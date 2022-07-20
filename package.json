@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "npx eleventy",
+    "build": "env NODE_ENV=production npx eleventy",
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy"
   },

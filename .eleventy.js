@@ -1,5 +1,4 @@
 const moment = require('moment');
- 
 moment.locale('fr');
  
 module.exports = function (eleventyConfig) {
@@ -13,6 +12,13 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
+
+  return {
+    pathPrefix: "/do-it/",
+    dir: {
+      input: "sources"
+    }
+  }
 
 };
 
