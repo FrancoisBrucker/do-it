@@ -1,3 +1,3 @@
 # Parcours do-it
 
-Auto-formation, cours et prés-requis.
+Auto-formation, cours et prés-requis
