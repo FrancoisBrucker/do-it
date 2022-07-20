@@ -4,6 +4,10 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
   <title>Blog do-it</title> 
+
+  <link href=/do-it/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+  <link href=/do-it/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+  
 </head> 
 <body> 
   <header>
@@ -14,17 +18,24 @@
     <article>
   <h1>This Is My First Ever Post</h1> 
   <time datetime="2019-05-30T00:00:00.000Z">30 mai 2019</time> 
-  <!-- Excerpt Start -->
+  <!-- résumé : début -->
 <p>This is included on the homepage.</p>
-<!-- Excerpt End -->
+<!-- résumé : fin -->
 <p>This is the first post on my blog.</p>
+<ul>
+<li><a href="../post-2">post 2</a></li>
+<li><a href="/do-it/blog/post-2#legal">encore post 2</a></li>
+</ul>
 <p>Eleventy is super fresh init.</p>
-<p>Est-ce que cela fonctionne ?</p>
+<blockquote class="note">
+<p>ensemble des règles opératoires propres à un <em>calcul</em></p>
+</blockquote>
 
 </article>
 
 
   </main> 
   <footer>Site Footer</footer> 
+
 </body> 
 </html>
