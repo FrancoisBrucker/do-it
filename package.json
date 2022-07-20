@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "env NODE_ENV=production npx eleventy",
-    "serve": "npx eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "build": "cd sources ; npm install ; cd .. ; env NODE_ENV=production npx @11ty/eleventy",
+    "build-powersell": "cd sources ; npm install ; cd .. ; $env:NODE_ENV=production ; npx eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@pborenstein/eleventy-md-syntax-highlight": "^1.0.2",
+    "markdown-it-attrs": "^4.1.4",
     "moment": "^2.29.4"
   }
 }

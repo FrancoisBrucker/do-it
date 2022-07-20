@@ -1,6 +1,12 @@
 const moment = require('moment');
 moment.locale('fr');
- 
+
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require('markdown-it-attrs');
+
+// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require('@pborenstein/eleventy-md-syntax-highlight')
+
 module.exports = function (eleventyConfig) {
  
   eleventyConfig.addFilter('dateIso', date => {
@@ -13,11 +19,27 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
 
+  eleventyConfig.addPlugin(syntaxHighlight, 
+    { showLineNumbers: false });
+
+  markdownItLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
+  
+  markdownItLibrary.use(markdownItAttrs)
+  
+  
+  eleventyConfig.setLibrary("md", markdownItLibrary);
+
+  eleventyConfig.addPassthroughCopy("sources/node_modules");
+
   return {
     pathPrefix: "/do-it/",
     dir: {
       input: "sources"
-    }
+    },
   }
 
 };
@@ -33,7 +55,7 @@ function extractExcerpt(article) {
  
   // The start and end separators to try and match to extract the excerpt
   const separatorsList = [
-    { start: '<!-- Excerpt Start -->', end: '<!-- Excerpt End -->' },
+    { start: '<!-- résumé : début -->', end: '<!-- résumé : fin -->' },
     { start: '<p>', end: '</p>' }
   ];
  

@@ -5,12 +5,16 @@ date: 2019-05-30
 tags: ['post']
 ---
 
-<!-- Excerpt Start -->
+<!-- résumé : début -->
 This is included on the homepage.
-<!-- Excerpt End -->
+<!-- résumé : fin -->
 
 This is the first post on my blog.
- 
+
+* [post 2](../post-2)
+* [encore post 2]({{ "/blog/post-2" | url }}#legal)
+
 Eleventy is super fresh init.
 
-Est-ce que cela fonctionne ?
+> ensemble des règles opératoires propres à un *calcul*
+{.note}
