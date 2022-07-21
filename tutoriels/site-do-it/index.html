@@ -21,26 +21,34 @@
   <!-- résumé : début -->
 <p>Installation du site do-it chez vous.</p>
 <!-- résumé : fin -->
+<h2>première installation</h2>
 <ol>
-<li>
-<p>installation de node</p>
-</li>
-<li>
-<p>récupérer le site avec git</p>
-</li>
-<li>
-<p><code>npm install</code> si nécessaire</p>
-</li>
-<li>
-<p>test en local avec <code>npm run serve</code> :</p>
+<li>installation de node :
 <ul>
-<li>il ne doit pas y avoir d'erreur</li>
-<li>vous devriez voir le site en local</li>
+<li>sous mac :
+<ol>
+<li>avec <a href="https://brew.sh/">https://brew.sh/</a></li>
+<li><code>brew install node</code>. La version doit être supérieure à 12. Chez moi, la commande <code>node --version</code>donne &quot;v18.6.0&quot;</li>
+</ol>
+</li>
 </ul>
 </li>
-<li>
-<p>push</p>
+<li>récupérer le site avec git : <code>git clone https://github.com/FrancoisBrucker/do-it.git</code></li>
+<li>allez dans le dossier <em>&quot;do-it&quot;</em></li>
+<li><code>npm install</code> : pour installer les dépendances de <a href="https://www.11ty.dev/">https://www.11ty.dev/</a> qui est notre générateur de site</li>
+<li><code>npm run build</code> : pour installer les dépendances front</li>
+<li>test en local avec <code>npm run serve</code> :
+<ul>
+<li>il ne doit pas y avoir d'erreur</li>
+<li>vous devriez voir le site en local sur <a href="http://localhost:8080">http://localhost:8080</a></li>
+</ul>
 </li>
+</ol>
+<h2>pousser ses modification sur le serveur</h2>
+<p>Une fois vos modifications effectuées, <strong>vérifiez que tout fonctionne encore !</strong>.</p>
+<p>Puis on pousse le tout sur le serveur :</p>
+<ol>
+<li></li>
 </ol>
 
 </article>
