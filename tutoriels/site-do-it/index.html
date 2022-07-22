@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr"> 
 <head> 
   <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>Blog do-it</title> 
 
-  <link href=/do-it/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-  <link href=/do-it/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+  <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+  <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
   
 </head> 
 <body> 
@@ -17,7 +17,6 @@
   <main> 
     <article>
   <h1>Comment installer do-it chez vous</h1> 
-  <time datetime="2019-05-30T00:00:00.000Z">30 mai 2019</time> 
   <!-- résumé : début -->
 <p>Installation du site do-it chez vous.</p>
 <!-- résumé : fin -->
@@ -28,13 +27,13 @@
 <li>sous mac :
 <ol>
 <li>avec <a href="https://brew.sh/">https://brew.sh/</a></li>
-<li><code>brew install node</code>. La version doit être supérieure à 12. Chez moi, la commande <code>node --version</code>donne &quot;v18.6.0&quot;</li>
+<li><code>brew install node</code>. La version doit être supérieure à 12. Chez moi, la commande <code>node --version</code>donne "v18.6.0"</li>
 </ol>
 </li>
 </ul>
 </li>
 <li>récupérer le site avec git : <code>git clone https://github.com/FrancoisBrucker/do-it.git</code></li>
-<li>allez dans le dossier <em>&quot;do-it&quot;</em></li>
+<li>allez dans le dossier <em>"do-it"</em></li>
 <li><code>npm install</code> : pour installer les dépendances de <a href="https://www.11ty.dev/">https://www.11ty.dev/</a> qui est notre générateur de site</li>
 <li><code>npm run build</code> : pour installer les dépendances front</li>
 <li>test en local avec <code>npm run serve</code> :
@@ -48,7 +47,10 @@
 <p>Une fois vos modifications effectuées, <strong>vérifiez que tout fonctionne encore !</strong>.</p>
 <p>Puis on pousse le tout sur le serveur :</p>
 <ol>
-<li></li>
+<li><code>git status</code> : pour voir ce qui a été modifié</li>
+<li>si on a ajouté des fichiers : <code>git add _mon_fichier_ajouté</code> (ou <code>git add --all</code> si on a <strong>bien vérifié</strong> que ça ne rajoutait pas de fichiers indésirables)</li>
+<li><code>git commit -am"le message de commit"</code> mettez un message de commit simple et informatif.</li>
+<li><code>git push</code> : pour pousser sur le serveur</li>
 </ol>
 
 </article>
