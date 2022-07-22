@@ -12,7 +12,9 @@ This is included on the homepage.
 This is the first post on my blog.
 
 * [post 2](../post-2)
-* [encore post 2]({{ "/blog/post-2" | url }}#legal)
+* [encore post 2]({{ "/blog/post-2" | url }})
+* [post 2](../post-2#images)
+* [encore avec une ancre en plus]({{ "/blog/post-2" | url }}#images)
 
 Eleventy is super fresh init.
 

@@ -29,4 +29,7 @@ Une fois vos modifications effectuées, **vérifiez que tout fonctionne encore !
 
 Puis on pousse le tout sur le serveur :
 
-1. 
+1. `git status` : pour voir ce qui a été modifié
+2. si on a ajouté des fichiers : `git add _mon_fichier_ajouté` (ou `git add --all` si on a **bien vérifié** que ça ne rajoutait pas de fichiers indésirables)
+3. `git commit -am"le message de commit"` mettez un message de commit simple et informatif.
+4. `git push` : pour pousser sur le serveur

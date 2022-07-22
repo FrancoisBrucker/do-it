@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "cd sources ; npm install ; cd .. ; env NODE_ENV=production npx @11ty/eleventy",
+    "build": "cd sources/assets ; npm install ; cd ../.. ; env NODE_ENV=production npx @11ty/eleventy",
     "build-powersell": "cd sources ; npm install ; cd .. ; $env:NODE_ENV=production ; npx eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"
@@ -17,7 +17,9 @@
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@pborenstein/eleventy-md-syntax-highlight": "^1.0.2",
+    "eleventy-plugin-mathjax": "^2.0.4",
     "markdown-it-attrs": "^4.1.4",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "outdent": "^0.8.0"
   }
 }
