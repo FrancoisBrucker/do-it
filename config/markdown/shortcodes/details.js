@@ -5,7 +5,7 @@ module.exports = function (markdownItLibrary, eleventyConfig) {
 
     eleventyConfig.addPairedShortcode('details', (content, arg) => {
         summary = `<summary>${arg}</summary>`
-        content = outdent`${markdownItLibrary.render(content)}` 
+        content = "<div>" + outdent`${markdownItLibrary.render(content)}` + "</div>"
 
         return '<details>' + summary + content + '</details>'
     });

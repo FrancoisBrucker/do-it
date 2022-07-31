@@ -1,11 +1,19 @@
 ---
-layout: base-layout.njk 
-title: Markdown possibilités
+layout: layout/post.njk 
+title: Les possibilités d'édition en markdown
 date: 2019-06-01
 tags: ['post']
 ---
 
-Les possibilités d'édition en markdown
+
+
+## titre `##`
+
+### titre `###`
+
+#### titre `####`
+
+##### titre `#####`
 
 ## liens
 
@@ -14,8 +22,50 @@ Les possibilités d'édition en markdown
 * [post 2 chemin relatif avec une ancre](../post-2#images)
 * [post 2 chemin absolu avec une ancre]({{ "/blog/post-2" | url }}#images)
 
+## listes
+
+### non ordonnées 
+
+* un
+* deux
+* trois
+
+### ordonnées
+
+1. un
+2. deux
+3. trois
+
+## quotes
+
+> Une quote normale
+> sur deux lignes.
+
+
+> Une mise en garde.
+{.attention}
+
+
+> Une note à retenir.
+{.note}
+
+> Un chemin/vers/un article
+{.chemin}
+
+> un exercice à faire
+{.a-faire}
 
 ## algorithmes
+
+### programme
+
+```python
+permutations(T):
+l = [1, 3, 2, 6, 4, 5]
+print(l.max())
+```
+
+### avec lignes numérotées
 
 ```text#
 si T est vide:
@@ -31,24 +81,21 @@ pour chaque i allant de 0 à len(T) - 1:
 rendre L
 ```
 
-```python
-permutations(T):
-l = [1, 3, 2, 6, 4, 5]
-print(l.max())
-```
+### dans le texte 
+
+* par défaut : `l = [1, 3, 2, 6, 4, 5]`
+* on dit que c'est un langage : `l = [1, 3, 2, 6, 4, 5]`{.language-python}.
 
 ## images {#images}
 
-![WTFs/minute](../wtfm.jpg){style="margin: auto;display: block"}
+![WTFs/minute](../wtfm.jpg)
 
 > Notez le `..` qui est important dans tous les liens.
 {.note}
 
 ## équations
 
-$$
-2+2 = \frac{1}{2}
-$$
+$$2+2 = \frac{1}{2}$$
 
 Et un $\log(3)^2$ dans une phrase.
 
@@ -57,3 +104,5 @@ Et un $\log(3)^2$ dans une phrase.
 {% details "spoiler" %}
 Quelque chose de caché.
 {% enddetails %}
+
+## tables
