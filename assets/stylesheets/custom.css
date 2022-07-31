@@ -1,6 +1,3 @@
-/**
- * import ajouté dans _layout/head.html
- */
 
 h2 {
   border-bottom: 4px solid;
@@ -84,15 +81,18 @@ blockquote.tbd::before {
   content: "TBD :";
   font-weight: bold;
 }
+
 a:not([class]), a:not([class]):visited {
 	text-decoration: none;
 	color: #629FDE;
 	border-bottom: 1px dotted #629FDE;  
 }
+
 a:not([class]):hover {
 	color: #5549DE;
 	border-bottom: 1px solid #5549DE;
 }
+
 a:not([class]):active {
 	color: #5549DE;
 	border-bottom: 3px solid #5549DE;

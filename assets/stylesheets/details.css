@@ -1,0 +1,26 @@
+@charset "UTF-8";
+details summary {
+  list-style: none;
+  margin-bottom: 0.8em;
+}
+details summary::before {
+  content: ">  [caché]";
+  font-weight: bold;
+  float: left;
+  color: #FA5EEC;
+  padding: 0;
+  padding-right: 0.5em;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details.open summary::before, details[open] summary::before {
+  content: "v  [visible]";
+  color: #49AD1F;
+  padding-right: 0.5em;
+}
+details > div {
+  padding-left: 1em;
+  border-left: 4px solid #49AD1F;
+  background: #FBFFF2;
+}

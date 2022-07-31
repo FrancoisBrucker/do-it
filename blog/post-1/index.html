@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr"> 
-<head> 
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>Blog do-it</title> 
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-  <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
-  
-</head> 
-<body> 
-  <header>
-    Site Header
-    <a href="/do-it/About">About</a>
-  </header> 
-  <main> 
-    <article>
+    <title>This Is My First Ever Post</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/details.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="wrapper">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/About">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      
+<article>
   <h1>This Is My First Ever Post</h1> 
   <!-- résumé : début -->
 <p>This is included on the homepage.</p>
@@ -35,8 +45,17 @@
 </article>
 
 
-  </main> 
-  <footer>Site Footer</footer> 
+    </main>
 
-</body> 
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="wrapper">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            parcours do-it        
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
 </html>
