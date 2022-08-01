@@ -10,7 +10,8 @@
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
     <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
-        <link href="/do-it/assets/stylesheets/details.css" rel="stylesheet">
+    <link href="/do-it/assets/stylesheets/details.css" rel="stylesheet">
+    <link href="/do-it/assets/stylesheets/custom.css" rel="stylesheet">
 
   <style id="MJX-SVG-styles">
 mjx-container[jax="SVG"] {
@@ -165,7 +166,8 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
       
 <article>
   <h1>Les possibilités d'édition en markdown</h1> 
-  <h2>titre <code>##</code></h2>
+  <p>Comparer le résultat au <a href="https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/blog/post-2.md">code source</a>.</p>
+<h2>titre <code>##</code></h2>
 <h3>titre <code>###</code></h3>
 <h4>titre <code>####</code></h4>
 <h5>titre <code>#####</code></h5>
@@ -203,9 +205,6 @@ sur deux lignes.</p>
 <blockquote class="chemin">
 <p>Un chemin/vers/un article</p>
 </blockquote>
-<blockquote class="a-faire">
-<p>un exercice à faire</p>
-</blockquote>
 <h2>algorithmes</h2>
 <h3>programme</h3>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">permutations<span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -232,7 +231,7 @@ rendre L
 </ul>
 <h2 id="images">images</h2>
 <p><img src="../wtfm.jpg" alt="WTFs/minute"></p>
-<blockquote class="note">
+<blockquote>
 <p>Notez le <code>..</code> qui est important dans tous les liens.</p>
 </blockquote>
 <h2>équations</h2>
@@ -241,6 +240,11 @@ rendre L
 <h2>details</h2>
 <details><summary>spoiler</summary><div><p>Quelque chose de caché.</p>
 </div></details>
+<h2>exercice</h2>
+<div class="exercice"><div><p>Un exercice à faire.</p>
+<details><summary>corrigé</summary><div><p>Le corrigé de l'exercice.</p>
+</div></details>
+</div></div>
 <h2>tables</h2>
 
 </article>
