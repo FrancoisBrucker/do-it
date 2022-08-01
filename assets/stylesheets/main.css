@@ -1334,6 +1334,14 @@ blockquote {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1381,55 +1389,4 @@ blockquote {
 .\[-\:\=\] {
   -: =;
 }
-blockquote.note {
-    border: .25rem solid #4f4f64;
-    border-radius: .3rem;
-    background-color: #FBFFF2;
 
-}
-blockquote.note:before {
-    content: 'À RETENIR';
-
-    font-weight: 700;
-    font-style: normal;
-}
-blockquote.attention {
-    border: .25rem solid #F54F4F;
-    border-radius: .3rem;
-    background-color: #FBFFF2;
-}
-blockquote.attention:before {
-    content: 'ATTENTION';
-    color: #F54F4F;
-
-    font-weight: 700;
-    font-style: normal;
-}
-blockquote.chemin {
-    border: .25rem solid #5549DE;
-    border-radius: .3rem;
-    background-color: #FBFFF2;
-}
-blockquote.chemin:before {
-    content: 'CHEMIN';
-    color: #5549DE;
-
-    font-weight: 700;
-    font-style: normal;
-}
-.exercice {
-    border-left: .5rem solid #E8A41E;
-    padding-left: .75rem;
-}
-.exercice::before {
-    content: "EXERCICE";
-    color: #E8A41E;
-    font-weight: 700;
-    font-style: normal;
-}
-.exercice details > summary  {
-    color: #E8A41E;
-}
-.exercice details > summary::before  {
-    color: #E8A41E;
-}
