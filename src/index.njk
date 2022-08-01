@@ -1,20 +1,13 @@
 ---
 layout: layout/base.njk
-pagination:
-  data: collections.post
-  size: 10
-  reverse: true
-  alias: posts
+title: do-it
 ---
-<h1> do-it</h1>
-{% for post in posts %}
+<h1 class="text-5xl py-2">{{ title }}</h1>
+
+{% for post in collections.post %}
   <article>
     <h1>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h1>
-
-<a href="{{ post.url | url }}"
-   aria-label="Read more on {{ post.data.title }}">Read more</a>
-
   </article>
 {% endfor %}

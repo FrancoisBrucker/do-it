@@ -5,7 +5,7 @@ date: 2019-06-01
 tags: ['post']
 ---
 
-Comparer le résultat au [code source](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/blog/post-2.md).
+Comparer le résultat au [code source](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/blog/possibilite-markdown.md).
 
 ## titre `##`
 
@@ -98,11 +98,13 @@ Et un $\log(3)^2$ dans une phrase.
 
 ## details
 
+### dans le texte
+
 {% details "spoiler" %}
 Quelque chose de caché.
 {% enddetails %}
 
-## exercice
+### dans un exercice
 
 {% exercice %}
 Un exercice à faire.
