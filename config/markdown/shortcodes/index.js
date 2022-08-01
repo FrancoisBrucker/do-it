@@ -1,8 +1,8 @@
 
-const details = require('./details');
-
 module.exports = function (markdownItLibrary, eleventyConfig) {
 
-    details(markdownItLibrary, eleventyConfig);
+    require('./details')(markdownItLibrary, eleventyConfig);
+    require('./exercice')(markdownItLibrary, eleventyConfig);
+
 };
 

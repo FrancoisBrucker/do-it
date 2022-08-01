@@ -61,13 +61,22 @@
         border-bottom: 3px solid #5549DE;
     }
 
-    blockquote.note {
-        border: .25rem solid #4f4f64;
-        border-radius: .3rem;
-
-        @apply bg-gray-100;
+    blockquote {
+        border-left-width: .5rem;
     }    
+}
 
+blockquote.note {
+    border: .25rem solid #4f4f64;
+    border-radius: .3rem;
+    background-color: #FBFFF2;
+
+}    
+blockquote.note:before {
+    content: 'À RETENIR';
+
+    font-weight: 700;
+    font-style: normal;
 }
 
 blockquote.attention {
@@ -75,12 +84,12 @@ blockquote.attention {
     border-radius: .3rem;
     background-color: #FBFFF2;
 }
-
 blockquote.attention:before {
     content: 'ATTENTION';
     color: #F54F4F;
 
-    @apply font-bold not-italic;
+    font-weight: 700;
+    font-style: normal;
 }
 
 blockquote.chemin {
@@ -92,19 +101,24 @@ blockquote.chemin:before {
     content: 'CHEMIN';
     color: #5549DE;
 
-    @apply font-bold not-italic;
+    font-weight: 700;
+    font-style: normal;
 }
 
-blockquote.a-faire {
-    border-left: .25rem solid #E8A41E;
-
-  }
-  
-  blockquote.a-faire::before {
-    content: "À FAIRE";
+.exercice {
+    border-left: .5rem solid #E8A41E;
+    padding-left: .75rem;
+}
+.exercice::before {
+    content: "EXERCICE";
     color: #E8A41E;
+    font-weight: 700;
+    font-style: normal;
+}
 
-    @apply font-bold not-italic;
-  }
-  
-
+.exercice details > summary  {
+    color: #E8A41E;
+}
+.exercice details > summary::before  {
+    color: #E8A41E;
+}

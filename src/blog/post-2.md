@@ -5,7 +5,7 @@ date: 2019-06-01
 tags: ['post']
 ---
 
-
+Comparer le résultat au [code source](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/blog/post-2.md).
 
 ## titre `##`
 
@@ -52,8 +52,6 @@ tags: ['post']
 > Un chemin/vers/un article
 {.chemin}
 
-> un exercice à faire
-{.a-faire}
 
 ## algorithmes
 
@@ -91,7 +89,6 @@ rendre L
 ![WTFs/minute](../wtfm.jpg)
 
 > Notez le `..` qui est important dans tous les liens.
-{.note}
 
 ## équations
 
@@ -104,5 +101,16 @@ Et un $\log(3)^2$ dans une phrase.
 {% details "spoiler" %}
 Quelque chose de caché.
 {% enddetails %}
+
+## exercice
+
+{% exercice %}
+Un exercice à faire.
+
+{% details "corrigé" %}
+Le corrigé de l'exercice.
+{% enddetails %}
+
+{% endexercice %}
 
 ## tables
