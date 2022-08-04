@@ -2,7 +2,9 @@
 layout: layout/post.njk 
 title: Comment installer do-it chez vous
 date: 2019-05-30
-tags: ['post']
+tags: 
+   - 'tutoriel'
+   - 'installation'
 ---
 
 <!-- résumé : début -->

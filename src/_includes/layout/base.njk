@@ -1,3 +1,7 @@
+---
+footer: Parcours do-it
+---
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -19,7 +23,7 @@
       <div class="wrapper">
         <div class="min-h-[50px] flex justify-between items-center">
           <a class="mx-2" href="{{ '/' | url }}">Home</a>
-          <a class="mx-2" href="{{ '/About' | url }}">About</a>
+          <a class="mx-2" href="{{ '/about' | url }}">About</a>
         </div>
       </div>
     </header>
@@ -32,7 +36,7 @@
       <div class="wrapper">
         <div class="min-h-[50px] flex justify-center items-center">
           <p>
-            parcours do-it        
+            {{ footer | safe}}       
           </p>
         </div>
       </div>

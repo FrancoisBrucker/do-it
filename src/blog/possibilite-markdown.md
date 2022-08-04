@@ -2,7 +2,7 @@
 layout: layout/post.njk 
 title: Les possibilités d'édition en markdown
 date: 2019-06-01
-tags: ['post']
+tags: ['post', 'markdown']
 ---
 
 Comparer le résultat au [code source](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/blog/possibilite-markdown.md).
@@ -101,7 +101,7 @@ Et un $\log(3)^2$ dans une phrase.
 ### dans le texte
 
 {% details "spoiler" %}
-Quelque chose de caché.
+Quelque chose de caché. Que l'on peut *écrire* en `Markdown` 
 {% enddetails %}
 
 ### dans un exercice
