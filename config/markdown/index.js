@@ -1,29 +1,33 @@
 const markdownIt = require("markdown-it");
-const markdownItAttrs = require('markdown-it-attrs');
-
-const syntaxHighlight = require('@pborenstein/eleventy-md-syntax-highlight')
-const mathjaxPlugin = require("eleventy-plugin-mathjax");
 
 const shortcode = require("./shortcodes")
 
 module.exports = function (eleventyConfig) {
 
-    markdownItLibrary = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true
-    })
-    
-    markdownItLibrary.use(markdownItAttrs)
+  markdownItLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
 
-    eleventyConfig.setLibrary("md", markdownItLibrary);
-    
-    eleventyConfig.addPlugin(syntaxHighlight, 
-      { showLineNumbers: false }
-    );
-    eleventyConfig.addPlugin(mathjaxPlugin);
+  markdownItLibrary
+    .use(require('markdown-it-attrs'))
+    .use(require('markdown-it-multimd-table'), {
+      multiline: true,
+      rowspan: true,
+      headerless: true,
+      multibody: true,
+      aotolabel: true,
+    });
 
-    shortcode(markdownItLibrary, eleventyConfig);
+  eleventyConfig.setLibrary("md", markdownItLibrary)
+
+  eleventyConfig.addPlugin(require('@pborenstein/eleventy-md-syntax-highlight'),
+    { showLineNumbers: false }
+  )
+  eleventyConfig.addPlugin(require("eleventy-plugin-mathjax"));
+
+  shortcode(markdownItLibrary, eleventyConfig);
 
 };
 

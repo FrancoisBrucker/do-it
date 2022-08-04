@@ -116,3 +116,62 @@ Le corrigé de l'exercice.
 {% endexercice %}
 
 ## tables
+
+On utilise les possibilités de [multimardown](https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html)
+
+### de base 
+
+| titre colonne 1  | titre colonne 2 |
+| ---------------- | --------------- |
+| Content Cell     | Content Cell  |
+| Content Cell     | Content Cell  |
+
+
+### sans titre
+
+
+
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+### multi-colonne
+
+
+| ------------- | ------------- |
+|     Content Cell             ||
+| Content Cell  | Content Cell  |
+
+
+### multi-ligne
+
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| ^^            | Content Cell  |
+
+### plusieurs ligne dans une cellule
+
+| ------------- | ------------- |
+| Content Cell  | * Content Cell  | \
+| Content Cell  | * Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+### alignement horizontal
+
+| :- | :-: | -: |
+| Content Cell  | Content Cell  | Content Cell |
+| Content Cell  | Content Cell  |Content Cell  |
+| Content Cell  | Content Cell  |Content Cell  |
+
+
+### alignement vertical
+
+On ajoute un style.
+
+| ------------- | ------------- |
+| Content Cell  {style="vertical-align:middle"}| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia. | 
+| Content Cell  | Content Cell  |
+
+
