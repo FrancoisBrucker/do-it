@@ -247,6 +247,118 @@ rendre L
 </div></details>
 </div></div>
 <h2>tables</h2>
+<p>On utilise les possibilités de <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html">multimardown</a></p>
+<h3>de base</h3>
+<table>
+<thead>
+<tr>
+<th>titre colonne 1</th>
+<th>titre colonne 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>sans titre</h3>
+<table>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>multi-colonne</h3>
+<table>
+<tbody>
+<tr>
+<td colspan="2">Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>multi-ligne</h3>
+<table>
+<tbody>
+<tr>
+<td rowspan="2">Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>plusieurs ligne dans une cellule</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Content Cell<br>
+Content Cell</p>
+</td>
+<td>
+<ul>
+<li>Content Cell</li>
+<li>Content Cell</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>alignement horizontal</h3>
+<table>
+<tbody>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3>alignement vertical</h3>
+<p>On ajoute un style.</p>
+<table>
+<tbody>
+<tr>
+<td style="vertical-align:middle">Content Cell </td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia.</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
 
 </article>
 
