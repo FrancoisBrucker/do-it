@@ -6,12 +6,12 @@
 
     <title>Les possibilités d&#39;édition en markdown</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href="/cours_informatique/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/cours_informatique/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
-    <link href="/do-it/assets/stylesheets/details.css" rel="stylesheet">
-    <link href="/do-it/assets/stylesheets/custom.css" rel="stylesheet">
+    <link href="/cours_informatique/assets/stylesheets/main.css" rel="stylesheet">
+    <link href="/cours_informatique/assets/stylesheets/details.css" rel="stylesheet">
+    <link href="/cours_informatique/assets/stylesheets/custom.css" rel="stylesheet">
 
   <style id="MJX-SVG-styles">
 mjx-container[jax="SVG"] {
@@ -156,8 +156,8 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="wrapper">
         <div class="min-h-[50px] flex justify-between items-center">
-          <a class="mx-2" href="/do-it/">Home</a>
-          <a class="mx-2" href="/do-it/about">About</a>
+          <a class="mx-2" href="/cours_informatique/">Home</a>
+          <a class="mx-2" href="/cours_informatique/about">About</a>
         </div>
       </div>
     </header>
@@ -174,9 +174,9 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
 <h2>liens</h2>
 <ul>
 <li><a href="../post-2">post 2 chemin relatif</a></li>
-<li><a href="/do-it/blog/post-2">post 2 chemin absolu</a></li>
+<li><a href="/cours_informatique/blog/post-2">post 2 chemin absolu</a></li>
 <li><a href="../post-2#images">post 2 chemin relatif avec une ancre</a></li>
-<li><a href="/do-it/blog/post-2#images">post 2 chemin absolu avec une ancre</a></li>
+<li><a href="/cours_informatique/blog/post-2#images">post 2 chemin absolu avec une ancre</a></li>
 </ul>
 <h2>listes</h2>
 <h3>non ordonnées</h3>
@@ -239,13 +239,28 @@ rendre L
 <p>Et un <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.77ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2992.6 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="6C" xlink:href="#MJX-TEX-N-6C"></use><use data-c="6F" xlink:href="#MJX-TEX-N-6F" transform="translate(278,0)"></use><use data-c="67" xlink:href="#MJX-TEX-N-67" transform="translate(778,0)"></use></g><g data-mml-node="mo" transform="translate(1278,0)"><use data-c="2061" xlink:href="#MJX-TEX-N-2061"></use></g><g data-mml-node="mo" transform="translate(1278,0)"><use data-c="28" xlink:href="#MJX-TEX-N-28"></use></g><g data-mml-node="mn" transform="translate(1667,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use></g><g data-mml-node="msup" transform="translate(2167,0)"><g data-mml-node="mo"><use data-c="29" xlink:href="#MJX-TEX-N-29"></use></g><g data-mml-node="mn" transform="translate(422,363) scale(0.707)"><use data-c="32" xlink:href="#MJX-TEX-N-32"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>log</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mn>3</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></math></mjx-assistive-mml></mjx-container> dans une phrase.</p>
 <h2>details</h2>
 <h3>dans le texte</h3>
-<details><summary>spoiler</summary><div><p>Quelque chose de caché. Que l'on peut <em>écrire</em> en <code>Markdown</code></p>
-</div></details>
+<details>
+<summary>
+<p>spoiler</p>
+</summary>
+<div>
+<p>Quelque chose de caché. Que l'on peut <em>écrire</em> en <code>Markdown</code></p>
+</div>
+</details>
 <h3>dans un exercice</h3>
-<div class="exercice"><div><p>Un exercice à faire.</p>
-<details><summary>corrigé</summary><div><p>Le corrigé de l'exercice.</p>
-</div></details>
-</div></div>
+<div class="exercice">
+<div>
+<p>Un exercice à faire.</p>
+<details>
+<summary>
+<p>corrigé</p>
+</summary>
+<div>
+<p>Le corrigé de l'exercice.</p>
+</div>
+</details>
+</div>
+</div>
 <h2>tables</h2>
 <p>On utilise les possibilités de <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html">multimardown</a></p>
 <h3>de base</h3>
