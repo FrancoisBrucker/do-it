@@ -5,13 +5,19 @@ const assetsConfig = require("./config/assets")
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    // excerpt_separator: "<!-- résumé -->"
+  });
 
+  // eleventyConfig.addPlugin(EleventyRenderPlugin);
+  
   markdownConfig(eleventyConfig);
   assetsConfig(eleventyConfig);
 
   return {
-    pathPrefix: "/do-it/",
+    pathPrefix: "/cours_informatique/",
     dir: {
       input: "src",
       output: "dist"

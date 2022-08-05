@@ -1,12 +1,14 @@
 
-const outdent = require('outdent');
+const { escapeHtml } = require("./utils")
 
-module.exports = function (markdownItLibrary, eleventyConfig) {
+module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPairedShortcode('exercice', (content, arg) => {
-        content = "<div>" + outdent`${markdownItLibrary.render(content)}` + "</div>"
+        content = escapeHtml("<div>") + `${content}` + escapeHtml("</div>")
 
-        return '<div class="exercice">' + content + '</div>'
+        return escapeHtml('<div class="exercice">') + content + escapeHtml('</div>')
     });
 };
+
+
 
