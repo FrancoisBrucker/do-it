@@ -1,8 +1,8 @@
 
 module.exports = function (eleventyConfig) {
 
-    require('./details')(eleventyConfig);
-    require('./exercice')(eleventyConfig);
+    require('./quotes')(eleventyConfig);
+    require('./resume')(eleventyConfig);
 
 };
 

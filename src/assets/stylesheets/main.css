@@ -23,46 +23,52 @@
     }
             
     h5 {
-        @apply border-black border-b border-dashed;
+        @apply border-black border-b border-dashed font-bold mt-6 mb-2;
     }
 
     mjx-container[jax="SVG"] > svg {
         display: inline;
     }
     
+    summary p {
+        @apply m-0 inline-block;
+    }
+
     article {
         @apply max-w-none prose prose-slate;
     }
-    blockquote > p::before, blockquote > p::after {
-        content: "";
+
+    blockquote {
+        @apply border-l-8;
     }
     code[class*=language-]::before, code[class*=language-]::after {
         content: "";
     }
 
+    img {
+        @apply border-4 rounded p-0 m-4 max-w-[90%];
+    }
+
 }
 
 @layer components {
-    .wrapper {
-        @apply max-w-[1000px] mx-auto px-4;
-    }
-
     a:not([class]), a:not([class]):visited {
-        text-decoration: none;
-        color: #629FDE;
-        border-bottom: 1px dotted #629FDE;  
+        @apply underline decoration-purple-500 decoration-2 hover:text-purple-800 hover:decoration-purple-800 active:decoration-4;
     }
-    a:not([class]):hover {
-        color: #5549DE;
-        border-bottom: 1px solid #5549DE;
-    }
-    a:not([class]):active {
-        color: #5549DE;
-        border-bottom: 3px solid #5549DE;
-    }
-
-    blockquote {
-        border-left-width: .5rem;
-    }    
 }
 
+table.no-border tr {
+    @apply border-none;
+}
+
+.prose .fichier {
+    @apply underline decoration-1;
+}
+
+.quote p, .quote ul, .quote ol, .quote li {
+        @apply m-0;
+}
+
+details p {
+    @apply mb-0;
+}
