@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   assetsConfig(eleventyConfig);
 
   return {
-    pathPrefix: "/cours_informatique/",
+    pathPrefix: "/do-it/",
     dir: {
       input: "src",
       output: "dist"
