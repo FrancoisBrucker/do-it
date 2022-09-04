@@ -77,7 +77,8 @@ Il est constitué de trois parties :
 
 ### exemple
 
-Ce fichier 
+Ce fichier est visible à [cette adresse](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md).
+
 ### entête
 
 Ce sont les premières lignes du site. Elles contiennent les méta-données du post :
@@ -115,25 +116,14 @@ Comment contribuer au site do-it.
 
 Le reste du post, écrit en markdown.
 
-### exemple
-
-
 ### les ressources
 
-fichier './'
-images  './'
+Placez les ressources dans le même dossier que votre post. Vos liens auront alors la forme suivante :
 
-Vous placerez dans ce dossier tout ce dont vous aurez besoin pour votre post. De façon minimale, ce dossier doit contenir un fichier `index.md` qui est le texte de votre post.
+* `[ressource à télécharger](./sources.zip)`{.fichier}
+* `![image à voir](./mon-image.png)`{.fichier}
 
-Certains post seront uniquement constitués d'un ficher index, comme par exemple ce post :
-
-```shell
-.
-└── francois-brucker
-    └── index.md
-
-1 directory, 1 file
-```
+## Possibilités étendues en markdown
 
 
 
