@@ -6,14 +6,18 @@ module.exports = function (eleventyConfig) {
 function extractExcerpt(article) {
   // https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/
 
-  if (!article.hasOwnProperty('templateContent')) {
-    console.warn('Failed to extract excerpt: Document has no property "templateContent".');
+  // if (!article.hasOwnProperty('templateContent')) {
+  //   console.warn('Failed to extract excerpt: Document has no property "templateContent".');
+  //   return null;
+  // }
+  
+  if (article == null) {
     return null;
   }
- 
   let excerpt = null;
+  
   const content = article.templateContent;
- 
+
   // The start and end separators to try and match to extract the excerpt
   const separatorsList = [
     { start: '<!-- début résumé -->', end: '<!-- fin résumé -->' },
@@ -29,6 +33,5 @@ function extractExcerpt(article) {
       return true; // Exit out of array loop on first match
     }
   });
- 
   return excerpt;
 }
