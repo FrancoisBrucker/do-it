@@ -152,7 +152,7 @@ Comment contribuer au site do-it.
 <span class="token operator">&lt;</span><span class="token operator">!</span>-- fin résumé --<span class="token operator">&gt;</span>
 </code></pre>
 <h3>corps du texte</h3>
-<p>Le reste du post, écrit en markdown.</p>
+<p>Le reste du post, écrit en markdown. Le titre est déjà mis, vos différentes parties sont donc de niveau <code class="language-">##</code></p>
 <h3>les ressources</h3>
 <p>Placez les ressources dans le même dossier que votre post. Vos liens auront alors la forme suivante :</p>
 <ul>
@@ -160,6 +160,260 @@ Comment contribuer au site do-it.
 <li><code class="fichier">![image à voir](./mon-image.png)</code></li>
 </ul>
 <h2>Possibilités étendues en markdown</h2>
+<p>Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des parties spécifiques de votre post.</p>
+<h3>liens</h3>
+<p>Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">src
+└── pok
+    ├── un-site-chez-moi
+    │   ├── FB-GD
+    │   │   ├── index.njk
+    │   │   └── sources.zip
+    │   ├── RS
+    │   └── index.njk 
+    ├── index.njk
+    └── ct
+       ├── contribuer-au-site
+       │   └── index.md
+       └── index.njk
+</code></pre>
+<p>Et que l'on veuille, depuis le post <code class="fichier">FB-GD</code>, aller vers le post <code class="fichier">contribuer-au-site</code>.</p>
+<p>Il y a deux façon de faire :</p>
+<ul>
+<li>lien absolu. Depuis la racine du site (qui est <code class="fichier">src</code>) <code class="language">[lien](/do-it/ct/contribuer-au-site)</code></li>
+<li>lien relatif. Depuis là on je suis : <code class="language">[lien](../../../ct/contribuer-au-site)</code> (je remonte 3 dossier avant de redescendre dans l'arborescence)</li>
+</ul>
+<h3>texte spécial</h3>
+<p>En plus des possibilités markdown, on ajoute deux distinction de texte :</p>
+<ul>
+<li>fichier : <code class="fichier">nom-fichier</code> que l'on écrit : `nom-fichier`{.fichier}</li>
+<li>code : <code class="language-">print("coucou !")</code> que l'on écrit : `print("coucou !")`{.language-}</li>
+</ul>
+<h3>shortcodes</h3>
+<p>Les <em>shortcodes</em> sont des aides markdown. Elles permettent de mettre en valeur un paragraphe. elles sont toutes de la même forme :</p>
+<p>{% nom_shortcode "titre de la shortcode" %}</p>
+<p>le contenu de la shortcode</p>
+<p>{% endnom_shortcode %}</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Le titre de la shortcode est toujours optionnel. Mais s'il est présent il est <strong>obligatoirement</strong> entre " ".</p>
+</div></div>
+<p>Regardez <a href="https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md">le code source de cette page</a> pour voir comment sont écrit ces différentes façon de mettre du texte en relief.</p>
+<h4>Une mise en garde</h4>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-2">
+<p><strong>faisez</strong> attention</p>
+</div><div class="pl-8 mr-2">
+<p>Une <em>grosse</em> mise en garde.</p>
+</div></div>
+<h4>Une note</h4>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Une note à retenir.</p>
+</div></div>
+<h4>Une information</h4>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Un truc marrant ou une information utile, mais pas indispensable.</p>
+</div></div>
+<h4>A faire</h4>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Quelque-chose à faire.</p>
+</div></div>
+<h4>Partie cachée</h4>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>spoiler</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Quelque chose de caché. Que l'on peut <em>écrire</em> en <code>Markdown</code></p>
+</div>
+</details>     
+</div>
+<h4>Exercice avec son corrigé</h4>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-2">
+<p>Un exercice à faire.</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>corrigé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Le corrigé de l'exercice.</p>
+</div>
+</details>     
+</div>
+<h3>Tables</h3>
+<p>On utilise les possibilités de <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html">multimarkdown</a></p>
+<h4>Tables de base</h4>
+<table>
+<thead>
+<tr>
+<th>titre colonne 1</th>
+<th>titre colonne 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>Tables sans titre</h4>
+<table>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>Tables multi-colonne</h4>
+<table>
+<tbody>
+<tr>
+<td colspan="2">Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>Tables multi-ligne</h4>
+<table>
+<tbody>
+<tr>
+<td rowspan="2">Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>plusieurs ligne dans une cellule</h4>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Content Cell<br>
+Content Cell</p>
+</td>
+<td>
+<ul>
+<li>Content Cell</li>
+<li>Content Cell</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>Alignement horizontal</h4>
+<table>
+<tbody>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4>Alignement vertical</h4>
+<p>On ajoute un style, mais il ne faut pas que ce soit la dernière colonne.</p>
+<table>
+<tbody>
+<tr>
+<td style="vertical-align:middle">Content Cell </td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia.</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>Pour la dernière colonne, il faut ajouter une colonne vide :</p>
+<table>
+<tbody>
+<tr>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia.</td>
+<td style="vertical-align:middle">Content Cell </td>
+<td></td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
