@@ -217,6 +217,23 @@ Un exercice à faire.
 Le corrigé de l'exercice.
 {% enddetails %}
 
+#### Un chemin
+
+Pour emmener vers un autre cours par exemple :
+
+{% chemin %}
+[Cours do-it de FB](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/)
+{% endchemin %}
+
+#### Des prérequis
+
+{% prerequis "À lire si vous aimez les graphes :" %}
+
+* *graphes* de Claude Berge
+* *hypergraphes* de Claude Berge
+
+{% endprerequis %}
+
 ### Tables
 
 On utilise les possibilités de [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html)
