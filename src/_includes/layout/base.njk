@@ -16,6 +16,26 @@ footer: "do-it : option de troisième année à l'école centrale Marseille"
     <link href={{ "/assets/stylesheets/main.css" | url }} rel="stylesheet">
   </head>
   <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+  src={{ "/assets/node_modules/mathjax/es5/tex-svg-full.js" | url }}></script>
+
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
         <div class="min-h-[50px] flex justify-between items-center">
@@ -34,11 +54,18 @@ footer: "do-it : option de troisième année à l'école centrale Marseille"
       <div class="max-w-[1000px] mx-auto px-4">
         <div class="min-h-[50px] flex justify-center items-center">
           <p>
-            {{ footer | safe}}     
+            {{ footer | safe}}
           </p>
         </div>
       </div>
     </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
 
   </body>
 </html>
