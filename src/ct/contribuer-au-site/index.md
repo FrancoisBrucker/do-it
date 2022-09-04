@@ -114,7 +114,7 @@ Comment contribuer au site do-it.
 
 ### corps du texte
 
-Le reste du post, écrit en markdown.
+Le reste du post, écrit en markdown. Le titre est déjà mis, vos différentes parties sont donc de niveau `##`{.language-}
 
 ### les ressources
 
@@ -125,5 +125,151 @@ Placez les ressources dans le même dossier que votre post. Vos liens auront alo
 
 ## Possibilités étendues en markdown
 
+Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des parties spécifiques de votre post.
+
+### liens
+
+Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :
 
 
+```shell
+src
+└── pok
+    ├── un-site-chez-moi
+    │   ├── FB-GD
+    │   │   ├── index.njk
+    │   │   └── sources.zip
+    │   ├── RS
+    │   └── index.njk 
+    ├── index.njk
+    └── ct
+       ├── contribuer-au-site
+       │   └── index.md
+       └── index.njk
+```
+
+Et que l'on veuille, depuis le post `FB-GD`{.fichier}, aller vers le post `contribuer-au-site`{.fichier}.
+
+Il y a deux façon de faire :
+
+* lien absolu. Depuis la racine du site (qui est `src`{.fichier}) `[lien]({{ "/ct/contribuer-au-site" | url }})`{.language}
+* lien relatif. Depuis là on je suis : `[lien](../../../ct/contribuer-au-site)`{.language} (je remonte 3 dossier avant de redescendre dans l'arborescence)
+
+### texte spécial
+
+En plus des possibilités markdown, on ajoute deux distinction de texte :
+
+* fichier : `nom-fichier`{.fichier} que l'on écrit : \`nom-fichier\`\{.fichier\}
+* code : `print("coucou !")`{.language-} que l'on écrit : \`print("coucou !")\`\{.language-\}
+
+### shortcodes
+
+Les *shortcodes* sont des aides markdown. Elles permettent de mettre en valeur un paragraphe. elles sont toutes de la même forme :
+
+\{\% nom_shortcode "titre de la shortcode" \%\}
+
+le contenu de la shortcode
+
+\{\% endnom_shortcode \%\}
+
+{% note %}
+Le titre de la shortcode est toujours optionnel. Mais s'il est présent il est **obligatoirement** entre " ".
+{% endnote %}
+
+Regardez [le code source de cette page](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md) pour voir comment sont écrit ces différentes façon de mettre du texte en relief.
+
+#### Une mise en garde
+
+{% attention "**faisez** attention" %}
+Une *grosse* mise en garde.
+{% endattention %}
+
+#### Une note
+
+{% note %}
+Une note à retenir.
+{% endnote %}
+
+#### Une information
+
+{% info %}
+Un truc marrant ou une information utile, mais pas indispensable.
+{% endinfo %}
+
+#### A faire
+
+{% faire %}
+Quelque-chose à faire.
+{% endfaire %}
+
+#### Partie cachée
+
+{% details "spoiler" %}
+Quelque chose de caché. Que l'on peut *écrire* en `Markdown`
+{% enddetails %}
+
+#### Exercice avec son corrigé
+
+{% exercice %}
+Un exercice à faire.
+{% endexercice %}
+{% details "corrigé" %}
+Le corrigé de l'exercice.
+{% enddetails %}
+
+### Tables
+
+On utilise les possibilités de [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html)
+
+#### Tables de base
+
+| titre colonne 1  | titre colonne 2 |
+| ---------------- | --------------- |
+| Content Cell     | Content Cell  |
+| Content Cell     | Content Cell  |
+
+#### Tables sans titre
+
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+#### Tables multi-colonne
+
+| ------------- | ------------- |
+|     Content Cell             ||
+| Content Cell  | Content Cell  |
+
+#### Tables multi-ligne
+
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| ^^            | Content Cell  |
+
+#### plusieurs ligne dans une cellule
+
+| ------------- | ------------- |
+| Content Cell  | * Content Cell  | \
+| Content Cell  | * Content Cell  |
+| Content Cell  | Content Cell  |
+
+#### Alignement horizontal
+
+| :- | :-: | -: |
+| Content Cell  | Content Cell  | Content Cell |
+| Content Cell  | Content Cell  |Content Cell  |
+| Content Cell  | Content Cell  |Content Cell  |
+
+#### Alignement vertical
+
+On ajoute un style, mais il ne faut pas que ce soit la dernière colonne.
+
+| ------------- | ------------- |
+| Content Cell  {style="vertical-align:middle"}| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia. |
+| Content Cell  | Content Cell  |
+
+Pour la dernière colonne, il faut ajouter une colonne vide :
+
+| ------------- | ------------- | - |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia. | Content Cell  {style="vertical-align:middle"}| |
+| Content Cell  | Content Cell  | |
