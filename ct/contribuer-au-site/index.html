@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contribuer au site</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">Contribuer au site</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">ct</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">François Brucker</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Comment contribuer au site do-it.</p>
+<!-- fin résumé -->
+<p>Le site do-it est un site constitué de fichiers écrit au format <a href="https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/">Markdown</a>. Y contribuer est très simple, il suffit de suivre ce document.</p>
+<h2>architecture d'un post</h2>
+<p>Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site/francois-brucker">https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site/francois-brucker</a></p>
+<p>Ce dossier contient :</p>
+<ul>
+<li>un fichier <code>index.md</code> qui est le texte de votre post</li>
+<li>les images ou autres fichier de ressources (code source, données, etc) que vous voulez montrer.</li>
+</ul>
+<p>Il y a 3 endroits où placer ses contributions :</p>
+<ul>
+<li>dans le dossier <code class="fichier">ct</code></li>
+<li>dans le dossier <code class="fichier">pok</code></li>
+<li>dans le dossier <code class="fichier">mon</code></li>
+</ul>
+<h3>post ct</h3>
+<p>Votre dossier de post doit s'appeler comme l'intitulé du cours, en remplaçant les espace par des <code>-</code>.</p>
+<p>Par exemple ce post s'appelle <code class="fichier">contribuer-au-site</code> et est rangé dans le dossier <code class="fichier">ct</code> :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">src
+└── ct
+    ├── contribuer-au-site
+    │   └── index.md
+    └── index.njk
+</code></pre>
+<h3>post pok</h3>
+<p>Comme plusieurs groupes de personnes peuvent faire le même pok, on ajoute une indirection. Votre dossier de post doit s'appeler des initiales des personnes constituant le groupe (séparés par des <code>-</code>) et être placé dans le dossier du pok correspondant. Par exemple si j'avais avec Geo fait le pok "un site chez moi", le post aurait été nommé <code class="fichier">FB-GD</code>, et aurait été de cette forme :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">src
+└── pok
+    ├── un-site-chez-moi
+    │   ├── FB-GD
+    │   │   ├── index.njk
+    │   │   └── sources.zip
+    │   ├── RS
+    │   └── index.njk 
+    └── index.njk
+</code></pre>
+<p>Il aurait en effet contenu, en plus du fichier <code class="fichier">index.md</code> les sources du site compressées au format <code>zip</code>.</p>
+<h3>post mon</h3>
+<p>De la même manière que le poste pok.</p>
+<h2>le fichier <code class="fichier">index.md</code></h2>
+<p>Il est constitué de trois parties :</p>
+<ul>
+<li>l'entête</li>
+<li>son résumé</li>
+<li>le corps du texte en markdown</li>
+</ul>
+<h3>exemple</h3>
+<p>Ce fichier est visible à <a href="https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md">cette adresse</a>.</p>
+<h3>entête</h3>
+<p>Ce sont les premières lignes du site. Elles contiennent les méta-données du post :</p>
+<ul>
+<li>le layout html à utiliser</li>
+<li>le titre du post</li>
+<li>le ou les auteurs (il suffit d'ajouter une ligne)</li>
+<li>les tags du site. Doit au minimum contenir <code class="fichier">ct</code> si vous faite un ct, <code class="fichier">pok</code> si vous faites un pok et <code class="fichier">mon</code> si vous faites un mon.</li>
+</ul>
+<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">---
+layout: layout/post.njk
+
+title: "Contribuer au site"
+authors:
+  - François Brucker
+
+tags: ['ct']
+---
+</code></pre>
+<h3>résumé</h3>
+<p>Juste en dessous de l'entête.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token operator">&lt;</span><span class="token operator">!</span>-- début résumé --<span class="token operator">&gt;</span>
+
+Comment contribuer au site do-it.
+
+<span class="token operator">&lt;</span><span class="token operator">!</span>-- fin résumé --<span class="token operator">&gt;</span>
+</code></pre>
+<h3>corps du texte</h3>
+<p>Le reste du post, écrit en markdown.</p>
+<h3>les ressources</h3>
+<p>Placez les ressources dans le même dossier que votre post. Vos liens auront alors la forme suivante :</p>
+<ul>
+<li><code class="fichier">[ressource à télécharger](./sources.zip)</code></li>
+<li><code class="fichier">![image à voir](./mon-image.png)</code></li>
+</ul>
+<h2>Possibilités étendues en markdown</h2>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
