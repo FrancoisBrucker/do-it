@@ -1,8 +1,8 @@
 # Parcours do-it
 
-Auto-formation, cours et prés-requis
+Auto-formation, cours et prés-requis pour le parcours do-it
 
-https://francoisbrucker.github.io/do-it/
+<https://francoisbrucker.github.io/do-it/>
 
 ## Logiciels requis
 
