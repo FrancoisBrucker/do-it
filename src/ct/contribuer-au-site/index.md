@@ -18,7 +18,7 @@ Le site do-it est un site constitué de fichiers écrit au format [Markdown](htt
 
 ## architecture d'un post
 
-Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site/francois-brucker>
+Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site>
 
 Ce dossier contient :
 
@@ -130,7 +130,6 @@ Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des 
 ### liens
 
 Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :
-
 
 ```shell
 src
