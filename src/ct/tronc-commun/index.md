@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Gestion des sources"
+title: "Tronc commun"
 authors:
   - François Brucker
 
@@ -27,3 +27,7 @@ Par François Brucker
 [Cours github](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/git-et-site/)
 
 {% endchemin %}
+
+## Service design
+
+Par Oresis.
