@@ -5,7 +5,7 @@ title: "Le MON de Nathan"
 authors:
     - Nathan Gissler
 
-    tags: ['mon']
+tags: ['mon']
 ---
 
 <!-- début résumé -->
