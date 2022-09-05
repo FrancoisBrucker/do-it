@@ -15,5 +15,5 @@ Mon pok qui crée un site web chez moi.
 
 
 {% faire %}
-- Il faudrait peu être commencer
+- Il faudrait peut-être commencer
 {% endfaire %}
