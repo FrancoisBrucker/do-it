@@ -9,22 +9,18 @@ tags: ['mon']
 ---
 <!-- Début Résumé -->
 
-## Planning MOK de Kasimir
+## Planning MON de Kasimir
 
 ### Temps 1
-- Premier MON: Créer son site web statique avec eleventy
+- Premier MON: Diagnostic organisationnel, modélisation des processus, et conception d'un SI 
 - Deuxième MON: “google apps script” ou comment automatiser les choses embêtantes dans un tableur
 
-mais ca peut encore se changer
-
 ### Temps 2
-- Premier MON: aucune idée
-- Deuxième MON: aucune idée
+- Premier MON: Maturité de la transformation digitale
+- Deuxième MON: bases de données non relationnelles (mongodb, ...)
 
 ### Temps 3
-- Premier MON: aucune idée
-- Deuxième MON: aucune idée
+- Premier MON: Sobriété numérique et stratégie digitale
+- Deuxième MON: dev-ops ou développement mobile
 
-mais ca peut encore se changer
-TBD : tout!
 <!-- fin résumé -->
