@@ -61,5 +61,5 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
   - Créer une page avec différents *components*
   - Commencer à structurer la page du projet
     - Component *grille*
-    - Component *header*
+    - Component *navbar*
     - Component *info utilisateurs*
