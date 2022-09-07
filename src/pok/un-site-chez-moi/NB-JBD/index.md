@@ -32,5 +32,12 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 
 <img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
 
--  **Front-end :** Svelte
+-  **Front-end** : Svelte + TailwindCSS
+- **Back-end** : NestJS
+- **API** : GraphQL
+- **Moyen d'authentification** : JWT (*JSON Web Token*)
+- **Base de données** : MongoDB
 
+## Fonctionnalités
+
+Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.
