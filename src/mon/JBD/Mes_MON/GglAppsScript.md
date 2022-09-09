@@ -1,11 +1,11 @@
 ---
 layout: layout/post.njk
 
-title: "MON Temps 1.1 Jean-Baptiste"
+title: "Google Apps Script"
 authors:
   - Jean-Baptiste Durand
 
-tags: ['mon']
+tags: ['monJBD']
 ---
 
 <!-- début résumé -->
