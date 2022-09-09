@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Test de Jeff"
+title: "Web Front 1"
 authors:
   - Jeffrey Edisah
 
@@ -9,8 +9,8 @@ tags: ['mon']
 ---
 <!-- début résumé -->
 
-Tester Github Desktop pour voir si je serai capable de rendre les projets que j'aurai à faire dans l'année
+Mon objectif est de revoir HTML 5 et CSS 3 et découvrir Javascript afin de pouvoir travailler sur mon POK. Ma ressource de base pour l'instant est freecodecamp.
 
 <!-- fin résumé -->
 
-Coucou, c'est Jeff
+
