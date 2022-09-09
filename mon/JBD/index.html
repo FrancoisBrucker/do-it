@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chez JB</title>
+    <title>MON Jean-Baptiste</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">Chez JB</h1>
+  <h1 class="mb-1">MON Jean-Baptiste</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -53,7 +53,7 @@
         
         <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
           
-            <li class="before:content-['•'] before:px-1">pok</li>
+            <li class="before:content-['•'] before:px-1">mon</li>
           
         </ul>
       </div>
@@ -76,10 +76,90 @@
   
 
   <!-- début résumé -->
-<p>Mon site chez moi (POK-Temps 1)</p>
+<p>Ensemble des MON réalisés par Jean-Baptiste Durand</p>
 <!-- fin résumé -->
-<p>Cf mon site chez moi fait avec N.Bert</p>
-
+<div class="temps-container">
+	<div class="temps-border temps-border-left"></div>
+	<h2 class="temps">Temps 1</h2>
+	<div class="card-container">
+		<div class="card">
+			<img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%">
+			<p>Google apps script ou comment automatiser les choses embêtantes dans un tableur</p>
+		</div>
+		<div class="card">
+			<img src="./Image/11ty.png" alt="Avatar" style="width:100%">
+			<p> Créer son site web statique avec eleventy </p>
+		</div>
+	</div>
+</div>
+<div class="temps-container">
+	<div class="temps-border temps-border-right"></div>
+	<h2 class="temps">Temps 2</h2>
+	<div class="card-container">
+		<div class="card">
+			<img src="./Image/logo-mongoDB.jpg" alt="Avatar" style="width:100%">
+			<p>Bases de données non relationnelles (MongoDB, ...)</p>
+		</div>
+		<div class="card">
+			<img src="./Image/1200px-Sass_Logo_Color.svg.png" alt="Avatar" style="width:100%">
+			<p> Web Front 2 (SASS, postCSS) </p>
+		</div>
+	</div>
+</div>
+<div class="temps-container">
+	<div class="temps-border temps-border-left"></div>
+	<h2 class="temps">Temps 3</h2>
+	<div class="card-container">
+		<div class="card">
+			<img src="./Image/1631026680-logo-react-native.png" alt="Avatar" style="width:100%">
+			<p>Développement Mobile (React Native)</p>
+		</div>
+		<div class="card">
+			<img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%">
+			<p> Dev-ops (objets et/ou méthodes)</p>
+		</div>
+	</div>
+</div>
+<style>
+	.temps{
+		text-align:center;
+		font-size:2em;
+		border-bottom-width:0px;
+		margin-top:1em;
+	}
+	.temps-container{
+		position:relative;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.temps-border{
+		position:absolute;
+		border:solid;
+		border-width: 10px 0px 10px 0px;
+		top:calc(-1em - 5px);
+		bottom:calc(-1em - 5px);
+		z-index:-1;
+	}
+	.temps-border-left{
+		border-left-width:10px;
+		border-radius: 40px 0px 0px 40px;
+		right:10%;
+		left:0;
+	}
+	.temps-border-right{
+		border-right-width:10px;
+		border-radius: 0px 40px 40px 0px;
+		left:50%;
+		right:0;
+	}
+	.card-container{
+		display:flex;
+		flex-direction:row;
+	}
+	.card{
+		flex:1;
+	}
+</style>
 
 </article>
 
