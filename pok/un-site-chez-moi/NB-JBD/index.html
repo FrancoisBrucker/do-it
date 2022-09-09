@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jeu Mots croisés</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">Jeu Mots croisés</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">pok</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteurs : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Nicolas BERT</li>
+          
+            <li class="before:content-['•'] before:px-1">Jean-Baptiste DURAND</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Mon site chez moi (POK-Temps 1)</p>
+<!-- fin résumé -->
+<h2>Idée de ce POK</h2>
+<p>L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.</p>
+<p>Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :</p>
+<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="height: 500px; margin: 0 auto;">
+<br>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p><strong>Règles du jeu</strong><br>
+Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derrière chaque case se trouve une lettre qui apparaît dans la grille. A chaque lettre révélée il faut gratter les occurrences de cette lettre dans la grille. Une fois toutes les cases <strong>?</strong> grattées, on remporte de l’argent suivant le nombre de mots entièrement reconstitués.</p>
+</div></div>
+<h2>Technologies utilisées</h2>
+<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0">
+<ul>
+<li><strong>Front-end</strong> : Svelte + TailwindCSS</li>
+<li><strong>Back-end</strong> : NestJS</li>
+<li><strong>API</strong> : GraphQL</li>
+<li><strong>Moyen d'authentification</strong> : JWT (<em>JSON Web Token</em>)</li>
+<li><strong>Base de données</strong> : MongoDB</li>
+</ul>
+<h2>Fonctionnalités</h2>
+<p>Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.</p>
+<p>Gestion des utilisateurs, avec connexion et gestion de solde.</p>
+<h2>Objectifs points POK</h2>
+<!-- ### Ce qu'on avait prévu la dernière séance
+### Ce qu'on a fait depuis
+### Ce qu'on prévoit pour la prochaine séance  -->
+<h3>Ce qu'on a prévu pour la prochaine séance</h3>
+<ul>
+<li><em>Découvrir</em> les framework pour le front : Svelte et TailwindCSS
+<ul>
+<li><a href="https://svelte.dev/tutorial/basics">Tuto Svelte</a></li>
+<li><a href="https://tailwindcss.com/docs/installation">Tuto TailwindCSS</a></li>
+<li>TailwindCSS avec Svelte : <a href="https://blog.logrocket.com/how-to-use-tailwind-css-with-svelte/">lien 1</a>, <a href="https://tailwindcss.com/docs/guides/sveltekit">lien 2</a></li>
+</ul>
+</li>
+<li>Créer une <em>ébauche</em> de front en static
+<ul>
+<li>Créer une page avec des <em>éléments simples</em></li>
+<li>Créer une page avec différents <em>components</em></li>
+<li>Commencer à structurer la page du projet
+<ul>
+<li>Component <em>grille</em></li>
+<li>Component <em>navbar</em></li>
+<li>Component <em>info utilisateurs</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
