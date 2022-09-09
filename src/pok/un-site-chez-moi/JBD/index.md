@@ -10,10 +10,7 @@ tags: ['pok']
 
 <!-- début résumé -->
 
-Mon pok qui crée un site web chez moi.
+Mon site chez moi (POK-Temps 1)
 <!-- fin résumé -->
 
-
-{% faire %}
-- Il faudrait peut-être commencer
-{% endfaire %}
+Cf mon site chez moi fait avec N.Bert
