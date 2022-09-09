@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "EGT"
+title: "MON d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
