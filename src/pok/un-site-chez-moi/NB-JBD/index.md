@@ -55,7 +55,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - *Découvrir* les framework pour le front : Svelte et TailwindCSS
   - [Tuto Svelte](https://svelte.dev/tutorial/basics)
   - [Tuto TailwindCSS](https://tailwindcss.com/docs/installation)
-  - TailwindCSS with Svelte : [lien 1](https://blog.logrocket.com/how-to-use-tailwind-css-with-svelte/), [lien 2](https://tailwindcss.com/docs/guides/sveltekit)
+  - TailwindCSS avec Svelte : [lien 1](https://blog.logrocket.com/how-to-use-tailwind-css-with-svelte/), [lien 2](https://tailwindcss.com/docs/guides/sveltekit)
 - Créer une *ébauche* de front en static
   - Créer une page avec des *éléments simples* 
   - Créer une page avec différents *components*
