@@ -16,13 +16,13 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<div class="temps-border temps-border-left"/>
 	<h2 class="temps">Temps 1</h2>
 	<div class="card-container">
-		<div class="card">
-			<img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%">
-			<p>Google apps script ou comment automatiser les choses embêtantes dans un tableur</p>
+		<div class="card" style="background-color:#4086f4;">
+			<div class="img-container"><img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%"></div>
+			<p class="MON-descriptif">Google apps script ou comment automatiser les choses embêtantes dans un tableur</p>
 		</div>
-		<div class="card">
-			<img src="./Image/11ty.png" alt="Avatar" style="width:100%">
-			<p> Créer son site web statique avec eleventy </p>
+		<div class="card" style="background-color:#000;">
+			<div class="img-container"><img src="./Image/11ty.png" alt="Avatar" style="width:100%;"></div>
+			<p class="MON-descriptif"> Créer son site web statique avec eleventy </p>
 		</div>
 	</div>
 </div>
@@ -31,13 +31,13 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<div class="temps-border temps-border-right"/>
 	<h2 class="temps">Temps 2</h2>
 	<div class="card-container">
-		<div class="card">
-			<img src="./Image/logo-mongoDB.jpg" alt="Avatar" style="width:100%">
-			<p>Bases de données non relationnelles (MongoDB, ...)</p>
+		<div class="card" style="background-color:#81c464;">
+			<div class="img-container"><img src="./Image/logo-mongoDB.jpg" alt="Avatar" style="width:100%;border-radius: 8em;"></div>
+			<p class="MON-descriptif">Bases de données non relationnelles (MongoDB, ...)</p>
 		</div>
-		<div class="card">
-			<img src="./Image/1200px-Sass_Logo_Color.svg.png" alt="Avatar" style="width:100%">
-			<p> Web Front 2 (SASS, postCSS) </p>
+		<div class="card" style="background-color:#ce679a;">
+			<div class="img-container"><img src="./Image/1200px-Sass_Logo_Color.svg.png" alt="Avatar" style="width:100%"></div>
+			<p class="MON-descriptif"> Web Front 2 (SASS, postCSS) </p>
 		</div>
 	</div>
 </div>
@@ -46,13 +46,13 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<div class="temps-border temps-border-left"/>
 	<h2 class="temps">Temps 3</h2>
 	<div class="card-container">
-		<div class="card">
-			<img src="./Image/1631026680-logo-react-native.png" alt="Avatar" style="width:100%">
-			<p>Développement Mobile (React Native)</p>
+		<div class="card" style="background-color:#00a9d9;">
+			<div class="img-container"><img src="./Image/1631026680-logo-react-native.png" alt="Avatar" style="width:100%"></div>
+			<p class="MON-descriptif">Développement Mobile (React Native)</p>
 		</div>
-		<div class="card">
-			<img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%">
-			<p> Dev-ops (objets et/ou méthodes)</p>
+		<div class="card" style="background-color:#1496ff;">
+			<div class="img-container"><img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%"></div>
+			<p class="MON-descriptif"> Dev-ops (objets et/ou méthodes)</p>
 		</div>
 	</div>
 </div>
@@ -95,5 +95,26 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	}
 	.card{
 		flex:1;
+		margin:1em;
+		border-radius: 4em;
+		--opacity:0.2;
+	}
+	.img-container{
+		height:408.6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color:white;
+		margin-right:1em;
+		margin-left:1em;
+		margin-top:1em;
+		border-radius: 3em;
+	}
+	img{
+		border-width:0;
+	}
+	.MON-descriptif{
+		margin:2em;
+		font-size:1.2em;
 	}
 </style>
