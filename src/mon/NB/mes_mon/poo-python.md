@@ -5,7 +5,6 @@ title: "Programmation objet en Python"
 authors:
   - Nicolas BERT
 
-tags: ['mon']
 ---
 
 <!-- début résumé -->

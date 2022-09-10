@@ -5,7 +5,6 @@ title: "Créer un site web statique avec 11ty"
 authors:
   - Nicolas BERT
 
-tags: ['mon']
 ---
 
 <!-- début résumé -->
