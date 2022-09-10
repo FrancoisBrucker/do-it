@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  
+  eleventyConfig.addPassthroughCopy('./src/pok/royantk/site_chez_moi/FindTheKey/game.js');
   markdownConfig(eleventyConfig);
   assetsConfig(eleventyConfig);
 

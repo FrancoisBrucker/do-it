@@ -10,12 +10,15 @@ tags: ['pok']
 
 <!-- début résumé -->
 
-Mon pok qui crée un site web chez moi.
+Tous les POK de Killian ROYANT
 <!-- fin résumé -->
 
-## Mon premier POK
+## Introduction
 
-Bonjour, bonjour ! Pour l'instant sur ce site il y a :
+Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **POK** :
 
-- Rien
-- Rien non plus
+- **Temps 1** - [Mon site chez moi](site_chez_moi)
+- **Temps 2** - Site sur serveur distant
+- **Temps 3** - Programmation par tests
+
+Lien vers mes MON : [ici](../../mon/royantk)
