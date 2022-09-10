@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "[POK] Mon site chez moi"
+title: "[POK] Find the Key"
 authors:
   - Killian ROYANT
 
@@ -15,10 +15,10 @@ Présentation de mon POK du temps 1
 
 ## Ressources
 
-- Le site : [ici](FindTheKey/index.html)
-- Le projet sur Github : [ici](https://github.com/FrancoisBrucker/do-it/tree/main/src/pok/royantk/site_chez_moi/FindTheKey)
+- [Le résultat du POK](FindTheKey/index.html)
+- [Le Github du POK](https://github.com/FrancoisBrucker/do-it/tree/main/src/pok/royantk/site_chez_moi/FindTheKey)
 
-## Introduction
+## Présentation
 
 ### Mon POK - Améliorer « FIND THE KEY »
 
@@ -27,7 +27,7 @@ Présentation de mon POK du temps 1
 
 ### To-Do du POK
 
-- Régler le problème de police
+- ~~Régler le problème de police~~ *(fait)*
 - Régler le problème de compatibilité Firefox
 - Ajouter une partie « back » au site
   - Génération des cases
