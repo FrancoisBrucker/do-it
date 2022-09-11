@@ -67,6 +67,162 @@
   <!-- début résumé -->
 <p>Site web statique avec 11ty (Temps 1)</p>
 <!-- fin résumé -->
+<p>Dans ce cours nous allons apprendre à créer un site web statique de zéro en utilisant <a href="https://www.11ty.dev/">Eleventy</a>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Nous allons avoir besoin de Node.js, si vous ne l'avez pas vous pouvez le télécharger sur le site officiel de <a href="https://nodejs.org/">Node.js</a> (version &gt; 12).</p>
+</div></div>
+<h2>1. Création du projet</h2>
+<h3>1.1 Créer le répertoire du projet</h3>
+<p>Pour commencer, nous allons créer un dossier <code>mon-site</code> . Pour cela, ouvrir le terminal et taper les commandes suivantes :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> mon-site
+<span class="token builtin class-name">cd</span> mon-site
+</code></pre>
+<p><em>Vous pouvez ensuite ouvrir ce dossier dans votre éditeur de code favori. Pour ma part j'utilise VSCode, il me suffit de taper <code>code .</code> afin d'ouvrir le dossier avec VSCode.</em></p>
+<h3>1.2 Installer le package <code>eleventy</code></h3>
+<p>Afin d'installer <code>eleventy</code> dans notre projet, nous allons utiliser <code>npm</code> (Node Package Manager).<br>
+Commençons par initialiser npm dans notre projet puis installer <code>eleventy</code>. Pour cela, exécuter les deux commandes suivantes :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> init <span class="token parameter variable">-y</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> @11ty/eleventy
+</code></pre>
+<p>Une fois ces deux commandes exécutées vous devriez avoir l'arborescence suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">mon-site
+    ├── node_modules
+    ├── package-lock.json
+    ├── package.json
+
+</code></pre>
+<p>Vous devriez également voir <code>"@11ty/eleventy": {version}</code> dans la partie <code>"dependencies</code> du fichier <code>.package.json</code>.</p>
+<h3>1.3 Lancer le projet</h3>
+<p>Afin de lancer le projet, il faut demander à <code>eleventy</code> de compiler les fichiers du projet. Pour cela on utilisera la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx @11ty/eleventy
+</code></pre>
+<p>Eleventy va alors vous dire qu'il a compilé 0 fichier et c'est normal, on n'a rien écrit encore ! :D</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Si jamais la compilation indique des erreurs, recommencez depuis le début.</p>
+</div></div>
+<h3>1.4 Première page</h3>
+<p>Pour montrer que la compilation fonctionne, il serait bien d'avoir un fichier à compiler ! C'est parti ! Créons un fichier <code>index.md</code>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"># Une belle page !
+
+Regarder ce mot est en **gras** et celui là est en *italique* !
+</code></pre>
+<p>Relançons la commande <code>npx @11ty/eleventy</code>. On voit alors que notre fichier <code>index.md</code> a été compilé en un fichier <code>index.html</code> dans le dossier <code>_site</code>. Voilà son contenu :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Une belle page !<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Regarder ce mot est en <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>gras<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> et celui là est en <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>italique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span> !<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3>1.5 Mettre en place le serveur web en local</h3>
+<p>Afin qu'Eleventy détecte les changements en permanence, nous allons lancer la commande <code>npx @11ty/eleventy --serve</code>.<br>
+Rendez-vous ensuite sur <a href="http://localhost:8080">http://localhost:8080</a> et vous devriez voir le contenu de votre fichier compilé !</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Actuellement, il est nécessaire de rafraîchir la page web pour voir les modifications, c'est normal ! Ce problème sera réglé plus tard :)</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-2">
+<p><strong>Mise en place d'un alias pour la compilation</strong></p>
+</div><div class="pl-8 mr-2">
+<p>Cette commande étant un peu difficile à se souvenir, nous allons créer un alias à cette commande dans le fichier <code>package.json</code>. Pour cela, il suffit d'ajouter la ligne suivante :</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+  ...
+  <span class="token property">"srcipts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    ... 
+    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><span class="token punctuation">,</span>
+    <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"npx @11ty/eleventy --serve"</span>
+    ...
+  <span class="token punctuation">}</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre>
+<p>La ligne de <code>"test"</code> se trouve déjà là, cependant n'oubliez pas d'ajouter la virgule à la fin de cette ligne !</p>
+</div></div>
+<h2>2. Mise en place des templates &amp; configuration</h2>
+<h3>2.1 Création d'un template</h3>
+<p>Les templates sont comme leur nom l'indique des templates qui pourront être utilisé par d'autres pages. Les templates doivent se trouver dans le dossier <code>_includes/</code>. Créons notre premier template que nous appellerons <code>base.njk</code></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">---
+title: Mon super site statique
+---
+
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Créer un site web statique avec 11ty<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    Bienvenue à tous sur mon site créer avec Eleventy !
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Ici, dans la balise <code>content</code> sera ajouté le contenu des "enfants", c'est-à-dire les pages qui vont utiliser ce template.<br>
+Afin que la page que nous venons de créer utiliser ce template il faut rajouter les quelques lignes suivantes en en-tête du fichier <code>index.md</code>.</p>
+<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token front-matter yaml language-yaml">layout: base.njk
+title: Ma première page</span>
+<span class="token punctuation">---</span></span>
+
+<span class="token title important"><span class="token punctuation">#</span> Une belle page !</span>
+
+Regarder ce mot est en <span class="token bold"><span class="token punctuation">**</span><span class="token content">gras</span><span class="token punctuation">**</span></span> et celui là est en <span class="token italic"><span class="token punctuation">*</span><span class="token content">italique</span><span class="token punctuation">*</span></span> !
+
+</code></pre>
+<p>Dans cette en-tête on indique à Eleventy qu'il doit utiliser le template base.njk et qu'il doit afficher "Ma première page" dans l'emplacement "title" du template. Si cette valeur de title n'est pas spécifié dans la page, elle vaudra par défaut celle du template, ici "Mon super site statique".</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Il est possible d'enchainer les templates les uns dans les autres et d'avoir ainsi plusieurs niveau de templating !</p>
+</div></div>
+<h3>2.2 configuration</h3>
+<p>Pour gagner en lisibilité, nous allons mettre tous nos fichiers à compiler dans un dossier <code>src</code> et les fichiers compilés seront dans le dossier <code>dist</code>. Pour cela nous allons ajouter à la racine du projet le fichier de configuration appelé <code>.eleventy.js</code>. (Attention, il y a un <strong>.</strong> devant !) Voici la configuration a insérer dans le fichier :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token string">"src"</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token string">"dist"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Il faut cependant déplacer le dossier de layout dans le dossier <code>src</code>. On a alors l'arborescence suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">node_modules
+dist
+├── index.html
+src
+├── _includes
+<span class="token operator">|</span>  ├── base.njk
+└── index.md
+.eleventy.js
+package.json
+package-lock.json
+</code></pre>
+<p>Voilà à ce niveau du tutoriel vous avez de quoi créer votre site statique !</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Pour davantage d'informations, rendez-vous sur la <a href="https://www.11ty.dev/">documentation d'Eleventy</a>.</p>
+</div></div>
+
 
 </article>
 
