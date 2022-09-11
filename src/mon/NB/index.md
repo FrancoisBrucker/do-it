@@ -67,7 +67,7 @@ Ensemble des MON réalisés par Nicolas BERT
                     </svg>
                 </div>
                 <span class="link"></span>
-                <a href="./mes-mon/bdd-sql">
+                <a href="./mes-mon/bdd-nosql">
                     Base de données
                     <span class="bold">non relationnelles</span>
                 </a>
