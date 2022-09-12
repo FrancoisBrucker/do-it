@@ -1,11 +1,14 @@
 ---
 layout: layout/post.njk
 
-title: "MON d'Eugénie"
+title: "Sûrement le seul MON d'info d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
 tags: ['mon']
 
 ---
-Faire le choix du MON.
+<!-- Début Résumé -->
+J'ai choisi de faire le MON appscript parce que ça ne peut qu'être utile.
+
+<!-- fin Résumé -->
