@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Bienvenue chez Kasimir"
+title: "Planning MON Kasimir"
 authors:
   - Kasimir Romer
 
@@ -12,8 +12,8 @@ tags: ['mon']
 ## Planning MON de Kasimir
 
 ### Temps 1
-- Premier MON: Diagnostic organisationnel, modélisation des processus, et conception d'un SI 
-- Deuxième MON: “google apps script” ou comment automatiser les choses embêtantes dans un tableur
+- [Premier MON: “google apps script” ou comment automatiser les choses embêtantes dans un tableur](./t1-google-app-script)
+- [Deuxième MON: Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./diagnostic-SI)
 
 ### Temps 2
 - Premier MON: Maturité de la transformation digitale
