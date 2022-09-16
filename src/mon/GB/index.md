@@ -10,5 +10,8 @@ tags: ['mon']
 
 <!-- Début Résumé -->
 
-Mon MON 
+MON du temps 1 : 
+- HTML/CSS : majoritairement suivre les tuto de internetingishard qui sont très bien  fait et complet. 
+- Appscript
+
 <!-- Début Résumé -->
