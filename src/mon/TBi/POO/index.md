@@ -17,10 +17,11 @@ But : POO en python
 {% attention %}
 {% note %}
 {% info %}{% faire %}
-ToDO: Contacter Mr Brucker pour définir les technologies à utiliser.
 Apprendre a utiliser en python:
-Classes,attributs,méthodes
-relations entre classes: Héritences, Interfaces, OnetoMany, ManytoMany, OnetoOne
+Classes,attributs,méthodes,héritages
+Projet Compteur Dices Panier
+Durée de travail 6/10 H
+reste a voir :  Design pattern, Metaclass
 {% endfaire %}
 {% endinfo %}{% endnote %}{% endattention %}
 
