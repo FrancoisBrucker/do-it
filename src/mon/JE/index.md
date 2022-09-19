@@ -13,7 +13,7 @@ Mon objectif est de revoir HTML 5 et CSS 3 et découvrir Javascript afin de pouv
 
 <!-- fin résumé -->
 
-J'ai utilisé MDN pour revoir l'HTML et le CSS et l'utiliser dans mon POK (le lien est icihttps://github.com/JeffreyEdisah/Jekwed-Portfolio)
+J'ai utilisé MDN pour revoir l'HTML et le CSS et l'utiliser dans mon POK (le lien est ici : https://github.com/JeffreyEdisah/Jekwed-Portfolio)
 
 Je commence Javascript cette semaine.
 
