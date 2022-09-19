@@ -1,29 +1,35 @@
 ---
 layout: layout/post.njk
 
-title: "Les POK de Killian"
+title: "Les MON de Killian"
 authors:
   - Killian ROYANT
 
-tags: ['pok']
+tags: ['mon']
 ---
 
 <!-- début résumé -->
 
-Tous les POK de Killian ROYANT
+Tous les MON de Killian Royant
 <!-- fin résumé -->
 
-**Lien vers mes MON :**
+**Lien vers mes POK :**
 
-{% chemin %} [Les MON de Killian](../../mon/royantk) {% endchemin %}
+{% chemin %} [Les POK de Killian](../../pok/royantk) {% endchemin %}
 
-## Liste de mes POK
+## Liste de mes MON
 
-Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **POK** :
+Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **MON** :
 
-- **Temps 1** - [Mon site chez moi](site_chez_moi)
-- **Temps 2** - Site sur serveur distant
-- **Temps 3** - Programmation par tests
+- [**Temps 1**](temps_1)
+  - [Google Apps Script](temps_1/gg_apps_script)
+  - [Programmation Objet en Python](temps_1/POO_python)
+- **Temps 2**
+  - Web front 2
+  - Micro services
+- **Temps 3**
+  - Développement mobile
+  - Dev-Ops
 
 ## Mon parcours
 

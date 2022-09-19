@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Test de Jeff"
+title: "Web Front 1"
 authors:
   - Jeffrey Edisah
 
@@ -9,8 +9,14 @@ tags: ['mon']
 ---
 <!-- début résumé -->
 
-Tester Github Desktop pour voir si je serai capable de rendre les projets que j'aurai à faire dans l'année
+Mon objectif est de revoir HTML 5 et CSS 3 et découvrir Javascript afin de pouvoir travailler sur mon POK. Ma ressource de base pour l'instant est Mozilla Developer Network. Je consulte aussi d'autres ressources complémentaires selon mes besoins.
 
 <!-- fin résumé -->
 
-Coucou, c'est Jeff
+J'ai utilisé MDN pour revoir l'HTML et le CSS et l'utiliser dans mon POK (le lien est icihttps://github.com/JeffreyEdisah/Jekwed-Portfolio)
+
+Je commence Javascript cette semaine.
+
+Si d'ici là j'ai pu faire quelque chose de satisfaisant sur mon site, je verrai la bibliothèque bootstrap, mais je doute en être à ce point au moment de la présentation.
+
+

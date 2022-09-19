@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON de Thibault"
+title: "MONs de Thibault"
 authors:
   - Thibault Adelain
 
@@ -9,8 +9,11 @@ tags: ['mon']
 ---
 
 <!-- début résumé -->
-
-Mon MON qui crée un site web chez moi.
-
+- Méthodes de chiffrement
+- Framework front-end
 <!-- fin résumé -->
 
+## MONs temps 1:
+
+- **Méthodes de chiffrement** et **hachage**
+- **HTML/CSS/JS:** apprendre un framework front tel que React
