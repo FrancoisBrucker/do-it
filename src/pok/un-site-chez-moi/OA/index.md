@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Du côté de chez Ossama"
+title: "Un site chez moi"
 authors:
   - Ossama Abdane
 
@@ -12,6 +12,3 @@ tags: ['pok']
 
 Mon pok qui crée un site web chez moi.
 <!-- fin résumé -->
-
-
-TBD : le rapport.
