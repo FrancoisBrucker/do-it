@@ -85,8 +85,8 @@ Ainsi `dé.position='lol'` peut etre utilisé malgré le fait que l'on a défini
         dé.position = value
 	
 comme on peut le voir avec la classe Dice et son fichier main.
-Pour eviter se comortement, on créer des @property, qui permettent d'appeller les setters que l'on a implémenté, même avec `dé.position`. Ce sont donc des decorateurs pré-construits dans python avec une syntaxe particulière. Les créateurs de python préconisent cette manière de faire.
-[Tuto vidéo disponible ici](https://www.youtube.com/watch?v=45R-gynfbnw&list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-&index=1&ab_channel=CoursPython)
+Pour eviter se comportement, on créer des @property, qui permettent d'appeller les setters que l'on a implémenté, même avec `dé.position`. Ce sont donc des decorateurs pré-construits dans python avec une syntaxe particulière. Les créateurs de python préconisent cette manière de faire.
+[Tuto vidéo disponible ici](https://www.youtube.com/watch?v=45R-gynfbnw&list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-&index=1&ab_channel=CoursPython) et un [un explication très détaillée ici](https://www.programiz.com/python-programming/property) 
 
 ### Les méthodes statiques et méthodes de Classe.
 
