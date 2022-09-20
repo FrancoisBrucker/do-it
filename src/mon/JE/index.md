@@ -19,4 +19,6 @@ Je commence Javascript cette semaine.
 
 Si d'ici là j'ai pu faire quelque chose de satisfaisant sur mon site, je verrai la bibliothèque bootstrap, mais je doute en être à ce point au moment de la présentation.
 
+L'apprentissage du HTML était plutôt rapide, mes souvenirs sont frais, cependant l'apprentissage du CSS s'avère plus hardu.
+
 

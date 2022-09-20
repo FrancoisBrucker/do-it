@@ -19,4 +19,5 @@ Voici le lien de mon repo GitHub : https://github.com/JeffreyEdisah/Jekwed-Portf
 J'ai commencé par la page about car elle est constitué de textes seulement, à l'inverse de mes autres pages qui comporteront des images et des vidéos.
 Quand j'aurais fini de la styliser avec mon fichier CSS (qui sera sûrement commun à tous les fichiers) j'écrirai l'html des pages suivantes.
 
-Il me manque un header avec une navbar et un footer actuellement.
+Il me manque un header avec une navbar et un footer actuellement. La stylisation de ma page about prend plus de temps que prévu car 
+l'apprentissage du CSS me retarde.
