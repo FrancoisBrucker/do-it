@@ -17,6 +17,8 @@ Google apps script ou comment automatiser les choses embêtantes dans un tableur
 - [Quelles sont les principales fonctionnalitées ?](#h2)
   - [Fonctions de calcul personnalisées](#h2-1)
   - [Automatiser plusieurs cases](#h2-2)
+    - [Class Range](#h2-2-1)
+    - [Class Sheet](#h2-2-2)
 - [Exemple - Création d'un historique](#h3)
 - [Liens Utils](#liens)
 
@@ -55,8 +57,39 @@ et dans la case où on veut appliquer la fonction, on applique le calcul : **=Ma
 
 <h3 id="h2-2">Automatiser plusieurs cases</h3>
 
-Les fonctions de Google Apps Script offrent seulement la possibilité de modifier une unique case (une formule retourne une unique valeur qui est stockée dans une seule cellule). 
-Google Apps Script offre la possibilité de gérer un grand nombre de cases, en accédant de manière indépendante à l'ensemble des cases du tableur.
+Les fonctions de Google Apps Script **n'offrent pas seulement** la possibilité de modifier une unique case (une formule retourne une unique valeur qui est stockée dans une seule cellule). 
+Google Apps Script offre aussi la possibilité de gérer un grand nombre de cases, en accédant de manière indépendante à l'ensemble des cases du tableur.
+
+Pour cela, il faut savoir comment accéder, en lecture et en écriture, aux cellules, à partir de la fonction.
+
+Pour avoir la documentation exacte, je vous laisse vous référer aux [liens](#liens). Sinon voici quelques fonctions essentielles pour bien commencer :
+
+<h4 id="h2-2-1">Class Range</h4>
+
+| Méthode                | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| clear()                | Efface le contenu d'une plage de donnée                                         |
+| getA1Notation()        | Récupère la description au format A1                                            |
+| getValue()             | Renvoie la valeur de la case ou de la case en haut à gauche si plage de données |
+| getValues()            | Renvoi l'ensemble des valeurs de la plage de données                            |
+| getFormulas()          | Idem mais la formule                                                            |
+| getFormulas()          | Idem mais les formules de la plage de données                                   |
+| setValue(value)        | Modifie la valeur de la case ou de la case en haut à gauche si plage de données |
+| setValues(values)      | Modifie l'ensemble des valeurs de la plage de données                           |
+| setFormulas(formula)   | Idem mais la formule                                                            |
+| setFormulas(formuulas) | Idem mais les formules de la plage de données                                   |
+
+{% attention "**Attention** aux Formules" %}
+Les formules que l'ont récupère et que l'on set sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)
+{% endattention %}
+
+
+<h4 id="h2-2-2">Class Sheet</h4>
+
+| Méthode               | Description                     |
+| --------------------- | ------------------------------- |
+| getRange(a1Notation)  | Renvoi l'ensemble des cases     |
+| appendRow(rowContent) | Ajoute un ligne avec le contenu |
 
 <h2 id="h3"> Exemple - Création d'un historique </h2>
 
@@ -69,3 +102,6 @@ Documentation de Google sur l'utilisation de Google Apps Script sur ses différe
 
 [Mon exemple](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
 
+Api pour accéder aux cellules
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) : classe de feuille de calcul
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range) : classe d'un ou plusieurs cases
