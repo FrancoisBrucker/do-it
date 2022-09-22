@@ -76,37 +76,65 @@
   
 
   <!-- début résumé -->
-<p>Présentation de mon POK du temps 1</p>
+<p>Présentation de mon POK du temps 1 &amp; 2 : Find The Key</p>
 <!-- fin résumé -->
-<h2>Ressources</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p><strong>Ressources</strong></p>
 <ul>
-<li><a href="FindTheKey/index.html">Le résultat du POK</a></li>
-<li><a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/pok/royantk/site_chez_moi/FindTheKey">Le Github du POK</a></li>
+<li><a href="https://royantk.github.io/FindTheKey/">Le résultat du POK (front)</a></li>
+<li><a href="https://github.com/royantk/FindTheKey">Le Github du POK</a></li>
 </ul>
-<h2>Présentation</h2>
-<h3>Mon POK - Améliorer « FIND THE KEY »</h3>
+</div></div>
+<h2>Introduction</h2>
+<p><strong>Find The Key</strong> est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres.</p>
+<p><img src="FindTheKey.png" alt="Image Find The Key"></p>
+<p>Find The Key a été d'abord designé à l'aide du logiciel de maquettage Adobe XD. J'ai ensuite utilisé un plugin pour transformer ce design en fichiers HTML et CSS. J'ai enfin dû adapter ces fichiers afin de les rendres utilisables pour communiquer avec le fichier JavaScript devant gérer le jeu.</p>
+<p>Néanmoins, le projet a rencontré des <strong>problèmes</strong>, dont la plupart liés à l'exportation au format HTML/CSS depuis Adobe XD :</p>
 <ul>
-<li>Reprendre et améliorer un projet WEB commencé au S7</li>
-<li>Objectif : Revoir la gestion du back et du front et régler les problèmes de compatibilité</li>
+<li>La maquette étant dessinée par rapport à un certain nombre de pixels, le site n'est donc <strong>pas responsif</strong></li>
+<li>La <strong>police</strong> utilisée sur le logiciel n'était <strong>pas disponible</strong> dans les fichiers exportés, ce qui rendait impossible leur affichage en ligne</li>
+<li>Le jeu n'est <strong>pas compatible</strong> avec des navigateurs comme <strong>Firefox</strong>. En effet, le fichier JavaScript responsable du placement des cases sur la mini carte utilise du code imcompatible avec le moteur de Firefox.</li>
+<li>Enfin, la <strong>structure générée</strong> par l'exportation au format HTML/CSS par le plugin d'Adobe XD est plutôt <strong>brouillon</strong> : un empilement de balises SVG dont les liens avec le fichier CSS sont mals optimisés et chaotiques. Ainsi, l'<strong>utilisation et la modification du code</strong> se trouvaient très difficiles.</li>
 </ul>
-<h3>To-Do du POK</h3>
+<h3>Objectif - Améliorer et réparer le jeu</h3>
+<p>Mes objectifs à l'occasion de ce POK sont les suivants :</p>
+<ul>
+<li><strong>Reprendre, réparer et améliorer</strong> le contenu du projet commencé au S7</li>
+<li><strong>Transformer</strong> le projet <strong>en un projet Full Stack</strong> à l'aide de Node.js et d'Express afin de gérer la génération des cases en back et de créer un système d'utilisateurs</li>
+</ul>
+<h3>To-Do List</h3>
+<p>N'ayant pas les compétences nécessaires au développement full stack, j'ai décidé de consacrer mes MON à l'apprentissage du développement full stack et de me concentrer uniquement sur la refonte du <strong>front pour le temps 1</strong>. Le <strong>temps 2</strong> sera consacré à l'<strong>implémentation du back</strong>.</p>
+<ul>
+<li><strong>Temps 1</strong>
 <ul>
 <li><s>Régler le problème de police</s> <em>(fait)</em></li>
 <li>Régler le problème de compatibilité Firefox</li>
-<li>Ajouter une partie « back » au site
-<ul>
-<li>Génération des cases</li>
-<li>Tableau des scores ?</li>
-</ul>
-</li>
+<li>Reprendre le code HTML/CSS pour l’améliorer (responsivité, gestion du CSS, etc.)</li>
 <li>Améliorer le jeu
 <ul>
 <li>Ajout d’un personnage</li>
 <li>Ajout de pièces</li>
 </ul>
 </li>
-<li>Explorer la possibilité de reprendre le code HTML/CSS pour l’améliorer (responsivité, etc.)</li>
 </ul>
+</li>
+<li><strong>Temps 2</strong>
+<ul>
+<li>Ajouter une partie « back » au site
+<ul>
+<li>Création du back</li>
+<li>Déplacement de la génération des cases</li>
+<li>Création d'une gestion des utilisateurs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../">&lt;-- Retour</a></p>
 
 
 </article>
