@@ -19,6 +19,10 @@ Google apps script ou comment automatiser les choses embêtantes dans un tableur
   - [Automatiser plusieurs cases](#h2-2)
     - [Class Range](#h2-2-1)
     - [Class Sheet](#h2-2-2)
+  - [Déclencheur de fonction](#h2-3)
+    - [Manuellement](#h2-3-1)
+    - [Temporellement](#h2-3-2)
+    - [Listener](#h2-3-3)
 - [Exemple - Création d'un historique](#h3)
 - [Liens Utils](#liens)
 
@@ -60,9 +64,13 @@ et dans la case où on veut appliquer la fonction, on applique le calcul : **=Ma
 Les fonctions de Google Apps Script **n'offrent pas seulement** la possibilité de modifier une unique case (une formule retourne une unique valeur qui est stockée dans une seule cellule). 
 Google Apps Script offre aussi la possibilité de gérer un grand nombre de cases, en accédant de manière indépendante à l'ensemble des cases du tableur.
 
-Pour cela, il faut savoir comment accéder, en lecture et en écriture, aux cellules, à partir de la fonction.
+Pour cela, il faut savoir comment **accéder**, en *lecture* et en *écriture*, **aux cellules**, à partir de la fonction.
 
-Pour avoir la documentation exacte, je vous laisse vous référer aux [liens](#liens). Sinon voici quelques fonctions essentielles pour bien commencer :
+{% prerequis %} 
+Pour avoir la documentation exacte, je vous laisse vous référer aux [liens](#liens).
+{% endprerequis%}
+ 
+Sinon voici quelques fonctions essentielles pour bien commencer 👇
 
 <h4 id="h2-2-1">Class Range</h4>
 
@@ -90,6 +98,24 @@ Les formules que l'ont récupère et que l'on set sont en anglais : la traductio
 | --------------------- | ------------------------------- |
 | getRange(a1Notation)  | Renvoi l'ensemble des cases     |
 | appendRow(rowContent) | Ajoute un ligne avec le contenu |
+
+<h3 id="h2-3">Déclencheur de fonction</h3>
+
+<h4 id="h2-3-1">Manuellement</h4>
+
+Pour executer de manière manuelle la fonction, il faut d'abord l'importer,
+
+Ensuite, on peut l'executer à tous moment :
+
+<img src="../../Image/google_apps_script_function_execution.png" alt="Executer la fonction" style="height: 200px; margin: 0 auto; border: 0" />
+
+{% faire %}
+Il vous sera demandé d'autoriser l'execution d'un script
+{% endfaire %}
+
+<h4 id="h2-3-1">Temporellement</h4>
+
+<h4 id="h2-3-1">Listener</h4>
 
 <h2 id="h3"> Exemple - Création d'un historique </h2>
 
