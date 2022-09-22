@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Google Apps Script"
+title: "[MON] Google Apps Script"
 authors:
   - Killian ROYANT
 
@@ -16,3 +16,5 @@ MON - Google Apps Script
 ## Introduction
 
 **Google Apps Script** est un outil et un language de programmation créé par Google pour faciliter les interactions entre les différentes Google Apps.
+
+[<-- Retour](../)
