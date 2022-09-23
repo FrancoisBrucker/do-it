@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Web Front 1</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">Web Front 1</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Antoine Varnerot</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Framework Angular</p>
+<!-- fin résumé -->
+<h2>Description</h2>
+<p>Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.</p>
+<h2>Premiers pas</h2>
+<h3>1. Installations</h3>
+<p>Sur un terminal, installer le CLI d'Angular (Command Line Interface) à l'aide de npm.</p>
+<p><code>npm install -g @angular/cli</code></p>
+<p><mark>Note : -g signifie qu'on installe Angular "globalement" sur l'ordinateur et qu'on aura pas à le réinstaller pour chaque projet</mark></p>
+<h3>2. Créer un projet</h3>
+<p>Pour créer un projet, on écrit dans le terminal et à l'endroit voulu :<br>
+<code>ng new mon-projet</code></p>
+<p><mark>Note : ng fait référence à Angular et sera l'abréviation à utiliser pour toutes les autres commandes que l'on va utiliser.</mark></p>
+<p>Cette commande va créer un dossier avec plusieurs fichiers mais celui qui va le plus nous intéresser est le dossier src (source). C'est ce dossier que l'on va modifier et où on va coder notre site. Voici l'arborescence de ce dossier :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">src
+    ├── app
+    ├── assets
+    ├── environnements
+    ├── index
+    ├── main
+    ├── styles
+    <span class="token builtin class-name">.</span>
+    <span class="token builtin class-name">.</span>
+    <span class="token builtin class-name">.</span>
+
+</code></pre>
+<p>Pour visualiser son site, il faut le lancer sur un serveur. Dans un terminal ouvert au dossier du projet, lancez la commande :<br>
+<code>ng new mon-projet</code><br>
+Ensuite rendez-vous à l'adresse <a href="http://localhost:4200/">http://localhost:4200/</a> et ceci devrait s'afficher :</p>
+<img src="../../assets/Angular-init.png">
+<p>C'est la page qu'Angular génère de base quand on crée un projet.</p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
