@@ -51,13 +51,14 @@ N'ayant pas les compétences nécessaires au développement full stack, j'ai dé
 
 - **Temps 1**
   - ~~Régler le problème de police~~ *(fait)*
-  - Régler le problème de compatibilité Firefox
-  - Reprendre le code HTML/CSS pour l’améliorer (responsivité, gestion du CSS, etc.)
+  - ~~Régler le problème de compatibilité Firefox~~ *(fait)*
+  - Reprendre le code HTML/CSS pour l’améliorer (responsivité, gestion du CSS, etc.) *(commencé)*
   - Améliorer le jeu
     - Ajout d’un personnage
     - Ajout de pièces
+  - Commencer à ajouter une partie « back » au site
 - **Temps 2**
-  - Ajouter une partie « back » au site
+  - Continuer d'ajouter la partie « back » au site
     - Création du back
     - Déplacement de la génération des cases
     - Création d'une gestion des utilisateurs

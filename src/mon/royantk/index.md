@@ -22,11 +22,11 @@ Tous les MON de Killian Royant
 Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **MON** :
 
 - [**Temps 1**](temps_1)
-  - [Créez des pages web dynamiques avec JavaScript](temps_1/js)
-  - [Passez au Full Stack avec Node.js, Express et MongoDB](temps_1/fullstack)
-- [**Temps 2**](temps_2)
-  - [Google Apps Script](temps_2/gg_apps_script)
   - [Programmation Objet en Python](temps_2/POO_python)
+  - [Créez des pages web dynamiques avec JavaScript](temps_1/js)
+- [**Temps 2**](temps_2)
+  - [Passez au Full Stack avec Node.js, Express et MongoDB](temps_1/fullstack)
+  - [Google Apps Script](temps_2/gg_apps_script)
 - **Temps 3**
   - Développement mobile
   - Dev-Ops
@@ -39,6 +39,6 @@ Ci dessous mes choix prévisionnels de parcours pour le S9. Mon objectif : conti
 |---|:---:|:---:|:---:|
 | **Cours** | Expérience Utilisateur<br>Java/Gradle<br>Serveur Web 101 | Interface utilisateur<br>Lean engineering<br>Réseaux<br>Serveur distant<br>Structure de données | Programmation par tests<br>AWS/Docker<br>Algorithmie<br>No/Low code<br>Management visuel |
 | **POK** | Mon site chez moi (front) | Mon site chez moi (back) | Site sur serveur distant |
-| **MON** | Pages web dynamiques<br>Full stack | Google Apps Script<br>Programmation objet Python | Développement mobile<br>Dev-Ops |
+| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>Google Apps Script | Développement mobile<br>Dev-Ops |
 
 [<-- Retour](../)

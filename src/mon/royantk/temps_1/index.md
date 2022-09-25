@@ -15,10 +15,10 @@ MON du temps 1
 
 ## Introduction
 
-Afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je souhaite me former au **développement Web Full Stack**. Pour y parvenir, il m'a semblé nécessaire de choisir ces deux MON proposés par la plateforme de formation [OPENCLASSROOMS](https://openclassrooms.com/fr) :
+Pour mon temps 1, j'ai choisis de me former à la programmation orientée objet sur Python. En parallèle, afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je souhaite me former au **développement Web Full Stack**. Pour y parvenir, il m'a semblé nécessaire de choisir deux MON (dont le deuxième au temps 2) proposés par la plateforme de formation [OPENCLASSROOMS](https://openclassrooms.com/fr) :
 
-- MON 1 - [Créez des pages web dynamiques avec JavaScript](js/)
-- MON 2 - [Passez au Full Stack avec Node.js, Express et MongoDB](fullstack/)
+- MON 1 - [Programmation Objet en Python](POO_python/)
+- MON 2 - [Créez des pages web dynamiques avec JavaScript](js/)
 
 ### Ressources
 
@@ -26,9 +26,8 @@ Afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je 
 
 **Ressources utilisées**
 
+- [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python)
 - [Créez des pages web dynamiques avec JavaScript *(Openclassrooms)*](https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript)
-- [Passez au Full Stack avec Node.js, Express et MongoDB *(Openclassrooms)*](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb)
-
 {% endchemin %}
 
 [<-- Retour](../)
