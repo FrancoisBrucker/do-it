@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON 1 : Web Front 1"
+title: "MON 1 : React"
 authors:
  - Thomas Pont
 
@@ -10,9 +10,9 @@ tags: ['mon']
 
 <!-- Début Résumé -->
 
-Web front 1
+React
 <!-- Début Résumé -->
 
 ## Objectif de ce MON
 
-Dans ce MON, l'objectif sera de revoir le HTML/CSS.
+Dans ce MON, l'objectif sera de découvrir le React et d'en voir les principales fonctionnalités.
