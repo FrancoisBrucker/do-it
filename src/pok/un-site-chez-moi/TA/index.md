@@ -9,6 +9,8 @@ tags: ['pok']
 ---
 
 <!-- début résumé -->
+InstantBuddy
 
-Mon pok qui crée un site web chez moi.
+Github: <https://github.com/ThibaultAdelain/InstantBuddyNode>
+
 <!-- fin résumé -->
