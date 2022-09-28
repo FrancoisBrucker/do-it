@@ -28,13 +28,11 @@ Il y a 2 semaines et demi d’ici le prochain point POK. Je vais définir ce qu'
 On peut retenir qu'un plateforme numérique est un intermédiaire qui met en relation de nombreux acteurs différents : elle ne produit pas de biens en soi mais permet d'aligner l'offre et la demande de la manière la plus intuitive et facile possible. Quand on parle d'offre et de demande, il s'agit ici de concepts bien plus larges que l'exemple classique de la vente d'un objet réel et palpable : les réseaux sociaux sont des plateformes numériques.
 
 
-Types de services proposés par les plateformes : 
+(Types de services proposés par les plateformes : 
 Mise en relation, Logicielles, Contenus financés par la publicité, Production et gestion des connaissances (infomédiaires) cairn.info
-
 OU BIEN
-
 Les différentes typologies de plateformes numériques : 
-Les "entreprises-plateformes", les plateformes digitales, les plateformes IT et les plateformes business
+Les "entreprises-plateformes", les plateformes digitales, les plateformes IT et les plateformes business)
 
 https://www.caissedesdepots.fr/blog/article/les-plateformes-devorent-le-monde
 D'après cet article de la Caisse de dépôts, il existe différents types de plateformes numériques : les plateformes d'interaction, les plateformes de contenus, les plateformes de collecte de données, les plateformes "places de marché", les plateformes de distribution, les plateformes de services à la demande, les plateformes "informatiques" et les plateformes technologiques.
