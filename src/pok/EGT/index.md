@@ -42,3 +42,13 @@ D'après cet article de la Caisse de dépôts, il existe différents types de pl
 Instagram : plateforme de contenus
 Airbnb : plateforme "place de marché"
 Yoojo : plateforme de services à la demande
+
+## Questions à se poser en parcourant les plateformes
+
+A quoi sert cette plateforme ?
+Qui a accès à quoi ? Est-elle ouverte à tous ?
+La plateforme est-elle intuitive, simple d'utilisation ?
+Comment l'utilise-t-on ?
+Quel est le bilan de l'organisation de la plateforme ?
+Comment ça se passe côté finance ?
+Comment se place-t-elle dans son marché ?
