@@ -86,28 +86,28 @@ Quelques Données chiffrées :
 {% endinfo %}
 
 
-**But de la plateforme :**
+***But de la plateforme :***
 Youtube est une plateforme de partage de contenu vidéo. 
-- type de contenu:
+***type de contenu:***
 Elle se distingue par le grand nombre de vidéos disponibles, avecvec une grande variété de sujets : des jeux vidéo aux bandes-annonces de films en passant par les chaînes YouTube d’opinion, tout le monde peut rechercher et visualiser le contenu qui lui plaît le plus. 
-**les différents acteurs, leurs rôles :**
+***les différents acteurs, leurs rôles :***
 Il y a 3 types d'acteurs sur la plateforme youtube. D'abord les utilisateurs qui peuvent être simple consommateurs de vidéos et/ou créateur de contenu. Il y a ensuite les employés de youtube dont les responsabilités seront mieux développées plus loin.
-**modèle de financement :**
+***modèle de financement :***
 La plateforme tire ses revenus du contenu publicitaire (le plus souvent sous forme de vidéos diffuser avant ou pendant une vidéo youtube).
 D'abord gratuite à l'utilisation elle propose depuis 2015 un modèle de freemuim. Ses fonctionnalités restent accessibles gratuitement mais il est possible de s'abonner pour pouvoir visionner des contenus sans publicités et hors ligne. Cet abonnement contient l'accès et des applications comme youtube music
 Depuis 2011 , le programme ‘YouTube Partner’ permet aux créateurs de contenu d'être rémunérés pour leur travail. Il consiste à verser des revenus aux réalisateurs de vidéos grâce à leur chaîne de diffusion par le biais de Google Adsense. C'est à dire qu'une parties des revenus dégagés par les publicité avant/ pendant les vidéos est versé au créateur de la vidéo en question. Cela correspond à quelques centimes par millier de vues
-**expérience client :**
+***expérience client :***
 Les fonctionnalités sont les suivantes : 
 Rechercher et visionner des vidéos. A noter que sans créer un compte Youtube (=une chaine), seule cette fonctionnalité est disponible
 S'abonner à des chaînes. Cela permet d'être avertit lorsque les créateurs en questions postent du nouveau contenu 
 Interagir avec des vidéos :écrire des commentaires à leur sujet, leur donner des likes ou des dislikes. Il est aussi possible de partager leur contenu sur des sites Web ou sur d’autres réseaux sociaux.  Ceci permet de donner de la visibilité à nos contenus préfèrés
 Créer sa propre vidéothèque. Youtube permet à ses utilisateurs de créer leur propres playlists de contenus (privées ou publiques)
 Créer une chaine youtube et y poster son propre contenu (protégé par les droits d’auteur). Il est alors possible de publier des vidéos, les diffuser en direct, faire des premières, créer une communauté, tchatter en direct et même gagner de l’argent..
-**expérience travailleur :** 
+***expérience travailleur :*** 
 Le plus grand défi de YouTube est sans doute la modération de son contenu. Les modérateurs sont là pour s'assurer qu'aucun propos ou image inappropriées ne soient postés. La modération s'assure aussi qu'aucun droits d'auteurs ne soit violé (ex : utilisation d'une musique/contenu protégé).  C'est une tâche longue, couteuse et si compliquée que la plateforme propose maintenant à ses utilisateurs de devenir modérateur. 
-**concurrents:** 
+***concurrents:*** 
 Youtube domine largement ses concurrents spécialisés. Cependant de nombreux réseaus sociaux comme FB et Instagram proposent mtn des fonctionnalités semblablent à Yotuube et pourraient menacer sa suprématie. La plateforme tente donc de faire face en proposant le partage de types de contenus différents comme des gifs, shorts, liens ou photos. (se rapprochant plus du fonctionnement des autres réseaux sociaux)
-**qu'est ce qui fait la réussite/ou non de cette plateforme ?**
+***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
 Ce qui différencie youtube (au delà des fonctionnalités décrites précédemment) est son algorithme de recommandation. En effet youtube analyse le contenu favoris de ses utilisateur pour leur recommander des contenus semblables. Cela permet d'augmenter le temps de visionnage des utilisateurs et de les fidélisés. 
 De plus, la rémunération des créateurs assure un contenu de qualité à Youtube. La plateforme a aussi une vocation de réseau social. En effet elle permet la créations de réelles communautés.  
 Cependant ce fonctionnement est aussi sujet à de nombreuses controverses. Tout d'abord 'l'algorithme' de Youtube pose de nombreux problèmes. En effet, à cause de celui-ci, la plateforme met en avant certains contenu et en enterre d'autres (retire toute visibilité à d'autres) créant un sentiment d'injustice auprès de certains créateur. 
