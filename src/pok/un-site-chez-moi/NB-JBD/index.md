@@ -50,7 +50,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 ### Ce qu'on a fait depuis
 ### Ce qu'on prévoit pour la prochaine séance  -->
 
-### Ce qu'on a prévu pour la prochaine séance
+### Ce qu'on a prévu pour le 1er point POK
 
 - *Découvrir* les framework pour le front : Svelte et TailwindCSS
   - [Tuto Svelte](https://svelte.dev/tutorial/basics)
@@ -63,3 +63,22 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
     - Component *grille*
     - Component *navbar*
     - Component *info utilisateurs*
+
+
+### Ce qu'on a fait
+
+- Découverte de Svelte et implémentation de TailwindCSS
+- Création des différents composants + interaction (bind des variables, props)
+- Style avec TailwindCSS + animations
+- Création des différents pages (jeu, login, register)
+- Début des tutoriels NestJS + génération du backend et docker compose.
+- Réflexion sur le schéma d'entités (On va utiliser MySQL plutot que MongoDB)
+
+### Ce qu'on a prévu pour le second point POK
+
+- Découverte plus approfondie de NestJS
+- Création des entités (User, Game ...)
+- Création des routes associées si on fait une API REST ou bien création + paramétrage du endpoint si on utilise GraphQL
+- Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT
+
+*Si on a le temps : essayer de faire un algo qui génère une grille à partir d'une liste de mots obtenue via une API externe*

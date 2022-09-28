@@ -189,3 +189,99 @@ Voilà à ce niveau du tutoriel vous avez de quoi créer votre site statique !
 {% prerequis %}
 Pour davantage d'informations, rendez-vous sur la [documentation d'Eleventy](https://www.11ty.dev/).
 {% endprerequis%}
+
+## 3. Installation de TailwindCSS
+
+Afin de faciliter la création du style, nous allons utiliser [TailwindCSS](https://tailwindcss.com/) dans notre projet. TailwindCSS est un framework CSS basé sur le principe de classes utilitaires. Cela rend la phase de développement beaucoup plus simple.
+
+Commençons par installer `tailwindcss` et `concurrently` (cela nous servira plus tard):
+
+```bash
+npm install -D tailwindcss concurrently
+npx tailwindcss init
+```
+
+La deuxième commande permet de créer automatiquement un fichier de configuration pour TailwindCSS. Nous allons le modifier de cette façon :
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./dist/**/*.{html,js,njk,md}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Ainsi, on indique à Tailwind que les fichiers contenant les classes utilitaires se trouvent dans le dossier `dist`.
+
+Commençons par créer un fichier `tailwind.css` dans `src/styles/`, puis nous allons importer le style de base de TailwindCSS.
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Nous devons ensuite indiquer à notre template `base.njk` d'utiliser le style de Tailwind. Pour cela on rajoute dans la balise `head` :
+```html
+<link href="/styles/index.css" rel="stylesheet" />
+```
+{% attention %}
+Le chemin indiqué ici fait référence au fichier CSS compilé. Ce chemin est défini dans la commande `tailwind`, dans le `package.json` que nous allons modifier ci-après.
+{% endattention %}
+
+Pour que le commande de lancement du serveur compile aussi le style de Tailwind, nous allons devoir effectuer des modifications dans le fichier `package.json`.
+
+```json
+{
+  ...
+  scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "tailwind": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles/index.css --watch",
+    "start": "concurrently \"npm run tailwind\" \"npm run serve\""
+  },
+  ...
+}
+```
+
+La commande `serve` (se lançant avec `npm run serve`) permet de lancer la compilation des fichiers avec Eleventy, et la commande `tailwind` (se lançant avec `npm run tailwind`) permet de compiler le style de Tailwind.
+
+Pour exécuter ses deux commandes en parallèle, on lance `npm run start`.
+*(Cette commande utilise `concurrently`, une bilbiothèque permettant de lancer des scripts en parallèle.)*
+
+Modifions désormais notre `base.njk` pour y ajouter des classes Tailwind !
+
+```markdown
+---
+title: Mon super site statique
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un site web statique avec 11ty</title>
+  </head>
+  <body class="text-3xl text-blue-600">
+    Bienvenue à tous sur mon site créer avec Eleventy !
+    
+  </body>
+</html>
+```
+
+Il ne reste plus qu'à lancer la commande npm run start, les fichiers ainsi que le style vont être compilés et tindiinnn !
+
+{% attention %}
+J'ai découvert cela durant l'élaboration de ce MON. Quand vous appliquez des classes Tailwind sur un template pas de problème. En revanche si vous appliquer ces classes à l'intérieur d'une de vos pages dans un fichier markdown, le style de tailwind prendre le dessus sur le style du Markdown.
+
+**Exemple** : le code ci dessous, une fois compilé n'affiche que du vert et le mot `amis` n'est pas mis en gras et les étoiles sont affichées. ⟶ **Le style du Markdown n'est pas pris en compte**.
+```markdown
+<div class="text-green-600">
+  Bonjour les **amis** !
+</div>
+```
+
+⟶ Ainsi je vous conseille de ne pas utiliser de classes Tailwind dans vos pages mais seulement dans vos templates.
+{% endattention %}
