@@ -164,7 +164,32 @@ shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
 </tr>
 </tbody>
 </table>
-<p>Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.</p>
+<p>Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.<br>
+Comme ça :</p>
+<pre><code>import os
+from pathlib import Path
+for filename in Path.home().glob('*.rxt'):
+    #os.unlink(filename)
+    print(filename)
+</code></pre>
+<h4>Envoyer à la corbeille</h4>
+<p>Pour éviter le problème cité à la partie d'avant, il y a une solution.</p>
+<p>Il faut installer le module sen2trash en exécutant "pip install --user send2trash" dans un terminal.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Fonction</strong></th>
+<th style="text-align:center"><strong>Explication</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">send2trash.send2trash(path)</td>
+<td style="text-align:center">Cela envoie l'objet dans la corbeille.</td>
+</tr>
+</tbody>
+</table>
+<p>Avant l'utilisation de la fonction, il faut importer le module.</p>
 <h3>Parcourir une arborescence</h3>
 <h3>Compresser des dossiers</h3>
 <h3>Projet d'application ?</h3>
