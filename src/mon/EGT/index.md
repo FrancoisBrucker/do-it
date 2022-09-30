@@ -21,10 +21,12 @@ Pour ce chapitre, une bibliothèque python est utile : shutil.
 
 ## Le module shutil
 
-|   | **Fonction** | **Explication** |
-|---|:---:|:---:|
-| **Copier** | shutil.copy(source, destination) | Cela copie un fichier d'un endroit à un autre en spécifiant le chemin de l'endroit à chaque fois. La fonction renvoie le chemin du fichier copié. |
-|   | shutil.copytree(source, destination) | Cela copie un dossier avec tous ses fichiers et sous-dossiers. Même fonctionnement que celle d'avant. |
+### Pour copier fichiers et dossiers
+
+| **Fonction** | **Explication** |
+|:---:|:---:|
+| shutil.copy(source, destination) | Cela copie un fichier d'un endroit à un autre en spécifiant le chemin de l'endroit à chaque fois. La fonction renvoie le chemin du fichier copié. |
+| shutil.copytree(source, destination) | Cela copie un dossier avec tous ses fichiers et sous-dossiers. Même fonctionnement que celle d'avant. |
 
 Exemple :
 
