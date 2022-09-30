@@ -17,21 +17,31 @@ Je vais commencer par explorer le site du livre : Automate the boring stuff with
 
 Lecture du chapitre 10 : L'organisation de dossiers
 
+### Le module shutil
+
 Pour ce chapitre, une bibliothèque python est utile : shutil.
 
-## Le module shutil
-
-### Pour copier fichiers et dossiers
+#### Pour copier fichiers et dossiers
 
 | **Fonction** | **Explication** |
 |:---:|:---:|
 | shutil.copy(source, destination) | Cela copie un fichier d'un endroit à un autre en spécifiant le chemin de l'endroit à chaque fois. La fonction renvoie le chemin du fichier copié. |
 | shutil.copytree(source, destination) | Cela copie un dossier avec tous ses fichiers et sous-dossiers. Même fonctionnement que celle d'avant. |
 
-Exemple :
+Exemples :
+import shutil, os
+from pathlib import Path
+p = Path.home()
+shutil.copy(p / 'spam.txt', p / 'some_folder')
+renvoi : 'C:\\Users\\Al\\some_folder\\spam.txt'
+shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')
+renvoi : WindowsPath('C:/Users/Al/some_folder/eggs2.txt')
 
-## Parcourir une arborescence
+shutil.copytree(p / 'spam', p / 'spam_backup')
+renvoi : WindowsPath('C:/Users/Al/spam_backup')
 
-## Compresser des dossiers
+### Parcourir une arborescence
 
-## Projet d'application ?
+### Compresser des dossiers
+
+### Projet d'application ?
