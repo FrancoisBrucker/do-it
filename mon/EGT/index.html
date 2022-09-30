@@ -80,9 +80,9 @@
 <!-- fin Résumé -->
 <p>Je vais commencer par explorer le site du livre : Automate the boring stuff with Python. Je pourrai ensuite creuser les thématiques qui m'intéressent grâce à Google Apps script et éventuellement trouver une application utile à mettre en place.</p>
 <p>Lecture du chapitre 10 : L'organisation de dossiers</p>
+<h3>Le module shutil</h3>
 <p>Pour ce chapitre, une bibliothèque python est utile : shutil.</p>
-<h2>Le module shutil</h2>
-<h3>Pour copier fichiers et dossiers</h3>
+<h4>Pour copier fichiers et dossiers</h4>
 <table>
 <thead>
 <tr>
@@ -101,10 +101,19 @@
 </tr>
 </tbody>
 </table>
-<p>Exemple :</p>
-<h2>Parcourir une arborescence</h2>
-<h2>Compresser des dossiers</h2>
-<h2>Projet d'application ?</h2>
+<p>Exemples :<br>
+import shutil, os<br>
+from pathlib import Path<br>
+p = Path.home()<br>
+shutil.copy(p / 'spam.txt', p / 'some_folder')<br>
+renvoi : 'C:\Users\Al\some_folder\spam.txt'<br>
+shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')<br>
+renvoi : WindowsPath('C:/Users/Al/some_folder/eggs2.txt')</p>
+<p>shutil.copytree(p / 'spam', p / 'spam_backup')<br>
+renvoi : WindowsPath('C:/Users/Al/spam_backup')</p>
+<h3>Parcourir une arborescence</h3>
+<h3>Compresser des dossiers</h3>
+<h3>Projet d'application ?</h3>
 
 
 </article>
