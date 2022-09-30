@@ -101,16 +101,33 @@
 </tr>
 </tbody>
 </table>
-<p>Exemples :<br>
-import shutil, os<br>
-from pathlib import Path<br>
-p = Path.home()<br>
-shutil.copy(p / 'spam.txt', p / 'some_folder')<br>
-renvoi : 'C:\Users\Al\some_folder\spam.txt'<br>
+<p>Exemples :</p>
+<pre><code>import shutil, os
+from pathlib import Path
+p = Path.home()
+shutil.copy(p / 'spam.txt', p / 'some_folder')
+</code></pre>
+<p>renvoi : 'C:\Users\Al\some_folder\spam.txt'<br>
 shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')<br>
 renvoi : WindowsPath('C:/Users/Al/some_folder/eggs2.txt')</p>
-<p>shutil.copytree(p / 'spam', p / 'spam_backup')<br>
-renvoi : WindowsPath('C:/Users/Al/spam_backup')</p>
+<pre><code>shutil.copytree(p / 'spam', p / 'spam_backup')
+</code></pre>
+<p>renvoi : WindowsPath('C:/Users/Al/spam_backup')</p>
+<h4>Pour déplacer et renommer des fichiers et des dossiers</h4>
+<p>| <strong>Fonction</strong> | <strong>Explication</strong> |<br>
+| shutil.move(source, destination) | On peut déplacer un fichier ou un dossier à l'adresse précisée. Soit on l'envoie dans un dossier et il gardera le même nom, soit on l'envoie dans un dossier en précisant le nouveau nom au bout de l'adresse. |</p>
+<p>Attention, il faut que le dossier dans lequel on déplace l'objet existe bien, sinon, la fonction va transformer l'objet en un fichier sans extension du nom du présumé dossier. De même, il faut que tout les dossiers cités dans l'adresse de destination existent, sinon python trouvera une erreur. Lorsqu'on déplace un fichier dans un dossier, s'il existe déjà un fichier du même nom dedans, celui-ci sera écrasé.</p>
+<p>Exemples :</p>
+<pre><code>import shutil
+shutil.move('C:\\bacon.txt', 'C:\\eggs')
+</code></pre>
+<p>renvoi : 'C:\eggs\bacon.txt'</p>
+<pre><code>shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
+</code></pre>
+<p>renvoi : 'C:\eggs\new_bacon.txt'</p>
+<pre><code>shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
+</code></pre>
+<p>renvoi : 'C:\eggs'</p>
 <h3>Parcourir une arborescence</h3>
 <h3>Compresser des dossiers</h3>
 <h3>Projet d'application ?</h3>
