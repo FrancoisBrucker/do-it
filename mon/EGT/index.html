@@ -128,6 +128,12 @@ shutil.move('C:\\bacon.txt', 'C:\\eggs')
 <pre><code>shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
 </code></pre>
 <p>renvoi : 'C:\eggs'</p>
+<h4>Pour effacer définitivement</h4>
+<p>| <strong>Fonction</strong> | <strong>Explication</strong> |<br>
+| os.unlink(path) | Cela efface le fichier. |<br>
+| os.rmdir(path) | Cela efface le dossier vide. |<br>
+| shutil.rmtree(path) | Cela efface le dossier et tout ce qu'il contient. |</p>
+<p>Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.</p>
 <h3>Parcourir une arborescence</h3>
 <h3>Compresser des dossiers</h3>
 <h3>Projet d'application ?</h3>
