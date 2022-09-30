@@ -106,33 +106,64 @@
 from pathlib import Path
 p = Path.home()
 shutil.copy(p / 'spam.txt', p / 'some_folder')
+    'C:\\Users\\Al\\some_folder\\spam.txt'
+
+shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')
+    WindowsPath('C:/Users/Al/some_folder/eggs2.txt')
+
+shutil.copytree(p / 'spam', p / 'spam_backup')
+    WindowsPath('C:/Users/Al/spam_backup')
 </code></pre>
-<p>renvoi : 'C:\Users\Al\some_folder\spam.txt'<br>
-shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')<br>
-renvoi : WindowsPath('C:/Users/Al/some_folder/eggs2.txt')</p>
-<pre><code>shutil.copytree(p / 'spam', p / 'spam_backup')
-</code></pre>
-<p>renvoi : WindowsPath('C:/Users/Al/spam_backup')</p>
 <h4>Pour déplacer et renommer des fichiers et des dossiers</h4>
-<p>| <strong>Fonction</strong> | <strong>Explication</strong> |<br>
-| shutil.move(source, destination) | On peut déplacer un fichier ou un dossier à l'adresse précisée. Soit on l'envoie dans un dossier et il gardera le même nom, soit on l'envoie dans un dossier en précisant le nouveau nom au bout de l'adresse. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Fonction</strong></th>
+<th style="text-align:center"><strong>Explication</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">shutil.move(source, destination)</td>
+<td style="text-align:center">On peut déplacer un fichier ou un dossier à l'adresse précisée. Soit on l'envoie dans un dossier et il gardera le même nom, soit on l'envoie dans un dossier en précisant le nouveau nom au bout de l'adresse.</td>
+</tr>
+</tbody>
+</table>
 <p>Attention, il faut que le dossier dans lequel on déplace l'objet existe bien, sinon, la fonction va transformer l'objet en un fichier sans extension du nom du présumé dossier. De même, il faut que tout les dossiers cités dans l'adresse de destination existent, sinon python trouvera une erreur. Lorsqu'on déplace un fichier dans un dossier, s'il existe déjà un fichier du même nom dedans, celui-ci sera écrasé.</p>
 <p>Exemples :</p>
 <pre><code>import shutil
 shutil.move('C:\\bacon.txt', 'C:\\eggs')
+    'C:\\eggs\\bacon.txt'
+
+shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
+    'C:\\eggs\\new_bacon.txt'
+
+shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
+    'C:\\eggs'
 </code></pre>
-<p>renvoi : 'C:\eggs\bacon.txt'</p>
-<pre><code>shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
-</code></pre>
-<p>renvoi : 'C:\eggs\new_bacon.txt'</p>
-<pre><code>shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
-</code></pre>
-<p>renvoi : 'C:\eggs'</p>
 <h4>Pour effacer définitivement</h4>
-<p>| <strong>Fonction</strong> | <strong>Explication</strong> |<br>
-| os.unlink(path) | Cela efface le fichier. |<br>
-| os.rmdir(path) | Cela efface le dossier vide. |<br>
-| shutil.rmtree(path) | Cela efface le dossier et tout ce qu'il contient. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Fonction</strong></th>
+<th style="text-align:center"><strong>Explication</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">os.unlink(path)</td>
+<td style="text-align:center">Cela efface le fichier.</td>
+</tr>
+<tr>
+<td style="text-align:center">os.rmdir(path)</td>
+<td style="text-align:center">Cela efface le dossier vide.</td>
+</tr>
+<tr>
+<td style="text-align:center">shutil.rmtree(path)</td>
+<td style="text-align:center">Cela efface le dossier et tout ce qu'il contient.</td>
+</tr>
+</tbody>
+</table>
 <p>Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.</p>
 <h3>Parcourir une arborescence</h3>
 <h3>Compresser des dossiers</h3>
