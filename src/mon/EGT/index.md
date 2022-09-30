@@ -60,6 +60,15 @@ renvoi : 'C:\\eggs\\new_bacon.txt'
     shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
 renvoi : 'C:\\eggs'
 
+#### Pour effacer définitivement
+
+| **Fonction** | **Explication** |
+| os.unlink(path) | Cela efface le fichier. |
+| os.rmdir(path) | Cela efface le dossier vide. |
+| shutil.rmtree(path) | Cela efface le dossier et tout ce qu'il contient. |
+
+Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.
+
 ### Parcourir une arborescence
 
 ### Compresser des dossiers
