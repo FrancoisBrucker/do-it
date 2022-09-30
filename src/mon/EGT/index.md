@@ -29,16 +29,36 @@ Pour ce chapitre, une bibliothèque python est utile : shutil.
 | shutil.copytree(source, destination) | Cela copie un dossier avec tous ses fichiers et sous-dossiers. Même fonctionnement que celle d'avant. |
 
 Exemples :
-import shutil, os
-from pathlib import Path
-p = Path.home()
-shutil.copy(p / 'spam.txt', p / 'some_folder')
+
+    import shutil, os
+    from pathlib import Path
+    p = Path.home()
+    shutil.copy(p / 'spam.txt', p / 'some_folder')
 renvoi : 'C:\\Users\\Al\\some_folder\\spam.txt'
-shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')
+    shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')
 renvoi : WindowsPath('C:/Users/Al/some_folder/eggs2.txt')
 
-shutil.copytree(p / 'spam', p / 'spam_backup')
+    shutil.copytree(p / 'spam', p / 'spam_backup')
 renvoi : WindowsPath('C:/Users/Al/spam_backup')
+
+#### Pour déplacer et renommer des fichiers et des dossiers
+
+| **Fonction** | **Explication** |
+| shutil.move(source, destination) | On peut déplacer un fichier ou un dossier à l'adresse précisée. Soit on l'envoie dans un dossier et il gardera le même nom, soit on l'envoie dans un dossier en précisant le nouveau nom au bout de l'adresse. |
+
+Attention, il faut que le dossier dans lequel on déplace l'objet existe bien, sinon, la fonction va transformer l'objet en un fichier sans extension du nom du présumé dossier. De même, il faut que tout les dossiers cités dans l'adresse de destination existent, sinon python trouvera une erreur. Lorsqu'on déplace un fichier dans un dossier, s'il existe déjà un fichier du même nom dedans, celui-ci sera écrasé.
+
+Exemples :
+
+    import shutil
+    shutil.move('C:\\bacon.txt', 'C:\\eggs')
+renvoi : 'C:\\eggs\\bacon.txt'
+
+    shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
+renvoi : 'C:\\eggs\\new_bacon.txt'
+
+    shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
+renvoi : 'C:\\eggs'
 
 ### Parcourir une arborescence
 
