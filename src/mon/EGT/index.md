@@ -70,9 +70,26 @@ Exemples :
 | os.rmdir(path) | Cela efface le dossier vide. |
 | shutil.rmtree(path) | Cela efface le dossier et tout ce qu'il contient. |
 
-Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.
+Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter. 
+Comme ça : 
 
+    import os
+    from pathlib import Path
+    for filename in Path.home().glob('*.rxt'):
+        #os.unlink(filename)
+        print(filename)
 
+#### Envoyer à la corbeille
+
+Pour éviter le problème cité à la partie d'avant, il y a une solution.
+
+Il faut installer le module sen2trash en exécutant "pip install --user send2trash" dans un terminal.
+
+| **Fonction** | **Explication** |
+|:---:|:---:|
+| send2trash.send2trash(path) | Cela envoie l'objet dans la corbeille. |
+
+Avant l'utilisation de la fonction, il faut importer le module.
 
 ### Parcourir une arborescence
 
