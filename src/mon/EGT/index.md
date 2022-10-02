@@ -93,6 +93,23 @@ Avant l'utilisation de la fonction, il faut importer le module.
 
 ### Parcourir une arborescence
 
+La fonction os.walk(path) permet de parcourir une arborescence. Elle renvoie 3 éléments : une chaîne de caractères correspondant au nom du dossier actuel, une liste des noms des dossiers contenus dans le dossier actuel et une liste des noms des fichiers contenus dans le dossier actuel.
+
+On peut donc utiliser ce programme :
+
+    import os
+
+    for folderName, subfolders, filenames in os.walk('C:\\delicious'):
+        print('The current folder is ' + folderName)
+
+        for subfolder in subfolders:
+            print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
+
+        for filename in filenames:
+            print('FILE INSIDE ' + folderName + ': '+ filename)
+
+On obtiendra une liste des objets de l'arborescence, comme si on la parcourait par niveau.
+
 ### Compresser des dossiers
 
 ### Projet d'application ?
