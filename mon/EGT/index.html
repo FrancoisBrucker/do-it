@@ -191,6 +191,20 @@ for filename in Path.home().glob('*.rxt'):
 </table>
 <p>Avant l'utilisation de la fonction, il faut importer le module.</p>
 <h3>Parcourir une arborescence</h3>
+<p>La fonction os.walk(path) permet de parcourir une arborescence. Elle renvoie 3 éléments : une chaîne de caractères correspondant au nom du dossier actuel, une liste des noms des dossiers contenus dans le dossier actuel et une liste des noms des fichiers contenus dans le dossier actuel.</p>
+<p>On peut donc utiliser ce programme :</p>
+<pre><code>import os
+
+for folderName, subfolders, filenames in os.walk('C:\\delicious'):
+    print('The current folder is ' + folderName)
+
+    for subfolder in subfolders:
+        print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
+
+    for filename in filenames:
+        print('FILE INSIDE ' + folderName + ': '+ filename)
+</code></pre>
+<p>On obtiendra une liste des objets de l'arborescence, comme si on la parcourait par niveau.</p>
 <h3>Compresser des dossiers</h3>
 <h3>Projet d'application ?</h3>
 
