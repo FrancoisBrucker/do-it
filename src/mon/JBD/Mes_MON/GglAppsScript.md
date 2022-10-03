@@ -66,7 +66,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 
 Pour cela, il faut savoir comment **accéder**, en *lecture* et en *écriture*, **aux cellules**, à partir de la fonction.
 
-{% prerequis %} 
+{% prerequis %}
 Pour avoir la documentation exacte, je vous laisse vous référer aux [liens](#liens).
 {% endprerequis%}
  
@@ -88,7 +88,7 @@ Sinon voici quelques fonctions essentielles pour bien commencer 👇
 | setFormulas(formuulas) | Idem mais les formules de la plage de données                                   |
 
 {% attention "**Attention** aux Formules" %}
-Les formules que l'ont récupère et que l'on set sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)
+Les formules que l'ont **get** et que l'on **set** sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)
 {% endattention %}
 
 
@@ -167,6 +167,7 @@ Documentation de Google sur l'utilisation de Google Apps Script sur ses différe
 
 Mon travail
 - [Le Google Sheet](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
+- [Le code source](../../Annexe/GglAppsScript)
 
 Documentation
 - [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) : classe de feuille de calcul
