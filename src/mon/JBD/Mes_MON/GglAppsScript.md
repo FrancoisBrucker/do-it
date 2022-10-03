@@ -23,8 +23,8 @@ Google apps script ou comment automatiser les choses embêtantes dans un tableur
     - [Manuellement](#h2-3-1)
     - [Temporellement](#h2-3-2)
     - [Listener](#h2-3-3)
-- [Exemple - Création d'un historique](#h3)
-- [Liens Utils](#liens)
+- [Exemple - Création d'un Tricount](#h3)
+- [Liens Utiles](#liens)
 
 <h2 id="h1"> Qu'est ce que Google Apps Script ? </h2>
 
@@ -107,7 +107,7 @@ Pour executer de manière manuelle la fonction, il faut d'abord l'importer,
 
 Ensuite, on peut l'executer à tous moment :
 
-<img src="../../Image/google_apps_script_function_execution.png" alt="Executer la fonction" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../../Image/google_apps_script_function_execution.png" alt="Executer la fonction" style="height: 200px; width:1000px; margin: 0 auto; border: 0" />
 
 {% faire %}
 Il vous sera demandé d'autoriser l'execution d'un script
@@ -115,19 +115,61 @@ Il vous sera demandé d'autoriser l'execution d'un script
 
 <h4 id="h2-3-1">Temporellement</h4>
 
+Il est possible de déclencher une fonction de manière temporelle.
+
+Voici un exemple, issue de la documentation de Google [liens](#liens)
+
+```javascript
+function createTimeDrivenTriggers() {
+  // Trigger every 6 hours.
+  ScriptApp.newTrigger('myFunction')
+      .timeBased()
+      .everyHours(6)
+      .create();
+  // Trigger every Monday at 09:00.
+  ScriptApp.newTrigger('myFunction')
+      .timeBased()
+      .onWeekDay(ScriptApp.WeekDay.MONDAY)
+      .atHour(9)
+      .create();
+}
+```
+
+J'ai pas cependant eu l'occasion d'aller en profondeur dans cette fonctionnalité, le laisse cette possibilité à quelqu'un d'autre pour un autre MON 😉
+
 <h4 id="h2-3-1">Listener</h4>
 
-<h2 id="h3"> Exemple - Création d'un historique </h2>
+En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un actiion se produit.
 
-<h2 id="liens"> Liens Utils </h2>
+Les 2 principales fonctions sont :
+  - onEdit : executée à chaque fois qu'un utilisateur modifie une case
+  - onOpen : executée à chaque fois qu'un utlisateur (ayant des droits de modification) se connecte sur le google sheet.
+
+exemple : 
+```javascript
+function onEdit(e){
+  //supprime le contenu de toute les cases modifiées (⊙ˍ⊙)
+  const range = e.range;
+  range.clear()
+}
+```
+
+il existe quelques atres fonctions, comme d'habitude le détail dans les [liens](#liens)👇
+
+<h2 id="h3"> Exemple - Création d'un Tricount </h2>
+
+<h2 id="liens"> Liens Utiles </h2>
 
 Documentation de Google sur l'utilisation de Google Apps Script sur ses différents produits :
 - [Google Sheet](https://developers.google.com/apps-script/guides/sheets)
 - [Google Docs](https://developers.google.com/apps-script/guides/docs)
 - [Google Slides](https://developers.google.com/apps-script/guides/slides)
 
-[Mon exemple](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
+Mon travail
+- [Le Google Sheet](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
 
-Api pour accéder aux cellules
+Documentation
 - [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) : classe de feuille de calcul
 - [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range) : classe d'un ou plusieurs cases
+- [Déclencheurs listener](https://developers.google.com/apps-script/guides/triggers) : Fonction listener
+- [Déclencheur temporel](https://developers.google.com/apps-script/guides/triggers/installable) : Fonction exéctuée de manière régulière
