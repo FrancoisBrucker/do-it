@@ -266,7 +266,7 @@ title: Mon super site statique
   </head>
   <body class="text-3xl text-blue-600">
     Bienvenue à tous sur mon site créer avec Eleventy !
-    
+    {{ content | safe }}
   </body>
 </html>
 ```
