@@ -83,6 +83,5 @@ Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou
 Notions d'évènements. 
 Notions d'objet. 
 
-- Appscript
 
 <!-- Début Résumé -->
