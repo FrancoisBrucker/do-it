@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Working with Excel Spreadsheets</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">Working with Excel Spreadsheets</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Timothée Bermond</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Automate the boring stuff with python : Working with Excel spreadsheets (chapter 13)</p>
+<!-- fin résumé -->
+<h2>Introduction</h2>
+<p>J'ai suivi la formation du livre <a href="https://automatetheboringstuff.com/">Automate the boring stuff with python</a> et plus particulièrement le chapitre 13 <a href="https://automatetheboringstuff.com/2e/chapter13/">Working with Excel Spreadsheets</a> car on est forcément amené à utiliser des tableurs dans notre vie professionelle. Savoir automatiser son utilisation afin de gagner du temps et limiter les erreurs me paraît pertinent.</p>
+<h2>Lire un document Excel</h2>
+<p>Une méthode pour travailler sur les documents Excel est l'utilisation du module OpenPyXL (version 2.6.2 dans cette formation).</p>
+<p>Il est ensuite possible d'importer un document excel avec la fonction <em>openpyxl.load_workbook()</em>. Ce qui permet d'accéder aux différents feuilles (sheet) du tableur ainsi qu'aux cellules de chaque feuille.</p>
+<p>Chaque cellule a comme attribut :</p>
+<ul>
+<li>sa valeur (<em>value</em>)</li>
+<li>sa ligne (<em>row</em>)</li>
+<li>sa colonne (<em>column</em>)</li>
+<li>ses coordonnées (<em>coordinate</em>)</li>
+</ul>
+<p>Il est donc possible de lire les données, de calculer l'occurence d'un mot, comparer les données entre différents tableurs, vérifier la présence de lignes vides ou de données invalides...</p>
+<p><strong>Petit résumé</strong></p>
+<ul>
+<li>Importer le module openpyxl</li>
+<li>Utiliser la fonction openpyxl.load_workbook()</li>
+<li>Choisir les feuilles qu'on veut modifier en utilisant son nom ou en choisissant la feuille active</li>
+<li>Utiliser les coordonnées ou la méthode <em>cell()</em> avec les lignes et les colonnes en arguments</li>
+<li>Lire la valeur de la cellule</li>
+</ul>
+<h2>Modifier un document Excel</h2>
+<p>Il est également possible de modifier un document Excel :</p>
+<ul>
+<li>Créer un nouveau tableur vide</li>
+<li>Créer ou supprimer une nouvelle feuille</li>
+<li>Modifier le nom d'une feuille</li>
+<li>Créer ou modifier la valeur d'une cellule</li>
+</ul>
+<p><strong>Idées de programmes</strong></p>
+<ul>
+<li>Modifier un tableur</li>
+<li>Écrire des parties d'un tableur dans un autre</li>
+<li>Lire des données sur des sites, des textes ou sur le presse papier et les écrire dans un tableur</li>
+<li>Automatiquement "clean up" des données dans un tableur. (réécrire différents formats de numéros de téléphones en un seul)</li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
