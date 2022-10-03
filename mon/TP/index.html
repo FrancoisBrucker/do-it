@@ -76,10 +76,72 @@
   
 
   <!-- Début Résumé -->
-<p>React</p>
+<p>React : un framework front-end</p>
 <!-- Début Résumé -->
 <h2>Objectif de ce MON</h2>
 <p>Dans ce MON, l'objectif sera de découvrir le React et d'en voir les principales fonctionnalités.</p>
+<h2>Qu'est-ce que React ?</h2>
+<p>React est un framework front-end. C’est donc un ensemble de classes, fonctions et utilitaires qui facilite la création de la partie visuelle d’un site Internet. On peut retrouver au même titre Vue ou Angular.</p>
+<p>Le principal objectif de React est de créer des sites Web à partir de composants. Un composant est un ensemble de HTML, CSS et JavaScript. Tous les composants pourront ensuite interagir ensemble afin de donner le site que l’on souhaite.</p>
+<h2>Fonctionnement de React</h2>
+<h3>Création d'un projet</h3>
+<p>Tout d’abord, pour créer un projet en React il faut ouvrir un terminal, se placer dans le dossier que l’on souhaite et entrer la commande suivante:</p>
+<p><strong>npx create-react-app mon-site-chez-moi</strong></p>
+<p>Un projet avec des dossiers et des fichiers de code va alors se créer.</p>
+<h3>Les composants</h3>
+<p>Comme expliqué précédemment, la logique de React est basée sur les composants. Chaque partie du site que l’on souhaite avoir sera défini par un composant. Par exemple, un site peut avoir un header, un footer,...</p>
+<p>Pour créer et organiser nos composants, on peut créer un dossier les regroupant tous. Chaque composant sera ensuite créé à l’aide d’un fichier en .js.</p>
+<p>Par exemple le fichier Banner.js suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Banner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Mon site chez moi<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Banner
+</code></pre>
+<p>créera un composant Banner qui pourra être mis sur notre site.<br>
+Dans ce fichier en .js, on peut ajouter tous les éléments que l’on souhaite avec les balises de HTML (&lt;h1&gt; pour un titre, &lt;ul&gt; pour une liste, &lt;p&gt; pour un paragraphe, &lt;img&gt; pour une image,...).</p>
+<p>On peut associer un fichier en CSS pour donner du style au texte ou aux éléments présents sur un composant.</p>
+<p>Mais comment afficher notre site ensuite ?<br>
+Pour cela, à la création de notre projet, un fichier App.js a été créé. On peut lui ajouter les composants que l’on a créer.</p>
+<p>Ainsi :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> Banner <span class="token keyword">from</span> <span class="token string">'./Banner'</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Banner <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App
+
+</code></pre>
+<p>permettra d’avoir un site avec la Banner précédemment défini.</p>
+<p>En lançant la commande suivante dans la console, notre site s’affiche sur un serveur local:</p>
+<p><strong>npm start</strong></p>
+<p>On peut progressivement ajouter des composants et du style pour que notre site ressemble à ce que l’on souhaite.</p>
+<h3>Contextualiser ces composants</h3>
+<p>On a vu que React permet de créer des composants mais il permet également de les contextualiser. En effet, lors de la définition d’un composant, on peut ajouter du javascript afin de savoir comment afficher un élément.</p>
+<p>Par exemple, si l’on souhaite réaliser un site affichant tous les partants à un marathon et qu’on souhaite afficher une flamme à côté de ceux qui ont déjà gagné un marathon, on peut automatiser cela.<br>
+En effet, on peut créer un document avec la liste des participants (Participant.txt) et pour chacun attribut avec leur nom et un avec True si le participant a déjà gagné un marathon et False sinon .</p>
+<p>Le script suivant affichera cela:</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> participant<span class="token operator">-</span>list from <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>Donnees<span class="token operator">/</span>Participants<span class="token punctuation">.</span>txt
+
+<span class="token keyword">function</span> <span class="token function">Participant</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span>participant<span class="token operator">-</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>name<span class="token punctuation">}</span>
+                <span class="token punctuation">{</span>name<span class="token punctuation">.</span>winMarathon <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>🔥<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Participant
+
+</code></pre>
+<p>On a vu jusque là qu’on pouvait créer et afficher des composants, qu’on pouvait eux-mêmes contextualiser. Cependant pour le moment, notre site reste statique et ne prend pas en compte les intéractions que l’utilisateur peut avoir avec les composants.</p>
+<h3>Les props et les interactions</h3>
 
 
 </article>
