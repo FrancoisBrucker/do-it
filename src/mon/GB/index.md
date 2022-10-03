@@ -78,7 +78,7 @@ Cette page est d'un niveau JS un peu compliqué pour un débutant et c'est voulu
 On peut le décomposer comme suit : 
 - Variables 
 - Fonctions 
-- Boucles à conditions et incrémentations 
+- Boucles à conditions et incrémentations <hr>
 Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou C++.<br>
 Notions d'évènements. 
 Notions d'objet. 
