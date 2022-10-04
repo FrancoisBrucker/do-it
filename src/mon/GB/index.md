@@ -83,5 +83,9 @@ Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou
 Notions d'évènements. 
 Notions d'objet. 
 
+10. Suite JS
+
+J'ai sauté quelques chapitres sur des thèmes déjà acquis tels les variables et les boucles. Je continue donc mon apprentissage par les fonctions sur JS. <br>
+Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. 
 
 <!-- Début Résumé -->
