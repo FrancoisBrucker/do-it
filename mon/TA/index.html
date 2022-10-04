@@ -276,6 +276,16 @@ Aussi, on peut trouver sur internet beaucoup mots de passe qui ont fuités. En t
 <p>Où le pepper est une chaîne de caractères unique pour tous les utilisateurs. On veillera à garder très précieusement le pepper (donc pas dans la base de données...) et à ne le communiquer à personne.</p>
 <p>Dès lors, si votre pepper est assez long et qu'il n'est pas compromis, il deviendra très difficile d'attaquer les mots de passe par force brute.</p>
 <h3>Chiffrement et connexion https</h3>
+<p>Les connexions sécurisées https sont utilisées en permanence sur internet. N'importe quel moteur de recherche récent vous enverra une notification plus ou moins alarmiste lorsque vous vous connectez sur un site non sécurisé (ou pire, avec un certificat auto-signé...).</p>
+<p>Mais, vous êtes vous déjà demandé comment s'établissent les connexions sécurisés https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?</p>
+<p>Voyons d'abord séparément les briques pour construire une connexion sécurisée, avant d'expliquer comment tout cela s'agence.</p>
+<p><strong>Chiffrement symétrique</strong></p>
+<p><img src="chiffrement_sym.png" alt="CHiffrement symétrique "><br>
+Chiffrement symétrique en image (par <a href="https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml">libreCours</a>)</p>
+<p>Le <a href="https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique">chiffrement symétrique</a> est connu depuis longtemps (Antiquité). Il consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>, l'algorithme le plus utilisé, la clé est stockée sur 128 bits, et il est considéré comme <em>sûr</em> tant qu'il n'y a pas de meilleure attaque que par force brute.</p>
+<p>Le chiffrement symétrique est la méthode utilisée pour transférer les données <strong>une fois la connexion établie</strong>. Mais, avant de commencer la communication sécurisée, il faut partager la clé de chiffrement. Et, si vous transmettez cette clé <em>en clair</em>, elle peut être interceptée par tous les intermédiaires de la communication, malveillant ou non, et ils pourront tous déchiffrer ce que vous communiquez avec votre interlocuteur.</p>
+<p>Le but est donc d'arriver à faire parvenir la clé de chiffrement au serveur sans que les intermédiaires puissent y avoir accès.</p>
+<p><strong>Chiffrement asymétrique</strong></p>
 <h3>Sources</h3>
 <ol>
 <li>Stocker correctement ses mots de passe : <a href="https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/">https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/</a></li>
