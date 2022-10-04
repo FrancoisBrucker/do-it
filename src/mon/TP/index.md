@@ -20,7 +20,7 @@ Dans ce MON, l'objectif sera de découvrir le React et d'en voir les principales
 
 ## Qu'est-ce que React ?
 
-React est un framework front-end. C’est donc un ensemble de classes, fonctions et utilitaires qui facilite la création de la partie visuelle d’un site Internet. On peut retrouver au même titre Vue ou Angular.
+React est un framework front-end. C’est donc un ensemble de classes, fonctions et utilitaires qui facilite la création de la partie visuelle d’un site Internet. Il existe d'autres frameworks tels que Vue ou Angular.
 
 Le principal objectif de React est de créer des sites Web à partir de composants. Un composant est un ensemble de HTML, CSS et JavaScript. Tous les composants pourront ensuite interagir ensemble afin de donner le site que l’on souhaite.
 
@@ -54,10 +54,10 @@ export default Banner
 créera un composant Banner qui pourra être mis sur notre site.
 Dans ce fichier en .js, on peut ajouter tous les éléments que l’on souhaite avec les balises de HTML (\<h1> pour un titre, \<ul> pour une liste, \<p> pour un paragraphe, \<img> pour une image,...).
 
-On peut associer un fichier en CSS pour donner du style au texte ou aux éléments présents sur un composant.
+On peut également associer un fichier CSS pour donner du style au texte ou aux éléments présents sur un composant.
 
 Mais comment afficher notre site ensuite ?
-Pour cela, à la création de notre projet, un fichier App.js a été créé. On peut lui ajouter les composants que l’on a créer.
+Pour cela, à la création de notre projet, un fichier App.js a été créé. On peut lui ajouter les composants que l’on a créés.
 
 Ainsi :
 
@@ -83,10 +83,10 @@ On peut progressivement ajouter des composants et du style pour que notre site r
 
 ### Contextualiser ces composants
 
-On a vu que React permet de créer des composants mais il permet également de les contextualiser. En effet, lors de la définition d’un composant, on peut ajouter du javascript afin de savoir comment afficher un élément.
+On a vu que React permet de créer des composants. Mais, il permet également de les contextualiser. En effet, lors de la définition d’un composant, on peut ajouter du javascript afin de savoir comment afficher un élément.
 
-Par exemple, si l’on souhaite réaliser un site affichant tous les partants à un marathon et qu’on souhaite afficher une flamme à côté de ceux qui ont déjà gagné un marathon, on peut automatiser cela.
-En effet, on peut créer un document avec la liste des participants (Participant.txt) et pour chacun attribut avec leur nom et un avec True si le participant a déjà gagné un marathon et False sinon .
+Par exemple, si l’on souhaite réaliser un site affichant tous les participants à un marathon et que l'on souhaite afficher une flamme à côté de ceux qui en ont déjà gagné un, on peut automatiser cela.
+En effet, on peut créer un document avec la liste des participants (paticipant-list dans Participant.txt). Pour chaque participant on peut lui attribuer un nom : *name* et un booléen *winMarathon* qui indique si la personne a déjà ou non remporté un marathon.
 
 Le script suivant affichera cela:
 
@@ -111,6 +111,6 @@ export default Participant
 ```
 
 
-On a vu jusque là qu’on pouvait créer et afficher des composants, qu’on pouvait eux-mêmes contextualiser. Cependant pour le moment, notre site reste statique et ne prend pas en compte les intéractions que l’utilisateur peut avoir avec les composants.
-
 ### Les props et les interactions
+
+On a ainsi vu jusque là que l'on pouvait créer et afficher des composants et qu’on pouvait les contextualiser. Cependant, pour le moment, notre site reste statique et ne prend pas en compte les interactions que l’utilisateur pouvait avoir avec les composants.
