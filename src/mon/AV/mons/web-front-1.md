@@ -13,6 +13,7 @@ authors:
 ## Description
 
 Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.
+Je vais expliquer comment j'ai fait mon POK avec Angular.
 
 
 ## Premiers pas
@@ -88,10 +89,120 @@ En se baladant dans le fichier Typescript, on remarque que pour faire appel à l
 ```html
 <app-navbar></app-navbar>
 ```
-On peut alors essayer de l'implémenter dans notre MON :
+On peut alors essayer de l'implémenter dans notre MON. Pour cela, on place cette balise à la place de tout ce qu'il y a dans app.component.html. Sur notre page locale, on peut ainsi voir ceci : 
 
-IMAGE AVEC "navbarworks" 
+<figure> 
+  <img src="../../assets/navbarWorks.png">
+  <figcaption>Implémentation d'un componenent</figcaption>
+</figure>
 
-Le composant de la barre de navigation s'affiche bien ! J'aime bien travailler avec Bootstrap pour avoir des beaux éléments sans faire trop de CSS. On va donc prendre une navbar de Bootstrap pour travailler avec. 
+Le composant de la barre de navigation s'affiche bien ! On peut maintenant de créer une vraie navbar et lui donner un peu de style.
 
-<mark>Note : Pour implémenter Bootstrap sur un projet Angular, il faut l'installer avec npm et le rajouter dans le document angular.json (tuto : https://stackoverflow.com/questions/43557321/angular-4-how-to-include-bootstrap)</mark>
+
+### 4. Navbar
+
+J'aime bien travailler avec Bootstrap pour avoir des beaux éléments sans faire trop de CSS. On va donc prendre une navbar de Bootstrap pour travailler avec. 
+
+Pour implémenter Bootstrap sur un projet Angular, il faut l'installer avec npm et le rajouter dans le fichier angular.json (tuto : https://stackoverflow.com/questions/43557321/angular-4-how-to-include-bootstrap).
+
+J'ai choisi une navbar simple pour commencer : 
+
+```html
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Antoine Varnerot</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#parcours">Parcours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projets">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+```
+
+Après avoir copié ce code dans le fichier navbar.component.html, on devrait avoir une navbar qui s'affiche en haut de la page.
+Pour les différentes parties du site (parcours, projets, contact), on va aussi créer un component. Je créé ainsi un component <i>acceuil</i> qui se placera sous la navbar qui faira office de page d'acceuil, un component <i>overview</i> qui contiendra une brève présentation de moi et un component <i>skills</i> qui contiendra mon parcours et mes compétences.
+
+### 5. Interactions HTML/TS
+
+Un des grands intérêts d'avoir de travailler avec un framework est qu'on va gagner du temps. Par exemple, on peut utiliser des variables du fichier Typescript dans le HTML, on peut écouter des évènements et indiquer quelle fonction appelé si l'évenement se produit ...
+Je vais présenter la syntaxe pour effectuer des actions de ce type et expliquer en quoi cela peut servir dans le projet de port-folio.
+
+- Pour afficher une variable TS dans le fichier HTML du même component on écrit :
+
+```html 
+<img [src]="imageUrl" [alt]="title">
+```
+Avec biensur imageUrl et title des variables définies dans le fichier Typescript. Par exemple :
+```typescript 
+imageUrl!: string;
+title: string;
+ngOnInit(){
+  this.imageUrl = "https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/temoignages/principale/iceland-2111810_1920.jpg?itok=PMXb-dCB";
+  this.title = "paysage";
+}
+
+```
+On parle alors de <strong>attribute binding</strong>.
+
+- Pour écouter un évènement et appeler une function s'il se produit : 
+```html
+<button (click)="myFunction()">Cliquez ici!</button>
+```
+```typescript
+myFunction(){
+  //Actions
+}
+```
+On parle alors d'<strong>event binding</strong>.
+
+
+Note : On peut bien-sur combiner les différentes syntaxes. Pour compter le nombre de fois qu'on appuie sur un bouton on peut écrire :
+ ```html
+<button (click)="addOne()">{{counter}}</button>
+```
+```typescript
+
+ngOnInit(){
+  counter: number = 0;
+}
+
+
+addOne(){
+  this.counter++
+}
+```
+
+<!-- Pour le MON, j'ai décidé de mettre dans le component <i>acceuil</i>, des boutons  -->
+
+### 6. Conditionnement et Boucles
+
+Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs nom (string), technologies (string[]), description (string), keyword (string[]) et image (string) qui est optionnel. 
+
+```typescript
+export class FaceSnap {
+  constructor(public title: string,
+              public description: string,
+              public imageUrl: string,
+              public createdDate: Date,
+              public snaps: number,
+              public location?: string) {
+  }
+}
+```
+#### A. *ngIf
+
+
+
+#### B. *ngFor
