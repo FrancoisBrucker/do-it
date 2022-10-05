@@ -280,12 +280,32 @@ Aussi, on peut trouver sur internet beaucoup mots de passe qui ont fuités. En t
 <p>Mais, vous êtes vous déjà demandé comment s'établissent les connexions sécurisés https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?</p>
 <p>Voyons d'abord séparément les briques pour construire une connexion sécurisée, avant d'expliquer comment tout cela s'agence.</p>
 <p><strong>Chiffrement symétrique</strong></p>
-<p><img src="chiffrement_sym.png" alt="CHiffrement symétrique "><br>
+<p><img src="chiffrement_sym.png" alt="Chiffrement symétrique"><br>
 Chiffrement symétrique en image (par <a href="https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml">libreCours</a>)</p>
 <p>Le <a href="https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique">chiffrement symétrique</a> est connu depuis longtemps (Antiquité). Il consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>, l'algorithme le plus utilisé, la clé est stockée sur 128 bits, et il est considéré comme <em>sûr</em> tant qu'il n'y a pas de meilleure attaque que par force brute.</p>
 <p>Le chiffrement symétrique est la méthode utilisée pour transférer les données <strong>une fois la connexion établie</strong>. Mais, avant de commencer la communication sécurisée, il faut partager la clé de chiffrement. Et, si vous transmettez cette clé <em>en clair</em>, elle peut être interceptée par tous les intermédiaires de la communication, malveillant ou non, et ils pourront tous déchiffrer ce que vous communiquez avec votre interlocuteur.</p>
 <p>Le but est donc d'arriver à faire parvenir la clé de chiffrement au serveur sans que les intermédiaires puissent y avoir accès.</p>
 <p><strong>Chiffrement asymétrique</strong></p>
+<p>Le chiffrement asymétrique repose sur <strong>deux clés</strong> pour <strong>chaque</strong> interlocuteur. Le client et le serveur auront donc chacun une clé publique (elle peut être partagée a tous) et une clé privée (à garder précieusement et <strong>seulement pour soi</strong>).</p>
+<p>Le fonctionnement de la cryptographie asymétrique est le suivant : la clé publique déchiffre ce que la clé privée chiffre, et réciproquement. On utilise cette cryptographie à deux fins :</p>
+<ul>
+<li>Vérifier l'auteur du message. En effet, comme vous êtes le seul à posséder votre clé privée, il vous suffit de chiffrer un message avec celle-ci. Tous ceux qui déchiffreront ce message avec votre clé publique pourront le lire, et vous serez le seul qui a pu l'écrire lisiblement.</li>
+<li>Transmettre un message de façon sécurisée.</li>
+</ul>
+<p>La procédure pour transmettre une clé de chiffrement <strong>symétrique</strong> à l'aide du chiffrement <strong>asymétrique</strong> est le suivant :</p>
+<ol>
+<li>Vous envoyez une requête au serveur lui demandant sa clé publique. Vous lui transmettez également votre clé publique.</li>
+<li>Après la réponse du serveur, vous envoyez la clé de chiffrement symétrique que vous voulez utiliser. Avant l'envoi, il faut que vous la chiffrer successivement :
+<ol>
+<li>Avec votre clé privée : elle permettra de vous authentifier,</li>
+<li>Avec la clé publique du serveur : elle permettra au serveur de déchiffrer le message avec sa clé privée.</li>
+</ol>
+</li>
+</ol>
+<p><img src="Chiffrement_asym%C3%A9trique.jpg" alt="Chiffrement asymétrique"><br>
+Le <a href="https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml">chiffrement asymétrique</a> en image.</p>
+<p>Bravo, vous pouvez ensuite commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique) ! A moins que, vous ne communiquiez pas directement avec le serveur...</p>
+<p><strong><em>Man in the middle</em> et certificats</strong></p>
 <h3>Sources</h3>
 <ol>
 <li>Stocker correctement ses mots de passe : <a href="https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/">https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/</a></li>
