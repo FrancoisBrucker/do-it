@@ -79,21 +79,22 @@
 <p>React : un framework front-end</p>
 <!-- Début Résumé -->
 <h2>Objectif de ce MON</h2>
-<p>Dans ce MON, l'objectif sera de découvrir le React et d'en voir les principales fonctionnalités.</p>
+<p>Dans ce MON, l'objectif sera de découvrir React et d'en voir les principales fonctionnalités.</p>
 <h2>Qu'est-ce que React ?</h2>
 <p>React est un framework front-end. C’est donc un ensemble de classes, fonctions et utilitaires qui facilite la création de la partie visuelle d’un site Internet. Il existe d'autres frameworks tels que Vue ou Angular.</p>
 <p>Le principal objectif de React est de créer des sites Web à partir de composants. Un composant est un ensemble de HTML, CSS et JavaScript. Tous les composants pourront ensuite interagir ensemble afin de donner le site que l’on souhaite.</p>
 <h2>Fonctionnement de React</h2>
+<p>Dans la suite, nous illustrerons le fonctionnement de React avec la réalisation du front d’un site de messagerie.</p>
 <h3>Création d'un projet</h3>
 <p>Tout d’abord, pour créer un projet en React il faut ouvrir un terminal, se placer dans le dossier que l’on souhaite et entrer la commande suivante:</p>
-<p><strong>npx create-react-app mon-site-chez-moi</strong></p>
+<p><strong>npx create-react-app la-boite-aux-lettres</strong></p>
 <p>Un projet avec des dossiers et des fichiers de code va alors se créer.</p>
 <h3>Les composants</h3>
 <p>Comme expliqué précédemment, la logique de React est basée sur les composants. Chaque partie du site que l’on souhaite avoir sera défini par un composant. Par exemple, un site peut avoir un header, un footer,...</p>
 <p>Pour créer et organiser nos composants, on peut créer un dossier les regroupant tous. Chaque composant sera ensuite créé à l’aide d’un fichier en .js.</p>
 <p>Par exemple le fichier Banner.js suivant :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Banner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Mon site chez moi<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>La boîte aux lettres<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Banner
@@ -116,32 +117,70 @@ Pour cela, à la création de notre projet, un fichier App.js a été créé. On
 <p>permettra d’avoir un site avec la Banner précédemment défini.</p>
 <p>En lançant la commande suivante dans la console, notre site s’affiche sur un serveur local:</p>
 <p><strong>npm start</strong></p>
-<p>On peut progressivement ajouter des composants et du style pour que notre site ressemble à ce que l’on souhaite.</p>
+<p>On peut progressivement ajouter des composants et du style pour que notre site ressemble à ce que l’on souhaite. Ainsi, on ajoute des composants pour les utilisateurs, la liste des utilisateurs, les messages et la liste des messages.<br>
+On crée également un composant main qui regroupe la liste des utilisateurs et la liste des messages.</p>
 <h3>Contextualiser ces composants</h3>
 <p>On a vu que React permet de créer des composants. Mais, il permet également de les contextualiser. En effet, lors de la définition d’un composant, on peut ajouter du javascript afin de savoir comment afficher un élément.</p>
-<p>Par exemple, si l’on souhaite réaliser un site affichant tous les participants à un marathon et que l'on souhaite afficher une flamme à côté de ceux qui en ont déjà gagné un, on peut automatiser cela.<br>
-En effet, on peut créer un document avec la liste des participants (paticipant-list dans Participant.txt). Pour chaque participant on peut lui attribuer un nom : <em>name</em> et un booléen <em>winMarathon</em> qui indique si la personne a déjà ou non remporté un marathon.</p>
+<p>Par exemple, ou peut mettre en avant nos meilleurs amis en affichant une flamme à côté de leur nom.<br>
+La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque personne on peut lui attribuer un booléen isBestFriend qui indique si oui ou non on est meilleur ami avec lui.</p>
 <p>Le script suivant affichera cela:</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> participant<span class="token operator">-</span>list from <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>Donnees<span class="token operator">/</span>Participants<span class="token punctuation">.</span>txt
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> userList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allUser'</span>
 
-<span class="token keyword">function</span> <span class="token function">Participant</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token function">UserItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
         <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
-            <span class="token punctuation">{</span>participant<span class="token operator">-</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+            <span class="token punctuation">{</span>userList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> isBestFriend</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
             <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
                 <span class="token punctuation">{</span>name<span class="token punctuation">}</span>
-                <span class="token punctuation">{</span>name<span class="token punctuation">.</span>winMarathon <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>🔥<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token punctuation">}</span>
+                <span class="token punctuation">{</span>isBestFriend <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>🔥<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token punctuation">}</span>
             <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
             <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
     <span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Participant
+<span class="token keyword">export</span> <span class="token keyword">default</span> UserItem
 
 </code></pre>
-<h3>Les props et les interactions</h3>
+<h3>Les interactions</h3>
 <p>On a ainsi vu jusque là que l'on pouvait créer et afficher des composants et qu’on pouvait les contextualiser. Cependant, pour le moment, notre site reste statique et ne prend pas en compte les interactions que l’utilisateur pouvait avoir avec les composants.</p>
+<p>On souhaite pouvoir voir les messages qu'on a eu avec une personne si l'on clique sur son nom.</p>
+<p>Pour cela on utilise les liens de parenté entre les composants. L'utilisateur va cliquer sur un UserItem. L'information va remonter à son parent Main puis redescendre jusqu'à MessageList et c'est la liste de message avec le bon utilisateur qui va s'afficher.<br>
+Pour cela on utilise la fonction useState.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> UserList <span class="token keyword">from</span> <span class="token string">'./UserList'</span>
+<span class="token keyword">import</span> MessageList <span class="token keyword">from</span> <span class="token string">'./MessageList'</span>
+<span class="token keyword">import</span> BarreMessage <span class="token keyword">from</span> <span class="token string">'./BarreMessage'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> allMessage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allMessage'</span>
+<span class="token keyword">import</span> <span class="token string">'../styles/Main.css'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+
+<span class="token keyword">function</span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>conversationwith<span class="token punctuation">,</span> setconversation<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'Alice'</span><span class="token punctuation">)</span>
+
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'ecran-principal'</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>UserList changeConversation<span class="token operator">=</span><span class="token punctuation">{</span>setconversation<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>MessageList list<span class="token operator">=</span><span class="token punctuation">{</span>allMessage<span class="token punctuation">[</span>conversationwith<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'barre-message'</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>BarreMessage<span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Main
+</code></pre>
+<p>La ligne <strong>const [conversationwith, setconversation]=useState('Alice')</strong> permet de créer une zone de stockage pour savoir ce que l'on affiche et pouvoir le modifier. La fonction useState permettra de modifier les informations de la page si l'utilisateur clique sur une autre personne.<br>
+La ligne <strong>UserList changeConversation={setconversation}</strong> permet de récupérer l'information de UserList de quel utilisateur a été sélectionné. La ligne <strong>MessageList list={allMessage[conversationwith]}</strong> permet elle de modifier ce qui va s'afficher.</p>
+<h2>Ressources utilisées</h2>
+<p>Pour effectuer ce MON, j'ai suivi le tutoriel d'OpenClassroom sur React : <a href="https://openclassrooms.com/fr/courses/7008001-debutez-avec-react">https://openclassrooms.com/fr/courses/7008001-debutez-avec-react</a>.<br>
+Par ailleurs, pour avoir plus d'informations sur certains points précis, j'ai également lu de la documentation sur le site de React : <a href="https://fr.reactjs.org/docs/getting-started.html">https://fr.reactjs.org/docs/getting-started.html</a>.</p>
 
 
 </article>
