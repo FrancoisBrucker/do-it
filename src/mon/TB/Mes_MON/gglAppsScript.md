@@ -43,9 +43,34 @@ Il est également possible de modifier un document Excel :
 - Modifier le nom d'une feuille
 - Créer ou modifier la valeur d'une cellule
 
+Il ne faut pas oublier d'utiliser la fonction *save()* afin de sauvegarder les modifications. Il est aussi préférable d'enregistrer les modifications dans une copie du tableur au cas ou il y aurait une erreur.(données corrompues...)
+
 **Idées de programmes**
 - Modifier un tableur
 - Écrire des parties d'un tableur dans un autre
 - Lire des données sur des sites, des textes ou sur le presse papier et les écrire dans un tableur
 - Automatiquement "clean up" des données dans un tableur. (réécrire différents formats de numéros de téléphones en un seul)
 
+## Autres fonctionnalités 
+
+**Modifier le style de police**
+Pour cela on utilise la fontion *Font()* du module *openpyxl.styles*.
+Il est possible:
+- de changer la police avec l'attribut *name*
+- ou la taille avec l'attribut *size*
+- d'écrire en gras avec l'attribut *bold*
+- ou en italique avec l'attribut *italic*.
+
+**Écrire des formules**
+Il est possible d'écrire des formules exactement comme dans un Excel.
+
+**Modifier la taille des lignes et des colonnes**
+Il est possible de changer la hauteur des lignes *row_dimension[].height* et la largeur des colonnes *column_dimension[].width*.
+
+**Fusionner ou séparer des cellules**
+En utilisant les fontions *merge_cells()* ou *unmerge_cells()*.
+
+**Figer des volets**
+Afin d'avoir toujours accès à certaines lignes ou colonnes, il est possible d'utiliser l'attribut *sheet.freeze.panes = ' '*. Toutes les lignes au dessus de celle indiquée ainsi que toutes les colonnes à gauche seront figer mais pas celles indiquées.
+
+**Créer des diagrammes**
