@@ -18,7 +18,7 @@ S'en suivent 5h sur du javascript ou du moins les prémices de js sur developper
 1. <strong>Introduction au html/CSS</strong>
 
 Site : ensemble de pages <br>
-Pages : HTML + CSS + JavaScript <br>
+Page : HTML + CSS + JavaScript <br>
 HTML : Contenu de la page <br>
 CSS : Format de ce contenu <br>
 JS : Dynamisation et interactivité de la page 
@@ -81,7 +81,7 @@ On peut le décomposer comme suit :
  <li>Boucles à conditions et incrémentations</li> </ul>
 Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou C++.<br>
 Notions d'évènements. 
-Notions d'objet. 
+Notions d'objets. 
 
 10. <strong>Suite JS</strong>
 
@@ -89,6 +89,10 @@ J'ai sauté quelques chapitres sur des thèmes déjà acquis tels les variables 
 Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. <br>
 Fonctions intégrées et personnalisées, portée des fonctions. <br>
 J'ai ensuite pu pratiquer un peu et créer ma propre fonction générée sur une page HTML. Cette fonction permettait de créer une box alert lorsqu'on cliquait sur un bouton. La box était ensuite personalisé en focntion du type de message.<br>
-Exemple intéressant car de nombreuses fonctions intégrés ont été utilisées et j'ai pu me familiariser avec la manière de les appeler. 
+Exemple intéressant car de nombreuses fonctions intégrés ont été utilisées et j'ai pu me familiariser avec la manière de les appeler.  C'était aussi un premier exemple pratique de ce qu'on peut faire avec les évènements.
+
+11. <strong>Evenements en JS</strong>
+
+Dernière partie de mon apprentissage en JS : les évènements. Le site contient de nombreux exemples de toutes sortes d'évenements possible et cela m'a pris une bonne partie du temps d'apprentissage. C'était sans doute la partie la plus fastidieuse mais c'était vraiment une nouveauté pour moi et je trouvais nécessaire de prendre le temps de bien comprendre la syntaxe sur comment appeler chaque évènement puisque j'en aurais besoin pour le POK.
 
 <!-- Début Résumé -->
