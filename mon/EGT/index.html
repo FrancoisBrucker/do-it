@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sûrement le seul MON d&#39;info d&#39;Eugénie</title>
+    <title>Les MON d&#39;Eugénie</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">Sûrement le seul MON d'info d'Eugénie</h1>
+  <h1 class="mb-1">Les MON d'Eugénie</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -76,179 +76,18 @@
   
 
   <!-- Début Résumé -->
-<p>J'ai choisi de faire le MON appscript parce que ça ne peut qu'être utile.</p>
+<p>Voici la table des matières des MON de l'année.</p>
 <!-- fin Résumé -->
-<p>Je vais commencer par explorer le site du livre : Automate the boring stuff with Python. Je pourrai ensuite creuser les thématiques qui m'intéressent grâce à Google Apps script et éventuellement trouver une application utile à mettre en place.</p>
-<p>Lecture du chapitre 10 : L'organisation de dossiers</p>
-<h3>Le module shutil</h3>
-<p>Pour ce chapitre, une bibliothèque python est utile : shutil.</p>
-<h4>Pour copier fichiers et dossiers</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Fonction</strong></th>
-<th style="text-align:center"><strong>Explication</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">shutil.copy(source, destination)</td>
-<td style="text-align:center">Cela copie un fichier d'un endroit à un autre en spécifiant le chemin de l'endroit à chaque fois. La fonction renvoie le chemin du fichier copié.</td>
-</tr>
-<tr>
-<td style="text-align:center">shutil.copytree(source, destination)</td>
-<td style="text-align:center">Cela copie un dossier avec tous ses fichiers et sous-dossiers. Même fonctionnement que celle d'avant.</td>
-</tr>
-</tbody>
-</table>
-<p>Exemples :</p>
-<pre><code>import shutil, os
-from pathlib import Path
-p = Path.home()
-shutil.copy(p / 'spam.txt', p / 'some_folder')
-    'C:\\Users\\Al\\some_folder\\spam.txt'
-
-shutil.copy(p / 'eggs.txt', p / 'some_folder/eggs2.txt')
-    WindowsPath('C:/Users/Al/some_folder/eggs2.txt')
-
-shutil.copytree(p / 'spam', p / 'spam_backup')
-    WindowsPath('C:/Users/Al/spam_backup')
-</code></pre>
-<h4>Pour déplacer et renommer des fichiers et des dossiers</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Fonction</strong></th>
-<th style="text-align:center"><strong>Explication</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">shutil.move(source, destination)</td>
-<td style="text-align:center">On peut déplacer un fichier ou un dossier à l'adresse précisée. Soit on l'envoie dans un dossier et il gardera le même nom, soit on l'envoie dans un dossier en précisant le nouveau nom au bout de l'adresse.</td>
-</tr>
-</tbody>
-</table>
-<p>Attention, il faut que le dossier dans lequel on déplace l'objet existe bien, sinon, la fonction va transformer l'objet en un fichier sans extension du nom du présumé dossier. De même, il faut que tout les dossiers cités dans l'adresse de destination existent, sinon python trouvera une erreur. Lorsqu'on déplace un fichier dans un dossier, s'il existe déjà un fichier du même nom dedans, celui-ci sera écrasé.</p>
-<p>Exemples :</p>
-<pre><code>import shutil
-shutil.move('C:\\bacon.txt', 'C:\\eggs')
-    'C:\\eggs\\bacon.txt'
-
-shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
-    'C:\\eggs\\new_bacon.txt'
-
-shutil.move('C:\\bacon.txt', 'C:\\eggs')   (le dossier eggs n'existe pas)
-    'C:\\eggs'
-</code></pre>
-<h4>Pour effacer définitivement</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Fonction</strong></th>
-<th style="text-align:center"><strong>Explication</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">os.unlink(path)</td>
-<td style="text-align:center">Cela efface le fichier.</td>
-</tr>
-<tr>
-<td style="text-align:center">os.rmdir(path)</td>
-<td style="text-align:center">Cela efface le dossier vide.</td>
-</tr>
-<tr>
-<td style="text-align:center">shutil.rmtree(path)</td>
-<td style="text-align:center">Cela efface le dossier et tout ce qu'il contient.</td>
-</tr>
-</tbody>
-</table>
-<p>Il faut faire attention à ces fonctions car une erreur est chère payée. Il vaut mieux faire afficher par la fonction les fichiers qui seraient supprimés avant de réellement l'exécuter.<br>
-Comme ça :</p>
-<pre><code>import os
-from pathlib import Path
-for filename in Path.home().glob('*.rxt'):
-    #os.unlink(filename)
-    print(filename)
-</code></pre>
-<h4>Envoyer à la corbeille</h4>
-<p>Pour éviter le problème cité à la partie d'avant, il y a une solution.</p>
-<p>Il faut installer le module sen2trash en exécutant "pip install --user send2trash" dans un terminal.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Fonction</strong></th>
-<th style="text-align:center"><strong>Explication</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">send2trash.send2trash(path)</td>
-<td style="text-align:center">Cela envoie l'objet dans la corbeille.</td>
-</tr>
-</tbody>
-</table>
-<p>Avant l'utilisation de la fonction, il faut importer le module.</p>
-<h3>Parcourir une arborescence</h3>
-<p>La fonction os.walk(path) permet de parcourir une arborescence. Elle renvoie 3 éléments : une chaîne de caractères correspondant au nom du dossier actuel, une liste des noms des dossiers contenus dans le dossier actuel et une liste des noms des fichiers contenus dans le dossier actuel.</p>
-<p>On peut donc utiliser ce programme :</p>
-<pre><code>import os
-
-for folderName, subfolders, filenames in os.walk('C:\\delicious'):
-    print('The current folder is ' + folderName)
-
-    for subfolder in subfolders:
-        print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
-
-    for filename in filenames:
-        print('FILE INSIDE ' + folderName + ': '+ filename)
-</code></pre>
-<p>On obtiendra une liste des objets de l'arborescence, comme si on la parcourait par niveau.</p>
-<h3>Compresser des dossiers</h3>
-<p>Ici, nous allons utiliser le module zipfile de Python.</p>
-<h4>Lire des fichiers zip</h4>
-<p>(Cette partie ne m'intéresse pas trop, j'ajouterai des informations si je me rends compte que je vais en avoir besoin. En résumé, il existe une fonction qui permet d'obtenir l'arborescence contenue dans un fichier zip.)</p>
-<p>Fonctions utiles pour la suite :</p>
-<p>Pour créer l'objet zip et pour que Python le comprenne, il faut faire :<br>
-import zipfile, os<br>
-from pathlib import Path<br>
-p = Path.home()<br>
-exampleZip = zipfile.ZipFile(p / 'example.zip')</p>
-<p>On utilise ensuite exampleZip en préfixe des fonctions qu'on veut lui appliquer.<br>
-Il faut ensuite fermer l'objet avec la fonction close() : exampleZip.close().</p>
-<h4>Extraire de fichiers zip</h4>
-<p>La fonction extractall() permet d'extraire l'intégralité des objets contenus dans le fichier zip vers le dossier de travail où l'on se trouve. On peut également ajouter le chemin d'accès à un dossier entre les parenthèses, on a deux cas de figure : soit le dossier existe et le contenu du fichier zip sera envoyer dans ce dossier, soit le dossier n'existe pas et il est créé pour mettre le contenu du fichier zip.</p>
-<p>Exemple d'utilisation :</p>
-<pre><code>import zipfile, os
-from pathlib import Path
-p = Path.home()
-exampleZip = zipfile.ZipFile(p / 'example.zip')
-exampleZip.extractall()
-exampleZip.close()
-</code></pre>
-<p>Il existe aussi une fonction pour n'extraire qu'un fichier dans le fichier zip mais je ne pense pas en avoir besoin.</p>
-<h4>Créer et ajouter à un fichier zip</h4>
-<p>Pour comprendre comment faire, observons ces lignes de code :</p>
-<pre><code>import zipfile
-newZip = zipfile.ZipFile('new.zip', 'w')
-newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
-newZip.close()
-</code></pre>
-<p>On crée l'objet zip en l'ouvrant en mode écriture avec le w en second argument de la fonction ZipFile(). Ensuite, on y ajoute le contenu compressé du fichier spam.zip (la méthode de compressage est précisée en second argument de write()). Ceci est le cas de figure lorsqu'on crée un fichier zip et qu'on le remplit. S'il y avait déjà du contenu dans ce fichier zip, il aurait été remplacé par le fichier spam compressé. Si on souhaite ajouter de l'information dans un fichier zip existant, il faut l'ouvrir en mode ajout (ou append) grâce à la lettre a au lieu du w.</p>
-<h3>Projet d'application</h3>
-<p>J'ai installé les versions recommandées de Python et de l'éditeur.</p>
-<p>J'ai choisi de faire le projet sur la création de fichier zip de backup.</p>
-<p>Le principe de la fonction à créer est le suivant :</p>
-<ul>
-<li>La fonction prend en variable un dossier.</li>
-<li>Elle commence par trouver le nom du nouveau fichier zip pour éviter d'écraser les versions précédentes du backup.</li>
-<li>Elle crée le fichier zip.</li>
-<li>Elle parcourt l'arborescence du dossier en ajoutant tous les fichiers du dossier de départ dans le fichier zip.</li>
-</ul>
-<p>Après avoir créé la fonction, je l'ai lancée sur un dossier d'un électif (RIS) de l'année dernière pour voir si cela fonctionnait bien. J'ai eu une première erreur dû à des mauvaises indentations. Je l'ai relancé et ça a fonctionné : un fichier zip nommé RIS_1.zip s'est créé. Je l'ai relancé deux fois pour vérifier que le nom s'incrémentait bien, c'était le cas. Dernier test, j'ai effacé le fichier RIS_2.zip en conservant le RIS_3.zip. En relancant la fonction, le programme a bien recréé RIS_2.zip et est passé au RIS_4.zip au coup d'après.</p>
-<p>J'ai tenté de modifier légèrement le programme pour voir si j'arrivais à copier dans le fichier zip tous les documents sauf ceux en .pdf.</p>
-<p>J'ai ensuite réalisé qu'aucun des fichiers n'apparaissaient dans les dossiers de backup. Je n'ai toujours pas trouvé la solution.</p>
+<h2>Temps 1</h2>
+<p>Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p><a href="src%5Cmon%5CEGT%5CMON_1_1%5Cindex.md">MON Automate the boring stuff</a></p>
+</div></div>
+<p>Diagnostic organisationnel (étude de cas CFP)</p>
 
 
 </article>
