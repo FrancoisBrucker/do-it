@@ -192,6 +192,8 @@ Pour davantage d'informations, rendez-vous sur la [documentation d'Eleventy](htt
 
 ## 3. Installation de TailwindCSS
 
+{% details "A vos risques et périls" %}
+
 Afin de faciliter la création du style, nous allons utiliser [TailwindCSS](https://tailwindcss.com/) dans notre projet. TailwindCSS est un framework CSS basé sur le principe de classes utilitaires. Cela rend la phase de développement beaucoup plus simple.
 
 Commençons par installer `tailwindcss` et `concurrently` (cela nous servira plus tard):
@@ -285,3 +287,5 @@ J'ai découvert cela durant l'élaboration de ce MON. Quand vous appliquez des c
 
 ⟶ Ainsi je vous conseille de ne pas utiliser de classes Tailwind dans vos pages mais seulement dans vos templates.
 {% endattention %}
+
+{% enddetails %}
