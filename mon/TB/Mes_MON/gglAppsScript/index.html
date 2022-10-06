@@ -96,6 +96,7 @@
 <li>Modifier le nom d'une feuille</li>
 <li>Créer ou modifier la valeur d'une cellule</li>
 </ul>
+<p>Il ne faut pas oublier d'utiliser la fonction <em>save()</em> afin de sauvegarder les modifications. Il est aussi préférable d'enregistrer les modifications dans une copie du tableur au cas ou il y aurait une erreur.(données corrompues...)</p>
 <p><strong>Idées de programmes</strong></p>
 <ul>
 <li>Modifier un tableur</li>
@@ -103,6 +104,25 @@
 <li>Lire des données sur des sites, des textes ou sur le presse papier et les écrire dans un tableur</li>
 <li>Automatiquement "clean up" des données dans un tableur. (réécrire différents formats de numéros de téléphones en un seul)</li>
 </ul>
+<h2>Autres fonctionnalités</h2>
+<p><strong>Modifier le style de police</strong><br>
+Pour cela on utilise la fontion <em>Font()</em> du module <em>openpyxl.styles</em>.<br>
+Il est possible:</p>
+<ul>
+<li>de changer la police avec l'attribut <em>name</em></li>
+<li>ou la taille avec l'attribut <em>size</em></li>
+<li>d'écrire en gras avec l'attribut <em>bold</em></li>
+<li>ou en italique avec l'attribut <em>italic</em>.</li>
+</ul>
+<p><strong>Écrire des formules</strong><br>
+Il est possible d'écrire des formules exactement comme dans un Excel.</p>
+<p><strong>Modifier la taille des lignes et des colonnes</strong><br>
+Il est possible de changer la hauteur des lignes <em>row_dimension[].height</em> et la largeur des colonnes <em>column_dimension[].width</em>.</p>
+<p><strong>Fusionner ou séparer des cellules</strong><br>
+En utilisant les fontions <em>merge_cells()</em> ou <em>unmerge_cells()</em>.</p>
+<p><strong>Figer des volets</strong><br>
+Afin d'avoir toujours accès à certaines lignes ou colonnes, il est possible d'utiliser l'attribut <em>sheet.freeze.panes = ' '</em>. Toutes les lignes au dessus de celle indiquée ainsi que toutes les colonnes à gauche seront figer mais pas celles indiquées.</p>
+<p><strong>Créer des diagrammes</strong></p>
 
 
 </article>
