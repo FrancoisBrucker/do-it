@@ -86,6 +86,9 @@ Notions d'objet.
 10. Suite JS
 
 J'ai sauté quelques chapitres sur des thèmes déjà acquis tels les variables et les boucles. Je continue donc mon apprentissage par les fonctions sur JS. <br>
-Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. 
+Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. <br>
+Fonctions intégrées et personnalisées, portée des fonctions. <hr>
+J'ai ensuite pu pratiquer un peu et créer ma propre fonction générée sur une page HTML. Cette fonction permettait de créer une box alert lorsqu'on cliquait sur un bouton. La box était ensuite personalisé en focntion du type de message.<br>
+Exemple intéressant car de nombreuses fonctions intégrés ont été utilisées et j'ai pu me familiariser avec la manière de les appeler. 
 
 <!-- Début Résumé -->
