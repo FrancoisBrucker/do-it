@@ -122,7 +122,46 @@ Il est possible de changer la hauteur des lignes <em>row_dimension[].height</em>
 En utilisant les fontions <em>merge_cells()</em> ou <em>unmerge_cells()</em>.</p>
 <p><strong>Figer des volets</strong><br>
 Afin d'avoir toujours accès à certaines lignes ou colonnes, il est possible d'utiliser l'attribut <em>sheet.freeze.panes = ' '</em>. Toutes les lignes au dessus de celle indiquée ainsi que toutes les colonnes à gauche seront figer mais pas celles indiquées.</p>
-<p><strong>Créer des diagrammes</strong></p>
+<p><strong>Créer des diagrammes</strong><br>
+Pour créer un diagramme, il faut suivre les étapes suivantes:</p>
+<ul>
+<li>Créer un objet <em>Reference</em> à partir d'une selection de cellules : <em>chart.Reference(sheet, min_col= , min_row= , max_col= , max_row=)</em></li>
+<li>Créer un objet <em>Series</em> qui prend l'objet <em>Reference</em> en arguement :  <em>chart.Series(refObj, title='')</em></li>
+<li>Créer un objet <em>Chart</em> qui peut être un diagramme en barre, en ligne, un nuage de point ou un camembert</li>
+<li>Ajouter l'objet <em>Series</em> à l'objet <em>Chart</em></li>
+<li>Ajouter l'objet <em>Chart</em> à la feuille : <em>sheet.add_chart(chartObj, 'C5')</em></li>
+</ul>
+<h2>Google Apps Script</h2>
+<p>Afin de compléter ma formation et de pouvoir également travailler sur les google sheets j'ai suivi le guide <a href="https://developers.google.com/apps-script/guides/sheets">Automatiser des tâches avec Apps Script</a>.</p>
+<p><strong>Présentation</strong></p>
+<p>Comme pour <em>openpyxl</em>, Apps Script permet de créer, lire et modifier des tableurs Google Sheets. La principale différence est le langage utilisé : Apps Script utilise du code JavaScript.</p>
+<p>Les fonctionnalités essentielles :</p>
+<ul>
+<li>Lire des données : avec les fonctions <em>getValue()</em> ou <em>getValues()</em></li>
+<li>Écrire des données : avec les fonctions <em>setValue()</em> ou <em>setValues()</em></li>
+</ul>
+<p>On peut ensuite créer des fonctions qui permettent de transformer les valeurs récupérés ou d'en écrire de nouvelles.<br>
+Différentes fonctionnalités :</p>
+<ul>
+<li>
+<p>Mise en forme : <a href="https://developers.google.com/apps-script/reference/spreadsheet/range">Class Range</a>, permet de modifier le fond, le style de police, permet de fusionner ou de diviser des cellules, définir des règles de validation,...</p>
+</li>
+<li>
+<p>Création de graphiques :<br>
+<em>var chart = sheet.newChart()</em> (initialisation)<br>
+<em>.setChartType()</em> (type de graphique)<br>
+<em>.addRange(sheet.getRange())</em> (séléction des cellules)<br>
+<em>.setPosition()</em> (position du graphique)<br>
+<em>.build();</em> (construction du graphique)</p>
+<p><em>sheet.insertChart(chart);</em> (insère le graphique dans la feuille de calcul)</p>
+</li>
+<li>
+<p>Macros : fonctions qui s'activent à l'aide d'un raccourci clavier</p>
+</li>
+<li>
+<p>Déclencheurs : il est possible de paramétrer les scripts afin qu'ils se déclenchent à un moment précis. Par exemple, avec les fonctions <em>onOpen()</em> ou <em>onEdit()</em>.</p>
+</li>
+</ul>
 
 
 </article>
