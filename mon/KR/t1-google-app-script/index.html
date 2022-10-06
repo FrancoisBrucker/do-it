@@ -88,29 +88,59 @@
 </ol>
 <h2>Déroulement du projet</h2>
 <ol>
-<li>Tutoriel sur YouTube: <a href="https://www.youtube.com/watch?v=Nd3DV_heK2Q">https://www.youtube.com/watch?v=Nd3DV_heK2Q</a> - 25 minutes</li>
-<li>Reconstruit le projet du tutoriel - 15 minutes + 30 minutes de correction d'erreur</li>
-<li>Création d'un plan pour le projet to-do (le but du projet) - 30 minutes</li>
-<li>Creation de la liste des tâches avec l'API - 15 minutes</li>
-<li>Trier la liste - 5 minutes + 10 minutes de correction d'erreur (au début, l'en-tête du tableau a également été trié)</li>
-<li>Récupérer le statut "terminé" et le convertir en case à cocher - 45 minutes</li>
-<li>Griser les tâches accomplies - 25 minutes</li>
-<li>TODO Erstellen einer Funktion, um die Anzahl der erledigten/nicht erledigten Aufgaben pro Tag zu zählen - bisher 30 min, xx minutes</li>
+<li>Tutoriel sur YouTube</li>
+<li>Reconstruit le projet du tutoriel</li>
+<li>Création d'un plan pour le projet to-do (le but du projet)</li>
+<li>Creation de la liste des tâches avec l'API</li>
+<li>Trier la liste et correction d'erreur (au début, l'en-tête du tableau a également été trié)</li>
+<li>Récupérer le statut "terminé" et le convertir en case à cocher</li>
+<li>Griser les tâches accomplies</li>
+<li>Génération d'un charte basique á la base de la documentation</li>
+<li>Travailler avec le debugger pour identifier des fautes</li>
+<li>Création d'une fonction permettant de compter le nombre de tâches effectuées/non effectuées par jour</li>
 </ol>
-<p>. TODO Aufruf dieser Funktion bei onEdit() - xx minutes<br>
-. TODO Ergänzen der Funktion: Erstellen eines Diagramms - xx minutes<br>
-. TODO documenter le code - xx minutes<br>
-.</p>
-<p>Gesamt bisher: 25 + 15 + 30 + 30 + 15 + 5 + 10 + 45 + 25 + 30 = 230 Minuten = 3,83 Stunden</p>
+<ul>
+<li>J'ai d'abord fait, sans trop réfléchir, quelques essais naïfs avec des tableaux et JSON, qui n'ont abouti à rien.</li>
+<li>Ensuite, j'ai imaginé un algorithme (voir ci-dessous) que j'ai ensuite converti en code.</li>
+<li>Cette tâche a pris beaucoup plus de temps que prévu, car je n'ai pas encore beaucoup d'expérience dans le traitement des données et dans les opérations sur les arrays, les listes, les dictionnaires etc.</li>
+</ul>
+<ol start="11">
+<li>Création d'un graphique avec le nombre de tâches effectuées/non effectuées par jour</li>
+<li>TODO Appeller la fonction a chaque modification de la feuille (onEdit)</li>
+<li>TODO Nettoyage : externaliser dans des fonctions, supprimer le logging</li>
+<li>TODO Documentation du code</li>
+</ol>
+<h2>Algorithmus für die Daten</h2>
+<ol>
+<li>Erstes Datum herausfinden</li>
+<li>Letztes Datum herausfinden</li>
+<li>Hilfstabelle erstellen mit jedem Datum zwischen erstem und letztem Datum, initialisieren mit 0 für Anzahl erledigt und 0 für Anzahl offen: | Datum | Anzahl erledigt | Anzahl offen |</li>
+<li>Für jede Zeile in der Tabelle:
+<ol>
+<li>Datum der Zeile herausfinden</li>
+<li>In der Hilfstabelle das Datum suchen</li>
+<li>Wenn die Zeile erledigt ist, dann Anzahl erledigt um 1 erhöhen, sonst Anzahl offen um 1 erhöhen</li>
+</ol>
+</li>
+<li>Graph erstellen mit den Daten aus der Hilfstabelle</li>
+</ol>
 <h2>Ressources utilisées</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=Nd3DV_heK2Q">https://www.youtube.com/watch?v=Nd3DV_heK2Q</a></li>
-<li><a href="https://developers.google.com/apps-script/reference/spreadsheet/">https://developers.google.com/apps-script/reference/spreadsheet/</a></li>
+<li>Tutoriel sur YouTube: <a href="https://www.youtube.com/watch?v=Nd3DV_heK2Q">https://www.youtube.com/watch?v=Nd3DV_heK2Q</a></li>
+<li>Documentation sur Google Apps Script en utilisant avec Google Sheets: <a href="https://developers.google.com/apps-script/reference/spreadsheet/">https://developers.google.com/apps-script/reference/spreadsheet/</a></li>
+<li>Documentation de la génération de graphiques: <a href="https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart">https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart</a></li>
+<li>Documentation du debugger: <a href="https://developers.google.com/apps-script/guides/support/troubleshooting#debugging">https://developers.google.com/apps-script/guides/support/troubleshooting#debugging</a></li>
+<li>Documentation de la fonction onEdit: <a href="https://developers.google.com/apps-script/guides/triggers#onedite">https://developers.google.com/apps-script/guides/triggers#onedite</a>)</li>
+<li>Documentation des Arrays in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></li>
+<li>Documentation de JSON in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON</a></li>
+<li>Documentation de la fonction Date in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a></li>
+<li>Boucler les dates: <a href="https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript">https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript</a></li>
 </ul>
 <h2>Conclusion</h2>
 <ul>
 <li>Google Apps Script est un outil très puissant pour automatiser des tâches répétitives. Il s'agit pour ainsi dire de JavaScript conçu pour les Google Apps. Google met à disposition des classes spéciales pour les Google Apps, qui permettent d'interagir avec les applications.</li>
 <li>J'ai appris pas mal de choses, notamment en rafraîchissant mes connaissances en JavaScript, et je pense que je vais maintenant automatiser plus souvent quelque chose dans Google Apps Script.</li>
+<li>Néanmoins, Google Apps Script n'est pas adapté aux développements sérieux qui dépassent le cadre des produits Google. Il ne peut être développé qu'en ligne dans l'éditeur Google et le debugger n'a que peu de fonctionnalités. Pour les débutants et les petits projets, Goole Apps Script est toutefois très bien adapté.</li>
 </ul>
 <p><a href="../">&lt;-- Retour</a></p>
 
