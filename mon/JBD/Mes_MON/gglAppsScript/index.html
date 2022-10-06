@@ -180,7 +180,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 <div class="pl-8  mb-2 mr-2">
 <p><strong>Attention</strong> aux Formules</p>
 </div><div class="pl-8 mr-2">
-<p>Les formules que l'ont <strong>get</strong> et que l'on <strong>set</strong> sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)</p>
+<p>Les formules que l'on <strong>get</strong> et que l'on <strong>set</strong> sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)</p>
 </div></div>
 <h4 id="h2-2-2">Class Sheet</h4>
 <table>
@@ -233,7 +233,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 </code></pre>
 <p>J'ai pas cependant eu l'occasion d'aller en profondeur dans cette fonctionnalité, le laisse cette possibilité à quelqu'un d'autre pour un autre MON 😉</p>
 <h4 id="h2-3-1">Listener</h4>
-<p>En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un actiion se produit.</p>
+<p>En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un action se produit.</p>
 <p>Les 2 principales fonctions sont :</p>
 <ul>
 <li>onEdit : executée à chaque fois qu'un utilisateur modifie une case</li>
@@ -246,8 +246,31 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
   range<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>il existe quelques atres fonctions, comme d'habitude le détail dans les <a href="#liens">liens</a>👇</p>
+<p>Il existe quelques autres fonctions, comme d'habitude le détail dans les <a href="#liens">liens</a>👇</p>
 <h2 id="h3"> Exemple - Création d'un Tricount </h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>L'objectif est de créer un Tricount, permettant de gérer les comptes à plusieurs. Très utilisé dans les colocs centraliennes notamment. Chacun ajoute les dépenses faites pour le groupe et l'application comptabilise combien d'argent chacun doit à qui.</p>
+</div></div>
+<p>Le projet est composé de paramtères modifiables, pour permettre de personnaliser le Google Sheet</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> tricountSettings <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">sourceSheet</span><span class="token operator">:</span> <span class="token string">'Ajout_achat'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">targetSheet</span><span class="token operator">:</span> <span class="token string">'Historique'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">statSheet</span><span class="token operator">:</span> <span class="token string">'Statistiques'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">people</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"Personne 1"</span><span class="token punctuation">,</span><span class="token string">"Personne 2"</span><span class="token punctuation">,</span> <span class="token string">"Personne 3"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Et de 4 fonctions :</p>
+<ul>
+<li><strong>tricountAddToHistory</strong>, dont le but est de transférer les données d'ajout d'achat dans la prtie historique (fonction inspirée du <a href="https://support.google.com/docs/thread/41717054">travail de --Hyde</a>)</li>
+<li><strong>columnToLetter</strong>, dont le but est de transformer la ième colonne en la lettre associée (fonction créée par <a href="https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter">AdamL</a>)</li>
+<li><strong>onEdit</strong>, dont le but est de déclencher la fonction <strong>trincountAddToHistory</strong> si les conditions sont réunies</li>
+<li><strong>generateSheet</strong>, dont le but est de créer toute la mise en page du tricount au début</li>
+</ul>
+<p>Tout le code source est disponible <a href="#liens">liens</a>.</p>
 <h2 id="liens"> Liens Utiles </h2>
 <p>Documentation de Google sur l'utilisation de Google Apps Script sur ses différents produits :</p>
 <ul>
@@ -255,17 +278,19 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 <li><a href="https://developers.google.com/apps-script/guides/docs">Google Docs</a></li>
 <li><a href="https://developers.google.com/apps-script/guides/slides">Google Slides</a></li>
 </ul>
-<p>Mon travail</p>
-<ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing">Le Google Sheet</a></li>
-<li><a href="../../Annexe/GglAppsScript">Le code source</a></li>
-</ul>
-<p>Documentation</p>
+<p>Documentation sur les fonctionnalitées :</p>
 <ul>
 <li><a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet">Class Sheet</a> : classe de feuille de calcul</li>
 <li><a href="https://developers.google.com/apps-script/reference/spreadsheet/range">Class Range</a> : classe d'un ou plusieurs cases</li>
 <li><a href="https://developers.google.com/apps-script/guides/triggers">Déclencheurs listener</a> : Fonction listener</li>
 <li><a href="https://developers.google.com/apps-script/guides/triggers/installable">Déclencheur temporel</a> : Fonction exéctuée de manière régulière</li>
+</ul>
+<p>Mon travail :</p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing">Le Google Sheet</a></li>
+<li><a href="../../Annexe/GglAppsScript">Le code source</a></li>
+<li><a href="https://support.google.com/docs/thread/41717054">Inspiration pour <strong>tricountAddToHistory</strong></a></li>
+<li><a href="https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter">Fonction <strong>columnToLetter</strong></a></li>
 </ul>
 
 
