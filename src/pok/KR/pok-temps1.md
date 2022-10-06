@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "POK 1 - Analyse comparative des différentes configurations organisationnelles"
+title: "Analyse comparative des différentes configurations organisationnelles - POK 1"
 authors:
   - Kasimir Romer
 ---
@@ -13,7 +13,7 @@ A partir de l'analyse comparative d'au moins 3 entreprises du domaine de l'IT, i
 1. Définition de l'objectif
 2. Définition des termes importants
 3. Sélection des entreprises
-4. Identification et analyse de la configuration organisationnelle de chaque entreprise selon Heintzberg
+4. Identification et analyse de la configuration organisationnelle de chaque entreprise selon Mintzberg
 5. Présentation d'exemples d'adoption de la conception organisationnelle et des méthodes de gestion par d'autres entreprises
 
 ## Objectif
@@ -25,26 +25,15 @@ Dans ce contexte, chaque étape doit être bien documentée et justifiée de man
 
 
 ## Termes importants
-**Configurations**
-Une configuration est l'ensemble des éléments qui composent une organisation, c'est-à-dire les personnes, les tâches, les technologies, les processus, les règles, les structures, les cultures, les valeurs, les objectifs, les stratégies, etc.
-
-{% note %}
-To-Do: trouver des sources, ameliorer la definition
-{% endnote %}
+**Configuration**
+Une configuration est l'ensemble des éléments d'un système (https://dictionnaire.lerobert.com/definition/configuration). En économie d'entreprise, une configuration est l'ensemble des élements qui composent une organisation, c'est-à-dire les personnes, les tâches, les technologies, les processus, les règles, les structures, les cultures, les valeurs, les objectifs, les stratégies, etc.
 
 **Organisation**
-{% attention %}
-To-Do: Définir l'organisation
-{% endattention %}
+Une organisation est un ensemble d'individus défini par une structure, un objectif, une culture et des moyens. Selon Henry Mintzberg, un économiste et gestionnaire canadien, une organisation se compose de six éléments fondamentaux : Le noyau opérationnel, le sommet stratégique, la ligne médiane, la technostructure, l'état-major auxiliaire, l'idéologie. Ceux-ci apparaissent dans chaque organisation, mais à des degrés divers.
 
 **Configurations Organisationelles**
-Les configurations organisationnelles sont les configurations qui sont spécifiques à l'organisation, c'est-à-dire les configurations qui sont propres à l'organisation et qui ne sont pas partagées avec d'autres organisations.
-{% note %}
-To-Do: trouver des sources, ameliorer la definition
-{% endnote %}
+Le modèle de Mintzberg classe les entreprises en trois dimensions afin de les regrouper en **configurations organisationnelles** sur la base de ces classifications. Les dimensions sont (1) les **composantes clés de l'organisation**, (2) le **mécanisme de coordination** et (3) le **type de décentralisation**.
 
-**Model d'après Mintzberg**
-Le modèle d'Henry Mintzberg, un économiste et gestionnaire canadien, classe les entreprises en trois dimensions afin de les regrouper en configurations organisationnelles sur la base de ces classifications. Les dimensions sont (1) les composantes clés de l'organisation, (2) le mécanisme de coordination et (3) le type de décentralisation.
 En combinant ces dimensions, Mintzberg en déduit cinq configurations organisationnelles différentes:
 1. organisation **entrepreneuriale** / structure simple
 2. organisation **mécaniste**  / bureaucratique
@@ -93,8 +82,15 @@ To-Do
 **DevOps**
 
 ## Sources
-- [Mintzberg’s Organizational Configurations: Understanding Your Organizational Structure (Mindtools)](https://www.mindtools.com/pages/article/newSTR_54.htm)
+- [Mintzberg, Henry. „Structure in 5’s: A Synthesis of the Research on Organization Design“. Management Science, Bd. 26, Nr. 3, Mars 1980, p. 322–41. doi:10.1287/mnsc.26.3.322](http://www.sietmanagement.fr/wp-content/uploads/2016/04/Structure-in-fives-Mintzberg.pdf)
 - [Lunenburg, Fred C. "Organizational structure: Mintzberg’s framework." *International journal of scholarly, academic, intellectual diversity* 14.1 (2012): 1-8.](https://platform.europeanmoocs.eu/users/8/Lunenburg-Fred-C.-Organizational-Structure-Mintzberg-Framework-IJSAID-V14-N1-2012.pdf)
+- [Mintzberg’s Organizational Configurations: Understanding Your Organizational Structure (mindtools.com)](https://www.mindtools.com/pages/article/newSTR_54.htm)
+- [Wikipedia allemand - La Configuration de Mintzberg](https://de.wikipedia.org/wiki/Konfiguration_von_Mintzberg)
 
+## To-Dos
+- 5. Punkt bei der Roadmap etwas einfacher halten: keine konkreten Beispiele, sondern nur Tendenzen
+- Paypal überlegen als Firma
+- aufgekaufte Startups
+- theconversation.com checken
 
 [<-- Retour](../)
