@@ -23,12 +23,12 @@ HTML : Contenu de la page <br>
 CSS : Format de ce contenu <br>
 JS : Dynamisation et interactivité de la page 
 
-2. Basic web page 
+2. <strong>Basic web page </strong>
 
 Création de notre première page. <br>
 Notions abordées : balises, paragraphes, titres, list, head, body, br, hr. 
 
-3. Links and Images 
+3. <strong>Links and Images </strong>
 
 Elargissement de page web à site web, relier des pages entre elles grâce à des liens, insertion d'images. <br>
 Apprentissage de la rigueur à appliquer à ses dossiers, fichiers, path afin de les retrouver. <br>
@@ -36,14 +36,14 @@ Absolute Link, relative link, rooth-relative link. <br>
 Formats d'images et leurs utilisations : png, jpg, gif, svg. <br>
 Dimensions de l'image. 
 
-4. CSS Base
+4. <strong>CSS Base</strong>
 
 Relier un fichier CSS à un HTML. <br>
 Définir le style sur les différentes balises : couleur, taille, police...<br>
 Styles de pages, de box, d'inline. <br>
 Balises div et span, text-align center.
 
-5. CSS Box
+5. <strong>CSS Box</strong>
 
 Etudes complètes de la notion de box. Répartition de la pages en terme de blocs.<br>
 Content, padding, border et margin. <br>
@@ -51,26 +51,26 @@ Manière de paramétrer les espaces entre tous selon toutes les directions. <br>
 Aligner les box au centre avec auto-margin.
 Width, Height.
 
-6. CSS selector 
+6. <strong>CSS selector</strong> 
 
 Notions de class permettant de styliser toutes les parties de notre site. <br>
 Utilisation plus complètes des balises div comme container. <br>
 Notions de Pseudo-class. 
 
-7. Floats 
+7. <strong>Floats </strong>
 
 Obtenir un pouvoir d'organisation horizontale sur le style de la page, répartition de la page en container div afin que tout ait une place et un contenu. <br>
 Organisation classique d'une page : sidebar, menu, contenu, footer.<br>
 Division d'une partie en d'autres parties. <br>
 Overflow : hidden.  
 
-8. Qu'est ce que JavaScript
+8. <strong>Qu'est ce que JavaScript</strong>
 
 Stockage de valeurs, Opérations sur variable, notions d'évènements. <br>
 Notions d'API. Code interprété, dynamique et coté client (dans ce module). <br>
 Relier un fichier JS à un fichier HTML. 
 
-9. Un premier code JS 
+9. <strong>Un premier code JS </strong>
 
 Dans ce premier module, l'objectif est d'étudier une premiere page réaliser à l'aide de javascript. <br>
 Cette page est un jeu dans lequel il faut deviner un nombre entre 1 et 100 en 10 tentatives maximum. Le jeu indique plus ou moins à chaque tentative. <br>
@@ -83,7 +83,7 @@ Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou
 Notions d'évènements. 
 Notions d'objet. 
 
-10. Suite JS
+10. <strong>Suite JS</strong>
 
 J'ai sauté quelques chapitres sur des thèmes déjà acquis tels les variables et les boucles. Je continue donc mon apprentissage par les fonctions sur JS. <br>
 Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. <br>
