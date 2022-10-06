@@ -112,4 +112,47 @@ On obtiendra une liste des objets de l'arborescence, comme si on la parcourait p
 
 ### Compresser des dossiers
 
+Ici, nous allons utiliser le module zipfile de Python.
+
+#### Lire des fichiers zip
+
+(Cette partie ne m'intéresse pas trop, j'ajouterai des informations si je me rends compte que je vais en avoir besoin. En résumé, il existe une fonction qui permet d'obtenir l'arborescence contenue dans un fichier zip.)
+
+Fonctions utiles pour la suite : 
+
+Pour créer l'objet zip et pour que Python le comprenne, il faut faire :
+    import zipfile, os
+    from pathlib import Path
+    p = Path.home()
+    exampleZip = zipfile.ZipFile(p / 'example.zip')
+
+On utilise ensuite exampleZip en préfixe des fonctions qu'on veut lui appliquer.
+Il faut ensuite fermer l'objet avec la fonction close() : exampleZip.close().
+
+#### Extraire de fichiers zip
+
+La fonction extractall() permet d'extraire l'intégralité des objets contenus dans le fichier zip vers le dossier de travail où l'on se trouve. On peut également ajouter le chemin d'accès à un dossier entre les parenthèses, on a deux cas de figure : soit le dossier existe et le contenu du fichier zip sera envoyer dans ce dossier, soit le dossier n'existe pas et il est créé pour mettre le contenu du fichier zip.
+
+Exemple d'utilisation : 
+
+    import zipfile, os
+    from pathlib import Path
+    p = Path.home()
+    exampleZip = zipfile.ZipFile(p / 'example.zip')
+    exampleZip.extractall()
+    exampleZip.close()
+
+Il existe aussi une fonction pour n'extraire qu'un fichier dans le fichier zip mais je ne pense pas en avoir besoin.
+
+#### Créer et ajouter à un fichier zip
+
+Pour comprendre comment faire, observons ces lignes de code :
+
+    import zipfile
+    newZip = zipfile.ZipFile('new.zip', 'w')
+    newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
+    newZip.close()
+
+On crée l'objet zip en l'ouvrant en mode écriture avec le w en second argument de la fonction ZipFile(). Ensuite, on y ajoute le contenu compressé du fichier spam.zip (la méthode de compressage est précisée en second argument de write()). Ceci est le cas de figure lorsqu'on crée un fichier zip et qu'on le remplit. S'il y avait déjà du contenu dans ce fichier zip, il aurait été remplacé par le fichier spam compressé. Si on souhaite ajouter de l'information dans un fichier zip existant, il faut l'ouvrir en mode ajout (ou append) grâce à la lettre a au lieu du w.
+
 ### Projet d'application ?
