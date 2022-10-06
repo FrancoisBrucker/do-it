@@ -99,7 +99,7 @@ Dès lors, si votre pepper est assez long et qu'il n'est pas compromis, il devie
 
 Les connexions sécurisées https sont utilisées en permanence sur internet. N'importe quel moteur de recherche récent vous enverra une notification plus ou moins alarmiste lorsque vous vous connectez sur un site non sécurisé (ou pire, avec un certificat auto-signé...).
 
-Mais, vous êtes vous déjà demandé comment s'établissent les connexions sécurisés https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?
+Mais, vous êtes vous déjà demandé comment s'établissent les connexions sécurisées https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?
 
 Voyons d'abord séparément les briques pour construire une connexion sécurisée, avant d'expliquer comment tout cela s'agence.
 
@@ -108,7 +108,7 @@ Voyons d'abord séparément les briques pour construire une connexion sécurisé
 ![Chiffrement symétrique](chiffrement_sym.png)
 Chiffrement symétrique en image (par [libreCours](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml))
 
-Le [chiffrement symétrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est connu depuis longtemps (Antiquité). Il consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), l'algorithme le plus utilisé, la clé est stockée sur 128 bits, et il est considéré comme *sûr* tant qu'il n'y a pas de meilleure attaque que par force brute.
+Le [chiffrement symétrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est connu depuis longtemps (Antiquité). Il consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), l'algorithme le plus utilisé, la clé est stockée sur 128 bits (donc $2^{128}$ clés possibles). Il peut être considéré comme *sûr* tant qu'il n'y a pas de meilleure attaque que par force brute.
 
 Le chiffrement symétrique est la méthode utilisée pour transférer les données **une fois la connexion établie**. Mais, avant de commencer la communication sécurisée, il faut partager la clé de chiffrement. Et, si vous transmettez cette clé *en clair*, elle peut être interceptée par tous les intermédiaires de la communication, malveillant ou non, et ils pourront tous déchiffrer ce que vous communiquez avec votre interlocuteur.
 
@@ -116,24 +116,25 @@ Le but est donc d'arriver à faire parvenir la clé de chiffrement au serveur sa
 
 **Chiffrement asymétrique**
 
-Le chiffrement asymétrique repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun une clé publique (elle peut être partagée a tous) et une clé privée (à garder précieusement et **seulement pour soi**).
+Le chiffrement asymétrique repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun **une clé publique** (elle peut être partagée a tous) et **une clé privée** (à garder précieusement, seulement pour soi).
 
 Le fonctionnement de la cryptographie asymétrique est le suivant : la clé publique déchiffre ce que la clé privée chiffre, et réciproquement. On utilise cette cryptographie à deux fins :
 
-- Vérifier l'auteur du message. En effet, comme vous êtes le seul à posséder votre clé privée, il vous suffit de chiffrer un message avec celle-ci. Tous ceux qui déchiffreront ce message avec votre clé publique pourront le lire, et vous serez le seul qui a pu l'écrire lisiblement.
+- Vérifier l'auteur du message. En effet, comme vous êtes le seul à posséder votre clé privée, il vous suffit de chiffrer un message avec celle-ci. Tous ceux qui déchiffreront ce message avec votre clé publique pourront le lire, et vous serez le seul qui a pu l'écrire lisiblement. On utilise une [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le) (somme de contrôle) pour vérifier que le message n'a pas été modifié après l'envoi.
 - Transmettre un message de façon sécurisée.
 
 La procédure pour transmettre une clé de chiffrement **symétrique** à l'aide du chiffrement **asymétrique** est le suivant : 
 
 1. Vous envoyez une requête au serveur lui demandant sa clé publique. Vous lui transmettez également votre clé publique.
-2. Après la réponse du serveur, vous envoyez la clé de chiffrement symétrique que vous voulez utiliser. Avant l'envoi, il faut que vous la chiffrer successivement :
+2. Le serveur vous répond avec sa clé publique (dans un certificat, nous verrons ensuite pourquoi).
+3. Après la réponse du serveur, vous envoyez la clé de chiffrement symétrique que vous voulez utiliser. Avant l'envoi, il faut que vous la chiffrer successivement :
    1. Avec votre clé privée : elle permettra de vous authentifier,
-   2. Avec la clé publique du serveur : elle permettra au serveur de déchiffrer le message avec sa clé privée.
+   2. Avec la clé publique du serveur : elle permettra à ce que seul le serveur puisse déchiffrer le message à l'aide de sa clé privée.
 
 ![Chiffrement asymétrique](Chiffrement_asymétrique.jpg)
-Le [chiffrement asymétrique](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml) en image.
+Le [chiffrement asymétrique](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml) en image. Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)).
 
-Bravo, vous pouvez ensuite commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique) ! A moins que, vous ne communiquiez pas directement avec le serveur...
+Bravo ! vous pouvez ensuite commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique...). A moins que... vous ne communiquiez pas directement avec le serveur ?
 
 ***Man in the middle* et certificats**
 
