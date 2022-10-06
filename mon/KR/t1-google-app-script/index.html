@@ -47,17 +47,6 @@
   <h1 class="mb-1">Temps 1 - MON - Google Apps Script</h1>
   <div class="mb-4">
     
-      <div class=" px-4 flex items-center">
-        
-          <div class="font-bold">Tag : </div>
-        
-        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
-          
-            <li class="before:content-['•'] before:px-1">mon</li>
-          
-        </ul>
-      </div>
-    
 
     
       <div class=" px-4 flex items-center">
@@ -76,54 +65,96 @@
   
 
   <!-- Début Résumé -->
-<p>Ici je vais mettre les informations sur mon MON de temps 1, google apps script.</p>
+<p>Ici je vais mettre les informations sur mon MON de temps 1, Google Apps Script.</p>
 <!-- fin résumé -->
 <h2>But du projet</h2>
-<p>Liste de tâches à faire ("To-Do") dans Google Sheets</p>
-<ol>
-<li>créer une liste de choses à faire - avec l'API : <a href="https://dummyjson.com/todos">https://dummyjson.com/todos</a></li>
-<li>tri par date de fin</li>
-<li>possibilité de cocher quand une tâche est terminée</li>
-<li>créer un graphique (par jour : nouveau, terminé)</li>
-</ol>
+<p>Le but de ce projet, c'est de créer une liste de tâches à faire ("To-Do") dans Google Sheets, qui est mise à jour automatiquement à chaque fois que je modifie la liste dans Google Sheets.</p>
 <h2>Déroulement du projet</h2>
 <ol>
 <li>Tutoriel sur YouTube</li>
 <li>Reconstruit le projet du tutoriel</li>
 <li>Création d'un plan pour le projet to-do (le but du projet)</li>
-<li>Creation de la liste des tâches avec l'API</li>
-<li>Trier la liste et correction d'erreur (au début, l'en-tête du tableau a également été trié)</li>
+<li>Creation de la liste des tâches avec une API (<a href="https://dummyjson.com/todos">https://dummyjson.com/todos</a>)</li>
+<li>Trier la liste (par date de fin) et correction d'erreur (au début, l'en-tête du tableau a également été trié)</li>
 <li>Récupérer le statut "terminé" et le convertir en case à cocher</li>
 <li>Griser les tâches accomplies</li>
 <li>Génération d'un charte basique á la base de la documentation</li>
 <li>Travailler avec le debugger pour identifier des fautes</li>
-<li>Création d'une fonction permettant de compter le nombre de tâches effectuées/non effectuées par jour</li>
-</ol>
+<li>Création d'une fonction permettant de compter le nombre de tâches effectuées/non effectuées par jour
 <ul>
 <li>J'ai d'abord fait, sans trop réfléchir, quelques essais naïfs avec des tableaux et JSON, qui n'ont abouti à rien.</li>
 <li>Ensuite, j'ai imaginé un algorithme (voir ci-dessous) que j'ai ensuite converti en code.</li>
 <li>Cette tâche a pris beaucoup plus de temps que prévu, car je n'ai pas encore beaucoup d'expérience dans le traitement des données et dans les opérations sur les arrays, les listes, les dictionnaires etc.</li>
 </ul>
-<ol start="11">
+</li>
 <li>Création d'un graphique avec le nombre de tâches effectuées/non effectuées par jour</li>
-<li>TODO Appeller la fonction a chaque modification de la feuille (onEdit)</li>
-<li>TODO Nettoyage : externaliser dans des fonctions, supprimer le logging</li>
-<li>TODO Documentation du code</li>
+<li>Appeller la fonction a chaque modification de la feuille (onEdit)</li>
+<li>Nettoyage : externaliser dans des fonctions, supprimer le logging qui n'est pas necessaire</li>
+<li>Documentation du code</li>
 </ol>
-<h2>Algorithmus für die Daten</h2>
+<p>Le code est disponible sur Pastebin : <a href="https://pastebin.com/ttNg5rMX">https://pastebin.com/ttNg5rMX</a></p>
+<h2>Algorithme de traitement des dates</h2>
 <ol>
-<li>Erstes Datum herausfinden</li>
-<li>Letztes Datum herausfinden</li>
-<li>Hilfstabelle erstellen mit jedem Datum zwischen erstem und letztem Datum, initialisieren mit 0 für Anzahl erledigt und 0 für Anzahl offen: | Datum | Anzahl erledigt | Anzahl offen |</li>
-<li>Für jede Zeile in der Tabelle:
+<li>trouver la première date</li>
+<li>trouver la dernière date</li>
+<li>créer un tableau auxiliaire, une ligne pour chaque jour entre la première et la dernière date, initialiser avec 0 pour le nombre de tâches terminées et 0 pour le nombre de tâches ouvertes : | date | nombre de tâches terminées | nombre de tâches ouvertes |.</li>
+<li>pour chaque ligne de la liste des choses à faire :
 <ol>
-<li>Datum der Zeile herausfinden</li>
-<li>In der Hilfstabelle das Datum suchen</li>
-<li>Wenn die Zeile erledigt ist, dann Anzahl erledigt um 1 erhöhen, sonst Anzahl offen um 1 erhöhen</li>
+<li>trouver la date de la ligne</li>
+<li>dans le tableau d'aide, chercher la date</li>
+<li>dans le tableau d'aide : Si la ligne de la liste des choses à faire est terminée, augmenter le nombre terminé de 1, sinon augmenter le nombre ouvert de 1.</li>
 </ol>
 </li>
-<li>Graph erstellen mit den Daten aus der Hilfstabelle</li>
+<li>créer un graphique avec les données du tableau auxiliaire</li>
 </ol>
+<h2>Exemples de code</h2>
+<p>Ici je veux montrer quelques exemples intéressants de code que j'ai écrit pour ce projet.</p>
+<h3>Implémentation de l'algorithme de traitement des dates</h3>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> datesAndDoneColumnRange <span class="token operator">=</span> activeSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>lastRow<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get range that includes the dates and done values (done/not done)</span>
+<span class="token keyword">var</span> dateAndDoneValues <span class="token operator">=</span> datesAndDoneColumnRange<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get the values from this range -&gt; Array[Date][done]</span>
+
+<span class="token comment">// create new sheet to store temporary data</span>
+<span class="token keyword">var</span> temporarySheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSpreadsheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSheetByName</span><span class="token punctuation">(</span><span class="token string">'temporary-data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+temporarySheet<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clear the temporary sheet</span>
+temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValues</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"Date"</span><span class="token punctuation">,</span> <span class="token string">"Done"</span><span class="token punctuation">,</span> <span class="token string">"Not done"</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// create header in the temporary sheet</span>
+
+<span class="token keyword">var</span> firstDay <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>dateAndDoneValues<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get first array element</span>
+<span class="token keyword">var</span> lastDate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>dateAndDoneValues<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get last array element</span>
+
+<span class="token comment">// iterate through all dates in the range: https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript</span>
+<span class="token keyword">var</span> allDates <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// array where all dates will be saved</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> d <span class="token operator">=</span> firstDay<span class="token punctuation">;</span> d <span class="token operator">&lt;=</span> lastDate<span class="token punctuation">;</span> d<span class="token punctuation">.</span><span class="token function">setDate</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> newDate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  allDates<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>newDate<span class="token punctuation">.</span><span class="token function">toLocaleDateString</span><span class="token punctuation">(</span><span class="token string">'fr-FR'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> allDates<span class="token punctuation">.</span>length<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValues</span><span class="token punctuation">(</span>allDates<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// write the array with all dates to the temporary sheet</span>
+
+<span class="token comment">// iterate throug dateAndDoneValues and read them</span>
+dateAndDoneValues<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">row<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> currentDate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>row<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> currentDoneState <span class="token operator">=</span> row<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> currentRow <span class="token operator">=</span> temporarySheet<span class="token punctuation">.</span><span class="token function">createTextFinder</span><span class="token punctuation">(</span>currentDate<span class="token punctuation">.</span><span class="token function">toLocaleDateString</span><span class="token punctuation">(</span><span class="token string">'fr-FR'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">findNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>currentDoneState <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>currentRow<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span>temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>currentRow<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// increase value of "done" by 1</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>currentDoneState <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>currentRow<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span>temporarySheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>currentRow<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// increase value of "not done" by 1</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    Logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Impossible state, currentDoneState is neither true nor false'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this case should never happen</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Trier par Date</h3>
+<p>Dans Google Sheet, c'est très facile de trier par colonne:</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  dataSection<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 = 2nd column which includes the date</span>
+</code></pre>
+<h2>Ce que je n'ai pas pu faire de plus</h2>
+<p>Au cours des 10h que j'ai investies dans ce projet, je n'ai malheureusement pas réussi à faire certaines choses non plus :</p>
+<ul>
+<li>Intercepter des edge cases (par exemple lorsqu'il n'y a pas de date dans la colonne des dates).</li>
+<li>Essayer différents types de graphiques</li>
+<li>Améliorer l'efficacité du script</li>
+</ul>
 <h2>Ressources utilisées</h2>
 <ul>
 <li>Tutoriel sur YouTube: <a href="https://www.youtube.com/watch?v=Nd3DV_heK2Q">https://www.youtube.com/watch?v=Nd3DV_heK2Q</a></li>
@@ -132,9 +163,8 @@
 <li>Documentation du debugger: <a href="https://developers.google.com/apps-script/guides/support/troubleshooting#debugging">https://developers.google.com/apps-script/guides/support/troubleshooting#debugging</a></li>
 <li>Documentation de la fonction onEdit: <a href="https://developers.google.com/apps-script/guides/triggers#onedite">https://developers.google.com/apps-script/guides/triggers#onedite</a>)</li>
 <li>Documentation des Arrays in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></li>
-<li>Documentation de JSON in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON</a></li>
 <li>Documentation de la fonction Date in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a></li>
-<li>Boucler les dates: <a href="https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript">https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript</a></li>
+<li>Itérer par les dates: <a href="https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript">https://stackoverflow.com/questions/4345045/loop-through-a-date-range-with-javascript</a></li>
 </ul>
 <h2>Conclusion</h2>
 <ul>
