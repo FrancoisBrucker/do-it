@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Les MON d'Eugénie"
+title: "Les MONs d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
@@ -9,7 +9,7 @@ tags: ['mon']
 
 ---
 <!-- Début Résumé -->
-Voici la table des matières des MON de l'année.
+Voici la table des matières des MONs de l'année.
 
 <!-- fin Résumé -->
 
