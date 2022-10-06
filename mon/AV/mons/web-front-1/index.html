@@ -64,11 +64,12 @@
 
   
 
-  <!-- début résumé -->
-<p>Framework Angular</p>
-<!-- fin résumé -->
+  <head>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
 <h2>Description</h2>
-<p>Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.</p>
+<p>Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.<br>
+L'objectif de ce MON est d'expliquer comment j'ai fait mon POK et notamment comment Angular m'a aidé.</p>
 <h2>Premiers pas</h2>
 <h3>1. Installations</h3>
 <p>Sur un terminal, installer le CLI d'Angular (Command Line Interface) à l'aide de npm.</p>
@@ -94,8 +95,123 @@
 <p>Pour visualiser son site, il faut le lancer sur un serveur. Dans un terminal ouvert au dossier du projet, lancez la commande :<br>
 <code>ng new mon-projet</code><br>
 Ensuite rendez-vous à l'adresse <a href="http://localhost:4200/">http://localhost:4200/</a> et ceci devrait s'afficher :</p>
-<img src="../../assets/Angular-init.png">
-<p>C'est la page qu'Angular génère de base quand on crée un projet.</p>
+<figure>
+  <img src="../../assets/Angular-init.png">
+  <figcaption>Application Angular basique</figcaption>
+</figure>
+C'est la page qu'Angular génère de base quand on crée un projet.
+<h3>3. Components</h3>
+<p>Angular, comme plusieurs autres framework JS, fonctionne grâce à des <i>components</i> (composants en français). Ce sont des blocs qui vont constituer une page web. Par exemple sur le site <a href="https://francoisbrucker.github.io/cours_informatique/cours/">https://francoisbrucker.github.io/cours_informatique/cours/</a> on pourrait identifier plusieurs components :</p>
+<figure> 
+  <img src="../../assets/ComponentsExplication.png">
+  <figcaption>Exemple de découpage d'une page web en composant</figcaption>
+</figure>
+Ces composants permettent d'organiser le code et de gagner du temps. En effet, en découpant le code en petits morceaux qui s'occupent seulement d'une fonction, on s'y retrouve plus facilement. De plus, les composants sont réutilisables.
+<p>Pour créer un composant, on se place dans le terminale et on tape :<br>
+<code>ng generate component navbar</code><br>
+(Si on veut l'appeler navbar)</p>
+<p>Notre component est maintenant créé ! Il est constitué de 4 fichiers :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">navbar
+    ├── navbar.component.html
+    ├── navbar.component.css
+    ├── navbar.component.spec.ts
+    ├── navbar.component.ts
+
+</code></pre>
+<p><mark>Note : Le fichier app.module.ts a aussi été mis-à-jour pour afin de bien importer ce component.</mark></p>
+<p>En se baladant dans le fichier Typescript, on remarque que pour faire appel à la balise html de ce composant on va devoir taper :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-navbar</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-navbar</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>On peut alors essayer de l'implémenter dans notre MON. Pour cela, on place cette balise à la place de tout ce qu'il y a dans app.component.html. Sur notre page locale, on peut ainsi voir ceci :</p>
+<figure> 
+  <img src="../../assets/navbarWorks.png">
+  <figcaption>Implémentation d'un componenent</figcaption>
+</figure>
+<p>Le composant de la barre de navigation s'affiche bien ! On peut maintenant de créer une vraie navbar et lui donner un peu de style.</p>
+<h3>4. Navbar</h3>
+<p>J'aime bien travailler avec Bootstrap pour avoir des beaux éléments sans faire trop de CSS. On va donc prendre une navbar de Bootstrap pour travailler avec.</p>
+<p>Pour implémenter Bootstrap sur un projet Angular, il faut l'installer avec npm et le rajouter dans le fichier angular.json (tuto : <a href="https://stackoverflow.com/questions/43557321/angular-4-how-to-include-bootstrap">https://stackoverflow.com/questions/43557321/angular-4-how-to-include-bootstrap</a>).</p>
+<p>J'ai choisi une navbar simple pour commencer :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar navbar-expand-lg navbar-light fixed-top<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar-brand<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Antoine Varnerot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar-toggler<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#navbarNav<span class="token punctuation">"</span></span> <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbarNav<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Toggle navigation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar-toggler-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse navbar-collapse<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbarNav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar-nav ml-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#parcours<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Parcours<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#projets<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Projets<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#contact<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Après avoir copié ce code dans le fichier navbar.component.html, on devrait avoir une navbar qui s'affiche en haut de la page.<br>
+Pour les différentes parties du site (parcours, projets, contact), on va aussi créer un component. Je créé ainsi un component <i>accueil</i> qui se placera sous la navbar qui faira office de page d'accueil, un component <i>overview</i> qui contiendra une brève présentation de moi et un component <i>skills</i> qui contiendra mon parcours et mes compétences.</p>
+<h3>5. Interactions HTML/TS</h3>
+<p>Un des grands intérêts d'avoir de travailler avec un framework est qu'on va gagner du temps. Par exemple, on peut utiliser des variables du fichier Typescript dans le HTML, on peut écouter des événements et indiquer quelle fonction appeler si l'événement se produit ...<br>
+Je vais présenter la syntaxe pour effectuer des actions de ce type et expliquer en quoi cela peut servir dans le projet de port-folio.</p>
+<ul>
+<li>Pour afficher une variable TS dans le fichier HTML du même component on écrit :</li>
+</ul>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">[src]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>imageUrl<span class="token punctuation">"</span></span> <span class="token attr-name">[alt]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Avec bien sur imageUrl et title des variables définies dans le fichier Typescript. Par exemple :</p>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript">imageUrl<span class="token operator">!</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>imageUrl <span class="token operator">=</span> <span class="token string">"https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/temoignages/principale/iceland-2111810_1920.jpg?itok=PMXb-dCB"</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"paysage"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>On parle alors de <strong>attribute binding</strong>.</p>
+<ul>
+<li>Pour écouter un événement et appeler une function s'il se produit :</li>
+</ul>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">(click)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myFunction()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Cliquez ici!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript"><span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//Actions</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On parle alors d'<strong>event binding</strong>.</p>
+<p>Note : On peut bien sur combiner les différentes syntaxes. Pour compter le nombre de fois qu'on appuie sur un bouton on peut écrire :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">(click)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>addOne()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript">
+<span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  counter<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function">addOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<!-- Pour le MON, j'ai décidé de mettre dans le component <i>accueil</i>, des boutons  -->
+<h3>6. Conditionnement et Boucles</h3>
+<p>Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs nom (string), technologies (string[]), description (string), keyword (string[]) et image (string) qui est optionnelle.</p>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">FaceSnap</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+              <span class="token keyword">public</span> description<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+              <span class="token keyword">public</span> imageUrl<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+              <span class="token keyword">public</span> createdDate<span class="token operator">:</span> Date<span class="token punctuation">,</span>
+              <span class="token keyword">public</span> snaps<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+              <span class="token keyword">public</span> location<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4>A. *ngIf</h4>
+<h4>B. *ngFor</h4>
 
 
 </article>
