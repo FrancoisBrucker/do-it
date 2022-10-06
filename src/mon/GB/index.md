@@ -15,7 +15,7 @@ tags: ['mon']
 5h sur les tutos de internetthingishard sur HTML et CSS afin de reprendre bien les bases. Aborder les notions de balises, classes, CSS selector, floats... <br>
 S'en suivent 5h sur du javascript ou du moins les prémices de js sur developper.mozilla afin de rendre les sites un peu plus dynamique. 
 
-1. Introduction au html/CSS 
+<h2>1. Introduction au html/CSS </h2>
 
 Site : ensemble de pages <br>
 Pages : HTML + CSS + JavaScript <br>
@@ -78,7 +78,7 @@ Cette page est d'un niveau JS un peu compliqué pour un débutant et c'est voulu
 On peut le décomposer comme suit : 
 <ul> <li>Variables</li> 
  <li>Fonctions </li>
- <li>Boucles à conditions et incrémentations</li> </ul><hr>
+ <li>Boucles à conditions et incrémentations</li> </ul>
 Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou C++.<br>
 Notions d'évènements. 
 Notions d'objet. 
@@ -87,7 +87,7 @@ Notions d'objet.
 
 J'ai sauté quelques chapitres sur des thèmes déjà acquis tels les variables et les boucles. Je continue donc mon apprentissage par les fonctions sur JS. <br>
 Je ne pense pas avoir besoin de réexpliquer les fonctions, j'étudie ce chapitre plus pour comprendre la syntaxe de déclaration et d'appel des fonctions. <br>
-Fonctions intégrées et personnalisées, portée des fonctions. <hr>
+Fonctions intégrées et personnalisées, portée des fonctions. <br>
 J'ai ensuite pu pratiquer un peu et créer ma propre fonction générée sur une page HTML. Cette fonction permettait de créer une box alert lorsqu'on cliquait sur un bouton. La box était ensuite personalisé en focntion du type de message.<br>
 Exemple intéressant car de nombreuses fonctions intégrés ont été utilisées et j'ai pu me familiariser avec la manière de les appeler. 
 
