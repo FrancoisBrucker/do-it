@@ -76,9 +76,9 @@ Dans ce premier module, l'objectif est d'étudier une premiere page réaliser à
 Cette page est un jeu dans lequel il faut deviner un nombre entre 1 et 100 en 10 tentatives maximum. Le jeu indique plus ou moins à chaque tentative. <br>
 Cette page est d'un niveau JS un peu compliqué pour un débutant et c'est voulu. L'objectif est d'explorer les différentes partie d'un code JavaScript et ce que cela peut réaliser. <br>
 On peut le décomposer comme suit : 
-<ul> <ls>Variables</ls> 
- <ls>Fonctions </ls>
- <ls>Boucles à conditions et incrémentations</ls> </ul><hr>
+<ul> <li>Variables</li> 
+ <li>Fonctions </li>
+ <li>Boucles à conditions et incrémentations</li> </ul><hr>
 Rien de nouveau donc si ce n'est la syntaxe comparé à des codes tels python ou C++.<br>
 Notions d'évènements. 
 Notions d'objet. 
