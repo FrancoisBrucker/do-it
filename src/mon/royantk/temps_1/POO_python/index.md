@@ -17,15 +17,20 @@ MON - La programation orientée objet sur Python
 
 Afin de réaliser ce module d'autoformation, j'ai commencé à suivre une formation de 12h (difficulté Moyenne) sur OpenClassrooms intitulée [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python). Tous les programmes créés à l'occasion de cette formation seront présents dans ce répertoire.
 
+![Image](https://i.vimeocdn.com/video/1118264994-2a67dba5a3a8c9aee27720f1afa58494be2dfa5768c7478bebbb104a4359d8c3-d?mw=800)
+
 ### Ressources
 
-{% chemin %}
+Ci-dessous les ressources principales liées à ce MON. Vous y retrouverez le lien vers la formation ainsi qu'un diaporama personnel où j'introduis et résume ce que j'ai appris grâce à cette formation.
 
-**Ressources utilisées**
+{% chemin "Ressources :" %}
 
-[Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python)
+- [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python)
+- [Présentation du MON - Killian ROYANT](https://drive.google.com/file/d/1D-gTBStHbos_4YKUw6P9KrZa1sg70D9E/view?usp=sharing)
 
 {% endchemin %}
+
+![Présentation](presentation.gif)
 
 ### Objectifs pédagogiques
 
@@ -37,16 +42,24 @@ Afin de réaliser ce module d'autoformation, j'ai commencé à suivre une format
 
 ### Prérequis
 
+{% prerequis "Prérequis :" %}
+
 Des connaissances de base en Python, que vous pouvez acquérir avec le cours suivant :
 
-- Apprenez les bases du langage Python
+- [Apprenez les bases du langage Python](https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python)
+
+{% endprerequis %}
+
 
 ### Outils nécessaires
 
+{% info "Outils nécessaires :" %}
 Visual Studio Code ou Pycharm, que vous pouvez configurer avec les cours suivants :
 
 - Mettez en place votre environnement front-end avec Visual Studio Code
 - Mettez en place votre environnement Python avec PyCharm
+
+{% endinfo %}
 
 ### Table des matières
 
