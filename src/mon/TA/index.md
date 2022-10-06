@@ -52,7 +52,7 @@ Par exemple, pour le hachage de `abc` avec SHA-256, sans salt:
 
 **Mais c'est quoi, le salt ?**
 
-Avant de voir ce que c'est, on va d'abord regarder comment un hacker pourrait, ayant la base de données, essayer de retrouver un mot de passe d'utilisateur. Une attaque est toujours un compromis entre puissance de calcul et mémoire. On va lister ici 4 types d'attaques (il en existe sûrement d'autres, découvertes ou à découvrir) : 
+Avant de voir ce que c'est, on va d'abord regarder comment un *hacker* pourrait, ayant la base de données, essayer de retrouver un mot de passe d'utilisateur. Une attaque est toujours un compromis entre puissance de calcul et mémoire. On va lister ici 4 types d'attaques (il en existe sûrement d'autres, découvertes ou à découvrir) : 
 
 - Attaque par [*brute force*](https://fr.wikipedia.org/wiki/Attaque_par_force_brute). Le pirate va tester successivement des mots de passe, choisis de façon plus ou moins aléatoire. Cette attaque ne demande pas ou peu d'espace mémoire, mais énormément de puissance de calcul pour tester un maximum de combinaisons.
   - Attaque par dictionnaire. C'est un type d'attaque par brute force. On va tester ici des mots présents dans le dictionnaire choisi (anglais, français, [*leet speak*](https://fr.wikipedia.org/wiki/Leet_speak)...).
@@ -87,7 +87,7 @@ Le salt limite donc fortement les attaques par tableaux.
 
 **Après le salt, le pepper !**
 
-Pour limiter les attaques par force brute, on peut réaliser plusieurs choses. Déjà, plus un mot de passe sera long, aléatoire, avec des majuscules, minuscules, chiffres, caractères spéciaux... plus il sera difficile à trouver (cf [temps pour craquer un mot de passe en 2022](https://www.iphon.fr/post/combien-temps-pour-craquer-identifiants-mots-de-passe#:~:text=un%20mot%20de%20passe%20de%2012%20chiffres%20peut%20%C3%AAtre%20crack%C3%A9,%C3%AAtre%20crack%C3%A9%20en%205%20mois)). Pour ralonger artificiellement la longeur d'un mot de passe, on peut décider de faire ça : 
+Pour limiter les attaques par force brute, on peut réaliser plusieurs choses. Déjà, plus un mot de passe sera long, aléatoire, avec des majuscules, minuscules, chiffres, caractères spéciaux... plus il sera difficile à trouver (cf [temps pour craquer un mot de passe en 2022](https://www.iphon.fr/post/combien-temps-pour-craquer-identifiants-mots-de-passe)). Pour ralonger artificiellement la longeur d'un mot de passe, on peut décider de faire ça : 
 
 $hash(mot de passe + salt + pepper)$
 
@@ -99,7 +99,7 @@ Dès lors, si votre pepper est assez long et qu'il n'est pas compromis, il devie
 
 Les connexions sécurisées https sont utilisées en permanence sur internet. N'importe quel moteur de recherche récent vous enverra une notification plus ou moins alarmiste lorsque vous vous connectez sur un site non sécurisé (ou pire, avec un certificat auto-signé...).
 
-Mais, vous êtes vous déjà demandé comment s'établissent les connexions sécurisées https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?
+Mais, vous êtes-vous déjà demandé comment s'établissent les connexions sécurisées https ? Pourquoi ose-t-on envoyer nos données, parfois intimes ou bancaires, sur internet seulement en sachant vaguement qu'un petit cadenas en haut à gauche de la barre de recherche nous protège ?
 
 Voyons d'abord séparément les briques pour construire une connexion sécurisée, avant d'expliquer comment tout cela s'agence.
 
@@ -116,7 +116,7 @@ Le but est donc d'arriver à faire parvenir la clé de chiffrement au serveur sa
 
 **Chiffrement asymétrique**
 
-Le chiffrement asymétrique repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun **une clé publique** (elle peut être partagée a tous) et **une clé privée** (à garder précieusement, seulement pour soi).
+Le [chiffrement asymétrique](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique) repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun **une clé publique** (elle peut être partagée a tous) et **une clé privée** (à garder précieusement, seulement pour soi).
 
 Le fonctionnement de la cryptographie asymétrique est le suivant : la clé publique déchiffre ce que la clé privée chiffre, et réciproquement. On utilise cette cryptographie à deux fins :
 
@@ -132,15 +132,38 @@ La procédure pour transmettre une clé de chiffrement **symétrique** à l'aide
    2. Avec la clé publique du serveur : elle permettra à ce que seul le serveur puisse déchiffrer le message à l'aide de sa clé privée.
 
 ![Chiffrement asymétrique](Chiffrement_asymétrique.jpg)
-Le [chiffrement asymétrique](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml) en image. Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)).
+Le chiffrement asymétrique en image (par Jp.simon.manz sur [wikipedia](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique)). Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)). En pratique, vous n'avez pas besoin de transmettre votre clé publique au serveur, car vous authentifier n'est pas nécessaire pour lui. Pour la communication, il suffit que vous lui transmettez votre clé de chiffrement symétrique chiffrée avec sa clé publique. Vous pourrez ensuite discuter de façon sécurisée.
 
-Bravo ! vous pouvez ensuite commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique...). A moins que... vous ne communiquiez pas directement avec le serveur ?
+Aujourd'hui, on utilise principalement le [chiffrement RSA](https://fr.wikipedia.org/wiki/Chiffrement_RSA) comme algorithme de cryptographie asymétrique. Les clés utilisées font de 1024 à 2048 bits (beaucoup plus que les 128 bits de [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard)). Les communications restent rapide car on se contente seulement de transmettre la clé de chiffrement symétrique. On ne sécurise pas seulement les connexions https avec RSA, mais aussi les terminaux de paiement par exemple. Nous devons donc nous assurer de la sûreté de cette algorithme. Le temps pour *craquer* la clé privée du chiffrement RSA croit exponentiellement avec la longueur de la clé. En 2020, le plus long message *craqué* faisait 829 bits. Les clés utilisées aujourd'hui sont encore considérées comme *sûres*, ce qui pourrait être remis en question avec les [ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), qui ont des [algorithmes de factorisation](https://fr.wikipedia.org/wiki/Algorithme_de_Shor) beaucoup plus efficaces que les ordinateurs classiques (mais pas d'inquiétude, d'autres ont pensé à des méthodes de [cryptographie quantique](https://fr.wikipedia.org/wiki/Cryptographie_quantique)...).
 
-***Man in the middle* et certificats**
+Enfin bref, avec ce procédé, vous pouvez enfin commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique) ! A moins que... ce ne soit pas au serveur que vous parlez ?
+
+***Man in the middle***
+
+ Lors de la première connexion entre vous et le serveur, qu'est-ce qui empêcherait un *hacker* de se placer entre vous deux, d'intercepter votre requête contenant votre clé publique, de remplacer cette clé publique par la sienne, et de transmettre cette donnée au serveur ? Ensuite, lors de la réponse du serveur, il pourrait vous transmettre non pas la clé publique du serveur, mais la sienne. Ainsi, lorsque vous transmettrait la clé de chiffrement symétrique, que vous avez chiffrée avec la clé publique du *hacker* en pensant que c'était celle du serveur, il interceptera le message, le déchiffrera, et le transmettra finalement au serveur. Ainsi, il pourra déchiffrer et modifier toutes les communications entre vous et le serveur car il a intercepté la clé de chiffrement symétrique. Pourtant, de votre point de vue ou de celui du serveur, vous ne vous rendez compte de rien et vous avez l'impression de communiquer sans intermédiaire.
+
+ En supposant que le serveur est Alice, le *hacker* est Êve et que vous êtes Bob :
+
+![*man in the middle*](MITM.png)
+
+Man in the middle (image par [Liu Tao](http://tao93.top/2020/03/31/Secure%20communication%20basics/)).
+
+C'est ce que l'on appelle une attaque *man in the middle*. Le *hacker* peut se placer entre vous et votre *router*, ou plus rarement sur le réseau internet. Ces attaques sont très fréquentes sur les réseaux non sécurisées, là où vous ne connaissez pas les autres appareils connectés au réseau.
+
+Pour éviter ce type d'attaque, on utilise des certificats pour établir une connexion https.
+
+**Certificats**
+
+Voici ce que contient un certificat :
+
+![Certificat](Cerificat.png)
+
+Cerficat en image (par [Yann Bidon](https://www.youtube.com/watch?v=FSq-FXx5dxU&t=1s&ab_channel=YannBidon)).
 
 ### Sources
 
 1. Stocker correctement ses mots de passe : <https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/>
 2. Un guide sur comment marche les *rainbow tables* : <https://www.ionos.fr/digitalguide/serveur/securite/rainbow-tables/>
+3. Comprendre comment marche le SSL/TCP, c'est-à-dire une connexion https : <https://www.youtube.com/playlist?list=PLYsJ-3MUn_eeYwSgJ3Z_hfrIzGqYOGAaj>
 
 [1]: <https://www.ionos.fr/digitalguide/serveur/securite/rainbow-tables/>
