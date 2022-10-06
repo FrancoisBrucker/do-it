@@ -88,7 +88,7 @@ Sinon voici quelques fonctions essentielles pour bien commencer 👇
 | setFormulas(formuulas) | Idem mais les formules de la plage de données                                   |
 
 {% attention "**Attention** aux Formules" %}
-Les formules que l'ont **get** et que l'on **set** sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)
+Les formules que l'on **get** et que l'on **set** sont en anglais : la traduction faite pour Google Sheet (ex : SOMME), redevient en anglais (ex : SUM)
 {% endattention %}
 
 
@@ -139,7 +139,7 @@ J'ai pas cependant eu l'occasion d'aller en profondeur dans cette fonctionnalit�
 
 <h4 id="h2-3-1">Listener</h4>
 
-En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un actiion se produit.
+En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un action se produit.
 
 Les 2 principales fonctions sont :
   - onEdit : executée à chaque fois qu'un utilisateur modifie une case
@@ -154,9 +154,31 @@ function onEdit(e){
 }
 ```
 
-il existe quelques atres fonctions, comme d'habitude le détail dans les [liens](#liens)👇
+Il existe quelques autres fonctions, comme d'habitude le détail dans les [liens](#liens)👇
 
 <h2 id="h3"> Exemple - Création d'un Tricount </h2>
+
+{% info %}
+L'objectif est de créer un Tricount, permettant de gérer les comptes à plusieurs. Très utilisé dans les colocs centraliennes notamment. Chacun ajoute les dépenses faites pour le groupe et l'application comptabilise combien d'argent chacun doit à qui.
+{% endinfo %}
+
+Le projet est composé de paramtères modifiables, pour permettre de personnaliser le Google Sheet
+```javascript
+const tricountSettings = {
+  sourceSheet: 'Ajout_achat',
+  targetSheet: 'Historique',
+  statSheet: 'Statistiques',
+  people:["Personne 1","Personne 2", "Personne 3"]
+}
+```
+
+Et de 4 fonctions :
+- **tricountAddToHistory**, dont le but est de transférer les données d'ajout d'achat dans la prtie historique (fonction inspirée du [travail de --Hyde](https://support.google.com/docs/thread/41717054))
+- **columnToLetter**, dont le but est de transformer la ième colonne en la lettre associée (fonction créée par [AdamL](https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter))
+- **onEdit**, dont le but est de déclencher la fonction **trincountAddToHistory** si les conditions sont réunies
+- **generateSheet**, dont le but est de créer toute la mise en page du tricount au début
+
+Tout le code source est disponible [liens](#liens).
 
 <h2 id="liens"> Liens Utiles </h2>
 
@@ -165,12 +187,15 @@ Documentation de Google sur l'utilisation de Google Apps Script sur ses différe
 - [Google Docs](https://developers.google.com/apps-script/guides/docs)
 - [Google Slides](https://developers.google.com/apps-script/guides/slides)
 
-Mon travail
-- [Le Google Sheet](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
-- [Le code source](../../Annexe/GglAppsScript)
-
-Documentation
+Documentation sur les fonctionnalitées :
 - [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) : classe de feuille de calcul
 - [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range) : classe d'un ou plusieurs cases
 - [Déclencheurs listener](https://developers.google.com/apps-script/guides/triggers) : Fonction listener
 - [Déclencheur temporel](https://developers.google.com/apps-script/guides/triggers/installable) : Fonction exéctuée de manière régulière
+
+Mon travail :
+- [Le Google Sheet](https://docs.google.com/spreadsheets/d/1g3JqFxX8HgXEYpOcudeMbe4TtCH9vGVsyqudbTxTd6E/edit?usp=sharing)
+- [Le code source](../../Annexe/GglAppsScript)
+- [Inspiration pour **tricountAddToHistory**](https://support.google.com/docs/thread/41717054)
+- [Fonction **columnToLetter**](https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter)
+
