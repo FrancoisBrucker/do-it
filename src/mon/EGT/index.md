@@ -155,4 +155,16 @@ Pour comprendre comment faire, observons ces lignes de code :
 
 On crée l'objet zip en l'ouvrant en mode écriture avec le w en second argument de la fonction ZipFile(). Ensuite, on y ajoute le contenu compressé du fichier spam.zip (la méthode de compressage est précisée en second argument de write()). Ceci est le cas de figure lorsqu'on crée un fichier zip et qu'on le remplit. S'il y avait déjà du contenu dans ce fichier zip, il aurait été remplacé par le fichier spam compressé. Si on souhaite ajouter de l'information dans un fichier zip existant, il faut l'ouvrir en mode ajout (ou append) grâce à la lettre a au lieu du w.
 
-### Projet d'application ?
+### Projet d'application 
+
+J'ai installé les versions recommandées de Python et de l'éditeur.
+
+J'ai choisi de faire le projet sur la création de fichier zip de backup.
+
+Le principe de la fonction à créer est le suivant :
+- La fonction prend en variable un dossier.
+- Elle commence par trouver le nom du nouveau fichier zip pour éviter d'écraser les versions précédentes du backup.
+- Elle crée le fichier zip.
+- Elle parcourt l'arborescence du dossier en ajoutant tous les fichiers du dossier de départ dans le fichier zip.
+
+Après avoir créé la fonction, je l'ai lancée sur un dossier d'un électif (RIS) de l'année dernière pour voir si cela fonctionnait bien. J'ai eu une première erreur dû à des mauvaises indentations. Je l'ai relancé et ça a fonctionné : un fichier zip nommé RIS_1.zip s'est créé. Je l'ai relancé deux fois pour vérifier que le nom s'incrémentait bien, c'était le cas. Dernier test, j'ai effacé le fichier RIS_2.zip en conservant le RIS_3.zip. En relancant la fonction, le programme a bien recréé RIS_2.zip et est passé au RIS_4.zip au coup d'après.
