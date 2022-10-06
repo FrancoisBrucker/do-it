@@ -18,7 +18,7 @@ S'en suivent 5h sur du javascript ou du moins les prémices de js sur developper
 1. <strong>Introduction au html/CSS</strong>
 
 Site : ensemble de pages <br>
-Pages : HTML + CSS + JavaScript <br>
+Page : HTML + CSS + JavaScript <br>
 HTML : Contenu de la page <br>
 CSS : Format de ce contenu <br>
 JS : Dynamisation et interactivité de la page 
