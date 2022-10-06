@@ -15,7 +15,7 @@ tags: ['mon']
 5h sur les tutos de internetthingishard sur HTML et CSS afin de reprendre bien les bases. Aborder les notions de balises, classes, CSS selector, floats... <br>
 S'en suivent 5h sur du javascript ou du moins les prémices de js sur developper.mozilla afin de rendre les sites un peu plus dynamique. 
 
-<h2>1. Introduction au html/CSS </h2>
+<h3>1. Introduction au html/CSS </h3>
 
 Site : ensemble de pages <br>
 Pages : HTML + CSS + JavaScript <br>
