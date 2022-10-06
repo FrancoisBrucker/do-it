@@ -168,3 +168,7 @@ Le principe de la fonction à créer est le suivant :
 - Elle parcourt l'arborescence du dossier en ajoutant tous les fichiers du dossier de départ dans le fichier zip.
 
 Après avoir créé la fonction, je l'ai lancée sur un dossier d'un électif (RIS) de l'année dernière pour voir si cela fonctionnait bien. J'ai eu une première erreur dû à des mauvaises indentations. Je l'ai relancé et ça a fonctionné : un fichier zip nommé RIS_1.zip s'est créé. Je l'ai relancé deux fois pour vérifier que le nom s'incrémentait bien, c'était le cas. Dernier test, j'ai effacé le fichier RIS_2.zip en conservant le RIS_3.zip. En relancant la fonction, le programme a bien recréé RIS_2.zip et est passé au RIS_4.zip au coup d'après.
+
+J'ai tenté de modifier légèrement le programme pour voir si j'arrivais à copier dans le fichier zip tous les documents sauf ceux en .pdf.
+
+J'ai ensuite réalisé qu'aucun des fichiers n'apparaissaient dans les dossiers de backup. Je n'ai toujours pas trouvé la solution.
