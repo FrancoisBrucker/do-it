@@ -13,7 +13,12 @@ authors:
 ## Description
 
 Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.
-L'objectif de ce MON est d'expliquer comment j'ai fait mon POK et notamment comment Angular m'a aidé.
+L'objectif de ce MON est d'expliquer comment j'ai fait mon POK et notamment comment Angular m'a aidé. Je me suis aidé du tuto : https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular (10h selon eux, moins si on a déjà des bases en Javascript) et du tuto (en anglais) Getting Started disponible sur le site https://angular.io/docs.
+
+Pour avoir quelques informations sur ce framework avant de commencer, j'ai d'ailleurs lu :
+
+https://webojob.ch/technologies/javascript/angular
+https://www.codeur.com/blog/choisir-framework-javascript/
 
 
 ## Premiers pas
@@ -25,6 +30,8 @@ Sur un terminal, installer le CLI d'Angular (Command Line Interface) à l'aide d
 `npm install -g @angular/cli`
 
 <mark>Note : -g signifie qu'on installe Angular "globalement" sur l'ordinateur et qu'on aura pas à le réinstaller pour chaque projet</mark>
+
+
 
 ### 2. Créer un projet
 
@@ -188,21 +195,105 @@ addOne(){
 
 ### 6. Conditionnement et Boucles
 
-Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs nom (string), technologies (string[]), description (string), keyword (string[]) et image (string) qui est optionnelle. 
+Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs title (string), techs (string[]), description (string), keyword (string[]) et image (string) qui est optionnelle. 
+
+Pour rendre le code plus lisible, on va créer un fichier dont le seul but sera de créer la classe Project. 
 
 ```typescript
-export class FaceSnap {
-  constructor(public title: string,
-              public description: string,
-              public imageUrl: string,
-              public createdDate: Date,
-              public snaps: number,
-              public location?: string) {
-  }
+export class Project {
+  public title!: string,
+  public techs!: string[],
+  public description!: string,
+  public keyword!: string[],
+  public image?: string
 }
 ```
-#### A. *ngIf
+Note : Le point d'interrogation à coté de l'attribut image permet de dire que cet attribut est optionnel.
+
+Avec ce que l'on a vu précédemment, on pourrait afficher des projets :
+
+```typescript
+
+import { Project } from '../models/project.model';
+
+project1!: Project;
+project2!: Project;
+
+ngOnInit(): void {
+
+  this.project1 = 
+  {
+    title: "Projet 1",
+    techs: ["Angular", "PHP"],
+    description: "Un petit projet avec Angular",
+    keyword: [""],
+    image: "monImage.png"
+  } 
+  this.project2 = 
+  {
+    title: "Projet 2",
+    techs: ["Javascript", "Scss"],
+    description: "Projet pour découvrir un framework css",
+    keyword: ["style","scss"],
+  }
+
+}
+```
+Et dans le code HTML : 
+
+```html {% raw %}
+<p>{{ project1.title }}</p>
+<p>{{ project1.description }}</p>
+<p>{{ project1.techs[0] }}</p>
+<p>{{ project2.title }}</p>
+<p>{{ project2.description }}</p>
+<p>{{ project2.techs[0] }}</p>
+{% endraw %}
+```
+
+Mais il existe des méthodes plus faciles pour faire cela !
 
 
+#### A. *ngFor
 
-#### B. *ngFor
+*ngFor permet d'itérer sur un tableau dans le code HTML. Reprenons l'exemple précédent. Organisons plutôt nos projets dans un tableau : 
+```typescript
+projects!: Project[];
+
+ngOnInit(): void {
+  this.projects = [
+    {
+      title: "Projet 1",
+      techs: ["Angular", "PHP"],
+      description: "Un petit projet avec Angular",
+      keyword: [""],
+      image: "monImage.png",
+    },
+    {
+      title: "Projet 2",
+      techs: ["Javascript", "Scss"],
+      description: "Projet pour découvrir un framework css",
+      keyword: ["style","scss"],
+    }
+
+  ]
+}
+```
+Pour afficher tous nos projets on va écrire :
+```html{% raw %}
+<div *ngFor="let project of projects">
+    <p>{{project.title}}</p>
+    <p>{{project.description}}</p>
+</div>{% endraw %}
+```
+#### B. *ngIf
+
+De manière similaire, on peut imposer des conditions aux projets. Par exemple, on peut avoir envie d'afficher que les projets qui ont une image.
+```html{% raw %}
+<div *ngFor="let project of projects" >
+   <div *ngIf="project.image"> 
+        <p>{{project.title}}</p>
+        <p>{{project.description}}</p>
+    </div>
+</div>{% endraw %}
+```
