@@ -69,7 +69,10 @@
 </head>
 <h2>Description</h2>
 <p>Pour ce MON, étant donné que j’ai fait un stage en développement web, j’ai décidé d’utiliser les 10h de temps en autonomie pour reprendre les quelques connaissances que j’avais du framework Angular et de les approfondir. J’ai choisi ce framework car il fait partie de la stack utilisé dans mon alternance.<br>
-L'objectif de ce MON est d'expliquer comment j'ai fait mon POK et notamment comment Angular m'a aidé.</p>
+L'objectif de ce MON est d'expliquer comment j'ai fait mon POK et notamment comment Angular m'a aidé. Je me suis aidé du tuto : <a href="https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular">https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular</a> (10h selon eux, moins si on a déjà des bases en Javascript) et du tuto (en anglais) Getting Started disponible sur le site <a href="https://angular.io/docs">https://angular.io/docs</a>.</p>
+<p>Pour avoir quelques informations sur ce framework avant de commencer, j'ai d'ailleurs lu :</p>
+<p><a href="https://webojob.ch/technologies/javascript/angular">https://webojob.ch/technologies/javascript/angular</a><br>
+<a href="https://www.codeur.com/blog/choisir-framework-javascript/">https://www.codeur.com/blog/choisir-framework-javascript/</a></p>
 <h2>Premiers pas</h2>
 <h3>1. Installations</h3>
 <p>Sur un terminal, installer le CLI d'Angular (Command Line Interface) à l'aide de npm.</p>
@@ -199,19 +202,92 @@ title<span class="token operator">:</span> <span class="token builtin">string</s
 </code></pre>
 <!-- Pour le MON, j'ai décidé de mettre dans le component <i>accueil</i>, des boutons  -->
 <h3>6. Conditionnement et Boucles</h3>
-<p>Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs nom (string), technologies (string[]), description (string), keyword (string[]) et image (string) qui est optionnelle.</p>
-<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">FaceSnap</span> <span class="token punctuation">{</span>
-  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-              <span class="token keyword">public</span> description<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-              <span class="token keyword">public</span> imageUrl<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
-              <span class="token keyword">public</span> createdDate<span class="token operator">:</span> Date<span class="token punctuation">,</span>
-              <span class="token keyword">public</span> snaps<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
-              <span class="token keyword">public</span> location<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token punctuation">}</span>
+<p>Dans la même idée que la partie précédente, il est possible d'utiliser des conditions et des boucles Typescript directement dans le HTML pour par exemple afficher ou non des éléments. Cela pourrait nous aider dans le MON pour l'affichage des projets. On va supposer que l'on dispose d'une classe Project qui dispose des attributs title (string), techs (string[]), description (string), keyword (string[]) et image (string) qui est optionnelle.</p>
+<p>Pour rendre le code plus lisible, on va créer un fichier dont le seul but sera de créer la classe Project.</p>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Project</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> title<span class="token operator">!</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token keyword">public</span> techs<span class="token operator">!</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token keyword">public</span> description<span class="token operator">!</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token keyword">public</span> keyword<span class="token operator">!</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token keyword">public</span> image<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4>A. *ngIf</h4>
-<h4>B. *ngFor</h4>
+<p>Note : Le point d'interrogation à coté de l'attribut image permet de dire que cet attribut est optionnel.</p>
+<p>Avec ce que l'on a vu précédemment, on pourrait afficher des projets :</p>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Project <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../models/project.model'</span><span class="token punctuation">;</span>
+
+project1<span class="token operator">!</span><span class="token operator">:</span> Project<span class="token punctuation">;</span>
+project2<span class="token operator">!</span><span class="token operator">:</span> Project<span class="token punctuation">;</span>
+
+<span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>project1 <span class="token operator">=</span> 
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">"Projet 1"</span><span class="token punctuation">,</span>
+    techs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Angular"</span><span class="token punctuation">,</span> <span class="token string">"PHP"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Un petit projet avec Angular"</span><span class="token punctuation">,</span>
+    keyword<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">""</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    image<span class="token operator">:</span> <span class="token string">"monImage.png"</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">this</span><span class="token punctuation">.</span>project2 <span class="token operator">=</span> 
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">"Projet 2"</span><span class="token punctuation">,</span>
+    techs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Javascript"</span><span class="token punctuation">,</span> <span class="token string">"Scss"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Projet pour découvrir un framework css"</span><span class="token punctuation">,</span>
+    keyword<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"style"</span><span class="token punctuation">,</span><span class="token string">"scss"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Et dans le code HTML :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project1.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project1.description }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project1.techs[0] }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project2.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project2.description }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ project2.techs[0] }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<p>Mais il existe des méthodes plus faciles pour faire cela !</p>
+<h4>A. *ngFor</h4>
+<p>*ngFor permet d'itérer sur un tableau dans le code HTML. Reprenons l'exemple précédent. Organisons plutôt nos projets dans un tableau :</p>
+<pre class="language-typescript " style="counter-reset: linenumber 0"><code class="language-typescript">projects<span class="token operator">!</span><span class="token operator">:</span> Project<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>projects <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">"Projet 1"</span><span class="token punctuation">,</span>
+      techs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Angular"</span><span class="token punctuation">,</span> <span class="token string">"PHP"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      description<span class="token operator">:</span> <span class="token string">"Un petit projet avec Angular"</span><span class="token punctuation">,</span>
+      keyword<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">""</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      image<span class="token operator">:</span> <span class="token string">"monImage.png"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">"Projet 2"</span><span class="token punctuation">,</span>
+      techs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Javascript"</span><span class="token punctuation">,</span> <span class="token string">"Scss"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      description<span class="token operator">:</span> <span class="token string">"Projet pour découvrir un framework css"</span><span class="token punctuation">,</span>
+      keyword<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"style"</span><span class="token punctuation">,</span><span class="token string">"scss"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Pour afficher tous nos projets on va écrire :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let project of projects<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{project.title}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{project.description}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4>B. *ngIf</h4>
+<p>De manière similaire, on peut imposer des conditions aux projets. Par exemple, on peut avoir envie d'afficher que les projets qui ont une image.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let project of projects<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">*ngIf</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>project.image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> 
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{project.title}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{project.description}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
 
 
 </article>

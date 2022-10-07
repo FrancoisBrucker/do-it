@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Web Front 1</title>
+    <title>Web Front 1 (HTML, CSS, Bootstrap, Sass)</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">Web Front 1</h1>
+  <h1 class="mb-1">Web Front 1 (HTML, CSS, Bootstrap, Sass)</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -76,12 +76,34 @@
   
 
   <!-- début résumé -->
-<p>Mon objectif est de revoir HTML 5 et CSS 3 et découvrir Javascript afin de pouvoir travailler sur mon POK. Ma ressource de base pour l'instant est Mozilla Developer Network. Je consulte aussi d'autres ressources complémentaires selon mes besoins.</p>
+<p>Voir ou revoir les technologies pour la conception du front d'un site (HTML, CSS, Frameworks CSS, JavaScript)</p>
 <!-- fin résumé -->
-<p>J'ai utilisé MDN pour revoir l'HTML et le CSS et l'utiliser dans mon POK (le lien est ici : <a href="https://github.com/JeffreyEdisah/Jekwed-Portfolio">https://github.com/JeffreyEdisah/Jekwed-Portfolio</a>)</p>
-<p>Je commence Javascript cette semaine.</p>
-<p>Si d'ici là j'ai pu faire quelque chose de satisfaisant sur mon site, je verrai la bibliothèque bootstrap, mais je doute en être à ce point au moment de la présentation.</p>
-<p>L'apprentissage du HTML était plutôt rapide, mes souvenirs sont frais, cependant l'apprentissage du CSS s'avère plus hardu.</p>
+<p>Au cours de ce MON, j'ai revu HTML 5, CSS 3 et Bootstrap afin de pouvoir travailler sur mon POK.<br>
+J'ai utilisé Mozilla Developer Network  pour revoir l'HTML, le CSS et les utiliser dans mon POK ( le lien est <a href="https://github.com/JeffreyEdisah/Jekwed-Portfolio">ici</a>)</p>
+<p>Mes souvenirs en HTML étant plutôt frais, ce MON se concentrera plus sur le CSS et les Frameworks associés</p>
+<h2>HTML</h2>
+<p>L'<strong>HTML</strong>(HyperText Markup Language) est le langage permettant l'écriture des pages web en complément du <strong>CSS</strong> (Cascading Style Sheets). Tandis que l'HTML sert à créer le contenu à proprement parler, c'est à dire le texte, les liens, les images, les vidéos, les tableaux, et les formulaires; le CSS sert lui à styliser les différents éléments HTML, organiser la page et son contenu, rendre le tout attrayant visuellement.</p>
+<p>L'HTML se construit à l'aide de balises ouvrantes et fermantes, de la forme <code>&lt;element&gt; contenu &lt;/element&gt;</code>, ces balises pouvant s'imbriquer les unes dans les autres. Une liste plus détaillée des éléments et de comment les utiliser est présente sur ce <a href="https://developer.mozilla.org/fr/docs/Learn/HTML">tutoriel de Mozilla Developer Network</a></p>
+<h3>Structure générale du fichier</h3>
+<p>Chaque fichier HTML se structure avec tout d'abord un élément principal <code>&lt;html&gt;&lt;/html&gt;</code>, qui est nécessaire.</p>
+<p>Il est possible ensuite d'écrire un en-tête <code>&lt;head&gt;&lt;/head&gt;</code> qui contient des métadonnées sur la page telle que son titre, son type de caractères, sa langue, ou bien les liens vers les fichiers CSS et JavaScript, ou même les codes CSS et JavaScript directement dans les éléments <code>&lt;style&gt;&lt;/style&gt;</code>et <code>&lt;script&gt;&lt;/script&gt;</code>respectivement. Le contenu de cette élément n'est pas visible sur la page.</p>
+<p>Ce qui est visible dans la page est écrit dans l'élément <strong>body</strong>, c'est ici que sera écrit ce qui est visible sur la page, et tout cela sera détaillé juste en dessous.</p>
+<h3>Structure de la page</h3>
+<p>Les pages Web se construisent généralement comme ceci, un <strong>header</strong>, un <strong>main</strong> et un <strong>footer</strong>. Aucun de ces éléments n'est obligatoire bien entendu mais ils permettent de mieux structurer la page, le header contenant généralement une <strong>navbar</strong> (barre de navigation ou menu) tandis que le footer porte des informations de contact. Le main lui correspond au reste de la page</p>
+<h3>Contenu</h3>
+<p>Le gros du contenu produit en HTML est surtout textuel, que ce soit les titres par exemple de la forme<code>&lt;h1&gt; &lt;/h1&gt;</code>, les paragraphes <code>&lt;p&gt;&lt;/p&gt;</code>.<br>
+Il existe aussi un élément <code>&lt;img&gt;</code>, avec une balise qui est seulement ouvrante pour tout ce qui est images, le contenant <code>&lt;iframe&gt;</code> pour les contenus multimédia, et des éléments audio et vidéo que je n'ai pas encore été amené à utiliser.</p>
+<p>Au delà de ça il existe des éléments appelés universels <code>&lt;div&gt;</code>et <code>&lt;span&gt;</code> qui servent ensuite dans la stylisation de la pag en CSS à l'aide des attribut classes.</p>
+<h2>CSS</h2>
+<p>De la même manière que pour l'HTML, ma ressource principale pour le CSS était <a href="https://developer.mozilla.org/fr/docs/Learn/CSS">Mozilla</a> qui nous permet une introduction au langage et référence les éléments CSS et leurs valeurs possibles</p>
+<h3>Sélecteurs</h3>
+<p>Le CSS fonctionne à l'aide de sélecteurs, c'est à dire des moyens de sélectionner les éléments auxquelles on ajoute le style. On peut les sélectionner par ordre de spécificité soit par leur élément, soit par leur classe, soit par leur id. La spécificité, concept important en CSS, est décrite de manière plus exhaustive <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">ici</a></p>
+<h3>Stylisation des éléments HTML</h3>
+<p>Le CSS permet de changer différentes propriétés des éléments, que ce soit leur taille, leur position, leur couleur, la couleur de l'arrière plan, etc...</p>
+<h3>Mise en page</h3>
+<p>La mise en page apparait comme la grande force de CSS, et aussi la partie la plus compliquée de la chose. Il y a plusieurs layout disponibles : la grille, les multicolonnes, et plus récemment la flexbox. La flexbox a l'avantage d'être plus responsive nativement que les autres layouts, ce qui permet d'éviter la multiplication des medias queries. Le lien suivant d'<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox">OpenClassrooms</a> m'a permis de comprendre beaucoup mieux la puissance du layout flex, notamment avec la fonction wrap.  Ce <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background">lien</a> m' a aussi permis de voir beaucoup plus de choses sur flex.</p>
+<h2>Bootstrap</h2>
+<p>J'ai manqué de temps pour voir Bootstrap de manière exhaustive et organiser mes pensées mais je suis toujours en train de regarder ces liens actuellement, la <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">documentation Bootstrap</a> ainsi que le [cours OpenClassrooms] (<a href="https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5">https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5</a>). je prendrais sûrement un peu de temps pour mieux organiser cette partie plus tard.</p>
 
 
 </article>
