@@ -62,6 +62,3 @@ La mise en page apparait comme la grande force de CSS, et aussi la partie la plu
 ## Bootstrap
 
 J'ai manqué de temps pour voir Bootstrap de manière exhaustive et organiser mes pensées mais je suis toujours en train de regarder ces liens actuellement, la [documentation Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) ainsi que le [cours OpenClassrooms](https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5/). je prendrais sûrement un peu de temps pour mieux organiser cette partie plus tard.
-
-
-
