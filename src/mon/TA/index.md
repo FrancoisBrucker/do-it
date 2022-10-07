@@ -103,20 +103,20 @@ Mais, vous êtes-vous déjà demandé comment s'établissent les connexions séc
 
 Voyons d'abord séparément les briques pour construire une connexion sécurisée, avant d'expliquer comment tout cela s'agence.
 
-**Chiffrement symétrique**
+**Cryptographie symétrique**
 
-![Chiffrement symétrique](chiffrement_sym.png)
-Chiffrement symétrique en image (par [libreCours](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml))
+![Cryptographie symétrique](chiffrement_sym.png)
+La cryptographie symétrique en image (par [libreCours](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml)).
 
-Le [chiffrement symétrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est connu depuis longtemps (Antiquité). Il consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), l'algorithme le plus utilisé, la clé est stockée sur 128 bits (donc $2^{128}$ clés possibles). Il peut être considéré comme *sûr* tant qu'il n'y a pas de meilleure attaque que par force brute.
+La [Cryptographie symétrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est connu depuis longtemps (Antiquité). Elle consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), l'algorithme le plus utilisé, la clé est stockée sur 128 bits (donc $2^{128}$ clés possibles). Il peut être considéré comme *sûr* tant qu'il n'y a pas de meilleure attaque que par force brute.
 
-Le chiffrement symétrique est la méthode utilisée pour transférer les données **une fois la connexion établie**. Mais, avant de commencer la communication sécurisée, il faut partager la clé de chiffrement. Et, si vous transmettez cette clé *en clair*, elle peut être interceptée par tous les intermédiaires de la communication, malveillant ou non, et ils pourront tous déchiffrer ce que vous communiquez avec votre interlocuteur.
+La cryptographie symétrique est la méthode utilisée pour transférer les données **une fois la connexion établie**. Mais, avant de commencer la communication sécurisée, il faut partager la clé de chiffrement. Et, si vous transmettez cette clé *en clair*, elle peut être interceptée par tous les intermédiaires de la communication, malveillant ou non, et ils pourront tous déchiffrer ce que vous communiquez avec votre interlocuteur.
 
 Le but est donc d'arriver à faire parvenir la clé de chiffrement au serveur sans que les intermédiaires puissent y avoir accès.
 
-**Chiffrement asymétrique**
+**Cryptographie asymétrique**
 
-Le [chiffrement asymétrique](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique) repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun **une clé publique** (elle peut être partagée a tous) et **une clé privée** (à garder précieusement, seulement pour soi).
+La [cryptographie asymétrique](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique) repose sur **deux clés** pour **chaque** interlocuteur. Le client et le serveur auront donc chacun **une clé publique** (elle peut être partagée a tous) et **une clé privée** (à garder précieusement, seulement pour soi).
 
 Le fonctionnement de la cryptographie asymétrique est le suivant : la clé publique déchiffre ce que la clé privée chiffre, et réciproquement. On utilise cette cryptographie à deux fins :
 
@@ -132,11 +132,11 @@ La procédure pour transmettre une clé de chiffrement **symétrique** à l'aide
    2. Avec la clé publique du serveur : elle permettra à ce que seul le serveur puisse déchiffrer le message à l'aide de sa clé privée.
 
 ![Chiffrement asymétrique](Chiffrement_asymétrique.jpg)
-Le chiffrement asymétrique en image (par Jp.simon.manz sur [wikipedia](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique)). Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)). En pratique, vous n'avez pas besoin de transmettre votre clé publique au serveur, car vous authentifier n'est pas nécessaire pour lui. Pour la communication, il suffit que vous lui transmettez votre clé de chiffrement symétrique chiffrée avec sa clé publique. Vous pourrez ensuite discuter de façon sécurisée.
+La cryptographie asymétrique en image (par Jp.simon.manz sur [wikipedia](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique)). Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)). En pratique, vous n'avez pas besoin de transmettre votre clé publique au serveur, car vous authentifier n'est pas nécessaire pour lui. Pour la communication, il suffit que vous lui transmettez votre clé de chiffrement symétrique chiffrée avec sa clé publique. Vous pourrez ensuite discuter de façon sécurisée.
 
 Aujourd'hui, on utilise principalement le [chiffrement RSA](https://fr.wikipedia.org/wiki/Chiffrement_RSA) comme algorithme de cryptographie asymétrique. Les clés utilisées font de 1024 à 2048 bits (beaucoup plus que les 128 bits de [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard)). Les communications restent rapide car on se contente seulement de transmettre la clé de chiffrement symétrique. On ne sécurise pas seulement les connexions https avec RSA, mais aussi les terminaux de paiement par exemple. Nous devons donc nous assurer de la sûreté de cette algorithme. Le temps pour *craquer* la clé privée du chiffrement RSA croit exponentiellement avec la longueur de la clé. En 2020, le plus long message *craqué* faisait 829 bits. Les clés utilisées aujourd'hui sont encore considérées comme *sûres*, ce qui pourrait être remis en question avec les [ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), qui ont des [algorithmes de factorisation](https://fr.wikipedia.org/wiki/Algorithme_de_Shor) beaucoup plus efficaces que les ordinateurs classiques (mais pas d'inquiétude, d'autres ont pensé à des méthodes de [cryptographie quantique](https://fr.wikipedia.org/wiki/Cryptographie_quantique)...).
 
-Enfin bref, avec ce procédé, vous pouvez enfin commencer à communiquer (et plus rapidement qu'avec le chiffrement asymétrique) ! A moins que... ce ne soit pas au serveur que vous parlez ?
+Enfin bref, avec ce procédé, vous pouvez enfin commencer à communiquer (et plus rapidement qu'avec la cryptographie asymétrique) ! A moins que... ce ne soit pas au serveur que vous parlez ?
 
 ***Man in the middle***
 
@@ -154,16 +154,35 @@ Pour éviter ce type d'attaque, on utilise des certificats pour établir une con
 
 **Certificats**
 
-Voici ce que contient un certificat :
+Voici ce que contient un [certificat](https://fr.wikipedia.org/wiki/Certificat_%C3%A9lectronique) :
 
 ![Certificat](Cerificat.png)
 
 Cerficat en image (par [Yann Bidon](https://www.youtube.com/watch?v=FSq-FXx5dxU&t=1s&ab_channel=YannBidon)).
 
+Un certificat permet d'assurer l'identité d'une entité. Il contient entre autres choses la clé publique, et un condensat (qui est le résultat des données du certificat passée dans la fonction de hachage (*checksum*)) pour vérifier qu'il n'a pas été modifié.
+
+Pour se faire délivrer un certificat (et donc ouvrir son site en https, entre autres), il faut le demander à une [autorité de certification](https://fr.wikipedia.org/wiki/Autorit%C3%A9_de_certification), qui vous délivrera une clé publique, moyennant finance. Les autorités de certifications sont nombreuses ; en fait, une autorité de certification est certifiée par une autre autorité de certification, qui est certifiée par une autre... et ainsi de suite. Jusqu'à arriver à une autorité de certification *racine*, comme la gendarmerie, le ministère de la Justice ou Google. Ces autorités sont considérées comme des tiers de confiance.
+
+Bref, pour avoir un certificat, l'autorité de certification vérifie votre identité, et vous attribue un certificat avec une clé publique si les données sont valides. Ce certificat n'est pas modifiable (sinon la *checksum* ne correspond pas au condensat) et les moteurs de recherche ont dans leur base de données des autorités de certification valides, ce qui met en garde contre les certificats auto-signés (il est possible et tout a fait légal d'auto-signer un certificat, mais un moteur de recherche récent vous mettra des *warnings* vous disant que vous êtes en danger... Ce n'est pas forcément vrai, c'est seulement que le serveur s'auto-certifie, à vous de voir ce que ça vaut...). Donc, si vous accéder à un site https avec un certificat valide, vous pouvez normalement être sûr de communiquer directement avec le serveur.
+
+Quand vous êtes connecté à un site en https, vous pouvez vérifier le certificat utilisé. Il vous suffit de cliquer sur le cadenas > la connexion est sécurisée > certificat valide (ou quelque chose comme ça). Vous pourrez alors retrouver toutes les informations du certificat.
+
+Donc, reprenons la procédure lorsque que vous voulez établir une connexion sécurisée avec un serveur. Le but est d'échanger une clé de chiffrement symétrique sans pouvoir être espionné par un tiers :
+
+1. Vous envoyez une requête au serveur lui demandant sa clé publique.
+2. Le serveur vous répond avec sa clé publique dans un certificat valide. Vous pourrez alors être sûr que vous avez en votre possession la clé publique du serveur, ce qui évite les attaques *man in the middle*.
+3. Vous envoyez la clé de chiffrement symétrique que vous voulez utiliser. Avant l'envoi, il faut que vous la chiffrer :
+   1. Avec la clé publique du serveur : elle permettra à ce que seul le serveur puisse déchiffrer le message à l'aide de sa clé privée.
+
+Vous pourrez ensuite communiquer avec le serveur en étant assuré que personne ne peut espionner vos messages ou transmettre des informations en votre nom, tant qu'il ne trouve pas la clé de chiffrement.
+
+Voilà, vous avez établi une **vraie** connexion https. Bravo !
+
 ### Sources
 
 1. Stocker correctement ses mots de passe : <https://patouche.github.io/2015/03/21/stocker-des-mots-de-passe/>
 2. Un guide sur comment marche les *rainbow tables* : <https://www.ionos.fr/digitalguide/serveur/securite/rainbow-tables/>
-3. Comprendre comment marche le SSL/TCP, c'est-à-dire une connexion https : <https://www.youtube.com/playlist?list=PLYsJ-3MUn_eeYwSgJ3Z_hfrIzGqYOGAaj>
+3. Comprendre un peu comment marche une connexion SSL/TCP, c'est-à-dire une connexion https : <https://www.youtube.com/playlist?list=PLYsJ-3MUn_eeYwSgJ3Z_hfrIzGqYOGAaj>
 
 [1]: <https://www.ionos.fr/digitalguide/serveur/securite/rainbow-tables/>
