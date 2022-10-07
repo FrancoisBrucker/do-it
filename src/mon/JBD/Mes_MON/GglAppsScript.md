@@ -14,7 +14,7 @@ Google apps script ou comment automatiser les choses embêtantes dans un tableur
 
 - [Table des matières](#toc)
 - [Qu'est ce que Google Apps Script ?](#h1)
-- [Quelles sont les principales fonctionnalitées ?](#h2)
+- [Quelles sont les principales fonctionnalités ?](#h2)
   - [Fonctions de calcul personnalisées](#h2-1)
   - [Automatiser plusieurs cases](#h2-2)
     - [Class Range](#h2-2-1)
@@ -38,7 +38,7 @@ Nous nous concentrerons sur l'apport que peut faire Google Apps Script à Google
 
 <img src="../../Image/google_apps_script_acces.png" alt="Technologies utilisées" style="height: 200px; margin: 0 auto; border: 0" />
 
-<h2 id="h2"> Quelles sont les principales fonctionnalitées ? </h2>
+<h2 id="h2"> Quelles sont les principales fonctionnalités ? </h2>
 
 <h3 id="h2-1">Fonctions de calcul personnalisées</h3>
 
@@ -173,7 +173,7 @@ const tricountSettings = {
 ```
 
 Et de 4 fonctions :
-- **tricountAddToHistory**, dont le but est de transférer les données d'ajout d'achat dans la prtie historique (fonction inspirée du [travail de --Hyde](https://support.google.com/docs/thread/41717054))
+- **tricountAddToHistory**, dont le but est de transférer les données d'ajout d'achat dans la partie historique (fonction inspirée du [travail de --Hyde](https://support.google.com/docs/thread/41717054))
 - **columnToLetter**, dont le but est de transformer la ième colonne en la lettre associée (fonction créée par [AdamL](https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter))
 - **onEdit**, dont le but est de déclencher la fonction **trincountAddToHistory** si les conditions sont réunies
 - **generateSheet**, dont le but est de créer toute la mise en page du tricount au début
