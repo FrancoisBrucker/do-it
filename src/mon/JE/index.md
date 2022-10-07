@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Web Front 1 (HTML, CSS, Bootstrap, Sass)"
+title: "Web Front 1 (HTML, CSS, Bootstrap)"
 authors:
   - Jeffrey Edisah
 
