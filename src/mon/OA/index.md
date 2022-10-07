@@ -17,6 +17,11 @@ Google Apps Script est un langage de programmation propre à Google. Il permet d
 
 Pour accéder à l'App Script, il suffit de se rendre sur un document sur un Google Drive, cliquer dans la barre de menu sur "extensions" puis sur "Apps Script". Nous sommes maintenant prêt à commencer à utliser ses fonctionnalités.
 
+{% attention "N'oubliez pas d'enregistrer votre script après chaque modification"%}
+
+{% endattention %}
+
+
 ### Les Triggers
 
 Pour mon MON, j'ai décidé de me focaliser sur les triggers, en français déclencheurs, j'ai trouvé leur utilisation pouvait beaucoup m'apporter dans le futur.
@@ -135,9 +140,10 @@ Tout est prêt, je vais donc recevoir tous les jours un mail de ce type pour ne 
 
 ![Optional Text](Image5.png)
 
-{% attention "N'oubliez pas d'enregistrer votre script après chaque modification"%}
+{% info %}
+Une autre idée de MON, à partir d'un tableau avec des dates d'anniversaire, créer un trigger temporel qui prévient par mail des anniversaires.
+{% endinfo %}
 
-{% endattention %}
 
 ### Ressources utilisées 
 
