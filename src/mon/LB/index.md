@@ -27,13 +27,13 @@ A l'aide d'[openclassroom](https://openclassrooms.com/fr/courses/1603881-apprene
 
 #####  2. Création de la page web
 
-Je commence le projet en HTML et CSS en parallèle du point précédent en créant un fichier index.html. J'ai fait quelque chose de très simple mais qui m'a permis d'utiliser les connaissances acquises, de découvrir aussi plein de template en css ce qui je pense sera ma solution retenue à l'avenir. Je pense que se baser sur un css bien fourni et changer certains objets si besoin est plus efficace que faire tout son css soi-meme.
+Je commence le projet en HTML et CSS en parallèle du point précédent en créant un fichier [index.html](index.html). J'ai fait quelque chose de très simple mais qui m'a permis d'utiliser les connaissances acquises, de découvrir aussi plein de template en css ce qui je pense sera ma solution retenue à l'avenir. Je pense que se baser sur un css bien fourni et changer certains objets si besoin est plus efficace que faire tout son css soi-meme.
 
 ##### 3. Apprentissage du Javascript
 
 J'ai ensuite vu des [tutos sur youtube](https://www.youtube.com/watch?v=XkvrHQNmigs&t=266s) pour m'introduire au JavaScript. C'était intéressant mais juste suivre un cours était compliqué surtout après le long cours sur HTML/CSS.
 
 ##### 4. Ecriture d'un petit jeu : Snake
-Assez vite j'ai donc voulu mettre la main à la pate et, pour me simplifier la vie et avoir des ressources sur internet je me suis lancé dans l'écriture d'un Snake en JavaScript. 
+Assez vite j'ai donc voulu mettre la main à la pate et, pour me simplifier la vie et avoir des ressources sur internet je me suis lancé dans l'écriture d'un [Snake](snake\snake.html) en JavaScript. 
 
 
