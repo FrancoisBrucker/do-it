@@ -17,7 +17,7 @@ Voici l'ensemble de mes POKs de l'année.
 
 Pour le temps 1 sur le thème Comprendre, j'ai choisi le POK suivant :
 
-[Typologie des plateformes numériques](Temps_1/index.md)
+[Typologie des plateformes numériques](src\pok\EGT\Temps_1\index.md)
 
 ## Temps 2
 
