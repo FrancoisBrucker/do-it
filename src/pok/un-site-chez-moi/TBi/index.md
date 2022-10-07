@@ -17,9 +17,8 @@ But : Site avec Front/Back/BDD avec des outils que je pourrais eventuellement ut
 {% attention %}
 {% note %}
 {% info %}{% faire %}
-ToDO: Contacter Mr Brucker pour définir les technologies à utiliser. idees : Tricount ?
-Tech que j'aimerai implémenter : Authentification avec un compte Admin
-Cookies qui associe un utilisateur a un compte
+ToDO: Contacter Mr Brucker pour définir les technologies à utiliser. idees : blog
+Tech que j'aimerai implémenter : utiliser Next.js avec react
 {% endfaire %}
 {% endinfo %}{% endnote %}{% endattention %}
 
