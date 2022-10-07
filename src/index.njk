@@ -5,7 +5,7 @@ title: do-it
 ---
 
 {% set post = null %}
-{% for order in ['1', '2', '3', '4'] %}
+{% for order in ['1', '2', '3'] %}
   {%- for index in collections.index -%}
     {% if index.data.order == order %}
       {% set post = index %}
