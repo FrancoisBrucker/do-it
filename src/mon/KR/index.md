@@ -14,8 +14,8 @@ Ici, c'est le MONde des projets de Kasimir
 ## Planning MON de Kasimir
 
 ### Temps 1
-- [Premier MON: “google apps script” ou comment automatiser les choses embêtantes dans un tableur](./t1-google-app-script)
-- [Deuxième MON: Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./t1-diagnostic-SI)
+- [Premier MON: “google apps script” ou comment automatiser les choses embêtantes dans un tableur](./MON1-1/)
+- [Deuxième MON: Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./MON1-2/)
 
 ### Temps 2
 - Premier MON: Maturité de la transformation digitale

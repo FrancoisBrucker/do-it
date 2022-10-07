@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "Temps 1 - MON - Google Apps Script"
 authors:
   - Kasimir Romer
+
+tags: ['google-apps-script']
 ---
 <!-- Début Résumé -->
 Ici je vais mettre les informations sur mon MON de temps 1, Google Apps Script.
@@ -11,6 +13,13 @@ Ici je vais mettre les informations sur mon MON de temps 1, Google Apps Script.
 
 ## But du projet
 Le but de ce projet, c'est de créer une liste de tâches à faire ("To-Do") dans Google Sheets, qui est mise à jour automatiquement à chaque fois que je modifie la liste dans Google Sheets.
+
+## Résultat
+### État de la table au debut
+![Screenshot of the table before the script is being executed](./sheet-before.png)
+
+### Etat de la table après l'exécution du script
+![Screenshot of the table after the script is being executed](./sheet-after.png)
 
 ## Déroulement du projet
 1. Tutoriel sur YouTube

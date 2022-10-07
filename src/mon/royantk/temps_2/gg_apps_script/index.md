@@ -4,8 +4,6 @@ layout: layout/post.njk
 title: "[MON] Google Apps Script"
 authors:
   - Killian ROYANT
-
-tags: ['mon']
 ---
 
 <!-- début résumé -->

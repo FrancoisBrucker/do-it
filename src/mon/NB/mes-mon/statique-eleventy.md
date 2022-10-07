@@ -13,6 +13,8 @@ Site web statique avec 11ty (Temps 1)
 
 Dans ce cours nous allons apprendre à créer un site web statique de zéro en utilisant [Eleventy](https://www.11ty.dev/).
 
+Eleventy est un générateur de site statique, il va, ici, transormer le langage markdown en langage HTML. Il utilise un langage de templating qui s'appelle Nunjucks.
+
 {% faire %}
 Nous allons avoir besoin de Node.js, si vous ne l'avez pas vous pouvez le télécharger sur le site officiel de [Node.js](https://nodejs.org/) (version > 12).
 {% endfaire %}
@@ -45,7 +47,7 @@ Une fois ces deux commandes exécutées vous devriez avoir l'arborescence suivan
 mon-site
     ├── node_modules
     ├── package-lock.json
-    ├── package.json
+    └── package.json
 
 ```
 Vous devriez également voir `"@11ty/eleventy": {version}` dans la partie `"dependencies` du fichier `.package.json`.
@@ -80,9 +82,11 @@ Relançons la commande `npx @11ty/eleventy`. On voit alors que notre fichier `in
 <p>Regarder ce mot est en <strong>gras</strong> et celui là est en <em>italique</em> !</p>
 ```
 
+Si vous connaissez un minimum le langage HTML vous voyez que la compilation ne fait rien de délirant et que c'est logique, c'est bien !
+
 ### 1.5 Mettre en place le serveur web en local
 
-Afin qu'Eleventy détecte les changements en permanence, nous allons lancer la commande `npx @11ty/eleventy --serve`.
+Afin d'éviter d'avoir à relancer la compilation à chaque fois, nous allons mettre en place un serveur web local pour qu'Eleventy détecte les changements en permanence, nous allons le lancer la commande `npx @11ty/eleventy --serve`.
 Rendez-vous ensuite sur [http://localhost:8080](http://localhost:8080) et vous devriez voir le contenu de votre fichier compilé !
 
 {% info %}
@@ -95,7 +99,7 @@ Cette commande étant un peu difficile à se souvenir, nous allons créer un ali
 ```json
 {
   ...
-  "srcipts": {
+  "scripts": {
     ... 
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx @11ty/eleventy --serve"
@@ -124,14 +128,18 @@ title: Mon super site statique
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{ title }</title>
   </head>
   <body>
     Bienvenue à tous sur mon site créer avec Eleventy !
-    {{ content | safe }}
+    { content | safe }
   </body>
 </html>
 ```
+
+{% attention %}
+**ATTENTION**, ici il faut remplacer les simples accolades "{ }" par des doubles accolades afin que le contenu soit interprété comme il faut. Je ne peux pas les afficher ici puisqu'elles sont interprétées directement par le compilateur.
+{% endattention %}
 
 Ici, dans la balise `content` sera ajouté le contenu des "enfants", c'est-à-dire les pages qui vont utiliser ce template.
 Afin que la page que nous venons de créer utiliser ce template il faut rajouter les quelques lignes suivantes en en-tête du fichier `index.md`.
@@ -191,6 +199,8 @@ Pour davantage d'informations, rendez-vous sur la [documentation d'Eleventy](htt
 {% endprerequis%}
 
 ## 3. Installation de TailwindCSS
+
+{% details "A vos risques et périls" %}
 
 Afin de faciliter la création du style, nous allons utiliser [TailwindCSS](https://tailwindcss.com/) dans notre projet. TailwindCSS est un framework CSS basé sur le principe de classes utilitaires. Cela rend la phase de développement beaucoup plus simple.
 
@@ -266,7 +276,7 @@ title: Mon super site statique
   </head>
   <body class="text-3xl text-blue-600">
     Bienvenue à tous sur mon site créer avec Eleventy !
-    
+    {{ content | safe }}
   </body>
 </html>
 ```
@@ -285,3 +295,18 @@ J'ai découvert cela durant l'élaboration de ce MON. Quand vous appliquez des c
 
 ⟶ Ainsi je vous conseille de ne pas utiliser de classes Tailwind dans vos pages mais seulement dans vos templates.
 {% endattention %}
+
+{% enddetails %}
+
+## 4. Un exemple + des bidouilles
+
+J'ai crée un petit site pour présenter les formations du GInfo en suivant le tuto ci dessus. Voilà le lien du repo : [https://github.com/nbert71/eleventy-cours](https://github.com/nbert71/eleventy-cours)
+Vous pouvez le consulter à l'adresse suivante : [http://nbert.perso.ec-m.fr/eleventy](http://nbert.perso.ec-m.fr/eleventy)
+
+J'ai installé [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) (via le CDN pour aller plus vite) pour styliser rapidement mes pages.
+
+{% info %}
+J'ai créé plusieurs pages. Il faut savoir que si l'on n'utilise pas de bilbiothèque spécifique pour gérer la navigation, le rounting du site suivra l'arbrescence des fichiers de votre projets. Exemple : si vous mettez la page `linux` dans un dossier `formations`, celle-ci sera accessible sur `http://monsite.com/formations/linux`
+{% endinfo %}
+
+Vous pouvez voir différentes pages ainsi qu'une page regroupant toutes les formations. Vous avez la possibilité de filtrer suivant un tag pour n'afficher que les formations qui possèdent ce tag. Ensuite en cliquant sur une formation vous avez accès au détail de la formation.

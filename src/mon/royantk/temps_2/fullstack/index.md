@@ -4,8 +4,6 @@ layout: layout/post.njk
 title: "[MON] Passez au Full Stack avec Node.js, Express et MongoDB"
 authors:
   - Killian ROYANT
-
-tags: ['mon']
 ---
 
 <!-- début résumé -->

@@ -22,10 +22,10 @@ Tous les MON de Killian Royant
 Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **MON** :
 
 - [**Temps 1**](temps_1)
-  - [Programmation Objet en Python](temps_2/POO_python)
+  - [Programmation Objet en Python](temps_1/POO_python)
   - [Créez des pages web dynamiques avec JavaScript](temps_1/js)
 - [**Temps 2**](temps_2)
-  - [Passez au Full Stack avec Node.js, Express et MongoDB](temps_1/fullstack)
+  - [Passez au Full Stack avec Node.js, Express et MongoDB](temps_2/fullstack)
   - [Google Apps Script](temps_2/gg_apps_script)
 - **Temps 3**
   - Développement mobile

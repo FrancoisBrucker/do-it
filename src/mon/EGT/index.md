@@ -17,6 +17,10 @@ Voici la table des matières des MONs de l'année.
 
 Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :
 
-{% chemin %} [MON Automate the boring stuff](src\mon\EGT\MON_1_1\index.md) {% endchemin %}
+{% chemin %} [MON Automate the boring stuff](./MON_1_1/) {% endchemin %}
 
 Diagnostic organisationnel (étude de cas CFP)
+
+## Temps 2
+
+## Temps 3

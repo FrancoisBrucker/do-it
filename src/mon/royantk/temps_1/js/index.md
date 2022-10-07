@@ -5,7 +5,6 @@ title: "[MON] Créez des pages web dynamiques avec JavaScript"
 authors:
   - Killian ROYANT
 
-tags: ['mon']
 ---
 
 <!-- début résumé -->
