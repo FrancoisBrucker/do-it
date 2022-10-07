@@ -4,8 +4,6 @@ layout: layout/post.njk
 title: "[MON] Temps 1"
 authors:
   - Killian ROYANT
-
-tags: ['mon']
 ---
 
 <!-- début résumé -->

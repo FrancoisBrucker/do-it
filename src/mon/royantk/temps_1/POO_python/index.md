@@ -4,8 +4,6 @@ layout: layout/post.njk
 title: "[MON] Programation orientée objet - Python"
 authors:
   - Killian ROYANT
-
-tags: ['mon']
 ---
 
 <!-- début résumé -->
