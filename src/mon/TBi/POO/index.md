@@ -16,7 +16,7 @@ Resultat : [Mon Repo GitHub.](https://github.com/TuncayBilgi/heelo-dev/tree/main
 Le MON balaie les notions suivantes :
 
  - POO en python:
-	 - Base de POO :Classe, Constructeurs, getter, setter, héritage
+	 - Base de POO : Classe, Constructeurs, getter, setter, héritage, interfaces
 	 -  Design patterns
  - Spécificités avancées de Python :
 	 - @decorateurs
@@ -27,6 +27,12 @@ Le MON balaie les notions suivantes :
  - TDD :
 	 - La philosophie
 	 - pytest
+
+   Il a été réaliser en suivant deux ressources en particulier : 
+   - [Cours de M.Brucker sur la POO en python](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/)
+   - [MOOC python](https://www.youtube.com/playlist?list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-) avancé, a partir du chapitre 9
+   
+   Tout cela accompagnées de recherches sur StackOverflow pour répondre à des questions précises sur des concepts inconnus.
 
 ## La Programmation Orientée Objet :
 
@@ -138,5 +144,18 @@ Enfin, on appelle :
  - `pytest -cov --cov:term-missing ` pour en plus avoir précisément les lignes non lues par les tests.
 
 Des exemples peuvent être trouvés [ici](https://github.com/TuncayBilgi/heelo-dev/blob/main/Python/POO/Dice/dice_test.py), [là](https://github.com/TuncayBilgi/heelo-dev/blob/main/Python/POO/Dice/tapis_vert_test.py) et [par là](https://github.com/TuncayBilgi/heelo-dev/blob/main/Python/POO/Panier/panier_test.py).
+
+# Conclusion :
+
+## La POO en python :
+
+En python, la programmation orientée ibjet est assez différente de celle de langagues typés comme le Java. Il y a moins de règles auxquels il faut faire attention, certains concept, comme le concept d'attributs et de fonctions privés n'existent pas, et les design pattern qui font appel a des abstractions sont moins évidents à implémenter et on y voit moins l'interêt. Par exemple, il n'y a pas le probleme de dispatch comme en java.
+
+## Les supports :
+
+Le cours de M.Brucker est une bonne introduction. Les concepts de décorateurs, et plus particulièrement le `@property` devrait y figurer car c'est la manière actuelle et recommandée de créer des getters et setters en python.
+De plus, quelques implémentations simples de design pattern seraient bienvenu, design faisant appel à des interfaces ou des classes abstraites notamment (c'est un point sur lequel j'ai encore beaucoup de mal).
+
+Le MOOC python est bien fait et actuel avec des exemples, il reprend python depuis les bases jusqu'au fonctions avancées.
 
 
