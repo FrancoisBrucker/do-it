@@ -1,9 +1,9 @@
 ---
 layout: layout/post.njk
 
-title: "Du côté de chez François"
+title: "Un site chez moi"
 authors:
-  - François Brucker
+  - Ossama Abdane
 
 tags: ['pok']
 ---
@@ -12,6 +12,3 @@ tags: ['pok']
 
 Mon pok qui crée un site web chez moi.
 <!-- fin résumé -->
-
-
-TBD : le rapport.
