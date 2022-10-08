@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dev Web 1</title>
+    <title>Dev Web 2</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">Dev Web 1</h1>
+  <h1 class="mb-1">Dev Web 2</h1>
   <div class="mb-4">
     
 
@@ -64,11 +64,54 @@
 
   
 
-  <p>Poursuite du Javascript dans un premier temps avec les chapitres :</p>
+  <!-- Début résumé -->
+<!-- Fin résumé -->
+<p>Poursuite du Javascript dans un premier temps avec les chapitres :</p>
 <ul>
 <li>[Programmation orienté objets]</li>
 <li>[Découverte des API web]</li>
 </ul>
+<h3>Programmation orienté objet</h3>
+<ol>
+<li>Les bases de JS orientés objet.<br>
+Dans ce chapitre nous sommes inités à ce qu'est un objet, comment ils sont construits ainsi que leurs différentes notations.<br>
+Un objet est une collection de variable et de fonctionalités.</li>
+</ol>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">       var personne <span class="token operator">=</span> <span class="token punctuation">{</span>
+        nom: <span class="token punctuation">[</span><span class="token string">'Jean'</span>, <span class="token string">'Martin'</span><span class="token punctuation">]</span>,
+        age: <span class="token number">32</span>,
+        sexe: <span class="token string">'masculin'</span>,
+        interets: <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'skier'</span><span class="token punctuation">]</span>,
+        bio: <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          alert<span class="token punctuation">(</span>this.nom<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> + <span class="token string">' '</span> + this.nom<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> + <span class="token string">' a '</span> + this.age + <span class="token string">' ans. Il aime '</span> + this.interets<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> + <span class="token string">' et '</span> + this.interets<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> + <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>,
+        salutation: <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          alert<span class="token punctuation">(</span><span class="token string">'Bonjour ! Je suis '</span> + this.nom<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> + <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="2">
+<li>Prototypes objet.<br>
+Ici, nous détaillons un peu plus le prototypage, les méthodes, la notion d'héritage ainsi que les constructeurs. <br><br>
+Le prototypage permet d'hériter des attributs et des méthodes d'autres objets : ci-dessous, personne1 est construit à partir de Personne.</li>
+</ol>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token keyword">function</span> Personne<span class="token punctuation">(</span>prenom, famille, age, genre, interets<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this.nom <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token string">'prenom'</span><span class="token builtin class-name">:</span> prenom,
+          <span class="token string">'famille'</span> <span class="token builtin class-name">:</span> famille
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        this.age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+        this.genre <span class="token operator">=</span> genre<span class="token punctuation">;</span>
+        this.interets <span class="token operator">=</span> interets<span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="Chaine prototypage.png"><br><br>
+Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
 
 </article>
