@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MON 1: Google apps script</title>
+    <title>MON d&#39;Ossama</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">MON 1: Google apps script</h1>
+  <h1 class="mb-1">MON d'Ossama</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -76,152 +76,11 @@
   
 
   <!-- début résumé -->
-<p>L'objectif de mon MON est l'apprentissage de nouvelles fonctionnalités pour permettre d'automatiser, par exemple, certaines tâches sur des fichiers de type tableaur grâce à l'App Script Google.</p>
+<p>Ensemble des MON d'Ossama Abdane</p>
 <!-- fin résumé -->
-<h3>Introduction</h3>
-<p>Google Apps Script est un langage de programmation propre à Google. Il permet de réaliser des scripts à l'intérieur de certains services de Google. Ainsi il est possible de modifier le comportement du logiciel tableur (Google sheet) pour automatiser des tâches par exemple.</p>
-<p>Pour accéder à l'App Script, il suffit de se rendre sur un document sur un Google Drive, cliquer dans la barre de menu sur "extensions" puis sur "Apps Script". Nous sommes maintenant prêt à commencer à utliser ses fonctionnalités.</p>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-</svg>
-<div class="pl-8  mb-2 mr-2">
-<p>N'oubliez pas d'enregistrer votre script après chaque modification</p>
-</div><div class="pl-8 mr-2">
-</div></div>
-<h3>Les Triggers</h3>
-<p>Pour mon MON, j'ai décidé de me focaliser sur les triggers, en français déclencheurs, j'ai trouvé leur utilisation pouvait beaucoup m'apporter dans le futur.<br>
-Les triggers permettent d'exécuter une fonction automatiquement à la suite d'un événement. Il peut s'agir de l'ouverture du fichier, la modification d'une case, après un certain délai... Je vais présenter les différents types de triggers et leur utilisation ci-dessous.</p>
-<h4>Les triggers simples</h4>
-<table>
-<thead>
-<tr>
-<th>Fonction</th>
-<th style="text-align:center">Utilisation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onOpen()</td>
-<td style="text-align:center">S'exécute lorsqu'un utilisateur ouvre un document qu'il est autorisé à modifier</td>
-</tr>
-<tr>
-<td>onInstall()</td>
-<td style="text-align:center">S'exécute lorsqu'un utilisateur installe un module complémentaire Editor</td>
-</tr>
-<tr>
-<td>onEdit()</td>
-<td style="text-align:center">S'exécute lorsqu'un utilisateur modifie une valeur dans une feuille de calcul</td>
-</tr>
-<tr>
-<td>onSelectionChange()</td>
-<td style="text-align:center">S'exécute lorsqu'un utilisateur modifie la cellule séléctionnée</td>
-</tr>
-</tbody>
-</table>
-<h5>Quelques exemples :</h5>
+<h2>Temps 1</h2>
 <ul>
-<li>
-<p>onOpen() :</p>
-<pre><code>  function onOpen(){
-    SpreadsheetApp.getActive().getRange('A1').setValue(new Date());
-  }
-</code></pre>
-</li>
-</ul>
-<p>Ce programme va permettre d'afficher la date et l'heure sur la Cellule A1 à chaque fois que le fichier est ouvert comme le montre l'image ci-dessous :<br>
-<img src="Image.png"></p>
-<ul>
-<li>
-<p>onSelectionChange() :</p>
-<pre><code>   function onSelectionChange(e){
-     console.log(e.range.getA1Notation());
-   }
-</code></pre>
-</li>
-</ul>
-<p>Ce programme va s'éxécuter à chaque fois que l'on va changer de cellule et dans la liste d'éxécution afficher toutes les cellules par lesquelles nous sommes passés.</p>
-<ul>
-<li>onEdit() :</li>
-</ul>
-<p>Certainement la fonction la plus intéressente, pour cet exemple, un programme plus poussé qui permet la verification de la validité de l'e-mail saisi.</p>
-<pre><code>      function onEdit(data){
-      
-        if(data.range.getSheet().getName() =='Feuille 1' &amp;&amp;  data.range.getA1Notation() == 'B3'){
-      
-          let isValid = emailValidation(data.range.getValue());
-      
-            if(isValid){
-              data.range.setBackground('white');
-            }else{
-              data.range.setBackground('red');
-            }
-        }
-      }
-      
-      function emailValidation(email){
-      
-        let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      
-        if(email.match(mailformat)){
-        return true;
-        }else{
-          return false;
-        }
-      }
-</code></pre>
-<p>Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la synthaxe n'est pas bonne, la case se colore en rouge.<br>
-Lorsque l'e-mail est bien noté :</p>
-<p><img src="Image1.png" alt="Optional Text"></p>
-<p>Lorsque qu'il y a une erreur (il manque le ".fr") :</p>
-<p><img src="Image2.png" alt="Optional Text"></p>
-<p>Ce type de vérification peu être étendu par exemple à la vérification du format du numéro de téléphone, la synthaxe de la date de naissance... Peut-être pour un prochain MON, créer tout un formulaire contrôlé avec un programme.</p>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-</svg>
-<div class="pl-8 mr-2">
-<p>Une idée pour un prochain MON, créer tout un formulaire vérifié par un programme.</p>
-</div></div>
-<h4>Les triggers temporels</h4>
-<p>Les triggers temporels permettent l'exécution d'une fonction dans un certain délai. On peut par exemple exécuter cette fonction toutes les minutes, toutes les jours ou encore tout les matins. On peut utiliser ce type de trigger pour implémenter une case tout les jours ou encore recevoir un mail tous les matins nous rappelent de faire un compte rendu tout les matins à notre patron.</p>
-<p>Pour programmer un trigger temporel, après avoir créer une fonction, il faut aller dans l'Apps script, cliquer sur l'horloge à gauche comme sur l'image ci-dessous :</p>
-<p><img src="Image3.png" alt="Optional Text"></p>
-<p>Il faut ensuite cliquer sur "ajouter un déclencheur" en bas à droite et le menu suivant s'affiche :</p>
-<p><img src="Image4.png" alt="Optional Text"></p>
-<p>Pour programmer le déclencheur, il faut dans le menu :</p>
-<ul>
-<li>Sélectionner la fonction que l'on souhaiter exécuter</li>
-<li>Dans source événement choisir "Déclencheur horaire"</li>
-<li>Choisir le délai (quatidien, hebdomadaire...)</li>
-<li>L'heure d'exécution</li>
-<li>Cliquer sur enregistrer</li>
-</ul>
-<p>Notre déclencheur temporet est prêt !</p>
-<h5>Exemple d'application :</h5>
-<p>On va créer une fonction qui va nous envoyer un mail tout les matins pour me rappeler d'aller signer la feuille de présence :</p>
-<pre><code>    function Rappelsignature() {
-      
-      MailApp.sendEmail("ossama84130@gmail.com","Rappel émargement","Aller à l'acceuil et signer le feuille d'émargement");
-    }
-</code></pre>
-<p>Après avoir créer la fonction, on va créer le déclencheur temporel et le paramétrer :</p>
-<p><img src="Image6.png" alt="Optional Text"></p>
-<p>Tout est prêt, je vais donc recevoir tous les jours un mail de ce type pour ne pas oublier de signer la feuille à l'acceuil :</p>
-<p><img src="Image5.png" alt="Optional Text"></p>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-</svg>
-<div class="pl-8 mr-2">
-<p>Une autre idée de MON, à partir d'un tableau avec des dates d'anniversaire, créer un trigger temporel qui prévient par mail des anniversaires.</p>
-</div></div>
-<h3>Ressources utilisées</h3>
-<ul>
-<li>Le site de Google : <a href="https://developers.google.com/apps-script/guides/triggers">https://developers.google.com/apps-script/guides/triggers</a></li>
-<li>La Playlist tuto de Tuto de rien : <a href="https://youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS">https://youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS</a></li>
-<li>Le site Spreadsheet Dev : <a href="https://spreadsheet.dev/triggers-in-google-sheets">https://spreadsheet.dev/triggers-in-google-sheets</a></li>
-<li>Le livre Automate the Boring Stuff with Python (pas beaucoup exploité): <a href="https://automatetheboringstuff.com">https://automatetheboringstuff.com</a></li>
+<li><a href="./MONs/mon1">Google Apps Script</a></li>
 </ul>
 
 
