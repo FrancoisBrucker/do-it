@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mon sheet c&#39;est moi</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">Mon sheet c'est moi</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteurs : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Léonard Barbotteau</li>
+          
+            <li class="before:content-['•'] before:px-1">Nathan Gissler</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Mon sheet c'est moi (POK-Temps 1)</p>
+<!-- fin résumé -->
+<h2>1. Idée initiale</h2>
+<p><br><br></p>
+<h2>2. Première version de partition interactive</h2>
+<p><br><br></p>
+<h2>3. To-do list</h2>
+<p><br><br></p>
+<ul>
+<li>
+<h3>Coder la partition en Javascript :</h3>
+<h4>A l'aide de javascript et dans un canvas html, dessiner la portée et la coder de telle sorte que:</h4>
+<ul>
+<li>On affiche au départ les barres de mesure et les silences tant que les rondes ne sont pas placées</li>
+<li>On puisse placer des notes (pour l'instant des rondes) où l'on veut en cliquant sur la partition</li>
+<li>Quand on passe le curseur sur un emplacement vacant, une note grisée s'affiche</li>
+<li>On puisse les retirer en appuyant sur un bouton qui change le mode (ajouter une note/supprimer une note)<br>
+<br><br></li>
+</ul>
+</li>
+<li>
+<h3>Permettre de lire la partition (lecture audio de la partition)</h3>
+<h4>Liste des fonctionnalités à mettre en place:</h4>
+<ul>
+<li>Un bouton pour lire la partition</li>
+<li>(Un bouton pour changer le tempo)<br>
+<br><br></li>
+</ul>
+</li>
+<li>
+<h3>Arborescence du site</h3>
+<h4>Créer une arborescence du site:</h4>
+<ul>
+<li>L'accueil avec description du fonctionnement du site, puis le choix entre faire une nouvelle partition ou en ouvrir une sauvegardée</li>
+<li>Le choix de la partition où l'on peut retrouver les partitions sauvegardées ou en créer une nouvelle</li>
+<li>La page avec la partition correspondante (et peut-etre une bulle d'aide visible d'une certaine manière) et les différents boutons qui permettent de modifier la partition<br>
+<br><br></li>
+</ul>
+</li>
+<li>
+<h3>Sauvegarder les partitions</h3>
+<h4>Trouver un moyen de sauvegarder la partition modifiée:</h4>
+<ul>
+<li>Stocker les informations dans un fichier d'un format spécifique (json à priori)</li>
+<li>Pouvoir nommer et renommer le fichier depuis le site</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
