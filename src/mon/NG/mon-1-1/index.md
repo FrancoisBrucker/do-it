@@ -62,7 +62,42 @@ Il existe de nombreuses balises, notamment :
 - `<a href="https://adressedulien.com>Nom affiché</a>` pour un lien, `title="titre"` permet d'afficher un texte lorsque l'on survole le lien et `target="_blank"` d'ouvrir le lien dans un nouvel onglet/fenêtre. Le lien peut aussi être une image par exemple
 - il est aussi possible de créer un lien relatif vers une autre page du site ou un fichier à télécharger avec `href="chemin/autrepage.html"` / `href="chemin/fichier.zip"` ou vers une ancre dans la même page avec `href="#ancre` et avec `id=ancre` dans la balise correspondant à l'ancre
 - `<img src="chemin/image.jpg" alt="texte alternatif" />` pour une image
-- `<div> </div>` et `<span> </span>` sont des balises génériques (qui n'ont pas de sens partculier)
+- `<div> </div>` et `<span> </span>` sont des balises génériques (qui n'ont pas de sens particulier)
+- `<audio src="chemin/fichier.mp3"> </audio>` pour des fichiers audios (fonctionne avec différents formats)
+- `<video src="chemin/fichier.mp4"> </video>` pour des vidéos
+
+#### Balises pour structurer la pages
+
+Certaines balises peuvent servir à identifier les différentes sections de la page.
+
+![Balises pour identifier les sections de la page](sections_page_web.png)
+
+#### Tableaux
+
+La structure des tableaux HTML est la suivante :
+
+    <table>
+        <tr>
+            <td>
+                ligne 1 colonne 1
+                ligne 1 colonne 2
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ligne 2 colonne 1
+                ligne 2 colonne 2
+            </td>
+        </tr>
+    </table>
+
+Il est possible de fusionner des cellules avec `colspan` et `rowsspan`.
+
+#### Formulaires
+
+Il est possible d'insérer des formulaires avec la balise `<form> </form>`, dans laquelle on peut placer la balise `<input type="text" />` par exemple, où l'attribut `type` peut prendre un certain nombre de valeurs pour demander à l'utilisateur une date, une couleur, un numéro de téléphone, etc.
+
+La récupération des informations doit se faire en php.
 
 ### 1.4 Principales fonctionnalité de CSS
 
@@ -153,6 +188,13 @@ Quelques propriétés pour le fond (de toute la page ou de n'importe quelle bali
 - `background-position`
 - `background` qui peut combiner ces propriétés
 
+Quelques propriétés pour les éléments de type block (contrairement aux éléments de type inline) :
+
+- `height` et `width` pour la hauteur et la largeur du block
+- on peut également définir des `min-width`, `max-width`, etc.
+- `padding` et `margin` pour les marges intérieures et extérieures du block
+- `overflow` ou encore `word-wrap` pour gérer le débordement du texte
+
 Autres propriétés :
 
 - `border` permet de paramétrer les bordures d'un élément. Les bordures peuvent paramétrées ensemble ou séparément
@@ -166,6 +208,12 @@ Il est possible de définir un style pour un élément seulement lorsqu'il est s
     }
 
 Il existe également `:active` pour un élément cliqué (lors du clic), `:focus` pour un élément sélectionné, ou encore `:visited` pour un élément déjà visité.
+
+Il est possible d'ajouter la propriété `display: flex` à un conteneur pour gérer la disposition de ses éléments assez simplement avec Flexbox (disposition verticale ou horizontale, ordre, espacement...).
+
+#### Responsive
+
+Les Medias Queries permettent de paramétrer les propriétés CSS à appliquer en fonction de différents paramètre de l'appareil sur lequel on affiche le site (type d'appareil, taille de la page, etc.).
 
 ## 2. Canvas HTML
 
@@ -275,10 +323,10 @@ Pour exécuter une action en cas de clic sur le canvas :
         // action à effectuer en utilisant la position x, y du clic
     })
 
-## 3. Sources
+## 3. Liens
 
 - [Cours HTML / CSS d'Openclassrooms][cours openclassrooms]
-- [Site de test sur GitHub][site sur github]
+- [Mon site de test sur GitHub][site sur github]
 - [Tutoriel Canvas HTML sur Youtube][tutoriel canvas html]
 
 [cours openclassrooms]: https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3
