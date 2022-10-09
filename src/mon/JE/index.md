@@ -5,7 +5,7 @@ title: "MON de Jeffrey"
 authors:
   - Jeffrey Edisah
 
-tag: ['mon']
+tags: ['mon']
 ---
 
 <!-- début résumé -->
@@ -16,8 +16,8 @@ Les MON de Jeffrey EDISAH
 
 ## Temps 1
 
- - [Web Front 1](.mons/JE/mon/webfront1.md)
- - [BDD Relationnelles](.mons/JE/mon/bddr.md)
+ - [Web Front 1 (HTML, CSS, Bootstrap)](./mons/webfront1)
+ - [BDD Relationnelle](./mons/bddr)
 
 ## Temps 2
 
