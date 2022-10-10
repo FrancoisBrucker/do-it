@@ -86,7 +86,7 @@ Professeur.prototype.saluer = function() {
 ```
 4. Json
 
-Le JSON est un moyen de stocker des objets et leurs propriétés afin de les réutiliser dans différents codes, et pas uniquement des codes JS !
+Le JSON est un moyen de stocker des objets et leurs propriétés afin de les réutiliser dans différents codes, et pas uniquement des codes JS !<br>
 Cela peut aussi être un tableau ou une suite de caractères ou de nombres. 
 Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'API XMLHttpRequest.
 ```bash
@@ -94,5 +94,5 @@ var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/super
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 ```
-Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS. 
+Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br> 
 <img src='json-superheroes.png'/>
