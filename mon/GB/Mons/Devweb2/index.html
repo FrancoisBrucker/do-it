@@ -69,7 +69,8 @@
 <p>Poursuite du Javascript dans un premier temps avec les chapitres :</p>
 <ul>
 <li>[Programmation orienté objets]</li>
-<li>[Découverte des API web]</li>
+<li>[Découverte des API web]<br>
+Ces chapitres proviennent du site <a href="http://Mozilla.developer.org">Mozilla.developer.org</a> et font suite à mon premier MON sur JavaScript. (4h30/5h)</li>
 </ul>
 <h3>Programmation orienté objet</h3>
 <ol>
@@ -112,6 +113,45 @@ Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec 
   alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<ol start="3">
+<li>Heritage au sein de JS</li>
+</ol>
+<p>Nous voyons ici l'héritage et les constructeurs de manière plus précise et plus concrète. Dans l'exemple ci-dessous, nous créons un objet Professeur qui hérite des attributs de Personne. Nous y rajoutons ensuite un attribut et les deux dernières lignes servent à attribuer les méthodes de Personne à Professeur.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"> <span class="token keyword">function</span> Professeur<span class="token punctuation">(</span>prenom, nom, age, genre, interets, matiere<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Personne.call<span class="token punctuation">(</span>this, prenom, nom, age, genre, interets<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  this.matiere <span class="token operator">=</span> matiere<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+Professeur.prototype <span class="token operator">=</span> Object.create<span class="token punctuation">(</span>Personne.prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Professeur.prototype.constructor <span class="token operator">=</span> Professeur<span class="token punctuation">;</span>
+</code></pre>
+<p>Nous voyons ensuite comment attribuer une nouvelle méthode ou encore modifier une méthode de Personne pour notre nouvel objet.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Professeur.prototype.saluer <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  var prefix<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'mâle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Mâle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'m'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'M'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    prefix <span class="token operator">=</span> <span class="token string">'M.'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'femelle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Femelle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'f'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'F'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    prefix <span class="token operator">=</span> <span class="token string">'Mme'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    prefix <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  alert<span class="token punctuation">(</span><span class="token string">'Bonjour. Mon nom est '</span> + prefix + <span class="token string">' '</span> + this.nom_complet.nom + <span class="token string">', et j\'</span>enseigne <span class="token string">' + this.matiere + '</span>.'<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="4">
+<li>Json</li>
+</ol>
+<p>Le JSON est un moyen de stocker des objets et leurs propriétés afin de les réutiliser dans différents codes, et pas uniquement des codes JS !<br>
+Cela peut aussi être un tableau ou une suite de caractères ou de nombres.<br>
+Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'API XMLHttpRequest.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">var requestURL <span class="token operator">=</span> <span class="token string">'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json'</span><span class="token punctuation">;</span>
+var request <span class="token operator">=</span> new XMLHttpRequest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS.<br>
+<img src="json-superheroes.png"></p>
 
 
 </article>
