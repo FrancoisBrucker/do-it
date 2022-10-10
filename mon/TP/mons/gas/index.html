@@ -79,6 +79,32 @@
 <p>Google Apps Script</p>
 <!-- Début Résumé -->
 <h2>Objectif de ce MON</h2>
+<p>L'objectif de ce MON est d'automatiser une tâche avec Google App Script.</p>
+<p>Ici on cherchera à automatiser l'envoi de mails personnalisés. à des personnes.</p>
+<p>Pour cela, on va réaliser un programme qui va automatiser l'envoi de mail lors de l'organisation d'évènements (réunions, cours..). A la fin, il faudrait que l'on ait juste à indiquer dans un Google Sheet, le prénom, le nom, le mail du participant ainsi que la nature, la date et l'heure de l'évènement auquel il est convié et qu'un mail comme celui qui suit s'envoie automatiquement.</p>
+<pre class="language-txt " style="counter-reset: linenumber 0"><code class="language-txt">Bonjour Jean Dupont,
+
+Vous êtes conviés à la réunion de fin de projet le 24/10/2022 à 15h dans la salle de réunion n°2.
+
+Cordialement,
+Yves Martin
+</code></pre>
+<h2>Réalisation de ce programme</h2>
+<p>Dans un premier temps, j'ai relu et étudié les précédents MON fait sur Google App Script pour revoir les principales fonctionnalités déjà utilisé et principalement celle de l'envoi de mail.</p>
+<h3>Fichier texte</h3>
+<p>Pour commencer on crée un Google Doc avec le texte que l'on souhaite envoyer aux différents destinataires du mail.</p>
+<pre class="language-txt " style="counter-reset: linenumber 0"><code class="language-txt"> Bonjour [Prenom] [Nom],
+
+ Vous êtes conviés [Evenement] le [Date] à [Heure] dans [Lieu].
+
+ Cordialement,
+ Yves Martin
+</code></pre>
+<p>Les éléments entre crochet seront ensuite automatiquement remplacé en fonction des informations sur la personne et sur l'évènement.</p>
+<h3>Google Sheet</h3>
+<h3>Personnalisation du mail</h3>
+<h3>Envoi du mail</h3>
+<h3>Automatisation</h3>
 
 
 </article>
