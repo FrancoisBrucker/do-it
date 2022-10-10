@@ -83,10 +83,88 @@ Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'o
 Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.</p>
 <!-- Fin Résumé -->
 <p>###Partie Gabriel</p>
-<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec timothé. <br></p>
+<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec timothé. <br><br>
+Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. <hr></p>
 <p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.<br>
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
-<p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc.</p>
+<p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc. <br></p>
+<p>J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">             <span class="token keyword">function</span> <span class="token function-name function">choixCoups</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                var <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>bool<span class="token operator">==</span><span class="token operator">=</span>false<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token assign-left variable">J1</span><span class="token operator">=</span>prompt<span class="token punctuation">(</span><span class="token string">'J1 choisit son coup : Pierre, Feuille ou Ciseaux'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>J1 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Pierre'</span> <span class="token operator">||</span> J1 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Feuille'</span> <span class="token operator">||</span> J1 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Ciseaux'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token assign-left variable">bool</span><span class="token operator">=</span>true<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+                        alert<span class="token punctuation">(</span><span class="token string">'Entrez un coup valide '</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>bool<span class="token operator">==</span><span class="token operator">=</span>false<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token assign-left variable">J2</span><span class="token operator">=</span>prompt<span class="token punctuation">(</span><span class="token string">'J2 choisit son coup'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>J2 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Pierre'</span> <span class="token operator">||</span> J2 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Feuille'</span> <span class="token operator">||</span> J2 <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Ciseaux'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token assign-left variable">bool</span><span class="token operator">=</span>true<span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+                            alert<span class="token punctuation">(</span><span class="token string">'Entrez un coup valide '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                PFC<span class="token punctuation">(</span>J1,J2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+</code></pre>
+<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton "annuler" du prompt n'annule pas notre demande et affiche "entrez un coup valide". De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. <hr><br>
+J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur "jouer" une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">            <span class="token keyword">function</span> <span class="token function-name function">choixCoups2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                var html <span class="token operator">=</span> document.querySelector<span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var panneau <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                panneau.setAttribute<span class="token punctuation">(</span><span class="token string">'class'</span>, <span class="token string">'liste'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                html.appendChild<span class="token punctuation">(</span>panneau<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var choix <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                panneau.appendChild<span class="token punctuation">(</span>choix<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var l1 <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                choix.appendChild<span class="token punctuation">(</span>l1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var l2 <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                choix.appendChild<span class="token punctuation">(</span>l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var l3 <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                choix.appendChild<span class="token punctuation">(</span>l3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var pierre <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token assign-left variable">pierre.textContent</span><span class="token operator">=</span><span class="token string">'Pierre'</span><span class="token punctuation">;</span>
+                l1.appendChild<span class="token punctuation">(</span>pierre<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, Pierre<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var ciseaux <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token assign-left variable">ciseaux.textContent</span><span class="token operator">=</span><span class="token string">'Ciseaux'</span><span class="token punctuation">;</span>
+                l2.appendChild<span class="token punctuation">(</span>ciseaux<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                ciseaux.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, Ciseaux<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                var feuille <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token assign-left variable">feuille.textContent</span><span class="token operator">=</span><span class="token string">'Feuille'</span><span class="token punctuation">;</span>
+                l3.appendChild<span class="token punctuation">(</span>feuille<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                feuille.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, Feuille<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                document.querySelector<span class="token punctuation">(</span><span class="token string">'.ensemble'</span><span class="token punctuation">)</span>.style.display <span class="token operator">=</span> <span class="token string">'none'</span><span class="token punctuation">;</span>
+                coupOrdi<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">function</span> <span class="token function-name function">coupOrdi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                a <span class="token operator">=</span> <span class="token number">1</span> + Math.floor<span class="token punctuation">(</span>Math.random<span class="token punctuation">(</span><span class="token punctuation">)</span>*<span class="token variable"><span class="token punctuation">((</span><span class="token number">4</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">))</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token operator">==</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token assign-left variable">J2</span><span class="token operator">=</span><span class="token string">'Pierre'</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token operator">==</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token assign-left variable">J2</span><span class="token operator">=</span><span class="token string">'Feuille'</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token punctuation">{</span> 
+                    <span class="token assign-left variable">J2</span><span class="token operator">=</span><span class="token string">'Ciseaux'</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+</code></pre>
+<p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible.</p>
 
 
 </article>
