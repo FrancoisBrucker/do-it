@@ -16,7 +16,7 @@ Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.
 
 <!-- Fin Résumé -->
 
-###Partie Gabriel 
+### Partie Gabriel 
 
 Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec timothé. <br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. <hr>
