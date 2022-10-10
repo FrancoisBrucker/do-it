@@ -123,6 +123,20 @@ Placez les ressources dans le même dossier que votre post. Vos liens auront alo
 * `[ressource à télécharger](./sources.zip)`{.fichier}
 * `![image à voir](./mon-image.png)`{.fichier}
 
+{% attention %}
+Si vous nommez votre fichier autrement que `index.md`{.fichier}, il faut mettre `../` devant le chargement de votre ressource (ex : `![image à voir](../mon-image.png)`{.fichier}).
+
+En effet, si vous utilisez par exemple `mon_fichier.md`{.fichier} comme nom de post, eleventy va :
+
+1. créer un dossier nommer `mon_fichier`{.fichier}
+2. placer votre post dans ce dossier et le renommer `index.md`{.fichier}
+
+Vos images ne se retrouvent du coup plus dans le bon dossier...
+
+C'est pourquoi, il est recommandé de toujours créer un dossier avec le nom de votre post et d'y mettre vos données,fichier `index.md`{.fichier} et ressources.
+
+{% endattention %}
+
 ## Possibilités étendues en markdown
 
 Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des parties spécifiques de votre post.

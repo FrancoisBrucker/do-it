@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "Working with Excel Spreadsheets"
 authors:
   - Timothée Bermond
+
+tags: ['google-apps-script']
 ---
 
 <!-- début résumé -->
