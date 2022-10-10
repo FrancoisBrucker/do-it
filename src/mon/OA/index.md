@@ -14,4 +14,5 @@ Ensemble des MON d'Ossama Abdane
 ## Temps 1
 
 - [Google Apps Script](./MONs/mon1)
+- [MOOC Design Thinking](./mon2)
 
