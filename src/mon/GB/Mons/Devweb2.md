@@ -11,6 +11,7 @@ authors:
 Poursuite du Javascript dans un premier temps avec les chapitres : 
  - [Programmation orienté objets]
  - [Découverte des API web]
+ Ces chapitres proviennent du site Mozilla.developer.org et font suite à mon premier MON sur JavaScript. (4h30/5h)
  
 ### Programmation orienté objet 
 
@@ -54,3 +55,44 @@ Personne.prototype.aurevoir = function() {
   alert(this.nom.prenom + ' est sorti. Au revoir !');
 }
 ```
+
+3. Heritage au sein de JS
+
+Nous voyons ici l'héritage et les constructeurs de manière plus précise et plus concrète. Dans l'exemple ci-dessous, nous créons un objet Professeur qui hérite des attributs de Personne. Nous y rajoutons ensuite un attribut et les deux dernières lignes servent à attribuer les méthodes de Personne à Professeur. 
+```bash
+ function Professeur(prenom, nom, age, genre, interets, matiere) {
+  Personne.call(this, prenom, nom, age, genre, interets);
+
+  this.matiere = matiere;
+}
+Professeur.prototype = Object.create(Personne.prototype);
+Professeur.prototype.constructor = Professeur;
+```
+Nous voyons ensuite comment attribuer une nouvelle méthode ou encore modifier une méthode de Personne pour notre nouvel objet. 
+```bash
+Professeur.prototype.saluer = function() {
+  var prefix;
+
+  if (this.genre === 'mâle' || this.genre === 'Mâle' || this.genre === 'm' || this.genre === 'M') {
+    prefix = 'M.';
+  } else if (this.genre === 'femelle' || this.genre === 'Femelle' || this.genre === 'f' || this.genre === 'F') {
+    prefix = 'Mme';
+  } else {
+    prefix = '';
+  }
+
+  alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
+};
+```
+4. Json
+
+Le JSON est un moyen de stocker des objets et leurs propriétés afin de les réutiliser dans différents codes, et pas uniquement des codes JS !
+Cela peut aussi être un tableau ou une suite de caractères ou de nombres. 
+Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'API XMLHttpRequest.
+```bash
+var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+```
+Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS. 
+<img src='json-superheroes.png'/>
