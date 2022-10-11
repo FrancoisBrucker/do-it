@@ -1,11 +1,11 @@
 ---
 layout: layout/post.njk
 
-title: "POK d'Eugénie"
+title: "POK 1 d'Eugénie"
+
 authors:
   - Eugénie Giraud-Telme
 
-tags: ['pok']
 ---
 <!-- début résumé -->
 
