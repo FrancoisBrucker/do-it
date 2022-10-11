@@ -1,10 +1,13 @@
 ---
 layout: layout/post.njk
-
+tags:
+  - 'eleventy'
+  - 'statique'
+  - 'markdown'
+  - 'web'
 title: "Créer un site web statique avec 11ty"
 authors:
   - Nicolas BERT
-
 ---
 
 <!-- début résumé -->
