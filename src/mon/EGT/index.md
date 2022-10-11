@@ -19,7 +19,7 @@ Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :
 
 {% chemin %} [MON Automate the boring stuff](./MON_1_1/) {% endchemin %}
 
-Diagnostic organisationnel (étude de cas CFP)
+{% chemin %} [MON Étude de cas CFP](./MON_1_2/) {% endchemin %}
 
 ## Temps 2
 
