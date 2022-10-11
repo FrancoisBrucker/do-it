@@ -4,6 +4,11 @@ layout: layout/post.njk
 title: "Google Apps Script"
 authors:
   - Jean-Baptiste Durand
+
+tags :
+  - 'Google Apps Script'
+  - 'Javascript'
+  - 'Google Sheet'
 ---
 
 <!-- début résumé -->
