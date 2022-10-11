@@ -47,6 +47,21 @@
   <h1 class="mb-1">Google Apps Script</h1>
   <div class="mb-4">
     
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Google Apps Script</li>
+          
+            <li class="before:content-['•'] before:px-1">Javascript</li>
+          
+            <li class="before:content-['•'] before:px-1">Google Sheet</li>
+          
+        </ul>
+      </div>
+    
 
     
       <div class=" px-4 flex items-center">
@@ -71,7 +86,7 @@
 <ul>
 <li><a href="#toc">Table des matières</a></li>
 <li><a href="#h1">Qu'est ce que Google Apps Script ?</a></li>
-<li><a href="#h2">Quelles sont les principales fonctionnalitées ?</a>
+<li><a href="#h2">Quelles sont les principales fonctionnalités ?</a>
 <ul>
 <li><a href="#h2-1">Fonctions de calcul personnalisées</a></li>
 <li><a href="#h2-2">Automatiser plusieurs cases</a>
@@ -98,7 +113,7 @@
 <p><strong>Google Apps Script</strong> est un outils qui execute du <strong>JavaScript</strong> pour effectuer vos actions. Il est possible aussi d'ajouter des bibliothèques, mais attention, l'utilisation de bibliothèque ralentit l'execution du code.</p>
 <p><strong>Comment accéder Google Apps Script sur Google Sheet ?</strong></p>
 <img src="../../Image/google_apps_script_acces.png" alt="Technologies utilisées" style="height: 200px; margin: 0 auto; border: 0">
-<h2 id="h2"> Quelles sont les principales fonctionnalitées ? </h2>
+<h2 id="h2"> Quelles sont les principales fonctionnalités ? </h2>
 <h3 id="h2-1">Fonctions de calcul personnalisées</h3>
 <p>Google Sheet a une grande quantité de formules déjà définies pour faire des opérations simples, SOMME, MOYENNE, ...</p>
 <p>Mais il existe un nombre limité de fonctions, Google Apps Script permet de créer la fonction qui répond à nos besoins.</p>
@@ -265,7 +280,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 </code></pre>
 <p>Et de 4 fonctions :</p>
 <ul>
-<li><strong>tricountAddToHistory</strong>, dont le but est de transférer les données d'ajout d'achat dans la prtie historique (fonction inspirée du <a href="https://support.google.com/docs/thread/41717054">travail de --Hyde</a>)</li>
+<li><strong>tricountAddToHistory</strong>, dont le but est de transférer les données d'ajout d'achat dans la partie historique (fonction inspirée du <a href="https://support.google.com/docs/thread/41717054">travail de --Hyde</a>)</li>
 <li><strong>columnToLetter</strong>, dont le but est de transformer la ième colonne en la lettre associée (fonction créée par <a href="https://stackoverflow.com/questions/21229180/convert-column-index-into-corresponding-column-letter">AdamL</a>)</li>
 <li><strong>onEdit</strong>, dont le but est de déclencher la fonction <strong>trincountAddToHistory</strong> si les conditions sont réunies</li>
 <li><strong>generateSheet</strong>, dont le but est de créer toute la mise en page du tricount au début</li>
