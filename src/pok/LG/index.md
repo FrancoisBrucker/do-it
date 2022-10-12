@@ -27,6 +27,7 @@ Plan suivi:
 3. Analyse de Youtube
 4. Analyse de Booking
 5. Analyse de Linkedin
+6. Conclusion
 
 
 ## 1. Définition d'une plateforme numérique
@@ -50,14 +51,14 @@ Elle présente alors des avantages significatifs pour les entreprise :
 
 Il existe differents types de plateformes numériques :
 
-- plateformes d'interaction : elles mettent en relation des utilisateurs de même type et facilitent les interactions entre ces derniers.
-- plateformes de contenus : elles collectent du contenu (fournis par des utilisateurs) et le partagent aux autre utilisateurs de la plateforme
-- plateformes collecte de données : Pour se servir de la plateforme, l'utilisateur accepte que ses informations personnelles soient vendues à des tiers.
-- plateformes « market place » (place de marché) :  elles mettent en relation l'offre et la demande
-- plateforme de distribution : met en relation des points de distribution et des fournisseurs voulant distribuer leurs produits
-- plateformes de service à la demande :  les services sont proposés par des fournisseurs indépendants
-- plateformes informatique :pour les développeurs d'applications et les utilisateurs
-- plateformes technologique : elles fournissent des briques logicielles
+- **plateformes d'interaction :** elles mettent en relation des utilisateurs de même type et facilitent les interactions entre ces derniers.
+- **plateformes de contenus :** elles collectent du contenu (fournis par des utilisateurs) et le partagent aux autre utilisateurs de la plateforme
+- **plateformes collecte de données :** Pour se servir de la plateforme, l'utilisateur accepte que ses informations personnelles soient vendues à des tiers.
+- **plateformes « market place » (place de marché) :**  elles mettent en relation l'offre et la demande
+- **plateforme de distribution :** met en relation des points de distribution et des fournisseurs voulant distribuer leurs produits
+- **plateformes de service à la demande :**  les services sont proposés par des fournisseurs indépendants
+- **plateformes informatique** :pour les développeurs d'applications et les utilisateurs
+- **plateformes technologique** : elles fournissent des briques logicielles
 
 Les modèles de revenus des plateformes sont multiples. Il peut s'agir d'un abonnement, d'une commission (lors de ventes) ou encore d'un modèle freemium (version de base gratuite mais version complète payante). D'autres plateformes optent pour le modèle de crowdsourcing où des utilisateurs participent (gratuitement) à la création de produits ou services.
 
