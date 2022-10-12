@@ -182,6 +182,10 @@ A noter aussi que le marketing de booking est très puissant au monde et pousse 
 « Dernière chance ! Plus qu’une chambre sur notre site !"
   A savoir : Le site a reçu à plusieurs reprises des plaintes dans différents pays. Même en France, le site a été accusé d’avoir mis la pression sur les prix des hôtels et de violation de la législation antitrust. Selon The Daily Telegraph, la société oblige les opérateurs hôteliers à promouvoir les offres les plus rentables pour les touristes. Des accusations similaires ont été portées en Allemagne, en Suisse, aux États-Unis et au Royaume-Uni.
 
+{% note "**Analyse**" %}
+Tout comme Youtube, Booking se différencie par le grand choix d'offres qu'elle propose. Elle utilise aussi un système de fidélisation, par la visibilité donnée aux annonceurs (comme youtube) mais aussi par des réductions offertes aux consommateurs. Les 2 plateformes savent aussi bien répondre à la demande de leur clients. En effet les résultats des recherches sont précis et le système de recommandation adaptée. LE dernier point commun est le marketing très développé : YouTube diffuse automatiquement d’autres vidéos pour nous empêcher de partir de la plateforme et booking manipule les loueurs pour les mettre dans l'urgence.
+
+{% endnote %}
 
 ## 5. Analyse de Linkedin
 
@@ -247,10 +251,44 @@ Tou d'abord Linkedin est gratuit. Ensuite l 'effet de réseau est très fort. En
 
 ***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
 
-Linkedin  a d'abord attiré les utilisateurs par ses fonctionnalités et sa gratuité puis a bénéficié d'un effet de réseau.
-Étendue au monde entier : impossible pour un nouveau concurrent de percer sur le marché car le but est d'étendre son réseau...mais comment rendre une telle plateforme attractive si seuleemnt qq pays sont accessibles (Un réseau entre professionnels peut-il encore se développer si la base de contacts possibles n’est pas suffisamment étendue, surtout si le réseau voisin est plus large ?)Il est donc très difficile pour tout autre nouveau service de prendre son envol. Seul un réseau tel FB pourrait le concurrencer
+Linkedin  a d'abord attiré les utilisateurs par ses fonctionnalités intéressantes et sa gratuité puis a bénéficié d'un effet de réseau pour attirer toujours plus d'utilisateurs.
+Maintenant que la plateforme est leader dans le monde il est  impossible pour un nouveau concurrent de percer sur le marché. En effet el but de ce genre de plateforme est d'étendre son réseau...mais comment rendre une telle plateforme attractive si seuleemnt quelques personnes dans peu de pays l'utilisent (Un réseau entre professionnels peut-il encore se développer si la base de contacts possibles n’est pas suffisamment étendue, surtout si le réseau voisin est plus large ?)
+Il est donc très difficile pour tout autre nouveau service de prendre son envol. Seul un réseau déjà bien implenter tel que FaceBook pourrait le concurrencer.
 présence de Linkedin sur de nombreux sites professionnels avec des boutons qui déclenchent un partage de l’actualité dans les principales plateformes. Aux côtés de Facebook, Twitter et Google+, souvent, seul Linkedin arrive à se faire une place
 
-Le but de réseau est, comme l’ensemble des réseaux sociaux d’ailleurs, de faire consommer de l’information aux utilisateurs afin qu’ils restent connectés et engagés.  Pour ce faire, LinkedIn adopte les mêmes fonctionnalités que Facebook, suivi plus tard par Instagram et Twitter. Il s’agit entre autres du fil d’actualité à l’infini, celui qui vous offre du contenu toujours plus pertinent en s’adaptant à vos habitudes et vos préférences.
-ne cesse de se réinventer et d’ajouter de nouvelles fonctionnalités au fur et à mesure des acquisition. Toujours de nouvelles fonctionnalités. C'est aussi une limite du réseau qui peut en devenir brouillon/fouilli
-autre limite : cest chronophage
+Le réseau reste aussi attractif car il ne cesse de se réinventer et d’ajouter de nouvelles fonctionnalités au fur et à mesure. C'est aussi une limite du réseau qui peut finir par en devenir brouillon. On perd de vue le réel but de Linkedin qui se rapproche de plus en plus d'un réseau socila classique.
+
+Une autre limite du site est qu'il peut s'avérer très chronophage
+
+
+{% note "**Analyse**" %}
+
+Comme YouTube et booking, linkedin fait la différence par le grand choix d'offres qu'il présente. Cela s'exprime ici par le grand nombre d'utilisateurs et de profils disponibles. Ici pas de programme de fidéliter comme sur booking. Etant la seule plateforme qui porpose ce type de fonctionnalités avec un réseau important, Linkedin n'a pas besoin de fidéliser ses clients. Enfin elle bénéficie comme les 2 autres plateforme d'un marketing agressif dont le but est de faire consommer de l’information aux utilisateurs afin qu’ils restent connectés et engagés.  Pour ce faire, LinkedIn adopte les mêmes fonctionnalités que Facebook: un fil d’actualité à l’infini qui offre du contenu toujours plus pertinent en s’adaptant à vos habitudes et vos préférences. Elle utilise un algorithme comparable à celui de youtube
+
+{% endnote %}
+
+## 6. Conclusion
+
+Après avoir analysé le fonctionnement de 3 grandes plateformes qui ont écrasé leurs concurrents, on peut mettre en avant des "ingrédients du succès" pour les plateformes numériques, quelque soit leurs type:
+- grande diversité du contenu et grande communauté 
+- expérience client agréable.. fonctionnalités faciles
+- fidélisation des consommateurs grâce à des rédcutions
+- Fidélisation des offreurs grâce à une mise en visibilité, 
+- Marketing agressif avec des offres urgentes et des algorithmes de recommandation
+
+
+{% prerequis "**Sources principales**" %}
+- Définition de la plateforme numérique : 
+https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/outils-de-developpement-des-ventes/quest-ce-quune
+https://www.alain-bensoussan.com/avocats/plateforme-en-ligne-definition/2017/03/02/
+https://www.caissedesdepots.fr/blog/article/les-plateformes-devorent-le-monde
+- Youtube:
+https://metricool.com/fr/ce-qu-est-youtube/#:~:text=YouTube%20est%20une%20plateforme%20gr%C3%A2ce,pour%20des%20millions%20d'utilisateurs.
+https://larevuedesmedias.ina.fr/10-evenements-qui-ont-marque-lhistoire-de-youtube
+- Booking:
+https://eldorado-immobilier.com/booking-com-cest-quoi-et-comment-ca-marche-et-quelle-commission/
+- Linkedin:
+https://fr.linkedin.com/pulse/comment-linkedin-a-t-il-pu-%C3%A9craser-ses-concurrents-alban-jarry#:~:text=Au%20niveau%20mondial%20une%20analyse,Viad%C3%A9o%20atteint%20les%2065%20millions.
+https://www.proinfluent.com/histoire-du-reseau-social-linkedin/
+https://www.portail-autoentrepreneur.fr/academie/developpement/reseaux-sociaux/avantages-inconvenients-linkedin
+{% endprerequis  %}
