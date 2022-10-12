@@ -165,6 +165,40 @@ Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en 
 </ol>
 <p>Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br><br>
 Nous voyons aussi les définitions de framework et bibliothèque.</p>
+<h3>Le framework angular</h3>
+<ol>
+<li>Introduction</li>
+</ol>
+<p>Angular est un framework permettant de coder en front-end de manière plus efficace. Il utilise notamment 3 langages :</p>
+<ul>
+<li>HTML</li>
+<li>SCSS</li>
+<li>TypeScript<br>
+Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</li>
+</ul>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> class FaceSnapComponent <span class="token punctuation">{</span>
+  title<span class="token operator">!</span>: string<span class="token punctuation">;</span> 
+  description<span class="token operator">!</span>: string<span class="token punctuation">;</span>
+  createdDate<span class="token operator">!</span>: Date<span class="token punctuation">;</span>
+  snaps<span class="token operator">!</span>: number<span class="token punctuation">;</span>
+  imageUrl<span class="token operator">!</span>:string<span class="token punctuation">;</span>
+<span class="token function-name function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token assign-left variable">this.title</span><span class="token operator">=</span><span class="token string">'Timothé'</span><span class="token punctuation">;</span>
+  <span class="token assign-left variable">this.description</span><span class="token operator">=</span><span class="token string">'Mon super pote'</span><span class="token punctuation">;</span>
+  <span class="token assign-left variable">this.createdDate</span><span class="token operator">=</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token assign-left variable">this.snaps</span><span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span>
+  <span class="token assign-left variable">this.imageUrl</span><span class="token operator">=</span><span class="token string">'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Nous les affichons ensuite dans notre fihier html associé à ce component :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"face-snap-card"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>Dev Web <span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Mis en ligne le <span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"imageUrl"</span> <span class="token punctuation">[</span>alt<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+</code></pre>
 
 
 </article>
