@@ -26,10 +26,10 @@ Plan suivi:
 2. Critères de comparaison ddes plateformes
 3. Analyse de Youtube
 4. Analyse de Booking
-5. 
+5. Analyse de Linkedin
 
 
-## Définition d'une plateforme numérique
+## 1.Définition d'une plateforme numérique
 
 Dans son utilisation courante le terme « plateforme numérique » désigne à la fois, les réseaux sociaux, places de marchés, les moteurs de recherche, les sites collaboratifs et de rencontres, les comparateurs, les applications mobiles… 
 Comment définir alors ce qu'est une plateforme numérique ?
@@ -61,7 +61,7 @@ Il existe differents types de plateformes numériques :
 
 Les modèles de revenus des plateformes sont multiples. Il peut s'agir d'un abonnement, d'une commission (lors de ventes) ou encore d'un modèle freemium (version de base gratuite mais version complète payante). D'autres plateformes optent pour le modèle de crowdsourcing où des utilisateurs participent (gratuitement) à la création de produits ou services.
 
-## Critères de comparaison des plateformes :
+## 2.Critères de comparaison des plateformes :
 
 Les points clés observés lors de l'analyses des platefomres choisis seront :
 - But de la plateforme
@@ -74,12 +74,12 @@ Les points clés observés lors de l'analyses des platefomres choisis seront :
 - qu'est ce qui fait la réussite/ou non de cette plateforme ?
 
 
-## Analyse de Youtube:
+## 3.Analyse de Youtube:
 
 Lancé le 14 février  2005  par 3 anciens employés de paypal, Youtube est une plateforme de contenu qui a révolutionné le partage de vidéos sur le web. Racheté en 2006 par google, Youtube est une plateforme de référence pour des millions d'utilisateurs. Son rayonnement est tel qu'elle a donné naissance a un nouveau type d'emplois  « youtuber ».
 
 {% info %}
-Quelques Données chiffrées :
+Quelques chiffres clés :
 - 2,2 milliards d'utilisateurs à travers le monde.
 - 50 millions d'abonnés aux formules payantes. (en 2021)
 - Disponible dans plus de 100 pays et traduit en 80 langues
@@ -112,3 +112,79 @@ Ce qui différencie youtube (au delà des fonctionnalités décrites précédemm
 De plus, la rémunération des créateurs assure un contenu de qualité à Youtube. La plateforme a aussi une vocation de réseau social. En effet elle permet la créations de réelles communautés.  
 Cependant ce fonctionnement est aussi sujet à de nombreuses controverses. Tout d'abord 'l'algorithme' de Youtube pose de nombreux problèmes. En effet, à cause de celui-ci, la plateforme met en avant certains contenu et en enterre d'autres (retire toute visibilité à d'autres) créant un sentiment d'injustice auprès de certains créateur. 
 La modération subit aussi de nombreuses critiques! En effet  de nombreux créateurs se disent victime d'une démonétisation de leurs vidéos  injuste .
+
+## 4.Analyse de Booking
+
+{% info %}
+Quelques chiffres clés :
+- plus de 1,5 million de nuitées sont réservées chaque jour
+- 591 millions de nuits réservées en 2021
+- des établissements dans 202 pays
+- 3 milliards d'utilisateurs en 2017
+{% endinfo %}
+
+***But de la plateforme :***
+Booking.com est une plateforme de type marketplace qui met en relation des hôtels  et des particuliers. Elle facilite la réservation en ligne pour tous les clients qui désirent trouver leurs hébergements, et ce partout dans le monde
+Contrairement à une bonne partie des autres sites de réservation d’hébergements, Booking.com n’est pas une partie contractante dans la transaction entre l' établissement et le client. Elle agit seulement comme une plateforme de mise en relation
+
+***type de contenu:***
+Booking propose des milliers d’offres d’hébergements.
+Le site agit en tant qu’intermédiaire et non en tant que vendeur de service et/ou de produit. Cela signifie que Réserver sur booking.com signifie passer un contrat direct avec le propriétaire auprès duquel vous avez réservé.
+
+***les différents acteurs, leurs rôles :***
+Les acteurs sont de 3 types chez Booking. Tout d'abord les utilisateurs qui souhaitent réserver un logement, puis les propriétaire qui proposent leur logement. Enfin les employés de booking sont surtout chargés de gérer le service client
+
+***modèle de financement :***
+Booking.com perçoit une commission sur toutes les réservations bouclées via sa plateforme.
+Il s’agit du 15 % du montant de la réservation, en moyenne. Notez que la commission varie selon quelques critères, à savoir :
+Le programme de fidélité choisi
+L’emplacement et le type d’hébergement choisi.
+Le montant maximum de cette commision et de 30 %.
+
+***expérience client :***
+Pour les clients, les fonctionnalités sont :
+- Choisir sa langue et sa devise
+- Rechercher des logements disponibles selon la position , le nombre d'occupants et les dates de séjour. Le résultat de recherche est précis : le nombre de fournisseurs dans la ville, la région, et le pays sont indiqués. 
+- Trier les logements proposés grâce à des filtres. Ces filtres qui peuvent paraître simples mais améliorent considérablement l'expérience client. En effet ils permettent de trouver très rapidement un logement qui correspond à nos critères ( prix, équipements, avis…)
+- Réserver un logement . La réservation  est sécurisée et sans frais. Le site envoie un e-mail de confirmation après avoir transmis au propriétaire les détails de réservation.
+- Plusieurs modes de paiement sont disponibles : en liquide directement au propriétaire, par CB et par paypal. (Le choix du mode de paiement revient au propriétaire) 
+- Suivre ses réservations et séjours à venir. On peut notamment demander à modifier ou annuler la réservation (les conditions sont imposées par le propriétaire), contacter l'établissement.
+- Noter et commenter ses séjours lorsque ceux ci sont passés.
+- Obtenir des prix réduits grâce au programme de fidélité genius. On peut alors bénéficier de réduction effectuée par booking même (qui réduit alors sa commission). On peut aussi avoir des cadeaux (ex : petit déjeuner offert) et des réduction de la part des établissement qui partie du programme Genius. 
+- Contacter le service client en cas de litiges
+
+***expérience travailleur :*** 
+Le site propose aux hôteliers et/ou propriétaires d’intégrer la plateforme de réservation.
+- Pour intégrer booking les propriétaires doivent signer un contrat avec la plateforme. Ensuite il faut créer une annonce avec une descritpion et des photos. Beaucoup de décisions sont laissées au proprio : ex ; frais d'annulations, de ménage, caution, heure d'arrivée...
+- Lorsque son logement est réservé, le propriétaire reçoit un mail avec les détails de la réservation
+- Il est possible d'optimiser son classement sur le site, et attirer plus de clients, grâce au programme de fidélité Genius.
+Pour devenir un partenaire Genius et bénéficier des avantages de fidélité, vous devez :
+  - Être ouvert à la réservation sur le site.
+  - Obtenir au moins 7,5* note de commentaires.
+  - Recevoir au moins 3 commentaires clients.
+Seuls les établissements bien notés peuvent rejoindre le programme Genius. Ils doivent proposer au moins une réduction et ont également la possibilité d’offrir d'autres récompenses, telles que le petit-déjeuner gratuit ou le surclassement. En échange ils auront plus de visibilité sur le site.
+
+- Si un client n'honore pas la réservation, le propriétaire peut signaler son absence 
+- Le propriétaire peut aussi rendre le logement indisponible sur booking si il a reçu une réservation par un autre biais 
+
+***concurrents:*** 
+On peut citer de nombreux concurrents à Booking : Airbnb, HostelWorld... 
+
+***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
+Tout d'abord les prix attractifs proposés aux clients…..  Le programme Genius permet aussi de fidéliser la clientèle. Le système de notation des établissement permet aussi de s'assurer de la qualité des établissement avant son séjour. (En effet les commentaires et notes des clients précedents peuvent être décisif lors du choix d'un établissement).
+Ensuite, Booking bénéficie d'un très grande visibilité car  il est présent dans  202 pays.
+Un de ses atout majeur reste son service client. En effet Booking accompagne ses clients et résout les litiges entre clients et propriétaires. En grande majorité des cas, le client aura gain de cause et sera remboursé de sa réservation.
+Le plus gros inconvénient de la plateforme est que l'on peut tomber sur de fausses annonces. Cependant, dans ces cas là, le client peut signaler l'établissement et être remboursé. Après quelques signalement l'annonce sera retirer.
+Pour les propriétaires, la limite de booking est qu'ils ne peuvent pas choisir leurs locataires
+
+A noter aussi que le marketing de booking est très puissant au monde et pousse les utilisateurs à reserver et vite ! En effet la plateforme  persuade ses utilisateurs que le prix à la nuitée est bas en affichant  des prix barrés et des messages tels que « Jackpot! C’est le prix le plus bas que vous pouvez voir à Paris sur vos dates ». La plateforme donne aussi un sentiment d'urgence avec des messages du type :« En forte demande – il ne reste que 3 chambres sur notre site ! »« 33 autres personnes regardent maintenant, d’après nos scientifiques de Booking.com » (quoi ?)
+« Dernière chance ! Plus qu’une chambre sur notre site ! « 
+
+
+***type de contenu:***
+***les différents acteurs, leurs rôles :***
+***modèle de financement :***
+***expérience client :***
+***expérience travailleur :*** 
+***concurrents:*** 
+***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
