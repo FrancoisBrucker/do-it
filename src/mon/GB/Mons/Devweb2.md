@@ -98,3 +98,16 @@ request.open('GET', requestURL);
 ```
 Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br> 
 ![](/src/mon/GB/Mons/json-superheroes.png)
+
+5. Pratique de construction d'objets
+
+Dans cette partie, nous voyonsun exemple pratique d'utilisations d'objets. Nous programmons, à l'aide de Canvas, un écran rempli de balles rebondissantes contre les bords de l'écran. <br>
+Les balles sont donc les objets auxquelles nous appliquons différentes méthodes afin de construire l'animation souhaitée. <br>
+Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en ayons déjà parlé durant le cours de web flask. 
+
+### Découverte des API web
+
+1. Introduction 
+
+Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br>
+Nous voyons aussi les définitions de framework et bibliothèque. 
