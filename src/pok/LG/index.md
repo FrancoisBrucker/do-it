@@ -29,7 +29,7 @@ Plan suivi:
 5. Analyse de Linkedin
 
 
-## 1.Définition d'une plateforme numérique
+## 1. Définition d'une plateforme numérique
 
 Dans son utilisation courante le terme « plateforme numérique » désigne à la fois, les réseaux sociaux, places de marchés, les moteurs de recherche, les sites collaboratifs et de rencontres, les comparateurs, les applications mobiles… 
 Comment définir alors ce qu'est une plateforme numérique ?
@@ -61,7 +61,7 @@ Il existe differents types de plateformes numériques :
 
 Les modèles de revenus des plateformes sont multiples. Il peut s'agir d'un abonnement, d'une commission (lors de ventes) ou encore d'un modèle freemium (version de base gratuite mais version complète payante). D'autres plateformes optent pour le modèle de crowdsourcing où des utilisateurs participent (gratuitement) à la création de produits ou services.
 
-## 2.Critères de comparaison des plateformes :
+## 2. Critères de comparaison des plateformes :
 
 Les points clés observés lors de l'analyses des platefomres choisis seront :
 - But de la plateforme
@@ -74,7 +74,7 @@ Les points clés observés lors de l'analyses des platefomres choisis seront :
 - qu'est ce qui fait la réussite/ou non de cette plateforme ?
 
 
-## 3.Analyse de Youtube:
+## 3. Analyse de Youtube:
 
 Lancé le 14 février  2005  par 3 anciens employés de paypal, Youtube est une plateforme de contenu qui a révolutionné le partage de vidéos sur le web. Racheté en 2006 par google, Youtube est une plateforme de référence pour des millions d'utilisateurs. Son rayonnement est tel qu'elle a donné naissance a un nouveau type d'emplois  « youtuber ».
 
@@ -113,8 +113,9 @@ De plus, la rémunération des créateurs assure un contenu de qualité à Youtu
 Cependant ce fonctionnement est aussi sujet à de nombreuses controverses. Tout d'abord 'l'algorithme' de Youtube pose de nombreux problèmes. En effet, à cause de celui-ci, la plateforme met en avant certains contenu et en enterre d'autres (retire toute visibilité à d'autres) créant un sentiment d'injustice auprès de certains créateur. 
 La modération subit aussi de nombreuses critiques! En effet  de nombreux créateurs se disent victime d'une démonétisation de leurs vidéos  injuste .
 
-## 4.Analyse de Booking
+## 4. Analyse de Booking
 
+Booking.com est un site néerlandais créé en 1996 qui propose des hébergements de tout type, allant de l'hôtel au gîte touristique en passant par le camping et l'appartement.
 {% info %}
 Quelques chiffres clés :
 - plus de 1,5 million de nuitées sont réservées chaque jour
@@ -178,13 +179,78 @@ Le plus gros inconvénient de la plateforme est que l'on peut tomber sur de faus
 Pour les propriétaires, la limite de booking est qu'ils ne peuvent pas choisir leurs locataires
 
 A noter aussi que le marketing de booking est très puissant au monde et pousse les utilisateurs à reserver et vite ! En effet la plateforme  persuade ses utilisateurs que le prix à la nuitée est bas en affichant  des prix barrés et des messages tels que « Jackpot! C’est le prix le plus bas que vous pouvez voir à Paris sur vos dates ». La plateforme donne aussi un sentiment d'urgence avec des messages du type :« En forte demande – il ne reste que 3 chambres sur notre site ! »« 33 autres personnes regardent maintenant, d’après nos scientifiques de Booking.com » (quoi ?)
-« Dernière chance ! Plus qu’une chambre sur notre site ! « 
+« Dernière chance ! Plus qu’une chambre sur notre site !"
+  A savoir : Le site a reçu à plusieurs reprises des plaintes dans différents pays. Même en France, le site a été accusé d’avoir mis la pression sur les prix des hôtels et de violation de la législation antitrust. Selon The Daily Telegraph, la société oblige les opérateurs hôteliers à promouvoir les offres les plus rentables pour les touristes. Des accusations similaires ont été portées en Allemagne, en Suisse, aux États-Unis et au Royaume-Uni.
 
+
+## 5. Analyse de Linkedin
+
+Créé en 2003, LinkedIn est devenu en quelques années le plus grand réseau social professionnel au monde, avec 1 professionnel sur 3 d’inscrit dans le monde  et 4 millions de pages entreprises.
+L’objectif de LinkedIn est de simplifier la mise en relation des professionnels dans le but de se constituer un réseau et de l’élargir.  Initialement utilisée comme une plateforme de CV en ligne, elle a muté progressivement pour ajuster ses fonctionnalités aux besoins actuels des professionnelsLe développement du réseau ne cesse de croître au vu des différentes mises à jour toujours plus innovantes et utiles aux professionnels.
+C'est donc une plateforme d'interaction qui a aussi vocation de « marketplace » car elle permet la mise en relation d'offre et de demande d'emploi.
+
+{% info %}
+Quelques chiffres clés :
+- Plus d'1/2 milliard d'utilisateurs
+- 170 secteurs d'activités représentés
+- 200 pays représentés
+
+{% endinfo %}
+
+***But de la plateforme :***
+Linkedin est un réseau social professionnel destiné à faciliter le réseautage entre collègues, clients, partenaires, fournisseurs. Linkedin permet également de mettre en valeur son curriculum, de soigner sa réputation, de participer à des groupes de discussion et de faire sa veille d’information en suivant l’actualité de votre secteur d’activité. Enfin, Linkedin est le terrain de chasse favori des commerciaux et cabinets de recrutement en recherche de clients à contacter et de profils qualifiés à placer dans des entreprises.
 
 ***type de contenu:***
+
+2 types de comptes sur linkedin :
+- le profil personnel : véritable CV en ligne, le profil permet aux professionnels de présenter leurs parcours et expériences.
+- la page entreprise : elle permet aux entreprises de mettre en avant leurs activités et leurs actualités
+
 ***les différents acteurs, leurs rôles :***
+Les acteurs de linkedin sont les particuliers et les entreprises
+
+
 ***modèle de financement :***
+
+modèle économique reposant sur trois sources de revenus : la publicité (18%), les abonnements (20%) et les services de recrutement (62%) 
+LinkedIn propose des offres premium, réalisées pour faciliter la tâche aux entreprises et leur permettre de mieux segmenter leurs cibles. 
+Il existe 4 offres premium LinkedIn :
+- LinkedIn Recruiter : un Mini CRM de recrutement.
+- Le compte premium Business : pour avoir un réseau de qualité.
+- LinkedIn Vente (Sales Navigator) : Permets de gagner des leads, vendre ses produits, ses services et faire découvrir sa marque.
+- Le compte premium carrière : pour trouver un emploi.
+En 2020, un total de 39% des utilisateurs LinkedIn paient pour LinkedIn Premium
+
 ***expérience client :***
-***expérience travailleur :*** 
+
+Le site et l'application sont disponibles dans 24 langues. Les fonctionnalités de linkedin sont très nombreuses. Nous allons seulement parler des fonctionnalités principales ici.
+pour les particuliers :
+- Créer un Profil : le profil Linkedin est le lieu où chaque utilisateur renseigne ses informations sur son parcours professionnel. Sorte de CV enrichi où vous renseignerez vos expériences, projets, diplômes et formation, langues, compétences et recommandations.
+- Consulter son mur : le Mur Linkedin réunit dans un unique flux d’actualité l’ensemble des publications et partages des utilisateurs de Linkedin avec lesquels vous êtes connectés et des pages et groupes que vous avez rejoints. (semblable au mur Facebook)
+- Publier : Linkedin permet de faire des publications rapidement depuis le mur. On peut partager un message texte ou un article en insérant un lien avec la possibilité de mentionner un utilisateur de Linkedin en précédant son nom du symbole @.En cliquant sur l’icône « crayon », on accéder  à une interface  plus poussée permettant d'écrire des articles.
+- Créer et participer à des groupes  : les groupes Linkedin sont des communautés d’échange et de discussion sur un thème spécifique. En devenant membre, vous aurez accès aux fonctionnalités de publication et recevrez le contenu des échanges directement sur votre mur.
+- Former, agrandir son réseau. On peut « se connecter » à d'autres profils. Cela permet de  d'envoyer des messages privés aux autres utilisateurs et d'augmenter sa visibilité. (En effet Linkedin nous informe lorsque des personnes font partis de notre réseau proche, secondaire...)
+
+Pour les entreprises;
+- Créer une Page : les pages entreprises Linkedin sont l’équivalent des pages Facebook pour les entreprises. Elles permettent aux marques et sociétés de se connecter avec leurs employés, leurs clients existants, leurs partenaires ou encore leurs fournisseurs tout en offrant un support pour attirer de nouveaux clients potentiels soit en publiant de l’information de qualité soit en utilisant la publicité sur Linkedin
+- Publier des messages et des photos ou partager des liens vers des articles, via la page de l'entreprise
+- Déposer des offres d'emploi : via l'onglet « carrières »
+- Créer des pages vitrines : les Pages « Showcase » sont une extension des Pages Entreprises de Linkedin. Elles permettent à une société de mettre en avant un produit, un projet ou une marque en particulier tout en la liant à la Page entreprise principale dont il ou elle dépend
+- Suivre les statistiques des publications de l'entreprise
+- Faire de la pub grâce aux abonnements de linkedin
+- Contacter des profils afin de leur proposer des opportunités. La recherche de profils est facilitée par certains abonnements proposés par Linkedin
+
 ***concurrents:*** 
+
+Linkedin a  écrasé ses précédents concurrents Viadeo, Xing et Plaxo. 2 raisons principal l'explique :
+Tou d'abord Linkedin est gratuit. Ensuite l 'effet de réseau est très fort. En tant qu'utilisateur normal, vous voulez avoir votre profil sur le même service avec tout le monde pour vous connecter et le même service que tous les recruteurs utilisent.  
+
 ***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
+
+Linkedin  a d'abord attiré les utilisateurs par ses fonctionnalités et sa gratuité puis a bénéficié d'un effet de réseau.
+Étendue au monde entier : impossible pour un nouveau concurrent de percer sur le marché car le but est d'étendre son réseau...mais comment rendre une telle plateforme attractive si seuleemnt qq pays sont accessibles (Un réseau entre professionnels peut-il encore se développer si la base de contacts possibles n’est pas suffisamment étendue, surtout si le réseau voisin est plus large ?)Il est donc très difficile pour tout autre nouveau service de prendre son envol. Seul un réseau tel FB pourrait le concurrencer
+présence de Linkedin sur de nombreux sites professionnels avec des boutons qui déclenchent un partage de l’actualité dans les principales plateformes. Aux côtés de Facebook, Twitter et Google+, souvent, seul Linkedin arrive à se faire une place
+
+Le but de réseau est, comme l’ensemble des réseaux sociaux d’ailleurs, de faire consommer de l’information aux utilisateurs afin qu’ils restent connectés et engagés.  Pour ce faire, LinkedIn adopte les mêmes fonctionnalités que Facebook, suivi plus tard par Instagram et Twitter. Il s’agit entre autres du fil d’actualité à l’infini, celui qui vous offre du contenu toujours plus pertinent en s’adaptant à vos habitudes et vos préférences.
+ne cesse de se réinventer et d’ajouter de nouvelles fonctionnalités au fur et à mesure des acquisition. Toujours de nouvelles fonctionnalités. C'est aussi une limite du réseau qui peut en devenir brouillon/fouilli
+autre limite : cest chronophage
