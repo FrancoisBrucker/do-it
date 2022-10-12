@@ -12,6 +12,8 @@ Poursuite du Javascript dans un premier temps avec les chapitres :
  - [Programmation orienté objets]
  - [Découverte des API web]
  Ces chapitres proviennent du site Mozilla.developer.org et font suite à mon premier MON sur JavaScript. (4h30/5h)
+
+ Dans un second temps, cours sur les bases d'Angular sur openclassroom <br> (https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular) 
  
 ### Programmation orienté objet 
 
@@ -95,4 +97,4 @@ var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 ```
 Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br> 
-<img src='json-superheroes.png'/>
+![](/src/mon/GB/Mons/json-superheroes.png)
