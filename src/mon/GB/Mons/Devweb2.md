@@ -111,3 +111,38 @@ Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en 
 
 Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br>
 Nous voyons aussi les définitions de framework et bibliothèque. 
+
+### Le framework angular 
+
+1. Introduction 
+
+Angular est un framework permettant de coder en front-end de manière plus efficace. Il utilise notamment 3 langages : 
+- HTML 
+- SCSS 
+- TypeScript
+Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :
+```bash
+export class FaceSnapComponent {
+  title!: string; 
+  description!: string;
+  createdDate!: Date;
+  snaps!: number;
+  imageUrl!:string;
+ngOnInit(){
+  this.title='Timothé';
+  this.description='Mon super pote';
+  this.createdDate=new Date();
+  this.snaps=6;
+  this.imageUrl='https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg';
+}
+```
+Nous les affichons ensuite dans notre fihier html associé à ce component : 
+```bash
+<div class="face-snap-card">
+    <h2>{{title}}</h2>
+    <p>Mis en ligne le {{createdDate}}</p>
+    <p>{{description}}</p>
+    <p>{{snaps}}</p>
+    <img [src]="imageUrl" [alt]="title">
+</div>
+```
