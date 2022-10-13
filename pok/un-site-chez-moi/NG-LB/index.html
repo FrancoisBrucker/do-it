@@ -79,51 +79,61 @@
 <p>Mon sheet c'est moi (POK-Temps 1)</p>
 <!-- fin résumé -->
 <h2>1. Idée initiale</h2>
-<p><br><br></p>
+<p>Notre idée initiale est de créer un site web qui permettrait d'écrire de la musique sur une partition intéractive, et de collaborer à plusieurs sur une même partition. L'utilisateur pourrait créer sa partition, la modifier, et la partager à d'autres utilisateurs qui pourraient la modifier à leur tour (en temps réel ou non, cela dépend de la difficulté de l'implémentation et du temps que nous aurons pour le faire).</p>
 <h2>2. Première version de partition interactive</h2>
-<p><br><br></p>
-<h2>3. To-do list</h2>
-<p><br><br></p>
+<p>Nous avons utilisé un canvas HTML pour créer une première version de la partition, qui est composée pour le moment d'une portée de 5 lignes et d'une clé de sol.</p>
+<p><img src="partition_premiere_version.png" alt="Première version de la partition"></p>
+<p>Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un EventListener lié au canvas qui détecte les clics. Les notes ont pour le moment toutes la même durée (ce sont des rondes) mais peuvent être placées à différentes hauteurs. Elles se placent les unes à la suite des autres et ne peuvent pas encore être supprimées.</p>
+<h2>3. To-do list pour la suite</h2>
 <ul>
 <li>
-<h3>Coder la partition en Javascript :</h3>
-<h4>A l'aide de javascript et dans un canvas html, dessiner la portée et la coder de telle sorte que:</h4>
+<h3>Code de la partition en Javascript</h3>
+<h4>A l'aide de javascript et dans un canvas HTML, améliorer le code de la portée de telle sorte que :</h4>
 <ul>
-<li>On affiche au départ les barres de mesure et les silences tant que les rondes ne sont pas placées</li>
-<li>On puisse placer des notes (pour l'instant des rondes) où l'on veut en cliquant sur la partition</li>
+<li>On affiche au départ les barres de mesure (délimitations rythmiques) et les silences (symboles représentant l'absence de note) tant que les rondes ne sont pas placées</li>
+<li>On puisse placer des notes (pour l'instant des rondes) où l'on veut en cliquant sur la partition, et qu'elles prennent la place des silences au lieu de s'ajouter en fin de partition</li>
 <li>Quand on passe le curseur sur un emplacement vacant, une note grisée s'affiche</li>
-<li>On puisse les retirer en appuyant sur un bouton qui change le mode (ajouter une note/supprimer une note)<br>
-<br><br></li>
+<li>On puisse supprimer les notes en appuyant sur un bouton qui change le mode (ajouter une note/supprimer une note)</li>
 </ul>
 </li>
 <li>
-<h3>Permettre de lire la partition (lecture audio de la partition)</h3>
-<h4>Liste des fonctionnalités à mettre en place:</h4>
+<h3>Lecture audio de la partition</h3>
+<h4>Liste des fonctionnalités à mettre en place :</h4>
 <ul>
-<li>Un bouton pour lire la partition</li>
-<li>(Un bouton pour changer le tempo)<br>
-<br><br></li>
+<li>Un bouton pour lancer la lecture</li>
+<li>Un bouton pour changer le tempo de lecture (optionnel)</li>
 </ul>
 </li>
 <li>
 <h3>Arborescence du site</h3>
-<h4>Créer une arborescence du site:</h4>
+<h4>Créer une arborescence du site :</h4>
 <ul>
-<li>L'accueil avec description du fonctionnement du site, puis le choix entre faire une nouvelle partition ou en ouvrir une sauvegardée</li>
+<li>L'accueil avec description du fonctionnement du site, puis le choix entre créer une nouvelle partition ou en ouvrir une existante</li>
 <li>Le choix de la partition où l'on peut retrouver les partitions sauvegardées ou en créer une nouvelle</li>
-<li>La page avec la partition correspondante (et peut-etre une bulle d'aide visible d'une certaine manière) et les différents boutons qui permettent de modifier la partition<br>
-<br><br></li>
+<li>La page qui affiche la partition correspondante (et éventuellement une bulle d'aide visible d'une certaine manière), ainsi que les différents boutons qui permettent l'édition de la partition</li>
 </ul>
 </li>
 <li>
-<h3>Sauvegarder les partitions</h3>
-<h4>Trouver un moyen de sauvegarder la partition modifiée:</h4>
+<h3>Sauvegarde des partitions</h3>
+<h4>Trouver un moyen de sauvegarder la partition modifiée :</h4>
 <ul>
-<li>Stocker les informations dans un fichier d'un format spécifique (json à priori)</li>
+<li>Stocker les informations dans un fichier d'un format spécifique (json a priori)</li>
 <li>Pouvoir nommer et renommer le fichier depuis le site</li>
 </ul>
 </li>
 </ul>
+<h2>4. Avancées de la partition et de l'affichage du site</h2>
+<h3>Page d'acceuil et partitions sauvegardées</h3>
+<p>Première version de ces deux pages :</p>
+<p><img src="page_daccueil_premiere_version.png" alt="Page d'acceuil première version"></p>
+<p><img src="partitions_sauvegardees_premiere_version.png" alt="Partitions sauvegardées première version"></p>
+<h3>Ajouts à la partition</h3>
+<p>Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches <code>a</code> (add note) et <code>d</code> (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.</p>
+<p><img src="partition_deuxieme_version.png" alt="Partition deuxième version"></p>
+<p>Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.</p>
+<h3>Difficultés rencontrées</h3>
+<p>Nous pensions afficher une note grisée au survol de la partition pour indiquer la possibilité de placer une note à cet endroit. Cependant le fait de faire suivre la trajectoire de la souris à la note grisée implique d'effacer et de redessiner le canvas à chaque mouvement de la souris et cela crée un lag trop important.</p>
+<p>Il sera peut-être possible par la suite de réduire le nombre d'actualisations du canvas en limitant les positions possibles de la note grisée à des emplacements précis mais nous avons laissé cet fonctionnalité de côté pour le moment.</p>
 
 
 </article>
