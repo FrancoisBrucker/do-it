@@ -37,7 +37,7 @@ Centre de Formation professionnelle, le nom de l'entreprise.
 Société de services en ingénierie informatique, une entreprise qui fournit des services informatiques (p. ex. la consultation, la conception, la mise en œuvre, la maintenance, etc. des systèmes d'information) à d'autres entreprises.
 
 **DIF**
-Droit individuel à la formation, un droit accordé aux salariés pour suivre des formations professionnelles.
+Droit individuel à la formation, un droit français qui permet aux salariés de suivre des formations professionnelles.
 
 **BPMN**
 Business Process Model and Notation, un langage de modélisation de processus d'affaires.
@@ -48,19 +48,29 @@ Strengths, Weaknesses, Opportunities, Threats, une méthode d'analyse stratégiq
 ### Question 1 - Quelle est la finalité de la mission engagée par le dirigeant?
 Tous les processus de l'entreprise doivent être analysés et les problèmes doivent être examinés. Ensuite, les processus doivent être améliorés en planifiant également la mise en place d'un SI. L'objectif est de mettre en place un nouveau SI avec les valeurs indicatives suivantes :
 - Permettre une réponse aux demandes des clients en 48 heures.
-- Permet de conclure un contrat en 5 jours en moyenne
+- Permet de conclure un contrat en 5 jours en moyenne.
 - Consultation facile des chiffres clés et des KPI.
+- Automatisation des tâches répétitives (p.ex. signature de contrats, etc.).
 
 Ce SI doit donc simplifier les processus et améliorer la communication entre les collaborateurs. 
 
 ### Question 2 - Quelles sont les attentes stratégiques de l’entreprise?
-<br>
+L'objectif stratégique à atteindre par le biais de la consultation est que CFP reste compétitif à long terme. Pour ce faire, l'entreprise doit atteindre les objectifs suivants :
+- Réduire les retards dans le traitement des demandes et des contrats au moins au niveau de la concurrence.
+- Augmenter la satisfaction des enseignants en résolvant les problèmes de gestion et de paiement des honoraires.
+- L'aspect économique doit être optimisé en utilisant des chiffres clés et des indicateurs clés de performance pour l'analyse du chiffre d'affaires et l'observation du marché.
+- L'entreprise doit devenir plus flexible et pouvoir réagir plus rapidement aux changements (p. ex. en cas de modification de la demande de cours).
 
 ### Question 3 - Réalisez une cartographie des acteurs.
-<br>
+J'ai dessiné l'esquisse suivante des acteurs et des relations entre eux :
+![Cartographie des acteurs](./cartographie-acteurs.jpg)
 
 ### Question 4 - Réalisez une cartographie des processus.
-<br>
+#### Liste des processus
+- Création de l'offre de cours (réunion semestrielle, catalogue sur le site web)
+- Vente d'un cours (demande du client, offre, réalisation, facture)
+- Établissement de la note d'honoraires du formateur
+- ...
 
 ### Question 5 - Réalisations des modèles de processus BPMN
 #### C'est quoi le BPMN?
@@ -84,5 +94,10 @@ Ce SI doit donc simplifier les processus et améliorer la communication entre le
 
 ### Question 9 - Donner un aperçu des besoins et des priorités du futur SI.
 <br>
+
+## Conclusion et réflexion
+En répondant aux questions, une grande partie du projet a déjà été traitée en analysant les processus et en identifiant les problèmes. Si le projet se poursuivait, la conception du vrai SI commencerait maintenant, lequel serait ensuite mis en œuvre et testé.
+
+L'étude de cas est très bien conçue, clairement compréhensible et pourtant suffisamment complexe pour que l'on doive réfléchir pour résoudre les tâches. J'ai pris plaisir à travailler sur cette étude de cas du point de vue d'un consultant et à apprendre les différents aspects organisationnels d'une entreprise autour de l'introduction d'un SI.
 
 [<-- Retour](../)
