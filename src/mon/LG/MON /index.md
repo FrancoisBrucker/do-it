@@ -1,4 +1,4 @@
---
+---
 layout: layout/post.njk
 
 title: "MON de Louise "
@@ -11,11 +11,11 @@ tags: ['mon']
 L'ensemble de mes MON
 <!-- fin résumé -->
 
-## Planning des MON de Louise
+## Planning des MON 
 
 ### Temps 1
-- [Premier MON: **Comparatif des typologies des projets agiles** ](./MON1/)
-- 
+- [Premier MON:  (Comparatif des typologies des projets agiles)](./MON1/)
+
 
 ### Temps 2
 - Premier MON: 
@@ -24,3 +24,5 @@ L'ensemble de mes MON
 ### Temps 3
 - Premier MON: 
 - Deuxième MON: 
+
+
