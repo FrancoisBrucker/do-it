@@ -11,14 +11,8 @@ tags: ['si']
 Ici je vais mettre les informations sur mon MON 2 de temps 1 avec le sujet *diagnostic organisationnel, modélisation des processus, et conception d'un SI*.
 <!-- fin résumé -->
 
-## To-Do
-(en allemand, pour me donner un coup de pouce - cette section sera supprimée à la fin)
-- Case-Study lesen
-- Wichtige Begriffe definieren
-- Aufgaben bearbeiten
-
 ## But du projet
-L'objectif du projet est de travailler sur une étude de cas de CFP et de répondre à autant de questions que possible de l'étude de cas.
+L'objectif du projet est de travailler sur une étude de cas de CFP dans la rôle d'un consultant en informatique et de répondre à autant de questions que possible de l'étude de cas.
 
 Voici les questions :
 1. Quelle est la finalité de la mission engagée par le dirigeant?
@@ -33,13 +27,31 @@ Voici les questions :
 
 ## Déroulement du projet
 ### Présentation de l'étude de cas
-<br>
+Dans la présente étude de cas, il s'agit d'une entreprise de taille moyenne, le CFP (centre de formation professionnelle), qui souhaite revoir son SI en profondeur et qui, pour ce faire, fait appel à l'aide d'un consultant SSII. Des entretiens avec le directeur et un commercial permettent de discuter des processus actuels et de leurs problèmes, ainsi que des souhaits concernant le futur SI.
 
 ### Termes importants
-<br>
+**CFP**
+Centre de Formation professionnelle, le nom de l'entreprise.
+
+**SSII**
+Société de services en ingénierie informatique, une entreprise qui fournit des services informatiques (p. ex. la consultation, la conception, la mise en œuvre, la maintenance, etc. des systèmes d'information) à d'autres entreprises.
+
+**DIF**
+Droit individuel à la formation, un droit accordé aux salariés pour suivre des formations professionnelles.
+
+**BPMN**
+Business Process Model and Notation, un langage de modélisation de processus d'affaires.
+
+**SWOT**
+Strengths, Weaknesses, Opportunities, Threats, une méthode d'analyse stratégique qui permet d'identifier les forces et les faiblesses d'une organisation, ainsi que les opportunités et les menaces.
 
 ### Question 1 - Quelle est la finalité de la mission engagée par le dirigeant?
-<br>
+Tous les processus de l'entreprise doivent être analysés et les problèmes doivent être examinés. Ensuite, les processus doivent être améliorés en planifiant également la mise en place d'un SI. L'objectif est de mettre en place un nouveau SI avec les valeurs indicatives suivantes :
+- Permettre une réponse aux demandes des clients en 48 heures.
+- Permet de conclure un contrat en 5 jours en moyenne
+- Consultation facile des chiffres clés et des KPI.
+
+Ce SI doit donc simplifier les processus et améliorer la communication entre les collaborateurs. 
 
 ### Question 2 - Quelles sont les attentes stratégiques de l’entreprise?
 <br>
@@ -51,12 +63,20 @@ Voici les questions :
 <br>
 
 ### Question 5 - Réalisations des modèles de processus BPMN
+#### C'est quoi le BPMN?
+<br>
+
+#### Modèle de processus 1
 <br>
 
 ### Question 6 - Relevez les dysfonctionnements par rapport à chaque processus.
 <br>
 
 ### Question 7 - Création d'une matrice SWOT
+#### C'est quoi, une matrice SWOT?
+<br>
+
+#### La matrice SWOT du CFP
 <br>
 
 ### Question 8 - Quels seraient les objectifs d’un futur SI et quels seraient les indicateurs associés?
