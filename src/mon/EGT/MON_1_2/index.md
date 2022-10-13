@@ -36,3 +36,15 @@ VII. Établir à l’aide d’une matrice SWOT les forces, les faiblesses de l�
 les opportunités et les risques d’un futur SI ?
 VIII. Quels seraient les objectifs d’un futur SI et quels seraient les indicateurs associés?
 IX. Donner un aperçu des besoins et des priorités du futur SI.
+
+#### Déroulement
+
+Pour répondre aux deux premières questions, il n'y a besoin que du premier texte et de la première interview.
+
+Pour la question III, j'ai fait un schéma avec les grands blocs d'acteurs et les différentes intéractions entre ces blocs et au sein des blocs. J'ai détaillé assez finement ces intéractions.
+
+Pour la question IV, au lieu de faire une liste des processus, j'ai fait un schéma pour classer les processus selon ce principe :
+<img src="Exemple-cartographie-des-processus.png">
+Source : https://www.certification-qse.com/fiche-processus-lapproche-processus/
+
+Pour la question V, j'ai utilisé le logiciel [edrawsoft](https://www.edrawsoft.com/fr/how-to-create-bpmn.html#:~:text=Pour%20cr%C3%A9er%20des%20diagrammes%20BPMN%2C%20les%20objets%20BPMN%20sont%20s%C3%A9lectionn%C3%A9s,les%20formes%20comme%20d'habitude.) proposé par Sarah. J'ai utilisé la version d'essai mais j'ai évité d'enregistrer mes diagrammes BPMN pour ne pas dépasser la limite autorisée sans payer : j'ai fait des captures d'écran des diagrammes. L'utilisation du logiciel est assez simple : il suffit d'ouvrir un diagramme vide, puis de trouver la bonne bibliothèque (c'est indiqué BPMN) et de faire glisser les éléments dont on a besoin au fur et à mesure.
