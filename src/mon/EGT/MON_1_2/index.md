@@ -53,3 +53,5 @@ Pour la question VI, je me suis basée sur les diagrammes BPMN et sur les diffé
 
 Pour la question VII, j'ai utilisé ce diagramme :
 <img src="Matrice_SWOT.png">
+
+Pour les deux dernières questions, j'ai partagé ce que j'imaginais à propos du futur SI.
