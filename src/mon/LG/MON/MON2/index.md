@@ -5,7 +5,6 @@ title: "MON 2:Web Front 2"
 authors:
   - Louise Gacoin
 
-tags: ['mon']
 ---
 
 Mes objectifs pour ce MON sont:
