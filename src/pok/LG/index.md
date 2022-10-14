@@ -144,7 +144,7 @@ Pour les clients, les fonctionnalités sont :
 
 ***expérience travailleur :*** 
 Le site propose aux hôteliers et/ou propriétaires d’intégrer la plateforme de réservation.
-- Pour intégrer booking les propriétaires doivent signer un contrat avec la plateforme. Ensuite il faut créer une annonce avec une descritpion et des photos. Beaucoup de décisions sont laissées au proprio : ex ; frais d'annulations, de ménage, caution, heure d'arrivée...
+- Pour intégrer booking les propriétaires doivent signer un contrat avec la plateforme. Ensuite il faut créer une annonce avec une descritpion et des photos. Beaucoup de décisions sont laissées au propriétaire : ex ; frais d'annulations, de ménage, caution, heure d'arrivée...
 - Lorsque son logement est réservé, le propriétaire reçoit un mail avec les détails de la réservation
 - Il est possible d'optimiser son classement sur le site, et attirer plus de clients, grâce au programme de fidélité Genius.
 Pour devenir un partenaire Genius et bénéficier des avantages de fidélité, vous devez :
@@ -157,28 +157,30 @@ Seuls les établissements bien notés peuvent rejoindre le programme Genius. Ils
 - Le propriétaire peut aussi rendre le logement indisponible sur booking si il a reçu une réservation par un autre biais 
 
 ***concurrents:*** 
-On peut citer de nombreux concurrents à Booking : Airbnb, HostelWorld... 
+On peut citer de nombreux concurrents à Booking : Airbnb, HostelWorld... Le concurrent le plus important de booking reste Airbnb. Cependants son rayon d'action n'est pas tout à fait le même. En effet Airbnb ne présente que des offres de particuliers et pas d'hotels.
 
 ***qu'est ce qui fait la réussite/ou non de cette plateforme ?***
-Tout d'abord les prix attractifs proposés aux clients…..  Le programme Genius permet aussi de fidéliser la clientèle. Le système de notation des établissement permet aussi de s'assurer de la qualité des établissement avant son séjour. (En effet les commentaires et notes des clients précedents peuvent être décisif lors du choix d'un établissement).
-Ensuite, Booking bénéficie d'un très grande visibilité car  il est présent dans  202 pays.
-Un de ses atout majeur reste son service client. En effet Booking accompagne ses clients et résout les litiges entre clients et propriétaires. En grande majorité des cas, le client aura gain de cause et sera remboursé de sa réservation.
-Le plus gros inconvénient de la plateforme est que l'on peut tomber sur de fausses annonces. Cependant, dans ces cas là, le client peut signaler l'établissement et être remboursé. Après quelques signalement l'annonce sera retirer.
+Tout d'abord les prix attractifs proposés aux clients. 
+Le programme Genius permet aussi de fidéliser la clientèle. Le système de notation des établissements permet aussi de s'assurer de la qualité des établissements avant son séjour. (En effet les commentaires et notes des clients précedents peuvent être décisifs lors du choix d'un établissement).
+Ensuite, Booking bénéficie d'un très grande visibilité car il est présent dans  202 pays.
+Un de ses atouts majeur reste son service client. En effet Booking accompagne ses clients et résout les litiges entre clients et propriétaires. En grande majorité des cas, le client aura gain de cause et sera remboursé de sa réservation.
+Le plus gros inconvénient de la plateforme est que l'on peut tomber sur de fausses annonces. Cependant, dans ces cas là, le client peut signaler l'établissement et être remboursé. Après quelques signalement l'annonce sera retirée.
 Pour les propriétaires, la limite de booking est qu'ils ne peuvent pas choisir leurs locataires
 
-A noter aussi que le marketing de booking est très puissant au monde et pousse les utilisateurs à reserver et vite ! En effet la plateforme  persuade ses utilisateurs que le prix à la nuitée est bas en affichant  des prix barrés et des messages tels que « Jackpot! C’est le prix le plus bas que vous pouvez voir à Paris sur vos dates ». La plateforme donne aussi un sentiment d'urgence avec des messages du type :« En forte demande – il ne reste que 3 chambres sur notre site ! »« 33 autres personnes regardent maintenant, d’après nos scientifiques de Booking.com » (quoi ?)
+A noter aussi que le marketing de booking est très puissant et pousse les utilisateurs à réserver et vite ! En effet la plateforme  persuade ses utilisateurs que le prix à la nuitée est bas en affichant  des prix barrés et des messages tels que « Jackpot! C’est le prix le plus bas que vous pouvez voir à Paris sur vos dates ». La plateforme donne aussi un sentiment d'urgence avec des messages du type :« En forte demande – il ne reste que 3 chambres sur notre site ! »« 33 autres personnes regardent maintenant, d’après nos scientifiques de Booking.com » (quoi ?)
 « Dernière chance ! Plus qu’une chambre sur notre site !"
   A savoir : Le site a reçu à plusieurs reprises des plaintes dans différents pays. Même en France, le site a été accusé d’avoir mis la pression sur les prix des hôtels et de violation de la législation antitrust. Selon The Daily Telegraph, la société oblige les opérateurs hôteliers à promouvoir les offres les plus rentables pour les touristes. Des accusations similaires ont été portées en Allemagne, en Suisse, aux États-Unis et au Royaume-Uni.
 
 {% note "**Analyse**" %}
-Tout comme Youtube, Booking se différencie par le grand choix d'offres qu'elle propose. Elle utilise aussi un système de fidélisation, par la visibilité donnée aux annonceurs (comme youtube) mais aussi par des réductions offertes aux consommateurs. Les 2 plateformes savent aussi bien répondre à la demande de leur clients. En effet les résultats des recherches sont précis et le système de recommandation adaptée. LE dernier point commun est le marketing très développé : YouTube diffuse automatiquement d’autres vidéos pour nous empêcher de partir de la plateforme et booking manipule les loueurs pour les mettre dans l'urgence.
+Tout comme Youtube, Booking se différencie par le grand choix d'offres qu'elle propose. Elle utilise aussi un système de fidélisation, par la visibilité donnée aux annonceurs (comme youtube) mais aussi par des réductions offertes aux consommateurs. Les 2 plateformes savent aussi bien répondre à la demande de leur clients. En effet les résultats des recherches sont précis et le système de recommandation adaptée. Le dernier point commun est le marketing très développé : YouTube diffuse automatiquement d’autres vidéos pour nous empêcher de partir de la plateforme et booking manipule les loueurs pour les mettre dans l'urgence.
+Le plus de Booking est son service client très efficace.
 
 {% endnote %}
 
 ## 5. Analyse de Linkedin
 
 Créé en 2003, LinkedIn est devenu en quelques années le plus grand réseau social professionnel au monde, avec 1 professionnel sur 3 d’inscrit dans le monde  et 4 millions de pages entreprises.
-L’objectif de LinkedIn est de simplifier la mise en relation des professionnels dans le but de se constituer un réseau et de l’élargir.  Initialement utilisée comme une plateforme de CV en ligne, elle a muté progressivement pour ajuster ses fonctionnalités aux besoins actuels des professionnelsLe développement du réseau ne cesse de croître au vu des différentes mises à jour toujours plus innovantes et utiles aux professionnels.
+L’objectif de LinkedIn est de simplifier la mise en relation des professionnels dans le but de se constituer un réseau et de l’élargir.  Initialement utilisée comme une plateforme de CV en ligne, elle a muté progressivement pour ajuster ses fonctionnalités aux besoins actuels des professionnels. Le développement du réseau ne cesse de croître au vu des différentes mises à jour toujours plus innovantes et utiles aux professionnels.
 C'est donc une plateforme d'interaction qui a aussi vocation de « marketplace » car elle permet la mise en relation d'offre et de demande d'emploi.
 
 {% info %}
@@ -204,12 +206,12 @@ Les acteurs de linkedin sont les particuliers et les entreprises
 
 ***modèle de financement :***
 
-modèle économique reposant sur trois sources de revenus : la publicité (18%), les abonnements (20%) et les services de recrutement (62%) 
+modèle économique reposant sur trois sources de revenus : la publicité (18%), les abonnements (20%) et les services de recrutement (62%). 
 LinkedIn propose des offres premium, réalisées pour faciliter la tâche aux entreprises et leur permettre de mieux segmenter leurs cibles. 
 Il existe 4 offres premium LinkedIn :
 - LinkedIn Recruiter : un Mini CRM de recrutement.
 - Le compte premium Business : pour avoir un réseau de qualité.
-- LinkedIn Vente (Sales Navigator) : Permets de gagner des leads, vendre ses produits, ses services et faire découvrir sa marque.
+- LinkedIn Vente (Sales Navigator) : Permet de gagner des leads, vendre ses produits, ses services et faire découvrir sa marque.
 - Le compte premium carrière : pour trouver un emploi.
 En 2020, un total de 39% des utilisateurs LinkedIn paient pour LinkedIn Premium
 
@@ -246,7 +248,7 @@ présence de Linkedin sur de nombreux sites professionnels avec des boutons qui 
 
 Le réseau reste aussi attractif car il ne cesse de se réinventer et d’ajouter de nouvelles fonctionnalités au fur et à mesure. C'est aussi une limite du réseau qui peut finir par en devenir brouillon. On perd de vue le réel but de Linkedin qui se rapproche de plus en plus d'un réseau socila classique.
 
-Une autre limite du site est qu'il peut s'avérer très chronophage
+Une autre limite du site est qu'il peut s'avérer très chronophage.
 
 
 {% note "**Analyse**" %}
@@ -259,10 +261,11 @@ Comme YouTube et booking, linkedin fait la différence par le grand choix d'offr
 
 Après avoir analysé le fonctionnement de 3 grandes plateformes qui ont écrasé leurs concurrents, on peut mettre en avant des "ingrédients du succès" pour les plateformes numériques, quelque soit leurs type:
 - grande diversité du contenu et grande communauté 
-- expérience client agréable.. fonctionnalités faciles
+- expérience client agréable.. fonctionnalités faciles d'utilisation
 - fidélisation des consommateurs grâce à des rédcutions
-- Fidélisation des offreurs grâce à une mise en visibilité, 
+- Fidélisation des offreurs grâce à une mise en visibilité 
 - Marketing agressif avec des offres urgentes et des algorithmes de recommandation
+- Un service client performant
 
 
 {% prerequis "**Sources principales**" %}
