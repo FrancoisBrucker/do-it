@@ -134,61 +134,149 @@ Strengths, Weaknesses, Opportunities, Threats, une méthode d'analyse stratégiq
 </ul>
 <h3>Question 3 - Réalisez une cartographie des acteurs.</h3>
 <p>J'ai dessiné l'esquisse suivante des acteurs et des relations entre eux :<br>
-<img src="./cartographie-acteurs.jpg" alt="Cartographie des acteurs"></p>
+<img src="./images/cartographie-acteurs.jpg" alt="Cartographie des acteurs"></p>
 <h3>Question 4 - Réalisez une cartographie des processus.</h3>
 <p>Une cartographie des processus est une est une représentation des processus d'entreprise dans les domaines suivants qui sont aussi appelés macro-processus : (<a href="https://www.advaloris.ch/nos-services/intelligence-organisationnelle/amelioration-de-performance-operationnelle-organisationnelle-dune-entreprise/modelisation-des-processus/cartographie-processus-de-lentreprise-prerequis-management-processus">source</a>)</p>
 <ul>
-<li>Les processus primaires/processus clés</li>
-<li>Les processus de gestion</li>
-<li>Les processus de soutien</li>
+<li>Les <strong>processus primaires/processus opérationnels</strong>: Il s'agit des processus dans lesquels la valeur ajoutée de l'entreprise est réalisée, c'est-à-dire les activités quotidiennes ou les commandes des clients.</li>
+<li>Les <strong>processus de pilotage</strong>: Il s'agit des processus de planification et de gestion de l'entreprise (par ex. gestion de la stratégie et des objectifs).</li>
+<li>Les <strong>processus de soutien</strong>: Il s'agit de processus qui n'apportent pas de valeur ajoutée directe, mais qui sont d'une grande importance pour l'exécution de la prestation dans les processus primaires.</li>
 </ul>
 <p>L'identification des processus dans ces trois domaines sert à préparer la tâche suivante, à savoir la représentation des processus en BPMN.</p>
 <h4>Processus primaires</h4>
 <ul>
-<li>Créer et publier l'offre de formation</li>
-<li>Vendre et dispenser une formation à un client
-<ul>
-<li>Cours du catalogue</li>
-<li>Cours à la demande du client</li>
+<li>Gestion du catalogue de formation (p.ex. création, modification, suppression de cours)</li>
+<li>Vendre et dispenser une formation à un client (soit un cours du catalogue, soit un cours sur mesure)</li>
 </ul>
-</li>
-</ul>
-<h4>Processus de gestion</h4>
+<h4>Processus de pilotage</h4>
 <ul>
-<li>Analyse mensuelle et trimestrielle des chiffres (KPI tels que chiffre d'affaires, bénéfice, nouveaux contacts, etc.)</li>
+<li>Reporting et pilotage de gestion (p.ex. analyse mensuelle et trimestrielle des chiffres (KPI tels que chiffre d'affaires, bénéfice, nouveaux contacts, etc.), création du bilan annuel, etc.)</li>
 </ul>
 <h4>Processus de soutien</h4>
 <ul>
-<li>Facturation au client</li>
-<li>Paiement des rémunérations aux enseignants</li>
+<li>Facturation client</li>
+<li>Paiement des prestataires</li>
+<li>Suivi des activités des commerciaux (pour calculer leur rémunération)</li>
 <li>Maintenance des fichiers clients et enseignants</li>
-<li>Création du bilan annuel</li>
+<li>Édition des conventions de formation</li>
+<li>Édition des contrats de prestation</li>
 </ul>
 <h3>Question 5 - Réalisations des modèles de processus BPMN</h3>
 <h4>C'est quoi le BPMN?</h4>
+<p>BPMN est une <strong>notation de modélisation de processus d'affaires</strong>. Elle permet de représenter les processus d'affaires de manière graphique et standardisée. Elle est utilisée pour la modélisation, la simulation, l'analyse et l'optimisation des processus d'affaires. Pour créer des modèles BPMN, on utilise des elements de base comme les <strong>activités</strong>, des <strong>gateways</strong> et des <strong>events</strong>. Les activités représentent les tâches effectuées par les acteurs. Les gateways permettent de définir les conditions de passage d'une activité à l'autre. Les events représentent les événements qui peuvent se produire pendant le processus. Les éléments de base sont reliés entre eux par des flèches. Les elements de base sont les suivants:</p>
+<p><img src="./images/basic-bpmn-elements.png" alt="Éléments BPMN de base"> Éléments de base à partir desquels les diagrammes BPMN sont construits (<a href="https://www.researchgate.net/figure/Basic-elements-of-BPMN-diagrams_fig2_228974950">source de l'image</a>)</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Je crée tous mes modèles de processus avec <a href="https://www.yworks.com/products/yed">yEd</a>, un logiciel gratuit pour la modélisation de graphes. La mise en page automatique, en particulier, est très utile.</p>
+</div></div>
+<h4>Modèle de processus 1</h4>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>To-Do: BPMN erklären</p>
+<p>Ici, on va trouver les modèles BPMN bientôt.</p>
 </div></div>
-<br>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+<h3>Question 6 - Relevez les dysfonctionnements par rapport à chaque processus.</h3>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>Je crée tous mes modèles de processus avec <a href="https://www.yworks.com/products/yed">yEd</a>, un logiciel gratuit pour la modélisation de graphes.</p>
+<p>Je vais d'abord noter tous les problèmes qui me viennent à l'esprit et les ajouter aux processus plus tard.</p>
 </div></div>
-<h4>Modèle de processus 1</h4>
-<br>
-<h3>Question 6 - Relevez les dysfonctionnements par rapport à chaque processus.</h3>
-<br>
+<p>Ici la liste avec tous les dysfonctionnements:</p>
+<table>
+<thead>
+<tr>
+<th>Problème</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cataloge: mise a jour 2x par an</td>
+<td>pas de cataloge, seulement site web, mise a jour chaque fois qc change</td>
+</tr>
+<tr>
+<td>Catalogue: diffusé par e-mail</td>
+<td>Newsletter avec lien vers la site web</td>
+</tr>
+<tr>
+<td>Rémuneration variable pour les commerciaux</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Pas de distribution d'information entre les commerciaux</td>
+<td>Base d'information centrale, interdire d'avoir ses propres bases d'information</td>
+</tr>
+<tr>
+<td>La liste des clients est un fichier Excel, chaque commercial a une copie qui est different des autres</td>
+<td>solution centrale</td>
+</tr>
+<tr>
+<td>Chaque commercial a ses propres prestataires</td>
+<td>Choix du fournisseur autorisé uniquement à partir d'un pool central de fournisseurs</td>
+</tr>
+<tr>
+<td>La liste des prestataires est un fichier Excel, chaque commercial a une copie qui es tdifferent des autres</td>
+<td>solution centrale</td>
+</tr>
+<tr>
+<td>Rendu mensuel + feuille d'emargement en papier</td>
+<td>en ligne, plus facile</td>
+</tr>
+<tr>
+<td>Manque de visibilité de l'entreprise</td>
+<td>site web qui est mis a jour souvent, enrichi par d'autres choses (blog, ...)</td>
+</tr>
+<tr>
+<td>Pas toujours un prestataire pour une formation</td>
+<td>offrir une formation a une entreprise seulement si on a un prestataire</td>
+</tr>
+<tr>
+<td>Pas de processus defini pour créer une nouvelle formation</td>
+<td>créer un processus pour faire ca - standardisation!!! faut être plus vite</td>
+</tr>
+<tr>
+<td>Réunions semestrielles</td>
+<td>Les réunions doivent être beaucoup plus souvent (le monde change très vite!)</td>
+</tr>
+<tr>
+<td>Le directeur signe le fiche de paie</td>
+<td>pas necessaire, vous devez avoir davantage confiance en vos collaborateurs</td>
+</tr>
+<tr>
+<td>Prestatire est payé au debut de mois</td>
+<td>Payer les paiements accumulés une fois par semaine</td>
+</tr>
+<tr>
+<td>Le directeur signe les factures</td>
+<td>Envoyer la facture par e-mail, pas de signature necessaire</td>
+</tr>
+<tr>
+<td>Le rassemble mensuellement et trimestriellement des donnée est trop complex</td>
+<td>Dashboards pour les KPI, mis a jour automatiquement chaque jour</td>
+</tr>
+<tr>
+<td>La reponse a un client n'est pas assez vite</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Les employés du CFP n'ont pas de connaissances plus avancées en informatique</td>
+<td>Formation pour le nouveau SI</td>
+</tr>
+</tbody>
+</table>
 <h3>Question 7 - Création d'une matrice SWOT</h3>
-<h4>C'est quoi, une matrice SWOT?</h4>
-<br>
+<h4>C'est quoi, une analyse SWOT?</h4>
+<p>Une analyse SWOT est une analyse stratégique qui permet de déterminer les forces, les faiblesses, les opportunités et les menaces d'une entreprise. Elle est utilisée pour évaluer la situation d'une entreprise et pour définir une stratégie. Les forces et les faiblesses sont des <strong>facteurs internes</strong> à l'entreprise. Les opportunités et les menaces sont des <strong>facteurs externes</strong> à l'entreprise. L'analyse SWOT est donc un outil de <strong>management stratégique</strong>.</p>
+<p><img src="./images/swot-matrix-description.png" alt="Matrice SWOT"></p>
 <h4>La matrice SWOT du CFP</h4>
 <br>
 <h3>Question 8 - Quels seraient les objectifs d’un futur SI et quels seraient les indicateurs associés?</h3>
