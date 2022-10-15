@@ -21,8 +21,8 @@ Tous les POK de Killian ROYANT
 
 Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **POK** :
 
-- **Temps 1** - [Mon site chez moi](site_chez_moi)
-- **Temps 2** - Site sur serveur distant
+- **Temps 1** - [Mon site chez moi (front)](site_chez_moi)
+- **Temps 2** - [Mon site chez moi (back)](site_chez_moi)
 - **Temps 3** - Programmation par tests
 
 ## Mon parcours
@@ -32,5 +32,7 @@ Ci dessous mes choix prévisionnels de parcours pour le S9. Mon objectif : conti
 |  | **Temps 1** | **Temps 2** | **Temps 3** |
 |---|:---:|:---:|:---:|
 | **Cours** | Expérience Utilisateur<br>Java/Gradle<br>Serveur Web 101 | Interface utilisateur<br>Lean engineering<br>Réseaux<br>Serveur distant<br>Structure de données | Programmation par tests<br>AWS/Docker<br>Algorithmie<br>No/Low code<br>Management visuel |
-| **POK** | Mon site chez moi | Site sur serveur distant | Programmation par tests |
-| **MON** | Google Apps Script<br>Programmation objet Python | Micro services<br>Web front 2 | Développement mobile<br>Dev-Ops |
+| **POK** | Mon site chez moi (front) | Mon site chez moi (back) | Site sur serveur distant |
+| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>Google Apps Script | Développement mobile<br>Dev-Ops |
+
+[<-- Retour](../)

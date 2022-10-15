@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Sûrement le seul MON d'info d'Eugénie"
+title: "Les MONs d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
@@ -9,8 +9,18 @@ tags: ['mon']
 
 ---
 <!-- Début Résumé -->
-J'ai choisi de faire le MON appscript parce que ça ne peut qu'être utile.
+Voici la table des matières des MONs de l'année.
 
 <!-- fin Résumé -->
 
-Je vais commencer par explorer le site du livre : Automate the boring stuff with Python. Je pourrai ensuite creuser les thématiques qui m'intéressent grâce à Google Apps script et éventuellement trouver une application utile à mettre en place.
+## Temps 1
+
+Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :
+
+{% chemin %} [MON Automate the boring stuff](./MON_1_1/) {% endchemin %}
+
+{% chemin %} [MON Étude de cas CFP](./MON_1_2/) {% endchemin %}
+
+## Temps 2
+
+## Temps 3

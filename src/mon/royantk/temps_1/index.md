@@ -1,11 +1,9 @@
 ---
 layout: layout/post.njk
 
-title: "Temps 1"
+title: "[MON] Temps 1"
 authors:
   - Killian ROYANT
-
-tags: ['mon']
 ---
 
 <!-- début résumé -->
@@ -13,9 +11,21 @@ tags: ['mon']
 MON du temps 1
 <!-- fin résumé -->
 
-## Sommaire
+## Introduction
 
-Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **MON** du temps 1 :
+Pour mon temps 1, j'ai choisis de me former à la programmation orientée objet sur Python. En parallèle, afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je souhaite me former au **développement Web Full Stack**. Pour y parvenir, il m'a semblé nécessaire de choisir deux MON (dont le deuxième au temps 2) proposés par la plateforme de formation [OPENCLASSROOMS](https://openclassrooms.com/fr) :
 
-- [Google Apps Script](gg_apps_script/)
-- [Programmation Objet en Python](POO_python/)
+- MON 1 - [Programmation Objet en Python](POO_python/)
+- MON 2 - [Créez des pages web dynamiques avec JavaScript](js/)
+
+### Ressources
+
+{% chemin %}
+
+**Ressources utilisées**
+
+- [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python)
+- [Créez des pages web dynamiques avec JavaScript *(Openclassrooms)*](https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript)
+{% endchemin %}
+
+[<-- Retour](../)
