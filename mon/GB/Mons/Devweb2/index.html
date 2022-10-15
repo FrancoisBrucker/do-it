@@ -108,7 +108,7 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
 
     <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="Chaine prototypage.png"><br><br>
+<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../../Images/Chaine_prototypage.png"><br><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -152,14 +152,14 @@ var request <span class="token operator">=</span> new XMLHttpRequest<span class=
 request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br><br>
-<img src="/src/mon/GB/Mons/json-superheroes.png" alt=""></p>
+<img src="../../Images/json-superheroes.png"></p>
 <ol start="5">
 <li>Pratique de construction d'objets</li>
 </ol>
 <p>Dans cette partie, nous voyonsun exemple pratique d'utilisations d'objets. Nous programmons, à l'aide de Canvas, un écran rempli de balles rebondissantes contre les bords de l'écran. <br><br>
 Les balles sont donc les objets auxquelles nous appliquons différentes méthodes afin de construire l'animation souhaitée. <br><br>
 Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en ayons déjà parlé durant le cours de web flask.</p>
-<h3>Découverte des API web</h3>
+<h4>Découverte des API web</h4>
 <ol>
 <li>Introduction</li>
 </ol>
@@ -173,9 +173,12 @@ Nous voyons aussi les définitions de framework et bibliothèque.</p>
 <ul>
 <li>HTML</li>
 <li>SCSS</li>
-<li>TypeScript<br>
-Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</li>
+<li>TypeScript</li>
 </ul>
+<ol start="2">
+<li>Premier site web</li>
+</ol>
+<p>Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> class FaceSnapComponent <span class="token punctuation">{</span>
   title<span class="token operator">!</span>: string<span class="token punctuation">;</span> 
   description<span class="token operator">!</span>: string<span class="token punctuation">;</span>
@@ -184,7 +187,7 @@ Dans un premier temps, nous apprenons à créer des "components" et à y associe
   imageUrl<span class="token operator">!</span>:string<span class="token punctuation">;</span>
 <span class="token function-name function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token assign-left variable">this.title</span><span class="token operator">=</span><span class="token string">'Timothé'</span><span class="token punctuation">;</span>
-  <span class="token assign-left variable">this.description</span><span class="token operator">=</span><span class="token string">'Mon super pote'</span><span class="token punctuation">;</span>
+  <span class="token assign-left variable">this.description</span><span class="token operator">=</span><span class="token string">'Mon meilleur ami'</span><span class="token punctuation">;</span>
   <span class="token assign-left variable">this.createdDate</span><span class="token operator">=</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token assign-left variable">this.snaps</span><span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span>
   <span class="token assign-left variable">this.imageUrl</span><span class="token operator">=</span><span class="token string">'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg'</span><span class="token punctuation">;</span>
@@ -199,6 +202,24 @@ Dans un premier temps, nous apprenons à créer des "components" et à y associe
     <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"imageUrl"</span> <span class="token punctuation">[</span>alt<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
 </code></pre>
+<p>Nous nous occupons ensuite de rendre notre application plus dynamique en y ajoutant un premier évènement. Nous cherchons à créer une fonction permettant de réagir à notre image. Nous rajoutons donc un bouton exprimant cette réaction. qui prend une valeur lorsqu'il est cliqué et retourne à sa valeur initiale lorsqu'il est reclické. Cela permet une seule réaction par utilisateur.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function-name function">onSnap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span>this.buttonText <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">':D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   this.snaps++<span class="token punctuation">;</span>
+   this.buttonText <span class="token operator">=</span> <span class="token string">'Je retire'</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+   this.snaps--<span class="token punctuation">;</span>
+   this.buttonText <span class="token operator">=</span> <span class="token string">':D'</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+<p>Nous appelons bien sur cette fonction dans notre component.html :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"onSnap()"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/button<span class="token operator">&gt;</span>
+        :D 
+    <span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+</code></pre>
+<p>Voici à quoi ressemble mon site pour le moment : <br><br>
+<img src="../../Images/Premier_site.png"></p>
 
 
 </article>
