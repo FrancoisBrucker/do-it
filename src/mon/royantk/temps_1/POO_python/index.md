@@ -13,7 +13,9 @@ MON - La programation orientée objet sur Python
 
 ## Déroulé de mon MON
 
-Afin de réaliser ce module d'autoformation, j'ai commencé à suivre une formation de 12h (difficulté Moyenne) sur OpenClassrooms intitulée [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python). Tous les programmes créés à l'occasion de cette formation seront présents dans ce répertoire.
+Afin de réaliser ce module d'autoformation, j'ai commencé à suivre une formation de 12h (difficulté Moyenne) sur OpenClassrooms intitulée [Apprenez la programmation orientée objet avec Python](https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python).
+
+La formation est très claire et très simple à suivre, comme la plupart des formations proposées par Openclassrooms. Le formateur propose différents exemples repris tout au long de la formation. La formation est composée de vidéos, de cours écrits, d'exemples et d'exercices à chaque étape. À la fin de chaque chapitre, un quiz est proposé afin d'évaluer notre compréhension des différents acquis du chapitre.
 
 ![Image](https://i.vimeocdn.com/video/1118264994-2a67dba5a3a8c9aee27720f1afa58494be2dfa5768c7478bebbb104a4359d8c3-d?mw=800)
 
