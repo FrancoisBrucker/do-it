@@ -103,36 +103,59 @@ BPMN est une **notation de modélisation de processus d'affaires**. Elle permet 
 Je crée tous mes modèles de processus avec [yEd](https://www.yworks.com/products/yed), un logiciel gratuit pour la modélisation de graphes. La mise en page automatique, en particulier, est très utile.
 {% endinfo %}
 
-#### Modèle de processus 1
-{% faire %}
-Ici, on va trouver les modèles BPMN bientôt.
-{% endfaire %}
+#### Gestion du catalogue de formation
+![Gestion du catalogue de formation](./images/bpmn/Creation-nouveau-offre-de-formation.png)
+
+#### Vendre et dispenser une formation à un client
+![Vendre et dispenser une formation à un client](./images/bpmn/Vende-d-une-formation.png)
+
+#### Reporting et pilotage de gestion
+![Reporting et pilotage de gestion](./images/bpmn/reporting-creation-bilan.png)
+
+#### Facturation client
+![Facturation client](./images/bpmn/facturation-client.png)
+
+#### Paie des prestataires
+![Paie des prestataires](./images/bpmn/remuneration-enseignant.png)
+
+#### Suivi des activités des commerciaux
+{% note %}
+Pour ce processus, je n'ai pas trouvé assez d'information dans les entretiens. Je vais donc le laisser de côté.
+{% endnote %}
+
+#### Maintenance des fichiers clients et prestetaires
+**Clients**
+![Maintenance de fichier client](./images/bpmn/maintenance-fichier-client.png)
+
+**Prestetaires**
+![Maintenance de fichier prestetaires](./images/bpmn/maintenance-fichier-prestetaires.png)
+
+#### Édition des conventions de formation
+Ce processus est déja integrée dans le modèle du processus "vendre et dispenser uen formation a un client"
+
+#### Édition des contrats de prestation
+Ce processus est également déja integrée dans le modèle du processus "vendre et dispenser uen formation a un client"
 
 ### Question 6 - Relevez les dysfonctionnements par rapport à chaque processus.
-{% faire %}
-Je vais d'abord noter tous les problèmes qui me viennent à l'esprit et les ajouter aux processus plus tard.
-{% endfaire %}
+Ici la liste avec tous les dysfonctionnements qui ont été identifié:
 
-Ici la liste avec tous les dysfonctionnements:
-
-| Problème  | Solution|
+| Problème  | Solution proposé|
 | ---------------- | --------------- |
-| Cataloge: mise a jour 2x par an    | pas de cataloge, seulement site web, mise a jour chaque fois qc change |
-| Catalogue: diffusé par e-mail    | Newsletter avec lien vers la site web |
+| Cataloge: mise a jour 2x par an    | Ne pas distribuer de catalogue, mais rendre l'offre accessible sur un site web |
+| Catalogue: diffusé par e-mail    | Envoi d'une newsletter avec un lien vers la site web |
 | Rémuneration variable pour les commerciaux    | x  |
-| Pas de distribution d'information entre les commerciaux    | Base d'information centrale, interdire d'avoir ses propres bases d'information  |
+| Pas de distribution d'information entre les commerciaux    | Base d'information centrale, interdire d'avoir ses propres fichiers clients/prestetaires  |
 | La liste des clients est un fichier Excel, chaque commercial a une copie qui est different des autres | solution centrale  |
-| Chaque commercial a ses propres prestataires | Choix du fournisseur autorisé uniquement à partir d'un pool central de fournisseurs |
-| La liste des prestataires est un fichier Excel, chaque commercial a une copie qui es tdifferent des autres  | solution centrale  |
-| Rendu mensuel + feuille d'emargement en papier | en ligne, plus facile  |
-| Manque de visibilité de l'entreprise   | site web qui est mis a jour souvent, enrichi par d'autres choses (blog, ...) |
-| Pas toujours un prestataire pour une formation     | offrir une formation a une entreprise seulement si on a un prestataire  |
-| Pas de processus defini pour créer une nouvelle formation   | créer un processus pour faire ca - standardisation!!! faut être plus vite |
+| Chaque commercial a ses propres prestataires | Choix du prestetaire autorisé uniquement à partir d'un pool central de prestetaires |
+| Rendu mensuel + feuille d'emargement en papier | Faire ca en ligne  |
+| Manque de visibilité de l'entreprise   | Création d'une site web qui est mis a jour souvent, enrichi par d'autres choses (blog, ...) |
+| Pas toujours un prestataire pour une formation     | Offrir une formation a une entreprise seulement si on a un prestataire  |
+| Pas de processus defini pour créer une nouvelle formation   | créer un processus pour faire ca - standardisation |
 | Réunions semestrielles  | Les réunions doivent être beaucoup plus souvent (le monde change très vite!)  |
-| Le directeur signe le fiche de paie     | pas necessaire, vous devez avoir davantage confiance en vos collaborateurs|
+| Le directeur signe le fiche de paie     | Ca n'est pas necessaire, vous devez avoir davantage confiance en vos collaborateurs|
 | Prestatire est payé au debut de mois     | Payer les paiements accumulés une fois par semaine |
 | Le directeur signe les factures     | Envoyer la facture par e-mail, pas de signature necessaire  |
-| Le rassemble mensuellement et trimestriellement des donnée est trop complex | Dashboards pour les KPI, mis a jour automatiquement chaque jour|
+| Le rassemble mensuellement et trimestriellement des donnée est trop complex | Création des dashboards pour les KPI, mis a jour automatiquement chaque jour|
 | La reponse a un client n'est pas assez vite     | x |
 | Les employés du CFP n'ont pas de connaissances plus avancées en informatique    | Formation pour le nouveau SI  |
 
