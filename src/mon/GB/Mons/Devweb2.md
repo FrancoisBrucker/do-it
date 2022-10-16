@@ -112,6 +112,43 @@ Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en 
 Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br>
 Nous voyons aussi les définitions de framework et bibliothèque. 
 
+2. API DOM
+
+Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures "appenChild" et "removeChild" car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br>
+Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés "setAttribute". Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés : 
+```bash
+        var btn=document.querySelector('button');
+        var liste=document.querySelector('ul');
+        var input=document.querySelector('input');
+
+        btn.addEventListener('click', Ajout);
+
+        function Ajout(){
+            var choix=input.value;
+            input.value=' ';
+
+            var ligne=document.createElement('li');
+            var sp=document.createElement('span');
+            var enlever=document.createElement('button');
+
+            ligne.appendChild(sp);
+            sp.textContent=choix;
+            ligne.appendChild(enlever);
+            enlever.textContent='Delete';
+            liste.appendChild(ligne);
+
+            enlever.addEventListener('click', ()=> {
+                liste.removeChild(ligne);
+            });
+
+            input.focus();
+        }
+```
+3. API tierce
+
+On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les "chercher", il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br> 
+Une API REST est un type d'API tierce où l'on ne récupère pas les données à l'aide d'une bibliothèque JavaScript mais à l'aide de requêtes HTTP. Ces API utilisent généralement une clé de développement. <br>
+Nous voyons finalement un exemple de récupération et d'utilisation des données récupérés via l'API sur notre site web. 
 ### Le framework angular 
 
 1. Introduction 
