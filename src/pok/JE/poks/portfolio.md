@@ -5,7 +5,6 @@ title: "Mon Portfolio chez moi"
 authors:
   - Jeffrey Edisah
 
-tags: ['pok']
 ---
 <!-- début résumé -->
 
@@ -32,14 +31,17 @@ l'apprentissage du CSS me retarde.
 
  ### Résultat
 
- Au cours de mon travail sur le POK, le CSS a été compliqué à maitriser pour arriver à la mise en page que je voulais pour ma page About, et même en y arrivant celle-ci n'était pas totalement responsive, je n'ai donc pas non plus eu le temps de travailler sur les autres pages que je veux faire.
+ Au cours de mon travail sur le POK, le CSS a été compliqué à maîtriser pour arriver à la mise en page que je voulais pour ma page About, et même en y arrivant celle-ci n'était pas totalement responsive, je n'ai donc pas non plus eu le temps de travailler sur les autres pages que je veux faire, cette expérience me montre la difficulté de travailler avec du CSS de base et la rigueur que cela nécessite pour parer à
 
  ## Sprint 2
 
  ### Objectif
 
-Ecritures des pages en HTML et CSS à l'aide du framework BootStrap, si possible ajout d'une page permettant aux visiteurs du site de me laisser des comissions, avec donc du backend.
+Écritures des pages en HTML et CSS à l'aide du framework BootStrap, si possible ajout d'une page permettant aux visiteurs du site de me laisser des commissions, avec donc du backend.
 
 ### Journal de bord
+
+J'ai pu rajouter une autre page Pieces qui contient les pièces que j'ai faites jusqu'ici. Boot strap m'a permis de le mettre en page aisément, mais j'ai quelques soucis avec la personnalisation de la taille des images. Il faudrait soit que je les travaille à priori dans GIMP, soit que je les affiche avec la classe thumbnail pour ensuite en appuyant dessus permettre de les afficher entièrement sur la page.
+Je me pose la question d'un stockage des images en base de données et de leur affichage à l'aide d'une API dédiée, peut-être à faire pour le 2ème ou le 3ème POK.
 
 ### Résultat
