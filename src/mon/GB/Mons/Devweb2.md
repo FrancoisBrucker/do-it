@@ -167,5 +167,6 @@ Nous nous occupons ensuite de rendre notre application plus dynamique en y ajout
         :D {{ snaps }}
     </p>
  ```
- Voici à quoi ressemble mon site pour le moment : <br>
+ Voici à quoi ressemble mon site : <br>
  <img src="../../Images/Premier_site.png"/>
+ 
