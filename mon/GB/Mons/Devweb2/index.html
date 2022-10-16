@@ -165,6 +165,44 @@ Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en 
 </ol>
 <p>Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br><br>
 Nous voyons aussi les définitions de framework et bibliothèque.</p>
+<ol start="2">
+<li>API DOM</li>
+</ol>
+<p>Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures "appenChild" et "removeChild" car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br><br>
+Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés "setAttribute". Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">        var <span class="token assign-left variable">btn</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        var <span class="token assign-left variable">liste</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        var <span class="token assign-left variable">input</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        btn.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, Ajout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">function</span> <span class="token function-name function">Ajout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            var <span class="token assign-left variable">choix</span><span class="token operator">=</span>input.value<span class="token punctuation">;</span>
+            <span class="token assign-left variable">input.value</span><span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">;</span>
+
+            var <span class="token assign-left variable">ligne</span><span class="token operator">=</span>document.createElement<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            var <span class="token assign-left variable">sp</span><span class="token operator">=</span>document.createElement<span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            var <span class="token assign-left variable">enlever</span><span class="token operator">=</span>document.createElement<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            ligne.appendChild<span class="token punctuation">(</span>sp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token assign-left variable">sp.textContent</span><span class="token operator">=</span>choix<span class="token punctuation">;</span>
+            ligne.appendChild<span class="token punctuation">(</span>enlever<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token assign-left variable">enlever.textContent</span><span class="token operator">=</span><span class="token string">'Delete'</span><span class="token punctuation">;</span>
+            liste.appendChild<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            enlever.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+                liste.removeChild<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            input.focus<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+<ol start="3">
+<li>API tierce</li>
+</ol>
+<p>On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les "chercher", il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br><br>
+Une API REST est un type d'API tierce où l'on ne récupère pas les données à l'aide d'une bibliothèque JavaScript mais à l'aide de requêtes HTTP. Ces API utilisent généralement une clé de développement. <br><br>
+Nous voyons finalement un exemple de récupération et d'utilisation des données récupérés via l'API sur notre site web.</p>
 <h3>Le framework angular</h3>
 <ol>
 <li>Introduction</li>
