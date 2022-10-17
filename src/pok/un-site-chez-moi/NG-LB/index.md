@@ -54,11 +54,11 @@ Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un Eve
 
 ## 4. Avancées de la partition et de l'affichage du site
 
-### Page d'acceuil et partitions sauvegardées
+### Page d'accueil et partitions sauvegardées
 
 Première version de ces deux pages :
 
-![Page d'acceuil première version](page_daccueil_premiere_version.png)
+![Page d'accueil première version](page_daccueil_premiere_version.png)
 
 ![Partitions sauvegardées première version](partitions_sauvegardees_premiere_version.png)
 
@@ -75,3 +75,29 @@ Il reste à modifier la manière de saisir les notes pour que celles-ci puissent
 Nous pensions afficher une note grisée au survol de la partition pour indiquer la possibilité de placer une note à cet endroit. Cependant le fait de faire suivre la trajectoire de la souris à la note grisée implique d'effacer et de redessiner le canvas à chaque mouvement de la souris et cela crée un lag trop important.
 
 Il sera peut-être possible par la suite de réduire le nombre d'actualisations du canvas en limitant les positions possibles de la note grisée à des emplacements précis mais nous avons laissé cet fonctionnalité de côté pour le moment.
+
+## 5. La gestion du stockage des données
+
+### Les données importantes à conserver 
+
+Il y a deux types de données que nous voulons pouvoir conserver.
+#### En premier lieu, les informations sur l'utilisateur :
+  - Le pseudo
+  - Le mot de passe (crypté si possible)
+  - Les partitions dont il est l'auteur
+  - Les partitions qui lui sont partagées
+
+#### En deuxième lieu, les informations sur les partitions :
+  - Les notes dans leur ordre
+  - L'auteur de la partition
+  - Les pseudos des personnes avec qui elle est partagée
+
+### Comment les conserver
+
+Toute la difficulté est là. A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript. 
+
+Le problème est que cette base de données ne traverse pas les pages. Quand on change de page HTML, on perd ces données.
+
+Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.
+
+En attendant, la solution retenue est de rester toujours sur la même page HTML, en supprimant tout le code HTML lorsque l'on veut changer virtuellement de page, à l'aide d'une commande JavaScript qui supprime tout l'HTML (document. body. innerHTML="";).
