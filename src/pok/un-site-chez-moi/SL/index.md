@@ -1,9 +1,9 @@
 ---
 layout: layout/post.njk
 
-title: "Du côté de chez François"
+title: "Coucou c'est Savinien"
 authors:
-  - François Brucker
+  - Savinien Laeuffer
 
 tags: ['pok']
 ---
@@ -12,6 +12,3 @@ tags: ['pok']
 
 Mon pok qui crée un site web chez moi.
 <!-- fin résumé -->
-
-
-TBD : le rapport.
