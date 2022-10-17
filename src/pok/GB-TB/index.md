@@ -20,7 +20,7 @@ Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.
 
 ### Partie Gabriel 
 
-Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec timothé. <br>
+Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. <hr>
 
 Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux. 
@@ -110,3 +110,131 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
 ```
 J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais. 
+
+<h2> Partie Timothée</h2>
+
+Pour ma part, j'ai choisi de créer une roulette qui permet de sélectionner aléatoirement entre 2 à 4 choix (c'est ensuite facile d'ajouter plus de choix cela demande juste un peu plus de temps).
+
+J'ai commencé par créer un site fonctionnel mais sans mise en page.
+
+J'ai décidé de créer plusieurs pages:
+- [Une pour la sélection des choix](#1)
+- [Une pour chaque roulette](#2)
+
+<h3 id="1"> Page de séléction des choix</h3>
+
+<h4> Fonctionnalités</h4>
+
+Voici les fonctionnalités que je voulais sur cette page:
+- [Récupération des choix](#1-1)
+- [Limitation du nombre de caractères par choix](#1-2)
+- [Modification du nombre de choix](#1-3)
+- [Redirection vers la page contenant la roulette](#1-4)
+- [Vérification que tous les choix sont remplis](#1-5)
+
+<h5 id="1-1"> Récupération des choix</h5>
+
+J'ai choisi d'utilser des inputs pour la récupération des choix.
+
+```html
+<input type="text" id="text_choix1" name="text_choix1">
+```
+
+```javascript
+document.getElementById('text_choix1').value
+```
+
+Étant donné que je voulais faire une page différente pour les roulettes, j'ai eu du mal à transférer les choix pour les afficher. Adrien Brunet (un intervenant) m'a conseillé d'utiliser le localStorage qui permet d'enregistrer des données dans le navigateur et de les conserver lors des changements de pages. 
+Pour ce faire j'utilise la fonction :
+
+```javascript
+localStorage.setItem('text_choix1',text_choix1)
+```
+
+<h5 id="1-2"> Limitation du nombre de caractères par choix</h5>
+
+Pour cela il suffit d'utiliser la propriété *maxLength* qui permet de fixer le nombre maximum de caractères dans un input.
+
+```html
+<input type="text" id="text_choix1" name="text_choix1" maxlength="10">
+```
+
+<h5 id="1-3"> Modification du nombre de choix</h5>
+
+J'ai également ajouté des boutons qui permettent d'ajouter ou de supprimer certains choix.
+
+```html
+<button type="submit" id="bouton_add2" class="bouton">+</button>
+```
+En utilisant la fonction *addEventListener* et les propriétés *display* on peut faire apparaitre et disparaitre des *div* lorsque l'on clique sur un bouton.
+
+```javascript
+bouton_add2.addEventListener("click", () => {
+div_choix3.style.display = "flex";
+bouton_add2.style.display = "none";
+nbr_choice = 3;
+})
+```
+J'ai également ajouté un compteur pour savoir le nombre de choix sélectionnés.
+
+<h5 id="1-4"> Redirection vers la page contenant la roulette</h5>
+
+J'ai ajouté un bouton suivant qui prend en compte le nombre de choix afin de rediriger vers la bonne page avec la fonction *location.href* ainsi que d'enregistrer les choix dans le *localStorage*.
+
+```javascript
+document.getElementById("bouton_suivant").addEventListener("click", () => {
+  let text_choix1 = document.getElementById('text_choix1').value
+  localStorage.setItem('text_choix1',text_choix1)
+  let text_choix2 = document.getElementById('text_choix2').value
+  localStorage.setItem('text_choix2',text_choix2)
+  let text_choix3 = document.getElementById('text_choix3').value
+  localStorage.setItem('text_choix3',text_choix3)
+  let text_choix4 = document.getElementById('text_choix4').value
+  localStorage.setItem('text_choix4',text_choix4)
+  if (nbr_choice == 2){
+    if (text_choix1 != "" && text_choix2 != "") {
+      location.href = "./roulette2.html"
+    } else {
+      alert("Remplissez les 2 choix")
+    }
+
+  } else if (nbr_choice == 3){
+    
+    if (text_choix1 != "" && text_choix2 != "" && text_choix3 != "") {
+      location.href = "./roulette3.html"
+    } else {
+      alert("Remplissez les 3 choix")
+    }
+
+  } else if (nbr_choice == 4){
+    if (text_choix1 != "" && text_choix2 != "" && text_choix3 != "" && text_choix4 != "") {
+      location.href = "./roulette4.html"
+    } else {
+      alert("Remplissez les 4 choix")
+    }
+  }
+    
+})
+```
+
+<h5 id="1-5"> Vérification que tous les choix sont remplis</h5>
+
+On peut voir dans le code précédant des *if* qui vérifient que tous les choix sont remplis et qui renvoie un message si ce n'est pas le cas :
+
+```javascript
+if (text_choix1 != "" && text_choix2 != "") {
+    location.href = "./roulette2.html"
+} else {
+    alert("Remplissez les 2 choix")
+}
+```
+
+J'arrive donc à cette page :
+<img src="./Images/Index_sans_css.jpg"/>
+
+Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.
+
+<h4> Mise en page</h4>
+
+
+<h3 id="2"> Page pour chaque roulette</h3>
