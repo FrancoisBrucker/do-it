@@ -251,6 +251,43 @@ Je suis donc arrivé à ce résultat là:
 
 
 
-
-
 <h3 id="2"> Page pour chaque roulette</h3>
+
+J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.
+
+J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.
+Grâce aux caractéristiques *position:absolute*, *rotate* et *z-index* j'ai placé les textes des différents choix sur l'image, choix que j'ai récupérer dans le local Storage. J'ai également ajouté un triangle qui permet de montrer quel choix a été tiré au sort.
+
+Pour la rotation de la roulette j'ai utilisé les animations webkit.
+```html
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+```
+Et j'ai créé 2 classes :
+- tourne : qui fait tourner l'animation
+- pause : qui arrête l'animation
+
+Enfin à l'aide des fonctions *Math.random* et *setTimeout* j'ai appliqué la classe *tourne* à la *div* contenant la roue et les choix pendant une durée aléatoire entre 1 et 3 secondes.
+
+```javascript
+function rotation(roue){
+    document.getElementById(roue).classList = "tourne"
+    random_number = Math.floor(Math.random() * (3000-1000-1)) + 1000
+    console.log(random_number)
+    setTimeout(() => {
+        document.getElementById(roue).classList = "stop";
+  },random_number)
+}
+```
+Cette fonction se lance lorsque l'on clique sur le bouton start.
+
+Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.
+
+J'ai donc obtenu cette page :
+<img src="./Images/roulette.jpg"/>
