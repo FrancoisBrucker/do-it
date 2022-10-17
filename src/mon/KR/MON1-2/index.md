@@ -107,16 +107,12 @@ Je crée tous mes modèles de processus avec [yEd](https://www.yworks.com/produc
 **Je réponds en même temps à la question 6 (Relevez les dysfonctionnements par rapport à chaque processus) en décrivant les problèmes sous chaque modèle de processus.**
 
 #### Gestion du catalogue de formation
-![Gestion du catalogue de formation](./images/bpmn/Creation-nouveau-offre-de-formation.png)
-
 **Dysfonctionnements:**
 - Le catalogue n'est mise a jour que 2x par an (pas assez souvent) 
 - Le catalogue est diffusé par e-mail (pas très moderne)
 - Si un nouveau cours est créé, il n'est pas automatiquement ajouté au catalogue
 
 #### Vendre et dispenser une formation à un client
-![Vendre et dispenser une formation à un client](./images/bpmn/Vende-d-une-formation.png)
-
 **Dysfonctionnements:**
 - Pas de distribution d'information entre les commerciaux 
 - Manque de visibilité de l'entreprise  
@@ -125,19 +121,19 @@ Je crée tous mes modèles de processus avec [yEd](https://www.yworks.com/produc
 
 #### Reporting et pilotage de gestion
 ![Reporting et pilotage de gestion](./images/bpmn/reporting-creation-bilan.png)
+C'est un example d'un diagramme BPMN très simple.
 
 **Dysfonctionnements:**
 - Pas de reporting automatique
 - Collecte des données manuelle est très complex (sujet à des erreurs)
 
 #### Facturation client
-![Facturation client](./images/bpmn/facturation-client.png)
-
 **Dysfonctionnements:**
 - Le directeur signe les factures
 
 #### Paie des prestataires
 ![Paie des prestataires](./images/bpmn/remuneration-enseignant.png)
+C'est un example d'un diagramme BPMN plus complexe avec des swimlanes.
 
 **Dysfonctionnements:**
 - Rendu mensuel + feuille d'emargement en papier
@@ -150,12 +146,6 @@ Pour ce processus, je n'ai pas trouvé assez d'information dans les entretiens. 
 {% endnote %}
 
 #### Maintenance des fichiers clients et prestetaires
-**Clients**
-![Maintenance de fichier client](./images/bpmn/maintenance-fichier-client.png)
-
-**Prestetaires**
-![Maintenance de fichier prestetaires](./images/bpmn/maintenance-fichier-prestetaires.png)
-
 **Dysfonctionnements:**
 - Chaque commercial a ses propres prestataires qu'il ne partage pas avec les autres commerciaux
 - La liste des clients est un fichier Excel, chaque commercial a une copie qui est different des autres
