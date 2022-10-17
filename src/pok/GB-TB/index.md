@@ -247,7 +247,7 @@ J'ai créé des classes afin d'appliquer un style à mes différents éléments.
 J'ai enfin utilisé la caractéristiques *placeholder* afin d'écrire les numéros des choix dans les input au lieu de les mettre au dessus.
 
 Je suis donc arrivé à ce résultat là:
-<img src="./Images/Index_avec_css.jpg"/>
+<img src="./Images/index_avec_css.jpg"/>
 
 
 
