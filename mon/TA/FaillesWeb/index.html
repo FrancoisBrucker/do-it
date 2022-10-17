@@ -142,12 +142,20 @@
 <li><strong>Filtrer toutes les données :</strong> il faut absolument éviter que les utilisateurs puissent poster du code malveillant, un média corrompu, un lien là ou il ne devrait pas être... Pour cela, il faut limiter ce qu'un utilisateur peut faire. On peut penser à utiliser les expressions régulières (ex: date de naissance au format dd-mm-yyyy soit <code>^\d{1,2}/\d{1,2}/\d{4}$</code>)... des fonctions toutes faites existent souvent. On peut limiter un média aux fichiers .png, .jpeg, .jpg... Bref, il faut filtrer tout ce qui vient du client.</li>
 <li><strong>Renforcer l'identification du client :</strong> de plus en plus, on voit l'essor de la double identification. Sans aller forcément jusque là, il faut proposer des méthodes d'identification qui soient sécurisées et résilientes. Par exemple, les JWT, les cookies de session bien configurés (https only, non accesible depuis la console JS du navigateur, date d'expiration)... On pensera a ajouter un système pour éviter les attaques par force brute (<em>captcha</em>, interdiction si tentatives d'identification répétées sur le même compte...).</li>
 <li><strong>Faire en sorte que le serveur soit le moins bavard possible.</strong> La collecte d'informations est une étape clé dans une attaque. Autant la rendre la plus difficile possible. Beaucoup de serveurs sont très bavards lorqu'on leur fait des requêtes : ils peuvent renvoyer l'OS, la version... Il faut dans la mesure du possible éviter ça.</li>
-<li><strong>Mettre à jour son serveur et ses logiciels.</strong> Même si cette recommendation est compliquée à respecter notamment en entreprise, il faut essayer de la satisfaire au maximum.</li>
+<li>etc.</li>
+</ul>
+<p>Quelques conseils essentiels pour sécuriser son site au niveau réseau / système :</p>
+<ul>
+<li><strong>Mettre à jour son serveur et ses logiciels.</strong> Même si cette recommendation est compliquée à respecter (notamment en entreprise), il faut essayer de la satisfaire au maximum.</li>
+<li><strong>Passer votre site en https ; interdire les connexions non https</strong>. En rendant le TLS obligatoire (+ en fermant les autres ports réseaux), vous excluez beaucoup d'attaques (notamment les attaques <em>man in the middle</em>).</li>
+<li><strong>Ne pas connecter votre base de données à internet</strong>. Utiliser un serveur qui va jouer le rôle de <em>proxy</em> et filtrer les requêtes entre le client et votre <em>database</em>. Cela évitera de trop exposer votre base de données.</li>
+<li>etc.</li>
 </ul>
 <p>Conclusion : filtrer tout ce qui vient du client et avoir une bonne configuration serveur.</p>
 <h2>Sources</h2>
 <p>[1] : ANSSI : recommendations pour la mise en place d'un site web : maîtriser les standards de sécurité côté navigateur : <a href="https://www.ssi.gouv.fr/uploads/2013/05/anssi-guide-recommandations_mise_en_oeuvre_site_web_maitriser_standards_securite_cote_navigateur-v2.0.pdf">https://www.ssi.gouv.fr/uploads/2013/05/anssi-guide-recommandations_mise_en_oeuvre_site_web_maitriser_standards_securite_cote_navigateur-v2.0.pdf</a></p>
 <p>[2] : Sécurité informatique <em>ethical hacking</em> : apprendre l'attaque pour mieux se défendre (6e édition). ISBN : 10-2409033660</p>
+<p>[3] : Le site de la CNIL : <a href="https://www.cnil.fr/">https://www.cnil.fr/</a></p>
 
 
 </article>
