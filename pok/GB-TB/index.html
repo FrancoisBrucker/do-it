@@ -267,6 +267,38 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <p>Je suis donc arrivé à ce résultat là:<br>
 <img src="./Images/Index_avec_css.jpg"></p>
 <h3 id="2"> Page pour chaque roulette</h3>
+<p>J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.</p>
+<p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.<br>
+Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>z-index</em> j'ai placé les textes des différents choix sur l'image, choix que j'ai récupérer dans le local Storage. J'ai également ajouté un triangle qui permet de montrer quel choix a été tiré au sort.</p>
+<p>Pour la rotation de la roulette j'ai utilisé les animations webkit.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+</code></pre>
+<p>Et j'ai créé 2 classes :</p>
+<ul>
+<li>tourne : qui fait tourner l'animation</li>
+<li>pause : qui arrête l'animation</li>
+</ul>
+<p>Enfin à l'aide des fonctions <em>Math.random</em> et <em>setTimeout</em> j'ai appliqué la classe <em>tourne</em> à la <em>div</em> contenant la roue et les choix pendant une durée aléatoire entre 1 et 3 secondes.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">rotation</span><span class="token punctuation">(</span><span class="token parameter">roue</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>roue<span class="token punctuation">)</span><span class="token punctuation">.</span>classList <span class="token operator">=</span> <span class="token string">"tourne"</span>
+    random_number <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">3000</span><span class="token operator">-</span><span class="token number">1000</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1000</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>random_number<span class="token punctuation">)</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>roue<span class="token punctuation">)</span><span class="token punctuation">.</span>classList <span class="token operator">=</span> <span class="token string">"stop"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>random_number<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette fonction se lance lorsque l'on clique sur le bouton start.</p>
+<p>Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.</p>
+<p>J'ai donc obtenu cette page :<br>
+<img src="./Images/roulette.jpg"></p>
 
 
 </article>
