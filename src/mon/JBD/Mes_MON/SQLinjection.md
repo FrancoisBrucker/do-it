@@ -35,6 +35,10 @@ Ce cours a pour objet de sensibiliser les ingénieurs dans le domaine de la séc
 - [BurpSuite](#h3)
 - [SQL injection](#h4)
   - [Principe de base](#h4-1)
+    - [Requete envoyé par l'utilisateur pour s'authentifier](#h4-1-1)
+    - [Interprétation par le serveur](#h4-1-2)
+    - [Attaquer cette mécanique](#h4-1-3)
+    - [Interprétation de la requête par le serveur](#h4-1-4)
   - [UNION attack](#h4-2)
     - [Spécificités d'une UNION](#h4-2-1)
     - [Trouver le nombre de colonnes](#h4-2-2)
@@ -50,10 +54,14 @@ Ce cours a pour objet de sensibiliser les ingénieurs dans le domaine de la séc
 
 Tout site web, sauf sites statiques, héberge une base de donnée SQL. Donc tous les site web sont des potentielles victimes d'attaques par injection de SQL.
 
+
+{% info %}
 D'après les chiffres d'Akamai ([lien de l'article](https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf)), sur une étude entre Janvier 2020 et Juin 2021 :
 
 - les attaques de type injection de SQL sont les plus présentes
 - durant la durée d'étude (18 mois) il y a eu 6.2 millards tentatives d'attaques enregistrées par inh=jection de SQL, ce qui représente 55.88% des attaques sur le web.
+
+{% endinfo %}
 
 <img src="../../Image/nb_attaque_sql.png" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
 
@@ -63,11 +71,13 @@ D'après les chiffres d'Akamai ([lien de l'article](https://www.akamai.com/site/
 
 BurpSuite est un logiciel permettant de capturer des requêtes effectuées sur un navigateur internet, de les modifier, de les renvoyer régulièrement. C'est un outil très utile, voir nécessaire pour faire de l'analyse d'API ou pour faire des attaques par injection.
 
-Voici tous les détails pour télécharger BurpSuite :
+{% prerequis "Voici tous les détails pour télécharger BurpSuite :" %}
 
-[Download](https://portswigger.net/burp/releases/professional-community-2022-8-5?requestededition=community&requestedplatform=)
-[Setup Proxy](https://portswigger.net/burp/documentation/desktop/external-browser-config/browser-config-firefox)
-[BurpSuite Certificate](https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate/ca-cert-firefox)
+- [Download](https://portswigger.net/burp/releases/professional-community-2022-8-5?requestededition=community&requestedplatform=)
+- [Setup Proxy](https://portswigger.net/burp/documentation/desktop/external-browser-config/browser-config-firefox)
+- [BurpSuite Certificate](https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate/ca-cert-firefox)
+
+{% endprerequis %}
 
 Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours proviennent de ce site :
 
@@ -77,10 +87,13 @@ Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui perme
 
 <h3 id="h4-1"> Principe de base </h3>
 
+{% note %}
 Pour beaucoup de fonctionnalitées d'un serveur, celui-ci va faire des appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.
+{% endnote %}
+
 Par exemple lors d'un connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :
 
-**Requete envoyé par l'utilisateur pour s'authentifier**
+<h4 id="h4-1-1"> Requete envoyé par l'utilisateur pour s'authentifier </h4>
 ```javascript
 fetch("https://nomDuServeur/login",
 {
@@ -94,7 +107,7 @@ fetch("https://nomDuServeur/login",
 })
 ```
 
-**Interprétation par le serveur**
+<h4 id="h4-1-2"> Interprétation par le serveur </h4>
 ```sql
 SELECT * FROM users WHERE username = ' + requete.username + ' AND password = ' + requete.password + '
 ```
@@ -104,14 +117,16 @@ ce qui donne ici :
 SELECT * FROM users WHERE username = 'mon_username' AND password = 'mon_password'
 ```
 
-**Attaquer cette mécanique**
+<h4 id="h4-1-3"> Attaquer cette mécanique </h4>
 
 L'objectif est de ne pas avoir à passer l'étape de vérification de mot de passe.
 
-Pour ça, on va utiliser une mécanique assez simple en programmation : les commentaires.
+Pour ça, on va utiliser une mécanique assez simple en programmation : **les commentaires**.
 
+{% note %}
 Pour une base de donnée Oracle, Microsoft ou PostgreSQL, les commentaires sont fait par **--**
 Pour une base de donnée qui utilise MySQL, les commentaires sont fait par **#** qui vaut **%23** en hexadécimal
+{% endnote %}
 
 Donc si on termine le *username* envoyé dans la requête par un comentaire, il n'y aura pas de vérificaton du *password*.
 
@@ -128,16 +143,21 @@ fetch("https://nomDuServeur/login",
 })
 ```
 
+{% note %}
 Le caractère **%27** correspond au symbole **'** de fermeture de chaine de caractère, il permet de dire que le nom d'utilisateur est fini.
 Pourquoi on utilise ça plutôt que **'** ?
 Le serveur va rajouter un caractère d'échappement devant les caractères qu'il utilise notamment **'**, mais pas devant sa forme hexadécimale **%27**
+{% endnote %}
 
-**Interprétation de la requête par le serveur**
+<h4 id="h4-1-4"> Interprétation de la requête par le serveur </h4>
+
 ```sql
 SELECT * FROM users WHERE username = 'administarteur'--' AND password = 'n\'importeQuoi'
 ```
 
+{% info %}
 Et là, vous êtes connecté en tant qu'administrateur du site.
+{% endinfo %}
 
 <h3 id="h4-2"> UNION Attack </h3>
 
@@ -145,7 +165,7 @@ C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'a
 
 
 Jusque là, on était limité par devoir faire des recherches dans la base de donnée par défaut de la requête : il est impossible de modifier la requête avant un **WHERE** qui se situe forcément après le **FROM**.
-On veut pouvoir effectuer nos propre requêtes dans d'autres table.
+*On veut pouvoir effectuer nos propre requêtes dans d'autres table.*
 
 Pour cela on va utiliser le mot clé SQL **UNION** qui va réaliser la concaténation de 2 recherches dans la base de donnée : celle par défaut et celle injectée.
 
@@ -153,15 +173,17 @@ Pour cela on va utiliser le mot clé SQL **UNION** qui va réaliser la concatén
 
 Il est pas possible de simplement mettre ce qu'on veut dans la 2e recherche de l'**UNION**, il y a certaines contraintes :
 
+{% faire %}
 - Il doit avoir autant de valeurs de retour des 2 recherches :
 ex : si la recherche par défaut envoie 2 informations (un nom et prénom d'utilisateur par exemple), la 2e recherche devra envoyer exactement 2 informations
 
 - Les valeurs de retour doivent être de même type : 
 ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envoyer exactement 2 chaines de caractères
+{% endfaire %}
 
 <h4 id="h4-2-2"> Trouver le nombre de colonnes </h4>
 
-Premièrement, il faut trouver le nombre de valeur de retour de la première recherche. Pour cela il y a 2 possibilités :
+Premièrement, il faut trouver le nombre de valeur de retour de la première recherche. Pour cela il y a **2 possibilités** :
 
 - Ordonner la première recherche selon la nième colonne, grace au mot clé **ORDER BY n**, si il y a une errreur c'est que la colonne **n** n'existe pas.
 - Faire une 2e recherche envoyant simplement des **NULL**, l'objectif étant de trouver combien on peut mettre de **NULL** sans avoir d'erreur : 
@@ -170,12 +192,16 @@ Premièrement, il faut trouver le nombre de valeur de retour de la première rec
 UNION SELECT NULL,NULL
 ```
 
+{% note %}
 Remarque 1 : il est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé **FROM**, pour cela, il existe une table faite pour ça : **dual**
+{% endnote %}
 ```sql
 UNION SELECT NULL,NULL FROM dual
 ```
 
-Remarque 2 : à partir de maintenant, on est obligé d'avoir des espaces dans nos requêtes (entre ORDER et BY ou entre UNION et SELECT), or il est pas possible de faire une requète HTTP avec des espaces dans les paramètres. Pour cela, il faut remplacer tous les espaces par le caractère + 
+{% note %}
+Remarque 2 : à partir de maintenant, on est obligé d'avoir des *espaces* dans nos requêtes (entre ORDER et BY ou entre UNION et SELECT), or il est pas possible de faire une requète HTTP avec des espaces dans les paramètres. Pour cela, **il faut remplacer tous les espaces par le caractère +** 
+{% endnote %}
 
 <h4 id="h4-2-3"> Trouver le type de données envoyées </h4>
 
@@ -224,11 +250,47 @@ SELECT TABLE_NAME FROM all_tables
 SELECT COLUMN_NAME FROM all_tab_columns WHERE TABLE_NAME = 'TABLE-NAME-HERE'
 ```
 
+{% note %}
 Ne pas oublier de rajouter des colonnes **NULL** au cas où il faille plusieurs colonnes avec l'**UNION**
+{% endnote %}
 
 <h4 id="h4-3"> CheatSheet </h4>
 
-Les informations plus spécifiques liés aux serveur SQL sont dans ce document : [lien](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+{% prerequis "Les informations plus spécifiques liés aux serveur SQL sont dans ce document : [lien](https://portswigger.net/web-security/sql-injection/cheat-sheet)" %}
+
+{% endprerequis %}
+
+ 
 
 
 <h2 id="h5"> Défense </h2>
+
+Il est possible de paramétriser un requête SQL, c'est à dire transformer un requête en une fonction prenant en paramètre les valeurs de la requête.
+
+Au lieu d'executer :
+```javascript
+String query = "SELECT * FROM products WHERE category = '"+ input + "'";
+Statement statement = connection.createStatement();
+ResultSet resultSet = statement.executeQuery(query);
+```
+
+On crée un statement sans les valeurs, puis on ajoute les paramètres :
+```javascript
+PreparedStatement statement = connection.prepareStatement("SELECT * FROM products WHERE category = ?");
+statement.setString(1, input);
+ResultSet resultSet = statement.executeQuery();
+```
+
+Voici les 3 liens où on peut retrouver des exemples de code en fonction des languages utilisés :
+- [hacksplaining](https://www.hacksplaining.com/prevention/sql-injection)
+- [PortSwigger](https://portswigger.net/web-security/sql-injection)
+- [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+
+{% attention "**Attention** aux ORM" %}
+Un ORM est un outils permettant de faciliter la communication entre le serveur et la base de donnée.
+Un ORM n'est pas forcément une protexion contre les injections de SQL.
+{% endattention %}
+
+{% info %}
+Pour savoir si votre serveur est protégé contre ce type d'attaques, n'oubliez pas de **tester** par vous même **la sécurité** de votre site.
+{% endinfo %}
