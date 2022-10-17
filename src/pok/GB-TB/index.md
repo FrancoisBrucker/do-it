@@ -1,9 +1,9 @@
 ---
 layout: layout/post.njk
 
-title: "Le POK de Timothé et Gabriel"
+title: "Le POK de Timothée et Gabriel"
 authors:
-  - Timothé BERMOND
+  - Timothée BERMOND
   - Gabriel BARBE
 
 tags: ['pok']
@@ -235,6 +235,22 @@ J'arrive donc à cette page :
 Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.
 
 <h4> Mise en page</h4>
+
+Pour cela j'ai ajouté un *header* en accord avec celui que Gabriel a mis dans sa partie.
+
+Puis j'ai ajouté des propriétés CSS à chacun des éléments.
+
+J'ai utilisé Flexbox pour la mise en page, ce qui m'a permis de centrer les éléments et de les répartir comme j'en avais envie.
+
+J'ai créé des classes afin d'appliquer un style à mes différents éléments.
+
+J'ai enfin utilisé la caractéristiques *placeholder* afin d'écrire les numéros des choix dans les input au lieu de les mettre au dessus.
+
+Je suis donc arrivé à ce résultat là:
+<img src="./Images/Index_avec_css.jpg"/>
+
+
+
 
 
 <h3 id="2"> Page pour chaque roulette</h3>
