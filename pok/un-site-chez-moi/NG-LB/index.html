@@ -123,9 +123,9 @@
 </li>
 </ul>
 <h2>4. Avancées de la partition et de l'affichage du site</h2>
-<h3>Page d'acceuil et partitions sauvegardées</h3>
+<h3>Page d'accueil et partitions sauvegardées</h3>
 <p>Première version de ces deux pages :</p>
-<p><img src="page_daccueil_premiere_version.png" alt="Page d'acceuil première version"></p>
+<p><img src="page_daccueil_premiere_version.png" alt="Page d'accueil première version"></p>
 <p><img src="partitions_sauvegardees_premiere_version.png" alt="Partitions sauvegardées première version"></p>
 <h3>Ajouts à la partition</h3>
 <p>Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches <code>a</code> (add note) et <code>d</code> (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.</p>
@@ -134,6 +134,27 @@
 <h3>Difficultés rencontrées</h3>
 <p>Nous pensions afficher une note grisée au survol de la partition pour indiquer la possibilité de placer une note à cet endroit. Cependant le fait de faire suivre la trajectoire de la souris à la note grisée implique d'effacer et de redessiner le canvas à chaque mouvement de la souris et cela crée un lag trop important.</p>
 <p>Il sera peut-être possible par la suite de réduire le nombre d'actualisations du canvas en limitant les positions possibles de la note grisée à des emplacements précis mais nous avons laissé cet fonctionnalité de côté pour le moment.</p>
+<h2>5. La gestion du stockage des données</h2>
+<h3>Les données importantes à conserver</h3>
+<p>Il y a deux types de données que nous voulons pouvoir conserver.</p>
+<h4>En premier lieu, les informations sur l'utilisateur :</h4>
+<ul>
+<li>Le pseudo</li>
+<li>Le mot de passe (crypté si possible)</li>
+<li>Les partitions dont il est l'auteur</li>
+<li>Les partitions qui lui sont partagées</li>
+</ul>
+<h4>En deuxième lieu, les informations sur les partitions :</h4>
+<ul>
+<li>Les notes dans leur ordre</li>
+<li>L'auteur de la partition</li>
+<li>Les pseudos des personnes avec qui elle est partagée</li>
+</ul>
+<h3>Comment les conserver</h3>
+<p>Toute la difficulté est là. A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript.</p>
+<p>Le problème est que cette base de données ne traverse pas les pages. Quand on change de page HTML, on perd ces données.</p>
+<p>Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.</p>
+<p>En attendant, la solution retenue est de rester toujours sur la même page HTML, en supprimant tout le code HTML lorsque l'on veut changer virtuellement de page, à l'aide d'une commande JavaScript qui supprime tout l'HTML (document. body. innerHTML="";).</p>
 
 
 </article>
