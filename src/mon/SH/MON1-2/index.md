@@ -74,10 +74,43 @@ Dans la dernière étape, la phase de maintenance, l'équipe projet peut corrige
 
 La méthode en cascade ou Waterfall ne sont pas adaptés aux projets très complexes ou très longs.
 
+
+### Méthode du cycle en V
+La particularité de la méthode de cycle en V est d'avoir plusieurs étapes de test après la réalisation et la mise en oeuvre contrairement à la méthode en cascade qui n'a qu'une phase de test à la fin du processus.
+<img src="cycle_en_V.PNG">
+source : https://www.manager-go.com/gestion-de-projet/cycle-en-v.htm
+
+Dans cette méthode, l'équipe projet teste d'abord chaque brique fonctionnelle, ce sont les tests unitaires. Puis des tests sont effectués sur l'ensemble du produit, ce sont les tests d'intégration. Viennent ensuite les tests systèmes et la validation qui impliquent les futurs utilisateurs du produits, ils vérifient alors que la foncionnalité de la solution. Juste avant la production, l'équipe projet consulte le client pour vérifier que le produit répond bien aux exigences qu'il a exprimé au début du projet, c'est la recette 
+
+Les avantages et les inconvénients de la méthode du cycle en V sont les mêmes que ceux de la méthode en cascade 
+
+### PRINCE2, une variante du Waterfall
+PRINCE signifie PRojects IN Controlled Environments. Cette méthode dérive de la méthode de la cascade en cela que tout est minutieusement planifié et contrôlé du début à la fin. 
+ 
+La méthode PRINCE2 repose sur 7 principes qui sont : 
+- le projet doit avoir une justification commerciale : nécessité d'avoir un besoin clair, un client défini et une évaluation des coûts détaillés
+- les équipes doivent tirer des leçons à chaque étape : les équipes doivent documenter chaque étape du processus 
+- les rôles et les responsabilités sont clairment définis : tout le monde doit savoir qui est responsable de quoi
+- le travail est organisé par séquences 
+- les comités de pilotage appliquent le "management par exception" : les membres du conseil d'administration n'ont pas le temps de gérer auu quotidien le projet donc ils délèguent le travail à un chef de projet en lui fournissant des exigences. En cas de problème entrainant un non respect des exigences, c'est une exception et c'est le comité de pilotage qui intervient 
+- les équipes se focalisnet sur la qualité : les livrables sont constamment contrôlés pour vérifier qu'ils respectent les exigences
+- l'approche est adaptée à chaque projet
+
+Il existe 7 rôles dans le PRINCE2. Les 3 principaux sont le comité de pilotage, le chef de projet et l'équipe projet mais il y en a d'autres. 
+Les 7 rôles sont les suivants  : 
+- le client qui la personne quu paie pour le projet
+- l'utilisateur qui soit sera affecté par les résultats du projet soit utilisera les livrables du projet (dans de nombreux cas, le client et l'utilisateur sont la même personne)
+- le fournisseur est l'expert qui apporte les connaisssances nécessaires à la réalisation du produit
+- le chef de projet est le responsable du projet, il gère l'organsation, la planification, il supervise. Il décide des personnes qui participent au projet et de leurs tâches. Il est responsable du travail réalisé et des délais.
+- L'équipe projet et le responsable d'équipe ce sont eux qui réalisent les différentes tâches du projet. Les responsables d'équipe sont de intermédiaires entre le chef de projet et l'équipe projet
+- l'administrateur est la personne qui organise les réunions, transmet les informations, assure le suivi de la documentation. Sur des petits projets, c'est le chef de projet qui assure ce rôle. 
+- le comité de pilotage est composé du client, de l'utilisateur final et du fournisseur
+
 #### Sources 
 {% prerequis "Sources générales" %}
 * [introduction project management](https://www.appvizer.fr/magazine/operations/gestion-de-projet/methode-classique-gestion-de-projet)
-
-
+* [Waterfall, source 1](https://www.planzone.fr/blog/quest-ce-que-la-methodologie-waterfall)
+* [Waterfall, source 2](https://asana.com/fr/resources/waterfall-project-management-methodology)
+* [cycle en V](https://blog.hubspot.fr/marketing/cycle-en-v)
 {% endprerequis %}
 
