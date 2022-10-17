@@ -84,7 +84,7 @@ Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.<
 <p><a href="https://github.com/gabrielbarbe00/POK-de-Gabriel.git">lien du projet</a></p>
 <!-- Fin Résumé -->
 <h3>Partie Gabriel</h3>
-<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec timothé. <br><br>
+<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br><br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. <hr></p>
 <p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.<br>
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
@@ -167,6 +167,99 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
 </code></pre>
 <p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br><br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais.</p>
+<h2> Partie Timothée</h2>
+<p>Pour ma part, j'ai choisi de créer une roulette qui permet de sélectionner aléatoirement entre 2 à 4 choix (c'est ensuite facile d'ajouter plus de choix cela demande juste un peu plus de temps).</p>
+<p>J'ai commencé par créer un site fonctionnel mais sans mise en page.</p>
+<p>J'ai décidé de créer plusieurs pages:</p>
+<ul>
+<li><a href="#1">Une pour la sélection des choix</a></li>
+<li><a href="#2">Une pour chaque roulette</a></li>
+</ul>
+<h3 id="1"> Page de séléction des choix</h3>
+<h4> Fonctionnalités</h4>
+<p>Voici les fonctionnalités que je voulais sur cette page:</p>
+<ul>
+<li><a href="#1-1">Récupération des choix</a></li>
+<li><a href="#1-2">Limitation du nombre de caractères par choix</a></li>
+<li><a href="#1-3">Modification du nombre de choix</a></li>
+<li><a href="#1-4">Redirection vers la page contenant la roulette</a></li>
+<li><a href="#1-5">Vérification que tous les choix sont remplis</a></li>
+</ul>
+<h5 id="1-1"> Récupération des choix</h5>
+<p>J'ai choisi d'utilser des inputs pour la récupération des choix.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+</code></pre>
+<p>Étant donné que je voulais faire une page différente pour les roulettes, j'ai eu du mal à transférer les choix pour les afficher. Adrien Brunet (un intervenant) m'a conseillé d'utiliser le localStorage qui permet d'enregistrer des données dans le navigateur et de les conserver lors des changements de pages.<br>
+Pour ce faire j'utilise la fonction :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">,</span>text_choix1<span class="token punctuation">)</span>
+</code></pre>
+<h5 id="1-2"> Limitation du nombre de caractères par choix</h5>
+<p>Pour cela il suffit d'utiliser la propriété <em>maxLength</em> qui permet de fixer le nombre maximum de caractères dans un input.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h5 id="1-3"> Modification du nombre de choix</h5>
+<p>J'ai également ajouté des boutons qui permettent d'ajouter ou de supprimer certains choix.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton_add2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>En utilisant la fonction <em>addEventListener</em> et les propriétés <em>display</em> on peut faire apparaitre et disparaitre des <em>div</em> lorsque l'on clique sur un bouton.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">bouton_add2<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+div_choix3<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"flex"</span><span class="token punctuation">;</span>
+bouton_add2<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
+nbr_choice <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>J'ai également ajouté un compteur pour savoir le nombre de choix sélectionnés.</p>
+<h5 id="1-4"> Redirection vers la page contenant la roulette</h5>
+<p>J'ai ajouté un bouton suivant qui prend en compte le nombre de choix afin de rediriger vers la bonne page avec la fonction <em>location.href</em> ainsi que d'enregistrer les choix dans le <em>localStorage</em>.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"bouton_suivant"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> text_choix1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">,</span>text_choix1<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> text_choix2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix2'</span><span class="token punctuation">,</span>text_choix2<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> text_choix3 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix3'</span><span class="token punctuation">,</span>text_choix3<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> text_choix4 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix4'</span><span class="token punctuation">,</span>text_choix4<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nbr_choice <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>text_choix1 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix2 <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"./roulette2.html"</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 2 choix"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nbr_choice <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>text_choix1 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix2 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix3 <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"./roulette3.html"</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 3 choix"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nbr_choice <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>text_choix1 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix2 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix3 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix4 <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"./roulette4.html"</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 4 choix"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h5 id="1-5"> Vérification que tous les choix sont remplis</h5>
+<p>On peut voir dans le code précédant des <em>if</em> qui vérifient que tous les choix sont remplis et qui renvoie un message si ce n'est pas le cas :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>text_choix1 <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text_choix2 <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"./roulette2.html"</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 2 choix"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>J'arrive donc à cette page :<br>
+<img src="./Images/Index_sans_css.jpg"></p>
+<p>Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.</p>
+<h4> Mise en page</h4>
+<h3 id="2"> Page pour chaque roulette</h3>
 
 
 </article>
