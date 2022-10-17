@@ -5,7 +5,7 @@ title: "MONs de Thibault"
 authors:
   - Thibault Adelain
 
-tags: ['Hachage', 'Chiffrement', 'Cryptographie', 'https', 'SSL', 'TLS']
+tags: ['Hachage', 'Chiffrement', 'Cryptographie', 'https', 'SSL', 'TLS', 'sécurité informatique']
 ---
 
 <!-- début résumé -->
