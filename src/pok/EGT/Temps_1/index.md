@@ -43,12 +43,45 @@ Instagram : plateforme de contenus
 Airbnb : plateforme "place de marché"
 Yoojo : plateforme de services à la demande
 
-## Questions à se poser en parcourant les plateformes
+J'ai choisi d'analyser et de comparer des plateformes de types très différents pour avoir plus de chances de couvrir plusieurs cas de figures. Les types de plateformes que j'ai précisés sont simplement à titre indicatif en amont de l'analyse. Je me laisse la liberté de nuancer cette classification plus tard.
 
-A quoi sert cette plateforme ?
-Qui a accès à quoi ? Est-elle ouverte à tous ?
-La plateforme est-elle intuitive, simple d'utilisation ?
-Comment l'utilise-t-on ?
-Quel est le bilan de l'organisation de la plateforme ?
-Comment ça se passe côté finance ?
-Comment se place-t-elle dans son marché ?
+## Critères d'analyse des plateformes
+
+Le but de la plateforme
+Les acteurs qui ont un lien avec la plateforme (indice sur l'étendue de la plateforme)
+Le modèle financier de la plateforme
+La stratégie de la plateforme (leviers d'actions pour atteindre son but)
+Les concurrents sur le marché
+En quoi s'inscrit-elle dans un type de plateforme ? Lequel ?
+
+## Analyse d'Instagram
+
+But : 
+La plateforme permet de partager des photos et des vidéos, de les modifier, de les stocker, d'intéragir par messagerie instantanée avec d'autres utilisateurs et de donner son avis sur les publications des autres. Elle permet également de mettre en ligne des publicités. Elle utilise les données des utilisateurs pour améliorer ses fonctionnalités.
+
+Acteurs : 
+- utilisateurs "lambdas", ce sont les utilisateurs qui postent des photos ou des vidéos de manière permanente ou dans leur "story" de manière éphémère mais qui ne gagnent pas d'argent en le faisant, ils commentent les publications des autres et les "likent".
+- utilisateurs "influenceurs", ces utilisateurs sont payés pour publier des photos, vidéos et "stories" par des marques avec lequelles ils signent des partenariats.
+- médiateurs.
+- marques, entreprises et professionnels de la publicité (annonceurs ou publicitaires), cette fois-çi, au lieu que ce soit sous forme de partenariat, ils peuvent directement utiliser des spots de publicité qui aparaîssent sous forme de publications mais annoncées comme publicité pour un produit ou pour une marque.
+
+Modèle financier :
+La vente de fonctionnalités particulières auprès des professionnels et des marques pour améliorer le placement de leur publicité représente la majorité des revenus de la plateforme. Instagram utilise des algorithmes pour mieux cibler les clients potentiels grâce aux données collectées sur les utilisateurs.
+
+Stratégies :
+L'effet réseau est le principal levier de la plateforme : plus il y a d'utilisateurs, plus les marques et les annonceurs sont attirés par la création de contenus publicitaires utilisant les fonctionnalités d'Instagram. Pour augmenter le nombre de marques sur la plateforme et donc de potentiels clients pour leurs fonctionnalités publicitaires, Instagram ne prend pas de commission sur les contrats de partenariat entre les marques et les influenceurs.
+
+Concurrents :
+Instagram est le 2ème réseau social au monde (derrière Facebook et devant Whatsapp et Youtube).
+Sur le marché du partage de photos en particulier, Instagram est leader.
+
+Bilan :
+Au départ, j'avais noté qu'Instagram est une plateforme de contenus. Or, je trouve que cela retire une grande partie de ce qu'est Instagram. En effet, le modèle financier de cette plateforme repose sur les publicités qui ciblent des utilisateurs en fonction de leurs données : ce principe de collecte des données (auquel l'utilisateur adhère en créant son compte) correspond plutôt aux plateformes de collecte de données. De plus, Instagram permet de faciliter les connexions entre les utilisateurs : ceci est typique d'une plateforme d'interaction. On retrouve tout de même le principe de plateforme de contenus dans le fait qu'Instagram adapte le contenu qu'il met en avant pour chaque utilisateur en fonction de ses préférences.
+
+https://instagram.com/
+https://digic.wp.imt.fr/2018/02/09/instagram-business-model-dune-plateforme-de-partage-de-photo/
+https://fr.wikipedia.org/wiki/Instagram
+
+## Analyse d'Airbnb
+
+## Analyse de Yoojo
