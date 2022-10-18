@@ -134,3 +134,4 @@ Conformément à ce qui était annoncé au départ, Yoojo est une plateforme de 
 
 ## Bilan
 
+On se rend compte qu'il existe plusieurs modèles financiers dans les plateformes numériques (abonnement, frais de service, publicité, etc.), pourtant, un même modèle peut être utilisé dans différents types de plateforme (ex : Airbnb et Yoojo). Les plateformes numériques représentent un nouveau type d'entreprise qui se développe fortement depuis deux décennies. Que ce soit des monopoles ou des marchés multi-concurrentiels, chaque plateforme a sa manière de fonctionner mais aucune "recette" ne semble être universelle.
