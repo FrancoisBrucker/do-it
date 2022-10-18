@@ -15,8 +15,8 @@ Mon site chez moi (POK-Temps 1)
 
 ### Liens GitHub
 
-- frontend : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
-- backend : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
+- Front-end : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
+- Back-end : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
 
 
 ## Idée de ce POK
@@ -39,9 +39,17 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 
 -  **Front-end** : Svelte + TailwindCSS
 - **Back-end** : NestJS
-- **API** : GraphQL
+- **API** : REST
 - **Moyen d'authentification** : JWT (*JSON Web Token*)
-- **Base de données** : MongoDB
+- **Base de données** : MySQL
+
+## Schéma d'entités
+
+<div style="display: grid; place-items: center;">
+  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;" />
+</div>
+
+On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.
 
 ## Fonctionnalités
 
@@ -87,3 +95,24 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT
 
 *Si on a le temps : essayer de faire un algo qui génère une grille à partir d'une liste de mots obtenue via une API externe*
+
+### Ce qu'on a fait à la fin du temps 1
+
+- Création du backend (DB + PHPMyAdmin) le tout fonctionnant avec Docker.
+- Création des entités (User et Game)
+- Connexion du backend avec la base de données
+- Hashage des mots de passe en base de données
+- Sécurisation de l'API via JWT (Guard)
+- Connexion entre le front et le back avec stockage du token de connexion dans le localStorage
+- Ajout de la mécanique de jeu dans le backend
+
+### Ce qu'il reste à faire pour le temps 2
+
+- Amélioration du code
+- Finitions
+- Création de l'algo de génération de grille avec appel à une API externe
+- Amélioration de l'environnement Docker
+- Création de fixtures ?
+- Rédaction de tests unitaires ?
+- Début de pipeline ?
+
