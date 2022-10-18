@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CSS, animation, SASS</title>
+    <title>CSS et introduction à SASS</title>
 
     <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
     <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
       
 <article>
-  <h1 class="mb-1">CSS, animation, SASS</h1>
+  <h1 class="mb-1">CSS et introduction à SASS</h1>
   <div class="mb-4">
     
 
@@ -65,7 +65,7 @@
   
 
   <!-- début résumé -->
-<p>Les bases du CSS, les animations et introduction au SASS</p>
+<p>Les bases du CSS et introduction à SASS</p>
 <!-- fin résumé -->
 <h2>Les bases du CSS</h2>
 <p>J'ai tout d'abord commencé par suivre la partie sur le CSS de cette <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">formation openclassrooms</a>.</p>
@@ -82,17 +82,17 @@ Mon POK avec css.
 <li>un id</li>
 </ul>
 <p>Pour ce faire on écrit le nom de la balise / classe / id puis on ajoute entre acolades les propriétés que l'on veut appliquer.</p>
-<pre><code>balise{
-  propriété1: valeur1;
-  propriété2: valeur2;
-}
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">balise</span><span class="token punctuation">{</span>
+  <span class="token property">propriété1</span><span class="token punctuation">:</span> valeur1<span class="token punctuation">;</span>
+  <span class="token property">propriété2</span><span class="token punctuation">:</span> valeur2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Pour chaque propriété on doit indiquer une valeur.</p>
 <p>On peut égalemement appliquer un style à plusieurs balises en les séparant d'une virgule.</p>
-<pre><code>balise1, balise2{
-  propriété1: valeur1;
-  propriété2: valeur2;
-}
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">balise1, balise2</span><span class="token punctuation">{</span>
+  <span class="token property">propriété1</span><span class="token punctuation">:</span> valeur1<span class="token punctuation">;</span>
+  <span class="token property">propriété2</span><span class="token punctuation">:</span> valeur2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3>Formater du texte</h3>
 <p>Il est possible de modifier de nombreuses caractéristiques du texte.</p>
@@ -102,9 +102,9 @@ Mon POK avec css.
 <li>Taille absolue<br>
 On indique le nombre de pixels (ou cm, mm mais plus rare) :</li>
 </ul>
-<pre><code>p{
-  font-size: 14px;
-}
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>Taille relative<br>
@@ -124,9 +124,9 @@ Ou indiquer la taille en <em>em</em> :</li>
 </ul>
 </li>
 </ul>
-<pre><code>p{
-  font-size: 1.8em;
-}
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1.8em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><strong>La police</strong></p>
 <p>Pour modifier la police il faut utiliser la propriété <em>font-family</em> suivi d'au moins une police. Le mieux est d'indiquer au moins 4 polices (séparées par des virgules) au cas où l'internaute n'aurait pas la 1ère police. (le navigateur essaiera tout d'abord d'utiliser a <em>police1</em>, s'il ne l'a pas il essaiera la <em>police2</em>, etc...)</p>
@@ -247,18 +247,89 @@ Il est possible d'aligner un seul élément sur l'axe secondaire avec la propri�
 <p>La propriété <em>order</em> permet de changer l'ordre des éléments du conteneur.</p>
 <p>Enfin la propriété <em>flex</em> peut autoriser les éléments à occuper plus ou moins d'espace restant.<br>
 Par exemple :</p>
-<pre><code>.element:nth-child(1)
-{
-    flex: 2;
-}
-.element:nth-child(2)
-{
-    flex: 1;
-}
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.element:nth-child(1)</span>
+<span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.element:nth-child(2)</span>
+<span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>permet à l'élément 1 de grossir 2 fois plus que l'élément 1.</p>
 <p>Il existe également d'autres manières de structurer les pages que je n'ai pas étudier durant ce MON.</p>
-<h2>SASS</h2>
+<h2>Simplification du CSS avec Sass</h2>
+<p>Dans une deuxième partie j'ai suivi cette autre <a href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass">formation openclassrooms</a>.</p>
+<h4>Structure du CSS</h4>
+<p>Il est très facile de se retrouver avec des fichiers .css brouillons et il devient alors très difficile et surtout long pour rien de modifier l'apparence de certaines parties de son site. C'est pourquoi il est important d'avoir un fichier .css bien structuré afin de gagner en efficacité.</p>
+<p><strong>Principe du DRY</strong></p>
+<p>Le principe DRY, signifiant "Don't Repeat Yourself", est très important : il ne faut pas que l'on retrouve des règles qui se répètent.<br>
+Dans mon POK par exemple on peut retrouver la répétion de la même règle pour deux balises différentes.</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">#div_choix3</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#div_choix4</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>J'ai donc ajouté une règle <em>.div_choix-hide</em> que j'applique à mes deux <em>div</em> en ajoutant <em>div_choix-hide</em> à leur classe.<br>
+On passe donc de ceci :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>A ceci :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix div_choix-hide<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>J'ai fusionné mes deux règles redondantes en une seule :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.div_choix-hide</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>Ce qui me permet d'avoir un codebase plus facile à maintenir.</p>
+<p>Je l'ai appliqué à mon POK et suis passé d'un fichier .css de plus de 300 lignes à un fichier de moins de 200 lignes.</p>
+<p><strong>Spécificité</strong></p>
+<p>Définition de la <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity">documentation MDN</a> :</p>
+<p>La spécificité est la manière dont le navigateur décide quelle règle s’applique si plusieurs règles ont des sélecteurs différents, mais peuvent quand même s’appliquer au même élément.</p>
+<p>C'est super compliqué à expliquer et je vais juste vous embrouiller donc allez checker vous même sur le <a href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css#/id/r-7191892">cours</a> où c'est très bien expliqué.</p>
+<p><strong>BEM</strong></p>
+<p>BEM est une convention CSS qui permet de rapidement s'y retrouver dans son code sans avoir à chercher des heures à quoi sert tel ou tel élément.</p>
+<p>BEM est l'acronyme de bloc, élément, modificateur.</p>
+<p>Comment ça fonctionne?</p>
+<p>Tout d'abord, il faut construire des <strong>blocs</strong>, càd un composant qui est autonome et peut fonctionner indépendamment du reste de la page.<br>
+Par exemple, dans un portfolio, si on supprimait tout sauf le titre d'un projet il ne deviendrait qu'un bout de texte isolé. Alors que si on prend l'aperçu entier du projet (titre, image, description) là ça à du sens, on a donc un bloc que l'on va nommer en décrivant sa fontion : <em>.apercu-proj</em> et auquel on va assigner les règles spécifiques à ce bloc.<br>
+Ensuite, on va nommer tous les <strong>éléments</strong> de ce bloc selon une nomenclature particulière : <em>bloc_parent__fonction_élément</em>.<br>
+Ici, pour le titre on obtiendrait : <em>.apercu-proj__titre</em>.<br>
+Enfin, pour des modifications spécifiques à un bloc ou un élément on va ajouter un <strong>modificateur</strong>. Là encore, il y a une nomenclature spéciale : <em>bloc/élément_modifié--style_modificateur</em>.<br>
+Dans notre cas, si on veut mettre un fond vert ça donnerait : <em>apercu-projet--vert</em></p>
+<h3>Sass</h3>
+<p>Sass est un préprocesseurs css, càd un outil qui permet de rédiger son code de manière plus cohérente visuellement.<br>
+Il est possible d'écrire du Sass dans des fichiers <em>.sass</em> ou <em>.scss</em>. La syntaxe est légèrement différente mais reste quand même très proche.</p>
+<p>Dans ce MON nous allons nous concentrer sur les fichiers <em>.scss</em>.</p>
+<p>Grâce à Sass, il est possible d'utiliser le <strong>nesting</strong>, càd l'imbrication des sélécteurs.<br>
+Au lieu d'écrire :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">{</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul li</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #D6FFF5<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On écrit :</p>
+<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token selector">ul </span><span class="token punctuation">{</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+  <span class="token selector">li </span><span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> #D6FFF5<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
 
 </article>
