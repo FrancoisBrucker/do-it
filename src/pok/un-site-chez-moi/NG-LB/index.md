@@ -52,21 +52,13 @@ Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un Eve
     - Stocker les informations dans un fichier d'un format spécifique (json a priori)
     - Pouvoir nommer et renommer le fichier depuis le site
 
-## 4. Avancées de la partition et de l'affichage du site
-
-### Page d'accueil et partitions sauvegardées
-
-Première version de ces deux pages :
-
-![Page d'accueil première version](page_daccueil_premiere_version.png)
-
-![Partitions sauvegardées première version](partitions_sauvegardees_premiere_version.png)
+## 4. Avancées de la partition
 
 ### Ajouts à la partition
 
 Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches `a` (add note) et `d` (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.
 
-![Partition deuxième version](partition_deuxieme_version.png)
+![Partition nouvelle version](partition_nouvelle_version.png)
 
 Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.
 
@@ -100,4 +92,24 @@ Le problème est que cette base de données ne traverse pas les pages. Quand on 
 
 Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.
 
-En attendant, la solution retenue est de rester toujours sur la même page HTML, en supprimant tout le code HTML lorsque l'on veut changer virtuellement de page, à l'aide d'une commande JavaScript qui supprime tout l'HTML (document. body. innerHTML="";).
+En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les pages en ordre et faire initialiser le LocalStorage à chaque nouvelle page par le LocalStorage de la page précédente pour tester les fonctionnalités. On va considérer donc tout le temps les mêmes conditions.
+
+## 6. Présentation du site et parcours des données
+
+Tout d'abord, la première page est le login : ici, on va récupérer l'identifiant de l'utilisateur et son mot de passe, et vérifier qu'il correspond à la base de données.
+
+![Page de login](page_login.png)  
+
+Si les identifiants ne sont pas corrects, un message d'alerte s'affiche. S'ils sont corrects, on passe à la page suivante en conservant le nom de l'utilisateur et son Id. Cet Id nous permettra de savoir à quelles partitions l'utilisateur à accès.
+
+Ensuite on arrive sur la page d'accueil du site
+![Page d'accueil première version](page_daccueil_premiere_version.png)
+On peut ici choisir si l'on veut créer une nouvelle partition ou accéder aux anciennes.
+
+Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui sont accessibles à l'utilisateur connecté. Les partitions contiennent dans la sauvegarde l'Id des personnes qui y ont accès, et en particulier l'auteur. On peut aussi dans cette page chosir de finalement créer une nouvelle partition.
+
+![Partitions sauvegardées](partitions_sauvegardees.png)
+
+Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.
+
+![Partition nouvelle version](partition_nouvelle_version.png)
