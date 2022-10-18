@@ -67,9 +67,198 @@
   <!-- début résumé -->
 <p>Les bases du CSS, les animations et introduction au SASS</p>
 <!-- fin résumé -->
-<h3>Les bases du CSS</h3>
+<h2>Les bases du CSS</h2>
 <p>J'ai tout d'abord commencé par suivre la partie sur le CSS de cette <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">formation openclassrooms</a>.</p>
 <p>Le CSS permet de faire la mise en forme son site (couleur du texte, police, mise en page,...).</p>
+<img src="../../Images/index_sans_css.jpg">
+Mon POK sans css.
+<img src="../../Images/index_avec_css.jpg">
+Mon POK avec css.
+<p>Le CSS peut-être écrit dans un fichier <em>.css</em> (recommandé), dans l'en-tête du fichier html à l'aide d'une balise <em>style</em> ou directement dans les balises (non recommandé). Utiliser un fichier <em>.css</em> permet de facilement généraliser les propriétés à toutes nos pages html sans avoir à faire des copié-collé.</p>
+<p>Pour appliquer un style nous pouvons sélectionner :</p>
+<ul>
+<li>une balise</li>
+<li>une classe</li>
+<li>un id</li>
+</ul>
+<p>Pour ce faire on écrit le nom de la balise / classe / id puis on ajoute entre acolades les propriétés que l'on veut appliquer.</p>
+<pre><code>balise{
+  propriété1: valeur1;
+  propriété2: valeur2;
+}
+</code></pre>
+<p>Pour chaque propriété on doit indiquer une valeur.</p>
+<p>On peut égalemement appliquer un style à plusieurs balises en les séparant d'une virgule.</p>
+<pre><code>balise1, balise2{
+  propriété1: valeur1;
+  propriété2: valeur2;
+}
+</code></pre>
+<h3>Formater du texte</h3>
+<p>Il est possible de modifier de nombreuses caractéristiques du texte.</p>
+<p><strong>La taille</strong></p>
+<p>Il est possible de modifier la taille du texte avec la propriété <em>font-size</em>. On peut indiquer une taille absolue ou une taille relative.</p>
+<ul>
+<li>Taille absolue<br>
+On indique le nombre de pixels (ou cm, mm mais plus rare) :</li>
+</ul>
+<pre><code>p{
+  font-size: 14px;
+}
+</code></pre>
+<ul>
+<li>Taille relative<br>
+On peut écrire la taille en mot anglais :
+<ul>
+<li>xx-small</li>
+<li>x-small</li>
+<li>small</li>
+<li>medium</li>
+<li>large</li>
+<li>x-large</li>
+<li>xx-large<br>
+Ou indiquer la taille en <em>em</em> :</li>
+<li><em>1em</em> : taille normale</li>
+<li>'&gt;'1em : grossi le texte</li>
+<li>&lt;1em : rétrécit le texte</li>
+</ul>
+</li>
+</ul>
+<pre><code>p{
+  font-size: 1.8em;
+}
+</code></pre>
+<p><strong>La police</strong></p>
+<p>Pour modifier la police il faut utiliser la propriété <em>font-family</em> suivi d'au moins une police. Le mieux est d'indiquer au moins 4 polices (séparées par des virgules) au cas où l'internaute n'aurait pas la 1ère police. (le navigateur essaiera tout d'abord d'utiliser a <em>police1</em>, s'il ne l'a pas il essaiera la <em>police2</em>, etc...)</p>
+<p><strong>Italique</strong></p>
+<p>Pour mettre en italique on utilise la propriété <em>font-style</em> et la valeur <em>italic</em>.</p>
+<p><strong>Gras</strong></p>
+<p>Pour mettre en gras on utilise la propriété <em>font-weight</em> et la valeur <em>bold</em>.</p>
+<p><strong>Souligné</strong></p>
+<p>Pour souligner ou décorer le texte on utilise la propriété <em>text-decoration</em> et les valeurs :</p>
+<ul>
+<li><em>underline</em> : souligné;</li>
+<li><em>line-through</em> : barré;</li>
+<li><em>overline</em> : ligne au-dessus.</li>
+</ul>
+<p>On peut également indiquer la valeur <em>none</em> si on veut annuler une des propriétés précédentes.</p>
+<p><strong>L'alignement</strong></p>
+<p>Il est possible d'appliquer tous les alignements connus avec la propriété <em>text-align</em> et les valeurs :</p>
+<ul>
+<li><em>left</em> : aligné à gauche;</li>
+<li><em>center</em> : centré;</li>
+<li><em>right</em> : aligné à droite;</li>
+<li><em>justify</em> : justifié.</li>
+</ul>
+<h3>Ajouter de la couleur et un fond</h3>
+<p><strong>Couleur du texte</strong></p>
+<p>On peut modifier la couleur du texte avec la propriété <em>color</em>. Pour les valeurs il y a plusieurs choix possibles :</p>
+<ul>
+<li>indiquer le nom de la couleur (en anglais), problème : avec cette méthode vous n'avez accès qu'à 16 couleurs que je ne listerai pas ici;</li>
+<li>utiliser la notation hexadécimale qui consiste à utiliser un # suivi de 6 caractères qui se lisent 2 par deux indiquant la quantité de rouge, de vert et de bleu;</li>
+<li>utiliser la méthode RGB, pour cela il faut taper <em>rgb(Rouge, Vert, Bleu)</em>.</li>
+</ul>
+<p><strong>Couleur de fond</strong></p>
+<p>Pour cela on utilise la propriété <em>background-color</em> et les mêmes valeurs que précédemment.</p>
+<p><strong>Image de fond</strong></p>
+<p>Pour cela on utilise la propriété <em>background-image</em> et en valeur <em>url("nom_de_l_image.png")</em>.</p>
+<p>Avec la propriété <em>background-attachment</em> on peut décider :</p>
+<ul>
+<li>de faire défiler l'image de fond avec le texte : <em>scroll</em>;</li>
+<li>de laisser fixe l'image de fond : <em>fixed</em>.</li>
+</ul>
+<p>Il est également possible de répéter ou non l'image de fond avec la propriété <em>background-repeat</em>.</p>
+<p>Ou encore d'indiquer la position de l'image de fond avec la propriété <em>background-position</em>.</p>
+<p><strong>Transparence</strong></p>
+<p>Il est possible de jouer avec les niveaux de transparence des éléments avec la propriété <em>opacity</em> qui prend une valeur entre 0 et 1 (1:opaque, 0:transparent) ou en utilisant la notation RGBa qui consiste à ajouter une valeur comprise entre 0 et 1 à la notation RGB.</p>
+<h3>Créez des bordures et des ombres</h3>
+<p><strong>Bordures standards</strong></p>
+<p>Pour modifier l'apparence de la bordure on utilise la propriété <em>border</em> qui peut prendre jusqu'à 3 valeurs :</p>
+<ul>
+<li>la largeur : valeur en pixels (2px);</li>
+<li>la couleur : utiliser un des choix vu plus haut pour décider de la couleur;</li>
+<li>type de bordure : il existe 8 types différents de bordure.<br>
+<img src="../../Images/types_bordures.jpg"></li>
+</ul>
+<p>Il est également possible de ne sélectionner qu'une bordure avec les propriétés :</p>
+<ul>
+<li><em>border-top</em></li>
+<li><em>border-bottom</em></li>
+<li><em>border-left</em></li>
+<li><em>border-right</em></li>
+</ul>
+<p>On peut aussi arrondir les bordures avec la propriété <em>border-radius</em> et on indique l'importance de l'arrondi en pixels.</p>
+<p><strong>Les ombres</strong></p>
+<p>Il est possible d'ajouter l'ombre des boites avec la propriété <em>box-shadow</em> qui prend 4 valeurs :</p>
+<ol>
+<li>Le décalage horizontzal</li>
+<li>Le décalage vertical</li>
+<li>L'adoucissement du dégradé.</li>
+<li>La couleur de l'ombre.</li>
+</ol>
+<p>Il est également possible d'ajouter la valeur <em>inset</em> qui place l'ombre à l'intérieur du bloc.</p>
+<p>On peut aussi ajouter l'ombre du texte avec la propriété <em>text-shadow</em> qui prend les mêmes valeurs que <em>box-shadow</em>.</p>
+<h3>Apparences dynamiques</h3>
+<p>Il est possible de modifier l'apparence du texte :</p>
+<ul>
+<li>au survol avec le pseudo-formats CSS <em>:hoover</em></li>
+<li>lors du clique : <em>:active</em></li>
+<li>lorsque l'élément est séléctionné : <em>:focus</em></li>
+<li>lorsque le lien a déjà été consulté : <em>:visited</em></li>
+</ul>
+<h3>Structurer son site</h3>
+<p><strong>Les balises structurantes</strong></p>
+<p>Des balises ont été introduites pour structurer les pages :</p>
+<ul>
+<li>l'en-tête : balise <em>header</em></li>
+<li>le pied de page : balise <em>footer</em></li>
+<li>principaux liens de navigation : balise <em>nav</em></li>
+<li>des sections de page : balise <em>section</em></li>
+<li>des informations complémentaires : balise <em>aside</em></li>
+<li>un article indépendant : balise <em>article</em></li>
+</ul>
+<p>Ce qui donne a peu près :<br>
+<img src="../../Images/balises_structure.jpg"></p>
+<p><strong>Flexbox</strong></p>
+<p>C'est la technique que j'ai principalement utilisé pour la mise en page de mon POK.</p>
+<p>Le principe de la mise en page est simple :<br>
+On définit un conteneur dans lequel on place des éléments.<br>
+Le conteneur est une balise HTML et les éléments sont d'autres balises HTML à l'intérieur de cette balise :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>conteneur<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Il faut ensuite ajouter la valeur <em>flex</em> à la propriété <em>display</em> du conteneur.</p>
+<p>On peut maintenant modifier la direction avec la propriété <em>flex-direction</em> qui peut prendre les valeurs suivantes :</p>
+<ul>
+<li><em>row</em> : sur une ligne</li>
+<li><em>column</em> : sur une colonne</li>
+<li><em>row-reverse</em> : sur une ligne en ordre inversé</li>
+<li><em>column-reverse</em> : sur une colonne en ordre inversé</li>
+</ul>
+<p>Afin de permettre aux éléments d'aller à la ligne si il n'y a plus de place il faut utiliser la propriété <em>flex-wrap</em>.</p>
+<p>On peut ensuite aligner les éléments selon l'axe principal avec la propriété <em>justify-content</em> qui peut prendre différentes valeurs :<br>
+<img src="../../Images/alignement_axe_principal.jpg"></p>
+<p>Mais on peut également aligner les éléments sur l'axe secondaire avec la propriété <em>align-items</em> qui peut prendre différentes valeurs :<br>
+<img src="../../Images/alignement_axe_secondaire.jpg"><br>
+Il est possible d'aligner un seul élément sur l'axe secondaire avec la propriété <em>align-self</em>.</p>
+<p>La propriété <em>order</em> permet de changer l'ordre des éléments du conteneur.</p>
+<p>Enfin la propriété <em>flex</em> peut autoriser les éléments à occuper plus ou moins d'espace restant.<br>
+Par exemple :</p>
+<pre><code>.element:nth-child(1)
+{
+    flex: 2;
+}
+.element:nth-child(2)
+{
+    flex: 1;
+}
+</code></pre>
+<p>permet à l'élément 1 de grossir 2 fois plus que l'élément 1.</p>
+<p>Il existe également d'autres manières de structurer les pages que je n'ai pas étudier durant ce MON.</p>
+<h2>SASS</h2>
 
 
 </article>
