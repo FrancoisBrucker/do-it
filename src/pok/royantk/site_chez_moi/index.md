@@ -4,8 +4,10 @@ layout: layout/post.njk
 title: "[POK] Find the Key"
 authors:
   - Killian ROYANT
-
-tags: ['pok']
+tags:
+  - HTML
+  - CSS
+  - JavaScript
 ---
 
 <!-- début résumé -->
