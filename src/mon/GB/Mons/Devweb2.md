@@ -149,6 +149,7 @@ Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'av
 On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les "chercher", il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br> 
 Une API REST est un type d'API tierce où l'on ne récupère pas les données à l'aide d'une bibliothèque JavaScript mais à l'aide de requêtes HTTP. Ces API utilisent généralement une clé de développement. <br>
 Nous voyons finalement un exemple de récupération et d'utilisation des données récupérés via l'API sur notre site web. 
+
 ### Le framework angular 
 
 1. Introduction 
