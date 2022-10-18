@@ -82,8 +82,8 @@
 <!-- fin résumé -->
 <h3>Liens GitHub</h3>
 <ul>
-<li>frontend : <a href="https://github.com/nbert71/mots-croises-front">https://github.com/nbert71/mots-croises-front</a></li>
-<li>backend : <a href="https://github.com/nbert71/mots-croises-back">https://github.com/nbert71/mots-croises-back</a></li>
+<li>Front-end : <a href="https://github.com/nbert71/mots-croises-front">https://github.com/nbert71/mots-croises-front</a></li>
+<li>Back-end : <a href="https://github.com/nbert71/mots-croises-back">https://github.com/nbert71/mots-croises-back</a></li>
 </ul>
 <h2>Idée de ce POK</h2>
 <p>L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.</p>
@@ -103,10 +103,15 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <ul>
 <li><strong>Front-end</strong> : Svelte + TailwindCSS</li>
 <li><strong>Back-end</strong> : NestJS</li>
-<li><strong>API</strong> : GraphQL</li>
+<li><strong>API</strong> : REST</li>
 <li><strong>Moyen d'authentification</strong> : JWT (<em>JSON Web Token</em>)</li>
-<li><strong>Base de données</strong> : MongoDB</li>
+<li><strong>Base de données</strong> : MySQL</li>
 </ul>
+<h2>Schéma d'entités</h2>
+<div style="display: grid; place-items: center;">
+  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;">
+</div>
+<p>On a une relation OneToMany entre User et Game ==&gt; un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.</p>
 <h2>Fonctionnalités</h2>
 <p>Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.</p>
 <p>Gestion des utilisateurs, avec connexion et gestion de solde.</p>
@@ -154,6 +159,26 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <li>Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT</li>
 </ul>
 <p><em>Si on a le temps : essayer de faire un algo qui génère une grille à partir d'une liste de mots obtenue via une API externe</em></p>
+<h3>Ce qu'on a fait à la fin du temps 1</h3>
+<ul>
+<li>Création du backend (DB + PHPMyAdmin) le tout fonctionnant avec Docker.</li>
+<li>Création des entités (User et Game)</li>
+<li>Connexion du backend avec la base de données</li>
+<li>Hashage des mots de passe en base de données</li>
+<li>Sécurisation de l'API via JWT (Guard)</li>
+<li>Connexion entre le front et le back avec stockage du token de connexion dans le localStorage</li>
+<li>Ajout de la mécanique de jeu dans le backend</li>
+</ul>
+<h3>Ce qu'il reste à faire pour le temps 2</h3>
+<ul>
+<li>Amélioration du code</li>
+<li>Finitions</li>
+<li>Création de l'algo de génération de grille avec appel à une API externe</li>
+<li>Amélioration de l'environnement Docker</li>
+<li>Création de fixtures ?</li>
+<li>Rédaction de tests unitaires ?</li>
+<li>Début de pipeline ?</li>
+</ul>
 
 
 </article>
