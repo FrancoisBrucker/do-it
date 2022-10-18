@@ -101,7 +101,7 @@ Yves Martin
  Yves Martin
 </code></pre>
 <p>Les éléments entre crochets seront ensuite automatiquement remplacé en fonction des informations sur la personne et sur l'évènement.</p>
-<p>On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce [Github] (<a href="https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js">https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js</a>).<br>
+<p>On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce <a href="https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js">Github</a>.<br>
 On nomme le texte ainsi converti mailBodyHTML</p>
 <h3>Google Sheet</h3>
 <p>On crée un Google Sheet permettant de réunir les éléments des mails que l'on doit envoyer. On le place dans un onglet intitulé Inscriptions.</p>
@@ -182,6 +182,8 @@ Pour pallier à ce problème on peut ajouter une colonne intitulée <em>Mail env
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">inscriptionsSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"TRUE"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Si on relance le script, en vérifiant si la case est bien décochée, seules les lignes non cochées vont recevoir le mail.</p>
+<h2>Lien vers le code</h2>
+<p><a href="./code/code_gas">Mon code</a></p>
 
 
 </article>
