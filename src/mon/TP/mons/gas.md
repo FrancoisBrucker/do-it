@@ -125,5 +125,3 @@ inscriptionsSheet.getRange(i+1,7).setValue("TRUE");
 ```
 
 Si on relance le script, en vérifiant si la case est bien décochée, seules les lignes non cochées vont recevoir le mail.
-
-### Automatisation
