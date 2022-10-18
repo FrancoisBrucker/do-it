@@ -105,7 +105,7 @@ Le terme `class` prête à confusion car il est utilisé à la fois pour les cla
 Il y a deux types de données que nous voulons pouvoir conserver.
 #### En premier lieu, les informations sur l'utilisateur :
   - Le pseudo
-  - Le mot de passe (crypté si possible)
+  - Le mot de passe
   - Les partitions dont il est l'auteur
   - Les partitions qui lui sont partagées
 
@@ -114,13 +114,15 @@ Il y a deux types de données que nous voulons pouvoir conserver.
   - L'auteur de la partition
   - Les pseudos des personnes avec qui elle est partagée
 
-### Comment les conserver
+L'objectif est pouvoir réutiliser ces données lorsque l'on parcourt le site
 
-Toute la difficulté est là. A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript. 
+### Difficultés rencontrées
+
+ A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript. 
 
 Le problème est que cette base de données ne traverse pas les pages. Quand on change de page HTML, on perd ces données.
 
-Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.
+Lorsque le serveur sera en ligne, nous pourrons utiliser les requêtes API pour récupérer les données nécessaires.
 
 En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les pages en ordre et faire initialiser le LocalStorage à chaque nouvelle page par le LocalStorage de la page précédente pour tester les fonctionnalités. On va considérer donc tout le temps les mêmes conditions.
 
@@ -143,3 +145,15 @@ Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui s
 Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.
 
 ![Partition dernière version](partition_derniere_version.png)
+
+### Améliorations possibles
+
+La plupart des améliorations concernant les données seront applicables lorsque l'on mettra le site sur un serveur, dans le second temps. 
+
+- Que l'on puisse stocker les données utilisateur et les partitions de manière durable dans un stockage associé au serveur
+
+- Il faudrait que le mot de passe de l'utilisateur soit crypté
+
+- Améliorer le CSS des différentes pages. 
+
+- Cela parait compliqué, mais faire en sorte qu'une partition puisse être traitée par plusieurs personnes à la fois, à la manière de google drive, serait idéal. Peut-être un serveur pourrait nous offrir cette possibilité.
