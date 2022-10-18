@@ -142,6 +142,22 @@ Contenu de la page
 "tags": "articles"
 }
 </code></pre>
+<h3>Paginations</h3>
+<p>Les paginations servent à créer plusieurs page en itérant sur des données (qui peuvent être de plusieurs types).</p>
+<p>On peut par exemple créer plusieurs pages du même format en itérant sur un fichier JSON :</p>
+<ul>
+<li>Fichier JSON contenant les données à utiliser (placé dans <code>_data</code>)</li>
+</ul>
+<p><img src="fichier_json.png" alt="Fichier JSON"></p>
+<ul>
+<li>Fichier Nunjucks qui définit le format des fichiers à générer</li>
+</ul>
+<p><img src="fichier_nunjucks.png" alt="Fichier Nunjucks"></p>
+<ul>
+<li>Résultat (créé dans un dossier <code>portraits</code> avec les pages correspondant aux autres données du JSON)</li>
+</ul>
+<p><img src="portrait.png" alt="Page affichée"></p>
+<p>On remarque que l'on peut choisir le lien auquel on trouvera les pages générées.</p>
 <h2>4. Création d'un site</h2>
 <p>On peut commencer par saisir ces commandes dans le dossier du projet :</p>
 <pre><code>npm init -y
@@ -173,6 +189,7 @@ npm i --save-dev @11ty/eleventy
 <h2>5. Liens</h2>
 <p>Pour ce MON j'ai lu <a href="https://www.zachleat.com/web/eleventy-tutorial-level-1/">ce tutoriel</a> à propos des templates liquid et des filtres avec Eleventy. Cependant seules les deux premières parties semblent avoir été écrites, je n'ai pas trouvé la suite censée aborder les templates multiples, layouts et fichiers de données externes.</p>
 <p><a href="https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/">Ce tutoriel</a> ne semble pas être complet non plus mais j'ai pu me renseigner sur les sites statiques, dynamiques et statiques générés grâce à la première partie.</p>
+<p><a href="https://www.11ty.dev/docs/pages-from-data/">Les paginations</a> dans la documentation d'Eleventy.</p>
 <p><a href="https://www.youtube.com/watch?v=BKdQEXqfFA0">Une vidéo</a> très courte qui montre les bases de la création d'un site avec Eleventy et de l'utilisation des layouts.</p>
 <p>J'ai créé <a href="https://github.com/nathan-gissler/cours-eleventy">ce petit site</a> (sur GitHub) en suivant les instructions de la vidéo pour tester les fonctionnalités par moi-même.</p>
 
