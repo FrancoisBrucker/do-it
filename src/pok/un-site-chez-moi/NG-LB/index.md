@@ -6,7 +6,7 @@ authors:
   - Léonard Barbotteau
   - Nathan Gissler
 
-tags: []
+tags: ['web']
 ---
 
 <!-- début résumé -->
@@ -25,7 +25,7 @@ Nous avons utilisé un canvas HTML pour créer une première version de la parti
 
 ![Première version de la partition](partition_premiere_version.png)
 
-Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un EventListener lié au canvas qui détecte les clics. Les notes ont pour le moment toutes la même durée (ce sont des rondes) mais peuvent être placées à différentes hauteurs. Elles se placent les unes à la suite des autres et ne peuvent pas encore être supprimées.
+Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un `EventListener` lié au canvas qui détecte les clics. Les notes ont pour le moment toutes la même durée (ce sont des rondes) mais peuvent être placées à différentes hauteurs. Elles se placent les unes à la suite des autres et ne peuvent pas encore être supprimées.
 
 ## 3. To-do list pour la suite
 
@@ -58,15 +58,45 @@ Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un Eve
 
 Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches `a` (add note) et `d` (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.
 
-![Partition nouvelle version](partition_nouvelle_version.png)
+![Partition deuxième version](partition_deuxieme_version.png)
 
 Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.
 
+### Modification de la saisie des notes
+
+Les notes peuvent désormais être placées uniquement à la place des silences ou à la place d'autres notes. On ne peut plus supprimer que les notes et elles sont alors remplacées par des silences.
+
+Les symboles de la portée peuvent être enregistrés et chargés à partir d'un format JSON grâce à des méthodes implémentées dans l'objet `Staff` (la portée).
+
+Dernière version de la partition :
+
+![Partition dernière version](partition_derniere_version.png)
+
 ### Difficultés rencontrées
+
+- Note grisée au survol de la partition
 
 Nous pensions afficher une note grisée au survol de la partition pour indiquer la possibilité de placer une note à cet endroit. Cependant le fait de faire suivre la trajectoire de la souris à la note grisée implique d'effacer et de redessiner le canvas à chaque mouvement de la souris et cela crée un lag trop important.
 
 Il sera peut-être possible par la suite de réduire le nombre d'actualisations du canvas en limitant les positions possibles de la note grisée à des emplacements précis mais nous avons laissé cet fonctionnalité de côté pour le moment.
+
+- Accès à aux dimensions des images du Canvas
+
+Lorsque que je créais une image pour l'insérer dans la partition (pour les symboles comme les notes, silences, etc.) je demandais les dimensions de l'image afin de la redimensionner tout en gardant le bon ratio. Mais les valeurs retournées étaient toujours 0. J'ai fini par comprendre en cherchant sur Internet que cela pouvait être parce que l'image n'a pas eu le temps de charger. J'ai trouvé des codes permettant d'y remédier mais ils étaient lourds et difficiles à comprendre. J'ai donc décidé pour le moment de simplement noter les ratios de toutes les images dans un dictionnaire dans le fichier JavaScript bien que ce ne soit pas la meilleure solution.
+
+- Confusion avec le terme `class`
+
+Le terme `class` prête à confusion car il est utilisé à la fois pour les classes des objets HTML, qui sont des sortes de catégories, et pour les classes JavaScript, en terme de Programmation Orientée Objet. Lorsque j'ai voulu tester l'appartenance d'un objet à une classe JavaScript, j'ai d'abord trouvé la syntaxe `element.classList.contains(nom_de_la_class)`, avant de me rendre compte que cela ne fonctionnait pas. En effet le terme `class` ici n'a rien à voir et je devais plutôt utiliser `object instanceof constructor` dans ce cas.
+
+### Pistes d'améliorations possibles
+
+- Régler d'une autre manière le problème de la taille des images qu'avec un dictionnaire placé directement dans le code.
+
+- Mettre les données des différentes hauteurs de note (nom de la note, fréquence, etc.) en dehors du code, par exemple dans un fichier JSON ou dans une base de données, et les importer dans le fichier JavaScript au moment de créer les objets.
+
+- Trouver un moyen d'afficher la note grisée au survol de la partition avec un affichage plus fluide, par exemple en limitant le nombre de positions auxquelles cette note peut être affichée.
+
+- Etoffer l'édition de la partition : ajouter d'autres notes, d'autres rythmes et les silences qui vont avec, d'autres clefs, d'autres chiffrages de mesure, des altérations, des nuances, des instruments, plusieurs portées au lieu d'une seule... Il y a beaucoup de possibilités, et cela pourrait impliquer d'améliorer certaines parties du code existant pour mieux le développer.
 
 ## 5. La gestion du stockage des données
 
@@ -112,4 +142,4 @@ Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui s
 
 Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.
 
-![Partition nouvelle version](partition_nouvelle_version.png)
+![Partition dernière version](partition_derniere_version.png)
