@@ -122,14 +122,10 @@
 </ul>
 </li>
 </ul>
-<h2>4. Avancées de la partition et de l'affichage du site</h2>
-<h3>Page d'accueil et partitions sauvegardées</h3>
-<p>Première version de ces deux pages :</p>
-<p><img src="page_daccueil_premiere_version.png" alt="Page d'accueil première version"></p>
-<p><img src="partitions_sauvegardees_premiere_version.png" alt="Partitions sauvegardées première version"></p>
+<h2>4. Avancées de la partition</h2>
 <h3>Ajouts à la partition</h3>
 <p>Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches <code>a</code> (add note) et <code>d</code> (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.</p>
-<p><img src="partition_deuxieme_version.png" alt="Partition deuxième version"></p>
+<p><img src="partition_nouvelle_version.png" alt="Partition nouvelle version"></p>
 <p>Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.</p>
 <h3>Difficultés rencontrées</h3>
 <p>Nous pensions afficher une note grisée au survol de la partition pour indiquer la possibilité de placer une note à cet endroit. Cependant le fait de faire suivre la trajectoire de la souris à la note grisée implique d'effacer et de redessiner le canvas à chaque mouvement de la souris et cela crée un lag trop important.</p>
@@ -154,7 +150,18 @@
 <p>Toute la difficulté est là. A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript.</p>
 <p>Le problème est que cette base de données ne traverse pas les pages. Quand on change de page HTML, on perd ces données.</p>
 <p>Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.</p>
-<p>En attendant, la solution retenue est de rester toujours sur la même page HTML, en supprimant tout le code HTML lorsque l'on veut changer virtuellement de page, à l'aide d'une commande JavaScript qui supprime tout l'HTML (document. body. innerHTML="";).</p>
+<p>En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les pages en ordre et faire initialiser le LocalStorage à chaque nouvelle page par le LocalStorage de la page précédente pour tester les fonctionnalités. On va considérer donc tout le temps les mêmes conditions.</p>
+<h2>6. Présentation du site et parcours des données</h2>
+<p>Tout d'abord, la première page est le login : ici, on va récupérer l'identifiant de l'utilisateur et son mot de passe, et vérifier qu'il correspond à la base de données.</p>
+<p><img src="page_login.png" alt="Page de login"></p>
+<p>Si les identifiants ne sont pas corrects, un message d'alerte s'affiche. S'ils sont corrects, on passe à la page suivante en conservant le nom de l'utilisateur et son Id. Cet Id nous permettra de savoir à quelles partitions l'utilisateur à accès.</p>
+<p>Ensuite on arrive sur la page d'accueil du site<br>
+<img src="page_daccueil_premiere_version.png" alt="Page d'accueil première version"><br>
+On peut ici choisir si l'on veut créer une nouvelle partition ou accéder aux anciennes.</p>
+<p>Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui sont accessibles à l'utilisateur connecté. Les partitions contiennent dans la sauvegarde l'Id des personnes qui y ont accès, et en particulier l'auteur. On peut aussi dans cette page chosir de finalement créer une nouvelle partition.</p>
+<p><img src="partitions_sauvegardees.png" alt="Partitions sauvegardées"></p>
+<p>Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.</p>
+<p><img src="partition_nouvelle_version.png" alt="Partition nouvelle version"></p>
 
 
 </article>
