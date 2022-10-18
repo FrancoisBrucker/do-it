@@ -142,6 +142,7 @@ On va passer à la partie la plus importante, les différents parties ou j'ai d�
 
 On va maintenant régler la disposition des différents éléments créés grâce au CSS. 
 Modification de la taille du titre, de sa disposition et de la bande qui va contenir le titre : 
+
         .section-title {
             font-size: 50px;
             position: relative;
