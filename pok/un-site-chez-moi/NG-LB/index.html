@@ -169,7 +169,7 @@
 <h4>En premier lieu, les informations sur l'utilisateur :</h4>
 <ul>
 <li>Le pseudo</li>
-<li>Le mot de passe (crypté si possible)</li>
+<li>Le mot de passe</li>
 <li>Les partitions dont il est l'auteur</li>
 <li>Les partitions qui lui sont partagées</li>
 </ul>
@@ -179,10 +179,11 @@
 <li>L'auteur de la partition</li>
 <li>Les pseudos des personnes avec qui elle est partagée</li>
 </ul>
-<h3>Comment les conserver</h3>
-<p>Toute la difficulté est là. A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript.</p>
+<p>L'objectif est pouvoir réutiliser ces données lorsque l'on parcourt le site</p>
+<h3>Difficultés rencontrées</h3>
+<p>A une page web est associé une base de données nommée LocalStorage qui résiste au rafraichissement de la page, et même à une fermeture du navigateur. Il peut contenir jusqu'à 5Mb, et est adapté à notre situation car facile à traiter en JavaScript.</p>
 <p>Le problème est que cette base de données ne traverse pas les pages. Quand on change de page HTML, on perd ces données.</p>
-<p>Lorsque le serveur sera en ligne, nous pourrons utiliser les requëtes API pour récupérer les données nécessaires.</p>
+<p>Lorsque le serveur sera en ligne, nous pourrons utiliser les requêtes API pour récupérer les données nécessaires.</p>
 <p>En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les pages en ordre et faire initialiser le LocalStorage à chaque nouvelle page par le LocalStorage de la page précédente pour tester les fonctionnalités. On va considérer donc tout le temps les mêmes conditions.</p>
 <h2>6. Présentation du site et parcours des données</h2>
 <p>Tout d'abord, la première page est le login : ici, on va récupérer l'identifiant de l'utilisateur et son mot de passe, et vérifier qu'il correspond à la base de données.</p>
@@ -195,6 +196,22 @@ On peut ici choisir si l'on veut créer une nouvelle partition ou accéder aux a
 <p><img src="partitions_sauvegardees.png" alt="Partitions sauvegardées"></p>
 <p>Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.</p>
 <p><img src="partition_derniere_version.png" alt="Partition dernière version"></p>
+<h3>Améliorations possibles</h3>
+<p>La plupart des améliorations concernant les données seront applicables lorsque l'on mettra le site sur un serveur, dans le second temps.</p>
+<ul>
+<li>
+<p>Que l'on puisse stocker les données utilisateur et les partitions de manière durable dans un stockage associé au serveur</p>
+</li>
+<li>
+<p>Il faudrait que le mot de passe de l'utilisateur soit crypté</p>
+</li>
+<li>
+<p>Améliorer le CSS des différentes pages.</p>
+</li>
+<li>
+<p>Cela parait compliqué, mais faire en sorte qu'une partition puisse être traitée par plusieurs personnes à la fois, à la manière de google drive, serait idéal. Peut-être un serveur pourrait nous offrir cette possibilité.</p>
+</li>
+</ul>
 
 
 </article>
