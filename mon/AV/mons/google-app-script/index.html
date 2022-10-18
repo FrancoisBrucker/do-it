@@ -64,9 +64,124 @@
 
   
 
-  <!-- début résumé -->
-<p>Vide</p>
-<!-- fin résumé -->
+  <h2>Description du MON</h2>
+<p>Pendant les 10h consacrées à ce MON, je veux découvrir Google Apps Script et essayer d'appliquer les connaissances que j'ai acquises à un petit projet.</p>
+<h2>Introduction</h2>
+<ol>
+<li></li>
+</ol>
+<p>Pour commencer, j'ai lu le tutoriel fait directement par Google (<a href="https://developers.google.com/apps-script/guides/sheets">https://developers.google.com/apps-script/guides/sheets</a>) qui présente le fonctionnement général et les différentes fonctionnalités de Apps Script. On y apprend notamment qu'on peut faire :</p>
+<ul>
+<li>de la mise en forme</li>
+<li>des graphiques</li>
+<li>des fonctions personnalisées</li>
+<li>des macros</li>
+<li>des déclencheurs</li>
+<li>...</li>
+</ul>
+<p>J'ai trouvé cette présentation très facile à lire, avec des exemples pertinents et elle m'a paru assez complète.</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>Je suis ensuite allé voir le travail fait par mes camarades durant le MON1 pour essayer d'implémenter des fonctions un peu plus complexes. Par exemple, j'ai réussi à implémenter le vérificateur d'adresse mail fait par Ossama (<a href="https://francoisbrucker.github.io/do-it/mon/OA/MONs/mon1">https://francoisbrucker.github.io/do-it/mon/OA/MONs/mon1</a>) qui s'actualise à chaque fois qu'on édite une case. Cela m'a permis de jouer un peu avec des objets complexes sans avoir à écrire trop de code.<br>
+Ces deux premiers points étaient une sorte d'entrée en matière.</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>Afin de rentrer vraiment dans la programmation j'ai suivi un tuto complet trouvé sur Youtube (<a href="https://www.youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS">https://www.youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS</a>). C'est une playlist de 5 vidéos en français qui explore certaines fonctionnalités de Google Apps Script comme :</p>
+<ul>
+<li>lire les données d'un tableur</li>
+<li>Ecrire des données dans un tableur</li>
+<li>Modifier des cellules (bordure, couleur ...)</li>
+<li>Déclencher des fonctions automatiquement (à l'ouverture du document ou selon l'heure)<br>
+Très bon tuto qui convient même à des débutants de Javascript. Je conseille de faire les exemples en même temps pour bien comprendre. Durée en faisant les exemples : &lt; 2 heures</li>
+</ul>
+<ol start="4">
+<li></li>
+</ol>
+<p>Maintenant que j'ai les bases de Google Apps Script, je me suis dit que c'était le temps de commencer un petit projet pour mettre en pratique ce que j'ai appris. Après avoir réfléchi un moment, j'ai eu du mal à trouver une idée. J'ai néanmoins trouvé sur le site <a href="https://developers.googleblog.com/2022/04/getting-started-is-hardest-part-find.html">https://developers.googleblog.com/2022/04/getting-started-is-hardest-part-find.html</a> de nombreuses idées de mini-projets à faire avec Google Apps Script.<br>
+Attention : il n'y a pas que des projets avec Google Sheet, il y a aussi des projets avec Google Slide ou Google Form.</p>
+<ol start="5">
+<li></li>
+</ol>
+<p>J'ai choisi le projet "Clean up data in a spreadsheet".<br>
+Le but de ce projet est, comme son nom l'indique, de nettoyer un tableur.<br>
+Plus précisément, on veut avoir une fonction qui supprime les lignes vides du tableur et une fonction qui supprime les colonnes vides dans une zone que l'on sélectionne.<br>
+Exemple :</p>
+<p>On commence avec un set de données :</p>
+  <img src="../../assets/datasetMon2.png">
+<p>On clique ensuite sur les fonctions voulues dans la barre de recherche et on obtient le tableau suivant :</p>
+  <img src="../../assets/datasetAfterCleaningMon2.png">
+<p>La base de données a été nettoyée. On pourrait trouver une application à cela dans le domaine de l'intelligence artificielle.</p>
+<p>Code :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">
+<span class="token keyword">function</span> <span class="token function">onOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> menu <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getUi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createAddonMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  menu
+    <span class="token punctuation">.</span><span class="token function">addItem</span><span class="token punctuation">(</span><span class="token string">'Supprimer les lignes vides'</span><span class="token punctuation">,</span> <span class="token string">'clearRows'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addItem</span><span class="token punctuation">(</span><span class="token string">'Supprimer les colonnes vides'</span><span class="token punctuation">,</span> <span class="token string">'clearColumns'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addToUi</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">clearRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token comment">//Definition de variables</span>
+  <span class="token keyword">const</span> sheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> range <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getActiveRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> firstActiveRow <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> height <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> width <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> values <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> rowsToKeep <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//Trouve les lignes à garder</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> height<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span> width<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        rowsToKeep<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//supprime les doublons dans rowsToKeep et supprime les lignes du sheet</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveRow <span class="token operator">+</span> height <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&gt;</span> firstActiveRow <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>rowsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      sheet<span class="token punctuation">.</span><span class="token function">deleteRow</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">clearColumns</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">//Definition de variables</span>
+  <span class="token keyword">const</span> sheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> range <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getActiveRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> firstActiveColumn <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getColumn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> height <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> width <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> values <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> columnsToKeep <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+ 
+  <span class="token comment">//Trouve les colonnes à garder</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> width<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span> height<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        columnsToKeep<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//supprime les doublons dans columnsToKeep et supprime les colonnes du sheet</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveColumn <span class="token operator">+</span> width <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&gt;</span> firstActiveColumn <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>columnsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
+      sheet<span class="token punctuation">.</span><span class="token function">deleteColumn</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+
 
 </article>
 
