@@ -113,6 +113,26 @@ On peut également appliquer un layout à toutes les pages d'un dossier en leur 
     "tags": "articles"
     }
 
+### Paginations
+
+Les paginations servent à créer plusieurs page en itérant sur des données (qui peuvent être de plusieurs types).
+
+On peut par exemple créer plusieurs pages du même format en itérant sur un fichier JSON :
+
+- Fichier JSON contenant les données à utiliser (placé dans `_data`)
+
+![Fichier JSON](fichier_json.png)
+
+- Fichier Nunjucks qui définit le format des fichiers à générer
+
+![Fichier Nunjucks](fichier_nunjucks.png)
+
+- Résultat (créé dans un dossier `portraits` avec les pages correspondant aux autres données du JSON)
+
+![Page affichée](portrait.png)
+
+On remarque que l'on peut choisir le lien auquel on trouvera les pages générées.
+
 ## 4. Création d'un site
 
 On peut commencer par saisir ces commandes dans le dossier du projet :
@@ -155,6 +175,8 @@ Je me suis aidé de [cette courte vidéo](https://www.youtube.com/watch?v=BKdQEX
 Pour ce MON j'ai lu [ce tutoriel](https://www.zachleat.com/web/eleventy-tutorial-level-1/) à propos des templates liquid et des filtres avec Eleventy. Cependant seules les deux premières parties semblent avoir été écrites, je n'ai pas trouvé la suite censée aborder les templates multiples, layouts et fichiers de données externes.
 
 [Ce tutoriel](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/) ne semble pas être complet non plus mais j'ai pu me renseigner sur les sites statiques, dynamiques et statiques générés grâce à la première partie.
+
+[Les paginations](https://www.11ty.dev/docs/pages-from-data/) dans la documentation d'Eleventy.
 
 [Une vidéo](https://www.youtube.com/watch?v=BKdQEXqfFA0) très courte qui montre les bases de la création d'un site avec Eleventy et de l'utilisation des layouts.
 
