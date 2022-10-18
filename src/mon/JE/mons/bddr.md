@@ -28,4 +28,8 @@ le site web [sql.sh](sql.sh) permet de revoir le langage tandis que [sqlzoo](sql
 
 ## Création d'une base de données avec MySQL
 
+Le **Système de Gestion de Base de Données** que j'ai choisi d'utiliser pour ce MON est **MySQL**. Ce SGBD est répandue, avec une [documentation](https://dev.mysql.com/doc/) très complète. Elle est assez simple à mettre en place, et j'ai pu créer et tester moi même un système CRUD très basique pour une table de données Commissions qui pourra me servir sur mon POK
+
 ## SQLAlchemy
+
+Je n'ai au final pas eu le temps de traiter cette ORM.
