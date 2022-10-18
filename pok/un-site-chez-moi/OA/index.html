@@ -190,12 +190,13 @@ Création du bandeau avec du html :</p>
     &lt;/div&gt;
 </code></pre>
 <p>On va maintenant régler la disposition des différents éléments créés grâce au CSS.<br>
-Modification de la taille du titre, de sa disposition et de la bande qui va contenir le titre :<br>
-.section-title {<br>
-font-size: 50px;<br>
-position: relative;<br>
-}</p>
-<pre><code>    .section-title::before {
+Modification de la taille du titre, de sa disposition et de la bande qui va contenir le titre :</p>
+<pre><code>    .section-title {
+        font-size: 50px;
+        position: relative;
+    }
+
+    .section-title::before {
         content: "";
         position: absolute;
         background-color: #d4eef4;
