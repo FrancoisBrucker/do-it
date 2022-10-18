@@ -156,6 +156,7 @@ Modification de la taille du titre, de sa disposition et de la bande qui va cont
             bottom: 0;
         }
 - Choix de la taille des cases pour la dsiposition et du type d'affichage du fond :
+
         .mons {
             min-height: 500px ;
             display: flex;
