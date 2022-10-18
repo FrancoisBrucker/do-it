@@ -10,8 +10,8 @@ Mes objectifs pour ce MON sont:
 - Améliorer ma maitrise du langage de l'informatique
 - Apprendre les bases du HTML
 - Apprendre les bases du CSS
-- Coder un site simple
-- Si temps, apprendre les bases du Java Script
+- Coder un site simple pour mettre en pratique
+
 
 ## 0. Le langage informatique pour les débutants
 
