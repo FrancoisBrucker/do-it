@@ -1,14 +1,14 @@
 ---
 layout: layout/post.njk
 
-title: "CSS, animation, SASS"
+title: "CSS et introduction à SASS"
 authors:
   - Timothée Bermond
 
 ---
 
 <!-- début résumé -->
-Les bases du CSS, les animations et introduction au SASS
+Les bases du CSS et introduction à SASS
 <!-- fin résumé -->
 
 ## Les bases du CSS
@@ -34,7 +34,7 @@ Pour appliquer un style nous pouvons sélectionner :
 
 Pour ce faire on écrit le nom de la balise / classe / id puis on ajoute entre acolades les propriétés que l'on veut appliquer.
 
-```
+```css
 balise{
   propriété1: valeur1;
   propriété2: valeur2;
@@ -44,7 +44,7 @@ Pour chaque propriété on doit indiquer une valeur.
 
 On peut égalemement appliquer un style à plusieurs balises en les séparant d'une virgule.
 
-```
+```css
 balise1, balise2{
   propriété1: valeur1;
   propriété2: valeur2;
@@ -61,7 +61,7 @@ Il est possible de modifier la taille du texte avec la propriété *font-size*. 
 - Taille absolue 
 On indique le nombre de pixels (ou cm, mm mais plus rare) :
 
-```
+```css
 p{
   font-size: 14px;
 }
@@ -81,7 +81,7 @@ Ou indiquer la taille en *em* :
   - '>'1em : grossi le texte
   - <1em : rétrécit le texte
 
-```
+```css
 p{
   font-size: 1.8em;
 }
@@ -233,7 +233,7 @@ La propriété *order* permet de changer l'ordre des éléments du conteneur.
 
 Enfin la propriété *flex* peut autoriser les éléments à occuper plus ou moins d'espace restant. 
 Par exemple :
-```
+```css
 .element:nth-child(1)
 {
     flex: 2;
@@ -247,4 +247,104 @@ permet à l'élément 1 de grossir 2 fois plus que l'élément 1.
 
 Il existe également d'autres manières de structurer les pages que je n'ai pas étudier durant ce MON.
 
-## SASS
+## Simplification du CSS avec Sass
+
+Dans une deuxième partie j'ai suivi cette autre [formation openclassrooms](https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass).
+
+
+#### Structure du CSS
+
+Il est très facile de se retrouver avec des fichiers .css brouillons et il devient alors très difficile et surtout long pour rien de modifier l'apparence de certaines parties de son site. C'est pourquoi il est important d'avoir un fichier .css bien structuré afin de gagner en efficacité.
+
+**Principe du DRY**
+
+Le principe DRY, signifiant "Don't Repeat Yourself", est très important : il ne faut pas que l'on retrouve des règles qui se répètent.
+Dans mon POK par exemple on peut retrouver la répétion de la même règle pour deux balises différentes.
+```css
+#div_choix3{
+    display: none;
+}
+
+#div_choix4{
+    display: none;
+}
+```
+
+J'ai donc ajouté une règle *.div_choix-hide* que j'applique à mes deux *div* en ajoutant *div_choix-hide* à leur classe.
+On passe donc de ceci :
+```html
+<div id="div_choix4" class="div_choix">
+```
+A ceci :
+```html
+<div id="div_choix4" class="div_choix div_choix-hide">
+```
+J'ai fusionné mes deux règles redondantes en une seule :
+```css
+.div_choix-hide{
+    display: none;
+}
+
+```
+Ce qui me permet d'avoir un codebase plus facile à maintenir.
+
+Je l'ai appliqué à mon POK et suis passé d'un fichier .css de plus de 300 lignes à un fichier de moins de 200 lignes.
+
+**Spécificité**
+
+Définition de la [documentation MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) :
+
+La spécificité est la manière dont le navigateur décide quelle règle s’applique si plusieurs règles ont des sélecteurs différents, mais peuvent quand même s’appliquer au même élément.
+
+C'est super compliqué à expliquer et je vais juste vous embrouiller donc allez checker vous même sur le [cours](https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css#/id/r-7191892) où c'est très bien expliqué.
+
+**BEM**
+
+BEM est une convention CSS qui permet de rapidement s'y retrouver dans son code sans avoir à chercher des heures à quoi sert tel ou tel élément.
+
+BEM est l'acronyme de bloc, élément, modificateur.
+
+Comment ça fonctionne?
+
+Tout d'abord, il faut construire des **blocs**, càd un composant qui est autonome et peut fonctionner indépendamment du reste de la page.
+Par exemple, dans un portfolio, si on supprimait tout sauf le titre d'un projet il ne deviendrait qu'un bout de texte isolé. Alors que si on prend l'aperçu entier du projet (titre, image, description) là ça à du sens, on a donc un bloc que l'on va nommer en décrivant sa fontion : *.apercu-proj* et auquel on va assigner les règles spécifiques à ce bloc. 
+Ensuite, on va nommer tous les **éléments** de ce bloc selon une nomenclature particulière : *bloc_parent__fonction_élément*. 
+Ici, pour le titre on obtiendrait : *.apercu-proj__titre*. 
+Enfin, pour des modifications spécifiques à un bloc ou un élément on va ajouter un **modificateur**. Là encore, il y a une nomenclature spéciale : *bloc/élément_modifié--style_modificateur*.
+Dans notre cas, si on veut mettre un fond vert ça donnerait : *apercu-projet--vert*
+
+### Sass
+
+Sass est un préprocesseurs css, càd un outil qui permet de rédiger son code de manière plus cohérente visuellement.
+Il est possible d'écrire du Sass dans des fichiers *.sass* ou *.scss*. La syntaxe est légèrement différente mais reste quand même très proche.
+
+Dans ce MON nous allons nous concentrer sur les fichiers *.scss*.
+
+Grâce à Sass, il est possible d'utiliser le **nesting**, càd l'imbrication des sélécteurs.
+Au lieu d'écrire : 
+```css
+ul {
+  list-style: none;
+  text-align: right;
+}
+
+ul li {
+  display: inline;
+  font-size: 3rem;
+  color: #D6FFF5;
+}
+```
+On écrit :
+```scss
+ul {
+  list-style: none;
+  text-align: right;
+  li {
+      display: inline;
+      font-size: 3rem;
+      color: #D6FFF5;
+  }
+}
+```
+
+
