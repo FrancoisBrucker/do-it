@@ -92,6 +92,7 @@ Il s'agit d'une plateforme de location de biens de particuliers et de profession
 - propriétaires d'un bien immobilier non-professionnels hôteliers
 - propriétaires d'un bien immobilier professionnels hôteliers
 - personnes s'occupant d'un bien mais non-propriétaires (personne tierce gestionnaire du bien)
+- gestionnaires de la plateforme
 
 **Modèle financier :**
 La plateforme prend un pourcentage sur les transactions effectuées entre gestionnaires et locataires : ce sont les frais de réservations.
@@ -103,7 +104,7 @@ La stratégie principale de la plateforme est de racheter les entreprises qui ex
 La plateforme a de nombreux concurrents mais est leader dans ce concept de location facilitée.
 
 **Bilan :**
-Représentant de l'économie de partage au départ, Airbnb représente très bien les plateformes "places de marché". Elle a même créé ce type de service : la preuve dans le nombre de concurrents qui sont apparus dans son sillage.
+Représentant de l'économie de partage au départ, Airbnb représente très bien les plateformes "places de marché". Elle a même créé ce type de service : la preuve par le nombre de concurrents qui sont apparus dans son sillage.
 
 https://www.airbnb.fr/
 https://fr.wikipedia.org/wiki/Airbnb
@@ -112,13 +113,24 @@ https://startupdeleconomiedupartage.files.wordpress.com/2014/12/dossier-airbnb.p
 ## Analyse de Yoojo
 
 **But :**
+Yoojo permet à des personnes recherchant une prestation particulière d'en trouver une auprès d'une communauté de personnes dont les profils sont vérifiés et dont les prix sont justes. La plateforme propose des assurances comprises dans les prix.
 
 **Acteurs :**
+- proposeurs de services
+- demandeurs de services
+- gestionnaires de la plateforme
 
 **Modèle financier :**
+Le modèle financier de Yoojo est basé sur les frais de service qui sont facturés au moment de payer.
 
 **Stratégies :**
+Yoojo est basée sur le système de l'économie de partage. Ce système étant attirant, ils jouent beaucoup sur leur image et sur le côté communautaire.
 
 **Concurrents :**
+Il existe beaucoup de concurrents du même type.
 
 **Bilan :**
+Conformément à ce qui était annoncé au départ, Yoojo est une plateforme de services à la demande qui s'incrit dans l'économie de partage (des compétences ici).
+
+## Bilan
+
