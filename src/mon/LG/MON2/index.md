@@ -15,9 +15,18 @@ Mes objectifs pour ce MON sont:
 
 ## 0. Le langage informatique pour les débutants
 
+Le développement d'un site web comprend deux aspects: le front et le back.
+
 *front end :* développent de la partie visible par le client/utilisateur, de ce qu'il voit, les éléments avec lesquels il peut interagir
 *back end :* c'est « l'arrière boutique » d'un site web : invisible aux utilisateurs mais donne vie au site (ses 3 éléments principaux sont : serveur, application, base de données)
 *Un Développeur full stack* est un super développeur qui sait faire les 2 parties !
+
+Les langages du front sont:
+- html : on écrit le contenu du site
+- css : on met en forme ce contenu. Cependant c'est un langage assez limité. 
+- Java script: utilisé pour aller plus loin que le css. (tout ce qui est animations, responsivité...) 
+
+Un site *responsive* s'adapte aux différents appareils : ordinateurs, tablettes, téléphone...
 
 ## 1. Débuts avec Html
 
