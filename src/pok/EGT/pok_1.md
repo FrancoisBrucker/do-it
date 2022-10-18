@@ -56,26 +56,26 @@ En quoi s'inscrit-elle dans un type de plateforme ? Lequel ?
 
 ## Analyse d'Instagram
 
-But : 
+**But :**
 La plateforme permet de partager des photos et des vidéos, de les modifier, de les stocker, d'intéragir par messagerie instantanée avec d'autres utilisateurs et de donner son avis sur les publications des autres. Elle permet également de mettre en ligne des publicités. Elle utilise les données des utilisateurs pour améliorer ses fonctionnalités.
 
-Acteurs : 
+**Acteurs :** 
 - utilisateurs "lambdas", ce sont les utilisateurs qui postent des photos ou des vidéos de manière permanente ou dans leur "story" de manière éphémère mais qui ne gagnent pas d'argent en le faisant, ils commentent les publications des autres et les "likent".
 - utilisateurs "influenceurs", ces utilisateurs sont payés pour publier des photos, vidéos et "stories" par des marques avec lequelles ils signent des partenariats.
 - médiateurs.
 - marques, entreprises et professionnels de la publicité (annonceurs ou publicitaires), cette fois-çi, au lieu que ce soit sous forme de partenariat, ils peuvent directement utiliser des spots de publicité qui aparaîssent sous forme de publications mais annoncées comme publicité pour un produit ou pour une marque.
 
-Modèle financier :
+**Modèle financier :**
 La vente de fonctionnalités particulières auprès des professionnels et des marques pour améliorer le placement de leur publicité représente la majorité des revenus de la plateforme. Instagram utilise des algorithmes pour mieux cibler les clients potentiels grâce aux données collectées sur les utilisateurs.
 
-Stratégies :
+**Stratégies :**
 L'effet réseau est le principal levier de la plateforme : plus il y a d'utilisateurs, plus les marques et les annonceurs sont attirés par la création de contenus publicitaires utilisant les fonctionnalités d'Instagram. Pour augmenter le nombre de marques sur la plateforme et donc de potentiels clients pour leurs fonctionnalités publicitaires, Instagram ne prend pas de commission sur les contrats de partenariat entre les marques et les influenceurs.
 
-Concurrents :
+**Concurrents :**
 Instagram est le 2ème réseau social au monde (derrière Facebook et devant Whatsapp et Youtube).
 Sur le marché du partage de photos en particulier, Instagram est leader.
 
-Bilan :
+**Bilan :**
 Au départ, j'avais noté qu'Instagram est une plateforme de contenus. Or, je trouve que cela retire une grande partie de ce qu'est Instagram. En effet, le modèle financier de cette plateforme repose sur les publicités qui ciblent des utilisateurs en fonction de leurs données : ce principe de collecte des données (auquel l'utilisateur adhère en créant son compte) correspond plutôt aux plateformes de collecte de données. De plus, Instagram permet de faciliter les connexions entre les utilisateurs : ceci est typique d'une plateforme d'interaction. On retrouve tout de même le principe de plateforme de contenus dans le fait qu'Instagram adapte le contenu qu'il met en avant pour chaque utilisateur en fonction de ses préférences.
 
 https://instagram.com/
@@ -84,4 +84,41 @@ https://fr.wikipedia.org/wiki/Instagram
 
 ## Analyse d'Airbnb
 
+**But :**
+Il s'agit d'une plateforme de location de biens de particuliers et de professionnels. Elle propose ces services et met en relation les potentiels locataires avec les propriétaires ou gestionnaires de biens immobiliers. La plateforme propose aussi un service de recommandations de lieux touristiques et d'activités.
+
+**Acteurs :**
+- personnes souhaitant louer un bien pour une durée déterminée
+- propriétaires d'un bien immobilier non-professionnels hôteliers
+- propriétaires d'un bien immobilier professionnels hôteliers
+- personnes s'occupant d'un bien mais non-propriétaires (personne tierce gestionnaire du bien)
+
+**Modèle financier :**
+La plateforme prend un pourcentage sur les transactions effectuées entre gestionnaires et locataires : ce sont les frais de réservations.
+
+**Stratégies :**
+La stratégie principale de la plateforme est de racheter les entreprises qui exercent dans le même domaine qu'eux, que ce soit sur la location de biens ou le tourisme. Comme son modèle marche très bien, cela a poussé certains utilisateurs à dépasser des limites : les différents pays ont du mettre en place des régulations à cause de pénuries de logement "classiques" par exemple.
+
+**Concurrents :**
+La plateforme a de nombreux concurrents mais est leader dans ce concept de location facilitée.
+
+**Bilan :**
+Représentant de l'économie de partage au départ, Airbnb représente très bien les plateformes "places de marché". Elle a même créé ce type de service : la preuve dans le nombre de concurrents qui sont apparus dans son sillage.
+
+https://www.airbnb.fr/
+https://fr.wikipedia.org/wiki/Airbnb
+https://startupdeleconomiedupartage.files.wordpress.com/2014/12/dossier-airbnb.pdf
+
 ## Analyse de Yoojo
+
+**But :**
+
+**Acteurs :**
+
+**Modèle financier :**
+
+**Stratégies :**
+
+**Concurrents :**
+
+**Bilan :**
