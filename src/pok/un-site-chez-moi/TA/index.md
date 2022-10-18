@@ -16,9 +16,16 @@ Github: <https://github.com/ThibaultAdelain/InstantBuddyNode>
 
 Cette application a pour but de rencontrer des gens autour de nous, à proximité.
 
-J'ai développé cette application avec Node, Express, Sequelize, MySQL. Je prévois d'utiliser React pour la partie front.
+J'ai développé cette application avec :
 
-J'ai utilisé le [tuto MERN stack][1], en particulier le tuto [REST API][1] et celui [JWT authentification](https://www.youtube.com/watch?v=enopDSs3DRw&list=PLillGF-RfqbbQeVSccR9PGKHzPJSWqcsm&index=2&ab_channel=TraversyMedia). J'ai remplacé la base de données MongoDB par une base de données [MySQL](https://www.mysql.com/). J'ai donc modifié la partie avec Mongoose en adaptant avec [Sequelize](https://sequelize.org/). J'ai remplacé les JWT par des cookies de session avec [cookie-parser](https://www.npmjs.com/package/cookie-parser). Pour le hachage, j'ai utilisé [bcryptjs](https://www.npmjs.com/package/bcryptjs).
+- *Back-end* : Node, Express, Sequelize, MySQL.
+- *Front-end* : React, Redux, tailwind CSS.
+
+J'ai utilisé le [tuto MERN stack][1]. 
+
+**Pour le *back-end* :** j'ai remplacé la base de données MongoDB par une base de données [MySQL](https://www.mysql.com/). J'ai donc modifié la partie avec Mongoose en adaptant avec [Sequelize](https://sequelize.org/). J'ai remplacé les JWT par des cookies de session avec [cookie-parser](https://www.npmjs.com/package/cookie-parser). Pour le hachage, j'ai utilisé [bcryptjs](https://www.npmjs.com/package/bcryptjs).
+
+**Pour le *front-end* :** j'ai utilisé [React](https://fr.reactjs.org/), [Redux](https://redux.js.org/) pour la gestion des states, [tailwind CSS](https://tailwindcss.com/) pour la mise en forme. J'ai aussi utilisé [react-toastify](https://www.npmjs.com/package/react-toastify) et des components [flowbites](https://flowbite.com/).
 
 #### Tuto :
 
