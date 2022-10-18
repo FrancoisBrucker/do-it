@@ -82,212 +82,127 @@
 <p>Dans ce MON, je vais revoir les grands points du CSS et de l'HTML, ainsi que m'introduire à l'écriture du javascript</p>
 <h2>Rappels d'HTML et découverte du Javascript.</h2>
 <p>Cette partie consiste particulièrement à revoir HTML et CSS. Comme mes connaissances ne sont pas très poussées, j'ai décidé de suivre un cours sur openclassrooms. De plus l'objectif du MON est d'apprendre également le Javascript, que je n'ai jamais vu avant cette année.</p>
-<h5>1. Apprentissage du HTML/CSS</h5>
-<p>A l'aide d'<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">openclassroom</a>, je revois et découvre de nombreuses possibilités offertes par les deux langages.</p>
-<h5>2. Création de la page web</h5>
+<h1>1. Apprentissage du HTML/CSS</h1>
+<p>A l'aide d'<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">openclassroom</a>, je revois et découvre de nombreuses possibilités offertes par les deux langages. Cette étape m'a pris 8h.</p>
+<p>Il est important de noter tout d'abord que tous les navigateurs ne supportent pas toutes les fonctionnalités, même si aujourd'hui ils englobent quasiment tout ce dont on peut avoir besoin.</p>
+<h2>Les possibilités offertes par le HTML et ses particularités.</h2>
+<h3>Les balises</h3>
+<p>Les balises nous permettent d'indiquer la fonction du contenu qu'elle encadre, avec une balise ouvrante et une balise fermante.</p>
+<p>Il faut faire attention : l'HTML est utilisé pour le fond du document plus que sur la forme contrairement au css. Certaines balises: <strong>"em"</strong>, <strong>"strong"</strong>, <strong>"mark"</strong> modifient l'aspect du texte, mais pour autant ce n'est pas leur fonction principale : elles servent surtout aux moteurs de recherche, à l'ordinateur.</p>
+<h3>Les balises qui structurent la page</h3>
+<p>Je ne vais pas m'attarder sur toutes les balises car je connais déjà un peu le html. Mais les balises qui structurent la page me sont étrangères en général.</p>
+<ul>
+<li><strong>header</strong> correspond à l'en-tête</li>
+<li><strong>footer</strong> au pied de page</li>
+<li><strong>nav</strong> donne les liens de navigation</li>
+<li><strong>section</strong> est une portion au centre de la page</li>
+<li><strong>article</strong> donne une portion autonome de la page</li>
+</ul>
+<h3>Les attributs</h3>
+<p>Les attributs sont dans la balise ouvrante. Ils sont utilisés pour fournir une information supplémentaire sur les éléments HTML. On peut en mettre plusieurs sur la même balise. Parmis les plus utilisés il y a:</p>
+<ul>
+<li><strong>href</strong> pour définir l'adresse du lien</li>
+<li><strong>height</strong> pour la hauteur de l'élément</li>
+<li><strong>width</strong> pour la largeur de l'élement</li>
+<li><strong>style</strong> si l'on veut attribuer un style css particulier à l'élément</li>
+</ul>
+<p>Plein d'autres attributs existent, il est bien de les connaître leur existence et ce qu'ils peuvent faire afin de les retrouver plus facilement.</p>
+<h3>Ajouter des images</h3>
+<p>On peut également grâce à l'HTML insérer des images et des GIF. Pour les images, le format bitmap n'est pas adapté car il est trop lourd. Il faut faire attention aux dimensionnements de l'image également.</p>
+<h3>Connecter au JavaScript</h3>
+<p>On peut à l'aide de l'HTML faire en sorte de lancer une fonction Javascript existante dans le Script de la page en mettant un attribut <strong>"onclick = "lafonction()"</strong> à un élément HTML. On peut le faire avec un bouton par exemple.</p>
+<h3>L'élément tableau</h3>
+<p>Cet élément est intéressant en HTML. Pour le construire, on utilise la balise <strong>table</strong>. <strong>tr</strong> détermine le début (et la balise fermante la fin) d'une ligne et <strong>td</strong> le début et la fin d'une cellule. On peut utiliser <strong>collapse</strong> pour coller les lignes du tableau, la valeur par défaut étant des lignes séparées.</p>
+<p>Pour la ligne d'en-tête du tableau on utilise la balise <strong>th</strong> pour les cellules.</p>
+<p>Enfin, le titre du tableau est attribué par <strong>caption</strong>.<br>
+Il existe encore d'autres fonctionnalités pour un tableau.</p>
+<h3>L'élément formulaire</h3>
+<p>L'élément <strong>form</strong> est assez intéressant en particulier. Il permet de contenir des contrôles interactif dans une section d'un document pour permettre à l'utilisateur de fournir des informations, comme pour un login par exemple.</p>
+<p>L'attribut <strong>method</strong> va définir comment les données sont envoyées.</p>
+<p>L'attribut <strong>action</strong> donne l'adresse de la page ou du programme qui va traiter les informations</p>
+<p>La balise <strong>label</strong> va permettre de nommer un <strong>input</strong> en s'associant à l'id de l'input. <strong>PlaceHolder</strong> est un attribut qui quant à lui va afficher un string grisé là où l'utilisateur est censé donner l'information.</p>
+<p>On peut aussi faire des listes déroulantes, des cases à cocher, des zones d'options.</p>
+<h2>Les possibilités offertes par le CSS et ses particularités.</h2>
+<p>On peut écrire le css de trois manières différentes :</p>
+<ul>
+<li>Dans l'entête du HTML, dans la balise <strong>head</strong></li>
+<li>Dans les balises directement avec l'attribut <strong>style</strong></li>
+<li>Dans fichier css externe que l'on appelle après dans l'HTML<br>
+La dernière option est plus propre et permet de faire en sorte de pouvoir utiliser le css dans plusieurs pages HTML.</li>
+</ul>
+<h3>Le lien avec le HTML</h3>
+<ul>
+<li>On peut dans le css changer n'importe quelle balise, et en créer de nouvelles. Exemple : la balise p du paragraphe</li>
+<li>On peut également créer des <strong>classes</strong> (avec un . devant), qui peuvent être appelées dans le HTML avec l'attribut <strong>class</strong>.</li>
+<li>On peut écrire du css pour des <strong>id</strong> (avec un # devant), qui fonctionnent comme les balises sauf qu'on les utilise qu'une fois en pratique. Les id sont utiles pour utiliser le JavaScript après.</li>
+<li>On peut aussi associer du css à deux balises a et b (a, b) et à une balise a contenue dans une balise b (b a).</li>
+</ul>
+<p>Lorsque l'on veut modifier du texte à l'intérieur d'un texte d'une balise en HTML, on utilise la balise <strong>span</strong> avec la class css que l'on utilise. A l'inverse, si on veut modifier le css de tout un pan d'HTML contenant plusieurs balises, on utilise la balise <strong>div</strong>.</p>
+<h3>Les propriétés css</h3>
+<p>Il existe de nombreuses propriétés css influant sur l'HTML.</p>
+<ul>
+<li><strong>font-size</strong> pour la taille du texte en pixels : en nombre de pixels avec px, en taille relative avec small/medium/large etc ou en em (0.8em, 1.5em...)</li>
+<li><strong>font-family</strong> pour la police</li>
+<li><strong>font-weight</strong> pour le mettre en gras</li>
+<li><strong>text-decoration</strong> pour mettre une ligne</li>
+<li><strong>text-align</strong> pour aligner le texte à droite, gauche etc</li>
+<li><strong>float</strong> pour faire flotter une image</li>
+<li><strong>clear</strong> pour que le texte s'affiche autour de l'image</li>
+<li><strong>background-color</strong> pour la couleur de fond</li>
+<li><strong>color</strong> pour la couleur de fond</li>
+<li><strong>border</strong> pour l'apparence de la bordure (largeur, couleur, type de bordure, bordure arrondie)</li>
+<li><strong>box-shadow</strong> ou <strong>text-shadow</strong> pour mettre des ombres</li>
+<li><strong>background-color</strong> pour la couleur de fond</li>
+</ul>
+<h3>Les apparences dynamiques</h3>
+<p>Une fois que la page a été chargée, on peut changer l'apparence des éléments, à l'aide de pseudo-formats css</p>
+<h4>Changer l'apparence au survol</h4>
+<p>Pour faire ceci il suffit d'utiliser <strong>:hover</strong> au bout d'une balise dans le css. L'apparence décrite apparaitra alors lors du survol de la balise à laquelle <strong>:hover</strong> est rattachée.</p>
+<h4>Changer l'apparence au moment du clic</h4>
+<p>Pour faire ceci il suffit d'utiliser <strong>:active</strong> au bout d'une balise dans le css. L'apparence décrite apparaitra alors lors d'un clic sur la balise à laquelle <strong>:active</strong> est rattachée.</p>
+<h1>2. Création de la page web</h1>
 <p>Je commence le projet en HTML et CSS en parallèle du point précédent en créant un fichier site.html. J'ai fait quelque chose de très simple mais qui m'a permis d'utiliser les connaissances acquises, de découvrir aussi plein de template en css ce qui je pense sera ma solution retenue à l'avenir. Je pense que se baser sur un css bien fourni et changer certains objets si besoin est plus efficace que faire tout son css soi-meme.</p>
-<p>Voici le code utilisé:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;!-- En-tête de la page --&gt;
-        &lt;meta charset="utf-8" /&gt;
-        &lt;title&gt;Raclette&lt;/title&gt;
-        &lt;link rel="stylesheet" href="style.css" /&gt;
-    &lt;/head&gt;
-
-    &lt;body&gt;
-        &lt;div class="header"&gt;
-            &lt;h2&gt;Bonjour et bienvenue sur mon site !&lt;br /&gt;
-                On va parler des plats d'hiver aujourd'hui&lt;/h2&gt;
-          &lt;/div&gt;
-
-    &lt;div class="row"&gt;
-        &lt;div class="column" style="background-color:#dd5329"&gt;
-            &lt;h1&gt;La fameuse et inévitable raclette&lt;/h1&gt;
-            &lt;p&gt;Source : &lt;a href="https://fr.wikipedia.org/wiki/Raclette"&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-            &lt;p&gt;La raclette (Bratchäs en suisse allemand, Bratkäse en allemand, litt. « fromage rôti ») est une recette de cuisine traditionnelle et emblématique de la cuisine suisse. Variante des fondues au fromage, elle consiste à faire fondre du raclette et à le racler au fur et à mesure qu’il fond. Elle est traditionnellement servie avec des pommes de terre en robe des champs et accompagnée de légumes au vinaigre (cornichons, oignons)&lt;/p&gt;
-            &lt;img src="raclette.jpg" alt="Photo de Raclette" /&gt;
-        &lt;/div&gt;
-
-        &lt;div class="column" style="background-color:#db7455"&gt;
-            &lt;h1&gt;La merveilleuse tartiflette&lt;/h1&gt;
-            &lt;p&gt;Source : &lt;a href="https://fr.wikipedia.org/wiki/Tartiflette"&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-            &lt;p&gt;La tartiflette (dérivé de tartifle ou tartiflâ, pomme de terre en savoyard) est une recette de cuisine à base de gratin de pommes de terre, d'oignons et de lardons, le tout gratiné au reblochon (fromage AOP des pays de Savoie).
-
-                D'origine récente (le plat a été inventé dans les années 1980), la recette est devenue l'un des emblèmes de la cuisine française, y compris à l'étranger. La « tartiflette au reblochon ou reblochon de Savoie » obtient un Label rouge le 9 octobre 2014 : pour être certifié Label rouge, l'AOP Reblochon de Savoie doit être le seul fromage du plat et constituer au minimum 20 % de la recette1. De plus, le produit doit être gratiné au four traditionnel. &lt;/p&gt;
-            &lt;img src="tartiflette.jpg" alt="Photo de Tartiflette" /&gt;
-        &lt;/div&gt;
-
-
-        &lt;div class="column" style="background-color:#c49384"&gt;
-            &lt;h1&gt;La somptueuse fondue&lt;/h1&gt;
-            &lt;p&gt;Source : &lt;a href="https://fr.wikipedia.org/wiki/Fondue"&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-            &lt;p&gt;La fondue au fromage consiste en un mélange de fromages, de vin et d'assaisonnement, bien qu'il existe de nombreuses variantes, comme l'utilisation de bière plutôt que de vin20. Traditionnellement, le caquelon est frotté avec une gousse d'ail coupée, le vin blanc est ajouté et chauffé avec de la fécule de maïs, puis le fromage râpé est ajouté et remué doucement jusqu'à ce qu'il soit fondu, bien qu'en pratique tous les ingrédients puissent être combinés et chauffés ensemble en même temps.&lt;/p&gt;
-            &lt;img src="fondue.jpeg" alt="Photo de Fondue"  width="225" height="225"/&gt;&gt;
-        &lt;/div&gt;
-    
-    &lt;/div&gt;
-
-    &lt;div class="footer"&gt;
-        &lt;p&gt;Je vous propose maintenant de jouer à un petit jeu : un &lt;a href= "snake/snake.html"&gt; snake&lt;/a&gt; maison!&lt;/p&gt;
-      &lt;/div&gt;
-        
-
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
 <p>Voici le résultat :<br>
-<img src="imagesite.jpg" alt="Fromage" title="Image du site"></p>
-<h5>3. Apprentissage du Javascript</h5>
-<p>J'ai ensuite vu des <a href="https://www.youtube.com/watch?v=XkvrHQNmigs&amp;t=266s">tutos sur youtube</a> pour m'introduire au JavaScript. C'était intéressant mais juste suivre un cours était compliqué surtout après le long cours sur HTML/CSS.</p>
-<h5>4. Ecriture d'un petit jeu : Snake</h5>
-<p>Assez vite j'ai donc voulu mettre la main à la pate et, pour me simplifier la vie et avoir des ressources sur internet je me suis lancé dans l'écriture d'un <a href="snake.html">Snake</a> en JavaScript.</p>
-<p>Voici le code:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Mon Snake&lt;/title&gt;
-  &lt;style&gt;
-    html, body {
-    height: 100%;
-    margin: 0;
-  }
-
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  canvas {
-    border: 1px solid white;
-  }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;canvas width="400" height="400" id="game"&gt;&lt;/canvas&gt;
-&lt;script&gt;
-var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
-
-var grid = 16;
-var count = 0;
-
-var snake = {
-  x: 160,
-  y: 160,
-    
-  dx: grid,
-  dy: 0,
-
-  cells: [],
-
-  maxCells: 4
+<img src="imagesite.png" alt="Fromage" title="Image du site"></p>
+<h1>3. Apprentissage du Javascript</h1>
+<p>J'ai ensuite vu des <a href="https://www.youtube.com/watch?v=XkvrHQNmigs&amp;t=266s">tutos sur youtube</a> pour m'introduire au JavaScript. Je suis également retourné sur <a href="https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript">open classroom</a>. Le temps qui me restait était court mais je voulais comprendre les bases.</p>
+<h2>Les variables</h2>
+<p>Les variables permettent d'enregistrer et manipuler des données. Une variable contient une donnée. Cette donnée s'appelle valeur. Il est important pour bien s'y retrouver que la variable ait un nom qui corresponde à ce qu'il y a à l'intérieur, quitte à ce que le nom soit long.</p>
+<h3>La déclaration</h3>
+<p>Pour déclarer une variable on utilise le mot <strong>let</strong> ou <strong>var</strong> suivi du nom de la variable.</p>
+<p>Si on déclare la variable avec <strong>const</strong>, elle devient alors une constante et le javascript renvoie une erreur si on tente de la modifier.</p>
+<h3>La manipulation</h3>
+<p>On peut utiliser les opérateurs normaux pour influer sur les variables (+, -, +=, -=, *, /, *=, /=)</p>
+<h2>Les types primitifs</h2>
+<p>Il y a trois types primitifs : les nombres, les chaînes de caractères et les booléens. Les <strong>string</strong> peuvent se concaténer avec "+". Dans JavaScript, chaque variable peut changer de type (typage faible).</p>
+<p>Il vaut mieux utiliser les constantes tant que possible.</p>
+<h2>Les objets</h2>
+<p>Plusieurs objets ayant des points communs et pouvant être expliqués de la même manière peuvent être décrits par des modèles, qu'on appelle des <strong>classes</strong>.</p>
+<p>Les objets sont écrits en JSON : des séries de paires clés-valeurs.<br>
+Exemple:</p>
+<pre><code>let example = {
+   firstname: "Leonard",
+   lastname: "Barbotteau",
 };
-var apple = {
-  x: 320,
-  y: 320
-};
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function loop() {
-  requestAnimationFrame(loop);
-
-  if (++count &lt; 4) {
-    return;
-  }
-
-  count = 0;
-  context.clearRect(0,0,canvas.width,canvas.height);
-
-  snake.x += snake.dx;
-  snake.y += snake.dy;
-
-  if (snake.x &lt; 0) {
-    snake.x = canvas.width - grid;
-  }
-  else if (snake.x &gt;= canvas.width) {
-    snake.x = 0;
-  }
-
-  if (snake.y &lt; 0) {
-    snake.y = canvas.height - grid;
-  }
-  else if (snake.y &gt;= canvas.height) {
-    snake.y = 0;
-  }
-
-  snake.cells.unshift({x: snake.x, y: snake.y});
-
-  if (snake.cells.length &gt; snake.maxCells) {
-    snake.cells.pop();
-  }
-
-  context.fillStyle = 'red';
-  context.fillRect(apple.x, apple.y, grid-1, grid-1);
-
-  context.fillStyle = 'green';
-  snake.cells.forEach(function(cell, index) {
- 
-    context.fillRect(cell.x, cell.y, grid-1, grid-1);
-
-    if (cell.x === apple.x &amp;&amp; cell.y === apple.y) {
-      snake.maxCells++;
-
-      apple.x = getRandomInt(0, 25) * grid;
-      apple.y = getRandomInt(0, 25) * grid;
-    }
-
-    for (var i = index + 1; i &lt; snake.cells.length; i++) {
-   
-      if (cell.x === snake.cells[i].x &amp;&amp; cell.y === snake.cells[i].y) {
-        snake.x = 160;
-        snake.y = 160;
-        snake.cells = [];
-        snake.maxCells = 4;
-        snake.dx = grid;
-        snake.dy = 0;
-
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
-      }
-    }
-  });
-}
-
-document.addEventListener('keydown', function(e) {
-  // left arrow key
-  if (e.which === 37 &amp;&amp; snake.dx === 0) {
-    snake.dx = -grid;
-    snake.dy = 0;
-  }
-  // up arrow key
-  else if (e.which === 38 &amp;&amp; snake.dy === 0) {
-    snake.dy = -grid;
-    snake.dx = 0;
-  }
-  // right arrow key
-  else if (e.which === 39 &amp;&amp; snake.dx === 0) {
-    snake.dx = grid;
-    snake.dy = 0;
-  }
-  // down arrow key
-  else if (e.which === 40 &amp;&amp; snake.dy === 0) {
-    snake.dy = grid;
-    snake.dx = 0;
-  }
-});
-
-// start the game
-requestAnimationFrame(loop);
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;	
 </code></pre>
+<p>Si on veut récupérer un attribut (exemple le prénom), on utilise ".":</p>
+<pre><code>let prenom = example.firstname
+</code></pre>
+<h3>Les constructeurs</h3>
+<p>Pour créer une <strong>classe</strong> on utilise un <strong>constructeur</strong>. Quand une instance de cette <strong>classe</strong> est créée, on écrit new puis le nom de la classe appelée.</p>
+<p>Dans le <strong>constructeur</strong>, on déclare les <strong>attributs</strong> avec <strong>this</strong>. Exemple:</p>
+<pre><code>class example = {
+   constructor(firstname, lastname) {
+   this.firstname = firstname,
+   this.lastname = lastname,
+  }
+};
+
+let moi = new example ("Leonard", "Barbotteau");
+</code></pre>
+<h1>4. Mise en application du Javascript</h1>
+<p>Pour finir ce cours, j'ai voulu mettre toutes ces connaissances en application. J'ai tenté de faire un snake tout seul mais je n'ai pas réussi et ai donc étudié un code déjà existant pour bien comprendre comment étaient agencées les fonctions.</p>
+<p>Je me suis concentré sur les classes, les définitions d'objets qui différent bien du langage python. Les boucles sont assez similaires, et pour les applications particulières google est mon ami.</p>
 
 
 </article>
