@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MON de Tuncay : Docker</title>
+
+    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1 class="mb-1">MON de Tuncay : Docker</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Docker</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Tuncay Bilgi</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <h1>Docker :</h1>
+<p>Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur<br>
+Il est largement utiliser dans la mise en production des appications.<br>
+Le MON consiste à prendre l'outil en main en suivant <a href="https://docs.docker.com/">la doc officielle</a> et un workshop <a href="https://www.youtube.com/watch?v=gAGEar5HQoU&amp;t=1400s&amp;ab_channel=Docker">officiel</a>.<br>
+Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Le projet est mis en place sur Windows et je ne mettrais pas la doc pour Linux ou Mac.</p>
+</div></div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Les prérequis sont : les bases de bash et de Linux, l'utilisation d'un CLI</p>
+</div></div>
+<h2><a href="">Le Workshop</a> :</h2>
+<h3>Initialisation et premiers pas.</h3>
+<p>Il faut installer Docker depuis <a href="https://www.docker.com/">le site officiel</a>.</p>
+<p>Ensuite, on suit le workshop.</p>
+<p>Docker permet d'empaqueter une application dans un conteneur, c'est à dire que le but est de créer, sur notre ordinateur, une boite isolée du reste du système. Cette boite va contenir le code de l'application que l'on veut mettre en production, et tout ce dont elle a besoin pour fonctionner.<br>
+Ces boites doivent donc possèder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons le chercher sur DockerHub qui contient pleins d'images, c'est à dire une copie d'un système.</p>
+<h4>Hello World</h4>
+<p>Pour chercher une image, ici une image de la distribution Linux Fedora, on se place dans le répertoire de notre projet et on lance :</p>
+<pre><code>docker pull fedora latest
+</code></pre>
+<p>Ensuite, pour notre premier hello world, on va effectuer une commande Linux avec le système fedora que l'on a téléchargé :</p>
+<p>docker run fedora echo 'hello world'</p>
+<p>Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancher un echo, puis va s'arrêter.</p>
+<p>on reçoit donc l'echo :</p>
+<pre><code>hello world
+</code></pre>
+<p>On peut utiliser cette commande avec des options à chercher dans docker --help .</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<pre><code>docker run --help //liste les commandes et les options
+-i  //maintenir le container ouvert après l'executions des tâches
+-t  //ouvrir un pseudo terminale
+-d  // exectuer les taches en deamon -&gt; en arrière plan, dans un autre terminale.
+</code></pre>
+</div></div>
+<p>D'autres commandes importantes :</p>
+<pre><code>docker ps //liste tous les containers en marche
+docker stop [id] // arrete le container proprement
+docker kill [id] // force l'arret
+docker log -f [id] // renvoie tous les logs du container sur le terminale
+</code></pre>
+<h4>Dockerfile</h4>
+<p>Une image est un template pour créer un container. Au lieu de simplement copier celle des autres, nous pouvons créer ou modifier les nôtres avec des Dockerfile.</p>
+<p>On crée un Dockerfile dans le projet et on ouvre vscode dans le dossier courant :</p>
+<pre><code>&gt;&gt; New-Item Dockerfile
+&gt;&gt; code .
+</code></pre>
+<p>On crée notre Dockerfile, il va chercher l'image fedora et lancer une commande pour nous qui va installer une dépendance, ici figlet, qui permet de faire de jolies echos.<br>
+Le Dockerfile ressemble à ça :</p>
+<pre><code>FROM fedora:latest
+
+RUN yum install -y figlet
+</code></pre>
+<p>Enfin, on construit l'image dans le dossier courant (où il y a le Dockerfile) et on le nomme figlet :</p>
+<pre><code>&gt;&gt; docker build -t figlet .
+</code></pre>
+<p>Nous voila avec une nouvelle image figlet, que l'on peut utiliser pour instancier des containers comme au début du tutoriel!</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-2">
+<p>Les dockerfiles fonctionnent avec des mots clefs tel que FROM,RUN,CMD,ENTRYPOINT.. voir la doc pour savoir à quoi ils servent.</p>
+</div></div>
+<p>On peut publier notre image sur le dockerhub avec une commande spéciale :</p>
+<pre><code>docker build -t mon_pseudo_docker/nom_image:latest .
+</code></pre>
+<p>Puis sur docker desktop on clique sur push to hub.</p>
+<h3>Conteneurisation d'un premier projet :</h3>
+<p>Lors des cours de flask, on à eu l'occasion de coder un front en React et un back en flask, nous allons essayer de conteneuriser ça.<br>
+On commence à créer une image qui va créer le conteneur du front.</p>
+<p>Le front utilise node et react.js.<br>
+On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiants les dépendances et qui les installes avec npm. Ensuite, on éxecute la commande qui lance le serveur pour le front.</p>
+<pre><code>FROM node:18-slim
+
+WORKDIR /app
+
+COPY ["package.json", "package-lock.json*", "./"]
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD [ "npm","start" ]
+</code></pre>
+<p>On lance ensuite un container de cette image en spécifiant le port 3000 et voila, on peut aller voir notre front sur localhost:3000.</p>
+<div style=" display: grid;grid-template-columns: repeat(2, minmax(0, 1fr))">
+  <img src="../images/container.png" alt="DockerDeskop" style="height: 200px; margin: 0 auto; border: 0;grid-column : 1 ;grid-row : 1">
+  <img src="../images/front.png" alt="Front" style="height: 200px; margin: 0 auto; border: 0;grid-column : 2;grid-row : 1">
+</div>
+<h3>DockerCompose</h3>
+<p>Pour containeriser une application, il est plus utile de découper l'applications en différentes parties et de containeriser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.</p>
+<p>Pour tester cela, on continue la containerisation de l'app du cours de flask.</p>
+<h4>Container Back-end</h4>
+<p>on créer un Dockerfile qui va creer l'image de l'application flask :</p>
+<pre><code>FROM python:latest
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+COPY requirements.dev.txt requirements.dev.txt
+
+RUN pip install -r requirements.txt
+RUN pip install -r requirements.dev.txt
+
+COPY  . .
+
+EXPOSE 5000
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+</code></pre>
+<p>Puis on lance le container <code>docker run -d -p 5000:5000  python-flash</code> . On peut maintenant écouter le port 5000 et voir que tout fonctionne.</p>
+<h4>Dockercompose file</h4>
+<p>On possède maintenant deux images, une pour le front, une pour le back, on peut essayer de faire fonctionner les deux.</p>
+<p>Pour cela on créer un Docker-composer.yml file.</p>
+<pre><code>version : '3'
+services:
+  web :
+    build: flask
+    ports: 
+      - '5000:5000'
+    environment:
+      FLASK_ENV: development
+    volumes :
+      - ./flask:/app
+
+
+  front :
+    build: react-todo
+    ports : 
+      - '3000:3000'
+
+  db:
+    image : postgres
+    ports :
+      - '5432:5432'
+    environment:
+      POSTGRES_USER : test
+      POSTGRES_PASSWORD : test
+      POSTGRES_DB : postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+    driver : local
+</code></pre>
+<p>Ce fichier préparer le lancement de trois containers basées sur :</p>
+<ul>
+<li>L'image présente dans ./flask</li>
+<li>L'image dans ./react-todo</li>
+<li>L'image du nom de postgres qu'il va chercher dans le dockerhub</li>
+</ul>
+<p>Ensuite, il relie les ports entre eux et fait passer les variables d'environnement, qui sont par défaut stockées dans le .env</p>
+<p>Le résultat :</p>
+<img src="../images/front+back.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
+<p>Le Front communique avec le back et donc notre page Todo n'est plus toute blanche mais elle fetch les tasks présentes dans le back flask et sa base de données sqlite.</p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
