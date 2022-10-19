@@ -89,9 +89,9 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>Les méthodes présentées dans ce cours peuvent permettent d'accéder de manière illégale à des informations.</p>
-<p>L'utilisation de ces méthodes sans l'autorisation du propriétaire d'un site web ou un quelconque serveur est illégal et est punit par la loi.</p>
-<p>Ce cours a pour objet de sensibiliser les ingénieurs dans le domaine de la sécurité et leurs permettre de protéger les serveurs contre ce type d'attaque.</p>
+<p>Les méthodes présentées dans ce cours peuvent permettre d'accéder de manière illégale à des informations.</p>
+<p>L'utilisation de ces méthodes sans l'autorisation du propriétaire d'un site web ou un quelconque serveur est illégale et est punit par la loi.</p>
+<p>Ce cours a pour objectif de sensibiliser les ingénieurs dans le domaine de la sécurité et leur permettre de protéger les serveurs contre ce type d'attaque.</p>
 </div></div>
 <h2 id="toc"> Table des matières </h2>
 <ul>
@@ -125,16 +125,16 @@
 <li><a href="#h5">Défense</a></li>
 </ul>
 <h2 id="h2"> Pourquoi cette attaque ? </h2>
-<p>Tout site web, sauf sites statiques, héberge une base de donnée SQL. Donc tous les site web sont des potentielles victimes d'attaques par injection de SQL.</p>
+<p>Tout site web, sauf sites statiques, héberge une base de données SQL. Donc tous les sites web sont des potentielles victimes d'attaques par injection de SQL.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>D'après les chiffres d'Akamai (<a href="https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf">lien de l'article</a>), sur une étude entre Janvier 2020 et Juin 2021 :</p>
+<p>D'après les chiffres d'Akamai (<a href="https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf">lien de l'article</a>), sur une étude menée entre Janvier 2020 et Juin 2021 :</p>
 <ul>
 <li>les attaques de type injection de SQL sont les plus présentes</li>
-<li>durant la durée d'étude (18 mois) il y a eu 6.2 millards tentatives d'attaques enregistrées par inh=jection de SQL, ce qui représente 55.88% des attaques sur le web.</li>
+<li>durant la durée d'étude (18 mois) il y a eu 6.2 millards de tentatives d'attaques enregistrées par injection de SQL, ce qui représente 55.88% des attaques sur le web.</li>
 </ul>
 </div></div>
 <img src="../../Image/nb_attaque_sql.png" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0">
@@ -154,7 +154,7 @@
 <li><a href="https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate/ca-cert-firefox">BurpSuite Certificate</a></li>
 </ul>
 </div></div>
-<p>Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours proviennent de ce site :</p>
+<p>Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours provient de ce site :</p>
 <p><a href="https://portswigger.net/web-security/all-labs#sql-injection">WebSecurityAcademy - SQL injection</a></p>
 <h2 id="h4"> SQL injection </h2>
 <h3 id="h4-1"> Principe de base </h3>
@@ -163,31 +163,29 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>Pour beaucoup de fonctionnalitées d'un serveur, celui-ci va faire des appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.</p>
+<p>Beaucoup de fonctionnalités d'un serveur nécessitent appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.</p>
 </div></div>
-<p>Par exemple lors d'un connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :</p>
+<p>Par exemple lors d'une connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe. Puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :</p>
 <h4 id="h4-1-1"> Requete envoyé par l'utilisateur pour s'authentifier </h4>
-```javascript
-fetch("https://nomDuServeur/login",
-{
-    method: "POST",                     //permet d'envoyer des données au serveur
-    body: JSON.stringify(
-      {
-        username : "mon_username",      //permet d'envoyer les informations au serveur
-        password : "mon_password"
-      }
-    )
-})
-```
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>                     <span class="token comment">//permet d'envoyer des données au serveur</span>
+    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">username</span> <span class="token operator">:</span> <span class="token string">"mon_username"</span><span class="token punctuation">,</span>      <span class="token comment">//permet d'envoyer les informations au serveur</span>
+        <span class="token literal-property property">password</span> <span class="token operator">:</span> <span class="token string">"mon_password"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
 <h4 id="h4-1-2"> Interprétation par le serveur </h4>
-```sql
-SELECT * FROM users WHERE username = ' + requete.username + ' AND password = ' + requete.password + '
-```
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">' + requete.username + '</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">' + requete.password + '</span>
+</code></pre>
 <p>ce qui donne ici :</p>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'mon_username'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'mon_password'</span>
 </code></pre>
 <h4 id="h4-1-3"> Attaquer cette mécanique </h4>
-<p>L'objectif est de ne pas avoir à passer l'étape de vérification de mot de passe.</p>
+<p>L'objectif est de ne pas avoir à passer l'étape de vérification du mot de passe.</p>
 <p>Pour ça, on va utiliser une mécanique assez simple en programmation : <strong>les commentaires</strong>.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -226,11 +224,11 @@ Le serveur va rajouter un caractère d'échappement devant les caractères qu'il
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>Et là, vous êtes connecté en tant qu'administrateur du site.</p>
+<p>Et là, vous êtes connectés en tant qu'administrateur du site.</p>
 </div></div>
 <h3 id="h4-2"> UNION Attack </h3>
-<p>C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur s'appelle pas <strong>administrateur</strong>, comment est ce qu'on peut faire pour quand même se connecter ?</p>
-<p>Jusque là, on était limité par devoir faire des recherches dans la base de donnée par défaut de la requête : il est impossible de modifier la requête avant un <strong>WHERE</strong> qui se situe forcément après le <strong>FROM</strong>.<br>
+<p>C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur ne s'appelle pas <strong>administrateur</strong>, comment est ce qu'on peut faire pour quand même se connecter ?</p>
+<p>Jusque là, on était limité par le fait de devoir faire des recherches dans la table par défaut de la requête : il est impossible de modifier la requête avant un <strong>WHERE</strong> qui se situe forcément après le <strong>FROM</strong>.<br>
 <em>On veut pouvoir effectuer nos propre requêtes dans d'autres table.</em></p>
 <p>Pour cela on va utiliser le mot clé SQL <strong>UNION</strong> qui va réaliser la concaténation de 2 recherches dans la base de donnée : celle par défaut et celle injectée.</p>
 <h4 id="h4-2-1"> Spécificités d'une UNION </h4>
@@ -256,7 +254,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <p>Premièrement, il faut trouver le nombre de valeur de retour de la première recherche. Pour cela il y a <strong>2 possibilités</strong> :</p>
 <ul>
 <li>Ordonner la première recherche selon la nième colonne, grace au mot clé <strong>ORDER BY n</strong>, si il y a une errreur c'est que la colonne <strong>n</strong> n'existe pas.</li>
-<li>Faire une 2e recherche envoyant simplement des <strong>NULL</strong>, l'objectif étant de trouver combien on peut mettre de <strong>NULL</strong> sans avoir d'erreur :</li>
+<li>Faire une 2e recherche (avec une <strong>UNION</strong>) en envoyant simplement des <strong>NULL</strong>, l'objectif étant de trouver combien on peut mettre de <strong>NULL</strong> sans avoir d'erreur :</li>
 </ul>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span>
 </code></pre>
@@ -265,7 +263,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-2">
-<p>Remarque 1 : il est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé <strong>FROM</strong>, pour cela, il existe une table faite pour ça : <strong>dual</strong></p>
+<p>Remarque 1 : il n'est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé <strong>FROM</strong>, pour cela, il existe une table faite pour ça : <strong>dual</strong></p>
 </div></div>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span> <span class="token keyword">FROM</span> dual
 </code></pre>
@@ -281,7 +279,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <p>On envoie <strong>UNION 'string',NULL,NULL</strong> (si 3 colonnes), puis <strong>UNION 0,NULL,NULL</strong>, jusqu'à trouver le type de la première colonne et ainsi de suite.</p>
 <p>La remarque faite sur Oracle dans la précédente partie est toujours applicable ici.</p>
 <h4 id="h4-2-4"> 1 seule colonne </h4>
-<p>Si un seul champ string disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le username et le password d'un utilisateur), on peut utiliser la fonction <strong>CONCAT</strong> de SQL:</p>
+<p>Si un il y a uniquement un champ <em>string</em> disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le <em>username</em> et le <em>password</em> d'un utilisateur), on peut utiliser la fonction <strong>CONCAT</strong> de SQL:</p>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> CONCAT<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token string">'/'</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> users
 </code></pre>
 <h4 id="h4-2-5"> Versions </h4>
@@ -322,7 +320,7 @@ Les requêtes dépendent de la base de donnée :</p>
 </div><div class="pl-8 mr-2">
 </div></div>
 <h2 id="h5"> Défense </h2>
-<p>Il est possible de paramétriser un requête SQL, c'est à dire transformer un requête en une fonction prenant en paramètre les valeurs de la requête.</p>
+<p>Il est possible de paramétrer une requête SQL, c'est-à-dire transformer une requête en une fonction prenant en paramètre les valeurs de la requête.</p>
 <p>Au lieu d'executer :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">String query <span class="token operator">=</span> <span class="token string">"SELECT * FROM products WHERE category = '"</span><span class="token operator">+</span> input <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">;</span>
 Statement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
