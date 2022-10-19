@@ -35,6 +35,8 @@ L'idée de la programmation objet est d'encapsuler les données(i.e. les attribu
   </div>
 </div>
 
+[source](https://waytolearnx.com/2018/09/difference-entre-programmation-procedurale-et-orientee-objet.html)
+
 ### Ressources
 
 Ce petit MON se base sur le [cours de François Brucker](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/).
@@ -44,7 +46,7 @@ Ce petit MON se base sur le [cours de François Brucker](https://francoisbrucker
 Dans ce cours j'ai réalisé comme il est suggéré dans le cours de François de Brucker à la section 7 un petit jeu en ligne de commande permettant de faire combatter deux personnages. Je fais ici combattre un magicien contre un nain. Vous pourrez retrouver mon code sur [GitHub](https://github.com/nbert71/POO-Python).
 
 <div style="display: grid; place-items: center;">
-  <img src="./../images/gandalf-gimli.png" style="width: 50%;" />
+  <img src="./../images/gandalf-gimli.png" style="width: 50%; border: 0;" />
 </div>
 
 ### La classe Character
