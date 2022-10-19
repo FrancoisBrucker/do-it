@@ -34,6 +34,22 @@ Afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je 
 
 ![Capture Openclassrooms](https://i.vimeocdn.com/video/1499265044-2cd83363e9cf92fe02a6ef5aeedd9396fa7269195555af32b9be92fef6ad9583-d_640)
 
+## Sommaire
+
+- [Introduction](#introduction)
+- [Sommaire](#sommaire)
+- [Présentation](#présentation)
+  - [Ressources](#ressources)
+- [Résumé du MON](#résumé-du-mon)
+  - [Présentation du JSON](#présentation-du-json)
+  - [Utilisation du DOM](#utilisation-du-dom)
+  - [Présentation des API](#présentation-des-api)
+  - [Présentation de la programmation asynchrone](#présentation-de-la-programmation-asynchrone)
+  - [Présentation de Fetch](#présentation-de-fetch)
+  - [Présentation du Local Storage](#présentation-du-local-storage)
+  - [Présentation des librairies](#présentation-des-librairies)
+  - [Présentation de jQuery](#présentation-de-jquery)
+
 ## Présentation
 
 Ce MON a pour objectif d'**apprendre à utiliser le DOM et les données (API, JSON, etc.) à l'aide de JavaScript** afin de créer des **pages web dynamiques**. À l'aide du DOM, on pourra générer automatiquement des éléments HTML à partir de données stockées dans des fichiers, des bases de données ou sur des serveurs distants.
