@@ -44,6 +44,7 @@ La formation est **très claire et très simple à suivre**, comme la plupart de
 
 - [Créez des pages web dynamiques avec JavaScript (Openclassrooms)](https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript)
 - [Learn DOM Manipulation In 18 Minutes (YouTube)](https://youtu.be/y17RuWkWdn8)
+- [Introduction à jQuery](https://openclassrooms.com/fr/courses/3504441-introduction-a-jquery)
 
 {% endchemin %}
 
@@ -203,5 +204,33 @@ Les **librairies** sont des **bibliothèques** qui contiennent des **fonctions**
 
 Pour utiliser une librairie, il faut la **télécharger** et la **inclure** dans notre page web. Il est également possible d'utiliser des **CDN** (Content Delivery Network) qui permettent d'inclure une librairie dans notre page web sans avoir à la télécharger. Les librairies sont très utiles pour, par exemple, **réaliser des animations** ou pour **générer des graphiques**.
 
+### Présentation de jQuery
+
+![Introduction à jQuery](https://i.vimeocdn.com/video/822498516-042feb94146f0232cf0caa3c3d498aee6056890e327b1093b3eb3d838dbd686e-d_640)
+
+Un exemple de librairie est **jQuery** qui permet de **sélectionner** des éléments dans le **DOM** à l'aide de la méthode `$(selector)`. En paramètre, on passe le **sélecteur** de l'élément à sélectionner, qui peut être un **sélecteur CSS** ou un **sélecteur jQuery**. Cette méthode retourne un **objet jQuery** qui contient des **méthodes** qui permettent de **modifier** les éléments sélectionnés.
+
+Pour utiliser jQuery, il faut inclure le fichier `jquery.min.js` dans notre page web comme ceci :
+
+```html
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+```
+
+On pourra ensuite utiliser les méthodes de jQuery comme ceci :
+
+```javascript
+// Sans jQuery
+document.querySelector("h1").style.color = "red";
+// Avec jQuery
+$("h1").css("color", "red");
+```
+
+Une formation complète sur jQuery est disponible sur **OpenClassrooms** :
+
+{% chemin %}
+
+[Introduction à jQuery](https://openclassrooms.com/fr/courses/3504441-introduction-a-jquery)
+
+{% endchemin %}
 
 [<-- Retour](../)
