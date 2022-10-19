@@ -16,7 +16,7 @@ Mes MON de l'année 2022/2023
 
 [Automate the boring stuff with python](./Mes_MON/gglAppsScript) (Excel spreadsheets)
 
-[CSS, animation, SASS](./Mes_MON/CSS)
+[CSS et introduction à SASS](./Mes_MON/CSS)
 
 ## MONs temps 2:
 

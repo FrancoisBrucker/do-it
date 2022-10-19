@@ -16,6 +16,7 @@ But : Suivre un tutoriel pour créer un blog utilisant du React et Next.js
 
 {% info %} Tout le code de mon projet est disponible sur [mon repo GitHub](https://github.com/TuncayBilgi/artblog) et le [tutoriel est disponible ici](https://www.youtube.com/watch?v=HYv55DhgTuA&ab_channel=JavaScriptMastery){% endinfo %}
 
+
 # Compétences acquises lors du PoK :
 
 - Compétences :
@@ -49,8 +50,8 @@ Un site de base poosède 3 composantes :
 - Une base de données
 
 Ces trois éléments communiquent de la sorte : 
-Le backend va chercher des ressoucres dans la base de données et les envoies au frontend pour qu'il puisse les afficher à l'utilisateur.
-Normalement,pendant le développement, le backend et la base de données sont stockés en local sur la machine du développeur.
+Le backend va chercher des ressoucres dans la base de données et les envoie au frontend pour qu'il puisse les afficher à l'utilisateur.
+Normalement, pendant le développement, le backend et la base de données sont stockés en local sur la machine du développeur.
 
 Ici, nous utilisons un Headless CMS qui est un Content Managning Service :
 
@@ -76,15 +77,17 @@ Cependant, j'aurais aimé faire plus de Backend, mais d'un coté le HeadlessCMS 
 
 On peut voir ici l'interface du CMS avec mon schéma de données :
 
-<img src="./images/graphCMSinterface.png" alt="Interface CMS" style="height: 125px; margin: 0 auto;width:250px" />
+<img src="./images/graphCMSinterface.png" alt="Interface CMS" style="height: 250px; margin: 0 auto;width:500px" />
 
 Ici des captures d'écrans de mon blog avec des publications test :
 
-<img src="./images/ArtblogInterface.png" alt="page de garde du site" style="height: 250px; margin: 0 auto; width : 500px" />
-<img src="./images/artblogForm.png" alt="Formulaire de comentaire" style="height: 250px; margin: 0 auto; width : 400px" />
-<img src="./images/artblogComments.png" alt="Affichage de commentaires" style="height: 250px; margin: 0 auto; width : 500px " />
+<div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
 
+<img src="./images/ArtblogInterface.png" alt="page de garde du site" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 1 ;grid-row : 1" />
+<img src="./images/artblogForm.png" alt="Formulaire de comentaire" style="height: 250px; margin: 0 auto; width : 400px,grid-column : 2 ;grid-row : 1" />
+<img src="./images/artblogComments.png" alt="Affichage de commentaires" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 3 ;grid-row : 1 " />
 
+</div>
 
 # Détail des sprints :
 
@@ -107,12 +110,12 @@ Il y a au total deux sprints de 1 semaine et demi :
 - D'où viennent les différences ? :
   - Le tutoriel est à un rythme très soutenu qui laisse peu de place aux modifications.
   - Passer trop de temps à définir mon projet.
-  - Je n'ai pas pus faire de Back car il n'y en a pas besoin dans le blog avec un CMS.
+  - Je n'ai pas pu faire de Back car il n'y en a pas besoin dans le blog avec un CMS.
 
 - A faire pour le prochain sprint :
   - Terminer le tutoriel
   - Alimenter le blog
-  - Ajouter une focntionnalité qui nécéssite du Back : Authentication ou Envoie de Mail automatique.
+  - Ajouter une fonctionnalité qui nécéssite du Back : Authentication ou Envoie de Mail automatique.
 
 ## Milieu -> Fin
  - Ce que j'ai fais :
@@ -129,8 +132,8 @@ Il y a au total deux sprints de 1 semaine et demi :
 
 - Idée pour la suite ? :
 J'aimerais publier mon site sur un serveur sans utiliser vercel, car vercel fait tout tout seul et ça n'est pas le but.
-Peut etre créer un docker pour le projet ?
-Il faudrait aussi terminer les fonctionnalitées qui n'ont pas étés ajoutées et mettre du contenue.
+Peut être créer un docker pour le projet ?
+Il faudrait aussi terminer les fonctionnalités qui n'ont pas été ajoutées et mettre du contenue.
 
 
 

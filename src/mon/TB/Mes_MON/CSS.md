@@ -5,6 +5,9 @@ title: "CSS et introduction à SASS"
 authors:
   - Timothée Bermond
 
+tags :
+  - 'CSS'
+  - 'SASS'
 ---
 
 <!-- début résumé -->
@@ -347,4 +350,176 @@ ul {
 }
 ```
 
+{% attention "**Attention** à ne pas créer des sélecteurs trop spécifiques." %}
+On pourrait donc être tenté de reproduire une copie conforme de la structure de notre HTML.
+Cela n'est pas une bonne idée car on va se retrouver avec des sélécteurs de haute spécificité qui seront très durs à modifier.
+{% endattention %}
 
+**Utiliser des sélécteurs BEM avec Sass**
+
+On peut fusionner la méthodologie BEM et le nesting de Sass.
+
+Pour cela on utilise les & ce qui nous permet d'être plus clair visuellement et de ne pas avoir à répeter le nom des blocs ou des éléments : 
+```scss
+.block{
+  background-color: #15DEA5;
+  &__element {
+      color: #fff;
+        &--modifier {
+            background-color: #001534;
+  }
+  }
+}
+```
+
+Ce qui nous donne en CSS compilé :
+
+```css
+.block {
+  background-color: #15DEA5;
+}
+
+.block__element {
+  color: #fff;
+}
+
+.block__element--modifier {
+  background-color: #001534;
+}
+```
+
+### Améliorer la maintenabilité du code avec les variables Sass
+
+Afin de pouvoir rapidement modifier une valeur qui apparait de nombreuses fois dans le CSS, il est possible d'utiliser les variables Sass.
+Par exemple, si l'on retrouve un grand nombre de fois la couleur vert menthe dans notre fichier, il est possible d'écrire *$color-primary: #15DEA5* au début de votre fichier .scss et puis de remplacer tous les *#15DEA5* par *$color-primary* dans le reste du fichier. Comme ça si l'on décide de changer la couleur principale de notre site il suffit de changer le code hexadécimal et tous les éléments changeront de couleur plutôt que de devoir les changer 1 à 1.
+
+{% attention "Nommer la variable en fonction de son rôle" %}
+On pourrait donc être tenté de nommer la variable *#mint* (vert menthe) mais si l'on change de couleur par du bleu alors il faudrait soit changer tous *#mint* du fichier soit juste changer le *$mint: #15DEA5* au début mais cela créérait une confusion car la couleur ne serait plus vert menthe mais bleu.
+{% endattention %}
+
+Il existe 8 types de variables dans Sass:
+- les couleurs;
+- les chaines de caractères
+- les nombres
+- les listes et maps
+- les booléens, les nulls et les fonctions
+
+### Les mixins Sass
+
+Les mixins fonctionnent un peu comme une variable sauf qu'elles stockent des blocs entiers de code. 
+C'est donc très pratique pour stocker des ensembles de règles CSS que l'on utilise fréquemment.
+```scss
+@mixin mixin-name {
+  css-property: value;
+}
+```
+
+Par exemple, si l'on veut ajouter des ombres à de nombreux textes on peut créer une mixin :
+```scss
+@mixin heading-shadow{
+  text-shadow: .55rem .55rem #15DEA5;
+}
+```
+Et puis l'ajouter dans notre sélecteur :
+```scss
+.form {
+  &__heading {
+      @include heading-shadow;
+  }
+}
+```
+
+Il est également possible d'ajouter des arguments à nos mixins :
+```scss
+@mixin heading-shadow($colour){
+  text-shadow: .55rem .55rem $colour;
+}
+```
+Ce qui nous permet ici d'appliquer les ombres de la couleur que l'on veut.
+
+On peut régler la valeur par défaut qui sera utilisé en écrivant :
+```scss
+@mixin heading-shadow($colour: $colour-primary){
+  text-shadow: .55rem .55rem $colour;
+}
+```
+Si aucune couleur n'est spécifiée alors l'ombre sera de la couleur principale (colour-primary).
+
+### Écrire du code plus propre grâce aux extensions Sass
+
+Attention en utilisant trop de mixins cela créer une duplication de l'ensemble de règles dans le CSS compilé. Il comporte de multiples répétitions.
+
+Heureusement, les extensions existent. Pour cela on utilise un placeholder, càd un bloc de code qui va être réutilisé dans les à l'aide de *@extend* pour les sélecteurs voulus.
+```scss
+%typography {
+  color: $colour-primary;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+h1 {
+@extend %typography;
+}
+textarea {
+  @extend %typography;
+}
+button {
+  @extend %typography;
+}
+input {
+  @extend %typography;
+}
+```
+Ainsi lorsque l'on regarde le CSS compilé, il n'y a plus de répétitions mais une liste des sélecteurs concernés :
+```css
+h1, textarea, button, input {
+color: #15dea5;
+font-size: 2rem;
+font-weight: 100;
+line-height: 1.7;
+}
+```
+
+### Mixins Vs Extensions
+
+Bien que les extensions évitent les répétions, il est préférable d'utiliser les mixins. En effet, les extensions démolissent l'ordre et la prédictibilité du codebase. De plus, les extensions n'acceptent pas d'arguments contrairement aux mixins.
+
+### Conditions dans Sass
+
+Il est possible d'instaurer des conditions dans Sass.
+Cela s'écrit :
+```scss
+@if ( lightness($colour) < 25% ) {
+  $colour: lighten($colour, 10%);
+}@else{
+  $colour: darken($colour, 10%);
+}
+```
+On peut donc créer des mixins modulables en fonctions de certains paramètres ;
+```scss
+@mixin heading-shadow($colour: $colour-primary, $size: $heading-shadow-size){
+  @if ( lightness($colour) < 25% ) {
+      $colour: lighten($colour, 10%);
+  }@else{
+      $colour: darken($colour, 10%);
+  }
+  text-shadow: $size $size $colour;
+}
+```
+
+### Créer des fonctions 
+
+Il est possible de créer des fonctions avec le *@function Nom_de_la_fonction(Arguments)*.
+Pour récupérer une valeur on utilise *@return*.
+Voici un exemple de fonction qui modifie la couleur :
+```scss
+@function lightness-shift($colour){
+  @if ( lightness($colour) < 25% ) {
+      @return lighten($colour, 10%);
+  }@else{
+      @return darken($colour, 10%);
+  }
+}
+```
+
+Je n'ai pas eu le temps de finir toute la formation openclassrooms, il me reste encore la dernière partie : ["Optimisez votre code en utilisant les techniques avancées de Sass"](https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599201-utilisez-le-systeme-7-1-pour-une-codebase-plus-simple-a-gerer)

@@ -28,11 +28,11 @@ Le MON balaie les notions suivantes :
 	 - La philosophie
 	 - pytest
 
-   Il a été réaliser en suivant deux ressources en particulier : 
+   Il a été réalisé en suivant deux ressources en particulier : 
    - [Cours de M.Brucker sur la POO en python](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/)
-   - [MOOC python](https://www.youtube.com/playlist?list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-) avancé, a partir du chapitre 9
+   - [MOOC python](https://www.youtube.com/playlist?list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-) avancé, à partir du chapitre 9.
    
-   Tout cela accompagnées de recherches sur StackOverflow pour répondre à des questions précises sur des concepts inconnus.
+   Tout cela accompagné de recherches sur StackOverflow pour répondre à des questions précises sur des concepts inconnus.
 
 ## La Programmation Orientée Objet :
 
