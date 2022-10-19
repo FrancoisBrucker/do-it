@@ -230,6 +230,14 @@ Pour utiliser une librairie, il faut la **télécharger** et la **inclure** dans
 
 ### Présentation de jQuery
 
+{% chemin %}
+
+Une formation complète sur jQuery est disponible sur **OpenClassrooms** :
+
+- [Introduction à jQuery](https://openclassrooms.com/fr/courses/3504441-introduction-a-jquery)
+
+{% endchemin %}
+
 ![Introduction à jQuery](https://i.vimeocdn.com/video/822498516-042feb94146f0232cf0caa3c3d498aee6056890e327b1093b3eb3d838dbd686e-d_640)
 
 Un exemple de librairie est **jQuery** qui permet de **sélectionner** des éléments dans le **DOM** à l'aide de la méthode `$(selector)`. En paramètre, on passe le **sélecteur** de l'élément à sélectionner, qui peut être un **sélecteur CSS** ou un **sélecteur jQuery**. Cette méthode retourne un **objet jQuery** qui contient des **méthodes** qui permettent de **modifier** les éléments sélectionnés.
@@ -248,13 +256,5 @@ document.querySelector("h1").style.color = "red";
 // Avec jQuery
 $("h1").css("color", "red");
 ```
-
-Une formation complète sur jQuery est disponible sur **OpenClassrooms** :
-
-{% chemin %}
-
-[Introduction à jQuery](https://openclassrooms.com/fr/courses/3504441-introduction-a-jquery)
-
-{% endchemin %}
 
 [<-- Retour](../)
