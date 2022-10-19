@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON 2: MOOC Design Thinking"
+title: "MON 2: MOOC Design Thinking for innovation"
 authors:
   - Ossama Abdane
 ---
@@ -28,16 +28,16 @@ Le design thinking, va s'opposer à cette idée et le désordre se transforme en
 
 A travers les question suivantes , on va pouvoir mener un projet à son terme. 
 
-- **What is ?** : On va essayer de comprendre ce qu'il se passe actuellement, comment ça fonctionne ? Il faut réalsier une immersion élargir et peut-être même à modifier complètement notre définition du problème ou de l'opportunité que nous voulons aborder.
+- **What is ?** : On va essayer de comprendre ce qu'il se passe actuellement, comment ça fonctionne ? Il faut réalsier une immersion, élargir et peut-être même modifier complètement notre définition du problème ou de l'opportunité que nous voulons explorer.
 
-- **What if ?** : On va commencer à générer des idées et à explorer des solutions possibles. Un brainstorming va avoir lieu et tout les idées vont être analyser en utilisant les données que nous avons recueillies, les problèmes que nous avons identifié lors de l'immersion.  
+- **What if ?** : On va commencer à générer des idées et à explorer des solutions possibles. Un brainstorming va avoir lieu et toutes les idées vont être analyser en utilisant les données que nous avons recueillies et les problèmes que nous avons identifiés lors de l'immersion.  
 
-- **What wows ?** : Nous allons traiter de façon explicite chacun de nos concepts que les 2 premières questions nous ont permis de mettre en avant. Il va falloir trancher et faire des choix entre les différentes idées pour choisir les idéew qui vont répondre aux mieux à nos problématiques.
+- **What wows ?** : Nous allons traiter de façon explicite chacun de nos concepts que les 2 premières questions nous ont permis de mettre en avant. Il va falloir trancher et faire des choix entre les différentes idées pour choisir les idées qui vont répondre aux mieux à nos problématiques.
 
-- **What works ?** : On va passer à la phase de test. On va présenter un protype à un groupe de personnes de petites tailles et attendre leurs retours. Si la solution fonctionne, on va l'améliorer avec les retours et la présenter à un plus grans panel de personnes. On continue jusqu'à aboutir à un produit fini et prêt à être commercialisé.
+- **What works ?** : On va passer à la phase de test. On va présenter un protype à un petit groupe de personnes et attendre leurs retours. Si la solution fonctionne, on va l'améliorer avec les retours et la présenter à un plus grans panel de personnes. On continue jusqu'à aboutir à un produit fini et prêt à être commercialisé.
 
 Le design thinking, contrairement aux autres processus, va placer l'**utilisateur** au centre. Il souligne l'importance de l'exploration profonde de la vie et des problèmes des personnes à qui nous espérons apporter des solutions. 
-Ce processus ca également résenter **plusieurs possibilités** et non pas une solution unique pour laisser aux parties prenantes le choix de la solution finale. 
+Ce processus va également résenter **plusieurs possibilités** et non pas une solution unique pour laisser aux parties prenantes le choix de la solution finale. 
 Enfin, le design thinking est **itératif**, il va à travers des cycles de tests sans cesse s'améliorer en prenant compte les retours des utilisateurs. 
 
 ### Dans quels cas utiliser le design thinking ?
@@ -65,8 +65,7 @@ Pour repérer un esprti bien préparé, on se base sur 3 critères :
 A travers un exemple concret, nous allons appliquer la méthode du Design Thinking.
 Chris est un entrepreneur qui a eu idée d'essayer de repondre à la problématique suivante :
 **Pourrait-on utiliser les réseaux sociaux pour aider les gens à adopter des modes de vie plus sains ?**
-Pour ce faire, il a fait appel à Essential Design, une société de conseil en innovation basée à Boston.
-La question posée est large, on va donc se servir des connaissances acquise précedemment pour y répondre. 
+Pour ce faire, il a fait appel à Essential Design, une société de conseil en innovation basée à Boston. La question posée est large, on va donc se servir des connaissances acquise précedemment pour y répondre. 
 
 #### What is ?
 Les clients potentiels pour un tel service étaient très diversifiées. Ils étaient âgés de 20 à 70 ans, et avaient un mélange de situations familiales, de niveaux de motivation et de connaissances technologiques. L'entreprise a commencé par choisir trois douzaines de candidats représentant diverses démographies et leur ont donné plusieurs questionnaires à remplir avant leur entretien.
