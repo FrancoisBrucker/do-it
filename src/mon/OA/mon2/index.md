@@ -6,7 +6,7 @@ authors:
   - Ossama Abdane
 ---
 <!-- début résumé -->
-Mnn second MON sur le Design Thinking
+Mon second MON sur le Design Thinking
 <!-- fin résumé -->
 
 
