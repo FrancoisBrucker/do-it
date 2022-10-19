@@ -20,6 +20,14 @@ Ce MON a pour objectif d'apprendre à utiliser le DOM et les données (API, JSON
 
 [<-- Retour](../)
 
+{% prerequis "Prérequis :"  %}
+
+Ce MON est destiné aux personnes **ayant déjà des bases en JavaScript et en HTML/CSS**.
+
+Si vous souhaitez vous initier à JavaScript, je vous invite à consulter cette formation OpenClassrooms : [Apprenez à programmer avec JavaScript](https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript)
+
+{% endprerequis %}
+
 ## Introduction
 
 Afin d'obtenir les connaissances nécessaires à la réalisation de mon POK, je souhaite me former au **développement Web Full Stack**. Pour y parvenir, il m'a semblé nécessaire de choisir deux MON proposés par la plateforme de formation [Openclassrooms](https://openclassrooms.com/fr). Ce premier MON explique comment utiliser le language Javascript pour parvenir à développer des pages web dynamiques, en apprenant notamment à utiliser les fichiers JSON, les API ou encore des librairies.
