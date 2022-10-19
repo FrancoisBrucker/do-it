@@ -5,6 +5,9 @@ title: "CSS et introduction à SASS"
 authors:
   - Timothée Bermond
 
+tags :
+  - 'CSS'
+  - 'SASS'
 ---
 
 <!-- début résumé -->
