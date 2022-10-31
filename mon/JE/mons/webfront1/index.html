@@ -93,6 +93,16 @@ Il existe aussi un élément <code>&lt;img&gt;</code>, avec une balise qui est s
 <p>La mise en page apparait comme la grande force de CSS, et aussi la partie la plus compliquée de la chose. Il y a plusieurs layout disponibles : la grille, les multicolonnes, et plus récemment la flexbox. La flexbox a l'avantage d'être plus responsive nativement que les autres layouts, ce qui permet d'éviter la multiplication des medias queries. Le lien suivant d'<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox">OpenClassrooms</a> m'a permis de comprendre beaucoup mieux la puissance du layout flex, notamment avec la fonction wrap.  Ce <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background">lien</a> m' a aussi permis de voir beaucoup plus de choses sur flex.</p>
 <h2>Bootstrap</h2>
 <p>J'ai manqué de temps pour voir Bootstrap de manière exhaustive et organiser mes pensées mais je suis toujours en train de regarder ces liens actuellement, la <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">documentation Bootstrap</a> ainsi que le <a href="https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5">cours OpenClassrooms</a>. je prendrais sûrement un peu de temps pour mieux organiser cette partie plus tard.</p>
+<p>Bootstrap est un framework qui facilite la mise en place de pages aux layouts agréables et responsives. Bootstrap construit ses propres classes à rajouter aux différents éléments HTML afin de leur appliquer les propriétés Bootstrap.</p>
+<p>Un exemple de structure d'un élément bootstrap se construit comme ceci :</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        ...
+      </div>
+    </div>
+  </div>
+<p>Concrètement, la page Bootstrap se construit sur un concept de grille, à 12 colonnes. On accède à la grille tout d'abord à l'aide d'une classe container. Cette classe met en place la grille, à laquelle les autres éléments peuvent accéder, tout d'abord par les rows, c'est-à-dire les lignes de la grille, et les colonnes, avec différents agencements pour différentes tailles d'écran ou <strong>breakpoints</strong>.</p>
 
 
 </article>
