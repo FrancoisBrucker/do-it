@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Le MON-2 de Léonard</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Le MON-2 de Léonard</h1>
+  <h1  class="mb-1">Le MON-2 de Léonard</h1>
   <div class="mb-4">
     
 
@@ -118,7 +120,7 @@
         self.interets = 0.05
 
     def argent(self):
-        print("J'aime l'argent")
+        print(&quot;J'aime l'argent&quot;)
 </code></pre>
 <p>On doit donc faire une instanciation:</p>
 <pre><code>epargnetest = Epargne()
@@ -131,11 +133,11 @@ epargnetest.argent()
 <p>Il sont définis dans le corps de la classe, et on utilise <strong>@classmethod</strong> avec un premier paramètre <strong>cls</strong></p>
 <pre><code>class Epargne:
 
-    banque = ("bnp", "creditagricole")
+    banque = (&quot;bnp&quot;, &quot;creditagricole&quot;)
 
     @classmethod
     def argent(cls, monnaie):
-        return("J'aime l'argent et surtout les", monnaie)
+        return(&quot;J'aime l'argent et surtout les&quot;, monnaie)
 </code></pre>
 <p>On peut récupérer les variables de classe sans instanciation</p>
 <pre><code>Epargne.banque
@@ -152,11 +154,11 @@ print(Epargne.argent(euros))
         self.interets = 0.05
 
     def _get_interets(self):
-        print "Récupération des interets"
+        print &quot;Récupération des interets&quot;
         return self.interets
 
     def _set_interets(self, change):
-        print "Les interets ont changé"
+        print &quot;Les interets ont changé&quot;
         self.interets  =  change
 
     interets=property(_get_interets, _set_interets)
@@ -164,7 +166,7 @@ print(Epargne.argent(euros))
 <p>Si interets change, on aura un message.<br>
 Ce n'est pas obligatoire mais ça apporte de la clarté.</p>
 <h3>La fonction dir, l'attribut __ dict __</h3>
-<p>La fonction <strong>dir</strong> permet de trouver les méthodes de l'objet, l'attribut <strong>__ dict __<strong> ses attributs.</strong></strong></p>
+<p>La fonction <strong>dir</strong> permet de trouver les méthodes de l'objet, l'attribut <strong>__ dict __<strong> ses attributs.</p>
 <h2>L'héritage</h2>
 <p>En gros, l'héritage permet de faire une <strong>sous-classe</strong> qui possède les mêmes attributs plus d'autres attributs spécifiques et d'autres méthodes, ou à l'inverse une super-classe qui en possède moins.<br>
 Cette méthode permet de simplifier le code.</p>
@@ -178,7 +180,7 @@ Cette méthode permet de simplifier le code.</p>
 <p>On peut à partir de cette classe créer une sous-classe qui va rajouter des éléments</p>
 <pre><code>class SousEpargne(Epargne):
     def argent(self):
-        print("J'aime l'argent")
+        print(&quot;J'aime l'argent&quot;)
 </code></pre>
 <p>On peut également remplacer les fonctions compléter les attributs:</p>
 <pre><code>class SousEpargne(Epargne):

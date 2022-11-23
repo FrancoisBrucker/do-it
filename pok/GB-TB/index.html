@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Le POK de Timothée et Gabriel</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Le POK de Timothée et Gabriel</h1>
+  <h1  class="mb-1">Le POK de Timothée et Gabriel</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -83,14 +85,14 @@ Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'o
 Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.</p>
 <p><a href="https://github.com/gabrielbarbe00/POK-de-Gabriel.git">lien du projet</a></p>
 <!-- Fin Résumé -->
-<img src="./Images/Accueil.png">
+<img src="./Images/Accueil.png"/>
 <h3>Partie Gabriel</h3>
 <p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br><br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc.</p>
 <p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.<br>
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
 <p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc.</p>
-<img src="./Images/Page_Gaby.png">
+<img src="./Images/Page_Gaby.png"/>
 <p>J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">             <span class="token keyword">function</span> <span class="token function-name function">choixCoups</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 var <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
@@ -115,8 +117,8 @@ Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot d
                 PFC<span class="token punctuation">(</span>J1,J2<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
 </code></pre>
-<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton "annuler" du prompt n'annule pas notre demande et affiche "entrez un coup valide". De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. <hr><br>
-J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur "jouer" une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).</p>
+<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton &quot;annuler&quot; du prompt n'annule pas notre demande et affiche &quot;entrez un coup valide&quot;. De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. <hr><br>
+J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur &quot;jouer&quot; une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">            <span class="token keyword">function</span> <span class="token function-name function">choixCoups2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 var html <span class="token operator">=</span> document.querySelector<span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -168,9 +170,9 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
             <span class="token punctuation">}</span>
 </code></pre>
 <p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br><br>
-J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais. <br></p>
-<img src="./Images/Choix.png">
-<img src="./Images/Reset.png">
+J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du &quot;prompt&quot;, j'avais aussi mon élèment &quot;panel&quot; qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le &quot;resetbutton&quot; n'aparaissait pas comme je le souhaitais. <br></p>
+<img src="./Images/Choix.png"/>
+<img src="./Images/Reset.png"/>
 Le reste du code est bien sur disponible via le lien en haut de page. 
 <h2> Partie Timothée</h2>
 <p>Pour ma part, j'ai choisi de créer une roulette qui permet de sélectionner aléatoirement entre 2 à 4 choix (c'est ensuite facile d'ajouter plus de choix cela demande juste un peu plus de temps).</p>
@@ -192,7 +194,7 @@ Le reste du code est bien sur disponible via le lien en haut de page.
 </ul>
 <h5 id="1-1"> Récupération des choix</h5>
 <p>J'ai choisi d'utilser des inputs pour la récupération des choix.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
 </code></pre>
@@ -202,14 +204,14 @@ Pour ce faire j'utilise la fonction :</p>
 </code></pre>
 <h5 id="1-2"> Limitation du nombre de caractères par choix</h5>
 <p>Pour cela il suffit d'utiliser la propriété <em>maxLength</em> qui permet de fixer le nombre maximum de caractères dans un input.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text_choix1<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre>
 <h5 id="1-3"> Modification du nombre de choix</h5>
 <p>J'ai également ajouté des boutons qui permettent d'ajouter ou de supprimer certains choix.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton_add2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton_add2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bouton<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>En utilisant la fonction <em>addEventListener</em> et les propriétés <em>display</em> on peut faire apparaitre et disparaitre des <em>div</em> lorsque l'on clique sur un bouton.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">bouton_add2<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">bouton_add2<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 div_choix3<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"flex"</span><span class="token punctuation">;</span>
 bouton_add2<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
 nbr_choice <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
@@ -218,7 +220,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <p>J'ai également ajouté un compteur pour savoir le nombre de choix sélectionnés.</p>
 <h5 id="1-4"> Redirection vers la page contenant la roulette</h5>
 <p>J'ai ajouté un bouton suivant qui prend en compte le nombre de choix afin de rediriger vers la bonne page avec la fonction <em>location.href</em> ainsi que d'enregistrer les choix dans le <em>localStorage</em>.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"bouton_suivant"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"bouton_suivant"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> text_choix1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
   localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">,</span>text_choix1<span class="token punctuation">)</span>
   <span class="token keyword">let</span> text_choix2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
@@ -261,7 +263,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <span class="token punctuation">}</span>
 </code></pre>
 <p>J'arrive donc à cette page :<br>
-<img src="./Images/Index_sans_css.jpg"></p>
+<img src="./Images/Index_sans_css.jpg"/></p>
 <p>Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.</p>
 <h4> Mise en page</h4>
 <p>Pour cela j'ai ajouté un <em>header</em> en accord avec celui que Gabriel a mis dans sa partie.</p>
@@ -270,7 +272,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <p>J'ai créé des classes afin d'appliquer un style à mes différents éléments.</p>
 <p>J'ai enfin utilisé la caractéristiques <em>placeholder</em> afin d'écrire les numéros des choix dans les input au lieu de les mettre au dessus.</p>
 <p>Je suis donc arrivé à ce résultat là:</p>
-<img src="./Images/index_avec_css.jpg">
+<img src="./Images/index_avec_css.jpg"/>
 <h3 id="2"> Page pour chaque roulette</h3>
 <p>J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.</p>
 <p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.<br>
@@ -295,7 +297,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
     document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>roue<span class="token punctuation">)</span><span class="token punctuation">.</span>classList <span class="token operator">=</span> <span class="token string">"tourne"</span>
     random_number <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">3000</span><span class="token operator">-</span><span class="token number">1000</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1000</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>random_number<span class="token punctuation">)</span>
-    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>roue<span class="token punctuation">)</span><span class="token punctuation">.</span>classList <span class="token operator">=</span> <span class="token string">"stop"</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>random_number<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
@@ -303,7 +305,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
 <p>Cette fonction se lance lorsque l'on clique sur le bouton start.</p>
 <p>Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.</p>
 <p>J'ai donc obtenu cette page :<br>
-<img src="./Images/roulette.jpg"></p>
+<img src="./Images/roulette.jpg"/></p>
 
 
 </article>

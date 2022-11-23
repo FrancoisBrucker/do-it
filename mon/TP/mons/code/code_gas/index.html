@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>MON 2 : Google App Scripts</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">MON 2 : Google App Scripts</h1>
+  <h1  class="mb-1">MON 2 : Google App Scripts</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -119,7 +121,7 @@ function <span class="token function">envoiEmail</span><span class="token punctu
   options<span class="token punctuation">[</span>'inlineImages'<span class="token punctuation">]</span> <span class="token operator">=</span> inlineImages<span class="token punctuation">;</span>
   <span class="token keyword">try</span> <span class="token punctuation">{</span>
     <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Envoi convocation à :"</span><span class="token operator">+</span>mailTo<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">MailApp</span><span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>mailTo<span class="token punctuation">,</span> mailSubject<span class="token punctuation">,</span> mailBodyHTML<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">/</span>g<span class="token punctuation">,</span> ''<span class="token punctuation">)</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">MailApp</span><span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>mailTo<span class="token punctuation">,</span> mailSubject<span class="token punctuation">,</span> mailBodyHTML<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token operator">></span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">></span><span class="token operator">/</span>g<span class="token punctuation">,</span> ''<span class="token punctuation">)</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>

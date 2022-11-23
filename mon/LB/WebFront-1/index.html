@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Le MON-1 de Léonard</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Le MON-1 de Léonard</h1>
+  <h1  class="mb-1">Le MON-1 de Léonard</h1>
   <div class="mb-4">
     
 
@@ -77,7 +79,7 @@
 <h2>Les possibilités offertes par le HTML et ses particularités.</h2>
 <h3>Les balises</h3>
 <p>Les balises nous permettent d'indiquer la fonction du contenu qu'elle encadre, avec une balise ouvrante et une balise fermante.</p>
-<p>Il faut faire attention : l'HTML est utilisé pour le fond du document plus que sur la forme contrairement au css. Certaines balises: <strong>"em"</strong>, <strong>"strong"</strong>, <strong>"mark"</strong> modifient l'aspect du texte, mais pour autant ce n'est pas leur fonction principale : elles servent surtout aux moteurs de recherche, à l'ordinateur.</p>
+<p>Il faut faire attention : l'HTML est utilisé pour le fond du document plus que sur la forme contrairement au css. Certaines balises: <strong>&quot;em&quot;</strong>, <strong>&quot;strong&quot;</strong>, <strong>&quot;mark&quot;</strong> modifient l'aspect du texte, mais pour autant ce n'est pas leur fonction principale : elles servent surtout aux moteurs de recherche, à l'ordinateur.</p>
 <h3>Les balises qui structurent la page</h3>
 <p>Je ne vais pas m'attarder sur toutes les balises car je connais déjà un peu le html. Mais les balises qui structurent la page me sont étrangères en général.</p>
 <ul>
@@ -99,7 +101,7 @@
 <h3>Ajouter des images</h3>
 <p>On peut également grâce à l'HTML insérer des images et des GIF. Pour les images, le format bitmap n'est pas adapté car il est trop lourd. Il faut faire attention aux dimensionnements de l'image également.</p>
 <h3>Connecter au JavaScript</h3>
-<p>On peut à l'aide de l'HTML faire en sorte de lancer une fonction Javascript existante dans le Script de la page en mettant un attribut <strong>"onclick = "lafonction()"</strong> à un élément HTML. On peut le faire avec un bouton par exemple.</p>
+<p>On peut à l'aide de l'HTML faire en sorte de lancer une fonction Javascript existante dans le Script de la page en mettant un attribut <strong>&quot;onclick = &quot;lafonction()&quot;</strong> à un élément HTML. On peut le faire avec un bouton par exemple.</p>
 <h3>L'élément tableau</h3>
 <p>Cet élément est intéressant en HTML. Pour le construire, on utilise la balise <strong>table</strong>. <strong>tr</strong> détermine le début (et la balise fermante la fin) d'une ligne et <strong>td</strong> le début et la fin d'une cellule. On peut utiliser <strong>collapse</strong> pour coller les lignes du tableau, la valeur par défaut étant des lignes séparées.</p>
 <p>Pour la ligne d'en-tête du tableau on utilise la balise <strong>th</strong> pour les cellules.</p>
@@ -163,18 +165,18 @@ La dernière option est plus propre et permet de faire en sorte de pouvoir utili
 <h3>La manipulation</h3>
 <p>On peut utiliser les opérateurs normaux pour influer sur les variables (+, -, +=, -=, *, /, *=, /=)</p>
 <h2>Les types primitifs</h2>
-<p>Il y a trois types primitifs : les nombres, les chaînes de caractères et les booléens. Les <strong>string</strong> peuvent se concaténer avec "+". Dans JavaScript, chaque variable peut changer de type (typage faible).</p>
+<p>Il y a trois types primitifs : les nombres, les chaînes de caractères et les booléens. Les <strong>string</strong> peuvent se concaténer avec &quot;+&quot;. Dans JavaScript, chaque variable peut changer de type (typage faible).</p>
 <p>Il vaut mieux utiliser les constantes tant que possible.</p>
 <h2>Les objets</h2>
 <p>Plusieurs objets ayant des points communs et pouvant être expliqués de la même manière peuvent être décrits par des modèles, qu'on appelle des <strong>classes</strong>.</p>
 <p>Les objets sont écrits en JSON : des séries de paires clés-valeurs.<br>
 Exemple:</p>
 <pre><code>let example = {
-   firstname: "Leonard",
-   lastname: "Barbotteau",
+   firstname: &quot;Leonard&quot;,
+   lastname: &quot;Barbotteau&quot;,
 };
 </code></pre>
-<p>Si on veut récupérer un attribut (exemple le prénom), on utilise ".":</p>
+<p>Si on veut récupérer un attribut (exemple le prénom), on utilise &quot;.&quot;:</p>
 <pre><code>let prenom = example.firstname
 </code></pre>
 <h3>Les constructeurs</h3>
@@ -187,7 +189,7 @@ Exemple:</p>
   }
 };
 
-let moi = new example ("Leonard", "Barbotteau");
+let moi = new example (&quot;Leonard&quot;, &quot;Barbotteau&quot;);
 </code></pre>
 <h1>4. Mise en application du Javascript</h1>
 <p>Pour finir ce cours, j'ai voulu mettre toutes ces connaissances en application. J'ai tenté de faire un snake tout seul mais je n'ai pas réussi et ai donc étudié un code déjà existant pour bien comprendre comment étaient agencées les fonctions.</p>

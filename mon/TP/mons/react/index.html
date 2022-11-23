@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>MON 1 : React</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">MON 1 : React</h1>
+  <h1  class="mb-1">MON 1 : React</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -94,7 +96,7 @@
 <p>Pour créer et organiser nos composants, on peut créer un dossier les regroupant tous. Chaque composant sera ensuite créé à l’aide d’un fichier en .js.</p>
 <p>Par exemple le fichier Banner.js suivant :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Banner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>La boîte aux lettres<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>La boîte aux lettres<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Banner
@@ -108,7 +110,7 @@ Pour cela, à la création de notre projet, un fichier App.js a été créé. On
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> Banner <span class="token keyword">from</span> <span class="token string">'./Banner'</span>
 
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Banner <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Banner <span class="token operator">/</span><span class="token operator">></span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App
@@ -128,14 +130,14 @@ La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque perso
 
 <span class="token keyword">function</span> <span class="token function">UserItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
-            <span class="token punctuation">{</span>userList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> isBestFriend</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
-            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+            <span class="token punctuation">{</span>userList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> isBestFriend</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>li<span class="token operator">></span>
                 <span class="token punctuation">{</span>name<span class="token punctuation">}</span>
-                <span class="token punctuation">{</span>isBestFriend <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>🔥<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token punctuation">}</span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>isBestFriend <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>span<span class="token operator">></span>🔥<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
             <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
     <span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
@@ -162,15 +164,15 @@ Pour cela on utilise la fonction useState.</p>
 
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
 
-        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'ecran-principal'</span><span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>UserList changeConversation<span class="token operator">=</span><span class="token punctuation">{</span>setconversation<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>MessageList list<span class="token operator">=</span><span class="token punctuation">{</span>allMessage<span class="token punctuation">[</span>conversationwith<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'barre-message'</span><span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>BarreMessage<span class="token operator">/</span><span class="token operator">&gt;</span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'ecran-principal'</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>UserList changeConversation<span class="token operator">=</span><span class="token punctuation">{</span>setconversation<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>MessageList list<span class="token operator">=</span><span class="token punctuation">{</span>allMessage<span class="token punctuation">[</span>conversationwith<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'barre-message'</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>BarreMessage<span class="token operator">/</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 

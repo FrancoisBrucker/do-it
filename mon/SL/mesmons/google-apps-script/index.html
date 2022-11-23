@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Google Apps Script</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Google Apps Script</h1>
+  <h1  class="mb-1">Google Apps Script</h1>
   <div class="mb-4">
     
 
@@ -92,36 +94,36 @@ Pour envoyer un mail à une liste de diffusion, il me faut tout d'abord une list
 <h5>b. Le script d'envoi</h5>
 <p>Maintenant que tout est prêt je peux commencer à écrire mon script. J'ouvre Appscript et j'entre le code suivant pour initialiser:</p>
 <pre><code>function MassEmails() {
-   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("listediffusion");
-   var range = sheet.getRange("A2:B5").getValues();
-   var template = sheet.getRange("E1").getValue();
+   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+   var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+   var template = sheet.getRange(&quot;E1&quot;).getValue();
 
    Logger.log(range);
 }
 </code></pre>
-<p>Je sauvegarde mon code, et l'execute. A noter qu'il est important de renommer sa feuille "listediffusion" afin de pouvoir la trouver avec le script. Une fois exécuté, Google nous demande quelques autorisations que l'on passe sans problème. Des logs s'affichent:</p>
+<p>Je sauvegarde mon code, et l'execute. A noter qu'il est important de renommer sa feuille &quot;listediffusion&quot; afin de pouvoir la trouver avec le script. Une fois exécuté, Google nous demande quelques autorisations que l'on passe sans problème. Des logs s'affichent:</p>
 <pre><code>00:36:02
 Infos
 [[zinedine.zidane@gmail.com, Zizou], [antoine.varnerot@centrale-marseille.fr, Raton], [yannick.noah@caramail.com, Yannick], [savinien.laeuffer@wanadoo.com, Moi]]
 </code></pre>
 <p>On a bien récupéré les informations dont nous avons besoin. La prochaine étape est de créer les différents mails en remplaçant les prénoms. On ajoute donc une boucle for comme ci-après:</p>
 <pre><code>for(var i=0; i&lt;range.length;i++) {
-  var finalMessage = template.replace("PRENOM", range[i][1])
+  var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
 }
 </code></pre>
 <p>En executant, on s'apperçoit dans les logs que le dernier message s'est affiché et correspond bien au dernier message.<br>
 On cherche maintenant à envoyer ces mails aux destinataires, on ajoute la ligne suivante dans la boucle for, juste après avoir défini <code>finalMessage</code>:</p>
-<pre><code>GmailApp.sendEmail(range[i][0], "Salut mon pote", finalMessage)
+<pre><code>GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
 </code></pre>
 <p>Votre code devrait ressembler à ceci:</p>
 <pre><code>function MassEmails() {
-   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("listediffusion");
-   var range = sheet.getRange("A2:B5").getValues();
-   var template = sheet.getRange("E1").getValue();
+   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+   var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+   var template = sheet.getRange(&quot;E1&quot;).getValue();
 
    for(var i=0; i&lt;range.length;i++) {
-     var finalMessage = template.replace("PRENOM", range[i][1])
-     GmailApp.sendEmail(range[i][0], "Salut mon pote", finalMessage)
+     var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+     GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
    }
 
    //Logger.log(finalMessage);
@@ -162,13 +164,13 @@ Pour utiliser un déclencheur simple, il suffit de nommer sa fonction d'une cert
   }
 
   function MassEmails() {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("listediffusion");
-    var range = sheet.getRange("A2:B5").getValues();
-    var template = sheet.getRange("E1").getValue();
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+    var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+    var template = sheet.getRange(&quot;E1&quot;).getValue();
 
     for(var i=0; i&lt;range.length;i++) {
-      var finalMessage = template.replace("PRENOM", range[i][1])
-      GmailApp.sendEmail(range[i][0], "Salut mon pote", finalMessage)
+      var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+      GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
     }
   }
 </code></pre>
@@ -181,13 +183,13 @@ Pour utiliser un déclencheur simple, il suffit de nommer sa fonction d'une cert
   }
 
   function MassEmails() {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("listediffusion");
-    var range = sheet.getRange("A2:B5").getValues();
-    var template = sheet.getRange("E1").getValue();
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+    var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+    var template = sheet.getRange(&quot;E1&quot;).getValue();
 
     for(var i=0; i&lt;range.length;i++) {
-      var finalMessage = template.replace("PRENOM", range[i][1])
-      GmailApp.sendEmail(range[i][0], "Salut mon pote", finalMessage)
+      var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+      GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
     }
 
     SpreadsheetApp.getActiveSpreadsheet().toast('Les mails ont bien été envoyés !', 'Confirmation', 3);

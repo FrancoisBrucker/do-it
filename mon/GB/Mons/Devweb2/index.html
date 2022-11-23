@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Dev Web 2</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Dev Web 2</h1>
+  <h1  class="mb-1">Dev Web 2</h1>
   <div class="mb-4">
     
 
@@ -108,7 +110,7 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
 
     <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../../Images/Chaine_prototypage.png"><br><br>
+<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../../Images/Chaine_prototypage.png"/><br><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -151,8 +153,8 @@ Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'
 var request <span class="token operator">=</span> new XMLHttpRequest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br><br>
-<img src="../../Images/json-superheroes.png"></p>
+<p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure &quot;document.createElement&quot;<br><br>
+<img src="../../Images/json-superheroes.png"/></p>
 <ol start="5">
 <li>Pratique de construction d'objets</li>
 </ol>
@@ -168,8 +170,8 @@ Nous voyons aussi les définitions de framework et bibliothèque.</p>
 <ol start="2">
 <li>API DOM</li>
 </ol>
-<p>Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures "appenChild" et "removeChild" car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br><br>
-Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés "setAttribute". Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés :</p>
+<p>Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures &quot;appenChild&quot; et &quot;removeChild&quot; car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br><br>
+Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés &quot;setAttribute&quot;. Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">        var <span class="token assign-left variable">btn</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var <span class="token assign-left variable">liste</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var <span class="token assign-left variable">input</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -190,7 +192,7 @@ Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'av
             <span class="token assign-left variable">enlever.textContent</span><span class="token operator">=</span><span class="token string">'Delete'</span><span class="token punctuation">;</span>
             liste.appendChild<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            enlever.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            enlever.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
                 liste.removeChild<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -200,7 +202,7 @@ Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'av
 <ol start="3">
 <li>API tierce</li>
 </ol>
-<p>On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les "chercher", il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br><br>
+<p>On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les &quot;chercher&quot;, il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br><br>
 Une API REST est un type d'API tierce où l'on ne récupère pas les données à l'aide d'une bibliothèque JavaScript mais à l'aide de requêtes HTTP. Ces API utilisent généralement une clé de développement. <br><br>
 Nous voyons finalement un exemple de récupération et d'utilisation des données récupérés via l'API sur notre site web.</p>
 <h3>Le framework angular</h3>
@@ -216,7 +218,7 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
 <ol start="2">
 <li>Premier site web</li>
 </ol>
-<p>Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</p>
+<p>Dans un premier temps, nous apprenons à créer des &quot;components&quot; et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> class FaceSnapComponent <span class="token punctuation">{</span>
   title<span class="token operator">!</span>: string<span class="token punctuation">;</span> 
   description<span class="token operator">!</span>: string<span class="token punctuation">;</span>
@@ -232,13 +234,13 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Nous les affichons ensuite dans notre fihier html associé à ce component :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"face-snap-card"</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>Dev Web <span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
-    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Mis en ligne le <span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"imageUrl"</span> <span class="token punctuation">[</span>alt<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"face-snap-card"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">2</span>></span>Dev Web <span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">2</span>></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>Mis en ligne le <span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"imageUrl"</span> <span class="token punctuation">[</span>alt<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>/div<span class="token operator">></span>
 </code></pre>
 <p>Nous nous occupons ensuite de rendre notre application plus dynamique en y ajoutant un premier évènement. Nous cherchons à créer une fonction permettant de réagir à notre image. Nous rajoutons donc un bouton exprimant cette réaction. qui prend une valeur lorsqu'il est cliqué et retourne à sa valeur initiale lorsqu'il est reclické. Cela permet une seule réaction par utilisateur.</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function-name function">onSnap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -251,13 +253,13 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
  <span class="token punctuation">}</span>
 </code></pre>
 <p>Nous appelons bien sur cette fonction dans notre component.html :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"onSnap()"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/button<span class="token operator">&gt;</span>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token operator">&lt;</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"onSnap()"</span><span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
         :D 
-    <span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/p<span class="token operator">></span>
 </code></pre>
 <p>Voici à quoi ressemble mon site : <br><br>
-<img src="../../Images/Premier_site.png"></p>
+<img src="../../Images/Premier_site.png"/></p>
 
 
 </article>

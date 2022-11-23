@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Web Front 1 HTML/CSS/JS</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Web Front 1 HTML/CSS/JS</h1>
+  <h1  class="mb-1">Web Front 1 HTML/CSS/JS</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -80,7 +82,7 @@
   
 
   <!-- début résumé -->
-<p>Avec ce MON, je vais apprendre à utiliser les outils de front qui me permettront de réaliser le POK "Mon site chez moi"</p>
+<p>Avec ce MON, je vais apprendre à utiliser les outils de front qui me permettront de réaliser le POK &quot;Mon site chez moi&quot;</p>
 <!-- fin résumé -->
 <h2>1. Prise en main de HTML et CSS</h2>
 <h3>1.1 Cours Openclassrooms</h3>
@@ -95,7 +97,7 @@
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
-        &lt;meta charset="utf-8" /&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
         &lt;title&gt;Titre de la page&lt;/title&gt;
     &lt;/head&gt;
 
@@ -114,12 +116,12 @@
 <li><code>&lt;/ br&gt;</code> pour les sauts de ligne</li>
 <li><code>&lt;em&gt; &lt;/em&gt;</code>, <code>&lt;strong&gt; &lt;/strong&gt;</code> et <code>&lt;mark&gt; &lt;/mark&gt;</code> pour faire ressortir certaines parties du texte</li>
 <li><code>&lt;ul&gt; &lt;/ul&gt;</code> pour une liste (<code>&lt;ol&gt; &lt;/ol&gt;</code> pour une liste ordonnée) et <code>&lt;li&gt; &lt;/li&gt;</code> pour chaque élément de liste</li>
-<li><code>&lt;a href="https://adressedulien.com&gt;Nom affiché&lt;/a&gt;</code> pour un lien, <code>title="titre"</code> permet d'afficher un texte lorsque l'on survole le lien et <code>target="_blank"</code> d'ouvrir le lien dans un nouvel onglet/fenêtre. Le lien peut aussi être une image par exemple</li>
-<li>il est aussi possible de créer un lien relatif vers une autre page du site ou un fichier à télécharger avec <code>href="chemin/autrepage.html"</code> / <code>href="chemin/fichier.zip"</code> ou vers une ancre dans la même page avec <code>href="#ancre</code> et avec <code>id=ancre</code> dans la balise correspondant à l'ancre</li>
-<li><code>&lt;img src="chemin/image.jpg" alt="texte alternatif" /&gt;</code> pour une image</li>
+<li><code>&lt;a href=&quot;https://adressedulien.com&gt;Nom affiché&lt;/a&gt;</code> pour un lien, <code>title=&quot;titre&quot;</code> permet d'afficher un texte lorsque l'on survole le lien et <code>target=&quot;_blank&quot;</code> d'ouvrir le lien dans un nouvel onglet/fenêtre. Le lien peut aussi être une image par exemple</li>
+<li>il est aussi possible de créer un lien relatif vers une autre page du site ou un fichier à télécharger avec <code>href=&quot;chemin/autrepage.html&quot;</code> / <code>href=&quot;chemin/fichier.zip&quot;</code> ou vers une ancre dans la même page avec <code>href=&quot;#ancre</code> et avec <code>id=ancre</code> dans la balise correspondant à l'ancre</li>
+<li><code>&lt;img src=&quot;chemin/image.jpg&quot; alt=&quot;texte alternatif&quot; /&gt;</code> pour une image</li>
 <li><code>&lt;div&gt; &lt;/div&gt;</code> et <code>&lt;span&gt; &lt;/span&gt;</code> sont des balises génériques (qui n'ont pas de sens particulier)</li>
-<li><code>&lt;audio src="chemin/fichier.mp3"&gt; &lt;/audio&gt;</code> pour des fichiers audios (fonctionne avec différents formats)</li>
-<li><code>&lt;video src="chemin/fichier.mp4"&gt; &lt;/video&gt;</code> pour des vidéos</li>
+<li><code>&lt;audio src=&quot;chemin/fichier.mp3&quot;&gt; &lt;/audio&gt;</code> pour des fichiers audios (fonctionne avec différents formats)</li>
+<li><code>&lt;video src=&quot;chemin/fichier.mp4&quot;&gt; &lt;/video&gt;</code> pour des vidéos</li>
 </ul>
 <h4>Balises pour structurer la pages</h4>
 <p>Certaines balises peuvent servir à identifier les différentes sections de la page.</p>
@@ -143,12 +145,12 @@
 </code></pre>
 <p>Il est possible de fusionner des cellules avec <code>colspan</code> et <code>rowsspan</code>.</p>
 <h4>Formulaires</h4>
-<p>Il est possible d'insérer des formulaires avec la balise <code>&lt;form&gt; &lt;/form&gt;</code>, dans laquelle on peut placer la balise <code>&lt;input type="text" /&gt;</code> par exemple, où l'attribut <code>type</code> peut prendre un certain nombre de valeurs pour demander à l'utilisateur une date, une couleur, un numéro de téléphone, etc.</p>
+<p>Il est possible d'insérer des formulaires avec la balise <code>&lt;form&gt; &lt;/form&gt;</code>, dans laquelle on peut placer la balise <code>&lt;input type=&quot;text&quot; /&gt;</code> par exemple, où l'attribut <code>type</code> peut prendre un certain nombre de valeurs pour demander à l'utilisateur une date, une couleur, un numéro de téléphone, etc.</p>
 <p>La récupération des informations doit se faire en php.</p>
 <h3>1.4 Principales fonctionnalité de CSS</h3>
 <h4>Bases</h4>
 <p>On écrit le code CSS dans un fichier .css qu'on relie au(x) fichier(s) HTML au(x)quel(s) il s'applique en insérant cette ligne dans la balise <code>&lt;head&gt; &lt;/head&gt;</code> du fichier HTML :</p>
-<pre><code>&lt;link rel="stylesheet" href="style.css" /&gt;
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
 </code></pre>
 <p>Où <code>style.css</code> est le nom du fichier CSS.</p>
 <p>On peut écrire des commentaires sous la forme <code>/* commentaire */</code></p>
@@ -164,7 +166,7 @@
 </code></pre>
 </li>
 <li>
-<p>à la balise ayant l'attribut <code>id="unebalise"</code> :</p>
+<p>à la balise ayant l'attribut <code>id=&quot;unebalise&quot;</code> :</p>
 <pre><code>  #unebalise
   {
       color: blue;
@@ -172,7 +174,7 @@
 </code></pre>
 </li>
 <li>
-<p>à toutes les balises ayant l'attribut <code>class="certainesbalises</code> :</p>
+<p>à toutes les balises ayant l'attribut <code>class=&quot;certainesbalises</code> :</p>
 <pre><code>  .certainesbalises
   {
       color: blue;
@@ -260,35 +262,35 @@
 <p>Les Medias Queries permettent de paramétrer les propriétés CSS à appliquer en fonction de différents paramètre de l'appareil sur lequel on affiche le site (type d'appareil, taille de la page, etc.).</p>
 <h2>2. Canvas HTML</h2>
 <h3>2.1 Tutoriel</h3>
-<p>J'ai également regardé une partie de ce <a href="https://www.youtube.com/watch?v=p88rNckccmg&amp;list=PLN0tvDAN1yvSNbkHAwPzJ5O4pP_e2vyme"> tutoriel</a> sur les Canvas HTML qui pourraient être utiles pour créer une partition intéractive pour le POK "Mon site chez moi".</p>
+<p>J'ai également regardé une partie de ce <a href="https://www.youtube.com/watch?v=p88rNckccmg&amp;list=PLN0tvDAN1yvSNbkHAwPzJ5O4pP_e2vyme"> tutoriel</a> sur les Canvas HTML qui pourraient être utiles pour créer une partition intéractive pour le POK &quot;Mon site chez moi&quot;.</p>
 <p>Les canvas se placent dans des balises HTML et permettent de dessiner au sein de la page (placer des formes, du texte, des images, les faire se déplacer, intéragir avec...), ils peuvent être utilisés grâce à JavaScript.</p>
 <h3>2.2 Quelques fonctionnalités</h3>
 <h4>Bases</h4>
 <p>Insertion du canvas dans le fichier HTML :</p>
 <pre><code>&lt;body&gt;
-    &lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+    &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;
 &lt;/body&gt;
-&lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>Paramétrage de la taille et du fond du canvas dans le fichier <code>main.js</code> :</p>
-<pre><code>let canvas = document.getElementById("canvas");
+<pre><code>let canvas = document.getElementById(&quot;canvas&quot;);
 
-let context = canvas.getContext("2d");
+let context = canvas.getContext(&quot;2d&quot;);
 
 var window_height = window.innerHeight;
 var window_width = window.innerWidth;
 
-canvas.style.background = "#fff";
+canvas.style.background = &quot;#fff&quot;;
 </code></pre>
 <h4>Création d'objets</h4>
 <p>On se place pour la suite dans <code>main.js</code></p>
 <p>Rectangle (la couleur est facultative) :</p>
-<pre><code>context.fillStyle = "colorName";
+<pre><code>context.fillStyle = &quot;colorName&quot;;
 context.fillRect(xpos, ypos, width, height);
 </code></pre>
 <p>Cercle :</p>
 <pre><code>context.beginPath();
-context.strokeStyle = "colorName";
+context.strokeStyle = &quot;colorName&quot;;
 context.lineWidth = lineWidth;
 context.arc(x, y, radius, startAngle, endAngle, anticlockwise?);
 context.stroke();
@@ -296,10 +298,10 @@ context.closePath();
 </code></pre>
 <p>Texte (la police est également facultative) :</p>
 <pre><code>context.fillText(text, xpos, ypos);
-context.font = "20px Arial";
+context.font = &quot;20px Arial&quot;;
 </code></pre>
 <p>Image :</p>
-<pre><code>let image = document.createElement("img");
+<pre><code>let image = document.createElement(&quot;img&quot;);
 image.src = imagePath;
 image.onload = function() {
     context.drawImage(image, xpos, ypos, width, height);
@@ -325,7 +327,7 @@ image.onload = function() {
 }
 </code></pre>
 <p>Création d'un cercle grâce à cette classe :</p>
-<pre><code>let circle = new Circle(100, 200, 50, "red");
+<pre><code>let circle = new Circle(100, 200, 50, &quot;red&quot;);
 
 circle.draw(context);
 </code></pre>

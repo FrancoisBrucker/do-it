@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Annexe du MON Google Apps Script</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Annexe du MON Google Apps Script</h1>
+  <h1  class="mb-1">Annexe du MON Google Apps Script</h1>
   <div class="mb-4">
     
 
@@ -162,7 +164,7 @@
   <span class="token keyword">if</span> <span class="token punctuation">(</span>casesToDelete<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">var</span> sourceSheet <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> rowStart <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getColumn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> casesToDelete<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> casesToDelete<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       sourceSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> rowStart <span class="token operator">+</span> casesToDelete<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -170,7 +172,7 @@
   <span class="token keyword">if</span> <span class="token punctuation">(</span>turnTrueCases<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">var</span> sourceSheet <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> rowStart <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getColumn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> turnTrueCases<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> turnTrueCases<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       sourceSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> rowStart <span class="token operator">+</span> turnTrueCases<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -187,7 +189,7 @@
 <span class="token keyword">function</span> <span class="token function">columnToLetter</span><span class="token punctuation">(</span><span class="token parameter">column</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
   <span class="token keyword">var</span> temp<span class="token punctuation">,</span> letter <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>column <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>column <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span>
   <span class="token punctuation">{</span>
     temp <span class="token operator">=</span> <span class="token punctuation">(</span>column <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">26</span><span class="token punctuation">;</span>
     letter <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">fromCharCode</span><span class="token punctuation">(</span>temp <span class="token operator">+</span> <span class="token number">65</span><span class="token punctuation">)</span> <span class="token operator">+</span> letter<span class="token punctuation">;</span>
@@ -256,7 +258,7 @@
   
   liste <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Timestamp"</span><span class="token punctuation">,</span><span class="token string">"Commentaire"</span><span class="token punctuation">,</span><span class="token string">"Prix"</span><span class="token punctuation">,</span><span class="token string">"Payé par"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>tricountSettings<span class="token punctuation">.</span>people<span class="token punctuation">)</span>
   liste<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"Nb Personnes"</span><span class="token punctuation">)</span>
-  tricountSettings<span class="token punctuation">.</span>people<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">person</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  tricountSettings<span class="token punctuation">.</span>people<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">person</span><span class="token operator">=></span><span class="token punctuation">{</span>
     liste<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"Coût "</span><span class="token operator">+</span>person<span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   liste<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
@@ -265,7 +267,7 @@
   liste<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"Dernière Ligne"</span><span class="token punctuation">)</span>
 
   targetSheet<span class="token punctuation">.</span><span class="token function">appendRow</span><span class="token punctuation">(</span>liste<span class="token punctuation">)</span>
-  targetSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>nb_people<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setFormula</span><span class="token punctuation">(</span><span class="token string">"=COUNTIF(A1:A,\"&lt;&gt;\")"</span><span class="token punctuation">)</span>
+  targetSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>nb_people<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setFormula</span><span class="token punctuation">(</span><span class="token string">"=COUNTIF(A1:A,\"&lt;>\")"</span><span class="token punctuation">)</span>
 
   <span class="token comment">// StatSheet</span>
 

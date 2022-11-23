@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Création d&#39;un site web avec Eleventy</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Création d'un site web avec Eleventy</h1>
+  <h1  class="mb-1">Création d&#39;un site web avec Eleventy</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -93,7 +95,7 @@
 </code></pre>
 <h2>3. Fonctionnalités</h2>
 <h3>Templates</h3>
-<p>Eleventy fonctionne avec des "templating engines" qui permettent de modifier certaines données du site à un seul endroit même si elles sont utilisées à plusieurs endroits (par exemple le titre d'une page).</p>
+<p>Eleventy fonctionne avec des &quot;templating engines&quot; qui permettent de modifier certaines données du site à un seul endroit même si elles sont utilisées à plusieurs endroits (par exemple le titre d'une page).</p>
 <p>Une des syntaxe qui existe avec Eleventy est la syntaxe liquid, elle est utilisée dans les fichiers HTML et Markdown. On place les données (titre de la page, noms de fichiers, etc.) en en-tête du fichier sous cette forme :</p>
 <pre><code>---
 title: Giffleball
@@ -113,9 +115,9 @@ images:
 <h3>Filtres</h3>
 <p>Les filtres peuvent servir à différentes choses, ils peuvent se créer de cette manière, dans un fichier <code>.eleventy.js</code> :</p>
 <pre><code>module.exports = (function(eleventyConfig) {
-    eleventyConfig.addFilter("nom_du_filtre", function(argument) {
+    eleventyConfig.addFilter(&quot;nom_du_filtre&quot;, function(argument) {
         /* code */
-        return "valeur retournée";
+        return &quot;valeur retournée&quot;;
     });
 });
 </code></pre>
@@ -138,8 +140,8 @@ Contenu de la page
 <p>Ce fichier correspond à une page de notre site qui utilise le layout nom_du_layout.njk. Lors de la génération du site, les informations comme le titre ou le contenu seront placés dans le code HTML du fichier Nunjucks pour créer un fichier HTML classique. La force des layouts est bien entendu qu'ils peuvent être utilisés pour de nombreuses pages, telles que des posts de blog, qui se présenteront sous la même forme et pourront être créées très simplement dans un fichier Markdown.</p>
 <p>On peut également appliquer un layout à toutes les pages d'un dossier en leur appliquant un tag avec ce type de fichier JSON :</p>
 <pre><code>{
-"layout": "base.njk",
-"tags": "articles"
+&quot;layout&quot;: &quot;base.njk&quot;,
+&quot;tags&quot;: &quot;articles&quot;
 }
 </code></pre>
 <h3>Paginations</h3>
@@ -163,18 +165,18 @@ Contenu de la page
 <pre><code>npm init -y
 npm i --save-dev @11ty/eleventy
 </code></pre>
-<p>Puis placer les lignes suivantes dans le <code>"scripts"</code> du <code>package.json</code> :</p>
-<pre><code>"scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+<p>Puis placer les lignes suivantes dans le <code>&quot;scripts&quot;</code> du <code>package.json</code> :</p>
+<pre><code>&quot;scripts&quot;: {
+    &quot;start&quot;: &quot;eleventy --serve&quot;,
+    &quot;build&quot;: &quot;eleventy&quot;
 }
 </code></pre>
 <p>On crée le .eleventy.js avec le code suivant :</p>
 <pre><code>module.exports = function(eleventyConfig) {
     return {
         dir: {
-            input: "src",
-            output: "public"
+            input: &quot;src&quot;,
+            output: &quot;public&quot;
         }
     };
 };
@@ -182,7 +184,7 @@ npm i --save-dev @11ty/eleventy
 <p>On crée le <code>src/_includes</code> qui va contenir les fichiers Nunjucks de templates.</p>
 <p>On crée notre <code>index.md</code>, puis un fichier CSS qu'on lie au fichier Nunjucks (comme à un fichier HTML classique).</p>
 <p>On ajoute également cette ligne au <code>.eleventy.js</code> :</p>
-<pre><code>eleventyConfig.addPassthroughCopy("./src/style.css");
+<pre><code>eleventyConfig.addPassthroughCopy(&quot;./src/style.css&quot;);
 </code></pre>
 <p>Le site peut être lancé localement avec la commande <code>npm start</code>.</p>
 <p>Je me suis aidé de <a href="https://www.youtube.com/watch?v=BKdQEXqfFA0">cette courte vidéo</a> pour créer un <a href="https://github.com/nathan-gissler/cours-eleventy">petit site</a> (sur GitHub) avec Eleventy. Cela a bien fonctionné, cependant j'ai remarqué que le style de mon fichier CSS ne s'appliquait pas à mes articles (équivalent des posts de la vidéos) alors que le layout s'applique sans problème, et le fichier CSS est lié à ce layout (le fichier <code>base.njk</code>). Ce problème semble être aussi présent dans l'exemple de la vidéo.</p>

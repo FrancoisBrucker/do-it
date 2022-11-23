@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Temps 1 - MON - Google Apps Script</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Temps 1 - MON - Google Apps Script</h1>
+  <h1  class="mb-1">Temps 1 - MON - Google Apps Script</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -79,7 +81,7 @@
 <p>Ici je vais mettre les informations sur mon MON de temps 1, Google Apps Script.</p>
 <!-- fin résumé -->
 <h2>But du projet</h2>
-<p>Le but de ce projet, c'est de créer une liste de tâches à faire ("To-Do") dans Google Sheets, qui est mise à jour automatiquement à chaque fois que je modifie la liste dans Google Sheets.</p>
+<p>Le but de ce projet, c'est de créer une liste de tâches à faire (&quot;To-Do&quot;) dans Google Sheets, qui est mise à jour automatiquement à chaque fois que je modifie la liste dans Google Sheets.</p>
 <h2>Résultat</h2>
 <h3>État de la table au debut</h3>
 <p><img src="./sheet-before.png" alt="Screenshot of the table before the script is being executed"></p>
@@ -92,7 +94,7 @@
 <li>Création d'un plan pour le projet to-do (le but du projet)</li>
 <li>Creation de la liste des tâches avec une API (<a href="https://dummyjson.com/todos">https://dummyjson.com/todos</a>)</li>
 <li>Trier la liste (par date de fin) et correction d'erreur (au début, l'en-tête du tableau a également été trié)</li>
-<li>Récupérer le statut "terminé" et le convertir en case à cocher</li>
+<li>Récupérer le statut &quot;terminé&quot; et le convertir en case à cocher</li>
 <li>Griser les tâches accomplies</li>
 <li>Génération d'un charte basique á la base de la documentation</li>
 <li>Travailler avec le debugger pour identifier des fautes</li>
@@ -127,7 +129,7 @@
 <p>Ici je veux montrer quelques exemples intéressants de code que j'ai écrit pour ce projet.</p>
 <h3>Implémentation de l'algorithme de traitement des dates</h3>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> datesAndDoneColumnRange <span class="token operator">=</span> activeSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>lastRow<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get range that includes the dates and done values (done/not done)</span>
-<span class="token keyword">var</span> dateAndDoneValues <span class="token operator">=</span> datesAndDoneColumnRange<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get the values from this range -&gt; Array[Date][done]</span>
+<span class="token keyword">var</span> dateAndDoneValues <span class="token operator">=</span> datesAndDoneColumnRange<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get the values from this range -> Array[Date][done]</span>
 
 <span class="token comment">// create new sheet to store temporary data</span>
 <span class="token keyword">var</span> temporarySheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSpreadsheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSheetByName</span><span class="token punctuation">(</span><span class="token string">'temporary-data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

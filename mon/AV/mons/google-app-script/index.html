@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Google Apps Script</title>
 
-    <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-    <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-    <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
   </head>
   <body>
     <script>
@@ -29,7 +30,8 @@
         }
       };
     </script>
-    
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
     <header class="border-b-2 border-gray-200 mb-4">
       <div class="max-w-[1000px] mx-auto px-4">
@@ -44,7 +46,7 @@
 
       
 <article>
-  <h1 class="mb-1">Google Apps Script</h1>
+  <h1  class="mb-1">Google Apps Script</h1>
   <div class="mb-4">
     
 
@@ -104,7 +106,7 @@ Attention : il n'y a pas que des projets avec Google Sheet, il y a aussi des pro
 <ol start="5">
 <li></li>
 </ol>
-<p>J'ai choisi le projet "Clean up data in a spreadsheet".<br>
+<p>J'ai choisi le projet &quot;Clean up data in a spreadsheet&quot;.<br>
 Le but de ce projet est, comme son nom l'indique, de nettoyer un tableur.<br>
 Plus précisément, on veut avoir une fonction qui supprime les lignes vides du tableur et une fonction qui supprime les colonnes vides dans une zone que l'on sélectionne.<br>
 Exemple :</p>
@@ -145,7 +147,7 @@ Exemple :</p>
   <span class="token punctuation">}</span>
 
   <span class="token comment">//supprime les doublons dans rowsToKeep et supprime les lignes du sheet</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveRow <span class="token operator">+</span> height <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&gt;</span> firstActiveRow <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveRow <span class="token operator">+</span> height <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">></span> firstActiveRow <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>rowsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
       sheet<span class="token punctuation">.</span><span class="token function">deleteRow</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -173,7 +175,7 @@ Exemple :</p>
   <span class="token punctuation">}</span>
 
   <span class="token comment">//supprime les doublons dans columnsToKeep et supprime les colonnes du sheet</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveColumn <span class="token operator">+</span> width <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&gt;</span> firstActiveColumn <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveColumn <span class="token operator">+</span> width <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">></span> firstActiveColumn <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>columnsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
       sheet<span class="token punctuation">.</span><span class="token function">deleteColumn</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
