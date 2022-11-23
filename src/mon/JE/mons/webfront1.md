@@ -61,3 +61,17 @@ La mise en page apparait comme la grande force de CSS, et aussi la partie la plu
 ## Bootstrap
 
 J'ai manqué de temps pour voir Bootstrap de manière exhaustive et organiser mes pensées mais je suis toujours en train de regarder ces liens actuellement, la [documentation Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) ainsi que le [cours OpenClassrooms](https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5). je prendrais sûrement un peu de temps pour mieux organiser cette partie plus tard.
+
+Bootstrap est un framework qui facilite la mise en place de pages aux layouts agréables et responsives. Bootstrap construit ses propres classes à rajouter aux différents éléments HTML afin de leur appliquer les propriétés Bootstrap.
+
+Un exemple de structure d'un élément bootstrap se construit comme ceci :
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12 col-md-4'>
+        ...
+      </div>
+    </div>
+  </div>
+
+Concrètement, la page Bootstrap se construit sur un concept de grille, à 12 colonnes. On accède à la grille tout d'abord à l'aide d'une classe container. Cette classe met en place la grille, à laquelle les autres éléments peuvent accéder, tout d'abord par les rows, c'est-à-dire les lignes de la grille, et les colonnes, avec différents agencements pour différentes tailles d'écran ou **breakpoints**.

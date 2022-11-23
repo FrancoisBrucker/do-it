@@ -49,7 +49,7 @@ Pour commencer on crée un Google Doc avec le texte que l'on souhaite envoyer au
 
 Les éléments entre crochets seront ensuite automatiquement remplacé en fonction des informations sur la personne et sur l'évènement.
 
-On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce [Github] (https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js).
+On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce [Github](https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js).
 On nomme le texte ainsi converti mailBodyHTML
 
 ### Google Sheet
@@ -126,4 +126,6 @@ inscriptionsSheet.getRange(i+1,7).setValue("TRUE");
 
 Si on relance le script, en vérifiant si la case est bien décochée, seules les lignes non cochées vont recevoir le mail.
 
-### Automatisation
+## Lien vers le code
+
+[Mon code](./code/code_gas)

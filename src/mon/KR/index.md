@@ -18,9 +18,8 @@ Ici, c'est le MONde des projets de Kasimir
 - [Deuxième MON: Étude de cas CFP - Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./MON1-2/)
 
 ### Temps 2
-- Proposition: [Splunk (cybersecurité/gestion des logs)](./MON2-1/)
-- Premier MON: Maturité de la transformation digitale
-- Deuxième MON: bases de données non relationnelles (mongodb, ...)
+- [Splunk (cybersecurité/gestion des logs)](./MON2-1/)
+- Bases de données non relationnelles (mongodb, ...)
 
 ### Temps 3
 - Premier MON: Sobriété numérique et stratégie digitale

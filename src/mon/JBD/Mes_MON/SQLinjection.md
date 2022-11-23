@@ -19,11 +19,11 @@ tags:
 
 {% info %}
 
-Les méthodes présentées dans ce cours peuvent permettent d'accéder de manière illégale à des informations.
+Les méthodes présentées dans ce cours peuvent permettre d'accéder de manière illégale à des informations.
 
-L'utilisation de ces méthodes sans l'autorisation du propriétaire d'un site web ou un quelconque serveur est illégal et est punit par la loi.
+L'utilisation de ces méthodes sans l'autorisation du propriétaire d'un site web ou un quelconque serveur est illégale et est punit par la loi.
 
-Ce cours a pour objet de sensibiliser les ingénieurs dans le domaine de la sécurité et leurs permettre de protéger les serveurs contre ce type d'attaque.
+Ce cours a pour objectif de sensibiliser les ingénieurs dans le domaine de la sécurité et leur permettre de protéger les serveurs contre ce type d'attaque.
 
 {% endinfo %}
 
@@ -52,14 +52,14 @@ Ce cours a pour objet de sensibiliser les ingénieurs dans le domaine de la séc
 
 <h2 id="h2"> Pourquoi cette attaque ? </h2>
 
-Tout site web, sauf sites statiques, héberge une base de donnée SQL. Donc tous les site web sont des potentielles victimes d'attaques par injection de SQL.
+Tout site web, sauf sites statiques, héberge une base de données SQL. Donc tous les sites web sont des potentielles victimes d'attaques par injection de SQL.
 
 
 {% info %}
-D'après les chiffres d'Akamai ([lien de l'article](https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf)), sur une étude entre Janvier 2020 et Juin 2021 :
+D'après les chiffres d'Akamai ([lien de l'article](https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf)), sur une étude menée entre Janvier 2020 et Juin 2021 :
 
 - les attaques de type injection de SQL sont les plus présentes
-- durant la durée d'étude (18 mois) il y a eu 6.2 millards tentatives d'attaques enregistrées par inh=jection de SQL, ce qui représente 55.88% des attaques sur le web.
+- durant la durée d'étude (18 mois) il y a eu 6.2 millards de tentatives d'attaques enregistrées par injection de SQL, ce qui représente 55.88% des attaques sur le web.
 
 {% endinfo %}
 
@@ -79,7 +79,7 @@ BurpSuite est un logiciel permettant de capturer des requêtes effectuées sur u
 
 {% endprerequis %}
 
-Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours proviennent de ce site :
+Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours provient de ce site :
 
 [WebSecurityAcademy - SQL injection](https://portswigger.net/web-security/all-labs#sql-injection)
 
@@ -88,12 +88,13 @@ Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui perme
 <h3 id="h4-1"> Principe de base </h3>
 
 {% note %}
-Pour beaucoup de fonctionnalitées d'un serveur, celui-ci va faire des appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.
+Beaucoup de fonctionnalités d'un serveur nécessitent appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.
 {% endnote %}
 
-Par exemple lors d'un connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :
+Par exemple lors d'une connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe. Puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :
 
 <h4 id="h4-1-1"> Requete envoyé par l'utilisateur pour s'authentifier </h4>
+
 ```javascript
 fetch("https://nomDuServeur/login",
 {
@@ -108,18 +109,20 @@ fetch("https://nomDuServeur/login",
 ```
 
 <h4 id="h4-1-2"> Interprétation par le serveur </h4>
+
 ```sql
 SELECT * FROM users WHERE username = ' + requete.username + ' AND password = ' + requete.password + '
 ```
 
 ce qui donne ici :
+
 ```sql
 SELECT * FROM users WHERE username = 'mon_username' AND password = 'mon_password'
 ```
 
 <h4 id="h4-1-3"> Attaquer cette mécanique </h4>
 
-L'objectif est de ne pas avoir à passer l'étape de vérification de mot de passe.
+L'objectif est de ne pas avoir à passer l'étape de vérification du mot de passe.
 
 Pour ça, on va utiliser une mécanique assez simple en programmation : **les commentaires**.
 
@@ -156,15 +159,15 @@ SELECT * FROM users WHERE username = 'administarteur'--' AND password = 'n\'impo
 ```
 
 {% info %}
-Et là, vous êtes connecté en tant qu'administrateur du site.
+Et là, vous êtes connectés en tant qu'administrateur du site.
 {% endinfo %}
 
 <h3 id="h4-2"> UNION Attack </h3>
 
-C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur s'appelle pas **administrateur**, comment est ce qu'on peut faire pour quand même se connecter ?
+C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur ne s'appelle pas **administrateur**, comment est ce qu'on peut faire pour quand même se connecter ?
 
 
-Jusque là, on était limité par devoir faire des recherches dans la base de donnée par défaut de la requête : il est impossible de modifier la requête avant un **WHERE** qui se situe forcément après le **FROM**.
+Jusque là, on était limité par le fait de devoir faire des recherches dans la table par défaut de la requête : il est impossible de modifier la requête avant un **WHERE** qui se situe forcément après le **FROM**.
 *On veut pouvoir effectuer nos propre requêtes dans d'autres table.*
 
 Pour cela on va utiliser le mot clé SQL **UNION** qui va réaliser la concaténation de 2 recherches dans la base de donnée : celle par défaut et celle injectée.
@@ -186,15 +189,16 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 Premièrement, il faut trouver le nombre de valeur de retour de la première recherche. Pour cela il y a **2 possibilités** :
 
 - Ordonner la première recherche selon la nième colonne, grace au mot clé **ORDER BY n**, si il y a une errreur c'est que la colonne **n** n'existe pas.
-- Faire une 2e recherche envoyant simplement des **NULL**, l'objectif étant de trouver combien on peut mettre de **NULL** sans avoir d'erreur : 
+- Faire une 2e recherche (avec une **UNION**) en envoyant simplement des **NULL**, l'objectif étant de trouver combien on peut mettre de **NULL** sans avoir d'erreur : 
 
 ```sql
 UNION SELECT NULL,NULL
 ```
 
 {% note %}
-Remarque 1 : il est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé **FROM**, pour cela, il existe une table faite pour ça : **dual**
+Remarque 1 : il n'est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé **FROM**, pour cela, il existe une table faite pour ça : **dual**
 {% endnote %}
+
 ```sql
 UNION SELECT NULL,NULL FROM dual
 ```
@@ -213,7 +217,8 @@ La remarque faite sur Oracle dans la précédente partie est toujours applicable
 
 <h4 id="h4-2-4"> 1 seule colonne </h4>
 
-Si un seul champ string disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le username et le password d'un utilisateur), on peut utiliser la fonction **CONCAT** de SQL:
+Si un il y a uniquement un champ *string* disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le *username* et le *password* d'un utilisateur), on peut utiliser la fonction **CONCAT** de SQL:
+
 ```sql
 SELECT CONCAT(username,'/',password) from users
 ```
@@ -265,9 +270,10 @@ Ne pas oublier de rajouter des colonnes **NULL** au cas où il faille plusieurs 
 
 <h2 id="h5"> Défense </h2>
 
-Il est possible de paramétriser un requête SQL, c'est à dire transformer un requête en une fonction prenant en paramètre les valeurs de la requête.
+Il est possible de paramétrer une requête SQL, c'est-à-dire transformer une requête en une fonction prenant en paramètre les valeurs de la requête.
 
 Au lieu d'executer :
+
 ```javascript
 String query = "SELECT * FROM products WHERE category = '"+ input + "'";
 Statement statement = connection.createStatement();
@@ -275,6 +281,7 @@ ResultSet resultSet = statement.executeQuery(query);
 ```
 
 On crée un statement sans les valeurs, puis on ajoute les paramètres :
+
 ```javascript
 PreparedStatement statement = connection.prepareStatement("SELECT * FROM products WHERE category = ?");
 statement.setString(1, input);
