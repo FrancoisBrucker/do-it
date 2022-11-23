@@ -9,4 +9,3 @@ authors:
 <!-- Début Résumé -->
 MON suivi en majorité grâce au site de M. Brucker sur le développement coté serveur. 
 <!-- Fin Résumé -->
-### MON 2.1 
