@@ -18,15 +18,19 @@ Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.
 
 <!-- Fin Résumé -->
 
+<img src="./Images/Accueil.png"/>
+
 ### Partie Gabriel 
 
 Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br>
-Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. <hr>
+Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc. 
 
 Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux. 
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br>
 
-La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc. <br>
+La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc. 
+
+<img src="./Images/Page_Gaby.png"/>
 
 J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur : 
 
@@ -109,7 +113,11 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
             }
 ```
 J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br>
-J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais. 
+J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais. <br>
+
+<img src="./Images/Choix.png"/>
+<img src="./Images/Reset.png"/>
+Le reste du code est bien sur disponible via le lien en haut de page. 
 
 <h2> Partie Timothée</h2>
 
