@@ -5,7 +5,7 @@ title: "Serveur Distant"
 authors:
   - Gabriel BARBE
 
-tags: ['pok'] ['serveur distant']
+tags: ['pok']
 ---
 <!-- Début Résumé -->
 POK visant à reproduire le site effectué dans le temps mais sur un serveur distant et en y rajoutant du back-end. 
