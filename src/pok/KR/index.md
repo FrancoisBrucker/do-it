@@ -17,7 +17,7 @@ Hub pour accéder à tous les POK de Kasimir
 [Configurations organisationnelles dans le secteur de l'IT](./pok-temps1)
 
 ### Temps 2
-Cartographier le système d'information d'une organisation
+[Formation Hacking/CTF](./pok-temps2)
 
 ### Temps 3
 Une des suivantes :
