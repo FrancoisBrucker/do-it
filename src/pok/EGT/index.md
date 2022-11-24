@@ -21,4 +21,6 @@ Pour le temps 1 sur le thème Comprendre, j'ai choisi le POK suivant :
 
 ## Temps 2
 
+[Cartographier le SI d'une entreprise](./pok_2)
+
 ## Temps 3
