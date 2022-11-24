@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>[POK] Find the Key (temps 2)</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">[POK] Find the Key (temps 2)</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">HTML</li>
+          
+            <li class="before:content-['•'] before:px-1">CSS</li>
+          
+            <li class="before:content-['•'] before:px-1">JavaScript</li>
+          
+            <li class="before:content-['•'] before:px-1">NodeJS</li>
+          
+            <li class="before:content-['•'] before:px-1">Express</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Killian ROYANT</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p><strong>Find The Key</strong> est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres. Il est codé en HTML/CSS/JS pur. Le desing a été réalisé depuis Adobe XD.</p>
+<p>Le temps 2 est consacré à l'<strong>ajout d'une partie back-end</strong> avec NodeJS et Express et au <strong>déploiement sur un serveur distant</strong>.</p>
+<!-- fin résumé -->
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Ressources</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://github.com/royantk/FindTheKey">Le Github du POK</a></li>
+<li><a href="http://cerfeuil.ovh1.ec-m.fr/">Le résultat (sur serveur distant)</a></li>
+</ul>
+</div></div>
+<h2>Introduction</h2>
+<p><strong>Find The Key</strong> est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres.</p>
+<p><img src="FindTheKey.png" alt="Image Find The Key"></p>
+<p>Durant le temps 1, j'ai eu l'occasion de résoudre les problèmes de compatibilité du site ainsi que de recréer la structure du HTML/CSS pour rendre l'application responsive. Le temps 2 sera consacré à l'<strong>ajout d'une partie back-end</strong> avec NodeJS et Express et au <strong>déploiement sur un serveur distant</strong>.</p>
+<h3>Objectif du temps 2 - Déployer sur un serveur distant</h3>
+<p>Mes objectifs à l'occasion de la deuxième partie de ce POK sont les suivants :</p>
+<ul>
+<li>Créer une partie <strong>back-end</strong> (API) pour générer le contenu des cases et sauvegarder les scores des joueurs</li>
+<li>Déployer le site et l'API sur un <strong>serveur distant</strong></li>
+</ul>
+<h3>Planning</h3>
+<p>Pour mener à bien ce projet, j'ai décidé de m'organiser en <strong>4 étapes principales</strong> traitant les parties <strong>back</strong> (en rouge), <strong>serveur</strong> (en vert) et adaptation du <strong>front</strong> (en bleu).</p>
+<p><img src="planning.png" alt="Image planning"></p>
+<p>On peut retrouver le détail du temps prévu et passé sur chaque étape dans le tableau ci-dessous :</p>
+<table>
+<thead>
+<tr>
+<th><strong>To-do</strong></th>
+<th><strong>Temps passé</strong></th>
+<th><strong>Temps prévu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mise en ligne (test) version front sur serveur distant</td>
+<td>1 h</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Préparation du back</td>
+<td>0 h</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>Création de l’API</td>
+<td>0 h</td>
+<td>5 h</td>
+</tr>
+<tr>
+<td>Création interface front/back</td>
+<td>0 h</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>Création écran scores</td>
+<td>0 h</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>Mise en ligne du back sur le serveur distant (API)</td>
+<td>0 h</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>1 h</strong></td>
+<td><strong>20 h</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>(mis à jour le 24/11/2022)</em></p>
+<h2>Mise en ligne (test) version front sur serveur distant</h2>
+<p>Pour commencer, j'ai décidé de <strong>mettre en ligne</strong> la version front du jeu sur un serveur distant. J'ai donc utilisé le service <a href="https://www.ovh.com/fr/">OVH</a> pour créer un serveur et y déployer le site.</p>
+<h3>Création du serveur</h3>
+<p>Pour créer un serveur, il faut se rendre sur le site <a href="https://www.ovh.com/fr/">OVH</a> et créer un compte. Une fois connecté, il faut se rendre dans la section <strong>Cloud</strong> puis <strong>Serveurs</strong>. Ensuite, il faut cliquer sur <strong>Créer un serveur</strong> et choisir les options suivantes :</p>
+<ul>
+<li><strong>Système d'exploitation</strong> : Debian 10</li>
+<li><strong>Type de serveur</strong> : Cloud</li>
+</ul>
+<p>Une fois le serveur créé, il faut se rendre dans la section <strong>Cloud</strong> puis <strong>Serveurs</strong>. Ensuite, il faut cliquer sur le serveur créé et se rendre dans la section <strong>Connexion</strong>. On peut alors récupérer l'adresse du serveur ainsi que le mot de passe.</p>
+<h3>Connexion au serveur</h3>
+<p>Pour se connecter au serveur, il faut utiliser le <strong>protocole SSH</strong>. J'ai utilisé le terminal de mon ordinateur pour me connecter au serveur. Pour cela, il faut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
+</code></pre>
+<p>On peut alors entrer le mot de passe du serveur pour se connecter. Pour ne pas avoir à entrer le mot de passe à chaque fois, il est possible de créer une <strong>clé SSH</strong>. Pour cela, il faut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ssh-keygen
+</code></pre>
+<p>On peut alors entrer le chemin de la clé et le mot de passe. Une fois la clé créée, il faut l'<strong>ajouter au serveur</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ssh-copy-id username@adresse_serveur
+</code></pre>
+<h3>Navigation dans le serveur</h3>
+<p>Pour vérifier que la connexion est bien établie, on peut utiliser la commande suivante pour <strong>afficher le contenu du dossier courant</strong> :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ls</span>
+</code></pre>
+<p>Pour <strong>se déplacer dans un dossier</strong>, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> nom_dossier
+</code></pre>
+<p>Au lieu de se déplacer dans un dossier, on peut aussi <strong>créer un nouveau dossier</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> nom_dossier
+</code></pre>
+<p>Enfin, pour <strong>supprimer un dossier</strong>, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">rm</span> <span class="token parameter variable">-r</span> nom_dossier
+</code></pre>
+<h3>Déploiement du site</h3>
+<p>Pour <strong>déployer</strong> le site sur le serveur, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
+</code></pre>
+<p>On peut alors entrer le mot de passe du serveur pour déployer le site. Pour vérifier que le site est bien déployé, on peut se rendre sur le navigateur et entrer l'adresse IP du serveur.</p>
+<p>Pour faciliter le déploiement, on peut aussi <strong>créer un script</strong>. Pour cela, il faut créer un fichier <strong><a href="http://deploy.sh">deploy.sh</a></strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">touch</span> deploy.sh
+</code></pre>
+<p>On peut ensuite ouvrir le fichier avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">nano</span> deploy.sh
+</code></pre>
+<p>On peut alors entrer et enregistrer le script suivant :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
+</code></pre>
+<p>On pourra ensuite <strong>exécuter le script</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">./deploy.sh
+</code></pre>
+<h2>Préparation du back</h2>
+<p><a href="../">&lt;-- Retour</a></p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
