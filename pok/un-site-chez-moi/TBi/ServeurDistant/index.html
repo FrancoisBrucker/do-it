@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>MON de Tuncay Bilgi</title>
+    <title>Artblog Déploiement</title>
 
     <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
     <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
@@ -46,7 +46,7 @@
 
       
 <article>
-  <h1  class="mb-1">MON de Tuncay Bilgi</h1>
+  <h1  class="mb-1">Artblog Déploiement</h1>
   <div class="mb-4">
     
       <div class=" px-4 flex items-center">
@@ -55,7 +55,7 @@
         
         <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
           
-            <li class="before:content-['•'] before:px-1">mon</li>
+            <li class="before:content-['•'] before:px-1">pok</li>
           
         </ul>
       </div>
@@ -77,14 +77,50 @@
 
   
 
-  <!-- début résumé -->
-<p>Ensemble des MON réalisés par Tuncay Bilgi</p>
-<!-- fin résumé -->
-<h3>Temps 1</h3>
-<p><a href="./MON/POO">POO</a> - <a href="./MON/Docker">Docker</a></p>
-<h3>Temps 2</h3>
-<p><a href="./MON/Jenkins">Jenkins</a> - <a href="./MON/Typescript">Typescript</a></p>
-<h3>Temps 3</h3>
+  <h1>Déploiement sur un site distant.</h1>
+<p>Le but du POK est d'appréhender le déploiement de projets sur un serveur.<br>
+Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Artblog, qui est un blog.</p>
+<h2>Pré-requis</h2>
+<ul>
+<li>
+<p>Avoir un site à déployer.</p>
+</li>
+<li>
+<p>Avoir les connaisances pour se connecter à un serveur distant :</p>
+<ul>
+<li>CLI Unix</li>
+<li>SSH</li>
+<li>Git Terminal</li>
+</ul>
+</li>
+<li>
+<p>Avoir des connaisances de Dev Fullstack :</p>
+<ul>
+<li>Projet à déployer qui est fait en JS avec React et Next.js</li>
+</ul>
+</li>
+</ul>
+<h3>Remarque :</h3>
+<p>Mon back étant hébergé sur un HeadlessCMS il n'y a pas besoin de déployer la BDD, je vais donc potentiellement créer un mini projet qui contient une BDD classique juste pour me frotter au déploiement complet d'une application.</p>
+<h2>Objectifs finaux :</h2>
+<ul>
+<li>Pouvoir acceder à mon site sur ovh1.</li>
+<li>Faire en sorte que le contenu se mette à jour sans nécéssiter de redéploiement.</li>
+</ul>
+<h1>Gestion de Projet :</h1>
+<p>Organisation en deux sprints séparés par le point POK.</p>
+<h2>Taches Premier sprint :</h2>
+<ul>
+<li>Explorer le serveur ovh1 pour voir comment marche le déploiement</li>
+<li>Corriger les bugs majeurs du Artblog</li>
+<li>Build une version du Artblog</li>
+<li>Bonus : déployer un projet tout simple (Express + front + back + bdd) pour se faire les dents</li>
+</ul>
+<h2>Backlog :</h2>
+<ul>
+<li>Deployer Artblog sur ovh1</li>
+<li>Bonus : mettre en place une automatisation avec Jenkins.</li>
+</ul>
 
 
 </article>
