@@ -128,4 +128,4 @@ Si on relance le script, en vérifiant si la case est bien décochée, seules le
 
 ## Lien vers le code
 
-[Mon code](./code/code_gas)
+[Mon code](../code/code_gas)

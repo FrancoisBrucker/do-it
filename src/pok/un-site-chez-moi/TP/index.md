@@ -47,3 +47,16 @@ Relier le front et le back.
 
 [Github du front](https://github.com/ThomasP04/Mon-site-chez-moi)
 [Github du back](https://github.com/ThomasP04/Mon-site-chez-moi-back)
+
+
+
+
+## Suite du POK (temps 2)
+
+Pour le temps 2, je vais reprendre la suite de mon POK. L'objectif sera de le rendre fonctionnel ce qui a été réalisé en reliant le front et le back et en améliorant le visuel. Puis, le but sera de le déployer sur un serveur distant.
+
+## Objectif jusqu'au prochain point POK
+
+- corriger le site
+- améliorer le visuel
+- se renseigner sur les méthodes de déploiement à distance
