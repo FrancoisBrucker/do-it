@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON de Tuncay : POO"
+title: "POO"
 authors:
   - Tuncay Bilgi
 

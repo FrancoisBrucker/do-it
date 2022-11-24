@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Pok de Tuncay : Artblog"
+title: "Artblog"
 authors:
   - Tuncay Bilgi
 
