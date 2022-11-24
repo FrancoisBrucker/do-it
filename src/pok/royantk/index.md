@@ -21,8 +21,8 @@ Tous les POK de Killian ROYANT
 
 Bonjour, bonjour ! Vous pouvez retrouvez ici tous mes **POK** :
 
-- **Temps 1** - [Mon site chez moi (front)](site_chez_moi)
-- **Temps 2** - [Mon site chez moi (back)](site_chez_moi)
+- **Temps 1** - [Mon site chez moi (front)](temps_1)
+- **Temps 2** - [Mon site chez moi (back)](temps_2)
 - **Temps 3** - Programmation par tests
 
 ## Mon parcours
