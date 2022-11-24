@@ -96,7 +96,7 @@ Les étapes sont les suivantes:
 
 **- Lier son document HTML à une page CSS:** 
 
-On créer un document "styles.css" qu'on lie à notre site en ajoutant cette comande dans la partie "head" de notre HTML.
+On créer un document "styles.css" qu'on lie à notre site en ajoutant cette commande dans la partie "head" de notre HTML.
 
 ```html
 <link rel='stylesheet' href='styles.css'/>
@@ -119,7 +119,7 @@ On peut bien sûr imbriquer des divisions. J'ai aussi mis mes images dans des di
 
 On peut maintenant rentrer dans le vif du sujet et remplir notre stylesheet. Voici quelques exemples  de styles que j'ai ajouté à mon site.(Cette liste n'est pas exhaustive sinon ce document serait très long). 
 
-Pour structurer la page j'ai suivi le schéma montré précédement:
+Pour structurer la page j'ai suivi le schéma montré précédemment:
 
 ```css
 
