@@ -5,7 +5,6 @@ title: "POK 1: typologie des plateformes numériques"
 authors:
   - Louise Gacoin
 
-tags: ['pok']
 ---
 ## Sommaire
 
