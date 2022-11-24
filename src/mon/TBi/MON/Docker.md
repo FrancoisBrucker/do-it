@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON de Tuncay : Docker"
+title: "Docker"
 authors:
   - Tuncay Bilgi
 
