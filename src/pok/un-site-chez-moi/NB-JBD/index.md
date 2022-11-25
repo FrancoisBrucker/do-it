@@ -10,7 +10,7 @@ tags: ['pok']
 ---
 
 <!-- début résumé -->
-Mon site chez moi (POK-Temps 1)
+Jeu de mots croisés (Svelte, NestJS, MySQL)
 <!-- fin résumé -->
 
 ### Liens GitHub
@@ -18,6 +18,7 @@ Mon site chez moi (POK-Temps 1)
 - Front-end : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
 - Back-end : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
 
+# Temps 1
 
 ## Idée de ce POK
 
@@ -116,3 +117,27 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - Rédaction de tests unitaires ?
 - Début de pipeline ?
 
+
+# Temps 2
+
+## Choses à faire durant ce temps 2
+
+- Finir la connexion entre le front et le back
+- Améliorer le projet : 
+  - Création de parties
+  - Listes des parties jouées
+  - Pages de statistiques sur les parties jouées ?
+  - Finitions de styles
+  - Génération de grilles + choix des lettres améliorés (voyelles) pour pas gagner trop d'argent quand même
+  - Connecter la page de register au back plus redirection qui s'en suit
+  - Solde dans la navbar
+  - Responsive à checker partout
+  - Recharge de solde
+- Mettre en prod le projet + régler tous les problèmes possibles
+- Passer en PostgreSQL pour matcher avec ce qu'il y a sur le OVH ?
+
+## 1er Sprint
+
+- Fixer les quelques erreurs pour un jeu fonctionnel mais pas "complet" (le minimun syndical).
+  - Problème de connexion (accès et limitation des pages, refresh sur la page d'accueil pour la connexion effective)
+- Déployer le front, le back et la BDD.
