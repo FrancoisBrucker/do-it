@@ -15,3 +15,4 @@ Voici mes poks
 
 ### Temps 1
 [Mon sheet c'est moi](../un-site-chez-moi/NG-LB)
+[Mon sheet c'est moi, suite et déploiement](../deployer-un-site/NG-LB)
