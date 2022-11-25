@@ -79,7 +79,7 @@ Netflix, Inc. est une entreprise américaine de services de streaming en ligne. 
 - **Idéologie** : “We promise our customers stellar service, our suppliers a valuable partner, our investors the prospects of sustained profitable growth, and our employees the allure of huge impact.”
 
 #### Mécanisme de coordination
-Netflix utilise le principe de **standardisation par les qualifications ** pour coordonner l'entreprise. Cela est particulièrement visible dans la culture Netflix (voir ci-dessous). Netflix fait confiance au niveau de qualification élevé de ses collaborateurs pour garantir la qualité du travail. Aucune consigne n'est donnée concernant les procédures et les processus, au contraire, cela est perçu comme une entrave.
+Netflix utilise le principe de **standardisation par les qualifications** pour coordonner l'entreprise. Cela est particulièrement visible dans la culture Netflix (voir ci-dessous). Netflix fait confiance au niveau de qualification élevé de ses collaborateurs pour garantir la qualité du travail. Aucune consigne n'est donnée concernant les procédures et les processus, au contraire, cela est perçu comme une entrave.
 
 #### Configuration organisationnelle de Netflix
 Netflix est une **bureaucratie professionnelle**, notamment en raison de la standardisation par la qualification et de l'accent mis sur le cœur de l'entreprise, à savoir la production de contenu. Mais Netflix a également les caractéristiques d'une **adhocratie innovante**, notamment en raison de la forte motivation des employés et de l'accent mis sur les employés.	
@@ -126,7 +126,9 @@ Bien sûr, cette approche présente aussi des inconvénients : il est ainsi diff
 
 Un point positif toutefois : Netflix est très transparent et toute personne qui y postule sait à quoi s'attendre et ce que l'on attend d'elle. Cette honnêteté m'a laissé une impression.
 
+{% prerequis %}
 Je recommande vraiment à tout le monde de regarder ce diaporama de Reed Hastings : [Seven Aspects of our Culture](https://www.slideshare.net/reed2001/culture-1798664/4-Seven_Aspects_of_our_Culture) (ou, plus récemment, sur le site web de Netflix : https://jobs.netflix.com/culture?lang=Fran%C3%A7ais) et de se faire sa propre opinion.
+{% endprerequis %}
 
 ## 7. Conclusion
 Dans ce POK, différentes formes d'organisation et approches de gestion ont été présentées, ainsi que trois méthodes de gestion à titre d'exemple. Elles ont toutes en commun d'avoir été rendues "présentables" par des entreprises innovantes et d'avoir été adaptées entre-temps par de nombreuses entreprises. Les collaborateurs, qui veillent à ce que l'entreprise continue à se développer, sont toujours au centre de l'attention. Les entreprises industrielles établies de longue date, en particulier, ne parviennent pas encore à s'habituer à ce changement de paradigme, car elles sont souvent encore prisonnières d'anciennes structures.

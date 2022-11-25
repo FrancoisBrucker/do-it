@@ -42,11 +42,11 @@ Business Process Model and Notation, un langage de modélisation de processus d'
 **CFP**
 Centre de Formation professionnelle, le nom de l'entreprise.
 
-**DIF**
-Droit individuel à la formation, un droit français qui permet aux salariés de suivre des formations professionnelles.
+**CPF**
+Compte personnel de formation (anciennement «DIF - Droit individuel à la formation»), un droit français qui permet aux salariés de suivre des formations professionnelles.
 
-**SSII**
-Société de services en ingénierie informatique, une entreprise qui fournit des services informatiques (p. ex. la consultation, la conception, la mise en œuvre, la maintenance, etc. des systèmes d'information) à d'autres entreprises.
+**ESN**
+Entreprise de services du numérique (anciennement «SSII - Société de services en ingénierie informatique»), une entreprise qui fournit des services informatiques (p. ex. la consultation, la conception, la mise en œuvre, la maintenance, etc. des systèmes d'information) à d'autres entreprises.
 
 **SWOT**
 Strengths, Weaknesses, Opportunities, Threats, une méthode d'analyse stratégique qui permet d'identifier les forces et les faiblesses d'une organisation, ainsi que les opportunités et les menaces.
@@ -239,5 +239,12 @@ J'ai sélectionné ce que je considère comme les cinq exigences fonctionnelles 
 En répondant aux questions, une grande partie du projet a déjà été traitée en analysant les processus et en identifiant les problèmes. Si le projet se poursuivait, la conception du vrai SI commencerait maintenant, lequel serait ensuite mis en œuvre et testé.
 
 L'étude de cas est très bien conçue, clairement compréhensible et pourtant suffisamment complexe pour que l'on doive réfléchir pour résoudre les tâches. J'ai pris plaisir à travailler sur cette étude de cas du point de vue d'un consultant et à apprendre les différents aspects organisationnels d'une entreprise autour de l'introduction d'un SI.
+
+## Historique des modifications
+- 10/10/2022 : Première version
+- 13/10/2022 : Ajout du glossaire
+- 17/10/2022 : Finalisation du tâche
+- 18/10/2022 : Correction des petites erreurs
+- 24/11/2022 - Correction du glossaire (CFP et ESN)
 
 [<-- Retour](../)

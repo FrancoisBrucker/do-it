@@ -6,34 +6,65 @@ authors:
   - Kasimir Romer
 ---
 
-## 1. Objectif
+## Objectif
 L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette formation devrait durer environ 10-12 heures, le volume serait donc très bien adapté au MON. Avec ce cours, que chacun peut ensuite suivre comme il le souhaite, on devrait être en mesure de jouer à des CTF (Capture the Flags) simples.
 
-## 2. Roadmap du projet
-1. Recherche sur chaque sujet
-2. Rédaction de chapitres théoriques (éventuellement avec de petites vidéos de démonstration)
-3. Mise à disposition de possibilités de tester en pratique ce qui a été appris
+## Gestion de projet
+### Backlog
+- [ ] Créer un repo GitHub pour la formation
+- [ ] Créer une liste avec les sujets à couvrir
+- [ ] Créer le document de cours
+- [ ] Recherche de commandes et outils importants
+- [ ] Ecrire le chapitre sur les commandes et outils importants
+- [ ] Recherche sur la reconnaissance 
+- [ ] Ecrire le chapitre sur la reconnaissance
+- [ ] Recherche sur Craquage de mots de passe
+- [ ] Ecrire le chapitre sur le craquage de mots de passe
+- [ ] Recherche sur Exploitation du Web 
+- [ ] Ecrire le chapitre sur l'exploitation du Web
+- [ ] Recherche sur Analyse binaire
+- [ ] Ecrire le chapitre sur l'analyse binaire
+- [ ] Recherche sur Exploiter les vulnérabilités
+- [ ] Ecrire le chapitre sur l'exploitation des vulnérabilités
+- [ ] Relecture
+- [ ] Recherche des sources pour des CTFs
+- [ ] Soudre quelques CTFs
+- [ ] Décrire les CTF dans ce fichier ici
+- [ ] Créer des exercises pour les chapitres
+- [ ] Créer une machine virtuelle et cacher quelques flags
+- [ ] Créer un manual pour la machine virtuelle
 
-## 3. Sujets
-Liste préliminaire de sujets à traiter :
-- Commandes et outils importants 
-- Recherche d'informations
-- Craquage de mots de passe
-- Exploitation du Web 
-- Analyse binaire
-- Exploiter les vulnérabilités
+### Sprint 1
+**25/11/2022 - 07/12/2022**
+Planning:
+- [ ] Créer un repo GitHub pour la formation
+- [ ] Créer une liste avec les sujets à couvrir
+- [ ] Créer le document de cours
+- [ ] Recherche de commandes et outils importants
+- [ ] Ecrire le chapitre sur les commandes et outils importants
+- [ ] Recherche sur la reconnaissance 
+- [ ] Ecrire le chapitre sur la reconnaissance
+- [ ] Recherche sur Craquage de mots de passe
+- [ ] Ecrire le chapitre sur le craquage de mots de passe
 
-## 4. Défintions
+### Sprint 2
+**08/12/2022 - 13/01/2023**
+
+### Sprint 3
+**14/01/2023 - 25/01/2023**
+
+## Défintions
 ### Hacking
 Le hacking est l'art de trouver des failles dans un système informatique. Il s'agit d'une activité très large, qui peut aller de la simple recherche de mots de passe à la création de virus. Le hacking est souvent associé à des activités illégales, mais il peut aussi être utilisé pour des activités légitimes, comme la recherche de failles dans un système informatique.
 
 ### CTF
 Un CTF (Capture the Flag) est un jeu dans lequel il faut trouver des informations cachées dans un système informatique. Pour obtenir le drapeau, il faut souvent résoudre des énigmes, trouver des mots de passe, exploiter des vulnérabilités, etc. Les CTF sont souvent organisés par des entreprises ou des associations, et sont souvent réservés aux personnes ayant déjà une certaine expérience en hacking.
 
-## 5. Sources
+## Sources
 - https://www.hackthebox.eu/
 - https://www.root-me.org/
 - https://www.hackthissite.org/
 - https://www.hackthis.co.uk/
+- ...
 
 [<-- Retour](../)
