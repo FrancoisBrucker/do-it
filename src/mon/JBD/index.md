@@ -13,49 +13,48 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 <!-- fin résumé -->
 
 <div class="temps-container">
-	<div class="temps-border temps-border-left"/>
+	<div class="temps-border temps-border-left"></div>
 	<h2 class="temps">Temps 1</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(64, 134, 244,var(--opacity));" href="./Mes_MON/gglAppsScript">
-			<div class="img-container"><img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%"></div>
+			<div class="img-container"><img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif">Google apps script ou comment automatiser les choses embêtantes dans un tableur</p>
 		</a>
 		<a class="card" style="background-color:rgba(218, 170, 248,var(--opacity));" href="./Mes_MON/SQLinjection">
-			<div class="img-container"><img src="./Image/SQLinjection.jpg" alt="Avatar" style="width:100%;"></div>
+			<div class="img-container"><img src="./Image/SQLinjection.jpg" alt="Avatar" style="width:100%;"/></div>
 			<p class="MON-descriptif"> SQL injection </p>
 		</a>
 	</div>
 </div>
-
 <div class="temps-container">
-	<div class="temps-border temps-border-right"/>
+	<div class="temps-border temps-border-right"></div>
 	<h2 class="temps">Temps 2</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(129, 196, 100,var(--opacity));" href="./Mes_MON/404">
-			<div class="img-container"><img src="./Image/logo-mongoDB.jpg" alt="Avatar" style="width:100%;border-radius: 8em;"></div>
+			<div class="img-container"><img src="./Image/logo-mongoDB.jpg" alt="Avatar" style="width:100%;border-radius: 8em;"/></div>
 			<p class="MON-descriptif">Bases de données non relationnelles (MongoDB, ...)</p>
 		</a>
 		<a class="card" style="background-color:rgba(206, 103, 154,var(--opacity));" href="./Mes_MON/404">
-			<div class="img-container"><img src="./Image/1200px-Sass_Logo_Color.svg.png" alt="Avatar" style="width:100%"></div>
+			<div class="img-container"><img src="./Image/1200px-Sass_Logo_Color.svg.png" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif"> Web Front 2 (SASS, postCSS) </p>
 		</a>
 	</div>
 </div>
-
 <div class="temps-container">
-	<div class="temps-border temps-border-left"/>
+	<div class="temps-border temps-border-left"></div>
 	<h2 class="temps">Temps 3</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(0, 169, 217,var(--opacity));" href="./Mes_MON/404">
-			<div class="img-container"><img src="./Image/1631026680-logo-react-native.png" alt="Avatar" style="width:100%"></div>
+			<div class="img-container"><img src="./Image/1631026680-logo-react-native.png" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif">Développement Mobile (React Native)</p>
 		</a>
 		<a class="card" style="background-color:rgba(20, 150, 255,var(--opacity));" href="./Mes_MON/404">
-			<div class="img-container"><img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%"></div>
+			<div class="img-container"><img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif"> Dev-ops (objets et/ou méthodes)</p>
 		</a>
 	</div>
 </div>
+
 
 <style>
 	.temps{
