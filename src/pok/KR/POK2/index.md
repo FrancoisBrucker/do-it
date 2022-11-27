@@ -6,6 +6,11 @@ authors:
   - Kasimir Romer
 ---
 
+## Résultat
+{% prerequis %}
+Cliquez ici pour accéder au document créé : [Résultat](./hacking)
+{% endprerequis %}
+
 ## Objectif
 L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette formation devrait durer environ 10-12 heures, le volume serait donc très bien adapté au MON. Avec ce cours, que chacun peut ensuite suivre comme il le souhaite, on devrait être en mesure de jouer à des CTF (Capture the Flags) simples.
 
@@ -14,21 +19,23 @@ L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette f
 - [ ] Créer un repo GitHub pour la formation
 - [ ] Créer une liste avec les sujets à couvrir
 - [ ] Créer le document de cours
+- [ ] Écrire un chapitre d'introduction
 - [ ] Recherche de commandes et outils importants
 - [ ] Ecrire le chapitre sur les commandes et outils importants
 - [ ] Recherche sur la reconnaissance 
 - [ ] Ecrire le chapitre sur la reconnaissance
-- [ ] Recherche sur Craquage de mots de passe
+- [ ] Recherche sur le craquage de mots de passe
 - [ ] Ecrire le chapitre sur le craquage de mots de passe
-- [ ] Recherche sur Exploitation du Web 
-- [ ] Ecrire le chapitre sur l'exploitation du Web
-- [ ] Recherche sur Analyse binaire
-- [ ] Ecrire le chapitre sur l'analyse binaire
+- [ ] Recherche sur l'exploitation Web 
+- [ ] Ecrire le chapitre sur l'exploitation web
+- [ ] Recherche sur l'analyse forensique
+- [ ] Ecrire le chapitre sur l'analyse forensique
 - [ ] Recherche sur Exploiter les vulnérabilités
 - [ ] Ecrire le chapitre sur l'exploitation des vulnérabilités
-- [ ] Relecture
+- [ ] Relecture et correction
+- [ ] Présentation du document, Correction par des autres étudiants
 - [ ] Recherche des sources pour des CTFs
-- [ ] Soudre quelques CTFs
+- [ ] Résoudre quelques CTFs
 - [ ] Décrire les CTF dans ce fichier ici
 - [ ] Créer des exercises pour les chapitres
 - [ ] Créer une machine virtuelle et cacher quelques flags
@@ -37,15 +44,18 @@ L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette f
 ### Sprint 1
 **25/11/2022 - 07/12/2022**
 Planning:
-- [ ] Créer un repo GitHub pour la formation
+- [x] ~~Créer un repo GitHub pour la formation~~
+- [x] Créer un document: [document](./hacking)
 - [ ] Créer une liste avec les sujets à couvrir
 - [ ] Créer le document de cours
+- [ ] Écrire un chapitre d'introduction
 - [ ] Recherche de commandes et outils importants
 - [ ] Ecrire le chapitre sur les commandes et outils importants
 - [ ] Recherche sur la reconnaissance 
 - [ ] Ecrire le chapitre sur la reconnaissance
 - [ ] Recherche sur Craquage de mots de passe
 - [ ] Ecrire le chapitre sur le craquage de mots de passe
+- Préparer du pitch pour le 7 décembre
 
 ### Sprint 2
 **08/12/2022 - 13/01/2023**
@@ -65,6 +75,7 @@ Un CTF (Capture the Flag) est un jeu dans lequel il faut trouver des information
 - https://www.root-me.org/
 - https://www.hackthissite.org/
 - https://www.hackthis.co.uk/
+- https://jaimelightfoot.com/blog/so-you-want-to-ctf-a-beginners-guide/
 - ...
 
 [<-- Retour](../)

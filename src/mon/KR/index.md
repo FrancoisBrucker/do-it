@@ -20,6 +20,7 @@ Ici, c'est le MONde des projets de Kasimir
 ### Temps 2
 - [Splunk (cybersecurité/gestion des logs)](./MON2-1/)
 - Bases de données non relationnelles (mongodb, ...)
+- où: Assembly language (x86, ARM, ...)
 
 ### Temps 3
 - Premier MON: Sobriété numérique et stratégie digitale
