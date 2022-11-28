@@ -15,8 +15,28 @@ Mon sheet c'est moi, suite du développement du site et déploiement sur un serv
 
 <!-- fin résumé -->
 
-## 1. Objectifs du POK
+## 1.1 Objectifs primordiaux du POK
 
-- mettre en place le backend nécessaire pour que plusieurs utilisateurs puissent éditer la partition en même temps, et pour gérer la connexion
-- déployer le site sur un serveur distant
-- possibilité de peaufiner l'apparence du site ou d'ajouter des fonctionnalités à la partition, selon le temps disponible
+- Déploiement du site sur ovh
+
+- Ecrire le back du site en node. Cette étape nécessitera une documentation approfondie en raison de nos connaissances précaires en la matière
+
+- Faire une base du données en Sqlite
+
+- Faire le lien entre le back, le site et la banque de données
+
+## 1.2 Objectifs optionnels du POK
+
+Ces objectifs seront réalisés si nous avons le temps après avoir fini les objectifs précédents. 
+
+- Améliorer le front du site, notamment son apparence et réaliser des finitions
+
+- Rajouter des fonctionnalités à la partition de musique
+
+## 1.3 Objectifs intermédiaires du premier sprint à réaliser d'ici le mercredi 07/12.
+
+- Déployer le site
+
+- Commencer l'écriture du back
+
+- Commencer la base de données
