@@ -10,11 +10,13 @@ tags: ['pok']
 
 <!-- début résumé -->
 
-Github: <https://github.com/ThibaultAdelain/InstantBuddyNode>
+Application pour rencontrer des buddies à proximité !
 
 <!-- fin résumé -->
 
-Cette application a pour but de rencontrer des gens autour de nous, à proximité.
+Github: <https://github.com/ThibaultAdelain/InstantBuddyNode>
+
+# Temps 1
 
 J'ai développé cette application avec :
 
@@ -36,3 +38,22 @@ J'ai utilisé le [tuto MERN stack][1].
 [1]: <https://www.youtube.com/watch?v=-0exw-9YJBo&list=PLillGF-RfqbbQeVSccR9PGKHzPJSWqcsm&ab_channel=TraversyMedia>
 
 [2]: <https://sequelize.org/docs/v6/getting-started/>
+
+# Temps 2
+
+## Fin de développement et déploiement
+
+### ToDo : 1er Sprint
+
+- Derniers correctifs :
+  - Vérifier les champs renseignés par l'utilisateur en back-end
+  - Temps d'expiration des cookies de session
+- Améliorer l'UI :
+  - Responsive bottom bar
+- Incorporer un système de chat :
+  - Choix de la technologie
+  - Développement
+  
+### ToDo : 2ème Sprint
+
+- Déploiement sur serveur distant
