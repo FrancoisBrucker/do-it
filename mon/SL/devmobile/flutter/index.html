@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Developpement Mobile avec Flutter</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">Developpement Mobile avec Flutter</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Savinien Laeuffer</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Développement mobile avec Flutter (Drift et FlutterBase)</p>
+<!-- fin résumé -->
+<h2>Description</h2>
+<p>Ayant déjà fait du développement mobile en entreprise, j'ai pu apprendre à maitriser Flutter afin de développer des applications mobiles dans le secteur médical. Cependant tout mon stage s'est focalisé sur la partie front-end des applications mobiles et je n'ai pas pu m'instruire sur la partie back-end qui peut être aussi gérée par Flutter, et quelques plugins utiles. Comme je souhaite probablement trouver un stage dans ce domaine, il me faut acquérir des connaissances dans cette branche afin d'avoir un spectre large de compétences sur le développement mobile. Aussi cela m'aidera énormément pour le projet 3A qui traite aussi du développement mobile.</p>
+<h2>Qu'est-ce que Flutter, Floor, Firebase ?</h2>
+<h5>Flutter</h5>
+<p><em><strong>Flutter</strong></em> est un <strong>framework open source</strong>  développé par Google utilisé dans la <strong>création d'applications mobiles</strong> Android mais aussi iOS. Il est basé sur le langage <strong>Dart</strong> aussi créé par Google, et se compile assez vite selon l'application que l'on fait. Il permet de construire des interfaces utilisateurs très esthétique et très rapidement grâce à un système de composants (components) déjà inclus dans Flutter mais qui sont tout aussi personnalisables (à la manière de Bootstrap pour le développement web)</p>
+<div style="width:100%;">
+  <figure style="text-align:center">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutter.png">
+    <figcaption>Logo de lutter</figcaption>
+  </figure>
+</div>
+<p>Je note deux avantages majeurs de ce framework:</p>
+<ul>
+<li>Tout d'abord il permet de développer des applications en même temps pour Android et iOS avec le <strong>même code</strong>.</li>
+<li>Aussi, une fonctionnalité &quot;Hot Reload&quot; est disponible et facilite énormément le développement. Au lieu de compiler, ou de relancer l'application pour afficher les changements de code que l'on a fait, le bouton Hot Reload permet automatiquement d'<strong>actualiser l'application</strong> sur la vue que l'on est en train de consulter. Malheuremsent cela ne marche pas tout le temps lorsque l'on travaille sur la partie back-end, notamment les bases de données où il faut souvent désinstaller l'application et la réinstaller pour retrouver une BDD vierge.</li>
+</ul>
+<h5>Drift</h5>
+<p><em><strong>Drift</strong></em>, anciennement Moor, est une librairie Flutter basé sur SQLite. Il fournit à nos applications mobiles un <strong>système de persistence de données</strong>. Drift a beaucoup d'avantages par rapport à une simple librairie comme SQFlite (SQlite pour Flutter):</p>
+<ul>
+<li>Un système de streaming des données: dès qu'une donnée change, le système est notifié et actualisé sans requête supplémentaire</li>
+<li>Une gestion des types plus pratique et efficace</li>
+<li>Une API en Dart qui permet d'écrire des requêtes plus simples sans passer par du SQL.</li>
+</ul>
+<h5>Firebase</h5>
+<p><em><strong>Firebase</strong></em> est une plateforme de développement d'application créée par Google qui va nous fournir les outils nécessaires à la <strong>création d'une base de données sur un serveur</strong> afin de stocker nos données d'applications.<br>
+<em><strong>Flutterfire</strong></em> est le <strong>package</strong> faisant le lien entre Firebase et nos applications mobiles en Flutter que nous allons installer afin de stocker sur le serveur nos données stockée localement grâce à Drift.</p>
+<div style="width:100%;">
+  <figure style="text-align:center">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutterfire.png">
+    <figcaption>Flutter et Firebase</figcaption>
+  </figure>
+</div>
+<h2>Persistence des données (Drift)</h2>
+<h5>Installation de Drift</h5>
+<p>Pour installer Drift à notre projet flutter, il faut ajouter plusieurs packages aux dépences dans notre fichier <code>public.yaml</code>:</p>
+<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+  <span class="token key atrule">drift</span><span class="token punctuation">:</span> ^2.2.0
+  <span class="token key atrule">sqlite3_flutter_libs</span><span class="token punctuation">:</span> ^0.5.0
+  <span class="token key atrule">path_provider</span><span class="token punctuation">:</span> ^2.0.0
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> ^1.8.2
+
+<span class="token key atrule">dev_dependencies</span><span class="token punctuation">:</span>
+  <span class="token key atrule">drift_dev</span><span class="token punctuation">:</span> ^2.2.0+1
+  <span class="token key atrule">build_runner</span><span class="token punctuation">:</span> ^2.2.1
+</code></pre>
+<p>On télécharge et installe finalement les packages en lançant dans notre terminal la commande <code>flutter pub get</code> (si problème avec des packages déjà existant, on peut lancer <code>flutter clean</code> avant)</p>
+<h5>Déclarer les tables</h5>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://docs.flutter.dev/">Documentation Flutter</a></li>
+<li><a href="https://m3.material.io/develop/flutter">Material</a></li>
+<li><a href="https://drift.simonbinder.eu/docs/">Documentation Drift</a></li>
+<li><a href="https://firebase.flutter.dev/docs/overview">Documentation Flutterfire</a></li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
