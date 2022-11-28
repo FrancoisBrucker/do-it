@@ -29,3 +29,10 @@ Nous envisageons deux scénarios pour ce POK :
 
 - si le système à cartographier est très complexe, nous nous restreindrons à quelques vues : vue métier et vue application par exemple.
 - Si le système est plus simple, nous pourons enrichir cette cartographie avec d'autres vues et augmenter la précision des premières.
+
+## To-do list jusqu'au premier sprint
+- [ ] Contacter la région Sud pour savoir comment ils cartographient leur SI
+- [ ] Contacter la DSI de Centrale MArseille pour savoir comment ils cartographient leur SI et savoir s'il y a une partie que l'on pourrait cartographier pour eux
+- [ ] Chercher si il y a des anciens de Centrale qui bossent dans une DSI
+- [ ] Chercher les différentes méthodes de cartographie d'un SI
+- [ ] Définir le périmètre que l'on souhaite donner à ce POK en fonction des réponses précédentes et définir la to-do list de la deuxième partie du POK
