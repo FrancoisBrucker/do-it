@@ -4,6 +4,7 @@ layout: layout/post.njk
 title: "Street Workout Finder"
 authors:
   - Thibault Adelain
+  - Thomas Duroy
   - Jeffrey Edisah
   - Kasimir Romer
 
