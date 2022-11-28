@@ -36,7 +36,7 @@ Voici un aperçu de ce que l'on souhaite pour l'UI:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:600px; margin-left: auto; margin-right: auto" src="../uitest.png">
+    <img style="height:600px; margin-left: auto; margin-right: auto" src="../uiwireframe.png">
     <figcaption>Wireframe de l'application</figcaption>
   </figure>
 </div>
