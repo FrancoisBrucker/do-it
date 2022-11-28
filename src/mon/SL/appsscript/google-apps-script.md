@@ -13,8 +13,9 @@ Google Apps Script
 
 ## Description
 
-Le but de ce MON est de découvrir Google Apps Script, un outil/language de programmation développé par Google permettant d'executer des scripts entre les différents services proposés par Google.
-Apps Script apparait dans l'onglet Extension dans différents services proposés sur Google Drive (Sheets, Document)
+Le but de ce MON est de découvrir Google Apps Script, un outil/language de programmation développé par Google permettant d'executer des scripts entre les différents services proposés par Google. J'ai présenté ça sous la forme d'un tutoriel où j'explique différents outils de Google Apps Script , et j'essaye par la suite de les combiner entre eux pour en faire quelque chose d'utile et pratique.
+Pour ce MON je me suis globalement servi de la documentation fournie par Google sur son service.
+Apps Script apparait dans l'onglet Extension dans différents services proposés sur Google Drive (Sheets, Document)`
 
 ## Afficher un Toast
 
@@ -115,6 +116,39 @@ Pour utiliser un déclencheur simple, il suffit de nommer sa fonction d'une cert
  - ```doGet(e)```: Se lance lorsque l'utilisateur visite une application web ou qu'un programme envoie une requête HTTP ```GET``` à une application web
 - ```doPost(e)```: Même chose mais avec une requête ```POST```
 
+## Du HTML dans Apps Script
+
+Il est aussi possible de créer et diffuser des fichiers HTML avec Apps Script. En cliquant sur le ```+``` pour ajouter un fichier, on nous propose de créer un fichier HTML. Créons donc un fichier ```index.html```:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    Hello, World!
+  </body>
+</html>
+```
+Si on veut diffuser ce fichier HTML, le code doit inclure une fonction ```doGet(e)``` (voir partie précédente) et doit renvoyer un objet ```HtmlOutput``` comme suit:
+
+```
+function doGet() {
+  return HtmlService.createHtmlOutputFromFile('index');
+}
+```
+
+Si par exemple on souhaite afficher ce ficher HTML dans une boite de dialogue, on peut utiliser le code suivant:
+
+```
+function openDialog() {
+  var html = HtmlService.createHtmlOutputFromFile('index');
+  SpreadsheetApp.getUi()
+      .showModalDialog(html, 'Dialog title');
+}
+```
+
 ## Créer un menu personnalisé dans Google Sheets
 
 On souhaite créer un menu sur le Google Sheets à partir des fonctions que l'on a créé. Cela permet d'exécuter les scripts créés plus rapidement. En plus de cela, on souhaite que ce menu se crée dès que l'on ouvre la feuille de calcul. On va donc d'abord appeler notre fonction comme suit:
@@ -132,17 +166,19 @@ On ajoute la création d'un menu:
     SpreadsheetApp.getUi()
       .createMenu('⚙️ Outils MON2')
       .addItem('Item A', 'itemA')
+      .addItem('Item B', 'itemB')
       .addToUi();
   }
 ``` 
 
-On ajoute notre fonction pour envoyer des e-mails à une liste de diffusion et on fait le lien entre le bouton du menu et la fonction:
+On ajoute notre fonction pour envoyer des e-mails à une liste de diffusion et l'affichage de la boite de dialogue et on fait le lien entre les boutons du menu et les fonctions:
 
 ``` 
   onOpen(e) {
     SpreadsheetApp.getUi()
       .createMenu('⚙️ Outils MON2')
       .addItem('Envoyer les e-mails', 'MassEmails')
+      .addItem('Diffuser HTML', 'openDialog')
       .addToUi();
   }
 
@@ -156,15 +192,22 @@ On ajoute notre fonction pour envoyer des e-mails à une liste de diffusion et o
       GmailApp.sendEmail(range[i][0], "Salut mon pote", finalMessage)
     }
   }
+
+  function openDialog() {
+    var html = HtmlService.createHtmlOutputFromFile('index');
+    SpreadsheetApp.getUi()
+        .showModalDialog(html, 'Dialog title');
+  }
 ```
 
-Et pour finir on affiche un toast de confirmation pour dire que les e-mails sont bien envoyés:
+Et pour finir on peut afficher un toast de confirmation pour dire que les e-mails sont bien envoyés:
 
 ``` 
   onOpen(e) {
     SpreadsheetApp.getUi()
       .createMenu('⚙️ Outils MON2')
       .addItem('Envoyer les e-mails', 'MassEmails')
+      .addItem('Diffuser HTML', 'openDialog')
       .addToUi();
   }
 
@@ -180,4 +223,24 @@ Et pour finir on affiche un toast de confirmation pour dire que les e-mails sont
 
     SpreadsheetApp.getActiveSpreadsheet().toast('Les mails ont bien été envoyés !', 'Confirmation', 3);
   }
+
+  function openDialog() {
+    var html = HtmlService.createHtmlOutputFromFile('index');
+    SpreadsheetApp.getUi()
+        .showModalDialog(html, 'Dialog title');
+  }
 ```
+
+Et voilà le résultat:
+
+<figure>
+  <img src="../menu.png">
+  <figcaption>Le message</figcaption>
+</figure>
+
+Je vais éviter de lancer le programme d'envoi de mails pour pas que ```zinedine.zidane@gmail.com``` reçoive un message bizarre, mais en ce qui concerne la boite de dialogue à partir du fichier ```index.html``` on obient cela:
+
+<figure>
+  <img src="../dialog.png">
+  <figcaption>Le message</figcaption>
+</figure>
