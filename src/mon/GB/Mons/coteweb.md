@@ -7,7 +7,7 @@ authors:
 
 ---
 <!-- Début Résumé -->
-MON suivi en majorité grâce au site de M. Brucker sur le développement coté serveur. 
+MON suivi en majorité grâce au site de M. Brucker sur le développement coté serveur. Il n'est pas question de paraphraser ici l'entièreté du cours, néanmoins j'incluerai un résumé sous chaque partie. 
 <!-- Fin Résumé -->
 
 ## Coté serveur 

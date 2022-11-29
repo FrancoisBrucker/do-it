@@ -17,4 +17,4 @@ Temps 1 :
 - [Dev Web 2](./Mons/Devweb2)
 <br/>
 Temps 2 :
-- [Coté Web](./Mons/coteweb.md)
+- [Côté Web](./Mons/coteweb)
