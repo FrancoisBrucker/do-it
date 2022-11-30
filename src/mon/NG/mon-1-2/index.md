@@ -5,7 +5,7 @@ title: "Création d'un site web avec Eleventy"
 authors:
     - Nathan Gissler
 
-tags: ['eleventy']
+tags: ['web', 'front', 'eleventy']
 ---
 
 <!-- début résumé -->

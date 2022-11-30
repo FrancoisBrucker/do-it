@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "POKs de Nathan"
+title: "POKs de Nathan GISSLER"
 authors:
     - Nathan Gissler
 

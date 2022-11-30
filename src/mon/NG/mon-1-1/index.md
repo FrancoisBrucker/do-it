@@ -5,7 +5,7 @@ title: "Web Front 1 HTML/CSS/JS"
 authors:
     - Nathan Gissler
 
-tags: ['html', 'css', 'canvas']
+tags: ['web', 'front', 'html', 'css', 'canvas']
 ---
 
 <!-- début résumé -->
