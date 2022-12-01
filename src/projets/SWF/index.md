@@ -25,3 +25,9 @@ L'objectif du projet est le développement d'une application de géolocalisation
 ### Octobre-Novembre
 
 Le but de cette période est d'arriver à un **Minimum Viable Product(MVP)** à travers le maquettage sur Figma et les interviews des potentiels utilisateurs. Ce temps est aussi dédiée à l'établissement de l'état de l'art, et à la délimitation d'un business model. Une fois ces objectifs atteints, nous nous lancerons dans le développement.
+
+
+### Décembre-Janvier
+
+Nous sommes actuellement en train de nous décider sur l'archtecture de notre application, et hésitons entre une application classique avec un front, un back et une base de données et des micros services.
+Une fois cette décision prise, nous commencerons à développer à proprement parler l'application.
