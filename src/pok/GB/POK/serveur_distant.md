@@ -19,3 +19,6 @@ Sprint 2 :
 - Insérer une base de donnée
 - Gérer le backend en node
 - Si le temps le permet voir un peu pour la sécurité  
+
+### Nouveau projet Express 
+Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je créee un nouveau projet à l'adresse http://localhost:3000/. 

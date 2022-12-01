@@ -10,7 +10,7 @@ authors:
 MON sur le developpement côté serveur suivi sur le site de M. Brucker puis sur mdn developper. 
 <!-- Fin Résumé -->
 Il n'est pas question de paraphraser ici l'entièreté du cours, néanmoins j'incluerai un résumé sous chaque partie. <br/>
-Etant complètement débutant j'ai trouvé que le cours dispensé en anglais sur <a href=https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment> détaillait plus toute la démarche de création de serveur, c'est pourquoi après les deux premiers modules, j'ai continué mon apprentissage sur ce site.
+Etant complètement débutant j'ai trouvé que le cours dispensé en anglais sur [mdn.developper](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment) détaillait plus toute la démarche de création de serveur, c'est pourquoi après les deux premiers modules, j'ai continué mon apprentissage sur ce site.
 ## Coté serveur 
 ### Lire des données 
 Afin de lire des données sur un site web et les réutiliser ensuite, on utilise la fonction javascript "fetch". Cette dernière est fondamentale dans l'utilisation des bases de données. La fonction fetch peut être utilisé sur des fichiers textes, des images ou du json ([voir Devweb 1](Devweb1)) à condition que ces dernières soient sur un serveur web !
