@@ -83,8 +83,68 @@ Ce serveur suit le protocole http c'est à dire une suite de requête de l'utils
 <h3>Création du premier projet grâce à Node/Express</h3>
 <p>Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : &quot;Mon site chez moi&quot; coté serveur.<br><br>
 Le framework Express crée tout le &quot;squelette&quot; de notre site web et l'importe sur un serveur local. Ce serveur est localisé à <a href="http://localhost:3000/">http://localhost:3000/</a>.<br>
-Nous obtenons donc notre premier site web sur serveur : <img src="../../Images/Express.png"></p>
+Nous obtenons donc notre premier site web sur serveur : <img src="../../Images/Express.png"><br>
+Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../../Images/Dossiers.png"></p>
+<ul>
+<li>le dossier &quot;bin&quot; contient un fichier &quot;www&quot; qui représente l'hébergement de notre site</li>
+<li>les dossiers &quot;models&quot; ainsi que &quot;public&quot; sont vides pour le moment : &quot;models&quot; nous servira pour la base de données et &quot;public&quot; pour les images et les styles.</li>
+<li>&quot;routes&quot; indique les routes</li>
+<li>&quot;views&quot; montre les messages que l'on voit affiché en fonction des réponses de notre serveur</li>
+<li>les fichiers &quot;.json&quot; sont l'identité de notre projet et le fichier app.js est l'endroit où l'on programme notre site et ressemble pour le moment à ceci :</li>
+</ul>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">var createError <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'http-errors'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var express <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var path <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var cookieParser <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'cookie-parser'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var logger <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'morgan'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+var indexRouter <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'./routes/index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var usersRouter <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'./routes/users'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+var app <span class="token operator">=</span> express<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// view engine setup
+app.set<span class="token punctuation">(</span><span class="token string">'views'</span>, path.join<span class="token punctuation">(</span>__dirname, <span class="token string">'views'</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+app.set<span class="token punctuation">(</span><span class="token string">'view engine'</span>, <span class="token string">'jade'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app.use<span class="token punctuation">(</span>logger<span class="token punctuation">(</span><span class="token string">'dev'</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+app.use<span class="token punctuation">(</span>express.json<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+app.use<span class="token punctuation">(</span>express.urlencoded<span class="token punctuation">(</span><span class="token punctuation">{</span> extended: <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+app.use<span class="token punctuation">(</span>cookieParser<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+app.use<span class="token punctuation">(</span>express.static<span class="token punctuation">(</span>path.join<span class="token punctuation">(</span>__dirname, <span class="token string">'public'</span><span class="token punctuation">))</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app.use<span class="token punctuation">(</span><span class="token string">'/'</span>, indexRouter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app.use<span class="token punctuation">(</span><span class="token string">'/users'</span>, usersRouter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// catch <span class="token number">404</span> and forward to error handler
+app.use<span class="token punctuation">(</span>function<span class="token punctuation">(</span>req, res, next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  next<span class="token punctuation">(</span>createError<span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// error handler
+app.use<span class="token punctuation">(</span>function<span class="token punctuation">(</span>err, req, res, next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // <span class="token builtin class-name">set</span> locals, only providing error <span class="token keyword">in</span> development
+  res.locals.message <span class="token operator">=</span> err.message<span class="token punctuation">;</span>
+  res.locals.error <span class="token operator">=</span> req.app.get<span class="token punctuation">(</span><span class="token string">'env'</span><span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'development'</span> ? err <span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  // render the error page
+  res.status<span class="token punctuation">(</span>err.status <span class="token operator">||</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res.render<span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module.exports <span class="token operator">=</span> app<span class="token punctuation">;</span>
+</code></pre>
 <h3>Utiliser une base de donnée</h3>
+<p>Dans cette troisième partie nous apprenons à insérer une base de données sur notre site express via mongoose et mangodb. Cette partie fondamentale est surement la plus compliqué que j'ai effectuée en informatique depuis cette année. <br><br>
+Nous avons commencé par créer un compte sur <a href=hhtp://cloud.mongodb.com/> puis le tout est de connecter notre application ou site avec la database présente sur le cloud. Pour se faire, nous utilisons le lien que nous donne mangodb : 'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&amp;w=majority' que nous lions avec notre projet dans le fichier app.js :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">var mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var dev_db_url <span class="token operator">=</span> <span class="token string">'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&amp;w=majority'</span><span class="token punctuation">;</span>
+var mongoDB <span class="token operator">=</span> process.env.MONGODB_URI <span class="token operator">||</span> dev_db_url<span class="token punctuation">;</span>
+mongoose.connect<span class="token punctuation">(</span>mongoDB, <span class="token punctuation">{</span>useNewUrlParser: true, useUnifiedTopology: true<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mongoose.Promise <span class="token operator">=</span> global.Promise<span class="token punctuation">;</span>
+var db <span class="token operator">=</span> mongoose.connection<span class="token punctuation">;</span>
+db.on<span class="token punctuation">(</span><span class="token string">'error'</span>, console.error.bind<span class="token punctuation">(</span>console, <span class="token string">'MongoDB connection error:'</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+</code></pre>
 
 
 </article>
