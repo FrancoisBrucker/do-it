@@ -26,7 +26,7 @@ Ce serveur suit le protocole http c'est à dire une suite de requête de l'utils
 Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : "Mon site chez moi" coté serveur.<br>
 Le framework Express crée tout le "squelette" de notre site web et l'importe sur un serveur local. Ce serveur est localisé à http://localhost:3000/.
 Nous obtenons donc notre premier site web sur serveur : <img src="../../Images/Express.png">
-Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../../Images/Dossiers.png">
+Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../../Images/Dossiers.PNG">
 - le dossier "bin" contient un fichier "www" qui représente l'hébergement de notre site
 - les dossiers "models" ainsi que "public" sont vides pour le moment : "models" nous servira pour la base de données et "public" pour les images et les styles. 
 - "routes" indique les routes 
@@ -79,7 +79,7 @@ module.exports = app;
 
 ### Utiliser une base de donnée
 Dans cette troisième partie nous apprenons à insérer une base de données sur notre site express via mongoose et mangodb. Cette partie fondamentale est surement la plus compliqué que j'ai effectuée en informatique depuis cette année. <br>
-Nous avons commencé par créer un compte sur <a href=hhtp://cloud.mongodb.com/> puis le tout est de connecter notre application ou site avec la database présente sur le cloud. Pour se faire, nous utilisons le lien que nous donne mangodb : 'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&w=majority' que nous lions avec notre projet dans le fichier app.js : 
+Nous avons commencé par créer un compte sur hhtp://cloud.mongodb.com/ puis le tout est de connecter notre application ou site avec la database présente sur le cloud. Pour se faire, nous utilisons le lien que nous donne mangodb : 'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&w=majority' que nous lions avec notre projet dans le fichier app.js : 
 
 ```bash
 var mongoose = require('mongoose');
@@ -90,3 +90,71 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
+Nous crééons ensuite une base de donnée comprenant des livres, des auteurs etc. par l'intermédiaire d'un nouveau fichier "populatedb.js" qui nous sert à peupler la base de données. Ce fichier contient par exemple des fonctions telles que :
+```bash
+function authorCreate(first_name, family_name, d_birth, d_death, cb) {
+  authordetail = {first_name:first_name , family_name: family_name }
+  if (d_birth != false) authordetail.date_of_birth = d_birth
+  if (d_death != false) authordetail.date_of_death = d_death
+  
+  var author = new Author(authordetail);
+       
+  author.save(function (err) {
+    if (err) {
+      cb(err, null)
+      return
+    }
+    console.log('New Author: ' + author);
+    authors.push(author)
+    cb(null, author)
+  }  );
+}
+function createGenreAuthors(cb) {
+    async.series([
+        function(callback) {
+          authorCreate('Patrick', 'Rothfuss', '1973-06-06', false, callback);
+        },
+        function(callback) {
+          authorCreate('Ben', 'Bova', '1932-11-8', false, callback);
+        },
+    ]);
+}
+```
+Cette fonction renvoi à un autre fichier, "author.js", stocké dans "models" définissant l'objet "auteur". 
+```bash
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+const AuthorSchema = new Schema({
+  first_name: { type: String, required: true, maxLength: 100 },
+  family_name: { type: String, required: true, maxLength: 100 },
+  date_of_birth: { type: Date },
+  date_of_death: { type: Date },
+});
+
+// Virtual for author's full name
+AuthorSchema.virtual("name").get(function () {
+  // To avoid errors in cases where an author does not have either a family name or first name
+  // We want to make sure we handle the exception by returning an empty string for that case
+  let fullname = "";
+  if (this.first_name && this.family_name) {
+    fullname = `${this.family_name}, ${this.first_name}`;
+  }
+  if (!this.first_name || !this.family_name) {
+    fullname = "";
+  }
+  return fullname;
+});
+
+// Virtual for author's URL
+AuthorSchema.virtual("url").get(function () {
+  // We don't use an arrow function as we'll need the this object
+  return `/catalog/author/${this._id}`;
+});
+
+// Export model
+module.exports = mongoose.model("Author", AuthorSchema);
+```
+
+Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../../Images/database.PNG'>
