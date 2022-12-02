@@ -23,6 +23,8 @@ Cette commande crée un serveur minimal en local.
 Ce serveur suit le protocole http c'est à dire une suite de requête de l'utilsateur et de réponse de la machine. 
 
 ### Création du premier projet grâce à Node/Express 
-Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveur. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : "Mon site chez moi" coté serveur.<br>
+Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : "Mon site chez moi" coté serveur.<br>
 Le framework Express crée tout le "squelette" de notre site web et l'importe sur un serveur local. Ce serveur est localisé à http://localhost:3000/.
 Nous obtenons donc notre premier site web sur serveur : <img src="../../Images/Express.png">
+
+### Utiliser une base de donnée

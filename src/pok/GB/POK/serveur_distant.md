@@ -14,11 +14,13 @@ Dans un premier temps, ajouter du back-end grâce au MON suivi sur le site de M.
 TO do-list : 
 Sprint 1 : 
 - Ramener le site sur l'ovh 
-- Gérer des cookies pour implémenter une page de connexion 
+- Gérer des cookies pour implémenter une page de connexion
+<br> 
 Sprint 2 :
 - Insérer une base de donnée
 - Gérer le backend en node
 - Si le temps le permet voir un peu pour la sécurité  
 
 ### Nouveau projet Express 
-Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je créee un nouveau projet à l'adresse http://localhost:3000/. 
+Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je crée un nouveau projet à l'adresse http://localhost:3000/. <br>
+Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur <a href="http://developer.mozilla.org"/> et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.
