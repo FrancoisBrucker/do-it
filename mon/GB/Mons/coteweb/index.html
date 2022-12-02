@@ -84,7 +84,7 @@ Ce serveur suit le protocole http c'est à dire une suite de requête de l'utils
 <p>Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : &quot;Mon site chez moi&quot; coté serveur.<br><br>
 Le framework Express crée tout le &quot;squelette&quot; de notre site web et l'importe sur un serveur local. Ce serveur est localisé à <a href="http://localhost:3000/">http://localhost:3000/</a>.<br>
 Nous obtenons donc notre premier site web sur serveur : <img src="../../Images/Express.png"><br>
-Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../../Images/Dossiers.png"></p>
+Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../../Images/Dossiers.PNG"></p>
 <ul>
 <li>le dossier &quot;bin&quot; contient un fichier &quot;www&quot; qui représente l'hébergement de notre site</li>
 <li>les dossiers &quot;models&quot; ainsi que &quot;public&quot; sont vides pour le moment : &quot;models&quot; nous servira pour la base de données et &quot;public&quot; pour les images et les styles.</li>
@@ -136,7 +136,7 @@ module.exports <span class="token operator">=</span> app<span class="token punct
 </code></pre>
 <h3>Utiliser une base de donnée</h3>
 <p>Dans cette troisième partie nous apprenons à insérer une base de données sur notre site express via mongoose et mangodb. Cette partie fondamentale est surement la plus compliqué que j'ai effectuée en informatique depuis cette année. <br><br>
-Nous avons commencé par créer un compte sur <a href=hhtp://cloud.mongodb.com/> puis le tout est de connecter notre application ou site avec la database présente sur le cloud. Pour se faire, nous utilisons le lien que nous donne mangodb : 'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&amp;w=majority' que nous lions avec notre projet dans le fichier app.js :</p>
+Nous avons commencé par créer un compte sur hhtp://cloud.mongodb.com/ puis le tout est de connecter notre application ou site avec la database présente sur le cloud. Pour se faire, nous utilisons le lien que nous donne mangodb : 'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&amp;w=majority' que nous lions avec notre projet dans le fichier app.js :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">var mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 var dev_db_url <span class="token operator">=</span> <span class="token string">'mongodb+srv://username:password!@cluster0.kngjtje.mongodb.net/?retryWrites=true&amp;w=majority'</span><span class="token punctuation">;</span>
 var mongoDB <span class="token operator">=</span> process.env.MONGODB_URI <span class="token operator">||</span> dev_db_url<span class="token punctuation">;</span>
@@ -145,6 +145,71 @@ mongoose.Promise <span class="token operator">=</span> global.Promise<span class
 var db <span class="token operator">=</span> mongoose.connection<span class="token punctuation">;</span>
 db.on<span class="token punctuation">(</span><span class="token string">'error'</span>, console.error.bind<span class="token punctuation">(</span>console, <span class="token string">'MongoDB connection error:'</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
 </code></pre>
+<p>Nous crééons ensuite une base de donnée comprenant des livres, des auteurs etc. par l'intermédiaire d'un nouveau fichier &quot;populatedb.js&quot; qui nous sert à peupler la base de données. Ce fichier contient par exemple des fonctions telles que :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">function</span> authorCreate<span class="token punctuation">(</span>first_name, family_name, d_birth, d_death, cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  authordetail <span class="token operator">=</span> <span class="token punctuation">{</span>first_name:first_name , family_name: family_name <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>d_birth <span class="token operator">!=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> authordetail.date_of_birth <span class="token operator">=</span> d_birth
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>d_death <span class="token operator">!=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> authordetail.date_of_death <span class="token operator">=</span> d_death
+  
+  var author <span class="token operator">=</span> new Author<span class="token punctuation">(</span>authordetail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       
+  author.save<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      cb<span class="token punctuation">(</span>err, null<span class="token punctuation">)</span>
+      <span class="token builtin class-name">return</span>
+    <span class="token punctuation">}</span>
+    console.log<span class="token punctuation">(</span><span class="token string">'New Author: '</span> + author<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    authors.push<span class="token punctuation">(</span>author<span class="token punctuation">)</span>
+    cb<span class="token punctuation">(</span>null, author<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> createGenreAuthors<span class="token punctuation">(</span>cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    async.series<span class="token punctuation">(</span><span class="token punctuation">[</span>
+        function<span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          authorCreate<span class="token punctuation">(</span><span class="token string">'Patrick'</span>, <span class="token string">'Rothfuss'</span>, <span class="token string">'1973-06-06'</span>, false, callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>,
+        function<span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          authorCreate<span class="token punctuation">(</span><span class="token string">'Ben'</span>, <span class="token string">'Bova'</span>, <span class="token string">'1932-11-8'</span>, false, callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>,
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette fonction renvoi à un autre fichier, &quot;author.js&quot;, stocké dans &quot;models&quot; définissant l'objet &quot;auteur&quot;.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
+
+const AuthorSchema <span class="token operator">=</span> new Schema<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  first_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  family_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  date_of_birth: <span class="token punctuation">{</span> type: Date <span class="token punctuation">}</span>,
+  date_of_death: <span class="token punctuation">{</span> type: Date <span class="token punctuation">}</span>,
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Virtual <span class="token keyword">for</span> author<span class="token string">'s full name
+AuthorSchema.virtual("name").get(function () {
+  // To avoid errors in cases where an author does not have either a family name or first name
+  // We want to make sure we handle the exception by returning an empty string for that case
+  let fullname = "";
+  if (this.first_name &amp;&amp; this.family_name) {
+    fullname = `${this.family_name}, ${this.first_name}`;
+  }
+  if (!this.first_name || !this.family_name) {
+    fullname = "";
+  }
+  return fullname;
+});
+
+// Virtual for author'</span>s URL
+AuthorSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // We don<span class="token string">'t use an arrow function as we'</span>ll need the this object
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/catalog/author/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Export model
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Author"</span>, AuthorSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../../Images/database.PNG'></p>
 
 
 </article>
