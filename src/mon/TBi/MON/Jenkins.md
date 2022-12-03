@@ -61,5 +61,25 @@ Par exemple ce site de M.Brucker utilise de la CI/CD :
 
  L'idée est d'un tel outil est de mettre en place un environnement d'intégration continue. C'est à dire que le but est de créer un outil qui permet de developper, tester et pousser le code automatiquement, dès sa création. Par exemple, au lieu d'ajouter de nouvelles fonctionnalités sur notre site web, de faire un commit sur le repository, puis se rendre compte qu'il ne marche pas et corriger les bugs puis recommencer, on peut automatiser tout ça. Dans le meilleur des cas, à chaque nouvelle fonctionnalité, elle est automatiquement testée puis integrée dans une version viable du code, prête à être déployée. Si les tests détectent des erreurs ou des incompatibilités dans le code, la nouvelle fonctionnalité n'est pas integrée dans la branche principale et le développeur peut la retravailler sans jamais corrompre la version du code qui marche.
 
+{%details%}
+Outils populaires pour la CI : 
+- Bamboo
+- Buildbot
+- Apache Gump (pour Java)
+- Travis CI (qui fonctionne avec Github)
+- Github Action
+- Jenkins 
+{%enddetails%}
+
+
+## La Pipeline Jenkins :
+
+La pipelin, ou le workflow, est l'ensemble des étapes qui  gravitent autour de jenkins et qui permeteent de mettre en place l'intégration et le déploiement continue.
+
+|Dev| => Commit -> Build -> Test -> Realase -> Deploy => |Production|
+
+Cette pipeline peut être enclanché périodiquement comme avec un nightly build ou elle peut être enclanché à chaque commit.
+
+
 
 
