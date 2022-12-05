@@ -8,6 +8,7 @@ authors:
 tags: ['pok']
 ---
 {% prerequis %} 
+
 - Connaissance de commandes UNIX : ssh,scp,ls,cat,touch etc...
 - Accès ssh au serveur ovh1
 - Avoir un projet à déployer
@@ -38,11 +39,12 @@ Organisation en deux sprints séparés par le point POK.
  - Explorer le serveur ovh1 pour voir comment marche le déploiement
  - Corriger les bugs majeurs du Artblog
  - Build une version du Artblog
- - Bonus : déployer un projet tout simple (Express + front + back + bdd) pour se faire les dents
+ - Deployer Artblog sur ovh1
 
 ## Backlog :
 
-- Deployer Artblog sur ovh1
+- Mettre en place une fenêtre permanente.
+- Bonus : Mettre en place une base de données
 - Bonus : mettre en place une automatisation avec Jenkins.
 
 
@@ -52,14 +54,15 @@ Organisation en deux sprints séparés par le point POK.
 
 Le serveur est organisée de la même manière pour chaque compte. Mon compte est curcuma donc je prend cela pour exemple et je me concentre sur la partie node puisque le projet que je veut mettre en place est basé sur node.js :
 
-_ Home
-|_ Curcuma
- |_django
- |_ flask
- |_java
- |_node
-  |_example.js
- |_ readme.txt
+
+    _ Home
+    |_ Curcuma
+    |_django
+    |_ flask
+    |_java
+    |_node
+      |_example.js
+    |_ readme.txt
 
  Le **readme** contient les addresses à questionner selon le port que l'on veut atteindre.
  Dans notre cas, on vois dans le fichier `example.js` que l'on utilise le port 10438 et que pour communiquer à travers ce port, on doit envoyer nos requêtes à `node.curcuma.ovh1.ec-m.fr`.
@@ -69,7 +72,7 @@ _ Home
  ## Mise en production du Artblog : 
 
  ### Mise en place du projet sur ovh1 :
-{%attention%} Ce n'est pas une manière propre de faire ce que je veux faire sur un serveur de production car on copie tous le repo dans le serveur alors qu'il n'a besoin que de la branche main. Dans un chapitre suivant on recommance plus proprement. {%endattention%}
+{%attention%} Ce n'est pas une manière propre de faire sur un serveur de production car on copie tous le repo dans le serveur alors qu'il n'a besoin que de la branche main. Dans un chapitre suivant on recommence plus proprement. {%endattention%}
 
  Grâce à github, on va cloner le projet dans le dossier node.
 
@@ -112,7 +115,7 @@ Le serveur ovh1 nous octroie un port bien précis pour y mettre notre applicatio
 
 Ce qui devrait lancer l'application sur le port 8080.
 
-Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec `npm run start` et en lancant cette commande dans le powershell `Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess` on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.
+Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec `npm run start` et en lancant cette commande dans le Powershell : `Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess`, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.
 
 On vérifie que le port 8080 est libre puis on lance l'application sur ce port.
 
@@ -127,10 +130,10 @@ La dernière commande renvoie :
 
 C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.
 
-### Prétexte pour faire du git proprement:
+### Faire du git proprement:
 
-  Comme précisé précedement, on à copier l'entierté du repo dans le serveur de production. On oublie et on refait.
-  On commenc par surpimmer l'ancien dossier. Je ne sais pas si il y a une bonne manière de le faire et je n'ai pas regardé. Ici, je suprimme le dossier et tout ce qu'il y avait dedans, ce qui peut être dangereux.
+  Comme précisé précedement, on a copié l'entierté du repo dans le serveur de production. On oublie et on refait.
+  On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne manière de le faire et je n'ai pas regardé. Ici, je supprime le dossier et tout ce qu'il y avait dedans, ce qui peut être dangereux.
 
   {%attention%} Si vous aviez des fichiers importants, tout va sauter, vérifiez 2 fois avant de lancer des commandes qui commencent par rm -r {%endattention%}
     // Dans ovh1 [...]/node
@@ -142,14 +145,14 @@ C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.
     git remote add origin https://github.com/TuncayBilgi/artblog.git
     git pull origin main
 
-  Ici, seul la branche master traine sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.
+  Ici, seul la branche main est clonée sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.
   Pou mettre le repo à jour sur le serveur il suffit de : 
 
     git fetch origin main
     git reset --hard origin/main
     git clean -fdx // attention cela surpimme tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle
 
-  Ou plus simplement 
+  Ou plus simplement :
 
     git pull origin master
 
@@ -160,17 +163,17 @@ Tous les préparatifs sont faits, il ne reste qu'à build l'application sur le s
     npm run build
     npm run start
 
-{%attention%}Ne lancez pas d'applications en mode dev sur le serveur de production, et de manièere générale, faites attentioon aux ports que vous allez utiliser.{%endattention%}
+{%attention%}Ne lancez pas d'applications en mode dev sur le serveur de production, et de manière générale, faites attention aux ports que vous allez utiliser.{%endattention%}
 
 L'application est disponible sur internet à l'adresse `node.curcuma.ovh1.ec-m.fr` et tout marche correctement.
 
 Problème, quand on ferme le terminale, l'application s'arrête.
 
-### Lancer l'application de façon permanante :
+### Lancer l'application de façon permanente :
 
-En effet, exit le terminal tue tous les processus sur ovh1 qui ont étés lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie que je ne peux pas eteindre min ordinateur sans que ça coupe l'application.
+En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas eteindre notre ordinateur sans que ça coupe l'application.
 
-Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. On tente pour ça d'utiliser tmux, sous les conseils avisés de Nicolas Bert, le lead technique de DO IT.
+Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. On va peut être tenté d'utiliser tmux, sous les conseils avisés de Nicolas Bert, le lead technique de DO-IT. Sinon let's go chez M. Brucker.
     
 
 
