@@ -85,7 +85,7 @@
 <h2>1.1 Objectifs primordiaux du POK</h2>
 <ul>
 <li>
-<p>Déploiement du site sur le serveur</p>
+<p>Déploiement sur le serveur du site développé au temps 1</p>
 </li>
 <li>
 <p>Ecrire le back du site en node. Cette étape nécessitera une documentation approfondie en raison de nos connaissances précaires en la matière</p>
@@ -107,7 +107,7 @@
 <p>Rajouter des fonctionnalités à la partition de musique</p>
 </li>
 </ul>
-<h2>1.3 Tâches du premier sprint à réaliser d'ici le mercredi 07/12.</h2>
+<h2>2.1 Tâches du premier sprint à réaliser d'ici le mercredi 07/12.</h2>
 <ul>
 <li>
 <p>Déployer le site sur ovh</p>
@@ -119,10 +119,15 @@
 <p>Commencer la base de données (avec SQLite a priori)</p>
 </li>
 </ul>
-<h2>2.1 Réalisations du premier sprint.</h2>
-<p>Nous avons pu à l'aide des premières connaissances acquises par nos MON commencer à améliorer le site et le pousser sur un serveur distant.</p>
-<p>Le site est déployé sur l'herbe de Provence de Nathan (Thym), les fichiers utiles sont mieux structurés (notamment avec le fichier static) et un fichier index.js nous permet de controler le back-end.</p>
-<p>En ce qui concerne la base de données, on a un tableau pour les utilisateurs et un tableau pour les partitions enregistrées. Chaque partition appartient à un utilisateur (que l'on retrouve avec son ID) et possède un élément JSON qui correspond aux notes de la partition. Il reste à pouvoir alimenter la base de données en utilisant le back-end.</p>
+<h2>2.2 Réalisations du premier sprint.</h2>
+<p>Nous avons pu à l'aide des premières connaissances acquises par nos MON commencé à améliorer le site et le pousser sur un serveur distant. Nous avons comme prévu déployé le site sur le serveur et commencé à travailler avec Express et SQLite, mais le temps nécessaire pour acquérir des connaissances au fur et à mesure a fait que nous n'avons pas encore pu beaucoup avancer.</p>
+<h3>Déploiement du site sur le serveur ovh</h3>
+<p>Le site est déployé sur l'herbe de Provence de Nathan (Thym), on peut y accéder à cette adresse : <a href="http://thym.ovh1.ec-m.fr/mon-sheet-cest-moi/static/index.html">http://thym.ovh1.ec-m.fr/mon-sheet-cest-moi/static/index.html</a>, sans express pour le moment.</p>
+<p>Nous avons rencontré quelques difficultés avec l'installation de xz (qui permet de compresser des archives avec la méthode Lzma), nous avons donc pour l'instant envoyé sur le serveur l'archive contenant le site directement.</p>
+<h3>Express</h3>
+<p>Nous avons commencé à utiliser Express : gestion des routes et accès au site en local. Les fichiers du site sont mieux structurés (notamment avec le dossier static) et un fichier index.js nous permet de controler le back-end.</p>
+<h3>Base de données</h3>
+<p>En ce qui concerne la base de données, nous avons un tableau pour les utilisateurs et un tableau pour les partitions enregistrées. Chaque partition appartient à un utilisateur (que l'on retrouve avec son ID) et possède un élément JSON qui correspond aux notes de la partition. Il reste à pouvoir alimenter la base de données en utilisant le back-end.</p>
 
 
 </article>
