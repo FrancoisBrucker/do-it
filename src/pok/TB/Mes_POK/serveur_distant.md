@@ -33,7 +33,7 @@ J'ai rencontré plusieurs difficultés : je voulais notamment ajouter un input a
 Une autre difficulté a été la création d'indication au survol d'une image. Je me suis pris la tête avec des *:hoover* alors qu'il suffisait d'utiliser la propriété title.
 <img src="../../Images/indication.jpg">
 J'ai également tenté d'implémenter une boucle for dans le fichier javascrpit afin de traiter les scores de tous les joueurs d'un seul coup ce qui m'aurait permis de créer facilement d'autres joueurs. Mais cette méthode n'a pas fonctionné et je n'ai pas eu le temps de chercher une méthode alternative.
-Pour toute la partie CSS je me suis référé à mon [MON1.2](../../../../mon/TB/Mes_MON/CSS.md). Il y a juste la fonctionnalité *:before* que j'ai utilisé afin d'ajouter un fond d'écran partiellement opaque.
+Pour toute la partie CSS je me suis référé à mon [MON1.2](../../../../mon/TB/Mes_MON/CSS). Il y a juste la fonctionnalité *:before* que j'ai utilisé afin d'ajouter un fond d'écran partiellement opaque.
 
 J'ai ensuite suivi la [formation](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/) de Mr. Brucker, notamment le Projet Numérologie, afin de me former sur les serveurs web. Je n'ai pas eu le temps de tout parcourir mais je finirais ça d'ici la fin de la semaine.
 
