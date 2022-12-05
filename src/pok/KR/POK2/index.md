@@ -45,17 +45,16 @@ L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette f
 **25/11/2022 - 07/12/2022**
 Planning:
 - [x] ~~Créer un repo GitHub pour la formation~~
-- [x] Créer un document: [document](./hacking)
-- [ ] Créer une liste avec les sujets à couvrir
-- [ ] Créer le document de cours
-- [ ] Écrire un chapitre d'introduction
-- [ ] Recherche de commandes et outils importants
-- [ ] Ecrire le chapitre sur les commandes et outils importants
+- [x] Créer une liste avec les sujets à couvrir
+- [x] Créer le document de cours [document](./hacking)
+- [x] Écrire un chapitre d'introduction
+- [x] Recherche de commandes et outils importants
+- [x] Ecrire le chapitre sur les commandes et outils importants
 - [ ] Recherche sur la reconnaissance 
 - [ ] Ecrire le chapitre sur la reconnaissance
 - [ ] Recherche sur Craquage de mots de passe
 - [ ] Ecrire le chapitre sur le craquage de mots de passe
-- Préparer du pitch pour le 7 décembre
+- [ ] Préparer du pitch pour le 7 décembre
 
 ### Sprint 2
 **08/12/2022 - 13/01/2023**
