@@ -108,7 +108,7 @@
 <h3>Objectif du temps 2 - Déployer sur un serveur distant</h3>
 <p>Mes objectifs à l'occasion de la deuxième partie de ce POK sont les suivants :</p>
 <ul>
-<li>Créer une partie <strong>back-end</strong> (API) pour générer le contenu des cases et sauvegarder les scores des joueurs</li>
+<li>Créer une partie <strong>back-end</strong> (API) pour générer le contenu des cases et sauvegarder les scores des joueurs (ATTENTION : UTILISER ORM (ex : sequelize))</li>
 <li>Déployer le site et l'API sur un <strong>serveur distant</strong></li>
 </ul>
 <h3>Planning</h3>
@@ -131,12 +131,12 @@
 </tr>
 <tr>
 <td>Préparation du back</td>
-<td>0 h</td>
+<td>1 h</td>
 <td>4 h</td>
 </tr>
 <tr>
 <td>Création de l’API</td>
-<td>0 h</td>
+<td>1 h</td>
 <td>5 h</td>
 </tr>
 <tr>
@@ -156,12 +156,12 @@
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>1 h</strong></td>
+<td><strong>3 h</strong></td>
 <td><strong>20 h</strong></td>
 </tr>
 </tbody>
 </table>
-<p><em>(mis à jour le 24/11/2022)</em></p>
+<p><em>(mis à jour le 03/12/2022)</em></p>
 <h2>Mise en ligne (test) version front sur serveur distant</h2>
 <p>Pour commencer, j'ai décidé de <strong>mettre en ligne</strong> la version front du jeu sur un serveur distant. J'ai donc utilisé le service <a href="https://www.ovh.com/fr/">OVH</a> pour créer un serveur et y déployer le site.</p>
 <h3>Création du serveur</h3>
@@ -213,6 +213,69 @@
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">./deploy.sh
 </code></pre>
 <h2>Préparation du back</h2>
+<p>Pour préparer le back, j'ai décidé de <strong>créer un projet Node.js</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> init
+</code></pre>
+<p>On peut alors entrer les informations demandées. Une fois le projet créé, on peut <strong>installer les dépendances</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express
+</code></pre>
+<p>On peut ensuite <strong>créer un fichier</strong> pour le back avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">touch</span> index.js
+</code></pre>
+<p>On peut ensuite ouvrir le fichier avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">nano</span> index.js
+</code></pre>
+<p>On peut alors entrer et enregistrer le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Example app listening at http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On peut ensuite <strong>lancer le serveur</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
+</code></pre>
+<p>On peut alors se rendre sur le navigateur et entrer l'adresse suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://localhost:3000
+</code></pre>
+<p>On peut alors voir le message <strong>Hello World!</strong>.</p>
+<h2>Mise en ligne (test) version back sur serveur distant</h2>
+<p>Source : <a href="https://www.hostinger.fr/tutoriels/comment-installer-node-js-sur-ubuntu">Hostinger</a></p>
+<h3>Installation de Node.js</h3>
+<p>Tout d'abord, il faut se connecter au serveur avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
+</code></pre>
+<p>On peut alors entrer le mot de passe du serveur pour se connecter. Pour déployer le back sur le serveur distant, on doit ensuite installer <strong>Node.js</strong> et <strong>npm</strong> sur le serveur. Pour cela, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span>
+</code></pre>
+<p>On peut ensuite <strong>créer un dossier</strong> pour le back avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> back
+</code></pre>
+<p>On peut ensuite <strong>déployer le back</strong> sur le serveur avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
+</code></pre>
+<p>On peut ensuite <strong>se connecter au serveur</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
+</code></pre>
+<p>On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut <strong>se déplacer dans le dossier</strong> du back avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> back
+</code></pre>
+<p>On peut ensuite <strong>installer les dépendances</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
+</code></pre>
+<p>On peut ensuite <strong>lancer le serveur</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
+</code></pre>
+<p>On peut alors se rendre sur le navigateur et entrer l'adresse suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://adresse_serveur:3000
+</code></pre>
+<p>On peut alors voir le message <strong>Hello World!</strong>.</p>
 <p><a href="../">&lt;-- Retour</a></p>
 
 
