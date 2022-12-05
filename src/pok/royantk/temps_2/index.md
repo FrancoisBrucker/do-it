@@ -39,7 +39,7 @@ Durant le temps 1, j'ai eu l'occasion de résoudre les problèmes de compatibili
 
 Mes objectifs à l'occasion de la deuxième partie de ce POK sont les suivants :
 
-- Créer une partie **back-end** (API) pour générer le contenu des cases et sauvegarder les scores des joueurs
+- Créer une partie **back-end** (API) pour générer le contenu des cases et sauvegarder les scores des joueurs (ATTENTION : UTILISER ORM (ex : sequelize))
 - Déployer le site et l'API sur un **serveur distant**
 
 ### Planning
@@ -53,14 +53,14 @@ On peut retrouver le détail du temps prévu et passé sur chaque étape dans le
 | **To-do**                                              | **Temps passé** | **Temps prévu** |
 | ------------------------------------------------------ | --------------- | --------------- |
 | Mise en ligne (test) version front sur serveur distant | 1 h             | 1 h             |
-| Préparation du back                                    | 0 h             | 4 h             |
-| Création de l’API                                      | 0 h             | 5 h             |
+| Préparation du back                                    | 1 h             | 4 h             |
+| Création de l’API                                      | 1 h             | 5 h             |
 | Création interface front/back                          | 0 h             | 4 h             |
 | Création écran scores                                  | 0 h             | 4 h             |
 | Mise en ligne du back sur le serveur distant (API)     | 0 h             | 2 h             |
-| **Total**                                              | **1 h**         | **20 h**        |
+| **Total**                                              | **3 h**         | **20 h**        |
 
-*(mis à jour le 24/11/2022)*
+*(mis à jour le 03/12/2022)*
 
 ## Mise en ligne (test) version front sur serveur distant
 
@@ -157,5 +157,121 @@ On pourra ensuite **exécuter le script** avec la commande suivante :
 ```
 
 ## Préparation du back
+
+Pour préparer le back, j'ai décidé de **créer un projet Node.js** avec la commande suivante :
+
+```bash
+npm init
+```
+
+On peut alors entrer les informations demandées. Une fois le projet créé, on peut **installer les dépendances** avec la commande suivante :
+
+```bash
+npm install express
+```
+
+On peut ensuite **créer un fichier** pour le back avec la commande suivante :
+
+```bash
+touch index.js
+```
+
+On peut ensuite ouvrir le fichier avec la commande suivante :
+
+```bash
+nano index.js
+```
+
+On peut alors entrer et enregistrer le code suivant :
+
+```javascript
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
+```
+
+On peut ensuite **lancer le serveur** avec la commande suivante :
+
+```bash
+node index.js
+```
+
+On peut alors se rendre sur le navigateur et entrer l'adresse suivante :
+
+```bash
+http://localhost:3000
+```
+
+On peut alors voir le message **Hello World!**.
+
+## Mise en ligne (test) version back sur serveur distant
+
+Source : [Hostinger](https://www.hostinger.fr/tutoriels/comment-installer-node-js-sur-ubuntu)
+
+### Installation de Node.js
+
+Tout d'abord, il faut se connecter au serveur avec la commande suivante :
+
+```bash
+ssh username@adresse_serveur
+```
+
+On peut alors entrer le mot de passe du serveur pour se connecter. Pour déployer le back sur le serveur distant, on doit ensuite installer **Node.js** et **npm** sur le serveur. Pour cela, on peut utiliser la commande suivante :
+
+```bash
+sudo apt install nodejs npm
+```
+
+On peut ensuite **créer un dossier** pour le back avec la commande suivante :
+
+```bash
+mkdir back
+```
+
+On peut ensuite **déployer le back** sur le serveur avec la commande suivante :
+
+```bash
+scp -r chemin_dossier username@adresse_serveur:/chemin_dossier
+```
+
+On peut ensuite **se connecter au serveur** avec la commande suivante :
+
+```bash
+ssh username@adresse_serveur
+```
+
+On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut **se déplacer dans le dossier** du back avec la commande suivante :
+
+```bash
+cd back
+```
+
+On peut ensuite **installer les dépendances** avec la commande suivante :
+
+```bash
+npm install
+```
+
+On peut ensuite **lancer le serveur** avec la commande suivante :
+
+```bash
+node index.js
+```
+
+On peut alors se rendre sur le navigateur et entrer l'adresse suivante :
+
+```bash
+http://adresse_serveur:3000
+```
+
+On peut alors voir le message **Hello World!**.
 
 [<-- Retour](../)
