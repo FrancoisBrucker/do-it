@@ -17,5 +17,5 @@ Hub pour accéder à tous les POK d'Ossama
 [Un site chez moi]()
 
 ### Temps 2
-[Création d'un site sur un serveur distant](./pok-temps2)
+[Réalisation d'un site sur eleventy](./pok-temps2)
 

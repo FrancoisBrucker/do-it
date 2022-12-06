@@ -15,9 +15,9 @@ L'objectif de ce POK est d'approfondir les bases de création acquise lors du te
 3. Rendre le site final
 
 ## Premier sprint 
-1. Prise en main eleventy
-2. Créer le répertoire du projet
-3. Installer le package eleventy
-4. Création de la première page 
-5. Mettre en place le serveur web en local
-6. Commencer la création d'un template 
+1. Prise en main eleventy [X]
+2. Créer le répertoire du projet [X]
+3. Installer le package eleventy [X]
+4. Création de la première page [X]
+5. Mettre en place le serveur web en local [X]
+6. Commencer la création d'un template [~]
