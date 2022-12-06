@@ -82,7 +82,8 @@ Nous en arrivons ici à la partie création des routes pour notre site sur le se
 - http://localhost:3000/catalog/pays
 - http://localhost:3000/catalog/joueurs
 - http://localhost:3000/users
-Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. 
+Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données. 
+<img src="C:\do-it\src\pok\GB\POK\images\routes.png"/>
 
 ### Etablissement des premières pages 
 
