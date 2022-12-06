@@ -52,7 +52,6 @@ JoueurSchema.virtual("name").get(function () {
 });
 
 JoueurSchema.virtual("url").get(function () {
-  // We don't use an arrow function as we'll need the this object
   return `/catalog/joueur/${this._id}`;
 });
 
@@ -76,3 +75,24 @@ function JoueurCreate(first_name, family_name, number, cb) {
   }  );
 }
 ```
+### Routes 
+
+Nous en arrivons ici à la partie création des routes pour notre site sur le serveur. En premier lieu, nous crééons un dossier "controllers" où l'on mettra,  pour chaque fichier de notre base de donées, les requêtes de création, d'affichages, de supression etc. Ensuite, nous crééons un fichier javascript "catalog.js" où l'on définit les routes de notre site à proprement parlé. J'obtients donc les routes suivantes : 
+- http://localhost3000/catalog
+- http://localhost:3000/catalog/pays
+- http://localhost:3000/catalog/joueurs
+- http://localhost:3000/users
+Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. 
+
+### Etablissement des premières pages 
+
+On arrive donc à une partie plus intéressante, celle de la liaison entre ma première partie, le front-end, et mon site actuellement hébérgé sur un serveur. 
+Pour se faire, nous utilisons pug (choix par défaut du cours que je regrette un peu à ce moment car je dois réadapter certains de mes codes sources).<br>
+Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier "views". Comme son nom l'indique, celui-ci contiendra les interfaces vus par l'utilisateur. J'implémente donc mon code html "PFC" dans le fichier "index.pug". C'est à ce moment que cela se complique car bien que pug reprend complétement l'idée de html, il y'a tout de même de nombreux changements à opérer dans un langage que je ne connais pas. 
+
+### Ce qu'il reste à faire 
+Comme on peut le voir, il reste de nombreuses choses à effectuer, j'ai désormais plus de visibilité sur l'ensemble du projet : 
+- Adapter mon script afin que le site marche comme avant
+- Je pense à modifier la base de données afin que celle-ci soit juste un historique des anciens coups car sinon le temps manquera surement (cela n'implique pas tant de changements à mon avis)
+- Ramener le site sur l'ovh une fois que tout cela sera fait 
+- Bonus si le temps me le permet : insérer une page de connexion 
