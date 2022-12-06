@@ -173,7 +173,26 @@ Problème, quand on ferme le terminale, l'application s'arrête.
 
 En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas eteindre notre ordinateur sans que ça coupe l'application.
 
-Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. On va peut être tenté d'utiliser tmux, sous les conseils avisés de Nicolas Bert, le lead technique de DO-IT. Sinon let's go chez M. Brucker.
+Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. Sous les conseils de M.Brucker, on utilise simplement la commande screen qui permet de lancer des terminaux et des processus en tâche de fond.
+
+    screen -S artblog // Nous emmene dans un nouveau terminale.
+    npm run start
+    // on tape Ctrl-A + D pour quitter le terminale
+    
+Et voila l'application tourne de façon permanente sur ovh1.
+
+
+## Bilan premier sprint : 
+
+J'ai réalisé le travail que j'avais prévu de faire car j'ai eu la chance de ne rencontrer aucun problème.
+J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'était pas la priorité et j'ai amplement le temps durant le second sprint.
+
+### Pour le second sprint :
+
+Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une base de données juste pour me frotter à l'exercie et si possible, mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.
+
+
+    
     
 
 
