@@ -10,8 +10,8 @@ authors:
 <!-- début résumé -->
 
 - Ce POK est destiné à être repris et complété. Le but est de faire un état des lieux de certaines pratiques de plusieurs organisations en termes de cartographies de Systèmes d'Information et d'essayer de cartographier une partie du SI d'une organisation.
-- indication du niveau
-- prérequis éventuels
+- Niveau : intermédiaire
+- Il faut avoir suivi le cours "Architecture des SI" au moins.
 
 <!-- fin résumé -->
 
@@ -30,12 +30,24 @@ Nous envisageons deux scénarios pour ce POK :
 - si le système à cartographier est très complexe, nous nous restreindrons à quelques vues : vue métier et vue application par exemple.
 - Si le système est plus simple, nous pourons enrichir cette cartographie avec d'autres vues et augmenter la précision des premières.
 
-## To-do list jusqu'au premier sprint
+## To-do list du premier sprint
 - [X] Contacter la région Sud pour savoir comment ils cartographient leur SI
-- [X] Contacter la DSI de Centrale MArseille pour savoir comment ils cartographient leur SI et savoir s'il y a une partie que l'on pourrait cartographier pour eux
-- [ ] Chercher si il y a des anciens de Centrale qui bossent dans une DSI
+- [X] Contacter la DSI de Centrale Marseille pour savoir comment ils cartographient leur SI et savoir s'il y a une partie que l'on pourrait cartographier pour eux
+- [~] Chercher si il y a des anciens de Centrale qui bossent dans une DSI
 - [~] Chercher les différentes méthodes de cartographie d'un SI
 - [X] Définir le périmètre que l'on souhaite donner à ce POK en fonction des réponses précédentes et définir la to-do list de la deuxième partie du POK
 
 ## Détail du premier sprint
-Comme notre objectif principal du premier sprint était de faire un tour d'horizon du sujet et de définir le périmètre de notre POK, nous avons surtout contacté des personnes pouvant nous aider dans notre projet. Nous n'avons pas contacté d'anciens de Centrale car nous attendions les résultats des autres entretiens. M. Bouilloux, la personne que nous avons contacté de la DSI de la Région Sud, nous a offert son aide sans problème. Eugénie pourra discuter plus précisemment du sujet lors du deuxième sprint, lorsqu'elle sera en alternance. Nous avons eu une réunion avec M. Pagé de la DSI le 06/12.
+Comme notre objectif principal du premier sprint était de faire un tour d'horizon du sujet et de définir le périmètre de notre POK, nous avons surtout contacté des personnes pouvant nous aider dans notre projet. 
+- Nous avons cherché les contacts d'anciens de Centrale sans les contacter pour le moment. 
+- M. Bouilloux, la personne que nous avons contacté de la DSI de la Région Sud, nous a offert son aide sans problème. Eugénie pourra discuter plus précisemment du sujet lors du deuxième sprint, lorsqu'elle sera en alternance. 
+- Nous avons eu une réunion avec M. Pagé de la DSI le 06/12. Cette réunion nous a appris beaucoup de choses. Nous savons désormais que Centrale n'a pas de cartographie complète : seule la vue applicative a été cartographiée pour répondre aux exigences du cabinet, il s'agit d'une figure imposée d'un rapport. Le DSI pense qu'il leur serait utile d'avoir une cartographie complète pour pouvoir anticiper certains problèmes et savoir quelles parties du SI sont liées entre les différentes vues. Par exemple, elle servirait à connaître, lorsqu'un serveur est coupé, les impacts sur le SI. La raison de l'absence d'une cartographie est tout simplement le manque de ressources humaines : la DSI est composée de 8 personnes qui sont déjà très chargées. Comme les outils de cartographie sont souvent de "grosses usines à gaz", il est nécessaire d'avoir au moins une personne (un architecte ou un urbaniste) assignée à ce travail, ce qui est impossible dans le cas de Centrale.
+
+Ce que nous nous proposons de faire dans ce POK est de mettre en place une collaboration entre la DSI de l'École et les élèves de l'option DO-IT sur plusieurs années. Comme a dit M. Pagé, si nous avions 40h mais avec déjà de l'expérience, peut-être qu'alors nous aurions pu avancer de manière significative sur la cartographie du SI de Centrale. Ainsi, nous allons regrouper les témoignages de DSIs et les différentes méthodes de cartographies au même endroit pour que, à défaut d'avoir de l'expérience, la théorie et un peu de pratique soient regroupés. Nous allons ensuite préparer la collaboration entre les parties pour la cartographie puisse être faite, améliorée et mise à jour au fil des années. Dans ce projet, il va falloir prendre en compte le fait que la DSI ne pourra pas participer au projet autrement que par des points ponctuels.
+
+## To-do list du second sprint :
+- [~] Chercher et restituer les différentes méthodes théoriques de cartographie d'un SI
+- [ ] Rencontrer la Région Sud
+- [~] Chercher si il y a des anciens de Centrale qui bossent dans une DSI et discuter avec eux des méthodes
+- [ ] Restituer proprement les entretiens obtenus avec les DSI
+- [ ] Préparer la collaboration avec la DSI de Centrale et mettre en forme le projet pour l'année prochaine
