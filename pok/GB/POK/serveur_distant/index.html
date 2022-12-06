@@ -84,7 +84,56 @@ Sprint 2 :</li>
 </ul>
 <h3>Nouveau projet Express</h3>
 <p>Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je crée un nouveau projet à l'adresse <a href="http://localhost:3000/">http://localhost:3000/</a>. <br><br>
-Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur <a href="http://developer.mozilla.org"/> et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.</p>
+Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur &quot;<a href="http://developer.mozilla.org">http://developer.mozilla.org</a>&quot; et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.</p>
+<h3>Création de la base de données</h3>
+<p>Afin de compléter mon premier site, j'ai eu pour idée d'ajouter une option permettant de sélectionner un champion et un pays : ainsi J1 sera désigné par le champion Zidane ou le pays Brésil. Le but est donc de créer une base de données avec 5 champions et 5 pays. J'ai repris en grande partie le code visible sur <a href="../../../mon/GB/Mons/coteweb">mon MON</a> que j'ai personnalisé afin d'y mettre mes exigences. Le champion devra donc avoir les caractéristiques &quot;nom&quot;, &quot;prénom&quot; et &quot;numéro&quot; ; le pays, lui, sera associé aux caractéristiques &quot;nom&quot; et &quot;couleur&quot;. Ci-dessous le code concernant le champion :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
+
+const JoueurSchema <span class="token operator">=</span> new Schema<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  first_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  family_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  number:<span class="token punctuation">{</span> type: Number, required: true, maxLength:2<span class="token punctuation">}</span>,
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+JoueurSchema.virtual<span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // To avoid errors <span class="token keyword">in</span> cases where an author does not have either a family name or first name
+  // We want to <span class="token function">make</span> sure we handle the exception by returning an empty string <span class="token keyword">for</span> that <span class="token keyword">case</span>
+  <span class="token builtin class-name">let</span> fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>this.first_name <span class="token operator">&amp;&amp;</span> this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>$<span class="token punctuation">{</span>this.family_name<span class="token punctuation">}</span>, $<span class="token punctuation">{</span>this.first_name<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>this.first_name <span class="token operator">||</span> <span class="token operator">!</span>this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token builtin class-name">return</span> fullname<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+JoueurSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // We don<span class="token string">'t use an arrow function as we'</span>ll need the this object
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/catalog/joueur/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Export model
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Joueur"</span>, JoueurSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">function</span> JoueurCreate<span class="token punctuation">(</span>first_name, family_name, number, cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  joueurdetail <span class="token operator">=</span> <span class="token punctuation">{</span>first_name:first_name , family_name: family_name, number:number<span class="token punctuation">}</span>
+  
+  var joueur <span class="token operator">=</span> new Joueur<span class="token punctuation">(</span>joueurdetail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       
+  joueur.save<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      cb<span class="token punctuation">(</span>err, null<span class="token punctuation">)</span>
+      <span class="token builtin class-name">return</span>
+    <span class="token punctuation">}</span>
+    console.log<span class="token punctuation">(</span><span class="token string">'New Joueur: '</span> + joueur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    joueurs.push<span class="token punctuation">(</span>joueur<span class="token punctuation">)</span>
+    cb<span class="token punctuation">(</span>null, joueur<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
 
 </article>
