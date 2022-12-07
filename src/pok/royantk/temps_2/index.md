@@ -303,7 +303,7 @@ else
 fi
 ```
 
-Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : chmod +x deploy.sh
+Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : `chmod +x deploy.sh`
 
 Enfin, vous devez configurer le Webhook dans les paramètres de votre dépôt Github pour qu'il exécute ce script à chaque fois qu'il est appelé. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section "Webhooks" et éditez le Webhook que vous avez créé précédemment. Dans la section "Payload URL", indiquez l'URL du script sur votre serveur OVH, suivie du nom du script, par exemple : `http://server.com/deploy.sh`. Dans la section "Content type", sélectionnez l'option "application/json". Enfin, dans la section "Secret", entrez un mot de passe secret que vous avez choisi pour protéger l'accès à votre script.
 
