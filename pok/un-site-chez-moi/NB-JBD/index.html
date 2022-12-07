@@ -80,7 +80,7 @@
   
 
   <!-- début résumé -->
-<p>Jeu de mots croisés (Svelte, NestJS, MySQL)</p>
+<p>Jeu de mots croisés (Svelte, NestJS, PGSQL)</p>
 <!-- fin résumé -->
 <h3>Liens GitHub</h3>
 <ul>
@@ -91,7 +91,7 @@
 <h2>Idée de ce POK</h2>
 <p>L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.</p>
 <p>Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :</p>
-<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="height: 500px; margin: 0 auto;" />
+<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
 <br>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -102,13 +102,13 @@
 Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derrière chaque case se trouve une lettre qui apparaît dans la grille. A chaque lettre révélée il faut gratter les occurrences de cette lettre dans la grille. Une fois toutes les cases <strong>?</strong> grattées, on remporte de l’argent suivant le nombre de mots entièrement reconstitués.</p>
 </div></div>
 <h2>Technologies utilisées</h2>
-<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
+<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
 <ul>
 <li><strong>Front-end</strong> : Svelte + TailwindCSS</li>
 <li><strong>Back-end</strong> : NestJS</li>
 <li><strong>API</strong> : REST</li>
 <li><strong>Moyen d'authentification</strong> : JWT (<em>JSON Web Token</em>)</li>
-<li><strong>Base de données</strong> : MySQL</li>
+<li><strong>Base de données</strong> : PostgreSQL</li>
 </ul>
 <h2>Schéma d'entités</h2>
 <div style="display: grid; place-items: center;">
@@ -210,6 +210,24 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 </ul>
 </li>
 <li>Déployer le front, le back et la BDD.</li>
+</ul>
+<h2>Ce qui a été fait au 1er sprint</h2>
+<ul>
+<li>Correction du login et register</li>
+<li>Protection des routes</li>
+<li>Lister les parties</li>
+<li>Passage à PostgreSQL</li>
+<li>Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans <code>/www/</code>, back dans <code>/node/</code>) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur <a href="http://melisse.ovh1.ec-m.fr">http://melisse.ovh1.ec-m.fr</a></li>
+<li>Fix de bugs</li>
+</ul>
+<h2>2e sprint</h2>
+<ul>
+<li>Connexion de la partie entre le front et le back</li>
+<li>Améliorer le style et la responsivité</li>
+<li>Algorithme de génération de grilles</li>
+<li>Solde dans la navbar</li>
+<li>Autres améliorations</li>
+<li>Redéployer l'ensemble du projet avec les modifications effectuées</li>
 </ul>
 
 
