@@ -10,7 +10,7 @@ tags: ['pok']
 ---
 
 <!-- début résumé -->
-Jeu de mots croisés (Svelte, NestJS, MySQL)
+Jeu de mots croisés (Svelte, NestJS, PGSQL)
 <!-- fin résumé -->
 
 ### Liens GitHub
@@ -26,7 +26,7 @@ L'idée de ce POK est de créer une site contenant une partie frontend, une part
 
 Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :
 
-<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="height: 500px; margin: 0 auto;" />
+<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
 <br>
 
 {% info %}
@@ -36,13 +36,13 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 
 ## Technologies utilisées
 
-<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
+<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
 
 -  **Front-end** : Svelte + TailwindCSS
 - **Back-end** : NestJS
 - **API** : REST
 - **Moyen d'authentification** : JWT (*JSON Web Token*)
-- **Base de données** : MySQL
+- **Base de données** : PostgreSQL
 
 ## Schéma d'entités
 
@@ -141,3 +141,21 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - Fixer les quelques erreurs pour un jeu fonctionnel mais pas "complet" (le minimun syndical).
   - Problème de connexion (accès et limitation des pages, refresh sur la page d'accueil pour la connexion effective)
 - Déployer le front, le back et la BDD.
+
+## Ce qui a été fait au 1er sprint
+
+- Correction du login et register
+- Protection des routes
+- Lister les parties
+- Passage à PostgreSQL
+- Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans `/www/`, back dans `/node/`) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur [http://melisse.ovh1.ec-m.fr](http://melisse.ovh1.ec-m.fr)
+- Fix de bugs
+
+## 2e sprint
+
+- Connexion de la partie entre le front et le back
+- Améliorer le style et la responsivité
+- Algorithme de génération de grilles
+- Solde dans la navbar
+- Autres améliorations
+- Redéployer l'ensemble du projet avec les modifications effectuées
