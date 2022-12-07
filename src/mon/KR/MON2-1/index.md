@@ -17,9 +17,27 @@ La formation de base "Splunk Fundamentals" devrait durer environ 10-12 heures, l
 
 ## Formation
 ### What is Splunk?
-- get data from any source and add it to an index
+- get data from **any source** and add it to an index which can be searched
+- **search** the index
+- **visualize** the data
+- **monitor** the data
+- **alert** on the data
+
+### Splunk Fundamentals
+- three components: search head, indexer, forwarder
+#### Search Head
+This is the user interface, it is the place where you search the index and visualize the data.
+
+#### Indexer
+Takes the raw data and indexes it. The indexer is the place where the data is stored.
+
+#### Forwarder
+The forwarder is the component that collects the data from the sources and sends it to the indexer.
+
+Data Pipeline: Input, Parsing, Indexing, Searching, Visualizing
 
 
 ## Sources
 - https://education.splunk.com/free
 - https://www.splunk.com/pdfs/training/splunk-education-student-handbook.pdf
+- https://www.youtube.com/list=PLY2f3p7xyMiTUbUo0A_lBFEwj6KdH0nFy
