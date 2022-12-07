@@ -55,15 +55,13 @@
         
         <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
           
-            <li class="before:content-['•'] before:px-1">HTML</li>
-          
-            <li class="before:content-['•'] before:px-1">CSS</li>
-          
             <li class="before:content-['•'] before:px-1">JavaScript</li>
           
             <li class="before:content-['•'] before:px-1">NodeJS</li>
           
             <li class="before:content-['•'] before:px-1">Express</li>
+          
+            <li class="before:content-['•'] before:px-1">Serveur distant</li>
           
         </ul>
       </div>
@@ -98,7 +96,8 @@
 </div><div class="pl-8 mr-8">
 <ul>
 <li><a href="https://github.com/royantk/FindTheKey">Le Github du POK</a></li>
-<li><a href="http://cerfeuil.ovh1.ec-m.fr/">Le résultat (sur serveur distant)</a></li>
+<li><a href="http://cerfeuil.ovh1.ec-m.fr/">Résultat serveur distant (front)</a></li>
+<li><a href="http://cerfeuil.ovh1.ec-m.fr/">Résultat serveur distant (API)</a></li>
 </ul>
 </div></div>
 <h2>Introduction</h2>
@@ -131,7 +130,7 @@
 </tr>
 <tr>
 <td>Préparation du back</td>
-<td>1 h</td>
+<td>3 h</td>
 <td>4 h</td>
 </tr>
 <tr>
@@ -151,19 +150,19 @@
 </tr>
 <tr>
 <td>Mise en ligne du back sur le serveur distant (API)</td>
-<td>0 h</td>
+<td>1 h</td>
 <td>2 h</td>
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>3 h</strong></td>
+<td><strong>6 h</strong></td>
 <td><strong>20 h</strong></td>
 </tr>
 </tbody>
 </table>
-<p><em>(mis à jour le 03/12/2022)</em></p>
+<p><em>(mis à jour le 07/12/2022)</em></p>
 <h2>Mise en ligne (test) version front sur serveur distant</h2>
-<p>Pour commencer, j'ai décidé de <strong>mettre en ligne</strong> la version front du jeu sur un serveur distant. J'ai donc utilisé le service <a href="https://www.ovh.com/fr/">OVH</a> pour créer un serveur et y déployer le site.</p>
+<p>Pour commencer, j'ai décidé de <strong>mettre en ligne</strong> la version front du jeu sur un serveur distant. J'ai donc utilisé le service <a href="https://www.ovh.com/fr/">OVH</a> pour créer un serveur et y déployer le site. Je présente ci-dessous comment créer un serveur OVH, ce que je n'ai pas fais en pratique car j'ai utilisé le serveur OVH1 de Centrale.</p>
 <h3>Création du serveur</h3>
 <p>Pour créer un serveur, il faut se rendre sur le site <a href="https://www.ovh.com/fr/">OVH</a> et créer un compte. Une fois connecté, il faut se rendre dans la section <strong>Cloud</strong> puis <strong>Serveurs</strong>. Ensuite, il faut cliquer sur <strong>Créer un serveur</strong> et choisir les options suivantes :</p>
 <ul>
@@ -276,6 +275,32 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://adresse_serveur:3000
 </code></pre>
 <p>On peut alors voir le message <strong>Hello World!</strong>.</p>
+<h2>Configurer le serveur pour le déploiement automatique</h2>
+<p>Pour déployer automatiquement un site sur un serveur OVH via SSH à chaque push sur Github, vous pouvez utiliser l'outil git en combinaison avec un service de Webhooks.</p>
+<p>Ensuite, vous devez ajouter un Webhook dans les paramètres de votre dépôt Github pour qu'il envoie une notification à votre serveur OVH à chaque push. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section &quot;Webhooks&quot;. Ajoutez un nouveau Webhook en indiquant l'URL de votre serveur OVH et en sélectionnant l'option &quot;Just the push event&quot;.</p>
+<p>Sur votre serveur OVH, vous devez maintenant écrire un script qui sera exécuté à chaque fois que le Webhook sera appelé. Ce script devra se connecter en SSH sur votre serveur, puis télécharger et mettre à jour le code de votre site depuis le dépôt Github. Vous pouvez utiliser la commande git clone pour télécharger le code depuis le dépôt, et la commande git pull pour mettre à jour le code si vous avez déjà cloné le dépôt précédemment.</p>
+<p>Voici un exemple de script qui accomplit ces tâches :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment"># Se connecter en SSH sur le serveur</span>
+<span class="token function">ssh</span> username@server.com
+
+<span class="token comment"># Aller dans le répertoire où se trouve le code de votre site</span>
+<span class="token builtin class-name">cd</span> /path/to/site/
+
+<span class="token comment"># Si le dépôt n'a pas encore été cloné</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-d</span> <span class="token string">"repo"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+  <span class="token comment"># Cloner le dépôt</span>
+  <span class="token function">git</span> clone https://github.com/username/repo.git
+<span class="token keyword">else</span>
+  <span class="token comment"># Sinon, mettre à jour le dépôt</span>
+  <span class="token function">git</span> pull
+<span class="token keyword">fi</span>
+</code></pre>
+<p>Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : chmod +x <a href="http://deploy.sh">deploy.sh</a></p>
+<p>Enfin, vous devez configurer le Webhook dans les paramètres de votre dépôt Github pour qu'il exécute ce script à chaque fois qu'il est appelé. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section &quot;Webhooks&quot; et éditez le Webhook que vous avez créé précédemment. Dans la section &quot;Payload URL&quot;, indiquez l'URL du script sur votre serveur OVH, suivie du nom du script, par exemple : <code>http://server.com/deploy.sh</code>. Dans la section &quot;Content type&quot;, sélectionnez l'option &quot;application/json&quot;. Enfin, dans la section &quot;Secret&quot;, entrez un mot de passe secret que vous avez choisi pour protéger l'accès à votre script.</p>
+<p>Enregistrez les modifications et votre site devrait être automatiquement déployé sur votre serveur OVH à chaque fois que vous poussez du code sur votre dépôt Github.</p>
+<p>Attention : assurez-vous de bien protéger l'accès à votre script en utilisant un mot de passe secret et en autorisant uniquement les connexions SSH depuis votre ordinateur. Sinon, des personnes malveillantes pourraient modifier ou supprimer le code de votre site sans votre consentement.</p>
 <p><a href="../">&lt;-- Retour</a></p>
 
 
