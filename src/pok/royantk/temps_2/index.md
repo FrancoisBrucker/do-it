@@ -5,11 +5,10 @@ title: "[POK] Find the Key (temps 2)"
 authors:
   - Killian ROYANT
 tags:
-  - HTML
-  - CSS
   - JavaScript
   - NodeJS
   - Express
+  - Serveur distant
 ---
 
 <!-- début résumé -->
@@ -23,7 +22,8 @@ Le temps 2 est consacré à l'**ajout d'une partie back-end** avec NodeJS et Exp
 {% chemin "**Ressources**" %}
 
 - [Le Github du POK](https://github.com/royantk/FindTheKey)
-- [Le résultat (sur serveur distant)](http://cerfeuil.ovh1.ec-m.fr/)
+- [Résultat serveur distant (front)](http://cerfeuil.ovh1.ec-m.fr/)
+- [Résultat serveur distant (API)](http://cerfeuil.ovh1.ec-m.fr/)
 
 {% endchemin %}
 
@@ -53,18 +53,18 @@ On peut retrouver le détail du temps prévu et passé sur chaque étape dans le
 | **To-do**                                              | **Temps passé** | **Temps prévu** |
 | ------------------------------------------------------ | --------------- | --------------- |
 | Mise en ligne (test) version front sur serveur distant | 1 h             | 1 h             |
-| Préparation du back                                    | 1 h             | 4 h             |
+| Préparation du back                                    | 3 h             | 4 h             |
 | Création de l’API                                      | 1 h             | 5 h             |
 | Création interface front/back                          | 0 h             | 4 h             |
 | Création écran scores                                  | 0 h             | 4 h             |
-| Mise en ligne du back sur le serveur distant (API)     | 0 h             | 2 h             |
-| **Total**                                              | **3 h**         | **20 h**        |
+| Mise en ligne du back sur le serveur distant (API)     | 1 h             | 2 h             |
+| **Total**                                              | **6 h**         | **20 h**        |
 
-*(mis à jour le 03/12/2022)*
+*(mis à jour le 07/12/2022)*
 
 ## Mise en ligne (test) version front sur serveur distant
 
-Pour commencer, j'ai décidé de **mettre en ligne** la version front du jeu sur un serveur distant. J'ai donc utilisé le service [OVH](https://www.ovh.com/fr/) pour créer un serveur et y déployer le site.
+Pour commencer, j'ai décidé de **mettre en ligne** la version front du jeu sur un serveur distant. J'ai donc utilisé le service [OVH](https://www.ovh.com/fr/) pour créer un serveur et y déployer le site. Je présente ci-dessous comment créer un serveur OVH, ce que je n'ai pas fais en pratique car j'ai utilisé le serveur OVH1 de Centrale.
 
 ### Création du serveur
 
@@ -273,5 +273,42 @@ http://adresse_serveur:3000
 ```
 
 On peut alors voir le message **Hello World!**.
+
+## Configurer le serveur pour le déploiement automatique
+
+Pour déployer automatiquement un site sur un serveur OVH via SSH à chaque push sur Github, vous pouvez utiliser l'outil git en combinaison avec un service de Webhooks.
+
+Ensuite, vous devez ajouter un Webhook dans les paramètres de votre dépôt Github pour qu'il envoie une notification à votre serveur OVH à chaque push. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section "Webhooks". Ajoutez un nouveau Webhook en indiquant l'URL de votre serveur OVH et en sélectionnant l'option "Just the push event".
+
+Sur votre serveur OVH, vous devez maintenant écrire un script qui sera exécuté à chaque fois que le Webhook sera appelé. Ce script devra se connecter en SSH sur votre serveur, puis télécharger et mettre à jour le code de votre site depuis le dépôt Github. Vous pouvez utiliser la commande git clone pour télécharger le code depuis le dépôt, et la commande git pull pour mettre à jour le code si vous avez déjà cloné le dépôt précédemment.
+
+Voici un exemple de script qui accomplit ces tâches :
+
+```bash
+#!/bin/bash
+
+# Se connecter en SSH sur le serveur
+ssh username@server.com
+
+# Aller dans le répertoire où se trouve le code de votre site
+cd /path/to/site/
+
+# Si le dépôt n'a pas encore été cloné
+if [ ! -d "repo" ]; then
+  # Cloner le dépôt
+  git clone https://github.com/username/repo.git
+else
+  # Sinon, mettre à jour le dépôt
+  git pull
+fi
+```
+
+Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : chmod +x deploy.sh
+
+Enfin, vous devez configurer le Webhook dans les paramètres de votre dépôt Github pour qu'il exécute ce script à chaque fois qu'il est appelé. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section "Webhooks" et éditez le Webhook que vous avez créé précédemment. Dans la section "Payload URL", indiquez l'URL du script sur votre serveur OVH, suivie du nom du script, par exemple : `http://server.com/deploy.sh`. Dans la section "Content type", sélectionnez l'option "application/json". Enfin, dans la section "Secret", entrez un mot de passe secret que vous avez choisi pour protéger l'accès à votre script.
+
+Enregistrez les modifications et votre site devrait être automatiquement déployé sur votre serveur OVH à chaque fois que vous poussez du code sur votre dépôt Github.
+
+Attention : assurez-vous de bien protéger l'accès à votre script en utilisant un mot de passe secret et en autorisant uniquement les connexions SSH depuis votre ordinateur. Sinon, des personnes malveillantes pourraient modifier ou supprimer le code de votre site sans votre consentement.
 
 [<-- Retour](../)
