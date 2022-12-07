@@ -5,34 +5,9 @@ title: "Hacking-Guide"
 authors:
   - Kasimir Romer
 ---
-## Collection de thèmes
-(en allemand seulement, va etre supprimé a la fin)
-1. Einleitung
-    1. Was ist ein CTF?
-    2. Vorgehen: alles mitschreiben, was man gemacht hat, was funktioniert hat und was nicht funktioniert hat (Writeup)
-2. Wichtige Kommandozeilen-Befehle und Tools (z.B. CyberChef)
-    1. Kali Linux (Tutorial verlinken, um das in VirtualBox zu nutzen)
-    2. CyberChef - Kann quasi alles, sehr mächtiges “magic”-tool
-    3. Linux-Basics benötigt (ls, cd, Kommandozeilenparameter…)
-2. Informationsbeschaffung/Recon (Google, Shodan, Social Media, nmap …)
-    1. nmap auf eine IP-Range
-    2. Shodan
-3. Passwort-Cracking
-    1. Passwort-Listen
-    2. Jack the ripper
-4. Web Exploitation
-    1. Verändern von GET-Parametern
-    2. SQL Injection
-5. Forensik (Filetype herausfinden, strings, …)
-    1. file und string commands
-    2. pcap 
-6. Vulnerabilities ausnutzen mit Metasploit
-7. Ausblick auf weiteres
-    1. Wichtig, selbst zu googeln
-    2. Cryptographie…
 
 ## Introduction
-### Hacking, das ist doch etwas schlechtes
+### Hacking, n'est-ce pas une mauvaise chose
 Le terme "hacking" a une connotation très négative pour de nombreuses personnes. Les hackers, ce sont pourtant ceux qui attaquent les ordinateurs et distribuent des virus. C'est vrai, ces personnes sont aussi des hackers, mais le terme est beaucoup plus large. Il est défini de manière très différente par de nombreuses personnes, pour moi un hacker est quelqu'un qui utilise un produit ou un outil d'une manière différente de celle prévue à l'origine.
 Dans le domaine de la sécurité informatique, nous ne parlons pas de hackers, mais d'attaquants, car dans ce mot, il est directement clair qu'il s'agit de l'adversaire. Nous ne voulons certes pas devenir un attaquant, mais nous pouvons nettement mieux nous défendre si nous connaissons les techniques d'attaque et si nous pouvons nous y préparer. Si nous pensons comme un attaquant, nous avons plus de chances de le devancer. C'est pourquoi il est important de connaître les techniques d'attaque ("savoir hacker").
 
@@ -65,12 +40,9 @@ Kali Linux est une distribution Linux spécialement conçue pour les tests d'int
 ### Ligne de commande
 De très nombreuses tâches sont traitées en ligne de commande, c'est pourquoi il est nécessaire de connaître les commandes de base comme `cd`, `ls` ou `cat`. Il y a beaucoup de bons tutoriels sur Internet qui t'introduisent à la ligne de commande, par exemple [ici](https://www.youtube.com/watch?v=5XgBd6rjuDQ). Si tu vois quelque part une commande en ligne de commande avec des paramètres et que tu ne sais pas ce qu'une commande fait exactement, tu peux le vérifier ici : https://explainshell.com/ - ce site t'explique la signification de chaque paramètre. 
 
-### Schweizer Taschenmesser: CyberChef
+### "Couteau de poche suisse": CyberChef
 L'outil CyberChef (https://gchq.github.io/CyberChef/) est un véritable touche-à-tout. Les fonctions dont on a souvent besoin pour les CTF sont par exemple la conversion de/en base64, hex ou binaire, le décryptage, la détection des données intégrées, etc. L'avantage de CyberChef est qu'il maîtrise non seulement toutes ces fonctions, mais qu'il est également possible de les enchaîner, par exemple en décodant d'abord une chaîne de caractères en base64, en la dézippant et en affichant ensuite le fichier résultant. Il existe bien sûr d'autres outils pour ces tâches, mais à mon avis, CyberChef offre le meilleur choix, une interface épurée et est facile à utiliser.
 
 {% exercice %}
-TODO überlegen
-Rumprobieren, was alles geht.
+TODO ici, on va trouver une exercise après
 {% endexercice %}
-
-
