@@ -23,7 +23,7 @@ Le temps 2 est consacré à l'**ajout d'une partie back-end** avec NodeJS et Exp
 
 - [Le Github du POK](https://github.com/royantk/FindTheKey)
 - [Résultat serveur distant (front)](http://cerfeuil.ovh1.ec-m.fr/)
-- [Résultat serveur distant (API)](http://cerfeuil.ovh1.ec-m.fr/)
+- [Résultat serveur distant (API)](http://node.cerfeuil.ovh1.ec-m.fr/)
 
 {% endchemin %}
 
