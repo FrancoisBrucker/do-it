@@ -77,29 +77,20 @@
 
   
 
-  <h1>Déploiement sur un site distant.</h1>
+  <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>Connaissance de commandes UNIX : ssh,scp,ls,cat,touch etc...</li>
+<li>Accès ssh au serveur ovh1</li>
+<li>Avoir un projet à déployer</li>
+</ul>
+</div></div>
+<h1>Déploiement sur un site distant.</h1>
 <p>Le but du POK est d'appréhender le déploiement de projets sur un serveur.<br>
-Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Artblog, qui est un blog.</p>
-<h2>Pré-requis</h2>
-<ul>
-<li>
-<p>Avoir un site à déployer.</p>
-</li>
-<li>
-<p>Avoir les connaisances pour se connecter à un serveur distant :</p>
-<ul>
-<li>CLI Unix</li>
-<li>SSH</li>
-<li>Git Terminal</li>
-</ul>
-</li>
-<li>
-<p>Avoir des connaisances de Dev Fullstack :</p>
-<ul>
-<li>Projet à déployer qui est fait en JS avec React et Next.js</li>
-</ul>
-</li>
-</ul>
+Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Artblog, qui est un blog en Javascript, plus précisément, il utilise Next.js et la base de données est hébergée par un service cloud.</p>
 <h3>Remarque :</h3>
 <p>Mon back étant hébergé sur un HeadlessCMS il n'y a pas besoin de déployer la BDD, je vais donc potentiellement créer un mini projet qui contient une BDD classique juste pour me frotter au déploiement complet d'une application.</p>
 <h2>Objectifs finaux :</h2>
@@ -114,13 +105,130 @@ Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Art
 <li>Explorer le serveur ovh1 pour voir comment marche le déploiement</li>
 <li>Corriger les bugs majeurs du Artblog</li>
 <li>Build une version du Artblog</li>
-<li>Bonus : déployer un projet tout simple (Express + front + back + bdd) pour se faire les dents</li>
+<li>Deployer Artblog sur ovh1</li>
 </ul>
 <h2>Backlog :</h2>
 <ul>
-<li>Deployer Artblog sur ovh1</li>
+<li>Mettre en place une fenêtre permanente.</li>
+<li>Bonus : Mettre en place une base de données</li>
 <li>Bonus : mettre en place une automatisation avec Jenkins.</li>
 </ul>
+<h1>Premier sprint:</h1>
+<h2>Premiers pas</h2>
+<p>Le serveur est organisée de la même manière pour chaque compte. Mon compte est curcuma donc je prend cela pour exemple et je me concentre sur la partie node puisque le projet que je veut mettre en place est basé sur node.js :</p>
+<pre><code>_ Home
+|_ Curcuma
+|_django
+|_ flask
+|_java
+|_node
+  |_example.js
+|_ readme.txt
+</code></pre>
+<p>Le <strong>readme</strong> contient les addresses à questionner selon le port que l'on veut atteindre.<br>
+Dans notre cas, on vois dans le fichier <code>example.js</code> que l'on utilise le port 10438 et que pour communiquer à travers ce port, on doit envoyer nos requêtes à <code>node.curcuma.ovh1.ec-m.fr</code>.</p>
+<p>Avec la commande <code>node example.js</code> on lance le programme et on met donc en place notre serveur. Sur un navigateur, <a href="http://node.curcuma.ovh1.ec-m.fr">node.curcuma.ovh1.ec-m.fr</a> nous renvoie <code>Hello World</code>.</p>
+<h2>Mise en production du Artblog :</h2>
+<h3>Mise en place du projet sur ovh1 :</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Ce n'est pas une manière propre de faire sur un serveur de production car on copie tous le repo dans le serveur alors qu'il n'a besoin que de la branche main. Dans un chapitre suivant on recommence plus proprement.</p>
+</div></div>
+<p>Grâce à github, on va cloner le projet dans le dossier node.</p>
+<p>Sur ovh1,on vérifie qu'il y a git :</p>
+<pre><code>git --version
+</code></pre>
+<p>On clone ensuite notre projet dans le dossier node. Puisque le projet est publique, il n'y a rien de spéciale à faire, sous les conseils de Joe, on utilise directement le lien https. Puisque l'on à jamais utilisé git avec des commande et que nous somme par conséquent un peu nul, on lis la documentation avec <code>git --help</code> et on trouve ce qui nous intéresse <code>git clone</code> et <code>git help clone</code> pour toujours plus de documentation.</p>
+<p>On clone :</p>
+<pre><code>git clone https://github.com/TuncayBilgi/artblog.git
+</code></pre>
+<p>Cela créer un dossier artblog avec tous les fichiers nécéssaires dedans, sauf certains que je n'ai pas mis dans le git comme mes fichiers d'environnement qui possèdent les clés d'API.</p>
+<p>Ensuite, on éxécute les commandes nécésaires à installer le reste des fichiers :</p>
+<p>npm install</p>
+<p>Je copie-colle mon fichier d'environment :</p>
+<pre><code>scp ./.env curcuma@ovh1.ec-m.fr/node
+</code></pre>
+<h3>Test de la mise en production sur mon ordinateur :</h3>
+<p>Avec Next.js, certaines commandes servent à la mise en production :</p>
+<pre><code>npm run dev // Lance le projet en mode développement en local
+npm run build // build le projet
+npm run start -p PORT //lance le serveur de production sur le port indiqué
+</code></pre>
+<p>On lance le build, après un certain temps il semble que tout marche, on peut alors essayer de lancer l'application sur un port différent que le port par défaut (3000) car on aura besoin de le faire sur ovh1.</p>
+<h3>Changement de port :</h3>
+<p>Le serveur ovh1 nous octroie un port bien précis pour y mettre notre application. On ne peut donc pas lancer le programme sur n'importe quel port et surement pas le port par défaut. Pour le changer, cela dépend de la technologie utilisée. Avec un serveur node tout simple, il suffit de modifier le port dans le fichier js qui lance le processus. Pour nous, d'après la documentation, nous devon modifier la commande <code>npm run start</code>. Cela ce fait dans le fichier package.json où l'on rentre :</p>
+<pre><code>&quot;start&quot;: &quot;next start -p 8080&quot;
+</code></pre>
+<p>Ce qui devrait lancer l'application sur le port 8080.</p>
+<p>Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec <code>npm run start</code> et en lancant cette commande dans le Powershell : <code>Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess</code>, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.</p>
+<p>On vérifie que le port 8080 est libre puis on lance l'application sur ce port.</p>
+<pre><code>npm run start
+Get-NetTCPConnection | where Localport -eq 8080 | select Localport,OwningProcess
+</code></pre>
+<p>La dernière commande renvoie :</p>
+<pre><code>Localport OwningProcess
+</code></pre>
+<hr>
+<pre><code> 8080         17516
+</code></pre>
+<p>C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.</p>
+<h3>Faire du git proprement:</h3>
+<p>Comme précisé précedement, on a copié l'entierté du repo dans le serveur de production. On oublie et on refait.<br>
+On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne manière de le faire et je n'ai pas regardé. Ici, je supprime le dossier et tout ce qu'il y avait dedans, ce qui peut être dangereux.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Si vous aviez des fichiers importants, tout va sauter, vérifiez 2 fois avant de lancer des commandes qui commencent par rm -r</p>
+</div></div>
+<pre><code>// Dans ovh1 [...]/node
+rm -r artblog/
+</code></pre>
+<p>Ensuite, on pull proprement le projet :</p>
+<pre><code>git init
+git remote add origin https://github.com/TuncayBilgi/artblog.git
+git pull origin main
+</code></pre>
+<p>Ici, seul la branche main est clonée sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.<br>
+Pou mettre le repo à jour sur le serveur il suffit de :</p>
+<pre><code>git fetch origin main
+git reset --hard origin/main
+git clean -fdx // attention cela surpimme tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle
+</code></pre>
+<p>Ou plus simplement :</p>
+<pre><code>git pull origin master
+</code></pre>
+<h3>Letsgo on test enfin :</h3>
+<p>Tous les préparatifs sont faits, il ne reste qu'à build l'application sur le serveur, puis la lancer :</p>
+<pre><code>npm run build
+npm run start
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Ne lancez pas d'applications en mode dev sur le serveur de production, et de manière générale, faites attention aux ports que vous allez utiliser.</p>
+</div></div>
+<p>L'application est disponible sur internet à l'adresse <code>node.curcuma.ovh1.ec-m.fr</code> et tout marche correctement.</p>
+<p>Problème, quand on ferme le terminale, l'application s'arrête.</p>
+<h3>Lancer l'application de façon permanente :</h3>
+<p>En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas eteindre notre ordinateur sans que ça coupe l'application.</p>
+<p>Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. Sous les conseils de M.Brucker, on utilise simplement la commande screen qui permet de lancer des terminaux et des processus en tâche de fond.</p>
+<pre><code>screen -S artblog // Nous emmene dans un nouveau terminale.
+npm run start
+// on tape Ctrl-A + D pour quitter le terminale
+</code></pre>
+<p>Et voila l'application tourne de façon permanente sur ovh1.</p>
+<h2>Bilan premier sprint :</h2>
+<p>J'ai réalisé le travail que j'avais prévu de faire car j'ai eu la chance de ne rencontrer aucun problème.<br>
+J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'était pas la priorité et j'ai amplement le temps durant le second sprint.</p>
+<h3>Pour le second sprint :</h3>
+<p>Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une base de données juste pour me frotter à l'exercie et si possible, mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.</p>
 
 
 </article>
