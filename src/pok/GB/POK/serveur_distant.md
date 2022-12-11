@@ -91,9 +91,13 @@ On arrive donc à une partie plus intéressante, celle de la liaison entre ma pr
 Pour ce faire, nous utilisons pug (choix par défaut du cours que je regrette un peu à ce moment car je dois réadapter certains de mes codes sources).<br>
 Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier "views". Comme son nom l'indique, celui-ci contiendra les interfaces vus par l'utilisateur. J'implémente donc mon code html "PFC" dans le fichier "index.pug". C'est à ce moment que cela se complique car bien que pug reprend complétement l'idée de html, il y'a tout de même de nombreux changements à opérer dans un langage que je ne connais pas. 
 
+# Fin du sprint 1 
 ### Ce qu'il reste à faire 
 Comme on peut le voir, il reste de nombreuses choses à effectuer, j'ai désormais plus de visibilité sur l'ensemble du projet : 
 - Adapter mon script afin que le site marche comme avant
-- Je pense à modifier la base de données afin que celle-ci soit juste un historique des anciens coups car sinon le temps manquera surement (cela n'implique pas tant de changements à mon avis)
+- Je pense à modifier la base de données afin que celle-ci soit juste un historique des anciens coups car l'objectif initiale demanderait beaucoup de changement sur le front et me limiterai dans la suite des évènement. 
 - Ramener le site sur l'ovh une fois que tout cela sera fait 
-- Bonus si le temps me le permet : insérer une page de connexion 
+- Insérer une page de connexion
+- Sécurité si le temps me le permet mais cela me parait compliqué. 
+- Rajouter des routes pour amener aussi la partie de timothée sur le serveur 
+
