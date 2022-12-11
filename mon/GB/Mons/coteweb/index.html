@@ -49,6 +49,17 @@
   <h1  class="mb-1">Coté Web</h1>
   <div class="mb-4">
     
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Server</li>
+          
+        </ul>
+      </div>
+    
 
     
       <div class=" px-4 flex items-center">
@@ -186,23 +197,20 @@ const AuthorSchema <span class="token operator">=</span> new Schema<span class="
   date_of_death: <span class="token punctuation">{</span> type: Date <span class="token punctuation">}</span>,
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Virtual <span class="token keyword">for</span> author<span class="token string">'s full name
-AuthorSchema.virtual("name").get(function () {
-  // To avoid errors in cases where an author does not have either a family name or first name
-  // We want to make sure we handle the exception by returning an empty string for that case
-  let fullname = "";
-  if (this.first_name &amp;&amp; this.family_name) {
-    fullname = `${this.family_name}, ${this.first_name}`;
-  }
-  if (!this.first_name || !this.family_name) {
-    fullname = "";
-  }
-  return fullname;
-});
+AuthorSchema.virtual<span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // To avoid errors <span class="token keyword">in</span> cases where an author does not have either a family name or first name
+  // We want to <span class="token function">make</span> sure we handle the exception by returning an empty string <span class="token keyword">for</span> that <span class="token keyword">case</span>
+  <span class="token builtin class-name">let</span> fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>this.first_name <span class="token operator">&amp;&amp;</span> this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>$<span class="token punctuation">{</span>this.family_name<span class="token punctuation">}</span>, $<span class="token punctuation">{</span>this.first_name<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>this.first_name <span class="token operator">||</span> <span class="token operator">!</span>this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token builtin class-name">return</span> fullname<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Virtual for author'</span>s URL
 AuthorSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  // We don<span class="token string">'t use an arrow function as we'</span>ll need the this object
   <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/catalog/author/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -210,6 +218,52 @@ AuthorSchema.virtual<span class="token punctuation">(</span><span class="token s
 module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Author"</span>, AuthorSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../../Images/database.PNG'></p>
+<h3>Routes</h3>
+<p>Définition : Une route est une section de code qui associe un HTTP, un chemin URL et une fonction qui les associe sur le site. <br><br>
+Express possède un middleware permettant de créer des routes directement. Ce middleware permet de créer des routes pour les requêtes : &quot;get&quot;, &quot;post&quot;, &quot;delete&quot;, &quot;copy&quot;, &quot;subscribe&quot;... et bien d'autres. Ainsi, pour chaque filtre de notre base de données, nous crééons un fichier où l'on code toutes les requêtes souhaitées. Nous plaçons ces fonctions dans un dossier.<br><br>
+Un exemple de fichier &quot;listController&quot; peut-être :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const Element <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"../models/element"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+//Liste tous les éléments
+exports.list <span class="token operator">=</span> <span class="token punctuation">(</span>req, res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  res.send<span class="token punctuation">(</span><span class="token string">"NOT IMPLEMENTED: Element list"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Ce code crée un URL où l'on listera tous les éléments de notre base de données. Nous verrons plus tard comment l'associer réellement à notre BDD.<br>
+Le code suivant permet ensuite de créer la route en tant que tel, nous le plaçons donc dans le dossier express &quot;routes&quot;</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const list_controller <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"../controllers/listController"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+//Page principale <span class="token function">du</span> site
+router.get<span class="token punctuation">(</span><span class="token string">"/"</span>, list_controller.index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Les routes &quot;index&quot; et &quot;users&quot; sont automatiquement implantées dans le fichier &quot;app.js&quot; mais on peut rajoutés des fichiers dans &quot;Routes&quot; et es reliées dans &quot;app.js&quot;. <br><br>
+En l'état actuel, notre page affiche le message : &quot;Not implemented : Element list&quot;<br>
+Il nous suffit simplement de remplacer la fonction &quot;export.list&quot; dans &quot;listController&quot; et elle pourra ensuite afficher notre base de donnée :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">exports.list <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>req, res, next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Element.find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span>, <span class="token string">"Information 1"</span><span class="token punctuation">)</span>
+    .sort<span class="token punctuation">(</span><span class="token punctuation">{</span> title: <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    .exec<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err, list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">return</span> next<span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      res.render<span class="token punctuation">(</span><span class="token string">"list"</span>, <span class="token punctuation">{</span> title: <span class="token string">"List"</span>, list: books <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Que l'on associe avec un fichier &quot;list.pug&quot; dans notre dossier &quot;View&quot; :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">extends layout
+
+block content
+  <span class="token assign-left variable">h1</span><span class="token operator">=</span> title
+
+  ul
+    each element <span class="token keyword">in</span> list
+      li
+        a<span class="token punctuation">(</span>href<span class="token operator">=</span>element.url<span class="token punctuation">)</span> <span class="token comment">#{element.title}</span>
+    <span class="token keyword">else</span>
+      li There are no books.
+</code></pre>
+<h3></h3>
 
 
 </article>
