@@ -16,12 +16,12 @@ L'objectif de ce POK est de créer une formation de base en hacking/CTF. Cette f
 
 ## Gestion de projet
 ### Backlog
-- [ ] Créer un repo GitHub pour la formation
-- [ ] Créer une liste avec les sujets à couvrir
-- [ ] Créer le document de cours
-- [ ] Écrire un chapitre d'introduction
-- [ ] Recherche de commandes et outils importants
-- [ ] Ecrire le chapitre sur les commandes et outils importants
+- [x] ~~Créer un repo GitHub pour la formation~~
+- [x] Créer une liste avec les sujets à couvrir
+- [x] Créer le document de cours [document](./hacking)
+- [x] Écrire un chapitre d'introduction
+- [x] Recherche de commandes et outils importants
+- [x] Ecrire le chapitre sur les commandes et outils importants
 - [ ] Recherche sur la reconnaissance 
 - [ ] Ecrire le chapitre sur la reconnaissance
 - [ ] Recherche sur le craquage de mots de passe
@@ -56,8 +56,18 @@ Planning:
 - [ ] Ecrire le chapitre sur le craquage de mots de passe
 - [ ] Préparer du pitch pour le 7 décembre
 
+**Review:**
+Je n'ai pas réussi a faire tous les tâches de ce sprint, c'est parce que j'ai beaucoup de projets en parallèle. Pour le prochain sprint, je vais prioriser le POK et donc faire plus de tâches. Cependant, entre-temps, j'ai participé à un véritable CTF (HackTheBox University CTF), au cours duquel j'ai appris beaucoup de choses que je peux intégrer dans les chapitres suivants.
+
 ### Sprint 2
 **08/12/2022 - 13/01/2023**
+- [ ] Recherche sur la reconnaissance 
+- [ ] Ecrire le chapitre sur la reconnaissance
+- [ ] Recherche sur le craquage de mots de passe
+- [ ] Ecrire le chapitre sur le craquage de mots de passe
+- [ ] Recherche sur l'exploitation Web 
+- [ ] Ecrire le chapitre sur l'exploitation web
+
 
 ### Sprint 3
 **14/01/2023 - 25/01/2023**
