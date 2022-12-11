@@ -4,7 +4,7 @@ layout: layout/post.njk
 title: "Coté Web"
 authors:
   - Gabriel BARBE
-
+tags: ['Server'], ['']
 ---
 <!-- Début Résumé -->
 MON sur le developpement côté serveur suivi sur le site de M. Brucker puis sur mdn developper. 
@@ -133,7 +133,6 @@ const AuthorSchema = new Schema({
   date_of_death: { type: Date },
 });
 
-// Virtual for author's full name
 AuthorSchema.virtual("name").get(function () {
   // To avoid errors in cases where an author does not have either a family name or first name
   // We want to make sure we handle the exception by returning an empty string for that case
@@ -147,9 +146,7 @@ AuthorSchema.virtual("name").get(function () {
   return fullname;
 });
 
-// Virtual for author's URL
 AuthorSchema.virtual("url").get(function () {
-  // We don't use an arrow function as we'll need the this object
   return `/catalog/author/${this._id}`;
 });
 
@@ -158,3 +155,54 @@ module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
 Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../../Images/database.PNG'>
+
+### Routes 
+Définition : Une route est une section de code qui associe un HTTP, un chemin URL et une fonction qui les associe sur le site. <br>
+Express possède un middleware permettant de créer des routes directement. Ce middleware permet de créer des routes pour les requêtes : "get", "post", "delete", "copy", "subscribe"... et bien d'autres. Ainsi, pour chaque filtre de notre base de données, nous crééons un fichier où l'on code toutes les requêtes souhaitées. Nous plaçons ces fonctions dans un dossier.<br>
+Un exemple de fichier "listController" peut-être : 
+```bash
+const Element = require("../models/element");
+
+//Liste tous les éléments
+exports.list = (req, res) => {
+  res.send("NOT IMPLEMENTED: Element list");
+};
+```
+Ce code crée un URL où l'on listera tous les éléments de notre base de données. Nous verrons plus tard comment l'associer réellement à notre BDD. 
+Le code suivant permet ensuite de créer la route en tant que tel, nous le plaçons donc dans le dossier express "routes"
+```bash
+const list_controller = require("../controllers/listController");
+
+//Page principale du site
+router.get("/", list_controller.index);
+```
+Les routes "index" et "users" sont automatiquement implantées dans le fichier "app.js" mais on peut rajoutés des fichiers dans "Routes" et es reliées dans "app.js". <br>
+En l'état actuel, notre page affiche le message : "Not implemented : Element list"
+Il nous suffit simplement de remplacer la fonction "export.list" dans "listController" et elle pourra ensuite afficher notre base de donnée : 
+```bash
+exports.list = function (req, res, next) {
+  Element.find({}, "Information 1")
+    .sort({ title: 1 })
+    .exec(function (err, list) {
+      if (err) {
+        return next(err);
+      }
+      res.render("list", { title: "List", list: books });
+    });
+};
+```
+Que l'on associe avec un fichier "list.pug" dans notre dossier "View" : 
+```bash
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each element in list
+      li
+        a(href=element.url) #{element.title}
+    else
+      li There are no books.
+```
+### 
