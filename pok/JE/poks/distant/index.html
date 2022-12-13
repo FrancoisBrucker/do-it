@@ -69,7 +69,7 @@
   <!-- début résumé -->
 <p>Pour ce deuxième POK, je continue à travailler sur mon site portfolio en mettant cette fois l'accent sur le back et en le déployant sur le serveur OVH de l'école.</p>
 <!-- fin résumé -->
-<p>Voici le lien de mon repo GitHub : <a href="https://github.com/JeffreyEdisah/">https://github.com/JeffreyEdisah/</a></p>
+<p>Voici le lien de mon repo GitHub : <a href="https://github.com/JeffreyEdisah/pok_serveur_distant">https://github.com/JeffreyEdisah/pok_serveur_distant</a></p>
 <p>Les technologies que je veux utiliser sont : Flask, PostGreSQL, MongoDB, Bootstrap(?), Tailwind(?)</p>
 <p>Ce que je veux concevoir dans ce deuxième POK :</p>
 <ul>
@@ -88,6 +88,16 @@
 <li>Mise en place d'une base de données relationnelle pour les commissions</li>
 <li>Une session utilisateur de 24h, pour qu'un utilisateur ne puisse pas me faire plusieurs commissions à la suite (mais qu'il puisse corriger une erreur s'il s'est trompé)</li>
 <li>Déploiement du site (non fini) sur le serveur OVH pour tester</li>
+</ul>
+<h3>Bilan</h3>
+<p>La session a été mise en place, cependant je n'ai pas trouver un moyen d'envoyer de mail en fin de session car la fin de session se fait sans envoi de requête. J'essaierai de mettre en place une vérification périodique de ma base de données (hebdomadaire) et l'envoi d'un mail en cas de nouvelles entrées.</p>
+<p>Le point le plus épineux de ce sprint a été la mise en place de la base de données avec SQLAlchemy que je n'arrive pas à mettre en place, et je ne comprends pas pourquoi. De fait, je n'ai pas pu tester le déploiement sur le serveur OVH de l'école car je veux avant tout une apllication fonctionnelle avec une base de données MySQL sur ma machine local</p>
+<h2>Sprint 2</h2>
+<p>Les tâches que je veux faire pour mon 2ème sprint :</p>
+<ul>
+<li>Connexion effective de ma base de données MySQL à mon application à l'aide de SQLAlchemy</li>
+<li>Déploiement sur le serveur OVH</li>
+<li>Fonction d'envoi de mail périodique</li>
 </ul>
 
 
