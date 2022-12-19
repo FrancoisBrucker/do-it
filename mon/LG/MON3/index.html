@@ -66,7 +66,166 @@
 
   
 
-  
+  <p>L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis le cours de Monsieur Brucker <em>ajouter le lien</em>.<br>
+Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:</p>
+<ul>
+<li>Nicolas BERT <em>ajouter le lien</em> (Bon exemple de programme en python)</li>
+<li>Tuncay Bilgi <em>ajouter le lien</em> (fonctionnalités avancées)</li>
+</ul>
+<h1>Sommaire:</h1>
+<ol>
+<li>Qu'est ce que la programmation objet</li>
+<li>Composition et agrégation</li>
+<li>Héritage</li>
+<li>Retour sur le cours de M.Brucker</li>
+</ol>
+<h2>1. Qu'est ce que la programmation objet</h2>
+<h1>Cours</h1>
+<p>Une vidéo explicative sympa pour commencer: <a href="https://www.youtube.com/watch?v=3-qqjlY3tCM">https://www.youtube.com/watch?v=3-qqjlY3tCM</a></p>
+<p>La programmation objet permet de découper son code en petites parties simples, faciles à lire. Pour ce faire on utilise des classes.<br>
+Une classe permet de créer un type d'objet et de définir les opérations que l'on peut effectuer dessus.</p>
+<p>Un objet issu d'une certaine classe :<br>
+• possède des attributs uniques. (Chaque objet de la classe possèdent les mêmes caractéristiques mais leur valeurs sont différentes pour chaque objet)<br>
+• possède des méthodes définies dans sa classe</p>
+<p>Pour représenter un objet on utilise la représentation ULM.</p>
+<p><em>insérer image:</em></p>
+<p>On voit bien ce qui compose la classe:</p>
+<ul>
+<li>Un nom</li>
+<li>Des méthodes (= fonctionnalités  qui sont pareilles pour tous les objets)</li>
+<li>Un attribut (= qui est différent pour chaque objet)</li>
+</ul>
+<p>Finalement, une classe python s'écrira de cette manière:</p>
+<img src="classe_.png">
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Source</p>
+</div><div class="pl-8 mr-8">
+<p>[Classes et objet][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/classes-et-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/classes-et-objets/</a>]<br>
+[Coder ses objets][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/coder-ses-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/coder-ses-objets/</a>]</p>
+</div></div>
+<p><em>Espaces de noms</em>:<br>
+ce sont des espaces où sont stockés les noms de variables. Dans un espace de noms, chaque nom est différent. Réutiliser le même nom fait que l'on réécrit sur le précédent (ex:si on donne le même noms à 2 variables, la 2nde valeur écrase la 1ère :x=1 et x=3, on aura x=3)<br>
+Lorsque l'on définit une classe, python lui associe un espace de noms. Les différents noms définits dans la classes y seront consignés.</p>
+<p><em>Conventions importantes</em>:</p>
+<ul>
+<li>Les noms de classe commencent par une majuscule</li>
+<li>L'implémentation de la classe est placée dans un fichier de même nom mais avec une minuscule</li>
+<li>Il faut tester ses fonctionnalités au fur et à mesure qu'on les écrit</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Remarques</p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>Le cours permet de bien comprendre ce que sont les objets et les classes avec des exemples simples. Cependant j'ai peur de ne pas m'en sortir quand la diffciluté augmentera</li>
+<li>J'ai encore du mal à comprendre les subtilités des espaces de noms. Je retiens surtout que si on utilise deux fois le même nom à l'intérieur d'une même classe on risque d'avoir des soucis...</li>
+</ul>
+</div></div>
+<h1>Pratique: Bataille navale</h1>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Source</p>
+</div><div class="pl-8 mr-8">
+<p>[projet : coder des objets][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/projet-code-objets/</a>]</p>
+</div></div>
+<p>On commence par coder la classe Grille:</p>
+<p>La méthode tirer remplace le &quot;.&quot; par un &quot;o&quot; dans la grille à l'endroit du tir</p>
+<p>On code ensuite la classe Bateau:</p>
+<p>La méthode &quot;touché&quot; permet de savoir si un tir  a atteint le bateau ou non.<br>
+Enfin on ajoute les méthodes ajoute(Bateau) à Grille et coulé() à Bateau  qui vont lier les 2 classes.</p>
+<p>Le code final du jeu de la bataille final est:</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Difficultés</p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>J'ai eu du mal à comprendre comment bien utiliser &quot;self&quot;. J'ai pas mal pataugé au début à cause de cela</li>
+<li>L'appel d'un objet de la classe Bateau dans l'écriture d'une méthode de la classe Grille m'a aussi posé problème</li>
+<li>J'ai bien compris la théorie des tests mais la réalisation de vrais tests vraiment efficaces reste assez mystérieuse</li>
+</ul>
+</div></div>
+<h2>2 Composition et agrégation</h2>
+<h1>Cours</h1>
+<p>Une composition est crée avec un ensemble d'objets. Elle est crée avec une classe.<br>
+Une agrégation représente un ensemble d'objets ajoutés par une méthode dans l'objet principale. Ils ne possèdent pas de classe propre</p>
+<p>exemple du panier de fruits:</p>
+<ul>
+<li>le panier est une composition de fruits</li>
+<li>les fruits sont une agrégation (il n'existe pas de classe Fruit)</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Source</p>
+</div><div class="pl-8 mr-8">
+<p>[composition et agrégation][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/composition-agr%C3%A9gation/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/composition-agrégation/</a>]</p>
+</div></div>
+<h1>Pratique: On lance 5 dés</h1>
+<p>Dans ce projte, on créé un TapisVert qui contient 5 dés que l'on peut lancer.<br>
+Représentation UML:</p>
+<p>Code:</p>
+<p>Tests associés:</p>
+<h2>3.Héritage</h2>
+<h1>Cours</h1>
+<p>L'héritage permet de créer des classes filles qui sont des cas particuliers de leur classe mère.<br>
+Une classe fille hérite de tous les attributs et méthodes de sa mère. On peut lui ajouter  des méthodes spécifiques.</p>
+<p>Par exemple:</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Source</p>
+</div><div class="pl-8 mr-8">
+<p>[Héritage][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/héritage/</a>]</p>
+</div></div>
+<h1>Pratique</h1>
+<p>Pour tester l'héritage j'ai ajouté une classe de sous-marins à ma bataille navale.<br>
+Ces sous marins peuvent plonger. Ils sont alors invisibles et intouchables:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<span class="token keyword">class</span> <span class="token class-name">Sous_marin</span><span class="token punctuation">(</span>Bateau<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ligne<span class="token punctuation">,</span> colonne<span class="token punctuation">,</span> longueur<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> vertical<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> visibilité<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>ligne<span class="token punctuation">,</span> colonne<span class="token punctuation">,</span> longueur<span class="token punctuation">,</span> vertical<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>visiblité<span class="token operator">=</span> visibilité
+        self<span class="token punctuation">.</span>longueur<span class="token operator">=</span> <span class="token number">3</span>
+
+    <span class="token keyword">def</span> touché <span class="token punctuation">(</span>self<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>visible<span class="token operator">==</span><span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>touché<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"c'est raté "</span><span class="token punctuation">)</span>
+
+
+    <span class="token keyword">def</span> coulé<span class="token punctuation">(</span>self<span class="token punctuation">,</span> grille<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>visible<span class="token operator">==</span><span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>coulé<span class="token punctuation">(</span>grille<span class="token punctuation">)</span>    
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"c'est raté "</span><span class="token punctuation">)</span>
+
+</code></pre>
+<h2>4. Retour sur le cours de M.Brucker</h2>
+<p>Pour conclure ce MON voici un petit retour d'expérience concernant le cours de Monsieur Brucker.</p>
+<p>Le cours est clair avec des exemples simples à comprendre. La première partie du cours est celle qui m'a posée le plus de diffcultées car elle introduit beaucoup de notions. La différence de difficulté entre les exemples du cours et la bataille navale m'a paru trop grande.<br>
+Les parties suivantes sur l'héritage et les compositions,agrégations n'ont pas posé problème.</p>
+<p>En résumé ce cours permet de bien comprendre les basses de la POO. Cependant il sera sans doute un peu compliqué à suivre pour les débutants (surtout en ce qui concerne les notions complexes). De plus il manque d'exemple plus compliqués, ce qui a rendu la bataille navale très dure à mettre en place pour moi.<br>
+Si vous êtes 100% débutant en informatique je vous conseille de compléter ce cours avec d'autres ressources internet (comme des petites vidéos par exemple) et de faire des exemples simples, qui montent en difficulté progressivement avant de vous attaquer à la bataille navale.</p>
+
 
 </article>
 
