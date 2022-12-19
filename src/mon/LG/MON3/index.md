@@ -8,8 +8,8 @@ authors:
 ---
 L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis le cours de Monsieur Brucker *ajouter le lien*.
 Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:
-- Nicolas BERT *ajouter le lien* (Bon exemple de programme en python)
-- Tuncay Bilgi *ajouter le lien* (fonctionnalités avancées)
+- MON 1.2 de Nicolas BERT [Programmation objet en Python][https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/] (Bon exemple de programme )
+- MON 1.1 de Tuncay Bilgi [POO][https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/] (fonctionnalités avancées)
 
 # Sommaire:
 1. Qu'est ce que la programmation objet
@@ -33,7 +33,7 @@ Un objet issu d'une certaine classe :
 
 Pour représenter un objet on utilise la représentation ULM.
 
-*insérer image:*
+<img src="ulm.png">
 
 On voit bien ce qui compose la classe:
   - Un nom 
@@ -136,10 +136,7 @@ Le code final du jeu de la bataille final est:
 Dans ce projte, on créé un TapisVert qui contient 5 dés que l'on peut lancer.
 Représentation UML:
 
-
-
-
-
+<img src="ulm_tapis.png">
 
 Code:
 
@@ -163,6 +160,9 @@ Par exemple:
  [Héritage][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/]
 {% endprerequis %}
 
+Un bon exemple de programme qui utilise l'héritage :
+
+-MON 1.2 de Nicolas BERT [Programmation objet en Python][https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/]
 
  # Pratique
 
@@ -202,3 +202,4 @@ Les parties suivantes sur l'héritage et les compositions,agrégations n'ont pas
 
 En résumé ce cours permet de bien comprendre les basses de la POO. Cependant il sera sans doute un peu compliqué à suivre pour les débutants (surtout en ce qui concerne les notions complexes). De plus il manque d'exemple plus compliqués, ce qui a rendu la bataille navale très dure à mettre en place pour moi.
 Si vous êtes 100% débutant en informatique je vous conseille de compléter ce cours avec d'autres ressources internet (comme des petites vidéos par exemple) et de faire des exemples simples, qui montent en difficulté progressivement avant de vous attaquer à la bataille navale.
+
