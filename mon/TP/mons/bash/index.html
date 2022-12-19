@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>MON 3 : Bash</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">MON 3 : Bash</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Bash</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thomas Pont</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- Début Résumé -->
+<p>Bash : utilisation d'une interface en ligne de commande</p>
+<!-- Début Résumé -->
+<h2>Introduction</h2>
+<p>Ce MON est destiné à des débutants en Bash. En effet, avant de débuter ce travail je ne connaissais pratiquement rien sur le sujet.</p>
+<p>Bash (ou Bourne-Again Shell) est un <strong>interpréteur en ligne de commande</strong>. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour qu’il les exécute. Il permet <strong>d’utiliser son ordinateur de façon efficace</strong> et de <strong>réaliser des opérations complexes très rapidement</strong>.<br>
+Il s’agit d’une <strong>interface en ligne de commande</strong> ou CLI (“Command Line Interface”).  L’utilisateur est face à une “grande boîte noire” dans laquelle il peut entrer ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation plus classique de son ordinateur avec l’accueil, le bureau, les icônes,... Même si une CLI peut être <strong>plus dure à maîtriser et moins intuitive</strong>, elle est <strong>plus puissante</strong> qu’une GUI.<br>
+Par ailleurs Bash fonctionne généralement en <strong>commande synchrone</strong>. Cela signifie que les lignes de commande sont lues et exécutées une par une.</p>
+<h2>Comment faire du Bash ?</h2>
+<p>Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais sans interpréteur certaines fonctions peuvent être limitées.<br>
+Pour ce MON, j’ai utilisé Bash sur un système Linux en me <strong>connectant à mon compte Centrale</strong>. Pour cela j’ai lancé la commande suivante dans mon terminal Windows Powershell:</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> tpont@sas1.ec-m.fr
+</code></pre>
+<p>En entrant son mot de passe Centrale, on se connecte sur son environnement de travail de Centrale.</p>
+<p>Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par:</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span>$
+</code></pre>
+<p>Dans un premier lieu (avant le ~), il s’agit du <strong>nom d’utilisateur</strong>. Le signe “~” avec rien derrière indique que l’on se situe dans le <strong>dossier home</strong>. Enfin, le signe “$” signifie qu’on est connecté en tant qu’<strong>utilisateur classique</strong>.<br>
+Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="https://www.pierre-giraud.com/shell-bash/">Apprendre à utiliser le shell Bash - Pierre Giraud</a>.</p>
+<h2>Les principales commandes</h2>
+<p>Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes:</p>
+<ul>
+<li><strong>#</strong> : commentaire (tout  le texte situé après ce signe sera ignoré par le terminal)</li>
+<li><strong>pwd</strong> : renvoie le chemin du répertoire courant</li>
+</ul>
+<p>Par exemple, si on entre la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span>$ <span class="token builtin class-name">pwd</span>
+</code></pre>
+<p>Le système va nous répondre :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">/users/home2/tpont
+</code></pre>
+<p>En effet, on est un utilisateur, home2 correspond aux élèves et tpont à ma session.</p>
+<ul>
+<li><strong>ls</strong> : renvoie le contenu d’un répertoire</li>
+<li><strong>cd</strong> : change directory permet de se déplacer dans un nouveau répertoire</li>
+</ul>
+<p>Par exemple,</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span>$ <span class="token builtin class-name">cd</span> Documents
+</code></pre>
+<p>permet de se déplacer dans le dossier Documents. Ceci est bien matérialiser par l’invite de commande qui est désormais :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~/Documents<span class="token punctuation">]</span>$
+</code></pre>
+<ul>
+<li><strong>cp</strong> : copie/colle un fichier</li>
+</ul>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~/Documents<span class="token punctuation">]</span>$ <span class="token function">cp</span> document.txt Dossier
+</code></pre>
+<p>copie document.txt qui est dans Documents et le colle dans Dossier qui est un dossier dans Documents.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Attention</strong> aux espaces</p>
+</div><div class="pl-8 mr-8">
+<p>Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.<br>
+Par exemple :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~/Documents<span class="token punctuation">]</span>$ <span class="token function">cp</span> “ mon document.txt” Dossier
+</code></pre>
+</div></div>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
