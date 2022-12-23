@@ -7,15 +7,21 @@ authors:
 tags: ['Server']
 ---
 <!-- Début Résumé -->
-MON sur le developpement côté serveur suivi sur le site de M. Brucker puis sur mdn developper. 
+MON sur le developpement côté serveur suivi sur le site de M. Brucker puis sur mdn developper. <br>
+Nous apprendrons entre autre à créer une base de données, l'utiliser, la modifier depuis le site web mais aussi apprendre le "back-end" et l'associer au "front-end". Ce cours sera constitué de deux partie. <br>
+Niveau : Intermédiaire<br>
+Prérequis : [DevWeb1](Devweb1.md), [DevWeb2](./Devweb2.md)
 <!-- Fin Résumé -->
-Il n'est pas question de paraphraser ici l'entièreté du cours, néanmoins j'incluerai un résumé sous chaque partie. <br/>
-Etant complètement débutant j'ai trouvé que le cours dispensé en anglais sur [mdn.developper](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment) détaillait plus toute la démarche de création de serveur, c'est pourquoi après les deux premiers modules, j'ai continué mon apprentissage sur ce site.
+
+## Préambule
+J'ai affiché un niveau intermédiaire mais j'aurais tout aussi bien pu mettre facile, en effet le cours est relativement accessible étant donné que je suis moi-même un débutant, et qu'avec le temps alloué j'ai été capable d'effectuer les taches voulues. Néanmoins, pour les débutants, il vous faudra sortir de votre zone de confort et être motivé car il y a des passages quelques peu ardus où avoir un projet en tête aide. Pour moi ce cours a été suivi dans l'idée de réaliser mon projet [PFC](/src/pok/GB-TB/index.md) que vous pouvez aussi visiter pour mieux comprendre mes intentions. <br>
+Mes sources principales sont le cours de François Brucker [Web](https://francoisbrucker.github.io/cours_informatique/cours/web/) et un cours en anglais  sur le site [MDN Developer](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)<br/>
+Bon cours !
 ## Coté serveur 
 ### Lire des données 
-Afin de lire des données sur un site web et les réutiliser ensuite, on utilise la fonction javascript "fetch". Cette dernière est fondamentale dans l'utilisation des bases de données. La fonction fetch peut être utilisé sur des fichiers textes, des images ou du json ([voir Devweb 1](Devweb1)) à condition que ces dernières soient sur un serveur web !
+Afin de lire des données sur un site web et les réutiliser ensuite, on utilise la fonction javascript "fetch". Cette dernière est fondamentale dans l'utilisation des bases de données. La fonction fetch peut être utilisé sur des fichiers textes, des images ou du json ([voir Devweb 1](./Devweb1.md)) à condition que ces dernières soient sur un serveur web !
 ### Serveur web minimal
-On peut créer un "serveur minimal" grâce à node simplement avec la commande shhell : 
+On peut créer un "serveur minimal" grâce à node simplement avec la commande shell : 
 ```bash
 node index.js
 ```
@@ -30,7 +36,7 @@ Nous avons pour le moment les dossiers suivants dans notre environnement de prog
 - le dossier "bin" contient un fichier "www" qui représente l'hébergement de notre site
 - les dossiers "models" ainsi que "public" sont vides pour le moment : "models" nous servira pour la base de données et "public" pour les images et les styles. 
 - "routes" indique les routes 
-- "views" montre les messages que l'on voit affiché en fonction des réponses de notre serveur
+- "views" est là où l'on code l'interface. 
 - les fichiers ".json" sont l'identité de notre projet et le fichier app.js est l'endroit où l'on programme notre site et ressemble pour le moment à ceci : 
 
 ```bash
@@ -90,52 +96,51 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
-Nous crééons ensuite une base de donnée comprenant des livres, des auteurs etc. par l'intermédiaire d'un nouveau fichier "populatedb.js" qui nous sert à peupler la base de données. Ce fichier contient par exemple des fonctions telles que :
+Nous crééons ensuite une base de donnée comprenant des chaines de caractères, des dates, des nombres etc. Cette base est crée par l'intermédiaire d'un nouveau fichier "populatedb.js" qui nous sert à peupler la base de données. Ce fichier contient par exemple des fonctions telles que :
 ```bash
-function authorCreate(first_name, family_name, d_birth, d_death, cb) {
-  authordetail = {first_name:first_name , family_name: family_name }
-  if (d_birth != false) authordetail.date_of_birth = d_birth
-  if (d_death != false) authordetail.date_of_death = d_death
+function personCreate(first_name, family_name, d_birth, d_death, cb) {
+  persondetail = {first_name:first_name , family_name: family_name }
+  if (d_birth != false) persondetail.date_of_birth = d_birth
+  if (d_death != false) persondetail.date_of_death = d_death
   
-  var author = new Author(authordetail);
+  var person = new Person(authordetail);
        
-  author.save(function (err) {
+  person.save(function (err) {
     if (err) {
       cb(err, null)
       return
     }
-    console.log('New Author: ' + author);
-    authors.push(author)
-    cb(null, author)
+    console.log('New Player: ' + person);
+    persons.push(person)
+    cb(null, person)
   }  );
 }
-function createGenreAuthors(cb) {
+function createGenrePersons(cb) {
     async.series([
         function(callback) {
-          authorCreate('Patrick', 'Rothfuss', '1973-06-06', false, callback);
+          playerCreate('Patrick', 'Rothfuss', '1973-06-06', false, callback);
         },
         function(callback) {
-          authorCreate('Ben', 'Bova', '1932-11-8', false, callback);
+          playerCreate('Ben', 'Bova', '1932-11-8', false, callback);
         },
     ]);
 }
 ```
-Cette fonction renvoi à un autre fichier, "author.js", stocké dans "models" définissant l'objet "auteur". 
+Cette fonction renvoi à un autre fichier, "person.js", stocké dans "models" définissant l'objet "personne". 
 ```bash
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const AuthorSchema = new Schema({
+const PersonSchema = new Schema({
   first_name: { type: String, required: true, maxLength: 100 },
   family_name: { type: String, required: true, maxLength: 100 },
   date_of_birth: { type: Date },
   date_of_death: { type: Date },
 });
 
-AuthorSchema.virtual("name").get(function () {
-  // To avoid errors in cases where an author does not have either a family name or first name
-  // We want to make sure we handle the exception by returning an empty string for that case
+PersonSchema.virtual("name").get(function () {
+ 
   let fullname = "";
   if (this.first_name && this.family_name) {
     fullname = `${this.family_name}, ${this.first_name}`;
@@ -146,19 +151,20 @@ AuthorSchema.virtual("name").get(function () {
   return fullname;
 });
 
-AuthorSchema.virtual("url").get(function () {
-  return `/catalog/author/${this._id}`;
+PersonSchema.virtual("url").get(function () {
+  return `/catalog/person/${this._id}`;
 });
 
 // Export model
-module.exports = mongoose.model("Author", AuthorSchema);
+module.exports = mongoose.model("Person", PersonSchema);
 ```
 
 Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../../Images/database.PNG'>
 
 ### Routes 
+
 Définition : Une route est une section de code qui associe un HTTP, un chemin URL et une fonction qui les associe sur le site. <br>
-Express possède un middleware permettant de créer des routes directement. Ce middleware permet de créer des routes pour les requêtes : "get", "post", "delete", "copy", "subscribe"... et bien d'autres. Ainsi, pour chaque filtre de notre base de données, nous crééons un fichier où l'on code toutes les requêtes souhaitées. Nous plaçons ces fonctions dans un dossier.<br>
+Express possède un middleware (sorte de pont entre différentes applications web) permettant de créer des routes directement. Ce middleware permet de créer des routes pour les requêtes : "get", "post", "delete", "copy", "subscribe"... et bien d'autres. Ainsi, pour chaque filtre de notre base de données, nous créons un fichier où l'on code toutes les requêtes souhaitées. Nous plaçons ces fonctions dans un dossier "controller".<br>
 Un exemple de fichier "listController" peut-être : 
 ```bash
 const Element = require("../models/element");
@@ -169,16 +175,18 @@ exports.list = (req, res) => {
 };
 ```
 Ce code crée un URL où l'on listera tous les éléments de notre base de données. Nous verrons plus tard comment l'associer réellement à notre BDD. 
-Le code suivant permet ensuite de créer la route en tant que tel, nous le plaçons donc dans le dossier express "routes"
+Le code suivant permet ensuite de créer la route en tant que tel, nous le plaçons donc dans le dossier express "routes" :
 ```bash
 const list_controller = require("../controllers/listController");
 
 //Page principale du site
 router.get("/", list_controller.index);
 ```
-Les routes "index" et "users" sont automatiquement implantées dans le fichier "app.js" mais on peut rajoutés des fichiers dans "Routes" et es reliées dans "app.js". <br>
-En l'état actuel, notre page affiche le message : "Not implemented : Element list"
-Il nous suffit simplement de remplacer la fonction "export.list" dans "listController" et elle pourra ensuite afficher notre base de donnée : 
+Les routes "index" et "users" sont automatiquement implantées dans le fichier "app.js" mais on peut rajoutés des fichiers dans "Routes" et les relier dans "app.js". <br>
+
+### Mis en page du site web 
+Nous avons désormais nos routes et notre base de donnée prête à être utilisée. Il nous reste donc à exploiter (dans un premier temps plus simplement afficher) les données sur notre site. Pour se faire, nous allons effectuer des modifications dans 2 dossiers : controller et view. Ces deux dossiers sont reliés et on peut considérer que les fichier controllers sont le "back" alors que les fichiers views sont le "front". En effet, les dossier view sont écrit en pug, un dérivé de html, et décrira explicitement ce que "verra" l'utilisateur. <br> 
+En l'état actuel, notre page affiche le message : "Not implemented : Element list". Il nous suffit simplement de remplacer la fonction "export.list" dans "listController" et elle pourra ensuite afficher notre base de donnée : 
 ```bash
 exports.list = function (req, res, next) {
   Element.find({}, "Information 1")
@@ -205,4 +213,64 @@ block content
     else
       li There are no books.
 ```
-### 
+Nous pouvons bien-sûr associer ce fichier à un fichier CSS et à un fichier JS comme nous l'avons vu auparavant (voir [DevWeb](../index.md))
+
+### Forms 
+
+Nous sommes désormais capable de créer une base de données et de l'afficher sur notre site. Afin de créer des interactions avec l'utilisateur, nous souhaiterions lui donner la possibilité de modifier la base de données. Pour ceci, nous utilisons les "forms". Ce sont des balises html qui donnent la possibilité à l'utilisateur de donner des informations et de les rentrer sur le serveur. <br/>
+Après que l'utilisateur ait rentré son nouvel élément, express-validator, que nous devons installer, se chargera de vérifier que la donnée correspond bien à celle attendue et sinon, enverra un message d'erreur. 
+Pour exemple, si l'on veut vérifier que notre donnée n'est pas un texte vide, il nous suffit d'insérer une ligne dans "controller : 
+```bash
+[
+  body("name", "Empty name").trim().isLength({ min: 1 }).escape(),
+];
+```
+Attention, il faut au préalable définir dans nos routes et nos controller si la donnée est de type "GET" ou "POST". <br/>
+Nous crééons donc notre fonction de création puis nous la reportons dans un fichier view : 
+```bash
+exports.humain_create_post = [
+
+  body("name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+    (req, res, next) => {
+    
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      res.render("person_form", {
+        title: "Create Humain",
+        person: req.body,
+        errors: errors.array(),
+      });
+      return;
+    }
+    const person = new Person({
+      name: req.body.name,
+    });
+    person.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      res.redirect(person.url);
+    });
+  },
+];
+```
+Nous créons finalement un fichier "person_form.pug" dans view où nous mettons : 
+```bash 
+form(method='POST' action='')
+    div.form-group
+      label(for='name') Name:
+      input#name.form-control(type='text' placeholder='Name' name='name' required='true' value=(undefined===person ? '' : person.first_name) )
+    button.btn.btn-primary(type='submit') Submit
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
+```
+Nous sommes désormais capable de mettre à jour notre base de données !
