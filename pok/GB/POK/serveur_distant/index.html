@@ -141,7 +141,7 @@ module.exports <span class="token operator">=</span> mongoose.model<span class="
 <li><a href="http://localhost:3000/catalog/joueurs">http://localhost:3000/catalog/joueurs</a></li>
 <li><a href="http://localhost:3000/users">http://localhost:3000/users</a><br>
 Ici, la route &quot;catalogue&quot; n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données.<br>
-<img src="C:\do-it\src\pok\GB\POK\images\routes.png"/></li>
+<img src="../POK/Images/routes.png" alt="Routes"></li>
 </ul>
 <h3>Etablissement des premières pages</h3>
 <p>On arrive donc à une partie plus intéressante, celle de la liaison entre ma première partie, le front-end, et mon site actuellement hébérgé sur un serveur.<br>
@@ -158,6 +158,64 @@ Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier
 <li>Sécurité si le temps me le permet mais cela me parait compliqué.</li>
 <li>Rajouter des routes pour amener aussi la partie de timothée sur le serveur</li>
 </ul>
+<h1>Début du sprint 2</h1>
+<p>Le script remarche comme avant, j'ai simplement eu à effectuer une traduction html -&gt; pug (des sites s'en occupent, c'est beaucoup plus facile du coup)</p>
+<h3>Changement base de donnée</h3>
+<p>Commme évoqué précedemment j'ai finalement opté pour un changement de base afin d'établir un historique des coups joués. Dans un premier temps, je me contente de rentrer moi-même les coups afin d'avoir une page propre avec des données puis dans un second temps, je les actualiserai avec les données issues de mon site. <br>.<br>
+J'ai donc commencé par recréer des routes notamment la route (/historique).<br>
+J'ai ensuite modifié tous mes fichiers afin de créer la nouvelle base de donnée avec les donnnées intéressantes : le dit coup et la date à laquelle il a été effectué. Je crée donc un nouveau schéma dans un fichier &quot;coup.js&quot;, dans le dossier &quot;models&quot;, où j'insère mon schéma :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
+
+const CoupSchema <span class="token operator">=</span> new Schema<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  date: <span class="token punctuation">{</span> type: Date, default: Date.now<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>,
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+CoupSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/coup/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Export model
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Je crée ensuite un nouveau fichier historiqueController.js afin de rentrer les fonctions en lien avec ma base de donnée</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const <span class="token punctuation">{</span> body, validationResult <span class="token punctuation">}</span> <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"express-validator"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Coup <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"../models/coup"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+const async <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Display list of all Books.
+exports.coup_list <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>req, res, next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Coup.find<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    .populate<span class="token punctuation">(</span><span class="token string">"date"</span><span class="token punctuation">)</span>
+      .exec<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err, list_coups<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token builtin class-name">return</span> next<span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        //Successful, so render
+        res.render<span class="token punctuation">(</span><span class="token string">"coup_list"</span>, <span class="token punctuation">{</span> title: <span class="token string">"Historique de coup"</span>, coup_list: list_coups <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Cette fonction sert simplement à implémenter la liste de coup sur mon site, il ne reste plus qu'à créer un fichier .pug où je fais le front. Je débute par un fichier très rudimentaire :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">extends layout
+
+block content
+  <span class="token assign-left variable">h1</span><span class="token operator">=</span> title
+  
+  ul
+  each coup <span class="token keyword">in</span> coup_list
+    li 
+      p <span class="token comment">#{coup.name} </span>
+      <span class="token operator">|</span> <span class="token comment">#{coup.date}</span>
+
+  <span class="token keyword">else</span>
+    li There are no authors.
+</code></pre>
+<p>Ma page historique ressemble alors à cela : <img src="../POK/Images/Historique" alt="Historique sans CSS"><br>
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="../POK/Images/Data.png" alt="Historique à jour"></p>
 
 
 </article>
