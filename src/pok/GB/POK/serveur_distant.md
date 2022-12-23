@@ -83,7 +83,7 @@ Nous en arrivons ici à la partie création des routes pour notre site sur le se
 - http://localhost:3000/catalog/joueurs
 - http://localhost:3000/users
 Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données. 
-<img src="C:\do-it\src\pok\GB\POK\images\routes.png"/>
+![Routes](../POK/Images/routes.png)
 
 ### Etablissement des premières pages 
 
@@ -101,3 +101,64 @@ Comme on peut le voir, il reste de nombreuses choses à effectuer, j'ai désorma
 - Sécurité si le temps me le permet mais cela me parait compliqué. 
 - Rajouter des routes pour amener aussi la partie de timothée sur le serveur 
 
+# Début du sprint 2 
+Le script remarche comme avant, j'ai simplement eu à effectuer une traduction html -> pug (des sites s'en occupent, c'est beaucoup plus facile du coup)
+### Changement base de donnée
+Commme évoqué précedemment j'ai finalement opté pour un changement de base afin d'établir un historique des coups joués. Dans un premier temps, je me contente de rentrer moi-même les coups afin d'avoir une page propre avec des données puis dans un second temps, je les actualiserai avec les données issues de mon site. <br>. 
+J'ai donc commencé par recréer des routes notamment la route (/historique). 
+J'ai ensuite modifié tous mes fichiers afin de créer la nouvelle base de donnée avec les donnnées intéressantes : le dit coup et la date à laquelle il a été effectué. Je crée donc un nouveau schéma dans un fichier "coup.js", dans le dossier "models", où j'insère mon schéma : 
+```bash
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+const CoupSchema = new Schema({
+  name: { type: String, required: true, maxLength: 100 },
+  date: { type: Date, default: Date.now() },
+});
+
+CoupSchema.virtual("url").get(function () {
+  return `/coup/${this._id}`;
+});
+
+// Export model
+module.exports = mongoose.model("Coup", CoupSchema);
+```
+Je crée ensuite un nouveau fichier historiqueController.js afin de rentrer les fonctions en lien avec ma base de donnée
+```bash
+const { body, validationResult } = require("express-validator");
+
+const Coup = require("../models/coup");
+const async = require("async");
+
+// Display list of all Books.
+exports.coup_list = function (req, res, next) {
+    Coup.find()
+    .populate("date")
+      .exec(function (err, list_coups) {
+        if (err) {
+          return next(err);
+        }
+        //Successful, so render
+        res.render("coup_list", { title: "Historique de coup", coup_list: list_coups });
+      });
+  };
+  ```
+Cette fonction sert simplement à implémenter la liste de coup sur mon site, il ne reste plus qu'à créer un fichier .pug où je fais le front. Je débute par un fichier très rudimentaire : 
+```bash
+extends layout
+
+block content
+  h1= title
+  
+  ul
+  each coup in coup_list
+    li 
+      p #{coup.name} 
+      | #{coup.date}
+
+  else
+    li There are no authors.
+```
+Ma page historique ressemble alors à cela : ![Historique sans CSS](../POK/Images/Historique)
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : ![Historique à jour](../POK/Images/Data.png)
