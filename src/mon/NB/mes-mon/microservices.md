@@ -41,6 +41,10 @@ En informatique, l'architecture en **microservices** est une technique de dével
 
 L'architecture en microservices permet aussi de restructurer les équipes de développement et la communication entre les services pour mieux se préparer aux inévitables pannes, mais aussi aux évolutions futures et à l'intégration de nouvelles fonctions.
 
+*A ce stade, je pense que vous avez compris que ce n'est pas à l'aide d'un framework fullstack que vous allez faire du microservices puisqu'en effet tout est au même endroit, une application monolithique !*
+
+🧐 *Mais du coup, si je réalise mon application avec un front-end, un back-end et une base de données, est-ce que cela peut-être considéré comme du microservices ? C'est ce que nous allons voir...*
+
 ## Est-ce que découper son application en fonctionnalités c'est faire du microservices ?
 
 Attention, on a l'habitude de découper une application en fonctionnalités/services (**S**ervice **O**riented **A**rchitecture) afin d'éviter une application monolithique très difficile à maintenir et faire évoluer. Cependant, l'architecture en microservices ressemble à la SOA mais diffère sur quelques points.
@@ -56,7 +60,7 @@ L'architecture en microservices n'est pas une idée nouvelle (comparaison avec l
 
 ## Avantages et inconvénients
 
-**Avantages** :
+✅ **Avantages** :
 - Nouvelle manière de travailler, les développeurs peuvent travailler plus aisément sur le développement simultané de plusieurs microservices. Ainsi plusieurs personnes peuvent travailler en même temps sur l'application, on gagne du temps !
 - Les déploiements sont facilités grâce au processus de CI/CD qui est facilité.
 - L'architecture dispose d'une grande évolutivité, on peut étendre les déploiements sur plusieurs infrastructures.
@@ -65,7 +69,7 @@ L'architecture en microservices n'est pas une idée nouvelle (comparaison avec l
 - Les services étant indépendants les uns de autres, les équipes peuvent choisir les technologies et langages qui conviennent le mieux.
 
 
-**Inconvénients** : 
+❌ **Inconvénients** : 
 - Les services étant séparés par rapport à une architecture classique, le coût de mise en place est plus important.
 - Difficulté d'adaptation si l'entreprise envisage de passer à une architecture en microservices (techniques, méthodologie de travail, responsabilité, )
 
