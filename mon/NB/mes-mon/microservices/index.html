@@ -94,6 +94,8 @@
 <p>En informatique, l'architecture en <strong>microservices</strong> est une technique de développement logiciel qui structure une application comme un ensemble de services faiblement couplés. Un microservice est une fonction/fonctionnalité essentielle d'une application. Ainsi, chacun peut fonctionner (ou dysfonctionner) sans affecter les autres. Les microservices indépendants communiquent les uns avec les autres en utilisant des API (REST la plupart du temps) indépendantes du langages de programmation.</p>
 </div></div>
 <p>L'architecture en microservices permet aussi de restructurer les équipes de développement et la communication entre les services pour mieux se préparer aux inévitables pannes, mais aussi aux évolutions futures et à l'intégration de nouvelles fonctions.</p>
+<p><em>A ce stade, je pense que vous avez compris que ce n'est pas à l'aide d'un framework fullstack que vous allez faire du microservices puisqu'en effet tout est au même endroit, une application monolithique !</em></p>
+<p>🧐 <em>Mais du coup, si je réalise mon application avec un front-end, un back-end et une base de données, est-ce que cela peut-être considéré comme du microservices ? C'est ce que nous allons voir...</em></p>
 <h2>Est-ce que découper son application en fonctionnalités c'est faire du microservices ?</h2>
 <p>Attention, on a l'habitude de découper une application en fonctionnalités/services (<strong>S</strong>ervice <strong>O</strong>riented <strong>A</strong>rchitecture) afin d'éviter une application monolithique très difficile à maintenir et faire évoluer. Cependant, l'architecture en microservices ressemble à la SOA mais diffère sur quelques points.</p>
 <p>L'architecture orientée services structure les applications en services individuels et réutilisables qui communiquent via un ESB (Entreprise Service Bus). Dans cette architecture, chaque service individuel suit une protocole de communication (SOAP, ActiveMQ ou Apache Thrift) pour se &quot;déplacer&quot; dans l'ESB. Ensemble, tous ces services intégrés via l'ESB constituent l'application. D'un côté cela permet de développer, tester et paramétrer les services simultanément et ainsi échapper au cycle des développement monolithiques. Par ailleurs, l'ESB représente un point individuel de défaillance pour l'ensemble du système. Ainsi, les efforts pour supprimer le &quot;monolithe&quot; n'ont fait qu'en créer un autre.</p>
@@ -106,7 +108,7 @@
 <p>L'architecture en microservices n'est pas une idée nouvelle (comparaison avec la SOA) cependant elle est devenue plus viable grâce aux progrès réalisés en matière de technologies. La conteneurisation Linux réalisée le plus souvent à l'aide de Docker, permet d'exécuter plusieurs parties d'une application indépendamment les unes des autres. Avec les API et le DevOps, les microservices conteneurisés sont la base des applications cloud-native.</p>
 </div></div>
 <h2>Avantages et inconvénients</h2>
-<p><strong>Avantages</strong> :</p>
+<p>✅ <strong>Avantages</strong> :</p>
 <ul>
 <li>Nouvelle manière de travailler, les développeurs peuvent travailler plus aisément sur le développement simultané de plusieurs microservices. Ainsi plusieurs personnes peuvent travailler en même temps sur l'application, on gagne du temps !</li>
 <li>Les déploiements sont facilités grâce au processus de CI/CD qui est facilité.</li>
@@ -115,7 +117,7 @@
 <li>L'évolution et l'amélioration des services sont grandement accélérés grâce aux cycles de développement plus courts surtout si cette architecture est associée aux méthodes de développement agiles.</li>
 <li>Les services étant indépendants les uns de autres, les équipes peuvent choisir les technologies et langages qui conviennent le mieux.</li>
 </ul>
-<p><strong>Inconvénients</strong> :</p>
+<p>❌ <strong>Inconvénients</strong> :</p>
 <ul>
 <li>Les services étant séparés par rapport à une architecture classique, le coût de mise en place est plus important.</li>
 <li>Difficulté d'adaptation si l'entreprise envisage de passer à une architecture en microservices (techniques, méthodologie de travail, responsabilité, )</li>
