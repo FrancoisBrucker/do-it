@@ -72,56 +72,95 @@
 <p>Dans ce MON, nous allons discuter du principe de microservices et plus particulièrement de son utilisation et implémentation en informatique.</p>
 <h2>Introduction</h2>
 <p>Quand on pense aux microservices, on pense premièrement à plein de petites structures bien organisées qui sont chacune responsable d'une fonctionnalité et destinée à fonctionner ensemble.</p>
-<p>Cette organisation de &quot;délégation&quot; et de &quot;répartition&quot; du travail n'est clairement pas anodine. On retrouve cette méthode de travail à de nombreux niveaux. Par exemple, le gouvernement français est découpé en ministère qui vont chacun s'occuper d'un domaine particulier (santé, justice, éducation, travail, intérieur ...) tout en fonctionnant en les uns avec les autres. De même, lorsque l'on travail en équipe projet à Centrale chacun se répartit le travail et s'occupe d'une partie du projet tout en restant avertit du travail des autres. L'idée de cette répartition des tâches est de gagner en efficacité, clarté, organisation et performance. Ce concept se démocratise beaucoup et est devenu très populaire dans les projets IT.</p>
-<h2>Le concept de microservice</h2>
-<h3>Historique</h3>
+<p>Cette organisation de &quot;délégation&quot; et de &quot;répartition&quot; du travail n'est clairement pas anodine. On retrouve cette méthode de découpage à de nombreux niveaux. Par exemple, le gouvernement français est découpé en ministère et chaque ministère va s'occuper d'un domaine particulier (santé, justice, éducation, travail, intérieur ...) tout en fonctionnant les uns avec les autres. De même, lorsque l'on travail en équipe projet à Centrale chacun se répartit le travail et s'occupe d'une partie du projet tout en restant avertit du travail des autres. L'idée de cette répartition des tâches est de gagner en efficacité, clarté, organisation et performance. Ce concept se démocratise beaucoup et est devenu très populaire dans les projets IT.</p>
+<h2>Qu'est-ce qu'une architecture microservices ?</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8 mr-8">
 <p>Le terme <strong>microservices</strong> est apparu en 2011 au cours d'ateliers d'architecture, bien qu'il réutilise un grand nombre de principes largement employés par les systèmes d'information des grandes entreprises, notamment les concepts de l'architecture orientée service (SOA). Le sujet est réellement évoqué à partir de 2014 selon Google Trends. Parmi les pionniers, on compte <strong>Netflix</strong> qui a oeuvré pour populariser ces architectures.</p>
-<h3>Philosophie</h3>
-<p>La philosophie de l'architecture en microservices s'inspire en grande partie de la <strong>philosophie UNIX</strong> qui prône <strong>&quot;ne faire qu'une seule chose, et la faire bien&quot;</strong>. Elle est décrite de la façon suivante :</p>
-<ul>
-<li>Les services sont <strong>petits</strong> et conçus pour remplir <strong>une seule fonction</strong> (facturation, interface, sécurité, authentification ...).</li>
-<li>Chaque service est élastique, résilient, composable, minimal et complet.</li>
-<li>Les services individuels sont <strong>simples à remplacer</strong>.</li>
-<li>Ils peuvent être <strong>développés et déployés indépendamment</strong> les uns des autres.</li>
-<li>L'organisation du projet doit prendre en compte <strong>l'automatisation</strong>, <strong>le déploiement</strong> et <strong>les tests</strong>.</li>
-<li>L'architecture est plus <strong>horizontale</strong> que verticale (passage d'une architecture client-serveur à une architecture de plusieurs entités communicantes)</li>
-</ul>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</div></div>
+<p>La philosophie de l'architecture en microservices s'inspire en grande partie de la <strong>philosophie UNIX</strong> qui prône <strong>&quot;ne faire qu'une seule chose, et la faire bien&quot;</strong>. Il s'agit d'une méthode de développement logiciel qui a pour but de <strong>décomposer une application en fonctionnalités clés</strong>, chacune de ces fonctions est appelée &quot;<strong>service</strong>&quot;. Chaque service est créé pour répondre à un <strong>besoin métier unique et précis</strong>. On peut citer par exemple : la gestion des utilisateurs, interface de paiement, envois de mails, sécurité, recherche, envois de notifications ... Par ailleurs, chaque service est <strong>indépendant</strong> et <strong>modulable</strong>, chacun peut fonctionner (ou dysfonctionner) sans affecter les autres. Les microservices indépendants communiquent les uns avec les autres en utilisant des API (REST la plupart du temps) indépendantes du langages de programmation. Cette catégorie d'architecture s'oppose aux architectures monolithiques qui sont construites comment une seule entité qui s'occupe de tout.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 <div class="pl-8 mr-8">
-<p>En informatique, l'architecture en <strong>microservices</strong> est une technique de développement logiciel qui structure une application comme un ensemble de services faiblement couplés. Un microservice est une fonction/fonctionnalité essentielle d'une application. Ainsi, chacun peut fonctionner (ou dysfonctionner) sans affecter les autres. Les microservices indépendants communiquent les uns avec les autres en utilisant des API (REST la plupart du temps) indépendantes du langages de programmation.</p>
-</div></div>
 <p>L'architecture en microservices permet aussi de restructurer les équipes de développement et la communication entre les services pour mieux se préparer aux inévitables pannes, mais aussi aux évolutions futures et à l'intégration de nouvelles fonctions.</p>
-<p><em>A ce stade, je pense que vous avez compris que ce n'est pas à l'aide d'un framework fullstack que vous allez faire du microservices puisqu'en effet tout est au même endroit, une application monolithique !</em></p>
-<p>🧐 <em>Mais du coup, si je réalise mon application avec un front-end, un back-end et une base de données, est-ce que cela peut-être considéré comme du microservices ? C'est ce que nous allons voir...</em></p>
-<h2>Est-ce que découper son application en fonctionnalités c'est faire du microservices ?</h2>
-<p>Attention, on a l'habitude de découper une application en fonctionnalités/services (<strong>S</strong>ervice <strong>O</strong>riented <strong>A</strong>rchitecture) afin d'éviter une application monolithique très difficile à maintenir et faire évoluer. Cependant, l'architecture en microservices ressemble à la SOA mais diffère sur quelques points.</p>
-<p>L'architecture orientée services structure les applications en services individuels et réutilisables qui communiquent via un ESB (Entreprise Service Bus). Dans cette architecture, chaque service individuel suit une protocole de communication (SOAP, ActiveMQ ou Apache Thrift) pour se &quot;déplacer&quot; dans l'ESB. Ensemble, tous ces services intégrés via l'ESB constituent l'application. D'un côté cela permet de développer, tester et paramétrer les services simultanément et ainsi échapper au cycle des développement monolithiques. Par ailleurs, l'ESB représente un point individuel de défaillance pour l'ensemble du système. Ainsi, les efforts pour supprimer le &quot;monolithe&quot; n'ont fait qu'en créer un autre.</p>
-<p>Dans une architecture en microservices, les microservices peuvent communiquer entre eux de manière directe. Les applications développées en microservices sont donc plus tolérantes aux pannes et ne sont pas tributaires d'un seul service (ESB). PAr ailleurs, cela permet à chaque équipe d'utiliser n'importe quelle technologie/langage pour développer le microservice dont ils ont la responsabilité.</p>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-</svg>
-<div class="pl-8 mr-8">
-<p>L'architecture en microservices n'est pas une idée nouvelle (comparaison avec la SOA) cependant elle est devenue plus viable grâce aux progrès réalisés en matière de technologies. La conteneurisation Linux réalisée le plus souvent à l'aide de Docker, permet d'exécuter plusieurs parties d'une application indépendamment les unes des autres. Avec les API et le DevOps, les microservices conteneurisés sont la base des applications cloud-native.</p>
 </div></div>
-<h2>Avantages et inconvénients</h2>
-<p>✅ <strong>Avantages</strong> :</p>
+<p>Cette définition et ce découpage en service peut nous rappeler un type d'architecture assez similaire, <strong>l'architecture orientée services (SOA)</strong> qui est déjà bien établie.</p>
+<h2>Quelle est la différence entre une architecture SOA et une architecture microservices ?</h2>
+<p>Premièrement, les précurseurs des microservices identifient l'architecture en microservices comme une extension du concept de SOA, la plupart des principes de conception des microservices étaient déjà disponibles dans le monde de la SOA. Certains disent que &quot;<em>l'architecture microservices est une SOA bien conçue</em>&quot;. Cependant, il y a tout de même des différences entre ces deux types d'architectures :</p>
 <ul>
-<li>Nouvelle manière de travailler, les développeurs peuvent travailler plus aisément sur le développement simultané de plusieurs microservices. Ainsi plusieurs personnes peuvent travailler en même temps sur l'application, on gagne du temps !</li>
-<li>Les déploiements sont facilités grâce au processus de CI/CD qui est facilité.</li>
-<li>L'architecture dispose d'une grande évolutivité, on peut étendre les déploiements sur plusieurs infrastructures.</li>
-<li>Les services sont résilients, ils n'ont aucun impact sur les autres. Si un service tombe en panne, l'ensemble de l'application ne cesse pas de fonctionner comme pour une application monolithique.</li>
-<li>L'évolution et l'amélioration des services sont grandement accélérés grâce aux cycles de développement plus courts surtout si cette architecture est associée aux méthodes de développement agiles.</li>
-<li>Les services étant indépendants les uns de autres, les équipes peuvent choisir les technologies et langages qui conviennent le mieux.</li>
+<li>
+<p><strong>La taille</strong> : En microservices, comme le nom le laisse penser, <strong>la taille des services est beaucoup plus faible</strong> que celle des services en SOA. Chaque service a une seule responsabilité, alors qu'avec la SOA, les services peuvent englober plusieurs fonctions métiers.</p>
+</li>
+<li>
+<p><strong>La réutilisation</strong> : La SOA prône la réutilisation des composants sans se soucier du couplage et des interactions. En revanche en microservices, on essaie de minimiser la réutilisation du code puisque cela crée des dépendances. On privilégie donc un <strong>couplage faible</strong> quitte à dupliquer son code.</p>
+</li>
+<li>
+<p><strong>La communication</strong> : En SOA, la communication se fait à travers un &quot;entreprise service bus&quot; (ESB) de manière synchrone et cela introduit un point de défaillance critique qui est aussi une source de latence. En comparaison, dans une architecture microservices, chaque service est indépendant et par conséquent plus tolérant aux pannes. Cela peut être mis en place par exemple en faisant en sorte que chaque service soit à l'écoute des modifications des autres services.</p>
+</li>
+<li>
+<p><strong>La duplication des données</strong> : Un des objectifs de la SOA est de permettre à l'application d'avoir accès à toutes les données de manière synchrone et direct. En microservices, dans l'idéal, chaque service a accès seulement à toutes les données dont il a besoin même si cela implique de dupliquer les données et donc rajoute de la complexité.</p>
+</li>
 </ul>
-<p>❌ <strong>Inconvénients</strong> :</p>
+<p>On peut schématiser les différentes architectures de la manière suivante :</p>
+<img src="./../images/schema_comp_archi.png" style="width: 100%;" />
+<h2>Quels sont les avantages et inconvénients d'une architecture en microservices ?</h2>
 <ul>
-<li>Les services étant séparés par rapport à une architecture classique, le coût de mise en place est plus important.</li>
-<li>Difficulté d'adaptation si l'entreprise envisage de passer à une architecture en microservices (techniques, méthodologie de travail, responsabilité, )</li>
+<li>
+<p>✅ <strong>Développement indépendant</strong> : Le découpage en service permet à chaque équipe d'utiliser les technologies qu'ils préfèrent et qui conviennent à la fonctionnalité gérée par le service et ne sont donc pas limités aux technologies imposés en début de projet.</p>
+</li>
+<li>
+<p>✅ <strong>Déploiement indépendant</strong> : Chaque microservice est déployé de manière indépendante. Un service peut-être mis-à-jour sans a voir à redéployer l'application dans son entièreté, ce qui facilite donc la gestion des bugs et l'implémentation de nouvelles fonctionnalités. En opposition, dans une architecture monolithique, un bug peut mettre en péril l'application entière.</p>
+</li>
+<li>
+<p>✅ <strong>Scaling indépendant</strong> : Chaque service étant indépendant, il peut grandir et évoluer de manière indépendante pour s'adapter aux besoin sans dépendre des autres. On optimise alors les coûts et le temps puisqu'il n'est pas nécessaire de faire évoluer l'application entière comme ce serait le cas avec une application monolithique.</p>
+</li>
+<li>
+<p>✅ <strong>Équipes ciblées</strong> : Cette organisation permet de répartir les équipes par service et facilite donc beaucoup de choses. L'arrivée de nouveaux membres est facilitée et la phase de compréhension du pojet est plus courte puisqu'il n'ya que le service à comprendre.</p>
+</li>
+<li>
+<p>✅ <strong>Moins de code</strong> : Une application monolithique partage beaucoup de dépendances et l'ajout de fonctionnalités n'est pas aisé. En revanche, une architecture en microservices va séparer le code et minimiser les dépendances et ainsi faciliter le scaling.</p>
+</li>
+<li>
+<p>✅ <strong>Isolation des données</strong> : Dans une architecture microservices, chaque service a accès de manière privée uniquement aux données dont il a besoin. Il est alors possible de mettre à jour le schéma de base de données sans impacter toutes l'application.</p>
+</li>
+<li>
+<p>✅ <strong>Résilience</strong> : Avec une architecture microservices, on diminue grandement le nombre de défaillances critiques possibles. Lorsqu'un service tombe en panne, l'application entière ne cesse pas de fonctionner comme c'est le cas avec le modèle monolithique, le risque est donc diminué et c'est également vrai lors de l'ajout de nouvelles fonctionnalités. Les erreurs sont isolées et par conséquent plus simple a corriger.</p>
+</li>
+<li>
+<p>✅ <strong>Avancées technologiques</strong> : Le découpage en service permet à chaque service de suivre indépendamment des autres les avancées technologiques et de les appliquer sans affecter l'application dans son entièreté. Les architectures Cloud et la conteneurisation avec Docker notamment rendent la mise en place d'une architecture microservices beaucoup plus simple.</p>
+</li>
 </ul>
+<hr>
+<ul>
+<li>
+<p>❌ <strong>Complexité</strong> : Même si chaque service en lui-même est assez simple, l'ensemble constitue un système distribué complexe.</p>
+</li>
+<li>
+<p>❌ <strong>Tests</strong> : L'existence de nombreux services peut rendre plus difficile l'écriture de tests s'il y a des dépendances entre les services.</p>
+</li>
+<li>
+<p>❌ <strong>Intégrité des données</strong> : Les microservices utilisent une architecture de base de données qui est distribuée (cloud) et l'intégrité des données n'est pas forcément assurée. Certaines fonctionnalités vont par exemple avoir besoin de mettre à jour plusieurs bases de données de plusieurs services, le tout doit être cohérent et fonctionnel.</p>
+</li>
+<li>
+<p>❌ <strong>Latence du réseau</strong> : Le fait d'avoir de nombreux services va se traduire par une importante communication entre les services. Une latence du réseau va ralentir les communications et ce phénomène est accentué par les possibles chaînes de dépendances entre les services.</p>
+</li>
+</ul>
+<h2>L'orchestration et la chorégraphie</h2>
+<h2>Conseils et bonnes pratiques</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -146,6 +185,7 @@
 <ul>
 <li><a href="https://fr.wikipedia.org/wiki/Microservices">https://fr.wikipedia.org/wiki/Microservices</a></li>
 <li><a href="https://www.redhat.com/fr/topics/microservices/what-are-microservices">https://www.redhat.com/fr/topics/microservices/what-are-microservices</a></li>
+<li><a href="https://sebastien-bouttier.medium.com/architecture-microservices-de-a-%C3%A0-z-5626809cd4f">https://sebastien-bouttier.medium.com/architecture-microservices-de-a-à-z-5626809cd4f</a></li>
 </ul>
 
 
