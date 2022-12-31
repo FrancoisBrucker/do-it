@@ -18,4 +18,4 @@ Ensemble des MON d'Ossama Abdane
 
 ## Temps 2
 
-- [Google Apps Script : création alerte anniversaire](./mon2.1)
+- [Google Apps Script : Rappel anniversaire](./mon2.1)
