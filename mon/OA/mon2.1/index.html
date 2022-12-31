@@ -69,7 +69,7 @@
   <!-- début résumé -->
 <p>Après un premier MON qui m'a permis de découvrir les principales fonctionnalités de Google AppScript, j'ai décidé d'approfondir mes connaissances dans ce domaine et plus précisément créer un outil qui permette de prévenir automatiquement par mail de la date d'anniversaire d'une personne.</p>
 <!-- fin résumé -->
-<h3>Présentation des fonctions utilisées</h3>
+<h3>Présentation de la fonction utilisée</h3>
 <p>Le fonction <code>Date()</code> permet de transformer une donnée en date sous le format voulu par Google Appscript.<br>
 L'utilisation des extensions suivantes permet d'obtenir des informations voulus à partir de la date sélectionnée :</p>
 <table>
@@ -124,10 +124,10 @@ L'utilisation des extensions suivantes permet d'obtenir des informations voulus 
 <h3>Codage de la fonction</h3>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">
 function <span class="token function">sendBirthdayEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// Récupère la feuille de calcul active</span>
+  <span class="token comment">// Récupère le tableau </span>
   <span class="token keyword">var</span> sheet <span class="token operator">=</span> <span class="token class-name">SpreadsheetApp</span><span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-  <span class="token comment">// Récupère la dernière ligne de la feuille de calcul</span>
+  <span class="token comment">// Récupère la dernière ligne du tableau</span>
   <span class="token keyword">var</span> derniereligne <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getLastRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
   <span class="token comment">// Récupère la date d'aujourd'hui</span>
@@ -138,7 +138,7 @@ function <span class="token function">sendBirthdayEmail</span><span class="token
     <span class="token comment">// Récupère la date d'anniversaire de la troisième colonne de la ligne</span>
     <span class="token keyword">var</span> anniversaire <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    <span class="token comment">// Si la date d'anniversaire est la même que la date du jour</span>
+    <span class="token comment">// Vérification si la date d'anniversaire est la même que la date du jour</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>anniversaire<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> ajourdhui<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> anniversaire<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> ajourdhui<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// Récupère le nom et prénom de la personne</span>
       <span class="token keyword">var</span> nom <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -157,6 +157,37 @@ function <span class="token function">sendBirthdayEmail</span><span class="token
 <h3>Mail de Rappel</h3>
 <p>Si une date d'anniversaire correspond à la date du jour, un mail est envoyé à l'email indiqué.</p>
 <p><img src="Image2.png" alt="Optional Text"></p>
+<h3>Autre fonction utile</h3>
+<p>Une fonction qui permet de vérifier si le tableau a été rempli par toutes les personnes. Elle va donc vérifier comme par exemple qur tableau suivant si les personnes ont undiqué leur présence dans la quatrième colonne :</p>
+<p><img src="Image4.png" alt="Optional Text"></p>
+<p>La fonction à rentrer :</p>
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">
+function <span class="token class-name">Verifremplissage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Récupère le tableau </span>
+  <span class="token keyword">var</span> sheet <span class="token operator">=</span> <span class="token class-name">SpreadsheetApp</span><span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Récupère la dernière ligne du tableau</span>
+  <span class="token keyword">var</span> derniereligne <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getLastRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Boucle sur chaque ligne</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> derniereligne<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Récupère la valeur de la quatrième colonne</span>
+    <span class="token keyword">var</span> value <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Si la case est vide</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">==</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Récupère l'adresse email de la troisième colonne</span>
+      <span class="token keyword">var</span> email <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+      <span class="token comment">// Envoie un email à l'adresse email</span>
+      <span class="token class-name">MailApp</span><span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>email<span class="token punctuation">,</span> <span class="token string">"Attention"</span><span class="token punctuation">,</span> <span class="token string">"Vous n'avez toujours pas rempli le tableau. Merci de le faire le plus rapidement possible"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>Le mail envoyé aux personnes n'ayant pas rempli le tableau :</p>
+<p><img src="Image5.png" alt="Optional Text"></p>
 <h3>Ressources utilisées</h3>
 <ul>
 <li>Le site Numerilog : <a href="https://thierryvanoffe.com">https://thierryvanoffe.com</a></li>
