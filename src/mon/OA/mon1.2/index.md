@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "MON 2: MOOC Design Thinking for innovation"
+title: "MON 1.2: MOOC Design Thinking for innovation"
 authors:
   - Ossama Abdane
 ---
