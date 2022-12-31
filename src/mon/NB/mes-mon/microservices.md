@@ -82,30 +82,39 @@ On peut schématiser les différentes architectures de la manière suivante :
 
 ## L'orchestration et la chorégraphie
 
+Dans une architecture microservices, de nombreux services peuvent être présents et certains ont besoin de communiquer entre eux pour s'échanger des informations. Cette communication doit être encadrée et elle peut se faire de deux façons : l'orchestration et la chorégraphie.
 
+### L'orchestration 🎼
+
+La première idée qui nous vient pour faire communiquer des services entre eux est d'utiliser des API REST. 
+
+<img src="./../images/orch-1.png" style="width: 100%" />
+
+Cette façon de faire est assez simple à mettre en place mais le système devient rapidement complexe et fastidieux et maintenir puisque l'on crée des dépendances entre les services. Pour éviter cela, une meilleure façon est d'introduire une couche supplémentaire avec un nouveau service que l'on appelle l'**orchestrateur** :
+
+<img src="./../images/orch-2.png" style="width: 100%" />
+
+L'orchestrateur est le seul service qui a connaissance de tous les autres. Ainsi si un service est mis à jour, la seul dépendance à mettre à jour également est l'orchestrateur, on réduit grandement le niveau de dépendances. Cependant, en introduisant un orchestrateur, on va indirectement introduire de la latence et une mauvaise tolérance aux pannes.
+
+### La chorégraphie 🕺🏻
+
+La chorégraphie est une approche différente qui permet de pallier certains inconvénients de l'orchestration : la dépendance et la latence. Cette approche consiste à utiliser des événements avec un modèle *publish-subscribe* :
+
+<img src="./../images/chore-1.png" style="width: 100%" />
+
+Ici, lorsqu'une action est effectuée, le service en question va publier un événement indiquant qu'il a effectué cette action. Les autres services quant à eux peuvent souscrire à cet événement de manière asynchrone pour effectuer les modifications nécessaires de l'événement. Les services n'ont pas connaissances des autres, le système est donc performant reste simple à maintenir à plus grande échelle. Si un service tombe en panne, le système continue de fonctionner mais l'on peut cependant perdre la cohérence des données.
 
 ## Conseils et bonnes pratiques
 
+- **Langage des microservices** :  on a vu que chaque microservices peut être développé avec le langage souhaité. Dans la réalité il est recommandé de minimiser ce nombre de langages afin de faciliter le changement d'équipes des développeurs et de pouvoir travailler sur n'importe quel service et ainsi gagner en productivité.
 
+- **Définition des API** : Il est important d'avoir une cohérence globale dans la définition des API. Pour cela un projet à part est créé afin d'expliciter ces définitions/spécifications.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+- **Base de données** : chaque service dispose de sa propre base de données qui ne doit être accessible que par lui. Si ce n'est pas le cas, les mises à jour de base de données sont complexes et risquées. Si un service souhaite modifier la base de données d'un autre service il doit passer par une API ou un événement.
 
+- **Déploiement continu** : Le déploiement continu est inévitable en microservices, en effet, déployer chaque service à la main un par un serait très fastidieux.
+
+- **Maintenance des dépendances** : Les dépendances de chaque service doivent être mises à jour régulièrement, et cela peut être fait de manière périodique tout en ayant une série de tests afin de s'assurer que le service et le système continue de fonctionner après la mise à jour.
 
 
 ## Exemple de microservices
@@ -125,10 +134,26 @@ Ici j'ai pris l'exemple de la recherche d'un article et de son achat sur Amazon.
 Toutes ces fonctionnalités, qui sont externes au site (dans le sens où elles vont faire appel à des algorithmes externes et afficher seulement le résultat sur le site), peuvent être découpées et séparées en microservices. On peut évidemment pensez à d'autre fonctionnalités : paiement, évaluations des produits ...
 
 
+## Preuve de concept
+
+L'auteur de l'[article](https://github.com/SebastienBtr/Micro-express) Sébastien Bouttier, nous mets à disposition une preuve de concept avec l'architecture suivante sous Docker :
+
+<img src="./../images/sdd-diagram.png" style="width: 100%;" />
+
+
+What you can do:
+- Create/update/get articles
+- Add articles in the cart, update/get cart items
+- Delete an article that is in the cart: will delete the article from the cart thanks to a kafka event
+- Checkout the cart: will edit the stock of articles with a kafka event
+- If you don't have an auth token you can do nothing on user service
+- Signup and login (auth service) to get a token
+- You can now access the user service except deleting a user: requires a special role in the token
 
 
 
 ## Sources
+*(consultées le 31/12/2022)*
 
 - https://fr.wikipedia.org/wiki/Microservices
 - https://www.redhat.com/fr/topics/microservices/what-are-microservices
