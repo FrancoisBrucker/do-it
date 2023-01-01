@@ -8,8 +8,8 @@ authors:
 ---
 L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis le cours de Monsieur Brucker *ajouter le lien*.
 Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:
-- MON 1.2 de Nicolas BERT [Programmation objet en Python][https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/] (Bon exemple de programme )
-- MON 1.1 de Tuncay Bilgi [POO][https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/] (fonctionnalités avancées)
+- MON 1.2 de Nicolas BERT [Programmation objet en Python](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/) (Bon exemple de programme )
+- MON 1.1 de Tuncay Bilgi [POO](https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/) (fonctionnalités avancées)
 
 # Sommaire:
 1. Qu'est ce que la programmation objet
@@ -46,8 +46,8 @@ Finalement, une classe python s'écrira de cette manière:
 
 {% prerequis "Source" %}
 
- [Classes et objet][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/classes-et-objets/]
- [Coder ses objets][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/coder-ses-objets/]
+ [Classes et objet](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/classes-et-objets/)
+ [Coder ses objets](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/coder-ses-objets/)
 {% endprerequis %}
 
 *Espaces de noms*:
@@ -69,46 +69,125 @@ Lorsque l'on définit une classe, python lui associe un espace de noms. Les diff
 # Pratique: Bataille navale
 {% prerequis "Source" %}
 
- [projet : coder des objets][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/]
+ [projet : coder des objets](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/)
 {% endprerequis %}
 
 On commence par coder la classe Grille:
 
+```python
 
+from bateau import Bateau
 
+class Grille:
+    def __init__(self,nb_ligne, nb_colonne):
+        self.nb_ligne = nb_ligne
+        self.nb_colonne = nb_colonne
+        self.carte=[["."]*self.nb_ligne for i in range(self.nb_colonne)] 
+        
+
+    def affiche(self):
+        print (self.carte)
+
+  
+    def tirer(self,ligne,colonne):
+        x=ligne-1 # self.qqch signifie qu'on créer un attribut.
+        #  Imposible dans une fonction. Ne pas rajouter des attributs qui sont pas dans le constructeur
+        y=colonne-1
+        if x>self.nb_ligne or y>self.nb_colonne:
+            return self
+            print("Tir hors de la grille")
+        
+        else:
+            self.carte[x][y]='o'
+            return self
+
+    def ajoute(self,bateau): 
+        if bateau.vertical== True:
+            if self.nb_ligne>= bateau.ligne+bateau.longueur:
+                for i in range (bateau.longueur):
+                    self.carte[bateau.ligne+i-1][bateau.colonne-1]='X'
+        if bateau.vertical== False:
+            if self.nb_ligne>= bateau.colonne+bateau.longueur:
+                for i in range (bateau.longueur):
+                    self.carte[bateau.ligne-1][bateau.colonne+i-1]='X'
+
+```
 
 
 La méthode tirer remplace le "." par un "o" dans la grille à l'endroit du tir
 
 On code ensuite la classe Bateau:
 
+```python
+
+class Bateau :
+    def __init__(self, ligne, colonne, longueur=1, vertical=False):
+        self.ligne = ligne
+        self.colonne = colonne
+        self.longueur= longueur
+        self.vertical= vertical
 
 
+    def touché(self,y,x):
+        if self.vertical== True:
+            if self.ligne==y:
+               if  x in range(self.colonne,  self.colonne+self.longueur):
+                   return True
+        else:
+            if self.colonne==x:
+                if  y in range(self.ligne,  self.ligne+self.longueur):
+                    return True
+        return False
 
+    def coulé(self,grille):
+        if self.vertical== True:
+            for i in range (self.longueur):
+                if grille.carte[self.ligne+i-1][self.colonne-1]=='o':
+                    return True
+        else:
+             for i in range (self.longueur):
+                if grille.carte[self.ligne-1][self.colonne+i-1]=='o':
+                    return True
 
+```
 
 
 La méthode "touché" permet de savoir si un tir  a atteint le bateau ou non.
 Enfin on ajoute les méthodes ajoute(Bateau) à Grille et coulé() à Bateau  qui vont lier les 2 classes.
 
-
-
-
-
-
-
 Le code final du jeu de la bataille final est:
 
+```python
+
+from grille import Grille
+from bateau import Bateau
+
+b=Bateau(1,3,2,True)
+g1= Grille(4,5)
+
+while b.coulé(g1)!= True:
+    g1.affiche()
+    x=int(input("Saisissez une coordonnée x : "))
+    y=int(input("Saisissez une coordonnée y : "))
+    g1.tirer(x,y)
+    b.touché(x,y)
+    if b.touché(x,y)==True:
+        print("C'est touché")
+        g1.carte[x-1][y-1]="X"
+
+g1.affiche()    
+
+```
 
 
 
-
-
+Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index.
 
 {% info "Difficultés" %}
 - J'ai eu du mal à comprendre comment bien utiliser "self". J'ai pas mal pataugé au début à cause de cela
 - L'appel d'un objet de la classe Bateau dans l'écriture d'une méthode de la classe Grille m'a aussi posé problème
 - J'ai bien compris la théorie des tests mais la réalisation de vrais tests vraiment efficaces reste assez mystérieuse 
+- Petit bonus: j'ai appris à utilisé le débogueur pour comprendre les problèmes demon code 
 
 {% endinfo %}
 
@@ -128,7 +207,7 @@ Le code final du jeu de la bataille final est:
 
 {% prerequis "Source" %}
 
- [composition et agrégation][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/composition-agr%C3%A9gation/]
+ [composition et agrégation](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/composition-agr%C3%A9gation/)
 {% endprerequis %}
 
 # Pratique: On lance 5 dés
@@ -140,9 +219,83 @@ Représentation UML:
 
 Code:
 
+```python
+from random import *
 
+
+class Dice:
+
+    def __init__(self,nb_faces,valeur):
+        self.nb_faces=nb_faces
+        self.valeur=valeur
+
+    def set_valeur(self,x):
+        self.valeur= x
+
+    def get_valeur(self):
+        return self.valeur
+
+    def roll(self):
+        self.valeur=randint(0,self.nb_faces)
+
+
+class TapisV:
+    def __init__(self):
+        self.liste = (1,1,1,1,1)
+
+    def lancer(self):
+        for i in range (5):
+            self.liste[i]=randint(1,6)
+
+    def get_valeur(self):
+        return self.liste  
+
+```
 
 Tests associés:
+
+```python
+from dice import *
+
+def test_init():
+    de = Dice(6,1)
+    assert de is not None
+
+
+def test_get_valeur():
+    de = Dice(6,1)
+    assert de() == int()
+
+def test_get_valeur():
+    de = Dice(6,1)
+    de.set_valeur(3)
+    assert de== 3
+
+
+def test_roll():
+    de= Dice(6,1)
+    de.roll()
+    if de < 7:
+        if de>0:
+            return True
+
+
+def test_init():
+    tapis = TapisV()
+    assert tapis is not None
+
+
+def test_montre_valeur():
+    tapis = TapisV()
+    assert tapis() == tuple()
+
+
+def test_objet():
+    tapis=TapisV()
+    tapis[2]=3
+    if tapis.get_valeur() == (1,1,3,1,1):
+        return True
+```
 
 
 
@@ -157,12 +310,12 @@ Par exemple:
 
 {% prerequis "Source" %}
 
- [Héritage][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/]
+ [Héritage](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/)
 {% endprerequis %}
 
 Un bon exemple de programme qui utilise l'héritage :
 
--MON 1.2 de Nicolas BERT [Programmation objet en Python][https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/]
+-MON 1.2 de Nicolas BERT [Programmation objet en Python](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/)
 
  # Pratique
 
