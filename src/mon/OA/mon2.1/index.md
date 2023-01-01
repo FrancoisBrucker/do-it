@@ -80,7 +80,7 @@ Si une date d'anniversaire correspond à la date du jour, un mail est envoyé à
 
 ### Autre fonction utile
 
-Une fonction qui permet de vérifier si le tableau a été rempli par toutes les personnes. Elle va donc vérifier comme par exemple qur tableau suivant si les personnes ont undiqué leur présence dans la quatrième colonne :  
+Une fonction qui permet de vérifier si le tableau a été rempli par toutes les personnes. Elle va donc vérifier comme par exemple sur le tableau suivant si les personnes ont indiqué leur présence dans la quatrième colonne :  
 
 ![Optional Text](Image4.png)
 
