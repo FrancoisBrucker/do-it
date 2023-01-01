@@ -69,8 +69,8 @@
   <p>L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis le cours de Monsieur Brucker <em>ajouter le lien</em>.<br>
 Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:</p>
 <ul>
-<li>MON 1.2 de Nicolas BERT [Programmation objet en Python][<a href="https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/">https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/</a>] (Bon exemple de programme )</li>
-<li>MON 1.1 de Tuncay Bilgi [POO][<a href="https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/">https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/</a>] (fonctionnalités avancées)</li>
+<li>MON 1.2 de Nicolas BERT <a href="https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/">Programmation objet en Python</a> (Bon exemple de programme )</li>
+<li>MON 1.1 de Tuncay Bilgi <a href="https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/">POO</a> (fonctionnalités avancées)</li>
 </ul>
 <h1>Sommaire:</h1>
 <ol>
@@ -104,8 +104,8 @@ Une classe permet de créer un type d'objet et de définir les opérations que l
 <div class="pl-8  mb-2 mr-8">
 <p>Source</p>
 </div><div class="pl-8 mr-8">
-<p>[Classes et objet][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/classes-et-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/classes-et-objets/</a>]<br>
-[Coder ses objets][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/coder-ses-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/coder-ses-objets/</a>]</p>
+<p><a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/classes-et-objets/">Classes et objet</a><br>
+<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/coder-ses-objets/">Coder ses objets</a></p>
 </div></div>
 <p><em>Espaces de noms</em>:<br>
 ce sont des espaces où sont stockés les noms de variables. Dans un espace de noms, chaque nom est différent. Réutiliser le même nom fait que l'on réécrit sur le précédent (ex:si on donne le même noms à 2 variables, la 2nde valeur écrase la 1ère :x=1 et x=3, on aura x=3)<br>
@@ -136,14 +136,103 @@ Lorsque l'on définit une classe, python lui associe un espace de noms. Les diff
 <div class="pl-8  mb-2 mr-8">
 <p>Source</p>
 </div><div class="pl-8 mr-8">
-<p>[projet : coder des objets][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/projet-code-objets/</a>]</p>
+<p><a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/">projet : coder des objets</a></p>
 </div></div>
 <p>On commence par coder la classe Grille:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<span class="token keyword">from</span> bateau <span class="token keyword">import</span> Bateau
+
+<span class="token keyword">class</span> <span class="token class-name">Grille</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>nb_ligne<span class="token punctuation">,</span> nb_colonne<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nb_ligne <span class="token operator">=</span> nb_ligne
+        self<span class="token punctuation">.</span>nb_colonne <span class="token operator">=</span> nb_colonne
+        self<span class="token punctuation">.</span>carte<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"."</span><span class="token punctuation">]</span><span class="token operator">*</span>self<span class="token punctuation">.</span>nb_ligne <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nb_colonne<span class="token punctuation">)</span><span class="token punctuation">]</span> 
+        
+
+    <span class="token keyword">def</span> <span class="token function">affiche</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>carte<span class="token punctuation">)</span>
+
+  
+    <span class="token keyword">def</span> <span class="token function">tirer</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>ligne<span class="token punctuation">,</span>colonne<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        x<span class="token operator">=</span>ligne<span class="token operator">-</span><span class="token number">1</span> <span class="token comment"># self.qqch signifie qu'on créer un attribut.</span>
+        <span class="token comment">#  Imposible dans une fonction. Ne pas rajouter des attributs qui sont pas dans le constructeur</span>
+        y<span class="token operator">=</span>colonne<span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">if</span> x<span class="token operator">></span>self<span class="token punctuation">.</span>nb_ligne <span class="token keyword">or</span> y<span class="token operator">></span>self<span class="token punctuation">.</span>nb_colonne<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Tir hors de la grille"</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'o'</span>
+            <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">ajoute</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>bateau<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+        <span class="token keyword">if</span> bateau<span class="token punctuation">.</span>vertical<span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>nb_ligne<span class="token operator">>=</span> bateau<span class="token punctuation">.</span>ligne<span class="token operator">+</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">:</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    self<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>ligne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>colonne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'X'</span>
+        <span class="token keyword">if</span> bateau<span class="token punctuation">.</span>vertical<span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>nb_ligne<span class="token operator">>=</span> bateau<span class="token punctuation">.</span>colonne<span class="token operator">+</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">:</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    self<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>colonne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'X'</span>
+
+</code></pre>
 <p>La méthode tirer remplace le &quot;.&quot; par un &quot;o&quot; dans la grille à l'endroit du tir</p>
 <p>On code ensuite la classe Bateau:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<span class="token keyword">class</span> <span class="token class-name">Bateau</span> <span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ligne<span class="token punctuation">,</span> colonne<span class="token punctuation">,</span> longueur<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> vertical<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>ligne <span class="token operator">=</span> ligne
+        self<span class="token punctuation">.</span>colonne <span class="token operator">=</span> colonne
+        self<span class="token punctuation">.</span>longueur<span class="token operator">=</span> longueur
+        self<span class="token punctuation">.</span>vertical<span class="token operator">=</span> vertical
+
+
+    <span class="token keyword">def</span> touché<span class="token punctuation">(</span>self<span class="token punctuation">,</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>vertical<span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>ligne<span class="token operator">==</span>y<span class="token punctuation">:</span>
+               <span class="token keyword">if</span>  x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>colonne<span class="token punctuation">,</span>  self<span class="token punctuation">.</span>colonne<span class="token operator">+</span>self<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                   <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>colonne<span class="token operator">==</span>x<span class="token punctuation">:</span>
+                <span class="token keyword">if</span>  y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>ligne<span class="token punctuation">,</span>  self<span class="token punctuation">.</span>ligne<span class="token operator">+</span>self<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">def</span> coulé<span class="token punctuation">(</span>self<span class="token punctuation">,</span>grille<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>vertical<span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> grille<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>self<span class="token punctuation">.</span>ligne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>colonne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'o'</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+             <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> grille<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>self<span class="token punctuation">.</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>colonne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'o'</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+</code></pre>
 <p>La méthode &quot;touché&quot; permet de savoir si un tir  a atteint le bateau ou non.<br>
 Enfin on ajoute les méthodes ajoute(Bateau) à Grille et coulé() à Bateau  qui vont lier les 2 classes.</p>
 <p>Le code final du jeu de la bataille final est:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<span class="token keyword">from</span> grille <span class="token keyword">import</span> Grille
+<span class="token keyword">from</span> bateau <span class="token keyword">import</span> Bateau
+
+b<span class="token operator">=</span>Bateau<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+g1<span class="token operator">=</span> Grille<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> b<span class="token punctuation">.</span>coulé<span class="token punctuation">(</span>g1<span class="token punctuation">)</span><span class="token operator">!=</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    g1<span class="token punctuation">.</span>affiche<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    x<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Saisissez une coordonnée x : "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    y<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Saisissez une coordonnée y : "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    g1<span class="token punctuation">.</span>tirer<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+    b<span class="token punctuation">.</span>touché<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> b<span class="token punctuation">.</span>touché<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"C'est touché"</span><span class="token punctuation">)</span>
+        g1<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>x<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"X"</span>
+
+g1<span class="token punctuation">.</span>affiche<span class="token punctuation">(</span><span class="token punctuation">)</span>    
+
+</code></pre>
+<p>Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -155,6 +244,7 @@ Enfin on ajoute les méthodes ajoute(Bateau) à Grille et coulé() à Bateau  qu
 <li>J'ai eu du mal à comprendre comment bien utiliser &quot;self&quot;. J'ai pas mal pataugé au début à cause de cela</li>
 <li>L'appel d'un objet de la classe Bateau dans l'écriture d'une méthode de la classe Grille m'a aussi posé problème</li>
 <li>J'ai bien compris la théorie des tests mais la réalisation de vrais tests vraiment efficaces reste assez mystérieuse</li>
+<li>Petit bonus: j'ai appris à utilisé le débogueur pour comprendre les problèmes demon code</li>
 </ul>
 </div></div>
 <h2>2 Composition et agrégation</h2>
@@ -173,14 +263,86 @@ Une agrégation représente un ensemble d'objets ajoutés par une méthode dans 
 <div class="pl-8  mb-2 mr-8">
 <p>Source</p>
 </div><div class="pl-8 mr-8">
-<p>[composition et agrégation][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/composition-agr%C3%A9gation/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/composition-agrégation/</a>]</p>
+<p><a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/composition-agr%C3%A9gation/">composition et agrégation</a></p>
 </div></div>
 <h1>Pratique: On lance 5 dés</h1>
 <p>Dans ce projte, on créé un TapisVert qui contient 5 dés que l'on peut lancer.<br>
 Représentation UML:</p>
 <img src="ulm_tapis.png">
 <p>Code:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> <span class="token operator">*</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Dice</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>nb_faces<span class="token punctuation">,</span>valeur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nb_faces<span class="token operator">=</span>nb_faces
+        self<span class="token punctuation">.</span>valeur<span class="token operator">=</span>valeur
+
+    <span class="token keyword">def</span> <span class="token function">set_valeur</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>valeur<span class="token operator">=</span> x
+
+    <span class="token keyword">def</span> <span class="token function">get_valeur</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>valeur
+
+    <span class="token keyword">def</span> <span class="token function">roll</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>valeur<span class="token operator">=</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>nb_faces<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">TapisV</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>liste <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">lancer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>liste<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_valeur</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>liste  
+
+</code></pre>
 <p>Tests associés:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> dice <span class="token keyword">import</span> <span class="token operator">*</span>
+
+<span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    de <span class="token operator">=</span> Dice<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> de <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_get_valeur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    de <span class="token operator">=</span> Dice<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> de<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_get_valeur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    de <span class="token operator">=</span> Dice<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+    de<span class="token punctuation">.</span>set_valeur<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> de<span class="token operator">==</span> <span class="token number">3</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_roll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    de<span class="token operator">=</span> Dice<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+    de<span class="token punctuation">.</span>roll<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> de <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> de<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tapis <span class="token operator">=</span> TapisV<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> tapis <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_montre_valeur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tapis <span class="token operator">=</span> TapisV<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> tapis<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">tuple</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_objet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tapis<span class="token operator">=</span>TapisV<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    tapis<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">3</span>
+    <span class="token keyword">if</span> tapis<span class="token punctuation">.</span>get_valeur<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+</code></pre>
 <h2>3.Héritage</h2>
 <h1>Cours</h1>
 <p>L'héritage permet de créer des classes filles qui sont des cas particuliers de leur classe mère.<br>
@@ -193,10 +355,10 @@ Une classe fille hérite de tous les attributs et méthodes de sa mère. On peut
 <div class="pl-8  mb-2 mr-8">
 <p>Source</p>
 </div><div class="pl-8 mr-8">
-<p>[Héritage][<a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/">https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-théorie/code/programmation-objet/héritage/</a>]</p>
+<p><a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/">Héritage</a></p>
 </div></div>
 <p>Un bon exemple de programme qui utilise l'héritage :</p>
-<p>-MON 1.2 de Nicolas BERT [Programmation objet en Python][<a href="https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/">https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/</a>]</p>
+<p>-MON 1.2 de Nicolas BERT <a href="https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/">Programmation objet en Python</a></p>
 <h1>Pratique</h1>
 <p>Pour tester l'héritage j'ai ajouté une classe de sous-marins à ma bataille navale.<br>
 Ces sous marins peuvent plonger. Ils sont alors invisibles et intouchables:</p>
