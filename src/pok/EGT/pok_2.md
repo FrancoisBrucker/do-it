@@ -47,7 +47,7 @@ Ce que nous nous proposons de faire dans ce POK est de mettre en place une colla
 
 ## To-do list du second sprint :
 - [~] Chercher et restituer les différentes méthodes théoriques de cartographie d'un SI
-- [ ] Rencontrer la Région Sud
+- [X] Rencontrer la Région Sud
 - [~] Chercher si il y a des anciens de Centrale qui bossent dans une DSI et discuter avec eux des méthodes
 - [ ] Restituer proprement les entretiens obtenus avec les DSI
 - [ ] Préparer la collaboration avec la DSI de Centrale et mettre en forme le projet pour l'année prochaine
