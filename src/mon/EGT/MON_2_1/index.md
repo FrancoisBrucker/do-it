@@ -17,7 +17,7 @@ tags: ['management', 'innovation']
 
 Après le catalogue des méthodes de gestion de projet, il est intéressant de regarder les méthodes de management dans les organisations. Au même titre que pour la gestion de projet, il est facile d’imaginer que ces méthodes suivent des tendances et sont beaucoup impactées par les modes.
 Ce que je souhaiterais trouver dans mes recherches : différentes méthodes de management qui sont utilisées aujourd’hui de manière répandue et d’autres méthodes qui sont en train de se démocratiser.
----
+
 
 ## Définitions :
 
