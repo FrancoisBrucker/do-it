@@ -21,7 +21,7 @@ MONs d'Antoine Varnerot
 
 ## Temps 2
 
-- [Base de donnée non relationnelles](./mons/bdd-non-relationelles)
+- [Base de donnée non relationnelles](./mons/bdd-non-relationnelles)
 
 ## Temps 3
 
