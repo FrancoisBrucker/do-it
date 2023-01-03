@@ -163,6 +163,8 @@
 </svg>
 <div class="pl-8 mr-8">
 <h4>Partie 1 - Créez un serveur Express simple</h4>
+<p>Cette partie vous permettra de <strong>créer un serveur web simple</strong> avec Express avec laquelle vous pourrez communiquer via des requêtes HTTP. Vous pourrez ainsi <strong>envoyer et recevoir</strong> des données au format JSON via différentes <strong>routes</strong> (adresses web) et différents types de requêtes (GET, POST).</p>
+<p>--</p>
 <ol>
 <li>Tirez le maximum de ce cours</li>
 <li>Configurez votre environnement de développement</li>
@@ -171,14 +173,20 @@
 <li>Créez une route GET</li>
 <li>Créez une route POST</li>
 </ol>
+<p>--</p>
 <h4>Partie 2 - Créez une API RESTful</h4>
+<p>Cette partie vous présentera comment <strong>créer une API REST fonctionnelle</strong> comportant une base de données non-relationnelle. Vous apprendrez à créer une base de données avec <strong>MongoDB</strong>, à communiquer avec elle ainsi qu'à créer toutes les routes nécessaires pour gérer les données de votre API.</p>
+<p>--</p>
 <ol>
 <li>Configurez votre base de données</li>
 <li>Créez un schéma de données</li>
 <li>Enregistrez et récupérez des données</li>
 <li>Modifiez et supprimez des données</li>
 </ol>
+<p>--</p>
 <h4>Partie 3 - Mettez en place un système d'authentification sur votre application</h4>
+<p>Cette partie vous permettra de <strong>mettre en place un système d'authentification</strong> sur votre application. Vous apprendrez à <strong>crypter</strong> les mots de passe des utilisateurs, à <strong>générer des jetons d'authentification</strong> et à <strong>protéger les routes</strong> de votre API.</p>
+<p>--</p>
 <ol>
 <li>Optimisez la structure du back-end</li>
 <li>Préparez la base de données pour les informations d'authentification</li>
@@ -187,14 +195,46 @@
 <li>Créez des tokens d'authentification</li>
 <li>Configurez le middleware d'authentification</li>
 </ol>
+<p>--</p>
 <h4>Partie 4 - Ajoutez une gestion des fichiers utilisateur sur l'application</h4>
+<p>Enfin, cette partie vous permettra de <strong>gérer les fichiers</strong> des utilisateurs de votre application. Vous apprendrez à <strong>stocker les images</strong> des utilisateurs sur votre serveur, à <strong>générer des liens uniques</strong> pour accéder à ces images et à les <strong>supprimer</strong>.</p>
+<p>--</p>
 <ol>
 <li>Acceptez les fichiers entrants avec multer</li>
 <li>Modifiez les routes pour prendre en compte les fichiers</li>
 <li>Développez la fonction delete du back-end</li>
 </ol>
+<p>--</p>
 </div></div>
 <p>Bonne formation !</p>
+<h2>Pour commencer</h2>
+<p>Si vous ne souhaitez pas suivre la formation, voici <strong>quelques pistes pour vous aider à commencer</strong> à développer votre API.</p>
+<p>Tout d'abord, <strong>nous allons voir comment créer un serveur Express simple</strong>.</p>
+<p>Pour <strong>installer Node.js</strong>, il suffit de <strong>télécharger</strong> le fichier d'installation sur le site officiel : <a href="https://nodejs.org/en/">Node.js</a>. Une fois l'installation terminée, vous pouvez <strong>vérifier que Node.js est bien installé</strong> en ouvrant un terminal et en tapant la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> <span class="token parameter variable">-v</span>
+</code></pre>
+<p>Vous devriez obtenir la version de Node.js installée sur votre ordinateur.</p>
+<p>Pour <strong>installer Express</strong>, il suffit de taper la commande suivante dans un terminal :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express <span class="token parameter variable">--save</span>
+</code></pre>
+<p>Cette commande va installer Express et l'ajouter dans la liste des dépendances de votre projet.</p>
+<p>Vous pouvez maintenant <strong>créer un fichier</strong> <code>server.js</code> dans lequel vous allez <strong>créer votre serveur Express</strong>. Voici un exemple de code pour un serveur Express simple qui renvoie le texte &quot;Hello World!&quot; à l'adresse <a href="http://localhost:3000/">http://localhost:3000</a> :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Example app listening on port 3000!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Pour <strong>lancer votre serveur</strong>, il suffit de taper la commande suivante dans un terminal :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> server.js
+</code></pre>
+<p>Vous pouvez maintenant <strong>accéder</strong> à votre serveur en tapant l'adresse suivante dans votre navigateur : <a href="http://localhost:3000/">http://localhost:3000</a></p>
+<p>Vous pourrez maintenant <strong>créer des routes GET et POST pour votre API</strong>. Pour cela, vous pouvez vous référer à la partie 1 de la formation ou consulter la documentation officielle de Node.js et d'Express fournie dans les ressources utiles.</p>
 <p><a href="../">&lt;-- Retour</a></p>
 
 
