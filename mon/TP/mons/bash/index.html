@@ -81,23 +81,23 @@
 <p>Bash : utilisation d'une interface en ligne de commande</p>
 <!-- Début Résumé -->
 <h2>Introduction</h2>
-<p>Ce MON est destiné à des <strong>débutants</strong> en Bash. En effet, avant de débuter ce travail je ne connaissais pratiquement rien sur le sujet.</p>
-<p>Bash (ou Bourne-Again Shell) est un <strong>interpréteur en ligne de commande</strong>. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour qu’il les exécute. Il permet <strong>d’utiliser son ordinateur de façon efficace</strong> et de <strong>réaliser des opérations complexes très rapidement</strong>.<br>
-Il s’agit d’une <strong>interface en ligne de commande</strong> ou CLI (“Command Line Interface”).  L’utilisateur est face à une “grande boîte noire” dans laquelle il peut entrer ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation plus classique de son ordinateur avec l’accueil, le bureau, les icônes,... Même si une CLI peut être <strong>plus dure à maîtriser et moins intuitive</strong>, elle est <strong>plus puissante</strong> qu’une GUI.<br>
+<p>Ce MON est destiné à des <strong>débutants</strong> en Bash. En effet, avant de débuter ce travail je n'avais que peu de connaissances sur le sujet.</p>
+<p>Bash (ou Bourne-Again Shell) est un <strong>interpréteur en ligne de commande</strong>. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour que ce dernier les exécute. Il permet <strong>d’utiliser son ordinateur de façon efficace</strong> et de <strong>réaliser des opérations complexes très rapidement</strong>.<br>
+Il s’agit d’une <strong>interface en ligne de commande</strong> ou CLI (“Command Line Interface”).  L’utilisateur est face à un terminal dans lequel il entre ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation la plus classique de son ordinateur : avec l’accueil, le bureau, les icônes,... Même si une CLI peut être <strong>plus complexe à maîtriser et moins intuitive</strong>, elle est <strong>plus puissante</strong> qu’une GUI.<br>
 Par ailleurs Bash fonctionne généralement en <strong>commande synchrone</strong>. Cela signifie que les lignes de commande sont lues et exécutées une par une.</p>
 <h2>Comment faire du Bash ?</h2>
-<p>Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais sans interpréteur certaines fonctions peuvent être limitées.<br>
-Pour ce MON, j’ai utilisé Bash sur un système Linux en me <strong>connectant à mon compte Centrale</strong>. Pour cela j’ai lancé la commande suivante dans mon terminal Windows Powershell:</p>
+<p>Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais, sans interpréteur, certaines fonctions peuvent être limitées.<br>
+Pour ce MON, j’ai utilisé Bash sur un système Linux en me <strong>connectant à mon compte Centrale</strong>. Pour cela j’ai lancé la commande suivante dans un terminal Windows Powershell:</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> tpont@sas1.ec-m.fr
 </code></pre>
-<p>En entrant son mot de passe Centrale, on se connecte sur son environnement de travail de Centrale.</p>
-<p>Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par:</p>
+<p>En entrant son mot de passe Centrale, on se connecte sur son environnement de travail Centrale.</p>
+<p>Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span>$
 </code></pre>
-<p>Dans un premier lieu (avant le ~), il s’agit du <strong>nom d’utilisateur</strong>. Le signe “~” avec rien derrière indique que l’on se situe dans le <strong>dossier home</strong>. Enfin, le signe “$” signifie qu’on est connecté en tant qu’<strong>utilisateur classique</strong>.<br>
+<p>Dans un premier lieu (avant le ~), il s’agit du <strong>nom d’utilisateur</strong>. Le signe “~” en fin de ligne indique que l’on se situe dans le <strong>dossier home</strong>. Le signe “$” quant à lui signifie qu’on est connecté en tant qu’<strong>utilisateur classique</strong>.<br>
 Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="https://www.pierre-giraud.com/shell-bash/">Apprendre à utiliser le shell Bash - Pierre Giraud</a>.</p>
 <h2>Les principales commandes</h2>
-<p>Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes. Sur certaines commandes, on peut rajouter des options. Cela permet d’avoir plus de fonctionnalités que la commande de base. Elles sont matérialisées par des -.</p>
+<p>Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes. Sur certaines commandes, on peut rajouter des options. Cela permet d’avoir plus de fonctionnalités que la commande de base. Elles sont matérialisées par des &quot;-&quot;.</p>
 <h3>Principales commandes</h3>
 <p>Les <strong>principales commandes</strong> en Bash sont les suivantes :</p>
 <ul>
@@ -108,7 +108,7 @@ Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="h
 <p>Par exemple,</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span><span class="token variable">$cd</span> Documents
 </code></pre>
-<p>permet de se déplacer dans le dossier Documents. Ceci est bien matérialiser par l’invite de commande qui est désormais :</p>
+<p>permet de se déplacer dans le dossier Documents. Ceci est matérialisé par l’invite de commande qui est désormais :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~/Documents<span class="token punctuation">]</span>$
 </code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -128,11 +128,11 @@ Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="h
 </ul>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> fichier1 fichier2
 </code></pre>
-<p>copie fichier1 et nomme la copie fichier2. Si fichier2 existait déjà, la précédente version est écrasée.</p>
+<p>copie fichier1 et nomme la copie fichier2. Si fichier2 existait déjà, la précédente version en est écrasée.</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> fichier1 répertoire1
 </code></pre>
-<p>copie fichier1 et met cette copie dans répertoire 1. On peut copier plusieurs fichiers dans un répertoire en mettant leurs noms les uns à la suite des autres.</p>
-<p>Enfin, pour copier un répertoire1 et mettre une copie dans un répertoire nommé répertoire2, on utilise la commande :</p>
+<p>copie fichier1 et met cette copie dans répertoire1. On peut copier plusieurs fichiers dans un répertoire en mettant leurs noms les uns à la suite des autres.</p>
+<p>Enfin, pour copier répertoire1 et mettre une copie dans un répertoire nommé répertoire2, on utilise la commande :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> <span class="token parameter variable">-R</span> répertoire1 répertoire2
 </code></pre>
 <p>Comme précédemment si répertoire2 n'existait pas il est créé. Sinon, le répértoire2 déjà existant est écrasé.</p>
@@ -143,7 +143,7 @@ Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="h
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Attention</strong> aux espaces</p>
 </div><div class="pl-8 mr-8">
-<p>Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.<br>
+<p>Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée, il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.<br>
 Par exemple :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> “ mon document.txt” Dossier
 </code></pre>
@@ -173,14 +173,12 @@ Par exemple :</p>
 </code></pre>
 <p>crée un nouveau répertoire intitulé &quot;nouveau_répertoire&quot;.</p>
 <h3>Les extensions</h3>
-<p>Les commandes ci-dessus permettent de naviguer dans les fichiers et les répertoires. Cependant, ceci est également possible avec l'interface graphique. Cependant, Bash permet également d'utiliser des <strong>extensions</strong>. Ceci permet de réaliser des <strong>tâches plus complexes</strong>, <strong>rapidement</strong>. C'est par exemple le cas de l'utilisation de <strong>métacaractères</strong>.</p>
-<p>Le métacaractère <strong>&quot;*&quot;</strong>, permet de représenter tout type de caractère (aucun, un ou plusieurs caractère). Le métacaractère <strong>&quot;?&quot;</strong> permet de représenter un caractère quelconque.</p>
+<p>Les commandes ci-dessus permettent de naviguer dans les fichiers et les répertoires. Cependant, ceci est également possible avec l'interface graphique. Mais, Bash permet également d'utiliser des <strong>extensions</strong>. Ceci permet de réaliser des <strong>tâches plus complexes rapidement</strong>. C'est par exemple le cas de l'utilisation de <strong>métacaractères</strong>.</p>
 <p>Ainsi on peut <strong>sélectionner des fichiers et/ou des répertoires</strong> à l'aide de ces <strong>métacaractères</strong>.</p>
 <p>Par exemple, la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> *.txt Sauvegarde
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> *.txt Dossier
 </code></pre>
-<p>permet de copier tous les fichiers en .txt dans le répertoire Sauvegarde.</p>
-<p>On peut de la même manière utiliser <strong>toutes les classes de caractères</strong> telles que alnum, alpha, lower, upper, digit,... en mettant ces nom entre [[::]].</p>
+<p>permet de copier tous les fichiers en .txt dans le répertoire Dossier.</p>
 <p>L'accolade {} permet de réaliser une même action sur des motifs qui se répètent. Par exemple :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> répertoire-<span class="token punctuation">{</span><span class="token number">1,2</span>,3,4<span class="token punctuation">}</span>
 </code></pre>
@@ -190,7 +188,7 @@ Par exemple :</p>
 </code></pre>
 <p>permet d'engendrer une séquence des chiffres de 1 à 5 et à l'aide de la substitution de commandes de créer des répertoires numérotés de 1 à 5.</p>
 <h2>Projet en Bash</h2>
-<p>Après avoir vu un certain nombre de commande et les avoir tester pour bien les comprendre, on peut chercher des idées de projets à faire en Bash qui peuvent être pratiques ou utiles pour effectuer différentes tâches.</p>
+<p>Après avoir vu les commandes élémentaires et les avoir testées pour bien les comprendre, on peut réaliser un projet en Bash qui peut être pratique pour effectuer différentes tâches.</p>
 <h3>Création d'un script en Bash</h3>
 <p>Pour lancer un script faisant appel à des commandes, on peut créer un script en Bash.<br>
 La commande suivante permet de le faire :</p>
@@ -204,9 +202,9 @@ On peut écrire un script qui affiche &quot;Hello world !&quot; quand on le lanc
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash'</span>
 <span class="token builtin class-name">echo</span> <span class="token string">"Hello World !"</span>
 </code></pre>
-<p>Le script ci-dessus affiche &quot;Hello World !&quot; quand on le lance, soit quand on lance <strong>./script.sh</strong> dans la commande.</p>
+<p>Le script ci-dessus affiche &quot;Hello World !&quot; quand on le lance, soit quand on effectue <strong>./script.sh</strong> dans l'invite de commande.</p>
 <h3>Scripts plus complexes</h3>
-<p>L'idée est alors de réaliser des scripts plus compliqués permettant d'effectuer des tâches complexes. Une première idée est de réaliser un script qui cherchera et affichera toutes les occurrences dans les fichiers d'un répertoire en indiquant leurs positions.</p>
+<p>L'idée est alors de réaliser des scripts plus compliqués permettant d'effectuer des tâches complexes. Une première idée est de réaliser un script qui cherchera et affichera toutes les occurrences d'un mot dans les fichiers texte d'un répertoire en indiquant leurs positions.</p>
 <h4>Recherche d'un mot clé dans les fichiers d'un répertoire</h4>
 <p>Ce script doit prendre en entrée deux arguments : un répertoire où chercher le mot clé et le mot clé.</p>
 <p>On commence par vérifier que notre script prend bien deux arguments en entrée puis on cherche le mot clé dans les documents du répertoire.</p>
@@ -229,21 +227,18 @@ On peut écrire un script qui affiche &quot;Hello world !&quot; quand on le lanc
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Attention</strong> aux opérateurs de comparaison</p>
 </div><div class="pl-8 mr-8">
-<p>Attention, pour la comparaison d'entiers, les opérateurs de comparaisons ne s'écrivent pas &quot;==&quot;,&quot;&lt;&quot; ou encore&quot;&gt;&quot; en Bash. Par exemple, différent s'écrit -ne.<br>
-Vous pouvez retrouver les bonnes commandes <a href="https://abs.traduc.org/abs-fr/ch07s03.html">ici</a>.</p>
+<p>Attention, pour la comparaison d'entiers, les opérateurs de comparaisons peuvent être retrouvés <a href="https://abs.traduc.org/abs-fr/ch07s03.html">ici</a>.</p>
 </div></div>
 <h4>Gestionnaire de tâches</h4>
-<p>L'objectif est de créer un gestionnaire de tâches. Ce gestionnaire stockera une liste de tâches dans un fichier texte et permettra de stocker leur état (à faire, faite).</p>
+<p>L'objectif est de créer un gestionnaire de tâches. Ce gestionnaire stockera une liste de tâches dans un fichier texte et permettra de stocker leur état (à faire, fait).</p>
 <p>Pour ce faire, on crée un script <em><a href="http://gestion.sh">gestion.sh</a></em> et un fichier texte <em>tache.txt</em>.<br>
 On a besoin de plusieurs commandes pour faire fonctionner ce gestionnaire :</p>
 <ul>
 <li><strong>add</strong> : pour ajouter une tâche (on doit vérifier qu'il y a bien une tâche à ajouter</li>
-<li><strong>do</strong> : pour marquer la tâche faite (on doit vérifier que la tâche existe bien)</li>
+<li><strong>do</strong> : pour marquer la tâche faite (on doit vérifier que la tâche existe bien et n'est pas marquée comme effectuée)</li>
 <li><strong>undo</strong> : pour modifier une tâche faite en non faite (on doit vérifier que la tâche existe bien et est marquée comme effectuée)</li>
 </ul>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-
-<span class="token builtin class-name">echo</span> <span class="token string">"Hello World !"</span>
 
 <span class="token keyword">case</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token keyword">in</span>
         <span class="token string">"add"</span><span class="token punctuation">)</span>
@@ -271,14 +266,13 @@ On a besoin de plusieurs commandes pour faire fonctionner ce gestionnaire :</p>
                 <span class="token comment">#awk '/$2/{echo NR;exit}' tache.txt >> temporaire.txt</span>
                 <span class="token comment">#index=cat temporaire.txt</span>
                 <span class="token comment">#awk '/$2/{index_tache = NR;exit}' tache.txt</span>
-                <span class="token assign-left variable">index</span><span class="token operator">=</span><span class="token number">1</span>
 
-                <span class="token keyword">if</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'1p'</span> tache.txt <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> <span class="token string">'^X'</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+                <span class="token keyword">if</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'$3p'</span> tache.txt <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> <span class="token string">'^X'</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
                         <span class="token builtin class-name">echo</span> <span class="token string">"La tâche a déjà été terminée"</span>
                         <span class="token builtin class-name">exit</span> <span class="token number">1</span>
                 <span class="token keyword">fi</span>
 
-                <span class="token function">sed</span> <span class="token parameter variable">-i</span> .txt <span class="token string">'1s/^/X /'</span> tache.txt
+                <span class="token function">sed</span> <span class="token parameter variable">-i</span> .txt <span class="token string">'$3s/^/X /'</span> tache.txt
                 <span class="token builtin class-name">echo</span> <span class="token string">"Tache marquée comme faite"</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
         <span class="token string">"undo"</span><span class="token punctuation">)</span>
                 <span class="token comment"># code pour marquer une tâche non faite</span>
@@ -292,21 +286,21 @@ On a besoin de plusieurs commandes pour faire fonctionner ce gestionnaire :</p>
                         <span class="token builtin class-name">exit</span> <span class="token number">1</span>
                 <span class="token keyword">fi</span>
 
-                <span class="token keyword">if</span> <span class="token operator">!</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'1p'</span> tache.txt <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> <span class="token string">'^X'</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+                <span class="token keyword">if</span> <span class="token operator">!</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'$3p'</span> tache.txt <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> <span class="token string">'^X'</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
                         <span class="token builtin class-name">echo</span> <span class="token string">"La tâhe n'est pas terminée"</span>
                         <span class="token builtin class-name">exit</span> <span class="token number">1</span>
                 <span class="token keyword">fi</span>
 
-                <span class="token function">sed</span> <span class="token parameter variable">-i</span> .txt <span class="token string">'1s/^X //'</span> tache.txt
+                <span class="token function">sed</span> <span class="token parameter variable">-i</span> .txt <span class="token string">'$3s/^X //'</span> tache.txt
                 <span class="token builtin class-name">echo</span> <span class="token string">"Tâche marquée comme non finie"</span>
                 <span class="token punctuation">;</span><span class="token punctuation">;</span>
 <span class="token keyword">esac</span>
 </code></pre>
 <p>Ce code permet d'ajouter une tâche, de marquer une tâche comme faite et comme non faite.</p>
-<p>Il possède néanmoins un problème. Ici, s'applique ici toujours à la ligne 1. Cela est du au fait que je n'arrive pas à récupérer le numéro de ligne d'un texte dans mon script. J'arrive à le faire directement dans l'invite de commande grâce à la commande suivante :</p>
+<p>Il possède néanmoins un problème. Je n'arrive pas à récupérer le numéro de ligne d'un texte dans mon script. J'arrive à le faire directement dans l'invite de commande grâce à la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">awk</span> <span class="token string">'/$2/{echo NR;exit}'</span> tache.txt <span class="token operator">>></span> temporaire.txt
 </code></pre>
-<p>Cela permet de stocker la valeur dans un fichier temporaire et de la récupérer grâce à la commande cat.</p>
+<p>Cela permet de stocker la valeur dans un fichier temporaire et de la récupérer grâce à la commande cat. Ainsi, il est ici nécessaire d'entrer la ligne de la tâche pour les commandes <em>done</em> et <em>undo</em> en troisième paramètre.</p>
 <h2>Autres ressources utilisées</h2>
 <ul>
 <li><a href="https://blog.desdelinux.net/fr/bash-como-hacer-un-script-ejecutable/">Comment créer un script exécutable</a></li>
