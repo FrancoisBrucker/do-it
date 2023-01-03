@@ -1,17 +1,22 @@
 ---
 layout: layout/post.njk
 
-title: "Microservices"
+title: "Les architectures microservices"
 authors:
   - Nicolas BERT
 
 ---
 
 <!-- début résumé -->
-Introduction aux microservices en informatique
+Introduction au concept de microservices en informatique
 <!-- fin résumé -->
 
-Dans ce MON, nous allons discuter du principe de microservices et plus particulièrement de son utilisation et implémentation en informatique.
+Dans ce MON, nous allons discuter du principe de microservices et plus particulièrement de son utilisation en informatique.
+
+{% prerequis "**Prérequis :**" %}
+- Connaître le contexte de développement full-stack (frontend, backend, API ...)
+- Niveau intermédiaire
+{% endprerequis %}
 
 ## Introduction
 
