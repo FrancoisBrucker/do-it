@@ -33,18 +33,19 @@ Comment fonctionne le language machine - binaire - et comment créer un compilat
 
 <h3 id="h1-1"> Qu'est ce que le language machine ? </h3>
 
-Le language machine est un language informatique reconnu par l'ordinateur et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).
+Le language machine est un **language informatique reconnu par l'ordinateur** et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).
 Par exemple, le C est un language informatique compilé, et Python est un language interprété.
 
-|       | Avantage | Inconvéniant |
+|       | Avantage | Inconvénient |
 | ----------- | ----------- | -------- |
-| Language Interprété      | Est cross-platform, fonctionne pour n'importe quel appareil | Toute personne voulant executer le code doit avoir l'interpréteur sur sa machine |
-| Language Compilé   | Nécessite d'utiliser le compilateur une unique fois | Un fichier compilé est spécifique à une distribution, un fichier Linux est différent d'un Windows |
+| Language Interprété      | Est **cross-platform**, fonctionne pour n'importe quel appareil | Toute personne voulant executer le code doit avoir l'**interpréteur** sur sa machine |
+| Language Compilé   | Nécessite d'utiliser le compilateur une **unique fois** | Un fichier compilé est **spécifique à une distribution**, un fichier Linux est différent d'un Windows |
 
-
+{% info %}
 Un language compilé peut être lu, pour comprendre ce que fait un programme avant de l'executer, ce qui peut être une bonne idée si le programme compilé est un virus.
+{% endinfo %}
 
-Sur linux, il est possible de récupérer le code machine d'un fichier compilé grâce à la commande **objdump**
+Sur Linux, il est possible de récupérer le code machine d'un fichier compilé grâce à la commande **objdump** (pas disponible par défaut)
 
 ``` bash
 objdump -d fichierCompilé > languageMachine.txt
@@ -80,9 +81,9 @@ Voilà à quoi peut ressembler une partie de code désassemblée. (Ici seulement
 
 <h3 id="h1-2"> Lire un fichier désassemblé </h3>
 
-- La première colonne permet de connaitre la position (en hexadécimal) de l'instruction dans le fichier compilé, est utile pour pouvoir comprendre quelle partie du code est exécutée lorsqu'il y a les fonctions **call** ou **jmp**.
-- La 2e colonne est l'écriture hexadécimale des instructions à effectuer, est la traduction exacte du code binaire de l'exécutabl. Cette partie du code n'est pas vraiment exploitable.
-- La 3e colonne est la traduction fonctionnelle de ces instructions avec les paramètres associés.
+- La première colonne permet de connaître la **position** (en hexadécimal) **de l'instruction** dans le fichier compilé, est utile pour pouvoir comprendre quelle partie du code est exécutée lorsqu'il y a les fonctions **call** ou **jmp**.
+- La 2e colonne est l'**écriture hexadécimale des instructions** à effectuer, est la traduction exacte du code binaire de l’exécutable. Cette partie du code n'est pas vraiment exploitable.
+- La 3e colonne est la **traduction fonctionnelle** de ces instructions avec les paramètres associés.
 
 L'exemple précédent est le language machine associé à cette fonction écrite en C.
 
@@ -105,7 +106,7 @@ Voici quelques fonction qui permettent de comprendre le fonctionnement global du
 
 Permettent de stocker en mémoire une valeur.
 
-**mov** quand cette valeur était déjà stockée ailleur
+**mov** quand cette valeur était déjà stockée ailleurs
 
 **movl** quand c'est une nouvelle valeur.
 
@@ -134,11 +135,13 @@ Dans l'exemple précédent, on peut voir notamment **rax** et **rbp**, ils fonct
 
 L'objectif est de créer sont propre language informatique et de créer le compilateur associé.
 
-J'ai utilisé les 2 technologies yacc et lex, qui permettent de créer de manière basique, un compilateur, en C.
+J'ai utilisé les 2 technologies **yacc** et **lex**, qui permettent de créer de manière basique, un compilateur, en C.
 
 <h3 id="h2-1"> Lex </h3>
 
-Lex est un générateur d’analyseur lexical, c'est à dire qu'il reconnait les expressions régulières et peut leurs associer des actions.
+{% note %}
+Lex est un générateur d’analyseur lexical, c'est à dire qu'il reconnaît les expressions régulières et peut leurs associer des actions.
+{% endnote %}
 
 exemple : 
 
@@ -146,15 +149,17 @@ exemple :
 [0-9]+          {yylval.num = atoi(yytext); return NUMBER;}
 ```
 
-**[0-9]** est une expression régulière permettant de reconnaitre les caractères '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9'
+**[0-9]** est une expression régulière permettant de reconnaître les caractères '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9'
 **+** permet de trouver toutes expression respectant au moins une fois ou plus l'expression juste avant.
-**[0-9]+** reconnait tous les nombres, ayant 1 ou plusieurs chiffres.
+**[0-9]+** reconnaît tous les nombres, ayant 1 ou plusieurs chiffres.
 
-Donc l'exemple va reconnaitre les nombres et stocker leurs valeurs
+Donc l'exemple va reconnaître les nombres et stocker leurs valeurs
 
 <h3 id="h2-2"> Yacc </h3>
 
+{% note %}
 Yacc est un générateur d’analyseur syntaxique, c'est à dire qu'il va reconstruire une syntaxe à partir de plusieurs éléments de cette syntaxe.
+{% endnote %}
 
 exemple : 
 
@@ -170,18 +175,22 @@ Expression:Expression'*'Expression      {$$=$1*$3;}
 ;
 ```
 
-on définit qu'un calcul peut être l'addition de 2 calculs, la différence entre 2 calculs ou un nombre. Ce qui permet de reconstuire tous les calculs possibles entre des nombres et en faisant des additions et des soustractions.
+On définit qu'un calcul peut être l'addition de 2 calculs, la différence entre 2 calculs ou un nombre. Ce qui permet de reconstruire tous les calculs possibles entre des nombres et en faisant des additions et des soustractions.
 
 L'objectif va être de construire un arbre pour faire les opérations.
 Par exemple pour le calcul suivant **12+4*(7+2)**, l'arbre suivant sera généré :
 
-<img src="../../Image/treeYacc.jpg" alt="Arbre de calcul" style="height: 250px; margin: 0 auto; border: 0" />
+<img src="../../Image/treeYacc.jpg" alt="Arbre de calcul" style="height: 200px; margin: 0 auto; border: 0" />
 
 Cet arbre est ensuite parcouru en Postfixe, ce qui donne :
 
 **12 4 7 2 + * +**
 
-Cette écriture est très pratique pour calculer, si on utilise une pile (ce qui est le cas dans le language machine). Pour lire ce genre de calcul, on lit le calcul de la gauuche vers la droite, si on a un nombre, on empile ce nombre, si on a un opérateur, on dépile les 2 dernière valeurs, on effectue le calcul, puis on empile le résultat.
+Cette écriture est très pratique pour calculer, si on utilise une **pile LIFO** (ce qui est le cas dans le language machine). 
+
+{% info %}
+Pour lire ce genre de calcul, on lit le calcul de la gauche vers la droite, si on a un nombre, on empile ce nombre, si on a un opérateur, on dépile les 2 dernière valeurs, on effectue le calcul, puis on empile le résultat.
+{% endinfo %}
 
 Ici tous les opérateurs se sont retrouvés à la fin, mais on peut tout à fait avoir ce genre d'expression **12 5 - 4 7 2 + * +**
 
@@ -193,8 +202,8 @@ Le principal problème avec YACC, c'est que les feuilles de l'arbre générées 
 
 Voulant créer une fonction *if*, j'ai naïvement écrit dans mon fichier yacc: 
 
-```
-ifFunction : IF Condition action ELSE action    {if($2){printf("Condition passée \n");}else{printf("Posibilité par défaut \n");};}
+``` 
+ifFunction : IF Condition action ELSE action    {if($2){printf("Condition passée \n");}else{printf("Possibilité par défaut \n");};}
 | IF Condition action                           {if($2){printf("Condition passée \n");};}
 ```
 
@@ -211,9 +220,9 @@ Booleen : 0
 Condition passée
 ```
 
-Les deux actions - dans le cas où la condition est vraie ou fausse - sont executées.
+Les deux actions - dans le cas où la condition est vraie ou fausse - sont exécutées.
 
-Il n'est pas possible de bloquer l'execution d'une action, ce qui est embettant pour une fonction if.
+Il n'est pas possible de bloquer l'execution d'une action, ce qui est embêtant pour une fonction if.
 
 Ensuite, il n'est pas possible d'aller à un endroit précis du code, rendant les boucles *for* et *while* impossible.
 
@@ -239,7 +248,7 @@ Voici un exemple d'une personne ayant réalisé cela : [compiler if and while](h
 
 **Language machine**
 
-[Cours achitecture des ordinateurs](https://igm.univ-mlv.fr/~giraudo/Old/Enseignements/2016-2017/AO/Cours_impr_4.pdf)
+[Cours architecture des ordinateurs](https://igm.univ-mlv.fr/~giraudo/Old/Enseignements/2016-2017/AO/Cours_impr_4.pdf)
 
 [Cours d'assembleur](https://docplayer.fr/12446949-Assembleur-x86-p-ezequel.html)
 
