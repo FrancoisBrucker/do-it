@@ -81,6 +81,10 @@ Vous trouverez ci-dessous la table des matières de la formation :
 
 #### Partie 1 - Créez un serveur Express simple
 
+Cette partie vous permettra de **créer un serveur web simple** avec Express avec laquelle vous pourrez communiquer via des requêtes HTTP. Vous pourrez ainsi **envoyer et recevoir** des données au format JSON via différentes **routes** (adresses web) et différents types de requêtes (GET, POST).
+
+--
+
 1. Tirez le maximum de ce cours
 2. Configurez votre environnement de développement
 3. Démarrez votre serveur Node
@@ -88,14 +92,26 @@ Vous trouverez ci-dessous la table des matières de la formation :
 5. Créez une route GET
 6. Créez une route POST
 
+--
+
 #### Partie 2 - Créez une API RESTful
+
+Cette partie vous présentera comment **créer une API REST fonctionnelle** comportant une base de données non-relationnelle. Vous apprendrez à créer une base de données avec **MongoDB**, à communiquer avec elle ainsi qu'à créer toutes les routes nécessaires pour gérer les données de votre API.
+
+--
 
 1. Configurez votre base de données
 2. Créez un schéma de données
 3. Enregistrez et récupérez des données
 4. Modifiez et supprimez des données
 
+--
+
 #### Partie 3 - Mettez en place un système d'authentification sur votre application
+
+Cette partie vous permettra de **mettre en place un système d'authentification** sur votre application. Vous apprendrez à **crypter** les mots de passe des utilisateurs, à **générer des jetons d'authentification** et à **protéger les routes** de votre API.
+
+--
 
 1. Optimisez la structure du back-end
 2. Préparez la base de données pour les informations d'authentification
@@ -104,14 +120,69 @@ Vous trouverez ci-dessous la table des matières de la formation :
 5. Créez des tokens d'authentification
 6. Configurez le middleware d'authentification
 
+--
+
 #### Partie 4 - Ajoutez une gestion des fichiers utilisateur sur l'application
+
+Enfin, cette partie vous permettra de **gérer les fichiers** des utilisateurs de votre application. Vous apprendrez à **stocker les images** des utilisateurs sur votre serveur, à **générer des liens uniques** pour accéder à ces images et à les **supprimer**.
+
+--
 
 1. Acceptez les fichiers entrants avec multer
 2. Modifiez les routes pour prendre en compte les fichiers
 3. Développez la fonction delete du back-end
 
+--
+
 {% endprerequis %}
 
 Bonne formation !
+
+## Pour commencer
+
+Si vous ne souhaitez pas suivre la formation, voici **quelques pistes pour vous aider à commencer** à développer votre API.
+
+Tout d'abord, **nous allons voir comment créer un serveur Express simple**.
+
+Pour **installer Node.js**, il suffit de **télécharger** le fichier d'installation sur le site officiel : [Node.js](https://nodejs.org/en/). Une fois l'installation terminée, vous pouvez **vérifier que Node.js est bien installé** en ouvrant un terminal et en tapant la commande suivante :
+
+```bash
+node -v
+```
+
+Vous devriez obtenir la version de Node.js installée sur votre ordinateur.
+
+Pour **installer Express**, il suffit de taper la commande suivante dans un terminal :
+
+```bash
+npm install express --save
+```
+
+Cette commande va installer Express et l'ajouter dans la liste des dépendances de votre projet.
+
+Vous pouvez maintenant **créer un fichier** `server.js` dans lequel vous allez **créer votre serveur Express**. Voici un exemple de code pour un serveur Express simple qui renvoie le texte "Hello World!" à l'adresse [http://localhost:3000](http://localhost:3000/) :
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!');
+});
+```
+
+Pour **lancer votre serveur**, il suffit de taper la commande suivante dans un terminal :
+
+```bash
+node server.js
+```
+
+Vous pouvez maintenant **accéder** à votre serveur en tapant l'adresse suivante dans votre navigateur : [http://localhost:3000](http://localhost:3000/)
+
+Vous pourrez maintenant **créer des routes GET et POST pour votre API**. Pour cela, vous pouvez vous référer à la partie 1 de la formation ou consulter la documentation officielle de Node.js et d'Express fournie dans les ressources utiles.
 
 [<-- Retour](../)
