@@ -69,9 +69,8 @@
   <head>
   <link rel="stylesheet" href="../../assets/style.css">
 </head>
-<p>Ca marche ?</p>
 <h2>Description du MON</h2>
-<p>Pendant les 10h consacrées à ce MON, je veux</p>
+<p>Pendant les 10h consacrées à ce MON, je veux apprendre à utiliser une système de base de données non relationnnelle et l'intégrer à un projet existant.</p>
 <h2>Préambule</h2>
 <ol>
 <li>Bases de données relationnelles</li>
@@ -85,7 +84,48 @@ MySQL et PostgreSQL sont des bons exemples de bdd relationnelles.</p>
 Exemples :  MongoDB, Cassandra, HBase, GraphQL ...</p>
 <p><a href="https://getc.com.tn/sql-vs-nosql-quelles-differences/">https://getc.com.tn/sql-vs-nosql-quelles-differences/</a></p>
 <h2>Réalisation</h2>
-<p>Pour mon apprentissage d'un systeme de base de données non relationnelles, j'ai choisi MongoDb car c'est une technologie que j'ai déjà vu sur des offres de stage et elle m'a l'air très populaire.</p>
+<p>Pour mon apprentissage d'un systeme de base de données non relationnelles, j'ai choisi MongoDb car c'est une technologie que j'ai déjà vu sur des offres de stage et elle m'a l'air très populaire. J'ai d'abord suivi le tuto : <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb</a><br>
+Prérequis :</p>
+<ul>
+<li>Connaissances de base de Javascript</li>
+<li>Connaissances de l'architecture du web (client/serveur)</li>
+<li>Avoir envie d'apprendre Express et NodeJs aussi<br>
+Temps estimé : 5h</li>
+</ul>
+<p><a href="https://www.mongodb.com/atlas/database">https://www.mongodb.com/atlas/database</a></p>
+<p>Le site a un peu changé de design depuis que le tuto a été fait mais on s'y retrouve assez bien.</p>
+<h2>Petit projet</h2>
+<p>Pour utiliser les connnaisances que je viens d'acquérir, j'ai décidé de faire un petit projet : une to-do list où l'on peut ajouter des taches, les supprimer et bien-sûr les afficher.<br>
+(Le code est disponible ici: <a href="https://github.com/AntwanV/Little-Todo-app/tree/master">https://github.com/AntwanV/Little-Todo-app/tree/master</a>)<br>
+Explication des grandes lignes:</p>
+<figure>
+  <img src="../../assets/todoapp.png">
+  <figcaption>To-do list</figcaption>
+</figure>
+<p>Pour ajouter des tâches on écrit dans le champs &quot;Add new item ...&quot; et pour en supprimer on clique simplement dessus.</p>
+<p>Pour comprendre le code, il faut s'intéresser au fichier todoController.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> psw <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./psw.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">//Connect to Mongoose</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'mongodb+srv://antoine:'</span><span class="token operator">+</span>psw<span class="token operator">+</span><span class="token string">'@cluster0.qh9so.mongodb.net/?retryWrites=true&amp;w=majority'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">useNewUrlParser</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">useUnifiedTopology</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB réussie !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB échouée !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Ici on importe mongoose (Doc: <a href="https://mongoosejs.com/">https://mongoosejs.com/</a>) qui permet un dialogue plus facile entre MongoDb et NodeJs et la possibilité de créer des schémas de données.<br>
+Ensuite on se connecte à la bdd avec un identifiant (antoine) et un mot de passe (que j'ai mis dans un autre fichier qui n'est pas mis sur GitHub).</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">//Models</span>
+<span class="token keyword">const</span> itemSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+  <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Item <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Item'</span><span class="token punctuation">,</span> itemSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
 
 </article>
