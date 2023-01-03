@@ -15,35 +15,35 @@ Bash : utilisation d'une interface en ligne de commande
 
 ## Introduction
 
-Ce MON est destiné à des **débutants** en Bash. En effet, avant de débuter ce travail je ne connaissais pratiquement rien sur le sujet.
+Ce MON est destiné à des **débutants** en Bash. En effet, avant de débuter ce travail je n'avais que peu de connaissances sur le sujet.
 
-Bash (ou Bourne-Again Shell) est un **interpréteur en ligne de commande**. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour qu’il les exécute. Il permet **d’utiliser son ordinateur de façon efficace** et de **réaliser des opérations complexes très rapidement**.
-Il s’agit d’une **interface en ligne de commande** ou CLI (“Command Line Interface”).  L’utilisateur est face à une “grande boîte noire” dans laquelle il peut entrer ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation plus classique de son ordinateur avec l’accueil, le bureau, les icônes,... Même si une CLI peut être **plus dure à maîtriser et moins intuitive**, elle est **plus puissante** qu’une GUI.
+Bash (ou Bourne-Again Shell) est un **interpréteur en ligne de commande**. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour que ce dernier les exécute. Il permet **d’utiliser son ordinateur de façon efficace** et de **réaliser des opérations complexes très rapidement**.
+Il s’agit d’une **interface en ligne de commande** ou CLI (“Command Line Interface”).  L’utilisateur est face à un terminal dans lequel il entre ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation la plus classique de son ordinateur : avec l’accueil, le bureau, les icônes,... Même si une CLI peut être **plus complexe à maîtriser et moins intuitive**, elle est **plus puissante** qu’une GUI.
 Par ailleurs Bash fonctionne généralement en **commande synchrone**. Cela signifie que les lignes de commande sont lues et exécutées une par une.
 
 ## Comment faire du Bash ?
 
-Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais sans interpréteur certaines fonctions peuvent être limitées.
-Pour ce MON, j’ai utilisé Bash sur un système Linux en me **connectant à mon compte Centrale**. Pour cela j’ai lancé la commande suivante dans mon terminal Windows Powershell:
+Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais, sans interpréteur, certaines fonctions peuvent être limitées.
+Pour ce MON, j’ai utilisé Bash sur un système Linux en me **connectant à mon compte Centrale**. Pour cela j’ai lancé la commande suivante dans un terminal Windows Powershell:
 
 ```bash
 ssh tpont@sas1.ec-m.fr
 ```
 
-En entrant son mot de passe Centrale, on se connecte sur son environnement de travail de Centrale.
+En entrant son mot de passe Centrale, on se connecte sur son environnement de travail Centrale.
 
-Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par:
+Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par :
 
 ```bash
 [tpont@sas1 ~]$
 ```
 
-Dans un premier lieu (avant le ~), il s’agit du **nom d’utilisateur**. Le signe “~” avec rien derrière indique que l’on se situe dans le **dossier home**. Enfin, le signe “$” signifie qu’on est connecté en tant qu’**utilisateur classique**.
+Dans un premier lieu (avant le ~), il s’agit du **nom d’utilisateur**. Le signe “~” en fin de ligne indique que l’on se situe dans le **dossier home**. Le signe “$” quant à lui signifie qu’on est connecté en tant qu’**utilisateur classique**.
 Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : [Apprendre à utiliser le shell Bash - Pierre Giraud](https://www.pierre-giraud.com/shell-bash/).
 
 ## Les principales commandes
 
-Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes. Sur certaines commandes, on peut rajouter des options. Cela permet d’avoir plus de fonctionnalités que la commande de base. Elles sont matérialisées par des -.
+Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes. Sur certaines commandes, on peut rajouter des options. Cela permet d’avoir plus de fonctionnalités que la commande de base. Elles sont matérialisées par des "-".
 
 ### Principales commandes
 
@@ -59,7 +59,7 @@ Par exemple,
 [tpont@sas1 ~]$cd Documents
 ```
 
-permet de se déplacer dans le dossier Documents. Ceci est bien matérialiser par l’invite de commande qui est désormais :
+permet de se déplacer dans le dossier Documents. Ceci est matérialisé par l’invite de commande qui est désormais :
 
 ```bash
 [tpont@sas1 ~/Documents]$
@@ -80,15 +80,15 @@ La commande **cd ..** permet de revenir dans le **dossier parent** de là où l'
 cp fichier1 fichier2
 ```
 
-copie fichier1 et nomme la copie fichier2. Si fichier2 existait déjà, la précédente version est écrasée.
+copie fichier1 et nomme la copie fichier2. Si fichier2 existait déjà, la précédente version en est écrasée.
 
 ```bash
 cp fichier1 répertoire1
 ```
 
-copie fichier1 et met cette copie dans répertoire 1. On peut copier plusieurs fichiers dans un répertoire en mettant leurs noms les uns à la suite des autres.
+copie fichier1 et met cette copie dans répertoire1. On peut copier plusieurs fichiers dans un répertoire en mettant leurs noms les uns à la suite des autres.
 
-Enfin, pour copier un répertoire1 et mettre une copie dans un répertoire nommé répertoire2, on utilise la commande :
+Enfin, pour copier répertoire1 et mettre une copie dans un répertoire nommé répertoire2, on utilise la commande :
 
 ```bash
 cp -R répertoire1 répertoire2
@@ -97,7 +97,7 @@ cp -R répertoire1 répertoire2
 Comme précédemment si répertoire2 n'existait pas il est créé. Sinon, le répértoire2 déjà existant est écrasé.
 
 {% attention "**Attention** aux espaces" %}
-Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.
+Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée, il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.
 Par exemple :
 
 ```bash
@@ -144,21 +144,17 @@ crée un nouveau répertoire intitulé "nouveau_répertoire".
 
 ### Les extensions
 
-Les commandes ci-dessus permettent de naviguer dans les fichiers et les répertoires. Cependant, ceci est également possible avec l'interface graphique. Cependant, Bash permet également d'utiliser des **extensions**. Ceci permet de réaliser des **tâches plus complexes**, **rapidement**. C'est par exemple le cas de l'utilisation de **métacaractères**.
-
-Le métacaractère **"*"**, permet de représenter tout type de caractère (aucun, un ou plusieurs caractère). Le métacaractère **"?"** permet de représenter un caractère quelconque.
+Les commandes ci-dessus permettent de naviguer dans les fichiers et les répertoires. Cependant, ceci est également possible avec l'interface graphique. Mais, Bash permet également d'utiliser des **extensions**. Ceci permet de réaliser des **tâches plus complexes rapidement**. C'est par exemple le cas de l'utilisation de **métacaractères**.
 
 Ainsi on peut **sélectionner des fichiers et/ou des répertoires** à l'aide de ces **métacaractères**.
 
 Par exemple, la commande
 
 ```bash
-cp *.txt Sauvegarde
+cp *.txt Dossier
 ```
 
-permet de copier tous les fichiers en .txt dans le répertoire Sauvegarde.
-
-On peut de la même manière utiliser **toutes les classes de caractères** telles que alnum, alpha, lower, upper, digit,... en mettant ces nom entre [[::]].
+permet de copier tous les fichiers en .txt dans le répertoire Dossier.
 
 L'accolade {} permet de réaliser une même action sur des motifs qui se répètent. Par exemple :
 
@@ -178,7 +174,7 @@ permet d'engendrer une séquence des chiffres de 1 à 5 et à l'aide de la subst
 
 ## Projet en Bash
 
-Après avoir vu un certain nombre de commande et les avoir tester pour bien les comprendre, on peut chercher des idées de projets à faire en Bash qui peuvent être pratiques ou utiles pour effectuer différentes tâches.
+Après avoir vu les commandes élémentaires et les avoir testées pour bien les comprendre, on peut réaliser un projet en Bash qui peut être pratique pour effectuer différentes tâches.
 
 ### Création d'un script en Bash
 
@@ -203,11 +199,11 @@ On peut écrire un script qui affiche "Hello world !" quand on le lance en utili
 echo "Hello World !"
 ```
 
-Le script ci-dessus affiche "Hello World !" quand on le lance, soit quand on lance **./script.sh** dans la commande.
+Le script ci-dessus affiche "Hello World !" quand on le lance, soit quand on effectue **./script.sh** dans l'invite de commande.
 
 ### Scripts plus complexes
 
-L'idée est alors de réaliser des scripts plus compliqués permettant d'effectuer des tâches complexes. Une première idée est de réaliser un script qui cherchera et affichera toutes les occurrences dans les fichiers d'un répertoire en indiquant leurs positions.
+L'idée est alors de réaliser des scripts plus compliqués permettant d'effectuer des tâches complexes. Une première idée est de réaliser un script qui cherchera et affichera toutes les occurrences d'un mot dans les fichiers texte d'un répertoire en indiquant leurs positions.
 
 #### Recherche d'un mot clé dans les fichiers d'un répertoire
 
@@ -231,26 +227,23 @@ done
 Ce script permet dans un premier temps de vérifier que le script prend bien deux arguments en entrée. En effet **$#** permet de connaître le nombre d'argument. Ensuite, la commande **grep -n** permet de renvoyer les lignes d'un document où un mot apparaît
 
 {% attention "**Attention** aux opérateurs de comparaison" %}
-Attention, pour la comparaison d'entiers, les opérateurs de comparaisons ne s'écrivent pas "==","<" ou encore">" en Bash. Par exemple, différent s'écrit -ne.
-Vous pouvez retrouver les bonnes commandes [ici](https://abs.traduc.org/abs-fr/ch07s03.html).
+Attention, pour la comparaison d'entiers, les opérateurs de comparaisons peuvent être retrouvés [ici](https://abs.traduc.org/abs-fr/ch07s03.html).
 
 {% endattention %}
 
 #### Gestionnaire de tâches
 
-L'objectif est de créer un gestionnaire de tâches. Ce gestionnaire stockera une liste de tâches dans un fichier texte et permettra de stocker leur état (à faire, faite).
+L'objectif est de créer un gestionnaire de tâches. Ce gestionnaire stockera une liste de tâches dans un fichier texte et permettra de stocker leur état (à faire, fait).
 
 Pour ce faire, on crée un script *gestion.sh* et un fichier texte *tache.txt*.
 On a besoin de plusieurs commandes pour faire fonctionner ce gestionnaire :
 
 - **add** : pour ajouter une tâche (on doit vérifier qu'il y a bien une tâche à ajouter
-- **do** : pour marquer la tâche faite (on doit vérifier que la tâche existe bien)
+- **do** : pour marquer la tâche faite (on doit vérifier que la tâche existe bien et n'est pas marquée comme effectuée)
 - **undo** : pour modifier une tâche faite en non faite (on doit vérifier que la tâche existe bien et est marquée comme effectuée)
 
 ```bash
 #!/bin/bash
-
-echo "Hello World !"
 
 case "$1" in
         "add")
@@ -278,14 +271,13 @@ case "$1" in
                 #awk '/$2/{echo NR;exit}' tache.txt >> temporaire.txt
                 #index=cat temporaire.txt
                 #awk '/$2/{index_tache = NR;exit}' tache.txt
-                index=1
 
-                if sed -n '1p' tache.txt | grep -q '^X'; then
+                if sed -n '$3p' tache.txt | grep -q '^X'; then
                         echo "La tâche a déjà été terminée"
                         exit 1
                 fi
 
-                sed -i .txt '1s/^/X /' tache.txt
+                sed -i .txt '$3s/^/X /' tache.txt
                 echo "Tache marquée comme faite";;
         "undo")
                 # code pour marquer une tâche non faite
@@ -299,12 +291,12 @@ case "$1" in
                         exit 1
                 fi
 
-                if ! sed -n '1p' tache.txt | grep -q '^X'; then
+                if ! sed -n '$3p' tache.txt | grep -q '^X'; then
                         echo "La tâhe n'est pas terminée"
                         exit 1
                 fi
 
-                sed -i .txt '1s/^X //' tache.txt
+                sed -i .txt '$3s/^X //' tache.txt
                 echo "Tâche marquée comme non finie"
                 ;;
 esac
@@ -312,13 +304,13 @@ esac
 
 Ce code permet d'ajouter une tâche, de marquer une tâche comme faite et comme non faite.
 
-Il possède néanmoins un problème. Ici, s'applique ici toujours à la ligne 1. Cela est du au fait que je n'arrive pas à récupérer le numéro de ligne d'un texte dans mon script. J'arrive à le faire directement dans l'invite de commande grâce à la commande suivante :
+Il possède néanmoins un problème. Je n'arrive pas à récupérer le numéro de ligne d'un texte dans mon script. J'arrive à le faire directement dans l'invite de commande grâce à la commande suivante :
 
 ```bash
 awk '/$2/{echo NR;exit}' tache.txt >> temporaire.txt
 ```
 
-Cela permet de stocker la valeur dans un fichier temporaire et de la récupérer grâce à la commande cat.
+Cela permet de stocker la valeur dans un fichier temporaire et de la récupérer grâce à la commande cat. Ainsi, il est ici nécessaire d'entrer la ligne de la tâche pour les commandes *done* et *undo* en troisième paramètre.
 
 ## Autres ressources utilisées
 
