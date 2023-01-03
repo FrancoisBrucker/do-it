@@ -20,4 +20,4 @@ MONs de Savinien Laeuffer
 
 # Temps 2
 
-[Flutter (Floor, Flutterbase)](./devmobile/flutter)
+[Flutter (Drift, Flutterbase)](./devmobile/flutter)
