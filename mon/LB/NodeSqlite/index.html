@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Le MON-3 de Léonard</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">Le MON-3 de Léonard</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Léonard Barbotteau</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Le Back-end avec Node.js, puis la base de données Sqlite</p>
+<!-- fin résumé -->
+<h2>Sources</h2>
+<p><a href="https://www.youtube.com/watch?v=09tWCISVU70">Un tuto youtube sur Node.js</a><br>
+<a href="https://www.youtube.com/watch?v=nf0FvGwAQBg">Un tuto youtube sur la programmation asynchrone en Javascript</a><br>
+<a href="https://www.linuxtricks.fr/wiki/sqlite-l-essentiel-sur-cette-base-de-donnees-cli-sql-php">De la documentation sur Sqlite</a><br>
+<a href="https://expressjs.com/fr">La documentation sur express</a><br>
+<a href="https://openai.com/api/">Une IA qui répond aux questions sépcifiques sur l'informatique avec une justesse étonnante</a></p>
+<h3>Introduction avec la programmation synchrone vs la programmation asynchrone.</h3>
+<p>D'après mes recherches, pour bien comprendre l'objet de ce MON il faut d'abord bien comprendre les notions de programmation synchrone/asynchrone.</p>
+<p>Dans la programmation synchrone, on éxécute ligne par ligne, à chaque ligne on éxecute le code, et la ligne d'après on est certains que les lignes d'avant on été éxécutées.</p>
+<p>Dans la programmation asynchrone, les conditions se font sur des événements qui peuvent intervenir à tout moment, et donc une ligne de code plus bas qu'une autre peut s'éxécuter avant la ligne plus haute, si la condition qui permet son éxécution est validée avant.</p>
+<p>Imaginons on utilise readLine qui permet d'interagir avec un utilisateur :</p>
+<pre><code>const readLine = require('readline')
+
+const r1 = readLine.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+</code></pre>
+<p>On va alors créer une fonction qui demande le prénom de quelqu'un. En asynchrone, on va poser la question et faire en sorte qu'une fonction s'éxécute lorsqu'on a donné la réponse à la question, avec un callback:</p>
+<pre><code>const demarrerProgramme = () =&gt; {
+  r1.question('Quel est ton prénom?', reponse =&gt; {
+    console.log('Ton prénom est ' + reponse)
+    r1.close()
+  })
+}
+</code></pre>
+<p>Tant que la réponse n'est pas donnée, le programme éxécute les lignes suivantes.</p>
+<h2>Le back-end.</h2>
+<p>Je n'ai très peu de notions sur la question et je vais donc commencer par les bases de Node.js.</p>
+<h3>Qu'est ce que Node.js?</h3>
+<p>Node.js est un environnement d'exécution JavaScript qui permet de faire des applications web côté serveur. On peut utiliser JavaScript non seulement dans son navigateur, mais aussi sur son serveur web.</p>
+<h3>A quoi sert Node.js?</h3>
+<p>Node.js est très populaire pour la création de serveurs web et de services en temps réel en raison de sa performance et de sa flexibilité.<br>
+Node.js permet également de construire des applications full-stack (c'est-à-dire avec une interface utilisateur côté client et un serveur côté serveur) en utilisant le même langage de programmation (JavaScript) sur les deux côtés.</p>
+<h3>Comment utiliser Node.js ?</h3>
+<p>Pour utiliser Node.js, on peut écrire des scripts Node.js dans un éditeur de texte et les exécuter à l'aide de la commande &quot;node&quot; dans son terminal.<br>
+On peut également utiliser Node.js avec des frameworks tels que Express pour créer des applications web plus complexes. Ce sera le cas dans mon cours et pour la réalisation du POK.</p>
+<h3>Les fonctionnalités qu'Express peut fournir</h3>
+<p>Explorant ce qu'est le back-end, les premières questions qui me viennent à l'esprit sont : à quoi cela sert de faire le lien entre le serveur et le client et comment le faire grâce à Express?<br>
+Nous allons le voir ici en listant les fonctionnalités d'Express</p>
+<ul>
+<li>
+<h4>Le routage</h4>
+<p>La définition de route s'écrit de cette manière:</p>
+<pre><code>app.METHOD(PATH, HANDLER)
+</code></pre>
+<p>Avec <strong>app</strong> une instance d'express, <strong>METHOD</strong> une méthode de demande HTTP, <strong>PATH</strong> un chemin sur le serveur et <strong>HANDLER</strong> la fonction exécutée lorsque la route est mise en correspondance.<br>
+Express nous permet de créer des routes pour notre serveur, qui sont des URL spécifiques que votre serveur peut gérer. Par exemple, on peut créer une route &quot;/&quot; qui gère les requêtes à la racine de son site, ou une route &quot;/api/users&quot; qui gère les requêtes à une API utilisateur.</p>
+<p>On va prendre un exemple avec le code suivant:</p>
+<pre><code>app.get('/partitions/:userId', (req, res) =&gt; {
+  const userId = req.params.userId;
+
+// Récupérer les partitions de l'utilisateur à partir de la base de données ou d'une autre source de données
+  const partitions = getPartitionsForUser(userId);
+
+  res.send(partitions);
+});
+</code></pre>
+<p>Grâce à cette route on peut répondre à une demande GET à l'URL <strong>/partitions/:userId</strong> où <strong>:userId</strong> est un paramètre de route qui peut être remplacé par l'Id de l'utilisateur. On extrait l'Id de l'utilisateur à partir des paramètres de route <strong>req.params.userId</strong> et la fonction utilise une fonction fictive <strong>getPartitionsForUser</strong> pour récupérer les partitions de l'utilisateur.</p>
+</li>
+<li>
+<h4>Middleware</h4>
+<p>Express utilise des &quot;middlewares&quot; pour traiter les requêtes et les réponses. Un middleware est une fonction qui est exécutée avant que la requête ne soit envoyée à la route finale. Vous pouvez utiliser des middlewares pour faire toutes sortes de choses, comme vérifier l'authentification de l'utilisateur, enregistrer des données dans une base de données ou gérer les erreurs.</p>
+<pre><code>app.get('/partitions/:userId', validateUser, (req, res) =&gt; {
+  const userId = req.params.userId;
+
+  // Récupérer les partitions de l'utilisateur à partir de la base de données ou d'une autre source de données
+  const partitions = getPartitionsForUser(userId);
+
+  res.send(partitions);
+});
+
+function validateUser(req, res, next) {
+  const userId = req.params.userId;
+
+  // Valider l'ID de l'utilisateur
+  if (isValidUserId(userId)) {
+    // Appeler le gestionnaire de route suivant si l'ID de l'utilisateur est valide
+    next();
+  } else {
+    // Renvoyer une erreur si l'ID de l'utilisateur n'est pas valide
+    res.status(400).send({ error: 'Invalid user ID' });
+  }
+}
+</code></pre>
+<p>Ici on a rajouté la fonction validateUser, un middleware qui vérifie l'ID de l'utilisateur et passe à la fonction <strong>next()</strong> si elle est valide. Sinon, la fonction renvoie une erreur au client.</p>
+</li>
+<li>
+<h4>Template engine</h4>
+<p>Express prend en charge plusieurs &quot;template engines&quot;, qui sont des outils qui vous permettent de générer du HTML ou d'autres types de contenu à partir de modèles. Cela peut être utile pour créer des sites Web dynamiques qui affichent des données provenant de votre serveur.</p>
+</li>
+<li>
+<h4>Gestion des erreurs</h4>
+<p>Express vous permet de gérer facilement les erreurs qui se produisent sur votre serveur. Vous pouvez définir des gestionnaires d'erreur pour traiter les erreurs de différentes manières, par exemple en renvoyant une page d'erreur ou en envoyant un message à un service de surveillance.</p>
+</li>
+<li>
+<h4>Gestion de la session</h4>
+<p>Express prend en charge la gestion de la session côté serveur, ce qui vous permet de stocker des informations sur les utilisateurs entre les requêtes. Vous pouvez utiliser cela pour créer des sites Web qui se souviennent de l'état de l'utilisateur, comme un panier d'achat ou un formulaire d'inscription.</p>
+<p>Une des solutions pour cela est de s'aider de cookies. Pour cela il faut d'abord installer la bibliothèque <strong>cookie-parser</strong>, ensuite on ajoute le middleware à l'application Express:</p>
+<pre><code>const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+</code></pre>
+<p>Ensuite on définit le cookie dans la réponse HTTP :</p>
+<pre><code>app.post('/preferences', (req, res) =&gt; {
+  // Récupérer les préférences de l'utilisateur à partir de la demande
+const preferences = req.body.preferences;
+
+  // Définir le cookie avec les préférences de l'utilisateur
+  res.cookie('preferences', preferences, { maxAge: 900000, httpOnly: true });
+
+  res.send({ message: 'Preferences saved' });
+});
+</code></pre>
+<p>Les options du cookies contiennent <strong>maxAge</strong> qui définit la durée de vie du cookie en millisecondes, et <strong>httpOnly</strong> qui précise que le cookie ne peut être accédé que par le serveur ce qui peut prévenir des attaques.<br>
+Quand l'utilisateur enverra une demande au serveur, le cookie sera envoyé simultanément et on pourra accéder aux préférences de l'utilisateur à l'aide de la propriété <strong>req.cookies</strong>:</p>
+<pre><code>app.get('/preferences', (req, res) =&gt; {
+  // Récupérer les préférences de l'utilisateur à partir du cookie
+  const preferences = req.cookies.preferences;
+
+  res.send({ preferences });
+});
+</code></pre>
+</li>
+</ul>
+<h2>La base de données</h2>
+<h3>La base de données SQLite fonctionnant sous Express</h3>
+<p>Je vais désormais expliquer comment développer une base de données Sqlite et la faire fontionner sous Express<br>
+Pour ceci suivez ces étapes:</p>
+<ol>
+<li>Installez SQLite et le module Sqlite pour Node.js avec npm:</li>
+</ol>
+<pre><code>npm install sqlite3
+</code></pre>
+<ol start="2">
+<li>Créez un fichier comme <strong>BDD.sqlite</strong> dans le projet et utilisez le module <strong>sqlite3</strong></li>
+</ol>
+<pre><code>const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('BDD.sqlite');
+</code></pre>
+<ol start="3">
+<li>Créez une table dans la base de données en exécutant une requête SQL:</li>
+</ol>
+<pre><code>db.serialize(() =&gt; {
+  db.run(&quot;CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, pseudo TEXT, password TEXT)&quot;);
+});
+</code></pre>
+<ol start="4">
+<li>Insérez des données dans la table en exécutant une autre requête SQL :</li>
+</ol>
+<pre><code>db.serialize(() =&gt; {
+  const stmt = db.prepare(&quot;INSERT INTO users (pseudo, password) VALUES (?, ?)&quot;);
+  stmt.run(&quot;Leonard&quot;, &quot;draneol&quot;);
+  stmt.run(&quot;Nathan&quot;, &quot;nahtan&quot;);
+  stmt.finalize();
+});
+</code></pre>
+<ol start="5">
+<li>Créez un serveur Express et configurez-le pour pouvoir récupérer les informations de la base de données lors de requêtes HTTP :</li>
+</ol>
+<pre><code>const express = require('express');
+const app = express();
+
+app.get('/users', (req, res) =&gt; {
+  db.all(&quot;SELECT * FROM users&quot;, (err, rows) =&gt; {
+    res.send(rows);
+  });
+});
+
+app.listen(3000, () =&gt; {
+  console.log('Server listening on port 3000');
+});
+</code></pre>
+<p>Voilà, l'application a bien été construite</p>
+<p>Pour ajouter un nouvel enregistrement dans la table users avec les valeurs <strong>Vincent</strong> et <strong>tnecniv</strong> pour les colonnes <strong>name</strong> et <strong>password</strong>, vous pouvez utiliser une requête INSERT SQL comme ceci :</p>
+<pre><code>db.run(&quot;INSERT INTO users (name, password) VALUES (?, ?)&quot;, &quot;Vincent&quot;, &quot;tnecniv&quot;);
+</code></pre>
+<p>On peut également utiliser la méthode <strong>run</strong> d'une fonction préparée:</p>
+<pre><code>const stmt = db.prepare(&quot;INSERT INTO users (name, password) VALUES (?, ?)&quot;);
+stmt.run(&quot;Vincent&quot;, &quot;tnecnit&quot;);
+stmt.finalize();
+</code></pre>
+<p>Cette méthode est efficace si on veut insérer plusieurs enregistrements.</p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
