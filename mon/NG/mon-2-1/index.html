@@ -59,6 +59,8 @@
           
             <li class="before:content-['•'] before:px-1">back</li>
           
+            <li class="before:content-['•'] before:px-1">express</li>
+          
         </ul>
       </div>
     
@@ -82,6 +84,84 @@
   <!-- début résumé -->
 <p>Pour ce MON, je vais apprendre à utiliser les outils de back qui me permettront de déployer mon site sur un seveur lors de mon POK, et ce notamment grâce au cours de François Brucker.</p>
 <!-- fin résumé -->
+<h2>Déploiement d'un dossier sur OVH</h2>
+<p>On peut déployer d'un coup tous les fichiers de notre site sur le serveur OVH avec les commandes suivantes :</p>
+<p>Archivage et compression du dossier contenant tous les fichiers du site</p>
+<pre><code>tar -Jcvf archive_dossier.tar.xz dossier/
+</code></pre>
+<p>Copie de l'archive compressée sur le serveur avec le protocole SSH</p>
+<pre><code>scp chemin/archive_dossier.tar.xz mon_herbe@ovh1.ec-m.fr:www/archive_dossier.tar.xz
+</code></pre>
+<p>Décompression et désarchivage</p>
+<pre><code>tar -Jxvf archive_dossier.tar.xz
+</code></pre>
+<p>On peut désormais accéder aux fichiers du site de cette manière : <code>http://mon_herbe.ovh1.ec-m.fr/dossier_du_site/chemin</code>.</p>
+<h2>Utilisation de Node.js et Express pour son site</h2>
+<p><img src="express.png" alt="Logo Express"></p>
+<p>Création du fichier de configuration package.json</p>
+<pre><code>npm init
+</code></pre>
+<p>Ajout du module Express</p>
+<pre><code>npm add --save express
+</code></pre>
+<p>Il faut également créer un fichier <code>index.js</code> qui va nous aider à gérer simplement les routes de notre site avec Express, c'est-à-dire les différents URL auxquels on peut accéder sur le serveur.</p>
+<p>Pour lancer le site, on exécute <code>node index.js</code> sur le serveur.</p>
+<p>Un bon usage est de séparer la partie front de la partie back. Pour cela, on créer un dossier <code>static</code> qui contiendra tous les fichiers front de notre site.</p>
+<h3>Utilisation du fichier <code>index.js</code></h3>
+<p>Exemple du fichier <code>index.js</code> que j'utilise pour mon site, dans le cadre de mon POK :</p>
+<pre><code>const path = require('path')
+
+const express = require('express')
+const app = express()
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+app.use(&quot;/static&quot;, express.static(path.join(__dirname, '/static')))
+
+app.get('/', (req, res) =&gt; {
+    res.redirect(301, '/static/index.html')
+})
+
+
+app.use(function (req, res) {
+    console.log(&quot;404 : &quot; + req.url);
+
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/html');
+
+    res.end(&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;404&lt;/title&gt;&lt;/head&gt;&lt;body&gt;404&lt;/body&gt;&lt;/html&gt;&quot;);
+
+})
+
+app.listen(port, hostname);
+console.log(`Server running at http://${hostname}:${port}/`);
+</code></pre>
+<p>Ici, j'utilise le port 3000 du serveur local (qui correspond à l'adresse IP 127.0.0.1).</p>
+<p>A chaque fois que l'on va envoyer une requête au serveur, chaque appel de <code>app</code> va être testé (sachant que <code>use</code> fonctionne avec toutes les requêtes, <code>get</code> avec les requêtes de type <code>get</code> et <code>post</code> avec les requêtes de type <code>post</code>), et dès que la condition du premier paramètre d'un des appels est satisfait on exécute le deuxième paramètre de cet appel.</p>
+<p>Par défaut, les appels suivants de <code>app</code> ne sont pas exécutés. On peut tout de même faire en sorte d'exécuter l'appel suivant grâce à la fonction <code>next()</code>, utilisée en fin d'appel.</p>
+<p>Dans mon exemple, on commence par filtrer toutes les requêtes dont l'url (après l'url du site lui-même) est <code>static/</code> qui sont renvoient vers les pages du site correspondantes (dans le dossier <code>static</code> du site).</p>
+<p>On gère ensuite le cas où notre requête contient simplement l'url du site afin de rediriger vers le fichier <code>static/index.html</code> qui est la première page du site.</p>
+<p>Enfin, toutes les requêtes qui n'ont pas encore été gérées à ce stade tombent sur le dernier appel qui renvoie dans tous les cas vers une page d'erreur 404 (assez rudimentaire ici).</p>
+<h4>Utilisation de l'objet <code>Router</code> d'Express</h4>
+<p>Lorsque l'on travaille sur un site d'une taille plus conséquente, il peut être pratique d'utiliser les <code>Router</code>, qui permettent des groupes de routes.</p>
+<p>Par exemple, on peut créer un <code>Router</code> pour un ensemble de requêtes dans un fichier, puis l'appeler en deux lignes dans notre <code>index.js</code> :</p>
+<pre><code>const router = require('chemin_vers_le_router');
+
+app.use('/requetes_concernees', router);
+</code></pre>
+<h2>Gestion de la modification en temps réel d'un document collaboratif</h2>
+<p><img src="meteor.png" alt="Logo Meteor"></p>
+<p>Pour la réalisation de notre POK, il faudrait que nous puissions, dans l'idéal, faire en sorte que les partitions du site &quot;Mon sheet c'est moi&quot; soient collaboratives et que les modifications d'un utilisateur soient visibles en temps réel par les autres utilisateurs. Cela fonctionnerait à la manière d'un Google Docs mais pour des partitions musicales.</p>
+<p>Cela est possible avec des frameworks comme Firebase ou Meteor. Le principe est que chaque utilisateur soit authentifié et que les modifications qu'il apporte à un document soient enregistrées dans sa session sur le serveur. Dès qu'une modification est apportée par un utilisateur, une notification est envoyée aux autres utilisateurs puis leur version du document est actualisée en temps réel.</p>
+<p>Nous pensons utiliser Meteor pour cela, il faudra se documenter plus en détail lors de la réalisation du POK.</p>
+<h2>Liens</h2>
+<ul>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/ops/ssh/">SSH et Serveur OVH</a></li>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/serveur-web/">Cours Serveur Web</a></li>
+<li><a href="https://docs.meteor.com">Documentation de Meteor</a></li>
+</ul>
+
 
 </article>
 
