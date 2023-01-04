@@ -80,12 +80,6 @@ index=web* status=404 | geostats count by clientip
 **Time ranges**
 The search results can be filtered by time ranges. There are two types of time ranges: absolute and relative. Absolute time ranges are specified by a start and end time, e.g. ```2019-01-01 00:00:00``` to ```2019-01-01 23:59:59```. Relative time ranges are specified by a start and end time relative to the current time, e.g. ```-1d@d``` to ```@d``` (yesterday to today). Besides this notation, the time ranges can also be specified by a time range picker in the search bar.
 
-### Integrations
-Splunk can be connected with many different systems through proprietary connectors or an API to combine the power of Splunk indexing and searching with e.g. TODO software.
-In the IT security context, Splunk (Splunk Enterprise Security) is used as complete SIEM (security incident event management) solution because Splunk offers built-in alert and pattern-finding capabilities.
-
-
-
 ## Sources
 ### Tutorials
 - https://education.splunk.com/free
