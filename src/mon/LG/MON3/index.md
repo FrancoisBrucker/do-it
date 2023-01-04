@@ -6,7 +6,7 @@ authors:
   - Louise Gacoin
 
 ---
-L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis le cours de Monsieur Brucker *ajouter le lien*.
+L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis [le cours de Monsieur Brucker ][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/].
 Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:
 - MON 1.2 de Nicolas BERT [Programmation objet en Python](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/poo-python/) (Bon exemple de programme )
 - MON 1.1 de Tuncay Bilgi [POO](https://francoisbrucker.github.io/do-it/mon/TBi/MON/POO/) (fonctionnalités avancées)
@@ -187,7 +187,7 @@ Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index
 - J'ai eu du mal à comprendre comment bien utiliser "self". J'ai pas mal pataugé au début à cause de cela
 - L'appel d'un objet de la classe Bateau dans l'écriture d'une méthode de la classe Grille m'a aussi posé problème
 - J'ai bien compris la théorie des tests mais la réalisation de vrais tests vraiment efficaces reste assez mystérieuse 
-- Petit bonus: j'ai appris à utilisé le débogueur pour comprendre les problèmes demon code 
+- Petit bonus: j'ai appris à utiliser le débogueur pour comprendre les problèmes de mon code 
 
 {% endinfo %}
 
@@ -199,7 +199,7 @@ Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index
  # Cours
 
  Une composition est crée avec un ensemble d'objets. Elle est crée avec une classe.
- Une agrégation représente un ensemble d'objets ajoutés par une méthode dans l'objet principale. Ils ne possèdent pas de classe propre
+ Une agrégation représente un ensemble d'objets ajoutés par une méthode dans l'objet principale. Ils ne possèdent pas de classe propre.
 
  exemple du panier de fruits:
  - le panier est une composition de fruits
@@ -212,7 +212,7 @@ Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index
 
 # Pratique: On lance 5 dés
 
-Dans ce projte, on créé un TapisVert qui contient 5 dés que l'on peut lancer.
+Dans ce projet, on créé un TapisVert qui contient 5 dés que l'on peut lancer.
 Représentation UML:
 
 <img src="ulm_tapis.png">
