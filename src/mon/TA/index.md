@@ -12,7 +12,7 @@ tags: ['mon']
 
 - Hachage et chiffrement
 - Failles web
-- Pentest
+- Pentest : environnement et outils
 
 <!-- fin résumé -->
 
@@ -23,6 +23,6 @@ tags: ['mon']
 
 ### Temps 2
 
-- [Pentest](pentest)
+- [Pentest : environnement et outils](pentest)
 
 ### Temps 3
