@@ -246,6 +246,38 @@ On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit m�
 
 {%info%}Bravo ! A partir d'ici vous avez tout ce qu'il faut pour commencer à expérimenter sur Jenkins. La suite des opérations consiste par exemple à mettre en place de vrais pipelines, à donner une clé ssh à jenkins pour qu'il puisse commit sur les branches du repo. {%endinfo%}
 
+### Pour aller plus loin :
+
+Nous allons mettre en place une pipeline qui effectue une action sur le repository à chaque pull-request effzctuée sur le remote.
+
+#### Relier Jenkins et Github par SSH :
+
+Nous allons donner une clé de déploiement a Jenkins pour qu'il puisse déployer ou non sur le repo Github.
+Pour cela on génere une paire de clé dans notre projet Artblog avec `ssh keygen`, on choisit un dossier, je met mes clés dans ssh/ .
+
+{%attention%}Il est impératif d'inclure le dossier qui contient vos clés dans le fichier `.gitignore` sinon vos clés seront dévoilée publiquement et c'est un gros risque de sécurité.{%endattention%}
+
+Ensuite, on entre cette nouvelle clé dans le repository github en tant que clé de déploiement.
+
+<img src="../images/github1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
+
+Coté Jenkins on met en place les **credentials**, c'est à dire notre clé privée SSH dans une pipeline qui va permettre de modifier notre Repository github.
+
+#### Permettre à Jenkins de repérer des pull request :
+
+Pour cela on installe des plugins notamment **Github API** qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évenement à lieu.
+
+{%attention%}Il se trouve que ce que je veux faire n'est pas possible à moins d'avoir une adresse public à questionner. En effet le webhook de github ne peut pas trouver mon localhost:8080 où jenkins écoute les webhooks. Il faut mettre en place une interface qui transforme mon port local en public grâce à un servic tier comme webhook relay, je ne le fais donc pas.{%endattention%}
+
+#### Plan de secours : Job périodique :
+
+On essaie de créer une pipeline qui publie un fichier dans une branche jenkins, toutes les minutes, si un test est réussi.
+
+Je créer une branche jenkins, vierge : `git switch --orphan jenkins`
+
+
+
+
 
 
 
