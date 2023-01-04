@@ -1,12 +1,12 @@
 ---
+tags: ['mon']
+
 layout: layout/post.njk
 
 title: "MON 2.1 : Web Front 1"
 authors:
   - Thomas Duroy
  
- tags: ['mon']
-
 ---
 
 # MON 2.1: WEB DEV 1
