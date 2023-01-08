@@ -84,8 +84,101 @@
   
 
   <!-- Début Résumé -->
-<p>Assembly language (x86, ARM, ...) (+ peut-être reverse engineering avec gdb, radare2 et Ghidra)</p>
+<p>TODO resume<br>
+Assembly language (x86, ARM, ...) (+ peut-être reverse engineering avec gdb, radare2 et Ghidra)</p>
 <!-- fin résumé -->
+<!-- ## Structure de ce MON
+1. Introduction
+  - What is assembly language?
+    - Assembly vs high-level language
+  - Use cases of assembly language
+    - Super fast execution
+    - Embedded systems (memory constraints, ...)
+    - Reverse engineering -> most important for me personally
+  - Differences of different assembly languages (x86, ARM, ...)
+2. Assembly language for ARM
+  - why? -> ARM is used in many embedded systems and will be used more and more in the future
+  - follow tutorial on https://azeria-labs.com/writing-arm-assembly-part-1/
+3. Assembly language for x86
+  - not in depth, only show the key differences to ARM assembly
+4. Reverse engineering with gdb, radare2 and Ghidra (only if time permits)
+  - gdb
+  - radare2
+  - Ghidra
+5. Useful resources
+  - Online resources
+  - Tools (like online assemblers, ...) -->
+<h2>Introduction</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Prerequisites</strong></p>
+</div><div class="pl-8 mr-8">
+<p>In order to follow this MON (or any tutorials on assembly programming), you should have basic knowledge of computer architecture and programming. You should at least:</p>
+<ul>
+<li>Understand the basic concepts of a computer (CPU, memory, input/output, ...)</li>
+<li>Being familiar with binary and hexadecimal numbers</li>
+<li>Know at least the basics of one high-level programming language like C++ or Java</li>
+</ul>
+<p>For a deeper understanding of machine language and compilers, see the <a href="../../JBD/Mes_MON/compilateur">MON of Jean-Baptiste</a> (but that's not necessary for understanding this MON)</p>
+</div></div>
+<h3>What is assembly language?</h3>
+<p>Assembly language is a very low-level programming language. It is being translated to machine code (binary code executed by the CPU) by an assembler. Because it is so hardware-near, it is very fast and efficient. However, it is harder to read and write than high-level languages like C++ or Java, that's why it only used in few use cases nowadays.</p>
+<h3>Use cases of assembly language</h3>
+<p>Assembly language is nowadays mostly used in <strong>embedded systems</strong> like microcontrollers, where the hardware is very limited (in terms of memory and processing power), so the performance of the code is very important. Because assembly language is hardware-near, it is used in cases where hardware-specific functions need to be used. Additionally, assembly language is used in <strong>reverse engineering</strong> to understand how a program works. The code recovered from a program can be disassembled to assembly language and then analyzed.<br>
+Besides those use cases, it is great to learn assembly language in order to <strong>understand the architecture of a computer</strong> with its CPU, registers, memory and I/O. It is also useful to understand how a program works in general and how it is executed by the CPU. This permets better software development and debugging, e.g. by knowing potential for optimizing or better securing the software.<br>
+Other special use cases are <strong>OS and driver development</strong> because some of the functions in those area can't be implemented in high-level languages. Assembly language is used unknowingly by many programs, because the compiler that compiles high-level languages (C and C++ code) <strong>generates assembly code</strong>.</p>
+<h3>Differences of different assembly languages (x86, ARM, ...)</h3>
+<p>There is no single &quot;assembly language&quot; because the instruction set of every CPU varies and therefore the language to control those instructions also varies. This means that every CPU has its own assembly language, but as they are very similar, it is possible to learn one assembly language and then learn the others relatively quickly. They share big parts of the syntax, so one can adapt quickly to a new assembly language if he needs to program for a different CPU. Nowadays, mainly two families of CPUs, and thus two families of assembly language, are used: x86 and ARM.</p>
+<h4>x86</h4>
+<p>The x86 family is used in most <strong>desktop computers</strong>. The CPUs of the x86 family use a <strong>CISC (complex instruction set computer)</strong> architecture. CISC CPUs have a larger, more complex instruction set with many specialized instructions for a variety of tasks. This allows them to perform a wider range of functions, but at the cost of slower execution times and increased complexity in the CPU. Because the instruction set is so complex, it is not easy to learn x86 assembly. The most well-known CPUs of this family are the Intel Core i3, i5 and i7 CPUs and the AMD Ryzen CPUs, so assumingly it is the CPU that is used in the computer you are using to read this MON at the moment.</p>
+<h4>ARM</h4>
+<p>The instruction set of the ARM CPU family is much simpler because it uses a <strong>RISC (reduced instruction set computer)</strong> architecture. RISC CPUs have a small, fixed instruction set with a limited number of instructions that can be executed quickly. This reduces the complexity of the CPU and allows it to execute instructions more quickly, at the cost of some flexibility. However, some instructions that can be executed in one step on a CISC CPU need multiple steps on a RISC CPU. ARM CPUs are used in most <strong>mobile devices and embedded systems</strong>. The most common CPUs of this family are the Apple A-series CPUs like the A15 Bionic which is used in the iPhone 14 and the Qualcomm Snapdragon CPUs like the Snapdragon 888 which is used in the Samsung Galaxy S21. In many embedded systems, ARM Cortex CPUs are used like the Cortex-M4 which is used in the popular STM32F4 microcontroller. ARM also spreads into the feld where x86 is dominating, e.g. with the Apple M2 chip which is used in the newest MacBook Air and the MacBook Pro and is considered extremely energy-efficient while still being very powerful. This shows that ARM will get even more relevant in the near future and could replace the x86 architecture in many domains.</p>
+<h2>Assembly language for ARM</h2>
+<p>I start my learning journey with the book &quot;Modern Assembly Language Programming with the ARM Processor&quot; by Larry D. Pyeatt. Because it is over 500 pages long, I won't cover all of it and instead follow the tutorial by freeCodeCamp on <a href="https://www.youtube.com/watch?v=gfmRrPjnEw4">youtube</a> which covers ARM assembly. Additionally, I will follow the tutorial on <a href="https://azeria-labs.com/writing-arm-assembly-part-1/">azeria-labs.com</a> because it sets the foundation for following courses on exploit development for ARM which is an interesting topic in cybersecurity.</p>
+<h3>Running ARM assembly code</h3>
+<p>To use the ARM assembly language, you need a device containing an ARM (micro)chip where the assembled code is stored and executed. For example, the <em>Raspberry Pi 4 Model B</em>, the current version of the Raspberry Pi computer, uses a Broadcomm BCM2711 SoC (system-on-a-chip) that includes the Cortex A-72 ARM chip as CPU. This means that you can use the ARM assembly language directly on the Raspberry Pi to get a real-world experience and direct hardware integration, e.g. you can blink the onboard LED etc.</p>
+<p>If you don't have access to a ARM chip, an emulator can be used. The advantage is that you can inspect the whole memory at every given time, easily understand changes that the program makes to the memory, and that you don't need to flash the device with the new code after every change that is made in the code. You can find an online ARM emulator <a href="https://cpulator.01xz.net/?sys=arm-de1soc">here</a>.</p>
+<p>In this MON, I will mainly use the emulator to write and execute the assembly code. Maybe later, I will test it also with the Raspberry Pi 4 that is laying around in my room.</p>
+<h3>ARM assembly basics</h3>
+<h4>Registers</h4>
+<p>Registers are the closest memory to the CPU. It is a small amount of memory that is directly accessible by the CPU, thus the CPU can read and write to the registers very quickly. One register can store data of the length of one word. A word is a fixed amount of bits that can be stored in a register. The amount of bits depends on the CPU, for example, the ARM Cortex-M4 CPU uses 32-bit words, so one word is 32 bits long and therefore a register can store 32 bits.</p>
+<p>Some of those registers are general purpose registers (e.g. r0-r6) and some of them are special purpose registers:</p>
+<ul>
+<li>r7: used for system calls</li>
+<li>the program counter (PC): stores the address of the next instruction to be executed</li>
+<li>the stack pointer (SP): stores the address of the top of the stack</li>
+<li>the link register (LR): stores the address of the next instruction to be executed after a function call</li>
+<li>the program status registers (SPSR and CPSR): CPSR stores of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag), SPSR records the pre-exception value of the CPSR.</li>
+<li>...</li>
+</ul>
+<h4>Instructions</h4>
+<h2>Assembly language for x86</h2>
+<p>I will not go into detail about x86 assembly language because it is not used in embedded systems and I will not use it in the future. However, I will show the key differences to ARM assembly language.</p>
+<h2>Reverse engineering with gdb, radare2 and Ghidra (only if time permits)</h2>
+<h2>Useful resources</h2>
+<h3>Tutorials</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gfmRrPjnEw4">https://www.youtube.com/watch?v=gfmRrPjnEw4</a> (2:30:00 freeCodeCamp tutorial on ARM assembly)</li>
+<li><a href="https://azeria-labs.com/writing-arm-assembly-part-1/">https://azeria-labs.com/writing-arm-assembly-part-1/</a> (tutorial on ARM assembly)</li>
+</ul>
+<h3>Tools</h3>
+<ul>
+<li><a href="https://cpulator.01xz.net/?sys=arm-de1soc">https://cpulator.01xz.net/?sys=arm-de1soc</a> (online ARM emulator)</li>
+<li><a href="https://defuse.ca/online-x86-assembler.htm">https://defuse.ca/online-x86-assembler.htm</a> (online x86 assembler/disassembler)</li>
+</ul>
+<h3>Other resources</h3>
+<ul>
+<li><a href="https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH">https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH</a> (Ben Eater - &quot;Build a 6502 computer from scratch&quot; (youtube series))</li>
+<li>Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (<a href="https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982">https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982</a>)</li>
+</ul>
+<h3>Sources</h3>
+<ul>
+<li>chatGPT (<a href="https://chat.openai.com/">https://chat.openai.com/</a>)</li>
+<li><a href="https://lioncash.github.io/ARMBook/the_apsr,_cpsr,_and_the_difference_between_them.html">https://lioncash.github.io/ARMBook/the_apsr,_cpsr,_and_the_difference_between_them.html</a></li>
+</ul>
 
 
 </article>
