@@ -1,12 +1,12 @@
 ---
 layout: layout/post.njk
 
-title: "Base de données non relationnelles"
+title: "React avancé"
 authors:
   - Nicolas BERT
 
 ---
 
 <!-- début résumé -->
-BDD No SQL (Temps 2)
+React avancé (Temps 3)
 <!-- fin résumé -->

@@ -1,12 +1,12 @@
 ---
 layout: layout/post.njk
 
-title: "Développement mobile en React Native"
+title: "GraphQL"
 authors:
   - Nicolas BERT
 
 ---
 
 <!-- début résumé -->
-Développement mobile RN (Temps 3)
+GraphQL (Temps 2)
 <!-- fin résumé -->
