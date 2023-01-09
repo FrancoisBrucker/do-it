@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Applications pour les Restos du coeur"
+title: "Cœur en Action - Restos du coeur"
 authors:
   - Killian ROYANT
   - Louise GACOIN
