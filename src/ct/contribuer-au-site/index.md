@@ -10,7 +10,7 @@ tags: ['ct']
 
 <!-- début résumé -->
 
-Comment contribuer au site do-it.
+Comment contribuer au site `Do_it`.
 
 <!-- fin résumé -->
 
