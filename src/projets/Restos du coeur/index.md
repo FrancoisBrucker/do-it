@@ -12,12 +12,10 @@ tags: ['projet']
 ---
 
 <!-- début résumé -->
-Projet 3A de Ossama ABDANE, Louise GACOIN, Sarah HONORÉ et Killian ROYANT
-<!-- fin résumé -->
-
 ## Présentation
 
 Le projet est réalisé avec le centre des **Restos du Coeur** de la rue Granoux à Marseille, **4 étudiants** du parcours DO-IT. Laetitia Piet encadre ce projet. Ce projet est en collaboration avec le centre des restos du coeur des 4° et 5° arrondissements de Marseille. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**.
+<!-- fin résumé -->
 
 ## Nos immersions
 
@@ -39,13 +37,15 @@ Nous avons identifié **3 problèmes** et avons proposé des solutions pour chac
 
 ### Problème 1 : Les inscriptions
 
-Avant chaque période de distribution (deux fois par an), une phase d’inscription a lieu.
+Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu.
 
 **Problème identifié :** Il faut remplir manuellement une fiche d’iscription pour chaque famille bénéficiaire. Cela rend le processus long et fastidieux.
 
 **Notre solution :** numériser la phase d’inscription en automatisant le remplissage de ce document.
 
 ### Problème 2 : Le calendrier des bénévoles
+
+Chaque semaine, des bénévoles sont présents pour **distribuer les denrées alimentaires** aux familles bénéficiaires. Actuellement, ces bénévoles viennent **sans prévenir** quand ils sont disponibles.
 
 ![surgeles](./photos/surgeles.jpg)
 
@@ -59,6 +59,8 @@ Avant chaque période de distribution (deux fois par an), une phase d’inscript
 
 ### Problème 3 : La répartition des denrées alimentaires
 
+Après chaque livraison de denrées alimentaires, il faut **répartir les denrées entre les différentes familles**. Actuellement, la responsable de centre fait les calculs **à la main**.
+
 ![conserves](./photos/conserves.jpg)
 
 **Problèmes identifiés :**
@@ -70,6 +72,6 @@ Avant chaque période de distribution (deux fois par an), une phase d’inscript
 
 ## Notre poster
 
-Afin de présenter notre projet, nous avons réalisé un poster. Vous pouvez le télécharger [ici](poster.pdf).
+Afin de présenter notre projet, nous avons réalisé un poster.
 
 ![poster](./photos/poster.png)
