@@ -5,10 +5,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/!(assets)/**/node_modules");
 
   // images 
-  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{jpg,png,ico}");
+  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{jpg,png,ico,pdf}");
   
   // data
-  eleventyConfig.addPassthroughCopy("src/**/{cours,enseignements,tutoriels}/**/*.{txt,edi,csv,json}");
+  eleventyConfig.addPassthroughCopy("src/**/{cours,enseignements,tutoriels}/**/*.{txt,edi,csv,json,pdf}");
 
   eleventyConfig.addPlugin(require("eleventy-postcss-extension"));
 
