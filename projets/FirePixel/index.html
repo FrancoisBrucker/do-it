@@ -84,27 +84,39 @@
   
 
   <!-- début résumé -->
-<p>La pixel war centralienne organisé autour d'un écran avec comme interface d'entrée .</p>
+<p>La pixel war centralienne organisé autour d'un écran comme interface d'entrée .</p>
 <!-- fin résumé -->
 <h1><a href="">FirePixel</a></h1>
-<p>Le projet a pour but de recréer la <a href="">pixel war</a> de reddit.</p>
-<h2>Le Principe :</h2>
-<p>Un tableau de $n \times m$ pixels est partagé entre plusieurs utilisateurs. Ceux-ci peuvent modifier les couleurs des cases en chissiant parmis une sélection limitée de couleur. Le but est que plusieur utilisateurs se coordonent pour dessiner une image, ou remplacer celles des autres.</p>
-<p>Il n'y a pas de modération automatique, mais les administrateurs se réservent le droit de supprimer des sections d'images jugées innapropriées.</p>
-<h2>En Pratique :</h2>
-<p>Le projet sera déployé sur un écran qui pourra être posé n'importe où dans centrale, par exemple dans un lieu de pause comme à coté des distributeurs de café.</p>
-<p>Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour s'enregistrer sur l'application. Sur leur téléphone, ils peuvent chosir un pixel, une couleur, et appliquer la modification qui sera affiché en temps réel sur l'écran principal.<br>
-Le télephone devra  être connecté sur le réseau centralien.</p>
-<p>Un compte admninistrateur permet de sélectionner des zones à effacer pour modérer l'usage de l'application.</p>
-<h2>Stack technologique :</h2>
-<p>L'application nécéssite un Front, un Back et une base de données.<br>
+<p>Le projet a pour but de recréer la <a href="https://www.reddit.com/r/place/?cx=1461&amp;cy=200&amp;px=199&amp;ts=1649112460185">pixel war</a> de reddit.</p>
+<h2>Le Principe</h2>
+<p>Un tableau de $n \times m$ pixels est partagé entre plusieurs utilisateurs sur un écran. Les utilisateurs peuvent modifier les couleurs des cases parmi 16 couleurs disponibles. Le but est que plusieurs utilisateurs se coordonnent pour dessiner une image, ou remplacer celles des autres.</p>
+<p>Il n'y a pas de modération automatique, mais les administrateurs se réservent le droit de supprimer des sections d'images jugées inappropriées.</p>
+<h2>En Pratique</h2>
+<p>Le projet sera déployé sur un écran qui pourra être posé n'importe où dans centrale. Celui pourra par exemple être dans un lieu de pause comme à coté des distributeurs de café ou dans un lieu de passage.</p>
+<p>Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à l'application. Sur leur téléphone, ils peuvent choisir un pixel et une couleur, et appliquer la modification (qui sera alors affichée en temps réel sur l'écran principal) à l'aide d'un joystick.<br>
+Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur.</p>
+<p>16 utilisateurs peuvent interagir simultanément. Afin de savoir où l'on est sur l'écran, chaque utilisateur est représenté par une couleur et son pixel actuel est marqué par cette couleur.</p>
+<p>Un compte administrateur permet de sélectionner des zones à effacer pour modérer l'usage de l'application.</p>
+<h2>Stack technologique</h2>
+<p>L'application nécessite un Front, un Back et une base de données.<br>
 Pour la réaliser on utilise le stack suivant :</p>
 <ul>
-<li>Front-end : React.js</li>
+<li>Front-end : React.js avec Tailwind</li>
 <li>Back-end : Express.js</li>
+<li>Technologie de communication : WebSocket</li>
 <li>Base de données : MongoDB ?</li>
 <li>Carte RaspberryPi + écran de télé%</li>
 </ul>
+<h2>Avancée du projet</h2>
+<p>Actuellement, différentes étapes ont été réalisées :</p>
+<ul>
+<li>Maquette des écrans sur Figma</li>
+<li>Premier prototype fonctionnel (écran des téléphones, de la télé et interaction entre les deux)</li>
+<li>Déploiement sur l'OVH</li>
+</ul>
+<p>Différentes fonctionnalités sont encore à coder comme la prévisualisation d'une zone de l'écran et le compte administrateur. Par ailleurs, des tests utilisateurs vont être réalisés de manière à vérifier que l'interface est compréhensible et simple d'utilisation.</p>
+<h2>Poster</h2>
+<p><img src="./Poster/Poster.png" alt="Poster" title="Poster FirePixel"></p>
 
 
 </article>
