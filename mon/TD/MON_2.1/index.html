@@ -49,17 +49,6 @@
   <h1  class="mb-1">MON 2.1 : Web Front 1</h1>
   <div class="mb-4">
     
-      <div class=" px-4 flex items-center">
-        
-          <div class="font-bold">Tag : </div>
-        
-        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
-          
-            <li class="before:content-['•'] before:px-1">mon</li>
-          
-        </ul>
-      </div>
-    
 
     
       <div class=" px-4 flex items-center">
@@ -77,8 +66,7 @@
 
   
 
-  <h1>MON 2.1: WEB DEV 1</h1>
-<p>J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme :</p>
+  <p>J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme :</p>
 <ul>
 <li>
 <p><a href="https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4">https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4</a></p>
@@ -87,17 +75,11 @@
 <p><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g">https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g</a></p>
 </li>
 </ul>
-<br>
-Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel. 
-<br>
+<p>Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel.</p>
 <p>Voici donc le tutoriel pour le réaliser.</p>
-<br>
 <h2>Tutoriel Carrousel</h2>
-<hr>
 <p>Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : <a href="https://codepen.io/dcode-software/pen/BaRMvJo">https://codepen.io/dcode-software/pen/BaRMvJo</a>.</p>
-<br>
-<h3><strong>Étape 1 : Squelette du carrousel</strong></h3>
-<br>
+<h3>Étape 1 : Squelette du carrousel</h3>
 <p>Dans le body de notre fichier html, nous créons ici 2 éléments de type div qui constituent le squelette de notre carrousel.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>carousel</span><span class="token punctuation">></span></span> 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>carousel_slot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Mettre ici ce que vous voulez<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -105,7 +87,6 @@ Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web a
 </code></pre>
 <p>Le premier div de classe &quot;carousel&quot; sera la box contenant tous les slots. En effet, nous allons empiler les div &quot;carousel_slot&quot; puis n'afficher que celui sélectionné par l'utilisateur à l'aide d'attribution de classe.</p>
 <p>Vous pouvez ajouter autant de &quot;carousel_slot&quot; que vous avez envie.</p>
-<br>
 <p>Un élément important de ce carousel est le div contenant les boutons de navigation. Il sera généré par une fonction js mais ressemble à ceci :</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>carousel_navigation<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>carousel_button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
@@ -114,29 +95,21 @@ Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web a
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>(attention, il ne faut <strong>pas</strong> ajouter ce code au fichier html)</p>
-<br>
 <h3><strong>Étape 2 : Style CSS</strong></h3>
-<br>
-<p>L'affichage du slot selectionné se fera par un changement de classes. Il est donc important de créer 4 classes de style distinct, à savoir :</p>
-<ul>
-<li>Le style d'un slot par défaut</li>
-</ul>
+<p>L'affichage du slot sélectionné se fera par un changement de classes. Il est donc important de créer 4 classes de style distinct, à savoir :</p>
+<h4>Le style d'un slot par défaut</h4>
 <pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.carousel_slot</span><span class="token punctuation">{</span>
   <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </code></pre>
 <p>Il est possible de le styliser davantage mais l'attribut &quot;display&quot; doit absolument être fixé à &quot;none&quot; pour faire disparaître les slots non-désirés.</p>
-<ul>
-<li>Le style du slot sélectionné</li>
-</ul>
+<h4>Le style du slot sélectionné</h4>
 <pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.carousel_selected_slot</span><span class="token punctuation">{</span>
   <span class="token property">display</span><span class="token punctuation">:</span>block<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Similairement, ici l'attribut &quot;display&quot; doit être &quot;block&quot; pour rendre le slot visible.</p>
-<ul>
-<li>Le style de bouton par défaut</li>
-</ul>
+<h4>Le style de bouton par défaut</h4>
 <pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.carousel_button</span><span class="token punctuation">{</span>
   <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
   <span class="token property">height</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
