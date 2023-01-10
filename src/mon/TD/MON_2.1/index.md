@@ -1,40 +1,27 @@
 ---
-tags: ['mon']
-
 layout: layout/post.njk
 
 title: "MON 2.1 : Web Front 1"
 authors:
-  - Thomas Duroy
- 
+  - Thomas Duroy 
 ---
 
-# MON 2.1: WEB DEV 1
 
-J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme : 
-- https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4
+J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme :
 
-- https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g
+* <https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4>
 
-<br>
-Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel. 
+* <https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g>
 
-<br>
+Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel.
 
-Voici donc le tutoriel pour le réaliser. 
-
-<br>
-
+Voici donc le tutoriel pour le réaliser.
 
 ## Tutoriel Carrousel
----
 
 Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : https://codepen.io/dcode-software/pen/BaRMvJo.
 
-<br>
-
-### **Étape 1 : Squelette du carrousel** 
-<br>
+### Étape 1 : Squelette du carrousel
 
 Dans le body de notre fichier html, nous créons ici 2 éléments de type div qui constituent le squelette de notre carrousel.
 
@@ -48,8 +35,6 @@ Le premier div de classe "carousel" sera la box contenant tous les slots. En eff
 
 Vous pouvez ajouter autant de "carousel_slot" que vous avez envie.
 
-<br>
-
 Un élément important de ce carousel est le div contenant les boutons de navigation. Il sera généré par une fonction js mais ressemble à ceci :
 
 ```html
@@ -59,26 +44,24 @@ Un élément important de ce carousel est le div contenant les boutons de naviga
         <span class="carousel_button"></span>
       </div>
 ```
+
 (attention, il ne faut **pas** ajouter ce code au fichier html)
-
-<br>
-
 
 ### **Étape 2 : Style CSS**
 
-<br>
+L'affichage du slot sélectionné se fera par un changement de classes. Il est donc important de créer 4 classes de style distinct, à savoir :
 
-L'affichage du slot selectionné se fera par un changement de classes. Il est donc important de créer 4 classes de style distinct, à savoir :
- - Le style d'un slot par défaut  
+#### Le style d'un slot par défaut
 
 ```css
 .carousel_slot{
   display: none;
   }
 ```
+
 Il est possible de le styliser davantage mais l'attribut "display" doit absolument être fixé à "none" pour faire disparaître les slots non-désirés.
 
-- Le style du slot sélectionné
+#### Le style du slot sélectionné
 
 ```css
 .carousel_selected_slot{
@@ -88,7 +71,7 @@ Il est possible de le styliser davantage mais l'attribut "display" doit absolume
 
 Similairement, ici l'attribut "display" doit être "block" pour rendre le slot visible.
 
-- Le style de bouton par défaut
+#### Le style de bouton par défaut
 
 ```css
 .carousel_button{
@@ -99,6 +82,7 @@ Similairement, ici l'attribut "display" doit être "block" pour rendre le slot v
   border-radius: 50%;
 }
 ```
+
 Quelques précisions sur ces paramètres :
 
 -$inline-block$ = contrairement au inline, cet attribut respecte les attributs "margin" et "padding" mais permet aussi de définir une hauteur et largeur de l'élément.
