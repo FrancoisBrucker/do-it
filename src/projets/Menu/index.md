@@ -46,7 +46,7 @@ Fonctionnalités qui apporte de l’intérêt à notre appli :
 - Recettes collaboratives
 - Générer une recette à partir d’un ingrédient
 - Liste de courses triée par rayons
-–------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 Bonus pur : 
 - S’adapter aux saisons
 - Mettre une vidéo des recettes
