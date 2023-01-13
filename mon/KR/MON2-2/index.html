@@ -152,9 +152,64 @@ Other special use cases are <strong>OS and driver development</strong> because s
 <li>the stack pointer (SP): stores the address of the top of the stack</li>
 <li>the link register (LR): stores the address of the next instruction to be executed after a function call</li>
 <li>the program status registers (SPSR and CPSR): CPSR stores of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag), SPSR records the pre-exception value of the CPSR.</li>
-<li>...</li>
+<li>and more, that will be described later when they are necessary</li>
 </ul>
 <h4>Instructions</h4>
+<h5>Entry point</h5>
+<p>The emulator automatically inserts the first two lines automatically:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+_start:
+</code></pre>
+<p><em>_start:</em> is a label that is used to divide the code into segments. If we go to a label, we execute the code below this label. <em>.global</em> makes the start label globally accessible.</p>
+<h5>Move</h5>
+<p>The <em>mov</em> instruction moves a value from the source register to the destination register. It doesn't matter if the instructions are in upper or lower case.<br>
+The syntax is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">mov <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>source register<span class="token operator">></span> or <span class="token operator">&lt;</span>value<span class="token operator">></span>
+</code></pre>
+<p>A value can be a number or a label. The value is stored in the destination register. If it is a number, it must be preceded by a #. So the first instruction is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+_start:
+    mov <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span> <span class="token comment">; move the decimal value 30 to the r0 register</span>
+    mov <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0x1F</span> <span class="token comment">; move the hex value 0x1F (31 decimal) to the r1 register</span>
+</code></pre>
+<h5>Comments</h5>
+<p>Comments are used to explain the code. They are ignored by the assembler and therefore not executed by the CPU. The syntax for comments in assembly is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token comment">; &lt;comment></span>
+</code></pre>
+<p>In the CPUlator emulator, however, comments are written in C style <em>//</em>:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>comment<span class="token operator">></span>
+</code></pre>
+<h5>End the program</h5>
+<p>To end the program, we need to make a system call to let the operating system know that the program has finished. The syntax for a system call is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">mov <span class="token register symbol">r7</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>system call number<span class="token operator">></span>  <span class="token comment">; move the system call number to the r7 register. The system call number for the exit system call is 1</span>
+swi <span class="token operator">&lt;</span>interrupt number<span class="token operator">></span>        <span class="token comment">; make the system call by interrupting the CPU (swi = software interrupt).</span>
+</code></pre>
+<p>When the OS receives the interrupt, it looks at the r7 register to see which system call was made. In this case, it is the exit system call (1), so the OS knows that the program has finished and can free the memory that was allocated for the program. In the emulator, software interrupts are not supported, but in later real-world use, this is how a program is finished.</p>
+<h5>Adressing modes</h5>
+<p>There are different ways to address the memory. The most common ones are:</p>
+<p><strong>immediate addressing</strong>: the value is stored in the instruction itself</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">mov <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span> <span class="token comment">; move the decimal value 30 to the r0 register</span>
+</code></pre>
+<p><strong>register direct addressing</strong>: the value is stored in a register</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">mov <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; move the value in the r1 register to the r0 register</span>
+</code></pre>
+<p><strong>register indirect addressing</strong>: the value is stored in the memory address that is stored in a register</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">ldr <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r1</span><span class="token punctuation">]</span> <span class="token comment">; load the value in the memory address that is stored in the r1 register to the r0 register</span>
+</code></pre>
+<h5>Arithmetic operations</h5>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">add <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; add r0 and r1 and store the value in r2</span>
+sub <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 - r1</span>
+mul <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 * r1</span>
+</code></pre>
+<h5>CPSR register</h5>
+<p>Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if <em>ffffff</em> is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the <em>N</em> bit. If it is set to 1, it indicates that the last operation returned a negative value.</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">subs <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; the subs command is needed to include the cpsr register operation.</span>
+</code></pre>
+<p>Another bit in CPSR is the <em>carry</em> bit that indicates if a carry took place, e.g. when the operation returns a value bigger than the register can hold. For that, a slighly different add-operation is needed:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">adc <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; add carry: r2 = r0+r1+carry</span>
+</code></pre>
+<h5>Logical operations</h5>
+<p>49:30 dans le vidéo</p>
 <h2>Assembly language for x86</h2>
 <p>I will not go into detail about x86 assembly language because it is not used in embedded systems and I will not use it in the future. However, I will show the key differences to ARM assembly language.</p>
 <h2>Reverse engineering with gdb, radare2 and Ghidra (only if time permits)</h2>
@@ -171,8 +226,8 @@ Other special use cases are <strong>OS and driver development</strong> because s
 </ul>
 <h3>Other resources</h3>
 <ul>
-<li><a href="https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH">https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH</a> (Ben Eater - &quot;Build a 6502 computer from scratch&quot; (youtube series))</li>
-<li>Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (<a href="https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982">https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982</a>)</li>
+<li><a href="https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH">https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH</a> (Ben Eater - &quot;Build a 6502 computer from scratch&quot; (youtube series in which a computer is built from a microcontroller, every step is explained - very entertaining and educating at the same time))</li>
+<li>Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (<a href="https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982">https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982</a>) - great book on ARM assembly</li>
 </ul>
 <h3>Sources</h3>
 <ul>
