@@ -19,13 +19,15 @@ En principe, il existe deux types de CTF : Jeopardy et Attack-Defense. Dans les 
 Les techniques apprises ici sont utiles pour les deux types de CTF, mais au début, on se concentrera plutôt sur les CTF de type Jeopardy.
 
 ### Prérequis
+{% prerequis %}
 Pour tirer le maximum de ce cours, les connaissances préalables suivantes sont nécessaires :
 - Utilisation de base de la ligne de commande
 - Savoir googler - tu dois savoir comment reconnaître les bons résultats de recherche et comment cibler les choses dont tu as besoin.
 Tout le reste s'apprend ici ou dans la pratique, c'est-à-dire dans les CTF. Comme on peut le constater, les obstacles à l'entrée sont très faibles.
+{% endprerequis %}
 
 ### Sur ce document
-Ce document a été réalisé dans le cadre d'un POK dans le parcours "Do-It" à l'EC Marseille. Le choix des thèmes est plus ou moins arbitraire, il ne prétend expressément pas à l'exhaustivité. Il doit s'agir d'un recueil de thèmes intéressants pour les participants et qu'ils peuvent mettre en pratique. Il n'y aura pas d'explication approfondie des sujets, mais seulement une brève introduction et quelques liens vers des informations complémentaires. Les participants devront se former de manière autonome et approfondir les sujets. Il s'agit d'une introduction aux technologies de base du hacking, de sorte que l'on puisse avoir un aperçu de tout ce qui est possible dans ce domaine.
+Ce document a été réalisé dans le cadre d'un POK dans le parcours ["Do-It"](../../../about/index) à l'EC Marseille. Le choix des thèmes est plus ou moins arbitraire, il ne prétend expressément pas à l'exhaustivité. Il doit s'agir d'un recueil de thèmes intéressants pour les participants et qu'ils peuvent mettre en pratique. Il n'y aura pas d'explication approfondie des sujets, mais seulement une brève introduction et quelques liens vers des informations complémentaires. Les participants devront se former de manière autonome et approfondir les sujets. Il s'agit d'une introduction aux technologies de base du hacking, de sorte que l'on puisse avoir un aperçu de tout ce qui est possible dans ce domaine.
 Ce document est ouvert à l'extension, afin que les lecteurs puissent y trouver davantage d'informations à l'avenir. 
 
 {% exercice %}

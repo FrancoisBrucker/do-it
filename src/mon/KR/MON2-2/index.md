@@ -82,13 +82,85 @@ Some of those registers are general purpose registers (e.g. r0-r6) and some of t
 - the stack pointer (SP): stores the address of the top of the stack
 - the link register (LR): stores the address of the next instruction to be executed after a function call
 - the program status registers (SPSR and CPSR): CPSR stores of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag), SPSR records the pre-exception value of the CPSR.
-- ...
+- and more, that will be described later when they are necessary
 
 #### Instructions
+##### Entry point
+The emulator automatically inserts the first two lines automatically:
+```armasm
+.global _start
+_start:
+```
+_\_start:_ is a label that is used to divide the code into segments. If we go to a label, we execute the code below this label. _.global_ makes the start label globally accessible.
 
+##### Move
+The _mov_ instruction moves a value from the source register to the destination register. It doesn't matter if the instructions are in upper or lower case.
+The syntax is:
+```armasm
+mov <destination register>, <source register> or <value>
+```
+A value can be a number or a label. The value is stored in the destination register. If it is a number, it must be preceded by a #. So the first instruction is:
+```armasm
+.global _start
+_start:
+    mov r0, #30 ; move the decimal value 30 to the r0 register
+    mov r1, #0x1F ; move the hex value 0x1F (31 decimal) to the r1 register
+```
 
+##### Comments
+Comments are used to explain the code. They are ignored by the assembler and therefore not executed by the CPU. The syntax for comments in assembly is:
+```armasm
+; <comment>
+```
 
+In the CPUlator emulator, however, comments are written in C style _//_:
+```armasm
+// <comment>
+```
 
+##### End the program
+To end the program, we need to make a system call to let the operating system know that the program has finished. The syntax for a system call is:
+```armasm
+mov r7, <system call number>  ; move the system call number to the r7 register. The system call number for the exit system call is 1
+swi <interrupt number>        ; make the system call by interrupting the CPU (swi = software interrupt).
+```
+When the OS receives the interrupt, it looks at the r7 register to see which system call was made. In this case, it is the exit system call (1), so the OS knows that the program has finished and can free the memory that was allocated for the program. In the emulator, software interrupts are not supported, but in later real-world use, this is how a program is finished.
+
+##### Adressing modes
+There are different ways to address the memory. The most common ones are:
+
+**immediate addressing**: the value is stored in the instruction itself
+```armasm
+mov r0, #30 ; move the decimal value 30 to the r0 register
+```
+**register direct addressing**: the value is stored in a register
+```armasm
+mov r0, r1 ; move the value in the r1 register to the r0 register
+```
+**register indirect addressing**: the value is stored in the memory address that is stored in a register
+```armasm
+ldr r0, [r1] ; load the value in the memory address that is stored in the r1 register to the r0 register
+```
+
+##### Arithmetic operations
+```armasm
+add r2, r0, r1 ; add r0 and r1 and store the value in r2
+sub r2, r0, r1 ; r2 = r0 - r1
+mul r2, r0, r1 ; r2 = r0 * r1
+```
+
+##### CPSR register
+Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if _ffffff_ is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the _N_ bit. If it is set to 1, it indicates that the last operation returned a negative value.
+```armasm
+subs r2, r0, r1 ; the subs command is needed to include the cpsr register operation.
+```
+Another bit in CPSR is the _carry_ bit that indicates if a carry took place, e.g. when the operation returns a value bigger than the register can hold. For that, a slighly different add-operation is needed:
+```armasm
+adc r2, r0, r1 ; add carry: r2 = r0+r1+carry
+```
+
+##### Logical operations
+49:30 dans le vidéo
 
 
 
@@ -107,8 +179,8 @@ I will not go into detail about x86 assembly language because it is not used in 
 - https://defuse.ca/online-x86-assembler.htm (online x86 assembler/disassembler)
 
 ### Other resources
-- https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH (Ben Eater - "Build a 6502 computer from scratch" (youtube series))
-- Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982)
+- https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH (Ben Eater - "Build a 6502 computer from scratch" (youtube series in which a computer is built from a microcontroller, every step is explained - very entertaining and educating at the same time))
+- Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982) - great book on ARM assembly
 
 ### Sources
 - chatGPT (https://chat.openai.com/)
