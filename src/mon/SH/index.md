@@ -20,7 +20,7 @@ L'ensemble de mes MON
 
 ### Temps 2
 - [Premier MON: **Maturité de la transformation digitale**](./MON2-1/)
-- Deuxième MON:
+- [Deuxième MON: **Lego in the age of digitization**](./MON2-2/)
 
 ### Temps 3
 - Premier MON: 
