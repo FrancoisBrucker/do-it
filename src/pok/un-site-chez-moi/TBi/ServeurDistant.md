@@ -191,6 +191,200 @@ J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'
 
 Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une base de données juste pour me frotter à l'exercie et si possible, mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.
 
+# Second Sprint :
+On va se faciliter la vie en écrivant un script qui va mettre à jour, sur ovh1, le site, en allant chercher la dernière version de artblog et en l'activant, ensuite on pourra lancer ce script depuis un pc distant via ssh.
+Dans cette partie, on utilise git en ligne de commande.
+
+## Git CLI :
+On commence par mettre à jour notre projet : 
+
+    git add .
+    git commit
+    git push
+    git chechout main
+    git merge dev
+
+## Création du script :
+La première version sera toute basique, on y inclus ces quelques commandes pour tester : 
+
+    #!/bin/sh
+
+    cd /home/curcuma/node/artblog
+
+    git pull origin main
+    npm install
+    npm run build
+    npm run start
+
+    echo "Prod successfully started"
+
+Ce script a de nombreux problèmes : 
+
+- Il echo "Prod etc.." peu importe de l'état d'éxecution.
+- Il ne sauvegarde pas les erreurs.
+- Il n'y a aucun test d'effectué.
+- Il lance le serveur de prod dans un terminal local, on va le détatcher avec screen.
+- On ne peut que lancer tout d'un couop, le script n'est pas optimal si il faut juste redémarrer le serveur.
+
+## Envoie du script :
+On copy ce script sur le server avec scp :
+
+    scp /chemin/local/publish.sh utilisteur@serveur:/chemin/distant
+
+Cet envoie doit être effectuer à chaque modifications.
+
+## On essaie maintenant d'executer le script via ssh :
+
+    ssh nom_d_utilisateur@nom_du_serveur "bash /chemin/distant/publish.sh"
+    
+On a un echo : prod succelfully started, ça s'annonce bien. Quelques erreurs de script plus tard, j'ai une version qui fait ce que je demande.
+On essaie maintenant d'améliorer le sustèmepoint par point.
+
+## Creation d'un script pour lancer le script : 
+Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.
+Je ne le fais pas car je prefère voir si il y a des erreurs.
+
+Prepare_prod :
+
+    scp publish.sh [...]
+    ssh [...] /publish.sh
+
+
+## Detachement du server dans un terminal en daemon :
+
+on modifie le script : 
+
+    screen -S artblog -dmS npm run start
+
+Cette commande devrait lancer le serveur dans un processus deamon nommé artblog, qui sera toujours en route quand je rompt la liaison ssh.
+
+{%attention%}Problème :  la commande screen -list ne référence pas le processus, je ne peux plus arreter mon serveur. C'est embêtant car impossible de lancer une nouvelle version du serveur si le port est pollué.{%endattention%}
+
+### Debug mode :
+
+On essaie de trouver le problème, pour commencer, le serveur est bien disponible sur node.curcuma.ovh1, ce qui veut dire que le screen à bien fonctionné.
+
+On trouve le processus qui écoute sur mon port 10438 avec :
+
+     ps -ef | grep artblog | awk '{print $2}'
+     // cette commande liste les processus, ne garde que ceux qui s'appelent artblog et print l'id du process. on reçoit 304108
+
+On kill le processus: 
+
+    kill 34108
+    
+Cela à marché.
+
+On l'inclut dans le script : d'abord on kill l'ancien process, ensuite on pourra en recréer un :
+
+    ps -ef | grep artblog |head -n -1 | awk '{print $2}' | xargs kill -15
+  
+  {%info%}La commande se complique :
+
+  - ps -ef : d'abord je récupere les processus
+  - grep artblog : je prend ceux qui contiennent le mot artblog
+  - head -n -1 | : je garde tous sauf la dernièere ligne, en effet la derniere ligne est la commande grep elle même et renvoie une erreur par la   suite
+  - awk : je print que la deuxieme colonne qui correspond au PID
+  - kill : je kill tous les process listés par le print awk.
+  {%endinfo%}
+
+### Retour au script :
+
+Le script devient :
+
+#!/bin/sh
+
+    cd /home/curcuma/node/artblog
+
+    git pull origin main
+    npm install
+    npm run build
+
+    ps -ef | grep artblog | awk '{print $2}' | xargs kill -15
+    screen -S artblog -dmS npm run start
+
+    echo "Script ended"
+
+On l'envoit et on test.
+
+## Détacher le lancement du serveur du build :
+
+On créer des options qui permettent ou non de build le serveur.
+
+On crée l'option -h qui affiche de l'aide et -b qui lance le build. Par défaut, on lance un screen.
+
+```
+
+#!/bin/sh
+
+function Build() {
+  echo "Pulling from origin..."
+  git pull origin main
+  echo "Installing dependancies..."
+  npm install
+  echo "Building ..."
+  npm run build
+  
+}
+
+
+while getopts ":hb" opt; do
+  case $opt in
+    h)
+      echo "This is the help section of the script test.sh"
+      echo "Available options are:"
+      echo "-h : display this help section"
+      echo "-b : run the Build function"
+      exit 0
+      ;;
+    b)
+      Build
+      exit 0
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+  esac
+done
+
+cd /home/curcuma/node/artblog
+
+ps -ef | grep artblog | head -n -1 | awk '{print $2}' | xargs kill -15
+screen -S artblog -dmS npm run start
+
+echo "Script ended"
+
+```
+
+Mais à cause de je ne sais quoi le screen ne marche pas a travers ssh.
+On essaie la même chose en utilisant tmux au lieu de screen.
+
+On remplace les lignes liées a screen part 
+```
+tmux kill-session -t artblogDeamon
+tmux new-session -d -s artblogDeamon "npm run start"
+
+```
+
+Et cela fonctionne !
+
+On peut maintenant lancer publish.sh en ssh pour 
+
+- afficher l'aide grâce à -h
+- pull la version la plus récente sur git et build le projet grâce à -b
+- et publier le serveur.
+
+Tout cela avec par exemple `ssh curcuma@ovh1.ec-m.fr "bash ./node/artblog/publish.sh -h"`
+
+
+
+
+
+
+
+
+
 
     
     
