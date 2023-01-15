@@ -8,8 +8,7 @@ authors:
 tags: ['assembler', 'reverse engineering', 'arm', 'x86']
 ---
 <!-- Début Résumé -->
-TODO resume
-Assembly language (x86, ARM, ...) (+ peut-être reverse engineering avec gdb, radare2 et Ghidra)
+Dans ce MON, je vais apprendre les bases du langage d'assemblage ARM et le comparer avec celui de l'architecture x86. Si le temps le permet, j'étudierai le déboguage et la reverse-engineering avec gdb et Ghidra car c'est un bon cas d'utilisation pour appliquer les connaissances de l'assembleur.
 <!-- fin résumé -->
 
 <!-- ## Structure de ce MON
@@ -35,12 +34,11 @@ Assembly language (x86, ARM, ...) (+ peut-être reverse engineering avec gdb, ra
   - Tools (like online assemblers, ...) -->
 
 ## Introduction
-
 {% prerequis "**Prerequisites**" %}
-In order to follow this MON (or any tutorials on assembly programming), you should have basic knowledge of computer architecture and programming. You should at least:
+In order to follow this MON (or any tutorial other on assembly programming), you should have basic knowledge of computer architecture and programming. You should at least:
 - Understand the basic concepts of a computer (CPU, memory, input/output, ...)
 - Being familiar with binary and hexadecimal numbers
-- Know at least the basics of one high-level programming language like C++ or Java
+- Know the basics of at least one high-level programming language like C++ or Java
 
 For a deeper understanding of machine language and compilers, see the [MON of Jean-Baptiste](../../JBD/Mes_MON/compilateur) (but that's not necessary for understanding this MON)
 {% endprerequis %}
@@ -63,7 +61,14 @@ The x86 family is used in most **desktop computers**. The CPUs of the x86 family
 The instruction set of the ARM CPU family is much simpler because it uses a **RISC (reduced instruction set computer)** architecture. RISC CPUs have a small, fixed instruction set with a limited number of instructions that can be executed quickly. This reduces the complexity of the CPU and allows it to execute instructions more quickly, at the cost of some flexibility. However, some instructions that can be executed in one step on a CISC CPU need multiple steps on a RISC CPU. ARM CPUs are used in most **mobile devices and embedded systems**. The most common CPUs of this family are the Apple A-series CPUs like the A15 Bionic which is used in the iPhone 14 and the Qualcomm Snapdragon CPUs like the Snapdragon 888 which is used in the Samsung Galaxy S21. In many embedded systems, ARM Cortex CPUs are used like the Cortex-M4 which is used in the popular STM32F4 microcontroller. ARM also spreads into the feld where x86 is dominating, e.g. with the Apple M2 chip which is used in the newest MacBook Air and the MacBook Pro and is considered extremely energy-efficient while still being very powerful. This shows that ARM will get even more relevant in the near future and could replace the x86 architecture in many domains.
 
 ## Assembly language for ARM
-I start my learning journey with the book "Modern Assembly Language Programming with the ARM Processor" by Larry D. Pyeatt. Because it is over 500 pages long, I won't cover all of it and instead follow the tutorial by freeCodeCamp on [youtube](https://www.youtube.com/watch?v=gfmRrPjnEw4) which covers ARM assembly. Additionally, I will follow the tutorial on [azeria-labs.com](https://azeria-labs.com/writing-arm-assembly-part-1/) because it sets the foundation for following courses on exploit development for ARM which is an interesting topic in cybersecurity.
+{% prerequis "To learn ARM assembly, I used the following sources:" %}
+- [Assembly Language Programming with ARM – Full Tutorial for Beginners (YouTube)](https://www.youtube.com/watch?v=gfmRrPjnEw4)
+- [azeria-labs.com - Writing ARM assembly](https://azeria-labs.com/writing-arm-assembly-part-1/)
+- [Larry D. Pyeatt: "Modern Assembly Language Programming with the ARM Processor" (book)](https://www.amazon.fr/Modern-Assembly-Language-Programming-Processor/dp/0128036982/)
+
+The YouTube tutorial focuses more on showing the different instructions, azeria-labs goes deeper into some of the topics and allows a very good understanding of the basics. In my opinion, the combination of those two sources is great to learn ARM assembly.
+{% endprerequis %}
+
 
 ### Running ARM assembly code
 To use the ARM assembly language, you need a device containing an ARM (micro)chip where the assembled code is stored and executed. For example, the _Raspberry Pi 4 Model B_, the current version of the Raspberry Pi computer, uses a Broadcomm BCM2711 SoC (system-on-a-chip) that includes the Cortex A-72 ARM chip as CPU. This means that you can use the ARM assembly language directly on the Raspberry Pi to get a real-world experience and direct hardware integration, e.g. you can blink the onboard LED etc.
@@ -76,17 +81,28 @@ In this MON, I will mainly use the emulator to write and execute the assembly co
 #### Registers
 Registers are the closest memory to the CPU. It is a small amount of memory that is directly accessible by the CPU, thus the CPU can read and write to the registers very quickly. One register can store data of the length of one word. A word is a fixed amount of bits that can be stored in a register. The amount of bits depends on the CPU, for example, the ARM Cortex-M4 CPU uses 32-bit words, so one word is 32 bits long and therefore a register can store 32 bits.
 
-Some of those registers are general purpose registers (e.g. r0-r6) and some of them are special purpose registers:
-- r7: used for system calls
+Some of those registers are general purpose registers (e.g. R0-R10) and some of them are special purpose registers:
+- R7: holds the syscall number
 - the program counter (PC): stores the address of the next instruction to be executed
 - the stack pointer (SP): stores the address of the top of the stack
 - the link register (LR): stores the address of the next instruction to be executed after a function call
-- the program status registers (SPSR and CPSR): CPSR stores of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag), SPSR records the pre-exception value of the CPSR.
-- and more, that will be described later when they are necessary
+- the current program status register (CPSR): stores the status of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag)
+- and more that will be described later when they are necessary
 
 #### Instructions
+In general, an instruction in ARM is constructed as following (based on [this article](https://azeria-labs.com/arm-instruction-set-part-3/#:~:text=INTRODUCTION%20TO%20ARM%20INSTRUCTIONS)):
+```armasm
+MNEMONIC{S}{condition} {Rd}, Operand1, Operand2
+```
+- MNEMONIC     - Short name (mnemonic) of the instruction (e.g. ADD, MOV, LDR, ...). It doesn't matter if the mnemonic is in upper or lower case.
+- {S}          - An optional suffix. If S is specified, the condition flags are updated on the result of the operation
+- {condition}  - Condition that is needed to be met in order for the instruction to be executed. This will be explained in the paragraph **Conditional instruction execution**
+- {Rd}         - Register (destination) for storing the result of the instruction
+- Operand1     - First operand. Either a register or an immediate value 
+- Operand2     - Second (flexible) operand. Can be an immediate value (number) or a register with an optional shift
+
 ##### Entry point
-The emulator automatically inserts the first two lines automatically:
+The emulator automatically inserts the first two lines of the program automatically:
 ```armasm
 .global _start
 _start:
@@ -94,17 +110,18 @@ _start:
 _\_start:_ is a label that is used to divide the code into segments. If we go to a label, we execute the code below this label. _.global_ makes the start label globally accessible.
 
 ##### Move
-The _mov_ instruction moves a value from the source register to the destination register. It doesn't matter if the instructions are in upper or lower case.
+The _MOV_ instruction moves a value from the source register to the destination register. 
 The syntax is:
 ```armasm
-mov <destination register>, <source register> or <value>
+MOV <destination register>, <source register> or <value>
 ```
 A value can be a number or a label. The value is stored in the destination register. If it is a number, it must be preceded by a #. So the first instruction is:
 ```armasm
 .global _start
 _start:
-    mov r0, #30 ; move the decimal value 30 to the r0 register
-    mov r1, #0x1F ; move the hex value 0x1F (31 decimal) to the r1 register
+    MOV r0, #30   ; move the decimal value 30 to register r0 
+    MOV r1, #0x1F ; move the hex value 0x1F (31 decimal) to register r1
+    MOV r2, r0     ; move the value from register r0 in register r2
 ```
 
 ##### Comments
@@ -113,16 +130,17 @@ Comments are used to explain the code. They are ignored by the assembler and the
 ; <comment>
 ```
 
-In the CPUlator emulator, however, comments are written in C style _//_:
+Unfortunately, the CPUlator emulator can't handle comments in this style, so for CPUlator, the comments are written in C style (_//_):
 ```armasm
 // <comment>
 ```
+Note that this won't be recognized by any ARM assembler in the real world.
 
 ##### End the program
 To end the program, we need to make a system call to let the operating system know that the program has finished. The syntax for a system call is:
 ```armasm
-mov r7, <system call number>  ; move the system call number to the r7 register. The system call number for the exit system call is 1
-swi <interrupt number>        ; make the system call by interrupting the CPU (swi = software interrupt).
+MOV r7, <system call number>  ; move the system call number to the r7 register. The system call number for exit is 1.
+SWI <interrupt number>        ; make the system call by interrupting the CPU (SWI = software interrupt).
 ```
 When the OS receives the interrupt, it looks at the r7 register to see which system call was made. In this case, it is the exit system call (1), so the OS knows that the program has finished and can free the memory that was allocated for the program. In the emulator, software interrupts are not supported, but in later real-world use, this is how a program is finished.
 
@@ -131,43 +149,179 @@ There are different ways to address the memory. The most common ones are:
 
 **immediate addressing**: the value is stored in the instruction itself
 ```armasm
-mov r0, #30 ; move the decimal value 30 to the r0 register
+MOV r0, #30 ; move the decimal value 30 to the r0 register
 ```
 **register direct addressing**: the value is stored in a register
 ```armasm
-mov r0, r1 ; move the value in the r1 register to the r0 register
+MOV r0, r1 ; move the value in the r1 register to the r0 register
 ```
 **register indirect addressing**: the value is stored in the memory address that is stored in a register
 ```armasm
-ldr r0, [r1] ; load the value in the memory address that is stored in the r1 register to the r0 register
+LDR r0, [r1] ; load the value in the memory address that is stored in the r1 register to the r0 register
 ```
 
 ##### Arithmetic operations
 ```armasm
-add r2, r0, r1 ; add r0 and r1 and store the value in r2
-sub r2, r0, r1 ; r2 = r0 - r1
-mul r2, r0, r1 ; r2 = r0 * r1
+ADD r2, r0, r1 ; add r0 and r1 and store the value in r2
+SUB r2, r0, r1 ; r2 = r0 - r1
+MUL r2, r0, r1 ; r2 = r0 * r1
 ```
 
 ##### CPSR register
-Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if _ffffff_ is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the _N_ bit. If it is set to 1, it indicates that the last operation returned a negative value.
+Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if _ffffff_ is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the _N_ bit. If it is set to 1, it indicates that the last operation returned a negative value. Similarly, the carry bit and the overflow bit of the CPSR are used.
+
+{% attention %}
+To use the CPSR register, the suffix "S" must be appended to the mnemonic (use _SUBS_ instead of _SUB_, _MULS_ instead of _MUL_, ...). Else, the CPSR won't be used.
+{% endattention %}
+
+Example: 
 ```armasm
-subs r2, r0, r1 ; the subs command is needed to include the cpsr register operation.
+SUBS r2, r0, r1   ; r2 = r0-r1 and the "negative" bit in CPSR ist set if r1<r0.
 ```
 Another bit in CPSR is the _carry_ bit that indicates if a carry took place, e.g. when the operation returns a value bigger than the register can hold. For that, a slighly different add-operation is needed:
 ```armasm
-adc r2, r0, r1 ; add carry: r2 = r0+r1+carry
+ADCS r2, r0, r1 ; add carry: r2 = r0+r1+carry and update the cpsr register
 ```
 
 ##### Logical operations
-49:30 dans le vidéo
+**AND**
+The AND operation iterates through every pair of bits A and B and returns a binary value X based on this table:
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
+In ARM assembly, it works as following:
+```armasm
+AND r2, r0, r1 ; bitwise AND between r0 and r1, stored in r2
+```
+
+**OR**
+The OR operation iterates through every pair of bits A and B and returns a binary value X based on this table:
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+In ARM assembly, it works as following:
+```armasm
+ORR r2, r0, r1 ; bitwise OR between r0 and r1, stored in r2 - yes, orr with thow r's is the real instruction
+```
+
+**XOR**
+The exclusive OR (XOR) operation iterates through every pair of bits A and B and returns a binary value X based on this table:
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+In ARM assembly, it works as following:
+```armasm
+EOR r2, r0, r1 ; bitwise XOR between r0 and r1, stored in r2 - the instruction is eor, not xor
+```
+
+**Logical shift**
+Logical shifts are operations to shift bits of a register. The [official documentation](https://developer.arm.com/documentation/dui0068/b/Thumb-Instruction-Reference/Thumb-general-data-processing-instructions/ASR--LSL--LSR--and-ROR) explains each one in greater detail than I do here.
+- **lsl**: "Logical shift to left" - move bits in the given register to the left. This equals a multiplication by two, but is much more efficient. The MSB gets dropped.
+- **lsr**: "Logical shift to the right" - move bits in the given register to the right. This equals a division by two, but is much more efficient. The LSB gets dropped.
+- **ror**: "Rotation to right" - Like the _lsr_ instruction, but the LSB doesn't get dropped, it is re-appended as MSB. There is no _rol_ instruction to rotate to left, but if you execute the _ror_ instruction 32-n times (n being the number of rotations to left), it hs the same effect. 
+
+In ARM assembly, it works as following:
+```armasm
+LSL r1, r0, #1 ; do one lsl on r0 and store the result in r1
+LSR r0, r0, #5 ; do lsr 5 times on r0 and store it back in r0
+ROR r0, r0, #1 ; do one ror on r0
+```
+
+##### Conditions
+**Branching**
+Conditions and branches are the equivalent to _if-else_-statements in higher level languages. In ARM assembly, we do a "compare" (CMP) instruction between two values/registers and after that, we can jump to different locations using branches.
+```armasm
+.global _start
+_start:
+  ; fill some values in ro and r1
+  MOV r0,#1
+  MOV r1,#2
+
+  CMP r0,r1 ; compare r0 and r1
+  BGT greater //if CMP revealed that R0 is greater than R1 -> go to "greater" label
+  BAL default// branch always (avoids stepping into "greater" after the execution of the last instruction) to the "defaukt" label
+
+greater:
+	MOV r2, #0xff
+	
+default:
+	MOV r2, #0xaa
+```
+The following branch instructions are available:
+- **BGT** - greater than
+- **BGE** - greater than or equal
+- **BLT** - less than
+- **BLE** - less than or equal
+- **BEQ** - equal
+- **BNE** - not equal
+- **BAL** - always
+
+**Looping**
+By using the branches, we can implement loops like _for_ or _while_-loops in higher-level languages. In this example, we load a list with the values from 1-10 in the variable _list_ and then we iterate through all values until we reach the end of the list:
+```armasm
+.global _start
+.equ endlist, 0xaaaaaaaa // memory after the list
+
+_start:
+	LDR R3,=endlist	// load the value of "endlist" in R3
+	LDR R0,=list	// load address of list in R0
+	LDR R1, [R0] 	// load the first value of the list in R1
+	ADD R2, R2, R1	// add R1 to R2 (R2 = R2 + R1)
+
+loop:
+	LDR R1,[R0,#4]!	// store the next value in list in R1
+	CMP R1, R3		// check if this value equals the "endlist" value 
+	BEQ exit 		// if this is the case: go to "exit" label
+	ADD R2,R2, R1	// else: add r1 to r2
+	BAL loop 		// goto "loop" 
+	
+exit:
+	MOV R4,#0xffffffff	//just a visual indication that we're in exit now	
+	
+.data
+list:
+	.word 1,2,3,4,5,6,7,8,9,10
+	
+```
+
+**Conditional instruction execution**
+To make matters simpler, instead of branching, we can use conditional instructions to execute the instruction only if a condition is met. Almost every instruction in ARM assembly can be modified so that it only gets executed if a condition is met.
+This happens by exchanging the "B" in the conditional branches with the instruction, e.g. _BLT_ (branch if less then) becomes _MOVLT_ (move if less then) or _BEQ_ (branch if equal) becomes _ADDEQ_ (add if equal).
+Example:
+```armasm
+MOV R0,#2
+MOV R1,#5
+
+CMP R0,R1
+ADDLT R2,#1   // add 1 to R2 if the comparison returns that R0 is less then R1.
+MOVEQ R2,R0   // move the value of R0 to R2 if R0=R1
+```
+
+##### Functions
+vidéo 1:34:56
+TODO push, pop
 
 
 ## Assembly language for x86
 I will not go into detail about x86 assembly language because it is not used in embedded systems and I will not use it in the future. However, I will show the key differences to ARM assembly language.
 
-## Reverse engineering with gdb, radare2 and Ghidra (only if time permits)
+## TODO Debugging with gdb
+### TODO what is gdb?
+### TODO gdb commands
+
+
 
 ## Useful resources
 ### Tutorials
@@ -179,9 +333,7 @@ I will not go into detail about x86 assembly language because it is not used in 
 - https://defuse.ca/online-x86-assembler.htm (online x86 assembler/disassembler)
 
 ### Other resources
-- https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH (Ben Eater - "Build a 6502 computer from scratch" (youtube series in which a computer is built from a microcontroller, every step is explained - very entertaining and educating at the same time))
+- ARM Developer Suite Assembler Guide: https://developer.arm.com/documentation/dui0068/b (includes all the documentation for ARM assembly)
 - Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor (https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982) - great book on ARM assembly
-
-### Sources
-- chatGPT (https://chat.openai.com/)
+- https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH (Ben Eater - "Build a 6502 computer from scratch" (youtube series in which a computer is built from a microcontroller, every step is explained - very entertaining and educating at the same time))
 - https://lioncash.github.io/ARMBook/the_apsr,_cpsr,_and_the_difference_between_them.html
