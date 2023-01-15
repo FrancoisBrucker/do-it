@@ -248,7 +248,7 @@ On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit m�
 
 ### Pour aller plus loin :
 
-Nous allons mettre en place une pipeline qui effectue une action sur le repository à chaque pull-request effzctuée sur le remote.
+Nous allons mettre en place une pipeline qui effectue une action sur le repository à chaque pull-request effectuée sur le remote.
 
 #### Relier Jenkins et Github par SSH :
 
