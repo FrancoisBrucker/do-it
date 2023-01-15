@@ -17,4 +17,4 @@ Temps 1 :
 - [Dev Web 2](./Mons/Devweb2)
 Temps 2 :
 - [Côté Web](./Mons/coteweb)
-- [Business Model](./Mons/Business.md)
+- [Business Model](./Mons/Business)
