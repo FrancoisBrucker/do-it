@@ -61,6 +61,16 @@ La communication est essentielle à bien des fins, on peut en distinguer 5 phase
 Comment maintenir une relation durable avec le client afin que celui-ci continue d'utiliser notre service ?
 C'est la question à laquelle nous essaierons de répondre avec ce bloc. 
 ### Le flux de revenus
+Le flux de revenus, c'est le but finale de l'entreprise. Comment gagne-t-on de l'argent. Nous voyons comment créer un business model, comment le valoriser et communiquer dessus cependant comment vivra l'entreprise. 
+Il existe là encore différents moyens de créer du revenu. Avant de les lister, j'aimerais remettre en esprit que le prix reste un des facteurs déterminants de l'utilisation d'un produit ou service. Il convient donc de se poser les questions suivantes : Combien nos clients sont-ils disposés à payer et comment préfereraient-ils payer. Avec ceci en tête, nous pouvons désormais lister les moyens de générer des flux de revenus : 
+- La vente de bien : flux de revenus historique, il est à l'origine même de la création de la monnaie et reste sûrement le plus utilisé. 
+- La location : ce système est à l'origine de nombreux concepts d'entreprise mondialement connnu. La location peut être de longue durée (appartement), de moyenne durée (voiture) ou de courte voire très courte durée (vélo électrique en libre service). 
+- Droit d'usage : le client paye en fonction du nombre d'utilisation. Ce concept a été très bien utilisé par les applications mobiles où l'on observe souvent une version basique gratuite puis une ou plusieurs versions "premium" permettant l'accès à de nouveaux services ou a un plus grand nombre d'utilisations. 
+- L'abonnement : système là aussi bien connu de tous, l'abonnement à un service qu'il soit mensuel ou annuel permet de l'utiliser tant que l'on paye pour. Système très prisé des plateformes de streaming par exemple. 
+- Publicité : l'utilisateur ne paye pas. En revanche, il accepte que l'on lui présente d'autres bien ou service afin de l'influencer.
+- Licensing : le client paye pour accéder à la propriété intelectuelle protégée d'une entreprise. C'est un système utilisé par les logiciels par exemple. 
+- Frais de courtage : l'entreprise touche une commission sur la vente d'un bien ou service. Système utilisé par des plateformes faisant l'intermédiaire entre 2 entités généralement, on peut citer les agences immobilières par exemple.
+- Revente de données : système très récent lié à l'exploitation des données à des fins marketing. Le client ne paye pas l'entreprise, en revanche celle-ci revend les données acquise grâce à son modèle pourr les revendre à d'autres entreprise. On a récemment pu voir émerger des applications payant les utilisateurs à marcher, leurs revenus étant liés à la revente des données GPS du client.  
 ### Les ressources clés 
 ### Les activités clés 
 ### Les partenaires clés 
