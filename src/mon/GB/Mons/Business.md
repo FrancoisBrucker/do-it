@@ -31,6 +31,7 @@ Le Business Model et définit par 9 blocs que l'on peut réunir en une matrice :
 - Les activités clés
 - Les partenaires clés
 - La structure de coûts
+<img src="../../Images/business.png">
 ### Les segments de clientèle 
 En premier lieu, nous nous devons de savoir à qui nous nous adressons, en d'autres termes : à qui souhaitons-nous vendre.
 On peut répartir les segments de clientèle en plusieurs marché : 
@@ -59,7 +60,16 @@ La communication est essentielle à bien des fins, on peut en distinguer 5 phase
 - L'après-vente : comment nous apportons un support aux clients après leur achat.
 ### La relation avec le client 
 Comment maintenir une relation durable avec le client afin que celui-ci continue d'utiliser notre service ?
-C'est la question à laquelle nous essaierons de répondre avec ce bloc. 
+L'entreprise se doit de répondre à une demande du client même après que celui-ci ait consommé son produit si elle veut fidéliser sa clientèle. De plus, si un client potentiel a une demande elle se doit la aussi d'y répondre afin d'acquérir de nouveaux clients. 
+Elle peut s'y prendre de plusieurs manières :
+- Fournir une assistance personnelle que ce soit par mail, tchat, appel... 
+- Fournir une assistance personnelle dédié. C'est utilisé lorsque le client veut s'assurer d'un service parfait comme le BTP ou le luxe par exemple. 
+- Fournir une aide en self-service. 
+- Fournir une aide automatisé. On observe de plus en plus cela grâce à l'émergence de l'IA, de nombreuses entreprises utilisent des bots en première couche de relation client. 
+- Créer une communauté d'aide. Cela s'observe beaucoup dan sles entreprises de technologiestels que Dell, Apple etc. 
+- Co-créer directement la valeur avec le client dans un esprit de partenariat. 
+
+Il n'est pas nécessaire de choisir une option dans cette liste, les entreprises utilisent généralement plus de ces possibilités.  
 ### Le flux de revenus
 Le flux de revenus, c'est le but finale de l'entreprise. Comment gagne-t-on de l'argent. Nous voyons comment créer un business model, comment le valoriser et communiquer dessus cependant comment vivra l'entreprise. 
 Il existe là encore différents moyens de créer du revenu. Avant de les lister, j'aimerais remettre en esprit que le prix reste un des facteurs déterminants de l'utilisation d'un produit ou service. Il convient donc de se poser les questions suivantes : Combien nos clients sont-ils disposés à payer et comment préfereraient-ils payer. Avec ceci en tête, nous pouvons désormais lister les moyens de générer des flux de revenus : 
@@ -72,8 +82,15 @@ Il existe là encore différents moyens de créer du revenu. Avant de les lister
 - Frais de courtage : l'entreprise touche une commission sur la vente d'un bien ou service. Système utilisé par des plateformes faisant l'intermédiaire entre 2 entités généralement, on peut citer les agences immobilières par exemple.
 - Revente de données : système très récent lié à l'exploitation des données à des fins marketing. Le client ne paye pas l'entreprise, en revanche celle-ci revend les données acquise grâce à son modèle pourr les revendre à d'autres entreprise. On a récemment pu voir émerger des applications payant les utilisateurs à marcher, leurs revenus étant liés à la revente des données GPS du client.  
 ### Les ressources clés 
-### Les activités clés 
+Les ressources clés peuvent être multiples et dépendent du modèle économique de l'entreprise. 
+Elles sont divisés en quatre catégories : physique, financière, intellectuelle et humaine.  
+### Les activités clés
+Les activités clés dépendent la aussi essentiellement du modèle économique.
+Elles peuvent être du domaine de la production, du conseil, du réseau... 
 ### Les partenaires clés 
+Les partenariats sont déterminants pour le développement d'une entreprises. 
+En effet, de bons partenariat peuvent influencer grandement les coûts de fournitures, de licence etc. 
+Un bon partenariat peut aussi apporter de la visibilité à un produit, ce qui crée de nouveaux canaux de communication. 
 ### La structure de coûts
 On peut globalement résumer ce bloc en deux catégories différentes : 
 - La logique de coûts 
@@ -81,3 +98,7 @@ On peut globalement résumer ce bloc en deux catégories différentes :
 
 Ces catégories correspondent à deux philosophies différentes : Préférons-nous privilégier le coût ou la qualité ? 
 Le luxe appartient par définition à la seconde catégories tandis que les entreprises dont la proposition de valeur est basée sur le prix appartiennent par défaut au premier groupe. 
+<br>
+C'est donc la fin de ce premier chapitre consacré aux différents blocs formant un Business Model. Ces blocs sont tous interdépendants et aucun ne doit être négligés lors de la conception du Business Model. 
+
+## Typologie
