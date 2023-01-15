@@ -136,10 +136,101 @@ Afin de lancer le service PostgreSQL, il suffit juste de lancer la commande `doc
 
 ### Mise en place du schéma de base de données et manipulations Prisma
 
+Pour communiquer avec la base de données j'ai choisi un ORM que je ne connaissais pas [Prisma](https://www.prisma.io/). Nous allons donc installer la CLI de Prisma en dev ainsi que le client Prisma.
+
+~~~bash
+npm i -D prisma 
+npm i @prisma/client
+~~~
+
+Nous allons désormais initialiser Prisma avec `npx prisma init`. Cela crée un dossier `prisma` avec un fichier `schema.prisma` que nous allons modifier.
+
+~~~javascript
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+~~~
+
+Nous allons ensuite spécifier notre schéma de base de données dans le fichier `schema.prisma`.
+
+~~~
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String   @db.VarChar(255)
+  content   String?
+  published Boolean  @default(false)
+  author    User     @relation(fields: [author_id], references: [id])
+  author_id  Int
+}
+
+model Profile {
+  id     Int     @id @default(autoincrement())
+  bio    String?
+  user   User    @relation(fields: [user_id], references: [id])
+  user_id Int     @unique
+}
+
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String?
+  posts   Post[]
+  profile Profile?
+}
+~~~
+
+On va désormais créer une migration et l'appliquer en même temps à la base de données avec `npx prisma migrate dev --name init`.
+
+{% info %}
+**Quelques commandes Prisma à connaître :**
+- `npx prisma validate`: permet de vérifier si le schéma Prisma est correct
+- `npx prisma studio` : lance une interface web pour visualiser le contenu de la base données
+- `npx prisma db pull` : récupère le schéma existant dans la base de données et met à jour le schéma Prisma
+- `npx prisma db push` : met à jour la base de données à partir des données du schéma Prisma
+- `npx prisma migrate dev --name my_migration` : crée un fichier de migration comportant les derniers changements du schéma Prisma et applique ce changement à la base de données
+- `npx prisma migrate reset` : réinitialise la base de données et applique toutes les migrations
+- `npx prisma migrate deploy` : applique les dernières migrations en cours à la base de données
+- `npx prisma generate`: permet de modifier le PrismaClient (outil utilisé dans le backend pour envoyer des requêtes) afin qu'il soit à jour avec le schéma de db
+{% endinfo %}
+
+A ce stade en lançant la commande `npx prisma studio`nous devrions voir nos tables avec les différents champs.
+
+{% attention %}
+Il faut faire attention aux pratiques que l'on souhaite avoir. Il est possible de travailler uniquement avec le schéma Prisma et faire des `db push`cependant des changements plus important en base de données pourrait être critique en production, c'est pour cela que l'on utilise les migrations.
+
+Selon moi, à chaque modification du schéma de base de données, on modifie le schéma Prisma et on lance `npx prisma migrate dev --name "ma migration"`.
+{% endattention %}
+
 ### Création de fausses données
+
+Nous allons désormais créer un fichier de fausses données à charger dans la base de données. Ce fichier s'appelle `prisma/seed.js`.
+Afin de pouvoir charger ces fausses données nous devons modifier le `package.json`.
+
+~~~json
+{
+  ...
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
+~~~
 
 ### Installation de GraphQL et paramétrisation
 
+Comme nous l'avons au début de ce MON, GraphQL est un langage de requête API. Pour fonctionner, nos serveur express a besoin d'un serveur GraphQL afin d'interpréter les requêtes et les transformer en requête Prisma qui les transformera ensuite en requête SQL. Nous allons utiliser `express-graphql`.
+
+~~~bash
+npm i express-graphql @graphql-tools/schema
+~~~
+
+**askip ça va marcher mais pas encore ^^**
 
 
 
