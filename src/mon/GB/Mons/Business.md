@@ -36,8 +36,9 @@ En premier lieu, nous nous devons de savoir à qui nous nous adressons, en d'aut
 On peut répartir les segments de clientèle en plusieurs marché : 
 - Marché de masse : segment général, il ne s'adresse pas à une partie de la population mais à la population en général. 
 - Marché de niche : segment spécialisé, il s'adresse à une clientèle spécifique souvent experte de son domaine.
-- Marché segmenté : segment s'adressant à différente parties de la population, par exemple Doctolib s'adresse d'un côté à la population générale et d'un autre côté aux professionnels du secteur. 
-Cela résume ce que l'on peut trouver comme segment, on peut en citer d'autre qui rentre malgré tout dans ces catégories.<br>
+- Marché segmenté : segment s'adressant à différente parties de la population, par exemple Doctolib s'adresse d'un côté à la population générale et d'un autre côté aux professionnels du secteur.
+
+Cela résume ce que l'on peut trouver comme segment, on peut en citer d'autre qui rentre dans ces catégories.
 Connaitre sa population cible est vitale lorsque l'on développe une entreprise car tout les autres blocs dépendent de ce facteur, aussi bien la communication que la source de revenue etc.
 ### La proposition de valeur
 Une fois la clientèle ciblée, il nous faut ensuite savoir comment nous différencier sur un marché. Pour cela, il existe de nombreuse possibilités. La question fondamentale à laquelle il faut répondre est celle du besoin : "A quel besoin répondons-nous ?". A cette question, il existe plusieurs que l'on peut lister de manière non-exhaustive : 
@@ -46,7 +47,8 @@ Une fois la clientèle ciblée, il nous faut ensuite savoir comment nous différ
 - Le prix : bien-sûr l'argent, permettre aux clients de faire des économies est surement la manière la plus simple et efficace de créer de la valeur. Les exemples de cette proposition sont légions : Lidl, RyanAir, OuiGo... 
 - L'accessibilité : permettre aux clients d'accéder à un service qui lui était jusqu'alors compliqué est une bonne manière de créer de la valeur. Blablacar utilise par exemple ce modèle en permettant à la population d'effectuer du co-voiturage avec tout le monde de manière efficace.
 - L'ergonomie : la commodité est un critère important lors de l'utilisation d'un service, Doctolib a par exemple révolutionné la manière dont est effectué une réservation médicale uniquement grâce à la simplicité dont est désormais effectuer cette action. 
-- L'accompagnement : le fait de promettre une garantie d'accompagnement est une manière de créer de la valeur. Darty assure une garantie totale de remplacement des produits à ceux qui souscrivent au "contrat de confiance" par exemple. 
+- L'accompagnement : le fait de promettre une garantie d'accompagnement est une manière de créer de la valeur. Darty assure une garantie totale de remplacement des produits à ceux qui souscrivent au "contrat de confiance" par exemple.
+
 Cette liste, loin d'être exhaustive, montre qu'il existe bien des possibilités pour attirer une clientèle. Ces deux premiers blocs sont la base de tous les autres et si ils sont solides, le business model possède alors de bonne base. 
 ### Les canaux de communication 
 La communication est essentielle à bien des fins, on peut en distinguer 5 phases : 
@@ -56,7 +58,7 @@ La communication est essentielle à bien des fins, on peut en distinguer 5 phase
 - La prestation : comment nous apportons la proposition de valeur aux clients. 
 - L'après-vente : comment nous apportons un support aux clients après leur achat.
 ### La relation avec le client 
-Comment maintenir une relation durable avec le client afin que celui-ci continue d'utiliser notre service ? <br>
+Comment maintenir une relation durable avec le client afin que celui-ci continue d'utiliser notre service ?
 C'est la question à laquelle nous essaierons de répondre avec ce bloc. 
 ### Le flux de revenus
 ### Les ressources clés 
@@ -66,5 +68,6 @@ C'est la question à laquelle nous essaierons de répondre avec ce bloc.
 On peut globalement résumer ce bloc en deux catégories différentes : 
 - La logique de coûts 
 - La logique de valeur
-Ces catégories correspondent à deux philosophies différentes : privilégions-nous le coût ou la qualité. <br>
+
+Ces catégories correspondent à deux philosophies différentes : Préférons-nous privilégier le coût ou la qualité ? 
 Le luxe appartient par définition à la seconde catégories tandis que les entreprises dont la proposition de valeur est basée sur le prix appartiennent par défaut au premier groupe. 
