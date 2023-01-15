@@ -13,6 +13,8 @@ tags: ['pok']
 - Accès ssh au serveur ovh1
 - Avoir un projet à déployer
 
+Dans le second sprint, on utilise des scripts bash qui nécéssite une compréhension du shell assez complète.
+
  {% endprerequis %}
 
 
@@ -198,14 +200,14 @@ Dans cette partie, on utilise git en ligne de commande.
 ## Git CLI :
 On commence par mettre à jour notre projet : 
 
-    git add .
-    git commit
-    git push
-    git chechout main
-    git merge dev
+    git add . // on ajoute les changements au commit
+    git commit // on commit les changements
+    git push // on les envoies à l'origine
+    git chechout main // on va sur la branche main
+    git merge dev  // on y fusionne la banche dev
 
 ## Création du script :
-La première version sera toute basique, on y inclus ces quelques commandes pour tester : 
+La première version sera toute basique, on y inclut ces quelques commandes pour tester : 
 
     #!/bin/sh
 
@@ -218,31 +220,35 @@ La première version sera toute basique, on y inclus ces quelques commandes pour
 
     echo "Prod successfully started"
 
+A ce stade, le script va chercher la dernière version du artblog sur github, installe les dépendances du projet, le build et lance le serveur sur mon port.
+
 Ce script a de nombreux problèmes : 
 
 - Il echo "Prod etc.." peu importe de l'état d'éxecution.
 - Il ne sauvegarde pas les erreurs.
 - Il n'y a aucun test d'effectué.
-- Il lance le serveur de prod dans un terminal local, on va le détatcher avec screen.
-- On ne peut que lancer tout d'un couop, le script n'est pas optimal si il faut juste redémarrer le serveur.
+- Il lance le serveur de prod dans un terminal local, on va le détatcher avec screen (puis tmux).
+- On ne peut que lancer tout le script d'un coup, le script n'est pas optimal si il faut juste redémarrer le serveur.
+- Il n'est pas possible de voir simplment comment ce que fait le script.
 
 ## Envoie du script :
-On copy ce script sur le server avec scp :
+On copy ce script sur le serveur avec scp :
 
     scp /chemin/local/publish.sh utilisteur@serveur:/chemin/distant
 
-Cet envoie doit être effectuer à chaque modifications.
+Cette commande doit être lancée à chaque modifications.
 
 ## On essaie maintenant d'executer le script via ssh :
 
     ssh nom_d_utilisateur@nom_du_serveur "bash /chemin/distant/publish.sh"
     
 On a un echo : prod succelfully started, ça s'annonce bien. Quelques erreurs de script plus tard, j'ai une version qui fait ce que je demande.
-On essaie maintenant d'améliorer le sustèmepoint par point.
+On essaie maintenant d'améliorer le système point par point.
 
-## Creation d'un script pour lancer le script : 
+## Creation d'un script pour lancer le script :
+{%info%}A ce stade, je ne pense pas que ça soit une bonne idée d'essayer de tout lancer sans voir ce qu'il se passe{%endinfo%}
 Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.
-Je ne le fais pas car je prefère voir si il y a des erreurs.
+Je ne le fais pas car je prefère voir si il y a des erreurs, mais il ressemblerait tout simplement à cela :
 
 Prepare_prod :
 
@@ -250,7 +256,7 @@ Prepare_prod :
     ssh [...] /publish.sh
 
 
-## Detachement du server dans un terminal en daemon :
+## Détachement du server dans un terminal en daemon :
 
 on modifie le script : 
 
@@ -258,7 +264,7 @@ on modifie le script :
 
 Cette commande devrait lancer le serveur dans un processus deamon nommé artblog, qui sera toujours en route quand je rompt la liaison ssh.
 
-{%attention%}Problème :  la commande screen -list ne référence pas le processus, je ne peux plus arreter mon serveur. C'est embêtant car impossible de lancer une nouvelle version du serveur si le port est pollué.{%endattention%}
+{%attention%}Problème :  la commande screen -list ne référence pas le processus, je ne peux plus arrêter mon serveur. C'est embêtant car impossible de lancer une nouvelle version du serveur si le port est déja utilisé.{%endattention%}
 
 ### Debug mode :
 
@@ -283,8 +289,8 @@ On l'inclut dans le script : d'abord on kill l'ancien process, ensuite on pourra
 
   - ps -ef : d'abord je récupere les processus
   - grep artblog : je prend ceux qui contiennent le mot artblog
-  - head -n -1 | : je garde tous sauf la dernièere ligne, en effet la derniere ligne est la commande grep elle même et renvoie une erreur par la   suite
-  - awk : je print que la deuxieme colonne qui correspond au PID
+  - head -n -1 | : je garde tous sauf la dernière ligne, en effet la dernière ligne est la commande grep elle même et renvoie une erreur par la   suite
+  - awk : je ne print que la deuxieme colonne qui correspond au PID
   - kill : je kill tous les process listés par le print awk.
   {%endinfo%}
 
@@ -292,6 +298,7 @@ On l'inclut dans le script : d'abord on kill l'ancien process, ensuite on pourra
 
 Le script devient :
 
+```bash
 #!/bin/sh
 
     cd /home/curcuma/node/artblog
@@ -304,16 +311,16 @@ Le script devient :
     screen -S artblog -dmS npm run start
 
     echo "Script ended"
-
+```
 On l'envoit et on test.
 
-## Détacher le lancement du serveur du build :
+## Séparer le build du projet du lancement du serveur :
 
-On créer des options qui permettent ou non de build le serveur.
+On crée des options qui permettent ou non de build le serveur.
 
 On crée l'option -h qui affiche de l'aide et -b qui lance le build. Par défaut, on lance un screen.
 
-```
+```bash
 
 #!/bin/sh
 
@@ -361,7 +368,7 @@ Mais à cause de je ne sais quoi le screen ne marche pas a travers ssh.
 On essaie la même chose en utilisant tmux au lieu de screen.
 
 On remplace les lignes liées a screen part 
-```
+```bash
 tmux kill-session -t artblogDeamon
 tmux new-session -d -s artblogDeamon "npm run start"
 
@@ -377,6 +384,130 @@ On peut maintenant lancer publish.sh en ssh pour
 
 Tout cela avec par exemple `ssh curcuma@ovh1.ec-m.fr "bash ./node/artblog/publish.sh -h"`
 
+## Récupértions des erreurs :
+
+{%prerequis%} On part sur du Bash un peu plus poussé que juste des echo et des commandes git. {%endprerequis%}
+
+Pour être un peu sérieux, on ajoute au script une fonction qui récupère les erreurs à chaque commande lancée. Ces erreurs seront casées dans un fichier de log. On formate les erreurs pour qu'elles affichent la date, la commande lancée avec ses options, et ensuite on print l'erreur.
+
+Pour cela, on utilise des spécificités bien pratique de bash comme les stderr, le pipe, les $?, les variabkes d'environements etc...
+
+ ```bash
+ Error_Handler() {
+    command=$1   # 1)
+    log_file=$PWD/error.log # 2)
+    stderr=$($command 2>&1 >/dev/null) # 3)
+    if [ $? -ne 0 ]; then # 4)
+        echo "Error: $(date +%F_%R) $command " >> $log_file
+        echo "      $stderr" >> $log_file
+        echo "$stderr" # 5)
+    fi
+  }
+ ```
+
+ La fonction est compliquée et on y arrive après plusieurs itérations. 
+ 
+ Explication détaillée :
+ 
+ - 1) On prend une commande en paramètre
+ - 2) on choisi le fichier error.log dans lequel on va placer nos log d'erreurs
+ - 3) on créer une variable stderr qui contient l'erreur standart de la commande. Pour cela, on lance la commande et on redirige l'erreur dans le stdout et on envoi ce stdout dans /dev/null pour qu'il ne soit pas affiché dans le terminal
+ - 4) Si la commande à terminé avec un exit code != 0, on sait qu'il y a une erreur, on va donc former un message d'erreur à mettre dans le fichier log
+ - 5) Ce message d'erreur contient 2 lignes, une avec la date formatée et la commande, l'autre avec la stderr récupérée plutôt. Enfin, on echo dans le terminal utilisé la stderr pour avoir l'erreur sans aller fouillé le fichier de logs
+
+ On peut maintenant 'wrapper' toutes nos fonctions avec cette Error_Handler pour que toutes les commandes me donnent des logs en cas d'erreur.
+
+ ### Problème de wrap : 
+
+ La commande du tmux agit mal quand elle est placée dans Error_Handler. Je suspecte que ça à un lien avec le fait qu'il y ait 3 fonctions imbriqués.
+ Je recopie juste la fonction Error_handler directement autour du tmux. Cela à l'avantage de marcher, mais l'inconvénient de baisser la qualitée de mon code. En effet il y a de la recopie et si je veux modifier le nom du fichier de logs par exemple, je dois le faire 2 fois maintenant.
+
+ {%attention%}Avec ce genre de fonction, et surtout en bash, il faut faire attention.
+ $command désigne la variable alors que $($command) l'éxécute. La syntax est crucial, surtout dans ce genre de script ou il est crucial de ne lancer la commande qu'une fois, et non pas plusieurs.
+ Ici, le script lance la commande une unique fois, c'est ce qu'on veut.
+ {%endattention%}
+
+ De plus, on conditionne le tmux-kill pour qu'il ne se lance que si il n'y a pas de session artblog déjà présente. Cela permet de ne lancer la commande que si nécéssaire puis ça peret d'éviter d'ajoiter des logs inutiles dans error.log à chaque fois que la fonction est executée.
+
+ le script devient :
+
+ ```bash
+#!/bin/sh
+
+function Error_Handler() {
+    command=$1
+    log_file=$PWD/error.log
+    stderr=$($command 2>&1 >/dev/null)
+    if [ $? -ne 0 ]; then
+        echo "Error: $(date +%F_%R) $command" >> $log_file
+        echo "    $stderr" >> $log_file
+        echo "$stderr"
+    fi
+}
+
+
+function Build() {
+  echo "Pulling from origin..."
+  Error_Handler "git pull origin main"
+  echo "Installing dependancies..."
+  Error_Handler "npm install"
+  echo "Building ..."
+  Error_Handler "npm run build"
+  
+}
+
+
+while getopts ":hb" opt; do
+  case $opt in
+    h)
+      echo "This is the help section of the script test.sh"
+      echo "Available options are:"
+      echo "-h : display this help section"
+      echo "-b : pull the main branch of the project, build the project and publish it on internet"
+      echo "no options will only publish the project"
+      exit 0
+      ;;
+    b)
+      Build
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+  esac
+done
+
+cd /home/curcuma/node/artblog
+
+
+session_status=$(tmux list-sessions | grep artblogDeamon)
+if [[ $session_status =~ "artblogDeamon" ]]; then
+  Error_Handler "tmux kill-session -t artblogDeamon"
+fi
+
+stderrTmux=$(tmux new-session -d -s artblogDeamon "npm run start" 2>&1 >/dev/null)
+if [ $? -ne 0 ]; then
+        echo "Error: $(date +%F_%R) tmux new-session -d -s artblogDeamon \"npm run start\" " >> $PWD/error.log
+        echo "    $stderrTmux" >> $PWD/error.log
+        echo "$stderrTmux"
+    fi
+
+
+
+echo "Script succesfuly ended"
+exit 0
+ 
+ ```
+
+ Le script fonctionne come voulue, voici un exemple de logs que l'on récupère si il y a des erreurs :
+
+ <img src="../images/error1.png" alt="error log" style="height: 200px; margin: 0 auto; border: 0" />
+
+{%info%}Pour aller plus loin, on peut automatiser le lancement de se script, suivant certaines conditions, avec Jenkins par exemple, comme dans [ce MON](../../../../mon/TBi/MON/Jenkins)
+{%endinfo%}
+
+## Bilan second sprint :
+Je suis partie dans une direction différente que prévu. Dans une démarche DevOps, la mise en production est un 'non évenement', c'est à dire qu'il doit se faire facilement, rapidement, et aussi souvent que nécéssaire. Gràce à ce petit script, on se rapproche de cette démarche.
 
 
 
