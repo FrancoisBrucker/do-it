@@ -117,3 +117,4 @@ Sur ce point, il faut surtout être honnête et transparent, il n'y a pas de tri
 ### Philosophie 
 Si l'on s'engage dans un projet au point d'en faire un projet entrepreunarial, les porteurs de celui-ci croient forcément en sa réussite et partagent une ambition commune. Le Business Plan doit donc les traduire, c'est ainsi que l'on affirme l'identité de l'entreprise. 
 
+### La mise en oeuvre du projet 
