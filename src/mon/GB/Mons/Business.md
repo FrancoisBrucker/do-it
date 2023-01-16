@@ -103,4 +103,17 @@ Le luxe appartient par définition à la seconde catégories tandis que les entr
 <br>
 C'est donc la fin de ce premier chapitre consacré aux différents blocs formant un Business Model. Ces blocs sont tous interdépendants et aucun ne doit être négligés lors de la conception du Business Model. 
 
-## Typologie
+## Stratégie
+
+# Business Plan
+Si le Business Model est la base de l'entreprise, le Business Plan est le moteur lui permettant d'avancer. En effet, le Business Plan contient la stratégie de développement de l'entreprise et ses implications financières, c'est ce qui lui permet d'évoluer. Il établi la vision et la philosophie de l'entreprise, il est aussi utilisé pour convaincre des investisseurs de "miser" sur l'entreprise. Nous parlerons ici d'un point de vue entrepreunarial majoritairement. 
+
+## Préparer le Business Plan 
+Le Business Plan reflète l'entreprise et, par conséquent, reflète les porteurs du projet. Ainsi, il doit obligatoirement montrer le professionnalisme des acteurs et la philosophie du projet. 
+
+### Professionnalisme 
+Sur ce point, il faut surtout être honnête et transparent, il n'y a pas de triche possible. Dans tous les cas, si il n'y a pas eu assez de travail préalable, l'entreprise ne se développera pas comme elle le pourrait. Par conséquent, il ne faut pas hésiter à montrer le travail effectué (le Business Model par exemple) et si il existe des zones d'incertitudes, ne pas les masquer. 
+
+### Philosophie 
+Si l'on s'engage dans un projet au point d'en faire un projet entrepreunarial, les porteurs de celui-ci croient forcément en sa réussite et partagent une ambition commune. Le Business Plan doit donc les traduire, c'est ainsi que l'on affirme l'identité de l'entreprise. 
+
