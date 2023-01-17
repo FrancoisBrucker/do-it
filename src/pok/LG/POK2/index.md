@@ -107,7 +107,7 @@ Avec le temps qui défile à une vitesse folle, mon premier MVP n'en est pas un.
 
 AJOUTER IMG
 
-Questions posées:
+**Questions posées:**
 
 - Le service proposé vous intéresse ? (pourquoi?)
 - Si une telle boutique existait, est-ce que vous seriez clients ? ( pour quel produits?)
@@ -118,7 +118,7 @@ Questions posées:
 - Le  segment d’habits choisis vous parait-il suffisant ? Quel autre produit souhaiteriez-vous voir à la location ? ( vêtements ou non)
 - La tranche d’âge proposée (0-6 ans) vous paraît idéal ? Jusqu’à quel âge seriez vous intéressé par la location de vêtement ?
 
-Analyse des réponses:
+**Analyse des réponses:**
 
 Il y a un vrai intérêt pour l’offre (100 % de oui), surtout pour les vêtements de ski ou cérémonie. Les parents ont des exigences de qualités : les habits doivent arriver en parfait état.
 Pour ce qui est  de la boutique, seul 28 % des parents interrogés la trouve indispensable/ rassurante. (argument:" Etant parent d'un enfant en bas âge, nous évitons au maximum les déplacements qui nécessitent une logistique importante ")
@@ -132,3 +132,97 @@ Sur le choix des produits : des vêtements de marque ou de créateur représent
 La plupart (plus de 70%) des parents aimeraient aussi pouvoir louer des accesssoires : Siège auto, lits bébé, duvet pour le camping... 
 
 La tranche d’âge choisie est idéale pour plus de 70% des parents.
+J’ai décidé d’iclure les chaussures dans les catégories dédiées. Mon 4eme onglet regroupera les accessoires mentionnés plus tôt.
+
+
+
+
+
+{% info "Difficultés" %}
+- Les réponses des  personnes sondées sont différentes et il faut faire des choix (lesquelles suivre?)
+- Mon nombre de réponses n’est bien sûr pas représentatif. J’ai fais de mon mieux pour contacter le plus de familles possible mais au final je n’ai récolté que peu de réponses.
+
+{% endinfo %}
+
+## 6. MVP 2 : Conception, tests , apprentissages
+
+On va passer à la maquette sur Figma 
+
+**Les fonctionnalités que je veux :**
+
+- Une en tête avec le logo , une barre de recherche et un accès au panier et au compte client
+- 4 catégories, montrer des sous catégories
+- une pages d’accueil avec les actualités du site et es collaborations avec les créateurs 
+-Sur les pages produits : des filtres (sexe,age,couleur, état)
+-  Afficher le prix de la location/jour 
+- Choix de la date de réception des vêtements
+- Choix du mode de livraison
+- Choix du nombre de jour loués
+- Avoir une page récapitulative des livraisons prévues dans la section « mon compte » et un historique de commandes
+
+
+**Maquette Figma :**
+
+Pour ma maquette,j’ai suivi la méthodologie Monsieur Ly (cours Interface Utilisateur). J’ai adapté le niveau de finissions de mon  MVP en fonction du temps dont je disposais .
+
+*1. Le brief graphique :*
+J’ai d’abord travaillé sur les valeurs que je voulais transmettre par mon design et ma cible type.
+- valeurs :
+éco friendly
+qualité
+Pratique/accessible à tous
+Facil
+personnel/familial
+- Profil cible: 
+Mère, 30-45 ans
+Ayant des enfants en bas âge (1 à 2 enfants)
+Concernée par son porte-monnaie et l’environnement
+
+- Mood board :  
+Je me suis inspirée d’autres sites de marque pour enfants eco responsables. On remarque que les tons majoritairement présents sont le rose, le marron et le vert.
+
+
+AJOUTER IMG
+
+
+- Les palettes de couleur : Je me suis inspirée du mood board pr sélectionner différentes palettes de couleurs correspondant à la marque
+
+AJOUTER IMG
+
+- La police : j’ai choisi des polices refletant les côtés simples et familiaux de la marque. Elles sont plus personnelles et arrondies que les polices classiques.
+
+AJOUTER IMG
+
+- Les écrans :
+J’ai choisis de réaliser 5 écrans qui reflètent les fonctionnalités principales de mon site :
+L’écran d’acceuil
+L’onglet vêtements de cérémonies
+L’onglet vêtements de ski
+L’onglet correspondant au panier
+l’onglet « Mon compte »
+
+
+Après plusieurs tests couleur voici le resultat final. J’ai aussi choisi de mettre des photos des vêtements portés et sur fond de nature (dans le but de rappeler le côté eco-friendly de la boutique) . Je pensais que mes premiers dessins sur canvas ne me serviraient pas. Au final ils m’ont pas mal aidé pour remplir mes pages figma.
+
+AJOUTER IMG
+
+
+J’ai enregistré une démo vidéo de la maquette afin de l’envoyer à mes testeurs qui n’habitent pas sur Marseille.
+
+Ajouter VID
+
+**Retours:**
+
+
+
+
+
+
+
+
+
+
+{% info "Difficultés" %}
+- Les couleurs
+
+{% endinfo %}
