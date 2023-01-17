@@ -118,3 +118,5 @@ Sur ce point, il faut surtout être honnête et transparent, il n'y a pas de tri
 Si l'on s'engage dans un projet au point d'en faire un projet entrepreunarial, les porteurs de celui-ci croient forcément en sa réussite et partagent une ambition commune. Le Business Plan doit donc les traduire, c'est ainsi que l'on affirme l'identité de l'entreprise. 
 
 ### La mise en oeuvre du projet 
+La mise en oeuvre du projet s'appuie en premier lieu sur des éléments concrets, factuels. Ce sont ces éléments qui permettent de donner des objectifs quantifiables et mesurables. Le travail de recherche préalable au business plan doit s'appuyer sur des exemples pour être moins abstrait. <br>
+Il est aussi efficace de réaliser des plans d'actions dotés d'objectifs chronologiques, cela donne une réelle idée de la situation globale du projet. Ces plans d'actions peuvent être réalisés dans n'importe quel domaine : marketing, commercial, ressources humaines...
