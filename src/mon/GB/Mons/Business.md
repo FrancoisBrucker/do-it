@@ -103,8 +103,6 @@ Le luxe appartient par définition à la seconde catégories tandis que les entr
 <br>
 C'est donc la fin de ce premier chapitre consacré aux différents blocs formant un Business Model. Ces blocs sont tous interdépendants et aucun ne doit être négligés lors de la conception du Business Model. 
 
-## Stratégie
-
 # Business Plan
 Si le Business Model est la base de l'entreprise, le Business Plan est le moteur lui permettant d'avancer. En effet, le Business Plan contient la stratégie de développement de l'entreprise et ses implications financières, c'est ce qui lui permet d'évoluer. Il établi la vision et la philosophie de l'entreprise, il est aussi utilisé pour convaincre des investisseurs de "miser" sur l'entreprise. Nous parlerons ici d'un point de vue entrepreunarial majoritairement. 
 
