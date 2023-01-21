@@ -19,7 +19,7 @@ L'ensemble de mes MON
 
 ### Temps 2
 - [Premier MON: **Programation Objet**](./MON3/)
-- [Deuxième MON: **Django girls**] (./MON4/)
+- Deuxième MON:
 
 ### Temps 3
 - Premier MON: 
