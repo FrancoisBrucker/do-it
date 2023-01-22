@@ -126,7 +126,7 @@ Puis je créé mon modèle :
 Je n'ai affiché qu'une partie car le modèle est très loin puisque je stock les points de tous les joueurs.
 Je me suis demandé si il était possible de créer un modèle *player* puis de l'invoquer 4 fois dans mon modèle *partie* mais je n'ai pas trouvé la réponse.
 
-Ensuite j'ai mis en place ma première route qui permet de créer la partie. Lorsque l'utilisateur clique sur le bouton suivant, une nouvelle partie est créée dans la base de données et les noms des joueurs sont récupérés dans les *headers* de la requête et enregistré dans la partie, puis un cookie est créé contenant l'id de la partie.
+Ensuite j'ai mis en place ma première route qui permet de créer la partie. Lorsque l'utilisateur clique sur le bouton suivant, une nouvelle partie est créée dans la base de données et les noms des joueurs sont récupérés dans les *headers* de la requête et enregistré dans la partie, puis un cookie est créé contenant l'id de la partie. J'ai cependant un problème avec cela car des fois le cookie ne s'envoie pas et je reste donc bloqué dans la partie précédente.
 
 index.js : 
 ```javascript
@@ -175,7 +175,7 @@ Une fois la partie créée il faut que j'affiche le nom des joueurs ainsi que le
 J'ai tout d'abord voulu accéder à la base de données depuis le fichier *yams.js* mais je n'ai pas réussi donc j'ai implémenté une route */initialisation* qui récupère le nombre de joueurs ainsi que leur nom dans la base de données et qui les affiche.
 
 yams.js :
-```bash
+```javascript
     fetch('/initialisation')
     .then(response => response.json())
     .then(data => {
@@ -214,3 +214,104 @@ yams.js :
         }   
     })
 ```
+
+server.js:
+```javascript
+  app.use('/initialisation', (req, res) => {
+    id = req.cookies.id
+    console.log(id)
+    db.Partie.findByPk(id)
+    .then((data) => {
+      res.json(data)
+    })
+  })
+```
+J'utilise le package cookie-parser afin de récupérer les cookies, ce qui me permet d'obtenir l'id de la partie en cours.
+
+J'ai ensuite créé la route qui permet d'enregistrer les valeurs des nouveaux scores du joueur 1. 
+
+Pour cela, j'utilise la fonction *onchange* et je récupère les valeurs de toutes les combinaisons et je les stock dans un dictionnaire que j'envoie dans les *headers* de mon fetch. 
+
+Je récupère ces données dans *server.js*, stock les données dans la bd puis à l'aide de *calcul.js* je calcule la somme et le total des points que j'ajoute également à la bd. 
+
+J'ai tout d'abord eu des erreurs puisque les combinaisons vides me renvoyait "" et lorsque je calculais la somme j'obtenais donc une chaine de caractère. J'ai pour cela, modifié mon dictionnaire avec une boucle for afin afin de remplacer les valeurs vides par 0.
+
+yams.js : 
+```javascript
+for(const combi of list_total){
+    document.getElementById(combi+'j1').onchange = function(){
+
+        ...
+
+        pts_J1 = {
+            nombre1J1 : document.getElementById('nombre1j1').value,
+            nombre2J1 : document.getElementById('nombre2j1').value,
+            nombre3J1 : document.getElementById('nombre3j1').value,
+            nombre4J1 : document.getElementById('nombre4j1').value,
+            nombre5J1 : document.getElementById('nombre5j1').value,
+            nombre6J1 : document.getElementById('nombre6j1').value,
+            brelanJ1 : document.getElementById('brelanj1').value,
+            carreJ1 : document.getElementById('carrej1').value,
+            fullJ1 : pts_fullj1,
+            psJ1 : pts_psj1,
+            gsJ1 : pts_gsj1,
+            yamsJ1 : pts_yamsj1,
+            yams2J1 : pts_yams2j1,
+            yams3J1 : pts_yams3j1,
+            chanceJ1 : document.getElementById('chancej1').value,
+        }
+
+        for (const pts in pts_J1){
+            if(pts_J1[pts] == ''){
+                pts_J1[pts] = 0
+            } else if(typeof(pts_J1[pts]) == 'string') {
+                pts_J1[pts] = parseInt(pts_J1[pts])
+            }
+        }
+        fetch('/changeJ1',{
+                method:'POST',
+                headers:{
+                  'Content-Type': 'application/json',
+                  'Players':JSON.stringify(pts_J1)
+                },
+            }).then(response => response.json())
+            .then(data => {
+                document.getElementById('pts_sommej1').textContent = data.sommeJ1
+                document.getElementById('pts_totalj1').textContent = data.totalJ1
+            })
+    }
+}
+```
+
+server.js:
+```javascript
+app.use('/changeJ1', (req, res) => {
+  pts_J1 = req.rawHeaders.toString().split("{")[1].split("}")[0]
+  id = req.cookies.id
+  db.Partie.findByPk(id)
+  .then((data) => {
+    data.nombre1J1 = parseInt(pts_J1.split(",")[0].split(":")[1])
+    data.nombre2J1 = parseInt(pts_J1.split(",")[1].split(":")[1])
+    data.nombre3J1 = parseInt(pts_J1.split(",")[2].split(":")[1])
+    data.nombre4J1 = parseInt(pts_J1.split(",")[3].split(":")[1])
+    data.nombre5J1 = parseInt(pts_J1.split(",")[4].split(":")[1])
+    data.nombre6J1 = parseInt(pts_J1.split(",")[5].split(":")[1])
+    data.brelanJ1 = parseInt(pts_J1.split(",")[6].split(":")[1])
+    data.carreJ1 = parseInt(pts_J1.split(",")[7].split(":")[1])
+    data.fullJ1 = parseInt(pts_J1.split(",")[8].split(":")[1])
+    data.psJ1 = parseInt(pts_J1.split(",")[9].split(":")[1])
+    data.gsJ1 = parseInt(pts_J1.split(",")[10].split(":")[1])
+    data.yamsJ1 = parseInt(pts_J1.split(",")[11].split(":")[1])
+    data.yams2J1 = parseInt(pts_J1.split(",")[12].split(":")[1])
+    data.yams3J1 = parseInt(pts_J1.split(",")[13].split(":")[1])
+    data.chanceJ1 = parseInt(pts_J1.split(",")[14].split(":")[1])
+    data.sommeJ1 = calcul.somme(data.nombre1J1, data.nombre2J1, data.nombre3J1, data.nombre4J1, data.nombre5J1, data.nombre6J1)
+    data.totalJ1 = calcul.total(data.sommeJ1, data.brelanJ1, data. carreJ1, data.fullJ1, data.psJ1, data.gsJ1, data.yamsJ1, data.yams2J1, data.yams3J1, data.chanceJ1)
+    data.save()
+    res.json(data)
+  })
+
+})
+```
+
+J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.
