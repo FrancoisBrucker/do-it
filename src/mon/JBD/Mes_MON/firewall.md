@@ -49,7 +49,7 @@ Remarque, si les employés de l'entreprise utilisent un VPN, il ne sera pas poss
 
 **Où appliquer des firewall ?**
 
-- Dans le context de l'entreprise, le pare-feu pourrait se placer sur la box de l'entreprise, sur l'interface externe (interface qui relie la box au reste du monde).
+- Dans le contexte de l'entreprise, le pare-feu pourrait se placer sur la box de l'entreprise, sur l'interface externe (interface qui relie la box au reste du monde).
 - Dans un contexte d'un aéroport où il y a un réseau public, et un réseau privé - pour permettre au clients d'accéder à internet et aux employés de communiquer avec les avions. Le réseau sera composé de **VLAN** (*Virtual Local Area Network*) pour éviter d'avoir les clients sur le même réseau que les employés. Les pare-feu peuvent se placer sur les différentes interfaces des VLAN du switch.
 
 Dans un monde où tout est sécurisé, chaque appareil devrait avoir son propre pare-feu, sur chacune de ses interfaces. Car si un utilisateur malveillant a réussi à contourner le pare-feu principal, tout ce qui est derrière peut-être vulnérable aux attaques. 
@@ -87,7 +87,7 @@ Ici, le pare-feu bloque toutes les connexions - UDP et TCP - sur les ports 25 et
 
 **Dans quelle condition est-il intéressant de protéger son ordinateur ?**
 
-Si par exemple, vous êtes en train de travailler sur la prochaine release de votre serveur web. Vous faites tourner en local le serveur, pour faire vos test. Malheureusement, vous êtes actuellement dans un aéroport, en attendant votre avions vers Centrale Casablanca, et n'avez accès qu'à un réseau public où peuvent être connectés des personnes malveillantes. En faisant tourner votre serveur sur votre ordinateur, vous l'exposez à des potentiels tentatives d'intrusions.
+Si par exemple, vous êtes en train de travailler sur la prochaine release de votre serveur web. Vous faites tourner en local le serveur, pour faire vos test. Malheureusement, vous êtes actuellement dans un aéroport, en attendant votre avion vers Centrale Casablanca, et n'avez accès qu'à un réseau public où peuvent être connectés des personnes malveillantes. En faisant tourner votre serveur sur votre ordinateur, vous l'exposez à des potentiels tentatives d'intrusions.
 
 {% prerequis "Ayant un Ubuntu, je me suis concentré sur les technologies disponible pour mon OS." %}
 
