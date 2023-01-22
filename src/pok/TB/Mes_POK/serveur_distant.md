@@ -315,3 +315,5 @@ app.use('/changeJ1', (req, res) => {
 ```
 
 J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.
+
+Il me reste à résoudre mon problème de cookie, réussir à ce que 2 joueurs puissent remplir la même feuille de résultat et surtout à réussir à le déployer sur l'ovh.
