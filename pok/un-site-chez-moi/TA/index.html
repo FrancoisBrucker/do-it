@@ -111,17 +111,28 @@
 <li>Responsive bottom bar</li>
 </ul>
 </li>
-<li>Incorporer un système de chat :
+<li>Incorporer l'authentification avec google. Utilisation de <a href="https://www.passportjs.org/packages/passport-google-oauth20/">passport-google-oauth20</a> :
 <ul>
-<li>Choix de la technologie</li>
-<li>Développement</li>
+<li>Adapter le système de gestion de session avec le système actuel (cookies) : il faut que comme avec une authentification classique, un cookie de session soit envoyé après google Oauth</li>
 </ul>
 </li>
 </ul>
 <h3>ToDo : 2ème Sprint</h3>
 <ul>
-<li>Déploiement sur serveur distant</li>
+<li>Déploiement sur serveur distant : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a>
+<ul>
+<li>Nécessité d'une connexion https pour accéder à la localisation ==&gt; utilisation de <a href="https://ngrok.com/">ngrok</a></li>
 </ul>
+</li>
+<li>Finir les derniers correctifs pour avoir un site fonctionnel en production, notamment :
+<ul>
+<li>Migration de MySQL --&gt; Postgres</li>
+<li>Changer les clés secrètes</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://ngrok.com/">Ngrok</a> est un outil qui permet de créer des tunnels sécurisés entre des ordinateurs distants. Il sert d'intermédiaire entre l'utilisateur et serveur ovh : utilisateur &lt;-&gt; ngrok &lt;-&gt; ovh. Les connexions utilisent le protocole sécurisé TLS, donc le navigateur peut se connecter en https et transmettre la localisation de l'utilisateur au serveur.</p>
+<p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>
 
 
 </article>
