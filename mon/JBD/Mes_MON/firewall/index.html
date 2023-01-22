@@ -113,7 +113,7 @@
 <p>Remarque, si les employés de l'entreprise utilisent un VPN, il ne sera pas possible pour l'entreprise de filtrer les flux sortants, car le VPN agit comme un tunnel.</p>
 <p><strong>Où appliquer des firewall ?</strong></p>
 <ul>
-<li>Dans le context de l'entreprise, le pare-feu pourrait se placer sur la box de l'entreprise, sur l'interface externe (interface qui relie la box au reste du monde).</li>
+<li>Dans le contexte de l'entreprise, le pare-feu pourrait se placer sur la box de l'entreprise, sur l'interface externe (interface qui relie la box au reste du monde).</li>
 <li>Dans un contexte d'un aéroport où il y a un réseau public, et un réseau privé - pour permettre au clients d'accéder à internet et aux employés de communiquer avec les avions. Le réseau sera composé de <strong>VLAN</strong> (<em>Virtual Local Area Network</em>) pour éviter d'avoir les clients sur le même réseau que les employés. Les pare-feu peuvent se placer sur les différentes interfaces des VLAN du switch.</li>
 </ul>
 <p>Dans un monde où tout est sécurisé, chaque appareil devrait avoir son propre pare-feu, sur chacune de ses interfaces. Car si un utilisateur malveillant a réussi à contourner le pare-feu principal, tout ce qui est derrière peut-être vulnérable aux attaques.</p>
@@ -143,7 +143,7 @@ Si personne n'a jamais été administrateur, il suffit souvent seulement de trou
 <p>Ici, le pare-feu bloque toutes les connexions - UDP et TCP - sur les ports 25 et 445 de la box.</p>
 <h2 id="h3"> Protéger mon ordinateur </h2>
 <p><strong>Dans quelle condition est-il intéressant de protéger son ordinateur ?</strong></p>
-<p>Si par exemple, vous êtes en train de travailler sur la prochaine release de votre serveur web. Vous faites tourner en local le serveur, pour faire vos test. Malheureusement, vous êtes actuellement dans un aéroport, en attendant votre avions vers Centrale Casablanca, et n'avez accès qu'à un réseau public où peuvent être connectés des personnes malveillantes. En faisant tourner votre serveur sur votre ordinateur, vous l'exposez à des potentiels tentatives d'intrusions.</p>
+<p>Si par exemple, vous êtes en train de travailler sur la prochaine release de votre serveur web. Vous faites tourner en local le serveur, pour faire vos test. Malheureusement, vous êtes actuellement dans un aéroport, en attendant votre avion vers Centrale Casablanca, et n'avez accès qu'à un réseau public où peuvent être connectés des personnes malveillantes. En faisant tourner votre serveur sur votre ordinateur, vous l'exposez à des potentiels tentatives d'intrusions.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
