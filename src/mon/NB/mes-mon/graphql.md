@@ -22,6 +22,11 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 - Avoir Docker et Docker Compose sur sa machine (ou bien avoir une instance de PostgreSQL installée)
 {% endprerequis %}
 
+
+{% info %}
+Le dépot GitHub du POC : https://github.com/nbert71/graphql-express
+{% endinfo %}
+
 ## GraphQL ou REST ?
 
 {% info "Qu'est-ce qu'une **API** ?" %}
@@ -238,6 +243,8 @@ On va désormais créer une migration et l'appliquer en même temps à la base d
 
 A ce stade en lançant la commande `npx prisma studio`nous devrions voir nos tables avec les différents champs.
 
+<img src="./../images/prisma-studio.png" />
+
 {% attention %}
 Il faut faire attention aux pratiques que l'on souhaite avoir. Il est possible de travailler uniquement avec le schéma Prisma et faire des `db push`cependant des changements plus important en base de données pourrait être critique en production, c'est pour cela que l'on utilise les migrations.
 
@@ -263,11 +270,146 @@ Afin de pouvoir charger ces fausses données nous devons modifier le `package.js
 Comme nous l'avons au début de ce MON, GraphQL est un langage de requête API. Pour fonctionner, nos serveur express a besoin d'un serveur GraphQL afin d'interpréter les requêtes et les transformer en requête Prisma qui les transformera ensuite en requête SQL. Nous allons utiliser `express-graphql`.
 
 ~~~bash
-npm i express-graphql @graphql-tools/schema
+npm i express-graphql graphql
 ~~~
 
-**askip ça va marcher mais pas encore ^^**
+GraphQL fonctionne avec des types, des queries et des mutations. Ici nous allons montrer en exemple la class User. On commence pas créer un type User qui va définir les types de données que nous allons renvoyer au client.
 
+~~~js
+const UserType = new GraphQLObjectType({
+    name: "User",
+    fields: () => ({
+        id: {type: GraphQLInt},
+        email: {type: GraphQLString},
+        first_name: {type: GraphQLString},
+        last_name: {type: GraphQLString},
+        posts: {type: GraphQLList(PostType)},
+        profile: {type: ProfileType}
+    })
+})
+~~~
+
+On peut ensuite définir une query associée qui permet de récupérer la liste de tous les users.
+
+~~~js
+const RootQuery = new GraphQLObjectType({
+    name: "RootQueryType",
+    fields: {
+        getAllUsers: {
+            type: GraphQLList(UserType),
+            async resolve(parent, args) {
+                return await prisma.user.findMany()
+            }
+        }
+    }
+})
+~~~
+
+On met en place ensuite la mutation pour créer un user.
+
+~~~js
+const Mutation = new GraphQLObjectType({
+    name: "Mutation",
+    fields: {
+        createUser: {
+            type: UserType,
+            args: {
+                email: {type: GraphQLString},
+                first_name: {type: GraphQLString},
+                last_name: {type: GraphQLString},
+            },
+            async resolve(parent, args) {
+                await prisma.user.create({data: {
+                    email: args.email,
+                    first_name: args.first_name,
+                    last_name: args.last_name
+                }})
+                return args
+            }
+        }
+    }
+})
+~~~
+
+On crée ensuite le schéma GraphQL qui va nous permette de gérer les requêtes et la route Express associée.
+
+~~~js
+const schema = new GraphQLSchema({query: RootQuery, mutation: Mutation})
+
+app.use('/api', graphqlHTTP({
+    schema,
+    graphiql: true
+}))
+~~~
+
+{% info %}
+L'option `graphiql: true`nous permet d'avoir un GUI sur la route *"/api"* et ainsi pour voir faire les requêtes plus simplement pour la période de test.
+{% endinfo %}
+
+Testons désormais notre api !
+
+~~~graphql
+# je demande la liste de tous les users et pour chaque user je veux son mail son nom et son prénom
+query {
+    getAllUsers {
+        email
+        first_name
+        last_name
+    }
+}
+~~~
+
+Le serveur répond alors :
+~~~json
+{
+  "data": {
+    "getAllUsers": [
+      {
+        "email": "alice@prisma.io",
+        "first_name": "Alice",
+        "last_name": "Prisma"
+      },
+      {
+        "email": "bob@prisma.io",
+        "first_name": "Bob",
+        "last_name": "Prisma"
+      }
+    ]
+  }
+}
+~~~
+
+On teste maintenant la mutation !
+
+~~~graphql
+mutation {
+  createUser(email: "mrbean@email.com", first_name:"Harry", last_name:"Cover"){
+    email
+    first_name
+    last_name
+  }
+}
+~~~
+
+Le serveur répond alors :
+
+~~~json
+{
+  "data": {
+    "createUser": {
+      "email": "mrbean@email.com",
+      "first_name": "Harry",
+      "last_name": "Cover"
+    }
+  }
+}
+~~~
+
+On peut ainsi continuer et créer d'autres requêtes....
+
+## Conclusion
+
+Pour conclure, GraphQL est un langage de requête API qui est assez novateur. Toutes les requêtes client sont des requêtes POST et se font sur un seul endpoint. Je pensais qu'il suffisait d'exposer ses données sur une route et que le client pouvait ensuite demander n'importe quoi sous le format qu'il veut mais en fait le développeur doit quand même tout définir à la main comme à la manière d'une API REST. Ainsi, GraphQL est censé apporter de la flexibilité aux développeurs mais le travail reste tout aussi fastidieux qu'une API REST, voire plus...
 
 
 ## Sources
