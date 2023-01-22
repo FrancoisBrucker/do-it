@@ -87,9 +87,50 @@
 </ul>
 </div></div>
 <h2>GraphQL ou REST ?</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Qu'est-ce qu'une <strong>API</strong> ?</p>
+</div><div class="pl-8 mr-8">
+<p>Selon la CNIL, une <strong>API</strong> (<em>application programming interface</em> ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.</p>
+<img src="./../images/api.png" style="border-width: 0;" />
+<p>Une API va alors exposer des <strong>routes</strong> (que l'on appelle aussi <strong>endpoints</strong> en anglais) afin que le client puisse dialoguer avec les services. Il existe différentes manières de structurer les routes: ici nous allons parler des API REST et des API GraphQL.</p>
+</div></div>
 <h3>Les API REST</h3>
+<p>Une API REST (<em>Representational State Transfer</em>) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des <a href="http.cat">status code</a> afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.</p>
+<img src="./../images/api_rest.png" style="border-width: 0; width: 100%;" />
+<p>Chaque méthode HTTP permet d'effectuer des actions bien particulières. Voilà un exemple pour expliquer les méthodes les plus utilisées.</p>
+<img src="./../images/rest_methods.png" />
+<p>Ainsi, en suivant les routes de l'image ci-dessus, en appelant <em>&quot;/posts&quot;</em> en méthode GET, l'API nous répondra en nous donnant la liste de tous les posts. Si j'envoie une requête POST à <em>&quot;/posts&quot;</em> en mettant des données dans ma requête je vais créer dans la base de données un post...</p>
+<p>Pour plus d'informations, je vous invite à consulter <a href="https://phauer.com/2015/restful-api-design-best-practices/">https://phauer.com/2015/restful-api-design-best-practices/</a>.</p>
 <h3>Les API GraphQL</h3>
-<h3>Comparaison et synthèse</h3>
+<p>Le modèle d'API GraphQL est une autre manière de structurer les routes. Il n'y a en général qu'<strong>un seul endpoint</strong> qui est de type <strong>POST</strong> et c'est le client qui, en paramètres de la requête POST va définir les données qu'il souhaite obtenir. On gagne ainsi en flexibilité en permettant au client d'obtenir ce qu'il a besoin sans être figé par un modèle REST.</p>
+<img src="./../images/rest_graphql.png" style="border-width: 0;" />
+<img src="./../images/REST-and-GraphQL.png" style="border-width: 0;" />
+<h3>REST ou GraphQL ? Avantages et inconvénients</h3>
+<p>Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantages et ses inconvénients par rapport aux API REST :</p>
+<ul>
+<li>
+<p>✅ <strong>Flexibilité</strong> : les API GraphQL permettent aux clients de demander des donnée spécifiques plutôt que de recevoir un format de données prédéfini, cela offre donc une grande flexibilité pour les développeurs.</p>
+</li>
+<li>
+<p>✅ <strong>Spécificité</strong> : les API GraphQL permettent de demander plusieurs donner en une seule requête alors qu'il en aura fallu plusieurs dans le cas d'un modèle REST.</p>
+</li>
+<li>
+<p>✅ <strong>Évolutivité</strong> : GraphQL est conçu pour évoluer avec les besoins du client et lui permet de faire des manipulations spécifiques telles que les opérations en lots ou bien les subscriptions pour les données en temps réel.</p>
+</li>
+<li>
+<p>❌ <strong>Apprentissage</strong> : GraphQL est un langage d'API complètement différent, il peut donc être difficile pour les développeurs de s'adapter.</p>
+</li>
+<li>
+<p>❌ <strong>Débogage</strong> : le débogage est plus difficile à cause de la flexibilité des requêtes.</p>
+</li>
+<li>
+<p>❌ <strong>Support</strong> : GraphQL est très largement moins utilisé que REST, il y a donc moins de bibliothèques, frameworks et documentations ...</p>
+</li>
+</ul>
 <h2>Proof Of Concept</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -258,6 +299,14 @@ Afin de pouvoir charger ces fausses données nous devons modifier le <code>packa
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> i express-graphql @graphql-tools/schema
 </code></pre>
 <p><strong>askip ça va marcher mais pas encore ^^</strong></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api">https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api</a></li>
+<li><a href="https://blog.hubvisory.com/blog/api-rest-comment-ca-fonctionne-et-pourquoi-l-utiliser/">https://blog.hubvisory.com/blog/api-rest-comment-ca-fonctionne-et-pourquoi-l-utiliser/</a></li>
+<li><a href="https://stackoverflow.com/questions/73103901/api-endpoint-for-a-single-item-post-vs-put">https://stackoverflow.com/questions/73103901/api-endpoint-for-a-single-item-post-vs-put</a></li>
+<li><a href="https://medium.com/nerd-for-tech/graphql-vs-restful-e1a99fd14285">https://medium.com/nerd-for-tech/graphql-vs-restful-e1a99fd14285</a></li>
+<li><a href="https://kinsta.com/fr/blog/graphql-vs-rest/">https://kinsta.com/fr/blog/graphql-vs-rest/</a></li>
+</ul>
 
 
 </article>
