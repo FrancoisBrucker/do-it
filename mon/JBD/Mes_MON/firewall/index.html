@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Firewall</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">Firewall</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Firewall</li>
+          
+            <li class="before:content-['•'] before:px-1">Réseau</li>
+          
+            <li class="before:content-['•'] before:px-1">Packet Tracer</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Jean-Baptiste Durand</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>À quoi servent les pare-feu ? Et comment les mettre en place sur un serveur ?</p>
+<!-- fin résumé -->
+<h2 id="toc"> Table des matières </h2>
+<ul>
+<li><a href="#toc">Table des matières</a></li>
+<li><a href="#h1">À quoi servent les pare-feu ?</a></li>
+<li><a href="#h2">Protéger ma box</a></li>
+<li><a href="#h3">Protéger mon ordinateur</a>
+<ul>
+<li><a href="#h3-1">Avant de commencer</a></li>
+<li><a href="#h3-2">Mise en place du pare-feu</a></li>
+<li><a href="#h3-3">Utiliser cette configuration</a></li>
+</ul>
+</li>
+<li><a href="#h4">Packet Tracer</a></li>
+<li><a href="#liens">Liens Utiles</a></li>
+</ul>
+<h2 id="h1"> À quoi servent les pare-feu ? </h2>
+<img src="../../Image/firewallCartoon.jpg" alt="Cartoon to present firewall" style="height: 400px; margin: 0 auto; border: 0" />
+<p>Un <strong>Firewall</strong> (pare-feu) est un logiciel qui <strong>contrôle l'ensemble des flux</strong> entrant et sortant de l'appareil sur lequel il est connecté.</p>
+<p>Aujourd’hui, la majorité des flux qui transitent sont des flux internet.</p>
+<p>On peut donc résumer le firewall comme un logiciel qui va contrôler les connexions à Internet.</p>
+<p><strong>Pourquoi vouloir contrôler les flux internet ?</strong></p>
+<p>Prenons par exemple un contexte d'une entreprise, qui a des serveurs - un public et un privé - et un réseau local.</p>
+<ul>
+<li>Toute personne extérieure à l'entreprise, doit pouvoir avoir accès au serveur public (pour avoir accès à la page internet par exemple). Mais il ne faudrait pas qu'ils accèdent au serveur privé (un serveur qui peut contenir des informations confidentielles). Donc un pare-feu permettrait de vérifier que seule les personnes autorisées peuvent avoir certains accès privilégiés.</li>
+<li>Toute personne interne à l'entreprise peut - à priori - accéder à n'importe site web, en particulier les malveillants. Ce qui peut mener ces utilisateurs à télécharger des malware et ainsi se faire hacker. Une entreprise pourrait contrôler les requêtes sortantes pour vérifier qu'elles accèdent seulement aux sites autorisés.</li>
+</ul>
+<p>Remarque, si les employés de l'entreprise utilisent un VPN, il ne sera pas possible pour l'entreprise de filtrer les flux sortants, car le VPN agit comme un tunnel.</p>
+<p><strong>Où appliquer des firewall ?</strong></p>
+<ul>
+<li>Dans le context de l'entreprise, le pare-feu pourrait se placer sur la box de l'entreprise, sur l'interface externe (interface qui relie la box au reste du monde).</li>
+<li>Dans un contexte d'un aéroport où il y a un réseau public, et un réseau privé - pour permettre au clients d'accéder à internet et aux employés de communiquer avec les avions. Le réseau sera composé de <strong>VLAN</strong> (<em>Virtual Local Area Network</em>) pour éviter d'avoir les clients sur le même réseau que les employés. Les pare-feu peuvent se placer sur les différentes interfaces des VLAN du switch.</li>
+</ul>
+<p>Dans un monde où tout est sécurisé, chaque appareil devrait avoir son propre pare-feu, sur chacune de ses interfaces. Car si un utilisateur malveillant a réussi à contourner le pare-feu principal, tout ce qui est derrière peut-être vulnérable aux attaques.</p>
+<p>Il faut toujours se demander à qui est ce que je peux faire confiance ? Aux personnes sur mon box ? Tout internet ? À priori, il faudrait faire confiance à personne - à part à soit même.</p>
+<h2 id="h2"> Protéger ma box </h2>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour protéger sa box, il faut d'abord que vous ayez un <strong>accès administrateur</strong> à votre box.<br>
+Si personne n'a jamais été administrateur, il suffit souvent seulement de trouver le code d'accès sous la box.</p>
+</div></div>
+<p>Il faut se connecter sur la GUI de la box : (en étant connecté sur le réseau)</p>
+<ul>
+<li><a href="http://192.168.1.254">Bbox</a></li>
+<li><a href="http://mafreebox.freebox.fr">FreeBox</a></li>
+<li><a href="http://192.168.1.1">Sfr</a></li>
+<li><a href="http://192.168.1.1">Orange</a></li>
+</ul>
+<p>Si votre box est un modèle différent, il n'est pas compliqué de trouver l'adresse sur internet.</p>
+<p>Pour ma part, j'ai une BBox, donc les exemples viendront de là.</p>
+<p>Une fois arrivé sur la page d'administration, on trouve où est ce qu'on peut gérer les paramètres avancés de la box.</p>
+<img src="../../Image/firewallBoxHome.png" alt="Box Administration Page" style="height: 400px; margin: 0 auto; border: 0" />
+<p>Puis en accédant aux pare-feu, on peut voir quels sont les filtres mis en place sur la box.</p>
+<img src="../../Image/fireWallonBox.png" alt="Box page Firewall" style="height: 300px; margin: 0 auto; border: 0" />
+<p>Ici, le pare-feu bloque toutes les connexions - UDP et TCP - sur les ports 25 et 445 de la box.</p>
+<h2 id="h3"> Protéger mon ordinateur </h2>
+<p><strong>Dans quelle condition est-il intéressant de protéger son ordinateur ?</strong></p>
+<p>Si par exemple, vous êtes en train de travailler sur la prochaine release de votre serveur web. Vous faites tourner en local le serveur, pour faire vos test. Malheureusement, vous êtes actuellement dans un aéroport, en attendant votre avions vers Centrale Casablanca, et n'avez accès qu'à un réseau public où peuvent être connectés des personnes malveillantes. En faisant tourner votre serveur sur votre ordinateur, vous l'exposez à des potentiels tentatives d'intrusions.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Ayant un Ubuntu, je me suis concentré sur les technologies disponible pour mon OS.</p>
+</div><div class="pl-8 mr-8">
+<p>Une solution a été développée spécialement pour les appareils Ubuntu : <a href="https://en.wikipedia.org/wiki/Uncomplicated_Firewall">UFW</a> <em>Uncomplicated FireWall</em>, elle est maintenant disponible pour une majorité des distributions Debian.</p>
+<p>Voici des liens pour :</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f#ID0EFD=Windows_11">Windows</a></li>
+<li><a href="https://support.apple.com/guide/mac-help/block-connections-to-your-mac-with-a-firewall-mh34041/mac">MacOS</a></li>
+</ul>
+<p>N'ayant pas ces OS, je laisse la découverte de ces technologies au lecteur.</p>
+</div></div>
+<h3 id="h3-1"> Avant de commencer </h3>
+<p><strong>Installation</strong></p>
+<p>Cet application est installée par défaut sur tous les appareils Ubuntu.</p>
+<p>Elle peut sinon être installée par :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ufw
+</code></pre>
+<p><strong>Utilisation</strong></p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Il faut avoir les droits root pour pouvoir accéder à cet application.<br>
+J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, et j'ai utilisé mon ordinateur pour tester la protection.</p>
+<p>J'ai mis en place 2 applications sur 2 ports :</p>
+<ul>
+<li>Une <strong>application OpenSSH</strong>, pour pouvoir me connecter à distance à ma machine, sur le <strong>port 22</strong></li>
+<li>Un <strong>serveur web Express</strong> sur le <strong>port 8080</strong>, un serveur qu'on veut rendre inaccessible de l'extérieur.</li>
+</ul>
+</div></div>
+<p>Pour voir si mes services fonctionnent, et sont accessibles de l'extérieur, j'ai utilisé <em>nmap</em> (cf <a href="https://francoisbrucker.github.io/do-it/mon/TA/pentest">explication de Thibault dessus</a>) un outil de scan de port.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> nmap <span class="token parameter variable">-A</span> <span class="token parameter variable">-T4</span> -p- <span class="token number">192.168</span>.56.101
+</code></pre>
+<p>-A permet d'avoir une détection de l'OS, des versions des logiciels, et le chemin qu'a pris les paquets</p>
+<p>-T&lt;0-5&gt; permet de définir le timing de ping de la cible 5 est très rapide/0 est très lent</p>
+<p>-p permet de choisir les ports ciblés, ex: -p22 / -p1-65535 / -p U:53,111,137,T:21-25,80,139,8080 / -p- permet de scanner tous les ports.</p>
+<p>Ensuite l'adresse IP de la cible (il faut préciser -6 si c'est une IPv6), ou le nom de domaine.</p>
+<p><strong>Voici ce que j'ai obtenu après le scan</strong></p>
+<pre><code>PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+8080/tcp open  http    Node.js Express framework
+</code></pre>
+<p>De plus, il est possible d'accéder au site web hébergé : <a href="http://192.168.56.101:8080">http://192.168.56.101:8080</a></p>
+<p>Donc par défaut, la machine virtuelle n'a pas protégé la connexion au site web.</p>
+<h3 id="h3-2"> Mise en place du pare-feu </h3>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Petit conseil</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Toutes les commandes nécessitent des droits <em>root</em>, pour éviter d'avoir à recopier <em>sudo</em> pour chacune des commandes, il est possible de se mettre en utilisateur <em>root</em> avec la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> root
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Il ne faut pas faire de chose qu'on ne maîtrise pas en étant <em>root</em></p>
+</div><div class="pl-8 mr-8">
+</div></div>
+<p>Pour sortir de <em>root</em>, on peut exécuter la commande</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">exit</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Règles par défaut</strong></p>
+<p>Tout d'abord, on va mettre en place des règles par défaut, pour les flux entrant et sortant :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw default allow outgoing
+<span class="token function">sudo</span> ufw default deny incoming
+</code></pre>
+<p>On autorise tous les flux sortant, et on interdit les flux entrant.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Attention</p>
+</div><div class="pl-8 mr-8">
+<p>si vous pouvez seulement vous connecter via une connexion <em>SSH</em> au serveur, il ne faut surtout pas se déconnecter maintenant, car vous ne pourriez plus avoir accès à votre serveur.</p>
+</div></div>
+<p><strong>Autoriser les connexions SSH</strong></p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token function">ssh</span>
+</code></pre>
+<p>le port ssh étant par défaut le 22, cette commande autorise les connxions au port 22, si le port est différent (par exemple le 2222), il faut executer :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token number">2222</span>/tcp
+</code></pre>
+<p>On peut aussi autoriser seulement les connexions ssh provenant d'une adresse IP - celle du sysadmin - pour plus de sécurité.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow proto tcp from <span class="token number">202.54</span>.2.5 to <span class="token number">172.24</span>.13.45 port <span class="token number">22</span>
+</code></pre>
+<p>avec <em>202.54.2.5</em> l'IP du sysadmin et <em>172.24.13.45</em> l'IP du serveur.</p>
+<p><strong>Activer le pare-feu</strong></p>
+<p>Il faut executer la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw <span class="token builtin class-name">enable</span>
+</code></pre>
+<p>pour le désactiver, il faut exécuter :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw disable
+</code></pre>
+<h3 id="h3-3"> Utiliser cette configuration </h3>
+<p><strong>Maintenant qu'on a mis en place le pare-feu, qu'est ce qu'on accéder depuis l'extérieur ?</strong></p>
+<p>Refaisons un scan des ports du serveur (avec <em>nmap</em>) :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">PORT   STATE SERVICE VERSION
+<span class="token number">22</span>/tcp <span class="token function">open</span>  <span class="token function">ssh</span>     OpenSSH <span class="token number">8</span>.9p1 Ubuntu 3ubuntu0.1 <span class="token punctuation">(</span>Ubuntu Linux<span class="token punctuation">;</span> protocol <span class="token number">2.0</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Heureusement, on a encore accès à SSH, et à priori, on n'a plus accès au site internet.</p>
+<p>On peut vérifier en essayant : <a href="http://192.168.56.101:8080">http://192.168.56.101:8080</a></p>
+<p>-&gt; on obtient une erreur, donc tout est bon, bravo, notre site n'est plus accessible depuis l'extérieur</p>
+<p><strong>Comment faire en sorte de quand même se connecter à distance au serveur, si on a des droits d'accès (pour se connecter en SSH)</strong></p>
+<p>Dans un contexte d'entreprise, on veut pas que notre serveur ne soit pas accessible par tous le monde, mais on aimerait que nos employés puissent y avoir accès à distance.</p>
+<p>Il n'est pas possible d'accéder directement à la page web, car le port est fermé. Donc la seule option pour y accéder c'est une connexion SSH. Ça tombe bien, SSH c'est une technologie sécurisé, qui nécessite une authentification. On peut donner l'accès que à certains personnes, notamment les employés.</p>
+<p>On va créer un tunnel SSH entre le serveur distant et la machine de l'employé, et on va demander de rediriger le port de la machine distante sur la machine locale :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-L</span> <span class="token number">8080</span>:localhost:8080 username@server
+</code></pre>
+<p>Le paramètre -L permet la redirection de ports.</p>
+<p>Maintenant, il est possible d'accéder à la page web, non pas avec : <a href="http://192.168.56.101:8080">http://192.168.56.101:8080</a> mais avec <a href="http://localhost:8080">http://localhost:8080</a></p>
+<h2 id="h4"> Packet Tracer </h2>
+<p>Pour ceux qui ont suivit le cours de Réseau, au temps 2, vous pouvez aussi essayer les pare-feu grâce à Packet Tracer.</p>
+<p>Il est seulement possible de mettre en place un pare-feu pour les appareils d'extrémité de réseau, comme les ordinateurs et serveurs, mais il n'est pas possible de le faire pour une box.</p>
+<p>Dans la partie <em>Desktop</em> de l'appareil, il y a une application, pour ajouter des règles de pare-feu pour les IPv4 et IPv6</p>
+<div style="display: flex; align-items: center;">
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="../../Image/PacketTracerDesktop.png" style="border: 0;" />
+  </div>
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="../../Image/PacketTracerFireWall.png" style="border: 0;" />
+  </div>
+</div>
+<p>Attention, dans la configuration du pare-feu, est demandé le <a href="https://en.wikipedia.org/wiki/Wildcard_mask">Wildcard mask</a>, qui est différent du subnet mask. L'idée du masque est la même mais, on a la relation : <strong>Subnet Mask = <em>NOT</em> Wildcard Mask</strong> :</p>
+<p>par exemple,</p>
+<p><em>subnet mask/27 = 255.255.255.224 = 11111111.11111111.11111111.11100000 = NOT 00000000.00000000.00000000.00011111 = NOT 0.0.0.31 = NOT Wildcard Mask</em></p>
+<h2 id="liens">Liens Utiles </h2>
+<p><a href="https://us.123rf.com/450wm/zdeneksasek/zdeneksasek1803/zdeneksasek180300074/96723555-cartoon-stick-man-dessin-illustration-conceptuelle-d-homme-d-affaires-travaillant-en-toute-s%C3%A9curit%C3%A9-.jpg?ver=6">Image</a></p>
+<p>Documentation sur les pare-feu sur les différents OS:</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f#ID0EFD=Windows_11">Windows</a></li>
+<li><a href="https://support.apple.com/guide/mac-help/block-connections-to-your-mac-with-a-firewall-mh34041/mac">MacOS</a></li>
+<li><a href="https://www.cyberciti.biz/faq/how-to-configure-firewall-with-ufw-on-ubuntu-20-04-lts/">Ubuntu - UFW</a></li>
+</ul>
+<p><a href="https://www.geeksforgeeks.org/basic-firewall-configuration-in-cisco-packet-tracer/">Packet Tracer Firewall</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Wildcard_mask">Wildcard mask</a></p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
