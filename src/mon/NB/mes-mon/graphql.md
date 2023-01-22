@@ -24,11 +24,47 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 
 ## GraphQL ou REST ?
 
+{% info "Qu'est-ce qu'une **API** ?" %}
+Selon la CNIL, une **API** (*application programming interface* ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.
+
+<img src="./../images/api.png" style="border-width: 0;" />
+
+Une API va alors exposer des **routes** (que l'on appelle aussi **endpoints** en anglais) afin que le client puisse dialoguer avec les services. Il existe différentes manières de structurer les routes: ici nous allons parler des API REST et des API GraphQL.
+{% endinfo %}
+
 ### Les API REST
+
+Une API REST (*Representational State Transfer*) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des [status code](http.cat) afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.
+
+<img src="./../images/api_rest.png" style="border-width: 0; width: 100%;" />
+
+Chaque méthode HTTP permet d'effectuer des actions bien particulières. Voilà un exemple pour expliquer les méthodes les plus utilisées.
+
+<img src="./../images/rest_methods.png" />
+
+Ainsi, en suivant les routes de l'image ci-dessus, en appelant *"/posts"* en méthode GET, l'API nous répondra en nous donnant la liste de tous les posts. Si j'envoie une requête POST à *"/posts"* en mettant des données dans ma requête je vais créer dans la base de données un post...
+
+Pour plus d'informations, je vous invite à consulter [https://phauer.com/2015/restful-api-design-best-practices/](https://phauer.com/2015/restful-api-design-best-practices/).
+
 
 ### Les API GraphQL
 
-### Comparaison et synthèse
+Le modèle d'API GraphQL est une autre manière de structurer les routes. Il n'y a en général qu'**un seul endpoint** qui est de type **POST** et c'est le client qui, en paramètres de la requête POST va définir les données qu'il souhaite obtenir. On gagne ainsi en flexibilité en permettant au client d'obtenir ce qu'il a besoin sans être figé par un modèle REST.
+
+<img src="./../images/rest_graphql.png" style="border-width: 0;" />
+<img src="./../images/REST-and-GraphQL.png" style="border-width: 0;" />
+
+### REST ou GraphQL ? Avantages et inconvénients 
+
+Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantages et ses inconvénients par rapport aux API REST :
+
+- ✅ **Flexibilité** : les API GraphQL permettent aux clients de demander des donnée spécifiques plutôt que de recevoir un format de données prédéfini, cela offre donc une grande flexibilité pour les développeurs.
+- ✅ **Spécificité** : les API GraphQL permettent de demander plusieurs donner en une seule requête alors qu'il en aura fallu plusieurs dans le cas d'un modèle REST.
+- ✅ **Évolutivité** : GraphQL est conçu pour évoluer avec les besoins du client et lui permet de faire des manipulations spécifiques telles que les opérations en lots ou bien les subscriptions pour les données en temps réel.
+
+- ❌ **Apprentissage** : GraphQL est un langage d'API complètement différent, il peut donc être difficile pour les développeurs de s'adapter.
+- ❌ **Débogage** : le débogage est plus difficile à cause de la flexibilité des requêtes.
+- ❌ **Support** : GraphQL est très largement moins utilisé que REST, il y a donc moins de bibliothèques, frameworks et documentations ...
 
 ## Proof Of Concept
 
@@ -234,3 +270,10 @@ npm i express-graphql @graphql-tools/schema
 
 
 
+## Sources
+
+- https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api
+- https://blog.hubvisory.com/blog/api-rest-comment-ca-fonctionne-et-pourquoi-l-utiliser/
+- https://stackoverflow.com/questions/73103901/api-endpoint-for-a-single-item-post-vs-put
+- https://medium.com/nerd-for-tech/graphql-vs-restful-e1a99fd14285
+- https://kinsta.com/fr/blog/graphql-vs-rest/
