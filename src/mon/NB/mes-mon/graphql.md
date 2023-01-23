@@ -18,7 +18,7 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 - Connaître les bases du langage Javascript
 
 *Pour la partie POC:*
-- Avoir une version de Node.js installé sur sa machine
+- Avoir une version de Node.js assez récente installé sur sa machine
 - Avoir Docker et Docker Compose sur sa machine (ou bien avoir une instance de PostgreSQL installée)
 {% endprerequis %}
 
