@@ -170,6 +170,32 @@ server.js :
 ```
 J'utilise une méthode un peu barbare pour récupérer les noms des joueurs mais je n'ai pas trouvé comment faire mieux.
 
+{% faire %}
+Update : je suis allé voir Mr. Brucker et il suffisait d'utiliser le middleware bodyParser afin de récupérer les données dans le body de la requête. Ce qui me donne donc : 
+
+index.js :
+```javascript
+  fetch('/create',{
+      method:'POST',
+      credentials: 'include',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify(players)
+    })
+```
+
+server.js :
+```javascript
+  partie.nombreJoueurs = req.body.nbrPlayers
+  partie.nameJ1 = req.body.player1
+  partie.nameJ2 = req.body.player2
+  partie.nameJ3 = req.body.player3
+  partie.nameJ4 = req.body.player4
+  partie.save()
+```
+{% endfaire %}
+
 Une fois la partie créée il faut que j'affiche le nom des joueurs ainsi que leur fiche de points. 
 
 J'ai tout d'abord voulu accéder à la base de données depuis le fichier *yams.js* mais je n'ai pas réussi donc j'ai implémenté une route */initialisation* qui récupère le nombre de joueurs ainsi que leur nom dans la base de données et qui les affiche.
@@ -313,7 +339,43 @@ app.use('/changeJ1', (req, res) => {
 
 })
 ```
+{% faire %}
+Update : comme pour le nom des joueurs j'envoie les points des joueurs dans le *body* et non les *headers* de la requête.
+{% endfaire %}
 
 J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.
 
-Il me reste à résoudre mon problème de cookie, réussir à ce que 2 joueurs puissent remplir la même feuille de résultat et surtout à réussir à le déployer sur l'ovh.
+J'ai toujours un problème, c'est que mes cookies ne s'envoient pas toujours et je n'arrive pas à comprendre ce qui en est la cause.
+Je suis allé voir avec Mr. Brucker et ce serait un problème avec les fonctions asynchrone (le cookie met trop de temps à s'envoyer et le code passe donc à la suite sans l'envoyer). J'ai essayé d'ajouter un then mais ça n'a pas réglé mon problème. 
+
+### Déploiement sur l'ovh
+
+Pour déployer son site sur l'ovh il faut tout d'abord suivre ces [instructions](https://francoisbrucker.github.io/cours_informatique/cours/ops/ssh/) pour générer sa paire de clé et accéder à son compte sur l'ovh. 
+
+(Il y a peut-être quelques petites coquilles qui vont se glisser dans l'explication donc si quelque chose ne marche demandez à Mr. Brucker il saura vous répondre)
+
+Puis, il faut ouvrir le fichier readme.txt pour trouver quel est le port associé à son compte.
+```bash
+cat readme.txt
+```
+Il faut modifier le port dans le fichier *server.js* afin qu'il corresponde à celui du fichier readme.txt.
+
+Ensuit on ajoute son code (que l'on a mis sur github) dans le dossier node avec la commande : 
+```bash
+git clone https://github.com/Timothee-Bermond/yams.git 
+```
+Ensuite on se place dans le dossier contenant notre code (yams pour moi), et on entre la commande : 
+```bash
+node server.js
+```
+On peut maintenant accéder à notre site à l'url : node.mon_herbe@ovh1.ec-m.fr (en replacant mon_herbe par votre herbe).
+
+Seul bémol lorsque l'on ferme le shell, le server s'arrête et on n'y a plus accès. Pour qu'il tourne même lorsque le shell est fermé il faut se placer dans le dossier contenant notre code et taper la commande :
+```bash
+/usr/bin/screen -d -m -S node node server.js
+```
+Et voilà, le site est déployé !
+
+
+
+
