@@ -116,7 +116,7 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 </div>
 <p>On a une relation OneToMany entre User et Game ==&gt; un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.</p>
 <h2>Fonctionnalités</h2>
-<p>Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.</p>
+<p>Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.</p>
 <p>Gestion des utilisateurs, avec connexion et gestion de solde.</p>
 <h2>Objectifs points POK</h2>
 <!-- ### Ce qu'on avait prévu la dernière séance
@@ -157,7 +157,7 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <h3>Ce qu'on a prévu pour le second point POK</h3>
 <ul>
 <li>Découverte plus approfondie de NestJS</li>
-<li>Création des entités (User, Game ...)</li>
+<li>Création des entités (User et Game)</li>
 <li>Création des routes associées si on fait une API REST ou bien création + paramétrage du endpoint si on utilise GraphQL</li>
 <li>Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT</li>
 </ul>
@@ -204,7 +204,7 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 </ul>
 <h2>1er Sprint</h2>
 <ul>
-<li>Fixer les quelques erreurs pour un jeu fonctionnel mais pas &quot;complet&quot; (le minimun syndical).
+<li>Fixer les quelques erreurs pour un jeu fonctionnel mais pas &quot;complet&quot; (le minimum syndical).
 <ul>
 <li>Problème de connexion (accès et limitation des pages, refresh sur la page d'accueil pour la connexion effective)</li>
 </ul>
@@ -217,7 +217,7 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <li>Protection des routes</li>
 <li>Lister les parties</li>
 <li>Passage à PostgreSQL</li>
-<li>Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans <code>/www/</code>, back dans <code>/node/</code>) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur <a href="http://melisse.ovh1.ec-m.fr">http://melisse.ovh1.ec-m.fr</a></li>
+<li>Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans <code>/www/</code>, back dans <code>/node/</code>) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur <a href="http://balsamite.ovh1.ec-m.fr">http://balasamite.ovh1.ec-m.fr</a></li>
 <li>Fix de bugs</li>
 </ul>
 <h2>2e sprint</h2>
@@ -229,6 +229,23 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <li>Autres améliorations</li>
 <li>Redéployer l'ensemble du projet avec les modifications effectuées</li>
 </ul>
+<h2>Ce qui a été fait au 2ème sprint</h2>
+<ul>
+<li>Amélioration du style et de la responsivité (à poffiner encore un peu)</li>
+<li>Algorithme de génération de grilles sour la forme d'un microservice appelé par le backend</li>
+<li>Solde dans la navbar en lien avec le solde en DB</li>
+<li>Recharge du compte</li>
+<li>Logout</li>
+<li>Redéploiement du projet</li>
+</ul>
+<h2>Ce qu'il reste à faire pour le temps 3</h2>
+<ul>
+<li>Amélioration du jeu (style, mécanique ...)</li>
+<li>Optimisation de l'algo de génération de grilles</li>
+<li>Écriture de tests ?</li>
+<li>Optimisation du déploiement (scripts ou pipeline)</li>
+</ul>
+<h1>Temps 3</h1>
 
 
 </article>
