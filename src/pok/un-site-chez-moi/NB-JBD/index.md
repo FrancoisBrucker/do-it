@@ -54,7 +54,7 @@ On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs 
 
 ## Fonctionnalités
 
-Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.
+Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.
 
 Gestion des utilisateurs, avec connexion et gestion de solde.
 
@@ -91,7 +91,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 ### Ce qu'on a prévu pour le second point POK
 
 - Découverte plus approfondie de NestJS
-- Création des entités (User, Game ...)
+- Création des entités (User et Game)
 - Création des routes associées si on fait une API REST ou bien création + paramétrage du endpoint si on utilise GraphQL
 - Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT
 
@@ -138,7 +138,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 
 ## 1er Sprint
 
-- Fixer les quelques erreurs pour un jeu fonctionnel mais pas "complet" (le minimun syndical).
+- Fixer les quelques erreurs pour un jeu fonctionnel mais pas "complet" (le minimum syndical).
   - Problème de connexion (accès et limitation des pages, refresh sur la page d'accueil pour la connexion effective)
 - Déployer le front, le back et la BDD.
 
@@ -148,7 +148,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - Protection des routes
 - Lister les parties
 - Passage à PostgreSQL
-- Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans `/www/`, back dans `/node/`) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur [http://melisse.ovh1.ec-m.fr](http://melisse.ovh1.ec-m.fr)
+- Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans `/www/`, back dans `/node/`) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur [http://balasamite.ovh1.ec-m.fr](http://balsamite.ovh1.ec-m.fr)
 - Fix de bugs
 
 ## 2e sprint
@@ -159,3 +159,21 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
 - Solde dans la navbar
 - Autres améliorations
 - Redéployer l'ensemble du projet avec les modifications effectuées
+
+## Ce qui a été fait au 2ème sprint
+
+- Amélioration du style et de la responsivité (à poffiner encore un peu)
+- Algorithme de génération de grilles sour la forme d'un microservice appelé par le backend
+- Solde dans la navbar en lien avec le solde en DB
+- Recharge du compte
+- Logout
+- Redéploiement du projet
+
+## Ce qu'il reste à faire pour le temps 3
+
+- Amélioration du jeu (style, mécanique ...)
+- Optimisation de l'algo de génération de grilles
+- Écriture de tests ?
+- Optimisation du déploiement (scripts ou pipeline)
+
+# Temps 3
