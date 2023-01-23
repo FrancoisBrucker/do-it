@@ -50,10 +50,17 @@ J'ai utilisé le [tuto MERN stack][1].
   - Temps d'expiration des cookies de session
 - Améliorer l'UI :
   - Responsive bottom bar
-- Incorporer un système de chat :
-  - Choix de la technologie
-  - Développement
-  
+- Incorporer l'authentification avec google. Utilisation de [passport-google-oauth20](https://www.passportjs.org/packages/passport-google-oauth20/) :
+  - Adapter le système de gestion de session avec le système actuel (cookies) : il faut que comme avec une authentification classique, un cookie de session soit envoyé après google Oauth
+
 ### ToDo : 2ème Sprint
 
-- Déploiement sur serveur distant
+- Déploiement sur serveur distant : <http://node.stevia.ovh1.ec-m.fr/>
+  - Nécessité d'une connexion https pour accéder à la localisation ==> utilisation de [ngrok](https://ngrok.com/)
+- Finir les derniers correctifs pour avoir un site fonctionnel en production, notamment :
+  - Migration de MySQL --> Postgres
+  - Changer les clés secrètes
+
+[Ngrok](https://ngrok.com/) est un outil qui permet de créer des tunnels sécurisés entre des ordinateurs distants. Il sert d'intermédiaire entre l'utilisateur et serveur ovh : utilisateur <-> ngrok <-> ovh. Les connexions utilisent le protocole sécurisé TLS, donc le navigateur peut se connecter en https et transmettre la localisation de l'utilisateur au serveur.
+
+Mon site : <http://node.stevia.ovh1.ec-m.fr/>

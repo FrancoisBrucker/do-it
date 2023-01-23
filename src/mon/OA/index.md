@@ -19,3 +19,4 @@ Ensemble des MON d'Ossama Abdane
 ## Temps 2
 
 - [Google Apps Script : Rappel anniversaire](./mon2.1)
+- [Création d'un site WordPress en local](./mon2.2)

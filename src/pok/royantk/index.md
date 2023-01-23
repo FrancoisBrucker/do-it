@@ -33,6 +33,6 @@ Ci dessous mes choix prévisionnels de parcours pour le S9. Mon objectif : conti
 |---|:---:|:---:|:---:|
 | **Cours** | Expérience Utilisateur<br>Java/Gradle<br>Serveur Web 101 | Interface utilisateur<br>Lean engineering<br>Réseaux<br>Serveur distant<br>Structure de données | Programmation par tests<br>AWS/Docker<br>Algorithmie<br>No/Low code<br>Management visuel |
 | **POK** | Mon site chez moi (front) | Mon site chez moi (back) | Site sur serveur distant |
-| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>Google Apps Script | Développement mobile<br>Dev-Ops |
+| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>React | Développement mobile<br>Dev-Ops |
 
 [<-- Retour](../)

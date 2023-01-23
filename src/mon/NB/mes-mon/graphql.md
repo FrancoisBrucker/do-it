@@ -18,17 +18,58 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 - Connaître les bases du langage Javascript
 
 *Pour la partie POC:*
-- Avoir une version de Node.js installé sur sa machine
+- Avoir une version de Node.js assez récente installé sur sa machine
 - Avoir Docker et Docker Compose sur sa machine (ou bien avoir une instance de PostgreSQL installée)
 {% endprerequis %}
 
+
+{% info %}
+Le dépot GitHub du POC : https://github.com/nbert71/graphql-express
+{% endinfo %}
+
 ## GraphQL ou REST ?
+
+{% info "Qu'est-ce qu'une **API** ?" %}
+Selon la CNIL, une **API** (*application programming interface* ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.
+
+<img src="./../images/api.png" style="border-width: 0;" />
+
+Une API va alors exposer des **routes** (que l'on appelle aussi **endpoints** en anglais) afin que le client puisse dialoguer avec les services. Il existe différentes manières de structurer les routes: ici nous allons parler des API REST et des API GraphQL.
+{% endinfo %}
 
 ### Les API REST
 
+Une API REST (*Representational State Transfer*) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des [status code](http.cat) afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.
+
+<img src="./../images/api_rest.png" style="border-width: 0; width: 100%;" />
+
+Chaque méthode HTTP permet d'effectuer des actions bien particulières. Voilà un exemple pour expliquer les méthodes les plus utilisées.
+
+<img src="./../images/rest_methods.png" />
+
+Ainsi, en suivant les routes de l'image ci-dessus, en appelant *"/posts"* en méthode GET, l'API nous répondra en nous donnant la liste de tous les posts. Si j'envoie une requête POST à *"/posts"* en mettant des données dans ma requête je vais créer dans la base de données un post...
+
+Pour plus d'informations, je vous invite à consulter [https://phauer.com/2015/restful-api-design-best-practices/](https://phauer.com/2015/restful-api-design-best-practices/).
+
+
 ### Les API GraphQL
 
-### Comparaison et synthèse
+Le modèle d'API GraphQL est une autre manière de structurer les routes. Il n'y a en général qu'**un seul endpoint** qui est de type **POST** et c'est le client qui, en paramètres de la requête POST va définir les données qu'il souhaite obtenir. On gagne ainsi en flexibilité en permettant au client d'obtenir ce qu'il a besoin sans être figé par un modèle REST.
+
+<img src="./../images/rest_graphql.png" style="border-width: 0;" />
+<img src="./../images/REST-and-GraphQL.png" style="border-width: 0;" />
+
+### REST ou GraphQL ? Avantages et inconvénients 
+
+Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantages et ses inconvénients par rapport aux API REST :
+
+- ✅ **Flexibilité** : les API GraphQL permettent aux clients de demander des donnée spécifiques plutôt que de recevoir un format de données prédéfini, cela offre donc une grande flexibilité pour les développeurs.
+- ✅ **Spécificité** : les API GraphQL permettent de demander plusieurs donner en une seule requête alors qu'il en aura fallu plusieurs dans le cas d'un modèle REST.
+- ✅ **Évolutivité** : GraphQL est conçu pour évoluer avec les besoins du client et lui permet de faire des manipulations spécifiques telles que les opérations en lots ou bien les subscriptions pour les données en temps réel.
+
+- ❌ **Apprentissage** : GraphQL est un langage d'API complètement différent, il peut donc être difficile pour les développeurs de s'adapter.
+- ❌ **Débogage** : le débogage est plus difficile à cause de la flexibilité des requêtes.
+- ❌ **Support** : GraphQL est très largement moins utilisé que REST, il y a donc moins de bibliothèques, frameworks et documentations ...
 
 ## Proof Of Concept
 
@@ -39,7 +80,7 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 
 Pour utiliser GraphQL, j'ai décidé d'utiliser un backend réalisé avec Express, connecté à une base de données PostgreSQL via l'ORM (Object Relation Mapping) [Prisma](https://www.prisma.io/). Il y aura ensuite une route statique renvoyant une page HTML afin d'indiquer la structure de la base de données (relations, entités ...) et une unique route d'API qui sera servie par GraphQL. Voici un petit schéma d'explications :
 
-**Un beau schéma**
+<img src="./../images/graphql-archi.png" />
 
 Nous allons désormais voir pas à pas comment créer un tel projet.
 
@@ -202,6 +243,8 @@ On va désormais créer une migration et l'appliquer en même temps à la base d
 
 A ce stade en lançant la commande `npx prisma studio`nous devrions voir nos tables avec les différents champs.
 
+<img src="./../images/prisma-studio.png" />
+
 {% attention %}
 Il faut faire attention aux pratiques que l'on souhaite avoir. Il est possible de travailler uniquement avec le schéma Prisma et faire des `db push`cependant des changements plus important en base de données pourrait être critique en production, c'est pour cela que l'on utilise les migrations.
 
@@ -227,10 +270,152 @@ Afin de pouvoir charger ces fausses données nous devons modifier le `package.js
 Comme nous l'avons au début de ce MON, GraphQL est un langage de requête API. Pour fonctionner, nos serveur express a besoin d'un serveur GraphQL afin d'interpréter les requêtes et les transformer en requête Prisma qui les transformera ensuite en requête SQL. Nous allons utiliser `express-graphql`.
 
 ~~~bash
-npm i express-graphql @graphql-tools/schema
+npm i express-graphql graphql
 ~~~
 
-**askip ça va marcher mais pas encore ^^**
+GraphQL fonctionne avec des types, des queries et des mutations. Ici nous allons montrer en exemple la class User. On commence pas créer un type User qui va définir les types de données que nous allons renvoyer au client.
+
+~~~js
+const UserType = new GraphQLObjectType({
+    name: "User",
+    fields: () => ({
+        id: {type: GraphQLInt},
+        email: {type: GraphQLString},
+        first_name: {type: GraphQLString},
+        last_name: {type: GraphQLString},
+        posts: {type: GraphQLList(PostType)},
+        profile: {type: ProfileType}
+    })
+})
+~~~
+
+On peut ensuite définir une query associée qui permet de récupérer la liste de tous les users.
+
+~~~js
+const RootQuery = new GraphQLObjectType({
+    name: "RootQueryType",
+    fields: {
+        getAllUsers: {
+            type: GraphQLList(UserType),
+            async resolve(parent, args) {
+                return await prisma.user.findMany()
+            }
+        }
+    }
+})
+~~~
+
+On met en place ensuite la mutation pour créer un user.
+
+~~~js
+const Mutation = new GraphQLObjectType({
+    name: "Mutation",
+    fields: {
+        createUser: {
+            type: UserType,
+            args: {
+                email: {type: GraphQLString},
+                first_name: {type: GraphQLString},
+                last_name: {type: GraphQLString},
+            },
+            async resolve(parent, args) {
+                await prisma.user.create({data: {
+                    email: args.email,
+                    first_name: args.first_name,
+                    last_name: args.last_name
+                }})
+                return args
+            }
+        }
+    }
+})
+~~~
+
+On crée ensuite le schéma GraphQL qui va nous permette de gérer les requêtes et la route Express associée.
+
+~~~js
+const schema = new GraphQLSchema({query: RootQuery, mutation: Mutation})
+
+app.use('/api', graphqlHTTP({
+    schema,
+    graphiql: true
+}))
+~~~
+
+{% info %}
+L'option `graphiql: true`nous permet d'avoir un GUI sur la route *"/api"* et ainsi pour voir faire les requêtes plus simplement pour la période de test.
+{% endinfo %}
+
+Testons désormais notre api !
+
+~~~graphql
+# je demande la liste de tous les users et pour chaque user je veux son mail son nom et son prénom
+query {
+    getAllUsers {
+        email
+        first_name
+        last_name
+    }
+}
+~~~
+
+Le serveur répond alors :
+~~~json
+{
+  "data": {
+    "getAllUsers": [
+      {
+        "email": "alice@prisma.io",
+        "first_name": "Alice",
+        "last_name": "Prisma"
+      },
+      {
+        "email": "bob@prisma.io",
+        "first_name": "Bob",
+        "last_name": "Prisma"
+      }
+    ]
+  }
+}
+~~~
+
+On teste maintenant la mutation !
+
+~~~graphql
+mutation {
+  createUser(email: "mrbean@email.com", first_name:"Harry", last_name:"Cover"){
+    email
+    first_name
+    last_name
+  }
+}
+~~~
+
+Le serveur répond alors :
+
+~~~json
+{
+  "data": {
+    "createUser": {
+      "email": "mrbean@email.com",
+      "first_name": "Harry",
+      "last_name": "Cover"
+    }
+  }
+}
+~~~
+
+On peut ainsi continuer et créer d'autres requêtes....
+
+## Conclusion
+
+Pour conclure, GraphQL est un langage de requête API qui est assez novateur. Toutes les requêtes client sont des requêtes POST et se font sur un seul endpoint. Je pensais qu'il suffisait d'exposer ses données sur une route et que le client pouvait ensuite demander n'importe quoi sous le format qu'il veut mais en fait le développeur doit quand même tout définir à la main comme à la manière d'une API REST. Ainsi, GraphQL est censé apporter de la flexibilité aux développeurs mais le travail reste tout aussi fastidieux qu'une API REST, voire plus...
 
 
+## Sources
 
+- https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api
+- https://blog.hubvisory.com/blog/api-rest-comment-ca-fonctionne-et-pourquoi-l-utiliser/
+- https://stackoverflow.com/questions/73103901/api-endpoint-for-a-single-item-post-vs-put
+- https://medium.com/nerd-for-tech/graphql-vs-restful-e1a99fd14285
+- https://kinsta.com/fr/blog/graphql-vs-rest/
