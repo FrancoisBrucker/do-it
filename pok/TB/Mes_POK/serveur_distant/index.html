@@ -208,6 +208,32 @@ Je me suis demandé si il était possible de créer un modèle <em>player</em> p
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <p>J'utilise une méthode un peu barbare pour récupérer les noms des joueurs mais je n'ai pas trouvé comment faire mieux.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Update : je suis allé voir Mr. Brucker et il suffisait d'utiliser le middleware bodyParser afin de récupérer les données dans le body de la requête. Ce qui me donne donc :</p>
+<p>index.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/create'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">method</span><span class="token operator">:</span><span class="token string">'POST'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">credentials</span><span class="token operator">:</span> <span class="token string">'include'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">headers</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">body</span><span class="token operator">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>players<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>server.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  partie<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>nbrPlayers
+  partie<span class="token punctuation">.</span>nameJ1 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player1
+  partie<span class="token punctuation">.</span>nameJ2 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player2
+  partie<span class="token punctuation">.</span>nameJ3 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player3
+  partie<span class="token punctuation">.</span>nameJ4 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player4
+  partie<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div></div>
 <p>Une fois la partie créée il faut que j'affiche le nom des joueurs ainsi que leur fiche de points.</p>
 <p>J'ai tout d'abord voulu accéder à la base de données depuis le fichier <em>yams.js</em> mais je n'ai pas réussi donc j'ai implémenté une route <em>/initialisation</em> qui récupère le nombre de joueurs ainsi que leur nom dans la base de données et qui les affiche.</p>
 <p>yams.js :</p>
@@ -338,8 +364,35 @@ Je me suis demandé si il était possible de créer un modèle <em>player</em> p
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Update : comme pour le nom des joueurs j'envoie les points des joueurs dans le <em>body</em> et non les <em>headers</em> de la requête.</p>
+</div></div>
 <p>J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.</p>
-<p>Il me reste à résoudre mon problème de cookie, réussir à ce que 2 joueurs puissent remplir la même feuille de résultat et surtout à réussir à le déployer sur l'ovh.</p>
+<p>J'ai toujours un problème, c'est que mes cookies ne s'envoient pas toujours et je n'arrive pas à comprendre ce qui en est la cause.<br>
+Je suis allé voir avec Mr. Brucker et ce serait un problème avec les fonctions asynchrone (le cookie met trop de temps à s'envoyer et le code passe donc à la suite sans l'envoyer). J'ai essayé d'ajouter un then mais ça n'a pas réglé mon problème.</p>
+<h3>Déploiement sur l'ovh</h3>
+<p>Pour déployer son site sur l'ovh il faut tout d'abord suivre ces <a href="https://francoisbrucker.github.io/cours_informatique/cours/ops/ssh/">instructions</a> pour générer sa paire de clé et accéder à son compte sur l'ovh.</p>
+<p>(Il y a peut-être quelques petites coquilles qui vont se glisser dans l'explication donc si quelque chose ne marche demandez à Mr. Brucker il saura vous répondre)</p>
+<p>Puis, il faut ouvrir le fichier readme.txt pour trouver quel est le port associé à son compte.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cat</span> readme.txt
+</code></pre>
+<p>Il faut modifier le port dans le fichier <em>server.js</em> afin qu'il corresponde à celui du fichier readme.txt.</p>
+<p>Ensuit on ajoute son code (que l'on a mis sur github) dans le dossier node avec la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/Timothee-Bermond/yams.git 
+</code></pre>
+<p>Ensuite on se place dans le dossier contenant notre code (yams pour moi), et on entre la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> server.js
+</code></pre>
+<p>On peut maintenant accéder à notre site à l'url : <a href="mailto:node.mon_herbe@ovh1.ec-m.fr">node.mon_herbe@ovh1.ec-m.fr</a> (en replacant mon_herbe par votre herbe).</p>
+<p>Seul bémol lorsque l'on ferme le shell, le server s'arrête et on n'y a plus accès. Pour qu'il tourne même lorsque le shell est fermé il faut se placer dans le dossier contenant notre code et taper la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">/usr/bin/screen <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> <span class="token function">node</span> <span class="token function">node</span> server.js
+</code></pre>
+<p>Et voilà, le site est déployé !</p>
 
 
 </article>
