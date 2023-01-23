@@ -10,13 +10,17 @@ tags: ['pok']
 ---
 
 <!-- début résumé -->
-Jeu de mots croisés (Svelte, NestJS, PGSQL)
+Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 <!-- fin résumé -->
 
-### Liens GitHub
-
+{% info %}
+**Liens GitHub**
 - Front-end : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
 - Back-end : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
+- Microservice: [https://github.com/Jean-Baptiste-DP/mots-croises-generateur](https://github.com/Jean-Baptiste-DP/mots-croises-generateur)
+{% endinfo %}
+
+<br>
 
 # Temps 1
 
