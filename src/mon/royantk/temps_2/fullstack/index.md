@@ -18,9 +18,11 @@ tags:
 
 <!-- début résumé -->
 
-Présentation du deuxième MON de mon temps 1 : une introduction au développement Full Stack avec Node.js, Express et MongoDB basée sur une formation proposée par Openclassrooms.
+Présentation du premier MON de mon temps 2 : une introduction au développement Full Stack avec Node.js, Express et MongoDB basée sur une formation proposée par Openclassrooms.
 
 <!-- fin résumé -->
+
+[<-- Retour](../)
 
 {% prerequis "**Prérequis**" %}
 
