@@ -80,7 +80,7 @@ Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantag
 
 Pour utiliser GraphQL, j'ai décidé d'utiliser un backend réalisé avec Express, connecté à une base de données PostgreSQL via l'ORM (Object Relation Mapping) [Prisma](https://www.prisma.io/). Il y aura ensuite une route statique renvoyant une page HTML afin d'indiquer la structure de la base de données (relations, entités ...) et une unique route d'API qui sera servie par GraphQL. Voici un petit schéma d'explications :
 
-**Un beau schéma**
+<img src="./../images/graphql-archi.png" />
 
 Nous allons désormais voir pas à pas comment créer un tel projet.
 
