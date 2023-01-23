@@ -194,9 +194,10 @@ AJOUTER IMG
 AJOUTER IMG
 
 - Les écrans :
-J’ai choisis de réaliser 5 écrans qui reflètent les fonctionnalités principales de mon site :
+J’ai choisis de réaliser 6 écrans qui reflètent les fonctionnalités principales de mon site :
 L’écran d’acceuil
 L’onglet vêtements de cérémonies
+Un écran de zoom sur une robe
 L’onglet vêtements de ski
 L’onglet correspondant au panier
 l’onglet « Mon compte »
@@ -212,8 +213,41 @@ J’ai enregistré une démo vidéo de la maquette afin de l’envoyer à mes te
 Ajouter VID
 
 **Retours:**
+J' ai obtenu les retours de 4 familles pour ce test. J'ai pu réaliser un test en vrai avec un couple de parents marseillais. J'ai reçu les autres retours par mails ou téléphone.
 
+Voici les remarques et recommandations qui en ressortent:
 
+- **Général :**
+charte de couleurs ; tres bien, en accord avec le theme, doux, elegant
+Ajouter une page FAQ
+
+- **Ecran d'accueil :**
+Mieux expliquer le concept ( écrire LOCATION quelque part )
+Créer une page 'vitrine' qui référencie les createurs et marques de vêtement + leurs évènements / annonces s
+Mettre plus d'images
+
+- **Ecran cérémonie :** 
+ Filtres: Ajouter un filtre "mixte", un flitre par marque de vêtement, u par disponibilités.
+ Faire ressortir la marque des produits
+ Attention au nom des vêtements, certains peuvent être discriminants
+
+- **Zoom sur un produit :**
+Ajouter une section commentaires/avis sur les articles déjà loués avec possibilités d'ajouter des photos
+Ecrire le nombre de fois que la pièce à été louée
+Ajouter des photos des réparations dans l'historique du vêtement
+
+- **Onglet panier :**
+Ajouter la date de retour
+Prendre une caution
+Revoir le prix d'envoi/retour
+Ajouter l'impression du bon de renvoi
+
+- **Onglet "mon compte":**
+Revoir l'ergonomie: mettre sur la même ligne le produit, la livraison et le retour
+
+- **Petites idées en plus :**
+Recevoir l'avis des clients sur des pieces qu'ils souhateraient voir dans le shop ( système de vote )
+Envoyer une alerte par mail pour les retours de vêtements
 
 
 
