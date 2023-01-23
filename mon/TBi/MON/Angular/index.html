@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Portfolio Angular</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">Portfolio Angular</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Angular</li>
+          
+            <li class="before:content-['•'] before:px-1">Front</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Tuncay Bilgi</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <h1>Résumé :</h1>
+<h2>Ressources :</h2>
+<ul>
+<li><a href="/do-it/mon/AV/mons/web-front-1">MON Angular d'un camarade</a></li>
+<li><a href="https://angular.io/start">Documentation de Angular</a></li>
+<li><a href="https://youtu.be/G0bBLvWXBvc">Vidéo rapide sur le fonctionnement de base</a></li>
+<li><a href="https://v2.tailwindcss.com/docs">Documentation tailwind</a></li>
+</ul>
+<h2>Pré-requis :</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Niveau intermédiaire</p>
+</div><div class="pl-8 mr-8">
+<p>Pré-requis :</p>
+<ul>
+<li>Introduction à html/css/js pour du Frontend</li>
+<li>Shell pour utiliser ssh/scp</li>
+</ul>
+</div></div>
+<h2>Ce qu'on fait :</h2>
+<ul>
+<li>1- Installer Angular et Tailwind</li>
+<li>2- Dev d'un portfolio à projets</li>
+<li>3- Build et déploiement du projet sur un serveur distant</li>
+</ul>
+<h1>Letsgo :</h1>
+<h2>1 - Installer Angular et Tailwind :</h2>
+<p>Après avoir lu le MON d'antoine sur angular, on se lance.<br>
+Nous avons besoin d'installer deux frameworks. Un framwork, en javascript, est un ensemble d'outil permettant de coder plus facilement qu'en utilisant le classique combo HTML/CSS. Ici, on utilise un framework front :  Angular, et un framework de style : Tailwind.</p>
+<ul>
+<li>Angular permet de découper sa page html en composants réutilisables, et de les rendres facilement interactif avec un script JS.</li>
+<li>Tailwind permet d'appliquer du style à son site, c'est à dire le rendre beau.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Autres frameworks</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Front :</p>
+<ul>
+<li>React (le plus à la mode en 2023)</li>
+<li>Vue</li>
+<li>Svelte (le plus expérimentale)</li>
+</ul>
+<p>Style :</p>
+<ul>
+<li>Bootstrap (le plus facile à utiliser)</li>
+<li>Pure</li>
+<li>Skeleton</li>
+</ul>
+</div>
+</details>     
+</div>
+<p>On installe donc nos frameworks :</p>
+<ul>
+<li>
+<p>On met node.js à jour, sur windows, il faut aller l'installer sur un navigateur, pour linux, la librairie <strong>n</strong> permet de maintenir node à jour facilement depuis votre terminal.</p>
+</li>
+<li>
+<p>on installe le cli angular : <code>npm install -g @angular/cli </code></p>
+</li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Ne pas faire <code>npm install angular</code> cela installera une version obsolète d'angular que vous devrez supprimer pour éviter les conflits. le -g dans la commande installe le framework de façon globale, pas juste dans votre répertoire courant.</p>
+</div></div>
+<ul>
+<li>
+<p>on initie le projet : <code>ng new projet</code>. Cela crée un projet avec la structure recommandée par Angular.</p>
+</li>
+<li>
+<p>On installe tailwind dans le projet : <a href="https://tailwindcss.com/docs/guides/angular">La documentation officiel est le meilleur tuto pour cela</a></p>
+</li>
+</ul>
+<p>On a maintenant un projet Angular+Tailwind.</p>
+<ul>
+<li>On lance le projet pour voir à quoi il ressemble : <code>ng serve</code> puis sur un navigateur on tape : <code>localhost:4200</code><br>
+Vous devriez tomber sur une page pré-remplie avec pleins de documentation pour apprendre angular. Personnellement je n'aime pas cette doc, je me suis appuyé sur les ressources citées plus haut.</li>
+</ul>
+<h2>2 - Dev le site de portfolio à projets.</h2>
+<p>Le but est de développer un site contenant une unique page web. Cette page web, comme un cv, va contenir des informations sur mon parcours et sur mes projets. Aussi, elle contiendra des éléments interactifs, des images, et des liens vers mes autres coordonnées accesibles depuis internet (de mes autres POK et MON par exemple).</p>
+<p>En plus de cela, je veux que mon site soit <strong>Responsive</strong>. C'est à dire que l'affichage doit s'adapter à toute taille d'écran. C'est très peu évident à faire, c'est même fastidieu. Tailwind va nous aider un peu.</p>
+<h3>Style</h3>
+<p>En regardant la doc de Tailwind, on voit que le framework propose de modifier nos balises HTML avec des noms de classes. Ces noms modifie le style de l'élement.<br>
+Par exemple <code>&lt;p&gt;Du texte blanc&lt;/p&gt;</code> peut devenir <code>&lt;p class=&quot;text-red-800&quot;&gt;Du texte rouge&lt;/p&gt;</code>.</p>
+<p>Ces modifications peuvent être appliquées sous certaines conditions, notamment des conditions de taille d'écran.<br>
+Tailwind propose de divisé nos tailles d'écran en 4 catégories, que l'on peut sélectionner avec un préfixe:</p>
+<ul>
+<li>Aucun préfixe : Tous les écrans.</li>
+<li>sm: les tablettes</li>
+<li>md: grandes tablettes et petit ordinateurs</li>
+<li>lg: les pls grands écrans</li>
+</ul>
+<p>Pour la documentation technique, allez sur leur site.</p>
+<p>On peut alors avoir ceci : <code>&lt;p class='text-white lg:text-red'&gt; Ce texte est blanc sur téléphone mais rouge sur grand écran&lt;/p&gt;</code></p>
+<p>On ce sert alors de ceci pour styliser nos components de façon responsive.</p>
+<h3>Component</h3>
+<p>Comme dit plus haut, Angular marche avec des components.<br>
+Par exemple, si on a besoin d'un bouton, au lieu de le faire en plein milieu de notre page principale, on va créer un component Bouton que l'on va inserer dans la page principale. Comme ça, si on a besoind e plusieurs boutons similairs, au lieu de recopier le code completement à chaque fois, on replace simplement le component ailleurs. Par exemple :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>et à coté on a un fichier qui définit à quoi ressemble MonBouttonPersonalisé, ici un bouton qui quand cliqué, nous redirige sur <a href="http://unlien.fr">unlien.fr</a> :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>BOUTON<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>https://unlien.fr<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Pour créer un component vide avec l'ossature désirée on tape <code>ng generate component nom-component</code><br>
+On l'appelle dans un html avec la balise <code>&lt;app-nom-component&gt;&lt;/app-nom-component&gt;</code>.</p>
+<p>En guise d'exemple plus concret, pour mon projet, j'ai plusieurs components :</p>
+<ul>
+<li>app | L'endroit où je rassemble tous les components pour former la page</li>
+<li>header | Une barre tous en haut de la page, avec un titre et des liens vers mes coordonnées</li>
+<li>Leftside | Une barre à gauche avec des infos sur moi.  Chaque info est encapsulé dans un component LeftSection</li>
+<li>LeftSection | Un conteneur qui affiche des informations d'après un format précis et modulable</li>
+<li>Center | Le centre de la page qui contient un carousel d'image</li>
+<li>Carousel | Un carousel qui affiche des images de mes projets, il est interactif et codé à la main</li>
+</ul>
+<p>Avec tout cela, on est en guise de créer une page internet. Elle est <strong>reponsive</strong> et le contenu peut être modifier sans revoir toute l'ossature du projet. Voici un apreçu :</p>
+<ul>
+<li>Sur grand écran et sur Mobile :</li>
+</ul>
+<div style='display:flex'>
+    <img src='./../images/monangular.png' >
+    <img src='./../images/monangulartel.png' >
+</div>
+<h2>3 - Build et déploiement du projet sur un serveur distant</h2>
+<p>Pour aller plus loin, on va déployer notre page sur le serveur ovh du parcours Do-it.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Se connecter à OVH1</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Pour aller sur ovh1, il vous faut une clé ssh et un compte vous appartena,t. Pour cela, il faut aller voir M.Brucker, je ne détaille pas ici la démarche</p>
+</div>
+</details>     
+</div>
+<p>Nous allons faire ce qu'on appelle <strong>un site statique</strong>. C'est un site dont le contenue ne change pas. Cest à dire que tous les utlisateurs verrons la même chose, et cette chose ne peut être mise à jour que si on modifie les fichiers du serveur.<br>
+C'est à mettre en opposition aux <strong>sites dynamiques</strong> qui possèdent une base de données et un programme qui peret d'afficher des choses différentes selon les utilisateurs, et de mettre à jour ces choses dans la base de données.</p>
+<p>Les sites statiques sont très bien pour l'application qu'on en fait. C'est à dire qe je veu montrer la même chose à tous le monde, et je n'ai pas besoin de faire de mises à jour régulière du contenu.</p>
+<p>En plus, OVH1 possède un répertoire particulier : www, qui permet de relier une page html directement sur internet.</p>
+<h2>Build :</h2>
+<p>Les serveurs web ne savent lire que trois choses : Le html, le css et le js. Nous avons un projet compliqué, avec plein de typescript, des &quot;node_modules&quot;, des fichiers de configuration etc.. on ne peut pas mettre ça directement sur le serveur et s'attendre à ce que cela fonctionne.</p>
+<p>On réalise une étape qu'on appelle la complilation (le build en anglais) qui permet de traduire tous nos fichiers et de nous sortir à la fin que les trois choses dont nous avons besoin : le html, le css et le js.</p>
+<h2>Transfert</h2>
+<p>Sur angular on compile avec <code>ng build</code>. Cela créer des fichiers dans <code>./projet/dist</code>, dist pour distribution, c'est ça qu'on va mettre sur le serveur.</p>
+<p>Pour mettre sur le serveur on utlise la commande 'scp' qui transfert des fichiers par ssh.</p>
+<pre><code>    scp -r ./dist epice@ovh1.ec-m.fr:/home/epice/www/
+</code></pre>
+<p>Cette commande copie tous ce qu'il y a dans dist pour le transferer dans le dossier www du compte epice sur ovh1.</p>
+<p>Après cela, il suffit d'aller sur internet pour voir.</p>
+<p>Dans mon cas :</p>
+<pre><code>http://www.curcuma.ovh1.ec-m.fr
+</code></pre>
+<h2>Pour aller plus loin :</h2>
+<p>A chaque mise à jour du projet, il faut rebuild, puis recopier les fichiers. Cela peut être embêtant, je vous propose d'automatiser ça comme je le fais dans la deuxième partie de mon POK : Artblog déploiement.</p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
