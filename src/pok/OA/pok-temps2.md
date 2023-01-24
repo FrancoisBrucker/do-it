@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Réalisation d'un site sur eleventy - POK 2"
+title: "Réalisation d'un site sur eleventy et comparaison avec WordPress"
 authors:
   - Ossama Abdane
 ---
@@ -9,12 +9,6 @@ authors:
 ## Objectif
 L'objectif de ce POK est d'approfondir les bases de création acquise lors du temps 1. L'idée est de suivre le tutoriel créé par Nicolas pour son MON : "Créer un site web statique avec 11ty". Pour ainsi découvrir un nouveau moyen de créer un site internet.
 Dans un deuxième temps, j'ai réalisé une comparaison entre la création d'un site avec eleventy et WordPress (réalisée dans mon MON2.2). 
-
-## Création d'un site avec eleventy 
-
-### Base de la création 
-
-J
 
 
 ## Eleventy 
@@ -31,6 +25,12 @@ J
 * Pas autant de fonctionnalités que WordPress : Eleventy est un générateur de site statique, il est donc moins capable de fournir les fonctionnalités avancées que vous pourriez trouver dans un système de gestion de contenu comme WordPress, comme les formulaires de contact, les commentaires, les médias, etc.
 * Moins de support et de communauté : Eleventy est un projet open-source relativement nouveau comparé à WordPress, il y a donc moins de support et de communauté disponible pour résoudre les problèmes ou pour obtenir de l'aide.
 
+### Exemples de sites utilisant eleventy
+
+* Mozilla Developer Network : https://developer.mozilla.org/fr/
+* Snipcart : https://snipcart.com/fr
+* Smashing Magazine : https://www.smashingmagazine.com
+
 ## WordPress 
 
 ### Avantages
@@ -43,6 +43,14 @@ J
 
 * Peut être plus lourd et moins performant que les sites statiques : Comme WordPress génère des sites dynamiques qui nécessitent des requêtes de base de données et des scripts PHP pour charger le contenu, ils peuvent être plus lents à charger pour les utilisateurs que les sites statiques générés par Eleventy.
 * Moins de flexibilité en termes de mise en page : Bien que WordPress permet de personnaliser l'apparence de votre site web à l'aide de thèmes et de plugins, il peut être moins flexible que Eleventy en termes de mise en page car il est basé sur des templates prédéfinis.
+
+### Exemples de sites utilisant WordPress
+
+* BBC America : https://www.bbcamerica.com
+* Sony Music : https://www.sonymusic.fr
+* The New Yorker : https://www.newyorker.com
+* Forbes : https://www.forbes.fr
+
 
 ## Cadre opportun d'utilisation 
 
@@ -74,3 +82,5 @@ Il est important de noter que combiner Eleventy et WordPress nécessite une cert
 * Site Eleventy : https://www.11ty.dev
 * Tutoriel youtube : https://www.youtube.com/watch?v=BKdQEXqfFA0
 * MON de Nicolas : https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/statique-eleventy/
+* WordPress contre 11ty : Quel est le meilleur ? : https://targettrend.com/fr/wordpress-vs-11ty/
+* Kinsta : https://kinsta.com/fr/blog/generateurs-de-sites-statiques/
