@@ -22,6 +22,7 @@ Le temps 2 est consacré à l'**ajout d'une partie back-end** avec NodeJS et Exp
 {% chemin "**Ressources**" %}
 
 - [Le Github du POK](https://github.com/royantk/FindTheKey)
+- [Le fichier de l'API](https://github.com/royantk/FindTheKey/blob/backend/app.js)
 - [Résultat serveur distant (front)](http://cerfeuil.ovh1.ec-m.fr/)
 - [Résultat serveur distant (API)](http://node.cerfeuil.ovh1.ec-m.fr/)
 
@@ -53,29 +54,76 @@ On peut retrouver le détail du temps prévu et passé sur chaque étape dans le
 | **To-do**                                              | **Temps passé** | **Temps prévu** |
 | ------------------------------------------------------ | --------------- | --------------- |
 | Mise en ligne (test) version front sur serveur distant | 1 h             | 1 h             |
-| Préparation du back                                    | 3 h             | 4 h             |
-| Création de l’API                                      | 1 h             | 5 h             |
-| Création interface front/back                          | 0 h             | 4 h             |
+| Préparation du back                                    | 7 h             | 4 h             |
+| Création de l’API                                      | 8 h             | 5 h             |
+| Création interface front/back                          | 1 h             | 4 h             |
 | Création écran scores                                  | 0 h             | 4 h             |
-| Mise en ligne du back sur le serveur distant (API)     | 1 h             | 2 h             |
-| **Total**                                              | **6 h**         | **20 h**        |
+| Mise en ligne du back sur le serveur distant (API)     | 3 h             | 2 h             |
+| **Total**                                              | **20 h**        | **20 h**        |
 
-*(mis à jour le 07/12/2022)*
+*(mis à jour le 24/01/2022)*
 
-## Mise en ligne (test) version front sur serveur distant
+### Résultats
+
+{% info "**Résultats**" %}
+
+Comme on peut le voir, j'ai **dépassé** le temps prévu pour la partie **back**. Cela est dû au fait que j'ai dû **apprendre** à utiliser NodeJS, Express et Sequelize et **adapter** mon code frontend à un environnement backend. Je n'ai ainsi pas pu réaliser l'écran des scores ni adapter correctement le front pour utiliser l'API.
+
+J'ai néanmoins **réussi** à mettre en ligne la version front du jeu sur un serveur distant et à créer une API sur le serveur distant permettant de générer le contenu des cases. Il reste donc à créer la route qui permet de gérer le déplacement et adapter le front à l'API.
+
+Pour utiliser l'API, il faut envoyer une requête **POST** à l'adresse suivante : [http://node.cerfeuil.ovh1.ec-m.fr/newGame](http://node.cerfeuil.ovh1.ec-m.fr/newGame). Il faut envoyer une requête incluant un **body** contenant la taille du plateau souhaité. Par exemple, pour un plateau de 4x4, il faut envoyer le body suivant :
+
+```json
+{
+  "size": 4
+}
+```
+
+Cette requête renverra alors un objet JSON contenant le plateau. Cette requête renverra toutes les cases mais **uniquement le type des cases découvertes**. Le vrai contenu des cases est néanmoins stocké en bases de données. Voici un aperçu d'une réponse :
+
+```json
+{
+    "success": true,
+    "message": "New game created successfully",
+    "data": {
+        "game": {
+            "playerHasKey": false,
+            "id": 3,
+            "playerLives": 3,
+            "playerX": 0,
+            "playerY": 2,
+            "updatedAt": "2023-01-24T21:00:50.846Z",
+            "createdAt": "2023-01-24T21:00:50.846Z"
+        },
+        "cases": [
+            {
+                "id": 33,
+                "x": 0,
+                "y": 0,
+                "visibleType": "hidden",
+                "etat": "hidden",
+                "createdAt": "2023-01-24T21:00:50.915Z",
+                "updatedAt": "2023-01-24T21:00:50.915Z",
+                "gameId": 3
+            } // ... 15 autres cases
+        ]
+    }
+}
+```
+
+Le code de l'API est disponible sur le [Github du POK](https://github.com/royantk/FindTheKey/blob/backend/app.js)
+
+{% endinfo %}
+
+## Mise en place
+
+Je détaille ci-dessous les différentes étapes que j'ai pu réaliser à l'aide d'explications générales applicables à un grand nombre de projets.
+
+### Mise en ligne (test) version front sur serveur distant
 
 Pour commencer, j'ai décidé de **mettre en ligne** la version front du jeu sur un serveur distant. J'ai donc utilisé le service [OVH](https://www.ovh.com/fr/) pour créer un serveur et y déployer le site. Je présente ci-dessous comment créer un serveur OVH, ce que je n'ai pas fais en pratique car j'ai utilisé le serveur OVH1 de Centrale.
 
-### Création du serveur
-
-Pour créer un serveur, il faut se rendre sur le site [OVH](https://www.ovh.com/fr/) et créer un compte. Une fois connecté, il faut se rendre dans la section **Cloud** puis **Serveurs**. Ensuite, il faut cliquer sur **Créer un serveur** et choisir les options suivantes :
-
-- **Système d'exploitation** : Debian 10
-- **Type de serveur** : Cloud
-
-Une fois le serveur créé, il faut se rendre dans la section **Cloud** puis **Serveurs**. Ensuite, il faut cliquer sur le serveur créé et se rendre dans la section **Connexion**. On peut alors récupérer l'adresse du serveur ainsi que le mot de passe.
-
-### Connexion au serveur
+#### Connexion au serveur
 
 Pour se connecter au serveur, il faut utiliser le **protocole SSH**. J'ai utilisé le terminal de mon ordinateur pour me connecter au serveur. Pour cela, il faut utiliser la commande suivante :
 
@@ -95,7 +143,7 @@ On peut alors entrer le chemin de la clé et le mot de passe. Une fois la clé c
 ssh-copy-id username@adresse_serveur
 ```
 
-### Navigation dans le serveur
+#### Navigation dans le serveur
 
 Pour vérifier que la connexion est bien établie, on peut utiliser la commande suivante pour **afficher le contenu du dossier courant** :
 
@@ -109,7 +157,7 @@ Pour **se déplacer dans un dossier**, on peut utiliser la commande suivante :
 cd nom_dossier
 ```
 
-Au lieu de se déplacer dans un dossier, on peut aussi **créer un nouveau dossier** avec la commande suivante :
+On peut aussi **créer un nouveau dossier** avec la commande suivante :
 
 ```bash
 mkdir nom_dossier
@@ -121,7 +169,7 @@ Enfin, pour **supprimer un dossier**, on peut utiliser la commande suivante :
 rm -r nom_dossier
 ```
 
-### Déploiement du site
+#### Déploiement du site
 
 Pour **déployer** le site sur le serveur, on peut utiliser la commande suivante :
 
@@ -131,32 +179,7 @@ scp -r chemin_dossier username@adresse_serveur:/chemin_dossier
 
 On peut alors entrer le mot de passe du serveur pour déployer le site. Pour vérifier que le site est bien déployé, on peut se rendre sur le navigateur et entrer l'adresse IP du serveur.
 
-Pour faciliter le déploiement, on peut aussi **créer un script**. Pour cela, il faut créer un fichier **deploy.sh** avec la commande suivante :
-
-```bash
-touch deploy.sh
-```
-
-On peut ensuite ouvrir le fichier avec la commande suivante :
-
-```bash
-nano deploy.sh
-```
-
-On peut alors entrer et enregistrer le script suivant :
-
-```bash
-#!/bin/bash
-scp -r chemin_dossier username@adresse_serveur:/chemin_dossier
-```
-
-On pourra ensuite **exécuter le script** avec la commande suivante :
-
-```bash
-./deploy.sh
-```
-
-## Préparation du back
+### Préparation du back
 
 Pour préparer le back, j'ai décidé de **créer un projet Node.js** avec la commande suivante :
 
@@ -164,25 +187,13 @@ Pour préparer le back, j'ai décidé de **créer un projet Node.js** avec la co
 npm init
 ```
 
-On peut alors entrer les informations demandées. Une fois le projet créé, on peut **installer les dépendances** avec la commande suivante :
+On peut alors entrer les informations demandées. Une fois le projet créé, on peut **installer les dépendances** comme, par exemple, Express avec la commande suivante :
 
 ```bash
 npm install express
 ```
 
-On peut ensuite **créer un fichier** pour le back avec la commande suivante :
-
-```bash
-touch index.js
-```
-
-On peut ensuite ouvrir le fichier avec la commande suivante :
-
-```bash
-nano index.js
-```
-
-On peut alors entrer et enregistrer le code suivant :
+J'ai ensuite **créé un fichier** `index.js` pour créer mon API. Pour commencer, j'ai utilisé l'exemple tiré de la documentation d'Express ci-dessous qui permet d'afficher un message dans le navigateur :
 
 ```javascript
 const express = require('express');
@@ -198,49 +209,31 @@ app.listen(port, () => {
 });
 ```
 
-On peut ensuite **lancer le serveur** avec la commande suivante :
+On pourra ensuite **lancer le serveur Node.js** avec la commande suivante :
 
 ```bash
 node index.js
 ```
 
-On peut alors se rendre sur le navigateur et entrer l'adresse suivante :
+On pourra alors se rendre sur le navigateur et entrer l'adresse suivante pour voir afficher le message **Hello World!** :
 
 ```bash
 http://localhost:3000
 ```
 
-On peut alors voir le message **Hello World!**.
+### Mise en ligne (test) version back sur serveur distant
 
-## Mise en ligne (test) version back sur serveur distant
+#### Importation du fichier `index.js` dans le serveur
 
-Source : [Hostinger](https://www.hostinger.fr/tutoriels/comment-installer-node-js-sur-ubuntu)
-
-### Installation de Node.js
-
-Tout d'abord, il faut se connecter au serveur avec la commande suivante :
+Pour importer le fichier `index.js` dans le serveur, on peut utiliser la commande suivante :
 
 ```bash
-ssh username@adresse_serveur
+scp index.js username@adresse_serveur:/chemin_dossier
 ```
 
-On peut alors entrer le mot de passe du serveur pour se connecter. Pour déployer le back sur le serveur distant, on doit ensuite installer **Node.js** et **npm** sur le serveur. Pour cela, on peut utiliser la commande suivante :
+On peut également utiliser un outil tel que [FileZilla](https://filezilla-project.org/) pour importer le fichier `index.js` dans le serveur via l'interface graphique.
 
-```bash
-sudo apt install nodejs npm
-```
-
-On peut ensuite **créer un dossier** pour le back avec la commande suivante :
-
-```bash
-mkdir back
-```
-
-On peut ensuite **déployer le back** sur le serveur avec la commande suivante :
-
-```bash
-scp -r chemin_dossier username@adresse_serveur:/chemin_dossier
-```
+#### Installation de Node.js sur le serveur
 
 On peut ensuite **se connecter au serveur** avec la commande suivante :
 
@@ -248,17 +241,32 @@ On peut ensuite **se connecter au serveur** avec la commande suivante :
 ssh username@adresse_serveur
 ```
 
-On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut **se déplacer dans le dossier** du back avec la commande suivante :
+On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut ensuite **installer Node.js** avec la commande suivante :
 
 ```bash
-cd back
+sudo apt install nodejs
 ```
 
-On peut ensuite **installer les dépendances** avec la commande suivante :
+On peut ensuite **installer npm** avec la commande suivante :
 
 ```bash
-npm install
+sudo apt install npm
 ```
+
+Pour vérifier que Node.js et npm sont bien installés, on peut utiliser les commandes suivantes :
+
+```bash
+node -v
+npm -v
+```
+
+On pourra ensuite installer les **dépendances** du projet avec la commande suivante :
+
+```bash
+npm install express
+```
+
+#### Lancement du serveur
 
 On peut ensuite **lancer le serveur** avec la commande suivante :
 
@@ -274,41 +282,222 @@ http://adresse_serveur:3000
 
 On peut alors voir le message **Hello World!**.
 
-## Configurer le serveur pour le déploiement automatique
+Pour **arrêter le serveur**, on peut effectuer la combinaison de touches `Ctrl + C`.
 
-Pour déployer automatiquement un site sur un serveur OVH via SSH à chaque push sur Github, vous pouvez utiliser l'outil git en combinaison avec un service de Webhooks.
+#### Laisser le serveur tourner en arrière-plan
 
-Ensuite, vous devez ajouter un Webhook dans les paramètres de votre dépôt Github pour qu'il envoie une notification à votre serveur OVH à chaque push. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section "Webhooks". Ajoutez un nouveau Webhook en indiquant l'URL de votre serveur OVH et en sélectionnant l'option "Just the push event".
+Après avoir lancé le serveur, on remarque que celui-ci s'arrête dès que l'on quitte la connexion SSH. Il est donc nécessaire de **laisser le serveur tourner en arrière-plan**.
 
-Sur votre serveur OVH, vous devez maintenant écrire un script qui sera exécuté à chaque fois que le Webhook sera appelé. Ce script devra se connecter en SSH sur votre serveur, puis télécharger et mettre à jour le code de votre site depuis le dépôt Github. Vous pouvez utiliser la commande git clone pour télécharger le code depuis le dépôt, et la commande git pull pour mettre à jour le code si vous avez déjà cloné le dépôt précédemment.
-
-Voici un exemple de script qui accomplit ces tâches :
+Pour **laisser le serveur tourner en arrière-plan**, on peut utiliser un outil tel que [screen](https://doc.ubuntu-fr.org/screen) qui permet de lancer des programmes en arrière-plan. On peut créer un screen avec la commande suivante :
 
 ```bash
-#!/bin/bash
-
-# Se connecter en SSH sur le serveur
-ssh username@server.com
-
-# Aller dans le répertoire où se trouve le code de votre site
-cd /path/to/site/
-
-# Si le dépôt n'a pas encore été cloné
-if [ ! -d "repo" ]; then
-  # Cloner le dépôt
-  git clone https://github.com/username/repo.git
-else
-  # Sinon, mettre à jour le dépôt
-  git pull
-fi
+screen -S nom_du_screen
 ```
 
-Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : `chmod +x deploy.sh`
+On peut alors relancer le serveur avec la commande suivante :
 
-Enfin, vous devez configurer le Webhook dans les paramètres de votre dépôt Github pour qu'il exécute ce script à chaque fois qu'il est appelé. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section "Webhooks" et éditez le Webhook que vous avez créé précédemment. Dans la section "Payload URL", indiquez l'URL du script sur votre serveur OVH, suivie du nom du script, par exemple : `http://server.com/deploy.sh`. Dans la section "Content type", sélectionnez l'option "application/json". Enfin, dans la section "Secret", entrez un mot de passe secret que vous avez choisi pour protéger l'accès à votre script.
+```bash
+node index.js
+```
 
-Enregistrez les modifications et votre site devrait être automatiquement déployé sur votre serveur OVH à chaque fois que vous poussez du code sur votre dépôt Github.
+Enfin, on pourra **quitter le screen** avec le raccourci `Ctrl + A + D`.
 
-Attention : assurez-vous de bien protéger l'accès à votre script en utilisant un mot de passe secret et en autorisant uniquement les connexions SSH depuis votre ordinateur. Sinon, des personnes malveillantes pourraient modifier ou supprimer le code de votre site sans votre consentement.
+Le serveur continuera alors de tourner en arrière-plan.
+
+Pour **revenir sur le screen** et arrêter le serveur, on utilisera la commande suivante :
+
+```bash
+screen -r nom_du_screen
+```
+
+On pourra enfin **arrêter le serveur** avec `Ctrl + C`.
+
+### Création de l'API
+
+Pour créer l'API nécessaire au projet, j'ai utilisé Node.js et Express accompagnés d'une base de données PostgreSQL. 
+
+#### Création de la base de données
+
+Pour **créer la base de données**, on peut utiliser la commande suivante :
+
+```bash
+createdb nom_base_de_donnees
+```
+
+On pourra alors s'en servir dans notre fichier `index.js`. Nous devons ensuite installer les diverses **dépendances** nécessaires à la base de données et à l'API avec la commande suivante :
+
+```bash
+npm install express sequelize pg body-parser
+```
+
+#### Configuration de la connexion à la base de données
+
+On commence par importer les dépendances nécessaires à la connexion à la base de données :
+
+```javascript
+const express = require('express');
+const Sequelize = require('sequelize');
+const bodyParser = require('body-parser');
+```
+
+On peut ensuite **créer la connexion** à la base de données :
+
+```javascript
+const sequelize = new Sequelize("postgres://<username>:<password>@<host>:<port>/<database>");
+```
+
+On peut alors **tester la connexion** à la base de données avec le code suivant :
+
+```javascript
+sequelize.authenticate().then(() => {
+    console.log('Connection has been established successfully.');
+}).catch(err => {
+    console.error('Unable to connect to the database:', err);
+});
+```
+
+#### Création du modèle
+
+On peut ensuite **créer le modèle** de la base de données avec le code suivant :
+
+```javascript
+const User = sequelize.define('user', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    username: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    password: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+});
+```
+
+On peut ensuite **créer la table** dans la base de données avec le code suivant :
+
+```javascript
+User.sync().then(() => {
+    console.log('Table created');
+});
+```
+
+#### Création des routes
+
+On peut ensuite **créer les routes** de l'API avec le code suivant :
+
+```javascript
+app.get('/users', (req, res) => {
+    User.findAll().then(users => {
+        res.json(users);
+    });
+});
+
+app.get('/users/:id', (req, res) => {
+    User.findById(req.params.id).then(user => {
+        res.json(user);
+    });
+});
+
+app.post('/users', (req, res) => {
+    User.create(req.body).then(user => {
+        res.json(user);
+    });
+});
+
+app.put('/users/:id', (req, res) => {
+    User.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    }).then(() => {
+        res.json(req.body);
+    });
+});
+
+app.delete('/users/:id', (req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(() => {
+        res.json(req.params.id);
+    });
+});
+```
+
+On peut ensuite **lancer le serveur** avec la commande suivante :
+
+```bash
+node index.js
+```
+
+On peut alors se rendre sur le navigateur et entrer l'adresse suivante :
+
+```bash
+http://adresse_serveur:3000/users
+```
+
+On peut alors voir la liste des utilisateurs.
+
+### Connexion de l'API au projet
+
+On peut ensuite **modifier le projet** pour qu'il puisse se connecter à l'API. Pour cela, on va utiliser la méthode `fetch()` de JavaScript qui permet de faire des requêtes HTTP.
+
+On peut commencer par **créer un fichier** `api.js` qui contiendra les fonctions permettant de se connecter à l'API. On peut ensuite **créer les fonctions** permettant de se connecter à l'API :
+
+```javascript
+export function getUsers() {
+    return fetch('http://adresse_serveur:3000/users').then(response => response.json());
+}
+
+export function getUser(id) {
+    return fetch('http://adresse_serveur:3000/users/' + id).then(response => response.json());
+}
+
+export function createUser(user) {
+    return fetch('http://adresse_serveur:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    }).then(response => response.json());
+}
+
+export function updateUser(user) {
+    return fetch('http://adresse_serveur:3000/users/' + user.id, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    }).then(response => response.json());
+}
+
+export function deleteUser(id) {
+    return fetch('http://adresse_serveur:3000/users/' + id, {
+        method: 'DELETE'
+    }).then(response => response.json());
+}
+```
+
+On peut ensuite **modifier le fichier** `index.js` pour qu'il puisse se connecter à l'API. On peut commencer par **importer les fonctions** permettant de se connecter à l'API :
+
+```javascript
+import { getUsers, getUser, createUser, updateUser, deleteUser } from './api.js';
+```
+
+On pourra alors utiliser les fonctions de l'API dans le fichier `index.js`. On peut par exemple **afficher la liste des utilisateurs** avec le code suivant :
+
+```javascript
+getUsers().then(users => {
+    console.log(users);
+});
+```
 
 [<-- Retour](../)
