@@ -28,7 +28,7 @@ Notre principale interrogation concerne le côté très confidentiel de la carto
 Nous envisageons deux scénarios pour ce POK :
 
 - si le système à cartographier est très complexe, nous nous restreindrons à quelques vues : vue métier et vue application par exemple.
-- Si le système est plus simple, nous pourons enrichir cette cartographie avec d'autres vues et augmenter la précision des premières.
+- Si le système est plus simple, nous pourrons enrichir cette cartographie avec d'autres vues et augmenter la précision des premières.
 
 ## To-do list du premier sprint
 - [X] Contacter la région Sud pour savoir comment ils cartographient leur SI
@@ -40,7 +40,7 @@ Nous envisageons deux scénarios pour ce POK :
 ## Détail du premier sprint
 Comme notre objectif principal du premier sprint était de faire un tour d'horizon du sujet et de définir le périmètre de notre POK, nous avons surtout contacté des personnes pouvant nous aider dans notre projet. 
 - Nous avons cherché les contacts d'anciens de Centrale sans les contacter pour le moment. 
-- M. Bouilloux, la personne que nous avons contacté de la DSI de la Région Sud, nous a offert son aide sans problème. Eugénie pourra discuter plus précisemment du sujet lors du deuxième sprint, lorsqu'elle sera en alternance. 
+- M. Bouilloux, la personne que nous avons contacté de la DSI de la Région Sud, nous a offert son aide sans problème. Eugénie pourra discuter plus précisément du sujet lors du deuxième sprint, lorsqu'elle sera en alternance. 
 - Nous avons eu une réunion avec M. Pagé de la DSI le 06/12. Cette réunion nous a appris beaucoup de choses. Nous savons désormais que Centrale n'a pas de cartographie complète : seule la vue applicative a été cartographiée pour répondre aux exigences du cabinet, il s'agit d'une figure imposée d'un rapport. Le DSI pense qu'il leur serait utile d'avoir une cartographie complète pour pouvoir anticiper certains problèmes et savoir quelles parties du SI sont liées entre les différentes vues. Par exemple, elle servirait à connaître, lorsqu'un serveur est coupé, les impacts sur le SI. La raison de l'absence d'une cartographie est tout simplement le manque de ressources humaines : la DSI est composée de 8 personnes qui sont déjà très chargées. Comme les outils de cartographie sont souvent de "grosses usines à gaz", il est nécessaire d'avoir au moins une personne (un architecte ou un urbaniste) assignée à ce travail, ce qui est impossible dans le cas de Centrale.
 
 Ce que nous nous proposons de faire dans ce POK est de mettre en place une collaboration entre la DSI de l'École et les élèves de l'option DO-IT sur plusieurs années. Comme a dit M. Pagé, si nous avions 40h mais avec déjà de l'expérience, peut-être qu'alors nous aurions pu avancer de manière significative sur la cartographie du SI de Centrale. Ainsi, nous allons regrouper les témoignages de DSIs et les différentes méthodes de cartographies au même endroit pour que, à défaut d'avoir de l'expérience, la théorie et un peu de pratique soient regroupés. Nous allons ensuite préparer la collaboration entre les parties pour la cartographie puisse être faite, améliorée et mise à jour au fil des années. Dans ce projet, il va falloir prendre en compte le fait que la DSI ne pourra pas participer au projet autrement que par des points ponctuels.
@@ -68,4 +68,14 @@ Ce schéma directeur contient les objectifs à atteindre, la démarche général
 ## Ebauche de fiche projet
 Ce projet de 3A a été construit au cours d'un POK par Eugénie Giraud-Telme et Sarah Honoré. Le projet consiste à réaliser la cartographie du système d'informations de l'Ecole, avec la collaboration ponctuelle de la DSI. Ce projet s'adresse aussi bien à des personnes intéressées par la compréhension de la structure du système d'informations de l'Ecole, qu'à des personnes intéressées par les serveurs ou la cybersécurité. Nous vous conseillons de construire une équipe avec plusieurs profils différents afin de pouvoir approfondir au maximum le sujet. 
 
-Pour rentrer dans le sujet et comprendre quel sera l'ojectif du projet, nous vous recommandons de commencer par lire le guide de la cartographie des systèmes d'informations de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) pour avoir une première idée de comment se construit une cartographie. 
+Pour rentrer dans le sujet et comprendre quel sera l'objectif du projet, nous vous recommandons de commencer par lire le guide de la cartographie des systèmes d'informations de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) pour avoir une première idée de comment se construit une cartographie. Il faudra bien évidemment chercher d'autres méthodologies de cartographie, les comparer et choisir celle qui convient le mieux à votre projet. 
+
+To do list pour le début de ce projet :
+- [ ] Trouver un organigramme à jour de l'Ecole
+- [ ] Contacter chaque responsable de l'organigramme pour trouver leurs liens avec le SI et les fonctions auxquelles ils répondent. Ces entretiens sont à préparer en amont avec la DSI afin d'être sûr de poser les bonnes questions pour obtenir les informations dont vous avez besoin. Dans l'idéal, il faudrait faire les premiers entretiens avec une personne de la DSI.
+- [ ] Réaliser la cartographie avec la vision métier
+- [ ] Reprendre une ancienne cartographie avec la vision applicative et la mettre à jour 
+
+La suite du projet dépend des profils des membres de l'équipe. 
+Il est possible de faire une cartographie avec une vue des processus. Auquel cas nous vous recommandons d'avoir fait précédemment le MON "Diagnostic organisationnel et modélisation des processus" avec l'étude de cas CPF pour être familier avec le concept de processus et une manière de les représenter. 
+
