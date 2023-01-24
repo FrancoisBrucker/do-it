@@ -96,6 +96,7 @@
 </div><div class="pl-8 mr-8">
 <ul>
 <li><a href="https://github.com/royantk/FindTheKey">Le Github du POK</a></li>
+<li><a href="https://github.com/royantk/FindTheKey/blob/backend/app.js">Le fichier de l'API</a></li>
 <li><a href="http://cerfeuil.ovh1.ec-m.fr/">Résultat serveur distant (front)</a></li>
 <li><a href="http://node.cerfeuil.ovh1.ec-m.fr/">Résultat serveur distant (API)</a></li>
 </ul>
@@ -130,17 +131,17 @@
 </tr>
 <tr>
 <td>Préparation du back</td>
-<td>3 h</td>
+<td>7 h</td>
 <td>4 h</td>
 </tr>
 <tr>
 <td>Création de l’API</td>
-<td>1 h</td>
+<td>8 h</td>
 <td>5 h</td>
 </tr>
 <tr>
 <td>Création interface front/back</td>
-<td>0 h</td>
+<td>1 h</td>
 <td>4 h</td>
 </tr>
 <tr>
@@ -150,27 +151,68 @@
 </tr>
 <tr>
 <td>Mise en ligne du back sur le serveur distant (API)</td>
-<td>1 h</td>
+<td>3 h</td>
 <td>2 h</td>
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>6 h</strong></td>
+<td><strong>20 h</strong></td>
 <td><strong>20 h</strong></td>
 </tr>
 </tbody>
 </table>
-<p><em>(mis à jour le 07/12/2022)</em></p>
-<h2>Mise en ligne (test) version front sur serveur distant</h2>
+<p><em>(mis à jour le 24/01/2022)</em></p>
+<h3>Résultats</h3>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Résultats</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Comme on peut le voir, j'ai <strong>dépassé</strong> le temps prévu pour la partie <strong>back</strong>. Cela est dû au fait que j'ai dû <strong>apprendre</strong> à utiliser NodeJS, Express et Sequelize et <strong>adapter</strong> mon code frontend à un environnement backend. Je n'ai ainsi pas pu réaliser l'écran des scores ni adapter correctement le front pour utiliser l'API.</p>
+<p>J'ai néanmoins <strong>réussi</strong> à mettre en ligne la version front du jeu sur un serveur distant et à créer une API sur le serveur distant permettant de générer le contenu des cases. Il reste donc à créer la route qui permet de gérer le déplacement et adapter le front à l'API.</p>
+<p>Pour utiliser l'API, il faut envoyer une requête <strong>POST</strong> à l'adresse suivante : <a href="http://node.cerfeuil.ovh1.ec-m.fr/newGame">http://node.cerfeuil.ovh1.ec-m.fr/newGame</a>. Il faut envoyer une requête incluant un <strong>body</strong> contenant la taille du plateau souhaité. Par exemple, pour un plateau de 4x4, il faut envoyer le body suivant :</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"size"</span><span class="token operator">:</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette requête renverra alors un objet JSON contenant le plateau. Cette requête renverra toutes les cases mais <strong>uniquement le type des cases découvertes</strong>. Le vrai contenu des cases est néanmoins stocké en bases de données. Voici un aperçu d'une réponse :</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"New game created successfully"</span><span class="token punctuation">,</span>
+    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"game"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"playerHasKey"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token property">"playerLives"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token property">"playerX"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">"playerY"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token property">"updatedAt"</span><span class="token operator">:</span> <span class="token string">"2023-01-24T21:00:50.846Z"</span><span class="token punctuation">,</span>
+            <span class="token property">"createdAt"</span><span class="token operator">:</span> <span class="token string">"2023-01-24T21:00:50.846Z"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">"cases"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">33</span><span class="token punctuation">,</span>
+                <span class="token property">"x"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token property">"y"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token property">"visibleType"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+                <span class="token property">"etat"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+                <span class="token property">"createdAt"</span><span class="token operator">:</span> <span class="token string">"2023-01-24T21:00:50.915Z"</span><span class="token punctuation">,</span>
+                <span class="token property">"updatedAt"</span><span class="token operator">:</span> <span class="token string">"2023-01-24T21:00:50.915Z"</span><span class="token punctuation">,</span>
+                <span class="token property">"gameId"</span><span class="token operator">:</span> <span class="token number">3</span>
+            <span class="token punctuation">}</span> <span class="token comment">// ... 15 autres cases</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Le code de l'API est disponible sur le <a href="https://github.com/royantk/FindTheKey/blob/backend/app.js">Github du POK</a></p>
+</div></div>
+<h2>Mise en place</h2>
+<p>Je détaille ci-dessous les différentes étapes que j'ai pu réaliser à l'aide d'explications générales applicables à un grand nombre de projets.</p>
+<h3>Mise en ligne (test) version front sur serveur distant</h3>
 <p>Pour commencer, j'ai décidé de <strong>mettre en ligne</strong> la version front du jeu sur un serveur distant. J'ai donc utilisé le service <a href="https://www.ovh.com/fr/">OVH</a> pour créer un serveur et y déployer le site. Je présente ci-dessous comment créer un serveur OVH, ce que je n'ai pas fais en pratique car j'ai utilisé le serveur OVH1 de Centrale.</p>
-<h3>Création du serveur</h3>
-<p>Pour créer un serveur, il faut se rendre sur le site <a href="https://www.ovh.com/fr/">OVH</a> et créer un compte. Une fois connecté, il faut se rendre dans la section <strong>Cloud</strong> puis <strong>Serveurs</strong>. Ensuite, il faut cliquer sur <strong>Créer un serveur</strong> et choisir les options suivantes :</p>
-<ul>
-<li><strong>Système d'exploitation</strong> : Debian 10</li>
-<li><strong>Type de serveur</strong> : Cloud</li>
-</ul>
-<p>Une fois le serveur créé, il faut se rendre dans la section <strong>Cloud</strong> puis <strong>Serveurs</strong>. Ensuite, il faut cliquer sur le serveur créé et se rendre dans la section <strong>Connexion</strong>. On peut alors récupérer l'adresse du serveur ainsi que le mot de passe.</p>
-<h3>Connexion au serveur</h3>
+<h4>Connexion au serveur</h4>
 <p>Pour se connecter au serveur, il faut utiliser le <strong>protocole SSH</strong>. J'ai utilisé le terminal de mon ordinateur pour me connecter au serveur. Pour cela, il faut utiliser la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
 </code></pre>
@@ -180,51 +222,32 @@
 <p>On peut alors entrer le chemin de la clé et le mot de passe. Une fois la clé créée, il faut l'<strong>ajouter au serveur</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ssh-copy-id username@adresse_serveur
 </code></pre>
-<h3>Navigation dans le serveur</h3>
+<h4>Navigation dans le serveur</h4>
 <p>Pour vérifier que la connexion est bien établie, on peut utiliser la commande suivante pour <strong>afficher le contenu du dossier courant</strong> :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ls</span>
 </code></pre>
 <p>Pour <strong>se déplacer dans un dossier</strong>, on peut utiliser la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> nom_dossier
 </code></pre>
-<p>Au lieu de se déplacer dans un dossier, on peut aussi <strong>créer un nouveau dossier</strong> avec la commande suivante :</p>
+<p>On peut aussi <strong>créer un nouveau dossier</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> nom_dossier
 </code></pre>
 <p>Enfin, pour <strong>supprimer un dossier</strong>, on peut utiliser la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">rm</span> <span class="token parameter variable">-r</span> nom_dossier
 </code></pre>
-<h3>Déploiement du site</h3>
+<h4>Déploiement du site</h4>
 <p>Pour <strong>déployer</strong> le site sur le serveur, on peut utiliser la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
 </code></pre>
 <p>On peut alors entrer le mot de passe du serveur pour déployer le site. Pour vérifier que le site est bien déployé, on peut se rendre sur le navigateur et entrer l'adresse IP du serveur.</p>
-<p>Pour faciliter le déploiement, on peut aussi <strong>créer un script</strong>. Pour cela, il faut créer un fichier <strong><a href="http://deploy.sh">deploy.sh</a></strong> avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">touch</span> deploy.sh
-</code></pre>
-<p>On peut ensuite ouvrir le fichier avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">nano</span> deploy.sh
-</code></pre>
-<p>On peut alors entrer et enregistrer le script suivant :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-<span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
-</code></pre>
-<p>On pourra ensuite <strong>exécuter le script</strong> avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">./deploy.sh
-</code></pre>
-<h2>Préparation du back</h2>
+<h3>Préparation du back</h3>
 <p>Pour préparer le back, j'ai décidé de <strong>créer un projet Node.js</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> init
 </code></pre>
-<p>On peut alors entrer les informations demandées. Une fois le projet créé, on peut <strong>installer les dépendances</strong> avec la commande suivante :</p>
+<p>On peut alors entrer les informations demandées. Une fois le projet créé, on peut <strong>installer les dépendances</strong> comme, par exemple, Express avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express
 </code></pre>
-<p>On peut ensuite <strong>créer un fichier</strong> pour le back avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">touch</span> index.js
-</code></pre>
-<p>On peut ensuite ouvrir le fichier avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">nano</span> index.js
-</code></pre>
-<p>On peut alors entrer et enregistrer le code suivant :</p>
+<p>J'ai ensuite <strong>créé un fichier</strong> <code>index.js</code> pour créer mon API. Pour commencer, j'ai utilisé l'exemple tiré de la documentation d'Express ci-dessous qui permet d'afficher un message dans le navigateur :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
@@ -237,37 +260,36 @@ app<span class="token punctuation">.</span><span class="token function">listen</
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Example app listening at http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>On peut ensuite <strong>lancer le serveur</strong> avec la commande suivante :</p>
+<p>On pourra ensuite <strong>lancer le serveur Node.js</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
 </code></pre>
-<p>On peut alors se rendre sur le navigateur et entrer l'adresse suivante :</p>
+<p>On pourra alors se rendre sur le navigateur et entrer l'adresse suivante pour voir afficher le message <strong>Hello World!</strong> :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://localhost:3000
 </code></pre>
-<p>On peut alors voir le message <strong>Hello World!</strong>.</p>
-<h2>Mise en ligne (test) version back sur serveur distant</h2>
-<p>Source : <a href="https://www.hostinger.fr/tutoriels/comment-installer-node-js-sur-ubuntu">Hostinger</a></p>
-<h3>Installation de Node.js</h3>
-<p>Tout d'abord, il faut se connecter au serveur avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
+<h3>Mise en ligne (test) version back sur serveur distant</h3>
+<h4>Importation du fichier <code>index.js</code> dans le serveur</h4>
+<p>Pour importer le fichier <code>index.js</code> dans le serveur, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">scp</span> index.js username@adresse_serveur:/chemin_dossier
 </code></pre>
-<p>On peut alors entrer le mot de passe du serveur pour se connecter. Pour déployer le back sur le serveur distant, on doit ensuite installer <strong>Node.js</strong> et <strong>npm</strong> sur le serveur. Pour cela, on peut utiliser la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span>
-</code></pre>
-<p>On peut ensuite <strong>créer un dossier</strong> pour le back avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> back
-</code></pre>
-<p>On peut ensuite <strong>déployer le back</strong> sur le serveur avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> chemin_dossier username@adresse_serveur:/chemin_dossier
-</code></pre>
+<p>On peut également utiliser un outil tel que <a href="https://filezilla-project.org/">FileZilla</a> pour importer le fichier <code>index.js</code> dans le serveur via l'interface graphique.</p>
+<h4>Installation de Node.js sur le serveur</h4>
 <p>On peut ensuite <strong>se connecter au serveur</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> username@adresse_serveur
 </code></pre>
-<p>On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut <strong>se déplacer dans le dossier</strong> du back avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> back
+<p>On peut alors entrer le mot de passe du serveur. Une fois connecté, on peut ensuite <strong>installer Node.js</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs
 </code></pre>
-<p>On peut ensuite <strong>installer les dépendances</strong> avec la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
+<p>On peut ensuite <strong>installer npm</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">npm</span>
 </code></pre>
+<p>Pour vérifier que Node.js et npm sont bien installés, on peut utiliser les commandes suivantes :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> <span class="token parameter variable">-v</span>
+<span class="token function">npm</span> <span class="token parameter variable">-v</span>
+</code></pre>
+<p>On pourra ensuite installer les <strong>dépendances</strong> du projet avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express
+</code></pre>
+<h4>Lancement du serveur</h4>
 <p>On peut ensuite <strong>lancer le serveur</strong> avec la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
 </code></pre>
@@ -275,32 +297,161 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://adresse_serveur:3000
 </code></pre>
 <p>On peut alors voir le message <strong>Hello World!</strong>.</p>
-<h2>Configurer le serveur pour le déploiement automatique</h2>
-<p>Pour déployer automatiquement un site sur un serveur OVH via SSH à chaque push sur Github, vous pouvez utiliser l'outil git en combinaison avec un service de Webhooks.</p>
-<p>Ensuite, vous devez ajouter un Webhook dans les paramètres de votre dépôt Github pour qu'il envoie une notification à votre serveur OVH à chaque push. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section &quot;Webhooks&quot;. Ajoutez un nouveau Webhook en indiquant l'URL de votre serveur OVH et en sélectionnant l'option &quot;Just the push event&quot;.</p>
-<p>Sur votre serveur OVH, vous devez maintenant écrire un script qui sera exécuté à chaque fois que le Webhook sera appelé. Ce script devra se connecter en SSH sur votre serveur, puis télécharger et mettre à jour le code de votre site depuis le dépôt Github. Vous pouvez utiliser la commande git clone pour télécharger le code depuis le dépôt, et la commande git pull pour mettre à jour le code si vous avez déjà cloné le dépôt précédemment.</p>
-<p>Voici un exemple de script qui accomplit ces tâches :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-
-<span class="token comment"># Se connecter en SSH sur le serveur</span>
-<span class="token function">ssh</span> username@server.com
-
-<span class="token comment"># Aller dans le répertoire où se trouve le code de votre site</span>
-<span class="token builtin class-name">cd</span> /path/to/site/
-
-<span class="token comment"># Si le dépôt n'a pas encore été cloné</span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-d</span> <span class="token string">"repo"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-  <span class="token comment"># Cloner le dépôt</span>
-  <span class="token function">git</span> clone https://github.com/username/repo.git
-<span class="token keyword">else</span>
-  <span class="token comment"># Sinon, mettre à jour le dépôt</span>
-  <span class="token function">git</span> pull
-<span class="token keyword">fi</span>
+<p>Pour <strong>arrêter le serveur</strong>, on peut effectuer la combinaison de touches <code>Ctrl + C</code>.</p>
+<h4>Laisser le serveur tourner en arrière-plan</h4>
+<p>Après avoir lancé le serveur, on remarque que celui-ci s'arrête dès que l'on quitte la connexion SSH. Il est donc nécessaire de <strong>laisser le serveur tourner en arrière-plan</strong>.</p>
+<p>Pour <strong>laisser le serveur tourner en arrière-plan</strong>, on peut utiliser un outil tel que <a href="https://doc.ubuntu-fr.org/screen">screen</a> qui permet de lancer des programmes en arrière-plan. On peut créer un screen avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> nom_du_screen
 </code></pre>
-<p>Une fois que votre script est prêt, vous devez le placer sur votre serveur OVH et lui donner les permissions d'exécution. Vous pouvez utiliser la commande chmod pour cela, par exemple : <code>chmod +x deploy.sh</code></p>
-<p>Enfin, vous devez configurer le Webhook dans les paramètres de votre dépôt Github pour qu'il exécute ce script à chaque fois qu'il est appelé. Pour cela, allez dans les paramètres de votre dépôt, puis dans la section &quot;Webhooks&quot; et éditez le Webhook que vous avez créé précédemment. Dans la section &quot;Payload URL&quot;, indiquez l'URL du script sur votre serveur OVH, suivie du nom du script, par exemple : <code>http://server.com/deploy.sh</code>. Dans la section &quot;Content type&quot;, sélectionnez l'option &quot;application/json&quot;. Enfin, dans la section &quot;Secret&quot;, entrez un mot de passe secret que vous avez choisi pour protéger l'accès à votre script.</p>
-<p>Enregistrez les modifications et votre site devrait être automatiquement déployé sur votre serveur OVH à chaque fois que vous poussez du code sur votre dépôt Github.</p>
-<p>Attention : assurez-vous de bien protéger l'accès à votre script en utilisant un mot de passe secret et en autorisant uniquement les connexions SSH depuis votre ordinateur. Sinon, des personnes malveillantes pourraient modifier ou supprimer le code de votre site sans votre consentement.</p>
+<p>On peut alors relancer le serveur avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
+</code></pre>
+<p>Enfin, on pourra <strong>quitter le screen</strong> avec le raccourci <code>Ctrl + A + D</code>.</p>
+<p>Le serveur continuera alors de tourner en arrière-plan.</p>
+<p>Pour <strong>revenir sur le screen</strong> et arrêter le serveur, on utilisera la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-r</span> nom_du_screen
+</code></pre>
+<p>On pourra enfin <strong>arrêter le serveur</strong> avec <code>Ctrl + C</code>.</p>
+<h3>Création de l'API</h3>
+<p>Pour créer l'API nécessaire au projet, j'ai utilisé Node.js et Express accompagnés d'une base de données PostgreSQL.</p>
+<h4>Création de la base de données</h4>
+<p>Pour <strong>créer la base de données</strong>, on peut utiliser la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">createdb nom_base_de_donnees
+</code></pre>
+<p>On pourra alors s'en servir dans notre fichier <code>index.js</code>. Nous devons ensuite installer les diverses <strong>dépendances</strong> nécessaires à la base de données et à l'API avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express sequelize pg body-parser
+</code></pre>
+<h4>Configuration de la connexion à la base de données</h4>
+<p>On commence par importer les dépendances nécessaires à la connexion à la base de données :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Sequelize <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'sequelize'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bodyParser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'body-parser'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On peut ensuite <strong>créer la connexion</strong> à la base de données :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span><span class="token string">"postgres://&lt;username>:&lt;password>@&lt;host>:&lt;port>/&lt;database>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On peut alors <strong>tester la connexion</strong> à la base de données avec le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">sequelize<span class="token punctuation">.</span><span class="token function">authenticate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connection has been established successfully.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Unable to connect to the database:'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4>Création du modèle</h4>
+<p>On peut ensuite <strong>créer le modèle</strong> de la base de données avec le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> User <span class="token operator">=</span> sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> Sequelize<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">primaryKey</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">autoIncrement</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> Sequelize<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">password</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> Sequelize<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On peut ensuite <strong>créer la table</strong> dans la base de données avec le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">User<span class="token punctuation">.</span><span class="token function">sync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Table created'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4>Création des routes</h4>
+<p>On peut ensuite <strong>créer les routes</strong> de l'API avec le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    User<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/users/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    User<span class="token punctuation">.</span><span class="token function">findById</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    User<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'/users/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    User<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/users/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    User<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On peut ensuite <strong>lancer le serveur</strong> avec la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> index.js
+</code></pre>
+<p>On peut alors se rendre sur le navigateur et entrer l'adresse suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">http://adresse_serveur:3000/users
+</code></pre>
+<p>On peut alors voir la liste des utilisateurs.</p>
+<h3>Connexion de l'API au projet</h3>
+<p>On peut ensuite <strong>modifier le projet</strong> pour qu'il puisse se connecter à l'API. Pour cela, on va utiliser la méthode <code>fetch()</code> de JavaScript qui permet de faire des requêtes HTTP.</p>
+<p>On peut commencer par <strong>créer un fichier</strong> <code>api.js</code> qui contiendra les fonctions permettant de se connecter à l'API. On peut ensuite <strong>créer les fonctions</strong> permettant de se connecter à l'API :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://adresse_serveur:3000/users'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://adresse_serveur:3000/users/'</span> <span class="token operator">+</span> id<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createUser</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://adresse_serveur:3000/users'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://adresse_serveur:3000/users/'</span> <span class="token operator">+</span> user<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'PUT'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">deleteUser</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://adresse_serveur:3000/users/'</span> <span class="token operator">+</span> id<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'DELETE'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On peut ensuite <strong>modifier le fichier</strong> <code>index.js</code> pour qu'il puisse se connecter à l'API. On peut commencer par <strong>importer les fonctions</strong> permettant de se connecter à l'API :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> getUsers<span class="token punctuation">,</span> getUser<span class="token punctuation">,</span> createUser<span class="token punctuation">,</span> updateUser<span class="token punctuation">,</span> deleteUser <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./api.js'</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On pourra alors utiliser les fonctions de l'API dans le fichier <code>index.js</code>. On peut par exemple <strong>afficher la liste des utilisateurs</strong> avec le code suivant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">getUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p><a href="../">&lt;-- Retour</a></p>
 
 
