@@ -10,7 +10,7 @@ authors:
 L'objectif de ce POK est d'approfondir les bases de création acquise lors du temps 1. L'idée est de suivre le tutoriel créé par Nicolas pour son MON : "Créer un site web statique avec 11ty". Pour ainsi découvrir un nouveau moyen de créer un site internet.
 Dans un deuxième temps, j'ai réalisé une comparaison entre la création d'un site avec eleventy et WordPress (réalisée dans mon MON2.2). 
 
-
+d
 ## Eleventy 
 
 ### Avantages
