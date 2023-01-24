@@ -81,7 +81,12 @@ Un tutoriel pour devenir opérationnel vite en Vagrant est disponible [ici](http
 
 #### Tutoriel Grafikart
 
+J'ai suivi le tutoriel de Grafikart jusqu'à un certain point, et j'ai dû également consulter la documentation Elastic pour certains éléments car le tutoriel date de 5 ans. Mais je n'ai pas pu lancer Elasticsearch sur ma machine virtuelle dans les temps.
 
+Mes tests se sont donc pour l'instant cantonner au cloud. Je terminerai ce tutoriel après la présentation.
 
 ## Conclusion
 
+Pour conclure, la stack Elastic est une stack très performante en terme de rapidité de recherche, bien que gourmande en ressources. Elle permet en cloud du moins de suivre n'importe quelle métriques que l'on ingère, et de les visualiser avec une très grande facilité, ce qui facilite pour les logs la vision de problèmes (une augmentation du nombre de requêtes, que ce soit en terme de performances ou de sécurité, des erreurs fréquentes, etc)
+
+Dans tous les cas, le monitoring prendra de plus en plus de place dans le cycle de vie d'une application.
