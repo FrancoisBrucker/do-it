@@ -5,7 +5,6 @@ title: "Le site d'Ossama"
 authors:
   - Ossama Abdane
 
-tags: ['pok']
 ---
 
 <!-- début résumé -->
