@@ -114,3 +114,36 @@ Une fois que l'on a créé son site il ne faut pas oublier le réferencement. Je
 Il faut également vérifier que toutes les pages du site fonctionnent bien (affichage, liens, formulaires,...), et sécuriser son site pour éviter de se faire hacker.
 
 ## Bubble
+
+Bubble est un logiciel No code permettant de développer des sites ou des applications web. 
+Pour y accéder il faut se rendre sur la [page](https://bubble.io) et se créer un compte.
+Puis on peut créer une nouvelle application. Pour cela, il suffit de choisir une url et c'est parti.
+Personnellement j'ai suivi la [formation ottho](https://www.ottho.co/sinitier-au-no-code?formation-categorie=e-learning-i#programme)
+
+### L'interface
+
+L'interface de Bubble est très intuitive, un panneau à gauche contient 7 menus. 
+Nous allons tout d'abord nous concentrer sur le menu design qui contient les différents éléments qu'il est possible d'ajouter sur la page en cliquant ou en drag-and-drop.
+Il existe 3 catégories d'éléments : 
+- Visual element : affichage / appel de la donnée (texte, image, bouton,...)
+- Containers : permet de grouper des éléments
+- Input forms : permet d'enregistrer de la donnée
+
+Une fois l'élément ajouté une fenêtre d'options s'ouvre dans laquelle il est possible de modifier l'apparence, la disposition ou les dépendances.
+
+Dans cette fenêtre d'options il est possible de modifier le style des textes. On peut choisir des styles déjà existants (h1, h2, ...) ou bien créer son propre style.
+
+Avec *Arrange* en haut à droite ou avec un clic droit on peut accéder à des outils permettant d'organiser la mise en page (centrer, aligner, mettre au premier plan,...).
+
+### Les workflows
+
+Un *workflow* est un ensemble d'actions qui démarre à partir d'un événément déclenché sur la page. 
+Il y a 2 types d'événements :
+- Passif : quand la page se charge, ...
+- Actif : quand l'utilisateur clique sur un bouton, ...
+Une fois que l'événement à déclenché le workflow les actions s'enchainent les unes à la suite des autres de manière linéaire.
+Il est également possible d'ajouter des conditions qui empêchent certaines actions de s'effectuer tant qu'elles ne sont pas remplies.
+
+### Base de données
+
+Il est possible de créer des tables comme on le souhaite ainsi que d'y ajouter ou de supprimer les champs que l'on souhaite. Pour chaque champ il faut entrer quel type de donnée est attendu.
