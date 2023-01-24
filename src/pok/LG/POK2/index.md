@@ -209,7 +209,13 @@ Après plusieurs tests couleur voici le resultat final. J’ai aussi choisi de m
 
 J’ai enregistré une démo vidéo de la maquette afin de l’envoyer à mes testeurs qui n’habitent pas sur Marseille.
 
-<video src="MVP.mov">
+<video width="320" height="240" controls>
+  <source src="MVP.mov" type="video/mp4">
+</video>
+
+Voici le lien de la maquette figma si vou voulez tester par vous même:
+ https://www.figma.com/file/gqB0yBRWeaXXhHdYDr8il8/BabyCam%C3%A9l%C3%A9on_pourtest?node-id=15%3A2&t=bLHL4qt4jXd6yuWf-1
+
 
 **Retours:**
 J' ai obtenu les retours de 4 familles pour ce test. J'ai pu réaliser un test en vrai avec un couple de parents marseillais. J'ai reçu les autres retours par mails ou téléphone.
@@ -261,6 +267,8 @@ J'ai intégré la plupart de ces retours sur ma maquette:
 <img src= "comptev2.png">
 <img src= "panierv2.png">
 
+Voici le lien de la maquette figma si vou voulez tester par vous même:
+https://www.figma.com/file/khPdhK9WQWeb1AcI7C2Iwx/BabyCam%C3%A9l%C3%A9onV2_pourtest?node-id=15%3A2&t=bLHL4qt4jXd6yuWf-1
 
 Prochaines améliorations: 
 - Ajouter la marque sur la présentation de chaque produit
