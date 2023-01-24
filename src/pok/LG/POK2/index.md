@@ -226,36 +226,46 @@ Créer une page 'vitrine' qui référencie les createurs et marques de vêtement
 Mettre plus d'images
 
 - **Ecran cérémonie :** 
- Filtres: Ajouter un filtre "mixte", un flitre par marque de vêtement, u par disponibilités.
+ Filtres: Ajouter un filtre "mixte", un flitre par marque de vêtement, ou par disponibilités.
  Faire ressortir la marque des produits
  Attention au nom des vêtements, certains peuvent être discriminants
 
-- **Zoom sur un produit :**
+- **Zoom sur un produit :** 
 Ajouter une section commentaires/avis sur les articles déjà loués avec possibilités d'ajouter des photos
 Ecrire le nombre de fois que la pièce à été louée
 Ajouter des photos des réparations dans l'historique du vêtement
 
-- **Onglet panier :**
+- **Onglet panier :** 
 Ajouter la date de retour
 Prendre une caution
 Revoir le prix d'envoi/retour
 Ajouter l'impression du bon de renvoi
 
-- **Onglet "mon compte":**
+- **Onglet "mon compte":** 
 Revoir l'ergonomie: mettre sur la même ligne le produit, la livraison et le retour
 
 - **Petites idées en plus :**
 Recevoir l'avis des clients sur des pieces qu'ils souhateraient voir dans le shop ( système de vote )
 Envoyer une alerte par mail pour les retours de vêtements
+Ajouter des petites icones sur les pages produits afin d'afficher s'ils sont vegans, eco-conçus...
 
 
 
+## 7. Maquette finale et conclusion
+
+J'ai intégré la plupart de ces retours sur ma maquette:
+
+<img src= "accueilv2.png">
+<img src= "cerev2.png">
+<img src= "commandev2.png">
+<img src= "comptev2.png">
+<img src= "panierv2.png">
 
 
+Prochaines améliorations: 
+- Ajouter la marque sur la présentation de chaque produit
+- Retravailler les polices
+- Ajouter des photos à la page d'accueil
+- positionner le FAQ
 
 
-
-{% info "Difficultés" %}
-- Les couleurs
-
-{% endinfo %}
