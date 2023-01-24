@@ -18,7 +18,7 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 2. Styliser les différentes pages
 
-3. Trouver une idée de service faisaible par une API back-end
+3. Trouver une idée de service faisable par une API back-end
 
 4. Mettre en place une API back-end grâce à mon MON 2.2
 
@@ -34,7 +34,7 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 - Faire un repérage des différents éléments que je désire implémenter (ex: un carrousel) [x]
 
-- Etablir les connexions entre les différentes pages (vides pour le moment) [x]
+- Établir les connexions entre les différentes pages (vides pour le moment) [x]
 
 - Coder la page d'accueil [~]
 
@@ -44,7 +44,7 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 - Démarrage lent/peu d'aise dans le développement du site au départ
 
-- Maîtrise des différents paramètres de CSS
+- Maîtrise des différents paramètres de CSS difficile
 
 ### Analyse des écarts
 
