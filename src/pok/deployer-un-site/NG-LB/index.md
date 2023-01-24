@@ -77,4 +77,14 @@ Nous étions parti pour réaliser la base de données avec le modules sqlite3, c
 Nous avons mieux organisé les fichiers du site afin de créer des routes claires pour associer le front, le back et la BDD de la meilleure manière possible.
 Nous nous sommes inspiré d'une architecture déjà existante, d'un utlisateur github utilisant sequelize et Express, dont le projet est ici : [Un exemple Github utilisant Sequelize avec Express](https://github.com/FaisonsLePoint/api_rest_express).
 Nous avons également apprécié les explications de Hugo Guillaume, ingénieur diplomé de Centrale Marseille.
-Le site ne fonctionne pas encore à cause d'erreurs sur la base de données lorsque l'on tente d'envoyer des requetes au back depuis le front, mais on peut voir la lumière au bout du tunnel. 
+Le site ne fonctionne pas encore à cause d'erreurs sur la base de données lorsque l'on tente d'envoyer des requêtes au back depuis le front, mais on peut voir la lumière au bout du tunnel. 
+
+### Meteor
+
+J'ai trouvé un [exemple d'utilisation de Meteor](https://blog.jscrambler.com/meteor-framework-hardest-part-coming-app-name-2) pour créer un éditeur de texte collaboratif. Le cas de l'éditeur de texte est beaucoup plus classique que le nôtre mais j'ai décidé de commencer par reproduire cet exemple pour comprendre le fonctionnement du framework.
+
+Cependant, j'ai été confronté à des difficultés lors de l'installation de Meteor. Une version de Node inférieure à 14 est requise alors que la version 16 est installée chez moi. J'ai donc entrepris d'installer nvm (Node version manager) afin de pouvoir changer de version de Node plus facilement. J'ai réussi à l'installer mais je ne suis pas parvenu à changer la version de Node, ce qui m'a bloqué pour l'utilisation de Meteor.
+
+### Express sur ovh
+
+En parallèle, j'avais comme objectif de faire fonctionner la gestion des routes sur ovh avec Express (ce qui fonctionnait déjà en local). J'ai également été bloqué, cette fois par le transfert de fichiers sur ovh. Le désarchivage du fichier `tar` avec la commande `tar -xvf mon-sheet-cest-moi.tar` ne faisait plus apparaître le dossier désarchivé, que ce soit localement ou sur ovh.
