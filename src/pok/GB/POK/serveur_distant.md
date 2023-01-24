@@ -162,3 +162,23 @@ block content
 ```
 Ma page historique ressemble alors à cela : ![Historique sans CSS](../POK/Images/Historique)
 En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : ![Historique à jour](../POK/Images/Data.png)
+
+### Mise à jour de la base de données
+Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction "appenchild" pour faire apparaitre la liste de coups et que mes variables "pierre", "feuille" et "ciseaux" ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier "coup.js", le terminal me renvoi que la variable "pierre" n'est pas déclarée : 
+```bash
+pierre.addEventListener('click', function(){
+  mongoose.model("Coup", CoupSchema).findOneAndUpdate({name:'Pierre'}, {date}, function(err, utilisateur)
+  {
+    if (err) return handleError(err);
+  })
+});
+```
+J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction "appenchild()" pour faire apparaitre sa variable. 
+
+### Mise du site sur l'ovh 
+J'ai suivi en grande partie le [POK de Tunçai](/src/pok/un-site-chez-moi/TBi/ServeurDistant.md) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
+Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier "node" :  
+```bash 
+git clone https://github.com/gabrielbarbe00/POK.git
+```
+Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné, dans mon cas le port 10408. C'est à cette étape que cela coine. A voir. 
