@@ -14,7 +14,28 @@ tags :
 Formation à WordPress et Bubble.
 <!-- fin résumé -->
 
-## Pourquoi le no code ?
+{% prerequis %} 
+
+Pas de prérequis même si c'est plus facile à comprendre si on est déjà familier avec le dev web.
+
+{% endprerequis %}
+
+## Qu'est-ce que le No code?
+
+Le No code est un mode de développement de logiciels sans ligne de codes (ou presque) à l'aide d'outils de modélisation et de configuration visuels (templates, drag-and-drop, extensions,...). Il permet de rendre accessible le dev web à des personnes n'ayant pas ou peu de connaissances en langages informatiques.
+
+## Pourquoi le No code ?
+
+Le No code est de plus en plus utilisé et a de nombreux avantages :
+- Facile à prendre en main : les outils No code sont assez facile à prendre en main même sans connaissance en dev et souvent très intuitive.
+- Réduction des coûts : grâce aux outils No code les coûts de développement sont diminués (requièrent moins d'expertise, pas besoin d'une équipe de dev).
+- Meilleur agilité : très facile de mettre en place une application afin de la tester, peut-être très utile pour les MVP.
+- Gain de temps : plus rapide que le développement traditionnel.
+- Facilement modifiable : la où il faut réussir à comprendre le code afin de le modifier sans tout casser avec un outil No code il est très simple de modifier son site ou son application.
+
+Cependant les outils No code restent plus rigides que le dev traditionnel (personnalisation restreinte) et leur utilisation entraîne un manque de contrôle, on devient dépendant technologiquement de la plateforme No code utilisée.
+
+Dans la suite je vais vous présenter deux plateformes No code : WordPress et Bubble.
 
 ## WordPress
 
