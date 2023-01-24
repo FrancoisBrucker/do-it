@@ -16,11 +16,12 @@ Les MON de Thomas Pont
 
 ## Temps 1
 
- - [React](./mons/react)
- - [Google Apps Script](./mons/gas)
+- [React](./mons/react)
+- [Google Apps Script](./mons/gas)
 
 ## Temps 2
 
- - [Bash](./mons/bash)
+- [Bash](./mons/bash)
+- [Sass](./mons/sass)
 
 ## Temps 3

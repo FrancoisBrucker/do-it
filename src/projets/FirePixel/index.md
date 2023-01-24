@@ -15,8 +15,6 @@ tags: ['projet']
 La pixel war centralienne organisé autour d'un écran comme interface d'entrée .
 <!-- fin résumé -->
 
-# [FirePixel]()
-
 Le projet a pour but de recréer la [pixel war](https://www.reddit.com/r/place/?cx=1461&cy=200&px=199&ts=1649112460185) de reddit.
 
 ## Le Principe
