@@ -118,7 +118,7 @@ Il faut également vérifier que toutes les pages du site fonctionnent bien (aff
 Bubble est un logiciel No code permettant de développer des sites ou des applications web. 
 Pour y accéder il faut se rendre sur la [page](https://bubble.io) et se créer un compte.
 Puis on peut créer une nouvelle application. Pour cela, il suffit de choisir une url et c'est parti.
-Personnellement j'ai suivi la [formation ottho](https://www.ottho.co/sinitier-au-no-code?formation-categorie=e-learning-i#programme)
+Personnellement j'ai suivi la [formation ottho](https://www.ottho.co/sinitier-au-no-code?formation-categorie=e-learning-i#programme) qui est très complète. J'ai fait un petit résumé simplifié de ce qu'il est possible de faire avec Bubble mais je vous invite à suivre la formation si vous voulez être complètement opérationnel sur Bubble. 
 
 ### L'interface
 
@@ -147,3 +147,8 @@ Il est également possible d'ajouter des conditions qui empêchent certaines act
 ### Base de données
 
 Il est possible de créer des tables comme on le souhaite ainsi que d'y ajouter ou de supprimer les champs que l'on souhaite. Pour chaque champ il faut entrer quel type de donnée est attendu.
+
+Il est également possible de créer des relations entre différentes tables. Pour ce faire, il suffit d'ajouter dans le champ de la table 1 la table 2. Cette relation a un sens, on peut accéder aux informations de la table 2 dans la table 1 mais pas aux informations de la table 1 dans la table 2.
+
+Lorsque l'on veut afficher des données contenues dans une table il est possible de trier ou bien de filtrer les données.
+
