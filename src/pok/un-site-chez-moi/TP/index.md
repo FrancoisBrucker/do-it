@@ -17,6 +17,20 @@ Mon  pok qui crée un site web chez moi
 
 - [POK2](./poks/pok2)
 
+## Point 2
+
+Lors de cette période j'ai rapidement amélioré le visuel de ma page de connexion avant de me concentrer sur le déploiement de mon site sur l'OVH.
+
+Mon site est constitué d'un serveur en Java et d'un site statique en HTML constitué d'une page de connexion et d'une page d'inscription. La base de données est une base Postgres. Lors du sprint précédent, j'avais réussi à faire fonctionner mon site en local.
+
+Pour déployer mon site sur l'OVH il fallait dès lors placer mon back sur l'OVH (le front y avait été placé au sprint précédent). Pour cela, il y a déjà une version de Tomcat déployée et une base de donnée disponible.
+J'ai donc modifié le port d'entrée de mon back pour qu'il corresponde à celui qui m'avait été attribué par l'OVH et j'ai modifié ma base de donnée pour prendre celle disponible sur ma session de l'OVH. Puis, j'ai compilé mes fichier en un fichier War (Web application Archive) que j'ai placé dans le dossier Webapps. Normalement, en lançant Tomcat, mon serveur aurait du fonctionner. Cependant, en faisant une requête, une erreur se produisait indiquant qu'il y avait un problème au niveau du serveur.
+Après avoir passé beaucoup de temps à chercher à régler ce problème et être aller voir M. Brucker, j'ai d'abord chercher à lancer une version de Tomcat sur mon ordinateur.
+
+J'ai ainsi télécharger Tomcat et replacer mon fichier War de mon projet au bon endroit. En lançant Tomcat et en me connectant à la session administrateur de mon Tomcat, on peut voir que le serveur de mon projet se lance bien. Cependant, je n'ai pas encore compris pourquoi cela ne fonctionnait pas sur l'OVH.
+
+Il y avait dans un premier temps un problème de routage dans les fichier mais il semble persister un problème au niveau de la machine virtuelle Java.
+
 ## Objectif de ce POK
 
 Pour le temps 2, je vais reprendre la suite de mon POK. L'objectif sera de le rendre fonctionnel ce qui a été réalisé en reliant le front et le back et en améliorant le visuel. Puis, le but sera de le déployer sur un serveur distant.
@@ -49,7 +63,6 @@ Le front actuel et le back actuel reliés entre eux sont visibles aux adresses s
 
 - déploiement du back sur le serveur,
 - ajouter du la sécurité au site (hachage des mots de passe, etc)
-
 
 - [POK1](./poks/pok1)
 
