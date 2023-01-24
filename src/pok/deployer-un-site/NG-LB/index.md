@@ -21,7 +21,7 @@ Mon sheet c'est moi, suite du développement du site et déploiement sur un serv
 
 - Ecrire le back du site en node. Cette étape nécessitera une documentation approfondie en raison de nos connaissances précaires en la matière
 
-- Faire une base du données en SQLite
+- Faire une base de données en SQLite
 
 - Faire le lien entre le back, le site et la base de données
 
@@ -58,3 +58,11 @@ Nous avons commencé à utiliser Express : gestion des routes et accès au site 
 ### Base de données
 
 En ce qui concerne la base de données, nous avons un tableau pour les utilisateurs et un tableau pour les partitions enregistrées. Chaque partition appartient à un utilisateur (que l'on retrouve avec son ID) et possède un élément JSON qui correspond aux notes de la partition. Il reste à pouvoir alimenter la base de données en utilisant le back-end.
+
+## Tâches du deuxième sprint
+
+- Faire fonctionner Express sur ovh
+
+- Faire fonctionner la base de données
+
+- Gérer l'édition de partition en temps réel avec Meteor
