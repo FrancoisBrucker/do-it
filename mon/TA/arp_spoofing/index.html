@@ -92,9 +92,9 @@
 <li>ARP spoofing : attaque sur un réseau wifi</li>
 <li>Niveau : intermédiaire</li>
 </ul>
-<p>Rappel : Il faut avoir l'accord de la personne cible pour réaliser un ARP cache poisoning sur ses appareils, et également l'accord de gestionnaire du réseau. Il faut s'en tenir à des pratiques éthiques et de ne pas utiliser ses connaissances pour causer des dommages ou enfreindre la loi.</p>
+<p>Rappel : Il faut avoir l'accord de la personne cible et de l'administrateur réseau pour réaliser un ARP spoofing. Il faut s'en tenir à des pratiques éthiques et de ne pas utiliser ses connaissances pour causer des dommages ou enfreindre la loi.</p>
 <h2>ARP spoofing : un type d'attaque MITM</h2>
-<p>L'ARP spoofing (ARP poisoning, ARP cache poisoning) est une attaque de type <em>Man In The Middle</em> (MITM). Sur un réseau local (LAN), le but de ce type d'attaque est de se placer entre la cible et le router. Ainsi, toutes les requêtes envoyés par la cible pour accéder à internet (qui transite normalement par le router), passeront à la machine de l'attaquant. Souvent, l'attaquant redirige ensuite le trafic vers le router qui envoie les requête de l'utilisateur sur internet. L'attaquant agit comme un intermédiaire, et peut alors espionner tout le trafic réseau de la machine cible.</p>
+<p>L'ARP spoofing (ARP poisoning, ARP cache poisoning) est une attaque de type <em>Man In The Middle</em> (MITM). Sur un réseau local (LAN), le but de ce type d'attaque est de se placer entre la cible et le router. Ainsi, toutes les requêtes envoyées par la cible pour accéder à internet (qui transite normalement par le router), passeront à la machine de l'attaquant. Souvent, l'attaquant redirige ensuite le trafic vers le router qui envoie les requête de l'utilisateur sur internet. L'attaquant agit comme un intermédiaire, et peut alors espionner tout le trafic réseau de la machine cible.</p>
 <p><img src="man-in-the-middle-attack.jpg" alt="man in the middle"></p>
 <p>En particulier, l'ARP cache poisoning consiste à utiliser une faille du protocole ARP afin se faire passer pour le router auprès de la machine cible.</p>
 <h2>ARP spoofing : protocole ARP</h2>
@@ -104,7 +104,7 @@
 <p>De plus, L'utilisation des adresses MAC permet aux machines de communiquer directement entre elles sur le réseau local sans avoir à passer par un serveur de résolution d'adresses ou un routeur pour déterminer l'adresse physique de la machine destinataire. Cela permet de réduire la charge sur les routeurs et les serveurs, et d'éviter de surcharger le réseau.</p>
 <h3>Étapes de communication</h3>
 <p>Lorsque vous envoyez un paquet à une machine, il faut d'abord résoudre son adresse MAC.</p>
-<p>Pour résoudre une adresse MAC d'un autre appareil sur le même réseau local, une machine envoie des requêtes ARP en broadcast (à toutes les machines du réseau) et demande : &quot;A qui correspond l'adresse IP 192.168.0.13 ?&quot;, et la machine ayant cette adresse répond : &quot;À moi, voici mon adresse MAC : 5E:FF:56:A2:AF:15&quot;.</p>
+<p>Pour résoudre une adresse MAC d'un autre appareil sur le même réseau local, une machine envoie des requêtes ARP en broadcast (à toutes les machines du réseau) et demande : &quot;A qui correspond l'adresse IP 192.168.0.13 ? Dites le à 192.168.0.1&quot;, et la machine ayant cette adresse répond : &quot;À moi, 192.168.0.13, voici mon adresse MAC : 5E:FF:56:A2:AF:15&quot;.</p>
 <p><img src="wireshark_arp.png" alt="Wireshark Capture of ARP request/ reply"></p>
 <p>Ensuite, son adresse mac est enregistré dans votre table ARP, contenant toutes les adresses IP et adresses MAC connues. Par exemple :</p>
 <table>
@@ -143,6 +143,7 @@ arp <span class="token parameter variable">-a</span>
 <p><img src="schema_arp_spoofing.png" alt="ARP spoofing"><br>
 Photo par <a href="https://levelup.gitconnected.com/man-in-the-middle-attack-part-1-arp-spoofing-6f5b174dec59">Dharmil Chhadva</a>.</p>
 <h3>Implémentation</h3>
+<p><strong>Note</strong> : macOS possède une fonctionnalité intégrée appelée &quot;ARP cache validation&quot; qui vise à protéger contre les attaques d'ARP spoofing en vérifiant la validité des entrées dans la table ARP. Cette attaque n'a pas fonctionné sur mes appareils macOS / iOS. Cependant, elle a fonctionné sur des windows / Linux.</p>
 <p>On va utiliser Python et la bibliothèque <a href="https://scapy.net/">scapy</a> qui permet de manipuler les paquets.</p>
 <p>On va d'abord créer une fonction qui renvoie l'adresse MAC de l'IP demandé. Cela se fait en envoyant des paquets ARP en broadcast (ff:ff:ff:ff:ff:ff).</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
@@ -348,18 +349,31 @@ scapy<span class="token punctuation">.</span>conf<span class="token punctuation"
     <span class="token comment">#kill process on a mac</span>
     os<span class="token punctuation">.</span>kill<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getpid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> signal<span class="token punctuation">.</span>SIGTERM<span class="token punctuation">)</span>
 </code></pre>
-<p>Note : Désactivez votre VPN, certains bloquent la retransmission de paquets.</p>
+<p><strong>Note</strong> : Désactivez votre VPN, certains bloquent la retransmission de paquets.</p>
 <p>L'attaque est maintenant réussi : en plus d'avoir modifier le cache ARP de la victime, vous transferez tous ses paquets vers leur destinataire, et renvoyer la réponse. Vous pouvez observer les connexions dans Wireshark. La cible ne se rendra compte de rien :  tous ses paquets sont transférés normalement de son point de vue.</p>
 <p>Bien sûr, si la cible transfère ses paquets en utilisant TLS (ex: https), les paquets seront chiffrés. Mais vous pourrez tout de même observer à quel ressource la cible accède, ce qui est un probème sérieux de confidentialité. Et si le protocole n'est pas sécurisé, vous pourrez lire tous les messages en clair...</p>
 <p>Par exemple, pour des paquets transmis avec FTP :</p>
 <p><img src="wireshark_transmited.png" alt="wireshark_FTP"></p>
-<p>Pour se protéger :</p>
+<p><strong>Ps</strong> : avec une machine virtuelle, vos paquets auront de toute façon été capté par wireshark, car ils passent par la carte réseau de votre machine hôte. Cette démonstration sur machine virtuelle est un peu artificielle mais permet de bien comprendre le processus. Elle serait tout à fait similaire sur un appareil réel.</p>
+<h2>Avec Ettercap</h2>
+<p>Vous avez un tuto sur Ettercap et Wireshark assez facile <a href="https://www.youtube.com/watch?v=-rSqbgI7oZM&amp;ab_channel=NetworkChuck">ici</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Ettercap_(software)">Ettercap</a> est un logiciel de sécurité réseau qui permet d'intercepter le trafic réseau. Il permet également de faire des attaques de type arp spoofing, sans avoir à implémenter quoi que ce soit. Avec la commande suivante :</p>
+<p><code>sudo ettercap -T -S -i en0 -M arp:remote /&lt;gateway-ip&gt;// /&lt;target-ip&gt;//</code></p>
+<p>-T : text<br>
+-S : sans SSL<br>
+-i : précisez votre interface réseau<br>
+-M : mode</p>
+<p>Tout le trafic est intercepté et redirigé ; vous pouvez observer tous les paquets simplement dans wireshark (fiters : ip.addr = &lt;<em>target-ip</em>&gt; ; http ; TLS... amusez-vous !).</p>
+<h2>Pour se protéger</h2>
+<p>Vous êtes très vulnérable sur un réseau wifi public. Quelques recommandations :</p>
 <ul>
 <li>Utilisez un VPN, vos paquets seront chiffrés.</li>
-<li>Ne partager pas votre code wifi à n'importe qui, et sécurisez votre réseau wifi.</li>
-<li>Il existe des IDS des routers bloquant les paquets ARP douteux.</li>
+<li>Ne partagez pas votre code wifi à n'importe qui, et sécurisez votre réseau wifi.</li>
+<li>Certains anti-virus / logiciels de sécurité bloquent les paquets ARP douteux.</li>
+<li>Il existe des IDS bloquant les paquets ARP douteux.</li>
+<li>...</li>
 </ul>
-<p>Ne pratiquez pas sans l'accord de la cible et de l'administrateur réseau !</p>
+<p><em>Surtout, ne pratiquez pas sans l'accord de la cible et de l'administrateur réseau !</em></p>
 <h2>Sources</h2>
 <ul>
 <li>Dharmil Chhadva : Man In The Middle Attack (MITM) Part 1 — ARP Spoofing : <a href="https://levelup.gitconnected.com/man-in-the-middle-attack-part-1-arp-spoofing-6f5b174dec59">https://levelup.gitconnected.com/man-in-the-middle-attack-part-1-arp-spoofing-6f5b174dec59</a></li>
