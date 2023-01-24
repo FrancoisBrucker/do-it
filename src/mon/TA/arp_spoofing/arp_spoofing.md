@@ -12,11 +12,11 @@ tags: ['ARP', 'ARP spoofing', 'ARP poisoning', 'ARP cache poisoning', 'wifi', 's
 - ARP spoofing : attaque sur un réseau wifi
 - Niveau : intermédiaire
 
-Rappel : Il faut avoir l'accord de la personne cible pour réaliser un ARP cache poisoning sur ses appareils, et également l'accord de gestionnaire du réseau. Il faut s'en tenir à des pratiques éthiques et de ne pas utiliser ses connaissances pour causer des dommages ou enfreindre la loi.
+Rappel : Il faut avoir l'accord de la personne cible et de l'administrateur réseau pour réaliser un ARP spoofing. Il faut s'en tenir à des pratiques éthiques et de ne pas utiliser ses connaissances pour causer des dommages ou enfreindre la loi.
 
 ## ARP spoofing : un type d'attaque MITM
 
-L'ARP spoofing (ARP poisoning, ARP cache poisoning) est une attaque de type *Man In The Middle* (MITM). Sur un réseau local (LAN), le but de ce type d'attaque est de se placer entre la cible et le router. Ainsi, toutes les requêtes envoyés par la cible pour accéder à internet (qui transite normalement par le router), passeront à la machine de l'attaquant. Souvent, l'attaquant redirige ensuite le trafic vers le router qui envoie les requête de l'utilisateur sur internet. L'attaquant agit comme un intermédiaire, et peut alors espionner tout le trafic réseau de la machine cible.
+L'ARP spoofing (ARP poisoning, ARP cache poisoning) est une attaque de type *Man In The Middle* (MITM). Sur un réseau local (LAN), le but de ce type d'attaque est de se placer entre la cible et le router. Ainsi, toutes les requêtes envoyées par la cible pour accéder à internet (qui transite normalement par le router), passeront à la machine de l'attaquant. Souvent, l'attaquant redirige ensuite le trafic vers le router qui envoie les requête de l'utilisateur sur internet. L'attaquant agit comme un intermédiaire, et peut alors espionner tout le trafic réseau de la machine cible.
 
 ![*man in the middle*](man-in-the-middle-attack.jpg)
 
@@ -36,7 +36,7 @@ De plus, L'utilisation des adresses MAC permet aux machines de communiquer direc
 
 Lorsque vous envoyez un paquet à une machine, il faut d'abord résoudre son adresse MAC.
 
-Pour résoudre une adresse MAC d'un autre appareil sur le même réseau local, une machine envoie des requêtes ARP en broadcast (à toutes les machines du réseau) et demande : "A qui correspond l'adresse IP 192.168.0.13 ?", et la machine ayant cette adresse répond : "À moi, voici mon adresse MAC : 5E:FF:56:A2:AF:15".
+Pour résoudre une adresse MAC d'un autre appareil sur le même réseau local, une machine envoie des requêtes ARP en broadcast (à toutes les machines du réseau) et demande : "A qui correspond l'adresse IP 192.168.0.13 ? Dites le à 192.168.0.1", et la machine ayant cette adresse répond : "À moi, 192.168.0.13, voici mon adresse MAC : 5E:FF:56:A2:AF:15".
 
 ![Wireshark Capture of ARP request/ reply](wireshark_arp.png)
 
@@ -73,6 +73,8 @@ On peut donc envoyer un requête ARP à la machine cible. Requête ARP vers la m
 Photo par [Dharmil Chhadva](https://levelup.gitconnected.com/man-in-the-middle-attack-part-1-arp-spoofing-6f5b174dec59).
 
 ### Implémentation
+
+**Note** : macOS possède une fonctionnalité intégrée appelée "ARP cache validation" qui vise à protéger contre les attaques d'ARP spoofing en vérifiant la validité des entrées dans la table ARP. Cette attaque n'a pas fonctionné sur mes appareils macOS / iOS. Cependant, elle a fonctionné sur des windows / Linux.
 
 On va utiliser Python et la bibliothèque [scapy](https://scapy.net/) qui permet de manipuler les paquets.
 
@@ -275,7 +277,7 @@ except KeyboardInterrupt:
     os.kill(os.getpid(), signal.SIGTERM)
 ```
 
-Note : Désactivez votre VPN, certains bloquent la retransmission de paquets.
+**Note** : Désactivez votre VPN, certains bloquent la retransmission de paquets.
 
 L'attaque est maintenant réussi : en plus d'avoir modifier le cache ARP de la victime, vous transferez tous ses paquets vers leur destinataire, et renvoyer la réponse. Vous pouvez observer les connexions dans Wireshark. La cible ne se rendra compte de rien :  tous ses paquets sont transférés normalement de son point de vue.
 
@@ -285,13 +287,35 @@ Par exemple, pour des paquets transmis avec FTP :
 
 ![wireshark_FTP](wireshark_transmited.png)
 
-Pour se protéger :
+**Ps** : avec une machine virtuelle, vos paquets auront de toute façon été capté par wireshark, car ils passent par la carte réseau de votre machine hôte. Cette démonstration sur machine virtuelle est un peu artificielle mais permet de bien comprendre le processus. Elle serait tout à fait similaire sur un appareil réel.
+
+## Avec Ettercap
+
+Vous avez un tuto sur Ettercap et Wireshark assez facile [ici](https://www.youtube.com/watch?v=-rSqbgI7oZM&ab_channel=NetworkChuck).
+
+[Ettercap](https://en.wikipedia.org/wiki/Ettercap_(software)) est un logiciel de sécurité réseau qui permet d'intercepter le trafic réseau. Il permet également de faire des attaques de type arp spoofing, sans avoir à implémenter quoi que ce soit. Avec la commande suivante :
+
+```sudo ettercap -T -S -i en0 -M arp:remote /<gateway-ip>// /<target-ip>//```
+
+-T : text
+-S : sans SSL
+-i : précisez votre interface réseau
+-M : mode
+
+Tout le trafic est intercepté et redirigé ; vous pouvez observer tous les paquets simplement dans wireshark (fiters : ip.addr = <*target-ip*> ; http ; TLS... amusez-vous !).
+
+## Pour se protéger
+
+Vous êtes très vulnérable sur un réseau wifi public. Quelques recommandations : 
 
 - Utilisez un VPN, vos paquets seront chiffrés.
-- Ne partager pas votre code wifi à n'importe qui, et sécurisez votre réseau wifi.
-- Il existe des IDS des routers bloquant les paquets ARP douteux.
+- Ne partagez pas votre code wifi à n'importe qui, et sécurisez votre réseau wifi.
+- Certains anti-virus / logiciels de sécurité bloquent les paquets ARP douteux.
+- Il existe des IDS bloquant les paquets ARP douteux.
+- ...
 
-Ne pratiquez pas sans l'accord de la cible et de l'administrateur réseau !
+
+*Surtout, ne pratiquez pas sans l'accord de la cible et de l'administrateur réseau !*
 
 ## Sources
 
