@@ -9,11 +9,16 @@ tags: ['mon']
 ---
 
 <!-- Début Résumé -->
-L'ensemble de mes MON
-<!-- fin résumé -->
+
+Ensemble des MONs réalisé par Thomas Duroy.
+  
+<!-- Fin résumé -->
 
 ## Planning des MON de Thomas
 
 ### Temps 2
 
-* [Premier MON](./MON_2.1)
+- [Bases Dev Web HTML/CSS/JS](./MON_2.1)
+- [Back-end avec Node.js et Express](./MON_2.2)
+
+### Temps 3

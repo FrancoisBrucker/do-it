@@ -14,7 +14,28 @@ tags :
 Formation à WordPress et Bubble.
 <!-- fin résumé -->
 
-## Pourquoi le no code ?
+{% prerequis %} 
+
+Pas de prérequis même si c'est plus facile à comprendre si on est déjà familier avec le dev web.
+
+{% endprerequis %}
+
+## Qu'est-ce que le No code?
+
+Le No code est un mode de développement de logiciels sans ligne de codes (ou presque) à l'aide d'outils de modélisation et de configuration visuels (templates, drag-and-drop, extensions,...). Il permet de rendre accessible le dev web à des personnes n'ayant pas ou peu de connaissances en langages informatiques.
+
+## Pourquoi le No code ?
+
+Le No code est de plus en plus utilisé et a de nombreux avantages :
+- Facile à prendre en main : les outils No code sont assez facile à prendre en main même sans connaissance en dev et souvent très intuitive.
+- Réduction des coûts : grâce aux outils No code les coûts de développement sont diminués (requièrent moins d'expertise, pas besoin d'une équipe de dev).
+- Meilleur agilité : très facile de mettre en place une application afin de la tester, peut-être très utile pour les MVP.
+- Gain de temps : plus rapide que le développement traditionnel.
+- Facilement modifiable : la où il faut réussir à comprendre le code afin de le modifier sans tout casser avec un outil No code il est très simple de modifier son site ou son application.
+
+Cependant les outils No code restent plus rigides que le dev traditionnel (personnalisation restreinte) et leur utilisation entraîne un manque de contrôle, on devient dépendant technologiquement de la plateforme No code utilisée.
+
+Dans la suite je vais vous présenter deux plateformes No code : WordPress et Bubble.
 
 ## WordPress
 
@@ -76,4 +97,53 @@ Le customizer permet de modifier l'apparence générale du site (logo, favicon, 
 
 Afin d'y accéder, il faut aller dans *Appearance* puis dans *Customize*.
 
+### Themes et page builder
+
+Il est possible d'installer des thèmes Wordpress. Ce sont des templates qui peuvent être gratuits ou non et qui configurent la structure et l'apparence du site. 
+
+Le "page builder" est un composant qui permet de créer des pages plus complexes en "drag-and-drop"
+
+### Extensions
+
+Une extension Wordpress est un composant qui permet d'ajouter une fonctionnalité qui n'existe pas dans WordPress. Il en existe une multitude pour faire à peu prêt tout ce qu'on veut.
+
+### Dernière étape
+
+Une fois que l'on a créé son site il ne faut pas oublier le réferencement. Je ne vais pas le détailler ici.
+
+Il faut également vérifier que toutes les pages du site fonctionnent bien (affichage, liens, formulaires,...), et sécuriser son site pour éviter de se faire hacker.
+
 ## Bubble
+
+Bubble est un logiciel No code permettant de développer des sites ou des applications web. 
+Pour y accéder il faut se rendre sur la [page](https://bubble.io) et se créer un compte.
+Puis on peut créer une nouvelle application. Pour cela, il suffit de choisir une url et c'est parti.
+Personnellement j'ai suivi la [formation ottho](https://www.ottho.co/sinitier-au-no-code?formation-categorie=e-learning-i#programme)
+
+### L'interface
+
+L'interface de Bubble est très intuitive, un panneau à gauche contient 7 menus. 
+Nous allons tout d'abord nous concentrer sur le menu design qui contient les différents éléments qu'il est possible d'ajouter sur la page en cliquant ou en drag-and-drop.
+Il existe 3 catégories d'éléments : 
+- Visual element : affichage / appel de la donnée (texte, image, bouton,...)
+- Containers : permet de grouper des éléments
+- Input forms : permet d'enregistrer de la donnée
+
+Une fois l'élément ajouté une fenêtre d'options s'ouvre dans laquelle il est possible de modifier l'apparence, la disposition ou les dépendances.
+
+Dans cette fenêtre d'options il est possible de modifier le style des textes. On peut choisir des styles déjà existants (h1, h2, ...) ou bien créer son propre style.
+
+Avec *Arrange* en haut à droite ou avec un clic droit on peut accéder à des outils permettant d'organiser la mise en page (centrer, aligner, mettre au premier plan,...).
+
+### Les workflows
+
+Un *workflow* est un ensemble d'actions qui démarre à partir d'un événément déclenché sur la page. 
+Il y a 2 types d'événements :
+- Passif : quand la page se charge, ...
+- Actif : quand l'utilisateur clique sur un bouton, ...
+Une fois que l'événement à déclenché le workflow les actions s'enchainent les unes à la suite des autres de manière linéaire.
+Il est également possible d'ajouter des conditions qui empêchent certaines actions de s'effectuer tant qu'elles ne sont pas remplies.
+
+### Base de données
+
+Il est possible de créer des tables comme on le souhaite ainsi que d'y ajouter ou de supprimer les champs que l'on souhaite. Pour chaque champ il faut entrer quel type de donnée est attendu.

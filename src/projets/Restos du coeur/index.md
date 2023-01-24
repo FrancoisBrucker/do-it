@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Cœur en Action - Restos du coeur"
+title: "Cœur en Action - Restos du cœur"
 authors:
   - Killian ROYANT
   - Louise GACOIN
@@ -14,12 +14,12 @@ tags: ['projet']
 <!-- début résumé -->
 ## Présentation
 
-Le projet est réalisé avec le centre des **Restos du Coeur** de la rue Granoux à Marseille, **4 étudiants** du parcours DO-IT. Laetitia Piet encadre ce projet. Ce projet est en collaboration avec le centre des restos du coeur des 4° et 5° arrondissements de Marseille. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**.
+Le projet est réalisé avec le centre des **Restos du Cœur** de la rue Granoux à Marseille, **4 étudiants** du parcours DO-IT. Laetitia Piet encadre ce projet. Ce projet est en collaboration avec le centre des restos du cœur des 4° et 5° arrondissements de Marseille. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**.
 <!-- fin résumé -->
 
 ## Nos immersions
 
-Afin de **mieux comprendre les bénévoles et leur environnement**, nous avons partcipé à leurs tâches quotidiennes lors de différentes **immersions**.
+Afin de **mieux comprendre les bénévoles et leur environnement**, nous avons participé à leurs tâches quotidiennes lors de différentes **immersions**.
 
 ![legumes](./photos/legumes.jpg)
 
@@ -39,7 +39,7 @@ Nous avons identifié **3 problèmes** et avons proposé des solutions pour chac
 
 Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu.
 
-**Problème identifié :** Il faut remplir manuellement une fiche d’iscription pour chaque famille bénéficiaire. Cela rend le processus long et fastidieux.
+**Problème identifié :** Il faut remplir manuellement une fiche d’inscription pour chaque famille bénéficiaire. Cela rend le processus long et fastidieux.
 
 **Notre solution :** numériser la phase d’inscription en automatisant le remplissage de ce document.
 

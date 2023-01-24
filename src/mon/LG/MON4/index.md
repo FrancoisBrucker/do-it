@@ -60,7 +60,7 @@ Le tutoriel comporte un chapitre sur Python (que vous connaissez déjà bien dep
 Pour la suite, nous allons utiliser VSCode.
 
 {% info "Pour les newbies" %}
-Editeur de texte = Il permet de produire du code en format texte brute, contrairement aux éditeurs comme Word et Textedit qui produisent du texte enrichi (avec des polices et de la mise en forme). De plus ils sont conçus spécialement pour l'édition de code. Ils fournissent donc des fonctionnalités très utiles comme la coloration du code en fonction du sens de celui-ci ou l'ajout automatique d'un guillemet fermant à chaque fois que vous ouvrez un guillemet.
+Editeur de texte = Il permet de produire du code en format texte brut, contrairement aux éditeurs comme Word et Textedit qui produisent du texte enrichi (avec des polices et de la mise en forme). De plus ils sont conçus spécialement pour l'édition de code. Ils fournissent donc des fonctionnalités très utiles comme la coloration du code en fonction du sens de celui-ci ou l'ajout automatique d'un guillemet fermant à chaque fois que vous ouvrez un guillemet.
 {% endinfo %}
 
 ## 3. Créer un projet avec Django
@@ -105,11 +105,11 @@ Nous allons aussi utiliser GitHub, pour héberger notre code en ligne.
 Git est un " système de gestion de versions" utilisé par de nombreux développeurs. Ce logiciel permet de garder une trace des modifications apportées à chaque fichier afin que vous puissiez facilement revenir en arrière ou à une version spécifique»
 {% endinfo %}
 
-Le tutoriel nous fait utiliser une BDD différente sur  PythonAnywhere (pour la version en ligne de notre site.). Les données sur notre site en locale et sur notre site en ligne sont donc complétement différentes. Si on ajoute des posts de blog sur l'un, ils ne seront pas visibles sur l'autre.
+Le tutoriel nous fait utiliser une BDD différente sur  PythonAnywhere (pour la version en ligne de notre site.). Les données sur notre site en local et sur notre site en ligne sont donc complétement différentes. Si on ajoute des posts de blog sur l'un, ils ne seront pas visibles sur l'autre.
 
 ## 5. ORM Django et Query Sets
 
-ORM est l'acronyme anglais de object relational mapping. Un ORM est une technique de programmation qui donne l' illusion de travailler avec une base de données orientée objet . Pour résumer ,on n'utilise plus les requetes SQL , on travaille directement avec vos objets. Cela représente un gain de temps pour e développeur.Si vous êtes un nouveau développeur sur un projet, vous comprenez ce projet en quelques secondes en visualisant ces fichiers.
+ORM est l'acronyme anglais de object relational mapping. Un ORM est une technique de programmation qui donne l' illusion de travailler avec une base de données orientée objet . Pour résumer ,on n'utilise plus les requêtes SQL , on travaille directement avec vos objets. Cela représente un gain de temps pour le développeur.Si vous êtes un nouveau développeur sur un projet, vous comprenez ce projet en quelques secondes en visualisant ces fichiers.
 Pour représenter des données d’une table de base de données en objets Python, Django utilise un système intuitif : une classe de modèle représente une table de base de données, et une instance de cette classe représente un enregistrement particulier dans la table de base de données.
 
 Pour extraire des objets de la base de données on utilise des QuerySet. Un QuerySet représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres.En termes SQL, un QuerySet équivaut à une commande SELECT et un filtre correspond à une clause restrictive telle que WHERE ou LIMIT.
@@ -132,15 +132,15 @@ Après tout ça je pense pouvoir changer le style de ma page ainsi que les champ
 
 {% info "Difficultés" %}
 - Je trouve l'imbrication des 3 composants du code (vue,template et modèle) compliquée à comprendre. Je me suis retrouvée plusieurs fois à copier des lignes de codes sans vraiment comprendre pourquoi
-- Certaines commande entrées dans le terminal durant le tutoriel restent assez mystèrieuses (je ne sais pas trop ce qu’elles font).
-- J'ai eu plusieurs erreur lors de l'exportation vers github et vers PythonAnywhere. J'ai finalement réussi à les résoudre grâce à Internet
-- Durant ce tutoriel on manipule de nombreux fichiers. On s'y perd un peu. J'avou ne pas avoir compris l'utilité  de certains d'entre eux.
+- Certaines commandes entrées dans le terminal durant le tutoriel restent assez mystèrieuses (je ne sais pas trop ce qu’elles font).
+- J'ai eu plusieurs erreurs lors de l'exportation vers github et vers PythonAnywhere. J'ai finalement réussi à les résoudre grâce à Internet
+- Durant ce tutoriel on manipule de nombreux fichiers. On s'y perd un peu. J'avoue ne pas avoir compris l'utilité  de certains d'entre eux.
 
 {% endinfo %}
 
 **Conclusion**
 
-Ce tutotriel est très ludique et facile à suivre.Les concepts de base sont très bien expliqués. On se sent pris par la main et accompagné à chaque étape. Les premiers chapitres sont très bien faits et permettent de remettre les points sur les i à propos d’outils qu on utilise au quotidien, que l’on est censé comprendre, comme le terminal par exemple. J'ai pu aussi revoir certains sujets appris dans mes MON (POO ,HTML ,CSS ). Cependant beaucoup d'étapes manquent de clarifications, notament sur les liens entre les différents fichiers manipulés. Normal, sinon le tutoriel serait plus compliqué ou beaucoup trop long.
+Ce tutoriel est très ludique et facile à suivre .Les concepts de base sont très bien expliqués. On se sent pris par la main et accompagné à chaque étape. Les premiers chapitres sont très bien faits et permettent de remettre les points sur les i à propos d’outils qu'on utilise au quotidien, que l’on est censé comprendre, comme le terminal par exemple. J'ai pu aussi revoir certains sujets appris dans mes MON (POO ,HTML ,CSS ). Cependant beaucoup d'étapes manquent de clarifications, notamment sur les liens entre les différents fichiers manipulés. Normal, sinon le tutoriel serait plus compliqué ou beaucoup trop long.
 
 En conclusion j'ai vraiment apprécié ce MON. Mes précédents (MON , Html, CSS et POO) m’ont permis d’aller plus rapidement sur certaines parties du tutoriel pour me concentrer sur des concepts plus intéressants.
 

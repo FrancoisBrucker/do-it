@@ -25,6 +25,6 @@ Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :
 
 Pour le temps 2 sur le thème Faire, j'ai choisi les MONs suivants :
 
-{% chemin %} [Catalogue des modes actuelles en management](./MON_2_1/) {% endchemin %}
+{% chemin %} [Catalogue des modes actuelles en management](./MON_2/) {% endchemin %}
 
 ## Temps 3
