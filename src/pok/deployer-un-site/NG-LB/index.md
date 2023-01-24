@@ -66,3 +66,15 @@ En ce qui concerne la base de données, nous avons un tableau pour les utilisate
 - Faire fonctionner la base de données
 
 - Gérer l'édition de partition en temps réel avec Meteor
+
+## 2.2 Réalisations du second sprint.
+
+A l'aide de nos MON mais également des cours nous avons pu continuer à travailler et faire avancer le site. Nous avons bien avancé mais ne sommes pas au bout de nos peines, si tant est que nous soyions amenés à poursuivre le projet.
+
+### La base de données
+
+Nous étions parti pour réaliser la base de données avec le modules sqlite3, cependant sur avis de M.Brucker nous avons décidé de partir sur l'utilisation de sequelize, avec MySQL.
+Nous avons mieux organisé les fichiers du site afin de créer des routes claires pour associer le front, le back et la BDD de la meilleure manière possible.
+Nous nous sommes inspiré d'une architecture déjà existante, d'un utlisateur github utilisant sequelize et Express, dont le projet est ici : [Un exemple Github utilisant Sequelize avec Express](https://github.com/FaisonsLePoint/api_rest_express).
+Nous avons également apprécié les explications de Hugo Guillaume, ingénieur diplomé de Centrale Marseille.
+Le site ne fonctionne pas encore à cause d'erreurs sur la base de données lorsque l'on tente d'envoyer des requetes au back depuis le front, mais on peut voir la lumière au bout du tunnel. 
