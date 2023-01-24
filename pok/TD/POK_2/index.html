@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>POK 2: Mon site chez moi</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">POK 2: Mon site chez moi</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Front</li>
+          
+            <li class="before:content-['•'] before:px-1">Back</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thomas Duroy</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <h3>But : Coder un site en local</h3>
+<p>Pour ce projet, je compte illustrer la dualité de mon parcours en développant un site, focalisé sur du front-end, répertoriant mes projets Data/IA et Dev sur leurs propres pages comme une sorte de mini git-hub.</p>
+<h2>Plan du POK</h2>
+<ol>
+<li>
+<p>Établir l'architecture du site</p>
+</li>
+<li>
+<p>Styliser les différentes pages</p>
+</li>
+<li>
+<p>Trouver une idée de service faisaible par une API back-end</p>
+</li>
+<li>
+<p>Mettre en place une API back-end grâce à mon MON 2.2</p>
+</li>
+<li>
+<p>Connecter l'API à une base de données</p>
+</li>
+</ol>
+<h2>Sprint 1</h2>
+<p>Compétences/Objectifs à atteindre :</p>
+<ul>
+<li>
+<p>Établir la structure du site web [x]</p>
+</li>
+<li>
+<p>Revoir/approfondir base de html/js/css avec mon premier MON [~]</p>
+</li>
+<li>
+<p>Faire un repérage des différents éléments que je désire implémenter (ex: un carrousel) [x]</p>
+</li>
+<li>
+<p>Etablir les connexions entre les différentes pages (vides pour le moment) [x]</p>
+</li>
+<li>
+<p>Coder la page d'accueil [~]</p>
+</li>
+<li>
+<p>Entamer le développement des pages &quot;Dev&quot; et &quot;Data&quot; [ ]</p>
+</li>
+</ul>
+<h2>To-Do pour sprint 2</h2>
+<ul>
+<li>
+<p>Finaliser la page d'accueil</p>
+</li>
+<li>
+<p>Coder les pages &quot;Dev&quot; et &quot;Data&quot;</p>
+</li>
+<li>
+<p>Lisser le style css</p>
+</li>
+<li>
+<p>Faire un repérage des améliorations (back-end notamment)</p>
+</li>
+</ul>
+<h2>Sprint 2</h2>
+<p>Compétences/Objectifs à atteindre :</p>
+<ul>
+<li>
+<p>Finaliser l'ensemble du front-end [x]</p>
+</li>
+<li>
+<p>Ajouter une page requête [x]</p>
+</li>
+<li>
+<p>Connecter front et back end [x]</p>
+</li>
+<li>
+<p>API totalement opérationnelle [~]</p>
+</li>
+<li>
+<p>Connexion à une base de donnée [~]</p>
+</li>
+</ul>
+<h2>Analyse des écarts</h2>
+<ul>
+<li>
+<p>Même si mon API RESTful est fonctionnelle, je n'utilise pas beaucoup les méthodes autres que GET et POST pour afficher des propositions de projets.</p>
+</li>
+<li>
+<p>Avec mon MON 2.2, j'ai suivi un tutoriel pour mettre en place un middleware connecté à une base de donnée. Cependant, pour mon POK, la base de donnée n'était pas prioritaire et j'ai manqué d'un peu de temps, d'où son absence pour le moment.</p>
+</li>
+</ul>
+<h2>Ajustements</h2>
+<ul>
+<li>
+<p>Pour palier à un problème CORS rencontré, j'ai dû utiliser le module &quot;CORS&quot;. Cependant, je sais que les autorisations doivent être le plus restrictives et je ne sais pas trop ce que fait le module.</p>
+</li>
+<li>
+<p>Complexifier le service du site pour pouvoir utiliser l'API dans tout sa capacité.</p>
+</li>
+<li>
+<p>Connecter une base de données à mon API pour avoir des propositions de projets persistantes.</p>
+</li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
