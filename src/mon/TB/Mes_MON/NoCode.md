@@ -76,4 +76,20 @@ Le customizer permet de modifier l'apparence générale du site (logo, favicon, 
 
 Afin d'y accéder, il faut aller dans *Appearance* puis dans *Customize*.
 
+### Themes et page builder
+
+Il est possible d'installer des thèmes Wordpress. Ce sont des templates qui peuvent être gratuits ou non et qui configurent la structure et l'apparence du site. 
+
+Le "page builder" est un composant qui permet de créer des pages plus complexes en "drag-and-drop"
+
+### Extensions
+
+Une extension Wordpress est un composant qui permet d'ajouter une fonctionnalité qui n'existe pas dans WordPress. Il en existe une multitude pour faire à peu prêt tout ce qu'on veut.
+
+### Dernière étape
+
+Une fois que l'on a créé son site il ne faut pas oublier le réferencement. Je ne vais pas le détailler ici.
+
+Il faut également vérifier que toutes les pages du site fonctionnent bien (affichage, liens, formulaires,...), et sécuriser son site pour éviter de se faire hacker.
+
 ## Bubble
