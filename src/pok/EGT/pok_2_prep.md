@@ -37,7 +37,7 @@ Nous envisageons deux scénarios pour ce POK :
 - [~] Chercher les différentes méthodes de cartographie d'un SI
 - [X] Définir le périmètre que l'on souhaite donner à ce POK en fonction des réponses précédentes et définir la to-do list de la deuxième partie du POK
 
-## Détail du premier sprint
+## Détails du premier sprint
 Comme notre objectif principal du premier sprint était de faire un tour d'horizon du sujet et de définir le périmètre de notre POK, nous avons surtout contacté des personnes pouvant nous aider dans notre projet. 
 - Nous avons cherché les contacts d'anciens de Centrale sans les contacter pour le moment. 
 - M. Bouilloux, la personne que nous avons contacté de la DSI de la Région Sud, nous a offert son aide sans problème. Eugénie pourra discuter plus précisément du sujet lors du deuxième sprint, lorsqu'elle sera en alternance. 
@@ -51,3 +51,8 @@ Ce que nous nous proposons de faire dans ce POK est de mettre en place une colla
 - [~] Chercher si il y a des anciens de Centrale qui bossent dans une DSI et discuter avec eux des méthodes
 - [X] Restituer proprement les entretiens obtenus avec les DSI
 - [X] Préparer la collaboration avec la DSI de Centrale et mettre en forme le projet pour l'année prochaine
+
+## Détails du second sprint
+Un objectif de ce second sprint était de contacter différentes DSI pour avoir le point de vue de d'autres entreprises. A l'origine, nous voulions contacter des anciens centraliens travaillant dans une DSI mais nous avons préféré pour des questions de facilité faire jouer notre réseau et contacter des gens que nous connaissions. Cela nous a permis de voir qu'avoir une cartographie complète de son SI n'était vraiment pas la norme. La plupart n'en ont qu'une partie. 
+Nous avons pas cherché de nouvelles méthodes de cartographie car nous estimons que ce sera aux élèves qui choisiront ce projet de le faire. Cela serait contre productif de le faire à leur place. 
+Durant la 2ème partie de ce POK, nous nous sommes attelées à rédiger une liste des grandes étapes du projet 3A. En regardant la fiche projet que nous avons rédigé, on se dit que si l'on avait eu ce document au début du temps 2 nous aurions pu commencer à faire une vue de la cartographie, la mission semble donc réussie. 

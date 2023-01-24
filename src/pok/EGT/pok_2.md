@@ -5,7 +5,9 @@ title: "Fiche projet 3A Cartographie d'un SI"
 authors:
   - Eugénie Giraud-Telme
   - Sarah Honoré
-
+tags :
+  - 'SI'
+  - 'cartographie'
 ---
 <!-- début résumé -->
 
@@ -14,14 +16,14 @@ authors:
 
 <!-- fin résumé -->
 
-## Ebauche de fiche projet
+## Fiche projet
 Ce projet de 3A a été construit au cours d'un POK par Eugénie Giraud-Telme et Sarah Honoré. Le projet consiste à réaliser la cartographie du système d'informations de l'Ecole, avec la collaboration ponctuelle de la DSI. Ce projet s'adresse aussi bien à des personnes intéressées par la compréhension de la structure du système d'informations de l'Ecole, qu'à des personnes intéressées par les serveurs ou la cybersécurité. Nous vous conseillons de construire une équipe avec plusieurs profils différents afin de pouvoir approfondir au maximum le sujet. 
 
-Pour comprendre comment s'est déroulé notre POK, cliquez ici : [Préparation POK](./pok_2_prep).
+Pour comprendre comment s'est déroulé notre POK, cliquez ici : [Préparation POK](./../pok_2_prep).
 
-Pour rentrer dans le sujet et comprendre quel sera l'objectif du projet, nous vous recommandons de commencer par lire le guide de la cartographie des systèmes d'informations de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) pour avoir une première idée de comment se construit une cartographie. Il faudra bien évidemment chercher d'autres méthodologies de cartographie, les comparer et choisir celle qui convient le mieux à votre projet. Nous avons pu interviewer des personnes travaillant dans des DSI d'entreprise pour connaître la démarche qu'ils adoptent lorsqu'ils font une cartographie, quels outils ils utilisent, combien de temps et de ressources ils y alouent, à quoi leur sert cette cartographie, quelle est sa nature (applicative, des fluxs, des processus, infrastructure, etc.). Toutes ces informations sont regroupées dans les comptes-rendus de discussions plus bas.
+Pour rentrer dans le sujet et comprendre quel sera l'objectif du projet, nous vous recommandons de commencer par lire le [guide de la cartographie des systèmes d'informations de l'ANSSI](./../guide-cartographie-systeme-information-anssi-pa-046.pdf) (Agence Nationale de la Sécurité des Systèmes d'Information) pour avoir une première idée de comment se construit une cartographie. Il faudra bien évidemment chercher d'autres méthodologies de cartographie, les comparer et choisir celle qui convient le mieux à votre projet. Nous avons pu interviewer des personnes travaillant dans des DSI d'entreprise pour connaître la démarche qu'ils adoptent lorsqu'ils font une cartographie, quels outils ils utilisent, combien de temps et de ressources ils y allouent, à quoi leur sert cette cartographie, quelle est sa nature (applicative, des flux, des processus, infrastructure, etc.). Toutes ces informations sont regroupées dans les comptes-rendus de discussions plus bas.
 
-To do list très large pour le début de ce projet :
+*To do list très large pour le début de ce projet* :
 - [ ] Trouver un organigramme à jour de l'Ecole
 - [ ] Contacter chaque responsable de l'organigramme pour trouver leurs liens avec le SI et les fonctions auxquelles ils répondent. Ces entretiens sont à préparer en amont avec la DSI afin d'être sûr de poser les bonnes questions pour obtenir les informations dont vous avez besoin. Dans l'idéal, il faudrait faire les premiers entretiens avec une personne de la DSI.
 - [ ] Réaliser la cartographie avec la vision métier
@@ -29,7 +31,10 @@ To do list très large pour le début de ce projet :
 
 La suite du projet dépend des profils des membres de l'équipe, en effet, chacun peut avoir un intérêt différent pour chaque aspect d'un cartographie. 
 Pour mener à bien ce projet, vous serez évidemment amenés à travailler avec M. Pagé, le directeur de la DSI de Centrale. Il n'aura pas le temps de vous accompagner hebdomadairement mais saura vous éclairer quand aux besoins de la DSI.
-Il est possible de faire une cartographie avec une vue des processus. Auquel cas nous vous recommandons d'avoir fait précédemment le MON "Diagnostic organisationnel et modélisation des processus" avec l'étude de cas CPF pour être familier avec le concept de processus et une manière de les représenter. 
+Il est possible de faire une cartographie avec une vue des processus. Au quel cas nous vous recommandons d'avoir fait précédemment le MON "Diagnostic organisationnel et modélisation des processus" avec l'étude de cas CPF pour être familier avec le concept de processus et une manière de les représenter. Nous sommes trois à l'avoir réalisé l'année dernière, vous trouverez nos MON [ici](../../../mon/SH/MON1-1/), [ici](../../../mon/EGT/MON_1_2) et [là](../../../mon/KR/MON1-2). La vue des processus s'adresse à des personnes qui cherchent à comprendre comment une information transite à travers différentes personnes et ce qu'une décision peut impliquer. 
+Si certains étudiants sont intéressées par le réseau et les serveurs ou la cybersécurité, il est intéressant de réaliser une vue des infrastructures logiques ou physiques.  
+
+Suivant l'intérêt porté à chaque vue, il est possible de rentrer plus ou moins dans le détail. Le projet pourra donc être repris l'année d'après pour être poursuivi et complété avec un niveau de détails plus important.
 
 ## Compte-rendus des discussions avec les DSI de différentes entreprises
 # Centrale Marseille
