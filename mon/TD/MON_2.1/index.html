@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>MON 2.1 : Web Front 1</title>
+    <title>MON 2.1 : Bases Dev Web HTML/CSS/JS</title>
 
     <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
     <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
@@ -46,8 +46,21 @@
 
       
 <article>
-  <h1  class="mb-1">MON 2.1 : Web Front 1</h1>
+  <h1  class="mb-1">MON 2.1 : Bases Dev Web HTML/CSS/JS</h1>
   <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Front</li>
+          
+            <li class="before:content-['•'] before:px-1">Carrousel</li>
+          
+        </ul>
+      </div>
     
 
     
@@ -69,16 +82,16 @@
   <p>J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme :</p>
 <ul>
 <li>
-<p><a href="https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4">https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4</a></p>
+<p><a href="https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4">Site de tutos HTML/CSS</a></p>
 </li>
 <li>
-<p><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g">https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g</a></p>
+<p><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g">Apprendre le javascript</a></p>
 </li>
 </ul>
 <p>Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel.</p>
 <p>Voici donc le tutoriel pour le réaliser.</p>
 <h2>Tutoriel Carrousel</h2>
-<p>Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : <a href="https://codepen.io/dcode-software/pen/BaRMvJo">https://codepen.io/dcode-software/pen/BaRMvJo</a>.</p>
+<p>Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : <a href="https://codepen.io/dcode-software/pen/BaRMvJo">Tuto carrousel</a>.</p>
 <h3>Étape 1 : Squelette du carrousel</h3>
 <p>Dans le body de notre fichier html, nous créons ici 2 éléments de type div qui constituent le squelette de notre carrousel.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>carousel</span><span class="token punctuation">></span></span> 
@@ -119,9 +132,9 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Quelques précisions sur ces paramètres :</p>
-<p>-$inline-block$ = contrairement au inline, cet attribut respecte les attributs &quot;margin&quot; et &quot;padding&quot; mais permet aussi de définir une hauteur et largeur de l'élément.</p>
-<p>-$rgba$ : a désigne un paramètre alpha, allant de 0 à 1 qui définit la transparence.</p>
-<p>-$border-radius$ : indiquer une seule valeur permet de désigner la courbe des 4 coins (avec 50% on obtient un cercle).</p>
+<p>-<em>inline-block</em> = contrairement au inline, cet attribut respecte les attributs &quot;margin&quot; et &quot;padding&quot; mais permet aussi de définir une hauteur et largeur de l'élément.</p>
+<p>-<em>rgba</em> : a désigne un paramètre alpha, allant de 0 à 1 qui définit la transparence.</p>
+<p>-<em>border-radius</em> : indiquer une seule valeur permet de désigner la courbe des 4 coins (avec 50% on obtient un cercle).</p>
 <ul>
 <li>Le style du bouton sélectionné</li>
 </ul>
@@ -130,10 +143,8 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>On obtient alors des cercles transparents et celui selectionné est plus visible que les autres.</p>
-<img src="carousel_buttons.png">
-<br>
+<p><img src="carousel_buttons.png" alt="Navigation image"></p>
 <h3><strong>Étape 3 : Changement de classes avec js</strong></h3>
-<br>
 <p>Comme mentionné au départ, la création des boutons va passer par une fonction js. Pour chaque &quot;carousel_slot&quot;, on crée dans une array un bouton par défaut comme suit:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">".carousel"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">carousel</span> <span class="token operator">=></span>
 
@@ -142,14 +153,15 @@
       <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;span class="carousel_button">&lt;/span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Puis on place ces spans dans un div de navigation qu'on insère à son tour à l'intérieur du carrousel (spécifié par le paramètre &quot;beforeend&quot;). <br>L'appel $buttonsHtml.join(&quot;&quot;)$ concatène les éléments de la liste. De plus l'argument de cette méthode, appelé le séparateur, définit se qui sépare les éléments dans la concaténation (ici rien d'où les deux guillements). <br></p>
+<p>Puis on place ces spans dans un div de navigation qu'on insère à son tour à l'intérieur du carrousel (spécifié par le paramètre &quot;beforeend&quot;).</p>
+<p>L'appel $buttonsHtml.join(&quot;&quot;)$ concatène les éléments de la liste. De plus l'argument de cette méthode, appelé le séparateur, définit se qui sépare les éléments dans la concaténation (ici rien d'où les deux guillements).</p>
 <p>On obtient au final, le div de navigation comme montré à l'étape 1.</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">  carousel<span class="token punctuation">.</span><span class="token function">insertAdjacentHTML</span><span class="token punctuation">(</span>
       <span class="token string">"beforeend"</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div class="carousel_navigation">
-			</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>buttonsHtml<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> &lt;/div></span><span class="token template-punctuation string">`</span></span>
+      </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>buttonsHtml<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> &lt;/div></span><span class="token template-punctuation string">`</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Il est maintenant temps de changer faire fonctionner le carrousel en changeant les classes des slots et des boutons. <br></p>
+<p>Il est maintenant temps de changer faire fonctionner le carrousel en changeant les classes des slots et des boutons.</p>
 <p>On commence par déselectionner tous les slots et boutons en réponse au click de l'utilisateur sur un bouton (on garde cependant son indice i).</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">  buttons<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">button<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -171,9 +183,9 @@ buttons<span class="token punctuation">[</span><span class="token number">0</spa
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Et voilà à quoi cela peut ressembler:</p>
-<img src="carousel_1.png">
-<img src="carousel_2.png">
-<img src="carousel_3.png">
+<p><img src="carousel_1.png" alt="Carrousel image"><br>
+<img src="carousel_2.png" alt="Carrousel image"><br>
+<img src="carousel_3.png" alt="Carrousel image"></p>
 
 
 </article>
