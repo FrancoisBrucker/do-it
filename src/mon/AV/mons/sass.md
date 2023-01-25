@@ -38,12 +38,18 @@ Prérequis :
 
 En plus d'apprendre à coder ces transitions, on apprend des concepts très interessant d'UI :
 
+-  les “12 principes de l’animation”.
+- les timings de transitions (linear,  ease-in-out, ease-in, ease-out, cubic-bezier)
+...
 
 ## Petit projet 
 
 Pour mettre en pratique, ce que j'ai pu apprendre j'ai décidé de créer une page très simple HTML/CSS qui utilise un maximum d'animations. Même si, l'utilité de la page peut être discutable, elle me servira à m'entrainer et à créer de "belles animations"
 
 Pour utiliser sass sans trop me casser la tête, j'ai utilisé l'extension VSCode **Live Sass Compiler** qui permet de compiler notre code sass en css sans.
+L'animation consiste à afficher le texte "Do It" un peu comme le texte "Netflix" s'affiche au lancement de l'application. Cette animation se répète à l'infini.
 
-Le lien vers le code est la : https://github.com/AntwanV/animCSS
+Remarque : On voit très bien que le code est beaucoup plus long dans le fichier css que dans le fichier scss. 
+
+Le lien vers le code est là : https://github.com/AntwanV/animCSS
 
