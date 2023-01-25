@@ -84,7 +84,8 @@ Sprint 2 :</li>
 </ul>
 <h3>Nouveau projet Express</h3>
 <p>Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je crée un nouveau projet à l'adresse <a href="http://localhost:3000/">http://localhost:3000/</a>. <br><br>
-Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur &quot;<a href="http://developer.mozilla.org">http://developer.mozilla.org</a>&quot; et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.</p>
+Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur &quot;<a href="http://developer.mozilla.org">http://developer.mozilla.org</a>&quot; et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.<br>
+Mon code est disponible sur [Mon Github].(<a href="https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback">https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback</a>)</p>
 <h3>Création de la base de données</h3>
 <p>Afin de compléter mon premier site, j'ai eu pour idée d'ajouter une option permettant de sélectionner un champion et un pays : ainsi J1 sera désigné par le champion Zidane ou le pays Brésil. Le but est donc de créer une base de données avec 5 champions et 5 pays. J'ai repris en grande partie le code visible sur <a href="../../../mon/GB/Mons/coteweb">mon MON</a> que j'ai personnalisé afin d'y mettre mes exigences. Le champion devra donc avoir les caractéristiques &quot;nom&quot;, &quot;prénom&quot; et &quot;numéro&quot; ; le pays, lui, sera associé aux caractéristiques &quot;nom&quot; et &quot;couleur&quot;. Ci-dessous le code concernant le champion :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -141,7 +142,7 @@ module.exports <span class="token operator">=</span> mongoose.model<span class="
 <li><a href="http://localhost:3000/catalog/joueurs">http://localhost:3000/catalog/joueurs</a></li>
 <li><a href="http://localhost:3000/users">http://localhost:3000/users</a><br>
 Ici, la route &quot;catalogue&quot; n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données.<br>
-<img src="../POK/Images/routes.png" alt="Routes"></li>
+<img src="./../Images/routes.png" alt='routes'/></li>
 </ul>
 <h3>Etablissement des premières pages</h3>
 <p>On arrive donc à une partie plus intéressante, celle de la liaison entre ma première partie, le front-end, et mon site actuellement hébérgé sur un serveur.<br>
@@ -213,8 +214,8 @@ block content
   <span class="token keyword">else</span>
     li There are no authors.
 </code></pre>
-<p>Ma page historique ressemble alors à cela : <img src="../POK/Images/Historique" alt="Historique sans CSS"><br>
-En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="../POK/Images/Data.png" alt="Historique à jour"></p>
+<p>Ma page historique ressemble alors à cela : <img src="./../Images/Historique.png" alt='routes'/><br>
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="./../Images/Data.png" alt='routes'/></p>
 <h3>Mise à jour de la base de données</h3>
 <p>Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction &quot;appenchild&quot; pour faire apparaitre la liste de coups et que mes variables &quot;pierre&quot;, &quot;feuille&quot; et &quot;ciseaux&quot; ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier &quot;coup.js&quot;, le terminal me renvoi que la variable &quot;pierre&quot; n'est pas déclarée :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -228,7 +229,7 @@ En y appliquant le design de mon site et quelques touches de CSS en plus, on obt
 <br><br>
 J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.</p>
 <h3>Mise du site sur l'ovh</h3>
-<p>J'ai suivi en grande partie le <a href="/src/pok/un-site-chez-moi/TBi/ServeurDistant.md">POK de Tunçai</a> qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences.<br>
+<p>J'ai suivi en grande partie le <a href="https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/">POK de Tunçai</a> qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences.<br>
 Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier &quot;node&quot; :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/gabrielbarbe00/POK.git
 </code></pre>
@@ -243,7 +244,8 @@ app.listen<span class="token punctuation">(</span>port, <span class="token punct
 On rentre donc la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> PFC
 </code></pre>
-<p>On lance l'application puis nous quittons le terminal avec la commande CTRL A + D.</p>
+<p>On lance l'application puis nous quittons le terminal avec la commande CTRL A + D.<br>
+Le site est disponible à <a href="http://node.coriandre.ovh1.ec-m.fr">cette adresse</a></p>
 <h2>Feedback</h2>
 <p>Je dois avouer que la gestion du &quot;back-end&quot; m'a nettement moins parlé que celle du &quot;front&quot;, je suis content d'avoir effectué ce POK pour m'en rendre compte. Je pense que les deux aspects du site sont en pratique très différent à coder, néanmoins ce projet était très formateur ne serait-ce que dans la compréhension de ce qu'est un site web. Je suis tout de même très déçu de n'avoir pu outrepasser le problème de mise à jour de l'historique, surtout que cela m'a pris énormément de temps que je n'ai pas pu passer à développer une page de connexion par exemple.</p>
 
