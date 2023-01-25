@@ -25,7 +25,7 @@ Dans ce contexte, des outils se sont démocratisées actuellement pour la survei
 
 - Datadog
 - DynaTrace
-- Splunk, avec un [MON de Kasimir à ce sujet orienté logs de sécurité](../../KR/MON2-1/index.md)
+- Splunk, avec un [MON de Kasimir à ce sujet orienté logs de sécurité](../../../KR/MON2-1/)
 - ce dont on va parler plus précisément dans ce MON, la stack Elastic (anciennement ELK)
 
 
@@ -75,7 +75,7 @@ Les données une fois ingérés sont très facilement exploitables sur Kibana, o
 
 #### Machine Virtuelle
 
-Pour faire le test local, je vais installer **Vagrant**, outil utile pour tester des builds ou conteneuriser des environnements sur sa propre machine, et [VirtualBox](../../TA/pentest.md) (Vous trouverez à ce lien un MON de Thibault qui utilise VirtualBox pour faire des pentests entre machines virtuelles)
+Pour faire le test local, je vais installer **Vagrant**, outil utile pour tester des builds ou conteneuriser des environnements sur sa propre machine, et [VirtualBox](../../../TA/pentest/) (Vous trouverez à ce lien un MON de Thibault qui utilise VirtualBox pour faire des pentests entre machines virtuelles)
 
 Un tutoriel pour devenir opérationnel vite en Vagrant est disponible [ici](https://developer.hashicorp.com/vagrant/tutorials/getting-started)
 
