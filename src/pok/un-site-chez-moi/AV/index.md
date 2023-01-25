@@ -113,7 +113,7 @@ TODO :
 Pour le second sprint, j'ai décidé de terminer d'abord les taches du premier sprint car elles étaient indispensables. Voici l aliste des taches après ce second sprint :
 
 - ~~définir l'architecture de la bdd~~ 
-- ~~connexion bdd (mongoDb ou postgreSQL), ORM ? ~~
+- ~~connexion bdd (mongoDb ou postgreSQL), ORM ?~~
 - ~~pouvoir ajouter de nouvelles musiques~~
 - ~~discuter avec l'api de Youtube par exemple pour intégrer la miniature de la musique ou même intégrer un lecteur~~
 - <span style="color:orange">pouvoir noter les musiques (j'aime ou j'aime pas)</span>
