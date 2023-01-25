@@ -94,6 +94,19 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 - Connecter une base de données à mon API pour avoir des propositions de projets persistantes.
 
+## Rendu final
+
+Le site présente une page d'accueil composée d'une partie Data/IA, d'une partie Dev et d'un bouton de requête.
+
+![Image accueil](aperçu%20POK%201.png)
+
+En cliquant sur l'une ou l'autre des moitiés Data/Dev, on accède à un carrousel des projets correspondants.
+![Image Carrousel](aperçu%20POK%203.png)
+
+En cliquant sur le bouton de proposition, on accède à un  formulaire et mon API back-end s'occupe de trier et d'afficher le propositions de projets.
+
+![Image formulaire](aperçu%20POK%202.png)
+
 ## Bilan
 
 Je suis content du site et de ce que j'ai pu produire pendant ces 20h de projet. Même si le design laisse à désirer, je suis satisfait du rendu général. De plus, le service, bien que minime, convient aux attentes que j'en avais.
