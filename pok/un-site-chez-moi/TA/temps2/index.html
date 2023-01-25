@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>InstantBuddy - Temps 2</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">InstantBuddy - Temps 2</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thibault Adelain</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <p>Github: <a href="https://github.com/ThibaultAdelain/InstantBuddyNode">https://github.com/ThibaultAdelain/InstantBuddyNode</a></p>
+<p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>
+<h2>Temps 2</h2>
+<h3>Fin de développement et déploiement</h3>
+<h4>ToDo : 1er Sprint</h4>
+<ul>
+<li>Derniers correctifs :
+<ul>
+<li>Vérifier les champs renseignés par l'utilisateur en back-end</li>
+<li>Temps d'expiration des cookies de session</li>
+</ul>
+</li>
+<li>Améliorer l'UI :
+<ul>
+<li>Responsive bottom bar</li>
+</ul>
+</li>
+<li>Incorporer l'authentification avec google. Utilisation de <a href="https://www.passportjs.org/packages/passport-google-oauth20/">passport-google-oauth20</a> :
+<ul>
+<li>Adapter le système de gestion de session avec le système actuel (cookies) : il faut que comme avec une authentification classique, un cookie de session soit envoyé après google Oauth</li>
+</ul>
+</li>
+</ul>
+<p><strong>Google Oauth</strong> : j'ai utilisé ce <a href="https://www.youtube.com/watch?v=SBvmnHTQIPY&amp;t=3223s&amp;ab_channel=TraversyMedia">tuto</a> (<a href="https://github.com/bradtraversy/storybooks">repo Github</a>). J'ai également utilisé la doc de <a href="https://www.passportjs.org/packages/passport-google-oauth20/">passport-google-oauth20</a>, qui est assez basique ; j'ai trouvé le tuto plus clair. J'ai également adatpé le tuto pour que le serveur renvoie des cookies après l'authentification google :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">// @desc Google auth callback</span>
+<span class="token comment">// @route GET auth/google/callback</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/google/callback'</span><span class="token punctuation">,</span> passport<span class="token punctuation">.</span><span class="token function">authenticate</span><span class="token punctuation">(</span><span class="token string">'google'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">failureRedirect</span><span class="token operator">:</span> <span class="token string">'/user/Register'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">session</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">cookie</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>user<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">cookie</span><span class="token punctuation">(</span><span class="token string">"email"</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>user<span class="token punctuation">.</span>email<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">cookie</span><span class="token punctuation">(</span><span class="token string">"sessionID"</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>user<span class="token punctuation">.</span>sessionID<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'User successfully login'</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">redirect</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4>ToDo : 2ème Sprint</h4>
+<ul>
+<li>Déploiement sur serveur distant : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a>
+<ul>
+<li>Nécessité d'une connexion https pour accéder à la localisation ==&gt; utilisation de <a href="https://ngrok.com/">ngrok</a></li>
+</ul>
+</li>
+<li>Finir les derniers correctifs pour avoir un site fonctionnel en production, notamment :
+<ul>
+<li>Changement de la bdd : MySQL --&gt; Postgres</li>
+<li>Changer les clés secrètes</li>
+</ul>
+</li>
+</ul>
+<h5>Ngrok</h5>
+<p><a href="https://ngrok.com/">Ngrok</a> est un outil qui permet de créer des tunnels sécurisés entre des ordinateurs distants. Il sert d'intermédiaire entre l'utilisateur et serveur ovh : utilisateur &lt;-&gt; ngrok &lt;-&gt; ovh. Les connexions utilisent le protocole sécurisé TLS, donc le navigateur peut se connecter en https et transmettre la localisation de l'utilisateur au serveur. J'ai utilisé cette solution car il n'était pas possible à l'instant t d'avoir un certificat sur le serveur ovh.</p>
+<p>Ngrok écoute sur un port de localhost et crée un tunnel entre l'utilisateur et le serveur. Sur votre serveur, Après avoir lancé une app sur le port 8080 par exemple, rentrez en ligne de commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ngrok http <span class="token number">8080</span>
+</code></pre>
+<p>Si vous utilisez une application React comme moi, il faudra peut-être plutôt écrire :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ngrok http <span class="token number">8080</span> --host-header<span class="token operator">=</span><span class="token string">"localhost:8080"</span>
+</code></pre>
+<p>(Cf ce <a href="https://stackoverflow.com/questions/45425721/invalid-host-header-when-ngrok-tries-to-connect-to-react-dev-server">post</a>)</p>
+<p>Si vous voulez en savoir plus sur ngrok: <a href="https://grafikart.fr/tutoriels/ngrok-637">https://grafikart.fr/tutoriels/ngrok-637</a></p>
+<p>Pour que votre appli reste en ligne même après la fermeture du terminal, vous pouvez utiliser tmux. Voici une CheatSheet des lignes de commande <a href="https://tmuxcheatsheet.com/">tmux</a>.</p>
+<h3>Mon site</h3>
+<p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>
+<p>Il vous faut suivre le lien <a href="http://ngrok.io">ngrok.io</a> affiché sur le page d'accueil pour pouvoir utiliser la fonctionnalité principale du site. Avec la version gratuite de ngrok, vous ne pouvez pas avoir votre propre nom de domaine.</p>
+<p>Par ce qu'une image vaut mille mots :</p>
+<p><img src="homePage.png" alt="homePage"><br>
+<img src="mapPage.png" alt="mapPage"></p>
+<h4>Tuto :</h4>
+<ul>
+<li>Tuto Google Oauth par TraversyMedia: <a href="https://www.youtube.com/watch?v=SBvmnHTQIPY&amp;t=3223s&amp;ab_channel=TraversyMedia">https://www.youtube.com/watch?v=SBvmnHTQIPY&amp;t=3223s&amp;ab_channel=TraversyMedia</a>.</li>
+<li>Passport google Oauth 20 : <a href="https://www.passportjs.org/packages/passport-google-oauth20/">https://www.passportjs.org/packages/passport-google-oauth20/</a></li>
+<li>ngrok : <a href="https://ngrok.com/">https://ngrok.com/</a></li>
+<li>Tuto ngrok par Grafikart : <a href="https://grafikart.fr/tutoriels/ngrok-637">https://grafikart.fr/tutoriels/ngrok-637</a></li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
