@@ -177,7 +177,7 @@ except KeyboardInterrupt:
 
 Tester seulement sur des appareils et des réseaux wifi dont vous avez l'autorisation. ARP spoofing est certes intrusif sur l'appareil cible, mais peut aussi saturer le réseau local. Également, vous pouvez activer des systèmes de détection d'intrusion.
 
-Pour le test, nous allons utiliser une machine virtuel comme appareil cible. Vous pouvez aussi utliser l'appareil de votre choix. Je vous renvoie au MON [pentest](../pentest.md) pour voir comment set-up la VM (utiliser l'OS de votre choix). Il faut par contre configurer le réseau sur *connection par pont* (cliquez sur une VM puis --> config --> réseau --> accès par pont).
+Pour le test, nous allons utiliser une machine virtuel comme appareil cible. Vous pouvez aussi utliser l'appareil de votre choix. Je vous renvoie au MON [pentest](../pentest) pour voir comment set-up la VM (utiliser l'OS de votre choix). Il faut par contre configurer le réseau sur *connection par pont* (cliquez sur une VM puis --> config --> réseau --> accès par pont).
 
 On peut regarder les tables ARP sur nos machines (attaquant et cible) avec `arp -a`. Sur la machine cible :
 
