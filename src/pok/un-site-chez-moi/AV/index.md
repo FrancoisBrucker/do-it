@@ -101,16 +101,24 @@ TODO :
 - ~~creer les classes/interfaces (User, Music) et definir les différentes fonctions (sans implementation)~~
 - <span style="color:orange">définir l'architecture de la bdd </span>
 - <span style="color:red">connexion bdd (mongoDb ou postgreSQL), ORM ? </span>
-- <span style="color:orange">pouvoir ajouter de nouvelles musiques <span>
+- <span style="color:orange">pouvoir ajouter de nouvelles musiques </span>
 
 **Sprint 2**
 - discuter avec l'api de Youtube par exemple pour intégrer la miniature de la musique ou même intégrer un lecteur
 - pouvoir noter les musiques (j'aime ou j'aime pas)
-- pouvoir ajouter aux favoris
 - systeme de login avec token si possible sso (single sign-on) avec des guards (ie limiter l'accès quand on est pas connecté). Cela comprend la création de nouvelles pages (inscription/connexion)
 - deployer en ligne 
 - tests 
 
+Pour le second sprint, j'ai décidé de terminer d'abord les taches du premier sprint car elles étaient indispensables. Voici l aliste des taches après ce second sprint :
 
+- ~~définir l'architecture de la bdd~~ 
+- ~~connexion bdd (mongoDb ou postgreSQL), ORM ? ~~
+- ~~pouvoir ajouter de nouvelles musiques~~
+- ~~discuter avec l'api de Youtube par exemple pour intégrer la miniature de la musique ou même intégrer un lecteur~~
+- <span style="color:orange">pouvoir noter les musiques (j'aime ou j'aime pas)</span>
+- systeme de login. Cela comprend la création de nouvelles pages (inscription/connexion)
+- <span style="color:orange">deployer en ligne </span>
+- tests 
 
 ## Temps 3

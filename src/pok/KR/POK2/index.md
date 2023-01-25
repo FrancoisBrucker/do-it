@@ -61,16 +61,33 @@ Je n'ai pas réussi a faire tous les tâches de ce sprint, c'est parce que j'ai 
 
 ### Sprint 2
 **08/12/2022 - 13/01/2023**
-- [ ] Recherche sur la reconnaissance 
-- [ ] Ecrire le chapitre sur la reconnaissance
-- [ ] Recherche sur le craquage de mots de passe
+- [x] Recherche sur la reconnaissance 
+- [x] Ecrire le chapitre sur la reconnaissance
+- [x] Recherche sur le craquage de mots de passe
 - [ ] Ecrire le chapitre sur le craquage de mots de passe
 - [ ] Recherche sur l'exploitation Web 
 - [ ] Ecrire le chapitre sur l'exploitation web
 
+En raison de nombreux projets parallèles, je n'ai malheureusement pas pu travailler autant que je l'aurais souhaité sur ce POK. Cela signifie que les tâches qui n'ont pas été effectuées tombent dans le dernier sprint.
 
 ### Sprint 3
 **14/01/2023 - 25/01/2023**
+- [x] Ecrire le chapitre sur le craquage de mots de passe
+- [ ] ~~Recherche sur l'exploitation Web~~ 
+- [ ] ~~Ecrire le chapitre sur l'exploitation web~~
+- [x] Recherche sur l'analyse forensique
+- [x] Ecrire le chapitre sur l'analyse forensique
+- [x] Recherche sur Exploiter les vulnérabilités
+- [x] Ecrire le chapitre sur l'exploitation des vulnérabilités
+- [x] Relecture et correction
+- [x] Recherche des sources pour des CTFs
+- [ ] Résoudre quelques CTFs
+- [ ] Décrire les CTF dans ce fichier ici
+- [ ] Créer des exercises pour les chapitres
+- [ ] Créer une machine virtuelle et cacher quelques flags
+- [ ] Créer un manual pour la machine virtuelle
+
+En clair : j'ai été débordé par d'autres tâches et j'ai donc fini par manquer de temps pour faire le POK consciencieusement. C'est pourquoi j'ai fait écrire une grande partie du texte par [ChatGPT](chat.openai.com). Évidemment, je l'ai relu plusieurs fois et adapté le cas échéant. Souvent, le texte était très générique, ce qui m'a obligé à investir encore pas mal de travail dans les détails. Néanmoins, pour des raisons de transparence, il est important de dire que beaucoup de choses viennent de ChatGPT. Je suis très satisfait du résultat final, mais je pense que je n'aurais pas pu le faire sans ChatGPT.
 
 ## Défintions
 ### Hacking

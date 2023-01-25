@@ -29,7 +29,7 @@ Les **caractéristiques essentielles** de ses méthodes sont :
 - un **découpage précis des tâches** : le chef de projet définit dès le début les différentes étapes du projet. Il vérifie que chaque étape est finie avant de passer à la suivante. 
 - Le **cadre et le planning sont définis en amont** en accord entre le client et le chef de projet. Tout est cadré dans le cahier des charges du projet. 
 
-En ayant tout défini dès le début du projet, il ya peu d'interactions entre le client et le chef de projet. Le client découvre le produit de sa demande à la fin lorsqu'il est complètement fini. 
+En ayant tout défini dès le début du projet, il y a peu d'interactions entre le client et le chef de projet. Le client découvre le produit de sa demande à la fin lorsqu'il est complètement fini. 
 
 Les **points de vigilance** à avoir dans ce type de management sont : 
 - l'effet tunnel dû au manque de communication entre chef de projet et client
@@ -69,7 +69,7 @@ Dans la dernière étape, la phase de maintenance, l'équipe projet peut corrige
 
 
 *Les inconvénients de la méthode Waterfall*
-- aucune fmexibilité : en cas d'obstacle ou de retard, tout le projet est retardé
+- aucune flexibilité : en cas d'obstacle ou de retard, tout le projet est retardé
 - impossibilité de revenir en arrière
 - les tests interviennent à la toute fin de processus, aucune itération n'est possible
 - retour vers le client uniquement lors de la livraison : possibilité de déception si ses attentes ont changé
@@ -83,7 +83,7 @@ La particularité de la méthode de cycle en V est d'avoir **plusieurs étapes d
 <img src="cycle_en_V.PNG">
 source : https://www.manager-go.com/gestion-de-projet/cycle-en-v.htm
 
-Dans cette méthode, l'équipe projet teste d'abord chaque brique fonctionnelle, ce sont les tests unitaires. Puis des tests sont effectués sur l'ensemble du produit, ce sont les tests d'intégration. Viennent ensuite les tests systèmes et la validation qui impliquent les futurs utilisateurs du produits, ils vérifient alors que la foncionnalité de la solution. Juste avant la production, l'équipe projet consulte le client pour vérifier que le produit répond bien aux exigences qu'il a exprimé au début du projet, c'est la recette 
+Dans cette méthode, l'équipe projet teste d'abord chaque brique fonctionnelle, ce sont les tests unitaires. Puis des tests sont effectués sur l'ensemble du produit, ce sont les tests d'intégration. Viennent ensuite les tests systèmes et la validation qui impliquent les futurs utilisateurs du produits, ils vérifient alors que la fonctionnalité de la solution. Juste avant la production, l'équipe projet consulte le client pour vérifier que le produit répond bien aux exigences qu'il a exprimé au début du projet, c'est la recette 
 
 Les avantages et les inconvénients de la méthode du cycle en V sont les mêmes que ceux de la méthode en cascade 
 
@@ -103,8 +103,8 @@ Il existe **7 rôles** dans le PRINCE2. Les 3 principaux sont le comité de pilo
 Les 7 rôles sont les suivants  : 
 - **le client** qui la personne qui paie pour le projet
 - **l'utilisateur** qui soit sera affecté par les résultats du projet soit utilisera les livrables du projet (dans de nombreux cas, le client et l'utilisateur sont la même personne)
-- **le fournisseur** est l'expert qui apporte les connaisssances nécessaires à la réalisation du produit
-- **le chef de projet** est le responsable du projet, il gère l'organsation, la planification, il supervise. Il décide des personnes qui participent au projet et de leurs tâches. Il est responsable du travail réalisé et des délais.
+- **le fournisseur** est l'expert qui apporte les connaissances nécessaires à la réalisation du produit
+- **le chef de projet** est le responsable du projet, il gère l'organisation, la planification, il supervise. Il décide des personnes qui participent au projet et de leurs tâches. Il est responsable du travail réalisé et des délais.
 - **L'équipe projet et le responsable d'équipe** ce sont eux qui réalisent les différentes tâches du projet. **Les responsables d'équipe** sont de intermédiaires entre le chef de projet et l'équipe projet
 - **l'administrateur** est la personne qui organise les réunions, transmet les informations, assure le suivi de la documentation. Sur des petits projets, c'est le chef de projet qui assure ce rôle. 
 - **le comité de pilotage** est composé du client, de l'utilisateur final et du fournisseur
@@ -123,7 +123,7 @@ Le processus PRINCE2 est ensuite divisé en **7 séquences** :
 - Les nombreuses réunions favorisent la communication
 - Les parties prenantes ont leur mot à dire au cours du projet, elles sont informées des avancées
 - Il est possible d'apporter des améliorations et de corriger les défauts
-- En étant bien organisé, ette méthode peut faire gagner beaucoup de temps
+- En étant bien organisé, cette méthode peut faire gagner beaucoup de temps
 
 *Les inconvénients de PRINCE2*
 - Cette méthode n'est pas très flexible et réactive face aux imprévus
@@ -181,7 +181,7 @@ La méthode utilise l'outil DMAIC (Define, Measure, Analyse, Improve, Control) d
 - **améliorer** les solutions pour éliminer les problèmes 
 - **contrôler** les solutions mises en place pour qu'il n'y ait pas de retours en arrière
 
-Les outils les plus utilisé dans Six Sigma sont la **cartographie des chaines de valeur**, des **sondages sur les réactions du client**, les **diagrammes de Gantt** et les **tableaux de contrôle de processus stattistiques**
+Les outils les plus utilisé dans Six Sigma sont la **cartographie des chaines de valeur**, des **sondages sur les réactions du client**, les **diagrammes de Gantt** et les **tableaux de contrôle de processus statistiques**
 
 Plus de détails sur le Six Sigma [ici](https://www.planzone.fr/blog/quest-ce-que-la-methodologie-six-sigma#:~:text=%C2%AB%20Six%20sigma%20%C2%BB%20signifie%20donc%206,produits%20issus%20de%20ce%20processus.) et [ici](https://www.lafabriquedunet.fr/gestion-de-projet/la-gestion-de-projet-lean-definitions-et-bonnes-pratiques/)
 
@@ -203,17 +203,17 @@ Le Lean Project Management insuffle une culture d'amélioration continue de l'or
 
 2. **Une maturité différente**
 Le Lean Startup vise des petites entreprises et des entreprises naissantes qui n'ont pas forcément encore de produits à proposer. Cette méthode de management vise à être utilisé lors du lancement d'une entreprise sur un marché.
-Le Lean Project Management vise de grandes et de petites entreprises qui recherchent une méthologie globale. Cette méthode de management tend à être utilisée sur le long terme.
+Le Lean Project Management vise de grandes et de petites entreprises qui recherchent une méthodologie globale. Cette méthode de management tend à être utilisée sur le long terme.
 
 3. **Une nature de produit différente**
-Le Lean Project Management recherche l'optimisation de toute la production pour avoir un produit défini et de qualité alors que le Lean Startup dévveloppe un produit primaire, appelé Minimum Viable Product (MVP) qui permet à l'entreprise de mesurer le marché, de répondre aux hypothèses commerciales faites en amont et de réadapter le produit.
+Le Lean Project Management recherche l'optimisation de toute la production pour avoir un produit défini et de qualité alors que le Lean Startup développe un produit primaire, appelé Minimum Viable Product (MVP) qui permet à l'entreprise de mesurer le marché, de répondre aux hypothèses commerciales faites en amont et de réadapter le produit.
 
 Même si les deux styles de management ont des différences, ils ont aussi des points communs : 
 - Le **client au centre**  
 - le **zéro gaspillage** 
 - la **mesure de la performance**
 
-Finalement, même si les deux méthodes se ressemblent, elles diffèrent tout de même de par leus outils, les usages et leurs portées.
+Finalement, même si les deux méthodes se ressemblent, elles diffèrent tout de même de par leurs outils, les usages et leurs portées.
 
 
 ## L'Agile et ses dérivées
@@ -275,12 +275,12 @@ Cependant ces variantes partagent les **7 points communs de la méthode Crystal*
 - une grande confiance entre les différents membres de l'équipe
 - la priorité à la concentration
 - une facilité d'accès aux experts
-- un environnement technique permetttant des tests automatisés et des intégrations fréquentes
+- un environnement technique permettant des tests automatisés et des intégrations fréquentes
 
 La majorité de ses principes sont communs à d'autres méthodes de management excepté **la concentration** qui est mise en avant pour la première fois et qui mérité d'être expliquée plus en détail.
-La concentration est fondamentale dans cette méthode de management, toutes les sources de distraction sont donc éloignées, les téléphones sont éteints, il ne faut pas poser des questions en dehors de leur contexte etc. En effet, si on interrompt la concentration d'une personne, elle aura besoin d temps pour retrouver son niveau de concentration initale et aura donc perdu du temps et de la productivité. La méthode Crystal définit 2 règles à ce propos : 
+La concentration est fondamentale dans cette méthode de management, toutes les sources de distraction sont donc éloignées, les téléphones sont éteints, il ne faut pas poser des questions en dehors de leur contexte etc. En effet, si on interrompt la concentration d'une personne, elle aura besoin d temps pour retrouver son niveau de concentration initiale et aura donc perdu du temps et de la productivité. La méthode Crystal définit 2 règles à ce propos : 
 - une personne de l'équipe doit travailler au minimum 2 heures sans être interrompue
-- un membre de l'équipe ne doit pas travailler moins de 2 jours sur un sujet avant d'en changer sans quoi il n'a pas le temps  de s'approprier complèment le sujet et d'être pleinement efficace
+- un membre de l'équipe ne doit pas travailler moins de 2 jours sur un sujet avant d'en changer sans quoi il n'a pas le temps  de s'approprier complètement le sujet et d'être pleinement efficace
 
 ## Conclusion
 Nous avons vu ici les 3 grands types de managements et certaines de leurs dérivées. Il en existe encore beaucoup d'autres qui mériteraient certainement d'être étudiées. 

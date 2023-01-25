@@ -59,7 +59,7 @@ La majorité des sources que j'ai étudié s'accordent sur la définition donné
 Concernant la démarche d'évaluation, j'ai présenté un questionnaire en ligne très rapide à remplir et une démarche développée par le cabinet de conseil Deloitte qui est beaucoup plus poussé. 
 
 La dernière question invite après avoir compris comment il est possible d'évaluer une transformation digitale à s'imaginer devoir le faire dans le cadre d'une PME (c'est-à-dire une entreprise qui a des spécificités et qui n’est pas à considérer comme un grand groupe à échelle réduite).
-Pour répondre à cette question, j'ai consulté un [article scientifique](https://www.mdpi.com/2079-9292/10/8/885) (qui était une des sources d'un des documents à disposition) qui proposait une démarche d'évaluatioin de la maturité de la transformation digitale dans une PME. Cette démarche m'a paru pertinente c'est donc ceci que j'appliquerais si j'avais à mener un audit. 
+Pour répondre à cette question, j'ai consulté un [article scientifique](https://www.mdpi.com/2079-9292/10/8/885) (qui était une des sources d'un des documents à disposition) qui proposait une démarche d'évaluation de la maturité de la transformation digitale dans une PME. Cette démarche m'a paru pertinente c'est donc ceci que j'appliquerais si j'avais à mener un audit. 
 
 # Conseils
 Je pense avoir passé trop de temps sur la question des enjeux car j'ai eu du mal à synthétiser les informations. J'ai donc moins pu approfondir la dernière question qui est très intéressante. Je conseille d'aller plus vite sur les enjeux afin d'avoir le temps de comparer différentes démarches de conduite d'audit dans la dernière question. 

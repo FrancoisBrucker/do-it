@@ -1,17 +1,19 @@
 ---
 layout: layout/post.njk
 
-title: "MON 2.1 : Web Front 1"
+title: "MON 2.1 : Bases Dev Web HTML/CSS/JS"
 authors:
   - Thomas Duroy 
+
+tags: ['Front', 'Carrousel']
 ---
 
 
 J'ai passé la plus grande partie de ces 10h à revoir les bases HTML/CSS/JS sur différents sites comme :
 
-* <https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4>
+* [Site de tutos HTML/CSS](<https://www.internetingishard.com/html-and-css/?fbclid=IwAR29PimL3BvePP-RgpBlIZK8sbU7aDNeGYtGRIL7RikziVqMCcfwKJfNvg4>)
 
-* <https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g>
+* [Apprendre le javascript](<https://developer.mozilla.org/fr/docs/Learn/JavaScript?fbclid=IwAR3AzVCZ8GFXkytVnL8jv7YSSC3Apla98ndJV8ypipAUwtTn7PrLRTXOv4g>)
 
 Beaucoup de personnes ayant déjà fait des tutoriels sur les bases du dev web au temps 1, j'ai pensé qu'il serait plus judicieux de me consacrer à l'explication d'éléments intéressants à ajouter à une page web comme un carrousel.
 
@@ -19,7 +21,7 @@ Voici donc le tutoriel pour le réaliser.
 
 ## Tutoriel Carrousel
 
-Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : https://codepen.io/dcode-software/pen/BaRMvJo.
+Ce tutoriel consiste en l'explication, étape par étape, du code obtenu à l'adresse suivante : [Tuto carrousel](<https://codepen.io/dcode-software/pen/BaRMvJo>).
 
 ### Étape 1 : Squelette du carrousel
 
@@ -85,15 +87,13 @@ Similairement, ici l'attribut "display" doit être "block" pour rendre le slot v
 
 Quelques précisions sur ces paramètres :
 
--$inline-block$ = contrairement au inline, cet attribut respecte les attributs "margin" et "padding" mais permet aussi de définir une hauteur et largeur de l'élément.
+-*inline-block* = contrairement au inline, cet attribut respecte les attributs "margin" et "padding" mais permet aussi de définir une hauteur et largeur de l'élément.
 
--$rgba$ : a désigne un paramètre alpha, allant de 0 à 1 qui définit la transparence.
+-*rgba* : a désigne un paramètre alpha, allant de 0 à 1 qui définit la transparence.
 
--$border-radius$ : indiquer une seule valeur permet de désigner la courbe des 4 coins (avec 50% on obtient un cercle).
+-*border-radius* : indiquer une seule valeur permet de désigner la courbe des 4 coins (avec 50% on obtient un cercle).
 
-
-
-- Le style du bouton sélectionné
+* Le style du bouton sélectionné
 
 ```css
 .carousel_selected_button{
@@ -101,14 +101,11 @@ Quelques précisions sur ces paramètres :
 }
 ```
 
-On obtient alors des cercles transparents et celui selectionné est plus visible que les autres. 
+On obtient alors des cercles transparents et celui selectionné est plus visible que les autres.
 
-<img src="carousel_buttons.png">
-
-<br>
+![Navigation image](carousel_buttons.png)
 
 ### **Étape 3 : Changement de classes avec js**
-<br>
 
 Comme mentionné au départ, la création des boutons va passer par une fonction js. Pour chaque "carousel_slot", on crée dans une array un bouton par défaut comme suit:
 
@@ -120,18 +117,21 @@ document.querySelectorAll(".carousel").forEach(carousel =>
       return `<span class="carousel_button"></span>`;
   });
 ```
-Puis on place ces spans dans un div de navigation qu'on insère à son tour à l'intérieur du carrousel (spécifié par le paramètre "beforeend"). <br>L'appel $buttonsHtml.join("")$ concatène les éléments de la liste. De plus l'argument de cette méthode, appelé le séparateur, définit se qui sépare les éléments dans la concaténation (ici rien d'où les deux guillements). <br>
+
+Puis on place ces spans dans un div de navigation qu'on insère à son tour à l'intérieur du carrousel (spécifié par le paramètre "beforeend").
+
+L'appel $buttonsHtml.join("")$ concatène les éléments de la liste. De plus l'argument de cette méthode, appelé le séparateur, définit se qui sépare les éléments dans la concaténation (ici rien d'où les deux guillements).
 
 On obtient au final, le div de navigation comme montré à l'étape 1.
 
 ```js
   carousel.insertAdjacentHTML(
       "beforeend", `<div class="carousel_navigation">
-			${buttonsHtml.join("")} </div>`
+      ${buttonsHtml.join("")} </div>`
   );
 ```
 
-Il est maintenant temps de changer faire fonctionner le carrousel en changeant les classes des slots et des boutons. <br>
+Il est maintenant temps de changer faire fonctionner le carrousel en changeant les classes des slots et des boutons.
 
 On commence par déselectionner tous les slots et boutons en réponse au click de l'utilisateur sur un bouton (on garde cependant son indice i).
 
@@ -144,6 +144,7 @@ On commence par déselectionner tous les slots et boutons en réponse au click d
           button.classList.remove("carousel_selected_button")
       );
 ```
+
 Au slot correspond au bouton d'indice i, on ajoute la classe du slot sélectionné ce qui le fait apparaîte. Et au bouton sur lequel on a cliqué, on lui attribue la classe du bouton selectionné, ce qui le rend moins transparent.
 
 ```js
@@ -163,6 +164,6 @@ buttons[0].classList.add("carousel_selected_button");
 
 Et voilà à quoi cela peut ressembler:
 
-<img src="carousel_1.png">
-<img src="carousel_2.png">
-<img src="carousel_3.png">
+![Carrousel image](carousel_1.png)
+![Carrousel image](carousel_2.png)
+![Carrousel image](carousel_3.png)

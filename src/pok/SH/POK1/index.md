@@ -39,7 +39,7 @@ Enfin, on peut aussi classer les plateformes numériques par **type**. Il existe
 -	Les plateformes *technologiques* (ex : Microsoft Azure) 
 
 
-Dans le cadre de cette étude, j’ai choisi d’étudier les plateformes numériques suivantes : **Deliveroo, Netflix et Leboncoin**. J’ai choisi ces 3 plateformes car je souhaite étudier des plateformes très différentes en termes de services pour voir l’étendue du spectre des plateformes numériques. J'ai aussi voulu étudier des plateformes numériques avec des acteurs différents, pour Netflix, la plateforme offre du contenu, le client est le seul acteur. Leboncoin permet des échanges entre particuliers ou entre particuliers et professionnels, il y a donc 2 acteurs. Deliveroo permet à un client de commander dans un restaurant et dee se faire livrer par un coursier, il y a donc 3 acteurs.
+Dans le cadre de cette étude, j’ai choisi d’étudier les plateformes numériques suivantes : **Deliveroo, Netflix et Leboncoin**. J’ai choisi ces 3 plateformes car je souhaite étudier des plateformes très différentes en termes de services pour voir l’étendue du spectre des plateformes numériques. J'ai aussi voulu étudier des plateformes numériques avec des acteurs différents, pour Netflix, la plateforme offre du contenu, le client est le seul acteur. Leboncoin permet des échanges entre particuliers ou entre particuliers et professionnels, il y a donc 2 acteurs. Deliveroo permet à un client de commander dans un restaurant et de se faire livrer par un coursier, il y a donc 3 acteurs.
 
 Les **critères d’évaluation** que j’ai choisis sont les suivants : 
 -	Le modèle de revenus 
