@@ -156,7 +156,6 @@ Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier
 <li>Ramener le site sur l'ovh une fois que tout cela sera fait</li>
 <li>Insérer une page de connexion</li>
 <li>Sécurité si le temps me le permet mais cela me parait compliqué.</li>
-<li>Rajouter des routes pour amener aussi la partie de timothée sur le serveur</li>
 </ul>
 <h1>Début du sprint 2</h1>
 <p>Le script remarche comme avant, j'ai simplement eu à effectuer une traduction html -&gt; pug (des sites s'en occupent, c'est beaucoup plus facile du coup)</p>
@@ -225,13 +224,28 @@ En y appliquant le design de mon site et quelques touches de CSS en plus, on obt
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction &quot;appenchild()&quot; pour faire apparaitre sa variable.</p>
+<p>J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction &quot;appenchild()&quot; pour faire apparaitre sa variable.<br>
+<br><br>
+J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.</p>
 <h3>Mise du site sur l'ovh</h3>
 <p>J'ai suivi en grande partie le <a href="/src/pok/un-site-chez-moi/TBi/ServeurDistant.md">POK de Tunçai</a> qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences.<br>
 Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier &quot;node&quot; :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/gabrielbarbe00/POK.git
 </code></pre>
-<p>Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné, dans mon cas le port 10408. C'est à cette étape que cela coine. A voir.</p>
+<p>Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné. Cet objectif est réalisé d'une manière très spécifique à express, il suffit d'ajouter deux lignes dans le fichier &quot;app.js&quot; :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const port <span class="token operator">=</span> <span class="token number">10408</span>
+
+app.listen<span class="token punctuation">(</span>port, <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console.log<span class="token punctuation">(</span><span class="token variable"><span class="token variable">`</span>Example app listening on port $<span class="token punctuation">{</span>port<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ainsi, l'application se lance désormais sur le bon port et tourne sur l'ovh, objectif accompli ! Il ne nous reste plus qu'à ouvrir un terminal virtuel tournant en continu afin que notre serveur ne se ferme pas dès que nous quittons le ssh.<br>
+On rentre donc la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> PFC
+</code></pre>
+<p>On lance l'application puis nous quittons le terminal avec la commande CTRL A + D.</p>
+<h2>Feedback</h2>
+<p>Je dois avouer que la gestion du &quot;back-end&quot; m'a nettement moins parlé que celle du &quot;front&quot;, je suis content d'avoir effectué ce POK pour m'en rendre compte. Je pense que les deux aspects du site sont en pratique très différent à coder, néanmoins ce projet était très formateur ne serait-ce que dans la compréhension de ce qu'est un site web. Je suis tout de même très déçu de n'avoir pu outrepasser le problème de mise à jour de l'historique, surtout que cela m'a pris énormément de temps que je n'ai pas pu passer à développer une page de connexion par exemple.</p>
 
 
 </article>
