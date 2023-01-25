@@ -76,7 +76,7 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 ### Difficultés rencontrées
 
-- Le carrousel que j'ai présenté dans mon MON 2.1 n'était pas pratique à manipuler et j'ai dû me rabbatre sur une solution similaire proposée par [le Designer du Web](https://www.youtube.com/watch?v=14xcmpCvG7Q&t=129s&ab_channel=LeDesignerduWeb-%C3%89coleduWeb) car, pensant avoir ce qu'il fallait, c'était un des derniers éléments que je voulais implémenter avant de passer au back-end
+- Le carrousel que j'ai présenté dans mon MON 2.1 n'était pas pratique à manipuler et j'ai dû me rabattre sur une solution similaire proposée par [le Designer du Web](https://www.youtube.com/watch?v=14xcmpCvG7Q&t=129s&ab_channel=LeDesignerduWeb-%C3%89coleduWeb) car, pensant avoir ce qu'il fallait, c'était un des derniers éléments que je voulais implémenter avant de passer au back-end
 
 - Au moment de lier front et back end, je me suis aperçu que je n'avais aucune idée comment faire. Des recherches ont palier à ce problème mais d'autres sont apparus, comme des soucis de CORS (cross-origin resource sharing).
 
