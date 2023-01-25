@@ -99,7 +99,6 @@ Comme on peut le voir, il reste de nombreuses choses à effectuer, j'ai désorma
 - Ramener le site sur l'ovh une fois que tout cela sera fait 
 - Insérer une page de connexion
 - Sécurité si le temps me le permet mais cela me parait compliqué. 
-- Rajouter des routes pour amener aussi la partie de timothée sur le serveur 
 
 # Début du sprint 2 
 Le script remarche comme avant, j'ai simplement eu à effectuer une traduction html -> pug (des sites s'en occupent, c'est beaucoup plus facile du coup)
@@ -173,7 +172,9 @@ pierre.addEventListener('click', function(){
   })
 });
 ```
-J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction "appenchild()" pour faire apparaitre sa variable. 
+J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction "appenchild()" pour faire apparaitre sa variable.
+<br>
+J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.  
 
 ### Mise du site sur l'ovh 
 J'ai suivi en grande partie le [POK de Tunçai](/src/pok/un-site-chez-moi/TBi/ServeurDistant.md) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
@@ -181,4 +182,20 @@ Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo gith
 ```bash 
 git clone https://github.com/gabrielbarbe00/POK.git
 ```
-Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné, dans mon cas le port 10408. C'est à cette étape que cela coine. A voir. 
+Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné. Cet objectif est réalisé d'une manière très spécifique à express, il suffit d'ajouter deux lignes dans le fichier "app.js" :
+```bash
+const port = 10408
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
+Ainsi, l'application se lance désormais sur le bon port et tourne sur l'ovh, objectif accompli ! Il ne nous reste plus qu'à ouvrir un terminal virtuel tournant en continu afin que notre serveur ne se ferme pas dès que nous quittons le ssh.
+On rentre donc la commande suivante : 
+```bash
+screen -S PFC
+```
+On lance l'application puis nous quittons le terminal avec la commande CTRL A + D. 
+
+## Feedback
+Je dois avouer que la gestion du "back-end" m'a nettement moins parlé que celle du "front", je suis content d'avoir effectué ce POK pour m'en rendre compte. Je pense que les deux aspects du site sont en pratique très différent à coder, néanmoins ce projet était très formateur ne serait-ce que dans la compréhension de ce qu'est un site web. Je suis tout de même très déçu de n'avoir pu outrepasser le problème de mise à jour de l'historique, surtout que cela m'a pris énormément de temps que je n'ai pas pu passer à développer une page de connexion par exemple. 
