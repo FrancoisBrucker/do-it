@@ -43,3 +43,7 @@ En plus d'apprendre à coder ces transitions, on apprend des concepts très inte
 
 Pour mettre en pratique, ce que j'ai pu apprendre j'ai décidé de créer une page très simple HTML/CSS qui utilise un maximum d'animations. Même si, l'utilité de la page peut être discutable, elle me servira à m'entrainer et à créer de "belles animations"
 
+Pour utiliser sass sans trop me casser la tête, j'ai utilisé l'extension VSCode **Live Sass Compiler** qui permet de compiler notre code sass en css sans.
+
+Le lien vers le code est la : https://github.com/AntwanV/animCSS
+
