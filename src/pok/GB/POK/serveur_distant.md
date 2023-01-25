@@ -178,7 +178,7 @@ J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demand
 J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.  
 
 ### Mise du site sur l'ovh 
-J'ai suivi en grande partie le [POK de Tunçai](https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
+J'ai suivi en grande partie le [POK de Tuncay](https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
 Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier "node" :  
 ```bash 
 git clone https://github.com/gabrielbarbe00/POK.git
