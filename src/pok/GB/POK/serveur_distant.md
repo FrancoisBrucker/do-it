@@ -24,6 +24,7 @@ Sprint 2 :
 ### Nouveau projet Express 
 Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je crée un nouveau projet à l'adresse http://localhost:3000/. <br>
 Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur "http://developer.mozilla.org" et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.
+Mon code est disponible sur [Mon Github].(https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback)
 
 ### Création de la base de données 
 Afin de compléter mon premier site, j'ai eu pour idée d'ajouter une option permettant de sélectionner un champion et un pays : ainsi J1 sera désigné par le champion Zidane ou le pays Brésil. Le but est donc de créer une base de données avec 5 champions et 5 pays. J'ai repris en grande partie le code visible sur [mon MON](../../../mon/GB/Mons/coteweb) que j'ai personnalisé afin d'y mettre mes exigences. Le champion devra donc avoir les caractéristiques "nom", "prénom" et "numéro" ; le pays, lui, sera associé aux caractéristiques "nom" et "couleur". Ci-dessous le code concernant le champion : 
@@ -83,7 +84,7 @@ Nous en arrivons ici à la partie création des routes pour notre site sur le se
 - http://localhost:3000/catalog/joueurs
 - http://localhost:3000/users
 Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données. 
-![Routes](../POK/Images/routes.png)
+ <img src="./../Images/routes.png" alt='routes'/>
 
 ### Etablissement des premières pages 
 
@@ -159,8 +160,8 @@ block content
   else
     li There are no authors.
 ```
-Ma page historique ressemble alors à cela : ![Historique sans CSS](../POK/Images/Historique)
-En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : ![Historique à jour](../POK/Images/Data.png)
+Ma page historique ressemble alors à cela : <img src="./../Images/Historique.png" alt='routes'/>
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="./../Images/Data.png" alt='routes'/>
 
 ### Mise à jour de la base de données
 Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction "appenchild" pour faire apparaitre la liste de coups et que mes variables "pierre", "feuille" et "ciseaux" ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier "coup.js", le terminal me renvoi que la variable "pierre" n'est pas déclarée : 
@@ -177,7 +178,7 @@ J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demand
 J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.  
 
 ### Mise du site sur l'ovh 
-J'ai suivi en grande partie le [POK de Tunçai](/src/pok/un-site-chez-moi/TBi/ServeurDistant.md) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
+J'ai suivi en grande partie le [POK de Tunçai](https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/) qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences. 
 Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier "node" :  
 ```bash 
 git clone https://github.com/gabrielbarbe00/POK.git
@@ -196,6 +197,7 @@ On rentre donc la commande suivante :
 screen -S PFC
 ```
 On lance l'application puis nous quittons le terminal avec la commande CTRL A + D. 
+Le site est disponible à [cette adresse](http://node.coriandre.ovh1.ec-m.fr)
 
 ## Feedback
 Je dois avouer que la gestion du "back-end" m'a nettement moins parlé que celle du "front", je suis content d'avoir effectué ce POK pour m'en rendre compte. Je pense que les deux aspects du site sont en pratique très différent à coder, néanmoins ce projet était très formateur ne serait-ce que dans la compréhension de ce qu'est un site web. Je suis tout de même très déçu de n'avoir pu outrepasser le problème de mise à jour de l'historique, surtout que cela m'a pris énormément de temps que je n'ai pas pu passer à développer une page de connexion par exemple. 
