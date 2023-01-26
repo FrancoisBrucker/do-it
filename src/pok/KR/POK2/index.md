@@ -87,7 +87,7 @@ En raison de nombreux projets parallèles, je n'ai malheureusement pas pu travai
 - [ ] Créer une machine virtuelle et cacher quelques flags
 - [ ] Créer un manual pour la machine virtuelle
 
-En clair : j'ai été débordé par d'autres tâches et j'ai donc fini par manquer de temps pour faire le POK consciencieusement. C'est pourquoi j'ai fait écrire une grande partie du texte par [ChatGPT](chat.openai.com). Évidemment, je l'ai relu plusieurs fois et adapté le cas échéant. Souvent, le texte était très générique, ce qui m'a obligé à investir encore pas mal de travail dans les détails. Néanmoins, pour des raisons de transparence, il est important de dire que beaucoup de choses viennent de ChatGPT. Je suis très satisfait du résultat final, mais je pense que je n'aurais pas pu le faire sans ChatGPT.
+En clair : j'ai été débordé par d'autres tâches et j'ai donc fini par manquer de temps pour faire le POK consciencieusement. C'est pourquoi j'ai fait écrire une grande partie du texte par [ChatGPT](https://chat.openai.com). Évidemment, je l'ai relu plusieurs fois et adapté le cas échéant. Souvent, le texte était très générique, ce qui m'a obligé à investir encore pas mal de travail dans les détails. Néanmoins, pour des raisons de transparence, il est important de dire que beaucoup de choses viennent de ChatGPT. Je suis très satisfait du résultat final, mais je pense que je n'aurais pas pu le faire sans ChatGPT.
 
 ## Défintions
 ### Hacking
