@@ -34,17 +34,59 @@ Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 
 <div class="allButtonGestionProjet">
   <a href="./gestionProjet/temps1" class="buttonGestionProjet">
-    <span><b>Temps 1 :</b> Un site chez moi</span>
+    <span><b class="hoverUnderline">Temps 1 :</b> Un site chez moi</span>
   </a>
 
   <a href="./gestionProjet/temps2" class="buttonGestionProjet">
-    <span><b>Temps 2 :</b> Serveur distant</span>
+    <span><b class="hoverUnderline">Temps 2 :</b> Serveur distant</span>
   </a>
 
   <a href="./gestionProjet/temps3" class="buttonGestionProjet">
-    <span><b>Temps 3 :</b> Amélioration continue</span>
+    <span><b class="hoverUnderline">Temps 3 :</b> Amélioration continue</span>
   </a>
 </div>
+
+
+
+
+## Idée de ce POK
+
+L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.
+
+Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :
+
+<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
+<br>
+
+{% info %}
+**Règles du jeu**
+Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque case se trouve une lettre qui apparaît dans la grille. A chaque lettre révélée il faut gratter les occurrences de cette lettre dans la grille. Une fois toutes les cases **?** grattées, on remporte de l’argent suivant le nombre de mots entièrement reconstitués.
+{% endinfo %}
+
+## Technologies utilisées
+
+<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
+
+-  **Front-end** : Svelte + TailwindCSS
+- **Back-end** : NestJS
+- **API** : REST
+- **Moyen d'authentification** : JWT (*JSON Web Token*)
+- **Base de données** : PostgreSQL
+
+## Schéma d'entités
+
+<div style="display: grid; place-items: center;">
+  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;" />
+</div>
+
+On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.
+
+## Fonctionnalités
+
+Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.
+
+Gestion des utilisateurs, avec connexion et gestion de solde.
+
 
 <style>
   a.imageContainer{
@@ -95,51 +137,25 @@ Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
     display: block;
     color: white;
   }
-  a.buttonGestionProjet b{
-    text-decoration: underline white;
-  }
   div.allButtonGestionProjet{
     display:flex;
     flex-direction:row;
     justify-content: space-around;
   }
+  .hoverUnderline{
+    position:relative;
+  }
+  a.buttonGestionProjet .hoverUnderline::after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 0.125em;
+    width: 0;
+    background-color:white;
+    transition: all 0.5s;
+  }
+  a.buttonGestionProjet:hover .hoverUnderline::after{
+    width:100%;
+  }
 </style>
-
-
-## Idée de ce POK
-
-L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.
-
-Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :
-
-<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
-<br>
-
-{% info %}
-**Règles du jeu**
-Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque case se trouve une lettre qui apparaît dans la grille. A chaque lettre révélée il faut gratter les occurrences de cette lettre dans la grille. Une fois toutes les cases **?** grattées, on remporte de l’argent suivant le nombre de mots entièrement reconstitués.
-{% endinfo %}
-
-## Technologies utilisées
-
-<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
-
--  **Front-end** : Svelte + TailwindCSS
-- **Back-end** : NestJS
-- **API** : REST
-- **Moyen d'authentification** : JWT (*JSON Web Token*)
-- **Base de données** : PostgreSQL
-
-## Schéma d'entités
-
-<div style="display: grid; place-items: center;">
-  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;" />
-</div>
-
-On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.
-
-## Fonctionnalités
-
-Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.
-
-Gestion des utilisateurs, avec connexion et gestion de solde.
