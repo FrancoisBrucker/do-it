@@ -20,6 +20,47 @@ Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 - Microservice: [https://github.com/Jean-Baptiste-DP/mots-croises-generateur](https://github.com/Jean-Baptiste-DP/mots-croises-generateur)
 {% endinfo %}
 
+<a href="http://balsamite.ovh1.ec-m.fr" class="imageContainer">
+  <img src="./images/gamePage.png" alt="Page de jeu" class="viewPage">
+  <div class="infoTitles">
+    <p class="title">Mots croisés</p>
+    <p class="link">http://balsamite.ovh1.ec-m.fr</p>
+  </div>
+</a>
+
+<style>
+  a.imageContainer{
+    margin: 50px auto;
+    width: 550px;
+    display: block;
+    border: 4px solid rgb(22,163,74);
+    border-radius: 25px;
+    --opacity:0.2;
+    transition: all 1s;
+    background-color : rgba(22,163,74,var(--opacity));
+    text-decoration:none;
+  }
+  a.imageContainer:hover{
+    --opacity:0.6;
+  }
+  img.viewPage{
+    width:500px;
+    margin: 25px 25px 15px 25px;
+    border-width:0;
+  }
+  div.infoTitles .title{
+    font-size:32px;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+  div.infoTitles .link{
+    margin: 0 0 25px 0; 
+    text-align: center;
+    font-weight: 350;
+  }
+</style>
+
 <br>
 
 # Temps 1
