@@ -101,6 +101,19 @@
     <p class="link">http://balsamite.ovh1.ec-m.fr</p>
   </div>
 </a>
+<br>
+<h2>Gestion de projet</h2>
+<div class="allButtonGestionProjet">
+  <a href="./gestionProjet/temps1" class="buttonGestionProjet">
+    <span><b>Temps 1 :</b> Un site chez moi</span>
+  </a>
+  <a href="./gestionProjet/temps2" class="buttonGestionProjet">
+    <span><b>Temps 2 :</b> Serveur distant</span>
+  </a>
+  <a href="./gestionProjet/temps3" class="buttonGestionProjet">
+    <span><b>Temps 3 :</b> Amélioration continue</span>
+  </a>
+</div>
 <style>
   a.imageContainer{
     margin: 50px auto;
@@ -132,9 +145,33 @@
     text-align: center;
     font-weight: 350;
   }
+  a.buttonGestionProjet{
+    display: flex;
+    height: 50px;
+    width: 280px;
+    background-color: rgb(22,163,74);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    padding: auto 0;
+    border: 4px white solid;
+    outline: 4px rgb(22,163,74) solid;
+    text-decoration: none;
+  }
+  a.buttonGestionProjet span{
+    display: block;
+    color: white;
+  }
+  a.buttonGestionProjet b{
+    text-decoration: underline white;
+  }
+  div.allButtonGestionProjet{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
 </style>
-<br>
-<h1>Temps 1</h1>
 <h2>Idée de ce POK</h2>
 <p>L'idée de ce POK est de créer une site contenant une partie frontend, une partie backend qui va communiquer avec le frontend via une API. On ajoutera également une base de données afin de pouvoir stocker les informations.</p>
 <p>Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :</p>
@@ -165,134 +202,6 @@ Nous disposons de 14 cases <strong>?</strong> et d’une grille de mots. Derriè
 <h2>Fonctionnalités</h2>
 <p>Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.</p>
 <p>Gestion des utilisateurs, avec connexion et gestion de solde.</p>
-<h2>Objectifs points POK</h2>
-<!-- ### Ce qu'on avait prévu la dernière séance
-### Ce qu'on a fait depuis
-### Ce qu'on prévoit pour la prochaine séance  -->
-<h3>Ce qu'on a prévu pour le 1er point POK</h3>
-<ul>
-<li><em>Découvrir</em> les framework pour le front : Svelte et TailwindCSS
-<ul>
-<li><a href="https://svelte.dev/tutorial/basics">Tuto Svelte</a></li>
-<li><a href="https://tailwindcss.com/docs/installation">Tuto TailwindCSS</a></li>
-<li>TailwindCSS avec Svelte : <a href="https://blog.logrocket.com/how-to-use-tailwind-css-with-svelte/">lien 1</a>, <a href="https://tailwindcss.com/docs/guides/sveltekit">lien 2</a></li>
-</ul>
-</li>
-<li>Créer une <em>ébauche</em> de front en static
-<ul>
-<li>Créer une page avec des <em>éléments simples</em></li>
-<li>Créer une page avec différents <em>components</em></li>
-<li>Commencer à structurer la page du projet
-<ul>
-<li>Component <em>grille</em></li>
-<li>Component <em>navbar</em></li>
-<li>Component <em>info utilisateurs</em></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3>Ce qu'on a fait</h3>
-<ul>
-<li>Découverte de Svelte et implémentation de TailwindCSS</li>
-<li>Création des différents composants + interaction (bind des variables, props)</li>
-<li>Style avec TailwindCSS + animations</li>
-<li>Création des différents pages (jeu, login, register)</li>
-<li>Début des tutoriels NestJS + génération du backend et docker compose.</li>
-<li>Réflexion sur le schéma d'entités (On va utiliser MySQL plutot que MongoDB)</li>
-</ul>
-<h3>Ce qu'on a prévu pour le second point POK</h3>
-<ul>
-<li>Découverte plus approfondie de NestJS</li>
-<li>Création des entités (User et Game)</li>
-<li>Création des routes associées si on fait une API REST ou bien création + paramétrage du endpoint si on utilise GraphQL</li>
-<li>Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT</li>
-</ul>
-<p><em>Si on a le temps : essayer de faire un algo qui génère une grille à partir d'une liste de mots obtenue via une API externe</em></p>
-<h3>Ce qu'on a fait à la fin du temps 1</h3>
-<ul>
-<li>Création du backend (DB + PHPMyAdmin) le tout fonctionnant avec Docker.</li>
-<li>Création des entités (User et Game)</li>
-<li>Connexion du backend avec la base de données</li>
-<li>Hashage des mots de passe en base de données</li>
-<li>Sécurisation de l'API via JWT (Guard)</li>
-<li>Connexion entre le front et le back avec stockage du token de connexion dans le localStorage</li>
-<li>Ajout de la mécanique de jeu dans le backend</li>
-</ul>
-<h3>Ce qu'il reste à faire pour le temps 2</h3>
-<ul>
-<li>Amélioration du code</li>
-<li>Finitions</li>
-<li>Création de l'algo de génération de grille avec appel à une API externe</li>
-<li>Amélioration de l'environnement Docker</li>
-<li>Création de fixtures ?</li>
-<li>Rédaction de tests unitaires ?</li>
-<li>Début de pipeline ?</li>
-</ul>
-<h1>Temps 2</h1>
-<h2>Choses à faire durant ce temps 2</h2>
-<ul>
-<li>Finir la connexion entre le front et le back</li>
-<li>Améliorer le projet :
-<ul>
-<li>Création de parties</li>
-<li>Listes des parties jouées</li>
-<li>Pages de statistiques sur les parties jouées ?</li>
-<li>Finitions de styles</li>
-<li>Génération de grilles + choix des lettres améliorés (voyelles) pour pas gagner trop d'argent quand même</li>
-<li>Connecter la page de register au back plus redirection qui s'en suit</li>
-<li>Solde dans la navbar</li>
-<li>Responsive à checker partout</li>
-<li>Recharge de solde</li>
-</ul>
-</li>
-<li>Mettre en prod le projet + régler tous les problèmes possibles</li>
-<li>Passer en PostgreSQL pour matcher avec ce qu'il y a sur le OVH ?</li>
-</ul>
-<h2>1er Sprint</h2>
-<ul>
-<li>Fixer les quelques erreurs pour un jeu fonctionnel mais pas &quot;complet&quot; (le minimum syndical).
-<ul>
-<li>Problème de connexion (accès et limitation des pages, refresh sur la page d'accueil pour la connexion effective)</li>
-</ul>
-</li>
-<li>Déployer le front, le back et la BDD.</li>
-</ul>
-<h2>Ce qui a été fait au 1er sprint</h2>
-<ul>
-<li>Correction du login et register</li>
-<li>Protection des routes</li>
-<li>Lister les parties</li>
-<li>Passage à PostgreSQL</li>
-<li>Mise en production du projet dans l'état actuel sur le serveur OVH : (front dans <code>/www/</code>, back dans <code>/node/</code>) et connexion avec la base de données en PGSQL disponibles sur le serveur OVH. L'application est disponible sur <a href="http://balsamite.ovh1.ec-m.fr">http://balasamite.ovh1.ec-m.fr</a></li>
-<li>Fix de bugs</li>
-</ul>
-<h2>2e sprint</h2>
-<ul>
-<li>Connexion de la partie entre le front et le back</li>
-<li>Améliorer le style et la responsivité</li>
-<li>Algorithme de génération de grilles</li>
-<li>Solde dans la navbar</li>
-<li>Autres améliorations</li>
-<li>Redéployer l'ensemble du projet avec les modifications effectuées</li>
-</ul>
-<h2>Ce qui a été fait au 2ème sprint</h2>
-<ul>
-<li>Amélioration du style et de la responsivité (à poffiner encore un peu)</li>
-<li>Algorithme de génération de grilles sour la forme d'un microservice appelé par le backend</li>
-<li>Solde dans la navbar en lien avec le solde en DB</li>
-<li>Recharge du compte</li>
-<li>Logout</li>
-<li>Redéploiement du projet</li>
-</ul>
-<h2>Ce qu'il reste à faire pour le temps 3</h2>
-<ul>
-<li>Amélioration du jeu (style, mécanique ...)</li>
-<li>Optimisation de l'algo de génération de grilles</li>
-<li>Écriture de tests ?</li>
-<li>Optimisation du déploiement (scripts ou pipeline)</li>
-</ul>
-<h1>Temps 3</h1>
 
 
 </article>
