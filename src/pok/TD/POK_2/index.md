@@ -10,7 +10,7 @@ tags: ['Front', 'Back']
 
 ### But : Coder un site en local
 
-Pour ce projet, je compte illustrer la dualité de mon parcours en développant un site, focalisé sur du front-end, répertoriant mes projets Data/IA et Dev sur leurs propres pages comme une sorte de mini [git-hub](https://github.com/ThomasDGH/POK_2/).
+Pour ce projet, je compte illustrer la dualité de mon parcours en développant un site, focalisé sur du front-end, répertoriant mes projets Data/IA et Dev sur leurs propres pages comme une sorte de mini [github](https://github.com/ThomasDGH/POK_2/).
 
 ## Plan du POK
 
