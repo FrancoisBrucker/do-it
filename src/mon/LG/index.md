@@ -19,8 +19,8 @@ L'ensemble de mes MON
 
 ### Temps 2
 - [Premier MON: **Programation Objet**](./MON3/)
-- [Deuxième MON:**Djangogirls**](./MON4/))
+- [Deuxième MON:**Djangogirls**](./MON4/)
 
 ### Temps 3
-- Premier MON: 
+- [Premier MON: **Sobriété Numérique et stratégie digitale**](./MON6/)
 - Deuxième MON: 
