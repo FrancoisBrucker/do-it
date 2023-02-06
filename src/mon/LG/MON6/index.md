@@ -1,4 +1,4 @@
- ---
+---
 layout: layout/post.njk
 
 title: "MON 6: Sobriété Numérique et stratégie digitale"
