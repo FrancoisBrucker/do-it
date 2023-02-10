@@ -41,8 +41,9 @@ On identifie 3 types de sources d’émissions :
 - Les réseaux : Les données sont transportées grâce à des millions de km de câbles, fibre optiques…
 
 
-Avec l’essor du numérique, ces émissions pourraient doubler d’ici 2025. D’autant plus que la simplicité du numérique provoque un effet rebond : on consomme plus car on est libéré de limites physiques, budgétaires... Par exemple, on envoi plus de mails  que ce qu’on aurait envoyé de lettre si les mails n’existaient pas
-
+Avec l’essor du numérique, ces émissions pourraient doubler d’ici 2025. D’autant plus que la simplicité du numérique provoque un effet rebond : on consomme plus car on est libéré de limites physiques, budgétaires... Par exemple, on envoi plus de mails  que ce qu’on aurait envoyé de lettre si les mails n’existaient pas.
+De plus, certaines technologies en vogue comme l'IA sont très gourmandes en énergie. On entend beaucoup parler de ChatGPT ces temps-ci mais peu de monde s'interesse à son empreinte carbonne.
+Des chercheurs du MIT ont estimé l’empreinte carbone des quatre modèles les plus sophistiqués de l’IA (GPT-3, BERT, ELMo, Transformer). Leurs conclusions: une session d'entraînement d’un modèle peut générer environ 282 tonnes d’équivalent CO2 (cinq fois plus qu’une voiture américaine durant tout son cycle de vie). Pour Chat GPT, on estime 552 tonnes de CO2 pour l'entrainement de GPT 3, et 8,4 tonnes de CO2 par an pour son utilisation. C'est un réel gouffre energétique.
 
 {% prerequis "Source" %}
 https://www.youtube.com/watch?v=DwRAVINpsB4
@@ -66,6 +67,10 @@ Quelques chiffres effrayants en plus : (en 2019)
 - Un écran d’ordinateur de 21,5 pouces émet 222 kg de CO2e. L’équivalent de 1 000 km en voiture.
 - Dans le monde : il y a 34 milliards d’équipements pour 4,1 milliards d’utilisateurs (soit 8 équipements par utilisateurs et 223 tonnes d’appareils)
 - 3 trillions d’octets de données sont générées chaque jour
+
+The Shift project a publié un second rapport en mars 2021 qui actualise les chiffres de l'impact du numérique et comfirme certaines de leurs hypothèses d'évolution. Ainsi, le taux de croissance des émissions de GES dues au numérique est d’environ 6 % chaque année depuis 2019. L'impact du secteur n'a fait qu'augmenter ces dernières années.
+D'ici 2025 le numérique représentera entre 5,5 % et 7% des émissions mondiales.
+
 
 Maintenant que nous sommes conscients du problème, quelles sont les solutions ?
 
@@ -135,6 +140,7 @@ https://www.itpro.fr/la-sobriete-numerique-au-coeur-des-strategies-des-entrepris
 {% endprerequis  %}
 
 
+## 4.Evolution de certains métiers : les nouvelles offres de conseil et le développement responsable 
 
 
 Dans ce contexte, les offres des entreprises de conseil évoluent. Lorsqu’on se promène sur les sites de ce dernière, des démarches « durables » ou « responsables » sont mises en avant. 
@@ -179,3 +185,24 @@ Quelques bonnes pratiques :
 
 De nouveaux services innovants voient aussi le jour tel que Treebal, une plateforme de messagerie eco conçue.
 https://www.treebal.green/eco-conception.html
+
+
+## 5. Les labels
+
+Aujourd’hui, aucune norme autour de la sobriété numérique n’est certifiable (contrairement  à la norme ISO 9001 par exemple). Seul le recours à la labellisation permet de valoriser cette démarche dans les entreprises .On dénombre  de nombreux d'éco-labels plus ou moins reconnus. En général, ceux-ci reprennent les exigences réglementaires imposées aux produits IT et plus largement aux équipements numériques à l'échelle nationale ou européenne 
+
+
+Pour les éditeurs de logiciels ou site web, plusieurs labels (plutôt récents) existent. En France les principaux labels sont le label Greenspector, Le green code label  et label Numérique Responsable soutenu par le ministère de la Transition écologique.
+L’obtention de ces labels nécessite de suivre des formations sur la sobriété numérique et de passer un audit  avec un expert (Le label est obtenu si ‘entreprise atteint un certain score). Chacun est valable pendant 2 ans environ.
+
+Pour les fabricants de hardware, les labels sont plus nombreux et plus vieux (ils existent depuis les années 1990). En général ils couvrent les impacts environnementaux d'un produit, de l'extraction des matières premières au recyclage, en passant par l'usage.
+A l’échelle de l’Europe, on peut citer les labels Nordic Swan, Blue Angel et TCO.
+Rappelons ici qu’il faut être vigilant face aux labels ! Ces derniers peuvent en effet être gage de qualité des produits cependant de nombreux labels se contentent de reprendre les critères légaux et restent vagues sur leur manière d’évaluer les entreprises. N’oublions pas de nous renseigner et d’exercer notre esprit critique lorsqu’on rencontre l’un d’eux.
+
+
+{% prerequis "Source" %}
+
+https://lebondigital.com/label-ecologique-site-web-responsable/
+https://www.actu-environnement.com/blogs/dominique-ortoli/96/labels-normes-greenit-eco-labellisation-RSE-139.html
+
+{% endprerequis %}
