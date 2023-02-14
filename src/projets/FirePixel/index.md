@@ -25,7 +25,7 @@ Il n'y a pas de modération automatique, mais les administrateurs se réservent 
 
 ## En Pratique
 
-Le projet sera déployé sur un écran qui pourra être posé n'importe où dans centrale. Celui pourra par exemple être dans un lieu de pause comme à coté des distributeurs de café ou dans un lieu de passage.
+Le projet sera déployé sur un écran qui pourra être posé n'importe où dans Centrale. Celui-ci pourra par exemple être dans un lieu de pause comme à coté des distributeurs de café ou dans un lieu de passage.
 
 Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à l'application. Sur leur téléphone, ils peuvent choisir un pixel et une couleur, et appliquer la modification (qui sera alors affichée en temps réel sur l'écran principal) à l'aide d'un joystick.
 Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur.
