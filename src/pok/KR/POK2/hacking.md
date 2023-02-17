@@ -25,7 +25,7 @@ Tout le reste s'apprend ici ou dans la pratique, c'est-à-dire dans les CTF. Com
 {% endprerequis %}
 
 ### Sur ce document
-Ce document a été réalisé dans le cadre d'un POK dans le parcours ["Do-It"](../../../about/index) à l'EC Marseille. Le choix des thèmes est plus ou moins arbitraire, il ne prétend expressément pas à l'exhaustivité. Il doit s'agir d'un recueil de thèmes intéressants pour les participants et qu'ils peuvent mettre en pratique. Il n'y aura pas d'explication approfondie des sujets, mais seulement une brève introduction et quelques liens vers des informations complémentaires. Les participants devront se former de manière autonome et approfondir les sujets. Il s'agit d'une introduction aux technologies de base du hacking, de sorte que l'on puisse avoir un aperçu de tout ce qui est possible dans ce domaine.
+Ce document a été réalisé dans le cadre d'un POK dans le parcours ["Do-It"](../../../../about/index) à l'EC Marseille. Le choix des thèmes est plus ou moins arbitraire, il ne prétend expressément pas à l'exhaustivité. Il doit s'agir d'un recueil de thèmes intéressants pour les participants et qu'ils peuvent mettre en pratique. Il n'y aura pas d'explication approfondie des sujets, mais seulement une brève introduction et quelques liens vers des informations complémentaires. Les participants devront se former de manière autonome et approfondir les sujets. Il s'agit d'une introduction aux technologies de base du hacking, de sorte que l'on puisse avoir un aperçu de tout ce qui est possible dans ce domaine.
 Ce document est ouvert à l'extension, afin que les lecteurs puissent y trouver davantage d'informations à l'avenir. 
 
 {% exercice %}
@@ -118,13 +118,13 @@ Dans les événements CTF, les défis de la criminalistique numerique impliquent
 ### Outils intégrés
 Il existe plusieurs outils d'analyse légale de base qui sont couramment utilisés sur les systèmes Linux pour analyser et étudier les données. Certains de ces outils incluent :
 
-file : Cet outil est utilisé pour identifier le type de fichier en fonction de son contenu. Il peut être utilisé pour déterminer si un fichier est une image, un document texte ou un exécutable, par exemple.
+**file** : Cet outil est utilisé pour identifier le type de fichier en fonction de son contenu. Il peut être utilisé pour déterminer si un fichier est une image, un document texte ou un exécutable, par exemple.
 ```bash
 $ file ~/Downloads/flag.png
 ~/Downloads/flag.png: PNG image data, 800 x 600, 8-bit/color RGB, non-interlaced
 ```
 
-strings : Cet outil est utilisé pour extraire des chaînes de caractères imprimables d'un fichier. Il peut être utile pour identifier des mots-clés ou du texte dans un fichier qui peuvent être pertinents pour une enquête.
+**strings** : Cet outil est utilisé pour extraire des chaînes de caractères imprimables d'un fichier. Il peut être utile pour identifier des mots-clés ou du texte dans un fichier qui peuvent être pertinents pour une enquête.
 ```bash
 $ strings ~/Downloads/flag.png
 libc.so.6
@@ -135,21 +135,21 @@ flag{strings_are_useful}
 __cxa_finalize
 ```
 
-dd : Cet outil est utilisé pour effectuer des copies au niveau des bits de supports de stockage, tels que des disques durs ou des clés USB. Il peut être utilisé pour créer une copie exacte d'un périphérique de stockage à des fins d'analyse médico-légale.
+**dd** : Cet outil est utilisé pour effectuer des copies au niveau des bits de supports de stockage, tels que des disques durs ou des clés USB. Il peut être utilisé pour créer une copie exacte d'un périphérique de stockage à des fins d'analyse médico-légale.
 Cette commande va créer une copie exacte de l'ensemble du disque dur /dev/sda et l'enregistrer dans le fichier /path/to/image.dd :
 ```bash
 $ dd if=/dev/sda of=/path/to/image.dd bs=1M
 ```
 
-grep : Cet outil est utilisé pour rechercher des motifs ou du texte spécifiques dans un fichier ou un groupe de fichiers. Il peut être utilisé pour rechercher des mots-clés ou des chaînes de texte spécifiques dans un fichier.
+**grep** : Cet outil est utilisé pour rechercher des motifs ou du texte spécifiques dans un fichier ou un groupe de fichiers. Il peut être utilisé pour rechercher des mots-clés ou des chaînes de texte spécifiques dans un fichier.
 ```bash
 $ grep "example" /path/to/file
 example text found on line 10
 ```
 
-hexdump : Cet outil est utilisé pour afficher le contenu d'un fichier au format hexadécimal. Il peut être utile pour identifier des modèles hexadécimaux dans un fichier qui peuvent être pertinents pour une enquête.
+**hexdump** : Cet outil est utilisé pour afficher le contenu d'un fichier au format hexadécimal. Il peut être utile pour identifier des modèles hexadécimaux dans un fichier qui peuvent être pertinents pour une enquête.
 
-md5sum : Cet outil est utilisé pour vitement calculer le hachage MD5 d'un fichier. Un hachage est une représentation unique du contenu d'un fichier, et peut être utilisé pour vérifier l'intégrité d'un fichier ou pour identifier si deux fichiers sont identiques.
+**md5sum** : Cet outil est utilisé pour vitement calculer le hachage MD5 d'un fichier. Un hachage est une représentation unique du contenu d'un fichier, et peut être utilisé pour vérifier l'intégrité d'un fichier ou pour identifier si deux fichiers sont identiques.
 ```bash
 $ md5sum ~/Downloads/flag.png
 a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png

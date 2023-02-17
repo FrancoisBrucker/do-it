@@ -274,4 +274,4 @@ Voici un exemple d'une personne ayant réalisé cela : [compiler if and while](h
 
 **Mon projet**
 
-[GitHub](https://github.com/Jean-Baptiste-DP/Initiation-Yacc-Lex)
+[GitHub](https://github.com/Jean-Baptiste-DP/Compiler-Yacc-Lex)

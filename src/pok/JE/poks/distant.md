@@ -51,7 +51,7 @@ Les tâches que je veux faire pour mon 2ème sprint :
 
 ### Bilan
 
-J'ai au final réussi à connecter ma base de données local à l'aide de SQLAlchemy et à avoir une base de données effectives. J'ai également pu déployer finalement mon projet sur le serveur OVH sur le lien [node.houblon.ovh1.ec-m.fr](node.houblon.ovh1.ec-m.fr) avec l'aide de M.Brucker, la configuration nginx Flask étant daté. 
+J'ai au final réussi à connecter ma base de données local à l'aide de SQLAlchemy et à avoir une base de données effectives. J'ai également pu déployer finalement mon projet sur le serveur OVH sur le lien [node.houblon.ovh1.ec-m.fr](http://node.houblon.ovh1.ec-m.fr) avec l'aide de M.Brucker, la configuration nginx Flask étant daté. 
 Je n'ai par contre pas pu mettre en place l'envoi de mail périodique dans ma boîte mail avec le contenu actualisé de la base de données car la fin d'une session se fait sans l'envoi de requêtes. Je me pose la question de la pertinence de cet ajout, car il était surtout présent pour que je puisse toucher un peu aux sessions, ce que j'ai déjà pu voir à travers ce POK et un peu à travers mon projet 3A.
 
 ## Conclusion

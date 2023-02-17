@@ -39,7 +39,7 @@ Une API va alors exposer des **routes** (que l'on appelle aussi **endpoints** en
 
 ### Les API REST
 
-Une API REST (*Representational State Transfer*) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des [status code](http.cat) afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.
+Une API REST (*Representational State Transfer*) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des [status code](http://http.cat) afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.
 
 <img src="./../images/api_rest.png" style="border-width: 0; width: 100%;" />
 

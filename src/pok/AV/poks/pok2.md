@@ -1,76 +1,31 @@
 ---
 layout: layout/post.njk
 
-title: "POKs d'Antoine Varnerot"
+title: "POK 2"
 authors:
   - Antoine Varnerot
 
-tags: ['pok']
 ---
 <head>
-  <link rel="stylesheet" href="../../un-site-chez-moi/AV/assets/style.css">
+  <link rel="stylesheet" href="../../assets/style.css">
 </head>
-
-<!-- Début Résumé -->
-MONs d'Antoine Varnerot
-
-<!-- fin Résumé -->
-
-## Temps 1
-
-<p style="text-align: center; font-size: 1.5rem;"><strong>Mon site chez moi</strong></p>
-
-L'objectif de ce POK est de créer un portfolio.
-
-Lien vers le repo Github : https://github.com/AntwanV/POKcv
-
-Voici le wireframe : 
-
-<figure>
-  <img src="../../un-site-chez-moi/AV/assets/wireframe.png">
-  <figcaption>Wireframe du portfolio</figcaption>
-</figure>
-
-J'ai ensuite choisi de réaliser mon site avec Angular car j'avais fait mon premier MON sur cette technologie. Je l'ai complété avec SASS qui est un framework CSS mais que j'ai clairement pas utilisé à son plein potentiel. C'était plus pour essayer une techno.
-
-Dans le projet j'ai aussi eu besoin de quelques librairies :
-- bootstrap
-- ngx-vertical : timeline verticale (https://github.com/aleckendall/ngx-timeline-vertical)
-- locomotive-scroll : smooth scroll (https://github.com/locomotivemtl/locomotive-scroll)
-- ...
-
-Toutes ces librairies sont disponibles dans le fichier package.json
-
-TODO :
-- ~~Trouver une idée de site~~
-- ~~Choix des technologies~~ 
-- ~~Créer l’arborescence du site~~
-- ~~Faire un schéma du positionnement des éléments d’une page pour chaque page (wireframe)~~
-- ~~Créer repo Github pour le projet~~
-- Développer le front-end :
-    1. Création des éléments HTML
-    2. Fonctionnalités (JS)
-    3. Intégration du style CSS
-- Rédiger les contenus
-
-
-## Temps 2 (5,5 semaines)
-
 <p style="text-align: center; font-size: 1.5rem;"><strong>Mon site distant</strong></p>
 
-Pour ce deuxième POK, j'ai choisi de me concentrer un peu plus sur le <strong>backend</strong> et sur comment mettre un site <strong>en ligne.</strong>
+Pour ce deuxième POK, j'ai choisi de me concentrer un peu plus sur le <strong>backend</strong> et sur "comment mettre un site <strong>en ligne.</strong>"
 Déployer un site sur un serveur ovh a été partiellement vue dans le cours de "serveur distant".
 
 L'idée du site à créer est d'avoir un feed de musiques partagées par des utilisateurs et que toute la communauté puisse voter +1/-1 pour les musiques partagées. Je vais donc me concentrer sur la partie backend et les différentes requêtes HTTP. L'objectif est aussi d'utiliser une base de données afin d'avoir un site complet en ligne. 
 
 <figure>
-  <img src="../../un-site-chez-moi/AV/assets/wireframe2.png">
+  <img src="../../assets/wireframe2.png">
   <figcaption>Wireframe de l'app</figcaption>
 </figure>
 
-Pendant le premier sprint, j'ai créé les repos pour le front et la back de mon app :
-- https://github.com/AntwanV/POK2
-- https://github.com/AntwanV/POK2-API
+Pendant le premier sprint, j'ai créé un mono-repo pour le front et la back de mon app :
+- https://github.com/AntwanV/POK2-fullstack
+Pour visualiser le site : 
+http://origan.ovh1.ec-m.fr/
+(Pas forcément avec toutes les dernières fonctionnalités)
 
 J'ai ensuite choisi les technologies que j'allais utilisé. J'ai pris une stack très classique, la stack MEAN (MongoDb, Express, Angular, Node)
 <figure>
@@ -83,7 +38,7 @@ Plus d'informations : https://subscription.packtpub.com/book/web-development/978
 J'ai ensuite rempli ces repos, d'abord avec un front assez simple : 
 
 <figure>
-  <img src="../../un-site-chez-moi/AV/assets/basic-front.png">
+  <img src="../../assets/basic-front.png">
   <figcaption>Wireframe de l'app</figcaption>
 </figure>
 
@@ -113,12 +68,18 @@ TODO :
 Pour le second sprint, j'ai décidé de terminer d'abord les taches du premier sprint car elles étaient indispensables. Voici l aliste des taches après ce second sprint :
 
 - ~~définir l'architecture de la bdd~~ 
-- ~~connexion bdd (mongoDb ou postgreSQL), ORM ? ~~
+- ~~connexion bdd (mongoDb ou postgreSQL), ORM ?~~
 - ~~pouvoir ajouter de nouvelles musiques~~
 - ~~discuter avec l'api de Youtube par exemple pour intégrer la miniature de la musique ou même intégrer un lecteur~~
 - <span style="color:orange">pouvoir noter les musiques (j'aime ou j'aime pas)</span>
 - systeme de login. Cela comprend la création de nouvelles pages (inscription/connexion)
-- <span style="color:orange">deployer en ligne </span>
+- ~~deployer en ligne~~
 - tests 
 
-## Temps 3
+Implementer l'API de Youtube pour pouvoir rechercher directement les musiques sur Youtube plutot que d'entrer toutes les informations manuellement a été une tâche qui nous a pris plus de temps que prévu. En effet, on avait mal estimé le temps nécessaire à créer un compte sur la partie "dev" de Google et de comprendre comment se servir de l'API. 
+Tuto qui m'a aidé : https://blog.logrocket.com/build-a-youtube-video-search-app-with-angular-and-rxjs/
+Très complet !   
+
+Liens utils :
+https://developers.google.com/youtube
+https://console.cloud.google.com/

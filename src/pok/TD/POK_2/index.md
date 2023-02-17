@@ -10,7 +10,7 @@ tags: ['Front', 'Back']
 
 ### But : Coder un site en local
 
-Pour ce projet, je compte illustrer la dualité de mon parcours en développant un site, focalisé sur du front-end, répertoriant mes projets Data/IA et Dev sur leurs propres pages comme une sorte de mini [git-hub](https://github.com/ThomasDGH/POK_2/).
+Pour ce projet, je compte illustrer la dualité de mon parcours en développant un site, focalisé sur du front-end, répertoriant mes projets Data/IA et Dev sur leurs propres pages comme une sorte de mini [github](https://github.com/ThomasDGH/POK_2/).
 
 ## Plan du POK
 
@@ -93,6 +93,19 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 - Complexifier le service du site pour pouvoir utiliser l'API dans tout sa capacité.
 
 - Connecter une base de données à mon API pour avoir des propositions de projets persistantes.
+
+## Rendu final
+
+Le site présente une page d'accueil composée d'une partie Data/IA, d'une partie Dev et d'un bouton de requête.
+
+![Image accueil](aperçu%20POK%201.png)
+
+En cliquant sur l'une ou l'autre des moitiés Data/Dev, on accède à un carrousel des projets correspondants.
+![Image Carrousel](aperçu%20POK%203.png)
+
+En cliquant sur le bouton de proposition, on accède à un  formulaire et mon API back-end s'occupe de trier et d'afficher le propositions de projets.
+
+![Image formulaire](aperçu%20POK%202.png)
 
 ## Bilan
 
