@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>MON 5: Bases de VBA</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">MON 5: Bases de VBA</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Louise Gacoin</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <p>Dans ce  MON je vais me former au VBA.</p>
+<p>Sommaire :</p>
+<ol>
+<li>Premiers pas</li>
+<li>Ecriture d’une macro</li>
+<li>Les variables</li>
+<li>Conditions et boucles</li>
+<li>Utilisation des boites de dialogue</li>
+<li>Les tableaux</li>
+<li>Retour sur le tutoriel</li>
+<li>Petit projet</li>
+</ol>
+<p>LE VBA ou Visual Basic for Applications est un langage de programmation évènementielle créé par Microsoft. Il est très utilisé dans les entreprises il me sera donc utile d’avoir des bases sur le sujet.C’est un langage facile et flexible :   pratiquement chaque opération que vous pouvez effectuer avec une souris, clavier ou une boîte de dialogue peut également être automatisée à l’aide de VBA. Le VBA ne peut s’utiliser qu’avec des applications Microsoft, d’où la nécessité d’avoir une licence.</p>
+<p>Attention il existe une version en ligne d’excel mais celle-ci ne gère pas les macros :<br>
+<a href="https://www.microsoft.com/fr-fr/microsoft-365/free-office-online-for-the-web">https://www.microsoft.com/fr-fr/microsoft-365/free-office-online-for-the-web</a></p>
+<p>Pour ce MON j’ai suivi le tutoriel suivant :</p>
+<p><a href="https://www.excel-pratique.com/fr/vba">https://www.excel-pratique.com/fr/vba</a></p>
+<p>C’est un tutoriel assez complet qui ne demande aucune connaissance de base sur VBA.</p>
+<p>Ce compte rendu pourra servir de mémo pour les personnes connaissant déjà le VBA.</p>
+<h2>1. Premiers pas:</h2>
+<p>On découvre l’onglet développeur qui permet d’utiliser le VBA. Le  bouton « Visual Basic » permet d’accéder à l’éditeur de macros.</p>
+<p>INSERE IMG DU RUBAN DEV</p>
+<p>Dans cet éditeur on peut écrire du code dans des « Modules » . Une macro s’écrit toujours entre ces deux balises :</p>
+<pre><code>Sub nom_de_ma_macro ()
+EndSub
+
+</code></pre>
+<p>Une fois le code écrit il n’y a plus qu’ à insérer un bouton dans la feuille et le relier à la macro que l’on veut activer. (Insérer → Bouton (Contrôles de formulaires) )</p>
+<p>On peut aussi déclencher des macros avec des événements ( et non des boutons) par exemple au clique sur une cellule ou à l’activation d’une feuille.</p>
+<p>A noter : on peut enregistrer une macro : c’est à dire effectuer des manipulations avec la souris qui seront traduites en code par excel (c’est très pratique)</p>
+<p>Ici on voit un exemple de changement de colonnes et le code associé qu’a créé excel.</p>
+<p>INSERE IMG</p>
+<h2>2. Ecriture d’une macro :</h2>
+<p>Voici un petit exemple de macro</p>
+<p>INSERER IMG de l’exo 1</p>
+<p>Le schéma d’écriture est toujours le même et fonctionne un peu comme une programmation objet :</p>
+<p>On sélectionne un ensemble de cellules et on applique des propriétés/fonctions avec le « . »</p>
+<p>Mémo des Sélecteurs principaux :</p>
+<p>Workbooks(« Nom_du_fichiers ») ⇒ Sélectionner un autre classeur<br>
+Worksheets(« Nom_de_feuille ») ou Sheets(«  Nom_de_feuille ») ⇒ Sélectionner une autre feuille du classeur</p>
+<p>ActiveCell ⇒ concerne la cellule active (= la cellule qui est actuellement sélectionnée)<br>
+Selection ⇒   concerne la ou les cellule sélectionnées<br>
+Cells (num_ligne,num_colonne) ⇒ La cellule de coordonnées :  num_ligne et num_colonne<br>
+Range(« A8 »),<br>
+Range(« A1:A10 ») =&gt; les cellules A1 à A10<br>
+Range(« A1,A2 »)==&gt; les cellules A1 et A2</p>
+<p>On peut enchainer les sélecteurs :</p>
+<pre><code>Workbooks(« projet»).Worksheets(« Feuil2»).Range(« A8 »)
+</code></pre>
+<p>Ensuite on a les propriétés qui concernent l’apparence :</p>
+<p>Value : renvoie la valeur<br>
+Activate :<br>
+Font : modifie la police  		(Font .Size 	<a href="http://Font.Name">Font.Name</a> 		Font.Bold)<br>
+Borders : modifie les bordure de cellules<br>
+Font.Color = RGB(174, 240, 194):modifie la  couleur de police<br>
+Interior.Color = RGB(174, 240, 194) modifie la couleur de la cellule</p>
+<p>exemple d’utilisation :</p>
+<pre><code>Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;).Borders.Weight =4 
+Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;).Font.Bold = True
+</code></pre>
+<p>Pour éviter la répetition :</p>
+<pre><code>With Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;) 
+	.Borders.Weight = 4 
+	.Font.Bold = True
+End With
+</code></pre>
+<p>Enfin les fonctions excel :<br>
+Toutes les fonctions excel sont disponibles en tapant « WorksheetFunction. » dans l’éditeur de code. Un menu déroulant va alors apparaître avec les différentes fonctionne</p>
+<p>Voici une liste avec explications des différentes fonctions :</p>
+<p><a href="https://www.excel-pratique.com/fr/fonctions-vba">https://www.excel-pratique.com/fr/fonctions-vba</a></p>
+<h2>3. Les variables :</h2>
+<p>A chaque début de macro il faut  déclarer ses variables, on utilise :</p>
+<p>Dim nom_variable As Type_variable</p>
+<p>Les principaux types  de variable:<br>
+Integer : entier<br>
+Single = virgule flottante<br>
+String = texte<br>
+Boolean = booléen<br>
+Date</p>
+<p>Les opérations sur les variables sont semblables à celles qu’on effectue sur pyhton</p>
+<h2>4. Conditions et boucles:</h2>
+<p>Le fonctionnement des conditions en VBA est assez intuitif ( globalement cela marche comme en python)<br>
+La forme du bloc est la suivante :</p>
+<pre><code>If CONDITION Then 
+	INSTRUCTION
+ElseIf
+	INSTRUCTION
+Else 
+	INSTRUCTION
+End If
+</code></pre>
+<p>Attention, le « est différent de » s’écrit : &lt;&gt;<br>
+Les autres opérateurs :  And, Or, Not<br>
+On peut aussi tester le type :  If IsNumeric(Range...)</p>
+<p>Lorsqu’on a beaucoup de ElseIf, on préférera utiliser l’instruction Select<br>
+exemple d’utilisation :</p>
+<p>Dim note As Single, commentaire As String note = Range(&quot;A1&quot;)</p>
+<pre><code>Select Case note
+Case Is = 1,2 
+	 commentaire = &quot;résultat affligeant!&quot; 
+Case 3 to 4 
+	commentaire = &quot;résultat médiocre!&quot; 
+Case Is &gt;5
+	 commentaire = &quot;Bon résultat&quot;
+
+</code></pre>
+<p>comparaison des chaines de caractère :<br>
+Pour savoir si 2 chaines de caractère sont identiques on utilisera l’instruction Like<br>
+Par exemple :</p>
+<pre><code>If nom_variable Like &quot;des_caractères&quot; Then 
+</code></pre>
+<p>A noter : La comparaison n’a pas besoin d’être exacte !!! on peut ainsi inclure plusieurs possibilités<br>
+Exemple :</p>
+<pre><code>Variable = « Un joli poème »
+If Variable like « Un ????? poè[mt]e » 
+</code></pre>
+<p>le ? Signifie que n’importe quel caractère peut se trouver ici., les accolades signifient que l’un de ces caractères est présent à cet emplacement.</p>
+<p>On effectue le boucles ainsi :</p>
+<pre><code>Do While CONDITION
+	ISTRUCTION 
+Loop
+</code></pre>
+<p>Until permet de réaliser une boucle jusqu’a ce qu’une condition soit vraie</p>
+<pre><code>Dim i as Integer
+For i = 1 To 5 Step 1
+	INSTRUCTION 
+Next
+
+For Each valeur In tableau 
+	MsgBox valeur 
+Next
+
+
+</code></pre>
+<p>Note : la fonction : WorksheetFunction.CountA(Range(&quot;A:A&quot;)<br>
+permet de compter le nombre de cases non vides, c’est très pratique .</p>
+<h2>5. Utilisation des boites de dialogue:</h2>
+<p>Les boites de dialogue permettent d’afficher des messages mais aussi de créer de formulaires. La plus utilisée est la :</p>
+<p>MsgBox<br>
+On peut lui ajouter des boutons :</p>
+<pre><code>
+MsgBox([TEXTE], [BOUTONS], [TITRE])
+</code></pre>
+<p>Les boutons sont prédéfini par excel, il faudra écrire « vbYesNo » pour avoir un bouton « Yes » et un bouton « No » par exemple<br>
+(tapez simplement « vb » et excel vous proposera la suite)</p>
+<p>On peut mettre plusieurs boutons à la suite :<br>
+ex :</p>
+<pre><code>MsgBox(&quot;Texte&quot;, vbYesNoCancel + vbExclamation + vbDefaultButton2, &quot;Titre&quot;)
+</code></pre>
+<p>Pour demander à l’utilisateur de rentrer des informations dans la boite de dialogue on utilise:</p>
+<pre><code>
+InputBox(&quot;Texte ?&quot;, &quot;Titre&quot;, &quot;Valeur par défaut&quot;)
+</code></pre>
+<p>La réalisation de formulaire est un peu plus compliquée donc je ne la détaillerai pas ici.</p>
+<h2>6. Les tableaux :</h2>
+<p>Pour déclarer un tableau on utilise la structure suivante :</p>
+<p>Dim  nom_tableau(4, 3) As String<br>
+(c’est un tableau à 5 lignes et 4 colonnes , le contenu des cases est du texte)<br>
+Pour déclarer un tableau dynamiques Dim tableau()<br>
+Attention : la numérotation d'un tableau commence à 0.</p>
+<p>Les tableaux dynamiques sont très pratiques pour faciliter des procédures (voir exercie du tutoriel :<a href="https://www.excel-pratique.com/fr/vba/tableaux_vba_exercice">https://www.excel-pratique.com/fr/vba/tableaux_vba_exercice</a>)</p>
+<h2>7. Retour sur le tutoriel</h2>
+<p>Ce tutoriel est assez complet. Il est parfait pour les débutants souhaitant parcourir la plupart des possibilités de VBA. Il est aussi très bien découpé en chapitres pertinents et autoporteurs. Il pourra donc servir d’aide pour des utilisateurs plus avancés. La difficulté des exercices augmente le long des chapitres. J’ai trouvé le chapitre sur les UserForms plus compliqué que le reste. A titre indicatif il faudra un peu plus de 7h à le terminer.</p>
+<h2>8. Petit Projet</h2>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
