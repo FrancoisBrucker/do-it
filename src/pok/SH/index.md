@@ -20,6 +20,7 @@ L'ensemble de mes POK
 - [POK 2: **Cartographie d'un système d'information**](../EGT/pok_2/) 
 
 ### Temps 3
-- POK3 :  
+- [POK3 : **Approche de Palo Alto**](./POK3/)
+
 
 
