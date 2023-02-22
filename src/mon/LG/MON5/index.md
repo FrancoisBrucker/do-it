@@ -9,7 +9,8 @@ authors:
 
 Dans ce  MON je vais me former au VBA.
 
-Sommaire :
+# Sommaire :
+
 1. Premiers pas
 2. Ecriture d’une macro
 3. Les variables 
@@ -19,7 +20,7 @@ Sommaire :
 7. Retour sur le tutoriel
 8. Petit projet
 
-LE VBA ou Visual Basic for Applications est un langage de programmation évènementielle créé par Microsoft. Il est très utilisé dans les entreprises il me sera donc utile d’avoir des bases sur le sujet.C’est un langage facile et flexible :   pratiquement chaque opération que vous pouvez effectuer avec une souris, clavier ou une boîte de dialogue peut également être automatisée à l’aide de VBA. Le VBA ne peut s’utiliser qu’avec des applications Microsoft, d’où la nécessité d’avoir une licence. 
+Le VBA ou Visual Basic for Applications est un langage de programmation évènementielle créé par Microsoft. Il est très utilisé dans les entreprises il me sera donc utile d’avoir des bases sur le sujet.C’est un langage facile et flexible :   pratiquement chaque opération que vous pouvez effectuer avec une souris, clavier ou une boîte de dialogue peut également être automatisée à l’aide de VBA. Le VBA ne peut s’utiliser qu’avec des applications Microsoft, d’où la nécessité d’avoir une licence. 
 
 Attention il existe une version en ligne d’excel mais celle-ci ne gère pas les macros :
 https://www.microsoft.com/fr-fr/microsoft-365/free-office-online-for-the-web
@@ -39,7 +40,7 @@ Ce compte rendu pourra servir de mémo pour les personnes connaissant déjà le 
 
 On découvre l’onglet développeur qui permet d’utiliser le VBA. Le  bouton « Visual Basic » permet d’accéder à l’éditeur de macros.
 
-INSERE IMG DU RUBAN DEV
+<img src="rubanVBA.png">
 
 Dans cet éditeur on peut écrire du code dans des « Modules » . Une macro s’écrit toujours entre ces deux balises :
 
@@ -59,7 +60,7 @@ A noter : on peut enregistrer une macro : c’est à dire effectuer des manipu
 
 Ici on voit un exemple de changement de colonnes et le code associé qu’a créé excel.  
 
-INSERE IMG
+<img src="VBA1.png">
 
 
 ## 2. Ecriture d’une macro :
@@ -68,10 +69,7 @@ INSERE IMG
 
 Voici un petit exemple de macro
 
-INSERER IMG de l’exo 1
-
-
-
+<img src="VBA3.png">
 
 Le schéma d’écriture est toujours le même et fonctionne un peu comme une programmation objet :
 
@@ -270,3 +268,18 @@ Ce tutoriel est assez complet. Il est parfait pour les débutants souhaitant par
 
 
 ## 8. Petit Projet
+
+Pour pratiquer, j'ai réalisé un petit projet pour un ami. Il voulait un fichier excel lui servant de tableau de bord pour gérer des documents à modifier.
+
+Voici le résultat:
+
+<img src="projetVBA1.png">
+<img src="projetVBA2.png">
+<img src="projetVBA4.png">
+
+
+
+Un Userform permet de remplir certaines informations. La date d'ajout est rempli automatiquement ainsi que l'état initial de la tâche.
+
+
+
