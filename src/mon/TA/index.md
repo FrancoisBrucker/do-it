@@ -14,6 +14,7 @@ tags: ['mon']
 - Failles web
 - Pentest : environnement et outils
 - ARP spoofing : attaque sur un réseau wifi
+- Linux : Linux Essentials
 
 <!-- fin résumé -->
 
@@ -28,3 +29,5 @@ tags: ['mon']
 - [ARP spoofing : attaque sur un réseau wifi](arp_spoofing)
 
 ### Temps 3
+
+- [Linux : Linux Essentials](linux)
