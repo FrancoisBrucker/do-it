@@ -111,7 +111,7 @@ Par ce qu'une image vaut mille mots :
 
 ![homePage](../temps2/homePage.png)
 
-#### Tuto :
+#### Tuto
 
 - MON de Tuncay : <https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/>.
 - Documentation + tuto Docker : <https://docs.docker.com/get-started/>

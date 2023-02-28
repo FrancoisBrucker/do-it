@@ -87,7 +87,7 @@ Par ce qu'une image vaut mille mots :
 
 ![homePage](homePage.png)
 
-#### Tuto :
+#### Tuto
 
 - Tuto Google Oauth par TraversyMedia: <https://www.youtube.com/watch?v=SBvmnHTQIPY&t=3223s&ab_channel=TraversyMedia>.
 - Passport google Oauth 20 : <https://www.passportjs.org/packages/passport-google-oauth20/>
