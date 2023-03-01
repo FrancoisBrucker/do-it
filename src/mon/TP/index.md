@@ -25,5 +25,3 @@ Les MON de Thomas Pont
 - [Sass](./mons/sass)
 
 ## Temps 3
-
-- [Spark](./mons/spark)
