@@ -49,7 +49,7 @@ router.get('/google/callback', passport.authenticate('google', {
 
 #### ToDo : 2ème Sprint
 
-- Déploiement sur serveur distant : <http://node.stevia.ovh1.ec-m.fr/>
+- Déploiement sur serveur distant (VM ovh) : <http://node.stevia.ovh1.ec-m.fr/>
   - Nécessité d'une connexion https pour accéder à la localisation ==> utilisation de [ngrok](https://ngrok.com/)
 - Finir les derniers correctifs pour avoir un site fonctionnel en production, notamment :
   - Changement de la bdd : MySQL --> Postgres
@@ -81,14 +81,13 @@ Pour que votre appli reste en ligne même après la fermeture du terminal, vous 
 
 Mon site : <http://node.stevia.ovh1.ec-m.fr/>
 
-Il vous faut suivre le lien ngrok.io affiché sur le page d'accueil pour pouvoir utiliser la fonctionnalité principale du site. Avec la version gratuite de ngrok, vous ne pouvez pas avoir votre propre nom de domaine.
+Il faut suivre le lien ngrok.io affiché sur la page d'accueil pour pouvoir utiliser la fonctionnalité principale du site. Avec la version gratuite de ngrok, vous ne pouvez pas avoir votre propre nom de domaine.
 
 Par ce qu'une image vaut mille mots :
 
 ![homePage](homePage.png)
-![mapPage](mapPage.png)
 
-#### Tuto :
+#### Tuto
 
 - Tuto Google Oauth par TraversyMedia: <https://www.youtube.com/watch?v=SBvmnHTQIPY&t=3223s&ab_channel=TraversyMedia>.
 - Passport google Oauth 20 : <https://www.passportjs.org/packages/passport-google-oauth20/>
