@@ -184,10 +184,7 @@ Par exemple :
 ```
 If nom_variable Like "des_caractères" Then 
 ```
-{% info "Note" %}
- La comparaison n’a pas besoin d’être exacte !!! on peut ainsi inclure plusieurs possibilités 
- {% endinfo %}
- 
+A noter : La comparaison n’a pas besoin d’être exacte !!! on peut ainsi inclure plusieurs possibilités 
 Exemple :
 ```
 Variable = « Un joli poème »
@@ -220,10 +217,10 @@ Next
 ```
 
 
-{% info "Note" %}
+
 Note : la fonction : WorksheetFunction.CountA(Range("A:A")
 permet de compter le nombre de cases non vides, c’est très pratique .
-{% endinfo %}
+
 
 ## 5. Utilisation des boites de dialogue:
 

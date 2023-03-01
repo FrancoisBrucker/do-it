@@ -46,7 +46,7 @@ De plus, certaines technologies en vogue comme l'IA sont très gourmandes en én
 Des chercheurs du MIT ont estimé l’empreinte carbone des quatre modèles les plus sophistiqués de l’IA (GPT-3, BERT, ELMo, Transformer). Leurs conclusions: une session d'entraînement d’un modèle peut générer environ 282 tonnes d’équivalent CO2 (cinq fois plus qu’une voiture américaine durant tout son cycle de vie). Pour Chat GPT, on estime 552 tonnes de CO2 pour l'entrainement de GPT 3, et 8,4 tonnes de CO2 par an pour son utilisation. C'est un réel gouffre energétique.
 
 {% prerequis "Source" %}
-https://www.youtube.com/watch?v=pPzIANK4VmI
+https://www.youtube.com/watch?v=DwRAVINpsB4
 
 https://theshiftproject.org/
 
@@ -206,11 +206,3 @@ https://lebondigital.com/label-ecologique-site-web-responsable/
 https://www.actu-environnement.com/blogs/dominique-ortoli/96/labels-normes-greenit-eco-labellisation-RSE-139.html
 
 {% endprerequis %}
-
-
-## 6. Conclusion
-
-Nous vivons dans l’air de la transformation digitale. On numérise tout, en croyant tout optimiser sans se rendre compte de  l’impact de nos pratiques sur l’environnement. En effet la pollution du numérique est moins tangible que celle des autres industries. Elle n’en est pas moins conséquente.De plus, avec la montée de l’IA, nos machines sont toujours plus performantes et consommatrices.
-Les gouvernements Français et Européens commencent à s’emparer du sujet de manière assez remarquable (il faut bien l’avouer). De nombreuses associations comme la Fresque du Numérique tentent de sensibiliser le public à l’impact du numérique via des ateliers. Le sujet est aussi de plus en plus  pris au sérieux par les entreprises qui sont poussées par les évolutions des normes mais aussi par la mode du durable. 
-Cependant nous restons majoritairement mal informés sur le sujet. La plus grande priorité est donc la prise de conscience collective.
-J’espère que la lecture de ce MON vous aura intéressé et vous aidera à consommer et produire du numérique plus responsable.
