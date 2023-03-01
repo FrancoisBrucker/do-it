@@ -67,3 +67,14 @@ De ces données, nous allons donc effectuer des calculs sur nos paramètres. Les
 ### Etudier plusieurs scénarios 
 Encore une fois, l'objectif d'un business plan n'est pas de mentir car cela ne servirait aucune cause ! Rien ne sert d'étudier exclusivement un scénario des plus favorables. 
 Les multiples scénarios doivent être obtenus en faisant varier les hypothèses et spécialement les risques, qu'ils soient internes ou externes. Effectuer ce travail ne montrera que plus le travail effectué et affichera la conscience que vous avez du marché dans lequel vous vous lancez.
+
+## Construire concrètement le tableau de chiffres
+Il s'agit de construire un compte de résultat simplifié et un tableau de trésorerie. 
+Je ne vais pas revenir sur la construction d'un compte de résultat et d'un tableau de trésorerie, les cours de comptabilité dispensés en première année sont assez bien pour cela. 
+Vous pouvez néanmoins trouver des templates issus de la formation openclassrooms ci-dessous : 
+<img src="../../Images/CR.png"/>
+<img src="../../Images/Tableau de trésorerie.png"/>
+L'horizon de temps doit être adapté les projections doivent être réalisées sur plusieurs années. Il est recommandé de réaliser les projections sur une base mensuelle pour un meilleur suivi opérationnel mais il peut aussi se faire sur une base annuelle. 
+
+## Conclusion
+Nous sommes désormais capable de créer un business model ainsi qu'un business plan solides qui assureront un développement péren. 
