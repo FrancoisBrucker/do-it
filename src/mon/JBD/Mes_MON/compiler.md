@@ -16,6 +16,8 @@ tags :
 Terminer le compilateur en ajoutant des fonctionnalités complexes (variables, boucles, fonctions)
 <!-- fin résumé -->
 
+[lien page Github](https://github.com/Jean-Baptiste-DP/Compiler-Yacc-Lex)
+
 {% prerequis "" %}
 La lecture de mon [premier MON](https://francoisbrucker.github.io/do-it/mon/JBD/Mes_MON/yaccLex/) sur le sujet n'est pas nécessaire pour la compréhension de ce MON mais est important pour la compréhension du projet.
 {% endprerequis %}
@@ -257,11 +259,18 @@ J'ai utilisé cette structure de donnée 3 fois dans mon projet. Pour stocker le
 <h2 id="liens">Liens Utiles </h2>
 
 [Pointeurs](https://www.rocq.inria.fr/secret/Anne.Canteaut/COURS_C/chapitre3.html)
+
 [Table de hachage](https://fr.wikipedia.org/wiki/Table_de_hachage)
+
 [Liste chaînée](https://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e)
+
 [Arbre binaires](https://fr.wikipedia.org/wiki/Arbre_binaire)
+
 [C structures 1](https://www.w3schools.com/c/c_structs.php)
+
 [C structures 2](https://www.programiz.com/c-programming/c-structures)
+
+[lien page Github](https://github.com/Jean-Baptiste-DP/Compiler-Yacc-Lex)
 
 <style>
     .codeContainer{
