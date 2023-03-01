@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>MON 5 : Spark et Big Data</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">MON 5 : Spark et Big Data</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tag : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Sass</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thomas Pont</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- Début Résumé -->
+<p>Spark</p>
+<!-- Début Résumé -->
+<h2>Introduction</h2>
+<p>J'ai réalisé ce MON pour préparer mon stage dans lequel je vais devoir faire de l'architecture de données et notamment devoir <strong>récolter et traiter un grand nombre d'information</strong>. Un des prérequis du stage est de connaître le <strong>principe de traitement de mégadonnées</strong> et de connaître les bases de <strong>Spark</strong>. Il s'agit &quot;d'un framework open source de calcul distribué&quot;. Il est utile pour traiter des mégadonnées et pour faire des analyses complexes à grande échelle.</p>
+<p>Afin d'apprendre tout ceci, j'ai suivi le cours Openclassrooms <a href="https://openclassrooms.com/fr/courses/4297166-realisez-des-calculs-distribues-sur-des-donnees-massives">Réalisez des calculs distribués sur des données massives</a>.</p>
+<p>Le cours est divisé en plusieurs parties :</p>
+<ul>
+<li>Introduction au Big Data et au calcul distribué</li>
+<li>Le principe de MapReduce</li>
+<li>Découvrir Spark</li>
+</ul>
+<h2>Introduction au Big Data et au calcul distribué</h2>
+<p>Aujourd'hui, de plus en plus de données sont collectées. Elles peuvent toucher tous les secteurs (consommation, environnement, santé,...). L'enjeu actuel est de pouvoir les stocker, les filtrer et les analyser. Mais ceci posent de nombreuses questions notamment sur la manière de stocker et d'architecturer les données. Un des points clés est la mise à l'échelle, lorsque l'on multiplie par un grand facteur le nombre de données que l'on possède. En effet, il faut alors faire attention à trois facteurs clés : le <strong>Volume</strong>, la <strong>Vélocité</strong> et la <strong>Variété</strong> (des formats).</p>
+<p>Une des manières de pallier à la multiplication des informations est d'effectuer du <strong>calcul distribué</strong>. Au lieu que différents calculs soient effectués simultanément en utilisant des ressources communes, dans le calcul distribué, les calculs sont faits dans des <strong>nœuds indépendants</strong>. Dans ce cadre de calculs distribués, quand on ajoute des données, on <strong>ajoute des nœuds</strong>.</p>
+<h2>MapReduce</h2>
+<h3>Principe</h3>
+<p>MapReduce est une manière de résoudre un problème pour s'adapter aux contraintes du Big Data. L'objectif est de découper les données afin de pouvoir paralléliser les tâches et réunir les résultats ensuite. Deux opérations sont nécessaires pour cela : une opération <strong>map</strong> et une opération <strong>reduce</strong>.</p>
+<p>Les différentes étapes sont les suivantes :</p>
+<ul>
+<li><strong>Découpage</strong> des données en plusieurs sous-ensembles.</li>
+<li>Etape <strong>Map</strong> : l'opération map, qui dépend du problème qu'on souhaite résoudre, est appliquée à chaque sous-ensemble. Elle transforme la paire(clé, valeur) représentant le sous-ensemble en une liste de nouvelles paires (clé, valeur)</li>
+<li>Etape <strong>Shuffle and Sort</strong> : les résultats obtenus sont regroupés et triés par clé</li>
+<li>Etape <strong>Reduce</strong> : l'opération reduce, qui dépend du problème notre problème, est appliqué à chaque clé. Elle permet d'obtenir le résultat final.</li>
+</ul>
+<p>Tout ceci peut être résumé par le schéma suivant :</p>
+<p><img src="./image/Sch%C3%A9ma.jpg" alt="Schéma du MapReduce" title="Schéma explicatif MapReduce"></p>
+<h3>Exemples</h3>
+<h4>Word count</h4>
+<p>Un des exemples basiques du MapReduce est le problème <strong>&quot;Word Count&quot;</strong>. Il permet de compter le nombre d'itération de chaque mot dans un texte. Afin de vérifier que j'avais bien compris le principe, j'ai recodé cette fonction.</p>
+<p>On suppose que le texte a été découpé en différentes parties. La fonction Map associe à chaque mot d'une partie du texte la couple (clé, valeur), <strong>(mot, 1)</strong>.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_map</span><span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    mots <span class="token operator">=</span> ligne<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    liste_paire <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> mot <span class="token keyword">in</span> mots<span class="token punctuation">]</span>
+    
+    <span class="token keyword">return</span> liste_paire
+</code></pre>
+<p>La fonction Shuffle permet de créer un dictionnaire de tous les mots présents et d'ajouter des 1 à chaque apparition d'un mot.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_shuffle</span><span class="token punctuation">(</span>liste_paire<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    dictionnaire_paire <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    
+    <span class="token keyword">for</span> élément <span class="token keyword">in</span> liste_paire<span class="token punctuation">:</span>
+        clé <span class="token operator">=</span> élément<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        valeur <span class="token operator">=</span> élément<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">if</span> clé <span class="token keyword">in</span> dictionnaire_paire <span class="token punctuation">:</span>
+            dictionnaire_paire<span class="token punctuation">[</span>clé<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>valeur<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            dictionnaire_paire<span class="token punctuation">[</span>clé<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>valeur<span class="token punctuation">]</span>
+    
+    <span class="token keyword">return</span> dictionnaire_paire
+</code></pre>
+<p>Enfin la fonction Reduce somme tous les 1 pour un mot présent dans le dictionnaire et permet donc de connaître son nombre d'itération.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_reduce</span><span class="token punctuation">(</span>dictionnaire<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result_liste<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> mot <span class="token keyword">in</span> dictionnaire <span class="token punctuation">:</span>
+        result_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>compte_mot_indiv<span class="token punctuation">(</span>mot<span class="token punctuation">,</span> dictionnaire<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>result_liste<span class="token punctuation">)</span>
+</code></pre>
+<p>En réunissant ces trois fonctions, on obtient la fonction <em>compte_mot</em> :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot</span><span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>compte_mot_reduce<span class="token punctuation">(</span>compte_mot_shuffle<span class="token punctuation">(</span>compte_mot_map<span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4>Autres exemples</h4>
+<p>Cette méthode peut paraître simple mais elle peut également s'appliquer à d'autres problèmes beaucoup plus complexes tel que la multiplication de matrice. C'est à partir de ceci que Google a mis au point son algorithme de <strong>Page Ranking</strong></p>
+<h3>Hadoop</h3>
+<p>Pour effectuer du MapReduce dans un contexte de Big Data, il faut une <strong>infrastructure logicielle</strong>. Cette dernière permettra de faire tourner des fonctions de manière <strong>massivement développée</strong> en s'assurant qu'il n'y ait pas de problèmes liés à la localité des données, à la puissance et aux pannes.<br>
+Le framework <strong>Hadoop</strong> permet ceci. Celui-ci est composé d'un <strong>système de fichiers</strong> où ceux-ci sont distribués, répliqués et optimisés et d'une <strong>architecture pour faire tourner MapReduce</strong>. Vous pouvez trouver plus d'informations sur Hadoop <a href="https://hadoop.apache.org/">ici</a>.</p>
+<p>Globalement l'utilisateur peut déposer des fichiers qui sont découpés sur des Datas Node. Toutes les informations sont dupliqués pour pallier aux potentielles pannes. Il peut ensuite donner le travail à effectuer au job tracker. Celui-ci communique avec le name node pour savoir où sont les données et pouvoir lancer les calculs de la manière la plus efficace possible. Tous les résultats sont sauvegardés au fur et à mesure.</p>
+<p><img src="./image/Sch%C3%A9ma2.jpg" alt="Schéma de Hadoop" title="Schéma explicatif Hadoop"></p>
+<p>Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.</p>
+<p>En suivant ce lien, on peut télécharger et tester une <a href="https://www.cloudera.com/downloads/cdp-private-cloud-trial.html">machine virtuelle Hadoop</a>.</p>
+<h2>Spark</h2>
+<p><strong>Spark</strong> permet de s'affranchir de quelques problèmes causés car Hadoop. En effet, Hadoop stocke à chaque étape les données et résultats sur le <strong>disque</strong> et ne les gardent pas sur la RAM. De plus, les opérations possibles sont <strong>limitées</strong>.</p>
+<p>Voici le lien d'un tutoriel pour <a href="http://www.xavierdupre.fr/app/sparkouille/helpsphinx/lectures/spark_install.html">télécharger Spark sous Windows</a>.</p>
+<p>Sur le cours que j'ai suivi, il y a l'exemple de la fonction CountWord lancer sur Spark. Afin de m'entraîner, j'ai décidé d'écrire la fonction de multiplication de matrice à écrire sur Spark.</p>
+<h2>Conclusion</h2>
+<h2>Source</h2>
+<ul>
+<li><a href="https://fr.wikipedia.org/wiki/Apache_Spark">Page Wikipédia de Spark</a></li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
