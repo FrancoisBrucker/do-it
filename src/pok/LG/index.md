@@ -17,4 +17,8 @@ L'ensemble de mes POK
 - [Premier POK: **typologie des plateformes numériques** ](./POK1/)
 
 ### Temps 2
-- [Deuxième POK: **Prototypage d'une offre de service innovante** ](./POK2/)
+- [Deuxième POK: **BabyCameleon, Prototypage d'une offre de service innovante** ](./POK2/)
+
+### Temps 3
+
+- [Troisième POK: **BabyCameleon, Business Plan et modélisation Logistique** ](./POK3/)

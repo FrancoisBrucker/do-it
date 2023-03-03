@@ -29,6 +29,8 @@ Voir le [MON de Gabriel](https://francoisbrucker.github.io/do-it/mon/GB/Mons/Bus
 
 On utilise le business model canva :
 
+<img src="BModel.png">
+
 
 
 ## 2. Business Plan
@@ -193,3 +195,46 @@ CA annuel prévu de 12 400 x 12= 148 800 €
 Le type d'entreprise créée sera une entreprise individuelle: une EURL(entreprise unipersonnelle à responsabilité limitée) car elle est facile à créer.
 De plus, le patrimoine de l'entreprise le  patrimoine personnel sont  divisés et seuls les biens utiles à l'activité professionnelle pourront être saisi par les créanciers professionnels.
 Cette structure permet de limiter les responsabilité sur les apports et envisager l'entrée de nouveaux associés. En contrepartie il faut se soumettre au formalisme lié à la constitution et au fonctionnement d'une société.
+
+
+## 3. Les Partenaires
+
+Les partenariats sont un point clés de notre entreprise. Le but est de pouvoir créer des partenariats long terme assurant la qualité de nos services . Pour cela il faudra réaliser un vrai travail en amont pour rechercher les partenaires potentiels. Il faut que les partenaires partagent les valeurs de BabyCaméléon (à savoir : être soucieux de l’environnement et de la qualité des services proposés aux clients. Vouloir encourager l’économie locale). Ces points communs nous permettront d’établir des partenariats durables.
+Ces partenariats vont aussi demander du temps et de l’investissement de ma part : il faut créer une vraie relation de confiance avec les partenaires et participer à la vie de leur entreprise ( évènements et autres…)
+
+Les différents partenariats:
+**Pour les créateurs/boutiques de vêtements et accessoires**
+*Le but pour BabyCaméléon :* 
+Obtenir des produits à mettre en location à prix réduits (voire gratuit?) et qui correspondent aux critères de la boutique ( fabriqués en France ou en Europe, matières écologiques...)
+*Le choix des partenaires :* 
+Petits créateurs indépendants (et Marques françaises) ciblés. Attention particulière sur les politiques RSE et l’eco responsabilité des partenaires choisis
+*Bénéfices pour les partenaires:*  
+- Visibilité: mise en avant sur  le site web avec une page dédiée à chaque partenaires +lien vers leur boutique + description de leur marque en dessous de leur produis.  Mise en avant via des publications sur les réseaux sociaux.
+La communication de BabyCameleon se veut transparente. Dans ce sens on peut imaginer des insight dans nos processus qui mettent en avant le travail des créateurs.
+- Partenariat longue durée avec des rachats à fréquence établie.
+- Possibilités d’avoir un pourcentage sur la location de leur articles (suivant le type de réduction accordé)
+- Diversification de leur offre avec de la location. BabyCaméléon ne fait que de la location. Nous ne sommes donc pas en concurrence directe avec les marques et site qui vendent des vêtements. De plus la location permettra aux foyers plus modestes de tester les marques ( elles toucheront donc un public plus large).
+
+**Pour nos Blanchisseuse et couturière :**
+*Le but pour BabyCaméléon :* 
+Obtenir des services de nettoyage et remise en état de qualité, à prix réduit.
+*Le choix des partenaires :* 
+Dans un souci de praticité  et de réduction des trajets inutiles, il faudra trouver des artisans proches géographiquement du Local de BabyCaméléon. Les partenaires seront des professionnels soucieux du travail bien fait.
+*Bénéfices pour les partenaires:* 
+- Visibilité: mise en avant sur  le site web avec une page dédiée à chaque partenaires. Mise en avant de leur travail via des publications sur les réseaux sociaux.
+- Partenariat longue durée avec du travail chaque mois
+
+**Pour un service de livraison :**
+*Le but pour BabyCaméléon :*
+Obtenir un service de confiance pour la livraison/ récupération des pièces à prix raisonnables pour le client. Pour rappel les expéditions seront payés par client.      
+*Le choix des partenaires :*  
+Une grande attention sera accordée aux valeurs et à l’éthique du service. En effet la marque se veut éco responsable donc doit trouver un service de livraison en conséquences.
+*Bénéfices pour les partenaires:* 
+- Partenariat longue durée avec de nombreuses expéditions chaque mois.
+- Visibilité: mise en avant sur  le site web avec une page dédiée à chaque partenaires. Mise en avant de leur travail via des publications sur les réseaux sociaux.
+
+
+{% prerequis "Sources" %}
+https://www.conseilsmarketing.com/techniques-de-ventes/hello-world/
+https://www.place2business.be/fr/fiche-documentaire/3/les-formes-de-partenariats#:~:text=Essentiellement%20trois%20types%20de%20partenariats,r%C3%A9seaux%20th%C3%A9matiques%20et%20les%20groupements.
+{% endprerequis %}
