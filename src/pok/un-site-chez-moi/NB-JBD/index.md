@@ -121,6 +121,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
   }
   a.buttonGestionProjet{
     display: flex;
+    position: relative;
     height: 50px;
     width: 280px;
     background-color: rgb(22,163,74);
@@ -128,10 +129,13 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
     text-align: center;
     justify-content: center;
     align-items:center;
-    padding: auto 0;
     border: 4px white solid;
     outline: 4px rgb(22,163,74) solid;
     text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.12,-0.91,.85,1.86);
+  }
+  a.buttonGestionProjet:hover{
+    transform: scale(1.1);
   }
   a.buttonGestionProjet span{
     display: block;
@@ -153,7 +157,7 @@ Gestion des utilisateurs, avec connexion et gestion de solde.
     height: 0.125em;
     width: 0;
     background-color:white;
-    transition: all 0.5s;
+    transition: all 0.6s;
   }
   a.buttonGestionProjet:hover .hoverUnderline::after{
     width:100%;
