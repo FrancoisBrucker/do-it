@@ -6,9 +6,6 @@ authors:
   - Antoine Varnerot
 
 ---
-<head>
-  <link rel="stylesheet" href="../../assets/style.css">
-</head>
 
 ## Description du MON
 
