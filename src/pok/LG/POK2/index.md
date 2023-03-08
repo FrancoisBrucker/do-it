@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "POK 2: Prototypage d'une offre de service innovante"
+title: "POK 2: BabyCameleon, Prototypage d'une offre de service innovante"
 authors:
   - Louise Gacoin
 
