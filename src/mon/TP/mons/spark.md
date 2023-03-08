@@ -124,23 +124,38 @@ En suivant ce lien, on peut télécharger et tester une [machine virtuelle Hadoo
 
 ## Spark
 
+### Présentation et exemple
+
 **Spark** permet de s'affranchir de quelques problèmes causés car Hadoop. En effet, Hadoop stocke à chaque étape les données et résultats sur le **disque** et ne les gardent pas sur la RAM. De plus, les opérations possibles sont **limitées**.
 
 Les programmes de Spark peuvent être écrits en Python ou en Java.
 
 Voici le lien d'un tutoriel pour [télécharger Spark sous Windows](http://www.xavierdupre.fr/app/sparkouille/helpsphinx/lectures/spark_install.html).
 
-Sur le tutoriel d'OpenClassrooms, l'exemple de la fonction CountWord sur Spark est entièrement traité.Pour m'entraîner, j'ai décidé d'écrire la fonction de multiplication de matrice par un vecteur qui peut elle aussi utiliser la méthode MapReduce.
-Ici, on fixe une matrice *matrice* et un vecteur *vecteur*. Ceux-ci sont modifiables pour répondre au problème donné.
+Voici un exemple de réécriture d'une fonction permettant de faire Word Count via Spark :
 
-```python
+``` python
 import sys
 from pyspark import SparkContext
 
 sc = SparkContext()
+texte_rdd = spark.sparkContext.textFile(file_path)
+ligne = sc.texte_rdd(sys.argv[1])
+compte_mot = ligne.flatMap(lambda ligne: ligne.split(' ')) \
+                   .map(lambda mot: (mot, 1)) \
+                   .reduceByKey(lambda c1, c2: c1 + c2) \
+                   .collect()
+
+for (mot, compteur) in compte_mot:
+    print(mot, compteur)
 ```
 
+Les premières lignes du code permettent d'importer les bons modules. Notre fichier est ensuite mis en RDD (cf lien dans les sources pour plus d'informations). Enfin, on définit les méthodes *Map* et *Reduce* qui sont ensuite directement gérées par Spark.
 Ici Spark tourne en **local** sur notre ordinateur mais il prévoit déjà une architecture si on possède **plusieurs machines connectées**.
+
+### Compléments
+
+Spark permet également d'aller plus loin notamment pour les Data Scientists. Un module Spark SQL est ainsi disponible pour faire "un modèle de requête SQL distribué" via des Data Frame. Il existe également un module de Machine Learning Spark ML.
 
 ## Conclusion
 
@@ -151,3 +166,4 @@ Le cours est noté pour durer 20h mais la dernière partie est peu pertinente et
 - [Page Wikipédia de Spark](https://fr.wikipedia.org/wiki/Apache_Spark)
 - [RDD (Resilient Distributed Datasets) en Spark](https://sparkbyexamples.com/spark-rdd-tutorial/)
 - [Fonction parallelize](https://sparkbyexamples.com/spark/how-to-create-an-rdd-using-parallelize/?utm_content=cmp-true)
+- [Spark SQL](https://spark.apache.org/sql/)
