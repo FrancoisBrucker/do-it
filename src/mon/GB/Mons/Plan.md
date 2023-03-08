@@ -77,4 +77,4 @@ Vous pouvez néanmoins trouver des templates issus de la formation openclassroom
 L'horizon de temps doit être adapté les projections doivent être réalisées sur plusieurs années. Il est recommandé de réaliser les projections sur une base mensuelle pour un meilleur suivi opérationnel mais il peut aussi se faire sur une base annuelle. 
 
 ## Conclusion
-Nous sommes désormais capable de créer un business model ainsi qu'un business plan solides qui assureront un développement péren. 
+Nous sommes désormais capable de créer un business model ainsi qu'un business plan solides qui assureront un développement péren de notre projet. Toutefois, ce cours n'a pas vocation à être un template à remplir ; il devrait plutôt être vu comme un guide et est donc sujet à modifications et améliorations. 
