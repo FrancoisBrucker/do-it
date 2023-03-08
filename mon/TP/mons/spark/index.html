@@ -152,17 +152,29 @@ Le framework <strong>Hadoop</strong> permet ceci. Celui-ci est composé d'un <st
 <p>Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.</p>
 <p>En suivant ce lien, on peut télécharger et tester une <a href="https://www.cloudera.com/downloads/cdp-private-cloud-trial.html">machine virtuelle Hadoop</a>. Il est donc possible de tester la fonction <em>Count Word</em> sur Hadoop.</p>
 <h2>Spark</h2>
+<h3>Présentation et exemple</h3>
 <p><strong>Spark</strong> permet de s'affranchir de quelques problèmes causés car Hadoop. En effet, Hadoop stocke à chaque étape les données et résultats sur le <strong>disque</strong> et ne les gardent pas sur la RAM. De plus, les opérations possibles sont <strong>limitées</strong>.</p>
 <p>Les programmes de Spark peuvent être écrits en Python ou en Java.</p>
 <p>Voici le lien d'un tutoriel pour <a href="http://www.xavierdupre.fr/app/sparkouille/helpsphinx/lectures/spark_install.html">télécharger Spark sous Windows</a>.</p>
-<p>Sur le tutoriel d'OpenClassrooms, l'exemple de la fonction CountWord sur Spark est entièrement traité.Pour m'entraîner, j'ai décidé d'écrire la fonction de multiplication de matrice par un vecteur qui peut elle aussi utiliser la méthode MapReduce.<br>
-Ici, on fixe une matrice <em>matrice</em> et un vecteur <em>vecteur</em>. Ceux-ci sont modifiables pour répondre au problème donné.</p>
+<p>Voici un exemple de réécriture d'une fonction permettant de faire Word Count via Spark :</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> sys
 <span class="token keyword">from</span> pyspark <span class="token keyword">import</span> SparkContext
 
 sc <span class="token operator">=</span> SparkContext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+texte_rdd <span class="token operator">=</span> spark<span class="token punctuation">.</span>sparkContext<span class="token punctuation">.</span>textFile<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+ligne <span class="token operator">=</span> sc<span class="token punctuation">.</span>texte_rdd<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+compte_mot <span class="token operator">=</span> ligne<span class="token punctuation">.</span>flatMap<span class="token punctuation">(</span><span class="token keyword">lambda</span> ligne<span class="token punctuation">:</span> ligne<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">)</span> \
+                   <span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> mot<span class="token punctuation">:</span> <span class="token punctuation">(</span>mot<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> \
+                   <span class="token punctuation">.</span>reduceByKey<span class="token punctuation">(</span><span class="token keyword">lambda</span> c1<span class="token punctuation">,</span> c2<span class="token punctuation">:</span> c1 <span class="token operator">+</span> c2<span class="token punctuation">)</span> \
+                   <span class="token punctuation">.</span>collect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span> <span class="token keyword">in</span> compte_mot<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span>
 </code></pre>
-<p>Ici Spark tourne en <strong>local</strong> sur notre ordinateur mais il prévoit déjà une architecture si on possède <strong>plusieurs machines connectées</strong>.</p>
+<p>Les premières lignes du code permettent d'importer les bons modules. Notre fichier est ensuite mis en RDD (cf lien dans les sources pour plus d'informations). Enfin, on définit les méthodes <em>Map</em> et <em>Reduce</em> qui sont ensuite directement gérées par Spark.<br>
+Ici Spark tourne en <strong>local</strong> sur notre ordinateur mais il prévoit déjà une architecture si on possède <strong>plusieurs machines connectées</strong>.</p>
+<h3>Compléments</h3>
+<p>Spark permet également d'aller plus loin notamment pour les Data Scientists. Un module Spark SQL est ainsi disponible pour faire &quot;un modèle de requête SQL distribué&quot; via des Data Frame. Il existe également un module de Machine Learning Spark ML.</p>
 <h2>Conclusion</h2>
 <p>Le cours est noté pour durer 20h mais la dernière partie est peu pertinente et peut être lue rapidement. Il est surtout important de s'attarder sur les premiers concepts présentés pour bien comprendre la logique de Spark et son fonctionnement.</p>
 <h2>Sources</h2>
@@ -170,6 +182,7 @@ sc <span class="token operator">=</span> SparkContext<span class="token punctuat
 <li><a href="https://fr.wikipedia.org/wiki/Apache_Spark">Page Wikipédia de Spark</a></li>
 <li><a href="https://sparkbyexamples.com/spark-rdd-tutorial/">RDD (Resilient Distributed Datasets) en Spark</a></li>
 <li><a href="https://sparkbyexamples.com/spark/how-to-create-an-rdd-using-parallelize/?utm_content=cmp-true">Fonction parallelize</a></li>
+<li><a href="https://spark.apache.org/sql/">Spark SQL</a></li>
 </ul>
 
 
