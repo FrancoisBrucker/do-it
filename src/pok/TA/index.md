@@ -24,4 +24,8 @@ Mon site : <http://node.stevia.ovh1.ec-m.fr/>
 
 ## Temps 2
 
-- [Fin de développement et déploiement](temps2)
+- [Fin de développement et déploiement sur VM ovh](temps2)
+
+## Temps 3
+
+- [Déploiement avec Docker](temps3)
