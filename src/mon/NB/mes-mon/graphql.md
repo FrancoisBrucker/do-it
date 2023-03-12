@@ -12,7 +12,7 @@ Interface d'API GraphQL avec Express, Prisma (ORM) et PostgreSQL
 <!-- fin résumé -->
 
 {% prerequis %}
-**Niveau :** intermédiaire
+**Niveau :** intermédiaire/avancé
 **Prérequis :**
 - Connaître le contexte de développement backend
 - Connaître les bases du langage Javascript

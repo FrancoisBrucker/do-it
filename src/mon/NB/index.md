@@ -90,7 +90,7 @@ Ensemble des MON réalisés par Nicolas BERT
                 </div>
                 <span class="link"></span>
                 <a href="./mes-mon/react">
-                    <span class="bold">React</span> avancé
+                    <span class="bold">React</span> intermédiaire
                 </a>
             </div>
             <div class="mon margin-bottom">
