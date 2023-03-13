@@ -14,7 +14,7 @@ Avec notamment l'utilisation de WebSocket afin de rendre collaborative les pages
 ## Sprint 1
 
 Pour le 1er sprint je prévois de :
-- Me former sur WebSocket grâce au [MON 3.1](https://francoisbrucker.github.io/do-it/mon/TB/Mes_MON/WebSockets/).
+- Me former sur WebSocket grâce au [MON 3.1](../../../../mon/TB/Mes_MON/WebSockets).
 - Faire une 1ère version du site où tout le monde a accès à la même feuille de score.
 
 Durant ce sprint, j'ai eu le temps de me former sur les WebSocket. 
