@@ -14,7 +14,7 @@ Avec notamment l'utilisation de WebSocket afin de rendre collaborative les pages
 ## Sprint 1
 
 Pour le 1er sprint je prévois de :
-- Me former sur WebSocket grâce au [MON 3.1](../../../mon/TB/Mes_MON/WebSockets)
+- Me former sur WebSocket grâce au [MON 3.1](../../../../mon/TB/Mes_MON/WebSockets)
 - Faire une 1ère version du site où tout le monde a accès à la même feuille de score.
 
 Durant ce sprint, j'ai eu le temps de me former sur les WebSocket. 
@@ -23,9 +23,9 @@ J'ai également pu développer la partie collaborative de mon site. Pour ce fair
 
 Les principaux problèmes que j'ai rencontré durant ce sprint étaient principalement des petites erreurs de précision ou de cas particuliers. 
 
-Le site est dispo [ici](http://node.poireau.ovh1.ec-m.fr/static/index.html)
+Le site est dispo [ici](http://node.poireau.ovh1.ec-m.fr/static/index.html).
 
-Et le code [ici](https://github.com/Timothee-Bermond/yams)
+Et le code [ici](https://github.com/Timothee-Bermond/yams).
 
 Pour le prochain sprint je vais essayer de créer des parties séparés afin que deux groupes qui se connectent en même temps puissent chacun avoir leurs parties. Je ne sais pas encore exactement comment je vais faire.
 
