@@ -59,6 +59,15 @@ Ce dernier site est très clair et contient beaucoup beaucoup de documentation a
 
 ## Framework
 
+Extension vsc : <https://trufflesuite.com/guides/configuring-visual-studio-code/>
 Truffle :
 <https://trufflesuite.com/>
 <https://github.com/trufflesuite/truffle>
+
+Ganache
+
+J'ai ensuite suivi le tuto quickstart qui permet d'explorer des petits projets déja existants avec des explications :
+
+<https://trufflesuite.com/docs/truffle/quickstart/>
+
+To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
