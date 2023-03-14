@@ -14,8 +14,8 @@ tags: ['mon']
 - 1.2 - Création d'un site web avec Eleventy
 - 2.1 - Web Back
 - 2.2 - Unix
-- 3.1 - Pas encore choisi
-- 3.2 - Pas encore choisi
+- 3.1 - Développement mobile
+- 3.2 - Leetcode
 
 <!-- fin résumé -->
 
@@ -27,6 +27,6 @@ tags: ['mon']
 
 # [Temps 2 - Unix](mon-2-2)
 
-# [Temps 3 - Pas encore choisi]
+# [Temps 3 - Développement mobile](mon-3-1)
 
-# [Temps 3 - Pas encore choisi]
+# [Temps 3 - Leetcode](mon-3-2)
