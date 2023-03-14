@@ -15,5 +15,6 @@ Mon  pok qui crée un site web chez moi
 
 ## Liste des POK
 
+- [POK3](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok3/)
 - [POK2](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok2/)
 - [POK1](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok1/)
