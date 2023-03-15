@@ -20,6 +20,15 @@ Le but de ce POK est de continuer mon projet du POK 2 (BabyCameleon). Pour cela 
 3. Les partenaires 
 4. Stratégie Supply chain
 
+***Liste des sprints:***
+SPRINT 1:
+- Business Model  (réalisé)
+- Business Plan   (réalisé)
+- Partenaires     (réalisé) 
+
+SPRINT 2:
+- Stragtégie Supply Chain (Commencé au sprint 1, réalisé)
+
 ## 1.Business Model
 
 Un business model décrit la logique de fonctionnement du projet, comment l’entreprise va créer de la valeur.
@@ -331,6 +340,10 @@ Un Audit réguliers des stocks  nous permettra aussi de garder la trace exact de
 {% prerequis "Sources" %}
 https://www.rentle.io/blog/rental-business/inventory-metrics
 {% endprerequis %}
+
+**Exemple Produit**
+
+<img src="ex_produit.png">
 
 ## Conclusion : 
 
