@@ -35,7 +35,7 @@ Pour le prochain sprint :
 
 ## Cadrage du sujet :
 
-Pour ce POK, je suis partie d'un constat simple : à l’École, on nous a fait passer au moins deux types de tests de personnalité ou de communication (j’en ai même passé un autre dans le cadre d’une étude statistique dans une association). Je me suis interrogée sur l’utilité et la finalité de ces tests. Mes questionnements s’éloignant un peu trop du cadre de l’option Do-IT, j’ai été redirigée vers le Guide pour les recruteurs du CNIL (Centre National de l’Informatique et des Libertés) qui traite de la place des données personnelles dans le recrutement, avec un chapitre sur les pratiques de recrutement comme les tests de personnalité. Ce document m’a permis de revenir vers un sujet plus adapté. 
+Pour ce POK, je suis partie d'un constat simple : à l’École, on nous a fait passer au moins deux types de tests de personnalité ou de communication (j’en ai même passé un autre dans le cadre d’une étude statistique dans une association). Je me suis interrogée sur l’utilité et la finalité de ces tests. Mes questionnements s’éloignant un peu trop du cadre de l’option Do-IT, j’ai été redirigée vers le Guide pour les recruteurs de la CNIL (Commission Nationale de l’Informatique et des Libertés) qui traite de la place des données personnelles dans le recrutement, avec un chapitre sur les pratiques de recrutement comme les tests de personnalité. Ce document m’a permis de revenir vers un sujet plus adapté. 
 
 J’avais alors deux possibilités de sujet : 
 - un guide de recrutement sur les pratiques de recrutement dans l'IT, avec un focus sur la pertinence des outils qui existent dans le cadre des recrutements d'une DSI par exemple.
@@ -70,4 +70,4 @@ La bibliographie n'est pas encore propre. Il ne s'agit pour l'instant que d'une 
 https://www.cnil.fr/recrutement-et-donnees-personnelles-dans-les-tpepme-cinq-questions-incontournables-se-poser
 https://www.cnil.fr/sites/default/files/atoms/files/guide_-_recrutement.pdf 
 https://theconversation-com.cdn.ampproject.org/c/s/theconversation.com/amp/les-tests-de-personnalite-sont-ils-vraiment-un-bon-outil-de-selection-en-entreprise-201432
-[L'intelligence arificielle au service de la lutte contre les discriminations dans le recrutement](./Lacroux-et-Martin-Lacroux-2021-L-Intelligence-artificielle-au-service-de-la-lutte.pdf)
+[L'intelligence arificielle au service de la lutte contre les discriminations dans le recrutement](./../Lacroux-et-Martin-Lacroux-2021-L-Intelligence-artificielle-au-service-de-la-lutte.pdf)

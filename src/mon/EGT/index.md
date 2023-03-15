@@ -32,3 +32,5 @@ Pour le temps 2 sur le thème Faire, j'ai choisi le MON suivant :
 Pour le temps 3 sur le thème Maintenir et développer, j'ai choisi les MONs suivants :
 
 {% chemin %} [People Analytics](./MON_3_1/) {% endchemin %}
+
+{% chemin %} [Barbecue](./MON_3_2/) {% endchemin %}
