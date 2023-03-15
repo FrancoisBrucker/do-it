@@ -238,3 +238,101 @@ Une grande attention sera accordée aux valeurs et à l’éthique du service. E
 https://www.conseilsmarketing.com/techniques-de-ventes/hello-world/
 https://www.place2business.be/fr/fiche-documentaire/3/les-formes-de-partenariats#:~:text=Essentiellement%20trois%20types%20de%20partenariats,r%C3%A9seaux%20th%C3%A9matiques%20et%20les%20groupements.
 {% endprerequis %}
+
+
+## 4. Stratégie Supply chain
+
+Maintenant que nous avons définit nos partenariats, il faut s’attaquer à la logistique de l’entreprise. La Supply Chain est l’ensemble des activités entre l’achat des matières 1ere et la livraison au client. Comme BabyCameleon fait de la location, la chaine d’approvisionnement diffère un peu des chaines classiques et se doit d’être réactive afin de satisfaire les clients .
+ Une modélisation des flux nous permet d’éclairer le sujet : 
+
+
+ <img src ="flux.png">
+
+ Lorsque l’article est renvoyé, il passe par la case nettoyage. Ensuite, il y a 3 cas de figures :
+- le vêtement n’est plus utilisable car trop abimé. Il sera recyclé
+- le vêtement nécessite des réparations. Il passe alors par la case couturier
+- tout va bien. Le vêtement est renvoyé au local.
+
+Ce genre d’échange nécessite une communication efficace et rapide avec les partenaires. Voici les différents flux d’informations :
+
+ <img src ="flux.info.png">
+
+ Les défis de ma chaine d’approvisionnement sont les suivants :
+    1.  Optimiser le réseau de points de stockage
+    2.  Gérer le stock ainsi que l’emplacement des produits dans les différents pints de stockage
+    3. Optimiser l’utilisation du stock
+    4. Maximiser les profits et minimiser les couts
+    5.  garantir la bonne disponibilité des produits pr les clients
+
+Il faut des points de stockages stratégiques. Je suis partie de l’hypothèse d’un seul point de stockage pour de compliquer la gestion des stocks. La localisation de ce local est cruciale : il faut qu’il soit proche des partenaires (blanchisserie et couturier ) mais aussi dans un endroit stratégique pour desservir la France entière. Cette hypothèse sous entend plus de contraintes dans le transport. Notamment en terme de temps et coût. Un envoi rapide coutera plus cher mais immobilisera la pièce moins longtemps. 
+J’ai du mal à bien me projeter sur ce point. A mon avis cela dépendra beaucoup du partenariat obtenu avec le transporteur.
+
+{% prerequis "Sources" %}
+https://supply-chain.net/modeles-supply-chains/
+{% endprerequis %}
+
+**Le processus de location :**
+
+Un client commande un article pour une date donnée dd/mm/aa et pour un nombre de jours n donnés. 
+L’article est envoyé par BabyCameleon le dd-1/mm /aa. 
+Il est ensuite renvoyé par le client et immobilisé 3 jours pour le transport, le lavage et les éventuelles réparations avant de retourner au local. Ce temps d’immobilisation pourra être optimiser au fur et à mesure.
+On a donc un total de 4 jours entre 2 locations du même produit. Pour rester rentable, les articles devront être loués pour 2 ou 3 jours minimum. 
+
+Le prix de location doit s’adapter à toutes ces composantes, on peut imaginer que le prix/jour loué diminue plus on loue longtemps. Ou alors pour régler ce problème faire comme dans l’étude de cas (voir plus bas) donner des options de location : par exemple 3 ou 6 jours et à la carte pour une durée >6 jours.
+
+L’article est renvoyé directement au blanchisseur par le transporteur. Ensuite il passera par la case réparation si besoin. Les trajets entre le blanchisseur, le couturier et le local seront assurés par BabyCameleon dans un premier temps.
+
+
+**Comparaison avec 2 supply chain existantes :**
+
+Monsieur Magnani m’a fourni une étude de cas qui explique comment 2 entreprises de location de vêtements ont su s’imposer sur leur marché. Cette étude va surement nous permettre de tirer des enseignements qui s’appliquent à Baby Cameleon.
+
+*cas 1 : RTR*
+
+La première entreprise étudiée est RTR ( Rent The Runway), boutique américaine de location de vêtements . RTR  possède un site web ainsi que des boutiques réelles. Il propose plusieurs types d’offres : un location à la journée et un abonnement.  Le cout de la livraison est pris en charge par l’entreprise. RTR a débuté en sous traitant la plupart de ses activité : stockage des marchandises,  livraison, nettoyage…
+L’entreprise, victime de son succès a grandit très vite et a du revoir son modèle d’approvisionnement. Ses multiples sous traitances sont devenues inefficaces lorsque l’entreprise a atteint une certaine taille. 
+Les contacts en face à face avec les partenaires étaient trop peu nombreux pour garantir une bonne circulation de l’information. De plus  RTR n’avait aucun contrôle sur la qualité des services fournis par ses partenaires. Un manque de contrôle qui conduisait à une baisse de qualité des services de RTR et un baisse de satisfaction des clients.
+RTR a donc décidé de gérer elle même l’entrepôt de stockage des produits.
+⇒ enseignements : Il ne faut pas hésiter à réévaluer sa stratégie en fonction de l’évolution de l’entreprise. Par exemple si BabyCaméléon grandit on pourrait envisager d’internaliser le nettoyage des vêtements.
+Nous sommes une entreprise de service . Le niveau du service est donc primordial. Il faut veiller à garder une bonne relation avec nos partenaires tout en contrôlant la qualité de leurs services. 
+
+Un autre point important mentionné dans ce cas est la bonne utilisation des données
+On peut utiliser les données des utilisateurs pour leur proposer des produits adaptés à leur besoins mais aussi prévoir nos besoins en stock
+Enfin pour faire face à la saisonnalité du stock, RTR  a mis en place un format de location « illimité » ou les clients louent pour une durée indéterminée.
+
+*cas 2 : Meliziu*
+
+Meliziu est une entreprise chinoise de location de vêtements haut de gamme. Elle a fait face à des débuts difficiles, avec une acceptation des clients faible pour le concept.  Elle a donc du réduire ses coûts au maximum en sous traitant un maximum de taches. Elle a aussi  permis aux clients de mettre en location leurs propre vêtements.  Cette idée leur permet de diversifier l’ offre à moindre couts .
+En conclusion de ces 2 études, la stratégie d ‘approvisionnement dépend surtout de la taille de l’entreprise.  Sous traiter le stockage de ses articles fait sens pour une petite entreprise. Même si ce n’est pas l’idée qui a été retenue, elle reste à étudiée. Les partenaire sont cruciaux dans le bon développement de notre entreprise,  beaucoup de conflits peuvent apparaître à mesure que la charge de travail augmente.
+
+**La gestion des stocks:**
+
+{% prerequis "Sources" %}
+https://www.rentle.io/blog/rental-business/rental-inventory-management
+https://www.cgnglobal.com/blog/network-modeling-an-effective-supply-chain-approach-to-the-rental-industry
+
+{% endprerequis %}
+
+Dans une entreprise de location, il ne s’agit pas de maximiser le nombre d’unités vendues mais leur taux d’utilisation. On veut que les articles soient loués le plus de temps possible.
+Le local : La capacités de stockage est impactée par le local : taille/ disposition… Il faut ensuite organiser l’espace et grouper le rangement par catégorie de produit par exemple. On veut conserver la qualité de nos articles, ils doivent  donc être gardés dans les meilleures conditions possibles. (par exemple dans des sacs spéciaux.)
+
+Je suis partie sur un stock de base de 200 pièces, une fois ce stock obtenu il faudra utiliser un logiciel de gestion des stocks pour savoir quand il est disponible/ A envoyer…
+Le management ou contrôle du stock nous permettra d’obtenir des informations et de nous adapter ( par exemple acheter en double les articles très sollicités.) On peut aussi imaginer ajouter un bouton sur le site : « j’aurais voulu louer cet article mais il n’est pas disponible ».
+Ensuite, il faut prévoir un temps d’immobilisation après chaque location pour effectuer la maintenance des articles : le lavage et les éventuelles réparations. Je suis partie du principe que  cela représentait 2 jours (hors livraison). Collecter des informations sur ces phases au fur et a mesure permettra d’augmenter notre réactivité. 
+
+Prédire la demande est très important dans le dimensionnement d’un stock.Logiquement, lors d’un pic de demande on augmente les stocks et on les diminue lorsque la demande baisse. Malheureusement vu le segment de produit de Baby Caméléon, c’est compliqué. Les produit sont saisonniers.  On pourrait prévoir des ventes saisonnière pour se « débarrasser » des articles déjà trop utilisés (une à la fin de la saison été pour les vêtements de cérémonie et une à la fin de l’hiver pour les vêtements de ski) ou recycler ceux qui sont déjà réparés et ainsi libérer de l’espace . Pour choisir quel article vendre ou recycler il faudra mettre en place des indicateurs d’usure.
+ Ensuite Reconnaitre et étudier les articles les plus profitables pourra nous permettre d’adapter nos stocks aux préférences clients.
+Enfin il faut prendre en considération la durabilité des produits. Le plus longtemps il peut circuler, plus il générera de profits.
+Un Audit réguliers des stocks  nous permettra aussi de garder la trace exact de nos articles.
+
+
+**Mes KPI:**
+
+{% prerequis "Sources" %}
+https://www.rentle.io/blog/rental-business/inventory-metrics
+{% endprerequis %}
+
+## Conclusion : 
+
+L’étude de la logistique de projet m’a fait réaliser que je devais revoir ma politique de prix. Au lieu de louer à la journée, il y aura plusieurs options : 3 jours, 6jours ou à la carte pour des durées plus longues. On pourra alors adapter les prix à ces forfaits et faciliter la planification.
+J’ai aussi reconsidérer le partenariat avec le transporteur qui sera crucial pour assurer l’efficacité du business. 
