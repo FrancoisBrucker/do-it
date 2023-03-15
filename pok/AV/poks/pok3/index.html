@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>POK 3</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">POK 3</h1>
+  <div class="mb-4">
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Antoine Varnerot</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <head>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<h2>Plan du POK</h2>
+<h2>Sprint 1</h2>
+<ul>
+<li><s>sign in (back)</s></li>
+<li><s>sign up (back)</s></li>
+<li><s>sign out (back)</s></li>
+<li><span style="color:orange">login (front)</span></li>
+<li><span style="color:orange">noter les musiques</span></li>
+<li><s>déployer en ligne</s></li>
+</ul>
+<h2>Sprint 2</h2>
+<ul>
+<li>tests unitaires</li>
+<li>utilisation de docker</li>
+<li>CI (avec gitlab peut-être ou directement avec les &quot;actions&quot; de GitHub)</li>
+</ul>
+<h2>Points difficiles/techniques</h2>
+<ol>
+<li>Mise en ligne de l'API</li>
+</ol>
+<p>L'API et le front-ent étant décomposés en deux dossier différents, on commence d'abord par mettre en ligne l'API sur l'OVH.<br>
+Tout d'abord dans notre API, on replace le port dé déploiement par défaut par un port géré par l'OVH. Dans notre fichier <code>server.js</code> on remplace le port 3000 par le 8080 comme suit:</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token function">normalizePort</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token string">'8080'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On voudra lancer la commande <code>nodemon serve</code> sur notre OVH une fois les fichiers déployés, mais l'OVH ne reconnait pas la commande nodemon directement, cependant il reconnait les commandes npm.<br>
+Pour pouvoir lancer la commande nodemon, il faut donc la renseigner dans notre fichier <code>package.json</code>:</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json">scripts"<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span>
+</code></pre>
+<p>Il nous suffit maintenant de copier les fichiers de notre dossier API dans le dossier /node de l'OVH puis, directement depuis la console, lancer notre commande</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> run serve
+</code></pre>
+<p>L'API est désormais en ligne sur le port 8080.</p>
+<ol start="2">
+<li>Mise en ligne du front</li>
+</ol>
+<p>Maintenant que notre API est en ligne sur l'OVH, il faut relier le front-end à l'API en changeant l'adresse des requêtes.<br>
+Dans <code>/src/app/services/music.service.ts</code>, on va remplacer les URL par ceux de l'API en ligne comme suit:</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">getMusics</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://node.origan.ovh1.ec-m.fr:8080/api/musics</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span>get<span class="token operator">&lt;</span>Music<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token punctuation">(</span>route<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">addMusic</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">newMusic</span><span class="token operator">:</span> Partial<span class="token operator">&lt;</span>Music<span class="token operator">></span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://node.origan.ovh1.ec-m.fr:8080/api/newMusic</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span>post<span class="token operator">&lt;</span>any<span class="token operator">></span><span class="token punctuation">(</span>route<span class="token punctuation">,</span> newMusic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On build notre application localement avec la commande <code>npm run build</code>. Cela va nous générer les fichiers nécessaire à déployer.<br>
+Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous: <code>/projet3a</code>)</p>
+<p>On supprime au prélable sur l'OVH tous les fichiers du dossier <code>/www</code>, puis on colle tout le contenu de notre dossier dans ce dernier.</p>
+<p>Notre site est désormais en ligne, et en se connectant on remarque que le front-end fonctionne correctement et communique bien avec l'API puisque les infos du feed de musique ont bien été collectées depuis MongoDB</p>
+<ol start="3">
+<li>Authentification</li>
+</ol>
+<p>Pour le système d'authentification, on avait sous-estimé le temps que ca prendrait. En effet, on a utilisé les JWT tokens et même si on a trouvé un tutoriel sur le site <a href="https://www.bezkoder.com/">https://www.bezkoder.com/</a>, il y avait eu quelques changements depuis que ce tutoriel a été fait et notre application express était en &quot;type: module&quot; (paramètre dans le package.json) et ca gênait beaucoup. On a préféré terminé cela parce que c'était un gros point technique du projet et qui allait nous servir pour d'autres projets.</p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
