@@ -25,14 +25,6 @@ L'objectif de mon POK est de découvrir comment créer un jeu en python en suiva
 
 #### Résultat du premier sprint : 
 
-* Configuration de l'écran d'accueil 
-* Configuration de projectiles aériens 
-* Animation des personnages
-* Ajout de personnages supplémentaires 
-* Ajout d'effets sonores 
-* Personnalisation du jeu 
-
-
 
 
 ### Sprint 2
