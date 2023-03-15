@@ -21,3 +21,5 @@ Ensemble des POKs réalisé par Thomas Duroy.
 - [Mon site chez moi](./POK_2)
 
 ### Temps 3
+
+- [Analyse de sentiments avec PyTorch](./POK_3)
