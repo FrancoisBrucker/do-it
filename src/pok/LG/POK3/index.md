@@ -337,26 +337,6 @@ Un Audit réguliers des stocks  nous permettra aussi de garder la trace exact de
 
 **Mes KPI:**
 
-Pour suivre l’évolution du business et permettre une amélioration continue de l’entreprise il faut suivre certains indicateurs clés :
-- Nombre de location (total au par article)
-- Marge générée par un article (= revenu généré par l’article/(cout d’achat +cout de maintenance) )
-- Taux d’utilisation d’un article (= nb jours loués/ nb de jours de location potentiel)
-- Durée de vie d’un produit
-- Nombres de réparations sur le produit
-- Fragilité de l’article (= nombre de location du produit/ nombre de réparations sur le produit)
-- Age moyen de l’inventaire
-- Taux de renouvellement de l’inventaire, mensuel ou annuel ( Nouvel équipement/  (Ancien équipement + Nouvel équipement -  équipement vendu)
-Ces indicateurs nous permettront de déterminer les articles les plus profitables et donc d’affiner le choix de nos pièces et leur nombre . Ils permettront  aussi d’estimer  quand remplacer certains produits.
-
-De nombreux indicateurs sur le coût de l’inventaire pourront aussi être utiles :
-- Cout de l’inventaire
-- Cout du stockage
-- Cout d’indisponibilité ( cout des locations perdues à cause de l’indisponibilité des produits)
-- Cout de transport
-- Taux maintenance sur revenu (=revenu total généré par le produit/ cout de maintenance)
-
-Des outils de BI (comme PowerBi par exemple) nous permettrons de suivre ces indicateurs et d'améliorer l'effcicacité de l'entreprise.
-
 {% prerequis "Sources" %}
 https://www.rentle.io/blog/rental-business/inventory-metrics
 {% endprerequis %}
@@ -369,4 +349,3 @@ https://www.rentle.io/blog/rental-business/inventory-metrics
 
 L’étude de la logistique de projet m’a fait réaliser que je devais revoir ma politique de prix. Au lieu de louer à la journée, il y aura plusieurs options : 3 jours, 6jours ou à la carte pour des durées plus longues. On pourra alors adapter les prix à ces forfaits et faciliter la planification.
 J’ai aussi reconsidérer le partenariat avec le transporteur qui sera crucial pour assurer l’efficacité du business. 
-Ce projet me semble bel et bien viable. Il faudra bien étudier les produits en amont de la consititution des stocks mais aussi bien suivre les indicateurs afin d'améliorer en continu l'entreprise et sa rentabilité. Pour ce faire il faudra aussi bien travailler la relation cient en donnant la possibilité à ces derniers de donner leur avis sur la qualité des services et les produits qu'ils désirent voir sur notre catalogue. 
