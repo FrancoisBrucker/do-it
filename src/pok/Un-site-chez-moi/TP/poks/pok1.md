@@ -5,7 +5,10 @@ title: "POK 1 : Mon site chez moi"
 authors:
  - Thomas Pont
 
-tags: ['Mon site chez moi']
+tags: 
+- 'Mon site chez moi'
+- 'Front'
+- 'Back'
 ---
 
 <!-- Début Résumé -->
