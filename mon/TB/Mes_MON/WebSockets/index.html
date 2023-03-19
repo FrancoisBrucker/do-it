@@ -76,10 +76,16 @@
   
 
   <!-- début résumé -->
-<p>Découverte des WebSockets</p>
+<p>Découverte du protocole WebSockets.<br>
+Le protocole permet d'échanger des données en temps réel entre le client et le serveur.<br>
+Il faut un niveau intermédiaire (savoir développer un site web) pour suivre ce MON.</p>
 <!-- fin résumé -->
-<p>Pour ce MON j'ai suivi la <a href="https://blog.logrocket.com/websocket-tutorial-real-time-node-react/">formation LogRocket sur les WebSockets</a>.<br>
-Finalement cette formation utilise react que je ne maitrise pas donc j'en ai cherché d'autres utilisant node et express :</p>
+<p>Pour ce MON j'ai suivi tout d'abord suivi la <a href="https://blog.logrocket.com/websocket-tutorial-real-time-node-react/">formation LogRocket sur les WebSockets</a>.</p>
+<p>Grâce à ce tutoriel j'ai pu bien comprendre le concept derrière le protocole WebSocket. Il s'agit de créer une connexion entre le client et le serveur avec un système de handshake (le client envoie une demande de connexion et le serveur lui répond avec un message d'acceptation). Une fois la connexion établie, les deux parties peuvent s'envoyer des messages.</p>
+<p>Il existe différentes API pour gérer WebSockets. Ce tutoriel utilise l'API <a href="https://www.npmjs.com/package/websocket">websocket</a>.</p>
+<p>Après avoir installé l'API avec la commande :</p>
+<pre><code>npm install --save websocket http
+</code></pre>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=wV-fDdHhGqs&amp;ab_channel=Vuka">une vidéo utilisant l'API WebSocket</a></li>
 <li><a href="https://medium.com/factory-mind/websocket-node-js-express-step-by-step-using-typescript-725114ad5fe4">un petit tuto utilisant Typescript</a></li>
