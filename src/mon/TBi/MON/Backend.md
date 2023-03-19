@@ -1,27 +1,28 @@
 ---
 layout: layout/post.njk
 
-title: " Application Web : Comprendre et/ou Mettre en place "
+title: " B.A-BA Application Web : Comprendre et Mettre en place un Backend "
 
 authors:
   - Tuncay Bilgi
 
-tags: ['Backend']
+tags: ['Backend','BDD','Typescript']
 ---
 
 <!-- début résumé -->
 
-Savoir comment fonctionne une application Web et enfin comprendre les geeks qui parlent dans un lexique obscure. Mettre en place sa propre application complexe.
+MON Débutant.
+
+Savoir comment fonctionne une application Web et enfin le lexique obscure des développeurs. Mettre en place sa propre application complexe.
 
 <!-- fin résumé -->
 
-Ce MON est un cours sur le Developpement Web, il se concentre sur ce qu'on appelle le Backend. Vous pourrez y apprendre la théorie et aussi la pratique avec la mise en place de votre propre application, plus complexe q'une simple page statique.
+Ce MON est un cours sur le Developpement Web, il se concentre sur ce qu'on appelle le Backend. Vous pourrez y apprendre la théorie et aussi la pratique avec la mise en place de votre propre application.
 
-Dans ce MON, nous allons voir comment mettre en place une application complete, avec une interface, base de données et un service d'authentification. Nous allons nous concentrer sur ce qu'on appelle le Backend. Je vous presenterais les grands principes d'une application web, et plus précisément, comment structurer un Backend pour qu'il soit maintenable et lisible.
-Dans la mesure du possible, tout sera fait proprement. Le but est d'apprendre à structurer un Backend.
-Dans un prochain MON, on s'appuiera sur cette application pour tester des classiques de cybersécurité.
+Dans ce MON, nous allons voir comment mettre en place une application complète, avec une interface, base de données et un service de création de compte. Je vous presenterais les grands principes d'une application web, et plus précisément, comment structurer un Backend pour qu'il soit maintenable et lisible.
+Le but est d'apprendre à structurer un Backend proprement.
 
-{%attention%} Je vous présente une manière de faire les choses, il y en à d'autres et je ne garantie pas que la mienne soit parfaite. Je ne me préoccupe pas de programation par les tests.{%endattention%}
+{%attention%} Je vous présente une manière de faire les choses, il y en à d'autres et je ne garantie pas que la mienne soit parfaite.Aussi,je ne me préoccupe pas de programation par les tests.{%endattention%}
 
 {%details 'Mots clés expliqués dans ce cours'%}
 - Frontend, Backend, Base de données
@@ -35,25 +36,33 @@ Dans un prochain MON, on s'appuiera sur cette application pour tester des classi
 ### Ressources :
 
 - Les documentations : 
-    - [Nodejs]
-    - [Expressjs]
-    - [TypeORM]
-    - [React]
+    - [Nodejs](https://nodejs.org/en)
+    - [Expressjs](https://expressjs.com/fr/)
+    - [TypeORM](https://typeorm.io/)
+    - [React](https://fr.reactjs.org/)
+
+- Les MON associés : 
+    - [MON web frontend](https://francoisbrucker.github.io/do-it/mon/AV/mons/web-front-1/)
+    - [MON Docker](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/)
+
+- Code source : 
+
+  - [Mon github](https://github.com/TuncayBilgi/cybersecenv)
 
 ### Prérequis :
 
--  Pour la théorie : Avoir un ordinateur, une connexion internet, l'eau courante
+- Pour la théorie : Avoir un ordinateur, une connexion internet, l'eau courante
 - Pour la pratique : Avoir une première expérience avec le developpement web.
 
 ### Etapes : 
 - Comment marche une application web
+- Architecture du BackEnd
 - Initialisation du projet : 
   - Frontend
   - Backend
   - Base de données
-- Architecture du BackEnd
 - Mise en place d'une entitée Account
-- Mise en place d'un token de connection
+- Mise en place de la création d'un account
 
 ## Comment marche une application web:
 
@@ -70,9 +79,9 @@ Ces trois parties ont leurs rôle bien défini :
 
 - La base de donnée, qui permet de stocker des données persistantes. Elle reste sur le serveur, et encor plus, on veut qu'elle soit impénétrable, car nous voulons conserver et cacher les données importantes à notre systèmes, ou les données privées qui concernent nos utilisateurs.
 
-Ces parties communiquent entre elles à travers ce qu'on appelle des requêtes. Le frontend envoie des requêtes au backend, qui lui répond, en lui envoyant une réponse. Pour ecrire cette réponse, le backend peut aller chercher des données dans la base de données. Pour ce faire, il va la questionner, avec language spécifique comme du SQL par exemple.
+Ces parties communiquent entre elles à travers ce qu'on appelle des requêtes. Le frontend envoie des requêtes au backend, qui lui répond, en lui envoyant une réponse. Pour ecrire cette réponse, le backend peut aller chercher des données dans la base de données. Pour ce faire, il va la questionner, avec langage spécifique comme du SQL par exemple.
 
-#### Exemple concret et à la mode en 2023 ChatGPT :
+#### Exemple à la mode en 2023 - ChatGPT :
 
 L'utilisateur interagit avec une page qui permet de poser une question à l'IA ChatGPT. Cette page est le frontend, qui est executée par son ordinateur. Quand il rentre sa question et qu'il appuie sur le bouton envoyer, son ordinateur va envoyer une requête au Backend de CHatGPT, qui tourne sur les serveurs de OpenAI. 
 
@@ -82,18 +91,18 @@ La prochaine fois que l'utilisateur vient sur le site de ChatGPT, sans qu'il ait
 
 ### Les attentes différentes remplies par les trois parties d'une application :
 
-Ces trois parties ayant des rôles bien différents, leurs code n'a rien à voir. Coder du Frontend ne ressemble pas à coder du backend, on n'utilise pas les mêmes fonctions, on ne se pose pas les mêmes questions, et parfois, on n'utilise même pas le même language de programation.
+Ces trois parties ayant des rôles bien différents, leurs code n'a rien à voir. Coder du Frontend ne ressemble pas à coder du backend, on n'utilise pas les mêmes fonctions, on ne se pose pas les mêmes questions, et parfois, on n'utilise même pas le même langage de programation.
 Par exemple : 
 
 - Le frontend à beson d'être du code qui puisse être lu par les navigateurs web.
 - Le backend à besoin d'être du code relativement efficace, qui réalise le travail sans gaspiller de ressources et de façon consistente pour tous les utilisteurs.
 - La Base de données doit pouvoir être questionnée, on doit pouvoir y retrouver les infrmations nécéssaires facilement.
 
-Pour répondre à ces besoins différents, on utilise d'abords des languages différents :
+Pour répondre à ces besoins différents, on utilise d'abords des langages différents :
 
-- Les navigateurs ne comprennent que le HTML, le CSS, le JavaScript et le Webassembly, il est donc impératif de choisir ses languages.
-- Pour être efficace, on utilise des languages orientés objet, stables, qui s'executent rapidement, et qui sont potentiellement typés. On utilise le plus souvent du Javascript, du Typescript, du php, du Java, du C# ou dans une moindre mesure, du Python.
-- Les bases de données communiquent à travers un language : souvent du SQL ou du grapheQL. Elles ont cependnt toutes leurs particularités et pour cela elles modifie le langage de base, on dit qu'elles utilisent un dialect.
+- Les navigateurs ne comprennent que le HTML, le CSS, le JavaScript et le Webassembly, il est donc impératif de choisir ses langages.
+- Pour être efficace, on utilise des langages orientés objet, stables, qui s'executent rapidement, et qui sont potentiellement typés. On utilise le plus souvent du Javascript, du Typescript, du php, du Java, du C# ou dans une moindre mesure, du Python.
+- Les bases de données communiquent à travers un langage : souvent du SQL ou du grapheQL. Elles ont cependnt toutes leurs particularités et pour cela elles modifie le langage de base, on dit qu'elles utilisent un dialect.
 
 Aussi, pour répondre à ses besoins, on utilise des principes différents :
 
@@ -103,13 +112,13 @@ Aussi, pour répondre à ses besoins, on utilise des principes différents :
 
 ### En pratique :
 
-#### Les languages :
+#### Les langages :
 
-Comme dit plus haut, différents besoins, différents languages.
-Voici quelques languages couremment utilisés, et une introduction sur leur fonctionnement.
+Comme dit plus haut, différents besoins, différents langages.
+Voici quelques langages couremment utilisés, et une introduction sur leur fonctionnement.
 
   - HTML,CSS :
-Ce couple forme un language qui permet d'afficher des pages sur un navigateur web.
+Ce couple forme un langage qui permet d'afficher des pages sur un navigateur web.
 Le html décrit le Layout, c'est à dire toutes les données qui seront affichées, et ouù elles seront affichés. Par exemple une page contient un titre, un paragraphe, un bouton en bas de page etc...
 Le CSS décrit le style avec lequel ces données sont affichées. On y décrit quels sont les tailles des paragraphes, la couleur des boutons, la police utilisée etc..
 
@@ -117,10 +126,10 @@ Le CSS décrit le style avec lequel ces données sont affichées. On y décrit q
 Langage incontournable du developpement web. Le javascript sert en premier lieux à injecter de l'interactivité dans les pages web. Il à le mérite d'être un des seuls langages que tous les navigateurs comprennent, avec les deux citées plus haut. Si un bouton doit incrémenter un compteur, si il faut envoyer une requête au backend, cela se fera avec du javascript. Ce langage est aussi utilisé pour du Backend.
 
   - Python :
-Le python à le mérite d'être simple à appréhender. Il possède des librairies qui facilitent d'autant plus la création de site web. Malheureusement, ce n'est pas un language compris par les navgateurs web, il n'est donc utilisé que pour le backend. Sont utilisation est cependant restrainte. En effet, le langage est lent est gourment en ressources, l'inverse de ce dont en a besoin en Backend.
+Le python à le mérite d'être simple à appréhender. Il possède des librairies qui facilitent d'autant plus la création de site web. Malheureusement, ce n'est pas un langage compris par les navgateurs web, il n'est donc utilisé que pour le backend. Sont utilisation est cependant restrainte. En effet, le langage est lent est gourment en ressources, l'inverse de ce dont en a besoin en Backend.
 
   - Typescript (ts) :
-Language récent qui est un Superset du Js. C'est à dire que c'est du Javascript avec des fonctionnalités en plus. Ces fonctionalités sont principalement les types. Ts est donc un langage typé, c'est à dire que pour définir une variable, il faut lui donner un type qui ne peut pas être changé. Ce language est utilisé autant en Front qu'en Back puisque qu'il est compilé en Javascript. C'est à dire qu'à partir du code en TS, un compilateur va créer un nouveau code en Js. Ce langage est de plus en plus utilisé par les développeur javascript car il facilite le développement. 
+langage récent qui est un Superset du Js. C'est à dire que c'est du Javascript avec des fonctionnalités en plus. Ces fonctionalités sont principalement les types. Ts est donc un langage typé, c'est à dire que pour définir une variable, il faut lui donner un type qui ne peut pas être changé. Ce langage est utilisé autant en Front qu'en Back puisque qu'il est compilé en Javascript. C'est à dire qu'à partir du code en TS, un compilateur va créer un nouveau code en Js. Ce langage est de plus en plus utilisé par les développeur javascript car il facilite le développement. 
 
 - JSON : 
 Format de données utilisé par les applications web pour communiquer.
@@ -170,7 +179,7 @@ Par exemple si je crée un projet avec certains frameworks, et que quelqu'un veu
 ##### Exemples :
 
 - Frontend :
-[ReactJS]() et [Angular]() nous proposent de créer des composants, qui seront inserés dans une page html et envoyés à l'utilisateur. Ils ont des opnions différentes.
+[ReactJS](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/) et [Angular](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) nous proposent de créer des composants, qui seront inserés dans une page html et envoyés à l'utilisateur. Ils ont des opnions différentes.
 Angular prône une séparation totale des fonctions. La page html ne s'occupe que de l'affichage, le fichier js (javascript) s'occupe de l'interactivitée. Chaque composant est défini par une classe et on doit donc faire attentions à certaines problématiques lié à cela. La communication entre le html et le js est gérée par des fonctions propre à Angular.
 
 React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de html et de js. Cette page affiche des composants qui sont aussi en jsx et on peut y placer si nécéssaire l'interactivitée. Aussi, les composants sont des fonctions, et ils interagissent entre avec des hooks, des fonctions préconstruites. 
@@ -178,9 +187,9 @@ React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de 
 Comme on peut le voir, les deux frameworks répondent aux mêmes besoins, d'une manière (parfois subtilement) différente.
 
 - Backend :
-[Sequelize]() et [TypeORM]() sont deux ORMS différents. Un ORM est un framework qui permet de connecter les fonctions ou les objets das notre programme, aux données dans une base de données.
+Sequelize et TypeORM sont deux ORMS différents. Un ORM est un framework qui permet de connecter les fonctions ou les objets das notre programme, aux données dans une base de données.
 Sequelize nous permet de faire cela en js, et laisse de la liberté au prgrammeur de choisir comment organiser son code.
-TypeORM nous force à suivre l'architecture classique d'un backend(que l'on verra plus bas). En plus de cea, il utilise Typescript, qui nous oblige à avoir un language typé (de type Java ou C#). Les types et l'architecture apportent une certaine lourdeur, mais permettent d'avoir un programme solide, plus simpe à maintenir en équipe.
+TypeORM nous force à suivre l'architecture classique d'un backend(que l'on verra plus bas). En plus de cea, il utilise Typescript, qui nous oblige à avoir un langage typé (de type Java ou C#). Les types et l'architecture apportent une certaine lourdeur, mais permettent d'avoir un programme solide, plus simpe à maintenir en équipe.
 
 #### Quels Framework utiliser ?
 
@@ -196,16 +205,66 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   La troisème idée est plus récente, le plus gros avantage est de ne as avoir à réfléchir. Les Méta Framework sont les plus opiniated de tous,a tels points qu'ils ont même une opinion sur les frameworks que vous devez utiliser. Cela à des avantages, ça permet de ne pas avoir à trouver les frameworks soit même, mais aussi, ces Metaframeworks garantissent une grande compatibilité entre les différents composants de l'applications, et une grande simplicité d'utilisation. Je le conseille au débutant qui ne savent pas quels frameworks utilisé, et aussi aux developpeurs confirmés qui connaissent déjà un farework inclus dans le ackage et qui veulent étendre leurs possibiltés.
 
+  ### Architecture du Backend :
+
+  Le backend réalise plusieurs actions spécifiques, il :
+
+  - Expose une application sur le port spécifique d'un serveur.
+  - Expose des routes (des urls) à travers lesquelles on peut communiquer avec lui. 
+  - Execute du codes selon les requêtes qui lui sont envoyées.
+  - Il met en place des requêtes pour aller chercher des informations dans la base de données.
+  - Il façonne des objets pour les enregistrer dans la base de données.
+
+  Pour réaliser ces divers tâches, on pourrait tout rassembler dans un seul fichier nommé par exemple backend.js . Le problème, est que cette méthode créer un immense fichier illisible, dur à débugger ou à refactoriser quand il y a besoin de mener des changements. On essaie donc, au maximum de fractionner le projets en fichiers qui n'ont qu'une unique fonction. on aura donc, dans l'ordre défini précédement : 
+
+  - Le fichier index
+  - Le controleur
+  - Les services
+  - Le repository
+  - Les entités
+
+  Notre Backend va gérer la création de comptes pour un site grâce à TypeORM.
+
+  l'arboresence est la suivante : 
+
+  backend
+  |_controller
+    |_accountController.ts
+  |_entity
+    |_Account.ts
+  |_service
+    |_accountService.ts
+  |_index.ts
+  |_datasource.ts
+
+  Le controller est le fichier qui répertorie **les routes** accesibles. Ces routes prennent en entrée **une requête** et renvoient **une réponse**. Pour créer la réponse, elles se servent des fonctions contenues dans **les services**. Ensuite, si besoin, les services font appels à **l'entité** pour créer un objet formatté qui peut être envoyé dans **la base de données**. Toutes les informations liées à la base de données sont contenues dans datasource.ts qui est le coeur de TypeORM. Ce dernier nous permet de se connecter facilement avec notre base de données, et créer pour nous des **repositories** automatiquement. Ces repository contiennent les fonctions qui créent les requêtes sql comme 'SELECT account *' ou 'SELECT account WHERE ...'.
+  Enfin, le fichier index.ts reprend toute l'application et la rend accessible sur le port 3000 de votre ordinateur.
+
+  Coté frontend, on à une application qui permet d'envoyer des requêtes sur le même port 3000 de votre ordinateur, ces requêtes seront donc directement captées par votre backend.
+
   ## Mise en place d'une application : 
 
   ### Initialisation du projet :
 
-  On commence par se placer dans un dossier vièrge que l'on ouvre dans un éditeur de code (VS code pour moi). On peut faire un git init, voici d'ailleurs le [lien du repository git de ce projet sur mon github](). N'hésitez pas à aller regarder le code directement là-bas, je ne vais pas le copier-coller ici.
+  On commence par se placer dans un dossier vièrge que l'on ouvre dans un éditeur de code (VS code pour moi). On peut faire un git init, voici d'ailleurs le [lien du repository git de ce projet sur mon github](https://github.com/TuncayBilgi/cybersecenv). N'hésitez pas à aller regarder le code directement là-bas, je ne vais pas le copier-coller ici.
   On aura deux dossiers principaux : 
   - Frontend
   - Backend
 
   En dehors de ces deux fichiers, on viendra placer les fichiers utiles pour la globalité du projet, comme un fichier .env qui possède des variables d'environment, un fichier .gitignore etc..
+
+  {%details "Cette partie demande plus de pré-requis."%}
+  Savoir utiliser : 
+  - un Logiciel pour coder (comme VScode)
+  - javascript
+  - les langages typés
+  - la programmation orientée objet
+  - un outil d'envoie de requête (curl, postman ou insomnia)
+  
+  Avoir installé : 
+  - Node.js
+  - Docker
+  {%enddetails%}
 
   #### Frontend :
   On choisit d'utiliser le framework Reactjs, on initialise donc un projet React :
@@ -214,7 +273,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   le front peut être lancé sur le port par défaut 5432 grâce à la commande :
   `npm run dev`
 
-  On ne s'occupe pas plus du front ici, reférez vous à des MON tels que [Angular]() [Angular2]() [React]().
+  On ne s'occupe pas plus du front ici, reférez vous à des MON tels que [Angular](https://francoisbrucker.github.io/do-it/mon/AV/mons/web-front-1/) [Angular2](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) [React](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/).
 
   #### Backend :
   On utlise les Frameworks suivants :
@@ -224,18 +283,105 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   on initialise le projet de cette manière :
 
-  `npm `
+  `npx typeorm init --name cyberenv-back  --database postgre --docker --express`
+  
+  Cela met en place un projet TypeORM nomé cyberenv-back qui utilise une base de données postgreSQL, docker et est basé sur express.js.
 
   On peut y voir plusieurs dossiers, on y revient dans le chapitre d'après.
 
   #### Base de données :
 
-  On met en place une base de données PostgreSQl. Elle est hébergée à travers un conteneur docker. Je vous invite à voir le [MON Docker]() et/ou de copier coller mon fichier [docker-compose]().
+  On met en place une base de données PostgreSQl. Elle est hébergée à travers un conteneur docker. Je vous invite à voir le [MON Docker](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/) et/ou de copier coller mon fichier [docker-compose](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/docker-compose.yml).
   Vous pouvez aussi mettre en place votre base de données vous même.
 
   Le plus important est de modifier le fichier data-source.ts . Ce fichier rassemble toutes les informations liées à la conexion à votre base de données. Il est appelé dans les différentes controleurs.
   
-  ### Architecture du Backend :
+
+  ### Mise en place d'un Account.
+
+  C'est optionnel mais puisque nous utilisons Typescript, un langage typé, nous ajoutons un dosser dto, qui contient les classes que vont manipuler les services. Cela permet de profiter de tous les bénéfices d'un langage typé, comme la correction et la suggestion automatique du code.
+
+  Nous allons voir le processus de création d'un form de création de compte pas à pas, le code est sur mon [github](https://github.com/TuncayBilgi/cybersecenv) et les explications sont ci-dessous.
+  Nous avons besoin d'une classe de données : Account.
+
+  Dans le [dto](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/dto/AccountDTO.ts), nous définissons ce qu'est un account.
+  Il est défini par une classe qui possède un nom, un mot de passe et un booléen qui définit s'il est valide.
+  On pourrait définir des conditions sur le mot de passe, par exemple un mot de pass doit être plus logn que 6 charactères, mais il vaut mieux placer ces conditions dans le Account service.
+  On définit une autre classe, accountSafeDTO, qui est un account sans le mot de passe. C'est grâce à cette classe que nous allons renvoyer des account au client, car nous ne voulons pas que le client reçoive des mots de passe, sinon un utilisateur malintentionné pourrait récupérer des mots de passes qui ne lui appartiennent pas.
+
+  En effet, [accountService](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/service/AccountService.ts) gère toute la partie logique liée à un account, on y écrit des fonctions qui seront appelés grâce à l'API. Le service est une classe, cette classe possède des méthodes comme findLogin et createAccount. Les méthodes prennent en entrée et renvoient en sortie des instances des classes définies dans le dto. Ces fonctions permettent de chercher les accounts déjà existans, pour ce faire, il faut envoyer une requête sql à la base de données. Cette requêtes est créée automatiquement par le accountrepository que l'on instancie au début de la classe.
+  On met en place dans accountService toutes les fonctions qui concernent la création d'un account, et notamment les fonctions qui vérifient que les mots de passes sont au bon format.
+
+  Il nous faut alors une base de données, elle est herbergée dans un conteneur Docker (voir (tuto docker si besoin)[]) et est lancé grâce à un fichier docker-compose.yml .
+
+  Ensuite, nous mettons en place dans [route.ts](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/routes.ts) et [accountController.ts](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/controller/AccountController.ts) les différentes routes qui peuvent être appelées par le front.
+  Ainsi, si un navigateur envoie à l'adresse http://localhost:3000/account/create (qui est une adresse locale) une requête POST avec le body suivant : 
+  ```json
+  {"login" : "test", "password" : "motdepasse"}
+  ```
+  Le controlleur va récuperer ce body, le transformer en account grâce au dto, et l'envoyer dans le service des accounts pour lancer une procédure de création de compte.
+
+  Envoyons des requêtes au serveur grâce au logiciel insominia et obserons les réponses : 
+
+  On voit que si on envoit notre requête GET, le backend répond : 
+
+  <img src="./../images/get.png" alt="oops"/>
+
+  Le mot de passe n'est pas dans la réponse, c'est ce que l'on veut.
+
+  Si on essaie de créer un compte qui existe déja, le bakend répond : 
+
+  <img src="./../images/post.png" alt="oops"/>
+  
+
+  ### Création d'un account.
+
+  Nous faisons alors une [page frontend](https://github.com/TuncayBilgi/cybersecenv/tree/main/cyberenv-front) qui permet justement d'envoyer ce genre de requête au backend.
+  Pour cela, nous utilisons un formulaire. L'utilisateur rempli le formulaire et le frontend récupère les informations rentrées, puis créer une requête appropriée et l'envoie au backend.
+
+  il faut faire attention à ce que le frontend ne puisse pas avoir accès a des informtions confidentielles, comme des motdepasse. On peut voir par exemple que si on essaie de créer un account dont le login existe déja dans la base de donnée, le backend envoie au front l'accounbt qui existe déja, il n'envoie cependant que le login et non pas le mot de passe.
+
+  Notre frontend ne donc qu'une interface qui permet d'envoyer facilement les requêtes au bon format, ainsi, on peut y faire exactement ce que l'on faisait quand on écrivait nos requêtes à la main, et recevoir les mêmes réponses : 
+
+<div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
+
+<img src="./../images/account1.png" alt="oops"/>
+<img src="./../images/account2.png" alt="oops"/>
+<img src="./../images/account3.png" alt="oops"/>
+
+</div>
+  
+
+  ### Lancer le projet : 
+
+  Pour lancer le projet, il faut executer 
+
+  ```js
+  // dans le répertoire du backend
+  npm install
+  docker-compose up -d
+  npm start 
+
+  // dans le répertoire du frontend et dans un autre terminal
+  npm install
+  npm run dev
+
+  ```
+
+  ## Pour aller plus loin :
+
+  Ce site va servir de base pour un prochain projet ou je testerai des principes de cyber-sécurités.
+  Pour cela il faut mettre en place  : 
+  - un moyen de se connecter avec un token de connexion.
+  - un hashage des mots de passe pour qu'ils ne soient pa en clair dans la base de données.
+
+
+
+
+
+
+
+
 
 
 
