@@ -49,7 +49,7 @@ Les 6 grandes étapes de la méthode Waterfall sont les suivantes :
 Dans la première étape, le client **exprime ses besoins et ses objectifs**. L'équipe projet recueille le maximum d'informations car les étapes d'après dépendent de cette prise d'informations. Le chef de projet établit un plan de chaque phase du projet, la liste des ressources nécessaires et des personnes qui travailleront sur chaque étape.
 
 Dans la deuxième étape, la conception, l'équipe projet **choisit le matériel** qu'elle va utiliser. Elle élabore le squelette puis les organes qui projet. dans le cadre d'un développement de logiciel, c'est dans cette étape qu'elle décide du langage de programmation et de l'interface utilisateur par exemple. 
-La méthode Waterfall nécessite de bien documenter chaque étape pour que l'équipe puisse toujours savoir ce qui a été fait à l'étap précédente et mesurer l'avancement du projet
+La méthode Waterfall nécessite de bien documenter chaque étape pour que l'équipe puisse toujours savoir ce qui a été fait à l'étape précédente et mesurer l'avancement du projet
 
 Dans la troisième étape, l'équipe projet **met en oeuvre et développe** conformément à ce qui été exigé à l'étape 1 et structuré à l'étape 2. 
 
