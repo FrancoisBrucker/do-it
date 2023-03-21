@@ -65,8 +65,8 @@ Pour chaque **leçon**, OpenClassRoom fournit un fichier sur lequel s'entrainer 
 
 **J'ai découvert les fonctions suivantes :** 
 - *BDSOMME()* qui fait la somme d'un champ sur certain critère (dans la même famille il y a *BDMOYENNE(), BDMIN(), BDMAX()*)
-- *SOMME.SI()* qui fait une somme avec un critère
-- *NB.SI()* qui compte le nombre de lignes qui répondent à un critère
+- *SOMME&#46;SI()* qui fait une somme avec un critère
+- *NB&#46;SI()* qui compte le nombre de lignes qui répondent à un critère
 - *SOMME.SI.ENS()* qui fait une somme avec un nombre infini de critères
 - *SI()* qui permet de mettre des conditions et de ne pas faire la même chose en fonction de la validation ou non de la condition
 - *SIERREUR()* pour anticiper les erreurs
