@@ -83,7 +83,7 @@ On voit que ca a créé 10 comptes avec leurs clés respectives.
 
 Pour migrer les contrats sur la blockchain on utilise ```migrate``` qui renvoie :
 
-```console
+```bash
 Starting migrations...
 ======================
 > Network name:    'develop'
