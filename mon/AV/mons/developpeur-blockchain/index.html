@@ -66,10 +66,7 @@
 
   
 
-  <head>
-  <link rel="stylesheet" href="../../assets/style.css">
-</head>
-<h2>Description du MON</h2>
+  <h2>Description du MON</h2>
 <p>Pendant les 10h consacrées à ce MON, je veux :</p>
 <ul>
 <li>découvrir les metiers du Web 3</li>
@@ -81,19 +78,117 @@
 <li>Fonctionnement basique de la blockchain et des cryptomonnaies</li>
 </ul>
 <h2>Informations</h2>
-<p>Etant donné que je ne connais pas les métiers qui mêlent developpeur web et Web 3 / blockchain, j'ai cherché naïvement &quot;developpeur blockchain&quot; sur Google et j'ai remarqué qu'il existait beaucoup de métiers derrière.<br>
-L'article qui m'a beaucoup aidé pour comprendre ces métiers est :<br>
+<p>Etant donné que je ne connais pas les métiers qui mêlent developpement web et Web 3 / blockchain, j'ai cherché naïvement &quot;developpeur blockchain&quot; sur Google et j'ai remarqué qu'il existait beaucoup de métiers derrière.<br>
+Les deux principaux sont :</p>
+<ol>
+<li>Developpeur blockchain core (~backend)</li>
+<li>Les développeurs d’applications décentralisées (developpeur de Dapps) (~frontend)</li>
+</ol>
+<p>L'article qui m'a beaucoup aidé pour comprendre ces métiers est :<br>
 <a href="https://www.commentcoder.com/developpeur-blockchain/">https://www.commentcoder.com/developpeur-blockchain/</a></p>
 <p>Après avoir vu cela, j'ai compris que l'activité sur laquelle je voulais avoir plus d'informations était developpeur blockchain core</p>
 <p>Les languages utilisés dans ces métiers sont :</p>
 <ul>
-<li>Solidity<br>
-Solidity est le langage d’Ethereum pour coder des Smart Contracts. Si vous voulez coder vos Dapps, c’est le langage incontournable. Il est très proche du JavaScript au niveau de sa syntaxe et assez simple à apprendre.</li>
+<li>Solidity</li>
 <li>JavaScript</li>
 <li>Rust</li>
 <li>Pyhton (Django)</li>
 <li>C++</li>
 </ul>
+<h2>Solidity</h2>
+<p>Solidity est le langage d’Ethereum pour coder des Smart Contracts. Il est très proche du JavaScript.<br>
+Un Smart contract écrit en Solidity est du code qui tourne sur la blockchain Ethereum.<br>
+Solidity permet, par exemple, de créer des NFTs, des jeux vidéo, des plateformes de DeFi et toutes autres formes de projets web3.</p>
+<p>J'ai lu les 20/30 premières pages de la documentation en francais de solidity (sur +200 pages). Cela m'a permis d'apprendre les concepts propres à Ethereum (EVM plus particulièrement) comme le gas, les messages calls, la gestion des données (Storage, Memory et Stack) ... Ainsi que quelques exemples simples de code Solidity. Lien vers la doc :<br>
+<a href="https://solidity-fr.readthedocs.io/_/downloads/fr/v0.5.0/pdf/">https://solidity-fr.readthedocs.io/_/downloads/fr/v0.5.0/pdf/</a><br>
+Ce pdf est assez compliqué à comprendre au bout d'un moment et me semblait pas en adéquation avec ce que je voulais faire c'est pour cela que je n'ai pas continué la lecture.</p>
+<p>J'ai aussi beaucoup utilisé le site ethereum directement :</p>
+<ul>
+<li><a href="https://ethereum.org/fr/developers/docs/smart-contracts/">https://ethereum.org/fr/developers/docs/smart-contracts/</a></li>
+<li><a href="https://ethereum.org/fr/developers/docs/programming-languages/javascript/">https://ethereum.org/fr/developers/docs/programming-languages/javascript/</a></li>
+</ul>
+<p>Ce dernier site est très clair et contient beaucoup beaucoup de documentation accessible à tous.</p>
+<h2>Framework Truffle</h2>
+<p>Extension vsc : <a href="https://trufflesuite.com/guides/configuring-visual-studio-code/">https://trufflesuite.com/guides/configuring-visual-studio-code/</a><br>
+Truffle :<br>
+<a href="https://trufflesuite.com/">https://trufflesuite.com/</a><br>
+<a href="https://github.com/trufflesuite/truffle">https://github.com/trufflesuite/truffle</a></p>
+<p>J'ai ensuite suivi le tuto quickstart qui permet d'explorer des petits projets déja existants avec des explications :</p>
+<p><a href="https://trufflesuite.com/docs/truffle/quickstart/">https://trufflesuite.com/docs/truffle/quickstart/</a></p>
+<p>Pour déployer nos smarts contracts, on doit se connecter à une blockchain. On pourrait se connecter à celle d'Ethereum mais on a pas envie dépenser de l'argent pour le dev. Heuresement, Truffle à sa propre blockchain local. On s'y connecte avec la commande</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">truffle develop
+</code></pre>
+<p>qui renvoit ici :</p>
+<figure>
+  <img src="../../assets/truffleDevelop.png">
+</figure>
+<p>On voit que ca a créé 10 comptes avec leurs clés respectives.</p>
+<p>Pour migrer les contrats sur la blockchain on utilise <code>migrate</code> qui renvoie :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Starting migrations<span class="token punctuation">..</span>.
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+<span class="token operator">></span> Network name:    <span class="token string">'develop'</span>
+<span class="token operator">></span> Network id:      <span class="token number">5777</span>
+<span class="token operator">></span> Block gas limit: <span class="token number">6721975</span> <span class="token punctuation">(</span>0x6691b7<span class="token punctuation">)</span>
+
+
+1_deploy_contracts.js
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+
+
+   Deploying <span class="token string">'ConvertLib'</span>
+   ----------------------
+
+   <span class="token operator">></span> transaction hash:    0xb6b11e717f56b967a0b7657dbebc95d746f871415b0f6e2e27ebae3f09b65b25
+
+   <span class="token operator">></span> Blocks: <span class="token number">0</span>            Seconds: <span class="token number">0</span>
+   <span class="token operator">></span> contract address:    0xcba5Fba74cf4A83f99fd359829Bba560c3339F86
+   <span class="token operator">></span> block number:        <span class="token number">1</span>
+   <span class="token operator">></span> block timestamp:     <span class="token number">1678288800</span>
+   <span class="token operator">></span> account:             0x6bcb62979E599B1cE4Ef3f3DF3575B644Cb9A613
+   <span class="token operator">></span> balance:             <span class="token number">99.999468208</span>
+   <span class="token operator">></span> gas used:            <span class="token number">157568</span> <span class="token punctuation">(</span>0x26780<span class="token punctuation">)</span>
+   <span class="token operator">></span> gas price:           <span class="token number">3.375</span> gwei
+   <span class="token operator">></span> value sent:          <span class="token number">0</span> ETH
+   <span class="token operator">></span> total cost:          <span class="token number">0.000531792</span> ETH
+
+
+
+   Linking
+   -------
+   * Contract: MetaCoin <span class="token operator">&lt;</span>--<span class="token operator">></span> Library: ConvertLib <span class="token punctuation">(</span>at address: 0xcba5Fba74cf4A83f99fd359829Bba560c3339F86<span class="token punctuation">)</span>
+
+
+   Deploying <span class="token string">'MetaCoin'</span>
+   --------------------
+
+   <span class="token operator">></span> transaction hash:    0x675fa58ed29a7dc17fea9e9dcca19597a6a3ed24ebcc409648a44deae71e4a8d
+
+   <span class="token operator">></span> Blocks: <span class="token number">0</span>            Seconds: <span class="token number">0</span>
+   <span class="token operator">></span> contract address:    0xb4dEbAE5393b921A3f556388538D2c9d142cf6D1
+   <span class="token operator">></span> block number:        <span class="token number">2</span>
+   <span class="token operator">></span> block timestamp:     <span class="token number">1678288801</span>
+   <span class="token operator">></span> account:             0x6bcb62979E599B1cE4Ef3f3DF3575B644Cb9A613
+   <span class="token operator">></span> balance:             <span class="token number">99.998105632065943366</span>
+   <span class="token operator">></span> gas used:            <span class="token number">416594</span> <span class="token punctuation">(</span>0x65b52<span class="token punctuation">)</span>
+   <span class="token operator">></span> gas price:           <span class="token number">3.270752661</span> gwei
+   <span class="token operator">></span> value sent:          <span class="token number">0</span> ETH
+   <span class="token operator">></span> total cost:          <span class="token number">0.001362575934056634</span> ETH
+
+
+   <span class="token operator">></span> Saving artifacts
+   -------------------------------------
+   <span class="token operator">></span> Total cost:     <span class="token number">0.001894367934056634</span> ETH
+
+Summary
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token operator">></span> Total deployments:   <span class="token number">2</span>
+<span class="token operator">></span> Final cost:          <span class="token number">0.001894367934056634</span> ETH
+</code></pre>
+<p>On voit qu'il a bien déployer les deux contrats et on voit, comme sur une facture, le detail de chaque transaction. On reconnait les concepts appris sur le site <a href="http://ethereum.org">ethereum.org</a> comme le gas, les différentes unités de monnaie (Wei, ETH).<br>
+Le coût total du contrat correspond environ à 3€ en mars 2023. Ce n'est pas énorme mais le code est très basique. Si on était ammené à utiliser beaucoup de la mémoire sur la blockchain, ce coût grimperait vite.</p>
+<p>Pour la suite du tuto, il est conseillé d'utiliser Ganache :<br>
+<a href="https://trufflesuite.com/ganache/">https://trufflesuite.com/ganache/</a></p>
+<p>J'ai utilisé cette techno comme sur le tuto mais je sais pas si tout a marché comme prévu. En effet , j'ai réussi à effectuer des transactions entre comptes (visible dans l'onglet &quot;Transactions&quot;) mais le solde des comptes n'a pas changé.</p>
 
 
 </article>
