@@ -68,7 +68,13 @@ J'ai ensuite suivi le tuto quickstart qui permet d'explorer des petits projets d
 
 <https://trufflesuite.com/docs/truffle/quickstart/>
 
-Pour déployer nos smarts contracts, on doit se connecter à une blockchain. On pourrait se connecter à celle d'Ethereum mais on a pas envie dépenser de l'argent pour le dev. Heuresement, Truffle à sa propre blockchain local. On s'y connecte avec la commande ```truffle develop``` qui renvoit ici :
+Pour déployer nos smarts contracts, on doit se connecter à une blockchain. On pourrait se connecter à celle d'Ethereum mais on a pas envie dépenser de l'argent pour le dev. Heuresement, Truffle à sa propre blockchain local. On s'y connecte avec la commande 
+
+```bash
+truffle develop
+```
+
+qui renvoit ici :
 <figure>
   <img src="../../assets/truffleDevelop.png">
 </figure>
@@ -77,7 +83,7 @@ On voit que ca a créé 10 comptes avec leurs clés respectives.
 
 Pour migrer les contrats sur la blockchain on utilise ```migrate``` qui renvoie :
 
-```console
+```bash
 Starting migrations...
 ======================
 > Network name:    'develop'
