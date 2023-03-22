@@ -10,7 +10,21 @@ authors:
   <link rel="stylesheet" href="../../assets/style.css">
 </head>
 
-## Plan du POK
+## Resumé projet
+
+L'idée du site à créer est d'avoir un feed de musiques partagées par des utilisateurs et que toute la communauté puisse voter +1/-1 pour les musiques partagées.
+
+Lien du code : <https://github.com/AntwanV/POK2-fullstack>
+
+Pour visualiser le site :
+<http://origan.ovh1.ec-m.fr/>
+(Pas forcément avec toutes les dernières fonctionnalités)
+
+Stack :
+<figure>
+  <img src="https://static.packt-cdn.com/products/9781789808735/graphics/C11069_01_02.jpg">
+  <figcaption>Stack</figcaption>
+</figure>
 
 ## Sprint 1
 
