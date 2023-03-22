@@ -43,7 +43,7 @@ J'ai également suivi une autre [vidéo tuto](https://www.youtube.com/watch?v=wV
 
 Elle était très intéressante car elle utilisait node et express en plus de l'API websocket comme ce que j'utilise sur mon POK. Elle est plus simple que la 1ère mais du coup est très utile en complément.
 
-## API socket.io
+## API socket&#46;io
 
 J'ai suivi 3 vidéos tutos pour l'API socket.io que j'ai d'ailleurs choisi pour mon POK car je l'ai trouvée plus simple à implémenter.
 
