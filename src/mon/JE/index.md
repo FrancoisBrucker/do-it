@@ -25,3 +25,6 @@ Les MON de Jeffrey EDISAH
 - [Elastic Stack](./mons/elastic)
 
 ## Temps 3
+
+- [Introduction au C++](./mons/cpp)
+- [Contribution à un projet open-source : Blender]
