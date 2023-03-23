@@ -12,9 +12,9 @@ layout: layout/base.njk
         {% else %}
           <div class="font-bold">Tag : </div>
         {% endif %}
-        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1" data-pagefind-meta="Tags">
           {% for tag in tags %}
-            <li class="before:content-['•'] before:px-1">{{ tag }}</li>
+            <li class="before:content-['•'] before:px-1" data-pagefind-filter="Tags">{{ tag }}</li>
           {% endfor %}
         </ul>
       </div>
@@ -26,14 +26,14 @@ layout: layout/base.njk
           <div class="font-bold">Auteurs : </div>
             <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1" data-pagefind-meta="Auteurs">
             {% for author in authors %}
-                <li class="before:content-['•'] before:px-1">{{ author }}</li>
+                <li class="before:content-['•'] before:px-1" data-pagefind-filter="Auteurs">{{ author }}</li>
             {% endfor %}
             </ul>
         {% else %}
           <div class="font-bold" >Auteur : </div>
             <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1" data-pagefind-meta="Auteur">
             {% for author in authors %}
-                <li class="before:content-['•'] before:px-1" >{{ author }}</li>
+                <li class="before:content-['•'] before:px-1" data-pagefind-filter="Auteurs">{{ author }}</li>
             {% endfor %}
             </ul>
         {% endif %}
