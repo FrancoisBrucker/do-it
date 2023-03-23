@@ -70,7 +70,22 @@ Bien que ChatGPT soit un modèle de langage très avancé, il a encore certaines
 * Qualité des données : ChatGPT apprend à partir de données existantes, il est donc important de veiller à la qualité et à la diversité des données utilisées pour son entraînement. Des données biaisées ou incomplètes peuvent entraîner des résultats incohérents ou trompeurs.
 * Responsabilité : Les utilisateurs de ChatGPT sont responsables de l'utilisation qu'ils en font et doivent prendre en compte les conséquences potentielles de leurs actions. Il est important d'être conscient des implications éthiques de l'utilisation de ChatGPT et de veiller à ce qu'elle soit guidée par des principes de responsabilité et de bienveillance.
 
+
 Bien que ChatGPT soit un outil puissant et prometteur, il est important de prendre des précautions et d'être conscient de ses limites pour en faire une utilisation responsable et éthique.
+
+## Réponse d'OpenAI pour réduire ces risques :
+
+En réponse à la propagation croissante de théories du complot et de désinformation en ligne, des mesures ont été mises en place pour garantir que l'IA ChatGPT ne contribue pas à la propagation de telles informations.
+
+L'IA ChatGPT est entraînée à partir d'une grande quantité de données factuelles provenant de sources fiables, ce qui garantit que les informations fournies sont basées sur des preuves crédibles et précises.Cela permet d'assurer que les informations fournis sont basées sur des preuves factuelles crédibles.
+
+Le modèle est équipé de mécanismes de filtrage qui peuvent aider à identifier et à supprimer les contenus qui sont potentiellement dangereux ou trompeurs. Les techniques de filtrage de langage naturel sont également utilisées pour éviter de générer des réponses qui pourraient être mal interprétées ou mal utilisées.
+
+Les équipes qui travaillent sur le développement de l'IA ChatGPT sont également à l'écoute des commentaires et des suggestions des utilisateurs pour s'assurer que le modèle reste pertinent et approprié à leurs besoins.
+
+En utilisant ces mesures, l'IA ChatGPT est en mesure de fournir des réponses précises et fiables tout en réduisant les risques associés à la propagation de théories du complot et de désinformation en ligne. On peur le voir sur l'exemple ci-desous :
+
+![Optional Text](./Image8.png) 
 
 
 ## Perspectives d'avenir pour ChatGPT :
