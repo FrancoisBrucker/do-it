@@ -1,8 +1,8 @@
 ---
 layout: layout/post.njk
 
-title: "Nicolas BERT"
-tags: ['promo2022_2023']
+title: "Jean DUPONT"
+tags: ['promo2023_2024']
 
 ---
 

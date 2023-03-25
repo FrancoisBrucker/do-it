@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Nicolas BERT"
+title: "Jean-Baptiste DURAND"
 tags: ['promo2022_2023']
 
 ---
