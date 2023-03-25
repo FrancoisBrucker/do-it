@@ -8,18 +8,18 @@
     }
 
     img {
-      @apply mx-auto;
+        @apply mx-auto;
     }
 
     h2 {
-      @apply border-black border-0 border-b-4 border-solid;
+        @apply border-black border-0 border-b-4 border-solid;
     }
     h3 {
-    @apply border-black border-b-2 border-solid;
+        @apply border-black border-b-2 border-solid;
     }
 
     h4 {
-    @apply border-black border-b border-solid;
+        @apply border-black border-b border-solid;
     }
             
     h5 {
