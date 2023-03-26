@@ -115,5 +115,20 @@ Sources :
 # Lien entre Lean et approche de Palo Alto
 Le Lean et l'approche de Palo Alto semblent être dans deux univers parallèles et ne jamais se croiser. Le Lean travaille sur les compétences techniques (hard skills). On intervient sur le terrain, là où les personnes travaillent et produisent de la richesse. Dans le Lean, on se base sur les faits et les chiffres, on peut appeler ça la réalité de 1er ordre. Le Lean a pour objectif de changer, apprendre, progresser. A l'opposé, le coaching selon l'approche de Palo Alto travaille sur les compétences comportementales (soft skills). L'approche de Palo Alto se focalise sur les comportements et les idées, on pourrait appeler ça la réalité de 2ème ordre. Le coaching selon Palo Alto n'a pas d'intention. A première vue, le Lean et l'approche de Palo Alto s'opposent à tous points de vue. Cependant, ils ont en commun la résolution de problèmes. 
 
-Etant donné que les 2 approches ont en commun la résolution de problèmes, nous allons tout d'abord définir un problème dans le cadre du Lean et dans le cadre de Palo Alto. 
+Etant donné que les 2 approches ont en commun la résolution de problèmes, nous allons tout d'abord définir un problème dans le cadre du Lean puis dans le cadre de Palo Alto. 
 Pour le Lean, un problème est un écart entre la situation actuelle et une situation que l'on souhaite atteindre. L'un des pères fondateurs du Lean Taichii Ohno disait : "personne n'a de plus grand problème qui celui qui dit ne pas avoir de problèmes". Du point de vue de Palo Alto cette définition semble confondre problème et objectif. Pour Palo Alto, un problème est un comportement insatisfait dans une interaction qui ne reçoit pas la réponse souhaitée. On se concentre sur la vision du monde de la personne concernée et on ne cherche pas de problèmes là où il n'y en a pas. 
+
+Pour aller plus loin, nous allons regarder les différentes étapes de la résolution de problème pour les 2 cas. 
+Le site [paradoxes](https://www.paradoxes.asso.fr/2015/10/lintervention-systemique-paradoxale-dans-le-contexte-du-lean-amelioration-continue/#:~:text=L'approche%20de%20Palo%20Alto%20cherche%20%C3%A0%20identifier%20le%20syst%C3%A8me,%C3%A0%20%C3%A9liminer%20les%20probl%C3%A8mes%20associ%C3%A9s) propose de prendre pour le Lean la méthodologie suivante : 
+1. Clarifier le problème
+2. Décomposer le problème
+3. Définir la cible
+4. Analyser les causes sources
+5. Développer des contremesures
+6. Mettre en place ces contremesures
+7. Evaluer les résultats et les processus
+8. Standardiser le succès
+Cela correspond plus ou moins à ce que nous avons appris en cours, je suis globalement d'accord avec les différentes étapes bien que nous n'ayons pas vu une liste précise d'étapes en cours. 
+
+D'un point de vue de Palo Alto, l'étape 1. Clarifier le problème correspond au fait de poser le problème avant de poser l'objectif. De même, pour l'étape 2. Décomposer le problème, l'approche de Palo Alto voit là une exploration, on ne se précipite pas vers une solution. L'étape 3. Définir la cible ressemble à une réduction de l'objectif, à la recherche d'un objectif minimal. Sur la 4ème étape, il y a un désaccord entre les 2 approches. En effet, l'approche de Palo Alto ne croit pas à l'existence des causes sources et revendique une approche systémique (et non déterministe). Pour l'étape 5. Développer des contremesures, l'approche de Palo ALto recolle bien avec le Lean, qui considère non pas des solutions mais des contremesures, ce qui montre que le Lean est conscient que chaque action a des conséquences qui peuvent engendrer des problèmes.
+Concernant l'étape 6. Mettre en place des contremesures, l'approche de Palo Alto voit là quelqu'un qui fait des tentatives de solutions. Enfin la dernière étape Evaluer les résultats et les processus, cela correspond aussi à Palo Alto en voyant cela comme des recadrages pour ajuster sa vision du monde. 
