@@ -202,8 +202,8 @@ title: Mon super site statique
 <p>Ici, dans la balise <code>content</code> sera ajouté le contenu des &quot;enfants&quot;, c'est-à-dire les pages qui vont utiliser ce template.<br>
 Afin que la page que nous venons de créer utiliser ce template il faut rajouter les quelques lignes suivantes en en-tête du fichier <code>index.md</code>.</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token front-matter yaml language-yaml">layout: base.njk
-title: Ma première page</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">layout</span><span class="token punctuation">:</span> base.njk
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Ma première page</span>
 <span class="token punctuation">---</span></span>
 
 <span class="token title important"><span class="token punctuation">#</span> Une belle page !</span>
@@ -315,7 +315,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <em>(Cette commande utilise <code>concurrently</code>, une bilbiothèque permettant de lancer des scripts en parallèle.)</em></p>
 <p>Modifions désormais notre <code>base.njk</code> pour y ajouter des classes Tailwind !</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token front-matter yaml language-yaml">title: Mon super site statique</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> Mon super site statique</span>
 <span class="token punctuation">---</span></span>
 
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">></span></span>
