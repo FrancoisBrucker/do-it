@@ -94,20 +94,20 @@ Au sein de l'association, il était difficile de suivre la présence des bénév
 * **Gratuit et open source** : Framadate est un logiciel libre et gratuit.
 * **Facilité d'utilisation** : L'interface de Framadate est simple et intuitive.
 * **Accessibilité** : Framadate est accessible depuis n'importe quel navigateur web, sans qu'il soit nécessaire de télécharger ou d'installer un logiciel supplémentaire.
-* **Inscription non obligtoire** : Les utilisateurs peuvent créer et participer à des sondages sans avoir besoin de s'inscrire ou de créer un compte utilisateur.
+* **Inscription non obligatoire** : Les utilisateurs peuvent créer et participer à des sondages sans avoir besoin de s'inscrire ou de créer un compte utilisateur.
 * **Flexibilité** : Il est possible de modifier ses réponses à tout instant
 * On peut indiquer les **disponibilités d'autres bénévoles** : ceux qui ne disposent pas de smartphone par exemple.
 * Vision sur le long terme : possibilité de générer un fichier mensuellement.
 
 Problèmes rencontrés :
-* Beaucoup d'apllication de palnning disponible
+* Beaucoup d'application de planning disponible
 * Réticence des bénévoles vis à vis la technologie 
 * 
 
 
 
 
-### Pronlème 3 : Solution de distribution
+### Problème 3 : Solution de distribution
 
 Pour aider la responsable de centre à faire sa distribution, nous avions besoin d’un outil simple d'utilisation et quasi incassable.
 
@@ -116,7 +116,7 @@ Voici le résultat:
 (mettre imgs)
 
 
-C’est un classeur excel composés de 5 feuilles :
+C’est un classeur Excel composés de 5 feuilles :
 * Une feuille pour mettre à jour le nombre de bénéficiaires à servir, en fonction des familles présentes la semaine passées
 * Une feuille permettant de mettre à jour le stock 
 * Deux feuilles de calculs, donnant chacune un répartition différente
@@ -137,6 +137,6 @@ Avantages:
 
 Problèmes rencontrés:
 * Le choix d’une méthode de calcul s’est avéré difficile. Aucune des méthodes que nous avons testées n’est parfaite. 
-* Aussi, il faut conserver un regard critique sur ces calculs car notre excel ne prend pas en compte les spécificités individuelles de chaque produit. La responsable est libre de modifier les chiffres de la répartition et nous avons constaté qu’elle le fait quasiment systématiquement. On peut penser qu’un bénévole nouveau venu ne pourrait pas effectuer une distribution efficace rien qu’avec notre outil. (Notre outil fonctionne bien pour les bénévoles expérimentés mais reste discutable pour les autres)
+* Aussi, il faut conserver un regard critique sur ces calculs car notre Excel ne prend pas en compte les spécificités individuelles de chaque produit. La responsable est libre de modifier les chiffres de la répartition et nous avons constaté qu’elle le fait quasiment systématiquement. On peut penser qu’un bénévole nouveau venu ne pourrait pas effectuer une distribution efficace rien qu’avec notre outil. (Notre outil fonctionne bien pour les bénévoles expérimentés mais reste discutable pour les autres)
 * La prise en main peut paraître compliquée car remplir la liste du stock prend du temps. Pour fluidifier cela nous avons effectué 3 répartitions avec la responsable, en l’accompagnant sur l’outil
 
