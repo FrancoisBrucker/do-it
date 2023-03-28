@@ -60,7 +60,15 @@ Bonus pur :
 ## Maquettes :
 
 #### Expérience Utilisateur (UX) :
+
+Nous avons eu un cours sur l'UX qui nous a appris à prendre en compte les différents parcours utilisateurs dans la création de l'application. Nous avons aussi pris en main Figma, un site web qui permet de créer des maquettes interactives. C'est pendant ce cours que nous avons créé la première maquette.
+
 #### Première maquette :
+
+<img src="maquette1a.png">
+<img src="maquette1b.png">
+<img src="maquette1c.png">
+
 #### Retours des étudiants (partie 1) : 
 
 Les premiers retours que nous avons obtenus à propos de cette maquette sont venus de nos camarades de Do-IT. D'une façon générale, l'application n'était pas très belle, pas particulièrement intuitive et certaines fonctionnalités semblaient manquer ou, au contraire, étaient de trop.
@@ -68,7 +76,7 @@ Notre bilan sur cette première maquette... Eh bien c'était la première ! Comm
 
 #### UI Design (Interface Utilisateur) :
 
-Nous avons eu un cours de Design qui nous a vraiment aidé à améliorer notre application. Nous avons choisi en connaissance de cause des couleurs, des polices d'écriture et des valeurs à transmettre. Nous avons même créé un Visual Board pour nous aider à trouver une direction pour notre design.
+Nous avons eu un cours de Design qui nous a vraiment aidé à améliorer notre application et à créer notre brief graphique. Nous avons choisi en connaissance de cause des couleurs, des polices d'écriture et des valeurs à transmettre. Nous avons même créé un Visual Board pour nous aider à trouver une direction pour notre design.
 
 Tout d'abord, nos valeurs sont le fait maison, la convivialité, la créativité et l'inspiration. 
 
@@ -86,7 +94,24 @@ Enfin, il a fallu décider des polices d'écriture pour nos titres, sous-titres 
 
 En pratique, nous avons gardé la Firan Sans pour les titres, la Noto Sans pour les sous-titres et la DM Sans pour les textes.
 
+L'utilisation des "layout grids" est quelque chose qui nous a beaucoup servi. En effet, cela permet d'aligner les éléments entre eux et de créer une harmonie visuelle. Il n'est pas nécessaire de l'appliquer parfaitement pour tous les éléments mais son utilisation générale permet de bien structurer la page. En voici l'exemple :
+
+<img src="layout.png">
+
 #### Deuxième maquette :
+
+Pour la deuxième maquette, nous avons travaillé un peu différemment. Nous avons commencé par créer des pages qui ressemblaient à cela :
+
+<img src="maquette2a.png">
+
+Puis, nous leur avons appliqué le design défini en UI pour donner cela :
+
+<img src="maquette2b.png">
+
+Une nouveauté a été la manière d'accéder aux autres pages de l'application. Au départ, nous avions mis un bandeau en bas de l'écran, mais nous nous sommes tournés vers un menu dépliant sur la gauche. Comme ceci :
+
+<img src="menu-déplié.png">
+
 #### Retours des étudiants (partie 2) :
 
 Cette fois-ci, nous avons eu des retours beaucoup plus précis. Voici les principales remarques :
