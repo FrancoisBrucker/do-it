@@ -24,9 +24,8 @@ Voici un pitch que nous avons préparé en cours de Collective Intelligence : ht
 
 ## Nos grandes étapes :
 
-Les cours que nous avons au cours de l'année nous permettent de comprendre comment conduire un projet, comment s'assurer de sa pertinence, etc. C'est comme ça que nous avons décidé de notre plan de route.
-Nous avons commencé par interviewer notre public cible, les étudiants, d'octobre à novembre, pour formaliser les besoins autour de notre thématique. Nous sommes en période de maquettage depuis fin novembre.
-Pour la suite, lorsque nous aurons une maquette viable, nous la ferons tester auprès des étudiants que nous avons interviewé en début d'année et nous la ferons évoluer grâce à leurs critiques. Nous pourrons ensuite créer l'application grâce à Bubble et travailler sur notre base de données pour les recettes.
+Les cours que nous avons au cours de l'année nous ont permis de comprendre comment conduire un projet, comment s'assurer de sa pertinence, etc. C'est comme ça que nous avons décidé de notre plan de route.
+Nous avons commencé par interviewer notre public cible, les étudiants, d'octobre à novembre, pour formaliser les besoins autour de notre thématique. Nous avons eu une longue période de maquettage de fin novembre jusqu'à mars. Ensuite, lorsque nous avons eu une maquette viable, nous l'avons faite tester auprès des étudiants que nous avions interviewés en début d'année et nous l'avons faite évoluer grâce à leurs critiques. Nous avons pu ensuite créer l'application grâce à Bubble et travailler sur notre base de données pour les recettes.
 
 ## Définition des besoins :
 
@@ -57,3 +56,54 @@ Bonus pur :
 ## Notre poster :
 
 ![Poster](./Poster/poster.png "Poster Menu")
+
+## Maquettes :
+
+#### Expérience Utilisateur (UX) :
+#### Première maquette :
+#### Retours des étudiants (partie 1) : 
+
+Les premiers retours que nous avons obtenus à propos de cette maquette sont venus de nos camarades de Do-IT. D'une façon générale, l'application n'était pas très belle, pas particulièrement intuitive et certaines fonctionnalités semblaient manquer ou, au contraire, étaient de trop.
+Notre bilan sur cette première maquette... Eh bien c'était la première ! Comme nous étions dans l'optique d'apprendre de nos erreurs et de repartir pour un autre sprint, cela ne nous a pas découragés, au contraire. 
+
+#### UI Design (Interface Utilisateur) :
+
+Nous avons eu un cours de Design qui nous a vraiment aidé à améliorer notre application. Nous avons choisi en connaissance de cause des couleurs, des polices d'écriture et des valeurs à transmettre. Nous avons même créé un Visual Board pour nous aider à trouver une direction pour notre design.
+
+Tout d'abord, nos valeurs sont le fait maison, la convivialité, la créativité et l'inspiration. 
+
+Après une séance de recherches, nous avons construit notre Visual Board, une sorte de brainstorming visuel :
+
+<img src="visual-board.png">
+
+L'élément ci-dessus est ce qui nous a permis de choisir nos couleurs principales pour l'application. De plus, nous avons fait en sorte que ces couleurs reflètent bien nos valeurs. Vous pouvez remarquer que nous avons écrit en noir puis en blanc des textes sur les couleurs, c'était pour vérifier si c'était lisible quelle que soit la couleur du texte. En l'occurance, nous avons déterminé que nous n'allions pas écrire en blanc sur du mimosa.
+
+<img src="couleurs.png">
+
+Enfin, il a fallu décider des polices d'écriture pour nos titres, sous-titres et textes. Après des recherches, nous avons choisi ces polices pour une première sélection.
+
+<img src="polices.png">
+
+En pratique, nous avons gardé la Firan Sans pour les titres, la Noto Sans pour les sous-titres et la DM Sans pour les textes.
+
+#### Deuxième maquette :
+#### Retours des étudiants (partie 2) :
+
+Cette fois-ci, nous avons eu des retours beaucoup plus précis. Voici les principales remarques :
+- L'application est vraiment intuitive et on en fait le tour rapidement.
+- L'emplacement du bouton menu était étrange (les étudiants voulaient l'avoir en haut de l'écran).
+- La grille de sélection des repas dans la page de "création du planning de la semaine" n'est pas très claire.
+- Il faudrait qu'il y ait un bouton de retour sur toutes les pages.
+- Pour vider la liste de course, il faut qu'il y ait une double validation (comme lorsqu'on refuse des cookies sur un site web).
+- Il n'y a pas de vraie page d'accueil. Ils l'ont fait remarquer mais disaient que ça ne posait pas de problème.
+
+#### Troisième maquette : 
+
+## L'application sur Bubble :
+
+#### Méthodologie et MVP :
+
+cours sur bubble
+
+#### Base de données :
+#### Workflow : 
