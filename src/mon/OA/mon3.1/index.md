@@ -63,6 +63,7 @@ Ces capacités de ChatGPT peuvent être utilisées dans de nombreuses applicatio
 ## Limites de ChatGPT :
 
 Bien que ChatGPT soit un modèle de langage très avancé, il a encore certaines limites. Ces limites incluent :
+
 * Connaissance limitée du monde réel : ChatGPT est capable de comprendre et de générer du texte à partir de données de langage naturel, mais il n'a pas de connaissances pratiques sur le monde réel. Par conséquent, il peut parfois produire des réponses qui ne sont pas réalistes ou qui ne tiennent pas compte de la réalité.
 * Biais : Comme ChatGPT est entraîné sur des données de langage naturel existantes, il peut reproduire des biais qui existent dans ces données. Par exemple, il peut reproduire des stéréotypes de genre ou de race, même s'il n'a pas l'intention de le faire.
 * Incapacité à comprendre les nuances émotionnelles : ChatGPT est capable de produire du langage naturel, mais il a des difficultés à comprendre les nuances émotionnelles. Par conséquent, il peut produire des réponses qui manquent de sensibilité émotionnelle ou qui sont inappropriées dans certaines situations.
@@ -91,6 +92,7 @@ En utilisant ces mesures, l'IA ChatGPT est en mesure de fournir des réponses pr
 ## Perspectives d'avenir pour ChatGPT :
 
 ChatGPT est un outil en constante évolution qui présente de nombreuses perspectives d'avenir.
+
 * Amélioration des performances : Les développeurs de ChatGPT travaillent constamment à l'amélioration de ses performances. Cela comprend l'augmentation de sa capacité de traitement, l'amélioration de la qualité des résultats et la réduction du temps de réponse.
 * Extension des capacités : ChatGPT peut être utilisé dans de nombreux domaines, mais il est encore possible d'élargir ses capacités. Par exemple, l'utilisation de ChatGPT pour des tâches complexes comme la prise de décision en entreprise ou l'analyse de données scientifiques est encore à explorer.
 * Nouvelles applications : ChatGPT peut être utilisé pour des applications qui n'ont pas encore été envisagées. Par exemple, il peut être utilisé pour aider à l'enseignement en ligne ou pour la création de jeux vidéo.
@@ -101,6 +103,7 @@ En somme, ChatGPT est un outil en constante évolution qui présente de nombreus
 ## Impact sur la société :
 
 ChatGPT a déjà eu un impact significatif sur la société et peut avoir un impact encore plus important à l'avenir.
+
 * Amélioration de l'efficacité : ChatGPT peut être utilisé pour automatiser de nombreuses tâches qui prenaient auparavant beaucoup de temps et d'efforts. Cela peut aider les entreprises et les organisations à être plus efficaces, ce qui peut avoir un impact positif sur leur rentabilité et leur capacité à innover.
 * Transformation de l'industrie : L'automatisation des tâches grâce à l'IA peut transformer l'industrie en réduisant les coûts de production et en améliorant la qualité des produits et des services. Cela peut aider à créer de nouveaux emplois qui nécessitent des compétences en IA et à stimuler la croissance économique.
 * Accessibilité à l'information : ChatGPT peut être utilisé pour aider à l'analyse et à la compréhension de grandes quantités de données. Cela peut aider à rendre l'information plus accessible et plus facile à comprendre pour les personnes qui ne sont pas des experts dans un domaine particulier.
