@@ -60,7 +60,29 @@ Et ca nous ouvre une fenêtre Chrome à l'adresse localhost:9876 où les erreurs
   <figcaption>Résultat des tests du projet 3a</figcaption>
 </figure>
 
+Les fichiers de tests dans Angular sont tous les fichiers qui ont l'extension ```.spec.ts```.
+
 Il y a 18 erreurs mais il y a quand même 11 succès ^^.
 On va essayer de comprendre comment on peut résoudre ces erreurs et comment implémenter d'autres tests.
 
-Les fichiers de tests dans Angular sont tous les fichiers qui ont l'extension ```.spec.ts```
+## Réalisation
+
+En regardant de plus près les erreurs, il y en avait beaucoup qui était très simple à résoudre. En effet, il n'y avait pas d'erreur dans le code en lui-même mais le fichier qui était exécuté pour faire le test ne disposait pas de toutes les informations. Par exemple, il n'y avait pas le module pour faire des requêtes HTTP. Je l'ai donc rajouté avant de réaliser tous les tests :
+
+```typescript
+import { HttpClientTestingModule } from '@angular/common/http/testing'; // Ligne ajoutée
+
+beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], // Ligne ajoutée
+      declarations: [ PlanningDialogComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(PlanningDialogComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+```
+
+Après avoir réalisé tout ces imports manquants, il me restait que 5 erreurs
