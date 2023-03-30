@@ -34,8 +34,8 @@ Finalement, suite à cette modélisation il peut interpréter ses résultats et 
 
 ### Le machine learning 
 Sujet passionnant mais souvent mal compris dans les discussions populaires, on va tenter de comprendre ici ce qu'est le machine learning. 
-Ce sous-domaine de l'intelligence artificielle qui défraie la chronique et fait craindre la perte d'emploi à de nombreux citoyens, avec raison ou non ce n'est pas à moi d'en décider, est un procédé permettant d'apprendre à une machine à effectuer des taches toute seule. Ce procédé, détaillé sur de nombreux sites (<a href="https://datascientest.com/machine-learning-tout-savoir/"> par exemple) ou sur notre cours référence dont le lien est en haut de la page, se compose en 4 étapes clés : 
+Ce sous-domaine de l'intelligence artificielle qui défraie la chronique et fait craindre la perte d'emploi à de nombreux citoyens, avec raison ou non ce n'est pas à moi d'en décider, est un procédé permettant d'apprendre à une machine à effectuer des taches toute seule. Ce procédé, détaillé sur de nombreux sites (https://datascientest.com/machine-learning-tout-savoir/)) ou sur notre cours référence dont le lien est en haut de la page, se compose en 4 étapes clés : 
 - Collecte et nettoyage des données d'entrainement 
-- La sélection de l'algorithme : régression linéaire, tissue neuronale, random forest (Je vous invite à consulter ce site afin d'en apprendre plus sur les différents algorithme existant <a href="https://mobiskill.fr/blog/conseils-emploi-tech/quels-sont-les-differents-algorithmes-en-machine-learning/">). 
+- La sélection de l'algorithme : régression linéaire, tissue neuronale, random forest (Je vous invite à consulter ce site afin d'en apprendre plus sur les différents algorithme existant (https://mobiskill.fr/blog/conseils-emploi-tech/quels-sont-les-differents-algorithmes-en-machine-learning/)). 
 - L'entrainement de la machine : La machine suit son algorithme avec les données entrées puis le data scientist analyse les erreurs et reprend à l'étape 1 si erreur il y a. 
 - L'utilisation dans le monde réel et l'amélioration continue du modèle.
