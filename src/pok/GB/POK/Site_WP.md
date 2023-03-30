@@ -61,5 +61,3 @@ Pistes suivantes :
 - Extensions utiles 
 - Template d'items présents sur toutes les pages 
 - Code HTML ? 
-
-Durant le sprint suivant, j'effectuerais un MON WordPress sur Openclassrooms pour m'ouvrir d'autres disponibilités. 
