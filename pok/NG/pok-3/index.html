@@ -82,16 +82,115 @@
   <!-- début résumé -->
 <p>Développement d'une application mobile avec Android Studio</p>
 <!-- fin résumé -->
-<h2>Objectif du POK</h2>
+<h2>But du POK</h2>
 <p>Ce POK fait suite à mon MON sur le développement mobile. Je vais utiliser les connaissances que j'ai acquises pour développer l'application Menu du projet Do-It en Java, avec Android Studio. Je le fais sur le temps de mon POK car nous n'auront pas le temps de le faire pendant le projet, nous allons à la place développer l'application en no-code sur Bubble.</p>
 <h3>Maquette Figma de l'appli</h3>
-<p><img src="applimenufigma.png" alt="Capture d'écran figma"></p>
+<img src="applimenufigma.png" alt="Capture d'écran figma" width="300"/>
 <h3>L'appli en développement sur Bubble</h3>
-<p><img src="applimenububble.png" alt="Capture d'écran bubble"></p>
+<img src="applimenububble.png" alt="Capture d'écran bubble" width="300"/>
 <h3>L'appli en développement sur Android Studio</h3>
-<p><img src="applimenuandroidstudio.png" alt="Capture d'écran android studio"></p>
+<img src="applimenuandroidstudio.png" alt="Capture d'écran android studio" width="300"/>
 <p>La maquette réalisée en projet va donc me servir ici pour appliquer ce que j'ai appris sur Android Studio et cela me permettra d'essayer deux manières de développer une application mobile en parallèle.</p>
-<p>Lien GitHub : <a href="https://github.com/nathan-gissler/AppliMenu">AppliMenu</a></p>
+<h2>Objectifs</h2>
+<ul>
+<li>
+<p>page carnet</p>
+<ul>
+<li>recettes favorites</li>
+<li>recettes personnelles</li>
+<li>apparence générale</li>
+</ul>
+</li>
+<li>
+<p>page recette</p>
+<ul>
+<li>titre et ingrédients</li>
+<li>étapes</li>
+<li>apparence générale</li>
+</ul>
+</li>
+<li>
+<p>navigation entre les deux pages</p>
+</li>
+<li>
+<p>page ajouter recette</p>
+<ul>
+<li>champs et boutons</li>
+<li>apparence générale</li>
+</ul>
+</li>
+<li>
+<p>navigation avec les autres pages</p>
+</li>
+<li>
+<p>ajout d'une recette à la base de données</p>
+</li>
+<li>
+<p>visualisation des recettes de la base de données dans les pages carnet et recette</p>
+</li>
+</ul>
+<h2>Déroulement du POK</h2>
+<p>Les objectifs que je m'étais fixé étaient relativement bien dosés. Mise à part la gestion des styles et de l'apparence de l'application, j'ai pu tout faire sans trop de difficultés, même si beaucoup de points pourraient encore être largement améliorés.</p>
+<h3>Création des trois pages de l'application</h3>
+<p>Dans un premier temps, j'ai principalement mis en place les éléments visuels de l'application grâce aux fichiers de layout en <code>.xml</code>. Cela correspond aux fichiers <code>html</code> utilisés en web. Le back est géré en parallèle dans des classes java où l'on récupère les données des champs de texte, on définit les actions des boutons, etc.</p>
+<h3>Difficultés pour la gestion des styles</h3>
+<p>En parallèle, je me suis confronté à la gestion des styles et des thèmes dans l'application, mais j'ai eu du mal à en saisir la logique. Je me suis donc contenté des polices et j'ai poursuivi le développement des fonctionnalités de l'application.</p>
+<h3>Gestion de la base de données avec Room</h3>
+<p>Enfin, pour ce qui est de la gestion de la base de données, j'ai choisi l'ORM Room qui m'a eu l'air d'être assez utilisé en développement mobile. Il est assez simple d'utilisation. Après avoir résolu quelques problèmes j'ai été en mesure d'ajouter des recettes à la base de données depuis l'application et de les visualiser dans la page &quot;recette&quot;.</p>
+<h2>Captures d'écran</h2>
+<img src="page_carnet.png" alt="Page carnet" width="300"/>
+<img src="page_ajouter_recette.png" alt="Page ajouter recette" width="300"/>
+<img src="page_recette.png" alt="Page recette" width="300"/>
+<h2>Difficultés rencontrées</h2>
+<p>Voici quelques problèmes / solutions que j'ai rencontrés au cours du POK :</p>
+<ul>
+<li>
+<p>styles :<br>
+J'ai eu des difficultés pour savoir comment sont appliqués les styles (notamment la gestion des styles par les fichiers styles.xml et themes.xml) et comment appliquer les styles qu'on veut où on veut. J'ai pu par exemple afficher les polices mais pas les couleurs de texte. J'ai finalement abandonné le fait de reproduire le style visuel de notre maquette pour privilégier l'aspect fonctionnel de l'application.</p>
+</li>
+<li>
+<p>logos :<br>
+On peut les télécharger sur <a href="fonts.google.com">fonts.google.com</a>, puis les inclure au format xml au projet, dans le dossier 'drawable'</p>
+</li>
+<li>
+<p>crash à cause de la base de données :<br>
+Au moment de la mise en place de la base de données, l'application crashait systématiquement car elle ne permettait pas à la base de donnée d'être lancée dans le thread principal. J'ai utilisé la méthode <code>allowMainThreadQueries()</code> à l'instanciation de la base de données pour remédier au problème, bien que ça ne soit pas recommandé dans l'absolu.</p>
+</li>
+<li>
+<p>problème d'affichage :<br>
+Dans la page &quot;Ajouter une recette&quot;, les listes d'ingrédients / d'étapes (créées à l'aide d'éléments de type RecyclerView) ne s'affichent pas toujours tout de suite et peuvent disparaître. Je n'ai pas trouvé la cause du problème.</p>
+</li>
+<li>
+<p>problèmes liés à la base de données :<br>
+L'ajout de recettes à la base de données ne fonctionnait car je n'avais pas mis en place la génération automatique d'ID uniques par Room. Une fois l'erreur corrigée, j'ai vu que lors de la modification du modèle de la base de données il faut incrémenter le numéro de version de la base de données et indiquer à Room comment gérer la migration vers cette nouvelle version. La migration se fait soit en indiquant les requêtes nécessaires, soit en autorisant une migration destructives si on ne tient pas à conserver nos données. J'ai opté pour la deuxième option.</p>
+</li>
+<li>
+<p>champs non enregistrables en base de données :<br>
+Le seul objet que j'enregistre dans ma base de données est l'objet <code>Recipe</code>. Certains de ses champs ne sont pas directement enregistrables dans la base de données, j'ai donc dû créer des classes <code>TypeConverter</code> qui expliquent à Room comment récupérer ces champs. Cela consiste par exemple à transformer une liste de chaînes de caractères en une chaîne de caractères avec des virgules comme séparateurs, et vice-versa.</p>
+</li>
+<li>
+<p>problème lié aux objets EditText (champs de texte pour récupérer un input de l'utilisateur) :<br>
+J'avais d'abord mis le texte indiquant comment remplir chaque champs avec l'attribut <code>text</code>, ce qui a généré des erreurs et n'était pas pratique pour remplir les champs (il fallait d'abord supprimer le texte de l'indication, qui n'était pas en &quot;arrière-plan&quot;). J'ai ensuite vu qu'il était mieux de mettre ces indices avec l'attribut <code>hint</code>.</p>
+</li>
+</ul>
+<h2>Amélioration possibles</h2>
+<ul>
+<li>mettre plus de <code>RelativeLayout</code> au lieu de <code>ConstraintLayout</code>, notamment pour régler le problème du bouton &quot;enregistrer recette&quot; qui remonte quand le clavier s'ouvre</li>
+<li>régler le problème des listes qui s'affichent bizarrement dans &quot;ajouter une recette&quot;</li>
+<li>améliorer les styles / l'apparence de l'appli</li>
+<li>gérer les recettes personnelles / favorites dans la base de données et les afficher correctement (jusque là toute la base de données s'affiche dans &quot;recettes personnelles&quot; et on ne peut pas accéder aux recettes favorites)</li>
+<li>ajouter des messages d'erreur lorsque l'on rentre des mauvaises valeurs dans &quot;ajouter une recette&quot;</li>
+<li>faire en sorte de pouvoir ajouter des images à nos recettes</li>
+<li>(et bien sûr ajouter toutes les autres fonctionnalités de l'Appli Menu)</li>
+</ul>
+<h2>Liens</h2>
+<ul>
+<li>GitHub du projet : <a href="https://github.com/nathan-gissler/AppliMenu">AppliMenu</a></li>
+<li><a href="https://developer.android.com/studio">Android Studio</a></li>
+<li><a href="https://developer.android.com/training/data-storage/room?hl=fr">Utiliser Room</a></li>
+<li><a href="fonts.google.com">Google Fonts</a></li>
+<li><a href="../../../mon/NG/mon-3-1">Mon MON sur le développement mobile</a></li>
+</ul>
 
 
 </article>
