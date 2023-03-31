@@ -4,7 +4,7 @@ layout: layout/post.njk
 title: "MON de Tuncay Bilgi"
 authors:
   - Tuncay Bilgi
-tags: ["mon"]
+tags: ['mon_node']
 ---
 
 <!-- début résumé -->

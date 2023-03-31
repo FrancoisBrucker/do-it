@@ -5,7 +5,7 @@ title: "MON d'Ossama"
 authors:
   - Ossama Abdane
 
-tags: ['mon']
+tags: ['mon_node']
 ---
 <!-- début résumé -->
 Ensemble des MON d'Ossama Abdane

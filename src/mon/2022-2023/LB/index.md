@@ -5,7 +5,7 @@ title: "Tous les MON de Léonard"
 authors:
   - Léonard Barbotteau
 
-tags: ['mon']
+tags: ['mon_node']
 ---
 <!-- Début Résumé -->
 Voici les MONs de Léonard

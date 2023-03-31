@@ -5,7 +5,7 @@ title: "MON de Gabriel"
 authors:
  - Gabriel Barbé
 
-tags: ['mon']
+tags: ['mon_node']
 ---
 
 <!-- Début Résumé -->

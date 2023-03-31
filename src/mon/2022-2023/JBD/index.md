@@ -5,7 +5,7 @@ title: "MON Jean-Baptiste"
 authors:
   - Jean-Baptiste Durand
 
-tags: ['mon']
+tags: ['mon_node']
 ---
 
 <!-- début résumé -->

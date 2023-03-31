@@ -5,7 +5,7 @@ title: "Les MONs d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
-tags: ['mon']
+tags: ['mon_node']
 
 ---
 <!-- Début Résumé -->
