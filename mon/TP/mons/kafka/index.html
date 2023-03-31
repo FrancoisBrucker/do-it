@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>MON 6 : Flux de données en temps réel : Kafka et Storm</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">MON 6 : Flux de données en temps réel : Kafka et Storm</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Kafka</li>
+          
+            <li class="before:content-['•'] before:px-1">Storm</li>
+          
+            <li class="before:content-['•'] before:px-1">Data</li>
+          
+            <li class="before:content-['•'] before:px-1">Temps réel</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thomas Pont</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- Début Résumé -->
+<p>Comment gérer des données en temps réel ?</p>
+<!-- Début Résumé -->
+<h2>Introduction</h2>
+<p>J'ai réalisé ce MON pour préparer mon stage dans lequel je vais faire de l'architecture de données et notamment devoir <strong>récolter et traiter un grand nombre d'information en temps réel</strong>.</p>
+<p>Afin d'apprendre tout ceci, j'ai suivi le cours Openclassrooms <a href="https://openclassrooms.com/fr/courses/4451251-gerez-des-flux-de-donnees-temps-reel">Gérer des flux de données en temps réel</a>.</p>
+<p>Le cours est divisé en plusieurs parties :</p>
+<ul>
+<li>Présentation des enjeux de la gestion des données en temps réel</li>
+<li>Kafka</li>
+<li>Storm</li>
+</ul>
+<p>Ce MON nécessite de nombreux prérequis en <strong>programmation objet</strong> et en <strong>ingénierie informatique</strong> (connaissance de l'environnement UNIX, ...) et est d'un niveau <strong>avancé</strong>.</p>
+<h2>Introduction aux données en temps réel et notion de synchronicité</h2>
+<p>De plus en plus de données sont aujourd'hui récoltées et certaines nécessitent un <strong>traitement quasi instantané</strong>. Par exemple des indicateurs médicaux ou des aides à la conduite nécessitent un traitement en temps réel.</p>
+<p>Mais, le temps réel ne s'applique pas qu'à cela. Il faut également que les sites aient un <strong>temps de réponse correct</strong>. Or, de nombreux sites font appel à des services extérieurs pour la gestion de certaines choses (par exemple, pour savoir d'où viennent leurs utilisateurs). Mais il est très fréquent que ces services extérieurs puissent tomber en panne. Donc que faire en cas d'erreur ? Plusieurs solutions sont envisageables pour pallier à ça :</p>
+<ul>
+<li>renvoyer à l'utilisateur un <strong>message d'erreur</strong> : problématique car il ne pourra accéder au site</li>
+<li><strong>ignorer l'erreur</strong> et l'utilisateur peut accéder à sa page : problématique car on ne peut plus savoir d'où il vient</li>
+<li><strong>renvoyer un message</strong> au serveur à une fréquence <em>f</em> jusqu'à ce que le serveur remarche à nouveau.</li>
+</ul>
+<p>Cette dernière solution permet de ne <strong>pas perdre l'information</strong> que l'on souhaite collecter sur l'utilisateur tout en lui permettant d'<strong>accéder à notre site</strong>.<br>
+Cependant, si les appels au serveur externes sont faits avant que la page s'affiche (donc de manière <strong>asynchrone</strong>), le <strong>temps d'attente</strong> pour le client peut être <strong>très long</strong>. Une solution est donc d'effectuer ces calculs de manière <strong>asynchrone</strong>.</p>
+<p><img src="../image/Sch%C3%A9ma6.1.jpg" alt="Schéma de l'asynchronicité" title="Schéma explicatif asynchronicité"></p>
+<p><em>Source : Openclassrooms</em></p>
+<p>De manière à ce que ce système permette d'effectuer les actions en <strong>quasi temps instantané</strong> tout en étant <strong>tolérant aux pannes</strong> du serveur du service externe, deux éléments ont été ajouté. La <strong>file d'attente de message</strong> permet de stocker tous les messages et de les faire passer les uns après les autres. Le <strong>traitement de flux de données</strong> permet de traiter les messages les uns à la suite des autres.</p>
+<p>Ainsi, les <strong>points importants</strong> d'un système de gestion de données en temps réel sont :</p>
+<ul>
+<li>Une faible latence ;</li>
+<li>Une file d'attente de messages qui avance rapidement ;</li>
+<li>Une tolérance aux pannes.</li>
+</ul>
+<p>Plusieurs outils permettent tout ceci dont <strong>Apache Kafka</strong> et <strong>Apache Storm</strong>. Nous détaillerons leurs fonctionnements maintenant.</p>
+<h2>Apache Kafka</h2>
+<p>Le but principal d'Apache Kafka est de fournir une <strong>plateforme de streaming de données</strong> distribuée, tolérante aux pannes et hautement évolutive pour les applications qui ont besoin de traiter des <strong>flux de données en temps réel</strong>. Kafka permet aux producteurs de publier des messages sur des topics et aux consommateurs de s'abonner à des topics pour consommer ces messages en temps réel.</p>
+<p>Kafka est souvent utilisé pour du <strong>traitement en temps réel</strong>, du <strong>traitement d'événements</strong>, de l'<strong>analyse de données</strong> en continu, de la <strong>surveillance</strong> des infrastructures, de la <strong>collecte de données de capteurs</strong> ou encore de la <strong>messagerie</strong>.</p>
+<p>Cela correspond à la partie <strong>file de messages</strong> détaillée précédemment. Kafka reçoit tous les messages et les redistribue aux bons services. Il fait office de &quot;centre de distribution de messages&quot;.</p>
+<p><img src="../image/Sch%C3%A9ma6.2.jpg" alt="Schéma de Kafka" title="Schéma explicatif Kafka"></p>
+<p><em>Source : Openclassrooms</em></p>
+<h3>Installation et commandes de base</h3>
+<p>L'installation est un peu compliqué sur Windows et pas toujours forcément bien détaillé dans les articles. Je recommande se plutôt regarder une vidéo comme <a href="https://www.youtube.com/watch?v=BwYFuhVhshI">celle-ci</a>. Toute la suite du cours OpenClassroom est fait pour un Linux. Je détaillerai ici comment faire avec un Windows.</p>
+<p>Pour lancer Kafka, il faut lancer deux composants : <strong>Zookeeper</strong> et <strong>Kafka</strong>. Zookeeper permet de gérer les <strong>clusters</strong> de Kafka. On le lance à l'aide de la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>zookeeper-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties
+</code></pre>
+<p>On peut ensuite lancer le serveur Kafka comme ceci :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties
+</code></pre>
+<p>On peut créer un topic appelé <em>topic1</em> (le port 9092 est le port par défaut utilisé mais il peut être modifié) :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--create</span> --bootstrap-server localhost:9092 <span class="token parameter variable">--topic</span> topic1
+</code></pre>
+<p>La commande suivante permet de lister les différents topics créés :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--list</span> --bootstrap-server localhost:9092
+</code></pre>
+<p>Remplacer <em>--list</em> par <em>--describe</em> permet d'avoir plus d'informations sur les partitions.</p>
+<p>Il est dès lors possible de produire des messages pour cette partition grâce à la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-producer.bat --broker-list localhost:9092 <span class="token parameter variable">--topic</span> topic1
+</code></pre>
+<p>On peut dès lors entrer toutes les données que l'on souhaite.</p>
+<p>On peut écouter les messages envoyés. Dans un autre terminal, on lance la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-consumer.bat <span class="token parameter variable">--topic</span> topic1 --bootstrap-server localhost:9092
+</code></pre>
+<p>On vérifie bien que quand on envoie des données, on les récupère dans ce second terminal.</p>
+<h3>Utilisation</h3>
+<p>Dans la suite du tutoriel, on s'intéresse à la <strong>gestion d'une flotte de vélo en temps réel</strong>. Pour cela, on récupère les données de l'API Decault. Le but est d'afficher le delta du nombre de vélos dans les différentes stations. En suivant le tutoriel, on construit progressivement le projet souhaité. Toutes les étapes sont très clairement expliquées et les commentaires permettent de bien comprendre ce que l'on fait.</p>
+<p>Jusque là, le code ne s'effectue que sur un serveur en local sur notre ordinateur. Pour des calculs avec plus de données et/ou plus complexe, il est possible de le <strong>déployer sur plusieurs serveurs en parallèle</strong> (ici tous sur notre ordinateur). Cela permet de répéter les informations et donc d'être <strong>tolérant aux pannes des serveurs</strong>. On crée un deuxième serveur :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">vim</span> config/server1.properties
+<span class="token assign-left variable">broker.id</span><span class="token operator">=</span><span class="token number">1</span>  <span class="token comment">## L'id doit être différent pour chaque server</span>
+<span class="token assign-left variable">listeners</span><span class="token operator">=</span>PLAINTEXT://:9093  <span class="token comment">## Chaque serveur est sur un port différent</span>
+<span class="token assign-left variable">log.dirs</span><span class="token operator">=</span>/tmp/kafka-logs-1
+</code></pre>
+<p>De la même manière, on peut ajouter des serveurs Zookeeper pour qu'ils fonctionnent en parallèle.</p>
+<h3>Projet</h3>
+<p>Par la suite, j'ai réalisé un mini-projet avec Storm. Le but est de savoir grâce à l'API précédemment utilisé quand une borne de vélo devient vide ou n'est plus vide.<br>
+Le code que j'ai réalisé est disponible sur <a href="https://github.com/ThomasP04/MON6-Kafka">ce github</a>.</p>
+<h2>Apache Storm</h2>
+<p>On a vu à la partie précédente que Kafka permettait de faire la distribution des messages. Storm permet lui de les <strong>traiter</strong>.<br>
+Un site peut par exemple transmettre des logs sur ses visites (date et heure, url de la page visitée, ...). Tout ceci peut permettre de tirer beaucoup d'informations utiles (nombre de visite de chaque page, ...). Mais, ceci nécessite un travail préalable : décomposition de chaque ligne pour en <strong>extraire les données</strong> et <strong>transmission</strong> de ces données pour effectuer les calculs. A grande échelle, cela nécessite une <strong>architecture distribuée</strong> afin d'être résistant aux pannes.</p>
+<h3>Présentation</h3>
+<p>Storm possède une architecture comme suit :</p>
+<p><img src="../image/Sch%C3%A9ma6.3.jpg" alt="Schéma de Storm" title="Schéma explicatif Storm"></p>
+<p><em>Source : Openclassrooms</em></p>
+<p>Les messages ou <strong>tuples</strong> sont <strong>créés</strong> par des composants appelés <em>spouts</em>, qui sont configurés pour <strong>lire les données</strong>.<br>
+Une fois les tuples créés, ils sont envoyés à différents <em>bolts</em> pour être traités. Les <em>bolts</em> sont les composants de traitement de Storm, qui effectuent des <strong>opérations sur les tuples</strong> tels que des filtrages, des agrégations, des jointures, etc. Ils peuvent être configurés pour exécuter des tâches spécifiques en parallèle, afin de permettre le traitement de flux de données massifs.<br>
+Un même message peut être envoyé à plusieurs <em>bolts</em>. Cela permet à Storm d'être tolérant aux pannes (en cas de défaillance d'un <em>bolt</em> ou d'un nœud du cluster, le traitement des messages peut continuer sans interruption).<br>
+De plus, les <em>bolts</em> peuvent également émettre de nouveaux messages vers d'autres <em>bolts</em> pour effectuer des traitements supplémentaires sur les données.<br>
+Tout ce processus peut être <strong>distribué</strong> sur différentes machines.</p>
+<h3>Conclusion</h3>
+<p>Le tutoriel d'Openclassroom permet de bien comprendre la théorie derrière la gestion de données en temps réel. Chaque point est bien détaillé et des exemples sont données. De plus, l'introduction de Kafka et Storm permet de tester et de voir ce qu'on peut réaliser en pratique.</p>
+<h2>Liens</h2>
+<p><a href="https://kafka.apache.org/documentation/">Documentation de Kafka</a><br>
+<a href="https://storm.apache.org/">Documentation de Storm</a></p>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
