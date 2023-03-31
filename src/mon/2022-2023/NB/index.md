@@ -4,7 +4,7 @@ layout: layout/post.njk
 title: "MON de Nicolas BERT"
 authors:
   - Nicolas BERT
-tags: ["mon", "HTML", "CSS", "JavaScript"]
+tags: ['mon_node', "HTML", "CSS", "JavaScript"]
 ---
 
 <!-- début résumé -->
