@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Phaser et CI sur Github</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">Phaser et CI sur Github</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Phaser</li>
+          
+            <li class="before:content-['•'] before:px-1">Game Engine</li>
+          
+            <li class="before:content-['•'] before:px-1">Github Actions</li>
+          
+            <li class="before:content-['•'] before:px-1">Github Pages</li>
+          
+            <li class="before:content-['•'] before:px-1">Javascript</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Jean-Baptiste Durand</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<p>Phaser - Game Engine + Github CI</p>
+<!-- fin résumé -->
+<p><a href="https://jean-baptiste-dp.github.io/PhaserEscapeRoom/">Lien du jeu</a><br>
+<a href="https://github.com/Jean-Baptiste-DP/PhaserEscapeRoom">Lien du github</a></p>
+<h2 id="toc"> Table des matières </h2>
+<ul>
+<li><a href="#toc">Table des matières</a></li>
+<li><a href="#h1">Choix de la technologie</a></li>
+<li><a href="#h2">Hébergement sur Github</a>
+<ul>
+<li><a href="#h2-1">Actions</a></li>
+<li><a href="#h2-2">Clé de déploiement</a>
+<ul>
+<li><a href="#h2-2-1">Access Token</a></li>
+<li><a href="#h2-2-2">Secrets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#liens">Liens Utiles</a></li>
+</ul>
+<h2 id="h1">Choix de la technologie</h2>
+<p>Je me suis renseigné sur 4 différents moteurs de jeu :</p>
+<ul>
+<li><a href="https://unity.com/">Unity</a> :
+<ul>
+<li>Code en C# et UnityScript (JS)</li>
+<li>Fait tourner des jeux pour Desktop, mobile et console</li>
+</ul>
+</li>
+<li><a href="https://www.unrealengine.com/en-US">Unreal Engine</a> :
+<ul>
+<li>Code en C++ et Blueprint</li>
+<li>Fait tourner des jeux pour Desktop, mobile et console</li>
+</ul>
+</li>
+<li><a href="https://godotengine.org/">Godot</a> :
+<ul>
+<li>Code en GDScript (Python) et C++</li>
+<li>Fait tourner des jeux pour Desktop, mobile et console</li>
+</ul>
+</li>
+<li><a href="https://phaser.io/">Phaser</a> :
+<ul>
+<li>Code en Javascript</li>
+<li>Fait tourner des jeux pour web (HTML5)</li>
+</ul>
+</li>
+</ul>
+<p>Je me suis tourné vers Phaser car il permettait d'être disponible en static sur un navigateur. Ce qui, combiné avec <a href="https://pages.github.com/">Github Pages</a>, permet d'avoir mon jeu hébergé directement par Github sans trop de difficultés.</p>
+<h2 id="h2"> Hébergement sur Github</h2>
+<h3 id="h2-1">Actions</h3>
+<p>Github propose d'<strong>héberger gratuitement un site static</strong> (comportant seulement des pages HTML, avec CSS et JS, mais sans serveur), c'est ce qui permet notamment d'héberger le <strong>site de Do_It</strong>. Pour cela, Github a besoin d'une branche sur laquelle est toute l'infrastructure statique du site.</p>
+<p>Pour éviter d'avoir à chaque fois à mettre le site static sur une branche, on peut utiliser les <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.">Github Actions</a> qui est une routine, exécutée sur une machine de Github.</p>
+<p>Voici l'action github que j'ai mis en place, avec en dessous les informations sur les différentes fonctionnalités :</p>
+<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">name: Build
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./static
+          github_token: ${{ secrets.DEPLOY_KEY }}
+</code></pre>
+<ul>
+<li><strong>Name</strong> permet de facilement retrouver l'action si on en a plusieurs</li>
+<li><strong>on</strong> est l'élément déclencheur de l'action, ici l'action est effectuée quand des commits sont push sur la branche <em>main</em></li>
+<li><strong>workflow_dispatch</strong> permet de lancer l'action manuellement depuis l'onglet <strong>Actions</strong> de github</li>
+<li><strong>jobs</strong> est l'ensemble des actions à effectuer</li>
+<li><strong>runs-on</strong> le code étant exécuté sur une machine de Github, on a la possibilité de choisir sur quelle OS va faire tourner notre code</li>
+<li><strong>actions/checkout</strong> est une action permettant à la machine de Github, de pouvoir accéder à notre code (permet aussi d'avoir accès à d'autres repo Github si nécessaire)</li>
+<li><strong>peaceiris/actions-gh-pages</strong> est une action permettant de publier sur la branche <strong>gh-pages</strong> le contenu d'un dossier (ici le dossier <em>static</em>). La machine de Github n'ayant pas les droit de modifier notre projet, il faut lui fournir un mot de passe d'accès en écriture de notre projet, d'où le <em>${{ secrets.DEPLOY_KEY }}</em></li>
+</ul>
+<h3 id="h2-2">Clé de déploiement</h3>
+<p>Bien évidement, nous n'allons pas donner aux machines de Github notre mot de passe de connexion à notre compte Github. Il faut donc trouver un moyen de donner l'accès à notre projet en évitant de se faire voler notre mot de passe.</p>
+<h4 id="h2-2-1">Access token</h4>
+<p>Github nous permet d'avoir des mots de passes ayant des accès restreints sur notre compte. On peut choisir d'avoir un accès en écriture seulement sur un projet ou autre.</p>
+<p>Pour cela :</p>
+<p>Settings (celui de votre compte, pas du repo) -&gt; Developer Settings -&gt; Personal Access Token</p>
+<p>Vous pouvez ensuite choisir les droits de votre clé.<br>
+Il faut faire attention à ne pas donner plus de droits que nécessaire.<br>
+Donner une date d'expiration de la clé et supprimer les clés inutiles.</p>
+<p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Documentation officielle</a></p>
+<h4 id="h2-2-2">Secrets</h4>
+<p>Un secret est une variable qui est stockée de manière sécurisée par Github et qui peut être transmise lors de l'exécution d'actions. Un secret peut être un token d'accès (comme dans ce projet), ou par exemple l'url d'un serveur distant sur lequel déployer notre code (comme on a pu le faire sur Gitlab dans le cours AWS/Docker).</p>
+<p><a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Documentation officielle</a></p>
+<h2 id="liens">Liens Utiles </h2>
+<p><strong>Mon projet</strong></p>
+<ul>
+<li><a href="https://jean-baptiste-dp.github.io/PhaserEscapeRoom/">Lien du jeu</a></li>
+<li><a href="https://github.com/Jean-Baptiste-DP/PhaserEscapeRoom">Lien du github</a></li>
+</ul>
+<p><strong>Github</strong></p>
+<ul>
+<li><a href="https://pages.github.com/">Github Pages</a></li>
+<li><a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.">Github Actions</a></li>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Github Access Token</a></li>
+<li><a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Github Secrets</a></li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
