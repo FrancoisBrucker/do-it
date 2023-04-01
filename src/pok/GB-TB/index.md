@@ -6,7 +6,7 @@ authors:
   - Timothée BERMOND
   - Gabriel BARBE
 
-tags: ['pok']
+tags: 
 ---
 <!-- Début Résumé -->
 

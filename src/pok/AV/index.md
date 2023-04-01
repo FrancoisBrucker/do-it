@@ -12,7 +12,7 @@ tags: ['pok']
 </head>
 
 <!-- Début Résumé -->
-MONs d'Antoine Varnerot
+POKs d'Antoine Varnerot
 
 <!-- fin Résumé -->
 
@@ -22,9 +22,7 @@ MONs d'Antoine Varnerot
 
 L'objectif de ce POK est de créer un portfolio.
 
-Lien vers le repo Github : https://github.com/AntwanV/POKcv
-
-
+Lien vers le repo Github : <https://github.com/AntwanV/POKcv>
 
 ## Temps 2
 
@@ -33,3 +31,7 @@ Lien vers le repo Github : https://github.com/AntwanV/POKcv
 Pour ce deuxième POK, j'ai choisi de me concentrer un peu plus sur le <strong>backend</strong> et sur "comment mettre un site <strong>en ligne.</strong>"
 
 ## Temps 3
+
+- [CI and tests](./poks/pok3)
+
+Le sujet du dernier POK est l'amélioration continue et la programmation par les tests.

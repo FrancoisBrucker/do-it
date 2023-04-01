@@ -23,8 +23,14 @@ Pour le temps 1 sur le thème Comprendre, j'ai choisi les MONs suivants :
 
 ## Temps 2
 
-Pour le temps 2 sur le thème Faire, j'ai choisi les MONs suivants :
+Pour le temps 2 sur le thème Faire, j'ai choisi le MON suivant :
 
 {% chemin %} [Catalogue des modes actuelles en management](./MON_2/) {% endchemin %}
 
 ## Temps 3
+
+Pour le temps 3 sur le thème Maintenir et développer, j'ai choisi les MONs suivants :
+
+{% chemin %} [People Analytics](./MON_3_1/) {% endchemin %}
+
+{% chemin %} [Barbecue](./MON_3_2/) {% endchemin %}

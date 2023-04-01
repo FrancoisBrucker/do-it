@@ -5,7 +5,11 @@ title: "POK 2 : Serveur distant"
 authors:
  - Thomas Pont
 
-tags: ['Serveur distant']
+tags: 
+- 'Serveur distant'
+- 'OVH'
+- 'Front'
+- 'Back'
 ---
 
 <!-- Début Résumé -->

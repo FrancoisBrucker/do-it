@@ -7,7 +7,11 @@ authors:
  - Thomas Pont
 
 
-tags: ['Spark']
+tags: 
+
+- 'Spark'
+- 'Data'
+- 'Calcul distribué'
 ---
 
 
@@ -18,7 +22,7 @@ Spark et Big Data
 
 ## Introduction
 
-J'ai réalisé ce MON pour préparer mon stage dans lequel je vais devoir faire de l'architecture de données et notamment devoir **récolter et traiter un grand nombre d'information**. Un des prérequis du stage est de connaître le **principe de traitement de mégadonnées** et de connaître les bases de **Spark**. Il s'agit "d'un framework open source de calcul distribué". Il est utile pour traiter des mégadonnées et pour faire des analyses complexes à grande échelle.
+J'ai réalisé ce MON pour préparer mon stage dans lequel je vais devoir faire de l'architecture de données et notamment devoir **récolter et traiter un grand nombre d'information**. Un des prérequis du stage est de comprendre les bases du **principe de traitement de mégadonnées** et de **Spark**. Il s'agit "d'un framework open source de calcul distribué". Il est utile pour traiter des mégadonnées et pour faire des analyses complexes à grande échelle.
 
 Afin d'apprendre tout ceci, j'ai suivi le cours Openclassrooms [Réalisez des calculs distribués sur des données massives](https://openclassrooms.com/fr/courses/4297166-realisez-des-calculs-distribues-sur-des-donnees-massives).
 
@@ -51,7 +55,8 @@ Les différentes étapes sont les suivantes :
 
 Tout ceci peut être résumé par le schéma suivant :
 
-![Schéma du MapReduce](./image/Schéma.jpg "Schéma explicatif MapReduce")
+![Schéma du MapReduce](../image/Schéma.jpg "Schéma explicatif MapReduce")
+*Source : Openclassrooms*
 
 ### Exemples
 
@@ -116,7 +121,8 @@ Le framework **Hadoop** permet ceci. Celui-ci est composé d'un **système de fi
 
 Globalement, l'utilisateur peut déposer des fichiers qui sont découpés sur des Datas Node. Toutes les informations sont dupliqués pour faire face aux potentielles pannes. Il peut ensuite donner le travail à effectuer au job tracker. Celui-ci communique avec le name node pour savoir où sont les données et pouvoir lancer les calculs de la manière la plus efficace possible. Tous les résultats sont sauvegardés au fur et à mesure.
 
-![Schéma de Hadoop](./image/Schéma2.jpg "Schéma explicatif Hadoop")
+![Schéma de Hadoop](../image/Schéma2.jpg "Schéma explicatif Hadoop")
+*Source : Openclassrooms*
 
 Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.
 

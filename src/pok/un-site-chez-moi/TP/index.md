@@ -10,10 +10,11 @@ tags: ['pok']
 
 <!-- début résumé -->
 
-Mon  pok qui crée un site web chez moi
+Page répertoriant mes différents POK
 <!-- fin résumé -->
 
 ## Liste des POK
 
-- [POK2](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok2/)
-- [POK1](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok1/)
+- [POK1 - Mon site chez moi](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok1/)
+- [POK2 - Déploiement sur serveur distant](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok2/)
+- [POK3 - Rust et programmation par les tests](https://francoisbrucker.github.io/do-it/pok/Un-site-chez-moi/TP/poks/pok3/)
