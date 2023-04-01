@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>MONs de Thibault</title>
+
+    <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+    <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+    <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            [
+              '$', '$'
+            ],
+            [
+              '\\(', '\\)'
+            ]
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" 
+  src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+    <header class="border-b-2 border-gray-200 mb-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-between items-center">
+          <a class="mx-2" href="/do-it/">Home</a>
+          <a class="mx-2" href="/do-it/about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4">
+
+      
+<article>
+  <h1  class="mb-1">MONs de Thibault</h1>
+  <div class="mb-4">
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Wireshark</li>
+          
+            <li class="before:content-['•'] before:px-1">Réseaux</li>
+          
+            <li class="before:content-['•'] before:px-1">TCP</li>
+          
+            <li class="before:content-['•'] before:px-1">Sécurité informatique</li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Auteur : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">Thibault Adelain</li>
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+
+  <!-- début résumé -->
+<ul>
+<li>Wireshark : analyse de paquets</li>
+<li>Niveau : débutant à intermédiaire</li>
+</ul>
+<!-- fin résumé -->
+<h2>Analyse de paquets avec Wireshark</h2>
+<p><a href="https://www.wireshark.org/">Wireshark</a> est un logiciel libre et gratuit qui permet d'analyser le trafic réseau en capturant et en examinant les paquets de données qui circulent sur un réseau. Il est largement utilisé par les professionnels de la sécurité informatique, les administrateurs réseaux... pour diagnostiquer les problèmes de réseau et détecter les éventuelles attaques.</p>
+<p>L'analyse de paquets avec Wireshark permet de comprendre le fonctionnement d'un réseau en examinant le contenu de chaque paquet de données qui y circule. Wireshark peut capturer et afficher différents types de paquets tels que les paquets TCP, UDP, ICMP, DNS... En fait, quasiment tous le trafic réseau transitant par la machine. En examinant les en-têtes de chaque paquet, il est possible de comprendre comment les données sont acheminées à travers le réseau, quelle est l'origine et la destination de chaque paquet, quels sont les ports utilisés, et quelle est la nature des données transmises... Les possibilités sont grandes et ce MON n'en donnera qu'un avant-goût.</p>
+<p>Wireshark permet, entre autres, de :</p>
+<ul>
+<li>Capturer et filtrer les paquets en fonction de différents critères tels que l'adresse IP, le port, le protocole, etc.</li>
+<li>Afficher des statistiques sur le trafic réseau (par exemple, le nombre de paquets envoyés et reçus, le débit de données, etc.)</li>
+<li>Examiner le contenu des paquets, y compris les données brutes et les données applicatives (par exemple, les requêtes HTTP, les requêtes DNS, etc.)</li>
+<li>Détecter les attaques réseau telles que les attaques de déni de service, les attaques de spoofing, les scans réseaux...</li>
+<li>etc</li>
+</ul>
+<p>Il peut être intéressant pour un expert en cybersécurité, administration réseau, développement de savoir utiliser ce logiciel.</p>
+<ul>
+<li>Il pourra avoir une vision plus claire des données qui transitent sur le réseau et comprendre les protocoles en profondeur pour en tirer d'éventuels exploits.</li>
+<li>Les hacker sont de plus en plus créatifs pour contourner les IDS et une analyse au niveau des paquets est parfois nécessaire pour détecter les attaques.</li>
+<li>Le logiciel peut permettre de comprendre d'où vient la latence pour se connecter à une application (pas assez de débit, retransmission de paquets car problème applicatif...). Énormément de problèmes de latence sont réglés en redescendant au niveau des paquets.</li>
+<li>etc</li>
+</ul>
+<p><strong><a href="https://www.wireshark.org/download.html">Le logiciel est téléchargeable ici</a>.</strong></p>
+<h2>Modèle OSI</h2>
+<p>Le modèle OSI (Open Systems Interconnection) est un modèle de référence en informatique qui définit les normes de communication entre les différents systèmes informatiques. Ce modèle a été développé par l'ISO (International Organization for Standardization) dans les années 1980 afin de standardiser les communications entre les ordinateurs de différents fabricants et de différentes plateformes.</p>
+<p>Le modèle OSI est constitué de sept couches, chacune représentant une étape spécifique dans le processus de communication entre les systèmes. Ces couches sont :</p>
+<ul>
+<li>Couche physique : cette couche représente le support physique de la communication.
+<ul>
+<li>ex de protocole : Fibre optique, câble, ondes radio...</li>
+</ul>
+</li>
+<li>Couche liaison de données : cette couche est responsable de la gestion de la transmission de données entre les équipements connectés.
+<ul>
+<li>ex : ethernet, wifi...</li>
+</ul>
+</li>
+<li>Couche réseau : cette couche est responsable de la transmission de données entre les réseaux différents, en utilisant des protocoles de routage.
+<ul>
+<li>ex : IP, ICMP, ARP...</li>
+</ul>
+</li>
+<li>Couche transport : cette couche est responsable de la gestion de la transmission de données de bout en bout.
+<ul>
+<li>ex : TCP, UDP, QUIC...</li>
+</ul>
+</li>
+<li>Couche session : cette couche permet l'établissement, la gestion, la fermeture de sessions, le chiffrement entre les applications des différents systèmes.
+<ul>
+<li>ex : SOCKS, (TLS, SSL) ?</li>
+</ul>
+</li>
+<li>Couche présentation : cette couche est responsable de la présentation des données aux applications, en gérant les formats de données, le chiffrement et la compression.
+<ul>
+<li>ex : (TLS, SSL) ?</li>
+</ul>
+</li>
+<li>Couche application : cette couche représente les applications elles-mêmes et leur interface avec les autres couches du modèle OSI.
+<ul>
+<li>ex : HTTP, SMTP, FTP, DNS, SSH...</li>
+</ul>
+</li>
+</ul>
+<p>Le modèle OSI permet de standardiser la communication entre les différents systèmes informatiques en séparant les différentes étapes de la communication en couches distinctes. Cela facilite la conception de nouveaux protocoles de communication, la résolution des problèmes et la compatibilité entre les différents systèmes. Le modèle OSI est largement utilisé dans l'industrie des réseaux informatiques pour comprendre et dépanner les problèmes de communication entre les différents équipements et applications.</p>
+<p><img src="modele_osi.png" alt="modèle osi"> par <a href="https://cisco.goffinet.org/ccna/fondamentaux/modeles-tcp-ip-osi/">cisco.goffinet.org</a>.</p>
+<h2>PING PONG</h2>
+<h4>Définition</h4>
+<p>Lorsque vous envoyez un ping à un serveur, vous utilisez le protocole ICMP pour tester la connectivité réseau entre votre système et le serveur. Le ping envoie un message ICMP ECHO_REQUEST à l'adresse IP du serveur que vous voulez tester. Le serveur recevra alors ce message et répondra avec un message ICMP ECHO_REPLY. Voici comment cela se déroule en détail :</p>
+<ul>
+<li>
+<p>Envoi du PING (ICMP ECHO_REQUEST) : Lorsque vous envoyez un ping à un serveur, votre système envoie un message ICMP ECHO_REQUEST à l'adresse IP du serveur. Ce message contient un champ d'identification et un champ de numéro de séquence, ainsi qu'un champ de données qui peut être utilisé pour transporter des informations supplémentaires.</p>
+</li>
+<li>
+<p>Réception du PING et envoi du PONG (ICMP ECHO_REPLY).</p>
+</li>
+<li>
+<p>Réception du PONG : votre système utilise le champ d'identification et le champ de numéro de séquence pour identifier la réponse correspondante à la demande d'envoi de ping et calcule le temps écoulé entre l'envoi et la réception de la réponse. Cela permet à votre système de mesurer le temps de latence entre votre système et le serveur.</p>
+</li>
+</ul>
+<p>Si le serveur ne répond pas au message ICMP ECHO_REQUEST, la machine n'est pas atteignable / n'a pas répondu. Le ping est utilisé pour diagnostiquer les problèmes de réseau et tester la connectivité entre les systèmes.</p>
+<h4>Dans Wireshark</h4>
+<p>On lance la capture de paquets. Avec la commande <code>ping google.com</code> :</p>
+<p><img src="capture_icmp.png" alt="Capture ICMP"></p>
+<p>Pour trouver les paquets en question, on peut utiliser des filtres. Je vous renvoie à <a href="https://www.youtube.com/watch?v=aEss3CG49iI&amp;ab_channel=DavidBombal">cette vidéo</a> pour avoir plus de détails. Par exemple, on peut filtrer avec :</p>
+<p><code>ip.addr == 192.168.1.21 &amp;&amp; icmp</code></p>
+<p>Ensuite, on peut prendre un paquet et faire [clique droit &gt; conversation filter &gt; ethernet] pour avoir son contexte.</p>
+<p>On a :</p>
+<ul>
+<li>Une requête + réponse DNS pour résoudre l'IP de <a href="http://google.com">google.com</a></li>
+<li>ping request et ping response.</li>
+</ul>
+<p>On peut examiner les paquets en détail et s'intéresser au champs présents dans un paquet ICMP (source ip, destination ip, <a href="https://fr.wikipedia.org/wiki/Time_to_Live">ttl</a>...)</p>
+<p>Assez simple, jusque-là. On peut aussi recommencer une capture et préciser la payload (nombre d'octets) à envoyer par <a href="https://fr.wikipedia.org/wiki/Trame_(informatique)">trame</a> :</p>
+<p><code>ping -s 1500 google.com</code></p>
+<p>puis :</p>
+<p><code>ping -s 1500 -D google.com</code></p>
+<p>Et là, problème. Vous pouvez essayer de comprendre dans Wireshark et allez voir <a href="https://www.youtube.com/watch?v=J-gnDC6B5eE&amp;t=3312s&amp;ab_channel=DavidBombal">cette ressource</a> pour en savoir plus.</p>
+<h2>TCP</h2>
+<h4>Définition</h4>
+<p>TCP (Transmission Control Protocol) est un protocole de transport fiable et orienté connexion utilisé pour la transmission de données sur les réseaux informatiques. Il est l'une des deux options principales de la couche transport du modèle OSI (l'autre étant UDP). TCP fournit une communication bidirectionnelle, de bout en bout et fiable, c'est-à-dire qu'il garantit la livraison des données sans erreur.</p>
+<p>Pour cela, TCP utilise une méthode appelé le three-way handshake. Le 3-way handshake est un mécanisme de synchronisation à trois étapes utilisé par TCP pour établir une connexion fiable et orientée connexion entre deux systèmes. Voici les étapes du 3-way handshake :</p>
+<ul>
+<li>
+<p>SYN : Le système émetteur envoie un segment SYN (Synchronize) au système destinataire pour indiquer qu'il souhaite établir une connexion TCP. Ce segment contient un numéro de séquence initial choisi par l'émetteur. Dans wireshark, un numéro noté <em>relative sequence number</em> est ramené à 0 pour nous faciliter le comptage, mais il s'agit en fait d'un très grand nombre aléatoire pour identifier de manière unique la connection TCP en cours (dans wireshark, il s'appelle <em>sequence number (raw)</em>).</p>
+</li>
+<li>
+<p>SYN-ACK : Le système destinataire répond avec un segment SYN-ACK (Synchronize-Acknowledgment) pour indiquer qu'il est prêt à établir la connexion. Ce segment contient entre autres : Dans le SYN, un nouveau numéro de séquence. Dans le ACK, le numéro de séquence initial choisi par l'émetteur initial + 1.</p>
+</li>
+<li>
+<p>ACK : Le système émetteur répond avec un segment ACK pour confirmer la réception du segment SYN du destinataire. Ce segment contient également le numéro de séquence du SYN du destinataire + 1, qui indique que la connexion a été établie avec succès.</p>
+</li>
+</ul>
+<p>Une fois que le 3-way handshake est terminé, les deux systèmes peuvent commencer à échanger des données de manière fiable et ordonnée. Les segments de données envoyés par TCP contiennent un numéro de séquence qui permet à celui qui réceptionne les données de les réassembler dans le bon ordre.</p>
+<h4>Dans Wireshark</h4>
+<p><a href="https://www.youtube.com/watch?v=rmFX1V49K8U&amp;list=PLW8bTPfXNGdCR0RjCBwHM0EzfVKQfpn1m&amp;ab_channel=DavidBombal">Ressource</a>.</p>
+<p>On lance la capture de paquets. Avec la commande <code>curl google.com</code> :</p>
+<p><img src="capture_tcp.png" alt="capture_tcp"></p>
+<p>Pour avoir la capture en question, on peut appliquer le filtre <code>http</code>. Ensuite, [clique droit &gt; follow TCP stream] sur le paquet.</p>
+<p><em>Note</em> : pour ajouter des colonnes : dans le cadre en bas à gauche, clique droit sur la donnée et apply as a column</p>
+<p>Les trois premiers paquets correspondent à l'établissement de la connexion : SYN, SYN-ACK, ACK. Je vous invite à étudier ces paquets.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>On voit un lien entre le <em>acknowledgment number</em> et <em>TCP Segment Length</em>, non ?</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>En fait, le <em>acknowledgment number</em> est incrémenté de 1 + taille du paquet reçu à chaque réception</p>
+</div>
+</details>     
+</div>
+<h2>Analyse scan Nmap</h2>
+<h4>Scan Full TCP connect</h4>
+<p><strong>Exo :</strong> faites un scan <a href="https://nmap.org/">nmap</a> full TCP connect sur une machine de votre réseau. Comment détecter que c'est un scan Nmap ?</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><code>nmap -sT 192.168.1.1</code><br>
+En regardant paquet par paquet, c'est difficile à remarquer... Chaque paquet TCP est normal et comporte toutes les options classiques d'un paquet TCP. Le comportement global est cependant étrange (SYN, SYN-ACK, ACK, RST-ACK), on établit une connection pour la fermer brutalement ensuite (flag RESET : &quot;Le bit de réinitialisation a été prévu pour des situations comme celle où un ordinateur A « plante » ou est éteint alors qu'une connexion TCP était en cours avec un ordinateur B.&quot; <a href="https://fr.wikipedia.org/wiki/Attaque_TCP_reset">wikipedia</a>). On aurait pu aussi préciser le port pour éviter de tout scanner et d'éveiller les soupçons. Finalement, on comprend facilement qu'un scan comme ça est facile à détecter par les IDS.<br>
+<img src="capture_nmap_full_tcp.png" alt="capture nmap full tcp"></p>
+</div>
+</details>     
+</div>
+<h4>SYN (&quot;stealth&quot;) scan</h4>
+<p><strong>Exo :</strong> faites un SYN scan <a href="https://nmap.org/">nmap</a> sur une machine de votre réseau. Comment détecter que c'est un scan Nmap ?</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><code>sudo nmap -sS 192.168.1.1</code><br>
+Si on a réussi à établir une connexion, on a ceci dans wireshark :<br>
+<img src="capture_nmap_syn_scan.png" alt="capture syn scan"><br>
+On voit que le client envoie un SYN, le server revoie un SYN-ACK pour établir une connexion TCP, et ensuite... plus de réponse. Le serveur retransmet alors son SYN-ACK, en supposant qu'il n'a pas été reçu, et recommence toutes les <code>~ 2 * delta</code>.<br>
+Le SYN scan envoie un paquet SYN et attend un SYN-ACK en retour, mais ne renvoie pas de ACK au serveur. Il est donc normal d'avoir ce genre de stream. Mais du point de vue du serveur, c'est difficile à détecter, car tout se passe comme si le paquet réponse s'était perdu en chemin (d'où la retransmission).<br>
+Cependant, en regardant attentivement, on voit que le premier SYN envoyé par le client n'est pas identique à ceux de tout à l'heure. Et oui, regardez dans les options TCP... que 4 octets. C'est très étrange, normalement un paquet TCP SYN a au moins une vingtaine d'octets d'options. Finalement, On voit qu'un <em>stealth scan</em> n'est pas si <em>stealth</em> que ça...</p>
+</div>
+</details>     
+</div>
+<h2>Sources</h2>
+<ul>
+<li>David Bombal and Chris Greer using Wireshark : <a href="https://www.youtube.com/watch?v=rmFX1V49K8U&amp;list=PLhfrWIlLOoKO8522T1OAhR5Bb2mD6Qy_l&amp;ab_channel=DavidBombal">https://www.youtube.com/watch?v=rmFX1V49K8U&amp;list=PLhfrWIlLOoKO8522T1OAhR5Bb2mD6Qy_l&amp;ab_channel=DavidBombal</a></li>
+</ul>
+
+
+</article>
+
+    </main>
+
+    <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="min-h-[50px] flex justify-center items-center">
+          <p>
+            do-it : option de troisième année à l'école centrale Marseille
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      MathJax
+        .startup
+        .document
+        .getMathItemsWithin(document.body);
+    </script>
+
+  </body>
+</html>
