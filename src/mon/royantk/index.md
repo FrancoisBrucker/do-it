@@ -17,6 +17,7 @@ Tous les MON de Killian ROYANT
 - [Passez au Full Stack avec Node.js, Express et MongoDB](royantk/temps_2/fullstack)
 - [Débuter avec React](royantk/temps_2/react)
 - [Technologies front-end](royantk/temps_3/technologies)
+- [Les métiers après DO_IT](royantk/temps_3/jobs)
 
 <!-- fin résumé -->
 
