@@ -3,13 +3,15 @@ layout: layout/post.njk
 
 title: "MON Jean-Baptiste"
 authors:
-  - Jean-Baptiste Durand
+    - Jean-Baptiste Durand
 
-tags: ['mon']
+tags: ["mon"]
 ---
 
 <!-- début résumé -->
+
 Ensemble des MON réalisés par Jean-Baptiste Durand
+
 <!-- fin résumé -->
 
 <div class="temps-container">
@@ -48,13 +50,12 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 			<div class="img-container"><img src="./Image/compiler.jpg" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif">Compilateur (partie 2)</p>
 		</a>
-		<a class="card" style="background-color:rgba(20, 150, 255,var(--opacity));" href="./Mes_MON/404">
-			<div class="img-container"><img src="./Image/13429_ILL_DevOpsLoop.png" alt="Avatar" style="width:100%"/></div>
-			<p class="MON-descriptif"> Dev-ops (objets et/ou méthodes)</p>
+		<a class="card" style="background-color:rgba(152, 115, 93,var(--opacity));" href="./Mes_MON/phaser">
+			<div class="img-container"><img src="https://phaser.io/images/img.png" alt="Avatar" style="width:100%"/></div>
+			<p class="MON-descriptif"> Phaser - Game Engine + Github CI</p>
 		</a>
 	</div>
 </div>
-
 
 <style>
 	.temps{

@@ -27,4 +27,4 @@ Les MON de Jeffrey EDISAH
 ## Temps 3
 
 - [Introduction au C++](./mons/cpp)
-- [Contribution à un projet open-source : Blender]
+- [Contribution à un projet open-source : Blender](./mons/openSource.md)
