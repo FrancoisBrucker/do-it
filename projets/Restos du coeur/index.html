@@ -84,7 +84,6 @@
   
 
   <!-- début résumé -->
-<h2>Présentation</h2>
 <p>Le projet est réalisé avec le centre des <strong>Restos du Cœur</strong> de la rue Granoux à Marseille, <strong>4 étudiants</strong> du parcours DO-IT. Laetitia Piet encadre ce projet. Ce projet est en collaboration avec le centre des restos du cœur des 4° et 5° arrondissements de Marseille. Notre <strong>objectif</strong> est d’<strong>optimiser et de simplifier certaines tâches des bénévoles du centre</strong>.</p>
 <!-- fin résumé -->
 <h2>Nos immersions</h2>
@@ -128,9 +127,206 @@
 <p><img src="./photos/poster.png" alt="poster"></p>
 <h2>Nos résultats</h2>
 <p>Nous avons donc essayé de développer et mettre en place nos différentes solutions. On va détailler ci-dessous la démarche et les résultats obtenu.</p>
-<h3>Problème 1 : Les inscriptions</h3>
-<p>Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu. Il fallait remplir manuellement une fiche d’inscription pour chaque famille bénéficiaire ce qui rendait le processus long et fastidieux.<br>
-Les données de chaque famille étaient présente dans un logiciel &quot;Ulysse&quot; propre aux restos du coeur.......... <strong>Killian à toi de rédiger !!!</strong></p>
+<h3><strong>Problème 1 : Les inscriptions</strong></h3>
+<p>Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu. Il fallait remplir manuellement une fiche d’inscription pour chaque famille bénéficiaire ce qui rendait le processus long et fastidieux.</p>
+<p><img src="./photos/inscriptions1.png" alt="Feuille de template d'inscription"></p>
+<p>Néanmoins, toutes les informations necessaires au remplissage de ces fiches était déjà renseigné sur le logiciel interne des restos du cœur. Nous avons ainsi réfléchis à une solution permettant d’automatiser le remplissage des fiches d’inscription aux campagnes des bénéficiaires.</p>
+<p>Pour cela, nous avons travaillé via Excel et une macro codée en VBA. La macro utilise un fichier Excel contenant une feuille de template à remplir, une feuille de mode d'emploi avec un bouton pour lancer la macro, et une feuille Data qui définit les portions à distribuer en fonction du nombre de personnes. La macro demande à l'utilisateur de sélectionner les fichiers Excel des familles et des personnes, et permet de générer automatiquement les fiches d'inscription pour chaque famille bénéficiaire.</p>
+<p><img src="./photos/inscriptions2.png" alt="Interface du Excel"></p>
+<p>Voici le code de la macro développée :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code de la macro</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> GenererFeuilles<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">Dim</span> wbFamilles <span class="token keyword">As</span> Workbook<span class="token punctuation">,</span> wbPersonnes <span class="token keyword">As</span> Workbook
+    <span class="token keyword">Dim</span> numCarteMin <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> wsTemplate <span class="token keyword">As</span> Worksheet<span class="token punctuation">,</span> wsTemplateTemp <span class="token keyword">As</span> Worksheet<span class="token punctuation">,</span> wsFiches <span class="token keyword">As</span> Worksheet<span class="token punctuation">,</span> wsData <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> i <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> famille <span class="token keyword">As</span> Range
+
+    <span class="token keyword">Dim</span> familleFile <span class="token keyword">As</span> <span class="token keyword">Variant</span><span class="token punctuation">,</span> personnesFile <span class="token keyword">As</span> <span class="token keyword">Variant</span>
+    <span class="token keyword">Dim</span> fd <span class="token keyword">As</span> FileDialog
+
+    <span class="token keyword">Set</span> fd <span class="token operator">=</span> Application<span class="token punctuation">.</span>FileDialog<span class="token punctuation">(</span>msoFileDialogFilePicker<span class="token punctuation">)</span>
+    fd<span class="token punctuation">.</span>Title <span class="token operator">=</span> <span class="token string">"Sélectionner le fichier Excel des familles"</span>
+    fd<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span>Clear
+    fd<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span>Add <span class="token string">"Fichiers Excel"</span><span class="token punctuation">,</span> <span class="token string">"*.xlsx"</span>
+    fd<span class="token punctuation">.</span>AllowMultiSelect <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">If</span> fd<span class="token punctuation">.</span>Show <span class="token operator">=</span> <span class="token boolean">True</span> <span class="token keyword">Then</span>
+        familleFile <span class="token operator">=</span> fd<span class="token punctuation">.</span>SelectedItems<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">Else</span>
+        MsgBox <span class="token string">"La sélection de fichier a été annulée. Veuillez sélectionner un fichier Excel à traiter."</span>
+        <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+
+        <span class="token keyword">Set</span> fd <span class="token operator">=</span> Application<span class="token punctuation">.</span>FileDialog<span class="token punctuation">(</span>msoFileDialogFilePicker<span class="token punctuation">)</span>
+    fd<span class="token punctuation">.</span>Title <span class="token operator">=</span> <span class="token string">"Sélectionner le fichier Excel des personnes"</span>
+    fd<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span>Clear
+    fd<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span>Add <span class="token string">"Fichiers Excel"</span><span class="token punctuation">,</span> <span class="token string">"*.xlsx"</span>
+    fd<span class="token punctuation">.</span>AllowMultiSelect <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">If</span> fd<span class="token punctuation">.</span>Show <span class="token operator">=</span> <span class="token boolean">True</span> <span class="token keyword">Then</span>
+        personnesFile <span class="token operator">=</span> fd<span class="token punctuation">.</span>SelectedItems<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">Else</span>
+        MsgBox <span class="token string">"La sélection de fichier a été annulée. Veuillez sélectionner un fichier Excel à traiter."</span>
+        <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+
+    <span class="token comment">' Vérification de la sélection des fichiers Excel</span>
+    <span class="token keyword">If</span> familleFile <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token keyword">Or</span> personnesFile <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token keyword">Then</span>
+        MsgBox <span class="token string">"Veuillez sélectionner les fichiers Excel à traiter."</span>
+        <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+
+    <span class="token keyword">Set</span> wbFamilles <span class="token operator">=</span> Workbooks<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>familleFile<span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wbPersonnes <span class="token operator">=</span> Workbooks<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>personnesFile<span class="token punctuation">)</span>
+
+    <span class="token comment">' Vérification des fichiers Excel</span>
+    <span class="token keyword">If</span> wbPersonnes<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"Q1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">"Contact"</span> <span class="token keyword">Or</span> wbFamilles<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"U1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">"Derniere Activite"</span> <span class="token keyword">Then</span>
+        MsgBox <span class="token string">"Veuillez vérifier les fichiers Excel sélectionnés."</span>
+        <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+
+    <span class="token comment">'numCarteMin = 0</span>
+    numInput <span class="token operator">=</span> InputBox<span class="token punctuation">(</span><span class="token string">"Indiquer le numéro de la premire carte à traiter"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">Do</span> <span class="token keyword">While</span> <span class="token keyword">Not</span> IsNumeric<span class="token punctuation">(</span>numInput<span class="token punctuation">)</span>
+        numInput <span class="token operator">=</span> InputBox<span class="token punctuation">(</span><span class="token string">"Entrez un nombre valide. Indiquer le numéro de la premire carte à traiter : "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">If</span> numInput <span class="token operator">=</span> <span class="token string">""</span> <span class="token keyword">Then</span>
+            <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Loop</span>
+    numCarteMin <span class="token operator">=</span> numInput
+    <span class="token keyword">Set</span> wsTemplate <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Template"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wsTemplateTemp <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Temp"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wsFiches <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Fiches"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wsData <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Data"</span><span class="token punctuation">)</span>
+
+    <span class="token comment">' Suppression du contenu des feuilles TemplateTemp et Fiches</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"1:"</span> <span class="token operator">&amp;</span> wsTemplateTemp<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span>Delete Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlUp
+    wsFiches<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"1:"</span> <span class="token operator">&amp;</span> wsFiches<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span>Delete Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlUp
+    
+    wsTemplate<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"30:30"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Copy
+    wsFiches<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"1:1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>PasteSpecial Paste<span class="token punctuation">:</span><span class="token operator">=</span>xlPasteColumnWidths<span class="token punctuation">,</span> Operation<span class="token punctuation">:</span><span class="token operator">=</span>xlNone<span class="token punctuation">,</span> <span class="token operator">_</span>
+        SkipBlanks<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> Transpose<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span>
+
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> famille <span class="token keyword">In</span> wbFamilles<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A2"</span><span class="token punctuation">,</span> wbFamilles<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A"</span> <span class="token operator">&amp;</span> wbFamilles<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">If</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">></span><span class="token operator">=</span> numCarteMin <span class="token keyword">Then</span>
+            
+            <span class="token comment">' Copie du template</span>
+            wsTemplate<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"1:28"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Copy
+            ThisWorkbook<span class="token punctuation">.</span>Activate
+            Sheets<span class="token punctuation">(</span><span class="token string">"Temp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
+            Rows<span class="token punctuation">(</span><span class="token string">"1:1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
+            Selection<span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown
+            Selection<span class="token punctuation">.</span>PasteSpecial Paste<span class="token punctuation">:</span><span class="token operator">=</span>xlPasteColumnWidths<span class="token punctuation">,</span> Operation<span class="token punctuation">:</span><span class="token operator">=</span>xlNone<span class="token punctuation">,</span> <span class="token operator">_</span>
+                SkipBlanks<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> Transpose<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span>
+
+            <span class="token keyword">If</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">+</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">+</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">Then</span>
+                BoucleBabies famille<span class="token punctuation">,</span> wbPersonnes<span class="token punctuation">,</span> wsTemplateTemp
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+
+            CopieInfos famille<span class="token punctuation">,</span> wsTemplateTemp
+            AjoutPortions famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> wsTemplateTemp<span class="token punctuation">,</span> wsData
+
+            <span class="token comment">' Coupe du template rempli</span>
+            wsTemplateTemp<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span><span class="token string">"1:28"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cut
+
+            <span class="token comment">' Collage à la suite des autres feuilles</span>
+            wsFiches<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>i <span class="token operator">*</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&amp;</span> <span class="token string">":"</span> <span class="token operator">&amp;</span> i <span class="token operator">*</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown
+            i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> famille
+
+    wbFamilles<span class="token punctuation">.</span>Close SaveChanges<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span>
+    wbPersonnes<span class="token punctuation">.</span>Close SaveChanges<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span>
+
+    <span class="token comment">' Ouvrir la fentre d'impression pour imprimer les pages généréess</span>
+    wsFiches<span class="token punctuation">.</span>Activate
+    Application<span class="token punctuation">.</span>Dialogs<span class="token punctuation">(</span>xlDialogPrint<span class="token punctuation">)</span><span class="token punctuation">.</span>Show
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+
+<span class="token keyword">Sub</span> BoucleBabies<span class="token punctuation">(</span>famille <span class="token keyword">As</span> Range<span class="token punctuation">,</span> wbPersonnes <span class="token keyword">As</span> Workbook<span class="token punctuation">,</span> wsTemplateTemp <span class="token keyword">As</span> Worksheet<span class="token punctuation">)</span>
+
+    <span class="token keyword">Dim</span> nbBabies <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> person <span class="token keyword">As</span> Range
+
+    nbBabies <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> person <span class="token keyword">In</span> wbPersonnes<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A2"</span><span class="token punctuation">,</span> wbPersonnes<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A"</span> <span class="token operator">&amp;</span> wbPersonnes<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">If</span> person<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token keyword">And</span> person<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">&lt;</span><span class="token operator">=</span> <span class="token number">18</span> <span class="token keyword">Then</span>
+            <span class="token keyword">If</span> nbBabies <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">Then</span>
+                wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"R3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> person<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+            <span class="token keyword">ElseIf</span> nbBabies <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">Then</span>
+                wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"Z3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> person<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+            <span class="token keyword">ElseIf</span> nbBabies <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">Then</span>
+                wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"AH3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> person<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+            nbBabies <span class="token operator">=</span> nbBabies <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">If</span> nbBabies <span class="token operator">></span> <span class="token number">2</span> <span class="token keyword">Then</span>
+                <span class="token keyword">Exit</span> <span class="token keyword">For</span>
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> person
+
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+
+<span class="token keyword">Sub</span> CopieInfos<span class="token punctuation">(</span>famille <span class="token keyword">As</span> Range<span class="token punctuation">,</span> wsTemplateTemp <span class="token keyword">As</span> Worksheet<span class="token punctuation">)</span>
+
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"AD1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Value <span class="token comment">' Campagne</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"G2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token comment">' Nom</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"AB2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token comment">' Prénom</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"B3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token comment">' Numéro de carte</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"L4"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token comment">' Nb de personnes à servir</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"L5"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Max<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">*</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token comment">' Nombre de points</span>
+    wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"AF4"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> <span class="token string">"Famille de "</span> <span class="token operator">&amp;</span> famille<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">&amp;</span> <span class="token string">" personnes"</span> <span class="token comment">' 'Famille de {nb de personnes} personnes'</span>
+
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+
+<span class="token keyword">Sub</span> AjoutPortions<span class="token punctuation">(</span>nbPersonnes <span class="token keyword">As</span> <span class="token keyword">Long</span><span class="token punctuation">,</span> wsTemplateTemp <span class="token keyword">As</span> Worksheet<span class="token punctuation">,</span> wsData <span class="token keyword">As</span> Worksheet<span class="token punctuation">)</span>
+
+    <span class="token keyword">Dim</span> product <span class="token keyword">As</span> Range
+    <span class="token keyword">Dim</span> nbPortions <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> startCell <span class="token keyword">As</span> Range
+    <span class="token keyword">Dim</span> i <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    
+    <span class="token keyword">If</span> nbPersonnes <span class="token operator">></span> <span class="token number">6</span> <span class="token keyword">Then</span> nbPersonnes <span class="token operator">=</span> <span class="token number">6</span>
+
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> product <span class="token keyword">In</span> wsData<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A2"</span><span class="token punctuation">,</span> wsData<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A"</span> <span class="token operator">&amp;</span> wsData<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        nbPortions <span class="token operator">=</span> product<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> nbPersonnes<span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+        <span class="token keyword">Set</span> startCell <span class="token operator">=</span> wsTemplateTemp<span class="token punctuation">.</span>Range<span class="token punctuation">(</span>product<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">)</span>
+        startCell<span class="token punctuation">.</span>Value <span class="token operator">=</span> nbPortions
+        <span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> nbPortions
+            startCell<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span>Borders<span class="token punctuation">.</span>LineStyle <span class="token operator">=</span> xlContinuous
+        <span class="token keyword">Next</span> i
+    <span class="token keyword">Next</span> product
+
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>La macro importe les fichiers Excel des familles et des personnes, recherche les bénéficiaires, récupère les informations relatives aux dates de naissance des bébés, remplit les fiches d'inscription, ajoute les données relatives aux nombre de portions, copie le template et ouvre la page d'impression pour imprimer les fiches générées.</p>
+<p><img src="./photos/inscriptions3.png" alt="Interface de sortie"></p>
+<p>Cela permet aux bénévoles de gagner du temps et de réduire le risque d'erreurs lors du remplissage des fiches d'inscription. Cette solution a donc permis de résoudre efficacement le problème d'inscription pour les Restos du Cœur.</p>
+<p><strong>Avantages</strong></p>
+<p>Les bénévoles n'ont plus besoin de remplir manuellement les fiches d'inscription pour chaque famille bénéficiaire, ce qui leur fait gagner un temps considérable. De plus, l'automatisation de ce processus permet de réduire le risque d'erreurs lors du remplissage des fiches d'inscription.</p>
+<p><strong>Difficultés rencontrées</strong></p>
+<p>Comme on peut le voir dans le code fourni, la solution pour numériser la phase d'inscription a nécessité une expertise technique assez avancée en VBA (Visual Basic for Applications), ainsi que la création d'un fichier Excel contenant une feuille de template à remplir, une feuille de mode d'emploi avec un bouton pour lancer la macro, et une feuille Data qui définit les portions à distribuer en fonction du nombre de personnes.</p>
+<p>La création de cette macro a donc été assez complexe et demande une connaissance approfondie du langage VBA. De plus, cette solution n'est pas compatible avec les ordinateurs Mac, car la macro utilise des fonctionnalités spécifiques à Excel pour Windows.</p>
+<p>Malgré ces difficultés, la solution mise en place a permis de résoudre efficacement le problème d'inscription et a apporté un gain de temps considérable aux bénévoles, ainsi qu'une réduction du risque d'erreurs lors du remplissage des fiches d'inscription.</p>
 <h3>Problème 2 : Le calendrier des bénévoles</h3>
 <p>Au sein de l'association, il était difficile de suivre la présence des bénévoles lors des jours de distribution, faute de planning. C'est alors que nous avons proposé une solution pratique et simple : Framadate. Il s'agit d'un calendrier en ligne, facile à créer et à compléter par tous les bénévoles, quel que soit leur âge. Cette application offre de nombreux avantages :</p>
 <ul>
