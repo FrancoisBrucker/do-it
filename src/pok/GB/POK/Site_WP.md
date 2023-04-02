@@ -10,7 +10,7 @@ authors:
 
 <!-- Fin Résumé -->
 
-# Préambule
+### Préambule
 Après les deux premiers POK m'ayant permis de découvrir le développement Web autant en front-end qu'en back-end, j'aimerais passer celui-ci à faire un site web sur WordPress afin de pouvoir comparer par moi-même les différences. En effet, ayant acquis certaines compétences au cours de cette année, j'en viens à me demander si, finalement, ces compétences sont nécessaires à un développement de site web à mon niveau. 
 Ne voyez pas ici un quelconque regret de mes choix de cours, au contraire ce sont ces cours qui me permettent de pouvoir me poser cette question aujourd'hui et pouvoir comprendre les différents points positifs et négatifs de chaque méthode. 
 Pour répondre à cette problématique, je vais effectuer ce POK en deux temps : 
@@ -61,3 +61,31 @@ Pistes suivantes :
 - Extensions utiles 
 - Template d'items présents sur toutes les pages 
 - Code HTML ? 
+
+### L'hébergement sur WordPress 
+WordPress propose un solution d'hébergement qui est wordpress.com. Cette solution est une solution payante plutôt contraignante, je ne me dirigerai pas forcément vers cette solution afin d'héberger mon site web. Il existe d'autres hébergeurs plus populaires au sein de la communauté tels que ThemeCloud qui a l'avantage de proposer un site sécurisé, gratuit et bénéficiant d'un support pendant 30 jours
+; après quoi il faudra payer.
+# Petit projet 
+Afin de mettre en pratique tout ce qui a été vu jusqu'à présent, je vais de ce pas réaliser un projet de site statique sur WordPress. 
+Ce site sera développé pour un coach sportif indépendant qui voudrait communiquer, sur ses offres notamment, via ce site web.
+
+### Contexte 
+Thibault est un jeune coach indépendant ayant obtenu son diplome récemment. Il n'a aucune connaissance en informatique mais souhaiterait développer un site web statique contenant ses offres, quelques vidéos de ses entrainements, des liens vers ses principaux médias sociaux et un moyen de le contacter. Pour effectuer cette mission, il fait appel à son ami Gabriel, jeune développeur en devenir, qui propose de lui apporter son aide en 10h, car il est très occuper dans le cadre de ses études. Par chance, Gabriel a effectué sa dernière année d'étude sur le développement web et comprend qu'en si peu de temps une de ses seules possibilités est de passer par un site no-code, même si il est conscient que 10h ne sera surement pas assez, il pourra au moins fournir une ébauche de site à Thibault. Il décide donc de développer le site web sur WordPress (tiens tiens).
+
+### Conception
+L'objectif ici est d'utiliser WordPress tel qu'il a été pensé, à mon niveau et avec le temps compté il est bien plus confortable d'exploiter toutes les possibilités de WordPress. 
+Pour créer ce site web, j'utilise un thème disponible Wordpress : Ocean. Ce thème a l'avantage de posséder plusieurs démos importables ce qui permet de ne pas partir de rien. On importe donc la démo coaching sur notre site qui regroupe les fonctionnalités que Thibault souhaitait pour son site. 
+S'en suit alors un travail de recherche d'extensions. Nous installons quelques extensions basiques suggérés sur (https://www.presse-citron.net/hebergeur/faq/plugins-wordpress/) et (https://kinsta.com/fr/meilleures-extensions-wordpress/) permettant plus de possibilités sur la construction des pages ou d'afficher le flux instagram de @coachthibault entre autres, la liste ci-dessus détaille les extensions installées : 
+- Social feed gallery
+- Elementor
+- Duplicate page
+- Hustle : crée des pop-up et envoi des mails automatiquement
+- WP Form : crée un formulaire de contact
+- Central color palette
+
+### Brief graphique 
+Après un rendez-vous téléphonique avec le client, nous avons pu réaliser ensemble le brief graphique que l'on souhaitait appliquer au site.
+
+### Développement 
+La suite du processus est assez simple avec le template importé. Cela se résume à remplir les cases avec les informations de coach.thibault, changer les couleurs et les éléments typographiques avec ceux issus de notre brief graphique. J'ai aussi rajouté quelques fonctionnalités, des vidéos issu de l'instagram du client par exemple, qui n'était pas forcément prévues dans le template ; c'est très facile à rajouter, il suffit d'insérer un bloc et de lui assigner les fonctionnalités nécessaires. 
+L'extension "Elementor" est, je trouve, bien plus intuitive et pratique que le simple wordpress pour modifier l'interface. En revanche certaines fonctionnalités ne sont pas disponibles dans la version gratuite. 
