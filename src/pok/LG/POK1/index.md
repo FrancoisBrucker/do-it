@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "POK 1: typologie des plateformes numériques"
 authors:
   - Louise Gacoin
+tags:
+-  systeme informations
 
 ---
 ## Sommaire

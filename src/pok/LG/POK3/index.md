@@ -5,6 +5,12 @@ title: "POK 3: BabyCameleon, Business Plan et modélisation Logistique"
 authors:
   - Louise Gacoin
 
+tags:
+- gestion de projet
+- business plan
+- logistique
+- entreprenariat
+
 ---
 
 <!-- début résumé -->
@@ -235,9 +241,10 @@ Dans un souci de praticité  et de réduction des trajets inutiles, il faudra tr
 
 **Pour un service de livraison :**
 *Le but pour BabyCaméléon :*
-Obtenir un service de confiance pour la livraison/ récupération des pièces à prix raisonnables pour le client. Pour rappel les expéditions seront payés par client.      
+Obtenir un service de confiance pour la livraison/ récupération des pièces à prix raisonnables pour le client. Pour rappel les expéditions seront payés par client. La rapidité du service de livraison est cruciale pour notre entreprise car elle va conditionner notre business. Plus les livraisons seront rapides, plus nous pourront louer nos pièces.
+Pour rappel, BabyCameleon doit pouvoir servir le France entière (Le mode de transport privilégié sera donc le camion).
 *Le choix des partenaires :*  
-Une grande attention sera accordée aux valeurs et à l’éthique du service. En effet la marque se veut éco responsable donc doit trouver un service de livraison en conséquences.
+La rapidité est le critère n°1. Une grande attention sera aussi accordée aux valeurs et à l’éthique du service. En effet la marque se veut éco responsable donc doit trouver un service de livraison en conséquences.
 *Bénéfices pour les partenaires:* 
 - Partenariat longue durée avec de nombreuses expéditions chaque mois.
 - Visibilité: mise en avant sur  le site web avec une page dédiée à chaque partenaires. Mise en avant de leur travail via des publications sur les réseaux sociaux.
@@ -266,14 +273,14 @@ Ce genre d’échange nécessite une communication efficace et rapide avec les p
 
  <img src ="flux.info.png">
 
- Les défis de ma chaine d’approvisionnement sont les suivants :
+ Les défis de cette chaine d’approvisionnement sont les suivants :
     1.  Optimiser le réseau de points de stockage
-    2.  Gérer le stock ainsi que l’emplacement des produits dans les différents pints de stockage
+    2.  Gérer le stock ainsi que l’emplacement des produits dans les différents points de stockage
     3. Optimiser l’utilisation du stock
     4. Maximiser les profits et minimiser les couts
-    5.  garantir la bonne disponibilité des produits pr les clients
+    5. Garantir la bonne disponibilité des produits pour les clients
 
-Il faut des points de stockages stratégiques. Je suis partie de l’hypothèse d’un seul point de stockage pour de compliquer la gestion des stocks. La localisation de ce local est cruciale : il faut qu’il soit proche des partenaires (blanchisserie et couturier ) mais aussi dans un endroit stratégique pour desservir la France entière. Cette hypothèse sous entend plus de contraintes dans le transport. Notamment en terme de temps et coût. Un envoi rapide coutera plus cher mais immobilisera la pièce moins longtemps. 
+Il faut des points de stockages stratégiques. Je suis partie de l’hypothèse d’un seul point de stockage pour éviter de compliquer la gestion des stocks. La localisation de ce local est cruciale : il faut qu’il soit proche des partenaires (blanchisserie et couturier ) mais aussi dans un endroit stratégique pour desservir la France entière. Cette hypothèse sous entend plus de contraintes dans le transport. Notamment en terme de temps et coût. Un envoi rapide coutera plus cher mais immobilisera la pièce moins longtemps. 
 J’ai du mal à bien me projeter sur ce point. A mon avis cela dépendra beaucoup du partenariat obtenu avec le transporteur.
 
 {% prerequis "Sources" %}
@@ -284,10 +291,10 @@ https://supply-chain.net/modeles-supply-chains/
 
 Un client commande un article pour une date donnée dd/mm/aa et pour un nombre de jours n donnés. 
 L’article est envoyé par BabyCameleon le dd-1/mm /aa. 
-Il est ensuite renvoyé par le client et immobilisé 3 jours pour le transport, le lavage et les éventuelles réparations avant de retourner au local. Ce temps d’immobilisation pourra être optimiser au fur et à mesure.
+Il est ensuite renvoyé par le client et *immobilisé 3 jours pour le transport, le lavage et les éventuelles réparations* avant de retourner au local. Ce temps d’immobilisation pourra être optimisé au fur et à mesure.
 On a donc un total de 4 jours entre 2 locations du même produit. Pour rester rentable, les articles devront être loués pour 2 ou 3 jours minimum. 
 
-Le prix de location doit s’adapter à toutes ces composantes, on peut imaginer que le prix/jour loué diminue plus on loue longtemps. Ou alors pour régler ce problème faire comme dans l’étude de cas (voir plus bas) donner des options de location : par exemple 3 ou 6 jours et à la carte pour une durée >6 jours.
+Le prix de location doit s’adapter à toutes ces composantes, on peut imaginer que le prix/jour loué diminue plus on loue longtemps. Pour régler ce problème, on peut aussi faire comme dans l’étude de cas (voir plus bas) donner des options de location : par exemple 3 ou 6 jours et à la carte pour une durée >6 jours.
 
 L’article est renvoyé directement au blanchisseur par le transporteur. Ensuite il passera par la case réparation si besoin. Les trajets entre le blanchisseur, le couturier et le local seront assurés par BabyCameleon dans un premier temps.
 
@@ -302,17 +309,18 @@ La première entreprise étudiée est RTR ( Rent The Runway), boutique américai
 L’entreprise, victime de son succès a grandit très vite et a du revoir son modèle d’approvisionnement. Ses multiples sous traitances sont devenues inefficaces lorsque l’entreprise a atteint une certaine taille. 
 Les contacts en face à face avec les partenaires étaient trop peu nombreux pour garantir une bonne circulation de l’information. De plus  RTR n’avait aucun contrôle sur la qualité des services fournis par ses partenaires. Un manque de contrôle qui conduisait à une baisse de qualité des services de RTR et un baisse de satisfaction des clients.
 RTR a donc décidé de gérer elle même l’entrepôt de stockage des produits.
-⇒ enseignements : Il ne faut pas hésiter à réévaluer sa stratégie en fonction de l’évolution de l’entreprise. Par exemple si BabyCaméléon grandit on pourrait envisager d’internaliser le nettoyage des vêtements.
-Nous sommes une entreprise de service . Le niveau du service est donc primordial. Il faut veiller à garder une bonne relation avec nos partenaires tout en contrôlant la qualité de leurs services. 
+⇒ Enseignements : Il ne faut *pas hésiter à réévaluer sa stratégie en fonction de l’évolution de l’entreprise.* Par exemple si BabyCaméléon grandit on pourrait envisager d’internaliser le nettoyage des vêtements.
+Nous sommes une entreprise de service . *Le niveau du service est donc primordial*. Il faut veiller à garder une bonne relation avec nos partenaires tout en contrôlant la qualité de leurs services. 
 
 Un autre point important mentionné dans ce cas est la bonne utilisation des données
-On peut utiliser les données des utilisateurs pour leur proposer des produits adaptés à leur besoins mais aussi prévoir nos besoins en stock
+On peut utiliser les données des utilisateurs pour leur proposer des produits adaptés à leur besoins mais aussi prévoir nos besoins en stock.
 Enfin pour faire face à la saisonnalité du stock, RTR  a mis en place un format de location « illimité » ou les clients louent pour une durée indéterminée.
 
 *cas 2 : Meliziu*
 
 Meliziu est une entreprise chinoise de location de vêtements haut de gamme. Elle a fait face à des débuts difficiles, avec une acceptation des clients faible pour le concept.  Elle a donc du réduire ses coûts au maximum en sous traitant un maximum de taches. Elle a aussi  permis aux clients de mettre en location leurs propre vêtements.  Cette idée leur permet de diversifier l’ offre à moindre couts .
-En conclusion de ces 2 études, la stratégie d ‘approvisionnement dépend surtout de la taille de l’entreprise.  Sous traiter le stockage de ses articles fait sens pour une petite entreprise. Même si ce n’est pas l’idée qui a été retenue, elle reste à étudiée. Les partenaire sont cruciaux dans le bon développement de notre entreprise,  beaucoup de conflits peuvent apparaître à mesure que la charge de travail augmente.
+
+En conclusion de ces 2 études, la stratégie d ‘approvisionnement dépend surtout de la taille de l’entreprise.  Sous traiter le stockage de ses articles fait sens pour une petite entreprise. Même si ce n’est pas l’idée qui a été retenue, elle reste à étudier. Les partenaires sont cruciaux dans le bon développement de notre entreprise,  beaucoup de conflits peuvent apparaître à mesure que la charge de travail augmente.
 
 **La gestion des stocks:**
 
@@ -329,17 +337,17 @@ Je suis partie sur un stock de base de 200 pièces, une fois ce stock obtenu il 
 Le management ou contrôle du stock nous permettra d’obtenir des informations et de nous adapter ( par exemple acheter en double les articles très sollicités.) On peut aussi imaginer ajouter un bouton sur le site : « j’aurais voulu louer cet article mais il n’est pas disponible ».
 Ensuite, il faut prévoir un temps d’immobilisation après chaque location pour effectuer la maintenance des articles : le lavage et les éventuelles réparations. Je suis partie du principe que  cela représentait 2 jours (hors livraison). Collecter des informations sur ces phases au fur et a mesure permettra d’augmenter notre réactivité. 
 
-Prédire la demande est très important dans le dimensionnement d’un stock.Logiquement, lors d’un pic de demande on augmente les stocks et on les diminue lorsque la demande baisse. Malheureusement vu le segment de produit de Baby Caméléon, c’est compliqué. Les produit sont saisonniers.  On pourrait prévoir des ventes saisonnière pour se « débarrasser » des articles déjà trop utilisés (une à la fin de la saison été pour les vêtements de cérémonie et une à la fin de l’hiver pour les vêtements de ski) ou recycler ceux qui sont déjà réparés et ainsi libérer de l’espace . Pour choisir quel article vendre ou recycler il faudra mettre en place des indicateurs d’usure.
- Ensuite Reconnaitre et étudier les articles les plus profitables pourra nous permettre d’adapter nos stocks aux préférences clients.
+Prédire la demande est très important dans le dimensionnement d’un stock. Logiquement, lors d’un pic de demande on augmente les stocks et on les diminue lorsque la demande baisse. Malheureusement vu le segment de produit de Baby Caméléon, c’est compliqué. Les produits sont saisonniers.  On pourrait prévoir des **ventes saisonnière** pour se « débarrasser » des articles déjà trop utilisés (une à la fin de la saison été pour les vêtements de cérémonie et une à la fin de l’hiver pour les vêtements de ski) ou recycler ceux qui sont déjà réparés et ainsi libérer de l’espace . Pour choisir quel article vendre ou recycler il faudra mettre en place des indicateurs d’usure.
+Ensuite reconnaitre et étudier les articles les plus profitables pourra nous permettre d’adapter nos stocks aux préférences clients.
 Enfin il faut prendre en considération la durabilité des produits. Le plus longtemps il peut circuler, plus il générera de profits.
-Un Audit réguliers des stocks  nous permettra aussi de garder la trace exact de nos articles.
+Un Audit régulier des stocks  nous permettra aussi de garder la trace exact de nos articles.
 
 
 **Mes KPI:**
 
 
 Pour suivre l’évolution du business et permettre une amélioration continue de l’entreprise il faut suivre certains indicateurs clés :
-- Nombre de location (total au par article)
+- Nombre de location (total ou par article)
 - Marge générée par un article (= revenu généré par l’article/(cout d’achat +cout de maintenance) )
 - Taux d’utilisation d’un article (= nb jours loués/ nb de jours de location potentiel)
 - Durée de vie d’un produit
@@ -366,8 +374,23 @@ https://www.rentle.io/blog/rental-business/inventory-metrics
 
 <img src="ex_produit.png">
 
+J'ai indiqué une baisse du prix après un certain nombre de réparation ou utilisation. Je ne suis pas encore sûre de comment mettre en place ce système. Cependant je pense qu'on pourrait louer à des prix réduits les pièces un peu plus usées (cela permettra de diversifier l'offre).
+
+Voici une constitution type pour mon stock de départ:
+
+<img src="nb_prod.png">
+
+J'ai essayé de faire un stock équilibré et logique. Par exemple moins de pièces en grand froid pour les plus jeunes car on peut supposer que les parents évitent les vacances au skii avec les tout petits.
+
+
+Voici un tableau type pourles prix de location des produits:
+
+<img src="prix.png">
+
+Attention, le prix d'achat indiqué est celui de notre entreprise. Il sera surement différent des prix de base affichés par les vendeurs de vêtements car pour rappel le but est de faire des partenariats avec les vendeurs (et ainsi obtenir des réductions).
+
 ## Conclusion : 
 
-L’étude de la logistique de projet m’a fait réaliser que je devais revoir ma politique de prix. Au lieu de louer à la journée, il y aura plusieurs options : 3 jours, 6jours ou à la carte pour des durées plus longues. On pourra alors adapter les prix à ces forfaits et faciliter la planification.
-J’ai aussi reconsidérer le partenariat avec le transporteur qui sera crucial pour assurer l’efficacité du business. 
-Ce projet me semble bel et bien viable. Il faudra bien étudier les produits en amont de la consititution des stocks mais aussi bien suivre les indicateurs afin d'améliorer en continu l'entreprise et sa rentabilité. Pour ce faire il faudra aussi bien travailler la relation cient en donnant la possibilité à ces derniers de donner leur avis sur la qualité des services et les produits qu'ils désirent voir sur notre catalogue. 
+L’étude de la logistique de projet m’a fait réaliser que je devais revoir ma politique de prix. **Au lieu de louer à la journée, il y aura plusieurs options : 3 jours, 6jours ou à la carte pour des durées plus longues**. On pourra alors adapter les prix à ces forfaits et faciliter la planification.
+J’ai aussi reconsidéré le partenariat avec le transporteur qui sera crucial pour assurer l’efficacité du business. 
+Ce projet me semble bel et bien viable. Il faudra bien étudier les produits en amont de la consititution des stocks mais aussi bien suivre les indicateurs afin **d'améliorer en continu l'entreprise et sa rentabilité**. Pour ce faire il faudra aussi bien travailler la relation cient en donnant la possibilité à ces derniers de donner leur avis sur la qualité des services et les produits qu'ils désirent voir sur notre catalogue. 
