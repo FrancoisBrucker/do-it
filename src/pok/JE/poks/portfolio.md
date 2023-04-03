@@ -2,9 +2,14 @@
 layout: layout/post.njk
 
 title: "Mon Portfolio chez moi"
+
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'web'
+  - 'front'
 ---
 <!-- début résumé -->
 

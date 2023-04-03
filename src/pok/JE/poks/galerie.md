@@ -2,9 +2,14 @@
 layout: layout/post.njk
 
 title: "Ma galerie pour mon portfolio"
+
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'java'
+  - 'spring'
 ---
 
 <!-- début résumé -->
