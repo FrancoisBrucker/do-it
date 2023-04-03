@@ -6,13 +6,12 @@ title: "MON 6 : Flux de données en temps réel : Kafka et Storm"
 authors:
  - Thomas Pont
 
-
 tags: 
 
-- 'Kafka'
-- 'Storm'
-- 'Data'
-- 'Temps réel'
+- 'kafka'
+- 'storm'
+- 'data'
+- 'temps réel'
 ---
 
 

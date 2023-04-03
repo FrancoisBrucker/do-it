@@ -9,9 +9,9 @@ authors:
 
 tags: 
 
-- 'Spark'
-- 'Data'
-- 'Calcul distribué'
+- 'spark'
+- 'data'
+- 'calcul distribué'
 ---
 
 
