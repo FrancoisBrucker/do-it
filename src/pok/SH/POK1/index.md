@@ -4,7 +4,10 @@ layout: layout/post.njk
 title: "POKs de Sarah Honoré"
 authors:
   - Sarah Honoré
-
+tags :
+  - 'plateformes numeriques'
+  - 'points communs'
+  - differences'
 ---
 <!-- début résumé -->
 J'ai choisi le POK portant sur les plateformes numériques. 

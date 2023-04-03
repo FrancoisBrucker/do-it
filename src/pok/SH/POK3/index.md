@@ -5,10 +5,10 @@ title: "POKs de Sarah Honoré"
 authors:
   - Sarah Honoré
 tags :
-  - 'Palo Alto'
-  - 'Lean'
-  - 'Ecole du paradoxe'
-  - 'intervention systémique paradoxale'
+  - 'palo alto'
+  - 'lean'
+  - 'ecole du paradoxe'
+  - 'intervention systemique paradoxale'
   - 'communication'
 ---
 <!-- début résumé -->
