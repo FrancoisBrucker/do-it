@@ -86,7 +86,7 @@
 <li>la spécification rigide des dépendances</li>
 <li>etc</li>
 </ul>
-<p>Go est aussi connu pour sa grande efficacité, avec un temps de compilation et d'exécution rapide. Vous pouvez retrouver les cas d'utilisation classique <a href="https://go.dev/solutions/use-cases">ici</a>.</p>
+<p>Go est aussi connu pour sa grande efficacité, avec un temps de compilation et d'exécution rapide. Vous pouvez retrouver les cas d'utilisation classiques <a href="https://go.dev/solutions/use-cases">ici</a>.</p>
 <h2>Tutos pour débuter</h2>
 <p>Tutos sur la <a href="https://go.dev/doc/tutorial/">doc officielle</a> dont :</p>
 <ul>
@@ -165,7 +165,7 @@
 <p>Comme vous pouvez le voir, créer une application web basique se fait en quelques lignes de code.</p>
 <h4>Test avec Fuzzing</h4>
 <p><a href="https://go.dev/doc/tutorial/fuzz">Tuto</a></p>
-<p>Tester son programme est essentiel. Le fuzzing est une méthode permettant de tester son programme avec un grand nombre d'entrée aléatoires. Attention, tester son programme avec un Fuzzer ne dispense pas des tests unitaires. En effet, vous ne pourrez pas contrôler l'entrée et la sortie avec le fuzzing, donc vous pouvez seulement vérifier des pattern, contrairement aux tests unitaires ou vous pourrez avoir une vision entrée/sortie.</p>
+<p>Tester son programme est essentiel. Le fuzzing est une méthode permettant de tester son programme avec un grand nombre d'entrée aléatoires. Attention, tester son programme avec un Fuzzer ne dispense pas des tests unitaires. En effet, vous ne pourrez pas contrôler l'entrée et la sortie avec le fuzzing, vous pouvez seulement vérifier des pattern, contrairement aux tests unitaires ou vous pourrez avoir une vision entrée/sortie.</p>
 <p>Le fuzzing permet toutefois d'explorer des chemins qui n'ont pas été prévus par le développeur lors de la conception de l'app, et donc de débogguer des programmes / de corriger des vulnérabilités. C'est donc un outil supplémentaire pour tester nos codes.</p>
 <p>Je vous laisse suivre le <a href="https://go.dev/doc/tutorial/fuzz">tuto</a> pour plus de détails.</p>
 <h4>Programmation objet</h4>
@@ -218,7 +218,7 @@
 <p>Dans l'exemple ci-dessus, on a définit une fonction isScared sur l'interface animal pour savoir si l'animal est peureux ou non.</p>
 <p><em>Note : Lorsqu'un type implémente toutes les méthodes définies dans une interface, il est considéré comme implémentant cette interface. Cela signifie que le type peut être utilisé de manière interchangeable dans le code qui utilise cette interface. Cette approche permet de créer du code générique qui peut être utilisé avec n'importe quel type qui implémente l'interface.</em></p>
 <p>Autre exemple :</p>
-<p>Supposons que nous avons une interface Shape qui définit une méthode Area() et une méthode Perimeter() pour calculer l'aire et le périmètre d'une forme.Supossons également que nous avons deux types Rectangle et Circle qui implémentent l'interface Shape.</p>
+<p>Supposons que nous avons une interface Shape qui définit une méthode Area() et une méthode Perimeter() pour calculer l'aire et le périmètre d'une forme. Supossons également que nous avons deux types Rectangle et Circle qui implémentent l'interface Shape.</p>
 <pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
