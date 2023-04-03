@@ -25,7 +25,7 @@ Le langage [Go](https://go.dev/), également connu sous le nom de Golang, est un
 - la spécification rigide des dépendances
 - etc
 
-Go est aussi connu pour sa grande efficacité, avec un temps de compilation et d'exécution rapide. Vous pouvez retrouver les cas d'utilisation classique [ici](https://go.dev/solutions/use-cases).
+Go est aussi connu pour sa grande efficacité, avec un temps de compilation et d'exécution rapide. Vous pouvez retrouver les cas d'utilisation classiques [ici](https://go.dev/solutions/use-cases).
 
 ## Tutos pour débuter
 
@@ -117,7 +117,7 @@ Comme vous pouvez le voir, créer une application web basique se fait en quelque
 
 [Tuto](https://go.dev/doc/tutorial/fuzz)
 
-Tester son programme est essentiel. Le fuzzing est une méthode permettant de tester son programme avec un grand nombre d'entrée aléatoires. Attention, tester son programme avec un Fuzzer ne dispense pas des tests unitaires. En effet, vous ne pourrez pas contrôler l'entrée et la sortie avec le fuzzing, donc vous pouvez seulement vérifier des pattern, contrairement aux tests unitaires ou vous pourrez avoir une vision entrée/sortie.
+Tester son programme est essentiel. Le fuzzing est une méthode permettant de tester son programme avec un grand nombre d'entrée aléatoires. Attention, tester son programme avec un Fuzzer ne dispense pas des tests unitaires. En effet, vous ne pourrez pas contrôler l'entrée et la sortie avec le fuzzing, vous pouvez seulement vérifier des pattern, contrairement aux tests unitaires ou vous pourrez avoir une vision entrée/sortie.
 
 Le fuzzing permet toutefois d'explorer des chemins qui n'ont pas été prévus par le développeur lors de la conception de l'app, et donc de débogguer des programmes / de corriger des vulnérabilités. C'est donc un outil supplémentaire pour tester nos codes.
 
@@ -185,7 +185,7 @@ Dans l'exemple ci-dessus, on a définit une fonction isScared sur l'interface an
 
 Autre exemple :
 
-Supposons que nous avons une interface Shape qui définit une méthode Area() et une méthode Perimeter() pour calculer l'aire et le périmètre d'une forme.Supossons également que nous avons deux types Rectangle et Circle qui implémentent l'interface Shape.
+Supposons que nous avons une interface Shape qui définit une méthode Area() et une méthode Perimeter() pour calculer l'aire et le périmètre d'une forme. Supossons également que nous avons deux types Rectangle et Circle qui implémentent l'interface Shape.
 
 ```go
 package main
