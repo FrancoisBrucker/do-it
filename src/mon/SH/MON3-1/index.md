@@ -5,7 +5,7 @@ title: "MON de Sarah"
 authors:
   - Sarah Honoré
 tags :
-  - 'Excel'
+  - 'excel'
   - 'tableur'
 
 ---
