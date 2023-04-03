@@ -5,7 +5,7 @@ title: "InstantBuddy"
 authors:
   - Thibault Adelain
 
-tags: ['pok']
+tags: ['pok', 'dev', 'js', 'node', 'react', 'go']
 ---
 
 <!-- début résumé -->
