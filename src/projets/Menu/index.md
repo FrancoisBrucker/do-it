@@ -18,16 +18,21 @@ Notre projet est de créer une appli pour les étudiants qui ont du mal à trouv
 
 ## Notre idée :
 
-Nous sommes partis du constat que nous mangeons souvent les mêmes plats et que nous passons beaucoup de temps devant notre frigo à décider quoi préparer à manger avant de se rabattre sur des pâtes. Nous souhaitons apporter une solution numérique à ce problème en permettant aux étudiants comme nous de manger varier et bon. La solution que nous avons imaginée va prendre la forme d'une application mobile (collaborative, on l'espère) qui génère facilement des menus pour la semaine adaptés à tous et les listes de courses associées.
+Nous sommes partis du constat que nous mangeons souvent les mêmes plats et que nous passons beaucoup de temps devant notre frigo à décider quoi préparer à manger avant de se rabattre sur des pâtes. Nous souhaitons apporter une solution numérique à ce problème en permettant aux étudiants comme nous de manger varier et bon. La solution que nous avons imaginée va prendre la forme d'une application mobile (collaborative, on l'espère) qui génère facilement des menus pour la semaine, adaptés à tous, ainsi que les listes de courses associées.
 
 Voici un pitch que nous avons préparé en cours de Collective Intelligence : https://applimenu.carrd.co/.
 
-## Nos grandes étapes :
+## Nos grandes étapes et notre organisation :
 
 Les cours que nous avons au cours de l'année nous ont permis de comprendre comment conduire un projet, comment s'assurer de sa pertinence, etc. C'est comme ça que nous avons décidé de notre plan de route.
-Nous avons commencé par interviewer notre public cible, les étudiants, d'octobre à novembre, pour formaliser les besoins autour de notre thématique. Nous avons eu une longue période de maquettage de fin novembre jusqu'à mars. Ensuite, lorsque nous avons eu une maquette viable, nous l'avons faite tester auprès des étudiants que nous avions interviewés en début d'année et nous l'avons faite évoluer grâce à leurs critiques. Nous avons pu ensuite créer l'application grâce à Bubble et travailler sur notre base de données pour les recettes.
+Nous avons commencé par interviewer notre public cible, les étudiants, d'octobre à novembre, pour formaliser les besoins autour de notre thématique. Nous avons eu une longue période de maquettage de fin novembre jusqu'à mars. Ensuite, lorsque nous avons eu une maquette viable, nous l'avons fait tester auprès des étudiants que nous avions interviewés en début d'année et nous l'avons fait évoluer grâce à leurs critiques. Nous avons pu ensuite créer l'application grâce à Bubble et travailler sur notre base de données pour les recettes.
+
+Pour nous organiser en tant qu'équipe, nous avions distribué les grandes tâches du projet pour s'attribuer les différentes responsabilités. Nous savions que nous allions tous avancer ensemble sur la plupart des tâches mais cela nous a permis de savoir qui était chargé de relancer le travail sur chaque partie du projet. C'est comme cela que nous avons avancé pendant une grande partie de l'année : tous ensemble sur les mêmes sujets. Nous n'avons dû nous séparer que les deux derniers mois. En effet, pendant que certains continuaient à peaufiner les maquettes, d'autres commençaient à s'intéresser au fonctionnement de Bubble et à expérimenter certaines fonctionnalités du site web. Ensuite, sur Bubble même, chacun avait un rôle défini : une personne était en charge du Workflow, une autre en charge de la Base de Données, une autre du Design et une dernière était chargée d'aider les différents rôles qui avaient besoin d'aide. Tout le monde créait des éléments sur l'application en se basant sur la dernière maquette Figma à jour.
 
 ## Définition des besoins :
+
+Pour pouvoir définir les besoins auxquels nous pouvions répondre, nous avons interviewé des étudiants variés (habitant seul, en colocation, etc.). Nous avons tiré des réponses des fonctionnalités ou des concepts à mettre en œuvre dans l'application pour qu'elle soit adaptée à notre public cible. Nous avons également passé en revue de nombreuses applications déjà sur le marché pour pouvoir déterminer les choses à faire et à ne pas faire dans notre projet. Le meilleur cas de figure était lorsqu'un étudiant à qui nous posions des questions nous parlait d'une application qu'il connaissait pour en faire une critique.
+Nous avons traduit tous ces besoins en fonctionnalités que nous avons classées par ordre d'importance.
 
 Minimum pour que ça marche : 
 - Pouvoir afficher une recette
@@ -35,7 +40,9 @@ Minimum pour que ça marche :
 - Afficher un planning des recettes
 - Modifier le nombre de personnes
 - Générer une liste de course en fonction des recettes
+
 ------------------------------------------------------------------------------------------------------------------------
+
 Fonctionnalités qui apporte de l’intérêt à notre appli : 
 - Pouvoir prendre en compte la liste des ingrédients déjà possédés
 - Mettre des filtres (coût, difficulté, calories, temps, régime alimentaire)
@@ -45,12 +52,14 @@ Fonctionnalités qui apporte de l’intérêt à notre appli :
 - Recettes collaboratives
 - Générer une recette à partir d’un ingrédient
 - Liste de courses triée par rayons
+
 -------------------------------------------------------------------------------------------------------------------------
+
 Bonus pur : 
 - S’adapter aux saisons
 - Mettre une vidéo des recettes
 - Mettre image ingrédients
-- Ajouter une recette depuis internet
+- Ajouter une recette depuis Internet
 
 
 ## Notre poster :
@@ -92,7 +101,7 @@ Enfin, il a fallu décider des polices d'écriture pour nos titres, sous-titres 
 
 <img src="polices.png">
 
-En pratique, nous avons gardé la Firan Sans pour les titres, la Noto Sans pour les sous-titres et la DM Sans pour les textes.
+En pratique, nous avons gardé la Fira Sans pour les titres, la Noto Sans pour les sous-titres et la DM Sans pour les textes.
 
 L'utilisation des "layout grids" est quelque chose qui nous a beaucoup servi. En effet, cela permet d'aligner les éléments entre eux et de créer une harmonie visuelle. Il n'est pas nécessaire de l'appliquer parfaitement pour tous les éléments mais son utilisation générale permet de bien structurer la page. En voici l'exemple :
 
@@ -123,6 +132,14 @@ Cette fois-ci, nous avons eu des retours beaucoup plus précis. Voici les princi
 - Il n'y a pas de vraie page d'accueil. Ils l'ont fait remarquer mais disaient que ça ne posait pas de problème.
 
 #### Troisième maquette : 
+
+Pour cette troisième maquette, nous sommes restés sur Figma et nous avons fait quelques modifications ponctuelles.
+
+Par exemple, nous avons changé l'emplacement du bouton permettant d'accéder au menu dépliant : 
+<img src="emplacement-menu.png">
+
+Aussi, nous avons mis une double validation pour vider la liste de course :
+<img src="vider-liste.png">
 
 ## L'application sur Bubble :
 

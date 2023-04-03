@@ -6,8 +6,8 @@ authors:
   - Sarah Honoré
 tags :
   - 'transformation digitale'
-  - 'maturité'
-  - 'démarche'
+  - 'maturite'
+  - 'demarche'
 ---
 <!-- début résumé -->
 Le premier MON que je vais réaliser est une étude de la maturité digitale d'une entreprise.

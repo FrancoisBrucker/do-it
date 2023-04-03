@@ -5,8 +5,8 @@ title: "L'IT au service du management"
 authors:
   - Eugénie Giraud-Telme
 tags :
-  - 'Management'
-  - 'IA'
+  - 'management'
+  - 'intelligence artificielle'
 ---
 <!-- début résumé -->
 
