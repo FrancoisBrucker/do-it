@@ -116,6 +116,113 @@ Pour la réaliser on utilise le stack suivant :</p>
 <p>Différentes fonctionnalités sont encore à coder comme la prévisualisation d'une zone de l'écran et le compte administrateur. Par ailleurs, des tests utilisateurs vont être réalisés de manière à vérifier que l'interface est compréhensible et simple d'utilisation.</p>
 <h2>Poster</h2>
 <p><img src="./Poster/Poster.png" alt="Poster" title="Poster FirePixel"></p>
+<h2>Rapport du projet</h2>
+<h3>Introduction</h3>
+<p>Dans le cadre du parcours Do_It, nous avons été amenés à réaliser un projet sur le thème de l’autonomie numérique.</p>
+<p>Nous avons repris un projet réalisé les années précédentes : CampusFire. Il s’agit d’un écran pouvant être placé dans un lieu de passage à Centrale et sur lequel les étudiants peuvent interagir directement depuis leurs téléphones. Le but est d’utiliser les smartphones comme moyen de rassembler les élèves, plutôt que de l’utiliser pour interagir à distance.</p>
+<p>Pour commencer, nous nous sommes documentés sur les anciennes instances du projet pour apprendre de leurs enseignements. La lecture des différents rapports nous a permis de saisir les enjeux de ce projet et l’état d’avancement. Il s’agissait notamment de rendre cet écran attractif en poussant les utilisateurs à venir le voir et le revoir. Plusieurs possibilités avaient alors été soulevées : écran de jeux (jeux collaboratifs tels que cadavre exquis ou jeu avec classement), mur de Post-Its (chacun peut alors laisser une note visible de tous) ou encore un service utile pour tous les Centraliens (comme une borne pour réserver une salle). Il était également soulevé le fait que cette borne doit être simple d’utilisation de manière à ce que tout le monde puisse comprendre le fonctionnement et rapidement et s’en servir.</p>
+<p>Par la suite, les différents groupes ayant travaillé dessus ont commencé à réaliser une borne sur laquelle on peut, à l’aide de son téléphone, mettre des photos ou du texte. Un premier prototype a été déployé et testé lors des campagnes associatives 2021.</p>
+<p>Le concept nous plaisait et nous nous en sommes inspirés pour notre idée : créer un écran sur lequel les Centraliens pourront dessiner depuis leurs téléphones. Celui-ci permettra de créer un espace de rencontre pour les Centraliens et les faire collaborer autour d’un jeu ou d’un projet artistique.</p>
+<p>Dans ce rapport nous présenterons dans un premier temps le concept de notre projet de manière plus poussée, avant de détailler la première version que nous avons réalisée. Ensuite, nous décrirons les tests utilisateurs effectués et les modifications apportées.</p>
+<h3>I. L'idée du projet</h3>
+<p>Comme décrit en introduction, l’idée du projet est de créer un écran de dessin collaboratif. Dans un premier temps, il a fallu établir ce que nous souhaitions faire en établissant une liste de besoins et d’exigences.</p>
+<p>L’objectif est que le projet puisse être déployé sur une télévision de Centrale. Celle-ci pourrait être n'importe où sur le campus mais idéalement dans un lieu de pause comme à côté des distributeurs de café ou dans un lieu de passage comme en bas des plots. Les Centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à un site web mobile-first. Les utilisateurs peuvent se servir de leur téléphone comme d’une télécommande, grâce à laquelle ils peuvent dessiner sur l’écran. Cette télécommande propose plusieurs moyens d'interagir, allant d’un affichage en temps réel, un joystick et différents modes de dessin.</p>
+<p>Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur. 16 couleurs sont disponibles permettant une grande liberté de création.</p>
+<p>16 utilisateurs peuvent interagir simultanément, ceci afin d’avoir un fort aspect collaboratif, tout en gardant une bonne visibilité de l’écran. Afin de savoir où l'on se situe sur celui-ci, chaque utilisateur est représenté par une couleur visible sur son téléphone. Le curseur le représentant sur l’écran est de cette même couleur. Sur son téléphone, l’utilisateur pourra voir les pixels environnants afin d’avoir une plus grande précision sur ce qu’il fait.</p>
+<p>Pour pouvoir interagir facilement sur l’écran, l’interface mobile doit être simple d’utilisation. L’utilisateur peut donc facilement se servir des différentes fonctionnalités (couleurs, deux modes, …). De plus, un onglet “Aide” est disponible pour pouvoir expliquer rapidement aux joueurs comment FirePixel fonctionne.</p>
+<p>Le projet est développé en méthode agile. Les fonctionnalités sont priorisées puis elles sont implémentées dans des sprints d’une durée de 2 ou 3 semaines selon l’agenda. Une réunion le mardi permet de faire par de l’avancement du sprint, de discuter de l’architecture du projet, de mettre à jour le backlog et enfin de prendre du recul sur les échéances à  moyen terme.</p>
+<p>Une version fonctionnelle de l’application avec toutes les nouvelles features est déployée tous les 3 sprints. Suite à cette release, des phases de tests sont menées et les retours de ces tests alimentent la suite du développement.</p>
+<h3>II. Première phase</h3>
+<p>Pour débuter ce projet, nous avons choisi de réaliser une première version de ce que nous souhaitions faire. Cette partie du travail a été découpée en trois  temps : une partie maquettage, la réalisation du schéma d’entités et une partie développement.</p>
+<h4>1. Maquette</h4>
+<p>Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que l’interface utilisateur soit simple et intuitive. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.<br>
+Nous avons donc réalisé une première maquette de la Web App sur Figma.</p>
+<p><img src="./Photo_rapport/Maquette1.1.png" alt="Maquette1" title="Maquette1"></p>
+<p>Cette maquette est simple et épurée.</p>
+<p>Cependant, sur ce modèle, l’identité visuelle est faible et certaines fonctionnalités ne sont pas accessibles (comme l’onglet aide, ou la possibilité de dessiner de deux manières différentes).</p>
+<p>Suite à ces conclusions, nous avons donc réalisé la maquette suivante :</p>
+<p><img src="./Photo_rapport/Maquette1.2.png" alt="Maquette2" title="Maquette2"></p>
+<p>Cette interface reprend la couleur du logo de FirePixel afin de garder une certaine cohérence. Par ailleurs, elle dispose de boutons permettant d’utiliser toutes les fonctionnalités que nous souhaitions implémenter.</p>
+<p>Ainsi, le bouton Help permet d’afficher un texte explicatif. Le bouton Color affiche la palette de couleur ainsi que la possibilité de passer en mode continu ou pixel par pixel. Enfin, le bouton Apply permet d’appliquer la couleur choisie sur le pixel où notre curseur se trouve.</p>
+<p>Il est également important que la télévision où sera affiché FirePixel ait un visuel simple et esthétique, qui incite les personnes qui passent à scanner le QR Code.</p>
+<p><img src="./Photo_rapport/Maquette1.3.png" alt="Maquette3" title="Maquette3"></p>
+<h4>2. Schéma d'entité</h4>
+<p>Après avoir mis en place le visuel de l’application, nous avons créé le schéma d’entités de la base de données qui sera mise en place sur le serveur back.</p>
+<p>Nous avons construit 3 entités : l’écran, les curseurs et les pixels selon le schéma ci-dessous :</p>
+<p><img src="./Photo_rapport/Schema_entite.png" alt="Schema_entite" title="Schema_entite"></p>
+<h4>3. Développement</h4>
+<p>Dans un second temps, nous avons développé notre projet, en construisant le front selon les maquettes que nous avions réalisées et le back selon le schéma d’entité décrit.</p>
+<h5>a. Front</h5>
+<p>Le développement frontend s’est réalisé à l’aide de deux frameworks :</p>
+<ul>
+<li>React à été choisi car 2 membres du groupe avaient déjà de l’expérience avec le framework.</li>
+<li>Tailwind CSS, à été crucial pour guider l’esthétisme de l’application. Le framework permet de mettre en place des bests practices, notamment la responsivité ‘mobile first’ qui était impérative puisque le projet doit-être utilisé sur mobile et sur grand écran.</li>
+</ul>
+<p>La philosophie à aussi été d’utiliser le moins de dépendances possible pour ne pas importer des briques fonctionnelles sur lesquelles nous n’avons pas le contrôle et qui risquent de devenir obsolètes. Ainsi, le maximum est réalisé à la main, quitte à parfois réinventer la roue.</p>
+<p>Les deux grandes difficultés rencontrés sont :</p>
+<ul>
+<li>L’UX/UI</li>
+<li>L'interaction à travers le joystick</li>
+</ul>
+<p>L’UX/UI à été un problème tant l’application est singulière. Elle n’a pas vocation à afficher du contenu comme une application classique, au contraire, elle affiche le moins de contenu possible sur le téléphone pour forcer les joueurs à lever la tête et à collaborer verbalement. Cela mène à la recherche de compromis. Faut-il créer une application type télécommande avec pleins de boutons à proximité mais sans souci d’esthétisme, ou au contraire faut-il compartimenter l’application pour laisser l’utilisateur respirer?<br>
+Nous avons choisi la deuxième approche, mais les phases de tests montreront que ce choix à mené à une application trop lourde à l’utilisation, qui demande trop de clics pour réaliser des tâches récurrentes. C’est ce point qui nous à poussé à réaliser une v2.</p>
+<p>Ensuite, le joystick a été un problème, il a reçu plusieurs révisions. Nous avons utilisé un composant tiers sans dépendance, qui contient le minimum de code possible. Il a fallu gérer le comportement du joystick et son interaction avec l’application de A à Z, ce qui nous à mener à créer différentes fonctions plus ou moins algorithmiques.</p>
+<p>Par exemple, le premier joystick permettait seulement d’atteindre 8 directions, alors que le joystick actuel est beaucoup plus fin. Pour réaliser ces itérations, nous avons tirées des enseignements du lean engineering. A chaque itération, on relevait un problème majeur, puis on essayait de régler ce problème à l’itération suivante jusqu'à finir sur un joystick plaisant à utiliser.</p>
+<h5>b. Back</h5>
+<p>Afin de pouvoir communiquer entre le front et le back nous avons choisi d’utiliser la technologie de Websockets. Cela permet de conserver une interaction en quasi temps instantané. Mais, une des premières difficultés a été de bien comprendre cette technologie. Nous avons donc mis en place une petite application web pour comprendre comment il est possible de l’intégrer dans un projet.<br>
+Une fois cette application faite, nous avions toutes les connaissances pour mettre en place la partie back-end du projet. Le premier objectif étant d’avoir quelque chose de fonctionnel, nous nous sommes limités aux fonctionnalités les plus importantes, qui est de transmettre l’information des téléphones à l’écran, sans nous soucier de la sauvegarde des données (ce qui sera une difficulté en plus lors de l’amélioration vers la deuxième version). Nous nous sommes donc entièrement passés de base de données, et les données nécessaires à faire fonctionner le projet - les adresses websockets, et positions des curseurs - étaient stockées dans la RAM. Nous n’avons pas spécialement besoin d’avoir une persistance de ces données donc l’utilisation de la RAM est suffisante.<br>
+Il n’y a pas eu spécialement de difficultés liées au Back de notre projet.</p>
+<p>Enfin, nous avons déployé le travail réalisé sur le serveur OVH mis à notre disposition.</p>
+<h3>III. Tests utilisateurs</h3>
+<p>Suite à ce premier temps, et après le déploiement de la première version de FirePixel, nous avons débuté des tests utilisateurs. Ceux-ci avaient pour objectif de voir comment les personnes réagissaient face à notre projet : voir s'ils comprenaient le fonctionnement et s’ils réussissaient à interagir avec l’écran via leurs téléphones. Enfin, nous leur demandions un court retour d’expérience afin d’en dégager d’éventuelles améliorations à apporter au projet. Nous écoutions également les remarques et suggestions qui pouvaient être exprimées au cours du test.</p>
+<p>Les premiers tests utilisateurs de Fire Pixel ont été réalisés lors de la journée poster. Ces tests ont été biaisés par le fait que nous présentions en parallèle le projet et que nous avons pu aider et guider les joueurs en parallèle de leur découverte de l’écran. Cependant, cette journée nous a aussi permis de prendre conscience de beaucoup d'aspects autour de FirePixel grâce aux retours qui nous ont été faits.</p>
+<p>Ainsi les principaux retours ont été les suivants :</p>
+<ul>
+<li>L’interface n’est pas optimisée et n’est pas forcément simple d’utilisation : les utilisateurs ne comprennent pas où cliquer pour changer de mode (pixel par pixel ou continu) et ont du mal à saisir la différence entre la couleur avec laquelle ils dessinent et la couleur du curseur qui les symbolise sur l’écran;</li>
+<li>Dans le mode continu, le nombre de directions possibles est trop limité. En effet, nous avions ici choisi de limiter à quatre le nombre d’axes possibles (horizontal, vertical et diagonales);</li>
+<li>La vitesse de dessin dans le mode continu est trop faible : il est long de traverser l’écran;</li>
+<li>Le mode pixel par pixel est difficile d’utilisation car long et peu pratique.</li>
+</ul>
+<p>Malgré tout, cette première phase de tests a été un succès pour nous car c’était la première fois qu’on faisait tester notre projet et les retours ont été dans l’ensemble très positifs. Par ailleurs, une autre source de satisfaction a été le fait que l’écran fonctionne malgré les nombreux utilisateurs connectés (jusqu’à une dizaine) et qu’il n’y a pas ou très peu de temps de latence.</p>
+<p>Une deuxième phase de tests utilisateurs a alors été effectuée. Nous avons choisi des Centraliens car c’est principalement eux qui seront amenés à se servir de notre projet. Puis, nous les avons mis face à un écran de FirePixel seul ou par petit groupe afin d’effectuer notre test utilisateur.</p>
+<p>Les principaux points que nous avons relevé sont les suivants :</p>
+<ul>
+<li>Le menu Help est très peu utilisé. Sur une dizaine de personnes, seul deux l’ont ouvert et une l’a lu entièrement;</li>
+<li>Les deux modes de jeu sont difficiles à trouver notamment le mode continu qui nécessite souvent une explication;</li>
+<li>Les curseurs sont difficiles à repérer quand beaucoup de personnes sont connectées simultanément. En effet, des gros aplats de couleurs se forment et il est alors difficile de repérer un petit curseur de couleur ou il est alors difficile de différencier sa couleur de celle des autres;</li>
+<li>Certaines personnes ont proposé de mettre en place des modes alternatifs pour rendre le jeu plus dynamique : objets cachés qui font que si l’on colorie une case un effet se déclenche (comme curseur qui grossit, zone qui devient d’une couleur, …) ou alors guerre de territoire avec pourcentage de l’écran rempli par les différentes couleurs.</li>
+</ul>
+<p>Parmi toutes les idées émises, nous avons choisi de nous concentrer principalement sur la refonte du visuel de l’interface. En effet, celle-ci nous paraît primordiale. Il est trop difficile de bien jouer si l’interface n’est pas comprise.</p>
+<p>La possibilité d’ajouter des modes de jeu nous paraît intéressante afin d’ajouter du dynamisme dans le jeu. Cependant, la durée du projet étant limitée, nous n’en avons pas fait une priorité. Il nous a semblé plus important de, d’abord, améliorer l’interface.</p>
+<h3>IV. Seconde version</h3>
+<p>Suite aux retours des tests utilisateurs, nous sommes repartis dans un cycle de conception/développement. Parmi les retours faits, beaucoup soulignaient l’interface parfois peu claire. Nous avons donc dans un premier temps cherché à faire une refonte de l’interface. Puis, nous avons développé les modifications apportées.</p>
+<h4>1. Maquette</h4>
+<p>Ainsi, nous avons retravaillé la maquette de la Web App afin qu’elle soit plus propice aux interactions pour les utilisateurs. Tout ceci a été fait en parallèle des cours d'UI qui, nous ont présenté les différents concepts pour réaliser une bonne maquette d'application sur Figma.</p>
+<p>La première étape a été de refaire les boutons pour les remplacer par des symboles plus simples pour la compréhension et plus esthétiques. Plusieurs propositions ont alors été faites, dont celles ci-dessous :</p>
+<p><img src="./Photo_rapport/Maquette2.1.png" alt="Maquette1" title="Maquette1"><br>
+<img src="./Photo_rapport/Maquette2.2.png" alt="Maquette2" title="Maquette1"><br>
+<img src="./Photo_rapport/Maquette2.3.png" alt="Maquette3" title="Maquette1"></p>
+<p>Sur les maquettes, les trois couleurs correspondent aux trois dernières couleurs utilisées. La palette permet d’accéder à un plus large choix de couleurs et le pinceau aux deux modes possibles (dessin continu ou pixel par pixel).</p>
+<p>Finalement, nous avons réfléchi à d’autres possibilités. Le rouge, en couleur de fond, est trop voyant pour l'œil et ne permet pas de mettre en valeur les couleurs. Ensuite, le symbole du pinceau peut porter à confusion. Enfin, il est ici nécessaire de cliquer sur la palette puis sur la couleur qu’on souhaite choisir. Cela demande deux interactions.</p>
+<p>Nous avons donc réalisé une nouvelle maquette corrigeant tout ceci :</p>
+<p><img src="./Photo_rapport/Maquette3.1.png" alt="Maquette1" title="Maquette1"></p>
+<p>La couleur grise de fond permet de corriger l’attirance de l'œil vers le rouge.</p>
+<p>Par ailleurs, la palette est désormais accessible directement via une barre scrollable.</p>
+<p>La couleur symbolisant le joueur est visible en plein centre de l’écran. Il est alors plus difficile de faire la confusion entre cette couleur et celle choisie pour dessiner.</p>
+<p>La manière de choisir le mode de dessin est la plus simple possible. Il suffit d’orienter le bouton vers celui de notre choix.</p>
+<p>Enfin, la grille de taille 5x5 permet au joueur de voir plus précisément les cases autour desquelles il se situe et, il peut dessiner directement dessus grâce au mode Pixel.</p>
+<h4>2. Développement</h4>
+<p>Suite à ce travail, nous avons donc implémenté la maquette choisie. Une modification y a été apportée. Le mode pixel par pixel n’est plus disponible mais est faisable uniquement sur l’écran du haut du téléphone. Il est alors possible de cliquer directement sur un pixel dans l’aperçu en haut du téléphone pour le colorier. Le bouton du bas permet de se déplacer en coloriant ou sans colorier.</p>
+<h5>a. Front</h5>
+<h5>b. Back</h5>
+<p>La partie Back du projet, à la fin du premier déploiement, utilisait seulement un stockage en RAM, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.</p>
+<p>La première étape a donc été de complètement restructurer le Back pour intégrer une base de données. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.</p>
+<p>Ainsi nous avons créé 3 entités : Grid, Cursor et NewPixels. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un grand nombre d’interactions avec la base de données et ralentit énormément le mouvement du joueur.</p>
+<h2>Lien</h2>
+<p>Notre code est disponible aux liens suivants :<br>
+<a href="https://github.com/Jean-Baptiste-DP/FirePixel-front">Front</a><br>
+<a href="https://github.com/Jean-Baptiste-DP/FirePixel-back">Back</a></p>
+<p>Enfin, l'écran de FirePixel est disponible <a href="http://melisse.ovh1.ec-m.fr/#/screen">ici</a>.</p>
 
 
 </article>
