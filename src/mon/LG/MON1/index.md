@@ -5,6 +5,11 @@ title: "MON 1: Comparatif des typologies des projets agiles"
 authors:
   - Louise Gacoin
 
+tags:
+- gestions de projet
+- agile
+- scrum
+
 ---
 <!-- début résumé -->
  
