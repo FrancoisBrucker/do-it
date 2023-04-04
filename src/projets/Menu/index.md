@@ -204,6 +204,8 @@ Notre application Menu marche malgré le fait que certaines fonctionnalités qui
 
 Pour utiliser la version test de l'application, cliquez sur ce lien :
 https://appli-menu.bubbleapps.io/version-test/_app
+Utilisez l'identifiant : test2@gmail.com
+Utilisez le mot de passe : testtest
 Attention, comme la base de données est très très limitée, il ne faut pas s'attendre à pouvoir ajouter une recette. Et si elle est déjà pleine, l'application ne va pas fonctionner.
 
 #### Mise service :
