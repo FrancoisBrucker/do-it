@@ -55,7 +55,6 @@ Dans la phase de réflexion, nous nous sommes concentrés sur les étapes suivan
 ### Sprint 1
 
 **06/12/2022 - 03/01/2023**
-
 Dans le premier sprint, nous avons réalisé les étapes suivantes :
 [x] Création du repo GitHub : <https://github.com/JeffreyEdisah/Street-Workout-Finder>
 [x] Création microservice utilisateur et authentification
@@ -66,7 +65,6 @@ Nous avons crée un projet sur GitHub.
 ### Sprint 2
 
 **03/01/2023 - 07/02/2023**
-
 Dans le deuxième sprint, nous avons réalisé les étapes suivantes :
 [x] Finir le microservice lieux
 [x] Déploiement du microservice lieux sur AWS Lambda
@@ -74,7 +72,6 @@ Dans le deuxième sprint, nous avons réalisé les étapes suivantes :
 ### Sprint 3
 
 **07/02/2023 - 28/02/2023**
-
 Dans le troisième sprint, nous avons réalisé les étapes suivantes :
 [x] Début du travail sur le front en React
 [x] Création de la carte avec Leaflet
@@ -84,7 +81,6 @@ Dans le troisième sprint, nous avons réalisé les étapes suivantes :
 ### Sprint 4
 
 **28/02/2023 - 21/03/2023**
-
 Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Refactoring du microservice lieux
 [x] Ajout du menu à la carte
@@ -94,7 +90,34 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 ### Sprint 5
 
 **28/02/2023 - 21/03/2023**
-
 Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Divers ajustements CSS
-[x] Création d'un docker compose avec 3 services : le front, le microservice lieux et le microservice utilisateurs
+[x] Création d'un docker compose avec 3 services : le front, le microservice lieux et le microservice utilisateurs.
+
+## Bilan et futures fonctionnalités
+
+### 1-Bilan
+
+Le développement d'une application web est un projet qui peut être très enrichissant d'un point de vue professionnel et personnel. Dans ce projet, nousa avons eu l'opportunité de travailler sur différentes technologies et outils, ce qui nous a permis d'acquérir une expérience précieuse en développement web. Nous avons également développé des compétences en gestion de projet, en résolution de problèmes et en communication. Au-delà de ces compétences techniques, le projet a également permis aux membres de l'équipe de développer leur créativité et leur capacité à collaborer avec des personnes ayant des compétences différentes.
+
+Dans l'ensemble, le projet a permis à tous, à notre échelle personnelle de progresser en développement web. Que ce soit dans la façon de structurer une application ou dans la prise en main de nouveau outils et framework nécessaires à la progression du projet. Nous avons tous éprouvé et amélioré nos capacités.
+
+### 2-Futures fonctionnalités
+
+Bien que nous soyons fiers de ce que nous avons accompli avec l'application web, il y a certaines fonctionnalités que nous aurions aimé pouvoir ajouter si le temps et les ressources nous avaient permis. Ces améliorations pourraient inclure :
+
+- Recherche par équipement présents sur le lieu : Nous pourrions intégrer une fonctionnalité de recherche qui permettrait aux utilisateurs de trouver des lieux en fonction des équipements qu'ils offrent..
+
+- Aspect communauté avec ajout de commentaires : Il serait intéressant d'ajouter une section commentaires à l'application pour permettre aux utilisateurs de partager leur expérience, poser des questions et interagir entre eux.
+
+- Ajout d'équipements sur les lieux avec des tags : Nous pourrions permettre aux utilisateurs de suggérer de nouveaux équipements pour les lieux et de les taguer, afin que les autres utilisateurs puissent les trouver plus facilement.
+
+- Mise en place d'utilisateurs clés pour vérifier la véracité des ajouts : Pour assurer la qualité des informations de notre application, nous pourrions mettre en place un système de vérification pour les ajouts suggérés par les utilisateurs. Ces utilisateurs clés pourraient être responsables de valider ou de rejeter les ajouts proposés.
+
+- Déploiement sur le cloud : Il serait bénéfique de déployer notre application sur le cloud, car cela permettrait d'assurer une disponibilité en ligne 24/7 et une meilleure performance pour les utilisateurs.
+
+- Remplacement des images "placeholder" par des images correspondant au lieu : Nous pourrions remplacer les images par défaut par des images réelles des différents lieux, pour une expérience utilisateur plus personnalisée et plus engageante.
+
+- Ajout d'un bouton itinéraire : Il serait utile d'ajouter un bouton itinéraire pour que les utilisateurs puissent trouver facilement leur chemin vers les différents lieux répertoriés sur notre application.
+  
+En somme, nous sommes conscients qu'il y a encore des améliorations à apporter à notre application, et les intégrer à l'avenir afin permettrait de garantir la satisfaction de nos utilisateurs.
