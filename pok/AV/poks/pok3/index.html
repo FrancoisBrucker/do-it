@@ -49,6 +49,27 @@
   <h1  class="mb-1">POK 3</h1>
   <div class="mb-4">
     
+      <div class=" px-4 flex items-center">
+        
+          <div class="font-bold">Tags : </div>
+        
+        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+          
+            <li class="before:content-['•'] before:px-1">docker</li>
+          
+            <li class="before:content-['•'] before:px-1">login</li>
+          
+            <li class="before:content-['•'] before:px-1">angular</li>
+          
+            <li class="before:content-['•'] before:px-1">express</li>
+          
+            <li class="before:content-['•'] before:px-1">test</li>
+          
+            <li class="before:content-['•'] before:px-1">javaScript</li>
+          
+        </ul>
+      </div>
+    
 
     
       <div class=" px-4 flex items-center">
@@ -81,8 +102,8 @@
 </ul>
 <h2>Sprint 2</h2>
 <ul>
-<li>tests unitaires</li>
-<li>utilisation de docker</li>
+<li><s>tests unitaires</s></li>
+<li><s>utilisation de docker</s></li>
 <li>CI (avec gitlab peut-être ou directement avec les &quot;actions&quot; de GitHub)</li>
 </ul>
 <h2>Points difficiles/techniques</h2>
@@ -125,6 +146,72 @@ Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous
 <li>Authentification</li>
 </ol>
 <p>Pour le système d'authentification, on avait sous-estimé le temps que ca prendrait. En effet, on a utilisé les JWT tokens et même si on a trouvé un tutoriel sur le site <a href="https://www.bezkoder.com/">https://www.bezkoder.com/</a>, il y avait eu quelques changements depuis que ce tutoriel a été fait et notre application express était en &quot;type: module&quot; (paramètre dans le package.json) et ca gênait beaucoup. On a préféré terminé cela parce que c'était un gros point technique du projet et qui allait nous servir pour d'autres projets.</p>
+<ol start="5">
+<li>Utilisation de Docker (docker-compose)</li>
+</ol>
+<p>Il est dans notre cas possible d'utiliser l'outil Docker Compose pour créer une application multi-conteneurs avec le front et l'API.</p>
+<p>Tout d'abord il nous faut définir le Dockerfile pour l'API.<br>
+Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</code> puis on copie le code suivant:</p>
+<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /usr/src/app/front</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> package*.json ./</span>
+
+<span class="token instruction"><span class="token keyword">RUN</span> npm install -g @angular/cli @angular-devkit/build-angular &amp;&amp; npm install</span>
+
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 4201</span>
+
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"start"</span>]</span>
+</code></pre>
+<p>Dans notre fichier <code>package.json</code> on cherche la ligne associée à la commande &quot;start&quot; et on remplace par</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token string">"ng serve --host=0.0.0.0 --port 4201"</span><span class="token punctuation">,</span>
+</code></pre>
+<p>Pareil dans le dossier API on crée un fichier <code>Dockerfile</code> qui contient le code:</p>
+<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
+
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /usr/src/app/api</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> package*.json ./</span>
+
+<span class="token instruction"><span class="token keyword">RUN</span> npm install</span>
+
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 3080</span>
+
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"run"</span>, <span class="token string">"start"</span>]</span>
+</code></pre>
+<p>Dans notre fichier <code>package.json</code> on cherche la ligne associée à la commande &quot;start&quot; et on remplace par</p>
+<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span>
+</code></pre>
+<p>On supprime les dossiers <code>node_modules</code> et le fichier <code>package-lock.json</code> pour éviter les potentiels conflits et erreurs.</p>
+<p>On crée notre fichier <code>docker-compose.yml</code></p>
+<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">nodejs-server</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> ./API
+      <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> Dockerfile
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"3080:3080"</span>
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span>api
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./API<span class="token punctuation">:</span>/usr/src/app/api
+      <span class="token punctuation">-</span> /usr/src/app/api/node_modules
+  <span class="token key atrule">angular-ui</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> ./front
+      <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> Dockerfile
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"4201:4201"</span>
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> angular<span class="token punctuation">-</span>ui
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./front<span class="token punctuation">:</span>/usr/src/app/front
+      <span class="token punctuation">-</span> /usr/src/app/app<span class="token punctuation">-</span>ui/node_modules
+</code></pre>
+<p>Et il suffit dans le terminal les commandes suivantes pour lancer en local l'application</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker-compose</span> build --no-cache
+<span class="token function">docker-compose</span> up
+</code></pre>
+<p>Attention à bien changer les ports et les appels à l'API dans le code de l'application !</p>
 
 
 </article>
