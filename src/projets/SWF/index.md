@@ -17,19 +17,11 @@ Le projet pour trouver des installations sportives en plein air près de chez vo
 ## Objectif
 L'objectif du projet est le développement d'une application de géolocalisation d'installations sportives en extérieur (barres de tractions, barres parallèles, etc..) dans la ville de Marseille. La conception de l'application se fait dans une démarche Design Thinking.
 
-## Déroulé prévue
+## Déroulé 
 
-### Octobre-Novembre
-Le but de cette période est d'arriver à un **Minimum Viable Product (MVP)** à travers le maquettage sur Figma et les interviews des potentiels utilisateurs. Ce temps est aussi dédié à l'établissement de l'état de l'art, et à la délimitation d'un business model. Une fois ces objectifs atteints, nous nous lancerons dans le développement.
-
-### Décembre-Janvier
-Nous sommes actuellement en train de nous décider sur l'archtecture de notre application, et hésitons entre une application classique avec un front, un back et une base de données et des micros services.
-Une fois cette décision prise, nous commencerons à développer l'application.
-
-## Planning des sprint
 ### Phase de réflection, Design Thinking
 **19/09/2022 - 05/12/2022**
-Dans la phase de réflexion, nous allons nous concentrer sur les étapes suivantes :
+Dans la phase de réflexion, nous nous sommes concentrés sur les étapes suivantes :
 - Recherche des besoins utilisateurs (avec des entretiens)
 - Recherche de l'état de l'art
 - Création du design dans Figma
@@ -37,19 +29,45 @@ Dans la phase de réflexion, nous allons nous concentrer sur les étapes suivant
 
 ### Sprint 1
 **06/12/2022 - 03/01/2023**
-Dans le premier sprint, nous avons réalisé les étapes suivantes :
-[x] Création microservice utilisateur et authentification
-[ ] Création microservice lieux
 
-Nous avons crée un projet sur GitHub: https://github.com/JeffreyEdisah/Street-Workout-Finder
+Dans le premier sprint, nous avons réalisé les étapes suivantes :
+[x] Création du repo GitHub : https://github.com/JeffreyEdisah/Street-Workout-Finder
+[x] Création microservice utilisateur et authentification
+[x] Début du développement du microservice lieux
+
+Nous avons crée un projet sur GitHub: 
 
 ### Sprint 2
-**04/01/2023 - x**
+**03/01/2023 - 07/02/2023**
 
 Dans le deuxième sprint, nous avons réalisé les étapes suivantes :
-[ ] Finir le microservice lieux
-[ ] Création gateway
-[ ] Création front (MVP) avec React
+[x] Finir le microservice lieux
+[x] Déploiement du microservice lieux sur AWS Lambda
+
+### Sprint 3
+**07/02/2023 - 28/02/2023**
+
+Dans le troisième sprint, nous avons réalisé les étapes suivantes :
+[x] Début du travail sur le front en React
+[x] Création de la carte avec Leaflet
+[x] Ajout des pages Login et Register
+[x] Ajout de la page de description d'un lieu
+
+### Sprint 4
+**28/02/2023 - 21/03/2023**
+
+Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
+[x] Refactoring du microservice lieux
+[x] Ajout du menu à la carte
+[x] Liaison du front avec les différents microservices
+[x] Ajout d'une gateway entre le microservice lieu et le microservice utilisateurs
+
+### Sprint 5
+**28/02/2023 - 21/03/2023**
+
+Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
+[x] Divers ajustements CSS
+[x] Création d'un docker compose avec 3 services : le front, le microservice lieu et le microservice utilisateurs
 
 ## Poster
 
