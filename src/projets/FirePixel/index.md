@@ -65,13 +65,13 @@ Différentes fonctionnalités sont encore à coder comme la prévisualisation d'
 
 Dans le cadre du parcours Do_It, nous avons été amenés à réaliser un projet sur le thème de l’autonomie numérique.
 
-Nous avons repris un projet réalisé les années précédentes : CampusFire. Il s’agit d’un écran pouvant être placé dans un lieu de passage à Centrale et sur lequel les étudiants peuvent interagir directement depuis leurs téléphones. Le but est d’utiliser les smartphones comme moyen de rassembler les élèves, plutôt que de l’utiliser pour interagir à distance.
+Nous avons repris un projet réalisé les années précédentes : [CampusFire](https://github.com/campusfire/campusfire). Il s’agit d’un écran pouvant être placé dans un lieu de passage à Centrale et sur lequel les étudiants peuvent interagir directement depuis leurs téléphones. Le but est **d’utiliser les smartphones** comme moyen de **rassembler les élèves**, plutôt que de l’utiliser pour interagir à distance.
 
-Pour commencer, nous nous sommes documentés sur les anciennes instances du projet pour apprendre de leurs enseignements. La lecture des différents rapports nous a permis de saisir les enjeux de ce projet et l’état d’avancement. Il s’agissait notamment de rendre cet écran attractif en poussant les utilisateurs à venir le voir et le revoir. Plusieurs possibilités avaient alors été soulevées : écran de jeux (jeux collaboratifs tels que cadavre exquis ou jeu avec classement), mur de Post-Its (chacun peut alors laisser une note visible de tous) ou encore un service utile pour tous les Centraliens (comme une borne pour réserver une salle). Il était également soulevé le fait que cette borne doit être simple d’utilisation de manière à ce que tout le monde puisse comprendre le fonctionnement et rapidement et s’en servir.
+Pour commencer, nous nous sommes documentés sur les anciennes instances du projet pour apprendre de leurs enseignements. La lecture des différents rapports nous a permis de saisir les enjeux de ce projet et l’état d’avancement. Il s’agissait notamment de **rendre cet écran attractif** en poussant les utilisateurs à venir le **voir et le revoir**. Plusieurs possibilités avaient alors été soulevées : **écran de jeux** (jeux collaboratifs tels que cadavre exquis ou jeu avec classement), **mur de Post-Its** (chacun peut alors laisser une note visible de tous) ou encore un **service utile** pour tous les Centraliens (comme une borne pour réserver une salle). Il était également soulevé le fait que cette borne doit être **simple d’utilisation** de manière à ce que tout le monde puisse comprendre le fonctionnement et rapidement et s’en servir.
 
 Par la suite, les différents groupes ayant travaillé dessus ont commencé à réaliser une borne sur laquelle on peut, à l’aide de son téléphone, mettre des photos ou du texte. Un premier prototype a été déployé et testé lors des campagnes associatives 2021.
 
-Le concept nous plaisait et nous nous en sommes inspirés pour notre idée : créer un écran sur lequel les Centraliens pourront dessiner depuis leurs téléphones. Celui-ci permettra de créer un espace de rencontre pour les Centraliens et les faire collaborer autour d’un jeu ou d’un projet artistique.
+Le concept nous plaisait et nous nous en sommes inspirés pour notre idée : **créer un écran sur lequel les Centraliens pourront dessiner depuis leurs téléphones collaborativement**. Celui-ci permettra de créer un espace de rencontre pour les Centraliens et les faire collaborer autour d’un jeu ou d’un projet artistique.
 
 Dans ce rapport nous présenterons dans un premier temps le concept de notre projet de manière plus poussée, avant de détailler la première version que nous avons réalisée. Ensuite, nous décrirons les tests utilisateurs effectués et les modifications apportées.
 
@@ -79,25 +79,25 @@ Dans ce rapport nous présenterons dans un premier temps le concept de notre pro
 
 Comme décrit en introduction, l’idée du projet est de créer un écran de dessin collaboratif. Dans un premier temps, il a fallu établir ce que nous souhaitions faire en établissant une liste de besoins et d’exigences.
 
-L’objectif est que le projet puisse être déployé sur une télévision de Centrale. Celle-ci pourrait être n'importe où sur le campus mais idéalement dans un lieu de pause comme à côté des distributeurs de café ou dans un lieu de passage comme en bas des plots. Les Centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à un site web mobile-first. Les utilisateurs peuvent se servir de leur téléphone comme d’une télécommande, grâce à laquelle ils peuvent dessiner sur l’écran. Cette télécommande propose plusieurs moyens d'interagir, allant d’un affichage en temps réel, un joystick et différents modes de dessin.
+L’objectif est que le projet puisse être **déployé sur une télévision de Centrale**. Celle-ci pourrait être n'importe où sur le campus mais idéalement dans un **lieu de pause** comme à côté des **distributeurs de café** ou dans un lieu de passage comme en bas des plots. Les Centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à un site web mobile-first. Les utilisateurs peuvent **se servir de leur téléphone comme d’une télécommande**, grâce à laquelle ils peuvent dessiner sur l’écran. Cette télécommande propose plusieurs moyens d'interagir, allant d’un **affichage en temps réel**, un **joystick** et différents **modes de dessin**.
 
-Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur. 16 couleurs sont disponibles permettant une grande liberté de création.
+Il existe deux possibilités de modification. Un mode **pixel par pixel** et un **mode continu** qui permet de tracer des lignes d'une couleur. **16 couleurs** sont disponibles permettant une grande liberté de création.
 
-16 utilisateurs peuvent interagir simultanément, ceci afin d’avoir un fort aspect collaboratif, tout en gardant une bonne visibilité de l’écran. Afin de savoir où l'on se situe sur celui-ci, chaque utilisateur est représenté par une couleur visible sur son téléphone. Le curseur le représentant sur l’écran est de cette même couleur. Sur son téléphone, l’utilisateur pourra voir les pixels environnants afin d’avoir une plus grande précision sur ce qu’il fait.
+**16 utilisateurs peuvent interagir simultanément**, ceci afin d’avoir un fort aspect collaboratif, tout en gardant une bonne visibilité de l’écran. Afin de savoir où l'on se situe sur celui-ci, chaque utilisateur est représenté par une couleur visible sur son téléphone. Le curseur le représentant sur l’écran est de cette même couleur. Sur son téléphone, l’utilisateur pourra voir les pixels environnants afin d’avoir une plus grande précision sur ce qu’il fait.
 
-Pour pouvoir interagir facilement sur l’écran, l’interface mobile doit être simple d’utilisation. L’utilisateur peut donc facilement se servir des différentes fonctionnalités (couleurs, deux modes, …). De plus, un onglet “Aide” est disponible pour pouvoir expliquer rapidement aux joueurs comment FirePixel fonctionne.
+Pour pouvoir interagir facilement sur l’écran, **l’interface mobile doit être simple d’utilisation**. L’utilisateur peut donc facilement se servir des différentes fonctionnalités (couleurs, deux modes, …). De plus, un onglet “Aide” est disponible pour pouvoir expliquer rapidement aux joueurs comment FirePixel fonctionne.
 
-Le projet est développé en méthode agile. Les fonctionnalités sont priorisées puis elles sont implémentées dans des sprints d’une durée de 2 ou 3 semaines selon l’agenda. Une réunion le mardi permet de faire par de l’avancement du sprint, de discuter de l’architecture du projet, de mettre à jour le backlog et enfin de prendre du recul sur les échéances à  moyen terme.
+Le projet est développé en **méthode agile**. Les fonctionnalités sont priorisées puis elles sont implémentées dans des **sprints d’une durée de 2 ou 3 semaines** selon l’agenda. Une réunion le mardi permet de faire par de l’avancement du sprint, de discuter de l’architecture du projet, de mettre à jour le backlog et enfin de prendre du recul sur les échéances à  moyen terme.
 
 Une version fonctionnelle de l’application avec toutes les nouvelles features est déployée tous les 3 sprints. Suite à cette release, des phases de tests sont menées et les retours de ces tests alimentent la suite du développement.
 
 ### II. Première phase
 
-Pour débuter ce projet, nous avons choisi de réaliser une première version de ce que nous souhaitions faire. Cette partie du travail a été découpée en trois  temps : une partie maquettage, la réalisation du schéma d’entités et une partie développement.
+Pour débuter ce projet, nous avons choisi de réaliser une **première version** de ce que nous souhaitions faire. Nous avions pour objectif de terminer cette version pour la soutenance de mi-projet, qui a eu lieu en janvier 2023. Cette partie du travail a été découpée en trois  temps : une partie maquettage, la réalisation du schéma d’entités et une partie développement.
 
 #### 1. Maquette
 
-Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que l’interface utilisateur soit simple et intuitive. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.
+Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que **l’interface utilisateur soit simple et intuitive**. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.
 Nous avons donc réalisé une première maquette de la Web App sur Figma.
 
 ![Maquette1](./Photo_rapport/Maquette1.1.png "Maquette1")
@@ -135,7 +135,7 @@ Dans un second temps, nous avons développé notre projet, en construisant le fr
 Le développement frontend s’est réalisé à l’aide de deux frameworks :
 
 - React à été choisi car 2 membres du groupe avaient déjà de l’expérience avec le framework.
-- Tailwind CSS, à été crucial pour guider l’esthétisme de l’application. Le framework permet de mettre en place des bests practices, notamment la responsivité ‘mobile first’ qui était impérative puisque le projet doit-être utilisé sur mobile et sur grand écran.
+- Tailwind CSS a été crucial pour guider l'esthétisme de la page. Le framework est fait pour être pris en main rapidement, ce qui nous a aidé à facilement mettre en place le style de la page. 
 
 La philosophie à aussi été d’utiliser le moins de dépendances possible pour ne pas importer des briques fonctionnelles sur lesquelles nous n’avons pas le contrôle et qui risquent de devenir obsolètes. Ainsi, le maximum est réalisé à la main, quitte à parfois réinventer la roue.
 
