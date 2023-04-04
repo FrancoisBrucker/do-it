@@ -8,11 +8,14 @@ authors:
 tags: ['pok']
 ---
 
-<!-- Début Résumé -->
+<!-- début résumé -->
 
 Ensemble des POKs réalisé par Thomas Duroy.
+
+- POK 2: Mon site chez moi
+- POK 3: Analyse de sentiments avec PyTorch
   
-<!-- Fin résumé -->
+<!-- fin résumé -->
 
 ## Planning des POK de Thomas
 
