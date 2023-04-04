@@ -8,7 +8,7 @@ authors:
 tags: ['mon']
 ---
 
-<!-- Début Résumé -->
+<!-- début résumé -->
 
 Ensemble des MONs réalisé par Thomas Duroy.
 
@@ -17,7 +17,7 @@ Ensemble des MONs réalisé par Thomas Duroy.
 - MON 3.1 : Débuter avec React.js
 - MON 3.2 : Initiation à la cybersécurité
   
-<!-- Fin résumé -->
+<!-- fin résumé -->
 
 ## Planning des MON de Thomas
 
