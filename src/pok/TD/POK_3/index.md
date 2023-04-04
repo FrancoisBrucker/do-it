@@ -49,3 +49,5 @@ Pour le prochain sprint:
 - Compréhension des concepts clés (RNN, NLP, ...)
 
 - Choix du dataset (récupération brute est complexe mais un dataset kaggle parait simpliste)
+
+Parler de l'installation de "transformers", "pytorch", "pytorch audio", "pandas", "nltk"
