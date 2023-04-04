@@ -5,6 +5,11 @@ title: "MON de Louise "
 authors:
   - Louise Gacoin
 
+tags: 
+- programmation objet
+- python
+- debutant
+
 ---
 L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis [le cours de Monsieur Brucker ][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/].
 Ce MON s'adresse aux débutants en informatique. Si vous maîtrisez déjà les bases de la POO, dirigez vous vers les MON suivants:

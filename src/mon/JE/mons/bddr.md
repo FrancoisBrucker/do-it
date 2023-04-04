@@ -2,8 +2,14 @@
 layout: layout/post.njk
 
 title: "Bases de Données relationnelles, MySQL, SQLAlchemy"
+
 authors:
   - Jeffrey Edisah
+
+tags :
+  - 'info'
+  - 'base de donnees'
+  - 'sql'
 
 ---
 <!-- début résumé -->

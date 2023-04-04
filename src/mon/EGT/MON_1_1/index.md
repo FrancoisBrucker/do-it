@@ -5,6 +5,8 @@ title: "Sûrement le seul MON d'info d'Eugénie"
 authors:
     - "Eugénie Giraud-Telme"
 
+tags :
+  - 'automatisation'
 
 ---
 <!-- Début Résumé -->

@@ -6,6 +6,10 @@ title: "Introduction au C++"
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'c++'
+
 ---
 
 <!-- début résumé -->

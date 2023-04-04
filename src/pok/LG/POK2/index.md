@@ -5,6 +5,11 @@ title: "POK 2: BabyCameleon, Prototypage d'une offre de service innovante"
 authors:
   - Louise Gacoin
 
+tags:
+- gestion de projet
+- mvp
+- figma
+- entreprenariat
 ---
 
 <!-- début résumé -->

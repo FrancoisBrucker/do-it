@@ -5,7 +5,7 @@ title: "Artblog Déploiement"
 authors:
   - Tuncay Bilgi
 
-tags: ['pok']
+tags: ['Linux','ssh','deploy','bash']
 ---
 {% prerequis %} 
 
@@ -13,7 +13,7 @@ tags: ['pok']
 - Accès ssh au serveur ovh1
 - Avoir un projet à déployer
 
-Dans le second sprint, on utilise des scripts bash qui nécéssite une compréhension du shell assez complète.
+Dans le second sprint, on utilise des scripts bash qui nécessite une compréhension du shell assez complète.
 
  {% endprerequis %}
 

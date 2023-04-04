@@ -5,6 +5,13 @@ title: "Mon Portfolio chez OVH"
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'web'
+  - 'back'
+  - 'python'
+  - 'flask'
+  - 'ssh'
 ---
 <!-- début résumé -->
 

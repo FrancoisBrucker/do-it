@@ -6,7 +6,7 @@ authors:
   - Eugénie Giraud-Telme
   - Sarah Honoré
 tags :
-  - 'SI'
+  - 'systeme information'
   - 'cartographie'
 ---
 <!-- début résumé -->

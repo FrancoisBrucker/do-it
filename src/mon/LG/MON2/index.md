@@ -5,6 +5,10 @@ title: "MON 2:Web Front 1"
 authors:
   - Louise Gacoin
 
+tags: 
+- html
+- css
+- debutant
 ---
 Mes objectifs pour ce MON sont:
 - Améliorer ma maitrise du langage de l'informatique

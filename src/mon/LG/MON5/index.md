@@ -5,6 +5,10 @@ title: "MON 5: Bases de VBA"
 authors:
   - Louise Gacoin
 
+tags:
+- vba
+- excel
+- debutant
 ---
 
 Dans ce  MON je vais me former au VBA.

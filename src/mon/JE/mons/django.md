@@ -2,8 +2,15 @@
 layout: layout/post.njk
 
 title: "Introduction au back-end par Django"
+
 authors:
   - Jeffrey Edisah
+
+tags :
+  - 'info'
+  - 'back'
+  - 'python'
+  - 'django'
 
 ---
 <!-- début résumé -->

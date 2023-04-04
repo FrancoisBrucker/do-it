@@ -5,7 +5,10 @@ title: "MON 2 : Google Apps Script"
 authors:
  - Thomas Pont
 
-tags: ['Google Apps Script']
+tags:
+
+- 'google apps script'
+- 'automatisation'
 ---
 
 <!-- Début Résumé -->

@@ -163,7 +163,7 @@ La ligne sur l'environement permet d'enlever le besoin d'avoir un mdp, cela impl
 On peut lancer le container en deamon avec dans le terminale : `docker-compose up -d`. Ajoutez un nom si vous voulez arrêter le container en CLI, sinon allez sur Docker desktop.
 
 {%attention%}
-Allez savoir pourquoi, le fait de lancer un projet dans un container peux créer des erreurs nouvelles, faites attentions.
+Le fait de lancer un projet dans un container peux créer des erreurs nouvelles, faites attentions.
 Par exemple, dans le container, je reçois une erreur de React que je n'avais pas avant.
 {%endattention%}
 
@@ -242,7 +242,7 @@ Finished: SUCCESS
 
 ```
 
-On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit même le dernier commit, puis execute la pipeline.
+On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit même le dernier commit, puis il execute la pipeline.
 
 {%info%}Bravo ! A partir d'ici vous avez tout ce qu'il faut pour commencer à expérimenter sur Jenkins. La suite des opérations consiste par exemple à mettre en place de vrais pipelines, à donner une clé ssh à jenkins pour qu'il puisse commit sur les branches du repo. {%endinfo%}
 
@@ -267,13 +267,12 @@ Coté Jenkins on met en place les **credentials**, c'est à dire notre clé priv
 
 Pour cela on installe des plugins notamment **Github API** qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évenement à lieu.
 
-{%attention%}Il se trouve que ce que je veux faire n'est pas possible à moins d'avoir une adresse public à questionner. En effet le webhook de github ne peut pas trouver mon localhost:8080 où jenkins écoute les webhooks. Il faut mettre en place une interface qui transforme mon port local en public grâce à un servic tier comme webhook relay, je ne le fais donc pas.{%endattention%}
+{%attention%}Il se trouve que ce que je veux faire n'est pas possible à moins d'avoir une adresse public à questionner. En effet le webhook de github ne peut pas trouver mon localhost:8080 où jenkins écoute les webhooks. Il faut mettre en place une interface qui transforme mon port local en public grâce à un service tier comme webhook relay, je ne le fais donc pas.{%endattention%}
 
 #### Plan de secours : Job périodique :
 
-On essaie de créer une pipeline qui publie un fichier dans une branche jenkins, toutes les minutes, si un test est réussi.
-
-Je créer une branche jenkins, vierge : `git switch --orphan jenkins`
+La méthode pour contourner le problème des webhooks est celle mise en place dans le POK CI-CD : on demande à jenkins de regarder toutes les heures le dernier commit de notre repo, si ce commit est identifié comme non-déployé on le déploie et on le met dans la base de données des commits déployés.
+Voir le [POK]() en question pour plus de détails et pour une implémentation qui fonctionne.
 
 
 

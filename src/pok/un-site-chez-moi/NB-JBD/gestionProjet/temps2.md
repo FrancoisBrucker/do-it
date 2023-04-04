@@ -8,7 +8,7 @@ authors:
 
 tags: 
     - 'pok2'
-    - 'serveur-distant'
+    - 'serveur distant'
 ---
 
 ## Choses à faire durant ce temps 2

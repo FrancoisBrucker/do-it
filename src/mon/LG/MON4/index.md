@@ -5,6 +5,11 @@ title: "MON 4:Django girls"
 authors:
   - Louise Gacoin
 
+tags: 
+- framework
+- django
+- debutant
+
 ---
 
 L'objectif de ce MON est de découvrir comment créer un site web et le déployer sur internet avec Django. Cela va aussi me permettre de voir comment on utilise des bases de données dans la vraie vie (c'est à dire avec un site). Pour cela je vais suivre le tutoriel [Django girls](https://tutorial.djangogirls.org/fr/).

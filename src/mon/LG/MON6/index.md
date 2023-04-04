@@ -5,6 +5,10 @@ title: "MON 6: Sobriété Numérique et stratégie digitale"
 authors:
   - Louise Gacoin
 
+tags:
+- systeme information
+- climat
+- numerique
 ---
 
 L’objectif de ce MON est de comprendre le phénomène de sobriété numérique et comment il influence la stratégie digitale des entreprises.
