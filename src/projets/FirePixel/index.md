@@ -194,9 +194,17 @@ Ainsi, nous avons **retravaillé la maquette de la Web App** afin qu’elle soit
 
 La première étape a été de refaire les boutons pour les remplacer par des symboles plus simples pour la compréhension et plus esthétiques. Plusieurs propositions ont alors été faites, dont celles ci-dessous :
 
-![Maquette1](./Photo_rapport/Maquette2.1.png "Maquette1")
-![Maquette2](./Photo_rapport/Maquette2.2.png "Maquette1")
-![Maquette3](./Photo_rapport/Maquette2.3.png "Maquette1")
+<div style="display: flex; align-items: center;">
+  <div style="width: 32%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.1.png" style="border: 0;" />
+  </div>
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.2.png" style="border: 0;" />
+  </div>
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.3.png" style="border: 0;" />
+  </div>
+</div>
 
 Sur les maquettes, les trois couleurs correspondent aux trois dernières couleurs utilisées. La palette permet d’accéder à un plus large choix de couleurs et le pinceau aux deux modes possibles (dessin continu ou pixel par pixel).
 
@@ -229,11 +237,24 @@ Suite à ce travail, nous avons donc implémenté la maquette choisie. Une modif
 
 ##### b. Back
 
-La partie Back du projet, à la fin du premier déploiement, utilisait seulement un stockage en RAM, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.
+La partie Back du projet, à la fin du premier déploiement, **utilisait seulement un stockage en RAM**, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.
 
-La première étape a donc été de complètement restructurer le Back pour intégrer une base de données. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.
+La première étape a donc été de complètement restructurer le Back pour **intégrer une base de données**. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.
 
-Ainsi nous avons créé 3 entités : Grid, Cursor et NewPixels. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un grand nombre d’interactions avec la base de données et ralentit énormément le mouvement du joueur.
+Ainsi nous avons créé **3 entités : Grid, Cursor et NewPixels**. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un **grand nombre d’interactions avec la base de données** et ralentit énormément le mouvement du joueur.
+
+Il a fallu faire un compromis sur ce que nous souhaitions stocker en base de données et ce qui ne nécessitait pas forcément d'avoir une trace dans la mémoire.
+Premièrement, nous avons décidé que le stockage de chaque nouveau pixel, n'apportait rien au projet, donc nous avons supprimé ces accès en mémoire. Mais le serveur restait encore trop lent. 
+
+Parmi les 2 entités qui reste, on a les curseurs, dont la réelle persistence des données n'est pas nécessaire mais qui a besoin que la donnée soit gardée au moins pendant toute l'utilisation d'un joueur.
+
+Et il y a l'écran dont on veut absolument garder en mémoire une trace.
+
+Sachant que la mémoire RAM est beaucoup plus rapide d'un stockage en mémoire dure, nous avons pensé à une **alternative qui utiliserais la RAM et la base de donnée** pour optimiser le temps de réponse et garder une trace de l'écran.
+
+Pour les curseurs, nous avons simplement transféré toute la donnée du curseur dans la RAM. Pour l'écran, nous avons construit un composant de stockage RAM relié à la base de donnée. Ce composant met à jour la base de donnée de manière régulière (toute les 10 minutes). Le temps passé à stocker l'écran ne dépend plus du nombre d'utilisateur ni de la fréquence d'écriture sur l'écran.
+
+Grace à cette réorganisation de la partie back du projet, nous avons pu largement augmenté les performances serveur. Nous avons **divisé par 28 le temps qu'il faut au serveur pour répondre** tout en gardant une persistence de l'écran.
 
 ## Lien
 
