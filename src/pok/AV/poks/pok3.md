@@ -10,7 +10,7 @@ tags:
   - angular
   - express
   - test
-  - javaScript
+  - javascript
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">

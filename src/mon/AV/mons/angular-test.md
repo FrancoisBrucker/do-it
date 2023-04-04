@@ -4,7 +4,10 @@ layout: layout/post.njk
 title: "Les test dans Angular"
 authors:
   - Antoine Varnerot
-
+tags:
+  - angular
+  - test
+  - javascript
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">
@@ -28,13 +31,24 @@ Prérequis (selon le tuto):
 - CSS
 - Angular CLI
 
-Fonctionne avec Jasmin/Karma. <https://jasmine.github.io/>
+Les tests sont effectués avec Jasmin/Karma. <https://jasmine.github.io/>
 
 Pour lancer les tests unitaires et d'intégration d'une application il y a juste à utiliser la commande :
 
 ```bash
 ng test
 ```
+
+Si on a implémenté de l'intégration continue, on peut mettre dans le fichier package.json :
+
+```json
+"scripts": {
+    "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI"
+}
+```
+
+## Essais
 
 Quand je l'utilise sur le projet 3a, on voit :
 
@@ -103,3 +117,34 @@ Il suffit d'utiliser les 3 fonctions suivantes pour implémenter un test :
 - describe : pour définir une suite (ou groupe) de "specs".
 - it : pour définir une "spec" (ou un test).
 - expect : pour implémenter les assertions.
+
+## Tests de routage
+
+On peut maintenant réaliser des tests de routage par exemple pour vérifier que le router nous redirige au bon endroit :
+
+```typescript
+it('should navigate to home page', async () => {
+  await router.navigate(['']);
+  expect(location.path()).toBe('/');
+});
+
+it('should navigate to about page', async () => {
+  await router.navigate(['/about']);
+  expect(location.path()).toBe('/about');
+});
+
+it('should navigate to about page with navigateByUrl()', async () => {
+  await router.navigateByUrl('/about');
+  expect(location.path()).toBe('/about');
+});
+```
+Et que le bon component est bien chargé (app-home ici pour la route '') :
+
+```typescript
+it('should display home component for default route', async () => {
+  await router.navigate(['']);
+  fixture.detectChanges();
+  const home = fixture.debugElement.nativeElement.querySelector('app-home');
+  expect(home).toBeTruthy();
+});
+```
