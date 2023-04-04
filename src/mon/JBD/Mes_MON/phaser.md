@@ -204,6 +204,19 @@ La carte peut être composée de plusieurs couches, dont des touches qui créent
   </a>
 </div>
 
+<h2 id="h4">Mon point de vue</h2>
+
+**Points positifs** 👍
+
+- Phaser est très bien documenté avec un très grand nombre d'exemples différents.
+- Il n'y a pas besoin d'installer de logiciel ou autre.
+
+**Points négatifs** 👎
+
+- Il vaut mieux s'adapter à Phaser que essayer que suivre à la lettre ce qu'on a comme idée (contrôle limité sur les détails de bas niveau).
+- Il n'est pas aisé d'avoir un projet organisé en différents fichier. J'ai fait en sorte de séparer le code du joueur du code global, mais ce n'a pas été facile. Donc il n'est pas trop possible de faire des gros projets.
+- Il n'y a pas de réel cours, il y a une explication du "Hello World!", puis l'utilisateur est encouragé à aller voir les différents exemples.
+
 <h2 id="liens">Liens Utiles </h2>
 
 **Mon projet**
