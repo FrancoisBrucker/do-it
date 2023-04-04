@@ -61,7 +61,7 @@ Dans le premier sprint, nous avons réalisé les étapes suivantes :
 [x] Création microservice utilisateur et authentification
 [x] Début du développement du microservice lieux
 
-Nous avons crée un projet sur GitHub:
+Nous avons crée un projet sur GitHub.
 
 ### Sprint 2
 
@@ -89,7 +89,7 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Refactoring du microservice lieux
 [x] Ajout du menu à la carte
 [x] Liaison du front avec les différents microservices
-[x] Ajout d'une gateway entre le microservice lieu et le microservice utilisateurs
+[x] Ajout d'une gateway entre le microservice lieux et le microservice utilisateurs
 
 ### Sprint 5
 
@@ -97,4 +97,4 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 
 Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Divers ajustements CSS
-[x] Création d'un docker compose avec 3 services : le front, le microservice lieu et le microservice utilisateurs
+[x] Création d'un docker compose avec 3 services : le front, le microservice lieux et le microservice utilisateurs
