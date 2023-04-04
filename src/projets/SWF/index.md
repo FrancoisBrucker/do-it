@@ -114,10 +114,23 @@ Bien que nous soyons fiers de ce que nous avons accompli avec l'application web,
   
 En somme, nous sommes conscients qu'il y a encore des améliorations à apporter à notre application, et les intégrer à l'avenir afin permettrait de garantir la satisfaction de nos utilisateurs.
 
-## Difficulté gestion de projet
+## Difficultés rencontrées et points à améliorer
+
+La toute première difficulté que nous avons rencontrée est technique. En effet nous sommes tous en apprentissage actuellement, et le code que nous avons produit a été produit en même temps que nous apprenions les différents langages, librairies, ou même concepts. 
+Cette apprentissage a d'ailleurs souvent été la cause de retards dans nos sprints.
+
+La deuxième difficulté rencontrée est elle en terme de cadrage du projet, mais est également liée à la première. Il est compliqué de jauger la difficulté d'une tâche à accomplir quand on a pas une connaissance claire des moyens à notre disposition pour accomplir la dite tâche. 
+Cette difficulté s'est néanmoins peu à peu atténuée à mesure que nous prenions de plus en plus en compétences et en assurance.
+
+La troisième difficulté découle également des 2 autres mais pas seulement, et est liée à l'organisation du temps de travail autour du projet. Avec l'apprentissage continu et le mauvais cadrage, certaines fonctionnalités ont pris du temps à être développé pour au final être abandonnés parce que nous sommes finalement partis sur des solutions différentes, notamment pour le déploiement. 
+De plus, avec le départ de Kasimir et l'arrivée de Thomas, nous avons du rééquilibrer les charges de travail, informer Thomas sur le fonctionnement de notre code et le rendre opérationnel, ce qui aurait pu mieux être fait.
+
+Ces difficultés peuvent être mitigés avec des ajouts au processus de travail, par exemple la mise en place d'une documentation écrite claire et lisible au fur et à mesure de l'écriture du code, une réduction du temps de réflexion avant de commencer le travail effectif sur le projet, car la réflexion est continu.
+
+En somme projet a permis de mettre en évidence l'importance de la gestion de projet et de l'organisation dans le développement d'une application de ce type. Il y a plusieurs mesures que nous aurions pu prendre pour pallier au niveau des difficultés rencontrées, et dont nous comprenons mieux l'importance dans le monde professionnel, même si les échelles sont différentes.
 
 ## Bilan
 
-Le développement d'une application web est un projet qui peut être très enrichissant d'un point de vue professionnel et personnel. Dans ce projet, nousa avons eu l'opportunité de travailler sur différentes technologies et outils, ce qui nous a permis d'acquérir une expérience précieuse en développement web. Nous avons également développé des compétences en gestion de projet, en résolution de problèmes et en communication. Au-delà de ces compétences techniques, le projet a également permis aux membres de l'équipe de développer leur créativité et leur capacité à collaborer avec des personnes ayant des compétences différentes.
+Le développement d'une application web est un projet qui peut être très enrichissant d'un point de vue professionnel et personnel. Dans ce projet, nous avons eu l'opportunité de travailler sur différentes technologies et outils, ce qui nous a permis d'acquérir une expérience précieuse en développement web. Nous avons également développé des compétences en gestion de projet, en résolution de problèmes et en communication. Au-delà de ces compétences techniques, le projet a également permis aux membres de l'équipe de développer leur créativité et leur capacité à collaborer avec des personnes ayant des compétences différentes.
 
 Dans l'ensemble, le projet a permis à tous, à notre échelle personnelle de progresser en développement web. Que ce soit dans la façon de structurer une application ou dans la prise en main de nouveau outils et framework nécessaires à la progression du projet. Nous avons tous éprouvé et amélioré nos capacités.
