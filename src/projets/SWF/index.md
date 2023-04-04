@@ -34,7 +34,7 @@ Le microservice "Lieux" est construit à l'aide de Flask, un framework Python we
 
 Le microservice "Utilisateurs" est construit à l'aide de Node.js, d'Express.js, et de MongoDB. Node.js est un choix populaire pour construire des applications évolutives et performantes, et Express.js est un cadre web largement utilisé pour Node.js. MongoDB est également utilisé pour stocker les données du microservice Utilisateurs.
 
-Finalement, les microservices et la passerelle API sont conçus pour être encapsulés dans des conteneurs Docker, dans un objectif futur de dépoloiement. Docker permet une certaine flexibilité dans les options de déploiement et la possibilité de lancer les microservices et la passerelle sur n'importe quelle plateforme, quelle que soit l'infrastructure sous-jacente. Il est ainsi facile de faire évoluer et de gérer l'application au fur et à mesure de sa croissance. L'utilisation de conteneurs Docker garantit également la cohérence entre les différents environnements, ce qui rend souvent le processus de déploiement plus facile.
+Finalement, les microservices et la passerelle API sont conçus pour être encapsulés dans des conteneurs Docker, dans un objectif futur de déploiement. Docker permet une certaine flexibilité dans les options de déploiement et la possibilité de lancer les microservices et la passerelle sur n'importe quelle plateforme, quelle que soit l'infrastructure sous-jacente. Il est ainsi facile de faire évoluer et de gérer l'application au fur et à mesure de sa croissance. L'utilisation de conteneurs Docker garantit également la cohérence entre les différents environnements, ce qui rend souvent le processus de déploiement plus facile.
 
 ## Poster
 
