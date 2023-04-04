@@ -197,9 +197,17 @@ Il n’y a pas eu spécialement de difficultés liées au Back de notre projet �
 <h4>1. Maquette</h4>
 <p>Ainsi, nous avons <strong>retravaillé la maquette de la Web App</strong> afin qu’elle soit plus propice aux interactions pour les utilisateurs. Tout ceci a été fait en parallèle des <strong>cours d'UI</strong> qui, nous ont présenté les différents concepts pour réaliser une bonne maquette d'application sur Figma.</p>
 <p>La première étape a été de refaire les boutons pour les remplacer par des symboles plus simples pour la compréhension et plus esthétiques. Plusieurs propositions ont alors été faites, dont celles ci-dessous :</p>
-<p><img src="./Photo_rapport/Maquette2.1.png" alt="Maquette1" title="Maquette1"><br>
-<img src="./Photo_rapport/Maquette2.2.png" alt="Maquette2" title="Maquette1"><br>
-<img src="./Photo_rapport/Maquette2.3.png" alt="Maquette3" title="Maquette1"></p>
+<div style="display: flex; align-items: center;">
+  <div style="width: 32%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.1.png" style="border: 0;" />
+  </div>
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.2.png" style="border: 0;" />
+  </div>
+  <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+    <img src="./Photo_rapport/Maquette2.3.png" style="border: 0;" />
+  </div>
+</div>
 <p>Sur les maquettes, les trois couleurs correspondent aux trois dernières couleurs utilisées. La palette permet d’accéder à un plus large choix de couleurs et le pinceau aux deux modes possibles (dessin continu ou pixel par pixel).</p>
 <p>Finalement, nous avons réfléchi à d’autres possibilités. Le rouge, en couleur de fond, est trop voyant pour l'œil et ne permet pas de mettre en valeur les couleurs. Ensuite, le symbole du pinceau peut porter à confusion. Enfin, il est ici nécessaire de cliquer sur la palette puis sur la couleur qu’on souhaite choisir. Cela demande deux interactions.</p>
 <p>Nous avons donc réalisé une nouvelle maquette corrigeant tout ceci :</p>
@@ -219,9 +227,16 @@ Il n’y a pas eu spécialement de difficultés liées au Back de notre projet �
 <li>Adaptabilité sur la taille de l'écran (screen)</li>
 </ul>
 <h5>b. Back</h5>
-<p>La partie Back du projet, à la fin du premier déploiement, utilisait seulement un stockage en RAM, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.</p>
-<p>La première étape a donc été de complètement restructurer le Back pour intégrer une base de données. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.</p>
-<p>Ainsi nous avons créé 3 entités : Grid, Cursor et NewPixels. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un grand nombre d’interactions avec la base de données et ralentit énormément le mouvement du joueur.</p>
+<p>La partie Back du projet, à la fin du premier déploiement, <strong>utilisait seulement un stockage en RAM</strong>, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.</p>
+<p>La première étape a donc été de complètement restructurer le Back pour <strong>intégrer une base de données</strong>. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.</p>
+<p>Ainsi nous avons créé <strong>3 entités : Grid, Cursor et NewPixels</strong>. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un <strong>grand nombre d’interactions avec la base de données</strong> et ralentit énormément le mouvement du joueur.</p>
+<p>Il a fallu faire un compromis sur ce que nous souhaitions stocker en base de données et ce qui ne nécessitait pas forcément d'avoir une trace dans la mémoire.<br>
+Premièrement, nous avons décidé que le stockage de chaque nouveau pixel, n'apportait rien au projet, donc nous avons supprimé ces accès en mémoire. Mais le serveur restait encore trop lent.</p>
+<p>Parmi les 2 entités qui reste, on a les curseurs, dont la réelle persistence des données n'est pas nécessaire mais qui a besoin que la donnée soit gardée au moins pendant toute l'utilisation d'un joueur.</p>
+<p>Et il y a l'écran dont on veut absolument garder en mémoire une trace.</p>
+<p>Sachant que la mémoire RAM est beaucoup plus rapide d'un stockage en mémoire dure, nous avons pensé à une <strong>alternative qui utiliserais la RAM et la base de donnée</strong> pour optimiser le temps de réponse et garder une trace de l'écran.</p>
+<p>Pour les curseurs, nous avons simplement transféré toute la donnée du curseur dans la RAM. Pour l'écran, nous avons construit un composant de stockage RAM relié à la base de donnée. Ce composant met à jour la base de donnée de manière régulière (toute les 10 minutes). Le temps passé à stocker l'écran ne dépend plus du nombre d'utilisateur ni de la fréquence d'écriture sur l'écran.</p>
+<p>Grace à cette réorganisation de la partie back du projet, nous avons pu largement augmenté les performances serveur. Nous avons <strong>divisé par 28 le temps qu'il faut au serveur pour répondre</strong> tout en gardant une persistence de l'écran.</p>
 <h2>Lien</h2>
 <p>Notre code est disponible aux liens suivants :<br>
 <a href="https://github.com/Jean-Baptiste-DP/FirePixel-front">Front</a><br>
