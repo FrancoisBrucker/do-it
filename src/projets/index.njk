@@ -15,9 +15,9 @@ resume: 'Projets do-it'
       </div>
       <div class=" px-4 flex items-center">
         <div>Auteurs : </div>
-        <ul class="flex not-prose list-none my-0 last:after:content-['•'] last:after:px-1 mx-0 px-1">
+        <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1">
           {% for auteur in projet.data.authors | sort %}
-              <li class="before:content-['•'] before:px-1">{{ auteur }}</li>
+              <li class="bg-blue-200 rounded-full px-2">{{ auteur }}</li>
           {% endfor %}
         </ul>
       </div>
