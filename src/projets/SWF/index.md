@@ -103,7 +103,6 @@ Page d'accueil           |  Menu
 **Page de connexion**            |  **Parc Athéna**
 ![page de connexion](connect_1.png)  |   ![parc Athéna](parc_athena.png)
 
-
 ## Futures fonctionnalités
 
 Bien que nous soyons fiers de ce que nous avons accompli avec l'application web, il y a certaines fonctionnalités que nous aurions aimé pouvoir ajouter si le temps et les ressources nous avaient permis. Ces améliorations pourraient inclure :
