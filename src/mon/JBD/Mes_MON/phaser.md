@@ -29,10 +29,16 @@ Phaser - Game Engine + Github CI
   - [Clé de déploiement](#h2-2)
     - [Access Token](#h2-2-1)
     - [Secrets](#h2-2-2)
+- [Présentation de Phaser](#h3)
+  - [Physique (*Physics*)](#h3-1)
+    - [Arcade](#h3-1-1)
+    - [Matter](#h3-1-1)
+  - [Scène (*Scene*)](#h3-2)
+  - [Joueur (*Sprite*)](#h3-3)
+  - [Carte (*Tilemap*)](#h3-4)
 - [Liens Utiles](#liens)
 
 <h2 id="h1">Choix de la technologie</h2>
-
 
 Je me suis renseigné sur 4 différents moteurs de jeu : 
 - [Unity](https://unity.com/) : 
@@ -111,6 +117,71 @@ Donner une date d'expiration de la clé et supprimer les clés inutiles.
 Un secret est une variable qui est stockée de manière sécurisée par Github et qui peut être transmise lors de l'exécution d'actions. Un secret peut être un token d'accès (comme dans ce projet), ou par exemple l'url d'un serveur distant sur lequel déployer notre code (comme on a pu le faire sur Gitlab dans le cours AWS/Docker).
 
 [Documentation officielle](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+
+<h2 id="h3">Présentation de Phaser</h2>
+
+Phaser est un moteur de jeu open source, dont le code source se trouve [ici](https://github.com/photonstorm/phaser/tree/v3.55.2).
+
+Pour installer Phaser, il faut mettre, dans un fichier html, la balise :
+
+```html
+<script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+```
+
+Le reste du code sera dans un fichier js, ou dans une autre balise *script*.
+
+Phaser a une énorme bibliothèque d'exemples, pour voir une mise en application de chaque fonctionnalités, et un fichier API complet. Il est important de s'y référer pour voir comment implémenter une des fonctionnalités.
+
+[exemples](https://labs.phaser.io/index.html?dir=&q=)
+
+[API](https://photonstorm.github.io/phaser3-docs/index.html)
+
+<h3 id="h3-1">Physique (*Physics*)</h3>
+
+Phaser a 2 models de physique implémentée **Arcade** et **Matter**
+
+Le choix de la physique est quelque chose de primordial car il influencera les fonctionnalités de votre application.
+
+Les méthodes des objets ne sont pas les mêmes dans différents cas.
+
+<h4 id="h3-1-1">Arcade</h4>
+
+La physique **Arcade** est une physique plus simple, qui est faite pour mettre en place un projet rapidement.
+
+C'est plus simple de le prendre en main. Par contre la détections des éléments extérieurs (blocks) n'est pas implémentée ce qui peut-être limitant.
+
+[Exemple de fonctionnalités possible avec la physique **Arcade**](https://labs.phaser.io/index.html?dir=physics/arcade/&q=)
+
+<h4 id="h3-1-2">Matter</h4>
+
+La physique **Matter** essai de se rapprocher au plus proche de la réalité, en ayant une implémentation de mécanique : il y a des frottements, il est possible de pousser des objets etc.
+
+Il y a une variété plus importante d'objet qu'on peut créer.
+
+[Exemple de fonctionnalités possible avec la physique **Matter**](https://labs.phaser.io/index.html?dir=physics/matterjs/&q=)
+
+<h3 id="h3-2">Scène (*Scene*)</h3>
+
+La scène est l'élément principal de Phaser, c'est lui qui va s'occuper de précharger les images d'initier les components et de faire tourner le jeu.
+
+On doit créer une classe qui hérite de *Phaser.Scene*.
+
+On peut créer 3 méthodes :
+- *preload*
+- *create*
+- *update*
+
+Méthodes utilisées pour charger les images (*preload*), initialiser les éléments du jeu (*create*), et effectuer des actions à chaque tick du jeu (*update*).
+
+<h3 id="h3-3">Joueur (*Sprite*)</h3>
+
+Un Sprite est un objet animé du jeu, il peut être contrôlé par le joueur ou par d'autres éléments du jeu. Il est créé à partir d'une image.
+
+<h3 id="h3-4">Carte (*Tilemap*)</h3>
+
+La carte du jeu peut-être générée en plaçant des bloques un par un ou en utilisant une Tilemap qui va contenir toutes les informations pour créer la map.
+
+La carte peut être composée de plusieurs couches, dont des touches qui créent des collisions ou non. C'est pratique pour générer des décors de fond, et les blocks avec lesquels notre personnage va interagir.
 
 <h2 id="liens">Liens Utiles </h2>
 
