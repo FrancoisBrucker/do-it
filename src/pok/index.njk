@@ -10,7 +10,7 @@ resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
 
 {% for cours in collections.pok %}
     
-    <div class="my-3 px-2 p-1 border-solid border-2 rounded">
+    <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
       <div class="text-3xl mb-3">
         <a href="{{ cours.url | url }}">{{ cours.data.title }}</a>
       </div>
@@ -22,6 +22,20 @@ resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
           {% endfor %}
         </ul>
       </div>
+
+        {% if cours.data.tags | length > 1 %}
+        <div class=" px-4 flex items-center">
+            <div>Tags : </div>
+            <div class="flex pl-2 gap-1">
+            {% for tag in cours.data.tags | sort %}
+                {% if tag !== 'pok'%}
+                <span class="bg-yellow-200 rounded-full px-2">{{ tag }}</span>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
       <div class=" pt-1 px-4 flex items-top">
         <div class="flex-none">Résumé : </div>
         <div class="pl-2 m-0 grow quote">
@@ -30,6 +44,9 @@ resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
 
         </div>
       </div>
+      <div class="hidden sm:block absolute top-0 right-0 bg-purple-200 rounded-full px-2 mt-2 mr-2">
+            {{cours.data.year}}
+        </div>
     </div>
 
 {% endfor %}
