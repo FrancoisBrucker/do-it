@@ -12,7 +12,7 @@ tags: ['projet']
 ---
 
 <!-- début résumé -->
-La pixel war centralienne organisé autour d'un écran comme interface d'entrée .
+La pixel war centralienne organisée autour d'un écran comme interface d'entrée.
 <!-- fin résumé -->
 
 Le projet a pour but de recréer la [pixel war](https://www.reddit.com/r/place/?cx=1461&cy=200&px=199&ts=1649112460185) de reddit.
@@ -20,8 +20,6 @@ Le projet a pour but de recréer la [pixel war](https://www.reddit.com/r/place/?
 ## Le Principe
 
 Un tableau de $n \times m$ pixels est partagé entre plusieurs utilisateurs sur un écran. Les utilisateurs peuvent modifier les couleurs des cases parmi 16 couleurs disponibles. Le but est que plusieurs utilisateurs se coordonnent pour dessiner une image, ou remplacer celles des autres.
-
-Il n'y a pas de modération automatique, mais les administrateurs se réservent le droit de supprimer des sections d'images jugées inappropriées.
 
 ## En Pratique
 
@@ -31,8 +29,6 @@ Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour accé
 Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur.
 
 16 utilisateurs peuvent interagir simultanément. Afin de savoir où l'on est sur l'écran, chaque utilisateur est représenté par une couleur et son pixel actuel est marqué par cette couleur.
-
-Un compte administrateur permet de sélectionner des zones à effacer pour modérer l'usage de l'application.
 
 ## Stack technologique
 
@@ -77,9 +73,9 @@ Dans ce rapport nous présenterons dans un premier temps le concept de notre pro
 
 ### I. L'idée du projet
 
-Comme décrit en introduction, l’idée du projet est de créer un écran de dessin collaboratif. Dans un premier temps, il a fallu établir ce que nous souhaitions faire en établissant une liste de besoins et d’exigences.
+Comme décrite en introduction, l’idée du projet est de créer un écran de dessin collaboratif. Dans un premier temps, il a fallu établir ce que nous souhaitions faire en établissant une liste de besoins et d’exigences.
 
-L’objectif est que le projet puisse être **déployé sur une télévision de Centrale**. Celle-ci pourrait être n'importe où sur le campus mais idéalement dans un **lieu de pause** comme à côté des **distributeurs de café** ou dans un lieu de passage comme en bas des plots. Les Centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à un site web mobile-first. Les utilisateurs peuvent **se servir de leur téléphone comme d’une télécommande**, grâce à laquelle ils peuvent dessiner sur l’écran. Cette télécommande propose plusieurs moyens d'interagir, allant d’un **affichage en temps réel**, un **joystick** et différents **modes de dessin**.
+L’objectif est que le projet puisse être **déployé sur une télévision de Centrale**. Celle-ci pourrait être n'importe où sur le campus mais idéalement dans un **lieu de pause** comme à côté des **distributeurs de café** ou dans un lieu de passage comme en bas des plots. Les Centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à un site web mobile-first. Les utilisateurs peuvent **se servir de leur téléphone comme d’une télécommande**, grâce à laquelle ils peuvent dessiner sur l’écran. Cette télécommande propose plusieurs moyens d'interagir : un **affichage en temps réel**, un **joystick** et différents **modes de dessin**.
 
 Il existe deux possibilités de modification. Un mode **pixel par pixel** et un **mode continu** qui permet de tracer des lignes d'une couleur. **16 couleurs** sont disponibles permettant une grande liberté de création.
 
@@ -87,13 +83,13 @@ Il existe deux possibilités de modification. Un mode **pixel par pixel** et un 
 
 Pour pouvoir interagir facilement sur l’écran, **l’interface mobile doit être simple d’utilisation**. L’utilisateur peut donc facilement se servir des différentes fonctionnalités (couleurs, deux modes, …). De plus, un onglet “Aide” est disponible pour pouvoir expliquer rapidement aux joueurs comment FirePixel fonctionne.
 
-Le projet est développé en **méthode agile**. Les fonctionnalités sont priorisées puis elles sont implémentées dans des **sprints d’une durée de 2 ou 3 semaines** selon l’agenda. Une réunion le mardi permet de faire par de l’avancement du sprint, de discuter de l’architecture du projet, de mettre à jour le backlog et enfin de prendre du recul sur les échéances à  moyen terme.
+Le projet est développé en **méthode agile**. Les fonctionnalités sont priorisées puis elles sont implémentées dans des **sprints d’une durée de 2 ou 3 semaines** selon l’agenda. Une réunion le mardi permet de faire part de l’avancement du sprint, de discuter de l’architecture du projet, de mettre à jour le backlog et enfin de prendre du recul sur les échéances à  moyen terme.
 
 Une version fonctionnelle de l’application avec toutes les nouvelles features est déployée tous les 3 sprints. Suite à cette release, des phases de tests sont menées et les retours de ces tests alimentent la suite du développement.
 
 ### II. Première phase
 
-Pour débuter ce projet, nous avons choisi de réaliser une **première version** de ce que nous souhaitions faire. Nous avions pour objectif de terminer cette version pour la soutenance de mi-projet, qui a eu lieu en janvier 2023. Cette partie du travail a été découpée en trois  temps : une partie maquettage, la réalisation du schéma d’entités et une partie développement.
+Pour débuter ce projet, nous avons choisi de réaliser une **première version** de ce que nous souhaitions faire. Nous avions pour objectif de terminer cette version pour la soutenance de mi-projet, qui a eu lieu en janvier 2023. Cette partie du travail a été découpée en trois  temps : le maquettage, la réalisation du schéma d’entités et le développement.
 
 #### 1. Maquette
 
