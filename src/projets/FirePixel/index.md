@@ -234,11 +234,11 @@ Dans cette dernière itération nous avons dû implémenter les nouvelles foncti
 
 Nous avons implémenté la grille à l'aide d'un canvas afin de représenter les pixels aux alentours de notre curseur. Les pixels sont récupérés via websocket. Cette grille a aussi pour but de pouvoir dessiner directement et plus précisément autour de son curseur. Un appui long permet également de se déplacer de case en case.
 
-Par ailleurs, nous avons également modifié l'esthétique générale de l'application et ainsi intégré la nouvelle maquette fraîchement créée. Cette refonte du design a été l'occasion de factoriser notre code et l'organiser de manière plus structurée. Grâce à cela, nous avons réduit le nombre de clicks nécéssaires à chaque action, tout en gardant l'interface épurée.
+Par ailleurs, nous avons également modifié l'esthétique générale de l'application et ainsi intégré la nouvelle maquette fraîchement créée. Cette refonte du design a été l'occasion de factoriser notre code et l'organiser de manière plus structurée. Grâce à cela, nous avons **réduit le nombre de clicks nécessaires** à chaque action, tout en gardant l'interface épurée.
 
 La page screen a également été modifiée afin de mettre en place un canvas dit "responsive" qui va prendre toute la place disponible et s'adapter aux changements de taille d'écrans. On peut ainsi profiter d'une surface de dessin maximale sur l'entièreté de l'écran.
 
-Enfin, afin de rendre plus claire l'utilisation nous avons aussi changé l'emplacement des couleurs. Désormais, au centre du joystick se trouve la couleur du joueur, la couleur de son curseur sur l'écran, et l'encadré coloré sur la grille correspond à la couleur avec laquelle vous êtes entrain de dessiner.
+Enfin, afin de rendre plus claire l'utilisation nous avons aussi changé l'emplacement des couleurs. Désormais, au centre du joystick se trouve la couleur du joueur. La couleur de son curseur sur l'écran, et l'encadré coloré sur la grille correspond à la couleur avec laquelle vous êtes entrain de dessiner.
 
 Nous avons aussi ajouter un bouton sur la page de téléphone visant à faire grossir le curseur sur la page de screen afin que l'utilisateur puisse le repérer si jamais il l'a perdu de vue.
 
