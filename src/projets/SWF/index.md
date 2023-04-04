@@ -45,7 +45,6 @@ Finalement, les microservices et la passerelle API sont conçus pour être encap
 ### Phase de réflexion, Design Thinking
 
 **19/09/2022 - 05/12/2022**
-
 Dans la phase de réflexion, nous nous sommes concentrés sur les étapes suivantes :
 
 - Recherche des besoins utilisateurs (avec des entretiens)
