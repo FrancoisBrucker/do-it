@@ -40,9 +40,7 @@ Minimum pour que ça marche :
 - Afficher un planning des recettes
 - Modifier le nombre de personnes
 - Générer une liste de course en fonction des recettes
-
 ------------------------------------------------------------------------------------------------------------------------
-
 Fonctionnalités qui apporte de l’intérêt à notre appli : 
 - Pouvoir prendre en compte la liste des ingrédients déjà possédés
 - Mettre des filtres (coût, difficulté, calories, temps, régime alimentaire)
@@ -52,9 +50,7 @@ Fonctionnalités qui apporte de l’intérêt à notre appli :
 - Recettes collaboratives
 - Générer une recette à partir d’un ingrédient
 - Liste de courses triée par rayons
-
 -------------------------------------------------------------------------------------------------------------------------
-
 Bonus pur : 
 - S’adapter aux saisons
 - Mettre une vidéo des recettes
@@ -91,11 +87,11 @@ Tout d'abord, nos valeurs sont le fait maison, la convivialité, la créativité
 
 Après une séance de recherches, nous avons construit notre Visual Board, une sorte de brainstorming visuel :
 
-<img src="visual-board.png">
+<img src="visual-board.png" alt="Figma, visual board" width="400"/>
 
 L'élément ci-dessus est ce qui nous a permis de choisir nos couleurs principales pour l'application. De plus, nous avons fait en sorte que ces couleurs reflètent bien nos valeurs. Vous pouvez remarquer que nous avons écrit en noir puis en blanc des textes sur les couleurs, c'était pour vérifier si c'était lisible quelle que soit la couleur du texte. En l'occurance, nous avons déterminé que nous n'allions pas écrire en blanc sur du mimosa.
 
-<img src="couleurs.png">
+<img src="couleurs.png" alt="Figma, couleurs" width="300"/>
 
 Enfin, il a fallu décider des polices d'écriture pour nos titres, sous-titres et textes. Après des recherches, nous avons choisi ces polices pour une première sélection.
 
@@ -136,16 +132,16 @@ Cette fois-ci, nous avons eu des retours beaucoup plus précis. Voici les princi
 Pour cette troisième maquette, nous sommes restés sur Figma et nous avons fait quelques modifications ponctuelles.
 
 Par exemple, nous avons changé l'emplacement du bouton permettant d'accéder au menu dépliant : 
-<img src="emplacement-menu.png">
+<img src="emplacement-menu.png" alt="Figma, menu depliant" width="600"/>
 
 Aussi, nous avons mis une double validation pour vider la liste de course :
-<img src="vider-liste.png">
+<img src="vider-liste.png" alt="Figma, popup vider la liste" width="600"/>
 
 ## L'application sur Bubble :
 
 #### Méthodologie et MVP :
 
-L'application nous aurait pris trop de temps à développer avec du code, nous avons donc choisi d'utiliser Bubble, qui est un outils no-code de développement d'applications web / mobiles. Notre choix a été guidé par le fait que nous avions un cours sur des outils no-code au temps 3, dont Bubble. Ce cours nous a d'ailleurs permis de comprendre certains aspects du fonctionnement de Bubble, comme la manière de gérer les données au sein d'une page lors de la création d'une nouvelle recette. Il faut faire attention, ce n'est pas parce qu'il n'y a pas de code que Bubble est tout de suite facile à utiliser, il faut prendre un peu de temps pour maîtriser les différents éléments visuels, les workflows, la gestion des données, etc.
+L'application nous aurait pris trop de temps à développer avec du code, nous avons donc choisi d'utiliser Bubble, qui est un outil no-code de développement d'applications web / mobiles. Notre choix a été guidé par le fait que nous avions un cours sur des outils no-code au temps 3, dont Bubble. Ce cours nous a d'ailleurs permis de comprendre certains aspects du fonctionnement de Bubble, comme la manière de gérer les données au sein d'une page lors de la création d'une nouvelle recette. Il faut faire attention, ce n'est pas parce qu'il n'y a pas de code que Bubble est tout de suite facile à utiliser, il faut prendre un peu de temps pour maîtriser les différents éléments visuels, les workflows, la gestion des données, etc.
 
 En premier lieu, nous avons voulu utiliser la fonctionnalité qui permet d'importer un fichier Figma directement dans Bubble, mais après quelques essais nous avons vu que les différents éléments des pages de la maquette Figma n'étaient pas toujours importés correctement, et que les pages ainsi créées sur Bubble n'étaient pas très exploitables. Nous avons finalement choisi de créer l'application en partant de zéro afin d'avoir un résultat propre et fonctionnel.
 
@@ -175,3 +171,39 @@ Le côté backend de l'application est gérée principalement dans l'onglet "Wor
 <img src="bubble_workflows.png" alt="Bubble, workflows" width="800"/>
 
 #### Application finale :
+
+Si l'on reprend la liste des fonctionnalités que nous voulions créer, nous sommes en mesure de faire un bilan de notre projet :
+
+Minimum pour que ça marche : 
+- ~~Pouvoir afficher une recette~~
+- ~~Générer des recettes~~
+- ~~Afficher un planning des recettes~~
+- ~~Modifier le nombre de personnes~~
+- Générer une liste de course en fonction des recettes
+------------------------------------------------------------------------------------------------------------------------
+Fonctionnalités qui apporte de l’intérêt à notre appli : 
+- Pouvoir prendre en compte la liste des ingrédients déjà possédés
+- ~~Mettre des filtres (coût, difficulté, calories, temps, régime alimentaire)~~
+- ~~Créer un profil utilisateur~~
+- ~~Ajouter ses propres recettes~~
+- ~~Ajouter favori~~
+- Recettes collaboratives
+- Générer une recette à partir d’un ingrédient
+- Liste de courses triée par rayons
+-------------------------------------------------------------------------------------------------------------------------
+Bonus pur : 
+- S’adapter aux saisons
+- Mettre une vidéo des recettes
+- Mettre image ingrédients
+- Ajouter une recette depuis Internet
+
+
+Notre application Menu marche malgré le fait que certaines fonctionnalités qui nous étaient chères ne soient pas mises en place. Notamment, la liste de course est moins intelligente que ce que l'on souhaitait. Entre les fonctionnalités réduites de la version gratuite de Bubble et le manque de temps à la fin du projet, notre application ne ressemble pas exactement à ce que nous voulions au départ. L'utilisation de Bubble nous a souvent contraint à trouver des chemins détournés pour atteindre notre but : cela prenait donc plus de temps et nous en laissait encore moins pour les fonctionnalités suivantes. Comme nous avons fini par travailler sur la liste de course, c'est la fonctionnalité la moins aboutie du projet.
+
+#### Mise service :
+
+Comme dit précédemment, il n'est pas possible de déployer l'application en l'état. En effet, il faudrait payer Bubble pour le faire; d'une part pour le déploiement en tant que tel et d'autre part pour augmenter la capacité de la base de données qui est très réduite dans la version gratuite.
+Pour être en capacité de déployer l'application, il nous faudrait des fonds et un business modèle. Nous avons pensé à quelques possibilités pour ce dernier :
+- mettre des publicités dans l'application. C'est une solution à envisager même si elle ne nous enchante pas.
+- proposer des abonnements pour obtenir des fonctionnalités supplémentaires. Cela nous permettrait de passer plus de temps sur des fonctionnalités que nous voulions développer au début du projet.
+- faire des partenariats avec des diététiciens ou la santé publique. Les recettes pourraient être proposées par ces organismes et l'application pourrait promouvoir les repas sains et équilibrés.

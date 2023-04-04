@@ -28,8 +28,8 @@ Voici les différents objectifs que je souhaitais remplir lors du premier sprint
 
 Pour le prochain sprint : 
 - [] interviews réseau si pertinent
-- [] suite des recherches
-- [] organisation des infos et réflexions
+- [X] suite des recherches
+- [X] organisation des infos et réflexions
 - [] rédaction des introduction, conclusion, ouverture
 - [] mise en ligne du POK
 
