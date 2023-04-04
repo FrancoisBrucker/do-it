@@ -134,56 +134,57 @@ Dans un second temps, nous avons développé notre projet, en construisant le fr
 
 Le développement frontend s’est réalisé à l’aide de deux frameworks :
 
-- React à été choisi car 2 membres du groupe avaient déjà de l’expérience avec le framework.
-- Tailwind CSS a été crucial pour guider l'esthétisme de la page. Le framework est fait pour être pris en main rapidement, ce qui nous a aidé à facilement mettre en place le style de la page. 
+- **React** à été choisi car 2 membres du groupe avaient déjà de l’expérience avec le framework.
+- **Tailwind CSS** a été crucial pour guider l'esthétisme de la page. Le framework est fait pour être pris en main rapidement, ce qui nous a aidé à facilement mettre en place le style de la page. 
 
-La philosophie à aussi été d’utiliser le moins de dépendances possible pour ne pas importer des briques fonctionnelles sur lesquelles nous n’avons pas le contrôle et qui risquent de devenir obsolètes. Ainsi, le maximum est réalisé à la main, quitte à parfois réinventer la roue.
+La philosophie a aussi été d’utiliser le moins de dépendances possible pour ne pas importer des briques fonctionnelles sur lesquelles nous n’avons pas le contrôle et qui risquent de devenir obsolètes. Ainsi, le maximum est réalisé à la main, quitte à parfois réinventer la roue.
 
 Les deux grandes difficultés rencontrés sont : 
 
 - L’UX/UI
 - L'interaction à travers le joystick
 
-L’UX/UI à été un problème tant l’application est singulière. Elle n’a pas vocation à afficher du contenu comme une application classique, au contraire, elle affiche le moins de contenu possible sur le téléphone pour forcer les joueurs à lever la tête et à collaborer verbalement. Cela mène à la recherche de compromis. Faut-il créer une application type télécommande avec pleins de boutons à proximité mais sans souci d’esthétisme, ou au contraire faut-il compartimenter l’application pour laisser l’utilisateur respirer?
+L’UX/UI à été un problème tant **l’application est singulière**. Elle n’a pas vocation à afficher du contenu comme une application classique, au contraire, elle affiche le moins de contenu possible sur le téléphone pour **forcer les joueurs à lever la tête** et à collaborer verbalement. Cela mène à la recherche de compromis. Faut-il créer une application **type télécommande** avec pleins de boutons à proximité mais sans souci d’esthétisme, ou au contraire faut-il **compartimenter l’application pour laisser l’utilisateur respirer** ?
 Nous avons choisi la deuxième approche, mais les phases de tests montreront que ce choix à mené à une application trop lourde à l’utilisation, qui demande trop de clics pour réaliser des tâches récurrentes. C’est ce point qui nous à poussé à réaliser une v2.
 
-Ensuite, le joystick a été un problème, il a reçu plusieurs révisions. Nous avons utilisé un composant tiers sans dépendance, qui contient le minimum de code possible. Il a fallu gérer le comportement du joystick et son interaction avec l’application de A à Z, ce qui nous à mener à créer différentes fonctions plus ou moins algorithmiques.
+Ensuite, le **joystick** a été un problème, **il a reçu plusieurs révisions**. Nous avons utilisé un composant tiers sans dépendance, qui contient le minimum de code possible. Il a fallu gérer le comportement du joystick et son interaction avec l’application de A à Z, ce qui nous à mener à créer différentes fonctions plus ou moins algorithmiques.
 
-Par exemple, le premier joystick permettait seulement d’atteindre 8 directions, alors que le joystick actuel est beaucoup plus fin. Pour réaliser ces itérations, nous avons tirées des enseignements du lean engineering. A chaque itération, on relevait un problème majeur, puis on essayait de régler ce problème à l’itération suivante jusqu'à finir sur un joystick plaisant à utiliser.
+Par exemple, le premier joystick permettait seulement d’atteindre 8 directions, alors que le joystick actuel est beaucoup plus fin. Pour réaliser ces itérations, nous avons tirées des enseignements du **lean engineering**. A chaque **itération**, on relevait un **problème majeur**, puis on essayait de régler ce problème à l’itération suivante jusqu'à finir sur un joystick plaisant à utiliser.
 
 ##### b. Back
 
-Afin de pouvoir communiquer entre le front et le back nous avons choisi d’utiliser la technologie de Websockets. Cela permet de conserver une interaction en quasi temps instantané. Mais, une des premières difficultés a été de bien comprendre cette technologie. Nous avons donc mis en place une petite application web pour comprendre comment il est possible de l’intégrer dans un projet.
-Une fois cette application faite, nous avions toutes les connaissances pour mettre en place la partie back-end du projet. Le premier objectif étant d’avoir quelque chose de fonctionnel, nous nous sommes limités aux fonctionnalités les plus importantes, qui est de transmettre l’information des téléphones à l’écran, sans nous soucier de la sauvegarde des données (ce qui sera une difficulté en plus lors de l’amélioration vers la deuxième version). Nous nous sommes donc entièrement passés de base de données, et les données nécessaires à faire fonctionner le projet - les adresses websockets, et positions des curseurs - étaient stockées dans la RAM. Nous n’avons pas spécialement besoin d’avoir une persistance de ces données donc l’utilisation de la RAM est suffisante. 
-Il n’y a pas eu spécialement de difficultés liées au Back de notre projet.
+Afin de pouvoir communiquer entre le front et le back nous avons choisi d’utiliser la **technologie de Websockets**. Cela permet de conserver une **interaction en quasi temps instantané**. Mais, une des premières difficultés a été de bien comprendre cette technologie. Nous avons donc mis en place une petite application web pour comprendre comment il est possible de l’intégrer dans un projet.
+
+Une fois cette application faite, nous avions toutes les connaissances pour mettre en place la partie back-end du projet. Le **premier objectif** étant d’avoir quelque chose de **fonctionnel**, nous nous sommes limités aux fonctionnalités les plus importantes, qui est de **transmettre l’information** des téléphones à l’écran, sans nous soucier de la sauvegarde des données (ce qui sera une difficulté en plus lors de l’amélioration vers la deuxième version). Nous nous sommes donc entièrement passés de base de données, et les données nécessaires à faire fonctionner le projet - les adresses websockets, et positions des curseurs - étaient stockées dans la RAM. Nous n’avons pas spécialement besoin d’avoir une persistance de ces données donc l’utilisation de la RAM est suffisante. 
+Il n’y a pas eu spécialement de difficultés liées au Back de notre projet à cet instant du projet.
 
 Enfin, nous avons déployé le travail réalisé sur le serveur OVH mis à notre disposition.
 
 ### III. Tests utilisateurs
 
-Suite à ce premier temps, et après le déploiement de la première version de FirePixel, nous avons débuté des tests utilisateurs. Ceux-ci avaient pour objectif de voir comment les personnes réagissaient face à notre projet : voir s'ils comprenaient le fonctionnement et s’ils réussissaient à interagir avec l’écran via leurs téléphones. Enfin, nous leur demandions un court retour d’expérience afin d’en dégager d’éventuelles améliorations à apporter au projet. Nous écoutions également les remarques et suggestions qui pouvaient être exprimées au cours du test.
+Suite à ce premier temps, et après le déploiement de la première version de FirePixel, nous avons débuté des **tests utilisateurs**. Ceux-ci avaient pour objectif de voir comment les **personnes réagissaient face à notre projet** : voir s'ils comprenaient le fonctionnement et s’ils réussissaient à interagir avec l’écran via leurs téléphones. Enfin, nous leur demandions un **court retour d’expérience** afin d’en dégager d’éventuelles améliorations à apporter au projet. Nous écoutions également les remarques et suggestions qui pouvaient être exprimées au cours du test.
 
-Les premiers tests utilisateurs de Fire Pixel ont été réalisés lors de la journée poster. Ces tests ont été biaisés par le fait que nous présentions en parallèle le projet et que nous avons pu aider et guider les joueurs en parallèle de leur découverte de l’écran. Cependant, cette journée nous a aussi permis de prendre conscience de beaucoup d'aspects autour de FirePixel grâce aux retours qui nous ont été faits.
+Les premiers tests utilisateurs de Fire Pixel ont été réalisés lors de la **journée poster**. Ces tests ont été **biaisés** par le fait que nous présentions en parallèle le projet et que nous avons pu aider et guider les joueurs en parallèle de leur découverte de l’écran. Cependant, cette journée nous a aussi permis de **prendre conscience de beaucoup d'aspects autour de FirePixel** grâce aux retours qui nous ont été faits.
 
 Ainsi les principaux retours ont été les suivants :
 
-- L’interface n’est pas optimisée et n’est pas forcément simple d’utilisation : les utilisateurs ne comprennent pas où cliquer pour changer de mode (pixel par pixel ou continu) et ont du mal à saisir la différence entre la couleur avec laquelle ils dessinent et la couleur du curseur qui les symbolise sur l’écran;
-- Dans le mode continu, le nombre de directions possibles est trop limité. En effet, nous avions ici choisi de limiter à quatre le nombre d’axes possibles (horizontal, vertical et diagonales);
-- La vitesse de dessin dans le mode continu est trop faible : il est long de traverser l’écran;
-- Le mode pixel par pixel est difficile d’utilisation car long et peu pratique.
+- **L’interface n’est pas optimisée** et n’est pas forcément simple d’utilisation : les utilisateurs ne comprennent pas où cliquer pour changer de mode (pixel par pixel ou continu) et ont du mal à saisir la différence entre la couleur avec laquelle ils dessinent et la couleur du curseur qui les symbolise sur l’écran;
+- Dans le **mode continu**, le **nombre de directions possibles est trop limité**. En effet, nous avions ici choisi de limiter à quatre le nombre d’axes possibles (horizontal, vertical et diagonales);
+- La **vitesse de dessin** dans le mode continu est trop faible : il est long de traverser l’écran;
+- Le **mode pixel par pixel** est difficile d’utilisation car long et peu pratique. Car les mouvements du curseurs sont pas très précis.
 
-Malgré tout, cette première phase de tests a été un succès pour nous car c’était la première fois qu’on faisait tester notre projet et les retours ont été dans l’ensemble très positifs. Par ailleurs, une autre source de satisfaction a été le fait que l’écran fonctionne malgré les nombreux utilisateurs connectés (jusqu’à une dizaine) et qu’il n’y a pas ou très peu de temps de latence.
+Malgré tout, cette première phase de tests a été un succès pour nous car c’était la première fois qu’on faisait tester notre projet et les **retours ont été dans l’ensemble très positifs**. Par ailleurs, une autre source de satisfaction a été le fait que l’écran **fonctionne malgré les nombreux utilisateurs connectés** (jusqu’à une dizaine) et qu’il n’y a pas ou très peu de temps de latence.
 
-Une deuxième phase de tests utilisateurs a alors été effectuée. Nous avons choisi des Centraliens car c’est principalement eux qui seront amenés à se servir de notre projet. Puis, nous les avons mis face à un écran de FirePixel seul ou par petit groupe afin d’effectuer notre test utilisateur.
+Une deuxième phase de tests utilisateurs a alors été effectuée. Nous avons choisi des **Centraliens** car c’est principalement eux qui seront amenés à se servir de notre projet. Puis, nous les avons mis face à un écran de FirePixel **seul ou par petit groupe** afin d’effectuer notre test utilisateur.
 
 Les principaux points que nous avons relevé sont les suivants :
 
-- Le menu Help est très peu utilisé. Sur une dizaine de personnes, seul deux l’ont ouvert et une l’a lu entièrement;
-- Les deux modes de jeu sont difficiles à trouver notamment le mode continu qui nécessite souvent une explication;
-- Les curseurs sont difficiles à repérer quand beaucoup de personnes sont connectées simultanément. En effet, des gros aplats de couleurs se forment et il est alors difficile de repérer un petit curseur de couleur ou il est alors difficile de différencier sa couleur de celle des autres;
-- Certaines personnes ont proposé de mettre en place des modes alternatifs pour rendre le jeu plus dynamique : objets cachés qui font que si l’on colorie une case un effet se déclenche (comme curseur qui grossit, zone qui devient d’une couleur, …) ou alors guerre de territoire avec pourcentage de l’écran rempli par les différentes couleurs.
+- Le **menu Help** est très peu utilisé. Sur une dizaine de personnes, seul deux l’ont ouvert et une l’a lu entièrement;
+- Les **deux modes de jeu sont difficiles à trouver** notamment le mode continu qui nécessite souvent une explication;
+- Les **curseurs sont difficiles à repérer** quand beaucoup de personnes sont connectées simultanément. En effet, des gros aplats de couleurs se forment et il est alors difficile de repérer un petit curseur de couleur ou il est alors difficile de différencier sa couleur de celle des autres;
+- Certaines personnes ont proposé de mettre en place des **modes alternatifs** pour rendre le jeu plus dynamique : objets cachés qui font que si l’on colorie une case un effet se déclenche (comme curseur qui grossit, zone qui devient d’une couleur, …) ou alors guerre de territoire avec pourcentage de l’écran rempli par les différentes couleurs.
 
-Parmi toutes les idées émises, nous avons choisi de nous concentrer principalement sur la refonte du visuel de l’interface. En effet, celle-ci nous paraît primordiale. Il est trop difficile de bien jouer si l’interface n’est pas comprise.
+Parmi toutes les idées émises, nous avons choisi de nous concentrer principalement sur la **refonte du visuel** de l’interface. En effet, celle-ci nous paraît primordiale. Il est trop difficile de bien jouer si l’interface n’est pas comprise.
 
 La possibilité d’ajouter des modes de jeu nous paraît intéressante afin d’ajouter du dynamisme dans le jeu. Cependant, la durée du projet étant limitée, nous n’en avons pas fait une priorité. Il nous a semblé plus important de, d’abord, améliorer l’interface.
 
@@ -193,7 +194,7 @@ Suite aux retours des tests utilisateurs, nous sommes repartis dans un cycle de 
 
 #### 1. Maquette
 
-Ainsi, nous avons retravaillé la maquette de la Web App afin qu’elle soit plus propice aux interactions pour les utilisateurs. Tout ceci a été fait en parallèle des cours d'UI qui, nous ont présenté les différents concepts pour réaliser une bonne maquette d'application sur Figma.
+Ainsi, nous avons **retravaillé la maquette de la Web App** afin qu’elle soit plus propice aux interactions pour les utilisateurs. Tout ceci a été fait en parallèle des **cours d'UI** qui, nous ont présenté les différents concepts pour réaliser une bonne maquette d'application sur Figma.
 
 La première étape a été de refaire les boutons pour les remplacer par des symboles plus simples pour la compréhension et plus esthétiques. Plusieurs propositions ont alors été faites, dont celles ci-dessous :
 
@@ -215,15 +216,20 @@ Par ailleurs, la palette est désormais accessible directement via une barre scr
 
 La couleur symbolisant le joueur est visible en plein centre de l’écran. Il est alors plus difficile de faire la confusion entre cette couleur et celle choisie pour dessiner.
 
-La manière de choisir le mode de dessin est la plus simple possible. Il suffit d’orienter le bouton vers celui de notre choix.
+La manière de choisir le **mode de dessin** est la plus **simple** possible. Il suffit d’orienter le bouton vers celui de notre choix.
 
-Enfin, la grille de taille 5x5 permet au joueur de voir plus précisément les cases autour desquelles il se situe et, il peut dessiner directement dessus grâce au mode Pixel.
+Enfin, la grille de taille 5x5 permet au joueur de voir plus précisément les cases autour desquelles il se situe et, il peut **dessiner directement dessus** grâce au mode Pixel.
 
 #### 2. Développement
 
 Suite à ce travail, nous avons donc implémenté la maquette choisie. Une modification y a été apportée. Le mode pixel par pixel n’est plus disponible mais est faisable uniquement sur l’écran du haut du téléphone. Il est alors possible de cliquer directement sur un pixel dans l’aperçu en haut du téléphone pour le colorier. Le bouton du bas permet de se déplacer en coloriant ou sans colorier.
 
 ##### a. Front
+
+- Ajout de la grille
+- Refonte selon la nouvelle UI
+- Joystick
+- Adaptabilité sur la taille de l'écran (screen)
 
 ##### b. Back
 
