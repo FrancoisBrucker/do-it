@@ -220,12 +220,12 @@ Il n’y a pas eu spécialement de difficultés liées au Back de notre projet �
 <h4>2. Développement</h4>
 <p>Suite à ce travail, nous avons donc implémenté la maquette choisie. Une modification y a été apportée. Le mode pixel par pixel n’est plus disponible mais est faisable uniquement sur l’écran du haut du téléphone. Il est alors possible de cliquer directement sur un pixel dans l’aperçu en haut du téléphone pour le colorier. Le bouton du bas permet de se déplacer en coloriant ou sans colorier.</p>
 <h5>a. Front</h5>
-<ul>
-<li>Ajout de la grille</li>
-<li>Refonte selon la nouvelle UI</li>
-<li>Joystick</li>
-<li>Adaptabilité sur la taille de l'écran (screen)</li>
-</ul>
+<p>Dans cette dernière itération nous avons dû implémenter les nouvelles fonctionnalités décrites précédemment.</p>
+<p>Nous avons implémenté la grille à l'aide d'un canvas afin de représenter les pixels aux alentours de notre curseur. Les pixels sont récupérés via websocket. Cette grille a aussi pour but de pouvoir dessiner directement et plus précisément autour de son curseur. Un appui long permet également de se déplacer de case en case.</p>
+<p>Par ailleurs, nous avons également modifié l'esthétique générale de l'application et ainsi intégré la nouvelle maquette fraîchement créée. Cette refonte du design a été l'occasion de factoriser notre code et l'organiser de manière plus structurée. Grâce à cela, nous avons réduit le nombre de clicks nécéssaires à chaque action, tout en gardant l'interface épurée.</p>
+<p>La page screen a également été modifiée afin de mettre en place un canvas dit &quot;responsive&quot; qui va prendre toute la place disponible et s'adapter aux changements de taille d'écrans. On peut ainsi profiter d'une surface de dessin maximale sur l'entièreté de l'écran.</p>
+<p>Enfin, afin de rendre plus claire l'utilisation nous avons aussi changé l'emplacement des couleurs. Désormais, au centre du joystick se trouve la couleur du joueur, la couleur de son curseur sur l'écran, et l'encadré coloré sur la grille correspond à la couleur avec laquelle vous êtes entrain de dessiner.</p>
+<p>Nous avons aussi ajouter un bouton sur la page de téléphone visant à faire grossir le curseur sur la page de screen afin que l'utilisateur puisse le repérer si jamais il l'a perdu de vue.</p>
 <h5>b. Back</h5>
 <p>La partie Back du projet, à la fin du premier déploiement, <strong>utilisait seulement un stockage en RAM</strong>, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.</p>
 <p>La première étape a donc été de complètement restructurer le Back pour <strong>intégrer une base de données</strong>. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.</p>
