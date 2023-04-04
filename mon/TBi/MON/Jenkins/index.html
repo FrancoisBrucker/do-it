@@ -97,16 +97,16 @@
 </summary>
 <div class="mx-8 pb-2">
 <ul>
-<li>Niveau confirmé</li>
-<li>Pré-requis nécéssaires nombreux</li>
-<li>Instalations d'outils nécéssaires</li>
+<li>Niveau intermédiaire</li>
+<li>Pré-requis nécessaires nombreux</li>
+<li>Installations d'outils nécessaires</li>
 </ul>
 </div>
 </details>     
 </div>
 <h1>Jenkins, en théorie :</h1>
 <h3>Objectif :</h3>
-<p>Comprendre les besoins qui mènent à l'utilisation d'un outil comme Jenkins pour un developpeur fullstack, puis mettre en place un exemple pratique d'utilisation.</p>
+<p>Comprendre les besoins qui mènent à l'utilisation d'un outil comme Jenkins pour un développeur fullstack, puis mettre en place un exemple pratique d'utilisation.</p>
 <h3>Sujets abordés pendant le MON :</h3>
 <ul>
 <li>Qu'est ce que Jenkins ?</li>
@@ -124,15 +124,15 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
 </svg>
 <div class="pl-8 mr-8">
-<p>C'est un MON avancé : les manipulations ne sont pas compliquées mais la mise en place nécéssite de solides bases sur de nombreux concepts différents.</p>
+<p>C'est un MON intermédiaire : les manipulations ne sont pas compliquées mais la mise en place nécessite des bases sur de nombreux concepts différents.</p>
 </div></div>
 <p>Pré-requis :</p>
 <ul>
-<li>Connaitre le contexte de devleppoment Fullstack.</li>
+<li>Connaître le contexte de development Fullstack.</li>
 <li>Linux, CLI, shell, ssh</li>
 <li>Git, Github</li>
 <li><a href="./../Docker">Docker</a>.</li>
-<li>Un <a href="./../../../../pok/un-site-chez-moi/TBi/Artblog">projet</a> à portée de mains, (la doc jenkins en fourni un).</li>
+<li>Un <a href="./../../../../pok/un-site-chez-moi/TBi/Artblog">projet</a> à portée de mains, (la doc Jenkins en fourni un).</li>
 </ul>
 </div></div>
 <h3>Ressources utilisées :</h3>
@@ -151,7 +151,7 @@
 <li>Ajouter les dernières fonctionnalités le plus rapidement possible</li>
 </ul>
 <p>Plus particulièrement, <strong>la continuous integration</strong> est l'ensemble de bonnes pratiques et d'outils qui permet de développer et tester e le code dans une version prête à être déployée le plus souvent possible.<br>
-Traditionnelement, dans une équipe de développeur, la partie front et la partie Back pouvaient être développées par des personnes différentes et mises en communs quelques fois avant de lancer des tests. Cette technique est inéfficace car elle laisse le temps à des bugs ou des incompatibilités de grandir sans que l'on s'en rend compte. En effet, si l'on test le système seulement une fois par mois, il est possible de se retrouver avec une version qui ne marche plus et perdre énormément de temps.<br>
+Traditionnellement, dans une équipe de développeur, la partie front et la partie Back pouvaient être développées par des personnes différentes et mises en communs quelques fois avant de lancer des tests. Cette technique est inefficace car elle laisse le temps à des bugs ou des incompatibilités de grandir sans que l'on s'en rend compte. En effet, si l'on test le système seulement une fois par mois, il est possible de se retrouver avec une version qui ne marche plus et perdre énormément de temps.<br>
 Des outils comme git, github action ou Jenkins permettent aux développeurs de mettre leurs codes en communs puis de lancer une batterie de tests sur ce code plusieurs fois par jour. Grâce à cela, on évite la propagations de bugs et finalement, on gagne du temps.</p>
 <p>Quand le code est testé est prêt à être déployé il ne reste qu'à ... le déployé!</p>
 <p><strong>La continuous delivery</strong> est l'ensemble d'outils et de pratiques qui permettent de déployer automatiquement la dernière version fonctionnelle du code sur le serveur de production. Cela permet d'offrir au client une version qui soit toujours fonctionnelle et qui possède les derniers ajouts, mises à jours correctives ou même mises à jour de sécurité.<br>
@@ -166,7 +166,7 @@ On appelle cela un <strong>nightly build</strong>.</p>
 <ul>
 <li>les élèves développent en collaboration grâce à github</li>
 <li>A chaque commit sur la branche principale, le code est testé par Github action</li>
-<li>Si les tests passent, le code est déployé sur le site <a href="http://github.io">github.io</a> et la dernière version est disponnible directement sans que M.Brucker ait besoin de déployer quoi que ce soit lui-même</li>
+<li>Si les tests passent, le code est déployé sur le site <a href="http://github.io">github.io</a> et la dernière version est disponible directement sans que M.Brucker ait besoin de déployer quoi que ce soit lui-même</li>
 </ul>
 <p>Le problème avec cette manière de procéder est que l'on peut push un commit monstrueux qui détruit le site. Peut importe l'état des tests, le commit sera accepté et il faudra réparer le code avant de pouvoir déployer le site à nouveau.</p>
 </div></div>
@@ -178,7 +178,7 @@ On appelle cela un <strong>nightly build</strong>.</p>
 <div class="pl-8 mr-8">
 <p>Une vidéo explicative <a href="https://www.youtube.com/watch?v=LFDrDnKPOTg&amp;ab_channel=Simplilearn">ici</a></p>
 </div></div>
-<p>L'idée est d'un tel outil est de mettre en place un environnement d'intégration continue. C'est à dire que le but est de créer un outil qui permet de developper, tester et pousser le code automatiquement, dès sa création. Par exemple, au lieu d'ajouter de nouvelles fonctionnalités sur notre site web, de faire un commit sur le repository, puis se rendre compte qu'il ne marche pas et corriger les bugs puis recommencer, on peut automatiser tout ça. Dans le meilleur des cas, à chaque nouvelle fonctionnalité, elle est automatiquement testée puis integrée dans une version viable du code, prête à être déployée. Si les tests détectent des erreurs ou des incompatibilités dans le code, la nouvelle fonctionnalité n'est pas integrée dans la branche principale et le développeur peut la retravailler sans jamais corrompre la version du code qui marche.</p>
+<p>L'idée est d'un tel outil est de mettre en place un environnement d'intégration continue. C'est à dire que le but est de créer un outil qui permet de développer, tester et pousser le code automatiquement, dès sa création. Par exemple, au lieu d'ajouter de nouvelles fonctionnalités sur notre site web, de faire un commit sur le repository, puis se rendre compte qu'il ne marche pas et corriger les bugs puis recommencer, on peut automatiser tout ça. Dans le meilleur des cas, à chaque nouvelle fonctionnalité, elle est automatiquement testée puis intégrée dans une version viable du code, prête à être déployée. Si les tests détectent des erreurs ou des incompatibilités dans le code, la nouvelle fonctionnalité n'est pas intégrée dans la branche principale et le développeur peut la retravailler sans jamais corrompre la version du code qui marche.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -215,14 +215,14 @@ On appelle cela un <strong>nightly build</strong>.</p>
 </details>     
 </div>
 <h2>La Pipeline Jenkins :</h2>
-<p>La pipeline, ou le workflow, est l'ensemble des étapes qui gravitent autour de jenkins et qui permettent de mettre en place l'intégration et le déploiement continue.</p>
-<p>|Dev| =&gt; Commit -&gt; Build -&gt; Test -&gt; Realase -&gt; Deploy =&gt; |Production|</p>
-<p>Cette pipeline peut être enclanchée périodiquement comme avec un nightly build ou elle peut être enclanchée à chaque commit.</p>
+<p>La pipeline, ou le workflow, est l'ensemble des étapes qui gravitent autour de Jenkins et qui permettent de mettre en place l'intégration et le déploiement continue.</p>
+<p>|Dev| =&gt; Commit -&gt; Build -&gt; Test -&gt; Release -&gt; Deploy =&gt; |Production|</p>
+<p>Cette pipeline peut être enclenchée périodiquement comme avec un nightly build ou elle peut être enclenchée à chaque commit.</p>
 <h1>Jenkins, En pratique :</h1>
 <p>Nous allons mettre en place Jenkins avec un projet node.js, en suivant <a href="https://www.jenkins.io/doc/tutorials/build-a-node-js-and-react-app-with-npm/">le tutoriel officiel de la doc</a>. Le projet utilisé ne sera pas le projet de base proposé par la doc mais mon propre projet, le POK Artblog.</p>
 <h2>Lets-go</h2>
 <p>La Doc nous propose de créer une image Docker qui va servir de serveur CI, c'est à dire le serveur qui s'occupe de réaliser les tâches automatiques qu'on va mettre en place. Ici, on simule ce serveur sur notre ordinateur, en pratique ça peut être fait par un serveur dédié.<br>
-Je ne recopie pas la doc ici, seulement les subtilités que je recontres et les résultats.</p>
+Je ne recopie pas la doc ici, seulement les subtilités que je rencontres et les résultats.</p>
 <h3>Setup du conteneur Docker :</h3>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -236,17 +236,17 @@ Je ne recopie pas la doc ici, seulement les subtilités que je recontres et les 
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
 </svg>
 <div class="pl-8 mr-8">
-<p>Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfere rester sur des technologies à jour, ignorez ce qui concerne Blue Ocean si vous ne souhaitez pas l'utiliser.</p>
+<p>Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfère rester sur des technologies à jour, ignorez ce qui concerne Blue Ocean si vous ne souhaitez pas l'utiliser.</p>
 </div></div>
-<p>Le tutoriel de Jenkins utilise <strong>Docker:dind</strong> et les <strong>Networks</strong> de Docker. Ce sont des outils qui permettent de créer plusieurs containers et de les lier entre eux. Le problème : je ne sais pas comment ça marche et je n'ai pas envie de savoir pour le moment. Je sais par contre utiliser Docker compose, qui est sensé faire la même chose mais plus simplment, j'essaie de me débrouiller avec ça.<br>
+<p>Le tutoriel de Jenkins utilise <strong>Docker:dind</strong> et les <strong>Networks</strong> de Docker. Ce sont des outils qui permettent de créer plusieurs containers et de les lier entre eux. Le problème : il existe maintenant des manières plus simples. Nous avons Docker compose, qui est sensé faire la même chose mais plus simplement, j'essaie de me débrouiller avec ça.<br>
 En lisant la doc je vois que j'ai besoin de 2 services :</p>
 <ul>
 <li>Jenkins</li>
 <li>App, service qui va lancer mon instance node</li>
 </ul>
-<p>J'écris un Docker-compose.yml qui invoque ces deux types de conteneur, avec des images que j'ai récupéré sur le site officel <a href="https://hub.docker.com/">DockerHub</a><br>
+<p>J'écris un Docker-compose.yml qui invoque ces deux types de conteneur, avec des images que j'ai récupéré sur le site officiel <a href="https://hub.docker.com/">DockerHub</a><br>
 Aussi, je pull les images avant de lancer le compose :</p>
-<pre><code>docker pull jenkins/jenkins:lts
+<pre><code>docker pull jenkins/jenkins:alpine-lts
 docker pull node-16alpine
 </code></pre>
 <p>J'expose les ports utilisés par les applications, et je crée un volume.<br>
@@ -279,8 +279,8 @@ volumes:
 </code></pre>
 <p>Il faut alors ajouter un dockerfile qui définit le build pour next.js, cf le MON Docker.<br>
 On installe BlueOcean directement dans l'instance Jenkins.<br>
-La ligne sur l'environement permet d'enlever le besoin d'avoir un mdp, cela implique biensûr des problèmes de sécurités.</p>
-<p>On peut lancer le container en deamon avec dans le terminale : <code>docker-compose up -d</code>. Ajoutez un nom si vous voulez arrêter le container en CLI, sinon allez sur Docker desktop.</p>
+La ligne sur l’environnement permet d'enlever le besoin d'avoir un mdp, cela implique bien-sûr des problèmes de sécurités.</p>
+<p>On peut lancer le container en daemon avec dans le terminale : <code>docker-compose up -d</code>. Ajoutez un nom si vous voulez arrêter le container en CLI, sinon allez sur Docker desktop.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -296,7 +296,7 @@ Par exemple, dans le container, je reçois une erreur de React que je n'avais pa
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
 </svg>
 <div class="pl-8 mr-8">
-<p>Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfere rester sur des technologies à jour, passez à la partie suivante si besoin.</p>
+<p>Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfère rester sur des technologies à jour, passez à la partie suivante si besoin.</p>
 </div></div>
 <p>Un fois sur Jenkins :<br>
 On passe d'abord la langue en anglais car la traduction est désastreuse, pour cela, il faut installer le plugin <strong>Local</strong>. Ensuite, on installe le plugin <strong>Blue Ocean</strong> puis <strong>Pipeline</strong> on restart jenkins. ( C'est long ). Finalement on bascule sur <strong>Blue Ocean</strong>.</p>
@@ -367,7 +367,7 @@ Finished: SUCCESS
 <p>Nous allons mettre en place une pipeline qui effectue une action sur le repository à chaque pull-request effectuée sur le remote.</p>
 <h4>Relier Jenkins et Github par SSH :</h4>
 <p>Nous allons donner une clé de déploiement a Jenkins pour qu'il puisse déployer ou non sur le repo Github.<br>
-Pour cela on génere une paire de clé dans notre projet Artblog avec <code>ssh keygen</code>, on choisit un dossier, je met mes clés dans ssh/ .</p>
+Pour cela on génère une paire de clé dans notre projet Artblog avec <code>ssh keygen</code>, on choisit un dossier, je met mes clés dans ssh/ .</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -379,7 +379,7 @@ Pour cela on génere une paire de clé dans notre projet Artblog avec <code>ssh 
 <img src="../images/github1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
 <p>Coté Jenkins on met en place les <strong>credentials</strong>, c'est à dire notre clé privée SSH dans une pipeline qui va permettre de modifier notre Repository github.</p>
 <h4>Permettre à Jenkins de repérer des pull request :</h4>
-<p>Pour cela on installe des plugins notamment <strong>Github API</strong> qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évenement à lieu.</p>
+<p>Pour cela on installe des plugins notamment <strong>Github API</strong> qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évènement à lieu.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -389,7 +389,7 @@ Pour cela on génere une paire de clé dans notre projet Artblog avec <code>ssh 
 </div></div>
 <h4>Plan de secours : Job périodique :</h4>
 <p>La méthode pour contourner le problème des webhooks est celle mise en place dans le POK CI-CD : on demande à jenkins de regarder toutes les heures le dernier commit de notre repo, si ce commit est identifié comme non-déployé on le déploie et on le met dans la base de données des commits déployés.<br>
-Voir le <a href="">POK</a> en question pour plus de détails et pour une implémentation qui fonctionne.</p>
+Voir le <a href="https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/CI-CD/">POK</a> en question pour plus de détails et pour une implémentation qui fonctionne.</p>
 
 
 </article>

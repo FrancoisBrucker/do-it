@@ -77,9 +77,9 @@
 
   
 
-  <h1>Docker :</h1>
+  <h2>Docker :</h2>
 <p>Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur<br>
-Il est largement utiliser dans la mise en production des appications.<br>
+Il est largement utiliser dans la mise en production des applications.<br>
 Le MON consiste à prendre l'outil en main en suivant <a href="https://docs.docker.com/">la doc officielle</a> et un workshop <a href="https://www.youtube.com/watch?v=gAGEar5HQoU&amp;t=1400s&amp;ab_channel=Docker">officiel</a>.<br>
 Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -89,26 +89,32 @@ Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
 <div class="pl-8 mr-8">
 <p>Le projet est mis en place sur Windows et je ne mettrais pas la doc pour Linux ou Mac.</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
 </svg>
-<div class="pl-8 mr-8">
-<p>Les prérequis sont : les bases de bash et de Linux, l'utilisation d'un CLI</p>
+<div class="pl-8  mb-2 mr-8">
+<p>MON débutant</p>
+</div><div class="pl-8 mr-8">
+<p>Il faut connaître :</p>
+<ul>
+<li>des bases de bash et de Linux</li>
+<li>l'utilisation d'un CLI (un terminal de commande)</li>
+</ul>
 </div></div>
-<h2><a href="">Le Workshop</a> :</h2>
+<h2>Le Workshop :</h2>
 <h3>Initialisation et premiers pas.</h3>
 <p>Il faut installer Docker depuis <a href="https://www.docker.com/">le site officiel</a>.</p>
 <p>Ensuite, on suit le workshop.</p>
 <p>Docker permet d'empaqueter une application dans un conteneur, c'est à dire que le but est de créer, sur notre ordinateur, une boite isolée du reste du système. Cette boite va contenir le code de l'application que l'on veut mettre en production, et tout ce dont elle a besoin pour fonctionner.<br>
-Ces boites doivent donc possèder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons le chercher sur DockerHub qui contient pleins d'images, c'est à dire une copie d'un système.</p>
+Ces boites doivent donc posséder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons chercher une image (une copie) de ce système sur un &quot;drive d'images&quot; sur internet. ON se dirige donc sur DockerHub qui contient pleins d'images, par exemple, on peut y récupérer l'image d'un système Linux avec la distribution Ubuntu.</p>
 <h4>Hello World</h4>
 <p>Pour chercher une image, ici une image de la distribution Linux Fedora, on se place dans le répertoire de notre projet et on lance :</p>
 <pre><code>docker pull fedora latest
 </code></pre>
 <p>Ensuite, pour notre premier hello world, on va effectuer une commande Linux avec le système fedora que l'on a téléchargé :</p>
 <p>docker run fedora echo 'hello world'</p>
-<p>Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancher un echo, puis va s'arrêter.</p>
+<p>Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancer un echo, puis va s'arrêter.</p>
 <p>on reçoit donc l'echo :</p>
 <pre><code>hello world
 </code></pre>
@@ -121,13 +127,13 @@ Ces boites doivent donc possèder leur propre système d'exploitation. Nous n'al
 <pre><code>docker run --help //liste les commandes et les options
 -i  //maintenir le container ouvert après l'executions des tâches
 -t  //ouvrir un pseudo terminale
--d  // exectuer les taches en deamon -&gt; en arrière plan, dans un autre terminale.
+-d  // exécuter les taches en daemon -&gt; en arrière plan, dans un autre terminale.
 </code></pre>
 </div></div>
 <p>D'autres commandes importantes :</p>
 <pre><code>docker ps //liste tous les containers en marche
-docker stop [id] // arrete le container proprement
-docker kill [id] // force l'arret
+docker stop [id] // arrête le container proprement
+docker kill [id] // force l'arrêt
 docker log -f [id] // renvoie tous les logs du container sur le terminale
 </code></pre>
 <h4>Dockerfile</h4>
@@ -161,7 +167,7 @@ RUN yum install -y figlet
 <p>Lors des cours de flask, on à eu l'occasion de coder un front en React et un back en flask, nous allons essayer de conteneuriser ça.<br>
 On commence à créer une image qui va créer le conteneur du front.</p>
 <p>Le front utilise node et react.js.<br>
-On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiants les dépendances et qui les installes avec npm. Ensuite, on éxecute la commande qui lance le serveur pour le front.</p>
+On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiant les dépendances et qui les installes avec npm. Ensuite, on exécute la commande qui lance le serveur pour le front.</p>
 <pre><code>FROM node:18-slim
 
 WORKDIR /app
@@ -182,10 +188,10 @@ CMD [ &quot;npm&quot;,&quot;start&quot; ]
   <img src="../images/front.png" alt="Front" style="height: 200px; margin: 0 auto; border: 0;grid-column : 2;grid-row : 1" />
 </div>
 <h3>DockerCompose</h3>
-<p>Pour containeriser une application, il est plus utile de découper l'applications en différentes parties et de containeriser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.</p>
-<p>Pour tester cela, on continue la containerisation de l'app du cours de flask.</p>
+<p>Pour containériser une application, il est plus utile de découper l'applications en différentes parties et de containériser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.</p>
+<p>Pour tester cela, on continue la containérisation de l'app du cours de flask.</p>
 <h4>Container Back-end</h4>
-<p>on créer un Dockerfile qui va creer l'image de l'application flask :</p>
+<p>on créer un Dockerfile qui va créer l'image de l'application flask :</p>
 <pre><code>FROM python:latest
 
 WORKDIR /app
