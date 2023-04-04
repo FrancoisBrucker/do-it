@@ -94,15 +94,7 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Divers ajustements CSS
 [x] Création d'un docker compose avec 3 services : le front, le microservice lieux et le microservice utilisateurs.
 
-## Bilan et futures fonctionnalités
-
-### 1-Bilan
-
-Le développement d'une application web est un projet qui peut être très enrichissant d'un point de vue professionnel et personnel. Dans ce projet, nousa avons eu l'opportunité de travailler sur différentes technologies et outils, ce qui nous a permis d'acquérir une expérience précieuse en développement web. Nous avons également développé des compétences en gestion de projet, en résolution de problèmes et en communication. Au-delà de ces compétences techniques, le projet a également permis aux membres de l'équipe de développer leur créativité et leur capacité à collaborer avec des personnes ayant des compétences différentes.
-
-Dans l'ensemble, le projet a permis à tous, à notre échelle personnelle de progresser en développement web. Que ce soit dans la façon de structurer une application ou dans la prise en main de nouveau outils et framework nécessaires à la progression du projet. Nous avons tous éprouvé et amélioré nos capacités.
-
-### 2-Futures fonctionnalités
+## Futures fonctionnalités
 
 Bien que nous soyons fiers de ce que nous avons accompli avec l'application web, il y a certaines fonctionnalités que nous aurions aimé pouvoir ajouter si le temps et les ressources nous avaient permis. Ces améliorations pourraient inclure :
 
@@ -121,3 +113,11 @@ Bien que nous soyons fiers de ce que nous avons accompli avec l'application web,
 - Ajout d'un bouton itinéraire : Il serait utile d'ajouter un bouton itinéraire pour que les utilisateurs puissent trouver facilement leur chemin vers les différents lieux répertoriés sur notre application.
   
 En somme, nous sommes conscients qu'il y a encore des améliorations à apporter à notre application, et les intégrer à l'avenir afin permettrait de garantir la satisfaction de nos utilisateurs.
+
+## Difficulté gestion de projet
+
+## Bilan
+
+Le développement d'une application web est un projet qui peut être très enrichissant d'un point de vue professionnel et personnel. Dans ce projet, nousa avons eu l'opportunité de travailler sur différentes technologies et outils, ce qui nous a permis d'acquérir une expérience précieuse en développement web. Nous avons également développé des compétences en gestion de projet, en résolution de problèmes et en communication. Au-delà de ces compétences techniques, le projet a également permis aux membres de l'équipe de développer leur créativité et leur capacité à collaborer avec des personnes ayant des compétences différentes.
+
+Dans l'ensemble, le projet a permis à tous, à notre échelle personnelle de progresser en développement web. Que ce soit dans la façon de structurer une application ou dans la prise en main de nouveau outils et framework nécessaires à la progression du projet. Nous avons tous éprouvé et amélioré nos capacités.
