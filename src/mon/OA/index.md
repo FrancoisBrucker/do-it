@@ -24,3 +24,4 @@ Ensemble des MON d'Ossama Abdane
 ## Temps 2
 
 - [Présentation de ChatGPT](./mon3.1)
+- [Formation Excel VBA](./mon3.2)
