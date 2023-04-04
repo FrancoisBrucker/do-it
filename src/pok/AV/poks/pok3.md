@@ -4,7 +4,13 @@ layout: layout/post.njk
 title: "POK 3"
 authors:
   - Antoine Varnerot
-
+tags:
+  - docker
+  - login
+  - angular
+  - express
+  - test
+  - javaScript
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">
@@ -23,8 +29,8 @@ authors:
 
 ## Sprint 2
 
-- tests unitaires
-- utilisation de docker
+- ~~tests unitaires~~
+- ~~utilisation de docker~~
 - CI (avec gitlab peut-être ou directement avec les "actions" de GitHub)
 
 ## Points difficiles/techniques
@@ -81,3 +87,89 @@ Notre site est désormais en ligne, et en se connectant on remarque que le front
 3. Authentification
 
 Pour le système d'authentification, on avait sous-estimé le temps que ca prendrait. En effet, on a utilisé les JWT tokens et même si on a trouvé un tutoriel sur le site <https://www.bezkoder.com/>, il y avait eu quelques changements depuis que ce tutoriel a été fait et notre application express était en "type: module" (paramètre dans le package.json) et ca gênait beaucoup. On a préféré terminé cela parce que c'était un gros point technique du projet et qui allait nous servir pour d'autres projets.
+
+5. Utilisation de Docker (docker-compose)
+
+Il est dans notre cas possible d'utiliser l'outil Docker Compose pour créer une application multi-conteneurs avec le front et l'API.
+
+Tout d'abord il nous faut définir le Dockerfile pour l'API.
+Dans notre dossier ```/front``` on crée un fichier ```Dockerfile``` puis on copie le code suivant:
+
+```dockerfile
+FROM node:14-alpine as development
+WORKDIR /usr/src/app/front
+
+COPY package*.json ./
+
+RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
+
+EXPOSE 4201
+
+CMD ["npm", "start"]
+```
+
+Dans notre fichier ```package.json``` on cherche la ligne associée à la commande "start" et on remplace par
+
+```json
+"ng serve --host=0.0.0.0 --port 4201",
+```
+
+Pareil dans le dossier API on crée un fichier ```Dockerfile``` qui contient le code:
+
+```dockerfile
+FROM node:14-alpine as development
+
+WORKDIR /usr/src/app/api
+
+COPY package*.json ./
+
+RUN npm install
+
+EXPOSE 3080
+
+CMD ["npm", "run", "start"]
+```
+
+Dans notre fichier ```package.json``` on cherche la ligne associée à la commande "start" et on remplace par
+
+```json
+"start": "nodemon serve",
+```
+
+On supprime les dossiers ```node_modules``` et le fichier ```package-lock.json``` pour éviter les potentiels conflits et erreurs.
+
+On crée notre fichier ```docker-compose.yml```
+
+```yml
+version: '3'
+services:
+  nodejs-server:
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    ports:
+      - "3080:3080"
+    container_name: node-api
+    volumes:
+      - ./API:/usr/src/app/api
+      - /usr/src/app/api/node_modules
+  angular-ui:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    ports:
+      - "4201:4201"
+    container_name: angular-ui
+    volumes:
+      - ./front:/usr/src/app/front
+      - /usr/src/app/app-ui/node_modules
+```
+
+Et il suffit dans le terminal les commandes suivantes pour lancer en local l'application
+
+```bash
+docker-compose build --no-cache
+docker-compose up
+```
+
+Attention à bien changer les ports et les appels à l'API dans le code de l'application !

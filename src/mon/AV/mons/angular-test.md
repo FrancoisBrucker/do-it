@@ -85,4 +85,21 @@ beforeEach(async () => {
   });
 ```
 
-Après avoir réalisé tout ces imports manquants, il me restait que 5 erreurs
+Après avoir réalisé tout ces imports manquants, il me restait que 5 erreurs.
+
+J'ai aussi rajouté l'option ```--code-coverage``` pour savoir si tout mon code était bien testé.
+Résultat :
+=============================== Coverage summary ===============================
+Statements   : 57.04% ( 174/305 )
+Branches     : 9.52% ( 2/21 )
+Functions    : 48.67% ( 55/113 )
+Lines        : 57.23% ( 174/304 )
+================================================================================
+
+## Ajouter des tests personnalisés
+
+Il suffit d'utiliser les 3 fonctions suivantes pour implémenter un test :
+
+- describe : pour définir une suite (ou groupe) de "specs".
+- it : pour définir une "spec" (ou un test).
+- expect : pour implémenter les assertions.
