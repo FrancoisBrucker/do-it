@@ -136,7 +136,7 @@ Phaser a une énorme bibliothèque d'exemples, pour voir une mise en application
 
 [API](https://photonstorm.github.io/phaser3-docs/index.html)
 
-<h3 id="h3-1">Physique (*Physics*)</h3>
+<h3 id="h3-1">Physique (<i>Physics</i>)</h3>
 
 Phaser a 2 models de physique implémentée **Arcade** et **Matter**
 
@@ -150,7 +150,11 @@ La physique **Arcade** est une physique plus simple, qui est faite pour mettre e
 
 C'est plus simple de le prendre en main. Par contre la détections des éléments extérieurs (blocks) n'est pas implémentée ce qui peut-être limitant.
 
-[Exemple de fonctionnalités possible avec la physique **Arcade**](https://labs.phaser.io/index.html?dir=physics/arcade/&q=)
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=arcade" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
 
 <h4 id="h3-1-2">Matter</h4>
 
@@ -158,9 +162,14 @@ La physique **Matter** essai de se rapprocher au plus proche de la réalité, en
 
 Il y a une variété plus importante d'objet qu'on peut créer.
 
-[Exemple de fonctionnalités possible avec la physique **Matter**](https://labs.phaser.io/index.html?dir=physics/matterjs/&q=)
 
-<h3 id="h3-2">Scène (*Scene*)</h3>
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=matter" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h3 id="h3-2">Scène (<i>Scene</i>)</h3>
 
 La scène est l'élément principal de Phaser, c'est lui qui va s'occuper de précharger les images d'initier les components et de faire tourner le jeu.
 
@@ -173,15 +182,27 @@ On peut créer 3 méthodes :
 
 Méthodes utilisées pour charger les images (*preload*), initialiser les éléments du jeu (*create*), et effectuer des actions à chaque tick du jeu (*update*).
 
-<h3 id="h3-3">Joueur (*Sprite*)</h3>
+<h3 id="h3-3">Joueur (<i>Sprite</i>)</h3>
 
 Un Sprite est un objet animé du jeu, il peut être contrôlé par le joueur ou par d'autres éléments du jeu. Il est créé à partir d'une image.
 
-<h3 id="h3-4">Carte (*Tilemap*)</h3>
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=sprite" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h3 id="h3-4">Carte (<i>Tilemap</i>)</h3>
 
 La carte du jeu peut-être générée en plaçant des bloques un par un ou en utilisant une Tilemap qui va contenir toutes les informations pour créer la map.
 
 La carte peut être composée de plusieurs couches, dont des touches qui créent des collisions ou non. C'est pratique pour générer des décors de fond, et les blocks avec lesquels notre personnage va interagir.
+
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=map" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
 
 <h2 id="liens">Liens Utiles </h2>
 
@@ -194,3 +215,49 @@ La carte peut être composée de plusieurs couches, dont des touches qui créent
 - [Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.)
 - [Github Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+  
+<style>
+  a.buttonGestionProjet{
+    display: flex;
+    position: relative;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(22,163,74);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    border: 4px white solid;
+    outline: 4px rgb(22,163,74) solid;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.12,-0.91,.85,1.86);
+  }
+  a.buttonGestionProjet:hover{
+    transform: scale(1.1);
+  }
+  a.buttonGestionProjet span{
+    display: block;
+    color: white;
+  }
+  div.allButtonGestionProjet{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+  .hoverUnderline{
+    position:relative;
+  }
+  a.buttonGestionProjet .hoverUnderline::after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 0.125em;
+    width: 0;
+    background-color:white;
+    transition: all 0.6s;
+  }
+  a.buttonGestionProjet:hover .hoverUnderline::after{
+    width:100%;
+  }
+</style>
