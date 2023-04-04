@@ -8,20 +8,24 @@ authors:
 tags: ['Docker']
 ---
 
-# Docker :
+## Docker :
 
 Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur 
-Il est largement utiliser dans la mise en production des appications.
+Il est largement utiliser dans la mise en production des applications.
 Le MON consiste à prendre l'outil en main en suivant [la doc officielle](https://docs.docker.com/) et un workshop [officiel](https://www.youtube.com/watch?v=gAGEar5HQoU&t=1400s&ab_channel=Docker).
 Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.
 
 {%info%} Le projet est mis en place sur Windows et je ne mettrais pas la doc pour Linux ou Mac. {%endinfo%}
-{%attention%} Les prérequis sont : les bases de bash et de Linux, l'utilisation d'un CLI {%endattention%}
+{%prerequis 'MON débutant'%} 
+Il faut connaître : 
+- des bases de bash et de Linux 
+- l'utilisation d'un CLI (un terminal de commande) 
+{%endattention%}
 
 
 
 
-## [Le Workshop]() :
+## Le Workshop :
 
 ### Initialisation et premiers pas.
 
@@ -30,7 +34,7 @@ Il faut installer Docker depuis [le site officiel](https://www.docker.com/).
 Ensuite, on suit le workshop.
 
 Docker permet d'empaqueter une application dans un conteneur, c'est à dire que le but est de créer, sur notre ordinateur, une boite isolée du reste du système. Cette boite va contenir le code de l'application que l'on veut mettre en production, et tout ce dont elle a besoin pour fonctionner.
-Ces boites doivent donc possèder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons le chercher sur DockerHub qui contient pleins d'images, c'est à dire une copie d'un système.
+Ces boites doivent donc posséder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons chercher une image (une copie) de ce système sur un "drive d'images" sur internet. ON se dirige donc sur DockerHub qui contient pleins d'images, par exemple, on peut y récupérer l'image d'un système Linux avec la distribution Ubuntu.
 
 #### Hello World
 
@@ -42,7 +46,7 @@ Ensuite, pour notre premier hello world, on va effectuer une commande Linux avec
 
    docker run fedora echo 'hello world'
 
-Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancher un echo, puis va s'arrêter.
+Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancer un echo, puis va s'arrêter.
 
 on reçoit donc l'echo : 
 
@@ -56,7 +60,7 @@ On peut utiliser cette commande avec des options à chercher dans docker --help 
     docker run --help //liste les commandes et les options
     -i  //maintenir le container ouvert après l'executions des tâches
     -t  //ouvrir un pseudo terminale
-    -d  // exectuer les taches en deamon -> en arrière plan, dans un autre terminale.
+    -d  // exécuter les taches en daemon -> en arrière plan, dans un autre terminale.
 
 
 {%endinfo%}
@@ -64,8 +68,8 @@ On peut utiliser cette commande avec des options à chercher dans docker --help 
 D'autres commandes importantes : 
 
     docker ps //liste tous les containers en marche
-    docker stop [id] // arrete le container proprement
-    docker kill [id] // force l'arret
+    docker stop [id] // arrête le container proprement
+    docker kill [id] // force l'arrêt
     docker log -f [id] // renvoie tous les logs du container sur le terminale
 
 
@@ -106,7 +110,7 @@ Lors des cours de flask, on à eu l'occasion de coder un front en React et un ba
 On commence à créer une image qui va créer le conteneur du front.
 
 Le front utilise node et react.js. 
-On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiants les dépendances et qui les installes avec npm. Ensuite, on éxecute la commande qui lance le serveur pour le front.
+On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiant les dépendances et qui les installes avec npm. Ensuite, on exécute la commande qui lance le serveur pour le front.
 
     FROM node:18-slim
 
@@ -134,13 +138,13 @@ On lance ensuite un container de cette image en spécifiant le port 3000 et voil
 
 ### DockerCompose
 
-Pour containeriser une application, il est plus utile de découper l'applications en différentes parties et de containeriser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.
+Pour containériser une application, il est plus utile de découper l'applications en différentes parties et de containériser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.
 
-Pour tester cela, on continue la containerisation de l'app du cours de flask.
+Pour tester cela, on continue la containérisation de l'app du cours de flask.
 
 #### Container Back-end
 
-on créer un Dockerfile qui va creer l'image de l'application flask :
+on créer un Dockerfile qui va créer l'image de l'application flask :
 
     FROM python:latest
 

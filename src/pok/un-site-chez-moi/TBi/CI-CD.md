@@ -10,7 +10,7 @@ tags: ['CI/CD','jenkins','docker','TDD','nextjs','react','CMS']
 
 Dans ce POK, nous allons améliorer mon projet précédent : l'Artblog, en lui ajoutant de nouvelles pages et en créant un environnement d'intégration et de déploiement continue.
 
-{% prerequis %} 
+{% prerequis 'Niveau avancé ' %} 
 C'est un POK avancé car il met en relation plusieurs technologies différentes qu'il faut donc connaître, il demande de solides bases en : 
 
 - Linux et shell
