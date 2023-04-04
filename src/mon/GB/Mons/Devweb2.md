@@ -50,7 +50,7 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
 
     let personne1 = new Personne('Jean', 'Biche', 32, 'neutre', ['musique', 'tricot', 'boxe']); //personne1 hérite des attributs de Personne()
 ```
-Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src='Chaine prototypage.png'/><br>
+Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../../Images/Chaine_prototypage.png"/><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure : 
 ```bash
 Personne.prototype.aurevoir = function() {
@@ -97,7 +97,7 @@ var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 ```
 Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br> 
-![](/src/mon/GB/Mons/json-superheroes.png)
+<img src="../../Images/json-superheroes.png"/>
 
 5. Pratique de construction d'objets
 
@@ -105,12 +105,50 @@ Dans cette partie, nous voyonsun exemple pratique d'utilisations d'objets. Nous 
 Les balles sont donc les objets auxquelles nous appliquons différentes méthodes afin de construire l'animation souhaitée. <br>
 Cela m'a aussi permis de prendre le temps de découvrir Canvas bien que nous en ayons déjà parlé durant le cours de web flask. 
 
-### Découverte des API web
+#### Découverte des API web
 
 1. Introduction 
 
 Qu'est ce qu'une API ? Une API est une construction conférée par un navigateur ou une tierce application permettant d'utiliser des fonctionnalités complexe normalement programée en langage de bas niveau (C++). Nous pouvons par exemple citer l'API DOM comme API navigateur ou l'API Twitter comme API tierce.<br>
 Nous voyons aussi les définitions de framework et bibliothèque. 
+
+2. API DOM
+
+Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures "appenChild" et "removeChild" car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br>
+Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés "setAttribute". Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés : 
+```bash
+        var btn=document.querySelector('button');
+        var liste=document.querySelector('ul');
+        var input=document.querySelector('input');
+
+        btn.addEventListener('click', Ajout);
+
+        function Ajout(){
+            var choix=input.value;
+            input.value=' ';
+
+            var ligne=document.createElement('li');
+            var sp=document.createElement('span');
+            var enlever=document.createElement('button');
+
+            ligne.appendChild(sp);
+            sp.textContent=choix;
+            ligne.appendChild(enlever);
+            enlever.textContent='Delete';
+            liste.appendChild(ligne);
+
+            enlever.addEventListener('click', ()=> {
+                liste.removeChild(ligne);
+            });
+
+            input.focus();
+        }
+```
+3. API tierce
+
+On voit ici le fonctionnement des API tierce. Ces API s'appellent de manières différentes car il faut aller les "chercher", il faut en effet d'abord se connecter aux fonctionnalités de l'API. Nous voyons ensuite plusieurs exemple avec l'API tierce MapQuest dont nous voyons plusieurs propriétés et une API REST, ici l'API NewYorkTimes. <br> 
+Une API REST est un type d'API tierce où l'on ne récupère pas les données à l'aide d'une bibliothèque JavaScript mais à l'aide de requêtes HTTP. Ces API utilisent généralement une clé de développement. <br>
+Nous voyons finalement un exemple de récupération et d'utilisation des données récupérés via l'API sur notre site web. 
 
 ### Le framework angular 
 
@@ -120,6 +158,9 @@ Angular est un framework permettant de coder en front-end de manière plus effic
 - HTML 
 - SCSS 
 - TypeScript
+
+2. Premier site web
+
 Dans un premier temps, nous apprenons à créer des "components" et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :
 ```bash
 export class FaceSnapComponent {
@@ -130,7 +171,7 @@ export class FaceSnapComponent {
   imageUrl!:string;
 ngOnInit(){
   this.title='Timothé';
-  this.description='Mon super pote';
+  this.description='Mon meilleur ami';
   this.createdDate=new Date();
   this.snaps=6;
   this.imageUrl='https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg';
@@ -146,3 +187,24 @@ Nous les affichons ensuite dans notre fihier html associé à ce component :
     <img [src]="imageUrl" [alt]="title">
 </div>
 ```
+Nous nous occupons ensuite de rendre notre application plus dynamique en y ajoutant un premier évènement. Nous cherchons à créer une fonction permettant de réagir à notre image. Nous rajoutons donc un bouton exprimant cette réaction. qui prend une valeur lorsqu'il est cliqué et retourne à sa valeur initiale lorsqu'il est reclické. Cela permet une seule réaction par utilisateur. 
+ ```bash
+ onSnap() {
+  if (this.buttonText === ':D') {
+    this.snaps++;
+    this.buttonText = 'Je retire';
+  } else {
+    this.snaps--;
+    this.buttonText = ':D';
+  }
+ ```
+ Nous appelons bien sur cette fonction dans notre component.html : 
+```bash
+    <p>
+        <button (click)="onSnap()">{{ buttonText }}</button>
+        :D {{ snaps }}
+    </p>
+ ```
+ Voici à quoi ressemble mon site : <br>
+ <img src="../../Images/Premier_site.png"/>
+ 

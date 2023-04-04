@@ -4,10 +4,14 @@ layout: layout/post.njk
 title: "MON de Sarah"
 authors:
   - Sarah Honoré
-
+tags :
+  - 'etude de cas'
+  - 'processus'
+  - 'organisation'
+  - 'systeme information'
 ---
 <!-- début résumé -->
-Le premier MON que je vais réaliser est  un diagnostic organisationnel, une modélisation des processus, et une conception d'un SI  en travaillant sur l'étude de cas CFP.
+Le premier MON que je vais réaliser est un diagnostic organisationnel, une modélisation des processus, et une conception d'un SI  en travaillant sur l'étude de cas CFP.
 
 <!-- fin résumé -->
 
@@ -35,7 +39,7 @@ Cette question qui semble assez simple à première vue nécessite d'être faite
 
 Pour la question 4, de même que dans la question 3, il existe de nombreuses représentations, tel que celle ci [Lien](http://www.axess-qualite.fr/cartographie-processus.html). Finalement j'ai simplement réalisé une liste des processus que j'ai identifié en les classifiant en 3 macro-processus (macro-processsu de management, macro-processus de préparation et réalisation des commandes, macro-processus de soutien). 
 
-La question 5 est celle qui m'a posé le plus de difficultés car il a tout d'abord fallu comprendre comment représenter des **processus avec le modèle BPMN** (Business Process Model anf Notation). J'ai consulté différents sites qui expliquent la notation : 
+La question 5 est celle qui m'a posé le plus de difficultés car il a tout d'abord fallu comprendre comment représenter des **processus avec le modèle BPMN** (Business Process Model and Notation). J'ai consulté différents sites qui expliquent la notation : 
 - [edrawsoft](https://www.edrawsoft.com/fr/how-to-create-bpmn.html#:~:text=Pour%20cr%C3%A9er%20des%20diagrammes%20BPMN%2C%20les%20objets%20BPMN%20sont%20s%C3%A9lectionn%C3%A9s,les%20formes%20comme%20d'habitude.)
 - [lucidchart](https://www.lucidchart.com/pages/fr/explication-des-symboles-bpmn)
 J'ai essayé de prendre en main le site lucidchart pour réaliser de manière numérique ma cartographie mais étant donné que je n'étais pas en avance et que ce n'est pas si simple à prendre en min j'ai finalement réalisé ma cartographie à la main. 

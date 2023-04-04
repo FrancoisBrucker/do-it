@@ -2,8 +2,16 @@
 layout: layout/post.njk
 
 title: "Web Front 1 (HTML, CSS, Bootstrap)"
+
 authors:
   - Jeffrey Edisah
+
+tags :
+  - 'info'
+  - 'web'
+  - 'front'
+  - 'html'
+  - 'css'
 
 ---
 <!-- début résumé -->
@@ -61,3 +69,21 @@ La mise en page apparait comme la grande force de CSS, et aussi la partie la plu
 ## Bootstrap
 
 J'ai manqué de temps pour voir Bootstrap de manière exhaustive et organiser mes pensées mais je suis toujours en train de regarder ces liens actuellement, la [documentation Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) ainsi que le [cours OpenClassrooms](https://openclassrooms.com/fr/courses/7542506-creez-des-sites-web-responsives-avec-bootstrap-5). je prendrais sûrement un peu de temps pour mieux organiser cette partie plus tard.
+
+Bootstrap est un framework qui facilite la mise en place de pages aux layouts agréables et responsives. Bootstrap construit ses propres classes à rajouter aux différents éléments HTML afin de leur appliquer les propriétés Bootstrap.
+
+Un exemple de structure d'un élément bootstrap se construit comme ceci :
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12 col-md-4'>
+        ...
+      </div>
+    </div>
+  </div>
+
+Concrètement, la page Bootstrap se construit sur un concept de grille, à 12 colonnes. On accède à la grille tout d'abord à l'aide d'une classe container. Cette classe met en place la grille, à laquelle les autres éléments peuvent accéder, tout d'abord par les rows, c'est-à-dire les lignes de la grille, et les colonnes, avec différents agencements pour différentes tailles d'écran ou **breakpoints**. Il est également assez simple de rajouter des marges, avec des tailles prédéfinies.
+
+AU delà de la mise en page, Bootstrap facilite grandement le design des pages avec des composants déjà faits et facile à implémenter (encore une fois à l'aide de classes) telle que la navbar, les carousels, les boutons, etc...
+
+Un des problèmes que j'ai cependant rencontré avec l'utilisation de Bootstrap est la difficulté de personnalisation des différents composants, avec des ambiguïtés parfois au niveau des classes choisis, ou même au niveau de la spécificité, ce qui rend la personnalisation tatillonne. Apparemment, la personnalisation est plus simple avec des fichiers SCSS mais je ne suis pas encore au point sur les préprocesseurs CSS (peut-être un futur MON).

@@ -7,6 +7,7 @@ authors:
 
 tags: ['mon']
 ---
+
 <!-- Début Résumé -->
 L'ensemble de mes MON
 <!-- fin résumé -->
@@ -18,10 +19,10 @@ L'ensemble de mes MON
 - [Deuxième MON: **Comparatif des typologies des projets agiles (Safe, scrum…)**](./MON1-2/)
 
 ### Temps 2
-- Premier MON: 
-- Deuxième MON:
+- [Premier MON: **Maturité de la transformation digitale**](./MON2-1/)
+- [Deuxième MON: **Lego in the age of digitization**](./MON2-2/)
 
 ### Temps 3
-- Premier MON: 
-- Deuxième MON: 
+-  [Premier MON: **Progresser sur Excel**](./MON3-1/)
+- [Deuxième MON: **Formation macro Excel VBA**](./MON3-2/)
 

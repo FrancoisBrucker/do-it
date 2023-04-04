@@ -19,7 +19,8 @@ Savoir comment fonctionne une application Web et enfin le lexique obscure des d�
 
 Ce MON est un cours sur le Développement Web, il se concentre sur ce qu'on appelle le Backend. Vous pourrez y apprendre la théorie et aussi la pratique avec la mise en place de votre propre application.
 
-Dans ce MON, nous allons voir comment mettre en place une application complète, avec une interface, base de données et un service de création de compte. Je vous présenterais les grands principes d'une application web, et plus précisément, comment structurer un Backend pour qu'il soit maintenable et lisible.
+
+Dans ce MON, nous allons voir comment mettre en place une application complète, avec une interface, base de données et un service de création de compte. Je vous présenterai les grands principes d'une application web, et plus précisément, comment structurer un Backend pour qu'il soit maintenable et lisible.
 Le but est d'apprendre à structurer un Backend proprement.
 
 {%attention%} Je vous présente une manière de faire les choses, il y en à d'autres et je ne garantie pas que la mienne soit parfaite.Aussi,je ne me préoccupe pas de programmation par les tests.{%endattention%}
@@ -159,6 +160,7 @@ Toutes les applications web possèdent des points communs. Elles proposent par e
 
 Au lieu de réinventer la roue depuis zéro et de coder ces fonctionnalités à chaque application, les développeurs ont inventés ce qu'on appelle un framework.
 
+
 Les frameworks sont des environnements de programmation. L'équivalent d'une librairie python. Il permettent de mettre en place rapidement tout ce qui est nécessaire au programme que l'on veut coder.
 
 Il y a des frameworks pour le frontend, des frameworks pour le backend et enfin des frameworks qui allient les deux ensembles, ce qu'on appelle un Meta Framework.
@@ -172,6 +174,7 @@ Les Frameworks sont **opinionated** à un certains degré. C'est à dire qu'ils 
 Il est important de choisir un framework dont on supporte les opinions car si on essaye d'aller contre le framework, cela complique énormément la tâche du codeur, alors que l'on veut la faciliter.
 Certains frameworks sont par conception très libre. Il y a par exemple Node.js, qui laisse une immense libertés aux utilisateurs. C'est le framework à la base de tous les autres Framework backend et frontend javascript, à la base de npm.
 
+
 Pour gérer quels frameworks on utilise, les installer, les mettre à jour etc... on utilise npm. Les commandes npm sont rentrées dans le terminale de commande et permettent gérer nos projets.
 
 Par exemple si je crée un projet avec certains frameworks, et que quelqu'un veut l'utiliser, il doit d'abord tout installer de la même manière que je l'ai fait sur mon ordinateur. Pour faciliter la tâche, il existe `npm install` qui permet de faire ça d'un coup, magiquement.
@@ -179,7 +182,9 @@ Par exemple si je crée un projet avec certains frameworks, et que quelqu'un veu
 ##### Exemples :
 
 - Frontend :
+
 [ReactJS](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/) et [Angular](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) nous proposent de créer des composants, qui seront insérés dans une page html et envoyés à l'utilisateur. Ils ont des opinions différentes.
+
 Angular prône une séparation totale des fonctions. La page html ne s'occupe que de l'affichage, le fichier js (javascript) s'occupe de l’interactivité. Chaque composant est défini par une classe et on doit donc faire attentions à certaines problématiques lié à cela. La communication entre le html et le js est gérée par des fonctions propre à Angular.
 
 React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de html et de js. Cette page affiche des composants qui sont aussi en jsx et on peut y placer si nécessaire l’interactivité. Aussi, les composants sont des fonctions, et ils interagissent entre avec des hooks, des fonctions préconstruites. 
@@ -187,7 +192,9 @@ React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de 
 Comme on peut le voir, les deux frameworks répondent aux mêmes besoins, d'une manière (parfois subtilement) différente.
 
 - Backend :
+
 Sequelize et TypeORM sont deux ORMS différents. Un ORM est un framework qui permet de connecter les fonctions ou les objets das notre programme, aux données dans une base de données.
+
 Sequelize nous permet de faire cela en js, et laisse de la liberté au programmeur de choisir comment organiser son code.
 TypeORM nous force à suivre l'architecture classique d'un backend(que l'on verra plus bas). En plus de cea, il utilise Typescript, qui nous oblige à avoir un langage typé (de type Java ou C#). Les types et l'architecture apportent une certaine lourdeur, mais permettent d'avoir un programme solide, plus simple à maintenir en équipe.
 
@@ -205,6 +212,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   La troisième idée est plus récente, le plus gros avantage est de ne as avoir à réfléchir. Les Méta Framework sont les plus opinionated de tous,a tels points qu'ils ont même une opinion sur les frameworks que vous devez utiliser. Cela à des avantages, ça permet de ne pas avoir à trouver les frameworks soit même, mais aussi, ces Metaframeworks garantissent une grande compatibilité entre les différents composants de l'applications, et une grande simplicité d'utilisation. Je le conseille au débutant qui ne savent pas quels frameworks utilisé, et aussi aux développeurs confirmés qui connaissent déjà un framework inclus dans le package et qui veulent étendre leurs possibilités.
 
+
   ### Architecture du Backend :
 
   Le backend réalise plusieurs actions spécifiques, il :
@@ -214,6 +222,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   - Execute du codes selon les requêtes qui lui sont envoyées.
   - Il met en place des requêtes pour aller chercher des informations dans la base de données.
   - Il façonne des objets pour les enregistrer dans la base de données.
+
 
   Pour réaliser ces divers tâches, on pourrait tout rassembler dans un seul fichier nommé par exemple backend.js . Le problème, est que cette méthode créer un immense fichier illisible, dur à debugger ou à factoriser quand il y a besoin de mener des changements. On essaie donc, au maximum de fractionner le projets en fichiers qui n'ont qu'une unique fonction. on aura donc, dans l'ordre défini précédemment : 
 
@@ -237,7 +246,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   |_index.ts
   |_datasource.ts
 
-  Le controller est le fichier qui répertorie **les routes** accesibles. Ces routes prennent en entrée **une requête** et renvoient **une réponse**. Pour créer la réponse, elles se servent des fonctions contenues dans **les services**. Ensuite, si besoin, les services font appels à **l'entité** pour créer un objet formatté qui peut être envoyé dans **la base de données**. Toutes les informations liées à la base de données sont contenues dans datasource.ts qui est le coeur de TypeORM. Ce dernier nous permet de se connecter facilement avec notre base de données, et créer pour nous des **repositories** automatiquement. Ces repository contiennent les fonctions qui créent les requêtes sql comme 'SELECT account *' ou 'SELECT account WHERE ...'.
+  Le controller est le fichier qui répertorie **les routes** accessibles. Ces routes prennent en entrée **une requête** et renvoient **une réponse**. Pour créer la réponse, elles se servent des fonctions contenues dans **les services**. Ensuite, si besoin, les services font appels à **l'entité** pour créer un objet formaté qui peut être envoyé dans **la base de données**. Toutes les informations liées à la base de données sont contenues dans datasource.ts qui est le coeur de TypeORM. Ce dernier nous permet de se connecter facilement avec notre base de données, et créer pour nous des **repositories** automatiquement. Ces repository contiennent les fonctions qui créent les requêtes sql comme 'SELECT account *' ou 'SELECT account WHERE ...'.
   Enfin, le fichier index.ts reprend toute l'application et la rend accessible sur le port 3000 de votre ordinateur.
 
   Coté frontend, on à une application qui permet d'envoyer des requêtes sur le même port 3000 de votre ordinateur, ces requêtes seront donc directement captées par votre backend.
@@ -246,7 +255,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   ### Initialisation du projet :
 
-  On commence par se placer dans un dossier vièrge que l'on ouvre dans un éditeur de code (VS code pour moi). On peut faire un git init, voici d'ailleurs le [lien du repository git de ce projet sur mon github](https://github.com/TuncayBilgi/cybersecenv). N'hésitez pas à aller regarder le code directement là-bas, je ne vais pas le copier-coller ici.
+  On commence par se placer dans un dossier vierge que l'on ouvre dans un éditeur de code (VS code pour moi). On peut faire un git init, voici d'ailleurs le [lien du repository git de ce projet sur mon github](https://github.com/TuncayBilgi/cybersecenv). N'hésitez pas à aller regarder le code directement là-bas, je ne vais pas le copier-coller ici.
   On aura deux dossiers principaux : 
   - Frontend
   - Backend
@@ -267,16 +276,16 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   {%enddetails%}
 
   #### Frontend :
-  On choisit d'utiliser le framework Reactjs, on initialise donc un projet React :
+  On choisit d'utiliser le framework ReactJs, on initialise donc un projet React :
   `npm `
 
   le front peut être lancé sur le port par défaut 5432 grâce à la commande :
   `npm run dev`
 
-  On ne s'occupe pas plus du front ici, reférez vous à des MON tels que [Angular](https://francoisbrucker.github.io/do-it/mon/AV/mons/web-front-1/) [Angular2](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) [React](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/).
+  On ne s'occupe pas plus du front ici, référez vous à des MON tels que [Angular](https://francoisbrucker.github.io/do-it/mon/AV/mons/web-front-1/) [Angular2](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) [React](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/).
 
   #### Backend :
-  On utlise les Frameworks suivants :
+  On utilise les Frameworks suivants :
 
   - Node/Express pour le serveur
   - TypeORM en tant qu'ORM
@@ -285,7 +294,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   `npx typeorm init --name cyberenv-back  --database postgre --docker --express`
   
-  Cela met en place un projet TypeORM nomé cyberenv-back qui utilise une base de données postgreSQL, docker et est basé sur express.js.
+  Cela met en place un projet TypeORM nommé cyberenv-back qui utilise une base de données postgreSQL, docker et est basé sur express.js.
 
   On peut y voir plusieurs dossiers, on y revient dans le chapitre d'après.
 
@@ -294,7 +303,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   On met en place une base de données PostgreSQl. Elle est hébergée à travers un conteneur docker. Je vous invite à voir le [MON Docker](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/) et/ou de copier coller mon fichier [docker-compose](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/docker-compose.yml).
   Vous pouvez aussi mettre en place votre base de données vous même.
 
-  Le plus important est de modifier le fichier data-source.ts . Ce fichier rassemble toutes les informations liées à la conexion à votre base de données. Il est appelé dans les différentes controleurs.
+  Le plus important est de modifier le fichier data-source.ts . Ce fichier rassemble toutes les informations liées à la connexion à votre base de données. Il est appelé dans les différentes contrôleurs.
   
 
   ### Mise en place d'un Account.
@@ -306,30 +315,30 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   Dans le [dto](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/dto/AccountDTO.ts), nous définissons ce qu'est un account.
   Il est défini par une classe qui possède un nom, un mot de passe et un booléen qui définit s'il est valide.
-  On pourrait définir des conditions sur le mot de passe, par exemple un mot de pass doit être plus logn que 6 charactères, mais il vaut mieux placer ces conditions dans le Account service.
+  On pourrait définir des conditions sur le mot de passe, par exemple un mot de pass doit être plus long que 6 caractères, mais il vaut mieux placer ces conditions dans le Account service.
   On définit une autre classe, accountSafeDTO, qui est un account sans le mot de passe. C'est grâce à cette classe que nous allons renvoyer des account au client, car nous ne voulons pas que le client reçoive des mots de passe, sinon un utilisateur malintentionné pourrait récupérer des mots de passes qui ne lui appartiennent pas.
 
-  En effet, [accountService](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/service/AccountService.ts) gère toute la partie logique liée à un account, on y écrit des fonctions qui seront appelés grâce à l'API. Le service est une classe, cette classe possède des méthodes comme findLogin et createAccount. Les méthodes prennent en entrée et renvoient en sortie des instances des classes définies dans le dto. Ces fonctions permettent de chercher les accounts déjà existans, pour ce faire, il faut envoyer une requête sql à la base de données. Cette requêtes est créée automatiquement par le accountrepository que l'on instancie au début de la classe.
+  En effet, [accountService](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/service/AccountService.ts) gère toute la partie logique liée à un account, on y écrit des fonctions qui seront appelés grâce à l'API. Le service est une classe, cette classe possède des méthodes comme findLogin et createAccount. Les méthodes prennent en entrée et renvoient en sortie des instances des classes définies dans le dto. Ces fonctions permettent de chercher les accounts déjà existant, pour ce faire, il faut envoyer une requête sql à la base de données. Cette requêtes est créée automatiquement par le accountrepository que l'on instancie au début de la classe.
   On met en place dans accountService toutes les fonctions qui concernent la création d'un account, et notamment les fonctions qui vérifient que les mots de passes sont au bon format.
 
-  Il nous faut alors une base de données, elle est herbergée dans un conteneur Docker (voir (tuto docker si besoin)[]) et est lancé grâce à un fichier docker-compose.yml .
+  Il nous faut alors une base de données, elle est hébergée dans un conteneur Docker et est lancé grâce à un fichier docker-compose.yml .
 
   Ensuite, nous mettons en place dans [route.ts](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/routes.ts) et [accountController.ts](https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/controller/AccountController.ts) les différentes routes qui peuvent être appelées par le front.
   Ainsi, si un navigateur envoie à l'adresse http://localhost:3000/account/create (qui est une adresse locale) une requête POST avec le body suivant : 
   ```json
   {"login" : "test", "password" : "motdepasse"}
   ```
-  Le controlleur va récuperer ce body, le transformer en account grâce au dto, et l'envoyer dans le service des accounts pour lancer une procédure de création de compte.
+  Le contrôleur va récupérer ce body, le transformer en account grâce au dto, et l'envoyer dans le service des accounts pour lancer une procédure de création de compte.
 
-  Envoyons des requêtes au serveur grâce au logiciel insominia et obserons les réponses : 
+  Envoyons des requêtes au serveur grâce au logiciel Insominia et observons les réponses : 
 
-  On voit que si on envoit notre requête GET, le backend répond : 
+  On voit que si on envoie notre requête GET, le backend répond : 
 
   <img src="./../images/get.png" alt="oops"/>
 
   Le mot de passe n'est pas dans la réponse, c'est ce que l'on veut.
 
-  Si on essaie de créer un compte qui existe déja, le bakend répond : 
+  Si on essaie de créer un compte qui existe déjà, le backend répond : 
 
   <img src="./../images/post.png" alt="oops"/>
   
@@ -339,7 +348,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   Nous faisons alors une [page frontend](https://github.com/TuncayBilgi/cybersecenv/tree/main/cyberenv-front) qui permet justement d'envoyer ce genre de requête au backend.
   Pour cela, nous utilisons un formulaire. L'utilisateur rempli le formulaire et le frontend récupère les informations rentrées, puis créer une requête appropriée et l'envoie au backend.
 
-  il faut faire attention à ce que le frontend ne puisse pas avoir accès a des informtions confidentielles, comme des motdepasse. On peut voir par exemple que si on essaie de créer un account dont le login existe déja dans la base de donnée, le backend envoie au front l'accounbt qui existe déja, il n'envoie cependant que le login et non pas le mot de passe.
+  il faut faire attention à ce que le frontend ne puisse pas avoir accès a des informations confidentielles, comme des mot de passe. On peut voir par exemple que si on essaie de créer un account dont le login existe déjà dans la base de donnée, le backend envoie au front l'account qui existe déjà, il n'envoie cependant que le login et non pas le mot de passe.
 
   Notre frontend ne donc qu'une interface qui permet d'envoyer facilement les requêtes au bon format, ainsi, on peut y faire exactement ce que l'on faisait quand on écrivait nos requêtes à la main, et recevoir les mêmes réponses : 
 
@@ -373,7 +382,7 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   Ce site va servir de base pour un prochain projet ou je testerai des principes de cyber-sécurités.
   Pour cela il faut mettre en place  : 
   - un moyen de se connecter avec un token de connexion.
-  - un hashage des mots de passe pour qu'ils ne soient pa en clair dans la base de données.
+  - un hachage des mots de passe pour qu'ils ne soient pa en clair dans la base de données.
 
 
 

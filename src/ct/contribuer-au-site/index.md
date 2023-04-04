@@ -10,13 +10,13 @@ tags: ['ct']
 
 <!-- début résumé -->
 
-Comment contribuer au site do-it.
+Comment contribuer au site `Do_it`.
 
 <!-- fin résumé -->
 
 Le site do-it est un site constitué de fichiers écrit au format [Markdown](https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/). Y contribuer est très simple, il suffit de suivre ce document.
 
-## architecture d'un post
+## Architecture d'un post
 
 Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site>
 
@@ -31,7 +31,7 @@ Il y a 3 endroits où placer ses contributions :
 * dans le dossier `pok`{.fichier}
 * dans le dossier `mon`{.fichier}
 
-### post ct
+### Post ct
 
 Votre dossier de post doit s'appeler comme l'intitulé du cours, en remplaçant les espace par des `-`.
 
@@ -45,7 +45,7 @@ src
     └── index.njk
 ```
 
-### post pok
+### Post pok
 
 Comme plusieurs groupes de personnes peuvent faire le même pok, on ajoute une indirection. Votre dossier de post doit s'appeler des initiales des personnes constituant le groupe (séparés par des `-`) et être placé dans le dossier du pok correspondant. Par exemple si j'avais avec Geo fait le pok "un site chez moi", le post aurait été nommé `FB-GD`{.fichier}, et aurait été de cette forme :
 
@@ -63,11 +63,11 @@ src
 
 Il aurait en effet contenu, en plus du fichier `index.md`{.fichier} les sources du site compressées au format `zip`.
 
-### post mon
+### Post mon
 
 De la même manière que le poste pok.
 
-## le fichier `index.md`{.fichier}
+## Le fichier `index.md`{.fichier}
 
 Il est constitué de trois parties :
 
@@ -75,11 +75,11 @@ Il est constitué de trois parties :
 * son résumé
 * le corps du texte en markdown
 
-### exemple
+### Exemple
 
 Ce fichier est visible à [cette adresse](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md).
 
-### entête
+### Entête
 
 Ce sont les premières lignes du site. Elles contiennent les méta-données du post :
 
@@ -100,11 +100,11 @@ tags: ['ct']
 ---
 ```
 
-### résumé
+### Résumé
 
 Juste en dessous de l'entête.
 
-```shell
+```text
 <!-- début résumé -->
 
 Comment contribuer au site do-it.
@@ -145,7 +145,7 @@ Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des 
 
 Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :
 
-```shell
+```
 src
 └── pok
     ├── un-site-chez-moi
@@ -168,69 +168,144 @@ Il y a deux façon de faire :
 * lien absolu. Depuis la racine du site (qui est `src`{.fichier}) `[lien]({{ "/ct/contribuer-au-site" | url }})`{.language}
 * lien relatif. Depuis là on je suis : `[lien](../../../ct/contribuer-au-site)`{.language} (je remonte 3 dossier avant de redescendre dans l'arborescence)
 
-### texte spécial
+### Texte spécial
 
 En plus des possibilités markdown, on ajoute deux distinction de texte :
 
 * fichier : `nom-fichier`{.fichier} que l'on écrit : \`nom-fichier\`\{.fichier\}
 * code : `print("coucou !")`{.language-} que l'on écrit : \`print("coucou !")\`\{.language-\}
 
-### shortcodes
+### Shortcodes
 
 Les *shortcodes* sont des aides markdown. Elles permettent de mettre en valeur un paragraphe. elles sont toutes de la même forme :
 
-\{\% nom_shortcode "titre de la shortcode" \%\}
+```text
+<div>
+&#123;% nom_shortcode "titre de la shortcode" %}
 
-le contenu de la shortcode
+le contenu de la shortcode.
 
-\{\% endnom_shortcode \%\}
+&#123;% endnom_shortcode %}
+</div>
+```
 
 {% note %}
 Le titre de la shortcode est toujours optionnel. Mais s'il est présent il est **obligatoirement** entre " ".
 {% endnote %}
 
-Regardez [le code source de cette page](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md) pour voir comment sont écrit ces différentes façon de mettre du texte en relief.
-
-#### Une mise en garde
+#### Shortcode `attention`
 
 {% attention "**faisez** attention" %}
 Une *grosse* mise en garde.
 {% endattention %}
 
-#### Une note
+Code :
+
+```text
+<div>
+&#123;% attention "**faisez** attention" %}
+Une *grosse* mise en garde.
+&#123;% endattention %}
+</div>
+```
+
+#### Shortcode `note`
+
+Nom de la shortcode : `note`
 
 {% note %}
 Une note à retenir.
 {% endnote %}
 
-#### Une information
+Code :
+
+```text
+<div>
+&#123;% note %}
+Une note à retenir.
+&#123;% endnote %}
+</div>
+```
+
+#### Shortcode `info`
 
 {% info %}
 Un truc marrant ou une information utile, mais pas indispensable.
 {% endinfo %}
 
-#### A faire
+Code :
+
+```text
+<div>
+&#123;% info %}
+Un truc marrant ou une information utile, mais pas indispensable.
+&#123;% endinfo %}
+</div>
+```
+
+#### Shortcode `faire`
 
 {% faire %}
 Quelque-chose à faire.
 {% endfaire %}
 
-#### Partie cachée
+Code :
 
-{% details "spoiler" %}
+```text
+<div>
+&#123;% faire %}
+Quelque-chose à faire.
+&#123;% endfaire %}
+</div>
+```
+
+#### Shortcode `details`
+
+{% details "titre de la shortcode" %}
 Quelque chose de caché. Que l'on peut *écrire* en `Markdown`
 {% enddetails %}
 
-#### Exercice avec son corrigé
+Le titre de la shortcode est automatiquement mis en gras.
+
+Code :
+
+```text
+<div>
+&#123;% details "titre de la shortcode" %}
+Quelque chose de caché. Que l'on peut *écrire* en `Markdown`
+&#123;% enddetails %}
+</div>
+```
+
+#### Shortcode `exercice`
 
 {% exercice %}
 Un exercice à faire.
+{% endexercice %}
+
+On peut le combiner avec la shortcode `details` pour créer un exercice et son corrigé :
+
+{% exercice %}
+Sujet de l'exercice
 {% endexercice %}
 {% details "corrigé" %}
 Le corrigé de l'exercice.
 {% enddetails %}
 
-#### Un chemin
+Code :
+
+```text
+<div>
+&#123;% exercice %}
+Sujet de l'exercice
+&#123;% endexercice %}
+&#123;% details "corrigé" %}
+Le corrigé de l'exercice.
+&#123;% enddetails %}
+</div>
+```
+
+#### Shortcode `chemin`
 
 Pour emmener vers un autre cours par exemple :
 
@@ -238,25 +313,58 @@ Pour emmener vers un autre cours par exemple :
 [Cours do-it de FB](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/)
 {% endchemin %}
 
-#### Des prérequis
+Code :
 
-{% prerequis "À lire si vous aimez les graphes :" %}
+```text
+<div>
+&#123;% chemin %}
+[Cours do-it de FB](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/)
+&#123;% endchemin %}
+</div>
+```
 
-* *graphes* de Claude Berge
-* *hypergraphes* de Claude Berge
+#### Shortcode `prerequis`
+
+{% prerequis "Documentation :" %}
+
+* un pré-requis à lire
+* un autre pré-requis à lire
 
 {% endprerequis %}
+
+Code :
+
+```text
+<div>
+&#123;% prerequis "Documentation :" %}
+
+* un pré-requis à lire
+* un autre pré-requis à lire
+
+&#123;% endprerequis %}
+
+</div>
+```
 
 ### Tables
 
 On utilise les possibilités de [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html)
 
-#### Tables de base
+#### Table avec titre
 
 | titre colonne 1  | titre colonne 2 |
 | ---------------- | --------------- |
 | Content Cell     | Content Cell  |
 | Content Cell     | Content Cell  |
+
+Code :
+
+```text
+| titre colonne 1  | titre colonne 2 |
+| ---------------- | --------------- |
+| Content Cell     | Content Cell    |
+| Content Cell     | Content Cell    |
+```
 
 #### Tables sans titre
 
@@ -264,24 +372,59 @@ On utilise les possibilités de [multimarkdown](https://fletcher.github.io/Multi
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-#### Tables multi-colonne
+Code :
 
-| ------------- | ------------- |
-|     Content Cell             ||
-| Content Cell  | Content Cell  |
-
-#### Tables multi-ligne
-
+```text
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
-| ^^            | Content Cell  |
+| Content Cell  | Content Cell  |
+```
+
+#### Tables multi-colonnes
+
+| ------------- | ------------- |
+|     Je prends 2 colonnes     ||
+| Content Cell  | Content Cell  |
+
+Code :
+
+```markdown
+| ------------- | ------------- |
+|     Je prends 2 colonnes     ||
+| Content Cell  | Content Cell  |
+```
+
+#### Tables multi-lignes
+
+| ------------- | ------------- |
+| Je prends 2 lignes  |Content Cell  |
+| ^^            |Content Cell  |
+| Content Cell  | Content Cell  |
+
+Code :
+
+```markdown
+| ------------- | ------------- |
+| Je prends 2 lignes  |Content Cell  |
+| ^^            |Content Cell  |
+| Content Cell  | Content Cell  |
+```
 
 #### plusieurs ligne dans une cellule
 
 | ------------- | ------------- |
-| Content Cell  | * Content Cell  | \
-| Content Cell  | * Content Cell  |
+| 1. ligne colonne 1 | 1. ligne  colonne 2 | \
+| 1. ligne colonne 1 | 2. ligne  colonne 2  |
 | Content Cell  | Content Cell  |
+
+Code :
+
+```markdown
+| ------------- | ------------- |
+| 1. ligne colonne 1 | 1. ligne  colonne 2 | \
+| 1. ligne colonne 1 | 2. ligne  colonne 2  |
+| Content Cell  | Content Cell  |
+```
 
 #### Alignement horizontal
 
@@ -290,16 +433,45 @@ On utilise les possibilités de [multimarkdown](https://fletcher.github.io/Multi
 | Content Cell  | Content Cell  |Content Cell  |
 | Content Cell  | Content Cell  |Content Cell  |
 
+Code :
+
+```markdown
+| :- | :-: | -: |
+| Content Cell  | Content Cell  | Content Cell |
+| Content Cell  | Content Cell  |Content Cell  |
+| Content Cell  | Content Cell  |Content Cell  |
+```
+
 #### Alignement vertical
 
-On ajoute un style, mais il ne faut pas que ce soit la dernière colonne.
+On ajoute un style, mais il ne faut pas que ce soit la dernière colonne. Exemple sur une colonne multi-ligne :
 
 | ------------- | ------------- |
-| Content Cell  {style="vertical-align:middle"}| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia. |
+| Content Cell  {style="vertical-align:middle"}| Content Cell |
+| ^^| Content Cell |
 | Content Cell  | Content Cell  |
 
-Pour la dernière colonne, il faut ajouter une colonne vide :
+Code :
+
+```markdown
+| ------------- | ------------- |
+| Content Cell  {style="vertical-align:middle"}| Content Cell |
+| ^^| Content Cell |
+| Content Cell  | Content Cell  |
+```
+
+Si l'on veut avoir un alignement vertical de la dernière colonne, il faut ajouter une colonne vide (je ne sais pas trop pourquoi) :
 
 | ------------- | ------------- | - |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, orci nec pharetra lacinia, lacus dolor euismod ipsum, quis pulvinar ipsum urna non purus. Cras accumsan ex ligula, eu pellentesque mauris congue ac. Integer venenatis elementum est ac imperdiet. Etiam lectus purus, imperdiet gravida commodo non, faucibus at metus. Maecenas elit nibh, venenatis a efficitur vitae, placerat vitae nulla. Fusce volutpat nisl sem, vel iaculis risus sagittis vel. Nunc felis tellus, sollicitudin eu felis vel, cursus egestas arcu. Sed laoreet ex a nisl vestibulum, id placerat leo pellentesque. Praesent nec ultrices purus, ut congue elit. Pellentesque in diam ultrices purus volutpat lacinia. | Content Cell  {style="vertical-align:middle"}| |
+| Content Cell | Content Cell  {style="vertical-align:middle"}| |
+| Content Cell | ^^ | |
 | Content Cell  | Content Cell  | |
+
+Code :
+
+```markdown
+| ------------- | ------------- | - |
+| Content Cell | Content Cell  {style="vertical-align:middle"}| |
+| Content Cell | ^^ | |
+| Content Cell  | Content Cell  | |
+```

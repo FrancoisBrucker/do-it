@@ -1,7 +1,7 @@
 ---
 layout: layout/post.njk
 
-title: "Tous les MON de Kasimir"
+title: "MON de Kasimir"
 authors:
   - Kasimir Romer
 
@@ -14,15 +14,16 @@ Ici, c'est le MONde des projets de Kasimir
 ## Planning MON de Kasimir
 
 ### Temps 1
-- [Premier MON: “Google Apps Script” ou comment automatiser les choses embêtantes dans un tableur](./MON1-1/)
-- [Deuxième MON: Étude de cas CFP - Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./MON1-2/)
+{% chemin %} [“Google Apps Script” ou comment automatiser les choses embêtantes dans un tableur](./MON1-1/) {% endchemin %}
+<br>
+{% chemin %} [Étude de cas CFP - Diagnostic organisationnel, modélisation des processus, et conception d'un SI](./MON1-2/) {% endchemin %}
 
 ### Temps 2
-- Proposition: [Splunk (cybersecurité/gestion des logs)](./MON2-1/)
-- Premier MON: Maturité de la transformation digitale
-- Deuxième MON: bases de données non relationnelles (mongodb, ...)
+{% chemin %} [Splunk (cybersecurité/gestion des logs)](./MON2-1/) {% endchemin %}
+<br>
+{% chemin %} [Langue assembleur (x86, ARM, ...)](./MON2-2/) {% endchemin %}
 
 ### Temps 3
+Malheureusement, je ne suis plus à Marseille au temps 3, mais ces MON m'auraient intéressé :
 - Premier MON: Sobriété numérique et stratégie digitale
 - Deuxième MON: dev-ops ou développement mobile
-

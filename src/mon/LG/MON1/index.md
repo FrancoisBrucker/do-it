@@ -5,6 +5,11 @@ title: "MON 1: Comparatif des typologies des projets agiles"
 authors:
   - Louise Gacoin
 
+tags:
+- gestions de projet
+- agile
+- scrum
+
 ---
 <!-- début résumé -->
  
@@ -146,7 +151,7 @@ L’évaluation des projets envisagés ne se fait pas sur la base d’une estima
 Fonctionnement :
 
 **Etape 1 : Shapping**
-Cette étape sert à identififer les problèmatiques à adresser, solutions potentielles, leurs limites…
+Cette étape sert à identifier les problématiques à adresser, solutions potentielles, leurs limites…
 Lors du premier cycle, on va collecter les besoins des utilisateurs, cadrer la solution produit evisagée. L'idée est de “façonner”/”défricher” une idée brute. On doit êtablir clairement le problème auquel on veut répondre et les limites de notre solution, décrire ses grandes fonctionnalités et les risques.
 Lors des cycles suivants, on va collecter les besoins au fur et à mesure que les équipes développent la solution. Pour ce faire on va interviwer les équipes en interne pour cerner leurs besoins.
 

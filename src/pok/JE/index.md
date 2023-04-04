@@ -16,4 +16,8 @@ Les POK que je fais au cours de ce semestre
 
 ## Temps 2
 
+- [Mon Portfolio chez OVH](./poks/distant)
+
 ## Temps 3
+
+- [Ma galerie pour mon portfolio](./poks/galerie)

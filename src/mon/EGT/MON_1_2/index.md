@@ -6,6 +6,9 @@ title: "Étude de cas CFP"
 authors:
     - "Eugénie Giraud-Telme"
 
+tags :
+  - 'processus'
+  - 'systeme information'
 ---
 <!-- Début Résumé -->
 J'avais très envie d'essayer la modélisation de processus.

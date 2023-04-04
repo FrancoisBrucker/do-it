@@ -10,13 +10,43 @@ tags: ['pok']
 ---
 
 <!-- début résumé -->
-Mon site chez moi (POK-Temps 1)
+Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 <!-- fin résumé -->
 
-### Liens GitHub
+{% info %}
+**Liens GitHub**
+- Front-end : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
+- Back-end : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
+- Microservice: [https://github.com/Jean-Baptiste-DP/mots-croises-generateur](https://github.com/Jean-Baptiste-DP/mots-croises-generateur)
+{% endinfo %}
 
-- frontend : [https://github.com/nbert71/mots-croises-front](https://github.com/nbert71/mots-croises-front)
-- backend : [https://github.com/nbert71/mots-croises-back](https://github.com/nbert71/mots-croises-back)
+<a href="http://balsamite.ovh1.ec-m.fr" class="imageContainer">
+  <img src="./images/gamePage.png" alt="Page de jeu" class="viewPage">
+  <div class="infoTitles">
+    <p class="title">Mots croisés</p>
+    <p class="link">http://balsamite.ovh1.ec-m.fr</p>
+  </div>
+</a>
+
+<br>
+
+## Gestion de projet
+
+<div class="allButtonGestionProjet">
+  <a href="./gestionProjet/temps1" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Temps 1 :</b> Un site chez moi</span>
+  </a>
+
+  <a href="./gestionProjet/temps2" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Temps 2 :</b> Serveur distant</span>
+  </a>
+
+  <a href="./gestionProjet/temps3" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Temps 3 :</b> Amélioration continue</span>
+  </a>
+</div>
+
+
 
 
 ## Idée de ce POK
@@ -25,7 +55,7 @@ L'idée de ce POK est de créer une site contenant une partie frontend, une part
 
 Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :
 
-<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="height: 500px; margin: 0 auto;" />
+<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
 <br>
 
 {% info %}
@@ -35,55 +65,101 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 
 ## Technologies utilisées
 
-<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
+<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
 
 -  **Front-end** : Svelte + TailwindCSS
 - **Back-end** : NestJS
-- **API** : GraphQL
+- **API** : REST
 - **Moyen d'authentification** : JWT (*JSON Web Token*)
-- **Base de données** : MongoDB
+- **Base de données** : PostgreSQL
+
+## Schéma d'entités
+
+<div style="display: grid; place-items: center;">
+  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;" />
+</div>
+
+On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.
 
 ## Fonctionnalités
 
-Par la suite, le back-end fera appelle à une API de dictionnaire qui répcupèrera une liste de mots et un algorithme s'occupera de générer la grille de mots croisés à partir de cette liste de mots.
+Par la suite, le back-end fera appelle à un service externe qui à l'aide d'un algorithme s'occupera de générer la grille de mots croisés à partir d'une liste de mots.
 
 Gestion des utilisateurs, avec connexion et gestion de solde.
 
-## Objectifs points POK
 
-<!-- ### Ce qu'on avait prévu la dernière séance
-### Ce qu'on a fait depuis
-### Ce qu'on prévoit pour la prochaine séance  -->
-
-### Ce qu'on a prévu pour le 1er point POK
-
-- *Découvrir* les framework pour le front : Svelte et TailwindCSS
-  - [Tuto Svelte](https://svelte.dev/tutorial/basics)
-  - [Tuto TailwindCSS](https://tailwindcss.com/docs/installation)
-  - TailwindCSS avec Svelte : [lien 1](https://blog.logrocket.com/how-to-use-tailwind-css-with-svelte/), [lien 2](https://tailwindcss.com/docs/guides/sveltekit)
-- Créer une *ébauche* de front en static
-  - Créer une page avec des *éléments simples* 
-  - Créer une page avec différents *components*
-  - Commencer à structurer la page du projet
-    - Component *grille*
-    - Component *navbar*
-    - Component *info utilisateurs*
-
-
-### Ce qu'on a fait
-
-- Découverte de Svelte et implémentation de TailwindCSS
-- Création des différents composants + interaction (bind des variables, props)
-- Style avec TailwindCSS + animations
-- Création des différents pages (jeu, login, register)
-- Début des tutoriels NestJS + génération du backend et docker compose.
-- Réflexion sur le schéma d'entités (On va utiliser MySQL plutot que MongoDB)
-
-### Ce qu'on a prévu pour le second point POK
-
-- Découverte plus approfondie de NestJS
-- Création des entités (User, Game ...)
-- Création des routes associées si on fait une API REST ou bien création + paramétrage du endpoint si on utilise GraphQL
-- Connexion du front avec le backend + modifications pour bon fonctionnement + ajout de la connexion et de la sécurité à l'aide des JWT
-
-*Si on a le temps : essayer de faire un algo qui génère une grille à partir d'une liste de mots obtenue via une API externe*
+<style>
+  a.imageContainer{
+    margin: 50px auto;
+    width: 550px;
+    display: block;
+    border: 4px solid rgb(22,163,74);
+    border-radius: 25px;
+    --opacity:0.2;
+    transition: all 1s;
+    background-color : rgba(22,163,74,var(--opacity));
+    text-decoration:none;
+  }
+  a.imageContainer:hover{
+    --opacity:0.6;
+  }
+  img.viewPage{
+    width:500px;
+    margin: 25px 25px 15px 25px;
+    border-width:0;
+  }
+  div.infoTitles .title{
+    font-size:32px;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+  div.infoTitles .link{
+    margin: 0 0 25px 0; 
+    text-align: center;
+    font-weight: 350;
+  }
+  a.buttonGestionProjet{
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 280px;
+    background-color: rgb(22,163,74);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    border: 4px white solid;
+    outline: 4px rgb(22,163,74) solid;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.12,-0.91,.85,1.86);
+  }
+  a.buttonGestionProjet:hover{
+    transform: scale(1.1);
+  }
+  a.buttonGestionProjet span{
+    display: block;
+    color: white;
+  }
+  div.allButtonGestionProjet{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+  .hoverUnderline{
+    position:relative;
+  }
+  a.buttonGestionProjet .hoverUnderline::after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 0.125em;
+    width: 0;
+    background-color:white;
+    transition: all 0.6s;
+  }
+  a.buttonGestionProjet:hover .hoverUnderline::after{
+    width:100%;
+  }
+</style>
