@@ -33,13 +33,66 @@ Ce langage est en plein essor. L'objectif de ce POK est de monter en compétence
 
 Lors de ce temps, j'ai suivi la moitié du tutoriel de Rust. Ce tutoriel est très bien fait et permet de découvrir les notions de Rust tout en pouvant les tester en parallèle. De plus, il y a des petits exercices qui permettent de s'assurer qu'on a bien compris comment ce langage fonctionne.
 
-Après avoir suivi cela, j'ai décidé de créer une première bibliothèque de gestion de structure de données. J'ai en particulier orienté mon travail sur les tableaux. Plusieurs fonctionnalités ont été implémentées comme la création d'un tableau, l'ajout ou la suppression d'éléments, la somme de deux tableaux, le tri d'un tableau, la fusion de deux tableaux triés, ...
+Après avoir suivi cela, j'ai décidé de créer une première bibliothèque de gestion de structure de données. J'ai en particulier orienté mon travail sur les tableaux. Plusieurs fonctionnalités ont été implémentées comme la création d'un tableau, l'ajout ou la suppression d'éléments, la somme de deux tableaux, le tri d'un tableau, ...
 Chaque fonction a été réalisée avec des tests unitaires qui se lancent avec [une bibliothèque disponible via Cargo](https://doc.rust-lang.org/book/ch11-01-writing-tests.html).
 
 ## Sprint 2
 
 Dans la suite de ce POK, je me concentrerai sur l'implémentation d'autres fonctionnalités sur les tableaux et l'implémentation d'autres structures de données telles que les arbres.
 
+### Objectifs
+
+[x] Continuer à suivre le tutoriel Rust
+[x] Implémenter de nouvelles fonctionnalités dans ma bibliothèque sur les tableaux (comme la fusion de deux tableaux triés)
+[x] Créer une nouvelles bibliothèques sur les arbres binaires de recherches
+[x] Implémenter des fonctionnalités:
+
+- Création d'un arbre
+- Insertion et suppression d'éléments
+- Somme des éléments d'un tableau
+- Différents parcours de l'arbre
+- Hauteur et taille
+- ...
+
+## Comment faire du Rust ?
+
+[Lien](https://www.rust-lang.org/tools/install)pour installer Rust sur Windows
+
+Commande pour compiler du Rust :
+
+```bash
+rustc main.rs
+```
+
+Commande pour lancer le code :
+
+```bash
+./main
+```
+
+Pour créer une bibliothèque
+
+```bash
+cargo new nom_de_votre_bibliotheque --lib
+```
+
+Le code de la bibliothèque doit être mis dans le fichier src/lib.rs
+
+Pour compiler le code de la bibliothèque :
+
+```bash
+cargo build
+```
+
+Pour les tests unitaires, il faut indiquer #[test] devant chaque test.
+
+Pour lancer les tests unitaires :
+
+```bash
+cargo test
+```
+
 ## Lien
 
-[Lien vers le Github](https://github.com/ThomasP04/POK3-Rust)
+[Librairie Tableau](https://github.com/ThomasP04/POK3-Liste)
+[Librairie Arbre](https://github.com/ThomasP04/POK3)
