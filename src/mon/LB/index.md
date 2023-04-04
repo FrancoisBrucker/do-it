@@ -23,3 +23,4 @@ Voici les MONs de Léonard
 
 ### Temps 3
 - [Cinquième MON: L'algorithmie avec Leetcode](./Leetcode/)
+- [Sixième MON: Comment organiser des réunions au mieux?](./Organiser_Reunion/)
