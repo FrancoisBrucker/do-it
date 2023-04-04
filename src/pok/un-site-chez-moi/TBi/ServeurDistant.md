@@ -30,7 +30,7 @@ Mon back étant hébergé sur un HeadlessCMS il n'y a pas besoin de déployer la
 ## Objectifs finaux :
 
 - Pouvoir acceder à mon site sur ovh1.
-- Faire en sorte que le contenu se mette à jour sans nécéssiter de redéploiement.
+- Faire en sorte que le contenu se mette à jour sans nécessiter de redéploiement.
 
 # Gestion de Projet :
 
@@ -58,9 +58,9 @@ Le serveur est organisée de la même manière pour chaque compte. Mon compte es
 
 
     _ Home
-    |_ Curcuma
-    |_django
-    |_ flask
+    |_Curcuma
+    |_Django
+    |_Flask
     |_java
     |_node
       |_example.js
@@ -88,9 +88,9 @@ On clone :
 
     git clone https://github.com/TuncayBilgi/artblog.git
 
-Cela créer un dossier artblog avec tous les fichiers nécéssaires dedans, sauf certains que je n'ai pas mis dans le git comme mes fichiers d'environnement qui possèdent les clés d'API.
+Cela créer un dossier Artblog avec tous les fichiers nécessaires dedans, sauf certains que je n'ai pas mis dans le git comme mes fichiers d'environnement qui possèdent les clés d'API.
 
-Ensuite, on éxécute les commandes nécésaires à installer le reste des fichiers :
+Ensuite, on exécute les commandes nécessaires à installer le reste des fichiers :
 
   npm install
 
@@ -111,13 +111,13 @@ On lance le build, après un certain temps il semble que tout marche, on peut al
 
 ### Changement de port :
 
-Le serveur ovh1 nous octroie un port bien précis pour y mettre notre application. On ne peut donc pas lancer le programme sur n'importe quel port et surement pas le port par défaut. Pour le changer, cela dépend de la technologie utilisée. Avec un serveur node tout simple, il suffit de modifier le port dans le fichier js qui lance le processus. Pour nous, d'après la documentation, nous devon modifier la commande `npm run start`. Cela ce fait dans le fichier package.json où l'on rentre : 
+Le serveur ovh1 nous octroie un port bien précis pour y mettre notre application. On ne peut donc pas lancer le programme sur n'importe quel port et sûrement pas le port par défaut. Pour le changer, cela dépend de la technologie utilisée. Avec un serveur node tout simple, il suffit de modifier le port dans le fichier js qui lance le processus. Pour nous, d'après la documentation, nous devon modifier la commande `npm run start`. Cela ce fait dans le fichier package.json où l'on rentre : 
 
     "start": "next start -p 8080"
 
 Ce qui devrait lancer l'application sur le port 8080.
 
-Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec `npm run start` et en lancant cette commande dans le Powershell : `Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess`, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.
+Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec `npm run start` et en lançant cette commande dans le Powershell : `Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess`, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.
 
 On vérifie que le port 8080 est libre puis on lance l'application sur ce port.
 
@@ -134,7 +134,7 @@ C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.
 
 ### Faire du git proprement:
 
-  Comme précisé précedement, on a copié l'entierté du repo dans le serveur de production. On oublie et on refait.
+  Comme précisé précédemment, on a copié l’entièreté du repo dans le serveur de production. On oublie et on refait.
   On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne manière de le faire et je n'ai pas regardé. Ici, je supprime le dossier et tout ce qu'il y avait dedans, ce qui peut être dangereux.
 
   {%attention%} Si vous aviez des fichiers importants, tout va sauter, vérifiez 2 fois avant de lancer des commandes qui commencent par rm -r {%endattention%}
@@ -152,7 +152,7 @@ C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.
 
     git fetch origin main
     git reset --hard origin/main
-    git clean -fdx // attention cela surpimme tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle
+    git clean -fdx // attention cela surprime tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle
 
   Ou plus simplement :
 
@@ -173,11 +173,11 @@ Problème, quand on ferme le terminale, l'application s'arrête.
 
 ### Lancer l'application de façon permanente :
 
-En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas eteindre notre ordinateur sans que ça coupe l'application.
+En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas éteindre notre ordinateur sans que ça coupe l'application.
 
 Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. Sous les conseils de M.Brucker, on utilise simplement la commande screen qui permet de lancer des terminaux et des processus en tâche de fond.
 
-    screen -S artblog // Nous emmene dans un nouveau terminale.
+    screen -S artblog // Nous emmène dans un nouveau terminale.
     npm run start
     // on tape Ctrl-A + D pour quitter le terminale
     
@@ -191,7 +191,7 @@ J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'
 
 ### Pour le second sprint :
 
-Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une base de données juste pour me frotter à l'exercie et si possible, mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.
+Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.
 
 # Second Sprint :
 On va se faciliter la vie en écrivant un script qui va mettre à jour, sur ovh1, le site, en allant chercher la dernière version de artblog et en l'activant, ensuite on pourra lancer ce script depuis un pc distant via ssh.
@@ -203,7 +203,7 @@ On commence par mettre à jour notre projet :
     git add . // on ajoute les changements au commit
     git commit // on commit les changements
     git push // on les envoies à l'origine
-    git chechout main // on va sur la branche main
+    git checkout main // on va sur la branche main
     git merge dev  // on y fusionne la banche dev
 
 ## Création du script :
@@ -224,12 +224,12 @@ A ce stade, le script va chercher la dernière version du artblog sur github, in
 
 Ce script a de nombreux problèmes : 
 
-- Il echo "Prod etc.." peu importe de l'état d'éxecution.
+- Il echo "Prod etc.." peu importe de l'état d’exécution.
 - Il ne sauvegarde pas les erreurs.
 - Il n'y a aucun test d'effectué.
-- Il lance le serveur de prod dans un terminal local, on va le détatcher avec screen (puis tmux).
+- Il lance le serveur de prod dans un terminal local, on va le détacher avec screen (puis tmux).
 - On ne peut que lancer tout le script d'un coup, le script n'est pas optimal si il faut juste redémarrer le serveur.
-- Il n'est pas possible de voir simplment comment ce que fait le script.
+- Il n'est pas possible de voir simplement comment ce que fait le script.
 
 ## Envoie du script :
 On copy ce script sur le serveur avec scp :
@@ -248,7 +248,7 @@ On essaie maintenant d'améliorer le système point par point.
 ## Creation d'un script pour lancer le script :
 {%info%}A ce stade, je ne pense pas que ça soit une bonne idée d'essayer de tout lancer sans voir ce qu'il se passe{%endinfo%}
 Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.
-Je ne le fais pas car je prefère voir si il y a des erreurs, mais il ressemblerait tout simplement à cela :
+Je ne le fais pas car je préfère voir si il y a des erreurs, mais il ressemblerait tout simplement à cela :
 
 Prepare_prod :
 
@@ -264,7 +264,7 @@ on modifie le script :
 
 Cette commande devrait lancer le serveur dans un processus deamon nommé artblog, qui sera toujours en route quand je rompt la liaison ssh.
 
-{%attention%}Problème :  la commande screen -list ne référence pas le processus, je ne peux plus arrêter mon serveur. C'est embêtant car impossible de lancer une nouvelle version du serveur si le port est déja utilisé.{%endattention%}
+{%attention%}Problème :  la commande screen -list ne référence pas le processus, je ne peux plus arrêter mon serveur. C'est embêtant car impossible de lancer une nouvelle version du serveur si le port est déjà utilisé.{%endattention%}
 
 ### Debug mode :
 
@@ -273,7 +273,7 @@ On essaie de trouver le problème, pour commencer, le serveur est bien disponibl
 On trouve le processus qui écoute sur mon port 10438 avec :
 
      ps -ef | grep artblog | awk '{print $2}'
-     // cette commande liste les processus, ne garde que ceux qui s'appelent artblog et print l'id du process. on reçoit 304108
+     // cette commande liste les processus, ne garde que ceux qui s’appellent artblog et print l'id du process. on reçoit 304108
 
 On kill le processus: 
 
@@ -287,10 +287,10 @@ On l'inclut dans le script : d'abord on kill l'ancien process, ensuite on pourra
   
   {%info%}La commande se complique :
 
-  - ps -ef : d'abord je récupere les processus
+  - ps -ef : d'abord je récupère les processus
   - grep artblog : je prend ceux qui contiennent le mot artblog
   - head -n -1 | : je garde tous sauf la dernière ligne, en effet la dernière ligne est la commande grep elle même et renvoie une erreur par la   suite
-  - awk : je ne print que la deuxieme colonne qui correspond au PID
+  - awk : je ne print que la deuxième colonne qui correspond au PID
   - kill : je kill tous les process listés par le print awk.
   {%endinfo%}
 
@@ -312,7 +312,7 @@ Le script devient :
 
     echo "Script ended"
 ```
-On l'envoit et on test.
+On l’envoie et on test.
 
 ## Séparer le build du projet du lancement du serveur :
 
@@ -390,7 +390,7 @@ Tout cela avec par exemple `ssh curcuma@ovh1.ec-m.fr "bash ./node/artblog/publis
 
 Pour être un peu sérieux, on ajoute au script une fonction qui récupère les erreurs à chaque commande lancée. Ces erreurs seront casées dans un fichier de log. On formate les erreurs pour qu'elles affichent la date, la commande lancée avec ses options, et ensuite on print l'erreur.
 
-Pour cela, on utilise des spécificités bien pratique de bash comme les stderr, le pipe, les $?, les variabkes d'environements etc...
+Pour cela, on utilise des spécificités bien pratique de bash comme les stderr, le pipe, les $?, les variables d’environnements etc...
 
  ```bash
  Error_Handler() {
@@ -411,7 +411,7 @@ Pour cela, on utilise des spécificités bien pratique de bash comme les stderr,
  
  - 1) On prend une commande en paramètre
  - 2) on choisi le fichier error.log dans lequel on va placer nos log d'erreurs
- - 3) on créer une variable stderr qui contient l'erreur standart de la commande. Pour cela, on lance la commande et on redirige l'erreur dans le stdout et on envoi ce stdout dans /dev/null pour qu'il ne soit pas affiché dans le terminal
+ - 3) on créer une variable stderr qui contient l'erreur standard de la commande. Pour cela, on lance la commande et on redirige l'erreur dans le stdout et on envoi ce stdout dans /dev/null pour qu'il ne soit pas affiché dans le terminal
  - 4) Si la commande à terminé avec un exit code != 0, on sait qu'il y a une erreur, on va donc former un message d'erreur à mettre dans le fichier log
  - 5) Ce message d'erreur contient 2 lignes, une avec la date formatée et la commande, l'autre avec la stderr récupérée plutôt. Enfin, on echo dans le terminal utilisé la stderr pour avoir l'erreur sans aller fouillé le fichier de logs
 
@@ -423,11 +423,11 @@ Pour cela, on utilise des spécificités bien pratique de bash comme les stderr,
  Je recopie juste la fonction Error_handler directement autour du tmux. Cela à l'avantage de marcher, mais l'inconvénient de baisser la qualitée de mon code. En effet il y a de la recopie et si je veux modifier le nom du fichier de logs par exemple, je dois le faire 2 fois maintenant.
 
  {%attention%}Avec ce genre de fonction, et surtout en bash, il faut faire attention.
- $command désigne la variable alors que $($command) l'éxécute. La syntax est crucial, surtout dans ce genre de script ou il est crucial de ne lancer la commande qu'une fois, et non pas plusieurs.
+ $command désigne la variable alors que $($command) l’exécute. La syntax est crucial, surtout dans ce genre de script ou il est crucial de ne lancer la commande qu'une fois, et non pas plusieurs.
  Ici, le script lance la commande une unique fois, c'est ce qu'on veut.
  {%endattention%}
 
- De plus, on conditionne le tmux-kill pour qu'il ne se lance que si il n'y a pas de session artblog déjà présente. Cela permet de ne lancer la commande que si nécéssaire puis ça peret d'éviter d'ajoiter des logs inutiles dans error.log à chaque fois que la fonction est executée.
+ De plus, on conditionne le tmux-kill pour qu'il ne se lance que si il n'y a pas de session artblog déjà présente. Cela permet de ne lancer la commande que si nécessaire puis ça permet d'éviter d'ajouter des logs inutiles dans error.log à chaque fois que la fonction est exécutée.
 
  le script devient :
 
@@ -507,7 +507,8 @@ exit 0
 {%endinfo%}
 
 ## Bilan second sprint :
-Je suis partie dans une direction différente que prévu. Dans une démarche DevOps, la mise en production est un 'non évenement', c'est à dire qu'il doit se faire facilement, rapidement, et aussi souvent que nécéssaire. Gràce à ce petit script, on se rapproche de cette démarche.
+Je suis partie dans une direction différente que prévu. Dans une démarche DevOps, la mise en production est un 'non événement', c'est à dire qu'il doit se faire facilement, rapidement, et aussi souvent que nécessaire. Grâce à ce petit script, on se rapproche de cette démarche.
+Je n'ai cependant pas eu le temps de remplir mon site de vrai articles.
 
 
 

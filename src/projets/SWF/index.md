@@ -125,18 +125,18 @@ En somme, nous sommes conscients qu'il y a encore des améliorations à apporter
 
 ## Difficultés rencontrées et points à améliorer
 
-La toute première difficulté que nous avons rencontrée est technique. En effet nous sommes tous en apprentissage actuellement, et le code que nous avons produit a été produit en même temps que nous apprenions les différents langages, librairies, ou même concepts. 
+La toute première difficulté que nous avons rencontrée est technique. En effet nous sommes tous en apprentissage actuellement, et le code que nous avons produit a été produit en même temps que nous apprenions les différents langages, librairies, ou même concepts.
 Cette apprentissage a d'ailleurs souvent été la cause de retards dans nos sprints.
 
-La deuxième difficulté rencontrée est elle en terme de cadrage du projet, mais est également liée à la première. Il est compliqué de jauger la difficulté d'une tâche à accomplir quand on a pas une connaissance claire des moyens à notre disposition pour accomplir la dite tâche. 
+La deuxième difficulté rencontrée est elle en terme de cadrage du projet, mais est également liée à la première. Il est compliqué de jauger la difficulté d'une tâche à accomplir quand on a pas une connaissance claire des moyens à notre disposition pour accomplir ladite tâche.
 Cette difficulté s'est néanmoins peu à peu atténuée à mesure que nous prenions de plus en plus en compétences et en assurance.
 
-La troisième difficulté découle également des 2 autres mais pas seulement, et est liée à l'organisation du temps de travail autour du projet. Avec l'apprentissage continu et le mauvais cadrage, certaines fonctionnalités ont pris du temps à être développé pour au final être abandonnés parce que nous sommes finalement partis sur des solutions différentes, notamment pour le déploiement. 
+La troisième difficulté découle également des 2 autres mais pas seulement, et est liée à l'organisation du temps de travail autour du projet. Avec l'apprentissage continu et le mauvais cadrage, certaines fonctionnalités ont pris du temps à être développées pour au final être abandonnées parce que nous sommes finalement partis sur des solutions différentes, notamment pour le déploiement.
 De plus, avec le départ de Kasimir et l'arrivée de Thomas, nous avons du rééquilibrer les charges de travail, informer Thomas sur le fonctionnement de notre code et le rendre opérationnel, ce qui aurait pu mieux être fait.
 
-Ces difficultés peuvent être mitigés avec des ajouts au processus de travail, par exemple la mise en place d'une documentation écrite claire et lisible au fur et à mesure de l'écriture du code, une réduction du temps de réflexion avant de commencer le travail effectif sur le projet, car la réflexion est continu.
+Ces difficultés peuvent être mitigées avec des ajouts au processus de travail, par exemple la mise en place d'une documentation écrite claire et lisible au fur et à mesure de l'écriture du code, une réduction du temps de réflexion avant de commencer le travail effectif sur le projet, car la réflexion est continue.
 
-En somme projet a permis de mettre en évidence l'importance de la gestion de projet et de l'organisation dans le développement d'une application de ce type. Il y a plusieurs mesures que nous aurions pu prendre pour pallier au niveau des difficultés rencontrées, et dont nous comprenons mieux l'importance dans le monde professionnel, même si les échelles sont différentes.
+En somme, le projet a permis de mettre en évidence l'importance de la gestion de projet et de l'organisation dans le développement d'une application de ce type. Il y a plusieurs mesures que nous aurions pu prendre pour pallier au niveau des difficultés rencontrées, et dont nous comprenons mieux l'importance dans le monde professionnel, même si les échelles sont différentes.
 
 ## Bilan
 
