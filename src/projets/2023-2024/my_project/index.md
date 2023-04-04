@@ -6,7 +6,7 @@ authors:
   - Luke SKYWALKER
   - Han SOLO
   - C3-PO
-year: 2023-2024
+
 tags: ['projet']
 ---
 

@@ -18,6 +18,10 @@ module.exports = function (eleventyConfig) {
   assetsConfig(eleventyConfig);
   searchConfig(eleventyConfig);
 
+  eleventyConfig.addFilter('split', function(str, separator) {
+    return str.split(new RegExp(separator));
+  });
+
   return {
     pathPrefix: "/do-it/",
     dir: {

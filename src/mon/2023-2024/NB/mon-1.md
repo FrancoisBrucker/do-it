@@ -5,7 +5,6 @@ title: "HTML & CSS"
 authors:
   - Nicolas BERT
 tags: ['mon', 'HTML', 'CSS']
-year: 2023-2024
 ---
 
 <!-- début résumé -->

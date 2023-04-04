@@ -14,6 +14,7 @@ resume: 'Monitoring of Novelties. Cours en auto-formation tutorée (caft).'
         <div class="text-3xl mb-3">
             <a href="{{ cours.url | url }}">{{ cours.data.title }}</a>
         </div>
+        
         <div class=" px-4 flex items-center">
             <div>Auteurs : </div>
             <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1">
@@ -46,7 +47,8 @@ resume: 'Monitoring of Novelties. Cours en auto-formation tutorée (caft).'
         </div> 
 
         <div class="hidden sm:block absolute top-0 right-0 bg-purple-200 rounded-full px-2 mt-2 mr-2">
-            {{cours.data.year}}
+            {% set file_path = cours.inputPath | split('/') %}
+            {{ file_path[3] }}
         </div>
     </div>
 

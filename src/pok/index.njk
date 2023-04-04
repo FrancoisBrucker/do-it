@@ -45,7 +45,8 @@ resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
         </div>
       </div>
       <div class="hidden sm:block absolute top-0 right-0 bg-purple-200 rounded-full px-2 mt-2 mr-2">
-            {{cours.data.year}}
+            {% set file_path = cours.inputPath | split('/') %}
+            {{ file_path[3] }}
         </div>
     </div>
 
