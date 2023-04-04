@@ -8,7 +8,7 @@ order: 4
 resume: 'Projets do-it'
 ---
 
-{% for projet in collections.projet %}
+{% for projet in collections.projet | reverse %}
     <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
       <div class="text-3xl mb-3">
         <a href="{{ projet.url | url }}">{{ projet.data.title }}</a>
@@ -30,8 +30,8 @@ resume: 'Projets do-it'
         </div>
       </div>
       <div class="hidden sm:block absolute top-0 right-0 bg-purple-200 rounded-full px-2 mt-2 mr-2">
-            {% set file_path = projet.inputPath | split('/') %}
-            {{ file_path[3] }}
+            {% set year = projet.inputPath | getValueFromPath('/', 2) %}
+            {{ year }}
         </div>
     </div>
 {% endfor %}

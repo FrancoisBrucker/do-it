@@ -18,8 +18,8 @@ module.exports = function (eleventyConfig) {
   assetsConfig(eleventyConfig);
   searchConfig(eleventyConfig);
 
-  eleventyConfig.addFilter('split', function(str, separator) {
-    return str.split(new RegExp(separator));
+  eleventyConfig.addFilter('getValueFromPath', function(str, separator, value) {
+    return str.split(new RegExp(separator))[value];
   });
 
   return {
