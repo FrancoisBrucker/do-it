@@ -105,6 +105,19 @@
 </li>
 </ul>
 </li>
+<li><a href="#h3">Présentation de Phaser</a>
+<ul>
+<li><a href="#h3-1">Physique (<em>Physics</em>)</a>
+<ul>
+<li><a href="#h3-1-1">Arcade</a></li>
+<li><a href="#h3-1-1">Matter</a></li>
+</ul>
+</li>
+<li><a href="#h3-2">Scène (<em>Scene</em>)</a></li>
+<li><a href="#h3-3">Joueur (<em>Sprite</em>)</a></li>
+<li><a href="#h3-4">Carte (<em>Tilemap</em>)</a></li>
+</ul>
+</li>
 <li><a href="#liens">Liens Utiles</a></li>
 </ul>
 <h2 id="h1">Choix de la technologie</h2>
@@ -180,6 +193,42 @@ Donner une date d'expiration de la clé et supprimer les clés inutiles.</p>
 <h4 id="h2-2-2">Secrets</h4>
 <p>Un secret est une variable qui est stockée de manière sécurisée par Github et qui peut être transmise lors de l'exécution d'actions. Un secret peut être un token d'accès (comme dans ce projet), ou par exemple l'url d'un serveur distant sur lequel déployer notre code (comme on a pu le faire sur Gitlab dans le cours AWS/Docker).</p>
 <p><a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Documentation officielle</a></p>
+<h2 id="h3">Présentation de Phaser</h2>
+<p>Phaser est un moteur de jeu open source, dont le code source se trouve <a href="https://github.com/photonstorm/phaser/tree/v3.55.2">ici</a>.</p>
+<p>Pour installer Phaser, il faut mettre, dans un fichier html, la balise :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Le reste du code sera dans un fichier js, ou dans une autre balise <em>script</em>.</p>
+<p>Phaser a une énorme bibliothèque d'exemples, pour voir une mise en application de chaque fonctionnalités, et un fichier API complet. Il est important de s'y référer pour voir comment implémenter une des fonctionnalités.</p>
+<p><a href="https://labs.phaser.io/index.html?dir=&amp;q=">exemples</a></p>
+<p><a href="https://photonstorm.github.io/phaser3-docs/index.html">API</a></p>
+<h3 id="h3-1">Physique (*Physics*)</h3>
+<p>Phaser a 2 models de physique implémentée <strong>Arcade</strong> et <strong>Matter</strong></p>
+<p>Le choix de la physique est quelque chose de primordial car il influencera les fonctionnalités de votre application.</p>
+<p>Les méthodes des objets ne sont pas les mêmes dans différents cas.</p>
+<h4 id="h3-1-1">Arcade</h4>
+<p>La physique <strong>Arcade</strong> est une physique plus simple, qui est faite pour mettre en place un projet rapidement.</p>
+<p>C'est plus simple de le prendre en main. Par contre la détections des éléments extérieurs (blocks) n'est pas implémentée ce qui peut-être limitant.</p>
+<p><a href="https://labs.phaser.io/index.html?dir=physics/arcade/&amp;q=">Exemple de fonctionnalités possible avec la physique <strong>Arcade</strong></a></p>
+<h4 id="h3-1-2">Matter</h4>
+<p>La physique <strong>Matter</strong> essai de se rapprocher au plus proche de la réalité, en ayant une implémentation de mécanique : il y a des frottements, il est possible de pousser des objets etc.</p>
+<p>Il y a une variété plus importante d'objet qu'on peut créer.</p>
+<p><a href="https://labs.phaser.io/index.html?dir=physics/matterjs/&amp;q=">Exemple de fonctionnalités possible avec la physique <strong>Matter</strong></a></p>
+<h3 id="h3-2">Scène (*Scene*)</h3>
+<p>La scène est l'élément principal de Phaser, c'est lui qui va s'occuper de précharger les images d'initier les components et de faire tourner le jeu.</p>
+<p>On doit créer une classe qui hérite de <em>Phaser.Scene</em>.</p>
+<p>On peut créer 3 méthodes :</p>
+<ul>
+<li><em>preload</em></li>
+<li><em>create</em></li>
+<li><em>update</em></li>
+</ul>
+<p>Méthodes utilisées pour charger les images (<em>preload</em>), initialiser les éléments du jeu (<em>create</em>), et effectuer des actions à chaque tick du jeu (<em>update</em>).</p>
+<h3 id="h3-3">Joueur (*Sprite*)</h3>
+<p>Un Sprite est un objet animé du jeu, il peut être contrôlé par le joueur ou par d'autres éléments du jeu. Il est créé à partir d'une image.</p>
+<h3 id="h3-4">Carte (*Tilemap*)</h3>
+<p>La carte du jeu peut-être générée en plaçant des bloques un par un ou en utilisant une Tilemap qui va contenir toutes les informations pour créer la map.</p>
+<p>La carte peut être composée de plusieurs couches, dont des touches qui créent des collisions ou non. C'est pratique pour générer des décors de fond, et les blocks avec lesquels notre personnage va interagir.</p>
 <h2 id="liens">Liens Utiles </h2>
 <p><strong>Mon projet</strong></p>
 <ul>
