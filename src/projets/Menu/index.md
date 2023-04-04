@@ -198,7 +198,13 @@ Bonus pur :
 - Ajouter une recette depuis Internet
 
 
-Notre application Menu marche malgré le fait que certaines fonctionnalités qui nous étaient chères ne soient pas mises en place. Notamment, la liste de course est moins intelligente que ce que l'on souhaitait. Entre les fonctionnalités réduites de la version gratuite de Bubble et le manque de temps à la fin du projet, notre application ne ressemble pas exactement à ce que nous voulions au départ. L'utilisation de Bubble nous a souvent contraint à trouver des chemins détournés pour atteindre notre but : cela prenait donc plus de temps et nous en laissait encore moins pour les fonctionnalités suivantes. Comme nous avons fini par travailler sur la liste de course, c'est la fonctionnalité la moins aboutie du projet.
+
+
+Notre application Menu marche malgré le fait que certaines fonctionnalités qui nous étaient chères ne soient pas mises en place. Notamment, la liste de course est moins intelligente que ce que l'on souhaitait. Entre les fonctionnalités réduites de la version gratuite de Bubble et le manque de temps à la fin du projet, notre application ne ressemble pas exactement à ce que nous voulions au départ. L'utilisation de Bubble nous a souvent contraint à trouver des chemins détournés pour atteindre notre but : cela prenait donc plus de temps et nous en laissait encore moins pour les fonctionnalités suivantes. Comme nous avons fini par travailler sur la liste de course, c'est la fonctionnalité la moins aboutie du projet. De plus, les restrictions de la base de données nous ont empêché d'ajouter autant de recettes que l'on souhaitait. Nous avons donc dû choisir avec soin les recettes que nous mettions pour pouvoir tester les différentes fonctionnalités de l'application.
+
+Pour utiliser la version test de l'application, cliquez sur ce lien :
+https://appli-menu.bubbleapps.io/version-test/_app
+Attention, comme la base de données est très très limitée, il ne faut pas s'attendre à pouvoir ajouter une recette. Et si elle est déjà pleine, l'application ne va pas fonctionner.
 
 #### Mise service :
 
