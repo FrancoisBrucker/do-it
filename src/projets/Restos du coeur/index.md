@@ -20,7 +20,7 @@ Ce projet est réalisé en collaboration avec le centre des **Restos du Cœur** 
 2. Objectifs
 3. Notre démarche
 4. Nos solutions
-5. Conclusion
+5. Conclusion et améliorations
 
 
 ## 1.Contexte
@@ -335,11 +335,13 @@ Si les chiffres sont bidouillés, la répartition n'en sera pas plus fiable. Ell
 * La prise en main peut paraître compliquée car remplir la liste du stock prend du temps. Pour fluidifier cela nous avons effectué 3 répartitions avec la responsable, en l’accompagnant sur l’outil
 
 
-## 5.Conclusion
+## 5.Conclusion et améliorations
 
 Nous avons tous pris beaucoup de plaisir à réaliser ce projet qui a du sens. Nous sommes plutôt content du résultat et espérons que nos outils seront utilisés à long terme. Malheureusement on ne peut pas grantir que ces derniers seront utilisés de la bonne manière, notament la solution de répartition. En effet, la responsable qui a 6 ans d'expérience favorise son instinct plutôt que les calculs mathématiques... 
 Pour notre part, le contrat est rempli et nous sommes conscients des limites de notre projet.
-
+Si le projet avait duré 6 mois de plus, nous nous serions concentré sur l'adoption de nos solutions et leur bonne utilisation. Pour cela, il aurait fallu rappeler à la responsable de centre de recréer un calendrier chaque mois et l'accompagner sur les calcluls de répartition afin que les bonnes pratiques deviennent des habitudes.
+Nous aurions aussi pu ranger le local et le réorganiser à la manière du Lean.
+La solution inscription aurait aussi pu être retravaillée (elle nécessite encore des amléiorations).
 
 
 ![poster](./photos/poster.png)
