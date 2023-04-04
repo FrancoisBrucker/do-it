@@ -6,7 +6,7 @@ title: " B.A-BA Application Web : Comprendre et Mettre en place un Backend "
 authors:
   - Tuncay Bilgi
 
-tags: ['Backend','BDD','Typescript']
+tags: ['backend','bdd','typescript','']
 ---
 
 <!-- début résumé -->
@@ -18,6 +18,7 @@ Savoir comment fonctionne une application Web et enfin le lexique obscure des d�
 <!-- fin résumé -->
 
 Ce MON est un cours sur le Développement Web, il se concentre sur ce qu'on appelle le Backend. Vous pourrez y apprendre la théorie et aussi la pratique avec la mise en place de votre propre application.
+
 
 Dans ce MON, nous allons voir comment mettre en place une application complète, avec une interface, base de données et un service de création de compte. Je vous présenterai les grands principes d'une application web, et plus précisément, comment structurer un Backend pour qu'il soit maintenable et lisible.
 Le but est d'apprendre à structurer un Backend proprement.
@@ -61,7 +62,7 @@ Le but est d'apprendre à structurer un Backend proprement.
   - Frontend
   - Backend
   - Base de données
-- Mise en place d'une entité Account
+- Mise en place d'une entités Account
 - Mise en place de la création d'un account
 
 ## Comment marche une application web:
@@ -75,7 +76,7 @@ Ces trois parties ont leurs rôle bien défini :
 
 - Le Frontend est la partie du code qui est présentée à l'utilisateur. C'est le programme qui va afficher ce que l’utilisateur voit et ce avec quoi il va interagir. Le Frontend est envoyé à l'utilisateur, il est donc exécuté par sa propre machine. Quand vous afficher une page sur internet, c'est votre ordinateur qui fait le travail d'afficher les boutons, de regarder quels boutons sont cliqués, de changer de page etc...
 
-- Le Backend est la partie du code qui manipule les fonctionnalités complexes, et qui ne concernent pas directement l'affichage. C'est le programme qui va executer des fonctions qui permettent de répondre aux attentes de l’utilisateur. Le backend reste sur le serveur, il est exécuté par celui-ci, contrairement au frontend. Si vous avez une application web qui propose d'interagir avec une IA, l'utilisateur va interagir à travers le frontend, mais l'IA elle même, sera gérée par le Backend.
+- Le Backend est la partie du code qui manipule les fonctionnalités complexes, et qui ne concernent pas directement l'affichage. C'est le programme qui va exécuter des fonctions qui permettent de répondre aux attentes de l'utilisateur. Le backend reste sur le serveur, il est exécuté par celui-ci, contrairement au frontend. Si vous avez une application web qui propose d'interagir avec une IA, l'utilisateur va interagir à travers le frontend, mais l'IA elle même, sera gérée par le Backend.
 
 - La base de donnée, qui permet de stocker des données persistantes. Elle reste sur le serveur, et encor plus, on veut qu'elle soit impénétrable, car nous voulons conserver et cacher les données importantes à notre systèmes, ou les données privées qui concernent nos utilisateurs.
 
@@ -126,7 +127,7 @@ Le CSS décrit le style avec lequel ces données sont affichées. On y décrit q
 Langage incontournable du développement web. Le javascript sert en premier lieux à injecter de l'interactivité dans les pages web. Il à le mérite d'être un des seuls langages que tous les navigateurs comprennent, avec les deux citées plus haut. Si un bouton doit incrémenter un compteur, si il faut envoyer une requête au backend, cela se fera avec du javascript. Ce langage est aussi utilisé pour du Backend.
 
   - Python :
-Le python à le mérite d'être simple à appréhender. Il possède des librairies qui facilitent d'autant plus la création de site web. Malheureusement, ce n'est pas un langage compris par les navigateurs web, il n'est donc utilisé que pour le backend. Son utilisation est cependant restreinte. En effet, le langage est lent est gourmand en ressources, l'inverse de ce dont en a besoin en Backend.
+Le python à le mérite d'être simple à appréhender. Il possède des librairies qui facilitent d'autant plus la création de site web. Malheureusement, ce n'est pas un langage compris par les navigateurs web, il n'est donc utilisé que pour le backend. Sont utilisation est cependant restreinte. En effet, le langage est lent est gourmand en ressources, l'inverse de ce dont en a besoin en Backend.
 
   - Typescript (ts) :
 langage récent qui est un Superset du Js. C'est à dire que c'est du Javascript avec des fonctionnalités en plus. Ces fonctionnalités sont principalement les types. Ts est donc un langage typé, c'est à dire que pour définir une variable, il faut lui donner un type qui ne peut pas être changé. Ce langage est utilisé autant en Front qu'en Back puisque qu'il est compilé en Javascript. C'est à dire qu'à partir du code en TS, un compilateur va créer un nouveau code en Js. Ce langage est de plus en plus utilisé par les développeur javascript car il facilite le développement. 
@@ -159,7 +160,8 @@ Toutes les applications web possèdent des points communs. Elles proposent par e
 
 Au lieu de réinventer la roue depuis zéro et de coder ces fonctionnalités à chaque application, les développeurs ont inventés ce qu'on appelle un framework.
 
-Les frameworks sont des environnements de programmations. L'équivalent d'une librairie python. Il permettent de mettre en place rapidement tout ce qui est nécessaire au programme que l'on veut coder.
+
+Les frameworks sont des environnements de programmation. L'équivalent d'une librairie python. Il permettent de mettre en place rapidement tout ce qui est nécessaire au programme que l'on veut coder.
 
 Il y a des frameworks pour le frontend, des frameworks pour le backend et enfin des frameworks qui allient les deux ensembles, ce qu'on appelle un Meta Framework.
 
@@ -167,10 +169,11 @@ Il y a des frameworks pour le frontend, des frameworks pour le backend et enfin 
 {%details 'Frameworks Back'%}{%enddetails%}
 {%details 'Meta Frameworks'%}{%enddetails%}
 
-Les Frameworks sont **opniated** à un certains degré. C'est à dire qu'ils ont une opinion sur les manières de faire. Par exemple, faut-il séparer clairement certains composant où les utiliser ensemble ? Faut-il écrire une fonction d'une manière ou d'une autre ?
+Les Frameworks sont **opinionated** à un certains degré. C'est à dire qu'ils ont une opinion sur les manières de faire. Par exemple, faut-il séparer clairement certains composant où les utiliser ensemble ? Faut-il écrire une fonction d'une manière ou d'une autre ?
 
 Il est important de choisir un framework dont on supporte les opinions car si on essaye d'aller contre le framework, cela complique énormément la tâche du codeur, alors que l'on veut la faciliter.
-Certains frameworks sont par conception très libre. Il y a par exemple Node.js, qui laisse une immense liberté aux utilisateurs. C'est le framework à la base de tous les autres frameworks backend et frontend javascript, à la base de npm.
+Certains frameworks sont par conception très libre. Il y a par exemple Node.js, qui laisse une immense libertés aux utilisateurs. C'est le framework à la base de tous les autres Framework backend et frontend javascript, à la base de npm.
+
 
 Pour gérer quels frameworks on utilise, les installer, les mettre à jour etc... on utilise npm. Les commandes npm sont rentrées dans le terminale de commande et permettent gérer nos projets.
 
@@ -179,7 +182,9 @@ Par exemple si je crée un projet avec certains frameworks, et que quelqu'un veu
 ##### Exemples :
 
 - Frontend :
-[ReactJS](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/) et [Angular](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) nous proposent de créer des composants, qui seront insérés dans une page html et envoyés à l'utilisateur. Ils ont des opinons différentes.
+
+[ReactJS](https://francoisbrucker.github.io/do-it/mon/NB/mes-mon/react/) et [Angular](https://francoisbrucker.github.io/do-it/mon/TBi/MON/Angular/) nous proposent de créer des composants, qui seront insérés dans une page html et envoyés à l'utilisateur. Ils ont des opinions différentes.
+
 Angular prône une séparation totale des fonctions. La page html ne s'occupe que de l'affichage, le fichier js (javascript) s'occupe de l’interactivité. Chaque composant est défini par une classe et on doit donc faire attentions à certaines problématiques lié à cela. La communication entre le html et le js est gérée par des fonctions propre à Angular.
 
 React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de html et de js. Cette page affiche des composants qui sont aussi en jsx et on peut y placer si nécessaire l’interactivité. Aussi, les composants sont des fonctions, et ils interagissent entre avec des hooks, des fonctions préconstruites. 
@@ -187,7 +192,9 @@ React prône plus de flexibilité. Les pages sont en jsx, qui est une fusion de 
 Comme on peut le voir, les deux frameworks répondent aux mêmes besoins, d'une manière (parfois subtilement) différente.
 
 - Backend :
-Sequelize et TypeORM sont deux ORMs différents. Un ORM est un framework qui permet de connecter les fonctions ou les objets das notre programme, aux données dans une base de données.
+
+Sequelize et TypeORM sont deux ORMS différents. Un ORM est un framework qui permet de connecter les fonctions ou les objets das notre programme, aux données dans une base de données.
+
 Sequelize nous permet de faire cela en js, et laisse de la liberté au programmeur de choisir comment organiser son code.
 TypeORM nous force à suivre l'architecture classique d'un backend(que l'on verra plus bas). En plus de cea, il utilise Typescript, qui nous oblige à avoir un langage typé (de type Java ou C#). Les types et l'architecture apportent une certaine lourdeur, mais permettent d'avoir un programme solide, plus simple à maintenir en équipe.
 
@@ -201,9 +208,10 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   La première idée est la plus mauvaise idée que vous n'ayez jamais eu de votre vie. On utilise forcément un framework quelque part, sinon cotre site ressemblera à un blog des années 2000. En plus de cela, vous allez probablement mettre du code n'importe où, ne pas créer de Backend et tout envoyer à l'utilisateur, qui pourra ensuite hacker vos données et vous les revendre alors qu'elles vous appartiennent.
 
-  La deuxième idée et la manière classique de faire les choses, on choisit un framework pour le front , un autre pour le back et on code nos deux parties différentes de façon indépendante. C'est la méthode utilisé dans le projet [FirePixel]() ou dans le POK [Jeu de Grattage](). Cela permet d'avoir un code structuré, qui envoie seulement le nécessaire à l'utilisateur, qui est relativement protéger contre les cyberattaques (si on respecte les indications du framework). En plus de cela, on peut travailler en équipe sur le projet de manière plus fluide. Certains développeurs peuvent avancer le front pendant que d'autre avancent le Back, il n'y a pas de conflits car les fichiers sont séparés.
+  La deuxième idée et la manière classique de faire les choses, on choisit un framework pour le front , un autre pour le back et on code nos deux parties différentes de façon indépendante. C'est la méthode utilisé dans le projet [FirePixel]() ou dans le POK [Jeu de Grattage](). Cela permet d'avoir un code structuré, qui envoie seulement le nécessaire à l'utilisateur, qui est relativement protéger contre les cyberattaques (si on respecte les indications du framework). En plus de cela, on peut travailler en équipe sur le projet de manière plus fluide. Certains devs peuvent avancer le front pendant que d'autre avancent le Back, il n'y a pas de conflits car les fichiers sont séparés.
 
-  La troisième idée est plus récente, le plus gros avantage est de ne pas avoir à réfléchir. Les Méta Framework sont les plus opiniated de tous, à tels points qu'ils ont même une opinion sur les frameworks que vous devez utiliser. Cela à des avantages, ça permet de ne pas avoir à trouver les frameworks soi-même, mais aussi, ces Metaframeworks garantissent une grande compatibilité entre les différents composants de l'applications, et une grande simplicité d'utilisation. Je le conseille au débutant qui ne savent pas quels frameworks utiliser, et aussi aux développeurs confirmés qui connaissent déjà un framework inclus dans le package et qui veulent étendre leurs possibilités.
+  La troisième idée est plus récente, le plus gros avantage est de ne as avoir à réfléchir. Les Méta Framework sont les plus opinionated de tous,a tels points qu'ils ont même une opinion sur les frameworks que vous devez utiliser. Cela à des avantages, ça permet de ne pas avoir à trouver les frameworks soit même, mais aussi, ces Metaframeworks garantissent une grande compatibilité entre les différents composants de l'applications, et une grande simplicité d'utilisation. Je le conseille au débutant qui ne savent pas quels frameworks utilisé, et aussi aux développeurs confirmés qui connaissent déjà un framework inclus dans le package et qui veulent étendre leurs possibilités.
+
 
   ### Architecture du Backend :
 
@@ -215,7 +223,8 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
   - Il met en place des requêtes pour aller chercher des informations dans la base de données.
   - Il façonne des objets pour les enregistrer dans la base de données.
 
-  Pour réaliser ces divers tâches, on pourrait tout rassembler dans un seul fichier nommé par exemple backend.js . Le problème, est que cette méthode créer un immense fichier illisible, dur à débugger ou à refactoriser quand il y a besoin de mener des changements. On essaie donc, au maximum de fractionner le projets en fichiers qui n'ont qu'une unique fonction. on aura donc, dans l'ordre défini précédemment : 
+
+  Pour réaliser ces divers tâches, on pourrait tout rassembler dans un seul fichier nommé par exemple backend.js . Le problème, est que cette méthode créer un immense fichier illisible, dur à debugger ou à factoriser quand il y a besoin de mener des changements. On essaie donc, au maximum de fractionner le projets en fichiers qui n'ont qu'une unique fonction. on aura donc, dans l'ordre défini précédemment : 
 
   - Le fichier index
   - Le contrôleur

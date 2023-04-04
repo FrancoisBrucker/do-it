@@ -40,26 +40,26 @@ But : Suivre un tutoriel pour créer un blog utilisant du React et Next.js
 
   Un Blog qui peut être mis à jour sans toucher au code dans lequel on peut publier des posts contenants du texte, des liens, des commentaires...
   
-  Le Blog peut être publié sur Vercel (qui fonctione spécialement bien avec Next.js) qui s'occupe de tout et qui possède un Free tier.
+  Le Blog peut être publié sur Vercel (qui fonctionne spécialement bien avec Next.js) qui s'occupe de tout et qui possède un Free tier.
 
 # Fonctionnement du projet :
 
-Un site de base poosède 3 composantes : 
+Un site de base possède 3 composantes : 
 - un Frontend
 - Un Backend
 - Une base de données
 
 Ces trois éléments communiquent de la sorte : 
-Le backend va chercher des ressoucres dans la base de données et les envoie au frontend pour qu'il puisse les afficher à l'utilisateur.
+Le backend va chercher des ressources dans la base de données et les envoie au frontend pour qu'il puisse les afficher à l'utilisateur.
 Normalement, pendant le développement, le backend et la base de données sont stockés en local sur la machine du développeur.
 
-Ici, nous utilisons un Headless CMS qui est un Content Managning Service :
+Ici, nous utilisons un Headless CMS qui est un Content Managing Service :
 
-Le CMS fait office de base de données pour nous. Il nous permet de créer et d'alimenter une base de données en lowcode. Il s'occupe aussi de servir la base de données. Ainsi, si 'lon a besoin de faire une requête, nous allons directement interroger l'API du CMS.
+Le CMS fait office de base de données pour nous. Il nous permet de créer et d'alimenter une base de données en LowCode. Il s'occupe aussi de servir la base de données. Ainsi, si 'lon a besoin de faire une requête, nous allons directement interroger l'API du CMS.
 
 Cela permet d'enlever une grande partie du travail, qui concerne la mise en place de la base de données, et la création de routes qui vont questionner cette base.
 
-{% info %} Ici, le but était d'utiliser un CMS pour que plusieurs personnes puissent alimenter le Blog sans toucher au code source et sans nécéssiter le redéploiement de l'application. {% endinfo %}
+{% info %} Ici, le but était d'utiliser un CMS pour que plusieurs personnes puissent alimenter le Blog sans toucher au code source et sans nécessiter le redéploiement de l'application. {% endinfo %}
 
 # Ce que je retiens du projet :
 
@@ -115,7 +115,7 @@ Il y a au total deux sprints de 1 semaine et demi :
 - A faire pour le prochain sprint :
   - Terminer le tutoriel
   - Alimenter le blog
-  - Ajouter une fonctionnalité qui nécéssite du Back : Authentication ou Envoie de Mail automatique.
+  - Ajouter une fonctionnalité qui nécessite du Back : Authentication ou Envoie de Mail automatique.
 
 ## Milieu -> Fin
  - Ce que j'ai fais :
@@ -125,9 +125,9 @@ Il y a au total deux sprints de 1 semaine et demi :
 - D'où viennent les différences ? :
   - J'ai été beaucoup plus actifs dans ma suivi du tutoriel.
   - Temps d'autoformation pour apprendre à utiliser les React Hooks. 
-  - Passer plusieurs heures à débugger des erreurs:
+  - Passer plusieurs heures à debugger des erreurs:
    - erreurs de syntax
-   - erreurs d'hydration ??
+   - erreurs d'hydration
    - erreurs avec les requêtes à la base de données
 
 - Idée pour la suite ? :
@@ -137,5 +137,5 @@ Il faudrait aussi terminer les fonctionnalités qui n'ont pas été ajoutées et
 
 
 
-{% attention %} Même si le tutoriel ne dure que 3h, il est beaucoup plus long à implementer soi-même, surtout si l'on prend le temps de bien comprendre les choses et si l'on a pas toutes les connaisances pré-requises. Pour ma part, je n'avais jamais fait de Tailwind, Next, React ou GraphQL {% endattention %}
+{% attention %} Même si le tutoriel ne dure que 3h, il est beaucoup plus long à implementer soi-même, surtout si l'on prend le temps de bien comprendre les choses et si l'on a pas toutes les connaissances pré-requises. Pour ma part, je n'avais jamais fait de Tailwind, Next, React ou GraphQL {% endattention %}
 
