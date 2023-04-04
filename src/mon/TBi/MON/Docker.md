@@ -20,7 +20,7 @@ Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.
 Il faut connaître : 
 - des bases de bash et de Linux 
 - l'utilisation d'un CLI (un terminal de commande) 
-{%endattention%}
+{%endprerequis%}
 
 
 
