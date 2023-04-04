@@ -8,7 +8,7 @@ order: 2
 resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
 ---
 
-{% for cours in collections.pok %}
+{% for cours in collections.pok | reverse %}
     
     <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
       <div class="text-3xl mb-3">
@@ -45,7 +45,7 @@ resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
         </div>
       </div>
       <div class="hidden sm:block absolute top-0 right-0 bg-purple-200 rounded-full px-2 mt-2 mr-2">
-            {% set year = cours.inputPath | getValueFromPath('/', 2) %}
+            {% set year = cours.inputPath | getValueFromPath('/', 3) %}
             {{ year }}
         </div>
     </div>
