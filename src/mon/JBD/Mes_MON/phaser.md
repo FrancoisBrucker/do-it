@@ -228,7 +228,12 @@ La carte peut être composée de plusieurs couches, dont des touches qui créent
 - [Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.)
 - [Github Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
-  
+
+**Phaser**
+- [Site Web](https://phaser.io/)
+- [Bibliothèque d'exemples](https://labs.phaser.io/)
+- [API](https://photonstorm.github.io/phaser3-docs/index.html)
+
 <style>
   a.buttonGestionProjet{
     display: flex;
