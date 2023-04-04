@@ -15,19 +15,19 @@ tags :
 Je vais réaliser un POK sur l'approche de Palo Alto. Le prérequis pour ce POK pour ce MON est d'être déjà familier avec le Lean. 
 <!-- fin résumé -->
 
-To do list d'ici le point à mi-parcours : 
+### To do list d'ici le point à mi-parcours : 
 - [X] Définir ce qu'est l'approche de Palo Alto
 - [X] Faire des recherches sur l'école du paradoxe --> juste une école qui fait des formations sur la théorie de Palo Alto ?
 - [~] Faire des recherches sur l'intervention systémique paradoxale 
 - [~] A l'issue de ces recherches, trouver un plan structuré pour mon POK et montrer comment l'approche de Palo Alto et le Lean peuvent se compléter
 
-To do list d'ici la fin du temps : 
+### To do list d'ici la fin du temps : 
 - [X] Approfondir les recherches sur l'intervention systémique paradoxale 
-- [ ] Parcourir les 2 livres empruntés au Centre de Doc (Le langage du changement de Paul Watzlawick et Manager par l'approche systémique de Dominique Bériot)
+- [X] Parcourir les 2 livres empruntés au Centre de Doc (Le langage du changement de Paul Watzlawick et Manager par l'approche systémique de Dominique Bériot)
   - [X] Le langage du changement de Paul Watzlawick --> pas utile
-  - [ ] Manager par l'approche systémique de Dominique Bériot
-- [ ] Faire le lien avec le Lean
-- [ ] Trouver des applications concrètes dans le monde de l'industrie de l'approche de Palo Alto
+  - [X] Manager par l'approche systémique de Dominique Bériot --> super intéressant, je recommande
+- [X] Faire le lien avec le Lean
+- [X] Trouver des applications concrètes dans le monde de l'industrie de l'approche de Palo Alto
 - [X] Trouver le plan
 
 
@@ -142,3 +142,49 @@ Il y a sans aucun doute des différences entre le Lean et l'approche de Palo Alt
 En conclusion, ces 2 approches peuvent être complémentaires pour optimiser les flux et les processus tout en développent les personnes qui y travaillent. Il faut alors, travailler le plus en amont possible de la demande, regarder les interactions et les visions du monde en présence pour mieux agir sur le système. 
 
 Source :  [paradoxes](https://www.paradoxes.asso.fr/2015/10/lintervention-systemique-paradoxale-dans-le-contexte-du-lean-amelioration-continue/#:~:text=L'approche%20de%20Palo%20Alto%20cherche%20%C3%A0%20identifier%20le%20syst%C3%A8me,%C3%A0%20%C3%A9liminer%20les%20probl%C3%A8mes%20associ%C3%A9s)
+
+# Exemple de mise en pratique de l'approche de Palo Alto sur la conduite du changement et résumé du livre de Dominique Bériot
+Pour cette dernière partie, j'ai lu le livre *Manager par l'approche systémique* de Dominique Bériot (disponible au centre de documentation de l'Ecole) que j'ai trouvé très intéressant. Dans une première partie, il présente **l'entreprise et ses acteurs**, en expliquant le contexte, les freins au changement que l'on peut rencontrer et les changements les plus courants pratiqués en entreprise. Il présente ensuite **l'approche systémique pour piloter un changement**. Il appelle cette démarche CRÉER : 
+C pour *Cadrer la demande*
+R pour *Représenter l'impact des acteurs*
+É pour *Élaborer une démarche stratégique*
+E pour *Engager une dynamique de changement*
+R pour *Réguler le système*
+Il consacre un chapitre de son livre pour chaque lettre de la démarche. Enfin dans une 3ème partie, il traite des **exemples concrets de conduite du changement** où il applique toute la démarche. Dans la dernière partie il se questionne sur **l'avenir du management** (je n'ai pas lu cette partie). Tout son développement est ponctué d'**exemples** qui permettent de bien comprendre les concepts expliqués. 
+
+Comme il serait trop long pour un POK de détailler chaque étape de la démarche, je vais essayer de la faire transparaitre ici à travers d'un exemple traité dans la partie 3 du livre. 
+La situation étudiée s'intitule : **le dérapage d'un projet de ligne de raffinage.** 
+Le demandeur est **M.Jeanlez qui est le directeur du projet**, il est le porteur de la demande et le décideur
+Les acteurs qui gravitent dans ce projet sont : **M. Charlet (le chef de projet)**, l'équipe projet, la direction d'exploitation de la ligne de raffinage, le directeur de la société chargé  de la construction de la ligne (M.Jobert), les entreprises sous-traitantes et le directeur de la raffinerie. On nous donne la date à laquelle le projet doit être livré et le budget. Les règles de fonctionnement du projet sont détaillées dans un manuel des procédures. S'en suit une **synthèse de l'entretien avec M.Jeanlez** que je ne vais pas recopier ici car elle est assez longue. Dans cet entretien, on comprend les **relations entre les différents acteurs du projet**, on se rend compte que M.Jeanlez n'a pas de bonnes relations avec l'ensemble des acteurs alors que M.Charlet, le chef de projet en a de très bonnes. De plus la communication entre ces deux hommes qui devraient travailler ensemble semble totalement rompue. M.Jeanlez évoque les **actions qu'il a tenté** pour résoudre le problème sans que cela fonctionne. Il **demande à l'intervenant d'organiser une formation spécifiques pour ses collaborateurs**, axée sur les problèmes de communication dans la conduite de projet. Il explique aussi les résultats qu'il attend de cette formation.
+
+L'intervenant va alors de son coté commencer par **cadrer la demande** en listant : 
+- **l'élément déclencheur** : du retard et un non-respect du budget
+- **la hiérarchie des objectifs**: c'est à dire au travers de son entretien il a noté la demande (que l'on appelle l'objectif n, ici , former les membres de l'équipe projet aux techniques de communication liées aux déroulement d'un projet) mais il a aussi cherché à comprendre l'objectif n+1 (ici améliorer la coordination entre les personnes impliquées dans le projet) et l'objectif n+2 (ici, installer une nouvelle ligne de raffinage)
+- **les résultats attendus** par le demandeur pour l'objectif n+1
+- **les acteurs et la nature de leur relation** (cf image ci-dessous)
+- **les enjeux pour le demandeur et pour le chef de projet**
+- **les contraintes/ressources**
+- **les actions déjà tentées**
+- **les évolutions prévisibles**
+
+<img src="syst_a_considerer.jpg">
+Source : Manager par l'approche systémique, Dominique Bériot
+
+Ensuite l'intervenant **analyse la modélisation du système à considérer** avec le schéma des acteurs et la nature de leur relation.(cf schéma ci-dessus) Il cherche des informations sur la stratégie à adopter. La modélisation montre ici que M.Jeanlez est complètement exclu des interactions même si il est le directeur du projet. 
+
+L'étape suivante est **la réflexion stratégique**. M.Jeanlez est persuadé que sa demande de formation va régler tous ses problèmes or sa solution n'est pas cohérente. Il faut donc trouver une stratégie pour contourner sa résistance. L'intervenant va ici appliquer la *solution paradoxale* qui consiste à aller dans son sens et à "*faire plus de la même chose*". Dans cette situation, **le demandeur est l'obstacle au changement**, on ne peut pas avancer tant qu'il résiste. L'intervenant propose à M.Jeanlez de rédiger une lettre à toutes les personnes concernées pour les inviter à un stage sur la communication lors de projets. Ils rédigent ensemble la lettre et l'envoient. L'effet anticipé par l'intervenant se produit : personne n'est volontaire pour la formation. M.Jeanlez va donc être favorable à la recherche d'une autre solution. 
+L'intervenant peut alors se concentrer sur l'objectif n+1. Au vue des problèmes relationnels entre les différents acteurs. L'intervenant décide d'appliquer le principe stratégique "Détourner leur attention des tensions". Plutôt que de dépenser de l'énergie à résoudre des problèmes de relation, l'intervenant les fait travailler ensemble sur un nouvel objectif commun (ce qui les fera redéfinir leurs relations sans traiter explicitement des difficultés qu'ils rencontrent actuellement). L'intervenant propose alors un séminaire avec la démarche suivante : 
+1. Objectif : définir les actions de progrès réciproques et leurs mises en oeuvre pour mener à bien la phase suivante du projet
+2. Les acteurs concernés : tous les acteurs du système cités au début de l'exemple
+3. Le séminaire proprement dit : il a été ouvert par le directeur qui a rappelé ses critères. Le groupe de travail s'est concentré à recueillir les attentes de chacun pour chaque étape de la phase suivante et proposer les actions à mettre en oeuvre pour répondre à ces attentes.
+4. Les résultats de la journée : un plan a été élaboré en respectant les objectifs, des actions ont été décidées avec leurs effets attendues, un responsable et un délai de réalisation. 
+
+Le résultat de l'intervention est que la suite du projet s'est bien déroulée et les contraintes ont été respectées. Des enseignements utiles ont été tirés du projet et seront utilisés dans le futur. 
+
+L'intervenant a facturé 4 jours de travail à son client, là où un consultant qui aurait fait la formation demandée par M.Jeanlez aurait facturé 9jours. 
+
+J'ai trouvé cet exemple très parlant pour comprendre comment mettre en place une approche systémique dans la conduite du changement en entreprise. 
+
+# Mon avis sur l'approche de Palo Alto
+J'ai trouvé ce sujet très intéressant car il nous amène à penser d'une autre manière. Le livre de Dominique Bériot est passionnant et se lit très bien (j'ai lu 180 pages en 2 jours). Je regrette de ne pas avoir découvert ce sujet plus tôt sinon j'aurais étalé son étude sur 2 POK afin de pouvoir synthétiser mes lectures et apporter plus de détails sur la conduite du changement selon Palo Alto. Je pense qu'il pourrait être intéressant d'avoir un cours sur cette approche en Do_It.
+
