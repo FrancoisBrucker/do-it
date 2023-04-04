@@ -95,6 +95,16 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 [x] Divers ajustements CSS
 [x] Création d'un docker compose avec 3 services : le front, le microservice lieux et le microservice utilisateurs.
 
+## Application
+
+Page d'accueil           |  Menu
+:-------------------------:|:-------------------------:
+![page d'accueil](map.png)   |   ![menu](slide_bar.png)
+
+**Page de connexion**            |  **Parc Athéna**
+![page de connexion](connect_1.png)  |   ![parc Athéna](parc_athena.png)
+
+
 ## Futures fonctionnalités
 
 Bien que nous soyons fiers de ce que nous avons accompli avec l'application web, il y a certaines fonctionnalités que nous aurions aimé pouvoir ajouter si le temps et les ressources nous avaient permis. Ces améliorations pourraient inclure :
