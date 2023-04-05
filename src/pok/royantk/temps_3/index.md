@@ -19,6 +19,7 @@ Ce POK présente le développement d’une plateforme simple de e-commerce à l�
 
 {% chemin "**Ressources**" %}
 
+- [👀 Voir le site en ligne](http://cerfeuil.ovh1.ec-m.fr:1234/)
 - [Le Github du POK](https://github.com/royantk/POK3)
 - [[Documentation] React](https://fr.reactjs.org/docs/getting-started.html)
 - [[Documentation] React-Redux](https://react-redux.js.org/introduction/getting-started)
