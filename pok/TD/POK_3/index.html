@@ -159,6 +159,9 @@
 <li>
 <p>Réglage des hyper-paramètres d'un modèle [x]</p>
 </li>
+<li>
+<p>Implémentation de transfert learning [~]</p>
+</li>
 </ul>
 <h3>Difficultés rencontrées</h3>
 <ul>
@@ -200,6 +203,8 @@
 <p><img src="RNNetResults.png" alt="RNNetResults"></p>
 <p>J'ai voulu alors voir si je pouvais améliorer ces résultats en réglant le taux d'apprentissage (hyper-paramètre clé dans l'étude de réseau de neurones.)</p>
 <p><img src="LRcomparison.png" alt="LRcomparison"></p>
+<p>Ensuite, avec le modèle RNN entrainé avec le meilleur LR, j'ai codé une fonction de prédiction de sentiment et j'ai tenté de piéger mon algorithme des phrases un peu sarcastiques</p>
+<p><img src="sentiment_prediction.png" alt="Sentiment Prediction"></p>
 <p>Enfin, j'ai entendu parlé de &quot;Transfer Learning&quot; vers la fin de mon POK. Il s'agit d'utiliser un réseau de neurone pré-entrainé, puis d'entraîner sa couche de classification sur notre problème spécifique.</p>
 <p>J'ai essaié d'implémenter le modèle de Bert mais comme il fallait avoir recours à tokenizer différent de celui que j'avais codé, je n'ai pas réussi à régler les problèmes de dimensions d'inputs.</p>
 
