@@ -17,6 +17,8 @@ Ce POK présente le développement d’une plateforme simple de e-commerce à l�
 
 <!-- fin résumé -->
 
+[<-- Retour](../)
+
 {% chemin "**Ressources**" %}
 
 - [👀 Voir le site en ligne](http://cerfeuil.ovh1.ec-m.fr:1234/)
@@ -39,7 +41,7 @@ L’objectif de ce POK est de **concevoir une boutique en ligne simple** utilisa
 
 {% chemin "**Choix des technologies**" %}
 
-Afin d’identifier les différentes technologies que j’allais pouvoir utiliser, j’ai fais des recherches. J’en ai constitué un **MON** que vous pouvez consulter ici : [[MON] Technologies web](../../../mon/royantk/temps_3/tech_web)
+Afin d’identifier les différentes technologies que j’allais pouvoir utiliser, j’ai fais des recherches. J’en ai constitué un **MON** que vous pouvez consulter ici : [[MON] Technologies web](../../../mon/royantk/temps_3/technologies)
 
 {% endchemin %}
 
@@ -493,3 +495,5 @@ Voici le nouveau code pour la gestion du panier :
 ## Conclusion du POK
 
 Dans ce POK, nous avons appris comment créer une application de commerce électronique avec React, TailwindCSS et MUI. Nous avons commencé par créer un catalogue de produits à l'aide du composant `CatalogueItem`, puis nous avons appris comment créer des pages de produits avec React Router en utilisant l'ID du produit comme paramètre d'entrée. Enfin, nous avons mis en place la gestion du panier avec la page du panier qui affiche la liste des produits du panier et la possibilité de supprimer des produits du panier.
+
+[<-- Retour](../)
