@@ -45,14 +45,16 @@ layout: layout/base.njk
         </div>
     {% endif %}
 
-    {% set year = page.inputPath | getValueFromPath('/', 3) %}
-    {% if year !== 'index.njk' and year !== 'index.md' %}
-        <div class="absolute top-0 right-0">
-            <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2">
-                {{ year }}
-            <span>
-        </div>
-    {% endif %}
+    {% if page.inputPath | getValueFromPath('/', 2) !== 'ct' %}
+        {% set year = page.inputPath | getValueFromPath('/', 3) %}
+        {% if year !== 'index.njk' and year !== 'index.md' %}
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    {{ year }}
+                <span>
+            </div>
+        {% endif %}
+    {% endif%}
 </div>
 
 {% if eleventyNavigation and eleventyNavigation.key %}
