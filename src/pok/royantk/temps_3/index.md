@@ -19,11 +19,11 @@ Ce POK présente le développement d’une plateforme simple de e-commerce à l�
 
 {% chemin "**Ressources**" %}
 
-- [Le Github du POK](https://github.com/royantk/FindTheKey)
+- [Le Github du POK](https://github.com/royantk/POK3)
 - [[Documentation] React](https://fr.reactjs.org/docs/getting-started.html)
 - [[Documentation] React-Redux](https://react-redux.js.org/introduction/getting-started)
 - [[Documentation] Material Design UI (MUI)](https://mui.com/material-ui/getting-started/overview/)
-- [Documentation] Parcel
+- [Documentation](https://parceljs.org/)
 - [[MON] Débutez avec React](https://francoisbrucker.github.io/do-it/mon/royantk/temps_2/react/)
 - [Chat GPT](https://chat.openai.com/chat)
 - [https://parceljs.org/getting-started/webapp/](https://parceljs.org/getting-started/webapp/)
