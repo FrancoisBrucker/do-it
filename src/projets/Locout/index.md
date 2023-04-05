@@ -48,7 +48,10 @@ Pour l'application mobile, on utilisera :
   <figcaption>Poster de présentation du projet</figcaption>
 </figure>
 
+## Maquette 
+
 ## Business Model
+
 <figure>
 <img src="./assets/business.png">
 <figcaption>Business Model du porjet Loc'out</figcaption>
