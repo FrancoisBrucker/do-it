@@ -45,7 +45,7 @@ Nous nous servons aussi de plusieurs librairies/packages qui nous permettent de 
 -	Material pour Angular, créé par google, est un ensemble, d’outils et composants de design déjà préconçus afin d’avoir un site internet propre, beau, et aux normes modernes en terme d’UI.
 -	Bootstrap, pour la mise en page des éléments de notre site internet, fournit aussi des outils pour l’UI.
 -	L’extension Google Maps d’Angular, nous a permis d’utiliser une carte Google Maps interactive et d’y placer nos répères de salles de sports indoor
--	Ngx-Charts a servi pour les graphiques et la partie 
+-	Ngx-Charts a servi pour les graphiques et la partie statistique du tableau de bord.
 
 ## Poster
 
