@@ -124,4 +124,4 @@ Ensuite, avec le modèle RNN entrainé avec le meilleur LR, j'ai codé une fonct
 
 Enfin, j'ai entendu parlé de "Transfer Learning" vers la fin de mon POK. Il s'agit d'utiliser un réseau de neurone pré-entrainé, puis d'entraîner sa couche de classification sur notre problème spécifique.
 
-J'ai essaié d'implémenter le modèle de Bert mais comme il fallait avoir recours à tokenizer différent de celui que j'avais codé, je n'ai pas réussi à régler les problèmes de dimensions d'inputs.
+J'ai essaié d'implémenter le modèle de Bert mais comme il fallait avoir recours à un tokenizer différent de celui que j'avais codé, je n'ai pas réussi à régler les problèmes de dimensions d'inputs.
