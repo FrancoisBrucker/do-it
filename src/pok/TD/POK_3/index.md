@@ -62,6 +62,8 @@ Pour le prochain sprint:
 
 - Réglage des hyper-paramètres d'un modèle [x]
 
+- Implémentation de transfert learning [~]
+
 ### Difficultés rencontrées
 
 - Impossibilité de pipeliner la démarche (spécifité des inputs pour les différents modèles)
@@ -115,6 +117,10 @@ Et les résultats étaient bien meilleurs:
 J'ai voulu alors voir si je pouvais améliorer ces résultats en réglant le taux d'apprentissage (hyper-paramètre clé dans l'étude de réseau de neurones.)
 
 ![LRcomparison](LRcomparison.png)
+
+Ensuite, avec le modèle RNN entrainé avec le meilleur LR, j'ai codé une fonction de prédiction de sentiment et j'ai tenté de piéger mon algorithme des phrases un peu sarcastiques
+
+![Sentiment Prediction](sentiment_prediction.png)
 
 Enfin, j'ai entendu parlé de "Transfer Learning" vers la fin de mon POK. Il s'agit d'utiliser un réseau de neurone pré-entrainé, puis d'entraîner sa couche de classification sur notre problème spécifique.
 
