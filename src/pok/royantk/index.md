@@ -10,7 +10,12 @@ tags: ['pok']
 
 <!-- début résumé -->
 
-Tous les POK de Killian ROYANT
+Tous les POK de Killian ROYANT :
+
+- **Temps 1** - [Mon site chez moi (front)](https://francoisbrucker.github.io/do-it/pok/royantk/temps_1/)
+- **Temps 2** - [Mon site chez moi (back)](https://francoisbrucker.github.io/do-it/pok/royantk/temps_2)
+- **Temps 3** - [E-commerce avec React](https://francoisbrucker.github.io/do-it/pok/royantk/temps_3)
+
 <!-- fin résumé -->
 
 **Lien vers mes MON :**
@@ -32,7 +37,7 @@ Ci dessous mes choix prévisionnels de parcours pour le S9. Mon objectif : conti
 |  | **Temps 1** | **Temps 2** | **Temps 3** |
 |---|:---:|:---:|:---:|
 | **Cours** | Expérience Utilisateur<br>Java/Gradle<br>Serveur Web 101 | Interface utilisateur<br>Lean engineering<br>Réseaux<br>Serveur distant<br>Structure de données | Programmation par tests<br>AWS/Docker<br>Algorithmie<br>No/Low code<br>Management visuel |
-| **POK** | Mon site chez moi (front) | Mon site chez moi (back) | E-commerce avec React |
-| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>React | Développement mobile<br>Dev-Ops |
+| **POK** | Mon site chez moi (front) | Mon site chez moi (back) | Site sur serveur distant |
+| **MON** | Programmation objet Python<br>Pages web dynamiques | Full stack<br>React | Technologies front-end<br>Les métiers après DO_IT |
 
 [<-- Retour](../)

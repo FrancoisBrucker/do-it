@@ -6,9 +6,9 @@ authors:
   - Sarah Honoré
 tags :
   - 'digitalisation'
-  - 'Lego Universe'
-  - 'Minecraft'
-  - 'décision'
+  - 'lego Universe'
+  - 'minecraft'
+  - 'decision'
 ---
 <!-- début résumé -->
 Le second MON que je vais réaliser est une étude de cas intutilé "Lego in the age of digitization"

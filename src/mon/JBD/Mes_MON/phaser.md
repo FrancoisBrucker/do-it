@@ -29,10 +29,16 @@ Phaser - Game Engine + Github CI
   - [Clé de déploiement](#h2-2)
     - [Access Token](#h2-2-1)
     - [Secrets](#h2-2-2)
+- [Présentation de Phaser](#h3)
+  - [Physique (*Physics*)](#h3-1)
+    - [Arcade](#h3-1-1)
+    - [Matter](#h3-1-1)
+  - [Scène (*Scene*)](#h3-2)
+  - [Joueur (*Sprite*)](#h3-3)
+  - [Carte (*Tilemap*)](#h3-4)
 - [Liens Utiles](#liens)
 
 <h2 id="h1">Choix de la technologie</h2>
-
 
 Je me suis renseigné sur 4 différents moteurs de jeu : 
 - [Unity](https://unity.com/) : 
@@ -112,6 +118,105 @@ Un secret est une variable qui est stockée de manière sécurisée par Github e
 
 [Documentation officielle](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
+<h2 id="h3">Présentation de Phaser</h2>
+
+Phaser est un moteur de jeu open source, dont le code source se trouve [ici](https://github.com/photonstorm/phaser/tree/v3.55.2).
+
+Pour installer Phaser, il faut mettre, dans un fichier html, la balise :
+
+```html
+<script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+```
+
+Le reste du code sera dans un fichier js, ou dans une autre balise *script*.
+
+Phaser a une énorme bibliothèque d'exemples, pour voir une mise en application de chaque fonctionnalités, et un fichier API complet. Il est important de s'y référer pour voir comment implémenter une des fonctionnalités.
+
+[exemples](https://labs.phaser.io/index.html?dir=&q=)
+
+[API](https://photonstorm.github.io/phaser3-docs/index.html)
+
+<h3 id="h3-1">Physique (<i>Physics</i>)</h3>
+
+Phaser a 2 models de physique implémentée **Arcade** et **Matter**
+
+Le choix de la physique est quelque chose de primordial car il influencera les fonctionnalités de votre application.
+
+Les méthodes des objets ne sont pas les mêmes dans différents cas.
+
+<h4 id="h3-1-1">Arcade</h4>
+
+La physique **Arcade** est une physique plus simple, qui est faite pour mettre en place un projet rapidement.
+
+C'est plus simple de le prendre en main. Par contre la détections des éléments extérieurs (blocks) n'est pas implémentée ce qui peut-être limitant.
+
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=arcade" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h4 id="h3-1-2">Matter</h4>
+
+La physique **Matter** essai de se rapprocher au plus proche de la réalité, en ayant une implémentation de mécanique : il y a des frottements, il est possible de pousser des objets etc.
+
+Il y a une variété plus importante d'objet qu'on peut créer.
+
+
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=matter" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h3 id="h3-2">Scène (<i>Scene</i>)</h3>
+
+La scène est l'élément principal de Phaser, c'est lui qui va s'occuper de précharger les images d'initier les components et de faire tourner le jeu.
+
+On doit créer une classe qui hérite de *Phaser.Scene*.
+
+On peut créer 3 méthodes :
+- *preload*
+- *create*
+- *update*
+
+Méthodes utilisées pour charger les images (*preload*), initialiser les éléments du jeu (*create*), et effectuer des actions à chaque tick du jeu (*update*).
+
+<h3 id="h3-3">Joueur (<i>Sprite</i>)</h3>
+
+Un Sprite est un objet animé du jeu, il peut être contrôlé par le joueur ou par d'autres éléments du jeu. Il est créé à partir d'une image.
+
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=sprite" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h3 id="h3-4">Carte (<i>Tilemap</i>)</h3>
+
+La carte du jeu peut-être générée en plaçant des bloques un par un ou en utilisant une Tilemap qui va contenir toutes les informations pour créer la map.
+
+La carte peut être composée de plusieurs couches, dont des touches qui créent des collisions ou non. C'est pratique pour générer des décors de fond, et les blocks avec lesquels notre personnage va interagir.
+
+<div class="allButtonGestionProjet">
+  <a href="../../phaser/?id=map" class="buttonGestionProjet">
+    <span><b class="hoverUnderline">Exemple</b></span>
+  </a>
+</div>
+
+<h2 id="h4">Mon point de vue</h2>
+
+**Points positifs** 👍
+
+- Phaser est très bien documenté avec un très grand nombre d'exemples différents.
+- Il n'y a pas besoin d'installer de logiciel ou autre.
+
+**Points négatifs** 👎
+
+- Il vaut mieux s'adapter à Phaser que essayer que suivre à la lettre ce qu'on a comme idée (contrôle limité sur les détails de bas niveau).
+- Il n'est pas aisé d'avoir un projet organisé en différents fichier. J'ai fait en sorte de séparer le code du joueur du code global, mais ce n'a pas été facile. Donc il n'est pas trop possible de faire des gros projets.
+- Il n'y a pas de réel cours, il y a une explication du "Hello World!", puis l'utilisateur est encouragé à aller voir les différents exemples.
+
 <h2 id="liens">Liens Utiles </h2>
 
 **Mon projet**
@@ -123,3 +228,54 @@ Un secret est une variable qui est stockée de manière sécurisée par Github e
 - [Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.)
 - [Github Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+
+**Phaser**
+- [Site Web](https://phaser.io/)
+- [Bibliothèque d'exemples](https://labs.phaser.io/)
+- [API](https://photonstorm.github.io/phaser3-docs/index.html)
+
+<style>
+  a.buttonGestionProjet{
+    display: flex;
+    position: relative;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(22,163,74);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    border: 4px white solid;
+    outline: 4px rgb(22,163,74) solid;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.12,-0.91,.85,1.86);
+  }
+  a.buttonGestionProjet:hover{
+    transform: scale(1.1);
+  }
+  a.buttonGestionProjet span{
+    display: block;
+    color: white;
+  }
+  div.allButtonGestionProjet{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+  .hoverUnderline{
+    position:relative;
+  }
+  a.buttonGestionProjet .hoverUnderline::after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 0.125em;
+    width: 0;
+    background-color:white;
+    transition: all 0.6s;
+  }
+  a.buttonGestionProjet:hover .hoverUnderline::after{
+    width:100%;
+  }
+</style>

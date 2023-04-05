@@ -8,7 +8,7 @@ authors:
 
 tags: 
     - 'pok3'
-    - 'amélioration-continue'
+    - 'amelioration continue'
 ---
 
 ## Choses à faire durant ce temps 3
@@ -19,7 +19,7 @@ tags:
 
 ## 1er Sprint
 
-- Mettre en place des tests sur le back
+- Mise en place des tests sur le back
 
 ## Ce qui a été fait au 1er sprint
 
@@ -28,3 +28,14 @@ tags:
   - Blocage des commits
   - Merge si les tests passent
 - Nettoyage de toutes les fonctions inutiles du Back
+
+## 2e Sprint
+
+- Mise en place des logs
+
+## Ce qui a été fait au 2e sprint
+
+- Mise en place de logs personnalisés
+- Dockerisation du microservice (mots-croises-generateur):
+  - publication sur le [Docker Hub](https://hub.docker.com/repository/docker/instraben13/mots-croises-generateur/general)
+  - integration avec Docker Compose

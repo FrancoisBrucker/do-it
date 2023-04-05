@@ -4,7 +4,10 @@ layout: layout/post.njk
 title: "MON de Sarah "
 authors:
   - Sarah Honoré
-
+tags :
+  - 'gestion de projet'
+  - 'lean management'
+  - 'agile'
 ---
 <!-- Début Résumé -->
 Comparatif des typologies de gestion de projets

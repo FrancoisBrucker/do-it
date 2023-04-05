@@ -6,6 +6,10 @@ title: "Monitoring avec la stack Elastic (ELK)"
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'monitoring'
+  - 'base de donnees'
 ---
 
 <!-- début résumé -->

@@ -8,7 +8,7 @@ authors:
 
 tags: 
     - 'pok1'
-    - 'un-site-chez-moi'
+    - 'un site chez moi'
 ---
 
 ## Ce qu'on a prévu pour le 1er point POK

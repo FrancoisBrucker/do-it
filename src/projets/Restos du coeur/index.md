@@ -12,80 +12,72 @@ tags: ['projet']
 ---
 
 <!-- début résumé -->
-Le projet est réalisé avec le centre des **Restos du Cœur** de la rue Granoux à Marseille, **4 étudiants** du parcours DO-IT. Laetitia Piet encadre ce projet. Ce projet est en collaboration avec le centre des restos du cœur des 4° et 5° arrondissements de Marseille. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**.
+Ce projet est réalisé en collaboration avec le centre des **Restos du Cœur** des 4° et 5° arrondissements de Marseille (rue Granoux). Laetitia Piet encadre ce projet. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**. Sujet: autonomie numérique.
 <!-- fin résumé -->
 
-## Nos immersions
+## Sommaire
+1. Contexte
+2. Objectifs
+3. Notre démarche
+4. Nos solutions
+5. Conclusion et améliorations
 
-Afin de **mieux comprendre les bénévoles et leur environnement**, nous avons participé à leurs tâches quotidiennes lors de différentes **immersions**.
+
+## 1.Contexte
+
+Sarah a passé plusieurs mois comme bénévole dans un centre des Restos du Coeur. Elle s'est rendu compte de plusieurs problèmes dans leur manière de fonctionner. Le but de ce projet est de leur donner des outils numériques pour simplifier leur quotidien et leur faire gagner du temps. 
+
+Le centre des Restos du Coeur avec lequel nous travaillons est le centre des 4ème et 5ème arrondissements de Marseille et se situe au 21 rue Granoux. La responsable de ce centre est Annie Lecompte et il y a 56 bénévoles (dont une quinzaine de permanents) dans le centre. Le centre fonctionne de la manière suivante:
+- Le mercredi matin, des camions arrivent de l’association départementale chargés de nourriture (5 à 7 camions selon les semaines). Des bénévoles sont là pour décharger les camions, compter les denrées alimentaires et les ranger dans le local. Cela leur prend la matinée. L’après-midi, les derniers arrangements sont faits et parfois, lorsque des bénévoles sont disponibles, des vêtements sont distribués aux personnes qui en ont besoin. 
+- Les jeudis et vendredis, les denrées alimentaires sont distribuées aux bénéficiaires 
+
+L’année est découpée en 2 grandes périodes : la campagne d’hiver qui s’étend de novembre à mars et qui accueille plus de personnes dans le besoin et la campagne d’été qui s’étend de mars à novembre. Avant la pandémie, le centre accueillait environ 550 familles l’hiver et 300 l’été. Cette année, la campagne d’été a permis à 560 familles de recevoir de l’aide. Les inscriptions pour la campagne d’hiver sont en cours mais les critères d’admission ont été modifiés au vu de l’augmentation du prix des énergies et des inflations ce qui devrait encore augmenter le nombre de bénéficiaires pour cet hiver. 
+
+## 2.Objectifs
+
+Les Restos du cœur sont une organisation qui tourne grâce à des bénévoles. Par conséquent, les processus sont très approximatifs et l’informel est au cœur de son fonctionnement.
+Avec l’aide de la responsable du centre, nous avons sélectionné 3 problèmes sur lesquels nous souhaitons agir:
+- Seule la responsable Annie sait comment faire la répartition des denrées alimentaires
+- A chaque nouvelle campagne (2 fois par an), les bénéficiaires doivent s’inscrire et remplir de longs formulaires qui sont repris de zéro 
+- Il n’existe pas de moyen pour savoir à l’avance quels bénévoles seront présents pendant les jours d’actions 
+
+Les enjeux principaux de ce projet sont:
+- Fournir des solutions simples d’utilisation qui correspondent aux profils des bénévoles
+- Fournir des solutions pérennes qui serviront dans la durée et qui ne pourront pas se “casser”
+- Intégrer nos solutions avec de l'enthousiasme chez les bénévoles
+
+
+
+## Notre démarche
+
+Afin de nous adapter au mieux à notre public cible et fournir des solutions sur mesure, nous avons adopté une démarche inspirée du Service Design. Pour **mieux comprendre les bénévoles et leur environnement**, nous avons donc participé à leurs tâches quotidiennes lors de différentes **immersions**. Nous avons passé beaucoup de temps auprès d'eux afin de réellement comprendre leur besoins mais aussi pour promouvoir nos solutions et favoriser leur acceptation.
 
 ![legumes](./photos/legumes.jpg)
 
-Parmi ces immersions, on retrouve :
+Nos différentes rencontres avec les bénévoles:
 
-- Une immersion lors des distributions
-- Une immersion lors des inscriptions
-- Une immersion lors de la réception des denrées alimentaires
-- Des interviews de 3 bénévoles
-- Un atelier créatif avec des bénévoles
-
-## Nos solutions
-
-Nous avons identifié **3 problèmes** et avons proposé des solutions pour chacun d’entre eux.
-
-### Problème 1 : Les inscriptions
-
-Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu.
-
-**Problème identifié :** Il faut remplir manuellement une fiche d’inscription pour chaque famille bénéficiaire. Cela rend le processus long et fastidieux.
-
-**Notre solution :** numériser la phase d’inscription en automatisant le remplissage de ce document.
-
-### Problème 2 : Le calendrier des bénévoles
-
-Chaque semaine, des bénévoles sont présents pour **distribuer les denrées alimentaires** aux familles bénéficiaires. Actuellement, ces bénévoles viennent **sans prévenir** quand ils sont disponibles.
-
-![surgeles](./photos/surgeles.jpg)
-
-**Problèmes identifiés :**
-
-- Il est difficile de savoir quel bénévole sera présent les jours de distribution.
-- Trop de bénévoles sont présents le vendredi
-- Il manque des bénévoles le jeudi
-
-**Notre solution :** créer un calendrier des bénévoles pour faciliter la gestion des bénévoles.
-
-### Problème 3 : La répartition des denrées alimentaires
-
-Après chaque livraison de denrées alimentaires, il faut **répartir les denrées entre les différentes familles**. Actuellement, la responsable de centre fait les calculs **à la main**.
+- Immersion lors des distributions
+- Immersion lors des inscriptions
+- Immersion lors de la réception des denrées alimentaires
+- Interviews de 3 bénévoles
+- Mise en place sur 3 semaines consécutives avec démonstrations aux bénévoles
 
 ![conserves](./photos/conserves.jpg)
 
-**Problèmes identifiés :**
-
-- Les familles qui viennent en début et en fin de distribution n’ont pas la même quantité de nourriture
-- Les bénévoles ne font pas confiance aux calculs de la responsable de centre
-
-**Notre solution :** automatiser le répartition alimentaire en fonction des stocks et de paramètres spécifiques.
-
-## Notre poster
-
-Afin de présenter notre projet, nous avons réalisé un poster.
-
-![poster](./photos/poster.png)
+La phase de mise en place a aussi été très importante. Nous avons formé et accompagné la responsable sur les outils pendant 3 semaines. Ces rencontres nous ont permis d'écouter les critiques des bénévoles et de modifier nos solutions en conséquences.
 
 
-## Nos résultats
+## 4.Nos solutions
 
-Nous avons donc essayé de développer et mettre en place nos différentes solutions. On va détailler ci-dessous la démarche et les résultats obtenu. 
+Nous avons proposé  **3 solutions** en accord avec les 3 problèmes identifiés précedemment.
 
-### **Problème 1 : Les inscriptions**
+### **Solution 1 : Les inscriptions**
 
 Avant chaque période de distribution (deux fois par an), une phase d’inscription des bénéficiaires a lieu. Il fallait remplir manuellement une fiche d’inscription pour chaque famille bénéficiaire ce qui rendait le processus long et fastidieux.
 
 ![Feuille de template d'inscription](./photos/inscriptions1.png)
 
-Néanmoins, toutes les informations necessaires au remplissage de ces fiches était déjà renseigné sur le logiciel interne des restos du cœur. Nous avons ainsi réfléchis à une solution permettant d’automatiser le remplissage des fiches d’inscription aux campagnes des bénéficiaires.
+Néanmoins, toutes les informations necessaires au remplissage de ces fiches étaient déjà renseignées sur le logiciel interne des restos du cœur. Nous avons ainsi réfléchis à une solution permettant d’automatiser le remplissage des fiches d’inscription aux campagnes des bénéficiaires.
 
 Pour cela, nous avons travaillé via Excel et une macro codée en VBA. La macro utilise un fichier Excel contenant une feuille de template à remplir, une feuille de mode d'emploi avec un bouton pour lancer la macro, et une feuille Data qui définit les portions à distribuer en fonction du nombre de personnes. La macro demande à l'utilisateur de sélectionner les fichiers Excel des familles et des personnes, et permet de générer automatiquement les fiches d'inscription pour chaque famille bénéficiaire.
 
@@ -282,9 +274,13 @@ La création de cette macro a donc été assez complexe et demande une connaissa
 
 Malgré ces difficultés, la solution mise en place a permis de résoudre efficacement le problème d'inscription et a apporté un gain de temps considérable aux bénévoles, ainsi qu'une réduction du risque d'erreurs lors du remplissage des fiches d'inscription.
 
-### Problème 2 : Le calendrier des bénévoles
+Reserve: Durant notre projet une mise à jour d'Ulysse (logicieldont on extrait les données) a changé la forme des données à récupérer. Notre solution ne fonctionnait alors plus et a du être modifiée. Dans le futur, une telle mise à jour pourrait rendre notre solution obsolète.
 
-Au sein de l'association, il était difficile de suivre la présence des bénévoles lors des jours de distribution, faute de planning. C'est alors que nous avons proposé une solution pratique et simple : Framadate. Il s'agit d'un calendrier en ligne, facile à créer et à compléter par tous les bénévoles, quel que soit leur âge. Cette application offre de nombreux avantages :
+### Solution 2 : Le calendrier des bénévoles
+
+Au sein de l'association, il était difficile de suivre la présence des bénévoles lors des jours de distribution, faute de planning. C'est alors que nous avons proposé une solution pratique et simple : Framadate. Il s'agit d'un calendrier en ligne, facile à créer et à compléter par tous les bénévoles, quel que soit leur âge. 
+
+**Avantages**
 
 * **Gratuit et open source** : Framadate est un logiciel libre et gratuit.
 * **Facilité d'utilisation** : L'interface de Framadate est simple et intuitive.
@@ -294,15 +290,15 @@ Au sein de l'association, il était difficile de suivre la présence des bénév
 * On peut indiquer les **disponibilités d'autres bénévoles** : ceux qui ne disposent pas de smartphone par exemple.
 * Vision sur le long terme : possibilité de générer un fichier mensuellement.
 
-Problèmes rencontrés :
-* Beaucoup d'application de planning disponible
-* Réticence des bénévoles vis à vis la technologie 
-* 
+**Difficultés rencontrées**
+
+* Beaucoup d'application de planning sont disponibles et aucune n'est parfaite, nous avons donc du faire des choix
+* Certains bénévoles ont des appareils trop vieux pour pouvoir ouvrir framadate, 
+* Le planning doit être créé et envoyé chaque mois par la Responsable du centre. Nous craignons qu'elle ne continue pas à l'utiliser. 
 
 
 
-
-### Problème 3 : Solution de distribution
+### Solution 3 : Solution de distribution
 
 Pour aider la responsable de centre à faire sa distribution, nous avions besoin d’un outil simple d'utilisation et quasi incassable.
 
@@ -322,16 +318,30 @@ Les 2 méthodes de calculs:
 
 La première fait une répartition strictement équitable par personne (on divise le nombre d’unité par personne et on donne le même nombre d’aliments pour chaque personne, on a alors beaucoup de restes). La seconde méthode minimise les stocks restants en  donnant plus de denrées aux familles les plus nombreuses.
 
+Nous avons testé d'autres méthodes qui n'étaient pas concluantes.
 
-Avantages:
+**Avantages:**
+
 * Document qui suit les étapes logiques d’une semaine de travail au resto du coeur, simplifié au maximum
 * L’utilisateur n’a besoin de rentrer que des informations dans les  feuilles “data_bénéficiares” et “data_stock”. Tout le reste se remplit automatiquement évitant les répétitions. 
 * Les cellules contenant les calculs sont uniquement présentes dans les feuilles de répartition et sont verrouillées. 
 
 
-
-Problèmes rencontrés:
+**Difficultés rencontrées**
 * Le choix d’une méthode de calcul s’est avéré difficile. Aucune des méthodes que nous avons testées n’est parfaite. 
-* Aussi, il faut conserver un regard critique sur ces calculs car notre Excel ne prend pas en compte les spécificités individuelles de chaque produit. La responsable est libre de modifier les chiffres de la répartition et nous avons constaté qu’elle le fait quasiment systématiquement. On peut penser qu’un bénévole nouveau venu ne pourrait pas effectuer une distribution efficace rien qu’avec notre outil. (Notre outil fonctionne bien pour les bénévoles expérimentés mais reste discutable pour les autres)
+* Aussi, il faut conserver un regard critique sur ces calculs car notre Excel ne prend pas en compte les spécificités individuelles de chaque produit. La responsable est libre de modifier les chiffres de la répartition et nous avons constaté qu’elle le fait quasiment systématiquement. On peut penser qu’un bénévole nouveau venu ne pourrait pas effectuer une distribution efficace rien qu’avec notre outil. 
+De plus, en voyant l'utilisation faite par la responsable de centre, on pe se poser des questions sur sa réel utilitée... 
+Si les chiffres sont bidouillés, la répartition n'en sera pas plus fiable. Elle permettra juste de lui faire gagner du temps.
 * La prise en main peut paraître compliquée car remplir la liste du stock prend du temps. Pour fluidifier cela nous avons effectué 3 répartitions avec la responsable, en l’accompagnant sur l’outil
 
+
+## 5.Conclusion et améliorations
+
+Nous avons tous pris beaucoup de plaisir à réaliser ce projet qui a du sens. Nous sommes plutôt content du résultat et espérons que nos outils seront utilisés à long terme. Malheureusement on ne peut pas grantir que ces derniers seront utilisés de la bonne manière, notament la solution de répartition. En effet, la responsable qui a 6 ans d'expérience favorise son instinct plutôt que les calculs mathématiques... 
+Pour notre part, le contrat est rempli et nous sommes conscients des limites de notre projet.
+Si le projet avait duré 6 mois de plus, nous nous serions concentré sur l'adoption de nos solutions et leur bonne utilisation. Pour cela, il aurait fallu rappeler à la responsable de centre de recréer un calendrier chaque mois et l'accompagner sur les calcluls de répartition afin que les bonnes pratiques deviennent des habitudes.
+Nous aurions aussi pu ranger le local et le réorganiser à la manière du Lean.
+La solution inscription aurait aussi pu être retravaillée (elle nécessite encore des amléiorations).
+
+
+![poster](./photos/poster.png)

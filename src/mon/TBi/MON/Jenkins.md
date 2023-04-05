@@ -10,9 +10,9 @@ tags: ['Jenkins','CI/CD']
 
 {%details "Résumé"%}
 
-- Niveau confirmé
-- Pré-requis nécéssaires nombreux
-- Instalations d'outils nécéssaires
+- Niveau intermédiaire
+- Pré-requis nécessaires nombreux
+- Installations d'outils nécessaires
 
 {%enddetails%}
 
@@ -20,7 +20,7 @@ tags: ['Jenkins','CI/CD']
 
 ### Objectif :
 
-Comprendre les besoins qui mènent à l'utilisation d'un outil comme Jenkins pour un developpeur fullstack, puis mettre en place un exemple pratique d'utilisation.
+Comprendre les besoins qui mènent à l'utilisation d'un outil comme Jenkins pour un développeur fullstack, puis mettre en place un exemple pratique d'utilisation.
 
 ### Sujets abordés pendant le MON :
 
@@ -30,13 +30,13 @@ Comprendre les besoins qui mènent à l'utilisation d'un outil comme Jenkins pou
 - Exemple d'utilisation concret sur un de mes projets.
 
 {%prerequis%}
-{%attention%}C'est un MON avancé : les manipulations ne sont pas compliquées mais la mise en place nécéssite de solides bases sur de nombreux concepts différents.{%endattention%}
+{%attention%}C'est un MON intermédiaire : les manipulations ne sont pas compliquées mais la mise en place nécessite des bases sur de nombreux concepts différents.{%endattention%}
 Pré-requis :
-- Connaitre le contexte de devleppoment Fullstack.
+- Connaître le contexte de development Fullstack.
 - Linux, CLI, shell, ssh
 - Git, Github 
 - [Docker](./../Docker).
-- Un [projet](./../../../../pok/un-site-chez-moi/TBi/Artblog) à portée de mains, (la doc jenkins en fourni un).
+- Un [projet](./../../../../pok/un-site-chez-moi/TBi/Artblog) à portée de mains, (la doc Jenkins en fourni un).
 {%endprerequis%}
 
 ### Ressources utilisées : 
@@ -54,7 +54,7 @@ Ce sont des concepts de développement qui ont plusieurs but :
  - Ajouter les dernières fonctionnalités le plus rapidement possible
 
 Plus particulièrement, **la continuous integration** est l'ensemble de bonnes pratiques et d'outils qui permet de développer et tester e le code dans une version prête à être déployée le plus souvent possible.
-Traditionnelement, dans une équipe de développeur, la partie front et la partie Back pouvaient être développées par des personnes différentes et mises en communs quelques fois avant de lancer des tests. Cette technique est inéfficace car elle laisse le temps à des bugs ou des incompatibilités de grandir sans que l'on s'en rend compte. En effet, si l'on test le système seulement une fois par mois, il est possible de se retrouver avec une version qui ne marche plus et perdre énormément de temps.
+Traditionnellement, dans une équipe de développeur, la partie front et la partie Back pouvaient être développées par des personnes différentes et mises en communs quelques fois avant de lancer des tests. Cette technique est inefficace car elle laisse le temps à des bugs ou des incompatibilités de grandir sans que l'on s'en rend compte. En effet, si l'on test le système seulement une fois par mois, il est possible de se retrouver avec une version qui ne marche plus et perdre énormément de temps.
 Des outils comme git, github action ou Jenkins permettent aux développeurs de mettre leurs codes en communs puis de lancer une batterie de tests sur ce code plusieurs fois par jour. Grâce à cela, on évite la propagations de bugs et finalement, on gagne du temps.
 
 Quand le code est testé est prêt à être déployé il ne reste qu'à ... le déployé!
@@ -68,7 +68,7 @@ On appelle cela un **nightly build**.
 Par exemple ce site de M.Brucker utilise de la CI/CD :
   - les élèves développent en collaboration grâce à github
   - A chaque commit sur la branche principale, le code est testé par Github action
-  - Si les tests passent, le code est déployé sur le site github.io et la dernière version est disponnible directement sans que M.Brucker ait besoin de déployer quoi que ce soit lui-même
+  - Si les tests passent, le code est déployé sur le site github.io et la dernière version est disponible directement sans que M.Brucker ait besoin de déployer quoi que ce soit lui-même
 
   Le problème avec cette manière de procéder est que l'on peut push un commit monstrueux qui détruit le site. Peut importe l'état des tests, le commit sera accepté et il faudra réparer le code avant de pouvoir déployer le site à nouveau. 
 
@@ -78,7 +78,7 @@ Par exemple ce site de M.Brucker utilise de la CI/CD :
 
 {% info %} Une vidéo explicative [ici](https://www.youtube.com/watch?v=LFDrDnKPOTg&ab_channel=Simplilearn) {% endinfo %}
 
- L'idée est d'un tel outil est de mettre en place un environnement d'intégration continue. C'est à dire que le but est de créer un outil qui permet de developper, tester et pousser le code automatiquement, dès sa création. Par exemple, au lieu d'ajouter de nouvelles fonctionnalités sur notre site web, de faire un commit sur le repository, puis se rendre compte qu'il ne marche pas et corriger les bugs puis recommencer, on peut automatiser tout ça. Dans le meilleur des cas, à chaque nouvelle fonctionnalité, elle est automatiquement testée puis integrée dans une version viable du code, prête à être déployée. Si les tests détectent des erreurs ou des incompatibilités dans le code, la nouvelle fonctionnalité n'est pas integrée dans la branche principale et le développeur peut la retravailler sans jamais corrompre la version du code qui marche.
+ L'idée est d'un tel outil est de mettre en place un environnement d'intégration continue. C'est à dire que le but est de créer un outil qui permet de développer, tester et pousser le code automatiquement, dès sa création. Par exemple, au lieu d'ajouter de nouvelles fonctionnalités sur notre site web, de faire un commit sur le repository, puis se rendre compte qu'il ne marche pas et corriger les bugs puis recommencer, on peut automatiser tout ça. Dans le meilleur des cas, à chaque nouvelle fonctionnalité, elle est automatiquement testée puis intégrée dans une version viable du code, prête à être déployée. Si les tests détectent des erreurs ou des incompatibilités dans le code, la nouvelle fonctionnalité n'est pas intégrée dans la branche principale et le développeur peut la retravailler sans jamais corrompre la version du code qui marche.
 
 {%details "Des outils et des outils pour la CI"%} 
 - Bamboo
@@ -93,11 +93,11 @@ Par exemple ce site de M.Brucker utilise de la CI/CD :
 
 ## La Pipeline Jenkins :
 
-La pipeline, ou le workflow, est l'ensemble des étapes qui gravitent autour de jenkins et qui permettent de mettre en place l'intégration et le déploiement continue.
+La pipeline, ou le workflow, est l'ensemble des étapes qui gravitent autour de Jenkins et qui permettent de mettre en place l'intégration et le déploiement continue.
 
-|Dev| => Commit -> Build -> Test -> Realase -> Deploy => |Production|
+|Dev| => Commit -> Build -> Test -> Release -> Deploy => |Production|
 
-Cette pipeline peut être enclanchée périodiquement comme avec un nightly build ou elle peut être enclanchée à chaque commit.
+Cette pipeline peut être enclenchée périodiquement comme avec un nightly build ou elle peut être enclenchée à chaque commit.
 
 # Jenkins, En pratique :
 
@@ -106,23 +106,23 @@ Nous allons mettre en place Jenkins avec un projet node.js, en suivant [le tutor
 ## Lets-go
 
 La Doc nous propose de créer une image Docker qui va servir de serveur CI, c'est à dire le serveur qui s'occupe de réaliser les tâches automatiques qu'on va mettre en place. Ici, on simule ce serveur sur notre ordinateur, en pratique ça peut être fait par un serveur dédié.
-Je ne recopie pas la doc ici, seulement les subtilités que je recontres et les résultats.
+Je ne recopie pas la doc ici, seulement les subtilités que je rencontres et les résultats.
 
 ### Setup du conteneur Docker :
 
 {%info%}Le prérequis sur Docker rentre en jeu. Je ne sais pas a quel point c'est indispensable, mais sachez que la documentation officielle de Jenkins nous demande d'utiliser docker.{%endinfo%}
-{%attention%} Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfere rester sur des technologies à jour, ignorez ce qui concerne Blue Ocean si vous ne souhaitez pas l'utiliser. {%endattention%}
+{%attention%} Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfère rester sur des technologies à jour, ignorez ce qui concerne Blue Ocean si vous ne souhaitez pas l'utiliser. {%endattention%}
 
-Le tutoriel de Jenkins utilise **Docker:dind** et les **Networks** de Docker. Ce sont des outils qui permettent de créer plusieurs containers et de les lier entre eux. Le problème : je ne sais pas comment ça marche et je n'ai pas envie de savoir pour le moment. Je sais par contre utiliser Docker compose, qui est sensé faire la même chose mais plus simplment, j'essaie de me débrouiller avec ça.
+Le tutoriel de Jenkins utilise **Docker:dind** et les **Networks** de Docker. Ce sont des outils qui permettent de créer plusieurs containers et de les lier entre eux. Le problème : il existe maintenant des manières plus simples. Nous avons Docker compose, qui est sensé faire la même chose mais plus simplement, j'essaie de me débrouiller avec ça.
 En lisant la doc je vois que j'ai besoin de 2 services : 
 
   - Jenkins 
   - App, service qui va lancer mon instance node
 
-J'écris un Docker-compose.yml qui invoque ces deux types de conteneur, avec des images que j'ai récupéré sur le site officel [DockerHub](https://hub.docker.com/)
+J'écris un Docker-compose.yml qui invoque ces deux types de conteneur, avec des images que j'ai récupéré sur le site officiel [DockerHub](https://hub.docker.com/)
 Aussi, je pull les images avant de lancer le compose : 
 
-    docker pull jenkins/jenkins:lts
+    docker pull jenkins/jenkins:alpine-lts
     docker pull node-16alpine
 
 
@@ -158,12 +158,12 @@ Voila la tête du Docker-compose.yml :
 
 Il faut alors ajouter un dockerfile qui définit le build pour next.js, cf le MON Docker.
 On installe BlueOcean directement dans l'instance Jenkins.
-La ligne sur l'environement permet d'enlever le besoin d'avoir un mdp, cela implique biensûr des problèmes de sécurités.
+La ligne sur l’environnement permet d'enlever le besoin d'avoir un mdp, cela implique bien-sûr des problèmes de sécurités.
 
-On peut lancer le container en deamon avec dans le terminale : `docker-compose up -d`. Ajoutez un nom si vous voulez arrêter le container en CLI, sinon allez sur Docker desktop.
+On peut lancer le container en daemon avec dans le terminale : `docker-compose up -d`. Ajoutez un nom si vous voulez arrêter le container en CLI, sinon allez sur Docker desktop.
 
 {%attention%}
-Allez savoir pourquoi, le fait de lancer un projet dans un container peux créer des erreurs nouvelles, faites attentions.
+Le fait de lancer un projet dans un container peux créer des erreurs nouvelles, faites attentions.
 Par exemple, dans le container, je reçois une erreur de React que je n'avais pas avant.
 {%endattention%}
 
@@ -171,7 +171,7 @@ Par exemple, dans le container, je reçois une erreur de React que je n'avais pa
 
 #### Blue Ocean : 
 
-{%attention%} Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfere rester sur des technologies à jour, passez à la partie suivante si besoin. {%endattention%}
+{%attention%} Blue Ocean n'est plus mis à jour. Le process d'installation fonctionne correctement et vous pourrez probablement utiliser le plugin à partir d'ici, mais je préfère rester sur des technologies à jour, passez à la partie suivante si besoin. {%endattention%}
 
 Un fois sur Jenkins : 
 On passe d'abord la langue en anglais car la traduction est désastreuse, pour cela, il faut installer le plugin **Local**. Ensuite, on installe le plugin **Blue Ocean** puis **Pipeline** on restart jenkins. ( C'est long ). Finalement on bascule sur **Blue Ocean**.
@@ -242,7 +242,7 @@ Finished: SUCCESS
 
 ```
 
-On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit même le dernier commit, puis execute la pipeline.
+On peut voir que Jenkins clone ma branche dev du repo artblog Github, on voit même le dernier commit, puis il execute la pipeline.
 
 {%info%}Bravo ! A partir d'ici vous avez tout ce qu'il faut pour commencer à expérimenter sur Jenkins. La suite des opérations consiste par exemple à mettre en place de vrais pipelines, à donner une clé ssh à jenkins pour qu'il puisse commit sur les branches du repo. {%endinfo%}
 
@@ -253,7 +253,7 @@ Nous allons mettre en place une pipeline qui effectue une action sur le reposito
 #### Relier Jenkins et Github par SSH :
 
 Nous allons donner une clé de déploiement a Jenkins pour qu'il puisse déployer ou non sur le repo Github.
-Pour cela on génere une paire de clé dans notre projet Artblog avec `ssh keygen`, on choisit un dossier, je met mes clés dans ssh/ .
+Pour cela on génère une paire de clé dans notre projet Artblog avec `ssh keygen`, on choisit un dossier, je met mes clés dans ssh/ .
 
 {%attention%}Il est impératif d'inclure le dossier qui contient vos clés dans le fichier `.gitignore` sinon vos clés seront dévoilée publiquement et c'est un gros risque de sécurité.{%endattention%}
 
@@ -265,15 +265,14 @@ Coté Jenkins on met en place les **credentials**, c'est à dire notre clé priv
 
 #### Permettre à Jenkins de repérer des pull request :
 
-Pour cela on installe des plugins notamment **Github API** qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évenement à lieu.
+Pour cela on installe des plugins notamment **Github API** qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évènement à lieu.
 
-{%attention%}Il se trouve que ce que je veux faire n'est pas possible à moins d'avoir une adresse public à questionner. En effet le webhook de github ne peut pas trouver mon localhost:8080 où jenkins écoute les webhooks. Il faut mettre en place une interface qui transforme mon port local en public grâce à un servic tier comme webhook relay, je ne le fais donc pas.{%endattention%}
+{%attention%}Il se trouve que ce que je veux faire n'est pas possible à moins d'avoir une adresse public à questionner. En effet le webhook de github ne peut pas trouver mon localhost:8080 où jenkins écoute les webhooks. Il faut mettre en place une interface qui transforme mon port local en public grâce à un service tier comme webhook relay, je ne le fais donc pas.{%endattention%}
 
 #### Plan de secours : Job périodique :
 
-On essaie de créer une pipeline qui publie un fichier dans une branche jenkins, toutes les minutes, si un test est réussi.
-
-Je créer une branche jenkins, vierge : `git switch --orphan jenkins`
+La méthode pour contourner le problème des webhooks est celle mise en place dans le POK CI-CD : on demande à jenkins de regarder toutes les heures le dernier commit de notre repo, si ce commit est identifié comme non-déployé on le déploie et on le met dans la base de données des commits déployés.
+Voir le [POK](https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/CI-CD/) en question pour plus de détails et pour une implémentation qui fonctionne.
 
 
 

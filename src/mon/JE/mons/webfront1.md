@@ -2,8 +2,16 @@
 layout: layout/post.njk
 
 title: "Web Front 1 (HTML, CSS, Bootstrap)"
+
 authors:
   - Jeffrey Edisah
+
+tags :
+  - 'info'
+  - 'web'
+  - 'front'
+  - 'html'
+  - 'css'
 
 ---
 <!-- début résumé -->

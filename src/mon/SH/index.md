@@ -24,5 +24,5 @@ L'ensemble de mes MON
 
 ### Temps 3
 -  [Premier MON: **Progresser sur Excel**](./MON3-1/)
-- Deuxième MON: 
+- [Deuxième MON: **Formation macro Excel VBA**](./MON3-2/)
 

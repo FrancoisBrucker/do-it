@@ -6,6 +6,9 @@ title: "POK 1 d'Eugénie"
 authors:
   - Eugénie Giraud-Telme
 
+tags :
+  - 'plateformes numeriques'
+  - 'organisation'
 ---
 <!-- début résumé -->
 

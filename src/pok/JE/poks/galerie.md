@@ -2,9 +2,14 @@
 layout: layout/post.njk
 
 title: "Ma galerie pour mon portfolio"
+
 authors:
   - Jeffrey Edisah
 
+tags :
+  - 'info'
+  - 'java'
+  - 'spring'
 ---
 
 <!-- début résumé -->
@@ -27,11 +32,17 @@ Il s'avère que pour ce 1er sprint je n'ai pas assez décomposé mes tâches, da
 ## 2ème sprint :
 
 - Programmer le Storage Service
-- Ajouter du react au template Thymeleaf
 - Tester le Storage Service avec un fichier .txt
+- Débugguer Thymeleaf
 - Déployer le Storage Service de texte
 - Le transformer en Storage Service pour des images
 - Créer un composant React de base pour mes images
-- (Sous réserve de temps) Faire un programme de conversion de PNG en WEBP
+- 
 
 Ce sprint est assez ambitieux, mais mieux découpé que mon premier sprint.
+
+## Déroulé : 
+
+Il s'avère que l'intégration de Thymeleaf avec Spring est assez compliqué à mettre en place. J'ai une application qui fonctionne en back mais une page HTML qui ne s'affiche pas et qui de fait m'empêche de mettre en place le service que je veux mettre en place.
+J'ai testé différentes choses, rebuild le projet from scratch, changer certaines choses au niveau de mes dépendances Spring, trouver le travail de quelqu'un similaire au mien, mais je n'ai pas réussi à débuguer Thymeleaf.
+Néanmoins ce POK m'a permis de me remettre sérieusement à Spring et de faire un retour sur quelques fonctionnalités du framework, ainsi que sur le langage Java.

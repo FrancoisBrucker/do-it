@@ -5,7 +5,11 @@ title: "MON 4 : Sass"
 authors:
  - Thomas Pont
 
-tags: ['Sass']
+tags: 
+
+- 'sass'
+- 'front'
+
 ---
 
 <!-- Début Résumé -->
