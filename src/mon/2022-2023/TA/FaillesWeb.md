@@ -5,7 +5,7 @@ title: "MONs de Thibault"
 authors:
   - Thibault Adelain
 
-tags: ['failles web', 'securite informatique']
+tags: ['failles web', 'securite informatique', mon]
 ---
 
 <!-- début résumé -->

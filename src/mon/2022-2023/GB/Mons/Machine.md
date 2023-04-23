@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Big Data & Machine learning"
 authors :
  - Gabriel BARBE
-
+tags:
+  - mon
 ---
 <!-- Début résumé -->
 <!-- Fin résumé -->

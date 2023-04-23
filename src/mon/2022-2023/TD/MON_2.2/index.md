@@ -5,7 +5,7 @@ title: "MON 2.2 : Back-end avec Node.js et Express"
 authors:
   - Thomas Duroy 
 
-tags: ['back', 'Express']
+tags: ['back', 'Express', mon]
 ---
 
 Durant ce MON, j'ai pu en apprendre davantage sur le back-end. Dans un premier temps, j'ai appris ce qu'était Node.js, son architecture et son fonctionnement.

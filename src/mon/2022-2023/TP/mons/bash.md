@@ -5,7 +5,7 @@ title: "MON 3 : Bash"
 authors:
  - Thomas Pont
 
-tags: ['bash']
+tags: ['bash', mon]
 ---
 
 <!-- Début Résumé -->

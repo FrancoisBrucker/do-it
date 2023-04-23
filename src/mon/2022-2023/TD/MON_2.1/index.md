@@ -5,7 +5,7 @@ title: "MON 2.1 : Bases Dev Web HTML/CSS/JS"
 authors:
   - Thomas Duroy 
 
-tags: ['Front', 'Carrousel']
+tags: ['Front', 'Carrousel', mon]
 ---
 
 

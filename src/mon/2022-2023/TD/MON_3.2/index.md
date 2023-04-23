@@ -5,7 +5,7 @@ title: "MON 3.2 : Initiation à la cyber sécurité"
 authors:
   - Thomas Duroy 
 
-tags: ['cyber-sécurité', 'injection SQL']
+tags: ['cyber-sécurité', 'injection SQL', mon]
 ---
 
 ## Motivations

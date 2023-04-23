@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "GraphQL"
 authors:
   - Nicolas BERT
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

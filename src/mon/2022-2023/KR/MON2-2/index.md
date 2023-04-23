@@ -5,7 +5,7 @@ title: "MON 2.2 - Langage assembleur"
 authors:
   - Kasimir Romer
 
-tags: ['assembler', 'reverse engineering', 'arm', 'x86']
+tags: ['assembler', 'reverse engineering', 'arm', 'x86', mon]
 ---
 <!-- Début Résumé -->
 Dans ce MON, je vais apprendre les bases du langage d'assemblage ARM. Si le temps le permet, j'étudierai le débogage avec gdb car c'est un bon cas d'utilisation pour appliquer les connaissances de l'assembleur.

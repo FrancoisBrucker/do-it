@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "MON 2.2: Création d'un site WordPress en local"
 authors:
   - Ossama Abdane
+tags:
+  - mon
 ---
 <!-- début résumé -->
 

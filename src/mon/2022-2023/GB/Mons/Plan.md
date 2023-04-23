@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Business Plan"
 authors:
   - Gabriel BARBE
-
+tags:
+  - mon
 ---
 <!-- Début résumé -->
 <!-- Fin résumé -->

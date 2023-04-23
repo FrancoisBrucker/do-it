@@ -4,7 +4,7 @@ layout: layout/post.njk
 title: "Business Model"
 authors:
   - Gabriel BARBE
-tags: ['Business']
+tags: ['business', mon]
 ---
 <!-- Début Résumé -->
 

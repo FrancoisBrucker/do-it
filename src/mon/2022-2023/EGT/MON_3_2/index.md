@@ -5,7 +5,7 @@ title: "Organisation du Barbecue de fin d'option Do-IT"
 authors:
     - "Eugénie Giraud-Telme"
 
-tags: ['organisation', 'gestion de projet']
+tags: ['organisation', 'gestion de projet', mon]
 ---
 <!-- Début Résumé -->
 - Ce MON est un peu à part. Il s'agit de l'organisation du repas du 06/04/2023 au cours duquel aura lieu le débrief général de l'année.

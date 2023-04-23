@@ -9,6 +9,7 @@ tags:
 - gestions de projet
 - agile
 - scrum
+- mon
 
 ---
 <!-- début résumé -->

@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "MON 2.1: Google Apps Script : Rappel anniversaire"
 authors:
   - Ossama Abdane
+tags:
+  - mon
 ---
 <!-- début résumé -->
 Après un premier MON qui m'a permis de découvrir les principales fonctionnalités de Google AppScript, j'ai décidé d'approfondir mes connaissances dans ce domaine et plus précisément créer un outil qui permette de prévenir automatiquement par mail de la date d'anniversaire d'une personne.

@@ -5,7 +5,7 @@ title: "MON 2.1 - Splunk"
 authors:
   - Kasimir Romer
 
-tags: ['cybersecurité', 'logs', 'big data']
+tags: ['cybersecurité', 'logs', 'big data', mon]
 ---
 <!-- Début Résumé -->
 

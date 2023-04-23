@@ -8,6 +8,7 @@ tags :
   - 'gestion de projet'
   - 'lean management'
   - 'agile'
+  - mon
 ---
 <!-- Début Résumé -->
 Comparatif des typologies de gestion de projets

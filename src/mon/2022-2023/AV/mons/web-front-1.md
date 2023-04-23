@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Web Front 1"
 authors:
   - Antoine Varnerot
-
+tags:
+  - mon
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">

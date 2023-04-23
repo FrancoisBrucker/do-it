@@ -5,7 +5,7 @@ title: "Portfolio Angular"
 authors:
   - Tuncay Bilgi
 
-tags: ['Angular','Front']
+tags: ['Angular','Front', mon]
 ---
 # Résumé :
 

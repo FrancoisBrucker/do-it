@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "MON 3.1: Présentation de ChatGPT"
 authors:
   - Ossama Abdane
+tags:
+  - mon
 ---
 
 

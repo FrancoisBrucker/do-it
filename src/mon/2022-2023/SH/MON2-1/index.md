@@ -8,6 +8,7 @@ tags :
   - 'transformation digitale'
   - 'maturite'
   - 'demarche'
+  - mon
 ---
 <!-- début résumé -->
 Le premier MON que je vais réaliser est une étude de la maturité digitale d'une entreprise.

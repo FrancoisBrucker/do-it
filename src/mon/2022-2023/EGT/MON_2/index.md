@@ -6,7 +6,7 @@ title: "Catalogue et critique des modes actuelles en management"
 authors:
     - "Eugénie Giraud-Telme"
 
-tags: ['management', 'innovation']
+tags: ['management', 'innovation', mon]
 ---
 <!-- Début Résumé -->
 - Ce MON est destiné à être repris et mis à jour. Le but est de faire un état des lieux de ce qui se fait actuellement (en 2022-2023) en termes de management. Quelles pratiques, quelles méthodes, quelles innovations ? Une critique de ces innovations et des discours qui y sont associés complète ce catalogue.

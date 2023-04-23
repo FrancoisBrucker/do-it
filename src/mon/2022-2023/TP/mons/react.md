@@ -5,7 +5,7 @@ title: "MON 1 : React"
 authors:
  - Thomas Pont
 
-tags: ['react']
+tags: ['react', mon]
 ---
 
 <!-- Début Résumé -->

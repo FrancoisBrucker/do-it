@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "C# et .NET (Bases, création d'une API)"
 authors:
   - Savinien Laeuffer
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

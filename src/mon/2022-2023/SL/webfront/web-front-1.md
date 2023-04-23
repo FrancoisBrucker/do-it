@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Web Front 1"
 authors:
   - Savinien Laeuffer
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

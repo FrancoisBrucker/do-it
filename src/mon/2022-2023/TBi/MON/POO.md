@@ -5,7 +5,7 @@ title: "POO"
 authors:
   - Tuncay Bilgi
 
-tags: ['poo','python']
+tags: ['poo','python', mon]
 ---
 
 <!-- début résumé -->

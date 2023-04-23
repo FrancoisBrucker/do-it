@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "MON 1: Google apps script"
 authors:
   - Ossama Abdane
+tags:
+  - mon
 ---
 <!-- début résumé -->
 L'objectif de mon MON est l'apprentissage de nouvelles fonctionnalités pour permettre d'automatiser, par exemple, certaines tâches sur des fichiers de type tableaur grâce à l'App Script Google.

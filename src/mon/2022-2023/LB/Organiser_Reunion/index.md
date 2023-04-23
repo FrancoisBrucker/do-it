@@ -4,6 +4,9 @@ layout: layout/post.njk
 title: "Le MON-6 de Léonard"
 authors:
   - Léonard Barbotteau
+
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

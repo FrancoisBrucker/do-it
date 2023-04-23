@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Déploiement de microservices en C# avec Docker"
 authors:
   - Savinien Laeuffer
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

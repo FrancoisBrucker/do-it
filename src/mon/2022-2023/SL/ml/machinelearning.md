@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Machine learning"
 authors:
   - Savinien Laeuffer
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

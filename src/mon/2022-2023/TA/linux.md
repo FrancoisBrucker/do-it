@@ -5,7 +5,7 @@ title: "MONs de Thibault"
 authors:
   - Thibault Adelain
 
-tags: ['linux', 'formation']
+tags: ['linux', 'formation', mon]
 ---
 
 <!-- début résumé -->

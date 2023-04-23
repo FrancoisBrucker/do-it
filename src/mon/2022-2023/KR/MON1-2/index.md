@@ -5,7 +5,7 @@ title: "Temps 1 - MON - Diagnostic organisationnel, modélisation des processus,
 authors:
   - Kasimir Romer
 
-tags: ['si']
+tags: ['si', mon]
 ---
 <!-- Début Résumé -->
 Ici je vais mettre les informations sur mon MON 2 de temps 1 avec le sujet *diagnostic organisationnel, modélisation des processus, et conception d'un SI*.

@@ -8,6 +8,7 @@ tags:
   - angular
   - test
   - javascript
+  - mon
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">

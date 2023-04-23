@@ -7,6 +7,7 @@ authors:
 tags:
   - Python
   - POO
+  - mon
 ---
 
 <!-- début résumé -->

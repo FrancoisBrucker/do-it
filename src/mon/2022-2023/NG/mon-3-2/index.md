@@ -5,7 +5,7 @@ title: "Leetcode"
 authors:
     - Nathan Gissler
 
-tags: ['leetcode', 'java', 'algorithme']
+tags: ['leetcode', 'java', 'algorithme', mon]
 ---
 
 <!-- début résumé -->

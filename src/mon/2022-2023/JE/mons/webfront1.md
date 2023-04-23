@@ -12,6 +12,7 @@ tags :
   - 'front'
   - 'html'
   - 'css'
+  - mon
 
 ---
 <!-- début résumé -->

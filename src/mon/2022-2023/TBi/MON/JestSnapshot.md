@@ -6,7 +6,7 @@ title: " Jest et Next.js : Tests frontend/Backend "
 authors:
   - Tuncay Bilgi
 
-tags: ['tests','react']
+tags: ['tests','react', mon]
 ---
 
 

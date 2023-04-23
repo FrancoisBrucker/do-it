@@ -9,6 +9,7 @@ tags:
 - framework
 - django
 - debutant
+- mon
 
 ---
 

@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "BDD non relationnelles"
 authors:
   - Antoine Varnerot
-
+tags:
+  - mon
 ---
 <head>
   <link rel="stylesheet" href="../../assets/style.css">

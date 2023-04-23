@@ -9,6 +9,7 @@ tags:
 - programmation objet
 - python
 - debutant
+- mon
 
 ---
 L'objectif de ce MON est d'acquérir les bases en programmation objet sur python. Pour cela j'ai suivis [le cours de Monsieur Brucker ][https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/].

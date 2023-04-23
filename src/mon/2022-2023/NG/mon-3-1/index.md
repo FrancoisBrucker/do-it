@@ -5,7 +5,7 @@ title: "Développement mobile"
 authors:
     - Nathan Gissler
 
-tags: ['mobile', 'android studio']
+tags: ['mobile', 'android studio', mon]
 ---
 
 <!-- début résumé -->

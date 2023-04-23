@@ -9,6 +9,7 @@ tags:
 - html
 - css
 - debutant
+- mon
 ---
 Mes objectifs pour ce MON sont:
 - Améliorer ma maitrise du langage de l'informatique

@@ -5,7 +5,7 @@ title: "MON 3.1 : Débuter avec React.js"
 authors:
   - Thomas Duroy 
 
-tags: ['front', 'React']
+tags: ['front', 'React', mon]
 ---
 
 ## Introduction

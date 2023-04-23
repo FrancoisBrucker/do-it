@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Developpeur Blockchain"
 authors:
   - Antoine Varnerot
-
+tags:
+  - mon
 ---
 
 ## Description du MON

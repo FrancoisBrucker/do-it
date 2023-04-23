@@ -5,6 +5,7 @@ tags:
   - 'statique'
   - 'markdown'
   - 'web'
+  - mon
 title: "Créer un site web statique avec 11ty"
 authors:
   - Nicolas BERT

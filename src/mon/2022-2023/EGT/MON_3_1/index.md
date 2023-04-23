@@ -5,7 +5,7 @@ title: "MOOC People Analytics"
 authors:
     - "Eugénie Giraud-Telme"
 
-tags: ['management', 'ressources humaines']
+tags: ['management', 'ressources humaines', mon]
 ---
 <!-- Début Résumé -->
 - Ce MON est destiné aux personnes qui souhaitent découvrir d'autres disciplines qui constituent l'ensemble qu'est le management.

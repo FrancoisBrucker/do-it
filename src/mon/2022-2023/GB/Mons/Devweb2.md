@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Dev Web 2"
 authors:
   - Gabriel BARBE
-
+tags:
+  - mon
 ---
 <!-- Début résumé -->
 <!-- Fin résumé -->

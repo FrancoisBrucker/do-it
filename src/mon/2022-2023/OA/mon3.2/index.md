@@ -4,6 +4,8 @@ layout: layout/post.njk
 title: "MON 3.2: Formation Excel VBA"
 authors:
   - Ossama Abdane
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

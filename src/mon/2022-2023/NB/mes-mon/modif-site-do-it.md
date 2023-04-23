@@ -5,7 +5,7 @@ title: "Modification du site de Do-It"
 authors:
   - Nicolas BERT
 
-tags: ['eleventy']
+tags: ['eleventy', mon]
 ---
 
 <!-- début résumé -->

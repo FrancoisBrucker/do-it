@@ -5,11 +5,7 @@ title: "MON Jean-Baptiste"
 authors:
     - Jean-Baptiste Durand
 
-<<<<<<< HEAD:src/mon/JBD/index.md
-tags: ["mon"]
-=======
 tags: ['mon_node']
->>>>>>> feature/search:src/mon/2022-2023/JBD/index.md
 ---
 
 <!-- début résumé -->

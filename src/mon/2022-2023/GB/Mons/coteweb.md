@@ -4,7 +4,7 @@ layout: layout/post.njk
 title: "Coté Web"
 authors:
   - Gabriel BARBE
-tags: ['Server']
+tags: ['serveur', mon]
 ---
 <!-- Début Résumé -->
 MON sur le developpement côté serveur suivi sur le site de M. Brucker puis sur mdn developper. <br>

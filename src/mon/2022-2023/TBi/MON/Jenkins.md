@@ -5,7 +5,7 @@ title: "Jenkins"
 authors:
   - Tuncay Bilgi
 
-tags: ['Jenkins','CI/CD']
+tags: ['Jenkins','CI/CD', mon]
 ---
 
 {%details "Résumé"%}

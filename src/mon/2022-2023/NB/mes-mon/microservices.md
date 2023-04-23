@@ -4,7 +4,8 @@ layout: layout/post.njk
 title: "Les architectures microservices"
 authors:
   - Nicolas BERT
-
+tags:
+  - mon
 ---
 
 <!-- début résumé -->

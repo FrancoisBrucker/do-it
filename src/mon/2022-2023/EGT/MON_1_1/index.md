@@ -7,6 +7,7 @@ authors:
 
 tags :
   - 'automatisation'
+  - mon
 
 ---
 <!-- Début Résumé -->

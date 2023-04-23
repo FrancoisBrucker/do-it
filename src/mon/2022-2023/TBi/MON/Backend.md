@@ -6,7 +6,7 @@ title: " B.A-BA Application Web : Comprendre et Mettre en place un Backend "
 authors:
   - Tuncay Bilgi
 
-tags: ['backend','bdd','typescript','']
+tags: ['backend','bdd','typescript', 'mon']
 ---
 
 <!-- début résumé -->
