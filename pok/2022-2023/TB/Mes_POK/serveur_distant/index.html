@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Serveur Distant</title>
+
+        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" 
+    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/ct">CT</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a class="hidden sm:block" href="/do-it/about">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+
+                    </a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+            
+<article class="relative">
+<h1  class="mb-1">Serveur Distant</h1>
+<div class="mb-4">
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Timothée Bermond</li>
+                
+            </ul>
+        </div>
+    
+
+    
+        
+        
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    2022-2023
+                <span>
+            </div>
+        
+    
+</div>
+
+
+
+<!-- Début Résumé -->
+<p>Je vais créer un site qui permet de compter les points au Yams.<br>
+Il est disponible <a href="https://github.com/Timothee-Bermond/yams">ici</a></p>
+<!-- Fin Résumé -->
+<h2>Liste des thâches</h2>
+<ul>
+<li>Création du front</li>
+<li>Suivi du cours de Mr. Brucker en MON2.1</li>
+<li>Création d'un compte sur evh</li>
+<li>Création du back avec node</li>
+<li>Génération de cookies</li>
+<li>Création BD</li>
+<li>Lien back et front</li>
+<li>Lien back et BD : routes + API</li>
+</ul>
+<h2>Sprint 1</h2>
+<p>Durant le sprint 1 (25/11 - 7/12), je prévois :</p>
+<ul>
+<li>Tout d'abord de créer la partie front de mon site</li>
+<li>D'avoir entièrement suivi le cours dispensé en 2e année afin d'avoir les compétences pour déployer mon site sur un serveur distant.</li>
+<li>D'aller voir Mr. Brucker pour me créer un compte sur l'evh</li>
+</ul>
+<p>Durant ce print j'ai eu le temps de créer toute ma partie front.<br>
+<img src="../../Images/yams.jpg"/><br>
+J'ai rencontré plusieurs difficultés : je voulais notamment ajouter un input avec une liste déroulante et une zone de texte. J'ai eu du mal à trouver comment faire, la solution était toute simple : utilisé une datalist qui en plus peut-être réutilisable pour plusieurs input.<br>
+<img src="../../Images/datalist.jpg"><br>
+Une autre difficulté a été la création d'indication au survol d'une image. Je me suis pris la tête avec des <em>:hoover</em> alors qu'il suffisait d'utiliser la propriété title.<br>
+<img src="../../Images/indication.jpg"><br>
+J'ai également tenté d'implémenter une boucle for dans le fichier javascrpit afin de traiter les scores de tous les joueurs d'un seul coup ce qui m'aurait permis de créer facilement d'autres joueurs. Mais cette méthode n'a pas fonctionné et je n'ai pas eu le temps de chercher une méthode alternative.<br>
+Pour toute la partie CSS je me suis référé à mon <a href="../../../../mon/TB/Mes_MON/CSS">MON1.2</a>. Il y a juste la fonctionnalité <em>:before</em> que j'ai utilisé afin d'ajouter un fond d'écran partiellement opaque.</p>
+<p>J'ai ensuite suivi la <a href="https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/">formation</a> de Mr. Brucker, notamment le Projet Numérologie, afin de me former sur les serveurs web. Je n'ai pas eu le temps de tout parcourir mais je finirais ça d'ici la fin de la semaine.</p>
+<p>Pour ce qui est du dernier point de ce sprint : la création du compte sur l'evh, je m'y suis pris un peu tard et n'ai pas eu le temps de le faire.</p>
+<p>J'ai également pour idée d'ajouter une fonctionnalité qui permet de créer des groupes, par exemple des gens avec qui vous jouez souvent, et lorsque vous vous connecterez les noms des joueurs seront entrés automatiquement et vous aurez accès aux nombres de parties gagnées de chacun et potentiellement d'autres statistiques.</p>
+<h2>Sprint 2</h2>
+<p>Pour le sprint 2 je prévois de :</p>
+<ul>
+<li>Créer le back avec node</li>
+<li>Générer les cookies</li>
+<li>Créer la BD</li>
+<li>Mettre en place le lien back et front</li>
+<li>Ainsi que le lien back et BD : routes + API</li>
+<li>Faire en sorte que 2 joueurs puissent remplir les scores en même temps</li>
+</ul>
+<p>Durant ce 2ème sprint, je me suis, tout d'abord, occupé de mettre en place node et express.</p>
+<p>Pour cela, j'ai réorganisé mes fichiers en créant un dossier <em>static</em>.</p>
+<p>De plus, j'ai séparé la partie création de la partie et déroulée de la partie, car un de mes objectifs est de faire en sorte que 2 joueurs puissent remplir les scores en même temps.</p>
+<p>Puis j'ai initialiser le projet et installé le package express.</p>
+<p>J'ai ensuite créé le fichier <em>server.js</em> qui contiendra les routes et un dossier <em>back</em> pour les calculs.</p>
+<p>J'arrive donc à cette architecture :</p>
+<pre><code>__ back
+|__ calcul.js
+__ node_module
+__ static
+|__ Images
+|__ index.html
+|__ index.js
+|__ yams.css
+|__ yams.css
+|__ yams.html
+|__ yams.js
+__ package-lock.json
+__ package.json
+__ server.js
+</code></pre>
+<p>Puis j'ai mis en place ma base de données. Pour cela, j'ai utilisé SQlite et sequelize.</p>
+<p>Tout d'abord, je fais le lien avec la base de données SQlite:</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  <span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">dialect</span><span class="token operator">:</span> <span class="token string">'sqlite'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">storage</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'db.sqlite'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Puis je créé mon modèle :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  <span class="token keyword">const</span> Partie <span class="token operator">=</span> sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'Partie'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">nombreJoueurs</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span><span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">nameJ1</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span><span class="token string">'Joueur 1'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">nombre1J1</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span><span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+    <span class="token literal-property property">chanceJ4</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span><span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">totalJ4</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span><span class="token number">0</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Je n'ai affiché qu'une partie car le modèle est très loin puisque je stock les points de tous les joueurs.<br>
+Je me suis demandé si il était possible de créer un modèle <em>player</em> puis de l'invoquer 4 fois dans mon modèle <em>partie</em> mais je n'ai pas trouvé la réponse.</p>
+<p>Ensuite j'ai mis en place ma première route qui permet de créer la partie. Lorsque l'utilisateur clique sur le bouton suivant, une nouvelle partie est créée dans la base de données et les noms des joueurs sont récupérés dans les <em>headers</em> de la requête et enregistré dans la partie, puis un cookie est créé contenant l'id de la partie. J'ai cependant un problème avec cela car des fois le cookie ne s'envoie pas et je reste donc bloqué dans la partie précédente.</p>
+<p>index.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"bouton_suivant"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    players <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">nbrPlayers</span><span class="token operator">:</span> nbr_players<span class="token punctuation">,</span>
+      <span class="token literal-property property">player1</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+      <span class="token literal-property property">player2</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+      <span class="token literal-property property">player3</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+      <span class="token literal-property property">player4</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/create'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">method</span><span class="token operator">:</span><span class="token string">'POST'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">headers</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'Players'</span><span class="token operator">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>players<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+      window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'./yams.html'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>server.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">"/create"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  db<span class="token punctuation">.</span>Partie<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">partie</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      parametres <span class="token operator">=</span> req<span class="token punctuation">.</span>rawHeaders<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"{"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"}"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      partie<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">=</span> parametres<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      partie<span class="token punctuation">.</span>nameJ1 <span class="token operator">=</span> parametres<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      partie<span class="token punctuation">.</span>nameJ2 <span class="token operator">=</span> parametres<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      partie<span class="token punctuation">.</span>nameJ3 <span class="token operator">=</span> parametres<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      partie<span class="token punctuation">.</span>nameJ4 <span class="token operator">=</span> parametres<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      res<span class="token punctuation">.</span><span class="token function">cookie</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">,</span> partie<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+      partie<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>J'utilise une méthode un peu barbare pour récupérer les noms des joueurs mais je n'ai pas trouvé comment faire mieux.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Update : je suis allé voir Mr. Brucker et il suffisait d'utiliser le middleware bodyParser afin de récupérer les données dans le body de la requête. Ce qui me donne donc :</p>
+<p>index.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/create'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">method</span><span class="token operator">:</span><span class="token string">'POST'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">credentials</span><span class="token operator">:</span> <span class="token string">'include'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">headers</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">body</span><span class="token operator">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>players<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>server.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  partie<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>nbrPlayers
+  partie<span class="token punctuation">.</span>nameJ1 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player1
+  partie<span class="token punctuation">.</span>nameJ2 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player2
+  partie<span class="token punctuation">.</span>nameJ3 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player3
+  partie<span class="token punctuation">.</span>nameJ4 <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>player4
+  partie<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div></div>
+<p>Une fois la partie créée il faut que j'affiche le nom des joueurs ainsi que leur fiche de points.</p>
+<p>J'ai tout d'abord voulu accéder à la base de données depuis le fichier <em>yams.js</em> mais je n'ai pas réussi donc j'ai implémenté une route <em>/initialisation</em> qui récupère le nombre de joueurs ainsi que leur nom dans la base de données et qui les affiche.</p>
+<p>yams.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/initialisation'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn_new_game'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ2<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn_new_game'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ2<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ3<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn_new_game'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>nombreJoueurs <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ2<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ3<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nom_j4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>nameJ4<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'joueur4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn_new_game'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'hide'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>   
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>server.js:</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/initialisation'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    id <span class="token operator">=</span> req<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>id
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+    db<span class="token punctuation">.</span>Partie<span class="token punctuation">.</span><span class="token function">findByPk</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>J'utilise le package cookie-parser afin de récupérer les cookies, ce qui me permet d'obtenir l'id de la partie en cours.</p>
+<p>J'ai ensuite créé la route qui permet d'enregistrer les valeurs des nouveaux scores du joueur 1.</p>
+<p>Pour cela, j'utilise la fonction <em>onchange</em> et je récupère les valeurs de toutes les combinaisons et je les stock dans un dictionnaire que j'envoie dans les <em>headers</em> de mon fetch.</p>
+<p>Je récupère ces données dans <em>server.js</em>, stock les données dans la bd puis à l'aide de <em>calcul.js</em> je calcule la somme et le total des points que j'ajoute également à la bd.</p>
+<p>J'ai tout d'abord eu des erreurs puisque les combinaisons vides me renvoyait &quot;&quot; et lorsque je calculais la somme j'obtenais donc une chaine de caractère. J'ai pour cela, modifié mon dictionnaire avec une boucle for afin afin de remplacer les valeurs vides par 0.</p>
+<p>yams.js :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> combi <span class="token keyword">of</span> list_total<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>combi<span class="token operator">+</span><span class="token string">'j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onchange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token operator">...</span>
+
+        pts_J1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">nombre1J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre1j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">nombre2J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre2j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">nombre3J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre3j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">nombre4J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre4j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">nombre5J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre5j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">nombre6J1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'nombre6j1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">brelanJ1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'brelanj1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">carreJ1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'carrej1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+            <span class="token literal-property property">fullJ1</span> <span class="token operator">:</span> pts_fullj1<span class="token punctuation">,</span>
+            <span class="token literal-property property">psJ1</span> <span class="token operator">:</span> pts_psj1<span class="token punctuation">,</span>
+            <span class="token literal-property property">gsJ1</span> <span class="token operator">:</span> pts_gsj1<span class="token punctuation">,</span>
+            <span class="token literal-property property">yamsJ1</span> <span class="token operator">:</span> pts_yamsj1<span class="token punctuation">,</span>
+            <span class="token literal-property property">yams2J1</span> <span class="token operator">:</span> pts_yams2j1<span class="token punctuation">,</span>
+            <span class="token literal-property property">yams3J1</span> <span class="token operator">:</span> pts_yams3j1<span class="token punctuation">,</span>
+            <span class="token literal-property property">chanceJ1</span> <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'chancej1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> pts <span class="token keyword">in</span> pts_J1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">[</span>pts<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                pts_J1<span class="token punctuation">[</span>pts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">[</span>pts<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                pts_J1<span class="token punctuation">[</span>pts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">[</span>pts<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/changeJ1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span><span class="token string">'POST'</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">headers</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                  <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+                  <span class="token string-property property">'Players'</span><span class="token operator">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pts_sommej1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>sommeJ1
+                document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pts_totalj1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> data<span class="token punctuation">.</span>totalJ1
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>server.js:</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/changeJ1'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  pts_J1 <span class="token operator">=</span> req<span class="token punctuation">.</span>rawHeaders<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"{"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"}"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  id <span class="token operator">=</span> req<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>id
+  db<span class="token punctuation">.</span>Partie<span class="token punctuation">.</span><span class="token function">findByPk</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    data<span class="token punctuation">.</span>nombre1J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>nombre2J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>nombre3J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>nombre4J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>nombre5J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>nombre6J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>brelanJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>carreJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>fullJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>psJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>gsJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>yamsJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>yams2J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>yams3J1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>chanceJ1 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>pts_J1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>sommeJ1 <span class="token operator">=</span> calcul<span class="token punctuation">.</span><span class="token function">somme</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>nombre1J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>nombre2J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>nombre3J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>nombre4J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>nombre5J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>nombre6J1<span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>totalJ1 <span class="token operator">=</span> calcul<span class="token punctuation">.</span><span class="token function">total</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>sommeJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>brelanJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span> carreJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>fullJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>psJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>gsJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>yamsJ1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>yams2J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>yams3J1<span class="token punctuation">,</span> data<span class="token punctuation">.</span>chanceJ1<span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Update : comme pour le nom des joueurs j'envoie les points des joueurs dans le <em>body</em> et non les <em>headers</em> de la requête.</p>
+</div></div>
+<p>J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.</p>
+<p>J'ai toujours un problème, c'est que mes cookies ne s'envoient pas toujours et je n'arrive pas à comprendre ce qui en est la cause.<br>
+Je suis allé voir avec Mr. Brucker et ce serait un problème avec les fonctions asynchrone (le cookie met trop de temps à s'envoyer et le code passe donc à la suite sans l'envoyer). J'ai essayé d'ajouter un then mais ça n'a pas réglé mon problème.</p>
+<h3>Déploiement sur l'ovh</h3>
+<p>Pour déployer son site sur l'ovh il faut tout d'abord suivre ces <a href="https://francoisbrucker.github.io/cours_informatique/cours/ops/ssh/">instructions</a> pour générer sa paire de clé et accéder à son compte sur l'ovh.</p>
+<p>(Il y a peut-être quelques petites coquilles qui vont se glisser dans l'explication donc si quelque chose ne marche demandez à Mr. Brucker il saura vous répondre)</p>
+<p>Puis, il faut ouvrir le fichier readme.txt pour trouver quel est le port associé à son compte.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cat</span> readme.txt
+</code></pre>
+<p>Il faut modifier le port dans le fichier <em>server.js</em> afin qu'il corresponde à celui du fichier readme.txt.</p>
+<p>Ensuit on ajoute son code (que l'on a mis sur github) dans le dossier node avec la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/Timothee-Bermond/yams.git 
+</code></pre>
+<p>Ensuite on se place dans le dossier contenant notre code (yams pour moi), et on entre la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> server.js
+</code></pre>
+<p>On peut maintenant accéder à notre site à l'url : <a href="mailto:node.mon_herbe@ovh1.ec-m.fr">node.mon_herbe@ovh1.ec-m.fr</a> (en replacant mon_herbe par votre herbe).</p>
+<p>Seul bémol lorsque l'on ferme le shell, le server s'arrête et on n'y a plus accès. Pour qu'il tourne même lorsque le shell est fermé il faut se placer dans le dossier contenant notre code et taper la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">/usr/bin/screen <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> <span class="token function">node</span> <span class="token function">node</span> server.js
+</code></pre>
+<p>Et voilà, le site est déployé !</p>
+
+
+</article>
+
+        </main>
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        do-it : option de troisième année à l'école centrale Marseille
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>SQL Injection</title>
+
+        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" 
+    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/ct">CT</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a class="hidden sm:block" href="/do-it/about">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+
+                    </a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+            
+<article class="relative">
+<h1  class="mb-1">SQL Injection</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">security</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">web</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">connexion</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">sql</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">mon</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <span data-pagefind-filter="Type">MON</span>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Jean-Baptiste Durand</li>
+                
+            </ul>
+        </div>
+    
+
+    
+        
+        
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    2022-2023
+                <span>
+            </div>
+        
+    
+</div>
+
+
+
+<!-- début résumé -->
+<!-- fin résumé -->
+<h2 id="h1"> Disclaimer </h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Les méthodes présentées dans ce cours peuvent permettre d'accéder de manière illégale à des informations.</p>
+<p>L'utilisation de ces méthodes sans l'autorisation du propriétaire d'un site web ou un quelconque serveur est illégale et est punit par la loi.</p>
+<p>Ce cours a pour objectif de sensibiliser les ingénieurs dans le domaine de la sécurité et leur permettre de protéger les serveurs contre ce type d'attaque.</p>
+</div></div>
+<h2 id="toc"> Table des matières </h2>
+<ul>
+<li><a href="#h1">Disclaimer</a></li>
+<li><a href="#toc">Table des matières</a></li>
+<li><a href="#h2">Pourquoi cette attaque ?</a></li>
+<li><a href="#h3">BurpSuite</a></li>
+<li><a href="#h4">SQL injection</a>
+<ul>
+<li><a href="#h4-1">Principe de base</a>
+<ul>
+<li><a href="#h4-1-1">Requete envoyé par l'utilisateur pour s'authentifier</a></li>
+<li><a href="#h4-1-2">Interprétation par le serveur</a></li>
+<li><a href="#h4-1-3">Attaquer cette mécanique</a></li>
+<li><a href="#h4-1-4">Interprétation de la requête par le serveur</a></li>
+</ul>
+</li>
+<li><a href="#h4-2">UNION attack</a>
+<ul>
+<li><a href="#h4-2-1">Spécificités d'une UNION</a></li>
+<li><a href="#h4-2-2">Trouver le nombre de colonnes</a></li>
+<li><a href="#h4-2-3">Trouver le type de données envoyées</a></li>
+<li><a href="#h4-2-4">1 seule colonne</a></li>
+<li><a href="#h4-2-5">Versions</a></li>
+<li><a href="#h4-2-6">Avoir le nom des tables</a></li>
+</ul>
+</li>
+<li><a href="#h4-3">CheatSheet</a></li>
+</ul>
+</li>
+<li><a href="#h5">Défense</a></li>
+</ul>
+<h2 id="h2"> Pourquoi cette attaque ? </h2>
+<p>Tout site web, sauf sites statiques, héberge une base de données SQL. Donc tous les sites web sont des potentielles victimes d'attaques par injection de SQL.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>D'après les chiffres d'Akamai (<a href="https://www.akamai.com/site/en/documents/state-of-the-internet/soti-security-api-the-attack-surface-that-connects-us-all.pdf">lien de l'article</a>), sur une étude menée entre Janvier 2020 et Juin 2021 :</p>
+<ul>
+<li>les attaques de type injection de SQL sont les plus présentes</li>
+<li>durant la durée d'étude (18 mois) il y a eu 6.2 millards de tentatives d'attaques enregistrées par injection de SQL, ce qui représente 55.88% des attaques sur le web.</li>
+</ul>
+</div></div>
+<img src="../../Image/nb_attaque_sql.png" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
+<p><em>Graphique provenant du même article</em></p>
+<h2 id="h3"> BurpSuite</h2>
+<p>BurpSuite est un logiciel permettant de capturer des requêtes effectuées sur un navigateur internet, de les modifier, de les renvoyer régulièrement. C'est un outil très utile, voir nécessaire pour faire de l'analyse d'API ou pour faire des attaques par injection.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Voici tous les détails pour télécharger BurpSuite :</p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://portswigger.net/burp/releases/professional-community-2022-8-5?requestededition=community&amp;requestedplatform=">Download</a></li>
+<li><a href="https://portswigger.net/burp/documentation/desktop/external-browser-config/browser-config-firefox">Setup Proxy</a></li>
+<li><a href="https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate/ca-cert-firefox">BurpSuite Certificate</a></li>
+</ul>
+</div></div>
+<p>Le site web de BurpSuite propose un service appelé WebSecurityAcademy qui permet de tester différentes attaques, l'entièreté des exemples de ce cours provient de ce site :</p>
+<p><a href="https://portswigger.net/web-security/all-labs#sql-injection">WebSecurityAcademy - SQL injection</a></p>
+<h2 id="h4"> SQL injection </h2>
+<h3 id="h4-1"> Principe de base </h3>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Beaucoup de fonctionnalités d'un serveur nécessitent appels à une base de données SQL, avec pour paramètres des éléments envoyés par l'utilisateur.</p>
+</div></div>
+<p>Par exemple lors d'une connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe. Puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :</p>
+<h4 id="h4-1-1"> Requete envoyé par l'utilisateur pour s'authentifier </h4>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>                     <span class="token comment">//permet d'envoyer des données au serveur</span>
+    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">username</span> <span class="token operator">:</span> <span class="token string">"mon_username"</span><span class="token punctuation">,</span>      <span class="token comment">//permet d'envoyer les informations au serveur</span>
+        <span class="token literal-property property">password</span> <span class="token operator">:</span> <span class="token string">"mon_password"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="h4-1-2"> Interprétation par le serveur </h4>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">' + requete.username + '</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">' + requete.password + '</span>
+</code></pre>
+<p>ce qui donne ici :</p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'mon_username'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'mon_password'</span>
+</code></pre>
+<h4 id="h4-1-3"> Attaquer cette mécanique </h4>
+<p>L'objectif est de ne pas avoir à passer l'étape de vérification du mot de passe.</p>
+<p>Pour ça, on va utiliser une mécanique assez simple en programmation : <strong>les commentaires</strong>.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour une base de donnée Oracle, Microsoft ou PostgreSQL, les commentaires sont fait par <strong>--</strong><br>
+Pour une base de donnée qui utilise MySQL, les commentaires sont fait par <strong>#</strong> qui vaut <strong>%23</strong> en hexadécimal</p>
+</div></div>
+<p>Donc si on termine le <em>username</em> envoyé dans la requête par un comentaire, il n'y aura pas de vérificaton du <em>password</em>.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">username</span> <span class="token operator">:</span> <span class="token string">"administrateur%27--"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">password</span> <span class="token operator">:</span> <span class="token string">"n'importeQuoi"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Le caractère <strong>%27</strong> correspond au symbole <strong>'</strong> de fermeture de chaine de caractère, il permet de dire que le nom d'utilisateur est fini.<br>
+Pourquoi on utilise ça plutôt que <strong>'</strong> ?<br>
+Le serveur va rajouter un caractère d'échappement devant les caractères qu'il utilise notamment <strong>'</strong>, mais pas devant sa forme hexadécimale <strong>%27</strong></p>
+</div></div>
+<h4 id="h4-1-4"> Interprétation de la requête par le serveur </h4>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'administarteur'</span><span class="token comment">--' AND password = 'n\'importeQuoi'</span>
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Et là, vous êtes connectés en tant qu'administrateur du site.</p>
+</div></div>
+<h3 id="h4-2"> UNION Attack </h3>
+<p>C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur ne s'appelle pas <strong>administrateur</strong>, comment est ce qu'on peut faire pour quand même se connecter ?</p>
+<p>Jusque là, on était limité par le fait de devoir faire des recherches dans la table par défaut de la requête : il est impossible de modifier la requête avant un <strong>WHERE</strong> qui se situe forcément après le <strong>FROM</strong>.<br>
+<em>On veut pouvoir effectuer nos propre requêtes dans d'autres table.</em></p>
+<p>Pour cela on va utiliser le mot clé SQL <strong>UNION</strong> qui va réaliser la concaténation de 2 recherches dans la base de donnée : celle par défaut et celle injectée.</p>
+<h4 id="h4-2-1"> Spécificités d'une UNION </h4>
+<p>Il est pas possible de simplement mettre ce qu'on veut dans la 2e recherche de l'<strong>UNION</strong>, il y a certaines contraintes :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>
+<p>Il doit avoir autant de valeurs de retour des 2 recherches :<br>
+ex : si la recherche par défaut envoie 2 informations (un nom et prénom d'utilisateur par exemple), la 2e recherche devra envoyer exactement 2 informations</p>
+</li>
+<li>
+<p>Les valeurs de retour doivent être de même type :<br>
+ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envoyer exactement 2 chaines de caractères</p>
+</li>
+</ul>
+</div></div>
+<h4 id="h4-2-2"> Trouver le nombre de colonnes </h4>
+<p>Premièrement, il faut trouver le nombre de valeur de retour de la première recherche. Pour cela il y a <strong>2 possibilités</strong> :</p>
+<ul>
+<li>Ordonner la première recherche selon la nième colonne, grace au mot clé <strong>ORDER BY n</strong>, si il y a une errreur c'est que la colonne <strong>n</strong> n'existe pas.</li>
+<li>Faire une 2e recherche (avec une <strong>UNION</strong>) en envoyant simplement des <strong>NULL</strong>, l'objectif étant de trouver combien on peut mettre de <strong>NULL</strong> sans avoir d'erreur :</li>
+</ul>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span>
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Remarque 1 : il n'est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé <strong>FROM</strong>, pour cela, il existe une table faite pour ça : <strong>dual</strong></p>
+</div></div>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span> <span class="token keyword">FROM</span> dual
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Remarque 2 : à partir de maintenant, on est obligé d'avoir des <em>espaces</em> dans nos requêtes (entre ORDER et BY ou entre UNION et SELECT), or il est pas possible de faire une requète HTTP avec des espaces dans les paramètres. Pour cela, <strong>il faut remplacer tous les espaces par le caractère +</strong></p>
+</div></div>
+<h4 id="h4-2-3"> Trouver le type de données envoyées </h4>
+<p>Maintenant qu'on a le nombre de colonnes, il faut tester un par un les paramètres pour savoir quel est le type du paramètre :</p>
+<p>On envoie <strong>UNION 'string',NULL,NULL</strong> (si 3 colonnes), puis <strong>UNION 0,NULL,NULL</strong>, jusqu'à trouver le type de la première colonne et ainsi de suite.</p>
+<p>La remarque faite sur Oracle dans la précédente partie est toujours applicable ici.</p>
+<h4 id="h4-2-4"> 1 seule colonne </h4>
+<p>Si un il y a uniquement un champ <em>string</em> disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le <em>username</em> et le <em>password</em> d'un utilisateur), on peut utiliser la fonction <strong>CONCAT</strong> de SQL:</p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> CONCAT<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token string">'/'</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> users
+</code></pre>
+<h4 id="h4-2-5"> Versions </h4>
+<p>Il peut être interressant de connaitre la version de la base de donnée pour effectuer des attaques ciblées sur la version.<br>
+Les requêtes dépendent de la base de donnée :</p>
+<ul>
+<li><em>Oracle</em> : <strong>SELECT banner FROM v$version</strong></li>
+<li><em>Microsoft</em> : <strong>SELECT @@version</strong></li>
+<li><em>PostgreSQL</em> : <strong>SELECT version()</strong></li>
+<li><em>MySQL</em> : <strong>SELECT @@version</strong></li>
+</ul>
+<p>Si besoin <strong>@</strong> = <strong>%40</strong> et <strong>$</strong> = <strong>%24</strong></p>
+<h4 id="h4-2-6"> Avoir le nom des tables </h4>
+<p>Pour effectuer nos recherche, il faut avoir le nom des tables et de colonnes, pour cela on peut effectuer, dans un requete <strong>UNION</strong>, les recherches suivantes :</p>
+<p><strong>Non Oracle</strong></p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> information_schema<span class="token punctuation">.</span><span class="token keyword">tables</span>
+<span class="token keyword">SELECT</span> COLUMN_NAME <span class="token keyword">FROM</span> INFORMATION_SCHEMA<span class="token punctuation">.</span><span class="token keyword">COLUMNS</span> <span class="token keyword">WHERE</span> TABLE_NAME <span class="token operator">=</span> <span class="token string">'TABLE-NAME-HERE'</span>
+
+</code></pre>
+<p><strong>Oracle</strong></p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> all_tables
+<span class="token keyword">SELECT</span> COLUMN_NAME <span class="token keyword">FROM</span> all_tab_columns <span class="token keyword">WHERE</span> TABLE_NAME <span class="token operator">=</span> <span class="token string">'TABLE-NAME-HERE'</span>
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Ne pas oublier de rajouter des colonnes <strong>NULL</strong> au cas où il faille plusieurs colonnes avec l'<strong>UNION</strong></p>
+</div></div>
+<h4 id="h4-3"> CheatSheet </h4>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Les informations plus spécifiques liés aux serveur SQL sont dans ce document : <a href="https://portswigger.net/web-security/sql-injection/cheat-sheet">lien</a></p>
+</div><div class="pl-8 mr-8">
+</div></div>
+<h2 id="h5"> Défense </h2>
+<p>Il est possible de paramétrer une requête SQL, c'est-à-dire transformer une requête en une fonction prenant en paramètre les valeurs de la requête.</p>
+<p>Au lieu d'executer :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">String query <span class="token operator">=</span> <span class="token string">"SELECT * FROM products WHERE category = '"</span><span class="token operator">+</span> input <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">;</span>
+Statement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On crée un statement sans les valeurs, puis on ajoute les paramètres :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">PreparedStatement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span><span class="token string">"SELECT * FROM products WHERE category = ?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+statement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Voici les 3 liens où on peut retrouver des exemples de code en fonction des languages utilisés :</p>
+<ul>
+<li><a href="https://www.hacksplaining.com/prevention/sql-injection">hacksplaining</a></li>
+<li><a href="https://portswigger.net/web-security/sql-injection">PortSwigger</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html">OWASP</a></li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Attention</strong> aux ORM</p>
+</div><div class="pl-8 mr-8">
+<p>Un ORM est un outils permettant de faciliter la communication entre le serveur et la base de donnée.<br>
+Un ORM n'est pas forcément une protexion contre les injections de SQL.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour savoir si votre serveur est protégé contre ce type d'attaques, n'oubliez pas de <strong>tester</strong> par vous même <strong>la sécurité</strong> de votre site.</p>
+</div></div>
+
+
+</article>
+
+        </main>
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        do-it : option de troisième année à l'école centrale Marseille
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

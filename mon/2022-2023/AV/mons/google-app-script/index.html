@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Google Apps Script</title>
+
+        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" 
+    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/ct">CT</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a class="hidden sm:block" href="/do-it/about">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+
+                    </a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+            
+<article class="relative">
+<h1  class="mb-1">Google Apps Script</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tag : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">mon</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                        <span data-pagefind-filter="Type">MON</span>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Antoine Varnerot</li>
+                
+            </ul>
+        </div>
+    
+
+    
+        
+        
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    2022-2023
+                <span>
+            </div>
+        
+    
+</div>
+
+
+
+<h2>Description du MON</h2>
+<p>Pendant les 10h consacrées à ce MON, je veux découvrir Google Apps Script et essayer d'appliquer les connaissances que j'ai acquises à un petit projet.</p>
+<h2>Réalisation</h2>
+<ol>
+<li></li>
+</ol>
+<p>Pour commencer, j'ai lu le tutoriel fait directement par Google (<a href="https://developers.google.com/apps-script/guides/sheets">https://developers.google.com/apps-script/guides/sheets</a>) qui présente le fonctionnement général et les différentes fonctionnalités de Apps Script. On y apprend notamment qu'on peut faire :</p>
+<ul>
+<li>de la mise en forme</li>
+<li>des graphiques</li>
+<li>des fonctions personnalisées</li>
+<li>des macros</li>
+<li>des déclencheurs</li>
+<li>...</li>
+</ul>
+<p>J'ai trouvé cette présentation très facile à lire, avec des exemples pertinents et elle m'a paru assez complète.</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>Je suis ensuite allé voir le travail fait par mes camarades durant le MON1 pour essayer d'implémenter des fonctions un peu plus complexes. Par exemple, j'ai réussi à implémenter le vérificateur d'adresse mail fait par Ossama (<a href="https://francoisbrucker.github.io/do-it/mon/OA/MONs/mon1">https://francoisbrucker.github.io/do-it/mon/OA/MONs/mon1</a>) qui s'actualise à chaque fois qu'on édite une case. Cela m'a permis de jouer un peu avec des objets complexes sans avoir à écrire trop de code.<br>
+Ces deux premiers points étaient une sorte d'entrée en matière.</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>Afin de rentrer vraiment dans la programmation j'ai suivi un tuto complet trouvé sur Youtube (<a href="https://www.youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS">https://www.youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS</a>). C'est une playlist de 5 vidéos en français qui explore certaines fonctionnalités de Google Apps Script comme :</p>
+<ul>
+<li>lire les données d'un tableur</li>
+<li>Ecrire des données dans un tableur</li>
+<li>Modifier des cellules (bordure, couleur ...)</li>
+<li>Déclencher des fonctions automatiquement (à l'ouverture du document ou selon l'heure)<br>
+Très bon tuto qui convient même à des débutants de Javascript. Je conseille de faire les exemples en même temps pour bien comprendre. Durée en faisant les exemples : &lt; 2 heures</li>
+</ul>
+<ol start="4">
+<li></li>
+</ol>
+<p>Maintenant que j'ai les bases de Google Apps Script, je me suis dit que c'était le temps de commencer un petit projet pour mettre en pratique ce que j'ai appris. Après avoir réfléchi un moment, j'ai eu du mal à trouver une idée. J'ai néanmoins trouvé sur le site <a href="https://developers.googleblog.com/2022/04/getting-started-is-hardest-part-find.html">https://developers.googleblog.com/2022/04/getting-started-is-hardest-part-find.html</a> de nombreuses idées de mini-projets à faire avec Google Apps Script.<br>
+Attention : il n'y a pas que des projets avec Google Sheet, il y a aussi des projets avec Google Slide ou Google Form.</p>
+<ol start="5">
+<li></li>
+</ol>
+<p>J'ai choisi le projet &quot;Clean up data in a spreadsheet&quot;.<br>
+Le but de ce projet est, comme son nom l'indique, de nettoyer un tableur.<br>
+Plus précisément, on veut avoir une fonction qui supprime les lignes vides du tableur et une fonction qui supprime les colonnes vides dans une zone que l'on sélectionne.<br>
+Exemple :</p>
+<p>On commence avec un set de données :</p>
+  <img src="../../assets/datasetMon2.png">
+<p>On clique ensuite sur les fonctions voulues dans la barre de recherche et on obtient le tableau suivant :</p>
+  <img src="../../assets/datasetAfterCleaningMon2.png">
+<p>La base de données a été nettoyée. On pourrait trouver une application à cela dans le domaine de l'intelligence artificielle.</p>
+<p>Code :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">
+<span class="token keyword">function</span> <span class="token function">onOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> menu <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getUi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createAddonMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  menu
+    <span class="token punctuation">.</span><span class="token function">addItem</span><span class="token punctuation">(</span><span class="token string">'Supprimer les lignes vides'</span><span class="token punctuation">,</span> <span class="token string">'clearRows'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addItem</span><span class="token punctuation">(</span><span class="token string">'Supprimer les colonnes vides'</span><span class="token punctuation">,</span> <span class="token string">'clearColumns'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addToUi</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">clearRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token comment">//Definition de variables</span>
+  <span class="token keyword">const</span> sheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> range <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getActiveRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> firstActiveRow <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> height <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> width <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> values <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> rowsToKeep <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//Trouve les lignes à garder</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> height<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span> width<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        rowsToKeep<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//supprime les doublons dans rowsToKeep et supprime les lignes du sheet</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveRow <span class="token operator">+</span> height <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">></span> firstActiveRow <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>rowsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      sheet<span class="token punctuation">.</span><span class="token function">deleteRow</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">clearColumns</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">//Definition de variables</span>
+  <span class="token keyword">const</span> sheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> range <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">getActiveRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> firstActiveColumn <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getColumn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> height <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> width <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> values <span class="token operator">=</span> range<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> columnsToKeep <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+ 
+  <span class="token comment">//Trouve les colonnes à garder</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> width<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span> height<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        columnsToKeep<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//supprime les doublons dans columnsToKeep et supprime les colonnes du sheet</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> firstActiveColumn <span class="token operator">+</span> width <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">></span> firstActiveColumn <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>columnsToKeep<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
+      sheet<span class="token punctuation">.</span><span class="token function">deleteColumn</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+
+
+</article>
+
+        </main>
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        do-it : option de troisième année à l'école centrale Marseille
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

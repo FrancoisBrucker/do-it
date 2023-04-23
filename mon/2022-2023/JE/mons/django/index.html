@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Introduction au back-end par Django</title>
+
+        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" 
+    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/ct">CT</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a class="hidden sm:block" href="/do-it/about">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+
+                    </a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+            
+<article class="relative">
+<h1  class="mb-1">Introduction au back-end par Django</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">info</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">back</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">python</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">django</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">mon</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <span data-pagefind-filter="Type">MON</span>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Jeffrey Edisah</li>
+                
+            </ul>
+        </div>
+    
+
+    
+        
+        
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    2022-2023
+                <span>
+            </div>
+        
+    
+</div>
+
+
+
+<!-- début résumé -->
+<p>Découverte des principes du backend avec le framework Python Django<br>
+Pré-requis : Web Front 1</p>
+<!-- fin résumé -->
+<p>Ce MON fait suite à mon 1er MON Web Front 1. Après celui-ci, on peut écrire des pages webs plutôt simples et pas très dynamiques (quoique avec JavaScript beaucoup plus quand même).<br>
+C'est très utile quand on veut seulement afficher des choses, mais pour faire des choses dynamiques ou bien récupérer et utiliser des données ce n'est pas très pratique.<br>
+Je veux donc voir à travers ce MON comment faire des sites dynamiques qui permettent l'envoi ou la récupération de données avec les langages back-end et en particulier le framework Django du langage Python.</p>
+<p>Les ressources que j'utilise sont :</p>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/Server-side">Les principes de la programmation coté serveur de Mozilla</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.1/intro/tutorial01/">Le tutoriel Django pour faire une application de sondages</a></li>
+</ul>
+<p>J'utiliserai cette page pour vous montrer ce que je retire principalement de ces ressources.</p>
+<h2>Pourquoi Django ?</h2>
+<p>Avec la multitude de langages et de frameworks possibles, on peut me demander pourquoi Django. Tout d'abord, parce que je trouve la documentation très claire et exhaustive, ensuite parce que le framework a des outils déjà tout fait, ce qui permet de prendre un niveau d'abstraction au début et de vraiment comprendre les concepts facilement.<br>
+Avec une ligne dans le terminal, on peut créer le template d'une application ou d'un projet avec toute la configuration nécessaire déjà en place, ce qui clarifie beaucoup les choses. A terme, on peut rentrer plus en détails sur chacune des options de configuration.</p>
+<h2>La relation client-serveur</h2>
+<p>Au coeur de la programmation backend, il y a la relation client-serveur, le client correspondant au navigateur sur votre machine, et le serveur à une machine distante sur lequel est déployé le site, où se trouve la base de données associée, etc...</p>
+<p>Le client et le serveur communiquent par un système de requêtes et de réponses, système régulé par le protocole HTTP.<br>
+Le client envoie des requêtes au serveur qui répond ensuite. Les réponses peuvent être des données de tout type, des pages webs, des fichiers JSON ou d'autres choses.<br>
+Les requêtes peuvent elles aussi contenir des fichiers et des données, elle contiennent également des <strong>méthodes</strong> qui renseignent sur le type d'action demander par le client. Ces méthodes sont principalement (la liste n'est pas exhaustive) :</p>
+<ul>
+<li>GET, pour récupérer des données du serveur</li>
+<li>POST, pour envoyer des données au serveur</li>
+<li>PUT, pour mettre à jour des données du serveur</li>
+<li>DELETE, pour supprimer des données du serveur</li>
+</ul>
+<p>Ces méthodes-ci sont celles que l'on retrouve par exemple dans les API CRUD (CREATE, READ, UPDATE, DELETE) et correspondent à la grande majorité de ce qu'on peut être amené à utiliser dans le développement de sites.</p>
+<p>La 1ère partie du tutoriel Django permet de se familiariser avec ces principes de requêtes et réponses, tandis que la ressource Mozilla nous en apprend plus sur le protocole HTTP, les en-têtes de réponse et les codes statuts (200, 404).</p>
+<h2>Le principe de design MVC (Modèle-Vue-Contrôleur)</h2>
+<p>La plupart des frameworks et langage de développement coté serveur suivent le principe de design MVC, un principe de séparation du code en 3 parties : le modèle pour les données, la vue pour le front et les pages affichées à l'utilisateur, et le contrôleur pour tout traitement, connexion à la base de données, calcul, etc...</p>
+<h3>La Vue</h3>
+<p>La vue correspond à ce qui est affiché à l'écran de l'utilisateur. La différence avec les pages purement front vues en Web Front 1 est que ces pages-ci peuvent afficher différentes informations selon le client qui affiche les pages, par le biais des sessions et des cookies.<br>
+Ainsi les pages sont écrits à l'aide généralement d'un système de templates (Jinja pour Flask et Django) qui permet d'écrire des pages HTML de manière plus Python Friendly, et ainsi mettre des variables dans nos pages, faire des boucles, ou bien utiliser des conditions.<br>
+C'est également à partir de la vue que l'on peut récupérer des données de nos utilisateurs, avec les formulaires par exemple. La 3ème et 4ème partie du tutoriel Django traite plus en détail des vues.</p>
+<h3>Le Modèle</h3>
+<p>Le modèle sert à la représentation des données. Cette partie du site est généralement nécessaire pour les bases de données relationnelles et sert à définir nos bases de données dans le code plutôt qu'à devoir créer la table de données manuellement (même si il faut créer la base de données à priori).<br>
+En Django, cela se fait assez facilement avec le systèmes de classes de Python pour la Programmation Orienté Objet, chacun des attributs d'une classe modèle correspondant à une colonne distinct dans la table, et chaque classe correspondant à une table. la 2ème partie du tutoriel Django revient en détail sur ces connexions.</p>
+<h3>Le Contrôleur</h3>
+<p>Ce qui correspond aux calculs de l'application ou de la page, connecte le modèle et la vue, le centre de traitement de la page. Généralement, la vue et le contrôleur sont écrites ensemble pour la plupart des fonctions simples.</p>
+<h2>Sessions</h2>
+<p>L'une des choses qu'il est intéressante de faire avec les sites web est l'affichage de contenus différents selon les utilisateurs pour une même URL selon qui se connecte sur l'URL, par exemple les profils utilisateurs des réseaux sociaux ou autre.<br>
+Ceci est possible à l'aide des <strong>cookies</strong>, fichiers placés sur l'ordinateur des clients afin de reconnaître celui-ci. Cette notion est vu à travers la session administrateur dans le tutoriel.</p>
+<h2>Conclusion</h2>
+<p>Ces deux ressources en tandem sont très appropriés à mon sens pour avoir une vision du backend en tant que débutant. Si les principes du backend sont déjà connus, le tutoriel Django permet d'acquérir rapidement les bases du framework et être opérationnel mais peut manquer de profondeur. Dans ce cas, les <a href="https://docs.djangoproject.com/en/4.1/topics/">guides Django</a> sont plus appropriés selon ce que le développeur veut faire.</p>
+
+
+</article>
+
+        </main>
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        do-it : option de troisième année à l'école centrale Marseille
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

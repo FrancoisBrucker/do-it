@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Serveur Distant</title>
+
+        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+
+        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" 
+    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/ct">CT</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a class="hidden sm:block" href="/do-it/about">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+
+                    </a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+            
+<article class="relative">
+<h1  class="mb-1">Serveur Distant</h1>
+<div class="mb-4">
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Gabriel BARBE</li>
+                
+            </ul>
+        </div>
+    
+
+    
+        
+        
+            <div class="absolute top-0 right-0">
+                <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
+                    2022-2023
+                <span>
+            </div>
+        
+    
+</div>
+
+
+
+<!-- Début Résumé -->
+<p>POK visant à reproduire le site effectué dans le temps mais sur un serveur distant et en y rajoutant du back-end.</p>
+<!-- Fin Résumé -->
+<h1>Organisation</h1>
+<p>Dans un premier temps, ajouter du back-end grâce au MON suivi sur le site de M. Brucker puis dans un second temps l'implémenter sur un serveur distant.<br>
+TO do-list :<br>
+Sprint 1 :</p>
+<ul>
+<li>Ramener le site sur l'ovh</li>
+<li>Gérer des cookies pour implémenter une page de connexion<br>
+<br><br>
+Sprint 2 :</li>
+<li>Insérer une base de donnée</li>
+<li>Gérer le backend en node</li>
+<li>Si le temps le permet voir un peu pour la sécurité</li>
+</ul>
+<h3>Nouveau projet Express</h3>
+<p>Pour le développement du projet, j'ai choisi de le faire via Express car c'est ce que recommandait M. Brucker et donc dans un premier temps je crée un nouveau projet à l'adresse <a href="http://localhost:3000/">http://localhost:3000/</a>. <br><br>
+Concernant la base de données et le langage associée à utiliser, j'ai longtemps hésité mais j'ai finalement décidé de suivre l'exemple associé à Express sur &quot;<a href="http://developer.mozilla.org">http://developer.mozilla.org</a>&quot; et donc d'utiliser l'ORM Mongoose associée à une base de données MangoDB.<br>
+Mon code est disponible sur [Mon Github].(<a href="https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback">https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback</a>)</p>
+<h3>Création de la base de données</h3>
+<p>Afin de compléter mon premier site, j'ai eu pour idée d'ajouter une option permettant de sélectionner un champion et un pays : ainsi J1 sera désigné par le champion Zidane ou le pays Brésil. Le but est donc de créer une base de données avec 5 champions et 5 pays. J'ai repris en grande partie le code visible sur <a href="../../../mon/GB/Mons/coteweb">mon MON</a> que j'ai personnalisé afin d'y mettre mes exigences. Le champion devra donc avoir les caractéristiques &quot;nom&quot;, &quot;prénom&quot; et &quot;numéro&quot; ; le pays, lui, sera associé aux caractéristiques &quot;nom&quot; et &quot;couleur&quot;. Ci-dessous le code concernant le champion :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
+
+const JoueurSchema <span class="token operator">=</span> new Schema<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  first_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  family_name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  number:<span class="token punctuation">{</span> type: Number, required: true, maxLength:2<span class="token punctuation">}</span>,
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+JoueurSchema.virtual<span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  // To avoid errors <span class="token keyword">in</span> cases where an author does not have either a family name or first name
+  // We want to <span class="token function">make</span> sure we handle the exception by returning an empty string <span class="token keyword">for</span> that <span class="token keyword">case</span>
+  <span class="token builtin class-name">let</span> fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>this.first_name <span class="token operator">&amp;&amp;</span> this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>$<span class="token punctuation">{</span>this.family_name<span class="token punctuation">}</span>, $<span class="token punctuation">{</span>this.first_name<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>this.first_name <span class="token operator">||</span> <span class="token operator">!</span>this.family_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fullname <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token builtin class-name">return</span> fullname<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+JoueurSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/catalog/joueur/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Export model
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Joueur"</span>, JoueurSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">function</span> JoueurCreate<span class="token punctuation">(</span>first_name, family_name, number, cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  joueurdetail <span class="token operator">=</span> <span class="token punctuation">{</span>first_name:first_name , family_name: family_name, number:number<span class="token punctuation">}</span>
+  
+  var joueur <span class="token operator">=</span> new Joueur<span class="token punctuation">(</span>joueurdetail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       
+  joueur.save<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      cb<span class="token punctuation">(</span>err, null<span class="token punctuation">)</span>
+      <span class="token builtin class-name">return</span>
+    <span class="token punctuation">}</span>
+    console.log<span class="token punctuation">(</span><span class="token string">'New Joueur: '</span> + joueur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    joueurs.push<span class="token punctuation">(</span>joueur<span class="token punctuation">)</span>
+    cb<span class="token punctuation">(</span>null, joueur<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Routes</h3>
+<p>Nous en arrivons ici à la partie création des routes pour notre site sur le serveur. En premier lieu, nous crééons un dossier &quot;controllers&quot; où l'on mettra,  pour chaque fichier de notre base de donées, les requêtes de création, d'affichages, de supression etc. Ensuite, nous crééons un fichier javascript &quot;catalog.js&quot; où l'on définit les routes de notre site à proprement parlé. J'obtients donc les routes suivantes :</p>
+<ul>
+<li><a href="http://localhost3000/catalog">http://localhost3000/catalog</a></li>
+<li><a href="http://localhost:3000/catalog/pays">http://localhost:3000/catalog/pays</a></li>
+<li><a href="http://localhost:3000/catalog/joueurs">http://localhost:3000/catalog/joueurs</a></li>
+<li><a href="http://localhost:3000/users">http://localhost:3000/users</a><br>
+Ici, la route &quot;catalogue&quot; n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données.<br>
+<img src="./../Images/routes.png" alt='routes'/></li>
+</ul>
+<h3>Etablissement des premières pages</h3>
+<p>On arrive donc à une partie plus intéressante, celle de la liaison entre ma première partie, le front-end, et mon site actuellement hébérgé sur un serveur.<br>
+Pour ce faire, nous utilisons pug (choix par défaut du cours que je regrette un peu à ce moment car je dois réadapter certains de mes codes sources).<br><br>
+Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier &quot;views&quot;. Comme son nom l'indique, celui-ci contiendra les interfaces vus par l'utilisateur. J'implémente donc mon code html &quot;PFC&quot; dans le fichier &quot;index.pug&quot;. C'est à ce moment que cela se complique car bien que pug reprend complétement l'idée de html, il y'a tout de même de nombreux changements à opérer dans un langage que je ne connais pas.</p>
+<h1>Fin du sprint 1</h1>
+<h3>Ce qu'il reste à faire</h3>
+<p>Comme on peut le voir, il reste de nombreuses choses à effectuer, j'ai désormais plus de visibilité sur l'ensemble du projet :</p>
+<ul>
+<li>Adapter mon script afin que le site marche comme avant</li>
+<li>Je pense à modifier la base de données afin que celle-ci soit juste un historique des anciens coups car l'objectif initiale demanderait beaucoup de changement sur le front et me limiterai dans la suite des évènement.</li>
+<li>Ramener le site sur l'ovh une fois que tout cela sera fait</li>
+<li>Insérer une page de connexion</li>
+<li>Sécurité si le temps me le permet mais cela me parait compliqué.</li>
+</ul>
+<h1>Début du sprint 2</h1>
+<p>Le script remarche comme avant, j'ai simplement eu à effectuer une traduction html -&gt; pug (des sites s'en occupent, c'est beaucoup plus facile du coup)</p>
+<h3>Changement base de donnée</h3>
+<p>Commme évoqué précedemment j'ai finalement opté pour un changement de base afin d'établir un historique des coups joués. Dans un premier temps, je me contente de rentrer moi-même les coups afin d'avoir une page propre avec des données puis dans un second temps, je les actualiserai avec les données issues de mon site. <br>.<br>
+J'ai donc commencé par recréer des routes notamment la route (/historique).<br>
+J'ai ensuite modifié tous mes fichiers afin de créer la nouvelle base de donnée avec les donnnées intéressantes : le dit coup et la date à laquelle il a été effectué. Je crée donc un nouveau schéma dans un fichier &quot;coup.js&quot;, dans le dossier &quot;models&quot;, où j'insère mon schéma :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
+
+const CoupSchema <span class="token operator">=</span> new Schema<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name: <span class="token punctuation">{</span> type: String, required: true, maxLength: <span class="token number">100</span> <span class="token punctuation">}</span>,
+  date: <span class="token punctuation">{</span> type: Date, default: Date.now<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>,
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+CoupSchema.virtual<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.get<span class="token punctuation">(</span><span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">`</span>/coup/$<span class="token punctuation">{</span>this._id<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Export model
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Je crée ensuite un nouveau fichier historiqueController.js afin de rentrer les fonctions en lien avec ma base de donnée</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const <span class="token punctuation">{</span> body, validationResult <span class="token punctuation">}</span> <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"express-validator"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+const Coup <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"../models/coup"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+const async <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+// Display list of all Books.
+exports.coup_list <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>req, res, next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Coup.find<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    .populate<span class="token punctuation">(</span><span class="token string">"date"</span><span class="token punctuation">)</span>
+      .exec<span class="token punctuation">(</span>function <span class="token punctuation">(</span>err, list_coups<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token builtin class-name">return</span> next<span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        //Successful, so render
+        res.render<span class="token punctuation">(</span><span class="token string">"coup_list"</span>, <span class="token punctuation">{</span> title: <span class="token string">"Historique de coup"</span>, coup_list: list_coups <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Cette fonction sert simplement à implémenter la liste de coup sur mon site, il ne reste plus qu'à créer un fichier .pug où je fais le front. Je débute par un fichier très rudimentaire :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">extends layout
+
+block content
+  <span class="token assign-left variable">h1</span><span class="token operator">=</span> title
+  
+  ul
+  each coup <span class="token keyword">in</span> coup_list
+    li 
+      p <span class="token comment">#{coup.name} </span>
+      <span class="token operator">|</span> <span class="token comment">#{coup.date}</span>
+
+  <span class="token keyword">else</span>
+    li There are no authors.
+</code></pre>
+<p>Ma page historique ressemble alors à cela : <img src="./../Images/Historique.png" alt='routes'/><br>
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="./../Images/Data.png" alt='routes'/></p>
+<h3>Mise à jour de la base de données</h3>
+<p>Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction &quot;appenchild&quot; pour faire apparaitre la liste de coups et que mes variables &quot;pierre&quot;, &quot;feuille&quot; et &quot;ciseaux&quot; ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier &quot;coup.js&quot;, le terminal me renvoi que la variable &quot;pierre&quot; n'est pas déclarée :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span>.findOneAndUpdate<span class="token punctuation">(</span><span class="token punctuation">{</span>name:<span class="token string">'Pierre'</span><span class="token punctuation">}</span>, <span class="token punctuation">{</span>date<span class="token punctuation">}</span>, function<span class="token punctuation">(</span>err, utilisateur<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token builtin class-name">return</span> handleError<span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction &quot;appenchild()&quot; pour faire apparaitre sa variable.<br>
+<br><br>
+J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.</p>
+<h3>Mise du site sur l'ovh</h3>
+<p>J'ai suivi en grande partie le <a href="https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/">POK de Tuncay</a> qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences.<br>
+Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier &quot;node&quot; :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/gabrielbarbe00/POK.git
+</code></pre>
+<p>Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné. Cet objectif est réalisé d'une manière très spécifique à express, il suffit d'ajouter deux lignes dans le fichier &quot;app.js&quot; :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const port <span class="token operator">=</span> <span class="token number">10408</span>
+
+app.listen<span class="token punctuation">(</span>port, <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console.log<span class="token punctuation">(</span><span class="token variable"><span class="token variable">`</span>Example app listening on port $<span class="token punctuation">{</span>port<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ainsi, l'application se lance désormais sur le bon port et tourne sur l'ovh, objectif accompli ! Il ne nous reste plus qu'à ouvrir un terminal virtuel tournant en continu afin que notre serveur ne se ferme pas dès que nous quittons le ssh.<br>
+On rentre donc la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> PFC
+</code></pre>
+<p>On lance l'application puis nous quittons le terminal avec la commande CTRL A + D.<br>
+Le site est disponible à <a href="http://node.coriandre.ovh1.ec-m.fr">cette adresse</a></p>
+<h2>Feedback</h2>
+<p>Je dois avouer que la gestion du &quot;back-end&quot; m'a nettement moins parlé que celle du &quot;front&quot;, je suis content d'avoir effectué ce POK pour m'en rendre compte. Je pense que les deux aspects du site sont en pratique très différent à coder, néanmoins ce projet était très formateur ne serait-ce que dans la compréhension de ce qu'est un site web. Je suis tout de même très déçu de n'avoir pu outrepasser le problème de mise à jour de l'historique, surtout que cela m'a pris énormément de temps que je n'ai pas pu passer à développer une page de connexion par exemple.</p>
+
+
+</article>
+
+        </main>
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        do-it : option de troisième année à l'école centrale Marseille
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
