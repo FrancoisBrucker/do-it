@@ -3,7 +3,7 @@ layout: layout/post.njk
 
 title: "HTML & CSS"
 authors:
-  - Nicolas BERT
+  - Jean DUPONT
 tags: ['mon', 'HTML', 'CSS']
 ---
 
