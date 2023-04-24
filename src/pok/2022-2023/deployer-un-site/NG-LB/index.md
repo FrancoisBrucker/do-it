@@ -27,7 +27,7 @@ Mon sheet c'est moi, suite du développement du site et déploiement sur un serv
 
 ## 1.2 Objectifs optionnels du POK
 
-Ces objectifs seront réalisés si nous avons le temps après avoir fini les objectifs précédents. 
+Ces objectifs seront réalisés si nous avons le temps après avoir fini les objectifs précédents.
 
 - Améliorer le front du site, notamment son apparence et réaliser des finitions
 

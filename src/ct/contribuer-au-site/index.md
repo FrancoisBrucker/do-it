@@ -37,7 +37,7 @@ Votre dossier de post doit s'appeler comme l'intitulé du cours, en remplaçant 
 
 Par exemple ce post s'appelle `contribuer-au-site`{.fichier} et est rangé dans le dossier `ct`{.fichier} :
 
-```shell
+```
 src
 └── ct
     ├── contribuer-au-site
@@ -49,7 +49,7 @@ src
 
 Comme plusieurs groupes de personnes peuvent faire le même pok, on ajoute une indirection. Votre dossier de post doit s'appeler des initiales des personnes constituant le groupe (séparés par des `-`) et être placé dans le dossier du pok correspondant. Par exemple si j'avais avec Geo fait le pok "un site chez moi", le post aurait été nommé `FB-GD`{.fichier}, et aurait été de cette forme :
 
-```shell
+```
 src
 └── pok
     ├── un-site-chez-moi
