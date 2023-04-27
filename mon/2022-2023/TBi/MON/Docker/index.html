@@ -7,10 +7,10 @@
 
         <title>Docker</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -152,47 +146,39 @@ Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
 Ces boites doivent donc posséder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons chercher une image (une copie) de ce système sur un &quot;drive d'images&quot; sur internet. ON se dirige donc sur DockerHub qui contient pleins d'images, par exemple, on peut y récupérer l'image d'un système Linux avec la distribution Ubuntu.</p>
 <h4>Hello World</h4>
 <p>Pour chercher une image, ici une image de la distribution Linux Fedora, on se place dans le répertoire de notre projet et on lance :</p>
-<pre><code>docker pull fedora latest
-</code></pre>
+<p>docker pull fedora latest</p>
 <p>Ensuite, pour notre premier hello world, on va effectuer une commande Linux avec le système fedora que l'on a téléchargé :</p>
 <p>docker run fedora echo 'hello world'</p>
 <p>Cette commande va initialiser un container à partir de l'image fedora et va l'utiliser pour lancer un echo, puis va s'arrêter.</p>
 <p>on reçoit donc l'echo :</p>
-<pre><code>hello world
-</code></pre>
+<p>hello world</p>
 <p>On peut utiliser cette commande avec des options à chercher dans docker --help .</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
 </svg>
 <div class="pl-8 mr-8">
-<pre><code>docker run --help //liste les commandes et les options
--i  //maintenir le container ouvert après l'executions des tâches
--t  //ouvrir un pseudo terminale
--d  // exécuter les taches en daemon -&gt; en arrière plan, dans un autre terminale.
-</code></pre>
+<p>docker run --help //liste les commandes et les options<br>
+-i  //maintenir le container ouvert après l'executions des tâches<br>
+-t  //ouvrir un pseudo terminale<br>
+-d  // exécuter les taches en daemon -&gt; en arrière plan, dans un autre terminale.</p>
 </div></div>
 <p>D'autres commandes importantes :</p>
-<pre><code>docker ps //liste tous les containers en marche
-docker stop [id] // arrête le container proprement
-docker kill [id] // force l'arrêt
-docker log -f [id] // renvoie tous les logs du container sur le terminale
-</code></pre>
+<p>docker ps //liste tous les containers en marche<br>
+docker stop [id] // arrête le container proprement<br>
+docker kill [id] // force l'arrêt<br>
+docker log -f [id] // renvoie tous les logs du container sur le terminale</p>
 <h4>Dockerfile</h4>
 <p>Une image est un template pour créer un container. Au lieu de simplement copier celle des autres, nous pouvons créer ou modifier les nôtres avec des Dockerfile.</p>
 <p>On crée un Dockerfile dans le projet et on ouvre vscode dans le dossier courant :</p>
-<pre><code>&gt;&gt; New-Item Dockerfile
-&gt;&gt; code .
-</code></pre>
+<p>&gt;&gt; New-Item Dockerfile<br>
+&gt;&gt; code .</p>
 <p>On crée notre Dockerfile, il va chercher l'image fedora et lancer une commande pour nous qui va installer une dépendance, ici figlet, qui permet de faire de jolies echos.<br>
 Le Dockerfile ressemble à ça :</p>
-<pre><code>FROM fedora:latest
-
-RUN yum install -y figlet
-</code></pre>
+<p>FROM fedora:latest</p>
+<p>RUN yum install -y figlet</p>
 <p>Enfin, on construit l'image dans le dossier courant (où il y a le Dockerfile) et on le nomme figlet :</p>
-<pre><code>&gt;&gt; docker build -t figlet .
-</code></pre>
+<p>&gt;&gt; docker build -t figlet .</p>
 <p>Nous voila avec une nouvelle image figlet, que l'on peut utiliser pour instancier des containers comme au début du tutoriel!</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -202,28 +188,20 @@ RUN yum install -y figlet
 <p>Les dockerfiles fonctionnent avec des mots clefs tel que FROM,RUN,CMD,ENTRYPOINT.. voir la doc pour savoir à quoi ils servent.</p>
 </div></div>
 <p>On peut publier notre image sur le dockerhub avec une commande spéciale :</p>
-<pre><code>docker build -t mon_pseudo_docker/nom_image:latest .
-</code></pre>
+<p>docker build -t mon_pseudo_docker/nom_image:latest .</p>
 <p>Puis sur docker desktop on clique sur push to hub.</p>
 <h3>Conteneurisation d'un premier projet :</h3>
 <p>Lors des cours de flask, on à eu l'occasion de coder un front en React et un back en flask, nous allons essayer de conteneuriser ça.<br>
 On commence à créer une image qui va créer le conteneur du front.</p>
 <p>Le front utilise node et react.js.<br>
 On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiant les dépendances et qui les installes avec npm. Ensuite, on exécute la commande qui lance le serveur pour le front.</p>
-<pre><code>FROM node:18-slim
-
-WORKDIR /app
-
-COPY [&quot;package.json&quot;, &quot;package-lock.json*&quot;, &quot;./&quot;]
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD [ &quot;npm&quot;,&quot;start&quot; ]
-</code></pre>
+<p>FROM node:18-slim</p>
+<p>WORKDIR /app</p>
+<p>COPY [&quot;package.json&quot;, &quot;package-lock.json*&quot;, &quot;./&quot;]</p>
+<p>RUN npm install</p>
+<p>COPY . .</p>
+<p>EXPOSE 3000</p>
+<p>CMD [ &quot;npm&quot;,&quot;start&quot; ]</p>
 <p>On lance ensuite un container de cette image en spécifiant le port 3000 et voila, on peut aller voir notre front sur localhost:3000.</p>
 <div style = " display: grid;grid-template-columns: repeat(2, minmax(0, 1fr))">
   <img src="../images/container.png" alt="DockerDeskop" style="height: 200px; margin: 0 auto; border: 0;grid-column : 1 ;grid-row : 1" />
@@ -234,59 +212,46 @@ CMD [ &quot;npm&quot;,&quot;start&quot; ]
 <p>Pour tester cela, on continue la containérisation de l'app du cours de flask.</p>
 <h4>Container Back-end</h4>
 <p>on créer un Dockerfile qui va créer l'image de l'application flask :</p>
-<pre><code>FROM python:latest
-
-WORKDIR /app
-
-COPY requirements.txt requirements.txt
-
-COPY requirements.dev.txt requirements.dev.txt
-
-RUN pip install -r requirements.txt
-RUN pip install -r requirements.dev.txt
-
-COPY  . .
-
-EXPOSE 5000
-
-CMD [ &quot;python3&quot;, &quot;-m&quot; , &quot;flask&quot;, &quot;run&quot;, &quot;--host=0.0.0.0&quot;]
-</code></pre>
+<p>FROM python:latest</p>
+<p>WORKDIR /app</p>
+<p>COPY requirements.txt requirements.txt</p>
+<p>COPY requirements.dev.txt requirements.dev.txt</p>
+<p>RUN pip install -r requirements.txt<br>
+RUN pip install -r requirements.dev.txt</p>
+<p>COPY  . .</p>
+<p>EXPOSE 5000</p>
+<p>CMD [ &quot;python3&quot;, &quot;-m&quot; , &quot;flask&quot;, &quot;run&quot;, &quot;--host=0.0.0.0&quot;]</p>
 <p>Puis on lance le container <code>docker run -d -p 5000:5000  python-flash</code> . On peut maintenant écouter le port 5000 et voir que tout fonctionne.</p>
 <h4>Dockercompose file</h4>
 <p>On possède maintenant deux images, une pour le front, une pour le back, on peut essayer de faire fonctionner les deux.</p>
 <p>Pour cela on créer un Docker-composer.yml file.</p>
-<pre><code>version : '3'
-services:
-  web :
-    build: flask
-    ports: 
-      - '5000:5000'
-    environment:
-      FLASK_ENV: development
-    volumes :
-      - ./flask:/app
-
-
-  front :
-    build: react-todo
-    ports : 
-      - '3000:3000'
-
-  db:
-    image : postgres
-    ports :
-      - '5432:5432'
-    environment:
-      POSTGRES_USER : test
-      POSTGRES_PASSWORD : test
-      POSTGRES_DB : postgres
-    volumes:
-      - db:/var/lib/postgresql/data
-
-volumes:
-  db:
-    driver : local
-</code></pre>
+<p>version : '3'<br>
+services:<br>
+web :<br>
+build: flask<br>
+ports:<br>
+- '5000:5000'<br>
+environment:<br>
+FLASK_ENV: development<br>
+volumes :<br>
+- ./flask:/app</p>
+<p>front :<br>
+build: react-todo<br>
+ports :<br>
+- '3000:3000'</p>
+<p>db:<br>
+image : postgres<br>
+ports :<br>
+- '5432:5432'<br>
+environment:<br>
+POSTGRES_USER : test<br>
+POSTGRES_PASSWORD : test<br>
+POSTGRES_DB : postgres<br>
+volumes:<br>
+- db:/var/lib/postgresql/data</p>
+<p>volumes:<br>
+db:<br>
+driver : local</p>
 <p>Ce fichier préparer le lancement de trois containers basées sur :</p>
 <ul>
 <li>L'image présente dans ./flask</li>

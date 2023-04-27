@@ -7,10 +7,10 @@
 
         <title>Le site d&#39;Ossama</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -108,175 +102,155 @@ Il explique pas à pas comment créer un site internet en étant débutant. Il p
 <ul>
 <li>
 <p>Enlever les marges automatique pour que ça soit plus esthétique lorsque l'on place une image en fond par exemple.</p>
-<pre><code>      body{
-          margin: 0 auto;
-      }
-</code></pre>
+<p>body{<br>
+margin: 0 auto;<br>
+}</p>
 </li>
 <li>
 <p>Modifier le scroll pour qu'il soit plus fluide.</p>
-<pre><code>        html {
-            scroll-behavior: smooth ;
-        }
-</code></pre>
+<p>html {<br>
+scroll-behavior: smooth ;<br>
+}</p>
 </li>
 </ul>
 <h4>En-tête de page</h4>
 <p>On va passer à la création de l'en-tête du site, il s'agit dune bande tout en haut du site où l'on va placer 3 boutons cliquable.<br>
 Création du bandeau avec du html :</p>
-<pre><code>      &lt;header&gt;
-                  &lt;img src=&quot;Logo_ecole.png&quot; alt=&quot;Logo site&quot;&gt; 
-                  &lt;nav class=&quot;nav&quot;&gt;
-                  &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Acceuil&lt;/a&gt;&lt;/li&gt;
-                  &lt;li&gt; &lt;a href=&quot;#MON&quot;&gt;MON&lt;/a&gt;&lt;/li&gt;
-                  &lt;li&gt; &lt;a href=&quot;#POK&quot;&gt;POK&lt;/a&gt;&lt;/li&gt;
-                  &lt;/nav&gt;
-
-              &lt;/header&gt;
-</code></pre>
+<p><header><br>
+<img src="Logo_ecole.png" alt="Logo site"><br>
+<nav class="nav"><br>
+<li><a href="index.html">Acceuil</a></li><br>
+<li> <a href="#MON">MON</a></li><br>
+<li> <a href="#POK">POK</a></li><br>
+</nav></p>
+<p></header></p>
 <p>Après l'avour créer, on va utiliser du CSS pour modifier ses carctéristiques, on va par exemple indiquer le taille du logo ou la couleur du fond.</p>
-<pre><code>        header {
-            display: flex;
-            align-items: center;
-            background-color: #b6f5faa5;
-        }
-        header img {
-            width: 180px;
-        } 
-</code></pre>
+<p>header {<br>
+display: flex;<br>
+align-items: center;<br>
+background-color: #b6f5faa5;<br>
+}<br>
+header img {<br>
+width: 180px;<br>
+}</p>
 <p>On va égalment le CSS pour disposer les futurs boutons cliquable de la manière dont on souhaite :</p>
-<pre><code>        nav.nav {
-            font-weight: bold;
-            width: 300px;
-            display: flex;
-            list-style: none ;
-            justify-content: space-between;
-            margin-left: 60px;
-
-        }
-        nav.nav li a {
-            color: white;
-            text-decoration: none ; 
-</code></pre>
+<p>nav.nav {<br>
+font-weight: bold;<br>
+width: 300px;<br>
+display: flex;<br>
+list-style: none ;<br>
+justify-content: space-between;<br>
+margin-left: 60px;</p>
+<p>}<br>
+nav.nav li a {<br>
+color: white;<br>
+text-decoration: none ;</p>
 <p>A la fin, en compilant toutes nos lignes de comandes, on obtient le résultat suivant :</p>
 <p><img src="Image1.png" alt="Optional Text"></p>
 <h4>La landing page</h4>
 <p>La landing page est la première chose qu'une personne verra en arrivant sur le site, il faut y retrouver le titre ou le slogan que l'on souhate y placer.</p>
-<pre><code>        &lt;div class=&quot;landin-page&quot;&gt;
-                  &lt;h1 class=&quot;big-title&quot;&gt;Bienvenue sur le site d'Ossama &lt;/h1&gt;
-              &lt;/div&gt;
-</code></pre>
+<p><div class="landin-page"><br>
+<h1 class="big-title">Bienvenue sur le site d'Ossama </h1><br>
+</div></p>
 <p>Comme précedemment, on va utiliser le CSS pour mettre en place ce que l'on souhaite. On va chosir notre image de fond, sa taille, le type d'affichage, la taille du titre...</p>
-<pre><code>              section.top-page { 
-                  background: url(../Photo_ecole.jpeg);
-                  background-size: cover;
-                  height: 80vh;
-              }
-
-              /* Titre principal */
-              .big-title {
-                  color: white;
-                  font-size: 40px;
-                  padding: 20px 50px;
-              }
-</code></pre>
+<p>section.top-page {<br>
+background: url(../Photo_ecole.jpeg);<br>
+background-size: cover;<br>
+height: 80vh;<br>
+}</p>
+<p>/* Titre principal */<br>
+.big-title {<br>
+color: white;<br>
+font-size: 40px;<br>
+padding: 20px 50px;<br>
+}</p>
 <p>En utilisant les paramètres précedents, on obtient :</p>
 <p><img src="Image2.png" alt="Optional Text"></p>
 <h4>Structuration de la partie POK et MON</h4>
 <p>On va passer à la partie la plus importante, les différents parties ou j'ai décidé d'y presenter les MON et POK que j'ai choisi.</p>
-<pre><code>&lt;section class=&quot;MON&quot; id=&quot;MON&quot;&gt;
-    &lt;h2 class=&quot;section-title&quot;&gt;
-         MON
-    &lt;/h2&gt;
-    &lt;h3 class=&quot;sous-titre&quot;&gt;
-        Temps 1 
-    &lt;/h3&gt;
-    &lt;div class=&quot;mons&quot;&gt;
-        &lt;a class=&quot;mon-box mon1&quot;&gt;
-            &lt;div class=&quot;mon-details&quot;&gt;
-                &lt;p class=&quot;mon-name&quot;&gt;
-                    Google Apps Script
-                &lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-        &lt;a class=&quot;mon-box mon2&quot;&gt;
-            &lt;div class=&quot;mon-details&quot;&gt;
-                &lt;p class=&quot;mon-name&quot;&gt;
-                    MOOC Design Thinking
-                &lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-</code></pre>
+<p><section class="MON" id="MON"><br>
+<h2 class="section-title"><br>
+MON<br>
+</h2><br>
+<h3 class="sous-titre"><br>
+Temps 1<br>
+</h3><br>
+<div class="mons"><br>
+<a class="mon-box mon1"><br>
+<div class="mon-details"><br>
+<p class="mon-name"><br>
+Google Apps Script<br>
+</p><br>
+</div><br>
+</a><br>
+<a class="mon-box mon2"><br>
+<div class="mon-details"><br>
+<p class="mon-name"><br>
+MOOC Design Thinking<br>
+</p><br>
+</div><br>
+</a><br>
+</div></p>
 <p>On va maintenant régler la disposition des différents éléments créés grâce au CSS.<br>
 Modification de la taille du titre, de sa disposition et de la bande qui va contenir le titre :</p>
-<pre><code>    .section-title {
-        font-size: 50px;
-        position: relative;
-    }
-
-    .section-title::before {
-        content: &quot;&quot;;
-        position: absolute;
-        background-color: #d4eef4;
-        width: 50px ;
-        height: 7px;
-        bottom: 0;
-    }
-</code></pre>
+<p>.section-title {<br>
+font-size: 50px;<br>
+position: relative;<br>
+}</p>
+<p>.section-title::before {<br>
+content: &quot;&quot;;<br>
+position: absolute;<br>
+background-color: #d4eef4;<br>
+width: 50px ;<br>
+height: 7px;<br>
+bottom: 0;<br>
+}</p>
 <ul>
 <li>
 <p>Choix de la taille des cases pour la dsiposition et du type d'affichage du fond :</p>
-<pre><code>  .mons {
-      min-height: 500px ;
-      display: flex;
-      flex-wrap: wrap ;
-  }
-
-  .mon-box{
-      position: relative;
-      background-size: cover ;
-      background-position: center;
-      min-width: 350px ;
-      height: 500px ;
-      flex: 1 ; 
-  }
-</code></pre>
+<p>.mons {<br>
+min-height: 500px ;<br>
+display: flex;<br>
+flex-wrap: wrap ;<br>
+}</p>
+<p>.mon-box{<br>
+position: relative;<br>
+background-size: cover ;<br>
+background-position: center;<br>
+min-width: 350px ;<br>
+height: 500px ;<br>
+flex: 1 ;<br>
+}</p>
 </li>
 <li>
 <p>Choix des images des MON :</p>
-<pre><code>  .mon1 {
-      background-image:url( ../App-script.png)
-  }
-
-  .mon2 {
-      background-image:url( ../Design.webp) 
-  }
-</code></pre>
+<p>.mon1 {<br>
+background-image:url( ../App-script.png)<br>
+}</p>
+<p>.mon2 {<br>
+background-image:url( ../Design.webp)<br>
+}</p>
 </li>
 </ul>
 <p>Le résulat obtenu :</p>
 <p><img src="Image3.png" alt="Optional Text"></p>
 <h4>Bas de page</h4>
 <p>Comme tous les sites, il faut créer un bas de page où l'on va mettre les conditions générales d'utilisation et les droits de diffusion. Sur le code je n'ai pas mis de lien pour les conditions mais il suffit d'en insérer un entre les guillemets.</p>
-<pre><code>      &lt;footer&gt;
-              &lt;p class=&quot;copyright&quot;&gt;&amp;copy; 2022 - Mon site chez moi &lt;/p&gt;
-              &lt;a href=&quot;&quot; class=&quot;cgv&quot;&gt;Conditions générales du site &lt;/a&gt;
-          &lt;/footer&gt;
-</code></pre>
+<p><footer><br>
+<p class="copyright">© 2022 - Mon site chez moi </p><br>
+<a href="" class="cgv">Conditions générales du site </a><br>
+</footer></p>
 <p>On va également, chosir la manière de dispoistion et d'affichage avec le CSS.</p>
-<pre><code>         footer {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              margin: 20px 100px;
-          }
-
-          footer a.cgv{
-              text-decoration: none;
-              color: black ;
-          }
-</code></pre>
+<p>footer {<br>
+display: flex;<br>
+justify-content: space-between;<br>
+align-items: center;<br>
+margin: 20px 100px;<br>
+}</p>
+<p>footer a.cgv{<br>
+text-decoration: none;<br>
+color: black ;<br>
+}</p>
 <p>Le résulat obtenu :</p>
 <p><img src="Image4.png" alt="Optional Text"></p>
 <h4>Résultat final</h4>

@@ -7,10 +7,10 @@
 
         <title>Création d&#39;un site web avec Eleventy</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -141,20 +135,18 @@
 <h2>2. Installation d'Eleventy</h2>
 <p>Eleventy est un générateur de sites statiques. Il permet de générer plus facilement les pages de sites comme celui-ci grâce à des templates, entre autres fonctionnalités.</p>
 <p>L'utilisation d'Eleventy nécessite node.js et npm. On l'installe avec la commande suivante :</p>
-<pre><code>npm install -g @11ty/eleventy
-</code></pre>
+<p>npm install -g @11ty/eleventy</p>
 <h2>3. Fonctionnalités</h2>
 <h3>Templates</h3>
 <p>Eleventy fonctionne avec des &quot;templating engines&quot; qui permettent de modifier certaines données du site à un seul endroit même si elles sont utilisées à plusieurs endroits (par exemple le titre d'une page).</p>
 <p>Une des syntaxe qui existe avec Eleventy est la syntaxe liquid, elle est utilisée dans les fichiers HTML et Markdown. On place les données (titre de la page, noms de fichiers, etc.) en en-tête du fichier sous cette forme :</p>
-<pre><code>---
-title: Giffleball
-images:
-  - ???.jpg
-  - ….jpg
-  - parrot.gif
----
-</code></pre>
+<p>---<br>
+title: Giffleball<br>
+images:<br>
+- ???.jpg<br>
+- ….jpg<br>
+- parrot.gif<br>
+---</p>
 <p>Ces données peuvent ensuite être utilisée au sein du fichier (ici en HTML) de cette manière :</p>
 <p><img src="utilisation_titre.png" alt="Utilisation du titre"></p>
 <p>Ou encore comme ceci pour la liste d'images :</p>
@@ -164,13 +156,12 @@ images:
 <p>Remarque : attention quand on parle d'Eleventy sur un site qui fonctionne avec Eleventy, les textes entre doules accolades sont remplacés même si on les met entre `` ou dans un bloc de code (je n'ai pas trouvé d'autre moyen que de mettre des images).</p>
 <h3>Filtres</h3>
 <p>Les filtres peuvent servir à différentes choses, ils peuvent se créer de cette manière, dans un fichier <code>.eleventy.js</code> :</p>
-<pre><code>module.exports = (function(eleventyConfig) {
-    eleventyConfig.addFilter(&quot;nom_du_filtre&quot;, function(argument) {
-        /* code */
-        return &quot;valeur retournée&quot;;
-    });
-});
-</code></pre>
+<p>module.exports = (function(eleventyConfig) {<br>
+eleventyConfig.addFilter(&quot;nom_du_filtre&quot;, function(argument) {<br>
+/* code */<br>
+return &quot;valeur retournée&quot;;<br>
+});<br>
+});</p>
 <p>Ils s'utilisent ensuite dans un fichier HTML comme ceci :</p>
 <p><img src="utilisation_filtre.png" alt="Utilisation d'un filtre"></p>
 <h3>Layouts</h3>
@@ -180,20 +171,17 @@ images:
 <p>Et le contenu de la page par :</p>
 <p><img src="content.png" alt="Content"></p>
 <p>Ces informations seront ensuite renseignées dans un fichier Markdown situé dans <code>/src</code> : <code>/src/index.md</code>.</p>
-<pre><code>---
-layout: nom_du_layout.njk
-title: Titre de la page
----
-
-Contenu de la page
-</code></pre>
+<p>---<br>
+layout: nom_du_layout.njk<br>
+title: Titre de la page<br>
+---</p>
+<p>Contenu de la page</p>
 <p>Ce fichier correspond à une page de notre site qui utilise le layout nom_du_layout.njk. Lors de la génération du site, les informations comme le titre ou le contenu seront placés dans le code HTML du fichier Nunjucks pour créer un fichier HTML classique. La force des layouts est bien entendu qu'ils peuvent être utilisés pour de nombreuses pages, telles que des posts de blog, qui se présenteront sous la même forme et pourront être créées très simplement dans un fichier Markdown.</p>
 <p>On peut également appliquer un layout à toutes les pages d'un dossier en leur appliquant un tag avec ce type de fichier JSON :</p>
-<pre><code>{
-&quot;layout&quot;: &quot;base.njk&quot;,
-&quot;tags&quot;: &quot;articles&quot;
-}
-</code></pre>
+<p>{<br>
+&quot;layout&quot;: &quot;base.njk&quot;,<br>
+&quot;tags&quot;: &quot;articles&quot;<br>
+}</p>
 <h3>Paginations</h3>
 <p>Les paginations servent à créer plusieurs page en itérant sur des données (qui peuvent être de plusieurs types).</p>
 <p>On peut par exemple créer plusieurs pages du même format en itérant sur un fichier JSON :</p>
@@ -212,30 +200,26 @@ Contenu de la page
 <p>On remarque que l'on peut choisir le lien auquel on trouvera les pages générées.</p>
 <h2>4. Création d'un site</h2>
 <p>On peut commencer par saisir ces commandes dans le dossier du projet :</p>
-<pre><code>npm init -y
-npm i --save-dev @11ty/eleventy
-</code></pre>
+<p>npm init -y<br>
+npm i --save-dev @11ty/eleventy</p>
 <p>Puis placer les lignes suivantes dans le <code>&quot;scripts&quot;</code> du <code>package.json</code> :</p>
-<pre><code>&quot;scripts&quot;: {
-    &quot;start&quot;: &quot;eleventy --serve&quot;,
-    &quot;build&quot;: &quot;eleventy&quot;
-}
-</code></pre>
+<p>&quot;scripts&quot;: {<br>
+&quot;start&quot;: &quot;eleventy --serve&quot;,<br>
+&quot;build&quot;: &quot;eleventy&quot;<br>
+}</p>
 <p>On crée le .eleventy.js avec le code suivant :</p>
-<pre><code>module.exports = function(eleventyConfig) {
-    return {
-        dir: {
-            input: &quot;src&quot;,
-            output: &quot;public&quot;
-        }
-    };
-};
-</code></pre>
+<p>module.exports = function(eleventyConfig) {<br>
+return {<br>
+dir: {<br>
+input: &quot;src&quot;,<br>
+output: &quot;public&quot;<br>
+}<br>
+};<br>
+};</p>
 <p>On crée le <code>src/_includes</code> qui va contenir les fichiers Nunjucks de templates.</p>
 <p>On crée notre <code>index.md</code>, puis un fichier CSS qu'on lie au fichier Nunjucks (comme à un fichier HTML classique).</p>
 <p>On ajoute également cette ligne au <code>.eleventy.js</code> :</p>
-<pre><code>eleventyConfig.addPassthroughCopy(&quot;./src/style.css&quot;);
-</code></pre>
+<p>eleventyConfig.addPassthroughCopy(&quot;./src/style.css&quot;);</p>
 <p>Le site peut être lancé localement avec la commande <code>npm start</code>.</p>
 <p>Je me suis aidé de <a href="https://www.youtube.com/watch?v=BKdQEXqfFA0">cette courte vidéo</a> pour créer un <a href="https://github.com/nathan-gissler/cours-eleventy">petit site</a> (sur GitHub) avec Eleventy. Cela a bien fonctionné, cependant j'ai remarqué que le style de mon fichier CSS ne s'appliquait pas à mes articles (équivalent des posts de la vidéos) alors que le layout s'applique sans problème, et le fichier CSS est lié à ce layout (le fichier <code>base.njk</code>). Ce problème semble être aussi présent dans l'exemple de la vidéo.</p>
 <h2>5. Liens</h2>

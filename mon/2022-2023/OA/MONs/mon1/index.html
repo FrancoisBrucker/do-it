@@ -7,10 +7,10 @@
 
         <title>MON 1: Google apps script</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -162,10 +156,9 @@ Les triggers permettent d'exécuter une fonction automatiquement à la suite d'u
 <ul>
 <li>
 <p>onOpen() :</p>
-<pre><code>  function onOpen(){
-    SpreadsheetApp.getActive().getRange('A1').setValue(new Date());
-  }
-</code></pre>
+<p>function onOpen(){<br>
+SpreadsheetApp.getActive().getRange('A1').setValue(new Date());<br>
+}</p>
 </li>
 </ul>
 <p>Ce programme va permettre d'afficher la date et l'heure sur la Cellule A1 à chaque fois que le fichier est ouvert comme le montre l'image ci-dessous :</p>
@@ -173,10 +166,9 @@ Les triggers permettent d'exécuter une fonction automatiquement à la suite d'u
 <ul>
 <li>
 <p>onSelectionChange() :</p>
-<pre><code>    function onSelectionChange(e){
-      console.log(e.range.getA1Notation());
-    }
-</code></pre>
+<p>function onSelectionChange(e){<br>
+console.log(e.range.getA1Notation());<br>
+}</p>
 </li>
 </ul>
 <p>Ce programme va s’exécuter à chaque fois que l'on va changer de cellule et dans la liste d'exécution afficher toutes les cellules par lesquelles nous sommes passés.</p>
@@ -184,31 +176,24 @@ Les triggers permettent d'exécuter une fonction automatiquement à la suite d'u
 <li>onEdit() :</li>
 </ul>
 <p>Certainement la fonction la plus intéressante, pour cet exemple, un programme plus poussé qui permet la verification de la validité de l'e-mail saisi.</p>
-<pre><code>      function onEdit(data){
-      
-        if(data.range.getSheet().getName() =='Feuille 1' &amp;&amp;  data.range.getA1Notation() == 'B3'){
-      
-          let isValid = emailValidation(data.range.getValue());
-      
-            if(isValid){
-              data.range.setBackground('white');
-            }else{
-              data.range.setBackground('red');
-            }
-        }
-      }
-      
-      function emailValidation(email){
-      
-        let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      
-        if(email.match(mailformat)){
-        return true;
-        }else{
-          return false;
-        }
-      }
-</code></pre>
+<p>function onEdit(data){</p>
+<p>if(data.range.getSheet().getName() =='Feuille 1' &amp;&amp;  data.range.getA1Notation() == 'B3'){</p>
+<p>let isValid = emailValidation(data.range.getValue());</p>
+<p>if(isValid){<br>
+data.range.setBackground('white');<br>
+}else{<br>
+data.range.setBackground('red');<br>
+}<br>
+}<br>
+}</p>
+<p>function emailValidation(email){</p>
+<p>let mailformat = /^\w+([.-]?\w+)<em>@\w+([.-]?\w+)</em>(.\w{2,3})+$/;</p>
+<p>if(email.match(mailformat)){<br>
+return true;<br>
+}else{<br>
+return false;<br>
+}<br>
+}</p>
 <p>Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la syntaxe n'est pas bonne, la case se colore en rouge.<br>
 Lorsque l'e-mail est bien noté :</p>
 <p><img src="Image1.png" alt="Optional Text"></p>
@@ -239,11 +224,9 @@ Lorsque l'e-mail est bien noté :</p>
 <p>Notre déclencheur temporel est prêt !</p>
 <h5>Exemple d'application</h5>
 <p>On va créer une fonction qui va nous envoyer un mail tout les matins pour me rappeler d'aller signer la feuille de présence :</p>
-<pre><code>    function Rappelsignature() {
-      
-      MailApp.sendEmail(&quot;ossama84130@gmail.com&quot;,&quot;Rappel émargement&quot;,&quot;Aller à l'acceuil et signer le feuille d'émargement&quot;);
-    }
-</code></pre>
+<p>function Rappelsignature() {</p>
+<p>MailApp.sendEmail(&quot;<a href="mailto:ossama84130@gmail.com">ossama84130@gmail.com</a>&quot;,&quot;Rappel émargement&quot;,&quot;Aller à l'acceuil et signer le feuille d'émargement&quot;);<br>
+}</p>
 <p>Après avoir créer la fonction, on va créer le déclencheur temporel et le paramétrer :</p>
 <p><img src="Image6.png" alt="Optional Text"></p>
 <p>Tout est prêt, je vais donc recevoir tous les jours un mail de ce type pour ne pas oublier de signer la feuille à l’accueil :</p>

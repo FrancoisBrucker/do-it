@@ -7,10 +7,10 @@
 
         <title>Serveur Distant</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -143,21 +137,20 @@ Pour toute la partie CSS je me suis référé à mon <a href="../../../../mon/TB
 <p>Puis j'ai initialiser le projet et installé le package express.</p>
 <p>J'ai ensuite créé le fichier <em>server.js</em> qui contiendra les routes et un dossier <em>back</em> pour les calculs.</p>
 <p>J'arrive donc à cette architecture :</p>
-<pre><code>__ back
-|__ calcul.js
-__ node_module
-__ static
-|__ Images
-|__ index.html
-|__ index.js
-|__ yams.css
-|__ yams.css
-|__ yams.html
-|__ yams.js
-__ package-lock.json
-__ package.json
-__ server.js
-</code></pre>
+<p>__ back<br>
+|__ calcul.js<br>
+__ node_module<br>
+__ static<br>
+|__ Images<br>
+|__ index.html<br>
+|__ index.js<br>
+|__ yams.css<br>
+|__ yams.css<br>
+|__ yams.html<br>
+|__ yams.js<br>
+__ package-lock.json<br>
+__ package.json<br>
+__ server.js</p>
 <p>Puis j'ai mis en place ma base de données. Pour cela, j'ai utilisé SQlite et sequelize.</p>
 <p>Tout d'abord, je fais le lien avec la base de données SQlite:</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  <span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span><span class="token punctuation">{</span>

@@ -7,10 +7,10 @@
 
         <title>Artblog Déploiement</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -165,15 +159,14 @@ Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Art
 <h1>Premier sprint:</h1>
 <h2>Premiers pas</h2>
 <p>Le serveur est organisée de la même manière pour chaque compte. Mon compte est curcuma donc je prend cela pour exemple et je me concentre sur la partie node puisque le projet que je veut mettre en place est basé sur node.js :</p>
-<pre><code>_ Home
-|_Curcuma
-|_Django
-|_Flask
-|_java
-|_node
-  |_example.js
-|_ readme.txt
-</code></pre>
+<p>_ Home<br>
+|_Curcuma<br>
+|_Django<br>
+|_Flask<br>
+|_java<br>
+|_node<br>
+|<em>example.js<br>
+|</em> readme.txt</p>
 <p>Le <strong>readme</strong> contient les addresses à questionner selon le port que l'on veut atteindre.<br>
 Dans notre cas, on vois dans le fichier <code>example.js</code> que l'on utilise le port 10438 et que pour communiquer à travers ce port, on doit envoyer nos requêtes à <code>node.curcuma.ovh1.ec-m.fr</code>.</p>
 <p>Avec la commande <code>node example.js</code> on lance le programme et on met donc en place notre serveur. Sur un navigateur, <a href="http://node.curcuma.ovh1.ec-m.fr">node.curcuma.ovh1.ec-m.fr</a> nous renvoie <code>Hello World</code>.</p>
@@ -188,41 +181,33 @@ Dans notre cas, on vois dans le fichier <code>example.js</code> que l'on utilise
 </div></div>
 <p>Grâce à github, on va cloner le projet dans le dossier node.</p>
 <p>Sur ovh1,on vérifie qu'il y a git :</p>
-<pre><code>git --version
-</code></pre>
+<p>git --version</p>
 <p>On clone ensuite notre projet dans le dossier node. Puisque le projet est publique, il n'y a rien de spéciale à faire, sous les conseils de Joe, on utilise directement le lien https. Puisque l'on à jamais utilisé git avec des commande et que nous somme par conséquent un peu nul, on lis la documentation avec <code>git --help</code> et on trouve ce qui nous intéresse <code>git clone</code> et <code>git help clone</code> pour toujours plus de documentation.</p>
 <p>On clone :</p>
-<pre><code>git clone https://github.com/TuncayBilgi/artblog.git
-</code></pre>
+<p>git clone <a href="https://github.com/TuncayBilgi/artblog.git">https://github.com/TuncayBilgi/artblog.git</a></p>
 <p>Cela créer un dossier Artblog avec tous les fichiers nécessaires dedans, sauf certains que je n'ai pas mis dans le git comme mes fichiers d'environnement qui possèdent les clés d'API.</p>
 <p>Ensuite, on exécute les commandes nécessaires à installer le reste des fichiers :</p>
 <p>npm install</p>
 <p>Je copie-colle mon fichier d'environment :</p>
-<pre><code>scp ./.env curcuma@ovh1.ec-m.fr/node
-</code></pre>
+<p>scp ./.env <a href="mailto:curcuma@ovh1.ec-m.fr">curcuma@ovh1.ec-m.fr</a>/node</p>
 <h3>Test de la mise en production sur mon ordinateur :</h3>
 <p>Avec Next.js, certaines commandes servent à la mise en production :</p>
-<pre><code>npm run dev // Lance le projet en mode développement en local
-npm run build // build le projet
-npm run start -p PORT //lance le serveur de production sur le port indiqué
-</code></pre>
+<p>npm run dev // Lance le projet en mode développement en local<br>
+npm run build // build le projet<br>
+npm run start -p PORT //lance le serveur de production sur le port indiqué</p>
 <p>On lance le build, après un certain temps il semble que tout marche, on peut alors essayer de lancer l'application sur un port différent que le port par défaut (3000) car on aura besoin de le faire sur ovh1.</p>
 <h3>Changement de port :</h3>
 <p>Le serveur ovh1 nous octroie un port bien précis pour y mettre notre application. On ne peut donc pas lancer le programme sur n'importe quel port et sûrement pas le port par défaut. Pour le changer, cela dépend de la technologie utilisée. Avec un serveur node tout simple, il suffit de modifier le port dans le fichier js qui lance le processus. Pour nous, d'après la documentation, nous devon modifier la commande <code>npm run start</code>. Cela ce fait dans le fichier package.json où l'on rentre :</p>
-<pre><code>&quot;start&quot;: &quot;next start -p 8080&quot;
-</code></pre>
+<p>&quot;start&quot;: &quot;next start -p 8080&quot;</p>
 <p>Ce qui devrait lancer l'application sur le port 8080.</p>
 <p>Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec <code>npm run start</code> et en lançant cette commande dans le Powershell : <code>Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess</code>, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.</p>
 <p>On vérifie que le port 8080 est libre puis on lance l'application sur ce port.</p>
-<pre><code>npm run start
-Get-NetTCPConnection | where Localport -eq 8080 | select Localport,OwningProcess
-</code></pre>
+<p>npm run start<br>
+Get-NetTCPConnection | where Localport -eq 8080 | select Localport,OwningProcess</p>
 <p>La dernière commande renvoie :</p>
-<pre><code>Localport OwningProcess
-</code></pre>
+<p>Localport OwningProcess</p>
 <hr>
-<pre><code> 8080         17516
-</code></pre>
+<p>8080         17516</p>
 <p>C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.</p>
 <h3>Faire du git proprement:</h3>
 <p>Comme précisé précédemment, on a copié l’entièreté du repo dans le serveur de production. On oublie et on refait.<br>
@@ -234,28 +219,23 @@ On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne m
 <div class="pl-8 mr-8">
 <p>Si vous aviez des fichiers importants, tout va sauter, vérifiez 2 fois avant de lancer des commandes qui commencent par rm -r</p>
 </div></div>
-<pre><code>// Dans ovh1 [...]/node
-rm -r artblog/
-</code></pre>
+<p>// Dans ovh1 [...]/node<br>
+rm -r artblog/</p>
 <p>Ensuite, on pull proprement le projet :</p>
-<pre><code>git init
-git remote add origin https://github.com/TuncayBilgi/artblog.git
-git pull origin main
-</code></pre>
+<p>git init<br>
+git remote add origin <a href="https://github.com/TuncayBilgi/artblog.git">https://github.com/TuncayBilgi/artblog.git</a><br>
+git pull origin main</p>
 <p>Ici, seul la branche main est clonée sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.<br>
 Pou mettre le repo à jour sur le serveur il suffit de :</p>
-<pre><code>git fetch origin main
-git reset --hard origin/main
-git clean -fdx // attention cela surprime tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle
-</code></pre>
+<p>git fetch origin main<br>
+git reset --hard origin/main<br>
+git clean -fdx // attention cela surprime tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle</p>
 <p>Ou plus simplement :</p>
-<pre><code>git pull origin master
-</code></pre>
+<p>git pull origin master</p>
 <h3>Letsgo on test enfin :</h3>
 <p>Tous les préparatifs sont faits, il ne reste qu'à build l'application sur le serveur, puis la lancer :</p>
-<pre><code>npm run build
-npm run start
-</code></pre>
+<p>npm run build<br>
+npm run start</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -268,10 +248,9 @@ npm run start
 <h3>Lancer l'application de façon permanente :</h3>
 <p>En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas éteindre notre ordinateur sans que ça coupe l'application.</p>
 <p>Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. Sous les conseils de M.Brucker, on utilise simplement la commande screen qui permet de lancer des terminaux et des processus en tâche de fond.</p>
-<pre><code>screen -S artblog // Nous emmène dans un nouveau terminale.
-npm run start
-// on tape Ctrl-A + D pour quitter le terminale
-</code></pre>
+<p>screen -S artblog // Nous emmène dans un nouveau terminale.<br>
+npm run start<br>
+// on tape Ctrl-A + D pour quitter le terminale</p>
 <p>Et voila l'application tourne de façon permanente sur ovh1.</p>
 <h2>Bilan premier sprint :</h2>
 <p>J'ai réalisé le travail que j'avais prévu de faire car j'ai eu la chance de ne rencontrer aucun problème.<br>
@@ -283,25 +262,20 @@ J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'
 Dans cette partie, on utilise git en ligne de commande.</p>
 <h2>Git CLI :</h2>
 <p>On commence par mettre à jour notre projet :</p>
-<pre><code>git add . // on ajoute les changements au commit
-git commit // on commit les changements
-git push // on les envoies à l'origine
-git checkout main // on va sur la branche main
-git merge dev  // on y fusionne la banche dev
-</code></pre>
+<p>git add . // on ajoute les changements au commit<br>
+git commit // on commit les changements<br>
+git push // on les envoies à l'origine<br>
+git checkout main // on va sur la branche main<br>
+git merge dev  // on y fusionne la banche dev</p>
 <h2>Création du script :</h2>
 <p>La première version sera toute basique, on y inclut ces quelques commandes pour tester :</p>
-<pre><code>#!/bin/sh
-
-cd /home/curcuma/node/artblog
-
-git pull origin main
-npm install
-npm run build
-npm run start
-
-echo &quot;Prod successfully started&quot;
-</code></pre>
+<p>#!/bin/sh</p>
+<p>cd /home/curcuma/node/artblog</p>
+<p>git pull origin main<br>
+npm install<br>
+npm run build<br>
+npm run start</p>
+<p>echo &quot;Prod successfully started&quot;</p>
 <p>A ce stade, le script va chercher la dernière version du artblog sur github, installe les dépendances du projet, le build et lance le serveur sur mon port.</p>
 <p>Ce script a de nombreux problèmes :</p>
 <ul>
@@ -314,12 +288,10 @@ echo &quot;Prod successfully started&quot;
 </ul>
 <h2>Envoie du script :</h2>
 <p>On copy ce script sur le serveur avec scp :</p>
-<pre><code>scp /chemin/local/publish.sh utilisteur@serveur:/chemin/distant
-</code></pre>
+<p>scp /chemin/local/publish.sh utilisteur@serveur:/chemin/distant</p>
 <p>Cette commande doit être lancée à chaque modifications.</p>
 <h2>On essaie maintenant d'executer le script via ssh :</h2>
-<pre><code>ssh nom_d_utilisateur@nom_du_serveur &quot;bash /chemin/distant/publish.sh&quot;
-</code></pre>
+<p>ssh nom_d_utilisateur@nom_du_serveur &quot;bash /chemin/distant/publish.sh&quot;</p>
 <p>On a un echo : prod succelfully started, ça s'annonce bien. Quelques erreurs de script plus tard, j'ai une version qui fait ce que je demande.<br>
 On essaie maintenant d'améliorer le système point par point.</p>
 <h2>Creation d'un script pour lancer le script :</h2>
@@ -333,13 +305,11 @@ On essaie maintenant d'améliorer le système point par point.</p>
 <p>Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.<br>
 Je ne le fais pas car je préfère voir si il y a des erreurs, mais il ressemblerait tout simplement à cela :</p>
 <p>Prepare_prod :</p>
-<pre><code>scp publish.sh [...]
-ssh [...] /publish.sh
-</code></pre>
+<p>scp <a href="http://publish.sh">publish.sh</a> [...]<br>
+ssh [...] /publish.sh</p>
 <h2>Détachement du server dans un terminal en daemon :</h2>
 <p>on modifie le script :</p>
-<pre><code>screen -S artblog -dmS npm run start
-</code></pre>
+<p>screen -S artblog -dmS npm run start</p>
 <p>Cette commande devrait lancer le serveur dans un processus deamon nommé artblog, qui sera toujours en route quand je rompt la liaison ssh.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -351,16 +321,13 @@ ssh [...] /publish.sh
 <h3>Debug mode :</h3>
 <p>On essaie de trouver le problème, pour commencer, le serveur est bien disponible sur node.curcuma.ovh1, ce qui veut dire que le screen à bien fonctionné.</p>
 <p>On trouve le processus qui écoute sur mon port 10438 avec :</p>
-<pre><code> ps -ef | grep artblog | awk '{print $2}'
- // cette commande liste les processus, ne garde que ceux qui s’appellent artblog et print l'id du process. on reçoit 304108
-</code></pre>
+<p>ps -ef | grep artblog | awk '{print $2}'<br>
+// cette commande liste les processus, ne garde que ceux qui s’appellent artblog et print l'id du process. on reçoit 304108</p>
 <p>On kill le processus:</p>
-<pre><code>kill 34108
-</code></pre>
+<p>kill 34108</p>
 <p>Cela à marché.</p>
 <p>On l'inclut dans le script : d'abord on kill l'ancien process, ensuite on pourra en recréer un :</p>
-<pre><code>ps -ef | grep artblog |head -n -1 | awk '{print $2}' | xargs kill -15
-</code></pre>
+<p>ps -ef | grep artblog |head -n -1 | awk '{print $2}' | xargs kill -15</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />

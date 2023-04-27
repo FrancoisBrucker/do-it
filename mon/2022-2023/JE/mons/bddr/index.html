@@ -7,10 +7,10 @@
 
         <title>Bases de Données relationnelles, MySQL, SQLAlchemy</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -132,11 +126,10 @@
 <!-- fin résumé -->
 <h2>SQL</h2>
 <p>Le langage SQL sert à manipuler, récupérer des informations dans, créer et supprimer les bases de données relationnelle. Savoir utiliser ce langage est un prérequis. Les cours disponibles sont pour la plupart liés à la récupération des données dans les tables. Une requête s'écrit comme ceci</p>
-<pre><code>SELECT column_name FROM table
-WHERE condition
-GROUP BY column_name
-HAVING function(column_name)
-</code></pre>
+<p>SELECT column_name FROM table<br>
+WHERE condition<br>
+GROUP BY column_name<br>
+HAVING function(column_name)</p>
 <p>Avec généralement moins de ces mots clés dans les instructions. <strong>SELECT</strong> est le mot clé principal, nécessaire dans toutes les requêtes. <strong>WHERE</strong> permet de mettre des conditions pour les données que la requête demande. <strong>GROUP BY</strong> de la même façon permet d'afficher les données selon une catégorie spécifique.</p>
 <p>le site web <a href="sql.sh">sql.sh</a> permet de revoir le langage tandis que <a href="sqlzoo.net">sqlzoo</a> permet de travailler ceux-ci à l'aide d'exercices pratiques pour plusieurs types de requêtes, en particulier pour les jointures <strong>JOIN</strong> qui peuvent être un peu retors.</p>
 <h2>Création d'une base de données avec MySQL</h2>

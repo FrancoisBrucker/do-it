@@ -7,10 +7,10 @@
 
         <title>Introduction au C++</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -145,17 +139,15 @@
 <p>Comme le C, le C++ est un langage typé avec différents types classiques (bool, int, char, double, etc...) qui permettent une allocation précise de la mémoire en fonction du type de la fonction, tout comme en C++ et en Java, et à l'inverse de Python ou de Javascript.</p>
 <h3>Références</h3>
 <p>Le C++ introduit le concept de référence, qui comme son nom l'indique permet de référencer une variable déjà existante sans devoir lui attribuer une autre case mémoire. Les références sont utiles pour modifier directement les paramètres de fonction sans avoir à créer des variables locales pour effectuer nos calculs. Une référence se déclare comme ceci :</p>
-<pre><code>    int variable(0); 
-    int&amp; référence(variable);
-</code></pre>
+<p>int variable(0);<br>
+int&amp; référence(variable);</p>
 <h3>Pointeurs</h3>
 <p>Comme le C, le C++ continue à utiliser les pointeurs, c'est-à-dire des variables qui garde en mémoire les adresses mémoires vers d'autres variables. Ces pointeurs sont les outils de prédilection pour la gestion de la mémoire en C comme en C++. En effet à partir des pointeurs on peut accéder aux valeurs pointés et allouer la mémoire manuellement. Par contre, il est nécessaire de libérer la mémoire aussi, avant de supprimer le pointeur, sinon on perd de vue les variables considérés, et on risque de remplir la mémoire de la machine jusqu'au plantage. Voici le cycle de vie d'un pointeur.</p>
-<pre><code>    int *pointeur(0); //initialisation du pointeur
-    pointeur = new int; //allocation mémoire d'un int
-    *pointeur = 2; //affectation dans la précédente case mémoire
-    delete pointeur; //libération de la case mémoire
-    pointeur = 0; //pointeur ne pointe plus vers rien
-</code></pre>
+<p>int *pointeur(0); //initialisation du pointeur<br>
+pointeur = new int; //allocation mémoire d'un int<br>
+*pointeur = 2; //affectation dans la précédente case mémoire<br>
+delete pointeur; //libération de la case mémoire<br>
+pointeur = 0; //pointeur ne pointe plus vers rien</p>
 <h2>Conclusion</h2>
 <p>Le C++ est un langage plutôt difficile à mon avis, et nécessite une connaissance d'autres langages à priori avant de l’utiliser. Mais ce MON m'a permis une bonne mise à jour nécessaire pour le prochain MON.</p>
 

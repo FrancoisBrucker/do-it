@@ -7,10 +7,10 @@
 
         <title>Unix</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -127,28 +121,21 @@
 <p>Les commandes peuvent être testées même si l'on n'est pas sous unix, sur <a href="https://www.tutorialspoint.com/codingground.htm">ce site</a> (inscription gratuite). Cependant, je n'ai pas réussi à créer de compte (l'email ne s'envoyait pas). J'ai donc utilisé <a href="https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&amp;mem=192">ce site</a> à la place.</p>
 <h2>Connexion</h2>
 <p>Changer de mot de passe</p>
-<pre><code>passwd
-</code></pre>
+<p>passwd</p>
 <p>Savoir avec quel login on est connecté</p>
-<pre><code>whoami
-</code></pre>
+<p>whoami</p>
 <p>Savoir qui est connecté (plusieurs utilisateurs peuvent être connectés en même temps)</p>
-<pre><code>users
-</code></pre>
+<p>users</p>
 <p>ou</p>
-<pre><code>who
-</code></pre>
+<p>who</p>
 <p>ou</p>
-<pre><code>w
-</code></pre>
+<p>w</p>
 <p>Les deux derniers sont plus détaillés</p>
 <p>Déconnexion</p>
-<pre><code>logout
-</code></pre>
+<p>logout</p>
 <h2>Gestion des fichiers</h2>
 <p>Lister les fichiers et dossiers dans le répertoire courant</p>
-<pre><code>ls
-</code></pre>
+<p>ls</p>
 <p>Ajouter <code>-l</code> pour plus d'informations</p>
 <p>Informations par colonne :</p>
 <ul>
@@ -173,19 +160,16 @@
 <h3>Métacaractères</h3>
 <p>Des métacaractères peuvent être utilisés dans les commandes pour remplacer des caractères : <code>?</code> pour exactement un caractère ou <code>*</code> pour n'importe quel nombre de caractères (qui peut être 0).</p>
 <p>Exemples :</p>
-<pre><code>$ls ch?.doc
-</code></pre>
+<p>$ls ch?.doc</p>
 <p>Liste les fichiers dont le nom est de la forme <code>ch?.doc</code>, où <code>?</code> représente un seul caractère.</p>
-<pre><code>$ls ch*.doc
-</code></pre>
+<p>$ls ch*.doc</p>
 <p>Liste tous les fichiers dont le nom commence par <code>ch</code> et finit par <code>.doc</code></p>
 <h3>Fichiers cachés</h3>
 <p>Les fichiers cachés peuvent être listés avec l'option <code>-a</code>.</p>
 <p><code>ls -a</code> liste tous les fichiers cachés, dont le nom commence par <code>.</code>, ainsi que le fichier <code>.</code> qui représente le répertoire actuel et le fichier <code>..</code> qui représente le répertoire parent.</p>
 <h3>Création et modification de fichiers</h3>
 <p>Pour ouvrir un fichier ou le créer s'il n'existe pas :</p>
-<pre><code>vi nomdufichier
-</code></pre>
+<p>vi nomdufichier</p>
 <p>Une fois le fichier ouvert, on peut utiliser :</p>
 <ul>
 <li><code>l</code> pour se déplacer dans le fichier vers la droite</li>
@@ -198,12 +182,10 @@
 </ul>
 <h3>Autres opérations sur les fichiers</h3>
 <p>Afficher le contenu :</p>
-<pre><code>cat nomdufichier
-</code></pre>
+<p>cat nomdufichier</p>
 <p>On peut ajouter <code>-b</code> pour avoir les numéros de lignes.</p>
 <p>Compter les lignes/mots (il est possible de mettre plusieurs noms de fichier à la suite) :</p>
-<pre><code>wc nomdefichier
-</code></pre>
+<p>wc nomdefichier</p>
 <p>Valeurs renvoyées :</p>
 <ul>
 <li>nombre de lignes</li>
@@ -212,19 +194,15 @@
 <li>nom du fichier</li>
 </ul>
 <p>Copier un fichier :</p>
-<pre><code>cp nomdufichier nomdelacopie
-</code></pre>
+<p>cp nomdufichier nomdelacopie</p>
 <p>Renommer un fichier (le fichier est en fait remplacé par un nouveau avec le nom spécifié) :</p>
-<pre><code>mv anciennom nouveaunom
-</code></pre>
+<p>mv anciennom nouveaunom</p>
 <p>Supprimer un fichier :</p>
-<pre><code>rm nomdufichier
-</code></pre>
+<p>rm nomdufichier</p>
 <p>On peut ajouter <code>-i</code> pour qu'une confirmation soit demandée avant la suppression.</p>
 <h2>Répertoires</h2>
 <p>Se déplacer dans un autre répertoire :</p>
-<pre><code>cd répertoire
-</code></pre>
+<p>cd répertoire</p>
 <p>Le répertoire peut être désigné par :</p>
 <ul>
 <li>un chemin absolu commençant par <code>/</code></li>
@@ -234,23 +212,18 @@
 <li><code>-</code> pour le répertoire précédent</li>
 </ul>
 <p>Se situer dans l'arborescence :</p>
-<pre><code>pwd
-</code></pre>
+<p>pwd</p>
 <p>Lister les fichiers du répertoire :</p>
-<pre><code>ls
-</code></pre>
+<p>ls</p>
 <p>Auquel on peut ajouter un nom de répertoire si on ne veut pas le répertoire courant.</p>
 <p>Créer un répertoire :</p>
-<pre><code>mkdir nomdurépertoire
-</code></pre>
+<p>mkdir nomdurépertoire</p>
 <p>On peut aussi utiliser un chemin relatif ou absolu, et créer plusieurs répertoires d'un coup. Si le chemin utilise des répertoires inexistants il faut ajouter l'option <code>-p</code> pour ne pas avoir d'erreur et que ces répertoires soient créés.</p>
 <p>Supprimer un répertoire :</p>
-<pre><code>rmdir nomdurépertoire
-</code></pre>
+<p>rmdir nomdurépertoire</p>
 <p>Supprime un ou plusieurs répertoires, qui doivent être vides<br>
 renommer, comme pour les fichiers.</p>
-<pre><code>mv anciennom nouveaunom
-</code></pre>
+<p>mv anciennom nouveaunom</p>
 <h3>Répertoires spéciaux</h3>
 <p>Les fichiers <code>.</code> et <code>..</code> représentent respectivement le répertoire courant et le répertoire parent (on peut les voir avec <code>ls -la</code>), on peut donc remmonter au répertoire parent avec <code>cd ..</code>, par exemple.</p>
 <h2>Permissions</h2>
@@ -270,8 +243,7 @@ dans la représentation <code>rwxrwxrwx</code>, chaque groupe de trois caractèr
 <p>Une permission qui n'est pas accordée est représentée par <code>-</code><br>
 par exemple, <code>rwx--x---</code> signifie que le propriétaire a toutes les permissions sur le fichier, que les membres du groupe associé peuvent l'exécuter, et que les autres utilisateurs n'ont aucune permission.</p>
 <p>Modifier les permissions :</p>
-<pre><code>chmod
-</code></pre>
+<p>chmod</p>
 <p>On ajoute à la commande :</p>
 <ul>
 <li><code>u</code> (propriétaire), <code>g</code> (groupe) ou <code>o</code> (autres utilisateurs)</li>
@@ -293,24 +265,19 @@ on peut les permissions de plusieurs groupes d'utilisateurs en même temps</li>
 <li>7 pour <code>rwx</code></li>
 </ul>
 <p>Changer le propriétaire ou le groupe :</p>
-<pre><code>chown utilisateur fichier(s)
-
-chgrp groupe fichier(s)
-</code></pre>
+<p>chown utilisateur fichier(s)</p>
+<p>chgrp groupe fichier(s)</p>
 <p><code>utilisateur</code> et <code>groupe</code> peuvent être remplacés par le nom ou l'ID correspondant.</p>
 <p>Seul le propriétaire d'un fichier peut changer sa propriété (ou le super utilisateur <code>root</code> qui a toutes les permissions).</p>
 <h2>Environnement</h2>
 <p>Créer une variable d'environnement :</p>
-<pre><code>variable=&quot;contenu&quot;
-</code></pre>
+<p>variable=&quot;contenu&quot;</p>
 <p>Accéder au contenu d'une variable d'environnement :</p>
-<pre><code>echo $variable
-</code></pre>
+<p>echo $variable</p>
 <p>Au lancement, le shell lit deux fichiers (s'ils existent) afin d'initialiser l'environnement : <code>/etc/profile</code>, géré par l'administrateur de la machine, et <code>.profile</code>, situé dans le &quot;home directory&quot; de l'utilisateur et pouvant être modifié par lui. Le fichier <code>.profile</code> nous permet d'initialiser notre environnement comme on le souhaite pour chaque démarrage du shell<br>
 type de terminal.</p>
 <p>L'un des paramètres nécessaires au shell pour démarrer est le type de terminal, qui se trouve dans la variable d'environnement <code>TERM</code>. le shell peut ne pas reconnaître les commandes si ce paramètre est mal renseigné, on peut alors s'en sortir en définissant notre type de terminal de cette manière :</p>
-<pre><code>TERM=vt100
-</code></pre>
+<p>TERM=vt100</p>
 <p>Cette valeur est une sorte de dénominateur commun.</p>
 <h3>Répertoire(s) des commandes</h3>
 <p>Les répertoires contenant les commandes pouvant être utilisées par le terminal sont stockés dans la variable <code>PATH</code>, par exemple<br>
@@ -348,8 +315,7 @@ type de terminal.</p>
 <h2>&quot;Pipes&quot; et filtres</h2>
 <p>Une &quot;pipe&quot; consiste à encaîner plusieurs commande en une seule ligne. on sépare pour cela les commande avec <code>|</code> et la sortie d'une commande devient l'entrée de la suivante.</p>
 <p>La commande <code>grep</code> permet de rechercher des séquences de caractères (ou expressions régulières) dans les noms de fichiers et d'afficher les lignes correspondantes. Elle peut être combinée à <code>ls</code> pour ne pas avoir à spécifier les fichiers parmi lesquels chercher :</p>
-<pre><code>ls | grep &quot;séquence à rechercher&quot;
-</code></pre>
+<p>ls | grep &quot;séquence à rechercher&quot;</p>
 <p>Il existe plusieurs options supplémentaires à cette commande<br>
 la commande <code>sort</code> permet de trier par ordre alphabétique les lignes d'un fichier. Plusieurs options existent (pour trier numériquement, inverser l'ordre, ou encore ne pas prendre en compte la casse).</p>
 <h2>Processus</h2>

@@ -7,10 +7,10 @@
 
         <title>Jenkins</title>
 
-        <link href=/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
+        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
 
-        <link href=/do-it/assets/stylesheets/main.css rel="stylesheet">
+        <link href=/assets/stylesheets/main.css rel="stylesheet">
     </head>
     <body>
         <script>
@@ -31,25 +31,19 @@
         };
         </script>
         <script type="text/javascript" id="MathJax-script" 
-    src=/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/do-it/">Home</a>
+                <a class="mx-2" href="/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/do-it/ct">CT</a>
-                    <a class="" href="/do-it/pok">POK</a>
-                    <a class="" href="/do-it/mon">MON</a>
-                    <a class="" href="/do-it/projets">Projets</a>
-                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
-                    <a class="hidden sm:block" href="/do-it/about">
-                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
-
-                    </a>
-                    <a href="/do-it/search">
+                    <a class="" href="/cs">CS</a>
+                    <a class="" href="/pok">POK</a>
+                    <a class="" href="/mon">MON</a>
+                    <a class="" href="/projets">Projets</a>
+                    <a class="hidden sm:block" href="/promos">Promos</a>
+                    <a href="/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -290,37 +284,33 @@ En lisant la doc je vois que j'ai besoin de 2 services :</p>
 </ul>
 <p>J'écris un Docker-compose.yml qui invoque ces deux types de conteneur, avec des images que j'ai récupéré sur le site officiel <a href="https://hub.docker.com/">DockerHub</a><br>
 Aussi, je pull les images avant de lancer le compose :</p>
-<pre><code>docker pull jenkins/jenkins:alpine-lts
-docker pull node-16alpine
-</code></pre>
+<p>docker pull jenkins/jenkins:alpine-lts<br>
+docker pull node-16alpine</p>
 <p>J'expose les ports utilisés par les applications, et je crée un volume.<br>
 Voila la tête du Docker-compose.yml :</p>
-<pre><code>version: '3'
-services:
-  jenkins:
-    image: jenkins/jenkins:lts
-   ports:
-     - &quot;8080:8080&quot;
-     - &quot;50000:50000&quot;
-    volumes:
-      - jenkins_home:/var/jenkins_home
-    environment:
-      JAVA_OPTS: &quot;-Djenkins.install.runSetupWizard=false&quot;
-
-  nextjs:
-   build: .
-    command: npm run dev
-    volumes:
-     - .:/app
-     - /app/node_modules
-    ports:
-      - &quot;3000:3000&quot;
-    depends_on:
-     - jenkins
-
-volumes:
-  jenkins_home:
-</code></pre>
+<p>version: '3'<br>
+services:<br>
+jenkins:<br>
+image: jenkins/jenkins:lts<br>
+ports:<br>
+- &quot;8080:8080&quot;<br>
+- &quot;50000:50000&quot;<br>
+volumes:<br>
+- jenkins_home:/var/jenkins_home<br>
+environment:<br>
+JAVA_OPTS: &quot;-Djenkins.install.runSetupWizard=false&quot;</p>
+<p>nextjs:<br>
+build: .<br>
+command: npm run dev<br>
+volumes:<br>
+- .:/app<br>
+- /app/node_modules<br>
+ports:<br>
+- &quot;3000:3000&quot;<br>
+depends_on:<br>
+- jenkins</p>
+<p>volumes:<br>
+jenkins_home:</p>
 <p>Il faut alors ajouter un dockerfile qui définit le build pour next.js, cf le MON Docker.<br>
 On installe BlueOcean directement dans l'instance Jenkins.<br>
 La ligne sur l’environnement permet d'enlever le besoin d'avoir un mdp, cela implique bien-sûr des problèmes de sécurités.</p>
