@@ -5,7 +5,7 @@ title: "Les MON de Killian"
 authors:
   - Killian ROYANT
 
-tags: ['mon_node']
+tags: ['MON']
 ---
 
 <!-- début résumé -->

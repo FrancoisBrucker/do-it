@@ -5,7 +5,7 @@ title: "MON de Kasimir"
 authors:
   - Kasimir Romer
 
-tags: ['mon_node']
+tags: ['MON']
 ---
 <!-- Début Résumé -->
 Ici, c'est le MONde des projets de Kasimir

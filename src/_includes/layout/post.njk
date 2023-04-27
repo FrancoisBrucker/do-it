@@ -26,8 +26,8 @@ layout: layout/base.njk
                         <span data-pagefind-filter="Type">MON</span>
                     {% elseif tag == "pok" %}
                         <span data-pagefind-filter="Type">POK</span>
-                    {% elseif tag == 'ct' %}
-                        <span data-pagefind-filter="Type">CT</span>
+                    {% elseif tag == 'cs' %}
+                        <span data-pagefind-filter="Type">CS</span>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -45,7 +45,7 @@ layout: layout/base.njk
         </div>
     {% endif %}
 
-    {% if page.inputPath | getValueFromPath('/', 2) !== 'ct' %}
+    {% if page.inputPath | getValueFromPath('/', 2) == 'promo' %}
         {% set year = page.inputPath | getValueFromPath('/', 3) %}
         {% if year !== 'index.njk' and year !== 'index.md' %}
             <div class="absolute top-0 right-0">

@@ -5,7 +5,7 @@ title: "MON de Thomas"
 authors:
   - Thomas Pont
 
-tags: ['mon_node']
+tags: ['MON']
 ---
 
 <!-- début résumé -->

@@ -5,7 +5,7 @@ title: "MONs de Savinien"
 authors:
  - Savinien Laeuffer
 
-tags: ['mon_node']
+tags: ['MON']
 ---
 
 <!-- Début Résumé -->

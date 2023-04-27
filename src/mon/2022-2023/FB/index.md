@@ -5,7 +5,7 @@ title: "François Brucker"
 authors:
   - François Brucker
 
-tags: ['mon_node']
+tags: ['MON']
 ---
 
 <!-- début résumé -->
