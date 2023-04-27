@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Le POK de Timothée et Gabriel</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">Le POK de Timothée et Gabriel</h1>
+<h1 class="mb-1">Le POK de Timothée et Gabriel</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -98,7 +97,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -111,14 +110,14 @@ Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'o
 Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.</p>
 <p><a href="https://github.com/gabrielbarbe00/POK-de-Gabriel.git">lien du projet</a></p>
 <!-- Fin Résumé -->
-<img src="./Images/Accueil.png"/>
+<img src="Images/Accueil.png">
 <h3>Partie Gabriel</h3>
 <p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br><br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc.</p>
 <p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.<br>
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
 <p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc.</p>
-<img src="./Images/Page_Gaby.png"/>
+<img src="Images/Page_Gaby.png">
 <p>J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">             <span class="token keyword">function</span> <span class="token function-name function">choixCoups</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 var <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
@@ -143,8 +142,8 @@ Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot d
                 PFC<span class="token punctuation">(</span>J1,J2<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
 </code></pre>
-<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton &quot;annuler&quot; du prompt n'annule pas notre demande et affiche &quot;entrez un coup valide&quot;. De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. <hr><br>
-J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur &quot;jouer&quot; une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).</p>
+<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton &quot;annuler&quot; du prompt n'annule pas notre demande et affiche &quot;entrez un coup valide&quot;. De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. </p><hr><br>
+J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur &quot;jouer&quot; une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).<p></p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">            <span class="token keyword">function</span> <span class="token function-name function">choixCoups2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 var html <span class="token operator">=</span> document.querySelector<span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -197,8 +196,8 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
 </code></pre>
 <p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br><br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du &quot;prompt&quot;, j'avais aussi mon élèment &quot;panel&quot; qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le &quot;resetbutton&quot; n'aparaissait pas comme je le souhaitais. <br></p>
-<img src="./Images/Choix.png"/>
-<img src="./Images/Reset.png"/>
+<img src="Images/Choix.png">
+<img src="Images/Reset.png">
 Le reste du code est bien sur disponible via le lien en haut de page. 
 <h2> Partie Timothée</h2>
 <p>Pour ma part, j'ai choisi de créer une roulette qui permet de sélectionner aléatoirement entre 2 à 4 choix (c'est ensuite facile d'ajouter plus de choix cela demande juste un peu plus de temps).</p>
@@ -289,7 +288,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <span class="token punctuation">}</span>
 </code></pre>
 <p>J'arrive donc à cette page :<br>
-<img src="./Images/Index_sans_css.jpg"/></p>
+<img src="Images/Index_sans_css.jpg"></p>
 <p>Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.</p>
 <h4> Mise en page</h4>
 <p>Pour cela j'ai ajouté un <em>header</em> en accord avec celui que Gabriel a mis dans sa partie.</p>
@@ -298,7 +297,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <p>J'ai créé des classes afin d'appliquer un style à mes différents éléments.</p>
 <p>J'ai enfin utilisé la caractéristiques <em>placeholder</em> afin d'écrire les numéros des choix dans les input au lieu de les mettre au dessus.</p>
 <p>Je suis donc arrivé à ce résultat là:</p>
-<img src="./Images/index_avec_css.jpg"/>
+<img src="Images/index_avec_css.jpg">
 <h3 id="2"> Page pour chaque roulette</h3>
 <p>J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.</p>
 <p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.<br>
@@ -331,7 +330,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
 <p>Cette fonction se lance lorsque l'on clique sur le bouton start.</p>
 <p>Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.</p>
 <p>J'ai donc obtenu cette page :<br>
-<img src="./Images/roulette.jpg"/></p>
+<img src="Images/roulette.jpg"></p>
 
 
 </article>
@@ -342,7 +341,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

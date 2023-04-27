@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Hacking-Guide</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">Hacking-Guide</h1>
+<h1 class="mb-1">Hacking-Guide</h1>
 <div class="mb-4">
     
 
@@ -81,7 +80,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -100,7 +99,7 @@ Les techniques apprises ici sont utiles pour les deux types de CTF, mais au déb
 <h3>Prérequis</h3>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Pour tirer le maximum de ce cours, les connaissances préalables suivantes sont nécessaires :</p>
@@ -114,7 +113,7 @@ Tout le reste s'apprend ici ou dans la pratique, c'est-à-dire dans les CTF. Com
 <p>Ce document a été réalisé dans le cadre d'un POK dans le parcours <a href="../../../../about/index">&quot;Do-It&quot;</a> à l'EC Marseille. Le choix des thèmes est plus ou moins arbitraire, il ne prétend expressément pas à l'exhaustivité. Il doit s'agir d'un recueil de thèmes intéressants pour les participants et qu'ils peuvent mettre en pratique. Il n'y aura pas d'explication approfondie des sujets, mais seulement une brève introduction et quelques liens vers des informations complémentaires. Les participants devront se former de manière autonome et approfondir les sujets. Il s'agit d'une introduction aux technologies de base du hacking, de sorte que l'on puisse avoir un aperçu de tout ce qui est possible dans ce domaine.<br>
 Ce document est ouvert à l'extension, afin que les lecteurs puissent y trouver davantage d'informations à l'avenir.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8 mr-8">
 <p>À certains endroits du document, il y a des blocs comme celui-ci. Dans ceux-ci, je place de petites tâches qui doivent inciter le lecteur à travailler lui-même sur les sujets. Les tâches ne sont pas nécessaires à la compréhension du document, mais elles permettent d'approfondir les connaissances acquises. Les tâches ne sont pas évaluées, il n'y a pas non plus de solutions.</p>
 </div></div>
@@ -129,7 +128,7 @@ Kali Linux s'est entre-temps quasiment imposé comme standard.</p>
 <h3>&quot;Couteau de poche suisse&quot;: CyberChef</h3>
 <p>L'outil CyberChef (<a href="https://gchq.github.io/CyberChef/">https://gchq.github.io/CyberChef/</a>) est un véritable touche-à-tout. Les fonctions dont on a souvent besoin pour les CTF sont par exemple la conversion de/en base64, hex ou binaire, le décryptage, la détection des données intégrées, etc. L'avantage de CyberChef est qu'il maîtrise non seulement toutes ces fonctions, mais qu'il est également possible de les enchaîner, par exemple en décodant d'abord une chaîne de caractères en base64, en la dézippant et en affichant ensuite le fichier résultant. Il existe bien sûr d'autres outils pour ces tâches, mais à mon avis, CyberChef offre le meilleur choix, une interface épurée et est facile à utiliser.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Exercice</strong></p>
 </div><div class="pl-8 mr-8">
@@ -147,7 +146,7 @@ Kali Linux s'est entre-temps quasiment imposé comme standard.</p>
 <li>et beaucoup d'autres que vous pouvez trouver <a href="https://nmap.org/book/man-briefoptions.html">dans le manuel</a></li>
 </ul>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Exercice</strong></p>
 </div><div class="pl-8 mr-8">
@@ -227,7 +226,7 @@ a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png
 <h3>Wireshark</h3>
 <p>Wireshark est un logiciel de capture de paquets et d'analyse réseau. Il permet aux utilisateurs de capturer les paquets réseau en utilisant les protocoles de la couche 2 et 3 du modèle OSI, et de les analyser pour identifier les erreurs, les anomalies et les attaques. Wireshark est capable de capturer des paquets en utilisant différents protocoles de réseau tels que TCP, UDP, HTTP, FTP, SSH, etc. Il est également capable d'analyser des fichiers de capture de paquets (.pcap) pour identifier les anomalies et les attaques. Les fichiers pcap sont souvent utilisés dans les CTF (Capture the Flag) pour tester les compétences en sécurité des participants et pour analyser les captures de paquets réseau.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Exercice</strong></p>
 </div><div class="pl-8 mr-8">
@@ -245,7 +244,7 @@ a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png
 <p>Une fois que vous avez une session active avec Metasploit, vous pouvez utiliser différentes commandes pour naviguer dans les différentes options. La commande &quot;show&quot; permet d'afficher les différents modules disponibles, tandis que la commande &quot;use&quot; permet de sélectionner un module spécifique pour l'utiliser. Il est également possible de chercher des modules spécifiques en utilisant la commande &quot;search&quot;, en utilisant des mots-clés pertinents tels que le nom de la vulnérabilité ou le système d'exploitation cible. Une fois que vous avez sélectionné un module, vous pouvez utiliser la commande &quot;show options&quot; pour afficher les options disponibles et configurer les options nécessaires pour l'exploitation. Enfin, pour lancer l'exploitation, vous pouvez utiliser la commande &quot;exploit&quot;. Il est important de noter que l'utilisation de Metasploit peut violer les termes d'utilisation et les lois sur la sécurité informatique. Il est donc important de s'assurer d'avoir l'autorisation avant de lancer des attaques.</p>
 <p>L'ensemble des fonctionnalités est décrit dans la documentation : <a href="https://docs.metasploit.com/">https://docs.metasploit.com/</a></p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Exercice</strong></p>
 </div><div class="pl-8 mr-8">
@@ -271,7 +270,7 @@ Travaille sur cette pièce et essaie de résoudre les tâches qui s'y trouvent.<
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

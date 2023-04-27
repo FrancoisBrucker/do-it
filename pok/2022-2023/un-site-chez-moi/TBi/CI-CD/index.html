@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>CI/CD : Déploiement et Integration continues</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">CI/CD : Déploiement et Integration continues</h1>
+<h1 class="mb-1">CI/CD : Déploiement et Integration continues</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -124,7 +123,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -134,7 +133,7 @@
 <p>Dans ce POK, nous allons améliorer mon projet précédent : l'Artblog, en lui ajoutant de nouvelles pages et en créant un environnement d'intégration et de déploiement continue.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
 <p>Niveau avancé</p>
@@ -152,16 +151,16 @@
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 </svg>
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
 <div class="pl-8 font-bold inline-block">
 <p>Ce POK ce base sur plusieurs MON et POK qui ont précédés, voici la liste des projets dont j'ai eu besoin.</p>
 </div>
-<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
@@ -218,7 +217,7 @@ le fichier config.json ressemble alors à cela :</p>
 <p>Jest utilise des méthodes built-in pour tester pleins de choses différentes, allez voir la documentation sur internet pour savoir lesquelles utiliser.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Par défaut Jest utilise la syntaxe <code>const a = require('./module')</code> qui n'est pas compatible avec le reste du projet qui lui est en ES6 et donc utilise la syntaxe suivante <code>import {a} from module</code></p>
@@ -261,8 +260,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 C'est une requête graphQL il n'y à pas d’intérêt à la coller ici.</li>
 </ul>
 <p>Après ça, on code le front, allez voir le premier POK ou des MON Reacts pour des tutos détaillés sur comment faire. Voici les résultats :</p>
-<img src="./../images/artblog-cat1.png" alt="page de sculpture" style="height: 250px;width:600px; margin: 0 auto;" />
-<img src="./../images/artblog-cat2.png" alt="page de sculpture" style="height: 250px;width:500px; margin: 0 auto;" />
+<img src="../images/artblog-cat1.png" alt="page de sculpture" style="height: 250px;width:600px; margin: 0 auto;">
+<img src="../images/artblog-cat2.png" alt="page de sculpture" style="height: 250px;width:500px; margin: 0 auto;">
 <h3>Conclusion Premier sprint :</h3>
 <p>La partie facile de ce POK est terminée.<br>
 Tout c'est bien passé, on pourrait continuer en :</p>
@@ -319,7 +318,7 @@ Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a 
 <p>Je lui donne alors ma clé d'API et une clé ssh qui possède les accès au serveur ovh1, où je déploie le site (la mise en place de ce déploiement ce fait dans mon deuxième POK).</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Ces informations, qu'on appelle à juste titre des <strong>secrets</strong>, sont hautement confidentielles. Il ne faut surtout pas les mettre sur serveur qui peuvent être compromis, c'est à dire tous les serveurs qui ne vous appartiennent pas et qui ont accès à internet.<br>
@@ -330,21 +329,21 @@ Je recommande cependant de créer une clé ssh uniquement pour Jenkins et de ne 
 <p>Ne donnez pas non plus accès à ovh1 à votre repository github!</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Ces secrets sont accessible depuis le Jenkinsfile grâce aux méthodes withcredentials() et on peut communiquer en ssh avec le ssh-agent, je vous invite à lire la doc Jenkins, même si elle est parfois lunaire.</p>
 </div></div>
 <ul>
 <li>Résultats :<br>
-<img src="./../images/jenkins-cred.png" alt="credentials" /></li>
+<img src="../images/jenkins-cred.png" alt="credentials"></li>
 </ul>
 <h4>Le jenkinsfile :</h4>
 <p>Le <a href="https://github.com/TuncayBilgi/artblog/blob/main/Jenkinsfile">jenkinsfile</a> est le fichier dont va se servir Jenkins pour executer votre Pipeline, voir le MON Jenkins si jamais vous ne l'avez pas encore fait.<br>
 Je ne détaille pas le code, il est disponible sur le repository de mon projet sur Github.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Jenkins est une machine à gaz très capricieuse. Avec des milliers de plugins, et plus d'une dizaine année d’existence, il existe des millions de manières différentes de faire la même chose, et quand vous en choisissez une, ça ne marche pas.<br>
@@ -366,10 +365,10 @@ Je ne détaille pas le code, il est disponible sur le repository de mon projet s
 <li>Si ce hash est déjà dans la liste, Jenkins ne fait rien, il n'y a rien besoin de faire.</li>
 </ul>
 <p>On met en place tout ça et voici les résultat :</p>
-<div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
-<img src="./../images/jenkins-hour1.png" alt="page d'index" style="grid-column : 1 ;grid-row : 1" />
-<img src="./../images/jenkins-hour2.png" alt="pipeline log" style="grid-column : 2 ;grid-row : 1" />
-<img src="./../images/jenkins-hour3.png" alt="deploy list" style="grid-column : 3 ;grid-row : 1 " />
+<div style=" display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
+<img src="../images/jenkins-hour1.png" alt="page d'index" style="grid-column : 1 ;grid-row : 1">
+<img src="../images/jenkins-hour2.png" alt="pipeline log" style="grid-column : 2 ;grid-row : 1">
+<img src="../images/jenkins-hour3.png" alt="deploy list" style="grid-column : 3 ;grid-row : 1 ">
 </div>
 <p>On peut voir, de gauche à droite, que Jenkins repère les différents commits, ensuite il execute la pipeline où il lance des tests et où il build et enfin, la pipeline est exécutée périodiquement.</p>
 <h3>Conclusions sprint 2 :</h3>
@@ -393,7 +392,7 @@ J'ai commencé l'année en tant que débutant ne connaissant que html,css et boo
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

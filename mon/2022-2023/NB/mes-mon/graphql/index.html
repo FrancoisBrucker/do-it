@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>GraphQL</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">GraphQL</h1>
+<h1 class="mb-1">GraphQL</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -102,7 +101,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -114,7 +113,7 @@
 <!-- fin résumé -->
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p><strong>Niveau :</strong> intermédiaire/avancé<br>
@@ -131,7 +130,7 @@
 </div></div>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Le dépot GitHub du POC : <a href="https://github.com/nbert71/graphql-express">https://github.com/nbert71/graphql-express</a></p>
@@ -139,26 +138,26 @@
 <h2>GraphQL ou REST ?</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
 <p>Qu'est-ce qu'une <strong>API</strong> ?</p>
 </div><div class="pl-8 mr-8">
 <p>Selon la CNIL, une <strong>API</strong> (<em>application programming interface</em> ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.</p>
-<img src="./../images/api.png" style="border-width: 0;" />
+<img src="../images/api.png" style="border-width: 0;">
 <p>Une API va alors exposer des <strong>routes</strong> (que l'on appelle aussi <strong>endpoints</strong> en anglais) afin que le client puisse dialoguer avec les services. Il existe différentes manières de structurer les routes: ici nous allons parler des API REST et des API GraphQL.</p>
 </div></div>
 <h3>Les API REST</h3>
 <p>Une API REST (<em>Representational State Transfer</em>) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des <a href="http://http.cat">status code</a> afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.</p>
-<img src="./../images/api_rest.png" style="border-width: 0; width: 100%;" />
+<img src="../images/api_rest.png" style="border-width: 0; width: 100%;">
 <p>Chaque méthode HTTP permet d'effectuer des actions bien particulières. Voilà un exemple pour expliquer les méthodes les plus utilisées.</p>
-<img src="./../images/rest_methods.png" />
+<img src="../images/rest_methods.png">
 <p>Ainsi, en suivant les routes de l'image ci-dessus, en appelant <em>&quot;/posts&quot;</em> en méthode GET, l'API nous répondra en nous donnant la liste de tous les posts. Si j'envoie une requête POST à <em>&quot;/posts&quot;</em> en mettant des données dans ma requête je vais créer dans la base de données un post...</p>
 <p>Pour plus d'informations, je vous invite à consulter <a href="https://phauer.com/2015/restful-api-design-best-practices/">https://phauer.com/2015/restful-api-design-best-practices/</a>.</p>
 <h3>Les API GraphQL</h3>
 <p>Le modèle d'API GraphQL est une autre manière de structurer les routes. Il n'y a en général qu'<strong>un seul endpoint</strong> qui est de type <strong>POST</strong> et c'est le client qui, en paramètres de la requête POST va définir les données qu'il souhaite obtenir. On gagne ainsi en flexibilité en permettant au client d'obtenir ce qu'il a besoin sans être figé par un modèle REST.</p>
-<img src="./../images/rest_graphql.png" style="border-width: 0;" />
-<img src="./../images/REST-and-GraphQL.png" style="border-width: 0;" />
+<img src="../images/rest_graphql.png" style="border-width: 0;">
+<img src="../images/REST-and-GraphQL.png" style="border-width: 0;">
 <h3>REST ou GraphQL ? Avantages et inconvénients</h3>
 <p>Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantages et ses inconvénients par rapport aux API REST :</p>
 <ul>
@@ -184,7 +183,7 @@
 <h2>Proof Of Concept</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
 <p>Prérequis pour le POC :</p>
@@ -195,7 +194,7 @@
 </ul>
 </div></div>
 <p>Pour utiliser GraphQL, j'ai décidé d'utiliser un backend réalisé avec Express, connecté à une base de données PostgreSQL via l'ORM (Object Relation Mapping) <a href="https://www.prisma.io/">Prisma</a>. Il y aura ensuite une route statique renvoyant une page HTML afin d'indiquer la structure de la base de données (relations, entités ...) et une unique route d'API qui sera servie par GraphQL. Voici un petit schéma d'explications :</p>
-<img src="./../images/graphql-archi.png" />
+<img src="../images/graphql-archi.png">
 <p>Nous allons désormais voir pas à pas comment créer un tel projet.</p>
 <h3>Initialisation du projet Express</h3>
 <p>Nous allons donc initialiser un projet <strong>npm</strong> puis installer quelques librairies dont <code>express</code>.</p>
@@ -236,7 +235,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <p><em>Ici, la commande <code>npm run dev</code>sert uniquement à recharger automatiquement le serveur lorsqu'il y a une modification, c'est pour cela qu'on ne l'utilise qu'en dev.</em><br>
 Lançons <code>npm run dev</code>, aller sur <a href="localhost:3000">localhost:3000</a> et vous devriez voir un magnifique Hello World !</p>
 <h3>Mise en place de PostgreSQL via docker compose</h3>
-<p>Afin d'éviter d'avoir à installer une instance de PostgreSQL sur la machine, on va utiliser la version plus rapide avec docker compose. Si jamais vous ne connaissez pas docker, vous pouvez consulter le <a href="/do-it/mon/TBi/MON/Docker">magnifique MON de Tunçay sur Docker</a>. Voilà le fichier <code>docker-compose.yml</code> qu'il faut créer à la racine.</p>
+<p>Afin d'éviter d'avoir à installer une instance de PostgreSQL sur la machine, on va utiliser la version plus rapide avec docker compose. Si jamais vous ne connaissez pas docker, vous pouvez consulter le <a href="/do-it/do-it/mon/TBi/MON/Docker">magnifique MON de Tunçay sur Docker</a>. Voilà le fichier <code>docker-compose.yml</code> qu'il faut créer à la racine.</p>
 <pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
 
 <span class="token key atrule">services</span><span class="token punctuation">:</span>
@@ -310,7 +309,7 @@ model User {
 <p>On va désormais créer une migration et l'appliquer en même temps à la base de données avec <code>npx prisma migrate dev --name init</code>.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p><strong>Quelques commandes Prisma à connaître :</strong></p>
@@ -326,10 +325,10 @@ model User {
 </ul>
 </div></div>
 <p>A ce stade en lançant la commande <code>npx prisma studio</code>nous devrions voir nos tables avec les différents champs.</p>
-<img src="./../images/prisma-studio.png" />
+<img src="../images/prisma-studio.png">
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>Il faut faire attention aux pratiques que l'on souhaite avoir. Il est possible de travailler uniquement avec le schéma Prisma et faire des <code>db push</code>cependant des changements plus important en base de données pourrait être critique en production, c'est pour cela que l'on utilise les migrations.</p>
@@ -408,7 +407,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 </code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
 <p>L'option <code>graphiql: true</code>nous permet d'avoir un GUI sur la route <em>&quot;/api&quot;</em> et ainsi pour voir faire les requêtes plus simplement pour la période de test.</p>
@@ -482,7 +481,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

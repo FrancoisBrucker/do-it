@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Programmation objet en Python</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">Programmation objet en Python</h1>
+<h1 class="mb-1">Programmation objet en Python</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -102,7 +101,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -143,11 +142,11 @@
 </table>
 <div style="display: flex; align-items: center;">
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./../images/procedurale.png" style="border: 0;" />
+    <img src="../images/procedurale.png" style="border: 0;">
     <p>La programmation procédrale</p>
   </div>
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./../images/orientee-objet.png" style="border: 0;" />
+    <img src="../images/orientee-objet.png" style="border: 0;">
     <p>La programmation orientée objet</p>
   </div>
 </div>
@@ -156,7 +155,7 @@
 <h2>Un jeu de bataille</h2>
 <p>Dans ce cours j'ai réalisé comme il est suggéré dans le cours de François de Brucker à la section 7 un petit jeu en ligne de commande permettant de faire combatter deux personnages. Je fais ici combattre un magicien contre un nain. Vous pourrez retrouver mon code sur <a href="https://github.com/nbert71/POO-Python">GitHub</a>.</p>
 <div style="display: grid; place-items: center;">
-  <img src="./../images/gandalf-gimli.png" style="width: 50%;" />
+  <img src="../images/gandalf-gimli.png" style="width: 50%;">
 </div>
 <h3>La classe Character</h3>
 <p>J'ai d'abord commencé par créer une classe Character représentant un personnage avec un nom et nombre de points de vie. Je définis également des méthodes pour récupérer le nom ou le nombre de points de vie et les modifier : ce sont respectivement les getters et les setters. Je crée également une fonction visant à afficher les informations du personnage.</p>
@@ -246,7 +245,7 @@
 </code></pre>
 <p>Les relations entre les classes sont résumées dans le diagramme UML suivant.</p>
 <div style="display: grid; place-items: center;">
-  <img src="./../images/uml-poo.png" style="border: 0;">
+  <img src="../images/uml-poo.png" style="border: 0;">
 </div>
 <h2>La mécanique de jeu</h2>
 <p>J'ai ensuite programmé la logique de jeu. Tout d'abord le jeu nous demande de créer nos deux personnages et de leur donner un nom chacun. Ensuite tour à tour, chaque personnage joue. Le combat continue tant que les deux personnages sont encore en vie.</p>
@@ -274,7 +273,7 @@
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

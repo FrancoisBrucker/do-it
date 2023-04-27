@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Modification du site de Do-It</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">Modification du site de Do-It</h1>
+<h1 class="mb-1">Modification du site de Do-It</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -106,7 +105,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -122,35 +121,35 @@
 <p>Globalement voilà ce qui est ressorti :</p>
 <h3>Esthétique</h3>
 <p>L'esthétique du site est convenable mais pourrait être améliorée. Mais je ne suis pas designer donc ça sera pour quelqu'un d'aautre !<br>
-<img src="../images/esthetique.png" /></p>
+<img src="../images/esthetique.png"></p>
 <h3>Contribution</h3>
 <p>Pour tout le monde il est généralement facile de contribuer au site, peut-être un peu de mal au début mais on s'y fait.<br>
 - Les personnes ne savent combien de <code>./</code> ou <code>../</code> il faut mettre<br>
 - l'arborescence est un peu complexe --&gt; <strong>refonte</strong><br>
 - les shortcodes ne sont pas forcément connus --&gt; <strong>clarifier via un tuto</strong><br>
 - la gestion des tags --&gt; <strong>clarifier avec un tuto</strong><br>
-<img src="../images/contribution.png" /></p>
+<img src="../images/contribution.png"></p>
 <h3>Arborescence</h3>
 <p>L'arborescence est en effet peu claire pour beaucoup --&gt; <strong>refonte de l'arborescence par année</strong><br>
-<img src="../images/arborescence.png" /></p>
+<img src="../images/arborescence.png"></p>
 <h3>Navigation</h3>
 <p>La navigation n'est pas super fluide et intuitive --&gt; <strong>amélioration de la navbar</strong><br>
-<img src="../images/navigation.png" /></p>
+<img src="../images/navigation.png"></p>
 <h3>Recherche</h3>
 <p>La recherche de contenu est peu fréquente de la part des élèves mais ceux qui cherchent ne trouvent pas facilement les informations. --&gt; <strong>mise en place d'un crawler et d'une barre de recherche</strong><br>
-<img src="../images/recherche.png" /></p>
+<img src="../images/recherche.png"></p>
 <h3>Mots-clés</h3>
 <p>La mise en place de mots-clés semble être l'élement qui fait l'unanimité, tout le monde trouve utile l'implémentation de mots-clés. --&gt; <strong>intégration dans la recherche avec des filtres</strong><br>
-<img src="../images/mots-cles.png" /></p>
+<img src="../images/mots-cles.png"></p>
 <h3>Utilisation dans le futur</h3>
 <p>Selon les réponses, 61% des élèves n'utiliseront pas le site plus tard. Ceux qui vont l'utiliser on indiqué que cela sera principalement pour faire de la veille technologique et se tenir informé.<br>
-<img src="../images/futur.png" /></p>
+<img src="../images/futur.png"></p>
 <h3>Les améliorations voulues</h3>
 <p>Pour beaucoup, c'est la gestion des mots-clés qui arrive en première place.<br>
-<img src="../images/ameliorations.png" /></p>
+<img src="../images/ameliorations.png"></p>
 <h3>Nouvelles fonctionnalités demandées</h3>
 <p>Il ressort des réponses que les filtres de recherche ainsi qu'une barre de recherche seraient les plus bénéfiques lors de l'utilisation du site. Tous ces problèmes seront, je pense, résolus avec l'arrivée de la barre de recherche.<br>
-<img src="../images/fonctionnalites.png" /></p>
+<img src="../images/fonctionnalites.png"></p>
 <h3>Bac à sable</h3>
 <p>Voici également une liste de suggestions qui ont été faite en commentaires libres, certaines ne sont techniquement pas réalisables et d'autres que je trouve inutiles mais je les mets quand même !</p>
 <ul>
@@ -200,7 +199,7 @@
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>

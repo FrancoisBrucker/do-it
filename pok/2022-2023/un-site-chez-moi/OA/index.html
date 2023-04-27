@@ -3,14 +3,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Le site d&#39;Ossama</title>
 
-        <link href=/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css rel="stylesheet">
-        <link href=/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 
-        <link href=/assets/stylesheets/main.css rel="stylesheet">
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
         <script>
@@ -30,22 +30,21 @@
             }
         };
         </script>
-        <script type="text/javascript" id="MathJax-script" 
-    src=/assets/node_modules/mathjax/es5/tex-svg-full.js></script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
 
         <header class="border-b-2 border-gray-200 mb-4">
         <div class="max-w-[1000px] mx-auto px-4">
             <div class="min-h-[50px] flex justify-between items-center">
-                <a class="mx-2" href="/">Home</a>
+                <a class="mx-2" href="/do-it/">Home</a>
                 <div class="flex items-center gap-4 sm:gap-6 ">
-                    <a class="" href="/cs">CS</a>
-                    <a class="" href="/pok">POK</a>
-                    <a class="" href="/mon">MON</a>
-                    <a class="" href="/projets">Projets</a>
-                    <a class="hidden sm:block" href="/promos">Promos</a>
-                    <a href="/search">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
                         <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                         </svg>
                     </a>
                     <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
@@ -56,10 +55,10 @@
         </div>
         </header>
 
-        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body>
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1  class="mb-1">Le site d&#39;Ossama</h1>
+<h1 class="mb-1">Le site d&#39;Ossama</h1>
 <div class="mb-4">
     
 
@@ -81,7 +80,7 @@
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     2022-2023
                 <span>
-            </div>
+            </span></span></div>
         
     
 </div>
@@ -116,14 +115,14 @@ scroll-behavior: smooth ;<br>
 <h4>En-tête de page</h4>
 <p>On va passer à la création de l'en-tête du site, il s'agit dune bande tout en haut du site où l'on va placer 3 boutons cliquable.<br>
 Création du bandeau avec du html :</p>
-<p><header><br>
+<p></p><header><br>
 <img src="Logo_ecole.png" alt="Logo site"><br>
 <nav class="nav"><br>
 <li><a href="index.html">Acceuil</a></li><br>
 <li> <a href="#MON">MON</a></li><br>
 <li> <a href="#POK">POK</a></li><br>
-</nav></p>
-<p></header></p>
+</nav><p></p>
+<p></p></header><p></p>
 <p>Après l'avour créer, on va utiliser du CSS pour modifier ses carctéristiques, on va par exemple indiquer le taille du logo ou la couleur du fond.</p>
 <p>header {<br>
 display: flex;<br>
@@ -149,9 +148,9 @@ text-decoration: none ;</p>
 <p><img src="Image1.png" alt="Optional Text"></p>
 <h4>La landing page</h4>
 <p>La landing page est la première chose qu'une personne verra en arrivant sur le site, il faut y retrouver le titre ou le slogan que l'on souhate y placer.</p>
-<p><div class="landin-page"><br>
+<p></p><div class="landin-page"><br>
 <h1 class="big-title">Bienvenue sur le site d'Ossama </h1><br>
-</div></p>
+</div><p></p>
 <p>Comme précedemment, on va utiliser le CSS pour mettre en place ce que l'on souhaite. On va chosir notre image de fond, sa taille, le type d'affichage, la taille du titre...</p>
 <p>section.top-page {<br>
 background: url(../Photo_ecole.jpeg);<br>
@@ -168,7 +167,7 @@ padding: 20px 50px;<br>
 <p><img src="Image2.png" alt="Optional Text"></p>
 <h4>Structuration de la partie POK et MON</h4>
 <p>On va passer à la partie la plus importante, les différents parties ou j'ai décidé d'y presenter les MON et POK que j'ai choisi.</p>
-<p><section class="MON" id="MON"><br>
+<p></p><section class="MON" id="MON"><br>
 <h2 class="section-title"><br>
 MON<br>
 </h2><br>
@@ -190,7 +189,7 @@ MOOC Design Thinking<br>
 </p><br>
 </div><br>
 </a><br>
-</div></p>
+</div><p></p>
 <p>On va maintenant régler la disposition des différents éléments créés grâce au CSS.<br>
 Modification de la taille du titre, de sa disposition et de la bande qui va contenir le titre :</p>
 <p>.section-title {<br>
@@ -236,10 +235,10 @@ background-image:url( ../Design.webp)<br>
 <p><img src="Image3.png" alt="Optional Text"></p>
 <h4>Bas de page</h4>
 <p>Comme tous les sites, il faut créer un bas de page où l'on va mettre les conditions générales d'utilisation et les droits de diffusion. Sur le code je n'ai pas mis de lien pour les conditions mais il suffit d'en insérer un entre les guillemets.</p>
-<p><footer><br>
+<p></p><footer><br>
 <p class="copyright">© 2022 - Mon site chez moi </p><br>
-<a href="" class="cgv">Conditions générales du site </a><br>
-</footer></p>
+<a href="." class="cgv">Conditions générales du site </a><br>
+</footer><p></p>
 <p>On va également, chosir la manière de dispoistion et d'affichage avec le CSS.</p>
 <p>footer {<br>
 display: flex;<br>
@@ -260,7 +259,7 @@ color: black ;<br>
 Tutoriel Youtube : <a href="https://www.youtube.com/watch?v=6hCGTJCo_Uo&amp;t=2213s">https://www.youtube.com/watch?v=6hCGTJCo_Uo&amp;t=2213s</a></p>
 
 
-</article>
+</section></article>
 
         </main>
 
@@ -268,7 +267,7 @@ Tutoriel Youtube : <a href="https://www.youtube.com/watch?v=6hCGTJCo_Uo&amp;t=22
             <div class="max-w-[1000px] mx-auto px-4">
                 <div class="min-h-[50px] flex justify-center items-center">
                     <p class="text-center">
-                        do-it : option de troisième année à l'école centrale Marseille
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
                     </p>
                 </div>
             </div>
