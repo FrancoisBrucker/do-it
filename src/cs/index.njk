@@ -1,18 +1,18 @@
 ---
 layout: layout/post.njk
 
-title: "CT"
+title: "CS"
 tags: ['index']
 
 order: 1
-resume: 'Cours Théoriques (que quelques cours)'
+resume: 'Cours de Spécialités'
 ---
 
 {% for cours in collections.ct %}
     
     <div class="my-3 px-2 p-1 border-solid border-2 rounded">
       <div class="text-3xl mb-3">
-        <a href="{{ cours.url | url }}">{{ cours.data.title }}</a>
+        <a href="{{ cours.url  }}">{{ cours.data.title }}</a>
       </div>
       <div class=" px-4 flex items-center">
         <div>Auteurs : </div>

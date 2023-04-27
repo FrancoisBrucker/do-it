@@ -5,14 +5,14 @@ title: "POK"
 tags: ['index']
 
 order: 2
-resume: 'Proof of Knowledge. Projet en auto-formation tutorée (paft).'
+resume: 'Proof of Knowledge. Projet en autotonomie tutorée.'
 ---
 
 {% for cours in collections.pok | sort | reverse %}
     
     <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
         <div class="text-3xl mb-3">
-            <a href="{{ cours.url | url }}">{{ cours.data.title }}</a>
+            <a href="{{ cours.url  }}">{{ cours.data.title }}</a>
         </div>
 
         <div class=" px-4 flex items-center">

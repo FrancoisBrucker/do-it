@@ -1,5 +1,5 @@
 {
-  "name": "cours informatique",
+  "name": "Do_It",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
     "clean": "rm -rf dist",
     "clean-powershell": "Remove-Item './dist' -Recurse",
     "node-modules-front": "cd ./src/assets ; npm install ; cd ../..",
+    "build-github": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=do-it",
     "serve": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
@@ -15,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@pborenstein/eleventy-md-syntax-highlight": "^1.0.2",

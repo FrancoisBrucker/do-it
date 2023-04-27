@@ -23,7 +23,6 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/do-it/",
     dir: {
       input: "src",
       output: "dist"
