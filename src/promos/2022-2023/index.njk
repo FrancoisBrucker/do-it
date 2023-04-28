@@ -10,3 +10,13 @@ resume: 'Promotion 2022-2023'
 eleventyNavigation:
     order: 1
 ---
+
+<article>
+    <ul>
+        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) %}
+            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</article>

@@ -5,6 +5,8 @@ title: "Jean-Baptiste Durand"
 authors:
     - "Jean-Baptiste Durand"
 
+eleventyNavigation:
+    order: 8
 ---
 
 ## POK & MON

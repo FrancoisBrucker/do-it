@@ -5,6 +5,8 @@ title: "Thomas Duroy"
 authors:
     - "Thomas Duroy"
 
+eleventyNavigation:
+    order: 9
 ---
 
 ## POK & MON

@@ -5,6 +5,8 @@ title: "Thibault Adelain"
 authors:
     - "Thibault Adelain"
 
+eleventyNavigation:
+    order: 2
 ---
 
 ## POK & MON

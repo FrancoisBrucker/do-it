@@ -5,6 +5,8 @@ title: "Gabriel Barbé"
 authors:
     - "Gabriel Barbé"
 
+eleventyNavigation:
+    order: 3
 ---
 
 ## POK & MON

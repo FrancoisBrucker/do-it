@@ -5,6 +5,8 @@ title: "Léonard Barbotteau"
 authors:
     - "Léonard Barbotteau"
 
+eleventyNavigation:
+    order: 4
 ---
 
 ## POK & MON

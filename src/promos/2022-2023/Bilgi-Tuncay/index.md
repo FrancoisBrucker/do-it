@@ -5,6 +5,8 @@ title: "Tuncay Bilgi"
 authors:
     - "Tuncay Bilgi"
 
+eleventyNavigation:
+    order: 7
 ---
 
 ## POK & MON

@@ -8,3 +8,13 @@ order: 5
 resume: 'Liste des promotions de Do-It'
 
 ---
+
+<article>
+    <ul>
+        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) | reverse %}
+            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</article>

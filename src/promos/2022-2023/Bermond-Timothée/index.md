@@ -5,6 +5,8 @@ title: "Timothée Bermond"
 authors:
     - "Timothée Bermond"
 
+eleventyNavigation:
+    order: 5
 ---
 
 ## POK & MON

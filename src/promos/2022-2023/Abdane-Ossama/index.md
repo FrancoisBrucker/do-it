@@ -5,6 +5,8 @@ title: "Ossama Abdane"
 authors:
     - "Ossama Abdane"
 
+eleventyNavigation:
+    order: 1
 ---
 
 ## POK & MON
