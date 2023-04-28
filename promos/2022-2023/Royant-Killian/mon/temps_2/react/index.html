@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>[MON] Débutez avec React</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">[MON] Débutez avec React</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">DevWeb</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">FrontEnd</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">React</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">JavaScript</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Killian ROYANT</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Royant-Killian/">Killian Royant</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Royant-Killian/mon/">Les MON de Killian</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Royant-Killian/mon/temps_2/">[MON] Temps 2</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Royant-Killian/mon/temps_2/react/">[MON] Débutez avec React</a>
+
+</div></div>
+
+
+
+
+<!-- début résumé -->
+<p>Présentation du deuxième MON de mon temps 2 : une introduction au développement FrontEnd avec React basée sur une formation proposée par Openclassrooms.</p>
+<!-- fin résumé -->
+<p><a href="../">&lt;-- Retour</a></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Prérequis</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Pour réussir à suivre ce cours, vous devez avoir une certaine connaissance de HTML, CSS et JavaScript (ES2015+), npm, les commandes de base du terminal, et Git. Vous pouvez acquérir ces connaissances de JavaScript en suivant cette formation proposée par Openclassrooms :</p>
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web">Écrivez du JavaScript pour le Web</a></li>
+</ul>
+<p>Vous pouvez jetter un œil à des MON précédents pour vous aider à vous familiariser avec ces notions :</p>
+<ul>
+<li><a href="../../../LG/MON2/">Louise GARCOIN - Web Front 1</a></li>
+<li><a href="../../../SL/webfront/web-front-1/">Savinien LAEUFFFER - Web Front 1</a></li>
+<li><a href="../../../GB/Mons/Devweb2/">Gabriel BARBE - Dev Web 2</a></li>
+<li><a href="../js/">Killian ROYANT - Créez des pages web dynamiques avec JavaScript</a></li>
+</ul>
+<p>Outils nécessaires :</p>
+<ul>
+<li>Un IDE, tel que VSCode</li>
+<li>npm</li>
+<li>GitHub</li>
+</ul>
+</div></div>
+<h2>Introduction</h2>
+<p>En parcourant les offres de stage proposées dans le domaine du développement, je me suis rapidement rendu compte de la <strong>demande des employeurs</strong> vis à vis des <strong>frameworks de développement</strong> (React, Vue, Angular...). Ayant déjà abordé React en cours très rapidement, j'ai décidé de suivre une formation proposée par <a href="https://openclassrooms.com/fr">Openclassrooms</a> afin de solidifier mes bases sur le sujet.</p>
+<p><img src="https://i.vimeocdn.com/video/1043590546-d1dea1f9d9290343e0214d2f7495428c8db29ca375a135c7957a1d95b63afb9d-d_640" alt="Débutez avec React"></p>
+<p>Le lien de la formation est disponible : <a href="https://openclassrooms.com/fr/courses/7008001-debutez-avec-react">Débutez avec React (Openclassrooms)</a></p>
+<p>Cette formation est composée de <strong>4 parties</strong> qui mettent en place un <strong>projet concret</strong> de développement d'une interface FrontEnd. Chacune de ces parties est composé de <strong>plusieurs leçons</strong> et d'un <strong>quiz</strong>. Dans ces leçons, vous retrouverez du <strong>cours</strong> écrit, les lignes de <strong>code</strong> qui permettent de créer l'interface web ainsi que des <strong>vidéos</strong> qui expliquent pas à pas comment y arriver.</p>
+<p><img src="https://user.oc-static.com/upload/2021/01/18/16109867335116_P1C3-2.png" alt="Le site La maison jungle découpé en composants"></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Objectifs</strong></p>
+</div><div class="pl-8 mr-8">
+<p>À la fin de ce cours, vous serez capable de :</p>
+<ul>
+<li>comprendre le fonctionnement de React ;</li>
+<li>créer une application React complète avec Create React App ;</li>
+<li>stocker et récupérer des données avec le state et les effets.</li>
+</ul>
+</div></div>
+<h3>Table des matières</h3>
+<p>Vous trouverez ci-dessous la table des matières de la formation :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<h4>Partie 1 - Initiez-vous aux principes de React</h4>
+<p>Cette partie vous permettra de <strong>comprendre les bases</strong> de React en vous familiarisant avec sa logique et en écrivant du code modulaire avec les composants en JSX.</p>
+<p>--</p>
+<ol>
+<li>Tirez le maximum de ce cours</li>
+<li>Appréhendez la logique de React</li>
+<li>Écrivez du code modulaire avec les composants en JSX</li>
+</ol>
+<p>--</p>
+<h4>Partie 2 - Créez votre première application complète avec Create React App</h4>
+<p>Cette partie vous permettra de <strong>créer votre première application</strong> en utilisant Create React App. Vous apprendrez à incorporer du style et des assets à votre projet, à utiliser les listes et les conditions pour gagner en temps et en efficacité, et à réutiliser vos composants avec les props.</p>
+<p>--</p>
+<ol>
+<li>Prenez en main Create React App</li>
+<li>Incorporez du style et des assets à votre projet</li>
+<li>Gagnez en temps et en efficacité grâce aux listes et aux conditions</li>
+<li>Réutilisez vos composants avec les props</li>
+<li>Interagissez avec vos composants grâce aux événements</li>
+</ol>
+<p>--</p>
+<h4>Partie 3 - Stockez et récupérez des données avec le state et les effets</h4>
+<p>Cette partie vous permettra de <strong>stocker et récupérer des données</strong> en utilisant le state et les effets de React. Vous apprendrez à mettre en place votre state local avec useState, à partager votre state entre différents composants, et à déclencher des effets avec useEffect.</p>
+<p>--</p>
+<ol>
+<li>Mettez en place votre state local avec useState</li>
+<li>Partagez votre state entre différents composants</li>
+<li>Déclenchez des effets avec useEffect</li>
+</ol>
+<p>--</p>
+<h4>Partie 4 - Conclusion</h4>
+<ol>
+<li>Revenez sur vos acquis</li>
+</ol>
+</div></div>
+<p>Bonne formation !</p>
+<h2>Pour commencer</h2>
+<p>Si vous ne souhaitez pas suivre la formation, voici <strong>quelques pistes pour vous aider à commencer</strong> à développer en React.</p>
+<h3>Créer un projet React avec Create React App</h3>
+<p>Pour créer un projet React, vous pouvez utiliser <a href="https://create-react-app.dev/">Create React App</a>. C'est un outil qui permet de créer un projet React en quelques secondes. Pour l'utiliser, vous devez installer Node.js et npm, puis lancer la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx create-react-app nom-du-projet
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>C'est quoi npx ?</strong></p>
+</div><div class="pl-8 mr-8">
+<p>npx est un outil qui permet d'exécuter des commandes npm sans avoir à installer le package.</p>
+</div></div>
+<h3>Lancer un projet React</h3>
+<p>Pour lancer un projet React, vous devez vous rendre dans le dossier du projet et lancer la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">yarn</span> start
+</code></pre>
+<h3>Créer un composant React</h3>
+<p>Un composant React est un élément de l'interface qui peut être réutilisé. On peut par exemple créer un composant <code>Header</code> qui contient le titre et le logo de notre site, et l'utiliser sur toutes les pages de notre site.</p>
+<p>Pour créer un composant React, vous devez créer un fichier <code>.js</code> ou <code>.jsx</code> dans le dossier <code>src/components</code> et y écrire le code suivant :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">NomDuComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span>
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Explication de la syntaxe des composants React</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Pour créer un composant React, j'ai utilisé une fonction fléchée. Vous pouvez également utiliser une fonction classique, mais je vous conseille d'utiliser les fonctions fléchées car elles sont plus courtes et plus lisibles.</p>
+<p>La fonction fléchée <code>NomDuComposant</code> retourne un élément JSX. Cet élément JSX est un composant React qui contient un titre et un paragraphe.</p>
+<p>Pour finir, j'ai exporté le composant <code>NomDuComposant</code> pour pouvoir l'utiliser dans d'autres fichiers.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>C'est quoi JSX ?</strong></p>
+</div><div class="pl-8 mr-8">
+<p>JSX est une extension de JavaScript qui permet d'écrire du code HTML dans un fichier JavaScript. C'est une syntaxe qui permet de rendre le code plus lisible.</p>
+<p>Pour plus d'informations, vous pouvez consulter la <a href="https://fr.reactjs.org/docs/introducing-jsx.html">documentation officielle</a>.</p>
+<p>Il est important de noter que Create React App utilise un compilateur tel que Babel pour convertir le code JSX en JavaScript standard avant de l'exécuter dans un navigateur, donc il est transparent pour vous de utiliser JS ou JSX.</p>
+</div></div>
+<h3>Utiliser un composant React</h3>
+<p>Pour utiliser un composant React, vous devez l'importer dans le fichier où vous souhaitez l'utiliser et l'insérer dans le code JSX du fichier. Par exemple, si vous souhaitez utiliser le composant <code>NomDuComposant</code> dans le fichier <code>App.js</code>, vous devez écrire le code suivant:</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> NomDuComposant <span class="token keyword">from</span> <span class="token string">'./NomDuComposant'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NomDuComposant</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<p>Vous pourrez ensuite lancer l'application avec la commande <code>yarn start</code> et voir le composant s'afficher.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>C'est quoi le fichier App.js ?</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Le fichier <code>App.js</code> est le fichier principal de votre application. Il est utilisé pour afficher le composant principal de votre application. Il est possible de créer plusieurs composants principaux et de les afficher dans le fichier <code>App.js</code> en fonction de la page sur laquelle l'utilisateur se trouve.</p>
+</div></div>
+<h3>Utiliser le state</h3>
+<p>Le state est un objet qui contient des données. Il est utilisé pour stocker des données et les mettre à jour. Le state est préférable à la variable car il permet de mettre à jour le composant à chaque fois que le state est modifié.</p>
+<p>Pour utiliser le state, vous devez importer <code>useState</code> depuis la bibliothèque <code>react</code> et utiliser la fonction <code>useState</code> dans votre composant :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'valeur initiale'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>state<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<h3>Utiliser les effets</h3>
+<p>Les effets sont des fonctions qui sont exécutées à chaque fois que le composant est mis à jour. Elles sont utiles pour récupérer des données, mettre à jour le DOM, etc.</p>
+<p>Pour utiliser les effets, vous devez importer <code>useEffect</code> depuis la bibliothèque <code>react</code> et utiliser la fonction <code>useEffect</code> dans votre composant :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Ceci est un effet'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<h3>Utiliser les props</h3>
+<p>Les props sont des données que vous pouvez passer à un composant React. Elles sont utiles pour réutiliser un composant avec des données différentes.</p>
+<p>Pour utiliser les props, vous devez passer des données à votre composant :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> NomDuComposant <span class="token keyword">from</span> <span class="token string">'./NomDuComposant'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NomDuComposant</span></span> <span class="token attr-name">nom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>John Doe<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<p>Et vous devez récupérer ces données dans votre composant :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">NomDuComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Titre</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Paragraphe</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>nom<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span>
+</code></pre>
+<h3>Compiler un projet React</h3>
+<p>Afin de pouvoir déployer votre projet React, vous devez le compiler.</p>
+<p>Pour compiler un projet React, vous devez vous rendre dans le dossier du projet et lancer la commande suivante :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">yarn</span> build
+</code></pre>
+<p>Vous pouvez ensuite déployer le dossier <code>build</code> sur votre serveur.</p>
+<p><a href="../">&lt;-- Retour</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

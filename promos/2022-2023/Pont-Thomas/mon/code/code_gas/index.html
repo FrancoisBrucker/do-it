@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 2 : Google App Scripts</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 2 : Google App Scripts</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tag : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Thomas Pont</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+<!-- Début Résumé -->
+<p>Code de mon MON.</p>
+<!-- Début Résumé -->
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">function <span class="token function">gestionConvocations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> convocationMailTemplateDocId <span class="token operator">=</span> <span class="token string">"18RqDPW3E0JV-08OpF0aM5vteJQaCg8PNqv5ixK9WqlM"</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> convertedDocHTML <span class="token operator">=</span> <span class="token class-name">ConvertGoogleDocToCleanHtml</span><span class="token punctuation">(</span>convocationMailTemplateDocId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> inscriptionsSheet <span class="token operator">=</span> <span class="token class-name">SpreadsheetApp</span><span class="token punctuation">.</span><span class="token function">getActiveSpreadsheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSheetByName</span><span class="token punctuation">(</span><span class="token string">"Inscriptions"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> inscriptions <span class="token operator">=</span> inscriptionsSheet<span class="token punctuation">.</span><span class="token function">getDataRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>let i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>inscriptions<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> nom <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> prenom <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> email <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">//const date = inscription[i][3];</span>
+    <span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dateFormatee <span class="token operator">=</span> <span class="token class-name">Utilities</span><span class="token punctuation">.</span><span class="token function">formatDate</span><span class="token punctuation">(</span>date<span class="token punctuation">,</span> <span class="token string">"GMT+1"</span><span class="token punctuation">,</span> <span class="token string">"dd/MM/YYYY"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> heure <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> sujet <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> convocationDejaEnvoyee <span class="token operator">=</span> inscriptions<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nom <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> prenom <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> email <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> date <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> sujet <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> heure <span class="token operator">!=</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>convocationDejaEnvoyee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> variables <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"Prenom"</span><span class="token operator">:</span>prenom<span class="token punctuation">,</span> <span class="token string">"Nom"</span><span class="token operator">:</span>nom<span class="token punctuation">,</span> <span class="token string">"Evenement"</span><span class="token operator">:</span>sujet<span class="token punctuation">,</span> <span class="token string">"Date"</span><span class="token operator">:</span>dateFormatee<span class="token punctuation">,</span> <span class="token string">"Heure"</span><span class="token operator">:</span> heure<span class="token punctuation">,</span> <span class="token string">"email"</span><span class="token operator">:</span>email<span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> isMailSent <span class="token operator">=</span> <span class="token function">envoiEmail</span><span class="token punctuation">(</span>convertedDocHTML<span class="token punctuation">,</span> variables<span class="token punctuation">,</span> <span class="token string">"Convocation"</span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isMailSent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        inscriptionsSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"TRUE"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+function <span class="token function">envoiEmail</span><span class="token punctuation">(</span>emailTemplateHTML<span class="token punctuation">,</span> variables<span class="token punctuation">,</span> mailSubject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> mailTo <span class="token operator">=</span> variables<span class="token punctuation">.</span>email<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> mailBodyHTML <span class="token operator">=</span> <span class="token punctuation">(</span>emailTemplateHTML<span class="token punctuation">.</span>html<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> id in variables<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>variables<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      mailBodyHTML <span class="token operator">=</span> mailBodyHTML<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"["</span><span class="token operator">+</span>id<span class="token operator">+</span><span class="token string">"]"</span><span class="token punctuation">,</span>variables<span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  options<span class="token punctuation">[</span>'htmlBody'<span class="token punctuation">]</span> <span class="token operator">=</span> mailBodyHTML<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> inlineImages <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>let j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span>emailTemplateHTML<span class="token punctuation">.</span>images<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    inlineImages<span class="token punctuation">[</span><span class="token punctuation">[</span>emailTemplateHTML<span class="token punctuation">.</span>images<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> emailTemplateHTML<span class="token punctuation">.</span>images<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>blob<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  options<span class="token punctuation">[</span>'inlineImages'<span class="token punctuation">]</span> <span class="token operator">=</span> inlineImages<span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Envoi convocation à :"</span><span class="token operator">+</span>mailTo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">MailApp</span><span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>mailTo<span class="token punctuation">,</span> mailSubject<span class="token punctuation">,</span> mailBodyHTML<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token operator">></span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">></span><span class="token operator">/</span>g<span class="token punctuation">,</span> ''<span class="token punctuation">)</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Error : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>message <span class="token operator">+</span> <span class="token string">"\n"</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>stack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>variables<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Le email n'a pas pu être délivré"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

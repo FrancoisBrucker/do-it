@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 2.2: Création d&#39;un site WordPress en local</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 2.2: Création d&#39;un site WordPress en local</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Ossama Abdane</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/">Ossama Abdane</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/mon/">MON d&#39;Ossama</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/mon/mon2.2/">MON 2.2: Création d&#39;un site WordPress en local</a>
+
+</div></div>
+
+
+
+
+<!-- début résumé -->
+<p>Ce MON sert de tutoriel pour la création d'un site WordPress en local sur son ordinateur pour pouvoir facilement expérimenter des thèmes, des plugins et des fonctionnalités avant de les mettre en ligne sur un site en direct. Cela vous permet donc de développer et de tester votre site en toute sécurité, sans craindre de perturber les visiteurs du site.</p>
+<!-- fin résumé -->
+<h3>Présentation de WordPress</h3>
+<p>WordPress est un système de gestion de contenu (CMS) open-source qui permet aux utilisateurs de créer et de gérer facilement des sites web. Il est largement utilisé pour créer des blogs, des sites d'entreprise, des portfolios, des sites e-commerce et bien plus encore.</p>
+<p>Il est écrit en PHP et utilise une base de données MySQL pour stocker les données. Il est également compatible avec une variété de serveurs web, y compris Apache et Nginx.</p>
+<p>WordPress est facile à utiliser, même pour les utilisateurs qui n'ont pas de connaissances en développement web. Il offre une interface intuitive qui permet aux utilisateurs de créer et de publier du contenu, de gérer les utilisateurs et les commentaires, de personnaliser l'apparence de leur site et de gérer les extensions et les plugins.</p>
+<p>Il est également très personnalisable grâce à des milliers de thèmes et de plugins gratuits et payants disponibles sur le marché. Il est très populaire, c'est l'un des CMS les plus utilisés dans le monde, il est utilisé par des millions de sites web.</p>
+<h3>Avantage de créer un site WordPress en local</h3>
+<ul>
+<li>
+<p><strong>Développement et test</strong> : En créant un site WordPress en local, vous pouvez facilement expérimenter avec des thèmes, des plugins et des fonctionnalités avant de les mettre en ligne sur un site en direct. Cela vous permet de développer et de tester votre site en toute sécurité, sans craindre de perturber les visiteurs de votre site en direct.</p>
+</li>
+<li>
+<p><strong>Rapidité</strong> : En utilisant un serveur local pour héberger votre site, vous pouvez bénéficier de temps de chargement plus rapides pour vos pages, car les données sont stockées sur votre propre ordinateur, plutôt que sur un serveur distant.</p>
+</li>
+<li>
+<p><strong>Flexibilité</strong> : En hébergeant votre site localement, vous avez une plus grande flexibilité pour personnaliser et configurer votre site selon vos préférences, sans être limité par les restrictions de votre hébergeur web.</p>
+</li>
+<li>
+<p><strong>Économie</strong> : Héberger un site WordPress en local est gratuit alors qu'il est nécessaire de payer pour un hébergement web en ligne.</p>
+</li>
+<li>
+<p><strong>Sécurité</strong> : Héberger un site WordPress en local peut offrir une meilleure sécurité pour vos données, car vous avez un contrôle complet sur le serveur et les données.</p>
+</li>
+</ul>
+<h3>Téléchargement du logiciel Local by Flywheel</h3>
+<p>Il existe plusieurs logiciels permettant la création d'un site WordPress en local, après en avoir essayé quelques uns, le meilleur que j'ai trouvé est Local by Flywheel. Ce logiciel est gratuit et permet d'avoir une interface utilisateur claire et intuitive qui facilite la création et la gestion de sites WordPress locaux. Il offre également une visualisation graphique des sites en cours d'exécution sur votre ordinateur.</p>
+<p>Pour commencer, il faut d'abord télécharger l'application en se rendant sur le site suivant : <a href="https://localwp.com">https://localwp.com</a>. Il suffit ensuite de cliquer sur le lien de téléchargement comme sur l'image ci-dessous (il n'est pas nécessaire de créer de compte). Après avoir choisis son système d'exploitation, le téléchargement se lance.</p>
+<p><img src="Image1.png" alt="Optional Text"></p>
+<h3>Création d'un site</h3>
+<p>Après avoir ouvert l'application téléchargée, il faut cliquer sur &quot;Create a new site&quot; comme sur l'image ci-dessous :</p>
+<p><img src="Image3.png" alt="Optional Text"></p>
+<p>Il faudra ensuite choisir un nom pour le site, sélectionnez &quot;WordPress&quot; comme type de site, et cliquez sur &quot;Continue&quot;. Enfin, il va falloir choisir un emplacement pour le fichier du site sur l'ordinateur, et cliquez sur &quot;Create Site&quot;.<br>
+Local by Flywheel va maintenant installer WordPress sur l'ordinateur et créer une base de données pour le site. Il demandera également de choisir un nom d'utilisateur et un mot de passe pour la base de donnée.</p>
+<h3>Personnalisation du site</h3>
+<p>Le site est maintenant configuré !</p>
+<p><img src="Image4.png" alt="Optional Text"></p>
+<h4>Bouton &quot;Open Site&quot;</h4>
+<p>Le bouton &quot;<strong>Open Site</strong>&quot; permet d'ouvrir le site WordPress en local dans un navigateur web. Il vous permet de visualiser comment votre site apparaît et fonctionne sur un navigateur, ce qui est essentiel pour le développement et les tests de votre site.<br>
+En cliquant sur &quot;Open Site&quot;, Local by Flywheel ouvrira automatiquement votre navigateur web par défaut et affichera votre site localement hébergé. Il vous permettra de naviguer sur votre site comme vous le feriez si vous étiez en ligne.</p>
+<p>Cela est utile pour :</p>
+<ul>
+<li>Vérifier la mise en page et les fonctionnalités de votre site avant de le publier en ligne.</li>
+<li>Effectuer des tests utilisateurs pour recueillir des commentaires et des retours sur votre site.</li>
+<li>Présenter un projet à un client pour obtenir des commentaires et des approbations.</li>
+</ul>
+<p>En utilisant le bouton &quot;Open Site&quot; sur Local by Flywheel, vous pouvez facilement vérifier comment votre site se comporte et se présente dans un navigateur web, ce qui est essentiel pour assurer la qualité et la fonctionnalité de votre site avant de le rendre public.</p>
+<h4>Bouton &quot;WP Admin&quot;</h4>
+<p>Le bouton &quot;<strong>WP Admin</strong>&quot; permet d'accéder à l'interface d'administration de votre site WordPress en local. Il vous permet de gérer le contenu et les paramètres de votre site, comme vous le feriez si votre site était en ligne.</p>
+<p>En cliquant sur &quot;WP Admin&quot;, Local by Flywheel ouvrira automatiquement votre navigateur web par défaut et affichera l'écran de connexion de l'administration de votre site localement hébergé. Vous devrez saisir votre nom d'utilisateur et votre mot de passe pour vous connecter.</p>
+<p>Cela est utile pour :</p>
+<p>Ajouter, éditer et supprimer des pages, des articles, des médias et autres types de contenu.<br>
+Personnaliser l'apparence de votre site en utilisant les thèmes et les widgets.<br>
+Gérer les utilisateurs et les commentaires.<br>
+Installer et configurer des plugins pour ajouter des fonctionnalités à votre site.<br>
+En utilisant le bouton &quot;WP Admin&quot; sur Local by Flywheel, vous pouvez facilement gérer et personnaliser votre site WordPress en local, ce qui est essentiel pour le développement et les tests de votre site avant de le rendre public.</p>
+<h3>Partage d'un &quot;Live Link&quot;</h3>
+<p>Il est possible de partager un &quot;Live Link&quot; en activant l'option dans l'onglet &quot;tools&quot; comme sur l'image ci-dessous :</p>
+<p><img src="Image2.png" alt="Optional Text"></p>
+<p>Le partage de ce lien permet de donner un aperçu du site en rentrant un identifiant et un mot de passe. L'envoi de ce lien permet :</p>
+<ul>
+<li>
+<p><strong>Aperçu en direct</strong> : Si vous travaillez sur un site WordPress en local ou sur un site de développement, vous pouvez partager un lien en direct pour permettre aux autres de voir les dernières mises à jour et de donner des commentaires avant de publier le site en direct.</p>
+</li>
+<li>
+<p><strong>Collaboration</strong> : Si vous travaillez en équipe sur un site WordPress, vous pouvez partager un lien en direct pour permettre aux autres membres de l'équipe de voir les dernières mises à jour et de collaborer sur le contenu.</p>
+</li>
+<li>
+<p><strong>Partage avec des clients</strong> : Si vous créez un site WordPress pour un client, vous pouvez partager un lien en direct pour permettre au client de voir les dernières mises à jour et de donner des commentaires avant de publier le site en direct.</p>
+</li>
+<li>
+<p><strong>Présentation de projet</strong> : Si vous voulez montrer un projet WordPress que vous avez créé à un public plus large, vous pouvez partager un lien en direct pour permettre aux gens de voir le projet en action avant de le publier en direct.</p>
+</li>
+<li>
+<p><strong>Tests utilisateurs</strong> : Si vous voulez recueillir des commentaires et des retours d'utilisateurs sur votre site WordPress avant de le publier en direct, vous pouvez partager un lien en direct pour permettre aux utilisateurs de naviguer sur le site et de donner leur avis.</p>
+</li>
+</ul>
+<h3>Ressources utilisées</h3>
+<ul>
+<li>Tutoriel de WPMarmite : <a href="https://www.youtube.com/watch?v=rm73DF3BH38">https://www.youtube.com/watch?v=rm73DF3BH38</a></li>
+<li>Site Local by Flywheel : <a href="https://localwp.com">https://localwp.com</a></li>
+<li>Site WordPress : <a href="https://wordpress.org">https://wordpress.org</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

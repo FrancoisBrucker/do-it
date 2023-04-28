@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 1: Google apps script</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 1: Google apps script</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Ossama Abdane</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/">Ossama Abdane</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/mon/">MON d&#39;Ossama</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Abdane-Ossama/mon/mon1/">MON 1: Google apps script</a>
+
+</div></div>
+
+
+
+
+<!-- début résumé -->
+<p>L'objectif de mon MON est l'apprentissage de nouvelles fonctionnalités pour permettre d'automatiser, par exemple, certaines tâches sur des fichiers de type tableaur grâce à l'App Script Google.</p>
+<!-- fin résumé -->
+<h3>Introduction</h3>
+<p>Google Apps Script est un langage de programmation propre à Google. Il permet de réaliser des scripts à l'intérieur de certains services de Google. Ainsi il est possible de modifier le comportement du logiciel tableur (Google sheet) pour automatiser des tâches par exemple.</p>
+<p>Pour accéder à l'App Script, il suffit de se rendre sur un document sur un Google Drive, cliquer dans la barre de menu sur &quot;extensions&quot; puis sur &quot;Apps Script&quot;. Nous sommes maintenant prêt à commencer à utiliser ses fonctionnalités.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>N'oubliez pas d'enregistrer votre script après chaque modification</p>
+</div></div>
+<h3>Les Triggers</h3>
+<p>Pour mon MON, j'ai décidé de me focaliser sur les triggers, en français déclencheurs, j'ai trouvé leur utilisation pouvait beaucoup m'apporter dans le futur.<br>
+Les triggers permettent d'exécuter une fonction automatiquement à la suite d'un événement. Il peut s'agir de l'ouverture du fichier, la modification d'une case, après un certain délai... Je vais présenter les différents types de triggers et leur utilisation ci-dessous.</p>
+<h4>Les triggers simples</h4>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th style="text-align:center">Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onOpen()</td>
+<td style="text-align:center">S'exécute lorsqu'un utilisateur ouvre un document qu'il est autorisé à modifier</td>
+</tr>
+<tr>
+<td>onInstall()</td>
+<td style="text-align:center">S'exécute lorsqu'un utilisateur installe un module complémentaire Editor</td>
+</tr>
+<tr>
+<td>onEdit()</td>
+<td style="text-align:center">S'exécute lorsqu'un utilisateur modifie une valeur dans une feuille de calcul</td>
+</tr>
+<tr>
+<td>onSelectionChange()</td>
+<td style="text-align:center">S'exécute lorsqu'un utilisateur modifie la cellule sélectionnée</td>
+</tr>
+</tbody>
+</table>
+<h5>Quelques exemples</h5>
+<ul>
+<li>
+<p>onOpen() :</p>
+<p>function onOpen(){<br>
+SpreadsheetApp.getActive().getRange('A1').setValue(new Date());<br>
+}</p>
+</li>
+</ul>
+<p>Ce programme va permettre d'afficher la date et l'heure sur la Cellule A1 à chaque fois que le fichier est ouvert comme le montre l'image ci-dessous :</p>
+<p><img src="Image.png" alt="Optional Text"></p>
+<ul>
+<li>
+<p>onSelectionChange() :</p>
+<p>function onSelectionChange(e){<br>
+console.log(e.range.getA1Notation());<br>
+}</p>
+</li>
+</ul>
+<p>Ce programme va s’exécuter à chaque fois que l'on va changer de cellule et dans la liste d'exécution afficher toutes les cellules par lesquelles nous sommes passés.</p>
+<ul>
+<li>onEdit() :</li>
+</ul>
+<p>Certainement la fonction la plus intéressante, pour cet exemple, un programme plus poussé qui permet la verification de la validité de l'e-mail saisi.</p>
+<p>function onEdit(data){</p>
+<p>if(data.range.getSheet().getName() =='Feuille 1' &amp;&amp;  data.range.getA1Notation() == 'B3'){</p>
+<p>let isValid = emailValidation(data.range.getValue());</p>
+<p>if(isValid){<br>
+data.range.setBackground('white');<br>
+}else{<br>
+data.range.setBackground('red');<br>
+}<br>
+}<br>
+}</p>
+<p>function emailValidation(email){</p>
+<p>let mailformat = /^\w+([.-]?\w+)<em>@\w+([.-]?\w+)</em>(.\w{2,3})+$/;</p>
+<p>if(email.match(mailformat)){<br>
+return true;<br>
+}else{<br>
+return false;<br>
+}<br>
+}</p>
+<p>Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la syntaxe n'est pas bonne, la case se colore en rouge.<br>
+Lorsque l'e-mail est bien noté :</p>
+<p><img src="Image1.png" alt="Optional Text"></p>
+<p>Lorsque qu'il y a une erreur (il manque le &quot;.fr&quot;) :</p>
+<p><img src="Image2.png" alt="Optional Text"></p>
+<p>Ce type de vérification peu être étendu par exemple à la vérification du format du numéro de téléphone, la syntaxe de la date de naissance... Peut-être pour un prochain MON, créer tout un formulaire contrôlé avec un programme.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Une idée pour un prochain MON, créer tout un formulaire vérifié par un programme.</p>
+</div></div>
+<h4>Les triggers temporels</h4>
+<p>Les triggers temporels permettent l'exécution d'une fonction dans un certain délai. On peut par exemple exécuter cette fonction toutes les minutes, toutes les jours ou encore tout les matins. On peut utiliser ce type de trigger pour implémenter une case tout les jours ou encore recevoir un mail tous les matins nous rappellent de faire un compte rendu tout les matins à notre patron.</p>
+<p>Pour programmer un trigger temporel, après avoir créer une fonction, il faut aller dans l'Apps script, cliquer sur l'horloge à gauche comme sur l'image ci-dessous :</p>
+<p><img src="Image3.png" alt="Optional Text"></p>
+<p>Il faut ensuite cliquer sur &quot;ajouter un déclencheur&quot; en bas à droite et le menu suivant s'affiche :</p>
+<p><img src="Image4.png" alt="Optional Text"></p>
+<p>Pour programmer le déclencheur, il faut dans le menu :</p>
+<ul>
+<li>Sélectionner la fonction que l'on souhaiter exécuter</li>
+<li>Dans source événement choisir &quot;Déclencheur horaire&quot;</li>
+<li>Choisir le délai (quotidien, hebdomadaire...)</li>
+<li>L'heure d'exécution</li>
+<li>Cliquer sur enregistrer</li>
+</ul>
+<p>Notre déclencheur temporel est prêt !</p>
+<h5>Exemple d'application</h5>
+<p>On va créer une fonction qui va nous envoyer un mail tout les matins pour me rappeler d'aller signer la feuille de présence :</p>
+<p>function Rappelsignature() {</p>
+<p>MailApp.sendEmail(&quot;<a href="mailto:ossama84130@gmail.com">ossama84130@gmail.com</a>&quot;,&quot;Rappel émargement&quot;,&quot;Aller à l'acceuil et signer le feuille d'émargement&quot;);<br>
+}</p>
+<p>Après avoir créer la fonction, on va créer le déclencheur temporel et le paramétrer :</p>
+<p><img src="Image6.png" alt="Optional Text"></p>
+<p>Tout est prêt, je vais donc recevoir tous les jours un mail de ce type pour ne pas oublier de signer la feuille à l’accueil :</p>
+<p><img src="Image5.png" alt="Optional Text"></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Une autre idée de MON, à partir d'un tableau avec des dates d'anniversaire, créer un trigger temporel qui prévient par mail des anniversaires.</p>
+</div></div>
+<h3>Ressources utilisées</h3>
+<ul>
+<li>Le site de Google : <a href="https://developers.google.com/apps-script/guides/triggers">https://developers.google.com/apps-script/guides/triggers</a></li>
+<li>La Playlist tuto de Tuto de rien : <a href="https://youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS">https://youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS</a></li>
+<li>Le site Spreadsheet Dev : <a href="https://spreadsheet.dev/triggers-in-google-sheets">https://spreadsheet.dev/triggers-in-google-sheets</a></li>
+<li>Le livre Automate the Boring Stuff with Python (pas beaucoup exploité): <a href="https://automatetheboringstuff.com">https://automatetheboringstuff.com</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Temps 1 - MON - Diagnostic organisationnel, modélisation des processus, et conception d&#39;un SI</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Temps 1 - MON - Diagnostic organisationnel, modélisation des processus, et conception d&#39;un SI</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">si</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kasimir Romer</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/">Kasimir Romer</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/">MON de Kasimir</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/MON1-2/">Temps 1 - MON - Diagnostic organisationnel, modélisation des processus, et conception d&#39;un SI</a>
+
+</div></div>
+
+
+
+
+<!-- Début Résumé -->
+<p>Ici je vais mettre les informations sur mon MON 2 de temps 1 avec le sujet <em>diagnostic organisationnel, modélisation des processus, et conception d'un SI</em>.</p>
+<!-- fin résumé -->
+<h2>Management summary</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Au cours de la consultation de notre cabinet, le statu quo de tous les processus au sein de CFP a été établi, documenté et analysé afin d'en déceler les insuffisances. Sur la base de ces problèmes identifiés, des exigences ont été développées pour un nouveau SI. Ce SI doit permettre de digitaliser et d'automatiser de nombreux processus qui se déroulaient jusqu'à présent manuellement et étaient sujets à des erreurs. En outre, de nombreuses données, qui étaient jusqu'à présent dispersées dans toute l'entreprise, seront rassemblées en un point central. Le nouveau système permettra également d'analyser les données commerciales et d'établir le bilan plus rapidement et dans de meilleures conditions.<br><br>
+La mise en œuvre de ce SI permettra d'améliorer l'efficacité des opérations et de simplifier les processus. Cela permettra à CFP de continuer à être un pionnier sur le marché avec des solutions de formation innovantes.</p>
+</div></div>
+<h2>But du projet</h2>
+<p>L'objectif du projet est de travailler sur une étude de cas de CFP dans la rôle d'un consultant en informatique et de répondre à autant de questions que possible de l'étude de cas.</p>
+<p>Voici les questions :</p>
+<ol>
+<li>Quelle est la finalité de la mission engagée par le dirigeant?</li>
+<li>Quelles sont les attentes stratégiques de l’entreprise?</li>
+<li>Réalisez une cartographie des acteurs.</li>
+<li>Réalisez une cartographie des processus.</li>
+<li>Réalisez un modèle de processus BPMN pour chaque processus identifié dans la cartographie.</li>
+<li>Relevez les dysfonctionnements par rapport à chaque processus.</li>
+<li>Établir à l’aide d’une matrice SWOT les forces, les faiblesses de l’organisation et du SI actuels ainsi que les opportunités et les risques d’un futur SI ?</li>
+<li>Quels seraient les objectifs d’un futur SI et quels seraient les indicateurs associés?</li>
+<li>Donner un aperçu des besoins et des priorités du futur SI.</li>
+</ol>
+<h2>Déroulement du projet</h2>
+<h3>Présentation de l'étude de cas</h3>
+<p>Dans la présente étude de cas, il s'agit d'une entreprise de taille moyenne, le CFP (centre de formation professionnelle), qui souhaite revoir son SI en profondeur et qui, pour ce faire, fait appel à l'aide d'un consultant SSII. Des entretiens avec le directeur et un commercial permettent de discuter des processus actuels et de leurs problèmes, ainsi que des souhaits concernant le futur SI.</p>
+<h3>Glossaire</h3>
+<p><strong>BPMN</strong><br>
+Business Process Model and Notation, un langage de modélisation de processus d'affaires.</p>
+<p><strong>CFP</strong><br>
+Centre de Formation professionnelle, le nom de l'entreprise.</p>
+<p><strong>CPF</strong><br>
+Compte personnel de formation (anciennement «DIF - Droit individuel à la formation»), un droit français qui permet aux salariés de suivre des formations professionnelles.</p>
+<p><strong>ESN</strong><br>
+Entreprise de services du numérique (anciennement «SSII - Société de services en ingénierie informatique»), une entreprise qui fournit des services informatiques (p. ex. la consultation, la conception, la mise en œuvre, la maintenance, etc. des systèmes d'information) à d'autres entreprises.</p>
+<p><strong>SWOT</strong><br>
+Strengths, Weaknesses, Opportunities, Threats, une méthode d'analyse stratégique qui permet d'identifier les forces et les faiblesses d'une organisation, ainsi que les opportunités et les menaces.</p>
+<h3>Question 1 - Quelle est la finalité de la mission engagée par le dirigeant?</h3>
+<p>Tous les processus de l'entreprise doivent être analysés et les problèmes doivent être examinés. Ensuite, les processus doivent être améliorés en planifiant également la mise en place d'un SI. L'objectif est de mettre en place un nouveau SI avec les valeurs indicatives suivantes :</p>
+<ul>
+<li>Permettre une réponse aux demandes des clients en 48 heures.</li>
+<li>Permet de conclure un contrat en 5 jours en moyenne.</li>
+<li>Consultation facile des chiffres clés et des KPI.</li>
+<li>Automatisation des tâches répétitives (p.ex. signature de contrats, etc.).</li>
+</ul>
+<p>Ce SI doit donc simplifier les processus et améliorer la communication entre les collaborateurs.</p>
+<h3>Question 2 - Quelles sont les attentes stratégiques de l’entreprise?</h3>
+<p>L'objectif stratégique à atteindre par le biais de la consultation est que CFP reste compétitif à long terme. Pour ce faire, l'entreprise doit atteindre les objectifs suivants :</p>
+<ul>
+<li>Réduire les retards dans le traitement des demandes et des contrats au moins au niveau de la concurrence.</li>
+<li>Augmenter la satisfaction des enseignants en résolvant les problèmes de gestion et de paiement des honoraires.</li>
+<li>L'aspect économique doit être optimisé en utilisant des chiffres clés et des indicateurs clés de performance pour l'analyse du chiffre d'affaires et l'observation du marché.</li>
+<li>L'entreprise doit devenir plus flexible et pouvoir réagir plus rapidement aux changements (p. ex. en cas de modification de la demande de cours).</li>
+</ul>
+<h3>Question 3 - Réalisez une cartographie des acteurs.</h3>
+<p>J'ai dessiné l'esquisse suivante des acteurs et des relations entre eux :<br>
+<img src="images/cartographie-acteurs.jpg" alt="Cartographie des acteurs"></p>
+<h3>Question 4 - Réalisez une cartographie des processus.</h3>
+<p>Une cartographie des processus est une est une représentation des processus d'entreprise dans les domaines suivants qui sont aussi appelés macro-processus : (<a href="https://www.advaloris.ch/nos-services/intelligence-organisationnelle/amelioration-de-performance-operationnelle-organisationnelle-dune-entreprise/modelisation-des-processus/cartographie-processus-de-lentreprise-prerequis-management-processus">source</a>)</p>
+<ul>
+<li>Les <strong>processus primaires/processus opérationnels</strong>: Il s'agit des processus dans lesquels la valeur ajoutée de l'entreprise est réalisée, c'est-à-dire les activités quotidiennes ou les commandes des clients.</li>
+<li>Les <strong>processus de pilotage</strong>: Il s'agit des processus de planification et de gestion de l'entreprise (par ex. gestion de la stratégie et des objectifs).</li>
+<li>Les <strong>processus de soutien</strong>: Il s'agit de processus qui n'apportent pas de valeur ajoutée directe, mais qui sont d'une grande importance pour l'exécution de la prestation dans les processus primaires.</li>
+</ul>
+<p>L'identification des processus dans ces trois domaines sert à préparer la tâche suivante, à savoir la représentation des processus en BPMN.</p>
+<h4>Processus primaires</h4>
+<ul>
+<li>Gestion du catalogue de formation (p.ex. création, modification, suppression de cours)</li>
+<li>Vendre et dispenser une formation à un client (soit un cours du catalogue, soit un cours sur mesure)</li>
+</ul>
+<h4>Processus de pilotage</h4>
+<ul>
+<li>Reporting et pilotage de gestion (p.ex. analyse mensuelle et trimestrielle des chiffres (KPI tels que chiffre d'affaires, bénéfice, nouveaux contacts, etc.), création du bilan annuel, etc.)</li>
+</ul>
+<h4>Processus de soutien</h4>
+<ul>
+<li>Facturation client</li>
+<li>Paiement des prestataires</li>
+<li>Suivi des activités des commerciaux (pour calculer leur rémunération)</li>
+<li>Maintenance des fichiers clients et enseignants</li>
+<li>Édition des conventions de formation</li>
+<li>Édition des contrats de prestation</li>
+</ul>
+<h3>Question 5 - Réalisations des modèles de processus BPMN</h3>
+<h4>C'est quoi le BPMN?</h4>
+<p>BPMN est une <strong>notation de modélisation de processus d'affaires</strong>. Elle permet de représenter les processus d'affaires de manière graphique et standardisée. Elle est utilisée pour la modélisation, la simulation, l'analyse et l'optimisation des processus d'affaires. Pour créer des modèles BPMN, on utilise des elements de base comme les <strong>activités</strong>, des <strong>gateways</strong> et des <strong>events</strong>. Les activités représentent les tâches effectuées par les acteurs. Les gateways permettent de définir les conditions de passage d'une activité à l'autre. Les events représentent les événements qui peuvent se produire pendant le processus. Les éléments de base sont reliés entre eux par des flèches. Les elements de base sont les suivants:</p>
+<p><img src="images/basic-bpmn-elements.png" alt="Éléments BPMN de base"> Éléments de base à partir desquels les diagrammes BPMN sont construits (<a href="https://www.researchgate.net/figure/Basic-elements-of-BPMN-diagrams_fig2_228974950">source de l'image</a>)</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Je crée tous mes modèles de processus avec <a href="https://www.yworks.com/products/yed">yEd</a>, un logiciel gratuit pour la modélisation de graphes. La mise en page automatique, en particulier, est très utile.</p>
+</div></div>
+<p><strong>Je réponds en même temps à la question 6 (Relevez les dysfonctionnements par rapport à chaque processus) en décrivant les problèmes sous chaque modèle de processus.</strong></p>
+<h4>Gestion du catalogue de formation</h4>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Le catalogue n'est mise a jour que 2x par an (pas assez souvent)</li>
+<li>Le catalogue est diffusé par e-mail (pas très moderne)</li>
+<li>Si un nouveau cours est créé, il n'est pas automatiquement ajouté au catalogue</li>
+</ul>
+<h4>Vendre et dispenser une formation à un client</h4>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Pas de distribution d'information entre les commerciaux</li>
+<li>Manque de visibilité de l'entreprise</li>
+<li>Création de cours sur mesure est lent</li>
+<li>Pas toujours un prestataire pour une formation</li>
+</ul>
+<h4>Reporting et pilotage de gestion</h4>
+<p><img src="images/bpmn/reporting-creation-bilan.png" alt="Reporting et pilotage de gestion"><br>
+C'est un example d'un diagramme BPMN très simple.</p>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Pas de reporting automatique</li>
+<li>Collecte des données manuelle est très complex (sujet à des erreurs)</li>
+</ul>
+<h4>Facturation client</h4>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Le directeur signe les factures</li>
+</ul>
+<h4>Paie des prestataires</h4>
+<p><img src="images/bpmn/remuneration-enseignant.png" alt="Paie des prestataires"><br>
+C'est un example d'un diagramme BPMN plus complexe avec des swimlanes.</p>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Rendu mensuel + feuille d'emargement en papier</li>
+<li>Le directeur signe le fiche de paie</li>
+<li>Prestatire est payé au debut de mois (c'est un problème, car si le traitement de la demande prend plus de temps, il devra attendre un mois de plus avant de recevoir son argent)</li>
+</ul>
+<h4>Suivi des activités des commerciaux</h4>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour ce processus, je n'ai pas trouvé assez d'information dans les entretiens. Je vais donc le laisser de côté.</p>
+</div></div>
+<h4>Maintenance des fichiers clients et prestetaires</h4>
+<p><strong>Dysfonctionnements:</strong></p>
+<ul>
+<li>Chaque commercial a ses propres prestataires qu'il ne partage pas avec les autres commerciaux</li>
+<li>La liste des clients est un fichier Excel, chaque commercial a une copie qui est different des autres</li>
+</ul>
+<h4>Édition des conventions de formation</h4>
+<p>Ce processus est déja integrée dans le modèle du processus &quot;vendre et dispenser uen formation a un client&quot;</p>
+<h4>Édition des contrats de prestation</h4>
+<p>Ce processus est également déja integrée dans le modèle du processus &quot;vendre et dispenser une formation a un client&quot;</p>
+<h3>Question 6 - Relevez les dysfonctionnements par rapport à chaque processus.</h3>
+<p>La question est déjà traitée ci-dessus. Mais pour être complet, j'ai laissé ici mon ancienne liste, que j'ai utilisée pour le brainstorming et qui contient déjà des propositions de solutions pour les problèmes identifiés.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Problèmes et solutions (ancien)</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Ici la liste avec tous les dysfonctionnements qui ont été identifié:</p>
+<table>
+<thead>
+<tr>
+<th>Problème</th>
+<th>Solution proposé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cataloge: mise a jour 2x par an</td>
+<td>Ne pas distribuer de catalogue, mais rendre l'offre accessible sur un site web</td>
+</tr>
+<tr>
+<td>Catalogue: diffusé par e-mail</td>
+<td>Envoi d'une newsletter avec un lien vers la site web</td>
+</tr>
+<tr>
+<td>Rémuneration variable pour les commerciaux</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Pas de distribution d'information entre les commerciaux</td>
+<td>Base d'information centrale, interdire d'avoir ses propres fichiers clients/prestetaires</td>
+</tr>
+<tr>
+<td>La liste des clients est un fichier Excel, chaque commercial a une copie qui est different des autres</td>
+<td>solution centrale</td>
+</tr>
+<tr>
+<td>Chaque commercial a ses propres prestataires</td>
+<td>Choix du prestetaire autorisé uniquement à partir d'un pool central de prestetaires</td>
+</tr>
+<tr>
+<td>Rendu mensuel + feuille d'emargement en papier</td>
+<td>Faire ca en ligne</td>
+</tr>
+<tr>
+<td>Manque de visibilité de l'entreprise</td>
+<td>Création d'une site web qui est mis a jour souvent, enrichi par d'autres choses (blog, ...)</td>
+</tr>
+<tr>
+<td>Pas toujours un prestataire pour une formation</td>
+<td>Offrir une formation a une entreprise seulement si on a un prestataire</td>
+</tr>
+<tr>
+<td>Pas de processus defini pour créer une nouvelle formation</td>
+<td>créer un processus pour faire ca - standardisation</td>
+</tr>
+<tr>
+<td>Réunions semestrielles</td>
+<td>Les réunions doivent être beaucoup plus souvent (le monde change très vite!)</td>
+</tr>
+<tr>
+<td>Le directeur signe le fiche de paie</td>
+<td>Ca n'est pas necessaire, vous devez avoir davantage confiance en vos collaborateurs</td>
+</tr>
+<tr>
+<td>Prestatire est payé au debut de mois</td>
+<td>Payer les paiements accumulés une fois par semaine</td>
+</tr>
+<tr>
+<td>Le directeur signe les factures</td>
+<td>Envoyer la facture par e-mail, pas de signature necessaire</td>
+</tr>
+<tr>
+<td>Le rassemble mensuellement et trimestriellement des donnée est trop complex</td>
+<td>Création des dashboards pour les KPI, mis a jour automatiquement chaque jour</td>
+</tr>
+<tr>
+<td>La reponse a un client n'est pas assez vite</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Les employés du CFP n'ont pas de connaissances plus avancées en informatique</td>
+<td>Formation pour le nouveau SI</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<h3>Question 7 - Création d'une matrice SWOT</h3>
+<h4>C'est quoi, une analyse SWOT?</h4>
+<p>Une analyse SWOT est une analyse stratégique qui permet de déterminer les forces, les faiblesses, les opportunités et les menaces d'une entreprise. Elle est utilisée pour évaluer la situation d'une entreprise et pour définir une stratégie. Les forces et les faiblesses sont des <strong>facteurs internes</strong> à l'entreprise. Les opportunités et les menaces sont des <strong>facteurs externes</strong> à l'entreprise. L'analyse SWOT est donc un outil de <strong>management stratégique</strong>.</p>
+<p><img src="images/swot-matrix-description.png" alt="Matrice SWOT"></p>
+<h4>La matrice SWOT du CFP</h4>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Le CFP est une entreprise qui a une longue expérience dans le domaine de la formation, qui est bien établie sur le marché et qui a su élargir constamment sa clientèle.</li>
+<li>L'entreprise dispose d'une très vaste base de données de prestataires, ce qui lui permet de se positionner largement avec un portefeuille étendu.</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>En raison de processus obsolètes et de procédures manuelles, il y a souvent des retards, par exemple dans la réponse aux demandes ou le paiement des honoraires.</li>
+<li>La rémunération variable des commerciaux crée de mauvaises incitations et entraîne une concurrence entre eux qui freine l'entreprise dans son ensemble.</li>
+</ul>
+<p><strong>Opportunities</strong></p>
+<ul>
+<li>La demande d'offres de formation ne cesse d'augmenter et cette tendance n'est pas prête de s'arrêter.</li>
+<li>La digitalisation offre de nombreuses opportunités qui n'ont pas encore été exploitées.</li>
+</ul>
+<p><strong>Threats</strong></p>
+<ul>
+<li>La concurrence est forte et les clients ont de nombreuses possibilités de s'informer et de demander des offres.</li>
+<li>De plus en plus de fournisseurs de formations arrivent sur le marché, souvent avec des offres innovantes et des prix avantageux.</li>
+<li>En raison des développements techniques toujours plus rapides et des nouvelles demandes qui en découlent pour les collaborateurs, les formations doivent être adaptées et révisées de plus en plus souvent. Si cela n'est pas fait, l'offre de cours peut devenir totalement obsolète en peu de temps.</li>
+</ul>
+<h3>Question 8 - Quels seraient les objectifs d’un futur SI et quels seraient les indicateurs associés?</h3>
+<p>Pour répondre à cette question, j'ai déduit des problèmes susmentionnés des objectifs sur la manière de les résoudre. Ces objectifs sont présentés dans le tableau ci-dessous, ainsi que des indicateurs clés de performance ( KPI ) possibles pour mesurer la réalisation des objectifs.</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Indicateur(s) associé(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestion de l'offre de cours sur le site web</td>
+<td>Nombre de visites du site web</td>
+</tr>
+<tr>
+<td>Gestion d'une base de données centrale de tous les clients</td>
+<td>Croissance de la clientèle</td>
+</tr>
+<tr>
+<td>Gestion d'une base de données centrale de tous les prestataires</td>
+<td>Exhaustivité des profils, augmentation du nombre de prestataires</td>
+</tr>
+<tr>
+<td>Automatisation du processus d'honoraires</td>
+<td>Temps moyen entre la demande et le paiement des honoraires</td>
+</tr>
+<tr>
+<td>Trouver un fournisseur pour chaque formation</td>
+<td>Rapport entre les offres non réalisées en raison de l'absence de prestataires et toutes les offres</td>
+</tr>
+<tr>
+<td>Création et envoi automatisés des factures</td>
+<td>Temps moyen nécessaire par facturation</td>
+</tr>
+</tbody>
+</table>
+<h3>Question 9 - Donner un aperçu des besoins et des priorités du futur SI.</h3>
+<p><strong>Les exigences</strong></p>
+<ul>
+<li>Simplicité d'utilisation, de sorte que même les collaborateurs peu familiarisés avec l'informatique puissent l'utiliser facilement.</li>
+<li>Le SI ne doit pas compliquer les processus.</li>
+<li>Le SI doit être protégé contre la perte de données et les données doivent être disponibles à tout moment, car les données sont indispensables au travail quotidien.</li>
+<li>Le SI doit stocker et gérer les données des clients et des fournisseurs de manière sécurisée.</li>
+</ul>
+<p><strong>Les priorités</strong><br>
+J'ai sélectionné ce que je considère comme les cinq exigences fonctionnelles les plus importantes et les ai classées par ordre de priorité :</p>
+<ol>
+<li>des bases de données unifiées de clients et de prestataires, car cela évite immédiatement et efficacement l'annulation inutile de formations parce que les prestataires de services potentiels ne sont pas connus de tous les vendeurs.</li>
+<li>des processus automatisés qui déchargent les vendeurs, car ils peuvent ainsi se concentrer sur le conseil aux clients et ne doivent pas s'occuper de tâches administratives.</li>
+<li>traitement électronique des paiements d'honoraires, car les prestataires peuvent ainsi se faire verser les honoraires plus rapidement et plus facilement, leur satisfaction et leur attachement à CFP augmentent.</li>
+<li>simplifier radicalement la consultation des données et des indicateurs clés de performance (KPI) pour l'analyse des activités, par exemple en créant des tableaux de bord, car cela permet aux responsables d'identifier rapidement et facilement les problèmes et les points à améliorer.</li>
+<li>des offres de formation actualisées quotidiennement et disponibles via une plate-forme centrale, car les vendeurs peuvent ainsi consulter rapidement et facilement les offres et conseiller le client en conséquence.</li>
+</ol>
+<h2>Conclusion et réflexion</h2>
+<p>En répondant aux questions, une grande partie du projet a déjà été traitée en analysant les processus et en identifiant les problèmes. Si le projet se poursuivait, la conception du vrai SI commencerait maintenant, lequel serait ensuite mis en œuvre et testé.</p>
+<p>L'étude de cas est très bien conçue, clairement compréhensible et pourtant suffisamment complexe pour que l'on doive réfléchir pour résoudre les tâches. J'ai pris plaisir à travailler sur cette étude de cas du point de vue d'un consultant et à apprendre les différents aspects organisationnels d'une entreprise autour de l'introduction d'un SI.</p>
+<h2>Historique des modifications</h2>
+<ul>
+<li>10/10/2022 : Première version</li>
+<li>13/10/2022 : Ajout du glossaire</li>
+<li>17/10/2022 : Finalisation du tâche</li>
+<li>18/10/2022 : Correction des petites erreurs</li>
+<li>24/11/2022 - Correction du glossaire (CFP et ESN)</li>
+</ul>
+<p><a href="../">&lt;-- Retour</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Google Apps Script</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Google Apps Script</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Savinien Laeuffer</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Laeuffer-Savinien/">Savinien Laeuffer</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Laeuffer-Savinien/mon/">MONs de Savinien</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Laeuffer-Savinien/mon/appsscript/">Google Apps Script</a>
+
+</div></div>
+
+
+
+
+<!-- début résumé -->
+<p>Google Apps Script</p>
+<!-- fin résumé -->
+<h2>Description</h2>
+<p>Le but de ce MON est de découvrir Google Apps Script, un outil/language de programmation développé par Google permettant d'executer des scripts entre les différents services proposés par Google. J'ai présenté ça sous la forme d'un tutoriel où j'explique différents outils de Google Apps Script , et j'essaye par la suite de les combiner entre eux pour en faire quelque chose d'utile et pratique.<br>
+Pour ce MON je me suis globalement servi de la documentation fournie par Google sur son service.<br>
+Apps Script apparait dans l'onglet Extension dans différents services proposés sur Google Drive (Sheets, Document)`</p>
+<h2>Afficher un Toast</h2>
+<p>Pour afficher un toast, ce petit composant qui apparait en bas à droite de l'écran pour afficher un message, on peut utiliser la commande <code>SpreadsheetApp.getActiveSpreadsheet().toast()</code> comme suit:</p>
+<pre><code>SpreadsheetApp.getActiveSpreadsheet().toast('Les mails ont bien été envoyés !', 'Confirmation', 3);
+</code></pre>
+<p>Le premier argument correspond au corps du toast, le 2ème au titre du toast, et le 3ème, au nombre de secondes d'affichage (mettre -1 pour ne pas fermer automatiquement la notification)</p>
+<h2>Envoyer un mail à une liste de diffusion</h2>
+<h5>a. La liste de diffusion et le message (Google Sheets)</h5>
+<p>Supposons que l'on a une liste de diffusion immense et on veut envoyer un message personnalisé à tous les destinataires en mentionnant à chacun leur prénom en début de mail.<br>
+Pour envoyer un mail à une liste de diffusion, il me faut tout d'abord une liste de diffusion que je crée comme ceci sur Google Sheets:</p>
+<figure>
+  <img src="../mon2sheets.png">
+  <figcaption>La liste de diffusion</figcaption>
+</figure>
+<p>4 Contacts suffisent pour notre exemple.</p>
+<p>Maintenant que nous avons la liste de diffusion, je crée mon message personnalisé dans une autre cellule:</p>
+<figure>
+  <img src="../mon2texte.png">
+  <figcaption>Le message</figcaption>
+</figure>
+<h5>b. Le script d'envoi</h5>
+<p>Maintenant que tout est prêt je peux commencer à écrire mon script. J'ouvre Appscript et j'entre le code suivant pour initialiser:</p>
+<pre><code>function MassEmails() {
+   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+   var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+   var template = sheet.getRange(&quot;E1&quot;).getValue();
+
+   Logger.log(range);
+}
+</code></pre>
+<p>Je sauvegarde mon code, et l'execute. A noter qu'il est important de renommer sa feuille &quot;listediffusion&quot; afin de pouvoir la trouver avec le script. Une fois exécuté, Google nous demande quelques autorisations que l'on passe sans problème. Des logs s'affichent:</p>
+<pre><code>00:36:02
+Infos
+[[zinedine.zidane@gmail.com, Zizou], [antoine.varnerot@centrale-marseille.fr, Raton], [yannick.noah@caramail.com, Yannick], [savinien.laeuffer@wanadoo.com, Moi]]
+</code></pre>
+<p>On a bien récupéré les informations dont nous avons besoin. La prochaine étape est de créer les différents mails en remplaçant les prénoms. On ajoute donc une boucle for comme ci-après:</p>
+<pre><code>for(var i=0; i&lt;range.length;i++) {
+  var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+}
+</code></pre>
+<p>En executant, on s'apperçoit dans les logs que le dernier message s'est affiché et correspond bien au dernier message.<br>
+On cherche maintenant à envoyer ces mails aux destinataires, on ajoute la ligne suivante dans la boucle for, juste après avoir défini <code>finalMessage</code>:</p>
+<pre><code>GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
+</code></pre>
+<p>Votre code devrait ressembler à ceci:</p>
+<pre><code>function MassEmails() {
+   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+   var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+   var template = sheet.getRange(&quot;E1&quot;).getValue();
+
+   for(var i=0; i&lt;range.length;i++) {
+     var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+     GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
+   }
+
+   //Logger.log(finalMessage);
+}
+</code></pre>
+<p>Il suffit d'exécuter, passer les autorisations, et le tour est joué !</p>
+<h2>Les déclencheurs simple</h2>
+<p>Les déclencheurs sont des fonctions qui s'exécutent automatiquement lorsque un évènement se produit (changement d'une cellule, ouverture d'un document).<br>
+Pour utiliser un déclencheur simple, il suffit de nommer sa fonction d'une certaine manière, voici les noms à donner et ce à quoi ils correspondent:</p>
+<ul>
+<li><code>onOpen(e)</code>: Se lance lorsqu'on ouvre un fichier Google</li>
+<li><code>onIntall(e)</code>: Se lance lorsqu'un module complémentaire est installé à partir de Google Docs, Sheets, Slides ou Forms.</li>
+<li><code>onEdit(e)</code>: Se lance lorsqu'on modifie une valeur dans un Google Sheets</li>
+<li><code>onSelectionChange(e)</code>: Se lance lorsque qu'un utilisateur modifie une certaine sélection dans un Google Sheets</li>
+<li><code>doGet(e)</code>: Se lance lorsque l'utilisateur visite une application web ou qu'un programme envoie une requête HTTP <code>GET</code> à une application web</li>
+<li><code>doPost(e)</code>: Même chose mais avec une requête <code>POST</code></li>
+</ul>
+<h2>Du HTML dans Apps Script</h2>
+<p>Il est aussi possible de créer et diffuser des fichiers HTML avec Apps Script. En cliquant sur le <code>+</code> pour ajouter un fichier, on nous propose de créer un fichier HTML. Créons donc un fichier <code>index.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;base target=&quot;_top&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello, World!
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Si on veut diffuser ce fichier HTML, le code doit inclure une fonction <code>doGet(e)</code> (voir partie précédente) et doit renvoyer un objet <code>HtmlOutput</code> comme suit:</p>
+<pre><code>function doGet() {
+  return HtmlService.createHtmlOutputFromFile('index');
+}
+</code></pre>
+<p>Si par exemple on souhaite afficher ce ficher HTML dans une boite de dialogue, on peut utiliser le code suivant:</p>
+<pre><code>function openDialog() {
+  var html = HtmlService.createHtmlOutputFromFile('index');
+  SpreadsheetApp.getUi()
+      .showModalDialog(html, 'Dialog title');
+}
+</code></pre>
+<h2>Créer un menu personnalisé dans Google Sheets</h2>
+<p>On souhaite créer un menu sur le Google Sheets à partir des fonctions que l'on a créé. Cela permet d'exécuter les scripts créés plus rapidement. En plus de cela, on souhaite que ce menu se crée dès que l'on ouvre la feuille de calcul. On va donc d'abord appeler notre fonction comme suit:</p>
+<pre><code>  onOpen(e) {
+
+  }
+</code></pre>
+<p>On ajoute la création d'un menu:</p>
+<pre><code>  onOpen(e) {
+    SpreadsheetApp.getUi()
+      .createMenu('⚙️ Outils MON2')
+      .addItem('Item A', 'itemA')
+      .addItem('Item B', 'itemB')
+      .addToUi();
+  }
+</code></pre>
+<p>On ajoute notre fonction pour envoyer des e-mails à une liste de diffusion et l'affichage de la boite de dialogue et on fait le lien entre les boutons du menu et les fonctions:</p>
+<pre><code>  onOpen(e) {
+    SpreadsheetApp.getUi()
+      .createMenu('⚙️ Outils MON2')
+      .addItem('Envoyer les e-mails', 'MassEmails')
+      .addItem('Diffuser HTML', 'openDialog')
+      .addToUi();
+  }
+
+  function MassEmails() {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+    var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+    var template = sheet.getRange(&quot;E1&quot;).getValue();
+
+    for(var i=0; i&lt;range.length;i++) {
+      var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+      GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
+    }
+  }
+
+  function openDialog() {
+    var html = HtmlService.createHtmlOutputFromFile('index');
+    SpreadsheetApp.getUi()
+        .showModalDialog(html, 'Dialog title');
+  }
+</code></pre>
+<p>Et pour finir on peut afficher un toast de confirmation pour dire que les e-mails sont bien envoyés:</p>
+<pre><code>  onOpen(e) {
+    SpreadsheetApp.getUi()
+      .createMenu('⚙️ Outils MON2')
+      .addItem('Envoyer les e-mails', 'MassEmails')
+      .addItem('Diffuser HTML', 'openDialog')
+      .addToUi();
+  }
+
+  function MassEmails() {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;listediffusion&quot;);
+    var range = sheet.getRange(&quot;A2:B5&quot;).getValues();
+    var template = sheet.getRange(&quot;E1&quot;).getValue();
+
+    for(var i=0; i&lt;range.length;i++) {
+      var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
+      GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
+    }
+
+    SpreadsheetApp.getActiveSpreadsheet().toast('Les mails ont bien été envoyés !', 'Confirmation', 3);
+  }
+
+  function openDialog() {
+    var html = HtmlService.createHtmlOutputFromFile('index');
+    SpreadsheetApp.getUi()
+        .showModalDialog(html, 'Dialog title');
+  }
+</code></pre>
+<p>Et voilà le résultat:</p>
+<figure>
+  <img src="../menu.png">
+  <figcaption>Le message</figcaption>
+</figure>
+<p>Je vais éviter de lancer le programme d'envoi de mails pour pas que <code>zinedine.zidane@gmail.com</code> reçoive un message bizarre, mais en ce qui concerne la boite de dialogue à partir du fichier <code>index.html</code> on obient cela:</p>
+<figure>
+  <img src="../dialog.png">
+  <figcaption>Le message</figcaption>
+</figure>
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

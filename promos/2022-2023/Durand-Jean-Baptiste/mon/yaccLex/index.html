@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Programmes binaires et Compilateurs</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Programmes binaires et Compilateurs</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Programmes Binaires</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Compilateur</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Yacc et Lex</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">C</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Jean-Baptiste Durand</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Durand-Jean-Baptiste/">Jean-Baptiste Durand</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Durand-Jean-Baptiste/mon/">MON Jean-Baptiste</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Durand-Jean-Baptiste/mon/yaccLex/">Programmes binaires et Compilateurs</a>
+
+</div></div>
+
+
+
+
+<!-- début résumé -->
+<p>Comment fonctionne le language machine - binaire - et comment créer un compilateur de language informatique.</p>
+<!-- fin résumé -->
+<h2 id="toc"> Table des matières </h2>
+<ul>
+<li><a href="#toc">Table des matières</a></li>
+<li><a href="#h1">Language Machine</a>
+<ul>
+<li><a href="#h1-1">Qu'est ce que le language machine ?</a></li>
+<li><a href="#h1-2">Lire un fichier désassemblé</a></li>
+</ul>
+</li>
+<li><a href="#h2">Compilateur de language</a>
+<ul>
+<li><a href="#h2-1">Lex</a></li>
+<li><a href="#h2-2">Yacc</a></li>
+<li><a href="#h2-3">Mes difficultés pour faire de l'algorithmie avancée</a></li>
+<li><a href="#h2-4">Solution à ces problèmes</a></li>
+</ul>
+</li>
+<li><a href="#liens">Liens Utiles</a></li>
+</ul>
+<h2 id="h1"> Language Machine </h2>
+<h3 id="h1-1"> Qu'est ce que le language machine ? </h3>
+<p>Le language machine est un <strong>language informatique reconnu par l'ordinateur</strong> et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).<br>
+Par exemple, le C est un language informatique compilé, et Python est un language interprété.</p>
+<img src="../Image/differencePyC.jpg" alt="Arbre de calcul" style="height: 400px; margin: 0 auto; border: 0">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Avantage</th>
+<th>Inconvénient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language Interprété</td>
+<td>Est <strong>cross-platform</strong>, fonctionne pour n'importe quel appareil</td>
+<td>Toute personne voulant executer le code doit avoir l'<strong>interpréteur</strong> sur sa machine</td>
+</tr>
+<tr>
+<td>Language Compilé</td>
+<td>Nécessite d'utiliser le compilateur une <strong>unique fois</strong></td>
+<td>Un fichier compilé est <strong>spécifique à une distribution</strong>, un fichier Linux est différent d'un Windows</td>
+</tr>
+</tbody>
+</table>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Un language compilé peut être lu, pour comprendre ce que fait un programme avant de l'executer, ce qui peut être une bonne idée si le programme compilé est un virus.</p>
+</div></div>
+<p>Sur Linux, il est possible de récupérer le code machine d'un fichier compilé grâce à la commande <strong>objdump</strong> (pas disponible par défaut)</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">objdump <span class="token parameter variable">-d</span> fichierCompilé <span class="token operator">></span> languageMachine.txt
+</code></pre>
+<p>Il existe aussi un logiciel permettant de décompiler des fichiers : <a href="https://ghidra-sre.org/">Ghidra</a>.<br>
+Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outil permettant de comprendre comment fonctionne le fichier compilé.</p>
+<p>Voilà à quoi peut ressembler une partie de code désassemblée. (Ici seulement la partie principal du code)</p>
+<pre><code>0000000000001149 &lt;main&gt;:
+    1149:       f3 0f 1e fa             endbr64 
+    114d:       55                      push   %rbp
+    114e:       48 89 e5                mov    %rsp,%rbp
+    1151:       48 83 ec 10             sub    $0x10,%rsp
+    1155:       c7 45 f4 02 00 00 00    movl   $0x2,-0xc(%rbp)
+    115c:       c7 45 f8 05 00 00 00    movl   $0x5,-0x8(%rbp)
+    1163:       8b 55 f4                mov    -0xc(%rbp),%edx
+    1166:       8b 45 f8                mov    -0x8(%rbp),%eax
+    1169:       01 d0                   add    %edx,%eax
+    116b:       89 45 fc                mov    %eax,-0x4(%rbp)
+    116e:       8b 45 fc                mov    -0x4(%rbp),%eax
+    1171:       89 c6                   mov    %eax,%esi
+    1173:       48 8d 05 8a 0e 00 00    lea    0xe8a(%rip),%rax        # 2004 &lt;_IO_stdin_used+0x4&gt;
+    117a:       48 89 c7                mov    %rax,%rdi
+    117d:       b8 00 00 00 00          mov    $0x0,%eax
+    1182:       e8 c9 fe ff ff          call   1050 &lt;printf@plt&gt;
+    1187:       b8 00 00 00 00          mov    $0x0,%eax
+    118c:       c9                      leave  
+    118d:       c3                      ret
+</code></pre>
+<h3 id="h1-2"> Lire un fichier désassemblé </h3>
+<ul>
+<li>La première colonne permet de connaître la <strong>position</strong> (en hexadécimal) <strong>de l'instruction</strong> dans le fichier compilé, est utile pour pouvoir comprendre quelle partie du code est exécutée lorsqu'il y a les fonctions <strong>call</strong> ou <strong>jmp</strong>.</li>
+<li>La 2e colonne est l'<strong>écriture hexadécimale des instructions</strong> à effectuer, est la traduction exacte du code binaire de l’exécutable. Cette partie du code n'est pas vraiment exploitable.</li>
+<li>La 3e colonne est la <strong>traduction fonctionnelle</strong> de ces instructions avec les paramètres associés.</li>
+</ul>
+<p>L'exemple précédent est le language machine associé à cette fonction écrite en C.</p>
+<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> c<span class="token punctuation">;</span>
+
+    c<span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Voici quelques fonction qui permettent de comprendre le fonctionnement global du code.</p>
+<ul>
+<li><strong>mov</strong> et <strong>movl</strong></li>
+</ul>
+<p>Permettent de stocker en mémoire une valeur.</p>
+<p><strong>mov</strong> quand cette valeur était déjà stockée ailleurs</p>
+<p><strong>movl</strong> quand c'est une nouvelle valeur.</p>
+<ul>
+<li><strong>add</strong></li>
+</ul>
+<p>Permet d'ajouter 2 valeurs</p>
+<ul>
+<li><strong>call</strong></li>
+</ul>
+<p>Permet d'appeler la fonction située à l'emplacement mémoire associé</p>
+<h3 id="h1-3">Registre de mémoire </h3>
+<p>Il y a 4 <strong>registres de travail</strong> : <em>eax</em>, <em>ebx</em>, <em>ecx</em> et <em>edx</em>, ayant 32 bits chacun.</p>
+<p>À ces 4 registres, s'ajoute 4 autres registres :</p>
+<ul>
+<li><em>eip</em>, pointeur d'instruction, il contient le numéro de la ligne en cours d'execution dans le programme.</li>
+<li><em>esp</em>, pointeur de tête de pile</li>
+<li><em>ebp</em>, pointeur de pile</li>
+<li><em>flags</em>, permettant de contenir le résultat d'une opération qui vient d'être exécutée</li>
+</ul>
+<p>Dans l'exemple précédent, on peut voir notamment <strong>rax</strong> et <strong>rbp</strong>, ils fonctionnent de la même façon que respectivement <strong>eax</strong> et <strong>ebp</strong>, je ne sais pas quel est la différence entre les 2.</p>
+<h2 id="h2"> Compilateur de language </h2>
+<p>L'objectif est de créer sont propre language informatique et de créer le compilateur associé.</p>
+<p>J'ai utilisé les 2 technologies <strong>yacc</strong> et <strong>lex</strong>, qui permettent de créer de manière basique, un compilateur, en C.</p>
+<h3 id="h2-1"> Lex </h3>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Lex est un générateur d’analyseur lexical, c'est à dire qu'il reconnaît les expressions régulières et peut leurs associer des actions.</p>
+</div></div>
+<p>exemple :</p>
+<pre><code>[0-9]+          {yylval.num = atoi(yytext); return NUMBER;}
+</code></pre>
+<p><strong>[0-9]</strong> est une expression régulière permettant de reconnaître les caractères '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9'<br>
+<strong>+</strong> permet de trouver toutes expression respectant au moins une fois ou plus l'expression juste avant.<br>
+<strong>[0-9]+</strong> reconnaît tous les nombres, ayant 1 ou plusieurs chiffres.</p>
+<p>Donc l'exemple va reconnaître les nombres et stocker leurs valeurs</p>
+<h3 id="h2-2"> Yacc </h3>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Yacc est un générateur d’analyseur syntaxique, c'est à dire qu'il va reconstruire une syntaxe à partir de plusieurs éléments de cette syntaxe.</p>
+</div></div>
+<p>exemple :</p>
+<pre><code>Expression:Expression'*'Expression      {$$=$1*$3;}
+    |Expression'/'Expression            {$$=$1/$3;}
+    |Expression'+'Expression            {$$=$1+$3;}
+    |Expression'-'Expression            {$$=$1-$3;}
+    |Expression'%'Expression            {$$=$1%$3;}
+    |'('Expression')'                   {$$=$2;}
+    |'-' Expression %prec UMINUS        {$$=-$2;}
+    | NUMBER                            {$$=$1;}
+;
+</code></pre>
+<p>On définit qu'un calcul peut être l'addition de 2 calculs, la différence entre 2 calculs ou un nombre. Ce qui permet de reconstruire tous les calculs possibles entre des nombres et en faisant des additions et des soustractions.</p>
+<p>L'objectif va être de construire un arbre pour faire les opérations.<br>
+Par exemple pour le calcul suivant <em><em>12+4</em>(7+2)</em>*, l'arbre suivant sera généré :</p>
+<img src="../Image/treeYacc.jpg" alt="Arbre de calcul" style="height: 200px; margin: 0 auto; border: 0">
+<p>Cet arbre est ensuite parcouru en Postfixe, ce qui donne :</p>
+<p><strong>12 4 7 2 + * +</strong></p>
+<p>Cette écriture est très pratique pour calculer, si on utilise une <strong>pile LIFO</strong> (ce qui est le cas dans le language machine).</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour lire ce genre de calcul, on lit le calcul de la gauche vers la droite, si on a un nombre, on empile ce nombre, si on a un opérateur, on dépile les 2 dernière valeurs, on effectue le calcul, puis on empile le résultat.</p>
+</div></div>
+<p>Ici tous les opérateurs se sont retrouvés à la fin, mais on peut tout à fait avoir ce genre d'expression <strong>12 5 - 4 7 2 + * +</strong></p>
+<h3 id="h2-3"> Mes difficultés pour faire de l'algorithmie avancée </h3>
+<p>J'avais d'abord envie de faire les fonctions basiques de programmation (<em>if</em>, <em>for</em>, <em>while</em>)</p>
+<p>Le principal problème avec YACC, c'est que les feuilles de l'arbre générées sont exécutées avant les racines (c'est lié à la lecture Postfixe de l'arbre).</p>
+<p>Voulant créer une fonction <em>if</em>, j'ai naïvement écrit dans mon fichier yacc:</p>
+<pre><code>ifFunction : IF Condition action ELSE action    {if($2){printf(&quot;Condition passée \n&quot;);}else{printf(&quot;Possibilité par défaut \n&quot;);};}
+| IF Condition action                           {if($2){printf(&quot;Condition passée \n&quot;);};}
+</code></pre>
+<p>et en executant une fonction <em>if</em> :</p>
+<pre><code>if 1&gt;0 {print(True);} else print(False);
+</code></pre>
+<p>J'obtiens comme résultat :</p>
+<pre><code>Booleen : 1
+Booleen : 0
+Condition passée
+</code></pre>
+<p>Les deux actions - dans le cas où la condition est vraie ou fausse - sont exécutées.</p>
+<p>Il n'est pas possible de bloquer l'execution d'une action, ce qui est embêtant pour une fonction if.</p>
+<p>Ensuite, il n'est pas possible d'aller à un endroit précis du code, rendant les boucles <em>for</em> et <em>while</em> impossible.</p>
+<p>Dans le language machine, une boucle while s'execute de la manière suivante :</p>
+<pre><code>0   condition
+1   jmp 4
+2   code de la boucle
+3   jmp 0
+4   code après la boucle
+</code></pre>
+<p>Il est donc primordial de pouvoir sauter d'une ligne d'exécution à une autre pour faire des boucles.</p>
+<h3 id="h2-4">Solution à ces problèmes </h3>
+<p>Il n'est pas impossible de contourner ces problèmes, pour cela il faut manuellement reconstruire les lignes d'executions grace au parseur de yacc et ensuite executer le code.<br>
+Voici un exemple d'une personne ayant réalisé cela : <a href="https://github.com/chetnasureka/if-else-and-while-compiler-for-C-in-Yacc/blob/master/parser.y">compiler if and while</a></p>
+<h2 id="liens">Liens Utiles </h2>
+<p><strong>Language machine</strong></p>
+<p><a href="https://igm.univ-mlv.fr/~giraudo/Old/Enseignements/2016-2017/AO/Cours_impr_4.pdf">Cours architecture des ordinateurs</a></p>
+<p><a href="https://docplayer.fr/12446949-Assembleur-x86-p-ezequel.html">Cours d'assembleur</a></p>
+<p><strong>Désassembleur</strong></p>
+<p><a href="https://ghidra-sre.org/">Ghidra</a></p>
+<p><a href="https://man7.org/linux/man-pages/man1/objdump.1.html">Documentation objdump</a></p>
+<p><strong>Yacc et Lex</strong></p>
+<p><a href="https://pageperso.lis-lab.fr/alexis.nasr/Ens/Compilation/cmX_lex_yacc.pdf">Cours 1</a></p>
+<p><a href="https://lafibre.info/images/doc/201705_lex_yacc_tutorial.pdf">Cours 2</a></p>
+<p><a href="https://www.ibm.com/docs/en/aix/7.2?topic=information-yacc-grammar-file-declarations">Header Yacc</a></p>
+<p><a href="https://www.ibm.com/docs/en/zos/2.4.0?topic=section-precedence-associativity">Complément Header Yacc</a></p>
+<p><a href="https://github.com/chetnasureka/if-else-and-while-compiler-for-C-in-Yacc/blob/master/parser.y">Exemple avec boucle if et while</a></p>
+<p><strong>Mon projet</strong></p>
+<p><a href="https://github.com/Jean-Baptiste-DP/Compiler-Yacc-Lex">GitHub</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
