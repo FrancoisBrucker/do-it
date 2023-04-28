@@ -5,10 +5,10 @@ title: "Programmation objet en Python"
 authors:
   - Nicolas BERT
 
+date: 2022-10-19
+
 tags:
   - 'temps 1'
-
-date: 2022-10-19
 ---
 
 <!-- début résumé -->

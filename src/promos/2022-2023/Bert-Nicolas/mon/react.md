@@ -5,10 +5,10 @@ title: "React intermédiaire"
 authors:
   - Nicolas BERT
 
+date: 2023-03-23
+
 tags:
   - 'temps 3'
-
-date: 2023-03-23
 ---
 
 <!-- début résumé -->

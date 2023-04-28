@@ -5,10 +5,10 @@ title: "Les architectures microservices"
 authors:
   - Nicolas BERT
 
+date: 2023-01-04
+
 tags:
   - 'temps 2'
-
-date: 2023-01-04
 ---
 
 <!-- début résumé -->

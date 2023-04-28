@@ -5,11 +5,11 @@ title: "Modification du site de Do-It"
 authors:
   - Nicolas BERT
 
+date: 2023-04-05
+
 tags:
   - 'temps 3'
   - 'eleventy'
-
-date: 2023-04-05
 ---
 
 <!-- début résumé -->

@@ -5,10 +5,10 @@ title: "GraphQL"
 authors:
   - Nicolas BERT
 
+date: 2023-01-25
+
 tags:
   - 'temps 2'
-
-date: 2023-01-25
 ---
 
 <!-- début résumé -->
