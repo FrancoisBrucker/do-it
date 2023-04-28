@@ -7,7 +7,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const markdownConfig = require("./config/markdown")
 const assetsConfig = require("./config/assets")
 const searchConfig = require("./config/search")
-const collectionsConfig = require("./config/collections")
+const collectionsConfig = require("./config/filters")
 
 
 module.exports = function (eleventyConfig) {

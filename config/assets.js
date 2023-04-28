@@ -1,5 +1,7 @@
 module.exports = function (eleventyConfig) {
 
+  eleventyConfig.addPlugin(require("eleventy-postcss-extension"));
+
   // garder le node_modules des assets, ignorer les autres
   eleventyConfig.addPassthroughCopy("src/assets/node_modules");
   eleventyConfig.ignores.add("src/!(assets)/**/node_modules");
@@ -8,9 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{jpg,png,ico,pdf}");
   
   // data
-  eleventyConfig.addPassthroughCopy("src/**/{cours,enseignements,tutoriels}/**/*.{txt,edi,csv,json,pdf}");
-
-  eleventyConfig.addPlugin(require("eleventy-postcss-extension"));
+  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{txt,edi,csv,json,pdf}");
 
 };
 

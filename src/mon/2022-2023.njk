@@ -34,38 +34,31 @@ tags: ['index']
     </ul>
 </div>
 
-{% for temps in [1, 2, 3] %}
-<div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
-    <div class="text-3xl mb-3">
+{% for temps in[1, 2, 3] %}
+    <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
+        <div class="text-3xl mb-3">
         Temps {{ temps }}
-    </div>
-    <ul>
-        {% set types = [promo] %}
-        {% set types = (types.push('temps ' + temps), types) %}
-        
-        {% for order in [1, 2] %}
+        </div>
+        <ul>
+            {% set types = [promo] %}
+            {% set types = (types.push('temps ' + temps), types) %}
 
-        <li>{{ temps }}.{{ order }}
-            <ul>
-                {% for cours in collections.MON | sort | reverse %}
-                    {% set c = 0 %}
-                    {% for tag in cours.data.tags %}
-                        {% for type in types %}
-                            {% if tag == type %}
-                                {% set c = c + 1 %}
-                            {% endif %}
-                        {% endfor %}
+            {% for cours in collections.MON | sort %}
+                {% set c = 0 %}
+                {% for tag in cours.data.tags %}
+                    {% for type in types %}
+                        {% if tag == type %}
+                            {% set c = c + 1 %}
+                        {% endif %}
                     {% endfor %}
-                    {% if cours.data.order == order and c == types.length %}
-                        <li>
-                            <a href="{{ cours.url  }}">{{cours.data.title}}</a> ({{cours.data.authors}})
+                {% endfor %}
+                {% if c == types.length %}
+                    <li>
+                        <a href="{{ cours.url  }}">{{cours.data.title}}</a> ({{cours.data.authors}})
                         </li>
 
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 {% endfor %}

@@ -1,0 +1,25 @@
+---
+layout: layout/base.njk
+
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{ page.url }}"
+    title: "{{ title | safe }}"
+    parent: "{{ '../' | siteUrl(page.url) }}"
+---
+
+<h1 class="text-5xl pt-4 pb-6">{{ title }}</h1>
+
+{{ content | safe }}
+
+<article>
+    <ul>
+        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) | reverse %}
+            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</article>
+
+

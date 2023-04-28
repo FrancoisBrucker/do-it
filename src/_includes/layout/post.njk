@@ -1,5 +1,6 @@
 ---
 layout: layout/base.njk
+
 ---
 
 <article class="relative">
@@ -60,9 +61,14 @@ layout: layout/base.njk
 {% if eleventyNavigation and eleventyNavigation.key %}
     {% chemin %}
     {%- for page in collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true, allowMissing: false  }) -%}
-        {%- if not loop.first -%}
-        <span class="px-1">/</span>{%- endif -%}
-        <a href="{{ page.url  }}">{{page.title}}</a>
+
+        {%- if loop.index > 2 -%}
+            <span class="px-1">/</span>
+        {%- endif -%}
+
+        {%- if loop.index > 1 -%}
+            <a href="{{ page.url  }}">{{page.title}}</a>
+        {%- endif -%}
     {%- endfor -%}
     {% endchemin %}
 {% endif %}

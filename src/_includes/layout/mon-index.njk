@@ -1,0 +1,15 @@
+---
+layout: layout/post.njk
+
+tags: 
+    - "MON"
+    - "index"
+
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{ page.url }}"
+    title: "{{ title | safe }}"
+    parent: "{{ '../' | siteUrl(page.url) }}"
+---
+
+{{ content | safe }}
