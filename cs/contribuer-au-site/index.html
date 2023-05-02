@@ -59,6 +59,8 @@
             
 <article class="relative">
 <h1 class="mb-1">Contribuer au site</h1>
+
+
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -97,9 +99,6 @@
 
 
 
-<!-- début résumé -->
-<p>Comment contribuer au site <code>Do_it</code>.</p>
-<!-- fin résumé -->
 <p>Le site do-it est un site constitué de fichiers écrit au format <a href="https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/">Markdown</a>. Y contribuer est très simple, il suffit de suivre ce document.</p>
 <h2>Architecture d'un post</h2>
 <p>Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site">https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site</a></p>
@@ -161,18 +160,14 @@ layout: layout/post.njk
 title: "Contribuer au site"
 authors:
   - François Brucker
+résumé: "Comment contribuer au site do-it."
 
-tags: ['ct']
+tags: 
+  - 'ct'
 ---
 </code></pre>
 <h3>Résumé</h3>
-<p>Juste en dessous de l'entête.</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><!-- début résumé -->
-
-Comment contribuer au site do-it.
-
-<!-- fin résumé -->
-</code></pre>
+<p>Dans l'entête.</p>
 <h3>corps du texte</h3>
 <p>Le reste du post, écrit en markdown. Le titre est déjà mis, vos différentes parties sont donc de niveau <code class="language-">##</code></p>
 <h3>les ressources</h3>

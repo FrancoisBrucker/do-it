@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>InstantBuddy - Temps 3</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">InstantBuddy - Temps 3</h1>
+
+
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Thibault Adelain</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+<p>Github: <a href="https://github.com/ThibaultAdelain/InstantBuddyNode">https://github.com/ThibaultAdelain/InstantBuddyNode</a></p>
+<p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>
+<h2>Temps 3</h2>
+<h3>Déploiement avec Docker</h3>
+<h4>Déroulement</h4>
+<p>Contrairement au déploiement précédent, j'ai décidé d'opter pour une solution de déploiement avec conteneur <a href="https://docker.com/">Docker</a> pour apprendre à manipuler l'outil. J'ai utilisé la <a href="https://docs.docker.com/get-started/">documentation</a> officielle en suivant le tuto, ainsi que le <a href="https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/">MON de Tuncay</a>.</p>
+<p>En adaptant le tuto, pour bien comprendre le fonctionnement de Docker, j'ai d'abord créer des containers séparés pour mon front et mon back. Voici un exemple de dockerfile pour mon backend :</p>
+<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:16-alpine</span>
+
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> [<span class="token string">"package.json"</span>, <span class="token string">"package-lock.json*"</span>, <span class="token string">"./"</span>]</span>
+
+<span class="token instruction"><span class="token keyword">RUN</span> npm install</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> . .</span>
+
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 5000</span>
+
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>,<span class="token string">"start"</span> ]</span>
+</code></pre>
+<p>Ensuite, j'ai essayé de lier tous les containers avec docker-compose. Voici le fichier docker-compose que j'ai utilisé :</p>
+<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">app</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> ibback
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">'5000:5000'</span>
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"mysql"</span>
+  <span class="token key atrule">mysql</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql<span class="token punctuation">:</span><span class="token number">8.0</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ib_db<span class="token punctuation">:</span>/var/lib/mysql
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">'3306:3306'</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">MYSQL_ROOT_PASSWORD</span><span class="token punctuation">:</span> password
+      <span class="token key atrule">MYSQL_DATABASE</span><span class="token punctuation">:</span> INSTANT_BUDDY_DB
+
+  <span class="token key atrule">front</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> ibfront
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">'3000:3000'</span>
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"app"</span>
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ib_db</span><span class="token punctuation">:</span>
+</code></pre>
+<p>Au début, j'ai eu des problèmes lors de la connexion du front et du back, et du back avec la bdd. En fait, la raison pour laquelle la connexion ne se faisait pas est que le code de l'application responsable de lier le front / back et le back / bdd était écrite pour localhost. J'ai donc dû modifier localhost par l'adresse ip local du container en question. Par exemple pour la liaison back / bdd, dans le code de l'app, au lieu de <code>host: 'localhost'</code> :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span>
+    <span class="token string">'INSTANT_BUDDY_DB'</span><span class="token punctuation">,</span>
+    <span class="token string">'username'</span><span class="token punctuation">,</span>
+    <span class="token string">'password'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'172.20.0.2'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">dialect</span><span class="token operator">:</span> <span class="token string">'mysql'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>Pour avoir des informations sur un container (par exemple l'adresse ip):</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> inspect <span class="token operator">&lt;</span>container<span class="token operator">></span>
+</code></pre>
+<p>Pour accéder à un container en cli :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">bash</span> 
+</code></pre>
+<p>ou</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">sh</span> 
+</code></pre>
+<p>Après ces modifications, l'application a bien fonctionnée.</p>
+<h3>Mon site sur l'ovh</h3>
+<p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>
+<p>Il faut suivre le lien <a href="http://ngrok.io">ngrok.io</a> affiché sur la page d'accueil pour pouvoir utiliser la fonctionnalité principale du site. Avec la version gratuite de ngrok, vous ne pouvez pas avoir votre propre nom de domaine.</p>
+<p>Par ce qu'une image vaut mille mots :</p>
+<p><img src="../temps2/homePage.png" alt="homePage"></p>
+<h4>Tuto</h4>
+<ul>
+<li>MON de Tuncay : <a href="https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/">https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/</a>.</li>
+<li>Documentation + tuto Docker : <a href="https://docs.docker.com/get-started/">https://docs.docker.com/get-started/</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

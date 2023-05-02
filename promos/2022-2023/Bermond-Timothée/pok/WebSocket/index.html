@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Site collaboratif grâce à WebSocket</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Site collaboratif grâce à WebSocket</h1>
+
+
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tag : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Timothée Bermond</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+<!-- Début Résumé -->
+<p>Amélioration de mon site pour compter les points au Yams du temps du 2.<br>
+Avec notamment l'utilisation de WebSocket afin de rendre collaborative les pages de score.</p>
+<!-- Fin Résumé -->
+<h2>Sprint 1</h2>
+<p>Pour le 1er sprint je prévois de :</p>
+<ul>
+<li>Me former sur WebSocket grâce au <a href="../../../../mon/TB/Mes_MON/WebSockets">MON 3.1</a>.</li>
+<li>Faire une 1ère version du site où tout le monde a accès à la même feuille de score.</li>
+</ul>
+<p>Durant ce sprint, j'ai eu le temps de me former sur les WebSocket.</p>
+<p>J'ai également pu développer la partie collaborative de mon site. Pour ce faire, à chaque changement sur ma page je récupère l'id ainsi que la valeur de l'élément qui a changé puis j'envoie tout ça au serveur. Côté serveur je créé un array contenant les points de tous les joueurs et le modifie à chaque changement. Puis je recalcule la somme des points de chaque joueur. Enfin je renvoie les points actualisé à toutes les clients connectés et modifie l'affichage afin qu'il soit cohérent avec les points de chaque joueur.</p>
+<p>Les principaux problèmes que j'ai rencontré durant ce sprint étaient principalement des petites erreurs de précision ou de cas particuliers.</p>
+<p>Le site est dispo <a href="http://node.poireau.ovh1.ec-m.fr/static/index.html">ici</a>.</p>
+<p>Et le code <a href="https://github.com/Timothee-Bermond/yams">ici</a>.</p>
+<p>Pour le prochain sprint je vais essayer de créer des parties séparés afin que deux groupes qui se connectent en même temps puissent chacun avoir leurs parties. Je ne sais pas encore exactement comment je vais faire.</p>
+<h2>Objectifs sprint 2</h2>
+<p>Pour le 2nd sprint je prévois de :</p>
+<ul>
+<li>Finir mon site en ajoutant la possibilité de créer ou rejoindre des parties afin de pouvoir plusieurs parties différentes.</li>
+<li>Si j'ai encore du temps mettre en place la possibilité de directement jouer sur le site.</li>
+</ul>
+<h2>Sprint 2</h2>
+<p>Durant ce sprint j'ai mis en place la possibilité de créer ou de rejoindre des parties. Pour cela j'ai ajouté deux pages :</p>
+<ul>
+<li>une page permettant de choisir si l'on veut créer ou rejoindre une partie</li>
+<li>une page permettant de rejoindre une partie déjà créée.</li>
+</ul>
+<p>Mettre en place la possibilité de créer ou de rejoindre des parties a été bien plus compliqué que ce que je pensais.<br>
+En effet, il faut que je stock les points de chaque parties différement et que j'actualise les scores pour les joueurs faisant partie de la partie.</p>
+<p>Ma 1ère idée a été d'utiliser une base de données. À chaque création de nouvelle partie, je créé une nouvelle partie dans la bd et j'enregistre l'id de la partie dans les cookies. Sauf que je me suis retrouvé avec le même problème que dans le POK 2 avec des cookies qui s'enregistrent pas sans que je comprenne pourquoi.</p>
+<p>Ma seconde idée a été de créer une liste contenant tous les points avec comme index l'indice de chaque de partie : à chaque création de nouvelle partie je push une liste de points vierge et l'id de la partie est la longueur de la liste des parties. Et d'enregistrer l'id dans les cookies puis d'y faire appel à chaque changement dans une partie.</p>
+<p>C'est finalement cette idée que j'ai mise en place non sans mal.</p>
+<p>En effet, lorsque je modifiais le score d'une partie cela modifiais le score pour toutes les parties. Il m'a fallu du temps pour comprendre d'où ça venait. Au début je pensais que c'était un problème avec les cookies mais non enfait.</p>
+<p>Le problème venait du fait que je pushais mon template de la liste de points dans la liste des parties sauf que quand je modifiais les points pour une partie ça modifiait directement le template et donc les points de toutes les parties et pas uniquement ceux de la partie modifiée.<br>
+J'ai réglé ce problème avec ces deux lignes :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+list_parties<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>J'ai également eu un problème car je voulais récupérer l'id de la partie dans les cookies lors de l'échange websocket mais je n'ai pas trouvé comment faire. J'avais besoin d'un fetch afin de récupérer les cookies or webscoket n'utilise pas la méthode fetch et malgré de longues recherches je n'ai pas trouvé comment les récupérer. Mais j'ai assez facilement contourné ce problème en envoyant l'id avec la méthode <em>emit</em>.</p>
+<p>Enfin il fallait que j'envoie mes scores actualisés aux clients et qu'il y ait uniquement les clients jouant la partie modifiée qui prennent en compte ces points. J'ai résolu cela avec un simple <em>if</em> sur l'id de la partie.</p>
+<p>Je pense que le site est encore améliorable. Notamment la manière de stocker les points qui n'est pas optimale surtout si beaucoup de parties sont créées.</p>
+<p>Finalement je n'ai pas eu le temps de mettre en place la possibilité de directement jouer sur le site.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
