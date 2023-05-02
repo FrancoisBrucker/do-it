@@ -1,12 +1,10 @@
 ---
-layout: layout/post.njk
+layout: layout/pok-index.njk
 
 title: "Jeu Mots croisés"
 authors:
   - Nicolas BERT
   - Jean-Baptiste DURAND
-
-tags: ['index']
 ---
 
 <!-- début résumé -->
@@ -34,15 +32,15 @@ Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 ## Gestion de projet
 
 <div class="allButtonGestionProjet">
-  <a href="./gestionProjet/temps1" class="buttonGestionProjet">
+  <a href="./temps1" class="buttonGestionProjet">
     <span><b class="hoverUnderline">Temps 1 :</b> Un site chez moi</span>
   </a>
 
-  <a href="./gestionProjet/temps2" class="buttonGestionProjet">
+  <a href="./temps2" class="buttonGestionProjet">
     <span><b class="hoverUnderline">Temps 2 :</b> Serveur distant</span>
   </a>
 
-  <a href="./gestionProjet/temps3" class="buttonGestionProjet">
+  <a href="./temps3" class="buttonGestionProjet">
     <span><b class="hoverUnderline">Temps 3 :</b> Amélioration continue</span>
   </a>
 </div>

@@ -90,12 +90,12 @@ layout: layout/post.njk
 title: "Mon super MON qui déchire"
 authors:
   - François BRUCKER
-tags: ['mon', 'html', 'css']
----
+résumé: "Découverte de HTML & CSS"
 
-<!-- début résumé -->
-Découverte de HTML & CSS
-<!-- fin résumé -->
+tags: 
+  - 'html'
+  - 'css'
+---
 
 C'est trop cool !
 ```
@@ -117,12 +117,17 @@ layout: layout/post.njk
 title: "Mon super POK qui claque"
 authors:
   - François BRUCKER
-tags: ['pok', 'html', 'css']
----
+résumé: "Découverte de HTML & CSS"
 
-<!-- début résumé -->
-Découverte de HTML & CSS
-<!-- fin résumé -->
+tags: 
+  - 'html'
+  - 'css'
+tags: 
+  - 'html'
+  - 'css'
+
+
+---
 
 C'est trop cool !
 ```
@@ -146,13 +151,11 @@ authors:
   - François BRUCKER
   - Laetitia PIET
   - Florian MAGNANI
-
-tags: ['projet']
+résumé: "Le meilleur des projets"
+tags: 
+   - 'projet'
 ---
 
-<!-- début résumé -->
-Le meilleur des projets
-<!-- fin résumé -->
 
 On a bien travaillé !
 ```

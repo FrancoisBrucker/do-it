@@ -4,7 +4,12 @@ layout: layout/fiche.njk
 title: "Gordon ZOLA"
 authors:
     - "Gordon Zola"
+
+tags:
+    - "template"
 ---
+
+Étudiant fictif, utilisé pour le templating de nouveaux élèves.
 
 ## POK & MON
 

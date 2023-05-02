@@ -8,12 +8,6 @@ authors:
 tags: ['ct']
 ---
 
-<!-- début résumé -->
-
-Comment contribuer au site `Do_it`.
-
-<!-- fin résumé -->
-
 Le site do-it est un site constitué de fichiers écrit au format [Markdown](https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/). Y contribuer est très simple, il suffit de suivre ce document.
 
 ## Architecture d'un post
@@ -95,22 +89,17 @@ layout: layout/post.njk
 title: "Contribuer au site"
 authors:
   - François Brucker
+résumé: "Comment contribuer au site do-it."
 
-tags: ['ct']
+tags: 
+  - 'ct'
 ---
 ```
 
 ### Résumé
 
-Juste en dessous de l'entête.
+Dans l'entête.
 
-```text
-<!-- début résumé -->
-
-Comment contribuer au site do-it.
-
-<!-- fin résumé -->
-```
 
 ### corps du texte
 

@@ -8,12 +8,11 @@ authors:
   - Jean-Baptiste DURAND
   - Thomas PONT
 
-tags: ['projet']
+tags: 
+  - 'projet'
+résumé: "La pixel war centralienne organisée autour d'un écran comme interface d'entrée.
+"
 ---
-
-<!-- début résumé -->
-La pixel war centralienne organisée autour d'un écran comme interface d'entrée.
-<!-- fin résumé -->
 
 Le projet a pour but de recréer la [pixel war](https://www.reddit.com/r/place/?cx=1461&cy=200&px=199&ts=1649112460185) de reddit.
 

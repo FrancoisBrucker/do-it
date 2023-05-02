@@ -8,11 +8,6 @@ authors:
 tags: ['ct']
 ---
 
-<!-- début résumé -->
-
-Cours introductifs à do-it
-
-<!-- fin résumé -->
 
 ## Systèmes d'information
 
