@@ -16,3 +16,4 @@ eleventyNavigation:
 
 ## Projet
 
+[Street Workout Finder](../../../projets/2022-2023/SWF/)
