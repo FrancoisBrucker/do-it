@@ -10,10 +10,5 @@ date: 1971-03-01
 tags: 
   - "temps 3"
 
+résumé: Un POK traitant d'un sujet.
 ---
-
-<!-- début résumé -->
-
-Un POK traitant d'un sujet.
-
-<!-- fin résumé -->

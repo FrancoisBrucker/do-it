@@ -9,10 +9,5 @@ date: 1971-03-01
 tags: 
   - "temps 3"
 
+résumé: "Un MON traitant d'un sujet."
 ---
-
-<!-- début résumé -->
-
-Un MON traitant d'un sujet.
-
-<!-- fin résumé -->

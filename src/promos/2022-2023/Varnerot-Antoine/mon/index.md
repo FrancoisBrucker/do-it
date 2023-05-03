@@ -6,10 +6,7 @@ authors:
     - Antoine Varnerot
 ---
 
-<!-- Début Résumé -->
 MONs d'Antoine Varnerot
-
-<!-- fin Résumé -->
 
 ## Temps 1
 

@@ -13,13 +13,10 @@ tags:
   - React
   - MUI
   - TailwindCSS
+
+résumé: "Ce POK présente le développement d’une plateforme simple de e-commerce à l’aide de différentes technologies web (React, MUI, TailwindCSS…)"
+
 ---
-
-<!-- début résumé -->
-
-Ce POK présente le développement d’une plateforme simple de e-commerce à l’aide de différentes technologies web (React, MUI, TailwindCSS…)
-
-<!-- fin résumé -->
 
 [<-- Retour](../)
 

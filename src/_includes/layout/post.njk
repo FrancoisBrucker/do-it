@@ -4,17 +4,10 @@ layout: layout/base.njk
 eleventyComputed:
   eleventyNavigation:
     résumé: "{{ résumé }}"
-
 ---
 
 <article class="relative">
 <h1  {% if tags or authors %}class="mb-1"{% endif %}>{{ title }}</h1>
-{% if résumé %}
-        <div class="mb-4 text-lg">
-                {{ résumé }}
-        </div>
-{% endif %}
-
 <div {% if tags or authors %}class="mb-4"{% endif %}>
     {% if tags %}
         <div class=" px-4 flex items-center">
@@ -67,6 +60,13 @@ eleventyComputed:
         {% endif %}
     {% endif%}
 </div>
+{% if résumé %}
+        <p class="mb-4 text-lg">
+
+                {{ résumé | safe }}
+
+        </p>
+{% endif %}
 
 {% if eleventyNavigation and eleventyNavigation.key %}
     {% chemin %}

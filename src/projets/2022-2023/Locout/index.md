@@ -1,24 +1,18 @@
 ---
-layout: layout/post.njk
+layout: layout/projet.njk
 
 title: "Loc'out"
 authors:
   - Antoine Varnerot
   - Savinien Laeuffer
   - Gabriel Barbé
-
-tags: ['projet']
+résumé: "Application de réservation et de gestion de terrains de foot indoor"
 ---
 
-<!-- début résumé -->
-Application de réservation et de gestion de terrains de foot indoor
-<!-- fin résumé -->
 <head>
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-
-## Contexte
 Étant des pratiquants de football indoor, les membres du groupe ont constaté qu'il est difficile de trouver un terrain de sport de nos jours pour de nombreuses raisons. En effet, avec un nombre d'offres élevées et des sites web souvent rudimentaires, la recherche d'un créneau s'apparente à une série d'appels pas toujours fructueuse pouvant en décourager plus d'un. Peu de sites de salle indoor proposent une réservation en ligne et la plupart d’entre eux privilégient la réservation en ligne ou sur place, avec une gestion d’agenda sur Excel ou encore même sur papier pour certains.
 Pour toutes ces raisons, nous avons voulu développer une solution de gestion d’agenda et de réservation en ligne, de manière à centraliser tous les créneaux de location disponibles à Marseille et à faciliter la tâche aux gérants des salles au niveau organisation des locations terrains, statistiques, et aussi à leur faire gagner en visibilité.
 

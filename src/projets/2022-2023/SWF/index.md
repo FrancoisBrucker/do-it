@@ -1,5 +1,5 @@
 ---
-layout: layout/post.njk
+layout: layout/projet.njk
 
 title: "Street Workout Finder"
 authors:
@@ -7,12 +7,9 @@ authors:
   - Thomas Duroy
   - Jeffrey Edisah
   - Kasimir Romer
-
-tags: [projet]
 ---
-<!-- début résumé -->
+
 Le projet pour trouver des installations sportives en plein air près de chez vous !
-<!-- fin résumé -->
 
 ## Le projet
 

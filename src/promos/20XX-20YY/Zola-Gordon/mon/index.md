@@ -6,11 +6,7 @@ authors:
   - Gordon Zola
 ---
 
-<!-- début résumé -->
-
 Ensemble des MON réalisés par Gordon Zola.
-
-<!-- fin résumé -->
 
 * [MON 1.1](./temps-1.1)
 * [MON 1.2](./temps-1.2)

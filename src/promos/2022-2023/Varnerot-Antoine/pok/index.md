@@ -11,10 +11,7 @@ tags: ['pok']
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<!-- Début Résumé -->
-POKs d'Antoine Varnerot
-
-<!-- fin Résumé -->
+POKs d'Antoine Varnerot.
 
 ## Temps 1
 

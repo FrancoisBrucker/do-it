@@ -100,7 +100,6 @@ tags:
 
 Dans l'entête.
 
-
 ### corps du texte
 
 Le reste du post, écrit en markdown. Le titre est déjà mis, vos différentes parties sont donc de niveau `##`{.language-}
@@ -464,3 +463,16 @@ Code :
 | Content Cell | ^^ | |
 | Content Cell  | Content Cell  | |
 ```
+
+## tbd
+
+> TBD
+>
+> * résumé :
+>   1. toujours pris en compte : dans l'entête
+>   2. dans les résumés si pas 1
+>      1. premier paragraphe
+>      2. entre balise
+>
+> * pok, mon, mon-index, pok-index, projet
+> * entête, pas de `[]` que des listes

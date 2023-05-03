@@ -10,10 +10,5 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
+résumé: Un POK traitant d'un sujet.
 ---
-
-<!-- début résumé -->
-
-Un POK traitant d'un sujet.
-
-<!-- fin résumé -->

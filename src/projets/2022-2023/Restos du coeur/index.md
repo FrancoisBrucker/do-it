@@ -1,5 +1,5 @@
 ---
-layout: layout/post.njk
+layout: layout/projet.njk
 
 title: "Cœur en Action - Restos du cœur"
 authors:
@@ -8,20 +8,17 @@ authors:
   - Ossama ABDANE
   - Sarah HONORÉ
 
-tags: ['projet']
+résumé: "Ce projet est réalisé en collaboration avec le centre des <strong>Restos du Cœur</strong> des 4° et 5° arrondissements de Marseille (rue Granoux). Laetitia Piet encadre ce projet. Notre <strong>objectif</strong> est d’<strong>optimiser et de simplifier certaines tâches des bénévoles du centre</strong>. Sujet: autonomie numérique"
 ---
 
-<!-- début résumé -->
-Ce projet est réalisé en collaboration avec le centre des **Restos du Cœur** des 4° et 5° arrondissements de Marseille (rue Granoux). Laetitia Piet encadre ce projet. Notre **objectif** est d’**optimiser et de simplifier certaines tâches des bénévoles du centre**. Sujet: autonomie numérique.
-<!-- fin résumé -->
 
 ## Sommaire
+
 1. Contexte
 2. Objectifs
 3. Notre démarche
 4. Nos solutions
 5. Conclusion et améliorations
-
 
 ## 1.Contexte
 

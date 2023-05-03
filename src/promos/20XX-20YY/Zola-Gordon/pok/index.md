@@ -6,11 +6,7 @@ authors:
   - Gordon Zola
 ---
 
-<!-- début résumé -->
-
 Ensemble des POK réalisés par Gordon Zola.
-
-<!-- fin résumé -->
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)

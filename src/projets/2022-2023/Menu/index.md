@@ -1,5 +1,5 @@
 ---
-layout: layout/post.njk
+layout: layout/projet.njk
 
 title: "L'appli Menu"
 authors:
@@ -8,13 +8,9 @@ authors:
   - Timothée Bermond
   - Eugénie Giraud-Telme
 
-tags: ['projet']
 ---
 
-<!-- début résumé -->
 Notre projet est de créer une appli pour les étudiants qui ont du mal à trouver des idées de repas et ceux qui veulent planifier leurs courses.
-<!-- fin résumé -->
-
 
 ## Notre idée :
 
