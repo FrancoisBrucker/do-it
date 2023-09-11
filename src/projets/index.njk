@@ -8,6 +8,28 @@ tags:
 order: 4
 ---
 
+<div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
+    <div class="text-3xl mb-3">
+        Par Promo
+    </div>
+    <ul>
+        <li>
+            <a href="./2023-2024">2023-2024</a>
+        </li>
+        <li>
+            <a href="./2022-2023">2022-2023</a>
+        </li>
+        <li>
+            <a href="./20XX-20YY">20XX-20YY</a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
+    <div class="text-3xl mb-3">
+        Tous
+    </div>
 {% for projet in collections.PROJET | sort | reverse %}
     <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
         <div class="text-3xl mb-3">
@@ -41,3 +63,4 @@ order: 4
         </div>
     </div>
 {% endfor %}
+</div>
