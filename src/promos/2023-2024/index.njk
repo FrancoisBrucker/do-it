@@ -11,10 +11,12 @@ eleventyNavigation:
     order: 2
 ---
 
-{% for eleve in collections.promo2023_2024 %}
-    <div class="my-3 px-2 p-1 border-solid border-2 rounded">
-        <div class="text-3xl mb-3">
-            <a href="{{ eleve.url  }}">{{ eleve.data.title }}</a>
-        </div>
-    </div>
-{% endfor%}
+<article>
+    <ul>
+        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) %}
+            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</article>
