@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Titre du second MON du temps 1"
 authors:
-  - Gordon Zola
+  - Benoit Beguier
 
 date: 1970-10-01
 tags: 

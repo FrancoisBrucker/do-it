@@ -1,12 +1,12 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de Benoit Beguier"
 authors:
-  - Gordon Zola
+  - Benoit Beguier
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Benoit Beguier.
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)
