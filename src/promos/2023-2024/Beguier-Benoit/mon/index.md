@@ -1,12 +1,12 @@
 ---
 layout: layout/mon-index.njk
 
-title: "MON de Benoit Beguier"
+title: "MON de Gordon Zola"
 authors:
-  - Benoit Beguier
+  - Gordon Zola
 ---
 
-Ensemble des MON réalisés par Benoit Beguier.
+Ensemble des MON réalisés par Gordon Zola.
 
 * [MON 1.1](./temps-1.1)
 * [MON 1.2](./temps-1.2)

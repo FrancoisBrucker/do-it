@@ -1,11 +1,11 @@
 ---
 layout: layout/pok.njk
 
-title: "Modélisation et optimisation d'une monoplace"
+title: "Titre du POK du temps 1"
 authors:
-  - Benoit Beguier
+  - Gordon Zola
 
-date: 2001-09-17
+date: 1970-09-01
 
 tags: 
   - "temps 1"

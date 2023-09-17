@@ -1,16 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "Analyse des données sans galèR"
+title: "Titre du premier MON du temps 1"
 authors:
-  - Benoit BEGUIER
+  - Gordon Zola
 
-date: 2023-09-17
+date: 1970-09-01
 
 tags: 
   - "temps 1"
-  - "R"
-  - "Analyse des données"
 
-résumé: "Initiation au langage R et application dans l'analyse des données."
+résumé: "Un MON traitant d'un sujet."
 ---
