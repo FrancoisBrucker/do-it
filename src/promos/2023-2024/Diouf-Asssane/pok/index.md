@@ -1,13 +1,13 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK d'Assane Diouf"
 authors:
-  - Gordon Zola
+  - Assane Diouf
 ---
 
 Ensemble des POK réalisés par Gordon Zola.
 
-* [POK 1](./temps-1)
+* [Un site avec Rust/WASM](./temps-1)
 * [POK 2](./temps-2)
 * [POK 3](./temps-3)

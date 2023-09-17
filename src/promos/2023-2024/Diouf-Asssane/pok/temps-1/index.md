@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "Un site en Rust avec WebAssembly"
 authors:
-  - Gordon Zola
+  - Assane Diouf
 
-date: 1970-09-01
+date: 2023-09-17
 
 tags: 
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Depuis 2019, la plupart des navigateurs intègrent WebAssembly (WASM). Il est donc possible de réaliser des applications web avec des performances proches d'applications natives en utilisant des langages de programmation variés (C++, python, Rust, etc...). Réalisons une application de ce type avec Rust dans ce POK.
 ---
