@@ -1,11 +1,11 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "HTML C'est Super Simple"
 authors:
   - Benoit Beguier
 
-date: 1970-10-01
+date: 2023-09-17
 tags: 
   - "temps 1"
 
