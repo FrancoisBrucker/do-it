@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Analyse des données sans galèR"
 authors:
-  - Benoit Beguier
+  - Benoit BEGUIER
 
 date: 2023-09-17
 

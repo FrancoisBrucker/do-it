@@ -3,7 +3,7 @@ layout: layout/fiche.njk
 
 title: "Benoit BEGUIER"
 authors:
-    - "Benoit Beguier"
+    - "Benoit BEGUIER"
 ---
 
 

@@ -3,7 +3,7 @@ layout: layout/pok-index.njk
 
 title: "POK de Benoit Beguier"
 authors:
-  - Benoit Beguier
+  - Benoit BEGUIER
 ---
 
 Ensemble des POK réalisés par Benoit Beguier.

@@ -3,7 +3,7 @@ layout: layout/mon-index.njk
 
 title: "MON de Benoit Beguier"
 authors:
-  - Benoit Beguier
+  - Benoit BEGUIER
 ---
 
 Ensemble des MON réalisés par Benoit Beguier.

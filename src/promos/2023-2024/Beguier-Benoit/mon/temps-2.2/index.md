@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Titre du second MON du temps 2"
 authors:
-  - Benoit Beguier
+  - Benoit BEGUIER
 
 date: 1971-01-01
 tags: 

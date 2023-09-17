@@ -1,11 +1,11 @@
 ---
 layout: layout/pok.njk
 
-title: "Modélisation et optimisation d'une monoplace"
+title: "Modélisation dynamique d'une monoplace. D'un point matériel à un modèle simplifié"
 authors:
-  - Benoit Beguier
+  - Benoit BEGUIER
 
-date: 2001-09-17
+date: 2023-09-17
 
 tags: 
   - "temps 1"
