@@ -8,8 +8,8 @@ authors:
 
 Ensemble des MON réalisés par Gordon Zola.
 
-* [Rust](./temps-1.1)
-* [C#](./temps-1.2)
+* [Rust](./Rust/)
+* [C#](./C#/)
 * [MON 2.1](./temps-2.1)
 * [MON 2.2](./temps-2.2)
 * [MON 3.1](./temps-3.1)
