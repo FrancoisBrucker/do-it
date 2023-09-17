@@ -1,12 +1,12 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de Kawtar Bahri"
 authors:
-  - Gordon Zola
+  - Kawtar Bahri
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Kawtar Bahri.
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)
