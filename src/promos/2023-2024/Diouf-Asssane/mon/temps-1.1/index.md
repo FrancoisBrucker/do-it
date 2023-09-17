@@ -1,14 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "Rust"
 authors:
-  - Gordon Zola
+  - Assane Diouf
 
-date: 1970-09-01
+date: 2023-09-17
 
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Découvrant ensemble le langage Rust. Il est de plus en plus adopté dans l'industrie pour ses performances et ses idées nouvelles comme l'ownership."
 ---
