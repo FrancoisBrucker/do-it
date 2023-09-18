@@ -14,4 +14,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/2023-2024/notre-projet)
+Un jour peut être ...
