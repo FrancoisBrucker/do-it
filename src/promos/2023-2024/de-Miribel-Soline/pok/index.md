@@ -6,7 +6,7 @@ authors:
   - Soline de MIRIBEL
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Soline
 
 * [POK 1](./temps-1)
 
