@@ -8,6 +8,9 @@ authors:
 eleventyNavigation:
     order: 7
 ---
+## Parlons de moi
+
+CV trop important pour rentrer sur ce site.
 
 ## POK & MON
 
@@ -16,4 +19,4 @@ eleventyNavigation:
 
 ## Projet
 
-
+* [Projet trop cool](/)
