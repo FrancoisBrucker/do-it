@@ -12,7 +12,7 @@ Le site do-it est un site constitué de fichiers écrit au format [Markdown](htt
 
 ## Architecture d'un post
 
-Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/ct/contribuer-au-site>
+Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site>
 
 Ce dossier contient :
 
