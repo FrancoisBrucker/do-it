@@ -1,9 +1,9 @@
 ---
 layout: layout/fiche.njk
 
-title: "Gordon ZOLA"
+title: "Lola Bourdon"
 authors:
-    - "Gordon Zola"
+    - "Lola Bourdon"
 ---
 
 Étudiant fictif, utilisé pour le template de nouveaux élèves.
