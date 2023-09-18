@@ -11,6 +11,6 @@ Bio
 ## POK & MON
 
 * [POK](./pok)
-* [MON](./mon)
+* [Ses MON](./mon)
 
 
