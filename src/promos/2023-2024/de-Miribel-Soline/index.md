@@ -1,16 +1,16 @@
 ---
 layout: layout/fiche.njk
 
-title: "Sarah Sebastien"
+title: "Soline de MIRIBEL"
 authors:
-    - "Sarah Sebastien"
+    - "Soline de MIRIBEL"
 ---
+
+Bio
 
 ## POK & MON
 
 * [POK](./pok)
 * [MON](./mon)
 
-## Projet
 
-Bientôt...
