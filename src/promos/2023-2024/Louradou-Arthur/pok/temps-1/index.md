@@ -3,7 +3,7 @@ layout: layout/pok.njk
 
 title: "Portfolio"
 authors:
-  - Gordon Zola
+  - Arthur Louradou
 
 date: 1970-09-01
 

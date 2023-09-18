@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Hack The Box"
 authors:
-  - Gordon Zola
+  - Arthur Louradou
 
 date: 1970-09-01
 
