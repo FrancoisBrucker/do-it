@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Titre du premier MON du temps 2"
 authors:
-  - Duc DANG VU
+  - Gordon Zola
 
 date: 1970-11-01
 tags: 
