@@ -64,3 +64,7 @@ Tous les cours ont le même volume horaire de 12h. Une description plus détaill
   * Project management Office, Gestion de Projet avancée (GP)
   * UI avancée : théorie et testing (GP)
   * Analyse comportementale (GP)
+
+## Contribuer au site
+
+* [Markdown pour le site](./contribuer-au-site)
