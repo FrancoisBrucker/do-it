@@ -1,12 +1,11 @@
 ---
 layout: layout/fiche.njk
 
-title: "Lola Bourdon"
+title: "William Lalanne"
 authors:
-    - "Lola Bourdon"
+    - "William Lalanne"
 ---
 
-Étudiant fictif, utilisé pour le template de nouveaux élèves.
 
 ## POK & MON
 

@@ -1,9 +1,9 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de William Lalanne"
 authors:
-  - Gordon Zola
+  - William Lalanne
 ---
 
 Ensemble des POK réalisés par Gordon Zola.
