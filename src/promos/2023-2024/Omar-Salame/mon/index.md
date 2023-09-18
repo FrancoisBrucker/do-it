@@ -1,9 +1,9 @@
 ---
 layout: layout/mon-index.njk
 
-title: "MON de Gordon Zola"
+title: "MON de Omar Salame"
 authors:
-  - Gordon Zola
+  - Omar Salame
 ---
 
 Ensemble des MON réalisés par Omar Salame.
