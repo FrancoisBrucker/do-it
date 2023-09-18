@@ -8,8 +8,8 @@ authors:
 
 Ensemble des MON réalisés par Samy Diafat.
 
-* [Rust](./Rust/)
-* [C#](./temps-1-2/)
+* [Base html css javascript](./Rust/)
+* [MON 1.2](./temps-1-2/)
 * [MON 2.1](./temps-2.1)
 * [MON 2.2](./temps-2.2)
 * [MON 3.1](./temps-3.1)
