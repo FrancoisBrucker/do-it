@@ -12,7 +12,6 @@ tags:
   - "R"
   - "Analyse des données"
   - "RStudio"
-  - "mon"
 
 résumé: "Initiation au langage R et application dans l'analyse et la visualisation des données."
 ---
@@ -37,7 +36,15 @@ Je vais utiliser l'environnement de travail RStudio tout au long de cette format
 
 ## 2. Bases
 #### Répertoire
-Comme dans beaucoup d'environnements, il faut spécifier le répertoire de travail avec la commande 
-```html
+Comme dans beaucoup d'environnements, il faut spécifier à RStudio le répertoire de travail avec la commande 
+```shell
 setwd("C:Users...")
 ```
+
+#### Types d'objets
+S'en suivent ensuite d'autres explications basiques sur les trois manières d'attribuer des variables, ou *objets* comme ils sont appelés dans la formation ; ainsi que la suppression des objets et l'explication sur les différents types d'objets en R. 
+
+J'ai trouvé très intéressante la partie sur la conversion entre les types. R permet de convertir un objet en n'importe quel type, et ce même quand cela n'a pas de sens (par exemple : un nombre en type *numeric* que l'on peut convertir en booléen de type *logical*). Cette liberté peut permettre, à mon sens, des facilités de programmation utiles dans certains cas.
+
+#### Les dataframes
+Les dataframes sont des listes d'objets (appelés *composantes*), dont chaques composantes ont la même longueur. Ils sont particulièrement utiles dans l'analyse des données. J'ai appris à en créer à partir de deux listes, à partir d'une matrice et à en importer depuis un fixhier (.csv ou .txt par exemple) et aussi à les visualiser grâce à la fonction View.

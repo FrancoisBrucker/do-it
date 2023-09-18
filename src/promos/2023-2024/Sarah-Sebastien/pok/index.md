@@ -8,6 +8,4 @@ authors:
 
 Voici l'ensemble des POK que j'ai réalisés.
 
-* [POK 1](./temps-1)
-* [POK 2](./temps-2)
-* [POK 3](./temps-3)
+* [POK 1: Réalisation d'un diagramme de GANTT sous VBA](./temps-1)
