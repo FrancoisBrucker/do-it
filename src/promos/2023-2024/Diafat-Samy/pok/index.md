@@ -1,13 +1,13 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK d'Assane Diouf"
+title: "POK de Samy Diafat"
 authors:
-  - Assane Diouf
+  - Samy Diafat
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Samy Diafat.
 
-* [Un site avec Rust/WASM](./temps-1)
+* [Utilisation API Riot Games](./temps-1)
 * [POK 2](./temps-2)
 * [POK 3](./temps-3)

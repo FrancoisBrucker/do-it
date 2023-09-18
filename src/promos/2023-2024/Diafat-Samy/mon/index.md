@@ -1,12 +1,12 @@
 ---
 layout: layout/mon-index.njk
 
-title: "MON d'Assane Diouf"
+title: "MON de Samy Diafat"
 authors:
-  - Assane Diouf
+  - Samy Diafat
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par Samy Diafat.
 
 * [Rust](./Rust/)
 * [C#](./temps-1-2/)
