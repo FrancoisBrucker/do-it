@@ -1,9 +1,9 @@
 ---
 layout: layout/fiche.njk
 
-title: "Assane DIOUF"
+title: "Samy Diafat"
 authors:
-    - "Assane Diouf"
+    - "Samy Diafat"
 ---
 
 ## POK & MON
