@@ -6,7 +6,7 @@ authors:
   - Assane Diouf
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par Assane Diouf.
 
 * [Rust](./Rust/)
 * [C#](./temps-1-2/)
