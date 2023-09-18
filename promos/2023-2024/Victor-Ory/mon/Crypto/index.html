@@ -134,7 +134,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
-<p>Niveau débuttant</p>
+<p>Niveau débutant</p>
 </div><div class="pl-8 mr-8">
 <p>Pré-requis :</p>
 <ul>
@@ -147,11 +147,117 @@
 </ul>
 <h1>Letsgo :</h1>
 <h2>1 - Trouver les bonnes sources :</h2>
-<p>Après avoir récolté les informations du subreddit, on peut voir que les utilisateurs suivants et leur compte GitHub semblent sortir du lot d'après la communauté :</p>
+<p>Après avoir récolté les informations du subreddit <strong>r/cryptography</strong>, on peut voir que les utilisateurs suivants et leur compte GitHub semblent sortir du lot d'après la communauté :</p>
 <ul>
 <li><a href="https://github.com/pFarb">GitHub repo 1 : pFarb</a></li>
 <li><a href="https://github.com/sobolevn">GitHub repo 2 : sobolevn</a></li>
 </ul>
+<h2>2 - À quoi ça sert ?</h2>
+<p>La cryptographie est un outil puissant avec des limites qui a des applications dans beaucoup de technologies de communications et plus encore. Par exemple :</p>
+<ul>
+<li>La signature électronique</li>
+<li>Les communications sécurisées ( HTTPS )</li>
+<li>Sécuriser du contenu sur un disque</li>
+<li>...</li>
+</ul>
+<h2>Petit rappel historique :</h2>
+<p>L'encryptage existe depuis très longtemps et peut être simple.<br>
+Une table de substitution peut être utilisée pour encrypter un message.</p>
+<p>Tableau de substitution :</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>...</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K</td>
+<td>Y</td>
+<td>F</td>
+<td>...</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>Toutefois cela est sensible à des attaques par fréquence, càd, repérer la lettre qui revient le plus souvent pour en déduire les équivalences de lettres.<br>
+Ensuite, il y a eu des améliorations de ce processus à travers le temps toutefois même &quot;énigma&quot; a pu être crackée.</p>
+<h2>La partie triste :</h2>
+<p>Il faut faire des math pour comprendre les trucs là ....<br>
+Par exemple il va falloir faire appel aux probabilités discrètes, aux opérateurs logiques, notamment XOR.</p>
+<h2>La fonction de base :</h2>
+<p>La fonction de base est le <strong>XOR</strong>, elle se comporte de la manière suivante :</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>XOR(A,B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Cette fonction, appliquée à un message, $$m$$, avec une clée, $$k$$, de longueur égale à celle du message permet de l'encrypter en un message, $$c$$.</p>
+<table>
+<thead>
+<tr>
+<th>m</th>
+<th>0</th>
+<th>1</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+</tr>
+<tr>
+<th>k</th>
+<th>1</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Ainsi, beaucoup de systèmes sont des déclinaisons de ce procédé comme par exemple WEP(wifi), HTTPS.<br>
+Toutefois, cette technique requiert que la clé soit de longueur au moins égale à celle du message ==&gt; C'est chiant  !<br>
+Par conséquent un élément essentiels de ces algorithmes est le PRG ou Pseudo Random Generator, G, qui étends la clé k' de 6 bits en 64 bits comme ceci : $$G(k') = k $$</p>
+<h2>Le block Sipher :</h2>
+<p>Cette technique s'appui sur une clé, $$k$$, qui va être divisé en n, étapes pour appliquer au message, m, n encryptages successifs.</p>
 
 
 </article>
