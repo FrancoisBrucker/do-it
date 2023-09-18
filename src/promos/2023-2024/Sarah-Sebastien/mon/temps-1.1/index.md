@@ -5,7 +5,7 @@ title: "MON 1.1. Comparaison de plusieurs ERP"
 authors:
   - Sarah Sebastien
 
-date: 2023-10-01
+date: 2023-09-01
 tags: 
   - "temps 1"
 

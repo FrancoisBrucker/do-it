@@ -1,11 +1,12 @@
 ---
 layout: layout/fiche.njk
 
-title: "Nicolas OUZOULIAS"
+title: "Paul LE BIHAN"
 authors:
-    - "Nicolas OUZOULIAS"
+    - "Paul Le Bihan"
 ---
 
+Étudiant en 3A à Centrale Marseille.
 
 ## POK & MON
 
@@ -14,4 +15,4 @@ authors:
 
 ## Projet
 
-Un jour peut être ...
+Bientôt...

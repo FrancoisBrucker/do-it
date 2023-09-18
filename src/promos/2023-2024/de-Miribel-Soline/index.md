@@ -1,17 +1,17 @@
 ---
 layout: layout/fiche.njk
 
-title: "Nicolas OUZOULIAS"
+title: "Soline de MIRIBEL"
 authors:
-    - "Nicolas OUZOULIAS"
+    - "Soline de MIRIBEL"
 ---
 
+Bio
 
 ## POK & MON
 
 * [POK](./pok)
+
 * [MON](./mon)
 
-## Projet
 
-Un jour peut être ...

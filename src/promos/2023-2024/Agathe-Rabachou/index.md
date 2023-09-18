@@ -1,11 +1,10 @@
 ---
 layout: layout/fiche.njk
 
-title: "Nicolas OUZOULIAS"
+title: "Agathe Rabachou"
 authors:
-    - "Nicolas OUZOULIAS"
+    - "Agathe Rabachou"
 ---
-
 
 ## POK & MON
 
@@ -14,4 +13,4 @@ authors:
 
 ## Projet
 
-Un jour peut être ...
+Bientôt...

@@ -1,17 +1,13 @@
 ---
 layout: layout/fiche.njk
 
-title: "Nicolas OUZOULIAS"
+title: "Vladimir Jeantroux"
 authors:
-    - "Nicolas OUZOULIAS"
+    - "Vladimir Jeantroux"
 ---
-
 
 ## POK & MON
 
 * [POK](./pok)
 * [MON](./mon)
 
-## Projet
-
-Un jour peut être ...
