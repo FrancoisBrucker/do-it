@@ -5,7 +5,7 @@ title: "MON 1.2. Une approche du Lean Management au travers de plusieurs de ses 
 authors:
   - Sarah Sebastien
 
-date: 2023-10-01
+date: 2023-09-01
 tags: 
   - "temps 1"
 

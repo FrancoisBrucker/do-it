@@ -1,9 +1,9 @@
 ---
 layout: layout/fiche.njk
 
-title: "Sarah Sebastien"
+title: "Agathe Rabachou"
 authors:
-    - "Sarah Sebastien"
+    - "Agathe Rabachou"
 ---
 
 ## POK & MON
