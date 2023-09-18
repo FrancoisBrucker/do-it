@@ -6,7 +6,6 @@ authors:
     - "Duc DANG VU"
 ---
 
-Étudiant fictif, utilisé pour le template de nouveaux élèves.
 
 ## POK & MON
 
@@ -15,4 +14,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+Bientôt... chez vous
