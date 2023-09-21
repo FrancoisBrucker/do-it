@@ -6,7 +6,7 @@ authors:
   - William Lalanne
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par William Lalanne.
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)
