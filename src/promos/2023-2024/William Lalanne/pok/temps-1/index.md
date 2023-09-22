@@ -5,7 +5,7 @@ title: "Titre du POK du temps 1 de William Lalanne"
 authors:
   - William Lalanne
 
-date: 2023-09
+date: 2023-09-01
 
 tags: 
   - "temps 1"
