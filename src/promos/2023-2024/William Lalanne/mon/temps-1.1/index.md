@@ -5,7 +5,7 @@ title: "Titre du premier MON du temps 1"
 authors:
   - William Lalanne
 
-date: 2023-09-01
+date: 2023
 
 tags: 
   - "temps 1"
