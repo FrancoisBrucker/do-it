@@ -159,10 +159,23 @@ Une image peut être utilisé dans plusieurs container mais chaque container n'u
 Chaque image est découpé en layer ou couche.</p>
 <h2>Truc cool</h2>
 <p>Port binding : on associe un port à un container puis le lier à un port réel de l'ordinateur.<br>
--p permet de faire le binding de port et -d permet de détacher le shell du cycle de vie du container ==&gt; pas besoin d'avoir un shell qui tourne en même temps que l'application.<br>
-''' shell<br>
-docker run -phostport:containerport -d<br>
+-p permet de faire le binding de port et -d permet de détacher le shell du cycle de vie du container ==&gt; pas besoin d'avoir un shell qui tourne en même temps que l'application.</p>
+<p>''' shell<br>
+docker run -phostport:containerport -d -e variable environnement<br>
 '''</p>
+<h1>Classique Workflow :</h1>
+<p>Développement en local ==&gt; Continious Integration (Jenkins) crée un build et une image docker ==&gt; image pushed to private repositories ==&gt; deployement on deployement server</p>
+<h1>Docker network</h1>
+<p>Il est possible de créer un réseau fictif reliant les différents conteneurs qui peuvent héberger des éléments différents de la structure du site : Base de données, API backend, frontend, ...</p>
+<h1>Docker Compose</h1>
+<p>Cela permet de gérer de multiples containers en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. `Ces différents containers forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable.<br>
+Ainsi au lieu de configurer chaque container avec des variables, des binding de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de</p>
+<h1>Docker volume</h1>
+<p>Les volumes sont des mémoires persistantes entre les différentes construction d'un container à partir d'une même image. Cela est essentielle si nous voulons créer une base de données par exemple.</p>
+<h1>CI/CD</h1>
+<p>Cet ensemble de procédé et outils sont donc des maillons essentiels de l'automatisation de process dans l'industrie de 'IT. Cela permet la coopération des différents employés, mettre en commun leurs modifications sur GitHub puis de créer une image avec la dernière version du produit avec sa configuration, ses dépendances grâce à un Jenkinsfile, un fichier dans lequel sont notés les instructions à effectuer après chaque modification. Cela permet par exemple ensuite de déployer automatiquement la dernière version du projet sur un serveur de test pour qu'une équipe de test vérifie le bon fonctionnement de chaque élément.</p>
+<h1>Dockerfile</h1>
+<p>Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs.</p>
 
 
 </article>
