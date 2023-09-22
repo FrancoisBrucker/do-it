@@ -5,7 +5,7 @@ title: "Petite initiation au Java"
 authors:
   - Nicolas Ouzoulias
 
-date: 2023-09-27
+date: 2023-09-17
 
 tags: 
   - "temps 1" 
@@ -13,10 +13,8 @@ tags:
 résumé: "Mon premier MON pour découvrir quelques bases sur le langage Java."
 ---
 
-
 ## Sommaire
 
-I. Introduction
-II. Bases
+Introduction
 
 ## I. Introduction
