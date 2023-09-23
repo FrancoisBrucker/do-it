@@ -18,14 +18,12 @@ résumé: "Mon travail vise à approfondir ma compréhension de la façon dont l
 - [Comprendre la Stratégie IT](#section-2)
 - [Go to Section 3](#section-3)
 
-## Introduction
-<a id="section-1"></a>
+## Introduction <a id="section-1"></a>
 Traditionnellement, les technologies de l'information étaient principalement utilisées pour des tâches de soutien au sein des organisations, mais leur rôle s'est métamorphosé en un atout stratégique crucial pour renforcer la vision globale des entreprises à mesure que l'environnement commercial évolue rapidement. L'alignement entre la stratégie IT et la stratégie commerciale est essentiel, avec un focus sur l'identification du potentiel stratégique des investissements IT. Les avantages potentiels de la numérisation sont multiples, mais leur réalisation dépend d'une solide stratégie, car la simple intégration de ces technologies ne garantit pas automatiquement des résultats.
 
-## Comprendre la Stratégie IT
-<a id="section-2"></a>
-
+## Comprendre la Stratégie IT <a id="section-2"></a>
 ### Définitions
+Avant d'aborder le sujet, il est important de définir les termes clés.
 - **Stratégie :**
 La stratégie peut être définie comme l'ensemble des activités qui renforcent la position concurrentielle de l'entreprise qui entreprend de telles actions, englobant la planification, la surveillance et l'exécution d'opérations préalablement planifiées
 <img style="float: right;" src="strategie.png" width="250" height="150">
@@ -57,11 +55,41 @@ Les avantages potentiels de la numérisation sont multiples et comprennent une a
 ### Importance de l'alignement stratégique
 L'alignement de la stratégie IT avec la stratégie de l'entreprise est impératif. Il est essentiel de noter que la simple intégration de ces technologies de l'information ne garantit pas automatiquement les résultats souhaités. Les entreprises ne peuvent pas simplement adopter les dernières technologies sans avoir une stratégie IT solide qui les guide. Cette stratégie IT doit être en parfaite harmonie avec la vision globale de l'entreprise et orienter la manière dont les technologies numériques sont utilisées pour remodeler ou redéfinir des modèles d'entreprise entiers.
 
+## Outtil de prise de décision
+La prise de décision dans le cadre du développement de la stratégie informatique et de l'alignement sur les objectifs de l'entreprise fait appel à plusieurs outils et méthodologies pour aider les organisations à faire des choix éclairés. Voici quelques outils de prise de décision couramment utilisés:
+### Analyse SWOT 
+ L'analyse SWOT (Strengths, Weaknesses, Opportunities, Threats) permet d'évaluer les forces et les faiblesses internes d'une organisation, ainsi que les opportunités et les menaces externes. Elle fournit un cadre structuré pour la prise de décision en mettant en évidence les domaines qui doivent être améliorés ou dans lesquels des avantages stratégiques peuvent être exploités. 
+:-------------------------:|:-------------------------:
+<img src="Swot1.png" width="350" height="350"> | <img src="Swot2.png" width="350" height="350">
+
+### Analyse Coût-Avantage(CBA)
+CBA est une technique quantitative utilisée pour évaluer les coûts et les bénéfices associés à différentes initiatives informatiques. Elle permet de comparer les retours attendus par rapport aux investissements, ce qui facilite la hiérarchisation des projets en fonction de leur potentiel de création de valeur. Voici les étapes pour réussir une analyse coût-bénéfice:
+#### Étape 1 : Déterminer le coût du maintien du statu quo
+- Mesurez les coûts si aucune action n'est entreprise.
+- Évaluez si rester immobile est la meilleure décision ou si cela peut entraîner des coûts à long -terme.
+#### Étape 2 : Identifier les coûts
+- Élaborez une liste complète des coûts potentiels, y compris les coûts initiaux, imprévus, tangibles, intangibles, continus, futurs, et tout risque financier associé.
+- Utilisez une carte mentale pour structurer et explorer ces coûts.
+#### Étape 3 : Identifier les opportunités
+- Déterminez les bénéfices potentiels du projet.
+- Posez-vous des questions sur les revenus supplémentaires, le retour sur investissement, et la définition du retour sur investissement pour votre entreprise.
+- Identifiez les opportunités à court et à long terme.
+#### Étape 4 : Attribuer une valeur monétaire aux coûts et opportunités
+- Convertissez tous les coûts et bénéfices en unités monétaires.
+- Incluez les coûts humains tels que la main-d'œuvre, les nouvelles embauches, les équipements, les remplacements, la formation, et les avantages intangibles.
+#### Étape 5 : Créer une chronologie des coûts et des revenus attendus
+- Établissez un calendrier prévisionnel indiquant quand les coûts et les revenus sont prévus.
+- Prévoyez l'impact temporel des coûts et des revenus pour une gestion et un ajustement efficaces.
 
 
 
 
 
+{% prerequis "Documentation :" %}
 
+* [IT Strategy Duke University](https://www.youtube.com/watch?v=vzB1HVt6_sk&ab_channel=DukeUniversity-TheFuquaSchoolofBusiness)
+* [Transformation IT dans le monde numérique, y compris analyse SWOT](https://konfuzio.com/fr/it-transformation/#:~:text=L'analyse%20SWOT%20montre%20que,la%20possibilit%C3%A9%20de%20d%C3%A9velopper%20de)
+* [LucidChart: Comment créer une analyse coût-bénéfice](https://www.lucidchart.com/blog/fr/analyse-cout-benefice)
+* [Aligning IT strategy with business strategy :A case study of global IT consultancy firms](https://aaltodoc.aalto.fi/handle/123456789/21474)
 
-
+{% endprerequis %}
