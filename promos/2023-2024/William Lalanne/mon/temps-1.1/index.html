@@ -145,6 +145,23 @@
 <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks</a></li>
 </ul>
 <p>Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les <em>Grid</em>, les <em>Flex-box</em> qui sont des éléments très importants.</p>
+<h2>2. Les Grid</h2>
+<h3>Qu'est ce que c'est et à quoi ça sert ?</h3>
+<p>Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. Pour cela, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page.<br>
+Le plus simple pour comprendre est de prendre un exemple :<br>
+![exemple de gridd]</p>
+<p>Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus.</p>
+<h3>Créé un tableau</h3>
+<p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :<br>
+`</p><div class="container"><br>
+<div>Premier élément</div><br>
+<div>Deuxième élément</div><br>
+<div>Troisième élément</div><br>
+<div>Quatrième élément</div><p></p>
+</div>`
+<p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :<br>
+<code>.container {     display: grid; } </code><br>
+Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
 
 
 </article>
