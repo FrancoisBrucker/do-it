@@ -61,6 +61,16 @@ Cette ligne permet simplement de dire que l'élément de class "container" doit 
 
 
 ## Modifier les propriétés du tableau
-Une fois le tableau créé, on peut préciser combien de lignes on souhaite avoir et combien de colonnes. 
+Une fois le tableau créé, on peut préciser combien de lignes et de colonnes on souhaite avoir ainsi que leur taille.
+Examinons l'exemple suivant : 
+
+`.container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px 500px;
+}`
+
+Avec la propriété ***grid-template-columns***, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune. 
+Avec la propriété ***grid-template-roxs***, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500. 
 
 
