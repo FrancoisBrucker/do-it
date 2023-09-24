@@ -5,7 +5,7 @@ title: "Rust"
 authors:
   - Assane Diouf
 
-date: 2023-09-17
+date: 2023-09-27
 
 tags: 
   - "temps 1"

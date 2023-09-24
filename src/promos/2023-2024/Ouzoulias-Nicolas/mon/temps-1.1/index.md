@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "Petite initiation au Java"
 authors:
   - Nicolas Ouzoulias
 
@@ -10,5 +10,11 @@ date: 2023-09-17
 tags: 
   - "temps 1" 
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Mon premier MON pour découvrir quelques bases sur le langage Java."
 ---
+
+## Sommaire
+
+Introduction
+
+## I. Introduction

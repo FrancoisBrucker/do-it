@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Titre du premier MON du temps 3"
 authors:
-  - Gordon Zola
+  - Duc DANG VU
 
-date: 1970-10-01
+date: 1971-02-01
 tags: 
-  - "temps 1"
+  - "temps 3"
 
 résumé: "Un MON traitant d'un sujet."
 ---
