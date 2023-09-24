@@ -44,12 +44,13 @@ Dans l'image précédente, on peut voir que la page web est constituée d'un tab
 
 ### Créé un tableau
 Pour créer un tableau, il faut d'abord créer un *container* c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant : 
-`<div class="container">
-    <div>Premier élément</div>
-    <div>Deuxième élément</div>
-    <div>Troisième élément</div>
-    <div>Quatrième élément</div>
-</div>`
+`<div class="container">`
+    `<div>Premier élément</div>`
+    `<div>Deuxième élément</div>`
+    `<div>Troisième élément</div>`
+    `<div>Quatrième élément</div>`
+`</div>`
+
 
 Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code : 
 `.container {
