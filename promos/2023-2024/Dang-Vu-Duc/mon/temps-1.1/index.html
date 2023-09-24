@@ -125,6 +125,142 @@
 
 
 
+<h2>Introduction</h2>
+<p>Qt est une interface de programmation d'application (API) orientée objet pour développer des interfaces graphiques en C++. Dans ce MON, nous allons utiliser Python pour exploiter cet API, grâce au projet <em>Qt for Python</em>. L'installation se fait rapidement en rentrant la ligne de commande suivante sur un terminal:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pip install PySide6
+</code></pre>
+<p>PySide6 est un module de Python développé par le projet <em>Qt for Python</em>, et va nous permettre d'utiliser diverses méthodes pour développer des interfaces graphiques dans des fenêtres.</p>
+<h2>Présentation des classes de Qt for Python</h2>
+<p>Nous allons présenter les différentes classes utiles de <em>Qt for Python</em>, afin de créer des interfaces basiques.</p>
+<h3>QMainWindow</h3>
+<p>La première étape est de créer une fenêtre basique, avec rien dedans. Après avoir importé les différentes classes de la bibliothèque PySide, on créé une instance de la classe <strong>QMainWindow</strong> et on l'affiche:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication<span class="token punctuation">,</span> QMainWindow
+<span class="token keyword">import</span> sys
+
+app<span class="token punctuation">.</span>QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+window <span class="token operator">=</span> QMainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Fenêtre basique"</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre>
+<p>L'exécution de ce premier code ouvre cette fenêtre:</p>
+<p><img src="Image1.png" alt="Fenêtre basique"></p>
+<p>Comme on peut le voir, la classe <strong>QMainWindow</strong> permet de créer une fenêtre, qui va contenir tout les autres éléments que l'on veut.</p>
+<h3>QPushButton</h3>
+<p>Cette classe permet de créer des boutons avec lesquels l'utilisateur peut interagir. Dans l'exemple suivant, on va faire apparaître une fenêtre avec un bouton au milieu:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication<span class="token punctuation">,</span> QMainWindow<span class="token punctuation">,</span> QPushButton
+<span class="token keyword">import</span> sys
+
+app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+window <span class="token operator">=</span> QMainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Fenêtre basique avec un bouton"</span><span class="token punctuation">)</span>
+button <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton"</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>button<span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>L'execution de ce code affiche la fenêtre suivante:</p>
+<p><img src="Image2.png" alt="Fenêtre basique avec un bouton"></p>
+<p>Pour l'instant, il ne se passe rien lorsque l'on clique sur ce bouton. C'est parce que on n'a pas associé d'action à ce bouton. Pour se faire, on va utiliser la méthode <em>clicked.connect</em> de la classe <strong>QPushButton</strong>. Cette méthode permet d'associer une autre méthode au bouton: lorsque l'utilisateur va cliquer sur ce bouton, ce dernier va envoyer un signal au programme et va exécuter la méthode que l'on a renseigné en argument:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication<span class="token punctuation">,</span> QMainWindow<span class="token punctuation">,</span> QPushButton
+<span class="token keyword">import</span> sys
+<span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtCore <span class="token keyword">import</span> Qt
+
+<span class="token keyword">class</span> <span class="token class-name">Test_button</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Test Bouton cliquable"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton cliquable"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_clicked<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">button_clicked</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le bouton a été cliqué!"</span><span class="token punctuation">)</span>
+
+app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+window <span class="token operator">=</span> Test_button<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Notons que le code ci-dessus est organisé sour forme d'une classe. Il est préférable de faire ainsi pour rendre le code plus lisible.</p>
+</div></div>
+<p>Ce code fait bien apparaître la même fenêtre que précédemment, mais cette fois-ci le bouton print du texte lorsque l'on clique dessus.</p>
+<h3>QWidget</h3>
+<p>La classe <strong>QWidget</strong> permet, comme son nom l'indique, de créer des widgets. Ces widgets permettent de placer des éléments dans la fenêtre principale où l'on veut. A l'intérieur de ces widgets, on peut utiliser des classes comme <strong>QVBoxLayout</strong> ou <strong>QHBoxLayout</strong> pour placer les différents éléments. Par exemple, on peut ajouter à notre classe Test_button un widget pour y centrer notre bouton. On peut même y ajouter un deuxième bouton:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test_button</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Test Bouton cliquable"</span><span class="token punctuation">)</span>
+        central_widget <span class="token operator">=</span> QWidget<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button1 <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton cliquable 1"</span><span class="token punctuation">,</span> central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button1<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_clicked<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button2 <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton cliquable 2"</span><span class="token punctuation">,</span> central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button2<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_clicked<span class="token punctuation">)</span>
+
+        layout <span class="token operator">=</span> QVBoxLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button1<span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button2<span class="token punctuation">)</span>
+        central_widget<span class="token punctuation">.</span>setLayout<span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">button_clicked</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le bouton a été cliqué!"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ce code fait apparaître la fenêtre suivante:</p>
+<p><img src="Image3.png" alt="Test boutons cliquables"></p>
+<p>La classe <strong>QVBoxLayout</strong> permet de créer un layout vertical où tout les éléments sont centrés verticalement.</p>
+<h3>MenuBar</h3>
+<p>La différence entre <strong>QWidget</strong> et <strong>QMainWindow</strong> est qu'avec cette dernière classe, il est possible d'ajouter plusieurs éléments, notamment une barre de menu en haut de la fenêtre. Pour cela, nous allons utiliser la méthode <strong>MenuBar</strong>. Cette classe a de nombreuses méthodes, par exemple la méthode addMenu qui permet d'ajouter des onglets dans la barre de menu, ou bien encore la méthode addAction qui permet d'associer des actions à un onglet. A l'image des boutons, on peut également associer des méthodes pour que ces actions produisent quelque chose, grâce à la méthode triggered.connect:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test_button</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        menu_bar <span class="token operator">=</span> self<span class="token punctuation">.</span>menuBar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        file_menu <span class="token operator">=</span> menu_bar<span class="token punctuation">.</span>addMenu<span class="token punctuation">(</span><span class="token string">"Fichier"</span><span class="token punctuation">)</span>
+        file_menu<span class="token punctuation">.</span>addAction<span class="token punctuation">(</span><span class="token string">"Nouveau Fichier"</span><span class="token punctuation">)</span>
+        file_menu<span class="token punctuation">.</span>addAction<span class="token punctuation">(</span><span class="token string">"Ouvrir le fichier"</span><span class="token punctuation">)</span>
+        file_menu<span class="token punctuation">.</span>addAction<span class="token punctuation">(</span><span class="token string">"Enregistrer sous"</span><span class="token punctuation">)</span>
+        save_action <span class="token operator">=</span> file_menu<span class="token punctuation">.</span>addAction<span class="token punctuation">(</span><span class="token string">"Enregistrer"</span><span class="token punctuation">)</span>
+        save_action<span class="token punctuation">.</span>triggered<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>save<span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Test Bouton cliquable"</span><span class="token punctuation">)</span>
+        central_widget <span class="token operator">=</span> QWidget<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button1 <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton cliquable 1"</span><span class="token punctuation">,</span> central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button1<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_clicked<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button2 <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Bouton cliquable 2"</span><span class="token punctuation">,</span> central_widget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>button2<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_clicked<span class="token punctuation">)</span>
+
+        layout <span class="token operator">=</span> QVBoxLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button1<span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button2<span class="token punctuation">)</span>
+        central_widget<span class="token punctuation">.</span>setLayout<span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">button_clicked</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le bouton a été cliqué!"</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le fichier a été enregistré"</span><span class="token punctuation">)</span>
+
+</code></pre>
+<p>Ce code ouvre la même fenêtre que précédemment, mais avec un onglet &quot;Fichier&quot;. Lorsque l'on passe la souris dessus, un menu déroulant apparaît et lorque l'on clique sur &quot;enregistrer&quot;, un voit print &quot;Le fichier a été enregistré&quot;:</p>
+<p><img src="Image4.png" alt="Image menu déroulant"></p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Notons qu'il existe énormément de méthodes associées à chaque classes. Je présente ici les méthodes que je trouve les plus importantes, mais elles sont toutes répertoriées et expliquées sur le site de la documentation du projet <em>Qt for Python</em>: <a href="https://doc.qt.io/">Documentation QT</a></p>
+</div></div>
 
 
 </article>
