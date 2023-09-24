@@ -163,7 +163,11 @@ Le plus simple pour comprendre est de prendre un exemple :<br>
 <code>.container {     display: grid; } </code><br>
 Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
 <h2>Modifier les propriétés du tableau</h2>
-<p>Une fois le tableau créé, on peut préciser combien de lignes on souhaite avoir et combien de colonnes.</p>
+<p>Une fois le tableau créé, on peut préciser combien de lignes et de colonnes on souhaite avoir ainsi que leur taille.<br>
+Examinons l'exemple suivant :</p>
+<p><code>.container {     display: grid;     grid-template-columns: 500px 500px;     grid-template-rows: 100px 500px; }</code></p>
+<p>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.<br>
+Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</p>
 
 
 </article>
