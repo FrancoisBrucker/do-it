@@ -133,6 +133,8 @@
 </ol>
 <h2>1.Présentation du langage</h2>
 <p>Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA.</p>
+<h5>Documents utilisés</h5>
+<p><a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf">La programmation en C++</a></p>
 <h2>2. Syntaxe du C++</h2>
 <h4>Type de variable</h4>
 <p>Comme d'autres langages le C++ possède plusieurs type de variables :</p>
@@ -167,6 +169,91 @@ Exemples :</li>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"> 20.0 / 3.2    donnera  6.25
  15 / 8       donnera 1
  15 % 8       donnera 7
+</code></pre>
+<p>Comme d'autres langage l'utilisation de ++ ou de -- permet d'incrémenter ou de décrémenter une variable.</p>
+<h4>Instructions</h4>
+<p>Pour donner des instruction en C++ on peut soit faire une instruction par ligne comme ceci :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int a = 4;
+a++; 
+</code></pre>
+<p>Ou utiliser des instruction-bloc comme ceci :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">{
+  int a = 4;
+  a++ ;
+}
+</code></pre>
+<p>Si je déclare une variable dans un bloc alors elle ne pourra pas être utilisée en dehors de ce bloc., il s'agit d'une variable <em>locale</em>.<br>
+Il est interdit de donner le même nom à deux variables distinctes au sein d'un même bloc.<br>
+Si je déclare une variable en dehors d'un bloc alors c'est une variable dite <em>globale</em>.</p>
+<h4>Fonctions</h4>
+<h5>Elements de bases</h5>
+<p>Une fonction est définie par 4 éléments distincts :</p>
+<ul>
+<li>son nom</li>
+<li>le type de valeur qu'elle renvoie</li>
+<li>les paramètres dont elle a besoin</li>
+<li>le corps de la fonction</li>
+</ul>
+<p>Toute fonction doit être définie avant de pouvoir être utilisée.<br>
+Pour déclarer une fonction on utilise cette syntaxe : type nom(liste_des_paramètres).<br>
+Exemples :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Distance(double x1, double y1, double x2, double y2);
+char Concatenation(char mot1, char mot2);
+void AfficherUnNombreXFois(int nombre, int x);
+</code></pre>
+<p>On voit ici l'utilité de <em>void</em> rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.</p>
+<h5>Définir une fonction</h5>
+<p>Pour déclarer une fonction voici la syntaxe :<br>
+type nom_de_la_fonction(tous_les_paramètres)<br>
+{<br>
+corps de la fonction<br>
+}</p>
+<p>Exemples :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Moyenne(double x, double y){
+  reurn (x + y) / 2.0
+}
+</code></pre>
+<p>Lorsque l'on utilise <em>return</em> cela interrompt l'exécution de la fonction.</p>
+<h5>Utiliser une fonction</h5>
+<p>Une fois ma fonction déclarée je peux appeler ma fonction pour l'utiliser sur différentes valeurs.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double n=3;
+double m=4;
+double resultat = Moyenne(n,m);
+</code></pre>
+<p>Alors la variable <em>resultat</em> récupérera la valeur de la moyenne de 3 et 4 soit 3.5.</p>
+<h5>Les différentes instructions</h5>
+<h2>3.Premiers algorithmes</h2>
+<p>Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage.</p>
+<h4>Algorithme de calcul de distance entre deux points</h4>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Distance(x1,y1,x2,y2){
+  double dx,dy;
+  dx = x1-x2;
+  dy = y1-y2;
+  return sqrt(dx*dx+dy*dy);
+}
+</code></pre>
+<h4>Algorithme de calcul du maximum entre deux entiers</h4>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int Max(int a, int b)
+{
+if ((a &lt;= b))
+return b;
+return a;
+}
+</code></pre>
+<h4>Algorithme de calcul du maximum entre une liste d'entiers</h4>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int main()
+{
+    int arr[] = { 2, 7, 9, -1, 0, 3, 6, 21, 8, -12};
+ 
+    int max = INT_MIN;
+    for (int i: arr)
+    {
+        if (i > max) {
+            max = i;
+        }
+    }
+    return max;
+}
 </code></pre>
 
 
