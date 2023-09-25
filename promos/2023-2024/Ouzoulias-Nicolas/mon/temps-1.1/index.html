@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Mon premier MON pour découvrir quelques bases sur le langage Java.
+                Mon premier MON pour découvrir quelques bases sur le langage Java et la Programmation Orientée Objet.
 
         </p>
 
@@ -126,8 +126,81 @@
 
 
 <h2>Sommaire</h2>
-<p>Introduction</p>
+<p>I. Introduction</p>
+<p>II. Les bases</p>
+<p>III. La Programmation Orientée Objet (POO)</p>
+<p>IV. Conclusion</p>
 <h2>I. Introduction</h2>
+<p>A travers ce premier MON de l'année j'ai souhaité suivre une initiation au langage Java. Depuis ma découverte de l'informatique en prépa je n'ai fait que du Python et même si ce langage me plaît je pense qu'avoir au moins les bases d'un autre peut être toujours utile.</p>
+<p>Pour cela j'ai suivi une formation sur OpenClassRoom retrouvable juste <a href="https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java">ici</a> ainsi que quelques vidéos en ligne.</p>
+<p>De plus cette formation m'a permis d'approfondir mes connaissances sur la Programmation Orienté Objet que j'avais à peine découverte sur Python lors d'un stage.</p>
+<h2>II. Les bases</h2>
+<p>Mon principal objectif était de découvrir et d'apprendre la syntaxe Java, car ayant connaissance de Python la logique de programmation derrière les deux langages est globalement la même. Cependant contrairement à Python, le Java est plus exigeant en termes de syntaxe et rien que le fait de devoir utiliser le &quot; <code>;</code> &quot; et les &quot; <code>{}</code> &quot; de manière si fréquente n'est pas facile au début et il faut s'y habituer.</p>
+<p>De plus, un programme Java est structuré en <strong>packages</strong> et en <strong>classes</strong>, et aucun code n'est écrit en dehors d'une classe ce qui signifie que toutes les fonctions sont des <strong>méthodes</strong>.</p>
+<p>La construction en bloc et l'utilisation des <code>{}</code> pour marquer le début et la fin d'un bloc de code rendent les variables accessibles uniquement dans le contexte dans lequel elles ont été déclarée. Il faut donc faire attention à la <strong>portée</strong> d'une variable et faire attention lorsqu'on la déclare à désigner un niveau de contrôle.</p>
+<p><img src="https://user.oc-static.com/upload/2021/12/02/16384489205392_p1c5-4.png" alt="exemple portée"></p>
+<ul>
+<li>
+<p><em><strong>public</strong></em> : visible pour tous et par conséquent le moins restrictif ;</p>
+</li>
+<li>
+<p><em><strong>protected</strong></em> : visible pour le package et l'ensemble de ses sous-classes ;</p>
+</li>
+<li>
+<p><em><strong>package-protected</strong></em> : généralement visible uniquement par le package dans lequel il se trouve (paramètres par défaut). Ne pas mettre de mot clé déclenche ce niveau de contrôle ;</p>
+</li>
+<li>
+<p><em><strong>private</strong></em> : accessible uniquement dans le contexte dans lequel les variables sont définies (à l'intérieur de la classe dans laquelle il est situé).</p>
+</li>
+</ul>
+<p>Cette <em>encapsulation</em> du code peut permettre de sécuriser l'accès aux données ainsi que de limiter les modifications accidentelles lors de l'écriture de celui-ci.</p>
+<h2>III. La Programmation Orientée Objet (POO)</h2>
+<p>Une grande partie de la formation se concentrait sur la POO et comment bien l'utiliser en Java. N'ayant que très peu pratiquer ce type de programmation j'ai pu découvrir les bases de celles-ci tout en mettant en pratique ce que je venais d'apprendre en Java.</p>
+<p>La POO est une manière de programmer en se basant sur le concept d'<em>objets</em> possédant des <em>attributs</em> et des <em>méthodes</em>.</p>
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestObjet</span><span class="token punctuation">{</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>	
+		<span class="token class-name">Voiture</span> voiture <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Voiture</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		voiture<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">Bateau</span> bateau <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bateau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		bateau<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Vehicule</span><span class="token punctuation">{</span>
+	<span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"VROOM"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Voiture</span> <span class="token keyword">extends</span> <span class="token class-name">Vehicule</span><span class="token punctuation">{</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">allumerFeux</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">void</span> <span class="token function">allumerFeux</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Allumage Feux ! "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bateau</span> <span class="token keyword">extends</span> <span class="token class-name">Vehicule</span><span class="token punctuation">{</span>
+	
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Comme sur l'exemple précédent des classes filles peuvent <strong>hériter</strong> d'une classe mère mais également utiliser différemment les méthodes mères sans les modifier directement, c'est le <strong>polymorphisme</strong>.</p>
+<p>Ici les classes <code>Voiture</code> et <code>Bateau</code> descendent de la classe <code>Vehicule</code> et possèdent donc la méthode <code>.start()</code>, cependant cette dernière est différente pour les voitures.</p>
+<h4>Avantages de la POO :</h4>
+<ul>
+<li>Facile à lire et à comprendre</li>
+<li>Facilement modifiable</li>
+<li>Le Java semble bien s'y prêter avec les différentes portées des variables</li>
+</ul>
+<p><strong>Mais</strong> cela ne doit pas devenir une obligation, elle n'est à utiliser que lorsque le programme s'y prête et la programmation procédurale classique continue de très bien fonctionner dans la plupart des cas, <em>surtout à mon niveau de programmation peu élevé...</em></p>
+<h2>IV. Conclusion</h2>
+<p>Je ne suis pas du tout devenu un expert en Java, loin de là, mais je pense avoir bien appréhendé les bases de ce langage et si j'ai un jour besoin de l'utiliser je m'y adapterai plus rapidement. Désormais seul le temps et l'expérience me feront gagner en vitesse de code et en connaissances.</p>
+<p>De même pour la POO, la formation m'a permis de mieux comprendre l'utilité de celle-ci et comment bien organiser mon code pour en tirer profit. Il ne me reste plus qu'à faire de la POO en Python que je maîtrise plus, et je crois avoir un <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/">cours</a> à porter de main pour m'aider à cela ...</p>
 
 
 </article>
