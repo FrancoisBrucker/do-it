@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Airbnb : Comment une petite start-up est devenue un phénomène mondial."
+title: "Airbnb : The full story "
 authors:
   - BELAAZIZ Khaoula
 
@@ -10,15 +10,38 @@ date: 2023-09-17
 tags: 
   - "temps 1"
 
-résumé: "Wait for the story !!"
+résumé: "Comment une petite start-up est devenue un phénomène mondial ?!!"
 ---
 ## Sommaire
+- Histoire de la création
+  - Fondateurs
+  - Difficultés envisagées au début
+  - Première levée de fonds officielle
+- Croissance
+  - Site web au fil du temps
+- Défis
+- Conclusion
+- Documentation
 
-## Général
-Airbnb est une multinationale américaine fondée en 2008 par Brian Chesky, Joe Gebbia et Nathan Blecharczy.
 
-Elle met en relation des particuliers, des entreprises hôtelières (gîtes, chambres d’hôtes et d'hôtel), et des investisseurs en immobiliers locatifs.
+## Histoire de la création
 
-Airbnb connait une croissance exceptionnelle, au point d'être en 2020 présent dans plus de 100 000 villes différentes, sur tous les continents5.
+### Fondateurs
 
-Le groupe est coté à la bourse de New York. Son siège est à San Francisco, en Californie. (Wikipédia)
+### Difficultés envisagées au début
+### Première levée de fonds officielle
+## Croissance
+### Site web au fil du temps
+
+## Défis
+## Conclusion
+
+{% prerequis "Documentation :" %}
+
+* [The real story about how Airbnb was founded - Nathan Blecharczyk Co-founder Airbnb -](https://youtu.be/M6GBqqk2mY4?si=v4lXQi_bvU_q9ro4)
+* [Brian Chesky sur le lancement d'Airbnb et les défis de l'échelle](https://youtu.be/W608u6sBFpo?si=fPQlVDwCF62A5wAL)
+* [L’explication du logo d’AirBNB](https://www.creation-logo.net/blog/explication-du-logo-d-airbnb.html)
+* [COMMENT AIRBNB EST DEVENUE UN PHÉNOMÈNE MONDIAL ? – EP 1](https://inspire-media.fr/airbnb-1-la-creation-cereales-et-galeres/)
+* [COMMENT AIRBNB EST DEVENUE UN PHÉNOMÈNE MONDIAL ? – EP 2](https://inspire-media.fr/airbnb-2-comment-airbnb-est-devenue-un-phenomene-mondial/)
+
+{% endprerequis %}
