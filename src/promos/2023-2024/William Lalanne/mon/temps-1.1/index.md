@@ -38,7 +38,7 @@ Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièremen
 ### Qu'est ce que c'est et à quoi ça sert ? 
 Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. La disposition des éléments dans la page est difficile à gérer, mais plusieurs outils permettent de nous faciliter la vie. Par exemple, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page. 
 Le plus simple pour comprendre est de prendre un exemple :
-![exemple de gridd]
+![Exemple de grid dans une page web](exemple-grid.png)
 
 Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus. 
 
@@ -46,10 +46,10 @@ Dans l'image précédente, on peut voir que la page web est constituée d'un tab
 ### Créé un tableau
 Pour créer un tableau, il faut d'abord créer un *container* c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant : 
 `<div class="container">`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Premier élément</div>`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Deuxième élément</div>`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Troisième élément</div>`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Quatrième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>Premier élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>Deuxième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>Troisième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>Quatrième élément</div>`
 `</div>`
 
 
@@ -91,6 +91,14 @@ Les tableaux sont donc un moyen simple permettant de gérer la mise en place de 
 ## 3. Les Flexbox 
 ### Qu'est ce que c'est ? 
 
-Tout comme les Grid, les Flexbox sont des outils qui vont faciliter la mise en plage de la page web. 
+Tout comme les Grid, les Flexbox sont des outils qui vont faciliter l'aménagement de la page web. Mais contrairement aux Grid, les Flexbox ne vont pas permettre une mise en place bidimensionnelle, mais seulement unidimensionnelle. Les Grid permettaient de faire des lignes et des colonnes en même temps, les Flexbox sont comme des boîtes, donc on ne peut faire soit que des colonnes soit que des lignes. 
+
+Avec une Grid :
+
+| Premier élément | Deuxième élément | Troisième élément |
+|------------------|------------------|------------------|
+|         4        |         5        |         6        |
+
+Avec une Flexbox :
 
 
