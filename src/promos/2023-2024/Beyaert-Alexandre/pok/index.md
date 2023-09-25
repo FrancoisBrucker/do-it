@@ -1,12 +1,12 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Lola Bourdon"
+title: "POK de Alexandre Beyaert"
 authors:
-  - Lola Bourdon
+  - Alexandre Beyaert
 ---
 
-Ensemble des POK réalisés par Lola Bourdon.
+Ensemble des POK réalisés par Alexandre Beyaert.
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)
