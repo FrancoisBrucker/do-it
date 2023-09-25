@@ -45,10 +45,10 @@ Dans l'image précédente, on peut voir que la page web est constituée d'un tab
 ### Créé un tableau
 Pour créer un tableau, il faut d'abord créer un *container* c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant : 
 `<div class="container">`
-&nbsp;&nbsp;&nbsp;`<div>Premier élément</div>`
-&nbsp;&nbsp;&nbsp;`<div>Deuxième élément</div>`
-&nbsp;&nbsp;&nbsp;`<div>Troisième élément</div>`
-&nbsp;&nbsp;&nbsp;`<div>Quatrième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Premier élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Deuxième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Troisième élément</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp`<div>Quatrième élément</div>`
 `</div>`
 
 
@@ -65,10 +65,10 @@ Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le mod
 Examinons l'exemple suivant avec quelques propriétés du container : 
 
 `.container {`
-    &nbsp;&nbsp;&nbsp;`display: grid;`
-    &nbsp;&nbsp;&nbsp;`grid-template-columns: 500px 500px;`
-    &nbsp;&nbsp;&nbsp;`grid-template-rows: 100px 500px;`
-    &nbsp;&nbsp;&nbsp;`gap: 30px;`
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`display: grid;`
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`grid-template-columns: 500px 500px;`
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`grid-template-rows: 100px 500px;`
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`gap: 30px;`
 `}`
 
 Avec la propriété ***grid-template-columns***, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune. 
@@ -77,9 +77,11 @@ Avec la propriété ***grid-template-roxs***, on fixe la longueur de chaque lign
 D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément `<div class="first">Premier élément</div>`: 
 
 `.first {`
-&nbsp;&nbsp;&nbsp;`background-color: blueviolet;`
-&nbsp;&nbsp;&nbsp;`justify-self: center;`
-&nbsp;&nbsp;&nbsp;`align-self: center;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`background-color: blueviolet;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`justify-self: center;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`align-self: center;`
 `}`
 
+Ici on a trois propriétés, ***background-color*** permet de modifier la couleur de la cellule du tableau. 
+***justify-self*** permet de centrer horizontalement l'élément dans la cellule tandis que ***align-self*** permet de centrer l'élément verticalement dans la cellule. 
 
