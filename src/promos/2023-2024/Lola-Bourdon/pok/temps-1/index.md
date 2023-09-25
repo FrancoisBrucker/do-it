@@ -3,7 +3,7 @@ layout: layout/pok.njk
 
 title: "Titre du POK du temps 1 de Lola"
 authors:
-  - Gordon Zola
+  - Lola Bourdon
 
 date: 1970-09-01
 
