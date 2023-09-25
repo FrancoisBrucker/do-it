@@ -78,3 +78,8 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
                                        3rd Qu.:17  
                                        Max.   :18  
 ```
+Ici il n'y a aucun problème d'import.
+
+## Application sur des données de Formule 1
+#### Objectif
+Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visualiser et analyser rapidement des données issues de la Formule 1. Je fais d'abord des recherches pour déterminer le type de données auxquelles je pourrais avoir accès.
