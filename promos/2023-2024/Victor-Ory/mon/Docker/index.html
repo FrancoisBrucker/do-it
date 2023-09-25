@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cryptographie</title>
+        <title>Docker</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Cryptographie</h1>
+<h1 class="mb-1">Docker</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -73,13 +73,21 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Cryptographie</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Docker</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">DevOps</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Novice</li>
                 
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -116,18 +124,18 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/">ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/mon/">MON de ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/mon/Docker/">Cryptographie</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/">ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/mon/">MON de ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/mon/Docker/">Docker</a>
 
 </div></div>
 
 
 
 
-<h1>Résumé :</h1>
 <h2>Ressources :</h2>
 <ul>
 <li><a href="https://docs.docker.com/">La doc de Docker</a></li>
 <li><a href="https://www.youtube.com/watch?v=3c-iBn73dDE">Vidéo tutoriel de 3H</a></li>
+<li><a href="../../../2022-2023/Bilgi-Tuncay/mon/Docker.md">MON de Tuncay</a></li>
 </ul>
 <h2>Pré-requis :</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
@@ -135,47 +143,74 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
-<p>Niveau débutant</p>
+<p>Niveau novice</p>
 </div><div class="pl-8 mr-8">
 <p>Pré-requis :</p>
 <ul>
-<li>Un site trop cool à mettre en ligne</li>
-<li>Un compte AWS gratuit</li>
+<li>Un site à mettre en ligne</li>
+<li>Terminal</li>
+<li>basic réseau ( port )</li>
 </ul>
 </div></div>
+<h3>Résumé et Objectifs</h3>
+<p>Ce MON est le premiers pas sur le chemin du devOps. En effet, Docker est un élément essentiel des systèmes d'informations actuelles.  Ainsi ce MON va essayer de nous familiariser avec les concepts et voir leurs interaction avec des éléments classiques d'une application web.</p>
 <h2>Ce qu'on veut faire  :</h2>
 <ul>
-<li>Dockerier l'application que nous avons</li>
-<li>La mettre en ligne sur un serveur AWS</li>
+<li>Dockeriser l'application que nous avons.</li>
+<li>Comprendre les processus pour la mettre en ligne sur un serveur cloud</li>
 </ul>
-<h3>Let's go</h3>
+<h1>Let's go</h1>
 <h2>Pourquoi utiliser Docker ?</h2>
 <p>C'est un procédé de standardisation des applications pour pouvoir les déployer partout facilement.<br>
-On fait un package de l'applications, ses dépendances et sa configuration.<br>
+On fait un package de l'applications, ses dépendances et sa configuration facilement transportable.<br>
 Deux éléments sont importants dans cet écosystème : les images et les containers.<br>
 L'image est le moule qui contient les dépendances, les configurations et l'image devient un container lorsque qu'elle est hébergée sur ton ordinateur.<br>
 Le container est un environnement en fonctionnement autour d'une image.<br>
 Une image peut être utilisé dans plusieurs container mais chaque container n'utilise qu'une image.<br>
-Chaque image est découpé en layer ou couche.</p>
-<h2>Truc cool</h2>
-<p>Port binding : on associe un port à un container puis le lier à un port réel de l'ordinateur.<br>
--p permet de faire le binding de port et -d permet de détacher le shell du cycle de vie du container ==&gt; pas besoin d'avoir un shell qui tourne en même temps que l'application.</p>
-<p>''' shell<br>
-docker run -phostport:containerport -d -e variable environnement<br>
-'''</p>
-<h1>Classique Workflow :</h1>
-<p>Développement en local ==&gt; Continious Integration (Jenkins) crée un build et une image docker ==&gt; image pushed to private repositories ==&gt; deployement on deployement server</p>
-<h1>Docker network</h1>
-<p>Il est possible de créer un réseau fictif reliant les différents conteneurs qui peuvent héberger des éléments différents de la structure du site : Base de données, API backend, frontend, ...</p>
-<h1>Docker Compose</h1>
+Chaque image est découpé en layer ou couche, ce qui permet lors de changement localisé de modifier seulement une layer et non l'ensemble de l'image.</p>
+<h1>Installation</h1>
+<p>Pour l'installation, cela est très bien expliqué à travers du <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker">Mon de Tuncay</a>, cela permet d'installer notamment le CLI, une façon de communiquer avec l'application docker à travers un terminal.</p>
+<p>Ainsi après tout cela effectué, on eut commencer à travailler ! Car le travail c'est la vie.</p>
+<h3>Mon application</h3>
+<p>Pour ce cours, j'utilise une application que j'ai conçu pour un autre projet, mais elle peut être résumée par :</p>
+<ul>
+<li>une base de données MongoDB locale,</li>
+<li>une API en relation avec cette base de données en Express,</li>
+<li>un front en React</li>
+</ul>
+<h2>On fait quoi avec ça ?</h2>
+<p>Ainsi, l'objectif pour une application de ce genre est de créer un container à base d'un image adaptée à chaque composant.<br>
+Pour cela, nous pouvons nous aider de <a href="https://hub.docker.com/">Docker Hub</a>, un répertoire d'image pour les différents usage avec une documentation associée souvent.</p>
+<p>Une fois téléchargée, l'image peut être utilisé à travers ce genre de ligne de commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">docker</span> run <span class="token parameter variable">-phostport:containerport</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-e</span> variable environnement 
+</code></pre>
+<p>La commande permet de créer un container à partir d'une image où  :</p>
+<ul>
+<li>-p permet de faire le binding de port</li>
+<li>-d permet de détacher le shell du cycle de vie du container</li>
+</ul>
+<p>Port binding : on associe un port à un container puis le lier à un port réel de l'ordinateur.</p>
+<h3>Classique Workflow :</h3>
+<p>Le déroulement classique et simple qu'il pourrait y avoir :</p>
+<ul>
+<li>Développement en local</li>
+<li>Test en tout genre sur le projet ( compilation, test unitaire, ...)</li>
+<li>Création d'une image docker avec le projet incorporé ==&gt; Publication de l'image sur un répertoire accessible par d'autres</li>
+<li>Déploiement du l'image sur un serveur dédié avec exactement la même configuration ==&gt; Test des différentes fonctionnalités</li>
+<li>Feedback</li>
+</ul>
+<h1>Les différents concepts de Docker :</h1>
+<h2>Docker network :</h2>
+<p>Il est possible de créer un réseau fictif reliant les différents conteneurs qui peuvent héberger des éléments différents de la structure du site : Base de données, API backend, frontend, ... Cela permet de simplifier les échanges entre les différents composants du réseau et de s'abstenir de la complexité réel du réseau.</p>
+<h2>Docker Compose :</h2>
 <p>Cela permet de gérer de multiples containers en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. `Ces différents containers forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable.<br>
 Ainsi au lieu de configurer chaque container avec des variables, des binding de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de</p>
-<h1>Docker volume</h1>
-<p>Les volumes sont des mémoires persistantes entre les différentes construction d'un container à partir d'une même image. Cela est essentielle si nous voulons créer une base de données par exemple.</p>
-<h1>CI/CD</h1>
-<p>Cet ensemble de procédé et outils sont donc des maillons essentiels de l'automatisation de process dans l'industrie de 'IT. Cela permet la coopération des différents employés, mettre en commun leurs modifications sur GitHub puis de créer une image avec la dernière version du produit avec sa configuration, ses dépendances grâce à un Jenkinsfile, un fichier dans lequel sont notés les instructions à effectuer après chaque modification. Cela permet par exemple ensuite de déployer automatiquement la dernière version du projet sur un serveur de test pour qu'une équipe de test vérifie le bon fonctionnement de chaque élément.</p>
-<h1>Dockerfile</h1>
-<p>Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs.</p>
+<h2>Docker volume :</h2>
+<p>Les volumes sont des mémoires persistantes entre les différentes construction d'un container à partir d'une même image. Cela est essentielle si nous voulons créer une base de données par exemple. Si nous n'utilisons pas de volume, à chaque redémarrage du container à partir de l'image, les données de l'utilisation précédente ont disparus. Le volume Docker est donc un montage d'un espace du container sur un espace physique réel de l'hôte. L'espace du container renvoie directement à l'endroit en dehors du container et sur la machine, donc persistant, et cela permet de conserver les données au-delà des cycles de vie des containers.</p>
+<h2>Automatisation et Process :</h2>
+<p>Cet ensemble de procédé et outils est donc un maillons essentiel de l'automatisation de process dans l'industrie de l'IT. Cela permet la coopération des différents employés, mettre en commun leurs modifications sur GitHub puis de créer une image avec la dernière version du produit avec sa configuration, ses dépendances grâce à un <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Jenkins">Jenkinsfile</a>, un fichier dans lequel sont notés les instructions à effectuer après chaque modification. Cela permet par exemple ensuite de déployer automatiquement la dernière version du projet sur un serveur de test pour qu'une équipe de test vérifie le bon fonctionnement de chaque élément.</p>
+<h2>Dockerfile</h2>
+<p>Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, c'est la</p>
 
 
 </article>

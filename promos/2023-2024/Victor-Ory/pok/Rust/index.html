@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CI/CD ou bien </title>
+        <title>Apprendre un language Rust(ique) </title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">CI/CD ou bien </h1>
+<h1 class="mb-1">Apprendre un language Rust(ique) </h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -73,9 +73,9 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CI/CD</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Rust</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Jenkins</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Super facile</li>
                 
 
             </ul>
@@ -120,30 +120,83 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/">ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/pok/">POK de Vcitor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/pok/CICD/">CI/CD ou bien </a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/">ORY Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/pok/">POK de Victor</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Victor-Ory/pok/Rust/">Apprendre un language Rust(ique) </a>
 
 </div></div>
 
 
 
 
-<p>Ce POK a pour objectif de mettre en place un système de CI/CD pour un site simple, pour cela nous allons utilisé les technologies suivantes :</p>
-<ul>
-<li>Un site simple</li>
-<li>Jenkins</li>
-</ul>
-<p>Pour orienter mes recherches, je me suis basé sur les renseignements donnés par des utilisateurs Reddit, notamment ce post : <a href="https://www.reddit.com/r/dataengineering/comments/sixbe5/what_are_good_learning_resources_for_cicd/">Post Reddit</a></p>
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 </svg>
-<div class="pl-8  mb-2 mr-8">
-<p>Bases</p>
-</div><div class="pl-8 mr-8">
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Pré-requis</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <ul>
-<li>DevWeb de base pour faire un site simple</li>
+<li>Niveau novice</li>
+<li>Pré-requis de C++</li>
 </ul>
-</div></div>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Les ressources</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<ul>
+<li><a href="https://doc.rust-lang.org/rust-by-example/">Rust By Example</a></li>
+<li><a href="https://practice.rs/why-exercise.html">Rust by Practise</a></li>
+<li><a href="https://github.com/rust-lang/rustlings">GitHub Exercice</a></li>
+<li><a href="https://github.com/wasmflow/node-to-rust/raw/HEAD/from-javascript-to-rust.pdf">Livre &quot;From Javascript to Rust&quot;</a></li>
+</ul>
+</div>
+</details>     
+</div>
+<h1>Objectifs</h1>
+<p><strong>Rust</strong> est un language efficace et polyvalent, il peut faire du front, du back, du CLI, des jeux, du programme embarqué.<br>
+Donc je vais essayer d'en apprendre les fondements et de tester mes compétences sur le projet suivant :</p>
+<ul>
+<li>Créer une application pour écouter Spotify comme celle disponible à ce <a href="https://github.com/hrkfdn/ncspot">repo</a>.</li>
+</ul>
+<h1>Prévision pour le point 1 :</h1>
+<ul>
+<li>Apprendre les concepts de base de Rust :
+<ul>
+<li>Variables</li>
+<li>Ownership / Borrowship</li>
+<li>...</li>
+</ul>
+</li>
+<li>Cette partie se verra représenté par ma progression au sein du projet <a href="https://github.com/rust-lang/rustlings">Rustlings Exercice Repo</a> avec 96 exercices de plus en plus dur abordant les différents concepts clés au langage.</li>
+</ul>
+<h2>Confrontation avec la réalité :</h2>
+<h1>Prévision pour le point 2 :</h1>
+<h2>Confrontation avec la réalité :</h2>
 
 
 </article>
