@@ -45,10 +45,10 @@ Dans l'image précédente, on peut voir que la page web est constituée d'un tab
 ### Créé un tableau
 Pour créer un tableau, il faut d'abord créer un *container* c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant : 
 `<div class="container">`
-    `<div>Premier élément</div>`
-    `<div>Deuxième élément</div>`
-    `<div>Troisième élément</div>`
-    `<div>Quatrième élément</div>`
+&nbsp;&nbsp;&nbsp;`<div>Premier élément</div>`
+&nbsp;&nbsp;&nbsp;`<div>Deuxième élément</div>`
+&nbsp;&nbsp;&nbsp;`<div>Troisième élément</div>`
+&nbsp;&nbsp;&nbsp;`<div>Quatrième élément</div>`
 `</div>`
 
 
@@ -61,16 +61,25 @@ Cette ligne permet simplement de dire que l'élément de class "container" doit 
 
 
 ## Modifier les propriétés du tableau
-Une fois le tableau créé, on peut préciser combien de lignes et de colonnes on souhaite avoir ainsi que leur taille.
-Examinons l'exemple suivant : 
+Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau. 
+Examinons l'exemple suivant avec quelques propriétés du container : 
 
-`.container {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: 100px 500px;
-}`
+`.container {`
+    &nbsp;&nbsp;&nbsp;`display: grid;`
+    &nbsp;&nbsp;&nbsp;`grid-template-columns: 500px 500px;`
+    &nbsp;&nbsp;&nbsp;`grid-template-rows: 100px 500px;`
+    &nbsp;&nbsp;&nbsp;`gap: 30px;`
+`}`
 
 Avec la propriété ***grid-template-columns***, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune. 
 Avec la propriété ***grid-template-roxs***, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500. 
+
+D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément `<div class="first">Premier élément</div>`: 
+
+`.first {`
+&nbsp;&nbsp;&nbsp;`background-color: blueviolet;`
+&nbsp;&nbsp;&nbsp;`justify-self: center;`
+&nbsp;&nbsp;&nbsp;`align-self: center;`
+`}`
 
 
