@@ -101,7 +101,7 @@ Avec une Flexbox :
 ![Exemple de mise en page avec une flexbox](exemple-flexbox.png)
 ![Exemple de mise en page avec une flexbox](flex-exemple.png)
 
-## Cr&er une Flexbox
+## Créer une Flexbox
 
 Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes : 
 
@@ -119,4 +119,24 @@ Ensuite dans le fichier CSS, il faut spécifier que la div de class *container* 
     display: flex;
 }
 `
-Cela ressemble beaucoup à ce qu'on a fait pour le Grid. 
+Cela ressemble beaucoup à ce qu'on a fait pour la Grid. 
+On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété ***flex-direction***.
+
+`.container {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;
+}
+`
+On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox. 
+Si on souhaite en créer une en ligne il faudra écrire :
+***flex-direction: row;***. 
+
+Ensuite, les éléments à l'intérieur du container, comme **<div>1</div>** ont eux aussi des propriétés. On peut par exemple parler de la propriété ***justify-content***. 
+On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple : 
+![Exemple flexbox disponible](flexbox-freespace.png)
+Avec ***justify-content*** on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container. 
+- justify-content: **start** les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus. 
+- justify-content: **end** les éléments s'aligneront les une à la suite des autres en commençant par la fin du container. 
+![Exemple flexbox end](flexbox-end.png)
+- justify-contznt: **center** les éléments seront centrés par rapport à la largeur du container. 
+![Exemple flexbox center](flexbox-center.png)
