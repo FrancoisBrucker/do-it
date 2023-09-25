@@ -6,7 +6,7 @@ authors:
   - Assane Diouf
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Assane Diouf.
 
 * [Un site avec Rust/WASM](./temps-1)
 * [POK 2](./temps-2)

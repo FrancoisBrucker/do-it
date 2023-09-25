@@ -10,5 +10,5 @@ Ensemble des MON réalisés par Omar Salame.
 
 ## Temps 1
 
-* [MON 1](./temps-1.1)
+* [MON](./temps-1.1)
 

@@ -18,3 +18,9 @@ Ensemble des MON réalisés par Victor ORY
 - [Cryptographie](./Crypto) 
   
 - [Docker](./Docker) 
+
+### Autres MONs envisagés : 
+
+- Management des risques cyber 
+- OSINT 
+- 
