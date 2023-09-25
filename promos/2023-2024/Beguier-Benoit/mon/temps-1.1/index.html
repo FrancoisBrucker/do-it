@@ -181,9 +181,18 @@ Je vais utiliser l'environnement de travail RStudio tout au long de cette format
 <p>Il est aussi possible avec RStudio d'importer tous les types de fichiers en utilisant le bouton Import Dataset.</p>
 <h4>Gérer les erreurs d'importations</h4>
 <p>J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">summary
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre de type <em>NA</em>, en l'occurrence des erreurs de données.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token operator">></span> summary<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+     noms               sexe                age    
+ Length:6           Length:6           Min.   :16  
+ Class :character   Class :character   1st Qu.:17  
+ Mode  :character   Mode  :character   Median :17  
+                                       Mean   :17  
+                                       3rd Qu.:17  
+                                       Max.   :18  
+</code></pre>
 
 
 </article>
