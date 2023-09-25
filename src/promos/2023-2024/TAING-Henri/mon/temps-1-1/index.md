@@ -84,11 +84,11 @@ Le SEM regroupe un ensemble de techniques dont l'objectif commun est de garantir
 
 Un plan SEO comprend cinq étapes à réitérer au cours du temps pour suivre les tendances et l'évolution des moteurs de recherche :
 
-> étudier les mots-clés et tenir compte des thèmes associés pour comprendre ce que les utilisateurs recherchent.
-> évaluer sa position dans les résultats de recherche pour ces mots-clés.
-> corriger et améliorer ses performances en matière de SEO.
-> fixer des échéances pour chaque tâche tout au long de l'année
-> puis examiner les résultats et ajuster le plan si nécessaire.
+- étudier les mots-clés et tenir compte des thèmes associés pour comprendre ce que les utilisateurs recherchent.
+- évaluer sa position dans les résultats de recherche pour ces mots-clés.
+- corriger et améliorer ses performances en matière de SEO.
+- fixer des échéances pour chaque tâche tout au long de l'année
+- puis examiner les résultats et ajuster le plan si nécessaire.
 
 Dans le domaine du SEO, la longue traîne désigne les expressions longues qui correspondent spécifiquement à l'un de vos produits ou services. Elles sont associées à un faible volume de recherches et sont donc confrontées à une concurrence moins élevée. Par conséquent, elles ont plus de chances d'être pertinentes par rapport aux requêtes des utilisateurs.
 Un autre outil pour améliorer sa visibilité est le lien retour, c'est-à-dire des liens pointant vers son site qui figurent sur d'autres sites Web. Pour cela, il faut produire des contenus de qualité et ne pas hésiter à collaborer avec d'autres personnes. Attention, le moteur de recherche peut tenir compte de la pertinence de l'origine du lien retour, des sites artificiels pour générer des liens retours ne marcherait pas par exemple.
