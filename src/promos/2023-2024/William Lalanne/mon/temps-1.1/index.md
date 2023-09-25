@@ -103,4 +103,20 @@ Avec une Flexbox :
 
 ## Cr&er une Flexbox
 
-Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. 
+Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes : 
+
+`<div class="container">`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>1</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>2</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>3</div>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<div>4</div>`
+`</div>`
+On a un bien un container et des éléments à l'intérieur. 
+
+Ensuite dans le fichier CSS, il faut spécifier que la div de class *container* est une Flexbox. Pour cela : 
+
+`.container {
+    display: flex;
+}
+`
+Cela ressemble beaucoup à ce qu'on a fait pour le Grid. 
