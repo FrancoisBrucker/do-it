@@ -21,7 +21,8 @@ résumé: "Dans ce MON je souhaite approfondir mes connaissances en CSS"
 ## Sommaire
 
 1. Introduction
-2. Comment bien organiser sa page avec CSS ? 
+2. Les Grid 
+3. Les Flexbox
 
 
 ## 1. Introduction
@@ -35,7 +36,7 @@ Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièremen
 
 ## 2. Les Grid
 ### Qu'est ce que c'est et à quoi ça sert ? 
-Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. Pour cela, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page. 
+Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. La disposition des éléments dans la page est difficile à gérer, mais plusieurs outils permettent de nous faciliter la vie. Par exemple, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page. 
 Le plus simple pour comprendre est de prendre un exemple :
 ![exemple de gridd]
 
@@ -84,4 +85,12 @@ D'autres propriétés existent mais elles s'appliquent cette fois aux éléments
 
 Ici on a trois propriétés, ***background-color*** permet de modifier la couleur de la cellule du tableau. 
 ***justify-self*** permet de centrer horizontalement l'élément dans la cellule tandis que ***align-self*** permet de centrer l'élément verticalement dans la cellule. 
+
+Les tableaux sont donc un moyen simple permettant de gérer la mise en place de la page, on peut créer des colonnes, des lignes de la taille que l'on souhaite en y mettant les éléments voulus. 
+
+## 3. Les Flexbox 
+### Qu'est ce que c'est ? 
+
+Tout comme les Grid, les Flexbox sont des outils qui vont faciliter la mise en plage de la page web. 
+
 
