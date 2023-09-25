@@ -64,6 +64,17 @@ Il est aussi possible avec RStudio d'importer tous les types de fichiers en util
 #### Gérer les erreurs d'importations
 J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction
 ```shell
-summary
+summary()
 ```
 Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre de type *NA*, en l'occurrence des erreurs de données.
+
+```shell
+> summary(data1)
+     noms               sexe                age    
+ Length:6           Length:6           Min.   :16  
+ Class :character   Class :character   1st Qu.:17  
+ Mode  :character   Mode  :character   Median :17  
+                                       Mean   :17  
+                                       3rd Qu.:17  
+                                       Max.   :18  
+```
