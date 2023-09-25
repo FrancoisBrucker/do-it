@@ -192,7 +192,17 @@ Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la lon
 <p><img src="exemple-flexbox.png" alt="Exemple de mise en page avec une flexbox"><br>
 <img src="flex-exemple.png" alt="Exemple de mise en page avec une flexbox"></p>
 <h2>Cr&amp;er une Flexbox</h2>
-<p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox.</p>
+<p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes :</p>
+<p><code>&lt;div class=&quot;container&quot;&gt;</code><br>
+      <code>&lt;div&gt;1&lt;/div&gt;</code><br>
+      <code>&lt;div&gt;2&lt;/div&gt;</code><br>
+      <code>&lt;div&gt;3&lt;/div&gt;</code><br>
+      <code>&lt;div&gt;4&lt;/div&gt;</code><br>
+<code>&lt;/div&gt;</code><br>
+On a un bien un container et des éléments à l'intérieur.</p>
+<p>Ensuite dans le fichier CSS, il faut spécifier que la div de class <em>container</em> est une Flexbox. Pour cela :</p>
+<p><code>.container {     display: flex; } </code><br>
+Cela ressemble beaucoup à ce qu'on a fait pour le Grid.</p>
 
 
 </article>
