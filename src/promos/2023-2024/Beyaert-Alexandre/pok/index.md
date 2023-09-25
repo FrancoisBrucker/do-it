@@ -1,12 +1,12 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de Alexandre Beyaert"
 authors:
-  - Gordon Zola
+  - Alexandre Beyaert
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Alexandre Beyaert.
 
 * [POK 1](./temps-1)
 * [POK 2](./temps-2)

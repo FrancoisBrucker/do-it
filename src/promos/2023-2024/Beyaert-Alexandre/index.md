@@ -1,9 +1,9 @@
 ---
 layout: layout/fiche.njk
 
-title: "Gordon ZOLA"
+title: "Alexandre BEYAERT"
 authors:
-    - "Gordon Zola"
+    - "Alexandre BEYAERT"
 ---
 
 Étudiant fictif, utilisé pour le template de nouveaux élèves.
@@ -13,6 +13,4 @@ authors:
 * [POK](./pok)
 * [MON](./mon)
 
-## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)

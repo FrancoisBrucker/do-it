@@ -1,12 +1,12 @@
 ---
 layout: layout/mon-index.njk
 
-title: "MON de Gordon Zola"
+title: "MON de Alexandre Beyaert"
 authors:
   - Gordon Zola
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par Alexandre Beyaert.
 
 * [MON 1.1](./temps-1.1)
 * [MON 1.2](./temps-1.2)
