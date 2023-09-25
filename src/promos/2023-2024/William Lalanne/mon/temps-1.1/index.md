@@ -94,11 +94,13 @@ Les tableaux sont donc un moyen simple permettant de gérer la mise en place de 
 Tout comme les Grid, les Flexbox sont des outils qui vont faciliter l'aménagement de la page web. Mais contrairement aux Grid, les Flexbox ne vont pas permettre une mise en place bidimensionnelle, mais seulement unidimensionnelle. Les Grid permettaient de faire des lignes et des colonnes en même temps, les Flexbox sont comme des boîtes, donc on ne peut faire soit que des colonnes soit que des lignes. 
 
 Avec une Grid :
-
-| Premier élément | Deuxième élément | Troisième élément |
-|------------------|------------------|------------------|
-|         4        |         5        |         6        |
+ ![Exemple de mise en page avec une grid](grid-exemple.png)
 
 Avec une Flexbox :
 
+![Exemple de mise en page avec une flexbox](exemple-flexbox.png)
+![Exemple de mise en page avec une flexbox](flex-exemple.png)
 
+## Cr&er une Flexbox
+
+Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. 
