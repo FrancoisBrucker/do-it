@@ -191,7 +191,7 @@ Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la lon
 <p>Avec une Flexbox :</p>
 <p><img src="exemple-flexbox.png" alt="Exemple de mise en page avec une flexbox"><br>
 <img src="flex-exemple.png" alt="Exemple de mise en page avec une flexbox"></p>
-<h2>Cr&amp;er une Flexbox</h2>
+<h2>Créer une Flexbox</h2>
 <p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes :</p>
 <p><code>&lt;div class=&quot;container&quot;&gt;</code><br>
       <code>&lt;div&gt;1&lt;/div&gt;</code><br>
@@ -202,7 +202,23 @@ Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la lon
 On a un bien un container et des éléments à l'intérieur.</p>
 <p>Ensuite dans le fichier CSS, il faut spécifier que la div de class <em>container</em> est une Flexbox. Pour cela :</p>
 <p><code>.container {     display: flex; } </code><br>
-Cela ressemble beaucoup à ce qu'on a fait pour le Grid.</p>
+Cela ressemble beaucoup à ce qu'on a fait pour la Grid.<br>
+On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété <em><strong>flex-direction</strong></em>.</p>
+<p><code>.container { &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;display: flex; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;flex-direction: column; } </code><br>
+On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox.<br>
+Si on souhaite en créer une en ligne il faudra écrire :<br>
+<em><strong>flex-direction: row;</strong></em>.</p>
+<p>Ensuite, les éléments à l'intérieur du container, comme <strong><div>1</div></strong> ont eux aussi des propriétés. On peut par exemple parler de la propriété <em><strong>justify-content</strong></em>.<br>
+On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple :<br>
+<img src="flexbox-freespace.png" alt="Exemple flexbox disponible"><br>
+Avec <em><strong>justify-content</strong></em> on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container.</p>
+<ul>
+<li>justify-content: <strong>start</strong> les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus.</li>
+<li>justify-content: <strong>end</strong> les éléments s'aligneront les une à la suite des autres en commençant par la fin du container.<br>
+<img src="flexbox-end.png" alt="Exemple flexbox end"></li>
+<li>justify-contznt: <strong>center</strong> les éléments seront centrés par rapport à la largeur du container.<br>
+<img src="flexbox-center.png" alt="Exemple flexbox center"></li>
+</ul>
 
 
 </article>
