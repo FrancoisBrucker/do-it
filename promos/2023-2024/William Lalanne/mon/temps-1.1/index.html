@@ -154,10 +154,10 @@ Le plus simple pour comprendre est de prendre un exemple :<br>
 <h3>Créé un tableau</h3>
 <p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :<br>
 <code>&lt;div class=&quot;container&quot;&gt;</code><br>
-   <code>&lt;div&gt;Premier élément&lt;/div&gt;</code><br>
-   <code>&lt;div&gt;Deuxième élément&lt;/div&gt;</code><br>
-   <code>&lt;div&gt;Troisième élément&lt;/div&gt;</code><br>
-   <code>&lt;div&gt;Quatrième élément&lt;/div&gt;</code><br>
+     &amp;nbsp<code>&lt;div&gt;Premier élément&lt;/div&gt;</code><br>
+     &amp;nbsp<code>&lt;div&gt;Deuxième élément&lt;/div&gt;</code><br>
+     &amp;nbsp<code>&lt;div&gt;Troisième élément&lt;/div&gt;</code><br>
+     &amp;nbsp<code>&lt;div&gt;Quatrième élément&lt;/div&gt;</code><br>
 <code>&lt;/div&gt;</code></p>
 <p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :<br>
 <code>.container {     display: grid; } </code><br>
@@ -166,19 +166,21 @@ Cette ligne permet simplement de dire que l'élément de class &quot;container&q
 <p>Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau.<br>
 Examinons l'exemple suivant avec quelques propriétés du container :</p>
 <p><code>.container {</code><br>
-   <code>display: grid;</code><br>
-   <code>grid-template-columns: 500px 500px;</code><br>
-   <code>grid-template-rows: 100px 500px;</code><br>
-   <code>gap: 30px;</code><br>
+      <code>display: grid;</code><br>
+      <code>grid-template-columns: 500px 500px;</code><br>
+      <code>grid-template-rows: 100px 500px;</code><br>
+      <code>gap: 30px;</code><br>
 <code>}</code></p>
 <p>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.<br>
 Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</p>
 <p>D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément <code>&lt;div class=&quot;first&quot;&gt;Premier élément&lt;/div&gt;</code>:</p>
 <p><code>.first {</code><br>
-   <code>background-color: blueviolet;</code><br>
-   <code>justify-self: center;</code><br>
-   <code>align-self: center;</code><br>
+      <code>background-color: blueviolet;</code><br>
+      <code>justify-self: center;</code><br>
+      <code>align-self: center;</code><br>
 <code>}</code></p>
+<p>Ici on a trois propriétés, <em><strong>background-color</strong></em> permet de modifier la couleur de la cellule du tableau.<br>
+<em><strong>justify-self</strong></em> permet de centrer horizontalement l'élément dans la cellule tandis que <em><strong>align-self</strong></em> permet de centrer l'élément verticalement dans la cellule.</p>
 
 
 </article>
