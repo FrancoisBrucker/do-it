@@ -3,7 +3,7 @@ layout: layout/pok.njk
 
 title: "Titre du POK du temps 3"
 authors:
-  - Gordon Zola
+  - Alexandre Beyaert
 
 date: 1971-03-01
 

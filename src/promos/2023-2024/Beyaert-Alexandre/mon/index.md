@@ -3,7 +3,7 @@ layout: layout/mon-index.njk
 
 title: "MON de Alexandre Beyaert"
 authors:
-  - Gordon Zola
+  - Alexandre Beyaert
 ---
 
 Ensemble des MON réalisés par Alexandre Beyaert.
