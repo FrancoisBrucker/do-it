@@ -8,7 +8,7 @@ authors:
 date: 2023-09-25
 
 tags:
-  - "temps 1" "marketing" "communication"
+  - "temps 1"
 
 résumé: "Introduction au marketing digital pour les vieux"
 ---
