@@ -29,7 +29,7 @@ Une plateforme type Leboncoin permettant à un particulier de déposer son annon
 
 ![Image](MBM-accueil.png)
 
-![Image dépot annonce](MBM-dépot-annonce.png)
+![Image dépot annonce](MBM-depot-annonce.png)
 
 ![Image recherche annonce](MBM-recherche-annonce.png)
 
