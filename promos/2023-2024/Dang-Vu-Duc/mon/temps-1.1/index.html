@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Apprentissage de Qt avec Python</title>
+        <title>MON1.1: Apprentissage de Qt avec Python</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Apprentissage de Qt avec Python</h1>
+<h1 class="mb-1">MON1.1: Apprentissage de Qt avec Python</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON aura pour objectif de s'initier à Qt avec Python. Cet outil permet de créer des interfaces graphiques avec Python, et sera utile pour le POK du temps 1.
+                Ce MON aura pour objectif de s'initier à Qt avec Python. Cet outil permet de créer des interfaces graphiques avec Python, et sera utile pour mon POK du temps 1.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/">MON de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.1/">Apprentissage de Qt avec Python</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/">MON de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.1/">MON1.1: Apprentissage de Qt avec Python</a>
 
 </div></div>
 
@@ -261,6 +261,166 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 <div class="pl-8 mr-8">
 <p>Notons qu'il existe énormément de méthodes associées à chaque classes. Je présente ici les méthodes que je trouve les plus importantes, mais elles sont toutes répertoriées et expliquées sur le site de la documentation du projet <em>Qt for Python</em>: <a href="https://doc.qt.io/">Documentation QT</a></p>
 </div></div>
+<h3>QMessageBox</h3>
+<p>Cette classe permet de faire apparaître une fenêtre &quot;popup&quot;. On peut définir des boutons de base qui sont dans ce popup, avec la méthode <em>setStandardButtons</em>. Voici un exemple d'un code qui fait apparaître un popup (ce code est ajouté à notre méthode <em>button_clicked</em>):</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">button_clicked</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        message <span class="token operator">=</span> QMessageBox<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setMinimumSize<span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Titre du popup"</span><span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Message d'erreur"</span><span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setIcon<span class="token punctuation">(</span>QMessageBox<span class="token punctuation">.</span>Critical<span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setStandardButtons<span class="token punctuation">(</span>QMessageBox<span class="token punctuation">.</span>Ok <span class="token operator">|</span> QMessageBox<span class="token punctuation">.</span>Cancel<span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span>setDefaultButton<span class="token punctuation">(</span>QMessageBox<span class="token punctuation">.</span>Ok<span class="token punctuation">)</span>
+        message<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Lorsque l'on clique sur un des deux boutons, le popup suivant apparaît:</p>
+<p><img src="Image5.png" alt="Popup"></p>
+<p>Encore une fois, il est possible de faire bien plus de choses avec cette fenêtre popup, tout est documenté sur le site de Qt.</p>
+<h3>QLabel et QLineEdit</h3>
+<p>La classe <strong>QLabel</strong> permet de mettre des labels (c'est-à-dire du texte) dans la fenêtre, et la classe <strong>QLineEdit</strong> permet d'afficher un champ où l'utilisateur peut rentrer du texte. Ce texte peut être récupéré grâce à la méthode <em>text</em> de la classe <strong>QLineEdit</strong>. Voici un exemple d'utilisation de ces deux classes (on ajoute le code suivant dans l'initialisation de la classe <em>Test_button</em>):</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">label <span class="token operator">=</span> QLabel<span class="token punctuation">(</span><span class="token string">"Entrez votre nom:"</span><span class="token punctuation">)</span>
+self<span class="token punctuation">.</span>line_edit <span class="token operator">=</span> QLineEdit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+button_valider <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Valider"</span><span class="token punctuation">)</span>
+button_valider<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>valider<span class="token punctuation">)</span>
+
+layout2 <span class="token operator">=</span> QHBoxLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+layout2<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>label<span class="token punctuation">)</span>
+layout2<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>line_edit<span class="token punctuation">)</span>
+layout2<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>button_valider<span class="token punctuation">)</span>
+
+layout <span class="token operator">=</span> QVBoxLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button1<span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button2<span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>addLayout<span class="token punctuation">(</span>layout2<span class="token punctuation">)</span>
+central_widget<span class="token punctuation">.</span>setLayout<span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+self<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">valider</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Nom:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>line_edit<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>L'exécution de ce code fait apparaître notre fenêtre test, mais avec en plus un champ à remplir. Quand on clique sur le bouton valider, on voit que l'information du nom a bien été print:</p>
+<p><img src="Image6.png" alt="Image QLabel et QLineEdit"></p>
+<p>On remarque l'utilisation de la classe <strong>QHBoxLayout</strong> pour mettre le label, le champ à remplir et le bouton valider côte-à-côte. Ensuite, on a rajouté ce layout au layout vertical principal.</p>
+<h2>Utilisation de Qt Designer</h2>
+<h3>Création d'une interface graphique sur Qt Designer</h3>
+<p>Il existe bien plus de classes disponibles avec Qt. Il peut-être difficile de se retrouver parmi tout cela, et trouver les bonnes méthodes pour faire ce que l'on veut. Il existe ainsi un outil pour pallier à ce problème: <strong>Qt Designer</strong>. Ce logiciel est disponible en open source sur le <a href="https://qt.io">site de Qt</a>. Grâce à cet outil, on peut placer tout les éléments possibles comme on le souhaite dans une fenêtre.<br>
+Pour illustrer l'utilisation de cet outil, nous allons créer une fenêtre pour jouer à un jeu de carte basique: la bataille. Pour cela, on doit télécharger un dossier avec des images de cartes à jouer. Ensuite, on créé une <strong>MainWindow</strong> sur Qt Designer.</p>
+<p><img src="Image7.png" alt="Image QT Deigner"></p>
+<p>On peut voir ci-dessus à quoi ressemble le terminal de QT Designer. Sur le côté droit, il y a l'endroit pour modifier les propriétés de chaque objet; sur la gauche, il y a tout les objets que l'on peut utiliser. Il suffit de les cliquer-glisser sur l'interface. On peut également changer les couleurs, on encore assigner des images aux objets (dans notre cas, les images de cartes).<br>
+J'ai choisi un fond vert pour représenter le tapis de jeu. Pour charger une image sur un label (par exemple ici, une image de dos de carte), il faut cliquer sur cet élément et changer la &quot;pixmap&quot; dans les options du label (sur le côté gauche).</p>
+<h3>Utilisation de l'interface dans un programme</h3>
+<p>L'enregistrement de ce fichier via Qt Designer produit un fichier .ui, qui va pouvoir être utilisé dans un programme. Pour ce faire, on va utliser la classe <strong>QUiLoader</strong>, qui va permettre de charger le fichier .ui et l'associer à une fenêtre grâce à la méthode <em>load</em> de cette classe. Ensuite, il faut associer les éléments du fichier .ui à des variables dans notre code. Pour cela, on va utiliser la méthode <em>findChild</em>, qui prend en argument le type d'objet que l'on recherche ainsi que son nom que l'on a attribué dans Qt Designer. Ainsi, l'initialisation de notre classe <strong>Bataille</strong> ressemble à ceci:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Bataille</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        ui_file_name <span class="token operator">=</span> <span class="token string">"bataille.ui"</span>
+        ui_file <span class="token operator">=</span> QFile<span class="token punctuation">(</span>ui_file_name<span class="token punctuation">)</span>
+        loader <span class="token operator">=</span> QUiLoader<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window <span class="token operator">=</span> loader<span class="token punctuation">.</span>load<span class="token punctuation">(</span>ui_file<span class="token punctuation">)</span>
+        ui_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Bataille"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>DealerCard <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"dealer_card"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCard <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"player_card"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"dealer_count"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"player_count"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerName <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"player_header"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>CardsLeft <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"cards_left"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"result"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"play_button"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>RestartButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"restart_button"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>ShuffleButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"shuffle_button"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>PlayButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>play<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>RestartButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>restart<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>ShuffleButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>newdeck<span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>dealer_count <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>player_count <span class="token operator">=</span> <span class="token number">0</span>
+
+        widget <span class="token operator">=</span> QWidget<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name_window <span class="token operator">=</span> QMainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name_window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Nom du joueur"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name_window<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>widget<span class="token punctuation">)</span>
+        label <span class="token operator">=</span> QLabel<span class="token punctuation">(</span><span class="token string">"Entrez votre nom:"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>line_edit <span class="token operator">=</span> QLineEdit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        button_valider <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token string">"Valider"</span><span class="token punctuation">)</span>
+        button_valider<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>valider<span class="token punctuation">)</span>
+        layout <span class="token operator">=</span> QHBoxLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>label<span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>line_edit<span class="token punctuation">)</span>
+        layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>button_valider<span class="token punctuation">)</span>
+        widget<span class="token punctuation">.</span>setLayout<span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>On remarque que l'on a bien associé chaque bouton à une action (que l'on va définir plus tard). On a également deux fenêtres: main_window et name_window. Cette dernière fenêtre permet au joueur de renseigner son nom, grâce à la classe <strong>QLineEdit</strong>, explicitée précédemment.</p>
+<p>Il faut maintenant créer les méthodes pour associées à chaque bouton. La méthode newdeck créé un jeu de 52 cartes grâce à une classe <strong>Card</strong>, qui associe à chaque carte un nom et une valeur. La méthode restart créé un nouveau deck et réinitialise les compteurs de points et la méthode play affiche deux cartes aléatoires et compare leur valeurs. L'affichage des cartes se faire grâce à la métnode setPixmap de la classe <strong>QLabel</strong>. Cette pixmap contient l'information d'une image, qu'on définit grâce à la classe <strong>QPixmap</strong>. Voici le code de ces méthodes:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">    <span class="token keyword">def</span> <span class="token function">valider</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        name <span class="token operator">=</span> self<span class="token punctuation">.</span>line_edit<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerName<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Cartes du joueur </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name_window<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">newdeck</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        suits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"diamonds"</span><span class="token punctuation">,</span> <span class="token string">"clubs"</span> <span class="token punctuation">,</span><span class="token string">"hearts"</span><span class="token punctuation">,</span> <span class="token string">"spades"</span><span class="token punctuation">]</span>
+        values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>deck <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> suit <span class="token keyword">in</span> suits<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> value <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Card<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string">_of_</span><span class="token interpolation"><span class="token punctuation">{</span>suit<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>CardsLeft<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string"> cartes restantes"</span></span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">play</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        card_dealer <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card_dealer<span class="token punctuation">)</span>
+        pixmap_dealer <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_dealer<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap_dealer<span class="token punctuation">)</span>
+        card_player <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card_player<span class="token punctuation">)</span>
+        pixmap_player <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_player<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap_player<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>CardsLeft<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string"> cartes restantes"</span></span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> card_dealer<span class="token punctuation">.</span>value <span class="token operator">></span> card_player<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le dealer a gagné!"</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_count <span class="token operator">+=</span> <span class="token number">1</span>
+            self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Le dealer a </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>dealer_count<span class="token punctuation">}</span></span><span class="token string"> points"</span></span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> card_dealer<span class="token punctuation">.</span>value <span class="token operator">&lt;</span> card_player<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a gagné!"</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>player_count <span class="token operator">+=</span> <span class="token number">1</span>
+            self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Le joueur a </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>player_count<span class="token punctuation">}</span></span><span class="token string"> points"</span></span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> card_dealer<span class="token punctuation">.</span>value <span class="token operator">==</span> card_player<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Egalité!"</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">restart</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>player_count <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>dealer_count <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a 0 points"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le dealer a 0 points"</span><span class="token punctuation">)</span>
+        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string">'PNG-cards/dos.png'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Card</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+</code></pre>
+<p>L'exécution de ce code fait apparaître dans un premier temps une fenêtre demandant au joueur de rentrer son nom. Une fois que le joueur a validé son nom, la méthode &quot;valider&quot; change le Label du joueur pour y mettre son nom, avec la méthode setText.</p>
+<p><img src="Image8.png" alt="Fenêtre nom joueur"></p>
+<p><img src="Image9.png" alt="Fenêtre bataille"></p>
+<p>Ce jeu de bataille est donc bien fonctionnel. Il compte les points à chaque tour et met bien à jour chaque texte.</p>
+<h2>Conclusion</h2>
+<p>Comme on a pu le voir, Qt permet de faire des interfaces graphiques de tout genre. Il existe une multitude de classes et de méthodes, je n'ai ici que présenté une infime partie de ce qui est possible. Cependant, avec ces principales classes, il est possible de faire les applications les plus basiques, comme par exemple le jeu de bataille que j'ai implémenté en application de ce MON (ce code python se trouve dans le dossier GitHub). De plus, si l'on veut découvrir encore plus de choses sur Qt, il peut être intéressant de parcourir le site de la documentation de Qt, ainsi que le Qt Designer pour voir tout les éléments possibles.</p>
 
 
 </article>
