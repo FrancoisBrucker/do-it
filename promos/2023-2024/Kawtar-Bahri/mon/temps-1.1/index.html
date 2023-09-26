@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Analyse Statistique</title>
+        <title>Analyse Statistique &amp; Introduction à R</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Analyse Statistique</h1>
+<h1 class="mb-1">Analyse Statistique &amp; Introduction à R</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -118,13 +118,76 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/">Kawtar BAHRI</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/">MON de Kawtar Bahri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/temps-1.1/">Analyse Statistique</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/">Kawtar BAHRI</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/">MON de Kawtar Bahri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/temps-1.1/">Analyse Statistique &amp; Introduction à R</a>
 
 </div></div>
 
 
 
 
+<h2>Table des matières</h2>
+<ul>
+<li><a href="#section-1">Introduction</a></li>
+<li><a href="#section-2">Cheminement des données</a></li>
+<li><a href="#section-3">Introduction à R</a></li>
+<li><a href="#section-4">Ressources utilisées</a></li>
+<li><a href="#section-5">Perspectives</a></li>
+</ul>
+<h2>Introduction <a id="section-1"></a></h2>
+<p>L'analyse statistique met en avant les compétences essentielles nécessaires pour comprendre, traiter et interpréter des données, afin de prendre des décisions éclairées en se basant sur des données empiriques plutôt que sur des conjectures, de tester des hypothèses, de gérer les risques et d'optimiser les processus. Pour un ingénieur en informatique, ces compétences trouvent une application cruciale dans le traitement de données massives, le développement de modèles d'apprentissage automatique, la gestion de la qualité du code, l'optimisation des ressources informatiques, la prédiction de la demande et bien d'autres domaines.</p>
+<h2>Cheminement des données <a id="section-2"></a></h2>
+ <img src="stat.png">
+ <br>
+<h3>Etape 1 : Touver les données</h3>
+<p>La première étape consiste à obtenir des données, qu'il s'agisse d'utiliser une base de données préétablie ou d'établir les variables nécessaires et de créer et mettre en œuvre une méthode de collecte, par exemple :</p>
+<ul>
+<li><strong>Informations provenant de particuliers</strong> : Sondages d'opinion délibératifs, Journaux , Échelles de réalisation des objectifs, Tri hiérarchique des cartes, Entretiens, Photolangage, Isoloir de vote, Techniques projectives, Questionnaires en face à face, Questionnaire , Calendriers saisonniers, Cartographie d'esquisse, Histoires de changement, Histoires personnelles</li>
+<li><strong>Informations des groupes Bilan après action</strong> : Réflexion / brainstorming, Cartographie conceptuelle (carte mentale ou de carte de cluster), Étude Delphes, Dotmocratie, Entretiens, ORIDE, Méthodologie Q, Analyse SWOT</li>
+<li><strong>Observation</strong> : Excursions, Observation non participante, Observation participante, Enregistrement photographique/vidéo pour la collecte de données, Transect</li>
+<li><strong>Mesures physiques</strong> biophysique ou géographique</li>
+<li><strong>Examen des enregistrements et des données existants</strong> : Big Data, documents existants, évaluations et recherches antérieurs</li>
+</ul>
+<h3>Etape 2 : Nettoyer les données</h3>
+<p>Une fois qu’on obtient les données, on doit les explorer pour comprendre le format et les variables et les vérifier et voir s'il y a des erreurs et des valeurs manquantes. Il peut être nécessaire de nettoyer les données avant de les utiliser à des fins d'analyse, ce qui comprend notamment la correction du formatage, le retrait ou la correction de données erronées.<br>
+Et ce en exploitant des outils selon la nature des données, comme IBM Infosphere Quality Stage, tableurs, Power BI, etc.</p>
+<p>Le nettoyage des données est une étape d’importance cruciale, sans laquelle un bon modèle d’analyse perd sa valeur.</p>
+ <img src="garbage.png">
+ <br>
+<h3>Etape 3 : Analyser les données</h3>
+<p>Le but de l'analyse et de la modélisation est d'utiliser des techniques statistiques pour transformer les données en information afin de fournir des observations utiles. L'analyse et la modélisation servent à décrire un phénomène, à tirer des conclusions au sujet d'une population ou à faire des prédictions au sujet d'événements futurs.</p>
+<p>-<strong>Analyse bivariée</strong> : L’analyse bivariée a pour objectif d’analyser le lien qui peut exister entre deux variables. Le schéma mentale suivant résume les étapes à suivre dans ce type d'analyses :</p>
+<img src="bivar.png">
+ <br>
+<h2>Introduction à R <a id="section-3"></a></h2>
+<h3>Statistiques descriptives</h3>
+<p>Les statistiques descriptives permettent à résumer et à comprendre vos données. R propose des fonctions telles que summary(), mean(), median(), sd() et quantile() pour calculer des statistiques descriptives de base pour les variables numériques.</p>
+<img src="stat desc.png">
+ <br>
+<h3>Tests d'hypothèses :</h3>
+<p>R offre de nombreuses fonctions et packages pour les tests d'hypothèses, notamment les tests t, les tests du chi-carré, et bien d'autres. Les fonctions t.test(), chisq.test() et wilcox.test() sont des exemples d'outils utilisés pour les tests d'hypothèses.</p>
+<img src="test.png">
+ <br>
+<h3>Analyse de régression :</h3>
+<p>L'analyse de régression est utilisée pour modéliser la relation entre une ou plusieurs variables indépendantes et une variable dépendante. La fonction lm() de R est couramment utilisée pour la régression linéaire, tandis que glm() est utilisée pour les modèles linéaires généralisés (par exemple, la régression logistique).</p>
+<img src="regression.png">
+ <br>
+<h3>Graphiques statistiques :</h3>
+<p>La création de représentations graphiques appropriées des données est essentielle pour comprendre les relations et les tendances. Le package ggplot2 de R est un outil puissant pour créer une large gamme de graphiques statistiques, notamment des graphiques de dispersion, des boîtes à moustaches, des histogrammes, et plus encore.</p>
+<img src="fctgraph.png">
+ <br>
+<h3>Apprentissage automatique :</h3>
+<p>R est également largement utilisé pour les tâches d'apprentissage automatique. Les packages tels que caret, randomForest, xgboost et caret fournissent des outils pour la classification, la régression, le regroupement, et bien plus encore.</p>
+<img src="xgboost.png">
+ <br>
+<h2>Ressources utilisées <a id="section-4"></a></h2>
+<ul>
+<li>Statistics course. Disponible sur : <a href="https://www.youtube.com/playlist?list=PLqzoL9-eJTNAB5st3mtP_bmXafGSH1Dtz">https://www.youtube.com/playlist?list=PLqzoL9-eJTNAB5st3mtP_bmXafGSH1Dtz</a></li>
+<li>Présentation des méthodes de collecte et d'analyse de données dans l'évaluation d'impact, Greet Peersman. Disponible sur : <a href="https://www.unicef-irc.org/publications/pdf/brief_10_data_collection_analysis_fre.pdf">https://www.unicef-irc.org/publications/pdf/brief_10_data_collection_analysis_fre.pdf</a></li>
+<li>BetterEvaluation, page Internet « Collect and/or Retrieve Data ». Disponnible sur : <a href="http://betterevaluation.org/plan/describe/collect_retrieve_data">http://betterevaluation.org/plan/describe/collect_retrieve_data</a></li>
+<li>Analyse Statistique M2 IGAST, et DESIGEO. Disponible sur : <a href="https://www.umr-lastig.fr/paul-chapron/resources/cours_site/bivariee.html">https://www.umr-lastig.fr/paul-chapron/resources/cours_site/bivariee.html</a></li>
+</ul>
+<h2>Perspectives <a id="section-5"></a></h2>
+<p>Mon objectif est de mettre en pratique ce cours par la suite, pour analyser des données et générer des informations précieuses pour l’aide à la décision.</p>
 
 
 </article>
