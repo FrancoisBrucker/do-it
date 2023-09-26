@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Récupérer les données du jeu vidéo League of Legends</title>
+        <title>Récupérer les données du jeu vidéo League of Legends et les exploiter</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Récupérer les données du jeu vidéo League of Legends</h1>
+<h1 class="mb-1">Récupérer les données du jeu vidéo League of Legends et les exploiter</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -73,11 +73,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">API</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Flask</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu League of Legends à travers cette API.
+                Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers cette API. L'objectif final est de developper une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
 
         </p>
 
@@ -118,7 +126,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/">Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/pok/">POK de Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/pok/temps-1/">Récupérer les données du jeu vidéo League of Legends</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/">Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/pok/">POK de Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/pok/temps-1/">Récupérer les données du jeu vidéo League of Legends et les exploiter</a>
 
 </div></div>
 
@@ -130,9 +138,22 @@
 <li>Faire des reqûetes à l'API</li>
 <li>Nettoyer les données que j'aurais collecté</li>
 <li>Analyser les données pour en sortir des informations pertinentes</li>
-<li>Mettre les informations sur un site web?</li>
+<li>Bonus : Mettre les informations sur un site web?</li>
 </ul>
 <h2>Ce que j'ai fait</h2>
+<h3>1. Faire des requêtes directement sur le site de RiotGames</h3>
+<p>Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes aux API disponibles</p>
+<p><img src="clef_riot.jpg" alt="Api key"></p>
+<p>Une fois ma clef récupérer, j'ai tout d'abord pris connaissance de l'ensemble des API mis à notre disposition (il y a plus d'une dizaine d'API disponible pour le jeu League of Legends)</p>
+<p><img src="riot_api.jpg" alt="Riot API"></p>
+<p>J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo</p>
+<p><img src="exemple_requete.jpg" alt="Exemple requête"></p>
+<p>Ce qui m'a permis d'obtenir les données suivantes</p>
+<p><img src="exemple_rep.jpg" alt="Exemple réponse"></p>
+<p>On passe maintenant à un notebook afin d'automatiser tout cela avec python !</p>
+<h3>2. Automatiser les requêtes sur python</h3>
+<h3>3. Faire des calculs à l'aide des données récoltées</h3>
+<h3>4. Utiliser le framework Flask pour développer une petite application</h3>
 <h2>Ce que j'ai prévu pour le second point POK</h2>
 <h2>Ce que j'ai fait à la fin du temps 1</h2>
 
