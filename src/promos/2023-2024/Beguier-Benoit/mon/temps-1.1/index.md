@@ -26,6 +26,8 @@ résumé: "Initiation au langage R et application dans l'analyse et la visualisa
 
 1. Introduction
 2. Bases
+3. Importation de données à partir de fichiers externes
+4. Application sur des données de Formule 1
 
 ## 1. Introduction
 Pour la réalisation de ce cours, j'aurais deux sources principales : 
@@ -40,7 +42,7 @@ Je vais utiliser l'environnement de travail RStudio tout au long de cette format
 ## 2. Bases
 #### Répertoire
 Comme dans beaucoup d'environnements, il faut spécifier à RStudio le répertoire de travail avec la commande 
-```R
+```shell
 setwd("C:Users...")
 ```
 
@@ -56,7 +58,7 @@ Les dataframes sont des listes d'objets (appelés *composantes*), dont chaques c
 Un réel atout de R par rapport à Python repose, à mon sens, dans la syntaxe de sélection d'éléments. Je trouve celle-ci très intuitive et logique et ce pour tous types d'objets, là où cela peut s'avérer plus technique selon les objets manipulés sur Python.
 La sélection peut se faire par condition, par exemple :
 
-```R
+```shell
 #Créons la matrice X
 
 X <- matrix(1:12,nrow=3,ncol=4)
@@ -76,17 +78,17 @@ X[,X[1,]>2]
 
 ou alors par indice :
 
-```R
+```shell
 X[1,-1:2] # Première ligne de X privée de ses deux premières colonnes
 #      [,1] [,2]
 # [1,]    7   10
 ```
 
-## L'importation de données à partir de fichiers externes
+## 3. Importation de données à partir de fichiers externes
 #### A partir d'un fichier texte (.txt ou .csv)
 Pour lire les données d'un fichier texte externe avec R, il faut utiliser la commande
 
-```R
+```shell
 maVariable <- read.table("monFichier.txt", sep=";", row.names=1, header=TRUE)
 #header indique si la première ligne contient ou non les intitulés des variables. Il est FALSE par défaut.
 ```
@@ -98,7 +100,7 @@ Il est aussi possible avec RStudio d'importer tous les types de fichiers en util
 J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction `summary()`.
 Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre de type *NA*, en l'occurrence des erreurs de données. Un trop grand nombre de *NA* montre que le fichier source manque d'un grand nombre de données.
 
-```R
+```shell
 > summary(data1)
      noms               sexe                age    
  Length:6           Length:6           Min.   :16  
@@ -111,7 +113,7 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
 Ici il n'y a aucun problème d'import. Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
 ![MOOC](Mooc.png)
 
-## Application sur des données de Formule 1
+## 4. Application sur des données de Formule 1
 #### Objectif
 Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visualiser et analyser rapidement des données issues de la Formule 1. Je fais d'abord des recherches pour déterminer le type de données auxquelles je pourrais avoir accès.
 
@@ -122,11 +124,11 @@ J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des
 
 Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction `plot()` .
 
-###### Récupérer les données
+#### Récupérer les données
 A partir du site [Pitwall](https://pitwall.app), j'ai extrait les positions à chaque tour de deux pilotes (seulement deux pour l'exemple car je dois faire la procédure manuellement), Max Verstappen et lando Norris, pour le Grand Prix du Japon qui s'est déroulé le 24/09/2023. J'ai ensuite placé ces données dans un fichier Excel puis je les ai exporté en .csv. 
 J'importe ensuite les fichiers dans RStudio, en déclarant des variables `Lando` et `Max` qui sont de type `dataframe` :
 
-```R
+```shell
 setwd("C:/Users/Beguier/Desktop")
 Lando  <- read.csv("Norris.csv", header = TRUE, sep = ";")
 
@@ -135,7 +137,7 @@ Max  <- read.csv("Verstappen.csv", header = TRUE, sep = ";")
 
 Je peux ensuite facilement demander à R une représentation graphique de la position des pilotes en fonction du tour dans lequel ils se situent.
 
-```R
+```shell
 # Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée
 plot(Lando$Lap, Lando$Position, type="l", col="blue", xlab="Tours", ylab="Positions", ylim=rev(range(Lando$Position)))
 lines(Lando$Lap, Max$Position, type="l", col="red")
@@ -152,12 +154,14 @@ On obtient alors ce graphique :
 
 Afin d'améliorer l'esthétisme de ce graphique, j'y apporte quelques modifications pour obtenir le résultat suivant :
 
-```R
+```python
 setwd("C:/Users/Beguier/Desktop")
 Lando  <- read.csv("Norris.csv", header = TRUE, sep = ";")
 
 Max  <- read.csv("Verstappen.csv", header = TRUE, sep = ";")
 
+
+# Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée
 par(bg="white") # Définir le fond en blanc
 plot(Lando$Lap, Lando$Position, type="l", col="blue", xlab="", ylab="", xlim=c(0, max(Lando$Lap)), ylim=rev(range(Lando$Position)), lwd=2, axes=FALSE)
 lines(Lando$Lap, Max$Position, type="l", col="red", lwd=2)
@@ -172,10 +176,11 @@ y_ticks <- seq(max(Lando$Position), min(Lando$Position), by=-1)
 axis(1, at=x_ticks, col.axis="black", tck=0.02, labels=TRUE) # Axe des abscisses en noir sans quadrillage
 axis(2, at=y_ticks, col.axis="black", tck=0.02, labels=TRUE) # Axe des abscisses en noir sans quadrillage
 
-# étiquette de l'axe des abscisses en bas à droite
-mtext("Positions", side=1, line=2, col="black") # Texte en noir, ligne 2 pour le bas
+# Déplacez l'étiquette de l'axe des abscisses en bas
+mtext("Tours", side=1, line=2, col="black") # Texte en noir, ligne 2 pour le bas
+mtext("Positions", side=2, line=2, col="black") # Texte en noir, ligne 2 pour le bas
 
-# Légende (positionnée en bas à droite)
+# Légendes (positionnée en bas à droite)
 legend("bottomright", legend=c("Lando Norris", "Max Verstappen"), col=c("blue", "red"), lty=1, text.col="black", bty="n") # Texte en noir, position en bas à droite
 # Titre du graphique avec retour à la ligne au milieu
 title(main="Position des pilotes par rapport \n au tour dans lequel ils se situent", col.main="black") # Titre en noir avec retour à la ligne au milieu
