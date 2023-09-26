@@ -125,16 +125,28 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Niveau débutant</p>
+</div><div class="pl-8 mr-8">
+<p>Prérequis : Savoir ce qu'est un langage orienté objet.</p>
+</div></div>
 <h2>Sommaire</h2>
 <ol>
 <li>Présentation du langage</li>
 <li>Syntaxe du C++</li>
 <li>Premiers algorithmes</li>
+<li>Orientation objet</li>
 </ol>
 <h2>1.Présentation du langage</h2>
 <p>Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA.</p>
-<h5>Documents utilisés</h5>
-<p><a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf">La programmation en C++</a></p>
+<h5>Documents et outils utilisés</h5>
+<p><a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf">La programmation en C++</a><br>
+<a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop2.pdf">La programmation objet en C++</a><br>
+<a href="https://app.codesignal.com/">Exercices de programmation sur CodeSignal</a></p>
 <h2>2. Syntaxe du C++</h2>
 <h4>Type de variable</h4>
 <p>Comme d'autres langages le C++ possède plusieurs type de variables :</p>
@@ -222,6 +234,24 @@ double resultat = Moyenne(n,m);
 </code></pre>
 <p>Alors la variable <em>resultat</em> récupérera la valeur de la moyenne de 3 et 4 soit 3.5.</p>
 <h5>Les différentes instructions</h5>
+<p>Comme d'autres langages on retrouve les instructions de bases <em>if</em>, <em>while</em>, <em>do</em>, <em>for</em>, et aussi <em>switch</em> qui permet de dissocier différents cas pour lequels on ne veut pas lancer la même instruction.</p>
+<h5>Compléments</h5>
+<p>Il existe des expressions particulière en C++.</p>
+<ul>
+<li>
+<p>L'expression virgule<br>
+Elle s'utilise de la forme suivante : <em>expression 1</em> , <em>expression 2</em>.<br>
+D'abord, l'<em>expression 1</em> est évaluée mais sa valeur n'est pas gardée en mémoire.<br>
+Ensuite l'<em>expression 2</em> est évaluée et donne sa valeur est l'<em>expression 1</em>.<br>
+Cette utilisation est utile dans le cas où l'<em>expression 1</em> a un effet de bord.</p>
+</li>
+<li>
+<p>L'expression conditionnelle<br>
+Elle s'utilise de la forme suivante : <em>expression 1</em> ? <em>expression 2</em> : <em>expression 3</em>.<br>
+D'abord l'<em>expression 1</em> est évaluée. Ensuite, si elle est non nulle, l'<em>expression 2</em> est évaluée et donne sa valeur à l'expression conditionnelle. Sinon, l'<em>expression 3</em> est évaluée et donne sa valeur à l'expression conditionnelle.</p>
+</li>
+</ul>
+<p>Plusieurs fonctions utiles sont aussi à connaitre telles que : <em>floor</em>, <em>fabs</em>, <em>sqrt</em>, <em>pow</em> ainsi que les fonctions trigo.</p>
 <h2>3.Premiers algorithmes</h2>
 <p>Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage.</p>
 <h4>Algorithme de calcul de distance entre deux points</h4>
@@ -253,6 +283,109 @@ return a;
         }
     }
     return max;
+}
+</code></pre>
+<h4>Entrainement sur CodeSignal</h4>
+<p>Suite à cela j'ai repris le mode arcade de CodeSignal depuis le début mais en codant en C++ cette fois-ci. CodeSignal est une plateforme qui permet d'évaluer ses compétences en développement. Elle propose une variété de défis de programmations qui peuvent résolu en utilisant le langage de son choix.</p>
+<h2>4. Orientation Objet</h2>
+<h4>Définitions</h4>
+<p>En informatique un objet est défini comme ce qui suit :<br>
+<em>&quot;Un objet est une structure informatique regroupant :</em><br>
+<em>- des variables, caractérisant l'état de l'objet,</em><br>
+<em>- des fonctions, caractérisant le comportement de l'objet.&quot;</em></p>
+<p>Tout objet appartient à une classe, on dira que l'objet est une <em>instance</em> de cette classe.<br>
+Ainsi avant de décrire un objet il est important de décrire la classe à laquelle il appartienne.</p>
+<h4>Stratégie D.D.U</h4>
+<p>Lorsque l'on souhaite programmer une classe, on passe par trois phases :</p>
+<ul>
+<li>Déclaration</li>
+<li>Définition</li>
+<li>Utilisation</li>
+</ul>
+<h5>Déclaration</h5>
+<p>Cette partie se traite dans un fichier .h qui se présente sous cette forme :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Classe
+{
+  public : 
+    *déclaration*
+  private :
+    *déclaration*
+}
+</code></pre>
+<h5>Définition</h5>
+<p>Cette partie se traite dans un fichier .cpp qui contient les définitions des fonctions de la classe.</p>
+<h5>Utilisation</h5>
+<p>Cette partie se traite aussi dans un fichier .cpp dans lequel on pourra utilisé notre classe.</p>
+<p>Ainsi pour chaque classe on aura un fichier .h avec sa déclaration et un fichier .cpp contenant sa définition.</p>
+<div><img src="schema objet.png"></div>
+<p>Schema récapitulatif</p>
+<h4>Comment créé un programme ?</h4>
+<p>On procéde en trois étape :</p>
+<ul>
+<li>Créer les fichiers sources en .h et .cpp.</li>
+<li>Compiler les fichieres .cpp ce qui crée deux fichiers objets.</li>
+<li>Editer les liens entre les fichiers objets pour obtenir un fichier exécutable en .exe.</li>
+</ul>
+<p>Pour ce faire, sur Microsoft, il suffit de créer les fichiers sources, de les ajouter dans un projet et de lancer la commande <strong>build</strong>. Les phase 2 et 3 se feront alors automatiquement.</p>
+<p>Exemple :<br>
+Nous allons créer la classe <em>Complexe</em></p>
+<p>Dans le fichier complexe.h on aura :*</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Complexe
+{
+  public : 
+    Complexe(float x, float y);
+    Complexe();
+    void Lis();
+    void Affiche();
+    Complexe operator+(Complexe g);
+  private :
+    float re, im;
+}
+</code></pre>
+<p>Dans le fichier complexe.cpp on aura :*</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Complexe::Complexe(float x, float y)
+{
+  re = x;
+  im = y;
+}
+
+Complexe::Complexe()
+{
+  re = 0.0;
+  im = 0.0;
+}
+
+void Complexe::Lis()
+{
+  cout &lt;&lt; "Partie réelle ?";
+  cin >> re;
+  cout &lt;&lt; "Partie imaginaire ? ";
+  cin >> im;
+}
+
+void Complexe::Affiche()
+{
+  cout &lt;&lt; re &lt;&lt; "+ i"&lt;&lt; im;
+}
+
+Complexe Complexe::operator+(Complexe g)
+{
+  return Complexe(re + g.re, im + g.im);
+}
+</code></pre>
+<p>Enfin dans le fichier test.cpp on aura :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">void main()
+{
+  Complexe x1(0.0, 1.0);
+  Complexe x2;
+
+  x1.Affiche();
+  cout&lt;&lt;"\nEntrer un nombre complexe : ";
+  x2.Lis();
+  cout&lt;&lt;"\nVous avez rentré : ";
+  x2.Affiche();
+
+  Complexe x3=x1+x2;
 }
 </code></pre>
 

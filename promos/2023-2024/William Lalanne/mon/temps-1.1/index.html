@@ -138,14 +138,16 @@
 <li>Introduction</li>
 <li>Les Grid</li>
 <li>Les Flexbox</li>
+<li>Ajustement manuel de la position</li>
 </ol>
 <h2>1. Introduction</h2>
 <p>Pour ce premier MON, je me suis servi de plusieurs ressources afin de tirer le meilleur de chaque document. Voici les sites que j'ai utilisé :</p>
 <ul>
 <li><a href="https://openclassrooms.com/fr/courses/5295881-create-web-page-layouts-with-css/5341491-set-media-queries-for-different-devices">Openclassroom</a></li>
-<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks</a></li>
+<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks Complete guide to Grid </a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Complete guide to Flexbox</a><br>
+Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les <em>Grid</em>, les <em>Flex-box</em> qui sont des éléments très importants.</li>
 </ul>
-<p>Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les <em>Grid</em>, les <em>Flex-box</em> qui sont des éléments très importants.</p>
 <h2>2. Les Grid</h2>
 <h3>Qu'est ce que c'est et à quoi ça sert ?</h3>
 <p>Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. La disposition des éléments dans la page est difficile à gérer, mais plusieurs outils permettent de nous faciliter la vie. Par exemple, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page.<br>
@@ -163,7 +165,7 @@ Le plus simple pour comprendre est de prendre un exemple :<br>
 <p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :<br>
 <code>.container {     display: grid; } </code><br>
 Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
-<h2>Modifier les propriétés du tableau</h2>
+<h3>Modifier les propriétés du tableau</h3>
 <p>Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau.<br>
 Examinons l'exemple suivant avec quelques propriétés du container :</p>
 <p><code>.container {</code><br>
@@ -174,6 +176,19 @@ Examinons l'exemple suivant avec quelques propriétés du container :</p>
 <code>}</code></p>
 <p>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.<br>
 Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</p>
+<p>On peut aussi parler de la propriété <em><strong>justify-content</strong></em>. Lorsque le container est plus grand que le tableau, cette propriété permet de contrôler l'alignement du tableau dans le container. Voyons ce que cela peut donner :</p>
+<ul>
+<li>justify-content: <strong>start</strong><br>
+<img src="Grid-exemple-start.png" alt="Exemple grid start"><br>
+Le tableau se positionne au début du container.</li>
+<li>justify-content: <strong>end</strong><br>
+<img src="Grid-exemple-end.png" alt="Exemple grid end"><br>
+Le tableau se positionne à la fin du container.</li>
+<li>justify-content: <strong>center</strong><br>
+<img src="Grid-exemple-centre.png" alt="Exemple grid center"><br>
+Le tableau se positionne au milieu du container.</li>
+</ul>
+<p>La propriété <em><strong>align-content</strong></em> permet de faire la même chose verticalement.</p>
 <p>D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément <code>&lt;div class=&quot;first&quot;&gt;Premier élément&lt;/div&gt;</code>:</p>
 <p><code>.first {</code><br>
       <code>background-color: blueviolet;</code><br>
@@ -201,14 +216,17 @@ Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la lon
 <code>&lt;/div&gt;</code><br>
 On a un bien un container et des éléments à l'intérieur.</p>
 <p>Ensuite dans le fichier CSS, il faut spécifier que la div de class <em>container</em> est une Flexbox. Pour cela :</p>
-<p><code>.container {     display: flex; } </code><br>
+<p><code>.container {   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;display: flex; } </code><br>
 Cela ressemble beaucoup à ce qu'on a fait pour la Grid.<br>
 On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété <em><strong>flex-direction</strong></em>.</p>
-<p><code>.container { &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;display: flex; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;flex-direction: column; } </code><br>
+<p><code>.container {</code><br>
+      <code>display: flex;</code><br>
+      <code>flex-direction: column;</code><br>
+<code>}</code><br>
 On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox.<br>
 Si on souhaite en créer une en ligne il faudra écrire :<br>
 <em><strong>flex-direction: row;</strong></em>.</p>
-<p>Ensuite, les éléments à l'intérieur du container, comme <strong><div>1</div></strong> ont eux aussi des propriétés. On peut par exemple parler de la propriété <em><strong>justify-content</strong></em>.<br>
+<p>Ensuite, les éléments à l'intérieur du container, comme <strong><code>&lt;div&gt;1&lt;/div&gt;</code></strong> ont eux aussi des propriétés. On peut par exemple parler de la propriété <em><strong>justify-content</strong></em>.<br>
 On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple :<br>
 <img src="flexbox-freespace.png" alt="Exemple flexbox disponible"><br>
 Avec <em><strong>justify-content</strong></em> on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container.</p>
@@ -216,8 +234,17 @@ Avec <em><strong>justify-content</strong></em> on peut préciser comment on souh
 <li>justify-content: <strong>start</strong> les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus.</li>
 <li>justify-content: <strong>end</strong> les éléments s'aligneront les une à la suite des autres en commençant par la fin du container.<br>
 <img src="flexbox-end.png" alt="Exemple flexbox end"></li>
-<li>justify-contznt: <strong>center</strong> les éléments seront centrés par rapport à la largeur du container.<br>
+<li>justify-content: <strong>center</strong> les éléments seront centrés par rapport à la largeur du container.<br>
 <img src="flexbox-center.png" alt="Exemple flexbox center"></li>
+</ul>
+<h2>4. Ajustement manuel de la position d'un élément</h2>
+<p>Il est possible d'ajuster manuellement la position d'un élément sur la page, sans passer par des Grid ou des Flexbox. On utilise la propriété <em><strong>position</strong></em>.<br>
+Cette dernière peut prendre plusieurs valeurs :</p>
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
 </ul>
 
 
