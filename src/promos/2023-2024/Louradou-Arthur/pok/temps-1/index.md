@@ -3,7 +3,7 @@ layout: layout/pok.njk
 
 title: "Portfolio"
 authors:
-  - "Arthur Louradou"
+  - Arthur Louradou
 
 date: 2023-09-18
 
@@ -12,5 +12,3 @@ tags:
 
 résumé: Ce POK consistera en la réalisation d'un portfolio de projet pour se joindre à un CV.
 ---
-
-## POK 1 : Portfolio

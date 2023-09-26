@@ -1,14 +1,11 @@
 ---
 layout: layout/fiche.njk
 
-title: "MON parcours d'autoformation"
+title: "Arthur LOURADOU"
 authors:
     - "Arthur Louradou"
 ---
 
-Voici la liste des MONs réalisés par mes soins au cours de l'année 2023-2024.
+Élève ingénieur à l'École centrale de Marseille.
 
-## Temps 1 : Monter en compétences cyber
-
-* [MON 1.1 - Pentest et Cybersécurité](./temps-1.1)
-* [MON 1.2 - Cryptographie](./temps-1.2)
+## MON
