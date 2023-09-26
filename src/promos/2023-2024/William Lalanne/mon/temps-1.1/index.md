@@ -23,13 +23,14 @@ résumé: "Dans ce MON je souhaite approfondir mes connaissances en CSS"
 1. Introduction
 2. Les Grid 
 3. Les Flexbox
+4. Ajustement manuel de la position
 
 
 ## 1. Introduction
 Pour ce premier MON, je me suis servi de plusieurs ressources afin de tirer le meilleur de chaque document. Voici les sites que j'ai utilisé : 
 - [Openclassroom](https://openclassrooms.com/fr/courses/5295881-create-web-page-layouts-with-css/5341491-set-media-queries-for-different-devices)
-- [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-
+- [CSS-Tricks Complete guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [CSS-Tricks Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les *Grid*, les *Flex-box* qui sont des éléments très importants.
 
 
@@ -61,7 +62,7 @@ Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur
 Cette ligne permet simplement de dire que l'élément de class "container" doit être considéré comme un tableau. 
 
 
-## Modifier les propriétés du tableau
+### Modifier les propriétés du tableau
 Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau. 
 Examinons l'exemple suivant avec quelques propriétés du container : 
 
@@ -74,6 +75,19 @@ Examinons l'exemple suivant avec quelques propriétés du container :
 
 Avec la propriété ***grid-template-columns***, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune. 
 Avec la propriété ***grid-template-roxs***, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500. 
+
+On peut aussi parler de la propriété ***justify-content***. Lorsque le container est plus grand que le tableau, cette propriété permet de contrôler l'alignement du tableau dans le container. Voyons ce que cela peut donner : 
+- justify-content: **start**
+![Exemple grid start](Grid-exemple-start.png)
+Le tableau se positionne au début du container.
+- justify-content: **end**
+![Exemple grid end](Grid-exemple-end.png)
+Le tableau se positionne à la fin du container.
+- justify-content: **center**
+![Exemple grid center](Grid-exemple-centre.png)
+Le tableau se positionne au milieu du container. 
+
+La propriété ***align-content*** permet de faire la même chose verticalement. 
 
 D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément `<div class="first">Premier élément</div>`: 
 
@@ -116,27 +130,37 @@ On a un bien un container et des éléments à l'intérieur.
 Ensuite dans le fichier CSS, il faut spécifier que la div de class *container* est une Flexbox. Pour cela : 
 
 `.container {
-    display: flex;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;
 }
 `
 Cela ressemble beaucoup à ce qu'on a fait pour la Grid. 
 On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété ***flex-direction***.
 
-`.container {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;
-}
-`
+`.container {`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`display: flex;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`flex-direction: column;`
+`}`
 On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox. 
 Si on souhaite en créer une en ligne il faudra écrire :
 ***flex-direction: row;***. 
 
-Ensuite, les éléments à l'intérieur du container, comme **<div>1</div>** ont eux aussi des propriétés. On peut par exemple parler de la propriété ***justify-content***. 
+Ensuite, les éléments à l'intérieur du container, comme **`<div>1</div>`** ont eux aussi des propriétés. On peut par exemple parler de la propriété ***justify-content***. 
 On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple : 
 ![Exemple flexbox disponible](flexbox-freespace.png)
 Avec ***justify-content*** on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container. 
 - justify-content: **start** les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus. 
 - justify-content: **end** les éléments s'aligneront les une à la suite des autres en commençant par la fin du container. 
 ![Exemple flexbox end](flexbox-end.png)
-- justify-contznt: **center** les éléments seront centrés par rapport à la largeur du container. 
+- justify-content: **center** les éléments seront centrés par rapport à la largeur du container. 
 ![Exemple flexbox center](flexbox-center.png)
+
+
+
+
+## 4. Ajustement manuel de la position d'un élément
+Il est possible d'ajuster manuellement la position d'un élément sur la page, sans passer par des Grid ou des Flexbox. On utilise la propriété ***position***. 
+Cette dernière peut prendre plusieurs valeurs :
+- static
+- relative
+- absolute
+- fixed
