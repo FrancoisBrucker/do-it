@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: " Web Front"
+title: " MON 1 : Le Web Front pour Soline"
 authors:
   - Lola Bourdon
 
@@ -15,7 +15,7 @@ résumé: "MON 1 sur le développement d'un site web basique"
 {%prerequis 'Niveau débutant'%}  
 {%endprerequis%}
 
-Mes objectifs pour ce premier MON sont de découvirir les bases des langages HTML et CSS afin d'être capable de coder un site internet simple pour appliquer ce que j'ai appris. Pour rendre cela plus ludique, je vais coder au fur et à mesure de mon apprentissage un site internet très basique décrivant une fiche méthode du langage html pour Soline qui n'a pas suivi la formation html. Par la suite j'améliorerait l'esthétique du site grâce à la découverte de CSS.
+Mes objectifs pour ce premier MON sont de découvrir les bases des langages HTML et CSS afin d'être capable de coder un site internet simple pour appliquer ce que j'ai appris. Pour rendre cela plus ludique, je vais coder au fur et à mesure de mon apprentissage un site internet très basique décrivant une fiche méthode du langage html pour Soline qui n'a pas suivi la formation html. Par la suite j'améliorerait l'esthétique du site grâce à la découverte de CSS.
  
 
 ##  Méthodologie 

@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Réalisation d'un site web"
+title: "Réalisation d'une application web : la bonne montre"
 authors:
   - Lola Bourdon
 
@@ -10,7 +10,7 @@ date: 2023-09-01
 tags: 
   - "temps 1"
 
-résumé: Ce POK a pour but de créer une application qui permettrait à des utilisateurs de visualiser les montres de la marque  de référencer quelques modèles de montres en utilisant la plateforme bubble.io/ que j'ai récemment appris à utiliser.
+résumé: Ce premier POK a pour but de créer une application web qui permettrait de revendre des montres d'occasions entre particuliers à Marseille en utilisant la plateforme bubble.io/ que j'ai récemment appris à utiliser.
 
 ---
 
@@ -49,13 +49,22 @@ Pour la réalisation de ce premier POK, j'aimerai utiliser les connaissanes que 
 - Faire le lien entre les pages et les fonctionnalités [non]
 
 <strong> Sujet et fonctionnaliés de l'application :</strong> 
-Idée : 
-fonctionnalités nécessaires:
+Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieures montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre
+
+Fonctionnalités nécessaires:
 1. Log in/ sign Up et déconnection
-2. modifier son profil 
-3. publier les fiches des montres
-4. ajout d'un chatbot 
-5. visualiser les montres des utilisateurs 
+2. ajouter/modifier son profil 
+3. publier les fiches des montres à vendre
+4. proposer une montre à la plateforme
+5. ajouter au panier 
+
+Fonctionnalités possibles :
+1. visualiser et retirer du panier 
+2. ajout d'un chatbot plateforme/acheteur/vendeur
+3. ajouter de smontres en favoris et les visualiser
 
 
+### Remarques :
+
+Mauvaise gestion du temps + tâches cachées : J'ai sous estimé le temps nécessaire à la poursuite de ma formation sur bubble.io/ étant donné que je n'ai pas touché à tout pendant le projet du cours de no code. J'aurais du être capable de proposer une premiere version de la page d'accueil mais cette dernière ne me convient pas du tout à l'heure actuelle, je dois la retravailler.
 
