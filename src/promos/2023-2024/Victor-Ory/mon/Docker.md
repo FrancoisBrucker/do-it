@@ -104,7 +104,7 @@ Il est possible de créer un réseau fictif reliant les différents conteneurs q
 ## Docker Compose : 
 
 Cela permet de gérer de multiples containers en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. `Ces différents containers forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable.
-Ainsi au lieu de configurer chaque container avec des variables, des binding de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de 
+Ainsi au lieu de configurer chaque container avec des variables, des bindings de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de 
 
 ## Docker volume :
 
