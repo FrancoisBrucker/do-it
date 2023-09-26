@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Petite initiation au Java"
+title: "Petite initiation au Java et à la Programmation Orientée Objet"
 authors:
   - Nicolas Ouzoulias
 
@@ -52,9 +52,47 @@ La construction en bloc et l'utilisation des `{}` pour marquer le début et la f
 
 Cette *encapsulation* du code peut permettre de sécuriser l'accès aux données ainsi que de limiter les modifications accidentelles lors de l'écriture de celui-ci. 
 
+#### Différences de syntaxe avec Python : 
+
+***Java :*** 
+```java
+public class Main {
+    public static int max(int a, int b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
+        int resultat = max(num1, num2);
+        System.out.println("Le plus grand nombre est : " + resultat);
+    }
+}
+```
+***Python :***
+```python 
+def max(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+num1 = 10
+num2 = 20
+resultat = max(num1, num2)
+print("Le plus grand nombre est :", resultat)
+```
+Pour une même fonction très simple qui renvoie le maximum entre deux nombres on observe facilement les différences de syntaxe entre les 2 langages et pourquoi Python peut être considéré comme plus simple à prendre en main, il y a moins de lignes et de caractères tout en semblant plus procédurale.
+
 ## III. La Programmation Orientée Objet (POO)
 
 Une grande partie de la formation se concentrait sur la POO et comment bien l'utiliser en Java. N'ayant que très peu pratiquer ce type de programmation j'ai pu découvrir les bases de celles-ci tout en mettant en pratique ce que je venais d'apprendre en Java. 
+
+![descriptionPOO](https://www.data-transitionnumerique.com/wp-content/uploads/2021/03/classe.webp)
 
 La POO est une manière de programmer en se basant sur le concept d'*objets* possédant des *attributs* et des *méthodes*. 
 

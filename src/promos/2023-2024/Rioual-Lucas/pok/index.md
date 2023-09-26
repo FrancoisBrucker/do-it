@@ -8,5 +8,5 @@ authors:
 
 Voici l'ensemble de mes POK
 
-* [Temps 1 : Mon site chez moi](./temps-1)
+* [Temps 1 : Developpement Front-end de mon site web](./temps-1)
 

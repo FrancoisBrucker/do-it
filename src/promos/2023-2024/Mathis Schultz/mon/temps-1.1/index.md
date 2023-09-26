@@ -63,20 +63,17 @@ L'intérêt est donc d'avoir des abréviations intuitives qui permettent de pers
 
 En vue d'utiliser TailwindCSS et plus généralement pour écrire du code HTML, il est nécessaire d'avoir un environnement de travail qui soit propre. Ainsi, les extensions suivantes permettent de faciliter le développement :
 
-- [Tailwind CSS IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)
-, le but de cette extension est de faciliter l'écriture du code tailwind css, en effet elle permet la complétion automatique de syntaxe et surligne les erreurs.
+- [Tailwind CSS IntelliSense](https://code.visualstudio.com/docs/editor/intellisense), le but de cette extension est de faciliter l'écriture du code tailwind css, en effet elle permet la complétion automatique de syntaxe et surligne les erreurs.
 
 <img src="tailwind.png">
 
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-, le but de cette extension est d'avoir votre page web toujours ouverte et toujours à jour ! Cela permet de ne plus effectuer de "npm run serve" et de ne plus avoir de temps d'attente entre la modification et le rendu graphique.
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), le but de cette extension est d'avoir votre page web toujours ouverte et toujours à jour ! Cela permet de ne plus effectuer de "npm run serve" et de ne plus avoir de temps d'attente entre la modification et le rendu graphique.
 
 <img src="live_server.png">
 
-- [Inline Fold](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold)
-, le but de cette extension est de rendre le code lisible, lorsque l'on écrit en html et en Tailwind, les personnalisations viennent encombrer notre écran, cette extension va masquer la partie personnalisation de chaque Class en vue de ne garder que la structure de la page. Lorsque l'on souhaite modifier la personnalisation d'une classe, il nous suffit de cliquer sur les trois points de suspension.
+- [Inline Fold](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold), le but de cette extension est de rendre le code lisible, lorsque l'on écrit en html et en Tailwind, les personnalisations viennent encombrer notre écran, cette extension va masquer la partie personnalisation de chaque Class en vue de ne garder que la structure de la page. Lorsque l'on souhaite modifier la personnalisation d'une classe, il nous suffit de cliquer sur les trois points de suspension.
 
-<img src="inline_fold.png">
+<img src="Inline_fold.png">
 
 Voici un exemple du code précédent en utilisant Inline Fold, il permet doc de masquer toutes les personnalisations tant qu'on ne clique pas sur les points de suspensions :
 
