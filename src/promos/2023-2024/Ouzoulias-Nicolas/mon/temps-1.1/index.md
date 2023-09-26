@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Petite initiation au Java"
+title: "Petite initiation au Java et à la Programmation Orientée Objet"
 authors:
   - Nicolas Ouzoulias
 
