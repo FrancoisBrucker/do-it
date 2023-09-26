@@ -25,7 +25,8 @@ L'étudiant remplit un formulaire :
 ```
 Un formulaire sur une page annexe
 
-L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
+L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site  
+et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
 
 Cette méthode requiert :
 
@@ -114,7 +115,64 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 - Bouton pour déposer le rapport de mobilité (vidéo/pdf)
 - Bouton pour envoyer la mobilité pour validation
 
-## Ressource utilisé
+| Column 1 | Column 2 |
+| -------- | -------- |
+| Nom    | *Sacha*   |
+| Prénom    |  *Ketchum*   |
+| e-mail élève    | *Sacha.Ketchum@pokémon*    |
+| Bio de l'élève    | *Un jour je serai le meilleur dresseur*    |
+| Année de mobilité    | *2023*    |
+| Durée    | *6 mois*    |
+| Type de mobilité    | *SMA/SSE/Césure*    |
+| Pays    | *Espagne*    |
+| Ville    | *Barcelone*    |
+| Description rapide de la mobilité    | *Un SMA pour apprendre l'électronique de pikachu*    |
+| Contact mission    | *Pierre*    |
+| Budget   | *500-1000€*   |
+
+
+## Ressources utilisées
+
+### Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application
+
+```
+Les intérêts
+
+- Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?
+- Est-ce que vous souhaitez être contacté ?
+- Acceptez vous que vos informations soient visible ?
+- Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?
+```
+
+### Questionnaire pour recueillir l'avis de l'administration Centralienne
+
+```
+Les intérêts
+
+- Le but est de s'assurer de l'intérêt pour l'administration.
+- Concevoir quelque chose de facile d'utilisation.
+- Avec des questions pour les étudiants qui correspondent aux attentes de l'administration.
+- Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?
+- Établir les attendus d'un point de vue sécurités de la donnée :  
+serveur de Centrale ? système de login ?
+- Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?
+- Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est  
+pas déjà dans la liste)
+- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minnimum/  
+Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
+```
+
+### La réalisation d'une maquette CANVA
+
+```
+Les intérêts
+
+- Réfléchir aux différentes fonctionnalités pour rendre l'application viable
+- Établir les différents boutons à implémenter
+- Établir l'esthétisme du site
+- Modéliser les différentes interfaces : utilisateur/élève  
+déposant sa mobilité/administrateur de l'école
+```
 
 ### La réalisation d'un MVP (minimum viable project)
 
@@ -122,14 +180,16 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 Les intérêts
 
 - tester la faisabilité d'un projet rapidement.
-- Avoir une première application à éprouver pour trouver les limites du projet et cadrer proprement les outils à développer.
+- Avoir une première application à éprouver pour trouver les limites du projet  
+et cadrer proprement les outils à développer.
 ```
 
 ```
 Les phases pour faire le MVP (minimum viable product)
 
-1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration les fonctionnalités qui les intéresse.
-2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/ )
+1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
+les fonctionnalités qui les intéresse.
+2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )
 3. Tests des parcours utilisateurs (résolution et dev bug).
 4. Préparation du pitch et de la démonstration.
 ```
