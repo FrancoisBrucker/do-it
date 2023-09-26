@@ -22,11 +22,10 @@ tags:
 {%enddetails%}
 
 
-
 {%details "Les ressources"%}
 
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
--  [Rust by Practise](https://practice.rs/why-exercise.html)
+- [Rust by Practise](https://practice.rs/why-exercise.html)
 - [GitHub Exercice](https://github.com/rust-lang/rustlings)
 - [Livre "From Javascript to Rust"](https://github.com/wasmflow/node-to-rust/raw/HEAD/from-javascript-to-rust.pdf)
 

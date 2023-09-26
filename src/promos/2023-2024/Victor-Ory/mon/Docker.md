@@ -116,4 +116,6 @@ Cet ensemble de procédé et outils est donc un maillons essentiel de l'automati
 
 ## Dockerfile
 
-Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, c'est la
+Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, cela permet de créer une nouvelle image personnalisé et il devient possible de la partager avec d'autres, notamment en la mettant disponible sur le Docker Hub. 
+
+Vous ne me croyez pas ?  Allez donc voir [mon répertoire Docker hub](https://hub.docker.com/r/hagard/frontexperisite)
