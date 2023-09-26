@@ -47,12 +47,34 @@ On passe maintenant à un notebook afin d'automatiser tout cela avec python !
 ### 2. Automatiser les requêtes sur python
 
 
+![Notebook 1](notebook1.jpg)
+
+![Notebook 2](notebook2.jpg)
+
+Les deux captures d'écran précédentes permettent d'utiliser la clef afin de faire des requêtes directement via Jupyter Notebook.
+
 ### 3. Faire des calculs à l'aide des données récoltées
 
+Par la suite, j'ai créé des fonctions me permettant de faire des reqûetes dans plusieurs APIs différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.
+
+![Exemple fonction](exemple_calcul.jpg)
+
+Ici par exemple, on arrive à récupérer le classement d'un joueur, à calculer son taux de victoire, et un indicateur de permorfance au cours de ses récentes parties (KDA).
 
 ### 4. Utiliser le framework Flask pour développer une petite application
 
+Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique
+
+![Exemple flask](flask.jpg)
+![Exemple homepage](homepage.jpg)
+![Exemple seerank](Seerank.jpg)
+![Exemple result](result.jpg)
 
 ## Ce que j'ai prévu pour le second point POK
+
+
+Pour le second point, je voudrais tout d'abord corriger les bugs lors de l'utilisation de l'application web car au bout de quelques requêtes mon site plante.
+Je souhaiterais également améliorer l'interface graphique, par exemple en ajoutant des images correspondant au rang du joueur dans le jeu.
+
 
 ## Ce que j'ai fait à la fin du temps 1
