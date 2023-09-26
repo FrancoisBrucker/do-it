@@ -125,11 +125,55 @@
 
 
 
-<p>Mes objectifs pour ce MON sont de découvirir les bases des langages HTML et CSS afin d'être capable de coder un site internet simple pour appliquer ce que j'ai appris. Mon but premier est d'être capable d'expliquer à Soline comment créer son site web basique de la manière la plus simple possible. Cela me permettre également de réaliser mon POK 1 : mon site internet.</p>
+<p>Mes objectifs pour ce premier MON sont de découvirir les bases des langages HTML et CSS afin d'être capable de coder un site internet simple pour appliquer ce que j'ai appris. Pour rendre cela plus ludique, je vais coder au fur et à mesure de mon apprentissage un site internet très basique décrivant une fiche méthode du langage html pour Soline qui n'a pas suivi la formation html. Par la suite j'améliorerait l'esthétique du site grâce à la découverte de CSS.</p>
 <h2>Méthodologie</h2>
-<p>Pour me former aux langages html et css, je suis partie de zéro. J'ai suivi, comme beaucoup, les cours de<br>
-il est temps de partager mes nouvelles compétences avec Soline pour qu'elle soit capabble de faire son site web basique, sans trop approfondir ses connaissances.</p>
-<p>Nous partons du principe que Soline n'a jamais fait d'informatique à l'école.</p>
+<p>Pour me former aux langages html et css, je suis partie de zéro. J'ai suivi, comme beaucoup, les cours de <a href="https://internetingishard.netlify.app">https://internetingishard.netlify.app</a> .<br>
+Il est temps de partager mes nouvelles compétences avec Soline pour qu'elle soit capabble de faire son site web basique, sans trop approfondir ses connaissances.</p>
+<h2>1. Prérequis</h2>
+<p>Pour commencer, Soline aura besoin d'utiliser sur son ordinateur un éditeur de texte tel que Visual Studio Code qu'elle possède déjà, même si elle pourrait en utiliser d'autres.</p>
+<p>Sur VScode, elle devra suivre les étapes suivantes :</p>
+<ol>
+<li>Dans l’explorateur de fichier, créer un dossier : &quot;Mon-premier-site-vsc »</li>
+<li>Ouvrir l'application VsCode et choisir Fichier &gt; ouvrir &gt; fichier puis naviguer jusqu'au dossier &quot;Mon-premier-site-vsc&quot;.</li>
+<li>Accepter de faire confiances aux auteurs, puisque c'est elle</li>
+<li>Installer l’extension live folder : extension &gt; live folder &gt; installer, qui lui permettra de visualiser son super site web basique</li>
+<li>Créer un nouveau fichier html &quot;premier-essai.html&quot; un icone &lt;&gt; devrait apparaitre devant le nom du dossier</li>
+</ol>
+<h2>2. Les bases</h2>
+<p>Maintenant que Soline est sur la fenêtre de son fichier html, voici quelques bases :</p>
+<p>On commence le fichier html avec &lt;html&gt;&lt;/html&gt;.<br>
+Maintenant l’intégralité de la page Web doit être enveloppée dans des balises &lt;html&gt;&lt;/html&gt;.<br>
+&lt;html&gt;ouvre le code et &lt;/html&gt; le ferme.</p>
+<p>Entres les &lt;html&gt;&lt;/html&gt; :</p>
+<ul>
+<li>Il ne faut jamais mélanger les imbrications</li>
+<li>Placer &lt;head&gt;&lt;/head&gt; qui fait référence aux titres, langages CSS, et contenu qui ne seront pas visible directement sur le site</li>
+<li>On pourra ecrire le titre de la page entre &lt;title&gt;&lt;/title&gt; mais il n'apparaitra pas directement sur le site.</li>
+<li>Maintenant que le head est fermée mais pas le &lt;/html&gt;, on utilisera &lt;body&gt;&lt;/body&gt; qui encadre le contenu visible, rien ne s'affiche  sur la page web lorsqu'il est vide</li>
+</ul>
+<p>Dans &lt;body&gt;&lt;/body&gt; :</p>
+<ul>
+<li>&lt;p&gt;&lt;p&gt; encadre les paragraphes,</li>
+<li>&lt;h1&gt;&lt;/h1&gt;à &lt;h6&gt;&lt;/h6&gt; sont pour les titres du plus au moins gros</li>
+<li>&lt;ul&gt;&lt;ul&gt;et &lt;li&gt;&lt;/li&gt; servent pour les listes simple et sont indissociables</li>
+<li>On peut mettre le &lt;p&gt;&lt;p&gt; dans le &lt;li&gt;&lt;li&gt; mais pas dans le &lt;ul&gt;&lt;ul&gt;</li>
+<li>Pour faire apparaitre les crochets sur la page il suffira de les encadrer par &amp;lt ; &amp;gt ; sans espace entre le t et le point virgule</li>
+</ul>
+<p>Voyons ce que ces premières informations drendent sur un site web basique:</p>
+<img src="code1.png">
+<img src="screen1.png">
+<p>Il existe également des liste ordonnes qui permettent de numéroter la liste. Cela fonctionne de la même manière mais on remplacera le &lt;ul&gt; par &lt;ol&gt;&lt;ol&gt;.<br>
+On utilisra &lt;ol&gt;&lt;ol&gt; pour les recettes, les instructions et même les tables.<br>
+On utilisera &lt;ul&gt; pour les inventaires d'articles, les caractéristiques des produits, les comparaisons pour/contre et les menus de navigation.</p>
+<h3>Ecrire en Italique ou en gras</h3>
+<p>Pour écrire en <em>italique</em>, il faut utiliser  la commande &lt;em&gt; <em>  texte </em> &lt;/em&gt; qui n'affecte qu'une partie du texte de la ligne, à la différence de &lt;p&gt;&lt;p&gt;  qui est un élément de niveau bloc.</p>
+<p>De la même manière, Pour écrire en <strong>gras</strong>, on utilisera &lt;strong&gt; <strong> texte </strong> &lt;/strong&gt;</p>
+<p>On peux également imbriquer un élément gras dans un italique ou vice versa avec : &lt;em&gt;&lt;strong&gt;<em><strong> texte  </strong></em> &lt;/strong&gt;&lt;/em&gt;</p>
+<p></p><h3> Les élements vides </h3><br>
+Les sauts de ligne et les règles horizontales sont les éléments vides les plus courants. Pour indiquer au navigateur un saut de ligne définitif, il faut utiliser un seul élément &lt;/br&gt;<br>
+C'est utilisé pour les signatures, non pas pour sauter beaucoup de ligne<p></p>
+<p>Pour les lignes horizontales, on utiliserz simplement &lt;/hr&gt; souvent utile pour une rupture thématique.</p>
+
 
 
 </article>
