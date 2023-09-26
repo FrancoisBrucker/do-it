@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Implémentation du jeu de Blackjack avec Python</title>
+        <title>POK1: Implémentation du jeu de Blackjack avec Python</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Implémentation du jeu de Blackjack avec Python</h1>
+<h1 class="mb-1">POK1: Implémentation du jeu de Blackjack avec Python</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -118,14 +118,706 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/pok/">POK de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/pok/temps-1/">Implémentation du jeu de Blackjack avec Python</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/pok/">POK de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/pok/temps-1/">POK1: Implémentation du jeu de Blackjack avec Python</a>
 
 </div></div>
 
 
 
 
-<h2>Titre</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Prérequis</p>
+</div><div class="pl-8 mr-8">
+<p>Connaissance basique de Qt pour Python (cf mon <a href="../../mon/temps-1.1">MON1 du temps 1</a>)</p>
+</div></div>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Tout les codes présentés ci-dessous sont disponibles dans le dossier Github de Do-It: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-1">Codes du POK</a></p>
+</div></div>
+<h2>Introduction</h2>
+<p>Le Blackjack est l'un des jeux de carte les plus connus et joués dans les casinos. C'est un jeu qui oppose les joueurs au casino (dénommé aussi le dealer, puisqu'il distribue les cartes). Le Blackjack étant un jeu de carte de casino, on peut se douter que ce jeu est naturellement à l'avantage du casino. Il serait ainsi intéressant de se demander à quel point le joueur est perdant dans ce jeu, sachant qu'il utilise une stratégie connue pour être optimale. En d'autres termes, <strong>quelle est l'espérance de gain d'un joueur qui joue au Blackjack?</strong> D'autres statistiques seront également calculées, comme par exemple la meilleure carte que le dealer peut avoir ou bien encore l'influence du <em>comptage de cartes</em>.</p>
+<p>L'objectif sera également de recréer un jeu de Blackjack, en utilisant le module <em>Qt for Python</em>, que j'ai appris à maîtriser lors de mon premier MON du temps 1. C'est d'ailleurs par cela que ce POK va commencer.</p>
+<h2>Brève explication des règles du Blackjack</h2>
+<p>Il faut tout d'abord commencer par expliquer rapidement les (simples) règles du Blackjack. Ce jeu oppose les joueurs à la <em>maison</em> (autrement dit le casino, ou bien le dealer). Lors de chaque tour, le dealer distribue 2 cartes faces ouvertes à chaque joueur et une carte face ouverte à lui-même. Le but pour chaque joueur est de se rapprocher le plus possible de 21 points, sans dépasser cette limite. Chaque carte vaut sa valeur (le 2 vaut 2 points, le 5 vaut 5 points etc...), les têtes (valet, dame et roi) valent 10 points et l'As vaut 1 ou 11 points. Le joueur peut décider parmi plusieurs actions lors de son tour:</p>
+<ul>
+<li>Tirer une nouvelle carte et l'ajouter à son compte (action de <em>tirer</em>),</li>
+<li>Garder son compte actuel et terminer son tour (action de <em>rester</em>),</li>
+<li>Si le joueur a deux cartes, il peut <em>doubler</em>: dans ce cas, il double sa mise et pioche une unique carte, puis termine son tour,</li>
+<li>Si le joueur a deux cartes de même valeur, il peut les <em>séparer</em>: dans ce cas, il joue avec deux mains, chacune contenant une carte initialement en double. Sa mise initiale est donc misée également sur la deuxième main.</li>
+</ul>
+<p>Une fois que le joueur a terminé son tour, le dealer joue. Il joue toujours de la même manière: il pioche tant qu'il a un compte inférieur ou égal à 16, puis il reste s'il a un compte supérieur ou égal à 17. Si le joueur a dépassé 21 (on dit qu'il a <em>bust</em>), il perd; même si le dealer bust après lui, et perd sa mise. Si le joueur a un compte supérieur à celui du dealer, ou que le dealer bust sans que le joueur ne bust, alors le joueur gagne et il reçoit deux fois sa mise.</p>
+<h2>Implémentation d'un jeu de Blackjack avec Qt sur Python</h2>
+<p>La première étape de ce POK est de recréer ce jeu sur Python grâce au module Qt. Toutes les méthodes et classes utilisées dans le code sont expliquées dans mon <a href="../../mon/temps-1.1">MON 1.1</a>.</p>
+<p>J'ai utilisé l'outil Qt Designer pour designer l'aspect de l'interface utilisateur. J'ai opté pour un simple fond vert, pour représenter le tapis de jeu, ainsi que 7 images de dos de carte pour le joueur et le dealer. Au-dessus de ces cartes, on voit le compte des points et en-dessous, il y a les boutons correspondant aux actions que le joueur peut effectuer à chaque tour. Il faut bien s'assurer de renommer chaque objet avec un nom logique, pour pouvoir s'y retrouver dans le code. Voici à quoi ressemble la fenêtre sur Qt Designer:</p>
+<p><img src="Image1.png" alt="Image main_window"></p>
+<p>Cette fenêtre est enregistrée sous le nom de <em>main_window</em>. On crée une autre fenêtre que l'on nomme <em>split_window</em>. En effet, il faut une autre disposition des éléments dans le cas où le joueur décide de séparer ses cartes. Voici à quoi ressemble cette fenêtre sur Qt Designer:</p>
+<p><img src="Image2.png" alt="Image split_window"></p>
+<h2>Création du code Python pour implémenter le jeu</h2>
+<p>Maintenant qu'on a les deux fichiers .ui de chaque fenêtre, on commence à implémenter le jeu. Pour organiser correctement le code et le rendre plus lisible, on crée trois fichiers .py:</p>
+<ul>
+<li>Un fichier <em>blackjack_methods.py</em> qui va contenir la classe <strong>Blackjack_methods</strong> contenant les méthodes relatives à la manipulation du deck de cartes et des mains (création du deck, calcul du compte des mains),</li>
+<li>Un fichier <em>UI_blackjack.py</em> qui va contenir la classe <strong>Blackjack</strong> contenant les méthodes relatives à la création de l'interface graphique,</li>
+<li>Un fichier <em><a href="http://main.py">main.py</a></em> qui va contenir les instructions pour exécuter le code.</li>
+</ul>
+<h3>La classe Blackjack_methods</h3>
+<p>Comme explicité ci-dessus, cette classe contient les méthodes pour manipuler le deck. La méthode <em>newdeck</em> permet de créer le sabot pour le Blackjack. Ce sabot est composé de 6 jeux de 52 cartes. Ce sabot (dénommé <em>deck</em> dans le code) est une liste d'objet de la classe <strong>Card</strong>. Ces objets ont comme attribut un nom (par exemple 2_of_clubs pour le 2 de trèfle ou 11_of_hearts pour le valet de coeur) et sa valeur (1 pour as, 11 pour valet, 12 pour dame et 13 pour roi). Cette classe a également une méthode appelée <em>sum_hand</em>, qui prend en argument une liste et qui renvoie sa somme. Cette méthode prend en compte que l'As (donc la valeur 1) vaut soit 1 soit 11. Ainsi, si la main est <code>[1, 4]</code>, la méthode renvoie 15, mais si la main est <code>[1, 5, 7]</code>, la méthode renvoie 13. Voici l'implémentation de cette classe:</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la classe <strong>Blackjack_methods</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack_methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">newdeck</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        suits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"diamonds"</span><span class="token punctuation">,</span> <span class="token string">"clubs"</span> <span class="token punctuation">,</span><span class="token string">"hearts"</span><span class="token punctuation">,</span> <span class="token string">"spades"</span><span class="token punctuation">]</span>
+        values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">14</span><span class="token punctuation">)</span>
+        initial_deck <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> suit <span class="token keyword">in</span> suits<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> value <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> value <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+                    initial_deck<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Card<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string">_of_</span><span class="token interpolation"><span class="token punctuation">{</span>suit<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> value <span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">:</span>
+                    initial_deck<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Card<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string">_of_</span><span class="token interpolation"><span class="token punctuation">{</span>suit<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>deck <span class="token operator">=</span> initial_deck <span class="token operator">*</span> <span class="token number">6</span>
+    
+    <span class="token keyword">def</span> <span class="token function">sum_hand</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            sum1 <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> hand<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span>
+            <span class="token keyword">if</span> sum1 <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> hand<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span><span class="token punctuation">(</span>sum1<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> hand<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Card</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+</code></pre>
+</div>
+</details>     
+</div>
+<h3>La classe Blackjack</h3>
+<h4>L'initialisation</h4>
+<p>Cette classe hérite des classes <strong>QMainWindow</strong> et <strong>Blackjack_methods</strong>, dans l'optique de réaliser l'interface graphique du jeu. Dans l'initialisation de cette classe, on retrouve les éléments suivants:</p>
+<ul>
+<li>La création des fenêtres <em>main_window</em> et <em>split_window</em> avec l'aide des fichiers .ui précédemment créés. On utilise la méthode <em>load</em> de la classe <strong>QUiLoader</strong>.</li>
+<li>La création des attributs associés à chaque objet des fichiers .ui (les labels, les boutons etc...). On utilise la méthode <em>findChild</em> de la classe <strong>QWidget</strong></li>
+<li>L'association des méthodes correspondantes à chaque bouton de l'interface grâce à la méthode <em>clicked.connect</em> de la classe <strong>QPushButton</strong> (par exemple, la méthode <em>restart</em> pour le bouton <em>restartButton</em>)</li>
+</ul>
+<p>Voilà l'implémentation de cette initialisation:</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de l'initialisation de la classe <strong>Blackjack</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">,</span> Blackjack_methods<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        ui_file_name <span class="token operator">=</span> <span class="token string">"Blackjack_main_window.ui"</span>
+        ui_file <span class="token operator">=</span> QFile<span class="token punctuation">(</span>ui_file_name<span class="token punctuation">)</span>
+        loader <span class="token operator">=</span> QUiLoader<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window <span class="token operator">=</span> loader<span class="token punctuation">.</span>load<span class="token punctuation">(</span>ui_file<span class="token punctuation">)</span>
+        ui_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Blackjack"</span><span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>label_dealercard1 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard2 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard3 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard4 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard5 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard6 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard6"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercard7 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard7"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard1 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard2 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard3 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard4 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard5 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard6 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard6"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercard7 <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard7"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>label_dealerheader <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"labelDealerCards"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playerheader <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"labelPlayerCards"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_dealercount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"labelDealerCount"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_playercount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"labelPlayerCount"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCount"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCount <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCount"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"label_result"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_cards <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"label_cards"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cardsLeft <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"cardsLeft"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>hitButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_hit"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>stayButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_stay"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>doubleButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_double"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>restartButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_restart"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>splitButton <span class="token operator">=</span> self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_split"</span><span class="token punctuation">)</span>
+
+        ui_file_name2 <span class="token operator">=</span> <span class="token string">"Blackjack_split_window.ui"</span>
+        ui_file2 <span class="token operator">=</span> QFile<span class="token punctuation">(</span>ui_file_name2<span class="token punctuation">)</span>
+        loader2 <span class="token operator">=</span> QUiLoader<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_window <span class="token operator">=</span> loader2<span class="token punctuation">.</span>load<span class="token punctuation">(</span>ui_file2<span class="token punctuation">)</span>
+        ui_file2<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Blackjack: Split Window"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>label_split_dealercard1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard3 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard4 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard5 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard6 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard6"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_dealercard7 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCard7"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_3 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_4 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_5 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_6 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_6"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard1_7 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard1_7"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_3 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_4 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_5 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_6 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_6"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_split_playercard2_7 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCard2_7"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_PlayerCount1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCount1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_PlayerCount2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"PlayerCount2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_DealerCount <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"DealerCount"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cardsLeft_split <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QLabel<span class="token punctuation">,</span> <span class="token string">"cardsLeft"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>split_hitButton1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_hit1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_stayButton1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_stay1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_doubleButton1 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_double1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_hitButton2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_hit2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_stayButton2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_stay2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_doubleButton2 <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_double2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_buttonRestart <span class="token operator">=</span> self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>findChild<span class="token punctuation">(</span>QPushButton<span class="token punctuation">,</span> <span class="token string">"button_restart"</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>split_hitButton1<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>hit_split<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_hitButton2<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>hit_split<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_stayButton1<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stay_split_first<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_stayButton2<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stay_split<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>split_buttonRestart<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>restart_split<span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>restart<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>hitButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>hit<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>restartButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>restart<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stay<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>split<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On peut remarquer qu'il y a beaucoup de lignes de codes, mais que c'est assez répétitif, notamment parce qu'il faut associer chaque objet de l'interface à des attributs de la classe dans le code.</p>
+<p>Il faut ensuite créer chaque méthode associée aux boutons.</p>
+<h4>La méthode restart</h4>
+<p>Cette méthode est appelée dans l'initialisation de la classe. Elle permet de réaliser les actions suivantes:</p>
+<ul>
+<li>Refaire un nouveau deck lorsque la taille du sabot est inférieure à 52 cartes,</li>
+<li>Piocher deux nouvelles cartes pour le joueur et une nouvelle carte pour le dealer, et les afficher à leurs endroits respectifs grâce à la méthode <em>setPixmap</em> de la classe <strong>QPixmap</strong>,</li>
+<li>Mettre à jour les comptes du dealer et du joueur grâce à la méthode <em>display_player_count</em>. Cette méthode permet d'afficher le compte du joueur, en faisant attention au cas où un As est dans la main. Par exemple, si la main du joueur est As-4, alors le compte doit afficher 5/15.</li>
+<li>Activer ou désactiver le bouton <em>séparer</em> grâce à la méthode <em>setEnabled</em> de la classe <strong>QPushButton</strong>. En effet, ce bouton n'est actif que si le joueur a deux cartes de même valeur,</li>
+<li>Réinitialiser les attributs de la classe, que l'on explicitera au fur et à mesure.</li>
+</ul>
+<p>Cette méthode est appelée lorsque l'utilisateur clique sur le bouton &quot;Recommencer&quot; dans l'interface.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>restart</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">restart</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">52</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>player_bust <span class="token operator">=</span> <span class="token boolean">False</span>
+    self<span class="token punctuation">.</span>hitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>restartButton<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"background-color: white"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_buttonRestart<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"background-color: white"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>dealer_spot <span class="token operator">=</span> <span class="token number">1</span>
+    self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">=</span> <span class="token number">1</span>
+    card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>dealer_hand <span class="token operator">=</span> <span class="token punctuation">[</span>card<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> card<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"1/11"</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>player_spot <span class="token operator">=</span> <span class="token number">2</span>
+    self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">=</span> <span class="token number">1</span>
+    self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">=</span> <span class="token number">1</span>
+    card1 <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    card2 <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    pixmap1 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card1<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    pixmap2 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card2<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>player_hand <span class="token operator">=</span> <span class="token punctuation">[</span>card1<span class="token punctuation">,</span> card2<span class="token punctuation">]</span>
+    self<span class="token punctuation">.</span>label_playercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap1<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap2<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>display_player_count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.png'</span></span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_playercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>label_dealercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> card1<span class="token punctuation">.</span>value <span class="token operator">==</span> card2<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>La méthode draw</h4>
+<p>Cette méthode permet de piocher une carte dans le deck. Pour cela, on utilise la méthode <em>choice</em> de la bibliothèque <em>random</em> pour choisir une carte aléatoire dans le deck. Ensuite, on la retire du deck et on la renvoie. A chaque fois que le joueur pioche une carte, il faut mettre à jour le nombre de cartes restantes.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>draw</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        card <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cardsLeft<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cardsLeft_split<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>La méthode hit</h4>
+<p>Cette méthode est appelée lorsque l'utilisateur clique sur le bouton &quot;Tirer&quot; de l'interface. Cette méthode permet de réaliser les actions suivantes:</p>
+<ul>
+<li>Désactiver le bouton &quot;Séparer&quot;. En effet, lorsque le joueur a pioché une carte, il ne peut plus séparer ses cartes,</li>
+<li>Piocher une carte grâce à la méthode <em>draw</em> et on la place à l'endroit adéquat. Pour déterminer cet endroit adéquat, on doit créer un attribut <em>player_spot</em> qu'on incrémente au fur et à mesure que l'on avance dans la pioche. A noter que l'attribut &quot;name&quot; de chaque objet de la classe <strong>Card</strong> correspond exactement au nom qui est donné dans le fichier qui contient toutes les cartes en png, afin que la méthode <em>setPixmap</em> puisse retrouver l'image.</li>
+<li>Mettre à jour le compte du joueur.</li>
+</ul>
+<p>Si le compte du joueur dépasse 21, on appelle la méthode <em>stay</em>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>hit</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>player_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>label_playercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    self<span class="token punctuation">.</span>display_player_count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>player_bust <span class="token operator">=</span> <span class="token boolean">True</span>
+        self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a bust"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>stay<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>La méthode stay</h4>
+<p>Cette méthode est associée au bouton &quot;Rester&quot; de l'interface, et permet de finir le tour du joueur. Elle permet de réaliser les actions suivantes:</p>
+<ul>
+<li>Piocher des cartes jusqu'à ce que le dealer dépasse 16, et afficher les cartes au fur et à mesure de la même manière qu'avec la méthode <em>hit</em>.</li>
+<li>Déterminer si le joueur a gagné ou si le dealer a gagné, et l'afficher sur l'interface,</li>
+<li>Désactiver tout les boutons sauf le bouton &quot;recommencer&quot;, que l'on mettra en rouge.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode stay</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">stay</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">17</span><span class="token punctuation">:</span>
+        card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>label_dealercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
+        count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token comment">#time.sleep(1)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>player_bust <span class="token keyword">and</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le dealer a bust"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>player_bust <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a gagné"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>player_bust <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">></span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span> <span class="token keyword">and</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le dealer a gagné"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>player_bust <span class="token keyword">and</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Egalité!"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>restartButton<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"background-color: red"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>hitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>Les méthodes dans le cas du split</h4>
+<p>Toutes ces méthodes ont leur équivalent si jamais le joueur décide de séparer ses cartes. En effet, comme la fenêtre <em>split_window</em> est différente de la fenêtre <em>main_window</em>, on a par conséquent d'autres boutons, et donc d'autres méthodes à créer. Cependant, ces méthodes sont sensiblement les mêmes que celles explicitées précédemment, il est inutile de les expliciter ici. On peut mentionner tout de même que ces méthodes doivent gérer l'activation ou la désactivation des différents boutons, puisque le joueur ne peut pas jouer ses mains en même temps.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code des méthodes dans le cas du split</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_player_count_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsFirst<span class="token punctuation">:</span>
+      count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">21</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span> <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">else</span><span class="token punctuation">:</span>
+      count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">21</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount2<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span> <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount2<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">hit_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsFirst<span class="token punctuation">:</span>
+      card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard1_7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      self<span class="token punctuation">.</span>display_player_count_split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_hitButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_stayButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_doubleButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_hitButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_stayButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>split_doubleButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>IsFirst <span class="token operator">=</span> <span class="token boolean">False</span>
+  
+  <span class="token keyword">else</span><span class="token punctuation">:</span>
+      card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_playercard2_7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
+
+      self<span class="token punctuation">.</span>display_player_count_split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>split_PlayerCount2<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>stay_split<span class="token punctuation">(</span><span class="token punctuation">)</span>            
+
+
+<span class="token keyword">def</span> <span class="token function">stay_split_first</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>IsFirst <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_hitButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_stayButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_doubleButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_hitButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_stayButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>split_doubleButton1<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">stay_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  self<span class="token punctuation">.</span>split_hitButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_stayButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_doubleButton2<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">17</span><span class="token punctuation">:</span>
+      card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      <span class="token keyword">elif</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>label_split_dealercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+          self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
+      
+      count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>split_DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_buttonRestart<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"background-color: red"</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">21</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>split_DealerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">restart_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.png'</span></span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard1_7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_playercard2_7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard6<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>label_split_dealercard7<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_PlayerCount2<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>split_DealerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>restart<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h3>Démonstration du code</h3>
+<p>Pour exécuter ce code, on exécute ces quelques lignes dans un fichier <a href="http://main.py">main.py</a>:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+window <span class="token operator">=</span> Blackjack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="Image3.png" alt="Image démo1"></p>
+<p>On voit bien l'interface que l'on a créé plus tôt sur Qt Designer. Voici ce à quoi ressemble la fenêtre à la fin d'un tour:</p>
+<p><img src="Image4.png" alt="Image demo2"></p>
+<p>De plus, voici à quoi ressemble l'interface après la fin d'un tour où le joueur a split:</p>
+<p><img src="Image5.png" alt="Image demo3"></p>
 
 
 </article>
