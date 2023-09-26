@@ -66,5 +66,11 @@ Fonctionnalités possibles :
 
 ### Remarques :
 
-Mauvaise gestion du temps + tâches cachées : J'ai sous estimé le temps nécessaire à la poursuite de ma formation sur bubble.io/ étant donné que je n'ai pas touché à tout pendant le projet du cours de no code. J'aurais du être capable de proposer une premiere version de la page d'accueil mais cette dernière ne me convient pas du tout à l'heure actuelle, je dois la retravailler.
+Mauvaise gestion du temps + tâches cachées : J'ai sous estimé le temps nécessaire à la poursuite de ma formation sur bubble.io/ étant donné que je n'ai pas touché à tout pendant le projet du cours de no code. J'aurais du être capable de proposer une premiere version de la page d'accueil et de la structure de l'application mais cette dernière ne me convient pas du tout à l'heure actuelle, je dois la retravailler. J'ai également mis du temps a prendre en main VSCode et github, ce qui diminué le temps que j'avais a consacrer à ce POK jusqu'au premier sprint.
 
+### Objectifs sprint 2 :
+Maintenant que ce POK est plus clair, je dois :
+1. Mieux gérer mon temps 
+2. Terminer de me former à bubble.io/
+3. Terminer la page d'accueil, les différentes pages et la structure 
+4. Commencer les liens entre les pages et les fonctionnalités

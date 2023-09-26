@@ -10,7 +10,7 @@ authors:
 
 ## Idée
 
-Réalisation d’un **serious game** mettant le/les joueurs en condition de **crise** dans une entreprise. Leur objectif est de prendre la décision la plus juste et la plus responsable.
+Réalisation d’un **serious game** mettant le/les joueurs en condition de **gestion crise** dans une entreprise. L'objectif est de prendre la décision la plus juste et la plus responsable.
 
 ## L’objectif
 
