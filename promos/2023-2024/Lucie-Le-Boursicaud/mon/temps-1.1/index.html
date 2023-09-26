@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Informatique</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Langage C++</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Apprentissage d&#39;un langage</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -142,7 +154,7 @@
 <li>Orientation objet</li>
 </ol>
 <h2>1.Présentation du langage</h2>
-<p>Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA.</p>
+<p>Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA. Sa rapidité, sa puissance ainsi que sa très bonne gestion de la mémoire font de lui un langage incontournable. Nous allons découvrir ensemble les bases de ce langage.</p>
 <h5>Documents et outils utilisés</h5>
 <p><a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf">La programmation en C++</a><br>
 <a href="http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop2.pdf">La programmation objet en C++</a><br>
@@ -151,14 +163,14 @@
 <h4>Type de variable</h4>
 <p>Comme d'autres langages le C++ possède plusieurs type de variables :</p>
 <ul>
-<li>vide : void  - aucune voriable ne peut être de ce type</li>
-<li>enter : char - petit entier de -128 à 127<br>
-short - grand entier de -32768  à 32767<br>
-long - très grand entier<br>
-int - coïncide avec short ou long en fonction de l'initiation</li>
-<li>réels : float - précision de 7 chiffres<br>
-double - précision de 15 chiffres<br>
-long double - précision de 18 chiffres</li>
+<li>vide : <em>void</em>  - aucune voriable ne peut être de ce type on verra son utilité plus tard</li>
+<li>entier : <em>char</em> - petit entier de -128 à 127<br>
+<em>short</em> - grand entier de -32768  à 32767<br>
+<em>long</em> - très grand entier<br>
+<em>int</em> - coïncide avec short ou long en fonction de l'initialisation</li>
+<li>réels : <em>float</em> - précision de 7 chiffres<br>
+<em>double</em> - précision de 15 chiffres<br>
+<em>long double</em> - précision de 18 chiffres</li>
 </ul>
 <p>Parfois on pourra rencontré le type <em><strong>unsigned</strong></em> , il s'agit d'un entier dit &quot;non signé&quot;.</p>
 <h4>Déclarer une variable</h4>
@@ -213,7 +225,7 @@ Exemples :</p>
 char Concatenation(char mot1, char mot2);
 void AfficherUnNombreXFois(int nombre, int x);
 </code></pre>
-<p>On voit ici l'utilité de <em>void</em> rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.</p>
+<p>On voit ici l'utilité de <strong><em>void</em></strong> rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.</p>
 <h5>Définir une fonction</h5>
 <p>Pour déclarer une fonction voici la syntaxe :<br>
 type nom_de_la_fonction(tous_les_paramètres)<br>
@@ -222,7 +234,7 @@ corps de la fonction<br>
 }</p>
 <p>Exemples :</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Moyenne(double x, double y){
-  reurn (x + y) / 2.0
+  return (x + y) / 2.0
 }
 </code></pre>
 <p>Lorsque l'on utilise <em>return</em> cela interrompt l'exécution de la fonction.</p>
@@ -252,6 +264,47 @@ D'abord l'<em>expression 1</em> est évaluée. Ensuite, si elle est non nulle, l
 </li>
 </ul>
 <p>Plusieurs fonctions utiles sont aussi à connaitre telles que : <em>floor</em>, <em>fabs</em>, <em>sqrt</em>, <em>pow</em> ainsi que les fonctions trigo.</p>
+<ul>
+<li>Les énumérations<br>
+Les énumérations sont des listes de noms représentant les valeurs entières successives 0,1,2,...<br>
+On peut l'a défini de la façon suivante : <strong>enum</strong> <em>nom</em> { <em>liste_de_noms</em> }<br>
+Exemple :</li>
+</ul>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">enum Chiffres { un, deux, trois, quatre, cinq, six, sept, huit, neuf}
+enum Peinture { huile, gouache, acrylique, aquarelle}
+</code></pre>
+<p>Alors on obtiendra la déclaration implicite des constantes entières :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">const int huile=0;
+const int gouache=1;
+const int acrylique=2;
+...
+</code></pre>
+<p>Et attribue à ces constantes un type appelé Peinture.</p>
+<ul>
+<li>Tableaux<br>
+Un tableau est une collection indicée de variables de même type.<br>
+On peut le définir de la façon suivante : <em>type</em> <em>nom</em> [<em>taille</em>] où<br>
+<em>type</em> est le type des éléments du tableau<br>
+<em>nom</em> est le nom du tableau<br>
+<em>taille</em> est une constante entière égale au nmbre d'éléments du tableau.</li>
+</ul>
+<p>Exemples:</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int taille[2];       //tableau de deux entiers pour indiquer sa taille
+double tempsdouche[7];     //tableau de 7 réels pour indiquer le nombre de minutes passées sous la douche
+Peinture collection[10];    //tableau de 10 peintures
+</code></pre>
+<blockquote>
+<p>Soit i une expression entière, on note Peinture[i] l'élement d'indice i du tableau <em>Peinture</em>.</p>
+</blockquote>
+<ul>
+<li>Chaînes de caractères<br>
+En C++, une chaine de caractères est en fait un tableau de caractères avec un caractère nul '\0' en fin de chaîne.<br>
+Exemple :</li>
+</ul>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">char couleur[8]; // on a 7 caractères utiles
+strcpy(couleur, "rouge")
+</code></pre>
+<p>Les chaines de caractères peuvent être affichées grâce aux habituels <em>cin</em> et <em>cout</em>. De nombreuses fonctions de bases utiles pour les chaines de caractères sont déjà pré-définies en C++.</p>
 <h2>3.Premiers algorithmes</h2>
 <p>Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage.</p>
 <h4>Algorithme de calcul de distance entre deux points</h4>
@@ -327,67 +380,8 @@ Ainsi avant de décrire un objet il est important de décrire la classe à laque
 <li>Editer les liens entre les fichiers objets pour obtenir un fichier exécutable en .exe.</li>
 </ul>
 <p>Pour ce faire, sur Microsoft, il suffit de créer les fichiers sources, de les ajouter dans un projet et de lancer la commande <strong>build</strong>. Les phase 2 et 3 se feront alors automatiquement.</p>
-<p>Exemple :<br>
-Nous allons créer la classe <em>Complexe</em></p>
-<p>Dans le fichier complexe.h on aura :*</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Complexe
-{
-  public : 
-    Complexe(float x, float y);
-    Complexe();
-    void Lis();
-    void Affiche();
-    Complexe operator+(Complexe g);
-  private :
-    float re, im;
-}
-</code></pre>
-<p>Dans le fichier complexe.cpp on aura :*</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Complexe::Complexe(float x, float y)
-{
-  re = x;
-  im = y;
-}
-
-Complexe::Complexe()
-{
-  re = 0.0;
-  im = 0.0;
-}
-
-void Complexe::Lis()
-{
-  cout &lt;&lt; "Partie réelle ?";
-  cin >> re;
-  cout &lt;&lt; "Partie imaginaire ? ";
-  cin >> im;
-}
-
-void Complexe::Affiche()
-{
-  cout &lt;&lt; re &lt;&lt; "+ i"&lt;&lt; im;
-}
-
-Complexe Complexe::operator+(Complexe g)
-{
-  return Complexe(re + g.re, im + g.im);
-}
-</code></pre>
-<p>Enfin dans le fichier test.cpp on aura :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">void main()
-{
-  Complexe x1(0.0, 1.0);
-  Complexe x2;
-
-  x1.Affiche();
-  cout&lt;&lt;"\nEntrer un nombre complexe : ";
-  x2.Lis();
-  cout&lt;&lt;"\nVous avez rentré : ";
-  x2.Affiche();
-
-  Complexe x3=x1+x2;
-}
-</code></pre>
+<h4>Conclusion</h4>
+<p>Pendant ce MON j'ai pu découvrir ce nouveau langage qui m'est désormais bien moins inconnu. J'ai pu le pratiquer à l'aide de CodeSignal sur des algorithmes plutôt simple. J'ai appris comment l'utiliser en orientation objet avec un exemple du cours que j'ai consulté (voir dans les ressources). En 10h il est compliqué de maîtriser un nouveau langage mais le but ici était de le découvvrir et d'en comprendre les bases.</p>
 
 
 </article>
