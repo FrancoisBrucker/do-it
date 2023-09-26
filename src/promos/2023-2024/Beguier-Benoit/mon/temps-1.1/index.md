@@ -17,9 +17,11 @@ résumé: "Initiation au langage R et application dans l'analyse et la visualisa
 ---
 
 {% prerequis %}
+
 **Niveau :** débutant
 **Prérequis :**
 - Bases de programmation
+
 {% endprerequis %}
 
 ## Sommaire
