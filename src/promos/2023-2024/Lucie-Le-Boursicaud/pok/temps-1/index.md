@@ -12,6 +12,10 @@ tags:
 
 résumé: Ce POK a pour but d'utiliser un site de création d'application No Code que je ne connais pas pour créer une application qui permettra à des utilisateurs de visualiser des recettes et d'en publier.
 ---
+{%prerequis 'Niveau débutant'%} 
+Aucun prérequis !  
+{%endprerequis%}
+
 ## Sommaire
 
 1. Découverte d'Adalo
@@ -26,6 +30,8 @@ La première étape est évidemment de se créer un compte sur Adalo. Ensuite il
 
 ## 2.Idée de l'application
 J'ai décidé de réaliser une application de partage de recettes: <strong>Lucette | Recipes & Co</strong> afin de pouvoir garder en mémoire mes recettes et les partager à d'autres utilisateurs. 
+
+[Lien vers l'application](https://lucie-le-boursicauds-team.adalo.com/les-recettes-de-lulu?_gl=1%2A19rdhxq%2A_ga%2AMTQyNTAyOTgxNC4xNjk1MDM4NjQ2%2A_ga_SWT45DV35L%2AMTY5NTQ5NTc1My4xMi4wLjE2OTU0OTU3NTMuNjAuMC4w&target=3hni4na11m72olt1r9567f5qe&params=%7B%7D)
 
 ##### Fonctionalités nécessaires
 Afin de me donner des objectifs de réalisations voici la liste des fonctionalités qui devront être mise en place obligatoirement à la fin des 20h de projet :

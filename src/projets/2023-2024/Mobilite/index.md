@@ -13,14 +13,14 @@ Le but du projet est de réaliser une carte interactive afin de regrouper les di
 
 ## Design du site web
 
-### déposer sa mobilité
+### Déposer sa mobilité
 
 L'étudiant remplit un formulaire :
 
 - Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
-- Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images.
+- Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.
 
-#### plusieurs méthodes possibles
+#### Plusieurs méthodes possibles
 
 ```
 Un formulaire sur une page annexe
@@ -140,5 +140,5 @@ Les phases pour faire le MVP (minimum viable product)
 Les intérêts
 
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
-- Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas
+- Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
 ```

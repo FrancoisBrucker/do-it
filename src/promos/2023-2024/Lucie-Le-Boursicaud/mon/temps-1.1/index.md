@@ -13,17 +13,24 @@ tags:
 résumé: "Dans ce MON l'objectif est de découvrir un nouveau langage informatique dans lequel je n'ai aucune base. A la fin des 10h de cours j'espère savoir coder de petits algorithmes simples en C++."
 ---
 
+{%prerequis 'Niveau débutant'%} 
+Prérequis : Savoir ce qu'est un langage orienté objet. 
+{%endprerequis%}
+
 ## Sommaire
 
 1. Présentation du langage
 2. Syntaxe du C++
 3. Premiers algorithmes
+4. Orientation objet
 
 ## 1.Présentation du langage
 Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA. 
 
-##### Documents utilisés
+##### Documents et outils utilisés
 [La programmation en C++](http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf)
+[La programmation objet en C++](http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop2.pdf)
+[Exercices de programmation sur CodeSignal](https://app.codesignal.com/)
 
 
 ## 2. Syntaxe du C++
@@ -123,7 +130,21 @@ double resultat = Moyenne(n,m);
 Alors la variable *resultat* récupérera la valeur de la moyenne de 3 et 4 soit 3.5.
 
 ##### Les différentes instructions
+Comme d'autres langages on retrouve les instructions de bases *if*, *while*, *do*, *for*, et aussi *switch* qui permet de dissocier différents cas pour lequels on ne veut pas lancer la même instruction.
 
+##### Compléments
+Il existe des expressions particulière en C++. 
+  + L'expression virgule 
+Elle s'utilise de la forme suivante : *expression 1* , *expression 2*.
+D'abord, l'*expression 1* est évaluée mais sa valeur n'est pas gardée en mémoire.
+Ensuite l'*expression 2* est évaluée et donne sa valeur est l'*expression 1*.
+Cette utilisation est utile dans le cas où l'*expression 1* a un effet de bord.
+
+  + L'expression conditionnelle
+Elle s'utilise de la forme suivante : *expression 1* ? *expression 2* : *expression 3*.
+D'abord l'*expression 1* est évaluée. Ensuite, si elle est non nulle, l'*expression 2* est évaluée et donne sa valeur à l'expression conditionnelle. Sinon, l'*expression 3* est évaluée et donne sa valeur à l'expression conditionnelle. 
+
+Plusieurs fonctions utiles sont aussi à connaitre telles que : *floor*, *fabs*, *sqrt*, *pow* ainsi que les fonctions trigo.
 
 ## 3.Premiers algorithmes
 Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage. 
@@ -164,3 +185,123 @@ int main()
     return max;
 }
 ```
+
+#### Entrainement sur CodeSignal
+Suite à cela j'ai repris le mode arcade de CodeSignal depuis le début mais en codant en C++ cette fois-ci. CodeSignal est une plateforme qui permet d'évaluer ses compétences en développement. Elle propose une variété de défis de programmations qui peuvent résolu en utilisant le langage de son choix.
+
+
+## 4. Orientation Objet
+#### Définitions
+En informatique un objet est défini comme ce qui suit : 
+*"Un objet est une structure informatique regroupant :* 
+*- des variables, caractérisant l'état de l'objet,*
+*- des fonctions, caractérisant le comportement de l'objet."*
+
+Tout objet appartient à une classe, on dira que l'objet est une *instance* de cette classe.
+Ainsi avant de décrire un objet il est important de décrire la classe à laquelle il appartienne. 
+
+#### Stratégie D.D.U 
+Lorsque l'on souhaite programmer une classe, on passe par trois phases :
++ Déclaration
++ Définition
++ Utilisation
+
+##### Déclaration 
+Cette partie se traite dans un fichier .h qui se présente sous cette forme :
+```html
+class Classe
+{
+  public : 
+    *déclaration*
+  private :
+    *déclaration*
+}
+```
+
+##### Définition
+Cette partie se traite dans un fichier .cpp qui contient les définitions des fonctions de la classe.
+
+##### Utilisation
+Cette partie se traite aussi dans un fichier .cpp dans lequel on pourra utilisé notre classe.
+
+Ainsi pour chaque classe on aura un fichier .h avec sa déclaration et un fichier .cpp contenant sa définition.
+
+<div><img src="schema objet.png"></div>
+<p>Schema récapitulatif</p>
+
+#### Comment créé un programme ? 
+On procéde en trois étape : 
++ Créer les fichiers sources en .h et .cpp.
++ Compiler les fichieres .cpp ce qui crée deux fichiers objets.
++ Editer les liens entre les fichiers objets pour obtenir un fichier exécutable en .exe.
+  
+Pour ce faire, sur Microsoft, il suffit de créer les fichiers sources, de les ajouter dans un projet et de lancer la commande <strong>build</strong>. Les phase 2 et 3 se feront alors automatiquement.
+
+Exemple : 
+Nous allons créer la classe *Complexe*
+
+Dans le fichier complexe.h on aura :*
+```html
+class Complexe
+{
+  public : 
+    Complexe(float x, float y);
+    Complexe();
+    void Lis();
+    void Affiche();
+    Complexe operator+(Complexe g);
+  private :
+    float re, im;
+}
+```
+Dans le fichier complexe.cpp on aura :*
+```html
+Complexe::Complexe(float x, float y)
+{
+  re = x;
+  im = y;
+}
+
+Complexe::Complexe()
+{
+  re = 0.0;
+  im = 0.0;
+}
+
+void Complexe::Lis()
+{
+  cout << "Partie réelle ?";
+  cin >> re;
+  cout << "Partie imaginaire ? ";
+  cin >> im;
+}
+
+void Complexe::Affiche()
+{
+  cout << re << "+ i"<< im;
+}
+
+Complexe Complexe::operator+(Complexe g)
+{
+  return Complexe(re + g.re, im + g.im);
+}
+```
+
+Enfin dans le fichier test.cpp on aura : 
+```html
+void main()
+{
+  Complexe x1(0.0, 1.0);
+  Complexe x2;
+
+  x1.Affiche();
+  cout<<"\nEntrer un nombre complexe : ";
+  x2.Lis();
+  cout<<"\nVous avez rentré : ";
+  x2.Affiche();
+
+  Complexe x3=x1+x2;
+}
+```
+
+

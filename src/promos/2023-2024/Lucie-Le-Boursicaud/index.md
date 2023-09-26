@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Mobilite](../../../projets/2023-2024/Mobilite)
