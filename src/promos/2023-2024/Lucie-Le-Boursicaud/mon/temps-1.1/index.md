@@ -9,6 +9,9 @@ date: 1970-09-01
 
 tags: 
   - "temps 1"
+  - "Informatique"
+  - "Langage C++"
+  - "Apprentissage d'un langage"
 
 résumé: "Dans ce MON l'objectif est de découvrir un nouveau langage informatique dans lequel je n'ai aucune base. A la fin des 10h de cours j'espère savoir coder de petits algorithmes simples en C++."
 ---
@@ -25,7 +28,7 @@ Prérequis : Savoir ce qu'est un langage orienté objet.
 4. Orientation objet
 
 ## 1.Présentation du langage
-Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA. 
+Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un langage très utilisés et indispensable pour certains programmeur. Son grand atout est sa fonctionalité de classe permettant d'utiliser la programmation object comme en JAVA. Sa rapidité, sa puissance ainsi que sa très bonne gestion de la mémoire font de lui un langage incontournable. Nous allons découvrir ensemble les bases de ce langage.
 
 ##### Documents et outils utilisés
 [La programmation en C++](http://math.univ-lyon1.fr/~omarguin/programmation/C++Polycop1.pdf)
@@ -36,14 +39,14 @@ Le langage C++ est apparu dans les années 90 et il est aujourd'hui devenu un la
 ## 2. Syntaxe du C++
 #### Type de variable 
 Comme d'autres langages le C++ possède plusieurs type de variables :  
-+ vide : void  - aucune voriable ne peut être de ce type
-+ enter : char - petit entier de -128 à 127 
-          short - grand entier de -32768  à 32767
-          long - très grand entier 
-          int - coïncide avec short ou long en fonction de l'initiation 
-+ réels : float - précision de 7 chiffres
-          double - précision de 15 chiffres 
-          long double - précision de 18 chiffres
++ vide : *void*  - aucune voriable ne peut être de ce type on verra son utilité plus tard
++ entier : *char* - petit entier de -128 à 127 
+          *short* - grand entier de -32768  à 32767
+          *long* - très grand entier 
+          *int* - coïncide avec short ou long en fonction de l'initialisation 
++ réels : *float* - précision de 7 chiffres
+          *double* - précision de 15 chiffres 
+          *long double* - précision de 18 chiffres
 
 Parfois on pourra rencontré le type ***unsigned*** , il s'agit d'un entier dit "non signé".
 
@@ -103,7 +106,7 @@ double Distance(double x1, double y1, double x2, double y2);
 char Concatenation(char mot1, char mot2);
 void AfficherUnNombreXFois(int nombre, int x);
 ```
-On voit ici l'utilité de *void* rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.
+On voit ici l'utilité de <strong>*void*</strong> rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.
 
 ##### Définir une fonction
 Pour déclarer une fonction voici la syntaxe : 
@@ -115,7 +118,7 @@ type nom_de_la_fonction(tous_les_paramètres)
 Exemples :
 ```html
 double Moyenne(double x, double y){
-  reurn (x + y) / 2.0
+  return (x + y) / 2.0
 }
 ```
 Lorsque l'on utilise *return* cela interrompt l'exécution de la fonction.
@@ -145,6 +148,48 @@ Elle s'utilise de la forme suivante : *expression 1* ? *expression 2* : *express
 D'abord l'*expression 1* est évaluée. Ensuite, si elle est non nulle, l'*expression 2* est évaluée et donne sa valeur à l'expression conditionnelle. Sinon, l'*expression 3* est évaluée et donne sa valeur à l'expression conditionnelle. 
 
 Plusieurs fonctions utiles sont aussi à connaitre telles que : *floor*, *fabs*, *sqrt*, *pow* ainsi que les fonctions trigo.
+
+
++ Les énumérations
+Les énumérations sont des listes de noms représentant les valeurs entières successives 0,1,2,...
+On peut l'a défini de la façon suivante : <strong>enum</strong> *nom* { *liste_de_noms* }
+Exemple :
+```html
+enum Chiffres { un, deux, trois, quatre, cinq, six, sept, huit, neuf}
+enum Peinture { huile, gouache, acrylique, aquarelle}
+```
+Alors on obtiendra la déclaration implicite des constantes entières : 
+```html
+const int huile=0;
+const int gouache=1;
+const int acrylique=2;
+...
+```
+Et attribue à ces constantes un type appelé Peinture.
+
++ Tableaux
+Un tableau est une collection indicée de variables de même type.
+On peut le définir de la façon suivante : *type* *nom* [*taille*] où 
+*type* est le type des éléments du tableau 
+*nom* est le nom du tableau
+*taille* est une constante entière égale au nmbre d'éléments du tableau.
+
+Exemples:
+```html
+int taille[2];       //tableau de deux entiers pour indiquer sa taille
+double tempsdouche[7];     //tableau de 7 réels pour indiquer le nombre de minutes passées sous la douche
+Peinture collection[10];    //tableau de 10 peintures
+```
+> Soit i une expression entière, on note Peinture[i] l'élement d'indice i du tableau *Peinture*.
+
++ Chaînes de caractères
+En C++, une chaine de caractères est en fait un tableau de caractères avec un caractère nul '\0' en fin de chaîne.
+Exemple :
+```html
+char couleur[8]; // on a 7 caractères utiles
+strcpy(couleur, "rouge")
+```
+Les chaines de caractères peuvent être affichées grâce aux habituels *cin* et *cout*. De nombreuses fonctions de bases utiles pour les chaines de caractères sont déjà pré-définies en C++.
 
 ## 3.Premiers algorithmes
 Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage. 
@@ -237,71 +282,7 @@ On procéde en trois étape :
   
 Pour ce faire, sur Microsoft, il suffit de créer les fichiers sources, de les ajouter dans un projet et de lancer la commande <strong>build</strong>. Les phase 2 et 3 se feront alors automatiquement.
 
-Exemple : 
-Nous allons créer la classe *Complexe*
-
-Dans le fichier complexe.h on aura :*
-```html
-class Complexe
-{
-  public : 
-    Complexe(float x, float y);
-    Complexe();
-    void Lis();
-    void Affiche();
-    Complexe operator+(Complexe g);
-  private :
-    float re, im;
-}
-```
-Dans le fichier complexe.cpp on aura :*
-```html
-Complexe::Complexe(float x, float y)
-{
-  re = x;
-  im = y;
-}
-
-Complexe::Complexe()
-{
-  re = 0.0;
-  im = 0.0;
-}
-
-void Complexe::Lis()
-{
-  cout << "Partie réelle ?";
-  cin >> re;
-  cout << "Partie imaginaire ? ";
-  cin >> im;
-}
-
-void Complexe::Affiche()
-{
-  cout << re << "+ i"<< im;
-}
-
-Complexe Complexe::operator+(Complexe g)
-{
-  return Complexe(re + g.re, im + g.im);
-}
-```
-
-Enfin dans le fichier test.cpp on aura : 
-```html
-void main()
-{
-  Complexe x1(0.0, 1.0);
-  Complexe x2;
-
-  x1.Affiche();
-  cout<<"\nEntrer un nombre complexe : ";
-  x2.Lis();
-  cout<<"\nVous avez rentré : ";
-  x2.Affiche();
-
-  Complexe x3=x1+x2;
-}
-```
+#### Conclusion
+Pendant ce MON j'ai pu découvrir ce nouveau langage qui m'est désormais bien moins inconnu. J'ai pu le pratiquer à l'aide de CodeSignal sur des algorithmes plutôt simple. J'ai appris comment l'utiliser en orientation objet avec un exemple du cours que j'ai consulté (voir dans les ressources). En 10h il est compliqué de maîtriser un nouveau langage mais le but ici était de le découvvrir et d'en comprendre les bases.
 
 
