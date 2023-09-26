@@ -13,7 +13,7 @@ authors:
 
 ## Description du projet
 Jeu du killer classique, chaque participant reçoivent une action et un cible explicite.
-
+Jeu du killer classique, chaque participant reçoivent une action et un cible explicite.
 
 
 ## Objectif à atteindre
