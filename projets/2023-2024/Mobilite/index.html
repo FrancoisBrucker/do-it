@@ -110,16 +110,17 @@
 <h2>Introduction - définition du projet</h2>
 <p>Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.</p>
 <h2>Design du site web</h2>
-<h3>déposer sa mobilité</h3>
+<h3>Déposer sa mobilité</h3>
 <p>L'étudiant remplit un formulaire :</p>
 <ul>
 <li>Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.</li>
-<li>Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images.</li>
+<li>Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.</li>
 </ul>
-<h4>plusieurs méthodes possibles</h4>
+<h4>Plusieurs méthodes possibles</h4>
 <pre><code>Un formulaire sur une page annexe
 
-L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
+L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site  
+et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
 
 Cette méthode requiert :
 
@@ -205,17 +206,109 @@ L'idée est de générer une map cliquable afin de sélectionner la région qui 
 <li>Bouton pour déposer le rapport de mobilité (vidéo/pdf)</li>
 <li>Bouton pour envoyer la mobilité pour validation</li>
 </ul>
-<h2>Ressource utilisé</h2>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom</td>
+<td><em>Sacha</em></td>
+</tr>
+<tr>
+<td>Prénom</td>
+<td><em>Ketchum</em></td>
+</tr>
+<tr>
+<td>e-mail élève</td>
+<td><em>Sacha.Ketchum@pokémon</em></td>
+</tr>
+<tr>
+<td>Bio de l'élève</td>
+<td><em>Un jour je serai le meilleur dresseur</em></td>
+</tr>
+<tr>
+<td>Année de mobilité</td>
+<td><em>2023</em></td>
+</tr>
+<tr>
+<td>Durée</td>
+<td><em>6 mois</em></td>
+</tr>
+<tr>
+<td>Type de mobilité</td>
+<td><em>SMA/SSE/Césure</em></td>
+</tr>
+<tr>
+<td>Pays</td>
+<td><em>Espagne</em></td>
+</tr>
+<tr>
+<td>Ville</td>
+<td><em>Barcelone</em></td>
+</tr>
+<tr>
+<td>Description rapide de la mobilité</td>
+<td><em>Un SMA pour apprendre l'électronique de pikachu</em></td>
+</tr>
+<tr>
+<td>Contact mission</td>
+<td><em>Pierre</em></td>
+</tr>
+<tr>
+<td>Budget</td>
+<td><em>500-1000€</em></td>
+</tr>
+</tbody>
+</table>
+<h2>Ressources utilisées</h2>
+<h3>Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application</h3>
+<pre><code>Les intérêts
+
+- Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?
+- Est-ce que vous souhaitez être contacté ?
+- Acceptez vous que vos informations soient visible ?
+- Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?
+</code></pre>
+<h3>Questionnaire pour recueillir l'avis de l'administration Centralienne</h3>
+<pre><code>Les intérêts
+
+- Le but est de s'assurer de l'intérêt pour l'administration.
+- Concevoir quelque chose de facile d'utilisation.
+- Avec des questions pour les étudiants qui correspondent aux attentes de l'administration.
+- Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?
+- Établir les attendus d'un point de vue sécurités de la donnée :  
+serveur de Centrale ? système de login ?
+- Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?
+- Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est  
+pas déjà dans la liste)
+- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minnimum/  
+Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
+</code></pre>
+<h3>La réalisation d'une maquette CANVA</h3>
+<pre><code>Les intérêts
+
+- Réfléchir aux différentes fonctionnalités pour rendre l'application viable
+- Établir les différents boutons à implémenter
+- Établir l'esthétisme du site
+- Modéliser les différentes interfaces : utilisateur/élève  
+déposant sa mobilité/administrateur de l'école
+</code></pre>
 <h3>La réalisation d'un MVP (minimum viable project)</h3>
 <pre><code>Les intérêts
 
 - tester la faisabilité d'un projet rapidement.
-- Avoir une première application à éprouver pour trouver les limites du projet et cadrer proprement les outils à développer.
+- Avoir une première application à éprouver pour trouver les limites du projet  
+et cadrer proprement les outils à développer.
 </code></pre>
 <pre><code>Les phases pour faire le MVP (minimum viable product)
 
-1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration les fonctionnalités qui les intéresse.
-2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/ )
+1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
+les fonctionnalités qui les intéresse.
+2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )
 3. Tests des parcours utilisateurs (résolution et dev bug).
 4. Préparation du pitch et de la démonstration.
 </code></pre>
@@ -223,7 +316,7 @@ L'idée est de générer une map cliquable afin de sélectionner la région qui 
 <pre><code>Les intérêts
 
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
-- Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas
+- Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
 </code></pre>
 
 
