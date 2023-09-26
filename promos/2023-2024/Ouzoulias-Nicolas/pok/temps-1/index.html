@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du POK du temps 1</title>
+        <title>Découverte du développement Web</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du POK du temps 1</h1>
+<h1 class="mb-1">Découverte du développement Web</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un POK traitant d'un sujet.
+                Le premier POK de l'année pour apprendre à programmer un petit site Web.
 
         </p>
 
@@ -118,13 +118,60 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/">Nicolas OUZOULIAS</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/pok/">POK de Nicolas Ouzoulias</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/pok/temps-1/">Titre du POK du temps 1</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/">Nicolas OUZOULIAS</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/pok/">POK de Nicolas Ouzoulias</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/pok/temps-1/">Découverte du développement Web</a>
 
 </div></div>
 
 
 
 
+<p>Je n'ai jamais pratiqué le developpement Web je cherche donc à travers ce POK à :</p>
+<ul>
+<li>Apprendre les bases du HTML</li>
+<li>Apprendre les base du CSS</li>
+<li>Les mettre en pratique en codant mon premier site</li>
+</ul>
+<h2>Sommaire</h2>
+<p>I. Le développement Web pour les nuls</p>
+<p>II.</p>
+<h2>I. Le développement Web pour les nuls</h2>
+<p>Tout d'abord pourquoi deux langages séparés et pas un seul ?<br>
+Les deux fonctionnent de paire, le HTML permet de créer et de structurer le contenu tandis que le CSS s'occupe de la mise en forme visuelle.</p>
+<p>Le développement Web est divisé en 2 parties :</p>
+<ul>
+<li>Le <strong>front</strong> : c'est la partie apparente du site (l'interface, les boutons, les menus, ...), c'est le lien direct avec l'utilisateur</li>
+<li>Le <strong>back</strong> : c'est les composantes cachées du site (les bases de données, les serveurs, l'infrastructure,...)</li>
+</ul>
+<h3>Le HTML</h3>
+<p><strong>Exemple de code HTML</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>  <span class="token comment">&lt;!--Indispensable en début de code car indique qu'il s'agit d'une page HTML--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token comment">&lt;!--Pour afficher les caractères spéciaux--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span> Ceci est un titre <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Le corps du site --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!-- Balise orpheline --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Il existe ensuite de multiples balises pour organiser le texte et insérer des éléments comme par exemple :</p>
+<ul>
+<li><code>&lt;p&gt;</code> pour les paragraphes</li>
+<li><code>&lt;br&gt;</code> pour les sauts de ligne</li>
+<li><code>&lt;h1&gt; &lt;/h1&gt;</code> jusqu'à 6 pour les niveaux de titres</li>
+<li><code>&lt;img&gt;</code> pour insérer une image</li>
+</ul>
+<h3>Le CSS</h3>
+<p>Le CSS étant un complément au HTML, il faut demander à ce dernier de l'appeler, pour cela on rentre la commande :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!-- Cela doit obligatoirement dans &lt;head> --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+</code></pre>
 
 
 </article>
