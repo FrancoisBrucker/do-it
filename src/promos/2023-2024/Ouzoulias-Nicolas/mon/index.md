@@ -8,7 +8,7 @@ authors:
 
 Ensemble des MON réalisés par Nicolas Ouzoulias.
 
-* [MON 1 : Petite initiation au Java](./temps-1.1)
+* [MON 1 : Petite initiation au Java et à la Programmation Orientée Objet](./temps-1.1)
 * [MON 1.2](./temps-1.2)
 * [MON 2.1](./temps-2.1)
 * [MON 2.2](./temps-2.2)

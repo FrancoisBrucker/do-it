@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Nicolas Ouzoulias.
 
-* [POK 1](./temps-1)
+* [Découverte du développement Web](./temps-1)
 * [POK 2](./temps-2)
 * [POK 3](./temps-3)
