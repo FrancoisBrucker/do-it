@@ -8,7 +8,6 @@ authors:
 date: 2023-09-18
 
 tags: 
-  - "temps 1"
   - "cyber"
   - "pentest"
   - "security"
