@@ -13,7 +13,7 @@ tags:
   - CSS
   - Bootstrap
 
-résumé: "Revu des bases de l'HTML et du css, puis initiation au javascript (React ?)."
+résumé: "Revu des bases de l'HTML et du css, puis initiation à Bootstrap."
 ---
 
 {%prerequis 'MON débutant'%} 
