@@ -2,7 +2,7 @@
 layout: layout/mon.njk
 
 title: "HTML5 et CSS"
-author:
+authors:
   - Vladimir Jeantroux
 
 date: 2023-09-18
