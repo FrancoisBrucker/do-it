@@ -73,11 +73,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CSS</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON pour apprendre les bases du Web Front.
+                Ce MON a pour objectifs de découvrir les bases des langages HTML et CSS afin d'être capable de coder des sites web simples.
 
         </p>
 
@@ -125,6 +133,88 @@
 
 
 
+<h2>1. Introduction</h2>
+<p>Le front-end, ou développement web frontal, correspond à la partie visible et accessible d'un site web. En opposition, le back-end est la partie invisible mais qui permet de réaliser des actions.<br>
+Ce MON va présenter deux langages classiques du front-end que sont <strong>HTML</strong> et <strong>CSS</strong>. Il en existe d'autres, notamment JavaScript.</p>
+<p>Ces deux langages sont complémentaires, et permettent déjà de nombreuses fonctionnalités pour coder un site lorsque l'on est débutant. Pour aller plus loin notamment dans certains aspects de mise en page, il faudra utiliser des langages plus poussés.</p>
+<p><strong>HTML</strong> sert à écrire le contenu du site : texte, images, liens, logo, et tout ce qui sera visible sur les différentes pages. Avec <strong>CSS</strong>, on met en forme ce contenu, on agence les éléments, on y ajoute de la couleur, on joue avec les fonds,  les polices, les tailles ou encore les espacements.</p>
+<p>Chacune des deux parties suivantes introduira un de ces langages, que j'ai découvert en suivant le cours <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">Créez votre site web avec HTML5 et CSS3</a> sur OpenClassrooms. Ensuite, un exemple de site simple créé grâce aux bases vues dans ce cours sera présenté.</p>
+<h2>2. Les bases du langage HTML</h2>
+<p>Le langage <strong>HTML</strong> fonctionne avec un principe de balises, notées entre chevrons, qui structurent la page et définissent le type de chaque élément.</p>
+<p>En général, une page s'articule comme suit :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Accueil - Robbie Lens Photographie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!-- contenu de l'en-tête--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!--contenu principal de la page--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!--contenu du pied de page--></span>    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Dans chacune des parties de la page, le contenu est lui-même structuré par différentes balises qui délimitent les éléments, mettent en avant les titres, les liens, permettent d'insérer des images ou encore d'isoler des morceaux de texte dans le but de leur appliquer une mise en forme spécifique plus tard. Par exemple, &lt;p&gt; est un paragraphe, &lt;h1&gt; un titre &lt;a&gt; un lien et &lt;img&gt; une image.</p>
+<p>Les éléments à l'intérieur de la balise &lt;head&gt; ne sont pas visibles sur la page, ils sont la uniquement pour donner des informations sur celle-ci.</p>
+<p>Lorsque la page en <strong>HTML</strong> est terminée, le contenu s'affiche sans mise en forme, les éléments sont les uns en dessous des autres, noirs sur blancs et sans aucun style particulier. C'est pourquoi on utilise le <strong>CSS</strong>.</p>
+<h2>3. La mise en page avec CSS</h2>
+<p>Dans un premier temps, on créé un fichier en <strong>CSS</strong> que l'on appelle dans la partie &lt;head&gt; du fichier <strong>HTML</strong> à l'aide de cette commande :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nom_du_fichier.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+</code></pre>
+<p>Ensuite, on peut commencer à coder sur le fichier <strong>CSS</strong> le style que l'on veut appliquer au site web.</p>
+<p>La syntaxe <strong>CSS</strong> est différente de la syntaxe <strong>HTML</strong>. En <strong>CSS</strong>, on appelle un élément du code <strong>HTML</strong> par le nom donné dans sa balise (on utilise <em>class</em> pour attribuer des noms précis à des éléments), et on lui applique des propriétés précisées entre accolades. On peut par exemple modifier sa couleur, sa taille, le fond, les bordures...</p>
+<p>Voici un exemple de ce que cela peut donner :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Manrope'</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #1f2039<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 3.5em<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #a5b4fc<span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Montserrat'</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>En plus d'appliquer des caractéristiques à chaque élément de la page web, le <strong>CSS</strong> permet aussi d'agencer les éléments entre eux pour styliser la mise en page.</p>
+<p>Pour cela, on utilise <em>grid</em>. La page web est alors virtuellement découpée en une grille dont on décide le nombre de lignes et de colonnes ainsi que leurs tailles respectives. Ensuite, on peut placer chaque élément dans une case de cette grille, et ajouter des marges ou d'autres détails pour avoir un rendu plus esthétique.</p>
+<p>Voici pour illustrer un morceau de code qui crée deux grilles d'images en considérant que les images ont été importées au préalable dans le fichier <strong>HTML</strong> et séparées en deux <em>class</em> voyages et portraits :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.photos_voyages</span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr<span class="token punctuation">;</span>
+  <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 300px 300px 300px<span class="token punctuation">;</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.photos_portraits</span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr<span class="token punctuation">;</span>
+  <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 300px 300px<span class="token punctuation">;</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> 15px
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Les possibilités sont encore très nombreuses pour jouer avec le rendu visuel d'une page web grâce à <strong>CSS</strong>. J'ai vu durant ce MON plusieurs autres petites fonctionnalités qui permettent d'aller un peu plus loin, et j'espère continuer de m'améliorer dans l'utilisation de ce langage. Mais nous avons expliqué ici les principes de bases, qui je pense sont suffisants dans un premier temps pour démarrer en front-end.</p>
+<h2>4. Le résultat</h2>
+<p>Le cours OpenClassrooms que j'ai suivi alterne des parties théoriques et des parties pratiques. Durant ces parties pratiques, il faut réaliser le site web d'une photographe fictive en appliquant les connaissances acquises au fur et à mesure de l'avancée des chapitres.</p>
+<p>Voici le rendu obtenu :</p>
+<img src="accueil_site1.jpg">
+<img src="accueil_site2.jpg">
+<img src="a_propos.jpg">
+<img src="portfolio1.jpg">
+<img src="portfolio2.jpg">
+<img src="portfolio3.jpg">
+<p>Je laisse également dans le dossier de ce MON le code <strong>HTML</strong> de chaque page ainsi que la feuille de style du site en <strong>CSS</strong> pour de potentiels intéressés !</p>
 
 
 </article>
