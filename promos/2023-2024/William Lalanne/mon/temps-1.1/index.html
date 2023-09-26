@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du premier MON du temps 1</title>
+        <title>Mise en page avec CSS</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du premier MON du temps 1</h1>
+<h1 class="mb-1">Mise en page avec CSS</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-1.1/">Titre du premier MON du temps 1</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-1.1/">Mise en page avec CSS</a>
 
 </div></div>
 
@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Niveau :</strong> Moyen<br>
+<p><strong>Niveau :</strong> Facile<br>
 <strong>Prérequis :</strong> Bases en HTML et CSS</p>
 </div></div>
 <h2>Sommaire</h2>
@@ -139,6 +139,7 @@
 <li>Les Grid</li>
 <li>Les Flexbox</li>
 <li>Ajustement manuel de la position</li>
+<li>Conclusion</li>
 </ol>
 <h2>1. Introduction</h2>
 <p>Pour ce premier MON, je me suis servi de plusieurs ressources afin de tirer le meilleur de chaque document. Voici les sites que j'ai utilisé :</p>
@@ -146,7 +147,7 @@
 <li><a href="https://openclassrooms.com/fr/courses/5295881-create-web-page-layouts-with-css/5341491-set-media-queries-for-different-devices">Openclassroom</a></li>
 <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks Complete guide to Grid </a></li>
 <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Complete guide to Flexbox</a><br>
-Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les <em>Grid</em>, les <em>Flex-box</em> qui sont des éléments très importants.</li>
+Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièrement sur les <em>Grid</em>, les <em>Flex-box</em> qui sont des éléments très importantsp pour structurer une page web.</li>
 </ul>
 <h2>2. Les Grid</h2>
 <h3>Qu'est ce que c'est et à quoi ça sert ?</h3>
@@ -155,27 +156,35 @@ Le plus simple pour comprendre est de prendre un exemple :<br>
 <img src="exemple-grid.png" alt="Exemple de grid dans une page web"></p>
 <p>Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus.</p>
 <h3>Créé un tableau</h3>
-<p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :<br>
-<code>&lt;div class=&quot;container&quot;&gt;</code><br>
-      <code>&lt;div&gt;Premier élément&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;Deuxième élément&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;Troisième élément&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;Quatrième élément&lt;/div&gt;</code><br>
-<code>&lt;/div&gt;</code></p>
-<p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :<br>
-<code>.container {     display: grid; } </code><br>
-Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
+<p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Premier élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Deuxième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Troisième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Quatrième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
 <h3>Modifier les propriétés du tableau</h3>
 <p>Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau.<br>
 Examinons l'exemple suivant avec quelques propriétés du container :</p>
-<p><code>.container {</code><br>
-      <code>display: grid;</code><br>
-      <code>grid-template-columns: 500px 500px;</code><br>
-      <code>grid-template-rows: 100px 500px;</code><br>
-      <code>gap: 30px;</code><br>
-<code>}</code></p>
-<p>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.<br>
-Avec la propriété <em><strong>grid-template-roxs</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>`
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 500px 500px<span class="token punctuation">;</span>
+    <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 100px 500px<span class="token punctuation">;</span>
+    <span class="token property">gap</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.</li>
+<li>Avec la propriété <em><strong>grid-template-rows</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</li>
+<li>Avec la propriété <em><strong>gap</strong></em> on peut fixer l'espacement entre les différents éléments du tableau.</li>
+</ul>
 <p>On peut aussi parler de la propriété <em><strong>justify-content</strong></em>. Lorsque le container est plus grand que le tableau, cette propriété permet de contrôler l'alignement du tableau dans le container. Voyons ce que cela peut donner :</p>
 <ul>
 <li>justify-content: <strong>start</strong><br>
@@ -190,11 +199,12 @@ Le tableau se positionne au milieu du container.</li>
 </ul>
 <p>La propriété <em><strong>align-content</strong></em> permet de faire la même chose verticalement.</p>
 <p>D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément <code>&lt;div class=&quot;first&quot;&gt;Premier élément&lt;/div&gt;</code>:</p>
-<p><code>.first {</code><br>
-      <code>background-color: blueviolet;</code><br>
-      <code>justify-self: center;</code><br>
-      <code>align-self: center;</code><br>
-<code>}</code></p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.first</span> <span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> blueviolet<span class="token punctuation">;</span>
+   <span class="token property">justify-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+   <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>Ici on a trois propriétés, <em><strong>background-color</strong></em> permet de modifier la couleur de la cellule du tableau.<br>
 <em><strong>justify-self</strong></em> permet de centrer horizontalement l'élément dans la cellule tandis que <em><strong>align-self</strong></em> permet de centrer l'élément verticalement dans la cellule.</p>
 <p>Les tableaux sont donc un moyen simple permettant de gérer la mise en place de la page, on peut créer des colonnes, des lignes de la taille que l'on souhaite en y mettant les éléments voulus.</p>
@@ -208,22 +218,27 @@ Le tableau se positionne au milieu du container.</li>
 <img src="flex-exemple.png" alt="Exemple de mise en page avec une flexbox"></p>
 <h2>Créer une Flexbox</h2>
 <p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes :</p>
-<p><code>&lt;div class=&quot;container&quot;&gt;</code><br>
-      <code>&lt;div&gt;1&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;2&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;3&lt;/div&gt;</code><br>
-      <code>&lt;div&gt;4&lt;/div&gt;</code><br>
-<code>&lt;/div&gt;</code><br>
-On a un bien un container et des éléments à l'intérieur.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>On a un bien un container et des éléments à l'intérieur.</p>
 <p>Ensuite dans le fichier CSS, il faut spécifier que la div de class <em>container</em> est une Flexbox. Pour cela :</p>
-<p><code>.container {   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;display: flex; } </code><br>
-Cela ressemble beaucoup à ce qu'on a fait pour la Grid.<br>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cela ressemble beaucoup à ce qu'on a fait pour la Grid.<br>
 On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété <em><strong>flex-direction</strong></em>.</p>
-<p><code>.container {</code><br>
-      <code>display: flex;</code><br>
-      <code>flex-direction: column;</code><br>
-<code>}</code><br>
-On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox.<br>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox.<br>
 Si on souhaite en créer une en ligne il faudra écrire :<br>
 <em><strong>flex-direction: row;</strong></em>.</p>
 <p>Ensuite, les éléments à l'intérieur du container, comme <strong><code>&lt;div&gt;1&lt;/div&gt;</code></strong> ont eux aussi des propriétés. On peut par exemple parler de la propriété <em><strong>justify-content</strong></em>.<br>
@@ -237,15 +252,36 @@ Avec <em><strong>justify-content</strong></em> on peut préciser comment on souh
 <li>justify-content: <strong>center</strong> les éléments seront centrés par rapport à la largeur du container.<br>
 <img src="flexbox-center.png" alt="Exemple flexbox center"></li>
 </ul>
+<p>Il existe beaucoup d'autres propriétés qui peuvent être appliquées aux éléments de la Flexbox, mais je ne vais pas toutes les énumérer.</p>
 <h2>4. Ajustement manuel de la position d'un élément</h2>
 <p>Il est possible d'ajuster manuellement la position d'un élément sur la page, sans passer par des Grid ou des Flexbox. On utilise la propriété <em><strong>position</strong></em>.<br>
 Cette dernière peut prendre plusieurs valeurs :</p>
 <ul>
 <li>static</li>
 <li>relative</li>
-<li>absolute</li>
 <li>fixed</li>
 </ul>
+<h4>Static</h4>
+<p>Lorsqu'un élément possède la propriété <em><strong>position: static</strong></em> rien de particulier ne se passe, l'élément reste seulement là où il aurait du être.</p>
+<h4>Relative</h4>
+<p>Cette propriété permet d'attribuer un décalage de position à l'élément concernée relativement à la position qu'aurait du avoir l'élément. Par exemple le code suivant :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.item1</span> <span class="token punctuation">{</span>
+     <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+     <span class="token property">right</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+     <span class="token property">bottom</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Permet de passer de cette disposition :<br>
+<img src="position-static.png" alt="Exemple position static"></p>
+<p>A celle ci où il y a eu un décalage de 100 pixels vers la droite et de 30 pixels vers le haut :<br>
+<img src="position-relative1.png" alt="Exemple position relative"></p>
+<h4>Fixed</h4>
+<p>On peut parfois vouloir qu'une image ou un texte reste au même endroit sur la page même si l'on scrolle, c'est le cas notamment pour les pubs.<br>
+Pour faire cela, on donne à la propriété <em>position</em> l'attribut <em><strong>fixed</strong></em>.</p>
+<h3>Avantages et inconvénients</h3>
+<p>Grâce à la propriété <em>position</em> il est facile de placer un élément là où on le souhaite sans avoir à utiliser des outils comme les Grid ou les Flexbox qui peuvent paraître compliqués. L'inconvénient est que contrairement aux Grid et aux Flexbox, si l'on positionne un élément manuellement, il ne détecte pas la présence des autres éléments et il peut y avoir un chevauchement comme c'est le cas sur l'image illustrant la position relative.</p>
+<h2>5. Conclusion</h2>
+<p>Tout au long de ce MON, j'ai étudié les différents outils qui permettent de gérer la disposition d'une page web comme les Grid, les Flexbox et l'ajustement manuel de la position. Cela me permettra lors de mes différents projets de placer plus facilement les éléments là où je le souhaite.</p>
 
 
 </article>
