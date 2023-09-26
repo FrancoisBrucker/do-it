@@ -60,6 +60,8 @@ J'ai fait le choix d'utiliser Bubble.io pour construire ma plateforme. Après l'
 
 Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à créer les pages de base, l'accueil et la connexion/l'inscription, et la page contacts. Elles sont plus ou moins achevées. Il va falloir prendre en vitesse sur le deuxième sprint.
 
+![](index.jpg) ![](signin.jpg)
+
 ## Ce que j'ai prévu pour le second point POK (14h) :
 
 - Analyser la politique RSE des trois entreprises et les classer
