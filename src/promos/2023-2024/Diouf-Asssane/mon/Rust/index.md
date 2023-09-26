@@ -21,7 +21,7 @@ Il faut connaître :
 
 Pour faire mes débuts en Rust j'ai d'abord consulté le [site officiel](https://www.rust-lang.org/fr) du langage. On peut y trouver un livre (gratuit) pour apprendre le langage : [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/).
 
-J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : **Nom du livre**. Etant donné que le livre proposé par Rust est composé de plusieurs chapitres d'explication avec peu de pratique, il m'a permis de commencer à pratiquer en même temps que j'apprenais les concepts du langage.
+J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : **Hands-on Rust : Effective learning through 2D Game Development and Play** de Herbert Wolverson. Etant donné que le livre proposé par Rust est composé de plusieurs chapitres d'explication avec peu de pratique, il m'a permis de commencer à pratiquer en même temps que j'apprenais les concepts du langage.
 
 Cette vidéo Youtube est aussi une présentation (très) rapide à Rust : [Rust](https://www.youtube.com/watch?v=5C_HPTJg5ek)
 
