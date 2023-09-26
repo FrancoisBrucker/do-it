@@ -1,17 +1,17 @@
 ---
 layout: layout/fiche.njk
 
-title: "Arthur LOURADOU"
+title: "Arthur Louradou"
 authors:
     - "Arthur Louradou"
 ---
 
-Élève ingénieur à l'École centrale de Marseille.
+Élève ingénieur à l'École centrale de Marseille. 
 
 ## POK & MON
 
-* [POK](./pok)
-* [MON](./mon)
+* [Les POKs : La belle épok](./pok)
+* [Les MONs : Mon parcours d'autoformation](./mon)
 
 ## Projet
 
