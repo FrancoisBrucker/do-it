@@ -34,7 +34,7 @@ Depuis un certain temps maintenant, je travaille sur un projet de conception d'e
 
 Pour vous donner une idée plus claire de ce que je fait, voici un modèle 3D de mon premier objet.
 
-<img src="modele1.png">
+<img src="modele1.PNG">
 
 Je souhaite donc utiliser les **POK** pour developper le site web qui permettra de découvrir l'entreprise et acheter ses produits.
 
