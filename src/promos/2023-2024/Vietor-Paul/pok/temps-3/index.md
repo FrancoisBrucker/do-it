@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Titre du POK du temps 3"
 authors:
-  - Kawtar Bahri
+  - Gordon Zola
 
-date: 1971-01-01
+date: 1971-03-01
 
 tags: 
-  - "temps 2"
+  - "temps 3"
 
 résumé: Un POK traitant d'un sujet.
 ---
