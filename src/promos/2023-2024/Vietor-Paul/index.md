@@ -1,4 +1,4 @@
----
+﻿---
 layout: layout/fiche.njk
 
 title: "Paul VIETOR"
@@ -10,9 +10,9 @@ Bonjour !
 
 [Profil Github](https://github.com/paulvietor)
 
-[Clefs PGP publiques](https://github.com/paulvietor.gpg)
+[Clefs publiques PGP](https://github.com/paulvietor.gpg)
 
-[Clefs SSH publiques](https://github.com/paulvietor.keys)
+[Clefs publiques SSH](https://github.com/paulvietor.keys)
 
 ## POK & MON
 
