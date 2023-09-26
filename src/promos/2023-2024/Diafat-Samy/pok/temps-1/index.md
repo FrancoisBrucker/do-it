@@ -67,7 +67,7 @@ Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface
 
 ![Exemple flask](flask.jpg)
 ![Exemple homepage](homepage.jpg)
-![Exemple seerank](Seerank.jpg)
+![Exemple seerank](SeeRank.jpg)
 ![Exemple result](result.jpg)
 
 ## Ce que j'ai prévu pour le second point POK
