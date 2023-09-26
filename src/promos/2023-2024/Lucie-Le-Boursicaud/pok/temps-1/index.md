@@ -14,7 +14,7 @@ tags:
   - "Application"
   - "Développement"
 
-résumé: Ce POK a pour but d'utiliser un site de création d'application No Code "Adalo" pour créer une application qui permettra à des utilisateurs de visualiser des recettes de cuisine et d'en publier.
+résumé: Ce POK a pour but d'utiliser un site de création d'application No Code "Adalo" pour créer une application qui permettra à des utilisateurs de visualiser des recettes de cuisine ainsi que d'en publier.
 ---
 {%prerequis 'Niveau débutant'%} 
 Aucun prérequis !  

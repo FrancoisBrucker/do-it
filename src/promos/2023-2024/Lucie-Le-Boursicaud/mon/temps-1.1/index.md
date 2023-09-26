@@ -272,7 +272,6 @@ Cette partie se traite aussi dans un fichier .cpp dans lequel on pourra utilisé
 Ainsi pour chaque classe on aura un fichier .h avec sa déclaration et un fichier .cpp contenant sa définition.
 
 <div><img src="schema objet.png"></div>
-<p>Schema récapitulatif</p>
 
 #### Comment créé un programme ? 
 On procéde en trois étape : 
