@@ -15,9 +15,9 @@ Le but du projet est de réaliser une carte interactive afin de regrouper les di
 
 ### déposer sa mobilité
 
-L'étudiant rempli un formulaire :
+L'étudiant remplit un formulaire :
 
-- Des questions fermés : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
+- Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
 - Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images.
 
 #### plusieurs méthodes possibles
