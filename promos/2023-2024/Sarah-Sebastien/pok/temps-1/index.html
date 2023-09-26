@@ -73,11 +73,27 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Macro VBA</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Excel</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Diagramme de GANTT</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Gestion de projet</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +121,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ayant quelques bases en VBA, j'ai choisi pour ce POK de les approndir pour aboutir à l'obtention d'une diagramme de GANTT sur Excel qui sera paramétrable par l'utilisateur.
+                Ayant quelques bases en VBA, j'ai choisi pour ce POK de les approfondir pour aboutir à l'obtention d'une diagramme de GANTT sur Excel qui sera paramétrable par l'utilisateur.
 
         </p>
 
@@ -125,6 +141,69 @@
 
 
 
+<h2>Objectif de ce POK</h2>
+<p>L'objectif de ce POK est de créer un GANTT automatisé. Cette tâche est déjà réalisable sans utiliser VBA mais je trouvais intéressant d'en apprendre plus sur ce langage en automatisant le diagramme avec une macro.</p>
+<h2>Présentation de l'outil</h2>
+<p>L'utilisateur viendrait rentrer dans une feuille des données :</p>
+<ul>
+<li>nom du projet</li>
+<li>nom de la tâche</li>
+<li>type de tâche (tâche ou sous tâche)</li>
+<li>le responsable</li>
+<li>la date de début de la tâche</li>
+<li>la durée de la tache</li>
+</ul>
+<p>Il viendrait ensuite choisir le projet pour lequel il aimerait visualiser le GANTT et cliquerait simplement sur un bouton pour afficher le GANTT du projet sélectionné.</p>
+<h2>Fonctionnalités souhaitées</h2>
+<p>L'outil aura 2 onglets (1 pour remplir les données et l'autre pour visualiser le GANTT)</p>
+<ul>
+<li>onglet &quot;données&quot; avec un tableau contenant les informations sur les projets citées plus haut et un bouton &quot;mettre à jour les données&quot;</li>
+<li>onglet &quot;GANTT&quot; :
+<ul>
+<li>tableau GANTT sur lequel sont affichés tous les jours de l'année</li>
+<li>des colonnes &quot;tâche&quot;, &quot;responsable&quot;, &quot;date de début&quot;, &quot;date de fin&quot;, &quot;durée&quot;, &quot;avancement&quot;</li>
+<li>les cases du GANTT seront coloriées de couleurs différentes en fonction du responsable</li>
+<li>un affichage lisible de la date</li>
+<li>l'affichage du début du tableau au premier jour de la première tâche</li>
+<li>une case &quot;Nom de projet:&quot; avec un menu déroulant grâce auquel l'utilisateur peut choisir le projet dont il veut visualiser le gantt</li>
+</ul>
+</li>
+</ul>
+<h2>Point d'avancement au 1er sprint : Première version de la macro</h2>
+<h3>Onglet &quot;Données&quot;</h3>
+<img src="image_gantt.png"  ="">
+<p>On peut voir qu'il manque la notion de &quot;nom projet&quot; et de type de &quot;tâche&quot;.<br>
+<em>J'ai de plus remarquer qu'il fallait un bouton pour remettre à zéro le tableau de données (comme la macro va jusqu'à la dernière ligne remplie, &quot;effacer le contenu&quot; l'empêche de fonctionner si des lignes du tableau sont vides)</em></p>
+<h3>Onglet Gantt</h3>
+<h4><strong>Après appui sur &quot;Remplir GANTT&quot;</strong></h4>
+<img src="image_gantt_2.png"  ="">
+<p>Le remplissage du GANTT fonctionne mais manque encore de lisibilité au niveau des dates.<br>
+La macro ne lit pas les cases fusionnées, il faut donc qu'elles aient toutes du contenu pour pouvoir venir effectuer des tests dessus.</p>
+<h4><strong>Après appui sur &quot;Effacer&quot;</strong></h4>
+<img src="image_gantt_3.png"  ="">
+<h3>Les objectifs révisés pour le sprint 2</h3>
+<p>Voici donc ma liste de fonctionnalités revisitées (en barré les fonctionnalités abandonnées et en italique les nouvelles fonctionnalités souhaitées)</p>
+<ul>
+<li>[x] onglet &quot;données&quot; :
+<ul>
+<li>[x] un tableau contenant les informations sur les projets citées plus haut</li>
+<li>[ ] <em>ajout au tableau des informations manquantes</em></li>
+<li>[ ] bouton &quot;mettre à jour les données&quot;</li>
+<li>[ ] <em>bouton &quot;effacer le contenu&quot;</em></li>
+</ul>
+</li>
+<li>onglet &quot;GANTT&quot; :
+<ul>
+<li>[x] un tableau GANTT sur lequel sont affichés tous les jours de l'année</li>
+<li>[-] des colonnes &quot;tâche&quot;, &quot;responsable&quot;, &quot;date de début&quot;, &quot;date de fin&quot;, &quot;durée&quot;, &quot;avancement&quot;</li>
+<li>[ ] <s>les cases du GANTT seront coloriées de couleurs différentes en fonction du responsable</s></li>
+<li>[ ] <em>les cases du GANTT seront coloriées en fonction de leur typologie (tâche ou sous-tâche)</em></li>
+<li>[ ] un affichage lisible de la date</li>
+<li>[x] l'affichage du début du tableau au premier jour de la première tâche</li>
+<li>[ ] une case &quot;Nom de projet:&quot; avec un menu déroulant grâce auquel l'utilisateur peut choisir le projet dont il veut visualiser le gantt</li>
+</ul>
+</li>
+</ul>
 
 
 </article>

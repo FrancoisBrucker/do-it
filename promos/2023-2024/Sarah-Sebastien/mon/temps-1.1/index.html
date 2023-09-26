@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>MON 1.1. Comparaison de plusieurs ERP</title>
+        <title>MON 1.1. L&#39;ERP, du concept à son intégration en entreprise</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">MON 1.1. Comparaison de plusieurs ERP</h1>
+<h1 class="mb-1">MON 1.1. L&#39;ERP, du concept à son intégration en entreprise</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -71,13 +71,29 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">[object Object]</li>
+                
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Système d&#39;information</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">ERP</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">PGI</li>
                 
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -103,12 +119,6 @@
     
 </div>
 
-        <p class="mb-4 text-lg">
-
-                Ce MON permettra dans un premier temps de définir un ERP et de retracer son histoire. Puis dans un second temps, il offrira une comparaison de 3 ERP : SAP, Sage 300 et Oracle NetSuite.
-
-        </p>
-
 
 
     
@@ -118,13 +128,266 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/">Sarah Sebastien</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/mon/">MON de Sarah Sebastien</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/mon/temps-1.1/">MON 1.1. Comparaison de plusieurs ERP</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/">Sarah Sebastien</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/mon/">MON de Sarah Sebastien</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Sarah-Sebastien/mon/temps-1.1/">MON 1.1. L&#39;ERP, du concept à son intégration en entreprise</a>
 
 </div></div>
 
 
 
 
+<p>résumé: &quot;Ce MON permettra dans un premier temps de définir précisément un ERP et d'avoir un aperçu des solutions existantes. Puis dans un second temps, il offrira une approche de démarche de déploiement d'un projet ERP&quot;</p>
+<hr>
+<h2>Sommaire</h2>
+<ol>
+<li>Définition</li>
+<li>L'histoire des ERP</li>
+<li>Architecture et fonctionnement d'un ERP</li>
+<li>Différents types d'ERP</li>
+<li>Une démarche d'implémentation du progiciel dans l'entreprise</li>
+<li>Conclusion</li>
+</ol>
+<h2>1.Définition</h2>
+<p>Un <strong>ERP</strong> (Entreprise Ressource Planning) en anglais, ou <strong>PGI</strong> (Progiciel de Gestion Intégré) en français, est un système d’informations qui permet de <strong>gérer et fédérer l’ensemble des processus d’une entreprise</strong>. Un ERP est basé sur la construction des applications informatiques de l’entreprise (comptabilité, gestion de stocks,etc.) sous forme de <strong>modules indépendants</strong>. Ces modules partagent une <strong>base de données commune et unique</strong>, permettant la communication de données entre les applications.</p>
+<p>Un ERP a plusieurs caractéristiques :</p>
+<ul>
+<li><strong>Couverture fonctionnelle</strong> : doit couvrir au moins 3 fonctions de l’entreprise (souvent 5, si ce n’est toutes).</li>
+<li><strong>Base de données unique</strong> : une donnée est saisie une fois et peut être immédiatement disponible dans les autres modules de l’ERP</li>
+<li><strong>Adaptation et paramétrage étendu</strong> : un ERP doit être suffisamment flexible pour s’adapter au mode de fonctionnement d’une entreprise avec, par exemple, le paramétrage des postes de travail : autorisations d'accès, environnement de travail personnalisé (interface graphique), traçabilité des opération, etc…</li>
+<li><strong>Présence d’outils d’aide à la décision</strong> : le fait de disposer d’une BDD unique permet de faire toutes les requêtes possibles en SQL sans aucune ambiguïté. On peut donc définir une série de requêtes adaptées pour la prise de décision et des sorties sous formes de tableaux, diagrammes, etc...</li>
+</ul>
+<h2>2. L'histoire des ERP</h2>
+<h3>a. Avant les ERP</h3>
+<p>Avant les ERP, les applications d'entreprise étaient <strong>complètement indépendantess</strong> aussi bien sur le plan des programmes que sur celui des données. On avait donc une juxtaposition d'applicatifs communiquant difficilement<br>
+Ce qui provoquait:</p>
+<ul>
+<li><strong>la redondance des données</strong> (volumes de stockage importants)</li>
+<li><strong>des mises à jour non coordonnées</strong> (risques d'incohérence des données)</li>
+<li><strong>pas de standardisation des données</strong> (d'où des problèmes de compatibilité dans les transferts)</li>
+<li><strong>une dissémination des données</strong> (risques de pertes)</li>
+<li><strong>un cloisonnement des tâches</strong> (pertes de temps et d'efficacité)</li>
+</ul>
+<h3>b. De la naissance du concept</h3>
+<p>Les racines du concept proviennent des années 60 quand les fabricants ont créé un logiciel « de planification déterministe des besoins » (« Material Requirements Planning ou <strong>MRP</strong>). Cet outil avait pour but de calculer automatiquement la commande des composants selon des prévisions de ventes données. Au fil des années, d’autres fonctions support se sont ajoutées, comme la comptabilité, les RH et la distribution, amenant ainsi le cabinet d’analyse Gardener à inventer le terme en 1990.</p>
+<h3>c. Vers son évolution aujourd'hui</h3>
+<p>Aujourd’hui, les ERP gèrent une multitude de processus vitaux :</p>
+<table>
+<thead>
+<tr>
+<th>Fonctions</th>
+<th>Rôle de l'ERP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le suivi des commandes</td>
+<td><em>l'ERP permet une traçabilité des marchandises et assure l'exécution des commandes</em></td>
+</tr>
+<tr>
+<td>La gestion des ressources humaines</td>
+<td><em>l'ERP assure la gestion les salaires, la planification des équipes et les opérations liées aux employés</em></td>
+</tr>
+<tr>
+<td>La planification des ressources</td>
+<td><em>l'ERP gère la répartition des ressources (main-d’œuvre,matière première)</em></td>
+</tr>
+<tr>
+<td>La supervision de la production</td>
+<td><em>l’ERP synchronise la production, de la planification à l'exécution pour répondre à la demande</em></td>
+</tr>
+<tr>
+<td>La comptabilité et les finances</td>
+<td><em>l’ERP gère les transactions et génère des rapports financiers précis</em></td>
+</tr>
+<tr>
+<td>La gestion des ventes</td>
+<td><em>l'ERP permet un suivi du cycle de ventes et donc une vue complète des activités commerciales</em></td>
+</tr>
+</tbody>
+</table>
+<h2>3. Architecture et fonctionnement d'un ERP</h2>
+<h3>a. Architecture technique</h3>
+<img align="right" width="350" src="image_1.png"  ="">
+<p>Les ERP sont basés sur une architecture client/serveur : les différents postes informatiques accèdent à l’informations de loin et les transformations effectuées sont appliquées <strong>à toutes les fonctions</strong>. Les serveurs sont couplés à une <strong>base de données unique</strong>, où sont stockées toutes les données, et communiquent avec les clients.<br>
+De plus, les ERP sont <strong>compatibles au pack Office</strong>, en particulier pour PowerPoint et Excel. Le premier étant utile pour personnaliser les bureaux ERP en fonction de l'entreprise et le second pour effectuer les imports/exports de données. Les ERP sont aussi compatibles avec des outils de reporting (es CrystalReport), outils principalement utilisés pour le module de gestion relation client.</p>
+<h3>b. Une architecture dite &quot;modulaire&quot;</h3>
+<p>Un ERP est <strong>modulaire</strong> dans le sens où il est possible de n'avoir qu'une ou plusieurs applications pour une entreprise, et d'en ajouter quand elle veut. Les applications modulaires telles que les ERP permettent d'être sûr de la compatibilité des modules entre eux, ils s'imbriquent comme des blocs de Lego et fonctionnent ensemble (pas de vérification de compatibilité à effectuer).</p>
+<img src="image_2.png"  ="">
+<h2>4. Différents types d'ERP</h2>
+<h3>a. Open Source/Propriétaire</h3>
+<ul>
+<li>Les <strong>ERP propriétaires</strong> sont commercialisés par des sociétés spécialisées dans la conception et la mise en place de logiciels auprès des entreprises.</li>
+<li>Les <strong>ERP open source</strong> fonctionnent avec des licences, ie des formes de contrat par lequel une société :
+<ul>
+<li>donne l'autorisation à un client d'utiliser le PGI commercialisé,</li>
+<li>détermine les limites de l'utilisation du logiciel,</li>
+<li>liste les obligations et responsabilités du client et de la société.</li>
+</ul>
+</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><em><strong>A noter</strong></em></p>
+</div><div class="pl-8 mr-8">
+<p>La licence représente 15 % à 25 % de l'investissement total dans un projet ERP.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>A noter</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Aujourd'hui, ce sont principalement les ERP propriétaires qui dominent le marché des PGI.<br>
+On peut citer SAP, Oracle NetSuite, Microsoft Dynamics, par exemple, qui sont les 3 principaux ERP de nos jours.</p>
+</div></div>
+<h3>b. Généraliste/Spécialisé</h3>
+<ul>
+<li>PGI <strong>généraliste</strong>: sont flexibles et fonctionnent pour la grande majorité des entreprises. Ils sont adaptés à tout type d'activité</li>
+<li>PGI <strong>spécialisé</strong>: (ou “métier”) sont plus efficaces pour répondre à des besoins spécifiques de certains secteurs. (ex pour un PGI industriel, il permet : gestion des nomenclatures, calcul des niveaux, caractéristiques des matériaux, gestion des variantes ou encore traçabilité de la production.)</li>
+</ul>
+<h3>c. Typologie différentes en fonction de la taille de l'entreprise</h3>
+<p>Selon la taille d’une entreprise, ses attentes et son besoin concernant les fonctionnalités d’un ERP varient.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Les petites entreprises</strong></th>
+<th><strong>Les PME/ETI</strong></th>
+<th><strong>Les grandes entreprises</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l’ERP a pour but d’aider l’entreprise à dépasser le stade des feuilles de calcul et à gérer efficacement les différents aspects de son activité (vente, la relation client, opérations financières, l'exploitation). Les outils ERP pour petites entreprises se trouvent généralement sur le cloud. Ils sont <em>rapides à installer</em> et conçus pour <em>évoluer progressivement</em></td>
+<td>l’ERP pour une PME/ETI et ses possibles filiales offrent une analytique intégrée, un <em>déploiement rapide</em> pour des dizaines de processus différents (fonction Finance, RH, gestion de la Supply Chain et bien d'autres encore). Les systèmes ERP modulaires et basés sur le cloud sont également un choix populaire chez les PME/ETI aux processus complexes ou aux plans de croissance rapide</td>
+<td>les ERP pour les grandes entreprises à rayonnement mondial ont besoin d’inclure l'IA, le Machine Learning et l'analytique, ainsi qu'une automatisation intelligente pour transformer leurs modèles économiques et processus. Les systèmes ERP peuvent être déployés sur site, sur le cloud ou dans un scénario hybride. Ils peuvent s'intégrer à des bases de données existantes ou, idéalement, s'exécuter sur des bases de données <em>In-Memory</em> (Les données sont stockées directement dans la mémoire vive du système informatique plutôt que sur un disque) plus récentes et puissantes</td>
+</tr>
+</tbody>
+</table>
+<h3>d. Différents types de déploiements du progiciel</h3>
+<img src="image_3.png"  ="">
+<table>
+<thead>
+<tr>
+<th><strong>ERP cloud</strong></th>
+<th><strong>ERP sur site/&quot;on-premise&quot;</strong></th>
+<th><strong>ERP hybride/à deux niveaux</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On parle d'ERP sur site lorsque l'entreprise est propriétaire du centre de données. Le logiciel sur site peut être acheté moyennant des frais uniques ou une licence perpétuelle et il est ensuite installé localement sur les ordinateurs et serveurs d’une entreprise. C’est alors l’entreprise qui est responsable de l'hébergement, de la maintenance, des mises à jour du logiciel, et de la sécurité des données</td>
+<td>Ils sont hébergés dans des centres de données et la plateforme est gérée par des fournisseurs. L'accès aux systèmes ERP Cloud se fait par Internet, au lieu d'un ordinateur local ou d'un logiciel installé. Le fournisseur de logiciels s'occupe généralement de la maintenance régulière, des mises à jour et de la sécurité et utilisent généralement un modèle de tarification par abonnement pour les entreprises</td>
+<td>: Pour les entreprises qui souhaitent combiner les deux approches afin de répondre à leurs exigences de gestion, il existe un modèle d'ERP cloud hybride. Dans ce cas, une partie des applications et données ERP de l’entreprise se trouve dans le cloud et l'autre partie sur site</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Une démarche d'implémentation du progiciel dans l'entreprise</h2>
+<p>L’intégration d’un système ERP est une étape essentielle pour l’optimisation des opérations d’une entreprise. L’ERP doit avant tout contribuer à améliorer les performances de l’entreprise. Ainsi, la mise en place d’un ERP doit suivre une démarche structurée et méthodique.</p>
+<h3>a. Conception du projet ERP</h3>
+<h4>1. La prise en compte des modifications internes à l'entreprise</h4>
+<p>La mise en place d’un nouveau système de gestion informatisé entraîne des changements dans l’organisation du travail de tous les employés. C’est pourquoi, une redéfinition précise des rôles de chacun doit être pensée et anticipée en fonction des nouvelles exigences.</p>
+<p>Les étapes nécessaires à la bonne mise en place d’un ERP consistent à :</p>
+<ul>
+<li><strong>identifier et référencer l’ensemble des processus</strong>: cela permettra de mettre en lumière  certains  process pouvant s’avérer inadaptés avec les nouveaux enjeux ou objectifs d'une entreprise et lui permettre de choisir de les optimiser ou de les abandonner</li>
+<li><strong>communiquer sur les motivations de la direction à changer ou à intégrer un nouvel ERP</strong> et informer tout le personnel sur leur nouveau rôle</li>
+<li><strong>impliquer les collaborateurs dans le projet et ses différentes phases</strong>, de manière à coopérer avec eux pour éviter toute réticence face au changement puisque l’intégration ou le changement d’un ERP les amènera forcément à revoir leurs habitudes et méthodes de travail</li>
+</ul>
+<h4>2. Définition d'un cahier des charges</h4>
+<p>Au préalable, il est nécessaire de se poser les bonnes questions, et de rédiger <strong>un cahier des charges précis</strong> dans lequel les besoins de l’entreprise sont détaillés. Ces besoins sont hiérarchisés en fonction de leur degré d’importance.<br>
+L'entreprise doit alors se poser les questions suivantes:</p>
+<ul>
+<li>besoin externe(pression du marché, concurrence, clients) ou interne (évolution du SI, réorganisation, gain de productivité) ?</li>
+<li>contraintes spéciales?(environnement comme des ordinateurs spécifiques)</li>
+<li>envergure du projet ? (nombre d'utilisateurs finaux, budget envisagé pour le changement/implémentation d'ERP)</li>
+<li>constitution de l'équipe projet?</li>
+<li>architecture du SI actuel et les choix techniques envisagés?</li>
+</ul>
+<p>C’est une base de travail qui permettra aux intégrateurs(*) de vérifier l’adéquation de leurs solutions par rapport aux souhaits exprimés.</p>
+<h4>3. Sélection d'un progiciel et d'un éditeur(*)</h4>
+<p>Lors de ce choix, il est nécessaire de sélectionner des progiciels réellement adaptés aux moyens de l’entreprise (PME/petite entreprise/grande entreprise/multinationale/multi-activités, etc...) pour ne pas se retrouver avec des solutions trop complexes et inadaptées.</p>
+<p>Il faut également se poser des questions sur la <strong>typologie du progiciel</strong> recherchée (open source/propriétaire, ERP source/ERP sur site/ERP hybride, ou ERP généraliste/spécialisé)</p>
+<p>D’un point de vue technique, il est également important de tenir compte de la notoriété, et du nombre de licences déjà commercialisées de chaque éditeur (*), afin d’assurer la pérennité de la solution.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>A noter</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Il faut savoir que l’on garde en moyenne son ERP 8 à 10 ans. C’est un <strong>engagement à long terme</strong>.</p>
+</div></div>
+<h4>4. Sélection d'un intégrateur(*)</h4>
+<p>Comme il va permettre la mise en place de la solution, il est important de sélectionner l'intégrateur en regardant plusieurs critères :</p>
+<ul>
+<li>son <strong>organisation pour le déploiement du système</strong> (planning, réunions, contrôle de l’avancement, adaptabilité aux contraintes, délai de mise en place d’un ERP estimé)</li>
+<li>sa <strong>disponibilité</strong></li>
+<li>sa <strong>proximité géographique de l’entreprise</strong> (en terme notamment de réactivité et de coût)</li>
+<li>une bonne <strong>relation client-prestataire</strong> :les qualités relationnelles sont primordiales dans l’acceptation du projet en interne, et donc jouent un rôle important dans la réussite du projet</li>
+</ul>
+<h4>5. De l'obtention du devis vers le contrat</h4>
+<p>Une fois vérifiée l’adéquation de la solution choisie avec le budget prévu, l’établissement du devis peut avoir lieu. Lors de l’obtention d’un devis, il convient de l’analyser en portant son attention sur:</p>
+<ul>
+<li>l’aspect financier et des critères de qualité (réactivité, fonctionnalité, adaptabilité)</li>
+<li>la possibilité de <strong>surcoûts</strong> (coût de la hot line, coût des journées de prestations, fréquence de mises à jours et couts, etc..)</li>
+</ul>
+<p><em>Le contrat établi entre l’intégrateur et l’entreprise est la dernière étape avant le déploiement du système.</em></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>A noter</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Il faut garder à l'esprit que l'intégrateur n'a qu'une obligation de moyens et non de résultats.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Vocabulaire</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><strong>Les éditeurs</strong> : Ils réalisent les progiciels et assurent leur maintenance.</li>
+<li><strong>Les intégrateurs</strong> : Ils sont l’interface entre l’éditeur et l’entreprise. Ils forment les utilisateurs, procèdent au déploiement du progiciel et au développement de modules spécifiques.</li>
+<li><strong>Les experts conseil</strong> : Ils étudient les besoins de l’entreprise, recherchent les progiciels adaptés à la demande de celle-ci ainsi que les intégrateurs. Ils sont l’interface entre l’intégrateur et l’entreprise.</li>
+</ul>
+</div></div>
+<h3>b. Mise en place du projet ERP</h3>
+<h4>1. Le déploiement du progiciel</h4>
+<p>Son déploiement doit être en phase avec le système d’information existant. Ainsi, il faut en premier lieu <strong>mettre à jour l’infrastructure du SI</strong> et procéder à une <strong>migration des données dans la base unique de l’ERP</strong>.</p>
+<p>Une fois l'installation complète, il faut réaliser le paramétrage et les tests:</p>
+<ul>
+<li><strong>paramétrage</strong> de l'ERP par le personnel concerné par l'utilisation future de l'ERP</li>
+<li><strong>tests par l'équipe projet</strong> dédiée qui va récolter les <strong>retours d'expériences utilisateurs</strong> pour procéder par la suite à d'éventuelles modifications</li>
+</ul>
+<h4>2. Formation des collaborateurs</h4>
+<p>Former le personnel permettra une adhésion progressive au nouvel outil. Cette formation est réalisée par <strong>l'intégrateur</strong>, et pourra avoir lieu par le biais des utilisateurs finaux ou de référents.</p>
+<h2>6. Conclusion</h2>
+<p>Pour conclure, on peut dire qu'on assiste de plus en plus à une <strong>digitalisation des enterprises</strong> qui est devenue un enjeu majeur aujourd'hui pour qu'une entreprise reste performante. (développement du télétravail, migration vers le Cloud, etc..).<br>
+En choisissant de digitaliser ses processus métiers, l'entreprise a la possibilité de mettre en place un système dans lequel ses collaborateurs, ses machines et ses produits interagissent en temps réel. Le rôle d'un ERP devient alors fondamental.</p>
+<p>Par ailleurs, à l'ère de la <strong>transformation digitale</strong>, c'est devenu un enjeu pour les ERP actuels de fonctionner avec les nouvelles technologies intelligentes (IA, Machine Learning, bases de données In-Memory, etc). Ils permettent aux entreprises d'exécuter des processus encore plus efficaces et de rester compétitive dans un monde industriel en constante évolution.</p>
+<h2>Sources</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Sources</p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://fablain.developpez.com/tutoriel/presentation-generale-erp-sap/">https://fablain.developpez.com/tutoriel/presentation-generale-erp-sap/</a><br>
+<a href="http://www.entreprise-erp.com/">http://www.entreprise-erp.com/</a><br>
+<a href="http://www.guillaumeriviere.name/estia/si/pub/cours_ERP_PGI_2010.pdf">http://www.guillaumeriviere.name/estia/si/pub/cours_ERP_PGI_2010.pdf</a><br>
+<a href="https://www.sap.com/france/products/erp/what-is-erp.html#definition">https://www.sap.com/france/products/erp/what-is-erp.html#definition</a><br>
+<a href="http://www.guillaumeriviere.name/estia/si/pub/cours_ERP_PGI_2010.pdf">http://www.guillaumeriviere.name/estia/si/pub/cours_ERP_PGI_2010.pdf</a><br>
+<a href="https://fablain.developpez.com/tutoriel/presenterp/#LII-A">https://fablain.developpez.com/tutoriel/presenterp/#LII-A</a><br>
+<a href="https://archipelia.com/mise-en-place-erp/">https://archipelia.com/mise-en-place-erp/</a></p>
+</div></div>
 
 
 </article>
