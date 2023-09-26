@@ -56,7 +56,7 @@ Je n'ai pas d'affichage pour l'instant, cependant voici ma progression juqu'à p
 - Création des fichiers HTML de base
 - Test de mes méthodes existantes jusqu'à présent
 
-J'ai donc pu en arriver au point que je visais à la fin de ce POK !
+J'ai donc pu en arriver au point que je visais à la fin de ce premier point POK !
 
 ## Ce que j'ai prévu pour le second point POK
 Pour la suite, voici les taches que je souhaite terminer :
