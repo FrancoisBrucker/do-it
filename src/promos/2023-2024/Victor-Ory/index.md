@@ -19,4 +19,4 @@ CV trop important pour rentrer sur ce site.
 
 ## Projet
 
-* [Is it CSS or Cake ?](/projet/2023-2024/IsItCakeOrCSS)
+* [Is it CSS or Cake ?](../../../projets/2023-2024/IsItCakeOrCSS)
