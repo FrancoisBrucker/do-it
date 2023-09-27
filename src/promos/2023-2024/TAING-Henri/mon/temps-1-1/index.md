@@ -50,7 +50,7 @@ Quelques questions pour nous orienter :
 - **Objectifs** : que souhaitez-vous obtenir en établissant votre présence en ligne (augmenter vos ventes ou améliorer la reconnaissance de la marque, par exemple) ? Quels objectifs numériques (estimation du coût, du temps et des ressources nécessaires) pensez-vous réaliser au cours des six prochains mois ?
 - **Déclaration de mission** : quelles sont les valeurs importantes pour votre entreprise (le commerce équitable ou la protection de l'environnement, par exemple) ?
 - **Argument de vente unique** : quels sont vos atouts par rapport aux concurrents (service client, prix ou qualité, par exemple) ? Comment pouvez-vous inciter vos lients à interagir avec vous en ligne ? La prochaine fois que vous naviguez sur le Web ou sur les médias sociaux, jetez un œil aux autres entreprises et déterminez comment elles se démarquent, que ce soit par une fonctionnalité ou par leur contenu. Le fait de proposer une offre unique est un moyen efficace de se démarquer dans un marché déjà surchargé. Une analyse **FFOM** (Forces/Faiblesses, Opportunités/Menaces) permettra d'identifier les opportunités de développement pour l’entreprise, mais aussi les points faibles auxquels remédier.
-  ![Analyse FFOM](ffom.jpg "Analyse FFOM"). Image tirée de https://revealareleve.hec.ca/boite-a-outils/ffom/.
+  ![Analyse FFOM](ffom.jpg "Analyse FFOM") Image tirée de https://revealareleve.hec.ca/boite-a-outils/ffom/.
 
 Une façon de commencer pour faire la publicité de notre entreprise est de passer par les annuaires locaux ou par Google My Business ou Pages Jaunes. Une autre serait de créer une newsletter pour fidéliser les clients existants et récompenser les nouveaux arrivants.
 
