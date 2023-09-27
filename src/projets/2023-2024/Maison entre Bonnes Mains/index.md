@@ -9,6 +9,8 @@ authors:
   - Ouzoulias Nicolas
 ---
 
+Création d'un site de mise en relation de particuliers pour la garde d'animaux et la gestion de jardin pendant une absence.
+
 ## Introduction et contexte
 
 L'année dernière, alors qu'il s'apprêtait à partir en vacances, William  n'a trouvé personne qui pourrait s'occuper de son jardin en son absence (pas chez ses voisins, pas même chez ses amis).
