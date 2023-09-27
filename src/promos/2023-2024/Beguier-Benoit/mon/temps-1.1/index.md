@@ -35,8 +35,8 @@ résumé: "Initiation au langage R et application dans l'analyse et la visualisa
 Pour la réalisation de ce cours, j'aurais cinq sources principales : 
 - Initiez-vous au langage R pour analyser vos données, cours dispensé sur le site openclassrooms que vous pouvez trouvez [ici](https://openclassrooms.com/fr/courses/4525256-initiez-vous-au-langage-r-pour-analyser-vos-donnees).
 - La documentation officielle R pour aller plus loin accessible [ici](https://cran.r-project.org/other-docs.html).
-- Le site internet Racing Statistics accessible [ici](www.racing-statistics.com)
-- Le site internet Pitwall.app accessible [ici](www.pitwall.app)
+- Le site internet Racing Statistics accessible [ici](https://www.racing-statistics.com)
+- Le site internet Pitwall.app accessible [ici](https://www.pitwall.app)
 - L'e-book d'AWS sur la gestion des données en Formule 1
 
 R est un logiciel de la famille GNU (GNU signifie "GNU's Not Unix"). Le projet GNU a été lancé en 1984 afin de développer un système d’exploitation complet, semblable à Unix, et qui soit un logiciel libre.
