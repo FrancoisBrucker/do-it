@@ -41,7 +41,7 @@ J'ai ensuite fait plusieurs tentatives pour implémenter une barre de recherche,
 
 ## Bilan du Sprint 1 et objectif pour le Sprint 2 
 
-Je pense m'être tout de suite lancé dans des tâches en Javascript difficiles trop rapidement, ce qui a beaucoup ralenti ma progression. Je dispose cependant de templates de pages qui me seront utiles pour la suite. J'ai été très ambitieux au vu de mes compétences en développement web et j'ai revu mes objectifs pour le 2e sprint : 
+Je pense m'être tout de suite lancé dans des tâches en Javascript difficiles trop rapidement, ce qui a beaucoup ralenti ma progression. J'ai sous-estimé le temps pour apprendre Javascript et les tâches à faire pour le fonctionnement du site. Je dispose cependant de templates de pages qui me seront utiles pour la suite. J'ai été très ambitieux au vu de mes compétences en développement web et j'ai revu mes objectifs pour le 2e sprint : 
+- Finir d'apprendre Javascript
 - Polir les différentes pages déjà faites
 - Trouver une manière de construire les pages pour les recettes 
-- Créer une fonction recherche, que ce soit par nom ou par tag

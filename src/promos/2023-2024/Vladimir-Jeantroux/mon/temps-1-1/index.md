@@ -1,5 +1,5 @@
 ---
-layout: layout/mon.njk
+layout: layout/mon-index.njk
 
 title: "HTML5 et CSS"
 authors:
