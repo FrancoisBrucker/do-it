@@ -156,11 +156,12 @@
 <li>Application sur des données de Formule 1</li>
 </ol>
 <h2>1. Introduction</h2>
-<p>Pour la réalisation de ce cours, j'aurais deux sources principales :</p>
+<p>Pour la réalisation de ce cours, j'aurais cinq sources principales :</p>
 <ul>
 <li>Initiez-vous au langage R pour analyser vos données, cours dispensé sur le site openclassrooms que vous pouvez trouvez <a href="https://openclassrooms.com/fr/courses/4525256-initiez-vous-au-langage-r-pour-analyser-vos-donnees">ici</a>.</li>
 <li>La documentation officielle R pour aller plus loin accessible <a href="https://cran.r-project.org/other-docs.html">ici</a>.</li>
 <li>Le site internet Racing Statistics accessible <a href="www.racing-statistics.com">ici</a></li>
+<li>Le site internet Pitwall.app accessible <a href="www.pitwall.app">ici</a></li>
 <li>L'e-book d'AWS sur la gestion des données en Formule 1</li>
 </ul>
 <p>R est un logiciel de la famille GNU (GNU signifie &quot;GNU's Not Unix&quot;). Le projet GNU a été lancé en 1984 afin de développer un système d’exploitation complet, semblable à Unix, et qui soit un logiciel libre.<br>
@@ -220,13 +221,15 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
                                        Max.   :18  
 </code></pre>
 <p>Ici il n'y a aucun problème d'import. Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.<br>
-<img src="Mooc.png" alt="MOOC"></p>
+<img src="Mooc.png" alt="MOOC"><br>
+Source : Open Classrooms</p>
 <h2>4. Application sur des données de Formule 1</h2>
 <h4>Objectif</h4>
 <p>Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visualiser et analyser rapidement des données issues de la Formule 1. Je fais d'abord des recherches pour déterminer le type de données auxquelles je pourrais avoir accès.</p>
 <h4>Générer un graphique des positions des pilotes à chaque tour</h4>
 <p>J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des données de chaque Grand Prix, telles que les positions d'arrivées, les écarts avec les autres pilotes, les positions à chaque tour... C'est cette dernière donnée qui va m'intéresser, et je vais d'abord essayer de générer un graphique des positions de chaque pilote à chaque tour, comme montré ci-dessous :</p>
-<p><img src="graphique.png" alt="Graphique"></p>
+<p><img src="graphique.png" alt="Graphique"><br>
+Source : Pitwall</p>
 <p>Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction <code>plot()</code> .</p>
 <h4>Récupérer les données</h4>
 <p>A partir du site <a href="https://pitwall.app">Pitwall</a>, j'ai extrait les positions à chaque tour de deux pilotes (seulement deux pour l'exemple car je dois faire la procédure manuellement), Max Verstappen et lando Norris, pour le Grand Prix du Japon qui s'est déroulé le 24/09/2023. J'ai ensuite placé ces données dans un fichier Excel puis je les ai exporté en .csv.<br>
