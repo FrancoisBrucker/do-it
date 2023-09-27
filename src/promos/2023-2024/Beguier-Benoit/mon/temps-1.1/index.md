@@ -97,7 +97,11 @@ maVariable <- read.table("monFichier.txt", sep=";", row.names=1, header=TRUE)
 ```
 
 #### A partir d'un fichier quelconque
+
+{% note %}
 Il est aussi possible avec RStudio d'importer tous les types de fichiers en utilisant le bouton Import Dataset.
+{% endnote %}
+
 
 #### Gérer les erreurs d'importations
 J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction `summary()`.
@@ -113,7 +117,12 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
                                        3rd Qu.:17  
                                        Max.   :18  
 ```
-Ici il n'y a aucun problème d'import. Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
+
+{% info %}
+Ici il n'y a aucun problème d'import.
+{% endinfo %}
+ 
+Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
 ![MOOC](Mooc.png)
 Source : Open Classrooms
 

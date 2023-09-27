@@ -8,7 +8,10 @@ authors:
 date: 2023-09-17
 
 tags: 
-  - "temps 1" 
+  - "temps 1"
+  - Java 
+  - POO 
+  - Débutant 
 
 résumé: "Mon premier MON pour découvrir quelques bases sur le langage Java et la Programmation Orientée Objet."
 ---
@@ -32,6 +35,7 @@ Pour cela j'ai suivi une formation sur OpenClassRoom retrouvable juste [ici](htt
 De plus cette formation m'a permis d'approfondir mes connaissances sur la Programmation Orienté Objet que j'avais à peine découverte sur Python lors d'un stage. 
 
 
+
 ## II. Les bases  
 
 Mon principal objectif était de découvrir et d'apprendre la syntaxe Java, car ayant connaissance de Python la logique de programmation derrière les deux langages est globalement la même. Cependant contrairement à Python, le Java est plus exigeant en termes de syntaxe et rien que le fait de devoir utiliser le " `;` " et les " `{}` " de manière si fréquente n'est pas facile au début et il faut s'y habituer. 
@@ -41,6 +45,8 @@ De plus, un programme Java est structuré en **packages** et en **classes**, et 
 La construction en bloc et l'utilisation des `{}` pour marquer le début et la fin d'un bloc de code rendent les variables accessibles uniquement dans le contexte dans lequel elles ont été déclarée. Il faut donc faire attention à la **portée** d'une variable et faire attention lorsqu'on la déclare à désigner un niveau de contrôle. 
 
 ![exemple portée](https://user.oc-static.com/upload/2021/12/02/16384489205392_p1c5-4.png)
+
+*Schéma provenant de l'Open ClassRoom : <https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java/6446031-saisissez-la-portee-des-variables>*
 
 - ***public*** : visible pour tous et par conséquent le moins restrictif ;
 
@@ -93,6 +99,8 @@ Pour une même fonction très simple qui renvoie le maximum entre deux nombres o
 Une grande partie de la formation se concentrait sur la POO et comment bien l'utiliser en Java. N'ayant que très peu pratiquer ce type de programmation j'ai pu découvrir les bases de celles-ci tout en mettant en pratique ce que je venais d'apprendre en Java. 
 
 ![descriptionPOO](https://www.data-transitionnumerique.com/wp-content/uploads/2021/03/classe.webp)
+
+*Schéma provenant du site : <https://www.data-transitionnumerique.com/apprendre-programmation-objet/>*
 
 La POO est une manière de programmer en se basant sur le concept d'*objets* possédant des *attributs* et des *méthodes*. 
 
@@ -147,3 +155,9 @@ Ici les classes `Voiture` et `Bateau` descendent de la classe `Vehicule` et poss
 Je ne suis pas du tout devenu un expert en Java, loin de là, mais je pense avoir bien appréhendé les bases de ce langage et si j'ai un jour besoin de l'utiliser je m'y adapterai plus rapidement. Désormais seul le temps et l'expérience me feront gagner en vitesse de code et en connaissances. 
 
 De même pour la POO, la formation m'a permis de mieux comprendre l'utilité de celle-ci et comment bien organiser mon code pour en tirer profit. Il ne me reste plus qu'à faire de la POO en Python que je maîtrise plus, et je crois avoir un [cours](https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/) à porter de main pour m'aider à cela ... 
+
+### Sources
+
+- Le contenu principal de ma formation qui explique en détail la syntaxe et l'écriture en Java : <https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java/6173508-tirez-le-maximum-de-ce-cours>
+- Des petits exercices pour expérimenter : <https://www.cours-gratuit.com/java>
+- Une formation supplémentaire sur la POO : <https://www.data-transitionnumerique.com/apprendre-programmation-objet/>
