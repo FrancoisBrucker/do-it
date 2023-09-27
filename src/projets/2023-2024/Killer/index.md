@@ -56,6 +56,11 @@ Dans le cas où l'organisateur choisit de rendre la cible non explicite, les par
 
 
 ## Objectif à atteindre
+Créer un site web avec une meilleur expérience utilisateur, qui permet de jouer le jeu "Killer" en différents modes. Les modes principaux visés comme objectifs sont :
+    - Mode Normal (actions)
+    - Mode Mots
+    - Mode Team Building
+    - Mode Personnalisable
 
 ## Plan d'action
 
@@ -76,5 +81,7 @@ Dans le cas où l'organisateur choisit de rendre la cible non explicite, les par
 
 ## Points d'amélioration
 
-
+Comme amélioration du projet, on propose un mode **Grand Public**, qui permet une grande communauté de jouer le jeu pendant une semaine ou une quinzaine.
+Exemple d'application: L'intégration des étudiants centraliens.
+Concept du mode : Celui des **Hunger Games**, où les cibles tuées vont être affichées dans les écrans Centraliennes tout au long du jeu.
 
