@@ -16,7 +16,7 @@ résumé: Ce POK a pour but de réaliser une maquette d'une plateforme similaire
 ---
 
 {%prerequis 'MON débutant'%}
-Avoir un cerveau à moitié allumé
+Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et encore)
 {%endprerequis%}
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée
