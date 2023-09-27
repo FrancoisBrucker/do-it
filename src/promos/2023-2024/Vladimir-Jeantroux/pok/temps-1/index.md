@@ -31,9 +31,9 @@ Ensuite, je souhaiterais implémenter une fonction de recherche par nom du plat 
 
 ## Ce qui a été fait 
 
-Après avoir ressorti le cours de Javascript de 1ère année, j'ai regardé des vidéos youtube ([lien](https://www.youtube.com/watch?v=W6NZfCO5SIk)) pour approfondir et tenter de coder mes propres scripts. 
+Après avoir révisé le cours de Java de 1ère année, j'ai regardé des vidéos youtube ([lien](https://www.youtube.com/watch?v=W6NZfCO5SIk)) pour approfondir et tenter de coder mes propres scripts. 
 
-J'ai ensuite codé les fichiers HTML et CSS pour la page principale et une page type de recette. Pour le prochain sprint, je compte transformer cette page en template, qui pourra s'adapter selon la recette qu'on choisit. 
+J'ai ensuite écrit les fichiers HTML et CSS pour la page principale et une page type de recette. Pour le prochain sprint, je compte transformer cette page en template, qui pourra s'adapter selon la recette qu'on choisit, en me basant sur les méthodes qu'on a pu employer en low code/no code.
 
 ![Page prototype d'une recette](./recette.jpg)
 
