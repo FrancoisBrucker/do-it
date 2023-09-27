@@ -1,9 +1,9 @@
 ---
-layout: layout/fiche.njk
+layout: layout/mon-index.njk
 
 title: "MON parcours d'autoformation"
 authors:
-    - "Arthur Louradou"
+    - Arthur Louradou
 ---
 
 Voici la liste des MONs réalisés par mes soins au cours de l'année 2023-2024.

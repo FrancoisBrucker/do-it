@@ -25,7 +25,7 @@ J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : **Hands-on Rust
 
 Cette vidéo Youtube est aussi une présentation (très) rapide à Rust : [Rust](https://www.youtube.com/watch?v=5C_HPTJg5ek)
 
-## Présentation de Rust ?
+## Présentation de Rust
 - Parmis les langages préféré des développeurs
 - Performant, sécurisé (typage, ownership), productif
 - Permet de :

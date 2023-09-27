@@ -8,4 +8,4 @@ authors:
 
 Ensemble des POK réalisés par Agathe Rabachou.
 
-* [POK 1 : Création d'un site web](./temps-1)
+* [POK 1 : Création d'un CV en ligne interactif](./temps-1)

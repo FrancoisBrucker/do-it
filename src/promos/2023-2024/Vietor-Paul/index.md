@@ -19,6 +19,6 @@ Bonjour !
 * [POK](./pok)
 * [MON](./mon)
 
-## Projet (pas encore)
+## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[IsItCSS](../../../projets/2023-2024/IsItCakeOrCSS)

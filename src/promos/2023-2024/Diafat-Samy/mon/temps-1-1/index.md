@@ -64,12 +64,12 @@ Pour mon premier POK, j'avais besoin de mettre en place une barre de navigation 
 Boostrap répondait parfaitement à mon besoin puisque j'ai pu très facilement importé un code HTML me permettant d'afficher une barre de navigation.
 Voici un exemple de mon code :
 
-![Exemple de code](exemple_code.png)
+![Exemple de code](./exemple_code.jpg)
 
 
-![Nav bar homepage](nav_bar1.png)
+![Nav bar homepage](./nav_bar.jpg)
 
-![Nav bar RankPage](nav_bar2.png)
+![Nav bar RankPage](./nav_bar2.jpg)
 
 Le FrameWork Python Flask permet le développement d'application web, c'est ce qui m'a permis de faire ma mini-application en utilisant les données de Riot Games.
 Ce framework fera sûrement l'objet de mon projet MON !

@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Maison entre Bonnes Mains](../../../projets/2023-2024/Maison%20entre%20Bonnes%20Mains)
