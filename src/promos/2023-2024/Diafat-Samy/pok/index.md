@@ -8,4 +8,4 @@ authors:
 
 Ensemble des POK réalisés par Samy Diafat.
 
-* [Utilisation API Riot Games](./temps-1)
+* [Récupérer les données du jeu vidéo League of Legends et les exploiter](./temps-1)

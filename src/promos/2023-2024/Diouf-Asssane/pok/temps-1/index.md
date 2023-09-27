@@ -13,6 +13,7 @@ tags:
 résumé: Depuis 2019, la plupart des navigateurs intègrent WebAssembly (WASM). Il est donc possible de réaliser des applications web avec des performances proches d'applications natives en utilisant des langages de programmation variés (C++, python, Rust, etc...). Réalisons une application de ce type avec Rust dans ce POK.
 ---
 ## C'est quoi le WebAssembly ?
+![logo WebAssembly](./webassembly.svg)
 
 > WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.
 
@@ -42,16 +43,19 @@ Ces informations m'ont permis de mieux saisir ce qu'est le WebAssembly. Elles on
 J'ai donc décidé d'essayer wasm. J'ai commencé par un autre langage que Rust car je ne le connaissais pas encore assez. Il est cependant possible de cibler le WebAssembly depuis plusieurs langages comme le C et le C++ par exemple, j'ai donc commencé par là.
 
 Pour créer un code wasm avec du C++, il faut utiliser [emscripten](https://emscripten.org). Emscripten va prendre les fichiers sources et sortir un fichier en WebAssembly (.wasm), un fichier javascript et un fichier en HTML. Le javascript va automatiquement appelé le WebAssembly et définir les fonctions nécessaires pour que nos méthodes puissent être appelées depuis le javascript. Le HTML est alors une page générée automatiquement pour appeler ce javascript (en tout cas sa fonction main). J'ai pu obtenir le résultat suivant en utilisant emscripten sur un programme en C++/SDL :
+![Affichage avec emscripten](./emscripten.png)
 
 ### Rust et WebAssembly
 J'ai ensuite suivi le tutoriel fournit par Rust sur le WebAssembly accessible [ici](https://rustwasm.github.io/docs/book/introduction.html).
 
 Je l'ai suivi et j'ai pu réaliser le jeu de la vie. Après cette étape, la majorité de mes questions sur le WebAssembly avaient trouvées leur réponses.
 
-### Des mots croisés mathématiques
-Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu de mots croisées mathématiques. Le résultat final, ressemblerait à ça :
+### Des équations croisées
+Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :
+![Crossmath](./crossmath.png)
+*Cette image a été tirée du jeu Crossmath*
 
-Je n'ai pas d'affichage pour l'instant, cependant voici ma progression juqu'à présent :
+Je n'ai pas d'affichage pour l'instant, cependant voici ma progression jusqu'à présent :
 - Création du code de génération d'équations
 - Création des fichiers HTML de base
 - Test de mes méthodes existantes jusqu'à présent

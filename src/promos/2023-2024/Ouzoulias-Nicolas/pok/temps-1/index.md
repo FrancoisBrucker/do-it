@@ -22,7 +22,7 @@ Je n'ai jamais pratiqué le developpement Web je cherche donc à travers ce POK 
 
 I. Le développement Web pour les nuls
 
-II. 
+II. Mon petit site Web à moi
 
 ## I. Le développement Web pour les nuls
 
@@ -52,11 +52,12 @@ Le développement Web est divisé en 2 parties :
 
 </html>
 ```
-Il existe ensuite de multiples balises pour organiser le texte et insérer des éléments comme par exemple : 
-- `<p>` pour les paragraphes
+Il existe ensuite de multiples **balises** pour organiser le texte et insérer des éléments comme par exemple : 
+- `<p> </p>`  pour les paragraphes
 - `<br>` pour les sauts de ligne
 - `<h1> </h1>` jusqu'à 6 pour les niveaux de titres
 - `<img>` pour insérer une image
+- `<a>` pour les liens web
 
 ### Le CSS
 
@@ -66,3 +67,10 @@ Il existe ensuite de multiples balises pour organiser le texte et insérer des �
   <link href="style.css" rel="stylesheet">
 </head>
 ```
+
+
+
+
+## II. Mon petit site Web à moi
+
+à definir ...
