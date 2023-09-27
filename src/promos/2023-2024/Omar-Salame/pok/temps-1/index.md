@@ -28,7 +28,7 @@ résumé: Mon premier site web.
 
 
 2. **Développement Front-End**:
-- Utiliser HTML pour créer la structure de vos pages.
+- Utiliser HTML pour créer la structure des pages.
 - Appliquer le style à l'aide de CSS pour rendre votre site web attrayant.
 - Utiliser JavaScript pour rendre votre site web interactif, notamment pour la gestion d'équipes et le système de points.
 
