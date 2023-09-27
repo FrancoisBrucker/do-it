@@ -17,9 +17,8 @@ résumé: "MON 1 sur le développement d'un site web basique"
 {%endprerequis%}
 
 Mes objectifs pour ce premier MON sont de découvrir les bases des langages HTML et CSS afin d'être capable de coder un site internet simple pour appliquer ce que j'ai appris. Pour rendre cela plus ludique, je vais coder au fur et à mesure de mon apprentissage un site internet très basique décrivant une fiche méthode du langage html pour Soline qui n'a pas suivi la formation html. Par la suite j'améliorerait l'esthétique du site grâce à la découverte de CSS.
- 
 
-## Méthodologie 
+## Méthodologie
 
 Pour me former aux langages html et css, je suis partie de zéro. J'ai suivi, comme beaucoup, les cours de https://internetingishard.netlify.app.
 Il est temps de partager mes nouvelles compétences avec Soline pour qu'elle soit capable de faire son site web basique, sans trop approfondir ses connaissances.
