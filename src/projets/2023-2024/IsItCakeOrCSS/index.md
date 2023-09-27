@@ -1,7 +1,7 @@
 ---
 layout: layout/projet.njk
 
-title: "Is it Cake or CSS ?"
+title: "Is it CSS ?"
 authors:
   - LOURADOU Arthur
   - DIOUF Assane

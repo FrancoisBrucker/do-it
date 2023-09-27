@@ -48,7 +48,7 @@ Pour créer un code wasm avec du C++, il faut utiliser [emscripten](https://emsc
 ### Rust et WebAssembly
 J'ai ensuite suivi le tutoriel fournit par Rust sur le WebAssembly accessible [ici](https://rustwasm.github.io/docs/book/introduction.html).
 
-Je l'ai suivi et j'ai pu réaliser le jeu de la vie. Après cette étape, la majorité de mes questions sur le WebAssembly avaient trouvées leur réponses.
+Après cette étape, la majorité de mes questions sur le WebAssembly avaient trouvées leur réponses.
 
 ### Des équations croisées
 Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :
