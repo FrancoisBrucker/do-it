@@ -25,10 +25,27 @@ résumé: Je vais dans ce POK effectuer une modélisation d'une monoplace. Le bu
 ## Sommaire
 
 1. Tâtonnement
+2. Objectifs
+3. Première modélisation du comportement dynamique d'une monoplace
 
 ## Tâtonnement
 {% exercice %}
 Comment s'y prendre ?
 {% endexercice %}
 
-A l'heure où je débute ce projet, je ne sais pas encore par quel bout le prendre. Je décide alors de me renseigner sur l'existant de la modélisation d'un véhicule par un point matériel, et ce sur Matlab ou non. 
+A l'heure où je débute ce projet, je ne sais pas encore par quel bout le prendre. Je décide alors de me renseigner sur l'existant de la modélisation de la dynamique d'un véhicule par un point matériel, et ce sur Matlab ou sur un autre logiciel. Après plusieurs recherches, je décide de m'orienter vers le package *MATLAB and Simulink Racing Lounge: Vehicle Modeling* accessible [ici](https://fr.mathworks.com/matlabcentral/fileexchange/63823-matlab-and-simulink-racing-lounge-vehicle-modeling). Une fois cela fait, je fixe alors mes objectifs.
+
+## Objectifs
+Voici les objectifs que je me suis donné :
+- Modélisation dynamique simple du comportement d'une monoplace
+- Etablir les paramètres d'intérêts pour une étude dynamique
+- Complexifier l'étude avec un paramétrage plus poussé
+
+## Première modélisation du comportement dynamique d'une monoplace
+#### Prise en main de la bibliothèque
+J'ai commencé par me mettre à jour sur le contenu de la bibliothèque.
+
+![Biblio Simulink](Bibliothèque.png)
+
+#### Réalisation d'une première modélisation
+

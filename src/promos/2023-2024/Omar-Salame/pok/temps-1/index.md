@@ -37,3 +37,10 @@ résumé: Mon premier site web.
 
 4. **Gestion d'utilisateurs** :
 - Mettre en place un système d'authentification et de gestion des utilisateurs.
+
+## Premier Sprint
+
+- Création d'une base de données des équipes et joueurs de la Botola Pro.
+- Initialisation à l HTML CSS
+<img src="header.png" width="700" height="550">
+<img src="body.png" width="700" height="550">
