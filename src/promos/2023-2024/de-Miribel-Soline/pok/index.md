@@ -8,5 +8,5 @@ authors:
 
 Ensemble des POK réalisés par Soline
 
-* [POK 1](./temps-1)
+* [POK 1 : Delt'alarme](./temps-1)
 

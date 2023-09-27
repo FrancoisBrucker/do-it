@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "La gestion de crise"
+title: "La gestion de crise en entreprise"
 authors:
   - Soline de MIRIBEL
 

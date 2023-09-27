@@ -1,9 +1,9 @@
 ---
-layout: layout/fiche.njk
+layout: layout/pok-index.njk
 
 title: "POKs"
 authors:
-  - "Arthur Louradou"
+  - Arthur Louradou
 ---
 
 Élève ingénieur à l'École centrale de Marseille.

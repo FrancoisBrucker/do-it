@@ -35,4 +35,6 @@ Big Data | Cloud Computing | Fouille de données | Méthodologie pour la science
 * [POK](./pok)
 * [MON](./mon)
 
+## Projet
 
+[Maison entre Bonnes Mains](../../../projets/2023-2024/Maison%20entre%20Bonnes%20Mains)

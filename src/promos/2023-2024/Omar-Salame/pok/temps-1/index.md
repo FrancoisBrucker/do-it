@@ -12,3 +12,28 @@ tags:
 
 résumé: Mon premier site web.
 ---
+## Objectifs
+- **Créer un site web interactif**: L'objectif principal est de développer un site web attrayant et interactif pour les fans de football fantasy.
+
+- **Intégration de données en temps réel** : Intégrer des données en temps réel sur les joueurs, les équipes, les scores, etc., pour que les utilisateurs puissent suivre les performances de leurs équipes de fantasy en direct.
+
+- **Gestion d'équipes** : Permettre aux utilisateurs de créer, gérer et personnaliser leurs équipes de fantasy.
+
+- **Système de points** : Mettre en place un système de points pour noter les performances des joueurs de fantasy en fonction de leurs performances réelles sur le terrain.
+
+## Plan d'action
+1. **Conception** :
+- Créer une maquette du site web pour planifier la disposition et l'apparence.()
+- Définir la structure HTML de base pour chaque page.
+
+
+2. **Développement Front-End**:
+- Utiliser HTML pour créer la structure de vos pages.
+- Appliquer le style à l'aide de CSS pour rendre votre site web attrayant.
+- Utiliser JavaScript pour rendre votre site web interactif, notamment pour la gestion d'équipes et le système de points.
+
+3. **Intégration de données** :
+- Intégrer des données en temps réel, telles que les scores de matchs et les statistiques de joueurs, en utilisant des API ou des bases de données.
+
+4. **Gestion d'utilisateurs** :
+- Mettre en place un système d'authentification et de gestion des utilisateurs.

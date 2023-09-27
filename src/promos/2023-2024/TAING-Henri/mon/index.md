@@ -8,4 +8,4 @@ authors:
 
 Ensemble des MON réalisés par TAING Henri.
 
-- [Fondamentaux en digital marketing](./temps-1-1/)
+- [Fondamentaux en digital marketing partie 1](./temps-1-1/)
