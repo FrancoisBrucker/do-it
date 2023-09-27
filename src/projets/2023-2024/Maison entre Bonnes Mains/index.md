@@ -51,6 +51,7 @@ Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gè
 
 ![Image connection](MBM-connection.png)
 
+
 ![Image inscription](MBM-inscription.png)
 
 #### Menu déroulant
