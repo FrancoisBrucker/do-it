@@ -134,7 +134,7 @@ Parmi cette documentation, voici des liens intéressants à consulter.
 - [Apple Glass Morphism Design](https://www.behance.net/gallery/111528505/Apple-Glass-Morphism-Design)
 
 {% info %}
-J’ai développé un gout assez poussé pour le **glass morphism**, courant utilisé par Apple ou Microsoft dans leurs différents OS par exemple. Je trouve ce courant élégant, épuré mais surtout dans l’ère du temps. (Notez bien cette phrase pour plus tard, internet n’oubliant jamais rien, surtout pas les Skyblogs…)
+J’ai développé un gout assez poussé pour le **glass morphism**, courant utilisé par Apple ou Microsoft dans leurs différents OS par exemple. Je trouve ce courant élégant, épuré mais surtout dans l’air du temps<sup><a href="https://www.laculturegenerale.com/ere-du-temps-air-du-temps-orthographe/" style="text-decoration:none;">[!]</a></sup>. (Notez bien cette phrase pour plus tard, internet n’oubliant jamais rien, surtout pas les Skyblogs…)
 {% endinfo %}
 
 ## Initialisation Figma et recueil des assets existants
