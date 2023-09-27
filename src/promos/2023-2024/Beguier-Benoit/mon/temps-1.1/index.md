@@ -5,7 +5,7 @@ title: "Analyse des données sans galèR"
 authors:
   - Benoit BEGUIER
 
-date: 2023-09-17
+date: 2023-09-27
 
 tags: 
   - "temps 1"
@@ -32,10 +32,11 @@ résumé: "Initiation au langage R et application dans l'analyse et la visualisa
 4. Application sur des données de Formule 1
 
 ## 1. Introduction
-Pour la réalisation de ce cours, j'aurais deux sources principales : 
+Pour la réalisation de ce cours, j'aurais cinq sources principales : 
 - Initiez-vous au langage R pour analyser vos données, cours dispensé sur le site openclassrooms que vous pouvez trouvez [ici](https://openclassrooms.com/fr/courses/4525256-initiez-vous-au-langage-r-pour-analyser-vos-donnees).
 - La documentation officielle R pour aller plus loin accessible [ici](https://cran.r-project.org/other-docs.html).
 - Le site internet Racing Statistics accessible [ici](www.racing-statistics.com)
+- Le site internet Pitwall.app accessible [ici](www.pitwall.app)
 - L'e-book d'AWS sur la gestion des données en Formule 1
 
 R est un logiciel de la famille GNU (GNU signifie "GNU's Not Unix"). Le projet GNU a été lancé en 1984 afin de développer un système d’exploitation complet, semblable à Unix, et qui soit un logiciel libre.
@@ -114,6 +115,7 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
 ```
 Ici il n'y a aucun problème d'import. Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
 ![MOOC](Mooc.png)
+Source : Open Classrooms
 
 ## 4. Application sur des données de Formule 1
 #### Objectif
@@ -123,6 +125,7 @@ Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visuali
 J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des données de chaque Grand Prix, telles que les positions d'arrivées, les écarts avec les autres pilotes, les positions à chaque tour... C'est cette dernière donnée qui va m'intéresser, et je vais d'abord essayer de générer un graphique des positions de chaque pilote à chaque tour, comme montré ci-dessous :
 
 ![Graphique](graphique.png)
+Source : Pitwall
 
 Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction `plot()` .
 
