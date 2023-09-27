@@ -12,6 +12,10 @@ tags:
   - No/low code
   - RSE
 
+{%prerequis 'POK débutant'%}
+A la rigueur, avoir fait la formation no/low code
+{%endprerequis%}
+
 résumé: Ce POK a pour but de réaliser une maquette d'une plateforme similaire à Glassdoor où les utilisateurs pourraient laisser un avis sur une ou plusieurs entreprises en suivant une liste de critères en relation avec la RSE (Responsabilité sociétale des entreprises). L'idée est de pouvoir les classer pour avoir une meilleure idée de l'ambition sociale et environnementale d'une entreprise et ce qu'elle met vraiment en place.
 ---
 
