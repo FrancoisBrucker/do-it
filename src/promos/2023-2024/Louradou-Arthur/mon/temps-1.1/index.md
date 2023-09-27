@@ -81,8 +81,6 @@ Il est essentiel de comprendre que le terme "hacker" ne se réfère pas nécessa
 
 La qualité principale d'un pentester est l'autodidaxie, c'est-à-dire la capacité à apprendre de manière autonome. Cette compétence est particulièrement valorisée et recherchée par les professionnels de la sécurité informatique, et elle est étroitement surveillée par les MON de Do_It !
 
-N'hésitez pas à me fournir la suite de vos notes si vous souhaitez que je les convertisse également en Markdown.
-
 ### Cadrage du besoin de test d’intrusion _(skip)_ { #mooc-cadrage }
 
 <aside>
