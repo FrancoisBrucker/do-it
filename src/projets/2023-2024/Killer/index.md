@@ -6,6 +6,7 @@ authors:
   - BELAAZIZ Khaoula
   - RIOUAL Lucas
   - SALAME Omar
+  - JEANTROUX Vladimir
 
 ---
 
