@@ -6,7 +6,7 @@ authors:
   - "Lola Bourdon"
 ---
 
-Étudiant fictif, utilisé pour le template de nouveaux élèves.
+Étudiante dans l'option Do_It
 
 ## POK & MON
 

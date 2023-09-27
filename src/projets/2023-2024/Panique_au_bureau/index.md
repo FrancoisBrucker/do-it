@@ -25,7 +25,7 @@ Réalisation d’un **serious game** mettant le/les joueurs en condition de **ge
 - écrire le scénario du jeu
 - développer l’outil support du jeu
 
-## Idées utiles au projet :
+## Idées utiles au projet
 
 - plus ludique et interactif à plusieurs mais complexifie le jeu et nous laisse moins de temps pour développer l’outil support. Nous commencerons donc par un jeu pour un joueur, avant d’étendre le scénario à plusieurs utilisateurs
 - pour un utilisateur solo on pourrait utiliser l’outil Renpy.
@@ -34,7 +34,7 @@ Réalisation d’un **serious game** mettant le/les joueurs en condition de **ge
 - Mise en place d’un système de points individuels et collectifs
 - Positionnement sur un diagramme en fonction des choix faits
 
-## A creuser :
+## A creuser
 
 - outil commercialisé par humans matter : un outil d'évaluation sur les compétences managériales, avec un exercice de résolution de problèmes, prises de décision et gestion des priorités.
 - Proposition Educanta

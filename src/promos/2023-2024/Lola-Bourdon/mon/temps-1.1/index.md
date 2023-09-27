@@ -12,6 +12,7 @@ tags:
 
 résumé: "MON 1 sur le développement d'un site web basique"
 ---
+
 {%prerequis 'Niveau débutant'%}  
 {%endprerequis%}
 
@@ -54,16 +55,16 @@ Dans <strong>&lt;body&gt;&lt;/body&gt;</strong> :
 - On peut mettre le &lt;p&gt;&lt;/p&gt; dans le &lt;li&gt;&lt;/li&gt; mais pas dans le &lt;ul&gt;&lt;/ul&gt;
 - Pour faire apparaitre les crochets sur la page il suffira de les encadrer par &lt ; &gt ; sans espace entre le t et le point virgule
 
-Voyons ce que ces premières informations rendent sur un site web basique. Pour cela il suffit de faire clique droit sur le nom du fichier html et de cliquer sur <em> Open with Live Server </em>:
+Voyons ce que ces premières informations rendent sur un site web basique. Pour cela il suffit de faire clique droit sur le nom du fichier html et de cliquer sur <em> *Open with Live Server*:
 
-<img src="code1.png">
+![code](code1.png)
 <img src="screen1.png">
 
 Il existe également des liste ordonnées qui permettent de numéroter la liste. Cela fonctionne de la même manière mais on remplacera le &lt;ul&gt;&lt;/ul&gt;par &lt;ol&gt;&lt;/ol&gt;
 
 ### Ecrire en Italique, gras ou souligné
 
-Pour écrire en <em>italique</em> :
+Pour écrire en *italique* :
 - Utiliser  la commande &lt;em&gt; <em>  texte </em> &lt;/em&gt; 
 
 Pour écrire en <strong>gras</strong> :

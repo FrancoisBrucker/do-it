@@ -51,24 +51,27 @@ Pour la réalisation de ce premier POK, j'aimerai utiliser les connaissanes que 
 <strong> Sujet et fonctionnaliés de l'application :</strong> 
 Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieures montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre
 
-Fonctionnalités nécessaires:
+Fonctionnalités nécessaires :
+
 1. Log in/ sign Up et déconnection
 2. ajouter/modifier son profil 
 3. publier les fiches des montres à vendre
 4. proposer une montre à la plateforme
-5. ajouter au panier 
+5. ajouter au panier
 
 Fonctionnalités possibles :
+
 1. visualiser et retirer du panier 
 2. ajout d'un chatbot plateforme/acheteur/vendeur
 3. ajouter de smontres en favoris et les visualiser
 
 
-### Remarques :
+### Remarques
 
 Mauvaise gestion du temps + tâches cachées : J'ai sous estimé le temps nécessaire à la poursuite de ma formation sur bubble.io/ étant donné que je n'ai pas touché à tout pendant le projet du cours de no code. J'aurais du être capable de proposer une premiere version de la page d'accueil et de la structure de l'application mais cette dernière ne me convient pas du tout à l'heure actuelle, je dois la retravailler. J'ai également mis du temps a prendre en main VSCode et github, ce qui diminué le temps que j'avais a consacrer à ce POK jusqu'au premier sprint.
 
-### Objectifs sprint 2 :
+### Objectifs sprint 2
+
 Maintenant que ce POK est plus clair, je dois :
 1. Mieux gérer mon temps 
 2. Terminer de me former à bubble.io/
