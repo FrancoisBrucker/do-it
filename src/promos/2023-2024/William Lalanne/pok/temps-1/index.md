@@ -10,7 +10,7 @@ date: 2023-09-01
 tags: 
   - "temps 1"
 
-résumé: Création d'un site web avec HTML, CSS et JS. Ce site permettra de réaliser des To-do liste. 
+résumé: Création d'un site web avec HTML, CSS et JS. Ce site permettra de réaliser des To-do list. 
 ---
 
 ## Objectif de ce POK
