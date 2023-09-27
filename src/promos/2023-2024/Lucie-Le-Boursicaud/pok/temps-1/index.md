@@ -20,12 +20,24 @@ résumé: Ce POK a pour but d'utiliser un site de création d'application No Cod
 Aucun prérequis !  
 {%endprerequis%}
 
+# Sprint 1 
+###### Objectifs du premier sprint
+Fonctionalités à implémenter : 
++ [x] Authentification  - 1
++ [x] Pouvoir changer les informations de son profil  - 1
++ [x] Pouvoir visualiser une recette  - 2
++ [x] Pouvoir publier une recette  - 1
++ [x] Pouvoir se déconnecter  - 1
+
+Autres éléments : 
++ [X] Avoir un design/visuel agréable - 3
++ [x] Travailler le parcours utilisateurs - 2
+
 ## Sommaire
 
 1. Découverte d'Adalo
 2. Idée de l'application 
 3. Développement de l'application
-4. Conclusion sur l'outil utilisé
 
 ## 1.Découverte d'Adalo
 "Transformer des idées réelles en applications réeeles sans écrire une seule ligne de code", voici la promesse d'Adalo, un nouvel outil permettant de bâtir des applications web et mobiles sans coder.
@@ -73,13 +85,6 @@ Afin de me donner des objectifs de réalisations voici la liste des fonctionalit
 + [~] Ajouter une recette a ses favoris 
 + [~] Pouvoir noter une recette
 
-##### Fonctionalités supplémentaires optionnelles
-Une fois toutes ses fonctionalités mises en place, le temps restant sera consacré à d'autres fonctionalités : 
-+ [ ] Pouvoir laisser un avis sur une recette
-+ [ ] Avoir des badges en fonction du nombre de recettes publiées
-+ [ ] Pouvoir partager une recette 
-+ [ ] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates
-
 ## 3.Développement de l'application
 Pour commencer à developper l'application je me suis occupé du système d'inscription et d'authentification. Aucune difficulté avec Adalo puisque le site fait déjà la moitié du travail pour nous. Je me suis donc concentrée sur le design pour rentre l'application joli dès la première interraction avec l'utilisateur.
 
@@ -120,3 +125,19 @@ Une fois cette partie réalisé je me suis consacrée à la page de profil de l'
 </div>
 
 Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la bar de navigation. Lorsque l'utilisateur clique sur l'une des icones il est redirigé vers la page corresponsante. 
+
+# Sprint 2
+###### Objectifs du deuxième sprint
+Fonctionalités à implémenter : 
++ [ ] Fonctionalité de "mot de passe oublié"
++ [~] Ajouter une recette a ses favoris 
++ [~] Pouvoir noter une recette
++ [ ] Pouvoir laisser un avis sur une recette
++ [ ] Avoir des badges en fonction du nombre de recettes publiées
++ [ ] Pouvoir partager une recette 
++ [ ] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates
+
+## Sommaire
+
+1. Développement de l'application
+2. Conclusion 
