@@ -8,4 +8,4 @@ authors:
 
 Ensemble des POK réalisés par TAING Henri.
 
-- [Cristal, pour responsabilité et sensibiliser les entreprises et les employés](./temps-1)
+- [Cristal, pour responsabiliser et sensibiliser les entreprises et les employés](./temps-1)
