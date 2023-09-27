@@ -24,7 +24,7 @@ Pré-requis :
 ## Résumé :
 Dans ce premier MON, nous reverrons les bases d'HTML et de CSS. J'ai choisi ce MON afin d'appuyer mon premier POK, qui consiste à 
 créer un site web. 
-Pour ce faire, j'ai suivi le cours HTML/CSS d'OpenClassroom pour m'introduire aux notions de base. Ce MON vise à reprendre les notions basiques d'HTML et de CSS. 
+Pour ce faire, j'ai suivi le cours HTML/CSS [d'OpenClassroom](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3) pour m'introduire aux notions de base, et si je bloquais sur certaines notions je me renseignais sur [W3Schools](https://www.w3schools.com/html/). Ce MON vise à reprendre des notions basiques d'HTML et de CSS, et est illustré par la création pas-à-pas des pages du site de mon POK. 
 
 ### 1. HTML
 
@@ -217,3 +217,6 @@ Voici le résultat final :
 ![Page d'accueil](site_beau.jpg)
 
 ![Présentation élève](presentation.jpg)
+
+### Bibliographie 
+- Schéma "La structure de base en HTML" « Créez votre première page web en HTML ». OpenClassrooms, https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html.
