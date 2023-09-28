@@ -75,21 +75,22 @@ Quelques points à garder en tête en plus :
 
 - Avoir une vitesse de chargement inférieure à 3 secondes pour garder l’attention de l’utilisateur, en compressant les images et les vignettes par exemple,
 - Inciter l’utilisateur à l’action pour qu’il s’engage dans le site,
-- Adapter son site aux appareils les plus utilisés à l’aide du responsive design,
+- Adapter son site aux appareils les plus utilisés à l’aide du **responsive design**,
 - Tester son site sur plusieurs appareils, sur différentes plateformes (Mac, Windows, …) avec différents navigateurs internet (Chrome, Firefox, …).
 
 ## 3. Optimiser pour se faire mieux connaître <a id="section-3"></a>
 
 ### Mesurer pour optimiser <a id="subsection-4"></a>
 
-Les outils d'analyse permettent de savoir quelles sont les sections les plus consultées et connaître l'origine géographique des utilisateurs afin de pouvoir adapter sa stratégie. Par exemple, si de nombreuses personnes accèdent à son site sur un appareil mobile, il peut vérifier que son site est optimisé pour les smartphones, ou diffuser des annonces display pour les smartphones.
+Les outils d'analyse permettent de savoir quelles sont les sections les plus consultées et connaître l'origine géographique des utilisateurs afin de pouvoir adapter sa stratégie. On peut ainsi effectuer une segmentation de la clientèle ou par exemple, si de nombreuses personnes accèdent à son site sur un appareil mobile, on peut vérifier que son site est optimisé pour les smartphones.
+De plus, si on ajoute le code de suivi des conversions à la page qui s'affiche une fois que l'utilisateur a envoyé sa demande de renseignements, on saura quand un client potentiel a précisément effectué cette action. Ainsi, on pourra bien les distinguer de ceux qui ont consulté la page de demande d'informations, mais qui ont décidé de ne pas envoyer de message.
 
 Afin de fournir une analyse pertinente, il nous faut choisir nos **KPIs — les Key Indicator Performance** en anglais, sont les indicateurs d'une entreprise qui permettent de mesurer une performance — qui sont : - spécifiques - mesurables - réalistes - pertinents - limités dans le temps.
 Un KPI peut correspondre à n'importe quel élément vous rapprochant de la réalisation de votre objectif.
 
 ### Les moteurs de recherche <a id="subsection-5"></a>
 
-Les moteurs de recherche offrent aux utilisateurs la possibilité de trouver le produit ou le service dont ils ont besoin, au moment précis où ils en ont besoin. Ils peuvent également aider les entreprises à cibler les personnes les plus intéressées par leurs offres.
+Les **moteurs de recherche** offrent aux utilisateurs la possibilité de trouver le produit ou le service dont ils ont besoin, au moment précis où ils en ont besoin. Ils peuvent également aider les entreprises à cibler les personnes les plus intéressées par leurs offres.
 Chaque moteur de recherche a sa propre méthode de classement des sites, dont les détails sont soigneusement gardés secrets.
 Cependant, nous pouvons faire en sorte de maximiser nos chances d'apparaître dans les recherches en gardant quelques idées en tête.
 
@@ -114,11 +115,6 @@ En matière de référencement, la meilleure pratique consiste à créer différ
 
 On peut également choisir ces "mots-clés à exclure" pour éviter que des personnes ne voient son annonce lorsqu'elles effectuent des recherches sur ces termes pour diffuser des annonces qui correspondent précisément à la recherche des utilisateurs.
 
-Les outils d'analyse sont particulièrement utiles pour répondre à des questions telles que : quelle est l'efficacité d'un contenu ? Qui visite le site et devient un client ? Avec quels contenus les visiteurs interagissent-ils ? On peut ainsi faire de la segmentation de la clientèle (localisation, âge, publicité…).
-Si on ajoute le code de suivi des conversions à la page qui s'affiche une fois que l'utilisateur a envoyé sa demande de renseignements, on saura quand un client potentiel a précisément effectué cette action. Ainsi, on pourra bien les distinguer de ceux qui ont consulté la page de demande d'informations, mais qui ont décidé de ne pas envoyer de message.
-
-Néanmoins, ces outils ne permettent pas de savoir si les clients ont apprécié leur visite sur le site. Il faudra toujours penser à ses objectifs pour donner de la pertinence à nos analyses.
-
 ### La recherche locale <a id="subsection-6"></a>
 
 Pour certains, le meilleur moyen d'attirer les touristes serait d'adapter son site Web à la **recherche locale**. Aujourd'hui, les utilisateurs ont l'habitude de consulter leur téléphone lorsqu'ils sont en déplacement et ont besoin d'obtenir rapidement des informations. C'est pourquoi il est primordial d'établir une présence en ligne locale pour votre entreprise.
@@ -131,16 +127,16 @@ Le **GPS** est une technologie très intéressante, dont on peut tirer parti. Se
 
 ### 4. Introduction aux réseaux sociaux <a id="section-4"></a>
 
-La finalité des réseaux sociaux repose essentiellement sur la communication avec les utilisateurs, le but étant qu'ils vous connaissent mieux, vous et votre entreprise. Vous devez débuter une conversation, puis l'entretenir en publiant régulièrement du contenu, tout en veillant à ne pas inonder vos abonnés de messages. Nous vous déconseillons de nommer et de dénigrer vos concurrents, mais aussi de supprimer tous les posts négatifs, car cela pourrait nuire à votre image et déplaire aux abonnés. Pour ces mêmes raisons, évitez de trop commenter les posts personnels des abonnés.
+La finalité des réseaux sociaux repose essentiellement sur la **communication** avec les utilisateurs, le but étant qu'ils vous connaissent mieux, vous et votre entreprise. Vous devez débuter une conversation, puis l'entretenir en publiant régulièrement du contenu, tout en veillant à ne pas inonder vos abonnés de messages. Nous vous déconseillons de nommer et de dénigrer vos concurrents, mais aussi de supprimer tous les posts négatifs, car cela pourrait nuire à votre image et déplaire aux abonnés. Pour ces mêmes raisons, évitez de trop commenter les posts personnels des abonnés.
 Grâce aux réseaux sociaux, on peut mettre en avant le profil de son entreprise et développer sa clientèle en incitant les abonnés à partager leurs contenus avec leurs amis.
 
 Un plan marketing sur les réseaux sociaux permet de définir une stratégie et de planifier son activité sur les réseaux et de comment la mesurer. Ensuite, on peut créer des profils sur les réseaux sociaux les plus adaptés à son entreprise et configurer un outil de gestion afin d'effectuer le suivi de son activité sur ces sites. Enfin, on peut préparer des posts à l'avance, qui seront publiés automatiquement lors des événements clés qu'on a planifiés.
 
 Si on souhaite se développer à l'international, on n'a pas besoin de limiter ses annonces à une audience locale. Si on combine une audience mondiale et une publicité correctement ciblée, on pourra utiliser son budget judicieusement, en se concentrant sur les personnes qui ont le plus de chances de devenir des clients.
 
-L'analyse des réseaux sociaux permet aux responsables d'entreprise de savoir comment les clients interagissent sur leur site avec leurs produits et services, et comment ils y accèdent. Grâce à ces outils, on pourra déterminer si ce qu'elle entreprend est bénéfique et identifier les campagnes les plus efficaces pour générer du trafic vers son site Web. On verra également ce qui ne fonctionne pas, et pourra utiliser ces informations pour affiner et améliorer régulièrement sa stratégie sur les réseaux sociaux.
+L'analyse des réseaux sociaux permet aux responsables d'entreprise de savoir comment les clients interagissent sur leur site avec leurs produits et services, et comment ils y accèdent, pour déterminer si ce qu'elle entreprend est bénéfique et identifier les campagnes les plus efficaces pour générer du trafic vers son site Web.
 
-Le principal avantage des réseaux sociaux, c'est que vous pouvez vous adresser directement à vos clients, et interagir avec eux au bon moment et de la bonne façon.
+Le principal avantage des réseaux sociaux, c'est qu'on peut s'adresser directement à vos clients, et interagir avec eux au bon moment et de la bonne façon.
 
 ## 5. Conclusion <a id="section-5"></a>
 
