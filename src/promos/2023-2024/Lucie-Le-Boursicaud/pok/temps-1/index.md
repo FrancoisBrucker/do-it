@@ -129,13 +129,16 @@ Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la
 # Sprint 2
 ###### Objectifs du deuxième sprint
 Fonctionalités à implémenter : 
-+ [ ] Fonctionalité de "mot de passe oublié"
-+ [~] Ajouter une recette a ses favoris 
-+ [~] Pouvoir noter une recette
-+ [ ] Pouvoir laisser un avis sur une recette
-+ [ ] Avoir des badges en fonction du nombre de recettes publiées
-+ [ ] Pouvoir partager une recette 
-+ [ ] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates
++ [x] Fonctionalité de "mot de passe oublié"  - 1
++ [~] Ajouter une recette a ses favoris    - 3
++ [~] Pouvoir noter une recette         - 3
++ [x] Pouvoir laisser un avis sur une recette  - 2
++ [x] Avoir des badges en fonction du nombre de recettes publiées    - 1
++ [ ] Pouvoir partager une recette   - 5
++ [ ] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates   - 5
+
+Autres : 
++ [ ] Retravailler le design de certaines page - 3
 
 ## Sommaire
 
