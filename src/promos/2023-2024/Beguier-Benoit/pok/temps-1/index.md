@@ -71,23 +71,31 @@ J'ai visualisé la vidéo de présentation d'une trentaine de minutes afin de mi
 
 J'ai alors réalisé un premier modèle basé sur une représentation en un seul point de la monoplace. Ce point de masse *m* est soumis à la force de traînée, l'inertie, le poids et la résistance au roulement (Source : Zongxuan Sun, Guoming G. Zhu, *Design and Control of Automotive Propulsion Systems*, e-Book).
 
-Le but de cette modélisation est de soumettre le véhicule à un cycle de vitesse de référence : j'ai ici choisi le cycle classique effectué lors des tests de sécurité sur les prototypes automobiles. 
-Le pilote applique une force de traction (opérée par la pédale d'accélérateur) sur le véhicule pour que le véhicule ait la vitesse la plus proche possible de celle exigée par le cycle de référence. Le pilote agit donc comme un correcteur.
-Le véhicule est quant à lui modélisé à partir des lois physiques auxquelles il obéit, et que je ne détaillerai pas dans ce POK. Je les ajouterai cependant en Annexe pour les intéressés.
+Le but de cette modélisation est de soumettre le véhicule à un cycle de vitesse de référence : j'ai ici choisi le cycle classique EPA US06 effectué lors des tests de sécurité sur les prototypes automobiles aux Etats-Unis. 
+
+{% note %}
+Vous pourrez trouver plus d'informations sur le cycle EPA US06 [ici](https://www.epa.gov/emission-standards-reference-guide/epa-us06-or-supplemental-federal-test-procedures-sftp)
+{% endnote %}
+
+Pour ma modélisation, le pilote applique une force de traction (opérée par la pédale d'accélérateur) sur le véhicule pour que le véhicule ait la vitesse la plus proche possible de celle exigée par le cycle de référence. Le pilote agit donc comme un correcteur.
+Le véhicule est quant à lui modélisé à partir des lois physiques auxquelles il obéit, et que je ne détaillerai pas dans ce POK. Je les ajouter cependant dans l'Annexe en fin de document pour les intéressés.
+
+![Premier modèle](Simulink1.png)
+
 
 #### Résultats
 Après avoir exécuté la modélisation Simulink, j'obtiens un graphique comparant la vitesse exigée par le cycle et la vitesse réelle de la monoplace. Nous constatons que ces deux courbes sont **très proches** et qu'il faut zoomer pour voir une différence. 
 
 ![graphe1](Graphe1.png)
 
-L'écart le plus important que j'ai noté est de 0.2 mph, soit en comparant à la vitesse demandée un **écart de 0.3%**. 
+L'écart le plus important que j'ai noté est de 0.2 mph (comprenez *miles per hour*), soit en comparant à la vitesse demandée un **écart de 0.3%**. 
 
 ![graphe2](Graphe2.png)
 
 Nous pouvons affirmer que nous respectons ce cycle de conduite, et que la force de traction ainsi que la puissance utilisées pour cette masse sont tout à fait adéquates pour le respecter.
 
 #### Conclusion
-Cet écart pourrait paraître négligeable, et la modélisataion jugée suffisante. Cependant, le sport automobile reposant sur l'optimisation permanente, je décide de continuer mon travail et de fournir une modélisation plus poussée.
+Cet écart pourrait paraître négligeable, et la modélisataion jugée suffisante. Cependant, le sport automobile reposant sur l'optimisation permanente, je décide de continuer mon travail et de fournir une modélisation plus poussée. J'espère pouvoir en tirer un modèle plus proche de la réalité, ce qui ne se traduira pas pour autant par un gain de temps ou de vitesse.
 
 ## Etablir les paramètres d'intérêts pour une étude dynamique
 
@@ -104,7 +112,7 @@ Les paramètres cruciaux pour une telle simulation sont :
 - La masse du véhicule
 - La résistance au roulement
 
-## Nouvelle modélisation
+## Nouvelle modélisation plus approfondie
 Je décide cette fois de prendre en compte le système de freinage disponible pour le pilote, et de modéliser directement un sous-bloc moteur et un sous-bloc de transmission.
 Les paramètres suivants sont ainsi ajoutés :
 - Couple moteur
@@ -115,6 +123,30 @@ La transmission est assez simple. Elle doit simplement transmettre le couple du 
 
 La chaîne dans son entièreté est représentée ci-dessous :
 ![chaine](Simulink.png)
+
+#### Résultats
+Je décide de lancer la modélisation avec la même "stimulation" en entrée, c'est-à-dire le cycle de vitesse de référence US06. Voici le résultat en sortie du bloc du véhicule :
+![resultat](Graphe2-1.png)
+
+Dans l'ensemble, la courbe bleue est moins proche de la courbe jaune (ici la référence). Je rajoute un bloc qui permet d'afficher les écarts moyens, j'obtiens en moyenne un écart de **0.4 mph** là ou il représentait 0.05 mph pour le modèle précédent.
+
+Il est aussi utile de s'intéresser aux résultats locaux, c'est-à-dire aux  réponses du véhicule aux singularités de la courbe de référence.
+
+Lors des grandes consignes d'accélération vive, la réponse est très en retard, de lors de **2 secondes**, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de **10 mph** !
+
+![forte accel](Graphe2-2.png)
+
+Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ **0.25 mph**.
+
+![CONSTANCE](Graphe2-3.png)
+
+#### Conclusion sur le modèle
+Il m'est assez difficile de conclure sur la pertinence de mon modèle et sa précision. En rajoutant plus de paramètres, les courbes semblent montrer que le modèle est plus difficilement maniable et adaptable par rapport au cycle de référence. 
+Cependant, est-ce uniquement dû aux nouveaux paramètres pris en compte, je ne saurais le dire.
+
+## Simulateur de temps au tour
+#### Découverte de OpenLAP-Lap-Time-Simulator
+
 
 ## Annexe
 #### Annexe 1
@@ -128,3 +160,13 @@ Voici les équations qui régissent le mouvement de la monoplace dans la partie 
 ![Equations](equations.png)
 
 Source : Zongxuan Sun, Guoming G. Zhu, *Design and Control of Automotive Propulsion Systems*, e-Book.
+
+#### Annexe 3
+Voici le détail du bloc Monoplace dans la partie 3 :
+
+![GLIDER](modeleglider.png)
+
+#### Annexe 4
+Voici le détail du bloc Pilote dans la partie 3 :
+
+![DRIVER](modeledriver.png)
