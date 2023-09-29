@@ -158,7 +158,8 @@
 <li>Tâtonnement</li>
 <li>Première modélisation du comportement dynamique d'une monoplace</li>
 <li>Etablir les paramètres d'intérêts pour une étude dynamique</li>
-<li>Nouvelle modélisation</li>
+<li>Nouvelle modélisation plus approfondie</li>
+<li>Simulateur de temps au tour</li>
 </ol>
 <h2>Objectifs</h2>
 <p>Voici les objectifs que je me suis donné :</p>
@@ -236,9 +237,13 @@ Les paramètres suivants sont ainsi ajoutés :</p>
 <img src="Graphe2-1.png" alt="resultat"></p>
 <p>Dans l'ensemble, la courbe bleue est moins proche de la courbe jaune (ici la référence). Je rajoute un bloc qui permet d'afficher les écarts moyens, j'obtiens en moyenne un écart de <strong>0.4 mph</strong> là ou il représentait 0.05 mph pour le modèle précédent.</p>
 <p>Il est aussi utile de s'intéresser aux résultats locaux, c'est-à-dire aux  réponses du véhicule aux singularités de la courbe de référence.</p>
-<p>Lors des grandes consignes d'accélération vive, la réponse est très en retard, de lors de <strong>2 secondes</strong>, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de <strong>10 mph</strong> !</p>
+<ul>
+<li>Lors des consignes d'accélération vive, la réponse est très en retard, de l'ordre de <strong>2 secondes</strong>, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de <strong>10 mph</strong> soit environ <strong>16%</strong>!</li>
+</ul>
 <p><img src="Graphe2-2.png" alt="forte accel"></p>
-<p>Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ <strong>0.25 mph</strong>.</p>
+<ul>
+<li>Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ <strong>0.25 mph</strong>.</li>
+</ul>
 <p><img src="Graphe2-3.png" alt="CONSTANCE"></p>
 <h4>Conclusion sur le modèle</h4>
 <p>Il m'est assez difficile de conclure sur la pertinence de mon modèle et sa précision. En rajoutant plus de paramètres, les courbes semblent montrer que le modèle est plus difficilement maniable et adaptable par rapport au cycle de référence.<br>
