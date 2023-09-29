@@ -34,7 +34,8 @@ Pour la réalisation de ce cours, j'aurais plusieurs sources principales :
 2. Tâtonnement
 3. Première modélisation du comportement dynamique d'une monoplace
 4. Etablir les paramètres d'intérêts pour une étude dynamique
-5. Nouvelle modélisation
+5. Nouvelle modélisation plus approfondie
+6. Simulateur de temps au tour
 
 
 ## Objectifs
@@ -132,11 +133,11 @@ Dans l'ensemble, la courbe bleue est moins proche de la courbe jaune (ici la ré
 
 Il est aussi utile de s'intéresser aux résultats locaux, c'est-à-dire aux  réponses du véhicule aux singularités de la courbe de référence.
 
-Lors des grandes consignes d'accélération vive, la réponse est très en retard, de lors de **2 secondes**, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de **10 mph** !
+- Lors des consignes d'accélération vive, la réponse est très en retard, de l'ordre de **2 secondes**, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de **10 mph** soit environ **16%**!
 
 ![forte accel](Graphe2-2.png)
 
-Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ **0.25 mph**.
+- Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ **0.25 mph**.
 
 ![CONSTANCE](Graphe2-3.png)
 
