@@ -6,6 +6,7 @@ authors:
   - Lola Boudon
   - Henri Taing
   - Soline de Miribel
+  - Cassandra Ledins
 ---
 
 ## Idée
