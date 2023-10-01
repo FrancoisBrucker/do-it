@@ -40,6 +40,7 @@ Avoir un cerveau à moitié allumé et encore...
 Ici, vous trouverez la suite du MON 1-1, sur "Les principes fondamentaux du marketing digital". Suivant la conclusion écrite au MON 1-1, les répétitions sont toujours présentes. Je vais essayer de les éviter le plus possible et de simplement compléter ce qu'il manquait dans le MON 1-1. De plus, autre chose que je n'ai pas mentionné, les exemples ne sont pas forcément toujours pertinents. Je pensais en apprendre plus sur les réseaux sociaux, finalement, nous sommes restés à la surface, ou peut-être est-ce parce qu'il n'y a pas de fond...
 
 Pour une raison qui me dépasse, j'ai rencontré plein de problèmes sur cette moitié de la formation, des erreurs 404 à la pelle et des fautes (?) de traduction.
+:-------------------------:|:-------------------------:
 <img src="erreur404.jpg" width="350" height="350"> | <img src="eng2.jpg" width="350" height="350">
 
 J'ai essayé de reporter le problème à Google, mais même le formulaire n'a pas voulu s'envoyer.
