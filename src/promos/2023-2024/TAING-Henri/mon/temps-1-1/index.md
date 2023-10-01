@@ -140,7 +140,7 @@ Le principal avantage des réseaux sociaux, c'est qu'on peut s'adresser directem
 
 ## 5. Conclusion <a id="section-5"></a>
 
-Nous avons pu dans ce MON 1.1 voir les bases du marketing en ligne, mais il manque un énorme pan, les réseaux sociaux, que nous pourrons voir dans mon MON 1.2.
+Nous avons pu dans ce MON 1.1 voir les bases du marketing en ligne, mais il manque un pan, les réseaux sociaux, que nous pourrons voir dans mon MON 1.2.
 
 Un commentaire sur la formation :
 Je suis arrivé à l'équivalent de la moitié de la formation. Il y a beaucoup de répétitions et une insistence fatigante d'utiliser les outils proposés par Google (Oui, ils ont le monopole, mais le rappeler à chaque minute devient lassant). Bien que dans le fond, l'intérêt est là, sur la forme, je pense que l'on pourrait faire mieux, que ce soit en terme de volume horaire en organisant mieux les parties et en évitant des redites et en variant les façons de tester ses connaissances. On aurait également voulu plus de schémas et moins de blabla.
