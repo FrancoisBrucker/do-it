@@ -30,9 +30,9 @@ Avoir un cerveau à moitié allumé et encore...
    - [Publicité display contre les liens sponsorisés (SEM)](#subsection-3)
 3. [La vidéo](#section-3)
    - [D'abord, planifier](#subsection-4)
-   - [Les mots-clés](#subsection-5)
+   - [Des mesures utiles](#subsection-5)
    - [La recherche locale](#subsection-6)
-4. [Introduction aux réseaux sociaux](#subsection-5)
+4. [La fin d'une époque](#subsection-5)
 5. [Conclusion](#section-5)
 
 ## 1. Introduction <a id="section-1"></a>
@@ -80,7 +80,7 @@ Quelques points à garder en tête en plus :
 - Adapter son site aux appareils les plus utilisés à l’aide du **responsive design**,
 - Tester son site sur plusieurs appareils, sur différentes plateformes (Mac, Windows, …) avec différents navigateurs internet (Chrome, Firefox, …).
 
-## 3. Optimiser pour se faire mieux connaître <a id="section-3"></a>
+## 3. La vidéo <a id="section-3"></a>
 
 ### Mesurer pour optimiser <a id="subsection-4"></a>
 
