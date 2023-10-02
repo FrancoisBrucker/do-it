@@ -40,10 +40,12 @@ Pour la réalisation de ce cours, j'aurais plusieurs sources principales :
 
 ## Objectifs
 Voici les objectifs que je me suis donné :
-- Documentation et analyse de l'existant (moyen)
-- Modélisation dynamique simple du comportement d'une monoplace (moyen)
-- Etablir les paramètres d'intérêts pour une étude dynamique (facile)
-- Complexifier l'étude avec un paramétrage plus poussé (compliqué, bonus)
+- Documentation et analyse de l'existant (★★★☆☆)
+- Modélisation dynamique simple du comportement d'une monoplace (★★★☆☆)
+- Etablir les paramètres d'intérêt pour une étude dynamique (★★☆☆☆)
+- Complexifier l'étude avec un paramétrage plus poussé (★★★★☆)
+- Simuler des temps aux tours d'une modélisation (★★★☆☆)
+- Observer l'impact des paramètres d'intérêt (★★★☆☆)
 
 ## Tâtonnement
 {% exercice %}
