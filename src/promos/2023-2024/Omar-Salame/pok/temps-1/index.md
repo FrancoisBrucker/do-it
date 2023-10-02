@@ -43,4 +43,15 @@ résumé: Mon premier site web.
 - Création d'une base de données des équipes et joueurs de la Botola Pro.
 - Initialisation à l HTML CSS
 <img src="header.png" width="700" height="550">
-<img src="body.png" width="700" height="550">
+
+## Deuxième Sprint
+J'ai fais un webscrapping pour collecter les données de la ligues(équipes, joueurs...). La difficulté que j'ai rencontré c'est que les données ne sont pas centralisées en un endroit. Donc j'ai utilisé differents site web pour la collecte des données.
+:-------------------------:|:-------------------------:
+<img src="player_excel.png" width="650" height="500"> | <img src="player_excel2.png" width="650" height="500">
+J'ai travaillé sur le désigne de la page: 
+- Création d'un poster pour la ligue
+<img src="poster.png" width="700" height="550">
+- Restructuration de la page d'accueil
+<img src="index.png" width="700" height="550">
+
+
