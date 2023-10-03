@@ -192,6 +192,9 @@ Les intérêts
 ## Premières répartitions des tâches 
 | Taches | Affectée à | Statut |
 | ------- | ---------- | ------ |
+| Recueillir le besoin des étudiants | Tous le monde | A faire |
+| Construire une US | | A faire |
+| Benchmarker les étudiants des autres écoles sur leur recherche de mobilité | A faire |
 | Préparer un Git-Hub   | Lucie | A faire |
 | Choisir nos extensions    | Lucie | A faire |
 | Hébergement du site      | | A faire |
