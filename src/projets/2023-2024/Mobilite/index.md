@@ -187,3 +187,17 @@ Les intérêts
 
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
 - Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
+
+
+## Premières répartitions des tâches 
+| Taches | Affectée à |
+| ------- | ---------- |
+| Préparer un Git-Hub   | Lucie |
+| Choisir nos extensions    | Lucie |
+| Hébergement du site      | |
+| Etudier la connexion CAS     | |
+| Faire les maquettes de toutes les pages    | Paul & Kawtar|
+| Tables de données   | Mathis & Agathe |
+| Préparer l'entretien avec les RI   | Tous le monde |
+| Faire un Google Form pour les centraliens    | Mathis & Agathe |
+| Choisir entre API Google ou GeoPanda | |
