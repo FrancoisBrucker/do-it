@@ -82,3 +82,32 @@ Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à cr
 
 Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'étais pas assez précis dans ma planification et que Do_It est en fait véritablement calqué sur la gestion de projet agile.
 Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.
+
+Après m'être posé pendant une bonne heure, j'ai établi mes objectifs de cette deuxième partie du POK :
+
+- En apprendre plus sur ce qu'était la RSE,
+- Apprendre à créer un site plus que fonctionnel à l'aide d'un outil no/low code, ici Bubble.io,
+- Comment établir une analyse de la politique RSE d'une entreprise pour pouvoir donner un avis construit et éduqué.
+
+Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la suite de Fibonacci qui ira de 1 à 55. Pour ce qui a été fait au sprint 1, nous mettrons un V et, pour le sprint 2, un X. Le total de points de complexité est 45 et j'ai effectué au sprint 1, 11 points en 6h, il va falloir mettre le turbo pour les 13 prochaines heures. Les choses que je n'ai pas faites consitueront le backlog de mon sprint 2 :
+
+- Apprendre sur ce qu'était la RSE [V] = 1
+- Créer un site opérationnel sur Bubble.io [] = 31
+  Logo [V] = 1
+  Une page index et les autres pages qui vont avec [] = 17
+  - Log-in, sign-in qui s'affichera avec un pop-up [V] = 5
+  - Barre de navigation [V] = 3
+  - Page de profil/paramètres [] = 3
+  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [] = 2
+  - Page de contact [] = 1
+  - Formulaire pour donner son avis [] = 2
+  - Page pour présenter la RSE [V] = 1
+    Gérer la base de données [] = 13
+  - Gérer l'inscription des Users, leur connexion et leur déconnexion [] = 5
+  - Gérer les formulaires pour donner son avis [] = 5
+  - Gérer les demandes de prises de contact [] = 3 (Je progresserai donc la difficulté diminuera)
+- Analyse RSE [] = 13
+  S'imprégner des principales méthodes d'analyse [] = 2
+  Choisir une méthode et établir des critères d'évaluations [] = 2
+  Analyse d'une politique RSE, on prendra **Patagonia** [] = 8
+  La présenter [] = 1
