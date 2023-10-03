@@ -79,3 +79,6 @@ Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à cr
 - Créer une page fiche contact et services remise à niveau
 
 ## Ce que j'ai fait à la fin du temps 2
+
+Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'étais pas assez précis dans ma planification et que Do_It est en fait véritablement calqué sur la gestion de projet agile.
+Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.
