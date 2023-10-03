@@ -6,6 +6,8 @@ authors:
   - Rabachou Agathe
   - Le Boursicaud Lucie
   - Schultz Mathis
+  - Paul Le Bihan
+  - Kwatar Bahir
 ---
 ## Introduction - définition du projet
 
