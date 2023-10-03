@@ -22,8 +22,7 @@ L'étudiant remplit un formulaire :
 
 #### Plusieurs méthodes possibles
 
-```
-Un formulaire sur une page annexe
+###### Un formulaire sur une page annexe
 
 L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site  
 et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
@@ -32,17 +31,14 @@ Cette méthode requiert :
 
 - une page de dépôt hébergé sur le site
 - Une page administrateur pour valider les mobilités qui seront déposé.
-```
 
-```
-un formulaire Moodle  
+###### Un formulaire Moodle  
 
 Cette méthode requiert :
 
 - Un formulaire Moodle précis donnant des réponses sous un format exploitable.
 - une validation de l'administration
 - une implémentation manuelle de l'administration dans la base de donnée.
-```
 
 ### Site publique/réservé à Centrale
 
@@ -134,19 +130,15 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 ## Ressources utilisées
 
 ### Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application
-
-```
 Les intérêts
 
 - Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?
 - Est-ce que vous souhaitez être contacté ?
 - Acceptez vous que vos informations soient visible ?
 - Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?
-```
 
 ### Questionnaire pour recueillir l'avis de l'administration Centralienne
 
-```
 Les intérêts
 
 - Le but est de s'assurer de l'intérêt pour l'administration.
@@ -160,11 +152,9 @@ serveur de Centrale ? système de login ?
 pas déjà dans la liste)
 - Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minnimum/  
 Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
-```
 
 ### La réalisation d'une maquette CANVA
 
-```
 Les intérêts
 
 - Réfléchir aux différentes fonctionnalités pour rendre l'application viable
@@ -172,19 +162,15 @@ Les intérêts
 - Établir l'esthétisme du site
 - Modéliser les différentes interfaces : utilisateur/élève  
 déposant sa mobilité/administrateur de l'école
-```
 
 ### La réalisation d'un MVP (minimum viable project)
 
-```
 Les intérêts
 
 - tester la faisabilité d'un projet rapidement.
 - Avoir une première application à éprouver pour trouver les limites du projet  
 et cadrer proprement les outils à développer.
-```
 
-```
 Les phases pour faire le MVP (minimum viable product)
 
 1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
@@ -192,13 +178,10 @@ les fonctionnalités qui les intéresse.
 2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )
 3. Tests des parcours utilisateurs (résolution et dev bug).
 4. Préparation du pitch et de la démonstration.
-```
 
 ### La réalisation du site web final
 
-```
 Les intérêts
 
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
 - Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
-```
