@@ -190,14 +190,14 @@ Les intérêts
 
 
 ## Premières répartitions des tâches 
-| Taches | Affectée à |
-| ------- | ---------- |
-| Préparer un Git-Hub   | Lucie |
-| Choisir nos extensions    | Lucie |
-| Hébergement du site      | |
-| Etudier la connexion CAS     | |
-| Faire les maquettes de toutes les pages    | Paul & Kawtar|
-| Tables de données   | Mathis & Agathe |
-| Préparer l'entretien avec les RI   | Tous le monde |
-| Faire un Google Form pour les centraliens    | Mathis & Agathe |
-| Choisir entre API Google ou GeoPanda | |
+| Taches | Affectée à | Statut |
+| ------- | ---------- | ------ |
+| Préparer un Git-Hub   | Lucie | A faire |
+| Choisir nos extensions    | Lucie | A faire |
+| Hébergement du site      | | A faire |
+| Etudier la connexion CAS     | | A faire |
+| Faire les maquettes de toutes les pages    | Paul & Kawtar| A faire |
+| Tables de données   | Mathis & Agathe | A faire |
+| Préparer l'entretien avec les RI   | Tous le monde | A faire |
+| Faire un Google Form pour les centraliens    | Mathis & Agathe | A faire |
+| Choisir entre API Google ou GeoPanda | | A faire |
