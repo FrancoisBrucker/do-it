@@ -7,7 +7,7 @@ authors:
   - Le Boursicaud Lucie
   - Schultz Mathis
   - Paul Le Bihan
-  - Kwatar Bahir
+  - Kawtar Bahir
 ---
 ## Introduction - définition du projet
 
