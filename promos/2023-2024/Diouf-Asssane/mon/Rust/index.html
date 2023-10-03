@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Rust</title>
+        <title>Introduction à Rust</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Rust</h1>
+<h1 class="mb-1">Introduction à Rust</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/">MON d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">Rust</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/">MON d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">Introduction à Rust</a>
 
 </div></div>
 
@@ -163,9 +163,9 @@
 </code></pre>
 <p>L'usage est cependant d'utiliser <strong>cargo</strong> pour développer avec Rust. Cargo va permettre de gérer l'ensemble des dépendances du projet avec d'autres librairies Rust (des crates) et de facilement créer un exécutable et le tester.</p>
 <h2>Les particularités de Rust</h2>
-<p>Tout d'abord, Rust est un <strong>langage</strong> typé, mais contrairement à d'autres langages typés comme le C, il prend aussi en compte l'espace occupé par chaque type. Par exemple, un entier signé sur 32bits a pour type i32 alors qu'un entier signé sur 8bits a pour type i8. Avec ce système de type, Rust vient avec un système <em>simple</em> de conversion des variables d'un type à un autre. Rust introduit aussi une forme de string plus piégeuse que dans d'autres langages mais, en contrepartie, permet vraiment de travailler avec tout type de charactères de façon sécurisée.</p>
+<p>Tout d'abord, Rust est un <strong>langage</strong> typé, mais contrairement à d'autres langages, il prend aussi en compte l'espace occupé par chaque type. Par exemple, un entier signé sur 32bits a pour type i32 alors qu'un entier signé sur 8bits a pour type i8. Je trouve Rust particulièrement plus lisible que le C/C++ avec ces notations. En plus de ce système de type, Rust vient avec un système <em>simple</em> de conversion des variables d'un type à un autre. Rust introduit aussi une forme de string plus piégeuse que dans d'autres langages mais, en contrepartie, permet vraiment de travailler avec tout type de charactères de façon sécurisée.</p>
 <p>On peut aussi parler du fait que la valeur nulle n'existe pas dans Rust. A la place, Rust introduit des énumérations comme les Options qui peuvent valoir Some(quelque chose) ou None. Couplé avec les matchs par exemple, cela permet de mieux gérer les erreurs à mon sens.</p>
-<p>Ensuite, il y a l'<strong>owwnership</strong> (la <em>propriété</em> en français), qui est un ensemble de 3 règles dont le but est de réduire le nombre d'erreurs dûe à la manipulation de la mémoire.</p>
+<p>Ensuite, il y a l'<strong>ownership</strong> (la <em>propriété</em> en français), qui est un ensemble de 3 règles dont le but est de réduire le nombre d'erreurs dûe à la manipulation de la mémoire.</p>
 <h2>C'est quoi l'ownership ?</h2>
 <p>L'ownership est un système de <strong>management de la mémoire</strong> en Rust, basé sur les règles suivantes :</p>
 <ul>
@@ -173,7 +173,7 @@
 <li>Il ne peut y avoir qu'un proprétaire à la fois par valeur.</li>
 <li>Les valeurs sont automatiquement détruites avec le propriétaire.</li>
 </ul>
-<p>Ces règles sont importantes à garder en tête lors du maniement de valeur qui ne sont pas clonables. Il est alors intéressant, à mon sens, de tout voir alors comme dans le cas où l'on possède un objet :</p>
+<p>Ces règles sont importantes à garder en tête lors du maniement de certaines valeurs. Il est alors intéressant, à mon sens, de tout voir alors comme dans le cas où l'on possède un objet :</p>
 <ul>
 <li>il n'a qu'un seul propriétaire</li>
 <li>si on le donne, il n'est plus à nous</li>
