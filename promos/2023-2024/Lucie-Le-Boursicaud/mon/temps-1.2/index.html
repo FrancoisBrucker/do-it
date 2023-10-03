@@ -254,6 +254,49 @@ Beaucoup de calculs sont possibles pour les variables de type nombre (<em>effect
 <li>La <em>tendance centrale</em> qui concerne les valeurs <strong>moyennes</strong>.</li>
 <li>La <em>variabilité</em> qui concerne la <strong>distribution</strong> des valeurs.</li>
 </ul>
+<h4>Dénombrement, maximum et minimum</h4>
+<ul>
+<li>Dénombrement<br>
+L'objectif est de pouvoir compter l'effectif d'une donnée au sein d'une série statistique. La fonction <em><a href="http://NB.SI">NB.SI</a></em> permet de compter le nombre de cellules qui répondent à un critère donné.</li>
+</ul>
+<p>Exemple : <em>Nombre de peintures qui ont nécessités plus de 2H de travail</em></p>
+<div stype="display:flex"><img src="denomb.png"></div>
+<p>Avec cette fonction les données manquantes sont automatiquement exclues de l'anlyse. Pour savoir combien de données manquent on peut utiliser la fonction <em>NB</em> qui permet de compter le nombre de cellules remplies. Il suffira donc de soustraire ce nombre au nombre total d'enregistrement dans la base de données.</p>
+<ul>
+<li>
+<p>Maximum et minimum<br>
+L'objectif est ici d'obtenir la plus grande ou la plus peite valeur d'une plage de données. Pour ce faire on utilise les fonction <em>MIN</em> et <em>MAX</em>.</p>
+</li>
+<li>
+<p>D'autres fonctions<br>
+On utilise aussi la moyenne afn d'obtenir la tendance centrale, ou encore la médiane. La grosse différence entre les deux c'est que la moyenne va être bien plus sensibles aux valeurs abbérantes que la médiane.</p>
+</li>
+<li>
+<p>Mesures de variabilités<br>
+Elles permettent d'avoir une idée de la distribution des enregistrement de la BDD. Parmi elles on retrouve l'<em>étandue</em>, l'<em>écart-type</em>, la <em>variance</em>.</p>
+</li>
+</ul>
+<h2>5. Visualisation de données</h2>
+<h4>Introduction</h4>
+<p>Une fois différentes analyses menées il est toujours plus parlant de pouvoir les visualiser pour les interpréter. En fournissant une <strong>représentation visuelle</strong> notre cerveaux appréhende plus naturellement des données.<br>
+Afin d'utiliser une représentation adéquate il faut se poser deux questions:</p>
+<ul>
+<li><strong>Qu'est-ce que j'essaie de dire?</strong></li>
+<li>
+<ul>
+<li><strong>A qui j'essaie de le dire?</strong></li>
+</ul>
+</li>
+</ul>
+<h4>Comment représenter des données quantitatives?</h4>
+<p>Il existe une variété de représentations statistiques mais toutes ne sont pas adaptés à nos données. Voici les trois grandes catégories :</p>
+<ul>
+<li>Modèle de comparaison</li>
+<li>Modèle de composition</li>
+<li>Modèle de distribution</li>
+</ul>
+<p>Dans chacune en fonction du type et du nombre de variables que l'on souhaite réalisée différents sous-modèle sont plus ou moins appropriés.</p>
+<p>Exemples :</p>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -273,6 +316,11 @@ Beaucoup de calculs sont possibles pour les variables de type nombre (<em>effect
 <td>Jeudi 28/09</td>
 <td>2H</td>
 <td>Création d'une BDD et nettoyage</td>
+</tr>
+<tr>
+<td>Vendredi 29/09</td>
+<td>1H</td>
+<td>Dénombrement, minimum, maximum</td>
 </tr>
 </tbody>
 </table>
