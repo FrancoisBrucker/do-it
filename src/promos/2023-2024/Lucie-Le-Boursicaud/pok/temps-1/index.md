@@ -124,7 +124,7 @@ Une fois cette partie réalisé je me suis consacrée à la page de profil de l'
 <div></div>
 </div>
 
-Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la bar de navigation. Lorsque l'utilisateur clique sur l'une des icones il est redirigé vers la page corresponsante. 
+Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la barre de navigation. Lorsque l'utilisateur clique sur l'une des icones il est redirigé vers la page corresponsante. 
 
 # Sprint 2
 ###### Objectifs du deuxième sprint
@@ -144,3 +144,8 @@ Autres :
 
 1. Développement de l'application
 2. Conclusion 
+
+
+## 1. Déveoppement de l'application
+
+Pour ajouter la fonctionalité de favoris ça m'a paru un peu plus délicat que d'autres fonctionalités. J'ai essayé de trouver une solution par moi-même, mon idée de base étant d'avoir une table *Favoris* avec l'Id de la recette et de l'utilisateur concerné, puis de filtrer les recettes à partir de cette table. Seulement il n'était pas possible de le formuler tel quel et après 1h d'essais je me suis tournée vers l'excellente plateforme <strong>Youtube</strong> afin de me trouver un tuto sur cette fonctionalité. Et bingo ! Voici la (super) courte vidéo qui a résolu tous mes soucis : [How to Favorite Items in Adalo](https://www.youtube.com/watch?v=7EMMGKGYL0g). 

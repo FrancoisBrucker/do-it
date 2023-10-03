@@ -127,9 +127,48 @@ On peut s'y pencher selon 3 axes :
 + La *distribution* qui concerne la <strong>fréquence</strong> de chaque valeur.
 + La *tendance centrale* qui concerne les valeurs <strong>moyennes</strong>.
 + La *variabilité* qui concerne la <strong>distribution</strong> des valeurs.
+  
+#### Dénombrement, maximum et minimum
++ Dénombrement
+L'objectif est de pouvoir compter l'effectif d'une donnée au sein d'une série statistique. La fonction *NB.SI* permet de compter le nombre de cellules qui répondent à un critère donné.
+
+Exemple : *Nombre de peintures qui ont nécessités plus de 2H de travail*
+<div stype="display:flex"><img src="denomb.png"></div>
+
+Avec cette fonction les données manquantes sont automatiquement exclues de l'anlyse. Pour savoir combien de données manquent on peut utiliser la fonction *NB* qui permet de compter le nombre de cellules remplies. Il suffira donc de soustraire ce nombre au nombre total d'enregistrement dans la base de données.
+
++ Maximum et minimum
+L'objectif est ici d'obtenir la plus grande ou la plus peite valeur d'une plage de données. Pour ce faire on utilise les fonction *MIN* et *MAX*.
+
++ D'autres fonctions
+On utilise aussi la moyenne afn d'obtenir la tendance centrale, ou encore la médiane. La grosse différence entre les deux c'est que la moyenne va être bien plus sensibles aux valeurs abbérantes que la médiane.
+
++ Mesures de variabilités
+Elles permettent d'avoir une idée de la distribution des enregistrement de la BDD. Parmi elles on retrouve l'*étandue*, l'*écart-type*, la *variance*.
+
+## 5. Visualisation de données
+#### Introduction
+Une fois différentes analyses menées il est toujours plus parlant de pouvoir les visualiser pour les interpréter. En fournissant une <strong>représentation visuelle</strong> notre cerveaux appréhende plus naturellement des données.
+Afin d'utiliser une représentation adéquate il faut se poser deux questions:
++ <strong>Qu'est-ce que j'essaie de dire?</strong>
++ + <strong>A qui j'essaie de le dire?</strong>
+
+#### Comment représenter des données quantitatives?
+Il existe une variété de représentations statistiques mais toutes ne sont pas adaptés à nos données. Voici les trois grandes catégories :
+
++ Modèle de comparaison 
++ Modèle de composition
++ Modèle de distribution
+
+Dans chacune en fonction du type et du nombre de variables que l'on souhaite réalisée différents sous-modèle sont plus ou moins appropriés.
+
+Exemples : 
+
 
 ### Horodateur 
 | Date | Heures passées | Indications | 
 | -------- | -------- |-------- |
 | Mercredi 27/09  | 1H  | Choix des sources/cours à suivre et début de l'apprentissage |
 | Jeudi 28/09  | 2H  | Création d'une BDD et nettoyage |
+| Vendredi 29/09 | 1H | Dénombrement, minimum, maximum |
+
