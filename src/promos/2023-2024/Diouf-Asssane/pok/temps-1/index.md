@@ -64,10 +64,10 @@ J'ai donc pu en arriver au point que je visais à la fin de ce premier point POK
 
 ## Ce que j'ai prévu pour le second point POK
 Pour la suite, voici les taches que je souhaite terminer :
-- Terminer l'algorithme de génération des grilles
-- Envoyer une grille avec des cases non complétées ainsi que les indices associés
-- Afficher la grille dans la page
-- Gérer le remplissage de la grille par le joueur
-- Gérer la validation de la grille remplie par le joueur
+- Terminer l'algorithme de génération des grilles *(difficulté estimée : 5)*
+- Envoyer une grille avec des cases non complétées ainsi que les indices associés *(difficulté estimée : 2)*
+- Afficher la grille dans la page *(difficulté estimée : 1)*
+- Gérer le remplissage de la grille par le joueur *(difficulté estimée : 3)*
+- Gérer la validation de la grille remplie par le joueur *(difficulté estimée : 1)*
 
 ## Ce que j'ai fait à la fin du temps 1
