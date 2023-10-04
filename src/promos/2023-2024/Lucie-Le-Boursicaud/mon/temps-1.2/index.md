@@ -14,7 +14,7 @@ tags:
 résumé: "Dans ce MON l'objectif est d'apprendre à utiliser Excel dans le but d'analyser des données."
 ---
 {%prerequis 'Niveau débutant'%} 
-Aucun prérequis
+Aucun prérequis si ce n'est avoir Excel ! 
 {%endprerequis%}
 
 ## Introduction

@@ -130,7 +130,7 @@ Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la
 ###### Objectifs du deuxième sprint
 Fonctionalités à implémenter : 
 + [x] Fonctionalité de "mot de passe oublié"  - 1
-+ [~] Ajouter une recette a ses favoris    - 3
++ [x] Ajouter une recette a ses favoris    - 3
 + [~] Pouvoir noter une recette         - 3
 + [x] Pouvoir laisser un avis sur une recette  - 2
 + [x] Avoir des badges en fonction du nombre de recettes publiées    - 1
