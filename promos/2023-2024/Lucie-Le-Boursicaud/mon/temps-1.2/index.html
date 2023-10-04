@@ -151,6 +151,7 @@
 <li>Nettoyage de données sur Excel</li>
 <li>Analyse de données sur Excel</li>
 <li>Visualisation de données</li>
+<li>Mise en application par l'analyse complète d'un jeu de données</li>
 </ol>
 <h4>Ressources et Outils utilisés</h4>
 <ul>
@@ -229,7 +230,7 @@ Alors, le but est de déceler : <em>les valeurs manquantes</em> , <em>celulles v
 <ul>
 <li>Nombres enregistrés sous forme de texte :<br>
 Il faut sélectionner toute la plage de données concernée faire un clic droit et choisir &quot;Convertir en nombre&quot;</li>
-<li>Trouver un point au lieu d&quot;une virgule pour les nombres :<br>
+<li>Trouver un point au lieu d'une virgule pour les nombres :<br>
 Il faut utiliser la fonction &quot;Rechercher et remplacer&quot; pour modifier les points par des virgules.</li>
 <li>Les espaces inutiles :<br>
 On utilise la formule <strong>SUPPRESPACE()</strong> qui permet de supprimeer les espaces du texte à l'exception des espaces simples entre les mots.</li>
@@ -282,11 +283,7 @@ Elles permettent d'avoir une idée de la distribution des enregistrement de la B
 Afin d'utiliser une représentation adéquate il faut se poser deux questions:</p>
 <ul>
 <li><strong>Qu'est-ce que j'essaie de dire?</strong></li>
-<li>
-<ul>
 <li><strong>A qui j'essaie de le dire?</strong></li>
-</ul>
-</li>
 </ul>
 <h4>Comment représenter des données quantitatives?</h4>
 <p>Il existe une variété de représentations statistiques mais toutes ne sont pas adaptés à nos données. Voici les trois grandes catégories :</p>
@@ -296,7 +293,31 @@ Afin d'utiliser une représentation adéquate il faut se poser deux questions:</
 <li>Modèle de distribution</li>
 </ul>
 <p>Dans chacune en fonction du type et du nombre de variables que l'on souhaite réalisée différents sous-modèle sont plus ou moins appropriés.</p>
-<p>Exemples :</p>
+<p>Exemples : <em>Il y a-t-il une corrélation entre le temps passé sur une peinture et son appréciation ?</em></p>
+<div stype="display:flex"><img src="correlation.png"></div>
+<p>Pour déterminer si il y'a une corrélation entre les deux données on peut tracer le nuage de points d'une variable par rapport à l'autre. On se rend compte qu'il n'y a pas nécessairement de tendance mise en lumière mais comme il s'agit d'un tout petit échantillon de données c'est plutôt normal surtout que les données ont été inventé. Sur de vraie jeux de données il est très utile d'analyse ce genre de comportement.</p>
+<h2>6. Mise en application par l'analyse complète d'un jeu de données</h2>
+<p>Afin d'appliquer les différentes notions vu précédemment j'ai décidé de télécharger une base de données à partir du site <a href="%22https:/data.ampmetropole.fr%22">M DATA</a>. Je me suis penchée sur une BDD sur la fréquentation des musées : <a href="%22https:/data.ampmetropole.fr/explore/dataset/mod-frequentation-des-musees-metropolitains/export/%22">Fréquentation des musées</a> que j'ai téléchargé en format Excel.</p>
+<h4>Etape 1 : Mise en forme des données</h4>
+<p>Lorsqu'on ouvre le fichier voici ce que l'on obtient :</p>
+<div stype="display:flex"><img src="bddmusee.png"></div>
+<p>La première chose que l'on peut mettre en évidence se sont les cellules vide :</p>
+<h4>Etape 2 : Analyse des données</h4>
+<p>On va utiliser les formules vues plus tôt afin d'analyser nos données.<br>
+La première chose que je trouve intéressante est de chercher l'enregistrement possédant la plus grande fréquentation toutes années comprises. Pour celà je savais déterminer le maximum mais comment récupérer l'ID du musée correspondant ainsi que son nom et l'année de l'enregistrement ? Je me suis donc renseigné pour trouver la formule <strong>=RECHERCHERV</strong>. Seulement cette formule ne fonctionne que si la valeur rechercher se trouve dans la première colonne ce qui n'est pas le cas ici. J'ai donc du utilisé deux formules pour séquencer mon travail :</p>
+<ul>
+<li>Trouver la ligne correspondante à la valeur cherchée<br>
+J'utilise alors la formule <strong>=EQUIV</strong></li>
+<li>Trouver les informations d'une ligne<br>
+J'utilise alors la formule <strong>=INDEX</strong></li>
+</ul>
+<p>On obtient alors ce type de données :</p>
+<div stype="display:flex"><img src="analyse.png"></div>
+<p>Par la suite je suis allée bien plus loin dans mes différentes analyses pour obtenir ceci :</p>
+<h4>Etape 3 : Visualisation des données</h4>
+<p>Maintenant j'ai envie de rendre mes données plus interprétables pour des personnes n'ayant pas travaillé sur la BDD.</p>
+<div><div stype="display:flex"><img src="fgloable.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
+<div stype="display:flex"><img src="parannées.png"></div>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -321,6 +342,16 @@ Afin d'utiliser une représentation adéquate il faut se poser deux questions:</
 <td>Vendredi 29/09</td>
 <td>1H</td>
 <td>Dénombrement, minimum, maximum</td>
+</tr>
+<tr>
+<td>Mardi  03/10</td>
+<td>2H</td>
+<td>Recherche d'une base de données à traiter et début de l'application</td>
+</tr>
+<tr>
+<td>Mercredi 04/10</td>
+<td>2H</td>
+<td>Application sur les fréquentations des musées</td>
 </tr>
 </tbody>
 </table>
