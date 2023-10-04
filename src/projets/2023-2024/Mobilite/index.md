@@ -201,6 +201,6 @@ Les intérêts
 | Etudier la connexion CAS     | | A faire |
 | Faire les maquettes de toutes les pages    | Paul & Kawtar| A faire |
 | Tables de données   | Mathis & Agathe | A faire |
-| Préparer l'entretien avec les RI   | Tous le monde | A faire |
+| Préparer l'entretien avec les RI   | Tout le monde | A faire |
 | Faire un Google Form pour les centraliens    | Mathis & Agathe | A faire |
 | Choisir entre API Google ou GeoPanda | | A faire |
