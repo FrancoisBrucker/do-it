@@ -131,14 +131,14 @@ Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la
 Fonctionalités à implémenter : 
 + [x] Fonctionalité de "mot de passe oublié"  - 1
 + [x] Ajouter une recette a ses favoris    - 3
-+ [~] Pouvoir noter une recette         - 3
++ [x] Pouvoir noter une recette         - 3
 + [x] Pouvoir laisser un avis sur une recette  - 2
 + [x] Avoir des badges en fonction du nombre de recettes publiées    - 1
-+ [ ] Pouvoir partager une recette   - 5
-+ [ ] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates   - 5
++ ~~[ ] Pouvoir partager une recette   - 5 ~~ Impossible sur la version gratuite
++ [~] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates   - 5
 
 Autres : 
-+ [ ] Retravailler le design de certaines page - 3
++ [ ] Retravailler le design de certaines pages - 3
 
 ## Sommaire
 
@@ -149,3 +149,26 @@ Autres :
 ## 1. Déveoppement de l'application
 
 Pour ajouter la fonctionalité de favoris ça m'a paru un peu plus délicat que d'autres fonctionalités. J'ai essayé de trouver une solution par moi-même, mon idée de base étant d'avoir une table *Favoris* avec l'Id de la recette et de l'utilisateur concerné, puis de filtrer les recettes à partir de cette table. Seulement il n'était pas possible de le formuler tel quel et après 1h d'essais je me suis tournée vers l'excellente plateforme <strong>Youtube</strong> afin de me trouver un tuto sur cette fonctionalité. Et bingo ! Voici la (super) courte vidéo qui a résolu tous mes soucis : [How to Favorite Items in Adalo](https://www.youtube.com/watch?v=7EMMGKGYL0g). 
+Une fois la fonctionalité mise en place j'ai donc pu afficher les recettes favorites dans une page spéciale.
+<div style="display:flex">
+<div><img src="fav.png"></div>
+<div></div>
+</div>
+Je n'aime pas spécialement le design de cette page mais je viendrais retravailler ça après avoir développer les fonctionalités manquantes.
+
+Ensuite il a fallu mettre en place un système de notation des recettes par les utilisateurs. J'ai donc utilisé un plug-in adapté appelé <strong>Rating</strong>. Il permet d'ajouter une échelle de note à base d'icones que l'on peut choisir et d'effectuer une action lorsque l'on clique sur une note. J'ai donc rajouté le champs <strong>Rate</strong> pour la collection <strong>Recette</strong> qui est modifié lorsqu'un utilisateur note la recette en faisant la moyenne des notes qui ont été données.
+<div style="display:flex">
+<div><img src="rating.png"></div>
+<div><img src="ratingaverage.png"></div>
+</div>
+La moyenne s'affiche alors sous l'image de la recette.
+
+Par la suite j'ai implémenter la possibilité de publier des avis sur des recettes à l'aide d'un petit formulaire. J'ai créé une nouvelle collections <strong>Avis</strong> qui est relié à une recette et un utilisateur. Voici ce que cela donne : 
+<div style="display:flex">
+<div><img src="avis.png"></div>
+<div></div>
+</div>
+Encore une fois le design sera retravaillé par la suite.
+
+
+Après, il a fallu que je m'occupe de l'ajout des ingrédients et des quantités en faisant en sorte que l'ajout de ces éléments soit pratique pour un utilisateur qui souhaite ajouter une nouvelle recette. J'ai pas mal réfléchis pour faciliter l'implémentation de cette fonctionalité pour obtenir ce résultat : 
