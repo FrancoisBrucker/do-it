@@ -20,6 +20,8 @@ résumé: Ce POK a pour but d'utiliser un site de création d'application No Cod
 Aucun prérequis !  
 {%endprerequis%}
 
+
+
 # Sprint 1 
 ###### Objectifs du premier sprint
 Fonctionalités à implémenter : 
@@ -126,6 +128,8 @@ Une fois cette partie réalisé je me suis consacrée à la page de profil de l'
 
 Pour que le parcours utilisateur soit le plus agréable possible j'ai ajouté la barre de navigation. Lorsque l'utilisateur clique sur l'une des icones il est redirigé vers la page corresponsante. 
 
+
+
 # Sprint 2
 ###### Objectifs du deuxième sprint
 Fonctionalités à implémenter : 
@@ -172,3 +176,8 @@ Encore une fois le design sera retravaillé par la suite.
 
 
 Après, il a fallu que je m'occupe de l'ajout des ingrédients et des quantités en faisant en sorte que l'ajout de ces éléments soit pratique pour un utilisateur qui souhaite ajouter une nouvelle recette. J'ai pas mal réfléchis pour faciliter l'implémentation de cette fonctionalité pour obtenir ce résultat : 
+<div style="display:flex">
+<div><img src="new1.png"></div>
+<div><img src="new2.png"></div>
+<div><img src="new3.png"></div>
+</div>
