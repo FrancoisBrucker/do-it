@@ -39,8 +39,7 @@ Sur VScode, elle devra suivre les étapes suivantes :
 Maintenant que Soline est sur la fenêtre de son fichier html, voici quelques bases :
 
 Un fichier html se commence avec **&lt;html&gt;&lt;/html&gt;.**
-Maintenant l’intégralité de la page Web doit être enveloppée dans  &lt;html&gt; tout le code &lt;/html&gt;. 
-
+Maintenant l’intégralité de la page Web doit être enveloppée dans  &lt;html&gt; tout le code &lt;/html&gt;.
 
 Entres les **&lt;html&gt;&lt;/html&gt;.** :
 
@@ -48,12 +47,12 @@ Entres les **&lt;html&gt;&lt;/html&gt;.** :
 - Placer **&lt;head&gt;&lt;/head&gt;** qui fait référence au titre de la page, langages CSS, et contenu qui ne seront pas visible directement sur le site 
 - Écrire le titre de la page entre &lt;title&gt;&lt;/title&gt; même si il n'apparaitra pas directement sur le site.
 
-Maintenant que le &lt;/head&gt; est fermée mais pas le &lt;/html&gt;, placer &lt;body&gt;&lt;/body&gt; qui encadre le contenu visible, rien ne s'affiche  sur la page web lorsqu'il est vide. 
+Maintenant que le &lt;/head&gt; est fermée mais pas le &lt;/html&gt;, placer &lt;body&gt;&lt;/body&gt; qui encadre le contenu visible, rien ne s'affiche  sur la page web lorsqu'il est vide.
 
 Dans **&lt;body&gt;&lt;/body&gt;** :
 
 - &lt;p&gt;&lt;/p&gt; encadre les paragraphes,  
-- &lt;h1&gt;&lt;/h1&gt; à &lt;h6&gt;&lt;/h6&gt; sont pour les titres du plus au moins gros 
+- &lt;h1&gt;&lt;/h1&gt; à &lt;h6&gt;&lt;/h6&gt; sont pour les titres du plus au moins gros
 - &lt;ul&gt;&lt;/ul&gt;et &lt;li&gt;&lt;/li&gt; servent pour les listes simple et sont indissociables
 - On peut mettre le &lt;p&gt;&lt;/p&gt; dans le &lt;li&gt;&lt;/li&gt; mais pas dans le &lt;ul&gt;&lt;/ul&gt;
 - Pour faire apparaître les crochets sur la page il suffira de les encadrer par &lt ; &gt ; sans espace entre le t et le point virgule
