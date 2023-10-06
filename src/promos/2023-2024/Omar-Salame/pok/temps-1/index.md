@@ -51,7 +51,11 @@ J'ai fais un webscrapping pour collecter les données de la ligues(équipes, jou
 J'ai travaillé sur le désigne de la page: 
 - Création d'un poster pour la ligue
 <img src="poster.png" width="700" height="550">
+-Modélisation du terrain
+<img src="pitch2.png" width="300" height="500">
 - Restructuration de la page d'accueil
 <img src="index.png" width="700" height="550">
+-L'ajout du classement de la ligue
+<img src="classement.png" width="700" height="550">
 
 
