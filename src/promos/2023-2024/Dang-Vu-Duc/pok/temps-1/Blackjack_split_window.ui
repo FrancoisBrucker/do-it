@@ -787,6 +787,94 @@
      <string>Recommencer</string>
     </property>
    </widget>
+   <widget class="QLabel" name="player_bet1">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>240</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Mise: 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player_bet2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>240</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Mise: 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player_stack">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>110</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Stack du joueur: 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player_bet_total">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>140</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Mise totale du joueur: 0</string>
+    </property>
+   </widget>
    <zorder>PlayerCard2_1</zorder>
    <zorder>PlayerCard1_1</zorder>
    <zorder>DealerCard1</zorder>
@@ -827,6 +915,10 @@
    <zorder>button_hit2</zorder>
    <zorder>button_double2</zorder>
    <zorder>button_restart</zorder>
+   <zorder>player_bet1</zorder>
+   <zorder>player_bet2</zorder>
+   <zorder>player_stack</zorder>
+   <zorder>player_bet_total</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -1,5 +1,5 @@
-from PySide6.QtWidgets import QMainWindow, QPushButton, QLabel
-from PySide6.QtGui import QPixmap
+from PySide6.QtWidgets import QMainWindow, QPushButton, QLabel, QSlider, QLineEdit
+from PySide6.QtGui import QPixmap, QIntValidator
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile
 from blackjack_methods import Blackjack_methods
@@ -9,6 +9,7 @@ import random
 class Blackjack(QMainWindow, Blackjack_methods):
     def __init__(self):
         super().__init__()
+        self.player_stack = 200
 
         ui_file_name = "Blackjack_main_window.ui"
         ui_file = QFile(ui_file_name)
@@ -41,6 +42,8 @@ class Blackjack(QMainWindow, Blackjack_methods):
         self.result = self.main_window.findChild(QLabel, "label_result")
         self.label_cards = self.main_window.findChild(QLabel, "label_cards")
         self.cardsLeft = self.main_window.findChild(QLabel, "cardsLeft")
+        self.player_stack_main = self.main_window.findChild(QLabel, "player_stack")
+        self.player_bet_main = self.main_window.findChild(QLabel, "player_bet")
 
         self.hitButton = self.main_window.findChild(QPushButton, "button_hit")
         self.stayButton = self.main_window.findChild(QPushButton, "button_stay")
@@ -80,6 +83,10 @@ class Blackjack(QMainWindow, Blackjack_methods):
         self.split_PlayerCount2 = self.split_window.findChild(QLabel, "PlayerCount2")
         self.split_DealerCount = self.split_window.findChild(QLabel, "DealerCount")
         self.cardsLeft_split = self.split_window.findChild(QLabel, "cardsLeft")
+        self.split_player_bet1 = self.split_window.findChild(QLabel, "player_bet1")
+        self.split_player_bet2 = self.split_window.findChild(QLabel, "player_bet2")
+        self.split_player_stack = self.split_window.findChild(QLabel, "player_stack")
+        self.split_player_bet_total = self.split_window.findChild(QLabel, "player_bet_total")
 
         self.split_hitButton1 = self.split_window.findChild(QPushButton, "button_hit1")
         self.split_stayButton1 = self.split_window.findChild(QPushButton, "button_stay1")
@@ -94,14 +101,154 @@ class Blackjack(QMainWindow, Blackjack_methods):
         self.split_stayButton1.clicked.connect(self.stay_split_first)
         self.split_stayButton2.clicked.connect(self.stay_split)
         self.split_buttonRestart.clicked.connect(self.restart_split)
-        
+        self.split_doubleButton1.clicked.connect(self.double_split)
+        self.split_doubleButton2.clicked.connect(self.double_split)
+
+        ui_file_name3 = "Blackjack_bet_window.ui"
+        ui_file3 = QFile(ui_file_name3)
+        loader3 = QUiLoader()
+        self.bet_window = loader2.load(ui_file3)
+        ui_file3.close()
+        self.bet_window.setWindowTitle("Blackjack: Fenêtre de mise")
+
+        self.playerBet = self.bet_window.findChild(QLabel, "player_bet")
+        self.playerStack = self.bet_window.findChild(QLabel, "player_stack")
+        self.line_edit_bet = self.bet_window.findChild(QLineEdit, "line_edit_bet")
+        self.slideBet = self.bet_window.findChild(QSlider, "slide_bet")
+        self.validerButton = self.bet_window.findChild(QPushButton, "button_valider")
+        self.validerButton.clicked.connect(self.valider_bet)
+
+        self.add10 = self.bet_window.findChild(QPushButton, "add_10")
+        self.add20 = self.bet_window.findChild(QPushButton, "add_20")
+        self.add50 = self.bet_window.findChild(QPushButton, "add_50")
+        self.add10.clicked.connect(self.add_10)
+        self.add20.clicked.connect(self.add_20)
+        self.add50.clicked.connect(self.add_50)
+
+        self.remove10 = self.bet_window.findChild(QPushButton, "remove_10")
+        self.remove20 = self.bet_window.findChild(QPushButton, "remove_20")
+        self.remove50 = self.bet_window.findChild(QPushButton, "remove_50")
+        self.remove10.clicked.connect(self.remove_10)
+        self.remove20.clicked.connect(self.remove_20)
+        self.remove50.clicked.connect(self.remove_50)
+
+        onlyInt = QIntValidator()
+        onlyInt.setRange(0,self.player_stack)
+        self.line_edit_bet.setValidator(onlyInt)
+        self.line_edit_bet.textChanged.connect(self.line_edit_changed)
+        self.line_edit_bet.returnPressed.connect(self.valider_bet)
+
+        self.slideBet.setSingleStep(10)
+        self.slideBet.setTickPosition(QSlider.TicksBelow)
+        self.slideBet.valueChanged.connect(self.slide_changed)
+
         self.restart()
         
         self.hitButton.clicked.connect(self.hit)
         self.restartButton.clicked.connect(self.restart)
         self.stayButton.clicked.connect(self.stay)
         self.splitButton.clicked.connect(self.split)
-        self.main_window.show()
+        self.doubleButton.clicked.connect(self.double)
+    
+    def add_10(self):
+        if self.player_bet + 10 > self.player_stack:
+            return()
+        else:
+            self.player_bet += 10
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+    
+    def remove_10(self):
+        if self.player_bet - 10 < 0:
+            return()
+        else:
+            self.player_bet -= 10
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+
+    def add_20(self):
+        if self.player_bet + 20 > self.player_stack:
+            return()
+        else:
+            self.player_bet += 20
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+    
+    def remove_20(self):
+        if self.player_bet - 20 < 0:
+            return()
+        else:
+            self.player_bet -= 20
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+    
+    def add_50(self):
+        if self.player_bet + 50 > self.player_stack:
+            return()
+        else:
+            self.player_bet += 50
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+    
+    def remove_50(self):
+        if self.player_bet - 50 < 0:
+            return()
+        else:
+            self.player_bet -= 50
+            self.slideBet.setValue(self.player_bet)
+            self.playerBet.setText(f"Mise du joueur: {self.player_bet}")
+            self.line_edit_bet.setText(str(self.player_bet))
+
+    def valider_bet(self):
+        if self.player_bet != 0:
+            self.player_stack -= self.player_bet
+            self.player_stack_main.setText(f"Stack du joueur: {self.player_stack}")
+            self.player_bet_main.setText(f"Mise du joueur: {self.player_bet}")
+            if self.player_bet > self.player_stack:
+                self.doubleButton.setEnabled(False)
+                self.splitButton.setEnabled(False)
+            else:
+                self.doubleButton.setEnabled(True)
+            self.main_window.show()
+            self.bet_window.close()
+        
+    def slide_changed(self, value):
+        value = value / 10
+        value = round(value)
+        value = value * 10
+        if value == 0:
+            self.validerButton.setEnabled(False)
+        else:
+            self.validerButton.setEnabled(True)
+        self.slideBet.setValue(value)
+        self.playerBet.setText(f"Mise du joueur: {value}")
+        self.player_bet = value
+        self.line_edit_bet.setText(str(value))
+    
+    def line_edit_changed(self, value):
+        if value != '':
+            value = int(value)
+            if value > self.player_stack:
+                value = self.player_stack
+                self.slideBet.setValue(value)
+                self.playerBet.setText(f"Mise du joueur: {value}")
+                self.player_bet = value
+            else:
+                value = value / 10
+                value = round(value)
+                value = value * 10
+                if value == 0:
+                    self.validerButton.setEnabled(False)
+                else:
+                    self.validerButton.setEnabled(True)
+                self.slideBet.setValue(value)
+                self.playerBet.setText(f"Mise du joueur: {value}")
+                self.player_bet = value
         
     def draw(self):
         card = random.choice(self.deck)
@@ -131,9 +278,9 @@ class Blackjack(QMainWindow, Blackjack_methods):
             else:
                 self.split_PlayerCount2.setText(f"{count}")
         
-
     def hit(self):
         self.splitButton.setEnabled(False)
+        self.doubleButton.setEnabled(False)
         card = self.draw()
         self.player_hand.append(card)
         pixmap = QPixmap(f'PNG-cards/{card.name}.png')
@@ -257,15 +404,26 @@ class Blackjack(QMainWindow, Blackjack_methods):
                 self.stay_split()            
 
     def split(self):
+        self.player_stack -= self.player_bet
+        self.split_player_bet_total_value = self.player_bet * 2
+        self.split_player_stack.setText(f"Stack du joueur: {self.player_stack}")
+        self.split_player_bet_total.setText(f"Mise totale du joueur: {self.player_bet * 2}")
         if self.dealer_hand[0].value == 1:
             self.split_DealerCount.setText("1/11")
         else:
             self.split_DealerCount.setText(f"{self.sum_hand(self.dealer_hand)}")
         self.split_hitButton1.setEnabled(True)
         self.split_stayButton1.setEnabled(True)
-        self.split_doubleButton1.setEnabled(True)
-        self.player_hand_split_1 = [self.player_hand[0]]
-        self.player_hand_split_2 = [self.player_hand[1]]
+        if self.player_bet > self.player_stack:
+            self.split_doubleButton1.setEnabled(False)
+        else:
+            self.split_doubleButton1.setEnabled(True)
+        self.split_player_bet1_value = self.player_bet
+        self.split_player_bet1.setText(f"Mise: {self.player_bet}")
+        card1 = self.draw()
+        card2 = self.draw()
+        self.player_hand_split_1 = [self.player_hand[0], card1]
+        self.player_hand_split_2 = [self.player_hand[1], card2]
         count = self.sum_hand(self.player_hand_split_1)
         if 1 in (card.value for card in self.player_hand_split_1) and (sum([card.value for card in self.player_hand_split_1]) + 10) < 21:
             self.split_PlayerCount1.setText(f"{sum([card.value for card in self.player_hand_split_1])}" + "/" + f"{count}")
@@ -279,14 +437,34 @@ class Blackjack(QMainWindow, Blackjack_methods):
         self.label_split_dealercard1.setPixmap(QPixmap(f'PNG-cards/{self.dealer_hand[0].name}.png'))
         self.label_split_playercard1_1.setPixmap(QPixmap(f'PNG-cards/{self.player_hand[0].name}.png'))
         self.label_split_playercard2_1.setPixmap(QPixmap(f'PNG-cards/{self.player_hand[1].name}.png'))
+        self.label_split_playercard1_2.setPixmap(QPixmap(f'PNG-cards/{card1.name}.png'))
+        self.label_split_playercard2_2.setPixmap(QPixmap(f'PNG-cards/{card2.name}.png'))
         self.split_hitButton2.setEnabled(False)
         self.split_stayButton2.setEnabled(False)
         self.split_doubleButton2.setEnabled(False)
+        self.split_player_bet2_value = self.player_bet
+        self.split_player_bet2.setText(f"Mise: {self.player_bet}")
         self.IsFirst = True
         self.split_window.show()
         self.main_window.close()
 
-
+    def double(self):
+        self.splitButton.setEnabled(False)
+        card = self.draw()
+        self.player_hand.append(card)
+        pixmap = QPixmap(f'PNG-cards/{card.name}.png')
+        self.label_playercard3.setPixmap(pixmap)
+        self.player_stack -= self.player_bet
+        self.player_bet *= 2
+        self.player_stack_main.setText(f"Stack du joueur: {self.player_stack}")
+        self.player_bet_main.setText(f"Mise du joueur: {self.player_bet}")
+        self.display_player_count()
+        count = self.sum_hand(self.player_hand)
+        if count > 21:
+            self.player_bust = True
+            self.result.setText("Le joueur a bust")
+            self.PlayerCount.setStyleSheet("color : red")
+        self.stay()
 
     def stay(self):
         if 1 in (card.value for card in self.player_hand):
@@ -327,12 +505,15 @@ class Blackjack(QMainWindow, Blackjack_methods):
             #time.sleep(1)
         if not self.player_bust and self.sum_hand(self.dealer_hand) > 21:
             self.result.setText("Le dealer a bust")
-        if not self.player_bust and (self.sum_hand(self.dealer_hand) < self.sum_hand(self.player_hand) or self.sum_hand(self.dealer_hand) > 21):
+            self.player_stack += self.player_bet * 2
+        elif not self.player_bust and (self.sum_hand(self.dealer_hand) < self.sum_hand(self.player_hand) or self.sum_hand(self.dealer_hand) > 21):
             self.result.setText("Le joueur a gagné")
-        if not self.player_bust and (self.sum_hand(self.dealer_hand) > self.sum_hand(self.player_hand) and self.sum_hand(self.dealer_hand) <= 21):
+            self.player_stack += self.player_bet * 2
+        elif not self.player_bust and (self.sum_hand(self.dealer_hand) > self.sum_hand(self.player_hand) and self.sum_hand(self.dealer_hand) <= 21):
             self.result.setText("Le dealer a gagné")
-        if not self.player_bust and self.sum_hand(self.dealer_hand) == self.sum_hand(self.player_hand):
-            self.result.setText("Egalité!")
+        elif not self.player_bust and self.sum_hand(self.dealer_hand) == self.sum_hand(self.player_hand):
+            self.result.setText("Égalité!")
+            self.player_stack += self.player_bet
         if count > 21:
             self.DealerCount.setStyleSheet("color : red")
         self.restartButton.setStyleSheet("background-color: red")
@@ -352,6 +533,51 @@ class Blackjack(QMainWindow, Blackjack_methods):
         self.split_stayButton1.setEnabled(False)
         self.split_doubleButton1.setEnabled(False)
 
+    def double_split(self):
+        if self.IsFirst:
+            card = self.draw()
+            self.player_hand_split_1.append(card)
+            pixmap = QPixmap(f'PNG-cards/{card.name}.png')
+            self.label_split_playercard1_3.setPixmap(pixmap)
+            count = self.sum_hand(self.player_hand_split_1)
+            self.split_PlayerCount1.setText(f"{count}")
+            self.split_hitButton1.setEnabled(False)
+            self.split_stayButton1.setEnabled(False)
+            self.split_doubleButton1.setEnabled(False)
+            self.split_player_bet1_value *= 2
+            self.split_player_bet1.setText(f"Mise: {self.split_player_bet1_value}")
+            self.split_player_bet_total_value += self.player_bet
+            self.split_player_bet_total.setText(f"Mise totale du joueur: {self.split_player_bet_total_value}")
+            self.player_stack -= self.player_bet
+            self.split_player_stack.setText(f"Stack du joueur: {self.player_stack}")
+            if self.player_bet > self.player_stack:
+                self.split_doubleButton2.setEnabled(False)
+            else:
+                self.split_doubleButton2.setEnabled(True)
+            self.split_hitButton2.setEnabled(True)
+            self.split_stayButton2.setEnabled(True)
+            self.IsFirst = False
+            if self.sum_hand(self.player_hand_split_1) > 21:
+                self.split_PlayerCount1.setStyleSheet("color : red")
+        else:
+            card = self.draw()
+            self.player_hand_split_2.append(card)
+            pixmap = QPixmap(f'PNG-cards/{card.name}.png')
+            self.label_split_playercard2_3.setPixmap(pixmap)
+            count = self.sum_hand(self.player_hand_split_2)
+            self.split_PlayerCount2.setText(f"{count}")
+            self.split_hitButton2.setEnabled(False)
+            self.split_stayButton2.setEnabled(False)
+            self.split_doubleButton2.setEnabled(False)
+            self.split_player_bet2_value *= 2
+            self.split_player_bet2.setText(f"Mise: {self.split_player_bet2_value}")
+            self.split_player_bet_total_value += self.player_bet
+            self.split_player_bet_total.setText(f"Mise totale du joueur: {self.split_player_bet_total_value}")
+            self.player_stack -= self.player_bet
+            self.split_player_stack.setText(f"Stack du joueur: {self.player_stack}")
+            if self.sum_hand(self.player_hand_split_2) > 21:
+                self.split_PlayerCount2.setStyleSheet("color : red")
+            self.stay_split()
 
     def stay_split(self):
         self.split_hitButton2.setEnabled(False)
@@ -389,12 +615,29 @@ class Blackjack(QMainWindow, Blackjack_methods):
                 self.label_split_dealercard7.setPixmap(pixmap)
                 self.dealer_spot_split += 1
             
-            count = self.sum_hand(self.dealer_hand)
-            self.split_DealerCount.setText(f"{count}")
+            count_dealer = self.sum_hand(self.dealer_hand)
+            self.split_DealerCount.setText(f"{count_dealer}")
         self.split_buttonRestart.setStyleSheet("background-color: red")
-        if count > 21:
+        if count_dealer > 21:
             self.split_DealerCount.setStyleSheet("color : red")
+        count1 = self.sum_hand(self.player_hand_split_1)
+        count2 = self.sum_hand(self.player_hand_split_2)
+        if count_dealer > 21:
+            self.player_stack += 2 * self.split_player_bet1_value
+        elif count1 <= 21:
+            if count1 > count_dealer:
+                self.player_stack += 2 * self.split_player_bet1_value
+            if count1 == count_dealer:
+                self.player_stack += self.split_player_bet1_value
 
+        if count_dealer > 21:
+            self.player_stack += 2 * self.split_player_bet2_value
+        elif count2 <= 21:
+            if count2 > count_dealer:
+                self.player_stack += 2 * self.split_player_bet2_value
+            if count2 == count_dealer:
+                self.player_stack += self.split_player_bet2_value
+    
     def restart_split(self):
         self.main_window.show()
         self.split_window.close()
@@ -445,8 +688,8 @@ class Blackjack(QMainWindow, Blackjack_methods):
         pixmap = QPixmap(f'PNG-cards/{card.name}.png')
         self.label_dealercard1.setPixmap(pixmap)
         self.player_spot = 2
-        self.player_spot_split_1 = 1
-        self.player_spot_split_2 = 1
+        self.player_spot_split_1 = 2
+        self.player_spot_split_2 = 2
         card1 = self.draw()
         card2 = self.draw()
         pixmap1 = QPixmap(f'PNG-cards/{card1.name}.png')
@@ -471,3 +714,13 @@ class Blackjack(QMainWindow, Blackjack_methods):
             self.splitButton.setEnabled(True)
         else:
             self.splitButton.setEnabled(False)
+        
+        self.validerButton.setEnabled(False)
+        self.playerStack.setText(f"Stack du joueur: {self.player_stack}")
+        self.slideBet.setMinimum(0)
+        self.slideBet.setMaximum(self.player_stack)
+        self.slideBet.setValue(0)
+        self.line_edit_bet.setText("0")
+        self.player_bet = 0
+        self.bet_window.show()
+        self.main_window.close()
