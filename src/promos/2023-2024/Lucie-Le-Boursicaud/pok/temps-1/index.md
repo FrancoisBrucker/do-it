@@ -139,10 +139,10 @@ Fonctionalités à implémenter :
 + [x] Pouvoir laisser un avis sur une recette  - 2
 + [x] Avoir des badges en fonction du nombre de recettes publiées    - 1
 + ~~[ ] Pouvoir partager une recette   - 5 ~~ Impossible sur la version gratuite
-+ [~] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates   - 5
++ [x] Ajouter une liste d'ingrédient pour chaque recette avec les quantités adéquates   - 5
 
 Autres : 
-+ [ ] Retravailler le design de certaines pages - 3
++ [~] Retravailler le design de certaines pages - 3
 
 ## Sommaire
 
@@ -175,9 +175,16 @@ Par la suite j'ai implémenter la possibilité de publier des avis sur des recet
 Encore une fois le design sera retravaillé par la suite.
 
 
-Après, il a fallu que je m'occupe de l'ajout des ingrédients et des quantités en faisant en sorte que l'ajout de ces éléments soit pratique pour un utilisateur qui souhaite ajouter une nouvelle recette. J'ai pas mal réfléchis pour faciliter l'implémentation de cette fonctionalité pour obtenir ce résultat : 
+Après, il a fallu que je m'occupe de <strong>l'ajout des ingrédients et des quantités</strong> en faisant en sorte que l'ajout de ces éléments soit pratique pour un utilisateur qui souhaite ajouter une nouvelle recette. J'ai pas mal réfléchis pour faciliter l'implémentation de cette fonctionalité pour obtenir ce résultat : 
 <div style="display:flex">
 <div><img src="new1.png"></div>
 <div><img src="new2.png"></div>
 <div><img src="new3.png"></div>
 </div>
+Maitenant lorsque l'utilisateur visualise une recette les ingrédients sont affichés comme ci-dessous : 
+<div style="display:flex">
+<div><img src="ingredients.png"></div>
+</div>
+
+Toutes les fonctionalités possible avec la version gratuite d'Adalo que j'avais voulu apporté à l'application ont été mises en place. Seulement le design de l'application est encore à mon goût pas assez travaillé. Je vais donc me concentrer sur ça afin de rendre l'expérience utilisateur plus agréable.
+
