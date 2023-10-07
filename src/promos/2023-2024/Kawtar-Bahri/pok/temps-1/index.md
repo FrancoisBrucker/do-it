@@ -18,77 +18,50 @@ La transformation numérique désigne l'adoption par une entreprise de méthodes
 
 Le but de ce POK est d'étudier l'écosystème numérique de l’entreprise où j’ai effectué mon dernier stage, d’identifier des opportunités de transformation digitale, et d’élaborer un plan d’action de cette transformation.
 
-## Roadmap 
+## Démarche 
+Cette démarche est inspirée de l’approche que nous avons vu dans le cours d’écosystème digital, qui est souvent adoptée dans les cabinets de conseil  :
 
-### Étape 1 : État de l'Art
+<img src="demarche.png">
+ <br/>
 
-**1.1. Analyse de l'écosystème numérique actuel**
+{% info "**Démarche**" %}
+-	Évaluation des besoins et des opportunités
+-	Benchmarking concurrentiel
+- Définition des objectifs de transformation
+-	Élaboration d'un plan d'action
+-	Gestion du changement 
+{% endinfo %}
 
-- Examiner les tendances technologiques actuelles.
-- Identifier les acteurs clés dans le domaine numérique.
-- Évaluer la maturité numérique de l'industrie.
+## Évaluation des besoins et des opportunités 
+L’entreprise qui servira de référence dans cette étude est une entreprise de gestion de relation client et de BPO (Business Process Outsourcing).
 
-**1.2. Benchmarking de la concurrence**
+Comme il s’agit de l’externalisation des processus, cette entreprise travail pour le compte de plusieurs clients. Les collaborateurs se trouvent donc souvent obligés de travailler sur les environnements des clients. 
 
-- Analyser les stratégies numériques des concurrents directs.
-- Identifier les meilleures pratiques et les lacunes.
-- Évaluer la position de l'entreprise par rapport à la concurrence.
+Ceci entraîne plusieurs problèmes et défis, notamment : manque d'interopérabilité entre les outils, difficultés de collaboration entre les équipes, et difficultés de reporting et d'analyse.
 
-### Étape 2 : Étude de cas de Transformations Numériques
+## Définition des objectifs de transformation 
+Ci après les principales catégories des tranformations digitales selon une étude de Capgemini Consulting & MIT Sloan Management : 
+<img src="digital.png">
+ <br/>
+L’opportunité que j’ai identifiée pour l'entreprise étudiée s’inscrit dans la catégorie Operational Process, Performance management, Data-driven decision-making. Les objectifs sont donc :
+-	Centraliser les données pour faciliter le reporting 
+- Améliorer l'interopérabilité des outils
 
-**2.1. Examen des cas de réussite**
+## Benchmarking concurrentiel 
+Pour résoudre ces problèmes, de nombreuses entreprises cherchent à rationaliser leurs systèmes en adoptant des solutions intégrées, en améliorant l'interopérabilité des outils ou en investissant dans des plates-formes de gestion unifiée. L'objectif est de simplifier l'environnement informatique, d'augmenter l'efficacité et de réduire les coûts opérationnels.
 
-- Analyser des cas de transformation numérique d'entreprises similaires.
-- Comprendre les défis rencontrés et les solutions mises en œuvre.
-- Extraire les leçons apprises et les meilleures pratiques.
+## Élaboration d'un plan d'action 
+(A faire)
 
-**2.2. Étude de cas de transformation numérique**
+## Gestion du changement 
+Comme les employés sont habitués aux systèmes qu'ils utilisent actuellement, ils peuvent résister au changement. L'introduction de nouveaux outils peut rencontrer de la résistance, ce qui peut ralentir l'adoption. D'où l'importance du Change management.
 
-- Sélectionner un cas de transformation numérique emblématique.
-- Analyser en profondeur les étapes de la transformation.
-- Identifier les facteurs clés de succès et les obstacles. 
-
-### Etape 3 : Application sur le cas de l'entreprise de mon stage 2A
-**3.1. Analyse de la situation actuelle de l'entreprise**
-**3.2. Définition des objectifs numériques**
-**3.3. Suggestion d'un plan d'action**
-
-## Etat de l'art 
-### Analyse de l'écosystème numérique actuel
-
-L'ecosystème numérique est marqué par les tendances technologiques, principalement : 
-
-**Big Data :**
-
-- Quantité de données croissante provenant de smartphones, d'objets connectés (IoT), des médias sociaux, de la recherche en ligne, des transactions en ligne, etc.
-
-- Complexité des données : Les données sont de plus en plus diversifiées, ce qui signifie qu'elles peuvent être structurées (bases de données traditionnelles) ou non structurées (textes, images, vidéos).
-
-
-**Intelligence Artificielle (IA) :**
-
-- Apprentissage automatique : L'IA s'appuie largement sur l'apprentissage automatique pour analyser les données et créer des modèles prédictifs.
-
-- Automatisation des processus : Utilisation de l'IA pour automatiser des tâches répétitives afin de réduire le temps et les coûts opérationnels, analyser les données et créer des modèles prédictifs.
-
-- Personnalisation : L'IA est utilisée pour personnaliser les recommandations de produits, les publicités et les expériences utilisateur, améliorant ainsi la satisfaction client.
+## Références : 
+{% prerequis %}
+-	A roadmap for a digital transformation, Mars 2017. Disponible sur : https://www.mckinsey.com/industries/financial-services/our-insights/a-roadmap-for-a-digital-transformation. Consulté le 6 octobre 2023.
+-	Digital strategy roadmap. Disponible sur : https://www.bcg.com/capabilities/digital-technology-data/digital-strategy-roadmap. Consulté le 6 octobre 2023.
+-	Digital transformation : a roadmap for billion-dollar organizations. Disponible sur : https://www.capgemini.com/wp-content/uploads/2017/07/Digital_Transformation__A_Road-Map_for_Billion-Dollar_Organizations.pdf. Consulté le 5 octobre 2023.
+- Interopérabilité des outils et des données : https://www.puceplume.fr/ged-interoperabilite-des-outils-et-des-donnees/. Consulté le 7 octobre 2023.
+{% endprerequis %}
 
 
-**Systèmes d'Information (SI) :**
-
-- Intégration avec le Big Data : Les SI sont de plus en plus intégrés avec les systèmes de Big Data pour collecter, stocker et analyser des données en temps réel.
-
-- Collaboration et partage des données : Les SI modernes facilitent la collaboration et le partage des données au sein de l'entreprise, ce qui améliore la communication interne et la prise de décision.
-
-### Benchmarking de la concurrence
-L'entreprise en question est Majorel, une entreprise de gestion de relation client et de BPO (Business Process Outsourcing).
-La difficulté réside dans la multitude d'outils utilisés imposés par quelques clients. 
-
-D'autres concurrents utilisent des systèmes de : 
-- CRM (Customer Relationship Management) 
-- Gestion des interactions clients (CIS) 
-- Gestion des tickets d'assistance 
-- Gestion des ressources humaines (RH) 
-- BPM (business process management) 
-- Gestion de la qualité et de la conformité,et éventuellement évaluation de la performance 
-- BI, Analyse de données et de reporting
