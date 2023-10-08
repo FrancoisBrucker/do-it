@@ -137,9 +137,9 @@
 <p>Niveau débutant</p>
 </div><div class="pl-8 mr-8">
 </div></div>
-<p>Mes objectifs pour ce deuxième MON sont de redécouvrir les bases d'excel. En effet, lors de mes derniers stages, j'ai été amenée a utiliser excel mais je me suis souvent retrouvée en difficulté dans la manipulation des données. C'est pourquoi je repars du début afin d'être capable de les maîtriser convenablement dans le cadre d'un futur stage en entreprise et aussi poursuivre avec les fonctions VbA.</p>
+<p>Mes objectifs pour ce deuxième MON sont de (re)découvrir les bases d'excel. En effet, lors de mes derniers stages, j'ai été amenée a utiliser excel mais je me suis souvent retrouvée en difficulté dans la manipulation des données. C'est pourquoi je repars du début afin d'être capable de les maîtriser convenablement et d'en apprendre d'avantage dans le cadre d'un futur stage en entreprise. Je souhaiterai également poursuivre le VBA.</p>
 <h3>Méthodologie</h3>
-<p>Pour recommencer une formation sur excel a partir de zéro, j'ai suivi le cours excel sur. Qui se divise en 11 parties synthétiques :</p>
+<p>Pour recommencer une formation sur excel a partir de zéro, j'ai suivi le cours excel sur <a href="http://excel.pratique.com">excel.pratique.com</a>. Le cours Excel se divise en 11 parties synthétiques :</p>
 <ol>
 <li>Les bases</li>
 <li>Les tableaux</li>
@@ -154,18 +154,41 @@
 <li>Tableau croisé dynamique</li>
 </ol>
 <p>J'ai réalisé les exercices proposé tout au long de la formation.</p>
-<p>État des lieux le 06 octobre : 5h de formation.</p>
-<h3>Chapitres 1 à 8</h3>
-<p>Dans cette première partie, je vais simplement énumérer et détailler les fonctionnalités d'excel qui me paraissent utile à revoir si on estime ne pas avoir besoin de refaire toute la formation:</p>
+<p>État des lieux le 8 octobre : 10+h de formation.</p>
+<h3>Chapitres 1 à 8 - revoir les bases</h3>
+<p>Dans cette première partie, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur <a href="http://excel.pratique.com">excel.pratique.com</a> étant très synthétique, je vais juste énumérer les points importants pour moi.</p>
 <ol>
-<li>
-<p>L'utilisation du <code>$</code> qui permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :<br>
+<li>L'utilisation du <code>$</code> qui permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :<br>
 <img src="EXCEL2.png" alt="excel"><br>
 Dans cette exemple, on divise par la valeur <strong>3</strong>, qui apparaît dans la cellule <strong>B8</strong>. Seulement on veut pouvoir diviser à chaque fois par cette <strong>même valeur</strong> de cellule <strong>B8</strong> lors de la recopie. Corrigeons:<br>
 <img src="EXCEL3.png" alt="excel"><br>
-Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici,  on aurait pu simplement fixer la ligne.</p>
+Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici,  on aurait pu simplement fixer la ligne.</li>
+</ol>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>La suite de la formation a été réalisée sur un ordinateur avec excel en anglais (utile pour avoir le vocabulaire en anglais également).</p>
+</div></div>
+<ol start="2">
+<li>
+<p>Les formules SI, ET, OU :</p>
+<ol>
+<li>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong><br>
+Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.<br>
+Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :<br>
+<img src="screen_SI_1.png" alt="excel"><br>
+Il suffit de rentrer dans la cellule D36: <strong>=SI(C36&gt;=18 (qui explique la condition); &quot;majeur&quot;;&quot;mineur&quot;)</strong> et de faire une recopie sur les cellules souhaitées.<br>
+Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:<br>
+<img src="screen_SI_2.png" alt="excel"></li>
+</ol>
 </li>
-<li></li>
+</ol>
+<p>Ici, on souhaite calculer dans la cellule D3 la valeur du rabais en fonction de la quantité d'un article. POur cela il faut imbriquer une fonction SI dans une autre. Voici une option non unique:</p>
+<ol>
+<li>La <strong>fonction ET</strong></li>
+<li>La <strong>Fonction OU</strong></li>
 </ol>
 
 
