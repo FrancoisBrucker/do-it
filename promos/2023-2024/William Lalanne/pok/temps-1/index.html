@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>To-do liste en HTLM, CSS et JS</title>
+        <title>Site web pour jouer au memory</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">To-do liste en HTLM, CSS et JS</h1>
+<h1 class="mb-1">Site web pour jouer au memory</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Création d'un site web avec HTML, CSS et JS. Ce site permettra de réaliser des To-do list.
+                Création d'un site web avec HTML, CSS et JS pour jouer au memory.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/pok/">POK de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/pok/temps-1/">To-do liste en HTLM, CSS et JS</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/pok/">POK de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/pok/temps-1/">Site web pour jouer au memory</a>
 
 </div></div>
 
@@ -126,12 +126,59 @@
 
 
 <h2>Objectif de ce POK</h2>
-<p>L'objectif de ce POK est de créer un site web permettant de réaliser des To-do lists. Ce genre de site existe déjà le but est seulement de s'entraîner à utiliser HTML, CSS et JavaScript.</p>
+<p>L'objectif de ce POK est de créer un site web permettant de jouer au memory. Ce genre de site existe déjà le but est seulement de s'entraîner à utiliser HTML, CSS et JavaScript.</p>
 <h2>Fonctionnalités du site</h2>
-<p>Pour ce qui est des fonctionnalités, il faudra une partie sur le site où l'on peut écrire les différentes tâches que l'on souhaite réaliser. Enfin, il faudra que toutes les tâches à réaliser se retrouvent à un endroit, avec la possibilité de cocher les tâches effectuées et de les supprimer de la liste.</p>
-<h2>Ce à quoi cela pourrait ressembler</h2>
-<p>Voici une petite idée de design pour le site :<br>
-<img src="todo.png" alt="Exemple design site"></p>
+<p>Pour ce qui est des fonctionnalités, lorsqu'on arrive sur la première page du jeu, il sera possible de paramétrer sa partie (nombre de joueurs, nombres de carte...). Ensuite il faut que l'utilisateur puisse retourner les cartes et qu'un signal visuel lui indique si les cartes sont identiques ou différentes. Une fois que toutes les cartes ont été trouvées, un message indique que la partie est finie et un bouton permet de retourner sur la page d'accueil.</p>
+<h2>Les différentes étapes</h2>
+<p>Pour réaliser ce site il fallait que je code 3 pages web différentes :</p>
+<ul>
+<li>La page d'accueil où l'on définit les paramètres de la partie</li>
+<li>La page où se déroule une partie avec 16 cartes à retourner</li>
+<li>La page où se déroule une partie avec 36 cartes à retourner</li>
+</ul>
+<p>Le plus dur étant de coder l'une des deux dernières pages car lorsque l'une et faite, il suffit de la modifier légèrement pour avoir l'autre.</p>
+<p>Pour la page d'accueil, j'ai distingué 4 parties à faire :</p>
+<ul>
+<li>Une partie où l'on choisit si les cartes sont des numéros ou des formes</li>
+<li>Une autre où l'on choisit si on joue à 1 ou 2 joueurs</li>
+<li>Une partie où l'on choisit 16 ou 36 cartes</li>
+<li>Enfin le bouton pour commencer la partie</li>
+</ul>
+<p>Pour les pages de jeux, la mécanique sera la suivante :</p>
+<ul>
+<li>Les cartes sont des ronds noirs lorsqu'elles sont face cachée.</li>
+<li>Lorsque le joueur appuie sur une carte, son style change et le numéro ou la forme apparaît.</li>
+<li>Lorsqu'il clique sur une deuxième carte, si elle est identique à la première, elles deviennent vertes, si elles sont différentes elles deviennent rouges puis se retourne à nouveau.</li>
+<li>Quand toutes les cartes sont vertes, la partie est terminée.</li>
+<li>Un bouton permet au joueur de revenir à la page d'accueil.</li>
+</ul>
+<h2>Création de la page d'accueil</h2>
+<p>La page d'accueil est la suivante :</p>
+<p><img src="pageAccueilPOK1.png" alt="Page d'accueil"></p>
+<p>Pour faire ça, je me suis servi des connaissances acquises avec mon premier MON sur les grid et le flexbox.<br>
+J'ai aussi du apprendre ce qu'était les radio button et comment les modifier pour créer les petites cases à cocher.</p>
+<h2>Création de la page de jeu</h2>
+<p>La page de jeu est la plus difficile à coder. Toutes les actions sont basées sur des cliques :</p>
+<ul>
+<li>Quand on clique sur une carte pas retournée, cela déclenche le retournement de la carte</li>
+<li>Quand on clique sur une deuxième carte une autre action se déclenche<br>
+Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déclencher une fonction suite à une action de l'utilisateur qui peut être un clique ou un mouvement de souris.<br>
+Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListener.</li>
+</ul>
+<p>Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à chacun des boutons un addEventListener qui déclenche la fonction returnCard() à chaque clique.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">returnCard</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="memoryCardReturn.png" alt="carte retournée"></p>
+<p>On ajoute aussi un addEventListener qui permet quand deux cartes sont retournés de comparer leur valeur.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">checkCardPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Puis si les cartes sont les mêmes ont les ajoutes dans une liste et on leur attribut la class &quot;found&quot; pour signifier que la paire est trouvée. Un fond vert apparaît sur les cartes pour montrer au joueur qu'elles sont identiques.</p>
+<p><img src="memoryCardFound.png" alt="cartes identiques"></p>
+<p>Si les cartes sont différentes, on leur attribut la class &quot;notFound&quot; qui affiche un fond rouge sur les cartes pour montrer au joueur qu'elles sont différentes. Après 2 secondes, les cartes se retournent.</p>
+<p><img src="memoryCardNotFound.png" alt="cartes differentes"></p>
+<p>Lorsque toutes les cartes ont été trouvées, un message s'affiche pour dire au joueur qu'il a gagné la partie.</p>
+<p><img src="gameWon.png" alt="partie gagnee"></p>
+<p>En cliquant sur le bouton <strong>&quot;new game&quot;</strong> en haut à droite, on retourne à la page d'accueil.</p>
 
 
 </article>
