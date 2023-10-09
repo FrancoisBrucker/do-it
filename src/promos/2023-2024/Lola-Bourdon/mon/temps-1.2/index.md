@@ -43,19 +43,22 @@ J'ai réalisé les exercices proposé tout au long de la formation.
 
 Dans cette première partie, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
 
-1. L'utilisation du `$` qui permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
+* L'utilisation du `$` permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
 ![excel](EXCEL2.png)
 Dans cette exemple, on divise par la valeur **3**, qui apparaît dans la cellule **B8**. Seulement on veut pouvoir diviser à chaque fois par cette **même valeur** de cellule **B8** lors de la recopie. Corrigeons:
 ![excel](EXCEL3.png)
-Pour cela; le premier `$` de `$B$8` fixe la **colonne** lors de la recopie et le second `$` fixe la **ligne**. Ici,  on aurait pu simplement fixer la ligne.
-
+Pour cela; le premier `$` de `$B$8` fixe la **colonne** lors de la recopie et le second `$` fixe la **ligne**. Ici,  on aurait pu simplement fixer la ligne
+* L'opérarteur **<>** signifie est **différent de**
+* L'opérateur **<=** signifie est **inférieur ou égal à**
+* L'opérateur **>=** signifie est **supérieur ou égal à**
 
 {% note %}
-La suite de la formation a été réalisée sur un ordinateur avec excel en anglais (utile pour avoir le vocabulaire en anglais également).
+N'ayant pas la version payante d'excel sur mon ordinateur, une partie de la formation a été réalisée sur un autre  ordinateur avec excel en anglais (utile pour avoir le vocabulaire en anglais également).
 {% endnote %}
-2. Les formules SI, ET, OU :
 
-   1. La **fonction SI** ou **IF** en anglais : **=SI(test logique, valeur si vrai, valeur si faux)**
+#### Les formules SI, ET, OU
+
+* La **fonction SI** ou **IF** en anglais : **=SI(test logique, valeur si vrai, valeur si faux)**
     Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.
    Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :
    ![excel](screen_SI_1.png)
@@ -63,6 +66,26 @@ La suite de la formation a été réalisée sur un ordinateur avec excel en angl
   Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:
   ![excel](screen_SI_2.png)
 
-  Ici, on souhaite calculer dans la cellule D3 la valeur du rabais en fonction de la quantité d'un article. POur cela il faut imbriquer une fonction SI dans une autre. Voici une option non unique: 
-   1. La **fonction ET**
-   2. La **Fonction OU**
+  Ici, on souhaite calculer dans la cellule **D3** la valeur du *rabais* en fonction de la *quantité d'article*. Pour cela il faut **imbriquer** une fonction SI dans une autre.
+Dans ce cas, on demande d'abort si la quantité est inférieure à 50:
+
+  1. Si **Vrai** alors on demande si elle est inférieur à 10:
+       1. Si **vrai** on renvoie le prix **C3** multiplié par le rabais **H3** sans  oublier de fixer **H3** avec des '$'.
+       2. Si **Faux** on revoie le prix **C3** multiplié par le rabais **H4** sans oublier de fixer **H3** avec des '$'
+  2. Si **Faux** on revoie le prix **C3** multiplié par le rabais **H5** sans oublier de fixer **H3** avec des '$'
+Cela donne la formule suivante, non unique:
+    ![excel](formule1.png)
+
+* Les **fonctions  ET** et **OU**
+  1. La fonction ET renvoie VRAI si **tous** les tests sont VRAI:  **=ET(test_1; test_2; ...)**
+  2. La fonction OU renvoie VRAI si **au moins** un des tests est VRAI : **=OU(test_1; test_2; ...)**
+
+#### Les graphiques Sparkline
+
+Le **graphique sparkline** (non disponible sur la version en ligne) est un graphique miniature qui apparaît directement dans une cellule et apporte une représentation visuelle des données d'une ligne (ou d'une colonne) sous forme de graphique.
+Pour l'insérer il suffit de faire :
+
+**insertion > graphique sparkline > choisir** entre *courbe*, *histogramme* et *conclusion et perte* **> choisir la ligne ou colonne de données a utiliser > recopie possible > personnalisation possible.**
+Cela donne par exemple:
+
+  ![excel](screen_sparkline.png)
