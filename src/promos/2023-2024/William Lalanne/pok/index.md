@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par William Lalanne.
 
-* [POK 1](./temps-1)
+* [Site web pour jouer au memory](./temps-1)
 * [POK 2](./temps-2)
 * [POK 3](./temps-3)
