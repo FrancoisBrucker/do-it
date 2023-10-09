@@ -102,3 +102,473 @@ Lorsque toutes les cartes ont été trouvées, un message s'affiche pour dire au
 ![partie gagnee](gameWon.png)
 
 En cliquant sur le bouton **"new game"** en haut à droite, on retourne à la page d'accueil. 
+
+```javascript 
+newGameButton.addEventListener("click", function () {
+    location.href = "http://127.0.0.1:5501/index.html";
+})
+```
+
+Voici tout le code qui a permis de construire la page d'accueil :
+
+
+{% details "Cliquez pour afficher le code **HTML** de la **page d'accueil**" %}
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="memory.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <title>Memory | William Lalanne </title>
+  </head>
+  <body>
+  <main>
+
+    <div class="container">
+      <div class="themeSelection">
+        <p>Select theme</p>
+      </div>
+
+      <section class="radio-section">
+        <div class="radio-item">
+          <input type="radio" name="radio" class="themesButton" id="numbersButton">
+          <label for="numbersButton">Numbers</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="radio" class="themesButton" id="iconsButton">
+          <label for="iconsButton">Icons</label>
+        </div>
+      </section>
+      
+      <div class="playerSelection">
+         <p>Number of Players</p>
+        </div>
+
+      <section class="radio-section">
+        <div class="radio-item">
+          <input type="radio" name="radio" class="playersButton" id="oneButton">
+          <label for="playersButton">1</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="radio" class="playersButton" id="twoButton">
+          <label for="playersButton">2</label>
+        </div>
+      </section>
+
+      <div class="gridSelection" id="selectGrid">
+        <p>Grid size</p>
+      </div>
+
+      <section class="radio-section">
+        <div class="radio-item">
+          <input type="radio" name="radio" class="gridButton" id="4x4">
+          <label for="4x4">4x4</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="radio" class="gridButton" id="6x6">
+          <label for="6x6">6x6</label>
+        </div>
+      </section>
+
+      <button class="start" id="start">Start Game</button>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="startGame.js"></script>
+  </body>
+</html>
+```
+{% enddetails %}
+
+{% details "Cliquez pour afficher le code **CSS** de la **page d'accueil**" %}
+```css
+@charset "UTF-8";
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 700px;
+    height: 650px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+div.themeSelection {
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.themesButton {
+    width: 250px;
+    height: 50px;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 20px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+div.playerSelection {
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.playersButton {
+    width: 250px;
+    height: 50px;
+    background-color: gray;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    font-size: 20px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.gridButton {
+    width: 250px;
+    height: 50px;
+    background-color: gray;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    font-size: 20px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div.gridSelection  {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+div.gridSelection p {
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.start {
+    background-color: orange;
+    width: 400px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.start:hover {
+    background-color: orange;
+    width: 400px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    align-self: center;
+    margin-top: 60px;
+    border: 3px white;
+}
+
+.selected {    
+    display: none;
+}
+
+.gridButton {
+    display: none;
+    border-color: #524eee;
+}
+
+.radio-section {
+	display: flex;
+    flex-direction: row;
+	align-items: center;
+    justify-items: center;
+	align-content: center;
+    justify-content: center;
+	width: 700px;
+}
+
+.radio-item [type="radio"] {
+	display: none;
+}
+
+.radio-item {
+    margin-top: -10px;
+}
+
+.radio-item + .radio-item {
+    margin-left: 30px;
+}
+
+.radio-item label {
+	display: block;
+	padding: 20px 60px;
+	background: #1d1d42;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 600;
+	min-width: 150px;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+    color: white;
+}
+
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.radio-item label:after {
+	height: 19px;
+	width: 19px;
+	border: 2px solid #524eee;
+	left: 19px;
+	top: calc(50% - 12px);
+}
+.radio-item label:before {
+	background: #524eee;
+	height: 20px;
+	width: 20px;
+	left: 21px;
+	top: calc(50%-5px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #524eee;
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+
+.errorMessage {
+    font-size: 10px;
+    color: red;
+}
+```
+{% enddetails %}
+
+{% details "Cliquez pour afficher le code **JavaScript** de la **page d'accueil**" %}
+```javascript
+const startGame = document.getElementById("start");
+const x4 = document.getElementById("4x4");
+const x6 = document.getElementById("6x6");
+var errorMessageAppear = false;
+
+
+x4.addEventListener("click", function () {
+    x4.classList.add("selected");
+    x4.classList.remove("gridButton");
+})
+
+    
+x6.addEventListener("click", function () {
+    x6.classList.add("selected");
+    x6.classList.remove("gridButton");
+} )
+
+
+startGame.addEventListener("click", function () {
+
+    if (x4.classList.contains("selected")) {
+        location.href = "http://127.0.0.1:5501/game4x4.html";
+    }
+    else if(x6.classList.contains("selected")) {
+        location.href = "http://127.0.0.1:5501/game6x6.html"
+    }
+    else if (x4.classList.contains("gridButton") && x6.classList.contains("gridButton") && errorMessageAppear==false) {
+        var div = document.getElementById("selectGrid");
+        var para = document.createElement("p");
+        var node = document.createTextNode("Choose a grid size");
+        para.classList.add("errorMessage");
+        para.appendChild(node);
+        div.appendChild(para);
+        errorMessageAppear=true;
+    }
+})
+```
+{% enddetails %}
+
+Et voici le code qui a permis de construire la page de jeu avec une grille de 4x4 : 
+
+{% details "Cliquez pour afficher le code **JavaScript** de la **page d'accueil**" %}
+```html
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game4x4.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <title>Memory | William Lalanne </title>
+  </head>
+  <body>
+  <h1 class="victory" id="victory">You win !</h1>
+  <header>
+    <h1>memory</h1>
+    <button class="gameButton" id="restart">Restart</button>
+    <button class="gameButton" id="newGame">New Game</button>
+  </header>
+  <main>
+    <div class="container2">
+      <div class="card" id="0">
+      </div>
+      <div class="card" id="1">
+      </div>
+      <div class="card" id="2">
+      </div>
+      <div class="card" id="3">
+      </div>
+      <div class="card" id="4">
+      </div>
+      <div class="card" id="5">
+      </div>
+      <div class="card" id="6">
+      </div>
+      <div class="card" id="7">
+      </div>
+      <div class="card" id="8">
+      </div>
+      <div class="card" id="9">
+      </div>
+      <div class="card" id="10">
+      </div>
+      <div class="card" id="11">
+      </div>
+      <div class="card" id="12">
+      </div>
+      <div class="card" id="13">
+      </div>
+      <div class="card" id="14">
+      </div>
+      <div class="card" id="15">
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="memory4x4.js"></script>
+  </body>
+</html>
+```
+{% enddetails %}
+
+{% details "Cliquez pour afficher le code **CSS** de la page 4x4 %}
+```css
+@charset "UTF-8";
+
+body {
+    background-color: white;
+}
+
+header {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+h1 {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 700px;
+    
+}
+
+.gameButton {
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: end;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    width: 800px;
+    height: 700px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: black;
+    align-self: center;
+    justify-self: center;
+    border: solid;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible, .found, .notFound {
+    visibility: visible;
+    color: black;
+    font-size: 55px;
+    position: relative;
+    bottom: 20px;
+    left: 45px;
+}
+
+
+.victory {
+    visibility: hidden;
+    font-size: 130px;
+    position: relative;
+    top: 530px;
+    left: 790px;
+}
+
+```
+
+{% enddetails %}
