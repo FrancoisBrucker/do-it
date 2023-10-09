@@ -17,7 +17,7 @@ résumé: "MON 1.2 sur les bases d'excel"
 {%prerequis 'Niveau débutant'%}  
 {%endprerequis%}
 
-Mes objectifs pour ce deuxième MON sont de (re)découvrir les bases d'excel. En effet, lors de mes derniers stages, j'ai été amenée a utiliser excel mais je me suis souvent retrouvée en difficulté dans la manipulation des données. C'est pourquoi je repars du début afin d'être capable de les maîtriser convenablement et d'en apprendre d'avantage dans le cadre d'un futur stage en entreprise. Je souhaiterai également poursuivre le VBA.
+Mes objectifs pour ce deuxième MON sont de (re)découvrir les bases d'excel. En effet, lors de mes derniers stages, j'ai été amenée a utiliser excel mais je me suis souvent retrouvée en difficulté dans la manipulation des données. C'est pourquoi je repars du début afin d'être capable de les maîtriser convenablement et d'en apprendre d'avantage dans le cadre d'un futur stage en entreprise. Je souhaiterai également poursuivre avec l'apprentissage du VBA.
 
 ### Méthodologie
 
@@ -37,11 +37,11 @@ Pour recommencer une formation sur excel a partir de zéro, j'ai suivi le cours 
 
 J'ai réalisé les exercices proposé tout au long de la formation.
 
-État des lieux le 8 octobre : 10+h de formation.
+État des lieux le 9 octobre : 10+h de formation - rédaction
 
-### Chapitres 1 à 8 - revoir les bases
+### Chapitres 1 à 7- revoir les bases
 
-Dans cette première partie, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
+Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. POur cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
 
 * L'utilisation du `$` permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
 ![excel](EXCEL2.png)
@@ -89,3 +89,61 @@ Pour l'insérer il suffit de faire :
 Cela donne par exemple:
 
   ![excel](screen_sparkline.png)
+
+### Chapitres 8 à 11 - Apprendre
+
+Dans cette deuxième partie de formation, j'ai simplement appris à utiliser des fonctionnalités basiques d'excel que je ne connaissais pas.
+
+#### La mise en forme conditionnelle
+
+La mise en forme conditionnelle (ou MFC) est une mise en forme qui s'applique aux cellules sous condition et permet de modifier :
+
+* Couleur de fond des cellules
+* Mise en forme du texte
+* Bordures
+* Format des données
+
+L'outil de MFC ést assez intuitif, pour appliquer une MFC à un fichier excel, il faut :
+sélectionnez la plage de cellules contenant les données > accueil > Mise en forme conditionnelle
+On pourra ensuite faire:
+
+* règle de mise en surbrillance > supérieur à > remplissage vert avec texte vert foncé
+* créer Nouvelle règle  > Valeur de la cellule égale à ="x" > remplissage vert avec texte vert foncé
+
+Cela donne le résultat suivant :
+
+![excel](screen_MFC.png)
+
+Pour gérer/modifier les MFC ajoutées il faut :
+
+**Mise en forme conditionnelle > gérer mes règles** - comme c'est affiché sur la photo ci-dessus.
+Le gestionnaire affiché à droite permet de :
+
+* Ajouter/supprimer de nouvelles règles
+* Changer l'ordre des règles
+* Modifier la plage de cellules et la mise en forme de chaque règle
+
+Il existe également des MFC **prêtes à l'emploi** dans ce même menu déroulant:
+
+* Barres de données
+* Nuances de données
+* Jeux d'icônes
+
+#### Tri, filtres et validations de données
+
+La fonctionnalité **Trier** permet de **trier** une plage de cellules par ordre alphabétique, par valeur, etc. Cette fonctionnalité se trouve dans l'onglet **données**
+
+* Le tri *"AZ"* réalisera un tri rapide par ordre alphabétique croissant
+* Un tri en fonction de plusieurs colonnes ou d'une colonne qui n'est pas forcément la première se fera par de la manière : **sélectionner la plage de cellule à trier > tri personnalisé > remplir** la fenêtre qui s'affiche.
+
+La fonctionnalité **filtrer des données** permet **d'afficher** les données en fonction d'un ou de plusieurs critères, pour cela il faut : **onglet données > filtre > remplir** la fenêtre qui s'affiche.
+
+La fonctionnalité **validation de données** s'assure de la **validité** des données entrées et affiche un message d'erreur et refuse l'entrée si les données ne sont pas valides, pour cela :
+
+**Sélectionner la plage contiendra les données valides > onglet données > Validation des données > remplir** la fenêtre qui s'affiche.
+
+Cette fenêtre permettra de valider selon divers critères (liste, date, heure, etc.) et de personnaliser le message d'erreur.
+
+### Conclusion
+
+La réalisation de ce MON sur excel m'a permis de revoir et de solidifier mes bases sur l'utilisation de cet outil. J'ai également appris de nouvelle fonctionnalités comme les MFC, les tris et les tableaux croisés dynamiques. J'ai pu mettre en pratique ces connaissances tout au long de la formation en réalisant les exercices proposés. Je peux maintenant commencer à étudier le VBA.
