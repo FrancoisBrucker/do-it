@@ -17,12 +17,28 @@ résumé: Création d'un site web avec HTML, CSS et JS pour jouer au memory.
 
 L'objectif de ce POK est de créer un site web permettant de jouer au memory. Ce genre de site existe déjà le but est seulement de s'entraîner à utiliser HTML, CSS et JavaScript. 
 
+## Les étapes à réaliser pendant le Sprint 1
+Comme je n'avais pas encore fini mon MON pour le premier sprint j'ai choisi de dédier mon temps au projet sur le Sprint 2. 
+
+## Les étapes à réaliser pendant le Sprint 2
+Pour le sprint 2, voici les différentes étapes : 
+- [X] Trouver une idée de site web à implémenter 
+- [X] Réfléchir au design des différentes pages
+- [X] Permettre au joueur de configurer sa partie sur la page d'accueil
+- [X] Faire en sorte que les cartes se retournent quand on clique dessus
+- [X] Si les deux cartes sont les mêmes, faire en sorte que cela se voit et qu'il soit impossible de les retoruner à nouveau
+- [X] Si les cartes sont différentes, le montrer à l'utilisateur et retourner les cartes après un certain temps
+- [X] Montrer au joueur qu'il a gagné quand toutes les cartes sont retournées
+- [X] Permettre au joueur de faire une nouvelle partie
+
 
 ## Fonctionnalités du site 
+
 Pour ce qui est des fonctionnalités, lorsqu'on arrive sur la première page du jeu, il sera possible de paramétrer sa partie (nombre de joueurs, nombres de carte...). Ensuite il faut que l'utilisateur puisse retourner les cartes et qu'un signal visuel lui indique si les cartes sont identiques ou différentes. Une fois que toutes les cartes ont été trouvées, un message indique que la partie est finie et un bouton permet de retourner sur la page d'accueil. 
 
 
 ## Les différentes étapes 
+
 Pour réaliser ce site il fallait que je code 3 pages web différentes : 
 - La page d'accueil où l'on définit les paramètres de la partie
 - La page où se déroule une partie avec 16 cartes à retourner
@@ -42,6 +58,7 @@ Pour les pages de jeux, la mécanique sera la suivante :
 - Lorsqu'il clique sur une deuxième carte, si elle est identique à la première, elles deviennent vertes, si elles sont différentes elles deviennent rouges puis se retourne à nouveau. 
 - Quand toutes les cartes sont vertes, la partie est terminée. 
 - Un bouton permet au joueur de revenir à la page d'accueil. 
+
 
 ## Création de la page d'accueil
 
