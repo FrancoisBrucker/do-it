@@ -157,39 +157,61 @@
 <p>État des lieux le 8 octobre : 10+h de formation.</p>
 <h3>Chapitres 1 à 8 - revoir les bases</h3>
 <p>Dans cette première partie, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur <a href="http://excel.pratique.com">excel.pratique.com</a> étant très synthétique, je vais juste énumérer les points importants pour moi.</p>
-<ol>
-<li>L'utilisation du <code>$</code> qui permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :<br>
+<ul>
+<li>L'utilisation du <code>$</code> permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :<br>
 <img src="EXCEL2.png" alt="excel"><br>
 Dans cette exemple, on divise par la valeur <strong>3</strong>, qui apparaît dans la cellule <strong>B8</strong>. Seulement on veut pouvoir diviser à chaque fois par cette <strong>même valeur</strong> de cellule <strong>B8</strong> lors de la recopie. Corrigeons:<br>
 <img src="EXCEL3.png" alt="excel"><br>
-Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici,  on aurait pu simplement fixer la ligne.</li>
-</ol>
+Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici,  on aurait pu simplement fixer la ligne</li>
+<li>L'opérarteur <strong>&lt;&gt;</strong> signifie est <strong>différent de</strong></li>
+<li>L'opérateur <strong>&lt;=</strong> signifie est <strong>inférieur ou égal à</strong></li>
+<li>L'opérateur <strong>&gt;=</strong> signifie est <strong>supérieur ou égal à</strong></li>
+</ul>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>La suite de la formation a été réalisée sur un ordinateur avec excel en anglais (utile pour avoir le vocabulaire en anglais également).</p>
+<p>N'ayant pas la version payante d'excel sur mon ordinateur, une partie de la formation a été réalisée sur un autre  ordinateur avec excel en anglais (utile pour avoir le vocabulaire en anglais également).</p>
 </div></div>
-<ol start="2">
+<h4>Les formules SI, ET, OU</h4>
+<ul>
 <li>
-<p>Les formules SI, ET, OU :</p>
-<ol>
-<li>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong><br>
+<p>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong><br>
 Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.<br>
 Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :<br>
 <img src="screen_SI_1.png" alt="excel"><br>
 Il suffit de rentrer dans la cellule D36: <strong>=SI(C36&gt;=18 (qui explique la condition); &quot;majeur&quot;;&quot;mineur&quot;)</strong> et de faire une recopie sur les cellules souhaitées.<br>
 Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:<br>
-<img src="screen_SI_2.png" alt="excel"></li>
+<img src="screen_SI_2.png" alt="excel"></p>
+<p>Ici, on souhaite calculer dans la cellule <strong>D3</strong> la valeur du <em>rabais</em> en fonction de la <em>quantité d'article</em>. Pour cela il faut <strong>imbriquer</strong> une fonction SI dans une autre.<br>
+Dans ce cas, on demande d'abort si la quantité est inférieure à 50:</p>
+<ol>
+<li>Si <strong>Vrai</strong> alors on demande si elle est inférieur à 10:
+<ol>
+<li>Si <strong>vrai</strong> on renvoie le prix <strong>C3</strong> multiplié par le rabais <strong>H3</strong> sans  oublier de fixer <strong>H3</strong> avec des '$'.</li>
+<li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H4</strong> sans oublier de fixer <strong>H3</strong> avec des '$'</li>
 </ol>
 </li>
+<li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H5</strong> sans oublier de fixer <strong>H3</strong> avec des '$'<br>
+Cela donne la formule suivante, non unique:<br>
+<img src="formule1.png" alt="excel"></li>
 </ol>
-<p>Ici, on souhaite calculer dans la cellule D3 la valeur du rabais en fonction de la quantité d'un article. POur cela il faut imbriquer une fonction SI dans une autre. Voici une option non unique:</p>
+</li>
+<li>
+<p>Les <strong>fonctions  ET</strong> et <strong>OU</strong></p>
 <ol>
-<li>La <strong>fonction ET</strong></li>
-<li>La <strong>Fonction OU</strong></li>
+<li>La fonction ET renvoie VRAI si <strong>tous</strong> les tests sont VRAI:  <strong>=ET(test_1; test_2; ...)</strong></li>
+<li>La fonction OU renvoie VRAI si <strong>au moins</strong> un des tests est VRAI : <strong>=OU(test_1; test_2; ...)</strong></li>
 </ol>
+</li>
+</ul>
+<h4>Les graphiques Sparkline</h4>
+<p>Le <strong>graphique sparkline</strong> (non disponible sur la version en ligne) est un graphique miniature qui apparaît directement dans une cellule et apporte une représentation visuelle des données d'une ligne (ou d'une colonne) sous forme de graphique.<br>
+Pour l'insérer il suffit de faire :</p>
+<p><strong>insertion &gt; graphique sparkline &gt; choisir</strong> entre <em>courbe</em>, <em>histogramme</em> et <em>conclusion et perte</em> <strong>&gt; choisir la ligne ou colonne de données a utiliser &gt; recopie possible &gt; personnalisation possible.</strong><br>
+Cela donne par exemple:</p>
+<p><img src="screen_sparkline.png" alt="excel"></p>
 
 
 </article>
