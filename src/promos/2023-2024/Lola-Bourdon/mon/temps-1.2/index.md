@@ -92,7 +92,7 @@ Cela donne par exemple:
 
 ### Chapitres 8 à 11 - Apprendre
 
-Dans cette deuxième partie de formation, j'ai simplement appris à utiliser des fonctionnalités basiques d'excel que je ne connaissais pas.
+Dans cette deuxième partie de formation, j'ai simplement appris à utiliser des fonctionnalités basiques d'excel que je ne connaissais pas. J'ai ici réalisé une nouvelle fiche méthode encore plus synthétique que la formation suivie,  qui me sera probablement utile plus tard.
 
 #### La mise en forme conditionnelle
 
@@ -104,11 +104,11 @@ La mise en forme conditionnelle (ou MFC) est une mise en forme qui s'applique au
 * Format des données
 
 L'outil de MFC ést assez intuitif, pour appliquer une MFC à un fichier excel, il faut :
-sélectionnez la plage de cellules contenant les données > accueil > Mise en forme conditionnelle
+**sélectionner la plage de cellules contenant les données > accueil > Mise en forme conditionnelle**
 On pourra ensuite faire:
 
 * règle de mise en surbrillance > supérieur à > remplissage vert avec texte vert foncé
-* créer Nouvelle règle  > Valeur de la cellule égale à ="x" > remplissage vert avec texte vert foncé
+* créer nouvelle règle  > Valeur de la cellule égale à ="x" > remplissage vert avec texte vert foncé
 
 Cela donne le résultat suivant :
 
@@ -136,7 +136,7 @@ La fonctionnalité **Trier** permet de **trier** une plage de cellules par ordre
 * Le tri *"AZ"* réalisera un tri rapide par ordre alphabétique croissant
 * Un tri en fonction de plusieurs colonnes ou d'une colonne qui n'est pas forcément la première se fera par de la manière : **sélectionner la plage de cellule à trier > tri personnalisé > remplir** la fenêtre qui s'affiche.
   
-Il est également possible d'ajouter des niveaux de tris à partir de cette fenêtre, par exemple :
+Il est également possible d'ajouter des niveaux de tri à partir de cette fenêtre, par exemple :
 
 ![excel](screen_tri2.png)
 
@@ -144,7 +144,7 @@ La fonctionnalité **filtrer des données** permet **d'afficher** les données e
 
 La fonctionnalité **validation de données** s'assure de la **validité** des données entrées et affiche un message d'erreur et refuse l'entrée si les données ne sont pas valides, pour cela :
 
-**Sélectionner la plage contiendra les données valides > onglet données > Validation des données > remplir** la fenêtre qui s'affiche.
+**Sélectionner la plage qui contiendra les données valides > onglet données > Validation des données > remplir** la fenêtre qui s'affiche.
 Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100
 ![excel](screen_valisation.png)
 
