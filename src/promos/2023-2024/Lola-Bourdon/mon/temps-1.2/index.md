@@ -85,7 +85,7 @@ Cela donne la formule suivante, non unique:
 Le **graphique sparkline** (non disponible sur la version en ligne) est un graphique miniature qui apparaît directement dans une cellule et apporte une représentation visuelle des données d'une ligne (ou d'une colonne) sous forme de graphique.
 Pour l'insérer il suffit de faire :
 
-**insertion > graphique sparkline > choisir** entre *courbe*, *histogramme* et *conclusion et perte* **> choisir la ligne ou colonne de données a utiliser > recopie possible > personnalisation possible.**
+**insertion > graphique sparkline > choisir** entre *courbe*, *histogramme* et *conclusion et perte* **> choisir la ligne ou colonne de données à utiliser > recopie possible > personnalisation possible.**
 Cela donne par exemple:
 
   ![excel](screen_sparkline.png)
@@ -135,14 +135,21 @@ La fonctionnalité **Trier** permet de **trier** une plage de cellules par ordre
 
 * Le tri *"AZ"* réalisera un tri rapide par ordre alphabétique croissant
 * Un tri en fonction de plusieurs colonnes ou d'une colonne qui n'est pas forcément la première se fera par de la manière : **sélectionner la plage de cellule à trier > tri personnalisé > remplir** la fenêtre qui s'affiche.
+  
+Il est également possible d'ajouter des niveaux de tris à partir de cette fenêtre, par exemple :
+
+![excel](screen_tri2.png)
 
 La fonctionnalité **filtrer des données** permet **d'afficher** les données en fonction d'un ou de plusieurs critères, pour cela il faut : **onglet données > filtre > remplir** la fenêtre qui s'affiche.
 
 La fonctionnalité **validation de données** s'assure de la **validité** des données entrées et affiche un message d'erreur et refuse l'entrée si les données ne sont pas valides, pour cela :
 
 **Sélectionner la plage contiendra les données valides > onglet données > Validation des données > remplir** la fenêtre qui s'affiche.
+Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100
+![excel](screen_valisation.png)
 
-Cette fenêtre permettra de valider selon divers critères (liste, date, heure, etc.) et de personnaliser le message d'erreur.
+Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
+![excel](screen_valisation3.png)
 
 ### Conclusion
 
