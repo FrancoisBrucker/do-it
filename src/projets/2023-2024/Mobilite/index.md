@@ -93,35 +93,6 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 
 **Les différentes catégories à implémenter**
 
-- Nom
-- Prénom
-- Contact élève (mail)
-- Bio rapide de l'élève
-- Année de mobilité
-  - 2023
-  - 2024
-- Durée
-  - 2 mois (réservé aux apprenti)
-  - 6 mois
-- Type de mobilité :  
-  - SMA
-  - Apprenti - Bénévole
-  - Apprenti - envoyer via son entreprise
-  - SSE
-  - Césure - Bénévole
-  - Césure - entreprise
-- Description rapide
-- Contact mission
-- Budget :
-  - 0-500 €
-  - 500-1000 €
-  - 1000-2000€
-  - 2000-3000€
-  - 3000-4000€
-  - 4000+ €
-- Bouton pour déposer le rapport de mobilité (vidéo/pdf)
-- Bouton pour envoyer la mobilité pour validation
-
 | Column 1 | Column 2 |
 | -------- | -------- |
 | Nom    | *Sacha*   |
@@ -137,32 +108,7 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 | Contact mission    | *Pierre*    |
 | Budget   | *500-1000€*   |
 
-
-## Ressources utilisées
-
-### Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application
-Les intérêts
-
-- Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?
-- Est-ce que vous souhaitez être contacté ?
-- Acceptez vous que vos informations soient visible ?
-- Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?
-
-### Questionnaire pour recueillir l'avis de l'administration Centralienne
-
-Les intérêts
-
-- Le but est de s'assurer de l'intérêt pour l'administration.
-- Concevoir quelque chose de facile d'utilisation.
-- Avec des questions pour les étudiants qui correspondent aux attentes de l'administration.
-- Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?
-- Établir les attendus d'un point de vue sécurités de la donnée :  
-serveur de Centrale ? système de login ?
-- Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?
-- Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est  
-pas déjà dans la liste)
-- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum/  
-Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
+## Moyen technique mis en oeuvre
 
 ### La réalisation d'une maquette CANVA
 
@@ -175,6 +121,12 @@ Les intérêts
 déposant sa mobilité/administrateur de l'école
 
 Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.
+
+Voici une première maquette Canva pour représenter les mobilités des élèves 
+
+<img src="canva_site_1.png">
+
+<img src="canva_site_2.png">
 
 ### La réalisation d'un MVP (minimum viable project)
 
@@ -201,23 +153,80 @@ Les intérêts
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
 - Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
 
+### L'authentification CAS
+
+L'intérêt de l'authentification CAS est de définir les accès au site pour s'assurer que seul des personnes de l'écoles et sous certaines conditions auraient accès aux données partagés.
+
+### L'hébergement du site
+
+L'objectif est d'héberger le site web sur les serveurs de l'écoles pour rester souverain de la data.
+
 ## Contact des parties impliquées dans le projet
 
-### Gestionnaire des SMA et double diplôme : Olivier Boiron
+### Contact auprès de l'administration
 
-Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel.
+- Quelles sont les données que vous pouvez extraire de MyMobilityOnline ou autre site ?
+- Quelles sont les tâches les plus pénibles que vous êtes amenés à effectuer en tant que RI ? Quel travail effectuez vous avec ces datas ?
+- Comment imaginez-vous l’utilisation du site par les personnes des RI ? 
+- Quelles sont les données dont vous avez besoin ?
+- Comment travaillez-vous ?
+- Quelles fonctionnalités vous intéressent ?
+- Quelles sont les missions des RI lorsqu’un élève veut partir ? ou revient ?
+- Quels sont les outils dont vous disposez ? Excel ou autre base de données ?
+- Quel serait l'intérêt pour l'administration.
+- Concevoir quelque chose de facile d'utilisation.
+- Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?
+- Établir les attendus d'un point de vue sécurités de la donnée :  
+serveur de Centrale ? système de login ?
+- Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?
+- Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est  
+pas déjà dans la liste)
+- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum ?
+- Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
 
-### Gestionnaire des SSE
+**Gestionnaire des SMA et double diplôme : Olivier Boiron**
 
-Nous n'avons pas encore réaliser d'entrevu avec le responsable.
+Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.
 
-### Gestionnaire des mobilité recherche
+```
+- Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.
+- Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
+- Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui c'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
+- Le point critique : les étudiants ne contactent pas les référents pays ou scientifique, ainsi lors des commissions les dossiers ne sont pas logique ce qui ne les favorisent pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.
+- Ce qu’il nous faut : la liste des référents mise à jour, le contact des étudiants travaillant avec mobility online
+- Les RI ne gèrent que les SMA et Double Diplôme
+- Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
+- Obligatoire : avoir une FAQ et demander des retours d’expériences
+```
 
-Nous n'avons pas encore réaliser d'entrevu avec le responsable.
+**Gestionnaire des SSE & TFE : Muriel Roche**
+
+Nous n'avons pas encore réalisé d'entrevu avec le responsable.
+
+**Gestionnaire des Alernants entreprise : Guillaume Graton**
+
+Nous n'avons pas encore réalisé d'entrevu avec le responsable.
+
+**Gestionnaire des mobilité recherche : Daniel Mazzoni**
+
+Nous n'avons pas encore réalisé d'entrevu avec le responsable.
 
 ### Contact des étudiants
 
 Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1A et 2A pour savoir si le projet les intéressait, s'il serait prêt à y accorder un peu de temps.
+
+Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :
+
+- Quelles informations te semblent indispensables pour choisir ta mobilité ?
+- Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?
+- As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ? 
+- Combien de temps serais-tu prêt à consacrer pour remplir un formulaire de retour de mobilité ? Le ferais-tu si ça n'était pas obligatoire ? Qu'est-ce qui pourrait te motiver à le faire ?
+- Une FAQ regroupant les questions récurrentes des étudiants serait-il intéressant ? Irais-tu sur le site pour avoir réponse à ta question ou enverrais-tu quand même un mail "pour être sûr"?
+- Quelles données as-tu besoin d'avoir pour gérer les possibles bugs ? A quel degré de liberté ? (Lecture seule, modification sous certaines conditions , modifications totales , suppression …)
+- Aimerais-tu avoir les contacts des anciens élèves ayant effectué une mobilité qui t'intéresse ?
+- Aimerais-tu avoir accès aux sites des écoles pour les SMA ? 
+- As-tu des suggestions de fonctionnalités ? 
+- A quel point le fait de devoir prendre l’avion pour y aller a- t-il fermé des destinations ?
 
 **Contact des élèves cherchant une mobilité**
 
