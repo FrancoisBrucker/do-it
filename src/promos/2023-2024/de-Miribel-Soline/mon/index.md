@@ -8,4 +8,5 @@ authors:
 
 Ensemble des MON réalisés par Soline de Miribel.
 
-* [MON 1.1](./temps-1.1)
+* [MON 1.1 : la gestion de crise en entreprise](./temps-1.1)
+* [MON 1.2 : la gestion de crise en entreprise (suite)](./temps-1.2)

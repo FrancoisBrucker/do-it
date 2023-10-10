@@ -5,7 +5,7 @@ title: "Pentest et Cybersécurité"
 authors:
   - Arthur Louradou
 
-date: 2023-09-18
+date: 2023-09-27
 
 tags: 
   - "temps 1"
@@ -80,8 +80,6 @@ Il existe plusieurs méthodes pour tester la sécurité d'un système, dont le "
 Il est essentiel de comprendre que le terme "hacker" ne se réfère pas nécessairement à des intentions malveillantes. Les pentesters adoptent une approche créative et réfléchie pour identifier les vulnérabilités d'un système. Dans le cadre de ce cours, toutes les activités sont menées de manière légale, à condition qu'elles soient effectuées avec l'autorisation appropriée.
 
 La qualité principale d'un pentester est l'autodidaxie, c'est-à-dire la capacité à apprendre de manière autonome. Cette compétence est particulièrement valorisée et recherchée par les professionnels de la sécurité informatique, et elle est étroitement surveillée par les MON de Do_It !
-
-N'hésitez pas à me fournir la suite de vos notes si vous souhaitez que je les convertisse également en Markdown.
 
 ### Cadrage du besoin de test d’intrusion _(skip)_ { #mooc-cadrage }
 

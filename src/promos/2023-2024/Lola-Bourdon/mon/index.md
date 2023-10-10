@@ -8,4 +8,6 @@ authors:
 
 Ensemble des MON réalisés par Lola Bourdon
 
-* [MON 1.1](./temps-1.1)
+1. Temps 1
+    1. [MON 1.1 : Web front](./temps-1.1)
+    2. [MON 1.2 : Excel - repartir sur de bonnes bases](./temps-1.2)

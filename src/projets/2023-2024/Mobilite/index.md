@@ -7,6 +7,7 @@ authors:
   - Le Boursicaud Lucie
   - Schultz Mathis
   - Le Bihan Paul
+  - Kawtar Bahri
 
 date: 2023-09-27
 
@@ -15,6 +16,7 @@ tags:
   - "mobilité"
 
 résumé: Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
+
 ---
 ## Introduction - définition du projet
 
@@ -31,8 +33,7 @@ L'étudiant remplit un formulaire :
 
 #### Plusieurs méthodes possibles
 
-```
-Un formulaire sur une page annexe
+###### Un formulaire sur une page annexe
 
 L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site  
 et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
@@ -41,17 +42,14 @@ Cette méthode requiert :
 
 - une page de dépôt hébergé sur le site
 - Une page administrateur pour valider les mobilités qui seront déposé.
-```
 
-```
-un formulaire Moodle  
+###### Un formulaire Moodle  
 
 Cette méthode requiert :
 
 - Un formulaire Moodle précis donnant des réponses sous un format exploitable.
 - une validation de l'administration
 - une implémentation manuelle de l'administration dans la base de donnée.
-```
 
 ### Site publique/réservé à Centrale
 
@@ -143,19 +141,15 @@ Pour rendre possible le fonctionnement en filtre il est nécessaire que la base 
 ## Ressources utilisées
 
 ### Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application
-
-```
 Les intérêts
 
 - Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?
 - Est-ce que vous souhaitez être contacté ?
 - Acceptez vous que vos informations soient visible ?
 - Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?
-```
 
 ### Questionnaire pour recueillir l'avis de l'administration Centralienne
 
-```
 Les intérêts
 
 - Le but est de s'assurer de l'intérêt pour l'administration.
@@ -169,11 +163,9 @@ serveur de Centrale ? système de login ?
 pas déjà dans la liste)
 - Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum/  
 Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
-```
 
 ### La réalisation d'une maquette CANVA
 
-```
 Les intérêts
 
 - Réfléchir aux différentes fonctionnalités pour rendre l'application viable
@@ -181,21 +173,17 @@ Les intérêts
 - Établir l'esthétisme du site
 - Modéliser les différentes interfaces : utilisateur/élève  
 déposant sa mobilité/administrateur de l'école
-```
 
 Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.
 
 ### La réalisation d'un MVP (minimum viable project)
 
-```
 Les intérêts
 
 - tester la faisabilité d'un projet rapidement.
 - Avoir une première application à éprouver pour trouver les limites du projet  
 et cadrer proprement les outils à développer.
-```
 
-```
 Les phases pour faire le MVP (minimum viable product)
 
 1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
@@ -203,18 +191,15 @@ les fonctionnalités qui les intéresse.
 2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )
 3. Tests des parcours utilisateurs (résolution et dev bug).
 4. Préparation du pitch et de la démonstration.
-```
 
 Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.
 
 ### La réalisation du site web final
 
-```
 Les intérêts
 
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
 - Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
-```
 
 ## Contact des parties impliquées dans le projet
 
@@ -241,3 +226,19 @@ Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, le
 **Contact des élèves retournant de mobilité**
 
 Les 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet.
+
+## Premières répartitions des tâches 
+| Taches | Affectée à | Statut |
+| ------- | ---------- | ------ |
+| Recueillir le besoin des étudiants | Tous le monde | A faire |
+| Construire une US | | A faire |
+| Benchmarker les étudiants des autres écoles sur leur recherche de mobilité | A faire |
+| Préparer un Git-Hub   | Lucie | A faire |
+| Choisir nos extensions    | Lucie | A faire |
+| Hébergement du site      | | A faire |
+| Etudier la connexion CAS     | | A faire |
+| Faire les maquettes de toutes les pages    | Paul & Kawtar| A faire |
+| Tables de données   | Mathis & Agathe | A faire |
+| Préparer l'entretien avec les RI   | Tout le monde | A faire |
+| Faire un Google Form pour les centraliens    | Mathis & Agathe | A faire |
+| Choisir entre API Google ou GeoPanda | | A faire |

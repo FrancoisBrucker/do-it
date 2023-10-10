@@ -11,8 +11,9 @@ tags:
   - "temps 1"
   - "HTML"
   - "CSS"
+  - "débutant"
 
-résumé: "Ce MON a pour objectifs de découvrir les bases des langages HTML et CSS afin d'être capable de coder des sites web simples."
+résumé: "Ce MON a pour objectif de découvrir les bases des langages HTML et CSS afin d'être capable de coder des sites web simples."
 ---
 ## 1. Introduction
 
@@ -23,7 +24,7 @@ Ces deux langages sont complémentaires, et permettent déjà de nombreuses fonc
 
 **HTML** sert à écrire le contenu du site : texte, images, liens, logo, et tout ce qui sera visible sur les différentes pages. Avec **CSS**, on met en forme ce contenu, on agence les éléments, on y ajoute de la couleur, on joue avec les fonds,  les polices, les tailles ou encore les espacements.
 
-Chacune des deux parties suivantes introduira un de ces langages, que j'ai découvert en suivant le cours [Créez votre site web avec HTML5 et CSS3](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3) sur OpenClassrooms. Ensuite, un exemple de site simple créé grâce aux bases vues dans ce cours sera présenté.
+Chacune des deux parties suivantes introduira un de ces langages, que j'ai découvert en suivant le cours [Créez votre site web avec HTML5 et CSS3](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3) sur OpenClassrooms. A mon sens, le gros point positif de ce cours est sa partie pratique, qui nous permet de développer un site de manière guidée et au fur et à mesure des connaissances acquises. Je présenterai donc le résultat de ce projet dans une dernière partie.
 
 ## 2. Les bases du langage HTML
 
@@ -113,7 +114,7 @@ Les possibilités sont encore très nombreuses pour jouer avec le rendu visuel d
 
 ## 4. Le résultat
 
-Le cours OpenClassrooms que j'ai suivi alterne des parties théoriques et des parties pratiques. Durant ces parties pratiques, il faut réaliser le site web d'une photographe fictive en appliquant les connaissances acquises au fur et à mesure de l'avancée des chapitres.
+Durant les parties parties pratiques du cours suivi, j'ai pu réaliser le site web d'une photographe fictive au fil de l'avancée des chapitres.
 
 Voici le rendu obtenu :
 
@@ -124,4 +125,4 @@ Voici le rendu obtenu :
 <img src="portfolio2.jpg">
 <img src="portfolio3.jpg">
 
-Je laisse également dans le dossier de ce MON le code **HTML** de chaque page ainsi que la feuille de style du site en **CSS** pour de potentiels intéressés !
+Je laisse également dans le [ici](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Agathe-Rabachou/mon/temps-1.1/codes_sites.md) le code **HTML** de chaque page ainsi que la feuille de style du site en **CSS** pour de potentiels intéressés !

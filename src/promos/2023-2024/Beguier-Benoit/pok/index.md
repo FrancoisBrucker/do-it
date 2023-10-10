@@ -6,8 +6,8 @@ authors:
   - Benoit BEGUIER
 ---
 
-Ensemble des POK réalisés par Benoit Beguier.
+Ensemble des POK réalisés par Benoît Béguier.
 
-* [POK 1](./temps-1)
+* [Modélisation dynamique d'une monoplace : d'un point matériel à un modèle simplifié](./temps-1)
 * [POK 2](./temps-2)
 * [POK 3](./temps-3)

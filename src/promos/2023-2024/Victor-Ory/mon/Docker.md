@@ -104,7 +104,7 @@ Il est possible de créer un réseau fictif reliant les différents conteneurs q
 ## Docker Compose : 
 
 Cela permet de gérer de multiples containers en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. `Ces différents containers forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable.
-Ainsi au lieu de configurer chaque container avec des variables, des binding de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de 
+Ainsi au lieu de configurer chaque container avec des variables, des bindings de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de 
 
 ## Docker volume :
 
@@ -116,4 +116,6 @@ Cet ensemble de procédé et outils est donc un maillons essentiel de l'automati
 
 ## Dockerfile
 
-Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, c'est la
+Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, cela permet de créer une nouvelle image personnalisé et il devient possible de la partager avec d'autres, notamment en la mettant disponible sur le Docker Hub. 
+
+Vous ne me croyez pas ?  Allez donc voir [mon répertoire Docker hub](https://hub.docker.com/r/hagard/frontexperisite)

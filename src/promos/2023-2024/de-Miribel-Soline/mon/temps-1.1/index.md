@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "La gestion de crise"
+title: "La gestion de crise en entreprise"
 authors:
   - Soline de MIRIBEL
 
@@ -9,13 +9,25 @@ date: 2023-09-27
 
 tags: 
   - "temps 1"
+  - "gestion de crise"
 
-résumé: "Ce MON décrit comment les entreprises s'organisent pour faire face à une situation critique."
+résumé: "Ce MON décrit ce que les cabinets de conseil en gestion de crise proposent aux entreprises pour faire face à une situation critique. Il s'agit d'une gestion théorique de l'événement."
 ---
+{% prerequis %}
+**Niveau** : débutant
+**Prérequis** : Aucun
+{% endprerequis %}
+
 ## Introduction
-62 % des organisations ont connu plusieurs crises au cours des dernières années. L’exemple le plus éloquent est sans nul doute la crise sanitaire. Nombreuses sont les entreprises qui ont dû mettre en place le télétravail pendant l’épidémie tout en faisant face à la digitalisation croissante des métiers et à la baisse de l’engagement des collaborateurs qui questionnent leur rapport au travail. Lorsqu’elle est mal gérée, une crise peut avoir des conséquences plus ou moins importantes sur le bien-être, l’engagement, la performance, le chiffre d’affaires et l’image de marque. Si l’on ne peut échapper à certaines crises, on peut en revanche s’y adapter et même en faire une opportunité de développement.
+Selon une étude du Cabinet Deloitte, plus de 60% des entreprises sont confrontées à davantage de crises aujourd’hui qu’il y a 10 ans. L’exemple le plus éloquent est sans nul doute la crise sanitaire. Nombreuses sont les entreprises qui ont dû mettre en place le télétravail pendant l’épidémie tout en faisant face à la digitalisation croissante des métiers et à la baisse de l’engagement des collaborateurs qui questionnent leur rapport au travail. Lorsqu’elle est mal gérée, une crise peut avoir des conséquences plus ou moins importantes sur le bien-être, l’engagement, la performance, le chiffre d’affaires et l’image de marque. Si l’on ne peut échapper à certaines crises, on peut en revanche s’y adapter et même en faire une opportunité de développement.
 
 Qu’est-ce qu’une crise ? Peut-on l’anticiper ? Comment la gérer efficacement ? 
+
+## Sommaire
+1. Une crise
+2. Le plan de prévention des risques
+3. Le plan de gestion de crise
+4. La gestion de crise
 
 ## 1. Une crise
 ### 1.1. Etymologie, définition et caractéristiques
@@ -128,10 +140,10 @@ L'anticipation est donc le mettre mot de la gestion de crise. Au travers du plan
 L'organisation n'est cependant pas suffisante pour gérer efficacement un crise. En effet, la gestion de crise repose aussi sur un management et une communication spécifiques. Ces éléments feront l'objet de mon MON 1.2.
 
 ### Sources
-[Gestion de crise en entreprise : restez maître de la situation !](https://www.managersenmission.com/management-de-transition/expertises/management-de-crise/) par Manager en mission
+* [Gestion de crise en entreprise : restez maître de la situation !](https://www.managersenmission.com/management-de-transition/expertises/management-de-crise/) par Manager en mission
 
-[Gestion de crise en entreprise : quels enjeux et quelles solutions RH pour y faire face ?](https://www.simundia.com/blog/gestion-crise-entreprise-rh#:~:text=Qu%27est%2Dce%20qu%27,un%20climat%20de%20forte%20incertitude.) par Simundia
+* [Gestion de crise en entreprise : quels enjeux et quelles solutions RH pour y faire face ?](https://www.simundia.com/blog/gestion-crise-entreprise-rh#:~:text=Qu%27est%2Dce%20qu%27,un%20climat%20de%20forte%20incertitude.) par Simundia
 
-[Qu'est-ce que la gestion de crise ?](https://www.everbridge.com/fr/blog/quest-ce-que-la-gestion-de-crise/#:~:text=La%20gestion%20de%20crise%20est,biens%20ou%20aux%20processus%20op%C3%A9rationnels.) par Everbridge
+* [Qu'est-ce que la gestion de crise ?](https://www.everbridge.com/fr/blog/quest-ce-que-la-gestion-de-crise/#:~:text=La%20gestion%20de%20crise%20est,biens%20ou%20aux%20processus%20op%C3%A9rationnels.) par Everbridge
 
-[La gestion de crise en entreprise](https://prium-transition.com/la-gestion-de-crise/) par Prium Transition
+* [La gestion de crise en entreprise](https://prium-transition.com/la-gestion-de-crise/) par Prium Transition

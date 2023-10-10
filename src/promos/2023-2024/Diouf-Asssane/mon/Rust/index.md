@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Rust"
+title: "Introduction à Rust"
 authors:
   - Assane Diouf
 
@@ -21,11 +21,11 @@ Il faut connaître :
 
 Pour faire mes débuts en Rust j'ai d'abord consulté le [site officiel](https://www.rust-lang.org/fr) du langage. On peut y trouver un livre (gratuit) pour apprendre le langage : [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/).
 
-J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : **Nom du livre**. Etant donné que le livre proposé par Rust est composé de plusieurs chapitres d'explication avec peu de pratique, il m'a permis de commencer à pratiquer en même temps que j'apprenais les concepts du langage.
+J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : **Hands-on Rust : Effective learning through 2D Game Development and Play** de Herbert Wolverson. Etant donné que le livre proposé par Rust est composé de plusieurs chapitres d'explication avec peu de pratique, il m'a permis de commencer à pratiquer en même temps que j'apprenais les concepts du langage.
 
 Cette vidéo Youtube est aussi une présentation (très) rapide à Rust : [Rust](https://www.youtube.com/watch?v=5C_HPTJg5ek)
 
-## Présentation de Rust ?
+## Présentation de Rust
 - Parmis les langages préféré des développeurs
 - Performant, sécurisé (typage, ownership), productif
 - Permet de :
@@ -47,13 +47,13 @@ et exécuter ce dernier avec :
 L'usage est cependant d'utiliser **cargo** pour développer avec Rust. Cargo va permettre de gérer l'ensemble des dépendances du projet avec d'autres librairies Rust (des crates) et de facilement créer un exécutable et le tester.
 
 ## Les particularités de Rust
-Tout d'abord, Rust est un **langage** typé, mais contrairement à d'autres langages typés comme le C, il prend aussi en compte l'espace occupé par chaque type. Par exemple, un entier signé sur 32bits a pour type i32 alors qu'un entier signé sur 8bits a pour type i8. Avec ce système de type, Rust vient avec un système *simple* de conversion des variables d'un type à un autre. Rust introduit aussi une forme de string plus piégeuse que dans d'autres langages mais, en contrepartie, permet vraiment de travailler avec tout type de charactères de façon sécurisée.
+Tout d'abord, Rust est un **langage** typé, mais contrairement à d'autres langages, il prend aussi en compte l'espace occupé par chaque type. Par exemple, un entier signé sur 32bits a pour type i32 alors qu'un entier signé sur 8bits a pour type i8. Je trouve Rust particulièrement plus lisible que le C/C++ avec ces notations. En plus de ce système de type, Rust vient avec un système *simple* de conversion des variables d'un type à un autre. Rust introduit aussi une forme de string plus piégeuse que dans d'autres langages mais, en contrepartie, permet vraiment de travailler avec tout type de charactères de façon sécurisée.
 
 
 On peut aussi parler du fait que la valeur nulle n'existe pas dans Rust. A la place, Rust introduit des énumérations comme les Options qui peuvent valoir Some(quelque chose) ou None. Couplé avec les matchs par exemple, cela permet de mieux gérer les erreurs à mon sens.
 
 
-Ensuite, il y a l'**owwnership** (la *propriété* en français), qui est un ensemble de 3 règles dont le but est de réduire le nombre d'erreurs dûe à la manipulation de la mémoire.
+Ensuite, il y a l'**ownership** (la *propriété* en français), qui est un ensemble de 3 règles dont le but est de réduire le nombre d'erreurs dûe à la manipulation de la mémoire.
 
 
 ## C'est quoi l'ownership ?
@@ -62,7 +62,7 @@ L'ownership est un système de **management de la mémoire** en Rust, basé sur 
 - Il ne peut y avoir qu'un proprétaire à la fois par valeur.
 - Les valeurs sont automatiquement détruites avec le propriétaire.
 
-Ces règles sont importantes à garder en tête lors du maniement de valeur qui ne sont pas clonables. Il est alors intéressant, à mon sens, de tout voir alors comme dans le cas où l'on possède un objet :
+Ces règles sont importantes à garder en tête lors du maniement de certaines valeurs. Il est alors intéressant, à mon sens, de tout voir alors comme dans le cas où l'on possède un objet :
 - il n'a qu'un seul propriétaire
 - si on le donne, il n'est plus à nous
 - on peut cependant le prêter
