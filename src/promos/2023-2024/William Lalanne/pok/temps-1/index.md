@@ -389,3 +389,46 @@ div.gridSelection p {
 }
 ```
 {% enddetails %}
+
+
+{% details "Cliquez pour afficher le code **JavaScript** de la **page d'accueil**" %}
+```javascript
+const startGame = document.getElementById("start");
+const x4 = document.getElementById("4x4");
+const x6 = document.getElementById("6x6");
+var errorMessageAppear = false;
+
+
+x4.addEventListener("click", function () {
+    x4.classList.add("selected");
+    x4.classList.remove("gridButton");
+})
+
+    
+x6.addEventListener("click", function () {
+    x6.classList.add("selected");
+    x6.classList.remove("gridButton");
+} )
+
+
+startGame.addEventListener("click", function () {
+
+    if (x4.classList.contains("selected")) {
+        location.href = "http://127.0.0.1:5501/game4x4.html";
+    }
+    else if(x6.classList.contains("selected")) {
+        location.href = "http://127.0.0.1:5501/game6x6.html"
+    }
+    else if (x4.classList.contains("gridButton") && x6.classList.contains("gridButton") && errorMessageAppear==false) {
+        var div = document.getElementById("selectGrid");
+        var para = document.createElement("p");
+        var node = document.createTextNode("Choose a grid size");
+        para.classList.add("errorMessage");
+        para.appendChild(node);
+        div.appendChild(para);
+        errorMessageAppear=true;
+    }
+})
+```
+
+{% enddetails %}
