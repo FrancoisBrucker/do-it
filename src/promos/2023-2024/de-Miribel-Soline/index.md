@@ -15,4 +15,4 @@ Bio
 
 ## Projet
 
-[Panique au bureau](../../../projets/2023-2024/Panique_au_bureau)
+[Panique au château](../../../projets/2023-2024/Panique_au_chateau)
