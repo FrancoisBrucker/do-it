@@ -179,48 +179,6 @@ L'idée est de générer une map cliquable afin de sélectionner la région qui 
 <p>Pour rendre possible le fonctionnement en filtre il est nécessaire que la base de donnée soit dans un format précis avec des réponses fermer.<br>
 <em>on ne veut pas que Japon/japon/JAPON soit trois pays différents</em></p>
 <p><strong>Les différentes catégories à implémenter</strong></p>
-<ul>
-<li>Nom</li>
-<li>Prénom</li>
-<li>Contact élève (mail)</li>
-<li>Bio rapide de l'élève</li>
-<li>Année de mobilité
-<ul>
-<li>2023</li>
-<li>2024</li>
-</ul>
-</li>
-<li>Durée
-<ul>
-<li>2 mois (réservé aux apprenti)</li>
-<li>6 mois</li>
-</ul>
-</li>
-<li>Type de mobilité :
-<ul>
-<li>SMA</li>
-<li>Apprenti - Bénévole</li>
-<li>Apprenti - envoyer via son entreprise</li>
-<li>SSE</li>
-<li>Césure - Bénévole</li>
-<li>Césure - entreprise</li>
-</ul>
-</li>
-<li>Description rapide</li>
-<li>Contact mission</li>
-<li>Budget :
-<ul>
-<li>0-500 €</li>
-<li>500-1000 €</li>
-<li>1000-2000€</li>
-<li>2000-3000€</li>
-<li>3000-4000€</li>
-<li>4000+ €</li>
-</ul>
-</li>
-<li>Bouton pour déposer le rapport de mobilité (vidéo/pdf)</li>
-<li>Bouton pour envoyer la mobilité pour validation</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -279,30 +237,7 @@ L'idée est de générer une map cliquable afin de sélectionner la région qui 
 </tr>
 </tbody>
 </table>
-<h2>Ressources utilisées</h2>
-<h3>Questionnaire pour recueillir l'avis des Centraliens sur l'intérêts de l'application</h3>
-<p>Les intérêts</p>
-<ul>
-<li>Quels sont les informations que vous aimeriez connaître sur les mobilités précédentes ?</li>
-<li>Est-ce que vous souhaitez être contacté ?</li>
-<li>Acceptez vous que vos informations soient visible ?</li>
-<li>Possibilité d'anonymiser la mobilité ? Ne pas l'afficher du tout ?</li>
-</ul>
-<h3>Questionnaire pour recueillir l'avis de l'administration Centralienne</h3>
-<p>Les intérêts</p>
-<ul>
-<li>Le but est de s'assurer de l'intérêt pour l'administration.</li>
-<li>Concevoir quelque chose de facile d'utilisation.</li>
-<li>Avec des questions pour les étudiants qui correspondent aux attentes de l'administration.</li>
-<li>Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?</li>
-<li>Établir les attendus d'un point de vue sécurités de la donnée :<br>
-serveur de Centrale ? système de login ?</li>
-<li>Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?</li>
-<li>Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est<br>
-pas déjà dans la liste)</li>
-<li>Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum/<br>
-Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?</li>
-</ul>
+<h2>Moyen technique mis en oeuvre</h2>
 <h3>La réalisation d'une maquette CANVA</h3>
 <p>Les intérêts</p>
 <ul>
@@ -313,6 +248,9 @@ Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédente
 déposant sa mobilité/administrateur de l'école</li>
 </ul>
 <p>Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.</p>
+<p>Voici une première maquette Canva pour représenter les mobilités des élèves</p>
+<img src="canva_site_1.png">
+<img src="canva_site_2.png">
 <h3>La réalisation d'un MVP (minimum viable project)</h3>
 <p>Les intérêts</p>
 <ul>
@@ -335,15 +273,64 @@ les fonctionnalités qui les intéresse.</li>
 <li>Avoir un site web propre et se débarrasser des contraintes liées au no-code.</li>
 <li>Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.</li>
 </ul>
+<h3>L'authentification CAS</h3>
+<p>L'intérêt de l'authentification CAS est de définir les accès au site pour s'assurer que seul des personnes de l'écoles et sous certaines conditions auraient accès aux données partagés.</p>
+<h3>L'hébergement du site</h3>
+<p>L'objectif est d'héberger le site web sur les serveurs de l'écoles pour rester souverain de la data.</p>
 <h2>Contact des parties impliquées dans le projet</h2>
-<h3>Gestionnaire des SMA et double diplôme : Olivier Boiron</h3>
-<p>Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel.</p>
-<h3>Gestionnaire des SSE</h3>
-<p>Nous n'avons pas encore réaliser d'entrevu avec le responsable.</p>
-<h3>Gestionnaire des mobilité recherche</h3>
-<p>Nous n'avons pas encore réaliser d'entrevu avec le responsable.</p>
+<h3>Contact auprès de l'administration</h3>
+<ul>
+<li>Quelles sont les données que vous pouvez extraire de MyMobilityOnline ou autre site ?</li>
+<li>Quelles sont les tâches les plus pénibles que vous êtes amenés à effectuer en tant que RI ? Quel travail effectuez vous avec ces datas ?</li>
+<li>Comment imaginez-vous l’utilisation du site par les personnes des RI ?</li>
+<li>Quelles sont les données dont vous avez besoin ?</li>
+<li>Comment travaillez-vous ?</li>
+<li>Quelles fonctionnalités vous intéressent ?</li>
+<li>Quelles sont les missions des RI lorsqu’un élève veut partir ? ou revient ?</li>
+<li>Quels sont les outils dont vous disposez ? Excel ou autre base de données ?</li>
+<li>Quel serait l'intérêt pour l'administration.</li>
+<li>Concevoir quelque chose de facile d'utilisation.</li>
+<li>Un moyen facile de collecter les données : un bouton sur le site ? un e-mail automatique ?</li>
+<li>Établir les attendus d'un point de vue sécurités de la donnée :<br>
+serveur de Centrale ? système de login ?</li>
+<li>Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?</li>
+<li>Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est<br>
+pas déjà dans la liste)</li>
+<li>Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum ?</li>
+<li>Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?</li>
+</ul>
+<p><strong>Gestionnaire des SMA et double diplôme : Olivier Boiron</strong></p>
+<p>Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.</p>
+<pre><code>- Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.
+- Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
+- Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui c'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
+- Le point critique : les étudiants ne contactent pas les référents pays ou scientifique, ainsi lors des commissions les dossiers ne sont pas logique ce qui ne les favorisent pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.
+- Ce qu’il nous faut : la liste des référents mise à jour, le contact des étudiants travaillant avec mobility online
+- Les RI ne gèrent que les SMA et Double Diplôme
+- Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
+- Obligatoire : avoir une FAQ et demander des retours d’expériences
+</code></pre>
+<p><strong>Gestionnaire des SSE &amp; TFE : Muriel Roche</strong></p>
+<p>Nous n'avons pas encore réalisé d'entrevu avec le responsable.</p>
+<p><strong>Gestionnaire des Alernants entreprise : Guillaume Graton</strong></p>
+<p>Nous n'avons pas encore réalisé d'entrevu avec le responsable.</p>
+<p><strong>Gestionnaire des mobilité recherche : Daniel Mazzoni</strong></p>
+<p>Nous n'avons pas encore réalisé d'entrevu avec le responsable.</p>
 <h3>Contact des étudiants</h3>
 <p>Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1A et 2A pour savoir si le projet les intéressait, s'il serait prêt à y accorder un peu de temps.</p>
+<p>Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :</p>
+<ul>
+<li>Quelles informations te semblent indispensables pour choisir ta mobilité ?</li>
+<li>Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?</li>
+<li>As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ?</li>
+<li>Combien de temps serais-tu prêt à consacrer pour remplir un formulaire de retour de mobilité ? Le ferais-tu si ça n'était pas obligatoire ? Qu'est-ce qui pourrait te motiver à le faire ?</li>
+<li>Une FAQ regroupant les questions récurrentes des étudiants serait-il intéressant ? Irais-tu sur le site pour avoir réponse à ta question ou enverrais-tu quand même un mail &quot;pour être sûr&quot;?</li>
+<li>Quelles données as-tu besoin d'avoir pour gérer les possibles bugs ? A quel degré de liberté ? (Lecture seule, modification sous certaines conditions , modifications totales , suppression …)</li>
+<li>Aimerais-tu avoir les contacts des anciens élèves ayant effectué une mobilité qui t'intéresse ?</li>
+<li>Aimerais-tu avoir accès aux sites des écoles pour les SMA ?</li>
+<li>As-tu des suggestions de fonctionnalités ?</li>
+<li>A quel point le fait de devoir prendre l’avion pour y aller a- t-il fermé des destinations ?</li>
+</ul>
 <p><strong>Contact des élèves cherchant une mobilité</strong></p>
 <p>Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A.</p>
 <p><strong>Contact des élèves retournant de mobilité</strong></p>
