@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>DM 1 Ops</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">DM 1 Ops</h1>
+<div class="mb-4">
+    
+        <div class=" px-4 flex items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">DM</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Ops</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class=" px-4 flex items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Arthur Louradou</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+
+<script>
+
+function turnExportOn() {
+   document.getElementById("export-button").style.display = "none";
+
+   document.querySelector("header").hidden = true;
+   document.querySelector("article").style.marginTop = "40px";
+   document.querySelector("footer p").innerHTML = document.querySelector("footer p").innerHTML + " - CSS de <a href=\"https://francoisbrucker.github.io/do-it/\">https://francoisbrucker.github.io/do-it/</a>";
+}
+
+</script>
+<p><button id="export-button" onclick="turnExportOn()">Cliquer ici pour créer une page exportable</button></p>
+<br>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://francoisbrucker.github.io/cours_informatique/cours/syst%C3%A8me/linux/scripting/DM/">Le sujet du DM</a></p>
+</div></div>
+<h2>Introduction Comte de Monte Cristo</h2>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt
+</code></pre>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt <span class="token operator">></span> monte-cristo-tome1.txt
+</code></pre>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> monte-cristo-tome1.txt
+<span class="token comment"># puis -w puis -c</span>
+</code></pre>
+<p>→ 17067 lignes</p>
+<p>→ 121931 mots</p>
+<p>→ 784212 caractères !</p>
+<h2>En-tête</h2>
+<ol>
+<li>
+<p>Le roman commence à la 82ème ligne, d’après mon éditeur de texte graphique préféré.</p>
+</li>
+<li>
+<p>Pour avoir cette information à la manière Ops :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Le 24 février 1815"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span>
+</code></pre>
+<p>L’option -n affiche le numéro de ligne :</p>
+<p><code>82:Le 24 février 1815, la vigie de Notre-Dame de la Garde signala le</code></p>
+</li>
+<li>
+<p>Pour trouver la fin de l’en-tête, on peut chercher ligne contenant la chaîne de caractère <code>&quot;START OF THE PROJECT GUTENBERG&quot;</code> avec grep :</p>
+</li>
+<li>
+<p>Voilà donc la commande à exécuter.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"START OF THE PROJECT GUTENBERG"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span>
+</code></pre>
+<p>Il s’agit donc de la ligne 24.</p>
+</li>
+<li>
+<p>En ajoutant ceci à la commande précédente, on obtient 24 en sortie :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">|</span> <span class="token function">cut</span> <span class="token parameter variable">-f</span> <span class="token number">1</span> <span class="token parameter variable">-d</span> <span class="token builtin class-name">:</span>
+</code></pre>
+<p>Il faut lire le manuel de cut pour avoir les options <code>-d</code> indiquant le délimiteur et <code>-f</code> qui indique le nombre de sections à garder.</p>
+</li>
+<li>
+<p>Avec le numéro 24 ainsi retourné, on peut donner en paramètre à tail avec un + devant la valeur 24. On ajoute ensuite 1 au résultat avec la syntaxe bash $(( . + 1)), qui donne finalement la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">tail</span> <span class="token parameter variable">-n</span> +<span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>grep "START OF THE PROJECT GUTENBERG" monte<span class="token operator">-</span>cristo<span class="token operator">-</span>tome1.txt <span class="token operator">-</span>n <span class="token operator">|</span> cut <span class="token operator">-</span>f <span class="token number">1</span> <span class="token operator">-</span>d <span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token variable">))</span></span> monte-cristo-tome1.txt
+</code></pre>
+<p>On met ce résultat dans un fichier avec <code>&gt; roman_brut.txt</code>. On donne alors cette sortie à <code>wc</code> comme au début :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> roman_brut.txt
+</code></pre>
+<p>Et donc :</p>
+<ul>
+<li>17043 lignes</li>
+<li>124488 mots</li>
+<li>783326 caractères</li>
+</ul>
+</li>
+</ol>
+<p>Le man de grep nous indique que l’option <code>-E</code> permet d’insérer des expressions régulières à la place d’une simple chaine de caractère.</p>
+<p>Ainsi, la commande suivante nous donne le nombre de mentions à “Marseille” ou “Marseillais” qui est de <strong>85</strong> :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token parameter variable">-E</span> <span class="token string">"Marseille|Marseillais"</span> roman_brut.txt <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span>
+</code></pre>
+<p>Et voici un joli script qui télécharge les 4 tomes, retire l’en-tête (et le pied de page !), puis concatène chacun des tomes dans un seul fichier.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">array</span><span class="token operator">=</span><span class="token punctuation">(</span>https://www.gutenberg.org/files/17989/17989-0.txt https://www.gutenberg.org/files/17990/17990-0.txt https://www.gutenberg.org/files/17991/17991-0.txt https://www.gutenberg.org/files/17992/17992-0.txt<span class="token punctuation">)</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">""</span> <span class="token operator">></span> monte-cristo-full.txt
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">..</span><span class="token number">3</span><span class="token punctuation">}</span>
+<span class="token keyword">do</span>
+
+	<span class="token function">curl</span> <span class="token variable">${array<span class="token punctuation">[</span>$i<span class="token punctuation">]</span>}</span> <span class="token operator">></span> monte-cristo-reading.txt
+
+	<span class="token function">tail</span> <span class="token parameter variable">-n</span> +<span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>grep "START OF THE PROJECT GUTENBERG" monte<span class="token operator">-</span>cristo<span class="token operator">-</span>reading.txt <span class="token operator">-</span>n <span class="token operator">|</span> cut <span class="token operator">-</span>f <span class="token number">1</span> <span class="token operator">-</span>d <span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token variable">))</span></span> monte-cristo-reading.txt <span class="token operator">></span> monte-cristo-reading2.txt
+
+	<span class="token function">head</span> <span class="token parameter variable">-n</span> +<span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>grep "END OF THE PROJECT GUTENBERG" monte<span class="token operator">-</span>cristo<span class="token operator">-</span>reading2.txt <span class="token operator">-</span>n <span class="token operator">|</span> cut <span class="token operator">-</span>f <span class="token number">1</span> <span class="token operator">-</span>d <span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token variable">))</span></span> monte-cristo-reading2.txt <span class="token operator">></span> monte-cristo-reading.txt
+
+	<span class="token function">cat</span> monte-cristo-reading.txt <span class="token operator">>></span> monte-cristo-full.txt
+
+<span class="token keyword">done</span>
+
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> monte-cristo-reading.txt monte-cristo-reading2.txt
+</code></pre>
+<p>On a donc 68 994 lignes dans les 4 tomes et 2 966 509 caractères. Soit 42,9 en moyenne au total. Notons que je n’exclue pas ici les lignes blanches qui font baisser cette moyenne.</p>
+<p>Sans que je n’explique pourquoi, la commande suivante ne fonctionne pas (sur zsh, du moins) :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token punctuation">)</span> <span class="token operator">/</span> $<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token variable">))</span></span><span class="token punctuation">)</span>
+</code></pre>
+<p>Avec <code>script.sh</code> le script défini plus haut, voilà le code à exécuter :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token string">"comte-monte-cristo.txt"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Le fichier existe déjà."</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">else</span>
+    ./script.sh
+    <span class="token function">wc</span> <span class="token parameter variable">-l</span> comte-monte-cristo.txt <span class="token operator">|</span> <span class="token function">cut</span> <span class="token parameter variable">-f</span> <span class="token number">4</span> <span class="token parameter variable">-d</span> <span class="token string">' '</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+</code></pre>
+<h2>Poubelle</h2>
+<p>D’abord, changeons le PATH pour y ajouter ~/.local/bin</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$PATH</span>
+<span class="token function">mkdir</span> ~/.local/bin
+</code></pre>
+<p>Le script ayant été crée dans un dossier à part, cela explique la dernière commande.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/dm
+<span class="token function">touch</span> poubelle.sh
+<span class="token function">chmod</span> +x ./poubelle.sh
+<span class="token function">cp</span> ./poubelle.sh ~/.local/bin/poubelle
+</code></pre>
+<p>De cette façon, nous pouvons exécuter le script <code>poubelle</code> que voici :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">SHORT</span><span class="token operator">=</span>f,r:,l,h
+<span class="token assign-left variable">LONG</span><span class="token operator">=</span>force,recover:,list,help
+<span class="token assign-left variable">OPTS</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>getopt <span class="token parameter variable">--alternative</span> <span class="token parameter variable">--name</span> poubelle <span class="token parameter variable">--options</span> $SHORT <span class="token parameter variable">--longoptions</span> $LONG -- <span class="token string">"<span class="token variable">$@</span>"</span><span class="token variable">)</span></span>
+
+<span class="token comment"># Traitement des options</span>
+<span class="token builtin class-name">eval</span> <span class="token builtin class-name">set</span> -- <span class="token string">"<span class="token variable">$OPTS</span>"</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">:</span>
+<span class="token keyword">do</span>
+  <span class="token keyword">case</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token keyword">in</span>
+    <span class="token parameter variable">-f</span> <span class="token operator">|</span> <span class="token parameter variable">--force</span> <span class="token punctuation">)</span>
+      <span class="token assign-left variable">f</span><span class="token operator">=</span><span class="token number">1</span>
+      <span class="token builtin class-name">shift</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token parameter variable">-r</span> <span class="token operator">|</span> <span class="token parameter variable">--recover</span> <span class="token punctuation">)</span>
+      <span class="token assign-left variable">r</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$2</span>"</span>
+      <span class="token builtin class-name">shift</span> <span class="token number">2</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token parameter variable">-l</span> <span class="token operator">|</span> <span class="token parameter variable">--list</span> <span class="token punctuation">)</span>
+      <span class="token assign-left variable">l</span><span class="token operator">=</span><span class="token number">1</span>
+      <span class="token builtin class-name">shift</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token parameter variable">-h</span> <span class="token operator">|</span> <span class="token parameter variable">--help</span> <span class="token punctuation">)</span>
+      <span class="token builtin class-name">echo</span> <span class="token string">"Ceci est un DM d'Ops. Plus d'infos sur https://francoisbrucker.github.io/cours_informatique/cours/syst%C3%A8me/linux/scripting/DM/"</span>
+      <span class="token builtin class-name">exit</span> <span class="token number">2</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    -- <span class="token punctuation">)</span>
+      <span class="token builtin class-name">shift</span><span class="token punctuation">;</span>
+      <span class="token builtin class-name">break</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    * <span class="token punctuation">)</span>
+      <span class="token builtin class-name">echo</span> <span class="token string">"Option non reconnue: <span class="token variable">$1</span>"</span>
+      <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+
+<span class="token assign-left variable">fichier</span><span class="token operator">=</span><span class="token variable">$1</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$r</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span> <span class="token assign-left variable">fichier</span><span class="token operator">=</span><span class="token variable">$r</span><span class="token punctuation">;</span> <span class="token keyword">fi</span>
+
+<span class="token comment"># Traitement du chemin par défaut de la poubelle</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token variable">$POUBELLE</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token assign-left variable">POUBELLE</span><span class="token operator">=~</span>/.config/poubelle
+    <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-d</span> ~/.config <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> ~/.config
+    <span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token parameter variable">-d</span> ~/.config/poubelle <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span>  <span class="token function">mkdir</span> ~/.config/poubelle
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$r</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token variable">$POUBELLE</span>/<span class="token variable">$fichier</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">'Retablissement du fichier dans le dossier ./'</span>
+        <span class="token function">mv</span> <span class="token variable">$POUBELLE</span>/<span class="token variable">$fichier</span> ./<span class="token variable">$fichier</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">'Fichier introuvable'</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+    <span class="token keyword">fi</span>
+<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$l</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Contenu de la poubelle :"</span>
+    <span class="token function">ls</span> <span class="token variable">$POUBELLE</span>
+<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token variable">$POUBELLE</span>/<span class="token variable">$fichier</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">'Fichier deja dans la poubelle !'</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$f</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">'Deplacement du fichier a la poubelle (en ecrasant son predecesseur)...'</span>
+        <span class="token function">mv</span> <span class="token variable">$fichier</span> <span class="token variable">$POUBELLE</span>
+        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+    <span class="token keyword">fi</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">'Deplacement du fichier a la poubelle...'</span>
+    <span class="token function">mv</span> <span class="token variable">$fichier</span> <span class="token variable">$POUBELLE</span>
+<span class="token keyword">fi</span>
+</code></pre>
+<p>Ainsi, plusieurs possibilités sont envisagées :</p>
+<p><code>poubelle fichier</code> envoie le fichier dans la poubelle si fichier existe et qu’il n’y a pas de fichier appelé de la sorte dans la poubelle.</p>
+<p>Sinon, on peut forcer cette démarche en tapant <code>poubelle fichier -f</code>.</p>
+<p>Il est possible de rétablir un élément de la poubelle avec <code>poubelle -r fichier</code>.</p>
+<p>Enfin, nous pouvons lister les éléments de la poubelle avec <code>poubelle -l</code>.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
