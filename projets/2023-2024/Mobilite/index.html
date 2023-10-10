@@ -71,11 +71,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">projets</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">mobilité</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -96,9 +104,9 @@
                 
                     <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Schultz Mathis</li>
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Paul Le Bihan</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Le Bihan Paul</li>
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kawtar Bahir</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kawtar Bahri</li>
                 
             </ul>
         </div>
@@ -106,6 +114,12 @@
 
     
 </div>
+
+        <p class="mb-4 text-lg">
+
+                Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
+
+        </p>
 
 
 
@@ -143,7 +157,7 @@ et le soumet à l'administration, si le dossier est valide, il est alors visible
 L'idée est que tout le monde accède au site via un mot de passe unique pouvant changer tous les ans, défini par l'administration.<br>
 <em>méthode la plus simple, mais nécessite une modération</em></p>
 <p><strong>Un identifiant individuel</strong><br>
-L'idée est de venir utiliser les identifiants Moodle pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : <em>cette méthode requiert des compétences élevés en sécurité</em><br>
+L'idée est de venir utiliser les identifiants Moodle (le système d'authentification CAS) pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : <em>cette méthode requiert des compétences élevés en sécurité</em><br>
 <em>cette méthode limite les dépôts de dossier par étudiant</em></p>
 <p><strong>Un compte administrateur</strong><br>
 L'idée est que ce compte puisse gérer les différentes mobilités.</p>
@@ -286,7 +300,7 @@ serveur de Centrale ? système de login ?</li>
 <li>Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?</li>
 <li>Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est<br>
 pas déjà dans la liste)</li>
-<li>Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minnimum/<br>
+<li>Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum/<br>
 Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?</li>
 </ul>
 <h3>La réalisation d'une maquette CANVA</h3>
@@ -298,6 +312,7 @@ Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédente
 <li>Modéliser les différentes interfaces : utilisateur/élève<br>
 déposant sa mobilité/administrateur de l'école</li>
 </ul>
+<p>Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.</p>
 <h3>La réalisation d'un MVP (minimum viable project)</h3>
 <p>Les intérêts</p>
 <ul>
@@ -313,12 +328,26 @@ les fonctionnalités qui les intéresse.</li>
 <li>Tests des parcours utilisateurs (résolution et dev bug).</li>
 <li>Préparation du pitch et de la démonstration.</li>
 </ol>
+<p>Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.</p>
 <h3>La réalisation du site web final</h3>
 <p>Les intérêts</p>
 <ul>
 <li>Avoir un site web propre et se débarrasser des contraintes liées au no-code.</li>
 <li>Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.</li>
 </ul>
+<h2>Contact des parties impliquées dans le projet</h2>
+<h3>Gestionnaire des SMA et double diplôme : Olivier Boiron</h3>
+<p>Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel.</p>
+<h3>Gestionnaire des SSE</h3>
+<p>Nous n'avons pas encore réaliser d'entrevu avec le responsable.</p>
+<h3>Gestionnaire des mobilité recherche</h3>
+<p>Nous n'avons pas encore réaliser d'entrevu avec le responsable.</p>
+<h3>Contact des étudiants</h3>
+<p>Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1A et 2A pour savoir si le projet les intéressait, s'il serait prêt à y accorder un peu de temps.</p>
+<p><strong>Contact des élèves cherchant une mobilité</strong></p>
+<p>Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A.</p>
+<p><strong>Contact des élèves retournant de mobilité</strong></p>
+<p>Les 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet.</p>
 <h2>Premières répartitions des tâches</h2>
 <table>
 <thead>
