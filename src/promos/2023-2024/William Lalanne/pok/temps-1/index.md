@@ -433,65 +433,7 @@ startGame.addEventListener("click", function () {
 
 Et voici le code qui a permis de construire la page de jeu avec une grille de 4x4 : 
 
-{% details "Cliquez pour afficher le code **JavaScript** de la **page d'accueil**" %}
-```html
-!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game4x4.css" media="screen">
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
-    <title>Memory | William Lalanne </title>
-  </head>
-  <body>
-  <h1 class="victory" id="victory">You win !</h1>
-  <header>
-    <h1>memory</h1>
-    <button class="gameButton" id="restart">Restart</button>
-    <button class="gameButton" id="newGame">New Game</button>
-  </header>
-  <main>
-    <div class="container2">
-      <div class="card" id="0">
-      </div>
-      <div class="card" id="1">
-      </div>
-      <div class="card" id="2">
-      </div>
-      <div class="card" id="3">
-      </div>
-      <div class="card" id="4">
-      </div>
-      <div class="card" id="5">
-      </div>
-      <div class="card" id="6">
-      </div>
-      <div class="card" id="7">
-      </div>
-      <div class="card" id="8">
-      </div>
-      <div class="card" id="9">
-      </div>
-      <div class="card" id="10">
-      </div>
-      <div class="card" id="11">
-      </div>
-      <div class="card" id="12">
-      </div>
-      <div class="card" id="13">
-      </div>
-      <div class="card" id="14">
-      </div>
-      <div class="card" id="15">
-      </div>
-    </div>
-  </main>
-  <script type="text/javascript" src="memory4x4.js"></script>
-  </body>
-</html>
-```
-{% enddetails %}
+
 
 {% details "Cliquez pour afficher le code **CSS** de la page 4x4 %}
 ```css
