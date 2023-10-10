@@ -6,6 +6,15 @@ authors:
   - Rabachou Agathe
   - Le Boursicaud Lucie
   - Schultz Mathis
+  - Le Bihan Paul
+
+date: 2023-09-27
+
+tags: 
+  - "projets"
+  - "mobilité"
+
+résumé: Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
 ---
 ## Introduction - définition du projet
 
@@ -55,7 +64,7 @@ L'idée est que tout le monde accède au site via un mot de passe unique pouvant
 *méthode la plus simple, mais nécessite une modération*
 
 **Un identifiant individuel**  
-L'idée est de venir utiliser les identifiants Moodle pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : *cette méthode requiert des compétences élevés en sécurité*
+L'idée est de venir utiliser les identifiants Moodle (le système d'authentification CAS) pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : *cette méthode requiert des compétences élevés en sécurité*
 *cette méthode limite les dépôts de dossier par étudiant*
 
 **Un compte administrateur**  
@@ -158,7 +167,7 @@ serveur de Centrale ? système de login ?
 - Est-ce que l'admin peut poster des offres ? De SMA ? Des écoles partenaires ? Les offres de SSE ?
 - Pré-remplir les écoles partenaires ? (cela peut poser des problèmes si une école n'est  
 pas déjà dans la liste)
-- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minnimum/  
+- Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum/  
 Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
 ```
 
@@ -173,6 +182,8 @@ Les intérêts
 - Modéliser les différentes interfaces : utilisateur/élève  
 déposant sa mobilité/administrateur de l'école
 ```
+
+Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.
 
 ### La réalisation d'un MVP (minimum viable project)
 
@@ -194,6 +205,8 @@ les fonctionnalités qui les intéresse.
 4. Préparation du pitch et de la démonstration.
 ```
 
+Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.
+
 ### La réalisation du site web final
 
 ```
@@ -202,3 +215,29 @@ Les intérêts
 - Avoir un site web propre et se débarrasser des contraintes liées au no-code.
 - Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
 ```
+
+## Contact des parties impliquées dans le projet
+
+### Gestionnaire des SMA et double diplôme : Olivier Boiron
+
+Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel.
+
+### Gestionnaire des SSE
+
+Nous n'avons pas encore réaliser d'entrevu avec le responsable.
+
+### Gestionnaire des mobilité recherche
+
+Nous n'avons pas encore réaliser d'entrevu avec le responsable.
+
+### Contact des étudiants
+
+Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1A et 2A pour savoir si le projet les intéressait, s'il serait prêt à y accorder un peu de temps.
+
+**Contact des élèves cherchant une mobilité**
+
+Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A.
+
+**Contact des élèves retournant de mobilité**
+
+Les 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet.
