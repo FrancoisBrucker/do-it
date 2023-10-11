@@ -95,17 +95,21 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
 - Créer un site opérationnel sur Bubble.io [] = 31
   Logo [V] = 1
   Une page index et les autres pages qui vont avec [] = 17
+
   - Log-in, sign-in qui s'affichera avec un pop-up [V] = 5
   - Barre de navigation [V] = 3
-  - Page de profil/paramètres [] = 3
-  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [] = 2
+  - Page de profil/paramètres [X] = 3
+  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2
   - Page de contact [] = 1
   - Formulaire pour donner son avis [] = 2
   - Page pour présenter la RSE [V] = 1
-    Gérer la base de données [] = 13
+
+  Gérer la base de données [] = 13
+
   - Gérer l'inscription des Users, leur connexion et leur déconnexion [] = 5
   - Gérer les formulaires pour donner son avis [] = 5
   - Gérer les demandes de prises de contact [] = 3 (Je progresserai donc la difficulté diminuera)
+
 - Analyse RSE [] = 13
   S'imprégner des principales méthodes d'analyse [] = 2
   Choisir une méthode et établir des critères d'évaluations [] = 2

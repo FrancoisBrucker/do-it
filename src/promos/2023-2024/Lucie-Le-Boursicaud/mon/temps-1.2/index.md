@@ -195,8 +195,8 @@ Par la suite je suis allée bien plus loin dans mes différentes analyses pour o
 
 #### Etape 3 : Visualisation des données 
 Maintenant j'ai envie de rendre mes données plus interprétables pour des personnes n'ayant pas travaillé sur la BDD. 
-<div><div stype="display:flex"><img src="fgloable.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
-<div stype="display:flex"><img src="parannées.png"></div>
+<div><div stype="display:flex"><img src="fglobale.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
+<div stype="display:flex"><img src="fparannées.png"></div>
 
 
 

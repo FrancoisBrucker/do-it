@@ -18,6 +18,11 @@ résumé: "Ce MON fait suite au MON 1.2 et aborde plus en détail la question du
 **Prérequis** : MON 1.1 : Gestion de crise en entreprise
 {% endprerequis %}
 
+## Sommaire
+1. Le management en temps de crise
+2. La communication en temps de crise
+3. Une gestion agile d'une crise
+
 ## Le management en temps de crise
 L’objectif du manager en temps de crise est de **transformer la crise en opportunité de changement**. Manager la crise revient à remettre en question les processus établis, changer certaines pratiques de l’équipe, revoir certaines croyances, se réinventer tout en  mobilisant les ressources de l'équipe, et en gérant des situations de stress. Le manager devra rapidement fixer de nouveaux objectifs à son équipe, donner de nouveaux repères, au moins sur le court terme. Pour réussir à rassembler tout le monde autour du nouveau projet, les managers doivent faire appel à de nouvelles compétences, pouvoir compter sur la réactivité de leurs équipes, et fédérer autour d’un management de changement. À plus long terme, post-crise, il s’agira de **tirer les enseignements** pour améliorer les process dans l’entreprise.
 Pour que tous les managers sachent adapter leur management à une situation de crise, il est primordial qu’ils y soient **formés en amont**.
