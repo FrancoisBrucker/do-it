@@ -80,12 +80,12 @@ J'ai décidé de réaliser une application de partage de recettes: <strong>Lucet
 ##### Fonctionalités nécessaires
 Afin de me donner des objectifs de réalisations voici la liste des fonctionalités qui devront être mise en place obligatoirement à la fin des 20h de projet :
 + [x] Authentification 
-+ [ ] Fonctionalité de "mot de passe oublié"
++ [x] Fonctionalité de "mot de passe oublié"
 + [x] Pouvoir changer les informations de son profil
 + [x] Pouvoir visualiser une recette
 + [x] Pouvoir publier une recette
-+ [~] Ajouter une recette a ses favoris 
-+ [~] Pouvoir noter une recette
++ [x] Ajouter une recette a ses favoris 
++ [x] Pouvoir noter une recette
 
 ## 3.Développement de l'application
 Pour commencer à developper l'application je me suis occupé du système d'inscription et d'authentification. Aucune difficulté avec Adalo puisque le site fait déjà la moitié du travail pour nous. Je me suis donc concentrée sur le design pour rentre l'application joli dès la première interraction avec l'utilisateur.

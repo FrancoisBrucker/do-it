@@ -1,7 +1,7 @@
 ---
 layout: layout/mon-index.njk
 
-title: "HTML5 et CSS"
+title: "Bases d'HTML et CSS"
 authors:
   - Vladimir Jeantroux
 
@@ -32,13 +32,13 @@ Un fichier HTML (extension .html) est le fichier qui dicte l'agencement des él�
 
 Un document HTML est structuré avec des balises. Pour insérer un élément, on va le déclarer avec lesdites balises. La plupart d'entre elles sont couplées, c'est à dire qu'il y a une balise ouvrante pour déclarer le type d'élément, et une balise fermante pour marquer la fin de l'élément.  Prenons un exemple avec la balise \<p\> permettant d'indiquer un paragraphe.
 
-```
+```html
 <p> Voici le début de ma phrase, mais à mesure qu'elle progresse je me rapproche de la fin et je vais devoir la terminer. <p/>
 ```
 
 Voyons maintenant la structure basique d'un fichier HTML. On note que les éléments dans entourés par &lt;!-- et --> sont des commentaires, et ne sont pas pris en compte par la machine. 
 
-```
+```html
 <!DOCTYPE html> 
 <html lang="fr">  <!--Balise principale : elle nous dit que la langue de la page est en français -->
     <head>        <!--Balise d'en tête : contient les informations de la page, comme le nom ou le type de caractère utilisé-->
@@ -53,9 +53,11 @@ Voici comment fonctionne la structure HTML : les éléments sont des blocs déli
 
   ![Structure HTML](./structure_html.jpg "Structure HTML")
 
+Image : "La structure de base en HTML" OpenClassrooms, https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html.
+
 Pour s'entraîner, on va créer la page d'accueil d'un blog de cuisine comme point de départ de mon POK. Pour commencer, on va insérer un en-tête avec le nom de la page, un onglet de navigation, et une barre de recherche (non-fonctionnelle pour le moment). 
 
-```
+```html
 <!DOCTYPE html> 
 <html lang="fr">  
     <head>        
@@ -77,7 +79,7 @@ Pour s'entraîner, on va créer la page d'accueil d'un blog de cuisine comme poi
 </html>
 ```
 On en profite au passage pour créer la page "à-propos" en question, qui contiendra une image de son créateur. Le body contiendra donc un en-tête et le contenu suivant : 
-```
+```html
  <main class="main-content">
     <h2>Vladimir Jeantroux</h2>
     <div class="autobio">
@@ -93,7 +95,7 @@ La balise "h1" permet d'indiquer un titre (on pourra par la suite ), "header" un
 
 Maintenant, on va créer le contenu principal de la page. On va rapidement évoquer le but du site, et les fonctionnalités qu'on veut proposer. Mettons à jour notre code dans la section "body" en rajoutant une nouvelle section. 
 
-```
+```html
 <main class="main-content">
   <h2>A propos du site</h2>
     <p>Voici le début de commencement de mon site. Ce sera comme une base de données des recettes que j'ai pu faire 
@@ -135,7 +137,7 @@ A partir d'ici, on va pouvoir travailler sur le fichier style.css, et tous les c
 
 La structure d'un fichier .css est très différente d'un fichier .html. Ici, on va attribuer à des éléments et des catégories d'éléments des propriétés particulières. Par exemple, je veux que mes gros titres soient de la couleur violette, centrés et dans la police MingLiU. J'écrirai dans mon fichier .css : 
 
-```
+```css
 h1{
     color: darkviolet; 
     text-align: center;
@@ -145,7 +147,7 @@ h1{
 
 Je peux aussi appliquer ces propriétés à plusieurs éléments en une seule fois, il suffit de les lister en les séparant d'une virgule. Par exemple, appliquant ces propriétés aux titres, mais aussi aux sous-titres plus petits. Il suffit d'écrire : 
 
-```
+```css
 h1, h2, h3{
     color: darkviolet; 
     text-align: center;
@@ -155,7 +157,7 @@ h1, h2, h3{
 
 On peut maintenant exploiter les classes que nous avions défini précédemment. Prenons par exemple l'en-tête, auquel on avait donné la classe "entete". Dans le fichier .css, nous pouvons donner des attributs à tous les éléments de cette classe, avec la syntaxe ".nomdelaclasse" comme suit (en css les commentaires sont entourés par /* */): 
 
-```
+```css
 .entete {
     max-width: 1200px; /* Largeur maximale du contenu du header */
     margin: 0 auto; /* Centre le contenu horizontalement */
@@ -168,7 +170,7 @@ Grâce à ces attributs, on a donc un en-tête centré verticalement sur la page
 
 On peut aussi très bien agir sur les éléments de type "header" comme suit : 
 
-```
+```css
 header {
     color: #fff; 
     position: fixed; 
@@ -183,14 +185,14 @@ Cela nous permet d'obtenir un en-tête noir, fixé en haut de l'écran même si 
 
 Nous voulons maintenant un arrière plan plus lisible et esthétique. Pour cela, je compte mettre le texte de la page dans une fenêtre blanche qui sera centrée au milieu de l'écran, et l'arrière plan sera un dégradé de couleurs pour donner un peu de vie au site. On va commencer par le fond, où il suffit de changer l'attribut de l'arrière plan du corps du site : 
 
-```
+```css
 body{
     background: linear-gradient(to bottom, #800080, #ffc0cb);
 }
 ```
 On crée donc un dégradé qui va du haut vers le bas et du violet vers un blanc rosé. On peut maintenant agir sur le texte principal de la page, cette fois en agissant sur le main de la page, auquel on a donné la classe "main-content".
 
-```
+```css
 .main-content {
     max-width: 800px; /* Largeur maximale du contenu principal */
     padding:20px;
@@ -206,7 +208,7 @@ Ainsi le texte est maintenant inséré dans une boîte centrée verticalement su
 
 Enfin, on peut terminer avec un effet mineur mais qui peut donner un peu de vie au site sont les animations jouant lors d'interactions avec la souris. On utilise alors ce qu'on appelle des pseudos-classes. C'est un mot-clé qu'on peut associer à un élément qui précise l'état spécifique dans lequel l'élément doit se trouver pour être ciblé par la déclaration. On va par exemple faire en sorte que les liens hypertexte changent de couleur lorsqu'ils sont survolés ou cliqués par la souris. 
 
-```
+```css
 a:hover, a:active{
     color:deeppink
 }

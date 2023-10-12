@@ -1,7 +1,7 @@
 ---
 layout: layout/projet.njk
 
-title: "Panique au bureau"
+title: "Panique au château"
 authors:
   - Lola Boudon
   - Henri Taing
@@ -39,3 +39,9 @@ Réalisation d’un **serious game** mettant le/les joueurs en condition de **ge
 
 - outil commercialisé par humans matter : un outil d'évaluation sur les compétences managériales, avec un exercice de résolution de problèmes, prises de décision et gestion des priorités.
 - Proposition Educanta
+
+## Update 10/10/2023
+
+- Tuteur attribué : Florian Magnani. Réunion avec lui le **03/10/2023**. Clarification du public cible, 2As CAP, et présentation de l'univers finalement choisi, un monde médiéval avec un château à protéger et développer où 3 personnes incarneraient le roi, les conseillers et les intendants. But : Initier et évaluer deux compétences centraliennes : la complexité et la vision stratégique. Version papier avant de passer au digital.
+- Réunion avec Carole Enoch le **05/10/2023**, il existe effectivement un besoin. Opportunité de test en janvier, 80 élèves alternants 2A CAP, mais requiert de former les skippers pour qu'ils puissent animer la séance. Donc, le produit doit être fait pour Décembre et une formation doit être préparée également.
+- Réunion avec Florian Magnani le **10/10/2023**, état-de-l'art et brainstorming. Premiers détails dessinés en suivant les compétences centraliennes et début de questionnaire pour se renseigner sur le besoin élève.

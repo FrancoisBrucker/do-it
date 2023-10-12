@@ -27,7 +27,7 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 - *Race Car Design*, de Derek SEWARD, consulté en pdf.
 - *MATLAB - Simulink Tutorial for Beginners | Udemy instructor, Dr. Ryan Ahmed*, vidéo Youtube accessible [ici](https://www.youtube.com/watch?v=vxzR3W2BcRk).
 - *MATLAB and Simulink Racing Lounge: Vehicle Modeling*, package Matlab accessible [ici](https://fr.mathworks.com/matlabcentral/fileexchange/63823-matlab-and-simulink-racing-lounge-vehicle-modeling).
-- *OpenLAP-Lap-Time-Simulator*, package Matlab accessible [ici](https://fr.mathworks.com/matlabcentral/fileexchange/75063-openlap-lap-time-simulator)
+- *OpenLAP-Lap-Time-Simulator*, package Matlab accessible [ici](https://fr.mathworks.com/matlabcentral/fileexchange/75063-openlap-lap-time-simulator).
 
 ## Sommaire
 

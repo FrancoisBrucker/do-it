@@ -55,7 +55,8 @@ J'ai travaillé sur le désigne de la page:
 <img src="pitch2.png" width="300" height="500">
 - Restructuration de la page d'accueil
 <img src="index.png" width="700" height="550">
--L'ajout du classement de la ligue
-<img src="classement.png" width="700" height="550">
+- L'ajout d'une page d'identification (les données sont stockées localement)
+<img src="login.png" width="700" height="550">
+
 
 

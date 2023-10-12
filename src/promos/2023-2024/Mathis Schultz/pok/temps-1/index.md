@@ -5,7 +5,7 @@ title: "étude d'un système d'information complexe"
 authors:
   - Schultz Mathis
 
-date: 2023-09-24
+date: 2023-09-27
 
 tags: 
   - "temps 1"
@@ -82,7 +82,7 @@ Le but de ce paragraphe est de mettre en lumière les aspects négatifs de cet o
 
 **Un enjeu social**
 
-Une transition difficile, en effet, cet outil a demandé un effort complémentaire pour prendre la main sur le système et être capable de réaliser les missions nécessaire.  
+Une transition difficile, en effet, cet outil a demandé un effort complémentaire pour prendre la main sur le système et être capable de réaliser les missions nécessaire. Ce service présenté comme étant une révolution pour faciliter le travail permet effectivement une gestion d'une grosse structure facilement avec beaucoup d'indicateur de performance afin de prendre des décision stratégique efficace, cependant ce genre d'application n'a pas tendance à faciliter la gestion à petite échelle. Traditionnellement, le manager récoltait les informations afin de faire des rapports qui étaient donc très échelonner. Actuellement, il est possible d'outre-passer chaque rapport puisque le haut de la pyramide à donc accès à l'ensemble de l'information sans avoir tout l'aspect social. Si une équipe sous-performe pour une raison qui est indépendante de leur volonté, cela n'est pas forcément visible au travers des données des rapports. A l'inverse un rapport traditionnel permet de transmettre les raisons des échecs : une météo instable, une grève d'un fournisseur... Tout ces facteurs ne sont pas visible pour celui qui traite la data sans avoir de lien humain avec les échelons qu'il dirige.  
 Une perte de lien entre les collaborateurs; l'efficacité qu'apporte ce système en transmettant automatiquement les documents vient réduire le nombre d’interactions. Par exemple les comptables ne devrons plus aller collecter les bons auprès des collaborateurs. Les échanges se limiteront aux cas où un problème surviendrait.  
 La segmentation et l'automation de processus à tendance à réduire l'étendu de compétence de l'employé qui remplit le formulaire. En effet face à un choix limité, l'appel aux connaissances est plus restreinte.
 
@@ -90,12 +90,20 @@ La segmentation et l'automation de processus à tendance à réduire l'étendu d
 
 La digitalisation et la dématérialisation des processus. L'utilisation de Cloud, de tablette ou autre support informatique en vue de dématérialiser à tendance à augmenter l'impact environnemental : en effet, ce type d'outil à pour objectif de maximiser les traces de chaque opérations, et ces traces sont conservés sur des durées infiniment trop longue. Il est possible de retrouver le bon de commande de l'utilisation d'un camion il y a plusieurs années sur un chantier achevé depuis longtemps.
 
-**Un enjeu de design**
+**Un enjeu de design** 
 
-N'ayant pas encore eu d'accès très approfondi au système, je n'ai pas relevé de problème de design.
+Un design en constante évolution, en effet, tout d'abord il faut prendre en considération les évolutions du travail. Les équipes et matériels évoluent régulièrement. Cela impose au manager de mettre à jour les bases de données afin que chaque partie ait accès à des informations fiable. Cependant un enjeu plus complexe est celui de la mise à jour des techniques. En effet, dans le cas d'une évolution de procédé il faut faire évoluer la structure de l'application. Cela est donc fait par un sous-traitant qui va reprendre les procédés. Cette dépendance a un coût élevé mais permet de continuer d'utiliser l'outil. Tout l'enjeu est donc d'avoir une application qui permette de réduire les coûts en optimisant les procédés tout en restant moins cher que le coût d'exploitation de l'application. Ce service a donc pour vocation d'avoir la plus grosse structure possible. En effet lorsque l'on recherche des optimisations sur les procédés via l'utilisation de ce genre de ressource de management cela a pour but de permettre de la gestion uniforme de grande masse.  
+Cette application a pour but d'uniformiser la data, c'est à dire que si quelqu'un est affecté à un chantier, alors il va apparaîtra sur ce chantier pour les autres services : le service RH pourra identifier les activités de chacun, les mangers peuvent suivre les performance des chefs au cours du temps ou des chantiers. L'enjeu est donc la création de trace qui permet de retracer exactement les évènements et remettre la faute précisément sur un employé si besoin.
 
 **Un enjeu économique**
 
-D'un point de vue économique le système a tendance à optimiser les performances d'entreprise, cependant ce système s'installe comme une dépense mensuelle indispensable et éternelle pour l'entreprise, en plus du coût des outils numériques.
+D'un point de vue économique le système a tendance à optimiser les performances d'entreprise, cependant ce système s'installe comme une dépense mensuelle indispensable et éternelle pour l'entreprise, en plus du coût des outils numériques.  
+Il est nécessaire d'acheter :
+
+- Une tablette par chefs de chantier pour rédiger le rapport
+- Un téléphone d'entreprise pour chaque chefs et cadres
+- Des serveurs & un service de cloud pour accéder aux datas sur chantier
+- Des forfaits téléphoniques élevés pour l'accès internet afin d'effectuer les rapports journalier.
+- Une structure d'appuie technologique pour entretenir le parc informatique, s'assurer de l'intégrité des datas, de la sécurité informatique.
 
 [Présentation vidéo de la plateforme](https://www.black-euphoria.com/work/r/what-is-ecube)
