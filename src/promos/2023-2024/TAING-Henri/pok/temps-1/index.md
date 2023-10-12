@@ -29,7 +29,7 @@ Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et e
 3. [Ce que je prévoyais pour le 2ème sprint](#section-3)
 4. [Ce que j'ai fait au 2ème sprint](#section-4)
    - [Ce que j'ai finalement prévu de faire pour le 2ème sprint](#subsection-4)
-   - [Plus sur la RSE](#subsection-5)
+   - [La RSE et le RGPD ?](#subsection-5)
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a>
 
@@ -130,7 +130,7 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
   Analyse d'une politique RSE, on prendra **Patagonia** [] = 8
   La présenter sur le site [] = 1
 
-### Plus sur la RSE <a id="subsection-5"></a>
+### La RSE et le RGPD ? <a id="subsection-5"></a>
 
 Après avoir approfondi mes recherches, je peux sereinement dire qu'effectivement, mon projet de vouloir évaluer numériquement la politique RSE d'une entreprise était bien trop ambitieux.
 Les rapports étaient forcément biaisés, certains montraient qu'une partie de leurs données, tandis que d'autres mettaient en avant un axe qu'ils développaient particulièrement, sûrement pour cacher le cadavre qu'ils cachaient dans leur placard. En bref, la transparence n'était pas au goût du jour.
