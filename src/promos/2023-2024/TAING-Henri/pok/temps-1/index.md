@@ -30,6 +30,7 @@ Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et e
 4. [Ce que j'ai fait au 2ème sprint](#section-4)
    - [Ce que j'ai finalement prévu de faire pour le 2ème sprint](#subsection-4)
    - [La RSE et le RGPD ?](#subsection-5)
+   - [Analyse RSE](#subsection-6)
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a>
 
@@ -138,37 +139,30 @@ Les rapports étaient forcément biaisés, certains montraient qu'une partie de 
 Je me suis aussi rendu compte que la responsabilité sociale était plus large que je ne l'imaginais.
 Par exemple, la Protection et le respect de la confidentialité des données de ses clients font partie intégrante de la RSE, surtout depuis le RGPD.
 
-Qu'est-ce qu'une donnée personnelle ? Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable. Mais, parce qu’elles concernent des personnes, celles-ci doivent en conserver la maîtrise.
+Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
 
-Un « traitement de données personnelles » est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement). Un traitement de données doit avoir un objectif, une finalité, c’est-à-dire que vous ne pouvez pas collecter ou traiter des données personnelles simplement au cas où cela vous serait utile un jour. A chaque traitement de données doit être assigné un but, qui doit bien évidemment être légal et légitime au regard de votre activité professionnelle. Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
-
-Le contexte juridique s’adapte pour suivre les évolutions des technologies et de nos sociétés (usages accrus du numérique, développement du commerce en ligne…).
-
-Ce nouveau règlement européen s’inscrit dans la continuité de la Loi française Informatique et Libertés de 1978 et renforce le contrôle par les citoyens de l’utilisation qui peut être faite des données les concernant.
+> Une donnée personnelle est définie comme toute information se rapportant à une personne physique identifiée ou identifiable. Mais, parce qu’elles concernent des personnes, celles-ci doivent en conserver la maîtrise.
+> Un « traitement de données personnelles » est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement). Un traitement de données doit avoir un objectif, une finalité, c’est-à-dire que vous ne pouvez pas collecter ou traiter des données personnelles simplement au cas où cela vous serait utile un jour. A chaque traitement de données doit être assigné un but, qui doit bien évidemment être légal et légitime au regard de votre activité professionnelle.
 
 Il harmonise les règles en Europe en offrant un cadre juridique unique aux professionnels. Il permet de développer leurs activités numériques au sein de l’UE en se fondant sur la confiance des utilisateurs.
-En effet, le RGPD s’applique à toute organisation, publique et privée, qui traite des données personnelles pour son compte ou non, dès lors :
+En effet, le RGPD s’applique à toute organisation, publique et privée, qui traite des données personnelles pour son compte ou non, dès lors qu'elle est établie sur le territoire de l’Union européenne, ou que son activité cible directement des résidents européens.
 
-qu'elle est établie sur le territoire de l’Union européenne,
-ou que son activité cible directement des résidents européens.
+Quelques points importants du RGPD :
+
+- Consentement : Les entreprises doivent obtenir un consentement explicite des individus avant de collecter et de traiter leurs données personnelles. Les individus ont le droit de retirer leur consentement à tout moment.
+- Droits des individus : Le RGPD confère aux individus plusieurs droits, notamment le droit d'accès à leurs données personnelles, le droit de les rectifier, le droit à l'effacement (ou droit à l'oubli), le droit à la portabilité des données, et le droit de s'opposer au traitement de leurs données.
+- Responsabilité et transparence : Les entreprises sont tenues d'informer les individus sur la manière dont elles collectent, stockent et traitent leurs données personnelles. Elles doivent mettre en place des mesures de sécurité appropriées pour protéger ces données.
 
 Avec un champ d'action aussi large, je comprends mieux pourquoi la RSE est un travail qui doit être intégrée à tous les niveaux de l’activité de l’entreprise, de la production au consommateur final, et qui doit être envisagé et suivi à long terme.
 
-Certaines des dispositions les plus importantes du RGPD (Règlement Général sur la Protection des Données) incluent les suivantes :
+### Analyse RSE <a id="subsection-6"></a>
 
-Consentement : Les entreprises doivent obtenir un consentement explicite des individus avant de collecter et de traiter leurs données personnelles. Les individus ont le droit de retirer leur consentement à tout moment.
+Pour choisir les critères pour analyser la politique RSE d'une entreprise, je me suis reposé sur "GRI Universal Standards" (GRI 101, GRI 102 et GRI 103) qui représentent les pratiques à suivre en terme de développement durable et responsable d'une entreprise.
 
-Droits des individus : Le RGPD confère aux individus plusieurs droits, notamment le droit d'accès à leurs données personnelles, le droit de les rectifier, le droit à l'effacement (ou droit à l'oubli), le droit à la portabilité des données, et le droit de s'opposer au traitement de leurs données.
+Parmi les principes choisis pour guider une organisation dans leur politique d'expansion, j'ai décider d'en relever trois qui me permettront de "juger" la politique RSE de Patagonia : la clarté, la ponctualité et le contexte durable.
 
-Responsabilité et transparence : Les entreprises sont tenues d'informer les individus sur la manière dont elles collectent, stockent et traitent leurs données personnelles. Elles doivent mettre en place des mesures de sécurité appropriées pour protéger ces données.
-
-Notification des violations de données : En cas de violation de données personnelles susceptible de présenter un risque pour les droits et les libertés des individus, les entreprises sont tenues d'en informer les autorités de protection des données et, dans certains cas, les individus concernés.
-
-DPO (Délégué à la Protection des Données) : Certaines entreprises sont tenues de nommer un DPO, un responsable de la protection des données, chargé de veiller à la conformité au RGPD au sein de l'entreprise.
-
-Sanctions : Le RGPD prévoit des amendes sévères en cas de non-respect des règles, pouvant aller jusqu'à 4 % du chiffre d'affaires annuel mondial de l'entreprise ou 20 millions d'euros, selon le montant le plus élevé.
-
-Portée extraterritoriale : Le RGPD s'applique à toutes les organisations dans le monde qui traitent des données personnelles d'individus résidant dans l'Union européenne, ce qui signifie qu'il a un impact global.
+Qu'est-ce que c'est en fait ?
+Le pourquoi ? => Facile à évaluer
 
 ### Sources
 
