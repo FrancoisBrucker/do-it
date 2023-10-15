@@ -68,40 +68,10 @@ La page d'accueil est la suivante :
 
 Pour faire ça, je me suis servi des connaissances acquises avec mon premier MON sur les grid et le flexbox. 
 J'ai aussi du apprendre ce qu'était les radio button et comment les modifier pour créer les petites cases à cocher. 
+Sur cette page on peut paramétrer la partie, d'abord on choisit si on veut des numéros ou des images sur les cartes. Ensuite on choisit si on veut jouer seul ou à deux et enfin la taille du jeu, 4x4 ou 6x6. 
+Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, seuls les numéros sont disponibles. De plus on ne peut pour l'instant jouer qu'à deux. Ainsi l'utilisateur doit seulement choisir le nombre de cartes. S'il ne choisit pas, un message d'erreur apparaît et il ne peut pas démarrer la partie. 
 
-## Création de la page de jeu
-La page de jeu est la plus difficile à coder. Toutes les actions sont basées sur des cliques :
-- Quand on clique sur une carte pas retournée, cela déclenche le retournement de la carte
-- Quand on clique sur une deuxième carte une autre action se déclenche 
-Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déclencher une fonction suite à une action de l'utilisateur qui peut être un clique ou un mouvement de souris. 
-Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListener. 
-
-Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à chacun des boutons un addEventListener qui déclenche la fonction returnCard() à chaque clique. 
-
-```javascript 
-card.addEventListener("click", returnCard(card));
-```
-![carte retournée](memoryCardReturn.png)
-
-On ajoute aussi un addEventListener qui permet quand deux cartes sont retournés de comparer leur valeur. 
-
-```javascript 
-card.addEventListener("click", checkCardPair());
-```
-
-Puis si les cartes sont les mêmes ont les ajoutes dans une liste et on leur attribut la class "found" pour signifier que la paire est trouvée. Un fond vert apparaît sur les cartes pour montrer au joueur qu'elles sont identiques. 
-
-![cartes identiques](memoryCardFound.png)
-
-Si les cartes sont différentes, on leur attribut la class "notFound" qui affiche un fond rouge sur les cartes pour montrer au joueur qu'elles sont différentes. Après 2 secondes, les cartes se retournent. 
-
-![cartes differentes](memoryCardNotFound.png)
-
-Lorsque toutes les cartes ont été trouvées, un message s'affiche pour dire au joueur qu'il a gagné la partie. 
-
-![partie gagnee](gameWon.png)
-
-En cliquant sur le bouton **"new game"** en haut à droite, on retourne à la page d'accueil. 
+![message d'erreur](memoryErrorMessage.png)
 
 ```javascript 
 newGameButton.addEventListener("click", function () {
@@ -432,3 +402,294 @@ startGame.addEventListener("click", function () {
 ```
 
 {% enddetails %}
+
+## Création de la page de jeu
+La page de jeu est la plus difficile à coder. Toutes les actions sont basées sur des cliques :
+- Quand on clique sur une carte pas retournée, cela déclenche le retournement de la carte
+- Quand on clique sur une deuxième carte une autre action se déclenche 
+Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déclencher une fonction suite à une action de l'utilisateur qui peut être un clique ou un mouvement de souris. 
+Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListener. 
+
+Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à chacun des boutons un addEventListener qui déclenche la fonction returnCard() à chaque clique. 
+
+```javascript 
+card.addEventListener("click", returnCard(card));
+```
+![carte retournée](memoryCardReturn.png)
+
+On ajoute aussi un addEventListener qui permet quand deux cartes sont retournés de comparer leur valeur. 
+
+```javascript 
+card.addEventListener("click", checkCardPair());
+```
+
+Puis si les cartes sont les mêmes ont les ajoutes dans une liste et on leur attribut la class "found" pour signifier que la paire est trouvée. Un fond vert apparaît sur les cartes pour montrer au joueur qu'elles sont identiques. 
+
+![cartes identiques](memoryCardFound.png)
+
+Si les cartes sont différentes, on leur attribut la class "notFound" qui affiche un fond rouge sur les cartes pour montrer au joueur qu'elles sont différentes. Après 2 secondes, les cartes se retournent. 
+
+![cartes differentes](memoryCardNotFound.png)
+
+Lorsque toutes les cartes ont été trouvées, un message s'affiche pour dire au joueur qu'il a gagné la partie. 
+
+![partie gagnee](gameWon.png)
+
+En cliquant sur le bouton **"new game"** en haut à droite, on retourne à la page d'accueil. 
+
+{% details "Cliquez pour afficher le code **HTML** de la **page d'accueil**" %}
+
+```html
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game4x4.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <title>Memory | William Lalanne </title>
+  </head>
+  <body>
+  <h1 class="victory" id="victory">You win !</h1>
+  <header>
+    <h1>memory</h1>
+    <button class="gameButton" id="restart">Restart</button>
+    <button class="gameButton" id="newGame">New Game</button>
+  </header>
+  <main>
+    <div class="container2">
+      <div class="card" id="0">
+      </div>
+      <div class="card" id="1">
+      </div>
+      <div class="card" id="2">
+      </div>
+      <div class="card" id="3">
+      </div>
+      <div class="card" id="4">
+      </div>
+      <div class="card" id="5">
+      </div>
+      <div class="card" id="6">
+      </div>
+      <div class="card" id="7">
+      </div>
+      <div class="card" id="8">
+      </div>
+      <div class="card" id="9">
+      </div>
+      <div class="card" id="10">
+      </div>
+      <div class="card" id="11">
+      </div>
+      <div class="card" id="12">
+      </div>
+      <div class="card" id="13">
+      </div>
+      <div class="card" id="14">
+      </div>
+      <div class="card" id="15">
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="memory4x4.js"></script>
+  </body>
+</html>
+```
+{% enddetails %}
+
+{% details "Cliquez pour afficher le code **CSS** de la **page de jeu**" %}
+```css
+@charset "UTF-8";
+
+body {
+    background-color: white;
+}
+
+header {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+h1 {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 700px;
+    
+}
+
+.gameButton {
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: end;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    width: 800px;
+    height: 700px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: black;
+    align-self: center;
+    justify-self: center;
+    border: solid;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible, .found, .notFound {
+    visibility: visible;
+    color: black;
+    font-size: 55px;
+    position: relative;
+    bottom: 20px;
+    left: 45px;
+}
+
+
+.victory {
+    visibility: hidden;
+    font-size: 130px;
+    position: relative;
+    top: 530px;
+    left: 790px;
+}
+```
+{% enddetails %}
+
+{% details "Cliquez pour afficher le code **JavaScript** de la **page d'accueil**" %}
+```javascript
+const iconsArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
+const newGameButton = document.getElementById("newGame");
+const cardButtons = Array.from(document.querySelectorAll('.card'));
+let turnedCards = [];
+
+const COLOR_BLACK = 'rgb(0, 0, 0)';
+const COLOR_WHITE = 'rgb(255, 255, 255)';
+const COLOR_GREEN = 'rgb(0, 255, 0)';
+const COLOR_RED = 'rgb(255, 0, 0)';
+var greenCards = 0;
+
+for (var card of cardButtons) {
+    card.style.backgroundColor=COLOR_BLACK;
+}
+
+function allocateCard () {
+    for (let i=0; i<16; i++) {
+        var randomNumberIndex = Math.floor(Math.random() * (16-i));
+        const card = document.getElementById(String(i));
+        const para = document.createElement("p");
+        para.classList.add("hidden");
+        console.log(iconsArray[randomNumberIndex]);
+        const icon = document.createTextNode(String(iconsArray[randomNumberIndex]));
+        para.appendChild(icon);
+        iconsArray.splice(randomNumberIndex, 1);
+        card.appendChild(para);
+    }
+}
+
+function returnCard (card) {
+    const value = card.children[0];
+    if (card.style.backgroundColor===COLOR_BLACK && !value.classList.contains("found"))  {
+        card.style.backgroundColor=COLOR_WHITE;
+        value.classList.add('visible');
+        value.classList.remove('hidden');
+    }
+    else if (card.style.backgroundColor===COLOR_WHITE && !value.classList.contains("found")) {
+        card.style.backgroundColor=COLOR_BLACK;
+        value.classList.add('hidden');
+        value.classList.remove('visible');
+    }
+
+    else if (value.classList.contains("found")) {
+        console.log("can't turn it");
+    }
+    else if (value.classList.contains("notFound")) {
+        card.style.backgroundColor=COLOR_BLACK;
+        value.classList.add("hidden");
+        value.classList.remove("notFound");
+    }
+}
+
+
+function checkCardsPair () {
+    if (turnedCards.length===2) {
+        const firstCard = turnedCards[0];
+        const secondCard = turnedCards[1];
+
+       if (firstCard.children[0].textContent==secondCard.children[0].textContent) {
+            //console.log(firstCard.value.backgroundColor);
+            firstCard.children[0].classList.add('found');
+            firstCard.style.backgroundColor=COLOR_GREEN;
+            firstCard.children[0].classList.remove('hidden');
+            firstCard.children[0].classList.remove('visible');
+            secondCard.children[0].classList.add('found');
+            secondCard.style.backgroundColor=COLOR_GREEN;
+            secondCard.children[0].classList.remove('hidden');
+            secondCard.children[0].classList.remove('visible'); 
+            greenCards+=2;
+            console.log(greenCards);
+               
+       }
+
+       else {
+            firstCard.children[0].classList.add('notFound');
+            firstCard.style.backgroundColor=COLOR_RED;
+            firstCard.children[0].classList.remove('hidden');
+            firstCard.children[0].classList.remove('visible');
+            secondCard.children[0].classList.add('notFound');
+            secondCard.style.backgroundColor=COLOR_RED;
+            secondCard.children[0].classList.remove('hidden');
+            secondCard.children[0].classList.remove('visible');
+            setTimeout(() => {
+                returnCard(firstCard);
+                firstCard.style.backgroundColor=COLOR_BLACK;
+                returnCard(secondCard);
+                secondCard.style.backgroundColor=COLOR_BLACK;
+            }, 1500);
+
+       }
+       turnedCards=[];
+    }
+}
+
+allocateCard();
+for (const card of cardButtons) {
+    card.addEventListener("click", function () {
+        returnCard(card);
+        turnedCards.push(card);
+        checkCardsPair();
+        if (greenCards==16) {
+            document.getElementById("victory").style.visibility="visible";
+        }
+    });
+    
+}
+
+newGameButton.addEventListener("click", function () {
+    location.href = "http://127.0.0.1:5501/index.html";
+}
+)
+```
+{% enddetails %}
+
+

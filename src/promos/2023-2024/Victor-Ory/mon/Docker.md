@@ -5,13 +5,13 @@ title: "Docker"
 authors:
   - ORY Victor
 
-date: 2023-09-16
+date: 2023-09-27
 
 tags:
   - 'temps 1'
   - 'Docker'
   - 'DevOps'
-  - 'Novice'
+  - 'Intermédiaire'
 ---
 
 ## Ressources :
