@@ -34,6 +34,7 @@ Avoir un cerveau à moitié allumé et encore...
    - [Exploiter les données](#subsection-6)
 4. [Créer une boutique en ligne et viser l'international](#subsection-5)
 5. [Conclusion et remarques](#section-5)
+6. [Sources](#section-6)
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -149,6 +150,6 @@ Le plus gros défi n'a pas été de passer la certification, mais de faire cet e
 <u>Un dernier commentaire sur la formation<u>
 5/10, le fond n'est pas profond, sans compter les problèmes techniques. Prendre le temps d'appliquer serait intéressant. Ce sera pour plus tard, peut-être.
 
-### Sources
+### Sources <a id="section-6"></a>
 
 [Fondamentaux en marketing digital](https://skillshop.exceedlms.com/student/collection/651479) par Google

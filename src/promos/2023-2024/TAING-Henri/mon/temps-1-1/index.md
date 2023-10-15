@@ -32,6 +32,7 @@ Avoir un cerveau à moitié allumé
    - [La recherche locale](#subsection-6)
 4. [Introduction aux réseaux sociaux](#section-4)
 5. [Conclusion](#section-5)
+6. [Sources](#section-6)
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -136,7 +137,7 @@ Nous avons pu dans ce MON 1.1 voir les bases du marketing en ligne, mais il manq
 <u>Un commentaire sur la formation<u>
 Je suis arrivé à l'équivalent de la moitié de la formation. Il y a beaucoup de répétitions et une insistence fatigante d'utiliser les outils proposés par Google (Oui, ils ont le monopole, mais le rappeler à chaque minute est lassant). Bien que dans le fond, l'intérêt est là, sur la forme, je pense que l'on pourrait faire mieux, que ce soit en terme de volume horaire, en organisant mieux les parties et en évitant des redites ou en variant les façons de tester ses connaissances. On aurait également voulu plus de schémas et moins de blabla.
 
-### Sources
+### Sources <a id="section-6"></a>
 
 [Analyse FFOM](https://revealareleve.hec.ca/boite-a-outils/ffom/) par la relève
 
