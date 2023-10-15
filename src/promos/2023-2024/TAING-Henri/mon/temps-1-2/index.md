@@ -26,7 +26,7 @@ Avoir un cerveau à moitié allumé et encore...
 1. [Introduction](#section-1)
 2. [Le marketing à notre ère](#section-2)
    - [Le téléphone](#subsection-1)
-   - [Les emails](#subsection-1)
+   - [Les emails](#subsection-2)
    - [Publicité display contre les liens sponsorisés (SEM)](#subsection-3)
 3. [La vidéo](#section-3)
    - [D'abord, planifier](#subsection-4)

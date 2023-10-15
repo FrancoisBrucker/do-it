@@ -125,4 +125,4 @@ Voici le rendu obtenu :
 <img src="portfolio2.jpg">
 <img src="portfolio3.jpg">
 
-Je laisse également dans le [ici](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Agathe-Rabachou/mon/temps-1.1/codes_sites.md) le code **HTML** de chaque page ainsi que la feuille de style du site en **CSS** pour de potentiels intéressés !
+Je laisse également [ici](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Agathe-Rabachou/mon/temps-1.1/codes_sites.md) le code **HTML** de chaque page ainsi que la feuille de style du site en **CSS** pour de potentiels intéressés !

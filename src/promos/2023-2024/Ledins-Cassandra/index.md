@@ -3,15 +3,14 @@ layout: layout/fiche.njk
 
 title: "Cassandra Ledins"
 authors:
-    - "Cassandra Ledins"
+  - "Cassandra Ledins"
 ---
-
 
 ## POK & MON
 
-* [POK](./pok)
-* [MON](./mon)
+- [POK](./pok)
+- [MON](./mon)
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Panique au château](../../../projets/2023-2024/Panique_au_chateau)
