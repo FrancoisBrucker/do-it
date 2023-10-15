@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Data Mining</title>
+        <title>Dev Web (Front End 101)</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Data Mining</h1>
+<h1 class="mb-1">Dev Web (Front End 101)</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CSS</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">débutant</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -103,12 +115,6 @@
     
 </div>
 
-        <p class="mb-4 text-lg">
-
-                Un MON traitant l'exploration des données.
-
-        </p>
-
 
 
     
@@ -118,13 +124,97 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/">Kawtar BAHRI</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/">MON de Kawtar Bahri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/temps-1.2/">Data Mining</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/">Kawtar BAHRI</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/">MON de Kawtar Bahri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/mon/temps-1.2/">Dev Web (Front End 101)</a>
 
 </div></div>
 
 
 
 
+<h2>Introduction</h2>
+<p>Le développement front-end, également connu sous le nom de développement côté client, fait référence à la création de l'interface utilisateur d'un site web ou d'une application, que les utilisateurs finaux voient et avec laquelle ils interagissent directement.</p>
+<p>Dans ce mon, j’ai appris les bases de HTML &amp; CSS. Ce qui m’a permis de développer un site web qui pourra me servir comme modèle dans mes prochains Pokémon.</p>
+<h2>Structure du site web</h2>
+<p>Une structure de page web fait référence à l'organisation et à la disposition des éléments sur une page web. Elle définit comment les différents éléments, tels que le texte, les images, les liens, les formulaires et autres médias, sont agencés et hiérarchisés pour créer une page web cohérente et conviviale.</p>
+<p>La majorité de sites web (y compris celui que j’ai développé) sont organisés de la façon suivante :</p>
+<img src="structure site.png" width="600px">
+<h2>Code HTML</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>HTML (Hypertext Markup Language)</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Il s'agit du langage de balisage qui permet de structurer le contenu d'une page web. Il définit les éléments tels que les titres, les paragraphes, les listes, les images, les liens, les formulaires, et bien d'autres encore. Les &lt;balises&gt; encadrent le contenu et déterminent comment il doit être affiché dans le navigateur</p>
+</div></div>
+<p>Structure du code HTML :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Titre du site<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!-- contenu de l'en-tête--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!--contenu principal de la page--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!--contenu du pied de page--></span>    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>En appliquant cette structure, j’ai développé le code du site que vous prouvez visualiser <a href="https://github.com/KawtarBahri/Template-Site-Web/blob/main/page.html">ici</a>.</p>
+<h2>Code CSS</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>CSS (Cascading Style Sheets)</strong></p>
+</div><div class="pl-8 mr-8">
+<p>CSS utilisé pour styliser et formater les éléments HTML. Il permet de définir la couleur, la police, la taille, la mise en page et d'autres propriétés visuelles des éléments sur une page web. CSS permet de séparer le contenu (HTML) de sa présentation, ce qui rend le design plus flexible et maintenable.</p>
+</div></div>
+<p>Structure du code CSS :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">element</span> <span class="token punctuation">{</span>
+  <span class="token property">Propriété</span> <span class="token punctuation">:</span> valeur <span class="token punctuation">;</span>
+  <span class="token property">Propriété</span> <span class="token punctuation">:</span> valeur <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*exemple*/</span>
+<span class="token selector">main</span> <span class="token punctuation">{</span>
+    <span class="token property">max-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 20px auto<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 10px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*Pour styliser plusieurs éléments à la fois, 
+"element" peut etre remplacé par ".class" ou "#id"*/</span>
+</code></pre>
+<p>En appliquant cette structure, j’ai développé le stylesheet du site que vous prouvez visualiser <a href="https://github.com/KawtarBahri/Template-Site-Web/blob/main/style.css">ici</a>.</p>
+<h2>Résultat</h2>
+<p>En liant les deux codes HTML et CSS explicités précédemment, j’ai obtenu le résultat suivant :<br>
+<img src="site.png"></p>
+<h2>Références :</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">Cours de Openclassrooms HTML5 et CSS3</a></li>
+<li><a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS Tutorial</a></li>
+</ul>
+</div></div>
 
 
 </article>
