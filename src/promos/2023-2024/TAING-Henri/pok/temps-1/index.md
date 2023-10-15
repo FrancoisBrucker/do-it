@@ -95,7 +95,7 @@ Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à cr
 
 ### Ce que j'ai finalement prévu de faire pour le 2ème sprint <a id="subsection-4"></a>
 
-Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'étais pas assez précis dans ma planification et que Do_It est en fait véritablement calqué sur la gestion de projet agile.
+Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'avais pas été assez précis dans ma planification et que Do_It était en fait véritablement calqué sur la gestion de projet agile.
 Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.
 
 Après m'être posé pendant une bonne heure, j'ai établi mes objectifs de cette deuxième partie du POK :
@@ -115,20 +115,20 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
   - Barre de navigation [V] = 3
   - Page de profil/paramètres [X] = 3
   - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2
-  - Page de contact [] = 1
-  - Formulaire pour donner son avis [] = 3
+  - Page de contact [] = 2
+  - Formulaire pour donner son avis [X] = 3
   - Page pour présenter la RSE [V] = 1
 
-  Gérer la base de données [] = 13
+  Gérer la base de données [] = 15
 
-  - Gérer l'inscription des Users, leur connexion et leur déconnexion [] = 5
+  - Gérer l'inscription des Users, leur connexion et leur déconnexion [X] = 5
   - Gérer les formulaires pour donner son avis [] = 5
-  - Gérer les demandes de prises de contact [] = 3 (Je progresserai donc la difficulté diminuera)
+  - Gérer les demandes de prises de contact [] = 5
 
-- Analyse RSE [] = 13
-  S'imprégner des principales méthodes d'analyse [] = 2
-  Choisir une méthode et établir des critères d'évaluations [] = 2
-  Analyse d'une politique RSE, on prendra **Patagonia** [] = 8
+- Analyse RSE [] = 8
+  S'imprégner d'une méthode d'analyse [X] = 2
+  Choisir une méthode et établir des critères d'évaluations [X] = 2
+  Analyse d'une politique RSE, on prendra **Patagonia** [] = 3
   La présenter sur le site [] = 1
 
 ### La RSE et le RGPD ? <a id="subsection-5"></a>
@@ -137,7 +137,7 @@ Après avoir approfondi mes recherches, je peux sereinement dire qu'effectivemen
 Les rapports étaient forcément biaisés, certains montraient qu'une partie de leurs données, tandis que d'autres mettaient en avant un axe qu'ils développaient particulièrement, sûrement pour cacher le cadavre qu'ils cachaient dans leur placard. En bref, la transparence n'était pas au goût du jour.
 
 Je me suis aussi rendu compte que la responsabilité sociale était plus large que je ne l'imaginais.
-Par exemple, la Protection et le respect de la confidentialité des données de ses clients font partie intégrante de la RSE, surtout depuis le RGPD.
+Par exemple, la protection et le respect de la confidentialité des données de ses clients font partie intégrante de la RSE, surtout depuis le RGPD.
 
 Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
 
@@ -159,10 +159,13 @@ Avec un champ d'action aussi large, je comprends mieux pourquoi la RSE est un tr
 
 Pour choisir les critères pour analyser la politique RSE d'une entreprise, je me suis reposé sur "GRI Universal Standards" (GRI 101, GRI 102 et GRI 103) qui représentent les pratiques à suivre en terme de développement durable et responsable d'une entreprise.
 
-Parmi les principes choisis pour guider une organisation dans leur politique d'expansion, j'ai décider d'en relever trois qui me permettront de "juger" la politique RSE de Patagonia : la clarté, la ponctualité et le contexte durable.
+Parmi les principes choisis pour guider une organisation dans leur politique d'expansion, j'ai décider d'en relever trois qui me permettront de "juger" la politique RSE de Patagonia : la clarté, la régularité et leur vision durable.
 
-Qu'est-ce que c'est en fait ?
-Le pourquoi ? => Facile à évaluer
+> La clarté : L'organisation doit présenter l'information de manière à ce qu'elle soit accessible, compréhensible et utilisable. Ceci peut passer par une table de matières précise, des liens ou des graphiques.
+
+> La régularité : l'organisme doit communiquer les informations à intervalles réguliers et les mettre à la disposition des utilisateurs en temps utile pour qu'ils puissent prendre des décisions.
+
+> la vision durable : L'organisation doit fournir des informations sur ses impacts et ses objectifs dans le contexte plus large du développement durable, en s'appuyant par exemple sur des informations objectives et des mesures du développement durable faisant autorité, lorsqu'elles sont disponibles.
 
 ### Sources
 
