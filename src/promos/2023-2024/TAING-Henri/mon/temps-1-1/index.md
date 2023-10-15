@@ -35,14 +35,12 @@ Avoir un cerveau à moitié allumé
 
 ## 1. Introduction <a id="section-1"></a>
 
-Être ingénieur, au-delà de nécessiter d'un bagage technique, demande des soft-skills développés et un contact humain particulier. Savoir vendre et savoir se vendre, voilà ce que je veux apprendre à travers cette formation "Les fondamentaux du marketing digital" proposée par Google. Et dans ce MON, je résume ces 40 heures qui ne sont pas que du plaisir.
-Ici, on prend le point de vue d'une personne voulant créer son entreprise et la développer sur internet.
+Savoir vendre, voilà ce que je veux apprendre à travers cette formation "Les fondamentaux du marketing digital" proposée par Google. Dans mon MON 1.1 et 1.2, je synthétise ces 40 heures qui ne sont pas que du plaisir.
+On prendra le point de vue d'une personne voulant créer son entreprise et la développer sur internet.
 
 ## 2. Développer son activité sur internet <a id="section-2"></a>
 
 ### Une introduction du pourquoi et du comment <a id="subsection-1"></a>
-
-Développer ses services sur internet permet de toucher de nouveaux prospects et d'établir de meilleures relations avec les clients existants. On peut vendre ses produits ou services au niveau local et/ou international, et utiliser des outils d'analyse perfectionnés pour connaître précisément les attentes et les besoins des consommateurs.
 
 Avant de se lancer, il est important de définir ses objectifs, ses valeurs et son argument de vente unique pour pouvoir construire sa stratégie marketing et composer sa campagne de publicité ciblée.
 Quelques questions pour nous orienter :
@@ -56,20 +54,20 @@ Une façon de commencer pour faire la publicité de notre entreprise est de pass
 
 ### Lancer son site web <a id="subsection-2"></a>
 
-Il va falloir obtenir ce que l'on appelle un "**espace d'hébergement**", que l'on peut comparer à un terrain constructible. Vous devez parfois payer des frais, mais l'hébergement est parfois gratuit. Par conséquent, comparez les offres avant de vous décider. Il existe de nombreux "terrains constructibles" sur un serveur. On peut d'ailleurs imaginer ce dernier comme une rue où de nombreuses entreprises louent un espace de site Web et partagent en quelque sorte le même code postal. Chaque serveur est associé à ce que l'on appelle une adresse IP (Internet Protocol). Il s'agit d'une chaîne de numéros pouvant être localisés par tout appareil capable de se connecter à Internet. Chaque site Web dispose d'un nom de domaine, à savoir tout ce qui suit "www." (World Wide Web). Cela fonctionne un peu comme l'adresse postale de votre domicile.
-Que se passe-t-il si un utilisateur souhaite vous trouver ou, comme ici, accéder à votre site Web ? Il se sert d'un navigateur, tel que Google Chrome. Celui-ci repère votre site Web, récupère les informations, puis les affiche. La durée de chargement d'un site dépend de plusieurs facteurs : la quantité et le type de données ainsi que la vitesse de la connexion Internet, par exemple.
+Il va falloir obtenir ce que l'on appelle un "**espace d'hébergement**", que l'on peut comparer à un terrain sur lequel on peut construire.
+Il existe de nombreux "terrains" sur un serveur. On peut d'ailleurs imaginer ce dernier comme une rue où de nombreuses entreprises louent un espace de site Web et partagent en quelque sorte le même code postal. Chaque serveur est associé à ce que l'on appelle une adresse IP (Internet Protocol). Il s'agit d'une chaîne de numéros pouvant être localisés par tout appareil capable de se connecter à Internet. Chaque site Web dispose d'un nom de domaine, à savoir tout ce qui suit "www." (World Wide Web). Cela fonctionne un peu comme l'adresse postale de votre domicile.
+Un utilisateur voulant vous retrouver, repère votre site Web grâce à une recherche sur son navigateur, récupère les informations, puis les affiche.
+La durée de chargement d'un site dépend de plusieurs facteurs : la quantité et le type de données ainsi que la vitesse de la connexion Internet, par exemple.
 
-Une attention particulière doit être portée à la façon d’organiser les informations sur les pages. De plus, le ton employé doit inspirer confiance aux utilisateurs, raconter l'histoire de l'entreprise et décrire ses produits, sans pour autant les intimider ou les désintéresser. Il est important que le ton du post corresponde à la vocation du canal social utilisé. Obtenir des avis peut beaucoup aider, n’hésitez pas à contacter vos meilleurs clients pour qu’ils puissent partager leurs témoignages.
+Une attention particulière doit être portée à la façon d’organiser les informations sur les pages. Le ton employé doit inspirer confiance aux utilisateurs, raconter l'histoire de l'entreprise et décrire ses produits, sans pour autant les intimider ou les désintéresser. Il est important que le ton du post corresponde à la vocation du canal social utilisé. Obtenir des avis peut beaucoup aider, n’hésitez pas à contacter vos meilleurs clients pour qu’ils puissent partager leurs témoignages.
 
 ### Parcours client <a id="subsection-3"></a>
 
 En plus des codes de la **bonne pratique**, tels qu’avoir une barre de recherche et la possibilité de revenir sur l’accueil en cliquant sur le logo, il faut savoir se mettre à la place du client.
 
-Faites la liste de ce que vous voulez que les gens puissent faire sur votre site, comme trouver votre numéro de téléphone, remplir un formulaire de contact, ou regarder une vidéo. Ensuite, demandez à un ami ou à un membre de votre famille (qui n'a jamais vu votre site) d'essayer d'accomplir ces tâches. Si possible, observez-le pendant qu'il navigue sur votre site. Est-ce qu'il y arrive ? Est-ce que certaines zones de votre site sont difficiles à utiliser ? Est-ce que certains points pourraient être améliorés ?
-
 Repensez au dernier produit que vous avez acheté en ligne, puis réexaminez le modèle "**See, Think, Do, Care**" (voir, penser, agir, accorder de l'attention) que nous avons abordé dans cette leçon.
 Analysez votre parcours client via les points de contact rencontrés avant de réaliser l'achat.
-![Questions à se poser sur le parcours client](lesquestions.jpg "Questions à se poser sur le parcours client").
+![Questions à se poser sur le parcours client](lesquestions.jpg "Questions à se poser sur le parcours client"){width=70%}.
 
 Quelques points à garder en tête en plus :
 
@@ -83,7 +81,6 @@ Quelques points à garder en tête en plus :
 ### Mesurer pour optimiser <a id="subsection-4"></a>
 
 Les outils d'analyse permettent de savoir quelles sont les sections les plus consultées et connaître l'origine géographique des utilisateurs afin de pouvoir adapter sa stratégie. On peut ainsi effectuer une segmentation de la clientèle ou par exemple, si de nombreuses personnes accèdent à son site sur un appareil mobile, on peut vérifier que son site est optimisé pour les smartphones.
-De plus, si on ajoute le code de suivi des conversions à la page qui s'affiche une fois que l'utilisateur a envoyé sa demande de renseignements, on saura quand un client potentiel a précisément effectué cette action. Ainsi, on pourra bien les distinguer de ceux qui ont consulté la page de demande d'informations, mais qui ont décidé de ne pas envoyer de message.
 
 Afin de fournir une analyse pertinente, il nous faut choisir nos **KPIs — les Key Indicator Performance** en anglais, sont les indicateurs d'une entreprise qui permettent de mesurer une performance — qui sont : - spécifiques - mesurables - réalistes - pertinents - limités dans le temps.
 Un KPI peut correspondre à n'importe quel élément vous rapprochant de la réalisation de votre objectif.
@@ -96,7 +93,8 @@ Cependant, nous pouvons faire en sorte de maximiser nos chances d'apparaître da
 
 L'utilisation de libellés précis pour vos images facilite leur affichage lorsque les utilisateurs effectuent des recherches pertinentes. De même, l'utilisation de titres de pages précis favorise la visibilité des sites Web dans les résultats de recherche pertinents.
 Enfin, il faut choisir les **mots-clés** que les clients potentiels sont susceptibles de saisir dans le champ de recherche.
-Toutes ces petites astuces font partie du **SEO** (Search Engine Optimization), tous les procédés visant à améliorer la qualité et la quantité des flux vers le site, en particulier, le trafic dit "naturel" ou "organique". Gardez à l'esprit qu'aucune agence ne peut garantir la meilleure position dans les résultats naturels. Avec le **SEA** (Search Engine Advertising), qui lui agit sur le trafic payant à l'aide d'annonces sponsorisées, ils forment le « **SEM** » (Search Engine Marketing) et désignent le marketing des moteurs de recherche.
+Toutes ces petites astuces font partie du **SEO** (Search Engine Optimization) — tous les procédés visant à améliorer la qualité et la quantité des flux vers le site, en particulier, le trafic dit "naturel" ou "organique". Gardez à l'esprit qu'aucune agence ne peut garantir la meilleure position dans les résultats naturels. Avec le **SEA** (Search Engine Advertising), qui lui agit sur le trafic payant à l'aide d'annonces sponsorisées, ils forment le « **SEM** » (Search Engine Marketing) et désignent le marketing des moteurs de recherche.
+
 Le SEM regroupe un ensemble de techniques dont l'objectif commun est de garantir une bonne visibilité à un annonceur via le positionnement organique, d'une part, et la mise en place de campagnes payantes, d'autre part, avec un système d’enchères sur les mots-clés par exemple.
 
 Un plan SEO comprend cinq étapes à réitérer au cours du temps pour suivre les tendances et l'évolution des moteurs de recherche :
@@ -109,9 +107,9 @@ Un plan SEO comprend cinq étapes à réitérer au cours du temps pour suivre le
 
 Dans le domaine du SEO, la **longue traîne** désigne les expressions longues qui correspondent spécifiquement à l'un de vos produits ou services. Elles sont associées à un faible volume de recherches et sont donc confrontées à une concurrence moins élevée. Par conséquent, elles ont plus de chances d'être pertinentes par rapport aux requêtes des utilisateurs.
 
-Un autre outil pour améliorer sa visibilité est le **lien retour**, c'est-à-dire des liens pointant vers son site qui figurent sur d'autres sites Web. Pour cela, il faut produire des contenus de qualité et ne pas hésiter à collaborer avec d'autres personnes. Attention, le moteur de recherche peut tenir compte de la pertinence de l'origine du lien retour, des sites artificiels pour générer des liens retours ne marcherait pas par exemple.
+Un autre outil pour améliorer sa visibilité est le **lien retour**, c'est-à-dire des liens pointant vers son site qui figurent sur d'autres sites Web. Pour cela, il faut produire des contenus de qualité et ne pas hésiter à collaborer avec d'autres personnes. Attention, le moteur de recherche peut tenir compte de la pertinence de l'origine du lien retour, des sites artificiels pour générer des liens retours n'aiderait pas par exemple.
 
-En matière de référencement, la meilleure pratique consiste à créer différentes pages pour chaque langue qu'on souhaite proposer sur son site Web. Ainsi, le site aura toutes les chances d'être correctement indexé dans les moteurs de recherche. Éric doit éviter d'inclure des contenus dans différentes langues sur une même page, car le moteur de recherche ne pourra pas déterminer dans quelle langue ils sont rédigés. Le résultat d'une traduction automatique étant parfois considéré comme du spam, nous lui conseillons également de ne pas utiliser ce type d'outil. Enfin, les annotations de langue sont utiles, car elles aident les moteurs de recherche à afficher le contenu le plus adéquat pour l'utilisateur d'un pays donné.
+En matière de référencement, la meilleure pratique consiste à créer différentes pages pour chaque langue qu'on souhaite proposer sur son site Web. Ainsi, le site aura toutes les chances d'être correctement indexé dans les moteurs de recherche.
 
 On peut également choisir ces "mots-clés à exclure" pour éviter que des personnes ne voient son annonce lorsqu'elles effectuent des recherches sur ces termes pour diffuser des annonces qui correspondent précisément à la recherche des utilisateurs.
 
@@ -119,22 +117,15 @@ On peut également choisir ces "mots-clés à exclure" pour éviter que des pers
 
 Pour certains, le meilleur moyen d'attirer les touristes serait d'adapter son site Web à la **recherche locale**. Aujourd'hui, les utilisateurs ont l'habitude de consulter leur téléphone lorsqu'ils sont en déplacement et ont besoin d'obtenir rapidement des informations. C'est pourquoi il est primordial d'établir une présence en ligne locale pour votre entreprise.
 
-Il faut indiquer au minimum le nom de l'établissement, l'adresse, le numéro de téléphone et les horaires d'ouverture pour inclure sa fiche dans un annuaire local. On peut également ajouter d'autres éléments facultatifs, tels que des photos de ses produits, en fonction du site qu'il a choisi.
-
-Grâce aux annonces locales, on peut adapter son message aux personnes situées à proximité de sa boutique. Toutes ces méthodes permettent de cibler plus spécifiquement les clients locaux.
-
 Le **GPS** est une technologie très intéressante, dont on peut tirer parti. Selon les fonctionnalités de l'application qu'on utilise, on peut envoyer des alertes lorsque des utilisateurs se trouvent à proximité du magasin ou proposer simplement un plan pour les aider à trouver l'itinéraire.
 
 ### 4. Introduction aux réseaux sociaux <a id="section-4"></a>
 
-La finalité des réseaux sociaux repose essentiellement sur la **communication** avec les utilisateurs, le but étant qu'ils vous connaissent mieux, vous et votre entreprise. Vous devez débuter une conversation, puis l'entretenir en publiant régulièrement du contenu, tout en veillant à ne pas inonder vos abonnés de messages. Nous vous déconseillons de nommer et de dénigrer vos concurrents, mais aussi de supprimer tous les posts négatifs, car cela pourrait nuire à votre image et déplaire aux abonnés. Pour ces mêmes raisons, évitez de trop commenter les posts personnels des abonnés.
-Grâce aux réseaux sociaux, on peut mettre en avant le profil de son entreprise et développer sa clientèle en incitant les abonnés à partager leurs contenus avec leurs amis.
+La finalité des réseaux sociaux repose essentiellement sur la **communication** avec les utilisateurs, le but étant qu'ils vous connaissent mieux, vous et votre entreprise.
 
 Un plan marketing sur les réseaux sociaux permet de définir une stratégie et de planifier son activité sur les réseaux et de comment la mesurer. Ensuite, on peut créer des profils sur les réseaux sociaux les plus adaptés à son entreprise et configurer un outil de gestion afin d'effectuer le suivi de son activité sur ces sites. Enfin, on peut préparer des posts à l'avance, qui seront publiés automatiquement lors des événements clés qu'on a planifiés.
 
-Si on souhaite se développer à l'international, on n'a pas besoin de limiter ses annonces à une audience locale. Si on combine une audience mondiale et une publicité correctement ciblée, on pourra utiliser son budget judicieusement, en se concentrant sur les personnes qui ont le plus de chances de devenir des clients.
-
-L'analyse des réseaux sociaux permet aux responsables d'entreprise de savoir comment les clients interagissent sur leur site avec leurs produits et services, et comment ils y accèdent, pour déterminer si ce qu'elle entreprend est bénéfique et identifier les campagnes les plus efficaces pour générer du trafic vers son site Web.
+L'analyse des réseaux sociaux permet de savoir comment les clients interagissent sur leur site avec leurs produits et services, et comment ils y accèdent, pour déterminer si ce qu'elle entreprend est bénéfique et identifier les campagnes les plus efficaces pour générer du trafic vers son site Web.
 
 Le principal avantage des réseaux sociaux, c'est qu'on peut s'adresser directement à vos clients, et interagir avec eux au bon moment et de la bonne façon.
 
@@ -142,8 +133,8 @@ Le principal avantage des réseaux sociaux, c'est qu'on peut s'adresser directem
 
 Nous avons pu dans ce MON 1.1 voir les bases du marketing en ligne, mais il manque un pan, les réseaux sociaux, que nous pourrons voir dans mon MON 1.2.
 
-Un commentaire sur la formation :
-Je suis arrivé à l'équivalent de la moitié de la formation. Il y a beaucoup de répétitions et une insistence fatigante d'utiliser les outils proposés par Google (Oui, ils ont le monopole, mais le rappeler à chaque minute devient lassant). Bien que dans le fond, l'intérêt est là, sur la forme, je pense que l'on pourrait faire mieux, que ce soit en terme de volume horaire en organisant mieux les parties et en évitant des redites et en variant les façons de tester ses connaissances. On aurait également voulu plus de schémas et moins de blabla.
+<u>Un commentaire sur la formation<u>
+Je suis arrivé à l'équivalent de la moitié de la formation. Il y a beaucoup de répétitions et une insistence fatigante d'utiliser les outils proposés par Google (Oui, ils ont le monopole, mais le rappeler à chaque minute est lassant). Bien que dans le fond, l'intérêt est là, sur la forme, je pense que l'on pourrait faire mieux, que ce soit en terme de volume horaire, en organisant mieux les parties et en évitant des redites ou en variant les façons de tester ses connaissances. On aurait également voulu plus de schémas et moins de blabla.
 
 ### Sources
 
