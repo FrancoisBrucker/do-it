@@ -122,7 +122,7 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
   Gérer la base de données [] = 15
 
   - Gérer l'inscription des Users, leur connexion et leur déconnexion [X] = 5
-  - Gérer les formulaires pour donner son avis [] = 5
+  - Gérer les formulaires pour donner son avis [X] = 5
   - Gérer les demandes de prises de contact [] = 5
 
 - Analyse RSE [] = 8
@@ -142,6 +142,7 @@ Par exemple, la protection et le respect de la confidentialité des données de 
 Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
 
 > Une donnée personnelle est définie comme toute information se rapportant à une personne physique identifiée ou identifiable. Mais, parce qu’elles concernent des personnes, celles-ci doivent en conserver la maîtrise.
+
 > Un « traitement de données personnelles » est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement). Un traitement de données doit avoir un objectif, une finalité, c’est-à-dire que vous ne pouvez pas collecter ou traiter des données personnelles simplement au cas où cela vous serait utile un jour. A chaque traitement de données doit être assigné un but, qui doit bien évidemment être légal et légitime au regard de votre activité professionnelle.
 
 Il harmonise les règles en Europe en offrant un cadre juridique unique aux professionnels. Il permet de développer leurs activités numériques au sein de l’UE en se fondant sur la confiance des utilisateurs.
