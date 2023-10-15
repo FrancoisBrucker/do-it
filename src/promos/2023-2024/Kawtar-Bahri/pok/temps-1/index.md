@@ -41,7 +41,7 @@ Ceci entraîne plusieurs problèmes et défis, notamment : manque d'interopérab
 
 ## Définition des objectifs de transformation 
 Ci après les principales catégories des tranformations digitales selon une étude de Capgemini Consulting & MIT Sloan Management : 
-<img src="digital.png">
+<img src="digital.png" width=100px>
  <br/>
 L’opportunité que j’ai identifiée pour l'entreprise étudiée s’inscrit dans la catégorie Operational Process, Performance management, Data-driven decision-making. Les objectifs sont donc :
 -	Centraliser les données pour faciliter le reporting 
