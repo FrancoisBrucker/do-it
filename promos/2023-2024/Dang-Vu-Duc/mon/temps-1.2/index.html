@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Apprentissage de Excel</title>
+        <title>Utilisation de Python pour automatiser des tâches sur Excel avec Openpyxl</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Apprentissage de Excel</h1>
+<h1 class="mb-1">Utilisation de Python pour automatiser des tâches sur Excel avec Openpyxl</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON aura pour objectif de s'initier à manier l'outil Excel, notamment en le combinant avec Python.
+                Ce MON aura pour objectif de s'initier à l'utilisation de la bibliothèque openpyxl de Python, pour lire et modifier des fichiers Excel.
 
         </p>
 
@@ -118,13 +118,389 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/">MON de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.2/">Apprentissage de Excel</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/">Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/">MON de Duc DANG VU</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.2/">Utilisation de Python pour automatiser des tâches sur Excel avec Openpyxl</a>
 
 </div></div>
 
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Prérequis</p>
+</div><div class="pl-8 mr-8">
+<p>Connaissance basique de la programmation objet avec Python.</p>
+</div></div>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Tout les codes présentés ci-dessous ainsi que les fichiers de ce MON (notamment les emplois du temps personnalisés) sont disponibles dans le dossier Github de Do-It: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.2">Codes du MON1.2</a></p>
+</div></div>
+<h2>Introduction</h2>
+<p>L'outil Excel du pack Office est un outil très répandu dans toutes les entreprises. Tout le monde sait à peu près comment fonctionne ce logiciel, mais peu de gens savent qu'il existe une bibliothèque python qui permet de lire et modifier des fichier Excel: <strong>openpyxl</strong>. Ce MON aura donc pour objectif d'apprendre à utiliser openpyxl pour automatiser des tâches sur des fichiers Excel qui seraient en temps normal longues à faire à la main.</p>
+<p>Dans un premier temps, nous expliquerons les méthodes principales de openpyxl. Ensuite, nous appliquerons ces connaissances en créant des emplois du temps personnalisés pour chaque élève Do-It 2023/2024.</p>
+<p>Dans ce MON, seulement une petite partie des commandes de la bibliothèque openpyxl seront expliquées (celles les plus importantes). Le reste est très bien expliqué sur le <a href="https://openpyxl.readthedocs.io/en/stable/">site de openpyxl</a>.</p>
+<p>Dans la suite, quelques lignes de code en python seront présentées. Le résultat de l’exécution des lignes de code est indiqué juste après celles-ci, après 3 chevrons <code>&gt;&gt;&gt;</code></p>
+<h2>Apprentissage de la bibliothèque</h2>
+<p>Tout d'abord, il faut installer openpyxl. Pour cela, il faut rentrer la commande suivante dans une invite de commande:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pip install openpyxl
+</code></pre>
+<p>Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme <em>test.xlsx</em> est contient le simple tableur suivant:</p>
+<p><img src="Image1.png" alt="Image test"></p>
+<p>La feuille qui est remplie se nomme <em>Feuille 1</em>.</p>
+<h3>Lecture de données</h3>
+<p>Dans un premier temps, nous allons expliquer comment lire des données. La première classe qui est importante à connaître est la classe <strong>Workbook</strong>. Pour créer un objet de cette classe, on utilise la méthode <em>openpyxl.load_workbook</em>. Les objets de cette classe correspondent au fichier Excel renseigné en paramètre de la méthode. Ils contiennent toutes les informations du fichier: lignes, colonnes, cellules etc... Par exemple, on peut récupérer les noms des feuilles du fichier Excel avec la méthode <em>sheetnames</em>.<br>
+Il faut ensuite récupérer la feuille sur laquelle on veut lire les données. Pour cela, on renseigne le nom de la feuille en question comme suit:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
+
+wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
+sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par la méthode <em>active</em> de la classe Workbook: <code>sheet = wb.active</code></p>
+</div></div>
+<p>La variable <em>sheet</em> est un objet de la classe <strong>Worksheet</strong>. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode <em>cell</em>. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne &quot;AA&quot;. On peut récupérer le contenu de la cellule avec la méthode <em>value</em>. On peut également récupérer les coordonnées d'une cellule avec la méthode <em>coordinate</em>.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
+<span class="token comment">#ou cell = sheet.cell(row = 1, column = 1)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'Pommes'</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'A1'</span>
+</code></pre>
+<p>Il est possible de convertir un nombre vers la lettre d'une colonne et vice-versa. Par exemple, 1 correspond à &quot;A&quot; et 28 correspond à &quot;AB&quot;. Les fonctions utilisées sont <em>get_column_letter</em> et <em>column_index_from_string</em>. Ces fonctions doivent être importées avant d'être utilisées:</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>utils <span class="token keyword">import</span> get_column_letter<span class="token punctuation">,</span> column_index_from_string
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>get_column_letter<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>column_index_from_string<span class="token punctuation">(</span><span class="token string">'E'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'AD'</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token number">5</span>
+</code></pre>
+<h3>Écriture de données</h3>
+<p>En plus de lire des données, il est possible de les modifier, et d'en rajouter dans les fichiers Excel. Par exemple, on peut modifier le titre d'une feuille, ou encore modifier le contenu d'une cellule. Après chaque modification, il faut enregistrer le workbook avec la méthode <em>save</em>. Notons qu'on ne peut pas sauvegarder un fichier qui est ouvert dans un autre onglet. Il est recommandé d'enregistrer le fichier modifié sous un autre nom afin de ne pas écraser le fichier original. Ainsi, si jamais il y a des erreurs dans le programme, il est possible de récupérer le fichier original.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
+sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
+cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
+
+sheet<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'Inventaire fruits'</span>
+cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'Kiwis'</span>
+
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Voici à quoi ressemble le fichier <em>test_copy.xlsx</em>, qui a été enregistré dans le même repertoire que le code python exécuté:</p>
+<p><img src="Image2.png" alt="Image test2"></p>
+<p>La cellule A1 a bien été modifiée, ainsi que le nom de la feuille.</p>
+<p>On peut également modifier la hauteur et la largeur des cellules en modifiant les attributs <em>row_dimensions.height</em> et <em>column_dimensions.width</em> des objets de la classe <strong>Worksheet</strong>. Les valeurs indiquées sont en &quot;pt&quot;.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A2'</span><span class="token punctuation">]</span>
+cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'Pommes de rainette'</span>
+sheet<span class="token punctuation">.</span>column_dimensions<span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">30</span>
+
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Le fichier <em>test_copy.xlsx</em> produit est le suivant:</p>
+<p><img src="Image3.png" alt="Image test3"></p>
+<p>La largeur de la colonne A s'est bien modifiée.</p>
+<p>On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe <strong>Alignment</strong>, changer le style de police du contenu d'une cellule avec la classe <strong>Font</strong> ou encore changer la couleur de fond d'une cellule avec la classe <strong>PatternFill</strong>. Ces classes doivent être importées de la bibliothèque <em>openpyxl.styles</em>.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
+
+wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
+sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
+
+cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A2'</span><span class="token punctuation">]</span>
+cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'Pommes de rainette'</span>
+sheet<span class="token punctuation">.</span>column_dimensions<span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">30</span>
+sheet<span class="token punctuation">.</span>row_dimensions<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">30</span>
+cell<span class="token punctuation">.</span>font <span class="token operator">=</span> Font<span class="token punctuation">(</span>size <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">,</span> bold <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+cell<span class="token punctuation">.</span>alignment <span class="token operator">=</span> Alignment<span class="token punctuation">(</span>horizontal <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">,</span> vertical <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">)</span>
+cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"0ebf3e"</span><span class="token punctuation">)</span>
+
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Le résultat est le suivant:</p>
+<p><img src="Image4.png" alt="Image"></p>
+<p>Le texte &quot;Pomme de rainette&quot; est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>La couleur renseignée en paramètres de la classe <strong>PatternFill</strong> est sous la forme d'un code hex. Ce code peut être déterminé grâce au site suivant: <a href="https://htmlcolorcodes.com/">htmlcolorcode.com</a></p>
+</div></div>
+<p>Enfin, il est possible de fusionner des cellules ou de les séparer, grâce aux méthodes <em>merge_cells</em> et <em>unmerge_cells</em>. Par exemple, si l'on ajoute au code précédent la commande <code>sheet.merge_cells('A3:A4')</code>, on obtient le résultat suivant:</p>
+<p><img src="Image5.png" alt="Image merge"></p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>On remarque que seule le contenu de la première cellule est conservé. De plus, les autres cellules de la cellule fusionnée sont des objets de la classe <strong>MergedCell</strong>. Il est possible de récupérer tout ces objets grâce à l'attribut <em>merged_cell.ranges</em> de la classe <strong>Worksheet</strong>.</p>
+</div></div>
+<h2>Application des connaissances acquises</h2>
+<p>Afin d'appliquer ces connaissances de openpyxl, nous allons travailler sur les fichiers Excel disponibles dans le Drive Do-It 2023/2024. Nous allons récupérer le fichier contenant la liste des élèves ainsi que leur choix de cours, ainsi que le fichier contenant l'emploi du temps de l'année. L'objectif est de créer un emploi du temps personnalisé pour chaque élève, en fonction de ses choix de cours. Il faudra donc lire les données de la première feuille puis écrire de nouvelles données sur la deuxième feuille. Ensuite, nous allons implémenter des méthodes pour permettre à l'utilisateur de rajouter ou supprimer manuellement des cours sur son emploi du temps.</p>
+<h3>Création automatique d'emplois du temps personnalisés</h3>
+<p>Le premier fichier Excel sur lequel nous allons travailler est celui contenant la liste des élèves ainsi que leurs choix de cours. Ce fichier est nommé <em>étudiants_Do-It_23_24.xlsx</em>. Le deuxième fichier est nommé <em>edt Do_It.23-24.xlsx</em>, et contient l'emploi du temps de la promo Do-It 2023/2024 sous forme d'un tableau. On va créer une classe <strong>Create_timetable</strong> qui va contenir les méthodes pour manipuler les emplois du temps. Plus particulièrement, la méthode <em>create_timetable_automatic</em> va prendre en argument le nom et le prénom d'un étudiant et va enregistrer son emploi du temps personnalisé. Voici les différentes étapes que le programme va suivre:</p>
+<ul>
+<li>Création d'une liste <em>courses_name</em>, qui contient initialement les cours qui sont communs à tout les élèves (par exemple filière métier, les cours de tronc commun, les vacances etc...) On s'assure que tout ces cours sont écrit en lettres minuscules.</li>
+<li>Récupération du numéro de ligne correspondant au nom et prénom (donnés en arguments) dans le document Excel <em>étudiants_Do-It_23_24.xlsx</em>. Si le nom ou le prénom ne figure pas dans le document, on affiche une erreur et on sort de la méthode.</li>
+<li>Récupération des cours de l'élèves. Pour cela, on parcourt le numéro de ligne que l'on vient de déterminer et on vérifie si une croix s'y trouve. Si c'est le cas, on remonte jusqu'au nom du cours (ligne 2) et on ajoute à la liste <em>courses_name</em> le nom du cours.</li>
+<li>Suppression des cours que l'élève n'a pas choisi. On parcourt toutes les cellules à l'intérieur du tableau du fichier Excel <em>edt Do_It.23-24.xlsx</em>, et on relève son contenu. Si ce contenu n'est pas l'élément vide, on vérifie si le nom du cours est présent dans la liste <em>courses_name</em>. Si ce n'est pas le cas, on supprime ce cours. Pour supprimer ce cours, on fait appel on à méthode <em>remove_course_automatic</em>, qui suit les étapes suivantes:
+<ul>
+<li>Séparation des cellules</li>
+<li>Coloration de chaque cellule en blanc</li>
+<li>Suppression du contenu de ces cellules.</li>
+</ul>
+</li>
+<li>Si le cours est dans la liste des cours, on réajuste la hauteur de la cellule</li>
+<li>Une fois que toutes les cellules ont été visitées, on enregistre l'emploi du temps sous le nom de <em>edt de &quot;prénom&quot; &quot;nom&quot;</em></li>
+</ul>
+<p>On créé également une méthode <em>create_all_timetable</em>, qui itère la méthode précédente 24 fois (une fois pour chaque élève) pour créer chaque emploi du temps pour chaque élèves. Ces emplois du temps sont disponibles dans le dossier GitHub de ce MON: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.2">Codes du MON1.2</a></p>
+<p>Pour executer ce code, il faut créer un objet de la classe <strong>Create_timetable</strong> et appeler la méthode <em>create_timetable_automatic</em>, en renseignant les nom et prénom de l'élève (sous forme de chaîne de caractères):</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">test <span class="token operator">=</span> Create_timetable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+test<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span><span class="token string">"Dang Vu"</span><span class="token punctuation">,</span> <span class="token string">"Duc"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>L'exécution de ces lignes produit le fichier Excel suivant:</p>
+<p><img src="Image6.png" alt="edt Duc"></p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les emplois du temps produits sont basés sur le fichier original datant du 14/10/23. Il est possible que d'ici cette date, de nouveaux cours soient rajoutés, ou bien modifiés voire même supprimés. C'est pourquoi le temps 3 n'est pas complet pour tout les emplois du temps car à l'heure où j'écris ces lignes, les cours du temps 3 ne sont pas encore fixés. De plus, il est très important que les noms des cours indiqués dans le fichier <em>étudiants_Do-It_23_24.xlsx</em> correspondent <strong>mot pour mot</strong> à ceux présents dans le fichier <em>edt Do_It.23-24.xlsx</em>. Même un espace à la fin du nom posera des problèmes.</p>
+</div></div>
+<h3>Ajout et suppression automatisé d'un cours</h3>
+<p>La classe <strong>Create_timetable</strong> contient également des méthodes pour ajouter ou supprimer des cours dans un fichier Excel renseigné en argument. Voici les étapes que suit la méthode <em>add_course</em> pour ajouter des cours:</p>
+<ul>
+<li>Demande des informations suivantes: jour et mois du cours qui doit être ajouté, date et durée du cours, nom du professeur, numéro de salle et couleur du cours (au format hex)</li>
+<li>Récupération de la cellule correspondant à la date renseignée. Pour cela, on appelle la méthode <em>get_cell_reference</em>, qui utilise une liste <em>weeks</em> composée des semaines de l'année (obtenue grâce aux colonnes C et D de l'edt) et qui en déduit la cellule correspondante.</li>
+<li>Ajout du cours en question: on fusionne les $n$ cellules en partant de la cellule obtenue, $n$ étant la durée du cours renseignée.</li>
+</ul>
+<p>La méthode <em>remove_course</em> suit des étapes similaires.</p>
+<p>Voici ce que produit la méthode <em>add_course</em> quand on exécute la commande <code>test.add_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>:</p>
+<p><img src="Image7.png" alt="Image commande"></p>
+<p><img src="Image8.png" alt="Image edt modifié"></p>
+<p>Et voici ce que produit la méthode <em>remove_course</em> quand on exécute la commande <code>test.remove_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>:</p>
+<p><img src="Image9.png" alt="Image commande 2"></p>
+<p><img src="Image10.png" alt="Image edt modifié 2"></p>
+<p>Le cours a bien été ajouté, puis supprimé comme on le voulait.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la classe <strong>Create_timetable</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
+<span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
+<span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>utils <span class="token keyword">import</span> get_column_letter
+<span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles<span class="token punctuation">.</span>borders <span class="token keyword">import</span> Border<span class="token punctuation">,</span> Side
+
+<span class="token keyword">class</span> <span class="token class-name">Create_timetable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>create_new_sheets<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>weeks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>possible_times <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'edt Do_It.23-24.xlsx'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sheet <span class="token operator">=</span> self<span class="token punctuation">.</span>wb<span class="token punctuation">[</span><span class="token string">'année'</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">35</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cell_begin <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> i<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+            cell_end <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> i<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>weeks<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>cell_begin<span class="token punctuation">.</span>value<span class="token punctuation">,</span> cell_end<span class="token punctuation">.</span>value<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">create_new_sheets</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>wb2 <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'étudiants_Do-It_23_24.xlsx'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sheet2 <span class="token operator">=</span> self<span class="token punctuation">.</span>wb2<span class="token punctuation">[</span><span class="token string">'effectif'</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>wb3 <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'edt Do_It.23-24.xlsx'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sheet3 <span class="token operator">=</span> self<span class="token punctuation">.</span>wb3<span class="token punctuation">[</span><span class="token string">'année'</span><span class="token punctuation">]</span>
+    
+    <span class="token keyword">def</span> <span class="token function">get_cell_reference</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        nb_week <span class="token operator">=</span> <span class="token boolean">None</span>
+        nb_day <span class="token operator">=</span> <span class="token boolean">None</span>
+        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>weeks<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            date_begin <span class="token operator">=</span> self<span class="token punctuation">.</span>weeks<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            date_end <span class="token operator">=</span> self<span class="token punctuation">.</span>weeks<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> date_begin<span class="token punctuation">.</span>month <span class="token operator">==</span> date_end<span class="token punctuation">.</span>month <span class="token keyword">and</span> month <span class="token operator">==</span> date_begin<span class="token punctuation">.</span>month<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> day <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>date_begin<span class="token punctuation">.</span>day<span class="token punctuation">,</span> date_end<span class="token punctuation">.</span>day <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    nb_week <span class="token operator">=</span> k
+                    nb_day <span class="token operator">=</span> day <span class="token operator">-</span> date_begin<span class="token punctuation">.</span>day
+                    <span class="token keyword">break</span>
+            <span class="token keyword">if</span> date_begin<span class="token punctuation">.</span>month <span class="token operator">!=</span> date_end<span class="token punctuation">.</span>month <span class="token keyword">and</span> month <span class="token operator">==</span> date_begin<span class="token punctuation">.</span>month<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> day <span class="token operator">>=</span> date_begin<span class="token punctuation">.</span>day<span class="token punctuation">:</span>
+                    nb_week <span class="token operator">=</span> k
+                    nb_day <span class="token operator">=</span> day <span class="token operator">-</span> date_begin<span class="token punctuation">.</span>day
+                    <span class="token keyword">break</span>
+            <span class="token keyword">if</span> date_begin<span class="token punctuation">.</span>month <span class="token operator">!=</span> date_end<span class="token punctuation">.</span>month <span class="token keyword">and</span> month <span class="token operator">==</span> date_end<span class="token punctuation">.</span>month<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> day <span class="token operator">&lt;=</span> date_end<span class="token punctuation">.</span>day<span class="token punctuation">:</span>
+                    nb_week <span class="token operator">=</span> k
+                    virtual_day_begin <span class="token operator">=</span> date_end<span class="token punctuation">.</span>day <span class="token operator">-</span> <span class="token number">4</span>
+                    nb_day <span class="token operator">=</span> day <span class="token operator">-</span> virtual_day_begin
+                    <span class="token keyword">break</span>
+        <span class="token keyword">if</span> nb_week <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"La date indiquée n'est pas valide"</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+        nb_row <span class="token operator">=</span> nb_week <span class="token operator">+</span> <span class="token number">3</span>
+        <span class="token keyword">if</span> time <span class="token keyword">not</span> <span class="token keyword">in</span> self<span class="token punctuation">.</span>possible_times<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"L'heure indiquée n'est pas valide"</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            index <span class="token operator">=</span> self<span class="token punctuation">.</span>possible_times<span class="token punctuation">.</span>index<span class="token punctuation">(</span>time<span class="token punctuation">)</span>
+            nb_column <span class="token operator">=</span> nb_day <span class="token operator">*</span> <span class="token number">8</span> <span class="token operator">+</span> <span class="token number">5</span> <span class="token operator">+</span> index
+        <span class="token keyword">return</span><span class="token punctuation">(</span>get_column_letter<span class="token punctuation">(</span>nb_column<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>nb_row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">add_course</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current_wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+        current_sheet <span class="token operator">=</span> current_wb<span class="token punctuation">[</span><span class="token string">'année'</span><span class="token punctuation">]</span>
+        day <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le jour du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        month <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le mois du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        time <span class="token operator">=</span> <span class="token boolean">None</span>
+        <span class="token keyword">while</span> time <span class="token keyword">not</span> <span class="token keyword">in</span> self<span class="token punctuation">.</span>possible_times<span class="token punctuation">:</span>
+            time <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez l'heure du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        duration <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez la durée du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le nom du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        professor <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le nom du professeur: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        room <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le numéro de salle: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        color <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le code hex de la couleur du cours: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        cell_reference <span class="token operator">=</span> self<span class="token punctuation">.</span>get_cell_reference<span class="token punctuation">(</span>day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+        cell_reference2 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_cell_reference<span class="token punctuation">(</span>day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time <span class="token operator">+</span> duration <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        current_sheet<span class="token punctuation">.</span>merge_cells<span class="token punctuation">(</span>cell_reference <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> cell_reference2<span class="token punctuation">)</span>
+        cell <span class="token operator">=</span> current_sheet<span class="token punctuation">[</span>cell_reference<span class="token punctuation">]</span>
+        cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> color<span class="token punctuation">)</span>
+        cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>professor<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>room<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+        cell<span class="token punctuation">.</span>alignment <span class="token operator">=</span> Alignment<span class="token punctuation">(</span>wrapText<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> horizontal <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">,</span> vertical <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">)</span>
+        current_sheet<span class="token punctuation">.</span>row_dimensions<span class="token punctuation">[</span>cell<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">10</span>
+        current_wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">remove_course</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current_wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+        current_sheet <span class="token operator">=</span> current_wb<span class="token punctuation">[</span><span class="token string">'année'</span><span class="token punctuation">]</span>
+        day <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le jour du cours qui doit être supprimé: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        month <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez le mois du cours qui doit être supprimé: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        time <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez l'heure du cours qui doit être supprimé: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        duration <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Entrez la durée du cours qui doit être supprimé: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        cell_reference <span class="token operator">=</span> self<span class="token punctuation">.</span>get_cell_reference<span class="token punctuation">(</span>day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+        cell_reference2 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_cell_reference<span class="token punctuation">(</span>day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time <span class="token operator">+</span> duration <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        border <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        current_sheet<span class="token punctuation">.</span>unmerge_cells<span class="token punctuation">(</span>cell_reference <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> cell_reference2<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>duration<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cell_reference <span class="token operator">=</span> self<span class="token punctuation">.</span>get_cell_reference<span class="token punctuation">(</span>day<span class="token punctuation">,</span> month<span class="token punctuation">,</span> time <span class="token operator">+</span> k<span class="token punctuation">)</span>
+            cell <span class="token operator">=</span> current_sheet<span class="token punctuation">[</span>cell_reference<span class="token punctuation">]</span>
+            cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border
+            cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"FFFFFF"</span><span class="token punctuation">)</span>
+            cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">None</span>
+        current_wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">remove_course_automatic</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cell<span class="token punctuation">,</span> duration<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        border <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> duration <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border
+            cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"FFFFFF"</span><span class="token punctuation">)</span>
+            cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">None</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            cell_end_coordinate <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>get_column_letter<span class="token punctuation">(</span>cell<span class="token punctuation">.</span>column <span class="token operator">+</span> duration <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>row<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>sheet3<span class="token punctuation">.</span>unmerge_cells<span class="token punctuation">(</span>cell<span class="token punctuation">.</span>coordinate <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> cell_end_coordinate<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>duration<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                current_cell_coordinate <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>get_column_letter<span class="token punctuation">(</span>cell<span class="token punctuation">.</span>column <span class="token operator">+</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>row<span class="token punctuation">)</span>
+                current_cell <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet3<span class="token punctuation">[</span>current_cell_coordinate<span class="token punctuation">]</span>
+                current_cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border
+                current_cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"FFFFFF"</span><span class="token punctuation">)</span>
+                current_cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_course_duration</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> mergedCell <span class="token keyword">in</span> self<span class="token punctuation">.</span>sheet3<span class="token punctuation">.</span>merged_cells<span class="token punctuation">.</span>ranges<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> cell<span class="token punctuation">.</span>coordinate <span class="token keyword">in</span> mergedCell<span class="token punctuation">:</span>
+                <span class="token keyword">return</span><span class="token punctuation">(</span>mergedCell<span class="token punctuation">.</span>max_col <span class="token operator">-</span> mergedCell<span class="token punctuation">.</span>min_col <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        
+
+
+    <span class="token keyword">def</span> <span class="token function">create_timetable_automatic</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nom<span class="token punctuation">,</span> prénom<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        courses_name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"bonjour !"</span><span class="token punctuation">,</span> <span class="token string">"tc1 : agilité"</span><span class="token punctuation">,</span> <span class="token string">"lancement projet 3a"</span><span class="token punctuation">,</span> <span class="token string">"tc1 : gestion des sources"</span><span class="token punctuation">,</span> <span class="token string">"tc1 : service design"</span><span class="token punctuation">,</span> <span class="token string">"langues"</span><span class="token punctuation">,</span> <span class="token string">"projet 3a"</span><span class="token punctuation">,</span> <span class="token string">"vacances"</span><span class="token punctuation">,</span> <span class="token string">"filière métier"</span><span class="token punctuation">,</span> <span class="token string">"tronc commun 3a"</span><span class="token punctuation">,</span> <span class="token string">"prez mon 2"</span><span class="token punctuation">,</span> <span class="token string">"prez pok"</span><span class="token punctuation">,</span> <span class="token string">"point pok sprint 1"</span><span class="token punctuation">,</span> <span class="token string">"point pok sprint 2"</span><span class="token punctuation">,</span> <span class="token string">"prez mon 1"</span><span class="token punctuation">,</span> <span class="token string">"pok&amp;mon"</span><span class="token punctuation">,</span> <span class="token string">"cap 1a/3a/conception si"</span><span class="token punctuation">,</span> <span class="token string">"prez projet"</span><span class="token punctuation">,</span> <span class="token string">"rencontre w3g"</span><span class="token punctuation">,</span> <span class="token string">"débrief"</span><span class="token punctuation">,</span> <span class="token string">"conférence métier"</span><span class="token punctuation">]</span>
+        row_number <span class="token operator">=</span> <span class="token boolean">None</span>
+        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cell_nom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            cell_prénom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> prénom<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> cell_prénom<span class="token punctuation">.</span>value<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> nom<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> cell_nom<span class="token punctuation">.</span>value<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                row_number <span class="token operator">=</span> k
+                <span class="token keyword">break</span>
+        <span class="token keyword">if</span> row_number <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Nom ou prénom invalide"</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cell <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> row_number<span class="token punctuation">,</span> column <span class="token operator">=</span> k<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> cell<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token string">'x'</span> <span class="token keyword">or</span> cell<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token string">"X"</span><span class="token punctuation">:</span>
+                course <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> column <span class="token operator">=</span> k<span class="token punctuation">)</span><span class="token punctuation">.</span>value
+                course <span class="token operator">=</span> course<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> course <span class="token operator">==</span> <span class="token string">'bonnes pratiques'</span><span class="token punctuation">:</span>
+                    courses_name<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"structuration d'un projet info"</span><span class="token punctuation">)</span>
+                    courses_name<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"programmation par les tests"</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    courses_name<span class="token punctuation">.</span>append<span class="token punctuation">(</span>course<span class="token punctuation">)</span>
+        border_medium_left <span class="token operator">=</span>  Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'medium'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        border <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        border_thick_left <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thin'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> nb_row <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> nb_column <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                cell <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet3<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> nb_row<span class="token punctuation">,</span> column <span class="token operator">=</span> nb_column<span class="token punctuation">)</span>
+                course_name <span class="token operator">=</span> <span class="token string">''</span>
+                <span class="token keyword">if</span> cell<span class="token punctuation">.</span>value <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                    <span class="token keyword">for</span> char <span class="token keyword">in</span> cell<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+                        course_name <span class="token operator">+=</span> char<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                        <span class="token keyword">if</span> <span class="token string">"\n"</span> <span class="token keyword">in</span> course_name<span class="token punctuation">:</span>
+                            course_name <span class="token operator">=</span> course_name<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>course_name<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+                            <span class="token keyword">break</span>
+                    <span class="token keyword">if</span> course_name <span class="token keyword">not</span> <span class="token keyword">in</span> courses_name<span class="token punctuation">:</span>
+                        course_duration <span class="token operator">=</span> self<span class="token punctuation">.</span>get_course_duration<span class="token punctuation">(</span>cell<span class="token punctuation">)</span>
+                        self<span class="token punctuation">.</span>remove_course_automatic<span class="token punctuation">(</span>cell<span class="token punctuation">,</span> course_duration<span class="token punctuation">)</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        cell<span class="token punctuation">.</span>alignment <span class="token operator">=</span> Alignment<span class="token punctuation">(</span>wrapText<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> horizontal <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">,</span> vertical <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">)</span>
+                        cell<span class="token punctuation">.</span>font <span class="token operator">=</span> Font<span class="token punctuation">(</span>size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+                        self<span class="token punctuation">.</span>sheet3<span class="token punctuation">.</span>row_dimensions<span class="token punctuation">[</span>cell<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">10</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>nb_column <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">8</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border_thick_left
+                <span class="token keyword">elif</span> <span class="token punctuation">(</span>nb_column <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">8</span> <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+                    cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border_medium_left
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    cell<span class="token punctuation">.</span>border <span class="token operator">=</span> border
+        self<span class="token punctuation">.</span>wb3<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'edt de </span><span class="token interpolation"><span class="token punctuation">{</span>cell_prénom<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>cell_nom<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token string">.xlsx'</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Emploi du temps enregistré sous le nom de "edt de </span><span class="token interpolation"><span class="token punctuation">{</span>cell_prénom<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>cell_nom<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token string">.xlsx"'</span></span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">create_all_timetable</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>create_new_sheets<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            nom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+            prénom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+            self<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span>nom<span class="token punctuation">,</span> prénom<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Tout les edt ont été enregistrés"</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h2>Conclusion</h2>
+<p>Ce MON fut très intéressant. Je ne savais pas qu'il était possible d'automatiser des opérations sur Excel avec Python, et j'ai donc beaucoup appris. Ces connaissances peuvent très certainement m'être utiles dans ma future carrière.</p>
+<h2>Sources</h2>
+<ul>
+<li>Al Sweigart. <em>Automate the boring stuff with Python</em>. Chapitre 13: <em>Working with Excel spreadsheets</em>. <a href="https://automatetheboringstuff.com/">https://automatetheboringstuff.com/</a>. Consulté pour la dernière fois le 15/10/23</li>
+<li>Documentation de openpyxl. <em><a href="http://readthedoc.io">readthedoc.io</a></em>. <a href="https://openpyxl.readthedocs.io/en/stable/">site d'openpyxl</a></li>
+</ul>
 
 
 </article>

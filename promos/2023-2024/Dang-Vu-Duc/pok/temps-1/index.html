@@ -151,6 +151,8 @@
 <li>Implémentation d'un jeu de Blackjack avec Qt sur Python</li>
 <li>Démonstration du code</li>
 <li>Bilan du premier sprint et prévision du deuxième sprint</li>
+<li>Implémentation des simulations autour du jeu de Blackjack</li>
+<li>Conclusion</li>
 </ul>
 <h2>Brève explication des règles du Blackjack</h2>
 <p>Il faut tout d'abord commencer par expliquer rapidement les (simples) règles du Blackjack. Ce jeu oppose les joueurs à la <em>maison</em> (autrement dit le casino, ou bien le dealer). Lors de chaque tour, le dealer distribue 2 cartes faces ouvertes à chaque joueur et une carte face ouverte à lui-même. Le but pour chaque joueur est de se rapprocher le plus possible de 21 points, sans dépasser cette limite. Chaque carte vaut sa valeur (le 2 vaut 2 points, le 5 vaut 5 points etc...), les têtes (valet, dame et roi) valent 10 points et l'As vaut 1 ou 11 points. Le joueur peut décider parmi plusieurs actions lors de son tour:</p>
@@ -1223,11 +1225,11 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>On remarque que cette stratégie de base se présente sous forme de trois tableaux: un tableau dans le cas où le joueur a un As, un autre où il a un double et un dernier dans les autres cas. Ceci est dû au fait que le comptage est différent dans le ca d'un As, et que le joueur peut séparer ses cartes dans le cas d'un double.</p>
+<p>On remarque que cette stratégie de base se présente sous forme de trois parties: un tableau dans le cas où le joueur a un As, un autre où il a un double et un dernier dans les autres cas. Ceci est dû au fait que le comptage est différent dans le cas d'un As, et que le joueur peut séparer ses cartes dans le cas d'un double.</p>
 </div></div>
 <p>Nous allons donc créer une classe <strong>Blackjack_simulation</strong> qui va permettre de simuler cette stratégie et d'en estimer son efficacité. Nous allons expliciter ses méthodes une par une.</p>
 <h3>L'initialisation de la classe <strong>Blackjack_simulation</strong></h3>
-<p>Cette classe hérite de la classe <strong>Blackjack_methods</strong>, présentée précédemment, afin d'hériter des méthodes pour créer des nouveaux decks et pour compter les points d'une main. L'initialisation a pour but de créer les 3 tableaux de stratégies de base, nommées <em>strat1</em> pour le cas de base, <em>strat2</em> pour le cas du double et <em>strat3</em> pour le cas de l'As.</p>
+<p>Cette classe hérite de la classe <strong>Blackjack_methods</strong>, présentée précédemment, afin d'hériter des méthodes pour créer des nouveaux decks et pour compter les points d'une main. L'initialisation a pour but de créer les 3 parties du tableau de la stratégie de base, nommées <em>strat1</em> pour le cas de base, <em>strat2</em> pour le cas du double et <em>strat3</em> pour le cas de l'As.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -1238,7 +1240,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
 <div class="pl-8 font-bold inline-block">
-<p>Cliquer pour voir l'initialisation de la classe *<em>Blackjack_simulation</em></p>
+<p>Cliquer pour voir l'initialisation de la classe <em>Blackjack_simulation</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
@@ -1370,7 +1372,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 <li>Vérifier le cas normal (sans As ni doubles). On se réfère au tableau <em>strat1</em> et on fait le même processus.</li>
 </ul>
 <p>On effectue cet algorithme n fois. On remarque que cet algorithme est répétitif, et cela se voit dans l'implémentation, qui est assez longue.</p>
-<p>Après la simulation de ces n parties, il n'y a plus qu'a afficher les résultats sous forme de graphiques en couleur et d'un graphique en barre (comme explicité précédemment), grâce à la bibliothèque matplotlib. On peut choisir d'afficher seulement un graphique, ou bien les 4 en même temps.</p>
+<p>Après la simulation de ces n parties, il n'y a plus qu'à afficher les résultats sous forme de graphiques en couleur et d'un graphique en barre (comme explicité précédemment), grâce à la bibliothèque matplotlib. On peut choisir d'afficher seulement un graphique, ou bien les 4 en même temps.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -1853,10 +1855,9 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 <p>Il y a beaucoup de détails importants dans ce code et il est très répétitif, c'est pourquoi il est très long. J'ai choisi de ne pas expliquer ces détails, car ils ne sont pas pertinents. Il est plus important de comprendre l'idée générale du code.</p>
 </div></div>
 <h3>Résultats et analyse de la simulation</h3>
-<p>Voici les (jolis) graphiques que produit cette simulation. Cette simulation a été réalisée sur 10 millions de parties, afin d'avoir un echantillon suffisamment grand pour tendre vers les probabilités réélles.</p>
+<p>Voici les (jolis) graphiques que produit cette simulation. Cette simulation a été réalisée sur 10 millions de parties, afin d'avoir un echantillon suffisamment grand pour tendre vers les probabilités réélles. Les valeurs infiquées dans les graphiques en couleur indiquent le taux de réussite du joueur ayant la main indiquée en abscisses face à la première carte du dealer indiquée en ordonnée. Pour le premier graphique en couleur, les valeurs indiquées en abscisses sont les sommes des deux premières cartes du joueur. Par exemple, l'abscisse 10 se réfère à une des mains suivantes: 2-8, 3-7, 4-6 (les mains 5-5 et A-9 ne sont pas dans cette liste car elles sont prises en compte dans les tables des doubles et des As).</p>
 <p><img src="Image9.png" alt="Figure1"></p>
-<p><img src="Image10.png" alt="Figure2"><br>
-<em>Les valeurs indiquées pour la main du joueur sont les sommes des deux premières carte du joueur</em></p>
+<p><img src="Image10.png" alt="Figure2"></p>
 <p><img src="Image11.png" alt="Figure3"></p>
 <p><img src="Image12.png" alt="Figure4"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -1864,7 +1865,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Sur la droite des graphiques en couleur, il est indiqué les moyennes (pondérées par le nombre de mains jouées) des taux de réussites face à la première carte du dealer correspondante. En haut  de ces graphiques, on a les moyennes des taux de réussites des mains du joueur correspondante.</p>
+<p>Sur la droite des graphiques en couleur, il est indiqué les moyennes (pondérées par le nombre de mains jouées) des taux de réussites face à la première carte du dealer correspondante. En haut de ces graphiques, on a les moyennes des taux de réussites des mains du joueur correspondante.</p>
 </div></div>
 <p>Le taux de réussite moyen du joueur est de 43,22% et l'espérance de gain est de -<strong>1,75%</strong>. Ce chiffre est appelé l'avantage de la maison. Cela veut dire que pour une mise de 100 euros, le joueur perd en moyenne 1,75 euros. Pour se donner une idée, voici quelques avantages de la maison sur les jeux de roulette (jeux également populaires au casino):</p>
 <ul>
@@ -1879,7 +1880,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 <p>Pour les mains en double, la main 5-5 a un bon taux de réussite, mais la meilleure reste la main 10-10 qui a un excellent taux de réussite de 79,1%. La main A-A se défend également très bien, avec un taux de réussite à 62,9%. Le reste des mains en double ont des taux de réussite en dessous de 50%.</p>
 <p>Enfin, pour les mains contenant un As, la meilleure main est évidemment A-10, qui correpond à un &quot;Blackjack&quot; et qui gagne à tout les coups, sauf si le dealer en a un aussi. Sinon, la main A-9 a un bon taux de réussite, et le reste des mains avec un As ont un taux de réussite entre 40% et 50%.</p>
 <h3>Le comptage des cartes: la méthode <em>count</em></h3>
-<p>Il existe une méthode pour améliorer son espérance au Blackjack qui s'appelle le comptage des cartes. Une des méthodes s'appelle le <em>système Hi-Lo</em>, et permet d'estimer le nombre de cartes hautes restantes dans le sabot. En effet, plus il y a de cartes hautes dans le sabot, plus le joueur aura une main de départ élevée et plus le dealer aura de chance de bust. Concrètement, le joueur compte les cartes avec un &quot;running count&quot;. Il ajoute à ce running count 1 si une carte entre 2 et 6 sort, et enlève 1 a ce compte quand une carte d'une valeur de 10 ou un As sort. Ce compte ne change pas dans le cas où un 7, 8 ou 9 sort. Le joueur doit ensuite diviser ce running count part le nombre de decks de 52 cartes qu'il reste dans le sabot, pour obtenir le &quot;true_count&quot;. Lorsque ce true count dépasse une certaine valeur, le joueur va miser plus, car il aura plus de chances de gagner face au dealer.</p>
+<p>Il existe une méthode pour améliorer son espérance au Blackjack qui s'appelle le comptage des cartes. Une des méthodes s'appelle le <em>système Hi-Lo</em>, et permet d'estimer le nombre de cartes hautes restantes dans le sabot. En effet, plus il y a de cartes hautes dans le sabot, plus le joueur aura une main de départ élevée et plus le dealer aura de chance de bust. Concrètement, le joueur compte les cartes avec un &quot;running count&quot;. Il ajoute à ce running count 1 si une carte entre 2 et 6 sort, et enlève 1 a ce compte quand une carte d'une valeur de 10 ou un As sort. Ce compte ne change pas dans le cas où un 7, 8 ou 9 sort. Le joueur doit ensuite diviser ce running count part le nombre de decks de 52 cartes qu'il reste dans le sabot, pour obtenir le &quot;true_count&quot;. Lorsque ce true count dépasse une certaine valeur, le joueur va miser plus car il aura le sabot contient à ce moment là un grand nombre de cartes hautes comparé aux cartes basses.</p>
 <p>On implémente alors une méthode <em>count</em>, qui prend en argument une carte et modifie les comptes suivant sa valeur. Cette méthode est appelée à chaque fois qu'une carte est piochée.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -1909,7 +1910,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </div>
 </details>     
 </div>
-<p>Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevée, plus il y a de chances de gagner, et donc plus il faut miser.<br>
+<p>Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevé, plus il y a de chances de gagner, et donc plus il faut miser.<br>
 Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si ce seuil est dépassé, la mise est plus grande. L'éxecution de cet algorithme sur 10 millions de parties   avec le comptage des cartes activé donne ce graphique en barre:</p>
 <p><img src="Image13.png" alt="Image count"></p>
 <p>On remarque que le taux de réussite moyen et les taux de réussite face à chaque main du dealer ne changent pas comparé au graphique obtenu quand le joueur ne compte pas. Ceci est logique, puisque l'on change seulement la mise. Cependant, on remarque que l'avantage au casino n'est plus que de <strong>0,75%!</strong> C'est plus de deux fois moins que précédemment. Le comptage des cartes est donc bien efficace, mais ne permet cependant pas d'avoir une espérance positive: le casino sera donc toujours gagnant!</p>
@@ -1918,7 +1919,7 @@ Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si c
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Notons qu'il est possible de changer la valeur seuil et le facteur multiplicatif. Les résultats seront légèrement différents mais ne permettra jamais d'avoir l'avantage sur le casino. De plus, dans la vraie vie, il est difficile de calculer exactement le true count, notamment parce qu'il est difficile d'estimer le nombre de decks restants dans le sabot. Certains casinos cachent également le sabot, ce qui empêche les joueurs de compter les cartes.</p>
+<p>Notons qu'il est possible de changer la valeur seuil et le facteur multiplicatif. Les résultats seront légèrement différents mais ne permettront jamais d'avoir l'avantage sur le casino. De plus, dans la vraie vie, il est difficile de calculer exactement le true count, notamment parce qu'il est difficile d'estimer le nombre de decks restants dans le sabot. Certains casinos cachent également le sabot, ce qui empêche les joueurs de compter les cartes.</p>
 </div></div>
 <h2>Conclusion</h2>
 <p>Ce POK fut très intéressant pour moi car j'ai pu m'entraîner sur la programmation d'interface graphique. Je suis conscient que Python n'est pas le langage le plus répandu pour coder des applications ou des jeux, mais j'ai néanmoins au moins pu comprendre la logique derrière l'implémentation de simples jeux. La deuxième partie du POK fut égalemnt très intéressante: j'ai pu consolider mes acquis sur la programmation objet ainsi que sur ma façon d'organiser mes codes. Sur le plan de la gestion de projet, j'ai pu me rendre compte que j'ai surestimé mes capacités pour le premier sprint (je n'ai pas pu finir l'interface de mise comme je l'avais prévu), et j'ai donc dû mettre les bouchées doubles lors de la deuxième partie du premier temps. Je me suis donc rendu compte de l'importance de connaître mes capacités et d'estimer la compléxité d'une tâche.</p>
