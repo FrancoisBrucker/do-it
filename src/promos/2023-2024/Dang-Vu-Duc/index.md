@@ -14,4 +14,4 @@ authors:
 
 ## Projet
 
-Bientôt... chez vous
+[Version mobile du jeu "Chiche ou Pois chiche"](../../../projets/2023-2024/Chiche-ou-pois-chiche)
