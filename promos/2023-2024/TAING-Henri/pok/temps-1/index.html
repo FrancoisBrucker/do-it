@@ -160,7 +160,8 @@
 <li><a href="#subsection-6">Analyse RSE</a></li>
 </ul>
 </li>
-<li><a href="#section-5">Sources</a></li>
+<li><a href="#section-5">Conclusion</a></li>
+<li><a href="#section-6">Sources</a></li>
 </ol>
 <h2>Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a></h2>
 <ul>
@@ -206,7 +207,8 @@ Si je veux pouvoir comparer plusieurs entreprises, il me faudra des critères qu
 <h3>Début de la mise en place d'une plateforme en ligne <a id="subsection-3"></a></h3>
 <p>J'ai fait le choix d'utiliser <a href="http://Bubble.io">Bubble.io</a> pour construire ma plateforme. Après l'avoir utilisé pendant le cours &quot;No/Low code&quot;, cette solution me semblait appropriée, surtout dans l'optique de faire une maquette fonctionnelle.</p>
 <p>Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à créer les pages de base, l'accueil et la connexion/l'inscription, et la page contacts. Elles sont plus ou moins achevées. Il va falloir prendre en vitesse sur le deuxième sprint.</p>
-<p><img src="index.jpg" alt=""> <img src="signin.jpg" alt="" width="50%"></p>
+<p><img src="index.jpg" alt=""><br>
+<img src="signin.jpg" alt="" width="50%"></p>
 <h2>Ce que j'ai prévu pour le second point POK (14h) <a id="section-3"></a></h2>
 <ul>
 <li>Analyser la politique RSE des trois entreprises et les classer =&gt; Fournir une démarche pour analyser la politique RSE d'une entreprise sur un axe bien précis, puis l'appliquer à une entreprise. Ceci implique le choix de critères d'intérêts.</li>
@@ -220,7 +222,7 @@ Si je veux pouvoir comparer plusieurs entreprises, il me faudra des critères qu
 <h3>Ce que j'ai finalement prévu de faire pour le 2ème sprint <a id="subsection-4"></a></h3>
 <p>Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'avais pas été assez précis dans ma planification et que Do_It était en fait véritablement calqué sur la gestion de projet agile.<br>
 Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.</p>
-<p>Après m'être posé pendant une bonne heure, j'ai établi mes objectifs de cette deuxième partie du POK :</p>
+<p>Après m'être posé pendant une bonne heure, j'ai établi plus clairement mes objectifs de cette deuxième partie du POK :</p>
 <ul>
 <li>En apprendre plus sur ce qu'était la RSE,</li>
 <li>Apprendre à créer un site plus que fonctionnel à l'aide d'un outil no/low code, ici <a href="http://Bubble.io">Bubble.io</a>,</li>
@@ -256,7 +258,7 @@ Une page index et les autres pages qui vont avec [X] = 17 -&gt;</p>
 <p>Analyse RSE [X] = 8 -&gt; 6<br>
 S'imprégner d'une méthode d'analyse [X] = 2<br>
 Choisir une méthode et établir des critères d'évaluations [X] = 2<br>
-Analyse d'une politique RSE, on prendra <strong>Patagonia</strong> [X] = 3 -&gt; 1 (Finalement très subjectif)</p>
+Analyse d'une politique RSE, on prendra <strong>Patagonia</strong> [X] = 3 -&gt; 1 (Finalement très subjectif, un peu déçu sur ce point)</p>
 </li>
 </ul>
 <h3>La RSE et le RGPD ? <a id="subsection-5"></a></h3>
@@ -292,7 +294,75 @@ En effet, le RGPD s’applique à toute organisation, publique et privée, qui t
 <blockquote>
 <p>la vision durable : L'organisation doit fournir des informations sur ses impacts et ses objectifs dans le contexte plus large du développement durable, en s'appuyant par exemple sur des informations objectives et des mesures du développement durable faisant autorité, lorsqu'elles sont disponibles.</p>
 </blockquote>
-<h3>Sources <a id="section-5"></a></h3>
+<p>Malheureusement, ce jugement reste très subjectif. Pour pouvoir être objectif, il aurait fallu comparer avec d'autres entreprises qui auraient une quantité d'informations équivalente et de même qualité, ce que je n'ai pas eu le temps de faire.</p>
+<h3><a href="http://Bubble.io">Bubble.io</a> et les fonctionnalités que j'ai réussi à implémenter</h3>
+<ul>
+<li>
+<p>La base de données<br>
+<img src="datatypes.png" alt="La base de données"></p>
+</li>
+<li>
+<p>Inscription/Connexion</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="inscription.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="workflowindex.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p>Dans la base de données, on obtient alors :<br>
+<img src="userpouletfrit.png" alt="Users dans la base de données"></p>
+</li>
+<li>
+<p>Dashboard/Déconnexion<br>
+<img src="dashboard.png" alt="drawing1" width="500"></p>
+</li>
+<li>
+<p>Contact<br>
+<img src="contact.png" alt="drawing2" width="500"></p>
+<p>Dans la base de données, on a :<br>
+<img src="datacontact.png" alt="Les fiches de contact dans la base de données" width=""></p>
+</li>
+<li>
+<p>Formulaire pour donner son avis<br>
+<img src="avis.png" alt="Avis"></p>
+<p>Dans la base de données, on a alors :<br>
+<img src="dataformulaire.png" alt="Les formulaires dans la base de données" width=""></p>
+</li>
+<li>
+<p>Pour présenter les résultats sous la forme d'un classement, je voulais utiliser la fonctionnalité &quot;Repeating groups&quot;.<br>
+Les étapes à effectuer auraient été :</p>
+</li>
+</ul>
+<ol>
+<li>Récupérer les données des formulaires &gt; &quot;Search for&quot;</li>
+<li>Faire la moyenne des notes attribuées &gt; &quot;Calculate formula&quot; ou faire directement le calcul dans &quot;Value&quot;</li>
+<li>Vérifier si l'entreprise existe déjà dans la base de données, si oui, il suffit de mettre à jour sa note moyenne &gt; Condition sur le nom de l'entreprise avec &quot;Only when&quot;, puis ???</li>
+<li>Classer les entreprises par leurs notes &gt; &quot;Sort by&quot; dans &quot;Repeating groups&quot;</li>
+<li>Les afficher dans &quot;Repeating groups&quot;.<br>
+Je suis donc resté bloqué ici...
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="classement.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="workflowformulaire.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2>Conclusion <a id="section-5"></a></h2>
+<p>Je suis plutôt déçu du résultat. Je ne m'attendais pas forcément à avoir quelque chose de bien concluant vu l'ambition du projet, mais je pensais avoir le temps de faire plus, surtout du côté de Bubble.<br>
+Ne pas avoir réussi à lier les deux types de données et présenter ma base de données proprement me laisse un mauvais arrière-goût sur la langue.<br>
+De même pour le système d'avis, j'avais pour idée d'imiter le concept de glassdoor où chacun laisse son avis sur sa boîte. Mais quand il s'agit de la politique RSE, qui peut dire assurément qu'il est capable de donner un avis éduqué sur la question ?</p>
+<p>Ce que je retiens de ce POK :</p>
+<ul>
+<li>La RSE est un domaine très large, beaucoup trop large,</li>
+<li>Bubble est une bonne option de créer une maquette/prototype, mais je ne l'utiliserais pas pour créer un produit fini pour un client</li>
+<li>Le back/gestion des serveurs/base de donnnées n'est vraiment pas pour moi...</li>
+</ul>
+<h2>Sources <a id="section-6"></a></h2>
 <p><a href="https://www.cci.fr/ressources/developpement-durable/responsabilite-sociale-rse">Qu'est-ce que la RSE ? - CCI</a><br>
 <a href="https://qabis.eu/implementer-une-politique-rse-dans-son-entreprise-en-5-etapes/">Complément à la compréhension de la RSE - QABIS</a><br>
 <a href="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on">Qu'est-ce que le RGPD ? - CNIL</a><br>
