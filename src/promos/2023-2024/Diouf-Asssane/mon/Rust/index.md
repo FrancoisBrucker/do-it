@@ -144,6 +144,6 @@ A mon avis, Rust est un langage intéressant qui vaut le détour. Je souhaite ma
 ## Pour la suite...
 Rust est un langage aux multiples applications. Il est organisé autour d'une communauté active qui propose beaucoup de crates (packages).
 
-Par exemple, Rust est un langage qui se compile très facilement en WebAssembly. J'aborde le WebAssembly plus en détail dans mon premier POK. Je vais donc juste dire ici que le webassembly peut directement s'éxécuter dans le navigateur. A partir de ce point, des membres de la communauté ont introduit des crates pour faire le front entier d'un site avec Rust ([Trunk](https://trunkrs.dev) avec [Yew](https://yew.rs) ou d'autres).
+Par exemple, Rust est un langage qui se compile très facilement en WebAssembly. J'aborde le WebAssembly plus en détail dans mon premier [POK](./../../pok/temps-1). Je vais donc juste dire ici que le webassembly peut directement s'éxécuter dans le navigateur. A partir de ce point, des membres de la communauté ont introduit des crates pour faire le front entier d'un site avec Rust ([Trunk](https://trunkrs.dev) avec [Yew](https://yew.rs) ou d'autres).
 
 Il est aussi possible d'utiliser Rust pour développer des jeux-vidéos(avec [Bevy](https://bevyengine.org) ou encore bracket-lib), des applications de bureaux ([Tauri](https://tauri.app/fr/)) ou de faire du Rust côté serveur (on peut gérer tous les aspects d'une application avec Rust comme le montre cette video : [RSTY stack](https://youtu.be/luOgEhLE2sg?si=-GECHavzkNbjqvlI)).
