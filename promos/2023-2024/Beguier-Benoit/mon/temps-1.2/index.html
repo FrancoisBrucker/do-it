@@ -153,7 +153,8 @@
 <h2>Sommaire</h2>
 <ol>
 <li>Introduction</li>
-<li></li>
+<li>Structure de la page</li>
+<li>CSS3</li>
 </ol>
 <h2>Introduction</h2>
 <p>Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :</p>
@@ -175,11 +176,10 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 
 </code></pre>
-<p>Les différents éléments de la page sont définis par des balises (par exemple : <head> et </head>) qui ouvrent et ferment le bloc.<br>
-Pour plus de détails, je vous recommande de consulter le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-1/">MON de Vladimir</a>.</p>
-<p>On y rajoute des paragraphes avec </p><p> et des sections avec </p><div>.<p></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
+<p>Les différents éléments de la page sont définis par des balises (par exemple : <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code>) qui ouvrent et ferment le bloc.<br>
+Pour plus de détails, je vous recommande de consulter le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-1/">MON de Vladimir</a> qui détaille l'ensemble des balises standards.</p>
+<p>On y rajoute des paragraphes avec <code>&lt;p&gt;</code> et des sections avec <code>&lt;div&gt;</code>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -200,13 +200,31 @@ Pour plus de détails, je vous recommande de consulter le <a href="https://franc
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 
 </code></pre>
-<p>Cependant, nous n'avons ici écrit que le fond du site (&quot;back&quot;) qui le navigateur interprètera.<br>
-Il est aussi important de s'attarder sur la forme.</p>
-<h2>CSS</h2>
-<p>Le CSS est un autre langage qui permet de mettre en forme les différents composants écrits en HTML.</p>
+<p>Cependant, nous n'avons ici écrit que le fond du site (&quot;back&quot;) que le navigateur interprètera.<br>
+Il est aussi important de s'attarder sur la forme et la mise en page.</p>
+<h2>CSS3</h2>
+<p>Le CSS est un autre langage qui permet de mettre en forme les différents composants écrits en HTML. Dans l'idée, nous pouvons en CSS paramétrer le visuel de chaque composant HTML. Je recommande cette fois le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/William%20Lalanne/mon/temps-1.1/">MON de William</a> qui insiste sur les points importants du CSS et qui est très complet.</p>
+<p>Personnellement, je retiens les points suivants pour mon futur site Web.</p>
+<h4>Les Grid</h4>
+<p>Les Grid permettent de créer un tableau sur la page qui facilite la mise en page. On déclare le composant que l'on souhaite transformer en grid en HTML, puis on le paramètre en CSS. Voici un exemple de syntaxe :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.composant</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 200px 200px 200px<span class="token punctuation">;</span>
+    <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 400px 150px 200px<span class="token punctuation">;</span>
+    <span class="token property">gap</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Je conseille d'utiliser les unités relatives <em>fr</em> (fraction units) pour s'adapter à toutes les tailles d'écrans. Cela permet une meilleure accessibilité sur tous les appareils. On peut par exemple écrire ceci :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 2fr<span class="token punctuation">;</span>
+</code></pre>
+<p>Une deuxième manière de structurer la page web en CSS repose sur les Flexbox.</p>
+<h4>Flexbox</h4>
+<p>C'est pour ma part la syntaxe que j'ai préféré utiliser par rapport aux Grids. Je la trouve plus intuitive et maniable dans son comportement. La philosophie de Flexbox repose en mon sens sur la géométrie, ce qui est assez naturel. On oriente en CSS un axe primaire pour indiquer au navigateur dans quel sens doivent naviguer les boxes. Naturellement, l'axe secondaire correspond à sa rotation de 90°. On peut ainsi effectuer toutes les opérations auxquelles l'on pourrait penser en indiquant à CSS l'axe concerné.</p>
+<p>J'ai ensuite passé tous les niveaux du jeu <a href="https://flexboxfroggy.com/#fr">Flexbox Froggy</a> pour me familiariser avec toutes les subtilités du langage.</p>
+<p><img src="flewboxfroggy.png" alt="froggy"></p>
 
 
-</div></article>
+</article>
 
         </main>
 
