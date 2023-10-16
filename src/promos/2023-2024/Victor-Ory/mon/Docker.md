@@ -3,12 +3,15 @@ layout: layout/mon.njk
 title: "Docker"
 authors:
   - ORY Victor
+
 date: 2023-09-27
+
 tags:
   - 'temps 1'
   - 'Docker'
   - 'DevOps'
   - 'Intermédiaire'
+  
 ---
 
 ## Ressources :

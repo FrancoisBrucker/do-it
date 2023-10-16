@@ -1,7 +1,8 @@
 ---
 layout: layout/mon.njk
 
-title: "L'IT d'un point de vue géopo et focus sur la cryptographie"
+title: "L'IT d'un point de vue géopolitique et focus sur la cryptographie"
+
 authors:
   - ORY Victor
 
@@ -12,6 +13,7 @@ tags:
   - 'Cryptographie'
   - 'Enjeu international'
   - 'Math'
+  
 ---
 # Résumé :
 
