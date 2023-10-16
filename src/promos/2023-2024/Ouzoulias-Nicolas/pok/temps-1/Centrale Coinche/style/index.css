@@ -1,0 +1,38 @@
+.introduction{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    gap : 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.introduction h1{
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 30px;
+}
+
+.image{
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color : wheat
+  }
+  
+
+.déroulé{
+    border-right: 1px solid #0da352;
+    border-bottom: 1px solid #0da352;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 80px;
+}

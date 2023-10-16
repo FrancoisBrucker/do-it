@@ -1,0 +1,38 @@
+td,th {
+    padding-bottom: 5px ;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.results div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 30px;
+}
+
+.recap-match{
+    border: 1px white solid;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    width: 500px;
+}
+
+.recap-match p{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.vic{
+    color: #0da352;
+}
+
+.def{
+    color: red;
+}
