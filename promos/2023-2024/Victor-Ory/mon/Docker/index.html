@@ -149,69 +149,69 @@
 <ul>
 <li>Un site à mettre en ligne</li>
 <li>Terminal</li>
-<li>basic réseau ( port )</li>
+<li>basic réseau (port)</li>
+<li>Savoir ce qu'est Docker</li>
 </ul>
 </div></div>
 <h3>Résumé et Objectifs</h3>
-<p>Ce MON est le premiers pas sur le chemin du devOps. En effet, Docker est un élément essentiel des systèmes d'informations actuelles.  Ainsi ce MON va essayer de nous familiariser avec les concepts et voir leurs interaction avec des éléments classiques d'une application web.</p>
-<h2>Ce qu'on veut faire  :</h2>
+<p>Ce MON est le premiers pas sur le chemin du DevOps. En effet, Docker est un élément essentiel des systèmes d'informations actuelles. Ainsi, ce MON va essayer de nous familiariser avec les concepts et voir leurs interactions avec des éléments classiques d'une application web.</p>
+<h2>Ce qu'on veut faire :</h2>
 <ul>
 <li>Dockeriser l'application que nous avons.</li>
-<li>Comprendre les processus pour la mettre en ligne sur un serveur cloud</li>
+<li>Comprendre les processus pour la mettre en ligne sur un serveur cloud.</li>
 </ul>
 <h1>Let's go</h1>
 <h2>Pourquoi utiliser Docker ?</h2>
-<p>C'est un procédé de standardisation des applications pour pouvoir les déployer partout facilement.<br>
-On fait un package de l'applications, ses dépendances et sa configuration facilement transportable.<br>
-Deux éléments sont importants dans cet écosystème : les images et les containers.<br>
-L'image est le moule qui contient les dépendances, les configurations et l'image devient un container lorsque qu'elle est hébergée sur ton ordinateur.<br>
-Le container est un environnement en fonctionnement autour d'une image.<br>
-Une image peut être utilisé dans plusieurs container mais chaque container n'utilise qu'une image.<br>
-Chaque image est découpé en layer ou couche, ce qui permet lors de changement localisé de modifier seulement une layer et non l'ensemble de l'image.</p>
+<p>C'est un procédé de standardisation des applications pour pouvoir les déployer partout facilement. On fait un package de l'applications, ses dépendances et sa configuration facilement transportable. Deux éléments sont importants dans cet écosystème : les images et les containers. L'image est le moule qui contient les dépendances, les configurations et l'image devient un container lorsque qu'elle est hébergée sur ton ordinateur. Le container est un environnement en fonctionnement autour d'une image. Une image peut être utilisée dans plusieurs containers, mais chaque container n'utilise qu'une image. Chaque image est découpée en layers ou couches, ce qui permet lors de changement localisé de modifier seulement une layer et non l'ensemble de l'image.</p>
 <h1>Installation</h1>
-<p>Pour l'installation, cela est très bien expliqué à travers du <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker">Mon de Tuncay</a>, cela permet d'installer notamment le CLI, une façon de communiquer avec l'application docker à travers un terminal.</p>
-<p>Ainsi après tout cela effectué, on eut commencer à travailler ! Car le travail c'est la vie.</p>
+<p>Pour l'installation, cela est très bien expliqué à travers du <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker">MON de Tuncay</a>, cela permet d'installer notamment le CLI, une façon de communiquer avec l'application Docker à travers un terminal.</p>
+<p>Ainsi après tout cela effectué, on peut commencer à travailler ! Car le travail c'est la vie.</p>
 <h3>Mon application</h3>
-<p>Pour ce cours, j'utilise une application que j'ai conçu pour un autre projet, mais elle peut être résumée par :</p>
+<p>Pour ce cours, j'utilise une application que j'ai conçue pour un autre projet, mais elle peut être résumée par :</p>
 <ul>
 <li>une base de données MongoDB locale,</li>
 <li>une API en relation avec cette base de données en Express,</li>
-<li>un front en React</li>
+<li>un front en React.</li>
 </ul>
 <h2>On fait quoi avec ça ?</h2>
-<p>Ainsi, l'objectif pour une application de ce genre est de créer un container à base d'un image adaptée à chaque composant.<br>
-Pour cela, nous pouvons nous aider de <a href="https://hub.docker.com/">Docker Hub</a>, un répertoire d'image pour les différents usage avec une documentation associée souvent.</p>
-<p>Une fois téléchargée, l'image peut être utilisé à travers ce genre de ligne de commande :</p>
+<p>Ainsi, l'objectif pour une application de ce genre est de créer un container à base d'une image adaptée à chaque composant. Pour cela, nous pouvons nous aider de <a href="https://hub.docker.com/">Docker Hub</a>, un répertoire d'images pour les différents usages avec une documentation associée souvent.</p>
+<p>Une fois téléchargée, l'image peut être utilisée à travers ce genre de ligne de commande :</p>
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">docker</span> run <span class="token parameter variable">-phostport:containerport</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-e</span> variable environnement 
 </code></pre>
-<p>La commande permet de créer un container à partir d'une image où  :</p>
+<p>La commande permet de créer un container à partir d'une image où :</p>
 <ul>
-<li>-p permet de faire le binding de port</li>
-<li>-d permet de détacher le shell du cycle de vie du container</li>
+<li><code>-p</code> permet de faire le binding de port.</li>
+<li><code>-d</code> permet de détacher le shell du cycle de vie du container.</li>
 </ul>
-<p>Port binding : on associe un port à un container puis le lier à un port réel de l'ordinateur.</p>
-<h3>Classique Workflow :</h3>
-<p>Le déroulement classique et simple qu'il pourrait y avoir :</p>
-<ul>
-<li>Développement en local</li>
-<li>Test en tout genre sur le projet ( compilation, test unitaire, ...)</li>
-<li>Création d'une image docker avec le projet incorporé ==&gt; Publication de l'image sur un répertoire accessible par d'autres</li>
-<li>Déploiement du l'image sur un serveur dédié avec exactement la même configuration ==&gt; Test des différentes fonctionnalités</li>
-<li>Feedback</li>
-</ul>
+<p>Le port binding consiste à associer un port à un container, puis le lier à un port réel de l'ordinateur.</p>
+<h3>Workflow classique :</h3>
+<p>Le déroulement classique et simple peut être le suivant :</p>
+<ol>
+<li>Développement en local.</li>
+<li>Tests variés sur le projet (compilation, test unitaire, etc.).</li>
+<li>Création d'une image Docker avec le projet incorporé, suivie de la publication de l'image sur un répertoire accessible par d'autres.</li>
+<li>Déploiement de l'image sur un serveur dédié avec exactement la même configuration, suivi de tests des différentes fonctionnalités.</li>
+<li>Retour d'informations (feedback).</li>
+</ol>
 <h1>Les différents concepts de Docker :</h1>
 <h2>Docker network :</h2>
-<p>Il est possible de créer un réseau fictif reliant les différents conteneurs qui peuvent héberger des éléments différents de la structure du site : Base de données, API backend, frontend, ... Cela permet de simplifier les échanges entre les différents composants du réseau et de s'abstenir de la complexité réel du réseau.</p>
+<p>Il est possible de créer un réseau fictif reliant les différents conteneurs, qui peuvent héberger des éléments différents de la structure du site : base de données, API backend, frontend, etc. Cela simplifie les échanges entre les différents composants du réseau et permet de s'abstraire de la complexité réelle du réseau.</p>
 <h2>Docker Compose :</h2>
-<p>Cela permet de gérer de multiples containers en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. `Ces différents containers forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable.<br>
-Ainsi au lieu de configurer chaque container avec des variables, des bindings de port, il devient possible de stocker la configuration voulue dans un fichier en .yaml qui réunit tout cela et l'automatise. une nouvelle image, cela permet de</p>
+<p>Docker Compose permet de gérer plusieurs conteneurs en même temps, d'automatiser leur mise en service, leur configuration et leur mise en relation. Ces différents conteneurs forment automatiquement un réseau. Les différentes manipulations sont codifiées et stockées dans un fichier facilement modifiable. Ainsi, au lieu de configurer chaque conteneur avec des variables et des bindings de port, il devient possible de stocker la configuration voulue dans un fichier .yaml qui regroupe tous ces éléments et les automatise.</p>
 <h2>Docker volume :</h2>
-<p>Les volumes sont des mémoires persistantes entre les différentes construction d'un container à partir d'une même image. Cela est essentielle si nous voulons créer une base de données par exemple. Si nous n'utilisons pas de volume, à chaque redémarrage du container à partir de l'image, les données de l'utilisation précédente ont disparus. Le volume Docker est donc un montage d'un espace du container sur un espace physique réel de l'hôte. L'espace du container renvoie directement à l'endroit en dehors du container et sur la machine, donc persistant, et cela permet de conserver les données au-delà des cycles de vie des containers.</p>
+<p>Les volumes sont des mémoires persistantes entre les différentes constructions d'un conteneur à partir d'une même image. C'est essentiel lorsque l'on souhaite créer une base de données, par exemple. Si l'on n'utilise pas de volume, à chaque redémarrage du conteneur à partir de l'image, les données de l'utilisation précédente disparaissent. Le volume Docker est donc un montage d'un espace du conteneur sur un espace physique réel de l'hôte. L'espace du conteneur renvoie directement à l'emplacement en dehors du conteneur et sur la machine, ce qui le rend persistant et permet de conserver les données au-delà des cycles de vie des conteneurs.</p>
 <h2>Automatisation et Process :</h2>
-<p>Cet ensemble de procédé et outils est donc un maillons essentiel de l'automatisation de process dans l'industrie de l'IT. Cela permet la coopération des différents employés, mettre en commun leurs modifications sur GitHub puis de créer une image avec la dernière version du produit avec sa configuration, ses dépendances grâce à un <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Jenkins">Jenkinsfile</a>, un fichier dans lequel sont notés les instructions à effectuer après chaque modification. Cela permet par exemple ensuite de déployer automatiquement la dernière version du projet sur un serveur de test pour qu'une équipe de test vérifie le bon fonctionnement de chaque élément.</p>
+<p>Cet ensemble de procédés et d'outils est un maillon essentiel de l'automatisation des processus dans l'industrie de l'IT. Il permet la collaboration entre différents employés, de mettre en commun leurs modifications sur GitHub, puis de créer une image avec la dernière version du produit, avec sa configuration et ses dépendances, grâce à un <a href="/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Jenkins">Jenkinsfile</a>, un fichier dans lequel sont notées les instructions à effectuer après chaque modification. Cela permet ensuite de déployer automatiquement la dernière version du projet sur un serveur de test, où une équipe de test vérifie le bon fonctionnement de chaque élément.</p>
 <h2>Dockerfile</h2>
-<p>Un Dockerfile est un fichier d'instructions qui permettent de créer une image avec en plus notre projet par exemple, ainsi il sera plus facilement déployé sur d'autres serveurs. Ainsi, cela permet de créer une nouvelle image personnalisé et il devient possible de la partager avec d'autres, notamment en la mettant disponible sur le Docker Hub.</p>
-<p>Vous ne me croyez pas ?  Allez donc voir <a href="https://hub.docker.com/r/hagard/frontexperisite">mon répertoire Docker hub</a></p>
+<p>Un Dockerfile est un fichier d'instructions qui permet de créer une image avec en plus notre projet, par exemple. Ainsi, il sera plus facilement déployé sur d'autres serveurs. Cela permet de créer une nouvelle image personnalisée et de la partager avec d'autres, notamment en la mettant à disposition sur le Docker Hub.</p>
+<p>Vous ne me croyez pas ? Allez donc voir <a href="https://hub.docker.com/r/hagard/frontexperisite">mon répertoire Docker Hub</a>.</p>
+<h1>Conclusion</h1>
+<ul>
+<li>La <a href="https://www.youtube.com/watch?v=3c-iBn73dDE">vidéo</a> est super, pédagogue, couvre beaucoup de sujets, test réellement et ça c'est cool !<br>
+j'aimerais maintenant plus pratiquer et jouer avec dans un POK par exemple.</li>
+<li>La <a href="https://docs.docker.com/">documentation</a> est très efficace pour le début.</li>
+<li>Le <a href="../../../2022-2023/Bilgi-Tuncay/mon/Docker.md">MON de Tuncay</a> aide bien pour commencer toutefois la vidéo permet de réellement se lancer et avoir un petit panorama.</li>
+</ul>
 
 
 </article>
