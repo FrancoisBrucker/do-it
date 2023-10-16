@@ -30,6 +30,8 @@ Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et e
 4. [Ce que j'ai fait au 2ème sprint](#section-4)
    - [Ce que j'ai finalement prévu de faire pour le 2ème sprint](#subsection-4)
    - [La RSE et le RGPD ?](#subsection-5)
+   - [Analyse RSE](#subsection-6)
+5. [Sources](#section-5)
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a>
 
@@ -94,7 +96,7 @@ Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à cr
 
 ### Ce que j'ai finalement prévu de faire pour le 2ème sprint <a id="subsection-4"></a>
 
-Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'étais pas assez précis dans ma planification et que Do_It est en fait véritablement calqué sur la gestion de projet agile.
+Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'avais pas été assez précis dans ma planification et que Do_It était en fait véritablement calqué sur la gestion de projet agile.
 Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.
 
 Après m'être posé pendant une bonne heure, j'ai établi mes objectifs de cette deuxième partie du POK :
@@ -108,27 +110,27 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
 - S'initier à la RSE [V] = 2
 - Créer un site opérationnel sur Bubble.io [] = 32
   Logo [V] = 1
-  Une page index et les autres pages qui vont avec [] = 17
+  Une page index et les autres pages qui vont avec [X] = 17 ->
 
   - Log-in, sign-in qui s'affichera avec un pop-up [V] = 5
-  - Barre de navigation [V] = 3
-  - Page de profil/paramètres [X] = 3
-  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2
-  - Page de contact [] = 1
-  - Formulaire pour donner son avis [] = 3
+  - Barre de navigation [V] = 3 -> 2
+  - Page de profil/paramètres [X] = 3 -> 2
+  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2 -> 1
+  - Page de contact [X] = 2 -> 1
+  - Formulaire pour donner son avis [X] = 3 -> 2
   - Page pour présenter la RSE [V] = 1
+  - Présenter le classement/résultat de l'analyse [] = 1 -> 8 (Utilisation de groupes répétitifs, tri des données, extraction des données, lien entre deux types de données)
 
-  Gérer la base de données [] = 13
+  Gérer la base de données de base [X] = 15 -> 8
 
-  - Gérer l'inscription des Users, leur connexion et leur déconnexion [] = 5
-  - Gérer les formulaires pour donner son avis [] = 5
-  - Gérer les demandes de prises de contact [] = 3 (Je progresserai donc la difficulté diminuera)
+  - Gérer l'inscription des Users, leur connexion et leur déconnexion [X] = 5
+  - Gérer les formulaires pour donner son avis [X] = 5 -> 2
+  - Gérer les demandes de prises de contact [X] = 5 -> 1
 
-- Analyse RSE [] = 13
-  S'imprégner des principales méthodes d'analyse [] = 2
-  Choisir une méthode et établir des critères d'évaluations [] = 2
-  Analyse d'une politique RSE, on prendra **Patagonia** [] = 8
-  La présenter sur le site [] = 1
+- Analyse RSE [X] = 8 -> 6
+  S'imprégner d'une méthode d'analyse [X] = 2
+  Choisir une méthode et établir des critères d'évaluations [X] = 2
+  Analyse d'une politique RSE, on prendra **Patagonia** [X] = 3 -> 1 (Finalement très subjectif)
 
 ### La RSE et le RGPD ? <a id="subsection-5"></a>
 
@@ -136,41 +138,38 @@ Après avoir approfondi mes recherches, je peux sereinement dire qu'effectivemen
 Les rapports étaient forcément biaisés, certains montraient qu'une partie de leurs données, tandis que d'autres mettaient en avant un axe qu'ils développaient particulièrement, sûrement pour cacher le cadavre qu'ils cachaient dans leur placard. En bref, la transparence n'était pas au goût du jour.
 
 Je me suis aussi rendu compte que la responsabilité sociale était plus large que je ne l'imaginais.
-Par exemple, la Protection et le respect de la confidentialité des données de ses clients font partie intégrante de la RSE, surtout depuis le RGPD.
+Par exemple, la protection et le respect de la confidentialité des données de ses clients font partie intégrante de la RSE, surtout depuis le RGPD.
 
-Qu'est-ce qu'une donnée personnelle ? Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable. Mais, parce qu’elles concernent des personnes, celles-ci doivent en conserver la maîtrise.
+Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
 
-Un « traitement de données personnelles » est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement). Un traitement de données doit avoir un objectif, une finalité, c’est-à-dire que vous ne pouvez pas collecter ou traiter des données personnelles simplement au cas où cela vous serait utile un jour. A chaque traitement de données doit être assigné un but, qui doit bien évidemment être légal et légitime au regard de votre activité professionnelle. Le sigle RGPD signifie « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
+> Une donnée personnelle est définie comme toute information se rapportant à une personne physique identifiée ou identifiable. Mais, parce qu’elles concernent des personnes, celles-ci doivent en conserver la maîtrise.
 
-Le contexte juridique s’adapte pour suivre les évolutions des technologies et de nos sociétés (usages accrus du numérique, développement du commerce en ligne…).
-
-Ce nouveau règlement européen s’inscrit dans la continuité de la Loi française Informatique et Libertés de 1978 et renforce le contrôle par les citoyens de l’utilisation qui peut être faite des données les concernant.
+> Un « traitement de données personnelles » est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement). Un traitement de données doit avoir un objectif, une finalité, c’est-à-dire que vous ne pouvez pas collecter ou traiter des données personnelles simplement au cas où cela vous serait utile un jour. A chaque traitement de données doit être assigné un but, qui doit bien évidemment être légal et légitime au regard de votre activité professionnelle.
 
 Il harmonise les règles en Europe en offrant un cadre juridique unique aux professionnels. Il permet de développer leurs activités numériques au sein de l’UE en se fondant sur la confiance des utilisateurs.
-En effet, le RGPD s’applique à toute organisation, publique et privée, qui traite des données personnelles pour son compte ou non, dès lors :
+En effet, le RGPD s’applique à toute organisation, publique et privée, qui traite des données personnelles pour son compte ou non, dès lors qu'elle est établie sur le territoire de l’Union européenne, ou que son activité cible directement des résidents européens.
 
-qu'elle est établie sur le territoire de l’Union européenne,
-ou que son activité cible directement des résidents européens.
+Quelques points importants du RGPD :
+
+- Consentement : Les entreprises doivent obtenir un consentement explicite des individus avant de collecter et de traiter leurs données personnelles. Les individus ont le droit de retirer leur consentement à tout moment.
+- Droits des individus : Le RGPD confère aux individus plusieurs droits, notamment le droit d'accès à leurs données personnelles, le droit de les rectifier, le droit à l'effacement (ou droit à l'oubli), le droit à la portabilité des données, et le droit de s'opposer au traitement de leurs données.
+- Responsabilité et transparence : Les entreprises sont tenues d'informer les individus sur la manière dont elles collectent, stockent et traitent leurs données personnelles. Elles doivent mettre en place des mesures de sécurité appropriées pour protéger ces données.
 
 Avec un champ d'action aussi large, je comprends mieux pourquoi la RSE est un travail qui doit être intégrée à tous les niveaux de l’activité de l’entreprise, de la production au consommateur final, et qui doit être envisagé et suivi à long terme.
 
-Certaines des dispositions les plus importantes du RGPD (Règlement Général sur la Protection des Données) incluent les suivantes :
+### Analyse RSE <a id="subsection-6"></a>
 
-Consentement : Les entreprises doivent obtenir un consentement explicite des individus avant de collecter et de traiter leurs données personnelles. Les individus ont le droit de retirer leur consentement à tout moment.
+Pour choisir les critères pour analyser la politique RSE d'une entreprise, je me suis reposé sur "GRI Universal Standards" (GRI 101, GRI 102 et GRI 103) qui représentent les pratiques à suivre en terme de développement durable et responsable d'une entreprise.
 
-Droits des individus : Le RGPD confère aux individus plusieurs droits, notamment le droit d'accès à leurs données personnelles, le droit de les rectifier, le droit à l'effacement (ou droit à l'oubli), le droit à la portabilité des données, et le droit de s'opposer au traitement de leurs données.
+Parmi les principes choisis pour guider une organisation dans leur politique d'expansion, j'ai décider d'en relever trois qui me permettront de "juger" la politique RSE de Patagonia : la clarté, la régularité et leur vision durable.
 
-Responsabilité et transparence : Les entreprises sont tenues d'informer les individus sur la manière dont elles collectent, stockent et traitent leurs données personnelles. Elles doivent mettre en place des mesures de sécurité appropriées pour protéger ces données.
+> La clarté : L'organisation doit présenter l'information de manière à ce qu'elle soit accessible, compréhensible et utilisable. Ceci peut passer par une table de matières précise, des liens ou des graphiques.
 
-Notification des violations de données : En cas de violation de données personnelles susceptible de présenter un risque pour les droits et les libertés des individus, les entreprises sont tenues d'en informer les autorités de protection des données et, dans certains cas, les individus concernés.
+> La régularité : l'organisme doit communiquer les informations à intervalles réguliers et les mettre à la disposition des utilisateurs en temps utile pour qu'ils puissent prendre des décisions.
 
-DPO (Délégué à la Protection des Données) : Certaines entreprises sont tenues de nommer un DPO, un responsable de la protection des données, chargé de veiller à la conformité au RGPD au sein de l'entreprise.
+> la vision durable : L'organisation doit fournir des informations sur ses impacts et ses objectifs dans le contexte plus large du développement durable, en s'appuyant par exemple sur des informations objectives et des mesures du développement durable faisant autorité, lorsqu'elles sont disponibles.
 
-Sanctions : Le RGPD prévoit des amendes sévères en cas de non-respect des règles, pouvant aller jusqu'à 4 % du chiffre d'affaires annuel mondial de l'entreprise ou 20 millions d'euros, selon le montant le plus élevé.
-
-Portée extraterritoriale : Le RGPD s'applique à toutes les organisations dans le monde qui traitent des données personnelles d'individus résidant dans l'Union européenne, ce qui signifie qu'il a un impact global.
-
-### Sources
+### Sources <a id="section-5"></a>
 
 [Qu'est-ce que la RSE ? - CCI](https://www.cci.fr/ressources/developpement-durable/responsabilite-sociale-rse)
 [Complément à la compréhension de la RSE - QABIS](https://qabis.eu/implementer-une-politique-rse-dans-son-entreprise-en-5-etapes/)
