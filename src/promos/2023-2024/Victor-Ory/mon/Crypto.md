@@ -40,151 +40,124 @@ Pré-requis :
 
 # Letsgo :
 
-## 1 - Trouver les bonnes sources :
+# 1 - Trouver les bonnes sources
 
-Après avoir récolté les informations du subreddit **r/cryptography**, on peut voir que les utilisateurs suivants et leur compte GitHub semblent sortir du lot d'après la communauté :
+Après avoir collecté des informations du subreddit **r/cryptography**, il est notable que certains utilisateurs et leurs comptes GitHub se démarquent au sein de la communauté :
 - [GitHub repo 1 : pFarb](https://github.com/pFarb)
 - [GitHub repo 2 : sobolevn](https://github.com/sobolevn)
 
-## 2 - À quoi ça sert ? 
+# 2 - À quoi cela sert ?
 
-La cryptographie est un outil puissant avec des limites qui a des applications dans beaucoup de technologies de communications et plus encore. Par exemple : 
-  - La signature électronique
-  - Les communications sécurisées ( HTTPS )
-  - Sécuriser du contenu sur un disque 
-  - ... 
+La cryptographie est un outil puissant aux applications variées dans de nombreuses technologies de communication, par exemple :
+- La signature électronique
+- Les communications sécurisées (HTTPS)
+- La sécurisation de données sur un disque
+- ...
 
-## Petit rappel historique : 
+## Un bref rappel historique
 
-L'encryptage existe depuis très longtemps et peut être simple.
-Une table de substitution peut être utilisée pour encrypter un message.
+L'encryption existe depuis longtemps et peut être assez simple. Une table de substitution peut être utilisée pour chiffrer un message.
 
-Tableau de substitution : 
+Table de substitution :
 
 | A | B | C | ... | Z |
-|---------------|---------------|---------------|
-|  K   | Y   | F  | ... | T |
+|---|---|---|---|---|
+| K | Y | F | ... | T |
 
+Cependant, cela est vulnérable aux attaques par fréquence, c'est-à-dire qu'il est possible de repérer la lettre qui revient le plus souvent pour en déduire les équivalences de lettres. Par la suite, des améliorations ont été apportées au fil du temps, mais même "Enigma" a été craquée.
 
-Toutefois cela est sensible à des attaques par fréquence, càd, repérer la lettre qui revient le plus souvent pour en déduire les équivalences de lettres. 
-Ensuite, il y a eu des améliorations de ce processus à travers le temps toutefois même "énigma" a pu être crackée. 
+## La partie complexe
 
-## La partie triste : 
+Comprendre ces concepts nécessite des compétences mathématiques, notamment en probabilités discrètes et en opérateurs logiques, tels que le XOR.
 
-Il faut faire des math pour comprendre les trucs là .... 
-Par exemple il va falloir faire appel aux probabilités discrètes, aux opérateurs logiques, notamment XOR. 
+## La fonction de base : XOR
 
-## La fonction de base : 
+La fonction de base est le **XOR**, qui se comporte de la manière suivante :
 
-La fonction de base est le **XOR**, elle se comporte de la manière suivante : 
+| A | B | XOR(A, B) |
+|---|---|----------|
+| 0 | 0 | 0        |
+| 0 | 1 | 1        |
+| 1 | 0 | 1        |
+| 1 | 1 | 0        |
 
-| A | B | XOR(A,B) |
-|---------------|---------------|---------------|
-|  0  | 0  | 0 | 
-|  0  | 1  | 1 | 
-|  1  | 0  | 1 | 
-|  1  | 1  | 0 | 
-
-Cette fonction, appliquée à un message, $$m$$, avec une clée, $$k$$, de longueur égale à celle du message permet de l'encrypter en un message, $$c$$. 
+Cette fonction, lorsqu'elle est appliquée à un message, noté $$m$$, avec une clé, notée $$k$$, de même longueur que le message, permet de le chiffrer en un message, noté $$c$$.
 
 | m | 0 | 1 | 0 | 0 | 1 |
 | k | 1 | 0 | 0 | 1 | 1 |
-|---------------|---------------|---------------|---------------|---------------|
+|---|---|---|---|---|---|
 | c | 1 | 1 | 0 | 1 | 0 |
 
+Ainsi, de nombreux systèmes sont des variantes de ce procédé, tels que WEP (Wi-Fi) et HTTPS. Cependant, cette technique exige que la clé soit au moins aussi longue que le message, ce qui peut être contraignant. Par conséquent, un élément essentiel de ces algorithmes est le PRG (Pseudo Random Generator), noté $$G$$, qui étend la clé $$k'$$ de 6 bits en 64 bits comme suit : $$G(k') = k$$.
 
+## Le chiffrement par blocs
 
-Ainsi, beaucoup de systèmes sont des déclinaisons de ce procédé comme par exemple WEP(wifi), HTTPS.
-Toutefois, cette technique requiert que la clé soit de longueur au moins égale à celle du message ==> C'est chiant  ! 
-Par conséquent un élément essentiels de ces algorithmes est le PRG ou Pseudo Random Generator, G, qui étends la clé k' de 6 bits en 64 bits comme ceci : $$G(k') = k $$ 
+Ensuite, le cours porte sur une autre technique de chiffrement, ici en bloc cipher, avec une complexité  et des pré-requis mathématiques croissantes. 
 
-## Le block Sipher :
+# Conclusion de ce cours théorique (abandonné après 4 heures)
 
-Cette technique s'appui sur une clé, $$k$$, qui va être divisé en n, étapes pour appliquer au message, m, n encryptages successifs. 
+La cryptographie est fortement ancrée dans les mathématiques, ce qui peut dérouter. Cependant, elle est essentielle pour comprendre les pratiques liées à ces techniques.
 
-# Conclusion de ce cours théorique abandonné au bout de 4H 
+# Transition vers l'étude de la cryptographie en tant qu'outil
 
-C'est vachement mathématique et je pense que ce n'est pas exactement ce à quoi je voulais me confronter, c'était purement technique et peu informatif sur les pratiques liées à ces techniques. 
+## Souveraineté
 
-
-# Shift du sujet vers l'étude de la cryptographie vu comme un objet ou un outil : 
-
-## Souveraineté 
-
-Pour cela, je me suis basé sur les articles suivants dans un premier temps :
-
+Pour cela, je me suis appuyé sur les articles suivants dans un premier temps :
 - [La cryptographie, socle de la souveraineté numérique](https://www-cairn-info.lama.univ-amu.fr/revue-defense-nationale-2022-10-page-59.htm)
 
-Ainsi on comprend que la cryptographie permet de répondre à plusieurs contraintes :
+Ainsi, nous comprenons que la cryptographie répond à plusieurs contraintes essentielles :
+- La confidentialité des données, où seules les personnes concernées doivent pouvoir les lire.
+- L'intégrité des données, qui ne doivent pas être modifiables, un aspect crucial dans le secteur bancaire.
+- L'authentification.
+- La preuve de non-rejeu.
+- L'horodatage aveugle.
+- L'écosystème des cryptomonnaies.
+- La sécurisation d'un vote.
 
-- confidentialité des données, seul la personne concernées doit pouvoir les lire,
-- intégrité, les données ne sont pas modifiables, important dans le secteur bancaire,
-- authentification,
-- preuve de non re-jeu,
-- horodatage aveugle,
-- l'éco-système des cryptomonnaies, 
-- sécurisation d'un vote ,
+J'ai particulièrement espoir dans ces techniques pour protéger notre vie privée. Des chercheurs travaillent sur des méthodes permettant de transmettre une requête cryptée à un moteur de recherche, indiscernable par Google, par exemple, mais toujours traitable. Ainsi, Google ne perdrait aucune fonction tout en étant incapable de savoir ce que vous avez recherché.
 
-J'ai particulièrement d'espoir en ces techniques pour protéger notre privée, ainsi des chercheurs travaillent sur des méthodes permettant de transmettre à un moteur de recherche une requête, cryptée, indiscernable par Google par exemple mais traitable. Ainsi Google ne perdrai aucune fonction mais ne serait plus capable de savoir ce vous avez recherché.
+La maîtrise de la cryptologie est donc un enjeu majeur pour le secteur diplomatique et du renseignement. L'algorithme actuellement le plus utilisé est l'AES (Advanced Encryption Standard). Pour déterminer si un algorithme de chiffrement est fiable, il est nécessaire qu'il soit public et soumis à une revue par les pairs pour garantir l'absence de backdoor. Une autre option est de créer un algorithme secret.
 
-La maîtrise de la cryptologie est donc un enjeu majeur pour le secteur diplomatique et du renseignement. L'algorithme actuellement le plus utilisé et l'AES (Advanced Encryption Standard). Pour déterminer si un algorithme d'encryptage est bon il est nécessaire qu'il soit publique et peer-reviewed pour prouver l'absence de backdoor, ou bien créer soit même un algorithme secret. 
+Pour l'évaluer, il est important que les données soient hautement confidentielles. Cependant, la vitesse de chiffrement est également essentielle pour les procédures de communication.
 
-Pour l'évaluer, il est important que les données soit très confidentiel toutefois la vitesse d'encryptage est aussi essentiel pour un procédé de communication. 
+La France dispose de compétences importantes dans le domaine de la recherche cryptographique, notamment grâce à ses laboratoires qui utilisent déjà des techniques d'ordinateur quantique. Cependant, le pays reste dépendant des États-Unis, qui ont déjà montré leur capacité à vendre des modèles avec des backdoors.
 
-La France a des compétences importantes dans le domaine de la recherche cryptographique avec notamment ses laboratoires utilisant déjà les techniques d'ordinateur quantique. Toutefois, nous restons à la merci des ricains qui ont déjà montré leur capacité à vendre des modèles avec des backdoors. 
+## Géopolitique des données, la datasphère
 
+Pour cette étude, j'ai parcouru la revue [Hérodote](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2.htm) dédiée au sujet, comprenant de nombreux articles, dont :
+[Du cyberespace à la datasphère. Enjeux stratégiques de la révolution numérique](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-3.htm)
 
-### Géopolitique des données, la datasphère : 
+*Cet article fournit une bonne introduction*.
 
-Pour cette étude, j'ai parcourue la revue [Hérodote](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2.htm) dédiée au sujet avec de multiples articles : 
+Le postulat de base est que plus il y a de capteurs, plus il y a de données, ce qui conduit à une analyse en masse. Cela a transformé le monde en changeant les acteurs, les outils et les processus.
 
-- [Du cyberespace à la datasphère. Enjeux stratégiques de la révolution numérique](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-3.htm)
+*Qu'est-ce que la datasphère ?* 
+La datasphère est une nouvelle ère géologique caractérisée par l'impact décisif des activités humaines sur l'écosystème terrestre, notamment en lien avec le changement climatique. Cela diffère du cyberespace, décrit dans cet article comme un espace de menace pour la sécurité nationale, un "territoire" à maîtriser et une priorité stratégique.
 
-{note}
-Bon article d'introduction
-{endnote}
+La difficulté réside dans la définition de ces espaces, de leurs intersections et de leurs acteurs parmi la multiplicité des dimensions (physiques avec les câbles sous-marins, production de logiciels, stockage des données, ...).
 
-Postulat de base : + capteur, ++ données, Big Data ==> Big Analyse, ça a changé le monde : les acteurs, les outils et les processus.
+Un enjeu crucial est l'utilisation de ces technologies de l'information pour influencer les masses. Nous sommes vulnérables aux manipulations politiques via les médias sociaux sur Internet (cf. Cambridge Analytica) avec des innovations importantes.
 
-{% info %}
-Qu'est ce que la **datasphère** ? 
+Ensuite, la souveraineté est également remise en question à travers le cloud computing, ainsi que la 5G, initialement un enjeu économique devenu stratégique. Cela devient un élément essentiel de la stratégie de puissance de pays tels qu'Estonie, Israël, Chine et Russie, qui investissent massivement.
 
-"désigne une nouvelle ère géologique caractérisée par l’incidence déterminante des activités humaines sur l’écosystème terrestre, à l’origine notamment du changement climatique." d'après « La sphère des données et le droit : nouvel espace, nouveaux rapports aux territoires », de Jean-Sylvestre Bergé.
+## Focus sur le Cloud Computing et ses implications politiques
 
-Cela diffère du cyber-espace, décrit dans cet article comme : "un espace de menace à la sécurité nationale, un « territoire » à maîtriser et une priorité stratégique"
+[Le cloud computing : de l'objet technique à l'enjeu géopolitique. Le cas de la France](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-149.htm)
 
-{% endinfo %}
+*Cet article offre une analyse approfondie de la politique du cloud français, notamment les causes de son échec*.
 
-Ainsi la difficulté est de définir ces espaces, leurs intersections et leurs acteurs parmi la multiplicité des dimensions ( physique avec les câbles sous-marins, production de software, stockage des données, ...).
+Initialement, l'enjeu du cloud était économique, mais rapidement, la question de la sécurité des données s'est imposée, en particulier après la crise de 2008, lorsque la mondialisation a été remise en question. Les critères de confidentialité, d'intégrité et de disponibilité des données ont imposé cette dimension politique et d'intelligence économique.
 
-Un enjeu est l'utilisation des ces technologies d'information pour influencer des masses : Nous sommes vulnérables à des manipulations politiques par les médias sociaux sur internet (cf Cambridge Analytica) avec des innovations importante. 
+La France a tenté de lancer un projet de Cloud Souverain Andromède avec Thales, Orange et Dassault dans le cadre de sa stratégie numérique. Cependant, ce projet a échoué en raison de l'incompétence des décideurs politiques et a nui aux constructeurs français dans cette compétition internationale.
 
-Ensuite, la souveraineté est aussi questionné à travers le **cloud computing¨**, mais aussi de la **5G** un enjeu au début économique et maintenant stratégique.
-Et cela, devient un élément essentiel de la stratégie de puissance des pays comme le montre le comportement de l'Estonie, l'Israël, la Chine et la Russie en investissant.
+Après quelques années et les révélations d'Edward Snowden, l'idée de relancer ce cloud souverain est revenue en 2015, avec l'implication d'acteurs plus spécialisés dans le cloud, notamment OVH. Cependant, cette initiative est restée en arrière-plan jusqu'en 2018, date à laquelle elle est devenue un élément essentiel de la modernisation des processus de l'État.
 
-### Focus sur le Cloud Computing et ses implications politique :
+*Définition de l'article* : Le cloud privé garantit la restriction de l’accès aux données grâce à l’isolation de l’infrastructure. Le cloud public offre davantage de flexibilité et de facilité d'utilisation, mais son infrastructure est disponible au grand public et est hébergée dans les locaux du fournisseur de services. Un déploiement hybride combine les avantages des deux modèles pour adapter la solution choisie au type de données hébergées et à leur niveau de sensibilité.
 
-[Le cloud computing : de l’objet technique à l’enjeu géopolitique. Le cas de la France](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-149.htm)
+Ensuite, le CLOUD ACT, mis en place par l'administration de Trump, a rendu possible l'utilisation des données stockées par les fournisseurs de cloud américains sous couvert de mandat. Cela remet en question l'utilisation d'AWS, Azure par l'administration française et ses entreprises. Cette situation a donné de l'élan à l'idée d'un cloud national stratégique.
 
-{% faire %}
-Un article qui va plus en profondeur du déroulé politique du cloud français et analyse vite fait les causes d'échec. 
-{% endfaire %}
+## La transformation numérique du ministère des Armées
 
-De base l'enjeu du cloud est économique, toutefois très vite la question de la sécurité des données s'est invitée. Ce shift dimenssionelle s'opère à partir de la crise de 2008 où la mondialisation est remise ne question.
-Ainsi les critères de la confidentialité, de l’intégrité et de la disponibilité des données mettent en perspective imposent cette dimension politique et d'intelligence économique.
-La France a tenté de lancer un projet de Cloud Souverain Andromède avec Thalès, Orange et Dassault dans le cadre de sa stratégie numérique. Toutefois ce projet fut un échec par incompétences des décideurs politiques et a nui au constructeurs français dans cette compétition internationale.
-Après qqs années, en sorti de crise et après les révélations d'Edward Snowden, la volonté de relancer ce cloud souverain revient en 2015 avec d'autres acteurs plus spécialisé dans le cloud, notamment OVH. Toutefois, cela reste en second plan jusqu'en 2018, où il devient un élément essentiel à la modernisation des processus de l'État. 
-{% faire "Définition de l'article"%}
-Le cloud privé garantit la restriction de l’accès aux données grâce à l’isolation de l’infrastructure. Le cloud public permet davantage de flexibilité et de facilité d’usage mais son infrastructure, même si elle comporte de solides cloisonnements, est à disposition du grand public et est hébergée dans les locaux du fournisseur de services. Un déploiement hybride conjugue les avantages des deux modèles en permettant d’adapter la solution retenue au type de données hébergées et à leur niveau de sensibilité.
-{% endfaire %}
+*Cet article aborde davantage la politique que les aspects techniques, mais il répète en partie les articles précédents*.
 
-Ensuite le CLOUD ACT, fait par l'administration de Trump, rend possible l'utilisation des données stockées par les fournisseurs de Cloud américains sous couvert de mandat. Cela remet fort en question l'utilisation de AWS, Azure par l'administration française et ses entreprises. Et cela efface les débats sur l'utilité d'un projet de cloud publique et se concrétise avec le cloud national stratégique.
-
-## [La transformation numérique du ministère des Armées](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-165.htm)
-
-
-{% faire %}
-Un article dans la technique politique et pas la technique technique, se répète un peu avec les articles précédents, pas ouf
-{% endfaire %}
-
-Toujours dans cet environnement de révolution digitale, l'Armée a donc eu l'ambition dès 2008 de s'intéresser à :  l’Internet des objets, l’intelligence artificielle ou au big data. La gestion de données c'est important, on utilise des méthodes agiles et pas grand choses de plus. 
+Dans cet environnement de révolution numérique, l'Armée a rapidement compris l'importance de l'Internet des objets, de l'intelligence artificielle et du big data dès 2008. La gestion des données est cruciale, et l'Armée utilise des méthodes agiles pour s'adapter à ces nouvelles technologies.

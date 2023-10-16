@@ -25,6 +25,7 @@ tags:
 {%details "Les ressources"%}
 
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
+- [Documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html)
 - [Rust by Practise](https://practice.rs/why-exercise.html)
 - [GitHub Exercice](https://github.com/rust-lang/rustlings)
 - [Livre "From Javascript to Rust"](https://github.com/wasmflow/node-to-rust/raw/HEAD/from-javascript-to-rust.pdf)
@@ -48,15 +49,28 @@ Donc je vais essayer d'en apprendre les fondements et de tester mes compétences
   - Ownership / Borrowship;
   - ...
   
-Cette partie se verra représentée par ma progression au sein du projet [Rustlings Exercice Repo](https://github.com/rust-lang/rustlings) avec 96 exercices de plus en plus dur abordant les différents concepts clés au langage.
 
-Pour le moment : Progress: [>-----------------------------------------------------------] 1/96 (1.0 %)
-Objectif : Progress: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 96/96 (100 %)
+## Objectif initial
 
-Puis j'aimerais effectuer le projet proposé par la documentation Rust [Projet : Command line](https://doc.rust-lang.org/book/ch12-00-an-io-project.html)
+Mon premier objectif est d'acquérir une compréhension solide des concepts de base de Rust, notamment :
 
-## Confrontation avec la réalité :
+- Les variables
+- Les itérateurs
+- Les pointeurs intelligents
+- La gestion de la propriété et des emprunts (ownership/borrowship)
 
-# Prévision pour le point 2 :
+Je vais suivre mon progrès en accomplissant les 96 exercices progressivement plus complexes du référentiel [Rustlings](https://github.com/rust-lang/rustlings), qui couvrent ces concepts essentiels. Actuellement, j'en suis à la première étape de progression : [>-----------------------------------------------------------] 1/96 (1.0 %), mais j'ai pour objectif d'atteindre 100 %.
 
-## Confrontation avec la réalité : 
+Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet proposé dans la documentation Rust, à savoir [Projet : Gestionnaire de lignes de commande](https://doc.rust-lang.org/book/ch12-00-an-io-project.html).
+
+### Réalité du parcours
+
+J'ai réussi à lire l'intégralité de la [documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html), où les concepts clés ont été expliqués. Toutefois, pour consolider ces connaissances, j'ai dû réaliser des exercices supplémentaires proposés par [Rust By Practice](https://practice.rs/why-exercise.html). Mon défi personnel a été d'autant plus grand car mes bases en C++ étaient limitées, étant donné que ma formation initiale dans ce domaine remonte à un certain temps.
+
+Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui reproduit le comportement de "grep", c'est-à-dire un outil qui filtre la sortie d'une commande exécutée dans l'invite de commandes.
+
+Mon travail est accessible dans ce [repo](https://github.com/Hagarde/CmdLineProject).
+
+## Objectif en cours
+
+Dans la prochaine phase de mon parcours d'apprentissage, je vais me concentrer sur...
