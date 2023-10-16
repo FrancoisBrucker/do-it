@@ -46,7 +46,7 @@ Pour la réalisation de ce premier POK, j'aimerai utiliser les connaissances que
 - Faire le lien entre les pages et les fonctionnalités [non]
 
 **Sujet et fonctionnaliés de l'application :**
-Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieures montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre
+Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieurs montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre
 
 Fonctionnalités nécessaires :
 
@@ -83,9 +83,10 @@ Les objectifs techniques du sprint 2 sont :
 2. Terminer la page d'accueil, les différentes pages et la structure [ok]
 3. Commencer les liens entre les pages et les fonctionnalités [ok]
 
-### Développement de LaBonneMontre
+### Design de LaBonneMontre
 
- Pour ce sprint 2, j'ai terminé ma formation à bubble puis j'ai commencé par faire le design de la page principale.
+ Pour ce sprint 2, j'ai terminé ma formation à bubble puis j'ai commencé par faire le design de l'application web.
+- Desigh de la page principale.
  J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.
 ![bubble](screen_pok1.png)
 Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.
@@ -93,11 +94,29 @@ Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de
 J'ai ajouté deux boutons cliquables pour se connecter/enregistrer. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat final suivant : (en terme de design)
 ![bubble](screen_accueil.png)
 
+- Design de la page listant les montres : 
+![bubble](screen_liste_montre.png)
+
 #### Donner suite aux boutons cliquables
 
-Sur ma page principale, j'ai actuellement 4 boutons cliquables (sign up, log in et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up. 
-Pour cela, j'ai ajouté deux nouvelles pages, en commençant par le design : **index > create a new page > name new page > create** 
+Sur ma page principale, j'ai actuellement 5 boutons cliquables (sign up, log in, icone personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up.
 
-Pour la page sign, Bubble propose un composant déjà prêt que j'ai utilisé :
+* **Log In** j'ai décidé que le bouton log in afficherai un *popup*, cela donne le résultat suivant:
+![bubble](screen_login.png)
+* **Icon personnel** renvoie quant à lui un menu déroulant qui permettra d'accéder à son profil, ses favoris, son panier, donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter
+![bubble](screen_menu.png)
+
+* Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
 ![bubble](scree_signup.png)
 Ce composant est pratique mais pas très esthétique.
+
+Pour cela, j'ai ajouté deux nouvelles pages, en commençant par le design : **index > create a new page > name new page > create**
+
+![bubble](screen_liste_montre2.png)
+![bubble](screen_trouver_montre.png)
+![bubble](screen_signup_t.png)
+![bubble](screen_accueil_t.png)
+![bubble](screen_profil_user.png)
+![bubble](screen_builder_profil.png)
+![bubble](screen_formulaire_vendre.png)
+![bubble](scree_felicitations.png)
