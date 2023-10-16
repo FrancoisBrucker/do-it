@@ -31,6 +31,7 @@ Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et e
    - [Ce que j'ai finalement prévu de faire pour le 2ème sprint](#subsection-4)
    - [La RSE et le RGPD ?](#subsection-5)
    - [Analyse RSE](#subsection-6)
+5. [Sources](#section-5)
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a>
 
@@ -109,27 +110,27 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
 - S'initier à la RSE [V] = 2
 - Créer un site opérationnel sur Bubble.io [] = 32
   Logo [V] = 1
-  Une page index et les autres pages qui vont avec [] = 17
+  Une page index et les autres pages qui vont avec [X] = 17 ->
 
   - Log-in, sign-in qui s'affichera avec un pop-up [V] = 5
-  - Barre de navigation [V] = 3
-  - Page de profil/paramètres [X] = 3
-  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2
-  - Page de contact [] = 2
-  - Formulaire pour donner son avis [X] = 3
+  - Barre de navigation [V] = 3 -> 2
+  - Page de profil/paramètres [X] = 3 -> 2
+  - Réfléchir à un endroit approprié pour un bouton déconnexion et le créer [X] = 2 -> 1
+  - Page de contact [X] = 2 -> 1
+  - Formulaire pour donner son avis [X] = 3 -> 2
   - Page pour présenter la RSE [V] = 1
+  - Présenter le classement/résultat de l'analyse [] = 1 -> 8 (Utilisation de groupes répétitifs, tri des données, extraction des données, lien entre deux types de données)
 
-  Gérer la base de données [] = 15
+  Gérer la base de données de base [X] = 15 -> 8
 
   - Gérer l'inscription des Users, leur connexion et leur déconnexion [X] = 5
-  - Gérer les formulaires pour donner son avis [X] = 5
-  - Gérer les demandes de prises de contact [] = 5
+  - Gérer les formulaires pour donner son avis [X] = 5 -> 2
+  - Gérer les demandes de prises de contact [X] = 5 -> 1
 
-- Analyse RSE [] = 8
+- Analyse RSE [X] = 8 -> 6
   S'imprégner d'une méthode d'analyse [X] = 2
   Choisir une méthode et établir des critères d'évaluations [X] = 2
-  Analyse d'une politique RSE, on prendra **Patagonia** [] = 3
-  La présenter sur le site [] = 1
+  Analyse d'une politique RSE, on prendra **Patagonia** [X] = 3 -> 1 (Finalement très subjectif)
 
 ### La RSE et le RGPD ? <a id="subsection-5"></a>
 
@@ -168,7 +169,7 @@ Parmi les principes choisis pour guider une organisation dans leur politique d'e
 
 > la vision durable : L'organisation doit fournir des informations sur ses impacts et ses objectifs dans le contexte plus large du développement durable, en s'appuyant par exemple sur des informations objectives et des mesures du développement durable faisant autorité, lorsqu'elles sont disponibles.
 
-### Sources
+### Sources <a id="section-5"></a>
 
 [Qu'est-ce que la RSE ? - CCI](https://www.cci.fr/ressources/developpement-durable/responsabilite-sociale-rse)
 [Complément à la compréhension de la RSE - QABIS](https://qabis.eu/implementer-une-politique-rse-dans-son-entreprise-en-5-etapes/)
