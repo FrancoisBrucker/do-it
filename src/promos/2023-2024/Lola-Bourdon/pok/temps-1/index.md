@@ -14,7 +14,7 @@ résumé: Ce premier POK a pour but de créer une application web qui permettrai
 
 ---
 
-{%prerequis 'Niveau débutant'%}  
+{%prerequis 'Connaitre les bases de Bubble'%}  
 {%endprerequis%}
 
 ### Objectif : créer une application avec bubble.io/
@@ -74,3 +74,30 @@ Maintenant que ce POK est plus clair, je dois :
 2. Terminer de me former à bubble.io/
 3. Terminer la page d'accueil, les différentes pages et la structure
 4. Commencer les liens entre les pages et les fonctionnalités
+
+## Sprint 2
+
+Les objectifs techniques du sprint 2 sont :
+
+1. Terminer de me former à bubble.io/ [ok]
+2. Terminer la page d'accueil, les différentes pages et la structure [ok]
+3. Commencer les liens entre les pages et les fonctionnalités [ok]
+
+### Développement de LaBonneMontre
+
+ Pour ce sprint 2, j'ai terminé ma formation à bubble puis j'ai commencé par faire le design de la page principale.
+ J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.
+![bubble](screen_pok1.png)
+Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.
+![bubble](screen_pok2.png)
+J'ai ajouté deux boutons cliquables pour se connecter/enregistrer. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat final suivant : (en terme de design)
+![bubble](screen_accueil.png)
+
+#### Donner suite aux boutons cliquables
+
+Sur ma page principale, j'ai actuellement 4 boutons cliquables (sign up, log in et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up. 
+Pour cela, j'ai ajouté deux nouvelles pages, en commençant par le design : **index > create a new page > name new page > create** 
+
+Pour la page sign, Bubble propose un composant déjà prêt que j'ai utilisé :
+![bubble](scree_signup.png)
+Ce composant est pratique mais pas très esthétique.

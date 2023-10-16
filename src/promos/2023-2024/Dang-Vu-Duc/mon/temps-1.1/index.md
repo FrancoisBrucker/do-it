@@ -13,6 +13,14 @@ tags:
 résumé: "Ce MON aura pour objectif de s'initier à Qt avec Python. Cet outil permet de créer des interfaces graphiques avec Python, et sera utile pour mon POK du temps 1."
 ---
 
+{%prerequis 'Prérequis'%}
+Connaissance basique de la programmation objet avec Python.
+{%endprerequis%}
+
+{% note %}
+Tout les codes présentés ci-dessous sont disponibles dans le dossier Github de Do-It: [Codes du MON1.1](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.1)
+{% endnote %}
+
 ## Introduction
 
 Qt est une interface de programmation d'application (API) orientée objet pour développer des interfaces graphiques en C++. Dans ce MON, nous allons utiliser Python pour exploiter cet API, grâce au projet *Qt for Python*. L'installation se fait rapidement en rentrant la ligne de commande suivante sur un terminal:

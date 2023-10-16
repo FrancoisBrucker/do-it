@@ -198,7 +198,18 @@ Maintenant j'ai envie de rendre mes données plus interprétables pour des perso
 <div><div stype="display:flex"><img src="fglobale.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
 <div stype="display:flex"><img src="fparannées.png"></div>
 
+Grâce à ces visualisations on peut remarquer qu'il y a une une augmentation significative de la fréquentation des musées entre l'année 2012 et 2013 : elle a quasiment triplé ! J'ai voulu me renseigner pour savoir à quoi cela était dû et j'ai trouveé cet article du Figaro [Musées : un millésime 2013 riche en fréquentation]("https://www.lefigaro.fr/arts-expositions/2014/01/02/03015-20140102ARTFIG00383-musees-un-millesime-2013-riche-en-frequentation"). L'article parle d'une hausse de fréquentation dans toute la France et pas que dans les Bouches-Du-Rhônes. Un événément qui a sûrement permis de faire grimper les fréquentations cette année là c'est l'inauguration du MuCem à Marseille le 4 juin 2013. Comme le montre ce graphique, le MuCem était le musée le plus fréquenté cette année là et de loin:
+<div stype="display:flex"><img src="f2013.png"></div>
+Il représente à lui tout seul 51,64% des fréquentations de l'année.
 
+On peut aussi constater l'impact de la crise du COVID qui a engendré une brutale chute des fréquentations des musées à partir de 2020.
+
+J'ai aussi voulu comprendre le pic de 2006. Et voilà le graphique de cette année là :
+<div stype="display:flex"><img src="f2006.png"></div>
+Le <strong>Musée Granet</strong> a été réouvert cette année là après sa rénovation et son agrandissement ce qui a engendré une hausse significative des fréquentations. 
+
+## 7. Pour aller plus loin
+Après avoir réaliser l'application sur la fréquentation des musées j'ai voulu voir ce qui était possible de réaliser en allant plus loin dans l'utilisation d'Excel. Pour ce faire je me suis appuyée sur la ressource de [Zeste de savoir]("https://zestedesavoir.com/tutoriels/pdf/601/analysez-des-donnees-avec-excel.pdf") et plus particulièrement sur la partie <strong>Analyse des données et dynamisme du classeur</strong>. Je suis repassée très rapidement sur tout ce que j'avais déjà vu pour m'attarder sur une nouveauté : *les tableaux dynamiques croisés*.
 
 ### Horodateur 
 | Date | Heures passées | Indications | 
@@ -208,4 +219,6 @@ Maintenant j'ai envie de rendre mes données plus interprétables pour des perso
 | Vendredi 29/09 | 1H | Dénombrement, minimum, maximum |
 | Mardi  03/10 | 2H | Recherche d'une base de données à traiter et début de l'application |
 | Mercredi 04/10 | 2H | Application sur les fréquentations des musées |
+| Mercredi 11/10 | 1H | Application sur les fréquentations des musées |
+| Jeudi 12/10 | 1H | Pour aller plus loin |
 

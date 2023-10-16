@@ -15,12 +15,10 @@ Ensemble des MON réalisés par Victor ORY
 
 ### Temps 1
 
-- [Cryptographie](./Crypto) 
-  
 - [Docker](./Docker) 
+-  [Cryptographie](./Crypto) 
 
-### Autres MONs envisagés : 
+### Autres MONs envisagés :
 
-- Management des risques cyber 
-- OSINT 
-- 
+- Management des risques cyber
+- OSINT
