@@ -65,11 +65,12 @@ Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet propos
 
 ### Réalité du parcours
 
-J'ai réussi à lire l'intégralité de la [documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html), où les concepts clés ont été expliqués. Toutefois, pour consolider ces connaissances, j'ai dû réaliser des exercices supplémentaires proposés par [Rust By Practice](https://practice.rs/why-exercise.html). Mon défi personnel a été d'autant plus grand car mes bases en C++ étaient limitées, étant donné que ma formation initiale dans ce domaine remonte à un certain temps.
+J'ai réussi à lire l'intégralité de la [documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html), où les concepts clés ont été expliqués. Toutefois, pour consolider ces connaissances, j'ai dû réaliser des exercices supplémentaires proposés par [Rust By Practice](https://practice.rs/why-exercise.html). Mon défi personnel a été d'autant plus grand car mes bases en C++ sont limitées, étant donné que ma formation initiale dans ce domaine remonte à un certain temps.
 
 Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui reproduit le comportement de "grep", c'est-à-dire un outil qui filtre la sortie d'une commande exécutée dans l'invite de commandes.
 
 Mon travail est accessible dans ce [repo](https://github.com/Hagarde/CmdLineProject).
+Ce projet repose sur le [tutoriel](https://doc.rust-lang.org/book/ch12-00-an-io-project.html) proposé par le livre, toutefois j'ai souhaité commencer avec puis ajouter de la complexité sans suivre le tutoriel pour réellement confronter mes connaissances à la réalité.
 
 ## Objectif en cours
 
