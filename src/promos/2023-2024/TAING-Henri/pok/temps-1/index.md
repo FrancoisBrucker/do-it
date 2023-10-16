@@ -31,7 +31,8 @@ Avoir un cerveau à moitié allumé et avoir fait la formation no/low code (et e
    - [Ce que j'ai finalement prévu de faire pour le 2ème sprint](#subsection-4)
    - [La RSE et le RGPD ?](#subsection-5)
    - [Analyse RSE](#subsection-6)
-5. [Sources](#section-5)
+5. [Conclusion](#section-5)
+6. [Sources](#section-6)
 
 ## Ce que j'ai prévu pour le 1er point POK (6h) : limiter la portée <a id="section-1"></a>
 
@@ -81,7 +82,8 @@ J'ai fait le choix d'utiliser Bubble.io pour construire ma plateforme. Après l'
 
 Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à créer les pages de base, l'accueil et la connexion/l'inscription, et la page contacts. Elles sont plus ou moins achevées. Il va falloir prendre en vitesse sur le deuxième sprint.
 
-![](index.jpg) ![](signin.jpg){ width=50% }
+![](index.jpg)
+![](signin.jpg){ width=50% }
 
 ## Ce que j'ai prévu pour le second point POK (14h) <a id="section-3"></a>
 
@@ -99,7 +101,7 @@ Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à cr
 Après la formation sur l'agilité d'Oresys, je me suis rendu compte que je n'avais pas été assez précis dans ma planification et que Do_It était en fait véritablement calqué sur la gestion de projet agile.
 Pour le prochain POK, je ferai donc l'effort que je fais maintenant de définition, de cadrage dès le début du premier sprint et ça, de manière sérieuse et détaillée.
 
-Après m'être posé pendant une bonne heure, j'ai établi mes objectifs de cette deuxième partie du POK :
+Après m'être posé pendant une bonne heure, j'ai établi plus clairement mes objectifs de cette deuxième partie du POK :
 
 - En apprendre plus sur ce qu'était la RSE,
 - Apprendre à créer un site plus que fonctionnel à l'aide d'un outil no/low code, ici Bubble.io,
@@ -130,7 +132,7 @@ Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la s
 - Analyse RSE [X] = 8 -> 6
   S'imprégner d'une méthode d'analyse [X] = 2
   Choisir une méthode et établir des critères d'évaluations [X] = 2
-  Analyse d'une politique RSE, on prendra **Patagonia** [X] = 3 -> 1 (Finalement très subjectif)
+  Analyse d'une politique RSE, on prendra **Patagonia** [X] = 3 -> 1 (Finalement très subjectif, un peu déçu sur ce point)
 
 ### La RSE et le RGPD ? <a id="subsection-5"></a>
 
@@ -169,7 +171,60 @@ Parmi les principes choisis pour guider une organisation dans leur politique d'e
 
 > la vision durable : L'organisation doit fournir des informations sur ses impacts et ses objectifs dans le contexte plus large du développement durable, en s'appuyant par exemple sur des informations objectives et des mesures du développement durable faisant autorité, lorsqu'elles sont disponibles.
 
-### Sources <a id="section-5"></a>
+Malheureusement, ce jugement reste très subjectif. Pour pouvoir être objectif, il aurait fallu comparer avec d'autres entreprises qui auraient une quantité d'informations équivalente et de même qualité, ce que je n'ai pas eu le temps de faire.
+
+### Bubble.io et les fonctionnalités que j'ai réussi à implémenter
+
+- La base de données
+  ![La base de données](datatypes.png)
+
+- Inscription/Connexion
+  :-------------------------:|:-------------------------:
+  <img src="inscription.png" width="350" height="350"> | <img src="workflowindex.png" width="350" height="350">
+
+  Dans la base de données, on obtient alors :
+  ![Users dans la base de données](userpouletfrit.png)
+
+- Dashboard/Déconnexion
+  <img src="dashboard.png" alt="drawing1" width="500"/>
+
+- Contact
+  <img src="contact.png" alt="drawing2" width="500"/>
+
+  Dans la base de données, on a :
+  ![Les fiches de contact dans la base de données](datacontact.png){width = 120%}
+
+- Formulaire pour donner son avis
+  ![Avis](avis.png)
+
+  Dans la base de données, on a alors :
+  ![Les formulaires dans la base de données](dataformulaire.png){width = 120%}
+
+- Pour présenter les résultats sous la forme d'un classement, je voulais utiliser la fonctionnalité "Repeating groups".
+  Les étapes à effectuer auraient été :
+
+1. Récupérer les données des formulaires > "Search for"
+2. Faire la moyenne des notes attribuées > "Calculate formula" ou faire directement le calcul dans "Value"
+3. Vérifier si l'entreprise existe déjà dans la base de données, si oui, il suffit de mettre à jour sa note moyenne > Condition sur le nom de l'entreprise avec "Only when", puis ???
+4. Classer les entreprises par leurs notes > "Sort by" dans "Repeating groups"
+5. Les afficher dans "Repeating groups".
+   Je suis donc resté bloqué ici...
+   :-------------------------:|:-------------------------:
+   <img src="classement.png" width="350" height="350"> | <img src="workflowformulaire.png" width="350" height="350">
+
+## Conclusion <a id="section-5"></a>
+
+Je suis plutôt déçu du résultat. Je ne m'attendais pas forcément à avoir quelque chose de bien concluant vu l'ambition du projet, mais je pensais avoir le temps de faire plus, surtout du côté de Bubble.
+Ne pas avoir réussi à lier les deux types de données et présenter ma base de données proprement me laisse un mauvais arrière-goût sur la langue.
+De même pour le système d'avis, j'avais pour idée d'imiter le concept de glassdoor où chacun laisse son avis sur sa boîte. Mais quand il s'agit de la politique RSE, qui peut dire assurément qu'il est capable de donner un avis éduqué sur la question ?
+
+Ce que je retiens de ce POK :
+
+- La RSE est un domaine très large, beaucoup trop large,
+- Bubble est une bonne option de créer une maquette/prototype, mais je ne l'utiliserais pas pour créer un produit fini pour un client
+- Le back/gestion des serveurs/base de donnnées n'est vraiment pas pour moi...
+
+## Sources <a id="section-6"></a>
 
 [Qu'est-ce que la RSE ? - CCI](https://www.cci.fr/ressources/developpement-durable/responsabilite-sociale-rse)
 [Complément à la compréhension de la RSE - QABIS](https://qabis.eu/implementer-une-politique-rse-dans-son-entreprise-en-5-etapes/)
