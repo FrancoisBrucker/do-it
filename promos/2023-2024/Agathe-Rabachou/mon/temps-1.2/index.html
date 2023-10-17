@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POO</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">débutant</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON pour revoir et approfondir les bases de la programmation orientée objet
+                Ce MON a pour but de m'initier aux bases de la programmation orientée objet et de l'appliquer à des exemples simples en Python
 
         </p>
 
@@ -125,6 +137,96 @@
 
 
 
+<h2>1. Introduction</h2>
+<p>La programmation orientée objet (abrégée POO) est un modèle qui a pour but de simplifier l'écriture, la lecture et la modification d'un code. Pour cela, l'idée est de segmenter et de factoriser au maximum le code en regroupant ce qui se répète dans des entités que l'on peut réutiliser et faire interagir entre elles au besoin.</p>
+<p>Dans ce MON, mon objectif est de m'approprier les notions de bases de la programmation orientée objet, et de l'utiliser sur des applications simples en Python.<br>
+Contrairement à ce que je pensais, je me suis rendu compte que j'avais très peu de restes de mes connaissances du langage Python, et j'ai donc dû passer plus de temps que prévu à revoir la syntaxe et les fonctionnalités de base. J'ai utilisé pour cela les 8 premiers chapitres du livre <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a> en ligne. Cela m'a permis de me remettre en mémoire les principaux types de données, leur écriture et les opérations possibles sur chacune d'entre elles.<br>
+Ensuite, j'ai suivi la première moitié du cours <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/">Programmation Objet</a> de François Brucker et j'ai aussi regardé en détail l'exemple traité dans le MON <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Bert-Nicolas/mon/poo-python/">Programmation objet en Python</a> de Nicolas Bert.</p>
+<h2>2. Principes et définitions</h2>
+<p>Lorsque l'on fait de la programmation orientée objet, on manipule des objets et des classes. Voici quelques définitions du vocabulaire courant :</p>
+<ul>
+<li>
+<p>Un <strong>objet</strong> est une structure de données précise qui prend en paramètres des valeurs appelées <strong>attributs</strong> qui lui sont propres. Sur cet objet, on peut effectuer différentes opérations que l'on nomme aussi <strong>méthodes</strong>.<br>
+Les chaînes de caractères, les entiers ou encore les listes sont des objets simples inclus dans le langage Python.</p>
+</li>
+<li>
+<p>Une <strong>classe</strong> est un ensemble d'objets qui possèdent la même structure de données et auxquels on peut appliquer les mêmes <strong>méthodes</strong>. Ces objets sont donc uniquement différenciés par leurs <strong>attributs</strong>. A partir d'une classe existante, on peut donc créer un <strong>objet</strong> qui a d'office une certaine structure et des opérations associées, il ne reste alors qu'à attribuer des valeurs à ses champs.<br>
+Pour reprendre un des exemples précédents, on pourrait imaginer une classe qui contient toutes les listes d'entiers de taille 4 (ce sont bien des objets, leurs attributs sont les valeurs des éléments de la liste), et lui associer une méthode qui remplace la dernière valeur de la liste par 7.</p>
+</li>
+<li>
+<p>Pour appeler une méthode et l'appliquer à un objet issu d'une classe associée, on utilise ce que l'on appelle la <strong>notation pointée</strong>. On note alors : <strong>objet.méthode(a, b, c...)</strong> où a, b et c sont les paramètres de la méthode.</p>
+</li>
+<li>
+<p>Enfin, on décrit parfois les classes et les objets que l'on utilise grâce à une représentation synthétique issue du langage <strong>UML</strong>, pour <em>Unified Modeling Language</em>. Elle se traduit dans ce cas par le diagramme ci-dessous :</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nom de la classe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Liste des attributs, propres à chaque objet, avec leur type</td>
+</tr>
+<tr>
+<td style="text-align:center">Liste des méthodes, avec leurs nom et paramètres, que l'on peut appliquer aux objets de la classe</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Applications simples</h2>
+<p>Après avoir assimilé ces différents concepts et leur utilité dans la programmation de certains modèles, j'ai pu les mettre en application dans des exemples simples issus du <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/">cours</a> de François Brucker :</p>
+<ol>
+<li>Le premier exemple simule un dé que l'on peut lancer, dont on peut lire la valeur, et également que l'on peut lancer jusqu'à obtenir une certaine valeur choisie, on peut dans ce cas récupérer le nombre de lancers qui ont été nécessaires pour atteindre cette valeur.</li>
+</ol>
+<p>Voici la modélisation du dé :</p>
+<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">import</span> random
+
+<span class="token keyword">class</span> <span class="token class-name">D</span>é<span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> position_initiale<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>position <span class="token operator">=</span> position_initiale
+
+    <span class="token keyword">def</span> <span class="token function">lancer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>position <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Les tests associés :</p>
+<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
+
+<span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    d <span class="token operator">=</span> Dé<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span> Dé<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_position</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    d <span class="token operator">=</span> Dé<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> d<span class="token punctuation">.</span>position <span class="token operator">==</span> <span class="token number">1</span>
+
+<span class="token keyword">def</span> <span class="token function">test_position</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    d <span class="token operator">=</span> Dé<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> d<span class="token punctuation">.</span>position <span class="token operator">==</span> <span class="token number">4</span>
+
+<span class="token keyword">def</span> <span class="token function">test_lancer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    d<span class="token operator">=</span>Dé<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> d<span class="token punctuation">.</span>position <span class="token operator">&lt;=</span> <span class="token number">6</span>
+</code></pre>
+<p>Et le code principal du jeu :</p>
+<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
+
+position_initiale <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Position initiale :"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+valeur_arrêt <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Valeur pour laquelle arrêter les lancers :"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+d <span class="token operator">=</span> Dé<span class="token punctuation">(</span>position_initiale<span class="token punctuation">)</span>
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> d<span class="token punctuation">.</span>position <span class="token operator">!=</span> valeur_arrêt<span class="token punctuation">:</span>
+    d<span class="token punctuation">.</span>lancer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    i<span class="token operator">+=</span><span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<ol start="2">
+<li>Dans un deuxième temps, j'ai modélisé un jeu de cartes qui permet de jouer à une sorte de bataille.</li>
+</ol>
+<h2>4. Pour approfondir</h2>
+<p>Enfin, pour aller un peu plus loin dans la prise en main de ce modèle de programmation et de ses applications, j'ai parcouru le chapitre <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/">Héritage</a> du cours, les exemples associés, ainsi que la suite des chapitres de <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a>, mais je n'ai pas eu le temps de les mettre en pratique par moi-même.</p>
 
 
 </article>

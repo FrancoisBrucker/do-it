@@ -113,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce POK a pour but de créer un visual novel - un roman avec des images dans lequel on peut faire des choix pour orienter l'histoire. Il reprendra un roman que j'ai écrit, mais que je n'ai pas fini. Ce sera l'occasion pour moi de finir de l'écrire et de coder un petit jeu.
+                Ce POK a pour but de créer un visual novel - un roman avec des images dans lequel on peut faire des choix pour orienter l'histoire - à l'aide de Renpy. Il reprendra un roman que j'ai écrit, mais que je n'ai pas fini. Ce sera l'occasion pour moi de finir de l'écrire et de coder un petit jeu.
 
         </p>
 
@@ -150,6 +150,126 @@
 <li><a href="#section-4">Ce que j'ai fait au 2ème sprint</a></li>
 <li><a href="#section-5">Sources</a></li>
 </ol>
+<h2>Ce que j'ai prévu au 1er sprint <a id="section-1"></a></h2>
+<p><strong>Les objectifs</strong></p>
+<ul>
+<li>Apprendre à utiliser l'outil Renpy (Pour la création du jeu)</li>
+<li>Se familiariser avec Figma (Pour faire l'arbre de décisions)</li>
+<li>Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits)</li>
+<li>Créer un jeu qui dure environ 1h30 avec trois fins différentes, A, B et C (dont une qui est simplement une sorte de game-over).</li>
+</ul>
+<p><strong>Backlog produit</strong></p>
+<p>Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deuxième partie du roman), II.2., III.1., III.2.</p>
+<ul>
+<li>
+<p><u>Gestion des ressources infographiques pour le jeu<u> [] = 1</u></u></p>
+<ul>
+<li>Personnages et fonds [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Arbre de décision Figma<u> [] = 11</u></u></p>
+<ul>
+<li>Parcourir le scénario et décider des points de ruptures [] = 3</li>
+<li>Choisir les choix qui vont déterminer l'orientation de l'histoire et créer les noeuds [] = 2</li>
+<li>Créer les &quot;petits&quot; choix pour I. [] = 1 (Il y en a peu)</li>
+<li>Créer les &quot;petits&quot; choix pour II.1.A [] = 1</li>
+<li>Créer les &quot;petits&quot; choix pour II.1.BC [] = 1</li>
+<li>Créer les &quot;petits&quot; choix pour II.2.B et II.2.C [] = 1</li>
+<li>Créer les &quot;petits&quot; choix de la route III.B et III.C [] = 1</li>
+<li>Vérifier la cohérence [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Programmation du jeu<u> [] = 34</u></u></p>
+<ul>
+<li>
+<p>Coder les parties communes [] =</p>
+<ul>
+<li>Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5</li>
+<li>Petits choix 1ère partie du roman [] = 2</li>
+<li>Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3</li>
+<li>Implémenter scénario/petits choix + 2e grand choix + 3e grand choix qui sont communs aux routes B et C dans II.2. [] = 3</li>
+<li>Mettre les fonds [] = 1</li>
+<li>Mettre les transitions [] = 1</li>
+</ul>
+</li>
+<li>
+<p>Route A [] = 5</p>
+<ul>
+<li>Petits choix II.1.A du roman après 1ère grande décision [] = 2</li>
+<li>Page fin A [] = 1</li>
+<li>Mettre les fonds qui manquent [] = 1</li>
+<li>Mettre les transitions [] = 1</li>
+</ul>
+</li>
+<li>
+<p>Route B [] = 7</p>
+<ul>
+<li>Petits choix II.2.B. après 2ème grande décision [] = 2</li>
+<li>Petits choix III.B partie après 3ème grande décision [] = 2</li>
+<li>Page fin B [] = 1</li>
+<li>Mettre les fonds qui manquent [] = 1</li>
+<li>Mettre les transitions [] = 1</li>
+</ul>
+</li>
+<li>
+<p>Route C [] = 7</p>
+<ul>
+<li>Petits choix II.2.C après 2ème grande décision [] = 2</li>
+<li>Petits choix III.C après 3ème grande décision [] = 2</li>
+<li>Page fin C [] = 1</li>
+<li>Mettre les fonds qui manquent [] = 1</li>
+<li>Mettre les transitions [] = 1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><u>Customisation de GUI<u> [] = 3</u></u></p>
+<ul>
+<li>Menu principal [] = 1</li>
+<li>Barre de dialogue [] = 1</li>
+<li>Taille, couleur, style du texte et son placement [] = 1</li>
+</ul>
+</li>
+</ul>
+<p><strong>Backlog Sprint 1</strong><br>
+On prendra comme user-stories à faire :</p>
+<ul>
+<li>
+<p><u>Gestion des ressources infographiques pour le jeu<u> [] = 1</u></u></p>
+<ul>
+<li>Personnages et fonds [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Arbre de décision Figma<u> [] = 11</u></u></p>
+<ul>
+<li>Parcourir le scénario et décider des points de ruptures [] = 3</li>
+<li>Choisir les choix qui vont déterminer l'orientation de l'histoire et créer les noeuds [] = 2</li>
+<li>Créer les &quot;petits&quot; choix pour I. [] = 1 (Il y en a peu)</li>
+<li>Créer les &quot;petits&quot; choix pour II.1.A [] = 1</li>
+<li>Créer les &quot;petits&quot; choix pour II.1.BC [] = 1</li>
+<li>Créer les &quot;petits&quot; choix pour II.2.B et II.2.C [] = 1</li>
+<li>Créer les &quot;petits&quot; choix de la route III.B et III.C [] = 1</li>
+<li>Vérifier la cohérence [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Programmation du jeu<u> = 10</u></u></p>
+<ul>
+<li>
+<p>Coder les parties communes</p>
+<ul>
+<li>Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5</li>
+<li>Petits choix 1ère partie du roman [] = 2</li>
+<li>Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2>Sources</h2>
 <p><a href="https://www.youtube.com/watch?v=C3Ldd-5PKCw&amp;ab_channel=ZeilLearnings">Tutoriel pour créer un jeu avec Renpy (en anglais)</a> de ZeilLearnings<br>
 <a href="https://www.renpy.org/doc/html/quickstart.html">Documentation pour débuter sur Renpy</a><br>
