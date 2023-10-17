@@ -5,7 +5,7 @@ title: "Utilisation de Python pour automatiser des tâches sur Excel avec Openpy
 authors:
   - Duc DANG VU
 
-date: 2023-09-18
+date: 2023-16-10
 tags: 
   - "temps 1"
 
@@ -38,7 +38,7 @@ Tout d'abord, il faut installer openpyxl. Pour cela, il faut rentrer la commande
 pip install openpyxl
 ```
 
-Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme *test.xlsx* est contient le simple tableur suivant:
+Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme *test.xlsx* et contient le simple tableur suivant:
 
 ![Image test](Image1.png)
 
@@ -57,14 +57,14 @@ sheet = wb['Feuille 1']
 ```
 
 {% note %}
-Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par la méthode *active* de la classe Workbook: `sheet = wb.active`
+Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par l'attribut *active* de la classe Workbook: `sheet = wb.active`
 {% endnote %}
 
-La variable *sheet* est un objet de la classe **Worksheet**. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode *cell*. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne "AA". On peut récupérer le contenu de la cellule avec la méthode *value*. On peut également récupérer les coordonnées d'une cellule avec la méthode *coordinate*.
+La variable *sheet* est un objet de la classe **Worksheet**. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode *cell*. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne "AA". On peut récupérer le contenu de la cellule avec l'attribut *value*. On peut également récupérer les coordonnées d'une cellule avec l'attribut *coordinate*.
 
 ```python
 cell = sheet['A1']
-#ou cell = sheet.cell(row = 1, column = 1)
+# ou cell = sheet.cell(row = 1, column = 1)
 print(cell.value)
 print(cell.coordinate)
 
@@ -121,7 +121,7 @@ Le fichier *test_copy.xlsx* produit est le suivant:
 
 La largeur de la colonne A s'est bien modifiée.
 
-On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe **Alignment**, changer le style de police du contenu d'une cellule avec la classe **Font** ou encore changer la couleur de fond d'une cellule avec la classe **PatternFill**. Ces classes doivent être importées de la bibliothèque *openpyxl.styles*.
+On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe **Alignment**, changer le style de police du contenu d'une cellule avec la classe **Font** ou encore changer la couleur de fond d'une cellule avec la classe **PatternFill**. Ces classes doivent être importées de la bibliothèque *openpyxl.styles*. Enfin, il est possible de créer des bordures sur les cellules en modifiant leurs attributs *border* de la classe **Cell**. Encore une fois, il faut importer la classe **Border** depuis la bibliothèque *openpyxl.styles.borders*.
 
 ```python
 from openpyxl.styles import Font, PatternFill, Alignment
@@ -136,6 +136,7 @@ sheet.row_dimensions[2].height = 30
 cell.font = Font(size = 15, bold = True)
 cell.alignment = Alignment(horizontal = "center", vertical = "center")
 cell.fill = PatternFill("solid", start_color = "0ebf3e")
+cell.border = Border(left = Side(style='thick'), right = Side(style='thick'), top = Side(style='thick'), bottom = Side(style='thick'))
 
 wb.save('test_copy.xlsx')
 ```
@@ -144,7 +145,7 @@ Le résultat est le suivant:
 
 ![Image](Image4.png)
 
-Le texte "Pomme de rainette" est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé.
+Le texte "Pomme de rainette" est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé et la cellule a bien des bordures épaisses.
 
 {% note %}
 La couleur renseignée en paramètres de la classe **PatternFill** est sous la forme d'un code hex. Ce code peut être déterminé grâce au site suivant: [htmlcolorcode.com](https://htmlcolorcodes.com/)
@@ -155,7 +156,7 @@ Enfin, il est possible de fusionner des cellules ou de les séparer, grâce aux 
 ![Image merge](Image5.png)
 
 {% note %}
-On remarque que seule le contenu de la première cellule est conservé. De plus, les autres cellules de la cellule fusionnée sont des objets de la classe **MergedCell**. Il est possible de récupérer tout ces objets grâce à l'attribut *merged_cell.ranges* de la classe **Worksheet**.
+On remarque que seul le contenu de la première cellule est conservé. De plus, les autres cellules de la cellule fusionnée sont des objets de la classe **MergedCell**. Il est possible de récupérer tout ces objets grâce à l'attribut *merged_cell.ranges* de la classe **Worksheet**.
 {% endnote %}
 
 ## Application des connaissances acquises
@@ -166,10 +167,10 @@ Afin d'appliquer ces connaissances de openpyxl, nous allons travailler sur les f
 
 Le premier fichier Excel sur lequel nous allons travailler est celui contenant la liste des élèves ainsi que leurs choix de cours. Ce fichier est nommé *étudiants_Do-It_23_24.xlsx*. Le deuxième fichier est nommé *edt Do_It.23-24.xlsx*, et contient l'emploi du temps de la promo Do-It 2023/2024 sous forme d'un tableau. On va créer une classe **Create_timetable** qui va contenir les méthodes pour manipuler les emplois du temps. Plus particulièrement, la méthode *create_timetable_automatic* va prendre en argument le nom et le prénom d'un étudiant et va enregistrer son emploi du temps personnalisé. Voici les différentes étapes que le programme va suivre:
 
-- Création d'une liste *courses_name*, qui contient initialement les cours qui sont communs à tout les élèves (par exemple filière métier, les cours de tronc commun, les vacances etc...) On s'assure que tout ces cours sont écrit en lettres minuscules.
+- Création d'une liste *courses_name*, qui contient initialement les cours qui sont communs à tout les élèves (par exemple filière métier, les cours de tronc commun, les vacances etc...) On s'assure que tout ces cours soient écrits en lettres minuscules.
 - Récupération du numéro de ligne correspondant au nom et prénom (donnés en arguments) dans le document Excel *étudiants_Do-It_23_24.xlsx*. Si le nom ou le prénom ne figure pas dans le document, on affiche une erreur et on sort de la méthode.
-- Récupération des cours de l'élèves. Pour cela, on parcourt le numéro de ligne que l'on vient de déterminer et on vérifie si une croix s'y trouve. Si c'est le cas, on remonte jusqu'au nom du cours (ligne 2) et on ajoute à la liste *courses_name* le nom du cours.
-- Suppression des cours que l'élève n'a pas choisi. On parcourt toutes les cellules à l'intérieur du tableau du fichier Excel *edt Do_It.23-24.xlsx*, et on relève son contenu. Si ce contenu n'est pas l'élément vide, on vérifie si le nom du cours est présent dans la liste *courses_name*. Si ce n'est pas le cas, on supprime ce cours. Pour supprimer ce cours, on fait appel on à méthode *remove_course_automatic*, qui suit les étapes suivantes:
+- Récupération des cours de l'élève. Pour cela, on parcourt le numéro de ligne que l'on vient de déterminer et on vérifie si une croix s'y trouve. Si c'est le cas, on remonte jusqu'au nom du cours (ligne 2) et on ajoute à la liste *courses_name* le nom du cours.
+- Suppression des cours que l'élève n'a pas choisi. On parcourt toutes les cellules à l'intérieur du tableau du fichier Excel *edt Do_It.23-24.xlsx*, et on relève son contenu. Si ce contenu n'est pas l'élément vide, on vérifie si le nom du cours est présent dans la liste *courses_name*. Si ce n'est pas le cas, on supprime ce cours. Pour supprimer ce cours, on fait appel à la méthode *remove_course_automatic*, qui suit les étapes suivantes:
   - Séparation des cellules
   - Coloration de chaque cellule en blanc
   - Suppression du contenu de ces cellules.
@@ -203,13 +204,13 @@ La classe **Create_timetable** contient également des méthodes pour ajouter ou
 
 La méthode *remove_course* suit des étapes similaires.
 
-Voici ce que produit la méthode *add_course* quand on exécute la commande `test.add_course("edt de Duc Dang Vu.xlsx")`:
+Voici ce que produit la méthode *add_course* quand on exécute la commande `test.add_course("edt de Duc Dang Vu.xlsx")`, après avoir rentré les informations du cours à rajouter:
 
 ![Image commande](Image7.png)
 
 ![Image edt modifié](Image8.png)
 
-Et voici ce que produit la méthode *remove_course* quand on exécute la commande `test.remove_course("edt de Duc Dang Vu.xlsx")`:
+Et voici ce que produit la méthode *remove_course* quand on exécute la commande `test.remove_course("edt de Duc Dang Vu.xlsx")`, après avoir rentré les informations du cours à supprimer:
 
 ![Image commande 2](Image9.png)
 

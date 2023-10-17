@@ -30,5 +30,7 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 ## Sources
 
 [Tutoriel pour créer un jeu avec Renpy (en anglais)](https://www.youtube.com/watch?v=C3Ldd-5PKCw&ab_channel=ZeilLearnings) de ZeilLearnings
+[Documentation pour débuter sur Renpy](https://www.renpy.org/doc/html/quickstart.html)
+[Customiser l'interface graphique (GUI)](https://www.renpy.org/doc/html/gui.html#gui)
 [Ressources pour les arrières-plans](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
 [Ressources pour les personnages](https://sutemo.itch.io/)

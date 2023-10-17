@@ -188,3 +188,41 @@ Maitenant lorsque l'utilisateur visualise une recette les ingrédients sont affi
 
 Toutes les fonctionalités possible avec la version gratuite d'Adalo que j'avais voulu apporté à l'application ont été mises en place. Seulement le design de l'application est encore à mon goût pas assez travaillé. Je vais donc me concentrer sur ça afin de rendre l'expérience utilisateur plus agréable.
 
+## Résultat final 
+
+Voici les différentes pages finales de l'application disponible [ici](https://lucie-le-boursicauds-team.adalo.com/les-recettes-de-lulu?_gl=1%2A19rdhxq%2A_ga%2AMTQyNTAyOTgxNC4xNjk1MDM4NjQ2%2A_ga_SWT45DV35L%2AMTY5NTQ5NTc1My4xMi4wLjE2OTU0OTU3NTMuNjAuMC4w&target=3hni4na11m72olt1r9567f5qe&params=%7B%7D).
+
+#### Pages de connexions/inscriptions
+<div style="display:flex">
+<div><img src="connexionf.png"></div><div><img src="inscriptionf.png"></div>
+</div>
+
+#### Page principale
+<div style="display:flex">
+<div><img src="homepagef.png"></div>
+</div>
+
+#### Profil
+<div style="display:flex">
+<div><img src="profilf.png"></div>
+</div>
+
+#### Favoris
+<div style="display:flex">
+<div><img src="favorisf.png"></div>
+</div>
+
+#### Explorer
+<div style="display:flex">
+<div><img src="explorerf.png"></div>
+</div>
+
+#### Nouvelle recette
+<div style="display:flex">
+<div><img src="newf.png"></div>
+</div>
+
+## Conclusion 
+Adalo est un très bon outil de No Code, intuitif et facile d'utilisation. Comme tout outil No Code il possède des limites et la barrière du design restreint est compliqué à surpasser si l'on veut faire de jolies applications. Je pense que cela demanderait beaucoup de temps pour effectuer un design que l'on a en-tête. 
+En tout cas l'intéraction avec la base de données est vraiment adapté à un public novice ce qui beaucoup de fonctionnalités simples à réaliser. 
+Il ne faut pas hésiter à regarder des tutoriels pour certaines fonctionalités que l'on souhaite implémenter, on peut tourner en rond longtemps alors que la solution est en réalité bien plus simple que ce que l'on imagine. Cela m'a fait perdre parfois un peu de temps mais c'est aussi important de chercher par soi-même un minimum avant de trouver une solution déjà toute faite.
