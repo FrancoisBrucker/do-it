@@ -198,19 +198,64 @@ Nous allons voir comment intéragir avec le DOM avec JavaScript.
 
 ### Trouver des éléments dans la page
 Pour trouver les éléments du DOM avec lesquels on souhaite intéragir, il existe de nombreuse méthodes :
-- .getElementsByTagName()
-- .getElementsByClassName()
-- .getElementById()
-- .querySelector()
+- .getElementsByTagName() ---> permet de sélectionner tous les éléments d'une même famille (body, h3, div...). 
+- .getElementsByClassName() ---> permet de sélectionner les éléments d'une même classe.
+- .getElementById() ---> permet de sélectionner l'élément ayant l'Id demandé.
+- .querySelector() ---> un mélange de toutes les autres méthodes, on peut même combiner les sélecteurs (classe, Id, tag).
+
+```javascript 
+document.getElementById("myID");
+```
+
+
 
 ### Modifier les éléments
 Pour modifier le contenu d'un élément, il y a deux méthodes principales à connaître : 
-- innerHTML
-- textContent
+- innerHTML ---> permet d'avoir accès au contenu de l'élément HTML sélectionné.
+- textContent ---> permet d'avoir accès au texte du noeud choisi mais aussi celui de tous ses descendants
 
-Après avoir modifier le contenu, on peut aussi modifier 
+```javascript 
+var htmlElement = document.getElementById("myID");
+htmlElement.innerHTML = ("je remplace l'élément");
+```
 
+Après avoir modifier le contenu de l'élément, on peut aussi modifier son style notamment en changeant sa classe : 
+- .style.color
+- classList.add()
+- classList.remove()
 
+```javascript 
+var htmlElement = document.getElementById("myID");
+htmlElement.innerHTML = ("je remplace l'élément");
+htmlElement.style.color=('red');
+```
 
+### Ajouter des éléments 
+On peut ajouter de nouveaux éléments au DOM grâce à plusieurs méthodes : 
 
+- .createElement()
+
+```javascript 
+let newDiv = document.createElement('div');
+```
+
+### Les event listeners 
+
+Pouvoir modifier les éléments de la page web par l'intermédiaire du DOM c'est bien, mais comment faire pour que ces modifications se fassent à la suite d'une action d'un utilisateur ? 
+C'est là qu'intervienne les event listeners.
+Des évènements peuvent avoir lieu sur la page web :
+- Des cliques sur des éléments
+- Des mouvements de souris 
+- Appuis sur le clavier
+...
+On peut savoir à quel moment ont lieux ces évènements. 
+Pour cela on place des event listeners sur les éléments qui avec lesquels l'utilisateur est susceptible d'intéragir. 
+
+Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclenchera une action. Pour cela :
+
+```javascript 
+var button = document.getElementById("button");
+button.addEventListener(do an action);
+```
+L'action peut être un changement de page ou une modification.
 
