@@ -86,9 +86,9 @@ Pour la section **"Nos Produits"**, j'ai ajouté un effet de zoom lorsque la sou
 
 ## Bilan du sprint 1 
 
-Je n'ai pas réalisé tous mes objectifs initiaux. En effet, la page d'acceuil de mon site n'est pas finie. Il me reste à réaliser des sections qui permettent d'en savoir plus sur l'entreprise. De plus, le site n'est pas responsive. Il s'adapte mals au différentes tailles d'écran.
+Je n'ai pas réalisé tous mes objectifs initiaux. En effet, la page d'accueil de mon site n'est pas finie. Il me reste à réaliser des sections qui permettent d'en savoir plus sur l'entreprise. De plus, le site n'est pas responsive. Il s'adapte mals au différentes tailles d'écran.
 
 Pour le sprint 2, je souhaite :
 
-* Finir la page d'acceuil
+* Finir la page d'accueil
 * Réaliser la page présentant le produit
