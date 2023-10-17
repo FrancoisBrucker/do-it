@@ -37,7 +37,7 @@ Ce MON nécessite quelques prérequis :
     - [ Utilisation de Flask ](#subsection-2)
 2. [2ème tentative : DigitalOcean](#section-2)
 2. [Retour aux sources : Youtube](#section-3)
-
+3. [Mon avis sur les formations](#section-4)
 
 
 ## 1ère tentative : OpenClassroom <a id="section-1"></a>
@@ -235,3 +235,20 @@ En suivant ce tutoriel, je suis parvenu à avoir une simple application fonction
 
 J'ai par la suite réaliser une application un peu plus élaboré à travers mon POK 1.
 
+## Mon avis sur les formations <a id="section-4"></a>
+
+
+La formation d'OpenClassroom est bien détaillée mais je ne le conseille pas car je trouve qu'elle manque de clarté parfois, et surtout parce que j'ai échoué lol.
+
+La formation de DigitalOcean est beaucoup plus technique et permet de mieux comprendre les concepts sous-jacents (et aussi les erreurs que l'on peut rencontrer !)
+
+La vidéo youtube est un peu longue mais avec elle on est sûr d'avoir un résultat !
+
+
+
+
+{%prerequis "<u>Sources</u>"%} 
+- Formation OpenClassroom : https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask et https://openclassrooms.com/fr/courses/6951236-mettez-en-place-votre-environnement-python
+- Formation DigitalOcean : https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3-fr#etape-1-installation-de-flask 
+- Vidéo Youtube : https://www.youtube.com/watch?v=Yh23ZtfYOSs
+{%endprerequis%} 

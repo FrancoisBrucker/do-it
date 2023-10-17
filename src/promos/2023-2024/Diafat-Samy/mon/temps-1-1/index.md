@@ -65,7 +65,7 @@ Bootstrap répondait parfaitement à mon besoin puisque j'ai pu très facilement
 
 Voici un exemple de mon code :
 
-
+![exemple_code](./exemple_code.jpg)
 
 Ce qui donne :
 
