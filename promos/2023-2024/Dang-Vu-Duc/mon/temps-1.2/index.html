@@ -150,7 +150,7 @@
 <p>Tout d'abord, il faut installer openpyxl. Pour cela, il faut rentrer la commande suivante dans une invite de commande:</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pip install openpyxl
 </code></pre>
-<p>Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme <em>test.xlsx</em> et contient le simple tableur suivant:</p>
+<p>Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme <em>test.xlsx</em> est contient le simple tableur suivant:</p>
 <p><img src="Image1.png" alt="Image test"></p>
 <p>La feuille qui est remplie se nomme <em>Feuille 1</em>.</p>
 <h3>Lecture de données</h3>
@@ -166,11 +166,11 @@ sheet <span class="token operator">=</span> wb<span class="token punctuation">[<
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par l'attribut <em>active</em> de la classe Workbook: <code>sheet = wb.active</code></p>
+<p>Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par la méthode <em>active</em> de la classe Workbook: <code>sheet = wb.active</code></p>
 </div></div>
-<p>La variable <em>sheet</em> est un objet de la classe <strong>Worksheet</strong>. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode <em>cell</em>. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne &quot;AA&quot;. On peut récupérer le contenu de la cellule avec l'attribut <em>value</em>. On peut également récupérer les coordonnées d'une cellule avec l'attribut <em>coordinate</em>.</p>
+<p>La variable <em>sheet</em> est un objet de la classe <strong>Worksheet</strong>. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode <em>cell</em>. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne &quot;AA&quot;. On peut récupérer le contenu de la cellule avec la méthode <em>value</em>. On peut également récupérer les coordonnées d'une cellule avec la méthode <em>coordinate</em>.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
-<span class="token comment"># ou cell = sheet.cell(row = 1, column = 1)</span>
+<span class="token comment">#ou cell = sheet.cell(row = 1, column = 1)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span>
 
@@ -210,7 +210,7 @@ wb<span class="token punctuation">.</span>save<span class="token punctuation">(<
 <p>Le fichier <em>test_copy.xlsx</em> produit est le suivant:</p>
 <p><img src="Image3.png" alt="Image test3"></p>
 <p>La largeur de la colonne A s'est bien modifiée.</p>
-<p>On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe <strong>Alignment</strong>, changer le style de police du contenu d'une cellule avec la classe <strong>Font</strong> ou encore changer la couleur de fond d'une cellule avec la classe <strong>PatternFill</strong>. Ces classes doivent être importées de la bibliothèque <em>openpyxl.styles</em>. Enfin, il est possible de créer des bordures sur les cellules en modifiant leurs attributs <em>border</em> de la classe <strong>Cell</strong>. Encore une fois, il faut importer la classe <strong>Border</strong> depuis la bibliothèque <em>openpyxl.styles.borders</em>.</p>
+<p>On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe <strong>Alignment</strong>, changer le style de police du contenu d'une cellule avec la classe <strong>Font</strong> ou encore changer la couleur de fond d'une cellule avec la classe <strong>PatternFill</strong>. Ces classes doivent être importées de la bibliothèque <em>openpyxl.styles</em>.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
 
 wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
@@ -223,13 +223,12 @@ sheet<span class="token punctuation">.</span>row_dimensions<span class="token pu
 cell<span class="token punctuation">.</span>font <span class="token operator">=</span> Font<span class="token punctuation">(</span>size <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">,</span> bold <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
 cell<span class="token punctuation">.</span>alignment <span class="token operator">=</span> Alignment<span class="token punctuation">(</span>horizontal <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">,</span> vertical <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">)</span>
 cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"0ebf3e"</span><span class="token punctuation">)</span>
-cell<span class="token punctuation">.</span>border <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
 </code></pre>
 <p>Le résultat est le suivant:</p>
 <p><img src="Image4.png" alt="Image"></p>
-<p>Le texte &quot;Pomme de rainette&quot; est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé et la cellule a bien des bordures épaisses.</p>
+<p>Le texte &quot;Pomme de rainette&quot; est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -244,17 +243,17 @@ wb<span class="token punctuation">.</span>save<span class="token punctuation">(<
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>On remarque que seul le contenu de la première cellule est conservé. De plus, les autres cellules de la cellule fusionnée sont des objets de la classe <strong>MergedCell</strong>. Il est possible de récupérer tout ces objets grâce à l'attribut <em>merged_cell.ranges</em> de la classe <strong>Worksheet</strong>.</p>
+<p>On remarque que seule le contenu de la première cellule est conservé. De plus, les autres cellules de la cellule fusionnée sont des objets de la classe <strong>MergedCell</strong>. Il est possible de récupérer tout ces objets grâce à l'attribut <em>merged_cell.ranges</em> de la classe <strong>Worksheet</strong>.</p>
 </div></div>
 <h2>Application des connaissances acquises</h2>
 <p>Afin d'appliquer ces connaissances de openpyxl, nous allons travailler sur les fichiers Excel disponibles dans le Drive Do-It 2023/2024. Nous allons récupérer le fichier contenant la liste des élèves ainsi que leur choix de cours, ainsi que le fichier contenant l'emploi du temps de l'année. L'objectif est de créer un emploi du temps personnalisé pour chaque élève, en fonction de ses choix de cours. Il faudra donc lire les données de la première feuille puis écrire de nouvelles données sur la deuxième feuille. Ensuite, nous allons implémenter des méthodes pour permettre à l'utilisateur de rajouter ou supprimer manuellement des cours sur son emploi du temps.</p>
 <h3>Création automatique d'emplois du temps personnalisés</h3>
 <p>Le premier fichier Excel sur lequel nous allons travailler est celui contenant la liste des élèves ainsi que leurs choix de cours. Ce fichier est nommé <em>étudiants_Do-It_23_24.xlsx</em>. Le deuxième fichier est nommé <em>edt Do_It.23-24.xlsx</em>, et contient l'emploi du temps de la promo Do-It 2023/2024 sous forme d'un tableau. On va créer une classe <strong>Create_timetable</strong> qui va contenir les méthodes pour manipuler les emplois du temps. Plus particulièrement, la méthode <em>create_timetable_automatic</em> va prendre en argument le nom et le prénom d'un étudiant et va enregistrer son emploi du temps personnalisé. Voici les différentes étapes que le programme va suivre:</p>
 <ul>
-<li>Création d'une liste <em>courses_name</em>, qui contient initialement les cours qui sont communs à tout les élèves (par exemple filière métier, les cours de tronc commun, les vacances etc...) On s'assure que tout ces cours soient écrits en lettres minuscules.</li>
+<li>Création d'une liste <em>courses_name</em>, qui contient initialement les cours qui sont communs à tout les élèves (par exemple filière métier, les cours de tronc commun, les vacances etc...) On s'assure que tout ces cours sont écrit en lettres minuscules.</li>
 <li>Récupération du numéro de ligne correspondant au nom et prénom (donnés en arguments) dans le document Excel <em>étudiants_Do-It_23_24.xlsx</em>. Si le nom ou le prénom ne figure pas dans le document, on affiche une erreur et on sort de la méthode.</li>
-<li>Récupération des cours de l'élève. Pour cela, on parcourt le numéro de ligne que l'on vient de déterminer et on vérifie si une croix s'y trouve. Si c'est le cas, on remonte jusqu'au nom du cours (ligne 2) et on ajoute à la liste <em>courses_name</em> le nom du cours.</li>
-<li>Suppression des cours que l'élève n'a pas choisi. On parcourt toutes les cellules à l'intérieur du tableau du fichier Excel <em>edt Do_It.23-24.xlsx</em>, et on relève son contenu. Si ce contenu n'est pas l'élément vide, on vérifie si le nom du cours est présent dans la liste <em>courses_name</em>. Si ce n'est pas le cas, on supprime ce cours. Pour supprimer ce cours, on fait appel à la méthode <em>remove_course_automatic</em>, qui suit les étapes suivantes:
+<li>Récupération des cours de l'élèves. Pour cela, on parcourt le numéro de ligne que l'on vient de déterminer et on vérifie si une croix s'y trouve. Si c'est le cas, on remonte jusqu'au nom du cours (ligne 2) et on ajoute à la liste <em>courses_name</em> le nom du cours.</li>
+<li>Suppression des cours que l'élève n'a pas choisi. On parcourt toutes les cellules à l'intérieur du tableau du fichier Excel <em>edt Do_It.23-24.xlsx</em>, et on relève son contenu. Si ce contenu n'est pas l'élément vide, on vérifie si le nom du cours est présent dans la liste <em>courses_name</em>. Si ce n'est pas le cas, on supprime ce cours. Pour supprimer ce cours, on fait appel on à méthode <em>remove_course_automatic</em>, qui suit les étapes suivantes:
 <ul>
 <li>Séparation des cellules</li>
 <li>Coloration de chaque cellule en blanc</li>
@@ -286,10 +285,10 @@ test<span class="token punctuation">.</span>create_timetable_automatic<span clas
 <li>Ajout du cours en question: on fusionne les $n$ cellules en partant de la cellule obtenue, $n$ étant la durée du cours renseignée.</li>
 </ul>
 <p>La méthode <em>remove_course</em> suit des étapes similaires.</p>
-<p>Voici ce que produit la méthode <em>add_course</em> quand on exécute la commande <code>test.add_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>, après avoir rentré les informations du cours à rajouter:</p>
+<p>Voici ce que produit la méthode <em>add_course</em> quand on exécute la commande <code>test.add_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>:</p>
 <p><img src="Image7.png" alt="Image commande"></p>
 <p><img src="Image8.png" alt="Image edt modifié"></p>
-<p>Et voici ce que produit la méthode <em>remove_course</em> quand on exécute la commande <code>test.remove_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>, après avoir rentré les informations du cours à supprimer:</p>
+<p>Et voici ce que produit la méthode <em>remove_course</em> quand on exécute la commande <code>test.remove_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>:</p>
 <p><img src="Image9.png" alt="Image commande 2"></p>
 <p><img src="Image10.png" alt="Image edt modifié 2"></p>
 <p>Le cours a bien été ajouté, puis supprimé comme on le voulait.</p>
