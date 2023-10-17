@@ -183,6 +183,10 @@ Cette fonction, lorsqu'elle est appliquée à un message, noté $$m$$, avec une 
 
 Ainsi, de nombreux systèmes sont des variantes de ce procédé, tels que WEP (Wi-Fi) et HTTPS. Cependant, cette technique exige que la clé soit au moins aussi longue que le message, ce qui peut être contraignant. Par conséquent, un élément essentiel de ces algorithmes est le PRG (Pseudo Random Generator), noté $$G$$, qui étend la clé $$k'$$ de 6 bits en 64 bits comme suit : $$G(k') = k$$.
 
+## Abandon ...
+
+J'ai le regret de vous annoncer que j'ai abandonné ce cours car ce n'était pas ce que je souhaitais réellement travailler. Je souhaite pas connaître exactement les failles de chaque algorithme mais plus comment est-ce que c'est utilisé, pourquoi c'est pourquoi j'en suis venue à lire les articles précédemment cités. Je suis **Trop Math isé** (traumatisé)
+
 # Conclusion de ce cours théorique (abandonné après 4 heures)
 
 Du point de vue géopolitique, on peut voir que les pratiques évoluent avec notre temps et les acteurs internationaux sont s'approprient ces usages tout en les influençant dans le même temps ces usages. Ces évolutions, tels que le Big Data, l'OSINT, la sécurisation des communications sont des éléments essentielles de cette géopolitique.Cela nous amène à questionner la stratégie de l'Europe, et plus spécifiquement de la France, dans ces évolutions et comment vous les acteurs des ces transformations allez y participer et vers quelle direction vous voulez l'orienter ?
