@@ -9,6 +9,10 @@ date: 2023-09-20
 
 tags: 
   - "temps 1"
+  - "OpenGL"
+  - "GLSL"
+  - "C++"
+  - "Bruit simplexe"
 
 résumé: Génération et affichage d'un monde composé de voxels.
 ---
@@ -20,7 +24,7 @@ Mon objectif pour ce POK est de créer un programme qui génère un monde compos
 ## Techologies, bibliothèques et ressources
 
 J'ai décidé de l'écrire en C++, en utilisant OpenGL pour l'affichage.  
-De plus, j'utilise quelques bibliothèques supplémentaires pour gérer la fenêtre (GLFW3), charger des images (stb_images), créer certains objets mathématiques tels que des matrices (glm), et accéder au fonctions OpenGL (glad).  
+De plus, j'utilise quelques bibliothèques supplémentaires pour gérer la fenêtre ([GLFW3](https://www.glfw.org/)), charger des images ([stb_images](https://github.com/nothings/stb/blob/master/stb_image.h)), créer certains objets mathématiques tels que des matrices ([glm](https://github.com/g-truc/glm)), et accéder au fonctions OpenGL ([glad](https://glad.dav1d.de/)).  
 Enfin, pour apprendre OpenGL, j'utilise le site [LearnOpenGL](https://learnopengl.com), j'utilise également [cppreference](https://en.cppreference.com/w/).
 
 ## Objectifs pour le premier point POK
@@ -52,10 +56,12 @@ Pour ce premier point POK, j'ai réussi à afficher un cube texturé, qui tourne
  - Matrice de projection, qui permet d'avoir un rendu en perspective
 - Texture *cube map* : une texture spéciale qui est à la surface d'un cube centré en (0, 0, 0), OpenGL nous permet de récupérer la couleur qui se trouve dans une direction
 
+![cube](cube_qui_tourne.png)
+
 ## Objectifs pour le deuxième point
 
 - Éclairage
-- Génération d'un monde en utilisant une fonction de bruit (bruit de Perlin ou bruit simplex)
+- Génération d'un monde en utilisant une fonction de bruit (~~bruit de Perlin~~ ou bruit simplexe)
 - Création dynamique des cubes à afficher composant ce monde
 - Déplacement dans le monde (Dans les 3 dimensions, et bouger le regard avec la souris)
 - Support de la manette ?
@@ -63,4 +69,20 @@ Pour ce premier point POK, j'ai réussi à afficher un cube texturé, qui tourne
 
 ## Progrès après le deuxième sprint
 
-Dans ce deuxième sprint j'ai réussi à réaliser presque tous les objectifs que je m'étais fixé. Je n'ai malheureusement pas eu le temps d'implémenter un support manette, ni d'optimiser le rendu, mais cela n'est de toute façon pas nécessaire puisque j'atteins très largement les 60 images par secondes que peut afficher mon écran.
+Dans ce deuxième sprint j'ai réussi à réaliser presque tous les objectifs que je m'étais fixé. Je n'ai malheureusement pas eu le temps d'implémenter un support manette, ni d'optimiser le rendu, mais cela n'est de toute façon pas nécessaire puisque j'atteins très largement les 60 images par secondes que peut afficher mon écran :
+
+
+<video controls>
+<source src="mouvement.webm" type="video/webm"/>
+Votre navigateur ne supporte pas les vidéos au format webm.
+</video>
+
+
+Pour l'implémentation du bruit simplexe, je me suis principalement basé sur la description de l'algorithme présente sur [Wikipédia](https://en.wikipedia.org/wiki/Simplex_noise) et sur l'implémentation en GLSL donnée sur [The Book of Shaders](https://thebookofshaders.com/11/?lan=fr) ([implémentation](https://thebookofshaders.com/edit.php#11/2d-snoise-clear.frag)). 
+
+J'ai d'abord fait une [implémentation en python](simplexnoise.zip), dont voici un exemple de résultat, avec 3 octaves :
+
+![Bruit simplexe à 3 octaves](threeoctaves.png)
+
+J'ai ensuite porté cette implémentation en C++, celle-ci est disponible sur le dépôt Gihub du projet.
+
