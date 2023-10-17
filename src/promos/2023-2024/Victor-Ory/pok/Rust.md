@@ -53,9 +53,9 @@ Voici les objectifs que je me suis fixé :
   - Ownership / Borrowship;
   - ...
 
-## Objectif initial
+## Première étape
 
-Mon premier objectif est d'acquérir une compréhension solide des concepts de base de Rust, notamment :
+Mon premier objectif est d'acquérir, notamment à l'aide de la [Documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html), une compréhension solide des concepts de base de Rust :
 
 - Les variables
 - Les itérateurs
@@ -63,13 +63,14 @@ Mon premier objectif est d'acquérir une compréhension solide des concepts de b
 - La gestion de la propriété et des emprunts (ownership/borrowship)
 
 Je vais suivre mon progrès en accomplissant les 96 exercices progressivement plus complexes du référentiel [Rustlings](https://github.com/rust-lang/rustlings), qui couvrent ces concepts essentiels. Actuellement, j'en suis à la première étape de progression : 
+
 [>-----------------------------------------------------------] 1/96 (1.0 %), mais j'ai pour objectif d'atteindre 100 %.
 
 Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet proposé dans la documentation Rust, à savoir [Projet : Gestionnaire de lignes de commande](https://doc.rust-lang.org/book/ch12-00-an-io-project.html).
 
 ### Réalité du parcours
 
-## [Rust Documentation](https://doc.rust-lang.org/stable/book/title-page.html) 
+### [Rust Documentation](https://doc.rust-lang.org/stable/book/title-page.html) 
 
 * Fondamentale, complète, accessible et claire =  nécessaire mais pas suffisant *
 
@@ -79,11 +80,15 @@ J'ai réussi à lire le [livre Rust](https://doc.rust-lang.org/stable/book/title
 
 * Bon complément au [livre Rust](https://doc.rust-lang.org/stable/book/title-page.html) *
 
-Cela se concrétise notamment avec la complétion du projet [GitHub Exercice](https://github.com/rust-lang/rustlings) à hauteur de 67/97 à cause de concept avancé que je n'ai pas encore vu comme le multi thread programming.
+Cela se concrétise notamment avec la complétion du projet [GitHub Exercice](https://github.com/rust-lang/rustlings) à hauteur de 78/96 à cause de concept avancé que je n'ai pas encore vu comme le multi thread programming.
 
-Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui reproduit le comportement de "grep", c'est-à-dire un outil qui filtre la sortie d'une commande exécutée dans l'invite de commandes.
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---------] 78/96 (81.25 %), mais j'ai pour objectif d'atteindre 100 %.
 
-## Pratique 
+## Conclusion de ces travaux théoriques
+
+Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères car totalement nouveaux pour moment. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui recherche un chaîne de caractère au sein d'un texte.
+
+## La pratique
 
 * Facile avec les guides toutefois quand on navigue à vue, cela devient bien plus dure, un bon entraînement. Ça force à penser à TOUT ce qu'on a appris *
 
@@ -96,7 +101,7 @@ J'ai pas été très efficace pour cette tâche en raison de ma confiance en mes
 
 Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique.
 
-Source explorées : 
+Source explorées :
 - [Rust to javascript](https://annas-archive.org/md5/77a5209a50709593652c64d097088439) ( parce que j'ai pas mal d'expérience en javascript )
 - [Zero To Production in Rust - An introduction to backend development](https://annas-archive.org/md5/819c53acaf3bff8c145179d26aa8cd0a) ( bases = pré-requis )
 - [Vidéo Youtube](https://www.youtube.com/watch?v=BpPEoZW5IiY) ( lent mais représentatif de ma progression )

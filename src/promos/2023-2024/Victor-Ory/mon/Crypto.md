@@ -92,7 +92,7 @@ Ensuite, le CLOUD ACT, mis en place par l'administration de Trump, a rendu possi
 
 Dans cet environnement de révolution numérique, l'Armée a rapidement compris l'importance de l'Internet des objets, de l'intelligence artificielle et du big data dès 2008. La gestion des données est cruciale, et l'Armée utilise des méthodes agiles pour s'adapter à ces nouvelles technologies.
 
-# OSINT
+## OSINT
 
 [Renseigner autrement ? Trajectoires de l’Osint dans les services de renseignement](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2022-3-page-19.htm)
 
