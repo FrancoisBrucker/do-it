@@ -32,18 +32,15 @@ Ce MON nécessite quelques prérequis :
 
 ## Table des matières
 
-1. [1er guide suivi](#section-1)
+1. [1ère tentative : OpenClassroom](#section-1)
     - [Environnement virtuel ? Kezako ?](#subsection-1)
     - [ Utilisation de Flask ](#subsection-2)
-2. [2 ème guide](#section-2)
-   - [Le téléphone](#subsection-2)
-   - [Les emails](#subsection-3)
-   - [Publicité display contre les liens sponsorisés (SEM)](#subsection-3)
-2. [Retour au sources](#section-4)
+2. [2ème tentative : DigitalOcean](#section-2)
+2. [Retour aux sources : Youtube](#section-3)
 
 
 
-## 1er guide suivi <a id="section-1"></a>
+## 1ère tentative : OpenClassroom <a id="section-1"></a>
 
 Afin d'apprendre à utililiser le micro-framework Flask, j'ai décidé de suivre une formation sur le fameux site OpenClassRoom.
 
@@ -183,7 +180,7 @@ Après avoir perdu beaucoup de temps à tenter de lancer la console, j'ai décid
 
 
 
-## 2 ème guide <a id="section-2"></a>
+## 2ème tentative : DigitalOcean <a id="section-2"></a>
 
 Ce deuxième tutoriel reprend les mêmes bases que le précedent, à savoir la création d'un environnement virtuel.
 
@@ -226,7 +223,7 @@ Enfin, face à ce mur qui se dressait devant moi, j'ai décidé de faire un reto
 
 
 
-## Merci youtube <a id="section-3"></a>
+## Retour aux sources : Youtube <a id="section-3"></a>
 
 ![youtube](./youtube.png)
 

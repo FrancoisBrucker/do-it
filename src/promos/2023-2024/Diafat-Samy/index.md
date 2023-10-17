@@ -13,4 +13,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Nut ou Peanut, la version mobile du jeu Chiche ou Pois Chiche](../../../projets/2023-20Y24/Chiche-ou-pois-chiche)
