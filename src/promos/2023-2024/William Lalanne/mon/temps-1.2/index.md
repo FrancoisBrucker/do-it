@@ -20,9 +20,10 @@ résumé: "JavaScript"
 ## Sommaire
 
 1. Switch 
-2. Variables Globales/Locales
-3. Objets
-4. Fonctions anonymes
+2. Objets
+3. Fonctions anonymes
+4. Classes
+5. Pour le développement web
 
 ## Switch
 En JavaScript, comme dans de nombreux langages de programmation, lorsqu'on a une variable qui prend des valeurs différentes et que pour chacune de ses valeurs on veut afficher un message différent, on peut utiliser un switch. Pour mieux comprendre, prenons un exemple.
@@ -188,4 +189,28 @@ class BankAccount {
 ```
 
 Ainsi si on crée un bankAccount on peut lui appliquer la méthode.
+
+## Pour le développement web
+
+JavaScript est très utilisé pour le développement web, notamment pour modifer la strucuture et le style des pages web par l'intermédiraire du DOM (Document Object Model).
+
+Nous allons voir comment intéragir avec le DOM avec JavaScript.
+
+### Trouver des éléments dans la page
+Pour trouver les éléments du DOM avec lesquels on souhaite intéragir, il existe de nombreuse méthodes :
+- .getElementsByTagName()
+- .getElementsByClassName()
+- .getElementById()
+- .querySelector()
+
+### Modifier les éléments
+Pour modifier le contenu d'un élément, il y a deux méthodes principales à connaître : 
+- innerHTML
+- textContent
+
+Après avoir modifier le contenu, on peut aussi modifier 
+
+
+
+
 
