@@ -286,18 +286,56 @@ Par exemple pour créer une classe livre :</p>
 <h3>Trouver des éléments dans la page</h3>
 <p>Pour trouver les éléments du DOM avec lesquels on souhaite intéragir, il existe de nombreuse méthodes :</p>
 <ul>
-<li>.getElementsByTagName()</li>
-<li>.getElementsByClassName()</li>
-<li>.getElementById()</li>
-<li>.querySelector()</li>
+<li>.getElementsByTagName() ---&gt; permet de sélectionner tous les éléments d'une même famille (body, h3, div...).</li>
+<li>.getElementsByClassName() ---&gt; permet de sélectionner les éléments d'une même classe.</li>
+<li>.getElementById() ---&gt; permet de sélectionner l'élément ayant l'Id demandé.</li>
+<li>.querySelector() ---&gt; un mélange de toutes les autres méthodes, on peut même combiner les sélecteurs (classe, Id, tag).</li>
 </ul>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <h3>Modifier les éléments</h3>
 <p>Pour modifier le contenu d'un élément, il y a deux méthodes principales à connaître :</p>
 <ul>
-<li>innerHTML</li>
-<li>textContent</li>
+<li>innerHTML ---&gt; permet d'avoir accès au contenu de l'élément HTML sélectionné.</li>
+<li>textContent ---&gt; permet d'avoir accès au texte du noeud choisi mais aussi celui de tous ses descendants</li>
 </ul>
-<p>Après avoir modifier le contenu, on peut aussi modifier</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+htmlElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"je remplace l'élément"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Après avoir modifier le contenu de l'élément, on peut aussi modifier son style notamment en changeant sa classe :</p>
+<ul>
+<li>.style.color</li>
+<li>classList.add()</li>
+<li>classList.remove()</li>
+</ul>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+htmlElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"je remplace l'élément"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+htmlElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Ajouter des éléments</h3>
+<p>On peut ajouter de nouveaux éléments au DOM grâce à plusieurs méthodes :</p>
+<ul>
+<li>.createElement()</li>
+</ul>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Les event listeners</h3>
+<p>Pouvoir modifier les éléments de la page web par l'intermédiaire du DOM c'est bien, mais comment faire pour que ces modifications se fassent à la suite d'une action d'un utilisateur ?<br>
+C'est là qu'intervienne les event listeners.<br>
+Des évènements peuvent avoir lieu sur la page web :</p>
+<ul>
+<li>Des cliques sur des éléments</li>
+<li>Des mouvements de souris</li>
+<li>Appuis sur le clavier<br>
+...<br>
+On peut savoir à quel moment ont lieux ces évènements.<br>
+Pour cela on place des event listeners sur les éléments qui avec lesquels l'utilisateur est susceptible d'intéragir.</li>
+</ul>
+<p>Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclenchera une action. Pour cela :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token keyword">do</span> an action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>L'action peut être un changement de page ou une modification.</p>
 
 
 </article>
