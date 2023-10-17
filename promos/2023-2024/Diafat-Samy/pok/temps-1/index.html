@@ -77,11 +77,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Flask</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -113,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers cette API. L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
+                Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers une API.L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
 
         </p>
 
@@ -133,6 +137,15 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>POK intermédiaire</p>
+</div><div class="pl-8 mr-8">
+<p>Avoir les bases en html/css, python (pandas), invit de commande et avoir de la patience.</p>
+</div></div>
 <h2>Table des matières</h2>
 <ol>
 <li>
@@ -144,7 +157,7 @@
 <li><a href="#subsection-1">Faire des requêtes directement sur le site de RiotGames</a></li>
 <li><a href="#subsection-2">Automatiser les requêtes sur python</a></li>
 <li><a href="#subsection-3">Faire des calculs à l'aide des données récoltées</a></li>
-<li><a href="#subsection-4">Utiliser le framework Flask pour développer une petite application</a></li>
+<li><a href="#subsection-4">Utilisation du framework Flask pour développer une petite application</a></li>
 </ul>
 </li>
 <li>
@@ -173,16 +186,16 @@
 </ul>
 <h2>Ce que j'ai fait au 1er sprint<a id="section-2"></a></h2>
 <h3>Faire des requêtes directement sur le site de RiotGames<a id="subsection-1"></a></h3>
-<p>Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes aux API disponibles.</p>
+<p>Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes à l'API.</p>
 <p><img src="clef_riot.jpg" alt="Api key"></p>
-<p>Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble des API mis à notre disposition</p>
+<p>Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble de méthodes mis à notre disposition.</p>
 <blockquote>
-<p>Il y a plus d'une dizaine d'APIs disponibles pour le jeu League of Legends</p>
+<p>Il y a plus d'une dizaine de méthodes disponibles pour le jeu League of Legends.</p>
 </blockquote>
 <p><img src="riot_api.jpg" alt="Riot API"></p>
-<p>J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo</p>
+<p>J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo :</p>
 <p><img src="exemple_requete.jpg" alt="Exemple requête"></p>
-<p>Ce qui m'a permis d'obtenir les données suivantes</p>
+<p>Ce qui m'a permis d'obtenir les données suivantes :</p>
 <p><img src="exemple_rep.jpg" alt="Exemple réponse"></p>
 <p>On passe maintenant à un notebook afin d'automatiser tout cela avec python !</p>
 <h3>Automatiser les requêtes sur python<a id="subsection-2"></a></h3>
@@ -375,7 +388,7 @@ data<span class="token punctuation">[</span><span class="token string">'kda'</sp
 5.3125,<br>
 14.375]</p>
 <p>Vous pouvez trouver l'ensemble de mes fonctions sur mon github ! lien github</p>
-<h3>Utiliser le framework Flask pour développer une petite application<a id="subsection-4"></a></h3>
+<h3>Utilisation du framework Flask pour développer une petite application<a id="subsection-4"></a></h3>
 <p>Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -558,19 +571,19 @@ icone joueur 6271</p>
 <h2>Ce que j'ai prévu pour le second point POK<a id="section-3"></a></h2>
 <ul>
 <li>
-<p>Faire un Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes</p>
+<p>Rédiger un Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes</p>
 </li>
 <li>
-<p>Faire un Notebook permettant de lancer une application web interactive, on pourra y rentrer le pseudo d'un joueur et voir les informations du comptes</p>
+<p>Rédiger un Notebook permettant de lancer une application web interactive, on pourra y rentrer le pseudo d'un joueur et voir les informations du comptes</p>
 </li>
 <li>
-<p>Amélioration de l'interface de l'application</p>
+<p>Améliorer de l'interface de l'application</p>
 </li>
 <li>
 <p>Ajout et traitement de nouvelles données issues de l'API (personnage le plus joué et taux de victoire associé )</p>
 </li>
 <li>
-<p>Ajout d'illustration (icone choisie dans le jeu, icone des champions)</p>
+<p>Ajout d'illustration (icone choisie dans le jeu, icone des champions...)</p>
 </li>
 <li>
 <p>Correction des bugs faisant planter l'application</p>
@@ -579,16 +592,19 @@ icone joueur 6271</p>
 <h2>Ce que j'ai fait à la fin du temps 1 <a id="section-4"></a></h2>
 <ul>
 <li>
-<p>Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes (des extraits de ce notebook sont utilisés sur cette page, mais vous pouvez retrouver le fichier complet sur github)</p>
+<p>Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes (des extraits de ce notebook sont utilisés sur cette page, mais vous pouvez retrouver le fichier complet sur github).</p>
 </li>
 <li>
-<p>Notebook permettant de lancer une application web interactive LIEN</p>
+<p>Notebook permettant de lancer une application web interactive.</p>
 </li>
 <li>
 <p>Amélioration de l'interface graphique et ajout de données.</p>
 </li>
+<li>
+<p>Correction des bugs (gestion des cas limite : données non trouvées...)</p>
+</li>
 </ul>
-<p>Présentation des pages :</p>
+<p>Présentation des pages de l'application :</p>
 <h3>Page d'accueil<a id="subsection-5"></a></h3>
 <p>Les 3 icones forment une barre de navigation, il faut cliquer sur le jeu désiré.</p>
 <p><img src="accueil.png" alt="samy gg leo"></p>
@@ -600,7 +616,7 @@ icone joueur 6271</p>
 <p><img src="search.png" alt="samy gg leo"></p>
 <h3>Comparaison avec des statistiques issues du site OP.GG<a id="subsection-9"></a></h3>
 <p><img src="samyggleo.png" alt="samy gg leo"></p>
-<p>Comparaison avec un site en ligne<br>
+<p>Comparaison avec le site <a href="http://op.gg">op.gg</a> qui permet d'avoir des statistiques :<br>
 <img src="opggleo.png" alt="samy gg leo"><br>
 <img src="opggleo2.png" alt="samy gg leo"></p>
 <p>On peut voir sur le site que les données coincident bien !</p>
@@ -608,9 +624,9 @@ icone joueur 6271</p>
 <p><img src="samyggyomm.png" alt="samy gg leo"></p>
 <p><img src="opggyomm2.png" alt="samy gg leo"><br>
 <img src="opggyomm.png" alt="samy gg leo"></p>
-<p><a href="https://github.com/SamyDiafat/API-Riot-Games">Le lien vers mon github</a></p>
 <h2>Conclusion <a id="section-5"></a></h2>
-<p>blabla</p>
+<p>Je suis assez content du résultat obtenu, mais je n'ai clairement pas réussi à estimer mon temps correctement car j'ai passé beaucoup plus de temps que prévu sur ce premier POK.<br>
+En revanche, cela m'a permis d'aller plus loin que prévu donc je ne pense pas continuer sur ce sujet.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
@@ -622,7 +638,8 @@ icone joueur 6271</p>
 <li><a href="https://www.youtube.com/watch?v=jkzq9j5yeT8&amp;list=PL3vL1pnMCbUERqllcwhcvEJbKum-M9zT5">Playlist de iTero Gaming à propos de l'API</a>.</li>
 <li><a href="https://www.youtube.com/watch?v=Yh23ZtfYOSs">Guide pour utiliser Flask</a></li>
 <li><a href="https://www.artstation.com/artwork/vD2bwv">Illustrations</a></li>
-<li>[Dossier Riot]</li>
+<li><a href="https://github.com/SamyDiafat/API-Riot-Games">Le lien vers mon github</a></li>
+<li><a href="https://developer.riotgames.com/docs/lol#data-dragon">RiotGames data (icones...)</a></li>
 </ul>
 </div></div>
 
