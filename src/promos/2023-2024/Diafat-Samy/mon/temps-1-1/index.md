@@ -16,6 +16,9 @@ tags:
 résumé: "Revu des bases de l'HTML et du css, puis initiation à Bootstrap."
 ---
 
+{%prerequis 'MON débutant'%} 
+Ce MON ne nécessite pas de prérequis car il reprend les bases du HTML et du CSS.
+{%endprerequis%}
 
 
 ## Résumé
@@ -63,83 +66,6 @@ Bootstrap répondait parfaitement à mon besoin puisque j'ai pu très facilement
 Voici un exemple de mon code :
 
 
-```
-<!DOCTYPE html> 
-<html>
-<head>
-    
-    
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        img {
-            width: 100%;
-            height: 20vh; /* 1/8 de la hauteur de l'écran (100vh) */
-            object-fit: cover; /* Pour maintenir le rapport d'aspect */
-        }
-    </style>
-    
-    
-    
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
-    
-    
-    
-    
-    
-    
-    
-</head>
-<body>
-    
-    <img src="{{ url_for('static', filename='Banderolle3.jpg') }}" width="35%" height="35%">
-    
-<nav class="navbar bg-body-tertiary">
-    <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="/league">
-            <img src="{{ url_for('static', filename='lol_icon.png') }}" alt="Bootstrap" style="width: 100px; height: 100px;">
-        </a>
-        
-        <!-- Deux menus supplémentaires -->
-        <div class="d-flex">
-            <a class="nav-link" href="/tft">
-                <img src="{{ url_for('static', filename='tft_icon.png') }}" alt="Menu 1" style="width: 400px; height: 100px;">
-            </a>
-            <a class="nav-link" href="/valorant">
-                <img src="{{ url_for('static', filename='valorant.jpg') }}" alt="Menu 2" style="width: 200px; height: 200px;">
-            </a>
-        </div>
-    </div>
-</nav>
-
-
-
-
-    <div class="container-fluid">
-        {% block content %}
-         
-        {% endblock %}
-    </div>
-    
-    
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
-</html>
-```
 
 Ce qui donne :
 
