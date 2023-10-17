@@ -187,4 +187,5 @@ class BankAccount {
 }
 ```
 
-Ainsi si on crée un bankAccount on peut lui appliquer la méthode 
+Ainsi si on crée un bankAccount on peut lui appliquer la méthode.
+
