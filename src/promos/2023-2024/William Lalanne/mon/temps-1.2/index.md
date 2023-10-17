@@ -255,7 +255,20 @@ Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclench
 
 ```javascript 
 var button = document.getElementById("button");
-button.addEventListener(do an action);
+button.addEventListener('click', do an action);
 ```
-L'action peut être un changement de page ou une modification.
+L'action peut être un changement de page ou une modification, il faut préciser à l'event listener quel action on attend (clique, mouvement de souris...)
+
+### Conclusion 
+De nombreuses autres choses peuvent être faites avec JavaScript en web, mais pour l'instant nous nous limiterons à ce que nous avons déjà vu. La suite viendra éventuellement dans un autre MON. 
+
+
+## Conclusion 
+Dans ce MON nous avons vu comment JavaScript pouvait être utilisé comment langage orienté objet, notamment avec les classes. Mais nous avons également vu l'apport de JavaScript d'un point de vue web. 
+
+## Bibliographie 
+[OpenClassRoom](https://openclassrooms.com/fr/courses/5493201-write-javascript-for-the-web) : vraiment très bien fait pour l'aspect web, il faut néanmoins quelques connaissances en JavaScript pour se lancer. 
+
+[freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) : pas mal pour revoir les bases.
+
 
