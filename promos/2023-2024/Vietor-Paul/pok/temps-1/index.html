@@ -73,11 +73,27 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">OpenGL</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">GLSL</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">C++</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Bruit simplexe</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -129,7 +145,7 @@
 <p>Mon objectif pour ce POK est de créer un programme qui génère un monde composé de voxels, puis affiche ce monde et permet se se déplacer dedans.</p>
 <h2>Techologies, bibliothèques et ressources</h2>
 <p>J'ai décidé de l'écrire en C++, en utilisant OpenGL pour l'affichage.<br>
-De plus, j'utilise quelques bibliothèques supplémentaires pour gérer la fenêtre (GLFW3), charger des images (stb_images), créer certains objets mathématiques tels que des matrices (glm), et accéder au fonctions OpenGL (glad).<br>
+De plus, j'utilise quelques bibliothèques supplémentaires pour gérer la fenêtre (<a href="https://www.glfw.org/">GLFW3</a>), charger des images (<a href="https://github.com/nothings/stb/blob/master/stb_image.h">stb_images</a>), créer certains objets mathématiques tels que des matrices (<a href="https://github.com/g-truc/glm">glm</a>), et accéder au fonctions OpenGL (<a href="https://glad.dav1d.de/">glad</a>).<br>
 Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com">LearnOpenGL</a>, j'utilise également <a href="https://en.cppreference.com/w/">cppreference</a>.</p>
 <h2>Objectifs pour le premier point POK</h2>
 <p>Je ne connaissais pas OpenGL avant de débuter ce POK donc pour le premier point, j'aimerais réussir à afficher un premier cube avec une texture et de l'éclairage basique.</p>
@@ -156,17 +172,26 @@ Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com
 <li>Matrice de projection, qui permet d'avoir un rendu en perspective</li>
 <li>Texture <em>cube map</em> : une texture spéciale qui est à la surface d'un cube centré en (0, 0, 0), OpenGL nous permet de récupérer la couleur qui se trouve dans une direction</li>
 </ul>
+<p><img src="cube_qui_tourne.png" alt="cube"></p>
 <h2>Objectifs pour le deuxième point</h2>
 <ul>
 <li>Éclairage</li>
-<li>Génération d'un monde en utilisant une fonction de bruit (bruit de Perlin ou bruit simplex)</li>
+<li>Génération d'un monde en utilisant une fonction de bruit (<s>bruit de Perlin</s> ou bruit simplexe)</li>
 <li>Création dynamique des cubes à afficher composant ce monde</li>
 <li>Déplacement dans le monde (Dans les 3 dimensions, et bouger le regard avec la souris)</li>
 <li>Support de la manette ?</li>
 <li>Optimisations ?</li>
 </ul>
 <h2>Progrès après le deuxième sprint</h2>
-<p>Dans ce deuxième sprint j'ai réussi à réaliser presque tous les objectifs que je m'étais fixé. Je n'ai malheureusement pas eu le temps d'implémenter un support manette, ni d'optimiser le rendu, mais cela n'est de toute façon pas nécessaire puisque j'atteins très largement les 60 images par secondes que peut afficher mon écran.</p>
+<p>Dans ce deuxième sprint j'ai réussi à réaliser presque tous les objectifs que je m'étais fixé. Je n'ai malheureusement pas eu le temps d'implémenter un support manette, ni d'optimiser le rendu, mais cela n'est de toute façon pas nécessaire puisque j'atteins très largement les 60 images par secondes que peut afficher mon écran :</p>
+<video controls="">
+<source src="mouvement.webm" type="video/webm">
+Votre navigateur ne supporte pas les vidéos au format webm.
+</video>
+<p>Pour l'implémentation du bruit simplexe, je me suis principalement basé sur la description de l'algorithme présente sur <a href="https://en.wikipedia.org/wiki/Simplex_noise">Wikipédia</a> et sur l'implémentation en GLSL donnée sur <a href="https://thebookofshaders.com/11/?lan=fr">The Book of Shaders</a> (<a href="https://thebookofshaders.com/edit.php#11/2d-snoise-clear.frag">implémentation</a>).</p>
+<p>J'ai d'abord fait une <a href="simplexnoise.zip">implémentation en python</a>, dont voici un exemple de résultat, avec 3 octaves :</p>
+<p><img src="threeoctaves.png" alt="Bruit simplexe à 3 octaves"></p>
+<p>J'ai ensuite porté cette implémentation en C++, celle-ci est disponible sur le dépôt Gihub du projet.</p>
 
 
 </article>
