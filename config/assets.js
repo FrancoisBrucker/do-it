@@ -7,7 +7,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/!(assets)/**/node_modules");
 
   // images 
-  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{jpg,png,ico,pdf,svg}");
+  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{jpg,png,ico,pdf,svg,gif}");
+
+  // videos
+  eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{webm,mov,mp4}");
   
   // data
   eleventyConfig.addPassthroughCopy("src/**/!(node_modules)/**/*.{txt,edi,csv,json,pdf}");
