@@ -35,13 +35,11 @@ Pour recommencer une formation sur excel a partir de zéro, j'ai suivi le cours 
 10. Validations de données
 11. Tableau croisé dynamique
 
-J'ai réalisé les exercices proposé tout au long de la formation.
+J'ai réalisé les exercices proposés tout au long de la formation puis les exercices proposés par un membre de ma famille, cadre dans une grande entreprise.
 
-État des lieux le 9 octobre : 10+h de formation - rédaction
+### Chapitres 1 à 7 - revoir les bases
 
-### Chapitres 1 à 7- revoir les bases
-
-Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. POur cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
+Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. Pour cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
 
 - L'utilisation du `$` permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
   ![excel](EXCEL2.png)
@@ -150,6 +148,14 @@ Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 e
 
 Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
 ![excel](screen_valisation3.png)
+
+#### Tableaux croisés dynamiques
+
+Les *pivot table* (en anglais) permettent de structurer des informations à partir d'un tableau brut de données, pour analyser, présenter ou resumer.
+
+Pour insérer un tableau dynamique, il faut : **sélectionner les données/tableau > insertion > tableau croisé dynamique > valeurs par défaut > ok > cocher les champs à intégrer au tableau > les glisser dans 1 des 4 onglets souhaité** parmi *lignes*, *colonnes*, *valeurs* et *lignes* **> modifier si nécessaire**
+
+Pour m'exercer sur les tableaux croisés dynamiques, j'ai réalisé des exercices avec des donnés privées que je ne peux partager.
 
 ### Conclusion
 
