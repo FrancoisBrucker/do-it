@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Découverte du développement Web : Centrale Coinche"
+title: "Web Front : Centrale Coinche"
 authors:
   - Nicolas Ouzoulias
 
@@ -10,7 +10,7 @@ date: 2023-09-17
 tags: 
   - "temps 1"
 
-résumé: Le premier POK de l'année pour apprendre à programmer un petit site Web.
+résumé: Le premier POK de l'année pour apprendre à programmer la partie front d'un site web.
 ---
 
 Je n'ai jamais pratiqué le developpement Web je cherche donc à travers ce POK à : 
@@ -23,13 +23,13 @@ L'ensemble de mon code est disponible sur mon GitHub  [ici](https://github.com/N
 
 ## Sommaire
 
-I. Le développement Web pour les nuls
+I. Le Front pour les nuls
 
 II. Mon petit site Web à moi : Centrale Coinche
 
 III. Prochaines avancées
 
-## I. Le développement Web pour les nuls
+## I. Le Front pour les nuls
 
 Tout d'abord pourquoi deux langages séparés et pas un seul ? 
 Les deux fonctionnent de paire, le HTML permet de créer et de structurer le contenu tandis que le CSS s'occupe de la mise en forme visuelle. 
