@@ -14,8 +14,7 @@ tags:
   - "Python"
 
 
-résumé: Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers une API.
-L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
+résumé: Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers une API.L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
 ---
 
 
