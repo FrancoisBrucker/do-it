@@ -133,45 +133,498 @@
 
 
 
-<h2>Ce que j'ai prévu pour le 1er point POK</h2>
+<h2>Table des matières</h2>
+<ol>
+<li>
+<p><a href="#section-1">Ce que j'ai prévu pour le 1er point POK</a></p>
+</li>
+<li>
+<p><a href="#section-2">Ce que j'ai fait au 1er sprint</a></p>
+<ul>
+<li><a href="#subsection-1">Faire des requêtes directement sur le site de RiotGames</a></li>
+<li><a href="#subsection-2">Automatiser les requêtes sur python</a></li>
+<li><a href="#subsection-3">Faire des calculs à l'aide des données récoltées</a></li>
+<li><a href="#subsection-4">Utiliser le framework Flask pour développer une petite application</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#section-3">Ce que j'ai prévu pour le second point POK</a></p>
+</li>
+<li>
+<p><a href="#section-4">Ce que j'ai fait à la fin du temps 1</a></p>
+<ul>
+<li><a href="#subsection-5">Page d'accueil</a></li>
+<li><a href="#subsection-6">Page du jeu TFT</a></li>
+<li><a href="#subsection-7">Page du jeu Valorant</a></li>
+<li><a href="#subsection-8">Page du jeu League of Legends</a></li>
+<li><a href="#subsection-9">Comparaison avec des statistiques issues du site OP.GG</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#section-5">Conclusion</a></p>
+</li>
+</ol>
+<h2>Ce que j'ai prévu pour le 1er point POK<a id="section-1"></a></h2>
 <ul>
 <li>Faire des reqûetes aux APIs</li>
 <li>Nettoyer les données que j'aurai collecté</li>
 <li>Analyser les données pour en sortir des informations pertinentes</li>
 <li>Bonus : Mettre les informations sur un site web</li>
 </ul>
-<h2>Ce que j'ai fait</h2>
-<h3>1. Faire des requêtes directement sur le site de RiotGames</h3>
-<p>Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes aux API disponibles</p>
+<h2>Ce que j'ai fait au 1er sprint<a id="section-2"></a></h2>
+<h3>Faire des requêtes directement sur le site de RiotGames<a id="subsection-1"></a></h3>
+<p>Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes aux API disponibles.</p>
 <p><img src="clef_riot.jpg" alt="Api key"></p>
-<p>Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble des API mis à notre disposition (il y a plus d'une dizaine d'APIs disponibles pour le jeu League of Legends)</p>
+<p>Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble des API mis à notre disposition</p>
+<blockquote>
+<p>Il y a plus d'une dizaine d'APIs disponibles pour le jeu League of Legends</p>
+</blockquote>
 <p><img src="riot_api.jpg" alt="Riot API"></p>
 <p>J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo</p>
 <p><img src="exemple_requete.jpg" alt="Exemple requête"></p>
 <p>Ce qui m'a permis d'obtenir les données suivantes</p>
 <p><img src="exemple_rep.jpg" alt="Exemple réponse"></p>
 <p>On passe maintenant à un notebook afin d'automatiser tout cela avec python !</p>
-<h3>2. Automatiser les requêtes sur python</h3>
-<p><img src="notebook1.jpg" alt="Notebook 1"></p>
-<p><img src="notebook2.jpg" alt="Notebook 2"></p>
-<p>Les deux captures d'écran précédentes permettent d'utiliser la clef afin de faire des requêtes directement via Jupyter Notebook.</p>
-<h3>3. Faire des calculs à l'aide des données récoltées</h3>
-<p>Par la suite, j'ai créé des fonctions me permettant de faire des reqûetes dans plusieurs APIs différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.</p>
-<p><img src="exemple_calcul.jpg" alt="Exemple fonction"></p>
-<p>Ici par exemple, on arrive à récupérer le classement d'un joueur, à calculer son taux de victoire, ansi qu'un indicateur de permorfance au cours de ses récentes parties (KDA).</p>
-<h3>4. Utiliser le framework Flask pour développer une petite application</h3>
+<h3>Automatiser les requêtes sur python<a id="subsection-2"></a></h3>
+<p>Import de notre clef</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_key <span class="token operator">=</span> <span class="token string">'RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8'</span>
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_key
+</code></pre>
+<p>'RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8'</p>
+<p>On récupère ensuite une URL venant du site de Riot Games : <a href="https://developer.riotgames.com/apis">https://developer.riotgames.com/apis</a></p>
+<p>On s'interesse tout d'abord aux données d'un compte en particulier, on utilise ici l'API V4</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span>
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url <span class="token operator">=</span> <span class="token string">'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'</span> <span class="token operator">+</span> pseudo
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url
+</code></pre>
+<p>'<a href="https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm">https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm</a>'</p>
+<p>Afin d'avoir l'autorisation d'accès à l'API, nous devons ajouter notre clef à l'url</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url <span class="token operator">=</span> api_url <span class="token operator">+</span> <span class="token string">'?api_key='</span> <span class="token operator">+</span> api_key
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url
+</code></pre>
+<p>'<a href="https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm?api_key=RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8">https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm?api_key=RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8</a>'</p>
+<p>On importe ensuite la bibliothèque requests qui va nous permettre de faire des requêtes via python.</p>
+<blockquote>
+<p>La bibliothèque requests en Python est utilisée pour envoyer des requêtes HTTP vers des serveurs web et interagir avec des ressources en ligne. Elle permet de créer des applications qui peuvent effectuer des opérations telles que l'envoi de requêtes GET, POST, PUT, DELETE, etc., pour récupérer des données depuis des API, envoyer des données à des serveurs, télécharger des fichiers à partir d'Internet, et bien plus encore.</p>
+</blockquote>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> requests
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+</code></pre>
+<p>&lt;Response [200]&gt;</p>
+<p>La réponse nous permet de savoir l'état de la requête envoyée, 200 correspond à une requête réussi !</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+player_info <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+player_info
+</code></pre>
+<p>{'id': 'sowIMP6jk8jfAEMsUR9W9TwUlqcHLpk-sGD727LdzXTJKJU',<br>
+'accountId': 'XEOycCgqv9jSoYu25_24LPzueZGvKrcdUX7yUy_p-6vrxw',<br>
+'puuid': 'u-bz6k4v2VzDEVkG5brW_NBGfYmjCGstDEoK0ruij3BpbwkhseE4knsJZH_Sx3NjnSzQy8iv60vTjA',<br>
+'name': 'Yomm',<br>
+'profileIconId': 608,<br>
+'revisionDate': 1697225190000,<br>
+'summonerLevel': 184}</p>
+<p>La méthode .json() est appelée, et le contenu JSON de la réponse est automatiquement analysé et converti en une structure de données Python</p>
+<p>On voit que player_info est un dictionnaire contenant plusieurs informations</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">player_info<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>dict_keys(['id', 'accountId', 'puuid', 'name', 'profileIconId', 'revisionDate', 'summonerLevel'])</p>
+<p>On peut par exemple obtenir l'ID associée à un pseudo</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">player_info<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
+</code></pre>
+<h3>Faire des calculs à l'aide des données récoltées<a id="subsection-3"></a></h3>
+<p>Par la suite, j'ai créé des fonctions me permettant de faire des requêtes dans plusieurs sources différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquez pour voir le code <strong>Create_timetable</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Cette fonction permet de récupérer le puuid d'un joueur à partir du nom d'invocateur, de la région, et d'une clef api</span>
+<span class="token keyword">def</span> <span class="token function">get_puuid</span><span class="token punctuation">(</span>summoner_name<span class="token punctuation">,</span> region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    api_url <span class="token operator">=</span> <span class="token punctuation">(</span>
+        <span class="token string">"https://"</span> <span class="token operator">+</span> 
+        region <span class="token operator">+</span>
+        <span class="token string">".api.riotgames.com/lol/summoner/v4/summoners/by-name/"</span> <span class="token operator">+</span>
+        summoner_name <span class="token operator">+</span>
+        <span class="token string">"?api_key="</span> <span class="token operator">+</span>
+        api_key
+    <span class="token punctuation">)</span>
+    resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+    player_info <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    puuid <span class="token operator">=</span> player_info<span class="token punctuation">[</span><span class="token string">'puuid'</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> puuid  
+
+
+
+<span class="token comment"># cette fonction permet de récupérer les identifiants des 20 dernières parties d'un joueur</span>
+<span class="token keyword">def</span> <span class="token function">get_match_ids</span><span class="token punctuation">(</span>puuid<span class="token punctuation">,</span> mass_region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    api_url <span class="token operator">=</span> <span class="token punctuation">(</span>
+        <span class="token string">"https://"</span> <span class="token operator">+</span>
+        mass_region <span class="token operator">+</span>
+        <span class="token string">".api.riotgames.com/lol/match/v5/matches/by-puuid/"</span> <span class="token operator">+</span>
+        puuid <span class="token operator">+</span> 
+        <span class="token string">"/ids?start=0&amp;count=20"</span> <span class="token operator">+</span> 
+        <span class="token string">"&amp;api_key="</span> <span class="token operator">+</span> 
+        api_key
+    <span class="token punctuation">)</span>   
+    <span class="token comment"># we need to add this "while" statement so that we continuously loop until it's successful</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+        
+        <span class="token comment"># whenever we see a 429, we sleep for 10 seconds and then restart from the top of the "while" loop</span>
+        <span class="token keyword">if</span> resp<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">429</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Rate Limit hit, sleeping for 10 seconds"</span><span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+            <span class="token comment"># continue means start the loop again</span>
+            <span class="token keyword">continue</span>
+            
+        <span class="token comment"># if resp.status_code isn't 429, then we carry on to the end of the function and return the data</span>
+        resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+        match_ids <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> match_ids 
+
+
+<span class="token comment"># Cette fonction permet de récupérer les données d'une partie</span>
+<span class="token keyword">def</span> <span class="token function">get_match_data</span><span class="token punctuation">(</span>match_id<span class="token punctuation">,</span> mass_region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    api_url <span class="token operator">=</span> <span class="token punctuation">(</span>
+        <span class="token string">"https://"</span> <span class="token operator">+</span> 
+        mass_region <span class="token operator">+</span> 
+        <span class="token string">".api.riotgames.com/lol/match/v5/matches/"</span> <span class="token operator">+</span>
+        match_id <span class="token operator">+</span> 
+        <span class="token string">"?api_key="</span> <span class="token operator">+</span> 
+        api_key
+    <span class="token punctuation">)</span>   
+    <span class="token comment"># we need to add this "while" statement so that we continuously loop until it's successful</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+        
+        <span class="token comment"># whenever we see a 429, we sleep for 10 seconds and then restart from the top of the "while" loop</span>
+        <span class="token keyword">if</span> resp<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">429</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Rate Limit hit, sleeping for 10 seconds"</span><span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+            <span class="token comment"># continue means start the loop again</span>
+            <span class="token keyword">continue</span>
+            
+        <span class="token comment"># if resp.status_code isn't 429, then we carry on to the end of the function and return the data</span>
+        resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+        match_data <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> match_data 
+</code></pre>
+</div>
+</details>     
+</div>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span>
+region <span class="token operator">=</span> <span class="token string">'euw1'</span>
+mass_region <span class="token operator">=</span> <span class="token string">'EUROPE'</span>
+
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
+</code></pre>
+<p>'u-bz6k4v2VzDEVkG5brW_NBGfYmjCGstDEoK0ruij3BpbwkhseE4knsJZH_Sx3NjnSzQy8iv60vTjA'</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">puuid_player <span class="token operator">=</span> get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
+id_matches <span class="token operator">=</span> get_match_ids<span class="token punctuation">(</span>puuid_player<span class="token punctuation">,</span> mass_region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Les identifiants des 20 dernières parties de'</span><span class="token punctuation">,</span>pseudo<span class="token punctuation">,</span><span class="token string">'sont'</span><span class="token punctuation">,</span>id_matches<span class="token punctuation">)</span>
+</code></pre>
+<p>Les identifiants des 20 dernières parties de Yomm sont ['EUW1_6620612418', 'EUW1_6620591242', 'EUW1_6620117730', 'EUW1_6616569027', 'EUW1_6616516559', 'EUW1_6615412808', 'EUW1_6611335474', 'EUW1_6611256844', 'EUW1_6610248381', 'EUW1_6610147341', 'EUW1_6609656368', 'EUW1_6607254752', 'EUW1_6607085859', 'EUW1_6606463762', 'EUW1_6603360397', 'EUW1_6603288425', 'EUW1_6603210097', 'EUW1_6601582307', 'EUW1_6601554856', 'EUW1_6600766557']</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Fonction permettant de récupérer les données d'un joueur à partie des données d'une partie et d'un ID</span>
+<span class="token keyword">def</span> <span class="token function">find_player_data</span><span class="token punctuation">(</span>match_data<span class="token punctuation">,</span> puuid<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    participants <span class="token operator">=</span> match_data<span class="token punctuation">[</span><span class="token string">'metadata'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'participants'</span><span class="token punctuation">]</span>
+    player_index <span class="token operator">=</span> participants<span class="token punctuation">.</span>index<span class="token punctuation">(</span>puuid<span class="token punctuation">)</span>
+    player_data <span class="token operator">=</span> match_data<span class="token punctuation">[</span><span class="token string">'info'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'participants'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>player_index<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> player_data
+</code></pre>
+<p>Si l'on veut regarder uniquement une info</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+data<span class="token punctuation">[</span><span class="token string">'kda'</span><span class="token punctuation">]</span>
+</code></pre>
+<p champion:="" [TwistedFate,="" TwistedFate,="" Talon,="" Taliyah,="" KSante,="" Gangplank,="" Gangplank],="" kills:="" [4,="" 7,="" 6,="" 3,="" 2,="" 1,="" 4,="" 18,="" 8,="" 5,="" 15,="" 14,="" 9,="" 14],="" deaths:="" [11,="" 11,="" 19,="" 10,="" 12,="" 13,="" 17,="" 16,="" 8],="" assists:="" 3],="" kda:="" [5.0,="" 8.333333333333334,="" 6.636363636363637,="" 3.526315789473684,="" 2.5454545454545454,="" 1.2857142857142856,="" 4.8,="" 19.0,="" 1.4444444444444444,="" 8.75,="" 5.75,="" 3.2142857142857144,="" 5.615384615384615,="" 2.5384615384615383,="" 5.777777777777778,="" 16.076923076923077,="" 14.75,="" 9.411764705882353,="" 5.3125,="" 14.375],="" win:="" [Défaite,="" Défaite,="" Victoire,="" Victoire]=""></p>
+<p>[5.0,<br>
+8.333333333333334,<br>
+6.636363636363637,<br>
+3.526315789473684,<br>
+2.5454545454545454,<br>
+1.2857142857142856,<br>
+4.8,<br>
+19.0,<br>
+1.4444444444444444,<br>
+8.75,<br>
+5.75,<br>
+3.2142857142857144,<br>
+5.615384615384615,<br>
+2.5384615384615383,<br>
+5.777777777777778,<br>
+16.076923076923077,<br>
+14.75,<br>
+9.411764705882353,<br>
+5.3125,<br>
+14.375]</p>
+<p>Vous pouvez trouver l'ensemble de mes fonctions sur mon github ! lien github</p>
+<h3>Utiliser le framework Flask pour développer une petite application<a id="subsection-4"></a></h3>
 <p>Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique</p>
-<p><img src="flask.jpg" alt="Exemple flask"><br>
-<img src="homepage.jpg" alt="Exemple homepage"><br>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquez pour voir le code <strong>Create_timetable</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template<span class="token punctuation">,</span>request
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/home"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"homepage.html"</span><span class="token punctuation">)</span>
+ 
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/league"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"league.html"</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/tft"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">datapage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"tft.html"</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/valorant"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">datapage2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"valorant.html"</span><span class="token punctuation">)</span>
+
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/submit'</span><span class="token punctuation">,</span>methods <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'POST'</span><span class="token punctuation">,</span> <span class="token string">'GET'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'je rentre dans submit'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        pseudo <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'nm'</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"Login successfully by POST method, Hello </span><span class="token interpolation"><span class="token punctuation">{</span>pseudo<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        pseudo <span class="token operator">=</span> request<span class="token punctuation">.</span>args<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'nm'</span><span class="token punctuation">)</span>
+        data_player_ranked <span class="token operator">=</span> get_data_champion<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
+        data_player <span class="token operator">=</span> get_player_data<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
+        <span class="token comment">#print('bouton activé')</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'le pseudo du site'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>pseudo<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> pseudo<span class="token punctuation">:</span>
+            <span class="token comment">#data_player_ranked = get_data_champion(pseudo,region,api_key)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>data_player_ranked<span class="token punctuation">)</span>
+            <span class="token comment">#data_player = get_player_data(pseudo,region,api_key)</span>
+            icone <span class="token operator">=</span> data_player<span class="token punctuation">[</span><span class="token string">'icon_id'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            rank_flex <span class="token operator">=</span> data_player<span class="token punctuation">[</span><span class="token string">'rank_flex'</span><span class="token punctuation">]</span>
+            rank_solo <span class="token operator">=</span> data_player<span class="token punctuation">[</span><span class="token string">'rank_solo'</span><span class="token punctuation">]</span>
+            rank_flex_icon <span class="token operator">=</span> change_rank<span class="token punctuation">(</span>data_player<span class="token punctuation">[</span><span class="token string">'rank_flex'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            rank_solo_icon <span class="token operator">=</span> change_rank<span class="token punctuation">(</span>data_player<span class="token punctuation">[</span><span class="token string">'rank_solo'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            summoner_level <span class="token operator">=</span> data_player<span class="token punctuation">[</span><span class="token string">'summoner_level'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+                
+            champ_solo <span class="token operator">=</span> data_player_ranked<span class="token punctuation">[</span><span class="token string">'solo'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Champion_solo'</span><span class="token punctuation">]</span>
+            champ_flex <span class="token operator">=</span>data_player_ranked<span class="token punctuation">[</span><span class="token string">'flex'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Champion_flex'</span><span class="token punctuation">]</span>
+            winrate_solo <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span>data_player_ranked<span class="token punctuation">[</span><span class="token string">'solo'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Winrate_solo'</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span>
+            winrate_flex <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span>data_player_ranked<span class="token punctuation">[</span><span class="token string">'flex'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Winrate_flex'</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span>
+            
+            
+            <span class="token keyword">print</span><span class="token punctuation">(</span>champ_solo<span class="token punctuation">,</span>champ_flex<span class="token punctuation">,</span>winrate_solo<span class="token punctuation">,</span>winrate_flex<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'pseudo='</span><span class="token punctuation">,</span>pseudo<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'lvl='</span><span class="token punctuation">,</span>summoner_level<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rank solo'</span><span class="token punctuation">,</span>rank_solo<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rank flex'</span><span class="token punctuation">,</span>rank_flex<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'icone solo'</span><span class="token punctuation">,</span>rank_solo_icon<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'icone flex'</span><span class="token punctuation">,</span>rank_flex_icon<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'icone joueur'</span><span class="token punctuation">,</span>icone<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>data_player_ranked<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"datapage.html"</span><span class="token punctuation">,</span>pseudo<span class="token operator">=</span>pseudo<span class="token punctuation">,</span>summoner_level<span class="token operator">=</span>summoner_level<span class="token punctuation">,</span>icone<span class="token operator">=</span>icone<span class="token punctuation">,</span>rank_flex<span class="token operator">=</span>rank_flex<span class="token punctuation">,</span>rank_solo<span class="token operator">=</span>rank_solo<span class="token punctuation">,</span>rank_flex_icon<span class="token operator">=</span>rank_flex_icon<span class="token punctuation">,</span>rank_solo_icon<span class="token operator">=</span>rank_solo_icon<span class="token punctuation">,</span>champ_solo<span class="token operator">=</span>champ_solo<span class="token punctuation">,</span>champ_flex<span class="token operator">=</span>champ_flex<span class="token punctuation">,</span>winrate_solo<span class="token operator">=</span>winrate_solo<span class="token punctuation">,</span>winrate_flex<span class="token operator">=</span>winrate_flex<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Aucun pseudo n'a été spécifié dans la demande GET."</span>
+   
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>  
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>* Serving Flask app &quot;<strong>main</strong>&quot; (lazy loading)<br>
+* Environment: production<br>
+WARNING: This is a development server. Do not use it in a production deployment.<br>
+Use a production WSGI server instead.<br>
+* Debug mode: off</p>
+<p>* Running on <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a> (Press CTRL+C to quit)<br>
+127.0.0.1 - - [16/Oct/2023 18:02:09] &quot;[37mGET / HTTP/1.1[0m&quot; 200 -<br>
+127.0.0.1 - - [16/Oct/2023 18:02:09] &quot;[33mGET /static/style.css HTTP/1.1[0m&quot; 404 -<br>
+127.0.0.1 - - [16/Oct/2023 18:02:09] &quot;[37mGET / HTTP/1.1[0m&quot; 200 -<br>
+127.0.0.1 - - [16/Oct/2023 18:02:10] &quot;[37mGET /league HTTP/1.1[0m&quot; 200 -<br>
+127.0.0.1 - - [16/Oct/2023 18:02:10] &quot;[33mGET /static/style.css HTTP/1.1[0m&quot; 404 -<br>
+127.0.0.1 - - [16/Oct/2023 18:02:10] &quot;[37mGET /league HTTP/1.1[0m&quot; 200 -</p>
+<p>je rentre dans submit<br>
+Récupération des statistiques en classés<br>
+Récupération des parties classés<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Récupération des parties classés<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds</p>
+<p>127.0.0.1 - - [16/Oct/2023 18:06:41] &quot;[37mGET /submit?nm=nicpsy HTTP/1.1[0m&quot; 200 -<br>
+127.0.0.1 - - [16/Oct/2023 18:06:41] &quot;[33mGET /static/style.css HTTP/1.1[0m&quot; 404 -</p>
+<p>le pseudo du site<br>
+nicpsy<br>
+{'solo': {'Champion_solo': 'Sylas', 'Winrate_solo': 0.515625}, 'flex': {'Champion_flex': 'Sylas', 'Winrate_flex': 0.6056338028169014}}<br>
+Sylas Sylas 52 61<br>
+pseudo= nicpsy<br>
+lvl= 208<br>
+rank solo PLATINUM IV 0<br>
+rank flex EMERALD II 0<br>
+icone solo platine<br>
+icone flex emeraude<br>
+icone joueur 6271<br>
+{'solo': {'Champion_solo': 'Sylas', 'Winrate_solo': 0.515625}, 'flex': {'Champion_flex': 'Sylas', 'Winrate_flex': 0.6056338028169014}}<br>
+je rentre dans submit<br>
+Récupération des statistiques en classés</p>
+<p>127.0.0.1 - - [16/Oct/2023 18:06:41] &quot;[37mGET /static/Sylas.png HTTP/1.1[0m&quot; 200 -</p>
+<p>Récupération des parties classés<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Récupération des parties classés<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds<br>
+Rate Limit hit, sleeping for 10 seconds</p>
+<p>127.0.0.1 - - [16/Oct/2023 18:11:06] &quot;[37mGET /submit?nm=nicpsy HTTP/1.1[0m&quot; 200 -</p>
+<p solo:="" {Champion_solo:="" Sylas,="" Winrate_solo:="" 0.515625="">le pseudo du site<br>
+nicpsy<br>
+{'solo': {'Champion_solo': 'Sylas', 'Winrate_solo': 0.515625}, 'flex': {'Champion_flex': 'Sylas', 'Winrate_flex': 0.6056338028169014}}<br>
+Sylas Sylas 52 61<br>
+pseudo= nicpsy<br>
+lvl= 208<br>
+rank solo PLATINUM IV 0<br>
+rank flex EMERALD II 0<br>
+icone solo platine<br>
+icone flex emeraude<br>
+icone joueur 6271</p>
+</div>
+</details>     
+</div>
+<p>Voici ce que l'on obtient</p>
+<p><img src="homepage.jpg" alt="Exemple homepage"><br>
 <img src="SeeRank.jpg" alt="Exemple seerank"><br>
 <img src="result.jpg" alt="Exemple result"></p>
-<h2>Ce que j'ai prévu pour le second point POK</h2>
-<p>Pour le second point, je voudrais tout d'abord corriger les bugs que j'ai eu lors de l'utilisation de l'application web car au bout de quelques requêtes mon site plante.<br>
-Je souhaiterais également améliorer l'interface graphique, par exemple en ajoutant des images correspondant au rang du joueur dans le jeu.</p>
-<h2>Ce que j'ai fait à la fin du temps 1</h2>
-<h2>Des ressources</h2>
-<p><a href="https://www.youtube.com/watch?v=jkzq9j5yeT8&amp;list=PL3vL1pnMCbUERqllcwhcvEJbKum-M9zT5">Playlist de iTero Gaming à propos de l'API</a>.</p>
-<p><a href="https://www.youtube.com/watch?v=Yh23ZtfYOSs">Guide pour utiliser Flask</a></p>
+<h2>Ce que j'ai prévu pour le second point POK<a id="section-3"></a></h2>
+<ul>
+<li>
+<p>Faire un Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes</p>
+</li>
+<li>
+<p>Faire un Notebook permettant de lancer une application web interactive, on pourra y rentrer le pseudo d'un joueur et voir les informations du comptes</p>
+</li>
+<li>
+<p>Amélioration de l'interface de l'application</p>
+</li>
+<li>
+<p>Ajout et traitement de nouvelles données issues de l'API (personnage le plus joué et taux de victoire associé )</p>
+</li>
+<li>
+<p>Ajout d'illustration (icone choisie dans le jeu, icone des champions)</p>
+</li>
+<li>
+<p>Correction des bugs faisant planter l'application</p>
+</li>
+</ul>
+<h2>Ce que j'ai fait à la fin du temps 1 <a id="section-4"></a></h2>
+<ul>
+<li>
+<p>Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes (des extraits de ce notebook sont utilisés sur cette page, mais vous pouvez retrouver le fichier complet sur github)</p>
+</li>
+<li>
+<p>Notebook permettant de lancer une application web interactive LIEN</p>
+</li>
+<li>
+<p>Amélioration de l'interface graphique et ajout de données.</p>
+</li>
+</ul>
+<p>Présentation des pages :</p>
+<h3>Page d'accueil<a id="subsection-5"></a></h3>
+<p>Les 3 icones forment une barre de navigation, il faut cliquer sur le jeu désiré.</p>
+<p><img src="accueil.png" alt="samy gg leo"></p>
+<h3>Page du jeu TFT<a id="subsection-6"></a></h3>
+<p><img src="tft.png" alt="samy gg leo"></p>
+<h3>Page du jeu Valorant<a id="subsection-7"></a></h3>
+<p><img src="tft.png" alt="samy gg leo"></p>
+<h3>Page du jeu League of Legends<a id="subsection-8"></a></h3>
+<p><img src="search.png" alt="samy gg leo"></p>
+<h3>Comparaison avec des statistiques issues du site OP.GG<a id="subsection-9"></a></h3>
+<p><img src="samyggleo.png" alt="samy gg leo"></p>
+<p>Comparaison avec un site en ligne<br>
+<img src="opggleo.png" alt="samy gg leo"><br>
+<img src="opggleo2.png" alt="samy gg leo"></p>
+<p>On peut voir sur le site que les données coincident bien !</p>
+<p>Pour un autre joueur :</p>
+<p><img src="samyggyomm.png" alt="samy gg leo"></p>
+<p><img src="opggyomm2.png" alt="samy gg leo"><br>
+<img src="opggyomm.png" alt="samy gg leo"></p>
+<p><a href="https://github.com/SamyDiafat/API-Riot-Games">Le lien vers mon github</a></p>
+<h2>Conclusion <a id="section-5"></a></h2>
+<p>blabla</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Ressources</u></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jkzq9j5yeT8&amp;list=PL3vL1pnMCbUERqllcwhcvEJbKum-M9zT5">Playlist de iTero Gaming à propos de l'API</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=Yh23ZtfYOSs">Guide pour utiliser Flask</a></li>
+<li><a href="https://www.artstation.com/artwork/vD2bwv">Illustrations</a></li>
+<li>[Dossier Riot]</li>
+</ul>
+</div></div>
 
 
 </article>
