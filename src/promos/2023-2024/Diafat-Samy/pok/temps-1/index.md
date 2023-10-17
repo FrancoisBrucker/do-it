@@ -11,11 +11,18 @@ tags:
   - "temps 1"
   - "API"
   - "Flask"
+  - "Python"
 
 
-résumé: Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers cette API. L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
+résumé: Ce POK a pour but de réaliser ma première connexion à une API pour y récupérer des données. L'entreprise Riot Games donne accès aux données de son jeu vidéo en ligne League of Legends à travers une API.
+L'objectif final est de développer une petite application web permettant d'afficher des données à partir du pseudo d'un joueur
 ---
 
+
+
+{%prerequis 'POK intermédiaire'%}
+Avoir les bases en html/css, python (pandas), invit de commande et avoir de la patience.
+{%endprerequis%}
 
 ## Table des matières
 
@@ -24,7 +31,7 @@ résumé: Ce POK a pour but de réaliser ma première connexion à une API pour 
    - [Faire des requêtes directement sur le site de RiotGames](#subsection-1)
    - [Automatiser les requêtes sur python](#subsection-2)
    - [Faire des calculs à l'aide des données récoltées](#subsection-3)
-   - [Utiliser le framework Flask pour développer une petite application](#subsection-4)
+   - [Utilisation du framework Flask pour développer une petite application](#subsection-4)
 3. [Ce que j'ai prévu pour le second point POK](#section-3)
 4. [Ce que j'ai fait à la fin du temps 1](#section-4)
    - [Page d'accueil](#subsection-5)
@@ -52,21 +59,21 @@ résumé: Ce POK a pour but de réaliser ma première connexion à une API pour 
 
 ### Faire des requêtes directement sur le site de RiotGames<a id="subsection-1"></a>
 
-Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes aux API disponibles.
+Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes à l'API.
 
 ![Api key](clef_riot.jpg)
 
-Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble des API mis à notre disposition 
+Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble de méthodes mis à notre disposition.
 
->Il y a plus d'une dizaine d'APIs disponibles pour le jeu League of Legends
+>Il y a plus d'une dizaine de méthodes disponibles pour le jeu League of Legends.
 
 ![Riot API](riot_api.jpg)
 
-J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo
+J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo :
 
 ![Exemple requête](exemple_requete.jpg)
 
-Ce qui m'a permis d'obtenir les données suivantes
+Ce qui m'a permis d'obtenir les données suivantes :
 
 ![Exemple réponse](exemple_rep.jpg)
 
@@ -367,7 +374,7 @@ data['kda']
 
 Vous pouvez trouver l'ensemble de mes fonctions sur mon github ! lien github
 
-### Utiliser le framework Flask pour développer une petite application<a id="subsection-4"></a>
+### Utilisation du framework Flask pour développer une petite application<a id="subsection-4"></a>
 
 Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique
 
@@ -559,15 +566,15 @@ Voici ce que l'on obtient
 ## Ce que j'ai prévu pour le second point POK<a id="section-3"></a>
 
 
-- Faire un Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes
+- Rédiger un Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes
 
-- Faire un Notebook permettant de lancer une application web interactive, on pourra y rentrer le pseudo d'un joueur et voir les informations du comptes
+- Rédiger un Notebook permettant de lancer une application web interactive, on pourra y rentrer le pseudo d'un joueur et voir les informations du comptes
 
-- Amélioration de l'interface de l'application
+- Améliorer de l'interface de l'application
 
 - Ajout et traitement de nouvelles données issues de l'API (personnage le plus joué et taux de victoire associé )
 
-- Ajout d'illustration (icone choisie dans le jeu, icone des champions)
+- Ajout d'illustration (icone choisie dans le jeu, icone des champions...)
 
 - Correction des bugs faisant planter l'application 
 
@@ -579,15 +586,17 @@ Voici ce que l'on obtient
 ## Ce que j'ai fait à la fin du temps 1 <a id="section-4"></a>
 
 
-- Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes (des extraits de ce notebook sont utilisés sur cette page, mais vous pouvez retrouver le fichier complet sur github) 
+- Notebook permettant de montrer comment utiliser l'API pour automatiser les requêtes (des extraits de ce notebook sont utilisés sur cette page, mais vous pouvez retrouver le fichier complet sur github).
 
-- Notebook permettant de lancer une application web interactive LIEN
+- Notebook permettant de lancer une application web interactive.
 
 
 - Amélioration de l'interface graphique et ajout de données.
 
+- Correction des bugs (gestion des cas limite : données non trouvées...)
 
-Présentation des pages :
+
+Présentation des pages de l'application :
 
 
 
@@ -616,7 +625,7 @@ Les 3 icones forment une barre de navigation, il faut cliquer sur le jeu désir�
 
 ![samy gg leo](samyggleo.png)
 
-Comparaison avec un site en ligne
+Comparaison avec le site op.gg qui permet d'avoir des statistiques :
 ![samy gg leo](opggleo.png)
 ![samy gg leo](opggleo2.png)
 
@@ -633,12 +642,12 @@ Pour un autre joueur :
 ![samy gg leo](opggyomm.png)
 
 
-[Le lien vers mon github](https://github.com/SamyDiafat/API-Riot-Games)
 
 ## Conclusion <a id="section-5"></a>
 
 
-blabla
+Je suis assez content du résultat obtenu, mais je n'ai clairement pas réussi à estimer mon temps correctement car j'ai passé beaucoup plus de temps que prévu sur ce premier POK.
+En revanche, cela m'a permis d'aller plus loin que prévu donc je ne pense pas continuer sur ce sujet.
 
 
 
@@ -646,5 +655,6 @@ blabla
 - [Playlist de iTero Gaming à propos de l'API](https://www.youtube.com/watch?v=jkzq9j5yeT8&list=PL3vL1pnMCbUERqllcwhcvEJbKum-M9zT5).
 - [Guide pour utiliser Flask](https://www.youtube.com/watch?v=Yh23ZtfYOSs)
 - [Illustrations](https://www.artstation.com/artwork/vD2bwv)
-- [Dossier Riot]
+- [Le lien vers mon github](https://github.com/SamyDiafat/API-Riot-Games)
+- [RiotGames data (icones...)](https://developer.riotgames.com/docs/lol#data-dragon)
 {%endprerequis%} 
