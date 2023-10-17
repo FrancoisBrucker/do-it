@@ -125,27 +125,36 @@
 
 
 
-<h2>Objectifs</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://github.com/Omar-Salame/football-fantasy">Le Github du POK</a></p>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li><a href="#section-1">Présentation du projet</a></li>
+<li><a href="#section-2">Objectifs</a></li>
+<li><a href="#section-3">Premier Sprint</a></li>
+<li><a href="#section-4">Deuxième Sprint</a>
 <ul>
-<li>
-<p><strong>Créer un site web interactif</strong>: L'objectif principal est de développer un site web attrayant et interactif pour les fans de football fantasy.</p>
-</li>
-<li>
-<p><strong>Intégration de données en temps réel</strong> : Intégrer des données en temps réel sur les joueurs, les équipes, les scores, etc., pour que les utilisateurs puissent suivre les performances de leurs équipes de fantasy en direct.</p>
-</li>
-<li>
-<p><strong>Gestion d'équipes</strong> : Permettre aux utilisateurs de créer, gérer et personnaliser leurs équipes de fantasy.</p>
-</li>
-<li>
-<p><strong>Système de points</strong> : Mettre en place un système de points pour noter les performances des joueurs de fantasy en fonction de leurs performances réelles sur le terrain.</p>
-</li>
+<li><a href="#subsection-1">Base de données</a></li>
+<li><a href="#subsection-2">Front</a></li>
+<li><a href="#subsection-3">Back</a></li>
 </ul>
-<h2>Plan d'action</h2>
+</li>
+<li><a href="#section-5">Récapitulatif de l'avancement du projet et prochaines étapes</a></li>
+</ol>
+<h2>Présentation du projet <a id="section-1"></a></h2>
+<p>Le <em>fantasy football</em> est un jeu de gestion d'équipe virtuelle qui permet aux passionnés de football de créer leurs propres équipes imaginaires en sélectionnant des joueurs réels. Ces équipes virtuelles concourent en parallèle avec les performances réelles des joueurs sur le terrain. Les participants marquent des points en fonction des performances de leurs joueurs, notamment les buts marqués, les passes décisives, les clean sheets et d'autres statistiques de jeu. Le fantasy football ajoute une dimension stratégique et compétitive aux compétitions de football, permettant aux participants de gérer leur équipe, de faire des transferts de joueurs, et de rivaliser avec d'autres managers.</p>
+<p>Dans le cas de mon POK, ce concept est appliqué spécifiquement à la ligue marocaine de football, la <strong>INWI Botola Pro1</strong>. Les fans de cette ligue auront la possibilité de créer leurs propres équipes virtuelles composées de joueurs de la INWI Botola Pro1, de participer à des ligues, de suivre en temps réel les performances des joueurs et de rivaliser pour le classement en fonction des performances réelles des joueurs dans la ligue. Cette plateforme offre une expérience immersive pour les amateurs de football marocain, combinant leur passion pour le sport avec des éléments de compétition et de gestion d'équipe.</p>
+<h2>Objectifs <a id="section-2"></a></h2>
 <ol>
 <li><strong>Conception</strong> :</li>
 </ol>
 <ul>
-<li>Créer une maquette du site web pour planifier la disposition et l'apparence.()</li>
+<li>Créer une maquette du site web pour planifier la disposition et l'apparence.</li>
 <li>Définir la structure HTML de base pour chaque page.</li>
 </ul>
 <ol start="2">
@@ -168,13 +177,20 @@
 <ul>
 <li>Mettre en place un système d'authentification et de gestion des utilisateurs.</li>
 </ul>
-<h2>Premier Sprint</h2>
+<h2>Premier Sprint <a id="section-3"></a></h2>
 <ul>
-<li>Création d'une base de données des équipes et joueurs de la Botola Pro.</li>
-<li>Initialisation à l HTML CSS<br>
-<img src="header.png" width="700" height="550"></li>
+<li>Initialisation à l HTML CSS</li>
 </ul>
-<h2>Deuxième Sprint</h2>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="header.png" width="650" height="500"></td>
+<td style="text-align:center"><img src="body.png" width="650" height="500"></td>
+</tr>
+</tbody>
+</table>
+<h2>Deuxième Sprint <a id="section-4"></a></h2>
+<h3>Base de données<a id="subsection-1"></a></h3>
 <p>J'ai fais un webscrapping pour collecter les données de la ligues(équipes, joueurs...). La difficulté que j'ai rencontré c'est que les données ne sont pas centralisées en un endroit. Donc j'ai utilisé differents site web pour la collecte des données.</p>
 <table>
 <tbody>
@@ -184,17 +200,44 @@
 </tr>
 </tbody>
 </table>
-<p>J'ai travaillé sur le désigne de la page:</p>
-<ul>
-<li>Création d'un poster pour la ligue<br>
-<img src="poster.png" width="700" height="550"><br>
--Modélisation du terrain<br>
-<img src="pitch2.png" width="300" height="500"></li>
-<li>Restructuration de la page d'accueil<br>
-<img src="index.png" width="700" height="550"></li>
-<li>L'ajout d'une page d'identification (les données sont stockées localement)<br>
-<img src="login.png" width="700" height="550"></li>
-</ul>
+<h3>Front <a id="subsection-2"></a></h3>
+<p>J'ai travaillé sur la création d'un poster pour la ligue, la modélisation du terrain, puis la restructuration de la page d'accueil:</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="poster.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="index.png" width="700" height="550"></td>
+</tr>
+</tbody>
+</table>
+<img src="pitch2.png" width="150" height="300">
+<p>J'ai principalement utiliser du HTML et CSS pour le developpement du front:</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="front4.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="front1.png" width="700" height="550"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="front2.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="front3.png" width="700" height="550"></td>
+</tr>
+</tbody>
+</table>
+<p>Après avoir suivi une formation en JavaScript, j'ai implémenté une fonction d'authentification (pour l'instant locale):<br>
+<img src="login.png" width="700" height="550"></p>
+<p>Ensuite, j'ai ajouté la fonctionnalité de sélectionner les joueurs pour ton équipe. Jusqu'à ce stade, toutes les fonctionnalités sont purement visuelles et aucune n'est encore opérationnelle.<br>
+<img src="Selection.png" width="700" height="550"></p>
+<h3>Back <a id="subsection-3"></a></h3>
+<p>Pour mon deuxieme MON, j'ai acquis des connaissances de base en utilisant Node.js, Express, et MongoDB. J'ai ensuite mis en pratique ces compétences pour développer la partie backend de mon site. Cela m'a permis de créer une structure solide pour gérer les données, les requêtes, et les fonctionnalités interactives de la plateforme, en assurant ainsi une expérience utilisateur complète et fonctionnelle.</p>
+<p>J'ai initié le processus en établissant la première connexion avec MongoDB, en mettant en place une base de données login pour gérer les connexions et en créant une collection user.<br>
+<img src="auth.png" width="700" height="550"></p>
+<p>Le problème réside dans le fait que, même si le formulaire de création de compte est associé à MongoDB, l'authentification reste impossible. Pour remédier à cela, il était nécessaire de mettre en place une session, d'où ma décision d'utiliser la méthode des sessions et des cookies.<br>
+<img src="session.png" width="700" height="550"></p>
+<h2>Récapitulatif de l'avancement du projet et prochaines étapes <a id="section-5"></a></h2>
+<p>J'ai pu rassembler les bases de données, développer le frontend, ainsi que la fonctionnalité d'authentification pour le backend de mon projet. Il me reste encore à mettre en place la fonctionnalité de création d'équipe du côté backend, à concevoir un système de points, et éventuellement à permettre la comparaison des points entre les utilisateurs pour compléter l'ensemble des fonctionnalités souhaitées.</p>
 
 
 </article>
