@@ -95,8 +95,115 @@ while d.position != valeur_arrêt:
 print(i)
 ```
 
-2. Dans un deuxième temps, j'ai modélisé un jeu de cartes qui permet de jouer à une sorte de bataille.
+2. Dans un deuxième temps, j'ai modélisé un jeu de cartes que l'on mélange et dans lequel on tire trois cartes:
 
+```py
+SEPT = "sept"
+HUIT = "huit"
+NEUF = "neuf"
+DIX = "dix"
+VALET = "valet"
+DAME = "dame"
+ROI = "roi"
+AS = "as"
+
+PIQUE ="pique"
+COEUR = "coeur"
+CARREAU = "carreau"
+TREFLE = "trefle"
+
+VALEURS = [SEPT, HUIT, NEUF, DIX, VALET, DAME, ROI, AS]
+COULEURS = [TREFLE, CARREAU, COEUR, PIQUE]
+
+class Carte:
+    def __init__(self, valeur, couleur):
+        self.valeur = valeur
+        self.couleur = couleur
+
+    def __str__(self):
+        v = self.valeur
+        c = self.couleur
+        print(v + " de " + c)
+
+#opérations de comparaison pour une potentielle suite du MON où l'on crée un jeu avec les cartes
+
+    def __eq__(self, carte2):
+        print (self.valeur == carte2.valeur and self.couleur == carte2.couleur)
+
+    def __ne__(self, carte2):
+        print (self.valeur != carte2.valeur or self.couleur != carte2.couleur)
+
+    def __lt__(self, carte2):
+        if self.valeur < carte2.valeur :
+            return True
+        elif self.valeur == carte2.valeur :
+            return COULEURS.index(self.couleur) < COULEURS.index(carte2.couleur)
+        else :
+            return False
+        
+    def __gt__(self, carte2) :
+        if self.valeur > carte2.valeur :
+            return True
+        elif self.valeur == carte2.valeur :
+            return COULEURS.index(self.couleur) > COULEURS.index(carte2.couleur)
+        else :
+            return False
+        
+    def __le__(self, carte2) :
+        if self.valeur <= carte2.valeur :
+            return True
+        elif self.valeur == carte2.valeur :
+            return COULEURS.index(self.couleur) <= COULEURS.index(carte2.couleur)
+        else :
+            return False
+        
+    def __ge__(self, carte2) :
+        if self.valeur >= carte2.valeur :
+            return True
+        elif self.valeur == carte2.valeur :
+            return COULEURS.index(self.couleur) >= COULEURS.index(carte2.couleur)
+        else :
+            return False
+```
+
+Avec les tests associés :
+```py
+from carte import *
+import random
+
+def test_init():
+    c = Carte(SEPT, PIQUE)
+    assert c.valeur == SEPT
+    assert c.couleur == PIQUE
+
+def test__str__():
+    c = Carte(SEPT, PIQUE)
+    assert c.__str__ == "sept de pique"
+
+```
+
+Et le jeu en lui même :
+```py
+import random
+from carte import *
+
+PAQUET = [Carte(SEPT, TREFLE), Carte(HUIT, TREFLE), Carte(NEUF, TREFLE), Carte(DIX, TREFLE), Carte (VALET, TREFLE), Carte(DAME, TREFLE), Carte (ROI, TREFLE), Carte(AS, TREFLE),
+          Carte(SEPT, CARREAU), Carte(HUIT, CARREAU), Carte(NEUF, CARREAU), Carte(DIX, CARREAU), Carte (VALET, CARREAU), Carte(DAME, CARREAU), Carte (ROI, CARREAU), Carte(AS, CARREAU),
+          Carte(SEPT, COEUR), Carte(HUIT, COEUR), Carte(NEUF, COEUR), Carte(DIX, COEUR), Carte (VALET, COEUR), Carte(DAME, COEUR), Carte (ROI, COEUR), Carte(AS, COEUR),
+          Carte(SEPT, PIQUE), Carte(HUIT, PIQUE), Carte(NEUF, PIQUE), Carte(DIX, PIQUE), Carte (VALET, PIQUE), Carte(DAME, PIQUE), Carte (ROI, PIQUE), Carte(AS, PIQUE)]
+
+#userstory => tirer 3 cartes dans un paquet mélangé
+
+random.shuffle(PAQUET)
+
+cartes_tirees = random.sample(PAQUET, 3)
+
+for i in range (len(cartes_tirees)):
+    carte = cartes_tirees[i]
+    print(carte)
+```
+
+J'ai ensuite réfléchi à la suite de ce TD qui a pour but de créer une sorte de bataille avec ce jeu de cartes et les fonctions de comparaison, mais je n'ai pas eu le temps de l'implémenter proprement.
 
 ## 4. Pour approfondir
 
