@@ -73,11 +73,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">frontend</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -132,7 +136,6 @@
 <div class="pl-8 mr-8">
 <p>Lien de mon repo Github : <a href="https://github.com/LucasRioual/Curiolab/tree/main">https://github.com/LucasRioual/Curiolab/tree/main</a></p>
 </div></div>
-<h2>Mes objectifs</h2>
 <h2>Sommaire</h2>
 <ol>
 <li>Présentation</li>
@@ -177,11 +180,99 @@ Voici le resultat du sprint 1 :</p>
 <p>Pour la section <strong>&quot;Nos Produits&quot;</strong>, j'ai ajouté un effet de zoom lorsque la souris passe sur un élement.</p>
 <h2>Bilan du sprint 1</h2>
 <p>Je n'ai pas réalisé tous mes objectifs initiaux. En effet, la page d'accueil de mon site n'est pas finie. Il me reste à réaliser des sections qui permettent d'en savoir plus sur l'entreprise. De plus, le site n'est pas responsive. Il s'adapte mals au différentes tailles d'écran.</p>
-<p>Pour le sprint 2, je souhaite :</p>
+<h2>Objectif du sprint 2</h2>
+<p>Pour le sprint 2, je souhaite finir la page d'<strong>accueil</strong> et réaliser la page présentant le <strong>produit</strong>.</p>
+<p>Pour la <strong>page d'accueil</strong> :</p>
 <ul>
-<li>Finir la page d'accueil</li>
-<li>Réaliser la page présentant le produit</li>
+<li>Trouver une charte graphique qui me plaît</li>
+<li>Régler le problème de texture du modèle 3D</li>
+<li>Remplacer la section <strong>&quot;Nos Produits</strong> par une section présentant l'entreprise</li>
 </ul>
+<p>Pour la <strong>page Produit</strong></p>
+<ul>
+<li>Afficher une modèle 3D intéractif</li>
+<li>Afficher des photos du produits</li>
+<li>Afficher des informations utiles (prix, titre, description, difficulté ...).</li>
+<li>Afficher une description détaillée du produit.</li>
+</ul>
+<h2>Sprint 2</h2>
+<h3>Retour sur la maquette</h3>
+<p>Je n’étais pas  satisfait de ma première maquette. Je n’arrivais pas à me projeter et avancer dans le code car je trouvais le design moyen. J’ai donc fait le choix de retravailler la maquette.</p>
+<p>Je suis donc retourné sur Figma pour réaliser une maquette plus fidèle à mes envies.</p>
+<img src="maquette2.PNG">
+<p>L’objectif est de rajouter le modèle 3d en haut de la page produit et en haut de la page accueil.</p>
+<p>Une fois la maquette réalisée, j’ai pu continuer le code.</p>
+<h3>Page d’accueil</h3>
+<p>Pour cette page, je n’ai pas eu beaucoup de travail à faire car j’avais déjà quasiment fini lors du sprint 1. J’ai simplement modifié la deuxième section pour inclure une présentation succincte de l’entreprise.</p>
+<img src="page1.PNG">
+<img src="page1_2.PNG">
+<p>La texture de la boîte m’a posé encore beaucoup de problème. Toutes les textures de Blender ne sont pas importable dans Three.js. Je n’ai pas encore trouvé de solution à ce problème, mais je compte me pencher dessus plus sérieusement lorsque j’aurai fini la conception de ma boîte.</p>
+<p>Le bouton “en savoir plus” n’est pas fonctionnel car je n’ai pas crée la page présentant l’entreprise.</p>
+<h3>Page Produit</h3>
+<img src="page2.PNG">
+<img src="page2_2.PNG">
+<img src="page2_3.PNG">
+<p>Voilà le résultat de ma page <strong>Produit.</strong></p>
+<p><strong>Le modèle 3D</strong> est interactif. On peut tourner autour avec la souris. En plus, j’ai rajouté des particules qui gravitent autour de la boîte. Pour cela, j’ai utilisé <a href="https://www.youtube.com/watch?v=Uh7yvnBnLj0&amp;t=606s">ce tuto</a>.</p>
+<p>J’ai un petit soucis de lumière. Quand on tourne l’objet, on ne distingue plus ses formes car la scène devient trop sombre</p>
+<p>Ensuite, je voulais que cette page soit dynamique. C’est à dire que cette page s’adapte en fonction du produit visualisé. J’ai donc crée un fichier JSON avec 4 produits tests :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"titre"</span><span class="token operator">:</span> <span class="token string">"Ring Box"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"soustitre"</span><span class="token operator">:</span> <span class="token string">"Puzzle mécanique en bois"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"Boîte à énigme à 40 mouvements minimum avec engrenages, mécanismes et énigmes."</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prix"</span><span class="token operator">:</span> <span class="token number">149</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prixht"</span><span class="token operator">:</span> <span class="token number">99</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"difficulte"</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"ressource"</span><span class="token operator">:</span><span class="token string">"./Ressource/RingBox"</span>
+        
+   
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"titre"</span><span class="token operator">:</span> <span class="token string">"Truc Box"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"soustitre"</span><span class="token operator">:</span> <span class="token string">"Puzzle mécanique en bois"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"Boîte à énigme de test"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prix"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prixht"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"difficulte"</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"ressource"</span><span class="token operator">:</span><span class="token string">"./Ressource/RingBox"</span>
+   
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"titre"</span><span class="token operator">:</span> <span class="token string">"Troisième boîte"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"soustitre"</span><span class="token operator">:</span> <span class="token string">"Puzzle mécanique en bois"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"Boîte à énigme de test"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prix"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prixht"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"difficulte"</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"ressource"</span><span class="token operator">:</span><span class="token string">"./Ressource/RingBox"</span>
+   
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"titre"</span><span class="token operator">:</span> <span class="token string">"Quatrième boîte"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"soustitre"</span><span class="token operator">:</span> <span class="token string">"Puzzle mécanique en bois"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"Boîte à énigme de test"</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prix"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"prixht"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"difficulte"</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token string-property property">"ressource"</span><span class="token operator">:</span><span class="token string">"./Ressource/RingBox"</span>
+   
+      <span class="token punctuation">}</span>
+      
+<span class="token punctuation">]</span>
+</code></pre>
+<p>L’attribut “Ressource” désigne le dossier qui contient les images de la boîte et le modèle 3d. Pour l’instant, toutes les boîtes désignent le même dossier.</p>
+<p>Ainsi, cette page est dynamique et affiche les données en fonction de ce tableau JSON.</p>
+<img src="pagebis.PNG">
+<p>Voilà la page si on affiche <strong>“Truc Box”</strong>.</p>
+<h2>Bilan du sprint 2</h2>
+<p>Globalement, je suis content du résultat. J’ai pu découvrir beaucoup de notion de frontend grâce à ce projet mais ce projet m’a pris plus de 20h.</p>
+<p>Ce projet est encore loin d’être fini si je veux vraiment avoir un site web commercial.</p>
+<p>J’aimerai continuer ce projet pendant le temps 2 en me concentrant sur le backend. Notamment pour gérer le panier et l’affichage des produits.</p>
 
 
 </article>
