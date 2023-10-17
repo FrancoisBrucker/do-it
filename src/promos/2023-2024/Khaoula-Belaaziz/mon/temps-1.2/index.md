@@ -13,6 +13,7 @@ tags:
   - "Notion"
   - "Organisation"
   - "Gestion de projet"
+  - "débutant"
 
 résumé: ""
 ---
