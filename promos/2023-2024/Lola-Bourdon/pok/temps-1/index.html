@@ -160,7 +160,7 @@
 <li>Faire le lien entre les pages et les fonctionnalités [non]</li>
 </ul>
 <p><strong>Sujet et fonctionnaliés de l'application :</strong><br>
-Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieurs montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre</p>
+Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieurs montres (du moins les mettre au panier) et/ou proposer à la plateforme de vendre leurs montres : La bonne Montre</p>
 <p>Fonctionnalités nécessaires :</p>
 <ol>
 <li>Log in/ sign Up et déconnections</li>
@@ -190,49 +190,56 @@ Idée : proposer une application où les utilisateurs pourraient acheter une ou 
 <ol>
 <li>Terminer de me former à <a href="http://bubble.io/">bubble.io/</a> [ok]</li>
 <li>Terminer la page d'accueil, les différentes pages et la structure [ok]</li>
-<li>Commencer les liens entre les pages et les fonctionnalités [ok]</li>
+<li>Faire les liens entre les pages et les fonctionnalités [ok]</li>
 </ol>
-<h3>Design de LaBonneMontre</h3>
-<p>Pour ce sprint 2, j'ai terminé ma formation à bubble puis j'ai commencé par faire le design de l'application web.</p>
+<h3>Méthodologie</h3>
+<p>Pour ce second sprint j'ai avancé par phases :</p>
+<ol>
+<li>Premier design de l'application web</li>
+<li>Terminer la base de donnée</li>
+<li>Workflow entre les différentes pages et fonctions</li>
+<li>Design final</li>
+<li>test de la plateforme</li>
+</ol>
+<h3>Premier Design de LaBonneMontre</h3>
 <ul>
 <li>
-<p>Desigh de la page principale.<br>
+<p>Design de la page principale.<br>
 J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.<br>
 <img src="screen_pok1.png" alt="bubble"><br>
 Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.<br>
 <img src="screen_pok2.png" alt="bubble"><br>
-J'ai ajouté deux boutons cliquables pour se connecter/enregistrer. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat final suivant : (en terme de design)<br>
+J'ai ajouté deux boutons cliquables pour se connecter/enregistrer et un menu déroulant. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat suivant : (en terme de design)<br>
 <img src="screen_accueil.png" alt="bubble"></p>
 </li>
 <li>
-<p>Design de la page listant les montres :<br>
+<p>Design de la page listant les montres.<br>
+En ce qui concerne la page où l'utilisateur peut visualiser les montres le premier design assez simple est fonctionnel mais vraiment pas très esthétique.<br>
 <img src="screen_liste_montre.png" alt="bubble"></p>
-</li>
-</ul>
-<h4>Donner suite aux boutons cliquables</h4>
-<p>Sur ma page principale, j'ai actuellement 5 boutons cliquables (sign up, log in, icone personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up.</p>
-<ul>
-<li>
-<p><strong>Log In</strong> j'ai décidé que le bouton log in afficherai un <em>popup</em>, cela donne le résultat suivant:<br>
-<img src="screen_login.png" alt="bubble"></p>
-</li>
-<li>
-<p><strong>Icon personnel</strong> renvoie quant à lui un menu déroulant qui permettra d'accéder à son profil, ses favoris, son panier, donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter<br>
-<img src="screen_menu.png" alt="bubble"></p>
 </li>
 <li>
 <p>Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :<br>
 <img src="scree_signup.png" alt="bubble"><br>
-Ce composant est pratique mais pas très esthétique.</p>
+Ce composant est pratique mais pas très esthétique, je vais l'améliore et le compléter par la suite.</p>
 </li>
 </ul>
+<h3>La Base de donnée,</h3>
+<p>Pour la base de donnée de ce projet, je vais avoir besoin de deux &quot;Data types&quot; : les Utilisateur &quot;User (par défaut)&quot;  et les montres. La page Sign Up permet d'implémenter la base de donnée user et la page Vendre_montre implémente la base de donnée montre ainsi que la page vendre montre.</p>
+<h4>Donner suite aux boutons cliquables</h4>
+<p>Sur ma page principale, j'ai actuellement 5 boutons cliquables (sign up, log in, icone personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up.</p>
+<ul>
+<li><strong>Log In</strong> j'ai décidé que le bouton log in afficherai un <em>popup</em>, cela donne le résultat suivant:<br>
+<img src="screen_login.png" alt="bubble"></li>
+<li><strong>Icon personnel</strong> renvoie quant à lui un menu déroulant qui permettra d'accéder à son profil, ses favoris, son panier, donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter<br>
+<img src="screen_menu.png" alt="bubble"></li>
+</ul>
 <p>Pour cela, j'ai ajouté deux nouvelles pages, en commençant par le design : <strong>index &gt; create a new page &gt; name new page &gt; create</strong></p>
+<h3>Gérer les workflow</h3>
 <p><img src="screen_liste_montre2.png" alt="bubble"><br>
-<img src="screen_trouver_montre.png" alt="bubble"><br>
 <img src="screen_signup_t.png" alt="bubble"><br>
 <img src="screen_accueil_t.png" alt="bubble"><br>
 <img src="screen_profil_user.png" alt="bubble"><br>
-<img src="screen_builder_profil.png" alt="bubble"><br>
+<img src="Screen_builder_profil.png" alt="bubble"><br>
 <img src="screen_formulaire_vendre.png" alt="bubble"><br>
 <img src="scree_felicitations.png" alt="bubble"></p>
 
