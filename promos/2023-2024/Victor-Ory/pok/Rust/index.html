@@ -75,7 +75,7 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Rust</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Super facile</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Intermédiaire</li>
                 
 
             </ul>
@@ -146,7 +146,7 @@
 <div class="mx-8 pb-2">
 <ul>
 <li>Niveau novice</li>
-<li>Pré-requis de C++</li>
+<li>Pré-requis de C++ ( que je n'ai pas trop)</li>
 </ul>
 </div>
 </details>     
@@ -174,15 +174,19 @@
 <li><a href="https://practice.rs/why-exercise.html">Rust by Practise</a></li>
 <li><a href="https://github.com/rust-lang/rustlings">GitHub Exercice</a></li>
 <li><a href="https://github.com/wasmflow/node-to-rust/raw/HEAD/from-javascript-to-rust.pdf">Livre &quot;From Javascript to Rust&quot;</a></li>
+<li><a href="../../../Diouf-Asssane/mon/Rust/">MON de Assane</a></li>
+<li><a href="../../../Diouf-Asssane/pok/temps-1/">POK de Assane</a></li>
 </ul>
 </div>
 </details>     
 </div>
-<h1>Objectifs</h1>
-<p><strong>Rust</strong> est un language efficace et polyvalent, il peut faire du front, du back, du CLI, des jeux, du programme embarqué.</p>
-<p>Donc je vais essayer d'en apprendre les fondements et de tester mes compétences sur le projet suivant :</p>
+<h2>Objectifs</h2>
+<p>Voici les objectifs que je me suis fixé :</p>
 <ul>
-<li>Créer une application pour écouter Spotify comme celle disponible à ce <a href="https://github.com/hrkfdn/ncspot">repo</a> qui est conseillé par <a href="https://practice.rs/why-exercise.html">Rust By Practise</a>.</li>
+<li>Finir le livre <a href="https://doc.rust-lang.org/stable/book/title-page.html">Rust Documentation</a> (★★★☆☆)</li>
+<li>Finir les exercices de <a href="https://github.com/rust-lang/rustlings">GitHub Exercice</a>(★★★★☆)</li>
+<li>Tester mes connaissances sur le projet du Chapitre 12 de la <a href="https://doc.rust-lang.org/stable/book/title-page.html">Documentation Rust</a>(★★★★☆)</li>
+<li>Réaliser un outil en commande Line pour écouter de la musique Spotify (★★★★★★★)</li>
 </ul>
 <h1>Prévision pour le point 1 :</h1>
 <ul>
@@ -204,15 +208,36 @@
 <li>Les pointeurs intelligents</li>
 <li>La gestion de la propriété et des emprunts (ownership/borrowship)</li>
 </ul>
-<p>Je vais suivre mon progrès en accomplissant les 96 exercices progressivement plus complexes du référentiel <a href="https://github.com/rust-lang/rustlings">Rustlings</a>, qui couvrent ces concepts essentiels. Actuellement, j'en suis à la première étape de progression : [&gt;-----------------------------------------------------------] 1/96 (1.0 %), mais j'ai pour objectif d'atteindre 100 %.</p>
+<p>Je vais suivre mon progrès en accomplissant les 96 exercices progressivement plus complexes du référentiel <a href="https://github.com/rust-lang/rustlings">Rustlings</a>, qui couvrent ces concepts essentiels. Actuellement, j'en suis à la première étape de progression :<br>
+[&gt;-----------------------------------------------------------] 1/96 (1.0 %), mais j'ai pour objectif d'atteindre 100 %.</p>
 <p>Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet proposé dans la documentation Rust, à savoir <a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Projet : Gestionnaire de lignes de commande</a>.</p>
 <h3>Réalité du parcours</h3>
-<p>J'ai réussi à lire l'intégralité de la <a href="https://doc.rust-lang.org/stable/book/title-page.html">documentation Rust</a>, où les concepts clés ont été expliqués. Toutefois, pour consolider ces connaissances, j'ai dû réaliser des exercices supplémentaires proposés par <a href="https://practice.rs/why-exercise.html">Rust By Practice</a>. Mon défi personnel a été d'autant plus grand car mes bases en C++ sont limitées, étant donné que ma formation initiale dans ce domaine remonte à un certain temps.</p>
+<h2><a href="https://doc.rust-lang.org/stable/book/title-page.html">Rust Documentation</a></h2>
+<ul>
+<li>Fondamentale, complète, accessible et claire =  nécessaire mais pas suffisant *</li>
+</ul>
+<p>J'ai réussi à lire le <a href="https://doc.rust-lang.org/stable/book/title-page.html">livre Rust</a> jusqu'au 15ème chapitre, où les concepts clés ont été expliqués et on commence à aller ne profondeur. Toutefois, pour consolider ces connaissances, j'ai dû réaliser des exercices supplémentaires proposés par <a href="https://practice.rs/why-exercise.html">Rust By Practice</a>. Mon défi personnel a été d'autant plus grand car mes bases en C++ sont limitées, étant donné que ma formation initiale dans ce domaine remonte à un certain temps.</p>
+<h3><a href="https://github.com/rust-lang/rustlings">GitHub Exercice</a></h3>
+<ul>
+<li>Bon complément au <a href="https://doc.rust-lang.org/stable/book/title-page.html">livre Rust</a> *</li>
+</ul>
+<p>Cela se concrétise notamment avec la complétion du projet <a href="https://github.com/rust-lang/rustlings">GitHub Exercice</a> à hauteur de 67/97 à cause de concept avancé que je n'ai pas encore vu comme le multi thread programming.</p>
 <p>Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui reproduit le comportement de &quot;grep&quot;, c'est-à-dire un outil qui filtre la sortie d'une commande exécutée dans l'invite de commandes.</p>
+<h2>Pratique</h2>
+<ul>
+<li>Facile avec les guides toutefois quand on navigue à vue, cela devient bien plus dure, un bon entraînement. Ça force à penser à TOUT ce qu'on a appris *</li>
+</ul>
 <p>Mon travail est accessible dans ce <a href="https://github.com/Hagarde/CmdLineProject">repo</a>.<br>
 Ce projet repose sur le <a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">tutoriel</a> proposé par le livre, toutefois j'ai souhaité commencer avec puis ajouter de la complexité sans suivre le tutoriel pour réellement confronter mes connaissances à la réalité.</p>
-<h2>Objectif en cours</h2>
-<p>Dans la prochaine phase de mon parcours d'apprentissage, je vais me concentrer sur...</p>
+<h2>Conclusion</h2>
+<p>J'ai pas été très efficace pour cette tâche en raison de ma confiance en mes capacités en C++ après seulement le cours de 2A. Les concepts ont été dures à appréhender et ont consommé la plupart de mon temps et je me suis éparpillé entre les différentes sources pour essayer d'avoir des points de vue différents sur les concepts que je ne comprenais pas. Cela explique aussi le fait que j'ai passé beaucoup de temps sur les exercices dures du <a href="https://github.com/rust-lang/rustlings">GitHub</a>.</p>
+<p>Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique.</p>
+<p>Source explorées :</p>
+<ul>
+<li><a href="https://annas-archive.org/md5/77a5209a50709593652c64d097088439">Rust to javascript</a> ( parce que j'ai pas mal d'expérience en javascript )</li>
+<li><a href="https://annas-archive.org/md5/819c53acaf3bff8c145179d26aa8cd0a">Zero To Production in Rust - An introduction to backend development</a> ( bases = pré-requis )</li>
+<li><a href="https://www.youtube.com/watch?v=BpPEoZW5IiY">Vidéo Youtube</a> ( lent mais représentatif de ma progression )</li>
+</ul>
 
 
 </article>
