@@ -46,7 +46,7 @@ Pour la réalisation de ce premier POK, j'aimerai utiliser les connaissances que
 - Faire le lien entre les pages et les fonctionnalités [non]
 
 **Sujet et fonctionnaliés de l'application :**
-Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieurs montres (du moins les mettre au panier) et/ou proposer à la plateforme de les racheter : La bonne Montre
+Idée : proposer une application où les utilisateurs pourraient acheter une ou plusieurs montres (du moins les mettre au panier) et/ou proposer à la plateforme de vendre leurs montres : La bonne Montre
 
 Fonctionnalités nécessaires :
 
@@ -81,21 +81,40 @@ Les objectifs techniques du sprint 2 sont :
 
 1. Terminer de me former à bubble.io/ [ok]
 2. Terminer la page d'accueil, les différentes pages et la structure [ok]
-3. Commencer les liens entre les pages et les fonctionnalités [ok]
+3. Faire les liens entre les pages et les fonctionnalités [ok]
 
-### Design de LaBonneMontre
+### Méthodologie
 
- Pour ce sprint 2, j'ai terminé ma formation à bubble puis j'ai commencé par faire le design de l'application web.
-- Desigh de la page principale.
+Pour ce second sprint j'ai avancé par phases : 
+
+1. Premier design de l'application web
+2. Terminer la base de donnée
+3. Workflow entre les différentes pages et fonctions
+4. Design final
+5. test de la plateforme
+
+### Premier Design de LaBonneMontre
+
+
+- Design de la page principale.
  J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.
 ![bubble](screen_pok1.png)
 Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.
 ![bubble](screen_pok2.png)
-J'ai ajouté deux boutons cliquables pour se connecter/enregistrer. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat final suivant : (en terme de design)
+J'ai ajouté deux boutons cliquables pour se connecter/enregistrer et un menu déroulant. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat suivant : (en terme de design)
 ![bubble](screen_accueil.png)
 
-- Design de la page listant les montres : 
+- Design de la page listant les montres.
+En ce qui concerne la page où l'utilisateur peut visualiser les montres le premier design assez simple est fonctionnel mais vraiment pas très esthétique.
 ![bubble](screen_liste_montre.png)
+
+- Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
+![bubble](scree_signup.png)
+Ce composant est pratique mais pas très esthétique, je vais l'améliore et le compléter par la suite.
+
+### La Base de donnée,
+
+Pour la base de donnée de ce projet, je vais avoir besoin de deux "Data types" : les Utilisateur "User (par défaut)"  et les montres. La page Sign Up permet d'implémenter la base de donnée user et la page Vendre_montre implémente la base de donnée montre ainsi que la page vendre montre.
 
 #### Donner suite aux boutons cliquables
 
@@ -106,17 +125,15 @@ Sur ma page principale, j'ai actuellement 5 boutons cliquables (sign up, log in,
 * **Icon personnel** renvoie quant à lui un menu déroulant qui permettra d'accéder à son profil, ses favoris, son panier, donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter
 ![bubble](screen_menu.png)
 
-* Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
-![bubble](scree_signup.png)
-Ce composant est pratique mais pas très esthétique.
 
 Pour cela, j'ai ajouté deux nouvelles pages, en commençant par le design : **index > create a new page > name new page > create**
 
+### Gérer les workflow
+
 ![bubble](screen_liste_montre2.png)
-![bubble](screen_trouver_montre.png)
 ![bubble](screen_signup_t.png)
 ![bubble](screen_accueil_t.png)
 ![bubble](screen_profil_user.png)
-![bubble](screen_builder_profil.png)
+![bubble](Screen_builder_profil.png)
 ![bubble](screen_formulaire_vendre.png)
 ![bubble](scree_felicitations.png)
