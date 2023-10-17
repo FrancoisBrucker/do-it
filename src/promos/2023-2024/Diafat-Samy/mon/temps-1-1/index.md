@@ -16,9 +16,6 @@ tags:
 résumé: "Revu des bases de l'HTML et du css, puis initiation à Bootstrap."
 ---
 
-{%prerequis 'MON débutant'%} 
-Ce MON ne nécessite pas de prérequis car il reprend les bases du HTML et du CSS.
-{%endprerequis%}
 
 
 ## Résumé
