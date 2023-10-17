@@ -35,13 +35,11 @@ Pour recommencer une formation sur excel a partir de zéro, j'ai suivi le cours 
 10. Validations de données
 11. Tableau croisé dynamique
 
-J'ai réalisé les exercices proposé tout au long de la formation.
+J'ai réalisé les exercices proposés tout au long de la formation puis les exercices proposés par un membre de ma famille, cadre dans une grande entreprise.
 
-État des lieux le 9 octobre : 10+h de formation - rédaction
+### Chapitres 1 à 7 - revoir les bases
 
-### Chapitres 1 à 7- revoir les bases
-
-Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. POur cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
+Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. Pour cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
 
 - L'utilisation du `$` permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
   ![excel](EXCEL2.png)
