@@ -121,7 +121,7 @@ J'ai ajouté deux boutons cliquables pour se connecter/enregistrer et un menu d�
 ![bubble](screen_accueil.png)
 
 Design de la page listant les montres :
-En ce qui concerne la page où l'utilisateur peut visualiser les montres le premier design assez simple est fonctionnel mais vraiment pas très esthétique.
+En ce qui concerne la page où l'utilisateur peut visualiser les montres, le premier design assez simple est fonctionnel mais vraiment pas très esthétique.
 ![bubble](screen_liste_montre.png)
 
 Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
@@ -140,7 +140,7 @@ Pour la base de donnée de ce projet, je vais avoir besoin de trois *"Data types
 Dans l'onglet Data > App Data, on peut voir les éléments de chaque *"Data types"* déjà implémentés ou ajoutés manuellement.
 ![bubble](screen_BDD.png)
 
-#### Workflow 
+### Workflow 
 
 Un workflow représente une série d'actions automatisées qui se déclenchent en réponse à un événement donné, comme un clic sur un bouton.
 Par exemple, sur la page d'accueil, il y a 5 boutons cliquables (sign up, log in, icône personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up. Cela représente des workflow simples.
@@ -167,12 +167,12 @@ La page **Mon profil** affiche les données de l'utilisateur connecté et permet
 ![bubble](screen_builder_profil.png)
 ce qui donne le résultat suivant sur le site :
 ![bubble](screen_profil_user.png)
-Les informations peuvent être modifiées en temps réel sur le site lorsque l'utilisateur entre la donnée à modifier puis clique sur **Actualiser**
-La page **Vendre une montre** affiche un formulaire qui permet de renseigner une montre que l'on souhaite vendre. On y entre diverses informations et une photo, qui vont directement implémenter la base de donnée montre et la page liste_montre après avoir cliquer sur le bouton **soumettre**
+Les informations peuvent être modifiées en temps réel sur le site lorsque l'utilisateur entre la donnée à modifier puis clique sur **Actualiser**.
+La page **Vendre une montre** affiche un formulaire qui permet de renseigner une montre que l'on souhaite vendre. On y entre diverses informations et une photo, qui vont directement implémenter la base de donnée **montre** et la page liste_montre après avoir cliqué sur le bouton **soumettre**.
 ![bubble](screen_formulaire_vendre.png)
 L'action de cliquer sur le bouton **soumettre** qui ajoute une montre à la base de donnée est traduite par le workflow suivant : 
 ![bubble](screen_workflow.png)
-Une fois le formulaire remplis, le bouton **soumettre** amène a la page suivante : 
+Une fois le formulaire rempli, le bouton **soumettre** amène a la page suivante, avec  des boutons fonctionnels : 
 ![bubble](scree_felicitations.png)
 Sur la page Liste_montre, l'utilisateur a la possibilité d'ajouter au panier en cliquant sur le bouton correspondant. Cela apporte une alerte *Ajouté au panier* et  implémente la base de donnée **panier**. 
 ![bubble](screen_panier.png)
@@ -188,8 +188,8 @@ Lors de ce second sprint, j'ai réussi à mieux m'organiser et répartir les tâ
 4. proposer une montre à la plateforme
 5. ajouter au panier
 
-J'ai aussi passer beaucoup de temps à gérer les workflow et à comprendre mes erreurs.
+J'ai aussi passé beaucoup de temps à gérer les workflow et à comprendre mes erreurs. Actuellement le design n'est pas le plus idéal mais je ne souhaitais pas y passer trop de temps, préférant me concentrer sur les workflow.
 
 ### Conclusion générale
 
-Ce POK m'a permis de mettre en pratique mes connaissances sur Bubble au moyen d'une application WEB. J'ai pu réaliser les fonctionnalités nécessaires souhaitées. En revanche, j'ai passé beaucoup de temps à gérer les workflow et mes erreurs sur les workflow, notamment liées au header, ce qui ne m'a pas permis d'ajouter plus de fonctionnalités à mon application.
+Ce POK m'a permis de mettre en pratique mes connaissances sur Bubble au moyen d'une application WEB. Même si l'application n'est pas parfaite et montre encore quelques erreurs, j'ai pu réaliser les fonctionnalités nécessaires souhaitées. En revanche, j'ai passé beaucoup de temps à gérer les workflow et mes erreurs sur les workflow, notamment liées au header, ce qui ne m'a pas permis d'ajouter plus de fonctionnalités à mon application.
