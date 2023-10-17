@@ -127,11 +127,11 @@
 
 <p><a href="https://github.com/paulvietor/POK1_Not_Minecraft">Dépôt Github</a></p>
 <p>Mon objectif pour ce POK est de créer un programme qui génère un monde composé de voxels, puis affiche ce monde et permet se se déplacer dedans.</p>
-<h2>0. Techologies, bibliothèques et ressources</h2>
+<h2>Techologies, bibliothèques et ressources</h2>
 <p>J'ai décidé de l'écrire en C++, en utilisant OpenGL pour l'affichage.<br>
 De plus, j'utilise quelques bibliothèques supplémentaires pour gérer la fenêtre (GLFW3), charger des images (stb_images), créer certains objets mathématiques tels que des matrices (glm), et accéder au fonctions OpenGL (glad).<br>
 Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com">LearnOpenGL</a>, j'utilise également <a href="https://en.cppreference.com/w/">cppreference</a>.</p>
-<h2>1. Objectifs pour le premier point POK</h2>
+<h2>Objectifs pour le premier point POK</h2>
 <p>Je ne connaissais pas OpenGL avant de débuter ce POK donc pour le premier point, j'aimerais réussir à afficher un premier cube avec une texture et de l'éclairage basique.</p>
 <p>Cela peut paraître bien peu, mais les quelques bibliothèques avec lesquelles je travaille sont d'assez bas niveau : par exemple les seules formes géométriques qu'il est possible d'afficher avec OpenGL sont des triangles, à partir de leurs sommets, des lignes et des points. Il faut donc transformer tout ce qu'on veut afficher en un ensemble de telles formes.</p>
 <p>Ainsi, l'affichage de ce simple cube requiert :</p>
@@ -146,7 +146,7 @@ Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com
 <li>Création de <em>shaders</em> pour placer le cube devant la &quot;caméra&quot; et dessiner les textures au bon endroit</li>
 </ul>
 <p>Ainsi, ça fait un certain nombre de concepts à apprendre, donc même si c'est basique, ça me permettrait d'apprendre les bases d'OpenGL, et je pourrai enchaîner sur quelque chose de plus complexe pour la seconde moitié du POK.</p>
-<h2>2. Progrès jusqu'au premier point POK</h2>
+<h2>Progrès après le premier sprint</h2>
 <p>Pour ce premier point POK, j'ai réussi à afficher un cube texturé, qui tourne, mais sans réel éclairage, puisque la structure de données que j'utilisais ne permet pas de le faire de façon pratique, il va donc falloir que j'en change.</p>
 <ul>
 <li>Rendu indicé : 8 sommets, et une liste de 36 indices qui définissent les 12 triangles</li>
@@ -156,7 +156,7 @@ Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com
 <li>Matrice de projection, qui permet d'avoir un rendu en perspective</li>
 <li>Texture <em>cube map</em> : une texture spéciale qui est à la surface d'un cube centré en (0, 0, 0), OpenGL nous permet de récupérer la couleur qui se trouve dans une direction</li>
 </ul>
-<h2>3. Objectifs pour le deuxième point</h2>
+<h2>Objectifs pour le deuxième point</h2>
 <ul>
 <li>Éclairage</li>
 <li>Génération d'un monde en utilisant une fonction de bruit (bruit de Perlin ou bruit simplex)</li>
@@ -165,6 +165,8 @@ Enfin, pour apprendre OpenGL, j'utilise le site <a href="https://learnopengl.com
 <li>Support de la manette ?</li>
 <li>Optimisations ?</li>
 </ul>
+<h2>Progrès après le deuxième sprint</h2>
+<p>Dans ce deuxième sprint j'ai réussi à réaliser presque tous les objectifs que je m'étais fixé. Je n'ai malheureusement pas eu le temps d'implémenter un support manette, ni d'optimiser le rendu, mais cela n'est de toute façon pas nécessaire puisque j'atteins très largement les 60 images par secondes que peut afficher mon écran.</p>
 
 
 </article>
