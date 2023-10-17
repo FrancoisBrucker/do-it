@@ -86,7 +86,7 @@ Cela se concrétise notamment avec la complétion du projet [GitHub Exercice](ht
 
 ## Conclusion de ces travaux théoriques
 
-Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères car totalement nouveaux pour moment. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify. J'ai opté pour un outil en ligne de commande qui recherche un chaîne de caractère au sein d'un texte.
+Les concepts les plus complexes à assimiler ont été les cycles de vie et la manipulation des chaînes de caractères car totalement nouveaux pour moment. En conséquence, je n'ai pas pu progresser aussi rapidement que prévu pendant mes 20 heures d'apprentissage. Néanmoins, j'ai tenu à créer quelque chose de concret, c'est pourquoi j'ai renoncé à l'idée de développer un outil en ligne de commande pour écouter Spotify car encore trop dur pour moi. J'ai opté pour un outil en ligne de commande qui recherche un chaîne de caractère au sein d'un texte.
 
 ## La pratique
 
