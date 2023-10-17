@@ -216,7 +216,7 @@ player_info['id']
 
 Par la suite, j'ai créé des fonctions me permettant de faire des requêtes dans plusieurs sources différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.
 
-{% details "Cliquez pour voir le code **Create_timetable**" %}
+{% details "Cliquez pour voir le code" %}
 ```python
 # Cette fonction permet de récupérer le puuid d'un joueur à partir du nom d'invocateur, de la région, et d'une clef api
 def get_puuid(summoner_name, region, api_key):
@@ -377,7 +377,7 @@ Vous pouvez trouver l'ensemble de mes fonctions sur mon github ! lien github
 
 Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique
 
-{% details "Cliquez pour voir le code **Create_timetable**" %}
+{% details "Cliquez pour voir le code" %}
 
 
 ```python
