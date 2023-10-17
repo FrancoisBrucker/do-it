@@ -333,9 +333,16 @@ Pour cela on place des event listeners sur les éléments qui avec lesquels l'ut
 </ul>
 <p>Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclenchera une action. Pour cela :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token keyword">do</span> an action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">do</span> an action<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>L'action peut être un changement de page ou une modification.</p>
+<p>L'action peut être un changement de page ou une modification, il faut préciser à l'event listener quel action on attend (clique, mouvement de souris...)</p>
+<h3>Conclusion</h3>
+<p>De nombreuses autres choses peuvent être faites avec JavaScript en web, mais pour l'instant nous nous limiterons à ce que nous avons déjà vu. La suite viendra éventuellement dans un autre MON.</p>
+<h2>Conclusion</h2>
+<p>Dans ce MON nous avons vu comment JavaScript pouvait être utilisé comment langage orienté objet, notamment avec les classes. Mais nous avons également vu l'apport de JavaScript d'un point de vue web.</p>
+<h2>Bibliographie</h2>
+<p><a href="https://openclassrooms.com/fr/courses/5493201-write-javascript-for-the-web">OpenClassRoom</a> : vraiment très bien fait pour l'aspect web, il faut néanmoins quelques connaissances en JavaScript pour se lancer.</p>
+<p><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">freeCodeCamp</a> : pas mal pour revoir les bases.</p>
 
 
 </article>
