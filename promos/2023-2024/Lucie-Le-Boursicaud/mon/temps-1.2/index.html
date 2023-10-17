@@ -303,6 +303,45 @@ Afin d'utiliser une représentation adéquate il faut se poser deux questions:</
 <div stype="display:flex"><img src="bddmusee.png"></div>
 <p>La première chose que l'on peut mettre en évidence se sont les cellules vide :</p>
 <h4>Etape 2 : Analyse des données</h4>
+<p>J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Questions</th>
+<th>Intitulé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>Quelle est la plus grande fréquentation tout compris, le musée associé et l'année ?</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>Quelle est la plus grande fréquentation gratuite, le musée associe et l'annnée ?</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>Quelle est la plus faible fréquentation non nulle tout compris, le musée associé et l'année ?</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>Quelle est la plus faible fréquentation non nulle gratuite, le musée associé et l'année ?</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td>Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?</td>
+</tr>
+<tr>
+<td>Q6</td>
+<td>Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2016 ?</td>
+</tr>
+<tr>
+<td>Q7</td>
+<td>Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?</td>
+</tr>
+</tbody>
+</table>
 <p>On va utiliser les formules vues plus tôt afin d'analyser nos données.<br>
 La première chose que je trouve intéressante est de chercher l'enregistrement possédant la plus grande fréquentation toutes années comprises. Pour celà je savais déterminer le maximum mais comment récupérer l'ID du musée correspondant ainsi que son nom et l'année de l'enregistrement ? Je me suis donc renseigné pour trouver la formule <strong>=RECHERCHERV</strong>. Seulement cette formule ne fonctionne que si la valeur rechercher se trouve dans la première colonne ce qui n'est pas le cas ici. J'ai donc du utilisé deux formules pour séquencer mon travail :</p>
 <ul>
@@ -311,30 +350,18 @@ J'utilise alors la formule <strong>=EQUIV</strong></li>
 <li>Trouver les informations d'une ligne<br>
 J'utilise alors la formule <strong>=INDEX</strong></li>
 </ul>
-<p>J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes :</p>
-<table>
-<thead>
-<tr>
-<th>Questions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Quelle est la plus grande fréquentation tout compris, le musée associé et l'année ?</td>
-</tr>
-<tr>
-<td>Quelle est la plus grande fréquentation gratuite, le musée associe et l'annnée ?</td>
-</tr>
-<tr>
-<td>Quelle est la plus faible fréquentation non nulle tout compris, le musée associé et l'année ?</td>
-</tr>
-<tr>
-<td>Quelle est la plus faible fréquentation non nulle gratuite, le musée associé et l'année ?</td>
-</tr>
-</tbody>
-</table>
-<p>On obtient alors ce type de données :</p>
+<p>On obtient alors ce type de données pour les premières réponses :</p>
 <div stype="display:flex"><img src="analyse.png"></div>
+<p>Pour les quatres questions j'ai utilisé des feuilles de calculs à part car il s'agit de renvoyer plusieurs lignes et non pas une seule.</p>
+<h5>Q5 : Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?</h5>
+<div stype="display:flex"><img src="qpourcentage.png"></div>
+<div stype="display:flex"><img src="qpourcentagevisu.png"></div>
+<h5>Q6 : Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2006 ?</h5>
+<div stype="display:flex"><img src="qgplusquep.png"></div>
+<p>On peut visualiser l'évolution de cette variable au fil des années :</p>
+<div stype="display:flex"><img src="qgplusquepvisu.png"></div>
+<h5>Q7 : Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?</h5>
+<div stype="display:flex"><img src="qbaisse.png"></div>
 <p>Je me suis demandé si on pouvait trouver les musées gratuits de la région en filtrant la colonne <em>PAYANT</em> sur la valeur 0. Et voici ce que j'ai obtenu :</p>
 <div stype="display:flex"><img src="museegratuit.png"></div>
 <h4>Etape 3 : Visualisation des données</h4>
