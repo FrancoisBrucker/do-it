@@ -181,6 +181,17 @@ La première chose que l'on peut mettre en évidence se sont les cellules vide :
 
 
 #### Etape 2 : Analyse des données 
+J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes : 
+| Questions | Intitulé |
+| -------- | -----|
+| Q1 | Quelle est la plus grande fréquentation tout compris, le musée associé et l'année ? |
+| Q2 | Quelle est la plus grande fréquentation gratuite, le musée associe et l'annnée ? |
+| Q3 | Quelle est la plus faible fréquentation non nulle tout compris, le musée associé et l'année ? |
+| Q4 | Quelle est la plus faible fréquentation non nulle gratuite, le musée associé et l'année ? |
+| Q5 | Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ? |
+| Q6 | Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2016 ? |
+| Q7 | Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ? |
+
 On va utiliser les formules vues plus tôt afin d'analyser nos données.
 La première chose que je trouve intéressante est de chercher l'enregistrement possédant la plus grande fréquentation toutes années comprises. Pour celà je savais déterminer le maximum mais comment récupérer l'ID du musée correspondant ainsi que son nom et l'année de l'enregistrement ? Je me suis donc renseigné pour trouver la formule <strong>=RECHERCHERV</strong>. Seulement cette formule ne fonctionne que si la valeur rechercher se trouve dans la première colonne ce qui n'est pas le cas ici. J'ai donc du utilisé deux formules pour séquencer mon travail : 
 + Trouver la ligne correspondante à la valeur cherchée
@@ -188,16 +199,26 @@ La première chose que je trouve intéressante est de chercher l'enregistrement 
 + Trouver les informations d'une ligne 
   J'utilise alors la formule <strong>=INDEX</strong>
 
-J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes : 
-| Questions |
-| -------- |
-| Quelle est la plus grande fréquentation tout compris, le musée associé et l'année ? |
-| Quelle est la plus grande fréquentation gratuite, le musée associe et l'annnée ? |
-| Quelle est la plus faible fréquentation non nulle tout compris, le musée associé et l'année ? |
-| Quelle est la plus faible fréquentation non nulle gratuite, le musée associé et l'année ? |
-
-On obtient alors ce type de données : 
+On obtient alors ce type de données pour les premières réponses : 
 <div stype="display:flex"><img src="analyse.png"></div>
+
+Pour les quatres questions j'ai utilisé des feuilles de calculs à part car il s'agit de renvoyer plusieurs lignes et non pas une seule. 
+
+##### Q5 : Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?
+
+<div stype="display:flex"><img src="qpourcentage.png"></div>
+<div stype="display:flex"><img src="qpourcentagevisu.png"></div>
+
+##### Q6 : Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2006 ?
+
+<div stype="display:flex"><img src="qgplusquep.png"></div>
+
+On peut visualiser l'évolution de cette variable au fil des années : 
+<div stype="display:flex"><img src="qgplusquepvisu.png"></div>
+
+##### Q7 : Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?
+
+<div stype="display:flex"><img src="qbaisse.png"></div>
 
 Je me suis demandé si on pouvait trouver les musées gratuits de la région en filtrant la colonne *PAYANT* sur la valeur 0. Et voici ce que j'ai obtenu : 
 <div stype="display:flex"><img src="museegratuit.png"></div>

@@ -1,6 +1,7 @@
 import openpyxl
 from openpyxl.utils import get_column_letter, column_index_from_string
 from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.styles.borders import Border, Side
 
 # wb = openpyxl.load_workbook('test.xlsx')
 # sheet = wb['Feuille 1']
@@ -27,6 +28,7 @@ sheet.row_dimensions[2].height = 30
 cell.font = Font(size = 15, bold = True)
 cell.alignment = Alignment(horizontal = "center", vertical = "center")
 cell.fill = PatternFill("solid", start_color = "0ebf3e")
+cell.border = Border(left = Side(style='thick'), right = Side(style='thick'), top = Side(style='thick'), bottom = Side(style='thick'))
 
 sheet.merge_cells('A3:A4')
 
