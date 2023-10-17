@@ -112,7 +112,7 @@ Je n’étais pas  satisfait de ma première maquette. Je n’arrivais pas à me
 
 Je suis donc retourné sur Figma pour réaliser une maquette plus fidèle à mes envies.
 
-<img src="maquette2.PNG"/>
+<img src="maquette2.png"/>
 
 L’objectif est de rajouter le modèle 3d en haut de la page produit et en haut de la page accueil.
 
@@ -122,9 +122,9 @@ Une fois la maquette réalisée, j’ai pu continuer le code.
 
 Pour cette page, je n’ai pas eu beaucoup de travail à faire car j’avais déjà quasiment fini lors du sprint 1. J’ai simplement modifié la deuxième section pour inclure une présentation succincte de l’entreprise. 
 
-<img src="page1.PNG"/>
+<img src="page1.png"/>
 
-<img src="page1_2.PNG"/>
+<img src="page12.PNG"/>
 
 La texture de la boîte m’a posé encore beaucoup de problème. Toutes les textures de Blender ne sont pas importable dans Three.js. Je n’ai pas encore trouvé de solution à ce problème, mais je compte me pencher dessus plus sérieusement lorsque j’aurai fini la conception de ma boîte.
 
@@ -132,11 +132,11 @@ Le bouton “en savoir plus” n’est pas fonctionnel car je n’ai pas crée l
 
 ### Page Produit
 
-<img src="page2.PNG"/>
+<img src="page2.png"/>
 
-<img src="page2_2.PNG"/>
+<img src="page22.png"/>
 
-<img src="page2_3.PNG"/>
+<img src="page23.png"/>
 
 Voilà le résultat de ma page **Produit.**
 
@@ -201,7 +201,7 @@ L’attribut “Ressource” désigne le dossier qui contient les images de la b
 
 Ainsi, cette page est dynamique et affiche les données en fonction de ce tableau JSON.
 
-<img src="pagebis.PNG"/>
+<img src="pagebis.png"/>
 
 Voilà la page si on affiche **“Truc Box”**.
 
