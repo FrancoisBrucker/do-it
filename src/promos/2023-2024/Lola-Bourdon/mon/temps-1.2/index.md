@@ -151,6 +151,14 @@ Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 e
 Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
 ![excel](screen_valisation3.png)
 
+#### Tableaux croisés dynamiques
+
+Les *pivot table* (en anglais) permettent de structurer des informations à partir d'un tableau brut de données, pour analyser, présenter ou resumer.
+
+Pour insérer un tableau dynamique, il faut : **sélectionner les données/tableau > insertion > tableau croisé dynamique > valeurs par défaut > ok > cocher les champs à intégrer au tableau > les glisser dans 1 des 4 onglets souhaité** parmi *lignes*, *colonnes*, *valeurs* et *lignes* **> modifier si nécessaire**
+
+Pour m'exercer sur les tableaux croisés dynamiques, j'ai réalisé des exercices avec des donnés privées que je ne peux partager.
+
 ### Conclusion
 
 La réalisation de ce MON sur excel m'a permis de revoir et de solidifier mes bases sur l'utilisation de cet outil. J'ai également appris de nouvelle fonctionnalités comme les MFC, les tris et les tableaux croisés dynamiques. J'ai pu mettre en pratique ces connaissances tout au long de la formation en réalisant les exercices proposés. Je peux maintenant commencer à étudier le VBA.
