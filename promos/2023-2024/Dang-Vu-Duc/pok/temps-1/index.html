@@ -185,7 +185,7 @@
 <li>Un fichier <em><a href="http://main.py">main.py</a></em> qui va contenir les instructions pour exécuter le code.</li>
 </ul>
 <h3>La classe Blackjack_methods</h3>
-<p>Comme explicité ci-dessus, cette classe contient les méthodes pour manipuler le deck. La méthode <em>newdeck</em> permet de créer le sabot pour le Blackjack. Ce sabot est composé de 6 jeux de 52 cartes. Ce sabot (dénommé <em>deck</em> dans le code) est une liste d'objet de la classe <strong>Card</strong>. Ces objets ont comme attribut un nom (par exemple 2_of_clubs pour le 2 de trèfle ou 11_of_hearts pour le valet de coeur) et sa valeur (1 pour as, 11 pour valet, 12 pour dame et 13 pour roi). Cette classe a également une méthode appelée <em>sum_hand</em>, qui prend en argument une liste et qui renvoie sa somme. Cette méthode prend en compte que l'As (donc la valeur 1) vaut soit 1 soit 11. Ainsi, si la main est <code>[1, 4]</code>, la méthode renvoie 15, mais si la main est <code>[1, 5, 7]</code>, la méthode renvoie 13. Voici l'implémentation de cette classe:</p>
+<p>Comme explicité ci-dessus, cette classe contient les méthodes pour manipuler le deck. La méthode <em>newdeck</em> permet de créer le sabot pour le Blackjack. Ce sabot est composé de 6 jeux de 52 cartes. Ce sabot (dénommé <em>deck</em> dans le code) est une liste d'objet de la classe <strong>Card</strong>. Ces objets ont comme attribut un nom (par exemple 2_of_clubs pour le 2 de trèfle ou 11_of_hearts pour le valet de coeur) et sa valeur (1 pour As, et 10 pour les têtes). Cette classe a également une méthode appelée <em>sum_hand</em>, qui prend en argument une liste et qui renvoie sa somme. Cette méthode prend en compte que l'As (donc la valeur 1) vaut soit 1 soit 11. Ainsi, si la main est <code>[1, 4]</code>, la méthode renvoie 15, mais si la main est <code>[1, 5, 7]</code>, la méthode renvoie 13. Voici l'implémentation de cette classe:</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -447,7 +447,7 @@
 </details>     
 </div>
 <h4>La méthode draw</h4>
-<p>Cette méthode permet de piocher une carte dans le deck. Pour cela, on utilise la méthode <em>choice</em> de la bibliothèque <em>random</em> pour choisir une carte aléatoire dans le deck. Ensuite, on la retire du deck et on la renvoie. A chaque fois que le joueur pioche une carte, il faut mettre à jour le nombre de cartes restantes.</p>
+<p>Cette méthode permet de piocher une carte dans le deck. Pour cela, on utilise la fonction <em>choice</em> de la bibliothèque <em>random</em> pour choisir une carte aléatoire dans le deck. Ensuite, on la retire du deck et on la renvoie. A chaque fois que le joueur pioche une carte, il faut mettre à jour le nombre de cartes restantes.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
