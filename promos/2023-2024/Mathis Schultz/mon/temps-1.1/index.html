@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CSS</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Tailwind</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -128,9 +140,7 @@
 <a href="https://tailwindcss.com/" target="_blank">
         <img src="logo_tailwindcss.png" rounded-full="" alt="Click me" width="200" height="150">
     </a>
-<blockquote>
 <p>Le front web au travers d'une introduction à <a href="https://tailwindcss.com/">TailwindCSS</a>.</p>
-</blockquote>
 <h2 id="toc"> Table des matières </h2>
 <ul>
 <li><a href="#toc">Table des matières</a></li>
@@ -141,6 +151,7 @@
 </ul>
 </li>
 <li><a href="#h2">Outils complémentaires</a></li>
+<li><a href="#h3">Installation de l'environnement</a></li>
 <li><a href="#liens">Liens utiles</a></li>
 </ul>
 <h2 id="h1"> Introduction </h2>
@@ -181,7 +192,63 @@
 <img src="Inline_fold.png">
 <p>Voici un exemple du code précédent en utilisant Inline Fold, il permet doc de masquer toutes les personnalisations tant qu'on ne clique pas sur les points de suspensions :</p>
 <img src="inline_exemple.png">
+<h2 id="h3"> Installation de l'environnement </h2>
+<p>Le but de ce paragraphe est de détailler les étapes à suivre afin d'installer proprement les bibliothèques de TailwindCSS.</p>
+<p><strong>Installer la bibliothèque Tailwind</strong></p>
+<p>Usuellement on se place dans notre fichier et on va venir construire différents dossier :</p>
+<ul>
+<li>src</li>
+<li>nodes_modules</li>
+<li>dist</li>
+</ul>
+<p>Voici la démarche à suivre que l'on retrouve sur le <a href="https://tailwindcss.com/docs/installation">site officiel</a></p>
+<ol>
+<li>Installer Tailwind CSS via npm dans le terminal</li>
+</ol>
+<pre><code>npm install -D tailwindcss
+npx tailwindcss init
+</code></pre>
+<p>Attention à bien se placer dans le dossier dans lequel on souhaite créer notre projet.</p>
+<ol start="2">
+<li>Ajouter la bibliothèque TailwindCSS à chacune des pages</li>
+</ol>
+<p>Dans le fichier tailwind.config.js qui vient d'être construit par les commandes précédentes il faut impérativement spécifier quels fichiers doivent utiliser TailwindCSS. Cela se fait de la manière suivante :</p>
+<pre><code>/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [&quot;./src/**/*.{html,js}&quot;],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+</code></pre>
+<p>La ligne &quot;content&quot; précise le chemin vers les fichiers où Tailwind sera utilisé (via ./src/**/*) et précise le type de fichier qui sont concernés ( {html,js})<br>
+Cette étape est capitale et c'est elle qui m'a bloqué pendant des heures et m'a fait refaire 5/6 fois l'installation sans comprendre où était mon problème.</p>
+<ol start="3">
+<li>Construire le fichier suivant</li>
+</ol>
+<p>Dans le dossier source il est nécessaire de créer un dossier input.css qui permettra d'installer les outils de TailwindCSS, dans ce fichier on écrira les lignes suivantes (qui pourront être étoffer pour ceux qui souhaiteraient aller plus loin)</p>
+<pre><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</code></pre>
+<ol start="4">
+<li>Installer ces composants</li>
+</ol>
+<p>Via la commande suivante dans le terminal on va pouvoir installer les outils qui sont écrit dans le fichier (input.CSS) que l'on vient de créer.</p>
+<pre><code>npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+</code></pre>
+<p>Cette commande va créer le dossier dist avec le fichier output.css qui contient un ensemble de fonction pour TailwindCSS.</p>
+<ol start="5">
+<li>Ajouter le chemin à chaque page web qui utilise Tailwind</li>
+</ol>
+<p>Lorsque l'on construit une nouvelle page (index.html par exemple), il est nécessaire de préciser dans le &quot;head&quot; le lien du fichier précédent (output.css) cela se fait par exemple avec la ligne suivante :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/dist/output.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+</code></pre>
 <h2 id="liens"> Liens utiles </h2>
+```
 <p>Voici différents lien permettant de se former à l'utilisation de TailwindCSS :</p>
 <h3>Un tutoriel de Dave Gray</h3>
 <a href="//www.youtube.com/watch?v=lCxcTsOHrjo" target="_blank">

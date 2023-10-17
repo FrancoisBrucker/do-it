@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Langage VBA</title>
+        <title>Front Web 2</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Langage VBA</h1>
+<h1 class="mb-1">Front Web 2</h1>
 <div class="mb-4">
     
         <div class=" px-4 flex items-center">
@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Tailwind</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CSS</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Introduction au langage VBA et traitement de la data.
+                Utilisation de TailwindCSS pour mettre en forme une page Web
 
         </p>
 
@@ -118,13 +130,183 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/">Schultz Mathis</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/mon/">MON de Schultz Mathis</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/mon/temps-1.2/">Langage VBA</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/">Schultz Mathis</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/mon/">MON de Schultz Mathis</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Mathis Schultz/mon/temps-1.2/">Front Web 2</a>
 
 </div></div>
 
 
 
 
+<h2 id="h1"> Introduction </h2>
+<p>Le but de ce MON est de réaliser une première page à partir de <a href="https://tailwindcss.com/">TailwindCSS</a>.</p>
+<p>Mon précédent MON détaille l'installation de l'environnement de travail, ainsi le code que je vous partage ne peut fonctionner sans réaliser préalablement l'installation.</p>
+<h2 id="prerequis"> Prérequis </h2>
+<p>Avant de s'intéresser à TailwindCSS, il est important de se former au langage html et au langage CSS, je vous renvois vers mon MON précédent qui donne des ressources pour apprendre le HTML/CSS et pour installer un environnement de travail.</p>
+<h2 id="toc"> Table des matières </h2>
+<ul>
+<li><a href="#h1">Introduction</a></li>
+<li><a href="#prerequis">Prérequis</a></li>
+<li><a href="#toc">Table des matières</a></li>
+<li><a href="#h2">Une première page</a></li>
+<li><a href="#h3">Choisir son style</a></li>
+<li><a href="#h4">Un questionnaire</a></li>
+<li><a href="#h5">Outils complémentaires</a></li>
+<li><a href="#h6">Conclusion</a></li>
+<li><a href="#liens">Liens utiles</a></li>
+</ul>
+<h2 id="h2"> Une première page </h2>
+<p>Le but de ce paragraphe est de faire la mise en page d'une première page web, établir quelques éléments à placer ainsi que de partitionner la page.</p>
+<img src="site_clair.png">
+<p>Image du site sur fond clair</p>
+<p>Il est facile de passer d'un site clair à un site sombre ! il suffit pour de définir les couleurs à utiliser en dark mode, dans mon cas, vu le peu d'élément j'ai défini individuellement les couleurs à utiliser pour le mode sombre et pour le mode clair mais il est possible de modifier le fichier tailwind.config.js pour que les modifications opère sur l'ensemble du site.</p>
+<p>Voici le résultat en ajoutant simplement &quot;dark:text-bleu&quot; ou &quot;dark:bg-slate-100&quot; pour modifier le text ou le fond en mode sombre.</p>
+<img src="site_sombre.png">
+<p>Image du site sur fond sombre</p>
+<h2 id="h3"> Choisir son style </h2>
+<p>Le but de ce paragraphe est d'expliquer comment choisir sa charte graphique afin de construire sa page web. Pour cet exemple on va utiliser la charte graphique de Centrale.</p>
+<ol>
+<li>Choisir ses couleurs</li>
+</ol>
+<p>Choisir des couleurs est extrêmement simple avec TailwindCSS, il suffit de ce rendre dans le dossier tailwind.config.js et de rajouter les couleurs que l'on souhaite utiliser dans le thème :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">/** @type {import('tailwindcss').Config} */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">theme</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">colors</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'bleu'</span><span class="token operator">:</span> <span class="token string">'#000f9f'</span><span class="token punctuation">,</span>
+      <span class="token string-property property">'gris'</span><span class="token operator">:</span> <span class="token string">'#4d5f80'</span><span class="token punctuation">,</span>
+      <span class="token string-property property">'gris_claire'</span><span class="token operator">:</span> <span class="token string">'#eff0f4'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">extend</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Ici, j'ai implémenter le bleu de Centrale ainsi que les deux gris majoritairement utilisé.</p>
+<ol start="2">
+<li>Choisir des typographies :</li>
+</ol>
+<p>Il existe plusieurs méthodes pour ajouter des typographies :</p>
+<ul>
+<li>
+<p>la première possibilité est de télécharger la charte graphique de centrale avec des fichiers au formats ttf et de réaliser un certain nombre d'opérations, voici le lien d'un tutoriel pour détailler cette méthode <a href="https://dev.to/thomasvanholder/add-a-custom-tailwind-css-fonts-to-your-website-1nn6">tuto</a> : il faut lire la section 1.b pour effectuer cette démarche.</p>
+</li>
+<li>
+<p>La seconde méthode qui me semble plus simple, qui propose beaucoup plus de typographie et sans avoir besoin de retrouver la charte de centrale est d'utiliser le site <a href="https://fonts.google.com/">fonts.google.com</a>. Voici la démarche à suivre :</p>
+</li>
+<li>
+<p>utiliser la barre de recherche pour trouver sa typo</p>
+</li>
+<li>
+<p>choisir plusieurs typo sur le site et cliquer sur le petit &quot;+&quot;</p>
+</li>
+<li>
+<p>un bandeau s'affiche, en cliquant sur import un code apparaît entre deux balises &lt; style&gt;, il faut copier le code entre les balises pour venir le coller dans le fichier input.css</p>
+</li>
+</ul>
+<img src="choix_typo.png">
+<p>Image du site permettant de télécharger les typographie</p>
+<ul>
+<li>transformer votre fichier input.css : coller le @import de votre presse-papier puis rajouter les lignes concernant le layer.</li>
+</ul>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&amp;family=Barlow:wght@100&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@tailwind</span> base<span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@tailwind</span> components<span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@tailwind</span> utilities<span class="token punctuation">;</span></span>
+
+<span class="token atrule"><span class="token rule">@layer</span> base</span> <span class="token punctuation">{</span>
+    <span class="token selector">html</span> <span class="token punctuation">{</span>
+        <span class="token property">font-family</span><span class="token punctuation">:</span> Barlow<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>Enfin, la dernière étape consiste à ajouter le code suivant au fichier tailwind.config.js :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">    <span class="token literal-property property">fontFamily</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'custom'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Barlow'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>Voilà le résultat avec la charte de Centrale : une typographie Barlow et les nuances de bleus et de gris :</p>
+<img src="site_charte.png">
+<p>Image du site avec la charte de Centrale</p>
+<h2 id="h4"> Un questionnaire </h2>
+<p>L'idée de cette partie est de développer les différents outils pour mettre en forme un questionnaire.<br>
+L'objectif est d'avoir :</p>
+<ul>
+<li>Un champ à remplir</li>
+<li>Une question à choix multiple</li>
+<li>Une case à cocher</li>
+<li>Un bouton soumettre</li>
+</ul>
+<p>Cette partie ne propose pas de mettre en oeuvre la partie Java, ainsi bien que les boutons ou case puissent être rempli, il n'y a que la forme qui n'est créé.</p>
+<p><strong>Un champ à remplir</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inputField<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Text Field Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+            <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+            <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inputField<span class="token punctuation">"</span></span>
+            <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inputField<span class="token punctuation">"</span></span>
+            <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500<span class="token punctuation">"</span></span>
+            <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter text<span class="token punctuation">"</span></span>
+          <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>Une question à choix multiple</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectField<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Select Field Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span>
+            <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectField<span class="token punctuation">"</span></span>
+            <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectField<span class="token punctuation">"</span></span>
+            <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500<span class="token punctuation">"</span></span>
+          <span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>option1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Option 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>option2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Option 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>option3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Option 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>Une case à cocher</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2 leading-tight<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> Checkbox Label
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2 leading-tight<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioGroup<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioOption1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> Radio Option 1
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2 leading-tight<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioGroup<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioOption2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> Radio Option 2
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>Un bouton soumettre</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex items-center justify-between<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+            <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span>
+            <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600<span class="token punctuation">"</span></span>
+          <span class="token punctuation">></span></span>
+            Submit
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<img src="questionnaire.png">
+<p>Image du site avec un questionnaire simple</p>
+<h2 id="h5"> Outils complémentaires </h2>
+<p>Ce qui est difficile lorsque l'on souhaite apprendre un nouveau langage (HTML ou CSS) est de connaître les fonctions afin de pouvoir réaliser notre site, il est donc nécessaire d'expérimenter, de découvrir des fonctionnalités même si elle ne servent pas encore. Il faut comprendre la structure. Pour cela je recommande donc d'utiliser différentes ressources :</p>
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">Open Classroom</a> qui permet de comprendre les structures de page web ainsi que les bases de mise en forme. Cet outil incontournable permet de fixer des notions et de donner des idées pour que votre site ait une architecture fiable. Maîtriser HTML5 et CSS3 est un prérequis presqu'indispensable pour construire dans de bonnes conditions.</li>
+<li><a href="https://chat.openai.com/">Chat GPT</a> va permettre d'aller vite, de trouver facilement des solutions pour des fonctionnalités. Il ne pourra pas créer un bel ensemble homogène mais il va rapidement vous donner accès au code pour réaliser un bouton, l'arrondir, le centré, il pourra faciliter grandement la mise en page. Et si vous trouvez par la suite une meilleure solution il suffira de remplacer ce code par le votre. En somme l'intérêt comme toujours de chat GPT est de gagner du temps bien qu'il ne réalise pas complètement votre mission et qu'il produise régulièrement des choses à côté de la plaque.</li>
+</ul>
+<h2 id="h6"> Conclusion </h2>
+<p>Tailwind permet facilement de définir l'environnement graphique de notre site internet, ce n'est pas la seule solution disponible sur le marché, bootstrap est très répandu aussi.</p>
+<h2 id="liens"> Liens utiles </h2>
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">Open Classroom</a></li>
+<li><a href="https://chat.openai.com/">Chat GPT</a></li>
+<li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+<li><a href="https://fonts.google.com/">fonts.google.com</a> : télécharger des typographie</li>
+<li><a href="https://dev.to/thomasvanholder/add-a-custom-tailwind-css-fonts-to-your-website-1nn6">tuto</a> : pour installer les typographies.</li>
+</ul>
 
 
 </article>

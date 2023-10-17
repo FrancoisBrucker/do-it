@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
+                L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.
 
         </p>
 
@@ -126,14 +126,35 @@
 
 
 <h2>Introduction - définition du projet</h2>
-<p>Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.</p>
+<p>L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.</p>
 <h2>Design du site web</h2>
 <h3>Déposer sa mobilité</h3>
-<p>L'étudiant remplit un formulaire :</p>
-<ul>
-<li>Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.</li>
-<li>Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.</li>
-</ul>
+<p><strong>L'étudiant remplit un formulaire</strong></p>
+<pre><code>Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
+Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.
+
+Intérêts :
+- Une donnée collecté de manière unique.
+- Facile à reconduire dans le temps.
+- Un format de donnée tout de suite adapté.
+
+Difficultés :
+- Nécessite un engagement supplémentaire des élèves avec un nouveau formulaire à remplir.
+- Difficulté à inciter les gens à répondre.
+</code></pre>
+<p><strong>Collecte de données via l'administration</strong></p>
+<pre><code>Venir récupérer les données de l'administration, venant de leur différentes plateformes : My Mobility Online, CFA,...  
+Les implémenter dans la base de données du site
+
+Intérêts : 
+- faire gagner du temps aux étudiants en évitant de donnée plusieurs fois les mêmes informations.
+
+Difficultés :  
+- Réussir à collecter les datas des différentes plateforme pour les adapter au site
+- Problème en cas de mise à jour des données d'un site externe, nécessite une mise à jour de l'API qui transforme la data pour la rentrer dans la base de donnée.
+- Nécessite un lien permanent avec l'admin pour mettre à jour ces données.
+- Comment savoir si l'élève accepte que ses datas soient partager ? remplir quand même le formulaire ? L'admin souhaite les retours d'expérience.
+</code></pre>
 <h4>Plusieurs méthodes possibles</h4>
 <h6>Un formulaire sur une page annexe</h6>
 <p>L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site<br>
@@ -159,7 +180,7 @@ L'idée est que tout le monde accède au site via un mot de passe unique pouvant
 <p><strong>Un identifiant individuel</strong><br>
 L'idée est de venir utiliser les identifiants Moodle (le système d'authentification CAS) pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : <em>cette méthode requiert des compétences élevés en sécurité</em><br>
 <em>cette méthode limite les dépôts de dossier par étudiant</em></p>
-<p><strong>Un compte administrateur</strong><br>
+<p><strong>Un compte pour l'administration</strong><br>
 L'idée est que ce compte puisse gérer les différentes mobilités.</p>
 <ul>
 <li>Un mot de passe sécurisé</li>
@@ -248,7 +269,7 @@ L'idée est de générer une map cliquable afin de sélectionner la région qui 
 déposant sa mobilité/administrateur de l'école</li>
 </ul>
 <p>Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.</p>
-<p>Voici une première maquette Canva pour représenter les mobilités des élèves</p>
+<p>Voici une première maquette Canva pour représenter les mobilités des élèves.</p>
 <img src="canva_site_1.png">
 <img src="canva_site_2.png">
 <h3>La réalisation d'un MVP (minimum viable project)</h3>
@@ -262,11 +283,15 @@ et cadrer proprement les outils à développer.</li>
 <ol>
 <li>Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration<br>
 les fonctionnalités qui les intéresse.</li>
-<li>Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )</li>
+<li>Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue ) ou de design (Figma)</li>
 <li>Tests des parcours utilisateurs (résolution et dev bug).</li>
 <li>Préparation du pitch et de la démonstration.</li>
 </ol>
 <p>Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.</p>
+<p>Notre MVP sera réalisé sous Figma, c'est un logiciel de design qui permet de tester les fonctionnalités et de mettre en page le site web pour visualiser les parcours utilisateurs, définir les aspects graphiques ainsi que de s'assurer que l'utilisation est intuitive.</p>
+<p>Actuellement la maquette figma présente le parcours utilisateur d'un étudiant pour voir les mobilités et aussi pour déposer la sienne.</p>
+<img src="figma.png">
+<p>Maquette figma.</p>
 <h3>La réalisation du site web final</h3>
 <p>Les intérêts</p>
 <ul>
@@ -301,15 +326,16 @@ pas déjà dans la liste)</li>
 </ul>
 <p><strong>Gestionnaire des SMA et double diplôme : Olivier Boiron</strong></p>
 <p>Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.</p>
-<pre><code>- Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.
-- Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
-- Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui c'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
-- Le point critique : les étudiants ne contactent pas les référents pays ou scientifique, ainsi lors des commissions les dossiers ne sont pas logique ce qui ne les favorisent pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.
-- Ce qu’il nous faut : la liste des référents mise à jour, le contact des étudiants travaillant avec mobility online
-- Les RI ne gèrent que les SMA et Double Diplôme
-- Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
-- Obligatoire : avoir une FAQ et demander des retours d’expériences
-</code></pre>
+<ul>
+<li>Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.</li>
+<li>Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.</li>
+<li>Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui c'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.</li>
+<li>Le point critique : les étudiants ne contactent pas les référents pays ou scientifique, ainsi lors des commissions les dossiers ne sont pas logique ce qui ne les favorisent pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.</li>
+<li>Ce qu’il nous faut : la liste des référents mise à jour, le contact des étudiants travaillant avec mobility online</li>
+<li>Les RI ne gèrent que les SMA et Double Diplôme</li>
+<li>Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)</li>
+<li>Obligatoire : avoir une FAQ et demander des retours d’expériences</li>
+</ul>
 <p><strong>Gestionnaire des SSE &amp; TFE : Muriel Roche</strong></p>
 <p>Nous n'avons pas encore réalisé d'entrevu avec le responsable.</p>
 <p><strong>Gestionnaire des Alernants entreprise : Guillaume Graton</strong></p>
