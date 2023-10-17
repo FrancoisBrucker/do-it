@@ -107,12 +107,12 @@ Après m'être posé pendant une bonne heure, j'ai établi plus clairement mes o
 - Apprendre à créer un site plus que fonctionnel à l'aide d'un outil no/low code, ici Bubble.io,
 - Comment établir une analyse de la politique RSE d'une entreprise pour pouvoir donner un avis construit et éduqué.
 
-Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la suite de Fibonacci qui ira de 1 à 55. Pour ce qui a été fait au sprint 1, nous mettrons un V et, pour le sprint 2, un X. Le total de points de complexité est 47 et j'ai effectué au sprint 1, 11 points en 6h, il va falloir mettre le turbo pour les 13 prochaines heures. Les choses que je n'ai pas faites consitueront le backlog de mon sprint 2 :
+Le backlog produit écrit, avec un niveau de difficulté à côté, suivant la suite de Fibonacci qui ira de 1 à 55. Pour ce qui a été fait au sprint 1, nous mettrons un V et, pour le sprint 2, un X. Le total de points de complexité est 47 -> 39 et j'ai effectué au sprint 1, 11 points en 6h, il va falloir mettre le turbo pour les 13 prochaines heures. Les choses que je n'ai pas faites consitueront le backlog de mon sprint 2 :
 
 - S'initier à la RSE [V] = 2
-- Créer un site opérationnel sur Bubble.io [] = 32
+- Créer un site opérationnel sur Bubble.io [] = 31
   Logo [V] = 1
-  Une page index et les autres pages qui vont avec [X] = 17 ->
+  Une page index et les autres pages qui vont avec [] = 17 -> 22
 
   - Log-in, sign-in qui s'affichera avec un pop-up [V] = 5
   - Barre de navigation [V] = 3 -> 2
@@ -213,6 +213,9 @@ Malheureusement, ce jugement reste très subjectif. Pour pouvoir être objectif,
    <img src="classement.png" width="350" height="350"> | <img src="workflowformulaire.png" width="350" height="350">
 
 ## Conclusion <a id="section-5"></a>
+
+Nombre de points effectués pendant le sprint 1 : **11**.
+Nombre de points effectués pendant le sprint 2 : **21**.
 
 Je suis plutôt déçu du résultat. Je ne m'attendais pas forcément à avoir quelque chose de bien concluant vu l'ambition du projet, mais je pensais avoir le temps de faire plus, surtout du côté de Bubble.
 Ne pas avoir réussi à lier les deux types de données et présenter ma base de données proprement me laisse un mauvais arrière-goût sur la langue.
