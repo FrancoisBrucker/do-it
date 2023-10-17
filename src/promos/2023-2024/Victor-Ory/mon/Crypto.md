@@ -22,7 +22,7 @@ tags:
 ## Ressources :
 
 - [SubReddit dédié à la cryptologie ](https://www.reddit.com/r/crypto/wiki/index/)
-- Si vous voulez des compléments, il y a aussi le [MON]() de Louradou
+- Si vous voulez des compléments, il y a aussi le [MON de Louradou](../../../2023-2024/Louradou-Arthur/mon/Crypto.md)
 - [La cryptographie, socle de la souveraineté numérique](https://www-cairn-info.lama.univ-amu.fr/revue-defense-nationale-2022-10-page-59.htm)
 - [Du cyberespace à la datasphère. Enjeux stratégiques de la révolution numérique](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-3.htm)
 - [Du cyberespace à la datasphère. Enjeux stratégiques de la révolution numérique](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2020-2-page-3.htm)
@@ -49,7 +49,7 @@ Ensuite, la souveraineté est également remise en question à travers le cloud 
 
 ## Souveraineté
 
-Pour cela, je me suis appuyé sur les articles suivants dans un premier temps :
+Article :
 - [La cryptographie, socle de la souveraineté numérique](https://www-cairn-info.lama.univ-amu.fr/revue-defense-nationale-2022-10-page-59.htm)
 
 Ainsi, nous comprenons que la cryptographie répond à plusieurs contraintes essentielles :
@@ -94,9 +94,9 @@ Dans cet environnement de révolution numérique, l'Armée a rapidement compris 
 
 # OSINT
 
-## 
-
 [Renseigner autrement ? Trajectoires de l’Osint dans les services de renseignement](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2022-3-page-19.htm)
+
+*Evolutions et tendances de la pratique, pistes pour MON/POK, *
 
 OSINT : Open Source INTelligence, ensemble des renseignements disponibles à tous le monde. 
 
@@ -107,16 +107,18 @@ L'Osint a gagné en importance grâce à l'accès facilité aux informations sur
 La professionnalisation de ce secteur est importante et risque de s'intensifier, cela se ressent particulièrement avec l'apparition de qqs stages dans ce domaine au sein des institutions de renseignements français. Toutefois cela reste peu développé dans les institutions occidentales en raison d'un culture professionnelle tournée vers la bureaucratie et la culture du secret.
 
 - Des logiciels sont développé pour recouper des données de ressources ouvertes ou fermées pour améliorer leur efficacité, c'est le **multi-int**.
--  De plus, ces business peuvent être au service de l'Etat avec notamment la localisation de biens de dictateur sous sanction, c'est le **asset recovery**
+- De plus, ces business peuvent être au service de l'Etat avec notamment la localisation de biens de dictateur sous sanction, c'est le **asset recovery**
 -  
 
 Certaines plateformes permettent tout comme les CTF pour le hacking de proposer des **challenges d'OSINT**, notamment [OZINT](https://ozint.eu/)
 
 On peut citer [Maltego](https://www.maltego.com/) comme outil central, même si il en existe des milliers pour des usages pus ou moins spécifiques. J'aimerais en explorer son utilisation pour un MON futur.
 
-## OSINT et Ukraine 
+## OSINT et Ukraine
 
 [Article Hérodote](https://www-cairn-info.lama.univ-amu.fr/revue-herodote-2022-3-page-57.htm)
+
+*Aborde les sujets de la judiciarisation de ce domaine et son possible rôle de preuve de crime international*
 
 Le recours à l'Osint est devenu particulièrement pertinent dans le contexte des crimes internationaux, tels que le génocide, les crimes contre l'humanité, les crimes de guerre et les infractions liées au terrorisme. Il est utilisé par des enquêteurs, des juristes, des magistrats et des avocats. L'Osint permet de documenter ces crimes en fournissant des preuves "documentaires" ou "contextuelles", telles que des vidéos et des images, qui sont devenues essentielles dans les procédures judiciaires.
 
@@ -180,10 +182,6 @@ Cette fonction, lorsqu'elle est appliquée à un message, noté $$m$$, avec une 
 | c | 1 | 1 | 0 | 1 | 0 |
 
 Ainsi, de nombreux systèmes sont des variantes de ce procédé, tels que WEP (Wi-Fi) et HTTPS. Cependant, cette technique exige que la clé soit au moins aussi longue que le message, ce qui peut être contraignant. Par conséquent, un élément essentiel de ces algorithmes est le PRG (Pseudo Random Generator), noté $$G$$, qui étend la clé $$k'$$ de 6 bits en 64 bits comme suit : $$G(k') = k$$.
-
-## Le chiffrement par blocs
-
-Ensuite, le cours porte sur une autre technique de chiffrement, ici en bloc cipher, avec une complexité  et des pré-requis mathématiques croissantes. 
 
 # Conclusion de ce cours théorique (abandonné après 4 heures)
 
