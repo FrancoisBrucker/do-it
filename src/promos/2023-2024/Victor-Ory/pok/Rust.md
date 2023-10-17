@@ -22,6 +22,7 @@ tags:
 {%enddetails%}
 
 
+
 {%details "Les ressources"%}
 
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
@@ -93,10 +94,9 @@ Ce projet repose sur le [tutoriel](https://doc.rust-lang.org/book/ch12-00-an-io-
 
 J'ai pas été très efficace pour cette tâche en raison de ma confiance en mes capacités en C++ après seulement le cours de 2A. Les concepts ont été dures à appréhender et ont consommé la plupart de mon temps et je me suis éparpillé entre les différentes sources pour essayer d'avoir des points de vue différents sur les concepts que je ne comprenais pas. Cela explique aussi le fait que j'ai passé beaucoup de temps sur les exercices dures du [GitHub](https://github.com/rust-lang/rustlings).
 
-Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique. 
+Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique.
 
 Source explorées : 
 - [Rust to javascript](https://annas-archive.org/md5/77a5209a50709593652c64d097088439) ( parce que j'ai pas mal d'expérience en javascript )
 - [Zero To Production in Rust - An introduction to backend development](https://annas-archive.org/md5/819c53acaf3bff8c145179d26aa8cd0a) ( bases = pré-requis )
 - [Vidéo Youtube](https://www.youtube.com/watch?v=BpPEoZW5IiY) ( lent mais représentatif de ma progression )
-
