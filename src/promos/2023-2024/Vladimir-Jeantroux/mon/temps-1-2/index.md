@@ -21,13 +21,13 @@ C# (prononcer C Sharp) est un langage orienté objet prédominant dans le domain
 
 Pré-requis :
 
-- Avoir des bases en C et en programmation orientée objet 
+Aucun bagage théorique n'est requis
 
  {%endprerequis%}
 
-On va aussi avoir besoin d'un IDE comme Visual Studio Code, avec l'extension C# et le framework .NET. 
+Contrairement à ce que son nom indique, C# na aucun rapport avec C ou C++, il n'y a pas besoin d'avoir de connaissances quelconques dans ces langages pour démarrer en C#. C'est même un bon langage pour les débutants car il est plutôt simple à prendre en main, et très polyvalent. Pour ce qui est des prérequis techniques, on va avoir besoin d'un IDE comme [Visual Studio Code](https://code.visualstudio.com), avec [l'extension C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) et le [framework .NET](https://dotnet.microsoft.com/en-us/download). 
 
-## C'est quoi .NET ? 
+## C'est quoi .NET et pourquoi j'en ai besoin ? 
 
 .NET (prononcer dot net) est un framework qui fournit un environnement de développement et d'exécution pour le développement d'applications web. Il contient des librairies et des outils de base qui permettent de faciliter la tâche du développeur. L'intérêt pour C# est d'avoir des outils pour coder son application sans avoir à tout réinventer, et simplement pouvoir construire par-dessus les templates qu'offre .NET. 
 
