@@ -168,8 +168,9 @@ Output :
 
 IMPORTANT ! Une bonne pratique est de nommer son fichier à partir du nom de la classe, cela peut éviter certaines erreurs. 
 
-## Ouverture 
+## Bilan et ouverture 
 
+J'ai trouvé le C# très clair et bien structuré; le code produit en C# est selon généralement compréhensible et facile à cerner. Cependant, cette rigueur dans la structure m'a aussi posé quelques difficultés quand il s'agissait de coder. Le seul autre langage dans lequel je suis vraiment à l'aise est Python, qui est bien moins rigoureux sur les définitions et les structures, donc lors de mon apprentissage il y a eu un considérable temps d'adaptation. 
 Après avoir cerné C# et ses bases, je me suis lancé dans plusieurs travaux qui n'ont pas pu aboutir par manque de temps, mais qui pourraient être abordés dans le futur : 
 - Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev. 
 - S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de voir comment développer une application web (ou mobile). 
