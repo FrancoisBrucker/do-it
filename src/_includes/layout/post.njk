@@ -10,13 +10,13 @@ eleventyComputed:
 <h1  {% if tags or authors %}class="mb-1"{% endif %}>{{ title }}</h1>
 <div {% if tags or authors %}class="mb-4"{% endif %}>
     {% if tags %}
-        <div class=" px-4 flex items-center">
+        <div class="px-4 flex flex-wrap items-center">
             {% if tags | length > 1 %}
                 <div class="font-bold">Tags : </div>
             {% else %}
                 <div class="font-bold">Tag : </div>
             {% endif %}
-            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
                 {% for tag in tags %}
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">{{ tag }}</li>
                 {% endfor %}
@@ -39,9 +39,9 @@ eleventyComputed:
     {% endif %}
 
     {% if authors %}
-        <div class=" px-4 flex items-center">
+        <div class="px-4 flex flex-wrap items-center">
             <div class="font-bold">Auteurs : </div>
-            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
                 {% for author in authors %}
                     <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">{{ author }}</li>
                 {% endfor %}

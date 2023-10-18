@@ -440,15 +440,15 @@ table,th {
                     </thead>
                     <tr>
                         <td> </td>
-                        <td class="vic"> Guillaume - Arthur</td>
+                        <td class="vic"> Antonin - Loïc</td>
                         <td> / </td>
-                        <td class="def"> Léa - Ninon</td>
+                        <td class="def"> William - Zélie</td>
                     </tr>
                     <tr>
                         <td> Score : </td>
-                        <td class="vic"> 1 120 </td>
+                        <td class="vic"> 1 000 </td>
                         <td> - </td>
-                        <td class="def"> 750 </td>
+                        <td class="def"> 300 </td>
                     </tr>
                 </table>
             </div>
