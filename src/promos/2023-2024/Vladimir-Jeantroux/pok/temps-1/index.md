@@ -98,12 +98,12 @@ Tâches terminées avec succès :
 - Un caroussel d'images sur chaque page de recette
 
 Pistes d'amélioration : 
--Avoir une interface plus polie 
--Plus de recettes 
--Héberger le site sur un serveur 
--Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main
--La barre de recherche est toujours entièrement cosmétique
--Le code est assez chaotique et nécessite d'être optimisé
+- Avoir une interface plus polie 
+- Plus de recettes 
+- Héberger le site sur un serveur 
+- Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main
+- La barre de recherche est toujours entièrement cosmétique
+- Le code est assez chaotique et nécessite d'être optimisé
 
 ## Bilan 
 
