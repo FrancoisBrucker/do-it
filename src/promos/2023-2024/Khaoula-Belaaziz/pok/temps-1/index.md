@@ -42,8 +42,22 @@ Créer un portfolio avec Html, Css et Javascript en se concentrant sur le design
 
 ## Ce que j'ai fait
 
+J'ai créé un portfolio avec Html & Css, où je montre mes projets personnels et le travail que je fais. 
+J'ai appliqué les connaissances que j'ai pris dans les formations que j'ai suivi sur un site web e-commerce, j'ai créé:
+- Header Section
+- Home Section
+- About Section
+- Portfolio Section
+- Services Section
 
-<img src=".png"  width=600px>
+<img src="ecom5.png"  width=600px>
+<img src="ecom2 (1).png"  width=600px>
+<img src="ecom3.png"  width=600px>
+<img src="ecom5.png"  width=600px>
+ 
+ Et par la suite j'ai entrepris le travail sur mon Portfolio.
+
+
 
 ## Code HTML
 {% info "**HTML (Hypertext Markup Language)**" %}
@@ -84,18 +98,22 @@ Structure du code HTML :
 
 </html>
 ```
-En appliquant cette structure, j’ai développé le code du site que vous prouvez visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/index.html).
+ Vous prouvez trouver le code Html [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/index.html).
 
 ## Code CSS
-{% info "**CSS (Cascading Style Sheets)**" %}
 
-{% endinfo %}
+J’ai développé le stylesheet du site. Vous prouvez le visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
 
-J’ai développé le stylesheet du site que vous prouvez visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
+## Résultat final
 
-## Résultat
-En liant les deux codes HTML et CSS explicités précédemment, j’ai obtenu le résultat suivant : 
-<img src="site.png">
+<img src="portfolio1.png"  width=600px>
+<img src="portfolio2.png"  width=600px>
+<img src="portfolio3.png"  width=600px>
+<img src="portfolio4.png"  width=600px>
+<img src="portfolio5.png"  width=600px>
+
+## Points d'amélioration
+Le site est opérationnel, mais faute de temps, certaines de mes idées n'ont pas été implémentées. Je souhaite améliorer sa conception responsive et ajouter plus d'éléments interactifs pour enrichir l'expérience utilisateur.
 
 ## Références : 
 {% prerequis %}

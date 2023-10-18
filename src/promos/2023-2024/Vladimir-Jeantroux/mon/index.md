@@ -1,5 +1,5 @@
 ---
-layout: layout/fiche.njk
+layout: layout/mon-index.njk
 
 title: "MON de Vladimir Jeantroux"
 authors:
@@ -17,4 +17,4 @@ Ensemble des MON réalisés par Vladimir Jeantroux
 
 - [Bases d'HTML et CSS](./temps-1-1) 
 
-- [C#](./temps-1-2) 
+- [Introduction au C#](./temps-1-2) 

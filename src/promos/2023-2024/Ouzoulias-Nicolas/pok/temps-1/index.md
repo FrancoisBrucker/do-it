@@ -649,3 +649,14 @@ L'objectif principal de faire un site de paris de coinche n'a pas pu être about
 
 Je souhaite également mettre en place un système de mise à jour automatique de l'historique des parties ainsi que de finir l'inscription et l'onglet pour récapituler les avancées des tournois. 
 
+## IV. Conclusion
+
+J'ai beaucoup aimé découvrir le développement Front à travers ce POK même si cela a été un peu chaotique et long au début car je n'avais vraiment aucune notion et j'étais donc très lent pour la prise en main des langages. 
+
+Une fois ces derniers un peu plus maîtrisés, la réalisation de mon premier site Web s'est très bien passé et j'ai pu testé de nombreuses fonctionnalités HTML et CSS. 
+
+Je n'ai pas pu incorporer les fonctionnalités principales que je souhaitais au départ par manque de temps et car c'est finalement sur tout le Back du site qu'il faut travailler pour cela, mais je pense orienter mon deuxième POK pour effectuer cela. 
+
+### Sources 
+
+- *Créez votre site web avec HTML5 et CSS3.* OpenClassrooms. https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3

@@ -176,8 +176,7 @@ Lorsqu'on ouvre le fichier voici ce que l'on obtient :
 
 <div stype="display:flex"><img src="bddmusee.png"></div>
 
-La première chose que l'on peut mettre en évidence se sont les cellules vide : 
-
+[Télécharger le fichier Excel](fréquentationsmusées.zip)
 
 
 #### Etape 2 : Analyse des données 
