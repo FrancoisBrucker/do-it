@@ -9,6 +9,10 @@ date: 2023-09-17
 
 tags: 
   - "temps 1"
+  - Web Front
+  - HTML
+  - CSS
+  - Coinche
 
 résumé: Le premier POK de l'année pour apprendre à programmer la partie front d'un site web.
 ---
@@ -19,7 +23,7 @@ Je n'ai jamais pratiqué le developpement Web je cherche donc à travers ce POK 
 - Les mettre en pratique en codant mon premier site
 - Aider mes confrères centraliens fan de Coinche
 
-L'ensemble de mon code est disponible sur mon GitHub  [ici](https://github.com/NicolasOuzoulias/Centrale-Coinche)
+L'ensemble de mon code est disponible sur mon GitHub [ici](https://github.com/NicolasOuzoulias/Centrale-Coinche).
 
 ## Sommaire
 
@@ -28,6 +32,8 @@ I. Le Front pour les nuls
 II. Mon petit site Web à moi : Centrale Coinche
 
 III. Prochaines avancées
+
+IV. Conclusion
 
 ## I. Le Front pour les nuls
 
