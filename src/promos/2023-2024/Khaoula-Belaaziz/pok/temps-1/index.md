@@ -49,6 +49,11 @@ J'ai appliqué les connaissances que j'ai pris dans les formations que j'ai suiv
 - About Section
 - Portfolio Section
 - Services Section
+
+<img src="ecom5.png"  width=600px>
+<img src="ecom2 (1).png"  width=600px>
+<img src="ecom3.png"  width=600px>
+<img src="ecom5.png"  width=600px>
  
  Et par la suite j'ai entrepris le travail sur mon Portfolio.
 
@@ -104,9 +109,7 @@ Structure du code HTML :
 
 J’ai développé le stylesheet du site. Vous prouvez le visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
 
-## Résultat
-En liant les deux codes HTML et CSS explicités précédemment, j’ai obtenu le résultat suivant : 
-<img src="site.png">
+
 
 ## Références : 
 {% prerequis %}
