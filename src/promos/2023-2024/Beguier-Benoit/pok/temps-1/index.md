@@ -5,7 +5,7 @@ title: "Modélisation dynamique d'une monoplace : d'un point matériel à un mod
 authors:
   - Benoit BEGUIER
 
-date: 2023-09-27
+date: 2023-10-18
 
 tags: 
   - "temps 1"
