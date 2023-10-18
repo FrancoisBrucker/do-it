@@ -169,10 +169,11 @@ Exemples : *Il y a-t-il une corrélation entre le temps passé sur une peinture 
 Pour déterminer si il y'a une corrélation entre les deux données on peut tracer le nuage de points d'une variable par rapport à l'autre. On se rend compte qu'il n'y a pas nécessairement de tendance mise en lumière mais comme il s'agit d'un tout petit échantillon de données c'est plutôt normal surtout que les données ont été inventé. Sur de vraie jeux de données il est très utile d'analyse ce genre de comportement.
 
 ## 6. Mise en application par l'analyse complète d'un jeu de données
-Afin d'appliquer les différentes notions vu précédemment j'ai décidé de télécharger une base de données à partir du site [M DATA]("https://data.ampmetropole.fr"). Je me suis penchée sur une BDD sur la fréquentation des musées : [Fréquentation des musées]("https://data.ampmetropole.fr/explore/dataset/mod-frequentation-des-musees-metropolitains/export/") que j'ai téléchargé en format Excel.
+Afin d'appliquer les différentes notions vu précédemment j'ai décidé de télécharger une base de données à partir du site [M DATA](https://data.ampmetropole.fr). Je me suis penchée sur une BDD sur la fréquentation des musées : [Fréquentation des musées](https://data.ampmetropole.fr/explore/dataset/mod-frequentation-des-musees-metropolitains/export/) que j'ai téléchargé en format Excel.
 
 #### Etape 1 : Mise en forme des données
 Lorsqu'on ouvre le fichier voici ce que l'on obtient : 
+
 <div stype="display:flex"><img src="bddmusee.png"></div>
 
 La première chose que l'on peut mettre en évidence se sont les cellules vide : 
@@ -180,6 +181,17 @@ La première chose que l'on peut mettre en évidence se sont les cellules vide :
 
 
 #### Etape 2 : Analyse des données 
+J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes : 
+| Questions | Intitulé |
+| -------- | -----|
+| Q1 | Quelle est la plus grande fréquentation tout compris, le musée associé et l'année ? |
+| Q2 | Quelle est la plus grande fréquentation gratuite, le musée associe et l'annnée ? |
+| Q3 | Quelle est la plus faible fréquentation non nulle tout compris, le musée associé et l'année ? |
+| Q4 | Quelle est la plus faible fréquentation non nulle gratuite, le musée associé et l'année ? |
+| Q5 | Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ? |
+| Q6 | Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2016 ? |
+| Q7 | Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ? |
+
 On va utiliser les formules vues plus tôt afin d'analyser nos données.
 La première chose que je trouve intéressante est de chercher l'enregistrement possédant la plus grande fréquentation toutes années comprises. Pour celà je savais déterminer le maximum mais comment récupérer l'ID du musée correspondant ainsi que son nom et l'année de l'enregistrement ? Je me suis donc renseigné pour trouver la formule <strong>=RECHERCHERV</strong>. Seulement cette formule ne fonctionne que si la valeur rechercher se trouve dans la première colonne ce qui n'est pas le cas ici. J'ai donc du utilisé deux formules pour séquencer mon travail : 
 + Trouver la ligne correspondante à la valeur cherchée
@@ -187,10 +199,29 @@ La première chose que je trouve intéressante est de chercher l'enregistrement 
 + Trouver les informations d'une ligne 
   J'utilise alors la formule <strong>=INDEX</strong>
 
-On obtient alors ce type de données : 
+On obtient alors ce type de données pour les premières réponses : 
 <div stype="display:flex"><img src="analyse.png"></div>
 
-Par la suite je suis allée bien plus loin dans mes différentes analyses pour obtenir ceci : 
+Pour les quatres questions j'ai utilisé des feuilles de calculs à part car il s'agit de renvoyer plusieurs lignes et non pas une seule. 
+
+##### Q5 : Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?
+
+<div stype="display:flex"><img src="qpourcentage.png"></div>
+<div stype="display:flex"><img src="qpourcentagevisu.png"></div>
+
+##### Q6 : Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2006 ?
+
+<div stype="display:flex"><img src="qgplusquep.png"></div>
+
+On peut visualiser l'évolution de cette variable au fil des années : 
+<div stype="display:flex"><img src="qgplusquepvisu.png"></div>
+
+##### Q7 : Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?
+
+<div stype="display:flex"><img src="qbaisse.png"></div>
+
+Je me suis demandé si on pouvait trouver les musées gratuits de la région en filtrant la colonne *PAYANT* sur la valeur 0. Et voici ce que j'ai obtenu : 
+<div stype="display:flex"><img src="museegratuit.png"></div>
 
 
 #### Etape 3 : Visualisation des données 
@@ -198,7 +229,18 @@ Maintenant j'ai envie de rendre mes données plus interprétables pour des perso
 <div><div stype="display:flex"><img src="fglobale.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
 <div stype="display:flex"><img src="fparannées.png"></div>
 
+Grâce à ces visualisations on peut remarquer qu'il y a une une augmentation significative de la fréquentation des musées entre l'année 2012 et 2013 : elle a quasiment triplé ! J'ai voulu me renseigner pour savoir à quoi cela était dû et j'ai trouveé cet article du Figaro [Musées : un millésime 2013 riche en fréquentation](https://www.lefigaro.fr/arts-expositions/2014/01/02/03015-20140102ARTFIG00383-musees-un-millesime-2013-riche-en-frequentation). L'article parle d'une hausse de fréquentation dans toute la France et pas que dans les Bouches-Du-Rhônes. Un événément qui a sûrement permis de faire grimper les fréquentations cette année là c'est l'inauguration du MuCem à Marseille le 4 juin 2013. Comme le montre ce graphique, le MuCem était le musée le plus fréquenté cette année là et de loin:
+<div stype="display:flex"><img src="f2013.png"></div>
+Il représente à lui tout seul 51,64% des fréquentations de l'année.
 
+On peut aussi constater l'impact de la crise du COVID qui a engendré une brutale chute des fréquentations des musées à partir de 2020.
+
+J'ai aussi voulu comprendre le pic de 2006. Et voilà le graphique de cette année là :
+<div stype="display:flex"><img src="f2006.png"></div>
+Le <strong>Musée Granet</strong> a été réouvert cette année là après sa rénovation et son agrandissement ce qui a engendré une hausse significative des fréquentations. 
+
+## 7. Pour aller plus loin
+Après avoir réaliser l'application sur la fréquentation des musées j'ai voulu voir ce qui était possible de réaliser en allant plus loin dans l'utilisation d'Excel. Pour ce faire je me suis appuyée sur la ressource de [Zeste de savoir](https://zestedesavoir.com/tutoriels/pdf/601/analysez-des-donnees-avec-excel.pdf) et plus particulièrement sur la partie <strong>Analyse des données et dynamisme du classeur</strong>. Je suis repassée très rapidement sur tout ce que j'avais déjà vu pour m'attarder sur une nouveauté : *les tableaux dynamiques croisés*.
 
 ### Horodateur 
 | Date | Heures passées | Indications | 
@@ -208,4 +250,6 @@ Maintenant j'ai envie de rendre mes données plus interprétables pour des perso
 | Vendredi 29/09 | 1H | Dénombrement, minimum, maximum |
 | Mardi  03/10 | 2H | Recherche d'une base de données à traiter et début de l'application |
 | Mercredi 04/10 | 2H | Application sur les fréquentations des musées |
+| Mercredi 11/10 | 1H | Application sur les fréquentations des musées |
+| Jeudi 12/10 | 1H | Pour aller plus loin |
 

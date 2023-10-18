@@ -9,4 +9,4 @@ authors:
 Ensemble des MON réalisés par Schultz Mathis.
 
 * [MON 1.1 : Front Web](./temps-1.1)
-* [MON 1.2 : Langage VBA](./temps-1.2)
+* [MON 1.2 : Front Web 2](./temps-1.2)
