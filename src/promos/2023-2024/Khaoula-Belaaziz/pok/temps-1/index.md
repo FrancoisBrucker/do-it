@@ -42,8 +42,21 @@ Créer un portfolio avec Html, Css et Javascript en se concentrant sur le design
 
 ## Ce que j'ai fait
 
+J'ai créé un portfolio avec Html & Css, où je montre mes projets personnels et le travail que je fais. 
+J'ai appliqué les connaissances que j'ai pris dans les formations que j'ai suivi sur un site web e-commerce, j'ai créé:
+- Header Section
+- Home Section
+- About Section
+- Portfolio Section
+- Services Section
+ 
+ Et par la suite j'ai entrepris le travail sur mon Portfolio.
 
-<img src=".png"  width=600px>
+<img src="portfolio1.png"  width=600px>
+<img src="portfolio2.png"  width=600px>
+<img src="portfolio3.png"  width=600px>
+<img src="portfolio4.png"  width=600px>
+<img src="portfolio5.png"  width=600px>
 
 ## Code HTML
 {% info "**HTML (Hypertext Markup Language)**" %}
@@ -84,14 +97,12 @@ Structure du code HTML :
 
 </html>
 ```
-En appliquant cette structure, j’ai développé le code du site que vous prouvez visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/index.html).
+ Vous prouvez trouver le code Html [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/index.html).
 
 ## Code CSS
-{% info "**CSS (Cascading Style Sheets)**" %}
 
-{% endinfo %}
 
-J’ai développé le stylesheet du site que vous prouvez visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
+J’ai développé le stylesheet du site. Vous prouvez le visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
 
 ## Résultat
 En liant les deux codes HTML et CSS explicités précédemment, j’ai obtenu le résultat suivant : 
