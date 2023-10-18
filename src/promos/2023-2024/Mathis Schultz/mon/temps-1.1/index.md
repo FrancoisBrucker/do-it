@@ -9,6 +9,9 @@ date: 2023-09-25
 
 tags: 
   - "temps 1"
+  - "CSS"
+  - "Tailwind"
+  - "HTML"
 
 résumé: "Premier pas dans le langage HTML/tailwindcss"
 ---
@@ -17,7 +20,7 @@ résumé: "Premier pas dans le langage HTML/tailwindcss"
         <img src="logo_tailwindcss.png" rounded-full alt="Click me" width="200" height="150">
     </a>
 
-> Le front web au travers d'une introduction à [TailwindCSS](https://tailwindcss.com/).
+Le front web au travers d'une introduction à [TailwindCSS](https://tailwindcss.com/).
 
 <h2 id="toc"> Table des matières </h2>
 
@@ -26,6 +29,7 @@ résumé: "Premier pas dans le langage HTML/tailwindcss"
   - [Qu'est ce que le langage HTML ?](#h1-1)
   - [Qu'est ce que TailwindCSS ?](#h1-2)
 - [Outils complémentaires](#h2)
+- [Installation de l'environnement](#h3)
 - [Liens utiles](#liens)
 
 <h2 id="h1"> Introduction </h2>
@@ -79,7 +83,76 @@ Voici un exemple du code précédent en utilisant Inline Fold, il permet doc de 
 
 <img src="inline_exemple.png">
 
+<h2 id="h3"> Installation de l'environnement </h2>
+
+Le but de ce paragraphe est de détailler les étapes à suivre afin d'installer proprement les bibliothèques de TailwindCSS.
+
+**Installer la bibliothèque Tailwind**
+
+Usuellement on se place dans notre fichier et on va venir construire différents dossier :
+- src
+- nodes_modules
+- dist
+
+Voici la démarche à suivre que l'on retrouve sur le [site officiel](https://tailwindcss.com/docs/installation)
+
+1. Installer Tailwind CSS via npm dans le terminal
+
+```
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+Attention à bien se placer dans le dossier dans lequel on souhaite créer notre projet.
+
+2. Ajouter la bibliothèque TailwindCSS à chacune des pages
+
+Dans le fichier tailwind.config.js qui vient d'être construit par les commandes précédentes il faut impérativement spécifier quels fichiers doivent utiliser TailwindCSS. Cela se fait de la manière suivante :
+
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+La ligne "content" précise le chemin vers les fichiers où Tailwind sera utilisé (via ./src/**/*) et précise le type de fichier qui sont concernés ( {html,js})
+Cette étape est capitale et c'est elle qui m'a bloqué pendant des heures et m'a fait refaire 5/6 fois l'installation sans comprendre où était mon problème.
+
+3. Construire le fichier suivant
+
+Dans le dossier source il est nécessaire de créer un dossier input.css qui permettra d'installer les outils de TailwindCSS, dans ce fichier on écrira les lignes suivantes (qui pourront être étoffer pour ceux qui souhaiteraient aller plus loin)
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+4. Installer ces composants
+
+Via la commande suivante dans le terminal on va pouvoir installer les outils qui sont écrit dans le fichier (input.CSS) que l'on vient de créer.
+
+```
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
+
+Cette commande va créer le dossier dist avec le fichier output.css qui contient un ensemble de fonction pour TailwindCSS.
+
+5. Ajouter le chemin à chaque page web qui utilise Tailwind
+
+Lorsque l'on construit une nouvelle page (index.html par exemple), il est nécessaire de préciser dans le "head" le lien du fichier précédent (output.css) cela se fait par exemple avec la ligne suivante :
+
+```html
+<head>
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+```
 <h2 id="liens"> Liens utiles </h2>
+```
 
 Voici différents lien permettant de se former à l'utilisation de TailwindCSS :
 

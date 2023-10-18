@@ -71,3 +71,28 @@ Pour la suite, voici les taches que je souhaite terminer :
 - Gérer la validation de la grille remplie par le joueur *(difficulté estimée : 1)*
 
 ## Ce que j'ai fait à la fin du temps 1
+![Le résultat après 20h de travail](./crossmath_final.png)
+
+### Les péripéties
+Comme je l'avais estimé, le plus difficile a été l'algorithme de génération de la grille. Je l'ai fait un bon coup un soir puis j'ai commencé à mettre en place le js pour l'afficher. Seulement, cet affichage m'a juste montrer à quelle point je passais à côté de plein de cas : mon implémentation n'allait pas. J'ai donc modifié mon algorithme, pour ensuite m'apercevoir que j'avais encore oublié quelque chose. Ca a continuer comme ça encore une ou deux fois avant que j'ai quelque chose qui fonctionne pour de bon !
+
+Il me restait ensuite assez peu de temps pour mettre en place mon CSS.
+
+### Rétrospectives
+Je pense que le code que j'ai écris pourrait être amélioré (ou au moins écrit de façon plus lisible). J'ai utilisé des tests en Rust, je pense que les tests relatifs à la création de la grille pourraient être améliorés. En effet, tous les tests des fonctions qui interviennent dans le processus étaient convaincants mais pas celui du tout.
+
+Ensuite, je suis sûr qu'il est possible de rendre mon implémentation encore plus rapide en utilisant des éléments de Rust que je ne connaissais pas encore.
+
+Je suis tout de même assez satisfait du résultat, je trouve assez incroyable que le tout se déroule uniquement en front.
+
+### Et ensuite ?
+Plein d'améliorations et de prolongements sont possibles, comme par exemple :
+- améliorer le style (rendre la page responsive, équilibrer le design car on dirait qu'il y a un vide à gauche, etc..)
+- ajouter des opérations comme les divisions et les multiplications
+- optimiser l'algorithme de création de la grille
+- rendre le remplissage de la grille plus intuitif (par exemple, griser une option si l'utilisateur a déjà placé la valeur)
+- et biensûr, publier le site
+
+## Conclusion
+J'ai pu découvrir le webassembly avec Rust et réaliser cette application. Le webassembly est une très belle découverte, il ouvre de toutes nouvelles possibilités à mon sens. Je souhaite toutefois noter qu'il y a des façons différentes de faire du web avec Rust. Ces autres méthodes vont un peu masquer le côté web mais se basent aussi sur le webassembly (voir [Trunk](https://trunkrs.dev)).
+Enfin, le code est disponible dans mon [github](https://github.com/assanediouf18/Crossmath).

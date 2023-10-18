@@ -13,7 +13,6 @@ tags:
   - ERP
   - PGI
 
----
 résumé: "Ce MON permettra dans un premier temps de définir précisément un ERP et d'avoir un aperçu des solutions existantes. Puis dans un second temps, il offrira une approche de démarche de déploiement d'un projet ERP"
 
 ---
