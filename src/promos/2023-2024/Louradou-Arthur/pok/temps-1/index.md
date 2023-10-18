@@ -220,7 +220,7 @@ Et voici comment j’ai créé un bouton dont on peut choisir le type et la coul
 
 Voici finalement le rendu de la première version du design, achevant la partie Design du Backlog.
 
-https://www.figma.com/file/DaRPw2SeV8fWeZLXjHCGZk/DA-Pro?type=design&node-id=55-247&mode=design&t=LW9PICOOn2GwJQ1B-4
+<img src="./assets/dark-design.svg" alt="Première version du design sombre">
 
 J’en suis satisfait car la version sombre correspond bien au style professionnel que j’avais en tête avec un design moderne auquel nous pourrions adresser quelques critiques comme la lisibilité de la police de titre en rouge. Nous verrons lors de l’intégration de cette maquette si nous pouvons résoudre simplement ces problèmes. Quoiqu’il en soit, il est désormais facile de passer au code puisque tout est fixé : couleurs, gradients, polices, disposition et même contraintes des éléments les uns par rapport aux autres. Nous pouvons passer Figma en mode développeur pour obtenir toutes ces informations et les intégrer au code. En particulier, Figma possède une option permettant de lire le css d’un élément.
 
