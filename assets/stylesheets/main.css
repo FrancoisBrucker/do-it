@@ -1251,6 +1251,9 @@ a:not([class]):active, a:not([class]):visited:active {
 .list-none {
   list-style-type: none;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .items-center {
   align-items: center;
 }
@@ -1265,6 +1268,9 @@ a:not([class]):active, a:not([class]):visited:active {
 }
 .gap-4 {
   gap: 1rem;
+}
+.overflow-auto {
+  overflow: auto;
 }
 .rounded {
   border-radius: 0.25rem;
