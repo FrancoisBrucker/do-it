@@ -362,3 +362,7 @@ monTableau[0] = 1;
 *(monTableau + 1) = 2;
 monTableau[2] = 3;
 ```
+
+## Conclusion
+
+Ca a été très intéressant pour moi de découvrir C et les concepts de pointeurs, de les appliquer dans des exercices. Ca a aussi permis de débloquer des problèmes de compréhension que j'avais dans les scripts en général (javascript ou shell). Je recommande vivement le cours d'OpenClassroom pour qui veut s'aventurer au C.
