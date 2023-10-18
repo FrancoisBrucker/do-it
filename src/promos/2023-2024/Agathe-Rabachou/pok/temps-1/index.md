@@ -5,7 +5,7 @@ title: "Création d'un CV en ligne interactif"
 authors:
   - Agathe Rabachou
 
-date: 2023-09-18
+date: 2023-10-18
 
 tags: 
   - "temps 1"

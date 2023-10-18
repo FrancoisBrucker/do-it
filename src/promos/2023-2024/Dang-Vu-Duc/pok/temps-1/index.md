@@ -35,6 +35,8 @@ L'objectif sera également de recréer un jeu de Blackjack, en utilisant le modu
 - Implémentation d'un jeu de Blackjack avec Qt sur Python
 - Démonstration du code
 - Bilan du premier sprint et prévision du deuxième sprint
+- Implémentation des simulations autour du jeu de Blackjack
+- Conclusion
 
 ## Brève explication des règles du Blackjack
 
@@ -77,7 +79,7 @@ Maintenant qu'on a les deux fichiers .ui de chaque fenêtre, on commence à impl
   
 ### La classe Blackjack_methods
 
-Comme explicité ci-dessus, cette classe contient les méthodes pour manipuler le deck. La méthode *newdeck* permet de créer le sabot pour le Blackjack. Ce sabot est composé de 6 jeux de 52 cartes. Ce sabot (dénommé *deck* dans le code) est une liste d'objet de la classe **Card**. Ces objets ont comme attribut un nom (par exemple 2_of_clubs pour le 2 de trèfle ou 11_of_hearts pour le valet de coeur) et sa valeur (1 pour as, 11 pour valet, 12 pour dame et 13 pour roi). Cette classe a également une méthode appelée *sum_hand*, qui prend en argument une liste et qui renvoie sa somme. Cette méthode prend en compte que l'As (donc la valeur 1) vaut soit 1 soit 11. Ainsi, si la main est `[1, 4]`, la méthode renvoie 15, mais si la main est `[1, 5, 7]`, la méthode renvoie 13. Voici l'implémentation de cette classe:
+Comme explicité ci-dessus, cette classe contient les méthodes pour manipuler le deck. La méthode *newdeck* permet de créer le sabot pour le Blackjack. Ce sabot est composé de 6 jeux de 52 cartes. Ce sabot (dénommé *deck* dans le code) est une liste d'objet de la classe **Card**. Ces objets ont comme attribut un nom (par exemple 2_of_clubs pour le 2 de trèfle ou 11_of_hearts pour le valet de coeur) et sa valeur (1 pour As, et 10 pour les têtes). Cette classe a également une méthode appelée *sum_hand*, qui prend en argument une liste et qui renvoie sa somme. Cette méthode prend en compte que l'As (donc la valeur 1) vaut soit 1 soit 11. Ainsi, si la main est `[1, 4]`, la méthode renvoie 15, mais si la main est `[1, 5, 7]`, la méthode renvoie 13. Voici l'implémentation de cette classe:
 
 {% details "Cliquer pour voir le code de la classe **Blackjack_methods**"%}
 
@@ -306,7 +308,7 @@ def restart(self):
 
 #### La méthode draw
 
-Cette méthode permet de piocher une carte dans le deck. Pour cela, on utilise la méthode *choice* de la bibliothèque *random* pour choisir une carte aléatoire dans le deck. Ensuite, on la retire du deck et on la renvoie. A chaque fois que le joueur pioche une carte, il faut mettre à jour le nombre de cartes restantes.
+Cette méthode permet de piocher une carte dans le deck. Pour cela, on utilise la fonction *choice* de la bibliothèque *random* pour choisir une carte aléatoire dans le deck. Ensuite, on la retire du deck et on la renvoie. A chaque fois que le joueur pioche une carte, il faut mettre à jour le nombre de cartes restantes.
 
 {% details "Cliquer pour voir le code de la méthode *draw*" %}
 
@@ -985,16 +987,16 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 *Source: [Guide-Blackjack.com](https://www.guide-blackjack.com/strategie-base-las-vegas.html)*
 
 {% note %}
-On remarque que cette stratégie de base se présente sous forme de trois tableaux: un tableau dans le cas où le joueur a un As, un autre où il a un double et un dernier dans les autres cas. Ceci est dû au fait que le comptage est différent dans le ca d'un As, et que le joueur peut séparer ses cartes dans le cas d'un double.
+On remarque que cette stratégie de base se présente sous forme de trois parties: un tableau dans le cas où le joueur a un As, un autre où il a un double et un dernier dans les autres cas. Ceci est dû au fait que le comptage est différent dans le cas d'un As, et que le joueur peut séparer ses cartes dans le cas d'un double.
 {% endnote %}
 
 Nous allons donc créer une classe **Blackjack_simulation** qui va permettre de simuler cette stratégie et d'en estimer son efficacité. Nous allons expliciter ses méthodes une par une.
 
 ### L'initialisation de la classe **Blackjack_simulation**
 
-Cette classe hérite de la classe **Blackjack_methods**, présentée précédemment, afin d'hériter des méthodes pour créer des nouveaux decks et pour compter les points d'une main. L'initialisation a pour but de créer les 3 tableaux de stratégies de base, nommées *strat1* pour le cas de base, *strat2* pour le cas du double et *strat3* pour le cas de l'As.
+Cette classe hérite de la classe **Blackjack_methods**, présentée précédemment, afin d'hériter des méthodes pour créer des nouveaux decks et pour compter les points d'une main. L'initialisation a pour but de créer les 3 parties du tableau de la stratégie de base, nommées *strat1* pour le cas de base, *strat2* pour le cas du double et *strat3* pour le cas de l'As.
 
-{% details "Cliquer pour voir l'initialisation de la classe **Blackjack_simulation*" %}
+{% details "Cliquer pour voir l'initialisation de la classe *Blackjack_simulation*" %}
 
 ```python
 def __init__(self):
@@ -1106,7 +1108,7 @@ L'implémentation de ces simulations est assez longue, mais assez répétitive. 
 
 On effectue cet algorithme n fois. On remarque que cet algorithme est répétitif, et cela se voit dans l'implémentation, qui est assez longue.
 
-Après la simulation de ces n parties, il n'y a plus qu'a afficher les résultats sous forme de graphiques en couleur et d'un graphique en barre (comme explicité précédemment), grâce à la bibliothèque matplotlib. On peut choisir d'afficher seulement un graphique, ou bien les 4 en même temps.
+Après la simulation de ces n parties, il n'y a plus qu'à afficher les résultats sous forme de graphiques en couleur et d'un graphique en barre (comme explicité précédemment), grâce à la bibliothèque matplotlib. On peut choisir d'afficher seulement un graphique, ou bien les 4 en même temps.
 
 {% details "Cliquer pour voir la méthode *simulation*" %}
 
@@ -1574,19 +1576,18 @@ Il y a beaucoup de détails importants dans ce code et il est très répétitif,
 
 ### Résultats et analyse de la simulation
 
-Voici les (jolis) graphiques que produit cette simulation. Cette simulation a été réalisée sur 10 millions de parties, afin d'avoir un echantillon suffisamment grand pour tendre vers les probabilités réélles.
+Voici les (jolis) graphiques que produit cette simulation. Cette simulation a été réalisée sur 10 millions de parties, afin d'avoir un echantillon suffisamment grand pour tendre vers les probabilités réélles. Les valeurs infiquées dans les graphiques en couleur indiquent le taux de réussite du joueur ayant la main indiquée en abscisses face à la première carte du dealer indiquée en ordonnée. Pour le premier graphique en couleur, les valeurs indiquées en abscisses sont les sommes des deux premières cartes du joueur. Par exemple, l'abscisse 10 se réfère à une des mains suivantes: 2-8, 3-7, 4-6 (les mains 5-5 et A-9 ne sont pas dans cette liste car elles sont prises en compte dans les tables des doubles et des As).
 
 ![Figure1](Image9.png)
 
 ![Figure2](Image10.png)
-*Les valeurs indiquées pour la main du joueur sont les sommes des deux premières carte du joueur*
 
 ![Figure3](Image11.png)
 
 ![Figure4](Image12.png)
 
 {% note %}
-Sur la droite des graphiques en couleur, il est indiqué les moyennes (pondérées par le nombre de mains jouées) des taux de réussites face à la première carte du dealer correspondante. En haut  de ces graphiques, on a les moyennes des taux de réussites des mains du joueur correspondante.
+Sur la droite des graphiques en couleur, il est indiqué les moyennes (pondérées par le nombre de mains jouées) des taux de réussites face à la première carte du dealer correspondante. En haut de ces graphiques, on a les moyennes des taux de réussites des mains du joueur correspondante.
 {% endnote %}
 
 Le taux de réussite moyen du joueur est de 43,22% et l'espérance de gain est de -**1,75%**. Ce chiffre est appelé l'avantage de la maison. Cela veut dire que pour une mise de 100 euros, le joueur perd en moyenne 1,75 euros. Pour se donner une idée, voici quelques avantages de la maison sur les jeux de roulette (jeux également populaires au casino):
@@ -1609,7 +1610,7 @@ Enfin, pour les mains contenant un As, la meilleure main est évidemment A-10, q
 
 ### Le comptage des cartes: la méthode *count*
 
-Il existe une méthode pour améliorer son espérance au Blackjack qui s'appelle le comptage des cartes. Une des méthodes s'appelle le *système Hi-Lo*, et permet d'estimer le nombre de cartes hautes restantes dans le sabot. En effet, plus il y a de cartes hautes dans le sabot, plus le joueur aura une main de départ élevée et plus le dealer aura de chance de bust. Concrètement, le joueur compte les cartes avec un "running count". Il ajoute à ce running count 1 si une carte entre 2 et 6 sort, et enlève 1 a ce compte quand une carte d'une valeur de 10 ou un As sort. Ce compte ne change pas dans le cas où un 7, 8 ou 9 sort. Le joueur doit ensuite diviser ce running count part le nombre de decks de 52 cartes qu'il reste dans le sabot, pour obtenir le "true_count". Lorsque ce true count dépasse une certaine valeur, le joueur va miser plus, car il aura plus de chances de gagner face au dealer.
+Il existe une méthode pour améliorer son espérance au Blackjack qui s'appelle le comptage des cartes. Une des méthodes s'appelle le *système Hi-Lo*, et permet d'estimer le nombre de cartes hautes restantes dans le sabot. En effet, plus il y a de cartes hautes dans le sabot, plus le joueur aura une main de départ élevée et plus le dealer aura de chance de bust. Concrètement, le joueur compte les cartes avec un "running count". Il ajoute à ce running count 1 si une carte entre 2 et 6 sort, et enlève 1 a ce compte quand une carte d'une valeur de 10 ou un As sort. Ce compte ne change pas dans le cas où un 7, 8 ou 9 sort. Le joueur doit ensuite diviser ce running count part le nombre de decks de 52 cartes qu'il reste dans le sabot, pour obtenir le "true_count". Lorsque ce true count dépasse une certaine valeur, le joueur va miser plus car il aura le sabot contient à ce moment là un grand nombre de cartes hautes comparé aux cartes basses.
 
 On implémente alors une méthode *count*, qui prend en argument une carte et modifie les comptes suivant sa valeur. Cette méthode est appelée à chaque fois qu'une carte est piochée.
 
@@ -1627,7 +1628,7 @@ def count(self,card):
 
 {% enddetails %}
 
-Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevée, plus il y a de chances de gagner, et donc plus il faut miser.
+Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevé, plus il y a de chances de gagner, et donc plus il faut miser.
 Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si ce seuil est dépassé, la mise est plus grande. L'éxecution de cet algorithme sur 10 millions de parties   avec le comptage des cartes activé donne ce graphique en barre:
 
 ![Image count](Image13.png)
@@ -1635,7 +1636,7 @@ Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si c
 On remarque que le taux de réussite moyen et les taux de réussite face à chaque main du dealer ne changent pas comparé au graphique obtenu quand le joueur ne compte pas. Ceci est logique, puisque l'on change seulement la mise. Cependant, on remarque que l'avantage au casino n'est plus que de **0,75%!** C'est plus de deux fois moins que précédemment. Le comptage des cartes est donc bien efficace, mais ne permet cependant pas d'avoir une espérance positive: le casino sera donc toujours gagnant!
 
 {% note %}
-Notons qu'il est possible de changer la valeur seuil et le facteur multiplicatif. Les résultats seront légèrement différents mais ne permettra jamais d'avoir l'avantage sur le casino. De plus, dans la vraie vie, il est difficile de calculer exactement le true count, notamment parce qu'il est difficile d'estimer le nombre de decks restants dans le sabot. Certains casinos cachent également le sabot, ce qui empêche les joueurs de compter les cartes.
+Notons qu'il est possible de changer la valeur seuil et le facteur multiplicatif. Les résultats seront légèrement différents mais ne permettront jamais d'avoir l'avantage sur le casino. De plus, dans la vraie vie, il est difficile de calculer exactement le true count, notamment parce qu'il est difficile d'estimer le nombre de decks restants dans le sabot. Certains casinos cachent également le sabot, ce qui empêche les joueurs de compter les cartes.
 {% endnote %}
 
 ## Conclusion

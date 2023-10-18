@@ -12,18 +12,29 @@ tags:
 
 résumé: Mon premier site web.
 ---
-## Objectifs
-- **Créer un site web interactif**: L'objectif principal est de développer un site web attrayant et interactif pour les fans de football fantasy.
+{% chemin %}
+[Le Github du POK](https://github.com/Omar-Salame/football-fantasy)
+{% endchemin %}
+## Sommaire
 
-- **Intégration de données en temps réel** : Intégrer des données en temps réel sur les joueurs, les équipes, les scores, etc., pour que les utilisateurs puissent suivre les performances de leurs équipes de fantasy en direct.
+1. [Présentation du projet](#section-1)
+2. [Objectifs](#section-2)
+3. [Premier Sprint](#section-3)
+4. [Deuxième Sprint](#section-4)
+    - [Base de données](#subsection-1)
+    - [Front](#subsection-2)
+    - [Back](#subsection-3)
+5. [Récapitulatif de l'avancement du projet et prochaines étapes](#section-5)
 
-- **Gestion d'équipes** : Permettre aux utilisateurs de créer, gérer et personnaliser leurs équipes de fantasy.
+## Présentation du projet <a id="section-1"></a>
+Le *fantasy football* est un jeu de gestion d'équipe virtuelle qui permet aux passionnés de football de créer leurs propres équipes imaginaires en sélectionnant des joueurs réels. Ces équipes virtuelles concourent en parallèle avec les performances réelles des joueurs sur le terrain. Les participants marquent des points en fonction des performances de leurs joueurs, notamment les buts marqués, les passes décisives, les clean sheets et d'autres statistiques de jeu. Le fantasy football ajoute une dimension stratégique et compétitive aux compétitions de football, permettant aux participants de gérer leur équipe, de faire des transferts de joueurs, et de rivaliser avec d'autres managers.
 
-- **Système de points** : Mettre en place un système de points pour noter les performances des joueurs de fantasy en fonction de leurs performances réelles sur le terrain.
+Dans le cas de mon POK, ce concept est appliqué spécifiquement à la ligue marocaine de football, la **INWI Botola Pro1**. Les fans de cette ligue auront la possibilité de créer leurs propres équipes virtuelles composées de joueurs de la INWI Botola Pro1, de participer à des ligues, de suivre en temps réel les performances des joueurs et de rivaliser pour le classement en fonction des performances réelles des joueurs dans la ligue. Cette plateforme offre une expérience immersive pour les amateurs de football marocain, combinant leur passion pour le sport avec des éléments de compétition et de gestion d'équipe.
 
-## Plan d'action
+## Objectifs <a id="section-2"></a>
+
 1. **Conception** :
-- Créer une maquette du site web pour planifier la disposition et l'apparence.()
+- Créer une maquette du site web pour planifier la disposition et l'apparence.
 - Définir la structure HTML de base pour chaque page.
 
 
@@ -38,25 +49,48 @@ résumé: Mon premier site web.
 4. **Gestion d'utilisateurs** :
 - Mettre en place un système d'authentification et de gestion des utilisateurs.
 
-## Premier Sprint
-
-- Création d'une base de données des équipes et joueurs de la Botola Pro.
+## Premier Sprint <a id="section-3"></a>
 - Initialisation à l HTML CSS
-<img src="header.png" width="700" height="550">
+:-------------------------:|:-------------------------:
+<img src="header.png" width="650" height="500"> | <img src="body.png" width="650" height="500">
 
-## Deuxième Sprint
+## Deuxième Sprint <a id="section-4"></a>
+
+### Base de données<a id="subsection-1"></a>
 J'ai fais un webscrapping pour collecter les données de la ligues(équipes, joueurs...). La difficulté que j'ai rencontré c'est que les données ne sont pas centralisées en un endroit. Donc j'ai utilisé differents site web pour la collecte des données.
 :-------------------------:|:-------------------------:
 <img src="player_excel.png" width="650" height="500"> | <img src="player_excel2.png" width="650" height="500">
-J'ai travaillé sur le désigne de la page: 
-- Création d'un poster pour la ligue
-<img src="poster.png" width="700" height="550">
--Modélisation du terrain
-<img src="pitch2.png" width="300" height="500">
-- Restructuration de la page d'accueil
-<img src="index.png" width="700" height="550">
-- L'ajout d'une page d'identification (les données sont stockées localement)
+
+ ### Front <a id="subsection-2"></a>
+J'ai travaillé sur la création d'un poster pour la ligue, la modélisation du terrain, puis la restructuration de la page d'accueil:
+:-------------------------:|:-------------------------:
+<img src="poster.png" width="700" height="550"> | <img src="index.png" width="700" height="550">
+<img src="pitch2.png" width="150" height="300">
+
+J'ai principalement utiliser du HTML et CSS pour le developpement du front:
+:-------------------------:|:-------------------------:
+<img src="front4.png" width="700" height="550">|<img src="front1.png" width="700" height="550">
+
+<img src="front2.png" width="700" height="550">|<img src="front3.png" width="700" height="550">
+
+Après avoir suivi une formation en JavaScript, j'ai implémenté une fonction d'authentification (pour l'instant locale):
 <img src="login.png" width="700" height="550">
+
+Ensuite, j'ai ajouté la fonctionnalité de sélectionner les joueurs pour ton équipe. Jusqu'à ce stade, toutes les fonctionnalités sont purement visuelles et aucune n'est encore opérationnelle.
+<img src="Selection.png" width="700" height="550">
+
+### Back <a id="subsection-3"></a>
+Pour mon deuxieme MON, j'ai acquis des connaissances de base en utilisant Node.js, Express, et MongoDB. J'ai ensuite mis en pratique ces compétences pour développer la partie backend de mon site. Cela m'a permis de créer une structure solide pour gérer les données, les requêtes, et les fonctionnalités interactives de la plateforme, en assurant ainsi une expérience utilisateur complète et fonctionnelle.
+
+J'ai initié le processus en établissant la première connexion avec MongoDB, en mettant en place une base de données login pour gérer les connexions et en créant une collection user.
+<img src="auth.png" width="700" height="550">
+
+Le problème réside dans le fait que, même si le formulaire de création de compte est associé à MongoDB, l'authentification reste impossible. Pour remédier à cela, il était nécessaire de mettre en place une session, d'où ma décision d'utiliser la méthode des sessions et des cookies.
+<img src="session.png" width="700" height="550">
+
+## Récapitulatif de l'avancement du projet et prochaines étapes <a id="section-5"></a>
+
+J'ai pu rassembler les bases de données, développer le frontend, ainsi que la fonctionnalité d'authentification pour le backend de mon projet. Il me reste encore à mettre en place la fonctionnalité de création d'équipe du côté backend, à concevoir un système de points, et éventuellement à permettre la comparaison des points entre les utilisateurs pour compléter l'ensemble des fonctionnalités souhaitées.
 
 
 
