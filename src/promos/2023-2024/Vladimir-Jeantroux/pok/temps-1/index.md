@@ -55,9 +55,38 @@ Je pense m'être tout de suite lancé dans des tâches en Javascript difficiles 
 
 L'objectif de ce sprint était au moins d'implémenter un système de tags pour filtrer par ingrédients, rajouter des recettes et éventuellement une barre de recherche s'il reste du temps. 
 
-J'ai créé un fichier .json avec les recettes (nom, image, ingrédients, étapes), et avec Javascript j'ai pu extraire les noms et les photos. Histoire de ne pas perdre trop de temps à rajouter à la main des recettes dans le .json il n'y en a que deux, mais elles ont pour but d'illustrer ce qui a été possible de faire. Par la suite, j'ai donc rajouté une page qui recense les différentes recettes sous forme de liste qui affiche le nom et une photo pour chaque article. En cliquant sur l'image, on est redirigé vers la page de la recette, pré-remplie à l'aide d'un script qui parcourt les recettes dans le fichier JSON, et récupère les informations correspondant à la recette voulue. 
+J'ai créé un fichier .json avec les recettes (nom, image, ingrédients, étapes), et avec Javascript j'ai pu extraire les noms et les photos. Histoire de ne pas perdre trop de temps à rajouter à la main des recettes dans le .json il n'y en a que deux, mais elles ont pour but d'illustrer ce qui a été possible de faire. Par la suite, j'ai donc rajouté une page qui recense les différentes recettes sous forme de liste qui affiche le nom et une photo pour chaque article. En cliquant sur l'image, on est redirigé vers la page de la recette, pré-remplie à l'aide d'un script qui parcourt les recettes dans le fichier JSON, et récupère les informations correspondant à la recette voulue. Pour ces étapes, j'ai demandé de l'aide à des amis développeurs, qui m'ont donné des idées de comment le code pourrait fonctionner, que je m'occuperais de rédiger. 
 
 Ensuite, j'ai modifié le JSON en ajoutant une section "Tags" qui permet de catégoriser les différents plats (par exemple les nouilles instantanées ont les tags "oeuf" et "éco"). Il y a une page qui recense tous les tags, et lorsque l'on clique dessus, affiche tous les plats avec ce tag. A l'avenir, cela pourrait servir à créer un système de recherche avancée à partir des tags. 
+
+```javascript
+//on crée la liste des recettes qui aura l'identifiant "recette-list" qui pourra être appelé sur HTML. 
+const recetteList = document.getElementById("recette-list");
+//recettes est le nom sous lequel est sauvegardé le fichier JSON
+recettes.forEach(recette => {
+    //on crée les éléments de la liste (nom, image)
+    const listItem = document.createElement("li");
+    const recipeLink = document.createElement("a");
+    const recipeImage = document.createElement("img");
+    recipeImage.classList.add("recipe-image");
+    const recipeTitle = document.createElement("h3");
+    // on parcourt le fichier JSON pour définir l'image et le titre, et le lien vers lequel ils vont mener
+    recipeLink.href = recette.lien; 
+    recipeImage.src = recette.image;
+    recipeImage.alt = recette.name;
+    recipeTitle.textContent = recette.name;
+    //on ajoute l'image et le texte au lien
+    recipeLink.appendChild(recipeImage);
+    recipeLink.appendChild(recipeTitle);
+    //on ajoute le lien à l'élément <li>
+    listItem.appendChild(recipeLink);
+    //on ajoute l'élément <li> et <ul>
+    recetteList.appendChild(listItem);
+    });
+```
+Résultat : 
+
+![Page listant toutes les recettes du site](./liste.JPG)
 
 ## Travail accompli 
 
@@ -73,6 +102,8 @@ Pistes d'amélioration :
 -Plus de recettes 
 -Héberger le site sur un serveur 
 -Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main
+-La barre de recherche est toujours entièrement cosmétique
+-Le code est assez chaotique et nécessite d'être optimisé
 
 ## Bilan 
 
@@ -82,4 +113,4 @@ Des pistes d'améliorations pour ce projet seraient l'ajout d'un véritable syst
 
 En termes d'outils, on pourrait explorer différentes pistes telles que Bootstrap ou d'autres framework pour rendre le développement plus facile sur le long terme. L'ajout d'icônes serait aussi le bienvenu pour rendre la navigation plus agréable. 
 
-Mon organisation pendant le sprint 2 était bien meilleure que durant le premier : j'ai défini des objectifs clairs que je devais remplir en une session de travail, qui m'a permis de moins m'éparpiller et mieux gérer mon temps. 
+Mon organisation pendant le sprint 2 était bien meilleure que durant le premier : j'ai défini des objectifs clairs que je devais remplir en une session de travail, qui m'a permis de moins m'éparpiller et mieux gérer mon temps. Pour le prochain POK, je vais continuer de définir des objectifs clairs pour chaque session, mais aussi bien prendre le temps de chercher et de me renseigner sur les outils utilisés afin de ne ne pas ralentir ma progression par le fait que je suis perdu. 
