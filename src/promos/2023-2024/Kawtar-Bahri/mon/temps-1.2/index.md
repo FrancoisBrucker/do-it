@@ -17,7 +17,7 @@ résumé: ""
 ## Introduction
 Le développement front-end, également connu sous le nom de développement côté client, fait référence à la création de l'interface utilisateur d'un site web ou d'une application, que les utilisateurs finaux voient et avec laquelle ils interagissent directement.
 
-Dans ce mon, j’ai appris les bases de HTML & CSS. Ce qui m’a permis de développer un site web qui pourra me servir comme modèle dans mes prochains Pokémon.
+Dans ce mon, j’ai appris les bases de HTML & CSS. Ce qui m’a permis de développer un site web qui pourra  me servir comme modèle dans mes prochains Pokémon.
 
 ## Structure du site web
 Une structure de page web fait référence à l'organisation et à la disposition des éléments sur une page web. Elle définit comment les différents éléments, tels que le texte, les images, les liens, les formulaires et autres médias, sont agencés et hiérarchisés pour créer une page web cohérente et conviviale.
