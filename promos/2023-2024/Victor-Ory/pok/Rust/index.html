@@ -188,6 +188,7 @@
 <li>Tester mes connaissances sur le projet du Chapitre 12 de la <a href="https://doc.rust-lang.org/stable/book/title-page.html">Documentation Rust</a>(★★★★☆)</li>
 <li>Réaliser un outil en commande Line pour écouter de la musique Spotify (★★★★★★★)</li>
 </ul>
+<p>★★★☆☆ = Diffculté</p>
 <h1>Prévision pour le point 1 :</h1>
 <ul>
 <li>Apprendre les concepts de base de Rust :
@@ -211,7 +212,7 @@
 <p>Je vais suivre mon progrès en accomplissant les 96 exercices progressivement plus complexes du référentiel <a href="https://github.com/rust-lang/rustlings">Rustlings</a>, qui couvrent ces concepts essentiels. Actuellement, j'en suis à la première étape de progression :</p>
 <p>[&gt;-----------------------------------------------------------] 1/96 (1.0 %), mais j'ai pour objectif d'atteindre 100 %.</p>
 <p>Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet proposé dans la documentation Rust, à savoir <a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Projet : Gestionnaire de lignes de commande</a>.</p>
-<h3>Réalité du parcours</h3>
+<p>##Réalité du parcours</p>
 <h3><a href="https://doc.rust-lang.org/stable/book/title-page.html">Rust Documentation</a></h3>
 <ul>
 <li>Fondamentale, complète, accessible et claire =  nécessaire mais pas suffisant *</li>
@@ -231,10 +232,19 @@
 </ul>
 <p>Mon travail est accessible dans ce <a href="https://github.com/Hagarde/CmdLineProject">repo</a>.<br>
 Ce projet repose sur le <a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">tutoriel</a> proposé par le livre, toutefois j'ai souhaité commencer avec puis ajouter de la complexité sans suivre le tutoriel pour réellement confronter mes connaissances à la réalité.</p>
-<h2>Conclusion</h2>
+<h2>Mes apprentissages :</h2>
+<p>La courbe d'apprentissage du Rust ressemble plutôt à :</p>
+<p><img src="learningGraphRust.png" alt="Courbe Apprentissage Rust"></p>
+<h3>Les pointeurs et les cycles de vie :</h3>
+<p>Les pointeurs dans Rust représentent un élément essentiel de l'allocation de mémoire en programmation. Ils offrent un contrôle précis sur les ressources, éliminant les problèmes de fuites de mémoire. Le système de propriété et les règles strictes de durée de vie renforcent la sécurité du code, ce qui est essentiel. Grâce à ces concepts, il est possible de créer des structures de données complexes en maintenant la stabilité du programme. En somme, les pointeurs en Rust simplifient efficacement la gestion de la mémoire et renforcent la fiabilité des projets.</p>
+<p>Cela se retrouve aussi dans la notion importante de cycle de vie des variables, qui simplifie la fonction de libérer cette espace mais la logique doit être comprise pour que cela fonctionne.</p>
+<h3>Gestion des structure de données :</h3>
+<p>La gestion des structures de données est intrinsèquement plus rigoureuse dans le langage Rust. Il se distingue par sa variété de structures de données adaptées à une multitude de scénarios. Par exemple, lorsque l'on considère le stockage de données dans une collection, Rust propose des vecteurs pour gérer des tailles variables, tandis que les tableaux (ou &quot;Array&quot; en anglais) exigent une longueur prédéterminée, connue au moment de la compilation.</p>
+<p>Cette distinction fondamentale réside dans la flexibilité offerte par ces structures. Les vecteurs permettent d'ajouter ou de supprimer des éléments de manière dynamique, ce qui se révèle particulièrement utile lorsque la taille exacte des données est inconnue à l'avance. Cela les rend adaptés à des situations où les besoins évoluent. À l'inverse, les tableaux en Rust sont statiques, obligeant à spécifier leur taille à la déclaration, avec une impossibilité de modification ultérieure. Cette contrainte peut sembler restrictive, mais elle apporte des avantages en matière de sécurité et d'efficacité, permettant au compilateur de détecter les erreurs potentielles à un stade précoce du développement.</p>
+<h2>Bilan</h2>
 <p>J'ai pas été très efficace pour cette tâche en raison de ma confiance en mes capacités en C++ après seulement le cours de 2A. Les concepts ont été dures à appréhender et ont consommé la plupart de mon temps et je me suis éparpillé entre les différentes sources pour essayer d'avoir des points de vue différents sur les concepts que je ne comprenais pas. Cela explique aussi le fait que j'ai passé beaucoup de temps sur les exercices dures du <a href="https://github.com/rust-lang/rustlings">GitHub</a>.</p>
 <p>Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique.</p>
-<p>Source explorées :</p>
+<p>Source explorées à ré explorer plus tard :</p>
 <ul>
 <li><a href="https://annas-archive.org/md5/77a5209a50709593652c64d097088439">Rust to javascript</a> ( parce que j'ai pas mal d'expérience en javascript )</li>
 <li><a href="https://annas-archive.org/md5/819c53acaf3bff8c145179d26aa8cd0a">Zero To Production in Rust - An introduction to backend development</a> ( bases = pré-requis )</li>
