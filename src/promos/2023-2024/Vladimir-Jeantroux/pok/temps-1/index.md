@@ -104,6 +104,7 @@ Pistes d'amélioration :
 - Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main
 - La barre de recherche est toujours entièrement cosmétique
 - Le code est assez chaotique et nécessite d'être optimisé
+- Les tags ne sont pas dynamiques : j'ai créer la page avec tous les tags à la main. 
 
 ## Bilan 
 
