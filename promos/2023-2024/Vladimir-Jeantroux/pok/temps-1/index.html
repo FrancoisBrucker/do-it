@@ -155,8 +155,34 @@ Ensuite, je souhaiterais implémenter une fonction de recherche par nom du plat 
 </ul>
 <h2>Sprint 2</h2>
 <p>L'objectif de ce sprint était au moins d'implémenter un système de tags pour filtrer par ingrédients, rajouter des recettes et éventuellement une barre de recherche s'il reste du temps.</p>
-<p>J'ai créé un fichier .json avec les recettes (nom, image, ingrédients, étapes), et avec Javascript j'ai pu extraire les noms et les photos. Histoire de ne pas perdre trop de temps à rajouter à la main des recettes dans le .json il n'y en a que deux, mais elles ont pour but d'illustrer ce qui a été possible de faire. Par la suite, j'ai donc rajouté une page qui recense les différentes recettes sous forme de liste qui affiche le nom et une photo pour chaque article. En cliquant sur l'image, on est redirigé vers la page de la recette, pré-remplie à l'aide d'un script qui parcourt les recettes dans le fichier JSON, et récupère les informations correspondant à la recette voulue.</p>
+<p>J'ai créé un fichier .json avec les recettes (nom, image, ingrédients, étapes), et avec Javascript j'ai pu extraire les noms et les photos. Histoire de ne pas perdre trop de temps à rajouter à la main des recettes dans le .json il n'y en a que deux, mais elles ont pour but d'illustrer ce qui a été possible de faire. Par la suite, j'ai donc rajouté une page qui recense les différentes recettes sous forme de liste qui affiche le nom et une photo pour chaque article. En cliquant sur l'image, on est redirigé vers la page de la recette, pré-remplie à l'aide d'un script qui parcourt les recettes dans le fichier JSON, et récupère les informations correspondant à la recette voulue. Pour ces étapes, j'ai demandé de l'aide à des amis développeurs, qui m'ont donné des idées de comment le code pourrait fonctionner, que je m'occuperais de rédiger.</p>
 <p>Ensuite, j'ai modifié le JSON en ajoutant une section &quot;Tags&quot; qui permet de catégoriser les différents plats (par exemple les nouilles instantanées ont les tags &quot;oeuf&quot; et &quot;éco&quot;). Il y a une page qui recense tous les tags, et lorsque l'on clique dessus, affiche tous les plats avec ce tag. A l'avenir, cela pourrait servir à créer un système de recherche avancée à partir des tags.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">//on crée la liste des recettes qui aura l'identifiant "recette-list" qui pourra être appelé sur HTML. </span>
+<span class="token keyword">const</span> recetteList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"recette-list"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//recettes est le nom sous lequel est sauvegardé le fichier JSON</span>
+recettes<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">recette</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">//on crée les éléments de la liste (nom, image)</span>
+    <span class="token keyword">const</span> listItem <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> recipeLink <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> recipeImage <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    recipeImage<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"recipe-image"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> recipeTitle <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"h3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// on parcourt le fichier JSON pour définir l'image et le titre, et le lien vers lequel ils vont mener</span>
+    recipeLink<span class="token punctuation">.</span>href <span class="token operator">=</span> recette<span class="token punctuation">.</span>lien<span class="token punctuation">;</span> 
+    recipeImage<span class="token punctuation">.</span>src <span class="token operator">=</span> recette<span class="token punctuation">.</span>image<span class="token punctuation">;</span>
+    recipeImage<span class="token punctuation">.</span>alt <span class="token operator">=</span> recette<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    recipeTitle<span class="token punctuation">.</span>textContent <span class="token operator">=</span> recette<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token comment">//on ajoute l'image et le texte au lien</span>
+    recipeLink<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>recipeImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    recipeLink<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>recipeTitle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//on ajoute le lien à l'élément &lt;li></span>
+    listItem<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>recipeLink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//on ajoute l'élément &lt;li> et &lt;ul></span>
+    recetteList<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>listItem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Résultat :</p>
+<p><img src="liste.JPG" alt="Page listant toutes les recettes du site"></p>
 <h2>Travail accompli</h2>
 <p>Tâches terminées avec succès :</p>
 <ul>
@@ -170,12 +196,14 @@ Ensuite, je souhaiterais implémenter une fonction de recherche par nom du plat 
 -Avoir une interface plus polie<br>
 -Plus de recettes<br>
 -Héberger le site sur un serveur<br>
--Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main</p>
+-Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main<br>
+-La barre de recherche est toujours entièrement cosmétique<br>
+-Le code est assez chaotique et nécessite d'être optimisé</p>
 <h2>Bilan</h2>
 <p>Au terme de ce POK, j'ai codé un site fonctionnel : les objectifs principaux ont été remplis, c'est-à-dire une page pour chaque recette, et un système de tags fonctionnels qui permet de trier les recettes. J'ai pu m'entraîner sur le HTML et CSS, et j'ai utilisé Javascript pour simplifier l'utilisation du site et le rendre dynamique grâce à des données JSON.</p>
 <p>Des pistes d'améliorations pour ce projet seraient l'ajout d'un véritable système de recherche, non seulement en recherchant des mots (la barre de recherche pourrait suggérer des pages pendant l'écriture sans passer par une page intermédiaire) mais aussi avec la recherche avancée, en incluant ou excluant des tags. Bien sûr, à l'avenir le site contiendrait beaucoup plus de pages et de <a href="http://recettes.Je">recettes.Je</a> n'ai pas pu faire tout ce que j'ai prévu de faire, mais je considère que le site accomplit son but initial : être une base de recettes pouvant être triées selon certains critères.</p>
 <p>En termes d'outils, on pourrait explorer différentes pistes telles que Bootstrap ou d'autres framework pour rendre le développement plus facile sur le long terme. L'ajout d'icônes serait aussi le bienvenu pour rendre la navigation plus agréable.</p>
-<p>Mon organisation pendant le sprint 2 était bien meilleure que durant le premier : j'ai défini des objectifs clairs que je devais remplir en une session de travail, qui m'a permis de moins m'éparpiller et mieux gérer mon temps.</p>
+<p>Mon organisation pendant le sprint 2 était bien meilleure que durant le premier : j'ai défini des objectifs clairs que je devais remplir en une session de travail, qui m'a permis de moins m'éparpiller et mieux gérer mon temps. Pour le prochain POK, je vais continuer de définir des objectifs clairs pour chaque session, mais aussi bien prendre le temps de chercher et de me renseigner sur les outils utilisés afin de ne ne pas ralentir ma progression par le fait que je suis perdu.</p>
 
 
 </article>
