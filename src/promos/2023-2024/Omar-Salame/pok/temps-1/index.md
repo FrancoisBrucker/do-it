@@ -77,7 +77,7 @@ Après avoir suivi une formation en JavaScript, j'ai implémenté une fonction d
 <img src="login.png" width="700" height="550">
 
 Ensuite, j'ai ajouté la fonctionnalité de sélectionner les joueurs pour ton équipe. Jusqu'à ce stade, toutes les fonctionnalités sont purement visuelles et aucune n'est encore opérationnelle.
-<img src="Selection.png" width="700" height="550">
+<img src="selection.png" width="700" height="550">
 
 ### Back <a id="subsection-3"></a>
 Pour mon deuxieme MON, j'ai acquis des connaissances de base en utilisant Node.js, Express, et MongoDB. J'ai ensuite mis en pratique ces compétences pour développer la partie backend de mon site. Cela m'a permis de créer une structure solide pour gérer les données, les requêtes, et les fonctionnalités interactives de la plateforme, en assurant ainsi une expérience utilisateur complète et fonctionnelle.
