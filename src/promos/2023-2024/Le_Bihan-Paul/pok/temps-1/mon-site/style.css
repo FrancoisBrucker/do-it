@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* font-family: 'Manrope', sans-serif; */
+    font-size: 1em;
+    background: linear-gradient(#FF8C42,#FFDE6B);
+}
+
+header {
+    background-color: #D13D40;
+    padding: 1% 0 1% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header h1 {
+    margin-bottom: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header div {
+    margin-bottom: 0.5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #FFE870;
+    padding: 1%;
+}
+
+.pied {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pied h2 {
+    padding-bottom: 20px;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
+
+section {
+    margin: 10% 0 10% 0;
+}
+
+section h1 {
+    margin-bottom: 10%;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume p {
+    width: 75%;
+}
+
+.mon_parcours div,
+.mes_experiences div {
+    margin: 5% 0 5% 0;
+}
+
+.par {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+h4, h5 {
+    font-weight: normal;
+    margin: 1% 0 1% 0;
+}
