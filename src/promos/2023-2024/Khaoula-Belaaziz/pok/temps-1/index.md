@@ -19,8 +19,8 @@ Créer un portfolio avec Html, Css et Javascript en se concentrant sur le design
 
 ## Plan d'action
 1. Planification
-- Définir l'Objectif : Déterminez le but/design du portfolio.
-- Organiser le Contenu : Rassemblez les informations, projets, et images que vous souhaitez inclure.
+   - Définir l'Objectif : Déterminez le but/design du portfolio.
+   - Organiser le Contenu : Rassemblez les informations, projets, et images que vous souhaitez inclure.
 2. Création de la Structure de Base avec HTML
 3. Style avec CSS
 4. Ajout de Fonctionnalités avec JavaScript
@@ -88,6 +88,8 @@ En appliquant cette structure, j’ai développé le code du site que vous prouv
 
 ## Code CSS
 {% info "**CSS (Cascading Style Sheets)**" %}
+
+{% endinfo %}
 
 J’ai développé le stylesheet du site que vous prouvez visualiser [ici](https://github.com/KhaoulaBelaaziz/Portfolio-Html-Css/blob/main/Styles/style.css).
 
