@@ -66,13 +66,3 @@ Des pistes d'améliorations pour ce projet seraient l'ajout d'un véritable syst
 En termes d'outils, on pourrait explorer différentes pistes telles que Bootstrap ou d'autres framework pour rendre le développement plus facile sur le long terme. L'ajout d'icônes serait aussi le bienvenu pour rendre la navigation plus agréable. 
 
 Mon organisation pendant le sprint 2 était bien meilleure que durant le premier : j'ai défini des objectifs clairs que je devais remplir en une session de travail, qui m'a permis de moins m'éparpiller et mieux gérer mon temps. 
-
-### Horodatage 
-
-12/10 16h-18h Passage en revue des différents outils de back-end, et planification des tâches. 
-
-14/10 9h-13h Création du .json, de la page recensant toutes les recettes à partir du .json, et de la page avec les tags. 
-
-15/10 18h-20h Création d'un modèle de page pour afficher les recettes
-
-16/10 17h-20h Présentation du site à différentes personnes afin d'avoir un retour et optimisation en conséquence

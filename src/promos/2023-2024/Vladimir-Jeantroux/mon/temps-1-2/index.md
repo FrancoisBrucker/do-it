@@ -173,17 +173,9 @@ IMPORTANT ! Une bonne pratique est de nommer son fichier à partir du nom de la 
 Je me suis ensuite intéressé à ce qui pouvait être étudié après avoir compris C#, et de sujets qui pourraient être intéressants après avoir compris C# : 
 - Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev. Je voulais expérimenter avec ça à la fin du MON mais la tâche paraît compliquée et j'ai manqué de temps. 
 - S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de développer une application web. 
-- Rust : un autre langage qui gagne de la popularité chez les développeurs. 
+- Rust : un autre langage qui gagne de la popularité chez les développeurs. (Après quelques révisions en C)
 
 ## Annexes
-
-### Horodatage 
-
-12/10 14h-16h Lecture des MON précédents, recherche des sources, installation des outils et début de l'apprentissage
-
-14/10 15h-20h Apprentissage et entraînement sur W3Schools
-
-15/10 13h-16h Mise en pratique et ouverture
 
 ### Bibliographie 
 
