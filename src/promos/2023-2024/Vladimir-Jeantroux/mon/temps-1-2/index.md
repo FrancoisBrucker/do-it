@@ -5,7 +5,7 @@ title: "Introduction au C#"
 authors:
   - Vladimir Jeantroux
 
-date: 2023-09-18
+date: 2023-10-18
 
 tags:
   - 'temps 1'
