@@ -123,9 +123,8 @@
 
 
 
-<h1>Résumé :</h1>
-<p>C# est un langage orienté objet prédominant dans le domaine du développement de jeux vidéos, très utilisé dans les moteurs tels que Unity ou Godot.</p>
-<h2>Ressources :</h2>
+<h2>Résumé :</h2>
+<p>C# (prononcer C Sharp) est un langage orienté objet prédominant dans le domaine du développement de jeux vidéos, très utilisé dans les moteurs tels que Unity ou Godot.</p>
 <h2>Pré-requis :</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -134,12 +133,141 @@
 <div class="pl-8 mr-8">
 <p>Pré-requis :</p>
 <ul>
-<li>Avoir des bases en C</li>
+<li>Avoir des bases en C et en programmation orientée objet</li>
 </ul>
 </div></div>
-<h2>Sommaire :</h2>
+<p>On va aussi avoir besoin d'un IDE comme Visual Studio Code, avec l'extension C# et le framework .NET.</p>
+<h2>C'est quoi .NET ?</h2>
+<p>.NET (prononcer dot net) est un framework qui fournit un environnement de développement et d'exécution pour le développement d'applications web. Il contient des librairies et des outils de base qui permettent de faciliter la tâche du développeur. L'intérêt pour C# est d'avoir des outils pour coder son application sans avoir à tout réinventer, et simplement pouvoir construire par-dessus les templates qu'offre .NET.</p>
+<p>L'intérêt principal de .NET est qu'il est polyvalent, avec plusieurs composants avec des fonctions différentes, comme une bibliothèque de classes ou de frameworks pour différents types d'application. Un tableau complet recensant les composants et leurs fonctionnalités peuvent être trouvés dans le <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/">MON de Savinien Laeuffer</a>, MON qui m'a permis de bien comprendre les différents aspects de ce langage.</p>
+<h2>Notions basiques</h2>
+<h3>La programmation orientée objet (POO)</h3>
+<p>C# est un langage orienté objet, ce qui signifie qu'il repose sur la notion d'objets et de classes. Elle se fonde sur l'idée de modéliser des entités du monde réel ou des abstractions informatiques sous forme d'objets, qui possèdent des caractéristiques (appelées attributs) et des comportements (appelés méthodes). La POO permet de structurer et d'organiser le code de manière plus modulaire, ce qui facilite la compréhension, la maintenance et la réutilisation du code. C'est une notion centrale à C# qu'il faut bien comprendre avant de vouloir commencer à coder.</p>
+<h4>1. Classes</h4>
+<p>Une classe est un modèle pour créer des objets. Elle définit les attributs (variables) et les méthodes (fonctions) que les objets auront. Voici un exemple simple de définition de classe :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On a déclaré une classe s'appelant &quot;Personne&quot;. Un objet de la catégorie Personne aura deux attributs : son nom et son âge. Cet objet a aussi une fonction Parler qui renvoie simplement dans le terminal le texte &quot;Bonjour&quot;. L'intérêt de cette méthode est que c'est ensuite facile de définir des Personnes, et on peut en avoir plusieurs représentants dans le programme.</p>
+<h4>2. Objets</h4>
+<p>Les objets sont les instances de classe. Par exemple, si je veux créer une nouvelle personne :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span>Nom <span class="token operator">=</span> <span class="token string">"Alice"</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span><span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Cela me permet de définir un représentant de la classe Personne avec tous les attributs et méthodes qui vont avec. Ceux qui ont bien suivi les cours d'informatique en 1A se rendront compte qu'on se rapproche beaucoup de la structure en Java, à quelques différences de syntaxe près. On a aussi les notions de constructeurs, qui permettent de faciliter la création d'objets.</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
+
+    <span class="token comment">// Constructeur</span>
+    <span class="token keyword">public</span> <span class="token function">Personne</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> nom<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> age<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Nom <span class="token operator">=</span> nom<span class="token punctuation">;</span>
+        Age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cela peut paraître fastidieux à implémenter au début, mais la création d'objets par la suite devient beaucoup plus simple.</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>En une seule ligne, on a créé un nouvel objet; les constructeurs permettent de créer plusieurs objets très rapidement et accélèrent le développement.</p>
+<h2>Exemples d'application</h2>
+<p>Pour apprendre à me servir de C#, j'ai codé quelques exemples simples pour me familiariser avec les méthodes. On a d'abord le plus simple, l'incontournable :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>J'ai aussi expérimenté avec des boucles et des conditions, en créant un programme qui liste les nombres premiers jusqu'à une certaine limite :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">EstNombrePremier</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> nombre<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nombre <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">*</span> i <span class="token operator">&lt;=</span> nombre<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nombre <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> limite <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> nombre <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> nombre <span class="token operator">&lt;=</span> limite<span class="token punctuation">;</span> nombre<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">EstNombrePremier</span><span class="token punctuation">(</span>nombre<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                Console<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>nombre <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Pour exécuter ce fichier, on se place dans le dossier où se trouve le fichier avec le code (au format .cs) et on exécute dans le terminal :</p>
+<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet new console
+</code></pre>
+<p>Cela nous crée un environnement de projet. On peut maintenant compiler le code et le faire tourner et avoir la sortie :</p>
+<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet build
+dotnet run
+</code></pre>
+<p>Output :</p>
+<pre><code>2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+</code></pre>
+<p>IMPORTANT ! Une bonne pratique est de nommer son fichier à partir du nom de la classe, cela peut éviter certaines erreurs.</p>
+<h2>Ouverture</h2>
+<p>Je me suis ensuite intéressé à ce qui pouvait être étudié après avoir compris C#, et de sujets qui pourraient être intéressants après avoir compris C# :</p>
 <ul>
-<li></li>
+<li>Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev. Je voulais expérimenter avec ça à la fin du MON mais la tâche paraît compliquée et j'ai manqué de temps.</li>
+<li>S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de développer une application web.</li>
+<li>Rust : un autre langage qui gagne de la popularité chez les développeurs.</li>
+</ul>
+<h2>Annexes</h2>
+<h3>Horodatage</h3>
+<p>12/10 14h-16h Lecture des MON précédents, recherche des sources, installation des outils et début de l'apprentissage</p>
+<p>14/10 15h-20h Apprentissage et entraînement sur W3Schools</p>
+<p>15/10 13h-16h Mise en pratique et ouverture</p>
+<h3>Bibliographie</h3>
+<ul>
+<li>
+<p>MON de Savinien Laeuffer : <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/">https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/</a></p>
+</li>
+<li>
+<p>Tutoriel C# de W3Schools : <a href="https://www.w3schools.com/cs/cs_getstarted.php">https://www.w3schools.com/cs/cs_getstarted.php</a></p>
+</li>
+<li>
+<p>Documentation de Microsoft : <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/">https://learn.microsoft.com/fr-fr/dotnet/csharp/</a></p>
+</li>
+<li>
+<p>MON Rust de Assane Diouf : <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/</a></p>
+</li>
 </ul>
 
 
