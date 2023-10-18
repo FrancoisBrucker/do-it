@@ -18,6 +18,8 @@ tags:
 Je voulais utiliser ce premier POK pour me former au développement web et créer un site sur les recettes de cuisine. Ca prendrait la forme de sites comme Marmiton, avec différentes recettes avec listes d'ingrédients et si possible appuyées par des photos et des vidéos. 
 J'aimerais aussi implémenter une forme de recherche où entre des ingrédients ou un style de plat (copieux, healthy, etc.) et renverrait des plats recommandés.
 
+Le projet est disponible sur Github [ici](https://github.com/VlaadimirJ/Vladimir-POK1). La page principale se trouve sur index.html et permet de naviguer vers toutes les autres pages. 
+
 ## Sprint 1
 
 ### Design : 
@@ -46,7 +48,7 @@ J'ai ensuite fait plusieurs tentatives pour implémenter une barre de recherche,
 Je pense m'être tout de suite lancé dans des tâches en Javascript difficiles trop rapidement, ce qui a beaucoup ralenti ma progression. J'ai sous-estimé le temps pour apprendre Javascript et les tâches à faire pour le fonctionnement du site. Je dispose cependant de templates de pages qui me seront utiles pour la suite. J'ai été très ambitieux au vu de mes compétences en développement web et j'ai revu mes objectifs pour le 2e sprint : 
 
 - Voir comment créer un système de tags avec les ingrédients 
-- Polir les différentes pages déjà faites
+- Stocker les recettes de façon à ce que le site puisse y accéder
 - Trouver une manière de construire les pages pour les recettes 
 
 ## Sprint 2 
@@ -61,7 +63,7 @@ Ensuite, j'ai modifié le JSON en ajoutant une section "Tags" qui permet de cat�
 
 Au terme de ce POK, j'ai codé un site fonctionnel : les objectifs principaux ont été remplis, c'est-à-dire une page pour chaque recette, et un système de tags fonctionnels qui permet de trier les recettes. J'ai pu m'entraîner sur le HTML et CSS, et j'ai utilisé Javascript pour simplifier l'utilisation du site et le rendre dynamique grâce à des données JSON.  
 
-Des pistes d'améliorations pour ce projet seraient l'ajout d'un véritable système de recherche, non seulement en recherchant des mots (la barre de recherche pourrait suggérer des pages pendant l'écriture sans passer par une page intermédiaire) mais aussi avec la recherche avancée, en incluant ou excluant des tags. Bien sûr, à l'avenir le site contiendrait beaucoup plus de pages et de recettes. 
+Des pistes d'améliorations pour ce projet seraient l'ajout d'un véritable système de recherche, non seulement en recherchant des mots (la barre de recherche pourrait suggérer des pages pendant l'écriture sans passer par une page intermédiaire) mais aussi avec la recherche avancée, en incluant ou excluant des tags. Bien sûr, à l'avenir le site contiendrait beaucoup plus de pages et de recettes.Je n'ai pas pu faire tout ce que j'ai prévu de faire, mais je considère que le site accomplit son but initial : être une base de recettes pouvant être triées selon certains critères.   
 
 En termes d'outils, on pourrait explorer différentes pistes telles que Bootstrap ou d'autres framework pour rendre le développement plus facile sur le long terme. L'ajout d'icônes serait aussi le bienvenu pour rendre la navigation plus agréable. 
 
