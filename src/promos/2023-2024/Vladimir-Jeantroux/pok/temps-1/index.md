@@ -59,6 +59,21 @@ J'ai créé un fichier .json avec les recettes (nom, image, ingrédients, étape
 
 Ensuite, j'ai modifié le JSON en ajoutant une section "Tags" qui permet de catégoriser les différents plats (par exemple les nouilles instantanées ont les tags "oeuf" et "éco"). Il y a une page qui recense tous les tags, et lorsque l'on clique dessus, affiche tous les plats avec ce tag. A l'avenir, cela pourrait servir à créer un système de recherche avancée à partir des tags. 
 
+## Travail accompli 
+
+Tâches terminées avec succès : 
+- Une page d'accueil
+- Une page pour chaque recette
+- Une page qui liste toutes les pages du site
+- Avoir des tags associés à chaque page 
+- Un caroussel d'images sur chaque page de recette
+
+Pistes d'amélioration : 
+-Avoir une interface plus polie 
+-Plus de recettes 
+-Héberger le site sur un serveur 
+-Avoir des pages entièrement dynamiques; certaines infos doivent encore être remplies à la main
+
 ## Bilan 
 
 Au terme de ce POK, j'ai codé un site fonctionnel : les objectifs principaux ont été remplis, c'est-à-dire une page pour chaque recette, et un système de tags fonctionnels qui permet de trier les recettes. J'ai pu m'entraîner sur le HTML et CSS, et j'ai utilisé Javascript pour simplifier l'utilisation du site et le rendre dynamique grâce à des données JSON.  
