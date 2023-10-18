@@ -170,10 +170,10 @@ IMPORTANT ! Une bonne pratique est de nommer son fichier à partir du nom de la 
 
 ## Ouverture 
 
-Je me suis ensuite intéressé à ce qui pouvait être étudié après avoir compris C#, et de sujets qui pourraient être intéressants après avoir compris C# : 
-- Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev. Je voulais expérimenter avec ça à la fin du MON mais la tâche paraît compliquée et j'ai manqué de temps. 
-- S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de développer une application web. 
-- Rust : un autre langage qui gagne de la popularité chez les développeurs. (Après quelques révisions en C)
+Après avoir cerné C# et ses bases, je me suis lancé dans plusieurs travaux qui n'ont pas pu aboutir par manque de temps, mais qui pourraient être abordés dans le futur : 
+- Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev. 
+- S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de voir comment développer une application web (ou mobile). 
+- Voir comment fonctionne Rust : un autre langage qui gagne de la popularité chez les développeurs. (Après quelques révisions en C) Il y a beaucoup de ressources accessibles, ainsi que des MONs pour apprendre, notamment ceux d'Assane Diouf et de Paul Vietor. 
 
 ## Annexes
 
@@ -186,3 +186,5 @@ Je me suis ensuite intéressé à ce qui pouvait être étudié après avoir com
 - Documentation de Microsoft : https://learn.microsoft.com/fr-fr/dotnet/csharp/ 
 
 - MON Rust de Assane Diouf : https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/ 
+
+- MON d'introduction à Rust de Paul Vietor : https://francoisbrucker.github.io/do-it/promos/2023-2024/Vietor-Paul/mon/temps-1.2/ 
