@@ -5,7 +5,7 @@ title: "HTML C'est Super Simple"
 authors:
   - Benoit BEGUIER
 
-date: 2023-09-17
+date: 2023-10-18
 tags: 
   - "temps 1"
   - "HTML"
@@ -72,7 +72,7 @@ On y rajoute des paragraphes avec `<p>` et des sections avec `<div>`.
           <h1>Mon site web</h1>
             <a href="a-propos.html" class="apropos">À propos</a>
             <div class="search-bar">
-              <input type="text" placeholder="Rechercher recette, ingrédient,...">
+              <input type="text" placeholder="Rechercher">
               <button type="button">Rechercher</button>
             </div>
         </div>

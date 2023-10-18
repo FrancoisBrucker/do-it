@@ -153,13 +153,13 @@ cellule_somme.value = somme
 
 Afin d'utiliser les différentes méthodes vues précédemment je vais reprendre le code sur lequel je travaillais lors de mon stage et pour lequel j'ai à peine utilisé *openpyxl*. 
 
-Mon code sert à étudier des relevés de pression dans des canalisations, les données initiales que j'avais est donc un tableau Excel avec une colonne de dates et une autre de pressions. 
+Mon code sert à étudier des relevés de pression dans des canalisations, les données initiales que j'avais étaient donc un tableau Excel avec une colonne de dates et une autre de pressions. 
 
-Après avoir importé les données dans Python et de nombreux calculs effectué j'obtenais un tableau correspondant à une matrice que j'affichais grâce à la bibliothèque *matplotlib.pyplot*. 
+Après avoir importé les données dans Python et après de nombreux calculs j'obtenais un tableau correspondant à une matrice que j'affichais grâce à la bibliothèque *matplotlib.pyplot*. 
 
 ![Graphe Python](graphe_python.png)
 
-Le tableau derrière cette matrice est rangé sous forme d'*array* dans mon code mais il peut être utile de l'avoir en Excel. 
+Le tableau derrière cette matrice est rangé sous forme d'*array* dans mon code mais il peut être utile de l'avoir en Excel pour visualiser et le manipuler plus facilement pour les clients. 
 
 {% details "Cliquez pour afficher la fonction de création du tableau Excel" %}
 
@@ -201,6 +201,7 @@ On obtient alors le tableau Excel suivant :
 Afin de le rendre plus visuel nous allons recréer une mise en page conditionnelle afin de recréer la matrice colorée obtenue sur Python. 
 
 {% details "Cliquez pour afficher la fonction de création du tableau Excel avec la mise en page conditionnelle" %}
+
 ```python
 def convert_excel (matrice,chemin_fichier) :
     """ Permet d'enregistrer une matrice dans un tableau Excel.
