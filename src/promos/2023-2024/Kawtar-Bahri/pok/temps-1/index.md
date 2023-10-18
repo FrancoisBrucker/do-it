@@ -40,8 +40,10 @@ Comme il s’agit de l’externalisation des processus, cette entreprise travail
 Ceci entraîne plusieurs problèmes et défis, notamment : manque d'interopérabilité entre les outils, difficultés de collaboration entre les équipes, et difficultés de reporting et d'analyse.
 
 ## Définition des objectifs de transformation 
-Ci après les principales catégories des tranformations digitales selon une étude de Capgemini Consulting & MIT Sloan Management : 
-<img src="digital.png" width=100px>
+Faire un projet de transformation digitale ne se résume pas à l'automatisation totale. Comme illustré dans le schéma ci-dessous, il est essentiel de traverser plusieurs étapes pour atteindre un niveau de maturité plus élevé. De plus, il est important de noter que la majorité des entreprises ne possèdent qu'un niveau de maturité digitale relativement bas, avec 80 % d'entre elles (y compris l'entreprise sujet dece POK) se situant à l'étape de la connectivité.
+<img src="maturity_stage.png" width = 550px>
+Ci après les principales catégories des tranformations digitales selon une [étude de Capgemini Consulting & MIT Sloan Management](https://www.capgemini.com/wp-content/uploads/2017/07/Digital_Transformation__A_Road-Map_for_Billion-Dollar_Organizations.pdf): 
+<img src="digital.png" width = 550px>
  <br/>
 L’opportunité que j’ai identifiée pour l'entreprise étudiée s’inscrit dans la catégorie Operational Process, Performance management, Data-driven decision-making. Les objectifs sont donc :
 -	Centraliser les données pour faciliter le reporting 
@@ -50,11 +52,50 @@ L’opportunité que j’ai identifiée pour l'entreprise étudiée s’inscrit 
 ## Benchmarking concurrentiel 
 Pour résoudre ces problèmes, de nombreuses entreprises cherchent à rationaliser leurs systèmes en adoptant des solutions intégrées, en améliorant l'interopérabilité des outils ou en investissant dans des plates-formes de gestion unifiée. L'objectif est de simplifier l'environnement informatique, d'augmenter l'efficacité et de réduire les coûts opérationnels.
 
+|Solution|Rôle|Exemple d'entreprise|Source de l'information| 
+|---    |---    |---    |---   |---    |
+|API (Application Programming Interface)|Permet la communication entre différentes applications informatiques.|Salesforce utilise des API pour intégrer des applications tierces.|       |       |
+|Data Warehousing|Stockage centralisé de données pour une analyse avancée, souvent accompagné d'ETL|Amazon Web Services (AWS) utilise Amazon Glue pour ETL, Netflix utilise Amazon Redshift pour le data warehousing.||
+|Middleware|Facilite la communication entre différentes applications et systèmes.|IBM WebSphere est un middleware utilisé par diverses entreprises.||
+|Enterprise Service Bus (ESB)|Facilite l'intégration de différents systèmes d'entreprise.|SAP Process Integration (PI/PO) est utilisé par Procter & Gamble.||
+|Master Data Management (MDM)|Gestion centralisée de données maîtresses pour assurer la cohérence.|Walmart utilise Informatica MDM.||
+|Messages queues |Technique de programmation utilisée pour la communication interprocessus ou la communication de serveur-à-serveur|-|-|
+|Plateformes d'Intégration d'Applications d'Entreprise (EAI)|-|IBM App Connect|-|
+
+Analyse multicritères : 
+
+|Solution|Facilité d'intégration|Coût|Performance|Flexibilité|Gestion des données|Fiabilité|
+|---    |---    |---    |---   |---    |
+|API|	Élevée|	Faible|Très rapide|	Élevée|	Élevée|	Très fiable|
+|ETL|	Élevée|	Moyen|	Élevée|	Moyenne|	Élevée|	Élevée|
+|Data Warehousing & ETL|	Moyenne|	Moyen|	Élevée|	Moyenne|	Élevée|	Élevée|
+|Middleware|	Moyenne|	Moyen|	Moyenne|	Élevée|	Moyenne|	Moyenne|
+|ESB|	Moyenne|	Moyen|	Moyenne|	Élevée	|Faible|	Moyenne|
+|MDM|	Faible|	Moyen|	Moyenne|	Moyenne|	Élevée|	Élevée|
+|Messages Queues|	Élevée|	Faible |Très rapide|	Moyenne|	Moyenne|	Très fiable|
+|EAI|	Élevée|	Moyen|	Élevée|	Élevée|	Moyenne|	Élevée|
+
+D'après cette analyse, on peut dire que les solutions les plus adaptées pour l'entreprise étudiée sont une API Gateway pour l'interopérabilité des outils, et unn Data Warehouse pour la centralisation des données.
+
+
 ## Élaboration d'un plan d'action 
-(A faire)
+Plan de déploiement des solutions choisies  :
+
+<div style="display: flex;">
+    <div style="flex: 50%; padding: 5px;">
+        <img src="1.png" alt="Image 1">
+    </div>
+    <div style="flex: 50%; padding: 5px;">
+        <img src="2.png" alt="Image 2">
+    </div>
+</div>
+
+*Niveau de maturité défini dans [Managing the Digital Transformation of Companies]( https://www.acatech.de/wp-content/uploads/2020/04/aca_STU_MatInd_2020_en_Web.pdf)
 
 ## Gestion du changement 
 Comme les employés sont habitués aux systèmes qu'ils utilisent actuellement, ils peuvent résister au changement. L'introduction de nouveaux outils peut rencontrer de la résistance, ce qui peut ralentir l'adoption. D'où l'importance du Change management.
+
+Pour faire face à cette problématique, il est essentiel d'engager activement les collaborateurs (les utilisateurs des nouveaux outils) à chaque étape de cette transformation. Nous pouvons commencer par les sensibiliser aux situations dans lesquelles ils peuvent constater les limitations des outils qu'ils utilisent actuellement, ce qui les encouragera à soutenir ce changement. En outre, il est crucial de fournir des formations complètes pour renforcer leurs compétences.
 
 ## Références : 
 {% prerequis %}
