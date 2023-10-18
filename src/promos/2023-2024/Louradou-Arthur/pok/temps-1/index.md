@@ -34,7 +34,7 @@ Trois compétences seront mises en pratique dans ce POK et pourraient vous incit
 2. Gestion de projet SCRUM : autant que faire ce peu, nous rapprocherons les étapes du projet à la gestion de projet agile.
 3. Développement web et intégration Front-End.
 
-# Introduction
+## Introduction
 
 Pour commencer, ce POK a une importance particulière puisqu’il servira deux fonctions principales. Premièrement, la mise en pratique de compétences techniques acquises ces dernières années et qu’il convient de combiner tout en s’assurant de la propreté du code, de l’architecture et de la gestion du projet mis en place. Ensuite, il permettra de prendre le temps de réfléchir à une stratégie de long terme pour la communication professionnelle, dans l’optique de fluidifier les démarches futures de recherche d’emploi ou de clients, tout en maintenant une qualité élevée dans l’image renvoyée aux interlocuteurs.
 
@@ -226,7 +226,7 @@ J’en suis satisfait car la version sombre correspond bien au style professionn
 
 ## Intégration web
 
-Pour intégrer ce design, je vais choisir de partir sur une base de React dans la mesure où ils permettront de répliquer le comportement en composants que l’on a fixé dans Figma. Nous n’utiliseront pas des fonctionnalités très avancées dans le framework javascript React.js : les connaissances que j’ai acquises jusqu’alors devraient donc suffire pour mettre en place des composants et les réutiliser.
+Pour intégrer ce design, je vais choisir de partir sur une base de React dans la mesure où ce framework javascript permettra de répliquer le comportement en composants que l’on a fixé dans Figma. Nous n’utiliseront pas des fonctionnalités très avancées dans le framework React.js : les connaissances que j’ai acquises jusqu’alors devraient donc suffire pour mettre en place des composants et les réutiliser.
 
 Au travail !
 
@@ -244,6 +244,8 @@ Pour rappel, [le fichier de design Figma se situe ici](https://www.figma.com/fil
 
 Ce portfolio est loin d’être achevé. Mais il constitue un MVP (Minimum Viable Project) tout à fait satisfaisant à présenter à un client ou un recruteur. Je pourrai en tirer partie en allant chercher des ressources graphiques dans le Design Figma et en créant de nouvelles pages à mesure que j’aurai des projets à présenter et des expériences à partager.
 
+{% info %}
 Quelques idées me sont apparues comme celle de refaire mon CV uniquement en HTML, mais je garderai cela pour plus tard.
+{% endinfo %}
 
-Quoiqu’il en soit, ce travail a été instructif tant sur la méthode de réalisation que sur les techniques approchées en Design et en Gestion de Projet. Le développement a été une mise en application des connaissances dans la philosophie des POKs de Do_It et constituait un point important du projet.
+Quoiqu’il en soit, ce travail a été instructif tant sur la méthode de réalisation que sur les techniques approchées en Design et en Gestion de Projet. Le développement a été une mise en application des connaissances dans la philosophie des POKs de <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> et constituait un point important du projet.
