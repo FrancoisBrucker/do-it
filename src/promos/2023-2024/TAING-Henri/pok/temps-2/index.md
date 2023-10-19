@@ -33,7 +33,7 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 
 - Apprendre à utiliser l'outil Renpy (Pour la création du jeu)
 - Se familiariser avec Figma (Pour faire l'arbre de décisions)
-- Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits)
+- Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits), il est en **anglais** donc ne soyez pas surpris que tout soit codé en anglais, etc.
 - Créer un jeu qui dure environ 1h30 avec trois fins différentes, A, B et C (dont une qui est simplement une sorte de game-over).
 
 **Backlog produit**
@@ -46,11 +46,10 @@ Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deu
 
 - <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 1 (10 minutes)
 
-- <u>Arbre de décision Figma</u> [] = 11 (420 minutes soit 7h)
+- <u>Arbre de décision Figma</u> [] = 11 (Environ 6h)
 
   - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
-  - Créer les arbres de décision pour I.ABC [] = 2 (1h30)
-  - Créer les arbres pour II.1.A [] = 1 (50 min)
+  - Créer les arbres de décision pour I.ABC [] = 2 (1h40)
   - Créer les arbres pour II.1.BC [] = 2 (1h20)
   - Créer les arbres pour II.2.B [] = 1 (40 min)
   - Créer les arbres pour II.2.C [] = 1 (40 min)
@@ -105,11 +104,10 @@ On prendra comme user-stories à faire :
 
 - <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 1 (10 minutes)
 
-- <u>Arbre de décision Figma</u> [] = 11 (420 minutes soit 7h)
+- <u>Arbre de décision Figma</u> [] = 11 (Environ 6h)
 
   - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
-  - Créer les arbres de décision pour I.ABC [] = 2 (1h30)
-  - Créer les arbres pour II.1.A [] = 1 (50 min)
+  - Créer les arbres de décision pour I.ABC [X] = 2 (1h30)
   - Créer les arbres pour II.1.BC [] = 2 (1h20)
   - Créer les arbres pour II.2.B [] = 1 (40 min)
   - Créer les arbres pour II.2.C [] = 1 (40 min)
@@ -117,11 +115,10 @@ On prendra comme user-stories à faire :
   - Créer les arbres pour III.C [] = 1 (40 min)
   - Vérifier la cohérence [] = 1 (30 min)
 
-- <u>Programmation du jeu</u> = 10 (2h)
+- <u>Programmation du jeu</u> [] = 10 (2h)
 
   - Coder les parties communes
 
-    - Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5
     - Petits choix 1ère partie du roman [] = 2
     - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3
 
