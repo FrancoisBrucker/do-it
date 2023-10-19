@@ -99,11 +99,11 @@ Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deu
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
 
-- <u>Faire un backlog précis</u> [] = 3 (1h20)
+- <u>Faire un backlog précis</u> [X] = 3 (1h20)
 
-- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [] = 5 (1h30)
+- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 1 (10 minutes)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 1 (10 minutes)
 
 - <u>Arbre de décision Figma</u> [] = 11 (420 minutes soit 7h)
 
