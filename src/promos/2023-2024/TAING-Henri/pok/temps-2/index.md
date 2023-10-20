@@ -27,8 +27,6 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 4. [Ce que j'ai fait au 2ème sprint](#section-4)
 5. [Sources](#section-5)
 
-## Ce que j'ai prévu au 1er sprint <a id="section-1"></a>
-
 **Les objectifs**
 
 - Apprendre à utiliser l'outil Renpy (Pour la création du jeu)
@@ -36,7 +34,7 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 - Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits), il est en **anglais** donc ne soyez pas surpris que tout soit codé en anglais, etc.
 - Créer un jeu qui dure environ 1h30 avec trois fins différentes, A, B et C (dont une qui est simplement une sorte de game-over).
 
-**Backlog produit**
+**Backlog produit qui évoluera**
 
 Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deuxième partie du roman), II.2., III.1., III.2.
 
@@ -95,6 +93,8 @@ Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deu
   - Barre de dialogue [] = 1
   - Taille, couleur, style du texte et son placement [] = 1
 
+**Ce que j'ai prévu au 1er sprint** <a id="section-1"></a>
+
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
 
@@ -106,7 +106,7 @@ On prendra comme user-stories à faire :
 
 - <u>Arbre de décision Figma</u> [] = 11 (Environ 6h)
 
-  - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
+  - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
   - Créer les arbres de décision pour I.ABC [X] = 2 (1h30)
   - Créer les arbres pour II.1.BC [] = 2 (1h20)
   - Créer les arbres pour II.2.B [] = 1 (40 min)
@@ -115,12 +115,12 @@ On prendra comme user-stories à faire :
   - Créer les arbres pour III.C [] = 1 (40 min)
   - Vérifier la cohérence [] = 1 (30 min)
 
-- <u>Programmation du jeu</u> [] = 10 (2h)
+- <u>Programmation du jeu</u> [] = 5 -> 10 (2h -> 5h)
 
   - Coder les parties communes
 
     - Petits choix 1ère partie du roman [] = 2
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3
+    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3 -> 8 (M'a pris beaucoup plus de temps que prévu, car je dois 1. Adapter mon scénario au jeu, 2. Adapter le texte à la fenêtre d'affichage 3. Résoudre les bugs/Retrouver les problèmes d'indentation)
 
 ## Sources
 
