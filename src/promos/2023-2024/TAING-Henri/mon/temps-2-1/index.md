@@ -40,7 +40,7 @@ Il est donc temps de devenir moins idiot. Pour ça, j'ai décidé de faire comme
 4. Insertions d'objets [X]
 5. Recopie incrémentée [X]
 6. Formules et fonctions [X]
-7. Les graphiques []
+7. Les graphiques [X]
 8. Mise en forme conditionnelle []
 9. Tri et filtres []
 10. Validations de données []
@@ -51,9 +51,12 @@ Il est donc temps de devenir moins idiot. Pour ça, j'ai décidé de faire comme
 Ayant déjà fait un peu d'analyse de données avec Python l'année dernière et utilisé Google Sheets pour des tâches simples, j'ai pu survoler les premières parties.
 Seulement, le fait que le tutoriel soit sur Excel et non sur Google Sheets m'a beaucoup ralenti, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.
 
-Par exemple, pour la fonction MID (ou STXT), qui permet d'extraire des chaînes de caractères.
+Par exemple, pour la fonction **MID** (ou STXT), qui permet d'extraire des chaînes de caractères.
 Google Sheets me renvoie "#ERROR" me disant qu'il y a une erreur dans ma formule. J'ai pris une demi-heure pour me rendre compte que les "," ne servaient pas de séparation dans la formule, mais qu'il fallait utiliser des ";".
+
+Puis, quelques jours plus tard, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction **SPARKLINE**, j'ai découvert qu'il existait la même formation pour Google Sheets ([sheets-pratique.com](https://www.sheets-pratique.com))... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.
 
 ### Sources
 
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
+[Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com
