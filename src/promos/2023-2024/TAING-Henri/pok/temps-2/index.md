@@ -21,11 +21,14 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 
 ## Table des matières
 
-1. [Ce que j'ai prévu au 1er sprint](#section-1)
-2. [Ce que j'ai fait au 1er sprint](#section-2)
-3. [Ce que je prévoyais pour le 2ème sprint](#section-3)
-4. [Ce que j'ai fait au 2ème sprint](#section-4)
-5. [Sources](#section-5)
+1. [Objectifs et backlog produit](#section-1)
+2. [Ce que j'ai prévu au 1er sprint](#section-2)
+3. [Ce que j'ai fait au 1er sprint](#section-3)
+4. [Ce que je prévoyais pour le 2ème sprint](#section-4)
+5. [Ce que j'ai fait au 2ème sprint](#section-5)
+6. [Sources](#section-6)
+
+## Objectifs et backlog produit <a id="section-1"></a>
 
 **Les objectifs**
 
@@ -90,7 +93,7 @@ Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deu
   - Menu principal [X] = 1
   - Barre de dialogue [X] = 1
 
-**Ce que j'ai prévu au 1er sprint** <a id="section-1"></a>
+## Ce que j'ai prévu au 1er sprint <a id="section-2"></a>
 
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
@@ -113,13 +116,13 @@ On prendra comme user-stories à faire :
   - Coder les parties communes
 
     - Petits choix 1ère partie du roman [] = 2 -> 3 (Pour les bugs)
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 5 -> 8 (M'a pris beaucoup plus de temps que prévu, car je dois 1. Adapter mon scénario au jeu, 2. Adapter le texte à la fenêtre d'affichage 3. Résoudre les bugs/Retrouver les problèmes d'indentation)
+    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 5 -> 8 (Me prend beaucoup plus de temps que prévu, car je dois 1. Adapter le texte à la fenêtre d'affichage 2. Résoudre les bugs/Retrouver les problèmes d'indentation)
 
 - <u>Customisation de GUI</u> [X] = 2 (30 minutes)
   - Menu principal [X] = 1
   - Barre de dialogue [X] = 1
 
-## Sources
+## Sources <a id="section-6"></a>
 
 [Tutoriel pour créer un jeu avec Renpy (en anglais)](https://www.youtube.com/watch?v=C3Ldd-5PKCw&ab_channel=ZeilLearnings) de ZeilLearnings
 [Documentation pour débuter sur Renpy](https://www.renpy.org/doc/html/quickstart.html)
