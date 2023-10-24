@@ -98,6 +98,7 @@ Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet 
 
 ![Image](MBM-accueil.png)
 
+**Voici l'utilité de chacune de ces pages :**
 |                                    | Mon Profil   | Mes Annonces       | Favoris            | Carte des Annonces |
 |:----------------------------------:|:------------:|:------------------:|:------------------:|:------------------:|
 | **Résumé**                         | Personnalisation et actualisation du profil | Liste des annonces déposées | Liste des annonces ajoutées aux favoris. | Carte interactive répertoriant les annonces et leur localisation |
