@@ -70,7 +70,7 @@ __Gestion de projet__
 ## TimeLine Projet
 La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
-![Image Timeline](MBM-timeline-projet.png)
+![Image Timeline](MBM-timeline-projet.PNG)
 
 ## Fonctionnalités 
 
