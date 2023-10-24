@@ -9,9 +9,10 @@ authors:
   - Ouzoulias Nicolas
 ---
 
+Création d'un site de mise en relation de particuliers pour la garde d'animaux et la gestion de jardin pendant une absence.
+
 Dernière mise à jour : 24/10/2023
 
-Création d'un site de mise en relation de particuliers pour la garde d'animaux et la gestion de jardin pendant une absence.
 
 ## Introduction et contexte
 
@@ -97,17 +98,11 @@ Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet 
 
 ![Image](MBM-accueil.png)
 
-#### Mon Profil
-La page Mon Profil permet à l'utilisateur de personnaliser son compte en ajoutant ou modifiant des informations à son propos. Certaines informations telles que le Prénom, le Nom et l'âge ne seront pas modifiables. C'est aussi sur cette page que l'utilisateur souhaitant déposer une annonce sera redirigé (voir ci-après) pour renseigner son adresse exacte.
+|                                    | Mon Profil   | Mes Annonces       | Favoris            | Carte des Annonces |
+|:----------------------------------:|:------------:|:------------------:|:------------------:|:------------------:|
+| **Résumé**                         | Personnalisation et actualisation du profil | Liste des annonces déposées | Liste des annonces ajoutées aux favoris. | Carte interactive répertoriant les annonces et leur localisation |
+| **Informations que l'on y trouve** |  Nom, Prénom, Age non modifiables.       | Visibilité des annonces, utilisateurs intéressés. Possibilité de modifier les annonces. | Si le déposant modifie l'annonce que la bonne main a ajouté aux favoris, ce dernier sera alerté  | Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des annonceurs  |
 
-#### Mes Annonces
-L'utilisateur retrouve facilement les annonces qu'il a déposé, avec la visibilité de celles-ci ainsi que les personnes intéressées. L'utilisateur pourra aussi modifier son annonce, ce qui alertera les bonnes mains intéressées par cette dernière et qui l'avait en favoris.
-
-#### Favoris
-Le système de favoris lors de la recherche d'annonces (voir ci-après) permet de stocker en un seul endroit toutes les annonces qui correspondent aux critères de recherche de l'utilisateur. Celui-ci peut ainsi quitter l'application pour vérifier ses disponibilités ou réfléchir, avant de se reconnecter et de retrouver rapidement ses annonces d'intérêt.
-
-#### Carte des annonces
-La carte des annonces qui permet à l'utilisateur d'afficher une carte de ses environs avec les annonces à disposition. Celle-ci sera sûrement déployée grâce une API de Google Maps. Les annonces seront affiliées à une zone géographique et non à une adresse précise afin de préserver la sécurité des annonceurs.
 
 #### Déconnexion
 Quand un utilisateur se déconnecte, il est alors redirigé vers la page d'accueil, qui lui permet de se reconnecter si besoin.
