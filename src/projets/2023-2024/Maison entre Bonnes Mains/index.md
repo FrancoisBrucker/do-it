@@ -9,6 +9,8 @@ authors:
   - Ouzoulias Nicolas
 ---
 
+Dernière mise à jour : 24/10/2023
+
 Création d'un site de mise en relation de particuliers pour la garde d'animaux et la gestion de jardin pendant une absence.
 
 ## Introduction et contexte
@@ -26,20 +28,49 @@ Une plateforme type Leboncoin permettant à un particulier de déposer son annon
 ## Et ça existe déjà ?
 Alors oui, mais non. Les applications existantes (Allovoisins, Yoojo, etc...) ne proposent que de la mise en relation entre particuliers et artisans ou dépanneurs, etc... Nous souhaitons proposer une application qui tisse réellement du lien, avec une forte inclusion sociale et non basée sur une rémunération systématique. Cette application n'est donc pas qu'une marketplace, mais bien plus que ça.
 
-## Principaux jalons / rendu final
-**Principaux jalons**
+## Rendu final, principaux jalons et compétences sollicitées
+### Rendu final ###
+- Site Low-Code / No-Code
+    - Airtable : outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces et utilisateurs
+    - Bubble : outil de programmation visuelle permettant de créer notre site web
+
+Le site Low-Code / No-Code est fonctionnel et esthétique. Il met en oeuvres différentes pages proposant diverses possibilités (dépôt d'annonce, sélection d'annonce, chatbot, ajout de favoris, création du profil utilisateur...)
+Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.
+
+- Site "dur"
+    - Partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
+    - Partie back-end pour gérer les fichiers et données utilisateurs
+
+Le site "dur" sera une version partielle du site Low-Code / No-Code : seules les principales fonctionnalités seront présentes.
+L'objectif étant cette fois-ci de développement des compétences de DevWeb.
+
+### Principaux jalons ###
 - Expérience utilisateur (UX/UI)
 - 1ère maquette en low-code
 - Passage au devweb (front-end) pour créer "le design / les fonctionnalités" du site
 - Ajout de back-end pour stocker les fichiers, gérer les données utilisateurs...
-- Quid d'une petite application en parallèle ? Trop ambitieux ?
 
-**Rendu final**
-- Site internet
-- Partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
-- Partie back-end pour gérer les fichiers et données utilisateurs
-- Quid d'une petite application en parallèle ? Trop ambitieux ?
+### Compétences sollicitées ###
+**Site Low-Code / No-code**
+- Prise en main de fonctionnalités Low-Code / No-Code grâce aux outils Airtable et Bubble afin de créer un prototype fidèle à la version finale souhaitée
+- Travail de créativité sur le design du site web.
+- Découverte des différentes fonctionnalités/interfaces visibles sur un site internet et développement du vocabulaire DevWeb associé (Carousel, liste déroulante).
 
+**Site "dur"**
+- Développement de compétences en DevWeb
+    - Apprentissage html, css, js (front-end)
+    - Utilisation de l'application Bootstrap pour implémenter des fonctionnalités sophistiquées (front-end)
+    - Utilisation des outils de dévloppement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
+    - Utilisation de Python au service des bases de données (back-end)
+
+__Gestion de projet__
+- Division et répartition des tâches dans la création d'un site
+- Utilisation de l'outil Notion afin de suivre l'avancée du projet
+
+## TimeLine Projet
+La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
+
+![Image Timeline](MBM-timeline-projet.png)
 
 ## Fonctionnalités 
 
