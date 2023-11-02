@@ -102,7 +102,7 @@ On prendra comme user-stories à faire :
 
 - <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 1 (30 minutes)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 1 -> 2 (30 min -> 1h pour séparer les ressources)
 
 - <u>Arbre de décision Figma</u> [] = 11 (Environ 4h)
 
@@ -117,10 +117,11 @@ On prendra comme user-stories à faire :
 
     - Petits choix 1ère partie du roman [] = 2 -> 3 (Pour les bugs)
     - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 5 -> 8 (Me prend beaucoup plus de temps que prévu, car je dois 1. Adapter le texte à la fenêtre d'affichage 2. Résoudre les bugs/Retrouver les problèmes d'indentation)
-
-- <u>Customisation de GUI</u> [X] = 2 (30 minutes)
-  - Menu principal [X] = 1
-  - Barre de dialogue [X] = 1
+      > Chapitre 1 [X]
+      > Chapitre 2 [X]
+      > Chapitre 3 []
+      > Chapitre 4 []
+      > Chapitre 5 []
 
 ## Sources <a id="section-6"></a>
 
