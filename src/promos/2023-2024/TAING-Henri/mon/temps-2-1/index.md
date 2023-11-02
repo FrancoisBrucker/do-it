@@ -245,7 +245,7 @@ Voilà le résultat magnifique :
 
 ## 7. Conclusion <a id="section-7"></a>
 
-J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
+J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités (**Chose qui me manque : les jointures de tableaux pour développer**). Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
 
 Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup (laissez-moi dans ma désillusion).
 
