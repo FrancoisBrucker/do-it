@@ -77,11 +77,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Google Sheets</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Apps Scripts</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -140,14 +144,19 @@
 <div class="pl-8  mb-2 mr-8">
 <p>MON débutant</p>
 </div><div class="pl-8 mr-8">
-<p>Avoir un cerveau à moitié allumé et encore...</p>
+<p>Avoir un cerveau à moitié allumé pour la partie Google Sheets, par contre, pour Apps Scripts, si vous n'avez aucune connaissance en programmation, il sera facile de prendre peur, mais encore une fois, comme en amour, il faut savoir prendre son temps...</p>
 </div></div>
 <hr>
 <h2>Table des matières</h2>
 <ol>
 <li><a href="#section-1">Introduction</a></li>
 <li><a href="#section-2">Les bases en quelques mots</a></li>
-<li><a href="#section-3">Des graphiques de partout !</a></li>
+<li><a href="#section-3">Mes deux bases de données sur lesquelles je me suis amusé</a></li>
+<li><a href="#section-4">Quelques images</a></li>
+<li><a href="#section-5">Apps Scripts à la rescousse</a></li>
+<li><a href="#section-6">Mon combat, notre combat</a></li>
+<li><a href="#section-7">Conclusion</a></li>
+<li><a href="#section-8">Sources</a></li>
 </ol>
 <h2>1. Introduction <a id="section-1"></a></h2>
 <p>Pendant le premier cours d'éco-système digital, on nous a demandé de faire un tableau de données sur Excel/Google Sheets, quelques calculs et donner une représentation pertinente. N'ayant pas Excel, j'ai utilisé Google Sheets.<br>
@@ -161,20 +170,243 @@ Et je fus incapable de créer un beau graphique. Quelle ne fut pas ma tristesse.
 <li>Recopie incrémentée [X]</li>
 <li>Formules et fonctions [X]</li>
 <li>Les graphiques [X]</li>
-<li>Mise en forme conditionnelle []</li>
-<li>Tri et filtres []</li>
-<li>Validations de données []</li>
-<li>Tableau croisé dynamique []</li>
+<li>Mise en forme conditionnelle [X]</li>
+<li>Tri et filtres [X]</li>
+<li>Validations de données [X]</li>
+<li>Tableau croisé dynamique [X]</li>
 </ol>
 <h2>2. Les bases en quelques mots <a id="section-2"></a></h2>
-<p>Ayant déjà fait un peu d'analyse de données avec Python l'année dernière et utilisé Google Sheets pour des tâches simples, j'ai pu survoler les premières parties.<br>
+<p>Ayant déjà utilisé Google Sheets pour des tâches simples, j'ai pu survoler les premières parties.<br>
 Seulement, le fait que le tutoriel soit sur Excel et non sur Google Sheets m'a beaucoup ralenti, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.</p>
 <p>Par exemple, pour la fonction <strong>MID</strong> (ou STXT), qui permet d'extraire des chaînes de caractères.<br>
 Google Sheets me renvoie &quot;#ERROR&quot; me disant qu'il y a une erreur dans ma formule. J'ai pris une demi-heure pour me rendre compte que les &quot;,&quot; ne servaient pas de séparation dans la formule, mais qu'il fallait utiliser des &quot;;&quot;.</p>
-<p>Puis, quelques jours plus tard, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction <strong>SPARKLINE</strong>, j'ai découvert qu'il existait la même formation pour Google Sheets (<a href="https://www.sheets-pratique.com">sheets-pratique.com</a>)... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.</p>
-<h3>Sources</h3>
+<p><strong>Puis, quelques jours plus tard</strong>, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction <strong>SPARKLINE</strong>, <strong>j'ai découvert qu'il existait la même formation pour Google Sheets</strong> (<a href="https://www.sheets-pratique.com">sheets-pratique.com</a>)... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.</p>
+<p>A partir de ce moment-là, tout s'est accéléré.<br>
+Je vous laisse quelques images. Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.</p>
+<h2>3. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-3"></a></h2>
+<p><strong>Base de données 1 sur les miss</strong><br>
+<img src="graphiques.png"></p>
+<p><strong>Base de données 2 sur des acteurs/célébrités</strong><br>
+<img src="repetition_incrementee.png"></p>
+<h2>4. Quelques images <a id="section-4"></a></h2>
+<p><strong>Utilisation de filtres</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="filtre.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="filtre2.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<img src="vuefiltre.png">
+<p><strong>Mise en forme conditionnelle avec dégradé de couleurs</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="mise_en_forme_conditionnelle_2.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="mise_en_forme_conditionnelle_3.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Graphes</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="graphe1.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="graphe2.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tableau croisé dynamique - FAIL</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="tableaudyn_fail.png" width="600" height="600"></td>
+<td style="text-align:center"><img src="editeurtableaudyn.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p>Première chose, je suis déçu. Je pensais que la création d'un tableau croisé dynamique était un truc de malade, mais il s'agit simplement de cliquer sur deux boutons...<br>
+Deuxième chose, je me suis rendu compte que la façon avec laquelle j'ai rempli ma base de données ne convenait pas à une analyse par tableaux croisés dynamiques. Doublement déçu.</p>
+<p>Que faire ? Refaire une base de données à la main ? Pfff. Bande de fous. QUE NENNI ! (Je regrette ce choix...)</p>
+<p>Avec les 5 heures qu'il me reste, il est temps de voir ce qu'est App Scripts, l'équivalent du VBA :o. Va-t-il m'apporter une solution ou sera-t-il un trou sans fond de connaissances ?</p>
+<h2>5. App Scripts à la rescousse <a id="section-5"></a></h2>
+<p>Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi personne ne me l'a jamais dit ?! J'avais toujours cette image obscure de la chose et pis en fait, c'est juste du code. (-.-)<br>
+En plus, c'est un langage qui est plutôt facile à prendre en main pour l'usage que je prévois d'en faire (#J'ai menti, j'ai souffert).</p>
+<p>M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur (<a href="https://www.sheets-pratique.com/fr/apps-script">sheets-pratique.com/fr/apps-script</a>) avec des étoiles dans les yeux.<br>
+Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois) :</p>
+<ol>
+<li>Introduction [X]</li>
+<li>Variables et tableaux [X]</li>
+<li>Feuilles et cellules [X]</li>
+<li>Conditions [X]</li>
+<li>Boucles [X]</li>
+<li>Fonctions [X]</li>
+<li>Tableaux avancés [X]</li>
+<li>Déclencheurs [X]</li>
+<li>Menus [X]</li>
+<li>Boîtes de dialogue [X]</li>
+<li>Fenêtres personnalisées [X]</li>
+<li>Compléments [X]</li>
+</ol>
+<p>C'était intéressant de voir la liberté qu'on avait avec App Scripts, mais comme le bon Centralien que je suis, je suis allé vers l'essentiel.<br>
+Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).</p>
+<h2>6. Mon combat, notre combat <a id="section-6"></a></h2>
+<p>On commence et on réfléchit... Je reviendrai à la charge plus tard pour finir et simplifier...<br>
+J'ai réussi à faire la première colonne et à peu près la deuxième, mais le code n'est pas très élégant.<br>
+Débugger + la syntaxe m'ont fait du mal.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Première ébauche de programme pour transformer mes données</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>function copy(list, count) {
+  var L = [];
+  for (var i = 0; i &lt; count; i++) {
+    for (var j = 0; j &lt; list.length; j++){
+      L.push([list[j]]);
+    }
+
+    }
+
+  return L;
+}
+
+
+function main(){
+
+const feuille = SpreadsheetApp.getActive();
+const f = feuille.getSheetByName('training');
+
+const nom = ['J', 'Vas', 'He', 'Ant', 'Ang', 'Han', 'Val', 'M']
+const regions = [
+    &quot;Alsace&quot;, &quot;Aquitaine&quot;, &quot;Auvergne&quot;, &quot;Bourgogne&quot;, &quot;Bretagne&quot;, &quot;Centre-Val de Loire&quot;,
+    &quot;Champagne-Ardenne&quot;, &quot;Corse&quot;, &quot;Côte d’Azur&quot;, &quot;Franche-Comté&quot;, &quot;Guadeloupe&quot;, &quot;Guyane&quot;,
+    &quot;Ile-de-France&quot;, &quot;Languedoc-Rousillon&quot;, &quot;Limousin&quot;, &quot;Martinique&quot;, &quot;Mayotte&quot;,
+    &quot;Midi-Pyrénées&quot;, &quot;Nord-Pas-de-Calais&quot;, &quot;Normandie&quot;, &quot;Nouvelle-Calédonie&quot;, &quot;Pays de la Loire&quot;,
+    &quot;Picardie&quot;, &quot;Poitou-Charentes&quot;, &quot;Provence&quot;, &quot;Réunion&quot;, &quot;Rhone-Alpes&quot;, &quot;Tahiti&quot;
+  ];
+var L =[]
+for (var i = 0; i &lt; regions.length; i++) {
+  var x = regions[i];
+  for (var j = 0; j &lt; 8; j++) {
+    L.push([x]);
+  }
+}
+
+const plage = f.getRange('A2:A225')
+plage.setValues(L)
+
+const plage2 = f.getRange('B2:B225')
+var L2 = copy(nom, 28)
+plage2.setValues(L2)
+}
+
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Deuxième et finale charge, let's gooooooooooooo !</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Programme que j'ai utilisé à la fin</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>//Pour avoir les noms des participants à côté des régions
+function copy(list, count) {
+  var L = [];
+  for (var i = 0; i &lt; count; i++) {
+    for (var j = 0; j &lt; list.length; j++){
+      L.push([list[j]]);
+      }
+
+    }
+  return L;
+}
+
+//fonction main pour éxécuter tout ça
+function main(){
+
+  const feuille = SpreadsheetApp.getActive();
+  const f1 = feuille.getSheetByName('Feuille1')
+  const f2 = feuille.getSheetByName('training');
+
+  var regions = f1.getRange(&quot;A4:A31&quot;).getValues(); //Retourne une liste de liste des régions
+  var noms = f1.getRange(&quot;B3:I3&quot;).getValues(); //Retourne une liste de liste de noms
+  var notes = f1.getRange(&quot;B4:I31&quot;).getValues(); //Retourne une matrice de notes
+
+  //Création d'une liste avec les régions*nombre de participants au sondage = 1ère colonne
+  var L1 =[]
+  for (var i = 0; i &lt; regions.length; i++) {
+    var x = regions[i];
+    for (var j = 0; j &lt; 8; j++) {
+      L1.push(x);
+    }
+  }
+  const plage = f2.getRange('A2:A225')
+  plage.setValues(L1)
+
+  //Création de la liste avec les différents noms = 2ème colonne
+  const plage2 = f2.getRange('B2:B225')
+  var L2 = copy(noms[0], 28)
+  plage2.setValues(L2)
+
+  //Création de la liste des notes = 3ème colonne, j'ai eu de la chance que getRange me donne les notes dans une forme qui m'arrange
+  const plage3 = f2.getRange('C2:C225')
+  var L3 = []
+  for (var k = 0; k &lt; notes.length; k++){
+    for (var l = 0; l &lt; notes[0].length; l++){
+      L3.push([notes[k][l]])
+    }
+  }
+  plage3.setValues(L3)
+}
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Mon dieu, ça n'a pas été facile. ChatGPT n'a même pas su m'aider, ce lâcheur.</p>
+<p>Voilà le résultat magnifique :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="training.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="menu_yes.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<img src="tableaudyn_yes.png">
+<h2>7. Conclusion <a id="section-7"></a></h2>
+<p>J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.</p>
+<p>Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup (laissez-moi dans ma désillusion).</p>
+<h2>8. Sources <a id="section-8"></a></h2>
 <p><a href="excel-pratique.com">Formation en Excel</a> par <a href="http://excel-pratique.com">excel-pratique.com</a><br>
-<a href="https://www.sheets-pratique.com/">Formation en Google Sheets</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a></p>
+<a href="https://www.sheets-pratique.com/">Formation en Google Sheets</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a><br>
+<a href="https://www.sheets-pratique.com/fr/apps-script">Formation en Apps Scripts</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a></p>
 
 
 </article>
