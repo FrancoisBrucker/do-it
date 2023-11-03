@@ -32,96 +32,90 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 
 **Les objectifs**
 
-- Apprendre à utiliser l'outil Renpy (Pour la création du jeu)
+- Prendre en main l'outil Renpy (Pour la création du jeu)
 - Se familiariser avec Figma (Pour faire l'arbre de décisions)
 - Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits), il est en **anglais** donc ne soyez pas surpris que tout soit codé en anglais, etc.
-- Créer un jeu qui dure environ 1h30 avec trois fins différentes, A, B et C (dont une qui est simplement une sorte de game-over). **Après avoir tâté un peu le terrain, on tentera déjà la fin A et la partie commune à B et C**.
+- Créer un jeu qui couvrira la partie I et la partie II de mon roman.
 
 **Backlog produit qui évoluera**
 
-Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deuxième partie du roman), II.2., III.1., III.2.
+A : Lié à la fin A | B : Lié à la fin B | C : Lié à la fin C
+Le roman est divisé en plusieurs parties I.ABC., II.BC et III.B et III.C, mais on ne s'intéressera qu'à I.ABC, II.1.BC.
 
-- <u>Faire un backlog précis</u> [] = 3 (1h30)
+- <u>Faire un backlog précis et le mettre à jour</u> [] = 3 (2h)
 
 - <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 1 (30 minutes)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 2 (1h)
 
-- <u>Arbre de décision Figma</u> [] = 11 (4h)
+- <u>Arbre de décision Figma</u> [] = 6 (3h)
 
   - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
-  - Créer les arbres de décision pour I.ABC [] = 2 (1h40)
-  - Créer les arbres pour II.1.BC [] = 2 (1h30)
-    <!-- - Créer les arbres pour II.2.B [] = 1 (40 min) -->
-    <!-- - Créer les arbres pour III.B [] = 1 (30 min)
-  - Créer les arbres pour III.C [] = 1 (40 min) -->
-  - Vérifier la cohérence [] = 1 (30 min)
+  - Créer les arbres de décision pour I.AB [] = 2 (1h40)
+  - Créer les arbres pour II.1.B [] = 2 (1h)
 
-- <u>Programmation du jeu</u> [] = 34
+- <u>Programmation du jeu</u> [] = 13
 
-  - Coder les parties communes [] = 15 (10h)
+  - Coder les parties communes I. [] = 7 (6h)
 
-    - Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5
-    - Petits choix 1ère partie du roman [] = 3
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 5
-    - Implémenter scénario/petits choix + 2e grand choix + 3e grand choix qui sont communs aux routes B et C dans II.1. [] = 5
-    - Mettre les fonds/personnages dans I. [] = 2
-    - Mettre les transitions dans I. [] = 1
-    - Mettre les fonds/personnages dans I. [] = 2
-    - Mettre les transitions dans I. [] = 1
+    - Implémenter I. [] = 5 (5h)
+      - Chapitre 1 []
+      - Chapitre 2 []
+      - Chapitre 3 []
+      - Chapitre 4 []
+      - Chapitre 5 []
+    - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)
 
-  - Route A [] = 5 (1h)
+  - Route A [] = 2 (1h)
 
-    - Pages fin A [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1
+    - Fin A [] = 1 (45 min)
+    - Mettre les fonds/transitions fin A [] = 1 (15 min)
 
-  - Route B [] = 7 (1h)
+  - Coder les parties communes II.1 [] = 4 (3h30)
 
-    - Pages fin B [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1
+    - Implémenter II.1 [] = 3 (3h)
+      - Chapitre 1 []
+      - Chapitre 2 []
+    - Mettre les fonds/personnages/transitions dans I. [] = 1 (30 min)
 
-  <!-- - Route C [] = 7 (1h30)
-    - Petits choix II.2.C après 2ème grande décision [] = 2
-    - Petits choix III.C après 3ème grande décision [] = 2
-    - Page fin C [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1 -->
+- <u>Customisation de GUI</u> [] = 2 (1h)
 
-- <u>Customisation de GUI</u> [] = 2 (30 minutes)
-  - Menu principal [X] = 1
-  - Barre de dialogue [X] = 1
+  - Menu principal [] = 1
+  - Barre de dialogue [] = 1
 
-## Ce que j'ai prévu au 1er sprint <a id="section-2"></a>
+- <u>Documenter le POK</u> [] = 1 (1h)
+
+## Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement <a id="section-2"></a>
 
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
 
-- <u>Faire un backlog précis</u> [X] = 3 (1h30)
+- <u>Faire un backlog précis et le mettre à jour</u> [X] = 3 (2h)
 
 - <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 1 -> 2 (30 min -> 1h pour séparer les ressources)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 (1h)
 
-- <u>Arbre de décision Figma</u> [] = 11 (Environ 4h)
+- <u>Arbre de décision Figma</u> [] = 6 (3h)
 
   - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
-  - Créer les arbres de décision pour I.ABC [X] = 2 (1h40)
-  - Créer les arbres pour II.1.BC [] = 2 (1h30)
-  - Vérifier la cohérence [] = 1 (30 min)
+  - Créer les arbres de décision pour I.AB [X] = 2 (1h40)
+  - Créer les arbres pour II.1.B [] = 2 (1h)
 
-- <u>Programmation du jeu</u> [] = 5h
+- <u>Coder les parties communes I.</u> [] = 7 (6h)
 
-  - Coder les parties communes
+  - Implémenter I. [] = 5 (5h)
+    - Chapitre 1 [X]
+    - Chapitre 2 [X]
+    - Chapitre 3 [X]
+    - Chapitre 4 []
+    - Chapitre 5 []
+  - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h) **Ajouté pendant le sprint**
 
-    - Petits choix 1ère partie du roman [] = 2 -> 3 (Pour les bugs)
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 5 -> 8 (Me prend beaucoup plus de temps que prévu, car je dois 1. Adapter le texte à la fenêtre d'affichage 2. Résoudre les bugs/Retrouver les problèmes d'indentation)
-      > Chapitre 1 [X]
-      > Chapitre 2 [X]
-      > Chapitre 3 []
-      > Chapitre 4 []
-      > Chapitre 5 []
+- <u>Customisation de GUI</u> [X] = 2 (1h) **Ajouté pendant le sprint**
+
+  - Menu principal [X] = 1
+  - Barre de dialogue [X] = 1
 
 ## Sources <a id="section-6"></a>
 

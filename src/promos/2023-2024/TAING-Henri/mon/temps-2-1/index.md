@@ -63,11 +63,11 @@ Google Sheets me renvoie "#ERROR" me disant qu'il y a une erreur dans ma formule
 **Puis, quelques jours plus tard**, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction **SPARKLINE**, **j'ai découvert qu'il existait la même formation pour Google Sheets** ([sheets-pratique.com](https://www.sheets-pratique.com))... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.
 
 A partir de ce moment-là, tout s'est accéléré.
-Je vous laisse quelques images. Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.
+Je vous laisse quelques images. Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des Miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.
 
 ## 3. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-3"></a>
 
-**Base de données 1 sur les miss**
+**Base de données 1 sur les Miss**
 <img src="graphiques.png">
 
 **Base de données 2 sur des acteurs/célébrités**
@@ -88,7 +88,7 @@ Je vous laisse quelques images. Je me suis appuyé sur une base de données que 
 :-------------------------:|:-------------------------:
 <img src="graphe1.png" width="350" height="350"> | <img src="graphe2.png" width="350" height="350">
 
-**Tableau croisé dynamique - FAIL**
+**Tableau croisé dynamique à partir du classement des Miss- FAIL**
 :-------------------------:|:-------------------------:
 <img src="tableaudyn_fail.png" width="600" height="600"> | <img src="editeurtableaudyn.png" width="350" height="350">
 
@@ -239,15 +239,19 @@ function main(){
 Mon dieu, ça n'a pas été facile. ChatGPT n'a même pas su m'aider, ce lâcheur.
 
 Voilà le résultat magnifique :
+**Avant**
+<img src="graphiques.png">
+
+**Après**
 :-------------------------:|:-------------------------:
 <img src="training.png" width="350" height="350"> | <img src="menu_yes.png" width="350" height="350">
 <img src="tableaudyn_yes.png">
 
 ## 7. Conclusion <a id="section-7"></a>
 
-J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités (**Chose qui me manque : les jointures de tableaux pour développer**). Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
+J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
 
-Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup (laissez-moi dans ma désillusion).
+Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup.
 
 ## 8. Sources <a id="section-8"></a>
 
