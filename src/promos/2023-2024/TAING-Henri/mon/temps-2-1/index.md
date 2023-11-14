@@ -27,11 +27,11 @@ Avoir un cerveau à moitié allumé pour la partie Google Sheets, par contre, po
 1. [Introduction](#section-1)
 2. [Les bases en quelques mots](#section-2)
 3. [Mes deux bases de données sur lesquelles je me suis amusé](#section-3)
-4. [Quelques images](#section-4)
-5. [Apps Scripts à la rescousse](#section-5)
-6. [Mon combat, notre combat](#section-6)
-7. [Conclusion](#section-7)
-8. [Sources](#section-8)
+<!-- 4. [Quelques images](#section-4)
+4. [Apps Scripts à la rescousse](#section-5)
+5. [Mon combat, notre combat](#section-6)
+6. [Conclusion](#section-7)
+7. [Sources](#section-8) -->
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -73,7 +73,7 @@ Je vous laisse quelques images. Je me suis appuyé sur une base de données que 
 **Base de données 2 sur des acteurs/célébrités**
 <img src="repetition_incrementee.png">
 
-## 4. Quelques images <a id="section-4"></a>
+<!-- ## 4. Quelques images <a id="section-4"></a>
 
 **Utilisation de filtres**
 :-------------------------:|:-------------------------:
@@ -258,3 +258,4 @@ Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psycholo
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
 [Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com
 [Formation en Apps Scripts](https://www.sheets-pratique.com/fr/apps-script) par sheets-pratique.com
+ -->

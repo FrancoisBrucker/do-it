@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: layout/mon.njk
 
 title: "Dépoussiérer ses connaissances en SQL et Python pour l'analyse de données"
@@ -143,3 +143,4 @@ Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psycholo
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
 [Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com
 [Formation en Apps Scripts](https://www.sheets-pratique.com/fr/apps-script) par sheets-pratique.com
+ -->
