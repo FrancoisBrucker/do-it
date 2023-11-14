@@ -65,10 +65,13 @@ OFFSET début
 
 Je vous fais part des questions que j'ai trouvé intéressantes dans le sens où elles me serviront comme fiches pour réapprendre quand je réoublierai, car je sais que ça arrivera très vite.
 
-{% details "Q1" %}
+{% details "Q6. Obtenir la liste des 10 plus grands départements, en terme de superficie" %}
 
 ```
-
+SELECT ville_departement, SUM(ville_surface) as surfacetotale FROM villes_france_free
+GROUP BY ville_departement
+ORDER BY surfacetotale DESC
+LIMIT 10
 
 ```
 
