@@ -105,17 +105,11 @@ On prendra comme user-stories à faire :
 - <u>Coder les parties communes I.</u> [] = 7 (6h)
 
   - Implémenter I. [] = 5 (5h)
-    - Chapitre 1 [X]
-    - Chapitre 2 [X]
-    - Chapitre 3 [X]
+    - Chapitre 1 []
+    - Chapitre 2 []
+    - Chapitre 3 []
     - Chapitre 4 []
     - Chapitre 5 []
-  - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h) **Ajouté pendant le sprint**
-
-- <u>Customisation de GUI</u> [X] = 2 (1h) **Ajouté pendant le sprint**
-
-  - Menu principal [X] = 1
-  - Barre de dialogue [X] = 1
 
 ## Sources <a id="section-6"></a>
 
