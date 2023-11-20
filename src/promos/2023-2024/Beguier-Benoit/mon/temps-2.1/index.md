@@ -1,13 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Reprise des bases de Python + Petite exploration de "
 authors:
   - Benoit BEGUIER
 
-date: 1970-11-01
+date: 2023-12-13
 tags: 
   - "temps 2"
+  - "python"
+  - "piton"
+  - "pyton"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python, puis de s'initier au"
 ---
