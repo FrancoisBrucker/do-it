@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Reprise des bases de Python + Petite exploration de "
+title: "Reprise des bases de Python + Petite exploration de Seaborn "
 authors:
   - Benoit BEGUIER
 
@@ -12,5 +12,5 @@ tags:
   - "piton"
   - "pyton"
 
-résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python, puis de s'initier au"
+résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python, puis de s'initier au package Seaborn"
 ---

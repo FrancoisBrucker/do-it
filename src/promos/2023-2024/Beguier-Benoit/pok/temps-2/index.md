@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Ouais Benoît fait un site Internet"
+title: "Ouais Benoît fait son site Internet"
 authors:
   - Benoit BEGUIER
 
@@ -28,6 +28,7 @@ résumé: Je vais dans ce POK créer mon site Internet permettant à l'utilisate
 Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous : 
 
 - *Créez votre site web avec HTML5 et CSS3.* OpenClassrooms. Accessible [ici](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3).
+- Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/)
 
 ## Sommaire
 
