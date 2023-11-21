@@ -8,6 +8,8 @@ authors:
 
 Ensemble des POK réalisés par Alexandre Beyaert.
 
-* [POK 1](./temps-1)
-* [POK 2](./temps-2)
+## Temps 2
+* [La Data Science au service de l'Anatomie Pathologique](./temps-2)
+
+## Temps 3
 * [POK 3](./temps-3)
