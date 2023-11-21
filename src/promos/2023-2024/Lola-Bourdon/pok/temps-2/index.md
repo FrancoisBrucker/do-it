@@ -3,7 +3,7 @@ layout: layout/pok.njk
 
 title: "Titre du POK du temps 2"
 authors:
-  - Gordon Zola
+  - Lola Bourdon
 
 date: 1971-01-01
 
