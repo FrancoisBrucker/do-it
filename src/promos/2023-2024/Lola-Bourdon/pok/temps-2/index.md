@@ -1,14 +1,16 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Approfonfir mes connaissances avec figma"
 authors:
-  - Gordon Zola
+  - Lola Bourdon
 
 date: 1971-01-01
 
 tags: 
   - "temps 2"
+  - "figma"
 
 résumé: Un POK traitant d'un sujet.
 ---
+l'objectif de ce POK et d'améliorer ês compétences sur l'utilisation de figma. Pour cela je compte réaliser une maquette du site intenet/appli d'une marque de restauration rapide

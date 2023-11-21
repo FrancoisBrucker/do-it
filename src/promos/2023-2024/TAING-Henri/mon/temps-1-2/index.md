@@ -147,9 +147,9 @@ Enfin, on doit également vérifier la procédure d'expédition, ainsi que les d
 La formation a fonctionné dans le sens où j'ai bien l'impression d'avoir acquis les bases du marketing digital.
 Le plus gros défi n'a pas été de passer la certification, mais de faire cet exercice de rédaction et de synthèse de tous les éléments mentionnés et de survivre aux heures interminables de vidéos.
 
-<u>Un dernier commentaire sur la formation<u>
+<u>Un dernier commentaire sur la formation</u>
 5/10, le fond n'est pas profond, sans compter les problèmes techniques. Prendre le temps d'appliquer serait intéressant. Ce sera pour plus tard, peut-être.
 
-### Sources <a id="section-6"></a>
+## 6. Sources <a id="section-6"></a>
 
 [Fondamentaux en marketing digital](https://skillshop.exceedlms.com/student/collection/651479) par Google

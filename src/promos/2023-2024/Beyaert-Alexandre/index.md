@@ -7,17 +7,20 @@ authors:
 ---
 
 ## PRÉSENTATION DE L'ÉTUDIANT
-J'ai décidé de rejoindre l'option Do_It après un **Erasmus à Politecnico di Milano** suivi d'une **année de césure**.
+Animé par les nouvelles technologies et l'industrie, j'aspire à m'engager dans la **Supply Chain** et les **opérations** pour débuter ma carrière.
 
-Animé par les nouvelles technologies, l'industrie, et plus particulièrement **l'industrie automobile**, j'aspire à m'engager dans ce domaine pour y effectuer de la gestion des opérations.
+Pour découvrir ce domaine, j'ai choisi de suivre des cours de **MSc in Management Engineering** à **Politecnico di Milano** dans le cadre d'un Erasmus. J'ai pu y découvrir des fondamentaux de la gestion des opérations dont le **Lean Management.**
 
-D'une part confronté à la **digitalisation du monde industriel** et d'autre part par **curiosité personnelle**, j'ai décidé de meler mes connaissances à des compétences en informatique et en Data Sciences.
+J'ai ensuite décidé d'effectuer une année de césure pour **transformer mes connaissances en compétences.** Pendant cette année, je me suis livré à 2 stages :
+- le 1er en tant qu'**ingénieur commercial dans une startup de robotique collaborative "Niryo".**
+- le 2nd en tant qu'**ingénieur Supply Chain chez L'Oréal.** J'étais immergé au sein du service logistique de SICOS : une usine de la division Luxe du groupe.
+
+D'une part confronté à la **digitalisation du monde industriel** et d'autre part par **curiosité personnelle**, j'ai décidé de meler mes connaissances de la Supply Chain à des compétences en informatique et en Data Sciences.
 
 **==> Pour cette raison, l'option Do_It me semblait être la meilleure option qui s'offrait à moi combinée au M2 SID à l'AMU.**
 
 #### ERASMUS
-J'ai suivi à Politecnico di Milano des cours de :
-Leadership and Innovation | Operations Management | Project Management
+J'ai suivi à Politecnico di Milano des cours de : Leadership and Innovation | Operations Management | Project Management
 
 #### CÉSURE
 Ma césure se décompose en 2 stages :
@@ -28,7 +31,7 @@ Ma césure se décompose en 2 stages :
 Suivi du M2 [SID](https://formations.univ-amu.fr/fr/master/5SIN/PRSIN5AH#) à Saint-Jerôme pendant le **Temps 1**.
 
 **Cours suivis :**
-Big Data | Cloud Computing | Fouille de données | Méthodologie pour la science |Recherche d'information et recommandation | Travail d'études et de recherche *(projet encadré)*
+Big Data | Cloud Computing | Fouille de données | Méthodologie pour la science des données |Recherche d'information et recommandation | Travail d'études et de recherche *(projet encadré)*
 
 ## POK & MON
 
