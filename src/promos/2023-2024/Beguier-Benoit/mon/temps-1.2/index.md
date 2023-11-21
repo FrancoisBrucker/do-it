@@ -82,7 +82,7 @@ On y rajoute des paragraphes avec `<p>` et des sections avec `<div>`.
 
 ```
 
-Cependant, nous n'avons ici écrit que le fond du site ("back") que le navigateur interprètera. 
+Cependant, nous n'avons ici écrit que la structure du site que le navigateur interprètera. 
 Il est aussi important de s'attarder sur la forme et la mise en page.
 
 ## CSS3
