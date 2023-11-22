@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Node : Bases"
 authors:
   - Benoit BEGUIER
 
-date: 1971-01-01
+date: 2023-12-11
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Apprentissage des bases de Node JS"
 ---
