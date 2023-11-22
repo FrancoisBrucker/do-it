@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Reprise des bases de Python + Petite exploration de Seaborn "
+title: "Reprise des bases de Python + Petite exploration de Seaborn"
 authors:
   - Benoit BEGUIER
 

@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Web Back : Centrale Coinche"
 authors:
   - Nicolas Ouzoulias
 
@@ -10,5 +10,5 @@ date: 2023-09-17
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé:  Le second POK de l'année pour apprendre à programmer la partie back d'un site web.
 ---
