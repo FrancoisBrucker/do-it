@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Node : Bases"
+title: "Node.js : Bases"
 authors:
   - Benoit BEGUIER
 
