@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Portfolio"
 authors:
   - Kawtar Bahri
 
@@ -10,12 +10,12 @@ date: 2020-11-22
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: L'objectif principal de ce POK est de créer un portfolio en ligne dynamique et interactif qui met en valeur mon profil. Ce portfolio servira comme une plateforme centralisée pour présenter mes compétences, expériences, projets et réalisations, offrant aux visiteurs une l'opportunité de faire une demande ou de laisser une recommandation. 
 ---
 
 ## Roadmap : 
 {%faire "**Sprint 1**"%}
-- Documentation (Découvrir JavaScript à travers ce cours) ***5h***
+- Documentation (Découvrir JavaScript) ***5h***
 - Planification et Conception du contenu et de l’interface du portfolio ***1h***
 - Développement du Front-End ***4h***
 {% endfaire %}
