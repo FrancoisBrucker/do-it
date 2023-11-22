@@ -16,3 +16,11 @@ résumé: Ajout d'un back sur mon site de Memeory avec Node.js et express.
 ## Objectifs de ce POK
 Dans ce POK j'aimerais commencer à intégrer l'aspect backend au site que j'ai développé pour mon premier POK. Pour cela je vais utiliser Node.js et express sur lesquels je vais me former lors d'un MON. 
 
+## Les étapes pour le Sprint 1
+- Création de la base de données
+- Création du serveur
+
+## Les étapes pour le Sprint 2
+- Créer les interactions entre le site et le serveur
+
+
