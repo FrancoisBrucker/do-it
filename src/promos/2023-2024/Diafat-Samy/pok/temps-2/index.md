@@ -12,7 +12,7 @@ tags:
 
 
 
-résumé:
+résumé:s
 
 ---
 
