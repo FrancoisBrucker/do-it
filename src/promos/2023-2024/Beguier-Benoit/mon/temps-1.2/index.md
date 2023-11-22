@@ -5,7 +5,7 @@ title: "HTML C'est Super Simple"
 authors:
   - Benoit BEGUIER
 
-date: 2023-09-17
+date: 2023-10-18
 tags: 
   - "temps 1"
   - "HTML"
@@ -26,7 +26,8 @@ résumé: "Apprentissage d'HTML5 et CSS3."
 
 ## Sommaire
 1. Introduction
-2. 
+2. Structure de la page
+3. CSS3
 
 
 ## Introduction
@@ -53,13 +54,12 @@ La structure sommaire d'une page web est la suivante :
 
 ```
 
-Les différents éléments de la page sont définis par des balises (par exemple : <head> et </head>) qui ouvrent et ferment le bloc. 
-Pour plus de détails, je vous recommande de consulter le [MON de Vladimir](https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-1/).
+Les différents éléments de la page sont définis par des balises (par exemple : `<head>` et `</head>`) qui ouvrent et ferment le bloc. 
+Pour plus de détails, je vous recommande de consulter le [MON de Vladimir](https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-1/) qui détaille l'ensemble des balises standards.
 
-On y rajoute des paragraphes avec <p> et des sections avec <div>.
+On y rajoute des paragraphes avec `<p>` et des sections avec `<div>`.
 
 ```html
-
 <!DOCTYPE html> 
 <html lang="fr">  
     <head>        
@@ -72,7 +72,7 @@ On y rajoute des paragraphes avec <p> et des sections avec <div>.
           <h1>Mon site web</h1>
             <a href="a-propos.html" class="apropos">À propos</a>
             <div class="search-bar">
-              <input type="text" placeholder="Rechercher recette, ingrédient,...">
+              <input type="text" placeholder="Rechercher">
               <button type="button">Rechercher</button>
             </div>
         </div>
@@ -82,8 +82,41 @@ On y rajoute des paragraphes avec <p> et des sections avec <div>.
 
 ```
 
-Cependant, nous n'avons ici écrit que le fond du site ("back") qui le navigateur interprètera. 
-Il est aussi important de s'attarder sur la forme.
+Cependant, nous n'avons ici écrit que la structure du site que le navigateur interprètera. 
+Il est aussi important de s'attarder sur la forme et la mise en page.
 
-## CSS
-Le CSS est un autre langage qui permet de mettre en forme les différents composants écrits en HTML.
+## CSS3
+Le CSS est un autre langage qui permet de mettre en forme les différents composants écrits en HTML. Dans l'idée, nous pouvons en CSS paramétrer le visuel de chaque composant HTML. Je recommande cette fois le [MON de William](https://francoisbrucker.github.io/do-it/promos/2023-2024/William%20Lalanne/mon/temps-1.1/) qui insiste sur les points importants du CSS et qui est très complet.
+
+Personnellement, je retiens les points suivants pour mon futur site Web.
+
+#### Les Grid
+
+Les Grid permettent de créer un tableau sur la page qui facilite la mise en page. On déclare le composant que l'on souhaite transformer en grid en HTML, puis on le paramètre en CSS. Voici un exemple de syntaxe :
+
+```css
+.composant {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 400px 150px 200px;
+    gap: 10px;
+}
+```
+
+Je conseille d'utiliser les unités relatives *fr* (fraction units) pour s'adapter à toutes les tailles d'écrans. Cela permet une meilleure accessibilité sur tous les appareils. On peut par exemple écrire ceci :
+
+```css
+    grid-template-columns: 1fr 2fr;
+```
+
+Une deuxième manière de structurer la page web en CSS repose sur les Flexbox.
+
+#### Flexbox
+
+C'est pour ma part la syntaxe que j'ai préféré utiliser par rapport aux Grids. Je la trouve plus intuitive et maniable dans son comportement. La philosophie de Flexbox repose en mon sens sur la géométrie, ce qui est assez naturel. On oriente en CSS un axe primaire pour indiquer au navigateur dans quel sens doivent naviguer les boxes. Naturellement, l'axe secondaire correspond à sa rotation de 90°. On peut ainsi effectuer toutes les opérations auxquelles l'on pourrait penser en indiquant à CSS l'axe concerné.
+
+J'ai ensuite passé tous les niveaux du jeu [Flexbox Froggy](https://flexboxfroggy.com/#fr) pour me familiariser avec toutes les subtilités du langage.
+
+![froggy](flewboxfroggy.png)
+
+J'ai beaucoup appris et les petites grenouilles me rappelaient Nicolas Ouzoulias.

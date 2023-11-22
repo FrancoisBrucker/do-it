@@ -82,7 +82,7 @@ newGameButton.addEventListener("click", function () {
 Voici tout le code qui a permis de construire la page d'accueil :
 
 
-{% details "Cliquez pour afficher le code **HTML** de la **page d'accueil**" %}
+{% details "Cliquez pour afficher le code **HTML** de **l'en-tête**" %}
 
 ```html
 <!DOCTYPE html>
@@ -691,5 +691,8 @@ newGameButton.addEventListener("click", function () {
 )
 ```
 {% enddetails %}
+
+
+## Conclusion
 
 

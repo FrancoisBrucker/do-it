@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Nicolas Ouzoulias.
 
-* [Découverte du développement Web](./temps-1)
-* [POK 2](./temps-2)
+* [Web Front : Centrale Coinche](./temps-1)
+* [Web Back : Centrale Coinche](./temps-2)
 * [POK 3](./temps-3)

@@ -15,21 +15,48 @@ tags:
   - "projets"
   - "mobilité"
 
-résumé: Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
+résumé: L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.
 
 ---
 ## Introduction - définition du projet
 
-Le but du projet est de réaliser une carte interactive afin de regrouper les différentes mobilités des élèves de l'école Centrale Méditerranée.
+L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.
 
 ## Design du site web
 
 ### Déposer sa mobilité
 
-L'étudiant remplit un formulaire :
+**L'étudiant remplit un formulaire**
 
-- Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
-- Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.
+```
+Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
+Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.
+
+Intérêts :
+- Une donnée collecté de manière unique.
+- Facile à reconduire dans le temps.
+- Un format de donnée tout de suite adapté.
+
+Difficultés :
+- Nécessite un engagement supplémentaire des élèves avec un nouveau formulaire à remplir.
+- Difficulté à inciter les gens à répondre.
+```
+
+**Collecte de données via l'administration**
+
+```
+Venir récupérer les données de l'administration, venant de leur différentes plateformes : My Mobility Online, CFA,...  
+Les implémenter dans la base de données du site
+
+Intérêts : 
+- faire gagner du temps aux étudiants en évitant de donnée plusieurs fois les mêmes informations.
+
+Difficultés :  
+- Réussir à collecter les datas des différentes plateforme pour les adapter au site
+- Problème en cas de mise à jour des données d'un site externe, nécessite une mise à jour de l'API qui transforme la data pour la rentrer dans la base de donnée.
+- Nécessite un lien permanent avec l'admin pour mettre à jour ces données.
+- Comment savoir si l'élève accepte que ses datas soient partager ? remplir quand même le formulaire ? L'admin souhaite les retours d'expérience.
+```
 
 #### Plusieurs méthodes possibles
 
@@ -43,7 +70,7 @@ Cette méthode requiert :
 - une page de dépôt hébergé sur le site
 - Une page administrateur pour valider les mobilités qui seront déposé.
 
-###### Un formulaire Moodle  
+###### Un formulaire Moodle
 
 Cette méthode requiert :
 
@@ -65,7 +92,7 @@ L'idée est que tout le monde accède au site via un mot de passe unique pouvant
 L'idée est de venir utiliser les identifiants Moodle (le système d'authentification CAS) pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : *cette méthode requiert des compétences élevés en sécurité*
 *cette méthode limite les dépôts de dossier par étudiant*
 
-**Un compte administrateur**  
+**Un compte pour l'administration**  
 L'idée est que ce compte puisse gérer les différentes mobilités.
 
 - Un mot de passe sécurisé
@@ -122,7 +149,7 @@ déposant sa mobilité/administrateur de l'école
 
 Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.
 
-Voici une première maquette Canva pour représenter les mobilités des élèves 
+Voici une première maquette Canva pour représenter les mobilités des élèves.
 
 <img src="canva_site_1.png">
 
@@ -140,11 +167,25 @@ Les phases pour faire le MVP (minimum viable product)
 
 1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
 les fonctionnalités qui les intéresse.
-2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue )
+2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue ) ou de design (Figma)
 3. Tests des parcours utilisateurs (résolution et dev bug).
 4. Préparation du pitch et de la démonstration.
 
 Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.
+
+Notre MVP sera réalisé sous Figma, c'est un logiciel de design qui permet de tester les fonctionnalités et de mettre en page le site web pour visualiser les parcours utilisateurs, définir les aspects graphiques ainsi que de s'assurer que l'utilisation est intuitive.
+
+Actuellement la maquette Figma présente le parcours utilisateur d'un étudiant pour voir les mobilités et aussi pour déposer la sienne.
+
+<img src="figma.png">
+
+Maquette Figma.
+
+<video width="1280" height="720" controls>
+  <source src="presentation_figma.mp4" type="video/mp4">
+</video>
+
+Vidéo de présentation de la maquette Figma.
 
 ### La réalisation du site web final
 
@@ -188,7 +229,6 @@ pas déjà dans la liste)
 
 Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.
 
-```
 - Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.
 - Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
 - Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui c'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
@@ -197,7 +237,6 @@ Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lu
 - Les RI ne gèrent que les SMA et Double Diplôme
 - Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
 - Obligatoire : avoir une FAQ et demander des retours d’expériences
-```
 
 **Gestionnaire des SSE & TFE : Muriel Roche**
 
@@ -219,7 +258,7 @@ Nous avons donc établit une trame de question afin d'entamer la discussion avec
 
 - Quelles informations te semblent indispensables pour choisir ta mobilité ?
 - Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?
-- As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ? 
+- As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ?
 - Combien de temps serais-tu prêt à consacrer pour remplir un formulaire de retour de mobilité ? Le ferais-tu si ça n'était pas obligatoire ? Qu'est-ce qui pourrait te motiver à le faire ?
 - Une FAQ regroupant les questions récurrentes des étudiants serait-il intéressant ? Irais-tu sur le site pour avoir réponse à ta question ou enverrais-tu quand même un mail "pour être sûr"?
 - Quelles données as-tu besoin d'avoir pour gérer les possibles bugs ? A quel degré de liberté ? (Lecture seule, modification sous certaines conditions , modifications totales , suppression …)
