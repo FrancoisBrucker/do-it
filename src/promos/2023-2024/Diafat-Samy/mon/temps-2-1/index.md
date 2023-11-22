@@ -5,7 +5,7 @@ title: "Obtention de certification : Six Sigma (White&Yellow Belt), Méthode Scr
 authors:
   - Samy Diafat
 
-date: 2023/11/22
+date: 2023-11-22
 tags: 
   - "Méthode Scrum"
   - "Six Sigma White&Yellow Belt"

@@ -12,7 +12,7 @@ tags:
 
 
 
-résumé:
+résumé: " "
 
 ---
 
@@ -46,3 +46,9 @@ résumé:
 ## Des ressources
 
 sources image illustration : https://www.appstud.com/fr/flutter-faut-il-y-aller/
+
+
+### Horodateur
+| Date | Heures passées | Indications | 
+| -------- | -------- |-------- |
+| Jour | H  | Activité |
