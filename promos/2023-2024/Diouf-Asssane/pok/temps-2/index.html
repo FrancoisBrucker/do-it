@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du POK du temps 2</title>
+        <title>CupCare - Votre Café, Votre Instant</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du POK du temps 2</h1>
+<h1 class="mb-1">CupCare - Votre Café, Votre Instant</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -94,7 +94,7 @@
             <div class="font-bold">Auteurs : </div>
             <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Gordon Zola</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Assane Diouf</li>
                 
             </ul>
         </div>
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un POK traitant d'un sujet.
+                Une application mobile pour savoir quelle machine à café marche à Centrale pour passer la meilleure pause possible
 
         </p>
 
@@ -118,13 +118,75 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/">POK d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-2/">Titre du POK du temps 2</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/">POK d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-2/">CupCare - Votre Café, Votre Instant</a>
 
 </div></div>
 
 
 
 
+<h2>Introduction</h2>
+<p>Personnellement, je ne bois pas de café. L'idée m'est venu en voyant sans arrêt mes camarades courir dans l'école à la recherche d'une machine à café qui fonctionne.</p>
+<p>L'objectif de CupCare - l'application mobile que je vais développer - est donc de faciliter cette étape de recherche de la bonne machine à café. Les fonctionnalités auxquelles j'ai pensées sont donc les suivantes :</p>
+<ul>
+<li>Voir les machines à café et leur état (en panne, en marche ou inconnue)</li>
+<li>Voir quels produits sont disponibles</li>
+<li>Rechercher où trouver un produit en particulier. <em>Par exemple, savoir ou il est possible de récupérer un chocolat chaud (si c'est possible)</em></li>
+<li>Un système d'authentification simple</li>
+<li>Laisser la possibilité aux utilisateurs de dire si un produit est accessible (ou pas) depuis une certaine machine</li>
+<li>Mme Piet a aussi proposer l'idée d'ajouter des informations sur l'affluence</li>
+</ul>
+<h3>Quel point de départ ?</h3>
+<p>ChatGPT a fait des suggestions pour le nom du projet, et a généré un petit texte de présentation de l'application.</p>
+<pre><code>Bienvenue sur CupCare - Votre Café, Votre Instant!
+Découvrez une nouvelle façon de vivre votre rituel matinal avec CupCare, votre compagnon de confiance pour un café parfait à tout moment de la journée!
+
+✨ Pourquoi choisir CupCare?
+
+CupCare est bien plus qu'une simple application – c'est votre alliée matinale, toujours prête à vous guider vers le café parfait, accompagné du biscuit qui mettra un sourire sur votre visage.
+
+🌍 Un Café, Une Aventure
+
+Que vous soyez étudiant en quête d'inspiration ou jeune ingénieur prêt à conquérir le monde, CupCare vous assure que votre pause café soit aussi exceptionnelle que vous l'êtes. Notre application vous permet de localiser instantanément les machines à café fonctionnelles les plus proches, vous assurant ainsi de ne jamais être loin de votre pause café bien méritée.
+
+☕ Toujours à portée de main
+
+Avec CupCare, la recherche du café parfait devient une aventure quotidienne. Où que vous soyez, quoi que vous fassiez, votre café idéal et votre biscuit préféré ne sont qu'à quelques clics. Soyez prêt à redécouvrir le plaisir d'une pause café à chaque instant.
+
+🎓 Pour les Étudiants, Par les Étudiants
+
+CupCare comprend les besoins des étudiants et des jeunes ingénieurs. Nous sommes là pour simplifier votre journée bien remplie en vous offrant un accès rapide à votre carburant essentiel – le café !
+
+Rejoignez la communauté CupCare dès aujourd'hui et transformez chaque tasse en une expérience inoubliable. Parce que chaque journée mérite un café exceptionnel.
+
+Commencez votre journée avec CupCare! ☕✨
+</code></pre>
+<p>J'ai aussi fait générer un logo par Bing Image Creator. Cela m'a permis d'avoir une piste pour la charte graphique de l'application. Voici le logo en question :<br>
+<img src="CupCare.jpg" alt="Logo généré par Bing Image Creator"></p>
+<h3>Comment je vais m'y prendre ?</h3>
+<p>J'ai prévu d'utiliser Flutter et Firebase pour développer cette application.</p>
+<p>Flutter est un framework Dart de développement multiplateforme développé par Google. Pas de panique : j'explique la phrase. Dart est un langage développé par Google pour concurrencer javascript à l'origine - ça n'a pas fonctionné. En revanche, Google a tout de même décidé de développer Flutter en se basant dessus. Flutter est multiplateforme, car il permet de cibler plusieurs plateformes &quot;en même temps&quot; : mobile (Android et iOS), web et desktop (Windows, Mac et Linux).</p>
+<p>Firebase est une plateforme de développement d'application et dispose d'outils pour accélérer le développement (base de données en NoSQL, authentification, etc...), le déploiement et le monitoring d'applications.</p>
+<p>Il s'agit de deux technologies que j'avais déjà utilisées ensemble, ce POK me permet de réactiver mes connaissances et d'ajouter une meilleure application mobile à mon portefolio.</p>
+<h2>Ce que je vais faire dans le premier sprint</h2>
+<p><em>J'ai mis la difficulté estimée entre parenthèses pour chaque tache</em></p>
+<ul>
+<li>[ ] Lister les pages essentielles (1)</li>
+<li>[ ] Faire le design des pages principales (2)</li>
+<li>[ ] Initialiser le projet (1)</li>
+<li>[ ] Ajouter les pages principales dans l'application (3)</li>
+<li>[ ] Ajouter des données factices dans Firebase (1)</li>
+</ul>
+<h2>Ce que j'ai fait à la fin du sprint 1</h2>
+<h2>Ce que je vais faire dans le deuxième sprint</h2>
+<ul>
+<li>[ ] Lier Firebase à Flutter</li>
+<li>[ ] Mettre à jour les pages avec les données</li>
+<li>[ ] Ajouter de vraies données</li>
+<li>[ ] Déployer</li>
+</ul>
+<h2>Ce que j'ai fait à la fin du sprint 2</h2>
+<h2>Conclusion</h2>
 
 
 </article>
