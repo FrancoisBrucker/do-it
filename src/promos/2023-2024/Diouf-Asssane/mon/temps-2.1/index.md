@@ -1,13 +1,17 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Le langage C#"
 authors:
-  - Gordon Zola
+  - Assane Diouf
 
-date: 1970-11-01
+date: 2023-12-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Apprendre C# et en particulier le développement web avec C#"
 ---
+
+## Pourquoi ?
+C# est un langage connu avec une large communanuté de développeur. Avec C#, on a un large éventail de choix allant de l'application web au jeu vidéo en passant par l'application mobile.
+Je vais particulièrement m'intéresser au développement web ici.
