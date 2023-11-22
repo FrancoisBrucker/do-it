@@ -693,3 +693,6 @@ newGameButton.addEventListener("click", function () {
 {% enddetails %}
 
 
+## Conclusion
+
+

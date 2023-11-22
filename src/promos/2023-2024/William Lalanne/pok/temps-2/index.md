@@ -3,12 +3,12 @@ layout: layout/pok.njk
 
 title: "Titre du POK du temps 2"
 authors:
-  - Gordon Zola
+  - William Lalanne
 
 date: 1971-01-01
 
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ajout d'un back sur mon site de Memeory avec Node.js et express.
 ---
