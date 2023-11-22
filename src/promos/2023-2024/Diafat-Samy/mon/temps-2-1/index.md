@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Obtention de certification : Six Sigma (White&Yellow Belt), Méthode Scrum, Cyber-securité"
+title: "Obtention de certifications : Six Sigma (White&Yellow Belt), Méthode Scrum, Cyber-securité"
 authors:
   - Samy Diafat
 
