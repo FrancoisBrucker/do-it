@@ -40,6 +40,32 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 6. Retour d'expérience du Sprint 1
 
 
+Le but de ce POK est de mettre en pratique mon MON1.2 sur le développement web. Je souhaite créer un site web fonctionnel, qui utilise l'API de Spotify. Ce site permettrait à l'utilisateur de connecter son compte Spotify personnel, et en retour afficher une analyse de ses goûts musicaux.
+
+{% exercice %}
+"Analyser les goûts musicaux de l'utilisateur" : ça veut dire quoi concrètement ?
+{% endexercice %}
+
+Il y a une multitude d'analyses possibles à partir d'un compte Spotify.
+Concrètement j'aimerais proposer les fonctionnalités suivantes :
+
+- Afficher une liste des principaux genres de musique que l'utilisateur écoute
+  - Si possible, afficher un graphique des genres écoutés en fonction de l'heure de la journée. Cela pourrait (et je dis bien pourrait) potentiellement mettre en avant une tendance de l'utilisateur : par exemple des musiques mouvementées à haut *bpm* (*beats per minute*) en fin d'après-midi lors de sa séance de sport.
+
+- Afficher le Top 5 des musiques écoutées depuis le début de l'année par l'utilisateur
+
+- Afficher des graphiques décomposant les musiques écoutées par l'utilisateur selon des paramètres définis dans la suite du POK.
+
+![features](Music-features.jpg)
+Ces graphiques prennent en ordonnée des paramètres tels que le tempo, la dançabilité
+
+- En bonus, effectuer une analyse en composantes principales (ACP, *PCA* en anglais) des musiques écoutées par l'utilisateur, et afficher le spectre d'écoute (*cf.* image ci-dessous). Vous pourrez trouver [ici](https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales) la documentation sur l'ACP.
+
+![spectre](spectre.jpg)
+Illustration du type de graphique que je souhaite afficher.
+
+
+
 ## Objectifs du Sprint 1
 Voici les objectifs que je me suis fixé :
 - Première maquette sur Figma (★☆☆☆☆, 2 heures estimées)
@@ -47,3 +73,10 @@ Voici les objectifs que je me suis fixé :
 - Mise en page V1 en CSS (★★☆☆☆, 4 heures estimées)
 
 Les étoiles correspondent au niveau de difficulté de l'objectif dans mon référentiel de débutant en DevWeb.
+
+##  Objectifs du Sprint 2
+Voici les objectifs que je me suis fixé :
+- Lier l'API de Spotify avec mon site
+- Travailler sur les différentes fonctionnalités d'affichage en lien avec le compte Spotify
+
+## Maquette Figma
