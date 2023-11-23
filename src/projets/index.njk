@@ -36,16 +36,16 @@ order: 4
             <a href="{{ projet.url  }}">{{ projet.data.title }}</a>
         </div>
 
-        <div class=" px-4 flex items-center">
+        <div class="px-4 flex flex-wrap items-center">
             <div>Auteurs : </div>
-            <ul class="flex not-prose list-none my-1 mx-0 px-1 gap-1">
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1">
             {% for auteur in projet.data.authors | sort %}
                 <li class="bg-blue-200 rounded-full px-2">{{ auteur }}</li>
             {% endfor %}
             </ul>
         </div>
 
-        <div class=" pt-1 px-4 flex items-top">
+        <div class="pt-1 px-4 flex items-top">
             <div class="flex-none">Résumé : </div>
             <div class="pl-2 m-0 grow quote">
             {% if projet.data.résumé %}

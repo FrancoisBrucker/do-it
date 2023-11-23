@@ -44,6 +44,8 @@ Voici les objectifs que je me suis fixé :
 - Tester mes connaissances sur le projet du Chapitre 12 de la [Documentation Rust](https://doc.rust-lang.org/stable/book/title-page.html)(★★★★☆)
 - Réaliser un outil en commande Line pour écouter de la musique Spotify (★★★★★★★)
 
+★★★☆☆ = Diffculté
+
 # Prévision pour le point 1 : 
 
 - Apprendre les concepts de base de Rust :
@@ -68,7 +70,7 @@ Je vais suivre mon progrès en accomplissant les 96 exercices progressivement pl
 
 Une fois cette étape terminée, j'ai l'intention de m'attaquer au projet proposé dans la documentation Rust, à savoir [Projet : Gestionnaire de lignes de commande](https://doc.rust-lang.org/book/ch12-00-an-io-project.html).
 
-### Réalité du parcours
+##Réalité du parcours
 
 ### [Rust Documentation](https://doc.rust-lang.org/stable/book/title-page.html) 
 
@@ -95,13 +97,31 @@ Les concepts les plus complexes à assimiler ont été les cycles de vie et la m
 Mon travail est accessible dans ce [repo](https://github.com/Hagarde/CmdLineProject).
 Ce projet repose sur le [tutoriel](https://doc.rust-lang.org/book/ch12-00-an-io-project.html) proposé par le livre, toutefois j'ai souhaité commencer avec puis ajouter de la complexité sans suivre le tutoriel pour réellement confronter mes connaissances à la réalité.
 
-## Conclusion
+## Mes apprentissages : 
+
+La courbe d'apprentissage du Rust ressemble plutôt à : 
+
+![Courbe Apprentissage Rust](./learningGraphRust.png)
+
+### Les pointeurs et les cycles de vie :
+
+Les pointeurs dans Rust représentent un élément essentiel de l'allocation de mémoire en programmation. Ils offrent un contrôle précis sur les ressources, éliminant les problèmes de fuites de mémoire. Le système de propriété et les règles strictes de durée de vie renforcent la sécurité du code, ce qui est essentiel. Grâce à ces concepts, il est possible de créer des structures de données complexes en maintenant la stabilité du programme. En somme, les pointeurs en Rust simplifient efficacement la gestion de la mémoire et renforcent la fiabilité des projets.
+
+Cela se retrouve aussi dans la notion importante de cycle de vie des variables, qui simplifie la fonction de libérer cette espace mais la logique doit être comprise pour que cela fonctionne.
+
+### Gestion des structure de données :
+
+La gestion des structures de données est intrinsèquement plus rigoureuse dans le langage Rust. Il se distingue par sa variété de structures de données adaptées à une multitude de scénarios. Par exemple, lorsque l'on considère le stockage de données dans une collection, Rust propose des vecteurs pour gérer des tailles variables, tandis que les tableaux (ou "Array" en anglais) exigent une longueur prédéterminée, connue au moment de la compilation.
+
+Cette distinction fondamentale réside dans la flexibilité offerte par ces structures. Les vecteurs permettent d'ajouter ou de supprimer des éléments de manière dynamique, ce qui se révèle particulièrement utile lorsque la taille exacte des données est inconnue à l'avance. Cela les rend adaptés à des situations où les besoins évoluent. À l'inverse, les tableaux en Rust sont statiques, obligeant à spécifier leur taille à la déclaration, avec une impossibilité de modification ultérieure. Cette contrainte peut sembler restrictive, mais elle apporte des avantages en matière de sécurité et d'efficacité, permettant au compilateur de détecter les erreurs potentielles à un stade précoce du développement.
+
+## Bilan
 
 J'ai pas été très efficace pour cette tâche en raison de ma confiance en mes capacités en C++ après seulement le cours de 2A. Les concepts ont été dures à appréhender et ont consommé la plupart de mon temps et je me suis éparpillé entre les différentes sources pour essayer d'avoir des points de vue différents sur les concepts que je ne comprenais pas. Cela explique aussi le fait que j'ai passé beaucoup de temps sur les exercices dures du [GitHub](https://github.com/rust-lang/rustlings).
 
 Cela aurait été mieux d'en faire un MON avant pour éviter le temps perdu sur l'apprentissage et non la pratique.
 
-Source explorées :
+Source explorées à ré explorer plus tard :
 - [Rust to javascript](https://annas-archive.org/md5/77a5209a50709593652c64d097088439) ( parce que j'ai pas mal d'expérience en javascript )
 - [Zero To Production in Rust - An introduction to backend development](https://annas-archive.org/md5/819c53acaf3bff8c145179d26aa8cd0a) ( bases = pré-requis )
 - [Vidéo Youtube](https://www.youtube.com/watch?v=BpPEoZW5IiY) ( lent mais représentatif de ma progression )

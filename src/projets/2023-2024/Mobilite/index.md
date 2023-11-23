@@ -175,11 +175,17 @@ Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette
 
 Notre MVP sera réalisé sous Figma, c'est un logiciel de design qui permet de tester les fonctionnalités et de mettre en page le site web pour visualiser les parcours utilisateurs, définir les aspects graphiques ainsi que de s'assurer que l'utilisation est intuitive.
 
-Actuellement la maquette figma présente le parcours utilisateur d'un étudiant pour voir les mobilités et aussi pour déposer la sienne.
+Actuellement la maquette Figma présente le parcours utilisateur d'un étudiant pour voir les mobilités et aussi pour déposer la sienne.
 
 <img src="figma.png">
 
-Maquette figma.
+Maquette Figma.
+
+<video width="1280" height="720" controls>
+  <source src="presentation_figma.mp4" type="video/mp4">
+</video>
+
+Vidéo de présentation de la maquette Figma.
 
 ### La réalisation du site web final
 

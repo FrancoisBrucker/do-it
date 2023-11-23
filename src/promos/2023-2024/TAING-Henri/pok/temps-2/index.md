@@ -21,105 +21,97 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 
 ## Table des matières
 
-1. [Ce que j'ai prévu au 1er sprint](#section-1)
-2. [Ce que j'ai fait au 1er sprint](#section-2)
-3. [Ce que je prévoyais pour le 2ème sprint](#section-3)
-4. [Ce que j'ai fait au 2ème sprint](#section-4)
-5. [Sources](#section-5)
+1. [Objectifs et backlog produit](#section-1)
+2. [Ce que j'ai prévu au 1er sprint](#section-2)
+3. [Ce que j'ai fait au 1er sprint](#section-3)
+4. [Ce que je prévoyais pour le 2ème sprint](#section-4)
+5. [Ce que j'ai fait au 2ème sprint](#section-5)
+6. [Sources](#section-6)
 
-## Ce que j'ai prévu au 1er sprint <a id="section-1"></a>
+## Objectifs et backlog produit <a id="section-1"></a>
 
 **Les objectifs**
 
-- Apprendre à utiliser l'outil Renpy (Pour la création du jeu)
+- Prendre en main l'outil Renpy (Pour la création du jeu)
 - Se familiariser avec Figma (Pour faire l'arbre de décisions)
-- Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits)
-- Créer un jeu qui dure environ 1h30 avec trois fins différentes, A, B et C (dont une qui est simplement une sorte de game-over).
+- Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits), il est en **anglais** donc ne soyez pas surpris que tout soit codé en anglais, etc.
+- Créer un jeu qui couvrira la partie I et la partie II de mon roman.
 
-**Backlog produit**
+**Backlog produit qui évoluera**
 
-Le roman est divisé en plusieurs parties I., II.1. (première moitié de la deuxième partie du roman), II.2., III.1., III.2.
+A : Lié à la fin A | B : Lié à la fin B | C : Lié à la fin C
+Le roman est divisé en plusieurs parties I.ABC., II.BC et III.B et III.C, mais on ne s'intéressera qu'à I.ABC, II.1.BC.
 
-- <u>Gestion des ressources infographiques pour le jeu<u> [] = 1
+- <u>Faire un backlog précis et le mettre à jour</u> [] = 3 (2h)
 
-  - Personnages et fonds [] = 1
+- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [] = 5 (1h30)
 
-- <u>Arbre de décision Figma<u> [] = 11
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 2 (1h)
 
-  - Parcourir le scénario et décider des points de ruptures [] = 3
-  - Choisir les choix qui vont déterminer l'orientation de l'histoire et créer les noeuds [] = 2
-  - Créer les "petits" choix pour I. [] = 1 (Il y en a peu)
-  - Créer les "petits" choix pour II.1.A [] = 1
-  - Créer les "petits" choix pour II.1.BC [] = 1
-  - Créer les "petits" choix pour II.2.B et II.2.C [] = 1
-  - Créer les "petits" choix de la route III.B et III.C [] = 1
-  - Vérifier la cohérence [] = 1
+- <u>Arbre de décision Figma</u> [] = 6 (3h)
 
-- <u>Programmation du jeu<u> [] = 34
+  - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
+  - Créer les arbres de décision pour I.AB [] = 2 (1h40)
+  - Créer les arbres pour II.1.B [] = 2 (1h)
 
-  - Coder les parties communes [] =
+- <u>Programmation du jeu</u> [] = 13
 
-    - Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5
-    - Petits choix 1ère partie du roman [] = 2
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3
-    - Implémenter scénario/petits choix + 2e grand choix + 3e grand choix qui sont communs aux routes B et C dans II.2. [] = 3
-    - Mettre les fonds [] = 1
-    - Mettre les transitions [] = 1
+  - Coder les parties communes I. [] = 7 (6h)
 
-  - Route A [] = 5
+    - Implémenter I. [] = 5 (5h)
+      - Chapitre 1 []
+      - Chapitre 2 []
+      - Chapitre 3 []
+      - Chapitre 4 []
+      - Chapitre 5 []
+    - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)
 
-    - Petits choix II.1.A du roman après 1ère grande décision [] = 2
-    - Page fin A [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1
+  - Route A [] = 2 (1h)
 
-  - Route B [] = 7
+    - Fin A [] = 1 (45 min)
+    - Mettre les fonds/transitions fin A [] = 1 (15 min)
 
-    - Petits choix II.2.B. après 2ème grande décision [] = 2
-    - Petits choix III.B partie après 3ème grande décision [] = 2
-    - Page fin B [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1
+  - Coder les parties communes II.1 [] = 4 (3h30)
 
-  - Route C [] = 7
-    - Petits choix II.2.C après 2ème grande décision [] = 2
-    - Petits choix III.C après 3ème grande décision [] = 2
-    - Page fin C [] = 1
-    - Mettre les fonds qui manquent [] = 1
-    - Mettre les transitions [] = 1
+    - Implémenter II.1 [] = 3 (3h)
+      - Chapitre 1 []
+      - Chapitre 2 []
+    - Mettre les fonds/personnages/transitions dans I. [] = 1 (30 min)
 
-- <u>Customisation de GUI<u> [] = 3
+- <u>Customisation de GUI</u> [] = 2 (1h)
+
   - Menu principal [] = 1
   - Barre de dialogue [] = 1
-  - Taille, couleur, style du texte et son placement [] = 1
+
+- <u>Documenter le POK</u> [] = 1 (1h)
+
+## Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement <a id="section-2"></a>
 
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
 
-- <u>Gestion des ressources infographiques pour le jeu<u> [] = 1
+- <u>Faire un backlog précis et le mettre à jour</u> [X] = 3 (2h)
 
-  - Personnages et fonds [] = 1
+- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Arbre de décision Figma<u> [] = 11
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 (1h)
 
-  - Parcourir le scénario et décider des points de ruptures [] = 3
-  - Choisir les choix qui vont déterminer l'orientation de l'histoire et créer les noeuds [] = 2
-  - Créer les "petits" choix pour I. [] = 1 (Il y en a peu)
-  - Créer les "petits" choix pour II.1.A [] = 1
-  - Créer les "petits" choix pour II.1.BC [] = 1
-  - Créer les "petits" choix pour II.2.B et II.2.C [] = 1
-  - Créer les "petits" choix de la route III.B et III.C [] = 1
-  - Vérifier la cohérence [] = 1
+- <u>Arbre de décision Figma</u> [] = 6 (3h)
 
-- <u>Programmation du jeu<u> = 10
+  - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
+  - Créer les arbres de décision pour I.AB [X] = 2 (1h40)
+  - Créer les arbres pour II.1.B [] = 2 (1h)
 
-  - Coder les parties communes
+- <u>Coder les parties communes I.</u> [] = 7 (6h)
 
-    - Définir les flags qui nous serviront pour passer d'une route à l'autre [] = 5
-    - Petits choix 1ère partie du roman [] = 2
-    - Implémenter le scénario/petits choix + 1er grand choix qui sont communs aux trois routes dans I. [] = 3
+  - Implémenter I. [] = 5 (5h)
+    - Chapitre 1 []
+    - Chapitre 2 []
+    - Chapitre 3 []
+    - Chapitre 4 []
+    - Chapitre 5 []
 
-## Sources
+## Sources <a id="section-6"></a>
 
 [Tutoriel pour créer un jeu avec Renpy (en anglais)](https://www.youtube.com/watch?v=C3Ldd-5PKCw&ab_channel=ZeilLearnings) de ZeilLearnings
 [Documentation pour débuter sur Renpy](https://www.renpy.org/doc/html/quickstart.html)
