@@ -6,10 +6,16 @@ authors:
   - Duc DANG VU
 
 
-date: 2023-09-18
+date: 2023-10-17
 
 tags: 
   - "temps 1"
+  - "Python"
+  - "Qt"
+  - "Interfaces graphiques"
+  - "Programmation Objet"
+  - "Blackjack"
+  - "Jeux de casino"
 
 résumé: "Ce POK a pour objectif d'utiliser le module Qt de Python pour implémenter un jeu de Blackjack. Le programme montrera également des statistiques sur différents aspects du jeu tels que l'espérance de du gain, le pourcentage de réussite pour chaque main ou encore l'espérance de gain avec le comptage des cartes."
 ---
@@ -27,6 +33,8 @@ Tout les codes présentés ci-dessous sont disponibles dans le dossier Github de
 Le Blackjack est l'un des jeux de carte les plus connus et joués dans les casinos. C'est un jeu qui oppose les joueurs au casino (dénommé aussi le dealer, puisqu'il distribue les cartes). Le Blackjack étant un jeu de carte de casino, on peut se douter que ce jeu est naturellement à l'avantage du casino. Il serait ainsi intéressant de se demander à quel point le joueur est perdant dans ce jeu, sachant qu'il utilise une stratégie connue pour être optimale. En d'autres termes, **quelle est l'espérance de gain d'un joueur qui joue au Blackjack?** D'autres statistiques seront également calculées, comme par exemple la meilleure carte que le dealer peut avoir ou bien encore l'influence du *comptage de cartes*.
 
 L'objectif sera également de recréer un jeu de Blackjack, en utilisant le module *Qt for Python*, que j'ai appris à maîtriser lors de mon premier MON du temps 1. C'est d'ailleurs par cela que ce POK va commencer.
+
+Tout les codes présentés ci-après ont été écrits par mes soins, de A à Z.
 
 ## Sommaire
 
