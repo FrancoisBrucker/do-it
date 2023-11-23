@@ -33,4 +33,8 @@ résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python
 ## Introduction
 
 Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous : 
-- *Créez votre site web avec HTML5 et CSS3*, cours réalisé sur OpenClassrooms par Mathieu Nebra et Alexia Toulmet. Accessible [ici](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3).
+- Python Tutorial, W3 Schools. Accessible [ici](https://www.w3schools.com/python/).
+- 
+
+## Remise au niveau intermédiaire sur Python
+
