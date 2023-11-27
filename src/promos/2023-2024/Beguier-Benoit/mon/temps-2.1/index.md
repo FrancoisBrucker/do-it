@@ -38,3 +38,22 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 
 ## Remise au niveau intermédiaire sur Python
 
+#### Exercices de décrassage
+
+J'ai débuté ce MON en effectuant un grand nombre d'exercices Python sur le site W3 Schools, cité dans mes références. Ce site propose un peu moins de 5 exercices sur les différents aspect essentiels du langage, tels que :
+- la syntaxe
+- les variables
+- les data types : string, boolean, number, integer, dictionnaries, ...
+- les opérateurs
+- les listes
+- les tuples
+- les boucles
+- les fonctions
+- les classes
+
+Ces exercices représentaient selon moi le meilleur moyen de me remettre dans la syntaxe Python. Bien que Python soit assez intutif, certains mots-clés m'échappaient (*break*, *continue*, ...). Les exercices sont d'abord très simples ce qui permet de se refaire la main, puis ils se corsent (très légèrement) pour aborder quelques détails et commandes.
+Je recommande à tous de faire ces exercices. Ils m'ont pris une heure.
+
+#### Échauffement
+
+É
