@@ -18,7 +18,7 @@ print("Voici les valeurs de vos 3 jauges :", "Popularité", popularite, "Relatio
 #chaque carte dans cartes est un dictionnaire avec les clés ['Choix', 'Oui R', 'Oui C', 'Oui I ', 'Non R', 'Non C ', 'Non I ', 'feu', 'terre', 'eau', 'air', 'intro', 'outro', '', 'index']
 
 cartes = []
-with open("cartes_action.tsv", "r", newline = "") as mycsv:
+with open("../static/cartes_action.tsv", "r", newline = "") as mycsv:
   reader = csv.DictReader(mycsv, delimiter = "\t")
   for idx, row in enumerate(reader):
     if row['Oui R']=='':
