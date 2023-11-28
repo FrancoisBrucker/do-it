@@ -18,9 +18,13 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def index():
-    return render_template("index.html")
+def login():
+    return render_template("login.html")
 
+@app.route('/session')
+def session():
+    return render_template("index.html")
+    
 if __name__ == '__main__':
     app.run(port=5000)
 
