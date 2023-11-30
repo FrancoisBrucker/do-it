@@ -86,21 +86,7 @@ Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi perso
 En plus, c'est un langage qui est plutôt facile à prendre en main pour l'usage que je prévois d'en faire (#J'ai menti, j'ai souffert).
 
 M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur ([sheets-pratique.com/fr/apps-script](https://www.sheets-pratique.com/fr/apps-script)) avec des étoiles dans les yeux.
-Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois) :
-
-1. Introduction [X]
-2. Variables et tableaux [X]
-3. Feuilles et cellules [X]
-4. Conditions [X]
-5. Boucles [X]
-6. Fonctions [X]
-7. Tableaux avancés [X]
-8. Déclencheurs [X]
-9. Menus [X]
-10. Boîtes de dialogue [X]
-11. Fenêtres personnalisées [X]
-12. Compléments [X]
-
+Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois).
 Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).
 
 {% details "Première ébauche de programme pour transformer mes données" %}
@@ -226,24 +212,40 @@ Le but est de créer une facture qui est complétée automatiquement avec seulem
 Voici le document qui est séparée en quatre feuilles.
 :-------------------------:|:-------------------------:
 <img src="cas_feuille1.png" width="350" height="350"> | <img src="cas_feuille2.png" width="350" height="350">
-<img src="tableaudyn_yes.png">
 
-:-------------------------:|:-------------------------:
 <img src="cas_feuille3.png" width="350" height="350"> | <img src="cas_feuille4.png" width="350" height="350">
-<img src="tableaudyn_yes.png">
 
 Pour ça, j'ai utilisé les fonctions INDEX et MATCH qui sont finalement analogues à VLOOKUP et plusieurs fonctions IF.
 
-Explication VLOOKUP et MATCH en mettant le code que j'ai utilisé pour la cellule et non une image !!
-Résultat
+```
+=INDEX(A2:D11; 4; 3)
+INDEX(table; ligne; colonne) retourne la valeur qui se trouve à la ligne 4, colonne 3 dans le tableau qui couvre A2:D11.
+
+=MATCH("drôle"; A2:A11; 0)
+MATCH(valeur; table; 0 pour avoir la valeur exacte et 1 pour approximation) retourne la position de "drôle" dans la colonne A2:A11, qui est donc ici une ligne.
+```
+
+MATCH peut faire la même recherche dans une ligne et retourner une colonne.
+Et c'est ce qu'on va utiliser pour combiner MATCH et INDEX.
+Adresse! qui est devant la table choisie signifie qu'on extrait les données de la feuille Adresse.
+
+```
+=INDEX(Adresse!A$1:D$10;MATCH(F$3;Adresse!A$1:A$10;0);MATCH(E4;Adresse!A$1:D$1;0))
+```
+
+Puis j'ai utilisé des IF pour pouvoir mettre en place la remise automatique/dynamique.
+
+```
+=IF(E21>=Remise!C1;IF(E21>=Remise!D1;IF(E21>=Remise!E1;IF(E21>=Remise!F1;Remise!F2;Remise!E2);Remise!E2);Remise!D2);Remise!B2)
+```
 
 ## 6. Conclusion <a id="section-6"></a>
 
 J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
 
-Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup.
+Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation).
 
-## 8. Sources <a id="section-7"></a>
+## 7. Sources <a id="section-7"></a>
 
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
 [Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com

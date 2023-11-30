@@ -117,4 +117,5 @@ On prendra comme user-stories à faire :
 [Documentation pour débuter sur Renpy](https://www.renpy.org/doc/html/quickstart.html)
 [Customiser l'interface graphique (GUI)](https://www.renpy.org/doc/html/gui.html#gui)
 [Ressources pour les arrières-plans](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
+[Autre ressources pour les arrières-plans](https://noranekogames.itch.io/yumebackground)
 [Ressources pour les personnages](https://sutemo.itch.io/)
