@@ -217,22 +217,8 @@ Deuxième chose, je me suis rendu compte que la façon avec laquelle j'ai rempli
 <p>Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi personne ne me l'a jamais dit ?! J'avais toujours cette image obscure de la chose et pis en fait, c'est juste du code. (-.-)<br>
 En plus, c'est un langage qui est plutôt facile à prendre en main pour l'usage que je prévois d'en faire (#J'ai menti, j'ai souffert).</p>
 <p>M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur (<a href="https://www.sheets-pratique.com/fr/apps-script">sheets-pratique.com/fr/apps-script</a>) avec des étoiles dans les yeux.<br>
-Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois) :</p>
-<ol>
-<li>Introduction [X]</li>
-<li>Variables et tableaux [X]</li>
-<li>Feuilles et cellules [X]</li>
-<li>Conditions [X]</li>
-<li>Boucles [X]</li>
-<li>Fonctions [X]</li>
-<li>Tableaux avancés [X]</li>
-<li>Déclencheurs [X]</li>
-<li>Menus [X]</li>
-<li>Boîtes de dialogue [X]</li>
-<li>Fenêtres personnalisées [X]</li>
-<li>Compléments [X]</li>
-</ol>
-<p>Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).</p>
+Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois).<br>
+Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -390,9 +376,6 @@ function main(){
 <td style="text-align:center"><img src="cas_feuille2.png" width="350" height="350"></td>
 </tr>
 </tbody>
-</table>
-<img src="tableaudyn_yes.png">
-<table>
 <tbody>
 <tr>
 <td style="text-align:center"><img src="cas_feuille3.png" width="350" height="350"></td>
@@ -400,14 +383,25 @@ function main(){
 </tr>
 </tbody>
 </table>
-<img src="tableaudyn_yes.png">
 <p>Pour ça, j'ai utilisé les fonctions INDEX et MATCH qui sont finalement analogues à VLOOKUP et plusieurs fonctions IF.</p>
-<p>Explication VLOOKUP et MATCH en mettant le code que j'ai utilisé pour la cellule et non une image !!<br>
-Résultat</p>
+<pre><code>=INDEX(A2:D11; 4; 3)
+INDEX(table; ligne; colonne) retourne la valeur qui se trouve à la ligne 4, colonne 3 dans le tableau qui couvre A2:D11.
+
+=MATCH(&quot;drôle&quot;; A2:A11; 0)
+MATCH(valeur; table; 0 pour avoir la valeur exacte et 1 pour approximation) retourne la position de &quot;drôle&quot; dans la colonne A2:A11, qui est donc ici une ligne.
+</code></pre>
+<p>MATCH peut faire la même recherche dans une ligne et retourner une colonne.<br>
+Et c'est ce qu'on va utiliser pour combiner MATCH et INDEX.<br>
+Adresse! qui est devant la table choisie signifie qu'on extrait les données de la feuille Adresse.</p>
+<pre><code>=INDEX(Adresse!A$1:D$10;MATCH(F$3;Adresse!A$1:A$10;0);MATCH(E4;Adresse!A$1:D$1;0))
+</code></pre>
+<p>Puis j'ai utilisé des IF pour pouvoir mettre en place la remise automatique/dynamique.</p>
+<pre><code>=IF(E21&gt;=Remise!C1;IF(E21&gt;=Remise!D1;IF(E21&gt;=Remise!E1;IF(E21&gt;=Remise!F1;Remise!F2;Remise!E2);Remise!E2);Remise!D2);Remise!B2)
+</code></pre>
 <h2>6. Conclusion <a id="section-6"></a></h2>
 <p>J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.</p>
-<p>Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup.</p>
-<h2>8. Sources <a id="section-7"></a></h2>
+<p>Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation).</p>
+<h2>7. Sources <a id="section-7"></a></h2>
 <p><a href="excel-pratique.com">Formation en Excel</a> par <a href="http://excel-pratique.com">excel-pratique.com</a><br>
 <a href="https://www.sheets-pratique.com/">Formation en Google Sheets</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a><br>
 <a href="https://www.sheets-pratique.com/fr/apps-script">Formation en Apps Scripts</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a></p>
