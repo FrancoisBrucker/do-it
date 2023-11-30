@@ -18,7 +18,7 @@ J'ai ensuite décidé d'effectuer une année de césure pour **transformer mes c
 D'une part confronté à la **digitalisation du monde industriel** et d'autre part par **curiosité personnelle**, j'ai décidé de meler mes connaissances de la Supply Chain à des compétences en informatique et en Data Sciences.
 
 **==> Pour cette raison, l'option Do_It me semblait être la meilleure option qui s'offrait à moi combinée au M2 SID à l'AMU.**
-
+**==> Mon stage de fin d'études s'effectuera chez [TRAKER - BNP Paribas Real Estate](https://www.traker-pm.com/) où je serai consultant Supply Chain & Opérations.**
 #### ERASMUS
 J'ai suivi à Politecnico di Milano des cours de : Leadership and Innovation | Operations Management | Project Management
 
