@@ -75,3 +75,17 @@ J'ai ensuite suivi le tutoriel Python (encore recommandé par Brucker) qui est d
 Enfin, j'ai lu la documentation du mot-clé *case* accessible [ici](https://docs.python.org/fr/dev/reference/compound_stmts.html) car je n'étais plus certain de son utilisation.
 
 ## Apprentissage de la bibliothèque Seaborn
+
+#### Introduction 
+Suite aux recommandations d'[Olivier Bastide](https://www.facebook.com/olivier.bastide.902), qui, après avoir suivi ses semaines de filières métier en ADAD, m'a chanté les louanges de la bibliothèque [Seaborn](https://seaborn.pydata.org/), je décide de lui faire confiance et d'apprendre à utiliser cette bibliothèque. Basée sur matplotlib, cette bibliothèque bénéficie donc de l'intégration sur tous les environnements supportés par matplotlib, ce qui est très pratique. Seaborn est plutôt orientée statistique et analyse des données, ce qui me convient parfaitement pour ce que je veux en faire. Il ne suffit que d'un 
+
+```python
+pip install seaborn
+```
+pour installer la bibliothèque.
+
+![Seaborn](Seaborn.png)
+
+#### Analyse de la documentation fournie sur le site Seaborn ( heure)
+
+
