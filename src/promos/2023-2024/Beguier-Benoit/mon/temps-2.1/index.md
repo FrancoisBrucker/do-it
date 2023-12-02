@@ -166,3 +166,11 @@ Dans mon [MON 1.1](https://francoisbrucker.github.io/do-it/promos/2023-2024/Begu
 ![MON](MON_R.png)
 
 Je souhaite cette fois améliorer le graphique obtenu et le temps machine grâce à Seaborn. Je vais pour ce MON me baser sur les données du dernier Grand Prix de la saison qui s'est déroulé à Abu Dhabi le 26/11/2023. J'ai récupéré les données sur le site [Pitwall](https://pitwall.app/analysis/compare-lap-times) et je crée un fichier .csv avec les données.
+
+J'ai réalisé tout ce travail dans un Notebook que vous pourrez trouver ci-dessous.
+
+{% chemin %}
+[Lien du Notebook](MON2_1.ipynb)
+{% endchemin %}
+
+Je suis satisfait de la finalité de mon MON et de la bibliothèque Seaborn. Je n'ai fait ici qu'effleurer les possibilités qu'elle offre car je n'ai pas fait d'études statistiques, mais il en résulte une très grande facilité d'utilisation.
