@@ -22,12 +22,13 @@ résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python
 
 **Niveau :** Intermédiaire
 **Prérequis :**
+
 - Bases de Python
 
 {% endprerequis %}
 
-
 ## Sommaire
+
 1. Introduction
 2. Remise au niveau intermédiaire sur Python
 3. Découverte de la bibliothèque Seaborn
@@ -35,7 +36,8 @@ résumé: "Le but de ce MON est de reprendre les bases d'algorithmique en Python
 
 ## Introduction
 
-Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous : 
+Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :
+
 - *Python Tutorial*, W3 Schools. Accessible [ici](https://www.w3schools.com/python/).
 - *Coder en Python*, François Brucker. Accessible [ici](https://francoisbrucker.github.io/cours_informatique/cours/coder-en-python/)
 - *Le tutoriel Python*. Accessible [ici](https://docs.python.org/fr/3/tutorial/index.html)
@@ -45,9 +47,10 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 
 ## Remise au niveau intermédiaire sur Python
 
-#### Exercices de décrassage (2 heures)
+### Exercices de décrassage (2 heures)
 
 J'ai débuté ce MON en effectuant un grand nombre d'exercices Python sur le site W3 Schools, cité dans mes références. Ce site propose un peu moins de 5 exercices sur les différents aspect essentiels du langage, tels que :
+
 - la syntaxe
 - les variables
 - les data types : string, boolean, number, integer, dictionnaries, ...
@@ -63,14 +66,14 @@ Je recommande à tous de faire ces exercices. Ils m'ont pris deux heures, car j'
 
 ![W3](W3.png)
 
-
-#### Échauffement (2 heures 30)
+### Échauffement (2 heures 30)
 
 J'ai ensuite effectué le cours de Python de M. Brucker accessible [ici](https://francoisbrucker.github.io/cours_informatique/cours/coder-en-python/). Je me suis attardé sur les parties Variables, Fonctions, Listes et Notebook.
 Je retiens notamment la partie sur les listes en compréhension (dont la documentation est disponible [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#list-comprehensions)), les arrays (dont la documentation est disponible [ici](https://numpy.org/doc/stable/reference/generated/numpy.array.html)), les Notebook et la partie *Pour aller plus loin*.
 J'ai effectué l'ensemble des exercices proposés par M. Brucker sur les pages que j'ai consulté, afin de reprendre rapidement la main sur tous les types.
 
-J'ai ensuite suivi le tutoriel Python (encore recommandé par Brucker) qui est disponible [ici](https://docs.python.org/fr/3/tutorial/index.html). Celui-ci étant très long, j'ai sélectionné uniquement les parties qui m'intéressaient : 
+J'ai ensuite suivi le tutoriel Python (encore recommandé par Brucker) qui est disponible [ici](https://docs.python.org/fr/3/tutorial/index.html). Celui-ci étant très long, j'ai sélectionné uniquement les parties qui m'intéressaient :
+
 - [10.6. Mathématiques](https://docs.python.org/fr/3/tutorial/stdlib.html#mathematics)
 - [12.2. Création d'environnements virtuels](https://docs.python.org/fr/3/tutorial/venv.html#creating-virtual-environments)
 - [12.3. Gestion des paquets avec pip](https://docs.python.org/fr/3/tutorial/venv.html#managing-packages-with-pip) histoire de consolider le cours de DevWeb du temps 2.
@@ -79,21 +82,23 @@ Enfin, j'ai lu la documentation du mot-clé *case* accessible [ici](https://docs
 
 ## Découverte de la bibliothèque Seaborn
 
-#### Introduction 
-Suite aux recommandations d'[Olivier Bastide](https://www.facebook.com/olivier.bastide.902), qui, après avoir suivi ses semaines de filières métier en ADAD, m'a chanté les louanges de la bibliothèque [Seaborn](https://seaborn.pydata.org/), je décide de lui faire confiance et d'apprendre à utiliser cette bibliothèque. Basée sur matplotlib, cette bibliothèque bénéficie donc de l'intégration sur tous les environnements supportés par matplotlib, ce qui est très pratique. Seaborn est plutôt orientée statistique et analyse des données, ce qui me convient parfaitement pour ce que je veux en faire. Il ne suffit que d'un 
+### Introduction
+
+Suite aux recommandations d'[Olivier Bastide](https://www.facebook.com/olivier.bastide.902), qui, après avoir suivi ses semaines de filières métier en ADAD, m'a chanté les louanges de la bibliothèque [Seaborn](https://seaborn.pydata.org/), je décide de lui faire confiance et d'apprendre à utiliser cette bibliothèque. Basée sur matplotlib, cette bibliothèque bénéficie donc de l'intégration sur tous les environnements supportés par matplotlib, ce qui est très pratique. Seaborn est plutôt orientée statistique et analyse des données, ce qui me convient parfaitement pour ce que je veux en faire. Il ne suffit que d'un
 
 ```python
 pip install seaborn
 ```
+
 pour installer la bibliothèque.
 
 ![Seaborn](Seaborn.png)
 
-#### Analyse de la documentation fournie sur le site Seaborn (2 heures)
+### Analyse de la documentation fournie sur le site Seaborn (2 heures)
 
 J'ai d'abord fait un tour sur la page [Introduction](https://seaborn.pydata.org/tutorial/introduction) de Seaborn. Une rapide présentation des possibilités permises par la bibliothèque sont montrées et on a une première approche avec les méthodes de la bibliothèque.
 
-L'ensemble des exemples fournis par Seaborn utilisent des *datasets* pré-existants. Il est possible de les consulter avec la commande 
+L'ensemble des exemples fournis par Seaborn utilisent des *datasets* pré-existants. Il est possible de les consulter avec la commande
 
 ```python
 sns.get_dataset_names()
@@ -127,9 +132,10 @@ J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas sim
 
 ![histo](histo.png)
 
-Nous abordons aussi le cas des distributions à deux variables. J'ai trouvé cette partie très intéressante car elle lie statistiques et programmation. J'ai légèrement survolé la partie sur les distributions marginales, qui ne m'intéressent pas spécialement dans mon étude. 
+Nous abordons aussi le cas des distributions à deux variables. J'ai trouvé cette partie très intéressante car elle lie statistiques et programmation. J'ai légèrement survolé la partie sur les distributions marginales, qui ne m'intéressent pas spécialement dans mon étude.
 
 Je retiens les fonctions suivantes :
+
 - *`displot()`*, qui permet d'afficher la distribution des données. Indiquer `kind=hist` dans ses paramètres affiche un histogramme, `kind=kde` affiche une Kernel Distribution Estimation. A noter que les fonctions *`hisplot()`* et *`kdeplot()`* existent à part entière mais *`displot()`* permet une souplesse d'utilisation très agréable.
 - *`scatterplot()`* pour les nuages de points, avec le paramètre `hue` très utile qui permet de grouper les données.
 - *`countplot()`* qui permet d'afficher des histogrammes pour des variables non quantitatives.
@@ -152,14 +158,16 @@ J'ai ensuite décidé de regarder plusieurs vidéos Youtube sur la bibliothèque
 J'ai d'abord regardé la vidéo de Gaelim Holland : [*How to Visualize Data in Python Using Seaborn | Seaborn Tutorial.*](https://www.youtube.com/watch?v=LnGz20B3nTU). Honnêtement je ne la recommande pas, car le contenu n'est pas très différent de la documentation, et il commet quelques imprécisions malvenues (par exemple dans `import seaborn as sb`, il affirme que `sb` est une variable alors que c'est un alias).
 
 Je retiens cependant la ligne de commande
+
 ```python
 data.head()
 ```
+
 qui permet d'afficher les premières lignes du dataset, ce qui est très pratique en particulier dans les Notebooks.
 
 J'ai ensuite regardé la vidéo [*Seaborn Tutorial : Seaborn Full Course*](https://www.youtube.com/watch?v=6GUZXDef2U0) de Derek Banas. Claire et directe, elle permet de revoir toutes les possibilités offertes par Seaborn. Bonus : son notebook qu'il rend disponible dans la description.
 
-4. Mise en pratique en reprenant l'exemple du MON 1.1
+## Mise en pratique en reprenant l'exemple du MON 1.1
 
 Dans mon [MON 1.1](https://francoisbrucker.github.io/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.1/), j'avais utilisé le langage R pour analyser les données issues du Grand Prix du Japon et afficher un graphique montrant la position de deux pilotes en foction du tour de la course.
 
@@ -170,7 +178,9 @@ Je souhaite cette fois améliorer le graphique obtenu et le temps machine grâce
 J'ai réalisé tout ce travail dans un Notebook que vous pourrez trouver ci-dessous.
 
 {% chemin %}
-[Lien du Notebook](MON2_1.ipynb)
+[Lien du Notebook](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Beguier-Benoit/mon/temps-2.1/MON2_1.ipynb)
 {% endchemin %}
 
 Je suis satisfait de la finalité de mon MON et de la bibliothèque Seaborn. Je n'ai fait ici qu'effleurer les possibilités qu'elle offre car je n'ai pas fait d'études statistiques, mais il en résulte une très grande facilité d'utilisation.
+
+![final](final.png)
