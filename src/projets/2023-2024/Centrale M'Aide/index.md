@@ -23,7 +23,7 @@ Nous souhaitons créer une plateforme de mise en relation de particuliers pour l
 
 ## Recentrage
 
-Après réflexion et discussion avec Adèle, notre tutrice, nous avons décidé de recentrer le projet. Nous allons nous concentrer sur un public centralien uniquement, ce qui nous permet de développer un projet plus précis et centré. Nous nous basons ainsi sur un public que nous connaissons et les personae seront correctement définis.
+Après réflexion et discussion avec Adèle, notre tutrice, nous avons décidé de recentrer le projet. Nous allons nous concentrer sur un public centralien uniquement, ce qui nous permet de développer un projet plus précis et répondant à une demande que nous connaissons tous. Nous nous basons ainsi sur un public clairement identifié et les personae seront correctement définis.
 
 ## Présentation
 

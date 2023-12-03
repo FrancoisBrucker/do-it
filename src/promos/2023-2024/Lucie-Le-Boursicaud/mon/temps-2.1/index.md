@@ -40,6 +40,170 @@ Il existe plusieurs types de Machine Learning :
 - <strong>Apprentissage non supervisé : </strong> Le modèle est formé sur un ensemble de données qui ne contient que des entrées, sans indications sur les résultats attendus. Le modèle cherche à découvrir des structures ou des patterns intrinsèques aux données. 
 - <strong>Apprentissage par renforcement : </strong> Le modèle apprend à prendre des décisions en interagissant avec un environnement. Il reçoit des récompenses ou des pénalités en fonction des actions qu'il entreprend, ce qui lui permet d'ajuster son comportement au fil du temps.
 
+##### Comprendre le fonctionnement du Machine Learning
+Pour cette partie j'ai surtout regardé les vidéos de la chaîne [Machine Learnia](https://www.youtube.com/c/machinelearnia) au sujet du Machine Learning. J'ai commencé par la playlist [Initiation au Machine Learning](https://www.youtube.com/playlist?list=PLO_fdPEVlfKqUF5BPKjGSh7aV9aBshrpY) pour continuer avec [Python Spécial Machine Learning](https://www.youtube.com/watch?v=82KLS2C_gNQ&list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq) à partir de la 20ème vidéo (avant les vidéos ne concerne pas vraiment le ML mais des bibliothèques python tel que Pandas et Matplotlib qui sont important pour traiter le ML).
+
+Concrétement voici comment procédé lorsque l'on veut faire du Machine Learning avec Python :
+
+##### Importer les bibliothèques nécessaires
+
+Avant de commencer, il est nécessaire d'importer les bibliothèques nécessaires, y compris scikit-learn pour les algorithmes de machine learning.
+
+```html 
+import pandas as pd 
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.neighbors import KNeighborsClassifier
+```
+
+
+##### Charger les données
+
+Pour avoir avoir accès aux données on utilise la fonction suivante :
+
+```html 
+data = pd.read_csv('chemin/vers/votre/fichier.csv')
+```
+
+##### Explorez les données pour mieux les comprendre
+
+Il est important de connaitre la structure des données que l'on a à disposition avant de se lancer dans les opérations de ML, pour ça on utilise ces trois fonctions :
+
+```html 
+print(data.head())
+```
+Cette fonction permt de retrouner les informations suivantes : 
+<div stype="display:flex"><img src="datahead.png"></div>
+
+```html 
+print(data.info())
+```
+Cette fonction permt de retrouner les informations suivantes : 
+<div stype="display:flex"><img src="datainfo.png"></div>
+
+```html 
+print(data.describe())
+```
+Cette fonction permt de retrouner les informations suivantes : 
+<div stype="display:flex"><img src="datadescribes.png"></div>
+
+##### Traitement des données 
+
+Pour ne pas amoindrir l'efficacité de notre modèle il est important de vérifier que les données ont du sens et d'éliminer celles dont des informations primordiales manquent ou semble trop extrême.
+Pour cela on utilise la fonction suivante : 
+```html 
+data = data.dropna()
+```
+
+##### Séparation des données
+
+On va diviser les données en deux ensembles : un ensemble d'entrainement et un ensemble de test. 
+```html 
+X = data.drop('variable_cible', axis=1)
+y = data['variable_cible']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+Une fois que la fonction *train_test_split* est utilisée, elle génère deux ensembles distincts : l'ensemble d'entraînement (train) et l'ensemble de test. Ce découpage des données offre la possibilité d'évaluer un modèle de Machine Learning sous deux perspectives distinctes.
+
+Initialement, le modèle est formé en utilisant l'ensemble d'entraînement fourni par la fonction. Ensuite, ses capacités prédictives sont évaluées en utilisant l'ensemble de test également fourni par la fonction. Cette approche permet de tester la performance du modèle sur des données qu'il n'a pas vues pendant l'entraînement, offrant ainsi un aperçu de sa généralisation à de nouvelles données.
+
+##### Normalisation/Standardisation des données 
+
+Cette étape n'est pas obligatoire mais elle peut permettre de gagner quelques pourcentage en plus leur de l'évaluation de notre modèle.  Elle vise à mettre toutes les variables (features) des données sur une échelle commune, ce qui peut être particulièrement important pour certains algorithmes et modèles.
+
+```html 
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
+Globalement normaliser ou standardiser les données à pour but de garantir que le modèle utilisé fonctionne de manière optimale, en particulière lorsque l'on travaille avec des algortihmes sensibles aux échelles des variables. Le choix entre la normalisation et la standardisation dépend du contaxte spécifique des données utilisées et des exigences associées au modèle utilisé.
+
+##### Choix du modèle 
+
+Dans cette étape on décide du modèle que l'on va utiliser en fonction de nos données.
+Les modèles de machine learning sont classés en différentes catégories en fonction du type de données sur lesquelles ils sont appliqués et du type de tâche qu'ils accomplissent. On utilise donc pas le même modèle pour chaque problématique. Les deux plus simples à comprendre sont : 
+
++ Modèles de Régression : *Utilisés lorsque la variable cible (output) est continue.*
+
+Par exemple on peut utiliser le modèle *LinearRegression* qui permet de modéliser la relation linéaire entre une variable dépendante et une variable indépendante. Il existe aussi des modèles de régression linéaire multiple, polynomiale et encore bien d'autres...
+
+```html 
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+```
+
++ Modèles de Classification : *Utilisés lorsque la variable cible est une classe ou une catégorie.*
+
+Dans cette catégorie de modèle on retrouve plusieurs modèles. Par exemple le modèle *KNeighborsClassifier* regarde les plus proches voisins (le nombre est déterminer en hyperparamètre *n_neighbors*) de l'élément qu'il souhaite classer et choisis la catégorie à la majorité. Tandis que le modèle *RandomForestClassifier* fonctionne à l'aide d'arbre de décision dont les dernières feuilles sont les différentes catégories possibles. Il existe encore tout plein d'autres modèle dans la même catégorie mais qui ne fonctionne pas de la même manière et à chaque problème un modèle est plus adapté qu'un autre.
+
+```html 
+
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+
+from sklearn.neighbors import KNeighborsClassifier
+model = KNeighborsClassifier(n_neighbors=5)
+
+```
+
+##### Entraînement du modèle 
+
+Ici, on va entrainer notre modèle sur l'ensemble des données d'entrainements qu'on a déterminer lors de la séparation des données. Pour ce faire on utilise la fonction suivante : 
+```html 
+model.fit(X_train, y_train)
+```
+
+
+##### Evaluation du modèle 
+
+Une fois notre modèle entraîné on va s'intéresser à ces performances sur des données qu'il n'a jamais vu (l'ensemble des données test). Concrétement on veut répondre à la question "A-t-il bien appris ?". Pour ce faire on utilise la fonction suivante : 
+```html 
+y_pred = model.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+print("Classification Report:\n", classification_report(y_test, y_pred))
+```
+
+##### Cross-Validation
+
+La Cross-Validation permet de s'assurer de la stabilité du modèle. Elle permet d'évaluer la performance d'un modèle sur un ensemble de données de manière plus robuste que l'utilisation d'une seule division en ensemble d'entraînement et ensemble de test. Elle aide à estimer comment le modèle généralise aux données non vues.La procédure de validation croisée implique de diviser l'ensemble de données en plusieurs sous-ensembles, puis de former et évaluer le modèle plusieurs fois. Il existe différentes variantes de la validation croisée, la plus courante étant la validation croisée k-fold. Elle fonctionne de cette façon : 
+  + Division en k-Folds :
+L'ensemble de données est divisé en k sous-ensembles (ou "folds") de taille égale.
+  + Itérations :
+Pour chaque itération, l'un des k sous-ensembles est utilisé comme ensemble de test, tandis que les k-1 autres sous-ensembles sont utilisés comme ensemble d'entraînement.
+  + Entraînement et Évaluation :
+Le modèle est formé sur l'ensemble d'entraînement et évalué sur l'ensemble de test.
+  + Répétition :
+Ces étapes sont répétées k fois, chaque sous-ensemble étant utilisé comme ensemble de test exactement une fois.
+  + Moyenne des Performances :
+Les performances (mesures d'évaluation telles que la précision, le F-score, etc.) de chaque itération sont généralement moyennées pour obtenir une estimation plus stable et représentative de la performance du modèle.
+
+```html 
+cv_scores = cross_val_score(model, X, y, cv=5)
+print("Cross-Validation Scores:", cv_scores)
+print("Mean CV Score:", cv_scores.mean())
+``` 
+
+##### Optimisation des hyperparamètres du modèle
+
+On a vu que les modèles peuvent avoir des hyperparramètres. En fonction de leur valeur, le modèle est plus ou moins efficace, le but est donc de trouver les hyperparamètres optimals pour que notre modèle soit le plus précis possible. 
+Pour ça on utilise la fonction suivante à adapter en fonction des hyperparamètres de notre modèle :
+
+```html 
+from sklearn.model_selection import GridSearchCV
+
+param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20]}
+grid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=5)
+grid_search.fit(X, y)
+best_model = grid_search.best_estimator_
+```
+
+
+
 ### Apprentissage avec Kaggle
 Afin d'apprendre le Machine Learning j'ai tout d'abord suivi le cours <strong>*Learn Intro to Machine Learning*</strong> sur la plateforme [Kaggle](https://www.kaggle.com/). 
 
@@ -48,4 +212,7 @@ Afin d'apprendre le Machine Learning j'ai tout d'abord suivi le cours <strong>*L
 | -------- | -------- |-------- |
 | Vendredi 17/11  | 1H  | Choix des sources/cours à suivre et début de l'apprentissage |
 | Dimanche 20/11 | 1H | Kaggle : *Learn Intro to Machine Learning*|
-| Lundi 21/11 | 1H | Videos Explicatives|
+| Lundi 21/11 | 1H | Videos Explicatives de Machine Learnia : *Machine Learning Formation Complète* Partie 1|
+| Vendredi 24/11 | 2H | Videos Explicatives de Machine Learnia : *Machine Learning Formation Complète* Partie 2 + *Python Spécial Machine Learning* Vidéo 20, 21 et 22|
+| Mercredi 30/11 | 2H | Exercice House Pricing avec différents modèles|
+
