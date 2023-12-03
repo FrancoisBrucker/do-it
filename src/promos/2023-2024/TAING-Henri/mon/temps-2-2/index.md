@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: layout/mon.njk
 
 title: "Dépoussiérer ses connaissances en SQL et Python pour l'analyse de données"
@@ -24,12 +24,12 @@ Avoir un cerveau à moitié allumé
 ## Table des matières
 
 1. [Introduction](#section-1)
-2. [SQL débutant](#section-2)
-3. [SQL intermédiaire](#section-3)
-4. [Rappels sur Python et ses librairies pour l'analyse de données](#section-4)
-5. [Quelques résultats et représentations à partir d'une base de données sur le Speed Dating](#section-5)
-6. [Conclusion](#section-6)
-7. [Sources](#section-7)
+<!-- 2. [SQL débutant](#section-2)
+2. [SQL intermédiaire](#section-3)
+3. [Rappels sur Python et ses librairies pour l'analyse de données](#section-4)
+4. [Quelques résultats et représentations à partir d'une base de données sur le Speed Dating](#section-5)
+5. [Conclusion](#section-6)
+6. [Sources](#section-7) -->
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -38,7 +38,7 @@ Puis étant dans ma phase "J'adore jouer avec des données", SQL s'est imposé c
 
 Il est donc temps de dépoussiérer tout ça. Pour ça, j'ai décidé de réapprendre SQL en essayant directement de résoudre les exercices faciles et intermédiaires proposés par [sql.sh](https://sql.sh/exercices-sql).
 
-## 2. SQL débutant <a id="section-2"></a>
+<!-- ## 2. SQL débutant <a id="section-2"></a>
 
 J'ai appris le SQL à la va-vite en classes préparatoires. Ça doit être comme le vélo, non ? Ça ne s'oublie pas.
 Eh bien, je me suis souvenu que j'étais nul au vélo. Heureusement, le site est bien documenté et les explications super bien ficelés. Dès que j'avais un trou de mémoire, je m'y référais.
@@ -287,5 +287,4 @@ Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psycholo
 
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
 [Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com
-[Formation en Apps Scripts](https://www.sheets-pratique.com/fr/apps-script) par sheets-pratique.com
- -->
+[Formation en Apps Scripts](https://www.sheets-pratique.com/fr/apps-script) par sheets-pratique.com -->

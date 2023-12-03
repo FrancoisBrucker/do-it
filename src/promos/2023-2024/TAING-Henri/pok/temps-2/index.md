@@ -22,11 +22,12 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 ## Table des matières
 
 1. [Objectifs et backlog produit](#section-1)
-2. [Ce que j'ai prévu au 1er sprint](#section-2)
-3. [Ce que j'ai fait au 1er sprint](#section-3)
-4. [Ce que je prévoyais pour le 2ème sprint](#section-4)
-5. [Ce que j'ai fait au 2ème sprint](#section-5)
-6. [Sources](#section-6)
+2. [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement](#section-2)
+3. [Sprint 1 Review](#section-3)
+4. [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement](#section-4)
+5. [Sprint 2 Review](#section-5)
+6. [Conclusion](#section-6)
+7. [Sources](#section-7)
 
 ## Objectifs et backlog produit <a id="section-1"></a>
 
@@ -94,24 +95,42 @@ On prendra comme user-stories à faire :
 
 - <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 (1h)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 -> 3 (1h -> 2h)
 
-- <u>Arbre de décision Figma</u> [] = 6 (3h)
+- <u>Arbre de décision Figma</u> [] = 4
 
   - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
   - Créer les arbres de décision pour I.AB [X] = 2 (1h40)
-  - Créer les arbres pour II.1.B [] = 2 (1h)
 
-- <u>Coder les parties communes I.</u> [] = 7 (6h)
+- <u>Coder les parties communes I.</u> [] = 5
 
   - Implémenter I. [] = 5 (5h)
-    - Chapitre 1 []
-    - Chapitre 2 []
+    - Chapitre 1 [X]
+    - Chapitre 2 [X]
     - Chapitre 3 []
     - Chapitre 4 []
     - Chapitre 5 []
 
-## Sources <a id="section-6"></a>
+**Ajouté durant le sprint car c'était trop moche**
+
+- <u>Customisation de GUI</u> [X] = 2 (1h)
+
+  - Menu principal [X] = 1
+  - Barre de dialogue [X] = 1
+
+## Sprint 1 Review <a id="section-3"></a>
+
+J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de dialogue et au code en général, sans compter les nombreux bugs que j'ai eus au début pendant la prise en main, et les problèmes d'images.
+
+Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h.
+
+## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a>
+
+## Sprint 2 Review <a id="section-5"></a>
+
+## Conclusion <a id="section-6"></a>
+
+## Sources <a id="section-7"></a>
 
 [Tutoriel pour créer un jeu avec Renpy (en anglais)](https://www.youtube.com/watch?v=C3Ldd-5PKCw&ab_channel=ZeilLearnings) de ZeilLearnings
 [Documentation pour débuter sur Renpy](https://www.renpy.org/doc/html/quickstart.html)
