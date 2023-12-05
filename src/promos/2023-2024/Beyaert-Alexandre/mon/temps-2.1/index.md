@@ -297,6 +297,159 @@ Il est également intéressant de remarquer :
 - np.isnan(A) : renvoie un masque de A avec des False et True si isnan permettant ainsi de corriger ces NaN
 
 ## 3. Bibliothèque Matplotlib
+```python
+import matplotlib.pyplot as plt
+```
+
+La bibliothèque Matplolib permet de créer des visualisations statiques, animées et interactives en Python.
+
+### Fonction Pyplot
+
+**Arguments de la fonction**
+plot(x, y, label=..., lw=..., ls=..., c=...)
+- label : nom de la courbe
+- lw : épaisseur du trait
+- ls : style du trait
+- c : couleur du trait
+
+Attention, x et y doivent être de même dimension !
+
+**Corps type de l'affichage d'une figure**
+```python
+# définition de la fonction
+import numpy as np
+x = np.linspace(0, 2, 10)
+y = x**2
+
+# début de la figure
+plt.figure(figsize=(12, 8)) #dimensions en pouces et non en centimètres
+
+# contenu
+plt.plot(x, y, label='quadratique', lw=6, ls='--', c='red')
+plt.plot(x, x**3, label='cubique', lw=4, c='blue')
+plt.title('figure 1')
+plt.xlabel('abscisses')
+plt.ylabel('ordonnées')
+plt.legend()
+
+# affichage
+plt.show()
+
+# sauvegarde dans le répertoire
+plt.savefig('figure_type.png')
+```
+
+![Figure type](figure_type.png)
+
+Il est également possible d'afficher plusieurs graphique avec subplot.
+
+```python
+plt.figure()
+
+#plt.subplot(lignes, colonnes, position)
+
+plt.subplot(2, 2, 1)
+plt.plot(x, x)
+plt.title('courbe1')
+
+plt.subplot(2, 2, 2)
+plt.plot(x, np.cos(x))
+plt.title('courbe2')
+
+plt.subplot(2, 2, 3)
+plt.plot(x, y)
+
+plt.subplot(2, 2, 4)
+plt.plot(x, np.cos(x))
+plt.plot(x, np.sin(x))
+```
+![Utilisation de subplot](subplot.png)
+
+### Différents graphiques
+Afin de visualiser les différents graphiques que l'on peut tracer avec matlpolib, nous allons nous servir du dataset iris flower qui contient 150 exemples de fleurs d'iris répartis en 3 classes.
+4 variables permettent alors de classer la fleur :
+- longueur et largeur du pétale
+- longeur et largeur du sépal
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+
+x = iris.data  # Correction ici
+y = iris.target
+names = list(iris.target_names)
+
+print(f'x contient {x.shape[0]} exemples et {x.shape[1]} variables')  # Correction ici
+print(f'il y a {np.unique(y).size} classes')
+
+#exécution du code*
+x contient 150 exemples et 4 variables
+il y a 3 classes
+```
+
+**Classification avec un nuage de points : plt.scatter**
+```python
+plt.scatter(x[:, 0], x[:, 1], c=y, alpha=0.5, s=100)
+plt.xlabel('longueur sépale')
+plt.ylabel('largeur sépale')
+```
+![Classification avec scatter](scatter.png)
+
+**Visualisation 3D avec mpl_toolkits**
+```python
+from mpl_toolkits.mplot3d import Axes3D
+ax = plt.axes(projection='3d')
+ax.scatter(x[:, 0], x[:, 1], x[:, 2], c=y)
+```
+![Visualisation 3D](visu3D.png)
+
+```python
+f = lambda x, y: np.sin(x) + np.cos(x+y)
+X = np.linspace(0, 5, 100)
+Y = np.linspace(0, 5, 100)
+X, Y = np.meshgrid(X, Y)
+Z = f(X, Y)
+
+ax = plt.axes(projection='3d')
+ax.plot_surface(X, Y, Z, cmap='plasma')
+```
+![Visualisation 3D d'une surface](surface.png)
+
+**Contour plots**
+```python
+f = lambda x, y: np.sin(x) + np.cos(x+y)*np.cos(x)
+X = np.linspace(0, 5, 100)
+Y = np.linspace(0, 5, 100)
+X, Y = np.meshgrid(X, Y)
+Z = f(X, Y)
+plt.contour(X, Y, Z, 20, colors='black')
+
+plt.contourf(X, Y, Z, 20, cmap='RdGy')
+plt.colorbar()
+```
+![Contour plot](contour_plot.png)
+![Contour plot V2](contour_plotv2.png)
+
+**Histogramme**
+```python
+plt.hist(x[:,0], bins=20)
+plt.xlabel('longueur sépale')
+plt.ylabel('nombre de sépales')
+
+plt.hist2d(x[:,0], x[:, 1], cmap='Blues')
+plt.xlabel('longueur sépale')
+plt.ylabel('largeur sépale')
+plt.colorbar()
+```
+
+![Histogramme des longueurs de sépale](histogramme.png)
+![Histogramme 2D des longueurs et largeurs de sépale](histogramme2d.png)
+
+
+
 ## 4. Bibliothèque Pandas
 ## 5. Combinaison des bibliothèques
 ## 6. Conclusion
