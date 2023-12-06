@@ -120,6 +120,7 @@ Pour faire face à cette problématique, il est essentiel d'engager activement l
 -	Digital transformation : a roadmap for billion-dollar organizations. Disponible sur : https://www.capgemini.com/wp-content/uploads/2017/07/Digital_Transformation__A_Road-Map_for_Billion-Dollar_Organizations.pdf. Consulté le 5 octobre 2023.
 - Interopérabilité des outils et des données. Disponile sur : https://www.puceplume.fr/ged-interoperabilite-des-outils-et-des-donnees/. Consulté le 7 octobre 2023.
 - Managing the Digital Transformation of Companies. Disponible sur : https://www.acatech.de/wp-content/uploads/2020/04/aca_STU_MatInd_2020_en_Web.pdf. Consulté le 11 octobre 2023.
+- L’API Menace L’Industrie Du Middleware. Disponible sur : https://www.forbes.fr/business/lapi-menace-lindustrie-du-middleware-et-cest-tant-mieux/. Consulté le 15 otobre 2023.
 {% endprerequis %}
 
 

@@ -8,8 +8,6 @@ authors:
 date: 2023-10-18
 
 tags:
-  - "mon"
-  - "2023-2024"
   - "temps 1"
   - "VBA"
   - "Excel"

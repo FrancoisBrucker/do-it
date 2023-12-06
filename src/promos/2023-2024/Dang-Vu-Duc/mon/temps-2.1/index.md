@@ -1,13 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Apprentissage de la bilbiothèque Pygame"
 authors:
   - Duc DANG VU
 
-date: 1970-11-01
+date: 2023-11-23
 tags: 
   - "temps 2"
+  - "Python"
+  - "Pygame"
+  - "Programmation objet"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "L'objectif de ce MON est d'apprendre à utiliser la bibliothèque Pygame de Python, afin d'implémenter des jeux."
 ---
