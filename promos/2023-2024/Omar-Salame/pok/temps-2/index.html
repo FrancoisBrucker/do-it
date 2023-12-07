@@ -135,12 +135,12 @@
 <h2>Sommaire</h2>
 <ol>
 <li><a href="#section-1">Recap</a></li>
-<li><a href="#section-2">Backlog</a></li>
+<li><a href="#section-2">Sprint 1</a></li>
 </ol>
 <h2>Recap<a id="section-1"></a></h2>
 <p>Mon projet de fantasy football pour la ligue marocaine INWI Botola Pro1 a déjà accompli des étapes significatives. Jusqu'à présent, j'ai mis en place les fondations de la plateforme, en développant la structure HTML et CSS de base, en intégrant les données des joueurs et des équipes via un processus de webscraping, et en commençant à travailler sur des fonctionnalités backend telles que l'authentification des utilisateurs. J'ai également créé un design initial pour le site, y compris la modélisation du terrain et la page d'accueil. Alors que je me prépare à entamer la deuxième phase du projet, mon intention est de développer davantage la plateforme en ajoutant des fonctionnalités clés, en améliorant son esthétique et en rendant le site pleinement fonctionnel. Ce développement inclura l'implémentation d'un système de gestion d'équipes, d'un système de points basé sur les performances des joueurs, et d'une interface utilisateur améliorée pour une expérience plus immersive et compétitive pour les utilisateurs.</p>
-<h2>Backlog <a id="section-2"></a></h2>
-<h3>1er Sprint : Fonctionnalités de Base</h3>
+<h2>1er Sprint : Fonctionnalités de Base<a id="section-2"></a></h2>
+<h3>Backlog</h3>
 <table>
 <thead>
 <tr>
@@ -164,6 +164,48 @@
 <td>Système de Points Basique pour les Joueurs</td>
 <td>Définition des règles et de la logique de scoring. Implémentation d'une version simple du système de points.</td>
 <td>4 heures</td>
+</tr>
+</tbody>
+</table>
+<h3>Implémentation</h3>
+<h4>Intégration et Gestion des Données des Joueurs</h4>
+<p>Jusqu'à présent, j'ai pu avancer sur la fonctionnalité &quot;Intégration et Gestion des Données des Joueurs&quot;. J'ai réussi à importer manuellement les données des joueurs dans la base de données MongoDB, comme une base de mon processus. Bien que l'automatisation complète ne soit pas encore mise en place, Cette étape initiale sert de fondement solide pour la suite du développement. Les prochaines étapes impliqueront la recherche et l'intégration d'une API appropriée pour garantir la mise à jour en temps réel des données des joueurs et de la ligue.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> PlayerModel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./models/player'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">const</span> mongoURI <span class="token operator">=</span> <span class="token string">"mongodb+srv://TinySpy:@cluster0.guwuhmj.mongodb.net/MFL"</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>mongoURI<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">useNewUrlParser</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">useUnifiedTopology</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">importPlayers</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'Botolapro_players.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> players <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> playerData <span class="token keyword">of</span> players<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> player <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PlayerModel</span><span class="token punctuation">(</span>playerData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">await</span> player<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Tous les joueurs ont été importés avec succès.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"Erreur d'importation des joueurs :"</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    mongoose<span class="token punctuation">.</span><span class="token function">disconnect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">importPlayers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<img src="players_schema.png" width="650" height="500">
+<h4>Création et Gestion d'Équipe</h4>
+<p>J'ai fait des avancées solides dans le développement du backend pour permettre aux utilisateurs de créer et gérer leurs équipes. Maintenant, les utilisateurs peuvent créer une session sur le site et choisir les joueurs pour leur équipe. Ces choix sont enregistrés dans la base de données en stockant les id des joueurs, ce qui signifie que chaque fois qu'ils reviennent sur le site, leur équipe est là, avec les modifications qu'ils ont apportées. J'ai également implémenté les opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour une gestion simple des équipes. En somme, la fonctionnalité backend avance comme prévu, offrant une expérience utilisateur pratique et facile d'utilisation.</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="select_equipe.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="equipe.png" width="700" height="550"></td>
 </tr>
 </tbody>
 </table>
