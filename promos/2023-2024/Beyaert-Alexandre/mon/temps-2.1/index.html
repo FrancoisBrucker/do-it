@@ -139,7 +139,6 @@
 <li>Bibliothèque NumPy</li>
 <li>Bibliothèque Matplotlib</li>
 <li>Bibliothèque Pandas</li>
-<li>Combinaison des bibliothèques</li>
 <li>Conclusion</li>
 <li>Bibliographie</li>
 </ol>
@@ -371,8 +370,8 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 <li>A.sort(axis=?) : trie le tableau selon l'axe</li>
 <li>A.argsort(axis=?) : retourne les index dans l'ordre de tri du tableau ( ne modifie pas le tableau)</li>
 </ul>
-<p>D'autres routines mathématiques sont égalements décrites dans la documentation : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html">https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html</a></p>
-<p>Et statistiques : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html">https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html</a></p>
+<p>D'autres routines mathématiques sont égalements décrites dans la documentation : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html">Scipy routines.math</a></p>
+<p>Et statistiques : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html">Scipy routines.statistics</a></p>
 <p>Il est également intéressant de remarquer :</p>
 <ul>
 <li>np.corrcoef(A) qui permet d'obtenir la matrice de corrélation de A : l'élément à l'emplacement (i, j) représente la corrélation entre la i-ème et la j-ème colonnes de la matrice A.</li>
@@ -510,9 +509,84 @@ plt<span class="token punctuation">.</span>colorbar<span class="token punctuatio
 <p><img src="histogramme.png" alt="Histogramme des longueurs de sépale"><br>
 <img src="histogramme2d.png" alt="Histogramme 2D des longueurs et largeurs de sépale"></p>
 <h2>4. Bibliothèque Pandas</h2>
-<h2>5. Combinaison des bibliothèques</h2>
-<h2>6. Conclusion</h2>
-<h2>7. Bibliographie</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+</code></pre>
+<p>La bibliothèque Pandas permet de d'effectuer de l'analyse de données de manière simple et intuitive.<br>
+Basée sur NumPy, elle fournit une structure de donnée appelée Dataframe adaptée pour lire et écrire dans différents formats : .csv, .txt, .xls, .sql...)</p>
+<h3>Application au DataFrame</h3>
+<p><strong>Dataset Titanic</strong><br>
+Pour mettre en lumière les possibilités de la bibliothèque Pandas, je vous propose de nous pencher sur le dataset Titanic disponible en suivant ce lien : <a href="https://github.com/MachineLearnia/Python-Machine-Learning/tree/master/Dataset">Dataset Titanic</a></p>
+<p><strong>Charger le fichier</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'titanic.xls'</span><span class="token punctuation">)</span>
+<span class="token comment"># .csv : pd.read_csv()</span>
+<span class="token comment"># .json : pd.read_json()</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p><img src="titanic.png" alt="Aperçu du dataset Titanic"></p>
+<p><strong>Fonctions utiles</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Afficher le début du DataFrame</span>
+df<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Statistiques sur le DataFrame</span>
+df<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">,</span> <span class="token string">'column'</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Éliminer des colonnes</span>
+df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># Éliminer les lignes aux données manquantes</span>
+df<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Compter les répétitions</span>
+df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Analyser par groupe</span>
+
+df<span class="token punctuation">.</span>shape <span class="token comment"># Afficher les dimensions du DataFrame</span>
+df<span class="token punctuation">.</span>columns <span class="token comment"># Renvoie les différentes colonnes du DataFrame</span>
+</code></pre>
+<p><strong>Application</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>file_path <span class="token operator">=</span> <span class="token string">r"C:\MOOC_Data_Sciences\Machine_Learnia\titanic3.xls"</span>
+<span class="token operator">>></span><span class="token operator">></span>df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df<span class="token punctuation">.</span>shape
+<span class="token punctuation">(</span><span class="token number">1309</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span> <span class="token comment"># 1309 lignes et 14 colonnes</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df<span class="token punctuation">.</span>columns
+Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'survived'</span><span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token string">'sibsp'</span><span class="token punctuation">,</span> <span class="token string">'parch'</span><span class="token punctuation">,</span> <span class="token string">'ticket'</span><span class="token punctuation">,</span>
+       <span class="token string">'fare'</span><span class="token punctuation">,</span> <span class="token string">'cabin'</span><span class="token punctuation">,</span> <span class="token string">'embarked'</span><span class="token punctuation">,</span> <span class="token string">'boat'</span><span class="token punctuation">,</span> <span class="token string">'body'</span><span class="token punctuation">,</span> <span class="token string">'home.dest'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Afin d'analyser les données, supprimons quelques colonnes.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>df_bis <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'parch'</span><span class="token punctuation">,</span> <span class="token string">'sibsp'</span><span class="token punctuation">,</span> <span class="token string">'ticket'</span><span class="token punctuation">,</span> <span class="token string">'fare'</span><span class="token punctuation">,</span> <span class="token string">'cabin'</span><span class="token punctuation">,</span> <span class="token string">'embarked'</span><span class="token punctuation">,</span> <span class="token string">'boat'</span><span class="token punctuation">,</span> <span class="token string">'body'</span><span class="token punctuation">,</span> <span class="token string">'home.dest'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># cf image retournée ci-dessous</span>
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># cf image retournée ci dessous</span>
+</code></pre>
+<p><img src="dataset_bis.png" alt="Nouveau dataset"><br>
+<img src="describe.png" alt="Describe"></p>
+<p>On peut remarquer via le &quot;describe&quot; que 1309 lignes sont présentes dans les 2 premières colonnes contre 1046 dans la troisième.<br>
+Il manque des données concernant l'âge de certains passagers, 2 options sont alors envisageable pour palier ce problème :</p>
+<ul>
+<li>compléter par une valeur par défaut, par exemple par l'âge moyen de la colonne avec la commande &quot;data.fillna(df['age].mean())&quot;</li>
+<li>supprimer les lignes pour lesquelles ces données sont manquantes &quot;data.dropna(axis=0)&quot;</li>
+</ul>
+<p>Poussons l'analyse pour désormais déterminer la répartition de ces 1046 passagers par classe.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>
+pclass
+<span class="token number">3</span>    <span class="token number">501</span>
+<span class="token number">1</span>    <span class="token number">284</span>
+<span class="token number">2</span>    <span class="token number">261</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#cf image retournée ci-dessous</span>
+</code></pre>
+<p><img src="groupby.png" alt="Utilité de la fonction groupby"></p>
+<p><strong>Combinaison Matplotlib et Pandas</strong><br>
+Pandas fonctionne en collaboration avec Matplotlib, il va donc être possible de réaliser des graphiques simples sur le dataframe.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">df<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>plot<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>bins<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>plot<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>y<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+
+pd<span class="token punctuation">.</span>plotting<span class="token punctuation">.</span>scatter_matrix<span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+
+<span class="token comment"># répartition des âges du DataFrame</span>
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="histo_ages.png" alt="Répartition des âges"></p>
+<h2>5. Conclusion</h2>
+<h2>6. Bibliographie</h2>
 <p><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">https://numpy.org/doc/stable/user/absolute_beginners.html</a><br>
 <a href="https://courspython.com/apprendre-numpy.html">https://courspython.com/apprendre-numpy.html</a><br>
 <a href="https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq">https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq</a></p>
