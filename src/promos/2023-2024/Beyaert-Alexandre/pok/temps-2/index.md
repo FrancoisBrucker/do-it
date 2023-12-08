@@ -13,6 +13,25 @@ tags:
 résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie Pathologique. En particulier, le risque de récidive d'une tumeur.
 ---
 
+{% prerequis %}
+**Niveau :** Avancé
+**Prérequis :** [à définir]
+{% endprerequis %}
+
+## Sommaire
+
+1. Introduction
+2. Description du projet
+3. Sprint 1 : analyse préliminaire des données
+(Il sera dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)
+4. Sprint 2 : algorithmes de Machine Learning
+(Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
+5. Conclusion
+6. Bibliographie
+
+## 1. Introduction
+## 2. Description du projet
+
 ## Risque de récidive du carcinome basocellulaire estimé par l’intégration de multiples jeux de données (images histologiques, compte-rendus, etc…)
 
 
