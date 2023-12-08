@@ -26,7 +26,7 @@ résumé: Je vais dans ce POK créer mon site Internet permettant à l'utilisate
 - Des prérequis en utilisation d'API peuvent être un plus mais ne sont pas indispensables
 {% endprerequis %}
 
-Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous : 
+Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :
 
 - *Créez votre site web avec HTML5 et CSS3.* OpenClassrooms. Accessible [ici](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3).
 - Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/)
@@ -89,7 +89,7 @@ Je choisis en premier lieu une interface simple et épurée. Afin de rappeler la
 
 Je crée aussi un logo se basant sur la forme ronde du logo Spotify, mais en y incluant un rappel de statistiques au travers des courbes de tendances. Je choisis ainsi le nom de mon service : **Spotistats**.
 
-![Logo](Allongé.png)
+![Logo](Allonge.png)
 
 Je choisis ensuite le type de boutons de ma page Web. Je télécharge les icones sur le site [Flaticon](https://www.flaticon.com/). J'utilise le pack d'icônes [*Outline*](https://www.flaticon.com/authors/icongeek26/outline?author_id=296&type=standard) créé par Icongeek26.
 
@@ -97,13 +97,18 @@ Je définis les composantes de mes pages :
 
 - les boutons seront des rectangles de 330px*65px, avec des bords arrondis de 38px.
 
-[bouton](Group-1.png)
+![bouton](Group-1.png)
 
 - le header fait 1440px*120px, de couleur #25242F, avec une ombre portée grise.
 
-[Header](Header.png)
+![Header](Header.png)
 
 - la page fait 1440px*1024px (dimension Desktop), de couleur #25242F qui rappelle le mode sombre sur Spotify. Les titres de section sont écrits avec la police Gotham de couleur #1ED760, tandis que le corps de texte est blanc en Roboto Light de 25px.
 
-[Accueil](Accueil.png)
+![Accueil](Accueil.png)
 
+Ma maquette Figma est accessible [ici](https://www.figma.com/file/Rx2sAj4SSzLNnZjNFwKq6O/Spotistats?type=design&node-id=0%3A1&mode=design&t=T7OGaQuYW9phVxnz-1).
+
+## Création des pages du site en HTML
+
+Rien de très intéressant à ajouter dans cette partie, si ce n'est que je vais transformer la maquette Figma en HTML et en CSS.
