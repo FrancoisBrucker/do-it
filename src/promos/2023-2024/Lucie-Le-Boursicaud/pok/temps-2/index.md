@@ -22,10 +22,10 @@ Connaitre les bases de Figma.
 
 # Sprint 1 
 ###### Objectifs du premier sprint
-+ [] Réaliser une maquette simplifiée - 2
-+ [] Choisir la charte graphique  - 3
-+ [] Créer les éléments et les variants principaux  - 2
-+ [] Avoir des ébauches de différentes pages - 2
++ [x] Réaliser une maquette simplifiée - 2
++ [x] Choisir la charte graphique  - 3
++ [x] Créer les éléments et les variants principaux  - 2
++ [x] Avoir des ébauches de différentes pages - 2
 
 
 ## Sommaire
@@ -105,7 +105,7 @@ Le design doit incarner l'essence de la créativité, la fusion de deux mondes d
 Pour créer le logo j'ai utilisé Canva que je maitrise plutôt bien. 
 J'ai essayé différents arrangements pour avoir le nom VIBE en harmonie avec l'information "Brunch & Art".Choisir la disposition parfaite pour intégrer ces éléments a été mon point de départ, je voulais refléter l'atmosphère artistique tout en assurant une lisibilité claire et immédiate. Au début j'ai essayé des arrangements très simples ce qui est efficace mais qui reflète peu le côté créatif que je voulais exprimé. 
 
-<div stype="display:flex">
+<div style="display:flex">
 <div><img src="logoVIBE.png"></div>
 <div><img src="vibe3Nv.png"></div>
 </div>
@@ -113,14 +113,25 @@ J'ai essayé différents arrangements pour avoir le nom VIBE en harmonie avec l'
 J'ai essayé donc d'autres justement. Ensuite, il a fallu trouvé la police adéquate assez expressive pour le nom de la marque mais aussi une police plus élégante et sobre pour l'information.
 J'ai ajouté des formes un peu artistiques et de la couleur pour former des versions finales qui correspondent bien à ce que j'imaginais. Ces formes évocatrices soulignent la créativité et l'énergie du lieu. Pour la palette de couleurs j'hésitait entre des couleurs vibrantes pour stimuler les sens ou des couleurs plus pastelles.
 
-<div stype="display:flex">
+<div style="display:flex">
 <div><img src="vibe1Cv.png"></div>
-<div><img src="vibe2Cv.png"></div>
+<div><img src="Vibe2Cv.png"></div>
 <div><img src="vibe3Cv.png"></div>
 </div>
 
-
 #### Typographie 
+
+La sélection de typographie que j'ai opérée pour ce site repose sur la recherche d'un équilibre entre la lisibilité, l'esthétique et la cohérence visuelle. Pour les titres, j'ai opté pour Montserrat en raison de son caractère moderne et élégant. Cette police apporte une forte présence tout en restant facile à lire, ce qui la rend idéale pour attirer l'attention sur les éléments clés de l'interface.
+
+Pour le corps du texte, j'ai choisi Kokoro. Cette police offre une bonne lisibilité tout en apportant une touche de chaleur et de personnalité. Sa simplicité épurée s'aligne parfaitement avec les valeurs du persona du design, créant une lecture fluide et agréable.
+
+En ce qui concerne les boutons, j'ai opté pour Koulen. Cette typographie confère aux boutons une apparence distinctive et une certaine énergie, tout en maintenant une clarté visuelle pour les interactions utilisateur. Koulen ajoute une dimension subtile, soulignant l'importance des actions à entreprendre sans compromettre la facilité d'utilisation.
+
+<div>
+<div><img src="typo.png"></div>
+</div>
+
+Dans l'ensemble, cette combinaison de Montserrat, Kokoro et Koulen vise à créer une expérience visuelle harmonieuse, cohérente pour les utilisateurs, renforçant ainsi l'identité visuelle de l'entreprise.
 
 
 #### Couleurs
@@ -134,11 +145,20 @@ Pour ce POK j'ai décidé de réaliser le site web d'un concept store que j'aime
 La première étape est donc d'avoir une idée globale de la structure du site nottament le placement des différents éléments, les boutons de navigations ect. Pour ce faire j'ai d'abord fait des croquis à la main puis je les ai reproduit sur Figma pour avoir un résultat plus précis et de meilleur qualité. 
 La réflexion principale pour ces maquettes simplifiées c'est que le parcours utilisateur soit le plus fluide possible lors que celui-ci cherche une information précise. Je veux donc quelque chose d'assez original mais qui reste intuitif : tout le défi de ce POK réside dans ce travail. 
 
-<div>
-<img src="homeMS.png"></img>
-<img src="cateMS.png"></img>
-<img src="artMS.png"></img>
-<img src="resaMS.png"></img>
+<div style="display:flex">
+<div><img src="homeMS.png"></div>
+<div><img src="carteMS.png"></div>
+<div><img src="artMS.png"></div>
+<div><img src="resaMS.png"></div>
+</div>
+
+## 4. Ebauche des différentes pages
+À partir d'une maquette simplifiée, j'ai élaboré des ébauches de pages toujours à l'aide de l'outil Figma. 
+<div style="display:flex">
+<div><img src="homeME.png"></div>
+<div><img src="carteME.png"></div>
+<div><img src="artME.png"></div>
+<div><img src="resaME.png"></div>
 </div>
 
 ### Horodateur
