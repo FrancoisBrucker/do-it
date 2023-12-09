@@ -28,7 +28,10 @@ résumé: "Un MON traitant de l'utilisation des bibliothèques Python pour la Da
 
 ## 1. Introduction
 
-quid sklearn et seaborn ??
+La vocation de ce MON est d'introduire de façon non exhaustive aux bibliothèques python utiles pour la DataScience.
+Ce premier MON introduit aux bibliothèques Numpy, Matplotlib et Pandas qui servent respectivement au calcul numérique, à la visualisation basique des données et à leur analyse.
+
+Le MON 2.1 va de pair avec le MON 2.2 quilui introduit les bibliothèques Seaborn et Scikit Learn. Celles-ci permettent d'effectuer d'une part de la visualisation plus poussée, très adaptée aux dataframe issus de Pandas, d'autre part appelle aux algorithmes d'apprentissage pour effectuer de la classification, de la régression et du clustering.
 
 ## 2. Bibliothèque NumPy
 ```python
@@ -543,9 +546,15 @@ pd.plotting.scatter_matrix(df)
 ![Répartition des âges](histo_ages.png)
 
 ## 5. Conclusion
+
+En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
+NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.
+
+Ensemble, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.
+
 ## 6. Bibliographie
 
-https://numpy.org/doc/stable/user/absolute_beginners.html
-https://courspython.com/apprendre-numpy.html
-https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq
+[Documentation NumPy](https://numpy.org/doc/stable/user/absolute_beginners.html)
+[Documentation Scipy](https://courspython.com/apprendre-numpy.html)
+[Chaint YouTube Machine Learnia](https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq)
 

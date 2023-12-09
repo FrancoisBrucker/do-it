@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Découverte de VBA"
+title: "Bibliothèques Python pour la Data Science (Partie 2/2) : Seaborn, Scikit Learn"
 authors:
   - Alexandre Beyaert
 
@@ -9,8 +9,10 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant du VBA : Visual Basic For Applications."
+résumé: "Un MON traitant de l'utilisation des bibliothèques Python pour la Data Science."
 ---
-https://www.excel-pratique.com/fr/vba
 
-https://www.youtube.com/watch?v=X9xR7LW6dPs&list=PL4moFYPB3KVsY_E5WAANYuZGeUQekvS3U
+{% prerequis %}
+**Niveau :** Facile
+**Prérequis :** Bases en Python
+{% endprerequis %}

@@ -9,9 +9,9 @@ authors:
 Ensemble des MON réalisés par Alexandre Beyaert.
 
 ## Temps 2
-* [Bibliothèques Python pour la Data Science : Numpy, Matplotlib et Pandas](./temps-2.1)
-* [Découverte de VBA](./temps-2.2)
+* [Bibliothèques Python pour la Data Science (Partie 1/2) : Numpy, Matplotlib et Pandas](./temps-2.1)
+* [Bibliothèques Python pour la Data Science (Partie 2/2) : Seaborn, Scikit Learn](./temps-2.2)
 
 ## Temps 3
-* [MON 3.1](./temps-3.1)
+* [Découverte de VBA](./temps-3.1)
 * [MON 3.2](./temps-3.2)
