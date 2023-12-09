@@ -27,8 +27,17 @@ résumé: L'objectif principal de ce POK est de créer un portfolio en ligne dyn
 
 ## Réalisation du sprint 1:
 1.	Documentation : Pour découvrir JavaScript en relation avec ce que j'ai appris en MON Temps en HTML et CSS, j'ai choisi ce [cours](https://www.coursera.org/learn/introduction-to-web-development-with-html-css-javacript). Cette étape est effectuée (voir [certificat](https://www.coursera.org/account/accomplishments/certificate/NRN8SQK7J9QS)).
-2.	Planification et Conception du contenu et de l’interface du portfolio (En cours)
-3.  Développement du Front-End (Pas encore)
+2.	Planification et Conception du contenu et de l’interface du portfolio 
+Objectifs du Portfolio : 
+•	Présenter mes compétences, mes projets passés, attirer des employeurs ou des clients potentiels
+•	Communiquer avec ces employeurs / clients (via une rubrique de demandes & recommandations) 
 
+3.  Développement du Front-End 
+<img src="1.png">
+<img src="2.png">
+<img src="3.png">
 
-
+## Réalisation du sprint 2:
+1. Développement du Back-End (en cours)
+2. Tests, Débogage (pas encore)
+3. Hébergement du site (pas encore)
