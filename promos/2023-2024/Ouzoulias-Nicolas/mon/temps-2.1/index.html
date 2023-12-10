@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Node.js et Express</title>
+        <title>Faire les backs : partie 1 </title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Node.js et Express</h1>
+<h1 class="mb-1">Faire les backs : partie 1 </h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON pour découvrir le back d'un site web
+                Un MON pour découvrir le back d'un site web : partie 1
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/">Nicolas OUZOULIAS</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/">MON de Nicolas Ouzoulias</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/temps-2.1/">Node.js et Express</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/">Nicolas OUZOULIAS</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/">MON de Nicolas Ouzoulias</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/temps-2.1/">Faire les backs : partie 1 </a>
 
 </div></div>
 
@@ -128,6 +128,73 @@
 <h2>Objectifs</h2>
 <p>Ce premier MON du temps 2 a pour objectif de m'initiner à la partie back d'un site Web pour m'aider dans la réalisation des sites web de mon POK et du projet 3A.</p>
 <p>Pour cela je vais suivre les cours de monsieur Brucker sur son site internet.</p>
+<h2>I. Initiation à JavaScript</h2>
+<p>Pour bien utiliser Node.js je dois me mettre à niveau en JavaScript. Grâce au projet 3A et aux cours d'info de Do-It j'ai pu expérimenté quelques fois ce langage mais j'ai encore beaucoup trop de lacunes et trop peu de connaissances. Je vais donc tout d'abord revoir les bases de ce langage pour mieux comprendre Node.js et tout le back.</p>
+<p>JavaScript peut être utilisé en <em>front</em> et en <em>back</em> :</p>
+<ul>
+<li><em>front</em> : c'est le côté <strong>client</strong>, JS permet de rendre la page plus dynamique et de permettre à ce dernière d'intéragir plus profondément avec le site</li>
+<li><em>back</em> : c'est le côté <strong>serveur</strong>, JS permet de travailler avec des environnements comme Node.js afin de gérer tout ce qui est base de données par exemple.</li>
+</ul>
+<p>Tout comme Python, JS est un langage interprété et le code va donc s'éxecuter de haut en bas en renvoyant le résultat immédiatement. Contrairement par exemple au C et au C++ qui sont compilés en langage assembleur pour  ensuite être exécuté par l'ordinateur.</p>
+<p>Le script JS se lie avec le code HTML grâce à cette ligne de code :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>script.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Le fonctionnement et la syntaxe de JS sont globalement assez sembables à Python et c'est donc assez facile de prendre en main ces aspects du langage. On y retrouve de multiples similitudes :</p>
+<ul>
+<li>l'utilisation de variables</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> myVariable <span class="token operator">=</span> <span class="token number">12</span> <span class="token comment">//déclaration de la variable</span>
+my variable <span class="token operator">=</span> <span class="token number">14</span> <span class="token comment">//modification de la variable</span>
+
+<span class="token keyword">const</span> myConst <span class="token operator">=</span> <span class="token string">"Daniel"</span> <span class="token comment">//déclaration d'une constante</span>
+</code></pre>
+<ul>
+<li>la programmation orientée objet</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> monPC <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">marque</span><span class="token operator">:</span> <span class="token string">"Dell"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gamme</span><span class="token operator">:</span> <span class="token string">"XPS"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">couleur</span><span class="token operator">:</span> <span class="token string">"gris"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">annee</span><span class="token operator">:</span> <span class="token string">"2021"</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> maMarque <span class="token operator">=</span> monPC<span class="token punctuation">.</span>marque <span class="token comment">//appel à une propriété</span>
+</code></pre>
+<ul>
+<li>les conditions et boucles</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">}</span>
+</code></pre>
+<p>Le grand intérêt du JS est le lien avec les langages HTML et CSS. Il permet :</p>
+<ul>
+<li><strong>d'ajouter des balises</strong></li>
+<li><strong>d'en supprimer</strong></li>
+<li><strong>de les modifier</strong></li>
+</ul>
+<p>Pour cela il faut tout d'abord récupérer les éléments d'une page Web grâce aux diverses méthodes</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> baliseZone <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"zone"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer un élément particulier</span>
+
+<span class="token keyword">let</span> baliseZoneSpan <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#zone span"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer seulement un type parmi un groupe parent (comme un div par exemple)</span>
+
+<span class="token keyword">let</span> listeInputRadio <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">".zoneChoix input"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer tous les inputs du groupe parent zoneChoix</span>
+</code></pre>
+<p>Afin d'avoir une page plus dynamique il faut programmer de <strong>manière événementielle</strong>. Les événements peuvent être : un clic de la souris, une frappe d'une clavier, un bouton coché, ...<br>
+Ces derniers sont écoutés grâce à <em>addEventListener</em> puis utilisés à l'aide d'une fonction <em>=&gt;</em></p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">monBouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Vous avez cliqué sur le bouton"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
 
 </article>
