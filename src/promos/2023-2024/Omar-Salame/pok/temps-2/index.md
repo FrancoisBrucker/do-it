@@ -71,5 +71,29 @@ J'ai fait des avancées solides dans le développement du backend pour permettre
 :-------------------------:|:-------------------------:
 <img src="select_equipe.png" width="700" height="550">|<img src="equipe.png" width="700" height="550">
 
+#### Système de Points pour Fantasy League
+
+Le tableau suivant décrit le système de points utilisé dans la fantasy league :
+
+| Action du Joueur        | Points Attribués |
+|-------------------------|------------------|
+| But marqué              | 5 points         |
+| Passe décisive          | 3 points         |
+| Carton jaune            | -1 point         |
+| Carton rouge            | -3 points        |
+| But contre son camp     | -2 points        |
+| Arrêt de pénalty        | 5 points         |
+| Gardien - But encaissé  | -1 point par but |
+| Défenseur - But encaissé | -0.5 point par but |
+| Match sans encaisser de but (Défenseur/Gardien) | 4 points |
+| Plus de 60 minutes jouées (Joueur) | 1 point  |
+| Moins de 60 minutes jouées (Joueur) | 0 point |
+
+{% info %}
+- Les points sont attribués en fonction des performances des joueurs durant chaque match.
+- Le total des points pour chaque joueur est calculé à la fin du match et ajouté à son score total dans la ligue.
+- Les décisions de l'arbitre sur le terrain sont finales pour l'attribution des points liés aux cartons et aux buts.
+{% endinfo %}
+
 
 
