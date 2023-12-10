@@ -23,13 +23,15 @@ résumé: "Un MON traitant de l'utilisation des bibliothèques Python pour la Da
 2. Bibliothèque NumPy 
 3. Bibliothèque Matplotlib
 4. Bibliothèque Pandas
-5. Combinaison des bibliothèques
-6. Conclusion
-7. Bibliographie
+5. Conclusion
+6. Bibliographie
 
 ## 1. Introduction
 
-quid sklearn et seaborn ??
+La vocation de ce MON est d'introduire de façon non exhaustive aux bibliothèques python utiles pour la DataScience.
+Ce premier MON introduit aux bibliothèques Numpy, Matplotlib et Pandas qui servent respectivement au calcul numérique, à la visualisation basique des données et à leur analyse.
+
+Le MON 2.1 va de pair avec le MON 2.2 quilui introduit les bibliothèques Seaborn et Scikit Learn. Celles-ci permettent d'effectuer d'une part de la visualisation plus poussée, très adaptée aux dataframe issus de Pandas, d'autre part appelle aux algorithmes d'apprentissage pour effectuer de la classification, de la régression et du clustering.
 
 ## 2. Bibliothèque NumPy
 ```python
@@ -287,9 +289,9 @@ array([ 6, 15])
 - A.sort(axis=?) : trie le tableau selon l'axe
 - A.argsort(axis=?) : retourne les index dans l'ordre de tri du tableau ( ne modifie pas le tableau)
 
-D'autres routines mathématiques sont égalements décrites dans la documentation : https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html 
+D'autres routines mathématiques sont égalements décrites dans la documentation : [Scipy routines.math](https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html)
 
-Et statistiques : https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html
+Et statistiques : [Scipy routines.statistics](https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html)
 
 Il est également intéressant de remarquer :
 - np.corrcoef(A) qui permet d'obtenir la matrice de corrélation de A : l'élément à l'emplacement (i, j) représente la corrélation entre la i-ème et la j-ème colonnes de la matrice A.
@@ -449,13 +451,110 @@ plt.colorbar()
 ![Histogramme 2D des longueurs et largeurs de sépale](histogramme2d.png)
 
 
-
 ## 4. Bibliothèque Pandas
-## 5. Combinaison des bibliothèques
-## 6. Conclusion
-## 7. Bibliographie
+```python
+import pandas as pd
+```
 
-https://numpy.org/doc/stable/user/absolute_beginners.html
-https://courspython.com/apprendre-numpy.html
-https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq
+La bibliothèque Pandas permet de d'effectuer de l'analyse de données de manière simple et intuitive.
+Basée sur NumPy, elle fournit une structure de donnée appelée Dataframe adaptée pour lire et écrire dans différents formats : .csv, .txt, .xls, .sql...)
+
+### Application au DataFrame
+**Dataset Titanic**
+Pour mettre en lumière les possibilités de la bibliothèque Pandas, je vous propose de nous pencher sur le dataset Titanic disponible en suivant ce lien : [Dataset Titanic](https://github.com/MachineLearnia/Python-Machine-Learning/tree/master/Dataset)
+
+**Charger le fichier**
+```python
+pd.read_excel('titanic.xls')
+# .csv : pd.read_csv()
+# .json : pd.read_json()
+...
+```
+![Aperçu du dataset Titanic](titanic.png)
+
+**Fonctions utiles**
+```python
+df.head() # Afficher le début du DataFrame
+df.describe() # Statistiques sur le DataFrame
+df.drop(['column', 'column',...]) # Éliminer des colonnes
+df.dropna(axis=0) # Éliminer les lignes aux données manquantes
+df.['column'].value_counts() # Compter les répétitions
+df.groupby(['column']) # Analyser par groupe
+
+df.shape # Afficher les dimensions du DataFrame
+df.columns # Renvoie les différentes colonnes du DataFrame
+```
+
+**Application**
+```python
+>>>file_path = r"C:\MOOC_Data_Sciences\Machine_Learnia\titanic3.xls"
+>>>df = pd.read_excel(file_path)
+
+>>>df.shape
+(1309, 14) # 1309 lignes et 14 colonnes
+
+>>>df.columns
+Index(['pclass', 'survived', 'name', 'sex', 'age', 'sibsp', 'parch', 'ticket',
+       'fare', 'cabin', 'embarked', 'boat', 'body', 'home.dest'],
+      dtype='object')
+```
+Afin d'analyser les données, supprimons quelques colonnes.
+
+```python
+>>>df_bis = data.drop(['name', 'parch', 'sibsp', 'ticket', 'fare', 'cabin', 'embarked', 'boat', 'body', 'home.dest'], axis=1)
+
+>>>df_bis.head()
+# cf image retournée ci-dessous
+>>>df_bis.describe()
+# cf image retournée ci dessous
+```
+![Nouveau dataset](dataset_bis.png)
+![Describe](describe.png)
+
+On peut remarquer via le "describe" que 1309 lignes sont présentes dans les 2 premières colonnes contre 1046 dans la troisième.
+Il manque des données concernant l'âge de certains passagers, 2 options sont alors envisageable pour palier ce problème :
+- compléter par une valeur par défaut, par exemple par l'âge moyen de la colonne avec la commande "data.fillna(df['age].mean())"
+- supprimer les lignes pour lesquelles ces données sont manquantes "data.dropna(axis=0)"
+
+Poussons l'analyse pour désormais déterminer la répartition de ces 1046 passagers par classe.
+
+```python
+>>>df_bis['pclass'].value_counts()
+pclass
+3    501
+1    284
+2    261
+
+>>>df_bis.groupby(['sex', 'pclass']).mean() #cf image retournée ci-dessous
+```
+![Utilité de la fonction groupby](groupby.png)
+
+**Combinaison Matplotlib et Pandas**
+Pandas fonctionne en collaboration avec Matplotlib, il va donc être possible de réaliser des graphiques simples sur le dataframe.
+
+```python
+df.plot()
+df.plot.bar()
+df.hist(bins=...)
+df.plot.scatter(x=...,y=...)
+
+pd.plotting.scatter_matrix(df)
+
+# répartition des âges du DataFrame
+>>>df_bis['age'].hist()
+```
+![Répartition des âges](histo_ages.png)
+
+## 5. Conclusion
+
+En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
+NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.
+
+Ensemble, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.
+
+## 6. Bibliographie
+
+[Documentation NumPy](https://numpy.org/doc/stable/user/absolute_beginners.html)
+[Documentation Scipy](https://courspython.com/apprendre-numpy.html)
+[Chaint YouTube Machine Learnia](https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq)
 
