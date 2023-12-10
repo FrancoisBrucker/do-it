@@ -11,7 +11,7 @@ tags:
   - "temps 2"
   - "gouvernance d'entreprise"
 
-résumé: "Ce MON aborde le sujet fondamental de la gouvernance d'entreprise. Après une présentation de ce qui est entendu par ce terme, on trouvera aussi un une comparaison de différents modèles de gouvernance."
+résumé: "Ce MON aborde le sujet fondamental de la gouvernance d'entreprise. Après une présentation de ce qui est entendu par ce terme, on trouvera aussi une comparaison de différents modèles de gouvernance."
 ---
 {% prerequis %}
 **Niveau** : débutant
