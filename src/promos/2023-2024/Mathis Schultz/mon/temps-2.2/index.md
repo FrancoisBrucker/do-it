@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "VBA"
+title: "Power BI"
 authors:
   - Schultz Mathis
 
 date: 2023-11-23
 tags: 
   - "temps 2"
-  - "VBA"
-  - "excel"
+  - "Power BI"
+  - "data"
 
-résumé: "Découverte du langage VBA"
+résumé: "Découverte de Power BI"
 ---

@@ -27,12 +27,11 @@ Mes objectifs sont donc les suivants :
 - Reprendre la main sur son code et me l'approprier
 - Rajouter des fonctionnalités : pouvoir télécharger mon CV pdf depuis le site
 - Rajouter des animations pour mettre en lumière les expériences et formation via JavaScript
-- Publier le site web pour qu'il soit consultable 
+- Publier le site web pour qu'il soit consultable
 
 {% info "Utilisation de mon code" %}
 Mon repository Github a pour vocation à vous être utile, n'hésitez pas à reprendre mon code pour faire votre CV en ligne, Ce serait un plaisir de savoir que mon code sert ne serait-ce qu'à une personne.
 {% endinfo %}
-
 
 <h2 id="toc"> Table des matières </h2>
 
@@ -53,10 +52,11 @@ Mon repository Github a pour vocation à vous être utile, n'hésitez pas à rep
 - Adapter le CV avec mes propres expériences
 - Publier le site web en ligne via Github 
 - Créer un carroussel pour faire défiler mes expériences sans utiliser de librairie particulière.
+- Ajouter la fonctionnalités pour pouvoir télécharger mon CV depuis mon site web.
 
 **Sprint 2**
 
-- Ajouter la fonctionnalités pour pouvoir télécharger mon CV depuis mon site web.
+- Amélioration du carroussel : je souhaite une version plus esthétique
 - Rédiger une aide à l'utilisation de mon code pour que d'autre puisse le reprendre et se l'approprier
 - Tests au près de ma famille et de mes collocataires
 - Une version Anglaise ? Cette fonctionnalité n'est pas très intéressante d'un point de vue développement mais peut avoir un vrai intérêt professionnel.
@@ -65,7 +65,7 @@ Mon repository Github a pour vocation à vous être utile, n'hésitez pas à rep
 
 **Construction de l'environnement de travail**
 
-La première étape a été de récupérer le code d'Agathe sur son repository Github. Cela m'a permis d'avoir une première base de travail pour ne pas refaire trop d'html et de CSS puisqu'elle avait déjà choisit la charte graphique et la structure du site. Cela m'a donc permis de me concentrer sur les fonctionnalités que je souhaitais rajouter. 
+La première étape a été de récupérer le code d'Agathe sur son repository Github. Cela m'a permis d'avoir une première base de travail pour ne pas refaire trop d'html et de CSS puisqu'elle avait déjà choisit la charte graphique et la structure du site. Cela m'a donc permis de me concentrer sur les fonctionnalités que je souhaitais rajouter.
 
 **Apropriation du code**
 
@@ -95,9 +95,18 @@ Les difficultés liées à ce caroussel sont surtout portées sur la lisibilité
 
 Une amélioration que j'essaie de mettre en oeuvre est d'avoir l'expérience principale affiché au centre et d'avoir en fond les expérience flouté pour avoir une meilleure expérience utilisateur et un parcour plus fluide. Cette amélioration me permet de garder le code qui structure l'ordre de défilement des paragraphes mais m'impose de reprendre le reste. Cette amélioration est mon principal point de blocage. Je passe beaucoup de temps pour réussir ma mise en forme. Il est parfois difficile de savoir où travailler pour corriger mes problèmes : est-ce un problème d'html ? de CSS ? de JavaScript ? Une combinaison des trois ? Stackoverflow, ChatGPT ou encore les github mette beaucoup de ressource à disposition à propos des sliders, chacun utilise des méthodes ou bibliothèques différents, on y retrouve beaucoup de bonnes idées et on y gagne pas mal de temps pour obtenir les premières briques de construction, cependant je ne trouve pas exactement la fonctionnalité que je souhaite et je compose avec des assemblages de codes.
 
-**Conclusion de Sprint**
+**Conclusion de Sprint 1**
 
 Chaque étape me paraissait simple, effectivement les missions de mise en page, la création des animations, la publications et les intégrations sont individuellement simple. Cependant, le fait d'avoir du code legacy, d'avoir un temps de compréhension de ce code qui est court et de vouloir le modifier crée un ensemble de petite erreur qui se répercute. Je conseillerai à chacun de partir de zéro pour être complètement souverain de son code, le comprendre à 100%. Cependant, il est évident qu'en vue d'être efficace et d'obtenir rapidement des résultats il est plus simple de partir d'un code existant. Et je vous encourage à reprendre mon code, et à rajouter des fonctionnalités. 
+
+**Rendu Intermédiaire**
+
+<img src="accueille.jpeg">
+<img src="competence.joeg">
+<img src="experience.jpeg">  
+<img src="contact.jpeg">
+<img src="formation.jpeg">
+<img src="loisir.jpeg">
 
 <h2 id="h3"> Second sprint </h2>
 
@@ -113,9 +122,9 @@ Ce paragraphe n'est pas encore disponible
 
 <h2 id="liens"> Liens utiles </h2>
 
-Dans cette partie vous retrouverez les différentes ressources utilisés pour construire mon POK, ainsi que les résultats obtenu pour pouvoir vous l'approprier. 
+Dans cette partie vous retrouverez les différentes ressources utilisés pour construire mon POK, ainsi que les résultats obtenu pour pouvoir vous l'approprier.
 
-- Dépôt Github
-- Lien vers mon CV
-- Lien vers le POK d'Agathe
-- Lien du Github d'Agathe
+- [Dépôt Github](https://github.com/schultzmathis/mon-cv)
+- [Lien vers mon CV](https://schultzmathis.github.io/mon-cv/)
+- [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/index.md)
+- [Lien du Github d'Agathe](https://github.com/arabachou/CVInteractif)
