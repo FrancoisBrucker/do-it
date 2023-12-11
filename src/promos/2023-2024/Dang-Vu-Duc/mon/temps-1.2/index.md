@@ -1,13 +1,18 @@
 ---
 layout: layout/mon.njk
 
-title: "Utilisation de Python pour automatiser des tâches sur Excel avec Openpyxl"
+title: "MON1.2: Utilisation de Python pour automatiser des tâches sur Excel avec Openpyxl"
 authors:
   - Duc DANG VU
 
 date: 2023-16-10
 tags: 
   - "temps 1"
+  - "Excel"
+  - "Python"
+  - "Automatisation"
+  - "Openpyxl"
+  - "Programmation Objet"
 
 résumé: "Ce MON aura pour objectif de s'initier à l'utilisation de la bibliothèque openpyxl de Python, pour lire et modifier des fichiers Excel."
 ---
@@ -414,3 +419,4 @@ Ce MON fut très intéressant. Je ne savais pas qu'il était possible d'automati
 
 - Al Sweigart. *Automate the boring stuff with Python*. Chapitre 13: *Working with Excel spreadsheets*. [https://automatetheboringstuff.com/](https://automatetheboringstuff.com/). Consulté pour la dernière fois le 15/10/23
 - Documentation de openpyxl. *readthedoc.io*. [site d'openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+- Tout les codes présentés ont été écrits par mes soins, de A à Z

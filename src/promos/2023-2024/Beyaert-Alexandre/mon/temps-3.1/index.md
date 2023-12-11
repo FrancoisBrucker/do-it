@@ -11,3 +11,6 @@ tags:
 
 résumé: "Un MON traitant d'un sujet."
 ---
+https://www.excel-pratique.com/fr/vba
+
+https://www.youtube.com/watch?v=X9xR7LW6dPs&list=PL4moFYPB3KVsY_E5WAANYuZGeUQekvS3U

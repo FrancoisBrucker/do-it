@@ -1,12 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Comment faire des présentations impactantes?"
 authors:
   - Duc DANG VU
-date: 1971-01-01
+date: 2023-11-23
 tags: 
   - "temps 2"
+  - "PowerPoint"
+  - "Présentation"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "L'objectif de ce MON est d'apprendre à faire des présentations impactantes."
 ---

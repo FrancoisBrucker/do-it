@@ -73,6 +73,10 @@ Pour la suite, voici les taches que je souhaite terminer :
 ## Ce que j'ai fait à la fin du temps 1
 ![Le résultat après 20h de travail](./crossmath_final.png)
 
+
+
+[Jouez au jeu en cliquant ici !](https://crossmath.assanediouf.com/)
+
 ### Les péripéties
 Comme je l'avais estimé, le plus difficile a été l'algorithme de génération de la grille. Je l'ai fait un bon coup un soir puis j'ai commencé à mettre en place le js pour l'afficher. Seulement, cet affichage m'a juste montrer à quelle point je passais à côté de plein de cas : mon implémentation n'allait pas. J'ai donc modifié mon algorithme, pour ensuite m'apercevoir que j'avais encore oublié quelque chose. Ca a continuer comme ça encore une ou deux fois avant que j'ai quelque chose qui fonctionne pour de bon !
 

@@ -25,47 +25,28 @@ Avoir un cerveau à moitié allumé pour la partie Google Sheets, par contre, po
 ## Table des matières
 
 1. [Introduction](#section-1)
-2. [Les bases en quelques mots](#section-2)
-3. [Mes deux bases de données sur lesquelles je me suis amusé](#section-3)
-<!-- 4. [Quelques images](#section-4)
-4. [Apps Scripts à la rescousse](#section-5)
-5. [Mon combat, notre combat](#section-6)
-6. [Conclusion](#section-7)
-7. [Sources](#section-8) -->
+2. [Mes deux bases de données pour appliquer ce que j'ai appris](#section-2)
+3. [Quelques images](#section-3)
+4. [Apps Scripts à la rescousse](#section-4)
+5. [Une étude de cas pour la recherche de données avec INDEX et MATCH](#section-5)
+6. [Conclusion](#section-6)
+7. [Sources](#section-7)
 
 ## 1. Introduction <a id="section-1"></a>
 
 Pendant le premier cours d'éco-système digital, on nous a demandé de faire un tableau de données sur Excel/Google Sheets, quelques calculs et donner une représentation pertinente. N'ayant pas Excel, j'ai utilisé Google Sheets.
-Et je fus incapable de créer un beau graphique. Quelle ne fut pas ma tristesse. Mon graphe était moche et j'avais eu l'impression d'avoir cliquer sur une suite de boutons sans sens. Puis franchement, ce serait dommage de mourir sans savoir ce qu'est un tableau croisé dynamique depuis le temps que j'en entends parler.
+Et je fus incapable de créer un beau graphique. Quelle ne fut pas ma tristesse.
+Il est donc temps de devenir moins idiot. Pour ça, j'ai décidé de faire comme **[Lola BOURDON dans son MON 1.2](../../../Lola-Bourdon/mon/temps-1.2/)** en suivant le cours sur [excel-pratique.com](excel-pratique.com).
 
-Il est donc temps de devenir moins idiot. Pour ça, j'ai décidé de faire comme **[Lola BOURDON dans son MON 1.2](../../../Lola-Bourdon/mon/temps-1.2/)** en suivant le cours sur [excel-pratique.com](excel-pratique.com) qui est divisé en 11 parties :
+Dans ce MON, vous trouverez ce que j'ai trouvé intéressant à souligner et ce que j'ai fait.
 
-1. Les bases [X]
-2. Les tableaux [X]
-3. Les formats [X]
-4. Insertions d'objets [X]
-5. Recopie incrémentée [X]
-6. Formules et fonctions [X]
-7. Les graphiques [X]
-8. Mise en forme conditionnelle [X]
-9. Tri et filtres [X]
-10. Validations de données [X]
-11. Tableau croisé dynamique [X]
-
-## 2. Les bases en quelques mots <a id="section-2"></a>
-
-Ayant déjà utilisé Google Sheets pour des tâches simples, j'ai pu survoler les premières parties.
-Seulement, le fait que le tutoriel soit sur Excel et non sur Google Sheets m'a beaucoup ralenti, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.
-
-Par exemple, pour la fonction **MID** (ou STXT), qui permet d'extraire des chaînes de caractères.
-Google Sheets me renvoie "#ERROR" me disant qu'il y a une erreur dans ma formule. J'ai pris une demi-heure pour me rendre compte que les "," ne servaient pas de séparation dans la formule, mais qu'il fallait utiliser des ";".
-
+Au début, j'ai été ralenti par le fait que le tutoriel soit sur Excel et non sur Google Sheets, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.
 **Puis, quelques jours plus tard**, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction **SPARKLINE**, **j'ai découvert qu'il existait la même formation pour Google Sheets** ([sheets-pratique.com](https://www.sheets-pratique.com))... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.
 
 A partir de ce moment-là, tout s'est accéléré.
-Je vous laisse quelques images. Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des Miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.
+Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des Miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.
 
-## 3. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-3"></a>
+## 2. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-2"></a>
 
 **Base de données 1 sur les Miss**
 <img src="graphiques.png">
@@ -73,7 +54,7 @@ Je vous laisse quelques images. Je me suis appuyé sur une base de données que 
 **Base de données 2 sur des acteurs/célébrités**
 <img src="repetition_incrementee.png">
 
-<!-- ## 4. Quelques images <a id="section-4"></a>
+## 3. Quelques images <a id="section-3"></a>
 
 **Utilisation de filtres**
 :-------------------------:|:-------------------------:
@@ -95,39 +76,18 @@ Je vous laisse quelques images. Je me suis appuyé sur une base de données que 
 Première chose, je suis déçu. Je pensais que la création d'un tableau croisé dynamique était un truc de malade, mais il s'agit simplement de cliquer sur deux boutons...
 Deuxième chose, je me suis rendu compte que la façon avec laquelle j'ai rempli ma base de données ne convenait pas à une analyse par tableaux croisés dynamiques. Doublement déçu.
 
-Que faire ? Refaire une base de données à la main ? Pfff. Bande de fous. QUE NENNI ! (Je regrette ce choix...)
+Que faire ? Refaire une base de données à la main ? Pfff. Bande de fous. QUE NENNI !
 
-Avec les 5 heures qu'il me reste, il est temps de voir ce qu'est App Scripts, l'équivalent du VBA :o. Va-t-il m'apporter une solution ou sera-t-il un trou sans fond de connaissances ?
+Il est temps de voir ce qu'est App Scripts, l'équivalent du VBA sur Excel :o.
 
-## 5. App Scripts à la rescousse <a id="section-5"></a>
+## 4. App Scripts à la rescousse <a id="section-4"></a>
 
 Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi personne ne me l'a jamais dit ?! J'avais toujours cette image obscure de la chose et pis en fait, c'est juste du code. (-.-)
 En plus, c'est un langage qui est plutôt facile à prendre en main pour l'usage que je prévois d'en faire (#J'ai menti, j'ai souffert).
 
 M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur ([sheets-pratique.com/fr/apps-script](https://www.sheets-pratique.com/fr/apps-script)) avec des étoiles dans les yeux.
-Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois) :
-
-1. Introduction [X]
-2. Variables et tableaux [X]
-3. Feuilles et cellules [X]
-4. Conditions [X]
-5. Boucles [X]
-6. Fonctions [X]
-7. Tableaux avancés [X]
-8. Déclencheurs [X]
-9. Menus [X]
-10. Boîtes de dialogue [X]
-11. Fenêtres personnalisées [X]
-12. Compléments [X]
-
-C'était intéressant de voir la liberté qu'on avait avec App Scripts, mais comme le bon Centralien que je suis, je suis allé vers l'essentiel.
+Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois).
 Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).
-
-## 6. Mon combat, notre combat <a id="section-6"></a>
-
-On commence et on réfléchit... Je reviendrai à la charge plus tard pour finir et simplifier...
-J'ai réussi à faire la première colonne et à peu près la deuxième, mais le code n'est pas très élégant.
-Débugger + la syntaxe m'ont fait du mal.
 
 {% details "Première ébauche de programme pour transformer mes données" %}
 
@@ -236,8 +196,6 @@ function main(){
 
 {% enddetails %}
 
-Mon dieu, ça n'a pas été facile. ChatGPT n'a même pas su m'aider, ce lâcheur.
-
 Voilà le résultat magnifique :
 **Avant**
 <img src="graphiques.png">
@@ -247,15 +205,48 @@ Voilà le résultat magnifique :
 <img src="training.png" width="350" height="350"> | <img src="menu_yes.png" width="350" height="350">
 <img src="tableaudyn_yes.png">
 
-## 7. Conclusion <a id="section-7"></a>
+## 5. Une étude de cas pour la recherche de données avec INDEX et MATCH <a id="section-5"></a>
+
+Le but est de créer une facture qui est complétée automatiquement avec seulement le nom du client, le code et la quantité des articles achetés.
+
+Voici le document qui est séparée en quatre feuilles.
+:-------------------------:|:-------------------------:
+<img src="cas_feuille1.png" width="350" height="350"> | <img src="cas_feuille2.png" width="350" height="350">
+
+<img src="cas_feuille3.png" width="350" height="350"> | <img src="cas_feuille4.png" width="350" height="350">
+
+Pour ça, j'ai utilisé les fonctions INDEX et MATCH qui sont finalement analogues à VLOOKUP et plusieurs fonctions IF.
+
+```
+=INDEX(A2:D11; 4; 3)
+INDEX(table; ligne; colonne) retourne la valeur qui se trouve à la ligne 4, colonne 3 dans le tableau qui couvre A2:D11.
+
+=MATCH("drôle"; A2:A11; 0)
+MATCH(valeur; table; 0 pour avoir la valeur exacte et 1 pour approximation) retourne la position de "drôle" dans la colonne A2:A11, qui est donc ici une ligne.
+```
+
+MATCH peut faire la même recherche dans une ligne et retourner une colonne.
+Et c'est ce qu'on va utiliser pour combiner MATCH et INDEX.
+Adresse! qui est devant la table choisie signifie qu'on extrait les données de la feuille Adresse.
+
+```
+=INDEX(Adresse!A$1:D$10;MATCH(F$3;Adresse!A$1:A$10;0);MATCH(E4;Adresse!A$1:D$1;0))
+```
+
+Puis j'ai utilisé des IF pour pouvoir mettre en place la remise automatique/dynamique.
+
+```
+=IF(E21>=Remise!C1;IF(E21>=Remise!D1;IF(E21>=Remise!E1;IF(E21>=Remise!F1;Remise!F2;Remise!E2);Remise!E2);Remise!D2);Remise!B2)
+```
+
+## 6. Conclusion <a id="section-6"></a>
 
 J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.
 
-Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation). Je dirai que j'ai passé un poil plus que 10h, mais on va dire que ça valait le coup.
+Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation).
 
-## 8. Sources <a id="section-8"></a>
+## 7. Sources <a id="section-7"></a>
 
 [Formation en Excel](excel-pratique.com) par excel-pratique.com
 [Formation en Google Sheets](https://www.sheets-pratique.com/) par sheets-pratique.com
 [Formation en Apps Scripts](https://www.sheets-pratique.com/fr/apps-script) par sheets-pratique.com
- -->

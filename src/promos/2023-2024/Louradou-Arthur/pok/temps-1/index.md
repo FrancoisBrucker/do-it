@@ -5,7 +5,7 @@ title: "Communication Professionnelle"
 authors:
   - "Arthur Louradou"
 
-date: 2023-09-27
+date: 2023-10-18
 
 tags: 
   - "temps 1"
@@ -20,11 +20,7 @@ tags:
 
 résumé: Ce POK consistera en la réalisation d'un portfolio de projet pour se joindre à un CV retravaillé avec des assets graphiques professionnels. Nous mettrons en pratique des principes de méthodologies agiles.
 ---
-<style>
-article .flex {
-   flex-wrap: wrap;
-}
-</style>
+
 
 ## Pourquoi lire ce POK ?
 
@@ -38,7 +34,7 @@ Trois compétences seront mises en pratique dans ce POK et pourraient vous incit
 
 Pour commencer, ce POK a une importance particulière puisqu’il servira deux fonctions principales. Premièrement, la mise en pratique de compétences techniques acquises ces dernières années et qu’il convient de combiner tout en s’assurant de la propreté du code, de l’architecture et de la gestion du projet mis en place. Ensuite, il permettra de prendre le temps de réfléchir à une stratégie de long terme pour la communication professionnelle, dans l’optique de fluidifier les démarches futures de recherche d’emploi ou de clients, tout en maintenant une qualité élevée dans l’image renvoyée aux interlocuteurs.
 
-Ainsi, l’objectif initial était de réaliser un portfolio de projets et de mettre en ligne les différents projets présents sur mon Github, réalisés au cours de ma scolarité ou bien sur mon temps personnel. Après réflexion, l’objectif d’un tel exercice est de penser une plateforme cohérente et design pour améliorer sa visibilité et son « image de marque ». On préfèrera alors utiliser le terme de « Personnal Branding ».
+Ainsi, l’objectif initial était de réaliser un portfolio de projets et de mettre en ligne les différents projets présents sur mon Github, réalisés au cours de ma scolarité ou bien sur mon temps personnel. Après réflexion, l’objectif d’un tel exercice est de penser une plateforme cohérente et design pour améliorer sa visibilité et son « image de marque ». On préfèrera alors utiliser le terme de « Personal Branding ».
 
 Alors, dans cette démarche, la recherche d’inspiration et le maquettage sont centraux et tous les supports de communication doivent être concernés, du site vitrine (portfolio) à lettre de motivation en passant par le CV.
 
