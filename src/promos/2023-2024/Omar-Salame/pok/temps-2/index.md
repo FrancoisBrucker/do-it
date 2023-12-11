@@ -27,9 +27,9 @@ Mon projet de fantasy football pour la ligue marocaine INWI Botola Pro1 a déjà
 ### Backlog
 | Fonctionnalité                               | Description                                                                                   | Temps Estimé |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
-| Intégration et Gestion des Données des Joueurs| Recherche et intégration d'une API appropriée pour les données des joueurs et de la ligue en temps réel. Conception et mise en œuvre de modèles/schémas de base pour stocker les données des joueurs. | 6 heures     |
-| Création et Gestion d'Équipe                 | Développement de la fonctionnalité backend permettant aux utilisateurs de créer et de gérer des équipes. Mise en œuvre des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour la gestion d'équipe. | 8 heures     |
-| Système de Points Basique pour les Joueurs   | Définition des règles et de la logique de scoring. Implémentation d'une version simple du système de points. | 4 heures     |
+| Intégration et Gestion des Données des Joueurs| Recherche et intégration d'une API appropriée pour les données des joueurs et de la ligue en temps réel. Conception et mise en œuvre de modèles/schémas de base pour stocker les données des joueurs. | 3 heures     |
+| Création et Gestion d'Équipe                 | Développement de la fonctionnalité backend permettant aux utilisateurs de créer et de gérer des équipes. Mise en œuvre des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour la gestion d'équipe. | 6 heures     |
+| Système de Points Basique pour les Joueurs   | Définition des règles et de la logique de scoring. Implémentation d'une version simple du système de points. | 1 heures     |
 
 ### Implémentation 
 #### Intégration et Gestion des Données des Joueurs
@@ -94,6 +94,45 @@ Le tableau suivant décrit le système de points utilisé dans la fantasy league
 - Le total des points pour chaque joueur est calculé à la fin du match et ajouté à son score total dans la ligue.
 - Les décisions de l'arbitre sur le terrain sont finales pour l'attribution des points liés aux cartons et aux buts.
 {% endinfo %}
+
+#### Intégration et Gestion des Données de la Botola Pro
+Pour l'intégration des données de la ligue, j'ai rencontré quelques difficultés car mon plan initial était de rechercher et d'intégrer une API appropriée pour les données en temps réel des joueurs et de la ligue. Cependant, la ligue marocaine n'est pas avancée dans ce domaine et l'accès à une API serait payant. Par conséquent, j'ai modifié ma méthode tout en conservant le même objectif. Je vais utiliser le web scraping pour extraire les données du site web, notamment les statistiques des joueurs et des équipes, ainsi que les scores et le classement de tous les matchs. J'ai utilisé le [site officiel de la Botola Pro](https://site.frmf.ma/fr/competitions/botola-d1/) pour obtenir toutes les données dont j'avais besoin:
+
+```js
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+async function scrapeJournee(url) {
+    try {
+        const { data } = await axios.get(url);
+        const $ = cheerio.load(data);
+        const fixtures = [];
+
+        $(".style-table-7.cs7-1 tr").each((index, element) => {
+            if (index === 0) return; 
+
+            const tds = $(element).find('td');
+            const homeTeam = $(tds[0]).text().trim();
+            const awayTeam = $(tds[3]).text().trim();
+            const date = $(tds[4]).text().trim();
+            const time = $(tds[5]).text().trim();
+
+            fixtures.push({ homeTeam, awayTeam, date, time });
+        });
+
+        return fixtures;
+    } catch (error) {
+        console.error(`Error scraping fixtures: ${error}`);
+        return [];
+    }
+}
+
+const url = 'https://botolapro.gestfootball.com/fr/p4755/#1560926979862-d8bdd234-a3403';
+scrapeJournee(url).then(fixtures => console.log(fixtures));
+```
+<img src="scrapbotola.png" width="700" height="550">
+
+
 
 
 

@@ -255,9 +255,9 @@ plt.imshow(A, cmap=plt.cm.gray)
 plt.show()
 ```
 Voici l'image d'origine :
-![Image d'origine](image_origine.png)
+![Image d'origine](image_origine.jpg)
 Et ici l'image traitée :
-![Image zoomée et éclaircié](zoom_et_blanc.png)
+![Image zoomée et éclaircié](zoom_et_blanc.jpg)
 
 ### Algèbre linéaire avec les tableaux
 
@@ -341,7 +341,7 @@ plt.show()
 plt.savefig('figure_type.png')
 ```
 
-![Figure type](figure_type.png)
+![Figure type](figure_type.jpg)
 
 Il est également possible d'afficher plusieurs graphique avec subplot.
 
@@ -365,7 +365,7 @@ plt.subplot(2, 2, 4)
 plt.plot(x, np.cos(x))
 plt.plot(x, np.sin(x))
 ```
-![Utilisation de subplot](subplot.png)
+![Utilisation de subplot](subplot.jpg)
 
 ### Différents graphiques
 Afin de visualiser les différents graphiques que l'on peut tracer avec matlpolib, nous allons nous servir du dataset iris flower qui contient 150 exemples de fleurs d'iris répartis en 3 classes.
@@ -398,7 +398,7 @@ plt.scatter(x[:, 0], x[:, 1], c=y, alpha=0.5, s=100)
 plt.xlabel('longueur sépale')
 plt.ylabel('largeur sépale')
 ```
-![Classification avec scatter](scatter.png)
+![Classification avec scatter](scatter.jpg)
 
 **Visualisation 3D avec mpl_toolkits**
 ```python
@@ -406,7 +406,7 @@ from mpl_toolkits.mplot3d import Axes3D
 ax = plt.axes(projection='3d')
 ax.scatter(x[:, 0], x[:, 1], x[:, 2], c=y)
 ```
-![Visualisation 3D](visu3D.png)
+![Visualisation 3D](visu3D.jpg)
 
 ```python
 f = lambda x, y: np.sin(x) + np.cos(x+y)
@@ -418,7 +418,7 @@ Z = f(X, Y)
 ax = plt.axes(projection='3d')
 ax.plot_surface(X, Y, Z, cmap='plasma')
 ```
-![Visualisation 3D d'une surface](surface.png)
+![Visualisation 3D d'une surface](surface.jpg)
 
 **Contour plots**
 ```python
@@ -432,8 +432,8 @@ plt.contour(X, Y, Z, 20, colors='black')
 plt.contourf(X, Y, Z, 20, cmap='RdGy')
 plt.colorbar()
 ```
-![Contour plot](contour_plot.png)
-![Contour plot V2](contour_plotv2.png)
+![Contour plot](contour_plot.jpg)
+![Contour plot V2](contour_plotv2.jpg)
 
 **Histogramme**
 ```python
@@ -447,8 +447,8 @@ plt.ylabel('largeur sépale')
 plt.colorbar()
 ```
 
-![Histogramme des longueurs de sépale](histogramme.png)
-![Histogramme 2D des longueurs et largeurs de sépale](histogramme2d.png)
+![Histogramme des longueurs de sépale](histogramme.jpg)
+![Histogramme 2D des longueurs et largeurs de sépale](histogramme2d.jpg)
 
 
 ## 4. Bibliothèque Pandas
@@ -470,7 +470,7 @@ pd.read_excel('titanic.xls')
 # .json : pd.read_json()
 ...
 ```
-![Aperçu du dataset Titanic](titanic.png)
+![Aperçu du dataset Titanic](titanic.jpg)
 
 **Fonctions utiles**
 ```python
@@ -508,8 +508,8 @@ Afin d'analyser les données, supprimons quelques colonnes.
 >>>df_bis.describe()
 # cf image retournée ci dessous
 ```
-![Nouveau dataset](dataset_bis.png)
-![Describe](describe.png)
+![Nouveau dataset](dataset_bis.jpg)
+![Describe](describe.jpg)
 
 On peut remarquer via le "describe" que 1309 lignes sont présentes dans les 2 premières colonnes contre 1046 dans la troisième.
 Il manque des données concernant l'âge de certains passagers, 2 options sont alors envisageable pour palier ce problème :
@@ -527,7 +527,7 @@ pclass
 
 >>>df_bis.groupby(['sex', 'pclass']).mean() #cf image retournée ci-dessous
 ```
-![Utilité de la fonction groupby](groupby.png)
+![Utilité de la fonction groupby](groupby.jpg)
 
 **Combinaison Matplotlib et Pandas**
 Pandas fonctionne en collaboration avec Matplotlib, il va donc être possible de réaliser des graphiques simples sur le dataframe.
@@ -543,14 +543,14 @@ pd.plotting.scatter_matrix(df)
 # répartition des âges du DataFrame
 >>>df_bis['age'].hist()
 ```
-![Répartition des âges](histo_ages.png)
+![Répartition des âges](histo_ages.jpg)
 
 ## 5. Conclusion
 
 En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
 NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.
 
-Ensemble, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.
+**Ensemble**, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est **très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.**
 
 ## 6. Bibliographie
 

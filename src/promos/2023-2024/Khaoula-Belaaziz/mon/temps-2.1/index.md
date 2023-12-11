@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "react Native"
+title: "React Native"
 authors:
   - Khaoula BELAAZIZ
 
