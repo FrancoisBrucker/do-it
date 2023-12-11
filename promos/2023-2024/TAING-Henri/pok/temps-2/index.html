@@ -245,7 +245,7 @@ On prendra comme user-stories à faire :</p>
 <p><u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 -&gt; 3 (1h -&gt; 2h)</p>
 </li>
 <li>
-<p><u>Arbre de décision Figma</u> [] = 4</p>
+<p><u>Arbre de décision Figma</u> [] = 4 (2h)</p>
 <ul>
 <li>Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)</li>
 <li>Créer les arbres de décision pour I.AB [X] = 2 (1h40)</li>
@@ -278,8 +278,100 @@ On prendra comme user-stories à faire :</p>
 </ul>
 <h2>Sprint 1 Review <a id="section-3"></a></h2>
 <p>J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de dialogue et au code en général, sans compter les nombreux bugs que j'ai eus au début pendant la prise en main, et les problèmes d'images.</p>
-<p>Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h.</p>
+<p>Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement.</p>
+<h1>Quelques images</h1>
+<p><strong>Changement de l'interface (GUI) avec à gauche la version basique et à droite la version actuelle</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="welcome_basic.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="welcome_aimer.png" width="350" height="350"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="menu_basic_save.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="menu_aimer_save.png" width="350" height="350"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="menu_basic_preferences.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="menu_aimer_preferences.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Une image du jeu et le code associé</strong><br>
+<img src="image1.png"></p>
+<pre><code>define j = Character('Jeanne', color=&quot;#006416&quot;) #Définition du personnage
+
+label start:  #début du jeu
+
+  scene bg bus_stop_night     #appelle l'arrière-plan
+
+  show jeanne cold smile at left       #appelle l'image associée
+  show lise turtleblacksmile at right
+
+  j &quot;Jeanne. Same as you.&quot;        #dialogue
+
+return      #fin du jeu
+</code></pre>
+<p><strong>Situation de choix et code associé</strong><br>
+<img src="choix1.png"></p>
+<pre><code>menu:     #crée le menu de choix
+
+        &quot;Prout.&quot;:
+            jump suite1_1_1    #envoie vers suite1_1_1
+
+        &quot;Wanna be friends?&quot;:
+            jump suite1_1_2
+
+    label suite1_1_1:
+
+        j &quot;Wanna be friends?&quot;
+
+        jump suite1_1_2
+
+    label suite1_1_2:
+
+        j &quot;Like friends?&quot;
+</code></pre>
 <h2>Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a></h2>
+<p><strong>Backlog Sprint 2</strong><br>
+On prendra comme user-stories à faire :</p>
+<ul>
+<li>
+<p><u>Le reste de l'arbre de décision Figma</u> [] = 2 (1h)</p>
+<ul>
+<li>Créer les arbres pour II.1.B [] = 2 (1h)</li>
+</ul>
+</li>
+<li>
+<p><u>Coder la deuxième moitié des parties communes I.</u> [] = 3 (3h)</p>
+<ul>
+<li>Implémenter I. [] = 5 (2h)
+<ul>
+<li>Chapitre 3 []</li>
+<li>Chapitre 4 []</li>
+<li>Chapitre 5 []</li>
+</ul>
+</li>
+<li>Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)</li>
+</ul>
+</li>
+<li>
+<p><u>Route A</u> [] = 2 (1h)</p>
+<ul>
+<li>Fin A [] = 1 (45 min)</li>
+<li>Mettre les fonds/transitions fin A [] = 1 (15 min)</li>
+</ul>
+</li>
+<li>
+<p><u>Début II.</u> [] = 1 (1h)</p>
+<ul>
+<li>Chapitre 1 [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Déploiement du jeu</u> = 3 (1h)</p>
+</li>
+</ul>
 <h2>Sprint 2 Review <a id="section-5"></a></h2>
 <h2>Conclusion <a id="section-6"></a></h2>
 <h2>Sources <a id="section-7"></a></h2>
