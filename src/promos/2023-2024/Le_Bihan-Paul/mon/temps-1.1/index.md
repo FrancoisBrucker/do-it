@@ -8,10 +8,10 @@ authors:
 date: 2023-10-18
 
 tags:
-  - "temps 1"
+  - "Temps 1"
   - "VBA"
   - "Excel"
-  - "débutant"
+  - "Débutant"
 
 résumé: "MON traitant du VBA sous Excel."
 ---
