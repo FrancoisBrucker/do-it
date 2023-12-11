@@ -97,7 +97,7 @@ On prendra comme user-stories à faire :
 
 - <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 -> 3 (1h -> 2h)
 
-- <u>Arbre de décision Figma</u> [] = 4
+- <u>Arbre de décision Figma</u> [] = 4 (2h)
 
   - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
   - Créer les arbres de décision pour I.AB [X] = 2 (1h40)
@@ -122,9 +122,84 @@ On prendra comme user-stories à faire :
 
 J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de dialogue et au code en général, sans compter les nombreux bugs que j'ai eus au début pendant la prise en main, et les problèmes d'images.
 
-Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h.
+Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement.
+
+# Quelques images
+
+**Changement de l'interface (GUI) avec à gauche la version basique et à droite la version actuelle**
+:-------------------------:|:-------------------------:
+<img src="welcome_basic.png" width="350" height="350"> | <img src="welcome_aimer.png" width="350" height="350">
+<img src="menu_basic_save.png" width="350" height="350"> | <img src="menu_aimer_save.png" width="350" height="350">
+<img src="menu_basic_preferences.png" width="350" height="350"> | <img src="menu_aimer_preferences.png" width="350" height="350">
+
+**Une image du jeu et le code associé**
+<img src="image1.png">
+
+```
+define j = Character('Jeanne', color="#006416") #Définition du personnage
+
+label start:  #début du jeu
+
+  scene bg bus_stop_night     #appelle l'arrière-plan
+
+  show jeanne cold smile at left       #appelle l'image associée
+  show lise turtleblacksmile at right
+
+  j "Jeanne. Same as you."        #dialogue
+
+return      #fin du jeu
+```
+
+**Situation de choix et code associé**
+<img src="choix1.png">
+
+```
+menu:     #crée le menu de choix
+
+        "Prout.":
+            jump suite1_1_1    #envoie vers suite1_1_1
+
+        "Wanna be friends?":
+            jump suite1_1_2
+
+    label suite1_1_1:
+
+        j "Wanna be friends?"
+
+        jump suite1_1_2
+
+    label suite1_1_2:
+
+        j "Like friends?"
+```
 
 ## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a>
+
+**Backlog Sprint 2**
+On prendra comme user-stories à faire :
+
+- <u>Le reste de l'arbre de décision Figma</u> [] = 2 (1h)
+
+  - Créer les arbres pour II.1.B [] = 2 (1h)
+
+- <u>Coder la deuxième moitié des parties communes I.</u> [] = 3 (3h)
+
+  - Implémenter I. [] = 5 (2h)
+    - Chapitre 3 []
+    - Chapitre 4 []
+    - Chapitre 5 []
+  - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)
+
+- <u>Route A</u> [] = 2 (1h)
+
+  - Fin A [] = 1 (45 min)
+  - Mettre les fonds/transitions fin A [] = 1 (15 min)
+
+- <u>Début II.</u> [] = 1 (1h)
+
+  - Chapitre 1 [] = 1
+
+- <u>Déploiement du jeu</u> = 3 (1h)
 
 ## Sprint 2 Review <a id="section-5"></a>
 
