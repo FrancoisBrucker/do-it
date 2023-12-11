@@ -126,20 +126,20 @@
 
 
 <h2>Objectifs</h2>
-<p>Ce premier MON du temps 2 a pour objectif de m'initiner à la partie back d'un site Web pour m'aider dans la réalisation des sites web de mon POK et du projet 3A.</p>
-<p>Pour cela je vais suivre les cours de monsieur Brucker sur son site internet.</p>
-<h2>I. Initiation à JavaScript</h2>
-<p>Pour bien utiliser Node.js je dois me mettre à niveau en JavaScript. Grâce au projet 3A et aux cours d'info de Do-It j'ai pu expérimenté quelques fois ce langage mais j'ai encore beaucoup trop de lacunes et trop peu de connaissances. Je vais donc tout d'abord revoir les bases de ce langage pour mieux comprendre Node.js et tout le back.</p>
+<p>Ce premier MON du temps 2 a pour objectif de m'initinier à la partie back d'un site Web pour m'aider dans la réalisation des sites web de mon POK et du projet 3A.</p>
+<p>Pour cela je vais suivre les cours de monsieur Brucker sur son site internet ainsi que les  sources qu'il recommande.</p>
+<h2>I. Initiation théorique à JavaScript</h2>
+<p>Pour bien utiliser Node.js je dois me mettre à niveau en JavaScript. Grâce au projet 3A et aux cours d'info de Do_It j'ai pu expérimenter quelques fois ce langage mais j'ai encore beaucoup trop de lacunes et trop peu de connaissances. Je vais donc tout d'abord revoir les bases de ce langage pour mieux appréhender Node.js et toute la partie back.</p>
 <p>JavaScript peut être utilisé en <em>front</em> et en <em>back</em> :</p>
 <ul>
-<li><em>front</em> : c'est le côté <strong>client</strong>, JS permet de rendre la page plus dynamique et de permettre à ce dernière d'intéragir plus profondément avec le site</li>
+<li><em>front</em> : c'est le côté <strong>client</strong>, JS permet de rendre la page plus dynamique et de permettre à ce dernier d'interagir plus profondément avec le site</li>
 <li><em>back</em> : c'est le côté <strong>serveur</strong>, JS permet de travailler avec des environnements comme Node.js afin de gérer tout ce qui est base de données par exemple.</li>
 </ul>
-<p>Tout comme Python, JS est un langage interprété et le code va donc s'éxecuter de haut en bas en renvoyant le résultat immédiatement. Contrairement par exemple au C et au C++ qui sont compilés en langage assembleur pour  ensuite être exécuté par l'ordinateur.</p>
+<p>Tout comme Python, JS est un langage interprété et le code va donc s'exécuter de haut en bas en renvoyant le résultat immédiatement. Contrairement par exemple au C et au C++ qui sont compilés en langage assembleur pour ensuite être exécuté par l'ordinateur.</p>
 <p>Le script JS se lie avec le code HTML grâce à cette ligne de code :</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>script.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
-<p>Le fonctionnement et la syntaxe de JS sont globalement assez sembables à Python et c'est donc assez facile de prendre en main ces aspects du langage. On y retrouve de multiples similitudes :</p>
+<p>Le fonctionnement et la syntaxe de JS sont globalement assez semblables à Python et c'est donc assez facile de prendre en main ces aspects du langage. On y retrouve de multiples similitudes :</p>
 <ul>
 <li>l'utilisation de variables</li>
 </ul>
@@ -189,12 +189,92 @@ my variable <span class="token operator">=</span> <span class="token number">14<
 
 <span class="token keyword">let</span> listeInputRadio <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">".zoneChoix input"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer tous les inputs du groupe parent zoneChoix</span>
 </code></pre>
-<p>Afin d'avoir une page plus dynamique il faut programmer de <strong>manière événementielle</strong>. Les événements peuvent être : un clic de la souris, une frappe d'une clavier, un bouton coché, ...<br>
+<p>Afin d'avoir une page plus dynamique il faut programmer de <strong>manière événementielle</strong>. Les événements peuvent être : un clic de la souris, une frappe d'un clavier, un bouton coché, ...<br>
 Ces derniers sont écoutés grâce à <em>addEventListener</em> puis utilisés à l'aide d'une fonction <em>=&gt;</em></p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">monBouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Vous avez cliqué sur le bouton"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h2>II. La pratique</h2>
+<p>Afin de mettre en pratique ces différents aspects principaux du code, j'ai suivi l'exercice d'un cours OpenClassRoom pour mettre en place une application en ligne pour apprendre à taper des mots plus vite.</p>
+<p><img src="images/appli1.png" alt="Appli"></p>
+<p>Le cours proposait cette mise en page avec les codes HTML/CSS correspondant. J'ai décidé de le recréer moi-même afin de pratiquer ces langages et de m'améliorer.</p>
+<p>Les objectifs principaux du script JS étaient de :</p>
+<ul>
+<li>vérifier que le mot écrit est le bon et de faire augmenter le score</li>
+<li>faire fonctionner le bouton &quot;Valider&quot; pour changer de mot proposé et effacer la zone d'input</li>
+<li>changer entre une phrase et un mot proposé grâce aux boutons radio</li>
+<li>afficher un popup pour partager notre score</li>
+</ul>
+<p>Début de la fonction pour lancer le jeu :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">lancerJeu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">initAddEventListenerPopup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> score <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">let</span> listeProposition <span class="token operator">=</span> listeMots
+
+  <span class="token keyword">let</span> btnValiderMot <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"btnValiderMot"</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> inputEcriture <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"inputEcriture"</span><span class="token punctuation">)</span>
+
+  <span class="token function">afficherProposition</span><span class="token punctuation">(</span>listeProposition<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Gestion de l'événement click sur le bouton "valider"</span>
+  btnValiderMot<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>inputEcriture<span class="token punctuation">.</span>value <span class="token operator">===</span> listeProposition<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          score<span class="token operator">++</span>
+      <span class="token punctuation">}</span>
+      i<span class="token operator">++</span>
+      <span class="token function">afficherResultat</span><span class="token punctuation">(</span>score<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+      inputEcriture<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">''</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>listeProposition<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">afficherProposition</span><span class="token punctuation">(</span><span class="token string">"Le jeu est fini"</span><span class="token punctuation">)</span>
+          btnValiderMot<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">afficherProposition</span><span class="token punctuation">(</span>listeProposition<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>En plus de cela j'ai effectué des exercices en ligne pour continuer d'améliorer mes réflexes en JS et apprendre plus de fonctionnalités. Les sites utilisés sont dans les sources après la conclusion.</p>
+<h2>III. Quelques principes importants pour le back</h2>
+<h3>Le JSON</h3>
+<p>Pour la manipulation de données et l'échange entre un serveur et un site web le <strong>JSON</strong> est le format le plus fréquemment utilisé. Il permet de représenter textuellement des objets, des tableaux ou encore des scalaires JS.</p>
+<p>Les données en format texte sous JSON sont dites <strong>sérialisées</strong>. La fonction <code>JSON.stringify()</code> permet de sérialiser une donnée en chaine de caractère.</p>
+<h3>Le DOM</h3>
+<p>Les éléments HTML qui peuvent être récupérés par les méthodes vues précédemment représentent le <strong>DOM</strong> <em>(Document Object Model)</em>. L'arbre DOM est composé de <strong>noeuds</strong> reliés entre eux par des <strong>branches</strong>. Ce schéma provenant du cours sur OpenClassRoom résumer relativement bien la structure DOM :</p>
+<p><img src="images/ArbreDOM.png" alt="DOM"></p>
+<p><em>image venant de : <a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205925-recuperez-un-element-d-une-page-web">https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205925-recuperez-un-element-d-une-page-web</a></em></p>
+<h3>Les API</h3>
+<p>Les API <em>(Application Programming Interface)</em> sont des interfaces qui permettent de <strong>récupérer</strong> et <strong>d'échanger</strong> des données entre deux applications.</p>
+<h3>Le JavaScript asynchrone</h3>
+<p>Des fonctions longues et coûteuses en ressources de calcul peut totalement bloquer l'exécution du reste du site. Pour contrer cela la programmation asynchrone a été développée permettant d'<strong>exécuter du code en parallèle.</strong></p>
+<p>Les <strong>fonctions de rappel</strong> (ou <em>callback</em>) ont initié la mise en place de fonctions asynchrone en JS. Ces dernières représentent simplement <em>l'imbrication de fonctions</em>, c'est à dire quand une fonction est en argument d'une autre. Cette méthode rend cependant le code difficile à lire et facilement compréhensible.</p>
+<p>Les API asynchrones se basent donc désormais sur le système de <em><strong>promesse</strong></em> .</p>
+<p>Une <strong>promesse</strong> représente l'état de l'opération d'une fonction asynchrone. Il existe trois états différents :</p>
+<ul>
+<li><em>pending</em> : la fonction a été initiée mais pas encore terminée : la promesse est <strong>en cours</strong></li>
+<li><em>fulfilled</em> : la fonction a été terminée et s'est bien exécutée : la promesse est donc <strong>validée</strong></li>
+<li><em>rejected</em> : contrairement à <em>fulfilled</em>, cette fois-ci la fonction a échouée : la promesse est <strong>rompue</strong>.</li>
+</ul>
+<h3>L'API <code>fetch()</code></h3>
+<p>La fonction <code>fetch()</code> permet d'envoyer des <strong>requêtes HTTP</strong> et de <strong>récupérer des données</strong> sous forme d'une promesse. Elle prend comme argument un URL des ressources à récupérer et renvoie une promesse avec la réponse.</p>
+<h3>Les réponses d'une promesse</h3>
+<p>Une fois une promesse faite il faut pouvoir l'interpréter. Pour cela on utilise deux méthodes : <code>then()</code> et <code>catch()</code>.</p>
+<p>La première permet de traiter les <strong>promesses validées</strong> tandis que la seconde est utilisées pour les <strong>promesses rompues</strong>.</p>
+<h2>Conclusion</h2>
+<p>Ce MON était initialement prévu pour faire du Node.js et du Express mais je me suis vite rendu compte que j'avais trop de lacunes sur de nombreux points majeurs de dev web et notamment en JavaScript. Je suis désormais bien plus à l'aise avec ce langage et avec les points précédemment présentés. Je n'ai pas pu énormément pratiquer ces derniers mais je compte le faire au début de mon prochain MON.</p>
+<h3>Sources</h3>
+<p><em>La théorie :</em></p>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">https://developer.mozilla.org/fr/docs/Web/JavaScript</a></li>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/javascript-bases/">https://francoisbrucker.github.io/cours_informatique/cours/web/javascript-bases/</a></li>
+<li><a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript">https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript</a></li>
+<li><a href="https://www.oracle.com/fr/database/what-is-json/#:~:text=Le%20JavaScript%20Object%20Notation%20">https://www.oracle.com/fr/database/what-is-json/#:~:text=Le JavaScript Object Notation </a></li>
+</ul>
+<p><em>Les exercices pratiqués pour le JS :</em></p>
+<ul>
+<li><a href="https://www.gchagnon.fr/cours/dhtml/exercices.html#t2">https://www.gchagnon.fr/cours/dhtml/exercices.html#t2</a></li>
+<li><a href="https://aymeric-auberton.fr/academie/js/exercices">https://aymeric-auberton.fr/academie/js/exercices</a></li>
+</ul>
 
 
 </article>
