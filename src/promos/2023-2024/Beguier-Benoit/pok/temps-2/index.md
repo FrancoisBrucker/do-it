@@ -116,7 +116,7 @@ Rien de très intéressant à ajouter dans cette partie, si ce n'est que je vais
 Voici le résultat pour la page d'accueil :
 ![Accueil](AccueilHtml.png)
 
-{% details "Cliquez pour afficher le **code HTML** de la page d'accueil%}
+{% details "Cliquez pour afficher le **code HTML** de la page d'accueil" %}
 
 ```html
 <!DOCTYPE html>
@@ -177,7 +177,7 @@ Voici le résultat pour la page d'accueil :
 
 {% enddetails %}
 
-{% details "Cliquez pour afficher le **code CSS** de la page d'accueil%}
+{% details "Cliquez pour afficher le **code CSS** de la page d'accueil" %}
 
 ```css
 body {
