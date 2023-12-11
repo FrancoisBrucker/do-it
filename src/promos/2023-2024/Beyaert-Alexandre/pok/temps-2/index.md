@@ -13,25 +13,41 @@ tags:
 résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie Pathologique. En particulier, le risque de récidive d'une tumeur.
 ---
 
-## Risque de récidive du carcinome basocellulaire estimé par l’intégration de multiples jeux de données (images histologiques, compte-rendus, etc…)
+{% prerequis %}
+**Niveau :** Avancé
+**Prérequis :** [à définir]
+{% endprerequis %}
 
+## Sommaire
 
-### Informations générales
+1. Introduction
+2. Description du projet
+3. Sprint 1 : analyse préliminaire des données
+(Il sera dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)
+4. Sprint 2 : algorithmes de Machine Learning
+(Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
+5. Conclusion
+6. Bibliographie
 
-Titre 	Evaluation du risque d’agressivité des carcinomes basocellulaires à partir de multiples jeux de données
-Champ médical	Cancérologie Diagnostic Anatomie Pathologique
-Entité de rattachement (unité de recherche, services etc…)	Service d’Anatomie Pathologiques, Timone, APHM
-UMR911, MMG, AMU
-Mots-clefs (2-3 mots clefs) santé/science	Basal cell carcinoma – prognosis
+## 1. Introduction
 
-### Description du projet
+Le but de ce projet est d'apporter des solutions informatiques d'analyse de données au service de l'anatomie pathologique. En particulier, concernant le risque de récidive du carcinome basocellulaire.
 
-Contexte et problématique du projet 
-Rapide présentation du cadre dans lequel ce sujet s’inscrit, contexte de soin, de recherche…
+Les médecins perdent un temps précieux dans l'analyse de lames afin d'évaluer l'envergure du carcinome basocellulaire. Le Machine Learning doit pouvoir aider à trier ces différentes lames pour ne demander aux médecins qu'une analyse approfondie.
+
+## 2. Description du projet
+
+### 2.1 Informations générales
+
+**Titre :** Évaluation du risque d’agressivité des carcinomes basocellulaires à partir de multiples jeux de données
+**Champ médical	:** Cancérologie Diagnostic Anatomie Pathologique
+**Entité de rattachement :**	Service d’Anatomie Pathologiques, Timone, APHM, UMR911, MMG, AMU
+
+### 2.2 Description du projet
 
 L'Anatomie Pathologique (anapath) est une spécialité médicale portant le diagnostic des maladies sur le plan microscopique, c’est-à-dire sur l'interprétation d’images des tissus et cellules, et notamment de toute la pathologie tumorale et du cancer.
 
-Le développement des techniques de numérisation offre de nouvelles perspectives pour cette spécialité qui pourra bientôt se passer de microscopes optiques au profit d’écran haute résolution. Dans ce contexte de numérisation totale, l'analyse d'images et certains pipeline de machine-learning offrent des perspectives de développement d’outils pratiques et/ou puissants d’aide au diagnostic: outre l’accélération de la vitesse pour rendre un diagnostic en routine aidé par l’informatique, la genèse de données normalisées et reproductibles de santé par l’intermédiaire de ces outils est un enjeu de compétitivité majeure pour la recherche et le développement en cancérologie dans les 5 prochaines années. Les tissus offrent de très nombreuses couches d’information actuellement peu exploitables. 
+Le développement des techniques de numérisation offre de nouvelles perspectives pour cette spécialité qui pourra bientôt se passer de microscopes optiques au profit d’écran haute résolution. Dans ce contexte de numérisation totale, l'analyse d'images et certains pipeline de machine-learning offrent des perspectives de développement d’outils pratiques et/ou puissants d’aide au diagnostic : outre l’accélération de la vitesse pour rendre un diagnostic en routine aidé par l’informatique, la genèse de données normalisées et reproductibles de santé par l’intermédiaire de ces outils est un enjeu de compétitivité majeure pour la recherche et le développement en cancérologie dans les 5 prochaines années. Les tissus offrent de très nombreuses couches d’information actuellement peu exploitables. 
 
 Les images microscopiques sont multimodales et le pathologiste peut s’aider de techniques pour visualiser différentes modalités d’information biologique, superposées sur une même coupe tissulaire, comme l’expression de protéines spécifiques qui jouent alors un rôle de filtre pour masquer ou au contraire révéler des cellules tumorales, les vaisseaux ou encore l’inflammation : l’immunohistochimie. Grace à ces images, et après intégration aux données cliniques, le pathologiste est à même de proposer des éléments pour la décision médicale. 
 
@@ -41,37 +57,57 @@ La thématique de l’aide au diagnostic et de l’automatisation du diagnostic 
 
 Aucun de ces projets ne se focalisent sur les données existantes (compte-rendus) ni sur l’intégration de multiples jeux de données (clinique, histologique) avec l’analyse d’image pour répondre à des questions cliniques précises. Dans le carcinome basocellulaire, la question clinique à se poser est : la tumeur va-t-elle récidiver ? Ce qui conditionne la surveillance et des traitements complémentaires.
 
-Le but de ce projet est de créer un outil répondant le plus précisément à cette question du risque de récidive en se basant sur le plus de données disponibles et fiables possible.
+**Le but de ce projet est de créer un outil répondant le plus précisément à cette question du risque de récidive en se basant sur le plus de données disponibles et fiables possible.**
 
 Ce projet s’articule en parallèle, pour la partie compte-rendus, avec un autre projet déposé portant sur l’extraction automatisée de données de compte-rendus d’anatomie pathologique : il sert de validation théorique en vie réelle, sur une question clinique donnée.
 
+Données : fichiers images, lames de microscopes numérisées, format .ndpi – anonymisées.
 
-### Missions et attendue souhaité 
-Détailler ce que vous souhaiteriez produire, dans l’idéal, à la fin de la période de projet (logiciel, prototype, traitement de donnée, étude de faisabilité, preuves de concepts etc…)
+### 2.3 Missions et attendus souhaités
+
+Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.
+
+## 3. Sprint 1 : analyse préliminaire des données
+
+### 3.1 Visualisation d'images
+
+Pour commencer, regardons quelques images dont nous disposons.
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+# Liste des chemins d'accès aux images
+image_paths = ['C:\\TER\\visu1.png', 'C:\\TER\\visu3.png', 'C:\\TER\\visu2.png', 'C:\\TER\\visu4.png']
+
+# Créer une figure avec 2x2 sous-graphiques
+plt.figure(figsize=(8, 8))
+
+# Boucle pour afficher chaque image dans un sous-graphique
+for i, image_path in enumerate(image_paths, 1):
+    
+    img = mpimg.imread(image_path)
+    plt.subplot(2, 2, i)
+    plt.imshow(img)
+    plt.axis('off')
+
+# Ajuster l'espacement entre les sous-graphiques
+plt.tight_layout()
+
+plt.show()
+```
 
 
-- 1. Etude de faisabilité préalable :
-Production de données à partir des lames de microscopes virtuelles (analyse d’image),
-Extraction (Parsing) de données à partir des compte-rendus PDF et/ou DOCX,
-Extraction de données à partir de la database du laboratoire (SGL/Access).
 
-- 2. Production d’une base de données : training set
-à partir de l’analyses d’images, du compte-rendu, des données de la base du service, des données cliniques, création d’une base de données concernant toutes les variables disponibles pour chaque patient atteinte de carcinome basocellulaire.
+Il est dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)
 
-- 3. Corrélation à la question clinique : le cancer a-t-il récidivé ?
-Entrainement sur un training-set annoté à des données cliniques de suivi (récidive ou non ?) pour proposer une estimation du risque de récidive afin d’aider le clinicien dans sa démarche décisionnelle afin d’indiquer un traitement complémentaire (tumeur à haut-risque) ou non (tumeur à bas-risque).
+### 3.1 test de pré-traitement sur les fichiers .ndpi
+### 3.2 Conversion des fichiers .ndpi au format .jpg
+https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html
 
-- 4. Validation des algorithmes sur cohorte indépendante, en condition vie réelle
+### 3.3 pré-traitement 
+## 4. Sprint 2 : algorithmes de Machine Learning
+(Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
 
-- 5. Valorisation : publication scientifique (proof of concept ?) et/ou partenariat industriel 
-
-
-### Données  
-Le cas échéant détailler les données qui vont être utilisées dans le cadre du projet, leurs formats, leurs nombres, les modalités d’accès à ces données et les contraintes réglementaires d’accès…. 
-
-
--	Fichiers images : lames de microscopes numérisées, format .ndpi – anonymisées.
--	Fichiers textes : compte-rendus au format DOCX ou PDF – anonymisés. 
--	Fichiers tabulés : métadonnées extraites du système de gestion du laboratoire.
-
-Le nombre de carcinomes basocellulaires analysables par an est environ 500 cas, ce qui représente 1500 à 2000 images de microscope par an. Des données concernant leur suivi sont déjà disponibles pour certaines années, en raison de travaux ultérieurs.
+## 5. Conclusion
+## 6. Bibliographie

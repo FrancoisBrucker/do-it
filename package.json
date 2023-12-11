@@ -32,6 +32,7 @@
     "tailwindcss": "^3.1.6"
   },
   "dependencies": {
-    "maximatch": "^0.1.0"
+    "maximatch": "^0.1.0",
+    "mongodb": "^6.3.0"
   }
 }
