@@ -8,8 +8,7 @@ authors:
 date: 2023-09-18
 
 tags: 
-  - "temps 1"
-  - "pok"
+  - "Temps 1"
   - "HTML"
   - "CSS"
 
