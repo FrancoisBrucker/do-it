@@ -550,7 +550,7 @@ pd.plotting.scatter_matrix(df)
 En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
 NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.
 
-Ensemble, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.
+**Ensemble**, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est **très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.**
 
 ## 6. Bibliographie
 
