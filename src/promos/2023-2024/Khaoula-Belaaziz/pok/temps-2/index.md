@@ -14,6 +14,18 @@ tags:
 
 résumé: Comment faire une étude photométrique en utilisant DIALux ?
 ---
+## Roadmap : 
+{%faire "**Sprint 1**"%}
+- Documentation (Revoir les bases de Dialux) ***5h***
+- Les normes européennes de l'éclairage ***1h***
+
+{% endfaire %}
+{%faire "**Sprint 2**"%}
+- Faire l'étude d'un projet réel de l'entreprise ***3h***
+- Point avec M.Magnani ***2h***
+- Analyse du besoin ***?h***
+- Formation ***3h***
+{% endfaire %}
 
 # Introduction à DIALux pour l'Éclairage Public
 
@@ -23,6 +35,5 @@ DIALux est un logiciel avancé et gratuit pour la planification, le calcul et la
 ## Pourquoi utiliser DIALux pour l'éclairage public?
 L'éclairage public nécessite une attention particulière à la sécurité, à l'efficacité énergétique et à l'impact environnemental. DIALux offre des outils précis pour modéliser ces exigences et visualiser l'impact d'un projet d'éclairage avant sa mise en œuvre.
 
-## Installation de DIALux
-## Interface Utilisateur de DIALux
-## Création d'un Projet d'Éclairage Public
+## Bilan du sprint 1
+
