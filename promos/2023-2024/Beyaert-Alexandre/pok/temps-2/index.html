@@ -165,7 +165,49 @@
 <h3>2.3 Missions et attendus souhaités</h3>
 <p>Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.</p>
 <h2>3. Sprint 1 : analyse préliminaire des données</h2>
-<h3>3.1 Visualisation d'images</h3>
+<h3>3.1 Conversion automatisée des images du format ..ndpi au format .jpg</h3>
+<p>Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi &quot;NanoZoomer Digital Pathology Image&quot; et sont de très hautes résolutions.</p>
+<p>L'échantillon dont je dispose propose des images allant de 100Mo à 1Go.</p>
+<p>Il est possible de les lire en utilisant le NDPI Viewer &quot;NDP.wiew2&quot; développé par le fabricant japonais d'instruments scientifiques Hamamatsu Photonics K.K..<br>
+Ce logiciel est téléchargeable gratuitement sur <a href="https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html">le site d'Hamamatsu</a></p>
+<p>Voici son interface :</p>
+<p><img src="NDP_view2.jpg" alt="NDP Viewer2"></p>
+<p>Afin de pouvoir utiliser ces images dans un algorithme de machine learning, il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.</p>
+<p>Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.</p>
+<p>La première problématique de ce POK consiste alors à automatiser une conversion des images au format .ndpi vers .jpg afin de les lire plus facilement dans un algorithme python en réduisant notamment leur taille.</p>
+<h4>Tentative d'automatisation avec NDPview2</h4>
+<p>Ayant téléchargé NDPview2, ma première idée consiste alors à créer un algorithme Python convertissant les différents fichiers en faisant appel à ce NDP viewer.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> subprocess
+
+<span class="token comment"># Chemins des dossiers</span>
+input_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-NDPI'</span>
+viewer_path <span class="token operator">=</span> <span class="token string">'C:\\Program Files\\Hamamatsu\\NDP.view 2\\NDPView2.exe'</span>
+output_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-JPG'</span>
+
+<span class="token comment"># Chemin du fichier test</span>
+test_file <span class="token operator">=</span> <span class="token string">'test.ndpi'</span>
+test_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>input_folder<span class="token punctuation">,</span> test_file<span class="token punctuation">)</span>
+
+<span class="token comment"># Génération du chemin de sortie avec le même nom de fichier mais en extension .jpg</span>
+output_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>output_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>test_file<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.jpg'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Commande pour appeler le viewer NDPI et effectuer la conversion</span>
+command <span class="token operator">=</span> <span class="token punctuation">[</span>viewer_path<span class="token punctuation">,</span> <span class="token string">'-i'</span><span class="token punctuation">,</span> test_file_path<span class="token punctuation">,</span> <span class="token string">'-o'</span><span class="token punctuation">,</span> output_file_path<span class="token punctuation">]</span>
+
+<span class="token comment"># Exécuter la commande en utilisant subprocess.Popen</span>
+process <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>command<span class="token punctuation">,</span> stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">)</span>
+output<span class="token punctuation">,</span> error <span class="token operator">=</span> process<span class="token punctuation">.</span>communicate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Afficher la sortie et les erreurs</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sortie:"</span><span class="token punctuation">,</span> output<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreurs:"</span><span class="token punctuation">,</span> error<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Conversion pour le fichier de test terminée."</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Hélas le programme se contente de lancer le viewer sans effectuer la conversion. Il semblerait donc que le viewer ne puisse servir de façon automatisée mais nécessite des actions manuelles pour effectuer la conversion.</p>
+<h4>Tentative d'automatisation avec OpenSlide</h4>
+<h3>3.2 Visualisation d'images</h3>
 <p>Pour commencer, regardons quelques images dont nous disposons.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>image <span class="token keyword">as</span> mpimg
@@ -189,7 +231,13 @@ plt<span class="token punctuation">.</span>tight_layout<span class="token punctu
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Il est dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)</p>
+<p><img src="Visualisation.jpg" alt="Exemples d'images"></p>
+<p>Ces différentes images sont à l'heure actuelle peu exploitables.<br>
+On y remarque beaucoup de bruit, des tâches qui pourraient tromper l'algorithme quant à la détection du carcinome...</p>
+<p><img src="Visualisation_annotee.jpg" alt="Annotations"><br>
+En noir, la zone où se trouve le carcinome.<br>
+En rouge, du bruit pour l'algorithme</p>
+<p>Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation &quot;zone cancéreuse vs zone non cancéreuse&quot;.</p>
 <h3>3.1 test de pré-traitement sur les fichiers .ndpi</h3>
 <h3>3.2 Conversion des fichiers .ndpi au format .jpg</h3>
 <p><a href="https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html">https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html</a></p>
