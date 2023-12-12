@@ -52,6 +52,7 @@ En naviguant dans le dossier du projet et en l'ouvrant dans l'éditeur de code,o
 Dans App.js, on commence par importer les composants nécessaires de React Native :
 
 ```js
+// Importer les composants nécessaires de React et React Native
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList } from 'react-native';
 
@@ -62,35 +63,40 @@ Ensuite, on crée un composant fonctionnel **App** :
 {# On met le code dans un bloc {% raw %} ... {% endraw %} pour que Nunjucks n'interprète pas les {{}} de React Native. #}
 {% raw %}
 ```js
+// Créer le composant principal App
 const App = () => {
-  const [tache, setTache] = useState('');
-  const [listeDeTaches, setListeDeTaches] = useState([]);
+  // Utiliser le Hook d'état pour gérer les tâches et la liste des tâches
+  const [tache, setTache] = useState(''); // Pour la tâche actuellement saisie
+  const [listeDeTaches, setListeDeTaches] = useState([]); // Pour toutes les tâches ajoutées
 
+  // Fonction pour ajouter une nouvelle tâche à la liste
   const ajouterTache = () => {
-    setListeDeTaches([...listeDeTaches, tache]);
-    setTache('');
+    setListeDeTaches([...listeDeTaches, tache]); // Ajouter la tâche actuelle à la liste
+    setTache(''); // Réinitialiser le champ de saisie de la tâche
   };
 
+  // Rendu de l'interface utilisateur de l'application
   return (
     <View style={{ padding: 20 }}>
       <Text>Liste de Tâches</Text>
       <TextInput
-        placeholder="Ajoutez une tâche..."
-        value={tache}
-        onChangeText={setTache}
-        style={{ borderWidth: 1, borderColor: 'black', marginBottom: 10 }}
+        placeholder="Ajoutez une tâche..." // Placeholder pour le champ de saisie
+        value={tache} // Valeur actuelle de la tâche
+        onChangeText={setTache} // Mise à jour de la valeur à chaque modification du texte
+        style={{ borderWidth: 1, borderColor: 'black', marginBottom: 10 }} // Style du champ de saisie
       />
-      <Button title="Ajouter" onPress={ajouterTache} />
+      <Button title="Ajouter" onPress={ajouterTache} /> {/* Bouton pour ajouter une tâche */}
       <FlatList
-        data={listeDeTaches}
-        renderItem={({ item }) => <Text>{item}</Text>}
-        keyExtractor={(item, index) => index.toString()}
+        data={listeDeTaches} // Données pour la liste des tâches
+        renderItem={({ item }) => <Text>{item}</Text>} // Comment afficher chaque tâche
+        keyExtractor={(item, index) => index.toString()} // Clé unique pour chaque élément de la liste
       />
     </View>
   );
 };
 
-export default App;
+export default App; // Exporter le composant pour utilisation dans l'application
+
 ```
 {% endraw %}
 Dans ce code, on a:
@@ -106,6 +112,9 @@ Pour exécuter l'application, dans le terminal, on navigue vers le dossier de vo
 npx react-native run-android
 
 ```
+## Exemples d'application :
+Projet 3A : KILLER
+
 ## Bibliographie 
 
 -	Build and Deploy a React Native App **Temps estimé = 2H** : (https://youtu.be/mJ3bGvy0WAY?si=E2pUqappCHahguCX)
