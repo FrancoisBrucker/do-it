@@ -126,5 +126,5 @@ Dans cette partie vous retrouverez les différentes ressources utilisés pour co
 
 - [Dépôt Github](https://github.com/schultzmathis/mon-cv)
 - [Lien vers mon CV](https://schultzmathis.github.io/mon-cv/)
-- [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/index.md)
+- [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/)
 - [Lien du Github d'Agathe](https://github.com/arabachou/CVInteractif)
