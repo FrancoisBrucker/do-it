@@ -133,16 +133,77 @@ Je vais particulièrement m'intéresser au développement web ici.</p>
 <p>Voici les taches que j'identifie pour réaliser ce jeu :</p>
 <ul>
 <li>[ ] Savoir lire dans un fichier le prochain mot</li>
-<li>[ ] Savoir lire les entrées de l'utilisateur</li>
-<li>[ ] Apprendre à organiser le code correctement</li>
+<li>[X] Savoir lire les entrées de l'utilisateur</li>
+<li>[X] Apprendre à organiser le code correctement</li>
 </ul>
-<h2>Notes</h2>
+<h3>Méthode</h3>
+<p>J'ai commencé par relire les MON des élèves ayant travaillé sur le langage avant moi (Vladimir et Savinien, voir dans la partie Source). Je me suis ensuite directement rendu sur le site officiel du langage (lien dans les Sources). J'ai ensuite suivi les étapes de découvertes du C# et fait un premier Hello World.</p>
+<h3>Ce que j'ai fait</h3>
+<p>Pour mieux assimiler les principes du langages et pratiquer, j'ai décidé de réaliser un pendu en C#. Mon objectif final et d'avoir un petit site web avec un back en C# depuis lequel on peut jouer au pendu.</p>
+<p>Pour commencer, j'ai développé un pendu auquel on peut jouer depuis la console. Pour le faire proprement, j'ai voulu bien séparer mon code. Pour se faire, j'ai fait les choix suivant :</p>
+<ul>
+<li>Avoir une classe Pendu, qui s'occupe simplement de gérer le jeu. Cette classe sera responsable du bon déroulement du jeu (lancement du jeu, vérification des propositions de l'utilisateur, cloture du jeu si victoire ou défaite)</li>
+<li>Avoir quelque chose pour sélectionner le mot à trouver. Je dis &quot;quelque chose&quot; car je voudrais me laisser la possibilité de changer la méthode de sélection de ce mot : le lire dans un fichier, le récupérer sur internet, etc... Afin d'avoir cette liberté d'implémentation, j'ai décidé de créer une interface nommée IWordProvider.</li>
+<li>Avoir un programme qui va utiliser la classe Pendu et communiquer avec le user (nombre d'essais restant, est-ce que le joueur a gagné, etc...).</li>
+</ul>
+<p>J'ai donc séparé toutes les classes relatives au jeu (la class Pendu et l'interface dans leur namespace) pour obtenir l'architecture suivante :</p>
+<pre><code>projet
+└── JeuPendu
+    ├── WordProviders
+    |   └── IWordProvider.cs
+    |   └── OneWordProvider.cs
+    └── Pendu.cs
+ └── Program.cs
+</code></pre>
+<p>Le fichier Program.cs ressemble à ça à la fin du MON :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c">using JeuPendu<span class="token punctuation">;</span>
+using JeuPendu<span class="token punctuation">.</span>WordProviders<span class="token punctuation">;</span>
+
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Jouons au pendu !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Pendu Jeu <span class="token operator">=</span> new <span class="token function">Pendu</span><span class="token punctuation">(</span>new <span class="token function">OneWordProvider</span><span class="token punctuation">(</span><span class="token string">"Pendu"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Jeu<span class="token punctuation">.</span><span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span>KnownLetters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Entre une lettre ou un mot pour commencer."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span><span class="token function">IsGoingOn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string guess <span class="token operator">=</span> Console<span class="token punctuation">.</span><span class="token function">ReadLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span><span class="token operator">?</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span><span class="token function">IsGoodGuess</span><span class="token punctuation">(</span>guess<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bravo !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span>Won<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Et non, essaie autre chose..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">if</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span>Lost<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Il te reste {0} essais"</span><span class="token punctuation">,</span> Jeu<span class="token punctuation">.</span>NbAllowedMistakes <span class="token operator">-</span> Jeu<span class="token punctuation">.</span>Mistakes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span>KnownLetters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"As-tu d'autres propositions ?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span>Jeu<span class="token punctuation">.</span>Won<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bravo ! Le mot est bien {0}, tu as gagné !"</span><span class="token punctuation">,</span> Jeu<span class="token punctuation">.</span>SecretWord<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> 
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Le mot était {0}..."</span><span class="token punctuation">,</span> Jeu<span class="token punctuation">.</span>SecretWord<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Dans ce code, on voit que la constructeur de Pendu prend en parametres un objet de type OneWordProvider. En réalité, la classe Pendu travaille avec un objet de type IWordProvider (mon interface), et OneWordProvider est une classe qui implémente l'interface IWordProvider donc je peux l'utiliser ici. La classe OneWordProvider, comme son nom l'indique, ne va fournir qu'un seul et même mot à chaque fois, en l'occurrence ici le mot &quot;PENDU&quot;.</p>
+<h2>Sources</h2>
 <ul>
 <li>MON Vladimir : vue d'ensemble syntax + POO en C#</li>
 <li>MON Savinien : vue d'ensemble .NET et différentes possibilités + exemple API Web bien détaillé -&gt; manque utilisation du back dans un site à mon goût mais très très clair</li>
-<li><a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/">https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/</a></li>
+<li><a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/">https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/</a> : vue plus détaillée du langages et accès à la documentation</li>
 <li><a href="https://youtu.be/mw254_XAnGU?si=w7nkqOI2DmRyp9Ak">https://youtu.be/mw254_XAnGU?si=w7nkqOI2DmRyp9Ak</a> : clarification utilisation des namespaces</li>
-<li>playlist <a href="http://ASP.NET">ASP.NET</a></li>
+<li><a href="https://youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy&amp;si=fJe1Oh3-JxUdWSva">https://youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy&amp;si=fJe1Oh3-JxUdWSva</a> : playlist <a href="http://ASP.NET">ASP.NET</a> débutant, pour découvrir le web avec C# (date de 4 ans)</li>
 </ul>
 
 
