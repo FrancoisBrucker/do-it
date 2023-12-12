@@ -229,11 +229,19 @@ Pendu Jeu = new Pendu(new WordFromFileProvider("do_it.txt"));
 
 Satisfait de mon petit Pendu, je me suis dit qu'il était temps de découvrir le développement web avec C#. Le MON de Savinien est un très bon début pour avoir une meilleure idée du développement web avec C#. J'ai aussi visionné une playlist de vidéos publiée par dotnet sur le web avec C# (voir Sources).
 
-J'ai commencé tout mon projet sur VSCode mais il semble plus simple d'aborder la suite avec Visual Studio. J'avais déjà le logiciel, j'ai donc ajouté les modules nécessaires au développement C#.
+Il est possible aussi bien de faire des applications Web que des API Web en C# avec ASP.NET. Etant donné que Savinien a fait une introduction aux API Web avec C# (cf Sources). Je vais donc faire une applications Web avec ASP.NET et je vous renvoie vers son MON si ce sont les API qui vous intéressent.
+
+Pour me rapprocher des tutoriels que j'ai vu sur ASP.NET, je vais utilise Visual Studio 2022 dans la suite de mon MON (mais tout reste faisable avec VSCode ou Rider par exemple).
+
+Pour lancer un projet d'application Web sur Visual Studio, il faut cliquer sur Nouveau Projet > Applications Web ASP.NET Core. Une fois que la solution est ouverte dans Visual Studio, on peut lancer le site généré en appuyant sur le bouton "play" vert. On a alors une page de ce type :
+
+<img src="./webAppBase.png" alt="Page par défaut en C#" style="height: 400px"/>
+
+**A suivre dans mon deuxième MON du temps 2**
 
 ## Sources
-- MON Vladimir : vue d'ensemble syntax + POO en C#
-- MON Savinien : vue d'ensemble .NET et différentes possibilités + exemple API Web bien détaillé -> manque utilisation du back dans un site à mon goût mais très très clair
-- https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/ : vue plus détaillée du langages et accès à la documentation
-- https://youtu.be/mw254_XAnGU?si=w7nkqOI2DmRyp9Ak : clarification utilisation des namespaces
-- https://youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy&si=fJe1Oh3-JxUdWSva : playlist ASP.NET débutant, pour découvrir le web avec C# (date de 4 ans)
+- [MON Vladimir](../../../Vladimir-Jeantroux/mon/temps-1-2/) : vue d'ensemble syntax + POO en C#
+- [MON Savinien](../../../../2022-2023/Laeuffer-Savinien/mon/csharp/) : vue d'ensemble .NET et différentes possibilités + exemple API Web bien détaillé
+- [Tour of C#](https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/) : vue plus détaillée du langages et accès à la documentation
+- [Les namespaces](https://youtu.be/mw254_XAnGU?si=w7nkqOI2DmRyp9Ak) : clarification utilisation des namespaces
+- [Playlist ASP.NET Web Application](https://youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy&si=fJe1Oh3-JxUdWSva) : playlist ASP.NET débutant, pour découvrir le web avec C# (date de 4 ans)
