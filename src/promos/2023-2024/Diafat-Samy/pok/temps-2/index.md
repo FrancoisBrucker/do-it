@@ -22,36 +22,47 @@ résumé: " "
 
 ![Api key](flutter.png)
 
-## Table des matières
-
-1. [Objectifs et backlog produit](#section-1)
-2. [Ce que j'ai prévu au 1er sprint](#section-2)
-3. [Ce que j'ai fait au 1er sprint](#section-3)
-4. [Ce que je prévoyais pour le 2ème sprint](#section-4)
-5. [Ce que j'ai fait au 2ème sprint](#section-5)
-6. [Sources](#section-6)
-
 
 ## Objectifs et backlog produit <a id="section-1"></a>
 
 **Les objectifs**
 
-- Installer Flutter et mettre en place un émulateur Android
-- Apprendre le langage Dart à travers le tutoriel Codelabs
-- Réaliser un premier projet simple
-- Débuter un projet plus complexe en utilisant une base de données (via Firebase)
+Je souhaiterais m'initier au développement d'application mobile, et pour ce faire j'ai choisi d'utiliser flutter à travers le langage Dart.
+
+
+
+## BACK LOG
+
+### Sprint 1
+
+|Intitulé|Complexité|Temps estimé|Temps réalisé|
+|---|---|---|---|
+|- Installer Flutter et mettre en place un émulateur Android <br> - M'initier au langage Dart à travers le tutoriel Codelabs <br> - Regarder des tutoriels pour débuter sur Flutter <br> - Rechercher un petit projet sympas à faire sur youtube <br> - Réaliser ce projet sympas <br> | 3 <br> 3 <br> 2 <br> 1 <br> 5 |1h <br> 1h30 <br> 2h <br> 30 mins <br> 1h |2h30 <br> 1h30 <br> 2h <br> 30 mins <br> 2h |
+
+### Sprint 2
+
+|Intitulé|Complexité|Temps estimé|Temps réalisé|
+|---|---|---|---|
+|- Terminer mon petit projet sympas <br> - Commencer un projet un peu plus conséquent (en solo ou rejoindre Monsieur Assane Diouf dans son POK) | 5 <br> 13| 12h |
+
+
+
+
+
+
+
+
+
+
 
 
 
 ## Des ressources
 
-sources image illustration : https://www.appstud.com/fr/flutter-faut-il-y-aller/
+
+Flutter : https://docs.flutter.dev/get-started/install
+Playlist tutoriel Graven :
+Petit projet sympas sur youtube !
 
 
-### Horodateur
-| Date | Heures passées | Indications | 
-| -------- | -------- |-------- |
-|  22/11 | 1h | Installation logiciel, émulateur android, pluging vscode |
-|  25/11 | 1h | Visionnage vidéo tutoriel sur la conception d'une application (Graven)|
-|  05/12 | 1h | Fin visionnage vidéo tutoriel|
-|  07/12 | 1h | Création d'une première application avec Codelabs|
+Illustration Flutter : https://www.appstud.com/fr/flutter-faut-il-y-aller/
