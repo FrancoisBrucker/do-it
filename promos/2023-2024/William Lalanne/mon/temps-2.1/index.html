@@ -178,7 +178,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <ul>
 <li><em><strong>const app = require('./app');</strong></em> on importe l'application Express sur le serveur pour pouvoir l'utiliser</li>
 <li><em><strong>app.set('port', process.env.PORT || 3000);</strong></em> avec cette ligne on précise sur quel port doit être lancé l'application, soit sur le port en cours soit sur le port 3000.</li>
-<li><em><strong>const server = http.createServer(app);</strong></em> commande qui permet de créer le serveur et qui prenc comme argument l'applicatio créé, mais comme notre application ne fait rien pour l'instant, chaque requête faite au serveur renverra une erreur 404.</li>
+<li><em><strong>const server = http.createServer(app);</strong></em> commande qui permet de créer le serveur et qui prenc comme argument l'application créé, mais comme notre application ne fait rien pour l'instant, chaque requête faite au serveur renverra une erreur 404.</li>
 </ul>
 <p>Pour que le serveur réponde quelque chose il faut que l'on ajoute des commandes dans notre application.</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -223,6 +223,14 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>DELETE permet de supprimer des données du serveur.</li>
 </ul>
 <p>Les routes permettent de définir comment l'application doit répondre à une requête HTTP spécifique. Par exemple, si on veut mettre en place un sytème d'authentification sur un site, il y aura une route pour l'inscription, une pour la connexion et une pour la deconnexion.</p>
+<p>Pour faire une requête POST, on s'inspire de ce qu'on a fait pour les middlewares mais au lieu d'utiliser la méthode <em><strong>use</strong></em> on utilise la méthode <em><strong>post</strong></em> :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Objet créé !'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On voit que contrairement à la requête <em><strong>use</strong></em>, ici il y a le chemin <em><strong>'/api/stuff'</strong></em>. Cela permet de préciser comment notre route doit être utilisé. Le préfixe 'api' laisse imaginer que notre requête concerne une api à laquelle on va vouloir ajouter un objet.</p>
 
 
 </article>

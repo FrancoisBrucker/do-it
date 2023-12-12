@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>React Native</title>
+        <title>Apprendre et Maîtriser React Native : Guide pour Débutants</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">React Native</h1>
+<h1 class="mb-1">Apprendre et Maîtriser React Native : Guide pour Débutants</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -103,6 +103,12 @@
     
 </div>
 
+        <p class="mb-4 text-lg">
+
+                Cette page est conçue pour les débutants qui aspirez à maîtriser React Native. Ici, nous allons découvrir ensemble les bases de React Native, accompagnées d'exemples de code simples et de ressources utiles pour démarrer. J'ai choisi d'apprendre React Native pour développer la partie frontend de notre projet 3A "Killer".
+
+        </p>
+
 
 
     
@@ -112,15 +118,88 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/">BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/">MON de BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/temps-2.1/">React Native</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/">BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/">MON de BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/temps-2.1/">Apprendre et Maîtriser React Native : Guide pour Débutants</a>
 
 </div></div>
 
 
 
 
-<h2>React Native</h2>
-<h2>Pourquoi utiliser React Native</h2>
+<h2>Qu'est-ce que React Native ?</h2>
+<p>React Native est un framework de développement d'applications mobiles créé par Facebook. Il permet aux développeurs de construire des applications mobiles en utilisant JavaScript et React, tout en offrant une expérience proche de celle d'une application native. Les principaux avantages de React Native incluent la capacité de réutiliser le code entre les plateformes iOS et Android, une grande communauté de développeurs, et un développement plus rapide.</p>
+<h2>Les Bases de React Native</h2>
+<p>Pour commencer avec React Native, vous aurez besoin d'installer Node.js, Watchman, et l'environnement de développement React Native CLI. Une fois installé, vous pouvez créer votre premier projet en exécutant npx react-native init MonApplication. Un projet React Native typique a une structure de dossiers contenant des fichiers JavaScript pour les composants, ainsi que des dossiers pour les ressources et les tests.</p>
+<h2>Exemples de Code de Base</h2>
+<p>React Native utilise des composants pour construire l'interface utilisateur. Par exemple, un composant simple peut être un bouton ou une vue texte. La navigation entre les écrans se fait à l'aide de bibliothèques comme React Navigation. Les états et les props sont utilisés pour gérer les données et rendre les composants réactifs. Voici un exemple de composant simple :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">MonComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bienvenue dans React Native<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Cliquez ici"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Bouton cliqué!'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MonComposant<span class="token punctuation">;</span>
+</code></pre>
+<h2>Construire une Application Simple</h2>
+<p>Voyons maintenant comment construire une application simple. Je vais créer une application de liste de tâches. Le but est de se familiariser avec la création de composants, l'utilisation de l'état, et la manipulation des données.</p>
+<h3>Création du Projet</h3>
+<p>Ouvrez votre terminal et exécutez la commande suivante pour créer un nouveau projet React Native :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npx react-native init MaListeDeTaches
+
+</code></pre>
+<h3>Structure de Base</h3>
+<p>En naviguant dans le dossier du projet et en l'ouvrant dans l'éditeur de code,on va trouver plusieurs dossiers et fichiers.On va principalement travailler dans le fichier <strong>App.js</strong></p>
+<h3>Développement de l'Interface Utilisateur</h3>
+<p>Dans App.js, on commence par importer les composants nécessaires de React Native :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> TextInput<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> FlatList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p>Ensuite, on crée un composant fonctionnel <strong>App</strong> :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>tache<span class="token punctuation">,</span> setTache<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>listeDeTaches<span class="token punctuation">,</span> setListeDeTaches<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">ajouterTache</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setListeDeTaches</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>listeDeTaches<span class="token punctuation">,</span> tache<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setTache</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">20</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Liste de <span class="token constant">T</span>âches<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>TextInput
+        placeholder<span class="token operator">=</span><span class="token string">"Ajoutez une tâche..."</span>
+        value<span class="token operator">=</span><span class="token punctuation">{</span>tache<span class="token punctuation">}</span>
+        onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>setTache<span class="token punctuation">}</span>
+        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">borderWidth</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">borderColor</span><span class="token operator">:</span> <span class="token string">'black'</span><span class="token punctuation">,</span> <span class="token literal-property property">marginBottom</span><span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Ajouter"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>ajouterTache<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>FlatList
+        data<span class="token operator">=</span><span class="token punctuation">{</span>listeDeTaches<span class="token punctuation">}</span>
+        renderItem<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> item <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>Text<span class="token operator">></span><span class="token punctuation">{</span>item<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span><span class="token punctuation">}</span>
+        keyExtractor<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> index<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<p>Dans ce code, on a:</p>
+<p>Un <em>TextInput</em> pour saisir les tâches.<br>
+Un <em>bouton Ajouter</em> pour ajouter des tâches à la liste.<br>
+Un <em>composant FlatList</em> pour afficher les tâches.</p>
+<h3>Exécution de l'Application</h3>
+<p>Pour exécuter l'application, dans le terminal, on navigue vers le dossier de votre projet et on exécute :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npx react-native run-android
+
+</code></pre>
 <h2>Bibliographie</h2>
 <ul>
 <li>Build and Deploy a React Native App <strong>Temps estimé = 2H</strong> : (<a href="https://youtu.be/mJ3bGvy0WAY?si=E2pUqappCHahguCX">https://youtu.be/mJ3bGvy0WAY?si=E2pUqappCHahguCX</a>)</li>
