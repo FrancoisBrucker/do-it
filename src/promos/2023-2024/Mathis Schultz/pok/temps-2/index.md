@@ -101,12 +101,12 @@ Chaque étape me paraissait simple, effectivement les missions de mise en page, 
 
 **Rendu Intermédiaire**
 
-<img src="accueille.jpeg">
-<img src="competence.joeg">
-<img src="experience.jpeg">  
-<img src="contact.jpeg">
-<img src="formation.jpeg">
-<img src="loisir.jpeg">
+<img src="accueille.png">
+<img src="competence.png">
+<img src="experience.png">  
+<img src="contact.png">
+<img src="formation.png">
+<img src="loisir.png">
 
 <h2 id="h3"> Second sprint </h2>
 
