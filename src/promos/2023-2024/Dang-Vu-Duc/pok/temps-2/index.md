@@ -20,6 +20,10 @@ résumé: "Ce POK a pour objectif d'implémenter un jeu d'échecs sur Python et 
 Connaissance basique de la programmation objet avec Python et des règles du jeu d'échecs.
 {%endprerequis%}
 
+{% note %}
+Tout les codes présentés sont disponibles dans le dossier Git du POK2: [codes du POK2](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-2)
+{% endnote %}
+
 ## Introduction
 
 Le jeu d'échecs est un jeu classique, mais relativement complexe à implémenter. Ce POK utilisera les connaissances acquises lors du premier MON du temps 2, pour implémenter l'interface du jeu. Afin d'éviter tout chevauchement entre le MON et ce POK, cette partie du POK sera réalisée lors du deuxième sprint. Le premier sprint sera dédié à l'implémentation du code pour résoudre des problèmes simples.
@@ -896,10 +900,23 @@ L'algorithme résout ce problème en 12 minutes et 57 secondes: `['Bh5', 'kxh5',
 
 ### Gestion de la promotion des pions
 
-De nombreux problèmes repose sur une règle des échecs, nommée la "promotion". Cette règle stipule qu'un pion a le droit de se transformer en n'importe quelle pièce lorsqu'elle arrive au bout du plateau. Pour implémenter cela dans le code, on crée un attribut *promote* dans la classe **Cell**. Cet attribut est par défaut *None*. Si un pion se trouve sur les rangées d'indice 1 ou 6, on change cet attribue en une pièce (Tour, Dame, FOu ou Cavalier). Ensuite, dans la méthode move, lorsque l'attribut *promote* n'est pas *None*n on avance le pion er on le change en la pièce correspondante.
+De nombreux problèmes repose sur une règle des échecs, nommée la "promotion". Cette règle stipule qu'un pion a le droit de se transformer en n'importe quelle pièce lorsqu'elle arrive au bout du plateau. Pour implémenter cela dans le code, on crée un attribut *promote* dans la classe **Cell**. Cet attribut est par défaut *None*. Si un pion se trouve sur les rangées d'indice 1 ou 6, on change cet attribue en une pièce (Tour, Dame, Fou ou Cavalier). Ensuite, dans la méthode move, lorsque l'attribut *promote* n'est pas *None* on avance le pion et on le change en la pièce correspondante.
 
 Pour tester cette implémentation, on fait tourner l'algorithme sur le problème suivant, qui est un mat en 2 qui nécessite deux promotions (Trait aux noirs):
 
 ![Image4](Image4.png)
 
 La ligne donnée est: `['e1=n+', 'Kh2', 'f1=n#']`, qui est bien la solution. L'algorithme a bien compris qu'il fallait faire deux promotions en cavalier.
+
+## Bilan du premier sprint et prévision du deuxième sprint
+
+J'ai réussi à développer tout les objectifs du backlog présenté plus haut. J'ai parfois sous estimé certaines complexités, mais finalement tout s'est bien passé. L'algorithme que j'ai créé n'est pas du tout optimal, et manque cruellement de techniques pour rendre plus rapide l'exécution. Les meilleurs robots d'échecs explorent une profondeur de plus de 15 en seulement quelques secondes, tandis que mon programme met plusieurs heures pour une profondeur de 7... Cependant, le programme marche parfaitement pour des profondeurs faibles, ce qui me contente pour l'instant.
+
+Il faut à présent décrire le backlog du deuxième sprint, qui aura pour objectif d'utiliser Pygame pour implémenter le jeu d'échecs pour qu'on puisse y jouer. Voici ce backlog, avec les complexités pour chaque fonctionnalités:
+
+- Représentation graphique du plateau et de ses pièces **(3)**
+- Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées **(13)**
+- Vérifier si les échecs et les échecs et mat **(5)**
+- Implémentation de sons **(3)**
+- Implémentation de l'historique de la partie **(8)**
+- Implémentation de la liste des pièces prises par chaque joueur **(3)**

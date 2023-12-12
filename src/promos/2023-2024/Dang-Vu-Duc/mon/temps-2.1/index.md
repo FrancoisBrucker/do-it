@@ -19,6 +19,11 @@ résumé: "L'objectif de ce MON est d'apprendre à utiliser la bibliothèque Pyg
 Connaissance basique de la programmation objet avec Python.
 {% endprerequis %}
 
+{% note %}
+Le jeu du Morpion codé en exemple est disponible sur le lien suivant: [Jeu du morpion avec Pygame](https://duc-dgv.itch.io/morpion)
+Tout les codes présentés sont disponibles dans le dossier Git du MON2.1: [codes du MON2.1](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-2.1)
+{% endnote %}
+
 ## Introduction
 
 Pygame est une bibliothèque Python permettant d'implémenter des jeux. Ce MON va présenter comment utiliser cette bibliothèque en utilisant l'exemple de l'implémentation d'un simple jeu de Morpion. Notons que Pygame permet de faire des jeux bien plus sophistiqués qu'un simple morpion (par exemple, il est possible de faire des animations ou gérer des collisions). Cependant, la durée du MON ne permet pas de développer un jeu très avancé. Nous allons quand même expliquer les principes de base pour réaliser ce genre d'opération.
@@ -313,3 +318,9 @@ def restart(self):
 Voici deux exemples de parties avec cette implémentation:
 
 ![Image3](Image3.png)
+
+Le jeu est disponible sur le lien suivant: [Jeu du morpion avec Pygame](https://duc-dgv.itch.io/morpion).
+
+## Conclusion
+
+Pygame offre des possibilités de jeu très grandes, bien plus que ce j'ai pu expliquer dans ce MON. On peut par exemple implémenter des images qui bougent, et qui peuvent entrer en collision. Cela consiste en une superposition d'images dans la boucle d'évènements. Ce point n'est pas développé ici, par manque de temps, mais il est tout à fait possible de faire des jeux bien plus sophistiqués que cela. Cependant, il fut intéressant d'apprendre ces opérations basiques, et de comprendre la logique qui se cache derrière l'implémentation des jeux.
