@@ -5,7 +5,7 @@ title: "La gouvernance d'entreprise"
 authors:
   - Soline de MIRIBEL
 
-date: 2023-09-27
+date: 2023-12-13
 
 tags: 
   - "temps 2"
@@ -43,7 +43,7 @@ A la tête d’une entreprise on trouve ses **dirigeants** qui en sont salariés
 Michael C. Jensen et William H. Meckling établissent, en 1976, la théorie de l’agence. Ils y explorent les relations entre les parties prenantes dans une organisation, en se concentrant principalement sur la relation entre les propriétaires (actionnaires) et les agents (dirigeants). Ils étudient leurs intérêts et motivations divergentes ainsi que l’accès à l’information. En effet, les agents, au plus proche de l’activité détiennent davantage d’informations que les propriétaires. Ces-derniers à qui les renseignements ne sont volontairement pas intégralement transmis, doivent déléguer leur pouvoir décisionnel sans pouvoir contrôler directement les actions des agents. Cette asymétrie de l’information en faveur des agents est un des piliers de la théorie de l’agence.
 
 #### 1980-1990
-Dans un contexte de déréglementation favorisant la concurrence et la fusion des entreprises, on observe une **transition d’un capitalisme capitalisme patrimonial à un capitalisme actionnarial**. Ces dans ces années là qu’est formalisé et popularisé le terme de gouvernance avec la “corporate governance” d'abord définie comme “l’ensemble des mécanismes qui garantissent aux différents bailleurs de fonds un retour sur investissement, en évitant une appropriation de valeur excessive par le dirigeant et les actionnaires dominants.”  Les premières conceptualisations et modèles de gouvernance sont donc centrés sur les moyens de préserver les intérêts des actionnaires. Par la suite, d'autres modèles et conceptualisations vont apparaître, prenant en compte d'autres parties prenantes.
+Dans un contexte de déréglementation favorisant la concurrence et la fusion des entreprises, on observe une **transition d’un capitalisme patrimonial à un capitalisme actionnarial**. Ces dans ces années là qu’est formalisé et popularisé le terme de gouvernance avec la “corporate governance” d'abord définie comme “l’ensemble des mécanismes qui garantissent aux différents bailleurs de fonds un retour sur investissement, en évitant une appropriation de valeur excessive par le dirigeant et les actionnaires dominants.”  Les premières conceptualisations et modèles de gouvernance sont donc centrés sur les moyens de préserver les intérêts des actionnaires. Par la suite, d'autres modèles et conceptualisations vont apparaître, prenant en compte d'autres parties prenantes.
 
 #### Depuis 1990
 On observe un **alignement des intérêts des actionnaires et des dirigeants** mais de nouvelles problématiques émergent avec la mondialisation, l’arrivée d’internet, des conflits direction/opérationnel. De plus, plusieurs scandales et crises mettent le concept de gouvernance au centre des stratégies des entreprises. La gouvernance fait aussi l’objet de nouvelles réglementations juridiques (en France notamment).
@@ -190,7 +190,7 @@ la stratégie globale, les processus, les cadres et la répartition des pouvoirs
 
 ### Contrôler les activités
 L’alignement stratégique exige des opérations de contrôle. Ainsi, les entreprises : suivent précisément leurs résultats,
-détectent d’éventuelles anomalies, risques à venir ou axes d’amélioration, dans l’optique de mettre en place des actions correctives. Les organisations doivent, en effet, restées suffisamment flexibles pour être parfaitement disposées à s’adapter aux évolutions du marché et de la société.
+détectent d’éventuelles anomalies, risques à venir ou axes d’amélioration, dans l’optique de mettre en place des actions correctives. Les organisations doivent, en effet, rester suffisamment flexibles pour être parfaitement disposées à s’adapter aux évolutions du marché et de la société.
 Dans le cadre du contrôle, les organisations sont tenues, une fois de plus, de clairement préciser les rôles (qui surveille quoi ?). Par ailleurs, il est recommandé de disposer d’indicateurs de performance précis et fiables, notamment par le biais de la construction de tableaux de bord.
 
 ### Tenir des instances de gouvernance
@@ -199,7 +199,7 @@ Les différentes instances de gouvernance jouent un rôle capital dans son bon f
 ## Conclusion
 La gouvernance d'entreprise fait l'objet d'une théorisation, d'études et de recherches depuis le siècle dernier. Elle est devenue en peu de temps un élément déterminant de la réussite d'une entreprise. Avec le temps, le concept évolue et comprend maintenant deux nouvelles approches : 
 - les théories de la gouvernance s'éloignent progressivement d’une approche plutôt de type coercitif ou disciplinaire vers une **approche beaucoup plus cognitive et comportementale**. Lorsqu’on débat par exemple de l’impact de la diversité du conseil d’administration d’une entreprise, il s’agit bien d’étudier le rôle du conseil en termes de répertoire de connaissances et non pas en termes de contrôle. Les recherches en gouvernance ont ainsi évolué dans le temps, en intégrant notamment des fonctions de ressources et de connaissances et en s’intéressant à la dynamique de leur déploiement dans l’entreprise.
-- le **traitement statistique** (l’algorithme) et le développement de l'**IA** deviennent des leviers de gouvernance : ils prédissent, ils guident l’action, voire ils décident. Ils peuvent le faire de manière quasi-autonome par apprentissage non supervisé. En même temps, le partage d’informations devient massif. Or en gouvernance l'information est primordiale pour prendre les bonnes décisions.
+- le **traitement statistique** (l’algorithme) et le développement de l'**IA** deviennent des leviers de gouvernance : ils prédisent, ils guident l’action, voire ils décident. Ils peuvent le faire de manière quasi-autonome par apprentissage non supervisé. En même temps, le partage d’informations devient massif. Or en gouvernance l'information est primordiale pour prendre les bonnes décisions.
 
 
 
