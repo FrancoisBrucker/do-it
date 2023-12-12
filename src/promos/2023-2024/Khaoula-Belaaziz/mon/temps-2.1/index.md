@@ -22,7 +22,7 @@ Pour commencer avec React Native, vous aurez besoin d'installer Node.js, Watchma
 ## Exemples de Code de Base
 React Native utilise des composants pour construire l'interface utilisateur. Par exemple, un composant simple peut être un bouton ou une vue texte. La navigation entre les écrans se fait à l'aide de bibliothèques comme React Navigation. Les états et les props sont utilisés pour gérer les données et rendre les composants réactifs. Voici un exemple de composant simple :
 
-``` html
+```js
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 
@@ -51,7 +51,7 @@ En naviguant dans le dossier du projet et en l'ouvrant dans l'éditeur de code,o
 ### Développement de l'Interface Utilisateur
 Dans App.js, on commence par importer les composants nécessaires de React Native :
 
-``` html
+```js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList } from 'react-native';
 
@@ -59,7 +59,9 @@ import { View, Text, TextInput, Button, FlatList } from 'react-native';
 
 Ensuite, on crée un composant fonctionnel **App** :
 
-``` html
+{# On met le code dans un bloc {% raw %} ... {% endraw %} pour que Nunjucks n'interprète pas les {{}} de React Native. #}
+{% raw %}
+```js
 const App = () => {
   const [tache, setTache] = useState('');
   const [listeDeTaches, setListeDeTaches] = useState([]);
@@ -90,6 +92,7 @@ const App = () => {
 
 export default App;
 ```
+{% endraw %}
 Dans ce code, on a:
 
 Un *TextInput* pour saisir les tâches.

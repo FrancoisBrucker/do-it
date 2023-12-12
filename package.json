@@ -9,7 +9,7 @@
     "clean-powershell": "Remove-Item './dist' -Recurse",
     "node-modules-front": "cd ./src/assets ; npm install ; cd ../..",
     "build-github": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=do-it",
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve --incremental",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "keywords": [],
