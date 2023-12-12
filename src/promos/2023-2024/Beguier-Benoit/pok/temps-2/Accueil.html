@@ -7,12 +7,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script>
+            window.onload = function () {
+                // Réinitialiser les champs input lors du chargement de la page
+                var emailInput = document.getElementById('email');
+                var mdpInput = document.getElementById('mdp');
+
+                if (emailInput && mdpInput) {
+                    emailInput.value = '';
+                    mdpInput.value = '';
+                }
+            };
+        </script>
     </head>
     <body>
         <header>
             <img src="Allonge.png" class="logo" width="15%" height="60%" >
             <a class="FAQ" href="FAQ.html">FAQ</a>
-            <button class="Connexion">
+            <button onclick="afficherEcran_noir()" class="Connexion">
                 <img src="Spotify_black.png" width="38" height="39">
                 <span class="ButtonText">S’identifier avec Spotify</span>
             </button>
@@ -50,5 +62,35 @@
             <img src="sound 1.png" class="sound">
         </div>
         
+        <div id="ecran_noir" class="ecran_noir">
+            <div class="ecran_noir-content">
+                <span class="close" onclick="fermerEcran_noir()">&times;</span>
+                <label for="email">Adresse e-mail liée à votre compte Spotify :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" required>
+                <button class="check_id" onclick="submitForm()">Connexion</button>
+            </div>
+        </div>
+    
+        <script>
+            function afficherEcran_noir() {
+                var ecran_noir = document.getElementById('ecran_noir');
+                ecran_noir.style.display = 'block';
+            }
+    
+            function fermerEcran_noir() {
+                var ecran_noir = document.getElementById('ecran_noir');
+                ecran_noir.style.display = 'none';
+            }
+    
+            function submitForm() {
+                var emailValue = document.getElementById('email').value;
+                var mdpValue = document.getElementById('mdp').value;
+        
+                fermerEcran_noir()
+            }
+        </script>
+
     </body>
 </html>

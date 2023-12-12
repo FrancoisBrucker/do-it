@@ -38,7 +38,7 @@ résumé: "Mon travail vise à approfondir ma maîtrise du développement web c�
 
 Le développement back-end, également appelé développement côté serveur, fait référence à la construction de la partie non visible des applications web, qui gère les données, la logique métier, et les interactions avec la base de données. Il est responsable de l'ensemble des opérations en coulisses qui permettent aux applications web de fonctionner. Le développement back-end se concentre sur la création de serveurs, la gestion des bases de données, le traitement des requêtes clients, et la fourniture de données dynamiques aux applications front-end. Il est essentiel pour assurer la fonctionnalité, la sécurité, et la performance des applications web.
 
-J'ai choisis de développer de compétences en Node.js, Express, et MongoDB à travers le cours [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/). Ce est une initiation au développement web avec JavaScript, composé de 12 sections, chacune exigeant environ 10 à 12 heures de travail. J'ai terminé la troisième section, qui aborde la programmation d'un serveur avec NodeJS et Express.
+J'ai choisis de développer de compétences en Node.js, Express, et MongoDB à travers le cours [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/). Ce cours est une initiation au développement web avec JavaScript, composé de 12 sections, chacune exigeant environ 10 à 12 heures de travail. J'ai terminé la troisième section, qui aborde la programmation d'un serveur avec NodeJS et Express.
 
 ## Node.js & Express <a id="section-2"></a>
 ### **Node.js** <a id="subsection-1"></a>

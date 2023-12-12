@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Football Fantasy"
+title: "Football Fantasy-2"
 authors:
   - Omar Salame
 

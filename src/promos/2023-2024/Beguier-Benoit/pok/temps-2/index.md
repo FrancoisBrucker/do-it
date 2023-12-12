@@ -317,3 +317,336 @@ p {
 ```
 
 {% enddetails %}
+
+Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai aussi de mettre un `position: fixed;` pour régler ce problème, mais cela décale toutes mes marges. Pour l'instant, je décide de rester comme ça.
+
+### Apparition du pop-up de connexion
+
+Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure pas encore cliquable.
+
+Pour ce faire, j'avais deux solutions : de l'HTML pur ou du Javascript. J'opte pour la deuxième option sur les conseil de [William Lalanne](https://www.instagram.com/william.lalanne/). Je ne suis pas spécialement familier du langage, mais après quelques explications du langage, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.
+
+Il y a deux parties à prendre en compte :
+
+- lorsque le bouton est cliqué, il faut faire apparaître un pop-up demandant à l'utilisateur l'adresse e-mail associée à son compte Spotify et son mot de passe.
+- un écran noir doit aussi apparaître en-dessous du pop-up afin de faciliter la différienciation des fenêtres.
+
+J'ai donc réalisé ces fonctionnalités. J'ai rajouté dans l'HTML un petit script qui permet d'effacer à chaque *refresh* les données précédentes contenues dans les champs à remplir.
+J'ai aussi mis en forme le texte du mot de passe pour qu'il soit crypté.
+
+Petit regret : j'ai eu la flemme de créer une box pour la position de la croix dans le *content*, je l'ai fait à la position absolue, peut-être que je regretterai après.
+
+Deuxième petit regret (décidément) : pour l'instant, il n'y a que le bouton fermer qui ferme le pop-up, il faudrait rajouter la possibilité de cliquer autre part.
+
+A noter que la page ne fait rien avec l'e-mail et le mot de passe, cela viendra dans le Sprint 2 en utilisant l'API.
+
+{% details "Cliquez pour afficher le **code HTML** de la page d'accueil avec le pop-up" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Accueil - Spotistats 📈</title>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script>
+            window.onload = function () {
+                // Réinitialiser les champs input lors du chargement de la page
+                var emailInput = document.getElementById('email');
+                var mdpInput = document.getElementById('mdp');
+
+                if (emailInput && mdpInput) {
+                    emailInput.value = '';
+                    mdpInput.value = '';
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="Allonge.png" class="logo" width="15%" height="60%" >
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <img src="Spotify_black.png" width="38" height="39">
+                <span class="ButtonText">S’identifier avec Spotify</span>
+            </button>
+        </header>
+
+        <div class="container">
+            <img src="chart-up 1.png" class="arrow">
+            <div class="column">
+                <h1> Toutes vos statistiques.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    bibendum enim facilisis. Erat imperdiet sed euismod nisi porta. Viverra 
+                    accumsan in nisl nisi scelerisque eu ultrices. In vitae turpis massa sed elementum. 
+                    Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros donec ac odio tempor. 
+                    Felis donec et odio pellentesque diam volutpat commodo. Et tortor consequat id porta nibh
+                    venenatis.
+                </p>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="column2">
+                <h1> Analysez vos goûts musicaux.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    bibendum enim facilisis. Erat imperdiet sed euismod nisi porta. Viverra 
+                    accumsan in nisl nisi scelerisque eu ultrices. In vitae turpis massa sed elementum. 
+                    Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros donec ac odio tempor. 
+                    Felis donec et odio pellentesque diam volutpat commodo. Et tortor consequat id porta nibh
+                    venenatis.
+                </p>
+            </div>
+            <img src="sound 1.png" class="sound">
+        </div>
+        
+        <div id="ecran_noir" class="ecran_noir">
+            <div class="ecran_noir-content">
+                <span class="close" onclick="fermerEcran_noir()">&times;</span>
+                <label for="email">Adresse e-mail liée à votre compte Spotify :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" required>
+                <button class="check_id" onclick="submitForm()">Connexion</button>
+            </div>
+        </div>
+    
+        <script>
+            function afficherEcran_noir() {
+                var ecran_noir = document.getElementById('ecran_noir');
+                ecran_noir.style.display = 'block';
+            }
+    
+            function fermerEcran_noir() {
+                var ecran_noir = document.getElementById('ecran_noir');
+                ecran_noir.style.display = 'none';
+            }
+    
+            function submitForm() {
+                var emailValue = document.getElementById('email').value;
+                var mdpValue = document.getElementById('mdp').value;
+        
+                fermerEcran_noir()
+            }
+        </script>
+
+    </body>
+</html>
+```
+
+{% enddetails %}
+
+{% details "Cliquez pour afficher le **code CSS** de la page d'accueil avec le pop-up" %}
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25242F;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25242F;
+    height: 90px;
+    padding: 0 30px;
+    box-shadow: 0 4px 17px rgba(81, 95, 95, 0.25);
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.FAQ {
+    order: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    justify-content: center;
+    margin-left: 520px;
+}
+
+button.Connexion {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #1ed760;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 38px;
+    width: 360px;
+    height: 55px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.ButtonText {
+    margin-right: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button.Connexion img {
+    margin-right: 10px;
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Spotify-Font/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-self: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 70px;
+    width: 650px;
+    margin-right: 50px;
+}
+
+h1 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 40px;
+    color: #1ed760;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    width: 600px;
+    text-align: justify;
+}
+
+.arrow {
+    width: 41.6%;
+    height: 41.4%;
+    margin-top: 70px;
+}
+
+.sound {
+    width: 55%;
+    height: 55%;
+    margin-top: 30px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 30px;
+    width: 950px;
+}
+
+.parap2{
+    width:950px;
+}
+
+.ecran_noir {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ecran_noir-content {
+    background-color: #25242F;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 50%;
+    color: #FFFFFF;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.check_id {
+    background-color: #1ed760;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+button:hover {
+    background-color: #149754; /* Changement de couleur au survol */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 140px;
+    right: 320px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+```
+
+{% enddetails %}
