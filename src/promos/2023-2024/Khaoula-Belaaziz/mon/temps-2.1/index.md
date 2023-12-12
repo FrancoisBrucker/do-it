@@ -59,6 +59,8 @@ import { View, Text, TextInput, Button, FlatList } from 'react-native';
 
 Ensuite, on crée un composant fonctionnel **App** :
 
+{# On met le code dans un bloc {% raw %} ... {% endraw %} pour que Nunjucks n'interprète pas les {{}} de React Native. #}
+{% raw %}
 ```js
 const App = () => {
   const [tache, setTache] = useState('');
@@ -90,6 +92,7 @@ const App = () => {
 
 export default App;
 ```
+{% endraw %}
 Dans ce code, on a:
 
 Un *TextInput* pour saisir les tâches.
