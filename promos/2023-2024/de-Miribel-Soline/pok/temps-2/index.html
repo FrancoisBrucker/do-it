@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Etude de cas d&#39;une transformation digitale</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Etude de cas d&#39;une transformation digitale</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">transformation digitale</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Soline de MIRIBEL</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Ce POK est une étude de cas d’une transformation digitale dans l'entreprise Sfil.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/de-Miribel-Soline/">Soline de MIRIBEL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/de-Miribel-Soline/pok/">POK de Soline de Miribel</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/de-Miribel-Soline/pok/temps-2/">Etude de cas d&#39;une transformation digitale</a>
+
+</div></div>
+
+
+
+
+<h2>Objectifs</h2>
+<ol>
+<li>Mieux comprendre en quoi consiste une transformation digitale</li>
+<li>Comparer la vision de ceux qui mettent en place cette transformation avec celle de ceux qui la suivent</li>
+</ol>
+<h2>Plan d'action</h2>
+<ol>
+<li><strong>Sprint 1</strong> : prise de contact, préparation de l'entretien, entretien, compte-rendu et analyse de l'échange</li>
+<li><strong>Sprint 2</strong> : préparation du deuxième entretien, entretien, compte-rendu et analyse croisée des deux entretiens</li>
+</ol>
+<h2>L'entreprise étudiée : Sfil</h2>
+<h3>Présentation</h3>
+<p>Sfil est une banque publique de développement au service des collectivités locales, des hôpitaux et des exportateurs. Créée le 1er février 2013, à la suite de la faillite du groupe bancaire franco-belge Dexia, Sfil refinance aujourd’hui, via sa société de crédit foncier, la Caisse Française de Financement Local (Caffil), des prêts à moyen et long terme que La Banque Postale et La Banque des Territoires proposent aux collectivités territoriales et aux établissements publics de santé.</p>
+<h3>Sa transformation</h3>
+<p>En 2019, l’entreprise affiche son nouvel objectif de rester un leader attractif et reconnu dans ses métiers. Pour cela elle souhaite se doter d’un modèle opérationnel digital efficace avec une culture collaborative et agile.<br>
+En 2022, l’entreprise entre dans sa deuxième phase de transformation (#objectif2026) avec pour objectif d’intégrer la Caisse Des Dépôts, les enjeux de développement durable ainsi que de nouveaux outils et augmenter la notoriété de la société. Les moyens d’atteindre cet objectif sont l’augmentation des effectifs dans certains domaines, l’accroissement de l’efficacité et de la dématérialisation et l’investissement en informatique (en protection et sécurité notamment).<br>
+Sur la branche IT, la déclinaison de la stratégie aboutit à l’intégration des enjeux RSE et de nouvelles contraintes réglementaires, à une digitalisation accélérée, à une hybridation du travail facilitée et à une surveillance accrue des risques cyber. La DSI veut se positionner en support de tous les métiers, anticiper l’obsolescence et intégrer de nouveaux modèles de travail.</p>
+<h2>1er entretien</h2>
+<p><strong>Interlocuteur</strong> : Roger Lenglet, collaborateur de la DSI dans la branche Transformation digitale et innovation, chargé de la cohérence SI et de l’innovation</p>
+<h3>Origine d'une transformation digitale</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Qu’est-ce qui motive une transformation digitale dans une entreprise ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>C’est avant tout la compétition qui motive une transformation pour ensuite entretenir et accroître la capacité d’innover de la société. Si l’on prend l’exemple des banques qui prêtent à des particuliers (BNP, La Banque Postale, les néo-banques,...) elles se doivent d’être à la pointe dans les domaines technologiques pour proposer de nouveaux service, de nouvelles fonctionnalités sur leurs applications tout en garantissant l’entière sécurité des transactions et données. Dans ces cas, une transformation digitale en profondeur de l’entreprise est motivée par la concurrence.<br>
+Dans le cas de Sfil, il n’y a pas de concurrence. La transformation et l’innovation se font donc à un autre rythme. A sa création en 2013, la réglementation a commandé au SI de Sfil d’être un duplicata de celui de Dexia. Ce grand groupe comptait 30 000 collaborateurs alors que Sfil n’en compte que 400. Le SI de Sfil était donc surdimensionné comparé à la taille de l’entreprise, ce qui engendrait des coûts superflus importants. Pendant 3 ans, la priorité de l’entreprise a donc été de simplifier ce SI et ses processus.<br>
+En parallèle, le monde de l’entreprise connaît une évolution avec le déploiement des méthodes agiles, l’importance grandissante des réseaux sociaux et l’arrivée d’outils collaboratifs de partage. En sortant de son redimensionnement de SI, Sfil se retrouve face à de nouveaux enjeux. Sa transformation digitale a donc été motivée par le besoin mais aussi par la nécessité de rester attractif sur le marché du travail et celle d’acquérir de nouvelles méthodes favorisant l’innovation et l’agilité.</p>
+</div>
+</details>     
+</div>
+<h3>Mise en oeuvre de la transformation</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Comment se met en place une transformation digitale ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Une telle transformation est décidée au niveau des plus hautes instances de direction (DG, DGA, COMEX). Les grands directeurs de l’entreprise impulsent des trajectoires. Ils en seront ensuite les arbitres. L’entreprise commence par analyser ses processus avant de se doter d’une direction de la transformation pour dialoguer avec le métier. La DSI se saisit ensuite du projet. Elle met en place les outils répondant aux besoins identifiés. La transformation ne vient pas de la DSI. Le rôle de celle-ci n’est cependant pas moindre puisqu’elle concentre la mise en place de nouveaux outils dans le respect des réglementations en vigueur et sous un contrôle de sécurité maximal.<br>
+Une transformation digitale s’accompagne aussi d’une intense communication (prises de paroles, discours,...) et d’une conduite du changement effectuée par le service des RH. En effet, cette transformation induisant des changements de comportements et de modes de travail, il est essentiel d’y sensibiliser les collaborateurs et de les accompagner sur cette voie.</p>
+</div>
+</details>     
+</div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Plus précisément, comment passe-t-on d’une idée à un tel projet ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Tout collaborateur détectant un besoin peut en faire part à un comité en le lui présentant sous forme de pitch. La prise en compte du risque est primordiale. Le comité tranche ensuite : soit on adapte un outil existant, soit il n’est même pas utile de le faire, soit on se penche davantage sur le sujet. Lors de la phase suivante, la DSI réfléchit à comment répondre à ce besoin. La solution trouvée est ensuite présentée au COMEX qui tranche si on lance finalement le projet ou non.</p>
+</div>
+</details>     
+</div>
+<h3>Périmètre de la transformation</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Quels sont les éléments de la transformation digitale de Sfil ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<ul>
+<li><strong>Les méthodes agiles</strong> : l’introduction des méthodes agiles a commencé chez Sfil en 2018. Les collaborateurs ont l’habitude et les connaissances pour mener leur projet par un cycle “en V” sur les principes d’optimisation de la qualité, des coûts et des délais. En passant vers les méthodes agiles, ils perdent leurs repères : ce qui prime c’est le planning et le budget, pour les fonctionnalités, il faudra faire au mieux selon les priorités établies et de nombreux livrables seront à rendre. L’agile ne concerne pas que la DSI, ces méthodes s’appliquent aussi aux autres services et entre les métiers. La transition vers cette gestion de projet se fait progressivement en commençant par les personnes les moins réfractaires. A ce jour 40% des projets emploient ces méthodes. Un coach agile propose des parcours de “randonnée” pour sensibiliser les collaborateurs puis un parcours d’”alpinisme” pour ceux qui voudraient mener des projets en agile.</li>
+<li><strong>Les outils</strong> : une veille technologique permet de repérer les outils facilitateurs pour un nouveau mode de travail. Sfil utilise par exemple Klaxoon, un espace de travail participatif adapté à un environnement de travail hybride.</li>
+<li><strong>Le partage d’informations</strong> : afin de partager les informations et la connaissance, les collaborateurs de Sfil ont rédigé des Wiki. Ce sont des espaces réunissant les connaissances dans chaque domaine.</li>
+<li><strong>L’environnement de travail</strong> : en juin dernier, l’entreprise a déménagé de bureaux fixes vers un nouveau site de haute qualité environnementale dans lequel les locaux sont aménagés en flexoffice. Ce déménagement et cette nouvelle organisation ont nécessité la mise en place de nouveaux outils, l’achat de nouveau matériel pour les salles de réunion et leur intégration.</li>
+</ul>
+</div>
+</details>     
+</div>
+<h3>Métier de R.Lenglet</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Quel est votre rôle et votre part de participation à cette transformation digitale ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>R. Lenglet est responsable de la cohérence du SI et de l’innovation. Cette double casquette peut sembler un peu contradictoire.<br>
+En tant qu’architecte fonctionnel, il est chargé de cartographier la DSI. Il est aussi responsable de la conformité en termes de technique : les solutions mises en place sont  des solutions connues et maîtrisées que l’on peut catégoriser. A ce titre, il valide aussi les projets soumis en comité.<br>
+En tant que responsable de l’innovation, R. Lenglet est chargé d’aller voir ce qui se fait ailleurs (dans des salons notamment) en matière d’innovation technologique (VR ou IA par exemple). Il organise aussi des Proof Of Concept (POC), des ateliers avec les collaborateurs pour qu’ils participent à l’évolution des technologies de l’entreprise. Pour la VR, par exemple, la technologie est présentée puis les participants l’expérimentent. Ensuite, ils réfléchissent ensemble à de potentielles applications dans le cadre du travail. Pour la VR cela a notamment abouti à la visite des nouveaux locaux en VR pour une trentaine de collaborateurs. Concernant l’IA de très nombreuses questions de sécurité se posent à cause de la sensibilité des données manipulées. Le no-code/low-code est aussi arrivé par un POC qui a aboutit à une plateforme le rendant accessible à tous. Ce travail s’accompagne d’une démarche d’écoute et de lobbying pour faire connaître ces idées.<br>
+Finalement, le métier de R. Lenglet est de faire la balance entre ces 2 aspects : explorer les nouvelles tendances pour les intégrer chez Sfil. Il s’occupe aussi de les présenter et expliquer au COMEX pour les éclairer dans leur prise de décision.</p>
+</div>
+</details>     
+</div>
+<h3>Les difficultés d'une transformation digitale</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Quelles sont les plus grandes difficultés auxquelles se heurterait une transformation digitale ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>La réticence au changement est, elle, prise en charge par la RH et la direction de la transformation par un accompagnement au changement. La plus grande difficulté reste celle du soutien hiérarchique. Pour qu'un projet aboutisse, il lui faut un sponsor qui y croit, qui s’engage, prenne position et sache prendre des décisions.</p>
+</div>
+</details>     
+</div>
+<h3>Evaluation de la transformation</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Quel recul avez-vous sur cette transformation et quels critères d’évaluation ont été mis en place ?</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Pour répondre à cette question, il faudra attendre que la direction de la transformation mette en place les bons KPI. Pour l’instant on peut seulement dire que la transformation n’a certes pas été très rapide, il aurait pu un avoir davantage de ruptures mais les résultats observés sont très positifs</p>
+</div>
+</details>     
+</div>
+<h3>Direction ou trajectoire</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Le mot de la fin</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>réponse</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>La transformation suit une trajectoire plus qu’une direction. Rigide et prévisible une direction ne convient pas à décrire une transformation qui repose sur des innovations, des opportunités et des difficultés en partie imprévisibles. L’objectif de la transformation est connu, le meilleur chemin pour l’atteindre n’est pas forcément le plus direct.</p>
+</div>
+</details>     
+</div>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
