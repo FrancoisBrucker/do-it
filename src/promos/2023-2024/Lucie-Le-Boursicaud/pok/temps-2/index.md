@@ -22,8 +22,8 @@ Connaitre les bases de Figma.
 
 # Sprint 1 
 ###### Objectifs du premier sprint
-+ [x] Réaliser une maquette simplifiée - 2
 + [x] Choisir la charte graphique  - 3
++ [x] Réaliser une maquette simplifiée - 2
 + [x] Créer les éléments et les variants principaux  - 2
 + [x] Avoir des ébauches de différentes pages - 2
 
@@ -59,47 +59,48 @@ Figma garde un historique des modifications, permettant ainsi aux utilisateurs d
 Figma propose sa version payante gratuite pour tous les étudiants. Je me suis donc créer un compte à l'aide de mon adresse mail de Centrale afin d'obtenir un accès totale à l'outil et explorer toutes les possibilités qu'il offre.
 
 ## 2. Charte graphique
+Pour ce POK j'ai décidé de réaliser le site web d'un concept store que j'aimerais ouvrir à l'avenir. L'idée est de pouvoir peindre entre amis autour d'un repas. C'est un concept très à la mode en ce moment et qui n'est pas encore développé à Marseille. 
 Afin d'avoir une charte graphique la plus adaptée possible j'ai réalisé un brief graphique. 
 
 **Brief Graphique : VIBE Brunch & Art**
 
 **Utilisateurs :**
 
-**Amateurs d'Art :** Personnes passionnées par l'art sous toutes ses formes, recherchant une expérience où la créativité culinaire se marie harmonieusement avec des expositions artistiques.
++ **Jeunes créatifs :** Personnes passionnées par l'art sous toutes ses formes, recherchant un endroit posé où elles peuvent utilisées leur créativité et manger de bons plats.
   
-**Foodies Avertis :** Individus appréciant la gastronomie raffinée et innovante, cherchant une expérience de brunch exceptionnelle associée à un environnement artistique.
++ **Expert du brunch :** Individus appréciant les brunchs, cherchant une expérience innovante associée à un environnement artistique.
 
-**Événements Spéciaux :** Groupes ciblés pour des événements privés, réceptions et célébrations artistiques, recherchant un lieu unique et créatif.
++ **Événements Spéciaux :** Groupes ciblés pour des événements privés, réceptions et célébrations artistiques, recherchant un lieu unique et créatif pouvant servir à manger.
 
 **Valeurs :**
 
-**Créativité :** Le mariage de l'art et de la gastronomie pour une expérience stimulant tous les sens.
++ **Créativité :** Le mariage de l'art et de la cuisine pour une expérience stimulant tous les sens.
 
-**Convivialité :** Un espace accueillant favorisant les rencontres, les échanges et la découverte.
++ **Convivialité :** Un espace accueillant favorisant les rencontres, les échanges et la découverte.
 
-**Innovation :** Un lieu constamment en évolution, offrant des expériences uniques à chaque visite.
++ **Innovation :** Un lieu constamment en évolution, offrant des expériences uniques à chaque visite.
 
 **Personnage du Design :**
 
 Le design doit incarner l'essence de la créativité, la fusion de deux mondes distincts. Il doit être :
 
-**Élégant et Contemporain :** Reflétant la sophistication d'un brunch de qualité et la modernité de l'art contemporain.
++ **Élégant et Contemporain :** Reflétant la sophistication d'un brunch de qualité et la modernité de l'art contemporain.
 
-**Dynamique :** Capturant l'énergie et le mouvement, évoquant la vitalité de l'expérience VIBE.
++ **Dynamique :** Capturant l'énergie et le mouvement, évoquant la vitalité de l'expérience VIBE.
 
-**Équilibré :** Assurant une harmonie visuelle entre les éléments artistiques et culinaires sans compromettre la lisibilité.
++ **Équilibré :** Assurant une harmonie visuelle entre les éléments artistiques et culinaires sans compromettre la lisibilité.
 
 **Contraintes Techniques :**
 
-**Adaptabilité :** Le design doit être adaptable à divers supports tels que les menus, les enseignes, le site web et les supports promotionnels.
++ **Adaptabilité :** Le design doit être adaptable à divers supports tels que les menus, les enseignes, le site web et les supports promotionnels.
 
-**Palette de Couleurs :** Utilisation d'une palette vibrante, reflétant l'énergie du lieu tout en maintenant une cohérence avec l'expérience globale.
++ **Palette de Couleurs :** Utilisation d'une palette vibrante, reflétant l'énergie du lieu tout en maintenant une cohérence avec l'expérience globale.
 
-**Lisibilité :** Assurer une lisibilité claire du logo et des éléments graphiques, même à petite échelle.
++ **Lisibilité :** Assurer une lisibilité claire du logo et des éléments graphiques, même à petite échelle.
 
-**Accessibilité :** Garantir une accessibilité optimale, notamment en ce qui concerne les contrastes de couleur pour les personnes atteintes de déficiences visuelles.
++ **Accessibilité :** Garantir une accessibilité optimale, notamment en ce qui concerne les contrastes de couleur pour les personnes atteintes de déficiences visuelles.
 
-**Intégration du Logo :** Le logo doit s'intégrer naturellement dans tous les supports, en conservant son impact visuel.
++ **Intégration du Logo :** Le logo doit s'intégrer naturellement dans tous les supports, en conservant son impact visuel.
 
 ##### Logo 
 Pour créer le logo j'ai utilisé Canva que je maitrise plutôt bien. 
@@ -136,11 +137,22 @@ Dans l'ensemble, cette combinaison de Montserrat, Kokoro et Koulen vise à crée
 
 #### Couleurs
 
-
-#### Iconographie
+<div style="display:flex">
+<div><img src="palette pastel.png"></div>
+<div><img src="palette vive.png"></div>
+</div>
 
 ## 3. Réalisation d'une maquette simplifiée
-Pour ce POK j'ai décidé de réaliser le site web d'un concept store que j'aimerais ouvrir à l'avenir. L'idée est de pouvoir peindre entre amis autour d'un repas. C'est un concept très à la mode en ce moment et qui n'est pas encore développé à Marseille. 
+Pour cette partie j'ai essayé déjà de voir les sites proposant des brunchs classiques ou un peu plus innovants pour me donner des idées et m'inspirer. 
+
++ [Kozy](https://www.kozy.fr/)
+
++ [Parenthèse](https://www.parenthesebrunch.com/menu)
+
++ [Sookie](https://www.hotelsookie.com/fr/page/coffee-shop-petit-dejeuner-marais.10175.html)
+  
++ [Galerie Wawi](https://www.galeriewawi.com/brunch-paint)
+  
 
 La première étape est donc d'avoir une idée globale de la structure du site nottament le placement des différents éléments, les boutons de navigations ect. Pour ce faire j'ai d'abord fait des croquis à la main puis je les ai reproduit sur Figma pour avoir un résultat plus précis et de meilleur qualité. 
 La réflexion principale pour ces maquettes simplifiées c'est que le parcours utilisateur soit le plus fluide possible lors que celui-ci cherche une information précise. Je veux donc quelque chose d'assez original mais qui reste intuitif : tout le défi de ce POK réside dans ce travail. 
@@ -152,7 +164,7 @@ La réflexion principale pour ces maquettes simplifiées c'est que le parcours u
 <div><img src="resaMS.png"></div>
 </div>
 
-## 4. Ebauche des différentes pages
+## 4. Ebauche des différentes pages et création de premiers composants
 À partir d'une maquette simplifiée, j'ai élaboré des ébauches de pages toujours à l'aide de l'outil Figma. 
 <div style="display:flex">
 <div><img src="homeME.png"></div>
@@ -160,6 +172,23 @@ La réflexion principale pour ces maquettes simplifiées c'est que le parcours u
 <div><img src="artME.png"></div>
 <div><img src="resaME.png"></div>
 </div>
+
+Et les premiers composants : 
+<div style="display:flex">
+<div><img src="compo1.png"></div>
+<div><img src="compo2.png"></div>
+<div><img src="compo3.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="compo4.png"></div>
+<div><img src="compo5.png"></div>
+</div>
+
+# Sprint 2
+###### Objectifs du deuxième sprint
++ [] Finaliser les composants - 3
++ [] Finaliser les maquettes - 3
++ [] Appliquer la colorimétrie sur les différentes pages - 3
 
 ### Horodateur
 | Date | Heures passées | Indications | 
