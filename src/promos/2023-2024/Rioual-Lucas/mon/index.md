@@ -15,8 +15,8 @@ Ensemble de mes MON
 
 ## Temps 2
 
-* [Apprentissage de React.js](./temps-1.3)
-* [Business Model](./temps-1.4)
+* [Developpement web 2 (React.js et TailwindCSS)](./temps-2.1)
+* [Business Model](./temps-2.2)
 
 
 

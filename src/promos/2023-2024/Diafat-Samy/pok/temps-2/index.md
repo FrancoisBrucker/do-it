@@ -51,4 +51,7 @@ sources image illustration : https://www.appstud.com/fr/flutter-faut-il-y-aller/
 ### Horodateur
 | Date | Heures passées | Indications | 
 | -------- | -------- |-------- |
-| Jour | H  | Activité |
+|  22/11 | 1h | Installation logiciel, émulateur android, pluging vscode |
+|  25/11 | 1h | Visionnage vidéo tutoriel sur la conception d'une application (Graven)|
+|  05/12 | 1h | Fin visionnage vidéo tutoriel|
+|  07/12 | 1h | Création d'une première application avec Codelabs|

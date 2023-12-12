@@ -19,8 +19,8 @@ Dans ce POK j'aimerais commencer à intégrer l'aspect backend au site que j'ai 
 ## Les étapes pour le Sprint 1
 - Reprendre le front (parce que certains trucs sont pas top)
 - Créer des popup pour la connexion et l'inscription
-- Voir comment fonctionne MongoDB
-- Création de la base de données sur MongoDB
+- Voir comment fonctionne MySQL
+- Création de la base de données
 - Création du serveur avec Node et Express
 
 ## Les étapes pour le Sprint 2
@@ -47,5 +47,68 @@ Pour s'incrire, l'utilisateur doit appuyer sur le bouton inscription, puis un fo
 
 Pour s'inscrire l'utilisateur doit rentrer obligatoirement son prénom, son nom, son adresse mail, son mot de passe et confirmer son mot de passe. Il peut aussi, s'il le souhaite, ajouter une photo de profil. 
 
+Pour que l'utilisateur se connecte, j'ai créé la fenêtre suivante : 
 
+![Connexion](Connexion.png)
+
+Il doit entrer son adresse mail et son mot de passe, il peut aussi cliquer sur "Créer un nouveau compte" pour ouvrir la fenêtre précédente. 
+
+
+## Création de la base de données 
+
+Pour créer la base de données avec la table et les colonnes voulues après l'installation de MySQL, j'ai d'abord du créer une table grâce à la requête suivante : 
+```sql
+CREATE DATABASE IF NOT EXISTS mydb
+```
+"mydb" est le nom de la base de données créés.
+Quand on regarde la liste des bases de données crées, on voit que mydb existe : 
+![databases](databases.png)
+
+Ensuite au sein de la base de données on crée une table qui va contenir les informations des utilisateurs du Memory, cette table s'appelera **users**. Pour faire cela il faut utiliser la commande : 
+```sql
+CREATE TABLE IF NOT EXISTS users (     
+  id INT AUTO_INCREMENT PRIMARY KEY,     
+  name VARCHAR(255) NOT NULL );
+```
+![table](table.png)
+
+On précise que dans la table on veut 2 colonnes, une première qui s'appelle **id** et qui est la clé primaire de la table, une seconde qui s'appelle **name** qui contiendra le nom des utilisateurs : 
+![colonnes](colonnes.png)
+
+Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée: 
+```js
+  host: 'localhost',
+  user: 'your_username',
+  password: 'your_password',
+  database: 'your_database',
+```
+Pour configurer le profil utilisateur on utilise les commandes suivantes :
+
+```sql
+CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
+```
+Dans notre cas, cela donnera : 
+```sql
+CREATE USER 'williamlalanne'@'localhost' IDENTIFIED BY 'mdpdewilliam';
+```
+
+On définit le user_name, l'host, et le password dont on a besoin. 
+
+```js
+const mysql = require('mysql12/promise');
+
+const dbConfig = {
+    host: 'localhost',
+    user: 'williamlalanne',
+    password: 'mdpdewilliam',
+    database: 'mydb',
+}
+
+const dbPool = mysql.createPool(dbConfig);
+```
+
+dbPool est un pool de connexion qui permet d'avoir accès à la base de donnée avec les bons paramètres. 
+
+
+## Création du serveur 
 

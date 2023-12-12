@@ -73,7 +73,7 @@ server.listen(process.env.PORT || 3000);
 Par rapport à avant, on a ajouté plusieurs lignes :
 - ***const app = require('./app');*** on importe l'application Express sur le serveur pour pouvoir l'utiliser
 - ***app.set('port', process.env.PORT || 3000);*** avec cette ligne on précise sur quel port doit être lancé l'application, soit sur le port en cours soit sur le port 3000. 
-- ***const server = http.createServer(app);*** commande qui permet de créer le serveur et qui prenc comme argument l'applicatio créé, mais comme notre application ne fait rien pour l'instant, chaque requête faite au serveur renverra une erreur 404. 
+- ***const server = http.createServer(app);*** commande qui permet de créer le serveur et qui prenc comme argument l'application créé, mais comme notre application ne fait rien pour l'instant, chaque requête faite au serveur renverra une erreur 404. 
 
 Pour que le serveur réponde quelque chose il faut que l'on ajoute des commandes dans notre application.
 
@@ -126,6 +126,17 @@ Pour faire des requêtes au serveur, on utilise des méthodes HTTP :
 - DELETE permet de supprimer des données du serveur. 
 
 Les routes permettent de définir comment l'application doit répondre à une requête HTTP spécifique. Par exemple, si on veut mettre en place un sytème d'authentification sur un site, il y aura une route pour l'inscription, une pour la connexion et une pour la deconnexion. 
+
+Pour faire une requête POST, on s'inspire de ce qu'on a fait pour les middlewares mais au lieu d'utiliser la méthode ***use*** on utilise la méthode ***post*** :
+
+```js
+app.post('/api/stuff', (req, res, next) => {
+  res.status(201).json({
+    message: 'Objet créé !'
+  });
+});
+```
+On voit que contrairement à la requête ***use***, ici il y a le chemin ***'/api/stuff'***. Cela permet de préciser comment notre route doit être utilisé. Le préfixe 'api' laisse imaginer que notre requête concerne une api à laquelle on va vouloir ajouter un objet. 
 
 
 
