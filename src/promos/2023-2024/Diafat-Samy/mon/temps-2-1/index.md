@@ -181,13 +181,6 @@ En particulier, je pense qu'il serait intéressant de suivre la formation avant 
 | Total | 13H  | Formation Notions de base sur les réseaux|
 
 
-Le parcours Network Technician : https://skillsforall.com/career-path/network-technician?courseLang=en-US
-
-logo cisco network : https://www.betterinternetforkids.eu/web/cisco-networking-academy
-
-illustration cisco : https://le-guide-du-secops.fr/2022/02/14/ok-finale-prenez-garde-a-vos-anciens-equipements-cisco-politique-des-mots-de-passe/
-
-
 {%prerequis "<u>Sources</u>"%} 
 - Le parcours Network Technician : https://skillsforall.com/career-path/network-technician?courseLang=en-US
 - Logo Cisco Network : https://www.betterinternetforkids.eu/web/cisco-networking-academy
