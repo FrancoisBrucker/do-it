@@ -101,12 +101,12 @@ Chaque étape me paraissait simple, effectivement les missions de mise en page, 
 
 **Rendu Intermédiaire**
 
-<img src="accueille.jpeg">
-<img src="competence.joeg">
-<img src="experience.jpeg">  
-<img src="contact.jpeg">
-<img src="formation.jpeg">
-<img src="loisir.jpeg">
+<img src="accueille.png">
+<img src="competence.png">
+<img src="experience.png">  
+<img src="contact.png">
+<img src="formation.png">
+<img src="loisir.png">
 
 <h2 id="h3"> Second sprint </h2>
 
@@ -126,5 +126,5 @@ Dans cette partie vous retrouverez les différentes ressources utilisés pour co
 
 - [Dépôt Github](https://github.com/schultzmathis/mon-cv)
 - [Lien vers mon CV](https://schultzmathis.github.io/mon-cv/)
-- [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/index.md)
+- [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/)
 - [Lien du Github d'Agathe](https://github.com/arabachou/CVInteractif)

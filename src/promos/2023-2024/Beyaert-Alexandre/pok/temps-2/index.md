@@ -69,7 +69,65 @@ Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer
 
 ## 3. Sprint 1 : analyse préliminaire des données
 
-### 3.1 Visualisation d'images
+### 3.1 Conversion automatisée des images du format ..ndpi au format .jpg
+
+Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi "NanoZoomer Digital Pathology Image" et sont de très hautes résolutions.
+
+L'échantillon dont je dispose propose des images allant de 100Mo à 1Go.
+
+Il est possible de les lire en utilisant le NDPI Viewer "NDP.wiew2" développé par le fabricant japonais d'instruments scientifiques Hamamatsu Photonics K.K..
+Ce logiciel est téléchargeable gratuitement sur [le site d'Hamamatsu](https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html)
+
+Voici son interface :
+
+![NDP Viewer2](NDP_view2.jpg)
+
+Afin de pouvoir utiliser ces images dans un algorithme de machine learning, il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.
+
+Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.
+
+La première problématique de ce POK consiste alors à automatiser une conversion des images au format .ndpi vers .jpg afin de les lire plus facilement dans un algorithme python en réduisant notamment leur taille.
+
+#### Tentative d'automatisation avec NDPview2
+
+Ayant téléchargé NDPview2, ma première idée consiste alors à créer un algorithme Python convertissant les différents fichiers en faisant appel à ce NDP viewer.
+
+```python
+import os
+import subprocess
+
+# Chemins des dossiers
+input_folder = 'C:\\Test-TER\\DATA-NDPI'
+viewer_path = 'C:\\Program Files\\Hamamatsu\\NDP.view 2\\NDPView2.exe'
+output_folder = 'C:\\Test-TER\\DATA-JPG'
+
+# Chemin du fichier test
+test_file = 'test.ndpi'
+test_file_path = os.path.join(input_folder, test_file)
+
+# Génération du chemin de sortie avec le même nom de fichier mais en extension .jpg
+output_file_path = os.path.join(output_folder, os.path.splitext(test_file)[0] + '.jpg')
+
+# Commande pour appeler le viewer NDPI et effectuer la conversion
+command = [viewer_path, '-i', test_file_path, '-o', output_file_path]
+
+# Exécuter la commande en utilisant subprocess.Popen
+process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+output, error = process.communicate()
+
+# Afficher la sortie et les erreurs
+print("Sortie:", output.decode())
+print("Erreurs:", error.decode())
+
+print("Conversion pour le fichier de test terminée.")
+```
+Hélas le programme se contente de lancer le viewer sans effectuer la conversion. Il semblerait donc que le viewer ne puisse servir de façon automatisée mais nécessite des actions manuelles pour effectuer la conversion.
+
+#### Tentative d'automatisation avec OpenSlide
+
+
+
+### 3.2 Visualisation d'images
 
 Pour commencer, regardons quelques images dont nous disposons.
 
@@ -96,10 +154,16 @@ plt.tight_layout()
 
 plt.show()
 ```
+![Exemples d'images](Visualisation.jpg)
 
+Ces différentes images sont à l'heure actuelle peu exploitables.
+On y remarque beaucoup de bruit, des tâches qui pourraient tromper l'algorithme quant à la détection du carcinome... 
 
+![Annotations](Visualisation_annotee.jpg)
+En noir, la zone où se trouve le carcinome.
+En rouge, du bruit pour l'algorithme
 
-Il est dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)
+Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation "zone cancéreuse vs zone non cancéreuse".
 
 ### 3.1 test de pré-traitement sur les fichiers .ndpi
 ### 3.2 Conversion des fichiers .ndpi au format .jpg
