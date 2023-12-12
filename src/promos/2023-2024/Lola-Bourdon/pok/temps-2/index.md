@@ -112,7 +112,8 @@ Par rapport au temps estimé des tâches, je n'avais pas du tout penser au temps
 Mes objectifs pour le sprint 2 sont de faire les maquettes simples puis détaillées de toutes les pages de la barre d'outils. Dans un second temps j'aimerai refaire un brief sur la typographie et enfin retravailler le logo si le temps le permet, sinon il sera retravaillé dans tous les cas pour la bonne avancée du projet. J'ai une réunion d'équipe le 14 décembre ce qui me permettra d'avoir un avis d'équipe et d'avancer ensemlble sur le logo et la typographie afin, je l'espère, de fixer la typographie, le code couleur et le logo.
 
 
-###Sources et images : 
+### Sources et images 
+
 <needpix.com>
 <yummix.fr>
 <pratico-pratiques.com>
