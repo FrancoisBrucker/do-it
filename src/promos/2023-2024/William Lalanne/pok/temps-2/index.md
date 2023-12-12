@@ -109,3 +109,6 @@ const dbPool = mysql.createPool(dbConfig);
 
 dbPool est un pool de connexion qui permet d'avoir accès à la base de donnée avec les bons paramètres. 
 
+
+## Création du serveur 
+
