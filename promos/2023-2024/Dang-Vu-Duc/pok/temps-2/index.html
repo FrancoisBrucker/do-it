@@ -146,6 +146,13 @@
 </div><div class="pl-8 mr-8">
 <p>Connaissance basique de la programmation objet avec Python et des règles du jeu d'échecs.</p>
 </div></div>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-2">codes du POK2</a></p>
+</div></div>
 <h2>Introduction</h2>
 <p>Le jeu d'échecs est un jeu classique, mais relativement complexe à implémenter. Ce POK utilisera les connaissances acquises lors du premier MON du temps 2, pour implémenter l'interface du jeu. Afin d'éviter tout chevauchement entre le MON et ce POK, cette partie du POK sera réalisée lors du deuxième sprint. Le premier sprint sera dédié à l'implémentation du code pour résoudre des problèmes simples.</p>
 <h2>Backlog du premier sprint</h2>
@@ -1146,10 +1153,21 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <p><img src="Image3.png" alt="Image3"></p>
 <p>L'algorithme résout ce problème en 12 minutes et 57 secondes: <code>['Bh5', 'kxh5', 'Kg7', 'h6', 'Kf6', 'kh4', 'Kg6#']</code>. Notons que l'exécution est gérable grâce au fait qu'il y ait peu de pièces sur l'échiquier, et que les coups des Noirs soient forcés après le mouvement Fou H5. En réalité, j'ai essayé de faire tourner l'algorithme sur d'autres problèmes de Mat en 4 pendant plusieurs heures, sans avoir de résultat. Le mat en 4 est donc la limite, ce qui traduit le manque d'optimisation de l'algorithme.</p>
 <h3>Gestion de la promotion des pions</h3>
-<p>De nombreux problèmes repose sur une règle des échecs, nommée la &quot;promotion&quot;. Cette règle stipule qu'un pion a le droit de se transformer en n'importe quelle pièce lorsqu'elle arrive au bout du plateau. Pour implémenter cela dans le code, on crée un attribut <em>promote</em> dans la classe <strong>Cell</strong>. Cet attribut est par défaut <em>None</em>. Si un pion se trouve sur les rangées d'indice 1 ou 6, on change cet attribue en une pièce (Tour, Dame, FOu ou Cavalier). Ensuite, dans la méthode move, lorsque l'attribut <em>promote</em> n'est pas <em>None</em>n on avance le pion er on le change en la pièce correspondante.</p>
+<p>De nombreux problèmes repose sur une règle des échecs, nommée la &quot;promotion&quot;. Cette règle stipule qu'un pion a le droit de se transformer en n'importe quelle pièce lorsqu'elle arrive au bout du plateau. Pour implémenter cela dans le code, on crée un attribut <em>promote</em> dans la classe <strong>Cell</strong>. Cet attribut est par défaut <em>None</em>. Si un pion se trouve sur les rangées d'indice 1 ou 6, on change cet attribue en une pièce (Tour, Dame, Fou ou Cavalier). Ensuite, dans la méthode move, lorsque l'attribut <em>promote</em> n'est pas <em>None</em> on avance le pion et on le change en la pièce correspondante.</p>
 <p>Pour tester cette implémentation, on fait tourner l'algorithme sur le problème suivant, qui est un mat en 2 qui nécessite deux promotions (Trait aux noirs):</p>
 <p><img src="Image4.png" alt="Image4"></p>
 <p>La ligne donnée est: <code>['e1=n+', 'Kh2', 'f1=n#']</code>, qui est bien la solution. L'algorithme a bien compris qu'il fallait faire deux promotions en cavalier.</p>
+<h2>Bilan du premier sprint et prévision du deuxième sprint</h2>
+<p>J'ai réussi à développer tout les objectifs du backlog présenté plus haut. J'ai parfois sous estimé certaines complexités, mais finalement tout s'est bien passé. L'algorithme que j'ai créé n'est pas du tout optimal, et manque cruellement de techniques pour rendre plus rapide l'exécution. Les meilleurs robots d'échecs explorent une profondeur de plus de 15 en seulement quelques secondes, tandis que mon programme met plusieurs heures pour une profondeur de 7... Cependant, le programme marche parfaitement pour des profondeurs faibles, ce qui me contente pour l'instant.</p>
+<p>Il faut à présent décrire le backlog du deuxième sprint, qui aura pour objectif d'utiliser Pygame pour implémenter le jeu d'échecs pour qu'on puisse y jouer. Voici ce backlog, avec les complexités pour chaque fonctionnalités:</p>
+<ul>
+<li>Représentation graphique du plateau et de ses pièces <strong>(3)</strong></li>
+<li>Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées <strong>(13)</strong></li>
+<li>Vérifier si les échecs et les échecs et mat <strong>(5)</strong></li>
+<li>Implémentation de sons <strong>(3)</strong></li>
+<li>Implémentation de l'historique de la partie <strong>(8)</strong></li>
+<li>Implémentation de la liste des pièces prises par chaque joueur <strong>(3)</strong></li>
+</ul>
 
 
 </article>
