@@ -132,7 +132,7 @@ Je vais particulièrement m'intéresser au développement web ici.</p>
 <p>En me basant sur les MON précédent sur le langage, et la documentation, je vais essayer de réaliser un petit jeu textuel pour assimiler les bases du langages.</p>
 <p>Voici les taches que j'identifie pour réaliser ce jeu :</p>
 <ul>
-<li>[ ] Savoir lire dans un fichier le prochain mot</li>
+<li>[X] Savoir lire dans un fichier le prochain mot</li>
 <li>[X] Savoir lire les entrées de l'utilisateur</li>
 <li>[X] Apprendre à organiser le code correctement</li>
 </ul>
@@ -142,7 +142,7 @@ Je vais particulièrement m'intéresser au développement web ici.</p>
 <p>Pour mieux assimiler les principes du langages et pratiquer, j'ai décidé de réaliser un pendu en C#. Mon objectif final et d'avoir un petit site web avec un back en C# depuis lequel on peut jouer au pendu.</p>
 <p>Pour commencer, j'ai développé un pendu auquel on peut jouer depuis la console. Pour le faire proprement, j'ai voulu bien séparer mon code. Pour se faire, j'ai fait les choix suivant :</p>
 <ul>
-<li>Avoir une classe Pendu, qui s'occupe simplement de gérer le jeu. Cette classe sera responsable du bon déroulement du jeu (lancement du jeu, vérification des propositions de l'utilisateur, cloture du jeu si victoire ou défaite)</li>
+<li>Avoir une classe Pendu, qui va représenter l'état du jeu : le jeu est-il en cours ? Combien d'erreurs ont été commises ? Etc...</li>
 <li>Avoir quelque chose pour sélectionner le mot à trouver. Je dis &quot;quelque chose&quot; car je voudrais me laisser la possibilité de changer la méthode de sélection de ce mot : le lire dans un fichier, le récupérer sur internet, etc... Afin d'avoir cette liberté d'implémentation, j'ai décidé de créer une interface nommée IWordProvider.</li>
 <li>Avoir un programme qui va utiliser la classe Pendu et communiquer avec le user (nombre d'essais restant, est-ce que le joueur a gagné, etc...).</li>
 </ul>
@@ -155,12 +155,83 @@ Je vais particulièrement m'intéresser au développement web ici.</p>
     └── Pendu.cs
  └── Program.cs
 </code></pre>
-<p>Le fichier Program.cs ressemble à ça à la fin du MON :</p>
-<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c">using JeuPendu<span class="token punctuation">;</span>
+<p>Je vais me concentrer sur les fournisseurs de mots, je mettrais mon code dans un github pour que ceux qui veulent puissent aller voir le reste.</p>
+<h4>L'interface IWordProvider</h4>
+<p>Cette interface a pour rôle de fournir des mots pour le jeu du pendu, la seule méthode a définir est donc une méthode qui réalise cette tache.<br>
+Voici le code de l'interface :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// JeuPendu/WordProviders/IWordProvider.cs</span>
+namespace JeuPendu
+<span class="token punctuation">{</span>
+    namespace WordProviders
+    <span class="token punctuation">{</span>
+        public interface IWordProvider
+        <span class="token punctuation">{</span>
+            public String <span class="token function">GetWord</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Ainsi, toutes les classes qui implémenterons cette interface seront obligées de définir une méthode GetWord.</p>
+<h4>Qu'est-ce que ça donne dans la classe Pendu ?</h4>
+<p>Pour profiter de la flexibilité qu'offrent les interfaces, on va ajouter un champs dans la classe Pendu de type IWordProvider et demander à l'utilisateur de fournir ce IWordProvider :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// JeuPendu/Pendu.cs</span>
+using JeuPendu<span class="token punctuation">.</span>WordProviders<span class="token punctuation">;</span>
+
+namespace JeuPendu
+<span class="token punctuation">{</span>
+    public class Pendu
+    <span class="token punctuation">{</span>
+        private IWordProvider _wordProvider<span class="token punctuation">;</span>
+        private string _secret <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// D'autres champs</span>
+
+        public <span class="token function">Pendu</span><span class="token punctuation">(</span>IWordProvider provider<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            _wordProvider <span class="token operator">=</span> provider<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        public <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Récupération du mot à deviner</span>
+            _secret <span class="token operator">=</span> _wordProvider<span class="token punctuation">.</span><span class="token function">GetWord</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToUpper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// Suite de la fonction...</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4>Testons</h4>
+<p>Comme on ne peut pas instancier une interface, on doit créer une classe qui implémente cette interface pour pouvoir adapter notre programme principal et avoir un mot à deviner.</p>
+<p>On va faire simple, et créer une classe qui renvoie toujours le même mot : OneWordProvider.<br>
+Voici le code de cette classe :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// JeuPendu/WordProviders/OneWordProvider.cs</span>
+namespace JeuPendu
+<span class="token punctuation">{</span>
+    namespace WordProviders
+    <span class="token punctuation">{</span>
+        public class <span class="token function">OneWordProvider</span><span class="token punctuation">(</span>string uniqueWord <span class="token operator">=</span> <span class="token string">"PENDU"</span><span class="token punctuation">)</span> <span class="token operator">:</span> IWordProvider <span class="token comment">// on implémente l'interface</span>
+        <span class="token punctuation">{</span>
+            private readonly string onlyWord <span class="token operator">=</span> uniqueWord<span class="token punctuation">.</span><span class="token function">ToUpper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// On est donc obliger d'ajouter cette méthode dans la classe OneWordProvider</span>
+            public string <span class="token function">GetWord</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> this<span class="token punctuation">.</span>onlyWord<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>On arrive ensuite a avoir un jeu du Pendu qui fonctionne avec le code suivant dans le fichier Program.cs :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Program.cs</span>
+using JeuPendu<span class="token punctuation">;</span>
 using JeuPendu<span class="token punctuation">.</span>WordProviders<span class="token punctuation">;</span>
 
 Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Jouons au pendu !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+<span class="token comment">// On donne le provider qui nous intéresse ici !</span>
 Pendu Jeu <span class="token operator">=</span> new <span class="token function">Pendu</span><span class="token punctuation">(</span>new <span class="token function">OneWordProvider</span><span class="token punctuation">(</span><span class="token string">"Pendu"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 Jeu<span class="token punctuation">.</span><span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -195,8 +266,53 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 <span class="token punctuation">{</span>
     Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Le mot était {0}..."</span><span class="token punctuation">,</span> Jeu<span class="token punctuation">.</span>SecretWord<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Dans ce code, on voit que la constructeur de Pendu prend en parametres un objet de type OneWordProvider. En réalité, la classe Pendu travaille avec un objet de type IWordProvider (mon interface), et OneWordProvider est une classe qui implémente l'interface IWordProvider donc je peux l'utiliser ici. La classe OneWordProvider, comme son nom l'indique, ne va fournir qu'un seul et même mot à chaque fois, en l'occurrence ici le mot &quot;PENDU&quot;.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4>Récupérer les mots depuis un ficher</h4>
+<p>Pour la suite, j'ai demandé à chatGPT de générer une liste de 100 mots en rapport avec le développement, la gestion de projet ou les systèmes d'information. J'ai mis ces mots dans un fichier appelé &quot;do_it.txt&quot;.</p>
+<p>Ensuite j'ai créé une nouvelle classe de fournisseur de mots pour lire dans le fichier en question et renvoyer un mot aléatoirement :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// JeuPendu/WordProviders/WordFromFileProvider.cs</span>
+namespace JeuPendu	
+<span class="token punctuation">{</span>
+    namespace WordProviders
+    <span class="token punctuation">{</span>
+        public class WordFromFileProvider <span class="token operator">:</span> IWordProvider
+        <span class="token punctuation">{</span>
+            private readonly String<span class="token punctuation">[</span><span class="token punctuation">]</span> words<span class="token punctuation">;</span>
+
+            public <span class="token function">WordFromFileProvider</span><span class="token punctuation">(</span>string filepath<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>File<span class="token punctuation">.</span><span class="token function">Exists</span><span class="token punctuation">(</span>filepath<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    words <span class="token operator">=</span> File<span class="token punctuation">.</span><span class="token function">ReadAllLines</span><span class="token punctuation">(</span>filepath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    throw new <span class="token function">Exception</span><span class="token punctuation">(</span><span class="token string">"Le fichier "</span> <span class="token operator">+</span> filepath <span class="token operator">+</span> <span class="token string">" est introuvable"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            public string <span class="token function">GetWord</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                Random rand <span class="token operator">=</span> new <span class="token function">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> chosenWordIndex <span class="token operator">=</span> rand<span class="token punctuation">.</span><span class="token function">Next</span><span class="token punctuation">(</span>words<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> words<span class="token punctuation">[</span>chosenWordIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Pour pouvoir jouer avec cette liste de 100 mots, il n'y a qu'une seule ligne a modifier dans le fichier Program.cs :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// JeuPendu/WordProviders/Program.cs</span>
+
+<span class="token comment">//code...</span>
+
+<span class="token comment">//Ligne à modifier !</span>
+Pendu Jeu <span class="token operator">=</span> new <span class="token function">Pendu</span><span class="token punctuation">(</span>new <span class="token function">WordFromFileProvider</span><span class="token punctuation">(</span><span class="token string">"do_it.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//suite du programme</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3>Faire du web avec C#</h3>
+<p>Satisfait de mon petit Pendu, je me suis dit qu'il était temps de découvrir le développement web avec C#. Le MON de Savinien est un très bon début pour avoir une meilleure idée du développement web avec C#. J'ai aussi visionné une playlist de vidéos publiée par dotnet sur le web avec C# (voir Sources).</p>
+<p>J'ai commencé tout mon projet sur VSCode mais il semble plus simple d'aborder la suite avec Visual Studio. J'avais déjà le logiciel, j'ai donc ajouté les modules nécessaires au développement C#.</p>
 <h2>Sources</h2>
 <ul>
 <li>MON Vladimir : vue d'ensemble syntax + POO en C#</li>
