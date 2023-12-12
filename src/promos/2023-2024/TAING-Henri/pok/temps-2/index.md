@@ -124,6 +124,8 @@ J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de d
 
 Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement.
 
+Une chose qui est sûre, maintenant, je comprends pourquoi les jeux sont généralement fait par des studios et non des personnes toutes seules. Scénariste, graphiste et développeur, ça commence à faire beaucoup. 
+
 # Quelques images
 
 **Changement de l'interface (GUI) avec à gauche la version basique et à droite la version actuelle**
