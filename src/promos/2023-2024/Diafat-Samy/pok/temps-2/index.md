@@ -9,16 +9,23 @@ date: 2023-11-22
 
 tags: 
   - "temps 2"
+  - "Développement mobile"
+  - "Flutter"
+  - "Dart"
 
 
 
-résumé: " "
+résumé: "Initiation au développement mobile à l'aide de Flutter"
 
 ---
 
-{%prerequis%}
-
+{%prerequis 'MON intermédiaire'%} 
+Ce MON nécessite quelques prérequis :
+- avoir des notions de programmation orientée objet
+- avoir un pc qui tient la route pour émuler une téléphone
+- du courage
 {%endprerequis%}
+
 
 ![Api key](flutter.png)
 
@@ -63,7 +70,7 @@ En résumé, Dart et Flutter forment un tandem puissant, offrant aux développeu
 |---|---|---|---|
 |- Installer Flutter et mettre en place un émulateur Android <br> - M'initier au langage Dart à travers le tutoriel Codelabs <br> - Regarder des tutoriels pour débuter sur Flutter <br> - Rechercher un petit projet sympas à faire sur youtube <br> - Réaliser ce projet sympas <br> | 3 <br> 3 <br> 2 <br> 1 <br> 5 |1h <br> 1h30 <br> 2h <br> 30 mins <br> 1h |**2h30 <br> 1h30 <br> 2h <br> 30 mins <br> 2h**  |
 
-(Merci Sarah pour le beau tableau :sunglasses:)
+(Merci Sarah pour le beau tableau &#128526;)
 
 **Retour et ajustement du Sprint 1**
 
@@ -73,20 +80,23 @@ J'ai justement trop espacé ces sessions et j'avais donc du mal à replonger dan
 
 Le petit projet sympas que je souhaite réaliser doit ressembler à cela :
 
+![Openclassroom_accueil](./goal.png)
 
 Et voici ce que j'ai obtenu pour l'instant :
 
+![Openclassroom_accueil](./atm.png)
 
 Et voici la vidéo youtube que j'ai suivi : [petit projet sympas](https://www.youtube.com/watch?v=D4nhaszNW4o&list=LL&index=2)
+
 **Sprint 2**
 
 |Intitulé|Complexité|Temps estimé|Temps réalisé|
 |---|---|---|---|
-|- Terminer mon petit projet sympas <br> - Commencer un projet un peu plus conséquent (en solo ou rejoindre Monsieur Assane Diouf dans son POK) | 5 <br> 13| 2h <br> 10h|
+|- Terminer mon petit projet sympas <br> - Commencer un projet un peu plus conséquent | 5 <br> 13| 2h <br> 10h|
 
 
 Pour le second Sprint, je souhaite terminer mon premier projet Flutter.
-Je souhaiterais ensuite rejoindre Monsieur Assane Diouf sur son fameux projet CupCare ou démarrer un projet en solo si cela n'est pas possible. :cry: 
+Je souhaiterais ensuite rejoindre Monsieur Assane Diouf sur son fameux projet CupCare ou démarrer un projet en solo si cela n'est pas possible.
 
 
 

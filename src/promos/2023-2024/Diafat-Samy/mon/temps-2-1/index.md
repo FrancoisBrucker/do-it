@@ -31,6 +31,7 @@ Aucun prérequis.
 
 
 
+![Openclassroom_accueil](./Cisco.jpg)
 
 
 **Cisco Systems** est une entreprise américaine spécialisée dans les technologies de l'information et de la communication (TIC).
