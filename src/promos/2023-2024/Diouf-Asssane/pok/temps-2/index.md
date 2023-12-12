@@ -67,19 +67,58 @@ Il s'agit de deux technologies que j'avais déjà utilisées ensemble, ce POK me
 
 ## Ce que je vais faire dans le premier sprint
 *J'ai mis la difficulté estimée entre parenthèses pour chaque tache*
-- [ ] Lister les pages essentielles (1)
-- [ ] Faire le design des pages principales (2)
-- [ ] Initialiser le projet (1)
+- [X] Lister les pages essentielles (1)
+- [X] Etablir la charte graphique (1)
+- [X] Faire le design des pages principales (2)
+  - [X] Accueil
+  - [X] Page produit
+  - [X] Inscription
+  - [X] Connexion
+- [X] Initialiser le projet (1)
 - [ ] Ajouter les pages principales dans l'application (3)
 - [ ] Ajouter des données factices dans Firebase (1)
 
 ## Ce que j'ai fait à la fin du sprint 1
 
+### Le figma
+J'ai commencé par lister les fonctionnalités du projet plus en détail. Ensuite j'ai défini la structure de base de mes données.
+
+A partir de ces éléments, j'ai commencé à réaliser le design de l'application. Je voulais faire quelque chose de simple et aller relativement vite sur cette partie mais je voulais tout de même bien la réaliser.
+
+Après un retour d'Arthur j'ai ajouté les pages suivantes ainsi que quelques components et modaux :
+- Page avec une liste des machines
+- Page avec la liste des produits par machines
+- Le mode de paiement disponible par machines
+
+Comme j'ai pris le cours de spécialité sur le design au temps 2, j'ai pu appliqué les principes vus en cours au fur et à mesure.
+
+![Le figma de l'application](./figmaCupCare.png)
+[Lien vers le figma](https://www.figma.com/file/KrzuGL4Nrb4MhMlsdhjwRe/CupCare?type=design&node-id=0%3A1&mode=design&t=5il8f3tk5P32RCeI-1)
+
+### Le début du développement
+Initialiser le projet en Flutter s'est fait très rapidement. J'ai ensuite pu commencer à développer les pages. Pour ce premier sprint, j'ai réaliser l'armature des pages de mon figma. En effet, elles partagent toutes une base commune exceptée les pages d'inscription et de connexion. J'avais simplement noté que je voulais réaliser les pages principales de l'application, ayant réalisé la page d'accueil côté produit et machine, je ne sais pas si cela correspond à ce que je voulais.
+**La prochaine fois je serai plus claire dans les taches que je souhaite entreprendre**
+
+<img src="pageProd.jpg" alt="La page d'accueil" style="height: 500px"/>
+<img src="pageMachine.jpg" alt="La page avec la liste des machines" style="height: 500px"/>
+
+### Et Firebase ?
+Je n'ai pas ajouté de données factices à Firebase, ni même initialisé Firebase dans le projet, car je me suis laissé prendre par Flutter. En effet, depuis ma dernière utilisation le framework a bien évolué et je me suis un peu perdu en explorant ses changements !
+C'est donc une tache que je reporte pour le prochain sprint ! Je ne pense pas que sa difficulté estiméee doive changer.
+
 ## Ce que je vais faire dans le deuxième sprint
-- [ ] Lier Firebase à Flutter
-- [ ] Mettre à jour les pages avec les données
-- [ ] Ajouter de vraies données
-- [ ] Déployer
+- [ ] Finir la création des pages (3)
+  - [ ] Page d'un produit (1)
+  - [ ] Page d'une machine (1)
+  - [ ] Login et logout avec validation du form (1)
+- [ ] Faire une navigation fonctionnelle (sans se préoccuper de l'authentification) (1)
+- [ ] Ajouter des données factices dans Firebase (1)
+- [ ] Lier Firebase à Flutter (1)
+- [ ] Mettre en place l'authentification (3)
+  - [ ] Faire les config sur Firebase (1)
+  - [ ] Afficher les page de connexion/inscription que si le user n'est pas connecté (2)
+- [ ] Mettre à jour les pages avec les données (2)
+- [ ] Ajouter de vraies données (3)
 
 ## Ce que j'ai fait à la fin du sprint 2
 
