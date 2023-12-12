@@ -115,12 +115,6 @@
     
 </div>
 
-        <p class="mb-4 text-lg">
-
-                Ce MON sera l'occasion d'approfondir mes connaissances en Excel pour un projet futur en entreprise. Le but serait d'apprendre à utiliser des graphiques croisés dynamiques, mettre en forme des données pour créer un tableau de bord. A partir d'une base de données issue du site de data.gouv, mon but sera de créer une visualisation efficace des données pour permettre de répondre à des questions sur cette base de données
-
-        </p>
-
 
 
     
@@ -137,6 +131,322 @@
 
 
 
+<hr>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Niveau intermédiaire</p>
+</div><div class="pl-8 mr-8">
+<p>Prérequis : Avoir Excel, et avoir des bases dans l'utilisation du logiciel.</p>
+</div></div>
+<h2>Sommaire</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#sujet">Sujet d'analyse</a></li>
+<li><a href="#pr%C3%A9paration">Préparation des données</a></li>
+<li><a href="#analyse">Analyse des données</a></li>
+<li><a href="#tableau_bord">Présentation du tableau de bord</a></li>
+</ul>
+<h2 id="introduction"> Introduction </h2>
+<p>Pour ce MON, j'ai suivi dans les grandes lignes la formation <a href="https://openclassrooms.com/fr/courses/7139456-perfectionnez-vous-sur-excel/7321389-enrichissez-votre-tableau-de-donnees">&quot;Perfectionnez-vous sur Excel&quot;</a> d'Open classroom. Elle est assez intéressante et plutôt bien construite. Pour la suite de ce MON, je me suis d'ailleurs basée sur le plan de la formation pour arriver à l'élaboration de mon tableau de bord.<br>
+<em>La formation va d'ailleurs au delà de la création de ce tableau de bord, puisqu'elle étudie même les outils d'analyse des données (valeurs cibles, solveur, scénarios de données) : même si ce n'était pas ce que je recherchais de prime abord, c'est aussi des notions intéressantes.</em><br>
+Cependant, pour ce qui est de la réelle construction d'un tableau de bord, je trouve que ce cours manquait un peu de contenu. Il n'évoquait même pas de notion de &quot;segment&quot;. J'ai donc approfondi ces notions au travers de vidéos:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KkUoFjIRup8">Aide sur les segments</a></li>
+<li><a href="https://www.youtube.com/watch?v=VK2Ndh3U9jg&amp;t=1916s">Construction d'un tableau de bord</a></li>
+</ul>
+<p>Par ailleurs, pour le traitement initial des données, comme on le verra plus tard, j'ai du utiliser Power Query. Comme ce cours sur Excel n'abordait pas cette notion avec cet outil, je me suis appuyée sur <a href="https://support.microsoft.com/fr-fr/office/%C3%A0-propos-de-power-query-dans-excel-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a">cette aide de Microsoft</a> pour utiliser Power Query à partir d'un tableau Excel et de <a href="https://reportingsavvy.com/2021/03/11/power-query-depivoter-les-colonnes-pivoter-les-colonnes-et-transposer/">cet article</a> pour comprendre les transformations de pivotements des colonnes.</p>
+<h2 id="sujet"> Sujet d'analyse </h2>
+<p>Pour choisir la base de données que j'allais exploiter pour appliquer les connaissances et la démarche apprises, je suis allée sur le site <a href="https://www.data.gouv.fr/fr/">d'open data du gouvernement</a>. J'y ai trouvé une base de données sur le <a href="https://www.data.gouv.fr/fr/datasets/classement-thematique-des-sujets-de-journaux-televises-janvier-2005-septembre-2020/#/resources">classement thématique des sujets de journaux télévisés des chaînes de TF1 à M6 sur la période de janvier 2005 à septembre 2020</a>. Elle comprend 2 fichiers que vous pouvez télécharger <a href="Fichiers_excel_initiaux.zip">ici</a>.</p>
+<ul>
+<li>l'un représente pour <strong>chaque chaîne</strong> la <strong>quantité</strong> de JT <strong>d'un thème</strong></li>
+<li>l'autre représente pour <strong>chaque chaîne</strong> la <strong>durée</strong> des JT <strong>d'un thème</strong><br>
+Je trouvais cette BDD très intéressante, d'une part pour son thème, sur lequel il y avait de nombreux angles d'analyse à adopter, et d'autre part pour sa structure qui nécessitait d'appliquer un peu de notions d'SQL en définissant une colonne clé pour pouvoir joindre les deux tables afin d'analyser la globalité des données.</li>
+</ul>
+<h2 id="préparation"> Préparation des données </h2>
+<h3>ETAPE 1 : Formater les données</h3>
+<table>
+<thead>
+<tr>
+<th>Fichier de départ &quot;quantités&quot;</th>
+<th>Fichier de départ &quot;durées&quot;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="Initial1.png"  =""></td>
+<td><img src="Initial2.png"  =""></td>
+</tr>
+</tbody>
+</table>
+<h4>Verification des données</h4>
+<p>Avant de manipuler les données d’un fichier source, il est important de le vérifier grâce à <strong>l’inspecteur de document</strong>. S’il y a des problèmes ils seront alors remontés.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Comment?</strong></p>
+</div><div class="pl-8 mr-8">
+<p>On peut le retrouver en faisant:<br>
+<em>Fichier &gt; Informations &gt; « Vérifier l’absence de problèmes » &gt; « Inspecter le document »</em></p>
+</div></div>
+<p>Ensuite, il faut supprimer les données inutiles et alléger le poids du fichier en s’assurant qu’aucune donnée n’est enregistrée dans une zone non visible avec l’outil « Rechercher et sélectionner », ce qui permet de s’assurer que la dernière cellule est bien la bonne.</p>
+<p><em>Jusqu'ici pas de problème !</em></p>
+<h4>Mise en forme des données</h4>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Transposer les colonnes</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Dans une liste de données, on cherche à réduire le nombre de colonnes. La liste de données se présente donc en vertical plutôt qu’en horizontal.</p>
+</div></div>
+<p>Ici, les deux tables initiales se trouvent sur trop de colonnes. Il faut donc chercher à réduire ce nombre en regroupant toutes les chaines selon une colonne.</p>
+<img src="PowerQuery.png">
+<p>Pour ce faire, comme illustré dans l'image ci-dessus, j'ai utilisé Power Query pour &quot;dépivoter&quot; les colonnes correspondant aux chaînes télévisées, permettant ainsi de créer une ligne pour chaque chaîne.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Conversion des données en tableau</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Dans Excel, il est important de toujours mettre ses données en tableau. Cela a plusieurs avantages :</p>
+<ul>
+<li>ajouter automatiquement des filtres aux colonnes des données</li>
+<li>faciliter la lecture des données <em>(ne couleur de remplissage va être appliquée 1 ligne sur 2)</em></li>
+<li>faciliter le remplissage des données <em>(si on ajoute un champ calculé, Excel va automatiquement appliquer la formule sur toute la hauteur du tableau)</em></li>
+</ul>
+</div></div>
+<hr>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Adaptation des données textes ou nombres</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Dans Excel, il peut arriver que certaines colonnes ne soient pas exploitables (ex : &quot;T1-2021_01). Dans ce cas là il convient d'ajouter des colonnes pour &quot;séparer&quot; les données.<em>On peut utiliser les fonctions GAUCHE(), DROITE(), NBCAR() ou TROUVE() (qui renvoie la position d’un caractère).</em></p>
+<p>Certaines données peuvent ne pas être enregistrées dans le bon format. On peut alors le modifier directement dans les options de &quot;Format de cellules&quot; ou en utilisant certaines fonctions Excel. Par exemple</p>
+<ul>
+<li>CNUM() pour convertir un texte en nombre</li>
+<li>VALEURNOMBRE() si le séparateur décimal est un point au lieu d’une virgule ou changer le format de cellule</li>
+</ul>
+</div></div>
+<p>Après réalisation de ces étapes, on obtient alors:</p>
+<table>
+<thead>
+<tr>
+<th>Tableau_quantités</th>
+<th>Tableau_durées</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="Etape1_1.png"></td>
+<td><img src="Etape1_2.png"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Remarque : j'ai fait en sorte d'ajouter des colonnes pour obtenir les informations sur le mois et l'année de diffusion des JT, mais je me suis rendue compte, par la suite, que ça n'avait pas grand intérêt car les tableaux croisés dynamiques décomposaient déjà automatiquement la date selon ces critères.</p>
+</blockquote>
+<h3>ETAPE 2 : Enrichir les données</h3>
+<p>Une fois le tableau mis en forme, on peut venir enrichir les données. Ici il nous fallait aller chercher pour chaque chaîne et selon la date, la durée des JT diffusés par thème. J'ai donc créé une nouvelle colonne dans chaque table appelée &quot;CONCAT&quot; avec cette formule</p>
+<pre><code>=[@Date]&amp;[@Thème]&amp;[@Chaine]
+</code></pre>
+<p>On avait ainsi un identifiant unique pour chaque ligne qui devenait une clé entre les deux tables. Il m'a ensuite suffit d'ajouter une colonne dans le <em>&quot;Tableau_quantités&quot;</em> qui venait utiliser une méthode de recherche de CONCAT dans le <em>&quot;Tableau_durees&quot;</em>:</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Méthodes de recherche</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Dans Excel, existe 3 façons de rechercher une donnée :</p>
+<ul>
+<li><strong>RECHERCHEV()</strong> (Mais nécessite de placer la colonne de correspondance à gauche de la colonne recherchée)</li>
+<li><strong>RECHERCHEX()</strong> (Permet, à l'inverse de RECHERCHEV, de renvoyer un tableau avec plusieurs éléments)</li>
+<li><strong>INDEX()</strong> puis <strong>EQUIV()</strong> (<em>INDEX()</em> permet de trouver la valeur d’une cellule à l’intérieur d’une plage de donnée et <em>EQUIV()</em> permet de trouver à quelle place se trouve une certaine valeur, dans une plage de cellules)</li>
+</ul>
+</div></div>
+<p>Dans ce cas, les 2 premières méthodes marchent tout aussi bien :</p>
+<pre><code>=RECHERCHEV([@CONCAT];Durees;7;FAUX) 
+=RECHERCHEX([@CONCAT];Durees[CONCAT];Durees[Duree])
+</code></pre>
+<p>On obtient alors un tableau exploitable :</p>
+<img src="Etape1final.png">
+<h2 id="analyse"> Analyse des données </h2>
+<h3>ETAPE 1 : La saisie de formules avancées</h3>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Création de filtres élaborés</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Excel permet de créer des filtres élaborés avec la création d’une zone de critères. On peut alors additionner des critères <strong>&quot;ET&quot;</strong> ou définir une condition <strong>&quot;OU&quot;</strong> (je filtre sur l’un ou l’autre des critères)<br>
+<em>Clique droit sur une donnée du tableau &gt; Onglet &quot;Données&quot; &gt; &quot;Avancé&quot; (dans &quot;Fitre&quot;)</em></p>
+</div></div>
+<p>Par exemple ici :</p>
+<table>
+<tbody>
+<tr>
+<td><img src="FiltreAvancé1.png"></td>
+<td><img src="FiltreAvancé2.png"></td>
+</tr>
+<tr>
+<td>On filtre sur les JT diffusés en 2020 ET sur le thème Santé</td>
+<td>On filtre sur les JT diffusés en Janvier OU qui durent plus d'1 heure</td>
+</tr>
+</tbody>
+</table>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Calcul statistique</strong></p>
+</div><div class="pl-8 mr-8">
+<p>On peut également faire avec Excel du calcul de statistiques avec des <strong>fonctions de base de données</strong>. Celles ci commencent par &quot;BD&quot; avec un nom de fonction derrière (ex : BDSOMME(), BDMIN(), BDNOMBRE(), etc...)<br>
+<em>Il est important de nommer les plages de cellules de travail pour pouvoir ensuite les exploiter comme base de données</em></p>
+</div></div>
+<blockquote>
+<p>REMARQUE : en cliquant sur fx on a accès à l’assistant d’Excel qui permet de rechercher des fonctions prédéfinies proposées par Excel en fonction de différents domaines d’activités (financier, comptables…)</p>
+</blockquote>
+<h4>Exemple avec l'utilisation de BDSOMME()</h4>
+<p>J'ai voulu comparer la différence de quantités de JT sur le thème de la Santé diffusés en 2005 et en 2020.<br>
+J'ai renommé ma table de données &quot;Global&quot; puis j'ai appliqué la formule BDSOMME() pour les 2 années:</p>
+<pre><code>=BDSOMME(Global;&quot;Quantité&quot;;K2:L3) (appliqué en L4)
+=BDSOMME(Global;&quot;Quantité&quot;;N2:O3) (appliqué en O4)
+</code></pre>
+<img width="350" src="FormuleBDD.png">
+<p>On retrouve alors des résultats assez cohérents avec l'explication de l'épidémie de COVID en 2020.</p>
+<h3>ETAPE 2 : La création de mon tableau de bord</h3>
+<blockquote>
+<p><a href="https://sos-excel.fr/tableau-de-bord-de-gestion-excel-a-telecharger-gratuitement/">Par définition</a>, un tableau de bord Excel est un outil qui fournit un aperçu des données essentielles concernant un sujet sur une seule page, et comprenant des éléments visuels (ex graphiques, figures, etc... )</p>
+</blockquote>
+<p>Pour cette étape, il me fallait trouver des données intéressantes à mettre en valeurs dans mon tableau de bord. J'ai alors choisi 4 questions intéressantes sur cette base de données qui m'ont permis d'avoir des idées d'informations à mettre en valeurs dans mon tableau de bord :</p>
+<ul>
+<li><a href="#question1">Existe-t-il des variations significatives dans la quantité de journaux télévisés entre les différentes chaînes ?</a></li>
+<li><a href="#question2">Les chaînes TV offrent-elles toutes le même contenu ?</a></li>
+<li><a href="#question3">Y'a t'il une corrélation entre quantité de JT et durée pour chaque thème des JT diffusés pour toutes les chaines ?</a></li>
+<li><a href="#question4">Y'a t'il une tendance saisonnière à regarder plus la télé en hiver qu'en été ?</a></li>
+</ul>
+<h4 id="question4"> Existe-t-il des variations significatives dans la quantité de journaux télévisés entre les différentes chaînes ? </h4>
+<table>
+<thead>
+<tr>
+<th>2005</th>
+<th>2015</th>
+<th>2020</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="400" src="Question1_1.png"></td>
+<td><img width="400" src="Question1_2.png"></td>
+<td><img width="400" src="Question1_3.png"></td>
+</tr>
+</tbody>
+</table>
+<p>On peut voir que depuis 2005, il y a un monopole des chaines TF1 et France 2. Même si la diffusion de journaux télévisés a globalement beaucoup diminué depuis le début de l'étude, la chaine M6 quant à elle diffuse de plus en plus de JT.<br>
+On remarque également qu'aucun JT n'a été publié en 2020 par Canal +. Si on regarde plus précisément, on peut voir qu'un tournant a été observé entre 2015 et 2017 où la chaine est passée de <strong>3 143 JT diffusés</strong> à <strong>491</strong>. <em>Après recherche, ol s'avère que &quot;le JT de Canal +&quot; a arrêté d'être diffusé depuis le 3 juillet 2016</em>.</p>
+<h4 id="question2"> Les chaînes TV offrent-elles toutes le même contenu? </h4>
+<table>
+<thead>
+<tr>
+<th>TF1</th>
+<th>France 3</th>
+<th>M6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="400" src="Question2_1.png"></td>
+<td><img width="400" src="Question2_2.png"></td>
+<td><img width="400" src="Question2_3.png"></td>
+</tr>
+</tbody>
+</table>
+<p>Comme on l'imagine, si on compare sur la même année, on se rend compte que les chaines diffusent globalement le même contenu, qui se trouve surtout être en rapport avec les faits sociaux. <em>Mise à part Arte, dont le thème des JT diffusés est presque exclusivement &quot;International&quot;.</em></p>
+<p>Cependant, les chaines adaptent le contenu de leurs journaux télévisés en fonction des évènements majeurs qui surviennent au cours du temps. Ces graphiques permettent de mettre en évidence ces faits marquants.</p>
+<table>
+<thead>
+<tr>
+<th>TF1</th>
+<th>M6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="350" src="Question2_4.png"></td>
+<td><img width="350" src="Question2_5.png"></td>
+</tr>
+<tr>
+<td><img width="350" src="Question2_6.png"></td>
+<td><img width="350" src="Question2_7.png"></td>
+</tr>
+</tbody>
+</table>
+<p>On peut voir alors que 2017 a été marquée par l'élection de Macron et 2020 par la pandémie de COVID.</p>
+<h4 id="question3"> Y'a t'il une corrélation entre quantité de JT et durée pour chaque thème des JT diffusés pour toutes les chaines ? </h4>
+<table>
+<thead>
+<tr>
+<th>Société</th>
+<th>Justice</th>
+<th>Environnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="400" src="Question3_1.png"></td>
+<td><img width="400" src="Question3_2.png"></td>
+<td><img width="400" src="Question3_3.png"></td>
+</tr>
+</tbody>
+</table>
+<p>On remarque que certaines chaines ont tendance a diffusé des JT plus longs par rapport aux autres chaines <em>(ex: M6)</em>. Pour d'autres, la durée des JT dépend du thème *(ex: Arte a fait des JT plus longs que les autres sur le thème &quot;Société&quot; et moins longs que les autres sr le thème &quot;Environnement&quot;).</p>
+<h4 id="question4"> Y'a t'il une tendance saisonnière à regarder plus la télé en hiver qu'en été ? </h4>
+<p>Les mois d'hiver présentent-ils une tendance à avoir une quantité de journaux télévisés supérieure à celle des mois d'été pour l'ensemble des chaînes ?</p>
+<table>
+<thead>
+<tr>
+<th>2011</th>
+<th>2014</th>
+<th>2017</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="400" src="Question4_1.png"></td>
+<td><img width="400" src="Question4_2.png"></td>
+<td><img width="400" src="Question4_3.png"></td>
+</tr>
+</tbody>
+</table>
+<p>Contrairement à ce que je pensais au début, <em>(ie que les téléspectateurs auraient tendance à moins regarder la télé en été qu'en hiver, et que donc les chaines auraient tendance à moins diffuser de JT l'été que l'hiver)</em> en analysant ces graphiques, on ne remarque pas de tendance saisonnière particulière. Finalement, les journaux télévisés sont autant regardés en été qu'en hiver, et les pics de quantité de JT diffusés pour un mois particulier semblent plus s'expliquer par un évènement spécial survenu à ce moment là qu'à autre chose.</p>
+<h2 id="tableau_bord"> Présentation du tableau de bord</h2>
+<p>Pour réaliser mon tableau de bord final, j'y ai inclus les graphiques obtenus avec les questions précédentes, et j'y ai rajouté d'autres graphiques pour mettre en valeurs d'autres données que je trouvais pertinentes. J'ai rajouté des segments pour contrôler chaque graphique en fonction des thèmes, des chaînes et des dates.</p>
+<p>Vous pouvez télécharger le fichier excel contenant ce tableau <a href="MON2_Tableau_de_bord_Excel.zip">ici</a></p>
+<img width="500" src="Tableau_de_bord.png">
+<h3>Le petit mot de la fin</h3>
+<p>Finalement, même si j'ai déjà utilisé souvent excel pendant mon alternance, je me rends compte qu'il y avait beaucoup de fonctionnalités dont j'ignorais l'existence. Cependant, même si la base de données sur laquelle je me suis appuyée était très intéressante, je ne suis pas sure que c'était la plus adaptée pour réaliser un tableau de bord pertinent. J'ai remarqué que c'était surtout au travers d'analyses de ventes, ou de suivi de KPI que les tableau de bord étaient surtout utilisés. Mais, cela reste, au final, un très bon entraînement !</p>
+<blockquote>
+<p><strong>Horodateur</strong> :<br>
+Samedi 11/11 : 30 mins (Recherche de ressources d'apprentissage et d'une base de données sur laquelle m'appuyer)<br>
+Jeudi 23/11 : 2h50 (Réalisation de la formation Open Classroom trouvée)<br>
+Vendredi 24/11 : 40 mins (Visionnage de vidéos supplémentaires pour compléter la formation)<br>
+Jeudi 30/11 : 1h30 (Mise en forme de la base de données obtenue suivant le plan énoncé dans ce MON)<br>
+Samedi 09/12  : 1h (Recherche de questions pertinentes pour analyser les données graphiquement)<br>
+Dimanche 10/12 : 2h (Mise en forme des graphiques)<br>
+Mardi 12/12 : 1h30 (Ajout de graphiques et mise en forme finale du tableau de bord)</p>
+</blockquote>
 
 
 </article>
