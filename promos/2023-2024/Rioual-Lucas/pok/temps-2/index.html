@@ -136,7 +136,7 @@
 <div class="pl-8 mr-8">
 <p>Lien de mon repo Github : <a href="https://github.com/LucasRioual/Curiolab/tree/main">https://github.com/LucasRioual/Curiolab/tree/main</a></p>
 </div></div>
-<h2>Sommaire</h2>
+<h2><strong>Sommaire</strong></h2>
 <ol>
 <li>Présentation</li>
 <li>Objectif du sprint 1</li>
@@ -145,16 +145,169 @@
 <li>Sprint 2</li>
 <li>Bilan du POK</li>
 </ol>
-<h2>Présentation</h2>
-<p>L'objectif de ce POK est d'implémenter quelques fonctionnalités backend sur mon site internet : <strong>Curiolab</strong>. Ensuite je vais me concentrer sur le déploiement du site internet sur le serveur distant OVH.</p>
-<h2>Objectif du sprint 1</h2>
-<p>Les objectifs du sprint 1 sont :</p>
-<ul>
-<li>Développer la page associée au panier</li>
-<li>Développer la logique du panier (côté client).</li>
-<li>Ajout d'une fonctionnalité d'authentification (objectif pédagogique).</li>
-</ul>
+<h2><strong>Objectif du sprint 1</strong></h2>
+<p>L’objectif du sprint 1 est d’appliquer mes connaissances en backend que j’ai acquises grâce au précèdent MON à mon site web Curiolab. Je souhaite donc créer une page admin qui permet d’ajouter, modifier ou retirer des produits de mon site internet. Je vais utiliser Node.js avec Express pour le backend et MongoDB pour la base de donnée  :</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Complexité</th>
+<th>Temps estimé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Développer la page admin</strong></td>
+<td>4</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Section pour ajouter ou modifier un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Section pour visualiser les produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Possibilité de supprimer des produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Développer le backend</strong></td>
+<td>3</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Connexion avec MongoDB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour créer un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour récupérer tous les produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour récupérer un seul produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour modifier un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour supprimer un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Modifier le front pour accéder à cette API</strong></td>
+<td>1</td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Déployer le projet sur le serveur distant OVH</strong></td>
+<td>2</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
 <h2>Sprint 1</h2>
+<h3>Page Administrateur</h3>
+<p>L’objectif de cette page est de pouvoir ajouter/modifier ou supprimer des produits de la base de données.</p>
+<p>Pour développer cette page Administrateur, j’ai choisi d’utiliser <strong>React</strong> et <strong>Tailwindcss</strong>. Ce sont des outils que j’ai appris à utiliser lors du <a href="../../mon/temps-2.1">MON 2.1</a>.</p>
+<p>Je me suis pas du tout concentré sur le design de la page, car le coeur de POK est le développement du backend.</p>
+<p>J’ai donc fait un formulaire sur la gauche de l’écran qui permet d’ajouter ou modifier un produit. Sur la droite, il y a une section pour visualiser les différents produits existants.</p>
+<p>Pour chaque produit, nous pouvons afficher le détail de ses caractéristiques sur la partie gauche de l’écran. Nous pouvons ensuite modifier ses caractéristiques. Un bouton supprimer est également présent sur chaque item.</p>
+<img src="admin.PNG">
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/curiolab-admin">https://github.com/LucasRioual/curiolab-admin</a></p>
+<h3>Backend avec Node.js, Express et MongoDB</h3>
+<p>J'ai décidé de développer le backend avec <strong>Node.js</strong> et <strong>Express</strong> car j'ai fait mon <a href="../../mon/temps-1.2">MON 1.2</a> sur ces technos.</p>
+<p>Voici les différents EndPoints que je dois développer :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>createStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>getAllStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>getOneStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>modifyStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>deleteStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Mon schéma de donnée :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> stuffSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">titre</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sousTitre</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">prix</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">difficulte</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Par exemple, voici la fonction qui permet d'ajouter un produit dans la base de donnée :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">exports<span class="token punctuation">.</span><span class="token function-variable function">createStuff</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> stuff <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stuff</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">titre</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>titre<span class="token punctuation">,</span>
+    <span class="token literal-property property">sousTitre</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>sousTitre<span class="token punctuation">,</span>
+    <span class="token literal-property property">description</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>description<span class="token punctuation">,</span>
+    <span class="token literal-property property">prix</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>prix<span class="token punctuation">,</span>
+    <span class="token literal-property property">difficulte</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>difficulte<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stuff<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Post saved successfully!'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">error</span> <span class="token operator">:</span> error
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/curiolab-backend">https://github.com/LucasRioual/curiolab-backend</a></p>
+<h3>Récupérer les données de l’API depuis le site Curiolab</h3>
+<p>Ici, il n’y a pas eu beaucoup de travail à faire, car il fallait simplement modifier la méthode qui récupèrait les données.</p>
+<p>Voici la requête que j’effectue à l’API :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">getOneStuff</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:10411/api/stuff/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> piece <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>piece<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-Ring"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>titre<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-titre"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>sousTitre<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-description"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>description<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-prix"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>prix <span class="token operator">+</span> <span class="token string">" € TTC"</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-prix-HT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>prix <span class="token operator">-</span> <span class="token punctuation">(</span>piece<span class="token punctuation">.</span>prix <span class="token operator">*</span> <span class="token number">0.2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" € HT"</span><span class="token punctuation">;</span>
+    
+  <span class="token punctuation">}</span>
+  <span class="token keyword">catch</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/Curiolab">https://github.com/LucasRioual/Curiolab</a></p>
+<h3>Déploiement sur le serveur distant OVH</h3>
+<p>Pour vous montrer le résultat, j’ai souhaité déployer mon site sur le serveur OVH.</p>
+<p>J’ai rencontré quelques problèmes liés aux chemins pour accéder aux ressources.</p>
+<p>Ensuite, ma page admin ne peux pas accéder à l’API car il y a des problèmes CORS. J’ai essayé d’utiliser le Middleware cors d’express mais cela ne marche toujours pas.</p>
+<p>Vous pouvez retrouver le site à cette adresse : <a href="http://node.persil.ovh1.ec-m.fr/">http://node.persil.ovh1.ec-m.fr/</a></p>
+<h3>Bilan par rapport aux objectifs fixés</h3>
+<p>J'ai globalement respecté mes objectifs. Pour la page administrateur il y a beaucoup d'améliorations possible. Par exemple, lorsqu'on ajoute un produit, nous sommes obligés d'actualiser la page pour voir le produit. IL y a pleins de détails comme celui ci à améliorer.<br>
+Ensuite, nous ne pouvons pas envoyer les images du produit au serveur.</p>
+<p>Ensuite, le site qui tourne sur le serveur OVH ne fonctionne pas comme en local. En effet, selon le chemin que nous prenons dans le site, toutes le ressources ne s'affichent pas.</p>
+<h3>Objectif pour le sprint 2</h3>
+<p>Pour le sprint 2, je vais me concentrer sur le déploiement de mon application sur le serveur OVH.</p>
+<p>Je souhaite utiliser Github action pour mettre à jour mon site quand je commit sur la branch main de mon repo Github (comme le site de do_It).</p>
 
 
 </article>
