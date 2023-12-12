@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>React.js</title>
+        <title>React.js et Tailwind CSS</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">React.js</h1>
+<h1 class="mb-1">React.js et Tailwind CSS</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -118,22 +118,134 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/">Lucas RIOUAL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/">MON de Lucas Rioual</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-2.1/">React.js</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/">Lucas RIOUAL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/">MON de Lucas Rioual</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-2.1/">React.js et Tailwind CSS</a>
 
 </div></div>
 
 
 
 
+<p>Ce MON a pour objectif de me rendre plus à l’aise avec le développement frontend. J’ai donc décidé d’apprendre React.js et Tailwind CSS.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Notions abordées</strong> : HTML, CSS, Javascript, Three.js<br>
-<strong>Niveau</strong> : Débutant</p>
+<p><strong>Notions abordées</strong> : React.js, Tailwind CSS<br>
+<strong>Niveau</strong> : Intermédiaire</p>
 </div></div>
-<h2>Mes objectifs</h2>
+<h2>Introduction</h2>
+<p><strong>React.js</strong> est un Framework Javascript qui permet de développer des interfaces utilisateurs.<br>
+Ce Framework propose une architecture différente du HTML/CSS/Javascript utilisé dans la conception de site internet traditionnel. Développer une interface réactive et dynamique peut s’avérer compliquer en HTML/CSS/Javascript. <strong>React</strong> facilite la création de ce genre d’interface grâce à des mécanismes que nous verrons plus tard.<br>
+Il existe d’autres Framework Javascript qui permettent plus ou moins la même chose comme <strong>Vue.js</strong> ou <strong>Angular</strong>.<br>
+J’ai choisi d’étudier React.js car il j’avais déjà quelques bases en <strong>React Native</strong> qui utilise à peu près les mêmes notions.</p>
+<p>Je me suis fixer comme objectif de refaire le site web que j’ai crée pendant le POK 1 avec <strong>React</strong>.</p>
+<p>Malheureusement, j’ai récemment perdu toutes les données de mon disque dur externe (y compris le code que j’ai fait durant ce MON). Je sais, cela ressemble à une excuse bidon, mais c’est malheureusement vrai. Je vais quand même expliquer tout mon processus d’apprentissage et certaines notions importante de <strong>React</strong> que j’ai découvert.</p>
+<h2>Commencer avec React</h2>
+<p>Pour l’apprentissage de React, j’ai utilisé la documentation de React et Chat GPT.</p>
+<p>Pour commencer, je vous conseille vraiment de lire la <a href="https://react.dev/learn/">documentation</a>.<br>
+Attention, il faut aller l'ancienne documentation est obsolète et plus valable.</p>
+<p>Je trouve cette documentation très claire et efficace. Il y a un tutoriel pour faire un morpion. C'est un bon exercice pour comprendre les notions fondamentales de React :</p>
+<ul>
+<li><strong>Les Components</strong></li>
+<li><strong>Les props</strong></li>
+<li><strong>Le state</strong></li>
+</ul>
+<h3>Les components</h3>
+<p>Les components sont essentiels dans le fonctionnement de React. Ce sont des éléments réutilisables qui encapsulent du code et les fonctionnalités. Un component peut être aussi simple qu'un bouton ou aussi complexe qu'une section entière.</p>
+<p>Voici un exemple d’un component représentant le header d’un site web (généré par Chat GPT) :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token comment">// Header.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Mon App</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">Accueil</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">À propos</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">Contact</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span>
+</code></pre>
+<p>On peut maintenant utiliser ce component n’importe où dans le projet :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'./Header'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Header</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span><span class="token comment">/* Contenu principal de l'application */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<h3>Les props</h3>
+<p>Les composants peuvent accepter des propriétés (props) pour paramétrer leur comportement. Les props sont des passées de parent à enfant. Par exemple, nous pouvons rendre le titre de notre header dynamique en utilisant une prop :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">Accueil</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">À propos</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">Contact</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> titreHeader <span class="token operator">=</span> <span class="token string">"Mon App"</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Header</span></span> <span class="token attr-name">titre</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>titreHeader<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+			</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span><span class="token comment">/* Contenu principal de l'application */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Le state</h3>
+<p>En plus des props, React propose le concept d'état (state) pour gérer les données qui changent au fil du temps à l'intérieur d'un composant. Pour illustrer cette notion, nous pouvons ajouter un bouton qui incrémente un compteur :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> titreHeader <span class="token operator">=</span> <span class="token string">"Mon App"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">incrementer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Header</span></span> <span class="token attr-name">titre</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>titreHeader<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+			</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">Compteur : </span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+	      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>incrementer<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">Incrémenter</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La fonction <strong><code>useState</code></strong> permet de déclarer et d'initialiser le state <strong><code>count</code></strong></p>
+<p><strong><code>setCount</code></strong> est une fonction qui permet de modifier la valeur de cette variable d'état.</p>
+<h2>Tailwind CSS</h2>
 
 
 </article>
