@@ -14,6 +14,7 @@ tags:
   - "HTML"
   - "CSS"
   - "API"
+  - "JavaScript"
 
 résumé: Je vais dans ce POK créer mon site Internet permettant à l'utilisateur d'analyser ses goûts musicaux, en utilisant l'API de Spotify.
 ---
@@ -109,7 +110,7 @@ Je définis les composantes de mes pages :
 
 Ma maquette Figma est accessible [ici](https://www.figma.com/file/Rx2sAj4SSzLNnZjNFwKq6O/Spotistats?type=design&node-id=0%3A1&mode=design&t=T7OGaQuYW9phVxnz-1).
 
-## Création des pages du site en HTML
+## Création des pages du site en HTML et en CSS
 
 Rien de très intéressant à ajouter dans cette partie, si ce n'est que je vais transformer la maquette Figma en HTML et en CSS.
 
@@ -324,7 +325,7 @@ Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai aussi de 
 
 Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure pas encore cliquable.
 
-Pour ce faire, j'avais deux solutions : de l'HTML pur ou du Javascript. J'opte pour la deuxième option sur les conseil de [William Lalanne](https://www.instagram.com/william.lalanne/). Je ne suis pas spécialement familier du langage, mais après quelques explications du langage, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.
+Pour ce faire, j'avais deux solutions : de l'HTML pur ou du JavaScript. J'opte pour la deuxième option sur les conseil de [William Lalanne](https://www.instagram.com/william.lalanne/). Je ne suis pas spécialement familier du langage, mais après quelques explications du langage, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.
 
 Il y a deux parties à prendre en compte :
 
@@ -650,3 +651,223 @@ button:hover {
 ```
 
 {% enddetails %}
+
+Je vais maintenant créer la page FAQ, ce qui devrait être assez rapide.
+
+{% details "Cliquez pour afficher le **code HTML** de la page FAQ" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>FAQ - Spotistats ❓</title>
+        <link href="stylesFAQ.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script>
+            window.onload = function () {
+                var emailInput = document.getElementById('email');
+                var mdpInput = document.getElementById('mdp');
+    
+                if (emailInput && mdpInput) {
+                    emailInput.value = '';
+                    mdpInput.value = '';
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="Allonge.png" class="logo" width="15%" height="60%" >
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <img src="Spotify_black.png" width="38" height="39">
+                <span class="ButtonText">S’identifier avec Spotify</span>
+            </button>
+        </header>
+        <h1>Pourquoi dois-je me connecter à mon compte Spotify ?</h1>
+        <p>La connexion à votre compte Spotify est nécessaire afin d'avoir accès à vos données d'écoute.
+            L'accès à vos données permet l'analyse de vos goûts musicaux.
+        </p>
+        <h1>Que faites-vous de mes données de connexion Spotify ?</h1>
+        <p>Vos données de connexion ne sont pas stockées mais seulement utilisées par notre service.
+            Nous validons l'authentification grâce à l'API Spotify, qui elle se charge d'évaluer 
+            la corrélation entre votre adresse mail et le mot de passe indiqué.
+        </p>
+        <h1>Est-il possible de regarder les données de quelqu'un d'autre ?</h1>
+        <p>Pour des raisons de sécurité, il n'est pas possible de consulter les analyse Spotistats
+            d'un autre individu. En effet, nous certifions l'authentification personnelle et la privatisation 
+            de chaque résultat.
+        </p>
+        <h1>Sera-t'il possible dans l'avenir d'effectuer l'analyse sur Deezer ?</h1>
+        <p>Ce n'est pas d'actualité pour le moment. Sinon on aura un problème de nom.</p>
+    </body>
+
+```
+
+{% enddetails %}
+
+{% details "Cliquez pour afficher le **code CSS** de la page FAQ" %}
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25242F;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25242F;
+    height: 90px;
+    padding: 0 30px;
+    box-shadow: 0 4px 17px rgba(81, 95, 95, 0.25);
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.FAQ {
+    order: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    justify-content: center;
+    margin-left: 520px;
+}
+
+button.Connexion {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #1ed760;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 38px;
+    width: 360px;
+    height: 55px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.ButtonText {
+    margin-right: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button.Connexion img {
+    margin-right: 10px;
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Spotify-Font/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 40px;
+    color: #1ed760;
+    margin-bottom: 0px;
+    margin-left: 40px;
+}
+
+p{
+    font-family: 'Gotham', sans-serif;
+    color:#FFFFFF;
+    font-size:20px;
+    margin-left: 40px;
+    margin-right:40px;    
+}
+
+.ecran_noir {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ecran_noir-content {
+    background-color: #25242F;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 50%;
+    color: #FFFFFF;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.check_id {
+    background-color: #1ed760;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+button:hover {
+    background-color: #149754;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 140px;
+    right: 320px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+```
+
+{% enddetails %}
+
+Je n'ai pas eu le temps de faire la page principale car les autres m'ont pris plus de temps. Cependant, j'ai déjà défini tous les styles que j'utilise et cela me prendra beaucoup plus de temps.
