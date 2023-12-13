@@ -90,7 +90,7 @@ J'ai commencé par programer l'interface du jeu à l'aide du code suivant :
 
 On obtient :
 
-![codevba](initialiserJeu2.png)
+![codevba](InitialiserJeu2.png)
 
 Le carré vert représente la tête du serpent en debut de partie. En suite j'ai affecté a chaque bouton haut, Bas, droite, gauche, une macro correspondant à la direction. L'objectif et de faire avancer/grandir/mourir le serpent en fonction de la couleur de la case suivante et de générer à chaque mouvement une case rouge pour la pomme. Malheureusement cette partie de code n'est pas encore au point et je rencontre beaucoup de difficulté dans la correction de mes erreurs.
 

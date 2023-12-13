@@ -23,9 +23,9 @@ Initialement l'objectif de ce POK était de découvrir le low-code, n'ayant pas 
 
 ### Objectifs
 
-- Découverte du sujet, contact avec le client, étude du fonctionnement actuel de l'entreprise et des problèmes qui en découlent, compréhension du besoin et mise en place d'un cahier des charges de l'outil à créer ;
-- Comparaison des différents moyen de faire du low-code, choix de la ou des technologies à utiliser et prise en main de leur fonctionnement ;
-- Premières réflexions sur la solution à mettre en place.
+- Découverte du sujet, contact avec le client, étude du fonctionnement actuel de l'entreprise et des problèmes qui en découlent, compréhension du besoin et mise en place d'un cahier des charges de l'outil à créer (5h) ;
+- Comparaison des différents moyen de faire du low-code, choix de la ou des technologies à utiliser et prise en main de leur fonctionnement (3h) ;
+- Premières réflexions sur la solution à mettre en place (2h).
 
 ### Réalisations
 
@@ -52,7 +52,6 @@ Voici quelques directives pour certains des aléas courants :
 Dans un deuxième temps s'est posée la question du ou des outils low-code à utiliser. J'ai donc fait des recherches sur les différentes technologies existantes pour déterminer ce qui conviendrait le mieux au cas d'étude. J'ai regardé différents tutoriels d'utilisation, entre autres de Microsoft Power Apps, Mendix ou Appian. Finalement, Airtable m'a semblé être la solution la plus intuitive et adaptée à l'analyse de données, et je prévois donc de me servir de cette plateforme. L'idée serait de l'utiliser pour la partie analyse des données et de garder Excel en ce qui concerne l'affichage de la planification et sa manipulation.
 J'ai également commencé à me renseigner sur des solutions pour mettre en lien  l'ERP existant avec le nouveau système de planification, notamment avec des outils comme Zapier ou Make (anciennement Integromat), mais je n'ai pas assez poussé mes recherches pour choisir une solution en particulier, d'autant plus que je ne suis pas encore sûre d'avoir le temps d'implémenter cette fonctionnalité.
 
-
 ### Retours
 
 Pour conclure ce premier sprint, j'ai à peu près réalisé les objectifs prévus dans le temps imparti (un peu moins de 10h en réalité). Je pense cependant que j'aurais pu passer moins de temps sur l'étude des outils low-code si j'avais fait des recherches de manières plus structurée et méthodique et sans me disperser comme j'ai pu le faire.
@@ -62,10 +61,10 @@ Malgré ma légère avance sur le sprint planning en terme de temps, je n'ai pas
 
 ### Objectifs
 
-- Finalisation de la réflexion autour du design et du fonctionnement final de la solution ;
-- Développement de l'outil ;
-- Tests et retours par le client ;
-- Reprise de la solution si besoin.
+- Finalisation de la réflexion autour du design et du fonctionnement final de la solution (1h) ;
+- Développement de l'outil (8h) ;
+- Tests et retours par le client (1h) ;
+- Reprise de la solution si besoin (en plus).
 
 ### Réalisations
 

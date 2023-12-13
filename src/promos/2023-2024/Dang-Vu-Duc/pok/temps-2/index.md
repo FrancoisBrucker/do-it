@@ -32,12 +32,12 @@ Le jeu d'échecs est un jeu classique, mais relativement complexe à implémente
 
 Ce premier sprint aura donc pour objectif d'implémenter le code de résolution de problèmes simples. Voici les fonctionnalités que devront être développées, ainsi que leurs complexités:
 
-- Implémentation de la représentation d'un plateau d'échecs (**3**)
-- Implémentation des classes de chaque pièce ainsi que leur mouvements (**8**)
-- Implémentation d'une méthode pour représenter n'importe quelle position dans le code (**2**)
-- Implémentation d'une méthode pour vérifier si une pièce peut être capturée ou non (**3**)
-- Implémentation d'une méthode pour vérifier si un joueur est en échec et mat ou non (**13**)
-- Implémentation d'une méthode pour résoudre des problèmes simples, en utilisant les méthodes précédentes. (**13**)
+- Implémentation de la représentation d'un plateau d'échecs (**3, 30min**)
+- Implémentation des classes de chaque pièce ainsi que leur mouvements (**5, 1h30**)
+- Implémentation d'une méthode pour représenter n'importe quelle position dans le code (**2, 30min**)
+- Implémentation d'une méthode pour vérifier si une pièce peut être capturée ou non (**3, 45min**)
+- Implémentation d'une méthode pour vérifier si un joueur est en échec et mat ou non (**8, 3h**)
+- Implémentation d'une méthode pour résoudre des problèmes simples, en utilisant les méthodes précédentes. (**8, 3h**)
 
 ## Implémentation du code permettant de résoudre des problèmes simples
 
@@ -914,9 +914,10 @@ J'ai réussi à développer tout les objectifs du backlog présenté plus haut. 
 
 Il faut à présent décrire le backlog du deuxième sprint, qui aura pour objectif d'utiliser Pygame pour implémenter le jeu d'échecs pour qu'on puisse y jouer. Voici ce backlog, avec les complexités pour chaque fonctionnalités:
 
-- Représentation graphique du plateau et de ses pièces **(3)**
-- Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées **(13)**
-- Vérifier si les échecs et les échecs et mat **(5)**
-- Implémentation de sons **(3)**
-- Implémentation de l'historique de la partie **(8)**
-- Implémentation de la liste des pièces prises par chaque joueur **(3)**
+- Représentation graphique du plateau et de ses pièces **(3, 1h)**
+- Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées **(8, 2h30)**
+- Vérifier les échecs et les échecs et mat **(5, 1h)**
+- Implémentation de sons **(3, 1h)**
+- Implémentation de l'historique de la partie **(8, 2h30)**
+- Implémentation de la liste des pièces prises par chaque joueur **(2, 30min)**
+- Implémentation d'une fonctionnalité pour retourner le plateau **(3, 45min)**

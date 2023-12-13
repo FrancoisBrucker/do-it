@@ -37,9 +37,14 @@ Réaliser une page pour les paris sportifs si le sprint 1 s'est déroulé sans a
 
 ![resultats](./images/affichage_resultats.png)
 
-### Prochaines missions 
+### Prochaines fonctionnalités pour le site
 
 - Travailler le côté serveur pour que les mises à jour apportées par l'utilisateur restent
 - Système de connexion
 - Système de paris sportifs
 - Continuer et finir l'affichage des résultats (notamment les phases finales)
+
+**Objectifs sprint deux :**
+- Finir la mise à jour des pages de résultats après l'ajout d'un match par l'utilisateur (*environ 1h*)  
+- Côté serveur avec Node.js (*sûrement 7h*)
+- Continuer et finir l'affichage des résultats (notamment les phases finales) (*environ 2h*)

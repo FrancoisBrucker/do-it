@@ -37,9 +37,9 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 1. Objectifs du Sprint 1
 2. Objectifs du Sprint 2
 3. Maquette Figma
-4. Création des pages du site en HTML
-5. Mise en page V1 en CSS
-6. Retour d'expérience du Sprint 1
+4. Création des pages du site en HTML et en CSS
+5. Retour d'expérience du Sprint 1
+6. Objectifs du Sprint 2 rationnalisés
 
 Le but de ce POK est de mettre en pratique mon MON1.2 sur le développement web. Je souhaite créer un site web fonctionnel, qui utilise l'API de Spotify. Ce site permettrait à l'utilisateur de connecter son compte Spotify personnel, et en retour afficher une analyse de ses goûts musicaux.
 
@@ -69,18 +69,28 @@ Illustration du type de graphique que je souhaite afficher.
 
 Voici les objectifs que je me suis fixé :
 
-- Première maquette sur Figma (★☆☆☆☆, 2 heures estimées)
-- Création des pages et de leur contenu primaire en HTML (★☆☆☆☆, 4 heures estimées)
-- Mise en page V1 en CSS (★★☆☆☆, 4 heures estimées)
+- Créer une maquette esthétique sur Figma (★☆☆☆☆, **2 heures estimées**)
+- Créer un logo pour mon site Web (★☆☆☆☆, **0 heure 30 estimée**)
+- Créer la page d'accueil en HTML (★☆☆☆☆, **1 heure 30 estimée**)
+- Créer le fichier CSS sur le header (★★☆☆☆, **2 heures estimées**)
+- Créer le fichier CSS sur le body de l'accueil (★★☆☆☆, **2 heures estimées**)
+- Créer la page FAQ en HTML (★☆☆☆☆, **0 heure 30 estimée**)
+- Créer le fichier CSS associé à la page FAQ (★☆☆☆☆, **0 heure 30 estimée**)
+- Créer la page principale en HTML (★☆☆☆☆, **0 heure 30 estimée**)
+- Créer le fichier CSS associé à la page principale (★☆☆☆☆, **0 heure 30 estimée**)
+
+TOTAL : 10 heures
 
 Les étoiles correspondent au niveau de difficulté de l'objectif dans mon référentiel de débutant en DevWeb.
 
 ## Objectifs du Sprint 2
 
-Voici les objectifs que je me suis fixé :
+Voici les gros objectifs que je me suis fixé :
 
 - Lier l'API de Spotify avec mon site
 - Travailler sur les différentes fonctionnalités d'affichage de données de l'utlisateur en lien avec son compte Spotify
+
+Ces objectifs servent de fil conducteur pour la logique de mon POK, les objectifs précis seront détailles à la fin du Sprint 1.
 
 ## Maquette Figma
 
@@ -871,3 +881,23 @@ button:hover {
 {% enddetails %}
 
 Je n'ai pas eu le temps de faire la page principale car les autres m'ont pris plus de temps. Cependant, j'ai déjà défini tous les styles que j'utilise et cela me prendra beaucoup plus de temps.
+
+## Retour d'expérience du Sprint 1
+
+J'ai finalisé presque tous les objectifs que je m'étais fixé, à l'exception de la page principale en HTML et CSS. Je le ferai donc au Sprint 2.
+J'ai effectué une autre tâche à la place : le pop-up de connexion en JavaScript, cela m'a pris une heure et demi, donc je respecte le planning qui m'était fixé.
+Pas de point dur particulier.
+
+## Objectifs du Sprint 2 rationnalisés
+
+Voici les objectifs que je me suis fixé pour le Sprint 2 :
+
+- Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, **1 heure estimée**)
+- Documentation sur les API de Spotify, ce qu'elles permettent (★☆☆☆☆, **2 heures estimées**)
+- Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**)
+- Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**)
+- Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**)
+- Déterminer quelle technologie utilsier pour la visualisation (★☆☆☆☆, **0 heure 30 estimée**)
+- Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)
+
+C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.
