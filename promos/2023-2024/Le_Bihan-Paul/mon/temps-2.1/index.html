@@ -71,15 +71,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Temps 2</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Web</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">web</li>
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">CSS</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Débutant</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">débutant</li>
                 
 
             </ul>
@@ -150,35 +150,57 @@
 </div><div class="pl-8 mr-8">
 <p>Prérequis : Aucun</p>
 </div></div>
+<div id="introduction"></div>
 <h2>Introduction</h2>
-<p>En soi, aucun prérequis n'est nécessaire pour suivre ce <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">cours</a> mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON.</p>
+<p>En soi, aucun prérequis n'est nécessaire pour suivre ce cours[<a href="#Web">1</a>] mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON.</p>
+<div id="sommaire"></div>
 <h2>Sommaire</h2>
-<ol>
-<li><a href="#Partie1">Outils de développement : approfondissement</a></li>
-<li><a href="#Partie2">Introduction à html : révisions</a></li>
-<li><a href="#Partie3">Anatomie d'une url : découverte</a></li>
-<li><a href="#Partie4">Projet html : réalisation</a></li>
-<li><a href="#Partie5">Introduction à css : révisions</a></li>
-<li><a href="#Partie6">Unités et couleurs : apprentissage</a></li>
-</ol>
-<div id="Partie1"></div>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#sommaire">Sommaire</a></li>
+<li><a href="#1-outils-de-d%C3%A9veloppement--approfondissement">1. Outils de développement : approfondissement</a>
+<ul>
+<li><a href="#le-menu-elements">Le menu <em>Elements</em></a></li>
+<li><a href="#le-menu-sources">Le menu <em>Sources</em></a></li>
+<li><a href="#le-menu-network">Le menu <em>Network</em></a></li>
+<li><a href="#le-menu-application">Le menu <em>Application</em></a></li>
+</ul>
+</li>
+<li><a href="#2-introduction-%C3%A0-html--r%C3%A9visions">2. Introduction à html : révisions</a>
+<ul>
+<li><a href="#arbre-dom">Arbre DOM</a></li>
+<li><a href="#markup-validation-service">Markup Validation Service</a></li>
+</ul>
+</li>
+<li><a href="#3-anatomie-dune-url--d%C3%A9couverte">3. Anatomie d'une URL : découverte</a></li>
+<li><a href="#4-projet-html--r%C3%A9alisation">4. Projet html : réalisation</a></li>
+<li><a href="#5-introduction-%C3%A0-css--r%C3%A9visions">5. Introduction à css : révisions</a></li>
+<li><a href="#6-unit%C3%A9s-et-couleurs--apprentissage">6. Unités et couleurs : apprentissage</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#horodateur">Horodateur</a></li>
+</ul>
+<div id="1-outils-de-développement--approfondissement"></div>
 <h2>1. Outils de développement : approfondissement</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/outils-de-d%C3%A9veloppement/">Outils de développement</a>.<br>
 Concernant les outils de développements, je les avaient déjà utilisés mais il me restait encore plusieurs lacunes et ce cours m'a permis d'en combler certaines. Voici les différents menu des outils de développement que j'ai parcourus pendant ce cours :</p>
+<div id="le-menu-elements"></div>
 <h4>Le menu <em>Elements</em></h4>
 <p>C'est surtout ce menu que j'avais déjà utilisé donc je connaissais la plupart des informations présentent dans le cours. Mais j'ai tout de même appris que la partie <em>Console</em> correspond à l'execution de la partie Javascript du site que l'on inspecte.</p>
 <div><img src="console.png"></div>
+<div id="le-menu-sources"></div>
 <h4>Le menu <em>Sources</em></h4>
 <p>En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation de l'arborescence des fichiers du site sur lequel on est. Cela permet notamment d'avoir accès à chaque fichier en particulier, comme par exemple certains fichiers <code>.png</code> qui sont utilisés pour la mise en forme du site.</p>
 <div><img src="sources.png"></div>
+<div id="le-menu-network"></div>
 <h4>Le menu <em>Network</em></h4>
 <p>Ici également j'ai tout appris quant à l'utilité de l'onglet. On y voit les informations relatives aux réponses des requêtes faites par le site au serveur.<br>
 Dans l'image suivante on voit que<span style="background-color:#c59989;">csszengarden.com</span>est un<span style="background-color:#a0acc2;">document</span>de<span style="background-color:#4e5a70;">5.0kB</span>qui a été rendu par le serveur en<span style="background-color:#86b194;">615ms</span>avec un statut de<span style="background-color:#CEC970;">200</span>(ce qui correspond à une réponse sans problème).</p>
 <div><img src="network.png"></div>
+<div id="le-menu-application"></div>
 <h4>Le menu <em>Application</em></h4>
 <p>Ce menu (dont j'ai aussi découvert l'existence) permet de voir les informations stockées par le site, comme les cookies.</p>
 <div><img src="application.png"></div>
-<div id="Partie2"></div>
+<div id="2-introduction-à-html--révisions"></div>
 <h2>2. Introduction à html : révisions</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/html-introduction/">Introduction à html</a>.<br>
 Dans cette partie la plupart du contenu a constitué uniquement des révisions mises à part deux nouveautés :</p>
@@ -186,6 +208,7 @@ Dans cette partie la plupart du contenu a constitué uniquement des révisions m
 <li>l'arbre DOM,</li>
 <li>et le Markup Validation Service du W3C(<em>World Wide Web Consortium</em>, organisme de standardisation chargé de promouvoir la compatibilité des technologies du <em>World Wide Web</em>[<a href="#W3C">2</a>]).</li>
 </ul>
+<div id="arbre-dom"></div>
 <h4>Arbre DOM</h4>
 <p>L'arbre DOM est le nom donné à la façon dont les fichiers html sont structurés. En effet, les fichiers <em>html</em> ont une structure bien particulière dans laquelle les balises forment une arborescence dont la balise <code>&lt;html&gt;&lt;/html&gt;</code> est la racine. Voici un exemple d'arborescence que l'on pourrait trouver dans un fichier html très simple :</p>
 <pre><code>html
@@ -203,9 +226,10 @@ Dans cette partie la plupart du contenu a constitué uniquement des révisions m
 <li>et les descendants de la balise <code>&lt;html&gt;&lt;/html&gt;</code> sont les balises <code>&lt;head&gt;&lt;/head&gt;</code>, <code>&lt;meta&gt;&lt;/meta&gt;</code>, <code>&lt;title&gt;&lt;/title&gt;</code>, <code>&lt;body&gt;&lt;/body&gt;</code>, <code>&lt;h1&gt;&lt;/h1&gt;</code> et <code>&lt;p&gt;&lt;/p&gt;</code>.</li>
 </ul>
 <p>Cet arbre s'appelle l'arbre DOM justement parce que le DOM (de l'anglais <em>Document Object Model</em>) est l'interface de programmation normalisée par le W3C, qui permet à des scripts d'examiner et de modifier le contenu du navigateur web[<a href="#DOM">3</a>].</p>
+<div id="markup-validation-service"></div>
 <h4>Markup Validation Service</h4>
 <p>le <a href="https://validator.w3.org/#validate_by_upload+with_options">Markup Validation Service du W3C</a> est un service permettant de vérifier qu'un document html a une syntaxe correcte.</p>
-<div id="Partie3"></div>
+<div id="3-anatomie-dune-url--découverte"></div>
 <h2>3. Anatomie d'une URL : découverte</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/anatomie-url/">Anatomie d'une URL</a>.<br>
 La notion d'URL est évidemment très commune et ne m'est pas inconnue. Par contre son architecture  m'était complêtement étrangère.</p>
@@ -234,7 +258,7 @@ Dans le cadre d'une page web, cette ressource pourra être :</p>
 <li>des données décrite au format json,</li>
 <li>...</li>
 </ul>
-<div id="Partie4"></div>
+<div id="4-projet-html--réalisation"></div>
 <h2>4. Projet html : réalisation</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/projet-html/">Projet html</a>.<br>
 Dans cette partie, j'ai réalisé un page html basique.<br>
@@ -407,28 +431,28 @@ Et un apperçu du bas de la page :
 </div>
 </details>     
 </div>
-<div id="Partie5"></div>
+<div id="5-introduction-à-css--révisions"></div>
 <h2>5. Introduction à css : révisions</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/css-introduction/">Introduction à css</a>.<br>
 Je n'ai rien à rapporter de cette partie car toutes les notions m'étaient connues.</p>
-<div id="Partie6"></div>
+<div id="6-unités-et-couleurs--apprentissage"></div>
 <h2>6. Unités et couleurs : apprentissage</h2>
 <p>Lien vers le cours : <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/unit%C3%A9s-couleurs/">Unités et couleurs</a>.</p>
+<div id="sources"></div>
 <h2>Sources</h2>
+<div id="Web"></div>
 <ol>
-<li>Cours &lt;&lt; <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">Web</a> &gt;&gt; de Monsieur François Brucker.</li>
+<li>Cours « <a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">Web</a> » de Monsieur François Brucker.</li>
 </ol>
 <div id="W3C"></div>
-<ol>
-<li>&lt;&lt; <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium">World Wide Web Consortium</a> &gt;&gt; sur <a href="http://wikipedia.org">wikipedia.org</a> (consulté le 11/12/2023).</li>
+<ol start="2">
+<li>« <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium">World Wide Web Consortium</a> » sur <a href="http://wikipedia.org">wikipedia.org</a> (consulté le 11/12/2023).</li>
 </ol>
 <div id="DOM"></div>
-<ol start="2">
-<li>
-<p>&lt;&lt; <a href="https://fr.wikipedia.org/wiki/Document_Object_Model">Document Object Model</a> &gt;&gt; sur <a href="http://wikipedia.org">wikipedia.org</a> (consulté le 11/12/2023).</p>
-</li>
-<li></li>
+<ol start="3">
+<li>« <a href="https://fr.wikipedia.org/wiki/Document_Object_Model">Document Object Model</a> » sur <a href="http://wikipedia.org">wikipedia.org</a> (consulté le 11/12/2023).</li>
 </ol>
+<div id="horodateur"></div>
 <h2>Horodateur</h2>
 <table>
 <thead>
