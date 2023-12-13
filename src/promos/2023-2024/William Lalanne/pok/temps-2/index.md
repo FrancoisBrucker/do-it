@@ -112,3 +112,21 @@ dbPool est un pool de connexion qui permet d'avoir accès à la base de donnée 
 
 ## Création du serveur 
 
+Pour démarrer un serveur basique, on créé un fichier *server.js* dans lequel on créera le serveur. Il faut d'abord commencer par importer le package HTTP indispensable pour créer un serveur :
+```js
+const http = require('http'); 
+```
+
+Une fois le package HTTP importé, on peut créer notre serveur à l'aide des commandes suivantes: 
+```js
+const server = http.createServer((req, res) => {
+    res.end('Voilà la réponse du serveur !');
+});
+```
+
+Le serveur est créé simplement grâce à la fonction ***createServer*** du package HTTP à qui on donne deux arguments:
+- ***req*** qui correspond à la requête faîte au serveur.
+- ***res*** qui correspond à la réponse.
+
+Ensuite, à chaque requête faite au serveur la fonction après le **(req, res)** est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'. 
+On améliorera plus tard dans ce POK le serveur pour qu'il fasse ce que l'on veut. 
