@@ -5,10 +5,13 @@ title: "Docker"
 authors:
   - Arthur Louradou
 
-date: 2023-09-18
+date: 2023-12-13
 
 tags: 
   - "temps 2"
+  - "temps 2.1"
+  - "docker"
+  - "devops"
 
 résumé: "Sur la base des travaux de mes camarades des années précédentes, se former à Docker et à son utilisation dans un contexte de production."
 ---

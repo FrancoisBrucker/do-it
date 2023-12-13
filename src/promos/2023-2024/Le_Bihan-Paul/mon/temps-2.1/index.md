@@ -8,11 +8,11 @@ authors:
 date: 2023-12-13
 
 tags:
-  - "Temps 2"
-  - "Web"
+  - "temps 2"
+  - "web"
   - "HTML"
   - "CSS"
-  - "Débutant"
+  - "débutant"
 
 résumé: "MON pour approfondir mes connaissances en html et css. Pour cela, j'ai suivi les parties sur le html et le css du cours 'Web' de Monsieur François Brucker."
 ---
@@ -21,26 +21,49 @@ résumé: "MON pour approfondir mes connaissances en html et css. Pour cela, j'a
 Prérequis : Aucun
 {%endprerequis%}
 
+<div id="introduction"></div>
+
 ## Introduction
 
-En soi, aucun prérequis n'est nécessaire pour suivre ce [cours](https://francoisbrucker.github.io/cours_informatique/cours/web/) mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON. 
+En soi, aucun prérequis n'est nécessaire pour suivre ce cours[[1](#Web)] mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON. 
+
+<div id="sommaire"></div>
 
 ## Sommaire
 
-1. [Outils de développement : approfondissement](#Partie1)
-2. [Introduction à html : révisions](#Partie2)
-3. [Anatomie d'une url : découverte](#Partie3)
-4. [Projet html : réalisation](#Partie4)
-5. [Introduction à css : révisions](#Partie5)
-6. [Unités et couleurs : apprentissage](#Partie6)
+- [Introduction](#introduction)
+- [Sommaire](#sommaire)
+- [1. Outils de développement](#1-outils-de-développement)
+    - [Le menu *Elements*](#le-menu-elements)
+    - [Le menu *Sources*](#le-menu-sources)
+    - [Le menu *Network*](#le-menu-network)
+    - [Le menu *Application*](#le-menu-application)
+- [2. Introduction à html](#2-introduction-à-html)
+    - [Arbre DOM](#arbre-dom)
+    - [Markup Validation Service](#markup-validation-service)
+- [3. Anatomie d'une URL](#3-anatomie-dune-url)
+- [4. Projet html](#4-projet-html)
+- [5. Introduction à css](#5-introduction-à-css)
+- [6. Unités et couleurs](#6-unités-et-couleurs)
+    - [Unités](#unités)
+    - [Couleurs](#couleurs)
+- [7. Sélecteurs css](#7-sélecteurs-css)
+- [8. Modèle de boîtes](#8-modèle-de-boîtes)
+- [9. Balises anonymes](#9-balises-anonymes)
+- [10. Positionnement](#10-positionnement)
+- [11. Projet css](#11-projet-css)
+- [12. Gestion des fichiers](#12-gestion-des-fichiers)
+- [Sources](#sources)
+- [Horodateur](#horodateur)
 
-<div id="Partie1"></div>
+<div id="1-outils-de-développement"></div>
 
-## 1. Outils de développement : approfondissement
+## 1. Outils de développement
 
 Lien vers le cours : [Outils de développement](https://francoisbrucker.github.io/cours_informatique/cours/web/outils-de-d%C3%A9veloppement/). 
 Concernant les outils de développements, je les avaient déjà utilisés mais il me restait encore plusieurs lacunes et ce cours m'a permis d'en combler certaines. Voici les différents menu des outils de développement que j'ai parcourus pendant ce cours : 
 
+<div id="le-menu-elements"></div>
 
 #### Le menu *Elements*
 
@@ -48,6 +71,7 @@ C'est surtout ce menu que j'avais déjà utilisé donc je connaissais la plupart
 
 <div><img src="console.png"></div>
 
+<div id="le-menu-sources"></div>
 
 #### Le menu *Sources*
 
@@ -55,6 +79,7 @@ En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation 
 
 <div><img src="sources.png"></div>
 
+<div id="le-menu-network"></div>
 
 #### Le menu *Network*
 
@@ -63,6 +88,7 @@ Dans l'image suivante on voit que<span style="background-color:#c59989;">csszeng
 
 <div><img src="network.png"></div>
 
+<div id="le-menu-application"></div>
 
 #### Le menu *Application*
 
@@ -70,14 +96,16 @@ Ce menu (dont j'ai aussi découvert l'existence) permet de voir les informations
 
 <div><img src="application.png"></div>
 
-<div id="Partie2"></div>
+<div id="2-introduction-à-html"></div>
 
-## 2. Introduction à html : révisions
+## 2. Introduction à html
 
 Lien vers le cours : [Introduction à html](https://francoisbrucker.github.io/cours_informatique/cours/web/html-introduction/). 
 Dans cette partie la plupart du contenu a constitué uniquement des révisions mises à part deux nouveautés : 
 - l'arbre DOM, 
 - et le Markup Validation Service du W3C(*World Wide Web Consortium*, organisme de standardisation chargé de promouvoir la compatibilité des technologies du *World Wide Web*[[2](#W3C)]). 
+
+<div id="arbre-dom"></div>
 
 #### Arbre DOM
 
@@ -98,13 +126,15 @@ Pour décrire les liens entre les balises, on utilise un vocabulaire généalogi
 
 Cet arbre s'appelle l'arbre DOM justement parce que le DOM (de l'anglais *Document Object Model*) est l'interface de programmation normalisée par le W3C, qui permet à des scripts d'examiner et de modifier le contenu du navigateur web[[3](#DOM)]. 
 
+<div id="markup-validation-service"></div>
+
 #### Markup Validation Service
 
 le [Markup Validation Service du W3C](https://validator.w3.org/#validate_by_upload+with_options) est un service permettant de vérifier qu'un document html a une syntaxe correcte. 
 
-<div id="Partie3"></div>
+<div id="3-anatomie-dune-url"></div>
 
-## 3. Anatomie d'une URL : découverte
+## 3. Anatomie d'une URL
 
 Lien vers le cours : [Anatomie d'une URL](https://francoisbrucker.github.io/cours_informatique/cours/web/anatomie-url/). 
 La notion d'URL est évidemment très commune et ne m'est pas inconnue. Par contre son architecture  m'était complêtement étrangère. 
@@ -133,9 +163,9 @@ Dans le cadre d'une page web, cette ressource pourra être :
 - des données décrite au format json, 
 - ...
 
-<div id="Partie4"></div>
+<div id="4-projet-html"></div>
 
-## 4. Projet html : réalisation
+## 4. Projet html
 
 Lien vers le cours : [Projet html](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-html/). 
 Dans cette partie, j'ai réalisé un page html basique. 
@@ -292,34 +322,155 @@ Et un apperçu du bas de la page :
 ```
 {% enddetails %}
 
-<div id="Partie5"></div>
+<div id="5-introduction-à-css"></div>
 
-## 5. Introduction à css : révisions
+## 5. Introduction à css
 
 Lien vers le cours : [Introduction à css](https://francoisbrucker.github.io/cours_informatique/cours/web/css-introduction/). 
 Je n'ai rien à rapporter de cette partie car toutes les notions m'étaient connues. 
 
-<div id="Partie6"></div>
+<div id="6-unités-et-couleurs"></div>
 
-## 6. Unités et couleurs : apprentissage
+## 6. Unités et couleurs
 
 Lien vers le cours : [Unités et couleurs](https://francoisbrucker.github.io/cours_informatique/cours/web/unit%C3%A9s-couleurs/). 
+Cette partie traite de l'utilisation des unités et des normes utilisables pour les couleurs, en css. 
 
+<div id="unités"></div>
 
+#### Unités
+
+En css, il existe de nombreuses unités pour dimensionner les éléments. Il y a à la fois des unités assez communes, comme le centimètre, **cm**, ou le pixel, **px**, mais aussi des unités spécifiques, comme l'*emphasis*, **em**, ou le *root emphasis*, **rem**. Le cours indique deux bonnes pratiques dans l'utilisation des unités en css : 
+- Toujours utiliser des unités relatives **em** et **rem** dans vos design. 
+- Toujours donner les unités des images en **px** sans redimensionnement. 
+
+<div id="couleurs"></div>
+
+#### Couleurs
+
+En css, il existe plusieurs façons de décrire les couleurs. On peut : 
+- les nommer (par exemple **black**, **red**,...), 
+- utiliser les valeurs en hexadécimale, 
+- utiliser des formats tels que rgb. 
+
+<div id="7-sélecteurs-css"></div>
+
+## 7. Sélecteurs css
+
+Lien vers le cours : [Sélecteurs css](https://francoisbrucker.github.io/cours_informatique/cours/web/s%C3%A9lecteurs-css/). 
+Cette section m'a permis de développer mon vocabulaire sur les différents sélecteurs même si leur utilisation m'était déjà familière. Voici les différents types de sélections qui existent : 
+- sélection par combinaison de sélecteurs (`p, h1` --> les paragraphes et les titres de type h1), 
+- sélection par attribut (`*[style]` --> toutes les balises avec un attribut style), 
+- sélection par spécialisation (`A > B` --> toutes les balises B descendant directement de balises A), 
+- sélection par pseudo-classe (`a:hover` --> lorsque la souris passe sur un lien), 
+- sélection par pseudo-élément (`p::first-letter` --> la première lettre d'un paragraphe), 
+- sélection par sélecteur de classe (`.spacious` --> tous les éléments de classe *spacious*), 
+- sélection par sélecteur d'identifiant (`#demo` --> l'élément avec l'identifiant *demo*). 
+
+<div id="8-modèle-de-boîtes"></div>
+
+## 8. Modèle de boîtes
+
+Lien vers le cours : [Modèle de boîtes](https://francoisbrucker.github.io/cours_informatique/cours/web/mod%C3%A8le-boites/). 
+Cette partie aborde différentes valeurs de la propriété css `display` ainsi que les notions de *padding*, *margin* et *border*. 
+En s'appuyant sur un code html fournit par le cours, on teste plusieurs styles pour bien comprendre l'utilité des propriété css et de leurs attributs. 
+
+<div id="9-balises-anonymes"></div>
+
+## 9. Balises anonymes
+
+Lien vers le cours : [Balises anonymes](https://francoisbrucker.github.io/cours_informatique/cours/web/balises-anonymes/). 
+Les balises anonymes sont des balises html qui n'ont pas de role spécifique si ce n'est de grouper d'autres balises sous une même balise parent. Les deux principales balises anonymes sont : 
+- la balise `<div></div>`, 
+- et la balise `<span></span>`. 
+
+<div id="10-positionnement"></div>
+
+## 10. Positionnement
+
+Lien vers le cours : [Positionnement](https://francoisbrucker.github.io/cours_informatique/cours/web/positionnement/). 
+Le positionnement correspond, comme son nom l'indique à la position des éléments sur une page web. Les propriétés qui permettent de s'en occuper sont les suivantes : 
+- `display` permet de changer le flux d'un élément, 
+- `position` permet de positionner les éléments en passant outre le flux. 
+
+Ces propriétés sont principalements utilisées pour des balises de comportement telles que `<header></header` ou `<footer></footer>`. 
+
+<div id="11-projet-css"></div>
+
+## 11. Projet css
+
+Lien vers le cours : [Projet css](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-css/). 
+Pour s'assurer de la bonne aquisition des notions vues, le cours propose de s'entraîner à ajouter du style en css sur le fichier html produit dans la partie [4. Projet html](#4-projet-html). 
+Voici donc à quoi ressemble maintenant la page : 
+<div><img src="page_css1.png"></div>
+Et le bas de page avec un lien sur lequel passe la souris : 
+<div><img src="page_css2.png"></div>
+{% details "Contenu du fichier css" %}
+```
+p {
+    color : #71706f;
+    background-color: #eff0f4;
+    border: black 5px double;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+}
+.partie {
+    background-color: #f7af17;
+    border: #2487b9 5px solid;
+}
+h1 {
+    background-color: #2487b9;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+a:hover {
+    color: #128c38;
+    font-size: large;
+}
+```
+{% enddetails %}
+
+<div id="12-gestion-des-fichiers"></div>
+
+## 12. Gestion des fichiers
+
+Lien vers le cours : [Gestion des fichiers](https://francoisbrucker.github.io/cours_informatique/cours/web/) (3ème partie du cours sur le web). 
+Cette partie explique les bonnes pratiques pour ranger les fichiers d'un site : 
+1. Il faut un dossier spécifique où ranger tout le site. 
+2. A l'intérieur de ce dossier, l'entrée du site (la première page qui est sensée s'afficher) a pour nom `index.html`. 
+3. Il faut toujours avoir des dossiers spécifiques pour ranger les différents types de fichiers utilisés. 
+C'est donc ce que j'ai mis en place dans mon fichier *html* de mon compte de Centrale. Ainsi, comme j'ai des images et un fichier de style, l'arborescence est la suivante : 
+```
+html
+├── index.html
+├── Images
+│   ├── css.png
+│   ├── html.png
+│   └── js.png
+└── Styles
+    └── style.css
+```
+Et comme cela est sur mon compte de Centrale, mon site est accessible à l'adresse : [http://paul.le_bihan.perso.centrale-marseille.fr](http://paul.le_bihan.perso.centrale-marseille.fr). 
+
+<div id="sources"></div>
 
 ## Sources
 
-1. Cours << [Web](https://francoisbrucker.github.io/cours_informatique/cours/web/) >> de Monsieur François Brucker. 
+<div id="Web"></div>
+
+1. Cours « [Web](https://francoisbrucker.github.io/cours_informatique/cours/web/) » de Monsieur François Brucker. 
 
 <div id="W3C"></div>
 
-1. << [World Wide Web Consortium](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) >> sur wikipedia.org (consulté le 11/12/2023). 
+2. « [World Wide Web Consortium](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) » sur wikipedia.org (consulté le 11/12/2023). 
 
 <div id="DOM"></div>
 
-2. << [Document Object Model](https://fr.wikipedia.org/wiki/Document_Object_Model) >> sur wikipedia.org (consulté le 11/12/2023). 
+3. « [Document Object Model](https://fr.wikipedia.org/wiki/Document_Object_Model) » sur wikipedia.org (consulté le 11/12/2023). 
 
-3. 
+<div id="horodateur"></div>
 
 ## Horodateur 
 | Date | Heures passées | Indications | 

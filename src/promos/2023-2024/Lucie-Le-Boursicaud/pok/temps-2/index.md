@@ -22,10 +22,18 @@ Connaitre les bases de Figma.
 
 # Sprint 1 
 ###### Objectifs du premier sprint
-+ [x] Choisir la charte graphique  - 3
-+ [x] Réaliser une maquette simplifiée - 2
-+ [x] Créer les éléments et les variants principaux  - 2
-+ [x] Avoir des ébauches de différentes pages - 2
++ [x] Réaliser le brief graphique - 1H
++ [x] Choisir la charte graphique (typographie et couleur) - 1H
++ [x] Réaliser un logo - 1H
++ [x] Réaliser la maquette simplifiée de la page *Home* - 1H
++ [x] Réaliser la maquette simplifiée de la page *Carte* - 1H
++ [x] Réaliser la maquette simplifiée de la page *Réservation* - 1H
++ [x] Réaliser la maquette simplifiée de la page *Art* - 1H
++ [x] Créer les boutons d'actions - 30min
++ [x] Créer la bottom bar - 1H
++ [x] Créer les inputs de réservations - 30min
++ [x] Créer les boutons pour le choix des heures et nombres de personnes - 30min
++ [x] Ajouter des photos - 30min
 
 
 ## Sommaire
@@ -116,7 +124,7 @@ J'ai ajouté des formes un peu artistiques et de la couleur pour former des vers
 
 <div style="display:flex">
 <div><img src="vibe1Cv.png"></div>
-<div><img src="Vibe2Cv.png"></div>
+<div><img src="vibe2Cv.png"></div>
 <div><img src="vibe3Cv.png"></div>
 </div>
 
@@ -186,9 +194,14 @@ Et les premiers composants :
 
 # Sprint 2
 ###### Objectifs du deuxième sprint
-+ [] Finaliser les composants - 3
-+ [] Finaliser les maquettes - 3
-+ [] Appliquer la colorimétrie sur les différentes pages - 3
++ [] Faire le composant d'en tête pour les différentes pages - 1H
++ [] Faire les composants des autres plats - 2H
++ [] Faire le composant de réservation bien prise en compte - 1H30
++ [] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
++ [] Ajouter les composants des autres plats sur la page *Carte* - 15min
++ [] Ajouter les couleurs aux différentes pages - 2H
++ [] Réaliser les animations d'interraction hoover sur les boutons - 1H
++ [] Réaliser les animation non interractive sur la page *Home* - 2H
 
 ### Horodateur
 | Date | Heures passées | Indications | 
