@@ -5,10 +5,15 @@ title: "SérénaDo_It"
 authors:
   - Arthur Louradou
 
-date: 2023-09-18
+date: 2023-12-13
 
 tags: 
   - "temps 2"
+  - "Data"
+  - "Excel"
+  - "Google Spreadsheet"
+  - "Python"
+
 
 résumé: Ce POK, modestement nommé selon le nom de son grand frère Sérénade, est un projet de création d'un site web de gestion de calendrier pour les élèves en 3A.
 ---
