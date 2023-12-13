@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Street Fighter de Wish"
+title: "Un jeu de combat ultra mortel"
 authors:
   - Vladimir Jeantroux
 
