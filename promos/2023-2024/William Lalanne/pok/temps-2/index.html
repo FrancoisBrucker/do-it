@@ -166,7 +166,7 @@ Quand on regarde la liste des bases de données crées, on voit que mydb existe 
   name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><img src="table.png" alt="table"></p>
-<p>On précise que dans la table on veut 2 colonnes, une première qui s'appelle <strong>id</strong> et qui est la clé primaire de la table, une seconde qui s'appelle <strong>name</strong> qui contiendra le nom des utilisateurs :<br>
+<p>On précise que dans la table on veut 2 colonnes, une première qui s'appelle <strong>id</strong> qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé <em>AUTO_INCREMENT</em> permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle <strong>name</strong> qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères :<br>
 <img src="colonnes.png" alt="colonnes"></p>
 <p>Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">  <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
