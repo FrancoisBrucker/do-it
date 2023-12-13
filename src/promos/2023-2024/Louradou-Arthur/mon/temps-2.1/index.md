@@ -19,7 +19,7 @@ résumé: "Sur la base des travaux de mes camarades des années précédentes, s
 - [Objectifs](#objectifs)
 - [Autres MONs](#autres-mons)
 - [Les bases de Docker](#les-bases-de-docker)
-  - [Cheat Sheet des commandes apprises au cours du MON (vidéo)](#cheat-sheet-des-commandes-apprises-au-cours-du-mon-vidéo)
+  - [Commandes basiques](#commandes-basiques)
   - [Création d’un DockerFile : exemple d’application](#création-dun-dockerfile--exemple-dapplication)
   - [La commande CMD : exécuter une commande dans le Docker](#la-commande-cmd--exécuter-une-commande-dans-le-docker)
   - [Construire une image Python](#construire-une-image-python)
@@ -60,7 +60,7 @@ https://labs.play-with-docker.com/
 
 Par la suite, j'ai changé la configuration de ma machine pour pourvoir installer Docker Desktop et profiter pleinement du MON pour mettre en pratique les tutoriels et documentations consultées.
 
-### Cheat Sheet des commandes apprises au cours du MON (vidéo) { #cheat-sheet-des-commandes-apprises-au-cours-du-mon-vidéo }
+### Commandes basiques { #commandes-basiques }
 
 La base, par exemple pour installer une distribution Linux partielle comme fedora :
 
