@@ -42,9 +42,25 @@ Les objectifs de cette réalisation sont les suivants :
 
 ### Sprint 1 { #sprint-1 }
 
+| Tâche                                                        | Difficulté | Temps |
+|--------------------------------------------------------------|------------|-------|
+| Interagir avec l'API Google Spreadsheet                      | 1          | 1h    |
+| Extraire les informations du tableur sous forme de DataFrame | 2          | 2h    |
+| Extraire du DataFrame les informations pertinentes           | 3          | 2h    |
+| Tester, débugger, chercher des solutions                     | 5          | 3h    |
+| Exporter ces informations dans un fichier .ics               | 1          | 1h    |
+| Générer l'architecture propre du projet                      | 2          | 2h    |
+
 À la fin de ce sprint, nous devrions avoir un programme qui s'éxécute en ligne de commande et qui permet d'extraire les informations de l'Excel (Google Spreadsheet, en réalité) du calendrier de la filière Do_It.
 
 ### Sprint 2 { #sprint-2 }
+
+| Tâche                                          | Difficulté | Temps |
+|------------------------------------------------|------------|-------|
+| Écrire les tests unitaires                     | 5          | 3h    |
+| Mettre le POC du POK dans les classes python   | 3          | 2h    |
+| Dégugger le code jusqu'à export du .ics        | 5          | 3h    |
+| Créer une interface web pour exporter le .ics  | 3          | 2h    |
 
 Dans cette partie, nous allons créer une interface permettant d'exporte un .ics et de s'abonner au calendrier de la filière Do_It, en tâchant de personnaliser cela aux élèves en utilisant le travail de Duc.
 
