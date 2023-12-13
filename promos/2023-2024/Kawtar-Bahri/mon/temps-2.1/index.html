@@ -154,8 +154,8 @@
 <td>- Besoin de conformité avec un schéma fixe <br> - Intégrité des données et relations importantes</td>
 </tr>
 <tr>
-<td>NoSQL</td>
-<td>- Flexibilité pour différents types de données <br>- Évolutivité horizontale<br>- Gestion de gros volumes de données</td>
+<td>NoSQL (Not Only SQL)</td>
+<td>- Flexibilité pour différents types de données <br>- Évolutivité horizontale*<br>- Gestion de gros volumes de données</td>
 <td>- Manque de normes et de cohérence entre les systèmes <br>- Moins adapté pour les requêtes complexes<br>- Risque de duplication des données</td>
 <td>- Grande variété de données non structurées, semi-structurées<br> - Besoin d'une évolutivité horizontale</td>
 </tr>
@@ -171,6 +171,10 @@
 </tr>
 </tbody>
 </table>
+<p>SQL permet de garantir l’unicité de la donnée (non dupliquée), ce qui était utile dans une époque où le cout de stockage etait extrêmement élevé.<br>
+Et comme ce n’est plus le cas, on peut maintenant se permettre de dupliquer la donnée en faisant du NoSQL, pour répondre à un besoin d’agilité (pouvoir modifier la donnée sans se soucier de sa structure).</p>
+<p>Evidement cette liste n’est pas exhaustive, on peut trouver d’autres types de base des données (Base de données embarquée, base de données XML/JSON, ...)</p>
+<p>*L'évolutivité horizontale se réfère à la capacité d'une base de données à gérer une augmentation de la charge de travail en ajoutant simplement de nouveaux serveurs au lieu d'augmenter la capacité des serveurs existants. Contrairement à l'évolutivité verticale, qui implique l'ajout de ressources (comme la RAM, le processeur, etc.) à un serveur existant, l'évolutivité horizontale permet de répartir la charge sur plusieurs serveurs, formant souvent un cluster.</p>
 <h2>Collecte de données</h2>
 <h3>Web scrapping</h3>
 <p>Le web scraping, également appelé extraction de données web, est une technique informatique qui consiste à extraire des informations ou des données à partir de sites web. C'est un moyen efficace d'obtenir des données structurées à partir de pages web, que ce soit pour la recherche, l'analyse de marché, la surveillance concurrentielle, ou d'autres applications.</p>
