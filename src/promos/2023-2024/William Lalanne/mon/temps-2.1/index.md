@@ -37,7 +37,7 @@ résumé: "Dans ce MON je souhaite me former au backend avec Node.js et express"
 [API](https://www.sitepoint.com/rest-api/)
 
 
-## Initialisation du backend
+## Initialisation du backend : 30min
 
 Lorsque l'on a déjà créé tout le front-end d'un site et que l'on veut coder le back, il faut d'abord veiller à séparer les fichiers concernés en les mettant dans deux dossiers distincts, un que l'on peut appeler front-end et l'autre back-end. 
 
@@ -52,7 +52,7 @@ npm init
 Grâce à cette commande, on précise que l'on veut créer un projet pour le back-end, ensuite on remplit plusieurs paramètres pour configurer un fichier nommé *package.json*
 
 
-## Création du serveur 
+## Création du serveur : 2h
 Pour démarrer un serveur basique, on créé un fichier *server.js* dans lequel on créera le serveur. Il faut d'abord commencer par importer le package HTTP indispensable pour créer un serveur :
 ```js
 const http = require('http'); 
@@ -72,7 +72,7 @@ Le serveur est créé simplement grâce à la fonction ***createServer*** du pac
 Ensuite, à chaque requête faite au serveur la fonction après le **(req, res)** est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'. 
 On améliorera plus tard dans ce MON le serveur pour qu'il fasse ce que l'on veut. 
 
-## API RESTful
+## API RESTful : 2h
 
 ![schema](schema.png)
 [Source_Image](https://welovedevs.com/fr/articles/api-rest/)
@@ -88,13 +88,13 @@ Les API sont composés de ressources, ce sont des types de données créées par
 
 ```js
 const contacts = {
-  {numero: 0644784004, prenom: 'Benoit', nomDeFamille: 'Béguier'},
-  {numero: 0763637393, prenom: 'Nicolas', nomDeFamille: 'Ouzouliasse'},
-  {numero: 0677777777, prenom: 'Alexandre', nomDeFamille: 'Beyaert'}
+  {numero: 0644784004, prenom: 'Benoit', nom: 'Béguier'},
+  {numero: 0763637393, prenom: 'Nicolas', nom: 'Ouzouliasse'},
+  {numero: 0677777777, prenom: 'Alexandre', nom: 'Beyaert'}
 }
 ```
 
-## Création de l'application express
+## Création de l'application express : 30min
 
 Après avoir créé notre serveur, il faut maintenant créer l'application express. Express est un framework de Node.js très utile car il facilite grandement l'écriture des requêtes au serveur. D'abord, il faut créer un fichier **app.js** dans lequel nous allons créer l'application avec la commande suivante: 
 ```js
@@ -133,7 +133,7 @@ app.use((req, res) => {
 Grâce à cette commande, à chaque requête faite au serveur, il renvoie la réponse **"Votre requête a bien été reçue"**. 
 
 
-## Les Middlewares. 
+## Les Middlewares : 2h
 La commande ci-dessus est ce qu'on appelle un middleware, les application express sont essentiellements composées d'une suite de middlewares. Ce sont des fonctions qui reçoivent en entrée une requête (req) et une réponse (res). Ils peuvent lire ces objets, les analyser et les manipuler. On peut aussi leur donner en entrée la méthode *next()* qui permet à un middleware de passer l'exécution du code au middleware suivant. 
 Pour mieux comprendre, prenons un exemple :
 ```js
@@ -166,7 +166,7 @@ module.exports = app;
 Pour faire simple, le premier middleware renvoie "requête reçue" lorsque qu'il y a une requête faite au serveur. Ensuite, il passe l'exécution au middleware suivant qui lui, renvoie un statut 201 puis passe l'éxecution. Le troisième middleware renvoie une réponse sous format JSON puis passe l'exécution. Le dernier renvoie "Réponse envoyée avec succès" dans la console. 
 
 
-## Exemple de méthodes HTTP et les routes
+## Exemple de méthodes HTTP et les routes : 2H30
 
 On peut aussi faire des requêtes en utilisant les méthodes HTTP vues précédemment. 
 Pour cela on va devoir définir des routes.
@@ -175,7 +175,7 @@ Les routes permettent de définir comment l'application doit répondre à une re
 Voyons un exemple de requête GET qui peut-être fait pour savoir si une personne existe dans nos contacts : 
 
 ```js
-app.get('/api/repertoire/:prenom',(req,res) => {
+app.get('/api/contacts/:prenom',(req,res) => {
     const personne = contacts.find(p => p.prenom === parseInt(req.params.prenom));
     if (personne=='Nicolas') res.status(200);
     res.send(personne);
@@ -185,10 +185,10 @@ app.get('/api/repertoire/:prenom',(req,res) => {
 Pour faire une requête POST qui ajoute quelqu'un dans nos contacts on peut faire ceci par exemple : 
 
 ```js
-app.post('/api/repertoire',(req,res) =>{
+app.post('/api/contacts',(req,res) =>{
 
     const nouveauContact = {
-        id: rq.body.numero
+        numero: rq.body.numero
         prenom: req.body.prenom,
         nom: req.body.nom
     };
@@ -198,10 +198,43 @@ app.post('/api/repertoire',(req,res) =>{
 });
 ```
 
+Voici un exemple de requête DELETE pour supprimer un contact :
+
+```js
+app.delete('/api/contacts/:numero', (req,res) => {
+    const personne = contacts.find(p => p.numero === parseInt(req.params.numero));
+    if (!personne) res.status(404).send("La personne n'existe pas");
+
+    
+    const index = contacts.indexOf(personne);
+    contacts.splice(index,1);
+
+    res.send(personne);
+});
+```
+
+Enfin on peut aussi mettre à jour les informations d'un contact comme le nom et le prénom : 
+
+```js
+app.put('/api/contacts/:numero', (req,res)=>{
+    
+    const personne = contacts.find(p => p.numero === parseInt(req.params.numero));
+    if (!personne) res.status(404).send("La personne n'existe pas");
+
+    if (!req.body.prénom || !req.body.nom) {
+        res.status(400).send('La requête pas valide');
+    }
+
+    personne.prenom = req.body.prenom;
+    personne.nom = req.body.nom;
+    res.send(personne);
+});
+```
+
 On peut se servir de tous ces middlewares pour communiquer avec l'API et obtenir ou donner des informations au serveur.
 
 
-## Conclusion 
+## Conclusion : 30min
 
 J'ai pu voir comment créer un serveur plutôt simple avec Node et Express et j'ai pu comprendre la logique derrière les middlewares. Mais je ne pensais pas que cela serait aussi complexe de mettre en place la logique back-end d'un site web. 
 

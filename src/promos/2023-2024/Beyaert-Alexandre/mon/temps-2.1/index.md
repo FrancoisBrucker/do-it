@@ -552,6 +552,13 @@ NumPy facilite la manipulation des données, Matplotlib offre des outils graphiq
 
 **Ensemble**, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est **très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.**
 
+#### Répartition du temps
+
+| Timing | NumPy | Matplotlib | Pandas |
+| -------| -------- | -------- | -------- |
+| Temps prévu (en heures) | 4 | 4 | 2 |
+| Temps dédié (en heures)| 5 | 3 | 1 |
+
 ## 6. Bibliographie
 
 [Documentation NumPy](https://numpy.org/doc/stable/user/absolute_beginners.html)
