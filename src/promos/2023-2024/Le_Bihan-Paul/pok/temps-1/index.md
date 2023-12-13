@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Création d'un site web"
+title: "POK 1 : Création d'un site web"
 authors:
   - Paul Le Bihan
 

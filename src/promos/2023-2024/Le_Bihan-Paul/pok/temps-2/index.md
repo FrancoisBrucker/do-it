@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "POK 2 : cours de html/css/js"
+title: "POK 2 : Cours de html/css/js"
 authors:
   - Paul Le Bihan
 
