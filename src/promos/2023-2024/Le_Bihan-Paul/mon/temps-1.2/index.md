@@ -8,10 +8,10 @@ authors:
 date: 2023-09-27
 
 tags: 
-  - "Temps 1"
+  - "temps 1"
   - "HTML"
   - "CSS"
-  - "Débutant"
+  - "débutant"
 
 résumé: "MON traitant de HTML et CSS."
 ---
