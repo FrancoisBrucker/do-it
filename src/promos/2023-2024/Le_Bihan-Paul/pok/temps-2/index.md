@@ -8,7 +8,7 @@ authors:
 date: 2023-12-13
 
 tags: 
-  - "Temps 2"
+  - "temps 2"
   - "HTML"
   - "CSS"
   - "JS"

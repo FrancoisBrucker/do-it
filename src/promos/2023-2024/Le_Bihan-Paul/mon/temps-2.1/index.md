@@ -8,11 +8,11 @@ authors:
 date: 2023-12-13
 
 tags:
-  - "Temps 2"
-  - "Web"
+  - "temps 2"
+  - "web"
   - "HTML"
   - "CSS"
-  - "Débutant"
+  - "débutant"
 
 résumé: "MON pour approfondir mes connaissances en html et css. Pour cela, j'ai suivi les parties sur le html et le css du cours 'Web' de Monsieur François Brucker."
 ---
