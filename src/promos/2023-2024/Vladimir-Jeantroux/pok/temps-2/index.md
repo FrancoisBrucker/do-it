@@ -51,16 +51,16 @@ Pour ce premier sprint, je compte faire au moins un personnage qui puisse être 
 
 Backlog du sprint 1 : 
 
-- Prise en main de Godot (4h) []
-- Création d'un personnage (5h) [] 
-    - Animation du personnage et des coups (1h) []
-    - Addition des mouvements (2h) []
-    - Addition des hitbox (2h) []
-- Implémentation des mécaniques de jeu (3h30) []
-  - Compte à rebours (1h) []
+- Prise en main de Godot ~~(4h)~~ 2h30 [X]
+- Création d'un personnage (6h) [X] 
+    - Animation du personnage et des coups (1h) [X]
+    - Addition des mouvements ~~(2h)~~ 3h [X]
+    - Addition des hitbox (2h) [X]
+- Implémentation des mécaniques de jeu (2h) []
+  - Compte à rebours (1h) [X]
   - PV (1h)[]
-- Création des menus (1h) []
-    - Menu principal (1h) []
+- Création des menus ~~(1h)~~ [X]
+    - Menu principal **et arène** ~~(1h)~~ 30 min [X]
 
 ## Résumé du Sprint 1 
 
