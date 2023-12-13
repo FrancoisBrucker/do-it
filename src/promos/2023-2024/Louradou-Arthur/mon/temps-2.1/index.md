@@ -13,14 +13,31 @@ tags:
 résumé: "Sur la base des travaux de mes camarades des années précédentes, se former à Docker et à son utilisation dans un contexte de production."
 ---
 
-## Prérequis
+## Sommaire
+
+- [Prérequis](#prérequis)
+- [Objectifs](#objectifs)
+- [Autres MONs](#autres-mons)
+- [Les bases de Docker](#les-bases-de-docker)
+  - [Commandes basiques](#commandes-basiques)
+  - [Création d’un DockerFile : exemple d’application](#création-dun-dockerfile--exemple-dapplication)
+  - [La commande CMD : exécuter une commande dans le Docker](#la-commande-cmd--exécuter-une-commande-dans-le-docker)
+  - [Construire une image Python](#construire-une-image-python)
+  - [Gestion du réseau](#gestion-du-réseau)
+  - [Faire persister la donnée](#faire-persister-la-donnée)
+  - [Aller plus loin dans la gestion du réseau (et Docker Compose…)](#aller-plus-loin-dans-la-gestion-du-réseau-et-docker-compose)
+  - [Mettre en ligne l’image Docker sur Docker Hub](#mettre-en-ligne-limage-docker-sur-docker-hub)
+- [Regard critique et ouverture](#regard-critique-et-ouverture)
+- [Bibliographie](#bibliographie)
+
+## Prérequis { #prérequis }
 
 Des bases en Linux seront nécessaires pour le suivi de ce MON le plus confortablement. Je tâcherai autant que possible de vulgariser les termes utilisés et d’expliquer pourquoi nous mettons en place les architectures que nous allons voir.
 
 Autrement, pas de prérequis si ce n’est de l’intérêt pour l’administration système et le déploiement d’applications sous forme de micro-services !
 
 
-## Objectifs
+## Objectifs { #objectifs }
 
 Les objectifs de cette réalisation sont les suivants :
 - Lire la documentation écrite par les élèves des années précédentes
@@ -29,13 +46,13 @@ Les objectifs de cette réalisation sont les suivants :
 - Mettre en pratique les connaissances acquises en parralèle de l'apprentissage
 
 
-## Autres MONs
+## Autres MONs { #autres-mons }
 
 [Docker - Tunçay](../../../../2022-2023/Bilgi-Tuncay/mon/Docker/)
 
 [Docker - Victor](../../../Victor-Ory/mon/Docker/)
 
-## Les bases de Docker
+## Les bases de Docker { #les-bases-de-docker }
 
 S’entrainer avec Docker sans l’installer sur ma machine :
 
@@ -43,7 +60,7 @@ https://labs.play-with-docker.com/
 
 Par la suite, j'ai changé la configuration de ma machine pour pourvoir installer Docker Desktop et profiter pleinement du MON pour mettre en pratique les tutoriels et documentations consultées.
 
-### Cheat Sheet des commandes apprises au cours du MON (vidéo)
+### Commandes basiques { #commandes-basiques }
 
 La base, par exemple pour installer une distribution Linux partielle comme fedora :
 
@@ -55,7 +72,7 @@ docker run --interactive --tty fedora
 
 Cette dernière commande (-i -t) ouvre un terminal interactif dans le container : ces options sont plus utilisées à des fins de debug que de production mais permettent de voir ce qui se passe dans le container en direct et interagir avec.
 
-### Création d’un DockerFile : exemple d’application
+### Création d’un DockerFile : exemple d’application { #création-dun-dockerfile--exemple-dapplication }
 
 Afin d’automatiser les actions à exécuter à la création de notre image Docker, nous pouvons créer un fichier qui dira à Docker quelles actions effectuer pour créer notre container.
 
@@ -75,7 +92,7 @@ docker build -t figlet ./
 docker run figlet
 ```
 
-### La commande CMD : exécuter une commande dans le Docker
+### La commande CMD : exécuter une commande dans le Docker { #la-commande-cmd--exécuter-une-commande-dans-le-docker }
 
 Il convient avant d’exécuter nos premiers scripts de définir un entrypoint, qui définit une valeur par défaut à la commande CMD.
 
@@ -117,7 +134,7 @@ $ docker run figlet coucou!
  \___\___/ \__,_|\___\___/ \__,_(_)
 ```
 
-### Construire une image Python
+### Construire une image Python { #construire-une-image-python }
 
 Nous allons mettre en pratique les acquis précédent pour construire une application avec un Dockerfile un peu plus élaboré. Il s’agira de construire une image Python et de la configurer pour la mettre en réseau et d’y accéder. Pour cela, nous allons utiliser un back-end en Django.
 
@@ -136,13 +153,13 @@ docker run -t python-django-app
 
 Nous allons aborder ce point dans la partie suivante.
 
-### Gestion du réseau
+### Gestion du réseau { #gestion-du-réseau }
 
 Ici, il s’agira de mettre en place l’ouverture des ports pour accéder au service depuis sa machine (et pas seulement depuis le container en question). Par exemple, `-p (--publish) 8000:8000` redirige le port 8000 du container vers le port 8000 de la machine hôte.
 
 Or mon port 8000 est bien le port de l’app Django par défaut dans le container Docker. J’y accèderai donc sur ma machine à l’adresse `localhost:8000`.
 
-### Faire persister la donnée
+### Faire persister la donnée { #faire-persister-la-donnée }
 
 Jusqu’ici nous avons vu que les `docker build` généraient toujours la même image avec une suite d’instructions. Dès lors, on peut se demander comment une suite d’instruction déterministe pourrait donner un résultat différent avec des données différentes dans le cas où une image serait relancée. C’est pour cela que Docker gère **les volumes**.
 
@@ -161,7 +178,7 @@ Il existe aussi les volumes de type “Bind Mounts”, qui permets de partager u
 docker run -it --mount type=bind,src="$(pwd)",target=/src ubuntu bash
 ```
 
-### Aller plus loin dans la gestion du réseau (et Docker Compose…)
+### Aller plus loin dans la gestion du réseau (et Docker Compose…) { #aller-plus-loin-dans-la-gestion-du-réseau-et-docker-compose }
 
 Il est possible de procéder de deux manières pour faire communiquer deux conteneurs entre eux, d’abord en démarrant le container avec un réseau attaché ou bien en connectant un container en cours d’exécution au réseau. Dans tous les cas, on commence par la commande :
 
@@ -183,7 +200,7 @@ Ensuite, nous pouvons utiliser Docker Compose pour automatiser la mise en place 
 
 Nous explorerons ces possibilités sur des mises en pratiques concrètes et des déploiements avec un orchestrateur dans le prochain MON que je vous invite à lire si celui-ci a retenu votre attention.
 
-### Mettre en ligne l’image Docker sur Docker Hub
+### Mettre en ligne l’image Docker sur Docker Hub { #mettre-en-ligne-limage-docker-sur-docker-hub }
 
 Dans cette partie, nous allons nous interroger sur la façon de sauvegarder le travail accompli sur notre image Docker de test. Pour cela, nous utiliserons un repo à la manière de Github pour y placer nos images et les récupérer depuis n’importe quelle machine autorisée.
 
@@ -196,7 +213,7 @@ docker image push alouradou/tutorial-1
 
 Pour voir le résultat sur docker hub : [https://hub.docker.com/repository/docker/alouradou/tutorial-django/](https://hub.docker.com/repository/docker/alouradou/tutorial-django/general)
 
-## Regard critique et ouverture
+## Regard critique et ouverture { #regard-critique-et-ouverture }
 
 Nous avons ici abordé les points de compréhension de Docker et de la mise ne place de containers. Pour déployer des applications plus complexes, nous allons ensuite approfondir la notion d’orchestrateurs pour lancer nos conteneurs Docker de façon redondante.
 
@@ -204,7 +221,7 @@ Nous avons ici abordé les points de compréhension de Docker et de la mise ne p
 
 Durant le prochain MON, nous chercherons d’autres contenus de ce type pour Kubernetes et Elastic Search.
 
-## Bibliographie
+## Bibliographie { #bibliographie }
 
 [1] Vidéo du MON de Tunçay :
 [YouTube - Getting Started with Docker - Docker](https://www.youtube.com/watch?v=gAGEar5HQoU)
