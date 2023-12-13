@@ -101,7 +101,7 @@ Voici donc où je pense en être de mon projet à la fin de ce sprint :
 | 3 | Analyser la clareté du cours (explications, présence d'exemples,...) | 2H | 2H | 70% |
 | 4 | Proposer des reformulations voire des explications supplémentaires | 3H | 2H | 70% |
 | 5 | Proposer des exemples | 2H | 1H | 40% |
-| 6 | Réfléchir à des exercices | 5H | 1H | 0% |
+| 6 | Réfléchir à des exercices | 5H | 1H | 20% |
 | 7 | Analyser l'harmonie du cours (cohérence dans l'écriture, orthographe,...) | 2H | 1H | 70% |
 | 8 | Proposer une éventuelle harmonisation | 2H | 1H | 70% |
 
