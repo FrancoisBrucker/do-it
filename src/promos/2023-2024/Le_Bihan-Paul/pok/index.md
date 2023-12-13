@@ -8,5 +8,5 @@ authors:
 
 Ensemble des POK réalisés par Paul Le Bihan.
 
-* [POK 1](./temps-1)
-* [POK 2](./temps-2)
+* [POK 1 : Création d'un site web](./temps-1)
+* [POK 2 : Cours de html/css/js](./temps-2)

@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Création d'un site web"
+title: "POK 1 : Création d'un site web"
 authors:
   - Paul Le Bihan
 
 date: 2023-09-18
 
 tags: 
-  - "Temps 1"
+  - "temps 1"
   - "HTML"
   - "CSS"
 
