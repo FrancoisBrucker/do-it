@@ -21,26 +21,41 @@ résumé: "MON pour approfondir mes connaissances en html et css. Pour cela, j'a
 Prérequis : Aucun
 {%endprerequis%}
 
+<div id="introduction"></div>
+
 ## Introduction
 
-En soi, aucun prérequis n'est nécessaire pour suivre ce [cours](https://francoisbrucker.github.io/cours_informatique/cours/web/) mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON. 
+En soi, aucun prérequis n'est nécessaire pour suivre ce cours[[1](#Web)] mais en ce qui me concerne, j'avais déjà suivi un cours sur le html et le css. De nombreux points m'étaient donc déjà connus, c'est pourquoi j'aborderai uniquement les nouvelles notions que j'ai rencontrées pendant ce MON. 
+
+<div id="sommaire"></div>
 
 ## Sommaire
 
-1. [Outils de développement : approfondissement](#Partie1)
-2. [Introduction à html : révisions](#Partie2)
-3. [Anatomie d'une url : découverte](#Partie3)
-4. [Projet html : réalisation](#Partie4)
-5. [Introduction à css : révisions](#Partie5)
-6. [Unités et couleurs : apprentissage](#Partie6)
+- [Introduction](#introduction)
+- [Sommaire](#sommaire)
+- [1. Outils de développement : approfondissement](#1-outils-de-développement--approfondissement)
+    - [Le menu *Elements*](#le-menu-elements)
+    - [Le menu *Sources*](#le-menu-sources)
+    - [Le menu *Network*](#le-menu-network)
+    - [Le menu *Application*](#le-menu-application)
+- [2. Introduction à html : révisions](#2-introduction-à-html--révisions)
+    - [Arbre DOM](#arbre-dom)
+    - [Markup Validation Service](#markup-validation-service)
+- [3. Anatomie d'une URL : découverte](#3-anatomie-dune-url--découverte)
+- [4. Projet html : réalisation](#4-projet-html--réalisation)
+- [5. Introduction à css : révisions](#5-introduction-à-css--révisions)
+- [6. Unités et couleurs : apprentissage](#6-unités-et-couleurs--apprentissage)
+- [Sources](#sources)
+- [Horodateur](#horodateur)
 
-<div id="Partie1"></div>
+<div id="1-outils-de-développement--approfondissement"></div>
 
 ## 1. Outils de développement : approfondissement
 
 Lien vers le cours : [Outils de développement](https://francoisbrucker.github.io/cours_informatique/cours/web/outils-de-d%C3%A9veloppement/). 
 Concernant les outils de développements, je les avaient déjà utilisés mais il me restait encore plusieurs lacunes et ce cours m'a permis d'en combler certaines. Voici les différents menu des outils de développement que j'ai parcourus pendant ce cours : 
 
+<div id="le-menu-elements"></div>
 
 #### Le menu *Elements*
 
@@ -48,6 +63,7 @@ C'est surtout ce menu que j'avais déjà utilisé donc je connaissais la plupart
 
 <div><img src="console.png"></div>
 
+<div id="le-menu-sources"></div>
 
 #### Le menu *Sources*
 
@@ -55,6 +71,7 @@ En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation 
 
 <div><img src="sources.png"></div>
 
+<div id="le-menu-network"></div>
 
 #### Le menu *Network*
 
@@ -63,6 +80,7 @@ Dans l'image suivante on voit que<span style="background-color:#c59989;">csszeng
 
 <div><img src="network.png"></div>
 
+<div id="le-menu-application"></div>
 
 #### Le menu *Application*
 
@@ -70,7 +88,7 @@ Ce menu (dont j'ai aussi découvert l'existence) permet de voir les informations
 
 <div><img src="application.png"></div>
 
-<div id="Partie2"></div>
+<div id="2-introduction-à-html--révisions"></div>
 
 ## 2. Introduction à html : révisions
 
@@ -78,6 +96,8 @@ Lien vers le cours : [Introduction à html](https://francoisbrucker.github.io/co
 Dans cette partie la plupart du contenu a constitué uniquement des révisions mises à part deux nouveautés : 
 - l'arbre DOM, 
 - et le Markup Validation Service du W3C(*World Wide Web Consortium*, organisme de standardisation chargé de promouvoir la compatibilité des technologies du *World Wide Web*[[2](#W3C)]). 
+
+<div id="arbre-dom"></div>
 
 #### Arbre DOM
 
@@ -98,11 +118,13 @@ Pour décrire les liens entre les balises, on utilise un vocabulaire généalogi
 
 Cet arbre s'appelle l'arbre DOM justement parce que le DOM (de l'anglais *Document Object Model*) est l'interface de programmation normalisée par le W3C, qui permet à des scripts d'examiner et de modifier le contenu du navigateur web[[3](#DOM)]. 
 
+<div id="markup-validation-service"></div>
+
 #### Markup Validation Service
 
 le [Markup Validation Service du W3C](https://validator.w3.org/#validate_by_upload+with_options) est un service permettant de vérifier qu'un document html a une syntaxe correcte. 
 
-<div id="Partie3"></div>
+<div id="3-anatomie-dune-url--découverte"></div>
 
 ## 3. Anatomie d'une URL : découverte
 
@@ -133,7 +155,7 @@ Dans le cadre d'une page web, cette ressource pourra être :
 - des données décrite au format json, 
 - ...
 
-<div id="Partie4"></div>
+<div id="4-projet-html--réalisation"></div>
 
 ## 4. Projet html : réalisation
 
@@ -292,34 +314,36 @@ Et un apperçu du bas de la page :
 ```
 {% enddetails %}
 
-<div id="Partie5"></div>
+<div id="5-introduction-à-css--révisions"></div>
 
 ## 5. Introduction à css : révisions
 
 Lien vers le cours : [Introduction à css](https://francoisbrucker.github.io/cours_informatique/cours/web/css-introduction/). 
 Je n'ai rien à rapporter de cette partie car toutes les notions m'étaient connues. 
 
-<div id="Partie6"></div>
+<div id="6-unités-et-couleurs--apprentissage"></div>
 
 ## 6. Unités et couleurs : apprentissage
 
 Lien vers le cours : [Unités et couleurs](https://francoisbrucker.github.io/cours_informatique/cours/web/unit%C3%A9s-couleurs/). 
 
-
+<div id="sources"></div>
 
 ## Sources
 
-1. Cours << [Web](https://francoisbrucker.github.io/cours_informatique/cours/web/) >> de Monsieur François Brucker. 
+<div id="Web"></div>
+
+1. Cours « [Web](https://francoisbrucker.github.io/cours_informatique/cours/web/) » de Monsieur François Brucker. 
 
 <div id="W3C"></div>
 
-1. << [World Wide Web Consortium](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) >> sur wikipedia.org (consulté le 11/12/2023). 
+2. « [World Wide Web Consortium](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) » sur wikipedia.org (consulté le 11/12/2023). 
 
 <div id="DOM"></div>
 
-2. << [Document Object Model](https://fr.wikipedia.org/wiki/Document_Object_Model) >> sur wikipedia.org (consulté le 11/12/2023). 
+3. « [Document Object Model](https://fr.wikipedia.org/wiki/Document_Object_Model) » sur wikipedia.org (consulté le 11/12/2023). 
 
-3. 
+<div id="horodateur"></div>
 
 ## Horodateur 
 | Date | Heures passées | Indications | 
