@@ -37,9 +37,9 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 1. Objectifs du Sprint 1
 2. Objectifs du Sprint 2
 3. Maquette Figma
-4. Création des pages du site en HTML
-5. Mise en page V1 en CSS
-6. Retour d'expérience du Sprint 1
+4. Création des pages du site en HTML et en CSS
+5. Retour d'expérience du Sprint 1
+6. Objectifs du Sprint 2 rationnalisés
 
 Le but de ce POK est de mettre en pratique mon MON1.2 sur le développement web. Je souhaite créer un site web fonctionnel, qui utilise l'API de Spotify. Ce site permettrait à l'utilisateur de connecter son compte Spotify personnel, et en retour afficher une analyse de ses goûts musicaux.
 
@@ -871,3 +871,14 @@ button:hover {
 {% enddetails %}
 
 Je n'ai pas eu le temps de faire la page principale car les autres m'ont pris plus de temps. Cependant, j'ai déjà défini tous les styles que j'utilise et cela me prendra beaucoup plus de temps.
+
+## Retour d'expérience du Sprint 1
+
+Très content de ce que j'ai réussi à implémenter, de manière technique et esthétique, par rapport aux objectifs fixés. Les estimations de temps fixés étaient cohérentes. Pas de difficultés particulières rencontrées. Il ne manque que la page principale à faire mais ce sera très rapide.
+
+## Objectifs du Sprint 2 rationnalisés
+
+Voici les objectifs que je me suis fixé qui restent inchangés :
+
+- Lier l'API de Spotify avec mon site (6 heures)
+- Travailler sur les différentes fonctionnalités d'affichage de données de l'utlisateur en lien avec son compte Spotify (4 heures).
