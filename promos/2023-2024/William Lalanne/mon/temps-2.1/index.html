@@ -147,7 +147,7 @@
 <p><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/serveur-web/express/">Site_De_François_Brucker</a></p>
 <p><a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6521356-tirez-le-maximum-de-ce-cours">OpenClassRoom</a></p>
 <p><a href="https://www.sitepoint.com/rest-api/">API</a></p>
-<h2>Initialisation du backend</h2>
+<h2>Initialisation du backend : 30min</h2>
 <p>Lorsque l'on a déjà créé tout le front-end d'un site et que l'on veut coder le back, il faut d'abord veiller à séparer les fichiers concernés en les mettant dans deux dossiers distincts, un que l'on peut appeler front-end et l'autre back-end.</p>
 <p><img src="arbo_projet.png" alt="arborescence projet"></p>
 <p>C'est par exemple ce que j'ai fait au dessus pour un de mes projets.</p>
@@ -155,7 +155,7 @@
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> init
 </code></pre>
 <p>Grâce à cette commande, on précise que l'on veut créer un projet pour le back-end, ensuite on remplit plusieurs paramètres pour configurer un fichier nommé <em>package.json</em></p>
-<h2>Création du serveur</h2>
+<h2>Création du serveur : 2h</h2>
 <p>Pour démarrer un serveur basique, on créé un fichier <em>server.js</em> dans lequel on créera le serveur. Il faut d'abord commencer par importer le package HTTP indispensable pour créer un serveur :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 </code></pre>
@@ -171,7 +171,7 @@
 </ul>
 <p>Ensuite, à chaque requête faite au serveur la fonction après le <strong>(req, res)</strong> est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'.<br>
 On améliorera plus tard dans ce MON le serveur pour qu'il fasse ce que l'on veut.</p>
-<h2>API RESTful</h2>
+<h2>API RESTful : 2h</h2>
 <p><img src="schema.png" alt="schema"><br>
 <a href="https://welovedevs.com/fr/articles/api-rest/">Source_Image</a></p>
 <p>Une API (Application Programming Interface) permet l'interaction entre différentes applications ou différentes briques d'une même application. On parle d'API RESTful ou REST quand l'API suit le principe de &quot;Represential State Transfer&quot;. Cela signifie que les interactions qui ont lieu se font grâce au protocole HTTP et la logique CRUD (Create Read Update Delete).<br>
@@ -189,7 +189,7 @@ On a 4 interactions possibles :</p>
   <span class="token punctuation">{</span><span class="token literal-property property">numero</span><span class="token operator">:</span> <span class="token number">0677777777</span><span class="token punctuation">,</span> <span class="token literal-property property">prenom</span><span class="token operator">:</span> <span class="token string">'Alexandre'</span><span class="token punctuation">,</span> <span class="token literal-property property">nomDeFamille</span><span class="token operator">:</span> <span class="token string">'Beyaert'</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2>Création de l'application express</h2>
+<h2>Création de l'application express : 30min</h2>
 <p>Après avoir créé notre serveur, il faut maintenant créer l'application express. Express est un framework de Node.js très utile car il facilite grandement l'écriture des requêtes au serveur. D'abord, il faut créer un fichier <strong>app.js</strong> dans lequel nous allons créer l'application avec la commande suivante:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -220,7 +220,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Grâce à cette commande, à chaque requête faite au serveur, il renvoie la réponse <strong>&quot;Votre requête a bien été reçue&quot;</strong>.</p>
-<h2>Les Middlewares.</h2>
+<h2>Les Middlewares : 2h</h2>
 <p>La commande ci-dessus est ce qu'on appelle un middleware, les application express sont essentiellements composées d'une suite de middlewares. Ce sont des fonctions qui reçoivent en entrée une requête (req) et une réponse (res). Ils peuvent lire ces objets, les analyser et les manipuler. On peut aussi leur donner en entrée la méthode <em>next()</em> qui permet à un middleware de passer l'exécution du code au middleware suivant.<br>
 Pour mieux comprendre, prenons un exemple :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -249,22 +249,22 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span>
 </code></pre>
 <p>Pour faire simple, le premier middleware renvoie &quot;requête reçue&quot; lorsque qu'il y a une requête faite au serveur. Ensuite, il passe l'exécution au middleware suivant qui lui, renvoie un statut 201 puis passe l'éxecution. Le troisième middleware renvoie une réponse sous format JSON puis passe l'exécution. Le dernier renvoie &quot;Réponse envoyée avec succès&quot; dans la console.</p>
-<h2>Exemple de méthodes HTTP et les routes</h2>
+<h2>Exemple de méthodes HTTP et les routes : 2H30</h2>
 <p>On peut aussi faire des requêtes en utilisant les méthodes HTTP vues précédemment.<br>
 Pour cela on va devoir définir des routes.<br>
 Les routes permettent de définir comment l'application doit répondre à une requête HTTP spécifique. Par exemple, si on veut mettre en place un sytème d'ajout de contacts ou de suppression ou de mise à jour, il y aura une route pour chacun de ces actions.</p>
 <p>Voyons un exemple de requête GET qui peut-être fait pour savoir si une personne existe dans nos contacts :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/repertoire/:prenom'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/contacts/:prenom'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> personne <span class="token operator">=</span> contacts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">p</span> <span class="token operator">=></span> p<span class="token punctuation">.</span>prenom <span class="token operator">===</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>prenom<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>personne<span class="token operator">==</span><span class="token string">'Nicolas'</span><span class="token punctuation">)</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>personne<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Pour faire une requête POST qui ajoute quelqu'un dans nos contacts on peut faire ceci par exemple :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/api/repertoire'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/api/contacts'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
 
     <span class="token keyword">const</span> nouveauContact <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token literal-property property">id</span><span class="token operator">:</span> rq<span class="token punctuation">.</span>body<span class="token punctuation">.</span>numero
+        <span class="token literal-property property">numero</span><span class="token operator">:</span> rq<span class="token punctuation">.</span>body<span class="token punctuation">.</span>numero
         <span class="token literal-property property">prenom</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>prenom<span class="token punctuation">,</span>
         <span class="token literal-property property">nom</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>nom
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -273,8 +273,35 @@ Les routes permettent de définir comment l'application doit répondre à une re
     res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>nouveauContact<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<p>Voici un exemple de requête DELETE pour supprimer un contact :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/api/contacts/:numero'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> personne <span class="token operator">=</span> contacts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">p</span> <span class="token operator">=></span> p<span class="token punctuation">.</span>numero <span class="token operator">===</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>numero<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>personne<span class="token punctuation">)</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">"La personne n'existe pas"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    
+    <span class="token keyword">const</span> index <span class="token operator">=</span> contacts<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>personne<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    contacts<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>personne<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Enfin on peut aussi mettre à jour les informations d'un contact comme le nom et le prénom :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'/api/contacts/:numero'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+    
+    <span class="token keyword">const</span> personne <span class="token operator">=</span> contacts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">p</span> <span class="token operator">=></span> p<span class="token punctuation">.</span>numero <span class="token operator">===</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>numero<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>personne<span class="token punctuation">)</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">"La personne n'existe pas"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>prénom <span class="token operator">||</span> <span class="token operator">!</span>req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>nom<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'La requête pas valide'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    personne<span class="token punctuation">.</span>prenom <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>prenom<span class="token punctuation">;</span>
+    personne<span class="token punctuation">.</span>nom <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>nom<span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>personne<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>On peut se servir de tous ces middlewares pour communiquer avec l'API et obtenir ou donner des informations au serveur.</p>
-<h2>Conclusion</h2>
+<h2>Conclusion : 30min</h2>
 <p>J'ai pu voir comment créer un serveur plutôt simple avec Node et Express et j'ai pu comprendre la logique derrière les middlewares. Mais je ne pensais pas que cela serait aussi complexe de mettre en place la logique back-end d'un site web.</p>
 
 
