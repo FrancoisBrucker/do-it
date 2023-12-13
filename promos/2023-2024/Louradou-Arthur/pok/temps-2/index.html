@@ -125,16 +125,295 @@
 
 
 
-<h2>Objectifs</h2>
+<h2>Sommaire</h2>
+<ul>
+<li><a href="#objectifs">Objectifs</a></li>
+<li><a href="#sprint-planning">Sprint planning</a>
+<ul>
+<li><a href="#sprint-1">Sprint 1</a></li>
+<li><a href="#sprint-2">Sprint 2</a></li>
+</ul>
+</li>
+<li><a href="#de-la-recherche-au-poc">De la recherche au POC</a>
+<ul>
+<li><a href="#google-spredsheet">Google Spredsheet</a></li>
+<li><a href="#traitement">Traitement</a></li>
+</ul>
+</li>
+<li><a href="#du-poc-%C3%A0-la-r%C3%A9alisation">Du POC à la réalisation</a></li>
+<li><a href="#revue-de-sprint-1">Revue de Sprint 1</a></li>
+<li><a href="#suite--sprint-2">Suite : Sprint 2</a></li>
+</ul>
+<h2 id="objectifs">Objectifs</h2>
 <p>Les objectifs de cette réalisation sont les suivants :</p>
 <ul>
 <li>Extraire l'information pertinente du calendrier de la filière Do_It</li>
 <li>Exporter cette donnée à la main dans un fichier .ics</li>
 <li>Créer un site web permettant de s'abonner au calendrier élève par élève, à partir du travail de Duc</li>
 </ul>
-<h2>Sprint planning</h2>
-<h3>Sprint 1</h3>
+<h2 id="sprint-planning">Sprint planning</h2>
+<h3 id="sprint-1">Sprint 1</h3>
 <p>À la fin de ce sprint, nous devrions avoir un programme qui s'éxécute en ligne de commande et qui permet d'extraire les informations de l'Excel (Google Spreadsheet, en réalité) du calendrier de la filière Do_It.</p>
+<h3 id="sprint-2">Sprint 2</h3>
+<p>Dans cette partie, nous allons créer une interface permettant d'exporte un .ics et de s'abonner au calendrier de la filière Do_It, en tâchant de personnaliser cela aux élèves en utilisant le travail de Duc.</p>
+<h2 id="de-la-recherche-au-poc">De la recherche au POC</h2>
+<p>Je vais vous présenter dans cette partie les pistes de codes envisagées au cours de la phase de recherche nécessaire à l'analyse de données.<br>
+En effet, ce projet comporte une phase de recherche importante, car il faut comprendre le fonctionnement de l'API Google Spreadsheet, et trouver un moyen de l'utiliser pour traiter les données du calendrier de la filière Do_It.</p>
+<h3 id="google-spredsheet">Google Spredsheet</h3>
+<p>Pour commencer, voilà comment importer notre fichier dans Google Colab :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> drive
+drive<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">'/content/drive'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ensuite, il faut autoriser google à nous authentifier sur ses services :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> auth
+auth<span class="token punctuation">.</span>authenticate_user<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">import</span> gspread
+<span class="token keyword">from</span> google<span class="token punctuation">.</span>auth <span class="token keyword">import</span> default
+creds<span class="token punctuation">,</span> _ <span class="token operator">=</span> default<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+gc <span class="token operator">=</span> gspread<span class="token punctuation">.</span>authorize<span class="token punctuation">(</span>creds<span class="token punctuation">)</span>
+
+workbook <span class="token operator">=</span> gc<span class="token punctuation">.</span>open_by_url<span class="token punctuation">(</span><span class="token operator">&lt;</span>url du spreadsheet Do_It<span class="token operator">></span><span class="token punctuation">)</span>
+ws <span class="token operator">=</span> workbook<span class="token punctuation">.</span>worksheet<span class="token punctuation">(</span><span class="token string">'année'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>On peut ensuite récupérer les données de la feuille de calcul :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>ws<span class="token punctuation">.</span>get_all_records<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+sheet_titles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> sheet <span class="token keyword">in</span> workbook<span class="token punctuation">.</span>worksheets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  sheet_titles<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sheet<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+
+<span class="token comment"># Get_all_values from sheets and store in dictionary</span>
+dict_of_sheets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> sheet_title <span class="token keyword">in</span> sheet_titles<span class="token punctuation">:</span>
+  sheet <span class="token operator">=</span> workbook<span class="token punctuation">.</span>worksheet<span class="token punctuation">(</span>sheet_title<span class="token punctuation">)</span>
+  values <span class="token operator">=</span> sheet<span class="token punctuation">.</span>get_all_values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  dict_of_sheets<span class="token punctuation">[</span>sheet_title<span class="token punctuation">]</span> <span class="token operator">=</span> values
+<span class="token comment"># To confirm all sheets made it into the dictionary</span>
+dict_of_sheets<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">.</span>from_records<span class="token punctuation">(</span>dict_of_sheets<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'année'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+<span class="token comment"># df = df.fillna(axis=1, method='ffill')</span>
+df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>fillna<span class="token punctuation">(</span>method<span class="token operator">=</span><span class="token string">'ffill'</span><span class="token punctuation">)</span>
+
+two_first <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+two_first <span class="token operator">=</span> two_first<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token punctuation">)</span>
+first <span class="token operator">=</span> two_first<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">","</span> <span class="token operator">+</span> two_first<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+headers <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+df<span class="token punctuation">.</span>columns <span class="token operator">=</span> first
+</code></pre>
+<p>À ce stade, le code n'est pas propre et il faut encore le nettoyer. Cependant, il permet d'obtenir un DataFrame contenant les données du calendrier :</p>
+<div style="overflow: scroll">
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>Ors,</th>
+<th>Ors,</th>
+<th>Semaine,du</th>
+<th>Semaine,au</th>
+<th>Lundi,8h-9h</th>
+<th>Lundi,9h-10h</th>
+<th>Lundi,10h-11h</th>
+<th>Lundi,11h-12h15</th>
+<th>Lundi,14h-15h</th>
+<th>Lundi,15h-16h</th>
+<th>Lundi,16h15-17h15</th>
+<th>Lundi,17h15-18h15</th>
+<th>Mardi,8h-9h</th>
+<th>Mardi,9h-10h</th>
+<th>Mardi,10h15-11h15</th>
+<th>Mardi,11h15-12h15</th>
+<th>Mardi,14h-15h</th>
+<th>Mardi,15h-16h</th>
+<th>Mardi,16h15-17h15</th>
+<th>Mardi,17h15-18h15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td>du</td>
+<td>au</td>
+<td>8h-9h</td>
+<td>9h-10h</td>
+<td>10h-11h</td>
+<td>11h-12h15</td>
+<td>14h-15h</td>
+<td>15h-16h</td>
+<td>16h15-17h15</td>
+<td>17h15-18h15</td>
+<td>8h-9h</td>
+<td>9h-10h</td>
+<td>10h15-11h15</td>
+<td>11h15-12h15</td>
+<td>14h-15h</td>
+<td>15h-16h</td>
+<td>16h15-17h15</td>
+<td>17h15-18h15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>temps 1</td>
+<td></td>
+<td>28/08</td>
+<td>01/09</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>04/09</td>
+<td>08/09</td>
+<td>tronc commun 3A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>1</td>
+<td>11/09</td>
+<td>15/09</td>
+<td></td>
+<td></td>
+<td>Bonjour !(FB--LP)218</td>
+<td></td>
+<td>TC1 : Agilité(Florian Magnani)Visio/218</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Langues</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On voit que le header a une forme satisfaisante pour être exploitable par la suite.</p>
+<p>Un point important à noter est que les cases fusionnées dans Excel ne sont présenter que dans la première ligne du DataFrame. On pourrait considérer les remplir avec la méthode <code>fillna(method='ffill')</code>, mais cela engenderait des incohérences et des &quot;trous&quot; dans l'emploi du temps seraient remplis.</p>
+<p>Pour combler ceci, il va falloir extraire les informations de fusion du google spreadsheet. Après de longues recherches, ceci s'est avéré impossible.</p>
+<p>Il faut donc trouver une autre solution, dont l'une retenue est d'exporter la taille des cours du fichier excel exporté, qui lui possède bien les informations de fusion.</p>
+<p>Nous verrons dans un second temps comment procéder.</p>
+<h3 id="traitement">Traitement</h3>
+<p>À l'aide de fonctions utilitaires et d'une boucle, on peut extraire les informations de l'emploi du temps :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> icalendar <span class="token keyword">import</span> Calendar<span class="token punctuation">,</span> Event
+<span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span> timedelta
+
+row <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span>  <span class="token comment"># Prenons un ligne pour exemple</span>
+row <span class="token operator">=</span> row<span class="token punctuation">.</span>fillna<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token comment"># On enlève les deux premières colonnes, qui ne nous intéressent pas</span>
+
+cal <span class="token operator">=</span> Calendar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> col_name<span class="token punctuation">,</span> col_value <span class="token keyword">in</span> row<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> col_name <span class="token operator">==</span> <span class="token string">'Semaine,du'</span><span class="token punctuation">:</span>
+        week_start_date <span class="token operator">=</span> datetime<span class="token punctuation">.</span>strptime<span class="token punctuation">(</span>col_value<span class="token operator">+</span><span class="token string">"/2023"</span><span class="token punctuation">,</span> <span class="token string">'%d/%m/%Y'</span><span class="token punctuation">)</span>
+        week_end_date <span class="token operator">=</span> week_start_date <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Traitement de la semaine du"</span><span class="token punctuation">,</span>week_start_date<span class="token punctuation">,</span><span class="token string">"au"</span><span class="token punctuation">,</span>week_end_date<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> col_value<span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            event_start_date<span class="token punctuation">,</span> event_end_date <span class="token operator">=</span> parse_custom_time<span class="token punctuation">(</span>
+                df<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">(</span>week_start_date <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span>df<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">)</span>
+
+            event_end_date <span class="token operator">=</span> event_start_date <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>hours<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Événement détecté le"</span><span class="token punctuation">,</span>event_start_date<span class="token punctuation">,</span>event_end_date<span class="token punctuation">,</span><span class="token string">":"</span><span class="token punctuation">,</span>col_value<span class="token punctuation">)</span>
+
+            event <span class="token operator">=</span> Event<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            event<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token string">'summary'</span><span class="token punctuation">,</span> col_value<span class="token punctuation">)</span>  <span class="token comment"># Ajoutez le contenu de la cellule comme titre de l'événement</span>
+            event<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token string">'dtstart'</span><span class="token punctuation">,</span> event_start_date<span class="token punctuation">)</span>
+            event<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token string">'dtend'</span><span class="token punctuation">,</span> event_end_date<span class="token punctuation">)</span> <span class="token comment"># + compute_duration()</span>
+
+            cal<span class="token punctuation">.</span>add_component<span class="token punctuation">(</span>event<span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreur dans la colonne"</span><span class="token punctuation">,</span>col_value<span class="token punctuation">,</span><span class="token string">": "</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span>
+</code></pre>
+<p>Ce code parcourt donc les colonnes pour une ligne donnée, et crée un événement pour chaque cours détecté.<br>
+Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier, est satisfaisant et démontre que l'on peut faire un Proof Of Concept de ce POK.</p>
+<p>Le problème subsiste avec les cours de deux ou trois heures, qui sont détectés comme des cours d'une heure.</p>
+<h2 id="du-poc-à-la-réalisation">Du POC à la réalisation</h2>
+<p>Pour passer du POC à la réalisation, il convient de quitter l'environnement Google Colab et d'ouvrir un repository Git digne de ce nom.</p>
+<p>Nous travaillerons donc sur un environnement local en utilisant au maximum des classes python pour rendre le code plus lisible et plus facilement maintenable.</p>
+<p>Je vous propose donc pour cette revue de Sprint 1 de vous présenter la structure qu'aura le code au repo suivant : <a href="https://github.com/alouradou/SerenaDo_It">https://github.com/alouradou/SerenaDo_It</a></p>
+<h2 id="revue-de-sprint-1">Revue de Sprint 1</h2>
+<p>Dans ce Sprint, nous avons vu comment extraire les informations de l'emploi du temps de la filière Do_It, et comment les traiter pour les exporter dans un fichier .ics.</p>
+<p>Nous avons ainsi produit un Proof Of Concept qui nous permet de voir que le projet est réalisable, puis nous avons défini la structure du code sous forme de classes qui sera utilisée pour la suite du projet.</p>
+<h2 id="suite--sprint-2">Suite : Sprint 2</h2>
+<ul>
+<li>Faire des Tests Unitaires ! Cela facilitera l'intégration des fonctions de traitement de données</li>
+<li>Intégrer le POC au code</li>
+<li>Automatiser l'exportation du (des !) fichier .ics pour les élèves</li>
+</ul>
 
 
 </article>

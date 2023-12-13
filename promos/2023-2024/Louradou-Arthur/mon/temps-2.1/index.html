@@ -125,10 +125,30 @@
 
 
 
-<h2>Prérequis</h2>
+<h2>Sommaire</h2>
+<ul>
+<li><a href="#pr%C3%A9requis">Prérequis</a></li>
+<li><a href="#objectifs">Objectifs</a></li>
+<li><a href="#autres-mons">Autres MONs</a></li>
+<li><a href="#les-bases-de-docker">Les bases de Docker</a>
+<ul>
+<li><a href="#commandes-basiques">Commandes basiques</a></li>
+<li><a href="#cr%C3%A9ation-dun-dockerfile--exemple-dapplication">Création d’un DockerFile : exemple d’application</a></li>
+<li><a href="#la-commande-cmd--ex%C3%A9cuter-une-commande-dans-le-docker">La commande CMD : exécuter une commande dans le Docker</a></li>
+<li><a href="#construire-une-image-python">Construire une image Python</a></li>
+<li><a href="#gestion-du-r%C3%A9seau">Gestion du réseau</a></li>
+<li><a href="#faire-persister-la-donn%C3%A9e">Faire persister la donnée</a></li>
+<li><a href="#aller-plus-loin-dans-la-gestion-du-r%C3%A9seau-et-docker-compose">Aller plus loin dans la gestion du réseau (et Docker Compose…)</a></li>
+<li><a href="#mettre-en-ligne-limage-docker-sur-docker-hub">Mettre en ligne l’image Docker sur Docker Hub</a></li>
+</ul>
+</li>
+<li><a href="#regard-critique-et-ouverture">Regard critique et ouverture</a></li>
+<li><a href="#bibliographie">Bibliographie</a></li>
+</ul>
+<h2 id="prérequis">Prérequis</h2>
 <p>Des bases en Linux seront nécessaires pour le suivi de ce MON le plus confortablement. Je tâcherai autant que possible de vulgariser les termes utilisés et d’expliquer pourquoi nous mettons en place les architectures que nous allons voir.</p>
 <p>Autrement, pas de prérequis si ce n’est de l’intérêt pour l’administration système et le déploiement d’applications sous forme de micro-services !</p>
-<h2>Objectifs</h2>
+<h2 id="objectifs">Objectifs</h2>
 <p>Les objectifs de cette réalisation sont les suivants :</p>
 <ul>
 <li>Lire la documentation écrite par les élèves des années précédentes</li>
@@ -136,21 +156,21 @@
 <li>Se former à Docker avec les ressources établies</li>
 <li>Mettre en pratique les connaissances acquises en parralèle de l'apprentissage</li>
 </ul>
-<h2>Autres MONs</h2>
+<h2 id="autres-mons">Autres MONs</h2>
 <p><a href="../../../../2022-2023/Bilgi-Tuncay/mon/Docker/">Docker - Tunçay</a></p>
 <p><a href="../../../Victor-Ory/mon/Docker/">Docker - Victor</a></p>
-<h2>Les bases de Docker</h2>
+<h2 id="les-bases-de-docker">Les bases de Docker</h2>
 <p>S’entrainer avec Docker sans l’installer sur ma machine :</p>
 <p><a href="https://labs.play-with-docker.com/">https://labs.play-with-docker.com/</a></p>
 <p>Par la suite, j'ai changé la configuration de ma machine pour pourvoir installer Docker Desktop et profiter pleinement du MON pour mettre en pratique les tutoriels et documentations consultées.</p>
-<h3>Cheat Sheet des commandes apprises au cours du MON (vidéo)</h3>
+<h3 id="commandes-basiques">Commandes basiques</h3>
 <p>La base, par exemple pour installer une distribution Linux partielle comme fedora :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> pull fedora
 <span class="token function">docker</span> run fedora <span class="token operator">&lt;</span>commande à exécuter dans le Docker<span class="token operator">></span>
 <span class="token function">docker</span> run <span class="token parameter variable">--interactive</span> <span class="token parameter variable">--tty</span> fedora
 </code></pre>
 <p>Cette dernière commande (-i -t) ouvre un terminal interactif dans le container : ces options sont plus utilisées à des fins de debug que de production mais permettent de voir ce qui se passe dans le container en direct et interagir avec.</p>
-<h3>Création d’un DockerFile : exemple d’application</h3>
+<h3 id="création-dun-dockerfile--exemple-dapplication">Création d’un DockerFile : exemple d’application</h3>
 <p>Afin d’automatiser les actions à exécuter à la création de notre image Docker, nous pouvons créer un fichier qui dira à Docker quelles actions effectuer pour créer notre container.</p>
 <p>La vidéo nous invite donc, après avoir installé DockerDesktop sur notre machine, à créer un fichier DockerFile qui se présente comme cela :</p>
 <pre class="language-docker " style="counter-reset: linenumber 0"><code class="language-docker"><span class="token instruction"><span class="token keyword">FROM</span> fedora</span>
@@ -161,7 +181,7 @@
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> figlet ./
 <span class="token function">docker</span> run figlet
 </code></pre>
-<h3>La commande CMD : exécuter une commande dans le Docker</h3>
+<h3 id="la-commande-cmd--exécuter-une-commande-dans-le-docker">La commande CMD : exécuter une commande dans le Docker</h3>
 <p>Il convient avant d’exécuter nos premiers scripts de définir un entrypoint, qui définit une valeur par défaut à la commande CMD.</p>
 <p>Exemple :</p>
 <pre class="language-docker " style="counter-reset: linenumber 0"><code class="language-docker"><span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"figlet"</span>]</span>
@@ -190,7 +210,7 @@ $ <span class="token function">docker</span> run figlet coucou<span class="token
 <span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span>
  <span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token operator">|</span><span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token punctuation">(</span>_<span class="token punctuation">)</span>
 </code></pre>
-<h3>Construire une image Python</h3>
+<h3 id="construire-une-image-python">Construire une image Python</h3>
 <p>Nous allons mettre en pratique les acquis précédent pour construire une application avec un Dockerfile un peu plus élaboré. Il s’agira de construire une image Python et de la configurer pour la mettre en réseau et d’y accéder. Pour cela, nous allons utiliser un back-end en Django.</p>
 <p>Avec l’aide de quelques informations trouvées en ligne, on peut déployer l’application en quelques minutes : <a href="https://dockerize.io/guides/python-django-guide">https://dockerize.io/guides/python-django-guide</a>.</p>
 <p>Une fois dans le répertoire du projet :</p>
@@ -201,10 +221,10 @@ $ <span class="token function">docker</span> run figlet coucou<span class="token
 <p>Mon application n’est pas accessible depuis le port 8000 où elle est censé être déployée d’après ce qu’indique le container. Pourquoi ?</p>
 </blockquote>
 <p>Nous allons aborder ce point dans la partie suivante.</p>
-<h3>Gestion du réseau</h3>
+<h3 id="gestion-du-réseau">Gestion du réseau</h3>
 <p>Ici, il s’agira de mettre en place l’ouverture des ports pour accéder au service depuis sa machine (et pas seulement depuis le container en question). Par exemple, <code>-p (--publish) 8000:8000</code> redirige le port 8000 du container vers le port 8000 de la machine hôte.</p>
 <p>Or mon port 8000 est bien le port de l’app Django par défaut dans le container Docker. J’y accèderai donc sur ma machine à l’adresse <code>localhost:8000</code>.</p>
-<h3>Faire persister la donnée</h3>
+<h3 id="faire-persister-la-donnée">Faire persister la donnée</h3>
 <p>Jusqu’ici nous avons vu que les <code>docker build</code> généraient toujours la même image avec une suite d’instructions. Dès lors, on peut se demander comment une suite d’instruction déterministe pourrait donner un résultat différent avec des données différentes dans le cas où une image serait relancée. C’est pour cela que Docker gère <strong>les volumes</strong>.</p>
 <p>La documentation indique ceci pour se lancer :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> volume create todo-db
@@ -214,7 +234,7 @@ $ <span class="token function">docker</span> run figlet coucou<span class="token
 <p>Il existe aussi les volumes de type “Bind Mounts”, qui permets de partager un dossier de la machine hôte sur le conteneur exécuté.</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--mount</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>bind,src<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>"</span>,target<span class="token operator">=</span>/src ubuntu <span class="token function">bash</span>
 </code></pre>
-<h3>Aller plus loin dans la gestion du réseau (et Docker Compose…)</h3>
+<h3 id="aller-plus-loin-dans-la-gestion-du-réseau-et-docker-compose">Aller plus loin dans la gestion du réseau (et Docker Compose…)</h3>
 <p>Il est possible de procéder de deux manières pour faire communiquer deux conteneurs entre eux, d’abord en démarrant le container avec un réseau attaché ou bien en connectant un container en cours d’exécution au réseau. Dans tous les cas, on commence par la commande :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> network create mon-application
 <span class="token function">docker</span> run <span class="token punctuation">\</span>
@@ -230,18 +250,18 @@ C’est donc une simplification de la syntaxe de <code>--mount</code></p>
 </blockquote>
 <p>Ensuite, nous pouvons utiliser Docker Compose pour automatiser la mise en place des applications multi-conteneur.</p>
 <p>Nous explorerons ces possibilités sur des mises en pratiques concrètes et des déploiements avec un orchestrateur dans le prochain MON que je vous invite à lire si celui-ci a retenu votre attention.</p>
-<h3>Mettre en ligne l’image Docker sur Docker Hub</h3>
+<h3 id="mettre-en-ligne-limage-docker-sur-docker-hub">Mettre en ligne l’image Docker sur Docker Hub</h3>
 <p>Dans cette partie, nous allons nous interroger sur la façon de sauvegarder le travail accompli sur notre image Docker de test. Pour cela, nous utiliserons un repo à la manière de Github pour y placer nos images et les récupérer depuis n’importe quelle machine autorisée.</p>
 <p>Alors, après avoir créé mon repo appelé tutorial-1, nous pouvons exécuter ceci :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> image tag figlet alouradou/tutorial-1:latest
 <span class="token function">docker</span> image push alouradou/tutorial-1
 </code></pre>
 <p>Pour voir le résultat sur docker hub : <a href="https://hub.docker.com/repository/docker/alouradou/tutorial-django/general">https://hub.docker.com/repository/docker/alouradou/tutorial-django/</a></p>
-<h2>Regard critique et ouverture</h2>
+<h2 id="regard-critique-et-ouverture">Regard critique et ouverture</h2>
 <p>Nous avons ici abordé les points de compréhension de Docker et de la mise ne place de containers. Pour déployer des applications plus complexes, nous allons ensuite approfondir la notion d’orchestrateurs pour lancer nos conteneurs Docker de façon redondante.</p>
 <p>À voir : <strong><a href="https://www.youtube.com/watch?v=s_o8dwzRlu4">Kubernetes Crash Course for Absolute Beginners</a></strong>.</p>
 <p>Durant le prochain MON, nous chercherons d’autres contenus de ce type pour Kubernetes et Elastic Search.</p>
-<h2>Bibliographie</h2>
+<h2 id="bibliographie">Bibliographie</h2>
 <p>[1] Vidéo du MON de Tunçay :<br>
 <a href="https://www.youtube.com/watch?v=gAGEar5HQoU">YouTube - Getting Started with Docker - Docker</a></p>
 <p>[2] Vidéo recommandée par Victor dans son MON :<br>
