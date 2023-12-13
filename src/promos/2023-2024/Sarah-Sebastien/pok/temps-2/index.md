@@ -270,3 +270,9 @@ Si on reprend le backlog du sprint 1 que je m'étais fixé :
 
 Au final, j'ai passé sur ce sprint 1 **plus de 10h...**. J'ai rencontré beaucoup de difficultés que je n'avais pas envisagées et qui, au final m'ont pris beaucoup de temps à surmonter. *Surtout concernant l'application des codes sur VSCodes*(ex: l'installation de Java, réaliser un packetage et déclarer les classes, configurer des arguments pour une classe, etc..).
 
+On peut alors redéfinir le backlog pour le sprint 2 :
+
+|Intitulé|Complexité|Temps estimé|
+|---|---|---|
+| *- Apprendre les connaissances théoriques pour réaliser une interface graphique en Java* <br> - Réaliser le backlog sur Java <br> - Analyse de méthodes de résolution d'un mastermind <br> | *1* <br> 5 <br> 3| *1h* <br> 6h <br> 3h |
+
