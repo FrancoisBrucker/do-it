@@ -29,7 +29,7 @@ Ce Framework propose une architecture différente du HTML/CSS/Javascript utilis�
 Il existe d’autres Framework Javascript qui permettent plus ou moins la même chose comme **Vue.js** ou **Angular**.
 J’ai choisi d’étudier React.js car il j’avais déjà quelques bases en **React Native** qui utilise à peu près les mêmes notions.
 
-Je me suis fixer comme objectif de refaire le site web que j’ai crée pendant le POK 1 avec **React**. 
+Je me suis fixer comme objectif de refaire le site web que j’ai crée pendant le [POK 1](../../pok/temps-1/) avec **React**. 
 
 
 Malheureusement, j’ai récemment perdu toutes les données de mon disque dur externe (y compris le code que j’ai fait durant ce MON). Je sais, cela ressemble à une excuse bidon, mais c’est malheureusement vrai. Je vais quand même expliquer tout mon processus d’apprentissage et certaines notions importante de **React** que j’ai découvert.
@@ -40,7 +40,7 @@ Malheureusement, j’ai récemment perdu toutes les données de mon disque dur e
 Pour l’apprentissage de React, j’ai utilisé la documentation de React et Chat GPT.
 
 Pour commencer, je vous conseille vraiment de lire la [documentation](https://react.dev/learn/).
-Attention, il faut aller l'ancienne documentation est obsolète et plus valable.
+Attention, l'ancienne documentation est obsolète et plus valable.
 
 Je trouve cette documentation très claire et efficace. Il y a un tutoriel pour faire un morpion. C'est un bon exercice pour comprendre les notions fondamentales de React : 
 
@@ -165,4 +165,43 @@ La fonction **`useState`** permet de déclarer et d'initialiser le state **`coun
 **`setCount`** est une fonction qui permet de modifier la valeur de cette variable d'état.
 
 ## Tailwind CSS
+
+J'ai décidé d'apprendre [Tailwind CSS](https://tailwindcss.com/) en plus. Je trouvais que l'écriture en CSS devenait vite chaotique avec beaucoup de réécriture.
+
+Tailwind CSS a plusieurs avantages par rapport au CSS classique :
+
+* Il n'y a plus besoin d'inventer des noms de classes.
+* Il est plus facile de faire du responsive
+* Je trouve le code plus lisible un fois qu'on connait (je suis d'accord qu'au début cela peut faire peur)
+* On peut facilement modifier notre code sans avoir peur de tout casser.
+
+Cependant, nous sommes presque obligé d'avoir une 'antisèche' lorsqu'on développe pour connaître toutes les classes disponible.
+Heureusement que certains sites internet nous offrent un résumé de toutes les classes à utiliser.
+Je vous conseille ce site : https://flowbite.com/tools/tailwind-cheat-sheet/ 
+Il est très clair et c'est facile de trouver l'information que nous voulons.
+
+
+## Horodateur
+| Heures passées | Indications                                       |
+| --------------- | ------------------------------------------------- |
+| 2H              | Lecture de la documentation de React.js           |
+| 1H              | Apprentissage de la logique de Tailwind CSS grâce à la documentation |
+| 6H              | Refonte de mon site web avec React et Tailwind CSS |
+| 2H              | Ajout de la page panier du site web               |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

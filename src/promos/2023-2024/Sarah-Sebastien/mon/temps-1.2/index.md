@@ -34,7 +34,7 @@ Prérequis : Aucun.
   - [A. Une définition de la méthode](#partie3a)
   - [B. La théorie de son implémentation](#partie3b)
 
-<h2 id=introduction"> Introduction </h2>
+<h2 id=introduction> Introduction </h2>
 
 L'amélioration continue est au cœur de la réussite de multiples organisations dans le monde. Dans un environnement commercial en constante évolution, les entreprises cherchent des moyens d'optimiser leurs opérations, d'éliminer le gaspillage et d'accroître leur efficacité pour rester compétitives. Le Lean Management, une philosophie de gestion d'origine japonaise qui a gagné en popularité au fil des décennies, offre une approche systématique pour atteindre ces objectifs. Nous découvrirons dans ce MON, les origines de cette façon de penser, ses piliers et nous essayerons de penser Lean au travers d'une illustration d'un de ses outils principaux : le 5S.
 

@@ -10,30 +10,28 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie Pathologique. En particulier, le risque de récidive d'une tumeur.
+résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie Pathologique. En particulier, la création d'un algorithme de classification afin d'aider au diagnostique les médecins dans le risque de récidive du carcinome basocellulaire.
 ---
 
 {% prerequis %}
 **Niveau :** Avancé
-**Prérequis :** [à définir]
+**Prérequis :** Bases en Python et en Datasciences (traitement d'image, segmentation, machine learning)
 {% endprerequis %}
 
 ## Sommaire
 
 1. Introduction
 2. Description du projet
-3. Sprint 1 : analyse préliminaire des données
-(Il sera dans un 1er temps nécessaire d'effectuer du pré-traitement de ces données puis de réaliser de la segementation afin d'uniquement détecter les zones cancéreuses)
+3. Analyse préliminaire des données
 4. Sprint 2 : algorithmes de Machine Learning
-(Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
 5. Conclusion
 6. Bibliographie
 
 ## 1. Introduction
 
-Le but de ce projet est d'apporter des solutions informatiques d'analyse de données au service de l'anatomie pathologique. En particulier, concernant le risque de récidive du carcinome basocellulaire.
+Le but de ce projet est d'apporter des solutions informatiques d'analyse de données au service de l'anatomie pathologique. L'objectif est de créer un algorithme de classification afin d'aider au diagnostique les médecins dans le risque de récidive du carcinome basocellulaire.
 
-Les médecins perdent un temps précieux dans l'analyse de lames afin d'évaluer l'envergure du carcinome basocellulaire. Le Machine Learning doit pouvoir aider à trier ces différentes lames pour ne demander aux médecins qu'une analyse approfondie.
+Cette solution permettrait l'économie d'un temps précieux dans la lecture de lames au microscope afin de détecter les souches plus ou moins atteintes. La science des données doit pouvoir aider à trier ces différentes lames pour ne demander aux médecins qu'une analyse approfondie de certains échantillons.
 
 ## 2. Description du projet
 
@@ -45,48 +43,46 @@ Les médecins perdent un temps précieux dans l'analyse de lames afin d'évaluer
 
 ### 2.2 Description du projet
 
-L'Anatomie Pathologique (anapath) est une spécialité médicale portant le diagnostic des maladies sur le plan microscopique, c’est-à-dire sur l'interprétation d’images des tissus et cellules, et notamment de toute la pathologie tumorale et du cancer.
 
-Le développement des techniques de numérisation offre de nouvelles perspectives pour cette spécialité qui pourra bientôt se passer de microscopes optiques au profit d’écran haute résolution. Dans ce contexte de numérisation totale, l'analyse d'images et certains pipeline de machine-learning offrent des perspectives de développement d’outils pratiques et/ou puissants d’aide au diagnostic : outre l’accélération de la vitesse pour rendre un diagnostic en routine aidé par l’informatique, la genèse de données normalisées et reproductibles de santé par l’intermédiaire de ces outils est un enjeu de compétitivité majeure pour la recherche et le développement en cancérologie dans les 5 prochaines années. Les tissus offrent de très nombreuses couches d’information actuellement peu exploitables. 
+L'Anatomie Pathologique (anapath) est une spécialité médicale centrée sur **le diagnostic des maladies à un niveau microscopique, en interprétant des images de tissus et de cellules, notamment dans le contexte de la pathologie tumorale et du cancer.** Les avancées dans la numérisation ouvrent de nouvelles perspectives, permettant potentiellement de se passer des microscopes optiques au profit d'écrans haute résolution. Cette transition vers la numérisation totale offre des opportunités de **développement d'outils basés sur l'analyse d'images et des pipelines de machine learning pour faciliter le diagnostic.**
 
-Les images microscopiques sont multimodales et le pathologiste peut s’aider de techniques pour visualiser différentes modalités d’information biologique, superposées sur une même coupe tissulaire, comme l’expression de protéines spécifiques qui jouent alors un rôle de filtre pour masquer ou au contraire révéler des cellules tumorales, les vaisseaux ou encore l’inflammation : l’immunohistochimie. Grace à ces images, et après intégration aux données cliniques, le pathologiste est à même de proposer des éléments pour la décision médicale. 
+En plus d'accélérer le processus diagnostique, ces outils peuvent contribuer à générer des données de santé normalisées et reproductibles, représentant un enjeu majeur pour la recherche en cancérologie. Les images microscopiques, souvent multimodales, peuvent être analysées en utilisant des techniques telles que l'immunohistochimie, permettant au pathologiste de visualiser différentes modalités d'information biologique superposées sur une même coupe tissulaire.
 
-Le cancer de la peau le plus fréquent est le carcinome basocellulaire, qui est un diagnostic facile au microscope avec des images prototypiques, reproductibles. L’incidence élevée de ce cancer mobilise de nombreuses ressources pour le diagnostic, qui pourraient être automatisées.
+La thématique de l'aide au diagnostic et de l'automatisation en pathologie est actuellement compétitive, principalement axée sur l'analyse d'image. Plusieurs projets industriels et commerciaux se concentrent sur cette problématique, bien que peu d'entre eux se consacrent spécifiquement à la dermatopathologie. Ces nouvelles approches rencontrent des défis réglementaires et financiers, notamment liés à l'obtention du marquage CE et au remboursement par les organismes de santé.
 
-La thématique de l’aide au diagnostic et de l’automatisation du diagnostic en pathologie s’inscrit dans un contexte actuel très concurrentiel portant essentiellement sur l’analyse d’image avec divers projets industriels et commerciaux en phase de validation voire de production dans d’autres organes (Medipath, Ibex, Vita-DX, Primaa, Howkin), qui sont financés. Seule la société Primaa développe des algorithmes dédiés à la dermatopathologie. In fine, ces nouveaux outils d’aide au diagnostic rencontreront nécessairement des obstacles réglementaires (marquage CE) et financiers (remboursement CPAM et/ou RIHN).
-
-Aucun de ces projets ne se focalisent sur les données existantes (compte-rendus) ni sur l’intégration de multiples jeux de données (clinique, histologique) avec l’analyse d’image pour répondre à des questions cliniques précises. Dans le carcinome basocellulaire, la question clinique à se poser est : la tumeur va-t-elle récidiver ? Ce qui conditionne la surveillance et des traitements complémentaires.
-
-**Le but de ce projet est de créer un outil répondant le plus précisément à cette question du risque de récidive en se basant sur le plus de données disponibles et fiables possible.**
-
-Ce projet s’articule en parallèle, pour la partie compte-rendus, avec un autre projet déposé portant sur l’extraction automatisée de données de compte-rendus d’anatomie pathologique : il sert de validation théorique en vie réelle, sur une question clinique donnée.
+En particulier, le carcinome basocellulaire, le cancer de la peau le plus fréquent, offre des images prototypiques et reproductibles au microscope, ce qui pourrait **permettre une automatisation accrue du diagnostic.** Cependant, les projets existants ne se concentrent pas suffisamment sur l'intégration des données existantes (compte-rendus) ni sur la combinaison de multiples jeux de données (clinique, histologique) avec l'analyse d'image pour répondre à des questions cliniques spécifiques, telles que **la prédiction de la récidive tumorale.**
 
 Données : fichiers images, lames de microscopes numérisées, format .ndpi – anonymisées.
 
 ### 2.3 Missions et attendus souhaités
 
 Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.
+Pour se faire :
+**- le sprint 1** consistera en la **compréhension** du projet, sa **description** ainsi qu'en **l'analyse préliminaire** des données.
+**- le sprint 2** consistera à adopter des méthodes de Machine Learning pour effectuer une **classification**.
 
-## 3. Sprint 1 : analyse préliminaire des données
+
+## 3. Analyse préliminaire des données
 
 ### 3.1 Conversion automatisée des images du format ..ndpi au format .jpg
 
 Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi "NanoZoomer Digital Pathology Image" et sont de très hautes résolutions.
 
-L'échantillon dont je dispose propose des images allant de 100Mo à 1Go.
+L'échantillon dont je dispose **propose des images allant de 100Mo à 1Go.**
 
 Il est possible de les lire en utilisant le NDPI Viewer "NDP.wiew2" développé par le fabricant japonais d'instruments scientifiques Hamamatsu Photonics K.K..
+
 Ce logiciel est téléchargeable gratuitement sur [le site d'Hamamatsu](https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html)
 
 Voici son interface :
 
 ![NDP Viewer2](NDP_view2.jpg)
 
-Afin de pouvoir utiliser ces images dans un algorithme de machine learning, il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.
+Afin de pouvoir utiliser ces images dans un algorithme de machine learning, **il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.**
 
 Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.
 
-La première problématique de ce POK consiste alors à automatiser une conversion des images au format .ndpi vers .jpg afin de les lire plus facilement dans un algorithme python en réduisant notamment leur taille.
+La première problématique de ce POK consiste alors à **automatiser une conversion des images au format .ndpi vers .jpg.**
 
 #### Tentative d'automatisation avec NDPview2
 
@@ -125,7 +121,55 @@ Hélas le programme se contente de lancer le viewer sans effectuer la conversion
 
 #### Tentative d'automatisation avec OpenSlide
 
+Le programme ci-dessous n'est pas abouti...
+Il semble théoriquement possible de convertir les fichiers .ndpi vers .jpg grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.
 
+cf [Documentation OpenSlyde Python](https://openslide.org/api/python/)
+
+
+```python
+!pip install openslide-python
+
+!apt-get install openslide-tools
+!pip install openslide-python
+
+from openslide import OpenSlide
+from PIL import Image
+
+def convert_ndpi_to_jpg(input_path, output_path):
+    # Ouvrir le fichier NDPI avec OpenSlide
+    ndpi_slide = OpenSlide(input_path)
+
+    # Extraire les dimensions de l'image
+    width, height = ndpi_slide.dimensions
+
+    # Lire l'image entière
+    image = ndpi_slide.read_region((0, 0), 0, (width, height))
+
+    # Convertir l'image PIL en mode RVB (si elle n'est pas déjà en mode RVB)
+    if image.mode != 'RGB':
+        image = image.convert('RGB')
+
+    # Enregistrer l'image au format JPG
+    image.save(output_path, 'JPEG')
+
+    # Fermer la lecture du fichier NDPI
+    ndpi_slide.close()
+
+# Chemin du fichier NDPI d'entrée
+input_ndpi_path = 'C:\\Test-TER\\DATA-NDPI\\test.ndpi'
+
+# Dossier de sortie pour les fichiers JPG
+output_jpg_folder = 'C:\\Test-TER\\DATA-JPG'
+
+# Construire le chemin de sortie pour le fichier JPG
+output_jpg_path = output_jpg_folder + '\\test.jpg'
+
+# Appeler la fonction pour convertir le fichier NDPI en JPG
+convert_ndpi_to_jpg(input_ndpi_path, output_jpg_path)
+
+print(f"Conversion terminée. Fichier JPG enregistré à : {output_jpg_path}")
+```
 
 ### 3.2 Visualisation d'images
 
@@ -165,11 +209,51 @@ En rouge, du bruit pour l'algorithme
 
 Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation "zone cancéreuse vs zone non cancéreuse".
 
-### 3.1 test de pré-traitement sur les fichiers .ndpi
-### 3.2 Conversion des fichiers .ndpi au format .jpg
-https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html
+### 3.3 Pré-traitement - Segmentation
 
-### 3.3 pré-traitement 
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Chemin de l'image
+image_path = "D:/Master_SID/projet_TER/data/tumeur/9.jpg"
+
+# Lecture de l'image et conversion BGR2RGB
+image = cv2.imread(image_path)
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Aplatissement des pixels, préparation à la segmentation
+pixels = image.reshape((-1, 3))
+pixels = np.float32(pixels)
+
+# Définition des critères pour l'algorithme k-means
+criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.2)
+
+# Choix du nombre de clusters
+k = 3
+
+# Modèle
+_, labels, centers = cv2.kmeans(pixels, k, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+
+centers = np.uint8(centers)
+
+# Reconstruction de l'image segmentée
+segmented_image = centers[labels.flatten()]
+segmented_image = segmented_image.reshape(image.shape)
+
+
+# Chemin de sortie
+cv2.imwrite("D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.jpg", cv2.cvtColor(segmented_image, cv2.COLOR_RGB2BGR))
+
+# Affichage
+
+plt.subplot(121), plt.imshow(image), plt.title('Original Image')
+plt.subplot(122), plt.imshow(segmented_image), plt.title('Segmented Image')
+plt.show()
+```
+![Image d'origine vs Image segmentée](pretraitement.jpg)
+
 ## 4. Sprint 2 : algorithmes de Machine Learning
 (Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
 

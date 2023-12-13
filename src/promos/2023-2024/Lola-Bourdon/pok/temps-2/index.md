@@ -106,7 +106,7 @@ Regardons le détail du travail effectué :
 | Recherches d’images et de nouvelles polices d’écriture  | 1h| 
 | Design détaillé des pages et améliorations| 1h 30| 
 
-Par rapport au temps estimé des tâches, je n'avais pas du tout penser au temps que me prendrait les logos et j'avais grandement sous-estimé la recherche d'images et de police d'écriture adéquat, ce qui a diminué le temps consacré au design des pages. J'ai aussi passé beaucoup de temps sur adobe color mais je pense que je n'arrive juste pas à me décider ..
+Par rapport au temps estimé des tâches, je n'avais pas du tout pensé au temps que me prendrait les logos et j'avais grandement sous-estimé la recherche d'images et de police d'écriture adéquat, ce qui a diminué le temps consacré au design des pages. J'ai aussi passé beaucoup de temps sur adobe color mais je pense que je n'arrive juste pas à me décider ..
 
 ### Objectif sprint 2
 

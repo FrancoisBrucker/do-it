@@ -10,4 +10,4 @@ authors:
 
 - [Temps 1 : Blog Cuisine](./temps-1)
 
-- [Temps 2 : Street Fighter de Wish](./temps-2)
+- [Temps 2 : Un jeu de combat ultra mortel](./temps-2)

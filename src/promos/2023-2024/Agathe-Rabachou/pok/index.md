@@ -14,4 +14,4 @@ Ensemble des POK réalisés par Agathe Rabachou.
 
 ## Temps 2
 
-* [POK 2 : Application en No Code](./temps-2)
+* [POK 2 : Élaboration d'un outil de planification en low-code](./temps-2)

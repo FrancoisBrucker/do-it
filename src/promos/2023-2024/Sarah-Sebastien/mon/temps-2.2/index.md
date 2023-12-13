@@ -1,13 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "MON 2.2. Les processus métiers de A à Z"
 authors:
-  - Gordon Zola
+  - Sarah Sebastien
 
-date: 1971-01-01
+date: 2023-11-22
 tags: 
   - "temps 2"
+  - "Processus"
+  - "BPMN"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON permettra d'apprendre ce qu'est un processus, comment est-il construit et comment l'améliorer."
 ---

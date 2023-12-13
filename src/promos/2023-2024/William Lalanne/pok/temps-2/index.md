@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 ![table](table.png)
 
-On précise que dans la table on veut 2 colonnes, une première qui s'appelle **id** et qui est la clé primaire de la table, une seconde qui s'appelle **name** qui contiendra le nom des utilisateurs : 
+On précise que dans la table on veut 2 colonnes, une première qui s'appelle **id** qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé *AUTO_INCREMENT* permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle **name** qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères : 
 ![colonnes](colonnes.png)
 
 Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée: 
@@ -112,3 +112,21 @@ dbPool est un pool de connexion qui permet d'avoir accès à la base de donnée 
 
 ## Création du serveur 
 
+Pour démarrer un serveur basique, on créé un fichier *server.js* dans lequel on créera le serveur. Il faut d'abord commencer par importer le package HTTP indispensable pour créer un serveur :
+```js
+const http = require('http'); 
+```
+
+Une fois le package HTTP importé, on peut créer notre serveur à l'aide des commandes suivantes: 
+```js
+const server = http.createServer((req, res) => {
+    res.end('Voilà la réponse du serveur !');
+});
+```
+
+Le serveur est créé simplement grâce à la fonction ***createServer*** du package HTTP à qui on donne deux arguments:
+- ***req*** qui correspond à la requête faîte au serveur.
+- ***res*** qui correspond à la réponse.
+
+Ensuite, à chaque requête faite au serveur la fonction après le **(req, res)** est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'. 
+On améliorera plus tard dans ce POK le serveur pour qu'il fasse ce que l'on veut. 
