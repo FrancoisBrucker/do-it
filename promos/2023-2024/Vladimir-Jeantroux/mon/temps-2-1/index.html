@@ -128,6 +128,152 @@
 
 
 <h2>Description</h2>
+<p>Ce MON vise à enseigner des bases de React Native aux débutants. React Native est un framework open-source de Facebook permettant de développer des applications iOS et Android, grâce aux langages Javascript et React. L'intérêt principal de React Native est qu'il permet de gérer à la fois le front et le back-end, en faisant un outil très polyvalent.</p>
+<p>J'ai choisi ce MON pour pouvoir approfondir et développer du front et back-end sur mon projet 3A, l'application <a href="https://francoisbrucker.github.io/do-it/projets/2023-2024/Killer/">Killer</a>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pré-requis :</p>
+<p>Des bases de Javascript et de React.js sont requises pour mieux comprendre le contenu de ce MON. Pas de problème pour ceux ayant suivi le cours dev web 0 to hero, mais sinon il y a quelques MON des temps et années précédentes traitant de React.js.</p>
+<p>Outils requis :</p>
+<ul>
+<li>Un IDE (Visual Studio Code, par exemple) pour écrire et éditer le code</li>
+<li>Node.js pour pouvoir exécuter le code et créer un serveur local</li>
+<li>Expo Go sur son téléphone pour éventuellement tester l'application (Ne fonctionne que sur les réseaux wifi privés, sinon il faut télécharger un émulateur Android sur son ordinateur.)</li>
+</ul>
+</div></div>
+<h2>La syntaxe de React Native</h2>
+<p>La syntaxe de React Native repose principalement sur l'utilisation de composants, écrits en JavaScript ou TypeScript, qui représentent des éléments d'interface utilisateur. Ces composants sont créés en utilisant la bibliothèque React et sont structurés de manière modulaire et réutilisable.</p>
+<p>Par exemple, disons que je veux coder une page comportant simplement le texte &quot;Bonjour, ça va ?&quot;.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span><span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Page</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bonjour<span class="token punctuation">,</span> ça va <span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Page
+</code></pre>
+<p>Ce qu'on a fait, dans l'ordre : on commence tout d'abord par importer les composants dont on a besoin, ici 'React' pour créer les composants, ainsi que les composants 'View', qui est un conteneur de base et 'Text', permettant d'afficher du texte. On crée ensuite le composant &quot;Page&quot; qui ne prend aucun argument, et à l'intérieur on crée un espace d'affichage contenant un élément textuel qui affiche &quot;Bonjour, ça va ?&quot; La dernière ligne permet d'exporter le composant &quot;Page&quot;, et signifie qu'il pourra être réutilisé ailleurs.</p>
+<h2>Une application simple</h2>
+<p>Ajoutons maintenant un composant plus complexe : une boîte où l'utilisateur peut taper, ainsi qu'un bouton.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> TextInput<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>userInput<span class="token punctuation">,</span> setUserInput<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleInputChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setUserInput</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">clearInput</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setUserInput</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bonjour<span class="token punctuation">,</span> ça va <span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>TextInput
+        placeholder<span class="token operator">=</span><span class="token string">"Entrez votre texte ici"</span>
+        onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>handleInputChange<span class="token punctuation">}</span>
+        value<span class="token operator">=</span><span class="token punctuation">{</span>userInput<span class="token punctuation">}</span>
+        multiline<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Vous avez écrit <span class="token operator">:</span> <span class="token punctuation">{</span>userInput<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Effacer"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>clearInput<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On commence par importer 'useState' qui est un hook qui permet de gérer l'état dans les composants fonctionnels. On initialise ainsi une variable 'userInput' pour stocker le texte saisi par l'utilisateur. 'setUserInput' est une fonction qui permet de mettre à jour cette variable d'état.</p>
+<p>On définit une fonction 'handleInputChange' qui prend le texte entré par l'utilisateur en paramètre et met à jour l'état 'userInput' en utilisant 'setUserInput'.</p>
+<p>Dans 'View', on ajoute l'objet 'TextInput', et les changements de texte seront gérés par la fonction 'handleInputChange', et le texte de l'utilisateur sera même réaffiché en bas de la boîte de texte. On a aussi créé un bouton qui lorsqu'il est pressé, efface le texte écrit grâce à la fonction 'clearInput', définie au préalable.<br>
+Cet exemple permet de montrer que React Native permet de gérer des éléments visuels, ainsi que le stockage d'informations.</p>
+<p>Notons qu'il est aussi possible d'ajouter une Stylesheet CSS dans un fichier React pour gérer l'apparence de la page.</p>
+<h2>Projet : Base de données</h2>
+<p>Pour aller plus loin, créons une base de données grâce à SQLite. Pour commencer, créons un projet avec la commande suivante :</p>
+<pre><code>npx create-expo-app my-app
+</code></pre>
+<p>Un nouveau dossier est alors créé, et on va travailler dans le fichier 'App.js', où on va coder. On lance ensuite pour installer les composants nécessaires :</p>
+<pre><code>npm install 
+</code></pre>
+<p>On pourra par la suite lancer le projet avec</p>
+<pre><code>npx expo start
+</code></pre>
+<p>On va commencer par créer une manière d'ajouter des entrées à la base de données.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">addName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token parameter">tx</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    tx<span class="token punctuation">.</span><span class="token function">executeSql</span><span class="token punctuation">(</span><span class="token string">'INSERT INTO names (name) values (?)'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>currentName<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> resultSet</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> existingNames <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>names<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        existingNames<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> resultSet<span class="token punctuation">.</span>insertId<span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span> currentName<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setNames</span><span class="token punctuation">(</span>existingNames<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setCurrentName</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> error</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette fonction sera liée à un espace où l'utilisateur peut taper du texte. La fonction va exécuter une requête SQL pour insérer le nom que l'utilisateur a tapé dans la base de données. Le '?' est remplacé par le nom entré par l'utilisateur. En cas de succès de la requête, une fonction reçoit l'objet de la transaction avec la base de données (le nom de l'objet), et le résultat de la requête, et va ajouter un nouvel objet au tableau des noms.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">deleteName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token parameter">tx</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    tx<span class="token punctuation">.</span><span class="token function">executeSql</span><span class="token punctuation">(</span><span class="token string">'DELETE FROM names WHERE id = ?'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> resultSet</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span>rowsAffected <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> existingNames <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>names<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token operator">=></span> name<span class="token punctuation">.</span>id <span class="token operator">!==</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">setNames</span><span class="token punctuation">(</span>existingNames<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> error</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">showNames</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> names<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>row<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span><span class="token punctuation">{</span>name<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">'Delete'</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">deleteName</span><span class="token punctuation">(</span>name<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On ajoute aussi les fonctions pour supprimer une entrée, ainsi que pour afficher les entrées existantes.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>TextInput value<span class="token operator">=</span><span class="token punctuation">{</span>currentName<span class="token punctuation">}</span> placeholder<span class="token operator">=</span><span class="token string">'name'</span> onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>setCurrentName<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Add Name"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>addName<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token punctuation">{</span><span class="token function">showNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>StatusBar style<span class="token operator">=</span><span class="token string">"auto"</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Ce dernier bloc de code permet de tout afficher : un espace d'entrée du texte, un bouton pour ajouter le nom, ainsi que la liste des noms 'showNames'. Ces éléments permettent de retourner une base de données basique.</p>
+<h2>Bibliographie</h2>
+<ul>
+<li>Documentation de React Native <a href="https://reactnative.dev/docs/getting-started">https://reactnative.dev/docs/getting-started</a></li>
+<li>React Native Course <a href="https://www.youtube.com/watch?v=obH0Po_RdWk">https://www.youtube.com/watch?v=obH0Po_RdWk</a></li>
+<li>Local SQLite Database for Expo React Native App with Import and Export Database from Device Files <a href="https://www.youtube.com/watch?v=1kSLd9oQX7c">https://www.youtube.com/watch?v=1kSLd9oQX7c</a></li>
+<li>Installer un émulateur Android (Nécessite un pc puissant) <a href="https://docs.expo.dev/workflow/android-studio-emulator/">https://docs.expo.dev/workflow/android-studio-emulator/</a></li>
+<li>Faire tourner un projet Expo sur un émulateur Android <a href="https://www.brainstormcreative.co.uk/react-native-expo/how-to-run-an-expo-app-on-android-emulator/">https://www.brainstormcreative.co.uk/react-native-expo/how-to-run-an-expo-app-on-android-emulator/</a></li>
+</ul>
+<h2>Horodatage</h2>
+<blockquote>
+<p>Mardi 5/12 - Mercredi 6/12 - Jeudi 7/12 : Visionnage de la vidéo React Native Course (2h-2h-1h)<br>
+Jeudi 7/12 : Visionnage de la vidéo Créer une base de données (1h)<br>
+Jeudi 7/12 : Application simple (1h)<br>
+Jeudi 7/12 : Codage de la base de données (2h30)</p>
+</blockquote>
 
 
 </article>

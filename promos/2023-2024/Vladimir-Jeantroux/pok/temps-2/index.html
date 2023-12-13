@@ -132,46 +132,138 @@
 
 
 <h2>Description</h2>
-<p>Ce POK a pour but de me familiariser avec le moteur Godot, en créant un petit jeu vidéo basique. Ce jeu serait un jeu de combat en 2D comme Mortal Kombat ou Street Fighter. J'ai choisi le moteur Godot car il est facile à prendre en main et open source.</p>
+<p>Ce POK a pour but de me familiariser avec le moteur Godot, en créant un petit jeu vidéo basique. Ce jeu serait un jeu de combat en 2D comme Mortal Kombat ou Street Fighter. J'ai choisi le moteur Godot car il est facile à prendre en main et open source. Un jeu de combat place 2 joueurs face à face, qui doivent enchaîner des séries de coups afin de réduire les points de vie de son adversaire à zéro.</p>
 <p>Pour ce jeu j'ai l'intention de faire au moins 2 personnages pour que 2 personnes puissent jouer ensemble, ainsi qu'une IA pour donner un adversaire aux joueurs solo.</p>
-<h2>Backlog</h2>
+<h2>Backlog mis à jour</h2>
 <ul>
 <li>
-<p>Prise en main de Godot (4h) []</p>
+<p>Prise en main de Godot <s>(4h)</s> 2h30 [X] (sprint 1)</p>
 </li>
 <li>
-<p>Création d'un personnage (5h) []</p>
+<p>Création d'un personnage (8h) []</p>
 <ul>
-<li>Animation du personnage et des coups (1h) []</li>
-<li>Addition des contrôles (2h) []</li>
-<li>Addition des hitbox (2h) []</li>
+<li>Animation du personnage et des coups (1h) [X] (sprint 1)</li>
+<li>Addition des mouvements <s>(2h)</s> 3h [X] (sprint 1)</li>
+<li>Addition des hitbox (2h) [X] (sprint 1)</li>
+<li>Interaction lorsqu'on se fait frapper (1h)[]</li>
+<li>Commande de blocage des attaques adverses (1h) []</li>
 </ul>
 </li>
 <li>
-<p>Implémentation des mécaniques de jeu (PV, Rounds, Attaques Spéciales) (3h) []</p>
+<p>Implémentation des mécaniques de jeu (3h30) []</p>
+<ul>
+<li>Compte à rebours (1h) [X] (sprint 1)</li>
+<li>PV (2h)[]</li>
+<li>Ecran de victoire (30 min) []</li>
+</ul>
 </li>
 <li>
 <p>IA (4h) []</p>
 <ul>
-<li>Bot facile (2h) []</li>
-<li>Bot difficle (2h) []</li>
+<li>Bot facile <strong>et difficile</strong> (2h) []</li>
+<li><s>Bot difficile</s> Multijoueur local (2h) []</li>
 </ul>
 </li>
 <li>
-<p>Création des menus (2h) []</p>
+<p>Création des menus (30 min) []</p>
 <ul>
-<li>Menu principal (1h) []</li>
-<li>Sélection du personnage (1h) []</li>
+<li>Menu principal <strong>et arène</strong> <s>(1h)</s> 30 min [X]</li>
+<li><s>Sélection du personnage (1h) []</s> Le personnage est imposé.</li>
 </ul>
 </li>
 </ul>
 <h2>Objectif du Sprint 1</h2>
 <p>Pour ce premier sprint, je compte faire au moins un personnage qui puisse être contrôlé et joué contre un mannequin d'entraînement (i.e. un personnage statique qui a pour seul but de prendre des coups).</p>
+<p>Backlog du sprint 1 :</p>
+<ul>
+<li>Prise en main de Godot (4h) []</li>
+<li>Création d'un personnage (5h) []
+<ul>
+<li>Animation du personnage et des coups (1h) []</li>
+<li>Addition des mouvements (2h) []</li>
+<li>Addition des hitbox (2h) []</li>
+</ul>
+</li>
+<li>Implémentation des mécaniques de jeu (3h30) []
+<ul>
+<li>Compte à rebours (1h) []</li>
+<li>PV (1h)[]</li>
+</ul>
+</li>
+<li>Création des menus (1h) []
+<ul>
+<li>Menu principal (1h) []</li>
+</ul>
+</li>
+</ul>
+<h2>Résumé du Sprint 1</h2>
+<p>J'ai tout d'abord regardé une vidéo couvrant les bases du moteur Godot. Avec ce tutoriel, j'ai appris le langage GDScript, et la manière dont était codée les mouvements du personnage jouable.</p>
+<p>Le jeu comporte pour le moment 2 scènes : un menu principal qui donne le choix entre démarrer ou quitter le jeu, ainsi que l'arène de combat où se déroule le jeu. L'arène comporte un sol, un mur de chaque côté de l'écran et une animation pour expérimenter avec les éléments d'arrière-plan, mais aussi pour que le fond ne soit pas trop vide. Il y a aussi un compte à rebours, et dès qu'il affiche 0, le jeu considère que le mannequin d'entraînement a gagné, et le jeu se ferme.</p>
+<p>J'ai ensuite implémenté les commandes droite, gauche, saut et attaque pour un personnage, ainsi que les animations correspondantes. J'ai aussi rajouté un mannequin immobile. Ces deux personnages sont capables d'interagir ensemble : ils ont une collision, i.e. ils ne peuvent pas se traverser l'un et l'autre, et le jeu réagit lorsque le joueur attaque le mannequin (la console affiche &quot;Ouch !&quot;), et un effet sonore se joue.</p>
+<p><img src="Gameplay.gif" alt="Gameplay"></p>
+<p>Séquence de gameplay montrant les contrôles que le joueur peut faire.</p>
+<pre><code>func _on_fist_colliders_body_entered(body):
+	$PunchSound.play()
+	if(body.name == &quot;Dummy&quot;):
+		print(&quot;-----&quot;)
+		print(&quot;Ouch !!&quot;)
+		print(&quot;-----&quot;)
+</code></pre>
+<p>Code dictant ce qu'il se passe lorsque le poing du personnage frappe le manequin. (Le son de frappe se joue, puis la console affiche &quot;Ouch!&quot; si le frappé est le mannequin d'entraînement.)</p>
+<p><img src="Hitbox.gif" alt="Démonstration des hitbox"></p>
+<p>Démonstration des hitbox en jeu. La boîte rose est liée au poing, et ne s'active que lorsqu'une attaque liée au poing est lancée. La boîte verte est liée au pied. Le reste du temps, ces boîtes sont inactives (grises). Si une boîte colorée touche un autre personnage, alors celui-ci se fait toucher par le coup.</p>
+<h3>Difficultés rencontrées</h3>
+<p>La principale difficulté que j'ai rencontré était la compatibilité du code présenté dans les guides que j'ai regardé. En effet, Godot est régulièrement mis à jour et le guide que j'ai regardé était sur une version précédente. J'ai donc dû adapter la syntaxe pour qu'elle soit lue par ma version de Godot, ce qui m'a ralenti lors de la prise en main du moteur. La manière dont les mouvements étaient codés dans le guide n'étaient aussi pas compatibles avec le genre de jeu que je voulais créer, et j'ai donc dû recommencer le codage des mouvements et de la gravité depuis le début. J'ai aussi été surpris par la difficulté à implémenter des éléments à priori simples, comme un compte à rebours ou une animation d'arrière plan.</p>
+<p>J'ai aussi un peu sous-estimé la partie graphique. Je pensais que ce serait vite fait avec des Stickman faits sur Paint en 30 secondes, mais ils doivent avoir une animation pour chaque action et ce qui je pensais allait me prendre 5 min m'a en réalité pris 1h.</p>
+<h2>Bilan du sprint 1 et prévisions pour le sprint 2</h2>
+<p>J'ai pu remplir les objectifs que je m'étais fixés pour le 1er sprint : un personnage jouable, qui peut interagir avec un mannequin d'entraînement.</p>
+<p>Pour le sprint 2 j'aimerais pouvoir ajouter une barre de points de vie, une interaction lorsque le joueur se fait frapper par une attaque (i.e. le personnage ne devrait pas pouvoir lancer d'actions lorsqu'il se fait frapper), ainsi qu'un ennemi contrôlé par l'IA que le joueur pourrait affronter.</p>
+<p>Backlog du sprint 2 :</p>
+<ul>
+<li>
+<p>Finition du personnage (3h) []</p>
+<ul>
+<li>Interaction lorsqu'on se fait frapper (1h)[]</li>
+<li>Commande de blocage des attaques adverses (1h) []</li>
+<li>Ajout de coups divers (attaques aériennes, accroupies, spéciales,...) (1h) []</li>
+</ul>
+</li>
+<li>
+<p>Implémentation des mécaniques de jeu (2h30) []</p>
+<ul>
+<li>PV (2h) []</li>
+<li>Ecran de victoire (30 min) []</li>
+</ul>
+</li>
+<li>
+<p>IA (4h) []</p>
+<ul>
+<li>Bot facile <strong>et difficile</strong> (2h) []</li>
+<li><s>Bot difficile</s> Multijoueur local (2h) []</li>
+</ul>
+</li>
+<li>
+<p>Déploiement (30 min)</p>
+</li>
+</ul>
 <h2>Glossaire</h2>
-<p>Hitbox<br>
-Sprite<br>
-Combo</p>
+<p>Hitbox : zone invisible autour d'un objet dans un jeu vidéo, déterminant les interactions et les collisions avec d'autres éléments du jeu.</p>
 <h2>Bibliographie</h2>
+<ul>
+<li>Documentation de Godot Engine <a href="https://docs.godotengine.org/en/stable/index.html">https://docs.godotengine.org/en/stable/index.html</a></li>
+<li>Godot Crash Course for Beginners pour apprendre comment fonctionne le moteur <a href="https://www.youtube.com/watch?v=S8lMTwSRoRg&amp;t=2537s">https://www.youtube.com/watch?v=S8lMTwSRoRg&amp;t=2537s</a></li>
+<li>Tournament Fighter | Basic Input tutorial pour l'implémentation des hitbox <a href="https://www.youtube.com/watch?v=XrR5jibBVxo">https://www.youtube.com/watch?v=XrR5jibBVxo</a></li>
+</ul>
+<blockquote>
+<p><strong>Horodatage</strong><br>
+Samedi 09/12 : Prise en main de Godot (~2h30)<br>
+Samedi 09/12 : Création du menu principal et de l'arène (~30 min)<br>
+Samedi 09/12 : Codage des mouvements et saut (1h)<br>
+Dimanche 10/12 : Réécriture complète du code lié aux mouvements (2h)<br>
+Dimanche 10/12 : Animation du personnage jouable (1h)<br>
+Dimanche 10/12 : Implémentation des hitbox et d'un mannequin d'entraînement (2h)<br>
+Dimanche 10/12 : Implémentation d'un compte à rebours (1h)</p>
+</blockquote>
 
 
 </article>
