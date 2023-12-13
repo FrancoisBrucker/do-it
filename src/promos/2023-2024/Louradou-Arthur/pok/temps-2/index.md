@@ -195,8 +195,8 @@ Dans ce Sprint, nous avons vu comment extraire les informations de l'emploi du t
 
 Nous avons ainsi produit un Proof Of Concept qui nous permet de voir que le projet est réalisable, puis nous avons défini la structure du code sous forme de classes qui sera utilisée pour la suite du projet.
 
-> Vous pourrez noter ici que la structure du code est générée à l'aide de l'assistant chatGPT et je m'assurerai que le contenu qui s'y trouve en dernier lieu sera bien vérifié et testé par mes soins.
-> Petit point méthodologique cependant : j'utilise principalement chatGPT dans ce genre de cas, à l'initialisation d'un projet, car ses réponses sont bonnes pour établir une architecture globale et "dans les règles de l'art" (respectant des bonnes pratiques dès le départ) d'une application. 
+Vous pourrez noter ici que la structure du code est générée à l'aide de l'assistant chatGPT et je m'assurerai que le contenu qui s'y trouve en dernier lieu sera bien vérifié et testé par mes soins.
+Petit point méthodologique cependant : j'utilise principalement chatGPT dans ce genre de cas, à l'initialisation d'un projet, car ses réponses sont bonnes pour établir une architecture globale et "dans les règles de l'art" (respectant des bonnes pratiques dès le départ) d'une application. 
 
 ## Suite : Sprint 2 { #suite--sprint-2 }
 
