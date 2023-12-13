@@ -88,9 +88,9 @@ Les API sont composés de ressources, ce sont des types de données créées par
 
 ```js
 const contacts = {
-  {numero: 0644784004, prenom: 'Benoit', nomDeFamille: 'Béguier'},
-  {numero: 0763637393, prenom: 'Nicolas', nomDeFamille: 'Ouzouliasse'},
-  {numero: 0677777777, prenom: 'Alexandre', nomDeFamille: 'Beyaert'}
+  {numero: 0644784004, prenom: 'Benoit', nom: 'Béguier'},
+  {numero: 0763637393, prenom: 'Nicolas', nom: 'Ouzouliasse'},
+  {numero: 0677777777, prenom: 'Alexandre', nom: 'Beyaert'}
 }
 ```
 
