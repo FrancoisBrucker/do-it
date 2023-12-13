@@ -13,30 +13,43 @@ tags:
 résumé: Ce POK, modestement nommé selon le nom de son grand frère Sérénade, est un projet de création d'un site web de gestion de calendrier pour les élèves en 3A.
 ---
 
-## Objectifs
+## Sommaire
+
+- [Objectifs](#objectifs)
+- [Sprint planning](#sprint-planning)
+  - [Sprint 1](#sprint-1)
+  - [Sprint 2](#sprint-2)
+- [De la recherche au POC](#de-la-recherche-au-poc)
+  - [Google Spredsheet](#google-spredsheet)
+  - [Traitement](#traitement)
+- [Du POC à la réalisation](#du-poc-à-la-réalisation)
+- [Revue de Sprint 1](#revue-de-sprint-1)
+- [Suite : Sprint 2](#suite--sprint-2)
+
+## Objectifs { #objectifs }
 
 Les objectifs de cette réalisation sont les suivants :
 - Extraire l'information pertinente du calendrier de la filière Do_It
 - Exporter cette donnée à la main dans un fichier .ics
 - Créer un site web permettant de s'abonner au calendrier élève par élève, à partir du travail de Duc
 
-## Sprint planning
+## Sprint planning { #sprint-planning }
 
-### Sprint 1
+### Sprint 1 { #sprint-1 }
 
 À la fin de ce sprint, nous devrions avoir un programme qui s'éxécute en ligne de commande et qui permet d'extraire les informations de l'Excel (Google Spreadsheet, en réalité) du calendrier de la filière Do_It.
 
-### Sprint 2
+### Sprint 2 { #sprint-2 }
 
 Dans cette partie, nous allons créer une interface permettant d'exporte un .ics et de s'abonner au calendrier de la filière Do_It, en tâchant de personnaliser cela aux élèves en utilisant le travail de Duc.
 
 
-## De la recherche au POC
+## De la recherche au POC { #de-la-recherche-au-poc }
 
 Je vais vous présenter dans cette partie les pistes de codes envisagées au cours de la phase de recherche nécessaire à l'analyse de données.
 En effet, ce projet comporte une phase de recherche importante, car il faut comprendre le fonctionnement de l'API Google Spreadsheet, et trouver un moyen de l'utiliser pour traiter les données du calendrier de la filière Do_It.
 
-### Google Spredsheet
+### Google Spredsheet { #google-spredsheet }
 
 Pour commencer, voilà comment importer notre fichier dans Google Colab :
 
@@ -102,13 +115,13 @@ df.columns = first
 
 <div style="overflow: scroll">
 
-|index|Ors,|Ors,|Semaine,du|Semaine,au|Lundi,8h-9h|Lundi,9h-10h|Lundi,10h-11h|Lundi,11h-12h15|Lundi,14h-15h|Lundi,15h-16h|Lundi,16h15-17h15|Lundi,17h15-18h15|Mardi,8h-9h|Mardi,9h-10h|Mardi,10h15-11h15|Mardi,11h15-12h15|Mardi,14h-15h|Mardi,15h-16h|Mardi,16h15-17h15|Mardi,17h15-18h15|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|0|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|
-|1|||du|au|8h-9h|9h-10h|10h-11h|11h-12h15|14h-15h|15h-16h|16h15-17h15|17h15-18h15|8h-9h|9h-10h|10h15-11h15|11h15-12h15|14h-15h|15h-16h|16h15-17h15|17h15-18h15|
-|2|temps 1||28/08|01/09|||||||||||||||||
-|3|||04/09|08/09|tronc commun 3A||||||||||||||||
-|4||1|11/09|15/09|||Bonjour \!(FB--LP\)218||TC1 : Agilité\(Florian Magnani\)Visio/218||||Langues||||||||
+| index | Ors,    | Ors, | Semaine,du | Semaine,au | Lundi,8h-9h     | Lundi,9h-10h | Lundi,10h-11h          | Lundi,11h-12h15 | Lundi,14h-15h                             | Lundi,15h-16h | Lundi,16h15-17h15 | Lundi,17h15-18h15 | Mardi,8h-9h | Mardi,9h-10h | Mardi,10h15-11h15 | Mardi,11h15-12h15 | Mardi,14h-15h | Mardi,15h-16h | Mardi,16h15-17h15 | Mardi,17h15-18h15 |
+|-------|---------|------|------------|------------|-----------------|--------------|------------------------|-----------------|-------------------------------------------|---------------|-------------------|-------------------|-------------|--------------|-------------------|-------------------|---------------|---------------|-------------------|-------------------|
+| 0     | NaN     | NaN  | NaN        | NaN        | NaN             | NaN          | NaN                    | NaN             | NaN                                       | NaN           | NaN               | NaN               | NaN         | NaN          | NaN               | NaN               | NaN           | NaN           | NaN               | NaN               |
+| 1     |         |      | du         | au         | 8h-9h           | 9h-10h       | 10h-11h                | 11h-12h15       | 14h-15h                                   | 15h-16h       | 16h15-17h15       | 17h15-18h15       | 8h-9h       | 9h-10h       | 10h15-11h15       | 11h15-12h15       | 14h-15h       | 15h-16h       | 16h15-17h15       | 17h15-18h15       |
+| 2     | temps 1 |      | 28/08      | 01/09      |                 |              |                        |                 |                                           |               |                   |                   |             |              |                   |                   |               |               |                   |                   |
+| 3     |         |      | 04/09      | 08/09      | tronc commun 3A |              |                        |                 |                                           |               |                   |                   |             |              |                   |                   |               |               |                   |                   |
+| 4     |         | 1    | 11/09      | 15/09      |                 |              | Bonjour \!(FB--LP\)218 |                 | TC1 : Agilité\(Florian Magnani\)Visio/218 |               |                   |                   | Langues     |              |                   |                   |               |               |                   |                   |
 
 </div>
 
@@ -124,7 +137,7 @@ Nous verrons dans un second temps comment procéder.
 
 
 
-### Traitement
+### Traitement { #traitement }
 
 À l'aide de fonctions utilitaires et d'une boucle, on peut extraire les informations de l'emploi du temps :
 
@@ -168,7 +181,7 @@ Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier,
 
 Le problème subsiste avec les cours de deux ou trois heures, qui sont détectés comme des cours d'une heure.
 
-## Du POC à la réalisation
+## Du POC à la réalisation { #du-poc-à-la-réalisation }
 
 Pour passer du POC à la réalisation, il convient de quitter l'environnement Google Colab et d'ouvrir un repository Git digne de ce nom.
 
@@ -176,13 +189,13 @@ Nous travaillerons donc sur un environnement local en utilisant au maximum des c
 
 Je vous propose donc pour cette revue de Sprint 1 de vous présenter la structure qu'aura le code au repo suivant : https://github.com/alouradou/SerenaDo_It
 
-## Revue de Sprint 1
+## Revue de Sprint 1 { #revue-de-sprint-1 }
 
 Dans ce Sprint, nous avons vu comment extraire les informations de l'emploi du temps de la filière Do_It, et comment les traiter pour les exporter dans un fichier .ics.
 
 Nous avons ainsi produit un Proof Of Concept qui nous permet de voir que le projet est réalisable, puis nous avons défini la structure du code sous forme de classes qui sera utilisée pour la suite du projet.
 
-## Suite : Sprint 2
+## Suite : Sprint 2 { #suite--sprint-2 }
 
 - Faire des Tests Unitaires ! Cela facilitera l'intégration des fonctions de traitement de données
 - Intégrer le POC au code
