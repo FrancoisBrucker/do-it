@@ -158,12 +158,12 @@
 <h2>Backlog du premier sprint</h2>
 <p>Ce premier sprint aura donc pour objectif d'implémenter le code de résolution de problèmes simples. Voici les fonctionnalités que devront être développées, ainsi que leurs complexités:</p>
 <ul>
-<li>Implémentation de la représentation d'un plateau d'échecs (<strong>3</strong>)</li>
-<li>Implémentation des classes de chaque pièce ainsi que leur mouvements (<strong>8</strong>)</li>
-<li>Implémentation d'une méthode pour représenter n'importe quelle position dans le code (<strong>2</strong>)</li>
-<li>Implémentation d'une méthode pour vérifier si une pièce peut être capturée ou non (<strong>3</strong>)</li>
-<li>Implémentation d'une méthode pour vérifier si un joueur est en échec et mat ou non (<strong>13</strong>)</li>
-<li>Implémentation d'une méthode pour résoudre des problèmes simples, en utilisant les méthodes précédentes. (<strong>13</strong>)</li>
+<li>Implémentation de la représentation d'un plateau d'échecs (<strong>3, 30min</strong>)</li>
+<li>Implémentation des classes de chaque pièce ainsi que leur mouvements (<strong>5, 1h30</strong>)</li>
+<li>Implémentation d'une méthode pour représenter n'importe quelle position dans le code (<strong>2, 30min</strong>)</li>
+<li>Implémentation d'une méthode pour vérifier si une pièce peut être capturée ou non (<strong>3, 45min</strong>)</li>
+<li>Implémentation d'une méthode pour vérifier si un joueur est en échec et mat ou non (<strong>8, 3h</strong>)</li>
+<li>Implémentation d'une méthode pour résoudre des problèmes simples, en utilisant les méthodes précédentes. (<strong>8, 3h</strong>)</li>
 </ul>
 <h2>Implémentation du code permettant de résoudre des problèmes simples</h2>
 <p>La première partie de ce POK a pour objectif de créer une méthode qui permettra de résoudre des problèmes simples du jeu des échecs. Autrement dit, pour une position donnée, le programme devra donner le coup gagnant qui mène à un échec et mat (en 1, 2, 3 voire 4 coups). Avant d'arriver à cette méthode, plusieurs étapes intermédiaires sont nécessaires, notamment pour représenter le plateau d'échecs et ses pièces.</p>
@@ -1161,12 +1161,13 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <p>J'ai réussi à développer tout les objectifs du backlog présenté plus haut. J'ai parfois sous estimé certaines complexités, mais finalement tout s'est bien passé. L'algorithme que j'ai créé n'est pas du tout optimal, et manque cruellement de techniques pour rendre plus rapide l'exécution. Les meilleurs robots d'échecs explorent une profondeur de plus de 15 en seulement quelques secondes, tandis que mon programme met plusieurs heures pour une profondeur de 7... Cependant, le programme marche parfaitement pour des profondeurs faibles, ce qui me contente pour l'instant.</p>
 <p>Il faut à présent décrire le backlog du deuxième sprint, qui aura pour objectif d'utiliser Pygame pour implémenter le jeu d'échecs pour qu'on puisse y jouer. Voici ce backlog, avec les complexités pour chaque fonctionnalités:</p>
 <ul>
-<li>Représentation graphique du plateau et de ses pièces <strong>(3)</strong></li>
-<li>Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées <strong>(13)</strong></li>
-<li>Vérifier si les échecs et les échecs et mat <strong>(5)</strong></li>
-<li>Implémentation de sons <strong>(3)</strong></li>
-<li>Implémentation de l'historique de la partie <strong>(8)</strong></li>
-<li>Implémentation de la liste des pièces prises par chaque joueur <strong>(3)</strong></li>
+<li>Représentation graphique du plateau et de ses pièces <strong>(3, 1h)</strong></li>
+<li>Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées <strong>(8, 2h30)</strong></li>
+<li>Vérifier les échecs et les échecs et mat <strong>(5, 1h)</strong></li>
+<li>Implémentation de sons <strong>(3, 1h)</strong></li>
+<li>Implémentation de l'historique de la partie <strong>(8, 2h30)</strong></li>
+<li>Implémentation de la liste des pièces prises par chaque joueur <strong>(2, 30min)</strong></li>
+<li>Implémentation d'une fonctionnalité pour retourner le plateau <strong>(3, 45min)</strong></li>
 </ul>
 
 
