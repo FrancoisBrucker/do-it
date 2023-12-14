@@ -194,14 +194,16 @@ Et les premiers composants :
 
 # Sprint 2
 ###### Objectifs du deuxième sprint
-+ [] Faire le composant d'en tête pour les différentes pages - 1H
-+ [] Faire les composants des autres plats - 2H
-+ [] Faire le composant de réservation bien prise en compte - 1H30
-+ [] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
-+ [] Ajouter les composants des autres plats sur la page *Carte* - 15min
++ [x] Faire le composant d'en tête pour les différentes pages - 1H
++ [x] Faire les composants des autres plats - 1H
++ [x] Faire les composants des categories - 30min
++ [] Faire le composant de réservation bien prise en compte - 30min
++ [x] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
++ [x] Ajouter les composants des autres plats sur la page *Carte* - 15min
 + [] Ajouter les couleurs aux différentes pages - 2H
-+ [] Réaliser les animations d'interraction hoover sur les boutons - 1H
++ [] Réaliser les animations d'interraction hoover sur les boutons - 2H
 + [] Réaliser les animation non interractive sur la page *Home* - 2H
++ [] Ajouter les photos sur toutes les pages - 1H30
 
 ### Horodateur
 | Date | Heures passées | Indications | 
@@ -212,3 +214,6 @@ Et les premiers composants :
 | Vendredi 24/11 | 2H | Création des premiers composants|
 | Mercredi 6/12 | 1H | Maquette : *Placement des vrais composants et ajustement|
 | Vendredi 8/12 | 2H | Amélioration composants |
+|---------- | --------- | ------- |
+| Jeudi 14/12 | 3H | Composants en-tête + plats + categories |
+| Jeudi 14/12 | 1H | Composants de réservation bien prise en compte + ajout des composants |
