@@ -901,3 +901,248 @@ Voici les objectifs que je me suis fixé pour le Sprint 2 :
 - Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)
 
 C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.
+
+## Sprint 2
+
+Création de la page principale; d'analyse de l'utilisateur, en HTML et en CSS.
+
+{% details "Cliquez pour afficher le **code HTML** de la page Analyse" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Analyse - Spotistats ✅</title>
+        <link href="stylesAnalyse.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html" style="width: 15%; height: 60%;">
+                <img src="Allonge.png" class="logo" width="100%" height="100%">
+            </a>
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <img src="image-1.png" width="38" height="39">
+                <span class="ButtonText">Nicolas Ouzouliasse</span>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="column">
+                <h1> Votre overview.</h1>
+                <p>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>  
+                </p>
+            </div>
+            <img src="../spectre.jpg" class="spectre">
+        </div>
+
+        <div class="container2">
+            <img src="../Music-features.jpg" class="graphe">
+            <div class="column2">
+                <h1> Vos goûts musicaux.</h1>
+                <p><li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>
+                </p>
+            </div>
+            
+        </div>
+        
+ 
+
+    </body>
+</html>
+
+```
+
+{% enddetails %}
+
+{% details "Cliquez pour afficher le **code CSS** de la page Analyse" %}
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25242F;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25242F;
+    height: 90px;
+    padding: 0 30px;
+    box-shadow: 0 4px 17px rgba(81, 95, 95, 0.25);
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.FAQ {
+    order: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    justify-content: center;
+    margin-left: 520px;
+}
+
+button.Connexion {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #dee0f6;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 38px;
+    width: 330px;
+    height: 55px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.ButtonText {
+    margin-right: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button.Connexion img {
+    margin-right: 10px;
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Spotify-Font/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-self: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 70px;
+    width: 660px;
+    margin-right: 50px;
+}
+
+h1 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 40px;
+    color: #1ed760;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    width: 650px;
+    text-align: justify;
+    margin-right: 0px;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    width: 650px;
+    text-align: justify;
+    margin-right: 0px;
+    margin-left:40px;
+}
+
+.spectre {
+    width: 30%;
+    height: 30%;
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.graphe{
+    width: 45%;
+    height: 45%;
+    margin-top: 120px;
+    margin-left: 40px;
+    border-radius: 15px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 30px;
+    width: 950px;
+}
+```
+
+{% enddetails %}
