@@ -42,3 +42,17 @@ Livre :
     - Critical Thinking for Strategic Intelligence (Pherson & Pherson)
 
     - Cases in Intelligence Analysis: Structured Analytic Techniques in Action (Beebe & Pherson)
+    - OSINT techniques : Ressources for Uncovering online information, Michael Bazzel (Bibliothèque de M.Brucker) 
+
+## Lecture OSINT Technique 15 /12:
+
+Premièrement, un accent est apporté sur l'importance de l'environnement de travail de manière à rester anonyme.
+Ensuite, un chapitre est dédié aux moteurs de recherches, connu sous le nom de googlint.
+On peut trouver des challenges associés à cette pratique sur le site [OZINT](https://ozint.eu/)
+
+## Ressource pour moi : 
+
+Pour créer des profils safe: 
+  - Mail de travail : [FastMail](https://www.fastmail.com/)
+  - This person exist pour les images ,
+  - fakeNameGenerator,
