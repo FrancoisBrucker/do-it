@@ -177,6 +177,9 @@ return (
 ```
 
 Ce dernier bloc de code permet de tout afficher : un espace d'entrée du texte, un bouton pour ajouter le nom, ainsi que la liste des noms 'showNames'. Ces éléments permettent de retourner une base de données basique.
+
+Le source code complet peut être trouvé [ici](https://github.com/chelseafarley/expo-sqlite-tutorial). Il comporte des fonctions plus avancées comme l'importation et l'exportation de bases de données, mais je ne me sens pas assez à l'aise en React pour pouvoir l'expliquer dans ce MON. 
+
 ## Bibliographie 
 
 - Documentation de React Native https://reactnative.dev/docs/getting-started 
@@ -184,6 +187,7 @@ Ce dernier bloc de code permet de tout afficher : un espace d'entrée du texte, 
 - Local SQLite Database for Expo React Native App with Import and Export Database from Device Files https://www.youtube.com/watch?v=1kSLd9oQX7c
 - Installer un émulateur Android (Nécessite un pc puissant) https://docs.expo.dev/workflow/android-studio-emulator/
 - Faire tourner un projet Expo sur un émulateur Android https://www.brainstormcreative.co.uk/react-native-expo/how-to-run-an-expo-app-on-android-emulator/
+- MON précédents sur React.js de [Thomas Duroy](https://francoisbrucker.github.io/do-it/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/) et [Lucas Rioual](https://francoisbrucker.github.io/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-2.1/).
 
 ## Horodatage 
 

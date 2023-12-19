@@ -37,15 +37,15 @@ Prérequis : Aucune base en JAVA
 
 ### Sprint 1
 
-|Intitulé|Complexité|Temps estimé|
+|Intitulé|Temps estimé|
 |---|---|---|
-|- Suivre une formation d'apprentissage du Java <br> - Appliquer ces connaissances en exercices <br> - Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Définir les fonctionnalités et le back log du Mastermind <br> - Réaliser une maquette sur Figma du projet| 3 <br> 8 <br> 1 <br> 1 <br> 1 |7h <br> 1h45 <br> 15 mins <br> 30 mins <br> 30 mins |
+|- Suivre une formation d'apprentissage du Java <br> - Appliquer ces connaissances en exercices <br> - Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Définir les fonctionnalités et le back log du Mastermind <br> - Réaliser une maquette sur Figma du projet| 7h <br> 1h45 <br> 15 mins <br> 30 mins <br> 30 mins |
 
 ### Sprint 2
 
-|Intitulé|Complexité|Temps estimé|
+|Intitulé|Temps estimé|
 |---|---|---|
-|- Réaliser le backlog sur Java <br> - Analyse de méthodes de résolution d'un mastermind <br> | 5 <br> 3| 6h <br> 4h |
+| - Réaliser le backlog Java <br> - Recherche de méthodes de résolution d'un mastermind <br> - Implémentation de ces méthodes <br> - Comparaison des méthodes |7h <br> 30 mins <br> 2h <br> 30 mins |
 
 <h2 id=bases> Acquérir bases en Java</h2>
 
@@ -240,10 +240,10 @@ Je n'ai malheureusement pas eu le temps d'apprendre à me servir de ce système.
 |Sélectionner une combinaison de 4 couleurs|3|Must|
 |Valider une fois qu'une combinaison a été choisie|3|Must|
 |Effacer une combinaison qui n'a pas encore été validée|3|Must|
-|Choisir d'effacer seulement la dernière couleur qui a été sélectionnée|13|Won't|
-|Pouvoir abandonner la partie à tout moment|8|Must|
-|Pouvoir accéder aux règles du jeu à tout moment|8|Could|
-|Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée|8|Must|
+|Choisir d'effacer seulement la dernière couleur qui a été sélectionnée|8|Won't|
+|Pouvoir abandonner la partie à tout moment|5|Must|
+|Pouvoir accéder aux règles du jeu à tout moment|5|Could|
+|Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée|5|Must|
 |Avoir le code secret recherché qui s'affiche à la fin d'une partie|3|Won't|
 
 ***Remarque :***
@@ -264,15 +264,15 @@ Vous pouvez retrouver la maquette [ici](https://www.figma.com/file/nxQbQ6gxDwGkS
 
 Si on reprend le backlog du sprint 1 que je m'étais fixé : 
 
-|Intitulé|Complexité|Temps estimé|Temps réalisé|
+|Intitulé|Temps estimé|Temps réalisé|
 |---|---|---|---|
-|- Suivre une formation d'apprentissage du Java <br> - Appliquer ces connaissances en exercices <br> - Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Définir les fonctionnalités et le backlog du Mastermind <br> - Réaliser une maquette sur Figma du projet| 3 <br> 8 <br> 1 <br> 1 <br> 1 |7h <br> 1h45 <br> 15 mins <br> 30 mins <br> 30 mins | **8h00** <br> **1h30** <br> **10 mins** <br> **5 mins** <br> **45 mins**|
+|- Suivre la formation open classroom d'apprentissage du Java <br> *- Suppléments de formations sur le langage (vidéos, articles)* <br> - Appliquer ces connaissances en exercices (cités plus tôt) <br> - Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Définir les fonctionnalités et le backlog du Mastermind <br> - Réaliser une maquette sur Figma du projet| 7h <br> / <br> 1h45 <br> 15 mins <br> 30 mins <br> 30 mins | **7h** <br> **1h** <br> **1h30** <br> **10 mins** <br> **5 mins** <br> **45 mins**|
 
 Au final, j'ai passé sur ce sprint 1 **plus de 10h...**. J'ai rencontré beaucoup de difficultés que je n'avais pas envisagées et qui, au final m'ont pris beaucoup de temps à surmonter. *Surtout concernant l'application des codes sur VSCodes*(ex: l'installation de Java, réaliser un packetage et déclarer les classes, configurer des arguments pour une classe, etc..).
 
 On peut alors redéfinir le backlog pour le sprint 2 :
 
-|Intitulé|Complexité|Temps estimé|
+|Intitulé|Temps estimé|
 |---|---|---|
-| *- Apprendre les connaissances théoriques pour réaliser une interface graphique en Java* <br> - Réaliser le backlog sur Java <br> - Analyse de méthodes de résolution d'un mastermind <br> | *1* <br> 5 <br> 3| *1h* <br> 6h <br> 3h |
+| *- Apprendre les connaissances théoriques pour réaliser une interface graphique en Java* <br> - Réaliser le backlog défini plus haut sur Java <br> - Recherche de méthodes de résolution d'un mastermind <br> - Implémentation de ces méthodes <br> - Comparaison des méthodes |*1h* <br> 6h <br> 45mins <br> 1h <br> 30 mins |
 

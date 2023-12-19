@@ -17,15 +17,15 @@ résumé: Ajout d'un back sur mon site de Memory avec Node.js et express.
 Dans ce POK j'aimerais commencer à intégrer l'aspect backend au site que j'ai développé pour mon premier POK. Pour cela je vais utiliser Node.js et express sur lesquels je vais me former lors d'un MON. 
 
 ## Les étapes pour le Sprint 1
-- Reprendre le front (parce que certains trucs sont pas top)
-- Créer des popup pour la connexion et l'inscription
-- Voir comment fonctionne MySQL
-- Création de la base de données
-- Création du serveur avec Node et Express
+- Reprendre le front (parce que certains trucs sont pas top) : 2h
+- Créer des popup pour la connexion et l'inscription : 2h
+- Voir comment fonctionne MySQL : 2h
+- Création de la base de données : 3h
+- Création du serveur avec Node et Express : 1h
 
 ## Les étapes pour le Sprint 2
-- Créer les requêtes pour permettre aux utilisateurs de s'inscrire, se connecter et se déconnecter
-- Afficher l'historique des parties du joueur connecté 
+- Créer les requêtes pour permettre aux utilisateurs de s'inscrire, se connecter et se déconnecter : 5h
+- Afficher l'historique des parties du joueur connecté : 5h
 
 
 ## Sprint 1 - Reprise du Front
