@@ -60,9 +60,4 @@ Après les bases(très basique mais nécessaire), et un peu de pratique comme la
 C'était un peu intéressant mais pour le moment on dirait que c'est réservé à un usage professionnel surtout.
 Par conséquent j'ai choisi de regarder ce tutoriel [from photo to passport](https://www.youtube.com/watch?v=TtTOp-o-TOs) parce que j'avais besoin de faire un truc, du concret, un exercice 
 
-## Ressource pour moi : 
-
-Pour créer des profils safe: 
-  - Mail de travail : [FastMail](https://www.fastmail.com/)
-  - This person exist pour les images ,
-  - fakeNameGenerator,
+Donc j'ai eu le plaisir d'apprendre des ficelles intéressantes avec cette vidéo, toutefois elle se focalise sur les personnes importantes car cela peut être à destination de journaliste d'investigation, toutefois en faisant des recherches sur ma personne, j'ai retrouvé assez facilement des informations(une micro entreprise uber que j'avais crée il y a 4 ans ), toutefois l'outil ne fait pas tout un travail supplémentaire est nécessaire pour vérifier chaque donnée.
