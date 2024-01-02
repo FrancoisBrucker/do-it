@@ -30,7 +30,8 @@ résumé: Je vais dans ce POK créer mon site Internet permettant à l'utilisate
 Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :
 
 - *Créez votre site web avec HTML5 et CSS3.* OpenClassrooms. Accessible [ici](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3).
-- Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/)
+- Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/).
+- *Web API*, Spotify. Accessible [ici](https://developer.spotify.com/documentation/web-api).
 
 ## Sommaire
 
@@ -893,7 +894,7 @@ Pas de point dur particulier.
 Voici les objectifs que je me suis fixé pour le Sprint 2 :
 
 - Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, **1 heure estimée**)
-- Documentation sur les API de Spotify, ce qu'elles permettent (★☆☆☆☆, **2 heures estimées**)
+- Documentation sur les API de Spotify, leur intégration et leurs features (★☆☆☆☆, **2 heures estimées**)
 - Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**)
 - Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**)
 - Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**)
@@ -904,7 +905,7 @@ C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API.
 
 ## Sprint 2
 
-Création de la page principale; d'analyse de l'utilisateur, en HTML et en CSS.
+Création de la page principale; c'est-à-dire la page d'analyse de l'utilisateur, en HTML et en CSS.
 
 {% details "Cliquez pour afficher le **code HTML** de la page Analyse" %}
 
@@ -1146,3 +1147,25 @@ li {
 ```
 
 {% enddetails %}
+
+### Documentation sur l'API Spotify
+
+Je vais vraisemblablement devoir adapter mon code HTML d'authentification pour qu'il utilise le système d'authentification de l'API. Je vais devoir créer un fichier .JS permettant de gérer cette fonctionnalité. Spotify dispose d'une interface destinée aux développeurs permettant d'avoir accès à des ressources très utiles : plusieurs explications et tutoriels, mais aussi de créer une App fournissant les *Client ID* and *Client Secret* permettant *in fine* d'accéder à un *access token*.
+L'*access token* est un string qui contient les informations d'identification et les autorisations qui peuvent être utilisées pour accéder à une ressource donnée (par exemple, artistes ou albums) ou aux données de l'utilisateur (par exemple son profil).
+
+Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet :
+
+- Créer une app sur le [Dashboard Spotify](https://developer.spotify.com/dashboard/create)
+![Dashborard](Dashboard.png)
+
+- Récupérer le *Client ID* et le *Client Secret*
+- Demander un *access token*
+- A partir de l'*access token*, écrire les requêtes nécessaires pour récupérer les données de l'utilisateur.
+
+### Mise en pratique
+
+Une fois l'app créée, je peux récupérer le *Client ID* directement dans les paramètres de l'app :
+![ID](ClientID.png)
+
+et aussi le *Client Secret* :
+![Secret](ClientSecret.png)
