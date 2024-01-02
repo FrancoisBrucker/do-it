@@ -1161,6 +1161,7 @@ Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet
 - Récupérer le *Client ID* et le *Client Secret*
 - Demander un *access token*
 - A partir de l'*access token*, écrire les requêtes nécessaires pour récupérer les données de l'utilisateur.
+- Appeler l'API
 
 ### Mise en pratique
 
@@ -1169,3 +1170,43 @@ Une fois l'app créée, je peux récupérer le *Client ID* directement dans les 
 
 et aussi le *Client Secret* :
 ![Secret](ClientSecret.png)
+
+Une fois que ces codes ont été recupérer, il est possible de faire une requête en [cURL](https://curl.se/) (un outil de ligne de commande en open source) pour obtenir l'*Access Token*.
+
+```shell
+curl -X POST "https://accounts.spotify.com/api/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id=70b7021a56234ecda100b97df932edec&client_secret=a5191ccecc734218b92f879346d9356c"
+
+```
+
+Je n'ai jamais réussi à installer cUrl, donc en modifiant les commandes pour pouvoir les exécuter dans PowerShell, j'obtiens:
+
+```shell
+Invoke-RestMethod -Uri "https://accounts.spotify.com/api/token" -Method Post `
+>>     -Headers @{
+>>         "Content-Type" = "application/x-www-form-urlencoded"
+>>     } `
+>>     -Body @{
+>>         "grant_type"    = "client_credentials"
+>>         "client_id"     = "70b7021a56234ecda100b97df932edec"
+>>         "client_secret" = "a5191ccecc734218b92f879346d9356c"
+>>     } 
+    
+access_token
+------------
+BQBf8bmbQ36w84jhmPm6zyN7CuzaekzLF6bwVCpgpiQO-RgRfPssBD198d49BRQiO6sLyADRMaRVfjpzsknWo6JLYta4ZkaKfKeZYW... 
+```
+
+J'ai ainsi l'*Access token* qui me permet d'interagir avec l'API.
+
+Je vais maintenant m'attacher à appeler l'API dans un programme JavaScript, afin que lorsque l'utilisateur se connecte avec son compte, des informations basiques apparaissent. 
+Il est important de rappeler que pour l'instant, je n'ai créé que du **Front-End**. Je vais créer à l'aide de [Vite](https://github.com/vitejs/vite) un serveur de développement.
+
+```cmd
+npm create vite@latest spotistats -- --template vanilla
+
+cd spotistats
+npm install
+npm run dev 
+```
