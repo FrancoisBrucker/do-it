@@ -1176,7 +1176,7 @@ Une fois que ces codes ont été recupérer, il est possible de faire une requê
 ```shell
 curl -X POST "https://accounts.spotify.com/api/token" \
      -H "Content-Type: application/x-www-form-urlencoded" \
-     -d "grant_type=client_credentials&client_id=70b7021a56234ecda100b97df932edec&client_secret=a5191ccecc734218b92f879346d9356c"
+     -d "grant_type=client_credentials&client_id=70b7021a56234ecda100b97df93*****&client_secret=a5191ccecc734218b92f879346*****"
 
 ```
 
@@ -1189,13 +1189,13 @@ Invoke-RestMethod -Uri "https://accounts.spotify.com/api/token" -Method Post `
 >>     } `
 >>     -Body @{
 >>         "grant_type"    = "client_credentials"
->>         "client_id"     = "70b7021a56234ecda100b97df932edec"
->>         "client_secret" = "a5191ccecc734218b92f879346d9356c"
+>>         "client_id"     = "70b7021a56234ecda100b97df9******"
+>>         "client_secret" = "a5191ccecc734218b92f879346******"
 >>     } 
     
 access_token
 ------------
-BQBf8bmbQ36w84jhmPm6zyN7CuzaekzLF6bwVCpgpiQO-RgRfPssBD198d49BRQiO6sLyADRMaRVfjpzsknWo6JLYta4ZkaKfKeZYW... 
+BQBf8bmbQ36w84jhmPm6zyN7CuzaekzLF6bwVCpgpiQO-RgRfPssBD198d49BRQiO6sLyADRMaRVfjpzsknWo6JLYta4ZkaK*****... 
 ```
 
 J'ai ainsi l'*Access token* qui me permet d'interagir avec l'API.
