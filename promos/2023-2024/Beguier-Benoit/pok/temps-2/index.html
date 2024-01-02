@@ -164,7 +164,8 @@
 <p>Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :</p>
 <ul>
 <li><em>Créez votre site web avec HTML5 et CSS3.</em> OpenClassrooms. Accessible <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">ici</a>.</li>
-<li>Developer Mozilla. Accessible <a href="https://developer.mozilla.org/fr/">ici</a></li>
+<li>Developer Mozilla. Accessible <a href="https://developer.mozilla.org/fr/">ici</a>.</li>
+<li><em>Web API</em>, Spotify. Accessible <a href="https://developer.spotify.com/documentation/web-api">ici</a>.</li>
 </ul>
 <h2>Sommaire</h2>
 <ol>
@@ -1087,7 +1088,7 @@ Pas de point dur particulier.</p>
 <p>Voici les objectifs que je me suis fixé pour le Sprint 2 :</p>
 <ul>
 <li>Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, <strong>1 heure estimée</strong>)</li>
-<li>Documentation sur les API de Spotify, ce qu'elles permettent (★☆☆☆☆, <strong>2 heures estimées</strong>)</li>
+<li>Documentation sur les API de Spotify, leur intégration et leurs features (★☆☆☆☆, <strong>2 heures estimées</strong>)</li>
 <li>Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, <strong>2 heures estimées</strong>)</li>
 <li>Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, <strong>2 heures estimées</strong>)</li>
 <li>Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, <strong>0 heure 30 estimée</strong>)</li>
@@ -1096,7 +1097,7 @@ Pas de point dur particulier.</p>
 </ul>
 <p>C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.</p>
 <h2>Sprint 2</h2>
-<p>Création de la page principale; d'analyse de l'utilisateur, en HTML et en CSS.</p>
+<p>Création de la page principale; c'est-à-dire la page d'analyse de l'utilisateur, en HTML et en CSS.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -1366,6 +1367,30 @@ Pas de point dur particulier.</p>
 </div>
 </details>     
 </div>
+<h3>Documentation sur l'API Spotify</h3>
+<p>Je vais vraisemblablement devoir adapter mon code HTML d'authentification pour qu'il utilise le système d'authentification de l'API. Je vais devoir créer un fichier .JS permettant de gérer cette fonctionnalité. Spotify dispose d'une interface destinée aux développeurs permettant d'avoir accès à des ressources très utiles : plusieurs explications et tutoriels, mais aussi de créer une App fournissant les <em>Client ID</em> and <em>Client Secret</em> permettant <em>in fine</em> d'accéder à un <em>access token</em>.<br>
+L'<em>access token</em> est un string qui contient les informations d'identification et les autorisations qui peuvent être utilisées pour accéder à une ressource donnée (par exemple, artistes ou albums) ou aux données de l'utilisateur (par exemple son profil).</p>
+<p>Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet :</p>
+<ul>
+<li>
+<p>Créer une app sur le <a href="https://developer.spotify.com/dashboard/create">Dashboard Spotify</a><br>
+<img src="Dashboard.png" alt="Dashborard"></p>
+</li>
+<li>
+<p>Récupérer le <em>Client ID</em> et le <em>Client Secret</em></p>
+</li>
+<li>
+<p>Demander un <em>access token</em></p>
+</li>
+<li>
+<p>A partir de l'<em>access token</em>, écrire les requêtes nécessaires pour récupérer les données de l'utilisateur.</p>
+</li>
+</ul>
+<h3>Mise en pratique</h3>
+<p>Une fois l'app créée, je peux récupérer le <em>Client ID</em> directement dans les paramètres de l'app :<br>
+<img src="ClientID.png" alt="ID"></p>
+<p>et aussi le <em>Client Secret</em> :<br>
+<img src="ClientSecret.png" alt="Secret"></p>
 
 
 </article>
