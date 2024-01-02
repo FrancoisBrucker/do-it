@@ -1374,7 +1374,7 @@ L'<em>access token</em> est un string qui contient les informations d'identifica
 <ul>
 <li>
 <p>Créer une app sur le <a href="https://developer.spotify.com/dashboard/create">Dashboard Spotify</a><br>
-<img src="Dashboard.png" alt="Dashborard"></p>
+<img src="Dashboard.png" alt="Dashboard"></p>
 </li>
 <li>
 <p>Récupérer le <em>Client ID</em> et le <em>Client Secret</em></p>
@@ -1385,12 +1385,45 @@ L'<em>access token</em> est un string qui contient les informations d'identifica
 <li>
 <p>A partir de l'<em>access token</em>, écrire les requêtes nécessaires pour récupérer les données de l'utilisateur.</p>
 </li>
+<li>
+<p>Appeler l'API</p>
+</li>
 </ul>
 <h3>Mise en pratique</h3>
 <p>Une fois l'app créée, je peux récupérer le <em>Client ID</em> directement dans les paramètres de l'app :<br>
 <img src="ClientID.png" alt="ID"></p>
 <p>et aussi le <em>Client Secret</em> :<br>
 <img src="ClientSecret.png" alt="Secret"></p>
+<p>Une fois que ces codes ont été récupérés, il est possible de faire une requête en <a href="https://curl.se/">cURL</a> (un outil de ligne de commande en open source) pour obtenir l'<em>Access Token</em>.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST <span class="token string">"https://accounts.spotify.com/api/token"</span> <span class="token punctuation">\</span>
+     <span class="token parameter variable">-H</span> <span class="token string">"Content-Type: application/x-www-form-urlencoded"</span> <span class="token punctuation">\</span>
+     <span class="token parameter variable">-d</span> <span class="token string">"grant_type=client_credentials&amp;client_id=70b7021a56234ecda100b97df93*****&amp;client_secret=a5191ccecc734218b92f879346*****"</span>
+
+</code></pre>
+<p>Je n'ai jamais réussi à installer cUrl, donc en modifiant les commandes pour pouvoir les exécuter dans PowerShell, j'obtiens:</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">Invoke-RestMethod <span class="token parameter variable">-Uri</span> <span class="token string">"https://accounts.spotify.com/api/token"</span> <span class="token parameter variable">-Method</span> Post <span class="token variable"><span class="token variable">`</span>
+<span class="token operator">>></span>     <span class="token parameter variable">-Headers</span> @<span class="token punctuation">{</span>
+<span class="token operator">>></span>         <span class="token string">"Content-Type"</span> <span class="token operator">=</span> <span class="token string">"application/x-www-form-urlencoded"</span>
+<span class="token operator">>></span>     <span class="token punctuation">}</span> <span class="token variable">`</span></span>
+<span class="token operator">>></span>     <span class="token parameter variable">-Body</span> @<span class="token punctuation">{</span>
+<span class="token operator">>></span>         <span class="token string">"grant_type"</span>    <span class="token operator">=</span> <span class="token string">"client_credentials"</span>
+<span class="token operator">>></span>         <span class="token string">"client_id"</span>     <span class="token operator">=</span> <span class="token string">"70b7021a56234ecda100b97df9******"</span>
+<span class="token operator">>></span>         <span class="token string">"client_secret"</span> <span class="token operator">=</span> <span class="token string">"a5191ccecc734218b92f879346******"</span>
+<span class="token operator">>></span>     <span class="token punctuation">}</span> 
+    
+access_token
+------------
+BQBf8bmbQ36w84jhmPm6zyN7CuzaekzLF6bwVCpgpiQO-RgRfPssBD198d49BRQiO6sLyADRMaRVfjpzsknWo6JLYta4ZkaK*****<span class="token punctuation">..</span>. 
+</code></pre>
+<p>J'ai ainsi l'<em>Access token</em> qui me permet d'interagir avec l'API.</p>
+<p>Je vais maintenant m'attacher à appeler l'API dans un programme JavaScript, afin que lorsque l'utilisateur se connecte avec son compte, des informations basiques apparaissent.<br>
+Il est important de rappeler que pour l'instant, je n'ai créé que du <strong>Front-End</strong>. Je vais créer à l'aide de <a href="https://github.com/vitejs/vite">Vite</a> un serveur de développement.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> create vite@latest spotistats -- <span class="token parameter variable">--template</span> vanilla
+
+<span class="token builtin class-name">cd</span> spotistats
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> run dev 
+</code></pre>
 
 
 </article>
