@@ -133,6 +133,134 @@
 <p><strong>Niveau :</strong> Facile<br>
 <strong>Prérequis :</strong> Bases en Python</p>
 </div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>Bibliothèque Seaborn</li>
+<li>Bibliothèque Scikit Learn</li>
+<li>Bibliothèque Keras</li>
+<li>Conclusion</li>
+<li>Bibliographie</li>
+</ol>
+<h2>1. Introduction</h2>
+<p>La vocation de ce MON est d'introduire de façon non exhaustive aux bibliothèques python utiles pour la DataScience.<br>
+Ce second MON introduit aux bibliothèques Seaborn et Scikit Leanr qui servent respectivement à la visualisation des données et au Machine Learning.</p>
+<p>Le MON 2.2 va de pair avec le MON 2.1 qui lui introduit les bibliothèques NumPy, Matplotlib et Pandas.</p>
+<h2>2. Bibliothèque Seaborn</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns
+</code></pre>
+<p>La bibliothèque Seaborn va permettre d'obtenir de la visualisation avancée en comparaison à Matplotlib et ce en simplifiant les lignes de code.</p>
+<p>Reprenons l'exemple du dataset iris (cf MON 2.1).<br>
+En lisant ce dataset sous forme de dataframe pandas, il va être possible en une seule ligne de code de produire une figure montrant toutes les différentes relations entre nos différentes variable.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">chemin <span class="token operator">=</span> <span class="token string">'C:\MOOC_Data_Sciences\Machine_Learnia\iris.csv'</span>
+iris <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>chemin<span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>iris<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="pairplot.png" alt="Figure des relations entre variables du dataset iris"></p>
+<p>Pour aller plus loin, il va même être possible d'analyser les sépales et pétales par variété de fleur grâce à l'ajout d'un seul paramètre.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>iris<span class="token punctuation">,</span> hue <span class="token operator">=</span> <span class="token string">'variety'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="pairplot_variety.png" alt="Distinction par variété"></p>
+<p>Les possibilités de seaborn sont multiples, <a href="https://seaborn.pydata.org/">la documentation officielle</a> répertorie les différents graphiques réalisables en fonction des besoins :</p>
+<ul>
+<li>distribution</li>
+<li>regressions</li>
+<li>catégories...</li>
+</ul>
+<p>Et ces possibilités ont presque toujours la même structure : <strong>sns.fonction(x, y, data, hue, size, style)</strong></p>
+<p>À titre d'exemple, reprenons le dataset titanic.</p>
+<p>Il va être possible d'étudier la répartition des âges des passagers en fonction de leur classe et de leur sexe, sous forme de categorical plot ou de box plot.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>catplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> hue<span class="token operator">=</span><span class="token string">'sex'</span><span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> hue<span class="token operator">=</span><span class="token string">'sex'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="catplot_titanic.png" alt="Répartition des passagers"></p>
+<p><img src="boxplot_titanic.png" alt="Répartition des passagers"></p>
+<p>On va également pouvoir visualiser la relation entre 2 distributions.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">sns<span class="token punctuation">.</span>jointplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'fare'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> kind<span class="token operator">=</span><span class="token string">'hex'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="jointplot_titanic.png" alt="Tarif en fonction de l'âge"></p>
+<p>Ou encore de visualiser les matrices de corrélation sous forme de heatmap.</p>
+<p><strong>NB :</strong> Attention, il s'avère au préalable nécessaire de supprimer les colonnes contenant autre chose que des int ou float ou de convertir des colonnes.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>titanic<span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="heatmap_titanic.png" alt="Heatmap de corrélation"></p>
+<h2>3. Bibliothèque Scikit Learn</h2>
+<p>La bibliothèque Scikit Learn va permettre d'effectuer du Machine Learning.<br>
+C'est cette bibliothèque qui répertorie toutes les méthodes d'apprentissage et prêtes à l'emploi. <a href="https://scikit-learn.org/stable/#">La documentation Scikit-Learn</a> va alors être très utile. Elle répertorie ces différentes méthodes : classification, régression, clustering... et explique leur fonctionnement. Ainsi, il n'y aura plus qu'à appeler les différentes fonctions déjà codées en python orienté objet pour effectuer du Machine Learning.</p>
+<p>Les programmes utilisant Sckit Learn auront tous le même schéma :</p>
+<ul>
+<li>Sélection du modèle et précision de ses hyperpramètres : <strong>model = LinearRegression(...)</strong></li>
+<li>Entraînement du modèle : <strong>model.fit(X, Y)</strong></li>
+<li>Évaluation du modèle : <strong>model.score(X, Y)</strong></li>
+<li>Utilisation du modèle : <strong>model.predict(X)</strong></li>
+</ul>
+<h3>3.1 Régression</h3>
+<p>Commençons par une simple régression linéaire.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">## Création des données</span>
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+Y <span class="token operator">=</span> X <span class="token operator">+</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment">## Modèle</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LinearRegression
+
+model <span class="token operator">=</span> LinearRegression<span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span> <span class="token comment">## renvoie le coefficient de détermination</span>
+predictions <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span> <span class="token comment">## renvoie un tableau Numpy des prédictions</span>
+
+<span class="token comment">## Visualisation</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span>predictions<span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="regression_lineaire.png" alt="Régression linéaire"></p>
+<p>Désormais, dans le cas où la relation entre les données ne serait plus linéaire, nous pourrions envisager le modèle SVR (Support Vector Regression).</p>
+<p>Le programme reste alors tout à fait similaire, il ne suffit que d'importer le modèle et modifier le choix du modèle.</p>
+<p><strong>NB :</strong> En regardant la <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html">☻documentation de ce modèle</a>, on comprend que seuls 2 hyperparamètres peuvent être modifiés :</p>
+<ul>
+<li>C : paramètre de régularisation. Il détermine la marge d'erreur tolérée par le modèle. (attention au surapprentissage si celui-ci est choisi trop grand)</li>
+<li>epsilon : l'erreur par rapport à la prédiction, comme en prépa lors de la détermination de limites, il s'agit du tunnel de tolérance autour d'une courbe. Plus epsilon est grand, plus le modèle est tolérant aux erreurs.</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+Y <span class="token operator">=</span> X<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment">## Modèle</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>svm <span class="token keyword">import</span> SVR
+model <span class="token operator">=</span> SVR<span class="token punctuation">(</span>C<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p><img src="SVR.png" alt="Régression SVR"></p>
+<h2>5. Conclusion</h2>
+<h4>Répartition du temps</h4>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>Seaborn</th>
+<th>Scikit Learn</th>
+<th>Combinaison</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temps prévu (en heures)</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Temps dédié (en heures)</td>
+<td>2</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Bibliographie</h2>
+<p><a href="https://seaborn.pydata.org/">Documentation Seaborn</a><br>
+<a href="https://scikit-learn.org/stable/#">Documentation Scikit Learn</a><br>
+<a href="https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq">Chaine YouTube Machine Learnia</a></p>
 
 
 </article>
