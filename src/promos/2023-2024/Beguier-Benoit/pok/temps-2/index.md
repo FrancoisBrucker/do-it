@@ -1210,3 +1210,112 @@ cd spotistats
 npm install
 npm run dev 
 ```
+
+Dans le fichier index.html créé par cette commande Vite, j'ai inséré le contenu de la page Analyse.html, et j'ai fait référence à un script JS que l'on créera ensuite. J'ai ensuite modifié son contenu pour en faire une page dynamique et non statique : par exemple, le nom dans la box en haut à droite doit être celui de la personne connectée et non un string 'Nicolas Ouzouliasse'. J'utilise pour cela des attributs *id* tels que `<span id="displayName">` qui seront obtenus avec le script JS et l'appel à l'API.
+
+{% details "Cliquez pour afficher le **code HTML** de la page Analyse" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Analyse - Spotistats ✅</title>
+        <link href="stylesAnalyse.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="src/script.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html" style="width: 15%; height: 60%;">
+                <img src="Allonge.png" class="logo" width="100%" height="100%">
+            </a>
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <span id="avatar" width="38" height="39"></span>
+                <span class="ButtonText"><span id="displayName"></span></span>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="column">
+                <h1> Votre overview.</h1>
+                <p>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>  
+                </p>
+            </div>
+            <img src="../spectre.jpg" class="spectre">
+        </div>
+
+        <div class="container2">
+            <img src="../Music-features.jpg" class="graphe">
+            <div class="column2">
+                <h1> Vos goûts musicaux.</h1>
+                <p><li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>
+                </p>
+            </div>
+            
+        </div>
+        
+ 
+
+    </body>
+</html>
+
+```
+
+{% enddetails %}
+
+### Appel à l'API
+
+Nous souhaitons maintenant appeler l'API, de manière automatique dans le script JS.
+Extrait de la documentation [Spotify](https://developer.spotify.com/) :
+
+- "Lorsque la page se charge, nous vérifions s'il y a un code dans le string de requête de rappel
+- S'il n'y a pas de code, nous redirigerons l'utilisateur vers la page d'autorisation de Spotify.
+- Une fois que l'utilisateur a autorisé l'application, Spotify le redirige vers notre application et nous lisons le code dans le string de requête.
+- Nous utiliserons ce code pour demander un *access token* à l'API de Spotify
+- Nous utiliserons l'*access token* pour appeler l'API Web afin d'obtenir les données du profil de l'utilisateur."
+
+Je ne pourrais pas expliquer d'une manière plus claire. Pour vérifier l'authenticité de notre requête, nous générons un code unique, appelé *PKCE verifier* qui est stocké en local et qui va subir une transformation, un *hash* avec un algorithme. C'est ce code transformé qui va être envoyé dans la *user authorization request*.
+
+J'ai aussi ajouté plusieurs fonctions grâce à la documentation :
+
+- `redirectToAuthCodeFlow(clientId)`, qui permet de rediriger l'utilisateur à la page d'autorisation Spotify
+- `getAccessToken(clientId, code)`, qui *challenge* le token généré
+- `fetchProfile(token)`, qui appelle l'API et utilise la méthode GET pour obtenir les données d'intérêt
+- `populateUI(profile)`, qui permet de récupérer et de remplir les données d'intérêt.
