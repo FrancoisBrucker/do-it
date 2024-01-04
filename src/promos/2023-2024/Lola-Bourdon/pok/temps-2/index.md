@@ -58,9 +58,6 @@ Comme j'apprécie plusieurs configurations et que je ne suis pas la seule sur le
 
 Pour réaliser le logo, j'ai appris à utiliser (plus ou moins) l'application Canva. j'ai commencé par regarder une vidéo de 25 min sur la création de logo canva sur YouTube. Je suis partie de l'idée de faire un logo simple, avec du vert. j'ai fait les logos suivants :
 
-![figma](Protneatlogoavoca.png)
-![figma](protneatlogoavocat2.png)
-
 POur l'instant je ne suis pas très convaincue mais je ne maitrise pas assez l'application. Je pense faire d'autres logo à l'avenir, au fur et à mesure que je prends en main l'application Canva.
 
 ### La barre d'outils 
@@ -70,24 +67,11 @@ Pour commencer, j'ai visité de nombreux sites de vente en ligne de nourriture o
 
 J'ai ensuite commencé par faire le design de la barre d'outils, qui sera la même sur toutes les pages (quand je l'aurai choisie):
 
-![figma](barre_outils.png)
-
 ### Premières maquettes 
 
 Puis j'ai fait une première maquette simple de la page principale et d'une autre page avant de les mettre en forme. Je me suis rendue compte que la police d'écriture fixée par le porteur de projet n'était pas adéquat pour la totalité de la page. J'ai donc  essayé différents designs et police d'écriture dont certains résultats sont ci-dessous
 
-<div style="display:flex">
-<div><img src="maquette1.png"></div>
-<div><img src="maquette2.png"></div>
-<div><img src="maquette3.png"></div>
-</div>
 
-J'ai également fait varier le code couleur 
-
-<div style="display:flex">
-<div><img src="maquette4.png"></div>
-<div><img src="maquette5.png"></div>
-</div>
 
 Je ne suis pas emballée par les images (trouvées sur internet) mais je sais qu'à l'avenir nous utiliserons nos propres photos et plats. 
 l'idée était quand meme de rester dans les tons de vert jaune rouge orange.
@@ -110,7 +94,16 @@ Par rapport au temps estimé des tâches, je n'avais pas du tout pensé au temps
 
 ### Objectif sprint 2
 
-Mes objectifs pour le sprint 2 sont de faire les maquettes simples puis détaillées de toutes les pages de la barre d'outils. Dans un second temps j'aimerai refaire un brief sur la typographie et enfin retravailler le logo si le temps le permet, sinon il sera retravaillé dans tous les cas pour la bonne avancée du projet. J'ai une réunion d'équipe le 14 décembre ce qui me permettra d'avoir un avis d'équipe et d'avancer ensemble sur le logo et la typographie afin, je l'espère, de fixer la typographie, le code couleur et le logo.
+Mes objectifs pour le sprint 2 sont : 
+
+- Maquettes simples des 3 pages de la barre d'outils (1h30)
+- Maquettes détaillées des 3 pages de la barre d'outil (2h)
+- Améliorer et fixer la typographie (1h)
+- améliorer et fixer le logo  (1h) 
+- continuer le maquettage (2h30)
+- Améliorations (2h) 
+  
+J'ai une réunion d'équipe le 14 décembre ce qui me permettra d'avoir un avis d'équipe et d'avancer ensemble sur le logo et la typographie afin, je l'espère, de fixer la typographie, le code couleur et le logo.
 
 ### Sources et images
 

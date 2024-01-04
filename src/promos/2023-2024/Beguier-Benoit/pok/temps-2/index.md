@@ -30,7 +30,8 @@ résumé: Je vais dans ce POK créer mon site Internet permettant à l'utilisate
 Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :
 
 - *Créez votre site web avec HTML5 et CSS3.* OpenClassrooms. Accessible [ici](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3).
-- Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/)
+- Developer Mozilla. Accessible [ici](https://developer.mozilla.org/fr/).
+- *Web API*, Spotify. Accessible [ici](https://developer.spotify.com/documentation/web-api).
 
 ## Sommaire
 
@@ -893,7 +894,7 @@ Pas de point dur particulier.
 Voici les objectifs que je me suis fixé pour le Sprint 2 :
 
 - Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, **1 heure estimée**)
-- Documentation sur les API de Spotify, ce qu'elles permettent (★☆☆☆☆, **2 heures estimées**)
+- Documentation sur les API de Spotify, leur intégration et leurs features (★☆☆☆☆, **2 heures estimées**)
 - Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**)
 - Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**)
 - Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**)
@@ -901,3 +902,420 @@ Voici les objectifs que je me suis fixé pour le Sprint 2 :
 - Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)
 
 C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.
+
+## Sprint 2
+
+Création de la page principale; c'est-à-dire la page d'analyse de l'utilisateur, en HTML et en CSS.
+
+{% details "Cliquez pour afficher le **code HTML** de la page Analyse" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Analyse - Spotistats ✅</title>
+        <link href="stylesAnalyse.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html" style="width: 15%; height: 60%;">
+                <img src="Allonge.png" class="logo" width="100%" height="100%">
+            </a>
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <img src="image-1.png" width="38" height="39">
+                <span class="ButtonText">Nicolas Ouzouliasse</span>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="column">
+                <h1> Votre overview.</h1>
+                <p>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>  
+                </p>
+            </div>
+            <img src="../spectre.jpg" class="spectre">
+        </div>
+
+        <div class="container2">
+            <img src="../Music-features.jpg" class="graphe">
+            <div class="column2">
+                <h1> Vos goûts musicaux.</h1>
+                <p><li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>
+                </p>
+            </div>
+            
+        </div>
+        
+ 
+
+    </body>
+</html>
+
+```
+
+{% enddetails %}
+
+{% details "Cliquez pour afficher le **code CSS** de la page Analyse" %}
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25242F;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25242F;
+    height: 90px;
+    padding: 0 30px;
+    box-shadow: 0 4px 17px rgba(81, 95, 95, 0.25);
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.FAQ {
+    order: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    justify-content: center;
+    margin-left: 520px;
+}
+
+button.Connexion {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #dee0f6;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 38px;
+    width: 330px;
+    height: 55px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.ButtonText {
+    margin-right: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button.Connexion img {
+    margin-right: 10px;
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Spotify-Font/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-self: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 70px;
+    width: 660px;
+    margin-right: 50px;
+}
+
+h1 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 40px;
+    color: #1ed760;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    width: 650px;
+    text-align: justify;
+    margin-right: 0px;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    width: 650px;
+    text-align: justify;
+    margin-right: 0px;
+    margin-left:40px;
+}
+
+.spectre {
+    width: 30%;
+    height: 30%;
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.graphe{
+    width: 45%;
+    height: 45%;
+    margin-top: 120px;
+    margin-left: 40px;
+    border-radius: 15px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 30px;
+    width: 950px;
+}
+```
+
+{% enddetails %}
+
+### Documentation sur l'API Spotify
+
+Je vais vraisemblablement devoir adapter mon code HTML d'authentification pour qu'il utilise le système d'authentification de l'API. Je vais devoir créer un fichier .JS permettant de gérer cette fonctionnalité. Spotify dispose d'une interface destinée aux développeurs permettant d'avoir accès à des ressources très utiles : plusieurs explications et tutoriels, mais aussi de créer une App fournissant les *Client ID* and *Client Secret* permettant *in fine* d'accéder à un *access token*.
+L'*access token* est un string qui contient les informations d'identification et les autorisations qui peuvent être utilisées pour accéder à une ressource donnée (par exemple, artistes ou albums) ou aux données de l'utilisateur (par exemple son profil).
+
+Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet :
+
+- Créer une app sur le [Dashboard Spotify](https://developer.spotify.com/dashboard/create)
+![Dashboard](Dashboard.png)
+
+- Récupérer le *Client ID* et le *Client Secret*
+- Demander un *access token*
+- A partir de l'*access token*, écrire les requêtes nécessaires pour récupérer les données de l'utilisateur.
+- Appeler l'API
+
+### Mise en pratique
+
+Une fois l'app créée, je peux récupérer le *Client ID* directement dans les paramètres de l'app :
+![ID](ClientID.png)
+
+et aussi le *Client Secret* :
+![Secret](ClientSecret.png)
+
+Une fois que ces codes ont été récupérés, il est possible de faire une requête en [cURL](https://curl.se/) (un outil de ligne de commande en open source) pour obtenir l'*Access Token*.
+
+```shell
+curl -X POST "https://accounts.spotify.com/api/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id=70b7021a56234ecda100b97df93*****&client_secret=a5191ccecc734218b92f879346*****"
+
+```
+
+Je n'ai jamais réussi à installer cUrl, donc en modifiant les commandes pour pouvoir les exécuter dans PowerShell, j'obtiens:
+
+```shell
+Invoke-RestMethod -Uri "https://accounts.spotify.com/api/token" -Method Post `
+>>     -Headers @{
+>>         "Content-Type" = "application/x-www-form-urlencoded"
+>>     } `
+>>     -Body @{
+>>         "grant_type"    = "client_credentials"
+>>         "client_id"     = "70b7021a56234ecda100b97df9******"
+>>         "client_secret" = "a5191ccecc734218b92f879346******"
+>>     } 
+    
+access_token
+------------
+BQBf8bmbQ36w84jhmPm6zyN7CuzaekzLF6bwVCpgpiQO-RgRfPssBD198d49BRQiO6sLyADRMaRVfjpzsknWo6JLYta4ZkaK*****... 
+```
+
+J'ai ainsi l'*Access token* qui me permet d'interagir avec l'API.
+
+Je vais maintenant m'attacher à appeler l'API dans un programme JavaScript, afin que lorsque l'utilisateur se connecte avec son compte, des informations basiques apparaissent.
+Il est important de rappeler que pour l'instant, je n'ai créé que du **Front-End**. Je vais créer à l'aide de [Vite](https://github.com/vitejs/vite) un serveur de développement.
+
+```shell
+npm create vite@latest spotistats -- --template vanilla
+
+cd spotistats
+npm install
+npm run dev 
+```
+
+Dans le fichier index.html créé par cette commande Vite, j'ai inséré le contenu de la page Analyse.html, et j'ai fait référence à un script JS que l'on créera ensuite. J'ai ensuite modifié son contenu pour en faire une page dynamique et non statique : par exemple, le nom dans la box en haut à droite doit être celui de la personne connectée et non un string 'Nicolas Ouzouliasse'. J'utilise pour cela des attributs *id* tels que `<span id="displayName">` qui seront obtenus avec le script JS et l'appel à l'API.
+
+{% details "Cliquez pour afficher le **code HTML** de la page Analyse" %}
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Analyse - Spotistats ✅</title>
+        <link href="stylesAnalyse.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="src/script.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html" style="width: 15%; height: 60%;">
+                <img src="Allonge.png" class="logo" width="100%" height="100%">
+            </a>
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button onclick="afficherEcran_noir()" class="Connexion">
+                <span id="avatar" width="38" height="39"></span>
+                <span class="ButtonText"><span id="displayName"></span></span>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="column">
+                <h1> Votre overview.</h1>
+                <p>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>  
+                </p>
+            </div>
+            <img src="../spectre.jpg" class="spectre">
+        </div>
+
+        <div class="container2">
+            <img src="../Music-features.jpg" class="graphe">
+            <div class="column2">
+                <h1> Vos goûts musicaux.</h1>
+                <p><li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li> 
+                <li>
+                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
+                    ibendum enim facilisis.
+                </li>
+                <li>
+                    Erat imperdiet sed euismod nisi porta. Viverra accumsan in nisl nisi scelerisque eu 
+                    ultrices.
+                    In vitae turpis massa sed elementum.
+                </li>
+                <li>Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros 
+                    donec ac odio tempor.</li>
+                <li>Felis donec et odio pellentesque diam volutpat commodo. 
+                    Et tortor consequat id porta nibh venenatis.</li>
+                </p>
+            </div>
+            
+        </div>
+        
+ 
+
+    </body>
+</html>
+
+```
+
+{% enddetails %}
+
+### Appel à l'API
+
+Nous souhaitons maintenant appeler l'API, de manière automatique dans le script JS.
+Extrait de la documentation [Spotify](https://developer.spotify.com/) :
+
+- "Lorsque la page se charge, nous vérifions s'il y a un code dans le string de requête de rappel
+- S'il n'y a pas de code, nous redirigerons l'utilisateur vers la page d'autorisation de Spotify.
+- Une fois que l'utilisateur a autorisé l'application, Spotify le redirige vers notre application et nous lisons le code dans le string de requête.
+- Nous utiliserons ce code pour demander un *access token* à l'API de Spotify
+- Nous utiliserons l'*access token* pour appeler l'API Web afin d'obtenir les données du profil de l'utilisateur."
+
+Je ne pourrais pas expliquer d'une manière plus claire. Pour vérifier l'authenticité de notre requête, nous générons un code unique, appelé *PKCE verifier* qui est stocké en local et qui va subir une transformation, un *hash* avec un algorithme. C'est ce code transformé qui va être envoyé dans la *user authorization request*.
+
+J'ai aussi ajouté plusieurs fonctions grâce à la documentation :
+
+- `redirectToAuthCodeFlow(clientId)`, qui permet de rediriger l'utilisateur à la page d'autorisation Spotify
+- `getAccessToken(clientId, code)`, qui *challenge* le token généré
+- `fetchProfile(token)`, qui appelle l'API et utilise la méthode GET pour obtenir les données d'intérêt
+- `populateUI(profile)`, qui permet de récupérer et de remplir les données d'intérêt.

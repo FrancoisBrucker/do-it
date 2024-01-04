@@ -31,10 +31,16 @@ J'ai appris comment créer une base de données, la connecter au serveur, et man
 |Type de Base de Données|Avantages|Inconvénients|Critère de choix|
 |---    |---    |---    |---   |---    |
 |Relationnelle|- Structure claire et bien définie <br>- Langage SQL standard<br>- Transactions ACID (Atomicité, Cohérence, Isolation, Durabilité)|- Moins flexible pour les données non structurées <br>- Difficulté à évoluer avec des schémas changeants <br>- Difficulté à gérer les données hiérarchiques|- Besoin de conformité avec un schéma fixe <br> - Intégrité des données et relations importantes |
-|NoSQL|- Flexibilité pour différents types de données <br>- Évolutivité horizontale<br>- Gestion de gros volumes de données|- Manque de normes et de cohérence entre les systèmes <br>- Moins adapté pour les requêtes complexes<br>- Risque de duplication des données|- Grande variété de données non structurées, semi-structurées<br> - Besoin d'une évolutivité horizontale|	
+|NoSQL (Not Only SQL)|- Flexibilité pour différents types de données <br>- Évolutivité horizontale*<br>- Gestion de gros volumes de données|- Manque de normes et de cohérence entre les systèmes <br>- Moins adapté pour les requêtes complexes<br>- Risque de duplication des données|- Grande variété de données non structurées, semi-structurées<br> - Besoin d'une évolutivité horizontale|	
 |Orientée graphe|- Modélisation naturelle des relations <br>- Performances élevées pour les requêtes de graphes|- Complexité pour les structures de données simples <br> - Pas adapté pour tous les types de données|- Analyses et requêtes basées sur des relations complexes <br> - Données fortement liées ou nécessitant une modélisation graphique|	
 ||	|	||	
 
+SQL permet de garantir l’unicité de la donnée (non dupliquée), ce qui était utile dans une époque où le cout de stockage etait extrêmement élevé.
+Et comme ce n’est plus le cas, on peut maintenant se permettre de dupliquer la donnée en faisant du NoSQL, pour répondre à un besoin d’agilité (pouvoir modifier la donnée sans se soucier de sa structure). 
+
+Evidement cette liste n’est pas exhaustive, on peut trouver d’autres types de base des données (Base de données embarquée, base de données XML/JSON, ...)
+
+*L'évolutivité horizontale se réfère à la capacité d'une base de données à gérer une augmentation de la charge de travail en ajoutant simplement de nouveaux serveurs au lieu d'augmenter la capacité des serveurs existants. Contrairement à l'évolutivité verticale, qui implique l'ajout de ressources (comme la RAM, le processeur, etc.) à un serveur existant, l'évolutivité horizontale permet de répartir la charge sur plusieurs serveurs, formant souvent un cluster.
 ## Collecte de données 
 ### Web scrapping
 Le web scraping, également appelé extraction de données web, est une technique informatique qui consiste à extraire des informations ou des données à partir de sites web. C'est un moyen efficace d'obtenir des données structurées à partir de pages web, que ce soit pour la recherche, l'analyse de marché, la surveillance concurrentielle, ou d'autres applications.
