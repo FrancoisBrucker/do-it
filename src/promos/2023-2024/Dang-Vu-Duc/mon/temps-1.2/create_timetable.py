@@ -51,7 +51,10 @@ class Create_timetable():
             print("L'heure indiquée n'est pas valide")
             return(False)
         else:
-            index = self.possible_times.index(time)
+            if time in [8, 9, 10, 11, 12]:
+                index = time - 8
+            else:
+                index = time - 10
             nb_column = nb_day * 8 + 5 + index
         return(get_column_letter(nb_column) + str(nb_row))
 
@@ -122,7 +125,7 @@ class Create_timetable():
 
 
     def create_timetable_automatic(self, nom, prénom):
-        courses_name = ["bonjour !", "tc1 : agilité", "lancement projet 3a", "tc1 : gestion des sources", "tc1 : service design", "langues", "projet 3a", "vacances", "filière métier", "tronc commun 3a", "prez mon 2", "prez pok", "point pok sprint 1", "point pok sprint 2", "prez mon 1", "pok&mon", "cap 1a/3a/conception si", "prez projet", "rencontre w3g", "débrief", "conférence métier"]
+        courses_name = ["bonjour !", "tc1 : agilité", "lancement projet 3a", "tc1 : gestion des sources", "tc1 : service design", "langues", "projet 3a", "vacances", "filière métier", "tronc commun 3a", "prez mon 2", "prez pok", "point pok sprint 1", "point pok sprint 2", "prez mon 1", "pok&mon", "cap 1a/3a/conception si", "prez projet", "rencontre w3g", "débrief", "conférence métier", "do_it circus"]
         row_number = None
         for k in range(3,27):
             cell_nom = self.sheet2.cell(row = k, column = 1)
@@ -133,7 +136,7 @@ class Create_timetable():
         if row_number == None:
             print("Nom ou prénom invalide")
             return()
-        for k in range(7,30):
+        for k in range(7,31):
             cell = self.sheet2.cell(row = row_number, column = k)
             if cell.value == 'x' or cell.value == "X":
                 course = self.sheet2.cell(row = 2, column = k).value
