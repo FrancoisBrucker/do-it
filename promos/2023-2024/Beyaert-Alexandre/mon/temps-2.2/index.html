@@ -231,6 +231,315 @@ model <span class="token operator">=</span> SVR<span class="token punctuation">(
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 </code></pre>
 <p><img src="SVR.png" alt="Régression SVR"></p>
+<h3>3.2 Classification</h3>
+<p>Reprenons le dataset titanic pour effectuer de la classification et ainsi déterminer les chances de survie d'un passager.</p>
+<p>Un modèle approprié pourrait être le <a href="https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification">KNeighborsClassifier</a>. Celui-ci va analyser les K plus proches voisins d'un élément et tirer la classification la plus probable qui en ressort.</p>
+<p>Commençons par importer et filtrer le dataset.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span>
+
+titanic <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+titanic<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+titanic<span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'male'</span><span class="token punctuation">,</span> <span class="token string">'female'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Puis implémentons le modèle.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+
+model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+Y <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">]</span>
+X <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+</code></pre>
+<p>Le score qui en ressort est alors de 84% : les prédictions du modèle sont bonnes dans 84% des cas.<br>
+model.predict(X) renvoie alors un tableau de 0 et de 1 indiquant les passagers qui survivraient.</p>
+<p>Pour aller plus loin, créons une fonction permettant de déterminer si un individu lambda aurait survécu et avec quelle probabilité.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">survie</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> pclass<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>pclass<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> age<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ainsi en testant la fonction sur moi : pclass=3, sex=0, age=24 ; le modèle prédit que je ne survivrai pas avec une probabilité de 80%.</p>
+<p>En suivant ces précédentes manipulations, on biaise toutefois le résultat puisque l'on teste notre modèle sur les données d'entraînement. En pratique, il est nécessaire de diviser notre dataset en données d'entraînement et données de test.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> Y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># On choisit le nombre de plus proches voisins</span>
+
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Train score:'</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Test score:'</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>En sortie, on observe que sur les données d'entraînement l'algorithme est fiable à 89% contre 79% pour les données de test.</p>
+<p>Puisque l'on choisit le nombre de plus proches voisins, vient alors la question de l'optimisation de cet hyperparamètre et des performances de l'algorithme.</p>
+<p>Il peut être intéressant de diviser notre dataset en plusieurs parties dont l'une d'entre elle sert à la validation. En réitérant cette étape plusieurs fois, nous pourrions alors déterminer la meilleure façon d'optimiser l'algorithme.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> validation_curve
+
+model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+k <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token comment"># tableau Numpy répertoriant le nombre de plus proches voisins que nous allons tester</span>
+
+train_score<span class="token punctuation">,</span> val_score <span class="token operator">=</span> validation_curve<span class="token punctuation">(</span>model<span class="token punctuation">,</span> X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> param_name<span class="token operator">=</span><span class="token string">'n_neighbors'</span><span class="token punctuation">,</span> param_range<span class="token operator">=</span>k<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment"># on teste le paramètre n_neighbors sur le tableau k et l'on divise nos données en 5 parties (cross validation)</span>
+
+train_score<span class="token punctuation">.</span>shape <span class="token comment"># train_score est alors un tableau à 49 lignes (les itérations du tableau k) et à 5 colonnes issues de la cross validation</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>k<span class="token punctuation">,</span> val_score<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>k<span class="token punctuation">,</span> train_score<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'n_neighbors'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'score'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="cross_validation.png" alt="Recherche du meilleur nombre de plus proches voisins"></p>
+<p>L'écart entre la courbe train et celle validation est très important lorsqu'on ne sélectionne qu'un seul plus proche voisin, il y a de l'overfitting. Le modèle essaye trop de se rapprocher des données qu'il apprend et en déforme la réalité. Cet écart diminue plus le nombre de plus proches voisins augmente. Cependant, lorsque l'on choisit trop de plus proches voisins, la performance de la courbe validation diminue puisque certains plus proches voisins sont en réalité éloignés de l'élément à analyser.</p>
+<p>Une dizaine de plus proches voisins semble être la solution la plus appropriée, il s'agit de celle maximisant la précision des données de validation et minimisant l'écart avec le train.</p>
+<p>Vérifions désormais cette supposition grâce aux fonctions de la bibliothèque Scikit-Learn.</p>
+<p>Le module GridSearchCV est capable de donner le meilleur score atteignable pour un modèle et les paramètres associés.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> GridSearchCV
+
+param_grid <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'n_neighbors'</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'metric'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'euclidiean'</span><span class="token punctuation">,</span> <span class="token string">'manhattan'</span><span class="token punctuation">]</span><span class="token punctuation">}</span> <span class="token comment"># on crée un dictionnaire avec les paramètres à tester : n_neigbors et la mesure de distance parmi différentes possibilités</span>
+
+grid <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>KNeighborsClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> param_grid<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+grid<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span> <span class="token comment"># on entraîne la grille comme précédemment</span>
+
+<span class="token comment"># La grille est prête à renvoyer les différents éléments par exemple</span>
+grid<span class="token punctuation">.</span>best_score_ <span class="token comment"># renvoie le meilleur score atteignable, dans notre cas 77%</span>
+
+grid<span class="token punctuation">.</span>best_params_ <span class="token comment"># renvoie les meilleurs paramètres, dans notre cas 9 plus proches voisins (ce qui confirme la 10aine observée précédemment) et la distance manhattan</span>
+</code></pre>
+<p>Si on le souhaite, il va ainsi être possible de régler notre modèle avec ces paramètres optimums et d'observer la matrice de confusion.<br>
+La matrice de confusion renvoie le nombre de bonnes réponses et d'erreurs.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">model <span class="token operator">=</span> grid<span class="token punctuation">.</span>best_estimator_
+
+model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">)</span> <span class="token comment"># renvoie le 71% précédent</span>
+
+confusion_matrix<span class="token punctuation">(</span>Y_test<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># renvoie la matrice ci-dessous</span>
+<span class="token comment">#array([[65, 20],</span>
+<span class="token comment">#       [21, 37]], dtype=int64)</span>
+<span class="token comment"># 65 survivants ont bien été trouvé par l'algorithme mais 20 d'entre eux sont manquants et ont été classés comme morts</span>
+<span class="token comment"># à l'inverse, 37 morts ont bien été trouvé mais 21 d'entre eux ont été prédits comme survivants alors qu'ils sont morts</span>
+
+<span class="token comment"># Nous pouvons retrouver notre 71% de performances en vérifiant le rapport (bonnes prédictions / nombre de prédictions)</span>
+<span class="token comment"># (65 + 37)/(65 + 20 + 21 + 37) = 71%</span>
+</code></pre>
+<h3>3.3 Préparation des données</h3>
+<h4>3.3.1 Encodage</h4>
+<p>Je l'ai déjà mentionné précédemment, avant de pouvoir effectuer du machine learning, j'effectue un pré-traitement des données.<br>
+Pour effectuer des calculs (régressions, classifications...) il est très souvent nécessaire de travailler avec des valeurs numériques.</p>
+<p>Ainsi les données manquantes 'NaN' vont poser problème, les chaînes de caractères telles que 'male' ou 'female' dans la colonne 'sex' du dataset titanic vont égaler poser problème.</p>
+<p>Il va être nécessaire de les prétraiter pour y remédier.</p>
+<p>2 types d'encodages sont envisageables :</p>
+<ul>
+<li>l'encodage Ordinal : il associe chaque catégorie d'une variable à une valeur décimale unique</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>chat</th>
+<th>chien</th>
+<th>oiseau</th>
+<th>chien</th>
+<th>chat</th>
+<th>lion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Lorsque nous avons une simple liste, la fonction à utiliser sera alors LabelEncoder()</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder
+
+y <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'chat'</span><span class="token punctuation">,</span> <span class="token string">'chien'</span><span class="token punctuation">,</span> <span class="token string">'oiseau'</span><span class="token punctuation">,</span> <span class="token string">'chien'</span><span class="token punctuation">,</span> <span class="token string">'chat'</span><span class="token punctuation">,</span> <span class="token string">'lion'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+encoder <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># création de l'objet</span>
+
+<span class="token comment"># Méthode 1</span>
+encoder<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token comment"># développement de l'encoder</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>encoder<span class="token punctuation">.</span>classes_<span class="token punctuation">)</span> <span class="token comment"># renvoie les différentes classes existantes</span>
+<span class="token comment"># ['chat' 'chien' 'lion' 'oiseau']</span>
+encoder<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token comment"># appliquer la transformation</span>
+<span class="token comment"># array([0, 1, 3, 1, 0, 2])</span>
+
+<span class="token comment"># Méthode 2</span>
+encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token comment"># fais tout en 1</span>
+<span class="token comment"># array([0, 1, 3, 1, 0, 2])</span>
+</code></pre>
+<p>À l'inverse, on peut retrouver ces chaînes de caractère à partir des nombres.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">encoder<span class="token punctuation">.</span>inverse_transform<span class="token punctuation">(</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># renvoie : array(['oiseau', 'lion', 'oiseau', 'chat', 'chien', 'oiseau'], dtype='&lt;U6')</span>
+</code></pre>
+<p>Dans le cas d'un tableau à plusieurs variables, il faudra opter pour la fonction OrdinalEncoder()</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> OrdinalEncoder
+
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'Chat'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Chien'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Chat'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Oiseau'</span><span class="token punctuation">,</span> <span class="token string">'Plumes'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+encoder <span class="token operator">=</span> OrdinalEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">)</span> <span class="token comment"># Renvoie le tableau ci-dessous</span>
+
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">2.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Le problème de cet encodage ordinal est qu'il crée un ordre 0 &lt; 1 &lt; 2... et cet ordre risque de pénaliser des modèles de Machine Learning.</p>
+<ul>
+<li>encodage One Hot : pour éviter l'ordonancement, l'encodage One Hot va représenter chacune des valeurs sous forme de vecteurs, empêchant ainsi les comparaisons.</li>
+</ul>
+<p>Pour une simple liste, il faut utiliser LabelBinarizer()</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelBinarizer
+
+y <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'chat'</span><span class="token punctuation">,</span> <span class="token string">'chien'</span><span class="token punctuation">,</span> <span class="token string">'oiseau'</span><span class="token punctuation">,</span> <span class="token string">'chien'</span><span class="token punctuation">,</span> <span class="token string">'chat'</span><span class="token punctuation">,</span> <span class="token string">'lion'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+encoder <span class="token operator">=</span> LabelBinarizer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token comment"># Renvoie le tableau ci-dessous</span>
+
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Et pour un tableau, OneHotEncoder().</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> OneHotEncoder
+
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'Chat'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Chien'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Chat'</span><span class="token punctuation">,</span> <span class="token string">'Poils'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token string">'Oiseau'</span><span class="token punctuation">,</span> <span class="token string">'Plumes'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+encoder <span class="token operator">=</span> OneHotEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">)</span> <span class="token comment"># Renvoie un tableau compressé ci-dessous</span>
+<span class="token operator">&lt;</span>4x5 sparse matrix of <span class="token builtin">type</span> <span class="token string">'&lt;class '</span>numpy<span class="token punctuation">.</span>float64<span class="token string">'>'</span>
+	<span class="token keyword">with</span> <span class="token number">8</span> stored elements <span class="token keyword">in</span> Compressed Sparse Row <span class="token builtin">format</span><span class="token operator">></span>
+</code></pre>
+<h4>3.3.2 Normalisation</h4>
+<p>La normalisation est également une étape très importante du pré-traitement.<br>
+Elle va notamment permettre à l'algorithme de converger plus facilement vers sa valeur finale.</p>
+<p>3 types de normalisation sont principalement utilisés :</p>
+<ul>
+<li>MinMax : la plage de données initiale va être rapportée à l'intervalle [0, 1]</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> MinMaxScaler
+
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">[</span><span class="token number">120</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+scaler <span class="token operator">=</span> MinMaxScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+scaler<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">)</span> <span class="token comment"># Renvoie le tableau ci-dessous</span>
+
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>Standardisation : les données seront normalisées de sorte à obtenir une moyenne nulle et un écart type égal à 1</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+scaler <span class="token operator">=</span> StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+scaler<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.9258201</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.46291005</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">1.38873015</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Le problème de ces 2 premières techniques est qu'elles sont très sensibles aux valeurs aberrantes.</p>
+<ul>
+<li>RobustScaler : chaque donnée sera soustraite à la médiane le tout divisé par l'interquartile (X-mediane)/(Q3-Q1)</li>
+</ul>
+<h2>4. Combinaison</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># imports</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>pipeline <span class="token keyword">import</span> make_pipeline
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> GridSearchCV
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> confusion_matrix
+
+<span class="token comment"># import du dataset</span>
+titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span> 
+
+<span class="token comment"># sélection des colonnes et supression des NaN</span>
+titanic <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> 
+titanic<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+Y <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">]</span>
+X <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+<span class="token comment"># encodage de la colonne 'sex'</span>
+encoder <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+X<span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">]</span> <span class="token operator">=</span> encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># division en test, train</span>
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> Y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># choix du modèle, sous forme d'un pipeline pour appliquer les mêmes opérations au train et au test</span>
+model <span class="token operator">=</span> make_pipeline<span class="token punctuation">(</span>StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> KNeighborsClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+param <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'kneighborsclassifier__n_neighbors'</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token comment"># création de la grille de recherche</span>
+grid <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>model<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>param<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+<span class="token comment"># entraînement</span>
+grid<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span>
+
+<span class="token comment"># résultats</span>
+grid<span class="token punctuation">.</span>best_params_
+
+grid<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">)</span>
+
+<span class="token comment"># calcul de la matrice de confusion</span>
+Y_pred <span class="token operator">=</span> grid<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+conf_matrix <span class="token operator">=</span> confusion_matrix<span class="token punctuation">(</span>Y_test<span class="token punctuation">,</span> Y_pred<span class="token punctuation">)</span>
+
+<span class="token comment"># affichage de la matrice de confusion</span>
+sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>conf_matrix<span class="token punctuation">,</span> annot<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> fmt<span class="token operator">=</span><span class="token string">'d'</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'Blues'</span><span class="token punctuation">,</span> cbar<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
+            xticklabels<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Not Survived'</span><span class="token punctuation">,</span> <span class="token string">'Survived'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yticklabels<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Not Survived'</span><span class="token punctuation">,</span> <span class="token string">'Survived'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="combinaison.png" alt="Matrice de confusion"></p>
+<p>On remarque ainsi que la performance est de 81%, alors que pour un modèle sans pré-traitement :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span> <span class="token comment"># import du dataset</span>
+
+titanic <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> 
+titanic<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+Y <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token string">'survived'</span><span class="token punctuation">]</span>
+X <span class="token operator">=</span> titanic<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+encoder <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+X<span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">]</span> <span class="token operator">=</span> encoder<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> Y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">)</span>
+</code></pre>
+<p>La performance est de 74% soit une amélioration de la performance de (81-74)/74 = 8% avec les simples opérations de pré-traitement.</p>
 <h2>5. Conclusion</h2>
 <h4>Répartition du temps</h4>
 <table>
@@ -238,28 +547,32 @@ model <span class="token operator">=</span> SVR<span class="token punctuation">(
 <tr>
 <th>Timing</th>
 <th>Seaborn</th>
-<th>Scikit Learn</th>
-<th>Combinaison</th>
+<th>Sklearn modèle</th>
+<th>Sklearn pré-traitement</th>
+<th>Combinaison des bibliothèques</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Temps prévu (en heures)</td>
 <td>2</td>
-<td>4</td>
-<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Temps dédié (en heures)</td>
 <td>2</td>
-<td>?</td>
-<td>?</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
 <h2>6. Bibliographie</h2>
 <p><a href="https://seaborn.pydata.org/">Documentation Seaborn</a><br>
 <a href="https://scikit-learn.org/stable/#">Documentation Scikit Learn</a><br>
+<a href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html">Choisir le bon estimateur</a><br>
 <a href="https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq">Chaine YouTube Machine Learnia</a></p>
 
 
