@@ -146,17 +146,277 @@
 <h2>Table des matières</h2>
 <ol>
 <li><a href="#section-1">Introduction</a></li>
+<li><a href="#section-2">SQL débutant</a></li>
+<li><a href="#section-3">SQL intermédiaire</a></li>
+<li><a href="#section-4">Rappels sur Python et ses librairies pour l'analyse de données</a></li>
+<li><a href="#section-5">Quelques résultats et représentations à partir d'une base de données sur le Speed Dating</a></li>
+<li><a href="#section-6">Conclusion</a></li>
+<li><a href="#section-7">Sources</a></li>
 </ol>
-<!-- 2. [SQL débutant](#section-2)
-2. [SQL intermédiaire](#section-3)
-3. [Rappels sur Python et ses librairies pour l'analyse de données](#section-4)
-4. [Quelques résultats et représentations à partir d'une base de données sur le Speed Dating](#section-5)
-5. [Conclusion](#section-6)
-6. [Sources](#section-7) -->
 <h2>1. Introduction <a id="section-1"></a></h2>
 <p>En finissant mon MON 2-1, je me suis dit &quot;Quand même, pas de jointure sur Google Sheets, c'est audacieux, en SQL, on en faisait à l'époque. Attends. Comment on fait déjà ?!&quot;<br>
 Puis étant dans ma phase &quot;J'adore jouer avec des données&quot;, SQL s'est imposé comme une nécessité.</p>
 <p>Il est donc temps de dépoussiérer tout ça. Pour ça, j'ai décidé de réapprendre SQL en essayant directement de résoudre les exercices faciles et intermédiaires proposés par <a href="https://sql.sh/exercices-sql">sql.sh</a>.</p>
+<h2>2. SQL débutant <a id="section-2"></a></h2>
+<p>J'ai appris le SQL à la va-vite en classes préparatoires. Ça doit être comme le vélo, non ? Ça ne s'oublie pas.<br>
+Eh bien, je me suis souvenu que j'étais nul au vélo. Heureusement, le site est bien documenté et les explications super bien ficelés. Dès que j'avais un trou de mémoire, je m'y référais.<br>
+J'ai utilisé MySQL, car c'était ce que j'utilisais en classes préparatoires.</p>
+<p>Voici à quoi ressemble la base de données qu'on extrait à l'aide de la commande SELECT.<br>
+<strong>Base de données sur les villes françaises</strong><br>
+<img src="Capture1.PNG"></p>
+<p>Ci-dessous, la syntaxe classique :</p>
+<pre><code>SELECT *
+FROM table
+WHERE condition
+GROUP BY nom_colonne
+HAVING condition avec une fonction
+{UNION | INTERSECT | EXCEPT}
+ORDER BY DESC/ASC
+LIMIT nombre
+OFFSET début
+</code></pre>
+<p>Je vous fais part des questions que j'ai trouvé intéressantes dans le sens où elles me serviront comme fiches pour réapprendre quand je réoublierai, car je sais que ça arrivera très vite.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q6, Obtenir la liste des 10 plus grands départements, en terme de superficie - Utilise SUM, GROUP, ORDER</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>SELECT ville_departement, SUM(ville_surface) as surfacetotale FROM villes_france_free
+GROUP BY ville_departement
+ORDER BY surfacetotale DESC
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Résultat sur la table</strong><br>
+<img src="ex1_Q6.PNG"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q7, Compter le nombre de villes dont le nom commence par “Saint” - Utilise COUNT, WHERE, LEFT</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>SELECT COUNT(ville_nom) as nombredevilles FROM villes_france_free
+WHERE LEFT(ville_nom, 5) = &quot;Saint&quot;;
+LEFT(valeur, nombre de lettres en partant de la gauche) = &quot;Ce qu'on cherche&quot; - Sert de condition pour WHERE
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Résultat sur la table</strong><br>
+<img src="ex1_Q7.PNG"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q8, Obtenir la liste des villes qui ont un nom existants plusieurs fois, et trier afin d’obtenir en premier celles dont le nom est le plus souvent utilisé par plusieurs communes” - Utilise HAVING</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>SELECT ville_nom, COUNT(ville_nom) FROM villes_france_free
+GROUP BY ville_nom
+HAVING COUNT(ville_nom) &gt; 1
+ORDER BY COUNT(ville_nom) DESC
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Résultat sur la table</strong><br>
+<img src="ex1_Q8.PNG"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q11, Remplacez les tirets par un espace vide, pour toutes les villes commençant par “SAINT-” (dans la colonne qui contient les noms en majuscule)” - Utilise HAVING</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>SELECT REPLACE(ville_nom, '-', ' ') FROM villes_france_free
+WHERE LEFT(ville_nom, 5) = 'Saint';
+REPLACE(valeur, 'ce qu'on veut remplacer', 'par quoi on veut le remplacer') - Après SELECT
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Résultat sur la table</strong><br>
+<img src="ex1_Q11.PNG"></p>
+<h2>3. SQL intermédiaire <a id="section-3"></a></h2>
+<p>Les questions niveau intermédiaire étaient moins claires, dans le sens où je n'avais pas l'impression de comprendre parfaitement ce qu'ils attendaient.<br>
+J'ai fait ce que je pensais qu'il fallait faire.</p>
+<p>Voici les trois tables à ma disposition qui ont été modifiées au fur et à mesure :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="Capture2_1.PNG" width="350" height="350"></td>
+<td style="text-align:center"><img src="Capture2_2.PNG" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<img src="Capture2_3.PNG" width="350" height="350">
+<p>Une remarque, il m'a fallu désactiver le &quot;Safe mode&quot; pour pouvoir changer les lignes de mon tableau à la question 4 par exemple, il est conseillé de le réactiver après pour éviter des bêtises.</p>
+<pre><code>SET SQL_SAFE_UPDATES = 0;
+Désactivation du safe mode
+SET SQL_SAFE_UPDATES = 1;
+Activation du safe mode
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q4, Enregistrer le prix total à l’intérieur de chaque ligne des commandes, en fonction du prix unitaire et de la quantité” - Utilise ALTER, MODIFY, UPDATE, SET</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>ALTER TABLE commande_ligne   // Sélectionne la table à modifier
+MODIFY prix_total DECIMAL(10, 2);   // Pour changer le type
+SET SQL_SAFE_UPDATES = 0; // A remettre à 1 plus tard, permet d’éviter de modifier des tables
+UPDATE commande_ligne    // Sélectionne la table qu'on veut mettre à jour
+SET prix_total = prix_unitaire * quantite;     // Change la valeur de la colonne pour celle que l'on désire
+</code></pre>
+</div>
+</details>     
+</div>
+<p>La question 5 résume bien comment joindre plusieurs tables.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q5, Obtenir le montant total pour chaque commande et y voir facilement la date associée à cette commande ainsi que le prénom et nom du client associé” - Utilise JOIN</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>SELECT client.nom, client.prenom, commande.date_achat, SUM(commande_ligne.prix_total) AS montant_total
+FROM client
+JOIN commande ON client.id = commande.client_id  (Première jointure sur une clé commune)
+JOIN commande_ligne ON commande.id = commande_ligne.commande_id
+GROUP BY client.nom, client.prenom, commande.date_achat (Pour résoudre les problèmes d’aggrégation)
+</code></pre>
+</div>
+</details>     
+</div>
+<p><strong>Résultat</strong><br>
+<img src="ex2_Q5.PNG"></p>
+<p>La question 10 nous apprend à ajouter et modifier une colonne.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q10, Ajouter une colonne intitulée “category” à la table contenant les commandes. Cette colonne contiendra une valeur numérique” - Utilise ADD</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>ALTER TABLE commande
+ADD category VARCHAR(255)    // Ajoute une colonne de type VARCHAR(255)
+</code></pre>
+</div>
+</details>     
+</div>
+<p>La question 11 nous apprend à utiliser IF, on peut également utiliser CASE WHEN.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Q11, Enregistrer la valeur de la catégorie, en suivant les règles suivantes :<br>
+“1” pour les commandes de moins de 200€<br>
+“2” pour les commandes entre 200€ et 500€<br>
+“3” pour les commandes entre 500€ et 1.000€<br>
+“4” pour les commandes supérieures à 1.000€” - Utilise IF</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>UPDATE commande
+JOIN commande_ligne ON commande.id = commande_ligne.commande_id
+SET category =
+  IF(commande_ligne.prix_total &lt;= 200, &quot;1&quot;,
+     IF(commande_ligne.prix_total &lt;= 500, &quot;2&quot;,
+        IF(commande_ligne.prix_total &lt;= 1000, &quot;3&quot;, &quot;4&quot;)
+     )
+  );
+</code></pre>
+</div>
+</details>     
+</div>
+<h2>4. Rappels sur Python et ses librairies pour l'analyse de données <a id="section-4"></a></h2>
+<h2>5. Quelques résultats et représentations à partir d'une base de données sur le Speed Dating <a id="section-5"></a></h2>
+<h2>6. Conclusion <a id="section-6"></a></h2>
+<h2>7. Sources <a id="section-7"></a></h2>
 
 
 </article>
