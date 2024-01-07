@@ -192,7 +192,6 @@ SET category =
 ```
 {% enddetails %}
 
-
 ## 4. Rappels sur Python et ses librairies pour l'analyse de données <a id="section-4"></a>
 
 
