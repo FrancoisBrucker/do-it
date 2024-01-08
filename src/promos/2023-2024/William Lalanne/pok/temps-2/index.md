@@ -286,6 +286,10 @@ La requête POST pour l'inscription a elle aussi fonctionné, elle a renvoyé un
 
 Tout a bien fonctionné, Nicolas a bien été ajouté à la base de données comme il le fallait. 
 
+## Route qui gère la connexion 
+
+Une fois que l'utilisateur est inscrit, il faut qu'il puisse se connecter au site. J'ai donc créer une route qui gère la connexion. Il faut que dans cette route on compare le mot de passe rentré par l'utilisateur dans le form de connexion et celui stocké dans la base de données. Pour cela, lorsque que l'email est rentré dans le form on s'en sert pour faire une requête SQL à la base de données. On demande à la base de nous donner le mot de passe de l'utilisateur ayant l'adresse mail utilisé plus haut. Ensuite on compare le mot de passe rentré dans le form et celui que l'on vient de récupérer. Si ce sont les mêmes alors on renvoie un status 200 et on affiche "Mot de passe correct, connexion réussie". Si les mots de passe sont différents, on renvoie un status 401 et on affiche : "Mot de passe incorrect". Si l'adresse mail rentré dans le form n'est pas présente dans la base de données on renvoie un status 404 et on affiche : "Utilisateur non trouvé". 
+
 ```js
 app.post('/connection', (req, res) => {
     const email = req.body.email;
@@ -317,7 +321,7 @@ app.post('/connection', (req, res) => {
     });
 });
 ```
-
+Une fois la route créée, on s'occupe de la requête côté client. On récupère les informations de connexion rentrées dans le form, email et mot de passe, on les passe en format JSON puis on les transfère au serveur à l'URL de la route que nous avons créée. Le serveur fera alors ce que nous avons détaillé au dessus. 
 ```js
 document.getElementById("connectionForm").addEventListener('submit', function (event) {
     
