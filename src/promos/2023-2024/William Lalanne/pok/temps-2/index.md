@@ -208,4 +208,144 @@ La route renvoie des data que l'on utilise dans notre requête coté client. En 
 
 ## Route qui gère l'inscription 
 
-Pour 
+Pour gérer l'inscription, il faut créer une route sur l'url "/inscription" qui utilise une méthode POST pour ajouter des données à notre table users. Voilà ce que donne notre route : 
+```js
+app.post('/inscription', (req, res) => {
+    
+    const { first_name, last_name, email, mot_de_passe } = req.body;
+    
+    const sql = 'INSERT INTO users (first_name, last_name, email, mot_de_passe) VALUES (?, ?, ?, ?)'
+    connection.query(sql, [first_name, last_name, email, mot_de_passe], (err, results) => {
+
+        if (err) {
+            console.log('Erreur inscription', err);
+            res.status(500).send('Erreur inscription');
+        }
+
+        else {
+            console.log('Inscription succès');
+            res.status(200).json(results);
+        }
+    });
+});
+```
+
+Dans cette route, on implémente la requête sql à faire à la base de données, on insère dans la table users 4 valeurs, first_name, last_name, email, mot_de_passe.
+
+
+Ensuite dans le fichier startgame.js on crée la requête voulue :
+```js
+document.getElementById('inscriptionForm').addEventListener('submit', function (event) {
+
+  const first_name = document.getElementById('first_name').value;
+  const last_name = document.getElementById('last_name').value;
+  const email = document.getElementById('email').value;
+  const mot_de_passe = document.getElementById('mot_de_passe').value;
+
+  fetch('http://localhost:3000/inscription', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ first_name, last_name, email, mot_de_passe }),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur lors de la requête POST');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Réponse du serveur :', data);
+  })
+  .catch(error => {
+    console.error('Erreur :', error);
+  });
+
+});
+```
+
+Les valeurs du prenom, nom, email et mot de passe entrées par l'utilisateur dans le form d'inscription sont récupérées et utilisées comme body de la requête. Or, comme on a l'a précisé dans la route créée, req.body est utilisé pour attribuer les valeurs de first_name, last_name, email et mot_de_passe. 
+Donc la requête sql devient : **INSERT INTO users (first_name, last_name, email, mot_de_passe) VALUES (prenom entré par l'utilisateur, nom entré par l'utilisateur, email entré par l'utilisateur, mot de passe entré par l'utilisateur)**.
+
+On peut faire le test et essayer d'inscrire Nicolas Ouzouliasse à la base de données. 
+
+![Exemple d'inscription](Exemple_Inscription.png)
+
+Lorsqu'on appuie sur le bouton "S'inscrire", la requête est envoyée au serveur. On peut voir le résultat de la requête :
+
+![Serveur](Requete_Get.png)
+
+On voit que la requête GET a fonctionné et qu'elle a renvoyé un status 200, donc l'utilisateur entré n'a pas de compte. 
+
+![Serveur](Requete_Post.png)
+
+La requête POST pour l'inscription a elle aussi fonctionné, elle a renvoyé un status 200 donc les informations de l'utilisateur ont été enregistrées dans la base de données : 
+
+![Exemple de donnee](Donnee.png)
+
+Tout a bien fonctionné, Nicolas a bien été ajouté à la base de données comme il le fallait. 
+
+## Route qui gère la connexion 
+
+Une fois que l'utilisateur est inscrit, il faut qu'il puisse se connecter au site. J'ai donc créer une route qui gère la connexion. Il faut que dans cette route on compare le mot de passe rentré par l'utilisateur dans le form de connexion et celui stocké dans la base de données. Pour cela, lorsque que l'email est rentré dans le form on s'en sert pour faire une requête SQL à la base de données. On demande à la base de nous donner le mot de passe de l'utilisateur ayant l'adresse mail utilisé plus haut. Ensuite on compare le mot de passe rentré dans le form et celui que l'on vient de récupérer. Si ce sont les mêmes alors on renvoie un status 200 et on affiche "Mot de passe correct, connexion réussie". Si les mots de passe sont différents, on renvoie un status 401 et on affiche : "Mot de passe incorrect". Si l'adresse mail rentré dans le form n'est pas présente dans la base de données on renvoie un status 404 et on affiche : "Utilisateur non trouvé". 
+
+```js
+app.post('/connection', (req, res) => {
+    const email = req.body.email;
+    const password = req.body.mot_de_passe; 
+    const sql = 'SELECT * FROM users WHERE email = ?';
+
+    connection.query(sql, [email], (err, results) => {
+        if (err) {
+            console.log('Erreur pour la connexion', err);
+            res.status(500).json({ message: 'Erreur connexion' });
+        } 
+        else {
+            if (results.length > 0) {
+
+                const storedPassword = results[0].mot_de_passe; 
+
+                if (password === storedPassword) {
+                    res.status(200).json({ message: 'Mot de passe correct, connexion réussie' });
+                } 
+                
+                else {
+                    res.status(401).json({ message: 'Mot de passe incorrect' });
+                }
+            } 
+            else {
+                res.status(404).json({ message: 'Utilisateur non trouvé' });
+            }
+        }
+    });
+});
+```
+Une fois la route créée, on s'occupe de la requête côté client. On récupère les informations de connexion rentrées dans le form, email et mot de passe, on les passe en format JSON puis on les transfère au serveur à l'URL de la route que nous avons créée. Le serveur fera alors ce que nous avons détaillé au dessus. 
+```js
+document.getElementById("connectionForm").addEventListener('submit', function (event) {
+    
+    event.preventDefault();
+    
+    const email = document.getElementById('connexionEmail').value;
+    const mot_de_passe = document.getElementById('connexionMdp').value;
+
+    fetch('http://localhost:3000/connection', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, mot_de_passe}),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de la requête POST de connexion');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Reponse du serveur:', data)
+    })
+    .catch(error => {
+        console.error('Erreur :', error);
+    });
+});
+```
