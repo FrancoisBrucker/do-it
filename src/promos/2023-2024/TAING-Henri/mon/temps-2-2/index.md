@@ -16,7 +16,7 @@ résumé: "Un vieux qui reprend ce qu'il a appris dans l'espoir de faire des jol
 ---
 
 {%prerequis 'MON débutant'%}
-Avoir un cerveau à moitié allumé
+Avoir un cerveau à moitié allumé et quelques connaissances en Python
 {%endprerequis%}
 
 ---
@@ -34,11 +34,15 @@ Avoir un cerveau à moitié allumé
 ## 1. Introduction <a id="section-1"></a>
 
 En finissant mon MON 2-1, je me suis dit "Quand même, pas de jointure sur Google Sheets, c'est audacieux, en SQL, on en faisait à l'époque. Attends. Comment on fait déjà ?!"
-Puis étant dans ma phase "J'adore jouer avec des données", SQL s'est imposé comme une nécessité.
+Puis étant dans ma phase "J'adore jouer avec des données", SQL s'est imposé comme une nécessité, ne serait-ce que pour réapparendre la logique. Puis, je suis passé sur Python avec ses bibliothèques Pandas, Numpy, Matplotlib et Plotly. 
 
-Il est donc temps de dépoussiérer tout ça. Pour ça, j'ai décidé de réapprendre SQL en essayant directement de résoudre les exercices faciles et intermédiaires proposés par [sql.sh](https://sql.sh/exercices-sql).
+Ce MON sera donc une fiche mémo vers laquelle je me tournerai à chaque fois que j'aurai un trou de mémoire.
+
+Il est donc temps de dépoussiérer tout ça. 
 
 ## 2. SQL débutant <a id="section-2"></a>
+
+Pour ça, j'ai décidé de réapprendre SQL en essayant directement de résoudre les exercices faciles et intermédiaires proposés par [sql.sh](https://sql.sh/exercices-sql).
 
 J'ai appris le SQL à la va-vite en classes préparatoires. Ça doit être comme le vélo, non ? Ça ne s'oublie pas.
 Eh bien, je me suis souvenu que j'étais nul au vélo. Heureusement, le site est bien documenté et les explications super bien ficelés. Dès que j'avais un trou de mémoire, je m'y référais.
@@ -192,14 +196,39 @@ SET category =
 ```
 {% enddetails %}
 
-## 4. Rappels sur Python et ses librairies pour l'analyse de données <a id="section-4"></a>
+Les questions 12 et 13 nous apprennent à créer une table et à y insérer des données.
+{% details "Q12 et Q13, Créer une table intitulée “commande_category” qui contiendra le descriptif de ces catégories
+et y insérer les 4 descriptifs de chaque catégorie au sein de la table précédemment créée” - Utilise CREATE TABLE, INSERT INTO" %}
+
+```
+CREATE TABLE commande_category
+(descriptif VARCHAR(255))  //nom de la colonne obligatoire
+
+INSERT INTO commande_category (descriptif)
+ VALUES
+ ('1 si inférieur à 200'),
+ ('2 si entre 200 et 500'),
+ ('3 entre 500 et 1000'),
+ ('4 si plus de 1000');
+```
+{% enddetails %}
+
+<img src="Capture2_4.PNG" width="350" height="350">
+
+## 4. Un cas pour reprendre l'analyse de données avec Python <a id="section-4"></a>
+
+Pour reprendre mes connaissances en analyse de données avec Python, j'ai fait le choix de reprendre à zéro un début d'étude de cas que j'avais fait l'an dernier. Le but étant de réapprendre, explorer et améliorer. 
+
+La base de données provient de Kaggle et s'appelle [Speed Dating Experiment](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment) et a été faite à partir d'une expérience conduite par Columbia Business School entre 2002 et 2004. Durant ces événements de "Speed Dating", chaque participant a quatre minutes avec chaque personne du sexe opposé, les participants étant tous soit un homme soit une femme, et hétérosexuels. 
+L'idée de cette base de données est de comprendre quels facteurs influencent l'amour au premier regard.
+
+De mon côté, j'ai décidé d'utiliser cette base de données pour répondre aux questions qui m'intéressaient.
 
 
-## 5. Quelques résultats et représentations à partir d'une base de données sur le Speed Dating <a id="section-5"></a>
+## 5. Conclusion <a id="section-6"></a>
 
 
-## 6. Conclusion <a id="section-6"></a>
+## 6. Sources <a id="section-7"></a>
 
-
-## 7. Sources <a id="section-7"></a>
-
+[Exercices SQL](https://sql.sh/exercices-sql)
+[Speed Dating Experiment](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment)
