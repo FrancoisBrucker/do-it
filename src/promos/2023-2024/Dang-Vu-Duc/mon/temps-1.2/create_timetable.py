@@ -2,6 +2,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 from openpyxl.styles.borders import Border, Side
+from datetime import date
 
 class Create_timetable():
     def __init__(self):
@@ -126,6 +127,8 @@ class Create_timetable():
 
     def create_timetable_automatic(self, nom, prénom):
         courses_name = ["bonjour !", "tc1 : agilité", "lancement projet 3a", "tc1 : gestion des sources", "tc1 : service design", "langues", "projet 3a", "vacances", "filière métier", "tronc commun 3a", "prez mon 2", "prez pok", "point pok sprint 1", "point pok sprint 2", "prez mon 1", "pok&mon", "cap 1a/3a/conception si", "prez projet", "rencontre w3g", "débrief", "conférence métier", "do_it circus"]
+        cell_maj = self.sheet3['A1']
+        cell_maj.value = "maj le " + date.today().strftime('%d/%m/%Y')
         row_number = None
         for k in range(3,27):
             cell_nom = self.sheet2.cell(row = k, column = 1)
