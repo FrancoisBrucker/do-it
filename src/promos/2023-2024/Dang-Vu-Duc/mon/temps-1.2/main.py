@@ -29,6 +29,6 @@ test = Create_timetable()
 # test.create_timetable_automatic("Dang vu", "duc")
 # test.remove_course("edt de Duc Dang Vu.xlsx")
 test.create_all_timetable()
-# test.add_course("edt Do_It.23-24.xlsx")
+# test.remove_course("edt Do_It.23-24.xlsx")
 
 
