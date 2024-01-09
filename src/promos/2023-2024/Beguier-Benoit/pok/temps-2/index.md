@@ -1319,3 +1319,9 @@ J'ai aussi ajouté plusieurs fonctions grâce à la documentation :
 - `getAccessToken(clientId, code)`, qui *challenge* le token généré
 - `fetchProfile(token)`, qui appelle l'API et utilise la méthode GET pour obtenir les données d'intérêt
 - `populateUI(profile)`, qui permet de récupérer et de remplir les données d'intérêt.
+
+Après exécution d'un rapide `npm run dev` dans la console, j'obtiens le résultat suivant :
+![cc](Accepter.png)
+![connexion](Connected.png)
+
+Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom.
