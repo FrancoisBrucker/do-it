@@ -1662,6 +1662,10 @@ async <span class="token keyword">function</span> fetchProfile<span class="token
 <img src="Connected.png" alt="connexion"></p>
 <p>Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom récupérés sur mon compte Spotify.</p>
 <h3>Recherche des visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas</h3>
+<p>Je choisis d'abord, comme annoncé en préambule, de visualiser les genres de musiques écoutés par l'utilisateur sur un graphique. J'aimerais aussi afficher les 5 artistes favoris de l'utilisateur.</p>
+<p><img src="Music-features.jpg" alt="alt"></p>
+<h3>Récupérer le top artiste et genres de l'utilisateur</h3>
+<p>Pour récupérer le top artiste et genres de l'utilisateur, la méthode précédente ne suffit pas : ce ne sont pas des <em>datas</em> remplies dans son profil, mais des <em>datas</em> qu'il faut extraire de manière dynamique avec une méthode <em>GET()</em>. Je modifie donc le script Javascript et je rajoute dans le code HTML une liste pour afficher les 5 top artistes.</p>
 
 
 </article>
