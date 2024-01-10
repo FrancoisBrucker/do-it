@@ -13,7 +13,7 @@ résumé: "Un MON traitant de l'utilisation des bibliothèques Python pour la Da
 ---
 
 {% prerequis %}
-**Niveau :** Facile
+**Niveau :** Moyen
 **Prérequis :** Bases en Python
 {% endprerequis %}
 
@@ -22,26 +22,26 @@ résumé: "Un MON traitant de l'utilisation des bibliothèques Python pour la Da
 1. Introduction
 2. Bibliothèque Seaborn 
 3. Bibliothèque Scikit Learn
-4. Bibliothèque Keras
+4. Application : combinaison des bibliothèques
 5. Conclusion
 6. Bibliographie
 
 ## 1. Introduction
 
 La vocation de ce MON est d'introduire de façon non exhaustive aux bibliothèques python utiles pour la DataScience.
-Ce second MON introduit aux bibliothèques Seaborn et Scikit Leanr qui servent respectivement à la visualisation des données et au Machine Learning.
+Ce second MON introduit aux bibliothèques Seaborn et Scikit Leanr qui servent respectivement à la **visualisation des données et au Machine Learning.**
 
-Le MON 2.2 va de pair avec le MON 2.1 qui lui introduit les bibliothèques NumPy, Matplotlib et Pandas.
+Le MON 2.2 est une suite du [MON 2.1](https://francoisbrucker.github.io/do-it/promos/2023-2024/Beyaert-Alexandre/mon/temps-2.1/) qui lui introduit les bibliothèques NumPy, Matplotlib et Pandas.
 
 ## 2. Bibliothèque Seaborn
 ```python
 import seaborn as sns
 ```
 
-La bibliothèque Seaborn va permettre d'obtenir de la visualisation avancée en comparaison à Matplotlib et ce en simplifiant les lignes de code.
+La bibliothèque Seaborn va permettre d'obtenir de la **visualisation avancée** en comparaison à Matplotlib et ce en simplifiant les lignes de code.
 
-Reprenons l'exemple du dataset iris (cf MON 2.1).
-En lisant ce dataset sous forme de dataframe pandas, il va être possible en une seule ligne de code de produire une figure montrant toutes les différentes relations entre nos différentes variable.
+Reprenons l'exemple du **dataset iris** *(cf MON 2.1)*.
+En lisant ce dataset sous forme de dataframe pandas, il va être possible en une seule ligne de code de produire une figure montrant toutes les différentes relations entre nos différentes variables.
 
 ```python
 chemin = 'C:\MOOC_Data_Sciences\Machine_Learnia\iris.csv'
@@ -59,15 +59,13 @@ sns.pairplot(iris, hue = 'variety')
 ![Distinction par variété](pairplot_variety.png)
 
 Les possibilités de seaborn sont multiples, [la documentation officielle](https://seaborn.pydata.org/) répertorie les différents graphiques réalisables en fonction des besoins :
-- distribution
+- distributions
 - regressions
 - catégories...
 
 Et ces possibilités ont presque toujours la même structure : **sns.fonction(x, y, data, hue, size, style)**
 
-À titre d'exemple, reprenons le dataset titanic.
-
-Il va être possible d'étudier la répartition des âges des passagers en fonction de leur classe et de leur sexe, sous forme de categorical plot ou de box plot.
+À titre d'exemple, reprenons désormais **le dataset titanic.** Il va être possible d'étudier la répartition des âges des passagers en fonction de leur classe et de leur sexe, sous forme de categorical plot ou de box plot.
 
 ```python
 titanic = sns.load_dataset('titanic')
@@ -86,9 +84,9 @@ sns.jointplot(x='age', y='fare', data=titanic, kind='hex')
 ```
 ![Tarif en fonction de l'âge](jointplot_titanic.png)
 
-Ou encore de visualiser les matrices de corrélation sous forme de heatmap.
+Ou encore visualiser les matrices de corrélation sous forme de heatmap.
 
-**NB :** Attention, il s'avère au préalable nécessaire de supprimer les colonnes contenant autre chose que des int ou float ou de convertir des colonnes.
+**NB :** Attention, il s'avère au préalable nécessaire de supprimer les colonnes contenant autre chose que des int ou float ou de convertir des colonnes. *(cf partie 3.3 Préparation des données)*
 
 ```python
 sns.heatmap(titanic.corr())
@@ -98,7 +96,8 @@ sns.heatmap(titanic.corr())
 
 
 ## 3. Bibliothèque Scikit Learn
-La bibliothèque Scikit Learn va permettre d'effectuer du Machine Learning.
+La bibliothèque Scikit Learn va permettre d'**effectuer du Machine Learning.**
+
 C'est cette bibliothèque qui répertorie toutes les méthodes d'apprentissage et prêtes à l'emploi. [La documentation Scikit-Learn](https://scikit-learn.org/stable/#) va alors être très utile. Elle répertorie ces différentes méthodes : classification, régression, clustering... et explique leur fonctionnement. Ainsi, il n'y aura plus qu'à appeler les différentes fonctions déjà codées en python orienté objet pour effectuer du Machine Learning.
 
 Les programmes utilisant Sckit Learn auront tous le même schéma :
@@ -109,7 +108,7 @@ Les programmes utilisant Sckit Learn auront tous le même schéma :
 
 ### 3.1 Régression
 
-Commençons par une simple régression linéaire.
+Voici ci-dessous une façon de réaliser une régression linéaire en suivante le schéma **"choix du modèle - entraînement - évaluation - utilisation"**.
 
 ```python
 ## Création des données
@@ -131,11 +130,9 @@ plt.plot(X,predictions, c='r')
 ```
 ![Régression linéaire](regression_lineaire.png)
 
-Désormais, dans le cas où la relation entre les données ne serait plus linéaire, nous pourrions envisager le modèle SVR (Support Vector Regression).
+Pour s'adapter à un cas où la relation entre les données ne serait plus linéaire, il ne suffira que de changer de modèle. Nous pourrions envisager le modèle SVR *(Support Vector Regression)*.
 
-Le programme reste alors tout à fait similaire, il ne suffit que d'importer le modèle et modifier le choix du modèle.
-
-**NB :** En regardant la [☻documentation de ce modèle](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html), on comprend que seuls 2 hyperparamètres peuvent être modifiés :
+**NB :** En regardant la [documentation de ce modèle](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html), on comprend que pour ce modèle, seuls 2 hyperparamètres peuvent être ajustés :
 - C : paramètre de régularisation. Il détermine la marge d'erreur tolérée par le modèle. (attention au surapprentissage si celui-ci est choisi trop grand)
 - epsilon : l'erreur par rapport à la prédiction, comme en prépa lors de la détermination de limites, il s'agit du tunnel de tolérance autour d'une courbe. Plus epsilon est grand, plus le modèle est tolérant aux erreurs.
 
@@ -148,16 +145,17 @@ from sklearn.svm import SVR
 model = SVR(C=100)
 ...
 ```
+Et voici notre nouvelle régression.
 
 ![Régression SVR](SVR.png)
 
 ### 3.2 Classification
 
-Reprenons le dataset titanic pour effectuer de la classification et ainsi déterminer les chances de survie d'un passager.
+Basons nous une nouvelle fois le dataset titanic pour effectuer de la classification et ainsi déterminer les chances de survie d'un passager.
 
 Un modèle approprié pourrait être le [KNeighborsClassifier](https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification). Celui-ci va analyser les K plus proches voisins d'un élément et tirer la classification la plus probable qui en ressort.
 
-Commençons par importer et filtrer le dataset.
+Commençons par **importer** et **filtrer** le dataset.
 
 ```python
 titanic = sns.load_dataset('titanic')
@@ -167,7 +165,7 @@ titanic.dropna(axis=0, inplace=True)
 titanic['sex'].replace(['male', 'female'], [0, 1], inplace=True)
 ```
 
-Puis implémentons le modèle.
+Puis **implémentons** le modèle.
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
@@ -182,8 +180,7 @@ model.score(X, Y)
 model.predict(X)
 ```
 
-Le score qui en ressort est alors de 84% : les prédictions du modèle sont bonnes dans 84% des cas.
-model.predict(X) renvoie alors un tableau de 0 et de 1 indiquant les passagers qui survivraient.
+Le score qui en ressort est alors de 84% : les prédictions du modèle sont bonnes dans 84% des cas et la fonction model.predict(X) renvoie un tableau de 0 et de 1 indiquant les passagers qui survivraient.
 
 Pour aller plus loin, créons une fonction permettant de déterminer si un individu lambda aurait survécu et avec quelle probabilité.
 
@@ -194,7 +191,7 @@ def survie(model, pclass, sex, age):
 ```
 Ainsi en testant la fonction sur moi : pclass=3, sex=0, age=24 ; le modèle prédit que je ne survivrai pas avec une probabilité de 80%.
 
-En suivant ces précédentes manipulations, on biaise toutefois le résultat puisque l'on teste notre modèle sur les données d'entraînement. En pratique, il est nécessaire de diviser notre dataset en données d'entraînement et données de test.
+En suivant ces précédentes manipulations, on biaise toutefois le résultat puisque l'on teste notre modèle sur les données d'entraînement. En pratique, il est **nécessaire de diviser notre dataset en données d'entraînement et données de test.**
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -232,13 +229,13 @@ plt.show()
 ```
 ![Recherche du meilleur nombre de plus proches voisins](cross_validation.png)
 
-L'écart entre la courbe train et celle validation est très important lorsqu'on ne sélectionne qu'un seul plus proche voisin, il y a de l'overfitting. Le modèle essaye trop de se rapprocher des données qu'il apprend et en déforme la réalité. Cet écart diminue plus le nombre de plus proches voisins augmente. Cependant, lorsque l'on choisit trop de plus proches voisins, la performance de la courbe validation diminue puisque certains plus proches voisins sont en réalité éloignés de l'élément à analyser.
+L'écart entre la courbe train et celle validation est très important lorsqu'on ne sélectionne qu'un seul plus proche voisin, il y a de l'**overfitting**. Le modèle essaye trop de se rapprocher des données qu'il apprend et en déforme la réalité. Cet écart diminue plus le nombre de plus proches voisins augmente. Cependant, lorsque l'on choisit trop de plus proches voisins, la performance de la courbe validation diminue puisque certains plus proches voisins sont en réalité éloignés de l'élément à analyser.
 
-Une dizaine de plus proches voisins semble être la solution la plus appropriée, il s'agit de celle maximisant la précision des données de validation et minimisant l'écart avec le train.
+**Une dizaine de plus proches voisins semble être la solution la plus appropriée**, il s'agit de celle maximisant la précision des données de validation et minimisant l'écart avec le train.
 
 Vérifions désormais cette supposition grâce aux fonctions de la bibliothèque Scikit-Learn.
 
-Le module GridSearchCV est capable de donner le meilleur score atteignable pour un modèle et les paramètres associés.
+Le module **GridSearchCV** est capable de donner le meilleur score atteignable pour un modèle et les paramètres associés.
 
 ```python
 from sklearn.model_selection import GridSearchCV
@@ -254,8 +251,7 @@ grid.best_score_ # renvoie le meilleur score atteignable, dans notre cas 77%
 
 grid.best_params_ # renvoie les meilleurs paramètres, dans notre cas 9 plus proches voisins (ce qui confirme la 10aine observée précédemment) et la distance manhattan
 ```
-Si on le souhaite, il va ainsi être possible de régler notre modèle avec ces paramètres optimums et d'observer la matrice de confusion.
-La matrice de confusion renvoie le nombre de bonnes réponses et d'erreurs.
+Si on le souhaite, il va ainsi être possible de régler notre modèle avec ces paramètres optimums et d'observer la matrice de confusion : la matrice retournant le nombre de bonnes réponses et d'erreurs.
 
 ```python
 model = grid.best_estimator_
@@ -271,23 +267,25 @@ confusion_matrix(Y_test, model.predict(X_test)) # renvoie la matrice ci-dessous
 # Nous pouvons retrouver notre 71% de performances en vérifiant le rapport (bonnes prédictions / nombre de prédictions)
 # (65 + 37)/(65 + 20 + 21 + 37) = 71%
 ```
+
 ### 3.3 Préparation des données
 #### 3.3.1 Encodage
 
-Je l'ai déjà mentionné précédemment, avant de pouvoir effectuer du machine learning, j'effectue un pré-traitement des données.
-Pour effectuer des calculs (régressions, classifications...) il est très souvent nécessaire de travailler avec des valeurs numériques.
+Je l'ai déjà mentionné précédemment, avant de pouvoir effectuer du machine learning, j'effectue un pré-traitement des données. Par exemple, pour effectuer des calculs (régressions, classifications...) il est très souvent nécessaire de travailler avec des valeurs numériques. Certaines valeurs vont alors poser problèmes :
 
-Ainsi les données manquantes 'NaN' vont poser problème, les chaînes de caractères telles que 'male' ou 'female' dans la colonne 'sex' du dataset titanic vont égaler poser problème.
+- les données manquantes 'NaN'
+- les chaînes de caractères telles que 'male' ou 'female' dans la colonne 'sex' du dataset titanic
 
-Il va être nécessaire de les prétraiter pour y remédier.
+Dans le premier cas, un simple usage de la fonction **dropna()** résoudra notre problème. Pour ce qui est du second cas, il sera nécessaire d'effectuer de l'**encodage**.
+
 
 2 types d'encodages sont envisageables :
-- l'encodage Ordinal : il associe chaque catégorie d'une variable à une valeur décimale unique
+**- l'encodage Ordinal :** il associe chaque catégorie d'une variable à une valeur décimale unique
 | chat   | chien    | oiseau   | chien    | chat | lion |
 | -------| -------- | -------- | -------- |----- | ---- |
 |    0   |     1    |     3    |    1     |  0   |   2  |
 
-Lorsque nous avons une simple liste, la fonction à utiliser sera alors LabelEncoder()
+Lorsque nous avons une simple liste, la fonction à utiliser sera alors **LabelEncoder()**.
 ```python
 from sklearn.preprocessing import LabelEncoder
 
@@ -312,7 +310,7 @@ encoder.fit_transform(y) # fais tout en 1
 encoder.inverse_transform((np.array([3, 2, 3, 0, 1, 3])))
 # renvoie : array(['oiseau', 'lion', 'oiseau', 'chat', 'chien', 'oiseau'], dtype='<U6')
 ```
-Dans le cas d'un tableau à plusieurs variables, il faudra opter pour la fonction OrdinalEncoder()
+Dans le cas d'un tableau à plusieurs variables, il faudra opter pour la fonction **OrdinalEncoder()**.
 
 ```python
 from sklearn.preprocessing import OrdinalEncoder
@@ -330,11 +328,11 @@ array([[0., 1.],
        [0., 1.],
        [2., 0.]])
 ```
-Le problème de cet encodage ordinal est qu'il crée un ordre 0 < 1 < 2... et cet ordre risque de pénaliser des modèles de Machine Learning.
+Le problème de l'encodage ordinal est qu'il **crée un ordre** 0 < 1 < 2... et cet ordre risque de pénaliser des modèles de Machine Learning. Pour y remédier, il faudra opter pour l'encodage One Hot.
 
-- encodage One Hot : pour éviter l'ordonancement, l'encodage One Hot va représenter chacune des valeurs sous forme de vecteurs, empêchant ainsi les comparaisons.
+**- L'encodage One Hot :** permet d'éviter l'ordonancement, il va représenter chacune des valeurs sous forme de vecteurs, empêchant ainsi les comparaisons.
 
-Pour une simple liste, il faut utiliser LabelBinarizer()
+Pour une simple liste, il faut utiliser **LabelBinarizer()**.
 ```python
 from sklearn.preprocessing import LabelBinarizer
 
@@ -350,7 +348,7 @@ array([[1, 0, 0, 0],
        [1, 0, 0, 0],
        [0, 0, 1, 0]])
 ```
-Et pour un tableau, OneHotEncoder().
+Et pour un tableau, **OneHotEncoder()**.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -405,7 +403,11 @@ Le problème de ces 2 premières techniques est qu'elles sont très sensibles au
 
 - RobustScaler : chaque donnée sera soustraite à la médiane le tout divisé par l'interquartile (X-mediane)/(Q3-Q1)
 
-## 4. Combinaison
+## 4. Application : combinaison des bibliothèques
+
+Pour terminer ce MON, je vous propose d'effectuer un algorithme combinant nos différentes bibliothèques et incluant un  pipeline complet de Machine Learning "pré-traitement - modèle - entraînement - évaluation - visualisation" afin de prédire la survie des passagers du Titanic.
+
+Le score sera ensuite comparé à celui obtenu sans pré-traitement.
 
 ```python
 # imports
