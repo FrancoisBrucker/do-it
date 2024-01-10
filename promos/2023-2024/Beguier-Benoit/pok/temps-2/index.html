@@ -481,10 +481,10 @@ Illustration du type de graphique que je souhaite afficher.</p>
 </div>
 </details>     
 </div>
-<p>Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai aussi de mettre un <code>position: fixed;</code> pour régler ce problème, mais cela décale toutes mes marges. Pour l'instant, je décide de rester comme ça.</p>
+<p>Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai décidé de mettre un <code>position: fixed;</code> pour régler ce problème, mais cela décale toutes mes marges. Pour l'instant, je décide de rester comme ça.</p>
 <h3>Apparition du pop-up de connexion</h3>
-<p>Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure pas encore cliquable.</p>
-<p>Pour ce faire, j'avais deux solutions : de l'HTML pur ou du JavaScript. J'opte pour la deuxième option sur les conseil de <a href="https://www.instagram.com/william.lalanne/">William Lalanne</a>. Je ne suis pas spécialement familier du langage, mais après quelques explications du langage, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.</p>
+<p>Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure actuelle pas encore cliquable.</p>
+<p>Pour ce faire, j'avais deux solutions : de l'HTML pur ou du JavaScript. J'opte pour la deuxième option sur les conseil de <a href="https://www.instagram.com/william.lalanne/">William Lalanne</a>. Je ne suis pas spécialement familier du langage, mais après quelques explications et quelques recherches, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.</p>
 <p>Il y a deux parties à prendre en compte :</p>
 <ul>
 <li>lorsque le bouton est cliqué, il faut faire apparaître un pop-up demandant à l'utilisateur l'adresse e-mail associée à son compte Spotify et son mot de passe.</li>
@@ -1092,7 +1092,7 @@ Pas de point dur particulier.</p>
 <li>Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, <strong>2 heures estimées</strong>)</li>
 <li>Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, <strong>2 heures estimées</strong>)</li>
 <li>Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, <strong>0 heure 30 estimée</strong>)</li>
-<li>Déterminer quelle technologie utilsier pour la visualisation (★☆☆☆☆, <strong>0 heure 30 estimée</strong>)</li>
+<li>Déterminer quelle technologie utiliser pour la visualisation (★☆☆☆☆, <strong>0 heure 30 estimée</strong>)</li>
 <li>Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, <strong>2 heures estimées</strong>)</li>
 </ul>
 <p>C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.</p>
@@ -1544,10 +1544,124 @@ Extrait de la documentation <a href="https://developer.spotify.com/">Spotify</a>
 <li><code>fetchProfile(token)</code>, qui appelle l'API et utilise la méthode GET pour obtenir les données d'intérêt</li>
 <li><code>populateUI(profile)</code>, qui permet de récupérer et de remplir les données d'intérêt.</li>
 </ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquez pour afficher le <strong>code JavaScript</strong> du script d'appel à l'API</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">const clientId <span class="token operator">=</span> <span class="token string">"70b7021a56234ecda100b97df932edec"</span><span class="token punctuation">;</span>
+const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span>window.location.search<span class="token punctuation">)</span><span class="token punctuation">;</span>
+const code <span class="token operator">=</span> params.get<span class="token punctuation">(</span><span class="token string">"code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">function</span> generateCodeVerifier<span class="token punctuation">(</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin class-name">let</span> text <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">let</span> possible <span class="token operator">=</span> <span class="token string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>let i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">+=</span> possible.charAt<span class="token punctuation">(</span>Math.floor<span class="token punctuation">(</span>Math.random<span class="token punctuation">(</span><span class="token punctuation">)</span> * possible.length<span class="token punctuation">))</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token builtin class-name">return</span> text<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> generateCodeChallenge<span class="token punctuation">(</span>codeVerifier<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const data <span class="token operator">=</span> new TextEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>.encode<span class="token punctuation">(</span>codeVerifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const digest <span class="token operator">=</span> await window.crypto.subtle.digest<span class="token punctuation">(</span><span class="token string">'SHA-256'</span>, data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">return</span> btoa<span class="token punctuation">(</span>String.fromCharCode.apply<span class="token punctuation">(</span>null, <span class="token punctuation">[</span><span class="token punctuation">..</span>.new Uint8Array<span class="token punctuation">(</span>digest<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">))</span>
+        .replace<span class="token punctuation">(</span>/<span class="token punctuation">\</span>+/g, <span class="token string">'-'</span><span class="token punctuation">)</span>
+        .replace<span class="token punctuation">(</span>/<span class="token punctuation">\</span>//g, <span class="token string">'_'</span><span class="token punctuation">)</span>
+        .replace<span class="token punctuation">(</span>/<span class="token operator">=</span>+$/, <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    redirectToAuthCodeFlow<span class="token punctuation">(</span>clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    const accessToken <span class="token operator">=</span> await getAccessToken<span class="token punctuation">(</span>clientId, code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const profile <span class="token operator">=</span> await fetchProfile<span class="token punctuation">(</span>accessToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    populateUI<span class="token punctuation">(</span>profile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin class-name">export</span> async <span class="token keyword">function</span> redirectToAuthCodeFlow<span class="token punctuation">(</span>clientId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const verifier <span class="token operator">=</span> generateCodeVerifier<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const challenge <span class="token operator">=</span> await generateCodeChallenge<span class="token punctuation">(</span>verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    localStorage.setItem<span class="token punctuation">(</span><span class="token string">"verifier"</span>, verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"client_id"</span>, clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"response_type"</span>, <span class="token string">"code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"redirect_uri"</span>, <span class="token string">"http://localhost:5173/callback"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"scope"</span>, <span class="token string">"user-read-private user-read-email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_challenge_method"</span>, <span class="token string">"S256"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_challenge"</span>, challenge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    document.location <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>https://accounts.spotify.com/authorize?$<span class="token punctuation">{</span>params.toString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin class-name">export</span> async <span class="token keyword">function</span> getAccessToken<span class="token punctuation">(</span>clientId, code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const verifier <span class="token operator">=</span> localStorage.getItem<span class="token punctuation">(</span><span class="token string">"verifier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"client_id"</span>, clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"grant_type"</span>, <span class="token string">"authorization_code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code"</span>, code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"redirect_uri"</span>, <span class="token string">"http://localhost:5173/callback"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_verifier"</span>, verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span><span class="token string">"https://accounts.spotify.com/api/token"</span>, <span class="token punctuation">{</span>
+        method: <span class="token string">"POST"</span>,
+        headers: <span class="token punctuation">{</span> <span class="token string">"Content-Type"</span><span class="token builtin class-name">:</span> <span class="token string">"application/x-www-form-urlencoded"</span> <span class="token punctuation">}</span>,
+        body: params
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const <span class="token punctuation">{</span> access_token <span class="token punctuation">}</span> <span class="token operator">=</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">return</span> access_token<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> fetchProfile<span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span><span class="token string">"https://api.spotify.com/v1/me"</span>, <span class="token punctuation">{</span>
+        method: <span class="token string">"GET"</span>, headers: <span class="token punctuation">{</span> Authorization: <span class="token variable"><span class="token variable">`</span>Bearer $<span class="token punctuation">{</span>token<span class="token punctuation">}</span><span class="token variable">`</span></span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">return</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> populateUI<span class="token punctuation">(</span>profile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"displayName"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.display_name<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        const profileImage <span class="token operator">=</span> new Image<span class="token punctuation">(</span><span class="token number">200</span>, <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        profileImage.src <span class="token operator">=</span> profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.url<span class="token punctuation">;</span>
+        document.getElementById<span class="token punctuation">(</span><span class="token string">"avatar"</span><span class="token punctuation">)</span>.appendChild<span class="token punctuation">(</span>profileImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        document.getElementById<span class="token punctuation">(</span><span class="token string">"imgUrl"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.id<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"email"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.email<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"uri"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.uri<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"uri"</span><span class="token punctuation">)</span>.setAttribute<span class="token punctuation">(</span><span class="token string">"href"</span>, profile.external_urls.spotify<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.href<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.setAttribute<span class="token punctuation">(</span><span class="token string">"href"</span>, profile.href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</details>     
+</div>
 <p>Après exécution d'un rapide <code>npm run dev</code> dans la console, j'obtiens le résultat suivant :<br>
 <img src="Accepter.png" alt="cc"><br>
 <img src="Connected.png" alt="connexion"></p>
-<p>Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom.</p>
+<p>Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom récupérés sur mon compte Spotify.</p>
+<h3>Recherche des visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas</h3>
 
 
 </article>
