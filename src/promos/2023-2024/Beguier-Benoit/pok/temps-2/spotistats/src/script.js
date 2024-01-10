@@ -2,7 +2,6 @@ const clientId = "70b7021a56234ecda100b97df932edec";
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
-
 function generateCodeVerifier(length) {
     let text = '';
     let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -22,12 +21,41 @@ async function generateCodeChallenge(codeVerifier) {
         .replace(/=+$/, '');
 }
 
+async function fetchTopArtists(token) {
+    const apiUrl = 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=5&offset=0';
+
+    const result = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        },
+    });
+
+    return await result.json();
+}
+
+async function fetchTopTracks(token) {
+    const apiUrl = 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=5&offset=0';
+
+    const result = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        },
+    });
+
+    return await result.json();
+}
+
 if (!code) {
     redirectToAuthCodeFlow(clientId);
 } else {
     const accessToken = await getAccessToken(clientId, code);
     const profile = await fetchProfile(accessToken);
-    populateUI(profile);
+    const topArtists = await fetchTopArtists(accessToken);
+    const topTracks = await fetchTopTracks(accessToken);
+
+    populateUI(profile, topArtists, topTracks);
 }
 
 export async function redirectToAuthCodeFlow(clientId) {
@@ -75,18 +103,42 @@ async function fetchProfile(token) {
     return await result.json();
 }
 
-function populateUI(profile) {
+function populateUI(profile, topArtists) {
     document.getElementById("displayName").innerText = profile.display_name;
+
     if (profile.images[0]) {
         const profileImage = new Image(200, 200);
         profileImage.src = profile.images[0].url;
         document.getElementById("avatar").appendChild(profileImage);
         document.getElementById("imgUrl").innerText = profile.images[0].url;
     }
+
     document.getElementById("id").innerText = profile.id;
     document.getElementById("email").innerText = profile.email;
     document.getElementById("uri").innerText = profile.uri;
     document.getElementById("uri").setAttribute("href", profile.external_urls.spotify);
     document.getElementById("url").innerText = profile.href;
     document.getElementById("url").setAttribute("href", profile.href);
+
+    if (topArtists && topArtists.items) {
+        const topArtistsList = document.getElementById("topArtistsList");
+        topArtistsList.innerHTML = ""; 
+
+        topArtists.items.forEach(artist => {
+            const listItem = document.createElement("li");
+            listItem.innerText = artist.name;
+            topArtistsList.appendChild(listItem);
+        });
+    }
+
+    if (topTracks && topTracks.items) {
+        const topTracksList = document.getElementById("topTracksList");
+        topTracksList.innerHTML = "";  // Efface le contenu précédent
+
+        topTracks.items.forEach(track => {
+            const listItem = document.createElement("li");
+            listItem.innerText = `${track.name} - ${track.artists.map(artist => artist.name).join(', ')}`;
+            topTracksList.appendChild(listItem);
+        });
+    }
 }

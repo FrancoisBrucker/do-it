@@ -1427,3 +1427,10 @@ Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spo
 
 ### Recherche des visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas
 
+Je choisis d'abord, comme annoncé en préambule, de visualiser les genres de musiques écoutés par l'utilisateur sur un graphique. J'aimerais aussi afficher les 5 artistes favoris de l'utilisateur.
+
+![alt](Music-features.jpg)
+
+### Récupérer le top artiste et genres de l'utilisateur
+
+Pour récupérer le top artiste et genres de l'utilisateur, la méthode précédente ne suffit pas : ce ne sont pas des *datas* remplies dans son profil, mais des *datas* qu'il faut extraire de manière dynamique avec une méthode *GET()*. Je modifie donc le script Javascript et je rajoute dans le code HTML une liste pour afficher les 5 top artistes.
