@@ -54,21 +54,21 @@ Les pseudoclasses sont essentielles pour déclencher des transitions en CSS, les
 
 - <strong>:hover</strong>, qui est déclenché au survol de la souris.
 
--<strong>:active<strong>, activé au clic de l'utilisateur (le plus souvent pour les liens et boutons).
+- <strong>:active</strong>, activé au clic de l'utilisateur (le plus souvent pour les liens et boutons).
 
--<strong>:focus</strong>, qui se déclenche lorsque son élément reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris).
+- <strong>:focus</strong>, qui se déclenche lorsque son élément reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris).
 
--<strong>:valid</strong>, dont la validation du contenu s'effectue correctement par rapport au type de donnée attendu.
+- <strong>:valid</strong>, dont la validation du contenu s'effectue correctement par rapport au type de donnée attendu.
 
--<strong>:invalid</strong>, qui inversement, correspond à un élément dont la validation du contenu ne s'effectue pas correctement par rapport au type de donnée attendu.
+- <strong>:invalid</strong>, qui inversement, correspond à un élément dont la validation du contenu ne s'effectue pas correctement par rapport au type de donnée attendu.
 
--<strong>:not()</strong>, qui correspond à la négation. Elle prend un sélecteur en argument et permet de cibler les éléments qui ne sont pas représentés par cet argument.
+- <strong>:not()</strong>, qui correspond à la négation. Elle prend un sélecteur en argument et permet de cibler les éléments qui ne sont pas représentés par cet argument.
 
--<strong>:checked</strong>, qui correspond aux input de type checkbox, option ou radio qui sont cochés.
+- <strong>:checked</strong>, qui correspond aux input de type checkbox, option ou radio qui sont cochés.
 
--<strong>:enabled</strong>, un élément avec lequel on peut interagir.
+- <strong>:enabled</strong>, un élément avec lequel on peut interagir.
 
--<strong>:disabled</strong>, qui correspond à un élément dont l'interaction a été bloquée.
+- <strong>:disabled</strong>, qui correspond à un élément dont l'interaction a été bloquée.
 
 ### Appliquez les 12 principes de l'animation web 
 Maintenant, il est opportun de réfléchir à la manière de créer des animations plus naturelles et engageantes. Bien que les animations déjà élaborées soient fonctionnelles, elles se limitent aux propriétés de transition de base, en laissant de côté la plupart des valeurs par défaut. Ces dernières produisent des effets excessivement lisses, parfois artificiels, en contraste avec la nature, où les mouvements sont caractérisés par l'irrégularité, les oscillations et les changements de direction. L'objectif d'intégrer des animations sur un site web est de procurer une expérience immersive en infusant une dynamique organique dans les mouvements, harmonisant ainsi l'expérience utilisateur avec notre perception naturelle.
@@ -77,7 +77,7 @@ Maintenant, il est opportun de réfléchir à la manière de créer des animatio
 Pour créer des animations vivantes et agréables il faut faire plus que simplement passer d'un état A à un état B. En superposant des effets de mouvement on offre à l'utilisateur une animation qui parait beaucoup plus authentique.
 Ainsi, au sein d'une transition, on peut facilement animer deux propriétés, ou même autant que l'on désire.
 
-L’utilisation du mot-clé <strong>all</strong>permet de déclencher plusieurs changements au même moment et pour la même durée, mais il existe un autre moyen d’ajouter des propriétés multiples à une transition.
+L’utilisation du mot-clé <strong>all</strong> permet de déclencher plusieurs changements au même moment et pour la même durée, mais il existe un autre moyen d’ajouter des propriétés multiples à une transition.
 On peut aussi faire une liste des animations de chaque propriété à laquelle nous voulons ajouter une transition, séparées par des virgules.
 
 ```html
@@ -147,6 +147,64 @@ L'ordre y est important car une propriété contenant plusieurs fonctions exécu
 
 Pour les fonctions de transformations en 3D telles que "translate3d()", "rotateZ()", et "scale3d()", il est également nécessaire d'inclure la fonction "perspective". Cela permet d'indiquer au navigateur la distance à laquelle se trouve l'utilisateur : plus la distance est grande, moins l'animation sera perceptible.
 
+### Modifier le point d'ancrage d'un élément grâce à transform-origin
+La propriété "transform-origin" permet de déplacer le point d'ancrage, qui est initialement positionné au centre de l'élément.
+
+On peut ajuster ce point d'origine en utilisant des unités telles que px, rem, vh, etc. Il est également possible d'utiliser des pourcentages pour les axes X et Y. Alternativement, des mots clés tels que "left" et "right" pour l'axe X, "top" et "bottom" pour l'axe Y, ainsi que "center" pour les deux axes peuvent être employés.
+
+Il est à noter qu'il est possible de ne pas spécifier la valeur de l'axe Y, ou lors de l'utilisation de mots clés, de fournir uniquement une valeur. Dans ce cas, le navigateur comprend automatiquement à quel axe la valeur s'applique.
+
+Lorsque le point d'origine est modifié en 3D, la valeur de Z doit être exprimée en unités (et non en pourcentages).
+
+### Analyser la performance de vos animations avec Chrome DevTools
+<strong>Chrome DevTools</strong> demeure l'outil privilégié des développeurs, offrant la possibilité d'inspecter le code source d'une page, d'évaluer les performances de la page, et même de restreindre délibérément les performances de la machine pour <strong>simuler un appareil plus lent</strong>, grâce à l'activation de l'option "CPU throttling".
+
+L'outil <strong>Performance</strong>, quant à lui, permet une analyse approfondie des performances d'une page, incluant le taux d'images par seconde d'une animation. En utilisant l'onglet Performance, il devient possible d'examiner en détail nos animations, facilitant ainsi la détection des problèmes potentiels dans notre code qui pourraient affecter la fluidité sur différents supports.
+
+Par ailleurs, en zoomant sur une image spécifique d'une animation, il est envisageable de scruter en détail <strong>les calculs effectués par le navigateur</strong>, offrant une vision plus précise des processus évoqués dans le chapitre dédié au fonctionnement du navigateur.
+
+### Animer les couleurs de manière performante avec opacity
+Animer la couleur d'une propriété entraîne des calculs de peinture, mais la propriété "opacity" offre une alternative en permettant des transitions entre les couleurs tout en contournant ces calculs. Pour définir le niveau de transparence, la propriété "opacity" prend une valeur entre 0 et 1, où 0 représente une transparence totale et 1 une opacité totale.
+
+Afin d'éviter d'ajouter des balises <div> supplémentaires au HTML, ce qui pourrait être nécessaire pour chaque ajout, on peut recourir aux pseudo-éléments "::before" ou "::after". La création d'un pseudo-élément se réalise en ajoutant le nom du pseudo-élément à un sélecteur, préfixé par deux-points doubles, comme ceci : ".selector::after{...}".
+
+Les pseudo-éléments "::before" et "::after" engendrent respectivement un élément qui est le premier ou le dernier enfant de l'élément sélectionné. Il est également possible de créer des dégradés de couleur en attribuant un dégradé à la propriété "background-color" de l'élément d'arrière-plan. Ensuite, on peut faire disparaître l'élément superposé en ajustant l'opacité à 0.
+
+### Créer des animations plus complexes avec la règle CSS @keyframes
+Les animations @keyframes nous offrent la possibilité de créer des animations plus élaborées en définissant plusieurs étapes pour les propriétés tout au long de l'animation.
+
+Les keyframes CSS sont créés en utilisant la règle @keyframes suivie d'un nom pour l'ensemble des keyframes, comme illustré ci-dessous :
+
+```css
+@keyframes example-frames {...};
+```
+
+Chaque keyframe peut être défini en utilisant le pourcentage d'avancement de l'animation comme valeur, tel que :
+
+```css
+33% {...};
+```
+
+Dans le cas où un seul keyframe de début et de fin est requis, les mots-clés « from » et « to » peuvent être utilisés en remplacement de 0% et 100%, respectivement.
+
+En l'absence d'un keyframe de début ou de fin, l'animation débute et/ou se termine avec les valeurs de propriété assignées au sélecteur. Si aucune valeur n'est explicitement assignée dans le sélecteur, la valeur par défaut est choisie.
+
+Une animation définie par la règle @keyframes peut inclure plusieurs keyframes avec des propriétés distinctes. De plus, plusieurs pourcentages peuvent être attribués à un seul keyframe, et les valeurs définies dans ce keyframe seront appliquées aux pourcentages spécifiés au cours de l'animation.
+
+Il est important de noter que les propriétés et valeurs d'un ensemble de keyframes remplaceront les valeurs de propriétés attribuées à un sélecteur pendant l'animation.
+
+### Utilisez les propriétés de l'animation CSS
+Les animations CSS @keyframes peuvent être activées en utilisant des pseudoclasses telles que :hover, de manière similaire aux transitions. En outre, les @keyframes CSS peuvent être déclenchés automatiquement par le chargement des éléments auxquels ils sont associés, tels qu'un sélecteur, dès le chargement d'une page, par exemple.
+
+Pour ajuster le moment de démarrage des animations avec keyframes, on peut utiliser la propriété animation-delay, en définissant un délai en secondes ou en millisecondes, comme on le ferait pour les transitions.
+
+Pour étendre les valeurs du début à la fin des animations, la propriété animation-fill-mode offre différentes options :
+- Le mot clé "backwards" prolonge les valeurs initiales de l'animation avant son lancement, couvrant la durée du délai assigné avant le début effectif de l'animation.
+- Le mot clé "forwards" prolonge les valeurs finales de l'animation jusqu'au rechargement de la page ou à la fermeture du navigateur.
+- Le mot clé "both" prolonge l'animation dans les deux sens, couvrant les valeurs initiales et finales.
+
+Une fonction de timing pour les @keyframes peut être définie en utilisant la fonction animation-timing-function sur le sélecteur où l'animation a été assignée. De plus, un timing spécifique peut être défini keyframe par keyframe en assignant la propriété animation-timing-function aux keyframes concernés.
+
 
 ### Horodateur
 | Date | Heures passées | Indications | 
@@ -159,6 +217,11 @@ Pour les fonctions de transformations en 3D telles que "translate3d()", "rotateZ
 | Mercredi 10/01 | 10min | Quizz: Réaliser ses premières animations CSS |
 | Mercredi 10/01 | 30min | Optimisez les performances de votre navigateur pour vos animations CSS |
 | Mercredi 10/01 | 1H | Créez des animations fluides avec la propriété CSS transform |
+| Mercredi 10/01 | 1H | Modifiez le point d’ancrage d’un élément grâce à transform-origin |
+| Mercredi 10/01 | 45min | Analysez la performance de vos animations avec Chrome DevTools |
+| Jeudi 11/01 | 1H | Animez les couleurs de manière performante avec opacity |
+| Jeudi 11/01 | 30min | Créez des animations plus complexes avec la règle CSS @keyframes |
+| Jeudi 11/01 | 1H | Utilisez les propriétés de l'animation CSS |
 
 
 
