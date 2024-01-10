@@ -330,13 +330,13 @@ p {
 
 {% enddetails %}
 
-Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai aussi de mettre un `position: fixed;` pour régler ce problème, mais cela décale toutes mes marges. Pour l'instant, je décide de rester comme ça.
+Le seul problème est qu'au scroll, le header est aussi scrollé. J'ai décidé de mettre un `position: fixed;` pour régler ce problème, mais cela décale toutes mes marges. Pour l'instant, je décide de rester comme ça.
 
 ### Apparition du pop-up de connexion
 
-Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure pas encore cliquable.
+Et oui, il faut pouvoir se connecter à son compte Spotify pour accéder aux fonctionnalités de mon super site. Le bouton Connexion n'est à l'heure actuelle pas encore cliquable.
 
-Pour ce faire, j'avais deux solutions : de l'HTML pur ou du JavaScript. J'opte pour la deuxième option sur les conseil de [William Lalanne](https://www.instagram.com/william.lalanne/). Je ne suis pas spécialement familier du langage, mais après quelques explications du langage, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.
+Pour ce faire, j'avais deux solutions : de l'HTML pur ou du JavaScript. J'opte pour la deuxième option sur les conseil de [William Lalanne](https://www.instagram.com/william.lalanne/). Je ne suis pas spécialement familier du langage, mais après quelques explications et quelques recherches, je comprends la philosophie des variables et des fonctions, qui ressemblent pas mal à Python.
 
 Il y a deux parties à prendre en compte :
 
@@ -898,7 +898,7 @@ Voici les objectifs que je me suis fixé pour le Sprint 2 :
 - Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**)
 - Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**)
 - Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**)
-- Déterminer quelle technologie utilsier pour la visualisation (★☆☆☆☆, **0 heure 30 estimée**)
+- Déterminer quelle technologie utiliser pour la visualisation (★☆☆☆☆, **0 heure 30 estimée**)
 - Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)
 
 C'est possible que je ne puisse pas effectuer la partie de connexion avec l'API. Les objectifs suivants sont décorrélés ce qui me permettra d'avancer dans tous les cas.
@@ -1320,8 +1320,110 @@ J'ai aussi ajouté plusieurs fonctions grâce à la documentation :
 - `fetchProfile(token)`, qui appelle l'API et utilise la méthode GET pour obtenir les données d'intérêt
 - `populateUI(profile)`, qui permet de récupérer et de remplir les données d'intérêt.
 
+{% details "Cliquez pour afficher le **code JavaScript** du script d'appel à l'API" %}
+
+```shell
+const clientId = "70b7021a56234ecda100b97df932edec";
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
+
+
+function generateCodeVerifier(length) {
+    let text = '';
+    let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (let i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
+
+async function generateCodeChallenge(codeVerifier) {
+    const data = new TextEncoder().encode(codeVerifier);
+    const digest = await window.crypto.subtle.digest('SHA-256', data);
+    return btoa(String.fromCharCode.apply(null, [...new Uint8Array(digest)]))
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '');
+}
+
+if (!code) {
+    redirectToAuthCodeFlow(clientId);
+} else {
+    const accessToken = await getAccessToken(clientId, code);
+    const profile = await fetchProfile(accessToken);
+    populateUI(profile);
+}
+
+export async function redirectToAuthCodeFlow(clientId) {
+    const verifier = generateCodeVerifier(128);
+    const challenge = await generateCodeChallenge(verifier);
+
+    localStorage.setItem("verifier", verifier);
+
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("response_type", "code");
+    params.append("redirect_uri", "http://localhost:5173/callback");
+    params.append("scope", "user-read-private user-read-email");
+    params.append("code_challenge_method", "S256");
+    params.append("code_challenge", challenge);
+
+    document.location = `https://accounts.spotify.com/authorize?${params.toString()}`;
+}
+
+export async function getAccessToken(clientId, code) {
+    const verifier = localStorage.getItem("verifier");
+
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("grant_type", "authorization_code");
+    params.append("code", code);
+    params.append("redirect_uri", "http://localhost:5173/callback");
+    params.append("code_verifier", verifier);
+
+    const result = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params
+    });
+
+    const { access_token } = await result.json();
+    return access_token;
+}
+
+async function fetchProfile(token) {
+    const result = await fetch("https://api.spotify.com/v1/me", {
+        method: "GET", headers: { Authorization: `Bearer ${token}` }
+    });
+
+    return await result.json();
+}
+
+function populateUI(profile) {
+    document.getElementById("displayName").innerText = profile.display_name;
+    if (profile.images[0]) {
+        const profileImage = new Image(200, 200);
+        profileImage.src = profile.images[0].url;
+        document.getElementById("avatar").appendChild(profileImage);
+        document.getElementById("imgUrl").innerText = profile.images[0].url;
+    }
+    document.getElementById("id").innerText = profile.id;
+    document.getElementById("email").innerText = profile.email;
+    document.getElementById("uri").innerText = profile.uri;
+    document.getElementById("uri").setAttribute("href", profile.external_urls.spotify);
+    document.getElementById("url").innerText = profile.href;
+    document.getElementById("url").setAttribute("href", profile.href);
+}
+```
+
+{% enddetails %}
+
 Après exécution d'un rapide `npm run dev` dans la console, j'obtiens le résultat suivant :
 ![cc](Accepter.png)
 ![connexion](Connected.png)
 
-Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom.
+Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom récupérés sur mon compte Spotify.
+
+### Recherche des visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas
+
