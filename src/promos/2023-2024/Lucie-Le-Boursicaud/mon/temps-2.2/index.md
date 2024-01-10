@@ -14,3 +14,152 @@ tags:
 
 résumé: "Ce MON a pour but de se famliariser avec les animations CSS qui sont essentiels pour dynamiser un site web et attirer l'attention d'un visiteur."
 ---
+{%prerequis 'Niveau débutant'%} 
+Connaitre les bases du HTML et du CSS.   
+{%endprerequis%}
+
+### Sommaire 
+1. Q 
+
+Pour ce MON j'ai suivi le cours d'OpenClassroom [Créer des animaton CSS modernes](https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes) d'une durée estimée à 15h. 
+  
+### Qu'est-ce qu'une animation ? 
+
+### Créer des animations avec des transitions 
+Il existe deux moyens de créer des animations en CSS : 
+- les <strong>transitions </strong>
+- les <strong>keyframes </strong>
+
+Les keyframes sont plus complexes à mettre en place mais elles permettent d'obtenir des animations plus élaborées. Les transitions sont elles plus limités mais plus simples à créer.
+
+Pour créer une <strong>transition</strong>il faut différentes informations :
+- une <strong>propriété CSS à modifier</strong>
+- une <strong>valeur initiale pour votre propriété CSS </strong>
+- une <strong>valeur finale pour cette même propriété </strong>
+- une <strong> durée </strong>
+- un <strong>événement pour déclencher votre transition </strong>
+
+On applique la valeur initiale à l’élément qu’on veut modifier, et la valeur finale dans la pseudoclasse qui déclenche la transition. La durée de la transition peut s'exprimer en secondes ou en millisecondes. On peut déclarer les propriétés d'une transistion individuellement ou en les combinant.
+
+```html
+transition: transform ;
+transition-duration: 400ms ; 
+```
+```html
+transition: transform 400ms ; 
+```
+
+### Pseudos-classes pour déclencher une transition
+Les pseudoclasses sont essentielles pour déclencher des transitions en CSS, les plus adaptés sont celles qui impliquent une interaction avec l'utilisateur. On peut aussi combiner des pseudoclasses entre elles pour créer des sélecteurs un peu plus précis, et permette aussi de changer le style d'un élément voisin.
+
+- <strong>:hover</strong>, qui est déclenché au survol de la souris.
+
+-<strong>:active<strong>, activé au clic de l'utilisateur (le plus souvent pour les liens et boutons).
+
+-<strong>:focus</strong>, qui se déclenche lorsque son élément reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris).
+
+-<strong>:valid</strong>, dont la validation du contenu s'effectue correctement par rapport au type de donnée attendu.
+
+-<strong>:invalid</strong>, qui inversement, correspond à un élément dont la validation du contenu ne s'effectue pas correctement par rapport au type de donnée attendu.
+
+-<strong>:not()</strong>, qui correspond à la négation. Elle prend un sélecteur en argument et permet de cibler les éléments qui ne sont pas représentés par cet argument.
+
+-<strong>:checked</strong>, qui correspond aux input de type checkbox, option ou radio qui sont cochés.
+
+-<strong>:enabled</strong>, un élément avec lequel on peut interagir.
+
+-<strong>:disabled</strong>, qui correspond à un élément dont l'interaction a été bloquée.
+
+### Appliquez les 12 principes de l'animation web 
+Maintenant, il est opportun de réfléchir à la manière de créer des animations plus naturelles et engageantes. Bien que les animations déjà élaborées soient fonctionnelles, elles se limitent aux propriétés de transition de base, en laissant de côté la plupart des valeurs par défaut. Ces dernières produisent des effets excessivement lisses, parfois artificiels, en contraste avec la nature, où les mouvements sont caractérisés par l'irrégularité, les oscillations et les changements de direction. L'objectif d'intégrer des animations sur un site web est de procurer une expérience immersive en infusant une dynamique organique dans les mouvements, harmonisant ainsi l'expérience utilisateur avec notre perception naturelle.
+
+### Créer des transitions css à propriétés multiples
+Pour créer des animations vivantes et agréables il faut faire plus que simplement passer d'un état A à un état B. En superposant des effets de mouvement on offre à l'utilisateur une animation qui parait beaucoup plus authentique.
+Ainsi, au sein d'une transition, on peut facilement animer deux propriétés, ou même autant que l'on désire.
+
+L’utilisation du mot-clé <strong>all</strong>permet de déclencher plusieurs changements au même moment et pour la même durée, mais il existe un autre moyen d’ajouter des propriétés multiples à une transition.
+On peut aussi faire une liste des animations de chaque propriété à laquelle nous voulons ajouter une transition, séparées par des virgules.
+
+```html
+transition: transform 450ms, background-color 450ms ; 
+```
+
+On peut donner une <strong>durée différente</strong> pour chaque changements. C’est très utile pour obtenir un rendu <strong> moins uniforme</strong>, et ainsi créer quelque chose de plus intéressant visuellement et de plus engageant pour l’utilisateur. 
+
+```html
+transition: transform 450ms, background-color 300ms ; 
+```
+
+La différence ne se voit qu'à peine, mais ces quelques fractions de secondes permettent de rendre l’animation un peu <strong>moins parfaite</strong> et lui apportent un peu de <strong>texture</strong>.
+
+Pour accentuer encore plus le côté "imparfait" de l'animation on peut retarder le changement sur une des propriétés. Par exemple faire démarer la transition sur *background-color* 150ms plus tard pour que les deux transistions se terminrent en même temps.
+
+```html
+transition: transform 450ms, background-color 300ms;
+transition-delay: 0, 150ms;
+```
+
+### Créer des animations plus naturelles avec les fonctions de timing
+Pour que les animations soient encore plus réaliste il faut penser que dans la nature un objet en mouvement doit accèléré à un moment donner et déccelérer lorsque son mouvement prend fin. On parle de <strong>ease-in</strong> et <strong>ease-out</strong>.
+
+En CSS on utilise la propriété <strong>transition-timing-function</strong> pour régler la courbe d’accélération d’une transition.
+
+#### Principales fonctions de timing 
+- la fonction <strong>linear</strong> : elle ne connaît pas d'accentuation à l'accélération ou à la décélération. Sa courbe est totalement droite du point A au point B.
+```html
+transition: transform 1000ms;
+transition-timing-function: linear;
+```
+- les fonctions <strong>ease-in-out</strong>, <strong>ease-in</strong>,<strong>ease-out</strong> : elles suivent une courbe d’accélération (pour ease-in et ease-in-out) et de décélération (pour ease-out et ease-in-out) subtile.
+```html
+transition: transform 1000ms ease-in-out;
+```
+<div style="display:flex"><img src="courbeseases.png"></div>
+
+- la fonction <strong>ease</strong> : c'est la fonction qui est utilisée par défaut lorsqu'aucune fonction n'est précisée. Elle ressemble beaucoup aux fonctions ci-dessus mais avec une accélération plus nette et une rampe de décélération plus prononcée.
+
+Ces fonctions sont des raccourcis de la fonction <strong>cubic-bezier</strong> : on lui indique une liste de valeurs numériques, qu'elle transforme en courbe d’accélération. Par exemple,  ease-in-out  peut être écrite ainsi :
+
+```html
+transition-timing-function: cubic-bezier(.42, 0, .58, 1);
+```
+Avec des outils comme le site [Cubic Bezier](https://cubic-bezier.com/#.17,.67,.83,.67) on peut créer facilement la courbe de bézier qui correspond à l'accélèration et la déccélération que l'on désire et récupérer les valeur numérique correspondante.
+
+### Optimisez les performances de votre navigateur pour vos animations CSS
+À l'écran, il n'y a pas de réel déplacement, mais plutôt <strong>une séquence d'images</strong> se succédant suffisamment rapidement pour être interprétée par notre cerveau comme un mouvement. Cette séquence d'images est appelée les <strong>FPS</strong> (Images par seconde).
+
+Un FPS plus élevé garantit une animation <strong>plus fluide</strong>, et l'idéal est généralement de viser <strong>60 FPS</strong>. Les étapes de création d'une page web comprennent <strong>le style</strong> (où le navigateur interprète la structure HTML pour préparer le style), la <strong>mise en page</strong> (où le navigateur détermine la disposition et la taille des éléments en fonction du style), la <strong>peinture</strong> (où les éléments sont transformés en pixels), et enfin <strong>la composition</strong> (où tous les éléments sont combinés pour afficher la page).
+
+Pour assurer <strong>la fluidité</strong> des animations, il est recommandé de se limiter à animer des propriétés lors de l'étape de composition. Les plus utiles à cet effet sont les propriétés <strong>"transform" et "opacity"</strong>.
+
+### Créez des animations fluides avec la propriété CSS transform
+Pour nous assurer que nos animations soient aussi fluides que possibles, nos deux propriétés alliées sont  <strong>transform  et  opacity</strong>. Cela peut paraitre limité mais en fait ces deux propriétés ont une multitude de fonctions à elles seules. 
+
+La propriété "transform" offre une flexibilité exceptionnelle pour manipuler et animer nos sites de manière variée. Étant donné que toutes ces manipulations se produisent pendant l'étape de composition, les animations sont fluides sur tous les supports.
+
+Il est possible de déplacer des éléments grâce aux fonctions de translation telles que "translate()", "translateX()", "translateY()", et "translate3d()". De même, on peut ajuster la taille avec les fonctions de mise à l'échelle telles que "scale()", "scaleX()", "scaleY()", et "scale3d()". En outre, il est possible de réaliser des rotations en utilisant les fonctions "rotate()", "rotateX()", "rotateY()", et "rotateZ()".
+
+Il est important de noter qu'ajouter une deuxième propriété "transform" annule la première, ce qui signifie qu'un seul "transform" peut être défini dans un même sélecteur. Pour effectuer plusieurs transformations, il suffit de les lister dans une seule propriété "transform", comme suit :
+```html
+transform:translateX(200%) scale(2)
+```
+L'ordre y est important car une propriété contenant plusieurs fonctions exécute ces fonctions dans l'ordre, de droite à gauche.
+
+Pour les fonctions de transformations en 3D telles que "translate3d()", "rotateZ()", et "scale3d()", il est également nécessaire d'inclure la fonction "perspective". Cela permet d'indiquer au navigateur la distance à laquelle se trouve l'utilisateur : plus la distance est grande, moins l'animation sera perceptible.
+
+
+### Horodateur
+| Date | Heures passées | Indications | 
+| -------- | -------- |-------- |
+| Lundi 8/01  | 1H  | Créer des animations simples avec des transitions |
+| Lundi 8/01 | 1H | Déclencher les transistions avec les pseudos-classes |
+| Mardi 9/01 | 20min | Appliquez les 12 principes de l'animation Web |
+| Mardi 9/01 | 40min | Créer des transitions CSS à propriétés multiples |
+| Mercredi 10/01 | 1H | Créer des animations plus naturelles avec les fonctions de timing |
+| Mercredi 10/01 | 10min | Quizz: Réaliser ses premières animations CSS |
+| Mercredi 10/01 | 30min | Optimisez les performances de votre navigateur pour vos animations CSS |
+| Mercredi 10/01 | 1H | Créez des animations fluides avec la propriété CSS transform |
+
+
+
+
