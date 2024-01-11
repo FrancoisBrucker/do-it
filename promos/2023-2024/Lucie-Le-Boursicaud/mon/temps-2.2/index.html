@@ -292,6 +292,20 @@ transition-timing-function: linear;
 <li>Le mot clé &quot;both&quot; prolonge l'animation dans les deux sens, couvrant les valeurs initiales et finales.</li>
 </ul>
 <p>Une fonction de timing pour les @keyframes peut être définie en utilisant la fonction animation-timing-function sur le sélecteur où l'animation a été assignée. De plus, un timing spécifique peut être défini keyframe par keyframe en assignant la propriété animation-timing-function aux keyframes concernés.</p>
+<h3>Manipuler et réutilisez les animations CSS</h3>
+<p>On peut répéter un ensemble de keyframes autant de fois que nécessaire en utilisant la propriété &quot;animation-iteration-count&quot; avec le nombre de cycles comme valeur ;</p>
+<p>On a la possibilité de régler nos keyframes pour qu'ils se répètent à l'infini en utilisant la propriété &quot;animation-iteration-count&quot; avec le mot clé « infinite » ;</p>
+<p>La propriété &quot;animation-direction&quot; permet de lire un ensemble de keyframes normalement avec le mot clé « normal » ;</p>
+<p>Avec le mot clé « reverse » de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en sens inverse ;</p>
+<p>En utilisant le mot clé « alternate » avec la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière ;</p>
+<p>Enfin, avec le mot clé « alternate-reverse » de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière, mais en commençant par la fin ;</p>
+<p>On peut mettre en pause une animation avec keyframe en assignant à la propriété &quot;animation-play-state&quot; la valeur réglée sur « paused » ;</p>
+<p>Pour reprendre la lecture d'une animation avec keyframe, on utilise la propriété &quot;animation-play-state&quot; avec la valeur réglée sur « running ».</p>
+<h3>Affinez vos animations CSS avec DevTools</h3>
+<p>Iterer est la clé d'une animation réussie. Se contenter d'ajouter quelques chiffres et de cliquer sur Enregistrer ne suffit généralement pas ;</p>
+<p>Notre expérience nous donne une bonne intuition sur les valeurs de départ qui semblent appropriées pour nos propriétés d'animation ;</p>
+<p>Le panneau Animations de DevTools nous offre la possibilité d'affiner rapidement les animations, d'improviser et d'expérimenter jusqu'à ce que nous trouvions la bonne durée ou le bon délai pour un élément ;</p>
+<p>Le panneau Changes (Modifications) nous permet de visualiser les propriétés que nous avons modifiées ainsi que leurs nouvelles valeurs, facilitant ainsi la mise à jour de notre code source en conséquence.</p>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -366,6 +380,16 @@ transition-timing-function: linear;
 <td>Jeudi 11/01</td>
 <td>1H</td>
 <td>Utilisez les propriétés de l'animation CSS</td>
+</tr>
+<tr>
+<td>Samedi 13/01</td>
+<td>45min</td>
+<td>Manipulez et réutilisez les animations CSS</td>
+</tr>
+<tr>
+<td>Samedi 13/01</td>
+<td>45min</td>
+<td>Affinez vos animations CSS avec DevTools</td>
 </tr>
 </tbody>
 </table>
