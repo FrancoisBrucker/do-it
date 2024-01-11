@@ -176,6 +176,15 @@ Par exemple ici, j'ai cliqué sur la ville de Brest, cela va mettre à jour les 
 
 Sur cet extrait, j'ai cliqué sur les accords "vide" du diagramme donc ceux en attente. Cela met en avant les villes dans lesquels il y a des prêts en attente.
 
+**Défauts de Power BI**
+Voici quelques défauts que j'ai pu remarqué lors de mon utilisation de Power BI :
+
+- La version gratuite a des limites : il est difficile d'accéder aux ressources gratuites sans avoir de mail professionnel.
+- Le logiciel ne met pas en avant les étapes de traitement des données : le nettoyage et la collecte sont possible mais moins intuitif que le reste.
+- Les fonctions et filtres sont complexes et permettent de réaliser un ensemble de requête SQL très poussé, cependant les filtres mis en avant ne sont pas toujours exactement ceux que l'on imagine.
+
+N'ayant pas eu l'occasion d'essayer d'autre logiciel de création de tableau de bord je ne peux pas émettre de recommendation particulière.
+
 <h2 id="h6"> Conclusion </h2>
 
 Les outils de tableau de bord sont pertinent pour l'étude de données, ils apportent une ergonomie d'utilisation que ne possède pas d'autres logiciel (excel notamment) puisqu'il permet de faire des interaction dynamique là ou excel se contente de réaliser une seule fois le graphique.
