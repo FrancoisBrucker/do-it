@@ -249,5 +249,5 @@ Le panneau Changes (Modifications) nous permet de visualiser les propriétés qu
 | Jeudi 11/01 | 1H | Animez les couleurs de manière performante avec opacity |
 | Jeudi 11/01 | 30min | Créez des animations plus complexes avec la règle CSS @keyframes |
 | Jeudi 11/01 | 1H | Utilisez les propriétés de l'animation CSS |
-| Samedi 13/01 | 45min | Manipulez et réutilisez les animations CSS |
-| Samedi 13/01 | 45min | Affinez vos animations CSS avec DevTools |
+<!-- | Samedi 13/01 | 45min | Manipulez et réutilisez les animations CSS |
+| Samedi 13/01 | 45min | Affinez vos animations CSS avec DevTools | -->
