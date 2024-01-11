@@ -78,6 +78,8 @@ Le but de toutes ces attaques est souvent le même (hors conflit internationaux)
 
 <h2 id="h3"> Mise en place </h2>
 
+Afin de mettre en place un tableau de bord, il est nécessaire de suivre une démarche précise afin d'obtenir un résultat pertinent pour le client, voici quelques points important de la démarche :
+
 **Rencontrer les utilisateurs finaux**
 Il est nécessaire d'aller rencontrer les utilisateurs finaux :
 
@@ -104,7 +106,7 @@ Le but est de présenter des dashboard similaires aux clients afin qu'ils puisse
 **Prototyper la solution avec un wireframe**
 Le wireframe (ou plus simplement une maquette) va permettre de dessiner l'ébauche du tableau de bord. Cette étape permet en collaboration avec le client de proposer une solution qui leur est adapté et qui est ergonomique pour leurs différents cas d'utilisation. Le but de cette maquette va être de répondre aux besoins identifiés dans les users stories.
 
-**Fixer des étapes**
+**Fixer des étapes de réalisation du tableau de bord**
 Comme dans tout projet, il est important d'éviter l'effet tunnel. Il est donc nécessaire de fixer des étapes avec des rendus pour la réalisation du dashboard.
 
 <h2 id="h4"> Exemple d'utilisation </h2>
