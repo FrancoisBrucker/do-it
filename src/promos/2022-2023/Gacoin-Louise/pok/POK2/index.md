@@ -218,7 +218,8 @@ Après plusieurs tests couleur voici le resultat final. J’ai aussi choisi de m
 J’ai enregistré une démo vidéo de la maquette afin de l’envoyer à mes testeurs qui n’habitent pas sur Marseille.
 
 <video width="320" height="240" controls>
-  <source src="MVP.mov" type="video/mp4">
+  <source src="MVP.mp4" type="video/mp4">
+  <source src="MVP.webm" type="video/webm">
 </video>
 
 Voici le lien de la maquette figma si vou voulez tester par vous même:
