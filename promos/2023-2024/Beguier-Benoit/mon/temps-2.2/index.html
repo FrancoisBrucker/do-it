@@ -152,7 +152,7 @@
 <ol>
 <li>Introduction</li>
 <li>Apprentissage de Node.js</li>
-<li>?</li>
+<li>Mise en application</li>
 </ol>
 <h2>Introduction</h2>
 <p>Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-dessous :</p>
@@ -160,10 +160,65 @@
 <li><em>Passez au Full Stack avec Node.js, Express et MongoDB</em>, cours réalisé sur OpenClassrooms*. Accessible <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">ici</a></li>
 <li><em>Deep Dive Into Modern Web Development</em>. Accessible <a href="https://fullstackopen.com/en/">ici</a></li>
 <li><em>Maîtriser le Développement Back-End Web avec Node.js, Express et MongoDB</em>, MON d'Omar Salame. Accessible <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Omar-Salame/mon/temps-1.2/">ici</a></li>
+<li><em>Introduction to Node.js</em>, Node.js. Accessible <a href="https://nodejs.org/en/learn/getting-started/introduction-to-nodejs">ici</a></li>
+<li><em>Basic Routing</em>, ExpressJS. Accessible <a href="https://expressjs.com/en/starter/basic-routing.html">ici</a>.</li>
 </ul>
 <p>Le développement back-end représente la colonne vertébrale souvent méconnue mais cruciale de tout système informatique. Il englobe l'ensemble des opérations côté serveur, assurant le bon déroulement, la gestion des données et la logique métier nécessaire aux applications web et systèmes informatiques pour offrir des fonctionnalités interactives et dynamiques. Les bases de données, les serveurs web, les langages de programmation côté serveur et les frameworks sont au coeur du développement back-end.</p>
 <h2>Apprentissage de Node.js</h2>
-<p>Je prends d'abord connaissance du MON d'Omar, car il constitue une bonne base pour la direction que je souhaite prendre lors de ce MON. Son MON est complet, je vous recommande de le consulter. Je ne suis pas sûr d'aller plus loin que lui en 10 heures. J'essaierai dans mon MON d'apporter quelques précisions et compléments.</p>
+<p>Je prends d'abord connaissance du MON d'Omar, car il constitue une bonne base pour la direction que je souhaite prendre lors de ce MON. Son MON est complet, je vous recommande de le consulter. Je ne suis pas sûr d'aller plus loin que lui en 10 heures. J'essaierai dans mon MON d'apporter des précisions et compléments.</p>
+<h2>Mise en application</h2>
+<h3>Initialisation du projet avec Vite</h3>
+<p>Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2.</p>
+<p>Pour créer une application :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> create vite@latest part1 -- <span class="token parameter variable">--template</span> react
+
+<span class="token builtin class-name">cd</span> part1
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token function">npm</span> run dev
+</code></pre>
+<p>NPM signifie Node Package Manager.<br>
+Vite dirige l'application sur le port 5173. Cela crée un répertoire entier avec des modules, un fichier <code>index.html</code>, un fichier .css, et un package .json. Le code de l'application est dans le dossier <em>src</em>.</p>
+<p><img src="dossier.png" alt="alt"></p>
+<h3>Configuration du serveur Node.js</h3>
+<p>Pour ajouter un serveur Node.js, je vais utiliser Express, un framework web reposant sur Node. Express s'installe avec la commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> express
+</code></pre>
+<p>On crée ensuite un fichier <code>server.js</code> à la racine du projet pour configurer le serveur.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3001</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Hello from the server!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running at http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h3>Configuration du Proxy</h3>
+<p>On modifie ensuite le fichier vite.config.js pour configurer le proxy vers le serveur Node.js.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">server</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">proxy</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'/api'</span><span class="token operator">:</span> <span class="token string">'http://localhost:3001'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Communication Client-Serveur</h3>
+<p>On peut utiliser une commande <code>fetch</code> pour communiquer avec le serveur depuis le client React. Par exemple :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Le développement Frontend, lui, s'effectue comme d'habitude.</p>
+<h3>Formation d'OpenClassrooms</h3>
+<p>Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route <code>GET</code> est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme multer.</p>
+<h2>Conclusion</h2>
+<p>Je suis maintenant à l'aise avec les termes de base du développement fullstack. Je sais comment créer et paramétrer un serveur et un proxy.</p>
 
 
 </article>
