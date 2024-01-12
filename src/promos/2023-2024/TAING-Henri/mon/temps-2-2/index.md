@@ -230,7 +230,7 @@ Je vous laisse les images, le code étant organisé et détaillé dans le jupyte
 <img src="gender_distrib.PNG" width="350" height="350">
 
 **Origine des participants, car aux Etats-Unis, ça a de l'importance...**
-<img src="race_distrib.PNG" width="350" height="350">
+<img src="race_distribution.PNG" width="350" height="350">
 
 **Domaine d'étude/de travail des participants**
 <img src="job_distrib.PNG" width="350" height="350">
@@ -240,34 +240,34 @@ Je vous laisse les images, le code étant organisé et détaillé dans le jupyte
 On a posé des questions aux participants avant l'événement. 
 
 **1ère question : Que cherchent les hommes et les femmes chez leurs partenaires ?**
-<img src="m_w_look_for.PNG" width="350" height="350">
+<img src="m_w_look_for.PNG" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les hommes chez leurs partenaires ? Que cherchent les autres hommes chez leurs partenaires d'après eux ? Que cherchent les femmes chez leurs partenaires d'après eux ? Dans l'ordre.**
-<img src="men_3_attr.PNG" width="350" height="350">
+<img src="men_3_attr.PNG" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les femmes chez leurs partenaires ? Que cherchent les autres femmes chez leurs partenaires d'après eux ? Que cherchent les hommes chez leurs partenaires d'après eux ? Dans l'ordre.**
-<img src="women_3_attr.PNG" width="350" height="350">
+<img src="women_3_attr.PNG" width="500" height="500">
 
 ### Au milieu de, et après l'événement
 
 D'autres questions ont été posées au milieu et après l'événement.
 
 **Superposition de 3 questions, que cherchent les hommes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
-<img src="men_reality.PNG" width="350" height="350">
+<img src="men_reality.PNG" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les femmes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
-<img src="women_reality.PNG" width="350" height="350">
+<img src="women_reality.PNG" width="500" height="500">
 
 **Superposition de 2 questions, importance des différents critères en réalité dans leurs décisions (posée à la fin de l'événement) chez les hommes et chez les femmes ?**
-<img src="m_w_after.PNG" width="350" height="350">
+<img src="m_w_after.PNG" width="500" height="500">
 
 **Comparaison attentes/réalité - Ce que cherchent les femmes chez leurs partenaires d'après les hommes (posée au début de l'événement) et l'importance des critères dans les décisions des femmes (posée à la fin de l'événement)**
 
-<img src="compar_w.PNG" width="350" height="350">
+<img src="compar_w.PNG" width="500" height="500">
 
 **Comparaison attentes/réalité - Ce que cherchent les hommes chez leurs partenaires d'après les femmes (posée au début de l'événement) et l'importance des critères dans les décisions des hommes (posée à la fin de l'événement)**
 
-<img src="compar_m.PNG" width="350" height="350">
+<img src="compar_m.PNG" width="500" height="500">
 
 ## 5. Conclusion <a id="section-5"></a>
 
