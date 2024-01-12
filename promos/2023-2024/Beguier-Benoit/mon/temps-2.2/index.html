@@ -168,7 +168,7 @@
 <p>Je prends d'abord connaissance du MON d'Omar, car il constitue une bonne base pour la direction que je souhaite prendre lors de ce MON. Son MON est complet, je vous recommande de le consulter. Je ne suis pas sûr d'aller plus loin que lui en 10 heures. J'essaierai dans mon MON d'apporter des précisions et compléments.</p>
 <h2>Mise en application</h2>
 <h3>Initialisation du projet avec Vite</h3>
-<p>Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2.</p>
+<p>Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2. Pour rappel, Vite est une technologie permettant la création d'applications back-end. Je l'utilise car j'apprécie sa fluidité et sa réactivité.</p>
 <p>Pour créer une application :</p>
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> create vite@latest part1 -- <span class="token parameter variable">--template</span> react
 
@@ -181,7 +181,9 @@
 Vite dirige l'application sur le port 5173. Cela crée un répertoire entier avec des modules, un fichier <code>index.html</code>, un fichier .css, et un package .json. Le code de l'application est dans le dossier <em>src</em>.</p>
 <p><img src="dossier.png" alt="alt"></p>
 <h3>Configuration du serveur Node.js</h3>
-<p>Pour ajouter un serveur Node.js, je vais utiliser Express, un framework web reposant sur Node. Express s'installe avec la commande :</p>
+<p>Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur V8 de Google. L'un de ses principaux avantages réside dans sa capacité à créer des serveurs de manière efficace et non bloquante. Pour mettre en place un serveur avec Node.js de manière traditionnelle, le processus est relativement simple.<br>
+Tout d'abord, il faut importer le module &quot;http&quot; inclus dans Node.js, puis créer un serveur en utilisant la méthode <code>createServer()</code>. Ensuite, on définit une fonction de rappel qui sera appelée à chaque fois qu'une requête est reçue. Cette fonction de rappel prend généralement deux paramètres, représentant la requête (<em>request</em>) et la réponse (<em>response</em>). À l'intérieur de cette fonction, on spécifie les actions à effectuer en réponse à la requête, comme par exemple l'envoi de données ou la lecture de fichiers. On spécifie enfin le port sur lequel le serveur &quot;écoutera&quot; les requêtes entrantes, en utilisant la méthode <code>listen()</code>.</p>
+<p>Pour ajouter un serveur Node.js, je vais plutôt utiliser Express, un framework web reposant sur Node. Cette méthode est relativement plus rapide et simple. Express s'installe avec la commande :</p>
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> express
 </code></pre>
 <p>On crée ensuite un fichier <code>server.js</code> à la racine du projet pour configurer le serveur.</p>
@@ -199,7 +201,8 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 
 </code></pre>
 <h3>Configuration du Proxy</h3>
-<p>On modifie ensuite le fichier vite.config.js pour configurer le proxy vers le serveur Node.js.</p>
+<p>Un proxy est un serveur intermédiaire qui agit comme un relais entre l'utilisateur et le serveur de destination. Son rôle principal est de filtrer, rediriger et contrôler les requêtes et les réponses échangées entre les deux parties. Les proxies sont largement utilisés pour plusieurs raisons, notamment la gestion des performances, la sécurité et la confidentialité.</p>
+<p>Pour ce faire, on modifie ensuite le fichier <em>vite.config.js</em> pour configurer le proxy vers le serveur Node.js.</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">server</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">proxy</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -216,7 +219,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 </code></pre>
 <p>Le développement Frontend, lui, s'effectue comme d'habitude.</p>
 <h3>Formation d'OpenClassrooms</h3>
-<p>Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route <code>GET</code> est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme multer.</p>
+<p>Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route <code>GET</code> est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme l'utilisation de <em>multer</em>.</p>
 <h2>Conclusion</h2>
 <p>Je suis maintenant à l'aise avec les termes de base du développement fullstack. Je sais comment créer et paramétrer un serveur et un proxy.</p>
 
