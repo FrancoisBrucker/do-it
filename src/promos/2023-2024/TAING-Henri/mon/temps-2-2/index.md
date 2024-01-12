@@ -230,10 +230,10 @@ Je vous laisse les images, le code étant organisé et détaillé dans le jupyte
 <img src="gender_distrib.PNG" width="350" height="350">
 
 **Origine des participants, car aux Etats-Unis, ça a de l'importance...**
-<img src="race_distribution.PNG" width="350" height="350">
+<img src="race_distribution.PNG" width="500" height="500">
 
 **Domaine d'étude/de travail des participants**
-<img src="job_distrib.PNG" width="350" height="350">
+<img src="job_distrib.PNG" width="500" height="500">
 
 ### Avant l'événement
 
