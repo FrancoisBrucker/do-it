@@ -259,9 +259,20 @@ D'autres questions ont été posées au milieu et après l'événement.
 **Superposition de 3 questions, que cherchent les femmes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
 <img src="women_reality.PNG" width="350" height="350">
 
+**Superposition de 2 questions, importance des différents critères en réalité dans leurs décisions (posée à la fin de l'événement) chez les hommes et chez les femmes ?**
+<img src="m_w_after.PNG" width="350" height="350">
+
+**Comparaison attentes/réalité - Ce que cherchent les femmes chez leurs partenaires d'après les hommes (posée au début de l'événement) et l'importance des critères dans les décisions des femmes (posée à la fin de l'événement)**
+
+<img src="compar_w.PNG" width="350" height="350">
+
+**Comparaison attentes/réalité - Ce que cherchent les hommes chez leurs partenaires d'après les femmes (posée au début de l'événement) et l'importance des critères dans les décisions des hommes (posée à la fin de l'événement)**
+
+<img src="compar_m.PNG" width="350" height="350">
 
 ## 5. Conclusion <a id="section-6"></a>
 
+J'ai passé un peu plus que 10h sur le MON, mais c'était un pur plaisir. Les graphes parlent d'eux-mêmes. Ce n'est pas tous les jours qu'on a une démonstration empirique de la superficialité de notre espèce en quelques graphes super jolis. 
 
 ## 6. Sources <a id="section-7"></a>
 
