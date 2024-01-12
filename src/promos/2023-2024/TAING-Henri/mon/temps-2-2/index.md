@@ -222,7 +222,42 @@ Pour reprendre mes connaissances en analyse de données avec Python, j'ai fait l
 La base de données provient de Kaggle et s'appelle [Speed Dating Experiment](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment) et a été faite à partir d'une expérience conduite par Columbia Business School entre 2002 et 2004. Durant ces événements de "Speed Dating", chaque participant a quatre minutes avec chaque personne du sexe opposé, les participants étant tous soit un homme soit une femme, et hétérosexuels. 
 L'idée de cette base de données est de comprendre quels facteurs influencent l'amour au premier regard.
 
-De mon côté, j'ai décidé d'utiliser cette base de données pour répondre aux questions qui m'intéressaient.
+De mon côté, j'ai décidé d'utiliser cette base de données pour répondre aux questions qui m'intéressaient. 
+Je vous laisse les images, le code étant organisé et détaillé dans le jupyter notebook ! Il ne faut pas cependant oublier qu'une analyse de données est toujours biaisée, que ce soit par la qualité des données et par la façon de l'analyser et de la faire visualiser.
+
+### Qui a participé à l'événement ? 
+
+**Genre des participants**
+<img src="gender_distrib.PNG" width="350" height="350">
+
+**Origine des participants, car aux Etats-Unis, ça a de l'importance...**
+<img src="race_distrib.PNG" width="350" height="350">
+
+**Domaine d'étude/de travail des participants**
+<img src="job_distrib.PNG" width="350" height="350">
+
+### Avant l'événement
+
+On a posé des questions aux participants avant l'événement. 
+
+**1ère question : Que cherchent les hommes et les femmes chez leurs partenaires ?**
+<img src="m_w_look_for.PNG" width="350" height="350">
+
+**Superposition de 3 questions, que cherchent les hommes chez leurs partenaires ? Que cherchent les autres hommes chez leurs partenaires d'après eux ? Que cherchent les femmes chez leurs partenaires d'après eux ? Dans l'ordre.**
+<img src="men_3_attr.PNG" width="350" height="350">
+
+**Superposition de 3 questions, que cherchent les femmes chez leurs partenaires ? Que cherchent les autres femmes chez leurs partenaires d'après eux ? Que cherchent les hommes chez leurs partenaires d'après eux ? Dans l'ordre.**
+<img src="women_3_attr.PNG" width="350" height="350">
+
+### Au milieu de, et après l'événement
+
+D'autres questions ont été posées au milieu et après l'événement.
+
+**Superposition de 3 questions, que cherchent les hommes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
+<img src="men_reality.PNG" width="350" height="350">
+
+**Superposition de 3 questions, que cherchent les femmes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
+<img src="women_reality.PNG" width="350" height="350">
 
 
 ## 5. Conclusion <a id="section-6"></a>
