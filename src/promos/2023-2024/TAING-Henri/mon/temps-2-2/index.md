@@ -25,11 +25,10 @@ Avoir un cerveau à moitié allumé et quelques connaissances en Python
 
 1. [Introduction](#section-1)
 2. [SQL débutant](#section-2)
-2. [SQL intermédiaire](#section-3)
-3. [Rappels sur Python et ses librairies pour l'analyse de données](#section-4)
-4. [Quelques résultats et représentations à partir d'une base de données sur le Speed Dating](#section-5)
-5. [Conclusion](#section-6)
-6. [Sources](#section-7) 
+3. [SQL intermédiaire](#section-3)
+4. [Quelques résultats et représentations à partir d'une base de données sur le Speed Dating](#section-4)
+5. [Conclusion](#section-5)
+6. [Sources](#section-6) 
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -270,11 +269,11 @@ D'autres questions ont été posées au milieu et après l'événement.
 
 <img src="compar_m.PNG" width="350" height="350">
 
-## 5. Conclusion <a id="section-6"></a>
+## 5. Conclusion <a id="section-5"></a>
 
 J'ai passé un peu plus que 10h sur le MON, mais c'était un pur plaisir. Les graphes parlent d'eux-mêmes. Ce n'est pas tous les jours qu'on a une démonstration empirique de la superficialité de notre espèce en quelques graphes super jolis. 
 
-## 6. Sources <a id="section-7"></a>
+## 6. Sources <a id="section-6"></a>
 
 [Exercices SQL](https://sql.sh/exercices-sql)
 [Speed Dating Experiment](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment)
