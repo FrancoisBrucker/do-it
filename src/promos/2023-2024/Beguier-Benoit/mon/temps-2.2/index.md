@@ -50,7 +50,7 @@ Je prends d'abord connaissance du MON d'Omar, car il constitue une bonne base po
 
 ### Initialisation du projet avec Vite
 
-Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2.
+Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2. Pour rappel, Vite est une technologie permettant la création d'applications back-end. Je l'utilise car j'apprécie sa fluidité et sa réactivité.
 
 Pour créer une application :
 
@@ -70,7 +70,10 @@ Vite dirige l'application sur le port 5173. Cela crée un répertoire entier ave
 
 ### Configuration du serveur Node.js
 
-Pour ajouter un serveur Node.js, je vais utiliser Express, un framework web reposant sur Node. Express s'installe avec la commande :
+Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur V8 de Google. L'un de ses principaux avantages réside dans sa capacité à créer des serveurs de manière efficace et non bloquante. Pour mettre en place un serveur avec Node.js de manière traditionnelle, le processus est relativement simple. 
+Tout d'abord, il faut importer le module "http" inclus dans Node.js, puis créer un serveur en utilisant la méthode `createServer()`. Ensuite, on définit une fonction de rappel qui sera appelée à chaque fois qu'une requête est reçue. Cette fonction de rappel prend généralement deux paramètres, représentant la requête (*request*) et la réponse (*response*). À l'intérieur de cette fonction, on spécifie les actions à effectuer en réponse à la requête, comme par exemple l'envoi de données ou la lecture de fichiers. On spécifie enfin le port sur lequel le serveur "écoutera" les requêtes entrantes, en utilisant la méthode `listen()`. 
+
+Pour ajouter un serveur Node.js, je vais plutôt utiliser Express, un framework web reposant sur Node. Cette méthode est relativement plus rapide et simple. Express s'installe avec la commande :
 
 ```shell
 npm install express
@@ -95,7 +98,9 @@ app.listen(port, () => {
 
 ### Configuration du Proxy
 
-On modifie ensuite le fichier vite.config.js pour configurer le proxy vers le serveur Node.js.
+Un proxy est un serveur intermédiaire qui agit comme un relais entre l'utilisateur et le serveur de destination. Son rôle principal est de filtrer, rediriger et contrôler les requêtes et les réponses échangées entre les deux parties. Les proxies sont largement utilisés pour plusieurs raisons, notamment la gestion des performances, la sécurité et la confidentialité.
+
+Pour ce faire, on modifie ensuite le fichier *vite.config.js* pour configurer le proxy vers le serveur Node.js.
 
 ```js
 export default {
@@ -121,7 +126,7 @@ Le développement Frontend, lui, s'effectue comme d'habitude.
 
 ### Formation d'OpenClassrooms
 
-Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route `GET` est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme multer.
+Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route `GET` est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme l'utilisation de *multer*.
 
 ## Conclusion
 
