@@ -1,18 +1,19 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Former une équipe à utiliser un nouveau logiciel"
 authors:
   - BELAAZIZ Khaoula
 
-date: 1971-01-01
+date: 2024-01-04
 
 tags: 
   - "temps 2"
   - "Eclairage public"
-  - "Etude"
+  - "Analyse de besoin"
+  - "Formation"
 
-résumé: Comment faire une étude photométrique en utilisant DIALux ?
+résumé: Comment former une équipe à faire une étude photométrique en utilisant DIALux ?
 ---
 ## Roadmap : 
 {%faire "**Sprint 1**"%}
@@ -50,7 +51,17 @@ J'ai choisi DIALux comme logiciel d'éclairage pour la formation de mon équipe.
 - Finaliser le support de formation
 - Faire la formation aux membre de l'équipe
 
-## Bibliothèque
-- Dialux evo for Advanced Users**Temps estimé: 6** : (https://www.udemy.com/course/dialux-evo-for-advance-users/)
-- Street Lighting:(https://www.udemy.com/course/jgjcigwg/)
+# Sprint 2
+## Préparation de la formation
+<a href="Manuel Formation DIALux evo.pdf" target="_blank">Cliquez ici pour ouvrir le manuel de formation dans un nouvel onglet</a>
 
+## Analyse du besoin
+### Formulaire d'analyse du besoin
+### Réponses
+## Formation 2
+### Etapes
+## Bibliothèque
+{% prerequis "**Références**" %}
+- DIALux evo for Beginners **Temps estimé: 4** : (https://www.udemy.com/course/dialux-evo-for-advance-users/)
+- Street Lighting **Temps estimé: 7,5 heures au total** :(https://www.udemy.com/course/jgjcigwg/)
+{% endprerequis %}
