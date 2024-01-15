@@ -204,28 +204,28 @@ Une fonction de timing pour les @keyframes peut être définie en utilisant la f
 
 ### Manipuler et réutilisez les animations CSS
 
-On peut répéter un ensemble de keyframes autant de fois que nécessaire en utilisant la propriété "animation-iteration-count" avec le nombre de cycles comme valeur ;
+On peut répéter un ensemble de keyframes autant de fois que nécessaire en utilisant la propriété "animation-iteration-count" avec le nombre de cycles comme valeur.
 
-On a la possibilité de régler nos keyframes pour qu'ils se répètent à l'infini en utilisant la propriété "animation-iteration-count" avec le mot clé « infinite » ;
+On a la possibilité de régler nos keyframes pour qu'ils se répètent à l'infini en utilisant la propriété "animation-iteration-count" avec le mot clé « infinite ».
 
-La propriété "animation-direction" permet de lire un ensemble de keyframes normalement avec le mot clé « normal » ;
+La propriété "animation-direction" permet de lire un ensemble de keyframes normalement avec le mot clé « normal ».
 
-Avec le mot clé « reverse » de la propriété "animation-direction", on peut lire un ensemble de keyframes en sens inverse ;
+Avec le mot clé « reverse » de la propriété "animation-direction", on peut lire un ensemble de keyframes en sens inverse.
 
-En utilisant le mot clé « alternate » avec la propriété "animation-direction", on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière ;
+En utilisant le mot clé « alternate » avec la propriété "animation-direction", on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière.
 
-Enfin, avec le mot clé « alternate-reverse » de la propriété "animation-direction", on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière, mais en commençant par la fin ;
+Enfin, avec le mot clé « alternate-reverse » de la propriété "animation-direction", on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière, mais en commençant par la fin.
 
-On peut mettre en pause une animation avec keyframe en assignant à la propriété "animation-play-state" la valeur réglée sur « paused » ;
+On peut mettre en pause une animation avec keyframe en assignant à la propriété "animation-play-state" la valeur réglée sur « paused ».
 
 Pour reprendre la lecture d'une animation avec keyframe, on utilise la propriété "animation-play-state" avec la valeur réglée sur « running ».
 
 ### Affinez vos animations CSS avec DevTools
-Iterer est la clé d'une animation réussie. Se contenter d'ajouter quelques chiffres et de cliquer sur Enregistrer ne suffit généralement pas ;
+Iterer est la clé d'une animation réussie. Se contenter d'ajouter quelques chiffres et de cliquer sur Enregistrer ne suffit généralement pas.
 
-Notre expérience nous donne une bonne intuition sur les valeurs de départ qui semblent appropriées pour nos propriétés d'animation ;
+Notre expérience nous donne une bonne intuition sur les valeurs de départ qui semblent appropriées pour nos propriétés d'animation.
 
-Le panneau Animations de DevTools nous offre la possibilité d'affiner rapidement les animations, d'improviser et d'expérimenter jusqu'à ce que nous trouvions la bonne durée ou le bon délai pour un élément ;
+Le panneau Animations de DevTools nous offre la possibilité d'affiner rapidement les animations, d'improviser et d'expérimenter jusqu'à ce que nous trouvions la bonne durée ou le bon délai pour un élément.
 
 Le panneau Changes (Modifications) nous permet de visualiser les propriétés que nous avons modifiées ainsi que leurs nouvelles valeurs, facilitant ainsi la mise à jour de notre code source en conséquence.
 
