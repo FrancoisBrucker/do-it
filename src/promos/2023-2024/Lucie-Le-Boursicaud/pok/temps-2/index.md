@@ -197,13 +197,13 @@ Et les premiers composants :
 + [x] Faire le composant d'en tête pour les différentes pages - 1H
 + [x] Faire les composants des autres plats - 1H
 + [x] Faire les composants des categories - 30min
-+ [] Faire le composant de réservation bien prise en compte - 30min
++ [x] Faire le composant de réservation bien prise en compte - 30min
 + [x] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
 + [x] Ajouter les composants des autres plats sur la page *Carte* - 15min
-+ [] Ajouter les couleurs aux différentes pages - 2H
-+ [] Réaliser les animations d'interraction hoover sur les boutons - 2H
-+ [] Réaliser les animation non interractive sur la page *Home* - 2H
-+ [] Ajouter les photos sur toutes les pages - 1H30
++ [x] Ajouter les couleurs aux différentes pages - 2H
++ [x] Réaliser les animations d'interraction hoover sur les boutons - 1H
++ [x] Réaliser les animation non interractive sur la page *Home* - 2H
++ [x] Ajouter les photos sur toutes les pages - 1H
 
 ### Horodateur
 | Date | Heures passées | Indications | 
@@ -217,3 +217,9 @@ Et les premiers composants :
 |---------- | --------- | ------- |
 | Jeudi 14/12 | 3H | Composants en-tête + plats + categories |
 | Jeudi 14/12 | 1H | Composants de réservation bien prise en compte + ajout des composants |
+| Jeudi 11/01 | 1H | Ajout des photos sur toutes les pages |
+| Samedi 13/01 | 1H30 | Ajout des couleurs sur les différentes pages |
+| Samedi 13/01 | 1H | Animations d'interraction sur les boutons |
+| Lundi 15/01 | 2H | Animation non interractive sur les pages |
+| Lundi 15/01 | 2H | Retravail de la structure de certaines pages |
+

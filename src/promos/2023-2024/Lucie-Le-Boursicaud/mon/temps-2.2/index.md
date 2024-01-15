@@ -232,6 +232,10 @@ Le panneau Animations de DevTools nous offre la possibilité d'affiner rapidemen
 
 Le panneau Changes (Modifications) nous permet de visualiser les propriétés que nous avons modifiées ainsi que leurs nouvelles valeurs, facilitant ainsi la mise à jour de notre code source en conséquence.
 
+## Conclusion sur la formation 
+J'ai trouvé cette formation très intéressante et elle m'a permi d'en apprendre beaucoup sur les bonnes techniques à utiliser si l'on veut que nos animations web soient performantes sur n'mporte quel ordinateur. 
+Les chapitres sont assez court et centré sur l'apprentissage de peu de fonctionnalité en même temps pour ne pas s'éparpiller. Il n'y a pas que du code d'animations ! On parle aussi de l'utilisation de DevTools pour apprendre à analyser nos animations afin de les améliorer. 
+Si vous aimez le développement web et particulièrement le front-end c'est une bonne formation à faire :).
 
 ### Horodateur
 | Date | Heures passées | Indications | 
@@ -249,5 +253,5 @@ Le panneau Changes (Modifications) nous permet de visualiser les propriétés qu
 | Jeudi 11/01 | 1H | Animez les couleurs de manière performante avec opacity |
 | Jeudi 11/01 | 30min | Créez des animations plus complexes avec la règle CSS @keyframes |
 | Jeudi 11/01 | 1H | Utilisez les propriétés de l'animation CSS |
-<!-- | Samedi 13/01 | 45min | Manipulez et réutilisez les animations CSS |
-| Samedi 13/01 | 45min | Affinez vos animations CSS avec DevTools | -->
+| Samedi 13/01 | 45min | Manipulez et réutilisez les animations CSS |
+| Samedi 13/01 | 45min | Affinez vos animations CSS avec DevTools |
