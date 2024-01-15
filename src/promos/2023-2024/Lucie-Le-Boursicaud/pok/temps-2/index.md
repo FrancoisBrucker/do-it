@@ -204,9 +204,24 @@ Et les premiers composants :
 + [x] Réaliser les animations d'interraction hoover sur les boutons - 1H
 + [x] Réaliser les animation non interractive sur la page *Home* - 2H
 + [x] Ajouter les photos sur toutes les pages - 1H
+  
+#### Réalisation finale 
+<div style="display:flex">
+<div><img src="homecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="cartecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="résacouleurs.png"></div>
+<div><img src="enrresacouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="artcouleurs.png"></div>
+</div>
 
 ### Horodateur
-| Date | Heures passées | Indications | 
+| Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Jeudi 16/11  | 1H  | Travail sur le brief design |
 | Jeudi 16/11 | 2H | Travail sur le logo, les typographies, les couleurs, recherche sur ce qui se fait aujourd'hui|

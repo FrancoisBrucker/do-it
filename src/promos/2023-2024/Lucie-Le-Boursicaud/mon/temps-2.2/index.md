@@ -237,6 +237,8 @@ J'ai trouvé cette formation très intéressante et elle m'a permi d'en apprendr
 Les chapitres sont assez court et centré sur l'apprentissage de peu de fonctionnalité en même temps pour ne pas s'éparpiller. Il n'y a pas que du code d'animations ! On parle aussi de l'utilisation de DevTools pour apprendre à analyser nos animations afin de les améliorer. 
 Si vous aimez le développement web et particulièrement le front-end c'est une bonne formation à faire :).
 
+Voilà des animations que j'ai pu recréer lors de la formation : [Télécharger le dossier ](AnimationCSS.zip)
+
 ### Horodateur
 | Date | Heures passées | Indications | 
 | -------- | -------- |-------- |
