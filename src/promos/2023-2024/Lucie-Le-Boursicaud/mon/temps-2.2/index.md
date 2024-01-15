@@ -18,12 +18,9 @@ résumé: "Ce MON a pour but de se famliariser avec les animations CSS qui sont 
 Connaitre les bases du HTML et du CSS.   
 {%endprerequis%}
 
-### Sommaire 
-1. Q 
-
+### Introduction
+Dans le but de m'méliorer dans le développement web je voulais m'intéresser à l'utilisation des animations sur les sites web pour les rendre plus dynamiques et attractifs pour l'utilisateur.
 Pour ce MON j'ai suivi le cours d'OpenClassroom [Créer des animaton CSS modernes](https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes) d'une durée estimée à 15h. 
-  
-### Qu'est-ce qu'une animation ? 
 
 ### Créer des animations avec des transitions 
 Il existe deux moyens de créer des animations en CSS : 
