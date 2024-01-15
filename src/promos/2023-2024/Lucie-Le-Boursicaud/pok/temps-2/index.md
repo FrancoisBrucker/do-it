@@ -194,17 +194,34 @@ Et les premiers composants :
 
 # Sprint 2
 ###### Objectifs du deuxième sprint
-+ [] Faire le composant d'en tête pour les différentes pages - 1H
-+ [] Faire les composants des autres plats - 2H
-+ [] Faire le composant de réservation bien prise en compte - 1H30
-+ [] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
-+ [] Ajouter les composants des autres plats sur la page *Carte* - 15min
-+ [] Ajouter les couleurs aux différentes pages - 2H
-+ [] Réaliser les animations d'interraction hoover sur les boutons - 1H
-+ [] Réaliser les animation non interractive sur la page *Home* - 2H
++ [x] Faire le composant d'en tête pour les différentes pages - 1H
++ [x] Faire les composants des autres plats - 1H
++ [x] Faire les composants des categories - 30min
++ [x] Faire le composant de réservation bien prise en compte - 30min
++ [x] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
++ [x] Ajouter les composants des autres plats sur la page *Carte* - 15min
++ [x] Ajouter les couleurs aux différentes pages - 2H
++ [x] Réaliser les animations d'interraction hoover sur les boutons - 1H
++ [x] Réaliser les animation non interractive sur la page *Home* - 2H
++ [x] Ajouter les photos sur toutes les pages - 1H
+  
+#### Réalisation finale 
+<div style="display:flex">
+<div><img src="homecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="cartecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="résacouleurs.png"></div>
+<div><img src="enrresacouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="artcouleurs.png"></div>
+</div>
 
 ### Horodateur
-| Date | Heures passées | Indications | 
+| Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Jeudi 16/11  | 1H  | Travail sur le brief design |
 | Jeudi 16/11 | 2H | Travail sur le logo, les typographies, les couleurs, recherche sur ce qui se fait aujourd'hui|
@@ -212,3 +229,12 @@ Et les premiers composants :
 | Vendredi 24/11 | 2H | Création des premiers composants|
 | Mercredi 6/12 | 1H | Maquette : *Placement des vrais composants et ajustement|
 | Vendredi 8/12 | 2H | Amélioration composants |
+|---------- | --------- | ------- |
+| Jeudi 14/12 | 3H | Composants en-tête + plats + categories |
+| Jeudi 14/12 | 1H | Composants de réservation bien prise en compte + ajout des composants |
+| Jeudi 11/01 | 1H | Ajout des photos sur toutes les pages |
+| Samedi 13/01 | 1H30 | Ajout des couleurs sur les différentes pages |
+| Samedi 13/01 | 1H | Animations d'interraction sur les boutons |
+| Lundi 15/01 | 2H | Animation non interractive sur les pages |
+| Lundi 15/01 | 2H | Retravail de la structure de certaines pages |
+
