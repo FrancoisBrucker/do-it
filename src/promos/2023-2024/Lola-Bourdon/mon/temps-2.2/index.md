@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Power BI et Excel pour l'anamyse de données"
 authors:
   - Lola Bourdon
 
@@ -9,6 +9,8 @@ date: 2023-12-15
 tags: 
   - "temps 2"
   - "power BI"
+  - "excel"
+  - "google form"
 
 résumé: "Analyse des résultats d'un google form en utilisant Excel Power BI"
 ---
@@ -44,7 +46,7 @@ Méthodologie de l'exercice :
 
 ## Analyse de données 
 
-Afin de traiter le google form, la première étape est de récupérer les données au format csv ou xlsv en allant dans les réponses>télécharger au format "x".
+Afin de traiter le google form, la première étape est de récupérer les données au format csv ou xlsv en allant dans les réponses>télécharger au format.
 
 
 Maintenant démarrons Power BI.
@@ -63,20 +65,20 @@ collecte de donnée> sélection du fichier csv.
 
 ### Transformer
 
-J'ai tenté de faire une première transformation de donnée en utilisant seulement Power Query mais cela m'a prit énormément de temps alors j'ai décidé de repasser sur excel, que je maîtrise mieux pour les mêmes fonctionnalités grâce à mon précédent [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-1.2/). 
+J'ai tenté de faire une première transformation de données en utilisant seulement Power Query mais cela m'a prit énormément de temps alors j'ai décidé de repasser sur excel, que je maîtrise mieux pour les mêmes fonctionnalités grâce à mon précédent [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-1.2/). 
 
 J'ai commencé par filtrer les données, supprimer les lignes trop incomplètes et inexploitables, homogénéiser l'orthographe, etc.
 
-Cela étant fait il restait des transformations a faire sur POwer Query, notamment :
+Cela étant fait il restait des transformations a faire sur Power Query, notamment :
 
 - remplacement de valeur pour alléger
 ![powerbi](ecranremplacer.png)
 - supprimer les colonnes inexploitables (trop peu de valeurs, etc.)
 ![powerbi](ecranchoisircolonne.png)
-- fractionner les colonnes (permet d'ajouter une une colonne pour les réponses a choix multiples, inexploitable par Power BI)
+- fractionner les colonnes (permet d'ajouter une une colonne pour les réponses à choix multiples, inexploitable par Power BI)
 ![powerbi](ecranfrac.png)  
 
-Une fois que la transformation de donnée est terminée, on peut revenir a Power BI en cliquant sur *Fermer&appliquer*.
+Une fois que la transformation de données est terminée, on peut revenir a Power BI en cliquant sur *Fermer&appliquer*.
 
 ### Modéliser et Analyser
 
@@ -90,18 +92,18 @@ L'onglet filtrer permet d'afficher les données pertinentes à chaque élément 
 
 
 ### Visualiser
-Dans POwer BI il est possible d'avoir plusieurs pages (comme les feuilles excel) ce qui me permet d'organiser les différents graphiques par thèmes.
+Dans Power BI il est possible d'avoir plusieurs pages (comme les feuilles excel) ce qui me permet d'organiser les différents graphiques par thèmes.
 Après avoir modéliser et analyser une partie des données, voici ce que j'obtient : 
 ![powerbi](ecranfinmain.png)
 <div style="display:flex">
 <div><img src="ecranfinsport.png"></div>
 <div><img src="ecranfinresto.png"></div>
 </div>
-La visualisation n'est pas encore optimale, les tableaux ne sont pas homogènes mais j'arrive a avoir un premier visuel des données de mon formulaire et les résultats sont intéressant pour l'équipe. Toutefois, le travail n'est pas encore terminé pour l'analyse de ce form, beaucoup de données sont encore à exploiter, et certains visuels pourraient être réétudier.
+La visualisation n'est pas encore optimale, les tableaux ne sont pas homogènes mais j'arrive a avoir un premier visuel des données de mon formulaire et les résultats sont intéressants pour l'équipe. Toutefois, le travail n'est pas encore terminé pour l'analyse de ce form, beaucoup de données sont encore à exploiter, et certains visuels pourraient être réétudier.
 
 ### Conclusion
 
-Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précedemment et de découvrir Power BI. C'est un outil très intéressant dans le cadre de mon analyse de formulaire que je vais poursuivre. Je ne pensais pas passer autant de temps sur la transformation des données mais c'est une étape cruciale pour simplifier la suite de l'exercice. Je peux Maintenant analyser le google form de Défensio.
+Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précédemment et de découvrir Power BI. C'est un outil très intéressant dans le cadre de mon analyse de formulaire que je vais poursuivre. Je ne pensais pas passer autant de temps sur la transformation des données mais c'est une étape cruciale pour simplifier la suite de l'exercice. Je peux maintenant analyser le google form de Défensio.
 
 | Travail effectué |  Temps | 
 | -------- | -------- |-------- |
@@ -109,3 +111,12 @@ Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précedemme
 | Collecter et transformer | 4h|
 | Modéliser et Analyser | 3h |
 | Visualiser | 1h| 
+
+
+### Source 
+
+- app.powerbi.co
+- <https://www.youtube.com/watch?v=hnztFw7ID4w&list=PL-7Ue_1Wto-ZdrFKOxcUalrqc3-CxezU_>
+- <https://www.youtube.com/watch?v=2jfS8hYrpzU&list=PL1aYsXmhJ1WcRPx3gotG36pu-lb7YdmOa>
+- <https://www.youtube.com/watch?v=jSuL7hJ76kE&t=1542s>
+  
