@@ -133,7 +133,7 @@ function populateUI(profile, topArtists) {
 
     if (topTracks && topTracks.items) {
         const topTracksList = document.getElementById("topTracksList");
-        topTracksList.innerHTML = "";  // Efface le contenu précédent
+        topTracksList.innerHTML = "";
 
         topTracks.items.forEach(track => {
             const listItem = document.createElement("li");
