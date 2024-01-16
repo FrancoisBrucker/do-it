@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Notions de base sur les réseaux</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Notions de base sur les réseaux</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Cisco</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Formation Réseaux</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Protocoles</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Samy Diafat</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Ce MON a pour but d'obtenir les bases en réseaux à l'aide de l'une des formations développées par l'entreprise Cisco sur la plateforme Networking Academy. 
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/">Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/mon/">MON de Samy Diafat</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diafat-Samy/mon/temps-2-2/">Notions de base sur les réseaux</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Niveau débutant</p>
+</div><div class="pl-8 mr-8">
+<p>Aucun prérequis.</p>
+</div></div>
+<h3>Sommaire</h3>
+<ol>
+<li>Présentation de la formation<br>
+1.1 Pourquoi suivre un cours de réseaux  ?<br>
+1.2 A quoi ressemble une formation  ?<br>
+1.3 Comment est-on évalué ?<br>
+1.4 Quelles sont les thèmes abordés ?</li>
+<li>Points positifs &amp; Points négatifs</li>
+<li>Recommandation</li>
+</ol>
+<h2>Présentation de la formation</h2>
+<p><img src="Cisco.jpg" alt="Openclassroom_accueil"></p>
+<p><strong>Cisco Systems</strong> est une entreprise américaine spécialisée dans les technologies de l'information et de la communication (TIC).<br>
+Cette entreprise est devenue l'une des plus grandes entreprises mondiales dans son domaine.<br>
+<strong>Cisco</strong> est particulièrement connue pour ses équipements réseau, notamment les routeurs et les commutateurs, utilisés dans le monde entier pour la construction et la gestion de réseaux informatiques.</p>
+<p><img src="cisconetwork.jpg" alt="Openclassroom_accueil"></p>
+<p>Le programme éducatif <strong>Networking Academy</strong> developpé par <strong>Cisco</strong> vise à former des professionels aux technologies réseaux.</p>
+<p>Sur la plateforme Networking Academy, nous pouvons retrouver <strong>deux parcours professionels gratuits</strong>, constitués chacuns de plusieurs formations d'une quinzaine d'heure. Le premier parcours porte sur les divers technologies liées au réseau, tandis que le second porte sur des notions de cyber-sécurité.</p>
+<p><img src="careerpath.png" alt="Openclassroom_accueil"></p>
+<p>Chaque formation donne accès à une certification suite à un petit examen de 50 questions. Il est cependant possible d'obtenir une certification payante à l'issu de chaque parcours professinels.</p>
+<p>J'ai donc décidé de commencer le parcours &quot;Network Technician&quot; !</p>
+<p><img src="networkpath.png" alt="Openclassroom_accueil"></p>
+<p>La première formation s'intitule &quot;Networking Basics&quot;, est destinée aux débutants, et a une durée estimée de 22h.</p>
+<h3>Pourquoi suivre ce cours ?</h3>
+<p>Afin de comprendre pourquoi ce cours est interessant, je vais simplement citer l'aperçu de la formation rédigée sur la plateforme.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Internet est construit sur des réseaux informatiques. Quel que soit le type de carrière technologique qui vous intéresse, il est donc essentiel de connaître les bases de la mise en réseau ! Que vous vous prépariez à une carrière en réseau, que vous rafraîchissiez vos connaissances en vue d'une certification reconnue par le secteur ou que vous soyez simplement curieux de savoir ce qu'est le réseau, ce cours est fait pour vous.</p>
+<p>Ce cours couvre les bases de la mise en réseau et des périphériques, supports et protocoles réseau. Vous observerez les données circulant dans un réseau et configurerez les périphériques pour les connecter aux réseaux. Enfin, vous apprendrez à utiliser différentes applications et protocoles réseau pour accomplir des tâches de mise en réseau. Les connaissances et les compétences que vous allez acquérir peuvent vous donner un point de départ pour trouver une carrière enrichissante dans le domaine de la technologie.</p>
+</div></div>
+<h3>A quoi ressemble un cours ?</h3>
+<p>Les formations commencent tout d'abord avec une évaluation permettant de faire un état des lieux de nos connaissances.<br>
+Celles-ci sont  decoupées en module traitant chacun d'une thématique.<br>
+Ces modules sont eux aussi segmentés en chapitre.</p>
+<p><img src="exemplemodule1.png" alt="Openclassroom_accueil"></p>
+<p>Au sein de chaque chapitre, il y a plusieurs ressources différentes :</p>
+<p><img src="exemplechapitre.png" alt="Openclassroom_accueil"></p>
+<p>Des vidéos explicatives, des schémas interractifs, des paragraphes descriptifs, des tableaux résumés et enfin des applications pratiques à l'aide du logiciel de simulation <strong>Cisco Packet Tracer</strong>.</p>
+<p><img src="logociscopacket.png" alt="Openclassroom_accueil"></p>
+<p>Le logiciel Cisco Packet Tracer est un excellent outil permettant de s'exercer afin de s'appropier au mieux les connaissances théoriques acquises à travers les nombreux chapitres.</p>
+<p>Des activités guidées permettent de s'amuser à configurer des réseaux de A à Z ( ou en tout cas d'essayer ! ).</p>
+<p><img src="packetracer1.png" alt="Openclassroom_accueil"></p>
+<p><img src="packetracer2.png" alt="Openclassroom_accueil"></p>
+<blockquote>
+<p>Le logiciel est très complet et gratuit !</p>
+</blockquote>
+<h3>Comment est-on évalué ?</h3>
+<p>A la fin de chaque chapitre, il y a une petite évaluation de 20 questions, puis, une évaluation intermédiaire tous les 3/4 modules est proposée pour valider nos connaissances. Les questions sont soit des QCMs, soit des cas pratiques à l'aide de Cisco Packet Tracer.</p>
+<p>Enfin, au terme de la formation, il est possible de passer une évaluation finale permettant d'obtenir une petite certification attestant la réussite de la formation.</p>
+<p><img src="certif.png" alt="Openclassroom_accueil"></p>
+<h3>Thèmes abordés</h3>
+<p>Voici les différentes modules de la formation :</p>
+<ol start="0">
+<li>Introduction aux cours (Formation au logiciel Cisco Packet Tracer)</li>
+<li>La communication dans un monde connecté</li>
+<li>Composants réseau, types et connexions</li>
+<li>Réseaux sans fil et mobiles</li>
+<li>Construire un réseau domestique</li>
+<li>Principes de communication</li>
+<li>Médias réseau</li>
+<li>La couche d'accès</li>
+<li>Protocole Internet</li>
+<li>IPV4 et segmentation du réseau</li>
+<li>Formats et règles d'adressage IPv6</li>
+<li>Adressage dynamique avec DHCP</li>
+<li>Passerelles vers d'autres réseaux</li>
+<li>Le processus ARP</li>
+<li>Routage entre les réseaux</li>
+<li>TCP et UDP</li>
+<li>Services de la couche d'application</li>
+<li>Utilitaires de test du réseau</li>
+</ol>
+<h2>Points positifs &amp; Points négatifs</h2>
+<p>Quelles sont les points négatifs selon moi ?</p>
+<ul>
+<li>Étant donné que le site est traduit en plusieurs langues, la traduction française n'est parfois pas très pertinente en raison du vocabulaire technique, en particulier lors des tests.</li>
+<li>Le cours est parfois lourd car les informations sont répétées trop de fois à mon sens. Par exemple, une vidéo explicative de quelques minutes suivie d'un texte réexpliquant le même concept.</li>
+</ul>
+<p>Quelles sont les points positifs selon moi ?</p>
+<ul>
+<li>Le cours est simple et très bien expliqué.</li>
+<li>Les vidéos peuvent être accélérées et sous-titrées.</li>
+<li>Il y a beaucoup de tests et d'activités.</li>
+<li>Le site est ergonomique.</li>
+<li>Le contenu de la formation a été mis à jour.</li>
+<li>Les parcours sont bien définis et donc  motivants !</li>
+</ul>
+<h2>Recommandation</h2>
+<p>Je recommande évidemment cette formation pour tout le monde, et surtout aux étudiants souhaitant travailler dans le monde de l'informatique.<br>
+En particulier, je pense qu'il serait intéressant de suivre la formation avant le cours du temps 1 &quot;OPS/ Unix&quot; afin d'être beaucoup plus au clair sur les notions liées au réseau.</p>
+<h2>Horodateur</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24/11</td>
+<td>3H</td>
+<td>Formation logiciel Cisco Packet Tracer et Intro, Module 1 et 2</td>
+</tr>
+<tr>
+<td>25/11</td>
+<td>1H</td>
+<td>Module 3</td>
+</tr>
+<tr>
+<td>25/11</td>
+<td>1H</td>
+<td>Module 4 et Checkpoint Exam</td>
+</tr>
+<tr>
+<td>26/11</td>
+<td>2H</td>
+<td>Module 5, 6, 7 et Checkpoint Exam</td>
+</tr>
+<tr>
+<td>26/11</td>
+<td>1H</td>
+<td>Module 8, 9</td>
+</tr>
+<tr>
+<td>27/11</td>
+<td>1H</td>
+<td>Module 10, 11 et Checkpoint Exam</td>
+</tr>
+<tr>
+<td>01/12</td>
+<td>1H30</td>
+<td>Module 12, 13, 14 et Checkpoint Exam</td>
+</tr>
+<tr>
+<td>02/12</td>
+<td>1H30</td>
+<td>Module 15, 16, 17 et Checkpoint Exam</td>
+</tr>
+<tr>
+<td>02/12</td>
+<td>1H</td>
+<td>Exam Final</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>13H</td>
+<td>Formation Notions de base sur les réseaux</td>
+</tr>
+</tbody>
+</table>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>Le parcours Network Technician : <a href="https://skillsforall.com/career-path/network-technician?courseLang=en-US">https://skillsforall.com/career-path/network-technician?courseLang=en-US</a></li>
+<li>Logo Cisco Network : <a href="https://www.betterinternetforkids.eu/web/cisco-networking-academy">https://www.betterinternetforkids.eu/web/cisco-networking-academy</a></li>
+<li>Illustration Cisco : <a href="https://le-guide-du-secops.fr/2022/02/14/ok-finale-prenez-garde-a-vos-anciens-equipements-cisco-politique-des-mots-de-passe/">https://le-guide-du-secops.fr/2022/02/14/ok-finale-prenez-garde-a-vos-anciens-equipements-cisco-politique-des-mots-de-passe/</a></li>
+</ul>
+</div></div>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
