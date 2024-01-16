@@ -59,3 +59,15 @@ J'utilise Power Query pour la :
 - Transformation de Données : Il offre des outils conviviaux pour nettoyer, filtrer, remodeler et transformer les données selon les besoins. Cela permet d'obtenir des données prêtes à l'emploi pour l'analyse.
 
 collecte de donnée> sélection du fichier csv 
+
+
+
+
+| Travail effectué |  Temps | 
+| -------- | -------- |-------- |
+| Visionnage vidéo total YouTube  | 2h |
+| Collecter et transformer | 2h|
+| Autre formation | 1h |
+| Modéliser et Analyser | 4h |
+| Visualiser | 1h| 
+

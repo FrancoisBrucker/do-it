@@ -2,8 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Accueil - Spotistats 📈</title>
-        <link href="stylesAccueil.css" rel="stylesheet">
+        <title>FAQ - Spotistats ❓</title>
+        <link href="stylesFAQ.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
             window.onload = function () {
                 var emailInput = document.getElementById('email');
                 var mdpInput = document.getElementById('mdp');
-
+    
                 if (emailInput && mdpInput) {
                     emailInput.value = '';
                     mdpInput.value = '';
@@ -29,39 +29,23 @@
                 <span class="ButtonText">S’identifier avec Spotify</span>
             </button>
         </header>
+        <h1>Pourquoi dois-je me connecter à mon compte Spotify ?</h1>
+        <p>La connexion à votre compte Spotify est nécessaire afin d'avoir accès à vos données d'écoute.
+            L'accès à vos données permet l'analyse de vos goûts musicaux.
+        </p>
+        <h1>Que faites-vous de mes données de connexion Spotify ?</h1>
+        <p>Vos données de connexion ne sont pas stockées mais seulement utilisées par notre service.
+            Nous validons l'authentification grâce à l'API Spotify, qui elle se charge d'évaluer 
+            la corrélation entre votre adresse mail et le mot de passe indiqué.
+        </p>
+        <h1>Est-il possible de regarder les données de quelqu'un d'autre ?</h1>
+        <p>Pour des raisons de sécurité, il n'est pas possible de consulter les analyse Spotistats
+            d'un autre individu. En effet, nous certifions l'authentification personnelle et la privatisation 
+            de chaque résultat.
+        </p>
+        <h1>Sera-t'il possible dans l'avenir d'effectuer l'analyse sur Deezer ?</h1>
+        <p>Ce n'est pas d'actualité pour le moment. Sinon on aura un problème de nom.</p>
 
-        <div class="container">
-            <img src="chart-up 1.png" class="arrow">
-            <div class="column">
-                <h1> Toutes vos statistiques.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
-                    bibendum enim facilisis. Erat imperdiet sed euismod nisi porta. Viverra 
-                    accumsan in nisl nisi scelerisque eu ultrices. In vitae turpis massa sed elementum. 
-                    Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros donec ac odio tempor. 
-                    Felis donec et odio pellentesque diam volutpat commodo. Et tortor consequat id porta nibh
-                    venenatis.
-                </p>
-            </div>
-        </div>
-
-        <div class="container2">
-            <div class="column2">
-                <h1> Analysez vos goûts musicaux.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Sit amet dictum sit amet justo donec. Dolor sed viverra ipsum nunc aliquet 
-                    bibendum enim facilisis. Erat imperdiet sed euismod nisi porta. Viverra 
-                    accumsan in nisl nisi scelerisque eu ultrices. In vitae turpis massa sed elementum. 
-                    Pretium aenean pharetra magna ac placerat vestibulum. Quis vel eros donec ac odio tempor. 
-                    Felis donec et odio pellentesque diam volutpat commodo. Et tortor consequat id porta nibh
-                    venenatis.
-                </p>
-            </div>
-            <img src="sound 1.png" class="sound">
-        </div>
-        
         <div id="ecran_noir" class="ecran_noir">
             <div class="ecran_noir-content">
                 <span class="close" onclick="fermerEcran_noir()">&times;</span>
@@ -98,6 +82,4 @@
                 fermerEcran_noir();
             }
         </script>
-
     </body>
-</html>
