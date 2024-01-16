@@ -1143,6 +1143,9 @@ a:not([class]):hover, a:not([class]):visited:hover {
 a:not([class]):active, a:not([class]):visited:active {
   text-decoration-thickness: 4px;
 }
+.visible {
+  visibility: visible;
+}
 .absolute {
   position: absolute;
 }
