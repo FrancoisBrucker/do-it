@@ -137,7 +137,8 @@
 </ul>
 <h2>Les étapes pour le Sprint 2</h2>
 <ul>
-<li>Créer les requêtes pour permettre aux utilisateurs de s'inscrire, se connecter et se déconnecter : 5h</li>
+<li>Créer les routes d'inscription et de connexion : 4h</li>
+<li>Créer les requêtes pour que l'utilisateur s'inscrive et se connecte : 1h</li>
 <li>Afficher l'historique des parties du joueur connecté : 5h</li>
 </ul>
 <h2>Sprint 1 - Reprise du Front</h2>
@@ -396,6 +397,16 @@ Donc la requête sql devient : <strong>INSERT INTO users (first_name, last_name,
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h2>Jeton d'authentification</h2>
+<p>Mais la logique de connexion créée est incomplète, tout ce que fait le serveur c'est vérifier que les mots de passe sont indentiques mais il ne fait rien de plus. L'utilisateur n'est pas réellement connecté. Pour que ce soit le cas il faut utiliser la logique des jetons d'authentification. Le jeton d'authentification est comme un pass que l'utilisateur obtient lorsqu'il se connecte. Ce pass lui permet de rester connecté pendant une certaine période, soit jusqu'à ce qu'il se déconnecte, soit pendant un temps fixé par le développeur. De plus, la façon dont sont stockés les mots de passe n'est pas sécurisée. Ils sont stockés comme de simple chaîne de caractère alors qu'ils devraient être cryptés par un hachage.</p>
+<h2>Conclusion</h2>
+<p>Pour ce qui est du temps passé sur chaque étape pour le sprint 2 :</p>
+<ul>
+<li>Créer une route pour l'inscription et la connexion : 9h -----&gt; +5h</li>
+<li>Créer les requêtes pour s'inscrire et se connecter : 6h -----&gt; +5h</li>
+<li>Gérer les historiques des parties : pas eu le temps de le faire</li>
+</ul>
+<p>J'ai été un peu ambitieux et j'ai sous-estimé la difficulté du back-end pour mon site.</p>
 
 
 </article>

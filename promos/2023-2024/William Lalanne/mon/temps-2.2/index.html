@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bases de données</title>
+        <title>Bases de React</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Bases de données</h1>
+<h1 class="mb-1">Bases de React</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Dans ce MON je souhaite me former à l'utilisation des bases de données
+                Dans ce MON je souhaite me former à l'utilisation des bases de React
 
         </p>
 
@@ -118,13 +118,273 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-2.2/">Bases de données</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-2.2/">Bases de React</a>
 
 </div></div>
 
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Niveau :</strong> Facile<br>
+<strong>Prérequis :</strong> Avoir fait un peu de JavaScript et HTML avant, peut-être aussi du CSS</p>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Components</li>
+<li>Props</li>
+<li>States</li>
+<li>React pour mon site</li>
+<li>Conclusion</li>
+</ol>
+<h2>Sources</h2>
+<p><a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-2.1/">MON de Lucas Rioual</a></p>
+<p><a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6521356-tirez-le-maximum-de-ce-cours">Documentation et tutos React</a></p>
+<h2>Introduction</h2>
+<p>React est un framework</p>
+<h2>1. Components</h2>
+<p>En React, un composant est comme une boîte autonome qui contient une partie spécifique de ce que l'on voit à l'écran. C'est comme si le code étaut constituée de plusieurs briques différentes, et chaque brique est un composant. Un composant peut être aussi bien un petit bouton ou quelque chose de plus complexe comme une barre de navigation, un form...<br>
+C'est très pratique pour réutiliser un élément d'un code à un autre, ou même plusieurs fois dans le même code.</p>
+<h2>2. Props</h2>
+<p>les composants peuvent recevoir des &quot;props&quot;, qui sont comme des instructions ou des données que le composant parent transmet à ses composants enfants. Les &quot;props&quot; permettent de personnaliser le comportement d'un composant et de le rendre adaptable et réutilisable dans différentes parties de l'application.</p>
+<h2>3. States</h2>
+<h2>4. React pour mon site</h2>
+<p>Pour faire mon site du memory en React j'ai du créer plusieurs components :</p>
+<ul>
+<li>Header :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./Button'</span><span class="token punctuation">;</span> <span class="token comment">// Assurez-vous d'avoir ce composant et le CSS associé</span>
+<span class="token keyword">import</span> <span class="token string">'./Header.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>header<span class="token operator">></span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"buttonContainer"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Button text<span class="token operator">=</span><span class="token string">"Connexion"</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Button text<span class="token operator">=</span><span class="token string">"S'inscrire"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>header<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Button :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> text<span class="token punctuation">,</span> onClick <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"buttonDiv"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>onClick<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>text<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>LoginForm :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./LoginForm.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">LoginForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>form id<span class="token operator">=</span><span class="token string">"connectionForm"</span> action<span class="token operator">=</span><span class="token string">"/connection"</span> method<span class="token operator">=</span><span class="token string">"POST"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"first_name"</span><span class="token operator">></span>
+          Prénom<span class="token operator">*</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"first_name"</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"Prénom"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"last_name"</span><span class="token operator">></span>
+          Nom<span class="token operator">*</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"last_name"</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"Nom"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"email"</span><span class="token operator">></span>
+          Email<span class="token operator">*</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"email"</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"Email"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"photo"</span><span class="token operator">></span>
+          Photo de profil
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"photo"</span> type<span class="token operator">=</span><span class="token string">"file"</span> placeholder<span class="token operator">=</span><span class="token string">"Photo de profil"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"mot_de_passe"</span><span class="token operator">></span>
+          Mot de passe<span class="token operator">*</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"mot_de_passe"</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"Mot de passe"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"inscriptionPopupElement"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>label className<span class="token operator">=</span><span class="token string">"inscriptionLabel"</span> htmlFor<span class="token operator">=</span><span class="token string">"mdpConf"</span><span class="token operator">></span>
+          Confirmer le mot de passe<span class="token operator">*</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input className<span class="token operator">=</span><span class="token string">"inscriptionInput"</span> id<span class="token operator">=</span><span class="token string">"mdpConf"</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"Mot de passe"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+      <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"submit"</span> id<span class="token operator">=</span><span class="token string">"popup"</span> className<span class="token operator">=</span><span class="token string">"inscriptionButton"</span><span class="token operator">></span>
+        <span class="token constant">S</span>'inscrire
+      <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span>a id<span class="token operator">=</span><span class="token string">"connectLink"</span><span class="token operator">></span>Vous avez déjà un compte <span class="token operator">?</span> Connectez<span class="token operator">-</span>vous<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> LoginForm<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Container :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ThemeSelection <span class="token keyword">from</span> <span class="token string">'./ThemeSelection'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PlayerSelection <span class="token keyword">from</span> <span class="token string">'./PlayerSelection'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> GridSelection <span class="token keyword">from</span> <span class="token string">'./GridSelection'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> StartButton <span class="token keyword">from</span> <span class="token string">'./StartButton'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./Container.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Container</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>ThemeSelection <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>PlayerSelection <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>GridSelection <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>StartButton <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Container<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>ThemeSelection :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> RadioSection <span class="token keyword">from</span> <span class="token string">'./RadioSection.jsx'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./ThemeSelection.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">ThemeSelection</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"themeSelection"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span>Select theme<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>RadioSection className<span class="token operator">=</span><span class="token string">"themesButton"</span> options<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">'Numbers'</span><span class="token punctuation">,</span> <span class="token string">'Icons'</span><span class="token punctuation">]</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ThemeSelection<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>PlayerSelection :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> RadioSection <span class="token keyword">from</span> <span class="token string">'./RadioSection.jsx'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./GridSelection.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">GridSelection</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"gridSelection"</span> id<span class="token operator">=</span><span class="token string">"selectGrid"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span>Grid size<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>RadioSection className<span class="token operator">=</span><span class="token string">"gridButton"</span> options<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">'4x4'</span><span class="token punctuation">,</span> <span class="token string">'6x6'</span><span class="token punctuation">]</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> GridSelection<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>StartButton :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./StartButton.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">StartButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>button className<span class="token operator">=</span><span class="token string">"start"</span> id<span class="token operator">=</span><span class="token string">"start"</span><span class="token operator">></span>
+      Start Game
+    <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> StartButton<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>RadioSection :</li>
+</ul>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">RadioSection</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> className<span class="token punctuation">,</span> options <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>section className<span class="token operator">=</span><span class="token string">"radio-section"</span><span class="token operator">></span>
+      <span class="token punctuation">{</span>options<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">option<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span> className<span class="token operator">=</span><span class="token string">"radio-item"</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"radio"</span> name<span class="token operator">=</span><span class="token string">"radio"</span> className<span class="token operator">=</span><span class="token punctuation">{</span>className<span class="token punctuation">}</span> id<span class="token operator">=</span><span class="token punctuation">{</span>option<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>label htmlFor<span class="token operator">=</span><span class="token punctuation">{</span>option<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>option<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>section<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> RadioSection<span class="token punctuation">;</span>
+</code></pre>
+<p>Certains de ces components s'imbriquent dans d'autres et tous sont utilisées dans le fichier App.jsx suivant :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'./components/Header'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Container <span class="token keyword">from</span> <span class="token string">'./components/Container'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./components/Button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> LoginForm <span class="token keyword">from</span> <span class="token string">'./components/LoginForm'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">handleConnexionClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Gérer le clic sur le bouton de connexion</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleInscriptionClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Gérer le clic sur le bouton d'inscription</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Header<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>main<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Container<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="Page_Accueil.png" alt="Page React"></p>
+<h2>Conclusion</h2>
+<p>Grâce à ce MON j'ai pu apprendre les bases de React, notamment comment créer des components et les modifier avec les states ou les personnaliser avec des props.</p>
+<p>Temps passé sur le mon :</p>
+<ol>
+<li>Les components : 1h</li>
+<li>Les props : 1h</li>
+<li>Les states : 1h</li>
+<li>React pour mon site : 7h</li>
+</ol>
 
 
 </article>
