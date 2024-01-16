@@ -143,16 +143,32 @@
 </div><div class="pl-8 mr-8">
 <p>Prérequis : Aucune base en JAVA</p>
 </div></div>
-<hr>
 <h2>Sommaire</h2>
 <ul>
-<li><a href="#backlog">Backlog du projet</a></li>
-<li><a href="#bases">Acquérir bases en Java</a></li>
-<li><a href="#exercice">S'entrainer en Java</a></li>
-<li><a href="#choix">Choix de l'interface graphique</a></li>
-<li><a href="#swing">Apprendre à réaliser une interface graphique</a></li>
-<li><a href="#maquette">Réalisation de la maquette Figma</a></li>
-<li><a href="#fonctionnalit%C3%A9s">Les fonctionnalités et le backlog du Mastermind</a></li>
+<li><a href="#sommaire">Sommaire</a>
+<ul>
+<li><a href="#sprint-1">Sprint 1</a></li>
+<li><a href="#sprint-2">Sprint 2</a></li>
+<li><a href="#apprentissage-du-codage-dune-interface-avec-swing">Apprentissage du codage d'une interface avec Swing</a>
+<ul>
+<li><a href="#interface-initiale">Interface initiale</a></li>
+<li><a href="#partie-en-cours">Partie en cours</a></li>
+<li><a href="#fin-de-la-partie">Fin de la partie</a></li>
+</ul>
+</li>
+<li><a href="#construction-de-la-partie">Construction de la partie</a>
+<ul>
+<li><a href="#1--button-panel">1 : Button Panel</a></li>
+<li><a href="#2--color-panel">2 : Color Panel</a></li>
+<li><a href="#3--main-panel">3 : Main Panel</a></li>
+</ul>
+</li>
+<li><a href="#retour-sur-le-backlog-du-jeu">Retour sur le backlog du jeu</a></li>
+<li><a href="#retour-sur-le-backlog-du-sprint-2">Retour sur le backlog du Sprint 2</a></li>
+<li><a href="#points-de-retard-not%C3%A9s">Points de retard notés</a></li>
+<li><a href="#axes-dam%C3%A9lioration">Axes d'amélioration</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="backlog"> Le backlog du projet</h2>
 <h3>Sprint 1</h3>
@@ -480,12 +496,12 @@ Sarah a une moyenne de 14.0
 <tr>
 <td>Pouvoir abandonner la partie à tout moment</td>
 <td>5</td>
-<td>Must</td>
+<td>Could</td>
 </tr>
 <tr>
 <td>Pouvoir accéder aux règles du jeu à tout moment</td>
 <td>5</td>
-<td>Could</td>
+<td>Won't</td>
 </tr>
 <tr>
 <td>Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée</td>
@@ -547,6 +563,696 @@ Sarah a une moyenne de 14.0
 </tr>
 </tbody>
 </table>
+<h2 id="interface"> Réalisation du jeu </h2>
+<h3>Apprentissage du codage d'une interface avec Swing</h3>
+<p>J'avais repérer une vidéo sur l'utilisation de Swing pour réaliser une interface graphique durant le sprint 1 que j'avais notée <a href="#swing">ici</a>, mais que je n'avais pas eu le temps de suivre.</p>
+<p>J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement à toute personne voulant débuter ! Elle permet d'acquérir les bases et de comprendre la logique et elle est très bien expliquée.</p>
+<h2 id="visuel"> Le jeu final </h2>
+<h4>Interface initiale</h4>
+<img width="350" src="Mastermind_1.png">
+<h4>Partie en cours</h4>
+<p>Le joueur vient écrire sa proposition:</p>
+<img width="350" src="Mastermind_2.png">
+<p>Une fois sa tentative validée, les indications de la justesse de sa proposition s'affichent sur la droite :</p>
+<ul>
+<li><strong>Blanc</strong> : la couleur est bonne mais mal placée</li>
+<li><strong>Rouge</strong> : la couleur est bonne et bien placée</li>
+</ul>
+<img width="350" src="Mastermind_4.png">
+<h4>Fin de la partie</h4>
+<table>
+<thead>
+<tr>
+<th>L'utilisateur n'a pas réussi à trouver le code avant la fin des 7 tentatives</th>
+<th>L'utilisateur a réussi à trouver le code avant la fin des 7 tentatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img width="350" src="Mastermind_3.png"></td>
+<td><img width="350" src="Mastermind_5.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="code"> Construction du code </h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Avant de commencer...</strong></p>
+</div><div class="pl-8 mr-8">
+<p>J'avais repérer une vidéo sur l'utilisation de Swing pour réaliser une interface graphique durant le sprint 1 que j'avais notée <a href="#swing">ici</a>, mais que je n'avais pas eu le temps de suivre.</p>
+<p>J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement à toute personne voulant débuter ! Elle permet d'acquérir les bases et de comprendre la logique et elle est très bien expliquée.</p>
+</div></div>
+<p>Pour mon projet, j'ai créé un package <em>Interface</em> dans lequel j'ai créé 2 classes : <strong><em>MainFrame</em></strong> (qui gère l'affichage de l'écran de jeu) et <strong><em>MessageFrame</em></strong> (qui gère l'affichage de l'écran final de fin de partie), qui héritent de <strong>JFrame</strong>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Classes importantes du package Java Swing,</p>
+<ul>
+<li><strong>JPanel</strong> :  est un conteneur capable de stocker, et d'organiser ainsi,un ensemble de composants.</li>
+<li><strong>Jframe</strong> : utilisée pour créer des fenêtres graphiques dans une application</li>
+</ul>
+</div></div>
+<img width="200" src="Jframe_Jpanel.png">
+<p><a href="https://waytolearnx.com/2020/05/jpanel-java-swing.html">Source image</a></p>
+<h3>Construction de la partie</h3>
+<ul>
+<li><a href="#mainframe">Main Frame</a>
+<ul>
+<li><a href="#a">Implémentation des méthodes</a></li>
+<li><a href="#b">Gestion des graphismes</a></li>
+<li><a href="#c">Création des Panels</a></li>
+</ul>
+</li>
+<li><a href="#messageframe">Message Frame</a></li>
+</ul>
+<h3 id="mainframe"> Main Frame</h3>
+<p>On définit d'abord quelques variables qui vont nous servir tout au long du codage <em>(ex : liste des couleurs disponibles, nombre d'essai maximum, etc...)</em></p>
+<h4 id="a"> Implémentation des méthodes</h4>
+<p>On créé ensuite une méthode qui va venir générer un code secret...</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Generation du code secret</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> <span class="token function">generateCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Random</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Génération de 4 nombres aléatoires entre 1 et 6 (inclus)</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> randomNumber <span class="token operator">=</span> random<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>secretCode<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>colorAvailable<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>randomNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">do</span> <span class="token punctuation">{</span>
+                randomNumber <span class="token operator">=</span> random<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>secretCode<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>colorAvailable<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>randomNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+            secretCode<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>colorAvailable<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>randomNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> secretCode<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>... Puis une autre qui va initialiser une grille vide de taille 7x4 de couleur noire qui servira pour l'affichage du jeu de l'utilisateur.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Création grille vide</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Color</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> initializeGrid <span class="token punctuation">(</span><span class="token keyword">int</span> rows<span class="token punctuation">,</span> <span class="token keyword">int</span> columns<span class="token punctuation">,</span> <span class="token class-name">Color</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">Color</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tableau <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">[</span>rows<span class="token punctuation">]</span><span class="token punctuation">[</span>columns<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> tableau<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> tableau<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            tableau<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> color<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token keyword">return</span> tableau<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<blockquote>
+<p>Ces méthodes sont appelées lors de l'ouverture du jeu.</p>
+</blockquote>
+<p>D'autres méthodes seront aussi utiles plus tard, comme par exemple:</p>
+<ul>
+<li>une méthode qui sera appelée lorsque l'utilisateur appuiera sur une couleur pour changer la couleur de la case de sa proposition</li>
+<li>une méthode qui met à jour la grille de jeu de l'utilisateur lorsqu'il appuie sur &quot;valider&quot;</li>
+<li>une méthode qui met à jour la grille d'indices lorsque l'utilisateur appuie sur &quot;valider&quot;</li>
+<li>une méthode qui va appelé la classe <em>&quot;MessageFrame&quot;</em> pour afficher le message final en fonction de la réussite de l'utilisateur</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Un aperçu de ces méthodes</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span> color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//méthode permettant de mettre à jour les couleurs choisies par l'utilisateur </span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">==</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">LIGHT_GRAY</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Changer la valeur de l'élément vide à la valeur du bouton appuyé</span>
+                <span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> validateChoices <span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isCompleted</span><span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> choicesGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j <span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+                choicesGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+        <span class="token comment">//on actualise la grid</span>
+        <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//on indique les indices de la tentative jouée</span>
+        <span class="token function">indicateClues</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//on initialise le zone de choix de couleurs de l'utilisateur</span>
+        <span class="token function">emptyChoicesList</span><span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxTries<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token comment">//test si la partie est finie</span>
+        <span class="token class-name">MessageBox</span><span class="token punctuation">(</span>maxTries<span class="token punctuation">,</span> isGameFinished<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">indicateClues</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//si une couleur est bien placée : goodPlace+1</span>
+        <span class="token comment">//si une couleur est bonne et bien placée : goodColor+1</span>
+        <span class="token keyword">int</span> goodColor<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> goodPlace<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> choicesGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j <span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>choicesGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> secretCode<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                goodPlace<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>secretCode<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>choicesGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                goodColor<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> goodPlace<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            clueGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span> <span class="token punctuation">(</span><span class="token number">141</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> l <span class="token operator">=</span> goodPlace<span class="token punctuation">;</span> l<span class="token operator">&lt;</span>goodColor<span class="token operator">+</span>goodPlace<span class="token punctuation">;</span> l<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            clueGrid<span class="token punctuation">[</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">WHITE</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+        <span class="token comment">//si toutes les couleurs sont bonnes et bien placées le jeu est terminé</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>goodPlace <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            isGameFinished<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token class-name">MessageBox</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token constant">ESSAI</span><span class="token punctuation">,</span> <span class="token keyword">boolean</span> <span class="token class-name">IsGameFinished</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//méthode qui permet d'affiche le message de fin de partie en fonction de la réussite de l'utilisateur</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">ESSAI</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;</span> <span class="token class-name">IsGameFinished</span> <span class="token operator">!=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token class-name">MessageFrame</span><span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">IsGameFinished</span> <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">MessageFrame</span><span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+</div>
+</details>     
+</div>
+<h4 id="b"> Gestion des graphismes</h4>
+<p>Toute la création des formes graphiques (cercles, rectangles) se fait au moyen de la méthode <strong>paint</strong> pour laquelle j'ai créé une <strong>classe fille</strong>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Remarque</strong></p>
+</div><div class="pl-8 mr-8">
+<p><em>La position se chaque forme se fait relativement à la dimension initiale de la fenêtre de jeu : quand on augmente ou diminue la taille de la fenêtre lors de la partie, la taille des graphismes n'est pas adaptée (ce qui fait que le jeu n'est pas du tout Responsive...)</em></p>
+</div></div>
+<hr>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Création des dessins</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">paint</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//creation du rectangle de fond</span>
+        g<span class="token punctuation">.</span>setColor <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        g<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">580</span><span class="token punctuation">,</span><span class="token number">480</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+        <span class="token comment">//grilles de colonnes </span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">(</span>choicesGrid<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token punctuation">(</span>choicesGrid<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> j <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               g<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>choicesGrid<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               g<span class="token punctuation">.</span><span class="token function">fillOval</span><span class="token punctuation">(</span><span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>posXCercleL<span class="token punctuation">,</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>posYCercleL<span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+        <span class="token comment">//lignes choix en cours</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">4</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            g<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            g<span class="token punctuation">.</span><span class="token function">fillOval</span><span class="token punctuation">(</span>i<span class="token operator">*</span>posXCercleL<span class="token punctuation">,</span><span class="token number">550</span><span class="token punctuation">,</span><span class="token number">46</span><span class="token punctuation">,</span><span class="token number">46</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//creation des icones d'indications des des réponses</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">(</span>clueGrid<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token punctuation">(</span>clueGrid<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> j <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                g<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>clueGrid<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                g<span class="token punctuation">.</span><span class="token function">fillOval</span><span class="token punctuation">(</span><span class="token number">380</span> <span class="token operator">+</span> <span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>posXCercleR<span class="token punctuation">,</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>posYCercleR<span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//permet d'appeler à nouveau la méthode paint pour redessiner les formes</span>
+            <span class="token function">repaint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4 id="c"> Création des Panels</h4>
+<p>On va ensuite s'occuper de la méthode <em>initialize</em> qui va permettre de créer les <em>panels</em>, les <em>boutons</em> et les <em>actions associées</em>.</p>
+<h5>1 : Button Panel</h5>
+<p><em>Ce panel va gérer l'affichage des boutons &quot;valider&quot; et &quot;effacer&quot;</em></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>ButtonPanel</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">    <span class="token comment">//Panel boutons "valider" et "effacer"</span>
+        <span class="token class-name">JPanel</span> <span class="token class-name">ButtonPanel</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnValider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span> <span class="token punctuation">(</span><span class="token string">"Valider"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnValider<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>mainFont<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnValider<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token number">510</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnValider<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">validateChoices</span><span class="token punctuation">(</span>maxTries<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnEffacer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span> <span class="token punctuation">(</span><span class="token string">"Effacer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnEffacer<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>mainFont<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnEffacer<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">350</span><span class="token punctuation">,</span><span class="token number">510</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnEffacer<span class="token punctuation">.</span>addActionListener <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//fait à une 1ere méthode qui remet à "zéro" (en gris) le contenu de la liste du choix de l'utilisateur et une autre qui vient actualiser l'action en redessinant le graphique</span>
+                <span class="token function">emptyChoicesList</span><span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnValider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnEffacer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<hr>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Remarque</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Pour m’entraîner, j'ai utilisé à la fois des classes anonymes (<em>new ActionListener</em>) et des expressions lambda (<em>e -&gt; validateChoices(maxTries)</em>). Après coup, je pense qu'ill aurait été plus cohérent d'utiliser que des expressions lambda, pour harmoniser les codes, et comme je les trouve plus facile à créer.</p>
+</div></div>
+<h5>2 : Color Panel</h5>
+<p><em>Ce panel va gérer l'affichage des boutons en bas de l'écran permettant à l'utilisateur de choisir ses couleurs</em></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>colorPanel</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token comment">// Panneau choix couleurs</span>
+        <span class="token class-name">JPanel</span> colorPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span>setLayout <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">GridLayout</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//Ajout des boutons des couleurs</span>
+        <span class="token class-name">JButton</span> btnRed <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnRed<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">RED</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        btnRed<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">RED</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnRed<span class="token punctuation">.</span><span class="token function">setPreferredSize</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Dimension</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">WIDTH</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnBlue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnBlue<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">BLUE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnBlue<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">BLUE</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnCyan <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnCyan<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">CYAN</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnCyan<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">CYAN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnYellow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnYellow<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">YELLOW</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        btnYellow<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">YELLOW</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnGreen <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnGreen<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">GREEN</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        btnGreen<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">GREEN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token class-name">JButton</span> btnPink <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnPink<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">MAGENTA</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnPink<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-></span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">MAGENTA</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnRed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnBlue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnCyan<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnYellow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnGreen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnPink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h5>3 : Main Panel</h5>
+<p><em>On va venir ensuite créer le main panel qui va stocker les panels précédents en les disposant sur la page (haut, bas, centre, ...)</em></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>mainPanel</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">       <span class="token class-name">JPanel</span> mainPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mainPanel<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BorderLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mainPanel<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//On ajoute le form panel au main Panel dans la partie "sud"</span>
+        mainPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>colorPanel<span class="token punctuation">,</span> <span class="token class-name">BorderLayout</span><span class="token punctuation">.</span><span class="token constant">SOUTH</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//On ajoute des marges</span>
+        mainPanel<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token class-name">BorderFactory</span><span class="token punctuation">.</span><span class="token function">createEmptyBorder</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mainPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">ButtonPanel</span><span class="token punctuation">,</span><span class="token class-name">BorderLayout</span><span class="token punctuation">.</span><span class="token constant">CENTER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">add</span><span class="token punctuation">(</span>mainPanel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">"Mastermind"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">700</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">WindowConstants</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Enfin, on créé la méthode principale pour executer le panneau principal :</p>
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> main <span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">MainFrame</span> myFrame <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MainFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myFrame<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="messageframe"> Message Frame</h3>
+<p>On réitère la même démarche que pour le Main Panel. Le besoin des méthodes et des boutons ne sera pas le même:</p>
+<ul>
+<li>méthode pour récupérer le code secret transmis lors de l'appel de l'appel de la méthode dans le MainPanel (<strong><em>MessageFrame</em></strong>)</li>
+<li>de la méthode paint pour venir dessiner les cercles de couleurs du code secret (<strong><em>paint</em></strong>)</li>
+<li>du texte dont le contenu s'adaptera en fonction de la réussite (ou pas) du joueur (<strong><em>displayMessage</em></strong>)</li>
+<li>une méthode pour exécuter le frame (<strong><em>go</em></strong>)</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>MessageFrame</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MessageFrame</span> <span class="token keyword">extends</span> <span class="token class-name">JFrame</span><span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token keyword">private</span> <span class="token class-name">Font</span> mainFont <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Font</span> <span class="token punctuation">(</span><span class="token string">"Poppins"</span><span class="token punctuation">,</span> <span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token constant">BOLD</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token keyword">private</span> <span class="token class-name">Font</span> secondFont <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Font</span> <span class="token punctuation">(</span><span class="token string">"Poppins"</span><span class="token punctuation">,</span><span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token constant">CENTER_BASELINE</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MessageFrame</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//permet de récupérer le code secret du MainFrame</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>secretCode<span class="token operator">=</span>secretCode<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">paint</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//creation du rectangle de fond</span>
+        g<span class="token punctuation">.</span>setColor <span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">WHITE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        g<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">320</span><span class="token punctuation">,</span><span class="token number">480</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">//creation des icones du code secret</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">4</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            g<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>secretCode<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            g<span class="token punctuation">.</span><span class="token function">fillOval</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">100</span><span class="token operator">*</span>i<span class="token punctuation">,</span><span class="token number">350</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">displayMessage</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> <span class="token class-name">IsWin</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//initialisation des text</span>
+        <span class="token class-name">JLabel</span> messageLabel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JLabel</span> <span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messageLabel<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>mainFont<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messageLabel<span class="token punctuation">.</span><span class="token function">setHorizontalAlignment</span><span class="token punctuation">(</span><span class="token class-name">JLabel</span><span class="token punctuation">.</span><span class="token constant">CENTER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">JLabel</span> codeLabel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JLabel</span> <span class="token punctuation">(</span><span class="token string">"Le code secret était:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        codeLabel<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>secondFont<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        codeLabel<span class="token punctuation">.</span><span class="token function">setHorizontalAlignment</span><span class="token punctuation">(</span><span class="token class-name">JLabel</span><span class="token punctuation">.</span><span class="token constant">CENTER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//création des panels</span>
+        <span class="token class-name">JPanel</span> textPanel<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        textPanel<span class="token punctuation">.</span>setLayout <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">GridLayout</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        textPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>messageLabel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        textPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>codeLabel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        textPanel<span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JButton</span> btnRecommencer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span> <span class="token punctuation">(</span><span class="token string">"Recommencer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnRecommencer<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>mainFont<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        btnRecommencer<span class="token punctuation">.</span>addActionListener <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// TODO Auto-generated method stub</span>
+                <span class="token class-name">MainFrame</span><span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">JPanel</span> buttonPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        buttonPanel<span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        buttonPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnRecommencer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//creation Panel principal</span>
+        <span class="token class-name">JPanel</span> messagePanel<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messagePanel<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BorderLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messagePanel<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token class-name">BorderFactory</span><span class="token punctuation">.</span><span class="token function">createEmptyBorder</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messagePanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>textPanel<span class="token punctuation">,</span><span class="token class-name">BorderLayout</span><span class="token punctuation">.</span><span class="token constant">CENTER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        messagePanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>buttonPanel<span class="token punctuation">,</span><span class="token class-name">BorderLayout</span><span class="token punctuation">.</span><span class="token constant">SOUTH</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">IsWin</span> <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            messagePanel<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">178</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">106</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            messageLabel<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"Vous avez gagné ! 😀"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            messagePanel<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">240</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            messageLabel<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"Vous avez perdu... 😢"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">add</span><span class="token punctuation">(</span>messagePanel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">"End"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">700</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">WindowConstants</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> go <span class="token punctuation">(</span><span class="token keyword">boolean</span> <span class="token class-name">IsWin</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">MessageFrame</span> my2Frame <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MessageFrame</span><span class="token punctuation">(</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        my2Frame<span class="token punctuation">.</span><span class="token function">displayMessage</span><span class="token punctuation">(</span><span class="token class-name">IsWin</span><span class="token punctuation">,</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h2 id="backlog2"> Message Frame</h2>
+<h3>Retour sur le backlog du jeu</h3>
+<table>
+<thead>
+<tr>
+<th>Intitulé</th>
+<th>Complexité</th>
+<th>Valeur métier(MoSCoW)</th>
+<th>Réalisé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sélectionner une combinaison de 4 couleurs</td>
+<td>3</td>
+<td>Must</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Valider une fois qu'une combinaison a été choisie</td>
+<td>3</td>
+<td>Must</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Effacer une combinaison qui n'a pas encore été validée</td>
+<td>3</td>
+<td>Must</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Choisir d'effacer seulement la dernière couleur qui a été sélectionnée</td>
+<td>8</td>
+<td>Won't</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Pouvoir abandonner la partie à tout moment</td>
+<td>5</td>
+<td>Could</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Pouvoir accéder aux règles du jeu à tout moment</td>
+<td>5</td>
+<td>Won't</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée</td>
+<td>5</td>
+<td>Must</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Avoir le code secret recherché qui s'affiche à la fin d'une partie</td>
+<td>3</td>
+<td>Won't</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>Finalement, je n'ai pas réussi à implémenter toutes les fonctionnalités que j'avais espérées pour mon jeu, surtout par manque de temps :</p>
+<ul>
+<li><em>accéder aux règles du jeu</em> et n'<em>effacer que la dernière couleur sélectionnée</em> n'étaient pas forcément compliqué à mettre en place (rajouter un bouton avec un autre JFrame avec la même méthode que le MessageFrame) mais pas primordial</li>
+<li>le bouton <em>Abandonner</em> était plus compliqué à mettre en place. Je n'ai pas réussi à combiner les graphismes créés avec la méthode paint avec les JButton. J'aurais pu revoir toute la disposition de l'écran, mais cela signifiait changer toutes les proportions, et je manquais de temps...</li>
+</ul>
+<h3>Retour sur le backlog du Sprint 2</h3>
+<table>
+<thead>
+<tr>
+<th>Intitulé</th>
+<th>Temps estimé</th>
+<th>Temps réalisé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Réaliser le backlog défini plus haut sur Java (*) <br> - Recherche de méthodes de résolution d'un mastermind <br> - Implémentation de ces méthodes <br> - Comparaison des méthodes</td>
+<td>1h <br> 6h <br> 45mins <br> 1h <br> 30 mins</td>
+<td><strong>1h15</strong> <br> <strong>9h</strong> <br> <strong>/</strong> <br> <strong>/</strong> <br> <strong>/</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>(*) Plus en détails</strong><br>
+1h30 : Recherches et réalisations des boutons de choix de couleurs<br>
+1h30 : Recherches sur la méthode paint et réalisation des graphismes<br>
+1h : Tentatives de création des boutons du jeu (&quot;Abandonner&quot;, &quot;Effacer&quot;, &quot;Valider&quot;)<br>
+45 mins : Gestion de la ligne de choix de l'utilisateur<br>
+1h : Gestion de la grille du jeu complet de l’utilisateur et création des méthodes<br>
+1h : Gestion de l'affiche et de la mise à jour des indices et méthodes<br>
+1h30 : Création du MessagePanel<br>
+45 mins : Tests du jeu pour s'assurer de son fonctionnement au fur et à mesure</p>
+</blockquote>
+<p>Bon...<br>
+J'ai finalement assez sous estimé le temps que prendrait le jeu à implémenter.</p>
+<h3>Points de retard notés</h3>
+<table>
+<thead>
+<tr>
+<th>Problème</th>
+<th>Raison</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manque de ressources et de culture sur le sujet</td>
+<td>- Ce qui fait que pour certains problèmes (ex: réaliser des formes graphiques dont la couleur se met à jour en fonction des choix de l'utilisateur) je ne savais pas au début comment orienter mes recherches pour résoudre mon problème <br> - Je suis d'ailleurs souvent partie dans une direction pour me rendre compte que ce n'était pas la bonne</td>
+</tr>
+<tr>
+<td>Trop grande volonté de coller au figma</td>
+<td>- Difficulté de réaliser des boutons ronds sur Java (j'ai passé beaucoup de temps sur des forums à essayer de comprendre comment on pouvait contourner le problème pour finalement me rendre compte que je ne comprenais rien et qu'il valait mieux que je fasse des boutons rectangulaires) <br> - Pendant un long moment, je n'arrivais pas à créer les boutons &quot;effacer&quot; et &quot;valider&quot;, comme je les avais positionnés sur la maquette (problème de combinaisons entre les graphismes créés avec la méthode paint et les JButton)</td>
+</tr>
+</tbody>
+</table>
+<h3>Axes d'amélioration</h3>
+<p>Si c'était à refaire, je ferais en sorte de définir mon backlog pour le sprint 2 après avoir eu un aperçu de comment utiliser Swing et de ses possibilités. Et de même, avant la réalisation de la maquette Figma. Cela m'aurait permis de vraiment savoir ce qui était possible de faire, de dessiner la maquette en conséquence, et d'estimer correctement le temps qu'il me faudra pour réaliser les tâches du backlog.</p>
 
 
 </article>
