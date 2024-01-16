@@ -156,7 +156,7 @@ Pour ce MON j'ai suivi le cours d'OpenClassroom <a href="https://openclassrooms.
 <li>les <strong>keyframes </strong></li>
 </ul>
 <p>Les keyframes sont plus complexes à mettre en place mais elles permettent d'obtenir des animations plus élaborées. Les transitions sont elles plus limités mais plus simples à créer.</p>
-<p>Pour créer une <strong>transition</strong>il faut différentes informations :</p>
+<p>Pour créer une <strong>transition</strong> il faut différentes informations :</p>
 <ul>
 <li>une <strong>propriété CSS à modifier</strong></li>
 <li>une <strong>valeur initiale pour votre propriété CSS </strong></li>
@@ -165,13 +165,13 @@ Pour ce MON j'ai suivi le cours d'OpenClassroom <a href="https://openclassrooms.
 <li>un <strong>événement pour déclencher votre transition </strong></li>
 </ul>
 <p>On applique la valeur initiale à l’élément qu’on veut modifier, et la valeur finale dans la pseudoclasse qui déclenche la transition. La durée de la transition peut s'exprimer en secondes ou en millisecondes. On peut déclarer les propriétés d'une transistion individuellement ou en les combinant.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform ;
-transition-duration: 400ms ; 
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token punctuation">;</span>
+<span class="token property">transition-duration</span><span class="token punctuation">:</span> 400ms <span class="token punctuation">;</span> 
 </code></pre>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 400ms ; 
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 400ms <span class="token punctuation">;</span> 
 </code></pre>
 <h3>Pseudos-classes pour déclencher une transition</h3>
-<p>Les pseudoclasses sont essentielles pour déclencher des transitions en CSS, les plus adaptés sont celles qui impliquent une interaction avec l'utilisateur. On peut aussi combiner des pseudoclasses entre elles pour créer des sélecteurs un peu plus précis, et permette aussi de changer le style d'un élément voisin.</p>
+<p>Les pseudoclasses sont essentielles pour déclencher des transitions en CSS, les plus adaptées sont celles qui impliquent une interaction avec l'utilisateur. On peut aussi combiner des pseudoclasses entre elles pour créer des sélecteurs un peu plus précis, et permette aussi de changer le style d'un élément voisin.</p>
 <ul>
 <li>
 <p><strong>:hover</strong>, qui est déclenché au survol de la souris.</p>
@@ -202,43 +202,43 @@ transition-duration: 400ms ;
 </li>
 </ul>
 <h3>Appliquez les 12 principes de l'animation web</h3>
-<p>Maintenant, il est opportun de réfléchir à la manière de créer des animations plus naturelles et engageantes. Bien que les animations déjà élaborées soient fonctionnelles, elles se limitent aux propriétés de transition de base, en laissant de côté la plupart des valeurs par défaut. Ces dernières produisent des effets excessivement lisses, parfois artificiels, en contraste avec la nature, où les mouvements sont caractérisés par l'irrégularité, les oscillations et les changements de direction. L'objectif d'intégrer des animations sur un site web est de procurer une expérience immersive en infusant une dynamique organique dans les mouvements, harmonisant ainsi l'expérience utilisateur avec notre perception naturelle.</p>
+<p>Maintenant, il est opportun de réfléchir à la manière de créer des animations plus <strong>naturelles et engageantes</strong>. Bien que les animations déjà élaborées soient fonctionnelles, elles se limitent aux propriétés de transition de base, en laissant de côté la plupart des valeurs par défaut. Ces dernières produisent des effets excessivement lisses, parfois artificiels, en contraste avec la nature, où les mouvements sont caractérisés par <strong>l'irrégularité</strong>, les oscillations et les changements de direction. L'objectif d'intégrer des animations sur un site web est de procurer <strong>une expérience immersive</strong> en infusant une dynamique organique dans les mouvements, <strong>harmonisant</strong> ainsi l'expérience utilisateur avec notre perception naturelle.</p>
 <h3>Créer des transitions css à propriétés multiples</h3>
-<p>Pour créer des animations vivantes et agréables il faut faire plus que simplement passer d'un état A à un état B. En superposant des effets de mouvement on offre à l'utilisateur une animation qui parait beaucoup plus authentique.<br>
+<p>Pour créer des animations vivantes et agréables il faut faire plus que simplement passer d'un état A à un état B. En superposant des effets de mouvement on offre à l'utilisateur une animation qui parait beaucoup <strong> plus authentique</strong>.<br>
 Ainsi, au sein d'une transition, on peut facilement animer deux propriétés, ou même autant que l'on désire.</p>
 <p>L’utilisation du mot-clé <strong>all</strong> permet de déclencher plusieurs changements au même moment et pour la même durée, mais il existe un autre moyen d’ajouter des propriétés multiples à une transition.<br>
-On peut aussi faire une liste des animations de chaque propriété à laquelle nous voulons ajouter une transition, séparées par des virgules.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 450ms, background-color 450ms ; 
+On peut aussi faire une <strong>liste des animations</strong> de chaque propriété à laquelle nous voulons ajouter une transition, séparées par des virgules.</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 450ms <span class="token punctuation">;</span> 
 </code></pre>
 <p>On peut donner une <strong>durée différente</strong> pour chaque changements. C’est très utile pour obtenir un rendu <strong> moins uniforme</strong>, et ainsi créer quelque chose de plus intéressant visuellement et de plus engageant pour l’utilisateur.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 450ms, background-color 300ms ; 
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms <span class="token punctuation">;</span> 
 </code></pre>
 <p>La différence ne se voit qu'à peine, mais ces quelques fractions de secondes permettent de rendre l’animation un peu <strong>moins parfaite</strong> et lui apportent un peu de <strong>texture</strong>.</p>
 <p>Pour accentuer encore plus le côté &quot;imparfait&quot; de l'animation on peut retarder le changement sur une des propriétés. Par exemple faire démarer la transition sur <em>background-color</em> 150ms plus tard pour que les deux transistions se terminrent en même temps.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 450ms, background-color 300ms;
-transition-delay: 0, 150ms;
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms<span class="token punctuation">;</span>
+<span class="token property">transition-delay</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 150ms<span class="token punctuation">;</span>
 </code></pre>
 <h3>Créer des animations plus naturelles avec les fonctions de timing</h3>
-<p>Pour que les animations soient encore plus réaliste il faut penser que dans la nature un objet en mouvement doit accèléré à un moment donner et déccelérer lorsque son mouvement prend fin. On parle de <strong>ease-in</strong> et <strong>ease-out</strong>.</p>
+<p>Pour que les animations soient encore <strong>plus réaliste</strong> il faut penser que dans la nature un objet en mouvement doit accèléré à un moment donner et déccelérer lorsque son mouvement prend fin. On parle de <strong>ease-in</strong> et <strong>ease-out</strong>.</p>
 <p>En CSS on utilise la propriété <strong>transition-timing-function</strong> pour régler la courbe d’accélération d’une transition.</p>
 <h4>Principales fonctions de timing</h4>
 <ul>
 <li>la fonction <strong>linear</strong> : elle ne connaît pas d'accentuation à l'accélération ou à la décélération. Sa courbe est totalement droite du point A au point B.</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 1000ms;
-transition-timing-function: linear;
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms<span class="token punctuation">;</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
 </code></pre>
 <ul>
 <li>les fonctions <strong>ease-in-out</strong>, <strong>ease-in</strong>,<strong>ease-out</strong> : elles suivent une courbe d’accélération (pour ease-in et ease-in-out) et de décélération (pour ease-out et ease-in-out) subtile.</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition: transform 1000ms ease-in-out;
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms ease-in-out<span class="token punctuation">;</span>
 </code></pre>
 <div style="display:flex"><img src="courbeseases.png"></div>
 <ul>
 <li>la fonction <strong>ease</strong> : c'est la fonction qui est utilisée par défaut lorsqu'aucune fonction n'est précisée. Elle ressemble beaucoup aux fonctions ci-dessus mais avec une accélération plus nette et une rampe de décélération plus prononcée.</li>
 </ul>
 <p>Ces fonctions sont des raccourcis de la fonction <strong>cubic-bezier</strong> : on lui indique une liste de valeurs numériques, qu'elle transforme en courbe d’accélération. Par exemple,  ease-in-out  peut être écrite ainsi :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transition-timing-function: cubic-bezier(.42, 0, .58, 1);
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition-timing-function</span><span class="token punctuation">:</span> <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>.42<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .58<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Avec des outils comme le site <a href="https://cubic-bezier.com/#.17,.67,.83,.67">Cubic Bezier</a> on peut créer facilement la courbe de bézier qui correspond à l'accélèration et la déccélération que l'on désire et récupérer les valeur numérique correspondante.</p>
 <h3>Optimisez les performances de votre navigateur pour vos animations CSS</h3>
@@ -247,62 +247,64 @@ transition-timing-function: linear;
 <p>Pour assurer <strong>la fluidité</strong> des animations, il est recommandé de se limiter à animer des propriétés lors de l'étape de composition. Les plus utiles à cet effet sont les propriétés <strong>&quot;transform&quot; et &quot;opacity&quot;</strong>.</p>
 <h3>Créez des animations fluides avec la propriété CSS transform</h3>
 <p>Pour nous assurer que nos animations soient aussi fluides que possibles, nos deux propriétés alliées sont  <strong>transform  et  opacity</strong>. Cela peut paraitre limité mais en fait ces deux propriétés ont une multitude de fonctions à elles seules.</p>
-<p>La propriété &quot;transform&quot; offre une flexibilité exceptionnelle pour manipuler et animer nos sites de manière variée. Étant donné que toutes ces manipulations se produisent pendant l'étape de composition, les animations sont fluides sur tous les supports.</p>
-<p>Il est possible de déplacer des éléments grâce aux fonctions de translation telles que &quot;translate()&quot;, &quot;translateX()&quot;, &quot;translateY()&quot;, et &quot;translate3d()&quot;. De même, on peut ajuster la taille avec les fonctions de mise à l'échelle telles que &quot;scale()&quot;, &quot;scaleX()&quot;, &quot;scaleY()&quot;, et &quot;scale3d()&quot;. En outre, il est possible de réaliser des rotations en utilisant les fonctions &quot;rotate()&quot;, &quot;rotateX()&quot;, &quot;rotateY()&quot;, et &quot;rotateZ()&quot;.</p>
-<p>Il est important de noter qu'ajouter une deuxième propriété &quot;transform&quot; annule la première, ce qui signifie qu'un seul &quot;transform&quot; peut être défini dans un même sélecteur. Pour effectuer plusieurs transformations, il suffit de les lister dans une seule propriété &quot;transform&quot;, comme suit :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">transform:translateX(200%) scale(2)
+<p>La propriété &quot;transform&quot; offre une <strong>flexibilité</strong> exceptionnelle pour manipuler et animer les sites de manière variée. Étant donné que toutes ces manipulations se produisent pendant l'étape de <strong>composition</strong>, les animations sont fluides sur tous les supports.</p>
+<p>Il est possible de déplacer des éléments grâce aux <strong>fonctions de translation</strong> telles que &quot;translate()&quot;, &quot;translateX()&quot;, &quot;translateY()&quot;, et &quot;translate3d()&quot;. De même, on peut ajuster la taille avec les fonctions de mise à l'échelle telles que &quot;scale()&quot;, &quot;scaleX()&quot;, &quot;scaleY()&quot;, et &quot;scale3d()&quot;. En outre, il est possible de réaliser des rotations en utilisant les fonctions &quot;rotate()&quot;, &quot;rotateX()&quot;, &quot;rotateY()&quot;, et &quot;rotateZ()&quot;.</p>
+<p>Il est important de noter qu'ajouter une deuxième propriété &quot;transform&quot; annule la première, ce qui signifie qu'<strong>un seul &quot;transform&quot; peut être défini dans un même sélecteur</strong>. Pour effectuer plusieurs transformations, il suffit de les lister dans une seule propriété &quot;transform&quot;, comme suit :</p>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">translateX</span><span class="token punctuation">(</span>200%<span class="token punctuation">)</span> <span class="token function">scale</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>
 </code></pre>
-<p>L'ordre y est important car une propriété contenant plusieurs fonctions exécute ces fonctions dans l'ordre, de droite à gauche.</p>
-<p>Pour les fonctions de transformations en 3D telles que &quot;translate3d()&quot;, &quot;rotateZ()&quot;, et &quot;scale3d()&quot;, il est également nécessaire d'inclure la fonction &quot;perspective&quot;. Cela permet d'indiquer au navigateur la distance à laquelle se trouve l'utilisateur : plus la distance est grande, moins l'animation sera perceptible.</p>
+<p>L'ordre y est important car une propriété contenant plusieurs fonctions <strong>exécute ces fonctions dans l'ordre, de droite à gauche.</strong></p>
+<p>Pour les fonctions de transformations en 3D telles que &quot;translate3d()&quot;, &quot;rotateZ()&quot;, et &quot;scale3d()&quot;, il est également nécessaire d'inclure la fonction &quot;perspective&quot;. Cela permet d'indiquer au navigateur <strong>la distance à laquelle se trouve l'utilisateur</strong> : plus la distance est grande, moins l'animation sera perceptible.</p>
 <h3>Modifier le point d'ancrage d'un élément grâce à transform-origin</h3>
-<p>La propriété &quot;transform-origin&quot; permet de déplacer le point d'ancrage, qui est initialement positionné au centre de l'élément.</p>
+<p>La propriété &quot;transform-origin&quot; permet de <strong>déplacer le point d'ancrage</strong>, qui est initialement positionné au centre de l'élément.</p>
 <p>On peut ajuster ce point d'origine en utilisant des unités telles que px, rem, vh, etc. Il est également possible d'utiliser des pourcentages pour les axes X et Y. Alternativement, des mots clés tels que &quot;left&quot; et &quot;right&quot; pour l'axe X, &quot;top&quot; et &quot;bottom&quot; pour l'axe Y, ainsi que &quot;center&quot; pour les deux axes peuvent être employés.</p>
-<p>Il est à noter qu'il est possible de ne pas spécifier la valeur de l'axe Y, ou lors de l'utilisation de mots clés, de fournir uniquement une valeur. Dans ce cas, le navigateur comprend automatiquement à quel axe la valeur s'applique.</p>
-<p>Lorsque le point d'origine est modifié en 3D, la valeur de Z doit être exprimée en unités (et non en pourcentages).</p>
+<p>Il est possible de ne pas spécifier la valeur de l'axe Y, ou lors de l'utilisation de mots clés, de fournir uniquement une valeur. Dans ce cas, le navigateur comprend automatiquement à quel axe la valeur s'applique.</p>
+<p>Lorsque le point d'origine est modifié en <strong>3D</strong>, la valeur de Z doit être exprimée <strong>en unités</strong> (et non en pourcentages).</p>
 <h3>Analyser la performance de vos animations avec Chrome DevTools</h3>
 <p><strong>Chrome DevTools</strong> demeure l'outil privilégié des développeurs, offrant la possibilité d'inspecter le code source d'une page, d'évaluer les performances de la page, et même de restreindre délibérément les performances de la machine pour <strong>simuler un appareil plus lent</strong>, grâce à l'activation de l'option &quot;CPU throttling&quot;.</p>
 <p>L'outil <strong>Performance</strong>, quant à lui, permet une analyse approfondie des performances d'une page, incluant le taux d'images par seconde d'une animation. En utilisant l'onglet Performance, il devient possible d'examiner en détail nos animations, facilitant ainsi la détection des problèmes potentiels dans notre code qui pourraient affecter la fluidité sur différents supports.</p>
 <p>Par ailleurs, en zoomant sur une image spécifique d'une animation, il est envisageable de scruter en détail <strong>les calculs effectués par le navigateur</strong>, offrant une vision plus précise des processus évoqués dans le chapitre dédié au fonctionnement du navigateur.</p>
 <h3>Animer les couleurs de manière performante avec opacity</h3>
-<p>Animer la couleur d'une propriété entraîne des calculs de peinture, mais la propriété &quot;opacity&quot; offre une alternative en permettant des transitions entre les couleurs tout en contournant ces calculs. Pour définir le niveau de transparence, la propriété &quot;opacity&quot; prend une valeur entre 0 et 1, où 0 représente une transparence totale et 1 une opacité totale.</p>
-<p>Afin d'éviter d'ajouter des balises </p><div> supplémentaires au HTML, ce qui pourrait être nécessaire pour chaque ajout, on peut recourir aux pseudo-éléments &quot;::before&quot; ou &quot;::after&quot;. La création d'un pseudo-élément se réalise en ajoutant le nom du pseudo-élément à un sélecteur, préfixé par deux-points doubles, comme ceci : &quot;.selector::after{...}&quot;.<p></p>
-<p>Les pseudo-éléments &quot;::before&quot; et &quot;::after&quot; engendrent respectivement un élément qui est le premier ou le dernier enfant de l'élément sélectionné. Il est également possible de créer des dégradés de couleur en attribuant un dégradé à la propriété &quot;background-color&quot; de l'élément d'arrière-plan. Ensuite, on peut faire disparaître l'élément superposé en ajustant l'opacité à 0.</p>
+<p>Animer la couleur d'une propriété entraîne <strong>des calculs de peinture</strong>, mais la propriété &quot;opacity&quot; offre une alternative en permettant <strong>des transitions entre les couleurs tout en contournant ces calculs</strong>. Pour définir le niveau de transparence, la propriété &quot;opacity&quot; prend une valeur entre 0 et 1, où 0 représente une transparence totale et 1 une opacité totale.</p>
+<p>Afin d'éviter d'ajouter des balises </p><div> supplémentaires au HTML, ce qui pourrait être nécessaire pour chaque ajout, on peut recourir aux pseudo-éléments <strong>&quot;::before&quot; ou &quot;::after&quot;</strong>. La création d'un pseudo-élément se réalise en ajoutant le nom du pseudo-élément à un sélecteur, préfixé par deux-points doubles, comme ceci :<p></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">.selector::after{...}
+</code></pre>
+<p>Les pseudo-éléments &quot;::before&quot; et &quot;::after&quot; engendrent respectivement un élément qui est le premier ou le dernier enfant de l'élément sélectionné. Il est possible de créer des dégradés de couleur en attribuant un dégradé à la propriété &quot;background-color&quot; de l'élément d'arrière-plan. Ensuite, on peut faire disparaître l'élément superposé en ajustant l'opacité à 0.</p>
 <h3>Créer des animations plus complexes avec la règle CSS @keyframes</h3>
-<p>Les animations @keyframes nous offrent la possibilité de créer des animations plus élaborées en définissant plusieurs étapes pour les propriétés tout au long de l'animation.</p>
+<p>Les animations <strong>@keyframes</strong> nous offrent la possibilité de créer des animations <strong> élaborées </strong> en définissant plusieurs étapes pour les propriétés tout au long de l'animation.</p>
 <p>Les keyframes CSS sont créés en utilisant la règle @keyframes suivie d'un nom pour l'ensemble des keyframes, comme illustré ci-dessous :</p>
 <pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@keyframes</span> example-frames</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Chaque keyframe peut être défini en utilisant le pourcentage d'avancement de l'animation comme valeur, tel que :</p>
 <pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">33%</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Dans le cas où un seul keyframe de début et de fin est requis, les mots-clés « from » et « to » peuvent être utilisés en remplacement de 0% et 100%, respectivement.</p>
-<p>En l'absence d'un keyframe de début ou de fin, l'animation débute et/ou se termine avec les valeurs de propriété assignées au sélecteur. Si aucune valeur n'est explicitement assignée dans le sélecteur, la valeur par défaut est choisie.</p>
-<p>Une animation définie par la règle @keyframes peut inclure plusieurs keyframes avec des propriétés distinctes. De plus, plusieurs pourcentages peuvent être attribués à un seul keyframe, et les valeurs définies dans ce keyframe seront appliquées aux pourcentages spécifiés au cours de l'animation.</p>
+<p>Dans le cas où un seul keyframe de début et de fin est requis, les mots-clés <strong>« from » et « to » peuvent être utilisés</strong> en remplacement de 0% et 100%, respectivement.</p>
+<p>En l'absence d'un keyframe de début ou de fin, <strong>l'animation débute et/ou se termine avec les valeurs de propriété assignées au sélecteur</strong>. Si aucune valeur n'est explicitement assignée dans le sélecteur, la valeur par défaut est choisie.</p>
+<p>Une animation définie par la règle @keyframes peut inclure plusieurs keyframes avec des propriétés distinctes. De plus, <strong>plusieurs pourcentages peuvent être attribués à un seul keyframe</strong>, et les valeurs définies dans ce keyframe seront appliquées aux pourcentages spécifiés au cours de l'animation.</p>
 <p>Il est important de noter que les propriétés et valeurs d'un ensemble de keyframes remplaceront les valeurs de propriétés attribuées à un sélecteur pendant l'animation.</p>
 <h3>Utilisez les propriétés de l'animation CSS</h3>
-<p>Les animations CSS @keyframes peuvent être activées en utilisant des pseudoclasses telles que :hover, de manière similaire aux transitions. En outre, les @keyframes CSS peuvent être déclenchés automatiquement par le chargement des éléments auxquels ils sont associés, tels qu'un sélecteur, dès le chargement d'une page, par exemple.</p>
-<p>Pour ajuster le moment de démarrage des animations avec keyframes, on peut utiliser la propriété animation-delay, en définissant un délai en secondes ou en millisecondes, comme on le ferait pour les transitions.</p>
-<p>Pour étendre les valeurs du début à la fin des animations, la propriété animation-fill-mode offre différentes options :</p>
+<p>Les animations CSS @keyframes peuvent être activées en utilisant des <strong>pseudoclasses</strong> telles que :hover, de manière similaire aux transitions. Les @keyframes CSS peuvent être déclenchés automatiquement par le chargement des éléments auxquels ils sont associés, tels qu'un sélecteur, dès le chargement d'une page, par exemple.</p>
+<p>Pour ajuster le moment de démarrage des animations avec keyframes, on peut utiliser la propriété <strong>animation-delay</strong>, en définissant un délai en secondes ou en millisecondes, comme on le ferait pour les transitions.</p>
+<p>Pour étendre les valeurs du début à la fin des animations, la propriété <strong>animation-fill-mode</strong> offre différentes options :</p>
 <ul>
-<li>Le mot clé &quot;backwards&quot; prolonge les valeurs initiales de l'animation avant son lancement, couvrant la durée du délai assigné avant le début effectif de l'animation.</li>
-<li>Le mot clé &quot;forwards&quot; prolonge les valeurs finales de l'animation jusqu'au rechargement de la page ou à la fermeture du navigateur.</li>
-<li>Le mot clé &quot;both&quot; prolonge l'animation dans les deux sens, couvrant les valeurs initiales et finales.</li>
+<li>Le mot clé <strong> &quot;backwards&quot; </strong> prolonge les valeurs initiales de l'animation avant son lancement, couvrant la durée du délai assigné avant le début effectif de l'animation.</li>
+<li>Le mot clé <strong>&quot;forwards&quot; </strong> prolonge les valeurs finales de l'animation jusqu'au rechargement de la page ou à la fermeture du navigateur.</li>
+<li>Le mot clé <strong> &quot;both&quot; </strong> prolonge l'animation dans les deux sens, couvrant les valeurs initiales et finales.</li>
 </ul>
-<p>Une fonction de timing pour les @keyframes peut être définie en utilisant la fonction animation-timing-function sur le sélecteur où l'animation a été assignée. De plus, un timing spécifique peut être défini keyframe par keyframe en assignant la propriété animation-timing-function aux keyframes concernés.</p>
+<p>Une fonction de timing pour les @keyframes peut être définie en utilisant la fonction <strong>animation-timing-function</strong> sur le sélecteur où l'animation a été assignée. De plus, un timing spécifique peut être défini keyframe par keyframe en assignant la propriété animation-timing-function aux keyframes concernés.</p>
 <h3>Manipuler et réutilisez les animations CSS</h3>
-<p>On peut répéter un ensemble de keyframes autant de fois que nécessaire en utilisant la propriété &quot;animation-iteration-count&quot; avec le nombre de cycles comme valeur.</p>
-<p>On a la possibilité de régler nos keyframes pour qu'ils se répètent à l'infini en utilisant la propriété &quot;animation-iteration-count&quot; avec le mot clé « infinite ».</p>
-<p>La propriété &quot;animation-direction&quot; permet de lire un ensemble de keyframes normalement avec le mot clé « normal ».</p>
-<p>Avec le mot clé « reverse » de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en sens inverse.</p>
-<p>En utilisant le mot clé « alternate » avec la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière.</p>
-<p>Enfin, avec le mot clé « alternate-reverse » de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière, mais en commençant par la fin.</p>
-<p>On peut mettre en pause une animation avec keyframe en assignant à la propriété &quot;animation-play-state&quot; la valeur réglée sur « paused ».</p>
-<p>Pour reprendre la lecture d'une animation avec keyframe, on utilise la propriété &quot;animation-play-state&quot; avec la valeur réglée sur « running ».</p>
+<p>On peut répéter un ensemble de keyframes autant de fois que nécessaire en utilisant la propriété <strong>&quot;animation-iteration-count&quot;</strong> avec le <strong>nombre de cycles</strong> comme valeur.</p>
+<p>Il est possible de régler nos keyframes pour qu'ils se répètent à l'infini en utilisant la propriété &quot;animation-iteration-count&quot; avec le mot clé <strong>« infinite »</strong>.</p>
+<p>La propriété &quot;animation-direction&quot; permet de lire un ensemble de keyframes normalement avec le mot clé <strong>« normal ».</strong></p>
+<p>Avec le mot clé <strong>« reverse » de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en sens inverse.</strong></p>
+<p>En utilisant le mot clés <strong>« alternate » </strong> avec la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière.</p>
+<p>Enfin, avec le mot clé <strong>« alternate-reverse »</strong> de la propriété &quot;animation-direction&quot;, on peut lire un ensemble de keyframes en alternant entre l'avant et l'arrière, mais en commençant par la fin.</p>
+<p>On peut mettre en pause une animation avec keyframe en assignant à la propriété &quot;animation-play-state&quot; la valeur réglée sur <strong>« paused ».</strong></p>
+<p>Pour reprendre la lecture d'une animation avec keyframe, on utilise la propriété &quot;animation-play-state&quot; avec la valeur réglée sur <strong>« running ».</strong></p>
 <h3>Affinez vos animations CSS avec DevTools</h3>
-<p>Iterer est la clé d'une animation réussie. Se contenter d'ajouter quelques chiffres et de cliquer sur Enregistrer ne suffit généralement pas.</p>
-<p>Notre expérience nous donne une bonne intuition sur les valeurs de départ qui semblent appropriées pour nos propriétés d'animation.</p>
-<p>Le panneau Animations de DevTools nous offre la possibilité d'affiner rapidement les animations, d'improviser et d'expérimenter jusqu'à ce que nous trouvions la bonne durée ou le bon délai pour un élément.</p>
-<p>Le panneau Changes (Modifications) nous permet de visualiser les propriétés que nous avons modifiées ainsi que leurs nouvelles valeurs, facilitant ainsi la mise à jour de notre code source en conséquence.</p>
+<p><strong>Iterer</strong> est la clé d'une animation réussie. Se contenter d'ajouter quelques chiffres et de cliquer sur Enregistrer ne suffit généralement pas.</p>
+<p>L'expérience nous donne une bonne intuition sur les valeurs de départ qui semblent appropriées pour les propriétés d'animation.</p>
+<p>Le panneau Animations de DevTools offre la possibilité d'affiner rapidement les animations, d'improviser et d'expérimenter jusqu'à trouver la bonne durée ou le bon délai pour un élément.</p>
+<p>Le panneau Changes (Modifications) permet de visualiser les propriétés que nous avons modifiées ainsi que leurs nouvelles valeurs, facilitant ainsi la mise à jour du code source en conséquence.</p>
 <h2>Conclusion sur la formation</h2>
 <p>J'ai trouvé cette formation très intéressante et elle m'a permi d'en apprendre beaucoup sur les bonnes techniques à utiliser si l'on veut que nos animations web soient performantes sur n'mporte quel ordinateur.<br>
 Les chapitres sont assez court et centré sur l'apprentissage de peu de fonctionnalité en même temps pour ne pas s'éparpiller. Il n'y a pas que du code d'animations ! On parle aussi de l'utilisation de DevTools pour apprendre à analyser nos animations afin de les améliorer.<br>
