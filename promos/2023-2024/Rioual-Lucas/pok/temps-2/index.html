@@ -296,18 +296,209 @@ router<span class="token punctuation">.</span><span class="token function">delet
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/Curiolab">https://github.com/LucasRioual/Curiolab</a></p>
-<h3>Déploiement sur le serveur distant OVH</h3>
-<p>Pour vous montrer le résultat, j’ai souhaité déployer mon site sur le serveur OVH.</p>
-<p>J’ai rencontré quelques problèmes liés aux chemins pour accéder aux ressources.</p>
-<p>Ensuite, ma page admin ne peux pas accéder à l’API car il y a des problèmes CORS. J’ai essayé d’utiliser le Middleware cors d’express mais cela ne marche toujours pas.</p>
-<p>Vous pouvez retrouver le site à cette adresse : <a href="http://node.persil.ovh1.ec-m.fr/">http://node.persil.ovh1.ec-m.fr/</a></p>
 <h3>Bilan par rapport aux objectifs fixés</h3>
 <p>J'ai globalement respecté mes objectifs. Pour la page administrateur il y a beaucoup d'améliorations possible. Par exemple, lorsqu'on ajoute un produit, nous sommes obligés d'actualiser la page pour voir le produit. IL y a pleins de détails comme celui ci à améliorer.<br>
 Ensuite, nous ne pouvons pas envoyer les images du produit au serveur.</p>
 <p>Ensuite, le site qui tourne sur le serveur OVH ne fonctionne pas comme en local. En effet, selon le chemin que nous prenons dans le site, toutes le ressources ne s'affichent pas.</p>
+<h2>Sprint 2</h2>
 <h3>Objectif pour le sprint 2</h3>
-<p>Pour le sprint 2, je vais me concentrer sur le déploiement de mon application sur le serveur OVH.</p>
-<p>Je souhaite utiliser Github action pour mettre à jour mon site quand je commit sur la branch main de mon repo Github (comme le site de do_It).</p>
+<p>Je souhaite me concentrer sur une démarche CI/CD pour déployer mon site sur le serveur OVH.</p>
+<p>Comme je ne connais rien, il est difficile d’écrire un backlog. C’est pourquoi, je vais d’abord consulter le travail qui a déjà été fait les années précédentes et me documenter. Suite à cela, je pourrai faire un Backlog.</p>
+<p>Je me suis beaucoup basé sur le POK de Tuncay <a href="../../../../2022-2023/Bilgi-Tuncay/pok/ServeurDistant/">POK de Tuncay</a> pour ce sprint. Après avoir lu de la documentation sur la démarche CI/CD, je vais plutôt me concentrer sur la création un script shell qui permettra de récupérer les derniers changements sur la branch main de mon projet et de lancer le projet en production. Cela me permettra d’éviter de copier mon projet à chaque fois.</p>
+<p>J’ai une partie front et une partie backend et je veux pouvoir déployer l’un sans déployer l’autre</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Temps estimé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>3h</td>
+</tr>
+<tr>
+<td><strong>Faire fonctionner l’application sur le serveur distant</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Créer une session de terminal persistante</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Création du premier script qui permet de récupérer la branch main du back et du front</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Amélioration du script</strong></td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<h3>Déploiement sur le serveur distant avec Github</h3>
+<p>La première étape est de faire fonctionner mon application web sur le serveur distant.<br>
+Je peux séparer mon projet en 2 parties. Il y a les fichiers statiques (html, css, image …) et mon application Node.js.</p>
+<p>Sur le serveur OVH, le répertoire principal de mon application est <strong><code>/node</code></strong>. À l'intérieur de ce répertoire, il y a un sous-répertoire appelé <strong><code>/static</code></strong> qui contient les fichiers statiques de l'application. Un serveur Nginx est en cours d'exécution sur le serveur OVH et il est configuré pour traiter les requêtes entrantes. Lorsqu'une requête commence par <strong><code>/static/</code></strong>, Nginx sert directement les fichiers correspondants du répertoire <strong><code>/node/static</code></strong>. Autrement, la requête est transmise à mon application Node.js.</p>
+<p>Cependant, la toute première requête envoyée est <strong><code>'/'</code></strong>. Dans ce cas, c'est l'application Node.js qui la reçoit. Pour renvoyer le fichier <strong><code>index.html</code></strong>, Node.js doit rediriger la requête vers le chemin <strong><code>/static</code></strong>. Voici comment j'implémente cela dans le code, en utilisant Express :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">app.get<span class="token punctuation">(</span><span class="token string">'/'</span>, <span class="token punctuation">(</span>req, res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    res.redirect<span class="token punctuation">(</span><span class="token string">'/static/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Je m’assure également que le port d’écoute de mon application est le bon.</p>
+<p>Je me rends donc dans le dossier <strong><code>/node/static</code></strong> pour cloner la branche main de mon repo git qui représente le front de mon application. J’exécute ces commandes :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/LucasRioual/Curiolab.git
+<span class="token function">git</span> pull origin main
+</code></pre>
+<p>Je fais la même chose pour le backend dans le dossier <strong><code>/node</code></strong> et je lance le serveur</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/LucasRioual/curiolab-backend.git
+<span class="token function">git</span> pull origin master
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">node</span> server
+</code></pre>
+<p>Je sais pas pourquoi ma branche s’appelle master et pas main</p>
+<p>Mon site est maintenant accessible à <a href="http://node.persil.ovh1.ec-m.fr/static/">http://node.persil.ovh1.ec-m.fr/</a></p>
+<h3>Créer une session de terminal persistante</h3>
+<p>Le problème est que lorsque je ferme le terminal, mon application ne fonctionne plus. Il faut maintenant que je créer une session de terminal persistante.<br>
+Pour cela j’utilise Screen. Screen permet de démarrer des processus dans une session et de les laisser s'exécuter même après la déconnexion du terminal.</p>
+<p>Voici la commande que j’ai exécuté :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> Curiolab <span class="token function">node</span> server.js
+</code></pre>
+<p>On peut voir la liste des process :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">persil@ovh1 ~/node <span class="token punctuation">(</span>git<span class="token punctuation">)</span>-<span class="token punctuation">[</span>master<span class="token punctuation">]</span> % <span class="token function">screen</span> <span class="token parameter variable">-ls</span>
+There is a <span class="token function">screen</span> on:
+        <span class="token number">806506</span>.Curiolab <span class="token punctuation">(</span><span class="token number">16</span>/01/2024 <span class="token number">19</span>:14:47<span class="token punctuation">)</span>   <span class="token punctuation">(</span>Detached<span class="token punctuation">)</span>
+<span class="token number">1</span> Socket <span class="token keyword">in</span> /run/screen/S-persil.
+</code></pre>
+<p>Je peux maintenant fermer le terminal sans tuer mon application.</p>
+<h3>Premier script pour automatiser ces taches</h3>
+<p>Maintenant, je veux pouvoir actualiser mon application à l’aide d’un script lorsqu’un changement est fait sur la branch main de mon repo.</p>
+<p>La première étape est de créer un script qui récupère simplement les fichier statiques pour les mettre dans <strong><code>/node/static</code></strong></p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token builtin class-name">cd</span> /home/persil/node/static
+
+<span class="token function">git</span> pull origin main
+<span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+</code></pre>
+<p>Je veux rajouter des paramètres pour choisir de modifier le front ou le backend.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> <span class="token string">":hfb"</span> opt<span class="token punctuation">;</span> <span class="token keyword">do</span>
+	<span class="token keyword">case</span> <span class="token variable">$opt</span> <span class="token keyword">in</span>
+		h<span class="token punctuation">)</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-f : déployer le frontend dans static"</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-b : déployer le backend dans node"</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-h : afficher l'aide"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span> 
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		f<span class="token punctuation">)</span>
+			<span class="token builtin class-name">cd</span> /home/persil/node/static
+			<span class="token function">git</span> pull origin main
+			<span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		b<span class="token punctuation">)</span>
+			<span class="token builtin class-name">cd</span> /home/persil/node
+			<span class="token function">git</span> pull origin master
+			<span class="token function">npm</span> <span class="token function">install</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"Backend déployer"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		<span class="token punctuation">\</span>?<span class="token punctuation">)</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"Option invalid: <span class="token variable">$OPTARG</span>"</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">1</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		<span class="token keyword">esac</span>
+	<span class="token keyword">done</span>
+</code></pre>
+<h3>Amélioration du script</h3>
+<p>Le problème pour le backend, c’est que l’instance screen ne prend pas en compte les changement, il faut donc kill l’ancien process et recréer un autre process.<br>
+Merci Tuncay qui explique comment kill un process dans son <a href="../../../../2022-2023/Bilgi-Tuncay/pok/ServeurDistant/">POK</a> :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"> <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> Curiolab <span class="token operator">|</span><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-1</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-15</span>
+</code></pre>
+<p>J’avoue que je ne comprends pas cette ligne mais ça marche.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">persil@ovh1 ~/node <span class="token punctuation">(</span>git<span class="token punctuation">)</span>-<span class="token punctuation">[</span>master<span class="token punctuation">]</span> % <span class="token function">screen</span> <span class="token parameter variable">-ls</span>
+No Sockets found <span class="token keyword">in</span> /run/screen/S-persil.
+</code></pre>
+<p>Le problème c’est que si il n’y a pas de process en cours, cela fait planter le script. J’ai donc demandé à chat GPT de me créer une condition pour vérifier si un process est en cours</p>
+<p>Voici donc mon script final</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> <span class="token string">":hfb"</span> opt<span class="token punctuation">;</span> <span class="token keyword">do</span>
+        <span class="token keyword">case</span> <span class="token variable">$opt</span> <span class="token keyword">in</span>
+                h<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-f : déployer le frontend dans static"</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-b : déployer le backend dans node"</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-h : afficher l'aide"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                f<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">cd</span> /home/persil/node/static
+                        <span class="token function">git</span> pull origin main
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                b<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">cd</span> /home/persil/node
+                        <span class="token function">git</span> pull origin master
+                        <span class="token function">npm</span> <span class="token function">install</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Backend déployer"</span>
+                        <span class="token keyword">if</span> <span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-v</span> <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> Curiolab<span class="token punctuation">;</span> <span class="token keyword">then</span>
+                                <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> Curiolab <span class="token operator">|</span><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-1</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-15</span>
+                                <span class="token builtin class-name">echo</span> <span class="token string">"Process tué"</span>
+                        <span class="token keyword">else</span>
+                                <span class="token builtin class-name">echo</span> <span class="token string">"il n'y a pas de process"</span>
+                        <span class="token keyword">fi</span>
+                        <span class="token function">screen</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> Curiolab <span class="token function">node</span> server
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Screen relancé"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token punctuation">\</span>?<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Option invalid: <span class="token variable">$OPTARG</span>"</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token keyword">esac</span>
+        <span class="token keyword">done</span>
+</code></pre>
+<h3>Conclusion</h3>
+<p>Voici le temps que j’ai passé sur le Sprint 2 :</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Temps passé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>3h</td>
+</tr>
+<tr>
+<td><strong>Faire fonctionner l’application sur le serveur distant</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Créer une session de terminal persistante</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Création du premier script qui permet de récupérer la branch main du back et du front</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Amélioration du script</strong></td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p>Pour conclure j’ai simplement mis un premier pied dans le devops. Il existe des outils puissants qui permettent de créer des pipeline CI/CD comme Jenkins. Pourquoi pas approfondir ce sujet dans le futur</p>
+<h3>Ressources</h3>
+<p><a href="https://resources.github.com/ci-cd/">https://resources.github.com/ci-cd/</a><br>
+<a href="https://www.data-transitionnumerique.com/devops-jenkins/">https://www.data-transitionnumerique.com/devops-jenkins/</a></p>
 
 
 </article>
