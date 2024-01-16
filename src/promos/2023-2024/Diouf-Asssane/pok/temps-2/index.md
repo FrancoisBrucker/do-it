@@ -121,5 +121,23 @@ C'est donc une tache que je reporte pour le prochain sprint ! Je ne pense pas qu
 - [ ] Ajouter de vraies données (3)
 
 ## Ce que j'ai fait à la fin du sprint 2
+- [ ] Finir la création des pages (3) -> Samy
+  - [ ] Page d'un produit (1)
+  - [ ] Page d'une machine (1)
+  - [ ] Login et logout avec validation du form (1)
+- [ ] Faire une navigation fonctionnelle (sans se préoccuper de l'authentification) (1) -> Samy
+- [X] Ajouter des données factices dans Firebase (1)
+- [X] Lier Firebase à Flutter (1)
+- [X] Mettre en place l'authentification (3)
+  - [X] Faire les config sur Firebase (1)
+  - [X] Afficher les page de connexion/inscription que si le user n'est pas connecté (2)
+- [X] Mettre à jour les pages avec les données (2)
+- [X] Ajouter de vraies données (3) -> Je reconnais ne pas avoir ajouté tous les produits de toutes les machines
+
+Certaines taches m'ont surpris car malgré une difficulté plutot faible elles ont été longues (ajouter Firebase au projet par exemple).
+J'ai donc pu terminer en 20H pile, je remercie Samy pour l'aide qu'il m'a apportée.
 
 ## Conclusion
+J'ai pu compléter les taches que je m'étais attribuées, cependant il resterai encore quelques petites choses à faire sur ce projet à mon avis. Par exemple, pour l'instant le pseudo de l'utilisateur n'est pas accessible dans l'application. Et il faudra continuer à ajouter des produits et mettre à jour la disponibilité des produits sur les machines
+
+Ca m'a fait plaisir de revoir Dart, Flutter et Firebase. J'ai sans doute mal évalué certaines taches parce que, comme j'avais déjà réalisé un projet avec Flutter auparavant, j'ai dû surévaluer ma vitesse/mon aisance.
