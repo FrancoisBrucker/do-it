@@ -1663,9 +1663,245 @@ async <span class="token keyword">function</span> fetchProfile<span class="token
 <p>Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom récupérés sur mon compte Spotify.</p>
 <h3>Recherche des visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas</h3>
 <p>Je choisis d'abord, comme annoncé en préambule, de visualiser les genres de musiques écoutés par l'utilisateur sur un graphique. J'aimerais aussi afficher les 5 artistes favoris de l'utilisateur.</p>
-<p><img src="Music-features.jpg" alt="alt"></p>
+<p>Enfin, la visualisation des paramètres des musiques pourrait être affiché de telle sorte :<br>
+<img src="Music-features.jpg" alt="alt"><br>
+Source de l'image : Researchgate</p>
 <h3>Récupérer le top artiste et genres de l'utilisateur</h3>
 <p>Pour récupérer le top artiste et genres de l'utilisateur, la méthode précédente ne suffit pas : ce ne sont pas des <em>datas</em> remplies dans son profil, mais des <em>datas</em> qu'il faut extraire de manière dynamique avec une méthode <em>GET()</em>. Je modifie donc le script Javascript et je rajoute dans le code HTML une liste pour afficher les 5 top artistes.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquez pour afficher le <strong>code JavaScript</strong> du script d'appel à l'API avec les Top</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">const clientId <span class="token operator">=</span> <span class="token string">"70b7021a56234ecda100b97df932edec"</span><span class="token punctuation">;</span>
+const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span>window.location.search<span class="token punctuation">)</span><span class="token punctuation">;</span>
+const code <span class="token operator">=</span> params.get<span class="token punctuation">(</span><span class="token string">"code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> generateCodeVerifier<span class="token punctuation">(</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin class-name">let</span> text <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">let</span> possible <span class="token operator">=</span> <span class="token string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>let i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">+=</span> possible.charAt<span class="token punctuation">(</span>Math.floor<span class="token punctuation">(</span>Math.random<span class="token punctuation">(</span><span class="token punctuation">)</span> * possible.length<span class="token punctuation">))</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token builtin class-name">return</span> text<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> generateCodeChallenge<span class="token punctuation">(</span>codeVerifier<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const data <span class="token operator">=</span> new TextEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>.encode<span class="token punctuation">(</span>codeVerifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const digest <span class="token operator">=</span> await window.crypto.subtle.digest<span class="token punctuation">(</span><span class="token string">'SHA-256'</span>, data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">return</span> btoa<span class="token punctuation">(</span>String.fromCharCode.apply<span class="token punctuation">(</span>null, <span class="token punctuation">[</span><span class="token punctuation">..</span>.new Uint8Array<span class="token punctuation">(</span>digest<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">))</span>
+        .replace<span class="token punctuation">(</span>/<span class="token punctuation">\</span>+/g, <span class="token string">'-'</span><span class="token punctuation">)</span>
+        .replace<span class="token punctuation">(</span>/<span class="token punctuation">\</span>//g, <span class="token string">'_'</span><span class="token punctuation">)</span>
+        .replace<span class="token punctuation">(</span>/<span class="token operator">=</span>+$/, <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> fetchTopArtists<span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const apiUrl <span class="token operator">=</span> <span class="token string">'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&amp;limit=5&amp;offset=0'</span><span class="token punctuation">;</span>
+
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span>apiUrl, <span class="token punctuation">{</span>
+        method: <span class="token string">'GET'</span>,
+        headers: <span class="token punctuation">{</span>
+            <span class="token string">'Authorization'</span><span class="token builtin class-name">:</span> <span class="token variable"><span class="token variable">`</span>Bearer $<span class="token punctuation">{</span>token<span class="token punctuation">}</span><span class="token variable">`</span></span>,
+        <span class="token punctuation">}</span>,
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">return</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> fetchTopTracks<span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const apiUrl <span class="token operator">=</span> <span class="token string">'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&amp;limit=5&amp;offset=0'</span><span class="token punctuation">;</span>
+
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span>apiUrl, <span class="token punctuation">{</span>
+        method: <span class="token string">'GET'</span>,
+        headers: <span class="token punctuation">{</span>
+            <span class="token string">'Authorization'</span><span class="token builtin class-name">:</span> <span class="token variable"><span class="token variable">`</span>Bearer $<span class="token punctuation">{</span>token<span class="token punctuation">}</span><span class="token variable">`</span></span>,
+        <span class="token punctuation">}</span>,
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">return</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    redirectToAuthCodeFlow<span class="token punctuation">(</span>clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    const accessToken <span class="token operator">=</span> await getAccessToken<span class="token punctuation">(</span>clientId, code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const profile <span class="token operator">=</span> await fetchProfile<span class="token punctuation">(</span>accessToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const topArtists <span class="token operator">=</span> await fetchTopArtists<span class="token punctuation">(</span>accessToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const topTracks <span class="token operator">=</span> await fetchTopTracks<span class="token punctuation">(</span>accessToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    populateUI<span class="token punctuation">(</span>profile, topArtists, topTracks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin class-name">export</span> async <span class="token keyword">function</span> redirectToAuthCodeFlow<span class="token punctuation">(</span>clientId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const verifier <span class="token operator">=</span> generateCodeVerifier<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const challenge <span class="token operator">=</span> await generateCodeChallenge<span class="token punctuation">(</span>verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    localStorage.setItem<span class="token punctuation">(</span><span class="token string">"verifier"</span>, verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"client_id"</span>, clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"response_type"</span>, <span class="token string">"code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"redirect_uri"</span>, <span class="token string">"http://localhost:5173/callback"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"scope"</span>, <span class="token string">"user-read-private user-read-email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_challenge_method"</span>, <span class="token string">"S256"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_challenge"</span>, challenge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    document.location <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>https://accounts.spotify.com/authorize?$<span class="token punctuation">{</span>params.toString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin class-name">export</span> async <span class="token keyword">function</span> getAccessToken<span class="token punctuation">(</span>clientId, code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const verifier <span class="token operator">=</span> localStorage.getItem<span class="token punctuation">(</span><span class="token string">"verifier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const params <span class="token operator">=</span> new URLSearchParams<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"client_id"</span>, clientId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"grant_type"</span>, <span class="token string">"authorization_code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code"</span>, code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"redirect_uri"</span>, <span class="token string">"http://localhost:5173/callback"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    params.append<span class="token punctuation">(</span><span class="token string">"code_verifier"</span>, verifier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span><span class="token string">"https://accounts.spotify.com/api/token"</span>, <span class="token punctuation">{</span>
+        method: <span class="token string">"POST"</span>,
+        headers: <span class="token punctuation">{</span> <span class="token string">"Content-Type"</span><span class="token builtin class-name">:</span> <span class="token string">"application/x-www-form-urlencoded"</span> <span class="token punctuation">}</span>,
+        body: params
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const <span class="token punctuation">{</span> access_token <span class="token punctuation">}</span> <span class="token operator">=</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">return</span> access_token<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+async <span class="token keyword">function</span> fetchProfile<span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const result <span class="token operator">=</span> await fetch<span class="token punctuation">(</span><span class="token string">"https://api.spotify.com/v1/me"</span>, <span class="token punctuation">{</span>
+        method: <span class="token string">"GET"</span>, headers: <span class="token punctuation">{</span> Authorization: <span class="token variable"><span class="token variable">`</span>Bearer $<span class="token punctuation">{</span>token<span class="token punctuation">}</span><span class="token variable">`</span></span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">return</span> await result.json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> populateUI<span class="token punctuation">(</span>profile, topArtists<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"displayName"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.display_name<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        const profileImage <span class="token operator">=</span> new Image<span class="token punctuation">(</span><span class="token number">200</span>, <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        profileImage.src <span class="token operator">=</span> profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.url<span class="token punctuation">;</span>
+        document.getElementById<span class="token punctuation">(</span><span class="token string">"avatar"</span><span class="token punctuation">)</span>.appendChild<span class="token punctuation">(</span>profileImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        document.getElementById<span class="token punctuation">(</span><span class="token string">"imgUrl"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.images<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.id<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"email"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.email<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"uri"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.uri<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"uri"</span><span class="token punctuation">)</span>.setAttribute<span class="token punctuation">(</span><span class="token string">"href"</span>, profile.external_urls.spotify<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.innerText <span class="token operator">=</span> profile.href<span class="token punctuation">;</span>
+    document.getElementById<span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span>.setAttribute<span class="token punctuation">(</span><span class="token string">"href"</span>, profile.href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>topArtists <span class="token operator">&amp;&amp;</span> topArtists.items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        const topArtistsList <span class="token operator">=</span> document.getElementById<span class="token punctuation">(</span><span class="token string">"topArtistsList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        topArtistsList.innerHTML <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span> 
+
+        topArtists.items.forEach<span class="token punctuation">(</span>artist <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            const listItem <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            listItem.innerText <span class="token operator">=</span> artist.name<span class="token punctuation">;</span>
+            topArtistsList.appendChild<span class="token punctuation">(</span>listItem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>topTracks <span class="token operator">&amp;&amp;</span> topTracks.items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        const topTracksList <span class="token operator">=</span> document.getElementById<span class="token punctuation">(</span><span class="token string">"topTracksList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        topTracksList.innerHTML <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+        topTracks.items.forEach<span class="token punctuation">(</span>track <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            const listItem <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            listItem.innerText <span class="token operator">=</span> <span class="token variable"><span class="token variable">`</span>$<span class="token punctuation">{</span>track.name<span class="token punctuation">}</span> - $<span class="token punctuation">{</span>track.artists.map<span class="token punctuation">(</span>artist <span class="token operator">=</span><span class="token operator">></span> artist.name<span class="token punctuation">)</span>.join<span class="token punctuation">(</span><span class="token string">', '</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span>
+            topTracksList.appendChild<span class="token punctuation">(</span>listItem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+</div>
+</details>     
+</div>
+<p>et on adapte le code HTML pour intégrer les réponses de l'API : <code>topTracksList</code> et <code>topArtistsList</code>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquez pour afficher le <strong>code HTML</strong> adapté avec les Tops</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html <span class="token assign-left variable">lang</span><span class="token operator">=</span><span class="token string">"fr"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>head<span class="token operator">></span>
+        <span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>title<span class="token operator">></span>Analyse - Spotistats ✅<span class="token operator">&lt;</span>/title<span class="token operator">></span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"stylesAnalyse.css"</span> <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">"preconnect"</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"https://fonts.googleapis.com"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">"preconnect"</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"https://fonts.gstatic.com"</span> crossorigin<span class="token operator">></span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap"</span> <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>script <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"src/script.js"</span> <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">"module"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>body<span class="token operator">></span>
+        <span class="token operator">&lt;</span>header<span class="token operator">></span>
+            <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"Accueil.html"</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">"width: 15%; height: 60%;"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"Allonge.png"</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"logo"</span> <span class="token assign-left variable">width</span><span class="token operator">=</span><span class="token string">"100%"</span> <span class="token assign-left variable">height</span><span class="token operator">=</span><span class="token string">"100%"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>/a<span class="token operator">></span>
+            <span class="token operator">&lt;</span>a <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"FAQ"</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">"FAQ.html"</span><span class="token operator">></span>FAQ<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+            <span class="token operator">&lt;</span>button <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"Connexion"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"avatar"</span> <span class="token assign-left variable">width</span><span class="token operator">=</span><span class="token string">"38"</span> <span class="token assign-left variable">height</span><span class="token operator">=</span><span class="token string">"39"</span><span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"ButtonText"</span><span class="token operator">></span><span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"displayName"</span><span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/button<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/header<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"column"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">1</span>></span> Votre <span class="token function">top</span> <span class="token number">5</span> des artistes les plus écoutés.<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">1</span>></span>
+                <span class="token operator">&lt;</span>p<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>ul <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"topArtistsList"</span><span class="token operator">></span><span class="token operator">&lt;</span>/ul<span class="token operator">></span> 
+                <span class="token operator">&lt;</span>/p<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"../spectre.jpg"</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"spectre"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"container2"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"../Music-features.jpg"</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"graphe"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"column2"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">1</span>></span> Votre <span class="token function">top</span> <span class="token number">5</span> des musiques les plus écoutées.<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">1</span>></span>
+                <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>ul <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"topTracksList"</span><span class="token operator">></span><span class="token operator">&lt;</span>/ul<span class="token operator">></span>
+                <span class="token operator">&lt;</span>/p<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+            
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+        
+    <span class="token operator">&lt;</span>/body<span class="token operator">></span>
+<span class="token operator">&lt;</span>/html<span class="token operator">></span>
+
+</code></pre>
+</div>
+</details>     
+</div>
 
 
 </article>
