@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du second MON du temps 2</title>
+        <title>Application Web avec ASP.NET Core</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du second MON du temps 2</h1>
+<h1 class="mb-1">Application Web avec ASP.NET Core</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -94,7 +94,7 @@
             <div class="font-bold">Auteurs : </div>
             <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Gordon Zola</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Assane Diouf</li>
                 
             </ul>
         </div>
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON traitant d'un sujet.
+                Ce MON est la suite de mon MON sur C#, l'objectif est de découvrir ASP.NET Core et de faire un petit pendu web
 
         </p>
 
@@ -118,13 +118,100 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/">MON d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/temps-2.2/">Titre du second MON du temps 2</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/">MON d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/temps-2.2/">Application Web avec ASP.NET Core</a>
 
 </div></div>
 
 
 
 
+<h2>Introduction</h2>
+<p><a href="http://ASP.NET">ASP.NET</a> Core est un framework .NET pour le développement web avec C#. Dans ce MON, je me suis appuyé sur les vidéos citées dans les sources ainsi que les différentes pages du site de Microsoft. J'ai trouvé qu'il y avait beaucoup de choses à voir/comprendre car le framework offre beaucoup de possibilités.</p>
+<h2>Blazor, Razor Pages et <a href="http://ASP.NET">ASP.NET</a> Core (MVC)</h2>
+<p>Pour faire une application Web <a href="http://ASP.NET">ASP.NET</a>, il y a 3 outils possibles : Blazor, Razor Pages et <a href="http://ASP.NET">ASP.NET</a> Core (MVC). Voici une courte comparaison (je vous encourage tout de même à lire <a href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/choose-web-ui?view=aspnetcore-8.0">cette page</a>)</p>
+<h3>Blazor :</h3>
+<p>Avantages : Il est côté client et permet le développement d'applications entièrement en C# et .NET (côté client et côté serveur).</p>
+<p>Inconvénients : Les applications Blazor peuvent avoir une taille de téléchargement plus importante en raison de la nécessité de télécharger le runtime .NET sur le navigateur client.</p>
+<h3>Razor Pages :</h3>
+<p>Avantages : Offre une approche plus légère qu'<a href="http://ASP.NET">ASP.NET</a> Core (c'est comme si chaque page embarquait sa logique back avec elle). C'est aussi très facile de l'utiliser avec le moteur de vue Razor, en créant des razors components par exemple.</p>
+<p>Inconvénients : Comme ça ne suis pas vraiment l'architecture MVC ça offre un peu moins de controle.</p>
+<h3><a href="http://ASP.NET">ASP.NET</a> Core (MVC) :</h3>
+<p>Avantages : Il s'agit de l'architecture MVC qui est assez connue et offre une séparation claire des préoccupations.</p>
+<p>Inconvénients : Un peu plus long à prendre en main pour les débutants par rapport à des solutions plus légères comme Razor Pages.</p>
+<h2>Organisation d'un projet d'application Web <a href="http://ASP.NET">ASP.NET</a> Core</h2>
+<p>Lorsqu'on crée un projet par défaut d'application Web, on a un peu de code généré automatiquement pour aider les développeurs. Le projet de base utilise des Razor Pages et intègre Bootstrap par exemple.</p>
+<p>Le dossier wwwroot contient les fichiers js, css  et autres.</p>
+<p>Le dossier Pages contient toutes les pages et définis aussi les différents url accessibles depuis notre site; par exemple si vous avez un fichiers Pages/About.cshtml, alors cette page s'affiche lorsque le client va sur l'url /about. Il est rempli de fichiers .cshtml qui permettent de faire de templates html avec C# et d'utiliser Razor. C'est fichiers sont en fait comme des dossiers comme le montre l'image ci-dessous.<br>
+<img src="penduExempleRazorPage.png" alt="Exemple Razor Page"></p>
+<p>Le fichier cshtml contient du code qui ressemble à ça:</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Pages/Index.cshtml</span>
+@page
+@model IndexModel
+@<span class="token punctuation">{</span>
+    ViewData<span class="token punctuation">[</span><span class="token string">"Title"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Le pendu de DO It"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"text-center"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>h1 class<span class="token operator">=</span><span class="token string">"display-4 custom-font"</span><span class="token operator">></span>Le Pendu<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>p<span class="token operator">></span>
+    Bienvenue sur ce jeu développé dans le cadre d'un MON<span class="token punctuation">.</span>
+    Il s<span class="token char">'agit d'</span>un pendu utilisant une liste de mots en rapport avec la gestion de projet<span class="token punctuation">,</span>
+    le management et le développement<span class="token punctuation">.</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span>a asp<span class="token operator">-</span>page<span class="token operator">=</span><span class="token string">"Jeu"</span> class<span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">></span>Jouer au pendu du jour<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>Si vous trouvez que ce n'est pas suffisant pour faire une page web, vous avez raison. Au fait, la balise html, les éléments du head, le footer et la navbar sont dans un fichiers de Layouts sur lequel toutes nos pages se basent.</em></p>
+<p>Tandis que le fichier .cshtml.cs contient une classe qui définit les données accessibles par cette page, ainsi que les différentes méthodes que l'on peut appeler :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Pages/Index.cshtml/Index.cshtml.cs</span>
+using Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>RazorPages<span class="token punctuation">;</span>
+
+namespace Pendu<span class="token punctuation">.</span>Pages
+<span class="token punctuation">{</span>
+    public class IndexModel <span class="token operator">:</span> PageModel
+    <span class="token punctuation">{</span>
+        private readonly ILogger<span class="token operator">&lt;</span>IndexModel<span class="token operator">></span> _logger<span class="token punctuation">;</span>
+
+        public <span class="token function">IndexModel</span><span class="token punctuation">(</span>ILogger<span class="token operator">&lt;</span>IndexModel<span class="token operator">></span> logger<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            _logger <span class="token operator">=</span> logger<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        public <span class="token keyword">void</span> <span class="token function">OnGet</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Le fichier le plus important est sans doute le Program.cs. C'est dans ce fichier que notre programme se lance et qu'il est configuré. C'est dans ce fichier qu'on va ajouter nos services, configurer notre base de données, activer l'architecture MVC et ainsi de suite.</p>
+<h2>Comment faire un site pour jouer au pendu ?</h2>
+<p>Entrons dans le vif du sujet. Dans mon premier MON du temps, j'ai développé un pendu version texte en C#; J'ai essayé de faire le développement en ayant bien en tête que je voulais qu'un maximum de code soit réutilisable. Mais pour faire celà, j'ai d'abord dû comprendre comment ajouter des services.</p>
+<h3>Ajouter mes services</h3>
+<p>Tout d'abord, un service c'est du code que l'on souhaite pouvoir utiliser à plusieurs endroit de notre application et qui est chargé d'effectuer une seule chose. Par exemple, les WordProvider de mon MON précédents pourraient y correspondre. L'intérêt d'avoir des services dans ce genre de projets, c'est qu'on peut profiter de l'injection de dépendances et de l'inversion de controle. Pour se faire, il suffit d'ajouter la classe en question et d'ajouter une ligne dans le Program.cs qui indique à <a href="http://ASP.NET">ASP.NET</a> qu'on veut ajouter ce service. Dans mon cas, j'ai d'abord ajoutés mes différents WordProviders dans un dossiers Service de mon projet. Ensuite, j'ai ajouté la ligne suivante dans mon Program.cs :</p>
+<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Program.cs</span>
+builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span>AddTransient<span class="token operator">&lt;</span>IWordProvider<span class="token punctuation">,</span> WordFromFileProvider<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><em>Ce que je dis à <a href="http://ASP.NET">ASP.NET</a> c'est d'instancier un WordFromFileProvider et de le fournir aux classes de mon projet qui ont besoin d'un IWordProvider</em></p>
+<h3>Intégrer le jeu du pendu à l'application</h3>
+<p>Ensuite il a fallu créer une page Jeu.cshtml dans laquelle j'ai pu appeler l'objet jeu de mon Mon précédent. Dans une Razor Page, on peut intéragir avec tous les éléments publics de notre classe dans le fichier .cshtml.cs. On peut aussi intégrer du code en C# en le préfixant d'un @.</p>
+<h3>La persistence</h3>
+<p>Pour ce petit projet, je voulais qu'un utilisateur puisse jouer à une partie du pendu, puis en refaire autant qu'il le souhaite. Pour faire cela, je ne voulais cependant pas créer de classe utilisateur et mettre en place l'authentification. J'ai donc utiliser la session. Lorsqu'un joueur arrive pour la première fois sur la page du pendu, on lui crée un Jeu. Ensuite on enregistre les informations importantes momentanément (nombre d'erreurs, mot à trouver, etc...) grace à la session et on efface ce qui est inutile lorsque le joueur a terminé.</p>
+<p>J'y étais réticent mais j'ai dû utiliser une base de données pour rendre le tout possible. Pour créer une base de données avec les Razor Pages, on utilise EF Framework. Il s'agit d'un ORM. Je vous renvoie vers les pages en sources pour voir plus en détail les étapes à suivre.</p>
+<h3>Le résultat</h3>
+<img src="penduPage.png" alt="Page du jeu" style="height: 400px">
+<img src="penduError.png" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px">
+<img src="penduPerdu.png" alt="On peut perdre" style="height: 400px">
+<img src="penduWon.png" alt="On peut gagner" style="height: 400px">
+<p><em>Retrouvez mon code sur <a href="https://github.com/assanediouf18/PenduWeb">github</a></em></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy&amp;si=fJe1Oh3-JxUdWSva">Playlist ASP.NET Web Application</a> : présente simplement et rapidement les différentes possibilités d'<a href="http://ASP.NET">ASP.NET</a> Core</li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/choose-web-ui?view=aspnetcore-8.0">Choisir une UI Web avec ASP.NET Core 8</a> : donne plus de précisions sur les avantages et les inconvénients de chaque possibilités</li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-8.0&amp;tabs=windows">Les fondamentaux d'ASP.NET Core</a> : donne plus de détails sur le fonctionnement du framework et sur les différentes façons de le configurer</li>
+<li><a href="https://www.codesdope.com/blog/article/getting-notebook-paper-effect-with-css/">Paper effect in CSS</a> : J'ai utilisé le CSS de ce site pour faire le background de mon site</li>
+</ul>
 
 
 </article>
