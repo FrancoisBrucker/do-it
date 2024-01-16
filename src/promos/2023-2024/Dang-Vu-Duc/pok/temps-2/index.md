@@ -21,7 +21,7 @@ Connaissance basique de la programmation objet avec Python et des règles du jeu
 {%endprerequis%}
 
 {% note %}
-Il est possible de tester l'implémentation du jeu sur le lien suivant: [Test de l'implémentation](https://duc-dgv.itch.io/jeu-dchecs)
+Il est possible de tester l'implémentation du jeu sur le lien suivant: [Jeu d'échecs avec Python](https://duc-dgv.itch.io/jeu-dchecs)
 Tout les codes présentés sont disponibles dans le dossier Git du POK2: [codes du POK2](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-2)
 {% endnote %}
 
