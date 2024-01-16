@@ -46,9 +46,13 @@ Une Prefab, dans l'univers d'Unity, représente un modèle ou un prototype d'obj
 
 Le GameObject est la pierre angulaire dans Unity. Il symbolise toute entité visualisable dans la scène, qu'il s'agisse de personnages, d'objets, de lumières, de caméras, et plus encore. Ces GameObjects sont constitués de divers composants tels que des transformateurs, des mesh renderers, ou des scripts. Ils forment ainsi la structure de base de toute scène Unity.
 
+![](./image.png)
+
 ### Instance 
 
 Une Instance est une occurrence particulière d'un Prefab dans la scène. Lorsqu'on place un Prefab dans la scène, il devient une Instance unique avec ses propres caractéristiques. Chaque Instance peut être manipulée individuellement sans impacter les autres. En illustrant, si un Prefab représente un arbre, chaque arbre spécifique placé dans la scène est considéré comme une Instance de ce Prefab. On parle aussi d'instances quand on créé une instance particulière d'un type plus général. Par exemple, j'ai défini une classe Item, et les ItemsInstances étaient des définitions de pierre, morceau de bois, chapeaux...
+
+![](./image-2.png)
 
 
 ## Syntaxe C#
@@ -102,13 +106,18 @@ Par exemple, on a rajouté un bruit de pioche qui s'active grâce à un script, 
 
 On a aussi traité la spatialisation audio et le mixage.
 
+![](./image-8.png)
+
 ## Box Collider, RigidBody
 
 La gestion des collisions a été réalisée grâce aux composants Box Collider et RigidBody d'Unity. Le Box Collider a été utilisé pour définir les zones de détection des collisions, tandis que le RigidBody a permis de simuler les interactions physiques, offrant une expérience de jeu plus réaliste. On a pu changer la masse des objets, les rendre fixes, atteints par la gravité...
 
+
 ## Layers et RayCast
 
 L'organisation des éléments dans le jeu a été facilitée par l'utilisation de Layers, permettant de catégoriser les GameObjects et d'optimiser les interactions. Différents Layers ont été utilisés comme le layer Item, Harvestable, UI... Les RayCast ont été employés pour gérer les scripts de pickUp et de l'IA ennemie. Les RayCast sont commes des lasers ou des fils qu'on tire depuis un objet dans une direction et on peut détecter par exemple si le joueur regarde un objet, ou s'il est près d'un ennemi.
+
+![](./image-5.png)
 
 ## UI - Game Menus
 
@@ -116,6 +125,8 @@ J'ai été surprise par la manière de créer des Menus dans une scène, on dira
 J'ai galéré à personnaliser cette partie, j'ai trouvé que le UI était difficile à gérer dynamiquement, car il y a beaucoup de choses et de paramètres à prendre en contre. Par exemple l'inventaire c'est un *panel dans un *canvas qui contient un *content, et ce content et composé de *slots qui contiennent une *image dont on configure le *sprite. 
 
 Il y avait des layout grids, des alignements dynamiques dans tous les sens, et j'ai pas vraiment la fibre front donc pour moi c'était un peu de la magie noire mais heureusement le tutoriel est bien fait.
+
+![](./image-6.png)
 
 ## Unity Terrain 
 
@@ -128,6 +139,7 @@ L'intégration de l'intelligence artificielle (AI) dans le jeu a été très int
 
 L'ours se délace aléatoirement et librement sur le NavMesh, et peut se mettre à nous courser et nous attaquer si on est trop près.
 
+![](./image-7.png)
 
 ## Fonctionnalités Finales
 
@@ -151,9 +163,11 @@ Les fonctionnalités finales du jeu sont:
 
 ## Démonstration
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-NTqzMroQNM?si=uooI9cz_aetpy9f4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Installez mon jeu chez vous !
 
-Comme mentionné au début, on a même intégré un installeur, vous pouvez donc jouer à mon jeu sur Windows en le téléchargeant [depuis ce lien](rajouter lien)
+Comme mentionné au début, on a même intégré un installeur, vous pouvez donc jouer à mon jeu sur Windows en le téléchargeant [depuis ce lien](http://node.basilic.ovh1.ec-m.fr/download-rpg-game)
 
 Je n'ai pas encore pris le temps de build le jeu sur Mac, mais c'est possible aussi.
 
@@ -167,4 +181,4 @@ Ce projet de jeu de survie en 3D avec Unity a été fantastique. D'une part c'es
 ## Sources
 
 * [**Playlist du tutoriel**](https://www.youtube.com/playlist?list=PLUWxWDlz8PYIvzRTHyvx54tgWTCkgZzkZ)
-* [**Mon repo GitHub avec tout le code final du jeu**](//a remplir)
+* [**Mon repo GitHub avec tout le code final du jeu**](https://github.com/Cledins/rpg)
