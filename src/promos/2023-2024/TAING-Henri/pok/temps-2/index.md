@@ -43,41 +43,37 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 A : Lié à la fin A | B : Lié à la fin B | C : Lié à la fin C
 Le roman est divisé en plusieurs parties I.ABC., II.BC et III.B et III.C, mais on ne s'intéressera qu'à I.ABC, II.1.BC.
 
-- <u>Faire un backlog précis et le mettre à jour</u> [] = 3 (2h)
+- <u>Faire un backlog précis et le mettre à jour</u> [X] = 3 (2h)
 
-- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [] = 5 (1h30)
+- <u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)
 
-- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [] = 2 (1h)
+- <u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 (1h)
 
 - <u>Arbre de décision Figma</u> [] = 6 (3h)
 
-  - Parcourir le scénario et décider des points de ruptures [] = 2 (20 minutes)
-  - Créer les arbres de décision pour I.AB [] = 2 (1h40)
+  - Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)
+  - Créer les arbres de décision pour I.AB [X] = 2 (1h40)
   - Créer les arbres pour II.1.B [] = 2 (1h)
 
 - <u>Programmation du jeu</u> [] = 13
 
-  - Coder les parties communes I. [] = 7 (6h)
+  - Coder les parties communes I. [X] = 7 (6h)
 
-    - Implémenter I. [] = 5 (5h)
-      - Chapitre 1 []
-      - Chapitre 2 []
-      - Chapitre 3 []
-      - Chapitre 4 []
-      - Chapitre 5 []
-    - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)
+    - Implémenter I. [X] = 5 (5h)
+      - Chapitre 1 [X]
+      - Chapitre 2 [X]
+      - Chapitre 3 [X]
+      - Chapitre 4 [X]
+      - Chapitre 5 [X]
+    - Mettre les fonds/personnages/transitions dans I. [X] = 2 (1h)
 
-  - Route A [] = 2 (1h)
+  - Route A [X] = 2 (1h)
 
-    - Fin A [] = 1 (45 min)
-    - Mettre les fonds/transitions fin A [] = 1 (15 min)
+    - Fin A [X] = 1 (45 min)
+    - Mettre les fonds/transitions fin A [X] = 1 (15 min)
 
-  - Coder les parties communes II.1 [] = 4 (3h30)
+  ~~- Coder les parties communes II.1 [] = 4 (3h30)~~
 
-    - Implémenter II.1 [] = 3 (3h)
-      - Chapitre 1 []
-      - Chapitre 2 []
-    - Mettre les fonds/personnages/transitions dans I. [] = 1 (30 min)
 
 - <u>Customisation de GUI</u> [] = 2 (1h)
 
@@ -122,7 +118,7 @@ On prendra comme user-stories à faire :
 
 J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de dialogue et au code en général, sans compter les nombreux bugs que j'ai eus au début pendant la prise en main, et les problèmes d'images.
 
-Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement.
+Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement. 
 
 Une chose qui est sûre, maintenant, je comprends pourquoi les jeux sont généralement fait par des studios et non des personnes toutes seules. Scénariste, graphiste et développeur, ça commence à faire beaucoup. 
 
@@ -180,32 +176,46 @@ menu:     #crée le menu de choix
 **Backlog Sprint 2**
 On prendra comme user-stories à faire :
 
-- <u>Le reste de l'arbre de décision Figma</u> [] = 2 (1h)
+~~- <u>Le reste de l'arbre de décision Figma</u> [] = 2 (1h)~~
 
-  - Créer les arbres pour II.1.B [] = 2 (1h)
+  ~~- Créer les arbres pour II.1.B [] = 2 (1h)~~
 
-- <u>Coder la deuxième moitié des parties communes I.</u> [] = 3 (3h)
+- <u>Coder la deuxième moitié des parties communes I.</u> [X] = 3 (3h -> 4h)
 
-  - Implémenter I. [] = 5 (2h)
-    - Chapitre 3 []
-    - Chapitre 4 []
-    - Chapitre 5 []
+  - Implémenter I. [X] = 5 (2h -> 3h)
+    - Chapitre 3 [X]
+    - Chapitre 4 [X]
+    - Chapitre 5 [X]
   - Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)
 
-- <u>Route A</u> [] = 2 (1h)
+- <u>Route A</u> [X] = 2 (1h)
 
-  - Fin A [] = 1 (45 min)
-  - Mettre les fonds/transitions fin A [] = 1 (15 min)
+  - Fin A [X] = 1 (45 min)
+  - Mettre les fonds/transitions fin A [X] = 1 (15 min)
 
-- <u>Début II.</u> [] = 1 (1h)
+~~- <u>Début II.</u> [] = 1 (1h)~~
 
-  - Chapitre 1 [] = 1
+~~  - Chapitre 1 [] = 1~~
 
-- <u>Déploiement du jeu</u> = 3 (1h)
+- <u>Déploiement du jeu</u> = 3 [X] (1h)
+
+- <u>Test et débug</u> = 2 [X] (1h)
 
 ## Sprint 2 Review <a id="section-5"></a>
 
+J'ai oublié l'importance de tester et retester au fur et à mesure. Pour preuve, ça m'a beaucoup ralenti sur la deuxième moitié de la partie 1, car j'ai dû tout reprendre petit à petit. 
+Le déploiement s'est effectué beaucoup plus facilement que prévu grâce au build fourni par Renpy.
+
+
 ## Conclusion <a id="section-6"></a>
+
+Je conseille Renpy pour faire un visual novel. C'est simple. Barbant. Efficace. Un vrai outil de débutant. 
+J'aurais néanmoins voulu avoir plus (beaucoup plus) de temps pour vraiment finir de coder **tout mon roman** et ne pas simplement livrer la première partie, et également pour nettoyer et organiser mieux le code.
+
+Enfin, tant mieux que ce soit fini, j'allais devenir fou. 
+
+Voici le lien pour essayer mon jeu ! 
+[Le jeu !](henritaing.itch.io/merrychristmas)
 
 ## Sources <a id="section-7"></a>
 
@@ -215,3 +225,5 @@ On prendra comme user-stories à faire :
 [Ressources pour les arrières-plans](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
 [Autre ressources pour les arrières-plans](https://noranekogames.itch.io/yumebackground)
 [Ressources pour les personnages](https://sutemo.itch.io/)
+[Déploiement du jeu sur itch.io](https://www.youtube.com/watch?v=WTatB4W-vKg)
+[Le jeu !](henritaing.itch.io/merrychristmas)

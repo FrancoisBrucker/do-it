@@ -8,5 +8,5 @@ authors:
 
 Ensemble des POK réalisés par Duc DANG VU.
 
-* [POK 1](./temps-1)
-* [POK 2](./temps-2)
+* [POK 1](./temps-1): Implémentation du jeu de Blackjack avec Python
+* [POK 2](./temps-2): Implémentation d'un jeu d'échecs sur Python
