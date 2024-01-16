@@ -41,6 +41,11 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 4. Création des pages du site en HTML et en CSS
 5. Retour d'expérience du Sprint 1
 6. Objectifs du Sprint 2 rationnalisés
+7. Documentation sur l'API Spotify
+8. Mise en pratique
+9. Appel à l'API
+10. Récupérer le top artiste et genres de l'utilisateur
+11. Retour d'expérience du Sprint 2
 
 Le but de ce POK est de mettre en pratique mon MON1.2 sur le développement web. Je souhaite créer un site web fonctionnel, qui utilise l'API de Spotify. Ce site permettrait à l'utilisateur de connecter son compte Spotify personnel, et en retour afficher une analyse de ses goûts musicaux.
 
@@ -1643,3 +1648,23 @@ et on adapte le code HTML pour intégrer les réponses de l'API : `topTracksList
 ```
 
 {% enddetails %}
+
+Quand je lance l'API, j'obtiens maintenant mon TOP artiste et musique. La photo de profil a disparu, c'est un petit bug sur lequel je m'attarderai après. Le CSS est aussi à adapter, mais ce n'est pas le but de mon projet.
+
+![alt](Analyse1.png)
+![alt](Analyse2.png)
+
+## Retour d'expérience du Sprint 2
+
+J'ai réussi à lier l'API Spotify avec mon front-end pour permettre à l'utilisateur de s'identifier, et d'arriver sur une page qui *display* ses informations personnalisées et ses top artistes/musiques. C'est globalement l'idée que j'avais de mon POK.
+Par contre je n'ai pas eu le temps de m'attarder sur la visualisation des données car l'a partie API m'a pris beaucoup plus de temps que prévu.
+
+Bilan du temps passé :
+
+- Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, **1 heure estimée**, 1 heure réelle)
+- Documentation sur les API de Spotify, leur intégration et leurs features (★☆☆☆☆, **2 heures estimées**, 2 heures réelles)
+- Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**, 4 heures réelles)
+- Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**, 3 heures réelles)
+- Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**, 0h30 réelle)
+- Déterminer quelle technologie utiliser pour la visualisation (★☆☆☆☆, **0 heure 30 estimée**)
+- Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)
