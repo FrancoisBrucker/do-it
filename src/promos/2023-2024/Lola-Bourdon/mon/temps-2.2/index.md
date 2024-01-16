@@ -101,7 +101,7 @@ La visualisation n'est pas encore optimale, les tableaux ne sont pas homogènes 
 
 ### Conclusion
 
-Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précedemment et de découvir Power BI. C'est un outil très intéressant dans le cadre de mon analyse de formulaire que je vais poursuivre. Je ne pensais pas passer autant de temps sur la transformation des données mais c'est une étape cruciale pour simplifier la suite de l'exercice.
+Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précedemment et de découvrir Power BI. C'est un outil très intéressant dans le cadre de mon analyse de formulaire que je vais poursuivre. Je ne pensais pas passer autant de temps sur la transformation des données mais c'est une étape cruciale pour simplifier la suite de l'exercice. Je peux Maintenant analyser le google form de Défensio.
 
 | Travail effectué |  Temps | 
 | -------- | -------- |-------- |
@@ -109,4 +109,3 @@ Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précedemme
 | Collecter et transformer | 4h|
 | Modéliser et Analyser | 3h |
 | Visualiser | 1h| 
-
