@@ -137,11 +137,9 @@ Tout le projet est sur mon [GitHub](https://github.com/VlaadimirJ/pok-2-vladimir
 
 Bien que c'est un cheminement normal lorsque l'on apprend, se rendre compte que ce que l'on a fait n'est pas optimal et devoir tout recommencer est assez frustrant. Il y a aussi toujours le problème de ne pas pouvoir comprendre l'aide qu'on puisse trouver sur Internet et les forums car le code proposé est obsolète car a la syntaxe d'une version précédente. 
 
-Un jeu de combat est aussi un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.   
-
 ## Bilan 
 
-Un jeu de combat est un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.  J'ai quand même pu apprendre beaucoup de choses sur la création d'un jeu vidéo, mais la route est encore longue si je souhaite aboutir à un produit à peu près fini. 
+Un jeu de combat est un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.  J'ai quand même pu apprendre beaucoup de choses sur la création d'un jeu vidéo et différents aspects d'un jeu, mais la route est encore longue si je souhaite aboutir à un produit à peu près fini. 
 
 ## Glossaire
 
