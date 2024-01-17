@@ -21,17 +21,23 @@ résumé: Il s'agit dans ce POK d'apprendre à coder en Java (par envie personne
 Prérequis : Aucune base en JAVA 
 {%endprerequis%}
 
----
-
 ## Sommaire
 
-- [Backlog du projet](#backlog)
-- [Acquérir bases en Java](#bases)
-- [S'entrainer en Java](#exercice)
-- [Choix de l'interface graphique](#choix)
-- [Apprendre à réaliser une interface graphique](#swing)
-- [Réalisation de la maquette Figma](#maquette)
-- [Les fonctionnalités et le backlog du Mastermind](#fonctionnalités)
+- [Sommaire](#sommaire)
+  - [Sprint 1](#sprint-1)
+  - [Sprint 2](#sprint-2)
+  - [Apprentissage du codage d'une interface avec Swing](#apprentissage-du-codage-dune-interface-avec-swing)
+    - [Interface initiale](#interface-initiale)
+    - [Partie en cours](#partie-en-cours)
+    - [Fin de la partie](#fin-de-la-partie)
+  - [Construction de la partie](#construction-de-la-partie)
+      - [1 : Button Panel](#1--button-panel)
+      - [2 : Color Panel](#2--color-panel)
+      - [3 : Main Panel](#3--main-panel)
+  - [Retour sur le backlog du jeu](#retour-sur-le-backlog-du-jeu)
+  - [Retour sur le backlog du Sprint 2](#retour-sur-le-backlog-du-sprint-2)
+  - [Points de retard notés](#points-de-retard-notés)
+  - [Axes d'amélioration](#axes-damélioration)
 
 <h2 id=backlog> Le backlog du projet</h2>
 
@@ -241,8 +247,8 @@ Je n'ai malheureusement pas eu le temps d'apprendre à me servir de ce système.
 |Valider une fois qu'une combinaison a été choisie|3|Must|
 |Effacer une combinaison qui n'a pas encore été validée|3|Must|
 |Choisir d'effacer seulement la dernière couleur qui a été sélectionnée|8|Won't|
-|Pouvoir abandonner la partie à tout moment|5|Must|
-|Pouvoir accéder aux règles du jeu à tout moment|5|Could|
+|Pouvoir abandonner la partie à tout moment|5|Could |
+|Pouvoir accéder aux règles du jeu à tout moment|5|Won't|
 |Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée|5|Must|
 |Avoir le code secret recherché qui s'affiche à la fin d'une partie|3|Won't|
 
@@ -276,3 +282,499 @@ On peut alors redéfinir le backlog pour le sprint 2 :
 |---|---|---|
 | *- Apprendre les connaissances théoriques pour réaliser une interface graphique en Java* <br> - Réaliser le backlog défini plus haut sur Java <br> - Recherche de méthodes de résolution d'un mastermind <br> - Implémentation de ces méthodes <br> - Comparaison des méthodes |*1h* <br> 6h <br> 45mins <br> 1h <br> 30 mins |
 
+<h2 id=interface> Réalisation du jeu </h2>
+
+### Apprentissage du codage d'une interface avec Swing
+
+J'avais repérer une vidéo sur l'utilisation de Swing pour réaliser une interface graphique durant le sprint 1 que j'avais notée [ici](#swing), mais que je n'avais pas eu le temps de suivre.
+
+J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement à toute personne voulant débuter ! Elle permet d'acquérir les bases et de comprendre la logique et elle est très bien expliquée. 
+
+<h2 id=visuel> Le jeu final </h2>
+
+#### Interface initiale 
+
+<img width="350" src="Mastermind_1.png">
+
+#### Partie en cours
+
+Le joueur vient écrire sa proposition:
+
+<img width="350" src="Mastermind_2.png">
+
+Une fois sa tentative validée, les indications de la justesse de sa proposition s'affichent sur la droite :
+- **Blanc** : la couleur est bonne mais mal placée
+- **Rouge** : la couleur est bonne et bien placée
+  
+<img width="350" src="Mastermind_4.png">
+
+#### Fin de la partie
+
+|L'utilisateur n'a pas réussi à trouver le code avant la fin des 7 tentatives|L'utilisateur a réussi à trouver le code avant la fin des 7 tentatives|
+|---|---|
+|<img width="350" src="Mastermind_3.png">|<img width="350" src="Mastermind_5.png">|
+
+<h2 id=code> Construction du code </h2>
+
+{%info "**Avant de commencer...**"%}
+J'avais repérer une vidéo sur l'utilisation de Swing pour réaliser une interface graphique durant le sprint 1 que j'avais notée [ici](#swing), mais que je n'avais pas eu le temps de suivre.
+
+J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement à toute personne voulant débuter ! Elle permet d'acquérir les bases et de comprendre la logique et elle est très bien expliquée. 
+{%endinfo%}
+
+Pour mon projet, j'ai créé un package *Interface* dans lequel j'ai créé 2 classes : **_MainFrame_** (qui gère l'affichage de l'écran de jeu) et **_MessageFrame_** (qui gère l'affichage de l'écran final de fin de partie), qui héritent de **JFrame**.
+
+{%prerequis%}
+Classes importantes du package Java Swing,
+- **JPanel** :  est un conteneur capable de stocker, et d'organiser ainsi,un ensemble de composants.
+- **Jframe** : utilisée pour créer des fenêtres graphiques dans une application 
+{%endprerequis%}
+
+<img width="200" src="Jframe_Jpanel.png">
+
+[Source image](https://waytolearnx.com/2020/05/jpanel-java-swing.html)
+
+
+### Construction de la partie 
+
+- [Main Frame](#mainframe)
+  - [Implémentation des méthodes](#a)
+  - [Gestion des graphismes](#b)
+  - [Création des Panels](#c)
+- [Message Frame](#messageframe)
+
+
+<h3 id=mainframe> Main Frame</h3>
+
+On définit d'abord quelques variables qui vont nous servir tout au long du codage *(ex : liste des couleurs disponibles, nombre d'essai maximum, etc...)*
+
+<h4 id=a> Implémentation des méthodes</h4>
+
+On créé ensuite une méthode qui va venir générer un code secret...
+
+{% details "Generation du code secret" %}
+```java
+private List<Color> generateCode(){
+        Random random = new Random();
+        List<Color> secretCode = new ArrayList<>();
+
+        // Génération de 4 nombres aléatoires entre 1 et 6 (inclus)
+        for (int i = 0; i < 4; i++) {
+            int randomNumber = random.nextInt(6);
+            if (secretCode.contains(colorAvailable.get(randomNumber))){
+                do {
+                randomNumber = random.nextInt(6);
+                } while (secretCode.contains(colorAvailable.get(randomNumber)));
+                }
+
+            secretCode.add(colorAvailable.get(randomNumber));
+        }
+        System.out.println(secretCode);
+        return secretCode;
+    }
+```
+{% enddetails %}
+
+... Puis une autre qui va initialiser une grille vide de taille 7x4 de couleur noire qui servira pour l'affichage du jeu de l'utilisateur. 
+
+{% details "Création grille vide" %}
+```java
+public Color[][] initializeGrid (int rows, int columns, Color color){
+    Color[][] tableau = new Color[rows][columns];
+    for(int i = 0; i < tableau.length; i++){
+        for(int j = 0; j < tableau[i].length; j++){
+            tableau[i][j] = color;
+    }}
+    return tableau;
+}
+```
+{% enddetails %}
+
+> Ces méthodes sont appelées lors de l'ouverture du jeu.
+
+D'autres méthodes seront aussi utiles plus tard, comme par exemple:
+
+- une méthode qui sera appelée lorsque l'utilisateur appuiera sur une couleur pour changer la couleur de la case de sa proposition
+- une méthode qui met à jour la grille de jeu de l'utilisateur lorsqu'il appuie sur "valider"
+- une méthode qui met à jour la grille d'indices lorsque l'utilisateur appuie sur "valider"
+- une méthode qui va appelé la classe *"MessageFrame"* pour afficher le message final en fonction de la réussite de l'utilisateur
+
+{% details "Un aperçu de ces méthodes" %}
+```java
+private void updateChoice(Color color) {
+        //méthode permettant de mettre à jour les couleurs choisies par l'utilisateur 
+        for (int i = 0; i <= Choices.size(); i++) {
+            if (Choices.get(i)==Color.LIGHT_GRAY) {
+            // Changer la valeur de l'élément vide à la valeur du bouton appuyé
+                Choices.set(i, color);
+                changeColor();
+                break;
+    }}}
+
+    private void validateChoices (int index) {
+
+        if (isCompleted(Choices)){
+            for(int j = 0; j < choicesGrid[index-1].length; j ++ ){
+                choicesGrid[index-1][j] = Choices.get(j);
+                }
+        //on actualise la grid
+        changeColor();
+        //on indique les indices de la tentative jouée
+        indicateClues(index);
+        //on initialise le zone de choix de couleurs de l'utilisateur
+        emptyChoicesList(Choices);
+        maxTries--;
+        //test si la partie est finie
+        MessageBox(maxTries, isGameFinished);
+        }}
+
+    private void indicateClues(int index){
+        //si une couleur est bien placée : goodPlace+1
+        //si une couleur est bonne et bien placée : goodColor+1
+        int goodColor=0;
+        int goodPlace=0;
+        for(int j = 0; j < choicesGrid[index-1].length; j ++ ){
+            if (choicesGrid[index-1][j] == secretCode.get(j)){
+                goodPlace+=1;}
+            else if (secretCode.contains(choicesGrid[index-1][j])){
+                goodColor+=1;
+            }}
+
+        for (int k = 0; k < goodPlace; k++){
+            clueGrid[index-1][k]=(new Color (141, 1, 1));}
+        for (int l = goodPlace; l<goodColor+goodPlace; l++){
+            clueGrid[index-1][l]=Color.WHITE;}
+
+        //si toutes les couleurs sont bonnes et bien placées le jeu est terminé
+        if (goodPlace == 4){
+            isGameFinished=true;
+        }
+    }
+
+    private void MessageBox (int ESSAI, boolean IsGameFinished){
+        //méthode qui permet d'affiche le message de fin de partie en fonction de la réussite de l'utilisateur
+        if (ESSAI == 0 & IsGameFinished != true){
+           MessageFrame.go(false,secretCode);
+        }
+        if (IsGameFinished == true){
+            MessageFrame.go(true,secretCode);
+        }
+    }
+
+```
+{% enddetails %}
+
+<h4 id=b> Gestion des graphismes</h4>
+
+Toute la création des formes graphiques (cercles, rectangles) se fait au moyen de la méthode **paint** pour laquelle j'ai créé une **classe fille**. 
+
+{%info "**Remarque**"%}
+*La position se chaque forme se fait relativement à la dimension initiale de la fenêtre de jeu : quand on augmente ou diminue la taille de la fenêtre lors de la partie, la taille des graphismes n'est pas adaptée (ce qui fait que le jeu n'est pas du tout Responsive...)*
+{%endinfo%}
+
+---
+
+{% details "Création des dessins" %}
+```java
+public void paint(Graphics g) {
+     super.paint(g);
+        //creation du rectangle de fond
+        g.setColor (new Color(91, 91, 91));
+        g.fillRect(40,40,580,480);
+  
+        //grilles de colonnes 
+        for (int i = 0; i < (choicesGrid.length); i += 1) {
+            for (int j = 0; j < (choicesGrid[i].length); j += 1) {
+               g.setColor(choicesGrid[i][j]);
+               g.fillOval((j+1)*posXCercleL, (i+1)*posYCercleL,44,44);
+        }}
+
+        //lignes choix en cours
+        for (int i = 1; i <= 4; i += 1) {
+            g.setColor(Choices.get(i-1));
+            g.fillOval(i*posXCercleL,550,46,46);
+        }
+
+        //creation des icones d'indications des des réponses
+        for (int i = 0; i < (clueGrid.length); i += 1) {
+            for (int j = 0; j < (clueGrid[i].length); j += 1) {
+                g.setColor(clueGrid[i][j]);
+                g.fillOval(380 + (j+1)*posXCercleR, 10 + (i+1)*posYCercleR,30,30);
+        }}}
+
+        public void changeColor() {
+            //permet d'appeler à nouveau la méthode paint pour redessiner les formes
+            repaint();
+        }
+```
+{% enddetails %}
+
+<h4 id=c> Création des Panels</h4>
+
+On va ensuite s'occuper de la méthode *initialize* qui va permettre de créer les *panels*, les *boutons* et les *actions associées*. 
+
+##### 1 : Button Panel
+
+*Ce panel va gérer l'affichage des boutons "valider" et "effacer"*
+
+{% details "ButtonPanel" %}
+```java
+    //Panel boutons "valider" et "effacer"
+        JPanel ButtonPanel = new JPanel ();
+        ButtonPanel.setLayout(null);
+
+        JButton btnValider = new JButton ("Valider");
+        btnValider.setFont(mainFont);
+        btnValider.setBounds(500,510,100,50);
+        btnValider.addActionListener(e -> validateChoices(maxTries));
+
+        JButton btnEffacer = new JButton ("Effacer");
+        btnEffacer.setFont(mainFont);
+        btnEffacer.setBounds(350,510,100,50);
+        btnEffacer.addActionListener (new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //fait à une 1ere méthode qui remet à "zéro" (en gris) le contenu de la liste du choix de l'utilisateur et une autre qui vient actualiser l'action en redessinant le graphique
+                emptyChoicesList(Choices);
+                changeColor();
+            }
+        });
+
+        ButtonPanel.add(btnValider);
+        ButtonPanel.add(btnEffacer);
+        ButtonPanel.setOpaque(false);
+```
+{% enddetails %}
+
+---
+
+{%info "**Remarque**"%}
+Pour m’entraîner, j'ai utilisé à la fois des classes anonymes (*new ActionListener*) et des expressions lambda (*e -> validateChoices(maxTries)*). Après coup, je pense qu'ill aurait été plus cohérent d'utiliser que des expressions lambda, pour harmoniser les codes, et comme je les trouve plus facile à créer.
+{%endinfo%}
+
+##### 2 : Color Panel
+
+*Ce panel va gérer l'affichage des boutons en bas de l'écran permettant à l'utilisateur de choisir ses couleurs*
+
+{% details "colorPanel" %}
+```java
+// Panneau choix couleurs
+        JPanel colorPanel = new JPanel ();
+        colorPanel.setLayout (new GridLayout (1, 6, 20, 10));
+        colorPanel.setSize(700,100);
+        colorPanel.setOpaque(false);
+
+        //Ajout des boutons des couleurs
+        JButton btnRed = new JButton();
+        btnRed.setBackground(Color.RED); 
+        btnRed.addActionListener(e -> updateChoice(Color.RED));
+        btnRed.setPreferredSize(new Dimension(this.WIDTH, 50));
+
+        JButton btnBlue = new JButton();
+        btnBlue.setBackground(Color.BLUE);
+        btnBlue.addActionListener(e -> updateChoice(Color.BLUE));
+
+        JButton btnCyan = new JButton();
+        btnCyan.setBackground(Color.CYAN);
+        btnCyan.addActionListener(e -> updateChoice(Color.CYAN));
+
+        JButton btnYellow = new JButton();
+        btnYellow.setBackground(Color.YELLOW); 
+        btnYellow.addActionListener(e -> updateChoice(Color.YELLOW));
+
+        JButton btnGreen = new JButton();
+        btnGreen.setBackground(Color.GREEN); 
+        btnGreen.addActionListener(e -> updateChoice(Color.GREEN));
+
+
+        JButton btnPink = new JButton();
+        btnPink.setBackground(Color.MAGENTA);
+        btnPink.addActionListener(e -> updateChoice(Color.MAGENTA));
+        
+        colorPanel.add(btnRed);
+        colorPanel.add(btnBlue);
+        colorPanel.add(btnCyan);
+        colorPanel.add(btnYellow);
+        colorPanel.add(btnGreen);
+        colorPanel.add(btnPink);
+```
+{% enddetails %}
+
+##### 3 : Main Panel
+
+*On va venir ensuite créer le main panel qui va stocker les panels précédents en les disposant sur la page (haut, bas, centre, ...)*
+
+{% details "mainPanel" %}
+
+```java
+       JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
+        mainPanel.setBackground(new Color(30, 30, 30));
+        //On ajoute le form panel au main Panel dans la partie "sud"
+        mainPanel.add(colorPanel, BorderLayout.SOUTH);
+        //On ajoute des marges
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        mainPanel.add(ButtonPanel,BorderLayout.CENTER);
+
+        add(mainPanel);
+
+        setTitle("Mastermind");
+        setSize(700,700);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+```
+{% enddetails %}
+
+Enfin, on créé la méthode principale pour executer le panneau principal :
+```java
+    public static void main (String[] args){
+        MainFrame myFrame = new MainFrame();
+        myFrame.initialize();
+        }
+``` 
+
+<h3 id=messageframe> Message Frame</h3>
+
+On réitère la même démarche que pour le Main Panel. Le besoin des méthodes et des boutons ne sera pas le même:
+- méthode pour récupérer le code secret transmis lors de l'appel de l'appel de la méthode dans le MainPanel (**_MessageFrame_**)
+- de la méthode paint pour venir dessiner les cercles de couleurs du code secret (**_paint_**)
+- du texte dont le contenu s'adaptera en fonction de la réussite (ou pas) du joueur (**_displayMessage_**)
+- une méthode pour exécuter le frame (**_go_**)
+
+{% details "MessageFrame" %}
+```java
+public class MessageFrame extends JFrame{
+    final private Font mainFont = new Font ("Poppins", Font.BOLD, 25);
+    final private Font secondFont = new Font ("Poppins",Font.CENTER_BASELINE, 19);
+    private List<Color> secretCode;
+
+    public MessageFrame (List<Color> secretCode){
+        //permet de récupérer le code secret du MainFrame
+        this.secretCode=secretCode;
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+
+        //creation du rectangle de fond
+        g.setColor (Color.WHITE);
+        g.fillRect(100,320,480,130);
+        
+        //creation des icones du code secret
+        for (int i = 1; i <= 4; i += 1) {
+            g.setColor(secretCode.get(i-1));
+            g.fillOval(60+100*i,350,60,60);
+        }}
+
+    public void displayMessage(boolean IsWin, List<Color> secretCode){
+        //initialisation des text
+        JLabel messageLabel = new JLabel ("");
+        messageLabel.setFont(mainFont);
+        messageLabel.setHorizontalAlignment(JLabel.CENTER);
+        JLabel codeLabel = new JLabel ("Le code secret était:");
+        codeLabel.setFont(secondFont);
+        codeLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        //création des panels
+        JPanel textPanel= new JPanel ();
+        textPanel.setLayout (new GridLayout (4, 1, 5, 5));
+        textPanel.add(messageLabel);
+        textPanel.add(codeLabel);
+        textPanel.setOpaque(false);
+
+        JButton btnRecommencer = new JButton ("Recommencer");
+        btnRecommencer.setFont(mainFont);
+        btnRecommencer.addActionListener (new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                MainFrame.main(null);
+            }
+        });
+
+        JPanel buttonPanel = new JPanel ();
+        buttonPanel.setOpaque(false);
+        buttonPanel.add(btnRecommencer);
+
+        //creation Panel principal
+        JPanel messagePanel= new JPanel ();
+        messagePanel.setLayout(new BorderLayout());
+        messagePanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        messagePanel.add(textPanel,BorderLayout.CENTER);
+        messagePanel.add(buttonPanel,BorderLayout.SOUTH);
+
+
+        if (IsWin == true){
+            messagePanel.setBackground(new Color(178, 255, 106));
+            messageLabel.setText("Vous avez gagné ! 😀");
+        }
+        else {
+            messagePanel.setBackground(new Color(240, 89, 89));
+            messageLabel.setText("Vous avez perdu... 😢");
+        }
+        add(messagePanel);
+
+        setTitle("End");
+        setSize(700,700);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void go (boolean IsWin,List<Color> secretCode){
+        MessageFrame my2Frame = new MessageFrame(secretCode);
+        my2Frame.displayMessage(IsWin,secretCode);
+        }
+}
+```
+{% enddetails %}
+
+<h2 id=backlog2> Message Frame</h2>
+
+### Retour sur le backlog du jeu 
+
+|Intitulé|Complexité|Valeur métier(MoSCoW)|Réalisé|
+|---|---|---|---|
+|Sélectionner une combinaison de 4 couleurs|3|Must|✅|
+|Valider une fois qu'une combinaison a été choisie|3|Must|✅|
+|Effacer une combinaison qui n'a pas encore été validée|3|Must|✅|
+|Choisir d'effacer seulement la dernière couleur qui a été sélectionnée|8|Won't|❌|
+|Pouvoir abandonner la partie à tout moment|5|Could|❌|
+|Pouvoir accéder aux règles du jeu à tout moment|5|Won't|❌|
+|Avoir à indicateur du nombre de couleurs justes et bien placées et juste et mal placées à chaque combinaison validée|5|Must|✅|
+|Avoir le code secret recherché qui s'affiche à la fin d'une partie|3|Won't|✅|
+
+Finalement, je n'ai pas réussi à implémenter toutes les fonctionnalités que j'avais espérées pour mon jeu, surtout par manque de temps : 
+- *accéder aux règles du jeu* et n'*effacer que la dernière couleur sélectionnée* n'étaient pas forcément compliqué à mettre en place (rajouter un bouton avec un autre JFrame avec la même méthode que le MessageFrame) mais pas primordial
+- le bouton *Abandonner* était plus compliqué à mettre en place. Je n'ai pas réussi à combiner les graphismes créés avec la méthode paint avec les JButton. J'aurais pu revoir toute la disposition de l'écran, mais cela signifiait changer toutes les proportions, et je manquais de temps...
+
+### Retour sur le backlog du Sprint 2
+
+|Intitulé|Temps estimé|Temps réalisé|
+|---|---|---|
+| - Apprendre les connaissances théoriques pour réaliser une interface graphique en Java <br> - Réaliser le backlog défini plus haut sur Java (*) <br> - Recherche de méthodes de résolution d'un mastermind <br> - Implémentation de ces méthodes <br> - Comparaison des méthodes |1h <br> 6h <br> 45mins <br> 1h <br> 30 mins | **1h15** <br> **9h** <br> **/** <br> **/** <br> **/**
+
+> **(*) Plus en détails**
+> 1h30 : Recherches et réalisations des boutons de choix de couleurs
+> 1h30 : Recherches sur la méthode paint et réalisation des graphismes 
+> 1h : Tentatives de création des boutons du jeu ("Abandonner", "Effacer", "Valider") 
+> 45 mins : Gestion de la ligne de choix de l'utilisateur
+> 1h : Gestion de la grille du jeu complet de l’utilisateur et création des méthodes
+> 1h : Gestion de l'affiche et de la mise à jour des indices et méthodes
+> 1h30 : Création du MessagePanel
+> 45 mins : Tests du jeu pour s'assurer de son fonctionnement au fur et à mesure
+
+Bon...
+J'ai finalement assez sous estimé le temps que prendrait le jeu à implémenter. 
+
+### Points de retard notés
+
+|Problème|Raison|
+|---|---|
+|Manque de ressources et de culture sur le sujet | - Ce qui fait que pour certains problèmes (ex: réaliser des formes graphiques dont la couleur se met à jour en fonction des choix de l'utilisateur) je ne savais pas au début comment orienter mes recherches pour résoudre mon problème <br> - Je suis d'ailleurs souvent partie dans une direction pour me rendre compte que ce n'était pas la bonne|
+|Trop grande volonté de coller au figma| - Difficulté de réaliser des boutons ronds sur Java (j'ai passé beaucoup de temps sur des forums à essayer de comprendre comment on pouvait contourner le problème pour finalement me rendre compte que je ne comprenais rien et qu'il valait mieux que je fasse des boutons rectangulaires) <br> - Pendant un long moment, je n'arrivais pas à créer les boutons "effacer" et "valider", comme je les avais positionnés sur la maquette (problème de combinaisons entre les graphismes créés avec la méthode paint et les JButton)|
+
+### Axes d'amélioration
+
+Si c'était à refaire, je ferais en sorte de définir mon backlog pour le sprint 2 après avoir eu un aperçu de comment utiliser Swing et de ses possibilités. Et de même, avant la réalisation de la maquette Figma. Cela m'aurait permis de vraiment savoir ce qui était possible de faire, de dessiner la maquette en conséquence, et d'estimer correctement le temps qu'il me faudra pour réaliser les tâches du backlog.

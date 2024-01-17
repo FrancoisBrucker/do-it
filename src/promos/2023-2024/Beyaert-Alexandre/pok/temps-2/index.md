@@ -23,7 +23,7 @@ résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie
 1. Introduction
 2. Description du projet
 3. Analyse préliminaire des données
-4. Sprint 2 : algorithmes de Machine Learning
+4. Pré-traitement des données et sélection du classifier
 5. Conclusion
 6. Bibliographie
 
@@ -59,7 +59,7 @@ Données : fichiers images, lames de microscopes numérisées, format .ndpi – 
 Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.
 Pour se faire :
 **- le sprint 1** consistera en la **compréhension** du projet, sa **description** ainsi qu'en **l'analyse préliminaire** des données.
-**- le sprint 2** consistera à adopter des méthodes de Machine Learning pour effectuer une **classification**.
+**- le sprint 2** consistera à effectuer un pré-traitement qualitatif des données et à la sélection de l'algorithme de Machine Learning pour effectuer une **classification**.
 
 
 ## 3. Analyse préliminaire des données
@@ -209,7 +209,7 @@ En rouge, du bruit pour l'algorithme
 
 Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation "zone cancéreuse vs zone non cancéreuse".
 
-### 3.3 Pré-traitement - Segmentation
+### 3.3 Premier pré-traitement - Segmentation
 
 ```python
 import cv2
@@ -254,8 +254,157 @@ plt.show()
 ```
 ![Image d'origine vs Image segmentée](pretraitement.jpg)
 
-## 4. Sprint 2 : algorithmes de Machine Learning
-(Ensuite, une fois la segmentation au point, nous allons pouvoir commencer à faire tourner des algorithmes de ML pour effectuer une classification : "cancer" ou "pas de cancer")
+## 4. Pré-traitement des données et sélection du classifier
+
+![Celulle avant extraction du contour](celulle.png)
+
+```python
+def extraire_contour(image_entree, image_sortie, seuil_canny, taille_dilatation, superficie_min):
+    # Charger l'image en niveaux de gris
+    image = cv2.imread(image_entree, cv2.IMREAD_GRAYSCALE)
+
+    # Appliquer un flou pour réduire le bruit
+    image_floue = cv2.GaussianBlur(image, (5, 5), 0)
+
+    # Utiliser le détecteur de contours Canny avec le seuil spécifié
+    contours = cv2.Canny(image_floue, seuil_canny, 2 * seuil_canny)
+
+    # Appliquer la dilatation pour lier les contours discontinus
+    element_structurel = cv2.getStructuringElement(cv2.MORPH_RECT, (taille_dilatation, taille_dilatation))
+    contours = cv2.dilate(contours, element_structurel)
+
+    contours, _ = cv2.findContours(contours, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    contours = [contour for contour in contours if len(contour) > superficie_min]
+
+    contours_image = np.zeros_like(image)
+
+    cv2.drawContours(contours_image, contours, -1, (255), 2)
+
+    cv2.imwrite(image_sortie, contours_image)
+    
+    return contours
+```
+![Celulle après extraction du contour](celulle_contour_v1.png)
+
+Besoin d'effectuer une dilatation
+
+```python
+def decouper_image(image_entree, contours, dossier_sortie,fichier):
+    # Charger l'image originale
+    image_originale = cv2.imread(image_entree)
+   
+    # Boucler sur les contours
+    for i, contour in enumerate(contours):
+        masque = np.zeros_like(image_originale)
+
+        # Dessiner le contour sur le masque
+        cv2.drawContours(masque, [contour], 0, (255, 255, 255), -1)
+
+        petite_image = cv2.bitwise_and(image_originale, masque)
+
+        # Trouver la boîte englobante du contour
+        x, y, w, h = cv2.boundingRect(contour)
+
+        petite_image = image_originale[y:y+h, x:x+w]
+
+        cv2.imwrite(os.path.join(dossier_sortie, f"{fichier}image_{i}.jpg"), petite_image)
+```
+
+```python
+def pre_traitement_1_contour_dilatation(dossier_E,dossier_S,dossier_C):
+    
+    seuil_canny = 100
+    taille_delatation=80
+    superficier_mini=300
+    seuil_contour=20
+    
+    fichiers = os.listdir(dossier_E)
+    
+    for fichier in fichiers:
+        if fichier.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+            
+            chemin_entree = os.path.join(dossier_E, fichier)
+            chemin_contour = os.path.join(dossier_C, fichier)
+            
+            #### premier fonction
+            contours = extraire_contour(chemin_entree, chemin_contour, seuil_canny,taille_delatation,superficier_mini)
+            #### deuxieme fonction
+            decouper_image(chemin_entree, contours, dossier_S,fichier)
+
+pre_traitement_1_contour_dilatation('D:/Master_SID/projet_TER/data/tumeur','D:/Master_SID/projet_TER/data/pretraitement_1','D:/Master_SID/projet_TER/data/contour')
+```
+
+![Extraction du contour après dilatation](celulle_contour_v2.png)
+
+Reste le problème de plusieurs membranes sur une même lame :
+
+![Plusieurs membranes sur une même lame](plusieurs_celulles.png)
+
+![Plusieurs membranes sur une même lame](plusieurs_celulles_contour.png)
+
+Focus sur la segmentation
+
+![Avant pré-traitement](avant_pre-trait.png)
+
+
+```python
+def pre_traitement_2_segmentation(dossier_E,dossier_S):
+    
+    
+    fichiers = os.listdir(dossier_E)
+    
+    for fichier in fichiers:
+        if fichier.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+            
+            chemin_entree = os.path.join(dossier_E, fichier)
+            chemin_sortie = os.path.join(dossier_S, fichier)
+    
+            image_path = chemin_entree
+
+            ######################################################
+            image = cv2.imread(image_path)
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            pixels = image.reshape((-1, 3))
+            pixels = np.float32(pixels)
+            criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.2)
+
+            ############ le NB de clusters
+            ######## changer le pour tester
+
+            k = 3
+
+            ############################
+            ######## modele ############
+            _, labels, centers = cv2.kmeans(pixels, k, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+            centers = np.uint8(centers)
+            segmented_image = centers[labels.flatten()]
+            segmented_image = segmented_image.reshape(image.shape)
+            cv2.imwrite(chemin_sortie, cv2.cvtColor(segmented_image, cv2.COLOR_RGB2BGR))
+
+pre_traitement_2_segmentation('D:/Master_SID/projet_TER/data/pretraitement_1','D:/Master_SID/projet_TER/data/pretraitement_2')
+```
+    
+![Après pré-traitement](apres_pre-trait.png)
+
+Ajout éventuel d'annotations avec le logiciel QuPath
+
+![Annotation](annotation.png)
+
+![Logiciel QuPath](logiciel.png))
+
 
 ## 5. Conclusion
+
+| Timing | Introduction du sujet (déplacement à la Timone) | Prise en main des données | Conversion auto avec NDPview2 | Pré-traitement |
+| -------| -------- | -------- | -------- |
+| Sprint 1 - Temps prévu (en heures) | 2 | 2 | 3 | 3 |
+| Sprint 1 - Temps dédié (en heures) | 2 | 3 | 4 | 2 |
+
+| Timing | Seaborn | Sklearn modèle | Sklearn pré-traitement | Combinaison des bibliothèques |
+| -------| -------- | -------- | -------- |
+| Sprint 2 - Temps prévu (en heures) | 2 | 3 | 3 | 2 |
+| Sprint 2 - Temps dédié (en heures) | 2 | 4 | 2 | 2 |
+
+
 ## 6. Bibliographie
