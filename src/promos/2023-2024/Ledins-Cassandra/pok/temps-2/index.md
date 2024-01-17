@@ -166,24 +166,55 @@ On commence par réaliser un map-builder, qui génère des rectangles adjacents,
 
  ### Monstres et arrivée des Components
 
- - Rappel à Unity
+ Un héros qui se balade dans des couloirs ne fait pas un jeu, il faut donc rajouter du challenge : des ennemis. On va créer un script spawner qui s'occupera aussi bien de spawn des monstres que notre joueur. On spawn 1 monstre au centre de chaque salle. Grâce à notre image qui associe caractère et sprites (une font en fait), on peut faire spawn des orcs et goblins avec les caractères o et O. 
+
+ A ce moment là, la structure des scripts commence à se rapprocher de ce que j'ai pu faire dans Unity, on ajoute un script component, qui définira des components qu'on pourra ajouter à nos entités. Par exemple un nom, des points de vie, des intentions comme "veut se déplacer"...
+
 
  ### Collisions et déplacements randomisés
 
+ On écrit un script de collision entre entité pour préparer le système de combat, et on ajoute un système de déplacement randomisé sur les monstres
+
  ### Turn by Turn et système d'attaque
+
+On ajoute un système de tour par tour, où les monstres ne bougent qu'après vous appuyez sur les touches de déplacement et attendent ensuite votre prochain input. Viens ensuite le système d'attaque, on remplace le script collision par un script de combat.
+
 
  ### HUD et régéneration des points de vie
 
+Se battre c'est bien, mais c'est toujours intéressant dans les jeux de pouvoir voir notre propre barre de vie ainsi que celle des ennemis. On ajoute un troisième layer HUD à notre console (on  avait un layer map avec le sol et les murs, un deuxième layer par dessus avec les entités). Et un système où si on reste sur place, on regagne de la vie.
+
+On rend aussi les déplacements des montres non-randomisés mais avec un Dijkstra (plus court chemin vers le héros). Je ne suis pas fan de ce système où des monstres à l'autre bout de la map courent ligne droite vers vous, je trouvais les déplacements randomisés plus dur à battre que des déplacements prévisibles.
+
+On a aussi maintenant la possibilité de régénérer des points de vie en restant sur place.
+
+Voilà donc à quoi ressemble le jeu finalement : 
+
+![image](./goblins.png)
+
  ### Condition de fin, Game Over ou Victory
 
+L'affichage et le combat étant terminés, il faut pour notre MVP une condition de fin de jeu : défaite ou victoire. On implémente donc un écran de fin de jeu quand notre player tombe à 0 points de vie, et on rajoute une amulette avec un Dijkstra (cette fois au point le plus éloigné du spawn du joueur). Récupérer cette amulette est une condition de victoire qui nous affiche un message glorieux.
+
+Nous avons aussi la possibilté de recommencer le jeu en appuyant sur une touche.
+
+![](./amulet.png)
+![](./victory.png)
 
  ## Fin du Sprint 2
 
- Objectif accompli :thumbs_up:
+ J'ai réussi à aller jusqu'à un MVP dans le temps imparti, je suis satisfaite de ça.
+ J'ai trouvé difficile pour ce POK de me donner des objectifs plus précis à part d'atteindre un certain niveau du livre.
+
+ ## Conclusion
+
+ Il a fallu bien s'accrocher dans ce livre qui devient de plus en plus mystique dès qu'on avance. J'ai pu remarquer des redondances dans le code donné par le livre, ou alors parfois on nous dit d'ajouter une ligne de code dans une fonction qui n'existe pas donc il faut deviner où ça va... Mais sinon les explications sont quand même très détaillée et assez claires. J'aimerais pouvoir le terminer après ça pour pouvoir comparer mon niveau de maîtrise des Game Component et Resources entre maintenant et une fois le jeu amélioré.
+
+ Je vous conseille de lire la documentation car les concepts clés de Rust ne sont pas tous expliqués dans Hands-on Rust.
 
 ## Sources
 
-* [Mon repo github avec les exercices, le flappy dragon et le dungeon crawler]()
+* [Mon repo github avec les exercices, le flappy dragon et le dungeon crawler](https://github.com/Cledins/rust)
 * [La documentation Rust officielle](https://doc.rust-lang.org/stable/book/title-page.html)
 
 ## Horodateur

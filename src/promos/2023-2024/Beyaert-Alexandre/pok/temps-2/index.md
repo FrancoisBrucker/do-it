@@ -23,7 +23,7 @@ résumé: Un POK traitant de l'usage de la Data Science au service de l'anatomie
 1. Introduction
 2. Description du projet
 3. Analyse préliminaire des données
-4. Pré-traitement des données et sélection du classifier
+4. Pré-traitement des données
 5. Conclusion
 6. Bibliographie
 
@@ -59,7 +59,7 @@ Données : fichiers images, lames de microscopes numérisées, format .ndpi – 
 Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.
 Pour se faire :
 **- le sprint 1** consistera en la **compréhension** du projet, sa **description** ainsi qu'en **l'analyse préliminaire** des données.
-**- le sprint 2** consistera à effectuer un pré-traitement qualitatif des données et à la sélection de l'algorithme de Machine Learning pour effectuer une **classification**.
+**- le sprint 2** consistera à effectuer un pré-traitement qualitatif des données pour qu'elles soient prêtes à faire passer dans un algorithme de classification.
 
 
 ## 3. Analyse préliminaire des données
@@ -254,9 +254,20 @@ plt.show()
 ```
 ![Image d'origine vs Image segmentée](pretraitement.jpg)
 
-## 4. Pré-traitement des données et sélection du classifier
+## 4. Pré-traitement des données
 
-![Celulle avant extraction du contour](celulle.png)
+Le pré-traitement précédent est une première avancée pour par la suite optimiser la classification. Cependant, il **reste encore un peu de bruit** risquant d'abaisser les performances de l'algorithme.
+Il est alors nécessaire d'accoître la performance du pré-traitement.
+
+### 4.1 Délimitation du contour
+
+Une première chose à faire consiste à **délimiter le contour** des membranes, cela permettra à l'algorithme de se focaliser uniquement sur la membrane et non pas sur les corps étrangers présents sur la lame.
+
+Voici une membrane :
+
+![Celulle avant extraction du contour](celulle.png){width=50%}
+
+Et le 1er code testé pour extraire le contour :
 
 ```python
 def extraire_contour(image_entree, image_sortie, seuil_canny, taille_dilatation, superficie_min):
@@ -285,9 +296,11 @@ def extraire_contour(image_entree, image_sortie, seuil_canny, taille_dilatation,
     
     return contours
 ```
-![Celulle après extraction du contour](celulle_contour_v1.png)
+Ce 1er code hélas n'est pas suffisament robuste. Le bruit perturbe le découpage et toutes les formes et contour à l'intérieur de la membrane sont découpés.
 
-Besoin d'effectuer une dilatation
+![Celulle après extraction du contour](celulle_contour_v1.png){width=50%}
+
+Pour y remédier, j'ai donc décidé d'apporter de la **dilatation :** concrètement, la dilatation consiste à élargir les régions d'une image qui contiennent des pixels blancs. Elle va permettre ainsi de connecter les régions blanches qui sont proches les unes des autres et ainsi combler les lacunes.
 
 ```python
 def decouper_image(image_entree, contours, dossier_sortie,fichier):
@@ -334,19 +347,19 @@ def pre_traitement_1_contour_dilatation(dossier_E,dossier_S,dossier_C):
 
 pre_traitement_1_contour_dilatation('D:/Master_SID/projet_TER/data/tumeur','D:/Master_SID/projet_TER/data/pretraitement_1','D:/Master_SID/projet_TER/data/contour')
 ```
+Le résultat est tout de suite plus satisfaisant, la forme globale de la membrane est respectée et plus aucun contour n'apparaît à l'intérieur.
 
-![Extraction du contour après dilatation](celulle_contour_v2.png)
+![Extraction du contour après dilatation](celulle_contour_v2.png){width=50%}
 
-Reste le problème de plusieurs membranes sur une même lame :
+Seul un problème persiste, lorsque plusieurs membranes sont présents sur une même lame, le programme risque de fusionner certaines membranes. Dans un premier temps, je décide de ne pas m'attarder sur ce problème et débuterai la classification avec des lames ne présentant qu'une seule membrane.
 
-![Plusieurs membranes sur une même lame](plusieurs_celulles.png)
+![Plusieurs membranes sur une même lame](plusieurs_celulles.png){width=50%}
 
-![Plusieurs membranes sur une même lame](plusieurs_celulles_contour.png)
+![Plusieurs membranes sur une même lame](plusieurs_celulles_contour.png){width=50%}
 
-Focus sur la segmentation
+### 4.2 Amélioration de la segmentation
 
-![Avant pré-traitement](avant_pre-trait.png)
-
+Les contours délimités, je décide de revoir l'opération de segmentation des images avec l'algorithme de k-means.
 
 ```python
 def pre_traitement_2_segmentation(dossier_E,dossier_S):
@@ -384,27 +397,30 @@ def pre_traitement_2_segmentation(dossier_E,dossier_S):
 
 pre_traitement_2_segmentation('D:/Master_SID/projet_TER/data/pretraitement_1','D:/Master_SID/projet_TER/data/pretraitement_2')
 ```
-    
-![Après pré-traitement](apres_pre-trait.png)
+Avant segmentation
+![Avant pré-traitement](avant_pre-trait.png){width=50%}
 
-Ajout éventuel d'annotations avec le logiciel QuPath
+Après segmentation
+![Après pré-traitement](apres_pre-trait.png){width=50%}
 
-![Annotation](annotation.png)
+Le résultat semble tout à fait satisfaisant, je décide donc dans un dernier temps d'effectuer de l'annotation avec le logiciel QuPath pour aider le futur algorithme de classification à détecter la zone de la tumeur.
 
-![Logiciel QuPath](logiciel.png))
+### 4.3 Annotation
+
+![Annotation](annotation.png){width=50%}
+
+![Logiciel QuPath](logiciel.png){width=50%}
 
 
 ## 5. Conclusion
-
+**Timing Sprint 1**
 | Timing | Introduction du sujet (déplacement à la Timone) | Prise en main des données | Conversion auto avec NDPview2 | Pré-traitement |
 | -------| -------- | -------- | -------- |
 | Sprint 1 - Temps prévu (en heures) | 2 | 2 | 3 | 3 |
 | Sprint 1 - Temps dédié (en heures) | 2 | 3 | 4 | 2 |
 
-| Timing | Seaborn | Sklearn modèle | Sklearn pré-traitement | Combinaison des bibliothèques |
+**Timing Sprint 2**
+| Timing | Extraction contour | Segmentation | Annotation | Choix algorithme |
 | -------| -------- | -------- | -------- |
-| Sprint 2 - Temps prévu (en heures) | 2 | 3 | 3 | 2 |
-| Sprint 2 - Temps dédié (en heures) | 2 | 4 | 2 | 2 |
-
-
-## 6. Bibliographie
+| Sprint 2 - Temps prévu (en heures) | 4 | 3 | 1 | 2 |
+| Sprint 2 - Temps dédié (en heures) | 5 | 2 | 1 | 2 |
