@@ -111,3 +111,9 @@ Concernant les possibles mises en place de processus de chiffrement, d'anonymisa
 
 C'est un exercice très formateur, qui semble être essentiel pour travailler dans la protection des données. Cela nous force à nous poser des questions importantes pour assurer la pérennité des différentes infrastructures tout en couvrant divers domaines.
 J'ai étudié une application du GInfo, cela implique une gestion spécifiques du développement, des capacités financières, des capacités humaines ce qui rend complexe la recommandation de mesures efficaces. Le cadre de cette application ne permettait pas vraiment de voir les violations horribles d'une entreprise et parfois le code seulement ne permettait pas forcément d'avoir toutes les informations concernant les backups, l'anonymisation, ... Je comprends mieux les problématiques autour de cela mais je sais pas si c'est exactement ce dans quoi je veux travailler plus tard mais j'aimerais définitivement l'intégrer dans mes questionnement professionnelles.
+
+
+### Bibliographie : 
+
+- [AIPD](https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd)
+- [RGPD conformité](https://www.cnil.fr/fr/me-mettre-en-conformite)
