@@ -115,8 +115,8 @@ J'y étais réticent mais j'ai dû utiliser une base de données pour rendre le 
 ### Le résultat
 <img src="./penduPage.png" alt="Page du jeu" style="height: 400px"/>
 <img src="./penduError.png" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px"/>
-<img src="./penduPerdu.png" alt="On peut perdre" style="height: 400px"/>
-<img src="./penduWon.png" alt="On peut gagner" style="height: 400px"/>
+<img src="./PenduPerdu.png" alt="On peut perdre" style="height: 400px"/>
+<img src="./PenduWon.png" alt="On peut gagner" style="height: 400px"/>
 
 *Retrouvez mon code sur [github](https://github.com/assanediouf18/PenduWeb)*
 
