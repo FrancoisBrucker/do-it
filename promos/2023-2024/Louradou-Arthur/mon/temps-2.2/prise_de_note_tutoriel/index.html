@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>MON parcours d&#39;autoformation</title>
+        <title>Prise de note tutoriel viéo Kubernetes</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">MON parcours d&#39;autoformation</h1>
+<h1 class="mb-1">Prise de note tutoriel viéo Kubernetes</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -69,15 +69,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">index</li>
-                
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">kubernetes</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">devops</li>
                 
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -112,24 +120,48 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/">MON parcours d&#39;autoformation</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/">MON parcours d&#39;autoformation</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.2/">Kubernetes</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.2/prise_de_note_tutoriel/">Prise de note tutoriel viéo Kubernetes</a>
 
 </div></div>
 
 
 
 
-<p>Voici la liste des MONs réalisés par mes soins au cours de l'année 2023-2024.</p>
-<h2>Temps 1 : Montée en compétences cyber</h2>
+<h2>Source</h2>
+<p><a href="https://www.youtube.com/watch?v=s_o8dwzRlu4">Kubernetes Crash Course for Absolute Beginners [NEW]</a></p>
+<h2>Master Node</h2>
+<p>Ce qui tourne sur le master Node :</p>
 <ul>
-<li><a href="temps-1.1">MON 1.1 - Pentest et Cybersécurité</a></li>
-<li><a href="temps-1.2">MON 1.2 - Cryptographie</a></li>
+<li>Un serveur API qui constitue une entrée vers le cluster Kubernetes</li>
+<li>Un controller manager qui garde la trace de ce qui se passe dans le cluster</li>
+<li>Un Scheduler qui s’assurer de la programmation en fonction de la charge de chaque nœud</li>
+<li>Un etcd qui garde le status de chaque nœud pour stoker les états de chaque nœud (une sorte de base de données)</li>
+<li>Un réseau local dans lequel sont déployés les nœuds (worker nodes)</li>
 </ul>
-<h2>Temps 2 : Montée en compétences DevOps</h2>
+<p>Un point important est d’avoir plusieurs master nodes pour qu’en cas de panne du premier master on ait une redondance à l’accès aux worker nodes.</p>
+<h2>Node et Pod</h2>
+<p>Un <strong>Node</strong> ou nœud est une machine (virtuelle ou physique).</p>
+<p>Un <strong>Pod</strong> est une unité dans Kub, et est une abstraction du container Docker.</p>
+<p>Souvent, un pod a une seule application conteneurisée à l’intérieur. Chaque Pod a une adresse IP locale à l’intérieur. Ils sont éphémères et peuvent changer d’IP lorsqu’ils redémarrent. C’est pourquoi on met en place des <strong>services</strong>, attachés à un Pod et qui eux ne changent pas.</p>
+<p>Un <strong>service</strong> a bien une adresse IP définie. Il est possible d’avoir des services <strong>externes</strong> et <strong>internes</strong>. Pour les services externes, il est possible d’ajouter une sorte de résolveur DNS appelé <strong>ingress</strong>.</p>
+<h2>Mise en place de ConfigMap et de secrets</h2>
+<p>Permet la configuration par exemple des adresses de bases de données et autres services qui doivent être appelés dans l’appli.</p>
+<p>Pour les données secretes comme les noms d’utilisateur et mots de passe, il y a aussi un module pour ça et on peut sécuriser les secrets en les chiffrant avec des outils externes.</p>
+<h2>Faire persister une base de données alors qu’elle est lancée sur plusieurs Pods</h2>
+<p>Comme avec Docker, il est possible de rattacher un <strong>volume</strong> à nos services. Le stockage peut être interne ou distant (dans le Cloud par exemple).</p>
+<h2>Deployment et Statefulset</h2>
+<p>Un déploiement est un clone du serveur qui permet de switcher quelle nœud est appelé si une application tombe.</p>
+<p>Il est possible de répliquer une base de données mais on doit s’assurer de la consistance des données à l’intérieur. Pour cela, on a besoin d’un autre élément qui gère l’état et la consistance. Ce n’est pas une tâche facile et elle peut être coûteuse.</p>
+<h2>Configuration</h2>
+<p>Nous avons vu qu’il y avait 3 possibilités pour interagir avec Kub : UI, API ou ligne de commande (kuectl). Cela signifie que l’on va lui glisser des fichiers de configuration sous format yaml ou json pour lui indiquer les déclarations de Deployments et des Services</p>
 <ul>
-<li><a href="temps-2.1">MON 2.1 - Docker</a></li>
-<li><a href="temps-2.2">MON 2.2 - Kubernetes</a></li>
+<li>Metadata</li>
+<li>Specifications : dépendent du type (deployment ou service)</li>
+<li>Status (généré automatiquement) : compare l’état désiré à l’état courant</li>
 </ul>
+<aside>
+💡 Stocker les fichiers de configuration sur le repo git est une bonne pratique
+</aside>
 
 
 </article>

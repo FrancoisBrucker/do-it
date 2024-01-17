@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Kubernetes - Elastic Seach</title>
+        <title>Kubernetes</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Kubernetes - Elastic Seach</h1>
+<h1 class="mb-1">Kubernetes</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -73,11 +73,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">kubernetes</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">devops</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON a pour objectif de se former à l'orchestreteur Kunbernetes et de le mettre en lien avec les services fournis par ElasticSerch.
+                Ce MON a pour objectif de se former à l'orchestrateur Kunbernetes pour continuer la montée en compétences DevOps de ce temps.
 
         </p>
 
@@ -118,16 +126,81 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/">MON parcours d&#39;autoformation</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.2/">Kubernetes - Elastic Seach</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/">MON parcours d&#39;autoformation</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.2/">Kubernetes</a>
 
 </div></div>
 
 
 
 
+<br>
+<img align="center" width="500" src="assets/kube-logo.png" alt="Logo Kubernetes">
 <h2>Objectifs</h2>
-<p>L'objectif est avant tout de comprendre le rôle d'un orchestrateur dans le déploiement d'une application, en particulier web.<br>
-Ensuite, l'idée est de se familiariser avec Kubernetes. Puis, il s'agira de mettre en place un cluster Kubernetes et de le faire communiquer avec ElasticSearch.</p>
+<p>L'objectif est avant tout de comprendre le rôle d'un orchestrateur dans le déploiement d'une application, en particulier web.</p>
+<p>Ensuite, l'idée est de se familiariser avec Kubernetes. Si cela vous intéresse de découvrir comment sont déployées des applications (sites webs, APIs, bases de données dans le Cloud, etc.) de façon moderne : vous êtes au bon endroit !</p>
+<h2>Prérequis</h2>
+<p>Des connaissances solides en Linux sont nécessaires pour aborder la pratique de ce MON. Autant que faire ce peut, je tâcherai de rendre compréhensible pour des néophytes les tâches exécutées. Aussi, je recommande vivement la lecture des différents MONs de Do_It à propos de Docker, auxquels je ferai régulièrement référence lors de cette restitution. En effet, nous allons déployer des applications que nous avons préalablement empaquetées avec cet outil.</p>
+<h2>Autres MONs</h2>
+<img align="right" width="350" src="assets/docker-logo.svg" alt="Logo Docker">
+<p>Je renvoie à nouveau vers les différents MON sur Docker, puisque celui-ci sera la continuité de mon <a href="../temps-2.1">MON 2.1</a>.</p>
+<p>Évidemment, je recommande toujours la lecture des différents MONs de Do_It, qui sont très bien faits et qui m'ont permis de monter en compétences sur ces sujets DevOps.</p>
+<ul>
+<li><a href="../../../../2022-2023/Bilgi-Tuncay/mon/Docker/">Docker - Tunçay</a></li>
+<li><a href="../../../Victor-Ory/mon/Docker/">Docker - Victor</a></li>
+</ul>
+<h2>Objectifs du MON</h2>
+<p>L’objectif qui sera notre fil conducteur sera de comprendre comment déployer, par exemple, une application comprenant un Back-End, un Front-End et une belle base de données à l’aide d’un orchestrateur pour le rendre plus résilient aux erreurs et aux lenteurs qui peuvent survenir dans un projet informatique. Le but est de se former à des problématiques rencontrées en entreprise pour monter en compétences dans les domaines auxquels j’ai pu postuler et auxquels je postulerai à l’avenir.</p>
+<p>Prêt ? Alors c’est parti : embarquons dans le monde merveilleux des orchestrateurs…</p>
+<h2>Un orchestrateur, pourquoi faire ?</h2>
+<p>Un outil d’orchestration permet de gérer des applications conteneurisées. Pour rappel, un conteneur est une brique légère et autonome qui contient tout ce dont une application a besoin pour s'exécuter, y compris le code, les dépendances et les configurations. Les conteneurs sont portables, faciles à déployer et à mettre à l'échelle, et ils offrent un environnement isolé pour exécuter des applications.</p>
+<p>L’intérêt majeur est la disponibilité : si un container tombe à l’intérieur d’un orchestrateur, l’application reste disponible. En effet, l’orchestrateur peut se charger de lancer plusieurs instances d’une même application (un back-end par exemple) et de relancer une instance qui aurait crashé.</p>
+<p>Ensuite, celui-ci permet de régler des problématiques de mise à l’échelle. En effet, en fonction de la demande sur un site, la charge et le temps de réponse diffèrent. C’est pourquoi l’orchestrateur choisit de répartir la charge et de définir des règles qui augmentent la scalabilité (un anglicisme souvent employé dans le monde de la blockchain pour parler de mise à l’échelle) d’une application.</p>
+<h2>Les bases de Kubernetes</h2>
+<h3>Cheat Sheet des commandes apprises au cours du MON</h3>
+<p>Je recommande vivement de lire le <a href="cheat_sheet">cheat sheet</a> que j'ai rédigé pour ce MON. Il contient les commandes de base pour utiliser Kubernetes.</p>
+<h3>Notions du <a href="https://www.youtube.com/watch?v=s_o8dwzRlu4">tutoriel vidéo</a></h3>
+<p>La partie suivante comportera des éléments <a href="https://www.youtube.com/watch?v=X48VuDVv0do">du tutoriel de 3h</a> de la <a href="https://www.youtube.com/@TechWorldwithNana">même chaîne YouTube</a>. En parcourant celui-ci, nous approfondissons la connaissance pendant la mise en pratique des concepts sur ma machine. Je vais joindre ici la prise de note effectuée avec les vidéos de cette chaîne.</p>
+<p>Voici un schéma explicatif de l'architecture de Kubernetes (Source: <a href="https://wikipedia.org/wiki/kubernetes/">https://wikipedia.org/wiki/kubernetes/</a>) :</p>
+<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Kubernetes.png" alt="Schéma Kubernetes" width="700">
+<p>Voici ce que l'on retient des concepts du visionnage :</p>
+<h3>Master Node</h3>
+<p>Le <strong>Master Node</strong> est un serveur comprend un serveur API, un <code>controller manager</code>, un <code>Scheduler</code>, et un <code>etcd</code>. Il est possible de mettre en place des Multiples Master Nodes garantissent la redondance pour l'accès aux worker nodes (ceux qui contiennent les Pods, les Services etc. vus ensuite). Pour les détails de chaque explication, je recommande vivement la vidéo qui l’explique bien.</p>
+<h3>Node et Pod</h3>
+<p>Parmi les concepts les plus importants, un <strong><a href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node</a></strong> (noeud) est une machine physique ou virtuelle. Un <strong><a href="https://kubernetes.io/docs/concepts/workloads/pods/">Pod</a></strong> est une abstraction d'un <a href="https://kubernetes.io/docs/concepts/containers/">container Docker</a>, souvent dédié à une seule application (je renvoie à mon précédent MON sur le sujet, à nouveau !). Pour résumer, on a aussi des notions de <strong><a href="https://kubernetes.io/docs/concepts/services-networking/service/">services</a></strong> qui offrent des accès réseaux stables, et les <strong><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">ingress</a></strong> résolvent les services externes.</p>
+<h3>ConfigMap et Secrets</h3>
+<p>Les ConfigMap et secrets sont des notions utilisées dans les fichiers de configuration et permettent justement la configuration des services, tandis que la sécurisation des secrets est stockée à un endroit différent pour éviter des fuites de tokens ou de clés, par exemple.</p>
+<h3>Persistance d'une base de données</h3>
+<p>L'attachement d'un <strong>volume</strong> aux services assure la persistance des données, que le stockage soit interne ou distant. Le plus gros problème avec les volumes est que leur redondance est plus complexe que de simples applications. En effet, cela renvoie à un dilemme connu en sciences informatiques concernant la confidentialité, l’intégrité et la disponibilité de l’information, nommé le triangle de la sécurité de l'information.</p>
+<h3>Deployment et Statefulset</h3>
+<p>Le <strong><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Deployment</a></strong> permet de définir la répartition entre les nœuds en cas de défaillance.</p>
+<p>Ensuite, la réplication d'une base de données requiert la gestion de l'état et de la consistance, une tâche complexe comme nous l’avons abordé juste avant, c’est pour cela que l’on configure un Statefulset. Nous ne rentrerons pas en détail dans celui-ci.</p>
+<h3>Configuration</h3>
+<p>Il existe trois méthodes pour interagir avec Kubernetes : l’UI (interface utilisateur), l’API ou la ligne de commande (kubectl), cette dernière étant plus courante. Les fichiers de configuration, au format yaml ou json, définissent les déploiements et services, avec des sections metadata, specifications, et status. Stocker ces fichiers sur un repo git est une bonne pratique, un peu à la manière des DockerFiles.</p>
+<p>On retrouvera aussi un exemple de fichier de configuration dans la <a href="cheat_sheet">cheat sheet</a>.</p>
+<h2>Introduction à Helm</h2>
+<img align="right" width="200" src="assets/helm-logo.svg" alt="Logo Helm">
+<p>Après avoir établi les bases de Kubernetes, plongeons dans Helm, un outil qui facilite le déploiement d'applications sur des clusters Kubernetes.</p>
+<p>Helm est souvent comparé à un gestionnaire de paquets pour Kubernetes. Il simplifie le processus de déploiement et de gestion des applications en encapsulant ces dernières dans des &quot;charts&quot;, des paquets pré-configurés comprenant toutes les ressources nécessaires.</p>
+<p>La façon dont j'ai appris à utiliser Helm est de l'utiliser pour déployer des applications qui ont déjà été empaquetées avec Docker. Il s'agissait de poster les images sur un repo Docker, puis de les déployer avec Helm.</p>
+<p>La documentation explique bien les étapes de configuration de l'outil, et il s'avère très pratique pour la gestion des packages et le déploiement rapide d'applications. [5]</p>
+<h2>Pratique</h2>
+<p>Pour la partique, j'ai commencé par configurer mon cluster Kubernetes avec minikube, puis j'ai déployé une application web très légère avec une base de données MongoDB.</p>
+<p>Je voulais déployer une plus grosse application, celle du Barbu, développée en Projet Thématique de 2A avec un côté API/Front-End distinct qui se prêtait bien à l'exercice.  Cependant, cette tâche prévue initialement s'est avérée trop lourde pour être réalisée et je me suis contenté d'ajouter de simples petites applications Python avec Helm, en ajoutant des interactions réseau entre les images.</p>
+<h2>Regard critique et ouverture</h2>
+<p>J'ai apprécié découvrir le monde vaste des orchestrateurs pour l'aspect professionnalisant qu'ils permettent d'apporter à un déploiement d'application.</p>
+<p>Ce MON est évidemment un résumé beaucoup plus succint que les tutoriels suivis, mais je recommande leur visionnage car ceux là permettent d'appréhender plus serainement les concepts de Kubernetes.</p>
+<p>Enfin, j'ai pu à la suite de ce MON, mettre en pratique les compétences acquises en entreprise.</p>
+<h2>Bibliographie</h2>
+<p>[1] Exemple de déploiement d’une application réelle :</p>
+<p><a href="https://youtu.be/10UU6umqqv8?si=RUJAD5NFs57oSnzK&amp;t=496">YouTube - 95% des devs ne connaissent pas cette façon de déployer une application - Benjamin Code</a></p>
+<p>[2] Vidéo de référence pour débuter sur Kubernetes (1h) :</p>
+<p><a href="https://www.youtube.com/watch?v=s_o8dwzRlu4">YouTube - Kubernetes Crash Course for Absolute Beginners -</a> <a href="https://www.youtube.com/@TechWorldwithNana">TechWorld with Nana</a></p>
+<p>[3] Vidéo de référence pour débuter sur Kubernetes (3h) :</p>
+<p><a href="https://www.youtube.com/watch?v=X48VuDVv0do">YouTube - Kubernetes Tutorial for Beginners [FULL COURSE in 3 Hours] -</a> <a href="https://www.youtube.com/@TechWorldwithNana">TechWorld with Nana</a></p>
+<p>[4] Documentation officielle de Kubernetes :</p>
+<p><a href="https://kubernetes.io/docs/home/">Documentation Kubernetes</a></p>
+<p>[5] Documentation officielle de Helm, introduction :</p>
+<p><a href="https://docs.helm.sh/fr/docs/intro/quickstart/">Documentation Helm</a></p>
 
 
 </article>

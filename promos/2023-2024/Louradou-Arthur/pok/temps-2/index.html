@@ -158,7 +158,18 @@
 </li>
 <li><a href="#du-poc-%C3%A0-la-r%C3%A9alisation">Du POC à la réalisation</a></li>
 <li><a href="#revue-de-sprint-1">Revue de Sprint 1</a></li>
-<li><a href="#suite--sprint-2">Suite : Sprint 2</a></li>
+<li><a href="#suite--sprint-2">Suite : Sprint 2</a>
+<ul>
+<li><a href="#objectifs-fin-sprint1">Objectifs à l'issue du Sprint 1</a></li>
+<li><a href="#documentation-google-api">Lecture de documentation de <strong>Google Workspace APIs</strong> pour déployer en local</a></li>
+<li><a href="#solution">Une solution inespérée, plus simple..!</a></li>
+<li><a href="#integration-poc">Intégration du POC au code</a></li>
+<li><a href="#traitement-donnees">Traitement des données</a></li>
+<li><a href="#tests-unitaires">Tests unitaires</a></li>
+</ul>
+</li>
+<li><a href="#perspectives-et-conclusion">Perspectives et conclusion</a></li>
+<li><a href="#liens-et-documentation">Liens et documentation</a></li>
 </ul>
 <h2 id="objectifs">Objectifs</h2>
 <p>Les objectifs de cette réalisation sont les suivants :</p>
@@ -249,6 +260,23 @@
 En effet, ce projet comporte une phase de recherche importante, car il faut comprendre le fonctionnement de l'API Google Spreadsheet, et trouver un moyen de l'utiliser pour traiter les données du calendrier de la filière Do_It.</p>
 <h3 id="google-spredsheet">Google Spredsheet</h3>
 <p>Pour commencer, voilà comment importer notre fichier dans Google Colab :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Authentification Google Colab et traitement de la donnée</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> drive
 drive<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">'/content/drive'</span><span class="token punctuation">)</span>
 </code></pre>
@@ -299,7 +327,27 @@ first <span class="token operator">=</span> two_first<span class="token punctuat
 headers <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
 df<span class="token punctuation">.</span>columns <span class="token operator">=</span> first
 </code></pre>
+</div>
+</details>     
+</div>
 <p>À ce stade, le code n'est pas propre et il faut encore le nettoyer. Cependant, il permet d'obtenir un DataFrame contenant les données du calendrier :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Voir la DataFrame</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <div style="overflow: scroll">
 <table>
 <thead>
@@ -446,6 +494,9 @@ df<span class="token punctuation">.</span>columns <span class="token operator">=
 </tbody>
 </table>
 </div>
+</div>
+</details>     
+</div>
 <p>On voit que le header a une forme satisfaisante pour être exploitable par la suite.</p>
 <p>Un point important à noter est que les cases fusionnées dans Excel ne sont présenter que dans la première ligne du DataFrame. On pourrait considérer les remplir avec la méthode <code>fillna(method='ffill')</code>, mais cela engenderait des incohérences et des &quot;trous&quot; dans l'emploi du temps seraient remplis.</p>
 <p>Pour combler ceci, il va falloir extraire les informations de fusion du google spreadsheet. Après de longues recherches, ceci s'est avéré impossible.</p>
@@ -453,6 +504,23 @@ df<span class="token punctuation">.</span>columns <span class="token operator">=
 <p>Nous verrons dans un second temps comment procéder.</p>
 <h3 id="traitement">Traitement</h3>
 <p>À l'aide de fonctions utilitaires et d'une boucle, on peut extraire les informations de l'emploi du temps :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Extraction des informations</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> icalendar <span class="token keyword">import</span> Calendar<span class="token punctuation">,</span> Event
 <span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span> timedelta
 
@@ -486,6 +554,9 @@ cal <span class="token operator">=</span> Calendar<span class="token punctuation
         <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreur dans la colonne"</span><span class="token punctuation">,</span>col_value<span class="token punctuation">,</span><span class="token string">": "</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span>
 </code></pre>
+</div>
+</details>     
+</div>
 <p>Ce code parcourt donc les colonnes pour une ligne donnée, et crée un événement pour chaque cours détecté.<br>
 Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier, est satisfaisant et démontre que l'on peut faire un Proof Of Concept de ce POK.</p>
 <p>Le problème subsiste avec les cours de deux ou trois heures, qui sont détectés comme des cours d'une heure.</p>
@@ -499,11 +570,122 @@ Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier,
 <p>Vous pourrez noter ici que la structure du code est générée à l'aide de l'assistant chatGPT et je m'assurerai que le contenu qui s'y trouve en dernier lieu sera bien vérifié et testé par mes soins.<br>
 Petit point méthodologique cependant : j'utilise principalement chatGPT dans ce genre de cas, à l'initialisation d'un projet, car ses réponses sont bonnes pour établir une architecture globale et &quot;dans les règles de l'art&quot; (respectant des bonnes pratiques dès le départ) d'une application.</p>
 <h2 id="suite--sprint-2">Suite : Sprint 2</h2>
+<h3 id="objectifs-fin-sprint1">Objectifs à l'issue du Sprint 1</h3>
 <ul>
 <li>Faire des Tests Unitaires ! Cela facilitera l'intégration des fonctions de traitement de données</li>
 <li>Intégrer le POC au code</li>
 <li>Automatiser l'exportation du (des !) fichier .ics pour les élèves</li>
 </ul>
+<h3 id="documentation-google-api">Lecture de documentation de <strong>Google Workspace APIs</strong> pour déployer en local</h3>
+<p>La solution prometteuse semblait être l’utilisation de l’API de Google pour le projet en dehors d’un environnement Google Workspace. Cependant, celle-ci a des règles bien spécifiques pour être utilisée sur n’importe quelle application, incluant un environnement de test contraignant ou bien une validation de la part de Google. Ce détour est néanmoins intéressant pour comprendre le fonctionnement de certaines applications Cloud. [3]</p>
+<p>J’ai donc abandonné cette piste qui m’a conduit à d’autres recherches.</p>
+<h3 id="solution">Une solution inespérée, plus simple..!</h3>
+<p>Durant les recherches sur l’API, certains posts ont mentionné des liens d’export et nous aurions pu commencer par là : analyser les requêtes effectuées par le navigateur pour télécharger un Google Spreadsheet en PDF, Excel, CSV, etc. En effet, à l’aide d’un simple lien composé de cette façon :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">csv_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/gviz/tq?tqx=out:csv&amp;sheet="</span> <span class="token operator">+</span> sheet_name
+xlsx_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/export?format=xlsx&amp;id="</span> <span class="token operator">+</span> sheet_id
+</code></pre>
+<p>Avec le Sheet id se trouvant dans l’URL de l’emploi du temps de Do_It.</p>
+<aside>
+💡 Merveilleux : nous avons désormais un Google Sheet qui se télécharge tout seul et qui peut être exploité par la bibliothèque `openpyxl` comme le fait DUC dans son MON !
+</aside>
+<h3 id="integration-poc">Intégration du POC au code</h3>
+<p>Dans cette phase du projet, nous avons consolidé le Proof Of Concept (POC) que nous avons développé dans le Sprint 1. Pour ce faire, nous avons intégré le code du POC dans la structure du projet définie précédemment. Les fonctionnalités de traitement des données du Google Spreadsheet ont été encapsulées dans des classes Python pour assurer une intégration automatique à tout code python y faisant appel.</p>
+<h3 id="traitement-donnees">Traitement des données</h3>
+<div style="display:flex;flex-direction: row;">
+  <div style="display: block; margin-right: 20px;">
+<p>Comme il ne s’agit pas de perdre tout le monde, j’invite les intéressés à regarder le code du projet et à tester par vous même l’interface disponible au moment où je poste ce MON à son adresse de déploiement. Je vais tout de même détailler les classes intéressantes du projet pour le traitement des données.</p>
+<p>Dans la phase de traitement des données, nous avons utilisé les bibliothèques <code>openpyxl</code> et <code>pandas</code> pour extraire et manipuler les données de l’Excel et résoudre la problématique des cellules fusionnées.</p>
+<p>Comme un schéma vaut mieux que mille mots, voici le schéma de la donnée à mettre en perspective avec le code.</p>
+<h3 id="fonctionnement-application">Fonctionnement de l’application</h3>
+<a href="http://node.oignon.ovh1.ec-m.fr/" class="buttonGithub">
+  <span>Allons voir le projet !</span>
+</a>
+<p>Le fonctionnement de l’application est possible de plusieurs façons que je vais détailler de la plus stable et fiable à la moins éprouvée.</p>
+</div>
+<img src="assets/schema_data_serenadoit.png" style="width: 30vw; aspect-ratio: 1/1;">
+</div>
+<ol>
+<li>
+<p>Le calendrier général (route <code>/annee</code>)</p>
+<p>Dans le cas où vous souhaitez consulter l’agenda général, vous pouvez vous y abonner et voir les cours de tout Do_It. Notez que ce calendrier marche avec l’agenda de l’option CliMaTHs car leur calendrier est de la même forme que celui de l’option Do_It. Pour ce qui est de la génération du calendrier avec abonnement à partir du Google Sheet, celle-ci a lieu lors du clic sur le bouton “La liste complète des cours de l’année”. Vous pouvez donc mettre à jours les cours de toute l’option en parcourant le site !</p>
+</li>
+<li>
+<p>Personnalisation à partir de votre Excel (route POST <code>/annee/source-excel</code>)</p>
+<p>Vous pouvez vous-même supprimer les cours que vous n’avez pas choisi au cours de l’année et ainsi personnaliser votre calendrier et ajouter vos propres événements. Veillez à ne pas toucher à la structure de l’Excel et cela sera</p>
+</li>
+<li>
+<p>Scrapping de l’export de Duc depuis Github (route <code>/github</code>)</p>
+<p>À l’origine, Duc a sorti un export lors de <a href="../../../Dang-Vu-Duc/mon/temps-1.2/">son MON 1.2.</a> Il est donc possible de récupérer les fichiers Excel bruts sur le repo du site. On affiche ainsi une liste de documents qui peuvent être intégrés au programme de traitement.<br>
+Problème relevé : lorsque l’orthographe des cours est inexacte dans la première ligne de la cellule de l’emploi du temps, le cours n’apparait pas. Deux solutions sont envisagées : modifier un peu l’algorithme pour le rendre plus robuste ou écrire des tests unitaires pour garantir l’intégrité du calendrier ainsi généré.</p>
+</li>
+<li>
+<p>Utilisation de l’algorithme de Duc directement dans l’API (route <code>/eleves</code>)</p>
+<p>Cette route liste les élèves pour exécuter l’algorithme de sélection des cours directement dans l’application.</p>
+</li>
+</ol>
+<h3 id="tests-unitaires">Tests unitaires</h3>
+<p>Pour assurer la fiabilité de ce dernier algorithme (qui est le plus pratique pour les élèves), j’ai pu lors du peu de temps restant exécuter un test dont voici le principe :</p>
+<ol>
+<li>Créer un élève “Test” qui aurait rempli de “X” toutes les cases de choix de cours.</li>
+<li>Parcourir l’Excel généré par la fonction de Duc et l’Excel original, complet.</li>
+<li>En relevant les différences, on sait si des problèmes d’orthographe ont été repérés.</li>
+</ol>
+<p>Pour l’heure, je corrige ces problèmes en ajoutant dans CreateTimetable, la liste des cours problématiques comme s’ils s’agissait de tronc commun :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token string">"architecture si"</span><span class="token punctuation">,</span> <span class="token string">"stratégje &amp; si"</span><span class="token punctuation">,</span> <span class="token string">"people analytics"</span><span class="token punctuation">,</span> <span class="token string">"it &amp; dynamique organisationnelle"</span>
+</code></pre>
+<p>Il conviendrait d'en réaliser de nouveaux.</p>
+<h2 id="perspectives-et-conclusion">Perspectives et conclusion</h2>
+<p>Ce projet a été très intéressant à réaliser car il m’a permis de découvrir des outils très utiles pour la gestion de données et de me sentir à l'aise avec des concepts de développement complets pour un résulat utilisable par les élèves de Do_It.</p>
+<p>Je pense que ce projet peut être amélioré en plusieurs points :</p>
+<ul>
+<li>Demander des retours aux utilisateur</li>
+<li>Ajouter des tests unitaires pour garantir la fiabilité de l’algorithme de persionnalisations des cours</li>
+<li>Ajouter une fonction de mise à jour automatique du calendrier</li>
+</ul>
+<h2 id="liens-et-documentation">Liens et documentation</h2>
+<p>[1] Code du projet : <a href="https://github.com/alouradou/SerenaDo_It">https://github.com/alouradou/SerenaDo_It</a></p>
+<p>[2] Testez le projet : <a href="http://node.oignon.ovh1.ec-m.fr/">http://node.oignon.ovh1.ec-m.fr/</a></p>
+<p>[3] Documentation Google API : <a href="https://developers.google.com/workspace/guides/enable-apis#sheets-api">https://developers.google.com/workspace/guides/enable-apis#sheets-api</a></p>
+<style>
+    a.buttonGithub {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #2ecc71;
+      color: #fff;
+      border-radius: 10px;
+      border: 2px solid #2ecc71;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, transform 0.3s ease-in-out;
+    }
+
+    a.buttonGithub:hover {
+      background-color: #2ecc71;
+      transform: translateY(-5px);
+      color: #2ecc71;
+    }
+
+    a.buttonGithub span {
+      position: relative;
+      z-index: 1;
+    }
+
+    a.buttonGithub::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: left 0.3s;
+    }
+
+    a.buttonGithub:hover::before {
+      left: 0;
+    }
+  </style>
 
 
 </article>
