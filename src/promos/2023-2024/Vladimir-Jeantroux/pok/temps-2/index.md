@@ -139,6 +139,10 @@ Bien que c'est un cheminement normal lorsque l'on apprend, se rendre compte que 
 
 Un jeu de combat est aussi un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.   
 
+## Bilan 
+
+Un jeu de combat est un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.  J'ai quand même pu apprendre beaucoup de choses sur la création d'un jeu vidéo, mais la route est encore longue si je souhaite aboutir à un produit à peu près fini. 
+
 ## Glossaire
 
 Hitbox : zone invisible autour d'un objet dans un jeu vidéo, déterminant les interactions et les collisions avec d'autres éléments du jeu.
@@ -159,6 +163,7 @@ Hitbox : zone invisible autour d'un objet dans un jeu vidéo, déterminant les i
 >Réécriture complète du code lié aux mouvements (2h)
 >Animation du personnage jouable (1h)
 >Implémentation des hitbox et d'un mannequin d'entraînement (2h)
+>Ajout de bruitages lors d'un coup réussi (15mn)
 >Implémentation d'un compte à rebours (1h)
 
 *Sprint 2*
