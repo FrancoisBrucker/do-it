@@ -76,8 +76,30 @@ On doit aussi soi-même appeler un affichage pour notre programme (là encore, e
 ```
 
 Une autre particularité de Rust est qu'il n'y a pas de tabulation, on utilise 4 espaces à la place. 
+Un autre exemple d'application est la création du personnage joueur. On initialise ses coordonnées horizontales et verticales avec des entiers codés sur 32 bits, ainsi que sa vitesse, qui est un flottant. On va aussi initialiser un constructeur pour le joueur, le plaçant sur des coordonnées x et y avec une vitesse initiale.
 
+```rust
+​struct​ Player {
+​​​	    x: i32, 
+​​​	    y: i32, 
+​​​	    velocity: f32, 
+​ 	}
 
+​impl​ Player {
+    ​fn​ ​new​(x: i32, y: i32) ​->​ Self {
+​ 	     Player {
+​ 	         x,
+​ 	         y,
+​​ ​	         velocity: 0.0,
+​ 	        }
+​ 	    }
+```
+
+On constate ainsi des éléments de POO, où on a un objet Joueur déterminé par sa position, et sa vitesse. (Souvenirs de C#...)
+
+## Conclusion 
+
+Cette programmation d'un jeu simple m'a permis d'appliquer les notions du livre officiel de Rust, qui était en somme assez théorique. J'ai pu ainsi cerner tous les objets de Rust, qui au premier abord paraissaient assez abstraits. J'ai aussi pu comparer avec mon expérience de programmation sur Godot, où je me suis rendu compte que je me suis fait vraiment tenir la main par le moteur, et j'ai pu découvrir beaucoup d'aspects de gamedev que le développement avec Godot ne m'aurait jamais fait voir. Je pense continuer à jouer avec Rust dans mon temps libre, mais plus de jeu vidéo. C'était très enrichissant, mais Godot reste tout de même bien pratique. 
 
 ## Bibliographie 
 
