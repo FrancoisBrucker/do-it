@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Notions de Rust</title>
+        <title>Apprendre Rust en codant un jeu</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Notions de Rust</h1>
+<h1 class="mb-1">Apprendre Rust en codant un jeu</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -116,7 +116,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/">Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/">MON de Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-2-2/">Notions de Rust</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/">Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/">MON de Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-2-2/">Apprendre Rust en codant un jeu</a>
 
 </div></div>
 
@@ -133,6 +133,38 @@
 <p>Pré-requis :<br>
 Un peu d'expérience en programmation, car le livre part du principe qu'on en a avec d'autres langages. Il serait judicieux d'avoir aussi des connaissances en C, car il y a des notions dans la gestion de mémoire.</p>
 </div></div>
+<h2>Approfondissements</h2>
+<p>Ce MON ne reviendra pas sur ce qui a déjà été expliqué par ceux mentionnés au-dessus, comme par exemple les notions d'ownership ou d'objets comme les structures et les énumérations. Je souhaite cependant aborder certains concepts que j'ai moins bien compris ou que j'ai estimé necessiter des explications lors de mon apprentissage de Rust.</p>
+<h3>Les macros</h3>
+<p>En Rust, une macro-abréviation, ou macro, est une fonctionnalité puissante du langage qui permet la création de code source à la compilation. Les macros sont une façon d'écrire du code qui écrit d'autres codes, ce qui est connu sous le nom de métaprogrammation. Contrairement à une fonction, qui appelle un nombre et un type spécifique de paramètres, une macro peut prendre un nombre variable de paramètres. En effet, en Rust, <code>println!</code> est une macro; on peut écrire <code>println!(&quot;hello world&quot;)</code> ou bien <code>println!(&quot;hello{}&quot;,name)</code>, et les deux fourniront un output correct (si la variable <code>name</code> est bien définie dans le deuxième exemple, bien évidemment). Les macros sont indiquées par un point d'exclamation à la fin de leur nom.</p>
+<p>En outre, les macros sont développées avant que le compilateur n'interprète la signification du code, de sorte qu'une macro peut, par exemple, implémenter un trait sur un type donné. Une fonction ne le peut pas, car elle est appelée au moment de l'exécution, alors qu'un trait doit être implémenté au moment de la compilation.</p>
+<p>L'inconvénient d'implémenter une macro plutôt qu'une fonction est que les définitions de macros sont plus complexes, ce qui les rend plus difficiles à les écrire, les lire, à comprendre et à maintenir que les définitions de fonctions. C'est pour cela qu'il faut être prudent avec l'utilisation des macros, pour maintenir la lisibilité et la compréhension du code.</p>
+<p>On peut définir des macros grâce à la commande <code>macro_rules!</code></p>
+<h2>Eléments de game design en Rust</h2>
+<p>Après m'être entraîné avec les exemples du livre de Rust, j'ai voulu créer un jeu simple avec le temps qu'il me restait. Ayant réussi à mettre la main sur le livre &quot;Hands-on Rust : Effective learning through 2D Game Development and Play&quot; par Herbert Wolverson, j'ai souhaité m'intéressé à la philosophie de programmation d'un jeu vidéo lorsqu'on utilise Rust, en faisant un jeu &quot;Flappy Dragon&quot;.</p>
+<h3>Game Loop</h3>
+<p>Une fonction normale en Rust dans le fichier <code>main.rs</code> s'exécute de haut en bas, attendant une entrée de l'utilisateur (s'il y en a) avant de continuer à s'exécuter. Ce n'est évidemment pas possible dans un jeu vidéo, le jeu doit continuer de tourner même si l'utilisateur ne fait rien. Lorsqu'on joue à Flappy Bird, l'oiseau continue de tomber même si le joueur ne touche pas à son écran. On fait donc appel à une boucle qui s'appelle &quot;Game loop&quot;, qui va s'exécuter à chaque fois que l'écran s'actualise.</p>
+<p><img src="gameloop.JPG" alt="Schéma d'un Game Loop"><br>
+<em>Image : Schéma d'un game loop et de ses étapes, Hands-on Rust : Effective learning through 2D Game Development and Play, Herbert Wolverson.</em></p>
+<p>En premier lieu, il faut initialiser l'application afin qu'on soit capable d'afficher quelque chose à l'écran (1). Ensuite, pendant l'exécution de la boucle, on va demander en premier lieu à l'OS s'il y a eu des entrées de la part de l'utilisateur et lesquelles (appuyer sur son clavier, mouvements/clics de souris,...) (2). Le moteur du jeu va alors traduire ces événements, en faisant appel à la fonction <em>tick</em>, et va fournir la réponse du jeu à ces événements, comme les mouvements du personnage par exemple (3). Le jeu met ensuite l'écran à jour (4), et vérifie si le programme doit être fermé (5). Si oui, le jeu se ferme, sinon, on retourne à l'étape 2, et continuer le jeu.</p>
+<p>Cette vision du jeu implique beaucoup d'interactions avec l'OS de la machine, ce qui implique qu'il faudra s'adapter pour chaque type de machine, une solution peut très bien fonctionner sur une machine particulière et pas du tout sur une autre. C'est pour ça que les développeurs utilisent des <code>moteurs</code>, qui permettent de s'affranchir des problèmes liés à une plateforme spécifique, entre autres.</p>
+<h3>Création du jeu</h3>
+<p>On commence par créer dans le main une structure nommée <code>State</code> : il faut stocker l'était du jeu (game state) quelque part, afin que la fonction <code>tick</code> puisse y accéder et opérer. On utilise la librairie <code>bracket-lib</code> pour concevoir le jeu qui contient de multiples algorithmes, génération de nombres aléatoires, etc.</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">impl</span>​ <span class="token class-name">GameState</span> ​<span class="token keyword">for</span>​ <span class="token class-name">State</span> <span class="token punctuation">{</span>
+​​​    ​<span class="token keyword">fn</span>​ ​tick​<span class="token punctuation">(</span><span class="token operator">&amp;</span>​<span class="token keyword">mut</span>​ ​<span class="token keyword">self</span>​<span class="token punctuation">,</span> ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span>​<span class="token keyword">mut</span>​ <span class="token class-name">BTerm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+​​​    ctx​<span class="token punctuation">.</span>cls​<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+​​​	   ctx​<span class="token punctuation">.</span>print​<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> ​<span class="token lifetime-annotation symbol">'Hello</span><span class="token punctuation">,</span> <span class="token class-name">Bracket</span> <span class="token macro property">Terminal!</span>'​<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+​ 	    <span class="token punctuation">}</span>
+​ 	<span class="token punctuation">}</span>
+</code></pre>
+<p>On va ensuite créer un trait &quot;GameState&quot; pour notre état, qui vient avec la fonction tick (ligne 2). <code>ctx.cls</code> permet d'effacer le contenu de l'écran, et print nous donne un affichage basique pour voir si ça marche (1,1 sont les coordonnées du print, un peu comme des coordonnées dans une matrice).</p>
+<p>Une particularité de la programmation en Rust est que l'on va devoir gérer les erreurs dans la fonction <code>main</code>, chose à laquelle je n'étais pas confronté lorsque j'utilisais Godot.</p>
+<p>On doit aussi soi-même appeler un affichage pour notre programme (là encore, en Godot c'est automatique).</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust">​<span class="token keyword">let</span>​ context <span class="token operator">=</span> ​<span class="token class-name">BTermBuilder</span>​<span class="token punctuation">::</span>​simple80x50​<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+​​​	    ​<span class="token punctuation">.</span>with_title​<span class="token punctuation">(</span>​<span class="token lifetime-annotation symbol">'Flappy</span> <span class="token class-name">Dragon</span>'​<span class="token punctuation">)</span> 
+​​​	    ​<span class="token punctuation">.</span>build​<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">;</span> 
+</code></pre>
+<p>Une autre particularité de Rust est qu'il n'y a pas de tabulation, on utilise 4 espaces à la place.</p>
 <h2>Bibliographie</h2>
 <ul>
 <li>MON d'Assane Diouf <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/</a></li>
