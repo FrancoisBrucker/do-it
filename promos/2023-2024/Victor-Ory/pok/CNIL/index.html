@@ -182,18 +182,18 @@ Résumé des 3 étapes d'une AIPD :</p>
 <p>Je collecte les données nécessaires, les informations et les accès requis pour cette étude auprès de mes collègues du GInfo, notamment le Gitlab du GInfo.</p>
 <p>Je suis donc prêt à entamer l'étude de cas en analysant une application développée par le GInfo : <a href="https://my.centrale-assos.fr/">MyCentraleAsso</a>, offrant un service d'annuaire, calendrier associatif et centralisation d'informations utiles.</p>
 <h2>L'AIPD en question :</h2>
-<p>L'AIPD peut être téléchargé ici même : <a href="../CNILMod%C3%A8les.pdf">Télécharger maintenant</a> (je viens de la supprimer sans faire exprès de mon ordi, donc pour le moment, c'est le modèle vide).</p>
-<p>Mais pour résumer, la première partie sert à définir le périmètre de l'application <a href="https://my.centrale-assos.fr/">MyCentraleAsso</a>.</p>
-<h4>Respect des droit fondamentaux :</h4>
-<p>Ensuite très vite, il convient d'étudier si le site web respecte les réglementations en relation avec les droits fondamentaux tel que le droit de rectification, le droit à l'oubli. Ainsi, on s'intéresse à quelle traitement des données est effectué pour ensuite se questionner sur la finalité, vérifier que le consentement est recueilli, vérifier quelle informations est récolté sur les différents individus. On résume cela dans un tableau qui indique pour chaque donnée si elle respecte  :</p>
+<p>L'AIPD peut être téléchargé ici même : <a href="../CNILMod%C3%A8les.pdf">Télécharger maintenant</a> (je viens de la supprimer sans faire exprès de mon ordi, donc pour le moment, c'est le modèle vide que je vais re-remplir dans les jours à venir).</p>
+<p>Mais pour <strong>résumer</strong>, la première partie sert à définir le périmètre de l'application <a href="https://my.centrale-assos.fr/">MyCentraleAsso</a>.</p>
+<h4>Respect des droits fondamentaux :</h4>
+<p>Ensuite très vite, il convient d'étudier si le site web respecte les réglementations en relation avec les droits fondamentaux tels que le droit de rectification, le droit à l'oubli. Ainsi, on s'intéresse à quel traitement des données est effectué pour ensuite se questionner sur la finalité, vérifier que le consentement est recueilli, vérifier quelle information est récoltée sur les différents individus. On résume cela dans un tableau qui indique pour chaque donnée si elle respecte :</p>
 <ul>
 <li>la Minimisation des données;</li>
 <li>la Qualité des données;</li>
 <li>Un fondement juridique;</li>
 <li>Une finalité définie et explicite;</li>
 </ul>
-<p>On y associe les mesures qui assure un droit.<br>
-La plupart des droit fondamentaux sont assuré par ou bien par un accès facile aux membres du GInfo qui pourront satisfaire la demande des informations sur moi ou bien de rectification des données.</p>
+<p>On y associe les mesures qui assurent un droit.<br>
+La plupart des droits fondamentaux sont assurés soit par un accès facile aux membres du GInfo qui pourront satisfaire la demande des informations sur moi ou bien de rectification des données.</p>
 <h4>Sécurité technique :</h4>
 <p>Ici, nous nous assurons de la mise en place des techniques informatiques nécessaires à la sécurité, la confidentialité des données traitées : chiffrement, backup, anonymisation des données, le monitoring, ...<br>
 On y décrit aussi la gouvernance, les procédures de gestion de projet, ...</p>
@@ -206,7 +206,7 @@ On y décrit aussi la gouvernance, les procédures de gestion de projet, ...</p>
 <p>Les données stockées sur un utilisateur :</p>
 <p>Nom, Prénom, Régime alimentaire , date de naissance, associations et postes, adresse, tél, promo entrante, carte NFC</p>
 <p>L'ensemble des autres données sont + ou - des données personnelles toutefois une des questions a été de se demander si le régime alimentaire est une information sensible pour l'utilisateur.<br>
-Il s'est révélée que c'est une donnée de santé et qui est donc sensibles. [Donc quoi ?]<br>
+Il s'est révélé que c'est une donnée de santé et qui est donc sensibles. [Donc quoi ?]<br>
 Une anonymisation des données serait possible et pourrait bénéficier à diminuer les risques de fuite de données, toutefois l'impact potentiel est dans la plupart des cas de campagnes de phishing ciblé, ou des publicités ciblées non sollicité.</p>
 <h4>Les risques :</h4>
 <p>La disparition des données est peu probable grâce à la mise en place d'un stockage en RAID1. Mais, dans le cas où les deux serveurs physiques, qui sont stockés au même endroit deviennent inutilisables, il serait cool d'avoir un backup automatisé sur un serveur OVH dans lequel nous stockerions les backups. Passer en RAID5 coûterait très cher et serai trop importante.</p>
@@ -214,8 +214,9 @@ Une anonymisation des données serait possible et pourrait bénéficier à dimin
 <p>Une modification non désirée des données pourrait arrivée suite un dysfonctionnement des librairies, ainsi on souhaite établir un ensemble de procédures annuelles menés par le responsable Réseau du GInfo pour mettre à jour les infrastructures et par les équipes de développement pour le code.</p>
 <p><img src="../MatriceRisque.png" alt="Matrice des risques"></p>
 <p>Concernant les possibles mises en place de processus de chiffrement, d'anonymisation, vu l'application et l'ampleur de l'installation et les capacités de l'association, beaucoup de mesures sembleraient être trop importantes face aux risques.</p>
-<h3>Conclusion</h3>
-<p>C'est un exercice très formateur, qui semble être essentielle pour travailler dans la protection des données. Cela nous force à nous poser des questions importantes pour assurer la pérennité des différentes infrastructures tout en couvrant divers domaines.</p>
+<h2>Conclusion</h2>
+<p>C'est un exercice très formateur, qui semble être essentiel pour travailler dans la protection des données. Cela nous force à nous poser des questions importantes pour assurer la pérennité des différentes infrastructures tout en couvrant divers domaines.<br>
+J'ai étudié une application du GInfo, cela implique une gestion spécifiques du développement, des capacités financières, des capacités humaines ce qui rend complexe la recommandation de mesures efficaces. Le cadre de cette application ne permettait pas vraiment de voir les violations horribles d'une entreprise et parfois le code seulement ne permettait pas forcément d'avoir toutes les informations concernant les backups, l'anonymisation, ... Je comprends mieux les problématiques autour de cela mais je sais pas si c'est exactement ce dans quoi je veux travailler plus tard mais j'aimerais définitivement l'intégrer dans mes questionnement professionnelles.</p>
 
 
 </article>
