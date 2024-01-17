@@ -41,14 +41,65 @@ React est un framework
 En React, un composant est comme une boîte autonome qui contient une partie spécifique de ce que l'on voit à l'écran. C'est comme si le code étaut constituée de plusieurs briques différentes, et chaque brique est un composant. Un composant peut être aussi bien un petit bouton ou quelque chose de plus complexe comme une barre de navigation, un form...
 C'est très pratique pour réutiliser un élément d'un code à un autre, ou même plusieurs fois dans le même code.
 
+Exemple de Component très simple, voici un bouton "S'inscrire" placé dans un div : 
+```js
+import React from 'react';
+import './Button.css';
+
+const Button = () => {
+  return (
+    <div className="buttonDiv">
+      <button>S'inscrire</button>
+    </div>
+  );
+};
+
+export default Button;
+```
 
 ## 2. Props
 
 les composants peuvent recevoir des "props", qui sont comme des instructions ou des données que le composant parent transmet à ses composants enfants. Les "props" permettent de personnaliser le comportement d'un composant et de le rendre adaptable et réutilisable dans différentes parties de l'application.
 
+Par exemple, je peux mettre un props à mon component Button créé au dessus : 
+```js
+import React from 'react';
+import './Button.css';
+
+const Button = ({ text }) => {
+  return (
+    <div className="buttonDiv">
+      <button>{text}</button>
+    </div>
+  );
+};
+
+export default Button;
+```
+
+Je peux maintenant créer plusieurs boutons différents :
+
+```js
+import React from 'react';
+import './App.css';
+import Button from './components/Button';
+
+const App = () => {
+
+  return (
+    <div>
+      <Button text="connexion">
+      <Button text="Inscription">
+    </div>
+  );
+};
+
+export default App;
+```
+
 ## 3. States
 
-
+En plus des props, React propose le concept d'état (state) pour gérer les données qui changent au fil du temps à l'intérieur d'un composant. 
 
 ## 4. React pour mon site
 
