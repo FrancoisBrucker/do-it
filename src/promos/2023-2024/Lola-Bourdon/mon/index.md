@@ -13,3 +13,4 @@ Ensemble des MON réalisés par Lola Bourdon
     2. [MON 1.2 : Excel - repartir sur de bonnes bases](./temps-1.2)
 2. Temps 2 
    1. [MON 2.1 : Langage VBA](./temps-2.1/)
+   2. [MON 2.2 : Excel et Power BI pour l'analyse de données](./temps-2.2/)

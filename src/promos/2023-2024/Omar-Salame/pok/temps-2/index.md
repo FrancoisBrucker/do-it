@@ -13,12 +13,14 @@ tags:
 résumé: Mon premier site web.
 ---
 {% chemin %}
-[Le Github du POK](https://github.com/Omar-Salame/football-fantasy)
+[Le Github du POK1](https://github.com/Omar-Salame/football-fantasy)
+[Le Github du Front](https://github.com/Omar-Salame/football-fantasy-front)
 {% endchemin %}
 ## Sommaire
 
 1. [Recap](#section-1)
 2. [Sprint 1](#section-2)
+3. [Sprint 2](#section-3)
 
 ## Recap<a id="section-1"></a>
 Mon projet de fantasy football pour la ligue marocaine INWI Botola Pro1 a déjà accompli des étapes significatives. Jusqu'à présent, j'ai mis en place les fondations de la plateforme, en développant la structure HTML et CSS de base, en intégrant les données des joueurs et des équipes via un processus de webscraping, et en commençant à travailler sur des fonctionnalités backend telles que l'authentification des utilisateurs. J'ai également créé un design initial pour le site, y compris la modélisation du terrain et la page d'accueil. Alors que je me prépare à entamer la deuxième phase du projet, mon intention est de développer davantage la plateforme en ajoutant des fonctionnalités clés, en améliorant son esthétique et en rendant le site pleinement fonctionnel. Ce développement inclura l'implémentation d'un système de gestion d'équipes, d'un système de points basé sur les performances des joueurs, et d'une interface utilisateur améliorée pour une expérience plus immersive et compétitive pour les utilisateurs.
@@ -132,7 +134,21 @@ scrapeJournee(url).then(fixtures => console.log(fixtures));
 ```
 <img src="scrapbotola.png" width="700" height="550">
 
+## 2eme Sprint: Développement Front<a id="section-3"></a>
 
+### Backlog
 
+| Tâche                                    | Sous-Tâches                                                                                   | Durée Estimée | Durée Réelle |
+| -----------------------------------------| ----------------------------------------------------------------------------------------------| --------------|--------------|
+| ~~Transition HTML vers React~~            | 1. Analyse des pages HTML/CSS existantes.<br>2. Création des composants React correspondants.<br>3. Intégration des composants dans l'architecture React. | 2 heures      |              |
+| Création de Composants React             | 1. Conception de composants pour la navigation.<br>2. Développement de composants pour l'affichage des joueurs.<br>3. Création de composants pour la gestion d'équipe. | 2 heures      |  3 heures            |
+| Mise en Page et Design                   | 1. Adaptation du design pour React.<br>2. Amélioration du responsive design.<br>3. Personnalisation des styles avec CSS. | 2 heures      |   2 heures           |
+| Système de Sélection de Joueurs          | 1. Conception de l'interface de sélection des joueurs.<br>2. Implémentation de la logique de sélection/désélection.<br>3. Intégration avec la gestion d'équipe. | 2 heures      |   4 heures           |
+| Intégration des Données avec React       | 1. ~~Configuration de l'API pour récupérer les données.~~<br>2. Mise en place de l'état des composants pour gérer les données.<br>3. Affichage des données dans les composants. | 1 heure       |  2 heures            |
+| Styling des Composants                   | 1. Définition des styles de base pour les composants.<br>2. Adaptation des styles pour différents appareils.<br>3. Optimisation de l'expérience utilisateur. | 1 heure       |  30 min            |
 
-
+### Apperçu du Front
+:-------------------------:|:-------------------------:
+<img src="front_1.png" width="700" height="600">|<img src="front4.png" width="700" height="550">
+<img src="front_2.png" width="700" height="550">|<img src="front3.png" width="700" height="550">
+<img src="front_3.png" width="700" height="550">|<img src="front1.png" width="700" height="550">

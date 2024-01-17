@@ -130,4 +130,4 @@ Je ne recommande pas spécialement la formation d'OpenClassrooms. La première p
 
 ## Conclusion
 
-Je suis maintenant à l'aise avec les termes de base du développement fullstack. Je sais comment créer et paramétrer un serveur et un proxy. 
+Je suis maintenant à l'aise avec les termes de base du développement fullstack. Je sais comment créer et paramétrer un serveur et un proxy.

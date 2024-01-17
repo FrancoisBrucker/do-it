@@ -2,11 +2,14 @@ import copy
 import time
 
 class Cell():
-    def __init__(self, row, column, promote = None):
+    def __init__(self, row, column, promote = None, short_castle = False, long_castle = False, en_passant = False):
         self.name = chr(column + 97) + f"{row+1}"
         self.row = row
         self.column = column
         self.promote = promote
+        self.short_castle = short_castle
+        self.long_castle = long_castle
+        self.en_passant = en_passant
 
 class Piece():
     def __init__(self, IsWhite, value, letter, current_cell):
@@ -15,13 +18,14 @@ class Piece():
         self.IsWhite = IsWhite
         self.value = value
         self.letter = letter
-
+    
 class King(Piece):
-    def __init__(self, IsWhite, current_cell):
+    def __init__(self, IsWhite, current_cell, can_castle = True):
         if IsWhite:
             super().__init__(IsWhite, 1000, "K", current_cell)
         else:
             super().__init__(IsWhite, -1000, "k", current_cell)
+        self.can_castle = can_castle
 
     def get_possible_moves(self, board):
         self.possible_moves = []
@@ -41,6 +45,16 @@ class King(Piece):
                             if obstacle_color ^ self.IsWhite:
                                 new_cell = Cell(new_row, new_column)
                                 self.possible_moves.append(new_cell)
+        if self.can_castle and row == 0 and column == 4 and self.IsWhite:
+            if (board[0][7][1] != None and board[0][7][1].letter == "R") and board[0][6][1] == None and board[0][5][1] == None:
+                self.possible_moves.append(Cell(0, 6, None, True, False))
+            if (board[0][0][1] != None and board[0][0][1].letter == "R") and board[0][1][1] == None and board[0][2][1] == None and board[0][3][1] == None:
+                self.possible_moves.append(Cell(0, 2, None, False, True))
+        elif self.can_castle and row == 7 and column == 4 and not self.IsWhite:
+            if (board[7][7][1] != None and board[7][7][1].letter == "r") and board[7][6][1] == None and board[7][5][1] == None:
+                self.possible_moves.append(Cell(7, 6, None, True, False))
+            if (board[7][0][1] != None and board[7][0][1].letter == "r") and board[7][1][1] == None and board[7][2][1] == None and board[7][3][1] == None:
+                self.possible_moves.append(Cell(7, 2, None, False, True))
 
 class Rook(Piece):
     def __init__(self, IsWhite, current_cell):
@@ -195,7 +209,7 @@ class Pawn(Piece):
             super().__init__(IsWhite, 1, "", current_cell)
         else:
             super().__init__(IsWhite, -1, "", current_cell)
-    
+        self.en_passant = None
     
     def get_possible_moves(self, board):
         if self.IsWhite:
@@ -206,7 +220,7 @@ class Pawn(Piece):
         if self.current_cell.row == 6 and self.IsWhite:
             new_column = self.current_cell.column + 0
             new_row = self.current_cell.row + move
-            if new_column >= 0 and new_column <= 7:
+            if new_column >= 0 and new_column <= 7 and board[new_row][new_column][1] == None:
                 self.possible_moves.append(Cell(new_row, new_column, "Q"))
                 self.possible_moves.append(Cell(new_row, new_column, "N"))
                 self.possible_moves.append(Cell(new_row, new_column, "B"))
@@ -226,7 +240,7 @@ class Pawn(Piece):
         elif self.current_cell.row == 1 and not self.IsWhite:
             new_column = self.current_cell.column + 0
             new_row = self.current_cell.row + move
-            if new_column >= 0 and new_column <= 7:
+            if new_column >= 0 and new_column <= 7 and board[new_row][new_column][1] == None:
                 self.possible_moves.append(Cell(new_row, new_column, "q"))
                 self.possible_moves.append(Cell(new_row, new_column, "n"))
                 self.possible_moves.append(Cell(new_row, new_column, "b"))
@@ -278,8 +292,10 @@ class Pawn(Piece):
                     if obstacle_color ^ self.IsWhite:
                         new_cell = Cell(new_row, new_column)
                         self.possible_moves.append(new_cell)
-            
+        if self.en_passant != None:
+            self.possible_moves.append(self.en_passant)
 
+            
 class Chessboard():
     def __init__(self):
         self.board = [ [None for j in range(8)] for i in range(8) ]
@@ -339,7 +355,7 @@ class Chessboard():
             print("Il n'y a pas de pièce dans la case indiquée")
             return()
         if (final_cell.row, final_cell.column) not in [(cell.row, cell.column) for cell in piece.possible_moves]:
-            print("La pièce ne peut pas aller jusqu'à la case indiquée")
+            # print("La pièce ne peut pas aller jusqu'à la case indiquée")
             return()
         self.board[current_cell.row][current_cell.column][1] = None
         if piece.letter == "" and (current_cell.row == 6 and piece.IsWhite):
@@ -354,7 +370,6 @@ class Chessboard():
                 self.board[final_cell.row][final_cell.column][1] = Bishop(piece.IsWhite, final_cell)
             elif final_cell.promote in ["R", "r"]:
                 self.board[final_cell.row][final_cell.column][1] = Rook(piece.IsWhite, final_cell)
-
         elif piece.letter == "" and (current_cell.row == 1 and not piece.IsWhite):
             if final_cell.promote is None:
                 print("Problème : pas de promotion", piece.letter, current_cell.name, final_cell.name, final_cell.promote)
@@ -367,6 +382,24 @@ class Chessboard():
                 self.board[final_cell.row][final_cell.column][1] = Bishop(piece.IsWhite, final_cell)
             elif final_cell.promote in ["R", "r"]:
                 self.board[final_cell.row][final_cell.column][1] = Rook(piece.IsWhite, final_cell) 
+        elif piece.letter in ["k", "K"] and final_cell.short_castle:
+            if piece.IsWhite:
+                row_castle = 0
+            else:
+                row_castle = 7
+            self.board[row_castle][6][1] = King(piece.IsWhite, Cell(row_castle, 6), False)
+            self.board[row_castle][4][1] = None
+            self.board[row_castle][7][1] = None
+            self.board[row_castle][5][1] = Rook(piece.IsWhite, Cell(row_castle, 5))
+        elif piece.letter in ["k", "K"] and final_cell.long_castle:
+            if piece.IsWhite:
+                row_castle = 0
+            else:
+                row_castle = 7
+            self.board[row_castle][2][1] = King(piece.IsWhite, Cell(row_castle, 2), False)
+            self.board[row_castle][4][1] = None
+            self.board[row_castle][0][1] = None
+            self.board[row_castle][3][1] = Rook(piece.IsWhite, Cell(row_castle, 3))
         elif piece.letter in ["K", "k"]:
             self.board[final_cell.row][final_cell.column][1] = King(piece.IsWhite, final_cell)
         elif piece.letter in ["R", "r"]:
@@ -584,10 +617,23 @@ class Chessboard():
         return(all_possible_moves)
 
     def update_possible_moves(self):
-        for row in self.board:
-            for cell in row:
-                if cell[1] is not None:
-                    cell[1].get_possible_moves(self.board)
+        initial_board = copy.deepcopy(self.board[:])
+        for i in range(len(self.board)):
+            row = self.board[i]
+            for j in range(len(self.board[i])):
+                cell = self.board[i][j]
+                if self.board[i][j][1] is not None:
+                    self.board[i][j][1].get_possible_moves(self.board)
+                    # valid_moves = []
+                    # IsWhite = self.board[i][j][1].IsWhite
+                    # all_moves = copy.deepcopy(self.board[i][j][1].possible_moves)
+                    # initial_cell = copy.deepcopy(self.board[i][j][0])
+                    # for move in all_moves:
+                    #     self.move(initial_cell, move)
+                    #     if not self.IsCheck(IsWhite):
+                    #         valid_moves.append(move)
+                    #     self.board = copy.deepcopy(initial_board[:])
+                    # self.board[i][j][1].possible_moves = copy.deepcopy(valid_moves)
 
     def solve(self, fen_position, IsWhiteToPlay, depth):
         self.c = 0 
@@ -757,3 +803,70 @@ class Chessboard():
         #                 self.board = copy.deepcopy(initial_board[:])
         #             else:
         #                 self.board = copy.deepcopy(initial_board[:])
+
+    def get_fen_from_position(self, board, IsWhiteToPlay):
+        fen_position = ""
+        nb_row = 7
+        nb_column = 0
+        while nb_row >= 0:
+            count = 0
+            while nb_column <= 7:
+                if board[nb_row][nb_column][1] == None:
+                    count += 1
+                elif board[nb_row][nb_column][1] != None and (count != 0):
+                    fen_position += str(count)
+                    if board[nb_row][nb_column][1].letter == "" and board[nb_row][nb_column][1].IsWhite:
+                        fen_position += "P"
+                    elif board[nb_row][nb_column][1].letter == "" and not board[nb_row][nb_column][1].IsWhite:
+                        fen_position += "p"
+                    else:
+                        fen_position += board[nb_row][nb_column][1].letter
+                    count = 0
+                elif board[nb_row][nb_column][1] != None and count == 0:
+                    if board[nb_row][nb_column][1].letter == "" and board[nb_row][nb_column][1].IsWhite:
+                        fen_position += "P"
+                    elif board[nb_row][nb_column][1].letter == "" and not board[nb_row][nb_column][1].IsWhite:
+                        fen_position += "p"
+                    else:
+                        fen_position += board[nb_row][nb_column][1].letter
+                if count != 0 and nb_column == 7:
+                    fen_position += str(count)
+                nb_column += 1
+            nb_row -= 1
+            nb_column = 0
+            fen_position += "/"
+        fen_position = fen_position[:len(fen_position) - 1]
+        if IsWhiteToPlay:
+            fen_position += " w"
+        else:
+            fen_position += " b"
+        fen_position += " KQkq - 0 1"
+        return(fen_position)
+    
+    # def get_stockfish_move(self, fen_position):
+    #     Stockfish.set_fen_position(fen_position)
+    #     move = Stockfish.get_best_move()
+    #     return(move)
+    
+    # def move_stockfish(self, move):
+    #     initial_cell_name = move[:2]
+    #     final_cell_name = move[2:]
+    #     row_start = int(initial_cell_name[1:]) - 1
+    #     column_start = ord(initial_cell_name[:1]) - 97
+    #     row_end = int(final_cell_name[1:]) - 1
+    #     column_end = ord(final_cell_name[:1]) - 97
+    #     piece = self.board[row_start][column_start][1]
+    #     if piece.letter in ["K", "k"]:
+    #         self.board[row_end][column_end][1] = King(piece.IsWhite, Cell(row_end, column_end))
+    #     elif piece.letter in ["R", "r"]:
+    #         self.board[row_end][column_end][1] = Rook(piece.IsWhite, Cell(row_end, column_end))
+    #     elif piece.letter in ["B", "b"]:
+    #         self.board[row_end][column_end][1] = Bishop(piece.IsWhite, Cell(row_end, column_end))
+    #     elif piece.letter in ["N", "n"]:
+    #         self.board[row_end][column_end][1] = Knight(piece.IsWhite, Cell(row_end, column_end))
+    #     elif piece.letter in ["Q", "q"]:
+    #         self.board[row_end][column_end][1] = Queen(piece.IsWhite, Cell(row_end, column_end))
+    #     elif piece.letter in [""]:
+    #         self.board[row_end][column_end][1] = Pawn(piece.IsWhite, Cell(row_end, column_end))
+    #     self.board[row_start][column_start][1] = None
+    #     self.update_possible_moves()

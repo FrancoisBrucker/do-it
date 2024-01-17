@@ -21,6 +21,7 @@ Connaissance basique de la programmation objet avec Python et des règles du jeu
 {%endprerequis%}
 
 {% note %}
+Il est possible de tester l'implémentation du jeu sur le lien suivant: [Jeu d'échecs avec Python](https://duc-dgv.itch.io/jeu-dchecs)
 Tout les codes présentés sont disponibles dans le dossier Git du POK2: [codes du POK2](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-2)
 {% endnote %}
 
@@ -915,9 +916,473 @@ J'ai réussi à développer tout les objectifs du backlog présenté plus haut. 
 Il faut à présent décrire le backlog du deuxième sprint, qui aura pour objectif d'utiliser Pygame pour implémenter le jeu d'échecs pour qu'on puisse y jouer. Voici ce backlog, avec les complexités pour chaque fonctionnalités:
 
 - Représentation graphique du plateau et de ses pièces **(3, 1h)**
-- Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées **(8, 2h30)**
+- Détection des clics du joueur sur chaque pièces, et proposition de mouvement pour chaque pièces cliquées **(8, 2h)**
 - Vérifier les échecs et les échecs et mat **(5, 1h)**
 - Implémentation de sons **(3, 1h)**
-- Implémentation de l'historique de la partie **(8, 2h30)**
+- Implémentation de l'historique de la partie **(8, 2h)**
 - Implémentation de la liste des pièces prises par chaque joueur **(2, 30min)**
 - Implémentation d'une fonctionnalité pour retourner le plateau **(3, 45min)**
+- Tests sur le programme, détection et correction des bugs **(5, 1h)**
+
+## Implémentation du jeu d'échecs avec Pygame
+
+Nous allons à présent implémenter le jeu d'échecs en utilisant le module Pygame (ce module est expliqué dans mon [MON2.1](../../mon/temps-2.1/)). On créé donc une nouvelle classe **Chess_game**, qui hérite de la classe précédemment créée **Chessboard**. Nous allons en effet utiliser toutes les méthodes déjà créées pour implémenter l'interface du jeu d'échecs, comme par exemple les méthodes pour manipuler la représentation du plateau d'échecs, vérifier s'il y a un échec etc...
+
+### Initialisation de la classe
+
+Lors de l'initialisation de la classe **Chess_game**, nous allons introduire plusieurs variables qui nous seront utiles:
+
+- Les différentes surfaces correspondant aux différentes images à afficher sur l'écran (images des pièces blanches et noires et du plateau de jeu).
+- La taille du plateau de jeu, d'une case du plateau de jeu, ainsi que les valeurs correspondant à la distance entre le plateau de jeu et le bord de la fenêtre.
+- Une liste qui contiendra les cases sélectionnées par le joueur.
+- Une liste qui contiendra l'historique des mouvements de la partie.
+- Des listes qui contiendront les pièces prises par les Blancs et par les Noirs.
+- Les différents sons que l'on pourra entendre pendant le jeu.
+
+{% details "Cliquer pour voir le code de l'initialisation de la classe **Chess_game**" %}
+
+```python
+def __init__(self):
+    pygame.init()
+    super().__init__()
+    self.set_starting_board()
+    self.screen = pygame.display.set_mode((900, 550))
+    self.chessboard_surface = pygame.image.load('chessboard.png')
+    self.size = 480
+    self.cell_size = self.size // 8
+    self.chessboard_surface = pygame.transform.scale(self.chessboard_surface, (self.size, self.size))
+    self.delta_x = 150
+    self.delta_y = 30
+    self.background_color = "White"
+    self.screen.fill(self.background_color)
+    self.font = pygame.font.Font(None, 30)
+    pygame.display.set_caption("Jeu d'échecs")
+    self.clock = pygame.time.Clock()
+    self.black_rook_surface = pygame.image.load('Chess_pieces_png/black_rook.png')
+    self.black_rook_surface = pygame.transform.scale(self.black_rook_surface, (self.cell_size, self.cell_size))
+    self.black_knight_surface = pygame.image.load('Chess_pieces_png/black_knight.png')
+    self.black_knight_surface = pygame.transform.scale(self.black_knight_surface, (self.cell_size, self.cell_size))
+    self.black_bishop_surface = pygame.image.load('Chess_pieces_png/black_bishop.png')
+    self.black_bishop_surface = pygame.transform.scale(self.black_bishop_surface, (self.cell_size, self.cell_size))
+    self.black_king_surface = pygame.image.load('Chess_pieces_png/black_king.png')
+    self.black_king_surface = pygame.transform.scale(self.black_king_surface, (self.cell_size, self.cell_size))
+    self.black_queen_surface = pygame.image.load('Chess_pieces_png/black_queen.png')
+    self.black_queen_surface = pygame.transform.scale(self.black_queen_surface, (self.cell_size, self.cell_size))
+    self.black_pawn_surface = pygame.image.load('Chess_pieces_png/black_pawn.png')
+    self.black_pawn_surface = pygame.transform.scale(self.black_pawn_surface, (self.cell_size, self.cell_size))
+
+    self.white_rook_surface = pygame.image.load('Chess_pieces_png/white_rook.png')
+    self.white_rook_surface = pygame.transform.scale(self.white_rook_surface, (self.cell_size, self.cell_size))
+    self.white_knight_surface = pygame.image.load('Chess_pieces_png/white_knight.png')
+    self.white_knight_surface = pygame.transform.scale(self.white_knight_surface, (self.cell_size, self.cell_size))
+    self.white_bishop_surface = pygame.image.load('Chess_pieces_png/white_bishop.png')
+    self.white_bishop_surface = pygame.transform.scale(self.white_bishop_surface, (self.cell_size, self.cell_size))
+    self.white_king_surface = pygame.image.load('Chess_pieces_png/white_king.png')
+    self.white_king_surface = pygame.transform.scale(self.white_king_surface, (self.cell_size, self.cell_size))
+    self.white_queen_surface = pygame.image.load('Chess_pieces_png/white_queen.png')
+    self.white_queen_surface = pygame.transform.scale(self.white_queen_surface, (self.cell_size, self.cell_size))
+    self.white_pawn_surface = pygame.image.load('Chess_pieces_png/white_pawn.png')
+    self.white_pawn_surface = pygame.transform.scale(self.white_pawn_surface, (self.cell_size, self.cell_size))
+    
+    self.state = "piece_not_selected"
+    self.coord_piece_selected = None
+    self.cells_selected = []
+    self.IsWhiteToPlay = True
+
+    self.scrolled = False
+    self.move_list = []
+    self.move_count = 1
+    self.scroll_count = 0
+    self.font_moves_size = 27
+    self.limit = 18
+    self.font_moves = pygame.font.Font(None, self.font_moves_size)
+
+    self.en_passant_cell = None
+
+    self.pieces_taken_by_white = []
+    self.pieces_taken_by_black = []
+    self.pieces_taken_size = 25
+    self.black_rook_surface2 = pygame.image.load('Chess_pieces_png/black_rook.png')
+    self.black_rook_surface2 = pygame.transform.scale(self.black_rook_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.black_knight_surface2 = pygame.image.load('Chess_pieces_png/black_knight.png')
+    self.black_knight_surface2 = pygame.transform.scale(self.black_knight_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.black_bishop_surface2 = pygame.image.load('Chess_pieces_png/black_bishop.png')
+    self.black_bishop_surface2  = pygame.transform.scale(self.black_bishop_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.black_king_surface2 = pygame.image.load('Chess_pieces_png/black_king.png')
+    self.black_king_surface2 = pygame.transform.scale(self.black_king_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.black_queen_surface2 = pygame.image.load('Chess_pieces_png/black_queen.png')
+    self.black_queen_surface2 = pygame.transform.scale(self.black_queen_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.black_pawn_surface2 = pygame.image.load('Chess_pieces_png/black_pawn.png')
+    self.black_pawn_surface2 = pygame.transform.scale(self.black_pawn_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+
+    self.white_rook_surface2 = pygame.image.load('Chess_pieces_png/white_rook.png')
+    self.white_rook_surface2 = pygame.transform.scale(self.white_rook_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.white_knight_surface2 = pygame.image.load('Chess_pieces_png/white_knight.png')
+    self.white_knight_surface2 = pygame.transform.scale(self.white_knight_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.white_bishop_surface2 = pygame.image.load('Chess_pieces_png/white_bishop.png')
+    self.white_bishop_surface2 = pygame.transform.scale(self.white_bishop_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.white_king_surface2 = pygame.image.load('Chess_pieces_png/white_king.png')
+    self.white_king_surface2 = pygame.transform.scale(self.white_king_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.white_queen_surface2 = pygame.image.load('Chess_pieces_png/white_queen.png')
+    self.white_queen_surface2 = pygame.transform.scale(self.white_queen_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.white_pawn_surface2 = pygame.image.load('Chess_pieces_png/white_pawn.png')
+    self.white_pawn_surface2 = pygame.transform.scale(self.white_pawn_surface2, (self.pieces_taken_size, self.pieces_taken_size))
+    self.font_pieces_taken = pygame.font.Font(None, 25)
+
+
+    self.move_sound = pygame.mixer.Sound('Sounds/move.ogg')
+    self.capture_sound = pygame.mixer.Sound('Sounds/capture.ogg')
+    self.check_sound = pygame.mixer.Sound('Sounds/check.ogg')
+    self.castle_sound = pygame.mixer.Sound('Sounds/castle.ogg')
+```
+
+{% enddetails %}
+
+### Gestion de l'affichage
+
+Il faut tout d'abord implémenter des méthodes pour afficher les différents éléments sur l'écran. Ces éléments sont les suivants:
+
+- Affichage du plateau de jeu (image prise sur le site [Chess.com](https://chess.com)).
+- Affichage de la position actuelle, représentée par l'attribut *board* de la classe. Les images des pièces viennent du site suivant: [Wikimedia](https://commons.wikimedia.org/wiki/Category:PNG_chess_pieces/Standard_transparent)
+- Affichage des pièces prises par chaque joueur.
+- Affichage du bouton "Recommencer".
+- Affichage du texte indiquant qui doit jouer, et qui a gagné au moment de la fin de partie.
+- Affichage de l'historique des coups de la partie. Cette méthode doit également gérer le scroll de la liste, si jamais la le nombre de coups est trop élevé pour pouvoir rentrer dans la fenêtre. L'utilisateur pourra utiliser les flèches de son clavier ou la mollette de sa souris pour défiler la liste à sa guise.
+
+Certaines de ces méthodes d'affichage utilisent une autre méthode *draw_rect* qui permettent de colorer une case d'une certaine couleur.
+
+{% details "Cliquer pour voir les méthodes dédiées à l'affichage" %}
+
+```python
+def display_position(self):
+    if self.state == "piece_selected":
+        nb_row, nb_column = self.coord_piece_selected
+        if self.cells_selected[1] != []:
+            self.draw_rect(nb_row, nb_column, "steelblue4")
+    if self.cells_selected != []:
+        for cell in self.cells_selected[1]:
+            self.draw_rect(cell.row, cell.column, "lightblue3")
+    if self.IsCheck(self.IsWhiteToPlay):
+        self.draw_check()
+    for row in self.board:
+        for cell in row:
+            if cell[1] is not None:
+                piece = cell[1]
+                if piece.IsWhite:
+                    coord_x, coord_y = self.get_coordinates(piece.current_cell.row, piece.current_cell.column)
+                    if piece.letter == "R":
+                        white_rook_rect = self.white_rook_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_rook_surface, white_rook_rect)
+                    elif piece.letter == "N":
+                        white_knight_rect = self.white_knight_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_knight_surface, white_knight_rect)
+                    elif piece.letter == "B":
+                        white_bishop_rect = self.white_bishop_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_bishop_surface, white_bishop_rect)
+                    elif piece.letter == "Q":
+                        white_queen_rect = self.white_queen_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_queen_surface, white_queen_rect)
+                    elif piece.letter == "K":
+                        white_king_rect = self.white_king_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_king_surface, white_king_rect)
+                    elif piece.letter == "":
+                        white_pawn_rect = self.white_pawn_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.white_pawn_surface, white_pawn_rect)
+                else:
+                    coord_x, coord_y = self.get_coordinates(piece.current_cell.row, piece.current_cell.column)
+                    if piece.letter == "r":
+                        black_rook_rect = self.black_rook_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_rook_surface, black_rook_rect)
+                    elif piece.letter == "n":
+                        black_knight_rect = self.black_knight_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_knight_surface, black_knight_rect)
+                    elif piece.letter == "b":
+                        black_bishop_rect = self.black_bishop_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_bishop_surface, black_bishop_rect)
+                    elif piece.letter == "q":
+                        black_queen_rect = self.black_queen_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_queen_surface, black_queen_rect)
+                    elif piece.letter == "k":
+                        black_king_rect = self.black_king_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_king_surface, black_king_rect)
+                    elif piece.letter == "":
+                        black_pawn_rect = self.black_pawn_surface.get_rect(center = (coord_x, coord_y))
+                        self.screen.blit(self.black_pawn_surface, black_pawn_rect)
+def display_pieces_taken(self):
+    white_rect = pygame.Rect(0, 0, self.delta_x, self.delta_y + self.size)
+    pygame.draw.rect(self.screen, self.background_color, white_rect)
+    score = self.evaluation()
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 1.5*self.cell_size
+    black_pawn_rect = self.black_pawn_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.black_pawn_surface2, black_pawn_rect)
+    text_black_pawn_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_white.count('')}", False, "Black")
+    text_rect = text_black_pawn_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_black_pawn_taken, text_rect)
+
+    coord_x += 55
+    black_knight_rect = self.black_knight_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.black_knight_surface2, black_knight_rect)
+    text_black_knight_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_white.count('n')}", False, "Black")
+    text_rect = text_black_knight_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_black_knight_taken, text_rect)
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 1*self.cell_size
+    black_bishop_rect = self.black_bishop_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.black_bishop_surface2, black_bishop_rect)
+    text_black_bishop_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_white.count('b')}", False, "Black")
+    text_rect = text_black_bishop_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_black_bishop_taken, text_rect)
+
+    coord_x += 55
+    black_rook_rect = self.black_rook_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.black_rook_surface2, black_rook_rect)
+    text_black_rook_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_white.count('r')}", False, "Black")
+    text_rect = text_black_rook_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_black_rook_taken, text_rect)
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 0.5*self.cell_size
+    black_queen_rect = self.black_queen_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.black_queen_surface2, black_queen_rect)
+    text_black_queen_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_white.count('q')}", False, "Black")
+    text_rect = text_black_queen_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_black_queen_taken, text_rect)
+    
+    if score == 1000000 or score == -1000000:
+        coord_x += 45
+        text_score = self.font_pieces_taken.render("#", False, "Black")
+        text_rect = text_score.get_rect(midtop = (coord_x + 23, coord_y + 5))
+        self.screen.blit(text_score, text_rect)
+    elif score > 0:
+        coord_x += 45
+        text_score = self.font_pieces_taken.render(f"+{score}", False, "Black")
+        text_rect = text_score.get_rect(midtop = (coord_x + 23, coord_y + 5))
+        self.screen.blit(text_score, text_rect)
+
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 8*self.cell_size
+    white_pawn_rect = self.white_pawn_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.white_pawn_surface2, white_pawn_rect)
+    text_white_pawn_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_black.count('')}", False, "Black")
+    text_rect = text_white_pawn_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_white_pawn_taken, text_rect)
+
+    coord_x += 55
+    white_knight_rect = self.white_knight_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.white_knight_surface2, white_knight_rect)
+    text_white_knight_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_black.count('N')}", False, "Black")
+    text_rect = text_white_knight_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_white_knight_taken, text_rect)
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 7.5*self.cell_size
+    white_bishop_rect = self.white_bishop_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.white_bishop_surface2, white_bishop_rect)
+    text_white_bishop_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_black.count('B')}", False, "Black")
+    text_rect = text_white_bishop_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_white_bishop_taken, text_rect)
+
+    coord_x += 55
+    white_rook_rect = self.white_rook_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.white_rook_surface2, white_rook_rect)
+    text_white_rook_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_black.count('R')}", False, "Black")
+    text_rect = text_white_rook_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_white_rook_taken, text_rect)
+
+    coord_x = self.delta_x - 100
+    coord_y = self.delta_y + self.size - 7*self.cell_size
+    white_queen_rect = self.white_queen_surface2.get_rect(midtop = (coord_x, coord_y))
+    self.screen.blit(self.white_queen_surface2, white_queen_rect)
+    text_white_queen_taken = self.font_pieces_taken.render(f"x{self.pieces_taken_by_black.count('Q')}", False, "Black")
+    text_rect = text_white_queen_taken.get_rect(midtop = (coord_x + 23, coord_y + 5))
+    self.screen.blit(text_white_queen_taken, text_rect)
+
+
+    if score == 1000000 or score == -1000000:
+        coord_x += 45
+        text_score = self.font_pieces_taken.render("#", False, "Black")
+        text_rect = text_score.get_rect(midtop = (coord_x + 23, coord_y + 5))
+        self.screen.blit(text_score, text_rect)
+    elif score < 0:
+        coord_x += 45
+        text_score = self.font_pieces_taken.render(f"+{-score}", False, "Black")
+        text_rect = text_score.get_rect(midtop = (coord_x + 23, coord_y + 5))
+        self.screen.blit(text_score, text_rect)
+
+def display_restart_button(self):
+    font_restart = pygame.font.Font(None, 27)
+    coord_x = self.delta_x - 75
+    coord_y = self.delta_y + self.size//2 - 20
+    text_restart = font_restart.render("Recommencer", False, "Black")
+    text_rect = text_restart.get_rect(center = (coord_x, coord_y))
+    rect_restart = pygame.Rect(self.delta_x - 143, coord_y - 15, 135, 30)
+    pygame.draw.rect(self.screen, "Gray", rect_restart)
+    self.screen.blit(text_restart, text_rect)
+
+ def display_who_to_play(self):
+    self.remove_text()
+    if self.IsWhiteToPlay:
+        text_white_to_play = self.font.render("Au tour des Blancs", False, "Black")
+        text_rect = text_white_to_play.get_rect(center = (self.size//2 + self.delta_x, self.delta_y//2))
+        self.screen.blit(text_white_to_play, text_rect)
+    else:
+        text_black_to_play = self.font.render("Au tour des Noirs", False, "Black")
+        text_rect = text_black_to_play.get_rect(center = (self.size//2 + self.delta_x, self.delta_y//2))
+        self.screen.blit(text_black_to_play, text_rect)
+
+def display_winner(self, is_white_winner):
+    self.remove_text()
+    if is_white_winner:
+        text_white_winner = self.font.render("Les Blancs ont gagné !", False, "Black")
+        text_rect = text_white_winner.get_rect(center = (self.size//2 + self.delta_x, self.delta_y//2))
+        self.screen.blit(text_white_winner, text_rect)
+    if not is_white_winner:
+        text_black_winner = self.font.render("Les Noirs ont gagné !", False, "Black")
+        text_rect = text_black_winner.get_rect(center = (self.size//2 + self.delta_x, self.delta_y//2))
+        self.screen.blit(text_black_winner, text_rect)
+
+def display_moves(self):
+    self.remove_moves()
+    delta_move_x = 100
+    delta_move_y = 10
+    if len(self.move_list) > self.limit * 2:
+        max_scroll_count = math.ceil(len(self.move_list)/2) * 2 - self.limit * 2
+        if (-1 * self.scroll_count * 2) == max_scroll_count or not self.scrolled:
+            list_move_to_display = self.move_list[max_scroll_count:]
+            if len(list_move_to_display) % 2 == 1:
+                list_move_to_display.append(["", ""])
+        else:
+            index_start = - self.scroll_count * 2
+            index_end = index_start + self.limit * 2
+            list_move_to_display = self.move_list[index_start:index_end]
+    else:
+        list_move_to_display = self.move_list[:]
+        self.scroll_count = 0
+    for k in range(len(list_move_to_display)):
+        coord_y = self.delta_y + (k // 2) * self.font_moves_size + delta_move_y
+        if k % 2 == 0:
+            coord_x = self.delta_x + self.size + delta_move_x
+            text_move = self.font_moves.render(list_move_to_display[k][1], False, "Black")
+            text_rect = text_move.get_rect(center = (coord_x, coord_y))
+            self.screen.blit(text_move, text_rect)
+
+            coord_x2 = self.delta_x + self.size + delta_move_x - 50
+            text_move2 = self.font_moves.render(str(list_move_to_display[k][0]) + ".", False, "Black")
+            text_rect2 = text_move2.get_rect(center = (coord_x2, coord_y))
+            self.screen.blit(text_move2, text_rect2)
+        if k % 2 == 1:
+            coord_x = self.delta_x + self.size + delta_move_x + 70
+            text_move = self.font_moves.render(list_move_to_display[k][1], False, "Black")
+            text_rect = text_move.get_rect(center = (coord_x, coord_y))
+            self.screen.blit(text_move, text_rect)
+```
+
+{% enddetails %}
+
+### Affichage des mouvements possibles
+
+Il faut à présent créer une méthode qui permet d'afficher les cases où la pièce sélectionnée peut aller. Il faut d'abord déterminer quelle case a été sélectionnée par l'utilisateur. Pour cela, on utilise la méthode *get_row_column* qui renvoie le numéro de ligne et colonne de la case sélectionnée par le joueur.
+
+{% details "Cliquer pour voir la méthode *get_row_column*" %}
+
+```python
+def get_row_column(self):
+    pos = pygame.mouse.get_pos()
+    pos_x = pos[0] - self.delta_x
+    pos_y = pos[1] - self.delta_y
+    if (pos_x in range(0, self.size + 1)) and (pos_y in range(0, self.size + 1)):
+        nb_row = 7 - (pos_y // self.cell_size)
+        nb_column = pos_x // self.cell_size
+        return(nb_row, nb_column)
+    else:
+        return(None)
+```
+
+{% enddetails %}
+
+Ensuite, il faut récupérer l'attribut *possible_moves* qui est a été défini plus tôt, et qui contient toutes les cases possibles sur lesquelles chaque pièce peut aller. On peut ainsi récupérer les numéros de lignes et colonnes de chaque cases, et ainsi les colorer de la bonne couleur. Notons que c'est dans cette méthode que l'on gère la prise en passant.
+
+{% details "Cliquer pour voir le code de la méthode *update_cells_selected*" %}
+
+```python
+def update_cells_selected(self, piece):
+    valid_moves = []
+    current_cell = copy.deepcopy(piece.current_cell)
+    initial_board = copy.deepcopy(self.board[:])
+    if self.en_passant_cell != None and piece.letter == "":
+        adjacent_column1 = self.en_passant_cell.column - 1
+        adjacent_column2 = self.en_passant_cell.column + 1
+        if piece.current_cell.column in [adjacent_column1, adjacent_column2]:
+            if piece.current_cell.row + 1 == self.en_passant_cell.row and piece.IsWhite:
+                piece.en_passant = self.en_passant_cell
+                piece.possible_moves.append(self.en_passant_cell)
+                valid_moves.append(self.en_passant_cell)
+            elif piece.current_cell.row - 1 == self.en_passant_cell.row and not piece.IsWhite:
+                piece.en_passant = self.en_passant_cell
+                piece.possible_moves.append(self.en_passant_cell)
+                valid_moves.append(self.en_passant_cell)
+    for cell in piece.possible_moves:
+        if cell.short_castle:
+            if self.IsWhiteToPlay:
+                row = 0
+            else:
+                row = 7
+            if not self.IsCheck(self.IsWhiteToPlay):
+                self.move(current_cell, Cell(row, 5))
+                if not self.IsCheck(self.IsWhiteToPlay):
+                    self.board = copy.deepcopy(initial_board)
+                    self.move(current_cell, Cell(row, 6))
+                    if not self.IsCheck(self.IsWhiteToPlay):
+                        valid_moves.append(copy.deepcopy(cell))
+                        self.board = copy.deepcopy(initial_board)
+                    else:
+                        self.board = copy.deepcopy(initial_board)
+                else:
+                    self.board = copy.deepcopy(initial_board)
+        elif cell.long_castle:
+            if self.IsWhiteToPlay:
+                row = 0
+            else:
+                row = 7
+            if not self.IsCheck(self.IsWhiteToPlay):
+                self.move(current_cell, Cell(row, 2))
+                if not self.IsCheck(self.IsWhiteToPlay):
+                    self.board = copy.deepcopy(initial_board)
+                    self.move(current_cell, Cell(row, 3))
+                    if not self.IsCheck(self.IsWhiteToPlay):
+                        valid_moves.append(copy.deepcopy(cell))
+                        self.board = copy.deepcopy(initial_board)
+                    else:
+                        self.board = copy.deepcopy(initial_board)
+                else:
+                    self.board = copy.deepcopy(initial_board)
+        else:
+            self.move(current_cell, cell)
+            if not self.IsCheck(self.IsWhiteToPlay):
+                valid_moves.append(copy.deepcopy(cell))
+            self.board = copy.deepcopy(initial_board)
+    self.cells_selected = [piece.current_cell, copy.deepcopy(valid_moves)]
+```
+
+{% enddetails %}
+
+### Test du programme
+
+Voici quelques captures d'écran de ce que le programme produit:
+
+![Image partie normale](Image5.png)
+*Image d'une partie en cours, avec une pièce sélectionnée*
+
+![Image échec](Image6.png)
+*Image d'une situation d'échec par les Blancs*
+
+![Image échec et mat](Image7.png)
+*Image d'une situation de fin de partie (échec et mat)*
+
+## Bilan du deuxième sprint
+
+Tout les éléments du backlog ont été réalisés, excepté la fonctionnalité du retournement de plateau. En effet, j'ai largement sous-estimé la difficulté de cette fonctionnalité, car elle implique d'inverser toutes les coordonnées présentes dans le code et cela prendrait un temps considérable.

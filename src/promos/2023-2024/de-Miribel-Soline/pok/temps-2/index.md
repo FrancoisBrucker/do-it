@@ -32,7 +32,8 @@ Sur la branche IT, la déclinaison de la stratégie aboutit à l’intégration 
 
 
 ## 1er entretien
-**Interlocuteur** : Roger Lenglet, collaborateur de la DSI dans la branche Transformation digitale et innovation, chargé de la cohérence SI et de l’innovation
+**Interlocuteur** : RL, collaborateur de la DSI dans la branche Transformation digitale et innovation, chargé de la cohérence SI et de l’innovation
+L'entretien a duré 1h. Se trouve ci-dessous un extrait de la grille de questions que j'avais établie. Les réponses proposées sont des synthèses de la prise de note que j'ai assurée pendant la discussion.
 
 ### Origine d'une transformation digitale
 {% exercice %}
@@ -71,15 +72,15 @@ Quels sont les éléments de la transformation digitale de Sfil ?
 - **L’environnement de travail** : en juin dernier, l’entreprise a déménagé de bureaux fixes vers un nouveau site de haute qualité environnementale dans lequel les locaux sont aménagés en flexoffice. Ce déménagement et cette nouvelle organisation ont nécessité la mise en place de nouveaux outils, l’achat de nouveau matériel pour les salles de réunion et leur intégration.
 {% enddetails %}
 
-### Métier de R.Lenglet
+### Métier de RL
 {% exercice %}
 Quel est votre rôle et votre part de participation à cette transformation digitale ?
 {% endexercice %}
 {% details "réponse"  %}
-R. Lenglet est responsable de la cohérence du SI et de l’innovation. Cette double casquette peut sembler un peu contradictoire. 
+RL est responsable de la cohérence du SI et de l’innovation. Cette double casquette peut sembler un peu contradictoire. 
 En tant qu’architecte fonctionnel, il est chargé de cartographier la DSI. Il est aussi responsable de la conformité en termes de technique : les solutions mises en place sont  des solutions connues et maîtrisées que l’on peut catégoriser. A ce titre, il valide aussi les projets soumis en comité.
-En tant que responsable de l’innovation, R. Lenglet est chargé d’aller voir ce qui se fait ailleurs (dans des salons notamment) en matière d’innovation technologique (VR ou IA par exemple). Il organise aussi des Proof Of Concept (POC), des ateliers avec les collaborateurs pour qu’ils participent à l’évolution des technologies de l’entreprise. Pour la VR, par exemple, la technologie est présentée puis les participants l’expérimentent. Ensuite, ils réfléchissent ensemble à de potentielles applications dans le cadre du travail. Pour la VR cela a notamment abouti à la visite des nouveaux locaux en VR pour une trentaine de collaborateurs. Concernant l’IA de très nombreuses questions de sécurité se posent à cause de la sensibilité des données manipulées. Le no-code/low-code est aussi arrivé par un POC qui a aboutit à une plateforme le rendant accessible à tous. Ce travail s’accompagne d’une démarche d’écoute et de lobbying pour faire connaître ces idées.
-Finalement, le métier de R. Lenglet est de faire la balance entre ces 2 aspects : explorer les nouvelles tendances pour les intégrer chez Sfil. Il s’occupe aussi de les présenter et expliquer au COMEX pour les éclairer dans leur prise de décision.
+En tant que responsable de l’innovation, RL est chargé d’aller voir ce qui se fait ailleurs (dans des salons notamment) en matière d’innovation technologique (VR ou IA par exemple). Il organise aussi des Proof Of Concept (POC), des ateliers avec les collaborateurs pour qu’ils participent à l’évolution des technologies de l’entreprise. Pour la VR, par exemple, la technologie est présentée puis les participants l’expérimentent. Ensuite, ils réfléchissent ensemble à de potentielles applications dans le cadre du travail. Pour la VR cela a notamment abouti à la visite des nouveaux locaux en VR pour une trentaine de collaborateurs. Concernant l’IA de très nombreuses questions de sécurité se posent à cause de la sensibilité des données manipulées. Le no-code/low-code est aussi arrivé par un POC qui a aboutit à une plateforme le rendant accessible à tous. Ce travail s’accompagne d’une démarche d’écoute et de lobbying pour faire connaître ces idées.
+Finalement, le métier de RL est de faire la balance entre ces 2 aspects : explorer les nouvelles tendances pour les intégrer chez Sfil. Il s’occupe aussi de les présenter et expliquer au COMEX pour les éclairer dans leur prise de décision.
 {% enddetails %}
 
 ### Les difficultés d'une transformation digitale
@@ -106,3 +107,22 @@ Le mot de la fin
 La transformation suit une trajectoire plus qu’une direction. Rigide et prévisible une direction ne convient pas à décrire une transformation qui repose sur des innovations, des opportunités et des difficultés en partie imprévisibles. L’objectif de la transformation est connu, le meilleur chemin pour l’atteindre n’est pas forcément le plus direct.
 {% enddetails %}
 
+## Horodatage
+### Sprint 1
+| Tâche                                                                            | Temps |
+|----------------------------------------------------------------------------------|-------|
+| Recherche d'informations et de documentations sur les transformations digitales  | 1h    |
+| Prise de contact avec les collaborateurs                                         | 30min |
+| Compréhension de l'activité et l'organisation de Sfil                            | 30min |
+| Recherche d'informations sur la transformation digitale en cours chez Sfil       | 1h    |
+| Préparation de la grille de questions pour l'entretien n°1                       | 1h    |
+| Entretien n°1                                                                    | 1h    |
+| Mise en forme du compte-rendu de l'entretien                                     | 2h    |
+| Comparaison de la transformation de Sfil avec les informations générales trouvées| 1h    |
+| Compréhension de la transformation de Sfil au vue de sa stratégie globale        | 1h    |
+
+
+### Sprint 2
+| Tâche                                                                            | Temps |
+|----------------------------------------------------------------------------------|-------|
+| ???                                                                              | Xh    |
