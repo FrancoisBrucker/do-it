@@ -149,9 +149,55 @@
 <h2>1. Components</h2>
 <p>En React, un composant est comme une boîte autonome qui contient une partie spécifique de ce que l'on voit à l'écran. C'est comme si le code étaut constituée de plusieurs briques différentes, et chaque brique est un composant. Un composant peut être aussi bien un petit bouton ou quelque chose de plus complexe comme une barre de navigation, un form...<br>
 C'est très pratique pour réutiliser un élément d'un code à un autre, ou même plusieurs fois dans le même code.</p>
+<p>Exemple de Component très simple, voici un bouton &quot;S'inscrire&quot; placé dans un div :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"buttonDiv"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>button<span class="token operator">></span><span class="token constant">S</span>'inscrire<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
+</code></pre>
 <h2>2. Props</h2>
 <p>les composants peuvent recevoir des &quot;props&quot;, qui sont comme des instructions ou des données que le composant parent transmet à ses composants enfants. Les &quot;props&quot; permettent de personnaliser le comportement d'un composant et de le rendre adaptable et réutilisable dans différentes parties de l'application.</p>
+<p>Par exemple, je peux mettre un props à mon component Button créé au dessus :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> text <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"buttonDiv"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>button<span class="token operator">></span><span class="token punctuation">{</span>text<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
+</code></pre>
+<p>Je peux maintenant créer plusieurs boutons différents :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./components/Button'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button text<span class="token operator">=</span><span class="token string">"connexion"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button text<span class="token operator">=</span><span class="token string">"Inscription"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
 <h2>3. States</h2>
+<p>En plus des props, React propose le concept d'état (state) pour gérer les données qui changent au fil du temps à l'intérieur d'un composant.</p>
 <h2>4. React pour mon site</h2>
 <p>Pour faire mon site du memory en React j'ai du créer plusieurs components :</p>
 <ul>
