@@ -225,27 +225,39 @@
 <ul>
 <li>Interaction lorsqu'on se fait frapper (1h)[]</li>
 <li>Commande de blocage des attaques adverses (1h) []</li>
-<li>Ajout de coups divers (attaques aériennes, accroupies, spéciales,...) (1h) []</li>
+<li>Ajout de coups divers (attaques accroupies) (1h) [X]</li>
 </ul>
 </li>
 <li>
 <p>Implémentation des mécaniques de jeu (2h30) []</p>
 <ul>
-<li>PV (2h) []</li>
+<li>PV (2h) [X]</li>
 <li>Ecran de victoire (30 min) []</li>
 </ul>
 </li>
 <li>
-<p>IA (4h) []</p>
+<p>Multijoueur (4h) []</p>
 <ul>
-<li>Bot facile <strong>et difficile</strong> (2h) []</li>
+<li>Bot facile <strong>et difficile</strong> <s>(2h)</s> (2h30) [X]</li>
 <li><s>Bot difficile</s> Multijoueur local (2h) []</li>
 </ul>
 </li>
 <li>
-<p>Déploiement (30 min)</p>
+<p>Déploiement (30 min)[X]</p>
 </li>
 </ul>
+<h2>Résumé du Sprint 2</h2>
+<p>Pour commencer, je me suis rendu compte que la manière dont les attaques et les hitbox étaient codées n'étaient pas adaptées si je voulais ajouter plusieurs personnages : je me retrouverais alors avec énormément de fichiers script différents pour chaque personnage. J'ai donc commencé par éditer le code et les animations pour avoir une base générale de mouvements auquel n'importe quel personnage aurait accès. Bien que j'ai avancé là dessus, je n'ai pas réussi à aboutir et pour l'instant le personnage joueur utilise le même script qu'avant.<br>
+J'ai aussi refait la manière dont étaient codées les animations, pour pouvoir plus tard ajouter d'autres animations lorsque je voudrais rajouter des attaques et des mouvements pour un personnage. J'ai aussi exploré des outils du moteur pour éliminer un maximum de fonctions à coder. Moins j'ai de mécanismes compliqués à coder, mieux je me porte.</p>
+<p>Pour avoir un jeu à 2 joueurs/contre l'IA, il fallait que je crée un autre personnage capable de se déplacer et de combattre, j'en ai donc fait un rapidement à partir du mannequin d'entraînement, qu'il remplacera dorénavant. Concernant l'IA, je souhaitais faire 2 niveaux de difficulté, mais le jeu est tellement basique qu'on ne pourrait pas faire une IA avancée (on ne peut que bouger de droite à gauche et faire 1 attaque).</p>
+<p>Le terme d'Intelligence Artificielle est un peu abusif, car c'est en réalité un simple algorithme. L'ennemi va regarder la distance entre le joueur et lui-même : plus il est proche du joueur, plus il a de chances d'initier une attaque. Sinon, il se déplace vers le joueur. De plus, si le joueur réussit à sauter derrière le bot, il va se retourner et continuer son assaut. Le bot a accès à 2 attaques : une attaque debout et une attaque accroupie.</p>
+<p><img src="D%C3%A9mo.gif" alt="L'ennemi IA en action"><br>
+L'ennemi IA en action. Il s'approche du joueur, fait une attaque accroupie et une attaque debout. Il y a aussi une probabilité qu'il ne prenne pas d'action lorsqu'il est proche du joueur, histoire qu'il ne fasse pas que des attaques.</p>
+<p>J'ai aussi importé des textures de barre de vie, mais je n'ai pas réussi à finaliser la programmation, et donc pour l'instant il y a des barres de vie purement décoratives. Au lieu de cela, j'ai rajouté la possibilité de jouer à la manette. Enfin, j'ai exporté le projet et l'ai compressé en un fichier .exe.</p>
+<p>Tout le projet est sur mon <a href="https://github.com/VlaadimirJ/pok-2-vladimir-jeantroux">GitHub</a>.</p>
+<h3>Difficultés rencontrées</h3>
+<p>Bien que c'est un cheminement normal lorsque l'on apprend, se rendre compte que ce que l'on a fait n'est pas optimal et devoir tout recommencer est assez frustrant. Il y a aussi toujours le problème de ne pas pouvoir comprendre l'aide qu'on puisse trouver sur Internet et les forums car le code proposé est obsolète car a la syntaxe d'une version précédente.</p>
+<p>Un jeu de combat est aussi un projet ambitieux pour un 1er jeu vidéo, et malgré ces 20h passées dessus, je suis encore incroyablement loin d'aboutir à quelque chose qu'on peut qualifier de jeu. J'ai dû travailler en apprenant tout le moteur Godot et le langage associé, et j'ai aussi progressé assez lentement sur des notions comme les interactions entre personnages ou le codage de l'IA, voire rencontré des impasses. J'ai préféré laisser tomber certaines notions pour travailler sur d'autres.</p>
 <h2>Glossaire</h2>
 <p>Hitbox : zone invisible autour d'un objet dans un jeu vidéo, déterminant les interactions et les collisions avec d'autres éléments du jeu.</p>
 <h2>Bibliographie</h2>
@@ -253,16 +265,28 @@
 <li>Documentation de Godot Engine <a href="https://docs.godotengine.org/en/stable/index.html">https://docs.godotengine.org/en/stable/index.html</a></li>
 <li>Godot Crash Course for Beginners pour apprendre comment fonctionne le moteur <a href="https://www.youtube.com/watch?v=S8lMTwSRoRg&amp;t=2537s">https://www.youtube.com/watch?v=S8lMTwSRoRg&amp;t=2537s</a></li>
 <li>Tournament Fighter | Basic Input tutorial pour l'implémentation des hitbox <a href="https://www.youtube.com/watch?v=XrR5jibBVxo">https://www.youtube.com/watch?v=XrR5jibBVxo</a></li>
+<li>Godot Tutorial || Part 5 || Tournament Fighter || Heads Up Display <a href="https://www.youtube.com/watch?v=SZnz6nWTRZo&amp;list=PLvz6jVtRjve0RbEmoKM_42k_J1KJw9y9W&amp;index=5">https://www.youtube.com/watch?v=SZnz6nWTRZo&amp;list=PLvz6jVtRjve0RbEmoKM_42k_J1KJw9y9W&amp;index=5</a></li>
 </ul>
+<p><strong>Horodatage</strong></p>
+<p><em>Sprint 1</em></p>
 <blockquote>
-<p><strong>Horodatage</strong><br>
-Samedi 09/12 : Prise en main de Godot (~2h30)<br>
-Samedi 09/12 : Création du menu principal et de l'arène (~30 min)<br>
-Samedi 09/12 : Codage des mouvements et saut (1h)<br>
-Dimanche 10/12 : Réécriture complète du code lié aux mouvements (2h)<br>
-Dimanche 10/12 : Animation du personnage jouable (1h)<br>
-Dimanche 10/12 : Implémentation des hitbox et d'un mannequin d'entraînement (2h)<br>
-Dimanche 10/12 : Implémentation d'un compte à rebours (1h)</p>
+<p>Prise en main de Godot (~2h30)<br>
+Création du menu principal et de l'arène (~30 min)<br>
+Codage des mouvements et saut (1h)<br>
+Réécriture complète du code lié aux mouvements (2h)<br>
+Animation du personnage jouable (1h)<br>
+Implémentation des hitbox et d'un mannequin d'entraînement (2h)<br>
+Implémentation d'un compte à rebours (1h)</p>
+</blockquote>
+<p><em>Sprint 2</em></p>
+<blockquote>
+<p>Création du 2e personnage (30mn)<br>
+Refonte des animations et ajout des attaques accroupies (1h30)<br>
+Programmation de l'IA (2h30)<br>
+Nouveau codage des coups et des hitbox (2h)<br>
+Barres de PV (1h30)<br>
+Ajout de contrôles manette (30mn)<br>
+Déploiement (30mn)</p>
 </blockquote>
 
 
