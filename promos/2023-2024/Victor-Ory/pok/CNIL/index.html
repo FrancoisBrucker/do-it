@@ -158,16 +158,12 @@
 <h2>Objectifs</h2>
 <p>Ci-dessous sont énoncés les objectifs que je me suis fixés, notés en termes de difficulté sur une échelle de trois étoiles :</p>
 <ul>
-<li>Réaliser une <a href="https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd">AIPD</a>★★★☆☆</li>
+<li>Apprendre la méthode pour faire un <a href="https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd">AIPD</a>; ★★☆☆☆</li>
+<li>Réaliser une <a href="https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd">AIPD</a>★★★★☆</li>
 </ul>
 <p><em>★★★☆☆</em> = Difficulté</p>
-<h2>Prévision pour le point 1 :</h2>
-<p>Pour atteindre ce premier objectif, j'ai défini les étapes suivantes :</p>
-<ol>
-<li>Acquérir une compréhension approfondie de la méthode d'analyse d’impact relative à la protection des données (AIPD).</li>
-<li>Élaborer un calendrier de mise en conformité avec le RGPD.</li>
-</ol>
-<h3>Plan d'action au 25/11 : Disponibilité limitée</h3>
+<h2>Première étape : Comprendre la méthode :</h2>
+<h3>le 25/11 :</h3>
 <ul>
 <li><a href="https://www.cnil.fr/fr/ce-quil-faut-savoir-sur-lanalyse-dimpact-relative-la-protection-des-donnees-aipd">Approfondir ses connaissances sur l'AIPD</a></li>
 </ul>
@@ -180,13 +176,40 @@ Résumé des 3 étapes d'une AIPD :</p>
 </ol>
 <p>Répond aux questions sur le quand, les exceptions, la définition, et les obligations de l'AIPD.</p>
 <p>Une méthode détaillée est fournie à travers plusieurs <a href="https://www.cnil.fr/sites/cnil/files/atoms/files/cnil-pia-1-fr-methode.pdf">documents</a>, démontrant la conformité.</p>
-<h3>Plan d'action au 29/11 : Temps conséquent</h3>
+<h3>Le 29/11 :</h3>
 <p>Lecture approfondie des dossiers de la CNIL dédiés à <a href="https://www.cnil.fr/sites/cnil/files/atoms/files/cnil-pia-1-fr-methode.pdf">la méthode</a>, <a href="https://www.cnil.fr/sites/cnil/files/atoms/files/cnil-pia-2-fr-modeles.pdf">les modèles</a> et <a href="https://www.cnil.fr/sites/cnil/files/atoms/files/cnil-pia-3-fr-basesdeconnaissances.pdf">les bases de connaissances</a>.</p>
-<h3>Plan d'action au 11/12 : Rassemblement des informations</h3>
-<p>Je collecte les données nécessaires, les informations et les accès requis pour cette étude auprès de mes collègues du GInfo.</p>
-<p>Je suis prêt à entamer l'étude de cas en analysant une application développée par le GInfo : <a href="https://my.centrale-assos.fr/">MyCentraleAsso</a>, offrant un service d'annuaire, calendrier associatif et centralisation d'informations utiles.</p>
-<h2>Prévision pour le point 2 :</h2>
-<p>J'effectuerai une étude de cas en appliquant les méthodes acquises lors de la phase précédente.</p>
+<h3>Le 11/12 : Préparation de l'AIPD</h3>
+<p>Je collecte les données nécessaires, les informations et les accès requis pour cette étude auprès de mes collègues du GInfo, notamment le Gitlab du GInfo.</p>
+<p>Je suis donc prêt à entamer l'étude de cas en analysant une application développée par le GInfo : <a href="https://my.centrale-assos.fr/">MyCentraleAsso</a>, offrant un service d'annuaire, calendrier associatif et centralisation d'informations utiles.</p>
+<h2>L'AIPD en question :</h2>
+<p>L'AIPD peut être téléchargé ici même : <a href="../CNILMod%C3%A8les.pdf">Clique-moi dessus !</a> (je viens de la supprimer sans faire exprès de mon ordi, donc pour le moment, c'est le modèle vide).</p>
+<p>Mais pour résumer, la première partie sert à définir le périmètre de l'application MyCentraleAsso.</p>
+<h4>Respect des droit fondamentaux :</h4>
+<p>Ensuite très vite, il convient d'étudier si le site web respecte les réglementations en relation avec les droits fondamentaux tel que le droit de rectification, le droit à l'oubli. Ainsi, on s'intéresse à quelle traitement des données est effectué pour ensuite se questionner sur la finalité, vérifier que le consentement est recueilli, vérifier quelle informations est récolté sur les différents individus. On résume cela dans un tableau qui indique pour chaque donnée si elle respecte  :</p>
+<ul>
+<li>la Minimisation des données;</li>
+<li>la Qualité des données;</li>
+<li>Un fondement juridique;</li>
+<li>Une finalité définie et explicite;</li>
+</ul>
+<p>On y associe les mesures qui assure un droit.</p>
+<h4>Sécurité technique :</h4>
+<p>Ici, nous nous assurons de la mise en place des techniques informatiques nécessaires à la sécurité, la confidentialité des données traitées : chiffrement, backup, anonymisation des données, le monitoring, ...<br>
+On y décrit aussi la gouvernance, les procédures de gestion de projet, ...</p>
+<p>Ensuite nous listons les risques potentiels qui pourraient nuire à l'association, les utilisateurs ou autres : Ici les risques principaux identifiés ont été :</p>
+<ul>
+<li>la disparition des données;</li>
+<li>un accès illégitime aux données;</li>
+<li>une modification non désirée des données;</li>
+</ul>
+<h4>Les risques :</h4>
+<p>La disparition des données est peu probable grâce à la mise en place d'un stockage en RAID1 sur les serveur du GINFO et une partie est sauvegardée sur un serveur OVH.</p>
+<p>Concernant un accès illégitime au données, on pense particulièrement à un ordinateur avec des accès privilégiés laissé ouvert. Pour remédier à cela, on préconise un rappel des bonnes pratiques de sécurité d'accès physiques aux installations ainsi que les pratiques de connexion pour diminuer la probabilité de ces événements, ainsi que la possible instauration d'un 2FA. De plus, on a vu plusieurs campagnes de phishing au sein de Centrale Marseille, donc un rappel des bonnes pratiques ne serait pas de trop.</p>
+<p>Une modification non désirée des données pourrait arrivée suite un dysfonctionnement des librairies, ainsi on souhaite établir un ensemble de procédures annuelles menés par le responsable Réseau du GInfo pour mettre à jour les infrastructures et par les équipes de développement pour le code.</p>
+<p><img src="../MatriceRisque.png" alt="Matrice des risques"></p>
+<p>Concernant les possibles mises en place de processus de chiffrement, d'anonymisation, vu l'application et l'ampleur de l'installation et les capacités de l'association, beaucoup de mesures sembleraient être trop importantes face aux risques.</p>
+<h3>Conclusion</h3>
+<p>C'est un exercice très formateur, qui semble être essentielle pour travailler dans la protection des données. Cela nous force à nous poser des questions importantes pour assurer la pérennité des différentes infrastructures tout en couvrant divers domaines.</p>
 
 
 </article>
