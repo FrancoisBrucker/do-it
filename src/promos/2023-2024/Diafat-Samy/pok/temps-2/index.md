@@ -92,15 +92,38 @@ Et voici la vidéo youtube que j'ai suivi : [petit projet sympas](https://www.yo
 
 |Intitulé|Complexité|Temps estimé|Temps réalisé|
 |---|---|---|---|
-|- Terminer mon petit projet sympas <br> - Commencer un projet un peu plus conséquent | 5 <br> 13| 2h <br> 10h|
+|- Terminer mon petit projet sympas <br> - Commencer un projet un peu plus conséquent | 3 <br> 5| 2h <br> 10h| **3h** <br> **8h**
 
 
 Pour le second Sprint, je souhaite terminer mon premier projet Flutter.
 Je souhaiterais ensuite rejoindre Monsieur Assane Diouf sur son fameux projet CupCare ou démarrer un projet en solo si cela n'est pas possible.
 
 
+**Ce qu'il s'est passé durant le Sprint 2**
 
 
+Durant le deuxième Sprint, j'ai tout d'abord terminé mon petit projet solo :
+
+![Openclassroom_accueil](./work.png)
+
+Assane a accepté de me laisser travailler avec lui sur son projet d'application [CupCare](https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-2/). Je vous invite à aller voir sa superbe application !
+
+Voici comment nous avons travaillé ensemble.
+
+J'ai tout d'abord eu accès au Figma de son projet ainsi qu'au code mis sur github. Nous avons ensuite discuté de la répartition des tâches afin d'être efficace. Voici le Backlog du projet pour le Sprint 2 :
+
+- [ ] Finir la création des pages (3) **(Samy)**
+  - [ ] Page d'un produit (1) **(Samy)**
+  - [ ] Page d'une machine (1) **(Samy)**
+  - [ ] Login et logout avec validation du form (1) **(Samy)**
+- [ ] Faire une navigation fonctionnelle (sans se préoccuper de l'authentification) (1) **(Samy)**
+- [ ] Ajouter des données factices dans Firebase (1) **(Assane)**
+- [ ] Lier Firebase à Flutter (1) **(Assane)**
+- [ ] Mettre en place l'authentification (3) **(Assane)**
+  - [ ] Faire les config sur Firebase (1) **(Assane)**
+  - [ ] Afficher les page de connexion/inscription que si le user n'est pas connecté (2) **(Assane)**
+- [ ] Mettre à jour les pages avec les données (2) **(Assane)**
+- [ ] Ajouter de vraies données (3) **(Assane)**
 
 
 

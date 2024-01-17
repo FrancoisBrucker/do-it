@@ -41,6 +41,11 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 4. Création des pages du site en HTML et en CSS
 5. Retour d'expérience du Sprint 1
 6. Objectifs du Sprint 2 rationnalisés
+7. Documentation sur l'API Spotify
+8. Mise en pratique
+9. Appel à l'API
+10. Récupérer le top artiste et genres de l'utilisateur
+11. Retour d'expérience du Sprint 2
 
 Le but de ce POK est de mettre en pratique mon MON1.2 sur le développement web. Je souhaite créer un site web fonctionnel, qui utilise l'API de Spotify. Ce site permettrait à l'utilisateur de connecter son compte Spotify personnel, et en retour afficher une analyse de ses goûts musicaux.
 
@@ -1429,8 +1434,237 @@ Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spo
 
 Je choisis d'abord, comme annoncé en préambule, de visualiser les genres de musiques écoutés par l'utilisateur sur un graphique. J'aimerais aussi afficher les 5 artistes favoris de l'utilisateur.
 
+Enfin, la visualisation des paramètres des musiques pourrait être affiché de telle sorte :
 ![alt](Music-features.jpg)
+Source de l'image : Researchgate
 
 ### Récupérer le top artiste et genres de l'utilisateur
 
 Pour récupérer le top artiste et genres de l'utilisateur, la méthode précédente ne suffit pas : ce ne sont pas des *datas* remplies dans son profil, mais des *datas* qu'il faut extraire de manière dynamique avec une méthode *GET()*. Je modifie donc le script Javascript et je rajoute dans le code HTML une liste pour afficher les 5 top artistes.
+
+{% details "Cliquez pour afficher le **code JavaScript** du script d'appel à l'API avec les Top" %}
+
+```shell
+const clientId = "70b7021a56234ecda100b97df932edec";
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
+
+function generateCodeVerifier(length) {
+    let text = '';
+    let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (let i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
+
+async function generateCodeChallenge(codeVerifier) {
+    const data = new TextEncoder().encode(codeVerifier);
+    const digest = await window.crypto.subtle.digest('SHA-256', data);
+    return btoa(String.fromCharCode.apply(null, [...new Uint8Array(digest)]))
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '');
+}
+
+async function fetchTopArtists(token) {
+    const apiUrl = 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=5&offset=0';
+
+    const result = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        },
+    });
+
+    return await result.json();
+}
+
+async function fetchTopTracks(token) {
+    const apiUrl = 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=5&offset=0';
+
+    const result = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        },
+    });
+
+    return await result.json();
+}
+
+if (!code) {
+    redirectToAuthCodeFlow(clientId);
+} else {
+    const accessToken = await getAccessToken(clientId, code);
+    const profile = await fetchProfile(accessToken);
+    const topArtists = await fetchTopArtists(accessToken);
+    const topTracks = await fetchTopTracks(accessToken);
+
+    populateUI(profile, topArtists, topTracks);
+}
+
+export async function redirectToAuthCodeFlow(clientId) {
+    const verifier = generateCodeVerifier(128);
+    const challenge = await generateCodeChallenge(verifier);
+
+    localStorage.setItem("verifier", verifier);
+
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("response_type", "code");
+    params.append("redirect_uri", "http://localhost:5173/callback");
+    params.append("scope", "user-read-private user-read-email");
+    params.append("code_challenge_method", "S256");
+    params.append("code_challenge", challenge);
+
+    document.location = `https://accounts.spotify.com/authorize?${params.toString()}`;
+}
+
+export async function getAccessToken(clientId, code) {
+    const verifier = localStorage.getItem("verifier");
+
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("grant_type", "authorization_code");
+    params.append("code", code);
+    params.append("redirect_uri", "http://localhost:5173/callback");
+    params.append("code_verifier", verifier);
+
+    const result = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params
+    });
+
+    const { access_token } = await result.json();
+    return access_token;
+}
+
+async function fetchProfile(token) {
+    const result = await fetch("https://api.spotify.com/v1/me", {
+        method: "GET", headers: { Authorization: `Bearer ${token}` }
+    });
+
+    return await result.json();
+}
+
+function populateUI(profile, topArtists) {
+    document.getElementById("displayName").innerText = profile.display_name;
+
+    if (profile.images[0]) {
+        const profileImage = new Image(200, 200);
+        profileImage.src = profile.images[0].url;
+        document.getElementById("avatar").appendChild(profileImage);
+        document.getElementById("imgUrl").innerText = profile.images[0].url;
+    }
+
+    document.getElementById("id").innerText = profile.id;
+    document.getElementById("email").innerText = profile.email;
+    document.getElementById("uri").innerText = profile.uri;
+    document.getElementById("uri").setAttribute("href", profile.external_urls.spotify);
+    document.getElementById("url").innerText = profile.href;
+    document.getElementById("url").setAttribute("href", profile.href);
+
+    if (topArtists && topArtists.items) {
+        const topArtistsList = document.getElementById("topArtistsList");
+        topArtistsList.innerHTML = ""; 
+
+        topArtists.items.forEach(artist => {
+            const listItem = document.createElement("li");
+            listItem.innerText = artist.name;
+            topArtistsList.appendChild(listItem);
+        });
+    }
+
+    if (topTracks && topTracks.items) {
+        const topTracksList = document.getElementById("topTracksList");
+        topTracksList.innerHTML = "";
+
+        topTracks.items.forEach(track => {
+            const listItem = document.createElement("li");
+            listItem.innerText = `${track.name} - ${track.artists.map(artist => artist.name).join(', ')}`;
+            topTracksList.appendChild(listItem);
+        });
+    }
+}
+
+```
+
+{% enddetails %}
+
+et on adapte le code HTML pour intégrer les réponses de l'API : `topTracksList` et `topArtistsList`.
+
+{% details "Cliquez pour afficher le **code HTML** adapté avec les Tops" %}
+
+```shell
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Analyse - Spotistats ✅</title>
+        <link href="stylesAnalyse.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="src/script.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html" style="width: 15%; height: 60%;">
+                <img src="Allonge.png" class="logo" width="100%" height="100%">
+            </a>
+            <a class="FAQ" href="FAQ.html">FAQ</a>
+            <button class="Connexion">
+                <span id="avatar" width="38" height="39"></span>
+                <span class="ButtonText"><span id="displayName"></span></span>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="column">
+                <h1> Votre top 5 des artistes les plus écoutés.</h1>
+                <p>
+                    <ul id="topArtistsList"></ul> 
+                </p>
+            </div>
+            <img src="../spectre.jpg" class="spectre">
+        </div>
+
+        <div class="container2">
+            <img src="../Music-features.jpg" class="graphe">
+            <div class="column2">
+                <h1> Votre top 5 des musiques les plus écoutées.</h1>
+                <p><ul id="topTracksList"></ul>
+                </p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
+
+```
+
+{% enddetails %}
+
+Quand je lance l'API, j'obtiens maintenant mon TOP artiste et musique. La photo de profil a disparu, c'est un petit bug sur lequel je m'attarderai après. Le CSS est aussi à adapter, mais ce n'est pas le but de mon projet.
+
+![alt](Analyse1.png)
+![alt](Analyse2.png)
+
+## Retour d'expérience du Sprint 2
+
+J'ai réussi à lier l'API Spotify avec mon front-end pour permettre à l'utilisateur de s'identifier, et d'arriver sur une page qui *display* ses informations personnalisées et ses top artistes/musiques. C'est globalement l'idée que j'avais de mon POK.
+Par contre je n'ai pas eu le temps de m'attarder sur la visualisation des données car l'a partie API m'a pris beaucoup plus de temps que prévu.
+
+Bilan du temps passé :
+
+- Créer la page principale en HTML et y définir les styles en CSS (★☆☆☆☆, **1 heure estimée**, 1 heure réelle)
+- Documentation sur les API de Spotify, leur intégration et leurs features (★☆☆☆☆, **2 heures estimées**, 2 heures réelles)
+- Lier l'API de Spotify avec mon bouton Connexion (★★★☆☆, **2 heures estimées**, 4 heures réelles)
+- Comprendre comment récupérer les données de l'utilisateur qui s'est connecté (★★★☆☆, **2 heures estimées**, 3 heures réelles)
+- Rechercher les visualisations de données musicales existantes, et lesquelles sont pertinentes dans mon cas (★☆☆☆☆, **0 heure 30 estimée**, 0h30 réelle)
+- Déterminer quelle technologie utiliser pour la visualisation (★☆☆☆☆, **0 heure 30 estimée**)
+- Réaliser une première visualisation des données de l'utilisateur, sous une forme à préciser (★★★☆☆, **2 heures estimées**)

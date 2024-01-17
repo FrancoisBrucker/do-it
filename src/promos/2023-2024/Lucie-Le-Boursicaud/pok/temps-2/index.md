@@ -201,12 +201,77 @@ Et les premiers composants :
 + [x] Ajouter le composant en-tête aux pages *Réservation* et *Carte* - 15min
 + [x] Ajouter les composants des autres plats sur la page *Carte* - 15min
 + [x] Ajouter les couleurs aux différentes pages - 2H
-+ [x] Réaliser les animations d'interraction hoover sur les boutons - 1H
++ [x] Réaliser les animations d'interaction hoover sur les boutons - 1H
 + [x] Réaliser les animation non interractive sur la page *Home* - 2H
 + [x] Ajouter les photos sur toutes les pages - 1H
 
+### Composants pour les différentes pages
+En utilisant les outils de Figma, j'ai créé une structure de base pour l'en-tête de page. J'ai essayé plusieurs modèles mais je trouvais que le plus sobre était celui qui rendait le mieux finalement.
+
+<div style="display:flex">
+<div><img src="entete2.png"></div>
+<div><img src="entete3.png"></div>
+<div><img src="entete.png"></div>
+</div>
+
+J'ai aussi fait différents prototypes pour les catégories de plats et j'en ai gardé un assez sobre. 
+
+<div style="display:flex">
+<div><img src="nomcat.png"></div>
+<div><img src="cat2.png"></div>
+<div><img src="cat3.png"></div>
+</div>
+
+### Réservation bien prise en compte
+Pour ce composant je me suis inspirée de ce que j'ai trouve en me baladant sur les templates de site pour essayer de recréer quelque chose de similaire et dans l'esprit du mien. 
+
+<div style="display:flex">
+<div><img src="enr.png"></div>
+</div>
+
+### Ajouter les couleurs aux différentes pages 
+Cette partie là était pas vraiment évidente parce que j'ai testé plusieurs teintes et sur plusieurs éléments pour voir ce qui ressortait le mieux. Au final mettre la couleur sur les boutons de navigation et en bas de page m'a semblé être le choix le plus judicieu. En rajoutant trop de couleurs un peu partout j'avais peur de perdre l'utilisateur.
+
+### Réaliser les animations 
+Je voulais qu'il y ait des animations sur les boutons lors du survol et lors du clic et aussi ajouter des animations sur les en-tête de page lors de l'arrivée sur une page. Pour la page principale j'ai aussi des animations sur les boutons qui apparaissent à l'écran. 
+
+<div style="display:flex">
+<div><img src="boutonhme.png"></div>
+</div>
+
+A l'arrivée sur la page le bouton n'est qu'un simple trait, puis il s'élargit jusqu'à devenir le bouton, et lors de son survol il grossit. J'ai bien toutes les animations que je voulais et je me suis servie de mon MON pour un peu mieux gérer les transitions et les temps d'animations optimaux.
+
+### Retravail de la structure de certaines pages
+La page principale ne me plaisait pas. J'ai donc essayé d'autres structures jusqu'à trouver celle qui me plaisait le plus. C'est aussi celle que l'on retrouve sur beaucoup de site web, elle n'est donc pas très originale mais elle fonctionne bien avec l'esprit du site. Le fait de l'avoir autant simplifié permet à l'utilisateur de se concecentrer sur l'essentiel de ce qu'il a envie de voir. 
+
+Exemples : 
+<div style="display:flex">
+<div><img src="lafourchette.png"></div>
+<div><img src="cafeoneleventh.png"></div>
+</div>
+
+<div style="display:flex">
+<div><img src="homepagecouleur1.png"></div>
+<div><img src="homecouleurs.png"></div>
+</div>
+
+#### Réalisation finale 
+<div style="display:flex">
+<div><img src="homecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="cartecouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="résacouleurs.png"></div>
+<div><img src="enrresacouleurs.png"></div>
+</div>
+<div style="display:flex">
+<div><img src="artcouleurs.png"></div>
+</div>
+
 ### Horodateur
-| Date | Heures passées | Indications | 
+| Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Jeudi 16/11  | 1H  | Travail sur le brief design |
 | Jeudi 16/11 | 2H | Travail sur le logo, les typographies, les couleurs, recherche sur ce qui se fait aujourd'hui|
@@ -216,10 +281,9 @@ Et les premiers composants :
 | Vendredi 8/12 | 2H | Amélioration composants |
 |---------- | --------- | ------- |
 | Jeudi 14/12 | 3H | Composants en-tête + plats + categories |
-| Jeudi 14/12 | 1H | Composants de réservation bien prise en compte + ajout des composants |
-| Jeudi 11/01 | 1H | Ajout des photos sur toutes les pages |
+| Jeudi 14/12 | 1H15 | Composants de réservation bien prise en compte + ajout des composants |
 | Samedi 13/01 | 1H30 | Ajout des couleurs sur les différentes pages |
-| Samedi 13/01 | 1H | Animations d'interraction sur les boutons |
+| Samedi 13/01 | 1H30 | Animations d'interraction sur les boutons |
 | Lundi 15/01 | 2H | Animation non interractive sur les pages |
-| Lundi 15/01 | 2H | Retravail de la structure de certaines pages |
+| Lundi 15/01 | 1H | Retravail de la structure de certaines pages |
 
