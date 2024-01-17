@@ -16,4 +16,4 @@ Voici la liste des MONs réalisés par mes soins au cours de l'année 2023-2024.
 ## Temps 2 : Montée en compétences DevOps
 
 * [MON 2.1 - Docker](./temps-2.1)
-* [MON 2.2 - Kubernetes & Elastic Search](./temps-2.2)
+* [MON 2.2 - Kubernetes](./temps-2.2)
