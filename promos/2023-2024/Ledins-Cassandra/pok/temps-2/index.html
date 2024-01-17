@@ -241,18 +241,32 @@ variable
 <h3>Style et déplacement de caméra</h3>
 <p>On importe ensuite une image pour donner du style à nos caractères. A chaque caractère est associé un petit sprite, par exemple un sprite de Chevalier pour notre héros qui en avait marre de ressembler à un @ qui se balade sur des , .</p>
 <h3>Monstres et arrivée des Components</h3>
-<ul>
-<li>Rappel à Unity</li>
-</ul>
+<p>Un héros qui se balade dans des couloirs ne fait pas un jeu, il faut donc rajouter du challenge : des ennemis. On va créer un script spawner qui s'occupera aussi bien de spawn des monstres que notre joueur. On spawn 1 monstre au centre de chaque salle. Grâce à notre image qui associe caractère et sprites (une font en fait), on peut faire spawn des orcs et goblins avec les caractères o et O.</p>
+<p>A ce moment là, la structure des scripts commence à se rapprocher de ce que j'ai pu faire dans Unity, on ajoute un script component, qui définira des components qu'on pourra ajouter à nos entités. Par exemple un nom, des points de vie, des intentions comme &quot;veut se déplacer&quot;...</p>
 <h3>Collisions et déplacements randomisés</h3>
+<p>On écrit un script de collision entre entité pour préparer le système de combat, et on ajoute un système de déplacement randomisé sur les monstres</p>
 <h3>Turn by Turn et système d'attaque</h3>
+<p>On ajoute un système de tour par tour, où les monstres ne bougent qu'après vous appuyez sur les touches de déplacement et attendent ensuite votre prochain input. Viens ensuite le système d'attaque, on remplace le script collision par un script de combat.</p>
 <h3>HUD et régéneration des points de vie</h3>
+<p>Se battre c'est bien, mais c'est toujours intéressant dans les jeux de pouvoir voir notre propre barre de vie ainsi que celle des ennemis. On ajoute un troisième layer HUD à notre console (on  avait un layer map avec le sol et les murs, un deuxième layer par dessus avec les entités). Et un système où si on reste sur place, on regagne de la vie.</p>
+<p>On rend aussi les déplacements des montres non-randomisés mais avec un Dijkstra (plus court chemin vers le héros). Je ne suis pas fan de ce système où des monstres à l'autre bout de la map courent ligne droite vers vous, je trouvais les déplacements randomisés plus dur à battre que des déplacements prévisibles.</p>
+<p>On a aussi maintenant la possibilité de régénérer des points de vie en restant sur place.</p>
+<p>Voilà donc à quoi ressemble le jeu finalement :</p>
+<p><img src="goblins.png" alt="image"></p>
 <h3>Condition de fin, Game Over ou Victory</h3>
+<p>L'affichage et le combat étant terminés, il faut pour notre MVP une condition de fin de jeu : défaite ou victoire. On implémente donc un écran de fin de jeu quand notre player tombe à 0 points de vie, et on rajoute une amulette avec un Dijkstra (cette fois au point le plus éloigné du spawn du joueur). Récupérer cette amulette est une condition de victoire qui nous affiche un message glorieux.</p>
+<p>Nous avons aussi la possibilté de recommencer le jeu en appuyant sur une touche.</p>
+<p><img src="amulet.png" alt=""><br>
+<img src="victory.png" alt=""></p>
 <h2>Fin du Sprint 2</h2>
-<p>Objectif accompli :thumbs_up:</p>
+<p>J'ai réussi à aller jusqu'à un MVP dans le temps imparti, je suis satisfaite de ça.<br>
+J'ai trouvé difficile pour ce POK de me donner des objectifs plus précis à part d'atteindre un certain niveau du livre.</p>
+<h2>Conclusion</h2>
+<p>Il a fallu bien s'accrocher dans ce livre qui devient de plus en plus mystique dès qu'on avance. J'ai pu remarquer des redondances dans le code donné par le livre, ou alors parfois on nous dit d'ajouter une ligne de code dans une fonction qui n'existe pas donc il faut deviner où ça va... Mais sinon les explications sont quand même très détaillée et assez claires. J'aimerais pouvoir le terminer après ça pour pouvoir comparer mon niveau de maîtrise des Game Component et Resources entre maintenant et une fois le jeu amélioré.</p>
+<p>Je vous conseille de lire la documentation car les concepts clés de Rust ne sont pas tous expliqués dans Hands-on Rust.</p>
 <h2>Sources</h2>
 <ul>
-<li><a href=".">Mon repo github avec les exercices, le flappy dragon et le dungeon crawler</a></li>
+<li><a href="https://github.com/Cledins/rust">Mon repo github avec les exercices, le flappy dragon et le dungeon crawler</a></li>
 <li><a href="https://doc.rust-lang.org/stable/book/title-page.html">La documentation Rust officielle</a></li>
 </ul>
 <h2>Horodateur</h2>
