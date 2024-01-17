@@ -130,12 +130,14 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://github.com/Omar-Salame/football-fantasy">Le Github du POK</a></p>
+<p><a href="https://github.com/Omar-Salame/football-fantasy">Le Github du POK1</a><br>
+<a href="https://github.com/Omar-Salame/football-fantasy-front">Le Github du Front</a></p>
 </div></div>
 <h2>Sommaire</h2>
 <ol>
 <li><a href="#section-1">Recap</a></li>
 <li><a href="#section-2">Sprint 1</a></li>
+<li><a href="#section-3">Sprint 2</a></li>
 </ol>
 <h2>Recap<a id="section-1"></a></h2>
 <p>Mon projet de fantasy football pour la ligue marocaine INWI Botola Pro1 a déjà accompli des étapes significatives. Jusqu'à présent, j'ai mis en place les fondations de la plateforme, en développant la structure HTML et CSS de base, en intégrant les données des joueurs et des équipes via un processus de webscraping, et en commençant à travailler sur des fonctionnalités backend telles que l'authentification des utilisateurs. J'ai également créé un design initial pour le site, y compris la modélisation du terrain et la page d'accueil. Alors que je me prépare à entamer la deuxième phase du projet, mon intention est de développer davantage la plateforme en ajoutant des fonctionnalités clés, en améliorant son esthétique et en rendant le site pleinement fonctionnel. Ce développement inclura l'implémentation d'un système de gestion d'équipes, d'un système de points basé sur les performances des joueurs, et d'une interface utilisateur améliorée pour une expérience plus immersive et compétitive pour les utilisateurs.</p>
@@ -310,6 +312,73 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
 <span class="token function">scrapeJournee</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">fixtures</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fixtures<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <img src="scrapbotola.png" width="700" height="550">
+<h2>2eme Sprint: Développement Front<a id="section-3"></a></h2>
+<h3>Backlog</h3>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Sous-Tâches</th>
+<th>Durée Estimée</th>
+<th>Durée Réelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><s>Transition HTML vers React</s></td>
+<td>1. Analyse des pages HTML/CSS existantes.<br>2. Création des composants React correspondants.<br>3. Intégration des composants dans l'architecture React.</td>
+<td>2 heures</td>
+<td></td>
+</tr>
+<tr>
+<td>Création de Composants React</td>
+<td>1. Conception de composants pour la navigation.<br>2. Développement de composants pour l'affichage des joueurs.<br>3. Création de composants pour la gestion d'équipe.</td>
+<td>2 heures</td>
+<td>3 heures</td>
+</tr>
+<tr>
+<td>Mise en Page et Design</td>
+<td>1. Adaptation du design pour React.<br>2. Amélioration du responsive design.<br>3. Personnalisation des styles avec CSS.</td>
+<td>2 heures</td>
+<td>2 heures</td>
+</tr>
+<tr>
+<td>Système de Sélection de Joueurs</td>
+<td>1. Conception de l'interface de sélection des joueurs.<br>2. Implémentation de la logique de sélection/désélection.<br>3. Intégration avec la gestion d'équipe.</td>
+<td>2 heures</td>
+<td>4 heures</td>
+</tr>
+<tr>
+<td>Intégration des Données avec React</td>
+<td>1. <s>Configuration de l'API pour récupérer les données.</s><br>2. Mise en place de l'état des composants pour gérer les données.<br>3. Affichage des données dans les composants.</td>
+<td>1 heure</td>
+<td>2 heures</td>
+</tr>
+<tr>
+<td>Styling des Composants</td>
+<td>1. Définition des styles de base pour les composants.<br>2. Adaptation des styles pour différents appareils.<br>3. Optimisation de l'expérience utilisateur.</td>
+<td>1 heure</td>
+<td>30 min</td>
+</tr>
+</tbody>
+</table>
+<h3>Apperçu du Front</h3>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="front_1.png" width="700" height="600"></td>
+<td style="text-align:center"><img src="front4.png" width="700" height="550"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="front_2.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="front3.png" width="700" height="550"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="front_3.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="front1.png" width="700" height="550"></td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
