@@ -88,7 +88,7 @@ Review Case Study III, “Blackout on the Eastern Seaboard!”
 
 ## Conclusion :
 
-En explorant le vaste domaine de l'OSINT, ce MON m'a offrert un aperçu des outils, des méthodes et des ressources essentiels pour ceux qui débutent dans cette discipline. De la méthode classique aux moteurs de recherche en passant par les réseaux sociaux. Il a même été utile dans les recherches du quotidien. 
+En explorant le vaste domaine de l'OSINT, ce MON m'a offert un aperçu des outils, des méthodes et des ressources essentiels pour ceux qui débutent dans cette discipline. De la méthode classique aux moteurs de recherche en passant par les réseaux sociaux. Il a même été utile dans les recherches du quotidien. 
 
 La découverte des motivations derrière l'OSINT, illustrée par le livre captivant de Bellingcat, souligne que cette discipline va bien au-delà de l'espionnage personnel. C'est un moyen structuré de collecter des informations, nécessitant ensuite une analyse méticuleuse pour obtenir des résultats significatifs.
 
