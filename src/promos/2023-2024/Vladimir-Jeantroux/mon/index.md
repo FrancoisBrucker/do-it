@@ -23,4 +23,10 @@ Ensemble des MON réalisés par Vladimir Jeantroux
 
 - [React Native et back end](./temps-2-1)
 
-- [Rust](./temps-2-2)
+- ["Apprendre Rust en codant un jeu"](./temps-2-2)
+
+### Temps 3
+
+-31
+
+-32

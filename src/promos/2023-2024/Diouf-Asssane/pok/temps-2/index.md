@@ -137,6 +137,15 @@ C'est donc une tache que je reporte pour le prochain sprint ! Je ne pense pas qu
 Certaines taches m'ont surpris car malgré une difficulté plutot faible elles ont été longues (ajouter Firebase au projet par exemple).
 J'ai donc pu terminer en 20H pile, je remercie Samy pour l'aide qu'il m'a apportée.
 
+## Ajout de dernière minute
+Je ne peux pas vous faire tester l'application directement sur votre téléphone car le processus de publication sur Google Play et l'App Store prend plusieurs jours et est payant. Cependant, Flutter est un framework multiplateforme, je peux donc construire une version web et déployer ça pour vous montrer !
+
+**Attention** L'application n'a pas été pensée pour bien s'afficher sur d'autres appareils que les téléphones, je vous recommande donc d'essayer l'application sur votre mobile (ou avec une fenêtre pas trop large). Cependant, il est possible dans Flutter de faire des UI qui s'adapte aux différents appareils et aux différentes taille d'écran (comme des medias queries).
+
+<iframe src="https://cupcare.assanediouf.com" width="353px" height="745px"></iframe>
+
+*Retrouvez l'application [ici](https://cupcare.assanediouf.com)*
+
 ## Conclusion
 J'ai pu compléter les taches que je m'étais attribuées, cependant il resterai encore quelques petites choses à faire sur ce projet à mon avis. Par exemple, pour l'instant le pseudo de l'utilisateur n'est pas accessible dans l'application. Et il faudra continuer à ajouter des produits et mettre à jour la disponibilité des produits sur les machines
 
