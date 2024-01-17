@@ -38,6 +38,49 @@ Objectifs du Portfolio :
 <img src="3.png">
 
 ## Réalisation du sprint 2:
-1. Développement du Back-End (en cours)
-2. Tests, Débogage (pas encore)
-3. Hébergement du site (pas encore)
+***1. Installation des outils***
+- Configuration de l'environnement du projet 
+- Installation de : Node.js, Express, Mongoose, ThunderClient
+
+***2. Création d’un serveur***
+- Création d'un serveur simple 
+- Liaison du Back et Front du site
+
+***3. Création d’une base de données***
+- Création d'une base de données sur MongoDB Atlas
+- Etablissement de la connexion de la base données et le serveur
+```js
+//La chaine de connexion est fournie par MongoDB
+mongoose.connect('chaine de connexion,
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
+```
+- Conception du schéma de base de données
+
+```js
+const mongoose = require('mongoose');
+
+const monSchema = mongoose.Schema({
+  //le nom est un champs non obligatoire
+  Nom: { type: String, required: false }, 
+  Recommandation: { type: String, required: true },  
+  Statut: { type: String, default: 'en attente' },
+});
+
+module.exports = mongoose.model('Recommandations', monSchema);
+```
+***4. Configuration des routes***
+- Route POST pour récupérer les recommandations provenant du formulaire
+- Route GET pour publier les recommandations validées sur le site 
+
+***5. Tests & Debogage***
+La base de données :
+<img src="MongoDB.png" >
+Le serveur : 
+<img src="server.png" >
+Le site :
+<img src="site.png" >
+Le code : 
+Le code développé dans ce POK est disponible sur mon [github repository ](https://github.com/KawtarBahri/Mon-portfolio/)

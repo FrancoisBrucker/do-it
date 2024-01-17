@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 2.2. Les processus métiers de A à Z"
+title: "MON 2.2. Focus sur les « processus »"
 authors:
   - Sarah Sebastien
 

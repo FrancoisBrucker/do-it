@@ -23,21 +23,16 @@ Prérequis : Aucune base en JAVA
 
 ## Sommaire
 
-- [Sommaire](#sommaire)
-  - [Sprint 1](#sprint-1)
-  - [Sprint 2](#sprint-2)
-  - [Apprentissage du codage d'une interface avec Swing](#apprentissage-du-codage-dune-interface-avec-swing)
-    - [Interface initiale](#interface-initiale)
-    - [Partie en cours](#partie-en-cours)
-    - [Fin de la partie](#fin-de-la-partie)
-  - [Construction de la partie](#construction-de-la-partie)
-      - [1 : Button Panel](#1--button-panel)
-      - [2 : Color Panel](#2--color-panel)
-      - [3 : Main Panel](#3--main-panel)
-  - [Retour sur le backlog du jeu](#retour-sur-le-backlog-du-jeu)
-  - [Retour sur le backlog du Sprint 2](#retour-sur-le-backlog-du-sprint-2)
-  - [Points de retard notés](#points-de-retard-notés)
-  - [Axes d'amélioration](#axes-damélioration)
+- [Le backlog du projet](#backlog)
+- [Acquérir bases en Java](#bases)
+- [s’entraîner en Java](#exercice)
+- [Choix de l'interface graphique du projet](#choix)
+- [Apprendre à utiliser l'API Swing](#swing)
+- [Réalisation de la maquette Figma](#maquette)
+- [Vers le sprint 2](#sprint2)
+- [Réalisation du jeu](#interface)
+- [Retour sur les objectifs](#objectifs)
+- [Retour d'expérience](#experience)
 
 <h2 id=backlog> Le backlog du projet</h2>
 
@@ -290,7 +285,9 @@ J'avais repérer une vidéo sur l'utilisation de Swing pour réaliser une interf
 
 J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement à toute personne voulant débuter ! Elle permet d'acquérir les bases et de comprendre la logique et elle est très bien expliquée. 
 
-<h2 id=visuel> Le jeu final </h2>
+<h3 id=visuel> Le jeu final </h3>
+
+*Le dossier du jeu est téléchargeable [ici](jeu_mastermind.zip)*
 
 #### Interface initiale 
 
@@ -730,9 +727,9 @@ public class MessageFrame extends JFrame{
 ```
 {% enddetails %}
 
-<h2 id=backlog2> Message Frame</h2>
+<h2 id=objectifs> Retour sur les objectifs </h2>
 
-### Retour sur le backlog du jeu 
+### Reetour sur le backlog du jeu
 
 |Intitulé|Complexité|Valeur métier(MoSCoW)|Réalisé|
 |---|---|---|---|
@@ -767,6 +764,9 @@ Finalement, je n'ai pas réussi à implémenter toutes les fonctionnalités que 
 
 Bon...
 J'ai finalement assez sous estimé le temps que prendrait le jeu à implémenter. 
+
+
+<h2 id=experience> Retour d'expérience </h2>
 
 ### Points de retard notés
 
