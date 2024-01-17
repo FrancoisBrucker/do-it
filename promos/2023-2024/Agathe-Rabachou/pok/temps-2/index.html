@@ -178,7 +178,151 @@ Malgré ma légère avance sur le sprint planning en terme de temps, je n'ai pas
 <li>Reprise de la solution si besoin (en plus).</li>
 </ul>
 <h3>Réalisations</h3>
+<p>Les objectifs de ce deuxième sprint ont été beaucoup plus difficiles que je ne l'avais imaginé.</p>
+<p>Tout d'abord, j'ai réfléchi aux bases de données nécessaires pour une entreprise telle que celle de la présente étude de cas, et j'ai crée un jeu de données fictif pour pouvoir tester les fonctionnalités d'Airtable. J'ai ainsi crée :</p>
+<ul>
+<li>une table <em>Clients</em> avec les données Numéro client, Nom, Prénom, Adresse, Code Postal, Ville, Téléphone et E-mail</li>
+<li>une table <em>Salariés</em> avec les données Nom, Prénom, Habilitations, Adresse, Code Postal, Ville, Téléphone et E-mail</li>
+<li>une table <em>Sites de chantiers</em> avec les données Code site, Adresse, Code Postal, Ville, Surface et Client propriétaire (lié à la table <em>Clients</em>)</li>
+<li>une table <em>Prestations</em> avec les données Référence, Type de prestation, Durée d'intervention, Nombre de salariés min. nécessaire, Matériel utilisé, Habilitations nécessaires, Deadline (Deadline brute pour les prestations uniques et deadline calculée en fonction de la fréquence et de la date de dernière intervention pour les prestations récurrentes, rassemblée dans une même colonne à l'aide de formules)</li>
+<li>Enfin, j'ai crée une table <em>Équipes habituelles</em> dans l'objectif de simplifier la suite, qui contient pour chaque équipe une Numéro d'équipe, un Chef d'équipe et un ou deux Membres.</li>
+</ul>
+<p>Voici des captures d'écran d'une partie des deux tables les plus importantes pour suivre la suite du raisonnement. La base complètes est disponible à <a href="https://airtable.com/invite/l?inviteId=invc2LAbkSvKVUnEi&amp;inviteToken=1c7005e9f0657cb15f4fa7ae54c7ff06a310988c4991084748d8f2b8e2585733&amp;utm_medium=email&amp;utm_source=product_team&amp;utm_content=transactional-alerts">ce lien</a> sous réserve de créer un compte Airtable.</p>
+<img src="baseSalaries.png">
+<img src="basePrestas1.png">
+<img src="basePrestas2.png">
+<p>Ensuite, j'ai crée les connexions pertinentes entre les différentes tables pour faciliter la lecture et l'utilisation des données. Entre autres, j'ai par exemple extrait de la table <em>Salariés</em> dans la table <em>Équipes habituelles</em> les habilitations des chefs de chaque équipe, puis j'ai utilisé cela pour reporter dans une colonne Équipes habilitées de la table <em>Prestations</em> la liste des équipes pouvant effectuer chaque prestation au regard des habilitations de leur chef d'équipe (comme mentionné dans le cahier des charges).</p>
+<p>C'est dans la suite que cela ce complique. J'ai d'abord voulu créer sur Airtable une version simplifiée du planning qui était mon objectif initial. Dans cette version, je prenais en compte uniquement les habilitations nécessaires pour réaliser la prestation, sa durée, et la priorisation selon la deadline (j'ai donc laissé de côté l'optimisation des temps de trajet entre le domicile des salariés et les sites de chantier ou encore l'entente entre les membres de l'équipe, qui étaient des critères mentionnés lors du sprint 1 mais qui rendaient le projet beaucoup trop complexe).<br>
+Le problème est que les fonctionnalités Airtable (et notamment les possibilités de créer des fonctions) sont très limitées, et je n'ai donc pas réussi. Mon principal point bloquant a été le fait de ne pas pouvoir connecter plus de deux bases ensemble pour récupérer une donnée. Par exemple, imaginons une nouvelle table dans laquelle je mets une partie des prestations les plus urgentes dans l'objectif de leur attribuer une équipe, il est impossible d'écrire dans une colonne de cette table une fonction qui dirait &quot;je veux extraire ici les Noms de la table <em>Salariés</em> telles que les Habilitations associées correspondent aux Habilitations nécessaires dans la table <em>Prestations</em> des prestations auxquelles j'ai fait référence ici&quot;. Autrement dit on ne peut pas extraire automatiquement les salariés habilités à effectuer certaines prestations. Ce qui rend impossible la résolution de la suite du problème.</p>
+<p>J'ai donc fait plusieurs recherches sur d'autres outils Low-Code depuis lesquels je pourrais récupérer ma base de données Airtable et automatiser certaines actions, mais je pense que mon objectif dépasse de loin les possibilités du Low-Code de manière générale, et cela n'a donc pas abouti.</p>
+<p>Afin d'essayer tout de même d'obtenir un résultat, j'ai converti ma base de données en csv pour l'importer dans Excel et essayer de faire du VBA (même si on sort du No-Code). Cette étape a été très laborieuse dû à mes faibles connaissances en VBA, mais j'ai réussi pour commencer à créer une fonction qui prend en paramètre les habilitations d'un salarié et les habilitations nécessaires pour réaliser une prestations et qui renvoie vrai si le salarié peut réaliser la prestation. Je l'ai testé en générant un tableau qui affiche les salariés habilités pour chaque prestation, et en voici le code et le résultat :</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Function</span> Habilité<span class="token punctuation">(</span>Habilitations <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Habilitations_requises <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">Boolean</span>
+    <span class="token keyword">Dim</span> Liste_habilitations<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">String</span>
+    <span class="token keyword">Dim</span> Liste_habilitations_requises<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">String</span>
+    
+    Liste_habilitations <span class="token operator">=</span> Split<span class="token punctuation">(</span>Habilitations<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span>
+    Liste_habilitations_requises <span class="token operator">=</span> Split<span class="token punctuation">(</span>Habilitations_requises<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">Dim</span> Habilitation_requise <span class="token keyword">As</span> <span class="token keyword">Variant</span>
+    
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> Habilitation_requise <span class="token keyword">In</span> Liste_habilitations_requises
+        <span class="token keyword">If</span> InStr<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> Habilitations<span class="token punctuation">,</span> Habilitation_requise<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">Then</span>
+            Habilité <span class="token operator">=</span> <span class="token boolean">False</span>
+            <span class="token keyword">Exit</span> <span class="token keyword">Function</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> Habilitation_requise
+    
+    Habilité <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token keyword">End</span> <span class="token keyword">Function</span>
+
+<span class="token keyword">Sub</span> test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">Dim</span> Tab_salariés <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Tab_prestations <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Tab_planning <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Nb_salariés <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> Nb_prestations <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> i <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> j <span class="token keyword">As</span> <span class="token keyword">Long</span>
+
+    <span class="token keyword">Set</span> Tab_salariés <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Salaries"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> Tab_prestations <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Prestations"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> Tab_planning <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Planning"</span><span class="token punctuation">)</span>
+
+    Nb_salariés <span class="token operator">=</span> Tab_salariés<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>Tab_salariés<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+    Nb_prestations <span class="token operator">=</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>Tab_prestations<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+
+    <span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> Nb_salariés
+        <span class="token keyword">For</span> j <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> Nb_prestations
+            <span class="token keyword">If</span> Habilité<span class="token punctuation">(</span>Tab_salariés<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token string">"H"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">)</span> <span class="token keyword">Then</span>
+                Tab_planning<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> Tab_salariés<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+                <span class="token keyword">End</span> <span class="token keyword">If</span>
+            <span class="token keyword">Next</span> j
+        <span class="token keyword">Next</span> i
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+<img src="fonctionHabilitations.png">
+<p>A partir de cela, j'ai donc voulu créer une procédure qui pour chaque prestation (priorisées par urgence) cherche un salarié habilité (grâce à la fonction ci-dessus) et disponible le plus tôt possible (on considère qu'un salarié est disponible au lendemain du dernier jour de sa dernière prestation, on calcule donc son premier jour de disponibilité en faisant &quot;date de début de la prestation attribuée juste avant&quot; + &quot;durée de cette prestation&quot; + 1). Lorsque ce salarié est trouvé, la prestation lui est attribué dès son prochain jour vide et le code passe à la prestation suivante.<br>
+Cependant, même après de nombreux tests et modifications, je n'ai pas réussi à faire aboutir cette idée. Voici la dernière version du code mais qui n'est donc pas fonctionnelle comme je le souhaitais :</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Function</span> Habilité<span class="token punctuation">(</span>Habilitations <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Habilitations_requises <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">Boolean</span>
+    <span class="token keyword">Dim</span> Liste_habilitations<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">String</span>
+    <span class="token keyword">Dim</span> Liste_habilitations_requises<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">String</span>
+    
+    Liste_habilitations <span class="token operator">=</span> Split<span class="token punctuation">(</span>Habilitations<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span>
+    Liste_habilitations_requises <span class="token operator">=</span> Split<span class="token punctuation">(</span>Habilitations_requises<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">Dim</span> Habilitation_requise <span class="token keyword">As</span> <span class="token keyword">Variant</span>
+    
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> Habilitation_requise <span class="token keyword">In</span> Liste_habilitations_requises
+        <span class="token keyword">If</span> InStr<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> Habilitations<span class="token punctuation">,</span> Habilitation_requise<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">Then</span>
+            Habilité <span class="token operator">=</span> <span class="token boolean">False</span>
+            <span class="token keyword">Exit</span> <span class="token keyword">Function</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> Habilitation_requise
+    
+    Habilité <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token keyword">End</span> <span class="token keyword">Function</span>
+
+<span class="token keyword">Sub</span> test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">Dim</span> Tab_salariés <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Tab_prestations <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Tab_planning <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> Nb_salariés <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> Nb_prestations <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> i <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> j <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> Début_prestation <span class="token keyword">As</span> <span class="token keyword">Date</span>
+    <span class="token keyword">Dim</span> Fin_prestation <span class="token keyword">As</span> <span class="token keyword">Date</span>
+    <span class="token keyword">Dim</span> Durée_prestation <span class="token keyword">As</span> <span class="token keyword">Double</span>
+
+    <span class="token keyword">Set</span> Tab_salariés <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Salaries"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> Tab_prestations <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Prestations"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> Tab_planning <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Planning"</span><span class="token punctuation">)</span>
+
+    Nb_salariés <span class="token operator">=</span> Tab_salariés<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>Tab_salariés<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+    Nb_prestations <span class="token operator">=</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>Tab_prestations<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+    
+    <span class="token comment">'Cette partie de code trie les données de la table Prestations par ordre de priorité</span>
+    Tab_prestations<span class="token punctuation">.</span>Sort<span class="token punctuation">.</span>SortFields<span class="token punctuation">.</span>Clear
+    Tab_prestations<span class="token punctuation">.</span>Sort<span class="token punctuation">.</span>SortFields<span class="token punctuation">.</span>Add2 Key<span class="token punctuation">:</span><span class="token operator">=</span>Range<span class="token punctuation">(</span><span class="token string">"K2:K"</span> <span class="token operator">&amp;</span> Nb_prestations<span class="token punctuation">)</span><span class="token punctuation">,</span> SortOn<span class="token punctuation">:</span><span class="token operator">=</span>xlSortOnValues<span class="token punctuation">,</span> Order<span class="token punctuation">:</span><span class="token operator">=</span>xlAscending
+    <span class="token keyword">With</span> Tab_prestations<span class="token punctuation">.</span>Sort
+        <span class="token punctuation">.</span>SetRange Range<span class="token punctuation">(</span><span class="token string">"A1:K"</span> <span class="token operator">&amp;</span> Nb_prestations<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span>Header <span class="token operator">=</span> xlYes
+        <span class="token punctuation">.</span>MatchCase <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token punctuation">.</span>Orientation <span class="token operator">=</span> xlTopToBottom
+        <span class="token punctuation">.</span>SortMethod <span class="token operator">=</span> xlPinYin
+        <span class="token punctuation">.</span>Apply
+    <span class="token keyword">End</span> <span class="token keyword">With</span>
+
+    Tab_planning<span class="token punctuation">.</span>Cells<span class="token punctuation">.</span>Clear
+    
+    Début_prestation <span class="token operator">=</span> <span class="token keyword">Date</span> <span class="token operator">+</span> <span class="token number">1</span>
+
+    <span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> Nb_prestations
+        Fin_prestation <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">100</span>
+        Durée_prestation <span class="token operator">=</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"F"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+        
+        <span class="token keyword">For</span> j <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> Nb_salariés
+            <span class="token keyword">If</span> Habilité<span class="token punctuation">(</span>Tab_salariés<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"I"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">)</span> <span class="token keyword">Then</span>
+                <span class="token keyword">If</span> Fin_prestation <span class="token operator">&lt;</span> Début_prestation <span class="token keyword">Then</span>
+                    Tab_planning<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>j<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> Tab_prestations<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+                    
+                    Fin_prestation <span class="token operator">=</span> Début_prestation <span class="token operator">+</span> Durée_prestation
+                    Début_prestation <span class="token operator">=</span> Fin_prestation <span class="token operator">+</span> <span class="token number">1</span>
+                    <span class="token keyword">Exit</span> <span class="token keyword">For</span>
+                <span class="token keyword">End</span> <span class="token keyword">If</span>
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+        <span class="token keyword">Next</span> j
+    <span class="token keyword">Next</span> i
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+<p>Le résultat de l'exécution de cette procédure est une suite de prestations dans l'ordre dans lequel elles sont attribuées mais en ligne et non en tableau de i par j, ce qui signifie que le j ne varie pas, donc la boucle sur j n'est pas prise en compte, mais je n'ai pas trouvé d'où vient le problème.</p>
 <h3>Retours</h3>
+<p>Pour conclure ce sprint :</p>
+<ul>
+<li>En terme de temps, j'ai passé environ 2h à construire les bases de données, 2h à créer les liens et à tester des solutions pour créer un planning sous Airtable, 1h à chercher d'autres solutions Low-Code, et 5h à travailler sur le problème en VBA (je n'ai pas du tout abordé la partie discussion et retour au client comme prévu).</li>
+<li>Cette problématique est très intéressante bien que beaucoup trop complexe pour un POK, même en version très simplifiée (ce que j'avais largement sous-estimé). Par curiosité, j'ai fait des recherches plus poussées sur le sujet de l'optimisation de planning selon différentes contraintes de manière générale, les algorithmes qui pourraient être utiles et la notion d'optimisation combinatoire, et je suis tombée sur une thèse qui traite quasiment ce problème et dont voici le <a href="https://theses.hal.science/tel-00011399/document">lien</a> pour les intéressés.</li>
+<li>Enfin, je pense que même si cela n'a pas abouti à un planning automatique comme c'était l'objectif initialement, la base de données créée sous Airtable peut-être un bon outil pour l'entreprise. En effet, elle permet quand même, même s'il faut remplir le planning à la main, de tirer plus rapidement certaines informations du jeu de données comme le personnel habilité, l'adresse d'un chantier ou encore le matériel nécessaire. De plus, il est possible d'automatiser certaines actions sur la plateforme, comme par exemple l'envoi d'un mail aux salariés concernés lorsque l'on modifie une ligne sur le planning (toujours à la main, le cas échéant). Cela pourrait permettre en somme d'éviter aux équipes de venir voir chaque matin le planning sur un tableau fixe, mais plutôt de le consulter / d'être notifié de leurs missions directement en ligne.</li>
+</ul>
 
 
 </article>
