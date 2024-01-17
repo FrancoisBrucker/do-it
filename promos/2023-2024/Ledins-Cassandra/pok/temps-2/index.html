@@ -125,6 +125,18 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Prérequis</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>savoir comment marche un pointeur</li>
+<li>niveau intermédiaire de programmation</li>
+</ul>
+</div></div>
 <h1>Objectifs</h1>
 <p>Inspirée par les POK&amp;MON d'Assane et de Victor, j'ai voulu en apprendre plus sur Rust et réaliser la programmation d'un jeu-vidéo comme proposé par le livre Hands-on Rust, prêté par M. Brucker.</p>
 <p>Dans un premier temps, j'aimerais me familiariser avec les concepts du langage Rust, puis ensuite enchaîner avec la création du dungeon crawler proposé par le livre:</p>
@@ -134,7 +146,119 @@
 <li>Introduction à la programmation de jeux vidéo <strong>4h</strong></li>
 <li>Développement du dungeon crawler <strong>9h</strong></li>
 </ul>
-<h1>Installation, familiarisation avec la syntaxe et défrichages des concepts</h1>
+<h2>Rust : Un Aperçu</h2>
+<h3>Bref Historique</h3>
+<p>Rust a été créé par Mozilla Research, avec le travail initial de Graydon Hoare en 2006. Il a été rendu open source en 2010, et sa première version stable a été publiée en 2015. Rust a gagné en popularité grâce à sa combinaison unique de performances élevées et de garanties de sécurité, ce qui le rend particulièrement attrayant pour le développement de systèmes.</p>
+<p>Rust est un langage de programmation moderne qui offre des performances élevées, des garanties de sécurité et une gestion avancée de la mémoire grâce à des concepts tels que la possession, les emprunts et les durées de vie. C'est un choix puissant pour les applications nécessitant à la fois rapidité et fiabilité.</p>
+<h3>Syntaxe de Rust</h3>
+<p>La syntaxe de Rust est conçue pour être expressive tout en étant précise. Faisons un rapide tour.</p>
+<h4>Déclarations de variables</h4>
+<p>Par défaut, les variables sont immuables, et il faut ajouter le mot clé <strong>mut</strong> pour pouvoir les changer plus tard.</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>      <span class="token comment">// variable immuable</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>  <span class="token comment">// variable mutable</span>
+</code></pre>
+<h4>Fonctions</h4>
+<p>Comme dans de nombreux langages de programmation, on déclare le type de variable retourné par les fonctions au moment de la déclaration. On peut également utiliser des fonctions en cascade sur une variable avec la syntaxe suivante :</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+variable
+  <span class="token punctuation">.</span><span class="token function">fonction1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">fonction2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">fonction3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">...</span><span class="token punctuation">..</span>
+</code></pre>
+<h4>Structures de contrôle</h4>
+<p>Les structures logiques sont semblables à la plupart des autres langages de programmation.</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">if</span> condition <span class="token punctuation">{</span>
+  <span class="token punctuation">...</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+ <span class="token punctuation">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> iterable <span class="token punctuation">{</span>
+    <span class="token punctuation">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Concepts Clés</h3>
+<p>J'ai lu <a href="https://doc.rust-lang.org/stable/book/title-page.html">la documentation Rust officielle</a>, en partie seulement, pour essayer de comprendre les concepts liés au langage. Ces concepts ont déjà été évoqués dans les Pok&amp;Mon d'Assane et de Victor, je ne vais donc pas m'étendre, dessus mais en voici un bref résumé.</p>
+<h4>Possession, Emprunt et Références</h4>
+<ul>
+<li>
+<p><strong>Possession (Ownership) :</strong> Rust suit le principe de possession unique. Chaque valeur a un unique &quot;propriétaire&quot;. La propriété peut être transférée, mais une seule entité peut posséder la valeur à la fois.</p>
+</li>
+<li>
+<p><strong>Emprunt (Borrowing) :</strong> Rust permet d'emprunter temporairement la valeur plutôt que de transférer la propriété. Cela permet à plusieurs parties du code d'accéder à une valeur sans en être propriétaire. On peut emprunter la valeur d'une variable x en appellant &amp;x.</p>
+</li>
+<li>
+<p><strong>Références :</strong>  Et si j'ai bien tout compris, on parle de référence quand une variable a emprunté la valeur d'une autre.</p>
+</li>
+</ul>
+<h4>Crates, Ownership et Lifetime</h4>
+<ul>
+<li>
+<p><strong>Crates :</strong> Les crates sont l'équivalent des bibliothèques ou modules en Rust. Les développeurs peuvent partager et réutiliser leur code en l'emballant dans des crates.</p>
+</li>
+<li>
+<p><strong>Ownership et Lifetime :</strong> Rust utilise le système de possession et de durée de vie pour garantir l'absence de violations de la mémoire. Chaque référence a une durée de vie spécifiée, et le compilateur Rust s'assure que les références restent valides pendant toute leur durée de vie. Plus concrètement, une variable vit dans le scope où elle a été déclarée.</p>
+</li>
+</ul>
+<h3>Mes premiers petits projets</h3>
+<p>Etant impatiente de découvrir le livre Hands-on Rust, j'ai vite sauté sur les premiers chapitres, qui sont en fait des petits exercices de démarrage. On y découvre des outils tels que <strong>Clippy</strong>, une sorte d'IA code-reviewer qui aime faire des suggestions pour rendre le code plus intelligent. On découvre aussi les commandes <strong>cargo new</strong> pour créer un projet, <strong>cargo run</strong> pour le lancer, <strong>cargo fmt</strong> pour bien aligner les tabulations...</p>
+<h4>TreeHouse</h4>
+<p>Dans le premier exercice TreeHouse, on joue au vigil avec l'invite de commande, pour savoir si on a le droit de rentrer ou non dans le TreeHouse, et si on a un traitement spécial. On y apprend donc les assignations et modification de variables.</p>
+<p><img src="treehouse.png" alt=""></p>
+<h3>La programmation de jeu avec Rust</h3>
+<p>On arrive donc à la partie ludique, celle où on parle de programmer notre premier jeu : un <strong>Flappy Dragon</strong></p>
+<p>On y implémente des structures, l'équivalent des déclarations de classe, ainsi que des implémentations liées aux structures, comme le constructeur et toutes les autres fonctions qu'on veut lier à nos structures.</p>
+<p>On y découvre aussi le concept de &quot;contexte&quot;, en gros les informations liées au jeu transmises sous forme graphique.</p>
+<p><img src="Flappy.png" alt="Flappy"></p>
+<h2>Fin du Sprint 1</h2>
+<p>La fin du sprint 1 a été un peu mouvementée pour moi, donc je ne sais pas dire exactement où j'en étais.</p>
+<p>Mais après avoir fini Flappy Dragon, voici le résumé des heures passées :</p>
+<ul>
+<li>
+<p>Installation, familiarisation avec la syntaxe, défrichage des concepts <strong>3h</strong> REALISE comme prévu, la réalisation des petits exercices m'a emmenée à peu près vers 3 heures.</p>
+</li>
+<li>
+<p>Comprendre les concepts de possession, de références et d'emprunt <strong>4h</strong>  X NON REALISE.</p>
+<p>J'ai lu la documentation dans le cadre de la première partie, et même si j'avais des notions à ce moment, c'est tout au long du POK que j'ai commencé à mieux maîtriser les concepts. Cet objectif n'était pas assez concret du tout. Je pense tout de même que si on compte le temps de débogage et de lectures liés à l'apprentissage des concepts, l'estimation de 4h n'était pas abberante.</p>
+</li>
+<li>
+<p>Introduction à la programmation de jeux vidéo : Réaliser le Flappy Dragon <strong>3h</strong> REALISE, c'était plus rapide que prévu</p>
+</li>
+</ul>
+<h3>Nouveaux objectifs Sprint 2</h3>
+<p>Pour le temps qui reste, c'est à dire à peu près 10 heures après le flappy dragon, je veux réaliser le dungeon crawler. Plus précisément, mon objectif sera d'<strong>avoir un MVP</strong> donc d'arriver à avoir un jeu jouable, avec un écran de victoire ou de défaite, ce qui correspond au Chapitre 10 du livre, soit un peu plus des 2 tiers. Il ne me semble pas réalisable en 10h de terminer toutes les améliorations proposées, à mon niveau.</p>
+<h1>Sprint 2</h1>
+<p>L'entièreté du sprint 2 a donc été consacré à la programmation du dungeon crawler du livre Hands-on Rust.</p>
+<h2>Découpage du projet</h2>
+<p>La première nouveauté par rapport aux premiers exercices et exemples, c'est que le projet aura besoin de plus (beaucoup plus) qu'un seul fichier main.</p>
+<h3>Initialisation et génération pseudo-random de la map</h3>
+<p>On commence par réaliser un map-builder, qui génère des rectangles adjacents, qu'on relie par des couloirs. Le tout sera affiché en caractères du type &quot;#&quot; pour les murs, &quot;,&quot; pour le sol.</p>
+<p>On ajoute ensuite le déplacement du joueur sur les endroits valide de la carte (donc le sol). Le joueur sera représenté par &quot;@&quot;.</p>
+<p>J'ai oublié de sauvegarder une image de cette étape, mais pour le coup on peut pas faire plus rétro qu'afficher une grille de caractères comme ça.</p>
+<h3>Style et déplacement de caméra</h3>
+<p>On importe ensuite une image pour donner du style à nos caractères. A chaque caractère est associé un petit sprite, par exemple un sprite de Chevalier pour notre héros qui en avait marre de ressembler à un @ qui se balade sur des , .</p>
+<h3>Monstres et arrivée des Components</h3>
+<ul>
+<li>Rappel à Unity</li>
+</ul>
+<h3>Collisions et déplacements randomisés</h3>
+<h3>Turn by Turn et système d'attaque</h3>
+<h3>HUD et régéneration des points de vie</h3>
+<h3>Condition de fin, Game Over ou Victory</h3>
+<h2>Fin du Sprint 2</h2>
+<p>Objectif accompli :thumbs_up:</p>
+<h2>Sources</h2>
+<ul>
+<li><a href=".">Mon repo github avec les exercices, le flappy dragon et le dungeon crawler</a></li>
+<li><a href="https://doc.rust-lang.org/stable/book/title-page.html">La documentation Rust officielle</a></li>
+</ul>
+<h2>Horodateur</h2>
+<p>01/12 <strong>|</strong> 6h<br>
+23/12 <strong>|</strong> 7h<br>
+15/01 <strong>|</strong> 7h</p>
 
 
 </article>
