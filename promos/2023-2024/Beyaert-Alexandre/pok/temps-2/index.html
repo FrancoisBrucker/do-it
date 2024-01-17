@@ -138,7 +138,7 @@
 <li>Introduction</li>
 <li>Description du projet</li>
 <li>Analyse préliminaire des données</li>
-<li>Pré-traitement des données et sélection du classifier</li>
+<li>Pré-traitement des données</li>
 <li>Conclusion</li>
 <li>Bibliographie</li>
 </ol>
@@ -160,7 +160,7 @@
 <p>Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.<br>
 Pour se faire :<br>
 <strong>- le sprint 1</strong> consistera en la <strong>compréhension</strong> du projet, sa <strong>description</strong> ainsi qu'en <strong>l'analyse préliminaire</strong> des données.<br>
-<strong>- le sprint 2</strong> consistera à effectuer un pré-traitement qualitatif des données et à la sélection de l'algorithme de Machine Learning pour effectuer une <strong>classification</strong>.</p>
+<strong>- le sprint 2</strong> consistera à effectuer un pré-traitement qualitatif des données pour qu'elles soient prêtes à faire passer dans un algorithme de classification.</p>
 <h2>3. Analyse préliminaire des données</h2>
 <h3>3.1 Conversion automatisée des images du format ..ndpi au format .jpg</h3>
 <p>Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi &quot;NanoZoomer Digital Pathology Image&quot; et sont de très hautes résolutions.</p>
@@ -322,8 +322,14 @@ plt<span class="token punctuation">.</span>subplot<span class="token punctuation
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p><img src="pretraitement.jpg" alt="Image d'origine vs Image segmentée"></p>
-<h2>4. Pré-traitement des données et sélection du classifier</h2>
-<p><img src="celulle.png" alt="Celulle avant extraction du contour"></p>
+<h2>4. Pré-traitement des données</h2>
+<p>Le pré-traitement précédent est une première avancée pour par la suite optimiser la classification. Cependant, il <strong>reste encore un peu de bruit</strong> risquant d'abaisser les performances de l'algorithme.<br>
+Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
+<h3>4.1 Délimitation du contour</h3>
+<p>Une première chose à faire consiste à <strong>délimiter le contour</strong> des membranes, cela permettra à l'algorithme de se focaliser uniquement sur la membrane et non pas sur les corps étrangers présents sur la lame.</p>
+<p>Voici une membrane :</p>
+<p><img src="celulle.png" alt="Celulle avant extraction du contour" width="50%"></p>
+<p>Et le 1er code testé pour extraire le contour :</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">extraire_contour</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> image_sortie<span class="token punctuation">,</span> seuil_canny<span class="token punctuation">,</span> taille_dilatation<span class="token punctuation">,</span> superficie_min<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># Charger l'image en niveaux de gris</span>
     image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>IMREAD_GRAYSCALE<span class="token punctuation">)</span>
@@ -350,8 +356,9 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
     
     <span class="token keyword">return</span> contours
 </code></pre>
-<p><img src="celulle_contour_v1.png" alt="Celulle après extraction du contour"></p>
-<p>Besoin d'effectuer une dilatation</p>
+<p>Ce 1er code hélas n'est pas suffisament robuste. Le bruit perturbe le découpage et toutes les formes et contour à l'intérieur de la membrane sont découpés.</p>
+<p><img src="celulle_contour_v1.png" alt="Celulle après extraction du contour" width="50%"></p>
+<p>Pour y remédier, j'ai donc décidé d'apporter de la <strong>dilatation :</strong> concrètement, la dilatation consiste à élargir les régions d'une image qui contiennent des pixels blancs. Elle va permettre ainsi de connecter les régions blanches qui sont proches les unes des autres et ainsi combler les lacunes.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">decouper_image</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> contours<span class="token punctuation">,</span> dossier_sortie<span class="token punctuation">,</span>fichier<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># Charger l'image originale</span>
     image_originale <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_entree<span class="token punctuation">)</span>
@@ -394,12 +401,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 
 pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/tumeur'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/contour'</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="celulle_contour_v2.png" alt="Extraction du contour après dilatation"></p>
-<p>Reste le problème de plusieurs membranes sur une même lame :</p>
-<p><img src="plusieurs_celulles.png" alt="Plusieurs membranes sur une même lame"></p>
-<p><img src="plusieurs_celulles_contour.png" alt="Plusieurs membranes sur une même lame"></p>
-<p>Focus sur la segmentation</p>
-<p><img src="avant_pre-trait.png" alt="Avant pré-traitement"></p>
+<p>Le résultat est tout de suite plus satisfaisant, la forme globale de la membrane est respectée et plus aucun contour n'apparaît à l'intérieur.</p>
+<p><img src="celulle_contour_v2.png" alt="Extraction du contour après dilatation" width="50%"></p>
+<p>Seul un problème persiste, lorsque plusieurs membranes sont présents sur une même lame, le programme risque de fusionner certaines membranes. Dans un premier temps, je décide de ne pas m'attarder sur ce problème et débuterai la classification avec des lames ne présentant qu'une seule membrane.</p>
+<p><img src="plusieurs_celulles.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<p><img src="plusieurs_celulles_contour.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<h3>4.2 Amélioration de la segmentation</h3>
+<p>Les contours délimités, je décide de revoir l'opération de segmentation des images avec l'algorithme de k-means.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pre_traitement_2_segmentation</span><span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span>dossier_S<span class="token punctuation">)</span><span class="token punctuation">:</span>
     
     
@@ -435,11 +443,16 @@ pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span
 
 pre_traitement_2_segmentation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_2'</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="apres_pre-trait.png" alt="Après pré-traitement"></p>
-<p>Ajout éventuel d'annotations avec le logiciel QuPath</p>
-<p><img src="annotation.png" alt="Annotation"></p>
-<p><img src="logiciel.png" alt="Logiciel QuPath">)</p>
+<p>Avant segmentation<br>
+<img src="avant_pre-trait.png" alt="Avant pré-traitement" width="50%"></p>
+<p>Après segmentation<br>
+<img src="apres_pre-trait.png" alt="Après pré-traitement" width="50%"></p>
+<p>Le résultat semble tout à fait satisfaisant, je décide donc dans un dernier temps d'effectuer de l'annotation avec le logiciel QuPath pour aider le futur algorithme de classification à détecter la zone de la tumeur.</p>
+<h3>4.3 Annotation</h3>
+<p><img src="annotation.png" alt="Annotation" width="50%"></p>
+<p><img src="logiciel.png" alt="Logiciel QuPath" width="50%"></p>
 <h2>5. Conclusion</h2>
+<p><strong>Timing Sprint 1</strong></p>
 <table>
 <thead>
 <tr>
@@ -466,37 +479,35 @@ pre_traitement_2_segmentation<span class="token punctuation">(</span><span class
 <td>2</td>
 </tr>
 </tbody>
+</table>
+<p><strong>Timing Sprint 2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>Extraction contour</th>
+<th>Segmentation</th>
+<th>Annotation</th>
+<th>Choix algorithme</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td>Timing</td>
-<td>Seaborn</td>
-<td>Sklearn modèle</td>
-<td>Sklearn pré-traitement</td>
-<td>Combinaison des bibliothèques</td>
-</tr>
-<tr>
-<td>-------</td>
-<td>--------</td>
-<td>--------</td>
-<td>--------</td>
-</tr>
-<tr>
 <td>Sprint 2 - Temps prévu (en heures)</td>
-<td>2</td>
+<td>4</td>
 <td>3</td>
-<td>3</td>
+<td>1</td>
 <td>2</td>
 </tr>
 <tr>
 <td>Sprint 2 - Temps dédié (en heures)</td>
+<td>5</td>
 <td>2</td>
-<td>4</td>
-<td>2</td>
+<td>1</td>
 <td>2</td>
 </tr>
 </tbody>
 </table>
-<h2>6. Bibliographie</h2>
 
 
 </article>
