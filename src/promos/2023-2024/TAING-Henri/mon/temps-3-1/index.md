@@ -14,8 +14,9 @@ tags:
   - CSS
   - JS
   - Python
+  - Flask
 
-résumé: "Quoi ? Il y a des conventions pour la manière d'écrire le code ? Une convention par langage en plus ?! Mon dieu, il est temps de nettoyer tout ce code sale et de rénover le site du projet 3A !"
+résumé: "Quoi ? Il y a des conventions pour la manière d'écrire le code ? Une convention par langage en plus ?! Mon dieu, il est temps de nettoyer tout ce code sale et de rénover le site du projet 3A ! (Et aussi le moment d'apprendre de faire du back :o)
 ---
 
 {%prerequis 'MON débutant'%}
@@ -28,7 +29,7 @@ Savoir lire du code
 
 1. [Introduction](#section-1)
 2. [PEP 8 pour Python et Google HTML/CSS Style Guide et Google JavaScript Style Guide](#section-2)
-3. [Nettoyage du code et Rénovation du site](#section-3)
+3. [Découverte et apprentissage de Flask](#section-3)
 4. [Conclusion](#section-4)
 5. [Sources](#section-5) 
 
@@ -41,7 +42,7 @@ Dans ce MON, nous verrons les principales conventions utilisées pour rédiger d
 ## 2. PEP 8 pour Python et Google HTML/CSS Style Guide et Google JavaScript Style Guide <a id="section-2"></a>
 
 Le but de ses conventions est définir des règles de format et de style pour le code afin de promouvoir la collaboration et la compréhension. L'idée est d'écrire du code qui soit lisible et consistent pour faire en sorte que sa lecture ne soit pas une souffrance visuelle en plus d'intellectuelle. 
-Ces guides sont mis à jour régulièrement pour suivre l'évolution de la programmation. 
+Ces guides sont mis à jour régulièrement pour suivre l'évolution de la programmation. Et je vais de ce pas les appliquer à tous les projets que je compte mettre sur GitHub, commençant par le projet 3A. 
 
 Les principaux points relèvent de :
 - l'indentation, par exemple, en Python, il faut faire en sorte soit de s'aligner sur le délimiteur ouvert (parenthèse, strophe, crochet) ou d'ajouter 4 espaces pour séparer les arguments du reste ou en alignant les autres lignes par rapport à la première. Et on va préférer les espaces (avec la touche espace) que les "tabs",
@@ -106,7 +107,7 @@ if booleen == True:
 {% enddetails %}
 
 
-## 3. Nettoyage du code et Rénovation du site <a id="section-3"></a>
+## 3. Découverte et apprentissage de Flask <a id="section-3"></a>
 
 
 ## 4. Conclusion <a id="section-4"></a>
