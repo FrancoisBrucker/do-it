@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Faire du clean code"
+title: "Faire du clean code et Python Flask"
 authors:
   - TAING Henri
 
