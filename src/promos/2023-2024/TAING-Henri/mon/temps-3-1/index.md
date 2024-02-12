@@ -39,7 +39,7 @@ Savoir lire du code
 
 Cherchant un poste à l'étranger en IT pour mon premier, mes choix sont assez restreints au vu de mes compétences techniques limitées. 
 Pour autant, ce n'est pas une raison de ne pas les valoriser en mettant en avant les projets effectués à l'école et sur mon temps libre, avec un lien github par exemple qui donne sur du clean code.
-Dans ce MON, nous verrons les principales conventions utilisées pour rédiger du code et vous aurez un avant-après du site du projet 3A. Le but étant pour moi, aussi, d'intégrer tout le code que j'ai écrit.
+Dans ce MON, vous verrez les principales conventions utilisées pour rédiger du code et moi, je prendrai cette occasion pour intégrer tout le code que j'ai écrit et le code écrit pour le back par Cassandra.
 
 ## 2. PEP 8 pour Python et Google HTML/CSS Style Guide et Google JavaScript Style Guide <a id="section-2"></a>
 
@@ -114,7 +114,6 @@ if booleen == True:
 
 ## 4. Conclusion <a id="section-4"></a>
 
-J'ai passé un peu plus que 10h sur le MON, mais c'était un pur plaisir. Les graphes parlent d'eux-mêmes. Ce n'est pas tous les jours qu'on a une démonstration empirique de la superficialité de notre espèce en quelques graphes super jolis. 
 
 ## 5. Sources <a id="section-5"></a>
 
