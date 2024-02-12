@@ -16,7 +16,9 @@ tags:
   - Python
   - Flask
 
-résumé: "Quoi ? Il y a des conventions pour la manière d'écrire le code ? Une convention par langage en plus ?! Mon dieu, il est temps de nettoyer tout ce code sale et de rénover le site du projet 3A ! (Et aussi le moment d'apprendre de faire du back :o)
+résumé: Quoi ? Il y a des conventions pour la manière d'écrire le code ? Une convention par langage en plus ?! Mon dieu, il est temps de nettoyer tout ce code sale et de rénover le site du projet 3A ! (Et aussi le moment d'apprendre de faire du back 
+
+
 ---
 
 {%prerequis 'MON débutant'%}
