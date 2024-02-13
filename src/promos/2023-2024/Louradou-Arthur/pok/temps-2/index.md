@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "SérénaDo_It"
+title: "SérénaDo_It - Du POC à la production"
 authors:
   - Arthur Louradou
 
