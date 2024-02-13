@@ -3,11 +3,13 @@ layout: layout/mon.njk
 
 title: "Introduction au langage Rust"
 authors:
-  - Paul VIETOR
+  - Paul Vietor
 
 date: 2023-10-18
+
 tags: 
   - "temps 1"
+  - "Rust"
 
 résumé: "Une introduction au langage Rust au travers du livre Rust officiel."
 ---
