@@ -10,6 +10,6 @@ date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: ""
+résumé: "Introduction à l'IA générative"
 ---
 
