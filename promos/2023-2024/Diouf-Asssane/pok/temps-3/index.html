@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du POK du temps 3</title>
+        <title>Un CLI avec Rust</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du POK du temps 3</h1>
+<h1 class="mb-1">Un CLI avec Rust</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -94,7 +94,7 @@
             <div class="font-bold">Auteurs : </div>
             <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Gordon Zola</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Assane Diouf</li>
                 
             </ul>
         </div>
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un POK traitant d'un sujet.
+                Développement d'une commande avec Rust
 
         </p>
 
@@ -118,13 +118,50 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/">POK d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-3/">Titre du POK du temps 3</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/">POK d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-3/">Un CLI avec Rust</a>
 
 </div></div>
 
 
 
 
+<h2>Introduction</h2>
+<p>Lors du premier temps à Do_It, j'ai découvert Rust. Rust est un langage bas niveau très apprécié par les développeurs pour son aspect &quot;safe by design&quot;. J'ai donc envie d'appliquer mes connaissances en Rust pour progresser davantages.<br>
+Dans ce POK, je vais développer un CLI (Command Line Interface). Il s'agit d'un programme qui tourne dans l'invité de commande avec laquelle l'utilisateur peut intéragir grace à des commandes. Pour ce faire je vais utiliser le crate <a href="http://clap.rs">clap.rs</a>, qui vient avec plein d'outils pour créer des commandes avec Rust.</p>
+<h2>Idée</h2>
+<p>J'ai pensé développer un outil simple de suivi des projets pour les développeurs sur leur machine locale. Les fonctionnalités seraient les suivantes :</p>
+<ul>
+<li>Ajouter un projet (nom, description)</li>
+<li>L'ouvrir dans l'IDE qui convient</li>
+<li>Le cloner directement dans le bon dossier si le projet n'est pas présent en local</li>
+<li>Suivre le temps passé sur chaque projet</li>
+</ul>
+<h2>Ce que j'aimerai faire pour le sprint 1</h2>
+<ul>
+<li>[ ] Découvrir les commandes <a href="http://clap.rs">clap.rs</a> (2h)</li>
+<li>[ ] Sérializer/désérializer les configurations (2h)</li>
+<li>[ ] Pouvoir ajouter des projets (1h)</li>
+<li>[ ] Pouvoir lister les projets présents sur la machine (1h)</li>
+<li>[ ] Afficher les informations spécifiques à un projet (1h)</li>
+<li>[ ] Supprimer des projets (1h30)</li>
+<li>[ ] Mettre à jour des projets (1h30)</li>
+</ul>
+<h2>Ce que j'ai fait au premier sprint</h2>
+<h2>Ce que j'aimerai faire au sprint 2</h2>
+<ul>
+<li>[ ] Pouvoir ouvrir les projets dans l'ide souhaité par le développeur (2h)</li>
+<li>[ ] Pouvoir suivre le temps passé sur chaque projet (4h)
+<ul>
+<li>[ ] Conserver dernière date d'ouverture (1h)</li>
+<li>[ ] Ajouter une commande pour indiquer que l'utilisateur arrête de travailler sur le projet (2h)</li>
+<li>[ ] Garder en mémoire le temps passé (1h)</li>
+</ul>
+</li>
+<li>[ ] Pouvoir ouvrir les projets dans vscode (1h)</li>
+<li>[ ] Cloner le projet si il n'est pas présent en local (1h)</li>
+</ul>
+<h2>Ce que j'ai fait au sprint 2</h2>
+<h2>Conclusion</h2>
 
 
 </article>
