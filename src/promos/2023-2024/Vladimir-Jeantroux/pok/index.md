@@ -12,4 +12,4 @@ authors:
 
 - [Temps 2 : Un jeu de combat ultra mortel](./temps-2)
 
-- [Temps 3 : POK 3](./temps-3)
+- [Temps 3 : Apprendre Unity avec un jeu mobile](./temps-3)
