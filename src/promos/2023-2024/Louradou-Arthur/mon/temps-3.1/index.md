@@ -1,14 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "À définir"
+title: "Angular"
 authors:
   - Arthur Louradou
 
-date: 2023-09-18
+date: 2024-02-28
 
 tags: 
   - "temps 3"
 
-résumé: "Ce MON reste à définir ultérieurement."
+résumé: "Angular est un framework TypeScript basé sur une architecture très uilisée dans le milieu professionnel. Il est très complet et permet de créer des applications web de grande envergure."
 ---

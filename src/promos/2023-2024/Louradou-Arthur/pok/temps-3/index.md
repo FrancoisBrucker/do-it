@@ -5,7 +5,7 @@ title: "SérénaDo_It 2 - Vers un projet pérenne"
 authors:
   - Arthur Louradou
 
-date: 2023-02-14
+date: 2024-03-27
 
 tags: 
   - "temps 3"
