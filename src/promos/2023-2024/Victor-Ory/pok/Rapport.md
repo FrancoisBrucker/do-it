@@ -32,10 +32,7 @@ Ci-dessous sont énoncés les objectifs que je me suis fixés, notés en termes 
 
 ## Première étape : Comprendre la méthode :
 
-### 
+## Deuxième étape : Faire le rapport : 
 
+#### Horodatage : 
 
-### Bibliographie : 
-
-- [AIPD](https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd)
-- [RGPD conformité](https://www.cnil.fr/fr/me-mettre-en-conformite)

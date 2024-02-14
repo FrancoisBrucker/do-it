@@ -19,4 +19,4 @@ CV trop important pour rentrer sur ce site.
 
 ## Projet
 
-* [Is it CSS or Cake ?](../../../projets/2023-2024/IsItCakeOrCSS)
+* [OpenDwarfMap ou comment sombrer dans un monde sombre](../../../projets/2023-2024/OpenDwarfMap/)
