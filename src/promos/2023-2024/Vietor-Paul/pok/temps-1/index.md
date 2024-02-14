@@ -17,7 +17,7 @@ tags:
 résumé: Génération et affichage d'un monde composé de voxels.
 ---
 
-[Dépôt Github](https://github.com/paulvietor/POK1_Not_Minecraft)
+[Dépôt Github](https://github.com/lauravietor/POK1_Not_Minecraft)
 
 Mon objectif pour ce POK est de créer un programme qui génère un monde composé de voxels, puis affiche ce monde et permet se se déplacer dedans.
 

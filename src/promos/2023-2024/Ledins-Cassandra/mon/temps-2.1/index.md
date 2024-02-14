@@ -182,3 +182,9 @@ Ce projet de jeu de survie en 3D avec Unity a été fantastique. D'une part c'es
 
 * [**Playlist du tutoriel**](https://www.youtube.com/playlist?list=PLUWxWDlz8PYIvzRTHyvx54tgWTCkgZzkZ)
 * [**Mon repo GitHub avec tout le code final du jeu**](https://github.com/Cledins/rpg)
+
+## Horodateur
+
+26/11 **|** 4h
+30/11 **|** 6h
+14/01 **|** 10h

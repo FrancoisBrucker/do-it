@@ -10,4 +10,4 @@ Ensemble des POK réalisés par Assane Diouf.
 
 * [Un site avec Rust/WASM](./temps-1)
 * [CupCare - Votre Café, Votre Instant](./temps-2)
-* [POK 3](./temps-3)
+* [Un CLI avec Rust](./temps-3)

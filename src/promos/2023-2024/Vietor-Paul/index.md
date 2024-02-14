@@ -1,7 +1,7 @@
 ﻿---
 layout: layout/fiche.njk
 
-title: "Paul VIETOR"
+title: "Paul Vietor"
 authors:
     - "Paul Vietor"
 ---
@@ -21,4 +21,4 @@ Bonjour !
 
 ## Projet
 
-[IsItCSS](../../../projets/2023-2024/IsItCakeOrCSS)
+[OpenDwarfMap](../../../projets/2023-2024/OpenDwarfMap)

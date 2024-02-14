@@ -266,9 +266,6 @@ Exemples :
 <div><img src="résacouleurs.png"></div>
 <div><img src="enrresacouleurs.png"></div>
 </div>
-<div style="display:flex">
-<div><img src="artcouleurs.png"></div>
-</div>
 
 ### Horodateur
 | Date | Heures passées | Indications |

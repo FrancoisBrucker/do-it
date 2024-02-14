@@ -215,7 +215,7 @@ J'aurais néanmoins voulu avoir plus (beaucoup plus) de temps pour vraiment fini
 Enfin, tant mieux que ce soit fini, j'allais devenir fou. 
 
 Voici le lien pour essayer mon jeu ! 
-[Le jeu !](henritaing.itch.io/merrychristmas)
+[Le jeu !](https://henritaing.itch.io/merrychristmas)
 
 ## Sources <a id="section-7"></a>
 
@@ -226,4 +226,4 @@ Voici le lien pour essayer mon jeu !
 [Autre ressources pour les arrières-plans](https://noranekogames.itch.io/yumebackground)
 [Ressources pour les personnages](https://sutemo.itch.io/)
 [Déploiement du jeu sur itch.io](https://www.youtube.com/watch?v=WTatB4W-vKg)
-[Le jeu !](henritaing.itch.io/merrychristmas)
+[Le jeu !](https://henritaing.itch.io/merrychristmas)

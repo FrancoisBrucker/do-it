@@ -18,6 +18,10 @@ Ensemble des MON réalisés par Omar Salame.
 * [MON 3: Introduction à React.js](./temps-2.1)
 * [MON 4: Evaluer la maturité de la transformation digitale](./temps-2.2)
 
+## Temps 3
+
+* [MON 5: Introduction à l'IA générative](./temps-4.1)
+
 
 
 
