@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Application mobile"
 authors:
-  - Gordon Zola
+  - William Lalanne
 
-date: 1971-03-01
+date: 2023-13-02
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: POK où je souhaite développer une petite application mobile.
 ---
