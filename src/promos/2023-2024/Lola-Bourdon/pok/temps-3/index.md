@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Etude de cas en gestion de projet "
 authors:
-  - Gordon Zola
+  - Lola Bourdon
 
 date: 1971-03-01
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Etude de cas visant à préparer mon stage.
 ---

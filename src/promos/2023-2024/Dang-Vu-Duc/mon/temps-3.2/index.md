@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "La stratégie Cloud dans les entreprises"
 authors:
   - Duc DANG VU
 
-date: 1971-03-01
+date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON explorera les différents enjeux de la stratégie Cloud dans le monde de l'entreprise"
 ---
