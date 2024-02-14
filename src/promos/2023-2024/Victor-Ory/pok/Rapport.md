@@ -32,7 +32,13 @@ Ci-dessous sont énoncés les objectifs que je me suis fixés, notés en termes 
 
 ## Première étape : Comprendre la méthode :
 
-## Deuxième étape : Faire le rapport : 
+Beaucoup de choses à lire ... 
 
-#### Horodatage : 
+## Deuxième étape : Faire le rapport :
+
+Le cadre du rapport est important et essentielles pour la structure et la démarche qui va habiter ce travail.
+Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur les sujets de politique publique relatif au monde cyber à l'échelle nationale et européenne.
+L'intention du rapport va être de donner un aperçu à des décideurs de la Banque de France concernant les potentiels signaux faibles technologiques pour penser la stratégie futures de l'organisation.
+
+#### Horodatage :
 

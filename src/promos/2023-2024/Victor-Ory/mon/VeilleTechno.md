@@ -15,13 +15,20 @@ tags:
   - 'Veille'
   
 ---
-# Résumé :
+## Résumé :
 
 Deux parties vont constituer ce MON :
 
     - Comprendre et mettre en place la méthode de veille 
     - Mettre en place ce dispositif
+    - Faire un petit rapport sur les sujets de politiques publiques du monde cuber
 
-## Ressources :
+### Comprendre :
+
+### Mettre en place :
+
+### Résultats :
+
+#### Ressources :
 
 [Documentation Feedly](https://docs.feedly.com/)
