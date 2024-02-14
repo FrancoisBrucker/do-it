@@ -4,15 +4,17 @@ layout: layout/pok.njk
 title: "Quiz Battle Royale"
 authors:
   - Lucas Rioual
+  - Samy Diafat
 
-date: 1970-09-01
+date: 2024-02-14
 
 tags: 
   - "temps 3"
   - "Spring Boot"
-  - "web"
+  - "Web"
+  - "Jeu"
 
-résumé: Création d'un quiz multijoueur en ligne'
+résumé: Création d'un quiz multijoueur en ligne en utilisant Java pour le backend'
 ---
 
 {% prerequis %}
@@ -20,10 +22,14 @@ Il faut mettre des trucs ici
 {% endprerequis %}
 
 
+
+
+<img src="./illustration.jpg" alt="Illustration" style="width:50%;">
+
 ## **Objectif du POK**
 
 L’objectif de ce POK est de créer un jeu de Quiz multijoueur en mode Battle Royale. Le but du jeu est d’être le dernier survivant de la partie en répondant juste à toutes les questions.
-Nous sommes deux pour réaliser ce POK : Flask Ip et Lucas Rioual
+Nous sommes deux pour réaliser ce POK : Moi, le grand Lucas Rioual, et mon larbin Samy Diafat.
 
 Nous avons choisi cette thématique pour créer une application web avec Spring Boot. 
 
