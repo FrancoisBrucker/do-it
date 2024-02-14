@@ -1,13 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "Découverte de Three.js"
 authors:
-  - Gordon Zola
+  - Assane Diouf
 
-date: 1971-03-01
+date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Découverte de Three.js et du creative programming."
 ---
+
+## Introduction
+Dans ce MON je vais essayer Three.js, il s'agit d'un framework js qui permet de faire de la 3D directement dans le navigateur. Beaucoup de développeurs créatifs ont pu faire des sites tout à fait bluffant avec ce framework.

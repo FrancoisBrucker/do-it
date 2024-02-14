@@ -9,5 +9,4 @@ authors:
 Ensemble des POK réalisés par Paul Vietor.
 
 * [POK 1: Absolument pas Minecraft](./temps-1)
-* [POK 2](./temps-2)
-* [POK 3](./temps-3)
+* [POK 3: Génération procédural de mondes](./temps-3)
