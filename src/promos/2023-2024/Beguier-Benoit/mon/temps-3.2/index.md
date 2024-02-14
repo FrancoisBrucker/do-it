@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "BBQ"
 authors:
   - Benoit BEGUIER
 
-date: 1971-03-01
+date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON va rendre compte de l'organisation du barbecue de fin d'année Do-It"
 ---

@@ -1657,7 +1657,7 @@ Quand je lance l'API, j'obtiens maintenant mon TOP artiste et musique. La photo 
 ## Retour d'expérience du Sprint 2
 
 J'ai réussi à lier l'API Spotify avec mon front-end pour permettre à l'utilisateur de s'identifier, et d'arriver sur une page qui *display* ses informations personnalisées et ses top artistes/musiques. C'est globalement l'idée que j'avais de mon POK.
-Par contre je n'ai pas eu le temps de m'attarder sur la visualisation des données car l'a partie API m'a pris beaucoup plus de temps que prévu.
+Par contre je n'ai pas eu le temps de m'attarder sur la visualisation des données car la partie API m'a pris beaucoup plus de temps que prévu.
 
 Bilan du temps passé :
 
