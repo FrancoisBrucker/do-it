@@ -1,7 +1,7 @@
 ---
 layout: layout/projet.njk
 
-title: "Nut ou Peanut, la version mobile du jeu Chiche ou Pois Chiche"
+title: "Tu tires ou tu pointes? La version mobile du jeu Chiche ou Pois Chiche"
 authors:
   - Duc DANG VU
   - Sarah SEBASTIEN

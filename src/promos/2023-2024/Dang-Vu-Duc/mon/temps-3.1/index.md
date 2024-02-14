@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "Utilisation de Python pour manipuler des fichiers Word et PDF"
 authors:
   - Duc DANG VU
 
-date: 1971-02-01
+date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON expliquera l'utilisation des bibliothèques PyPDF2 et Python-Docx pour manipuler des fichiers Word et PDF."
 ---

@@ -14,4 +14,4 @@ authors:
 
 ## Projet
 
-[Version mobile du jeu "Chiche ou Pois chiche"](../../../projets/2023-2024/Chiche-ou-pois-chiche)
+[Tu tires ou tu pointes? La version mobile du jeu Chiche ou Pois Chiche](../../../projets/2023-2024/Chiche-ou-pois-chiche)

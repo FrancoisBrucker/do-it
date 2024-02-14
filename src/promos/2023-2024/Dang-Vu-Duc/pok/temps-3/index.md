@@ -1,14 +1,14 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Implémentation de statistiques sur le Poker avec Python"
 authors:
   - Duc DANG VU
 
-date: 1971-03-01
+date: 2024-02-14
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce POK traitera de l'implémentation sur Python d'un programme qui permettra de calculer des statistiques autour du jeu de Poker.
 ---
