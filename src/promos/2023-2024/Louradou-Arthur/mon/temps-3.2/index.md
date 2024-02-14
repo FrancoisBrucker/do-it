@@ -12,3 +12,10 @@ tags:
 
 résumé: "CSS, Scss, Sass, Animations dans le web. Après la lecture de ce MON, vous serez capable de créer des interfaces web modernes et dynamiques."
 ---
+
+
+## Notes et références :
+
+- Sass
+- https://postcss.org
+- https://gsap.com
