@@ -10,11 +10,6 @@ authors:
 
 - [Rust](Rust/)
 - [CNIL](CNIL/)
-  
-## Futur POK possibles :
-
-- OSINT
-- CI/CD 
-- Hacker le professeur d'info
+- [Rapport](Rapport/)
 
 ## Description :

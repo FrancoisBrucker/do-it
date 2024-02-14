@@ -12,5 +12,5 @@ Ensemble des MON réalisés par Benoit Beguier.
 * [Deuxième MON : **HTML C'est Super Simple**](./temps-1.2)
 * [Premier MON : **Reprise des bases de Python + Petite exploration de Seaborn**](./temps-2.1)
 * [Deuxième MON : **Node.js : Bases**](./temps-2.2)
-* [MON 3.1](./temps-3.1)
-* [MON 3.2](./temps-3.2)
+* [Premier MON : **G-code pour CNC**](./temps-3.1)
+* [Deuxième MON : **BBQ**](./temps-3.2)

@@ -1,11 +1,11 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Back-end pour mon site de Memory avec Express"
 authors:
   - William Lalanne
 
-date: 1971-01-01
+date: 2024-01-08
 
 tags: 
   - "temps 2"
@@ -24,7 +24,8 @@ Dans ce POK j'aimerais commencer à intégrer l'aspect backend au site que j'ai 
 - Création du serveur avec Node et Express : 1h
 
 ## Les étapes pour le Sprint 2
-- Créer les requêtes pour permettre aux utilisateurs de s'inscrire, se connecter et se déconnecter : 5h
+- Créer les routes d'inscription et de connexion : 4h
+- Créer les requêtes pour que l'utilisateur s'inscrive et se connecte : 1h
 - Afficher l'historique des parties du joueur connecté : 5h
 
 
@@ -322,6 +323,7 @@ app.post('/connection', (req, res) => {
 });
 ```
 Une fois la route créée, on s'occupe de la requête côté client. On récupère les informations de connexion rentrées dans le form, email et mot de passe, on les passe en format JSON puis on les transfère au serveur à l'URL de la route que nous avons créée. Le serveur fera alors ce que nous avons détaillé au dessus. 
+
 ```js
 document.getElementById("connectionForm").addEventListener('submit', function (event) {
     
@@ -349,3 +351,18 @@ document.getElementById("connectionForm").addEventListener('submit', function (e
     });
 });
 ```
+
+## Jeton d'authentification
+
+Mais la logique de connexion créée est incomplète, tout ce que fait le serveur c'est vérifier que les mots de passe sont indentiques mais il ne fait rien de plus. L'utilisateur n'est pas réellement connecté. Pour que ce soit le cas il faut utiliser la logique des jetons d'authentification. Le jeton d'authentification est comme un pass que l'utilisateur obtient lorsqu'il se connecte. Ce pass lui permet de rester connecté pendant une certaine période, soit jusqu'à ce qu'il se déconnecte, soit pendant un temps fixé par le développeur. De plus, la façon dont sont stockés les mots de passe n'est pas sécurisée. Ils sont stockés comme de simple chaîne de caractère alors qu'ils devraient être cryptés par un hachage. 
+
+
+
+## Conclusion 
+
+Pour ce qui est du temps passé sur chaque étape pour le sprint 2 : 
+- Créer une route pour l'inscription et la connexion : 9h -----> +5h
+- Créer les requêtes pour s'inscrire et se connecter : 6h -----> +5h
+- Gérer les historiques des parties : pas eu le temps de le faire
+
+J'ai été un peu ambitieux et j'ai sous-estimé la difficulté du back-end pour mon site. 

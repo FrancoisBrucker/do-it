@@ -1,13 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "Analyse des données : on accèlR"
+title: "G-code pour CNC"
 authors:
   - Benoit BEGUIER
 
-date: 1971-02-01
+date: 2024-02-14
 tags: 
   - "temps 3"
+  - "G-code"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le but de ce MON est d'apprendre les bases du G-code, langage permettant d'indiquer à une machine CNC (type fraiseuse par exemple) comment usiner une pièce"
 ---

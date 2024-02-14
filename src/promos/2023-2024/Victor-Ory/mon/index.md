@@ -23,6 +23,7 @@ Ensemble des MON réalisés par Victor ORY
 - [OSINT](./OSINT)
 - [Blender et la 3D](./Blender)
 
-### Autres MONs envisagés :
+### Temps 3 : 
 
-- Management des risques cyber
+- [Veille Technologique](./VeilleTechno.md)
+- [À venir](./index.md)

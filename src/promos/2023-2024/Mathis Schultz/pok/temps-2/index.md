@@ -175,6 +175,8 @@ Mes objectifs ont légèrement était bouleversé par l'audit, mais cela montre 
 
 Cette nouvelle page d'accueil permet de choisir la langue du site web.
 
+J'ai un problème de chemin sur cette page que je ne comprend pas, pour l'instant cette page est masqué (accessible à cette adresse : [Lien vers la page d'accueil](https://schultzmathis.github.io/mon-cv/fr/))
+
 ![Alt text](activite.png)
 
 Remaniement des loisirs, avec plus de texte pour être plus vivant. Apparition d'un bouton langue en bas de chaque page qui renvoie vers la page similaire dans l'autre langue.
@@ -189,6 +191,6 @@ Bien que par la suite je ne mette pas à jour le POK, je risque de faire des mis
 Dans cette partie vous retrouverez les différentes ressources utilisés pour construire mon POK, ainsi que les résultats obtenu pour pouvoir vous l'approprier.
 
 - [Dépôt Github](https://github.com/schultzmathis/mon-cv)
-- [Lien vers mon CV](https://schultzmathis.github.io/mon-cv/)
+- [Lien vers mon CV](https://schultzmathis.github.io/mon-cv/fr/)
 - [Lien vers le POK d'Agathe](../../../Agathe-Rabachou/pok/temps-1/)
 - [Lien du Github d'Agathe](https://github.com/arabachou/CVInteractif)

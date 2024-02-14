@@ -10,4 +10,4 @@ Ensemble des POK réalisés par Nicolas Ouzoulias.
 
 * [Web Front : Centrale Coinche](./temps-1)
 * [Web Back : Centrale Coinche](./temps-2)
-* [POK 3](./temps-3)
+* [CentRale : REX des centraliens](./temps-3)
