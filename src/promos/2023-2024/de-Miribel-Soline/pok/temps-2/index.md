@@ -199,8 +199,8 @@ SM est dans l'entreprise depuis sa création en 2013, elle a donc été témoin 
 Comment les collaborateurs sont-ils impliqués et accompagnés dans ces transformations ?
 {% endexercice %}
 {% details "réponse" %}
-La transformation est impulsée par les directeurs. Plus la décision descend dans les échelons, plus elle s'impose. Au niveau de SM, de nombreuses évolutions sont donc imposées et il arrive donc que les collaborateurs se plaignent. Cepandant, ils sont accompagnés par de nombreuses propositions de prise en main des nouveaux outils. On pourrait citer les présentations répétées, la mise à disposition de tuto ou de manuels utilisateur, la commnunication, les formations proposées, la hotline ou des tickets suivis d'une enquête de satisfaction. Il existe aussi un service de dextérité numérique.
-Cette grande aide et le peu de marche de manoeuvre dont disposent les collaborateurs n'invitent pas les collaborateurs à s'investir dans ces changements. Ils ont davantage tendance a adopté une position d'attente passive au lieu d'une participation active à la transformation de leur métier.
+La transformation est impulsée par les directeurs. Plus la décision descend dans les échelons, plus elle s'impose. Au niveau de SM, de nombreuses évolutions sont donc imposées. Cepandant, les collaborateurs sont accompagnés par de nombreuses propositions de prise en main des nouveaux outils. On pourrait citer les présentations répétées, la mise à disposition de tuto ou de manuels utilisateur, la commnunication, les formations proposées, la hotline ou des tickets suivis d'une enquête de satisfaction. Il existe aussi un service de dextérité numérique.
+Cette grande aide et le peu de marche de manoeuvre dont disposent les collaborateurs présente le risque d'une tendance a adopté une position d'attente passive au lieu d'une participation active à la transformation de leur métier. L'écoute des besoins et des propositions reste néanmoins active : l'entreprise cherche à impliquer ses collaborateurs dans cette transformation digitale, et les collaborateurs se prêtent volontiers à l'exercice.
 {% enddetails %}
 
 ### La transformation des métiers
@@ -216,7 +216,7 @@ Les tâches récurrentes étant automatisées et simplifiées du temps est libé
 Finalement, comment définiriez-vous la transformation digitale dans votre entreprise ?
 {% endexercice %}
 {% details "réponse" %}
-SM confie avoir eu une idée faussée de cette transformation quand le mot digital avait été associé à la mise à disposition de canapés et de babyfoots. Aujourd'hui, elle comprend davantage l'utilité et le bénéfice qu'elle peut en retirer. Elle définirait donc la transformation digitale de Sfil comme un besoin de perpétuelle évolution mené par un service grâce à des veilles et des améliorations technologiques.
+SM confie s'être fait dans un premier temps une idée faussée de cette transformation quand le mot digital avait été associé un passage intégral au numérique, la fin des papiers dans les bureaux, un mode de travail moins conventionnel, le télétravail à outrance ou encore moins de relations interpersonnelles. Aujourd'hui,elle comprend que ce n'est pas ce que son entreprise appelle transformation digitale.Elle définirait donc la transformation digitale de Sfil comme un besoin de perpétuelle évolution mené par un service grâce à des veilles et des améliorations technologiques.
 {% enddetails %}
 
 ## Analyse

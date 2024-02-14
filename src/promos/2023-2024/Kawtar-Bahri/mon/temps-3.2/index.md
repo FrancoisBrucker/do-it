@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "Introduction au Docker"
 authors:
   - Kawtar Bahri
 
@@ -9,5 +9,5 @@ date: 1971-03-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON pour s'initier au Docker"
 ---

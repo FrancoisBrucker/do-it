@@ -27,6 +27,6 @@ Ensemble des MON réalisés par Vladimir Jeantroux
 
 ### Temps 3
 
--31
+-[Révisions de Java](./temps-3-1)
 
--32
+-[Aprentissage d'Excel](./temps-3-2)
