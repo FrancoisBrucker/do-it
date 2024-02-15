@@ -11,11 +11,11 @@ authors:
 
 Création d'un site de mise en relation des élèves centraliens pour déposer et répondre à des annonces.
 
-Dernière mise à jour : 28/11/2023
+Dernière mise à jour : 15/02/2023
 
 ## Introduction et contexte
 
-L'année dernière, alors qu'il s'apprêtait à partir en vacances, William  n'a trouvé personne qui pourrait s'occuper de son jardin en son absence (pas chez ses voisins, pas même chez ses amis).
+L'année dernière, alors qu'il s'apprêtait à partir en vacances, William  n'a trouvé personne qui pouvait s'occuper de son jardin en son absence (pas chez ses voisins, pas même chez ses amis).
 **Résultat :** tout son potager est mort en son absence.
 
 Nous souhaitons créer une plateforme de mise en relation de particuliers pour la garde d'animaux et la gestion de jardins pendant une absence.
@@ -26,17 +26,23 @@ Après réflexion et discussion avec Adèle, notre tutrice, nous avons décidé 
 
 ## Présentation
 
-Une plateforme type Leboncoin permettant à un particulier de déposer son annonce (besoin ponctuel, besoin récurrent, type tous les jeudis ; ou alors seulement pendant une semaine d'absence) avec une description et des infos pratiques. Les autres utilisateurs peuvent rechercher les annonces proches de chez eux, et avoir accès à la carte des Colocs. Après acceptation d'une annonce, l'utilisateur est invité à contacter l'accepteur sur Messenger.
+Nous souhaitons créer une plateforme d'entraide entre centraliens, du type Leboncoin, permettant à tout étudiant de déposer une annonce 
+pour tout type de service. Il peut s'agir d'un besoin ponctuel de courte durée (prêt d'outils, déménagement, vends bureau), d'un besoin récurrent (prêt de matériel de sport) ou même d'un besoin ponctuel de plus longue durée (entretien d'un potager pendant les vacances).
+Chaque centralien dépose alors son annonce avec une description et des infos pratiques : localisation, date, besoin... Les autres utilisateurs peuvent alors scruter les différentes annonces, rechercher celles proches de chez eux via un accès à la carte des colocs.
+Après acceptation d'une annonce, le demandeur est invité à contacter l'accepteur sur Messenger.
 
 ## Et ça existe déjà ?
 
-Alors oui, mais non. Les applications existantes (Allovoisins, Yoojo, etc...) ne proposent que de la mise en relation entre particuliers et artisans ou dépanneurs, etc... Nous souhaitons proposer un site Internet de confiance dédié aux centraliens, et qui favorise l'échange et les interactions sociales. La vie des centraliens s'en verra grandement améliorée.
+Oui, mais non... 
+Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent que de la mise en relation entre particuliers et artisans ou dépanneurs, etc... Les sercives restent tout à fait factuels or nous souhaitons proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales. La vie des centraliens s'en verra grandement améliorée.
+
+Il existe également un groupe Facebook "Centrale bière au Bar'bu" qui permet de demander des services de la sorte mais la page est inadaptée aux besoins : les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, la page est peu gérée...
 
 ## Rendu final, principaux jalons et compétences sollicitées
 
 ### Rendu final
 
-- Site Low-Code / No-Code
+Nous comptons rendre, d'une part : un **Site Low-Code / No-Code**
 - Airtable : outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces, les utilisateurs, et les favoris.
 - Bubble : outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
 
