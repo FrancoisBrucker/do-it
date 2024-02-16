@@ -700,10 +700,169 @@ function ajouterFruit(){
 ```
 Il faut faire la même modification lorsque deux fruits se rencontrent et que le prochain fruit apparait.
 
+
 <div style="display:flex">
 <div><img src="avecfruit.png"></div>
 <div><img src="avecfruit2.png"></div>
 </div>
+
+## 4. Ajout d'un score pour la partie 
+
+On va rajouter un tableau de score pour notre jeu. D'abord j'ajoute une nouvelle variable <strong>score</strong> qui ajoutera les points à chaque fois que l'on ajout un fruit dans notre boite.
+
+```html
+let score = 0;
+
+function updateScore(points) {
+    score += points;
+    document.getElementById('score').innerText = `Score: ${score}`;
+}
+```
+
+Ensuite je modifie mon tableau <strong>FRUITS</strong> en rajoutant une propriété <strong>point</strong> pour chaque fruit.
+
+{% details "Nouveau tableau FRUITS" %}
+```html
+export const FRUITS = [
+  {
+    label: "radish",
+    radius: 40 / 2,
+    color: "#F20306",
+    points: 10
+  },
+  {
+    label: "garlic",
+    radius: 50 / 2,
+    color: "#FF624C",
+    points: 15
+  },
+  {
+    label: "onionw",
+    radius: 72 / 2,
+    color: "#A969FF",
+    points: 20
+  },
+  {
+    label: "lemon",
+    radius: 85 / 2,
+    color: "#FFAF02",
+    points: 30
+  },
+  {
+    label: "orange",
+    radius: 106 / 2,
+    color: "#FC8611",
+    points: 45
+  },
+  {
+    label: "tomato",
+    radius: 140 / 2,
+    color: "#F41615",
+    points: 65
+  },
+  {
+    label: "onion",
+    radius: 160 / 2,
+    color: "#FDF176",
+    points: 90
+  },
+  {
+    label: "paprika",
+    radius: 196 / 2,
+    color: "#FEB6AC",
+    points: 130
+  },
+  {
+    label: "eggplant",
+    radius: 220 / 2,
+    color: "#F7E608",
+    points: 200
+  },
+  {
+    label: "artichoke",
+    radius: 270 / 2,
+    color: "#89CE13",
+    points: 300
+  },
+  {
+    label: "pumpkin",
+    radius: 300 / 2,
+    color: "#26AA1E",
+    points: 450
+  },
+];
+```
+{% enddetails %}
+
+Ensuite je vais appeler la fonction <strong>updateScore</strong> lorsque je lâche un fruit et aussi quand un nouveau fruit apparait.
+
+```html
+case "Space":
+            disableAction=true;
+            const indexF = FRUITS.findIndex((fruit)=> fruit.label==fruitActuel.label);
+            const monFruit = FRUITS[indexF] ; 
+            Sleeping.set(fruitActuel, false);
+            setTimeout(() => {
+                ajouterFruit();
+                disableAction = false;
+            },1000);
+            updateScore(monFruit.points);
+```
+
+```html
+Events.on(engine,"collisionStart",(event)=>{
+    event.pairs.forEach(collision => {
+        if(collision.bodyA.label == collision.bodyB.label){
+            World.remove(world, [collision.bodyA, collision.bodyB]);
+
+            const index = FRUITS.findIndex((fruit )=> fruit.label==collision.bodyA.label);
+
+            if(index == FRUITS.length - 1) return;
+            
+            const newfruit = FRUITS[index + 1];
+            const body = Bodies.circle(
+                collision.collision.supports[0].x,
+                collision.collision.supports[0].y,
+                newfruit.radius,
+                {render: {
+                    fillStyle: newfruit.color,
+                    sprite: { texture: `/${newfruit.label}.png` },
+                },
+            label : newfruit.label,
+        });
+        updateScore(newfruit.points);
+        World.add(world, body);
+
+        }
+        if((collision.bodyA.label === "ligne" || collision.bodyB.label === "ligne")&&!disableAction){
+            alert("Game over");
+          } 
+    })
+});
+```
+J'améliore un peu l'hmtl et j'obtiens ça : 
+<div style="display:flex">
+<div><img src="amelioration.png"></div>
+<div><img src="ameliorationavecscore.png"></div>
+</div>
+
+Ensuite j'ai changé les couleurs de la boite et du fond et j'ai rajouté un bouton pour lancer une nouvelle partie. Pour cela j'ai supprimé tous les corps autre que les constituants de la boite et mis le score à zero lorsque le joueur clique sur le bouton.
+
+```html
+document.getElementById('newGameButton').addEventListener('click', () => {
+    score = 0;
+    updateScore(score);
+    world.bodies.filter(body => body.label !== "sol" && body.label !== "ligne" && body.label !== "murgauche"&& body.label !== "murdroite").forEach(body => {
+        World.remove(world, body);
+    });
+    ajouterFruit();
+ } );
+```
+
+<div style="display:flex">
+<div><img src="nouvellescouleuretnouvellepartie.png"></div>
+</div>
+
 
 ### Horodateur
 | Date | Heures passées | Indications |
@@ -726,5 +885,5 @@ Il faut faire la même modification lorsque deux fruits se rencontrent et que le
 | Dimanche 04/02 | 30min | *Redimensionner et enlever le background des images* |
 | Dimanche 04/02 | 15min | *Ajouter les images dans le projet* |
 | Dimanche 04/02 | 1H30 | *Ajouter les images dans le code* |
-| Vendredi 16/02 | | *Amélioration de l'interface* |
+| Vendredi 16/02 | 1H | *Ajout d'un score* et modification de couleurs|
 
