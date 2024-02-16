@@ -151,99 +151,105 @@
 <p>Aucun prérequis !</p>
 </div></div>
 <h3>Introduction</h3>
-<p>WordPress est un système de gestion du contenu (CMS) open source qui permet de créer et de gérer facilement des sites web de manière flexible et personnalisable. Il permet autant de créer des blogs personnales que des sites d'entreprise ou des boutiques en ligne. Son architecture modulaire, ses thèmes personnalisables et ses plugins étendus font de lui une solution très populaire pour de nombreux utilisateurs internationaux.<br>
+<p>WordPress est un système de gestion du contenu (CMS) open source qui permet de créer et de gérer facilement des sites web de manière flexible et personnalisable. Il permet autant de créer des blogs personnels que des sites d'entreprise ou des boutiques en ligne. Son architecture modulaire, ses thèmes personnalisables et ses plugins étendus font de lui une solution très populaire pour de nombreux utilisateurs internationaux.<br>
 Différents plans tarifaires sont proposés en fonction du besoin de l'utilisateur, ici on se concentrera uniquement sur le plan gratuit, dont les fonctionalités bien que limités restent intéressantes pour l'objectif final : avoir un site professionnel permettant d'exposer les sorties VTT proposé par une entreprise et permette aux visiteurs de s'y inscrire.</p>
 <p>Pour ce faire je vais suivre la formation <a href="https://openclassrooms.com/">OpenClassroom</a> intitulé <a href="https://openclassrooms.com/fr/courses/5489551-creez-un-site-moderne-et-professionnel-avec-wordpress-5">Créez un site moderne et professionnel avec WordPress 5</a>.</p>
 <h2>1. Découverte de WordPress</h2>
-<p>Les CMS (systèmes de gestion de contenu) et le concept open source sont deux piliers fondamentaux de l'univers numérique contemporain, chacun apportant des avantages distincts et contribuant à façonner le paysage en ligne.</p>
-<p>Un CMS, ou &quot;Content Management System&quot;, est une plateforme logicielle conçue pour la création et la gestion dynamique de sites web ou d'applications multimédia. Plutôt que de coder manuellement chaque élément d'un site, un CMS offre une interface conviviale permettant de créer et de gérer les contenus plus efficacement.</p>
-<p>D'autre part, le terme &quot;open source&quot;, ou &quot;code source ouvert&quot;, désigne des logiciels (et désormais des œuvres intellectuelles) dont la licence respecte des critères spécifiques établis par l'Open Source Initiative. Cela inclut des principes tels que la libre redistribution, l'accès au code source et la possibilité de créer des travaux dérivés.</p>
-<p>L'association du CMS et de l'open source est particulièrement exemplifiée par WordPress, un CMS open source qui a connu un succès phénoménal. Son code ouvert a encouragé la collaboration et l'innovation, attirant une communauté dévouée de développeurs et d'utilisateurs. Cette ouverture a permis à WordPress de devenir le leader incontesté du marché des CMS, propulsant près de 40 % des sites web dans le monde.</p>
-<p>L'histoire de WordPress est celle d'une évolution constante, marquée par des fonctionnalités innovantes telles que les extensions (plugins) et les thèmes, qui ont considérablement élargi ses possibilités. L'engagement envers la gratuité, la philosophie open source et la communauté a été crucial dans la croissance et le maintien de sa popularité.</p>
-<p>Plus récemment, WordPress a introduit Gutenberg, un éditeur de contenu basé sur des blocs, représentant une évolution majeure vers un web plus moderne et dynamique. Bien que cette transition ait suscité des débats au sein de la communauté, Gutenberg devrait finalement s'imposer comme une norme, illustrant la capacité de WordPress à s'adapter et à innover pour répondre aux besoins changeants du monde numérique.</p>
+<p>Les <strong>CMS (systèmes de gestion de contenu)</strong> et le concept <strong> open source </strong> sont deux piliers fondamentaux de l'univers numérique contemporain, chacun apportant des avantages distincts et contribuant à façonner le paysage en ligne.</p>
+<p>Un CMS, ou &quot;Content Management System&quot;, est une <strong>plateforme logicielle</strong> conçue pour la création et la gestion dynamique de sites web ou d'applications multimédia. Plutôt que de coder manuellement chaque élément d'un site, un CMS offre une interface conviviale permettant de <strong>créer et de gérer les contenus plus efficacement.</strong></p>
+<p>D'autre part, le terme &quot;open source&quot;, ou &quot;code source ouvert&quot;, désigne des logiciels (et désormais des œuvres intellectuelles) dont la licence respecte des critères spécifiques établis par <strong>l'Open Source Initiative</strong>. Cela inclut des principes tels que la <strong>libre redistribution, l'accès au code source et la possibilité de créer des travaux dérivés. </strong></p>
+<p>L'association du CMS et de l'open source est particulièrement exemplifiée par WordPress, un CMS open source qui a connu un succès phénoménal. Son code ouvert a encouragé <strong>la collaboration et l'innovation</strong>, attirant une communauté dévouée de développeurs et d'utilisateurs. Cette ouverture a permis à WordPress de devenir <strong>le leader incontesté du marché des CMS</strong>, propulsant près de 40 % des sites web dans le monde.</p>
+<p>L'histoire de WordPress est celle d'une évolution constante, marquée par des fonctionnalités innovantes telles que les <strong>extensions (plugins) et les thèmes</strong>, qui ont considérablement élargi ses possibilités. L'engagement envers la gratuité, la philosophie open source et la communauté a été crucial dans la croissance et le maintien de sa popularité.</p>
+<p>Plus récemment, WordPress a introduit <strong>Gutenberg</strong>, <strong>un éditeur de contenu basé sur des blocs</strong>, représentant une évolution majeure vers un web plus moderne et dynamique. Bien que cette transition ait suscité des débats au sein de la communauté, Gutenberg devrait finalement s'imposer comme une norme, illustrant la capacité de WordPress à s'adapter et à innover pour répondre aux besoins changeants du monde numérique.</p>
 <h2>2. Fonctionnement d'un site web</h2>
-<p>Le fonctionnement du web repose sur un modèle d'échanges décentralisés entre un client (généralement vous, via votre navigateur web) et un serveur qui héberge les pages web.</p>
-<p>Lorsque vous souhaitez accéder à un site web, vous saisissez l'adresse du site dans votre navigateur, appelée URL (Uniform Resource Locator). Cette adresse se décompose en plusieurs parties :</p>
+<p>Le fonctionnement du web repose sur un modèle d'échanges décentralisés entre <strong>un client</strong> (généralement nous, via votre navigateur web) et <strong>un serveur qui héberge les pages web.</strong></p>
+<p>Lorsque l'on souhaite accéder à un site web, on saisisse l'adresse du site dans notre navigateur, appelée URL (Uniform Resource Locator). Cette adresse se décompose en plusieurs parties :</p>
 <ul>
-<li>Le protocole de communication utilisé, tel que HTTP (Hypertext Transfer Protocol), qui est le plus courant pour afficher des pages web.</li>
-<li>Le nom de domaine du site, loué auprès d'un registrar et permettant d'identifier le site de manière simple.</li>
-<li>Le chemin d'accès spécifique à la page demandée sur le site.</li>
+<li>Le <strong>protocole de communication utilisé</strong>, tel que HTTP (Hypertext Transfer Protocol), qui est le plus courant pour afficher des pages web.</li>
+<li>Le <strong>nom de domaine du site</strong>, loué auprès d'un registrar et permettant d'identifier le site de manière simple.</li>
+<li>Le <strong>chemin d'accès spécifique à la page demandée sur le site.</strong></li>
 </ul>
-<p>Techniquement, votre navigateur demande au réseau la localisation du site à partir de son nom de domaine. Le réseau répond en fournissant l'adresse IP du serveur hébergeant le site, permettant ainsi à la requête d'atteindre le serveur.</p>
-<p>Une fois la requête acheminée vers le serveur, celui-ci recherche la page demandée et la fournit au navigateur sous forme de code HTML.</p>
-<p>Le navigateur interprète ensuite ce code HTML pour afficher la page web que vous voyez à l'écran.</p>
-<p>Pour qu'un site web fonctionne, il a besoin d'un serveur pour stocker les fichiers et exécuter le code nécessaire à sa création. Pour les sites basés sur WordPress, par exemple, le serveur exécute du code PHP et accède à une base de données MySQL pour récupérer les informations nécessaires à la génération des pages.</p>
+<p>Techniquement, notre navigateur demande au réseau la localisation du site à partir de son nom de domaine. Le réseau répond en fournissant l'adresse IP du serveur hébergeant le site, permettant ainsi à la requête d'atteindre le serveur.</p>
+<p>Une fois la requête acheminée vers le serveur, celui-ci <strong>recherche la page demandée</strong> et la fournit au navigateur sous forme de <strong>code HTML.</strong></p>
+<p>Le navigateur interprète ensuite ce code HTML pour afficher la page web que l'on voit à l'écran.</p>
+<p>Pour qu'un site web fonctionne, il a besoin <strong>d'un serveur</strong> pour stocker les fichiers et exécuter le code nécessaire à sa création. Pour les sites basés sur WordPress, par exemple, le serveur exécute du <strong>code PHP</strong> et <strong>accède à une base de données MySQL</strong> pour récupérer les informations nécessaires à la génération des pages.</p>
 <p>Deux options principales sont disponibles pour disposer d'un tel serveur :</p>
 <ol>
 <li>
-<p>Créer un environnement en local en utilisant des logiciels tels que MAMP ou Local by Flywheel, qui simulent un serveur sur votre propre ordinateur. C'est gratuit mais le site ne sera accessible que sur votre machine.</p>
+<p><strong>Créer un environnement en local</strong> en utilisant des logiciels tels que <strong>MAMP</strong> ou <strong>Local by Flywheel</strong>, qui simulent un serveur sur notre propre ordinateur. C'est gratuit mais le site ne sera accessible que sur notre machine.</p>
 </li>
 <li>
-<p>Louer de l'espace sur un serveur auprès d'un hébergeur. Cela permet au site d'être accessible en ligne via Internet, mais cela implique des frais mensuels.</p>
+<p><strong>Louer de l'espace sur un serveur auprès d'un hébergeur</strong>. Cela permet au site d'être accessible en ligne via Internet, mais cela implique <strong>des frais mensuels</strong>.</p>
 </li>
 </ol>
-<p>En parallèle, un nom de domaine est nécessaire pour que le public puisse accéder facilement à votre site. Il est loué auprès de fournisseurs spécialisés appelés registrar et permet de remplacer l'adresse IP du serveur par un nom convivial. Ce nom de domaine peut être accompagné de sous-domaines, tels que <a href="http://blog.monsite.com">blog.monsite.com</a> ou <a href="http://shop.monsite.com">shop.monsite.com</a>, qui peuvent pointer vers des sites différents tout en étant liés au même nom de domaine principal.</p>
+<p>En parallèle, <strong>un nom de domaine est nécessaire</strong> pour que le public puisse accéder facilement à votre site. Il est <strong>loué auprès de fournisseurs spécialisés</strong> appelés registrar et permet de remplacer l'adresse IP du serveur par un nom convivial. Ce nom de domaine peut être accompagné de <strong>sous-domaines</strong>, tels que <a href="http://blog.monsite.com">blog.monsite.com</a> ou <a href="http://shop.monsite.com">shop.monsite.com</a>, qui peuvent pointer vers des sites différents tout en étant <strong>liés au même nom de domaine principal.</strong></p>
 <h2>3. Choisir le bon hébergeur</h2>
 <p>Il existe différent types d'hébergements selon le besoin :</p>
 <ul>
 <li>
-<p>hébergement mutualisé :<br>
+<p><strong>hébergement mutualisé : </strong><br>
 Ce type d'hébergement permet de louez une portion d'un serveur qui est partagé avec d'autres utilisateurs. Cette solution est la plus économique mais à de nombreux désavantages (accès limité à la configuration du serveur, subir les effets de noisy neighbours, un support très réduit,...)</p>
 </li>
 <li>
-<p>hébergement dédié :<br>
+<p><strong>hébergement dédié : </strong><br>
 Ce type d'hébergement permet de louez un serveur entier, ce qui est évidemment plus cher, mais permet d'avoir un contrôle total sur le serveur. Cependant il est primordiale d'avoir de bonnes connaissances techniques pour le gérer.</p>
 </li>
 <li>
-<p>hébergement managé (ou infogéré) :<br>
+<p><strong>hébergement managé (ou infogéré) :</strong><br>
 Ce type d'hébergement permet de louer un certain niveau de performance et de disponibilité pour un site sans avoir à se soucier de la partie serveur. C'est un prestataire qui s'occupe de tout à notre place. Le prix est plus cher que pour un hébergement mutualisé classique mais c'est une solution très idéal si on a pas le temps de s'occuper de cette partie là.</p>
 <p>Pour ce MON on va utiliser Themecloud qui est devenu <a href="https://www.faaaster.io/">faaaster.</a> pour les raisons suivantes :</p>
 <ul>
-<li>on a un site WordPress en ligne immédiatement et gratuit pour 30 jours</li>
-<li>le site est rapide, sécurisé et sauvegardé tous les jours</li>
-<li>on a un support réactif</li>
+<li>on a un site WordPress <strong>en ligne immédiatement</strong> et <strong>gratuit pour 30 jours </strong></li>
+<li>le site est <strong>rapide, sécurisé et sauvegardé tous les jours</strong></li>
+<li>on a un <strong>support réactif</strong></li>
 </ul>
 </li>
 </ul>
 <h2>4. Se connecter au bashboard WordPress</h2>
-<p>Dans la formation ils vont diront d'ajouter <em>/wp-admin</em> après l'adresse du site. Ca fonctionnait peut-être avec <strong>Themecloud</strong> mais pas avec <strong>faaaster</strong>. Il suffit de cliquer sur &quot;Se connecter au site&quot; lorsque l'on est sur la page de notre hébergeur pour le site en question.</p>
-<p>Voilà on est bien dans le mode admin ! On va pouvoir naviguer depuis le dashboard WordPress.</p>
-<p>On survole le nom du site en haut à gauche et on clique sur &quot;Dashboard&quot; pour accéder à l'interface d'administration WordPress.</p>
-<p>WordPress propose deux types de contenus de base : les articles et les pages. Les articles sont des contenus d'actualité, datés, et sont généralement présentés de manière antéchronologique sur une page spécifique, constituant ainsi un blog. Les pages, en revanche, sont des contenus statiques qui ne sont pas datés et conservent une valeur constante dans le temps. Elles sont utilisées pour présenter des informations permanentes telles que la société, les services ou les coordonnées de contact, et sont généralement accessibles via un menu de navigation sur le site web.</p>
+<p>Dans la formation ils nous dises d'ajouter <em>/wp-admin</em> après l'adresse du site. Ca fonctionnait peut-être avec <strong>Themecloud</strong> mais pas avec <strong>faaaster</strong>. Il suffit de cliquer sur &quot;Se connecter au site&quot; lorsque l'on est sur la page de notre hébergeur pour le site en question.</p>
+<p>Voilà on est bien dans le mode admin ! On va pouvoir naviguer depuis le <strong>dashboard WordPress.</strong></p>
+<p>On survole le nom du site en haut à gauche et on clique sur &quot;Dashboard&quot; pour accéder à <strong>l'interface d'administration WordPress.</strong></p>
+<p>WordPress propose deux types de contenus de base : <strong>les articles et les pages.</strong> Les articles sont des <strong>contenus d'actualité, datés</strong>, et sont généralement présentés de manière antéchronologique sur une page spécifique, constituant ainsi un blog. Les pages, en revanche, sont des <strong>contenus statiques</strong> qui ne sont pas datés et conservent une valeur constante dans le temps. Elles sont utilisées pour <strong>présenter des informations permanentes</strong> telles que la société, les services ou les coordonnées de contact, et sont généralement accessibles via un menu de navigation sur le site web.</p>
 <p>On va créer notre premier article.<br>
-Pour cela on survole &quot;Posts&quot; puis on clique sur &quot;Add new&quot;<br>
-// image</p>
-<p>On arrive alors sur cette page :<br>
-// image</p>
-<p>Je créer mon premier post que j'ajoutes dans la <strong>Catégorie</strong> <em>Weekend</em> :<br>
-//image</p>
-<p>WordPress propose également deux systèmes de classification par défaut : les catégories et les tags.</p>
-<p>Les catégories sont hiérarchisées et permettent de structurer le contenu dans une arborescence.</p>
-<p>Les tags, en revanche, ne suivent pas de hiérarchie et reflètent souvent les thèmes abordés dans le contenu.</p>
-<p>Gutenberg est le nouvel éditeur visuel de WordPress, basé sur le concept de &quot;blocs&quot;. Il offre la possibilité de créer des mises en page complexes en utilisant une interface de type &quot;drag and drop&quot;.</p>
-<p>Enfin, les articles et les pages peuvent être enregistrés en brouillon, publiés en mode privé, ou planifiés pour une publication ultérieure.</p>
+Pour cela on survole &quot;Posts&quot; puis on clique sur &quot;Add new&quot;</p>
+<div style="display:flex">
+<div><img src="addnewpost.png"></div>
+</div>
+<p>On arrive alors sur cette page :</p>
+<div style="display:flex">
+<div><img src="pageaddnew.png"></div>
+</div>
+<p>Je créer mon premier post que j'ajoutes dans la <strong>Catégorie</strong> <em>Weekend</em> :</p>
+<div style="display:flex">
+<div><img src="firstpost.png"></div>
+</div>
+<p>WordPress propose également deux systèmes de classification par défaut : <strong>les catégories et les tags.</strong></p>
+<p>Les catégories sont <strong>hiérarchisées</strong> et permettent de <strong>structurer le contenu dans une arborescence.</strong></p>
+<p>Les tags, en revanche, ne suivent pas de hiérarchie et reflètent souvent <strong>les thèmes abordés</strong> dans le contenu.</p>
+<p><strong>Gutenberg</strong> est le nouvel éditeur visuel de WordPress, basé sur le concept de &quot;blocs&quot;. Il offre la possibilité de créer des mises en page complexes en utilisant une <strong>interface de type &quot;drag and drop&quot;.</strong></p>
+<p>Enfin, les articles et les pages peuvent être <strong>enregistrés en brouillon</strong>, <strong>publiés en mode privé</strong>, ou <strong>planifiés pour une publication ultérieure.</strong></p>
 <h2>5. Paramétrage du site WordPress</h2>
-<p>Pour passer votre site WordPress en français, accédez à &quot;Réglages&quot; puis &quot;Général&quot;. Sélectionnez ensuite la langue désirée dans le menu déroulant sous &quot;Langue&quot;.</p>
-<p>Modifiez le titre et le slogan de votre site pour les rendre plus accrocheurs et optimiser le référencement. Vous pouvez le faire dans la même section &quot;Réglages&quot; &gt;&gt; &quot;Général&quot;.</p>
-<p>Assurez-vous de choisir une catégorie par défaut pour vos articles et cachez éventuellement votre site aux moteurs de recherche pendant le développement. Ces réglages se trouvent sous &quot;Réglages&quot; &gt;&gt; &quot;Écriture&quot; et &quot;Réglages&quot; &gt;&gt; &quot;Lecture&quot; respectivement.</p>
-<p>Configurez les paramètres de commentaires selon vos besoins sous &quot;Réglages&quot; &gt;&gt; &quot;Discussion&quot;.</p>
-<p>Enfin, ajustez les permaliens pour optimiser les URL de votre site. Cela se fait sous &quot;Réglages&quot; &gt;&gt; &quot;Permaliens&quot;.</p>
-<p>Il est important de garder à l'esprit la cohérence et la facilité d'utilisation pour les visiteurs tout en optimisant le référencement de votre site.</p>
+<p>Pour passer notre site WordPress en français, il faut aller dans <strong>&quot;Réglages&quot; puis &quot;Général&quot;.</strong> On sélectionne ensuite la langue désirée dans le menu déroulant sous &quot;Langue&quot;.</p>
+<p>On modifie <strong>le titre et le slogan</strong> de notre site pour les rendre plus accrocheurs et optimiser le référencement. On peut le faire dans la même section &quot;Réglages&quot; &gt;&gt; &quot;Général&quot;.</p>
+<p>Il faut s'assurer de <strong>choisir une catégorie par défaut pour les articles</strong> et <strong>cacher éventuellement le site aux moteurs de recherche</strong> pendant le développement. Ces réglages se trouvent sous &quot;Réglages&quot; &gt;&gt; &quot;Écriture&quot; et &quot;Réglages&quot; &gt;&gt; &quot;Lecture&quot; respectivement.</p>
+<p>Il faut configurer les <strong>paramètres de commentaires</strong> selon les besoins sous &quot;Réglages&quot; &gt;&gt; &quot;Discussion&quot;.</p>
+<p>Enfin, on ajuste <strong>les permaliens</strong> pour optimiser les URL du site. Cela se fait sous &quot;Réglages&quot; &gt;&gt; &quot;Permaliens&quot;.</p>
+<p>Il est important de garder à l'esprit la cohérence et la facilité d'utilisation pour les visiteurs tout en optimisant le référencement du site.</p>
 <h2>6. Page d'accueil personnalisée et menu de navigation</h2>
-<p>Avant de pouvoir configurer votre page d'accueil, il est nécessaire de la créer. Pour ce faire, rendez-vous dans l'onglet &quot;Pages&quot; puis cliquez sur &quot;Ajouter&quot;. Donnez un titre à votre page, par exemple &quot;Banana WordPress Design&quot;, et saisissez une description dans la zone de contenu. Une fois terminé, cliquez sur &quot;Publier&quot; pour créer la page.</p>
-<p>Répétez cette opération pour créer une page dédiée à votre blog. Pour cette page, ne saisissez aucun contenu, car elle affichera automatiquement la liste des articles publiés sur votre site.</p>
-<p>Maintenant que vos pages sont créées, allez dans &quot;Réglages&quot; puis &quot;Lecture&quot; pour configurer la page d'accueil et la page de blog. Sous l'option &quot;La page d'accueil affiche&quot;, choisissez &quot;Une page statique&quot; et sélectionnez votre page d'accueil et votre page de blog respectivement.</p>
-<p>Une fois ces paramètres enregistrés, vérifiez votre site pour voir les changements. La page d'accueil affichera le contenu que vous avez saisi, mais pour accéder à la page du blog, il faut créer un menu de navigation.</p>
-<p>Rendez-vous dans &quot;Apparence&quot; puis &quot;Menus&quot;. Créez un nouveau menu en lui donnant un nom, par exemple &quot;Principal&quot;, et sélectionnez l'emplacement &quot;Supérieur&quot;.</p>
-<p>Ensuite, ajoutez les pages que vous avez créées précédemment à ce menu en les sélectionnant dans la colonne de gauche et en cliquant sur &quot;Ajouter au menu&quot;. Vous pouvez réorganiser l'ordre des pages en les faisant glisser et les déposer. Enregistrez ensuite le menu.</p>
-<p>Une fois le menu créé et enregistré, visitez à nouveau votre site pour voir le menu de navigation qui s'affiche.</p>
+<p>Avant de pouvoir <strong>configurer la page d'accueil</strong>, il est nécessaire de <strong>la créer</strong>. Pour ce faire, on se rend dans l'onglet <strong>&quot;Pages&quot; puis on clique sur &quot;Ajouter&quot;</strong>. On donne <strong>un titre à la page</strong>, par exemple &quot;Banana WordPress Design&quot; (moi j'ai choisis &quot;Clapas &amp; Bartas&quot; le nomde l'école de VTT), et on saisie <strong>une description</strong> dans la zone de contenu. Une fois terminé, on clique sur <strong>&quot;Publier&quot; pour créer la page.</strong></p>
+<p>On répéte cette opération pour créer une page dédiée à notre blog. Pour cette page, on ne saisis aucun contenu, car elle affichera automatiquement la liste des articles publiés sur le site.</p>
+<p>Maintenant que nos pages sont créées, on va dans &quot;Réglages&quot; puis &quot;Lecture&quot; pour <strong>configurer la page d'accueil</strong> et <strong>la page de blog</strong>. Sous l'option &quot;La page d'accueil affiche&quot;,on choisis &quot;Une page statique&quot; et on sélectionnes notre page d'accueil et notre page de blog respectivement.</p>
+<p>Une fois ces paramètres enregistrés,on vérifie notre site pour voir les changements. La page d'accueil affichera le contenu que l'on a saisi, mais pour accéder à la page du blog, il faut <strong>créer un menu de navigation.</strong></p>
+<p>On se rend dans <strong>&quot;Apparence&quot; puis &quot;Menus&quot;</strong>. On crée <strong>un nouveau menu</strong> en lui donnant un nom, par exemple &quot;Principal&quot;, et on sélectionne l'emplacement &quot;Supérieur&quot;.</p>
+<p>Ensuite, on ajoute les pages que l'on a créées précédemment à ce menu en <strong>les sélectionnant dans la colonne de gauche</strong> et en cliquant sur <strong>&quot;Ajouter au menu&quot;</strong>. On peut <strong>réorganiser l'ordre des pages</strong> en les faisant glisser et les déposer. On <strong>enregistre ensuite le menu.</strong></p>
+<p>Une fois le menu créé et enregistré, on peut visiter à nouveau votre site pour voir le menu de navigation qui s'affiche.</p>
 <h2>7. Type de site</h2>
-<p>Maintenant que nous avons exploré l'interface d'administration de WordPress, nous sommes prêts à nous lancer dans notre projet. WordPress tire sa force de sa variété de composants, tels que les thèmes et les plugins, qui permettent de personnaliser et d'enrichir les fonctionnalités de notre site.</p>
-<p>La première étape consiste à définir clairement le type de site que nous souhaitons créer, puis à installer et configurer les composants les plus adaptés à nos besoins.</p>
-<p>Avant de commencer la création du site, il est essentiel de définir les objectifs spécifiques que nous souhaitons atteindre. Cela peut inclure des objectifs tels que générer des contacts commerciaux, offrir un design attrayant et professionnel, faciliter les interactions avec les visiteurs via un formulaire de contact et encourager l'abonnement à une newsletter.</p>
-<p>Il est également crucial de prendre en compte le référencement dès le début du processus. Cela implique de sélectionner des expressions de recherche pertinentes sur lesquelles se positionner et de structurer le contenu en conséquence pour améliorer la visibilité dans les résultats des moteurs de recherche.</p>
-<p>Une fois les objectifs et les expressions de recherche définis, nous pouvons passer à la structuration du site. Cela implique de créer une arborescence des pages en regroupant les informations de manière logique et cohérente, en tenant compte des objectifs et des expressions de recherche ciblées.</p>
-<p>Pour faciliter la visualisation de la structure des pages, il est recommandé de créer des wireframes, des schémas simples qui représentent la disposition des éléments sur chaque page. Cela peut être fait à l'aide d'outils dédiés ou simplement avec un crayon et du papier.</p>
+<p>Maintenant que nous avons exploré l'interface d'administration de WordPress, nous sommes prêts à nous lancer dans notre projet. WordPress tire sa force de <strong>sa variété de composants</strong>, tels que <strong>les thèmes et les plugins</strong>, qui permettent de <strong>personnaliser et d'enrichir les fonctionnalités de notre site.</strong></p>
+<p>La première étape consiste à <strong>définir clairement le type de site que nous souhaitons créer</strong>, puis à installer et configurer les composants les plus adaptés à nos besoins.</p>
+<p>Avant de commencer la création du site, il est essentiel de définir les <strong>objectifs spécifiques</strong> que nous souhaitons atteindre. Cela peut inclure des objectifs tels que générer des contacts commerciaux, offrir un design attrayant et professionnel, faciliter les interactions avec les visiteurs via un formulaire de contact et encourager l'abonnement à une newsletter.</p>
+<p>Il est également crucial de <strong>prendre en compte le référencement dès le début</strong> du processus. Cela implique de sélectionner des <strong>expressions de recherche pertinentes</strong> sur lesquelles se positionner et de structurer le contenu en conséquence pour <strong>améliorer la visibilité dans les résultats des moteurs de recherche.</strong></p>
+<p>Une fois les objectifs et les expressions de recherche définis, nous pouvons passer à la <strong>structuration du site.</strong> Cela implique de créer une <strong>arborescence des pages</strong> en regroupant les informations de manière logique et cohérente, en tenant compte des objectifs et des expressions de recherche ciblées.</p>
+<p>Pour faciliter la visualisation de la structure des pages, il est recommandé de créer des <strong>wireframes</strong>, des schémas simples qui représentent la disposition des éléments sur chaque page. Cela peut être fait à l'aide d'outils dédiés ou simplement avec un crayon et du papier.</p>
 <p>En résumé, avant de commencer la création de notre site WordPress, il est crucial de définir clairement nos objectifs, de prendre en compte le référencement dès le départ, de structurer le contenu de manière logique et cohérente, et de planifier la disposition des éléments sur chaque page à l'aide de wireframes.</p>
 <p><strong>Structure de mon site : </strong></p>
 <ul>
@@ -266,26 +272,26 @@ Téléphones portables accessibles pour prendre contact avec les moniteurs.</p>
 </li>
 </ul>
 <h2>8. Thèmes et page builder</h2>
-<p>Le thème est crucial, car il détermine l'apparence du site et ses fonctionnalités, comme la structure de l'en-tête, du contenu, du pied de page et des barres latérales.</p>
-<p>Un page builder facilite la création de pages avec des fonctionnalités avancées en glisser-déposer, offrant une visualisation en temps réel des modifications.</p>
-<p>Il existe trois types de thèmes : gratuit, freemium et premium, chacun avec ses avantages et ses limitations. Les thèmes spécialisés et les thèmes multipurpose offrent des fonctionnalités variées adaptées à différents types de sites.</p>
-<p>Lors du choix d'un thème, il est essentiel de prendre en compte des aspects tels que la dernière mise à jour, les notes et les commentaires, la rapidité de chargement, la compatibilité multilingue, le support, la source, la qualité du design et des fonctionnalités.</p>
-<p>Pour notre projet, nous optons pour le thème OceanWP, compatible avec le page builder Elementor, en raison de sa flexibilité et de sa compatibilité avec nos besoins.</p>
-<p>En personnalisant un thème, il est recommandé d'utiliser un thème enfant pour éviter la perte de personnalisations lors des mises à jour.</p>
+<p>Le thème est crucial, car il <strong>détermine l'apparence du site et ses fonctionnalités</strong>, comme la structure de l'en-tête, du contenu, du pied de page et des barres latérales.</p>
+<p><strong>Un page builder facilite la création de pages</strong> avec des fonctionnalités avancées en glisser-déposer, offrant une visualisation en temps réel des modifications.</p>
+<p>Il existe trois types de thèmes : <strong>gratuit, freemium et premium</strong>, chacun avec ses avantages et ses limitations. Les thèmes spécialisés et les thèmes multipurpose offrent des fonctionnalités variées adaptées à différents types de sites.</p>
+<p>Lors du choix d'un thème, il est essentiel de prendre en compte des aspects tels que <strong>la dernière mise à jour, les notes et les commentaires, la rapidité de chargement, la compatibilité multilingue, le support, la source, la qualité du design et des fonctionnalités.</strong></p>
+<p>Pour notre projet, nous optons pour le thème <strong>OceanWP</strong>, compatible avec le page builder <strong>Elementor</strong>, en raison de sa flexibilité et de sa compatibilité avec nos besoins.</p>
+<p>En personnalisant un thème, il est recommandé d'utiliser <strong>un thème enfant </strong>pour éviter la perte de personnalisations lors des mises à jour.</p>
 <h2>9. Installation et configuration du thème</h2>
-<p>Pour installer votre thème WordPress, accédez à Apparence &gt;&gt; Thèmes &gt;&gt; Ajouter. Recherchez le thème OceanWP dans la bibliothèque <a href="http://WordPress.org">WordPress.org</a> et cliquez sur &quot;Installer&quot;. Une fois installé, activez-le en un clic.</p>
-<p>Si vous aviez un thème premium ou non disponible sur <a href="http://WordPress.org">WordPress.org</a>, vous auriez dû téléverser l'archive (.zip) du thème.</p>
-<p>Après l'activation, installez les extensions recommandées en cliquant sur &quot;Commencez à installer les extensions&quot; dans la notification du dashboard. Sélectionnez toutes les extensions, installez-les et activez-les en un seul clic.</p>
-<p>Pour gagner du temps, utilisez l'Assistant de configuration d'OceanWP pour importer une démo de site prête à l'emploi. Choisissez le modèle de démo souhaité, installez les extensions requises (sauf les extensions premium), puis cliquez sur &quot;Installer cette démo&quot;.</p>
-<p>Votre site sera alors identique à la démo choisie. Vous disposez maintenant d'une base solide pour commencer à construire vos pages.</p>
+<p>Pour installer notre thème WordPress, on va dans <strong>Apparence &gt;&gt; Thèmes &gt;&gt; Ajouter</strong>. On <strong>recherche le thème OceanWP dans la bibliothèque WordPress.org</strong> et on clqiue sur <strong>&quot;Installer&quot;</strong>. Une fois installé, on <strong>l'active en un clic.</strong></p>
+<p>Si on choisi un thème premium ou non disponible sur <a href="http://WordPress.org">WordPress.org</a>, on aurait dû téléverser l'archive (.zip) du thème.</p>
+<p>Après l'activation, on <strong>installe les extensions recommandées</strong> en cliquant sur &quot;Commencez à installer les extensions&quot; dans la notification du dashboard. On sélectionne toutes les extensions, on les installes et on les actives.</p>
+<p>Pour gagner du temps, on utilise <strong>l'Assistant de configuration d'OceanWP</strong> pour importer une <strong>démo de site prête à l'emploi</strong>.On a choisi le modèle de démo souhaité, on installe les extensions requises (sauf les extensions premium), puis on clique sur <strong>&quot;Installer cette démo&quot;.</strong></p>
+<p>Notre site sera alors identique à la démo choisie. On dispose maintenant d'une base solide pour commencer à construire nos pages.</p>
 <h2>10. Extensions WordPress</h2>
-<p>Une extension WordPress est un ajout à WordPress qui permet d'intégrer des fonctionnalités supplémentaires non incluses nativement. Elles peuvent être gratuites ou payantes et sont disponibles dans la bibliothèque <a href="http://WordPress.org">WordPress.org</a> ou en dehors.</p>
-<p>Lors de l'installation d'OceanWP, des extensions comme &quot;WP Forms&quot; sont incluses. Celles-ci ajoutent des fonctionnalités spécifiques telles que la création de formulaires de contact. Il existe d'autres extensions similaires comme Caldera Forms, Ninja Forms ou Gravity Forms, recommandée pour des formulaires plus complexes.</p>
-<p>Certaines extensions sont dédiées à des composants WordPress spécifiques, comme Ocean Extra pour OceanWP ou les addons pour Elementor, le page builder utilisé. Les critères de sélection des extensions sont similaires à ceux des thèmes, et il est crucial de choisir celles qui répondent le mieux à vos besoins.</p>
-<p>Il existe deux types d'extensions : les standards, qui ajoutent des fonctionnalités essentielles à la plupart des sites web, et les spécifiques, répondant à des besoins précis du projet. Pour notre exemple, nous choisissons des extensions telles que &quot;SEO Press&quot; ou &quot;Yoast SEO&quot; pour le référencement naturel, &quot;Broken Link Checker&quot; pour les liens cassés, etc.</p>
-<p>Veillez à ne pas surcharger votre site en extensions inutiles, car cela peut affecter sa performance et la gestion des mises à jour. Il est important de sélectionner judicieusement les extensions nécessaires, de désactiver et de supprimer celles qui ne sont pas utilisées, et d'éviter d'installer plusieurs extensions pour la même fonctionnalité.</p>
+<p>Une extension WordPress est <strong> un ajout à WordPress qui permet d'intégrer des fonctionnalités supplémentaires</strong> non incluses nativement. Elles peuvent être <strong>gratuites ou payantes</strong> et sont disponibles dans la bibliothèque <a href="http://WordPress.org">WordPress.org</a> ou en dehors.</p>
+<p>Lors de l'installation d'OceanWP, des extensions comme <strong>&quot;WP Forms&quot;</strong> sont incluses. Celles-ci ajoutent des fonctionnalités spécifiques telles que <strong>la création de formulaires de contact.</strong> Il existe d'autres extensions similaires comme Caldera Forms, Ninja Forms ou Gravity Forms, recommandée <strong>pour des formulaires plus complexes.</strong></p>
+<p>Certaines extensions sont dédiées à des composants WordPress spécifiques, comme Ocean Extra pour OceanWP ou les addons pour Elementor, le page builder utilisé. <strong>Les critères de sélection des extensions sont similaires à ceux des thèmes</strong>, et il est crucial de choisir celles qui répondent le mieux à vos besoins.</p>
+<p>Il existe deux types d'extensions : <strong>les standards</strong>, qui ajoutent des <strong>fonctionnalités essentielles</strong> à la plupart des sites web, et les <strong>spécifiques</strong>, répondant à des <strong>besoins précis</strong> du projet. Pour notre exemple, nous choisissons des extensions telles que &quot;SEO Press&quot; ou &quot;Yoast SEO&quot; pour le référencement naturel, &quot;Broken Link Checker&quot; pour les liens cassés, etc.</p>
+<p>Il faut faire attention à <strong>ne pas surcharger votre site en extensions inutiles</strong>, car cela peut affecter sa performance et la gestion des mises à jour. Il est important de sélectionner judicieusement les <strong>extensions nécessaires</strong>, de <strong>désactiver et de supprimer celles qui ne sont pas utilisées</strong>, et <strong>d'éviter d'installer plusieurs extensions pour la même fonctionnalité.</strong></p>
 <h2>11. Design global du site</h2>
-<p>Dans ce chapitre, nous apprenons à définir une charte graphique pour notre site web. Voici un résumé des étapes que nous devons suivre :</p>
+<p>Dans ce chapitre, nous apprenons à définir <strong>une charte graphique</strong> pour notre site web. Voici un résumé des étapes que nous devons suivre :</p>
 <ol>
 <li><strong>Trouver une inspiration :</strong> Nous recherchons des sites d'inspiration pour définir une identité graphique cohérente. Des sites comme Dribbble, CollectUI, ou des comptes Instagram spécialisés dans le design peuvent être utiles.</li>
 </ol>
@@ -300,7 +306,7 @@ Téléphones portables accessibles pour prendre contact avec les moniteurs.</p>
 <div><img src="palette couleur.png"></div>
 <div><img src="palette couleur2.png"></div>
 </div>
-<p>Le seul bémol pour la première palette est le rose qui je pense ne correspond pas assez à la cible visé (adolescent masculin), je préfère passer à un orange tout aussi flashy mais qui sera plus adapté.</p>
+<p>Le seul bémol pour la première palette est le rose qui je pense ne correspond pas assez à la cible visé (enfant/adolescent masculin pour la plus part), je préfère passer à un orange tout aussi flashy mais qui sera plus adapté.</p>
 <ol>
 <li>
 <p><strong>Choisir des polices de caractères :</strong> Nous optons pour des polices gratuites disponibles sur Google Fonts, en sélectionnant une police pour les titres et une autre pour le corps de texte.</p>
@@ -323,70 +329,74 @@ Téléphones portables accessibles pour prendre contact avec les moniteurs.</p>
 <div style="display:flex">
 <div><img src="Clapas_Bartas.png"></div>
 </div>
-<ol>
+<ol start="4">
 <li><strong>Paramétrer les options du thème :</strong> Nous utilisons le customizer de WordPress pour intégrer les éléments de notre charte graphique dans le thème. Cela inclut l'ajout du logo, la définition des palettes de couleurs et des polices de caractères, ainsi que la configuration du layout des pages.</li>
 </ol>
 <p>En suivant ces étapes, nous pouvons créer un design cohérent et professionnel pour notre site web, même sans être des experts en design graphique.</p>
 <h2>12. Elementor et la page d'accueil</h2>
-<p>Ce chapitre explique comment utiliser le page builder Elementor pour modifier et personnaliser les pages de votre site WordPress, en mettant particulièrement l'accent sur la page d'accueil. Voici un résumé :</p>
+<p>Ce chapitre explique comment utiliser <strong>le page builder Elementor</strong> pour modifier et personnaliser les pages de notre site WordPress, en mettant particulièrement l'accent sur la page d'accueil.</p>
 <p><strong>Accès à Elementor</strong> :</p>
 <ul>
-<li>Pour éditer une page avec Elementor, rendez-vous sur la page que vous souhaitez modifier et cliquez sur &quot;Modifier avec Elementor&quot;.</li>
-<li>Si la page n'est pas encore créée avec Elementor, cliquez sur le bouton &quot;Modifier avec Elementor&quot; depuis le tableau de bord.</li>
+<li>Pour <strong>éditer une page avec Elementor</strong>, on se rend sur la page que l'on souhaite modifier et on clique sur <strong>&quot;Modifier avec Elementor&quot;.</strong></li>
+<li>Si la page n'est pas encore créée avec Elementor, on clique sur le bouton &quot;Modifier avec Elementor&quot; depuis le tableau de bord.</li>
 </ul>
 <p><strong>Interface Elementor</strong> :</p>
 <ul>
-<li>L'interface d'Elementor se divise en deux parties : une colonne de gauche avec les fonctionnalités et une zone de prévisualisation à droite.</li>
-<li>Vous pouvez ajouter des modules en les glissant depuis la colonne de gauche vers la zone de prévisualisation.</li>
+<li>L'interface d'Elementor se divise en deux parties : <strong>une colonne de gauche avec les fonctionnalités et une zone de prévisualisation à droite.</strong></li>
+<li>On peut ajouter des modules en les glissant depuis la colonne de gauche vers la zone de prévisualisation.</li>
 </ul>
 <p><strong>Personnalisation du hero</strong> :</p>
 <ul>
-<li>La section &quot;hero&quot; est la première partie de la page, souvent avec un titre accrocheur et un appel à l'action.</li>
-<li>Vous pouvez modifier le titre, le sous-titre, et l'image de fond en utilisant les options disponibles dans Elementor.</li>
+<li>La section <strong>&quot;hero&quot;</strong> est la première partie de la page, souvent avec <strong>un titre accrocheur et un appel à l'action.</strong></li>
+<li>On peut modifier le titre, le sous-titre, et l'image de fond en utilisant les options disponibles dans Elementor.</li>
 </ul>
 <p><strong>Personnalisation des boutons</strong> :</p>
 <ul>
-<li>Les boutons peuvent être stylisés en changeant leur forme, couleur, et texte.</li>
-<li>Vous pouvez également ajouter des animations aux boutons pour un effet visuel supplémentaire.</li>
+<li>Les boutons peuvent être <strong>stylisés en changeant leur forme, couleur, et texte.</strong></li>
+<li>On peut également ajouter des <strong>animations aux boutons</strong> pour un effet visuel supplémentaire.</li>
 </ul>
 <p><strong>Personnalisation du contenu</strong> :</p>
 <ul>
-<li>Vous pouvez personnaliser le contenu de chaque section en modifiant les titres, textes, images, etc.</li>
-<li>Utilisez les options disponibles dans Elementor pour ajuster le style et la mise en page selon vos besoins.</li>
+<li>On peut <strong>personnaliser le contenu</strong> de chaque section en modifiant <strong>les titres, textes, images, etc.</strong></li>
+<li>On utilises les options disponibles dans Elementor pour ajuster le style et la mise en page selon nos besoins.</li>
 </ul>
 <p><strong>Adaptation pour différents écrans</strong> :</p>
 <ul>
-<li>Assurez-vous d'adapter le design pour les écrans mobiles et tablettes en modifiant les paramètres spécifiquement pour ces tailles d'écran.</li>
+<li>On s'assure <strong>d'adapter le design pour les écrans mobiles et tablettes</strong> en modifiant les paramètres spécifiquement pour ces tailles d'écran.</li>
 </ul>
 <p><strong>Conseils supplémentaires</strong> :</p>
 <ul>
-<li>Utilisez les fonctionnalités avancées d'Elementor pour explorer davantage de possibilités de personnalisation.</li>
-<li>Ajoutez d'autres pages à votre site en utilisant des templates gratuits disponibles dans Elementor ou via l'extension Envato Elements.</li>
+<li>On utilise les fonctionnalités avancées d'Elementor pour explorer davantage de possibilités de personnalisation.</li>
+<li>On ajoute d'autres pages à notre site en utilisant des templates gratuits disponibles dans Elementor ou via l'extension Envato Elements.</li>
 </ul>
-<p>En suivant ces étapes et en explorant les fonctionnalités d'Elementor, vous pouvez créer des pages personnalisées et attrayantes pour votre site WordPress.</p>
+<p>En suivant ces étapes et en explorant les fonctionnalités d'Elementor, on peut créer des pages personnalisées et attrayantes pour notre site WordPress.</p>
+<p>Voilà un aperçu de ce que j'ai fait :</p>
+<div style="display:flex">
+<div><img src="premiereavancee.png"></div>
+</div>
 <h2>13. Fonctionnalités complémentaires grâce aux extensions</h2>
-<p>Ce chapitre explique comment ajouter un formulaire de contact à un site WordPress en utilisant l'extension WP Forms. Voici un résumé synthétique :</p>
+<p>Ce chapitre explique comment ajouter un formulaire de contact à un site WordPress en utilisant l'extension WP Forms.</p>
 <p><strong>Introduction du formulaire de contact</strong> :</p>
 <ul>
-<li>Ajouter un formulaire de contact est crucial pour permettre aux visiteurs de soumettre des demandes.</li>
-<li>WP Forms est choisi pour sa simplicité d'utilisation et sa capacité à enregistrer automatiquement les soumissions en base de données.</li>
+<li>Ajouter un formulaire de contact est crucial pour permettre aux visiteurs de <strong>soumettre des demandes.</strong></li>
+<li><strong>WP Forms</strong> est choisi pour sa simplicité d'utilisation et sa capacité à enregistrer automatiquement les soumissions en base de données.</li>
 </ul>
 <p><strong>Création du formulaire</strong> :</p>
 <ul>
-<li>Accéder à la rubrique &quot;WP Forms&quot; dans le tableau de bord WordPress.</li>
-<li>Cliquer sur &quot;Nouveau&quot; et créer un formulaire nommé &quot;contact&quot; en choisissant le modèle &quot;Formulaire de contact simple&quot;.</li>
-<li>Personnaliser le formulaire en ajoutant et en organisant les champs selon les besoins.</li>
+<li>Accéder à la rubrique <strong>&quot;WP Forms&quot; dans le tableau de bord WordPress.</strong></li>
+<li>Cliquer sur <strong>&quot;Nouveau&quot; et créer un formulaire nommé &quot;contact&quot;</strong> en choisissant le modèle &quot;Formulaire de contact simple&quot;.</li>
+<li>Personnaliser le formulaire en <strong>ajoutant et en organisant les champs selon les besoins.</strong></li>
 </ul>
 <p><strong>Réglages du formulaire</strong> :</p>
 <ul>
-<li>Modifier les libellés généraux et configurer les notifications par e-mail pour être alerté des soumissions.</li>
+<li>Modifier les <strong>libellés généraux</strong> et <strong>configurer les notifications par e-mail pour être alerté des soumissions.</strong></li>
 <li>Utiliser des balises pour personnaliser les e-mails en fonction des données saisies.</li>
-<li>Configurer un message de confirmation automatique pour les visiteurs.</li>
+<li>Configurer un <strong>message de confirmation automatique</strong> pour les visiteurs.</li>
 </ul>
 <p><strong>Insertion du formulaire dans la page</strong> :</p>
 <ul>
-<li>Utiliser un shortcode pour insérer le formulaire dans une page ou un article.</li>
-<li>Coller le shortcode dans la zone de contenu de la page.</li>
+<li>Utiliser un <strong>shortcode</strong> pour insérer le formulaire dans une page ou un article.</li>
+<li>Coller le shortcode dans la <strong> zone de contenu de la page.</strong></li>
 <li>Pour les utilisateurs d'Elementor, ajouter un composant de code court et y coller le shortcode.</li>
 </ul>
 <p><strong>Utilisation d'un widget</strong> :</p>
@@ -395,9 +405,166 @@ Téléphones portables accessibles pour prendre contact avec les moniteurs.</p>
 <li>Rechercher et glisser le widget &quot;WP Forms&quot; dans la section souhaitée.</li>
 <li>Choisir le formulaire à afficher à l'aide du menu contextuel.</li>
 </ul>
-<p>Ensuite, le chapitre explique comment ajouter un pop-up d'inscription à une newsletter en utilisant le plugin Hustle. Les étapes incluent l'installation du plugin, la création d'un pop-up, la personnalisation des paramètres et la publication du pop-up.</p>
-<p>Enfin, le chapitre se termine par des conseils sur l'importance de sauvegarder régulièrement le site avec l'extension Updraft Plus, en téléchargeant une sauvegarde manuelle sur la machine et en planifiant des sauvegardes automatiques sur Google Drive.</p>
+<p>Ensuite, le chapitre explique comment <strong>ajouter un pop-up d'inscription à une newsletter</strong> en utilisant le plugin <strong>Hustle</strong>. Les étapes incluent l'installation du plugin, la création d'un pop-up, la personnalisation des paramètres et la publication du pop-up. Mais je n'ai pas jugé utile d'ajouter cette fonctionnalité à mon site.</p>
+<p>Enfin, le chapitre se termine par des conseils sur l'importance de sauvegarder régulièrement le site avec <strong>l'extension Updraft Plus</strong>, en téléchargeant une sauvegarde manuelle sur la machine et en <strong>planifiant des sauvegardes automatiques sur Google Drive.</strong></p>
 <h2>14. Fonctionalités avancées</h2>
+<p>Ce chapitre explique comment <strong>configurer une page d'attente personnalisée</strong> ainsi que <strong>la création de headers et footers</strong> sur mesure avec Elementor et OceanWP, et l'ajout de <strong>CSS personnalisés.</strong></p>
+<p><strong>Page d'attente personnalisée </strong>:</p>
+<ul>
+<li>Deux solutions sont présentées pour rendre un site inaccessible au public jusqu'au lancement : <strong>utiliser une extension spécialisée ou créer une page personnalisée avec Elementor.</strong></li>
+<li>Pour créer une <strong>page d'attente avec Elementor</strong>, on se rend sur <strong> Elementor &gt; Mes modèles </strong>, on crée un <strong>nouveau modèle de type &quot;Page&quot;</strong> et on la personalise selon nos besoins.</li>
+<li>Ensuite, on va dans <strong>Elementor &gt; Outils</strong>, on sélectionne l'onglet <strong>&quot;Maintenance&quot;</strong>, on choisis <strong>&quot;Arrivée bientôt&quot;</strong> et on utilise le modèle créé précédemment.</li>
+</ul>
+<p><strong>Header et footer personnalisés avec Elementor et OceanWP</strong> :</p>
+<ul>
+<li>OceanWP permet de <strong>créer des headers et footers avec Elementor</strong> pour des designs complexes.</li>
+<li>Pour créer un header personnalisé, on va dans <strong>Theme Panel &gt; Ma bibliothèque</strong>, on crée un nouveau modèle de type &quot;Header&quot;, on le personnalise avec Elementor en ajoutant le menu, puis l'applique dans le customizer.</li>
+<li>Le même processus est applicable pour le footer.</li>
+</ul>
+<p><strong>Ajout de CSS personnalisés</strong> :</p>
+<ul>
+<li>L'ajout de règles CSS personnalisées est possible dans la section <strong>&quot;CSS et JS personnalisés&quot;</strong> du customizer.</li>
+<li>Il est nécessaire d'<strong>avoir des bases en CSS</strong> pour utiliser cette fonctionnalité.</li>
+<li>Les éléments peuvent être ciblés en <strong>attribuant des classes CSS dans Elementor</strong> ou en utilisant <strong>l'inspecteur du navigateur.</strong></li>
+</ul>
+<p><strong>Création de types de contenus personnalisés</strong> :</p>
+<ul>
+<li>Pour des sites plus complexes, la création de <strong>types de contenus personnalisés</strong> est nécessaire.</li>
+<li>L'extension <strong>CPT UI</strong> permet de créer facilement des types de contenus personnalisés.</li>
+<li>Les types de contenus peuvent être utilisés pour <strong>créer des sections comme des testimoniaux ou des portfolios.</strong></li>
+<li>Les contenus de type portfolio peuvent être affichés avec des <strong>addons Elementor</strong> comme &quot;Livemesh Addons for Elementor&quot; en utilisant le widget &quot;Posts Grid&quot; pour afficher une liste de contenus.</li>
+</ul>
+<p>En suivant ces étapes, il est possible de <strong>personnaliser efficacement différents aspects d'un site WordPress</strong> avec Elementor et OceanWP, tout en utilisant des fonctionnalités avancées telles que les pages d'attente, les headers et footers personnalisés, l'ajout de CSS personnalisés et la création de types de contenus personnalisés.</p>
+<h2>15. Optimisation du SEO et suivi du traffic</h2>
+<p>Ce chapitre aborde les principaux <strong>axes d'optimisation SEO</strong>, en se concentrant sur les optimisations <strong>off site et on site</strong>, ainsi que sur l'utilisation de <strong>l'extension SEO Press</strong> pour optimiser le contenu et les paramètres globaux.</p>
+<p><strong>Optimisations off site</strong> :</p>
+<ul>
+<li>Ces optimisations se font <strong>en dehors du site</strong> et incluent des actions telles que la déclaration du site sur Google Search Console, la création d'un profil Google My Business, et l'acquisition de liens entrants de qualité.</li>
+</ul>
+<p><strong>Optimisations on site</strong>:</p>
+<ul>
+<li>Celles-ci concernent les éléments directement optimisables sur le site, comme le contenu, le balisage, etc.</li>
+<li>Des facteurs importants incluent <strong>la qualité du contenu, l'inclusion du mot-clé principal dans le nom de domaine, et l'optimisation des titres et descriptions de page.</strong></li>
+</ul>
+<p><strong>Utilisation de SEO Press</strong> :</p>
+<ul>
+<li>L'extension SEO Press est présentée comme un outil utile pour <strong>optimiser le site WordPress.</strong></li>
+<li>Les recommandations globales incluent <strong>la mise en place d'un certificat SSL, la gestion du flux RSS, l'augmentation du nombre d'articles par page, et la création d'un compte Google My Business.</strong></li>
+<li>Différents modules optionnels sont disponibles pour gérer les titres et métas, le plan de site, les réseaux sociaux, Google Analytics, etc.</li>
+</ul>
+<p><strong>Optimisation des contenus avec SEO Press</strong> :</p>
+<ul>
+<li>L'extension permet <strong>d'optimiser le SEO pour chaque page ou article du site.</strong></li>
+<li>Des recommandations sont fournies pour des éléments tels que le <strong>nombre de mots sur la page, le titre de l'article, les titres de niveaux deux et trois, ainsi que les balises titre et métadescription.</strong></li>
+</ul>
+<p>En suivant ces conseils et en utilisant l'extension SEO Press, il est possible <strong>d'améliorer significativement le classement et la visibilité du site sur les moteurs de recherche.</strong></p>
+<h2>16. Temps de chargement</h2>
+<p>Ce chapitre aborde l'importance de <strong>mesurer et d'optimiser le temps de chargement d'un site web.</strong></p>
+<p><strong>Vérification du temps de chargement</strong> :</p>
+<ul>
+<li>Un temps de <strong>chargement lent</strong> peut entraîner une <strong>perte de revenus et affecter le classement SEO du site.</strong></li>
+<li>Des outils comme <strong>GT Metrix </strong> permettent de mesurer le temps de chargement et fournissent des <strong>indicateurs de performance</strong> importants tels que le Largest Contentful Paint, le Total Blocking Time et le Cumulative Layout Shift.<br>
+Voici ce que j'obtiens pour mon site.</li>
+</ul>
+   <div style="display:flex">
+   <div><img src="GTmetrix.png"></div>
+   <div><img src="GTmetrix_topissues.png"></div>
+   </div>
+   <div style="display:flex">
+   <div><img src="GTmetrix_waterfall.png"></div>
+   </div>
+   Gloablement c'est plutôt très positif, par contre il y un soucis lors de la requête affichant favicon.icon qu'il va falloir régler.
+<p><strong>Optimisation du temps de chargement</strong>:</p>
+<ul>
+<li>La mise en place <strong>d'une solution de cache</strong> est recommandée pour <strong>stocker temporairement les pages et les délivrer plus rapidement aux visiteurs.</strong></li>
+<li>Il est également conseillé d'optimiser le chargement des ressources statiques (fichiers JS et CSS) en les minifiant, les concaténant et en les préchargeant.</li>
+<li>Des extensions comme WP Rocket, WP Super Cache, et W3 Total Cache peuvent être utilisées à cet effet.</li>
+</ul>
+<p><strong>Nettoyage de la base de données</strong> :</p>
+<ul>
+<li>Les <strong>bases de données surchargées peuvent ralentir les chargements.</strong> Des outils d'optimisation comme ceux inclus dans <strong>WP Rocket et Autoptimize</strong> peuvent aider à <strong>nettoyer et optimiser la base de données.</strong></li>
+</ul>
+<p><strong>Optimisation des images</strong> :</p>
+<ul>
+<li>Les <strong>images non optimisées</strong> sont une cause fréquente de temps de chargement prolongé. Il est recommandé de compresser les images avant de les importer dans WordPress.</li>
+<li>Des plugins comme <strong>Imagify et ShortPixel</strong> peuvent être utilisés pour <strong>optimiser les images automatiquement.</strong></li>
+</ul>
+<p><strong>Utilisation des bonnes tailles d'images</strong> :</p>
+<ul>
+<li>Il est important <strong>d'utiliser des tailles d'images</strong> appropriées pour éviter de surcharger le chargement de la page.</li>
+<li>WordPress génère automatiquement différentes tailles de miniatures pour les images, qui peuvent être sélectionnées en fonction de la taille d'affichage souhaitée.</li>
+</ul>
+<p>En suivant ces recommandations, il est possible <strong>d'optimiser efficacement le temps de chargement du site et d'améliorer ainsi l'expérience utilisateur et le classement SEO.</strong></p>
+<h2>17. Vérifications avant lancement</h2>
+<p>Ce chapitre énumère les vérifications essentielles à effectuer avant de lancer votre site :</p>
+<p><strong>Supprimer les contenus non utilisés</strong>:</p>
+<ul>
+<li>Les articles et pages de démo importés doivent être <strong>supprimés ou mis en brouillon</strong> pour éviter d'être indexés par les moteurs de recherche.</li>
+</ul>
+<p><strong>Vérifier l'affichage sur tous les écrans</strong> :</p>
+<ul>
+<li>On vérifie que nos pages <strong>s'affichent correctement sur tous les types d'écrans</strong>, en particulier sur les appareils mobiles (50% du traffic).</li>
+</ul>
+<p><strong>Assurer l'accessibilité</strong> :</p>
+<ul>
+<li>On veille à ce que notre site <strong>respecte les bonnes pratiques d'accessibilité</strong> pour être accessible à tous, y compris aux personnes souffrant de handicaps.</li>
+</ul>
+<p><strong>Vérifier les liens cassés</strong> :</p>
+<ul>
+<li>On utilise un <strong>plugin pour détecter et corriger les liens cassés sur notre site.</strong></li>
+</ul>
+<p><strong>Tester les formulaires</strong> :</p>
+<ul>
+<li>On vérifie que <strong>tous les formulaires, notamment le formulaire de contact, fonctionnent</strong> correctement avant de mettre le site en ligne.</li>
+</ul>
+<p><strong>Activer la visibilité aux moteurs de recherche</strong> :</p>
+<ul>
+<li>On <strong>désactive l'option de blocage des moteurs de recherche</strong> pour que votre site soit indexé avant le lancement.</li>
+</ul>
+<p><strong>Créer les pages légales obligatoires</strong> :</p>
+<ul>
+<li>On s'assure de créer les pages contenant les <strong>informations légales obligatoires</strong>, telles que les mentions légales et la politique de confidentialité conforme au RGPD.</li>
+</ul>
+<p><strong>Protéger le site des hackers</strong> :</p>
+<ul>
+<li>On installe un <strong>plugin de sécurité tel que Wordfence ou SecuPress</strong> et modifiez l'URL de connexion pour renforcer la sécurité de votre site.</li>
+</ul>
+<p>En suivant ces vérifications, on s'assure que notre site est prêt à être lancé tout en garantissant sa sécurité, son accessibilité et sa conformité aux réglementations en vigueur.</p>
+<h2>18. Connexion nom de domaine</h2>
+<p>J'arrive un peu trop tôt, je n'aurais donc pas la méthode pour faaaster dans ce chapitre.</p>
+<div style="display:flex">
+<div><img src="majcours.png"></div>
+</div>
+<p>Ce chapitre guide sur la configuration du nom de domaine pour notre site avant de le mettre en ligne. Voici les étapes à suivre :</p>
+<p><strong>Récupération des enregistrements requis par l'hébergeur</strong>:</p>
+<ul>
+<li>L'hébergeur fournira les <strong>enregistrements DNS à configurer sur notre domaine</strong>. Si on utilise Themecloud, on pourra le faire depuis <strong>l'interface de gestion.</strong></li>
+</ul>
+<p><strong>Modification des enregistrements DNS</strong> :</p>
+<ul>
+<li>On accède à la page de modification des enregistrements DNS de votre fournisseur de domaine et on <strong>met à jour les enregistrements requis.</strong> On peut utiliser des services externes comme <strong>Cloudflare</strong> pour bénéficier de fonctionnalités supplémentaires.</li>
+</ul>
+<p><strong>Attente de la propagation des DNS et modification des URL en base de données</strong> :</p>
+<ul>
+<li>On attend que les nouveaux enregistrements DNS se propagent sur le réseau. Une fois cela fait, Themecloud mettra <strong>automatiquement à jour les URL en base de données</strong>. Sinon, on utilise un script comme Search Replace par <a href="http://Inteconnect.it">Inteconnect.it</a> pour le faire manuellement.</li>
+</ul>
+<p><strong>Finalisation des configurations</strong> :</p>
+<ul>
+<li>On configure <strong>Google Analytics</strong> en <strong>créant un compte</strong> et une propriété pour notre site. On utilise <strong>SEOPress</strong> pour <strong>activer le suivi Google Analytics</strong> et <strong>remplir les informations nécessaires pour le consentement RGPD.</strong></li>
+<li>On configure <strong>Google Search Console</strong> en <strong>créant un compte</strong> et une propriété pour votre domaine. On utilise les méthodes de validation proposées par Google, telles que le dépôt d'un fichier à la racine du site ou l'ajout d'une balise meta dans le header HTML des pages.</li>
+</ul>
+<p>En suivant ces étapes, vous pouvez <strong>connecter votre nom de domaine final à votre site</strong> et finaliser les configurations nécessaires avant de le mettre en ligne.</p>
+<h3>Conclusion</h3>
+<p>Et voilà le site est désormais opérationnel, <strong>référencé sur Google, et l'audience est suivie grâce à Google Analytics.</strong></p>
+<p>Cependant, il est crucial de <strong> maintenir une publication régulière de contenu, d'analyser le trafic et le positionnement SEO, et de rester à jour avec les mises à jour de WordPress et de ses extensions. </strong></p>
+<p>Voilà les compétences que le cours a permis d'explorer :</p>
+<ul>
+<li>Déployer un site WordPress sur un hébergement.</li>
+<li>Maîtriser l'administration de WordPress.</li>
+<li>Configurer un thème et des extensions WordPress.</li>
+<li>Personnaliser le contenu et le design de notre site WordPress.</li>
+<li>Optimiser la configuration de notre site WordPress.</li>
+</ul>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -485,8 +652,33 @@ Téléphones portables accessibles pour prendre contact avec les moniteurs.</p>
 </tr>
 <tr>
 <td>Samedi 10/02</td>
-<td></td>
+<td>45min</td>
 <td><em>Intégrez des fonctionnalités avancées</em></td>
+</tr>
+<tr>
+<td>Mercredi 14/02</td>
+<td>5min</td>
+<td><em>Quizz : Personnalisez les contenus et le design d'un site WordPress</em></td>
+</tr>
+<tr>
+<td>Mercredi 14/02</td>
+<td>25min</td>
+<td><em>Optimisez le SEO et suivez le trafic de votre site</em></td>
+</tr>
+<tr>
+<td>Mercredi 14/02</td>
+<td>35min</td>
+<td><em>Optimisez les temps de chargement de votre site</em></td>
+</tr>
+<tr>
+<td>Jeudi 15/02</td>
+<td>30min</td>
+<td><em>Vérifications à faire avant de lancer votre site</em></td>
+</tr>
+<tr>
+<td>Jeudi 15/02</td>
+<td>15min</td>
+<td><em>Connectez votre nom de domaine et finalisez vos configurations</em></td>
 </tr>
 </tbody>
 </table>
