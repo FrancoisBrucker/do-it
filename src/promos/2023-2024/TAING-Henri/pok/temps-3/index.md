@@ -66,9 +66,9 @@ Un cerveau et vaguement quelques connaissances en tech
 On prendra comme user-stories à faire :
 
 - <u>Consolider mes connaissances</u> [X] = 5 (7h)
-  - Guides recommendés par l'ANSSI [] = 3 (5h)
-    - Guide sur la continuité d'activité [] = 1 (1h30)
-    - Guide sur l'analyse de risk avec la méthode EBIOS []
+  - Guides recommendés par l'ANSSI [X] = 3 (5h)
+    - Guide sur la continuité d'activité [X] = 1 (1h30)
+    - EBIOS, management des risques [X] (3h30)
   - Formalisation/Traduction de la formation que j'ai suivi de mon côté (Certified in Cybersecurity by ISC2) [] = 2 (2h)
 
 - <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h30)
@@ -91,9 +91,14 @@ On prendra comme user-stories à faire :
 ## Conclusion <a id="section-6"></a>
 
 
-## Sources <a id="section-7"></a>
+## Sources et horodateur <a id="section-7"></a>
 
 [MOOC de l'ANSSI](https://secnumacademie.gouv.fr/) 
 [Formation en cybersécurité pour s'initier - parfait pour faire du management en cybersécurité, Certified in Cybersecurity by ISC2](https://www.isc2.org/certifications/cc)
 
 Autres sources : CCI - Formations de formateurs "Acquérir les compétences clés pour bien écrire un cas" et "Maîtriser les étapes et les enjeux d'une animation de cas" animés respectivement par Jean-Marc RAGGI et Emmanuelle LE NAGARD-ASSAYAG, les supports m'étant été prêtés par Laetitia PIET. 
+
+> **Horodateur** : 
+> Vendredi 09/02 : 1h (Backlog)
+> Jeudi 15/02 : 1h30 (Lecture des la méthodologie pour créer une étude de cas)
+> Mercredi 20/02 : 5h (Guides recommandés par l'ANSSI)
