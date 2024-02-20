@@ -66,7 +66,9 @@ Un cerveau et vaguement quelques connaissances en tech
 On prendra comme user-stories à faire :
 
 - <u>Consolider mes connaissances</u> [X] = 5 (7h)
-  - MOOC de l'ANSSI [] = 3 (5h)
+  - Guides recommendés par l'ANSSI [] = 3 (5h)
+    - Guide sur la continuité d'activité [] = 1 (1h30)
+    - Guide sur l'analyse de risk avec la méthode EBIOS []
   - Formalisation/Traduction de la formation que j'ai suivi de mon côté (Certified in Cybersecurity by ISC2) [] = 2 (2h)
 
 - <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h30)
