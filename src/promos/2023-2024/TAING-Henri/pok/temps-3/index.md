@@ -98,7 +98,7 @@ On prendra comme user-stories à faire :
 
 Autres sources : CCI - Formations de formateurs "Acquérir les compétences clés pour bien écrire un cas" et "Maîtriser les étapes et les enjeux d'une animation de cas" animés respectivement par Jean-Marc RAGGI et Emmanuelle LE NAGARD-ASSAYAG, les supports m'étant été prêtés par Laetitia PIET. 
 
-> **Horodateur** : 
+**Horodateur** : 
 > Vendredi 09/02 : 1h (Backlog)
 > Jeudi 15/02 : 1h30 (Lecture des la méthodologie pour créer une étude de cas)
 > Mercredi 20/02 : 5h (Guides recommandés par l'ANSSI)

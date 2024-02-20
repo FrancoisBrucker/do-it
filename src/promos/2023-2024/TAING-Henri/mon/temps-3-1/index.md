@@ -234,7 +234,7 @@ To-do-list avant de quitter Centrale : Faire un hackathon [X], Être full-stack 
 [Formation DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3-fr#etape-1-installation-de-flask)
 [L'application que j'ai créé durant le hackathon](https://github.com/henritaing/social_tracker)
 
-> **Horodateur** : 
+**Horodateur** : 
 > Mercredi 07/02 : 2h (Lecture des conventions et nettoyage de mon MON d'analyse de données)
 > Samedi 18/02 : 3h (Bases avec la formation DigitalOcean et création de l'architecture, des routes et initialisation de la base de données avec la création d'users)
 > Dimanche 19/02 : 4h (Création de la logique pour gérer les users, l'inscription, la connexion puis l'extraction de ses données pour les analyser et les visualiser)
