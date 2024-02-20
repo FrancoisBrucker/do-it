@@ -42,19 +42,27 @@ Il existe également un groupe Facebook "Centrale bière au Bar'bu" qui permet d
 
 ### Rendu final
 
-Nous comptons rendre, d'une part : un **Site Low-Code / No-Code**
-- Airtable : outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces, les utilisateurs, et les favoris.
-- Bubble : outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
+Nous comptons rendre, d'une part : **un Site Low-Code / No-Code**
+Ce site sera construit à partir de :
+- Airtable : un outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces, les utilisateurs et les favoris,
+- Bubble : un outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
 
-Le site Low-Code / No-Code est fonctionnel et esthétique. Il permet de naviguer sur les différentes pages(dépôt d'annonce, sélection d'annonce, chatbot, ajout de favoris, création du profil utilisateur...)
-Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.
+Le site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permettre de naviguer sur les différentes pages :
+- dépôt d'annonce
+- sélection d'annonce
+- chatbot
+- ajout de favoris
+- création du profil utilisateur...
 
-- Site "dur"
-- Partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
-- Partie back-end pour gérer les fichiers et données utilisateurs
+**Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.**
+
+D'autre part : **un Site "dur"**
+Ce site sera construit "à la main" avec :
+- une partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
+- une partie back-end pour gérer les fichiers et données utilisateurs.
 
 Le site "dur" sera une version partielle du site Low-Code / No-Code : seules les principales fonctionnalités seront présentes.
-L'objectif étant cette fois-ci de développement des compétences de DevWeb.
+L'objectif étant cette fois-ci le développement de compétences en DevWeb.
 
 ### Principaux jalons
 
