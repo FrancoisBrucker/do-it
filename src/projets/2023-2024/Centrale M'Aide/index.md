@@ -11,43 +11,54 @@ authors:
 
 Création d'un site de mise en relation des élèves centraliens pour déposer et répondre à des annonces.
 
-Dernière mise à jour : 15/02/2023
+Dernière mise à jour : 20/02/2024
 
-## Introduction et contexte
+## Description du projet
+### Contexte
 
 L'année dernière, alors qu'il s'apprêtait à partir en vacances, William  n'a trouvé personne qui pouvait s'occuper de son jardin en son absence (pas chez ses voisins, pas même chez ses amis).
 **Résultat :** tout son potager est mort en son absence.
 
-Nous souhaitons créer une plateforme de mise en relation de particuliers pour la garde d'animaux et la gestion de jardins pendant une absence.
+Nous souhaitions dans un premier temps créer une plateforme de mise en relation de particuliers pour la garde d'animaux et la gestion de jardins pendant une absence.
 
-## Recentrage
+### Recadrage
 
-Après réflexion et discussion avec Adèle, notre tutrice, nous avons décidé de recentrer le projet. Nous allons nous concentrer sur un public centralien uniquement, ce qui nous permet de développer un projet plus précis et répondant à une demande que nous connaissons tous. Nous nous basons ainsi sur un public clairement identifié et les personae seront correctement définis.
+Après réflexion et discussion avec Adèle, notre tutrice, nous avons décidé de recadrer le projet.
 
-## Présentation
+Nous nous concentrons sur un **public centralien uniquement**, ce qui nous permet de développer un projet plus **précis** et **répondant à une demande que nous connaissons tous.**
 
-Nous souhaitons créer une plateforme d'entraide entre centraliens, du type Leboncoin, permettant à tout étudiant de déposer une annonce 
-pour tout type de service. Il peut s'agir d'un besoin ponctuel de courte durée (prêt d'outils, déménagement, vends bureau), d'un besoin récurrent (prêt de matériel de sport) ou même d'un besoin ponctuel de plus longue durée (entretien d'un potager pendant les vacances).
-Chaque centralien dépose alors son annonce avec une description et des infos pratiques : localisation, date, besoin... Les autres utilisateurs peuvent alors scruter les différentes annonces, rechercher celles proches de chez eux via un accès à la carte des colocs.
+Nous nous basons ainsi sur un public clairement identifié et les personae seront correctement définis.
+
+### Présentation du projet retenu
+
+Nous souhaitons créer une **plateforme d'entraide entre centraliens**, du type Leboncoin, permettant à tout étudiant de déposer une annonce pour tout type de service.
+Il peut s'agir d'un besoin :
+- ponctuel de courte durée (prêt d'outils, déménagement, vends bureau) ;
+- ponctuel de plus longue durée (entretien d'un potager pendant les vacances) ; 
+- ou encore d'un besoin récurrent (prêt de matériel de sport)
+
+Chaque centralien qui le souhaite dépose son/ses annonce(s) incluant description et informations pratiques : localisation, date, besoin... 
+
+Les autres utilisateurs peuvent alors scruter les différentes annonces, rechercher celles proches de chez eux via un accès à la carte des colocs.
+
 Après acceptation d'une annonce, le demandeur est invité à contacter l'accepteur sur Messenger.
 
 ## Et ça existe déjà ?
 
 Oui, mais non... 
-Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent que de la mise en relation entre particuliers et artisans ou dépanneurs, etc... Les sercives restent tout à fait factuels or nous souhaitons proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales. La vie des centraliens s'en verra grandement améliorée.
+Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent **que de la mise en relation entre particuliers et artisans ou dépanneurs, etc...** Les sercives restent tout à fait factuels or nous souhaitons **proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales.** La vie des centraliens s'en verra grandement améliorée.
 
-Il existe également un groupe Facebook "Centrale bière au Bar'bu" qui permet de demander des services de la sorte mais la page est inadaptée aux besoins : les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, la page est peu gérée...
+Il existe également un groupe Facebook "Centrale bière au Bar'bu" qui permet de demander des services de la sorte mais la **page est inadaptée aux besoins :** les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, la page est peu gérée...
 
-## Rendu final, principaux jalons et compétences sollicitées
+## Objectifs du projet
 
 ### Rendu final
 
-Nous comptons rendre, d'une part : **un Site Low-Code / No-Code**
-Ce site sera construit à partir de :
+Nous comptons rendre, d'une part : **un Site Low-Code / No-Code**. Il sera construit à partir de :
 - Airtable : un outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces, les utilisateurs et les favoris,
 - Bubble : un outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
 
-Le site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permettre de naviguer sur les différentes pages :
+Ce site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permettre de naviguer sur les différentes pages :
 - dépôt d'annonce
 - sélection d'annonce
 - chatbot
@@ -56,47 +67,41 @@ Le site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permet
 
 **Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.**
 
-D'autre part : **un Site "dur"**
-Ce site sera construit "à la main" avec :
+D'autre part : **un Site "dur"**. Ce site sera construit "à la main" avec :
 - une partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
 - une partie back-end pour gérer les fichiers et données utilisateurs.
 
 Le site "dur" sera une version partielle du site Low-Code / No-Code : seules les principales fonctionnalités seront présentes.
 L'objectif étant cette fois-ci le développement de compétences en DevWeb.
 
-### Principaux jalons
-
-- Expérience utilisateur (UX/UI) : *due date* 26/11/2023
-- 1ère maquette en low-code : *due date* 7/11/2023
-- Passage au devweb (front-end) pour créer "le design / les fonctionnalités" du site : *due date* 26/03/2024
-- Ajout de back-end pour stocker les fichiers, gérer les données utilisateurs...
-
 ### Compétences sollicitées
+**Design de l'Interface (UI)**
+Construction d'un site esthétiquement qualitatif, prise en main de l'outil Figma, travail de créativité.
 
-**Site Low-Code / No-code**
+**Expérience Utilisateur (UX)**
+Construction d'un site intuitif, facile à prendre en main.
 
-- Prise en main de fonctionnalités Low-Code / No-Code grâce aux outils Airtable et Bubble afin de créer un prototype fidèle à la version finale souhaitée
-- Travail de créativité sur le design du site web.
-- Découverte des différentes fonctionnalités/interfaces visibles sur un site internet.
+**Low-Code**
+Prise en main de fonctionnalités Low-Code / No-Code grâce aux outils Airtable et Bubble afin de créer un prototype fidèle à la version finale souhaitée
+Découverte des différentes fonctionnalités/interfaces visibles sur un site internet.
 
-**Site "dur"**
+**Devweb Front-End**
+Apprentissage HTML, CSS, JS
+Utilisation de l'application Bootstrap pour implémenter des fonctionnalités sophistiquées
+Utilisation des outils de dévloppement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
 
-- Développement de compétences en DevWeb
-  - Apprentissage HTML, CSS, JS (front-end)
-  - Utilisation de l'application Bootstrap pour implémenter des fonctionnalités sophistiquées (front-end)
-  - Utilisation des outils de dévloppement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
-  - Utilisation de Python au service des bases de données (back-end)
+**Devweb Back-End**
+Utilisation de Python/ Javascript / node au service des bases de données
 
 **Gestion de projet**
-
-- Division et répartition des tâches dans la création d'un site
-- Utilisation de l'outil Notion afin de suivre l'avancée du projet
+Division et répartition des tâches dans la création d'un site
+Utilisation de l'outil Notion afin de suivre l'avancée du projet
 
 ## TimeLine Projet
 
 La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
-![Image Timeline](MBM-timeline-projet.PNG)
+![Image Timeline](Gantt.png)
 
 ## Fonctionnalités
 
