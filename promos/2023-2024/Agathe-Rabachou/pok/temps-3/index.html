@@ -150,6 +150,29 @@ Tout ce projet sera réalisé en Python, afin de revoir et de développer mes (f
 <li>Implémentation des premières fonctionnalités avec au minimum la récupération des données de l'utilisateur et la création de la feuille de match (4h).</li>
 </ul>
 <h3>Réalisations</h3>
+<p>Dans un <strong>premier temps</strong>, j'ai établi la liste exhaustive et idéale des fonctionnalités de mon interface. L'interface doit contenir un chronomètre de 4x 10 minutes, que l'utilisateur doit pouvoir arrêter et relancer. L'utilisateur doit pouvoir rentrer au fur et à mesure du match :</p>
+<ul>
+<li>Chaque panier, marqué ou non, avec le nombre de point (ou le type de shoot, c'est équivalent), l'équipe et le joueur concernés ;</li>
+<li>Chaque rebond, avec l'équipe et le joueur concernés ;</li>
+<li>Chaque contre, avec l'équipe et le rebond concernés ;</li>
+<li>Chaque interception, avec l'équipe et le joueur concernés ;</li>
+<li>Chaque passe décisive, avec l'équipe et le joueur concernés ;</li>
+<li>Chaque perte de balle, avec l'équipe et le joueur concernés ;</li>
+<li>Chaque faute, avec le type de faute, l'équipe et le joueur concernés ;</li>
+<li>Chaque changement, avec l'équipe concernée, le joueur entrant, le joueur sortant, et le chrono associé (cela comprend les joueurs du 5 majeur au début du match).</li>
+</ul>
+<p>Idéalement, chaque événement rentré dans l'interface doit être lié à un quart-temps (grâce au temps déjà écoulé au chronomètre). L'utilisateur doit également pour revenir en arrière en cas d'erreur, et consulter l'ensemble des événements déjà rentrés.<br>
+A la fin du match, l'utilisateur doit pouvoir récupérer :</p>
+<ul>
+<li>La feuille de match remplie ;</li>
+<li>La grille de statistique de chaque équipe ;</li>
+<li>L'évaluation individuelle et la grille de statistique de chaque joueur ;</li>
+</ul>
+<p>Si le temps me le permet, une suite intéressante au projet pourrait être de conserver toutes les informations de chaque match dans une base de données pour pouvoir faire des comparaisons de performance des équipes et des joueurs entre les matchs ou encore des statistiques moyennes sur une saison complète. Dans ce cas, il faudrait également conserver en mémoire pour chaque match la date, le lieu (domicile ou extérieur) et l'équipe adverse.</p>
+<p>Dans un <strong>second temps</strong>, j'ai imaginé un design pour l'interface, que j'ai maquetté sur Canva. Voici le rendu de la page principale :<br>
+<img src="maquette_page_principale.png"><br>
+La maquette complète avec la page d'accueil et des exemples de fonctionnement est disponible à <a href="https://www.canva.com/design/DAF9aX-qabs/2vwFKz3I0joGODFLJQR0hw/edit?utm_content=DAF9aX-qabs&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">ce lien</a>.</p>
+<p><strong>Ensuite</strong>, j'ai commencé le développement.</p>
 <h3>Retours</h3>
 <h2>Sprint 2</h2>
 <h3>Objectifs</h3>
