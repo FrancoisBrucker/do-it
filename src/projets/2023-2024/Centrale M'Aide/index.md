@@ -171,6 +171,19 @@ Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour
 - Le système de favoris qui communique avec la base de données
 - Un espace de retour de la part des utilisateurs pour les développeurs
 
+## Développement du site web
+
+### Low-code
+
+### Design : Maquette Figma
+Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.
+
+
+
+### Front-end
+
+### Back-end
+
 ## Sécurité de l'utilisateur
 
 Une problématique centrale réside dans la confidentialité des données, et de la sécurité des annonceurs (biens dégradés, cambriolages, etc...). De la même manière qu'Airbnb, seule la personne ayant accepté une annonce peut consulter l'adresse exacte de l'annonceur, sinon elle est localisée par une zone relativement large.
