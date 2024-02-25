@@ -24,13 +24,14 @@ Un cerveau et vaguement quelques connaissances en tech
 
 ## Table des matières
 
-1. [Objectifs et backlog produit](#section-1)
-2. [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement](#section-2)
-3. [Sprint 1 Review](#section-3)
-4. [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement](#section-4)
-5. [Sprint 2 Review](#section-5)
-6. [Conclusion](#section-6)
-7. [Sources](#section-7)
+- [Table des matières](#table-des-matières)
+- [Objectifs et backlog produit ](#objectifs-et-backlog-produit-)
+- [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement ](#ce-que-jai-prévu-au-1er-sprint-et-ce-qui-a-été-fait-finalement-)
+- [Sprint 1 Review ](#sprint-1-review-)
+- [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement ](#ce-que-jai-prévu-au-2ème-sprint-et-ce-qui-a-été-fait-finalement-)
+- [Sprint 2 Review ](#sprint-2-review-)
+- [Conclusion ](#conclusion-)
+- [Sources et horodateur ](#sources-et-horodateur-)
 
 ## Objectifs et backlog produit <a id="section-1"></a>
 
@@ -44,9 +45,9 @@ Un cerveau et vaguement quelques connaissances en tech
 
 - <u>Faire un backlog précis et le mettre à jour</u> [X] = 1 (1h)
 
-- <u>Consolider mes connaissances</u> [] = 5 (6h)
-  - MOOC de l'ANSSI [] = 3 (5h)
-  - Formalisation/traduction de mes connaissances [] = 2 (1h)
+- <u>Consolider mes connaissances</u> [] = 5 (7h)
+  - Guides de l'ANSSI [] = 3 (5h)
+  - Formalisation/traduction de mes connaissances [] = 2 (2h)
 
 - <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h)
 
@@ -65,20 +66,23 @@ Un cerveau et vaguement quelques connaissances en tech
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
 
-- <u>Consolider mes connaissances</u> [X] = 5 (7h)
+- <u>Faire un backlog précis et le mettre à jour</u> [X] = 1 (1h)
+  
+- <u>Consolider mes connaissances</u> [X] = 5 (7h) 
   - Guides recommendés par l'ANSSI [X] = 3 (5h)
     - Guide sur la continuité d'activité [X] = 1 (1h30)
     - EBIOS, management des risques [X] (3h30)
-  - Formalisation/Traduction de la formation que j'ai suivi de mon côté (Certified in Cybersecurity by ISC2) [] = 2 (2h)
+  - Formalisation/Traduction de la formation que j'ai suivi de mon côté (Certified in Cybersecurity by ISC2) [X] = 2 (2h)
 
-- <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h30)
+- <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h)
 
 - <u>Rédiger l'étude de cas</u>
-  - Choix du scénario et sa formalisation [] = 2 (1h)
-  - Présentation du cas [] = 2 (1h)
+  - Choix du scénario et sa formalisation [X] = 2 (1h)
+  - Présentation du cas [X] = 2 (1h)
 
 ## Sprint 1 Review <a id="section-3"></a>
-
+ 
+Ayant suivi le MOOC de l'ANSSI, j'avais une idée de la qualité de la documentation qu'elle pouvait produire, mais à nouveau, j'ai été bluffé. J'aurais voulu passer plus de temps sur EBIOS, une méthode de management de risques, mais il faudra passer pour cette fois. J'ai pris en note ce dont j'aurais besoin pour le sprint 2. De même, j'aurais voulu passer plus de temps sur mes notes (ce que je ferais finalement plus tard), car j'ai redécouvert des passages que j'ai envie d'approfondir. 
 
 ## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a>
 
@@ -100,5 +104,7 @@ Autres sources : CCI - Formations de formateurs "Acquérir les compétences clé
 
 **Horodateur** : 
 > Vendredi 09/02 : 1h (Backlog)
-> Jeudi 15/02 : 1h30 (Lecture des la méthodologie pour créer une étude de cas)
+> Jeudi 15/02 : 1h (Lecture des la méthodologie pour créer une étude de cas)
 > Mercredi 20/02 : 5h (Guides recommandés par l'ANSSI)
+> Vendredi 23/02 : 2h (Fin de la lecture de la méthode EBIOS et début de la rédaction du cas)
+> Dimanche 25/02 : 2h (Formalisation de mes notes)

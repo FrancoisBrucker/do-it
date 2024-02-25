@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Aimer, un petit jeu suivant une romance ordinaire"
+title: "Merry Christmas, un petit jeu suivant une romance ordinaire"
 authors:
   - TAING Henri
 
@@ -21,13 +21,11 @@ Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au dé
 
 ## Table des matières
 
-1. [Objectifs et backlog produit](#section-1)
-2. [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement](#section-2)
-3. [Sprint 1 Review](#section-3)
-4. [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement](#section-4)
-5. [Sprint 2 Review](#section-5)
-6. [Conclusion](#section-6)
-7. [Sources](#section-7)
+- [Quelques images](#quelques-images)
+  - [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement ](#ce-que-jai-prévu-au-2ème-sprint-et-ce-qui-a-été-fait-finalement-)
+  - [Sprint 2 Review ](#sprint-2-review-)
+  - [Conclusion ](#conclusion-)
+  - [Sources ](#sources-)
 
 ## Objectifs et backlog produit <a id="section-1"></a>
 
