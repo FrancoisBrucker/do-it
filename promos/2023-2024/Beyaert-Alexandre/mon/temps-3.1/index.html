@@ -125,6 +125,64 @@
 
 
 
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>VBA, c'est quoi ?</li>
+<li>Prise en main</li>
+<li></li>
+<li>Conclusion</li>
+<li>Bibliographie</li>
+</ol>
+<h2>1. Introduction</h2>
+<p>Les MON sur VBA ne datent pas d'hier, cette année <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Le_Bihan-Paul/mon/temps-1.1/">Paul</a>, <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Mathis%20Schultz/mon/temps-2.1/#h4">Mathis</a>, <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/">Agathe</a> et <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.1/">Lola</a> s'y sont déjà prêtés.</p>
+<p>Cette fois-ci c'est à mon tour de découvrir se langage, à la fois par curiosité mais aussi par intérêt pour mon stage de fin d'études en tant que consultant en Supply Chain.</p>
+<h2>2. VBA, c'est quoi ?</h2>
+<p>VBA pour &quot;Visual Basic for Applications&quot; est un langage de programmation intégré, développé par Microsoft dans le but d'automatiser les opérations réalisées dans les outils de la suite office : Excel, Word, Powerpoint...</p>
+<p>Il est très utile pour :</p>
+<ul>
+<li>automatiser des tâches</li>
+<li>personnaliser des applications</li>
+<li>intégrer des données en facilitant le flux de travail</li>
+<li>développer des applications</li>
+</ul>
+<h2>3. Prise en main</h2>
+<h3>Onglet développeur</h3>
+<p>Pour commencer à prendre en main VBA, il est nécessaire d'accéder aux outils de développements d'Excel. Pour se faire, cliquer sur Fichier &gt; Options &gt; Personnaliser le Ruban puis sélectionner la case Développeur.</p>
+<p><img src="Developpeur.png" alt="Ajout des outils de développement"></p>
+<p>Reste alors à ouvrir l'éditeur grâce au bouton &quot;Visual Basic&quot; ou avec le raccourci Alt + F11.</p>
+<h3>Macro</h3>
+<p>L'automatisation des tâches en VBA est rendu possible grâce à l'enregistreur de macro.</p>
+<p><strong>Qu'est-ce qu'une macro ?</strong></p>
+<p>Une macro est une série d'instructions ou de commandes enregistrées dans un langage de programmation intégré - dans notre cas VBA - qui permet d'automatiser des tâches répétitives ou complexes dans une application.</p>
+<p><strong>Enregistreur de macro</strong></p>
+<p>Une macro peut-être facilement implementée en VBA grâce à l'enregistreur de macro : il s'agit d'un outil permettant d'enregistrer les actions de l'utilisateur en temps réel et de générer automatiquement le code VBA correspondant. C'est un moyen très pratique pour créer rapidement des macros sans avoir à écrire manuellement le code.</p>
+<p>Pour utiliser l'enregistreur de macro, depuis l'onglet Développeur sélectionner &quot;Enregistrer une macro&quot;, toutes les manipulations effectuées seront alors enregistrées : suppression / ajout / déplacement de données, tout sera converti en VBA.<br>
+Il suffit ensuite de cliquer sur &quot;Arrêter l'enregistrement&quot; pour terminer la macro.</p>
+<p>Dans Visual Basic apparaît alors un nouveau module, lorsqu'on le sélectionne la macro retranscrite en langage VBA apparaît.</p>
+<h3>Caractéristiques d'une macro</h3>
+<p>Une macro commence par Sub et se termine par End Sub.<br>
+Il est également possible d'ajouter :</p>
+<ul>
+<li>un nom suivi de parenthèses après &quot;Sub&quot; pour nommer notre macro</li>
+<li>des commentaires qui ne seront pas exécutés en ajoutant du texte précédé d'une apostrophe</li>
+</ul>
+<pre><code>Sub nom_macro()
+
+'Ceci est un commentaire
+
+End sub
+</code></pre>
+<p>Pour faciliter l'exécution de notre macro, il est possible d'ajouter un bouton : Insérer &gt; Bouton &gt; Sélectionner la macro &gt; Tracer le bouton.</p>
+<p><img src="Bouton.png" alt="Ajout d'un bouton"></p>
+<p>Il est également possible de :</p>
+<ul>
+<li>sélectionner une ou plusieurs cellules</li>
+<li>modifier la valeur d'une cellule</li>
+<li>changer la mise en forme d'un texte</li>
+<li>afficher / masquer des feuilles...</li>
+</ul>
+<p>Le MON d'<a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/">Agathe</a> résume très bien ces fonctionnalités, je me contenterai donc de renvoyer vers sa page pour éviter les répétitions.</p>
 <p><a href="https://www.excel-pratique.com/fr/vba">https://www.excel-pratique.com/fr/vba</a></p>
 <div id="X9xR7LW6dPs" class="eleventy-plugin-youtube-embed" style="position:relative;width:100%;padding-top: 56.25%;"><iframe style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" title="Embedded YouTube video" src="https://www.youtube-nocookie.com/embed/X9xR7LW6dPs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
