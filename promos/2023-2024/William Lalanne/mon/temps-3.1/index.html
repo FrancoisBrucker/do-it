@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bases de C++</title>
+        <title>Bases du développement mobile</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Bases de C++</h1>
+<h1 class="mb-1">Bases du développement mobile</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Dans ce MON je souhaite apprendre les bases de C++
+                Dans ce MON je souhaite apprendre les bases de développement mobile
 
         </p>
 
@@ -118,13 +118,58 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-3.1/">Bases de C++</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/">William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/">MON de William Lalanne</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/William Lalanne/mon/temps-3.1/">Bases du développement mobile</a>
 
 </div></div>
 
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pré-requis :<br>
+<strong>Niveau :</strong> Facile<br>
+<strong>Prérequis :</strong> Pour ce MON, il est nécessaire d'avoir certaines bases de JavaScript et de React pour comprendre les concepts avec plus de facilité mais il est possible de s'en passer.</p>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Présentation de React Native</li>
+<li>Expo</li>
+<li>Les bases de React Native</li>
+<li>Créer une base de données pour l'app</li>
+<li>Conclusion</li>
+<li>Horodatage</li>
+</ol>
+<h2>1. Présentation</h2>
+<p>React Native est un framework créé par Facebook en 2015 qui permet de créer des applications mobile pour iOS ou Android en utilisant JavaScript. Dans le monde du développement mobilen il existe deux types distincts d'application :</p>
+<ul>
+<li>Application native :</li>
+<li>Application hybride :</li>
+</ul>
+<p>Techniquement, les applications développées aevc React Native  sont hybrides mais elles utilisent des composants graphiques natifs.</p>
+<h2>2. Expo</h2>
+<p>Expo est une plateforme qui permet de faire tourner une application mobile lors du développement de cette dernière. C'est très pratique pour voir à quoi ressemble l'application.<br>
+Voyons comment expo fonctionne.<br>
+D'abord, pour installer Expo il faut ouvrir un terminal et entrer la commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> expo-cli
+</code></pre>
+<p>Une fois Expo installée, il faut créer un projet. On se place dans le dossier dans lequel on souhaite créer l'app et on utilise la commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">npx create-expo-app nomDeLApp
+</code></pre>
+<p>Une fois l'application créée, pour la visualiser, il suffit d'ouvrir un terminal, se placer dans le dossier dans lequel on a créé l'app et utiliser la commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> start
+</code></pre>
+<p>Quand on fait ça, un qr code apparaît dans le terminal comme ci-dessous :<br>
+<img src="start_expo.png" alt="expo_start"></p>
+<p>En téléchargeant l'application Expo sur son téléphone et en étant connecté sur le même réseau wifi que son ordinateur, on peut scanner le qrcode et visualiser l'application directement sur son téléphone.</p>
+<h2>3. Les bases de React Native</h2>
+<h2>4.Horodatage</h2>
+<p>Mercredi 21/02 : 2h visionnage du cours de React Native sur Youtube<br>
+Vendredi 23/02 : 2h visionnage du cours de React Native sur Youtube<br>
+Samedi 24/02 : 4h création d'une petite application</p>
 
 
 </article>
