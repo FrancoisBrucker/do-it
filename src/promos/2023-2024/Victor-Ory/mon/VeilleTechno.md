@@ -25,7 +25,7 @@ Deux parties vont constituer ce MON :
 
 ## Comprendre :
 
-#### Étapes pour faire une veille : 
+### Étapes pour faire une veille : 
 
 1) Analyser ses besoins : Quels domaines ou sources surveiller ? Pour quelles finalités ? Combien de temps ai-je à y consacrer ?
 
@@ -39,9 +39,15 @@ Deux parties vont constituer ce MON :
 
 6) Diffuser et partager
   
-#### Choisir son outil : 
+Ensuite deux méthodes existent pour la collecte d'informations auprès de ses sources :
 
-J'ai testé les produits suivants : 
+   - Push : On va à la recherche de l'information, cela peut être lorsqu'on va consulté l'Humanité ou autre, cela peut prendre du temps, mais c'est gratuit ...
+   - Pull : Les informations vont à notre recherche, on configure un outil pour nous notifier des activités des différentes sources que nous avons identifié, on peut y appliqué des filtres pour spécifier nos recherches, pour cela des outils existent mais bien souvent payant.
+
+#### Choisir son outil :
+
+J'ai testé les produits suivants :
+
   - [Feedly](https://feedly.com/) --> Bon UI, compatibles avec bcps de sites, mais les fonctionnalités de base sont payantes, 
   - [Inoreader](https://www.inoreader.com/fr/) --> Pareil que Feedly, 
   - [NewsBlur](https://newsblur.com/), Open-source, gratuit mais pas vraiment de fonctionnalités qui le rendent plus utiles qu'une recherche classique.
@@ -49,16 +55,18 @@ J'ai testé les produits suivants :
 
 ### Mettre en place :
 
-1 ) Analyser ses besoins :
+1 / Analyser ses besoins :
 
 J'aimerais effectuer une veille dans le cadre de mon stage, le sujet étant 
 
 ### Résultats :
 
+J'aime bien le concept mais c'est chiant qu'il n'y est rien de gratuit, comme Mr.Magnagni l'avait expérimenté, les outils manquent encore pour faire ça bien... La méthode pour le cadrage et identifier les sources est intéressante, je pense que je vais poursuivre cette veille toutefois cela restera chronophage.
 
 #### Horodatage :
 
 [19/02] : Lecture sur concept, démarche = 1H30
 [21/02] : Établir le cadre, les limites de ma veille  = 1H
 [24/02] : Test des différentes solutions et sélection : [Feedly](https://feedly.com/), [Inoreader](https://www.inoreader.com/fr/), [NewsBlur](https://newsblur.com/), [Raven Reader](https://github.com/hello-efficiency-inc/raven-reader) = 1h30
-[24/02] : Penser à faire une application de lecture de flux RSS, car aucune app n'est bien ... = 0h30
+[24/02] : Penser à faire une application de lecture de flux RSS avec des filtres, car aucune app ne le permet alors que ça n'a pas l'air si complexe ... = 0h30
+[25/02] : Identification des sources pertinentes : 1H

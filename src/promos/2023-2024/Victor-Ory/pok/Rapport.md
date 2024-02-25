@@ -37,12 +37,20 @@ Beaucoup de choses à lire ...
 ## Deuxième étape : Faire le rapport :
 
 Le cadre du rapport est important et essentielles pour la structure et la démarche qui va habiter ce travail.
-Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur les sujets de politique publique relatif au monde cyber à l'échelle nationale et européenne.
-L'intention du rapport va être de donner un aperçu à des décideurs de la Banque de France concernant les potentiels signaux faibles technologiques pour penser la stratégie futures de l'organisation.
+Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur : .
+Le format attendu sera une analyse descriptive dans un premier temps et en fonction de l'avancé, nous pourrons faire une analyse explicative d'un phénomène 'un phénomène du milieu. 
+
+## Ressenti et conclusion : 
+
+Grosse lecture qui couvre un domaine un peu large, beaucoup d'information, qui peuvent sembler intuitives mais c'est tout le point, rendre certains procédés rigoureux pour éviter les erreurs intuitives, avec des check-lists des méthodes. 
+Si aujourd'hui j'en utilise seulement une fraction, je pense que ce sera utile tout au long de ma carrière avec l'évolution de mes connaissances et de la nature des analyses à fournir. En effet, le livre aborde les analyses sous différent angles, en fonction de la profondeur demandée, du type d'analyse, quantité d'information utilisée, quantitative ou qualitative analysis, ... 
 
 #### Horodatage :
 
+[17/02] : Planification, recherche des sources  = 0H30
 [22/02] : Lecture Critical Thinking Chapter 1&2 = 1H
 [23/02] : Lecture Critical Thinking Chapter 3 = 1H
 [24/02] : Lecture Critical Thinking Chapter 4 = 1H
 [24/02] : Lecture Critical Thinking Chapter 4&5 = 1H
+[25/02] : Lecture Critical Thinking Chapter 5 = 1H
+[25/02] : Lecture Critical Thinking Chapter 8 = 1H
