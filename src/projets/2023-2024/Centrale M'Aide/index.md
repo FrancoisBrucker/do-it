@@ -107,11 +107,14 @@ La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
 ### Connexion et inscription
 
-Lorsque le nouvel utilisateur arrive sur notre site Internet, il doit comprendre rapidement son fonctionnement. L'étude Experience 2030 (menée par Futurum Research et SAS) montre qu'un internaute décide en quelques secondes de quitter un site Internet si celui-ci n'est pas ergonomique. Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
+La prise en main de notre site se doit d'être facile et rapide.
+L'étude **Experience 2030** (menée par Futurum Research et SAS) montre qu'un internaute décide en quelques secondes de quitter un site Internet si celui-ci n'est pas ergonomique.
+
+Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
 
 ![Image page d'accueil MBM](MBM-homepage.png)
 
-Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gère les questions d'authentification et qui met à jour la base de données des identifiants/mots de passe. A titre d'exemple pour la maquette en low code, nous requérons qu'une adresse mail et un mot de passe. Il est possible que ces exigences évoluent dans le futur.
+Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gère les questions d'authentification et met à jour la base de données des identifiants/mots de passe. À titre d'exemple pour la maquette en low code, seuls le nom, l'adresse mail et le mot de passe suffisent à s'inscrire. *Il est possible que ces exigences évoluent dans le futur.*
 
 ![Image connection](MBM-connection.png)
 
@@ -119,7 +122,7 @@ Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gè
 
 #### Menu déroulant
 
-Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet à l'utilisateur, sur n'importe quelle page, d'avoir accès aux pages suivantes jugées **importantes** dans notre parcours utilisateur :
+Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet à l'utilisateur de naviguer aisément vers les pages **importantes** de notre parcours utilisateur :
 
 - Mon Profil
 - Mes Annonces
@@ -133,27 +136,29 @@ Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet 
 |                                    | Mon Profil   | Mes Annonces       | Favoris            | Carte des Annonces |
 |:----------------------------------:|:------------:|:------------------:|:------------------:|:------------------:|
 | **Résumé**                         | Personnalisation et actualisation du profil | Liste des annonces déposées | Liste des annonces ajoutées aux favoris. | Carte interactive répertoriant les annonces et leur localisation |
-| **Informations que l'on y trouve** |  Nom, Prénom, Age non modifiables.       | Visibilité des annonces, utilisateurs intéressés. Possibilité de modifier les annonces. | Si le déposant modifie l'annonce que la bonne main a ajouté aux favoris, ce dernier sera alerté  | Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des annonceurs  |
+| **Informations que l'on y trouve** |  Nom, Prénom, Age non modifiables.       | Visibilité des annonces, utilisateurs intéressés. Possibilité de modifier les annonces. | Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté  | Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs  |
 
 #### Déconnexion
 
-Quand un utilisateur se déconnecte, il est alors redirigé vers la page d'accueil, qui lui permet de se reconnecter si besoin.
+Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
 
 #### Dépôt d'une annonce
 
-L'annonceur remplit un formulaire simple mais précis, avec plusieurs fonctionnalités destinées à lui faciliter la vie :
-
+L'annonceur remplit un formulaire simple mais précis, présentant plusieurs fonctionnalités destinées faciliter son expérience :
 - la sélection d'une date se fait avec un calendrier interactif
-- le dépôt d'un fichier photo permettant de rajouter des informations qu'il ne pourrait pas décrire facilement, telle que l'étendue du potager...
-Cette page est destinée à être simple, afin que le dépôt d'une annonce ne soit pas synonyme de prise de tête pour l'utilisateur.
+- le dépôt d'un fichier photo permettant d'ajouter des informations : "une image vaut 1000 mots", la photographie d'un potager sera probablement plus parlante qu'un paragraphe visant à le décrire...
 
-Une fois le bouton *Déposer mon annonce* cliqué, une page de confirmation s'affichera pour éviter de publier des annonces avec des erreurs.
+Pour éviter toute erreur de missclick, une confirmation sera demandée après clic du bouton *Déposer mon annonce*.
 
 ![Image dépot annonce](MBM-depot-annonce.png)
 
 #### Recherche des annonces
 
-La page de recherche affiche peu d'informations pour chaque annonce. Nous pensons que la sélection d'une annonce se fait d'abord sur les critères de dates et de lieu, c'est pourquoi ils sont visibles directement. Cela permet une recherche fluide et épurée. Dès qu'un utilisateur est intéressé par une annonce, il peut la consulter pour avoir plus de détails et la mettre dans ses favoris. Il peut ensuite confirmer qu'il est disponible pour débuter la conversation avec l'annonceur.
+Inspirée des sites d'annonces, la page de recherche n'affiche que les éléments primordiaux de chaque annonce, elle se veut d'être impactante et lisible.
+La sélection d'une annonce se fait d'abord sur sa mission (titre de l'annonce) puis, si celle-ci semble intéressante, sur les critères de dates et de localisation.
+
+Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour avoir plus de détails et la mettre dans ses favoris. Il peut ensuite confirmer qu'il est disponible pour débuter la conversation avec l'annonceur.
+
 ![Image recherche annonce](MBM-recherche-annonce.png)
 
 #### Fonctionnalités à développer
@@ -165,6 +170,19 @@ La page de recherche affiche peu d'informations pour chaque annonce. Nous penson
 - La barre de recherche fonctionnelle
 - Le système de favoris qui communique avec la base de données
 - Un espace de retour de la part des utilisateurs pour les développeurs
+
+## Développement du site web
+
+### Low-code
+
+### Design : Maquette Figma
+Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.
+
+
+
+### Front-end
+
+### Back-end
 
 ## Sécurité de l'utilisateur
 

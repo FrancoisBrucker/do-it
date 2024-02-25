@@ -42,3 +42,7 @@ L'intention du rapport va être de donner un aperçu à des décideurs de la Ban
 
 #### Horodatage :
 
+[22/02] : Lecture Critical Thinking Chapter 1&2 = 1H
+[23/02] : Lecture Critical Thinking Chapter 3 = 1H
+[24/02] : Lecture Critical Thinking Chapter 4 = 1H
+[24/02] : Lecture Critical Thinking Chapter 4&5 = 1H
