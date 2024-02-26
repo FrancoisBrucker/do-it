@@ -125,7 +125,193 @@
 
 
 
-<p>Ce MON a été fait par de nombreux autres étudiants cette année et la précédente donc désolé pour le manque d'originalité mais j'aimerai également m'initier au langage R pour l'analyse de donnée.</p>
+<h2>Objectifs</h2>
+<p>A travers ce MON je vais m'initier au langage R pour l'analyse de données. Pour cela je vais tout d'abord voir la théorie à travers des cours en ligne pour ensuite l'appliquer à un exemple précis afin de manipuler moi même.</p>
+<h2>Initiation théorique à R</h2>
+<p>R est un langage informatique <strong>orienté objet</strong> et <strong>interprété</strong> principalement conçu pour le traitement et l'analyse de données. Son utilisation peut également être plus poussée et permettre  de réaliser du machin learning.</p>
+<p>Le langage est associé à un IDE (<em>Integrated Development Environment</em>) : <strong>RStudio</strong> pour faciliter son utilisation.</p>
+<h3>Syntaxe</h3>
+<p>Pour stocker une variable on utilise le symbole <code>&lt;-</code> :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">x <span class="token operator">&lt;-</span> <span class="token number">1000</span>
+</code></pre>
+<p>La manipulation mathématique d'une variable se fait ensuite traditionnellement comme en python :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">x <span class="token operator">&lt;-</span> x <span class="token operator">+</span> <span class="token number">5</span>
+y <span class="token operator">&lt;-</span> x<span class="token operator">*</span><span class="token number">3</span>
+z <span class="token operator">&lt;-</span> sqrt<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+</code></pre>
+<p>Il est également possible de créer des fonctions :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">calculer_moyenne <span class="token operator">&lt;-</span> <span class="token keyword">function</span><span class="token punctuation">(</span>liste<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  somme <span class="token operator">&lt;-</span> sum<span class="token punctuation">(</span>liste<span class="token punctuation">)</span>
+  nombre_elements <span class="token operator">&lt;-</span> length<span class="token punctuation">(</span>liste<span class="token punctuation">)</span>
+  moyenne <span class="token operator">&lt;-</span> somme <span class="token operator">/</span> nombre_elements
+  return<span class="token punctuation">(</span>moyenne<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+moyenne_resultat <span class="token operator">&lt;-</span> calculer_moyenne<span class="token punctuation">(</span>c<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>moyenne_resultat<span class="token punctuation">)</span>
+</code></pre>
+<p>Une autre façon d'écrire les opérations existe avec l'opérateur <code>|&gt;</code> :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r"><span class="token number">12</span> <span class="token operator">|</span><span class="token operator">></span> log<span class="token punctuation">(</span>base <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">|</span><span class="token operator">></span> sqrt<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">|</span><span class="token operator">></span> exp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># = exp(sqrt(log(12, base = 10)))</span>
+</code></pre>
+<h4>Les vecteurs et matrices</h4>
+<p>Une liste, ou vecteur, s'écrit à l'aide de la fonction <code>c()</code> :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">noms <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"Benjamin"</span><span class="token punctuation">,</span> <span class="token string">"Daniel"</span><span class="token punctuation">,</span> <span class="token string">"Emma"</span><span class="token punctuation">,</span> <span class="token string">"Romuald"</span><span class="token punctuation">,</span> <span class="token string">"Tom"</span><span class="token punctuation">,</span> <span class="token string">"Bastien"</span><span class="token punctuation">,</span> <span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token string">"Martin"</span><span class="token punctuation">,</span> <span class="token string">"Léa"</span><span class="token punctuation">,</span> <span class="token string">"Dimitri"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Des opérations peuvent être effectuées directement sur les vecteurs (concaténation, opérations mathématiques, conversion, comparaison,...)</p>
+<p>Par prolongement on peut utiliser des matrices avec la syntaxe suivante :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r"><span class="token comment"># Création d'une matrice</span>
+matrice_exemple <span class="token operator">&lt;-</span> matrix<span class="token punctuation">(</span>c<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nrow <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> ncol <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> byrow <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css">     [<span class="token punctuation">,</span>1] [<span class="token punctuation">,</span>2]
+[1<span class="token punctuation">,</span>]   10   20
+[2<span class="token punctuation">,</span>]   30   40
+[3<span class="token punctuation">,</span>]   50   60
+</code></pre>
+<h3>Organisation d'un projet</h3>
+<p>Les projets d'analyse de données reposent sur plusieurs documents :</p>
+<ul>
+<li>le code</li>
+<li>la documentation</li>
+<li>la data</li>
+<li>les images</li>
+<li>...</li>
+</ul>
+<p>On structure donc un projet sous forme de  <em><strong>Working directory</strong></em>. Cela permet de communiquer avec d'autres fichiers plus facilement sans avoir à préciser les emplacements complets de ces derniers. De plus cela permet de lier un projet R avec <em><strong>Github</strong></em> plus facilement car il ne va pas dépendre de l'ordinateur utilisé.</p>
+<p><img src="Images/structure_projet.png" alt="structuration projet"></p>
+<p><em>from</em> <a href="https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees/8309117-creez-votre-premier-projet-dans-r">https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees/8309117-creez-votre-premier-projet-dans-r</a></p>
+<ul>
+<li>
+<p><strong>data</strong>  et éventuellement  <strong>data_raw</strong>  . Les données d’origine seront enregistrées dans le sous-dossier  <strong>data_raw</strong>  . Il ne faut jamais réenregistrer dessus, les données doivent être conservées telles quelles. Les données modifiées seront enregistrées dans le sous-dossier  <strong>data</strong>  .</p>
+</li>
+<li>
+<p><strong>img</strong>  permet d’enregistrer au même endroit tous les graphiques ou images générés.</p>
+</li>
+<li>
+<p><strong>doc</strong>  pour conserver la documentation, les rapports générés…</p>
+</li>
+</ul>
+<h3>Utilisation d'un fichier externe</h3>
+<p>Le plus important pour traiter des données est de pouvoir les extraire et les analyser à partir d'un fichier externe. Pour cela il faut tout d'abord importer</p>
+<h4>CSV</h4>
+<p>On utilise la fonction <code>read.csv()</code> :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">table <span class="token operator">&lt;-</span> read.csv<span class="token punctuation">(</span><span class="token string">"table.csv"</span><span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span> 
+<span class="token comment">#ou</span>
+table <span class="token operator">&lt;-</span> read.csv2<span class="token punctuation">(</span><span class="token string">"table.csv"</span><span class="token punctuation">)</span> 
+<span class="token comment"># .csv2 utilise par défaut un séparateur ";"</span>
+</code></pre>
+<h4>Excel</h4>
+<p>Pour un fichier qui n'est pas texte il faut tout d'abord importer le type de fichier, par exemple ici <em><strong>readxl</strong></em> :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">library<span class="token punctuation">(</span>readxl<span class="token punctuation">)</span>
+
+salaire <span class="token operator">&lt;-</span> read_excel<span class="token punctuation">(</span><span class="token string">"data_raw/salaire.xlsx"</span><span class="token punctuation">,</span> sheet <span class="token operator">=</span> <span class="token string">"T1"</span><span class="token punctuation">,</span> range<span class="token operator">=</span><span class="token string">"B10:F352"</span><span class="token punctuation">,</span> col_names <span class="token operator">=</span> c<span class="token punctuation">(</span><span class="token string">"SSOC 2020"</span><span class="token punctuation">,</span>	<span class="token string">"Occupation"</span><span class="token punctuation">,</span>	<span class="token string">"Number Covered"</span><span class="token punctuation">,</span>	<span class="token string">"Basic  Wage"</span><span class="token punctuation">,</span> <span class="token string">"Gross  Wage"</span>
+<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Ici on rentre plus de paramètres :</p>
+<ul>
+<li><em>sheet</em> : pour sélectionner la feuille sur laquelle on travaille</li>
+<li><em>range</em> : pour sélectionner seulement la partie des données qui nous intéressent</li>
+<li><em>col_names</em> : pour insérer des titres aux colonnes (l'argument doit être un vecteur)</li>
+</ul>
+<p>Une fois la table importée on lit et on modifie les données avec :</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">table<span class="token punctuation">[</span><span class="token number">65</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> <span class="token number">65</span>
+table<span class="token punctuation">[</span><span class="token number">65</span><span class="token punctuation">,</span> <span class="token string">"tri"</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> <span class="token number">65</span>
+table<span class="token operator">$</span>tri<span class="token punctuation">[</span><span class="token number">65</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> <span class="token number">65</span>
+</code></pre>
+<p>Ici les trois écritures permettent d'écrire la valeur 65 à la ligne 65 de la colonne 1 dont le titre est &quot;tri&quot;. Le $ permet de descendre d’un niveau et les tableaux sont traités comme des assemblages de colonnes.</p>
+<p>De la même manière, on peut sélectionner toutes les lignes de plusieurs colonnes en ne mettant rien avant la virgule, et les colonnes d’intérêt listées après.</p>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r"><span class="token comment"># avec le nom des colonnes</span>
+mixite_groupe_edf_fr <span class="token operator">&lt;-</span> mixite_groupe_edf<span class="token punctuation">[</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span><span class="token string">"tri"</span><span class="token punctuation">,</span> <span class="token string">"annee"</span><span class="token punctuation">,</span> <span class="token string">"perimetre_juridique"</span><span class="token punctuation">,</span> <span class="token string">"perimetre_spatial"</span><span class="token punctuation">,</span> <span class="token string">"indicateur"</span><span class="token punctuation">,</span> <span class="token string">"valeur_de_l_indicateur"</span><span class="token punctuation">,</span> <span class="token string">"unite"</span><span class="token punctuation">,</span> <span class="token string">"methode_de_consolidation"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment"># ou la position des colonnes</span>
+mixite_groupe_edf_fr <span class="token operator">&lt;-</span> mixite_groupe_edf<span class="token punctuation">[</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code></pre>
+<h3>Les graphiques</h3>
+<p>Il est possible de créer un très grand nombre de graphes différents grâce à R :</p>
+<ul>
+<li><em>plot()</em> : la <strong>fonction générique</strong> qui s'adapte avec ses arguments</li>
+<li><em>barplot()</em> : pour un graphique à barre</li>
+<li><em>pie()</em> : pour un graphique camembert</li>
+<li><em>hist()</em> : pour un histogramme</li>
+<li>...</li>
+</ul>
+<h2>Application</h2>
+<p>A travers les cours j'ai suivi des petits exemples et exercice mais j'ai voulu appliquer la théorie à un autre groupe de données pour manipuler moi même. J'ai donc choisi de travailler sur un sujet que j'apprécie particulièrement : l'esport de <em>League of Legends</em> et plus particulièrement le plus grand joueur au monde <strong>Faker</strong>.</p>
+<p>J'ai ainsi trouvé en ligne une data base <em>csv</em> qui regroupait toutes les parties professionnelles qui ont été jouées depuis 2014 à travers les ligues et tournois principaux.</p>
+<p><img src="Images/projetdataLoL.png" alt="projet data LoL"></p>
+<p>Il y avait un <em>data frame</em> par an, je les ai donc tous importés puis filtrés pour ne garder que les parties du joueur qui m'intéresse avant de concaténer les <em>data frames</em> filtrées en un seul.</p>
+<p>A partir de là j'ai pu manipuler les data et afficher moi-même diverses statistiques comme le taux de victoire, l'avantage en or, ...</p>
+<p>Je met ici quelques exemples sans trop m'attarder dans les détails et les explications.</p>
+<h3>Kill par an</h3>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r"><span class="token comment">#Calcul kill par an </span>
+kill_year <span class="token operator">&lt;-</span> aggregate<span class="token punctuation">(</span>kills <span class="token operator">~</span> year<span class="token punctuation">,</span> data <span class="token operator">=</span> tableFaker10ans<span class="token punctuation">,</span> sum<span class="token punctuation">)</span>
+
+<span class="token comment">#Création graphique à barres</span>
+barplot<span class="token punctuation">(</span>kill_year<span class="token operator">$</span>kills<span class="token punctuation">,</span> names.arg <span class="token operator">=</span> kill_year<span class="token operator">$</span>year<span class="token punctuation">,</span> 
+        col <span class="token operator">=</span> <span class="token string">"skyblue"</span><span class="token punctuation">,</span> main <span class="token operator">=</span> <span class="token string">"Nombre de kills de Faker par an"</span><span class="token punctuation">,</span> 
+        xlab <span class="token operator">=</span> <span class="token string">"Année"</span><span class="token punctuation">,</span> ylab <span class="token operator">=</span> <span class="token string">"Kills"</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="Images/kill_an_faker.png" alt="kill par an"></p>
+<h3>K/D/A global et par champion</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>K/D/A = kill/deats/assists (les statistiques principales d'une joueur dans une partie)</p>
+</div></div>
+<h4>Global</h4>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">taux_victoire <span class="token operator">&lt;-</span> mean<span class="token punctuation">(</span>tableFaker10ans<span class="token operator">$</span>result<span class="token punctuation">)</span>
+KDA <span class="token operator">&lt;-</span> <span class="token punctuation">(</span>sum<span class="token punctuation">(</span>tableFaker10ans<span class="token operator">$</span>kills<span class="token punctuation">)</span> <span class="token operator">+</span> sum<span class="token punctuation">(</span>tableFaker10ans<span class="token operator">$</span>assists<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>sum<span class="token punctuation">(</span>tableFaker10ans<span class="token operator">$</span>deaths<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">sprintf<span class="token punctuation">(</span><span class="token string">"%.2f%%"</span><span class="token punctuation">,</span> taux_victoire <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span>
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token string">"66.75%"</span>
+
+print<span class="token punctuation">(</span>KDA<span class="token punctuation">)</span>
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token number">4.17038</span>
+</code></pre>
+<h4>Par champion (joués minimum 10 fois)</h4>
+<pre class="language-r " style="counter-reset: linenumber 0"><code class="language-r">library<span class="token punctuation">(</span>dplyr<span class="token punctuation">)</span>
+
+<span class="token comment"># Nombre de parties jouées par champion</span>
+games_champion <span class="token operator">&lt;-</span> tableFaker10ans <span class="token percent-operator operator">%>%</span>
+  group_by<span class="token punctuation">(</span>champion<span class="token punctuation">)</span> <span class="token percent-operator operator">%>%</span>
+  summarize<span class="token punctuation">(</span>parties_jouees <span class="token operator">=</span> n<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Champions joués 10 fois ou plus</span>
+champion_10plus <span class="token operator">&lt;-</span> games_champion <span class="token percent-operator operator">%>%</span>
+  filter<span class="token punctuation">(</span>parties_jouees <span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Taux de victoire pour chaque champion</span>
+winrate_champion <span class="token operator">&lt;-</span> tableFaker10ans <span class="token percent-operator operator">%>%</span>
+  filter<span class="token punctuation">(</span>champion <span class="token percent-operator operator">%in%</span> champion_10plus<span class="token operator">$</span>champion<span class="token punctuation">)</span> <span class="token percent-operator operator">%>%</span>
+  group_by<span class="token punctuation">(</span>champion<span class="token punctuation">)</span> <span class="token percent-operator operator">%>%</span>
+  summarize<span class="token punctuation">(</span>winrate <span class="token operator">=</span> mean<span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Affichage top 3</span>
+top_3_champions <span class="token operator">&lt;-</span> winrate_champion <span class="token percent-operator operator">%>%</span>
+  arrange<span class="token punctuation">(</span>desc<span class="token punctuation">(</span>winrate<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%>%</span>
+  head<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+top_3_champions <span class="token operator">&lt;-</span> merge<span class="token punctuation">(</span>top_3_champions<span class="token punctuation">,</span> games_champion<span class="token punctuation">,</span> by <span class="token operator">=</span> <span class="token string">"champion"</span><span class="token punctuation">,</span> all.x <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">)</span><span class="token percent-operator operator">%>%</span>
+  arrange<span class="token punctuation">(</span>desc<span class="token punctuation">(</span>winrate<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+print<span class="token punctuation">(</span>top_3_champions<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="Images/top3winrate.png" alt="resultat print top_3_champions"></p>
+<h2>Conclusion</h2>
+<p>R est un très bon outil pour l'analyse de data en très grand nombre, pour l'appication aux matchs compétitifs de <em>League of Legends</em> les data en <em>csv</em> s'étendaient sur des dizaines de milliers de lignes et pourtant les calculs et l'affichage de résultats se sont fait très rapidement.</p>
+<p>La prise en main est également assez facile si on a déjà des bases en python car je trouve que les langages se ressemblent beaucoup.</p>
+<h3>Sources</h3>
+<p>Cours théoriques suivis :</p>
+<ul>
+<li><a href="https://bookdown.org/ael/rexplor/chap1.html">https://bookdown.org/ael/rexplor/chap1.html</a></li>
+<li><a href="https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees">https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees</a></li>
+<li>MON de Benoit Béguier également sur R sans GalèR juste <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.1/">ici</a></li>
+</ul>
+<p>Data LoL :</p>
+<ul>
+<li><a href="https://oracleselixir.com/tools/downloads">https://oracleselixir.com/tools/downloads</a></li>
+<li><a href="https://gol.gg/players/player-stats/48/season-ALL/split-ALL/tournament-ALL/">https://gol.gg/players/player-stats/48/season-ALL/split-ALL/tournament-ALL/</a></li>
+</ul>
 
 
 </article>
