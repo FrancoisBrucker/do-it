@@ -17,7 +17,7 @@ résumé: "Un MON traitant de la découverte de VBA"
 1. Introduction
 2. VBA, c'est quoi ?
 3. Prise en main
-4. 
+4. Variables et types de données
 5. Conclusion
 6. Bibliographie
 
@@ -89,7 +89,59 @@ Il est également possible de :
 - changer la mise en forme d'un texte
 - afficher / masquer des feuilles...
 
-Le MON d'[Agathe](https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/) résume très bien ces fonctionnalités, je me contenterai donc de renvoyer vers sa page pour éviter les répétitions.
+Le MON d'[Agathe](https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/) résume très bien ces fonctionnalités, je me contenterai donc de renvoyer vers sa page pour éviter les répétitions et de développer davantage la partie 4 sur les variables et types de données.
+
+## 4. Variables et types de données
+
+### Variables
+Dans VBA, il existe différents types de données tels que **les entiers (Integer), les nombres décimaux (Double), les chaînes de caractères (String), etc.** On peut déclarer une variable et lui assigner une valeur de la manière suivante :
+
+```
+Dim monEntier As Integer
+monEntier = 10
+```
+### Structures de contrôle
+
+Les structures de contrôle, comme les boucles et les conditions, sont utilisées pour contrôler le flux d'exécution du programme. Par exemple, **la boucle For...Next** est couramment utilisée pour répéter une série d'instructions un certain nombre de fois :
+
+```
+For i = 1 To 10
+    ' Instructions à répéter
+Next i
+```
+Les instructions conditionnelles, comme **If...Then...Else**, sont également disponibles pour exécuter des blocs de code en fonction de certaines conditions :
+
+```
+If monEntier > 5 Then
+    ' Instructions si monEntier est supérieur à 5
+Else
+    ' Instructions si monEntier est inférieur ou égal à 5
+End If
+```
+
+### Fonctions et sous-procédures
+
+En plus des macros, il est possible de créer des fonctions et des sous-procédures dans VBA. Les fonctions prennent généralement des arguments en entrée et renvoient une valeur, tandis que les sous-procédures effectuent simplement des actions sans renvoyer de valeur. Voici un exemple de fonction qui renvoie la somme de deux nombres :
+
+```
+Function Somme(a As Integer, b As Integer) As Integer
+    Somme = a + b
+End Function
+```
+
+### Manipulation des objets
+
+En VBA, on travaille généralement avec des objets qui représentent les éléments d'une application (comme des cellules dans Excel ou des paragraphes dans Word).
+On peut manipuler ces objets en accédant à leurs propriétés et en appelant leurs méthodes. Par exemple, pour modifier le contenu d'une cellule dans Excel, on peut utiliser le code suivant :
+
+```
+ActiveSheet.Cells(1, 1).Value = "Nouvelle valeur"
+```
+Cela change la valeur de la cellule A1 de la feuille active.
+
+## 5. Conclusion
+
+## 6. Bibliographie
 
 https://www.excel-pratique.com/fr/vba
 
