@@ -15,6 +15,6 @@ Ensemble des POK réalisés par Omar Salame.
 ## Temps 2
 * [POK2: Football Fantasy-2](./temps-2)
 
-## Temps 2
+## Temps 3
 * [POK3: Optimisation de la Gestion des Ressources Humaines (SIRH) ](./temps-3)
 
