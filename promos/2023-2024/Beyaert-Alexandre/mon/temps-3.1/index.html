@@ -130,7 +130,7 @@
 <li>Introduction</li>
 <li>VBA, c'est quoi ?</li>
 <li>Prise en main</li>
-<li></li>
+<li>Variables et types de données</li>
 <li>Conclusion</li>
 <li>Bibliographie</li>
 </ol>
@@ -182,7 +182,40 @@ End sub
 <li>changer la mise en forme d'un texte</li>
 <li>afficher / masquer des feuilles...</li>
 </ul>
-<p>Le MON d'<a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/">Agathe</a> résume très bien ces fonctionnalités, je me contenterai donc de renvoyer vers sa page pour éviter les répétitions.</p>
+<p>Le MON d'<a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/">Agathe</a> résume très bien ces fonctionnalités, je me contenterai donc de renvoyer vers sa page pour éviter les répétitions et de développer davantage la partie 4 sur les variables et types de données.</p>
+<h2>4. Variables et types de données</h2>
+<h3>Variables</h3>
+<p>Dans VBA, il existe différents types de données tels que <strong>les entiers (Integer), les nombres décimaux (Double), les chaînes de caractères (String), etc.</strong> On peut déclarer une variable et lui assigner une valeur de la manière suivante :</p>
+<pre><code>Dim monEntier As Integer
+monEntier = 10
+</code></pre>
+<h3>Structures de contrôle</h3>
+<p>Les structures de contrôle, comme les boucles et les conditions, sont utilisées pour contrôler le flux d'exécution du programme. Par exemple, <strong>la boucle For...Next</strong> est couramment utilisée pour répéter une série d'instructions un certain nombre de fois :</p>
+<pre><code>For i = 1 To 10
+    ' Instructions à répéter
+Next i
+</code></pre>
+<p>Les instructions conditionnelles, comme <strong>If...Then...Else</strong>, sont également disponibles pour exécuter des blocs de code en fonction de certaines conditions :</p>
+<pre><code>If monEntier &gt; 5 Then
+    ' Instructions si monEntier est supérieur à 5
+Else
+    ' Instructions si monEntier est inférieur ou égal à 5
+End If
+</code></pre>
+<h3>Fonctions et sous-procédures</h3>
+<p>En plus des macros, il est possible de créer des fonctions et des sous-procédures dans VBA. Les fonctions prennent généralement des arguments en entrée et renvoient une valeur, tandis que les sous-procédures effectuent simplement des actions sans renvoyer de valeur. Voici un exemple de fonction qui renvoie la somme de deux nombres :</p>
+<pre><code>Function Somme(a As Integer, b As Integer) As Integer
+    Somme = a + b
+End Function
+</code></pre>
+<h3>Manipulation des objets</h3>
+<p>En VBA, on travaille généralement avec des objets qui représentent les éléments d'une application (comme des cellules dans Excel ou des paragraphes dans Word).<br>
+On peut manipuler ces objets en accédant à leurs propriétés et en appelant leurs méthodes. Par exemple, pour modifier le contenu d'une cellule dans Excel, on peut utiliser le code suivant :</p>
+<pre><code>ActiveSheet.Cells(1, 1).Value = &quot;Nouvelle valeur&quot;
+</code></pre>
+<p>Cela change la valeur de la cellule A1 de la feuille active.</p>
+<h2>5. Conclusion</h2>
+<h2>6. Bibliographie</h2>
 <p><a href="https://www.excel-pratique.com/fr/vba">https://www.excel-pratique.com/fr/vba</a></p>
 <div id="X9xR7LW6dPs" class="eleventy-plugin-youtube-embed" style="position:relative;width:100%;padding-top: 56.25%;"><iframe style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" title="Embedded YouTube video" src="https://www.youtube-nocookie.com/embed/X9xR7LW6dPs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
