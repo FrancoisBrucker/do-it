@@ -31,6 +31,8 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 
 - *LOGICIEL POUR L'USINAGE CNC*, Autodesk. Accessible [ici](https://www.autodesk.fr/solutions/cnc-machining-software).
 - *Usinage 5 axes: qu'est-ce que c'est ?*, Weerg. Accessible [ici](https://www.weerg.com/fr/guides/usinage-5-axes-definition).
+- *G-code/fr*, RepRap. Accessible [ici](https://reprap.org/wiki/G-code/fr).
+- *Isostatisme*, Philippe Berger. Accessible [ici](http://philippe.berger2.free.fr/productique/ressources/isostatisme/isostatisme.htm).
 
 ## Introduction
 
@@ -75,3 +77,19 @@ La gamme d'usinage est un document qui recense chaque phase de l'usinage, et pou
 Exemple d'une gamme d'usinage :
 
 ![gamme](gamme.png)
+
+## La Fabrication Assistée par Ordinateur
+
+Actuellement, la création de G-code *ex nihilo* se fait de plus en plus rare. Les ingénieurs fabrication utilisent les outils de Fabrication Assistée par Ordinateur (FAO), tels que les logiciels Delmia (Dassault Système). Ces logiciels permettent de représenter le brut sur l'ordinateur, utiliser un clone numérique de la machine CNC utilisée, simuler les MIP et les MAP, et enfin obtenir la pièce usinée simulée par le logiciel.
+
+![fao](fao.png)
+
+J'ai effectué un test sur le logiciel Delmia sur la pièce suivante que j'ai créé moi-même :
+
+![upright](upright.png)
+
+Voici un extrait du résultat obtenu avec Delmia :
+
+![fao](fao_exemple.jpg)
+
+Le logiciel permet donc de générer le G-code fonctionnel, et de le tester en amont pour s'assurer que le résultat sera celui que l'on souhaite. Il est tout à fait possible d'écrire tout le G-code soit même, cependant ce n'est plus du tout la manière de faire actuelle et avec une fiabilité plus faible.
