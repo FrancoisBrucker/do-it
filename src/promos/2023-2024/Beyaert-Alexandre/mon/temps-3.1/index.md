@@ -21,11 +21,19 @@ résumé: "Un MON traitant de la découverte de VBA"
 5. Conclusion
 6. Bibliographie
 
+| Timing | VBA, c'est quoi ? | Comparaison des MON et MOOC | Formation site excel | Formation YouTube |
+| -------| -------- | -------- | -------- |
+| Temps prévu (en heures) | 1 | 2 | 5 | 2 |
+| Temps dédié (en heures) | 1 | 1 | 6 | 2 |
+
+
 ## 1. Introduction
 
 Les MON sur VBA ne datent pas d'hier, cette année [Paul](https://francoisbrucker.github.io/do-it/promos/2023-2024/Le_Bihan-Paul/mon/temps-1.1/), [Mathis](https://francoisbrucker.github.io/do-it/promos/2023-2024/Mathis%20Schultz/mon/temps-2.1/#h4), [Agathe](https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-2.1/) et [Lola](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.1/) s'y sont déjà prêtés.
 
 Cette fois-ci c'est à mon tour de découvrir se langage, à la fois par curiosité mais aussi par intérêt pour mon stage de fin d'études en tant que consultant en Supply Chain.
+
+Pour ce faire, j'ai décidé de mêler la formation VBA proposée par le site d'[excel](https://www.excel-pratique.com/fr/vba) à la playlist YouTube [Formation VBA Excel](https://www.youtube.com/watch?v=X9xR7LW6dPs&list=PL4moFYPB3KVsY_E5WAANYuZGeUQekvS3U) de la chaîne Excel Formation et de confronter ces apprentissages aux différents MON existants.
 
 ## 2. VBA, c'est quoi ?
 
@@ -141,8 +149,7 @@ Cela change la valeur de la cellule A1 de la feuille active.
 
 ## 5. Conclusion
 
-## 6. Bibliographie
+Au cours de ce MON j'ai appris à automatiser des tâches simples, avec l'enregistreur de macro ou à la main en écrivant le script.
+On retrouve dans ce langage une logique prosimilaire à d'autres langages : l'utilisation de variables, de fonctions, d'objets...
 
-https://www.excel-pratique.com/fr/vba
-
-https://www.youtube.com/watch?v=X9xR7LW6dPs&list=PL4moFYPB3KVsY_E5WAANYuZGeUQekvS3U
+Ce MON m'a apporté une première compréhension aux bases de la programmation en VBA. Celle-ci sera très utile au travail que j'exercerai dans mon stage de consultant en Supply Chain notamment pour automatiser des processus de gestion de dépenses, de stock, de production...
