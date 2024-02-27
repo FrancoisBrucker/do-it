@@ -33,6 +33,9 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 2. Déroulement pratique
 3. Bilan et plan d'action suite à la lecture du livre *Lean à 540°*
 4. Documentation et recherche sur les bonnes pratiques de l'organisation d'une équipe de Formula Student
+5. Collecte des retours
+6. Organiser l'action
+7. Actions concrètes
 
 ## Objectifs du Sprint 1
 
@@ -66,3 +69,41 @@ Voici en vrac ce que je tire de la lecture d'une trentaine de pages de cet ouvra
 
 J'ai consulté le document *MANAGING STUDENT VEHICLE PROJECTS. The Non-Technical Side* de D. Golembiewski. Celui-ci traite de la construction et du management d'équipe dans la FSAE (l'équivalent américain de la Formula Student). Honnêtement, je ne recommande pas sa lecture car il reste très général et n'apprend pas grand chose. Les différents items sont applicables à n'importe quel projet et sont assez bâteaux : Positive attitude, The most valuable resource is people...
 
+## Collecte des retours
+
+J'ai fait remplir par mon département (4 personnes) un sheet anonyme dont l'objectif était de récolter les suggestions d'améliorations, les points bloquants et les risques potentiels.
+En voici un extrait :
+
+![tableau](tableau.png)
+
+Il est nécessaire de traiter et prioriser l'ensemble des remarques et des points durs, par ordre d'importance. De mon côté, je décide de m'attarder sur :
+
+- améliorer la communication au sein du département
+- organiser les points de partage hebdomadaires du département
+
+Je ne peux pas agir sur les autres remarques, néanmoins je les ai transmises au Team Manager.
+
+## Organiser l'action
+
+Il faut ensuite organiser l'action en termes d'acteurs et de temporalité.
+J'ai répertorié ces informations dans un tableau, comme recommandé dans *Lean au 540°*.
+
+![actions](Actions.png)
+
+## Actions concrètes
+
+Mise en place d'une réunion hebdomadaire pour faire le point du département (département LAS, Liaison Au Sol)
+
+![z](Point_Las.png)
+
+Améliorer la communication au sein du département
+
+![a](nouvelles.png)
+
+Jalonnement des tâches du département à court terme
+
+![a](Planning.png)
+
+Jalonnement des tâches du département à long terme
+
+![a](long_terme.png)

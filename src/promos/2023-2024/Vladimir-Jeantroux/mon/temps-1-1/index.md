@@ -91,7 +91,7 @@ On en profite au passage pour créer la page "à-propos" en question, qui contie
 ```
 Notons que l'on peut donner des attributs à un éléments directement dans la balise : on règle la taille de l'image lorsqu'on la déclare. La balise déclarant une image est ce qu'on appelle une balise orpheline, c'est à dire qu'elle n'a pas besoin de balise fermante.
 
-La balise "h1" permet d'indiquer un titre (on pourra par la suite ), "header" un en-tête, et "a" transforme une portion de texte en lien cliquable."div" est une balise dite universelle, elle n'indique rien en soi mais va permettre d'attribuer des classes à des éléments de la page. Nous reparlerons des classes au moment d'aborder CSS. 
+La balise "h1" permet d'indiquer un titre , "header" un en-tête, et "a" transforme une portion de texte en lien cliquable."div" est une balise dite universelle, elle n'indique rien en soi mais va permettre d'attribuer des classes à des éléments de la page. Nous reparlerons des classes au moment d'aborder CSS. 
 
 Maintenant, on va créer le contenu principal de la page. On va rapidement évoquer le but du site, et les fonctionnalités qu'on veut proposer. Mettons à jour notre code dans la section "body" en rajoutant une nouvelle section. 
 
