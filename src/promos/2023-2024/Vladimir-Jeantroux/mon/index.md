@@ -23,10 +23,10 @@ Ensemble des MON réalisés par Vladimir Jeantroux
 
 - [React Native et back end](./temps-2-1)
 
-- ["Apprendre Rust en codant un jeu"](./temps-2-2)
+- [Apprendre Rust en codant un jeu](./temps-2-2)
 
 ### Temps 3
 
--[Révisions de Java](./temps-3-1)
+-[Java tranquille et toi ?](./temps-3-1)
 
 -[Aprentissage d'Excel](./temps-3-2)
