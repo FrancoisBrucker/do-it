@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Quiz Battle Royale"
+title: "DoIt Quiz"
 authors:
   - Lucas Rioual
   - Samy Diafat
@@ -11,15 +11,18 @@ date: 2024-02-14
 tags: 
   - "temps 3"
   - "Spring Boot"
+  - "Java"
+  - "React"
+  - "Figma"
   - "Web"
   - "Jeu"
 
 résumé: Création d'un quiz multijoueur en ligne en utilisant Java pour le backend'
 ---
 
-{% prerequis %}
-Il faut mettre des trucs ici
-{% endprerequis %}
+{%prerequis 'POK niveau intermédiaire'%}
+Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en React Js
+{%endprerequis%}
 
 
 
@@ -104,21 +107,47 @@ Rédige moi tous les endpoints à prendre en compte en expliquant le fonctionnem
 
 L’objectif du sprint 1 est de développer les fonctionnalités les plus importantes pour avoir une première version assez rapidement.
 
-| Objectif                                        | Temps estimé |
+| Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
 |--------------------------------------------------|--------------|
-| **Créer la maquette Figma de toutes les pages**    | 5h             |
+| **Créer la maquette Figma de toutes les pages**    | 5h             | 10h | |
 | **Développement frontend**                          |              |
-| Setup du projet                                   | 30 min            |
-| Page d'accueil                                    | 2h            |
-| Page de la session                                | 3h            |
-| Page de la partie                                 | 2h            |
+| Setup du projet                                   | 30 min            |0| |
+| Page d'accueil                                    | 2h            |0| |
+| Page de la session                                | 3h            |0| |
+| Page de la partie                                 | 2h            |0| |
 | **Développement backend**                          |              |
-| Setup du projet                                   | 30 min            |
-| Mise en place de la base de donnée                | 3h            |
-| Obtenir la question actuelle pour un joueur (webSocket)     | 3h            |
-| Soumettre la réponse d'un joueur                  | 1h            |
+| Setup du projet                                   | 30 min            |2h| |
+| Mise en place de la base de données et des routes               | 3h            |8h| 0|
+| Obtenir la question actuelle pour un joueur (webSocket)     | 3h            |0| 0|
+| Soumettre la réponse d'un joueur                  | 1h            |0|0 |
 
 ## Sprint 1
+
+Le temps estimé pour réaliser la maquette a été très largement sous-estimé (Lucas voulait faire ça à la vite mais Samy l'a rappelé à l'ordre).
+
+Le developpement du back-end a pris plus de temps que prévu également.
+
+Voici quelques livrables issus du Sprint 1 
+
+### Maquette Figma
+
+
+D'abord le squelette que l'on a imaginé :
+
+![Gameplay](./squelette.gif)
+
+Puis la maquette :
+
+![Gameplay](./maquette.gif)
+
+### Schéma de la base de données
+
+Le schéma de données utilisé pour le back-end :
+
+
+![Gameplay](./data.png)
+
+### Front-End
 
 
 
