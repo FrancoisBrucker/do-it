@@ -73,11 +73,31 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Programmation objet</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Interfaces graphiques</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Poker</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Probabilités</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +125,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce POK traitera de l'implémentation sur Python d'un programme qui permettra de calculer des statistiques autour du jeu de Poker.
+                Ce POK traitera de l'implémentation sur Python d'un programme qui permettra de calculer des statistiques autour du jeu de Poker. Ce POK implémentera également une interface qui aidera le joueur à jouer en fonction de la situation.
 
         </p>
 
@@ -125,6 +145,581 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Prérequis</p>
+</div><div class="pl-8 mr-8">
+<p>Connaissance basique de la programmation objet avec Python et des règles du jeu du poker. Connaissance du <a href="../../mon/temps-1.1">module Qt pour Python</a></p>
+</div></div>
+<h2>Introduction</h2>
+<p>Le poker est un jeu de carte très répandu et populaire. On le trouve dans tous les casinos et ce jeu est très complexe a comprendre en profondeur. Il y a tout un aspect mathématique et probabiliste autour du jeu et qui est très important à comprendre pour devenir fort à ce jeu. Ce POK traitera donc de cette dimension, et présentera donc des programmes Python pour calculer différents aspects du poker (variante Texas Hold'em). Le lecteur doit avoir une vague connaissance des règles du poker (notamment les combinaisons des cartes), et les termes plus techniques seront expliqué en temps voulu.</p>
+<p>Le premier sprint sera dédié à l'écriture des méthodes de bases pour implémenter les différentes structures de données relatives au jeu de poker. Nous allons ensuite les utiliser pour montrer et représenter des premières statistiques sur ce jeu, en les mettant en forme grâce à diverses interfaces graphiques. Ensuite, le deuxième sprint utilisera les méthodes écrites lors du premier sprint pour élaborer une interface d'aide au jeu. Cette interface conseillera le joueur sur la décision à prendre selon la situation actuelle du jeu.</p>
+<h2>Backlog du premier sprint</h2>
+<p>Comme mentionné dans l'introduction, ce premier sprint aura pour objectif de créer des interfaces graphiques pour présenter des statistiques sur le jeu. Voici le backlog de ce premier sprint, ainsi que leurs complexités et leurs temps de réalisation estimé:</p>
+<ul>
+<li>Implémentation des structures de données de base, ainsi que leurs méthodes associées (cartes, jeu de carte, pioche...): <strong>1, 15min</strong></li>
+<li>Implémentation de la méthode pour déterminer la combinaison d'une main: <strong>3, 1h</strong></li>
+<li>Implémentation de la méthode pour avoir toutes les mains possibles: <strong>1, 15min</strong></li>
+<li>Implémentation de la méthode pour déterminer le gagnant entre deux mains: <strong>2, 45min</strong></li>
+<li>Implémentation de la méthode pour obtenir différents taux de réussite: <strong>3, 1h15</strong></li>
+<li>Réalisation de tests pour vérifier le bon fonctionnement des méthodes, débogage: <strong>3, 1h30</strong></li>
+<li>Réalisation et design des fenêtres pour les interfaces graphiques: <strong>3, 2h</strong></li>
+<li>Création du backend des interfaces: <strong>2, 2h</strong></li>
+<li>Tests et débogage des interfaces: <strong>2, 1h</strong></li>
+</ul>
+<h2>Implémentation du code pour effectuer les simulations</h2>
+<h3>Structures de données de base</h3>
+<p>La première étape de ce projet est de créer les structures de données de base qui vont être utilisées tout le long de ce projet. Il faut donc créer une classe <strong>Card</strong>, dont les objets représenteront les différentes cartes. Ces objets auront donc les attributs suivant:</p>
+<ul>
+<li><em>value</em>: correspond à la valeur de la carte (11 pour le Valet, 12 pour la Dame, 13 pour le Roi et 14 pour l'As)</li>
+<li><em>suit</em>: correspond à la couleur de la carte (coeur, carreau, trèfle ou pique)</li>
+<li><em>name</em>: correspond au nom de la carte (&quot;As de coeur, &quot;3 de pique&quot;, &quot;Dame de carreau&quot; etc...)</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la classe <strong>Card</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Card</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">,</span> suit<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
+      self<span class="token punctuation">.</span>suit <span class="token operator">=</span> suit
+      <span class="token keyword">if</span> value <span class="token operator">==</span> <span class="token number">14</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"As de "</span> <span class="token operator">+</span> suit
+      <span class="token keyword">elif</span> value <span class="token operator">==</span> <span class="token number">13</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Roi de "</span> <span class="token operator">+</span> suit
+      <span class="token keyword">elif</span> value <span class="token operator">==</span> <span class="token number">12</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Dame de "</span> <span class="token operator">+</span> suit
+      <span class="token keyword">elif</span> value <span class="token operator">==</span> <span class="token number">11</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Valet de "</span> <span class="token operator">+</span> suit
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+          self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string"> de "</span></span> <span class="token operator">+</span> suit
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Ensuite, on créé une classe <strong>Poker_methods</strong> qui, comme son nom l'indique, contiendra toutes les méthodes pour effectuer les simulations. L'initialisation de cette classe crée un jeu de 52 cartes, qui est une liste contenant 52 objets de la classe <strong>Card</strong>. Lors de cette étape, on crée aussi une liste contenant les 1326 mains de départ distinctes possibles (52*51) et les 169 mains possibles si l'on exclut les mains de même valeur. En effet, en termes de probabilités, deux mains qui ont les deux mêmes valeurs et une combinaison de couleur similaire ont la m$eme valeur. Par exemple, la main 3 de coeur - 6 de carreau et 3 de pique - 6 de trèfle ont la même valeur, tout comme les mains Roi de pique - Dame de pique et Roi de carreau - Dame de carreau.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir l'initialisation de la classe <strong>Poker_methods</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  self<span class="token punctuation">.</span>restart_deck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>all_possible_hands <span class="token operator">=</span> self<span class="token punctuation">.</span>get_all_possible_hands<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>all_possible_hands_2 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_all_possible_hands_2<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">restart_deck</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  self<span class="token punctuation">.</span>deck <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> suit <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">"coeur"</span><span class="token punctuation">,</span> <span class="token string">"carreau"</span><span class="token punctuation">,</span> <span class="token string">"trèfle"</span><span class="token punctuation">,</span> <span class="token string">"pique"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Card<span class="token punctuation">(</span>value<span class="token punctuation">,</span> suit<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_all_possible_hands</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  all_possible_hands <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  list_card_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  suits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"coeur"</span><span class="token punctuation">,</span> <span class="token string">"carreau"</span><span class="token punctuation">,</span> <span class="token string">"trèfle"</span><span class="token punctuation">,</span> <span class="token string">"pique"</span><span class="token punctuation">]</span>
+  values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> first_suit <span class="token keyword">in</span> suits<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> first_value <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+      first_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>first_value<span class="token punctuation">,</span> first_suit<span class="token punctuation">)</span>
+      <span class="token keyword">for</span> second_suit <span class="token keyword">in</span> suits<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> second_value <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+          second_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>second_value<span class="token punctuation">,</span> second_suit<span class="token punctuation">)</span>
+          <span class="token keyword">if</span> first_card<span class="token punctuation">.</span>name <span class="token operator">!=</span> second_card<span class="token punctuation">.</span>name <span class="token keyword">and</span> <span class="token punctuation">[</span>second_card<span class="token punctuation">.</span>name<span class="token punctuation">,</span> first_card<span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token keyword">not</span> <span class="token keyword">in</span> list_card_names<span class="token punctuation">:</span>
+            all_possible_hands<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>first_card<span class="token punctuation">,</span> second_card<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            list_card_names<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>first_card<span class="token punctuation">.</span>name<span class="token punctuation">,</span> second_card<span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>all_possible_hands<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_all_possible_hands_2</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  all_possible_hands_2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> first_value <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+      <span class="token keyword">for</span> second_value <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>first_value<span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+          first_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>first_value<span class="token punctuation">,</span> <span class="token string">"coeur"</span><span class="token punctuation">)</span>
+          second_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>second_value<span class="token punctuation">,</span> <span class="token string">"coeur"</span><span class="token punctuation">)</span>
+          <span class="token keyword">if</span> first_card<span class="token punctuation">.</span>name <span class="token operator">!=</span> second_card<span class="token punctuation">.</span>name<span class="token punctuation">:</span>
+              <span class="token keyword">if</span> first_value <span class="token operator">></span> second_value<span class="token punctuation">:</span>
+                  all_possible_hands_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>first_card<span class="token punctuation">,</span> second_card<span class="token punctuation">]</span><span class="token punctuation">)</span>
+              <span class="token keyword">else</span><span class="token punctuation">:</span>
+                  all_possible_hands_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>second_card<span class="token punctuation">,</span> first_card<span class="token punctuation">]</span><span class="token punctuation">)</span>
+          first_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>first_value<span class="token punctuation">,</span> <span class="token string">"coeur"</span><span class="token punctuation">)</span>
+          second_card <span class="token operator">=</span> Card<span class="token punctuation">(</span>second_value<span class="token punctuation">,</span> <span class="token string">"pique"</span><span class="token punctuation">)</span>
+          <span class="token keyword">if</span> first_card<span class="token punctuation">.</span>name <span class="token operator">!=</span> second_card<span class="token punctuation">.</span>name<span class="token punctuation">:</span>
+              <span class="token keyword">if</span> first_value <span class="token operator">></span> second_value<span class="token punctuation">:</span>
+                  all_possible_hands_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>first_card<span class="token punctuation">,</span> second_card<span class="token punctuation">]</span><span class="token punctuation">)</span>
+              <span class="token keyword">else</span><span class="token punctuation">:</span>
+                  all_possible_hands_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>second_card<span class="token punctuation">,</span> first_card<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>all_possible_hands_2<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On crée ensuite une méthode qui permet de piocher une carte du jeu de carte. Cette méthode choisit une carte aléatoirement et la retire de l'attribut <em>deck</em> de l'objet.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>draw</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  index <span class="token operator">=</span> rd<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  card <span class="token operator">=</span> self<span class="token punctuation">.</span>deck<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+  self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h3>Implémentation des méthodes pour effectuer les simulations</h3>
+<p>Maintenant que l'on a implémenter les méthodes de base pour manipuler les structures de données, nous allons implémenter les fonctions pour faire les simulations. La première méthode est celle qui va permettre de déterminer le score d'un joueur, étant donné sa main de deux cartes et le tableau en cours de 5 cartes. Cette méthode prend donc en argument ces deux éléments et renvoie un score variant de 0 à 9, correspondant à une combinaison de mains (de carte haute à Quinte Flush Royale). Cette méthode retourne également une liste contenant les &quot;kickers&quot; de la main évaluée. Cette liste va permettre de départager deux joueurs si jamais ils ont la même main. Par exemple, si les deux joueurs ont une Couleur, il faut regarder la valeur de la carte la plus élevée pour les départager.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>get_score</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_score</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> player_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 0 = Carte haute</span>
+        <span class="token comment"># 1 = Une paire</span>
+        <span class="token comment"># 2 = Deux paires</span>
+        <span class="token comment"># 3 = Brelan</span>
+        <span class="token comment"># 4 = Quinte</span>
+        <span class="token comment"># 5 = Couleur</span>
+        <span class="token comment"># 6 = Full</span>
+        <span class="token comment"># 7 = Carré</span>
+        <span class="token comment"># 8 = Quinte Flush</span>
+        <span class="token comment"># 9 = Quinte Flush Royale</span>
+        cards <span class="token operator">=</span> player_hand <span class="token operator">+</span> board
+        values <span class="token operator">=</span> <span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> cards<span class="token punctuation">]</span>
+        suits <span class="token operator">=</span> <span class="token punctuation">[</span>card<span class="token punctuation">.</span>suit <span class="token keyword">for</span> card <span class="token keyword">in</span> cards<span class="token punctuation">]</span>
+        list_values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        list_suits <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>suits<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        list_count_values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        list_count_suits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> value <span class="token keyword">in</span> list_values<span class="token punctuation">:</span>
+            list_count_values<span class="token punctuation">.</span>append<span class="token punctuation">(</span>values<span class="token punctuation">.</span>count<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> suit <span class="token keyword">in</span> list_suits<span class="token punctuation">:</span>
+            list_count_suits<span class="token punctuation">.</span>append<span class="token punctuation">(</span>suits<span class="token punctuation">.</span>count<span class="token punctuation">(</span>suit<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token keyword">in</span> list_count_values <span class="token keyword">and</span> <span class="token number">2</span> <span class="token keyword">in</span> list_count_values<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token comment"># Premier cas du Full</span>
+            index_first_kicker <span class="token operator">=</span> list_count_values<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+            index_second_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">]</span>
+            first_kicker <span class="token operator">=</span> list_values<span class="token punctuation">[</span>index_first_kicker<span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_second_kicker<span class="token punctuation">]</span>
+            second_kicker <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>first_kicker<span class="token punctuation">,</span> second_kicker<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token punctuation">(</span>list_count_values<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># Deuxième cas du Full</span>
+            index_first_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_first_kicker<span class="token punctuation">]</span>
+            first_kicker <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span>
+            second_kicker <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>first_kicker<span class="token punctuation">,</span> second_kicker<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token number">4</span> <span class="token keyword">in</span> list_count_values<span class="token punctuation">:</span> <span class="token comment"># Carré</span>
+            index_first_kicker <span class="token operator">=</span> list_count_values<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+            index_second_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">4</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_second_kicker<span class="token punctuation">]</span>
+            second_kicker <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span>
+            first_kicker <span class="token operator">=</span> list_values<span class="token punctuation">[</span>index_first_kicker<span class="token punctuation">]</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>first_kicker<span class="token punctuation">,</span> second_kicker<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token number">5</span> <span class="token keyword">in</span> list_count_suits <span class="token keyword">or</span> <span class="token number">6</span> <span class="token keyword">in</span> list_count_suits <span class="token keyword">or</span> <span class="token number">7</span> <span class="token keyword">in</span> list_count_suits<span class="token punctuation">:</span> <span class="token comment"># Couleur</span>
+            <span class="token keyword">if</span> <span class="token number">5</span> <span class="token keyword">in</span> list_count_suits<span class="token punctuation">:</span>
+                index_winner_suit <span class="token operator">=</span> list_count_suits<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> <span class="token number">6</span> <span class="token keyword">in</span> list_count_suits<span class="token punctuation">:</span>
+                index_winner_suit <span class="token operator">=</span> list_count_suits<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> <span class="token number">7</span> <span class="token keyword">in</span> list_count_suits<span class="token punctuation">:</span>
+                index_winner_suit <span class="token operator">=</span> list_count_suits<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span> 
+            winner_suit <span class="token operator">=</span> list_suits<span class="token punctuation">[</span>index_winner_suit<span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>cards<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>cards<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> cards<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>suit <span class="token operator">==</span> winner_suit<span class="token punctuation">]</span>
+            list_candidates_removed <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">5</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token number">14</span> <span class="token keyword">not</span> <span class="token keyword">in</span> list_candidates_removed<span class="token punctuation">:</span>
+                    values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                    <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                        <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">elif</span> <span class="token number">14</span> <span class="token keyword">in</span> list_candidates_removed<span class="token punctuation">:</span>
+                    values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                    <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                        <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                            <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">14</span><span class="token punctuation">:</span>
+                                <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    new_values <span class="token operator">=</span> <span class="token punctuation">[</span>element <span class="token keyword">if</span> element <span class="token operator">!=</span> <span class="token number">14</span> <span class="token keyword">else</span> <span class="token number">1</span> <span class="token keyword">for</span> element <span class="token keyword">in</span> list_candidates_removed<span class="token punctuation">]</span>
+                    values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>new_values<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                    <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_candidates_removed<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                        <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                            <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">14</span><span class="token punctuation">:</span>
+                                <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>list_values<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">5</span><span class="token punctuation">:</span> <span class="token comment"># Quinte</span>
+            <span class="token keyword">if</span> <span class="token number">14</span> <span class="token keyword">not</span> <span class="token keyword">in</span> list_values<span class="token punctuation">:</span>
+                values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_values<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_values<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                    <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> <span class="token number">14</span> <span class="token keyword">in</span> list_values<span class="token punctuation">:</span>
+                values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_values<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_values<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                    <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                new_values <span class="token operator">=</span> <span class="token punctuation">[</span>element <span class="token keyword">if</span> element <span class="token operator">!=</span> <span class="token number">14</span> <span class="token keyword">else</span> <span class="token number">1</span> <span class="token keyword">for</span> element <span class="token keyword">in</span> list_values<span class="token punctuation">]</span>
+                values_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>new_values<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_values<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    current_list <span class="token operator">=</span> values_sorted<span class="token punctuation">[</span>k<span class="token punctuation">:</span>k<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>
+                    <span class="token keyword">if</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>current_list<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>current_list<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token number">3</span> <span class="token keyword">in</span> list_count_values<span class="token punctuation">:</span> <span class="token comment"># Brelan</span>
+            index_first_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_first_kicker<span class="token punctuation">]</span>
+            first_kicker <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">)</span>
+            index_second_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">3</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_second_kicker<span class="token punctuation">]</span>
+            list_kickers <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>first_kicker<span class="token punctuation">]</span> <span class="token operator">+</span> list_kickers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> list_count_values<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">2</span><span class="token punctuation">:</span> <span class="token comment"># Deux paires</span>
+            index_first_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_first_kicker<span class="token punctuation">]</span>
+            list_first_kickers <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+            index_second_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">2</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_second_kicker<span class="token punctuation">]</span>
+            list_kickers <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> list_first_kickers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span> list_kickers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> list_count_values<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span> <span class="token comment"># Une paire</span>
+            index_first_kicker <span class="token operator">=</span> list_count_values<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+            first_kicker <span class="token operator">=</span> list_values<span class="token punctuation">[</span>index_first_kicker<span class="token punctuation">]</span>
+            index_second_kicker <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_count_values<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">if</span> list_count_values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">2</span><span class="token punctuation">]</span>
+            list_candidates <span class="token operator">=</span> <span class="token punctuation">[</span>list_values<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token keyword">for</span> index <span class="token keyword">in</span> index_second_kicker<span class="token punctuation">]</span>
+            list_kickers <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>list_candidates<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>first_kicker<span class="token punctuation">]</span> <span class="token operator">+</span> list_kickers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span> <span class="token comment"># Carte haute</span>
+            <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>values<span class="token punctuation">,</span> reverse <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Cette méthode est assez longue à expliquer, mais voici quelques idées importantes:</p>
+<ul>
+<li>Utilisation de la commande <code>list(set())</code> qui permet d'obtenir une liste qui contient tout les éléments d'une liste, mais sans les doublons. Cette technique est très pratique pour détecter les paires, les doubles paires, les brelans, les fulls, les carrés et les couleurs.</li>
+<li>Il est important de vérifier les types de combinaisons dans l'ordre décroissant de leur valeur. Il faut par exemple traiter le cas du carré avant celui du full, et le cas de la couleur avant celui de la suite.</li>
+<li>Il faut trier les kickers dans l'ordre décroissant, pour faciliter le cas de l'égalité entre deux joueurs.</li>
+</ul>
+<p>Il faut ensuite implémenter les méthodes pour déterminer le gagnant entre deux joueurs, étant donné leurs mains et le tableau en cours. Pour cela, on utilise la méthode <em>get_score</em> et on compare les scores des deux joueurs. Si le score est le même, on les départage grâce à la liste des kickers. On s'aide d'une autre méthode (<em>get_list_compare</em>) qui compare les éléments de deux listes un par un. Cette méthode renvoie <em>True</em> si la première main renseignée est gagnante, renvoie <em>False</em> si elle est perdante et renvoie <em>None</em> s'il y a égalité.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code des méthodes <em>do_first_player_win</em> et <em>get_list_compare</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">do_first_player_win</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> player1_hand<span class="token punctuation">,</span> player2_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  score_player1<span class="token punctuation">,</span> kickers_player1 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_score<span class="token punctuation">(</span>player1_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span>
+  score_player2<span class="token punctuation">,</span> kickers_player2 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_score<span class="token punctuation">(</span>player2_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> score_player1 <span class="token operator">></span> score_player2<span class="token punctuation">:</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  <span class="token keyword">elif</span> score_player1 <span class="token operator">&lt;</span> score_player2<span class="token punctuation">:</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  <span class="token keyword">else</span><span class="token punctuation">:</span> <span class="token comment"># Cas de l'égalité</span>
+    list_compare <span class="token operator">=</span> self<span class="token punctuation">.</span>get_list_compare<span class="token punctuation">(</span>kickers_player1<span class="token punctuation">,</span> kickers_player2<span class="token punctuation">,</span> score_player1<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> element <span class="token keyword">in</span> list_compare<span class="token punctuation">:</span>
+      <span class="token keyword">if</span> element <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_list_compare</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> kickers_player1<span class="token punctuation">,</span> kickers_player2<span class="token punctuation">,</span> score<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  list_compare <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>kickers_player1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> kickers_player1<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> kickers_player2<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">:</span>
+      list_compare<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      list_compare<span class="token punctuation">.</span>append<span class="token punctuation">(</span>kickers_player1<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">></span> kickers_player2<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>list_compare<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On va ensuite utiliser cette méthode pour déterminer des taux de réussite moyens. Le premier taux de réussite à calculer et celui d'une main contre une autre. On va simplement simuler N parties et on va récolter le nombre de fois où la première main gagne grâce à la méthode <em>do_first_player_win</em>. On peut ensuite implémenter une fonction qui donne le taux de réussite moyen d'une main. Pour cela, on effectue N simulations entre une main et les 1326 mains possibles, stockées dans l'attribut <em>all_possible_hands</em>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code des méthodes <em>get_winrate</em> et <em>get_average_winrate</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_winrate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> player1_hand<span class="token punctuation">,</span> player2_hand<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  players_cards <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      players_cards<span class="token punctuation">.</span>append<span class="token punctuation">(</span>player1_hand<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+      players_cards<span class="token punctuation">.</span>append<span class="token punctuation">(</span>player2_hand<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+  current_deck <span class="token operator">=</span> <span class="token punctuation">[</span>card <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>deck <span class="token keyword">if</span> card<span class="token punctuation">.</span>name <span class="token keyword">not</span> <span class="token keyword">in</span> players_cards<span class="token punctuation">]</span>
+  tot_wins_player1 <span class="token operator">=</span> <span class="token number">0</span>
+  tot_wins_player2 <span class="token operator">=</span> <span class="token number">0</span>
+  tot_draws <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      board <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      deck <span class="token operator">=</span> current_deck<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+      <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+          index <span class="token operator">=</span> rd<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>deck<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+          card <span class="token operator">=</span> deck<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+          deck<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+          board<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      result <span class="token operator">=</span> self<span class="token punctuation">.</span>do_first_player_win<span class="token punctuation">(</span>player1_hand<span class="token punctuation">,</span> player2_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> result <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+          tot_draws <span class="token operator">+=</span> <span class="token number">1</span>
+      <span class="token keyword">elif</span> result<span class="token punctuation">:</span>
+          tot_wins_player1 <span class="token operator">+=</span> <span class="token number">1</span>
+      <span class="token keyword">elif</span> <span class="token keyword">not</span> result<span class="token punctuation">:</span>
+          tot_wins_player2 <span class="token operator">+=</span> <span class="token number">1</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>tot_wins_player1<span class="token operator">/</span>N <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span> sigfigs <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">round</span><span class="token punctuation">(</span>tot_wins_player2<span class="token operator">/</span>N <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span> sigfigs <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">round</span><span class="token punctuation">(</span>tot_draws<span class="token operator">/</span>N <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span> sigfigs <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_average_winrate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> hand<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  tot_winrate <span class="token operator">=</span> <span class="token number">0</span>
+  winrates <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> possible_hand <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span>self<span class="token punctuation">.</span>all_possible_hands<span class="token punctuation">,</span> desc <span class="token operator">=</span> <span class="token string">"Progression de la boucle secondaire: "</span><span class="token punctuation">,</span> position <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> leave <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">if</span> <span class="token punctuation">[</span>hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token punctuation">[</span>possible_hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> possible_hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token punctuation">[</span>hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token punctuation">[</span>possible_hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> possible_hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">:</span>
+          result <span class="token operator">=</span> self<span class="token punctuation">.</span>get_winrate<span class="token punctuation">(</span>hand<span class="token punctuation">,</span> possible_hand<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+          tot_winrate <span class="token operator">+=</span> result
+          winrates<span class="token punctuation">.</span>append<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+          winrates<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>tot_winrate <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>all_possible_hands<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sigfigs <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> winrates<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Enfin, on créé une dernière méthode qui va obtenir les taux de réussite de toutes les 169 mains distinctes, afin de déterminer un classement des meilleures mains. On va simplement appliquer la méthode précédente sur toutes les mains de l'attribut <em>all_possible_hands_2</em>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>get_all_average_winrates</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_all_average_winrates</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  all_average_winrates <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  all_average_winrates_detail <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> hand <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span>self<span class="token punctuation">.</span>all_possible_hands_2<span class="token punctuation">,</span> desc <span class="token operator">=</span> <span class="token string">"Progression de la boucle principale"</span><span class="token punctuation">,</span> position <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      winrate<span class="token punctuation">,</span> winrates_list <span class="token operator">=</span> self<span class="token punctuation">.</span>get_average_winrate<span class="token punctuation">(</span>hand<span class="token punctuation">,</span> N<span class="token punctuation">)</span>
+      first_value <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+      second_value <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> first_value <span class="token operator">==</span> <span class="token string">"10"</span><span class="token punctuation">:</span>
+          first_value <span class="token operator">=</span> <span class="token string">"T"</span>
+      <span class="token keyword">elif</span> first_value <span class="token operator">==</span> <span class="token string">"11"</span><span class="token punctuation">:</span>
+          first_value <span class="token operator">=</span> <span class="token string">"J"</span>
+      <span class="token keyword">elif</span> first_value <span class="token operator">==</span> <span class="token string">"12"</span><span class="token punctuation">:</span>
+          first_value <span class="token operator">=</span> <span class="token string">"Q"</span>
+      <span class="token keyword">elif</span> first_value <span class="token operator">==</span> <span class="token string">"13"</span><span class="token punctuation">:</span>
+          first_value <span class="token operator">=</span> <span class="token string">"K"</span>
+      <span class="token keyword">elif</span> first_value <span class="token operator">==</span> <span class="token string">"14"</span><span class="token punctuation">:</span>
+          first_value <span class="token operator">=</span> <span class="token string">"A"</span>
+      <span class="token keyword">if</span> second_value <span class="token operator">==</span> <span class="token string">"10"</span><span class="token punctuation">:</span>
+          second_value <span class="token operator">=</span> <span class="token string">"T"</span>
+      <span class="token keyword">elif</span> second_value <span class="token operator">==</span> <span class="token string">"11"</span><span class="token punctuation">:</span>
+          second_value <span class="token operator">=</span> <span class="token string">"J"</span>
+      <span class="token keyword">elif</span> second_value <span class="token operator">==</span> <span class="token string">"12"</span><span class="token punctuation">:</span>
+          second_value <span class="token operator">=</span> <span class="token string">"Q"</span>
+      <span class="token keyword">elif</span> second_value <span class="token operator">==</span> <span class="token string">"13"</span><span class="token punctuation">:</span>
+          second_value <span class="token operator">=</span> <span class="token string">"K"</span>
+      <span class="token keyword">elif</span> second_value <span class="token operator">==</span> <span class="token string">"14"</span><span class="token punctuation">:</span>
+          second_value <span class="token operator">=</span> <span class="token string">"A"</span>
+      <span class="token keyword">if</span> hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token operator">==</span> hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+          hand_name <span class="token operator">=</span> first_value <span class="token operator">+</span> second_value
+      <span class="token keyword">elif</span> hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>suit <span class="token operator">==</span> hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>suit<span class="token punctuation">:</span>
+          hand_name <span class="token operator">=</span> first_value <span class="token operator">+</span> second_value <span class="token operator">+</span> <span class="token string">"s"</span>
+      <span class="token keyword">elif</span> hand<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>suit <span class="token operator">!=</span> hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>suit<span class="token punctuation">:</span>
+          hand_name <span class="token operator">=</span> first_value <span class="token operator">+</span> second_value <span class="token operator">+</span> <span class="token string">"o"</span>
+      all_average_winrates<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>hand_name<span class="token punctuation">,</span> winrate<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      all_average_winrates_detail<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>hand_name<span class="token punctuation">,</span> winrates_list<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>all_average_winrates<span class="token punctuation">,</span> all_average_winrates_detail<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h2>Présentation des résultats</h2>
+<p>L'implémentation de la classe <strong>Poker_methods</strong> permet de réaliser des statistiques sur le jeu de poker. Pour les représenter, on créé une nouvelle classe <strong>Plot_stats</strong> qui contiendra des méthodes pour représenter ces résultats. Cette classe hérite de la classe <strong>Poker_methods</strong>, pour pouvoir utiliser toutes ses méthodes.</p>
+<h3>Fréquence d'apparitions des combinaisons</h3>
+<p>Le premier résultat à représenter est la fréquence d'apparition des combinaisons. Pour cela, on va effectuer N simulations. Lors de chaque simulation, on va piocher 7 différentes cartes (2 cartes pour la main du joueur et 5 cartes pour le tableau en cours) et on va déterminer son score grâce à la méthode <em>get_score</em>. On stocke ainsi ce score, et on représente le résultat sur un graphique en barres grâce au module <em>matplotlib.pyplot</em></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>plot_stats_combinations</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">plot_stats_combinations</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  combinations_type <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Carte haute"</span><span class="token punctuation">,</span> <span class="token string">"Une paire"</span><span class="token punctuation">,</span> <span class="token string">"Deux paires"</span><span class="token punctuation">,</span> <span class="token string">"Brelan"</span><span class="token punctuation">,</span> <span class="token string">"Quinte"</span><span class="token punctuation">,</span> <span class="token string">"Couleur"</span><span class="token punctuation">,</span> <span class="token string">"Full"</span><span class="token punctuation">,</span> <span class="token string">"Carré"</span><span class="token punctuation">,</span> <span class="token string">"Quinte \nFlush"</span><span class="token punctuation">,</span> <span class="token string">"Quinte Flush \nRoyale"</span><span class="token punctuation">)</span>
+  results <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>combinations_type<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+  self<span class="token punctuation">.</span>progress_plot_stats_combinations <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">for</span> k <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">,</span> desc <span class="token operator">=</span> <span class="token string">"Progression de la simulation: "</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>progress_plot_stats_combinations <span class="token operator">=</span> <span class="token punctuation">(</span>k <span class="token operator">/</span> N<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+      player_hand <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      board <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+          card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+          player_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+          card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+          board<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+      score <span class="token operator">=</span> self<span class="token punctuation">.</span>get_score<span class="token punctuation">(</span>player_hand<span class="token punctuation">,</span> board<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      results<span class="token punctuation">[</span>score<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+      self<span class="token punctuation">.</span>restart_deck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  results <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">round</span><span class="token punctuation">(</span>element<span class="token operator">/</span>N <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span> sigfigs <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">for</span> element <span class="token keyword">in</span> results<span class="token punctuation">]</span>
+  ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  X <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>combinations_type<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span>X<span class="token punctuation">,</span> combinations_type<span class="token punctuation">)</span>
+  <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      plt<span class="token punctuation">.</span>text<span class="token punctuation">(</span>i<span class="token punctuation">,</span> results<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">0.6</span><span class="token punctuation">,</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>results<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">,</span> ha <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">)</span>
+  plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Fréquence d'apparition des différentes combinaisons pour </span><span class="token interpolation"><span class="token punctuation">{</span>N<span class="token punctuation">}</span></span><span class="token string"> tirages"</span></span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_xlabel<span class="token punctuation">(</span><span class="token string">"Combinaison"</span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_ylabel<span class="token punctuation">(</span><span class="token string">"Fréquence d'apparition en %"</span><span class="token punctuation">)</span>
+  plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>X<span class="token punctuation">,</span> results<span class="token punctuation">)</span>
+  plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Le résultat de cette simulation pour 10 millions de simulations est le suivant:</p>
+<p><img src="Image1.png" alt="Image1"></p>
+<p>Ces résultats concordent presque parfaitement aux résultats théoriques que l'on peut retrouver sur cette <a href="https://en.wikipedia.org/wiki/Poker_probability">page Wikipédia dédiée</a>.</p>
+<h3>Classement des mains</h3>
+<p>On peut ensuite utiliser la méthode <em>get_all_average_winrates</em> pour avoir les taux de réussite associés à chacune des 169 mains distinctes possibles. Cette simulation est très lourde en calcul, puisqu'il faut confronter N fois chacune des 169 mains aux 1326 mains possibles. J'ai donc fait tourner le programme avec N = 5000 (ce qui fait plus d'1 milliard de simulations) et j'ai stocké ces résultats dans un fichier json qui sera chargé dans l'initialisation de la classe <strong>Poker_methods</strong>. Cette simulation a tourné pendant presque 8 heures. On crée donc une méthode pour afficher ces résultats. Il faut préciser le premier ran à afficher ainsi que le dernier, car il est impossible d'afficher les 169 mains sur un même graphique en barre sans que cela ne soit illisible.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>plot_hands_ranking</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">plot_hands_ranking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> first_rank<span class="token punctuation">,</span> last_rank<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  hands <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>all_average_winrates5<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>all_average_winrates5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+  hands_extract <span class="token operator">=</span> hands<span class="token punctuation">[</span>first_rank <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">:</span>last_rank<span class="token punctuation">]</span>
+  results <span class="token operator">=</span> <span class="token punctuation">[</span>hand<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> hand <span class="token keyword">in</span> self<span class="token punctuation">.</span>all_average_winrates5<span class="token punctuation">]</span>
+  results_extract <span class="token operator">=</span> results<span class="token punctuation">[</span>first_rank <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">:</span>last_rank<span class="token punctuation">]</span>
+  ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  X <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>hands_extract<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span>X<span class="token punctuation">,</span> hands_extract<span class="token punctuation">)</span>
+  <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      plt<span class="token punctuation">.</span>text<span class="token punctuation">(</span>i<span class="token punctuation">,</span> results_extract<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">0.6</span><span class="token punctuation">,</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>results_extract<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">,</span> ha <span class="token operator">=</span> <span class="token string">"center"</span><span class="token punctuation">,</span> fontsize <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_xlabel<span class="token punctuation">(</span><span class="token string">"Main"</span><span class="token punctuation">)</span>
+  ax<span class="token punctuation">.</span>set_ylabel<span class="token punctuation">(</span><span class="token string">"Taux de réussite moyen en %"</span><span class="token punctuation">)</span>
+  plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>X<span class="token punctuation">,</span> results_extract<span class="token punctuation">)</span>
+  plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Voici le classement des 20 meilleures mains obtenues:</p>
+<p><img src="Image2.png" alt="Image2"></p>
+<p>La lettre T correspond au 10. La lettre &quot;s&quot; signifie que les deux cartes sont de la même couleur (de l'anglais &quot;suited&quot;) et la lettre &quot;o&quot; signifie que les deux cartes ne sont pas de la même couleur (de l'anglais &quot;offsuit&quot;). On retrouve bien la paire d'As qui est la meilleure main de départ, suivie de près les paires de Rois et de Dames.</p>
+<h2>Création des interfaces graphiques</h2>
+<p>Maintenant que l'on a tout les outils pour faire des simulations, on va à présent implémenter des interfaces graphiques pour interagir avec ces méthodes. Nous allons utiliser le module Qt de Python.</p>
+<p>Il faut tout d'abord designer les différentes fenêtres que l'utilisateur pourra utiliser. On utilise pour cela le logiciel Qt Designer, et on opte pour des designs simples. Voici un aperçu des 4 fenêtres dans le logiciel:</p>
+<p><img src="Image3.png" alt="Image3"></p>
 
 
 </article>

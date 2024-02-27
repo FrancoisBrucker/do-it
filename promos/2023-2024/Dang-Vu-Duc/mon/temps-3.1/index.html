@@ -73,11 +73,31 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Word</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">PDF</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">PyPDF2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python-Docx</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -125,6 +145,245 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Prérequis</p>
+</div><div class="pl-8 mr-8">
+<p>Connaissance basique de la programmation objet avec Python.</p>
+</div></div>
+<h2>Introduction</h2>
+<p>Les formats PDF et Word sont des formats très utilisés. Il peut être intéressant de pouvoir automatiser certaines tâches concernant ces formats, ou bien récupérer les données de ces documents dans des programmes Python. En effet, ces documents ont des encodages plus complexes qu'un simple fichier <em>.txt</em>, ce qui les rend difficile à manipuler sans bibliothèques adéquates. Ce MON présentera comment utiliser les bibliothèques <strong>PyPDF2</strong> et <strong>Python-Docx</strong> pour pouvoir manipuler de tels documents.</p>
+<p>Dans la suite, quelques lignes de code en Python seront présentées. Le résultat de l’exécution des lignes de code est indiqué juste après celles-ci, après 3 chevrons <code>&gt;&gt;&gt;</code></p>
+<p>Il faut commencer par installer ces bibliothèques, avec les commandes <code>pip install PyPDF2==1.26.0</code> et <code>pip install python-docx==0.8.10</code>.</p>
+<h2>Utilisation de PyPDF2</h2>
+<h3>Présentation des éléments de base du module</h3>
+<p>Nous allons commencer par présenter les éléments de base de cette bibliothèque. La première classe à connaître est la classe <strong>PdfFileReader</strong>. Les objets de cette classe permettent d'intégrer dans le code Python un document PDF. Ces objets ont différents attributs, correspondants à différentes caractéristiques du document en question. Elles ont également plusieurs méthodes pour effectuer des opérations sur le document.</p>
+<p>Dans la suite de cette section, nous nous appuierons sur deux documents PDF, enregistrés sous les noms de <em>PDF test 1.pdf</em> et <em>PDF test 2.pdf</em>. Ces documents sont des travaux que j'ai effectué lors de ma deuxième année.</p>
+<p>Pour ouvrir les documents PDF et les associer à des objets de la classe <strong>PdfFileReader</strong>, il faut d'abord les ouvrir avec la fonction <em>open</em>, en précisant en argument le paramètre <em>rb</em>, qui permet de lire en binaire le fichier. Ensuite, on créé l'objet en appellant la classe <strong>PdfFileReader</strong> du module <strong>PyPDF2</strong>.<br>
+Une fois que l'on a cet objet, on peut récupérer ses attributs et utiliser les méthodes associées.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pdfFile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'PDF test 2.pdf'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+pdfReader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdfFile<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>pdfReader<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token number">6</span>
+</code></pre>
+<p>Dans l'exemple ci-dessus, on ouvre le fichier test numéro 2 et on récupère son nombre de pages.</p>
+<p>L'autre classe à connaître est la classe <strong>PageObject</strong>. Les objets de cette classe représentent les différentes pages du document, ainsi que leurs contenu. On récupère ces objets à partir d'un objet de la classe <strong>PdfFileReader</strong> grâce à la méthode <em>getPage</em>. En spécifiant le numéro de page que l'on veut récupérer (indexation commençant à 0), on peut récupérer un objet de la classe <strong>PageObject</strong>. Encore une fois, ces objets ont différents attributs et méthodes pour les manipuler, telle que par exemple la méthode <em>extractText()</em> qui permet d'extraire du texte de la page. Notons également la méthode <em>rotateClockwise</em>, qui prend en argument un des entiers 90, 180 ou 270, et qui permet d'effectuer une rotation de la page.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">page <span class="token operator">=</span> pdfReader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span>extractText<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> Compte<span class="token operator">-</span>renduTPPollution
+MIE<span class="token punctuation">:</span>Approchevariationnelleet
+
+Elements
+Cours<span class="token punctuation">:</span>GuillaumeChiavassa
+Auteur<span class="token punctuation">:</span>DucDANGVU
+CentraleMarseille
+<span class="token number">2022</span><span class="token operator">-</span><span class="token number">2023</span>
+</code></pre>
+<p>Notons que le texte renvoyé est loin d'être parfait. On remarque que certains élément manquent à l'appel. Cependant, ce texte est globalement conforme à ce qui est présent réellement dans le PDF.</p>
+<p>Enfin, la dernière classe importante de ce module est la classe <strong>PdfFileWriter</strong>. Les objets de cette classe permettent de créer des nouveaux fichiers PDF, à partir des classes précédemment présentées. Les méthodes importantes de cette classe sont les suivantes:</p>
+<ul>
+<li>La méthode <em>addPage</em>, qui permet d'ajouter une page au nouveau fichier PDF en spécifiant en argument un objet de la classe <strong>PageObject</strong></li>
+<li>La méthode <em>write</em>, qui prend en argument un fichier écrit en binaire et qui permet de sauvegarder sous format PDF le document associé à l'objet.</li>
+<li>La méthode <em>encrypt</em> permet de protéger le fichier PDF par un mot de passe, renseigné en argument de la méthode.</li>
+</ul>
+<h3>Utilisation de ces éléments</h3>
+<p>Pour appliquer ces connaissances, nous allons à présent créer une classe <strong>PDF_Tools</strong>. Les objets de cette classe pourront effectuer des opérations sur des fichiers PDF grâce à des méthodes qui utiliseront les éléments présentés ci-dessus.</p>
+<h4>Création de la méthode pour combiner des PDF</h4>
+<p>Cette méthode permettra de combiner plusieurs documents PDF, c'est-à-dire mettre les pages les une à la suite des autres. Elle prend en argument une liste contenant les noms des PDF à combiner ainsi que le nom du nouveau fichier PDF créé. Pour cela, on doit utiliser un objet de la classe <strong>PdfFileWriter</strong>, qui va permettre de construire le nouveau fichier PDF. On ajoute ensuite les pages (qui sont en fait des objets de la classe <strong>PageObject</strong>) une par une grâce à la méthode <em>addPage</em>, puis on sauvegarde le nouveau fichier grâce à la méthode <em>write</em>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>combine_pdf</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">PDF_Tools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">combine_pdf</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> list_pdf<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_merged_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    list_pdf_objects <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> pdf_name <span class="token keyword">in</span> list_pdf<span class="token punctuation">:</span>
+      pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+      list_pdf_objects<span class="token punctuation">.</span>append<span class="token punctuation">(</span>PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> pdf_object <span class="token keyword">in</span> list_pdf_objects<span class="token punctuation">:</span>
+      <span class="token keyword">for</span> page_num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>pdf_object<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        page_object <span class="token operator">=</span> pdf_object<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>page_num<span class="token punctuation">)</span>
+        pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+    new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_merged_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+    pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>Création de la méthode pour effectuer des rotations sur des pages</h4>
+<p>Cette méthode prend en argument le nom du fichier PDF à modifier, ainsi qu'une liste contenant les numéros de page sur lesquelles effectuer des rotations. Enfin, le dernier argument spécifie quelle rotation effectuer (90, 180 ou 270). Il suffit d'utiliser la méthode <em>rotateClockwise</em> de la classe <strong>PageObject</strong>, et de l'utiliser dans la boucle qui ajoute les pages une par une dans le nouveau fichier.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>rotate_pages</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">rotate_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> rotation<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+      pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
+      pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">for</span> num_page <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>pdf_reader<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        page_object <span class="token operator">=</span> pdf_reader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>num_page<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> num_page <span class="token keyword">in</span> list_num_pages<span class="token punctuation">:</span>
+          page_object<span class="token punctuation">.</span>rotateClockwise<span class="token punctuation">(</span>rotation<span class="token punctuation">)</span>
+        pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+      new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_new_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+      pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
+      new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Voici un exemple de l'utilisation de ce code. Si on crée un objet de la classe PDF_Tools (<code>test = PDF_Tools()</code>) et que l'on rentre la ligne de code <code>test.rotate_pages(&quot;PDF test 1.pdf&quot;, [0,1,3], 180, &quot;Nouveau PDF.pdf&quot;)</code>, on obtient le fichier PDF suivant:</p>
+<p><img src="Image1.png" alt="Image1"></p>
+<p><img src="Image2.png" alt="Image2"></p>
+<p>Seules les pages numéro 1, 2 et 4 (indexées 0, 1 et 3) ont été tournées, ce qui est bien ce qu'on voulait.</p>
+<h4>Création de la méthode pour superposer des pages</h4>
+<p>Cette méthode prend argument un nom de fichier à modifier et un autre nom de fichier contenant l'image à superposer. Un autre paramètre est une liste contenant les numéros des pages que l'on veut modifier. On utilise la méthode <em>mergePage</em> de la classe <em>PageObject</em>, qui prend en argument un autre objet de la classe <em>PageObject</em> et qui superpose les deux pages.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>overlay_pages</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">overlay_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> pdf_name_overlay<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+  pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
+  pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> num_page <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>pdf_reader<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> num_page <span class="token keyword">not</span> <span class="token keyword">in</span> list_num_pages<span class="token punctuation">:</span>
+      page_object <span class="token operator">=</span> pdf_reader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>num_page<span class="token punctuation">)</span>
+      pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      pdf_file_overlay <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name_overlay<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+      pdf_reader_overlay <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file_overlay<span class="token punctuation">)</span>
+      page_overlay <span class="token operator">=</span> pdf_reader_overlay<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+      page_object <span class="token operator">=</span> pdf_reader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>num_page<span class="token punctuation">)</span>
+      page_overlay<span class="token punctuation">.</span>mergePage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+      pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_overlay<span class="token punctuation">)</span>
+  new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_new_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+  pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
+  new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Pour tester cette fonction, on rentre la commande suivante: <code>test.overlay_pages(&quot;PDF test 2.pdf&quot;, &quot;Logo Centrale.pdf&quot;, [1, 2, 3, 4, 5], &quot;Nouveau PDF3.pdf&quot;)</code>, et le fichier suivant est produit:</p>
+<p><img src="Image3.png" alt="Image3"></p>
+<p><img src="Image4.png" alt="Image4"></p>
+<p>Le logo a bien été placé sur les pages qu'il fallait.</p>
+<h4>Création de la méthode pour protéger un PDF par un mot de passe</h4>
+<p>Cette méthode permet de crypter un fichier pdf avec un mot de passe, renseigné en argument de la méthode. Cette dernière utilise la méthode <em>encrypt</em> de la classe <strong>PdfFileWriter</strong>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>encrypt</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">encrypt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> name_encrypted_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+    pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
+    pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> page_num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>pdf_reader<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      page_object <span class="token operator">=</span> pdf_reader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>page_num<span class="token punctuation">)</span>
+      pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+    pdf_writer<span class="token punctuation">.</span>encrypt<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
+    new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_encrypted_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+    pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>Création de la méthode pour réarranger les pages d'un PDF</h4>
+<p>Cette dernière méthode prend en argument le nom du fichier à modifier ainsi qu'une liste contenant le nouvel ordre des pages.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le code de la méthode <em>reorder</em></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reorder</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_new_order<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_reordered_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+    pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
+    pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> num_page <span class="token keyword">in</span> list_new_order<span class="token punctuation">:</span>
+      page_object <span class="token operator">=</span> pdf_reader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>num_page<span class="token punctuation">)</span>
+      pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
+    new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_reordered_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+    pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h2>Utilisation de python-docx</h2>
+<p>Nous allons à présent explorer les possibilités qu'offre le module Python-docx. Pour charger un fichier Word avec ce module, il faut utiliser la commande: <code>doc = docx.Document(&quot;Word test 1.docx&quot;)</code>. On pourra ensuite manipuler cet objet et utiliser ses attributs.</p>
+<p>Le texte d'un document Word est décomposé en paragraphes, qui se terminent à un retour à la ligne. Dans ces paragraphes, on y trouve des objets de la classe <strong>Runs</strong> qui correspondent à du texte de la même police. Par exemple, dans le texte suivant:</p>
+<p><img src="Image5.png" alt="Image5"></p>
+<p>on y trouve 6 objets de la classe <strong>Runs</strong>.</p>
 
 
 </article>
