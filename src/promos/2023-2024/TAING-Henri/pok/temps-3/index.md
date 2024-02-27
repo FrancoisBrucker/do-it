@@ -87,6 +87,7 @@ On prendra comme user-stories à faire :
 ## Sprint 1 Review <a id="section-3"></a>
  
 Ayant suivi le MOOC de l'ANSSI, j'avais une idée de la qualité de la documentation qu'elle pouvait produire, mais à nouveau, j'ai été bluffé. J'aurais voulu passer plus de temps sur EBIOS, une méthode de management de risques, mais il faudra passer pour cette fois. J'ai pris en note ce dont j'aurais besoin pour le sprint 2. De même, j'aurais voulu passer plus de temps sur mes notes (ce que je ferais finalement plus tard), car j'ai redécouvert des passages que j'ai envie d'approfondir. 
+J'ai pu définir la problématique de l'étude de cas qui sera le management des risques dans le cadre d'un projet de renforcement IT. 
 
 ## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a>
 
