@@ -73,11 +73,31 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">front-end</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">JavaScript</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">TypeScript</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Angular</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">framework</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -125,6 +145,136 @@
 
 
 
+<h2>Prérequis</h2>
+<p>Des bases en développement Front-End et en Javascript. La connaissance d’un framework javascript en particulier n’est pas nécessaire, même si je pars avec des bases d’Angular et une connaissance de React.</p>
+<h2>Autres MONs</h2>
+<p>Killian avait en 2023 présenté <a href="/do-it/promos/2022-2023/Royant-Killian/mon/temps_3/technologies/">un MON sur les différents frameworks Front-End</a> et en particulier y a consacré une section sur Angular.</p>
+<h2>Objectifs du MON</h2>
+<p>Dans le passé, j'ai utilisé Angular dans un contexte professionnel sans avoir une connaissance approfondie. Mon objectif est de combler cette lacune en acquérant une compréhension approfondie d'Angular. Je prévois d'explorer ses fonctionnalités, d'établir des bonnes pratiques et de l'appliquer dans des projets concrets.</p>
+<p>J’ai par exemple eu besoin de comprendre l’architecture des projets pour lesquels j’ai travaillé (séparation en modules, services et composants), de maîtriser les concepts de base (composants, directives, pipes, services) et de comprendre le fonctionnement de la détection de changements pour optimiser les performances de ce que j’ai développé. C’est le sujet sur lequel nous allons principalement nous concentrer pour ce MON.</p>
+<h2>Angular - Histoire et contexte</h2>
+<p>JavaScript a été créé en 1995. Il a été conçu comme un langage de script pour rendre les pages web plus interactives. Par la suite, JavaScript a évolué avec l'introduction de nombreuses mises à jour et standards, notamment ECMAScript, qui est devenu un standard de langage pour JavaScript. TypeScript, introduit par Microsoft en 2012, est un sur-ensemble de JavaScript qui ajoute des types statiques et d'autres fonctionnalités pour rendre le code JavaScript plus robuste et plus facile à maintenir. Angular, développé par Google, est un framework open-source basé sur TypeScript qui permet de créer des applications web dynamiques. Il a été initialement lancé en 2010 sous le nom d'AngularJS et a subi une refonte majeure en 2016 pour devenir Angular. <a href="#bibliographie">[1]</a></p>
+<p>Dans cette optique, nous allons mettre l’accent sur les bonnes pratiques sur l’utilisation d’Angular, apprendre à l'utiliser efficacement avec TypeScript et comprendre comment il se compare à d'autres Frameworks comme React.</p>
+<h2>Les bases de Javascript appliquées à Angular</h2>
+<h3>Fonctions asynchrones</h3>
+<p>L’avantage des fonctions asynchrones est la possibilité de lancer plusieurs traitements en parallèle sans avoir à attendre la fin de l’un pour commencer l’autre. Cela évite de bloquer l’application durant l’exécution d’une longue tâche. C'est un concept clé en programmation qui facilite la gestion des opérations qui prennent du temps, comme les requêtes API par exemple.</p>
+<h3>Event Loop</h3>
+<p>Dans cette partie, nous allons expliciter des fondamentaux de l’ordre d’exécution des fonctions en JavaScript, dont l’ignorance provoque beaucoup d’erreurs inexplicables.</p>
+<p>Voici un exemple assez parlant :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> value<span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token string">'VALUE'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token comment">/* 0 ms. */</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1 - undefined</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3 - VALUE</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 - undefined</span>
+</code></pre>
+<p>Ici, nous inscrivons des <strong>fonctions de callback</strong>  <code>function() {}</code> après l’exécution des <strong>événements</strong> <code>setTimeout, addEventListener, ...</code>. Le <strong>thread</strong> garde en mémoire la file d’exécution et joue les événements asynchrones dans l’ordre.</p>
+<h3>Programmation orientée objet</h3>
+<p>En JavaScript, tout est objet. Cependant, c’est un langage très peu typé, ce que TypeScript vient corriger à sa manière. Nous allons voir ce qui le caractérise.</p>
+<p>La norme ECMAScript 2015 (ES6) caractérise les objets de cette manière <a href="#bibliographie">[2]</a> :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">ClassName</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>var, let, const</h3>
+<p>Petit point sur ces mots clés avant les variables <a href="#bibliographie">[4]</a> : <code>let</code> ne permet l’accès aux variables que dans leur scope et après leur déclaration. On ne peut pas déclarer deux fois avec <code>let</code>. <code>const</code> permet quant à lui de ne pas réinitialiser une constante par erreur. <code>var</code> peut être redéclaré et causer des erreurs.</p>
+<p>On préfèrera utiliser <code>let</code> et délaisser <code>var</code> pour des raisons de clareté et de lisibilité.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Une convention de nommage définit le préfixe <code>_</code> devant une variable comme la visibilité <code>private</code> dans des languages plus typés. Cela donne des fonctions comme <code>_function()</code> et des variables sous forme <code>this._variable</code>.</p>
+</div></div>
+<h3>Binding dans les classes et les callbacks</h3>
+<p>Le binding dans les callbacks en JavaScript est une méthode pour s'assurer que la valeur de &quot;this&quot; dans une fonction de rappel correspond à l'objet attendu, et non à l'objet global.</p>
+<h3>Exemple de Binding dans les classes et les callbacks</h3>
+<p>Supposons que vous avez une classe <code>Person</code> avec une méthode que vous voulez utiliser cette méthode comme un callback.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+	<span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Ici, le contexte d’exécution de la fonction dans un callback (ici <code>setTimeout</code>) amène le <code>this</code> à avoir la valeur de la fonction elle-même. Ce n’est pas ce que l’on souhaite et il existe des méthodes pour l’éviter. La première consiste à ajouter à la fin de la fonction un <code>.bind(this)</code> correspondant au bon contexte d’exécution.</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Bonne pratique : les fonctions fléchées !</h3>
+<p>On lit qu’à partir de ES6, nous pouvons utiliser des fonctions fléchées pour préserver le contexte d'exécution sans avoir à recourir à <code>.bind(this)</code>. Dans l'exemple précédent, cela donnerait :</p>
+<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p>En effet, <code>this</code> fait référence au contexte dans lequel la fonction fléchée a été définie, et non à l'objet <code>timeout</code>. C'est une manière plus concise et souvent plus claire de gérer le contexte <code>this</code> dans les fonctions de rappel.</p>
+<p>Pour résumer, il existe de nombreuses manières de définir des fonctions en Javascript mais la fonction fléchée nous sera très utile pour éviter les ambigüités liées au contexte d’exécution.</p>
+<h2>TypeScript</h2>
+<p>Une petite mise au point s’impose à quiconque veut passer de JavaScript à TypeScript. On peut résumer rapidement l’essentiel, mais rien ne vaut la lecture de la documentation associée.</p>
+<p>Parmi les point à retenir :</p>
+<ul>
+<li>Importance de déclarer ces variables dans une classe avant de les appeler avec <code>this.variable</code></li>
+<li>Par défaut, visibilité publique des propriétés dans la classe</li>
+<li>Importance du typing des variables (par défaut, type <code>any</code>) dans la déclaration ET dans les paramètres des fonctions</li>
+<li>Types courants : <code>boolean</code>, <code>number</code>, <code>string</code>, array (<code>string[]</code>, <code>number[]</code>, …) et pas avec des majuscules qui correspondent aux types primitifs</li>
+<li>Paramètres optionnels dans les fonctions doivent être indiqués par un <code>?</code> pour que le code compile, ou en spécifiant une valeur par défaut</li>
+<li>Il existe des interfaces comme en Java pour spécifier la signature (le contrat) que doit remplir une classe (ou une fonction !)</li>
+<li>L’inférence permet à TypeScript de déterminer à l’avance les types de sortie des fonctions à la compilation (et de les traduire en erreur, le cas échéant)</li>
+</ul>
+<blockquote>
+<p>“Toute la puissance de TypeScript repose sur cet art de typer le moins possible mais au bon endroit pour en profiter au maximum.” <a href="https://guide-angular.wishtack.io/typescript/inference">[1]</a></p>
+</blockquote>
+<ul>
+<li>Par exemple, les fonctions de callback sont importantes à typer puisque le type de retour est déterminé après un certain temps dans les fonctions asynchrones. Après, l’IDE peut autocompléter et c’est chouette.</li>
+<li>Certains décorateurs permettent d’étendre des fonctions TypeScript <a href="#bibliographie">[5]</a></li>
+</ul>
+<h2>Angular</h2>
+<p>Une application Angular = Une arborescence de composants hiérarchisée. Au sommet de cette hiérarchie, le composant “root component”.</p>
+<p>En particulier, on peut citer différentes fonctionnalités à maitriser pour s’intégrer à un pipeline de développement professionnel :</p>
+<ul>
+<li>Les composants et la logique MVC</li>
+<li>Les services</li>
+<li>L’injection de dépendance <a href="#bibliographie">[6]</a></li>
+<li>Les directives</li>
+<li>Les pipes</li>
+</ul>
+<p>J’invite vivement les lecteurs à poursuivre la lecture de la partie Angular de la référence <a href="#bibliographie">[1]</a>, très instructive sur la structure des projets Angular et des points mentionnés ici.</p>
+<h3>Conclusion</h3>
+<p>Angular est un framework puissant pour le développement d'applications web. Grâce à ses fonctionnalités telles que les composants, les services, les directives et les pipes, Angular permet de créer des applications modulaires, réutilisables et maintenables. L'apprentissage d'Angular nécessite une compréhension approfondie de ces concepts, ainsi qu'une bonne maîtrise de JavaScript et de TypeScript. Cependant, une fois ces compétences acquises, Angular offre un environnement de développement robuste et flexible pour créer des applications web dynamiques.</p>
+<h2>Regard critique et ouverture</h2>
+<p>À partir de ce que j'ai appris, je peux dire qu'Angular est un outil puissant avec un ensemble de fonctionnalités robustes. Cependant, son adoption nécessite un investissement significatif en temps d'apprentissage et de maîtrise. Il est essentiel de comprendre les nuances de TypeScript et les spécificités d'Angular, comme l'injection de dépendances et le cycle de vie des composants.</p>
+<p>Je ne pense pas maitriser tous ces concepts à l’issue de ces dix heures d’autoformation, c’est pourquoi je continuerai à me documenter sur le framework Angular qui sera utile pour les contextes professionnels évoqués en introduction.</p>
+<h2>Ce que j’ai appris durant ce MON</h2>
+<p>Cependant, ce MON a permis une révision des concepts basiques de JavaScript que je pensais maîtriser, notamment parce que j'ai beaucoup pratiqué le framework React récemment. En revisitant ces bases, j'ai pris conscience de certaines pratiques risquées qui pourraient se glisser dans mes projets.</p>
+<p>En particulier, le traitement asynchrone des données était un point bloquant de plusieurs de mes projets et ce MON a offert un recul plus important sur ce point, entre autre.</p>
+<p>Pour résumer, j’ai désormais une meilleure maitrise des concepts clés de JavaScript et je suis convaincu de l'importance de comprendre en profondeur le fonctionnement des frameworks que j'utilise. Enfin, j'ai vu une approche de TypeScript et de son utilisation en conjonction avec Angular et je mesure l’intérêt de ces derniers dans les cas d’usages trouvés dans les différentes lectures.</p>
+<h2 id="bibliographie">Bibliographie</h2>
+<p>[1] Le guide de Angular par Marmicode :<br>
+<a href="https://guide-angular.wishtack.io/">https://guide-angular.wishtack.io</a></p>
+<p>[2] Javascript ES6<br>
+<a href="https://www.w3schools.com/Js/js_es6.asp">https://www.w3schools.com/Js/js_es6.asp</a></p>
+<p>[3] Différence var let const<br>
+<a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/</a></p>
+<p>[4] Documentation TypeScript<br>
+<a href="https://www.typescriptlang.org/">https://www.typescriptlang.org</a></p>
+<p>[5] Decorators<br>
+<a href="https://www.typescriptlang.org/docs/handbook/decorators.html">https://www.typescriptlang.org/docs/handbook/decorators.html</a></p>
+<p>[6] Guide for Dependency Injection<br>
+<a href="https://blog.angular-university.io/angular-dependency-injection/">https://blog.angular-university.io/angular-dependency-injection/</a></p>
+<p>[7] Angular official style guide<br>
+<a href="https://angular.io/guide/styleguide">https://angular.io/guide/styleguide</a></p>
 
 
 </article>
