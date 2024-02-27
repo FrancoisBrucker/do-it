@@ -96,3 +96,14 @@ Mise en place d'une réunion hebdomadaire pour faire le point du département (d
 
 ![z](Point_Las.png)
 
+Améliorer la communication au sein du département
+
+![a](nouvelles.png)
+
+Jalonnement des tâches du département à court terme
+
+![a](Planning.png)
+
+Jalonnement des tâches du département à long terme
+
+![a](long_terme.png)
