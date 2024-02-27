@@ -864,6 +864,17 @@ document.getElementById('newGameButton').addEventListener('click', () => {
 </div>
 
 
+### Conclusion et améliorations possibles 
+
+Le jeu final est très proche du jeu auquel on joue sur téléphone, néanmoins de nombreux choses peuvent être améliorés.
+
+Voici d'autres améliorations possibles : 
+- une interface plus jolie avec une chartre graphique précise 
+- des images en SVG, rogner à la forme du fruit/légume, pour éviter de grands espaces entre les éléments
+- une possibilité d'enregistrement du meilleur score 
+- correction de certains bugs inexpliqués (un oignon a réussi à traverser le sol...)
+
+
 ### Horodateur
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
@@ -885,5 +896,6 @@ document.getElementById('newGameButton').addEventListener('click', () => {
 | Dimanche 04/02 | 30min | *Redimensionner et enlever le background des images* |
 | Dimanche 04/02 | 15min | *Ajouter les images dans le projet* |
 | Dimanche 04/02 | 1H30 | *Ajouter les images dans le code* |
-| Vendredi 16/02 | 1H | *Ajout d'un score* et modification de couleurs|
+| Vendredi 16/02 | 1H | *Ajout d'un score et modification de couleurs*|
+
 
