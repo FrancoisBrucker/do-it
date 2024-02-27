@@ -55,6 +55,9 @@ Un cerveau et vaguement quelques connaissances en tech
 
   - Choix du scénario et sa formalisation/Présentation du cas [] = 2 (2h)
   - Corps du cas, l'exercice [] = 5 (5h)
+    - Extraits des interviews [] = 2 (2h)
+    - Questions [] = 1 (1h)
+    - Annexes [] = 2 (2h)
   - Conclusion [] = 1 (1h)
   - Note pédagogique [] = 2 (2h) 
   - Rédaction des annexes [] = 3 (2h)
@@ -79,6 +82,7 @@ On prendra comme user-stories à faire :
 - <u>Rédiger l'étude de cas</u>
   - Choix du scénario et sa formalisation [X] = 2 (1h)
   - Présentation du cas [X] = 2 (1h)
+  + Extraits des interviews [X] = 2 (2h)
 
 ## Sprint 1 Review <a id="section-3"></a>
  
@@ -108,3 +112,4 @@ Autres sources : CCI - Formations de formateurs "Acquérir les compétences clé
 > Mercredi 20/02 : 5h (Guides recommandés par l'ANSSI)
 > Vendredi 23/02 : 2h (Fin de la lecture de la méthode EBIOS et début de la rédaction du cas)
 > Dimanche 25/02 : 2h (Formalisation de mes notes)
+> Mardi 27/02 : 2h (Extraits d'interview) 
