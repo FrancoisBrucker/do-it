@@ -13,8 +13,14 @@ tags:
 résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
 ---
 
+## Table des matières
 1. [Introduction](#section-1)
 2. [Sprint 1](#section-2)
+3. [Etude préliminaire](#section-3)
+4. [Questionnaires](#section-4)
+5. [Résultat](#section-5)
+6. [Sprint 2](#section-6)
+
 
 ## Introduction<a id="section-1"></a>
 ### Présentation de l'entreprise
@@ -34,7 +40,7 @@ Le nouveau système de gestion des ressources humaines devrait permettre aux res
 
 Total estimé : 11 heures
 
-## Étude préliminaire
+## Étude préliminaire<a id="section-3"></a>
 ### Choix du modèle
 **Deloitte Digital Maturity Model**
 Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus pertinent pour les raisons suivantes : 
@@ -57,7 +63,7 @@ Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus 
 - **Niveau transformationnel** : À ce stade, l'entreprise a complètement intégré le numérique dans son ADN. Elle est capable d'anticiper les tendances du marché et d'innover de manière continue pour rester en tête de la concurrence.
 {% enddetails %}
 
-## Questionnaires
+## Questionnaires<a id="section-4"></a>
 Pour avoir ce type de solution,  je prévois de conduire des entretiens avec les parties prenantes de ce projet pour mieux comprendre les enjeux métier, leurs procédures et leur SIRH actuel.
 Personnes concernées par le questionnaires : drh , dsi , team leader, shift leader.
 
@@ -142,7 +148,9 @@ Personnes concernées par le questionnaires : drh , dsi , team leader, shift lea
 {% enddetails %}
 
 
-## Modélisation et cartographie des processus
+## Résultats<a id="section-5"></a>
+
+### Modélisation et cartographie des processus
 
 {% details "Process 1: Gestion des documents administratifs " %}
 <img src="process1.png" width="700" height="550">
@@ -153,3 +161,19 @@ Personnes concernées par le questionnaires : drh , dsi , team leader, shift lea
 {% details "Process 3: Gestion de l'absentéisme" %}
 <img src="process3.png" width="700" height="550">
 {% enddetails %}
+
+### Analyse SWOT des processus
+<img src="swot.png" width="700" height="550">
+
+### Niveau de maturité
+Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
+
+## Sprint 2<a id="section-6"></a>
+| Tâche                                | Durée estimée |
+|--------------------------------------|---------------|
+| Modélisation du nouveau processus optimisée | 2h            |
+| Rédaction du cahier de charge       | 4h            |
+| Schéma directeur des projets        | 2h            |
+| Validation                           | 1h            |
+
+[Drive de mon travail](https://drive.google.com/drive/folders/1UxRs99Mpo37_-gLLmpO96G_sKGVlFZNP?usp=drive_link)
