@@ -17,9 +17,11 @@ résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
 2. [Sprint 1](#section-2)
 
 ## Introduction<a id="section-1"></a>
-[Aptiv](https://www.aptiv.com/) (anciennement Delphi) est une entreprise mondiale de technologie automobile qui se concentre sur le développement de solutions avancées de mobilité. Au Maroc, Aptiv est présente à travers plusieurs sites stratégiques, notamment à Tanger, Oujda et Meknes. 
-Ils rencontrent des difficultés dans la gestion des ressources humaines: La gestion des documents administratives, la gestion de l'absentéisme et le plan de transportation.
-Ce qu'ils veulent est un SIRH qui permet de fournir à leurs partenaires commerciaux des analyses perspicaces, à valeur ajoutée et fondées sur des données. Pour atteindre cet objectif, ils visent à réduire le temps et les efforts nécessaires pour les tâches manuelles à forte intensité de main-d'œuvre.
+### Présentation de l'entreprise
+[Aptiv](https://www.aptiv.com/) (anciennement Delphi) est un leader technologique mondial, avec plus de 190 000 employés répartis dans 127 sites de production et 12 grands centres techniques à travers le monde. Avec une présence dans 46 pays, ils relèvent les défis les plus complexes de la mobilité grâce à leur expertise approfondie en matière de logiciels et d'intégration de systèmes, offrant des solutions pertinentes pour leurs clients.
+### Problématique
+Aptiv vise à améliorer la gestion des ressources humaines, en se concentrant spécifiquement sur la gestion de la main-d'œuvre, qui compte 2500 employés par usine. L'entreprise souhaite transformer les processus actuels de surveillance des données, qui sont manuels et intensifs, et qui concernent le contrôle de la présence, la gestion des absences, l'échange d'informations entre employés et employeurs, ainsi que la fourniture de documents administratifs. Aptiv prévoit d'identifier un outil adapté à ses besoins, capable de réduire de manière significative la dépendance actuelle à l'égard des processus manuels utilisés pour générer des informations de prévision et de budget.
+Le nouveau système de gestion des ressources humaines devrait permettre aux ressources de concentrer l'essentiel de leur temps et de leurs efforts sur l'analyse des modèles et des tendances des données, afin de fournir des analyses pertinentes et à forte valeur ajoutée. Cela sera réalisé en réduisant considérablement le temps et les efforts nécessaires pour les activités manuelles et intensives en main-d'œuvre, telles que la collecte et la consolidation des données nécessaires, ainsi que le remplissage des feuilles de calcul, qui représentent la majeure partie du temps dans le processus actuel.
 
 ## Sprint 1<a id="section-2"></a>
 | Tâche                                    | Description                                                                                                                                              | Durée estimée |
@@ -31,3 +33,123 @@ Ce qu'ils veulent est un SIRH qui permet de fournir à leurs partenaires commerc
 | Analyse des forces et faiblesses des processus | - Identifier les faiblesses, les inefficacités et les points de friction dans les processus de gestion des ressources humaines. <br> - Évaluer le niveau de maturité des processus actuels en termes de gestion des ressources humaines. <br> - Identifier les risques potentiels associés aux processus actuels et aux pratiques de gestion des ressources humaines. | 3h |
 
 Total estimé : 11 heures
+
+## Étude préliminaire
+### Choix du modèle
+**Deloitte Digital Maturity Model**
+Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus pertinent pour les raisons suivantes : 
+
+- **Pertinence des dimensions d'évaluation**: Contrairement aux autres modèles qui se concentrent principalement sur la stratégie numérique et l'engagement des dirigeants, le modèle Deloitte aborde un éventail plus large de dimensions pertinentes pour évaluer la transformation du SIRH. Il prend en compte des aspects tels que la culture organisationnelle et les compétences, qui sont essentiels pour une adoption réussie des solutions technologiques.
+
+- **Méthodologie d'auto-évaluation et de benchmarking** : Le modèle Deloitte propose une approche d'auto-évaluation qui permet à Aptiv d'évaluer ses propres forces et faiblesses en matière de transformation numérique, ce qui lui donne une vision plus précise de son état actuel. De plus, le benchmarking fournit des comparaisons avec d'autres entreprises similaires, ce qui permet à Aptiv d'identifier les domaines où elle peut s'améliorer.
+
+- **Niveaux de maturité numérique**: Le modèle Deloitte propose plusieurs niveaux de maturité numérique, ce qui permet à Aptiv de comprendre où elle se situe actuellement et quelles étapes sont nécessaires pour progresser. Cela offre une vision plus nuancée et une feuille de route plus claire pour la transformation.
+
+- **Résultats et recommandations personnalisés** : Le modèle Deloitte offre une analyse détaillée et un plan d'action personnalisé, ce qui permet à Aptiv d'obtenir des recommandations spécifiques pour guider sa transformation. Cela garantit que les initiatives de transformation de l'entreprise sont adaptées à ses besoins uniques et à ses objectifs commerciaux.
+
+**Résultat attendu : Situer le cas d’Aptiv dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
+
+{% details "Niveaux Digital Maturity Deloitte" %}
+- **Niveau de base/initial** : À ce stade, l'entreprise commence tout juste à adopter des technologies digitales. Les initiatives digitales sont souvent sporadiques et fragmentées, et il peut y avoir une résistance au changement de la part des employés.
+- **Niveau émergent** : À ce stade, l'entreprise commence à développer une vision plus claire de sa transformation digitale. Les initiatives sont mieux coordonnées et il y a une prise de conscience accrue de l'importance du numérique pour rester compétitif sur le marché.
+- **Niveau consolidé** : À ce stade, l'entreprise a établi une base solide en matière de technologies digitales. Les processus sont de plus en plus intégrés et optimisés, et il y a une adoption généralisée des technologies digitales à travers l'organisation.
+- **Niveau stratégique** : À ce stade, l'entreprise utilise le numérique de manière stratégique pour stimuler l'innovation, créer de nouveaux modèles commerciaux et améliorer l'expérience client. Il y a une culture d'innovation et d'expérimentation au sein de l'organisation.
+- **Niveau transformationnel** : À ce stade, l'entreprise a complètement intégré le numérique dans son ADN. Elle est capable d'anticiper les tendances du marché et d'innover de manière continue pour rester en tête de la concurrence.
+{% enddetails %}
+
+## Questionnaires
+Pour avoir ce type de solution,  je prévois de conduire des entretiens avec les parties prenantes de ce projet pour mieux comprendre les enjeux métier, leurs procédures et leur SIRH actuel.
+Personnes concernées par le questionnaires : drh , dsi , team leader, shift leader.
+
+{% details "Questionnaire DSI" %}
+### Présentation du département
+
+- Pouvez-vous présenter la composition de votre département en termes de nombre de collaborateurs par rapport au nombre d'employés de l'entreprise ?
+- Quelles sont les activités clés de votre service?
+
+### Description de vos activités et du SI
+
+- Pouvez-vous me décrire la structure de votre SIRH? Ses différentes composantes et fonctions? Est-il modulable?
+- Y a-t-il des systèmes tiers intégrés à votre SIRH?
+- Quels sont les départements qui ont des interactions directes avec le SIRH?
+- Comment sont gérés les accès aux données au sein de votre système d'information?
+- Dans quelle étape intervient-il votre département dans la gestion des ressources humaines?
+- Quels sont les projets en cours ou prévus à court terme dans votre périmètre ?
+
+### Evaluation métier / SI sur votre périmètre
+
+- Vos besoins métier sont-ils couverts par le SIRH actuel ?
+- Quelles sont les principales forces du SIRH actuel ?
+- À votre avis, quelles sont les principales faiblesses du SIRH actuel ?
+- Quelles nouvelles fonctionnalités ou caractéristiques pensez-vous qu'il faudrait incorporer dans le SIRH ?
+- Quelle est l'importance accordée à la sécurité dans votre système d'information?
+{% enddetails %}
+
+{% details "Questionnaire DRH" %}
+### Présentation du département
+
+- Pouvez-vous présenter la composition de votre département RH en termes de nombre de collaborateurs par rapport au nombre d'employés de l'entreprise ?
+- Quelles sont les activités clés de votre service des ressources humaines ?
+
+### Description de vos activités et du SI
+
+- Comment le processus de demande de documents est-il géré ?
+- Quel est l'approche de gestion de l'absentéisme ?
+- Comment est réalisée la prévision des besoins en personnel dans votre organisation ?
+- Quels flux d’informations sont impliqués dans vos tâches quotidiennes et avec quels départements? Sont-ils automatisés ?
+- Quelles sont les fonctionnalités du SIRH actuel liées à votre métier ?
+- Comment les tâches et les problèmes sont-ils priorisés au sein de votre département ?
+- Quels sont certains problèmes récurrents rencontrés dans vos processus RH ?
+- Quelles tâches nécessitent un temps et des ressources excessifs ? Y a-t-il un potentiel d'automatisation ?
+- Quel est le délai de traitement des demandes, réalisation des tâches et l'achèvement des processus ?
+
+### Evaluation métier / SI sur votre périmètre
+
+- Vos besoins métier sont-ils couverts par le SIRH actuel ?
+- Quels aspects de votre travail actuel vous satisfont et quels sont ceux que vous pensez nécessiter des améliorations ?
+- Quels indicateurs clés de performance (KPI) sont actuellement dérivés de votre SIRH, et quelles données sont nécessaires pour leur mise en œuvre ?
+- Quelles sont les principales forces du SIRH actuel ?
+- À votre avis, quelles sont les principales faiblesses du SIRH actuel ?
+- Quelles nouvelles fonctionnalités ou caractéristiques pensez-vous qu'il faudrait incorporer dans le SIRH ?
+
+{% enddetails %}
+
+{% details "Questionnaire Team/Shift Leader" %}
+### Présentation du Département
+
+- Pouvez-vous décrire en quoi consiste votre activité en tant que shift leader ?
+- Pourriez-vous décrire une journée typique au sein de votre service en tant que shift leader ?
+
+### Description des Activités et Interaction avec le SI
+
+- Comment le processus de demande de documents est-il géré ?
+- Quel est l'approche de gestion de l'absentéisme ?
+- Comment organisez-vous la planification des shifts et l’affectation des employés, et comment communiquez-vous ce plan au sein de votre équipe ?
+- Quels flux d’informations sont impliqués dans vos tâches quotidiennes et avec quels départements ?
+- Comment maintenez-vous la communication avec les employés dont vous êtes responsable ?
+- Quelles sont les fonctionnalités du SIRH actuel liées à votre métier ?
+- Quels sont certains problèmes récurrents rencontrés dans vos processus RH ?
+- Quelles tâches nécessitent un temps et des ressources excessifs ? Y a-t-il un potentiel d'automatisation ?
+
+### Evaluation métier / SI sur votre périmètre
+
+- Vos besoins métier sont-ils couverts par le SIRH actuel ?
+- Quels aspects de votre travail actuel vous satisfont et quels sont ceux que vous pensez nécessiter des améliorations ?
+- Quels indicateurs clés de performance (KPI) sont actuellement dérivés de votre SIRH, et quelles données sont nécessaires pour leur mise en œuvre ?
+- Quelles sont les principales forces du SIRH actuel ?
+- À votre avis, quelles sont les principales faiblesses du SIRH actuel ?
+- Quelles nouvelles fonctionnalités ou caractéristiques pensez-vous qu'il faudrait incorporer dans le SIRH ?
+{% enddetails %}
+
+
+## Modélisation et cartographie des processus
+
+{% details "Process 1: Gestion des documents administratifs " %}
+<img src="process1.png" width="700" height="550">
+{% enddetails %}
+{% details "Process 2: Gestion de l'envoie des documents" %}
+<img src="process2.png" width="700" height="550">
+{% enddetails %}
+{% details "Process 3: Gestion de l'absentéisme" %}
+<img src="process3.png" width="700" height="550">
+{% enddetails %}
