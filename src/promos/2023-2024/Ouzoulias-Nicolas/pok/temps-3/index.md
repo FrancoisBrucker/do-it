@@ -24,3 +24,13 @@ Je souhaiterai donc faire tourner mon POK du temps 3 autours de cette thématiqu
  - 2ème sprint pour présenter la synthèse et mettre en place le dialogue avec l'administration et la direction de l'école
 
  Je me laisse cependant assez de liberté pour modifier cela en fonction de l'avancée du projet, j'avance globalement à l'aveugle et les résultats attendus ne sont pas prédéfinis.
+
+
+ ## 1er sprint 
+
+ - Création d'un long formulaire pour récupérer les multiples avis
+ - J'ai pris beaucoup de retard donc je n'ai pas encore pu m'attarder sur les résultats
+ - Il est actuellement en période d'essai auprès d'un petit groupe avant de l'envoyer à toute la promo 
+ - J'ai également commencé à en faire pour les 1A, 2A et diplomés mais j'attends les résultats pour orienter ces derniers afin de confronter les avis des autres promos à celle sortante. 
+
+ ![forms1](./images/débutForms.png)
