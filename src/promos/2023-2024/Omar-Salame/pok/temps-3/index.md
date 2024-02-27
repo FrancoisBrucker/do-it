@@ -149,8 +149,6 @@ Personnes concernées par le questionnaires : drh , dsi , team leader, shift lea
 
 
 ## Résultats<a id="section-5"></a>
-### Niveau de maturité
-Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
 
 ### Modélisation et cartographie des processus
 
@@ -166,6 +164,9 @@ Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'
 
 ### Analyse SWOT des processus
 <img src="swot.png" width="700" height="550">
+
+### Niveau de maturité
+Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
 
 ## Sprint 2<a id="section-6"></a>
 | Tâche                                | Durée estimée |
