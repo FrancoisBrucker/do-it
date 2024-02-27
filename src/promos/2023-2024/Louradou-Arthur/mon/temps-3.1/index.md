@@ -70,7 +70,7 @@ Ici, nous inscrivons des **fonctions de callback**  `function() {}` après l’e
 
 ### Programmation orientée objet
 
-En JavaScript, tout est objet. Cependant c’est un language très peu typé, ce que TypeScript vient corriger à sa manière. Nous allons voir ce qui le caractérise.
+En JavaScript, tout est objet. Cependant, c’est un langage très peu typé, ce que TypeScript vient corriger à sa manière. Nous allons voir ce qui le caractérise.
 
 La norme ECMAScript 2015 (ES6) caractérise les objets de cette manière [[2]](#bibliographie) :
 
@@ -82,7 +82,7 @@ class ClassName {
 
 ### var, let, const
 
-Petit point sur ces mots clés avant les variables [[4]](#bibliographie) : `let` ne permet l’accès aux variables que dans leur scope et après leur déclaration. On ne peut pas déclarer deux fois avec `let`. `const` permet quand à lui de ne pas réinitialiser une constante par erreur. `var` quand à lui peut être redéclaré et causer des erreurs.
+Petit point sur ces mots clés avant les variables [[4]](#bibliographie) : `let` ne permet l’accès aux variables que dans leur scope et après leur déclaration. On ne peut pas déclarer deux fois avec `let`. `const` permet quant à lui de ne pas réinitialiser une constante par erreur. `var` peut être redéclaré et causer des erreurs.
 
 On préfèrera utiliser `let` et délaisser `var` pour des raisons de clareté et de lisibilité.
 
@@ -110,7 +110,7 @@ class Person {
 }
 ```
 
-Ici, le contexte d’exécution de la fonction dans un callback (ici `setTimeout`) amène le `this` a avoir la valeur de la fonction elle-même. Ce n’est pas ce que l’on souhaite et il existe des méthodes pour l’éviter. la première consiste à ajouter à la fin de la fonction un `.bind(this)` correspondant au bon contexte d’exécution.
+Ici, le contexte d’exécution de la fonction dans un callback (ici `setTimeout`) amène le `this` à avoir la valeur de la fonction elle-même. Ce n’est pas ce que l’on souhaite et il existe des méthodes pour l’éviter. La première consiste à ajouter à la fin de la fonction un `.bind(this)` correspondant au bon contexte d’exécution.
 
 ```javascript
 const timeout = setTimeout(function () {
@@ -135,7 +135,7 @@ Pour résumer, il existe de nombreuses manières de définir des fonctions en Ja
 
 ## TypeScript
 
-Une petite mise au point s’impose à quiconque veut passer de JavaScript à TypeScript. On peut résumer rapidement l’essentiel mais rien ne vaut la lecture de la documentation associée.
+Une petite mise au point s’impose à quiconque veut passer de JavaScript à TypeScript. On peut résumer rapidement l’essentiel, mais rien ne vaut la lecture de la documentation associée.
 
 Parmi les point à retenir :
 
@@ -145,7 +145,7 @@ Parmi les point à retenir :
 - Types courants : `boolean`, `number`, `string`, array (`string[]`, `number[]`, …) et pas avec des majuscules qui correspondent aux types primitifs
 - Paramètres optionnels dans les fonctions doivent être indiqués par un `?` pour que le code compile, ou en spécifiant une valeur par défaut
 - Il existe des interfaces comme en Java pour spécifier la signature (le contrat) que doit remplir une classe (ou une fonction !)
-- L’inférence permet a TypeScript de déterminer à l’avance les types de sortie des fonctions à la compilation (et de les traduire en erreur, le cas échéant)
+- L’inférence permet à TypeScript de déterminer à l’avance les types de sortie des fonctions à la compilation (et de les traduire en erreur, le cas échéant)
 
 > “Toute la puissance de TypeScript repose sur cet art de typer le moins possible mais au bon endroit pour en profiter au maximum.” [[1]](https://guide-angular.wishtack.io/typescript/inference)
 > 
@@ -173,7 +173,7 @@ Angular est un framework puissant pour le développement d'applications web. Gr�
 
 ## Regard critique et ouverture
 
-A partir de ce que j'ai appris, je peux dire qu'Angular est un outil puissant avec un ensemble de fonctionnalités robustes. Cependant, son adoption nécessite un investissement significatif en temps d'apprentissage et de maîtrise. Il est essentiel de comprendre les nuances de TypeScript et les spécificités d'Angular, comme l'injection de dépendances et le cycle de vie des composants.
+À partir de ce que j'ai appris, je peux dire qu'Angular est un outil puissant avec un ensemble de fonctionnalités robustes. Cependant, son adoption nécessite un investissement significatif en temps d'apprentissage et de maîtrise. Il est essentiel de comprendre les nuances de TypeScript et les spécificités d'Angular, comme l'injection de dépendances et le cycle de vie des composants.
 
 Je ne pense pas maitriser tous ces concepts à l’issue de ces dix heures d’autoformation, c’est pourquoi je continuerai à me documenter sur le framework Angular qui sera utile pour les contextes professionnels évoqués en introduction.
 
