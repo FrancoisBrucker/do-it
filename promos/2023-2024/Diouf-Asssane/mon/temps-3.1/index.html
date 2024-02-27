@@ -129,6 +129,48 @@
 <p>Rust est un langage de programmation montant et apprécié par les développeurs pour son aspect &quot;safe by design&quot;. Ses cas d'utilisation s'élargissent donc et il est désormais autant possible de développer des CLI, des applications embarquées ou des sites avec Rust.<br>
 Dans ce MON je vais m'intéresser à ce dernier cas. Toutefois, s'il est possible de traiter à la fois le front et le back avec Rust, je ne vais m'intéresser qu'au back ici. Pour celà, je vais partir à la découverte d'Actix-web, mais il existe aussi Rocket ou Axum pour faire la même chose avec Rust.<br>
 Je compte me baser sur la documentation officielle ainsi que sur le livre que m'a prêté M. Brucker &quot;Zero to production in Rust&quot;.</p>
+<h2>Ce que j'ai fait</h2>
+<p>Pendant ce MON, j'ai suivi, un peu comme un tuto, le livre prêté par M. Brucker sur Rust. Dans ce livre, on crée une newsletter en Rust de A à Z. Je me suis arrêté juste après le chapitre de la première mise en production. Ce livre est très bien, il suit un projet de A à Z et retrace des bonnes pratiques en expliquant à chaque étape pourquoi elles sont importantes.</p>
+<h2>Découverte d'Actix-Web</h2>
+<p>Actix Web est un framework Rust pour faire du back. On peut lancer un serveur HTTP et définir des controlleurs et les routes auxquelles il répondent.<br>
+Voici un exemple tiré du site du framework :</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token attribute attr-name">#[actix_web::main]</span>
+<span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span></span><span class="token class-name">Result</span><span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token class-name">HttpServer</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span><span class="token closure-punctuation punctuation">|</span></span> <span class="token punctuation">{</span>
+        <span class="token class-name">App</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">service</span><span class="token punctuation">(</span>hello<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">service</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">route</span><span class="token punctuation">(</span><span class="token string">"/hey"</span><span class="token punctuation">,</span> <span class="token namespace">web<span class="token punctuation">::</span></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">to</span><span class="token punctuation">(</span>manual_hello<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">?</span>
+    <span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">await</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[get(<span class="token string">"/"</span>)]</span>
+<span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">impl</span> <span class="token class-name">Responder</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HttpResponse</span><span class="token punctuation">::</span><span class="token class-name">Ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[post(<span class="token string">"/echo"</span>)]</span>
+<span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">echo</span><span class="token punctuation">(</span>req_body<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">impl</span> <span class="token class-name">Responder</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HttpResponse</span><span class="token punctuation">::</span><span class="token class-name">Ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span>req_body<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">manual_hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">impl</span> <span class="token class-name">Responder</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HttpResponse</span><span class="token punctuation">::</span><span class="token class-name">Ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"Hey there!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2>Gérer une base de données</h2>
+<p>En Rust, différentes options sont possibles pour travailler avec une base de données. On peut décider décider de travailler avec un ORM, ou sans, d'avoir un crate qui gère les requêtes en async ou non et ainsi de suite. Dans &quot;Zero to production in Rust&quot;, on utilise sqlx qui permet de créer une base de données et d'effectuer les migrations.</p>
+<h2>L'importance des tests</h2>
+<p>Dans tous le livre, l'auteur prête une attention particulière aux tests. Il réalise les tests d'intégration et les tests unitaires.<br>
+Au fur et à mesure, ces tests nous permettent d'avoir davantages confiance en le code écrit en s'assurant qu'il fonctionne bien.</p>
+<h2>Les logs</h2>
+<p>Les logs permettent d'améliorer l'observabilité de notre api. L'objectif est d'avoir suffisemment d'informations sur notre applications lorsqu'elle s'exécute pour nous aider en cas de bugs ou de soucis. Dans le livre, on aborde la trace par exemple. L'idée est de pouvoir savoir à quelle requête correspondent chaque logs.</p>
+<h2>Déploiement dans le cloud</h2>
+<p>Je n'ai pas eu le temps de mettre en pratique le chapitre sur les logs et celui sur le déploiement dans Digital Ocean.<br>
+Pour le déploiement, l'auteur a décidé de dockeriser l'api. Ensuite, il a pu envoyer l'image dans son serveur digital ocean, configuré au préalable.</p>
 
 
 </article>
