@@ -181,20 +181,22 @@ Voici une capture d'écran du jeu qui est disponible sur téléphone :</p>
 <p><a href="https://brm.io/matter-js/">Matter.js</a> est une bibliothèque JavaScript open-source qui permet la création de simulations physiques en 2D. Il s'agit d'une bibliothèque assez populaire dans le domaine du développement de jeux car elle est facile à utiliser et est très performante. Elle permet de simuler des objets, des collisions, des forces et la gravité, ce qui va être utile dans la création du jeu.<br>
 Je me suis rendue sur une <a href="https://brm.io/matter-js/">documentation</a> pour comprendre comment fonctionne cette bibliothèque. J'ai donc regardé une première vidéo <a href="https://www.youtube.com/watch?v=urR596FsU68&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh">Introduction to Matter.js</a> et la deuxième <a href="https://www.youtube.com/watch?v=uITcoKpbQq4&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh&amp;index=21">Introduction to Matter.js Continued</a>.</p>
 <h3>2. Créer l'environnement de code</h3>
-<p>Je me crée un dossier <em>Pasteque</em> et j'initialise mon projet avec</p>
-<p>npm init</p>
-<p>J'ajoute la ligne &quot;type&quot; : &quot;module&quot;, je crée un fichier index.js et index.html et j'installe Express et Matter via les commande</p>
-<p>npm add --save express<br>
-npm install matter-js</p>
-<p>J'ajoute un fichier main.js</p>
+<p>Je me crée un dossier <em>Pasteque</em> et j'initialise mon projet avec :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npm init 
+</code></pre>
+<p>J'ajoute la ligne &quot;type&quot; : &quot;module&quot;, je crée un fichier index.js et index.html et j'installe Express et Matter via les commandes :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npm add --save express
+npm install matter-js 
+</code></pre>
+<p>J'ajoute un fichier main.js dans lequel je vais coder les différentes fonctions pour le jeu.</p>
 <p>J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas réussi à corriger :</p>
 <div style="display:flex">
 <div><img src="erreur_matter.png"></div>
 </div>
-<p>J'ai donc utilisé Vite pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.</p>
-<p>J'ai donc l'environnement suivant :</p>
+<p>J'ai donc utilisé <a href="https://vitejs.dev/">Vite</a> pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.</p>
 <h3>3. Créer la boite du jeu</h3>
-<p>La première chose à créer est donc une boite, pour ça j'ai juste suivi la <a href="https://brm.io/matter-js/">documentation</a> qui explique comment ajouter des corps aux mondes ce qui m'a donné cela :</p>
+<p>Maintenant que j'ai mon environnement je peux commencer à coder le jeu.<br>
+La première chose à créer est donc une boite, pour ça j'ai juste suivi la <a href="https://brm.io/matter-js/">documentation</a> qui explique comment ajouter des corps aux mondes ce qui m'a donné cela :</p>
 <div style="display:flex">
 <div><img src="boite.png"></div>
 </div>
