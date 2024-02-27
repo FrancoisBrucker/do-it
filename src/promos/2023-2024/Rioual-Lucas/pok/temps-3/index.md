@@ -24,6 +24,13 @@ résumé: Création d'un quiz multijoueur en ligne en utilisant Java pour le bac
 Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en React Js
 {%endprerequis%}
 
+{%prerequis 'Repo github'%}
+[Front](https://github.com/LucasRioual/quiz-front)
+[Back](https://github.com/SamyDiafat/DoItQuizz-backend)
+{%endprerequis%}
+
+
+
 
 
 
@@ -125,7 +132,11 @@ L’objectif du sprint 1 est de développer les fonctionnalités les plus import
 
 Le temps estimé pour réaliser la maquette a été très largement sous-estimé (Lucas voulait faire ça à la vite mais Samy l'a rappelé à l'ordre).
 
-Le developpement du back-end a pris plus de temps que prévu également.
+Le développement du back-end a pris plus de temps que prévu également.
+
+Pour le front, nous avons choisi de partir sur du React et Tailwind CSS car Lucas avait déjà utilisé ces outils.
+Le temps pour le développement des trois premières pages a été respecté . Cependant le setup du projet a mis plus de temps que prévu (comme à chaque fois). Pour l'instant, il n'y a aucune interaction entre le front et le back. On verra ça pour le deuxième sprint
+
 
 Voici quelques livrables issus du Sprint 1 
 
@@ -148,6 +159,20 @@ Le schéma de données utilisé pour le back-end :
 ![Gameplay](./data.png)
 
 ### Front-End
+
+Page d'accueil :
+
+<img src="accueil.PNG">
+
+Page de salon :
+
+<img src="salon.PNG">
+
+Page de partie :
+
+<img src="partie.PNG">
+
+
 
 
 
