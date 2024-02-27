@@ -106,3 +106,33 @@ Enfin, les bureaux de gestion de projet (PMO) sont des structures organisationne
 
 ### Role du chef de projet
 
+Le chef de projet joue un rôle essentiel dans la direction d'une équipe de projet afin d'atteindre les objectifs. Dans certaines organisations, il peut être impliqué dans l'évaluation préalable du projet, la consultation des parties prenantes et la gestion des bénéfices. Son rôle peut varier et s'adapter à l'organisation, tout comme les processus de gestion de projet s'adaptent au projet lui-même. Dans tous les cas, il représente son équipe, en est responsable, et possède les compétences nécessaires pour mener à bien son projet. Il fournit à son équipe la direction, la planification et la coordination par le biais de la communication.
+
+Le chef de projet dirige l'équipe de projet afin d'atteindre les objectifs du projet et de répondre aux attentes des parties prenantes. Il s'efforce de trouver un équilibre entre les contraintes concurrentes du projet et les ressources disponibles.
+Daprès plusieures recherches, les meilleures chefs de projet possèdent les soft skills suivant parmi: 
+
+- créer, maintenir et respecter les plans et les calendriers de communication
+- communiquer de manière prévisible et cohérente 
+- Chercher à comprendre les besoins en communication des parties prenantes du projet
+- Faire en sorte que les communications soient concises, claires, complètes, simples, pertinentes et adaptées
+- inclure les nouvelles importantes, positives et négatives
+- Compétences relationnelles
+
+Le chef de projet s'emploie également à :
+
+- Démontrer la valeur de la gestion de projet,
+- Accroître l'acceptation du management de projet dans l'organisation,
+- Améliorer l'efficacité du PMO lorsqu'il existe dans l'organisation.
+
+Il est essentiel pour les chefs de projet de maîtriser diverses méthodes de travail créatives pour réussir. Cela inclut l'adoption de méthodes prédictives, agiles, de la pensée design ou d'autres pratiques émergentes. De plus, développer un sens des affaires permet de prendre des décisions éclairées et rapides en comprenant les multiples facteurs d'influence au sein d'une organisation ou d'une industrie. Enfin, les compétences relationnelles, telles que le leadership collaboratif, la communication efficace et l'empathie, sont cruciales pour exercer une influence, inspirer le changement et construire des relations solides.
+
+
+Le leadership et le management sont souvent confondus, mais ils diffèrent : le management consiste à diriger les autres vers un objectif avec des comportements attendus, tandis que le leadership implique de guider les autres à travers des discussions pour atteindre un but commun. Les chefs de projet doivent combiner les deux pour réussir, en adaptant leurs compétences et leur style de leadership à chaque situation. L'objectif final est de faire avancer les choses.
+
+| Date | Travail effectué |  Temps | 
+| -------- | -------- |-------- | -------- |
+| 17/02 | Lecture introduction et note | 2h |
+| 18/02 | Lecture environment du projet et note | 1h |
+| 21/02 | Lecture Role du chef de projet et note  | 1h30 |
+| 24/02 | Lecture Iniciating process group et note | 0h30 |
+| 26/02 | Lecture Planning Process group et note | 2h|
