@@ -10,7 +10,7 @@ date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "L'IA générative est de plus en plus palpable dans le paysage technologique actuel. Les grands modèles de langage ont ouvert de nouvelles perspectives et suscité un vif intérêt dans divers domaines professionnels. J'ai choisi de suivre le [cours de DeepLearning.AI](https://www.deeplearning.ai/courses/generative-ai-with-llms/)"
+résumé: L'IA générative est de plus en plus palpable dans le paysage technologique actuel. Les grands modèles de langage ont ouvert de nouvelles perspectives et suscité un vif intérêt dans divers domaines professionnels. J'ai choisi de suivre le [cours de DeepLearning.AI](https://www.deeplearning.ai/courses/generative-ai-with-llms/)
 ---
 
 ## Table des matières

@@ -34,16 +34,16 @@ Ci-dessous sont énoncés les objectifs que je me suis fixés, notés en termes 
 
 Beaucoup de choses à lire ... 
 
+## Ressenti et conclusion du sprint 1 :
+
+Grosse lecture qui couvre un domaine un peu large, beaucoup d'information, qui peuvent sembler intuitives mais c'est tout le point, rendre certains procédés rigoureux pour éviter les erreurs intuitives, avec des check-lists des méthodes.
+Si aujourd'hui j'en utilise seulement une fraction, je pense que ce sera utile tout au long de ma carrière avec l'évolution de mes connaissances et de la nature des analyses à fournir. En effet, le livre aborde les analyses sous différent angles, en fonction de la profondeur demandée, du type d'analyse, quantité d'information utilisée, quantitative ou qualitative analysis, ...
+
 ## Deuxième étape : Faire le rapport :
 
 Le cadre du rapport est important et essentielles pour la structure et la démarche qui va habiter ce travail.
 Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur : .
-Le format attendu sera une analyse descriptive dans un premier temps et en fonction de l'avancé, nous pourrons faire une analyse explicative d'un phénomène 'un phénomène du milieu. 
-
-## Ressenti et conclusion : 
-
-Grosse lecture qui couvre un domaine un peu large, beaucoup d'information, qui peuvent sembler intuitives mais c'est tout le point, rendre certains procédés rigoureux pour éviter les erreurs intuitives, avec des check-lists des méthodes. 
-Si aujourd'hui j'en utilise seulement une fraction, je pense que ce sera utile tout au long de ma carrière avec l'évolution de mes connaissances et de la nature des analyses à fournir. En effet, le livre aborde les analyses sous différent angles, en fonction de la profondeur demandée, du type d'analyse, quantité d'information utilisée, quantitative ou qualitative analysis, ... 
+Le format attendu sera une analyse descriptive dans un premier temps et en fonction de l'avancé, nous pourrons faire une analyse explicative d'un phénomène 'un phénomène du milieu.
 
 #### Horodatage :
 
@@ -54,3 +54,4 @@ Si aujourd'hui j'en utilise seulement une fraction, je pense que ce sera utile t
 [24/02] : Lecture Critical Thinking Chapter 4&5 = 1H
 [25/02] : Lecture Critical Thinking Chapter 5 = 1H
 [25/02] : Lecture Critical Thinking Chapter 8 = 1H
+[27/02] : Travail sur les études de cas sur partie 1 et 2 = 2H
