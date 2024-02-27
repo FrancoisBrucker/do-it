@@ -75,13 +75,12 @@ On prendra comme user-stories à faire :
   - Guides recommendés par l'ANSSI [X] = 3 (5h)
     - Guide sur la continuité d'activité [X] = 1 (1h30)
     - EBIOS, management des risques [X] (3h30)
-  - Formalisation/Traduction de la formation que j'ai suivi de mon côté (Certified in Cybersecurity by ISC2) [X] = 2 (2h)
+  - Formalisation/Traduction de mon expérience et de mes acquis [X] = 2 (2h)
 
 - <u>Lire et intégrer la documentation prêtée par Laetitia PIET sur la méthodologie pour créer une étude de cas</u> [X] = 1 (1h)
 
 - <u>Rédiger l'étude de cas</u>
-  - Choix du scénario et sa formalisation [X] = 2 (1h)
-  - Présentation du cas [X] = 2 (1h)
+  - Choix du scénario et sa formalisation/présentation [X] = 2 (2h)
   + Extraits des interviews [X] = 2 (2h)
 
 ## Sprint 1 Review <a id="section-3"></a>
