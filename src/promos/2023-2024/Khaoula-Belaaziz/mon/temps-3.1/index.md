@@ -39,11 +39,23 @@ J'ai commencé par lire et appliquer les cas pratiques du MON de Lola, en parcou
 - Comment CRÉER un MODÈLE EXCEL réutilisable ? 
 - L'ANALYSEUR de DONNÉES (Tableaux et graphiques automatiques)
 
+## Exemples d'application
+<div style="display: flex; justify-content: space-around;">
+  <img src="excel_graphs.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="excel_CDF.png" alt="Chemin de fer" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="excel_exemple 3.png" alt="Gantt" style="width: 100%; margin-right: 2%;">
+</div>
+
 ## Bibliographie 
 {% prerequis "**Références**" %}
+-	Réappliquer le cours   **Temps estimé = 3h**: [Formation Excel](https://www.excel-pratique.com/).
+-	La formation   **Temps estimé = 3h**: [Cours complet Microsoft EXCEL](https://www.youtube.com/playlist?list=PL8sQnj6qF1Lv6ejdklq25MGfPJFxThMw6).
+- Appliquation "Chemin de Fer"  **Temps estimé =2h**
 {% endprerequis %}
 
-{%info "**Pour booster le niveau**"%}
 
-{% endinfo %}
 
