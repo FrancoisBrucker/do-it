@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Gestion de projet, Supply chain appliqués à une équipe de Formula Student"
+title: "Management d'équipe et Gestion de projet appliqués à une équipe de Formula Student"
 authors:
   - Benoit BEGUIER
 
@@ -31,8 +31,8 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 
 1. Objectifs du Sprint 1
 2. Déroulement pratique
-3. Bilan et plan d'action suite à la lecture du livre *Lean à 540°*
-4. Documentation et recherche sur les bonnes pratiques de l'organisation d'une équipe de Formula Student
+3. Contexte
+4. Bilan et plan d'action suite à la lecture du livre *Lean à 540°*
 5. Collecte des retours
 6. Organiser l'action
 7. Actions concrètes
@@ -56,6 +56,13 @@ Les étoiles correspondent au niveau de difficulté de l'objectif dans mon réf�
 Suite à mes échanges avec Florian, je choisis de mener une approche incrémentale et itérative pour mon POK. Cela cadre les modalités d’interactions entre les collaborateurs (communication, avancement et suivi) et la méthodologie de résolution de problème. La méthode LEAN s'appliquerait bien dans cette situation, c'est pour cela que je vais consulter le livre *Lean à 540°* de Florian Magnani, qui permettra très vite d’orienter le sujet vers de la mise en pratique.
 On pourrait ensuite se concentrer sur les irritants de mes collaborateurs, la relance du dialogue pour enfin tendre vers les fournisseurs.
 
+## Contexte
+
+Je fais partie d'une équipe de Formula Student, que j'ai rejointe en octobre 2023. Nous sommes 12 étudiants d'Aix-Marseille Université, de tous âges (17 ans à 24 ans) et de toutes formations (Ecole d'ingénieur, BTS chaudronnerie, DUT Génie Mécanique,...) et notre but est de concevoir et fabriquer par nous-même une monoplace d'ici l'été 2024, en partant de 0.
+L'association, Marseille Racing, a été crée durant 2022 mais seuls 2 membres sur les 6 ont vraiment été productifs.
+Un premier item important que je souhaite travailler est la pérennisation de l'association, de sa vision et de ses objectifs dans le temps, car chaque année un turn-over très important a lieu (80% au moins).
+Le deuxième point important concerne la communication au sein de l'équipe, que ce soit entre les membres, entre les départements ou pour les futurs membres. Il y a la nécessité de rouvrir le dialogue entre chaque partie prenante en adoptant une méthode itérative. Pour cela il faut d'abord définir les objectifs, les *features* à obtenir, puis juger la qualité du résultat obtenu. Enfin, il faut conclure sur la pertinence de la première itération pour améliorer la prochaine.
+
 ## Bilan et plan d'action suite à la lecture du livre *Lean à 540°*
 
 Voici en vrac ce que je tire de la lecture d'une trentaine de pages de cet ouvrage :
@@ -64,6 +71,7 @@ Voici en vrac ce que je tire de la lecture d'une trentaine de pages de cet ouvra
 - Réaliser des faits marquants pour identifier des risques potentiels ou des dysfonctionnements
 - On peut ensuite dresser une liste d'actions à mener avec acteur, jalon, outil, objectif...
 - Etapes de la résolution de problèmes : Act, Plan, Check, Do
+- Il est important d'instaurer des rituels auxquels toutes les personnes concernées adhèrent, cela permet d'instaurer une cohésion et une confiance nécessaires à la communication, d'informations mais aussi d'irritants. Certains outils sont très efficaces pour mettre en évidence la souffrance des collaborateurs, même lorsque dans mon cas tout les membres sont bénévoles.
 
 ## Documentation et recherche sur les bonnes pratiques de l'organisation d'une équipe de Formula Student
 
@@ -82,6 +90,7 @@ Il est nécessaire de traiter et prioriser l'ensemble des remarques et des point
 - organiser les points de partage hebdomadaires du département
 
 Je ne peux pas agir sur les autres remarques, néanmoins je les ai transmises au Team Manager.
+La communication est souvent en lien avec l'organisation : la structure est censée répondre à un besoin, il faut donc baser l'ensemble de la structure sur l'échange, et si besoin réformer l'ancienne organisation.
 
 ## Organiser l'action
 
