@@ -18,7 +18,7 @@ résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
 2. [Sprint 1](#section-2)
 3. [Etude préliminaire](#section-3)
 4. [Questionnaires](#section-4)
-5. [Résultat](#section-5)
+5. [Résultats](#section-5)
 6. [Sprint 2](#section-6)
 
 
@@ -45,13 +45,7 @@ Total estimé : 11 heures
 **Deloitte Digital Maturity Model**
 Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus pertinent pour les raisons suivantes : 
 
-- **Pertinence des dimensions d'évaluation**: Contrairement aux autres modèles qui se concentrent principalement sur la stratégie numérique et l'engagement des dirigeants, le modèle Deloitte aborde un éventail plus large de dimensions pertinentes pour évaluer la transformation du SIRH. Il prend en compte des aspects tels que la culture organisationnelle et les compétences, qui sont essentiels pour une adoption réussie des solutions technologiques.
-
-- **Méthodologie d'auto-évaluation et de benchmarking** : Le modèle Deloitte propose une approche d'auto-évaluation qui permet à Aptiv d'évaluer ses propres forces et faiblesses en matière de transformation numérique, ce qui lui donne une vision plus précise de son état actuel. De plus, le benchmarking fournit des comparaisons avec d'autres entreprises similaires, ce qui permet à Aptiv d'identifier les domaines où elle peut s'améliorer.
-
-- **Niveaux de maturité numérique**: Le modèle Deloitte propose plusieurs niveaux de maturité numérique, ce qui permet à Aptiv de comprendre où elle se situe actuellement et quelles étapes sont nécessaires pour progresser. Cela offre une vision plus nuancée et une feuille de route plus claire pour la transformation.
-
-- **Résultats et recommandations personnalisés** : Le modèle Deloitte offre une analyse détaillée et un plan d'action personnalisé, ce qui permet à Aptiv d'obtenir des recommandations spécifiques pour guider sa transformation. Cela garantit que les initiatives de transformation de l'entreprise sont adaptées à ses besoins uniques et à ses objectifs commerciaux.
+<img src="ddm.png" width="700" height="550">
 
 **Résultat attendu : Situer le cas d’Aptiv dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
 
@@ -65,7 +59,7 @@ Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus 
 
 ## Questionnaires<a id="section-4"></a>
 Pour avoir ce type de solution,  je prévois de conduire des entretiens avec les parties prenantes de ce projet pour mieux comprendre les enjeux métier, leurs procédures et leur SIRH actuel.
-Personnes concernées par le questionnaires : drh , dsi , team leader, shift leader.
+Personnes concernées par le questionnaires : DRH , DSI , Shift Leader.
 
 {% details "Questionnaire DSI" %}
 ### Présentation du département
@@ -164,6 +158,9 @@ Personnes concernées par le questionnaires : drh , dsi , team leader, shift lea
 
 ### Analyse SWOT des processus
 <img src="swot.png" width="700" height="550">
+
+### Schéma du HRIS existant
+<img src="hris.png" width="700" height="550">
 
 ### Niveau de maturité
 Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.

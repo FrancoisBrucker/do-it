@@ -24,6 +24,13 @@ résumé: Création d'un quiz multijoueur en ligne en utilisant Java pour le bac
 Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en React Js
 {%endprerequis%}
 
+{%prerequis 'Repo github'%}
+[Front](https://github.com/LucasRioual/quiz-front)
+[Back](https://github.com/SamyDiafat/DoItQuizz-backend)
+{%endprerequis%}
+
+
+
 
 
 
@@ -109,14 +116,14 @@ L’objectif du sprint 1 est de développer les fonctionnalités les plus import
 
 | Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
 |--------------------------------------------------|--------------|
-| **Créer la maquette Figma de toutes les pages**    | 5h             | 10h | |
+| **Créer la maquette Figma de toutes les pages**    | 5h             | 10h | 5h |
 | **Développement frontend**                          |              |
-| Setup du projet                                   | 30 min            |0| |
-| Page d'accueil                                    | 2h            |0| |
-| Page de la session                                | 3h            |0| |
-| Page de la partie                                 | 2h            |0| |
+| Setup du projet                                   | 30 min            |0| 1h|
+| Page d'accueil                                    | 2h            |0| 2h |
+| Page de la session                                | 3h            |0| 1h|
+| Page de la partie                                 | 2h            |0| 1h|
 | **Développement backend**                          |              |
-| Setup du projet                                   | 30 min            |2h| |
+| Setup du projet                                   | 30 min            |2h| 0|
 | Mise en place de la base de données et des routes               | 3h            |8h| 0|
 | Obtenir la question actuelle pour un joueur (webSocket)     | 3h            |0| 0|
 | Soumettre la réponse d'un joueur                  | 1h            |0|0 |
@@ -125,7 +132,11 @@ L’objectif du sprint 1 est de développer les fonctionnalités les plus import
 
 Le temps estimé pour réaliser la maquette a été très largement sous-estimé (Lucas voulait faire ça à la vite mais Samy l'a rappelé à l'ordre).
 
-Le developpement du back-end a pris plus de temps que prévu également.
+Le développement du back-end a pris plus de temps que prévu également.
+
+Pour le front, nous avons choisi de partir sur du React et Tailwind CSS car Lucas avait déjà utilisé ces outils.
+Le temps pour le développement des trois premières pages a été respecté . Cependant le setup du projet a mis plus de temps que prévu (comme à chaque fois). Pour l'instant, il n'y a aucune interaction entre le front et le back. On verra ça pour le deuxième sprint
+
 
 Voici quelques livrables issus du Sprint 1 
 
@@ -148,6 +159,39 @@ Le schéma de données utilisé pour le back-end :
 ![Gameplay](./data.png)
 
 ### Front-End
+
+Page d'accueil :
+
+<img src="accueil.PNG">
+
+Page de salon :
+
+<img src="salon.PNG">
+
+Page de partie :
+
+<img src="partie.PNG">
+
+
+## **Objectif du sprint 2**
+
+L’objectif du sprint 2 est de proposer une version jouable du jeu.
+
+| Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
+|--------------------------------------------------|--------------|
+| **Développement frontend**                          |              |
+| Page de fin de Game                                 | 1h           || |
+| Connection à l'API pour créer/rejoindre             | 1h           || |
+| Afficher les joueurs de la session en temps réel    | 3h           || |
+| Connection Question/réponse à l'API                 | 3h           || |
+| Hôte qui passe à la prochaine question              | 1h           || |
+| Page d'élimination                                  | 30 min           || |
+| Afficher le nombre de vie en temps réel             | 1h          || |
+| Afficher les stats réels                            | 2h          || |
+| **Développement backend**                          |              | | |
+| Implémenter les webSockets                         | 3h          || |
+| Créer les routes qu'on a pas prévu                 | 3h          || |
+| **Mise en production**                             | 5h            | | |
 
 
 

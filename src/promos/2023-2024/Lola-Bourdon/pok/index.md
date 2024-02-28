@@ -10,4 +10,4 @@ Ensemble des POK réalisés par Lola Bourdon.
 
 * [POK 1 - Réalisation d'une application web : la bonne montre](./temps-1)
 * [POK 2 - Créer la maquette d'une site internet en utilisant Figma](./temps-2)
-* [POK 3](./temps-3)
+* [POK 3 - Préparer mon stage avec le PMI](./temps-3)
