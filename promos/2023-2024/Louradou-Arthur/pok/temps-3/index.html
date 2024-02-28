@@ -142,7 +142,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="sprint-3">Sprint 3</h3>
+<h3>Prévisionnel</h3>
+<h4 id="sprint-3">Sprint 3</h4>
 <p>Les temps suivants seront des estimations. Nous pourrons ajouter une colonne à la fin du POK pour mesurer les écarts.</p>
 <table>
 <thead>
@@ -175,7 +176,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="sprint-4">Sprint 4</h3>
+<h4 id="sprint-4">Sprint 4</h4>
 <p>Ce Sprint est encore vague et sera enrichi des retours du sprint 3.</p>
 <table>
 <thead>
@@ -198,6 +199,134 @@
 </tr>
 </tbody>
 </table>
+<h3 id="sprint-3-real">Sprint 3 - Réalisation</h3>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Tout ne s'est pas passé dans l'ordre prévu, la priorisation ayant changé au cours du sprint avec des aléas et des opportunités. Nous allons détailler cela !</p>
+</div></div>
+<h3 id="refonte-fonction">Refonte de la fonction de choix des cours</h3>
+<p>Lors de cette étape, j'ai revu la fonction de suppression des cours pour la rendre plus résiliente. Des tests sont désormais exécutés et comparent un Excel de référence avec le résultat du traitement sur plusieurs types d'élèves.</p>
+<p>J'ai également ajouté une fonctionnalité de comparaison entre les emplois du temps. Lorsqu'un élève se rend sur son emploi du temps personnel, il peut voir en bleu le sien et en rouge celui de la classe. Cela permet de voir les différences entre les deux et de les signaler si besoin.</p>
+<p>Enfin, j'ai initialisé comme prévu un processus de résolution de la correspondance de noms de cours en base de données (en cas de divergence d'orthographe). Cette fonctionnalité sera clé dans la pérennisation du projet et sera donc terminée au prochain sprint.</p>
+<h3 id="bug">Résolution d'un bug (!)</h3>
+<p>Google Calendar a décidé de se comporter différemment des autres logiciels de calendrier (Apple, Thunderbird, etc.). J'ai donc dû revoir la classe qui génère les horaires pour qu'elle inclue la timezone. Les recherches ont pris plus de temps que prévu, mais le bug est résolu.</p>
+<p>En effet, la façon dont Google Implémente la gestion des fuseaux horaires est subtilement différente des autres logiciels. <code>Ce fut donc un combat acharné qui s'achève par des élèves à l'heure (// TODO: fix this in a future commit) 🙂</code>.</p>
+<h3 id="ci-cd">CI/CD !</h3>
+<p>Avant de parler d'intégration et de déploiement continu, j'ai consacré du temps au déploiement du code sur le serveur OVH que vous pouvez retrouver sur <a href="https://github.com/alouradou/SerenaDo_It/blob/master/README.md">le Readme du projet</a>.</p>
+<p>Ces étapes ont été cruciales pour la suite, notamment la documentation de ces dernières. En effet, documenter ces fonctions m'a permis de mieux comprendre les étapes à suivre pour le déploiement continu.</p>
+<p>Ainsi, avant de travailler avec Docker, j'ai décidé de mettre en place une Github Action à la lumière du cours de CI/CD que nous avons eu dans l'électif vert <a href="#">&quot;AWS/Docker&quot;</a> <code>(insérer le lien vers le plan du cours dans le futur site)</code>.</p>
+<p>La connexion entre le dépôt Github et le serveur OVH est désormais établie. Le code est automatiquement déployé sur le serveur à chaque push sur la branche <code>main</code>. Cela a fait gagner un temps précieux au dépoilement des correctifs mineurs et des nouvelles fonctionnalités développeées par la suite.</p>
+<p>L'objectif est maintenant de pérenniser le projet en mettant en place un pipeline de déploiement continu avec Docker. Cela permettra de déployer le code dans un environnement isolé et de s'assurer que le code fonctionne bien avant de le mettre en production.</p>
+<p>Voilà le code de la pipeline de déploiement continu GitHub Action qui reprend les principes évoqués dans le Readme :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code de la pipeline de déploiement continu GitHub Action</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> CI/CD Pipeline
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Test
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout Repository
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v2
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.9</span>
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        python -m venv serenadoit .
+        source serenadoit/bin/activate
+        pip install -r requirements.txt</span>
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run tests
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        # Ajoutez ici les commandes pour exécuter vos tests</span>
+
+  <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy to Server
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">needs</span><span class="token punctuation">:</span> build
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout Repository
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> appleboy/ssh<span class="token punctuation">-</span>action@master
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">host</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">username</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">key</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">port</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">script</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          cd serenadoit
+          git stash
+          git pull origin master
+          git stash pop
+          rm -rf ~/node/static/styles/ ~/node/static/scripts/ ~/node/static/images/
+          cp -r ./static ~/node/</span>
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies and restart server
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> appleboy/ssh<span class="token punctuation">-</span>action@master
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">host</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">username</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">key</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">port</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">script</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          cd serenadoit
+          python -m venv serenadoit .
+          source serenadoit/bin/activate
+          pip install -r requirements.txt
+          kill $(ps aux | grep "^$" | grep '[g]unicorn' | awk '{print $2}') || true</span>
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> SSH to server and deploy
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> appleboy/ssh<span class="token punctuation">-</span>action@master
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">host</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">username</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">key</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">port</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">script</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          cd serenadoit
+          source serenadoit/bin/activate
+          gunicorn -w 4 -b 0.0.0.0:10410 run_prod:app --error-logfile logs/error.log --access-logfile logs/access.log -D</span>
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Check deployment
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        ps aux | grep "^$USER" | grep '[g]unicorn' || true</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h3 id="bugs-mineurs">Correction de bugs mineurs</h3>
+<p>Le sprint a aussi été l'occasion de corriger quelques bugs mineurs et améliorer des fonctionnalités. On peut citer quelques modifications de style et de texte, ainsi que des améliorations de performances qui seront complétées dans le dernier sprint par une gestion efficace du cache.</p>
+<h2 id="la-suite">La suite</h2>
+<p>J'attends des feedbacks des utilisateurs pour prioriser les tâches du sprint 4. Jusqu'ici, cela m'a permis d'aboutir à une version stable et une idée claire des fonctionnalités du projet.</p>
 
 
 </article>
