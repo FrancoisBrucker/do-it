@@ -19,14 +19,43 @@ Connaitre python.
 {%endprerequis%}
 
 ### Introduction
-Pour ce MON je vais donc suivre le cours [Programmation par les tests](https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/projet-TDD/) de François Brucker. On utilisera tout au long des chapitres le language Python.
+Pour ce MON je vais donc me baser sur le cours [Programmation par les tests](https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/projet-TDD/) de François Brucker. On utilisera tout au long des chapitres le language Python.
 
 python -m pytest test_monnaie.py
+## Sommaire 
 
-### Sommaire  
+1. Cours de François Brucker 
+2. Exercices
 
+### C'est quoi la programmation par les tests ? 
 
-## 1. Départ
+La programmation par tests (Test-Driven Development ou TDD en anglais), c'est une approche de développement logiciel où les tests sont écrits avant même que le code de production ne soit implémenté. Pour mettre en place cette méthode on suit généralement trois étapes :  
+
+1. <strong>Écriture du test (Red)</strong> : Dans cette première étape, on **rédige un test unitaire** qui définit le comportement attendu d'une fonction ou d'un module. À ce stade, le code de production n'existe pas encore, donc **le test échouera initialement.**
+
+2. <strong>Implémentation du code de production (Green)</strong> : Après avoir écrit le test, on **crée le code minimal** nécessaire pour faire passer le test avec succès. L'objectif est de produire un code qui satisfait les exigences du test, sans ajouter de fonctionnalités supplémentaires, **seulement le nécessaire.**
+
+3. <strong>Refactoring (Refactor)</strong> : Une fois que le test passe avec succès, on peut ensuite réorganiser et améliorer le code sans altérer son comportement externe. Cela implique souvent d'éliminer les **duplications de code**, **d'améliorer la lisibilité** ou **d'optimiser les performances**.
+
+Ce cycle se répète continuellement, chaque nouvelle fonctionnalité ou modification du code étant accompagnée de l'écriture de nouveaux tests, garantissant ainsi que les changements ne causent pas de régressions ou de dysfonctionnements dans le système existant.
+
+### Pourquoi c'est bien ?
+
+La programmation par tests présente plusieurs avantages :
+
+- <strong>Fiabilité accrue</strong> : En ayant une suite complète de tests automatisés, on peut être plus confiants dans la stabilité et la fiabilité de notre code.
+  
+- <strong>Découverte précoce des erreurs</strong> : En écrivant les tests en premier, on est plus susceptible de détecter les erreurs dès le début du processus de développement, ce qui permet de les corriger rapidement et à moindre coût.
+  
+- <strong>Conception modulaire</strong> : Cette approche encourage la conception modulaire en favorisant la création de code testable, ce qui conduit généralement à des architectures logicielles plus propres et mieux structurées.
+  
+- <strong>Documentation vivante</strong> : Les tests servent également de documentation vivante du comportement attendu du code, ça permet de mieux comprendre le code pour quelqu'un qui ne la pas écrit de sa main.
+
+Ainsi, la programmation par tests est une méthode de développement qui vise à améliorer la qualité du code en écrivant des tests automatisés avant d'écrire le code de production, favorisant ainsi la fiabilité, la détection précoce des erreurs et une meilleure conception logicielle. C'est pour ça que c'est bien de s'y intéresser, de bien comprendre son principe et de prendre le temps de s'exercer parce que ce fonctionnement n'est pas très intuitif au débu (on a très souvent envie de coder directement la fonction "compliqué" car on sait les soucis que l'on peut rencontrer).
+
+## Cours de François Brucker
+
+### 1. Départ
 
 Dans ce premier chapitre on met en place le projet de développement pour s'initier à la programmation par test.
 
@@ -53,7 +82,7 @@ Dans ce premier chapitre on met en place le projet de développement pour s'init
 
 Grâce à ce chapitre on a introduit les bases de la programmation par test en mettant l'accent sur la création de tests avant l'écriture de code fonctionnel, et en décrivant un processus itératif pour développer et améliorer le code de manière incrémentale.
 
-## 2. Value Object
+### 2. Value Object
 
 Ce chapitre se concentre sur la mise en œuvre d'objets de valeur (value objects) dans le processus de développement.
 
@@ -80,7 +109,7 @@ Ce chapitre se concentre sur la mise en œuvre d'objets de valeur (value objects
 
 Grâce à ce chapitre on a mis en lumière l'importance de garantir le bon fonctionnement de l'application avant de se préoccuper de son optimisation, et on a introduit la notion d'objets de valeur comme moyen de sécuriser et de rendre prévisible le comportement du code.
 
-## 3. ==
+### 3. ==
 
 Le troisième chapitre se concentre sur l'implémentation de la comparaison d'égalité (==) entre les objets Dollar.
 
@@ -103,7 +132,7 @@ Le troisième chapitre se concentre sur l'implémentation de la comparaison d'é
 
 Ce chapitre illustre la démarche itérative du TDD pour implémenter la comparaison d'égalité entre les objets Dollar, en mettant l'accent sur la détection des duplications et la résolution progressive des problèmes identifiés.
 
-## 4. __mul__
+### 4. __mul__
 
 Le quatrième chapitre se concentre sur l'implémentation de la méthode spéciale __mul__ pour permettre la multiplication des objets Dollar.
 
@@ -121,7 +150,7 @@ Le quatrième chapitre se concentre sur l'implémentation de la méthode spécia
 
 ce chapitre illustre comment utiliser la méthodologie TDD pour implémenter la multiplication des objets Dollar en ajoutant la méthode spéciale __mul__. Ce processus met en évidence la progression itérative du développement logiciel en identifiant les tâches à accomplir et en les réalisant une par une.
 
-## 5. Privacy
+### 5. Privacy
 
 Le cinquième chapitre se concentre sur la confidentialité de l'attribut montant et sur la manière de tester les objets Dollar en se concentrant sur leur comportement externe plutôt que sur leur implémentation interne.
 
@@ -139,7 +168,7 @@ Le cinquième chapitre se concentre sur la confidentialité de l'attribut montan
 
 Ce chapitre illustre l'importance de tester le comportement externe des objets Dollar et de maintenir la confidentialité de leur implémentation interne. La méthodologie TDD est utilisée pour guider le développement de manière itérative, en se concentrant sur les fonctionnalités à implémenter et en vérifiant leur fonctionnement par le biais de tests.
 
-## 6. Dollar 
+### 6. Dollar 
 
 Dans ce chapitre, l'objectif est de commencer à introduire les Francs dans le système de gestion de la monnaie.
 
@@ -157,7 +186,7 @@ Dans ce chapitre, l'objectif est de commencer à introduire les Francs dans le s
 
 Ce chapitre montre comment découper des tâches ambitieuses en étapes plus gérables et comment commencer à intégrer de nouvelles fonctionnalités dans le système en utilisant la méthodologie TDD. La todo list sert de guide pour s'assurer que toutes les étapes nécessaires sont prises en compte et réalisées de manière itérative.
 
-## 7. même == pour tous
+### 7. même == pour tous
 
 Ce chapitre se concentre sur l'élimination de la duplication du code identique présent dans les classes Dollar et Franc en les faisant hériter d'une classe mère Monnaie.
 
@@ -187,7 +216,7 @@ Ce chapitre se concentre sur l'élimination de la duplication du code identique 
 
 Ce chapitre montre l'importance de l'élimination de la duplication du code pour maintenir un code propre et éviter les répétitions inutiles. L'utilisation de l'héritage et de la remontée des méthodes communes dans une classe mère permet d'optimiser la structure du code.
 
-## 8. Franc/Dollar
+### 8. Franc/Dollar
 
 Ce chapitre se concentre sur la comparaison entre les objets de classe Franc et Dollar.
 
@@ -208,7 +237,7 @@ Ce chapitre se concentre sur la comparaison entre les objets de classe Franc et 
 
 Ce chapitre met en lumière l'importance de coder en tenant compte de la signification des objets plutôt que de leur implémentation interne. La todo list est mise à jour pour réfléchir à une meilleure façon de gérer la comparaison des devises.
 
-## 9. Duplication Franc/Dollar
+### 9. Duplication Franc/Dollar
 
 Dans ce chapitre, l'objectif est de supprimer la duplication entre les classes Franc et Dollar en les remplaçant par une seule classe, tout en garantissant que toutes les fonctionnalités sont préservées grâce aux tests.
 
@@ -238,7 +267,7 @@ Dans ce chapitre, l'objectif est de supprimer la duplication entre les classes F
 
 Ce chapitre montre comment utiliser le design pattern factory pour remplacer les références directes aux classes Franc et Dollar par des fonctions de création d'objets, en préparation de leur unification.
 
-## 10. Devise
+### 10. Devise
 
 Dans ce chapitre, l'objectif est de remplacer les classes Franc et Dollar par une seule classe Monnaie tout en maintenant les fonctionnalités existantes et en éliminant les duplications de code.
 
@@ -262,7 +291,7 @@ Dans ce chapitre, l'objectif est de remplacer les classes Franc et Dollar par un
 
 Ce chapitre montre comment unifier les classes Franc et Dollar en une seule classe Monnaie tout en maintenant les fonctionnalités et en éliminant les duplications de code, grâce à l'utilisation de patterns de refactoring et de bonnes pratiques de conception.
 
-## 11. Unification de *
+### 11. Unification de *
 
 Dans ce chapitre, l'objectif était de supprimer les méthodes de multiplication `__mul__` des classes Franc et Dollar pour les unifier dans la classe Monnaie.
 
@@ -291,7 +320,7 @@ Ce chapitre montre comment unifier les méthodes de multiplication `__mul__` des
 
 PS : il faut bien penser à retirer l'importation des classes Dollar et Franc qui n'existe plus du fichier des tests sinon ça marche pas :) 
 
-## 12. Addition 1/3
+### 12. Addition 1/3
 Dans cette étape, nous avons ajouté la fonctionnalité d'addition pour une unique devise.
 
 -<strong>Todo list mise à jour :</strong> 
@@ -343,7 +372,7 @@ Après vérification ma fonction <strong> plus </strong> est similaire à la cor
 def test_plus():
     assert monnaie.dollar(7) == monnaie.dollar(5).plus(monnaie.dollar(2))
 ```
-## 13. Addition 
+### 13. Addition 
 
 Avant de traiter l'addition de deux monnaies différentes, il est nécessaire de commencer par traiter le cas de l'addition de montants d'une même monnaie.
 
@@ -414,7 +443,7 @@ Après avoir traité l'addition de montants de devises différentes, il est temp
 
 En suivant ces étapes, l'ajout de montants de devises différentes sera correctement géré par la classe `Somme`, tandis que les montants de la même devise resteront gérés par la classe `Monnaie`.
 
-## 14. Conversion
+### 14. Conversion
 
 Pour permettre que $5 + $2 corresponde à quelque chose qui vaut à $7, nous devons travailler sur la méthode `conversion` de la classe `Banque`. Actuellement, c'est une méthode fictive qui renvoie $7. Nous devons la rendre fonctionnelle pour gérer les conversions de devises.
 
@@ -440,7 +469,7 @@ L'étape précédente a permis de baisser le niveau de connaissance de la banque
 -<strong>Implémenter la méthode de conversion dans la classe `Monnaie` :</strong> 
   Ajoutez une méthode `conversion` à la classe `Monnaie` pour gérer la conversion vers une devise donnée.
 
-## 15. Taux de change
+### 15. Taux de change
 
 Dans cette partie, nous nous attaquons à la gestion des taux de change. Nous commençons par travailler sur les objets de type `Monnaie` pour réaliser des conversions entre devises.
 
@@ -469,7 +498,7 @@ Pour généraliser les opérations sur les sommes et les monnaies, nous utilison
 -<strong>Tester la multiplication de somme :</strong> 
   Écrivez un test pour la multiplication d'une somme et assurez-vous que cela fonctionne correctement.
 
-### Conclusion 
+### Conclusion du cours
 
 La programmation par les tests (TDD) est une approche de développement logiciel où les tests sont écrits avant le code de production. Durant ce cours on a vu son principe et ses qualités : 
 
@@ -485,9 +514,543 @@ La programmation par les tests (TDD) est une approche de développement logiciel
 
 La programmation par les tests est essentielle pour développer rapidement des logiciels de haute qualité, tout en favorisant la collaboration et l'agilité.
 
+## Exercices
+
+Maintenant que je connais mieux le fonctionnement du TDD et que j'ai réalisé mon premier programme à l'aide du cours, je peux tenter de réaliser un exercice par moi-même. J'ai donc demandé à ChatGPT de me proposer un exercice pour mettre en application ce que j'ai appris : 
+
+<div style="display:flex">
+<div><img src="ChatGPTExo.png"></div>
+</div>
+
+Donc on va coder une <stong>calculatrice simple</strong> ! 
+
+### Calculatrice simple
+
+Je crée un nouveau dossier <strong>calculatrice-tdd</strong> dans lequel j'ajoute un fichier pour les tests <strong>test_calculatrice.py</strong>, un fichier pour mon code <strong>calculatrice.py</strong> et bien sur on n'oublies pas <strong>todo.md</strong>.
+<div style="display:flex">
+<div><img src="environnementExo.png"></div>
+</div>
+
+La première chose c'est donc de remplir notre <strong>todo</strong>.
+Le plus instinctif ça serait d'écrire ça : 
+
+```html
+## MY TODO 1
+- [] Pouvoir ajouter deux nombres
+- [] Pouvoir soustraire deux nombres
+- [] Pouvoir multiplier deux nombres
+- [] Pouvoir diviser deux nombres
+```
+Commençons par <strong>l'addition</strong>.
+On écrit un test simple : 
+
+<strong>test_calculatrice.py</strong>
+```html
+from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+```
+Je lance mon test : 
+```html
+python -m pytest test_calculatrice.py
+```
+Et évidemment ça échoue, il n'existe pas de class <strong>Calculatrice</strong>. On en crée donc une mais qui ne fait rien : 
+
+<strong>calculatrice.py</strong>
+```html
+class Calculatrice():
+    pass
+```
+Maintenant l'erreur vient du fais que la class <strong>Calculatrice</strong> n'a pas de méthode <strong>add</strong>. On va donc la coder : 
+
+```html
+class Calculatrice():
+    def add(self, other) :
+        return self + other
+```
+Et le test passe ! 
+Maintenant on va s'ocupper de la <strong>soustraction</strong>.
+J'écris un nouveau test : 
+
+<strong>test_calculatrice.py</strong>
+```html
+from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+```
+
+Evidemment le test échoue car on a pas créé de méthode <strong>sub</storng>.
+On s'occupe de le faire : 
+
+```html
+class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+```
+Super les tests passent ! 
+
+On va faire la <strong>multiplication</strong>.
+
+<strong>test_calculatrice.py</strong>
+```html
+from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+
+def test_multiplication():
+    assert Calculatrice.mul(4,5)==20
+```
+<strong>calculatrice.py</strong>
+```html
+class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+    
+    def mul(self, other) : 
+        return self*other
+```
+Et les 3 tests passent bien. 
+
+La <strong>division</strong> pour finir : 
+
+<strong>test_calculatrice.py</strong>
+```html
+from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+
+def test_multiplication():
+    assert Calculatrice.mul(4,5)==20
+
+def test_division():
+    assert Calculatrice.div(36,3)==12
+```
+<strong>calculatrice.py</strong>
+```html
+class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+    
+    def mul(self, other) : 
+        return self*other
+    
+    def div(self, other):
+        return self/other
+```
+Et nos tests passent bien. 
+
+Bon cet exercice est assez simple parce qu'on manipule des nombres, même si je peux complexifier le code j'ai envie d'aller vers autre chose de moins intuitif. 
+
+### Gestion d'une bibliothèque
+Je redemande à ChatGPT un nouvel exo mais un peut moins simple cette fois :
+
+<div style="display:flex">
+<div><img src="ExoBibliothèque.png"></div>
+</div>
+
+Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.
+
+```html
+## MY TODO
+- [] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [] Rechercher un livre par titre ou par auteur
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+```
+
+On va commencer par <strong>ajouter un livre</strong> car sans ça on ne peut pas faire les autes. 
+
+#### Ajouter un livre 
+
+Je ne savais pas trop quoi mettre comme test pour vérifier que l'ajout a bien fonctionné. J'ai fait ça sans être trop sûre de moi : 
+
+<strong>test_bibliotheque.py</strong>
+```html
+from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+```
+Evidemment le test échoue, il n'existe pas de class <strong>Bibliotheque</strong> et encore moins de méthode <strong>add_book</strong> ou <strong>livre_existe</strong>.
+
+Je commence mon code dans <strong>bibliotheque.py</strong>. Evidemment ça a pas été évident du premier coup, j'ai un peu eu du mal au début (surtout que je code pas souvent en orienté objet...) mais au final j'ai réussi à m'en sortir ! Voici le code : 
+
+```html
+class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_est_disponible(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return livre["disponible"]
+        return False
+```
+Et ça passe ! 
+On peut mettre à jour la <strong>Todo</strong>.
+```html
+## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [-] Rechercher un livre par titre et obtenir ses infos
+- [ ] Rechercher un livre par auteur et avoir la liste de ses livres
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+```
+On va s'occuper de la recherche d'un livre maintenant, mais comme on a déjà codé le fait qu'il existe on va dire que cette fois on veut savoir ses informations et surtout sa disponibilité. 
+
+### Recherche d'un livre par titre
+
+On commence par écrire le test associé à la fonctionnalité :
+
+<strong>test_bibliotheque.py</strong>
+```html
+from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+```
+Le test échoue, on va rajouter une nouvelle méthode <strong>recherche_livre</strong>.
+
+```html
+class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+```
+Et ça passe du premier coup ! 
+On peut mettre à jour la <strong>Todo</strong>.
+```html
+## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [-] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+```
+### Recherche d'un livre par auteur
+
+On commence par écrire le test associé à la fonctionnalité :
+
+<strong>test_bibliotheque.py</strong>
+```html
+from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+```
+
+Je commence donc à coder une fonction pour faire passer le test : 
+<strong>bibliotheque.py</strong>
+```html
+class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+```
+Ca passe aussi ! 
+On peut mettre à jour la <strong>Todo</strong>.
+
+```html
+## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [-] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+```
+
+### Emprunter un livre
+
+On va s'occuper maintenant de l'emprunt d'un livre si il est disponible.
+
+{% details "Test associé" %}
+
+<strong>bibliotheque.py</strong>
+```html
+from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+
+def test_emprunt_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==True
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==False
+    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True
+```
+{% enddetails %}
+
+{% details "Code associé" %}
+
+<strong>bibliotheque.py</strong>
+```html
+class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+
+    def emprunt_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre and livre["disponible"]:
+                livre["disponible"]=False
+                return True
+        return False
+```
+{% enddetails %}
+
+On peut mettre à jour la <strong>Todo</strong>.
+
+```html
+## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [x] Emprunter un livre disponible
+- [-] Retourné un livre emprunté
+```
+
+### Retourner un livre
+
+On va s'occuper maintenant de retourner un livre emprunté.
+
+{% details "Test associé" %}
+
+<strong>bibliotheque.py</strong>
+```html
+from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+
+def test_emprunt_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==True
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==False
+    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True
+
+def test_retour_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    bibliotheque.emprunt_livre("L'Arrache-coeur")
+    bibliotheque.emprunt_livre("L'Ecume des jours")
+    bibliotheque.retour_livre("L'Arrache-coeur")
+    assert bibliotheque.livre_disponible("L'Arrache-coeur")==True
+    assert bibliotheque.livre_disponible("L'Ecume des jours")==False
+```
+{% enddetails %}
+
+{% details "Code associé" %}
+
+<strong>bibliotheque.py</strong>
+```html
+class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+
+    def emprunt_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre and livre["disponible"]:
+                livre["disponible"]=False
+                return True
+        return False
+
+    def retour_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                livre["disponible"]=True
+        pass
+    
+    def livre_disponible(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre: 
+                return livre["disponible"]
+        return False
+```
+{% enddetails %}
+
+On peut mettre à jour la <strong>Todo</strong>.
+
+```html
+## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [x] Emprunter un livre disponible
+- [x] Retourné un livre emprunté
+```
+On a fini notre gestionaire de bibliothèque ! 
+
 ### Horodateur
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Samedi 24/02 | 2H | *Environnement + Parie 1/3* |
 | Samedi 24/02 | 1H30 | *Partie 2/3* |
 | Dimanche 25/02 | 2H | *Partie 3/3* |
+| Mercredi 28/02 | 30min | *Exercice calculatrice* |
+| Mercredi 28/02 | 2H | *Exercice bibliothèque* |
