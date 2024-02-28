@@ -149,6 +149,53 @@ Voilà ce que ça donne :
 </div>
 
 
+Ensuite on fait la même chose mais avec l'inscription :
+
+<div style="display:flex">
+<div><img src="inscription.jpg" width="300" height="600"></div>
+</div>
+
+Voici le code associé :
+
+```js
+<Modal animationType="slide" transparent={true} visible={inscriptionModalVisible} onRequestClose={ouvertureInscriptionModal}>
+  <View style={styles.centeredView}>
+    <View style={styles.modalView}>
+      <TouchableOpacity style={styles.button} onPress={ouvertureInscriptionModal}>
+        <Text style={styles.textStyle}>X</Text>
+      </TouchableOpacity>
+      <View>
+        <Text style={styles.title}>S'inscrire</Text>
+            <View style={styles.userInput}>
+              <Text>Prénom*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Nom*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Email*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Mot de passe*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Confirmation du mot de passe*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <CustomButton title="S'inscrire"></CustomButton>
+      </View>
+    </View>
+  </View>
+</Modal>
+
+```
+
+
+
 ## Les étapes à réaliser pendant le Sprint 2 
 
 - Finir le front des pages (★☆☆☆☆ 4h)
