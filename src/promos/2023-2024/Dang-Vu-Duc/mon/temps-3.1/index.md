@@ -20,6 +20,10 @@ résumé: "Ce MON expliquera l'utilisation des bibliothèques PyPDF2 et Python-D
 Connaissance basique de la programmation objet avec Python.
 {%endprerequis%}
 
+{% note %}
+Tout les codes présentés sont disponibles dans mon [dossier GitHub de temps 3.1](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-3.1)
+{% endnote %}
+
 ## Introduction
 
 Les formats PDF et Word sont des formats très utilisés. Il peut être intéressant de pouvoir automatiser certaines tâches concernant ces formats, ou bien récupérer les données de ces documents dans des programmes Python. En effet, ces documents ont des encodages plus complexes qu'un simple fichier *.txt*, ce qui les rend difficile à manipuler sans bibliothèques adéquates. Ce MON présentera comment utiliser les bibliothèques **PyPDF2** et **Python-Docx** pour pouvoir manipuler de tels documents.
