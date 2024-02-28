@@ -20,6 +20,10 @@ résumé: "Ce MON expliquera l'utilisation des bibliothèques PyPDF2 et Python-D
 Connaissance basique de la programmation objet avec Python.
 {%endprerequis%}
 
+{% note %}
+Tout les codes présentés sont disponibles dans mon [dossier GitHub de temps 3.1](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-3.1)
+{% endnote %}
+
 ## Introduction
 
 Les formats PDF et Word sont des formats très utilisés. Il peut être intéressant de pouvoir automatiser certaines tâches concernant ces formats, ou bien récupérer les données de ces documents dans des programmes Python. En effet, ces documents ont des encodages plus complexes qu'un simple fichier *.txt*, ce qui les rend difficile à manipuler sans bibliothèques adéquates. Ce MON présentera comment utiliser les bibliothèques **PyPDF2** et **Python-Docx** pour pouvoir manipuler de tels documents.
@@ -219,4 +223,15 @@ Le texte d'un document Word est décomposé en paragraphes, qui se terminent à 
 
 ![Image5](Image5.png)
 
-on y trouve 6 objets de la classe **Runs**.
+on y trouve 6 objets de la classe **Runs**. Chacun de ces objets ont des attributs que l'ont peut modifier. En voici une liste:
+
+![Image6](Image6.png)
+*Source: [Automate the boring stuff with Python](https://automatetheboringstuff.com/2e/chapter15/)*
+
+On peut changer chacun de ces attributs en True ou False.
+
+L'attribut *paragraphs* de la classe **Document** permet de récupérer une liste de tout les paragraphes du documents. Chaque objet de la classe **Paragraphs** a un attribut *runs*, qui est une liste d'objets de la classe **Runs**.
+
+Une autre chose utile à faire est changer le style d'un paragraphe. Pour cela, on doit changer l'attribut *style* d'un objet *paragraph* et l'assigner à un nom de style. Le style de base se nomme "Normal", mais il est possible d'en créer un autre directement depuis le logiciel Word, avec le raccourci Ctrl + Maj + S.
+
+En connaissant tout ces éléments, on peut changer facilement le contenu d'un document Word, ainsi que ses attributs de base tels que le soulignage, l'italique etc...

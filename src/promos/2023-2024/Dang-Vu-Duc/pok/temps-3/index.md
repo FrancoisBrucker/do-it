@@ -22,6 +22,10 @@ résumé: Ce POK traitera de l'implémentation sur Python d'un programme qui per
 Connaissance basique de la programmation objet avec Python et des règles du jeu du poker. Connaissance du [module Qt pour Python](../../mon/temps-1.1)
 {%endprerequis%}
 
+{% note %}
+Tout les codes présentés sont disponibles dans mon [dossier GitHub de temps 3](https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-3)
+{% endnote %}
+
 ## Introduction
 
 Le poker est un jeu de carte très répandu et populaire. On le trouve dans tous les casinos et ce jeu est très complexe a comprendre en profondeur. Il y a tout un aspect mathématique et probabiliste autour du jeu et qui est très important à comprendre pour devenir fort à ce jeu. Ce POK traitera donc de cette dimension, et présentera donc des programmes Python pour calculer différents aspects du poker (variante Texas Hold'em). Le lecteur doit avoir une vague connaissance des règles du poker (notamment les combinaisons des cartes), et les termes plus techniques seront expliqué en temps voulu.
@@ -490,3 +494,270 @@ Maintenant que l'on a tout les outils pour faire des simulations, on va à prés
 Il faut tout d'abord designer les différentes fenêtres que l'utilisateur pourra utiliser. On utilise pour cela le logiciel Qt Designer, et on opte pour des designs simples. Voici un aperçu des 4 fenêtres dans le logiciel:
 
 ![Image3](Image3.png)
+
+On créé ensuite une nouvelle classe **UI_stats** qui contiendra toutes les méthodes pour afficher les interfaces graphiques. Cette classe hérite des classes **Poker_methods** et **Plot_stats**. L'initialisation de cette classe permet de récupérer tout les éléments des interfaces designées (boutons, textes, barres de progression etc...) afin de les assigner à des attributs de notre classe. Les noms de ces attributs doivent être bien distinctes.
+
+{% details "Cliquer pour voir l'initialisation de la classe **UI_stats**" %}
+
+```python
+class UI_stats(Plot_stats, Poker_methods):
+    def __init__(self):
+        super().__init__()
+        ui_file_name = "main_window.ui"
+        ui_file = QFile(ui_file_name)
+        loader = QUiLoader()
+        self.main_window = loader.load(ui_file)
+        ui_file.close()
+        self.main_window.show()
+
+        self.main_window.setWindowTitle("Fenêtre principale")
+        self.button_plot_stats_combinations = self.main_window.findChild(QPushButton, "Button_plot_stats_combinations")
+        self.button_plot_hands_ranking = self.main_window.findChild(QPushButton, "Button_plot_hands_ranking")
+        self.button_get_winrate = self.main_window.findChild(QPushButton, "Button_get_winrate")
+        self.button_get_average_winrate = self.main_window.findChild(QPushButton, "Button_get_average_winrate")
+
+        self.button_plot_stats_combinations.clicked.connect(self.show_window_plot_stats_combinations)
+        self.button_plot_hands_ranking.clicked.connect(self.show_window_hands_ranking)
+        self.button_get_winrate.clicked.connect(self.show_window_get_winrate)
+
+        ui_file_name2 = "window_plot_stats_combinations.ui"
+        ui_file2 = QFile(ui_file_name2)
+        loader2 = QUiLoader()
+        self.window_plot_stats_combinations = loader2.load(ui_file2)
+        ui_file2.close()
+        self.window_plot_stats_combinations.setWindowTitle("Affichage des fréquences d'apparition des mains")
+
+        self.line_edit_plot_stats_combinations = self.window_plot_stats_combinations.findChild(QLineEdit, "line_edit_plot_stats_combinations")
+        self.button_valider_plot_stats_combinations = self.window_plot_stats_combinations.findChild(QPushButton, "button_valider_plot_stats_combinations")
+        self.button_return_window_plot_stats_combinations = self.window_plot_stats_combinations.findChild(QPushButton, "button_return")
+        self.progress_bar_plot_stats_combinations = self.window_plot_stats_combinations.findChild(QProgressBar, "progress_bar_plot_stats_combinations")
+        self.progress_bar_plot_stats_combinations.setValue(0)
+
+        onlyInt = QIntValidator()
+        self.line_edit_plot_stats_combinations.setValidator(onlyInt)
+        self.line_edit_plot_stats_combinations.textChanged.connect(self.line_edit_plot_stats_combinations_changed)
+        self.line_edit_plot_stats_combinations.setText("100")
+        self.button_valider_plot_stats_combinations.clicked.connect(self.valider_plot_stats_combinations)
+        self.button_return_window_plot_stats_combinations.clicked.connect(self.return_main_window)
+        self.N_plot_stats_combinations = 100
+
+
+        ui_file_name3 = "window_plot_hands_ranking.ui"
+        ui_file3 = QFile(ui_file_name3)
+        loader3 = QUiLoader()
+        self.window_plot_hands_ranking = loader3.load(ui_file3)
+        ui_file3.close()
+        self.window_plot_hands_ranking.setWindowTitle("Affichage du classement des meilleures mains")
+
+        self.last_rank = 169        
+        self.first_rank = 1
+        self.button_valider_plot_hands_ranking = self.window_plot_hands_ranking.findChild(QPushButton, "button_valider_plot_hands_ranking")
+        self.button_valider_plot_hands_ranking.clicked.connect(self.valider_plot_hands_ranking)
+        self.line_edit_plot_hands_ranking_first_rank = self.window_plot_hands_ranking.findChild(QLineEdit, "line_edit_first_rank")
+        self.line_edit_plot_hands_ranking_first_rank.setValidator(onlyInt)
+        self.line_edit_plot_hands_ranking_first_rank.textChanged.connect(self.line_edit_plot_hands_ranking_first_rank_changed)
+        self.line_edit_plot_hands_ranking_first_rank.setText("1")
+        self.line_edit_plot_hands_ranking_last_rank = self.window_plot_hands_ranking.findChild(QLineEdit, "line_edit_last_rank")
+        self.line_edit_plot_hands_ranking_last_rank.setValidator(onlyInt)
+        self.line_edit_plot_hands_ranking_last_rank.textChanged.connect(self.line_edit_plot_hands_ranking_last_rank_changed)
+        self.line_edit_plot_hands_ranking_last_rank.setText("169")
+        self.button_return_plot_hands_ranking = self.window_plot_hands_ranking.findChild(QPushButton, "button_return_plot_hands_ranking")
+        self.button_return_plot_hands_ranking.clicked.connect(self.return_main_window)
+
+        ui_file_name4 = "window_get_winrate.ui"
+        ui_file4 = QFile(ui_file_name4)
+        loader4= QUiLoader()
+        self.window_get_winrate = loader4.load(ui_file4)
+        ui_file4.close()
+        self.window_get_winrate.setWindowTitle("Affichage d'un taux de réussite")
+
+        self.button_valider_get_winrate = self.window_get_winrate.findChild(QPushButton, "button_valider_get_winrate")
+        self.button_valider_get_winrate.clicked.connect(self.valider_get_winrate)
+        self.card1_player1 = self.window_get_winrate.findChild(QComboBox, "card1_player1")
+        self.card2_player1 = self.window_get_winrate.findChild(QComboBox, "card2_player1")
+        self.suit1_player1 = self.window_get_winrate.findChild(QComboBox, "suit1_player1")
+        self.suit2_player1 = self.window_get_winrate.findChild(QComboBox, "suit2_player1")
+        self.card1_player2 = self.window_get_winrate.findChild(QComboBox, "card1_player2")
+        self.card2_player2 = self.window_get_winrate.findChild(QComboBox, "card2_player2")
+        self.suit1_player2 = self.window_get_winrate.findChild(QComboBox, "suit1_player2")
+        self.suit2_player2 = self.window_get_winrate.findChild(QComboBox, "suit2_player2")
+        self.progress_bar_get_winrate = self.window_get_winrate.findChild(QProgressBar, "progress_bar_get_winrate")
+        self.result_get_winrate = self.window_get_winrate.findChild(QLabel, "result_simulation_get_winrate")
+        self.line_edit_get_winrate = self.window_get_winrate.findChild(QLineEdit, "line_edit_get_winrate")
+        self.line_edit_get_winrate.setValidator(onlyInt)
+        self.line_edit_get_winrate.textChanged.connect(self.line_edit_get_winrate_changed)
+        self.line_edit_get_winrate.setText("100")
+        self.N_get_winrate = 100
+        self.label_erreur_get_winrate = self.window_get_winrate.findChild(QLabel, "label_erreur_get_winrate")
+        self.label_erreur_get_winrate.setText("")
+        self.button_return_get_winrate = self.window_get_winrate.findChild(QPushButton, "button_return_get_winrate")
+        self.button_return_get_winrate.clicked.connect(self.return_main_window)
+```
+
+{% enddetails %}
+
+### Fenêtre principale
+
+La première fenêtre à faire est la fenêtre principale, qui agira comme un menu pour l'utilisateur. Cette fenêtre comporte pour l'instant 4 boutons qui mèneront chacun sur une autre fenêtre, en fonction de la statistique à afficher.
+
+![Image4](Image4.png)
+
+### Affichage des fréquences d'apparition des combinaisons
+
+Ensuite, on crée la fenêtre pour afficher les fréquences d'apparition des combinaisons. Pour cela, on reprend simplement le code présenté précédemment, en rajoutant une variable qui suit la progression de la boucle, pour actualiser la barre de progression. Voici la fenêtre qui apparaît lorsque l'on clique sur le bouton "Afficher les fréquences d'apparition des combinaisons":
+
+![Image5](Image5.png)
+
+L'utilisateur peur renseigner le nombre de simulations qu'il souhaite effectuer, ensuite la barre de progression évolue puis le graphique est affiché.
+
+### Affichage du classement des meilleures mains
+
+Cette fenêtre permet à l'utilisateur de visualiser le classement des meilleures mains. Encore une fois, on réutilise le code précédemment réalisé, et on récupère les informations renseignées par l'utilisateur dans les champs textuels grâce aux méthodes *line_edit_plot_hands_ranking_first_rank_changed* et *line_edit_plot_hands_ranking_last_rank_changed*.
+
+{% details "Cliquer pour voir le code des méthodes *line_edit_plot_hands_ranking_first_rank_changed* et *line_edit_plot_hands_ranking_last_rank_changed*" %}
+
+```python
+def line_edit_plot_hands_ranking_first_rank_changed(self, value):
+    if value != '':
+        self.first_rank = int(value)
+        if self.first_rank > self.last_rank:
+            self.button_valider_plot_hands_ranking.setEnabled(False)
+        else:
+            self.button_valider_plot_hands_ranking.setEnabled(True)
+    else:
+        self.button_valider_plot_hands_ranking.setEnabled(False)
+
+def line_edit_plot_hands_ranking_last_rank_changed(self, value):
+    if value != '':
+        self.last_rank = int(value)
+        if self.first_rank > self.last_rank:
+            self.button_valider_plot_hands_ranking.setEnabled(False)
+        else:
+            self.button_valider_plot_hands_ranking.setEnabled(True)
+    else:
+        self.button_valider_plot_hands_ranking.setEnabled(False)
+```
+
+{% enddetails %}
+
+La fenêtre affichée est donc la suivante:
+
+![Image6](Image6.png)
+
+L'utilisateur peut rentrer le premier rang qu'il veut afficher et le dernier rang.
+
+### Affichage du taux de réussite d'une main face à une autre
+
+La dernière fenêtre implémentée est celle qui permet au joueur d'obtenir le taux de réussite d'une main face à une autre. La sélection des 4 cartes se fait grâce à des menus déroulants. On doit vérifier que plusieurs cartes n'ont pas été choisies deux fois, sinon on affiche un message d'erreur. Enfin, l'utilisateur choisit un nombre de simulations souhaité, et on réutilise la méthode précédente en suivant la progression de la boucle.
+
+{% details "Cliquer pour voir le code de la méthode *valider_get_winrate*" %}
+
+```python
+def valider_get_winrate(self):
+    if self.card1_player1.currentText() == "As":
+        value1_player1 = 14
+    elif self.card1_player1.currentText() == "Roi":
+        value1_player1 = 13
+    elif self.card1_player1.currentText() == "Dame":
+        value1_player1 = 12
+    elif self.card1_player1.currentText() == "Valet":
+        value1_player1 = 11
+    else:
+        value1_player1 = int(self.card1_player1.currentText())
+    if self.card1_player2.currentText() == "As":
+        value1_player2 = 14
+    elif self.card1_player2.currentText() == "Roi":
+        value1_player2 = 13
+    elif self.card1_player2.currentText() == "Dame":
+        value1_player2 = 12
+    elif self.card1_player2.currentText() == "Valet":
+        value1_player2 = 11
+    else:
+        value1_player2 = int(self.card1_player2.currentText())
+
+    if self.card2_player1.currentText() == "As":
+        value2_player1 = 14
+    elif self.card2_player1.currentText() == "Roi":
+        value2_player1 = 13
+    elif self.card2_player1.currentText() == "Dame":
+        value2_player1 = 12
+    elif self.card2_player1.currentText() == "Valet":
+        value2_player1 = 11
+    else:
+        value2_player1 = int(self.card2_player1.currentText())
+    if self.card2_player2.currentText() == "As":
+        value2_player2 = 14
+    elif self.card2_player2.currentText() == "Roi":
+        value2_player2 = 13
+    elif self.card2_player2.currentText() == "Dame":
+        value2_player2 = 12
+    elif self.card2_player2.currentText() == "Valet":
+        value2_player2 = 11
+    else:
+        value2_player2 = int(self.card2_player2.currentText())
+    cards = [self.get_card_name(value1_player1, str(self.suit1_player1.currentText())), self.get_card_name(value2_player1, str(self.suit2_player1.currentText())), self.get_card_name(value1_player2, str(self.suit1_player2.currentText())), self.get_card_name(value2_player2, str(self.suit2_player2.currentText()))]
+    cards_removed = list(set(cards))
+    if len(cards_removed) == 4:
+        self.button_valider_get_winrate.setEnabled(False)
+        self.label_erreur_get_winrate.setText("")
+        player1_hand = [Card(value1_player1, str(self.suit1_player1.currentText())), Card(value2_player1, str(self.suit2_player1.currentText()))]
+        player2_hand = [Card(value1_player2, str(self.suit1_player2.currentText())), Card(value2_player2, str(self.suit2_player2.currentText()))]
+        players_cards = []
+        for k in range(2):
+            players_cards.append(player1_hand[k].name)
+            players_cards.append(player2_hand[k].name)
+        current_deck = [card for card in self.deck if card.name not in players_cards]
+        tot_wins_player1 = 0
+        tot_wins_player2 = 0
+        tot_draws = 0
+        progression = 0
+        for k in range(self.N_get_winrate):
+            progression += 1
+            current_progression = (progression / self.N_get_winrate) * 100
+            board = []
+            deck = current_deck[:]
+            for i in range(5):
+                index = rd.randint(0, len(deck) - 1)
+                card = deck[index]
+                deck.pop(index)
+                board.append(card)
+            result = self.do_first_player_win(player1_hand, player2_hand, board)
+            if result == None:
+                tot_draws += 1
+            elif result:
+                tot_wins_player1 += 1
+            elif not result:
+                tot_wins_player2 += 1
+            self.progress_bar_get_winrate.setValue(current_progression)
+        self.result_get_winrate.setText(f"Taux de réussite de la première main: {round(tot_wins_player1/self.N_get_winrate * 100, sigfigs = 3)}% \nTaux de réussite de la deuxième main: {round(tot_wins_player2/self.N_get_winrate * 100, sigfigs = 3)}% \nTaux de parties nulles: {round(tot_draws/self.N_get_winrate * 100, sigfigs = 3)}%")
+        self.button_valider_get_winrate.setEnabled(True)
+    else:
+        self.label_erreur_get_winrate.setText("Au moins une carte se répète")
+```
+
+{% enddetails %}
+
+![Image7](Image7.png)
+
+## Bilan du premier sprint et prévisions du deuxième sprint
+
+Les éléments du backlog du premier sprint ont été tous réalisés, sauf un élément qu'il faut ajouter à l'interface graphique ("Obtenir un taux de réussite global d'une main"). Voici un résumé du temps passé sur chaque item du backlog (temps réel effectué après la flèche ->):
+
+- Implémentation des structures de données de base, ainsi que leurs méthodes associées (cartes, jeu de carte, pioche...): **1, 15min** -> **15min**
+- Implémentation de la méthode pour déterminer la combinaison d'une main: **3, 1h** -> **1h**
+- Implémentation de la méthode pour avoir toutes les mains possibles: **1, 15min** -> **15min**
+- Implémentation de la méthode pour déterminer le gagnant entre deux mains: **2, 45min** -> **30min**
+- Implémentation de la méthode pour obtenir différents taux de réussite: **3, 1h15** -> **1h**
+- Réalisation de tests pour vérifier le bon fonctionnement des méthodes, débogage: **3, 1h30** -> **2h15**
+- Réalisation et design des fenêtres pour les interfaces graphiques: **3, 2h** -> **1h30**
+- Création du backend des interfaces: **2, 2h** -> **2h45**
+- Tests et débogage des interfaces: **2, 1h** -> **1h30**
+
+J'ai donc passé un peu plus de temps que prévu, notamment car j'ai sous estimé la création du backend des interfaces, qui est assez redondante et où il faut rentrer beaucoup d'informations. J'ai été particulièrement lent sur cette partie car elle ne me passionnait pas vraiment. J'ai également passé plus de temps que prévu sur les tests et débogages, car rien ne marchait du premier coup, et je devais vérifier mes résultats avec les résultats théoriques.
+
+Le deuxième sprint sera dédié à la création d'une interface graphique qui assistera le joueur dans ses décisions, en fonction de la situation actuelle du jeu. Ce sprint devra aussi reprendre les quelques éléments que je n'ai pas eu le temps de faire lors du premier sprint. En voici un backlog:
+
+- Reprise des éléments manquants de l'interface graphique du premier sprint: **2, 30min**
+- Design des nouvelles interfaces pour l'assistant de jeu: **3, 2h30**
+- Création du code implémentant la logique de l'assistant: **5, 3h30**
+- Tests de l'assistant: **2, 1h30**
