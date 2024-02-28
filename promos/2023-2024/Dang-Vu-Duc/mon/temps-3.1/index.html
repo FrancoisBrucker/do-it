@@ -383,7 +383,13 @@ CentraleMarseille
 <p>Nous allons à présent explorer les possibilités qu'offre le module Python-docx. Pour charger un fichier Word avec ce module, il faut utiliser la commande: <code>doc = docx.Document(&quot;Word test 1.docx&quot;)</code>. On pourra ensuite manipuler cet objet et utiliser ses attributs.</p>
 <p>Le texte d'un document Word est décomposé en paragraphes, qui se terminent à un retour à la ligne. Dans ces paragraphes, on y trouve des objets de la classe <strong>Runs</strong> qui correspondent à du texte de la même police. Par exemple, dans le texte suivant:</p>
 <p><img src="Image5.png" alt="Image5"></p>
-<p>on y trouve 6 objets de la classe <strong>Runs</strong>.</p>
+<p>on y trouve 6 objets de la classe <strong>Runs</strong>. Chacun de ces objets ont des attributs que l'ont peut modifier. En voici une liste:</p>
+<p><img src="Image6.png" alt="Image6"><br>
+<em>Source: <a href="https://automatetheboringstuff.com/2e/chapter15/">Automate the boring stuff with Python</a></em></p>
+<p>On peut changer chacun de ces attributs en True ou False.</p>
+<p>L'attribut <em>paragraphs</em> de la classe <strong>Document</strong> permet de récupérer une liste de tout les paragraphes du documents. Chaque objet de la classe <strong>Paragraphs</strong> a un attribut <em>runs</em>, qui est une liste d'objets de la classe <strong>Runs</strong>.</p>
+<p>Une autre chose utile à faire est changer le style d'un paragraphe. Pour cela, on doit changer l'attribut <em>style</em> d'un objet <em>paragraph</em> et l'assigner à un nom de style. Le style de base se nomme &quot;Normal&quot;, mais il est possible d'en créer un autre directement depuis le logiciel Word, avec le raccourci Ctrl + Maj + S.</p>
+<p>En connaissant tout ces éléments, on peut changer facilement le contenu d'un document Word, ainsi que ses attributs de base tels que le soulignage, l'italique etc...</p>
 
 
 </article>
