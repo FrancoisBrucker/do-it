@@ -97,6 +97,11 @@ const Accueil = () => {
 };
 ```
 
+<div style="display:flex">
+<div><img src="accueil.jpg" width="300" height="600"></div>
+</div>
+
+
 Maintenant ce qu'il faudrait c'est que quand on clique sur les boutons **CONNEXION** et **INSCRIPTION**, les fenêtres s'ouvrent pour que l'utilisateur puisse se connecter ou s'inscrire comme vu sur les design précédent. J'ai créé la fenêtre de connexion de la manière suivante : 
 
 
