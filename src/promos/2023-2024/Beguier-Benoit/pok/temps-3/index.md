@@ -121,9 +121,13 @@ Jalonnement des tâches du département à long terme
 
 J'ai aussi mis en place un outil Google Tasks, qui permet d'assigner des tâches, avec des jalons et des acteurs, qui apparaissent sur Google Calendar. Force est d'avouer que l'outil n'a pas été adopté par l'équipe, car actuellement toutes les tâches ne sont plus cochées comme faites alors qu'elles le sont lorsqu'on discute avec eux.
 
+## Retour d'expérience sur le Sprint 1
+
+L'ensemble des tâches que je m'étais fixée ont été effectuées. Il était important de bien discerner le besoin et les actions à mener. Au lieu d'aborder le sujet des fournisseurs, j'ai du coup préféré allouer ces deux heures à ce sujet.
+
 ## Horodotage
 
-Lundi 19/02 : 2 heures de documentation 
+Lundi 19/02 : 2 heures de documentation
 Mercredi 21/02 : 1 heure de documentation de *Lean 540°* + 1 heure pour créer le questionnaire du besoin de la bonne manière
 Vendredi 23/02 : 2 heures d'organisation de partage des avancées + créer le support adéquat
 Samedi 24/02 : 1 heure de tri des réponses du questionnaire, choix des actions à mener, des outils et des jalons
