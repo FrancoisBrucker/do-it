@@ -247,6 +247,46 @@
 <div style="display:flex">
 <div><img src="fenetre_connexion.jpg" width="300" height="600"></div>
 </div>
+<p>Ensuite on fait la même chose mais avec l'inscription :</p>
+<div style="display:flex">
+<div><img src="inscription.jpg" width="300" height="600"></div>
+</div>
+<p>Voici le code associé :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Modal animationType<span class="token operator">=</span><span class="token string">"slide"</span> transparent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span> visible<span class="token operator">=</span><span class="token punctuation">{</span>inscriptionModalVisible<span class="token punctuation">}</span> onRequestClose<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureInscriptionModal<span class="token punctuation">}</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>centeredView<span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>modalView<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>TouchableOpacity style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>button<span class="token punctuation">}</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureInscriptionModal<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textStyle<span class="token punctuation">}</span><span class="token operator">></span><span class="token constant">X</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>TouchableOpacity<span class="token operator">></span>
+      <span class="token operator">&lt;</span>View<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">></span><span class="token constant">S</span>'inscrire<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>Text<span class="token operator">></span>Prénom<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+              <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>Text<span class="token operator">></span>Nom<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+              <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>Text<span class="token operator">></span>Email<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+              <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>Text<span class="token operator">></span>Mot de passe<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+              <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>Text<span class="token operator">></span>Confirmation du mot de passe<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+              <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"S'inscrire"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>CustomButton<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">></span>
+
+</code></pre>
 <h2>Les étapes à réaliser pendant le Sprint 2</h2>
 <ul>
 <li>Finir le front des pages (★☆☆☆☆ 4h)</li>
