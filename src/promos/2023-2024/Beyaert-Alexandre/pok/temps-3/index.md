@@ -152,7 +152,31 @@ Il est crucial de comprendre les compétences et les connaissances nécessaires 
 
 #### Industry 4.0 in Logistics and Supply Chain Management
 
-Modern Supply Chain (MSC) : fast, automatic in the process (accept orders, preparing orders and distribute to customers), more flexible, and transparent. Moreover, an MSC can work in dynamic systems and with a high volume of data
+À l'heure actuelle, "l'objectif de toutes les entreprises est d'atteindre une Supply Chain Moderne dans la mesure où celle-ci est rapide, automatique dans les process, permet de travailler avec des systèmes dynamiques avec un grand volume de données". Amazon est ses millions de commandes quotidiennes en est un exemple.
+
+L'objectif de l'Industrie 4.0 est d'améliorer la productivité et réduire les coûts. Elle se focalise sur l'automatisation, la digitalisation, l'interconnexion rendant dès lors possible l'intégration des différents acteurs de la Supply Chain : fournisseurs, manufacturiers, consommateurs... au coeur des mêmes systèmes dynamiques. Cette intégration permet un meilleur decision-making de la part des managers réduisant ainsi les risques et augmentant la productivité.
+
+Le recourt au Big Data par exemple, collectant et évaluant les données va rendre possible l'amélioration de la Supply Chain sans interrompre les opérations et ainsi améliorer la satisfaction client.
+
+Cependant, le concept et le rôle de l'industrie 4.0 ne sont pas encore clairement établis. Apparu au milieu des années 2010, l'Industrie 4.0 ne présente pas de définition exacte. Repris sous les termes de "d'usine intelligente", "d'industrie intégrée", elle évoque les notions de réseau intelligent basé sur la digitalisation soulignant une interaction entre machines et produits sans besoin d'intervention humaine.
+Elle promeut l'utilisation de systèmes cyber-physiques : IoT, IoS, Big Data, Cloud Manufacturing... dont les techniques de Machine Learning, d'Intelligence Artificielle, de Business Analysis aident à son déploiement.
+
+L'Industrie 4.0 affecte 4 principaux pans de la Supply Chain : l'intégration, les opérations, les achats et la distribution. Son impact consiste à améliorer la productivité de l'entreprise en "réduisant le Lead Time, en réduisant le temps de réponse aux événement imprévus et en suscitant une augmentation significative de la qualité de la prise de décision."
+Elle est également précieuse pour les services S&OP et logistique afin d'améliorer les prévisions et planifications.
+
+**Challenges :**
+L'implémentation de l'Industrie 4.0 n'en reste pas moins évidente : le manque d'infrastructure technologique couplé à une pénurie d'experts pour démarrer ou améliorer les systèmes existants rend difficile sa mise en place. De plus, outre le capital initial requis pour innover, il reste complexe d'évaluer le retour sur investissement de cette transition, ce qui entrave le soutien des gestionnaires.
+
+L'Industrie 4.0, prônant la réduction de l'implication humaine, soulève des préoccupations quant à l'avenir des employés jusqu'à soulever une question fondamentale "Qu'adviendra-t-il aux employés perdant leur emploi au cours de cette transition ?"
+
+Des recherches supplémentaires sont nécessaires pour clarifier les avantages potentiels et les impacts sur la productivité des entreprises.
+
+Pour ces raisons, peu d'entreprises restent désireuses d'expérimenter l'industrie 4.0
+
+La question à se poser est alors la suivante : "Où, quand et comment les industries devraient implémenter l'Industrie 4.0 dans l'approche de leur SUpply Chain ?".
+
+
+
 
 Example of MSC : Amazon, millions of orders every day
 
