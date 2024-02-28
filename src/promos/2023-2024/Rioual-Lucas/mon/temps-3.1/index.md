@@ -156,4 +156,12 @@ Je conseille Symfony et ce livre pour des personnes qui ont déjà un bon bagage
 Voici le repo github de ce que j'ai fait : https://github.com/LucasRioual/guestbook-symfony
 
 
+## Horodateur
 
+| Taches                                                            | Temps passé |
+|----------------------------------------------------------------------------|--------------|
+| **Setup du projet**                                              | 3h            |
+| **Créer un controleur**                                          | 1h             |
+| **Mettre en place la base de donnée**                                                | 1h           |
+| **Page Admin**                                                         | 2h           |
+| **Faire l'interface**                                                         | 2h           |
