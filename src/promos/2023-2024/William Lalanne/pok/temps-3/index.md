@@ -62,66 +62,74 @@ Enfin, une fois que l'utilisateur est connecté, il a accès à la page principa
 ![principale](principale.png)
 
 
-## 2. Frontend des pages en React Native
+## Frontend des pages en React Native
 
 Pour le frontend des pages, il faut que l'on puisse naviguer entre chacune d'entre elles, je vais donc créer un component pour la page d'accueil, un component pour le pop-up de connexion et un component pour le pop-up de connexion. 
 
 Voici le component pour la page d'accueil : 
 
 ```js
+
 const Accueil = () => {
-
-    return (
-        <View style={styles.container}>
-          <Image 
-            source={require('./logo.png')}
-            style={styles.logo}
-          />
-          <Text style={styles.presentation}>Bienvenue sur l'application Centrale M'Aide</Text>
-          <View style={styles.userInput}>
-          </View>
-          <CustomButton title="CONNEXION" />
-          <CustomButton title="INSCRIPTION"  />
-          <Text style={styles.phrase}>Une annonce à déposer ? Vous êtes au bon endroit</Text>
-        </View>
-    );
+  return (
+    <View style={[styles.container, { backgroundColor }]}>
+      <Image source={require('./logo.png')} style={styles.logo}/>
+      <Text style={styles.presentation}>Bienvenue sur l'application Centrale M'Aide</Text>
+      <View style={styles.userInput}>
+        <CustomButton title="CONNEXION" onPress={ouvertureModal} />
+        <CustomButton title="INSCRIPTION"  />
+      </View>
+      <Text style={styles.phrase}>Une annonce à déposer ? Vous êtes au bon endroit</Text>
+    </View>
+   );
 };
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    textInput: {
-      height: 40,
-      width: 200,
-      borderColor: 'gray',
-      borderWidth: 1,
-      marginTop: 8,
-    },
-    userInput: {
-      display: 'flex',
-      flexDirection: 'column'
-    },
-    logo: {
-      width: 250,
-      height: 200,
-      resizeMode: "contain",
-    },
-    presentation: {
-      fontSize: 20,
-      textAlign: 'center',
-      width: 250,
-    },
-    phrase: {
-      fontSize: 15,
-      width: 200,
-      textAlign: 'center',
-      marginTop: 80,
-    }
-  });
-
-  
-export default Accueil;
 ```
+
+Maintenant ce qu'il faudrait c'est que quand on clique sur les boutons **CONNEXION** et **INSCRIPTION**, les fenêtres s'ouvrent pour que l'utilisateur puisse se connecter ou s'inscrire comme vu sur les design précédent. J'ai créé la fenêtre de connexion de la manière suivante : 
+
+
+```js
+<Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={ouvertureModal}>
+    <View style={styles.centeredView}>       
+      <View style={styles.modalView}>
+        <TouchableOpacity style={styles.button} onPress={ouvertureModal}>
+          <Text style={styles.textStyle}>X</Text>
+        </TouchableOpacity>
+        <View>
+          <Text style={styles.title}>Se connecter</Text>
+          <View style={styles.userInput}>
+            <Text>Email*</Text>
+            <TextInput style={styles.textInput}></TextInput>
+          </View>
+          <View style={styles.userInput}>
+            <Text>Mot de passe*</Text>
+            <TextInput style={styles.textInput}></TextInput>
+          </View>
+          <CustomButton title="Se connecter"></CustomButton>
+        </View>
+       </View>
+    </View>
+</Modal>
+```
+
+La fenêtre de connexion que l'on veut ouvrir est créée grâce à un component appelé **Modal**. dans ce modal on met tous les éléments dont on a besoin : 
+- un bouton pour fermer la fenêtre
+- le titre "Se connecter"
+- les input email et mot de passe
+- le bouton "Connexion"
+
+Il faut ensuite construire la logique, quand on clique sur le bouton connexion, cela déclenche une fonction appelée **"ouvertureModal"**. Voilà à quoi ressemble cette fonction : 
+
+```js
+const [modalVisible, setModalVisible] = useState(false);
+
+const ouvertureModal = () => {
+  setModalVisible(!modalVisible);
+};
+```
+
+La fonction permet de changer la visibilité de la fenêtre à chaque fois qu'elle est utilisée. Donc quand on appuie sur inscription la fenêtre est visible. 
+
+Voilà ce que ça donne : 
+
+![connexion](fenetre_connexion.jpg)
