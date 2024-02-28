@@ -54,16 +54,21 @@ L'objectif ici est de reproduire ce jeu sur un navigateur en déplaçant le frui
 Je me suis rendue sur une [documentation](https://brm.io/matter-js/) pour comprendre comment fonctionne cette bibliothèque. J'ai donc regardé une première vidéo [Introduction to Matter.js](https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh) et la deuxième [Introduction to Matter.js Continued](https://www.youtube.com/watch?v=uITcoKpbQq4&list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh&index=21).
 
 ### 2. Créer l'environnement de code 
-Je me crée un dossier *Pasteque* et j'initialise mon projet avec 
 
+Je me crée un dossier *Pasteque* et j'initialise mon projet avec :
+
+```html
 npm init 
+```
 
-J'ajoute la ligne "type" : "module", je crée un fichier index.js et index.html et j'installe Express et Matter via les commande 
+J'ajoute la ligne "type" : "module", je crée un fichier index.js et index.html et j'installe Express et Matter via les commandes : 
 
+```html
 npm add --save express
-npm install matter-js
+npm install matter-js 
+```
 
-J'ajoute un fichier main.js
+J'ajoute un fichier main.js dans lequel je vais coder les différentes fonctions pour le jeu.
 
 J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas réussi à corriger : 
 
@@ -71,12 +76,11 @@ J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas
 <div><img src="erreur_matter.png"></div>
 </div>
 
-J'ai donc utilisé Vite pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.
-
-J'ai donc l'environnement suivant : 
-
+J'ai donc utilisé [Vite](https://vitejs.dev/) pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.
 
 ### 3. Créer la boite du jeu 
+
+Maintenant que j'ai mon environnement je peux commencer à coder le jeu.
 La première chose à créer est donc une boite, pour ça j'ai juste suivi la [documentation](https://brm.io/matter-js/) qui explique comment ajouter des corps aux mondes ce qui m'a donné cela : 
 
 <div style="display:flex">

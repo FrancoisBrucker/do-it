@@ -57,7 +57,10 @@ Une fois l'application créée, pour la visualiser, il suffit d'ouvrir un termin
 npm start
 ```
 Quand on fait ça, un qr code apparaît dans le terminal comme ci-dessous : 
-![expo_start](start_expo.png)
+
+<div style="display:flex">
+<div><img src="start_expo.png"></div>
+</div>
 
 En téléchargeant l'application Expo sur son téléphone et en étant connecté sur le même réseau wifi que son ordinateur, on peut scanner le qrcode et visualiser l'application directement sur son téléphone. 
 
@@ -113,7 +116,9 @@ const styles = StyleSheet.create({
 });
 ```
 
-![rendu_application](demo_app.jpg)
+<div style="display:flex">
+<div><img src="demo_app.jpg" width="300" height="600"></div>
+</div>
 
 On va améliorer un peu cette page pour qu'elle ressemble à une page de connexion sur un site web. Il faut donc des input pour que l'utilisateur puisse entrer son prenom, so nom et un bouton pour se connecter. 
 
@@ -140,7 +145,9 @@ export default function App() {
 }
 ```
 
-![app_amélioree](amelioration_app.jpg)
+<div style="display:flex">
+<div><img src="amelioration_app.jpg" width="300" height="600"></div>
+</div>
 
 Pour faire cela j'ai du créer un component **CustomButton** car le component **<Button>** de base n'est pas modifiable. Voici le fichier CustomButton.js : 
 
