@@ -11,6 +11,8 @@ tags:
   - "temps 3"
   - "Gestion de projet"
   - "Logistique"
+  - "Gestion d'équipe"
+  - "Communication"
 
 résumé: Appliquer les bases de la gestion de projet, de la supply chain et de la logistique à l'organisation d'une équipe de Formula Student.
 ---
@@ -116,3 +118,14 @@ Jalonnement des tâches du département à court terme
 Jalonnement des tâches du département à long terme
 
 ![a](long_terme.png)
+
+J'ai aussi mis en place un outil Google Tasks, qui permet d'assigner des tâches, avec des jalons et des acteurs, qui apparaissent sur Google Calendar. Force est d'avouer que l'outil n'a pas été adopté par l'équipe, car actuellement toutes les tâches ne sont plus cochées comme faites alors qu'elles le sont lorsqu'on discute avec eux.
+
+## Horodotage
+
+Lundi 19/02 : 2 heures de documentation 
+Mercredi 21/02 : 1 heure de documentation de *Lean 540°* + 1 heure pour créer le questionnaire du besoin de la bonne manière
+Vendredi 23/02 : 2 heures d'organisation de partage des avancées + créer le support adéquat
+Samedi 24/02 : 1 heure de tri des réponses du questionnaire, choix des actions à mener, des outils et des jalons
+Lundi 26/02 : 2 heures de jalonnement de tâches et répartition des acteurs
+Mardi 27/02 : 1h échange avec Florian + lecture de la fin de *Lean 540°*
