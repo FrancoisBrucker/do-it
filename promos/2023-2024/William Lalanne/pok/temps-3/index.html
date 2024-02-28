@@ -178,65 +178,64 @@
 <p><img src="inscription.png" alt="inscription"></p>
 <p>Enfin, une fois que l'utilisateur est connecté, il a accès à la page principale sur laquelle se trouve les annonces. Il doit pouvoir faire une recherche parmi les annonces présentes et il doit pouvoir en ajouter s'il le souhaite.</p>
 <p><img src="principale.png" alt="principale"></p>
-<h2>2. Frontend des pages en React Native</h2>
+<h2>Frontend des pages en React Native</h2>
 <p>Pour le frontend des pages, il faut que l'on puisse naviguer entre chacune d'entre elles, je vais donc créer un component pour la page d'accueil, un component pour le pop-up de connexion et un component pour le pop-up de connexion.</p>
 <p>Voici le component pour la page d'accueil :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">Accueil</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">></span>
-          <span class="token operator">&lt;</span>Image 
-            source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
-            style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span>
-          <span class="token operator">/</span><span class="token operator">></span>
-          <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>presentation<span class="token punctuation">}</span><span class="token operator">></span>Bienvenue sur l<span class="token string">'application Centrale M'</span>Aide<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
-          <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
-          <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
-          <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"CONNEXION"</span> <span class="token operator">/</span><span class="token operator">></span>
-          <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"INSCRIPTION"</span>  <span class="token operator">/</span><span class="token operator">></span>
-          <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>phrase<span class="token punctuation">}</span><span class="token operator">></span>Une annonce à déposer <span class="token operator">?</span> Vous êtes au bon endroit<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">
+<span class="token keyword">const</span> <span class="token function-variable function">Accueil</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">,</span> <span class="token punctuation">{</span> backgroundColor <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Image source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>presentation<span class="token punctuation">}</span><span class="token operator">></span>Bienvenue sur l<span class="token string">'application Centrale M'</span>Aide<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"CONNEXION"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureModal<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"INSCRIPTION"</span>  <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>phrase<span class="token punctuation">}</span><span class="token operator">></span>Une annonce à déposer <span class="token operator">?</span> Vous êtes au bon endroit<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> styles <span class="token operator">=</span> StyleSheet<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token literal-property property">container</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">flex</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">alignItems</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">textInput</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">borderColor</span><span class="token operator">:</span> <span class="token string">'gray'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">borderWidth</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">marginTop</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">userInput</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">display</span><span class="token operator">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">flexDirection</span><span class="token operator">:</span> <span class="token string">'column'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">logo</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">resizeMode</span><span class="token operator">:</span> <span class="token string">"contain"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">presentation</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">textAlign</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">phrase</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">textAlign</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">marginTop</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  
-<span class="token keyword">export</span> <span class="token keyword">default</span> Accueil<span class="token punctuation">;</span>
 </code></pre>
+<p>Maintenant ce qu'il faudrait c'est que quand on clique sur les boutons <strong>CONNEXION</strong> et <strong>INSCRIPTION</strong>, les fenêtres s'ouvrent pour que l'utilisateur puisse se connecter ou s'inscrire comme vu sur les design précédent. J'ai créé la fenêtre de connexion de la manière suivante :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Modal animationType<span class="token operator">=</span><span class="token string">"slide"</span> transparent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span> visible<span class="token operator">=</span><span class="token punctuation">{</span>modalVisible<span class="token punctuation">}</span> onRequestClose<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureModal<span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>centeredView<span class="token punctuation">}</span><span class="token operator">></span>       
+      <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>modalView<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>TouchableOpacity style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>button<span class="token punctuation">}</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureModal<span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textStyle<span class="token punctuation">}</span><span class="token operator">></span><span class="token constant">X</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>TouchableOpacity<span class="token operator">></span>
+        <span class="token operator">&lt;</span>View<span class="token operator">></span>
+          <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">></span>Se connecter<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+          <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>Text<span class="token operator">></span>Email<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+            <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+          <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>Text<span class="token operator">></span>Mot de passe<span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+            <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+          <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"Se connecter"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>CustomButton<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">></span>
+</code></pre>
+<p>La fenêtre de connexion que l'on veut ouvrir est créée grâce à un component appelé <strong>Modal</strong>. dans ce modal on met tous les éléments dont on a besoin :</p>
+<ul>
+<li>un bouton pour fermer la fenêtre</li>
+<li>le titre &quot;Se connecter&quot;</li>
+<li>les input email et mot de passe</li>
+<li>le bouton &quot;Connexion&quot;</li>
+</ul>
+<p>Il faut ensuite construire la logique, quand on clique sur le bouton connexion, cela déclenche une fonction appelée <strong>&quot;ouvertureModal&quot;</strong>. Voilà à quoi ressemble cette fonction :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>modalVisible<span class="token punctuation">,</span> setModalVisible<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">ouvertureModal</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">setModalVisible</span><span class="token punctuation">(</span><span class="token operator">!</span>modalVisible<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La fonction permet de changer la visibilité de la fenêtre à chaque fois qu'elle est utilisée. Donc quand on appuie sur inscription la fenêtre est visible.</p>
+<p>Voilà ce que ça donne :</p>
+<p><img src="fenetre_connexion.jpg" alt="connexion"></p>
 
 
 </article>
