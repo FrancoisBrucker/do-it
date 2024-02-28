@@ -5,20 +5,29 @@ title: "Sciences sociales pour élaborer un questionnaire "
 authors:
   - Lola Bourdon
 
-date: 2023-12-15
+date: 2024-02-28
 tags: 
   - "temps 3"
   - "questionnaire"
   - "google form"
+  - "sciences sociales"
 
-résumé: "Sciences sociales élaborer un questionnaire "
+résumé: "Sciences sociales pour élaborer un questionnaire "
 
 ---
 {%prerequis 'Aucun prérequis'%}  
 {%endprerequis%}
 
+A l'occasion de mon précédent [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.2/), dans lequel j'ai réalisé l'analyse des données d'un questionnaire,je me suis rendue compte qu'il était plutôt mal réalisé. J'ai donc décidé pour ce MON de faire une étude des sciences sociales pour élaborer une enquête ce qui me permettra de revoir l'enquête et le questionnaire réalisé.
 
-A l'occasion de mon précédent [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.2/), dans lequel j'ai réalisé l'analyse des données d'un questionnaire et je me suis rendue compte qu'il était plutôt mal réalisé. J'ai donc décidé pour ce MON de faire une étude des sciences sociales pour élaborer une enquête ce qui me permettra de revoir l'enquête et le questionnaire réalisé.
+### Sommaire
+
+1. Introduction
+2. Etapes de l'enquête
+3. Construire un échantillon
+4. Concevoir et élaborer le questionnaire 
+5. Amélioration d'une enquête existante 
+6. Conclusion
 
 ### Introduction
 
@@ -75,7 +84,7 @@ En revanche, l'échantillonnage non probabiliste repose sur des critères spéci
 
 4. **Application de règles strictes :** Quelle que soit la méthode d'échantillonnage choisie, il est essentiel de respecter certaines règles pour garantir la fiabilité des résultats. Cela comprend l'absence de double-sondage, l'évitement de questionner des personnes qui se connaissent ou qui connaissent l'enquêteur, et le contrôle rigoureux de la répartition géographique et des quotas.
 
-En suivant ces étapes et en utilisant les techniques appropriées, il est possible de construire un échantillon robuste et représentatif pour mener à bien une enquête quantitative.
+En suivant ces étapes et en utilisant les techniques appropriées, il est possible de construire un échantillon robuste et représentatif pour mener à bien une enquête.
 
 ### Concevoir et élaborer le questionnaire 
 
@@ -88,37 +97,39 @@ On différencie 4 catégories de questions :
 3. Questions d'opinion
    1. Que pensent-elles?
 4. Questions de connaissances
-   1. que savent-elles?
+   1. Que savent-elles?
 
 Ensuite, pour concevoir et élaborer un questionnaire, il faut suivre plusieurs règles cruciales :
 
-3. **Définition du contenu du questionnaire** : Identifiez la variable principale et les variables secondaires liées à l'objet d'étude. Ces variables doivent être clairement définies pour orienter les questions du questionnaire.
+1. **Définition du contenu du questionnaire** : Identifiez la variable principale et les variables secondaires liées à l'objet d'étude. Ces variables doivent être clairement définies pour orienter les questions du questionnaire.
+2. . **Forme du questionnaire** : Le questionnaire doit être rédigé de manière interrogative, en utilisant des formules telles que "qui", "quoi", "où", "comment", "quand" et "lequel". Les questions peuvent être ouvertes ou fermées en fonction de la nature de l'enquête.
+3. . **Respect des règles de rédaction des questions** : les questions sont claires, concises, neutres et pertinentes. 
 
-4. **Forme du questionnaire** : Le questionnaire doit être rédigé de manière interrogative, en utilisant des formules telles que "qui", "quoi", "où", "comment", "quand" et "lequel". Les questions peuvent être ouvertes ou fermées en fonction de la nature de l'enquête.
+4. **Formulation des questions** : Les questions ouvertes permettent une expression libre, tandis que les questions fermées offrent des choix de réponses facilitant le traitement quantitatif. Il est préférable d'utiliser un langage approprié à la méthodologie de l'enquête et de limiter les questions ouvertes pour faciliter le traitement des données.
 
-5. **Respect des règles de rédaction des questions** : les questions sont claires, concises, neutres et pertinentes. 
+5. **Typologie des questions en fonction de leur objet** : Les questions relatives aux comportements, à la fréquence, à l'intensité, au lieu, ou aux relations doivent être formulées de manière adaptée pour obtenir des réponses précises et exploitables.
 
-6. **Formulation des questions** : Les questions ouvertes permettent une expression libre, tandis que les questions fermées offrent des choix de réponses facilitant le traitement quantitatif. Il est préférable d'utiliser un langage approprié à la méthodologie de l'enquête.
+6. **Utilisation d'échelles de valeurs** : Pour mesurer les attitudes et les opinions, il est courant d'utiliser des échelles de valeurs. Il est préférable que les questions soient formulées de manière claire et non ambiguë pour éviter toute confusion.
 
-7. **Typologie des questions en fonction de leur objet** : Les questions relatives aux comportements, à la fréquence, à l'intensité, au lieu, ou aux relations doivent être formulées de manière adaptée pour obtenir des réponses précises et exploitables.
-
-8. **Utilisation d'échelles de valeurs** : Pour mesurer les attitudes et les opinions, il est courant d'utiliser des échelles de valeurs. Il est préférable que les questions soient formulées de manière claire et non ambiguë pour éviter toute confusion.
-
-9. **Éviter les questions stériles** : Chaque question doit être pertinente et doit contribuer à répondre à l'objectif de l'enquête. Les questions imprécises ou vagues pourraient entraîner des réponses peu utiles.
+7. **Éviter les questions stériles** : Chaque question doit être pertinente et doit contribuer à répondre à l'objectif de l'enquête. Les questions imprécises ou vagues pourraient entraîner des réponses peu utiles.
 
 Avec toutes ces informations, il est possible d'élaborer un questionnaire efficace pour une enquête donnée, qu'elle soit qualitative ou quantitative.
 
 
 ### Amélioration d'une enquête existante 
 
-Afin de mettre en place l'étude précédente, j'ai troué intéressant de reprendre le questionnaire utilisé dans le cadre du [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.2/) afin de le réaliser correctement cette fois-ci. Je vais donc reprendre étape par étape jusqu'a la réalisation du questionnaire, les étapes suivantes n'ayant pas d’intérêt pour l'exercice.
+Afin de mettre en place l'étude précédente, j'ai trouvé intéressant de reprendre le questionnaire utilisé dans le cadre du [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.2/) afin de le réaliser correctement cette fois-ci. Je vais donc reprendre étape par étape jusqu'a la réalisation du questionnaire, les étapes suivantes n'ayant pas d’intérêt pour l'exercice.
+
+#### Erreurs commises 
+
+Dans la première réalisation du questionnaire, plusieurs erreurs ont été commises. Premièrement l'étape de traçage et de définition des objectifs n'était pas claire, il manquait des informations telles que le budget disponible pour notre projet. Par ailleurs, il y avait beaucoup trop de questions ouvertes ce qui rend les résultats très difficiles et long à traiter, la plupart des réponses peuvent se regrouper par catégories (lieu de vie, sports, etc). Il y avait aussi beaucoup de questions redondantes qui peuvent être regroupés en une seule. Pour finir j'ai réalisé que quelques questions n'étaient tout simplement pas pertinentes en l'état actuel du projet.
 
 #### Recommencer étape par étape
 
 1. **Tracer les objectifs et définir l'objet :** L'objectif de l'enquête est de trouver le **persona** ou client principal de notre future restaurant. 
     On s'attend à ce que ce soit des personnes:
 
-   - plutot sportives mais pas trop non plus (pas sportif de haut niveau)
+   - plutôt sportives mais pas trop non plus (pas sportif de haut niveau)
    - entre 18 et 40 ans
    - qui font attention à leur alimentation
    - qui connaissent plutôt bien leurs apports énergetiques journaliers.
@@ -146,13 +157,13 @@ Pour valider nos persona, il est important d'avoir une meilleure homogénéité 
 
 #### Concevoir et élaborer le questionnaire :
 
-Introduction : 
+**Introduction :**
 
 Bonjour, Nous c’est Prot&eat un équipe de passionnés de sport et de nutrition. Dans le cadre de notre projet entrepreneurial, nous avons besoin de vos réponses à ce formulaire afin de connaître plus précisément vos besoins et vos attentes en ce qui concerne vos habitudes alimentaires et sportives. 
 Merci d'avance pour vos retours !
 L'équipe Prot&eat.
 
-Questions démographiques à choix unique :
+**Questions démographiques à choix unique :**
 
 1. Quel est votre genre ?
 2. Quel est votre tranche d'âge ?
@@ -160,7 +171,7 @@ Questions démographiques à choix unique :
 4. Ou habitez-vous ?
    1. choix du département
 
-Questions de comportement :
+**Questions de comportement :**
 
 1. Quel réseau social utilisez-vous le plus ?
 2. Pratiquez-vous une activité sportive/bien être ?
@@ -174,7 +185,7 @@ Questions de comportement :
    4. Athlétisme
    5. Cyclisme
    6. Sports nautiques
-   7. sports de combat
+   7. Sports de combat
    8. Equitation
    9. Musculation/cross fit/danse
    10. pilates/yoga/fitness
@@ -202,26 +213,31 @@ Questions de comportement :
    3. 15-20€
    4. plus de 20€
 
-Questions d'opinions:
+**Questions d'opinions:**
 
-1. Quel budget seriez-vous prêt à accorder a un restauration saine qui respecte vos apports énergétiques nécessaires pour une personne?
+1. Seriez-vous attiré par une restauration rapide et saine qui respecte vos apports énergétiques nécessaires?
+2. Quel budget seriez-vous prêt à accorder a une restauration rapide et saine qui respecte vos apports énergétiques nécessaires pour une personne?
    1. moins de 10€
    2. 10-15€
    3. 15-20€
    4. plus de 20€
-2. Préférez-vous passer pas une plateforme de type UberEats ou Deliveroo pour consommer de la restauration rapide?
+3. Préférez-vous passer pas une plateforme de type UberEats ou Deliveroo pour consommer de la restauration rapide?
    1. je n'en consomme pas
    2. plutôt oui
    3. plutôt non
    
-Questions de connaissances :
+**Questions de connaissances :**
 
 1. Sur une échelle de 1 à 10, comment pensez vous connaître la nécessité de vos apports énergétiques / glucides, lipides, protides journaliers ?
-2. Sur une échelle de 1 à 10, comment noteriez-vous la qualité que portez à votre alimentation 
-   1. 1 ne s'en préoccupe pas - 10 fait très attention 
+2. Sur une échelle de 1 à 10, comment noteriez-vous la qualité que portez à votre alimentation ?
+   1. 1 ne s'en préoccupe pas - 10 fait très attention
 3. Connaissez-vous des restaurants qui proposent de la nourriture saine? si oui, lesquels?
 4. Quelque chose à ajouter ?
 
+
+### Conclusion
+
+Ce MON m'auras permis d'étudier les sciences sociales appliqué à une enquête. J'ai à mon sens passer un peu trop de temps à lire/regarder la documentation pour arriver aux mêmes conclusions. J'ai pu reconnaître les erreurs commises lors de la réalisation de mes précédents questionnaires et développer mes compétences dans ce domaine. J'aimerai trouver un autre exemple pour mettre en pratiques les connaissances acquises au niveau de l'échantillonnage.
 
 
 ### Horodateur
@@ -237,9 +253,6 @@ Questions de connaissances :
 | 26/02 | 1h | Concevoir et élaborer le questionnaire |
 | 27/02 | 1h30 | Lecture documentation |
 | 27/02 | 30 min| Concevoir et élaborer le questionnaire  |
-
-
-
 
 ### Sources
 
