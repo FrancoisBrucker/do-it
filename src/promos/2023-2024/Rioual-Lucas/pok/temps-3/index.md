@@ -116,14 +116,14 @@ L’objectif du sprint 1 est de développer les fonctionnalités les plus import
 
 | Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
 |--------------------------------------------------|--------------|
-| **Créer la maquette Figma de toutes les pages**    | 5h             | 10h | |
+| **Créer la maquette Figma de toutes les pages**    | 5h             | 10h | 5h |
 | **Développement frontend**                          |              |
-| Setup du projet                                   | 30 min            |0| |
-| Page d'accueil                                    | 2h            |0| |
-| Page de la session                                | 3h            |0| |
-| Page de la partie                                 | 2h            |0| |
+| Setup du projet                                   | 30 min            |0| 1h|
+| Page d'accueil                                    | 2h            |0| 2h |
+| Page de la session                                | 3h            |0| 1h|
+| Page de la partie                                 | 2h            |0| 1h|
 | **Développement backend**                          |              |
-| Setup du projet                                   | 30 min            |2h| |
+| Setup du projet                                   | 30 min            |2h| 0|
 | Mise en place de la base de données et des routes               | 3h            |8h| 0|
 | Obtenir la question actuelle pour un joueur (webSocket)     | 3h            |0| 0|
 | Soumettre la réponse d'un joueur                  | 1h            |0|0 |
@@ -173,6 +173,25 @@ Page de partie :
 <img src="partie.PNG">
 
 
+## **Objectif du sprint 2**
+
+L’objectif du sprint 2 est de proposer une version jouable du jeu.
+
+| Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
+|--------------------------------------------------|--------------|
+| **Développement frontend**                          |              |
+| Page de fin de Game                                 | 1h           || |
+| Connection à l'API pour créer/rejoindre             | 1h           || |
+| Afficher les joueurs de la session en temps réel    | 3h           || |
+| Connection Question/réponse à l'API                 | 3h           || |
+| Hôte qui passe à la prochaine question              | 1h           || |
+| Page d'élimination                                  | 30 min           || |
+| Afficher le nombre de vie en temps réel             | 1h          || |
+| Afficher les stats réels                            | 2h          || |
+| **Développement backend**                          |              | | |
+| Implémenter les webSockets                         | 3h          || |
+| Créer les routes qu'on a pas prévu                 | 3h          || |
+| **Mise en production**                             | 5h            | | |
 
 
 
