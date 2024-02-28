@@ -54,21 +54,44 @@ Dans un **second temps**, j'ai imaginé un design pour l'interface, que j'ai maq
 <img src="maquette_page_principale.png">
 La maquette complète avec la page d'accueil et des exemples de fonctionnement est disponible à [ce lien](https://www.canva.com/design/DAF9aX-qabs/2vwFKz3I0joGODFLJQR0hw/edit?utm_content=DAF9aX-qabs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
-**Ensuite**, j'ai commencé le développement.
+**Ensuite**, j'ai commencé le développement. J'ai fait quelques recherche avant de choisir Tkinter comme framework Python pour réaliser l'interface. J'ai eu un peu de mal à le prendre en main, mais je suis finalement arrivée au résultat suivant pour ma page principale :
+<img src="interface_main.png">
+J'ai alors commencé le développement des fonctionnalités : pour l'instant, une liste déroulante pour choisir le joueur s'affiche lorsque l'on clic sur un événement, et une fois le joueur choisi, un couple ('événement', 'numéro du joueur') s'ajoute à la liste correspondante.
 
 ### Retours
 
+Pour conclure, l'ensemble du code réalisé est disponible sur ce [Github](https://github.com/arabachou/-r-e-markaball.git). Faute de temps, ce sprint n'a pas duré les 10h prévues et sera compensé par le suivant. Enfin, les difficultés rencontrées se sont principalement situées sur la prise en main et l'utilisation de Tkinter pour l'interface, que je ne connaissais pas du tout, mais qui s'avère très bien fait une fois maîtrisé.
 
+### Organisation du temps
+
+| Durée | Action |
+| -------- | -------- |
+| 30min | Définition exacte du backlog |
+| 1h15 | Réalisation de la maquette |
+| 30min | Recherches et choix du framework pour l'interface |
+| 1h | Lecture de la documentation et prise en main de Tkinter |
+| 1h | Réalisation d'une interface fonctionnelle |
+| 1h30 | Design de l'interface |
+| 1h15 | Écriture des premières fonctions |
 
 ## Sprint 2
 
 ### Objectifs
 
-
+- Designer les autres pages de l'interface (3h)
+- Terminer le développements des fonctionnalités principales pour rendre l'application utilisable (3h)
+- Faire le lien entre les pages (30min)
+- Rendre l'utilisation personnalisable selon les joueurs et les équipes (1h30)
+- Créer et formaliser les documents extraits par l'utilisateur (2h)
+- En plus selon le temps : implémenter un chronomètre et associer un temps aux événements
 
 ### Réalisations
 
 
 
 ### Retours
+
+
+
+### Organisation du temps
 
