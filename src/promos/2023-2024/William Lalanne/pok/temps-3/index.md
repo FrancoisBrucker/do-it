@@ -28,10 +28,10 @@ L'objectif de ce POK est de créer une application mobile qui sera basée sur le
 
 ## Les étapes à réaliser pendant le Sprint 1
 Pour le premier sprint j'aimerais réaliser les étapes suivantes : 
-- Création du design de la page d'accueil sur Figma (★☆☆☆☆ 2h)
-- Création du design de la page de connexion (★☆☆☆☆ 1h30)
-- Création du design de la page d'inscription (★☆☆☆☆ 1h30)
-- Commencer à faire les pages avec React Native (★☆☆☆☆ 3h)
+- Création du design de la page d'accueil sur Figma (★☆☆☆ 2h)
+- Création du design de la page de connexion (★☆☆☆ 1h)
+- Création du design de la page d'inscription (★☆☆☆ 1h)
+- Commencer à faire les pages avec React Native (★☆☆☆ 4h)
 
 ## Sommaire
 - 1. Création du design des premières pages sur Figma
@@ -42,11 +42,18 @@ Pour le premier sprint j'aimerais réaliser les étapes suivantes :
 ## Création du design 
 
 D'abord il fallait créer la page d'accueil, sur cette page il faut le logo du site, un bouton pour se connecter, un bouton pour s'inscrire. Il faut aussi une petite présentation du site. Voilà ce que je fais avec mes talents de designer : 
-![accueil](accueil.png)
+
+<div style="display:flex">
+<div><img src="accueil.png" width="300" height="600"></div>
+</div>
+
 
 Lorsqu'on clique sur le bouton "Connexion", une nouvelle fenêtre s'ouvre et permet à l'utilisateur de se connecter. Il faut qu'il puisse rentrer son email, son mot de passe et cliquer sur le bouton. J'ai aussi rajouté un lien **Mot de passe oublié** au cas où l'utilisateur veuille changer son mot de passe. 
 
-![connexion](connexion.png)
+<div style="display:flex">
+<div><img src="connexion.png" width="300" height="600"></div>
+</div>
+
 
 Ensuite il faut faire la même chose mais pour l'inscription, cette fois-ci on aura plus d'input car on va demander à l'utilisateur plusieurs choses : 
 - son prénom 
@@ -55,11 +62,16 @@ Ensuite il faut faire la même chose mais pour l'inscription, cette fois-ci on a
 - son mot de passe
 - la confirmation du mot de passe
 
+<div style="display:flex">
+<div><img src="inscription.png" width="300" height="600"></div>
+</div>
 ![inscription](inscription.png)
 
 Enfin, une fois que l'utilisateur est connecté, il a accès à la page principale sur laquelle se trouve les annonces. Il doit pouvoir faire une recherche parmi les annonces présentes et il doit pouvoir en ajouter s'il le souhaite. 
 
-![principale](principale.png)
+<div style="display:flex">
+<div><img src="principale.png" width="300" height="600"></div>
+</div>
 
 
 ## Frontend des pages en React Native
@@ -132,4 +144,13 @@ La fonction permet de changer la visibilité de la fenêtre à chaque fois qu'el
 
 Voilà ce que ça donne : 
 
-![connexion](fenetre_connexion.jpg)
+<div style="display:flex">
+<div><img src="fenetre_connexion.jpg" width="300" height="600"></div>
+</div>
+
+
+## Les étapes à réaliser pendant le Sprint 2 
+
+- Finir le front des pages (★☆☆☆☆ 4h)
+- Faire le backend avec la logique de connexion (★★☆☆ 6h )
+
