@@ -147,10 +147,46 @@
 <p>Connaitre python.</p>
 </div></div>
 <h3>Introduction</h3>
-<p>Pour ce MON je vais donc suivre le cours <a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/projet-TDD/">Programmation par les tests</a> de François Brucker. On utilisera tout au long des chapitres le language Python.</p>
+<p>Pour ce MON je vais donc me baser sur le cours <a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/projet-TDD/">Programmation par les tests</a> de François Brucker. On utilisera tout au long des chapitres le language Python.</p>
 <p>python -m pytest test_monnaie.py</p>
-<h3>Sommaire</h3>
-<h2>1. Départ</h2>
+<h2>Sommaire</h2>
+<ol>
+<li>Cours de François Brucker</li>
+<li>Exercices</li>
+</ol>
+<h3>C'est quoi la programmation par les tests ?</h3>
+<p>La programmation par tests (Test-Driven Development ou TDD en anglais), c'est une approche de développement logiciel où les tests sont écrits avant même que le code de production ne soit implémenté. Pour mettre en place cette méthode on suit généralement trois étapes :</p>
+<ol>
+<li>
+<p><strong>Écriture du test (Red)</strong> : Dans cette première étape, on <strong>rédige un test unitaire</strong> qui définit le comportement attendu d'une fonction ou d'un module. À ce stade, le code de production n'existe pas encore, donc <strong>le test échouera initialement.</strong></p>
+</li>
+<li>
+<p><strong>Implémentation du code de production (Green)</strong> : Après avoir écrit le test, on <strong>crée le code minimal</strong> nécessaire pour faire passer le test avec succès. L'objectif est de produire un code qui satisfait les exigences du test, sans ajouter de fonctionnalités supplémentaires, <strong>seulement le nécessaire.</strong></p>
+</li>
+<li>
+<p><strong>Refactoring (Refactor)</strong> : Une fois que le test passe avec succès, on peut ensuite réorganiser et améliorer le code sans altérer son comportement externe. Cela implique souvent d'éliminer les <strong>duplications de code</strong>, <strong>d'améliorer la lisibilité</strong> ou <strong>d'optimiser les performances</strong>.</p>
+</li>
+</ol>
+<p>Ce cycle se répète continuellement, chaque nouvelle fonctionnalité ou modification du code étant accompagnée de l'écriture de nouveaux tests, garantissant ainsi que les changements ne causent pas de régressions ou de dysfonctionnements dans le système existant.</p>
+<h3>Pourquoi c'est bien ?</h3>
+<p>La programmation par tests présente plusieurs avantages :</p>
+<ul>
+<li>
+<p><strong>Fiabilité accrue</strong> : En ayant une suite complète de tests automatisés, on peut être plus confiants dans la stabilité et la fiabilité de notre code.</p>
+</li>
+<li>
+<p><strong>Découverte précoce des erreurs</strong> : En écrivant les tests en premier, on est plus susceptible de détecter les erreurs dès le début du processus de développement, ce qui permet de les corriger rapidement et à moindre coût.</p>
+</li>
+<li>
+<p><strong>Conception modulaire</strong> : Cette approche encourage la conception modulaire en favorisant la création de code testable, ce qui conduit généralement à des architectures logicielles plus propres et mieux structurées.</p>
+</li>
+<li>
+<p><strong>Documentation vivante</strong> : Les tests servent également de documentation vivante du comportement attendu du code, ça permet de mieux comprendre le code pour quelqu'un qui ne la pas écrit de sa main.</p>
+</li>
+</ul>
+<p>Ainsi, la programmation par tests est une méthode de développement qui vise à améliorer la qualité du code en écrivant des tests automatisés avant d'écrire le code de production, favorisant ainsi la fiabilité, la détection précoce des erreurs et une meilleure conception logicielle. C'est pour ça que c'est bien de s'y intéresser, de bien comprendre son principe et de prendre le temps de s'exercer parce que ce fonctionnement n'est pas très intuitif au débu (on a très souvent envie de coder directement la fonction &quot;compliqué&quot; car on sait les soucis que l'on peut rencontrer).</p>
+<h2>Cours de François Brucker</h2>
+<h3>1. Départ</h3>
 <p>Dans ce premier chapitre on met en place le projet de développement pour s'initier à la programmation par test.</p>
 <ul>
 <li>
@@ -183,7 +219,7 @@ L'utilisation du &quot;fake it&quot;, où l'on duplique simplement le résultat 
 </li>
 </ul>
 <p>Grâce à ce chapitre on a introduit les bases de la programmation par test en mettant l'accent sur la création de tests avant l'écriture de code fonctionnel, et en décrivant un processus itératif pour développer et améliorer le code de manière incrémentale.</p>
-<h2>2. Value Object</h2>
+<h3>2. Value Object</h3>
 <p>Ce chapitre se concentre sur la mise en œuvre d'objets de valeur (value objects) dans le processus de développement.</p>
 <ul>
 <li>
@@ -216,7 +252,7 @@ Implémentation évidente : L'implémentation directe du test, sans trop de réf
 </li>
 </ul>
 <p>Grâce à ce chapitre on a mis en lumière l'importance de garantir le bon fonctionnement de l'application avant de se préoccuper de son optimisation, et on a introduit la notion d'objets de valeur comme moyen de sécuriser et de rendre prévisible le comportement du code.</p>
-<h2>3. ==</h2>
+<h3>3. ==</h3>
 <p>Le troisième chapitre se concentre sur l'implémentation de la comparaison d'égalité (==) entre les objets Dollar.</p>
 <ul>
 <li>
@@ -244,7 +280,7 @@ En ajoutant un test supplémentaire, les duplications dans la méthode <strong>e
 </li>
 </ul>
 <p>Ce chapitre illustre la démarche itérative du TDD pour implémenter la comparaison d'égalité entre les objets Dollar, en mettant l'accent sur la détection des duplications et la résolution progressive des problèmes identifiés.</p>
-<h2>4. <strong>mul</strong></h2>
+<h3>4. <strong>mul</strong></h3>
 <p>Le quatrième chapitre se concentre sur l'implémentation de la méthode spéciale <strong>mul</strong> pour permettre la multiplication des objets Dollar.</p>
 <p>-<strong>Todo list :</strong><br>
 La mise à jour de la liste des tâches inclut l'implémentation de la méthode spéciale <strong>mul</strong> pour permettre la multiplication des objets Dollar.</p>
@@ -263,7 +299,7 @@ Après avoir complété l'implémentation de la méthode spéciale <strong>mul</
 </li>
 </ul>
 <p>ce chapitre illustre comment utiliser la méthodologie TDD pour implémenter la multiplication des objets Dollar en ajoutant la méthode spéciale <strong>mul</strong>. Ce processus met en évidence la progression itérative du développement logiciel en identifiant les tâches à accomplir et en les réalisant une par une.</p>
-<h2>5. Privacy</h2>
+<h3>5. Privacy</h3>
 <p>Le cinquième chapitre se concentre sur la confidentialité de l'attribut montant et sur la manière de tester les objets Dollar en se concentrant sur leur comportement externe plutôt que sur leur implémentation interne.</p>
 <p>-<strong>Todo list mise à jour : </strong><br>
 La confidentialité de l'attribut montant est ajoutée à la liste des tâches à accomplir.</p>
@@ -280,7 +316,7 @@ Il est souligné qu'il est préférable de tester le comportement d'une classe p
 <p>-<strong>Progression itérative :</strong><br>
 À mesure que de nouveaux tests sont ajoutés et que l'implémentation évolue, la liste des tâches est mise à jour pour refléter les prochaines étapes à réaliser.</p>
 <p>Ce chapitre illustre l'importance de tester le comportement externe des objets Dollar et de maintenir la confidentialité de leur implémentation interne. La méthodologie TDD est utilisée pour guider le développement de manière itérative, en se concentrant sur les fonctionnalités à implémenter et en vérifiant leur fonctionnement par le biais de tests.</p>
-<h2>6. Dollar</h2>
+<h3>6. Dollar</h3>
 <p>Dans ce chapitre, l'objectif est de commencer à introduire les Francs dans le système de gestion de la monnaie.</p>
 <ul>
 <li><strong>Todo list mise à jour :</strong><br>
@@ -299,7 +335,7 @@ Après avoir fait passer les tests, la todo list est mise à jour pour refléter
 </li>
 </ul>
 <p>Ce chapitre montre comment découper des tâches ambitieuses en étapes plus gérables et comment commencer à intégrer de nouvelles fonctionnalités dans le système en utilisant la méthodologie TDD. La todo list sert de guide pour s'assurer que toutes les étapes nécessaires sont prises en compte et réalisées de manière itérative.</p>
-<h2>7. même == pour tous</h2>
+<h3>7. même == pour tous</h3>
 <p>Ce chapitre se concentre sur l'élimination de la duplication du code identique présent dans les classes Dollar et Franc en les faisant hériter d'une classe mère Monnaie.</p>
 <p>-<strong>Todo list mise à jour : </strong><br>
 Un nouvel item est ajouté pour éliminer la duplication du code identique présent dans les classes Dollar et Franc.</p>
@@ -324,7 +360,7 @@ La todo list est mise à jour pour inclure la comparaison entre les Francs et le
 <p>-<strong>Remontée de la méthode __eq__ :</strong><br>
 La méthode __eq__ est finalement remontée dans la classe mère Monnaie pour éliminer la duplication du code.</p>
 <p>Ce chapitre montre l'importance de l'élimination de la duplication du code pour maintenir un code propre et éviter les répétitions inutiles. L'utilisation de l'héritage et de la remontée des méthodes communes dans une classe mère permet d'optimiser la structure du code.</p>
-<h2>8. Franc/Dollar</h2>
+<h3>8. Franc/Dollar</h3>
 <p>Ce chapitre se concentre sur la comparaison entre les objets de classe Franc et Dollar.</p>
 <ul>
 <li><strong>Todo list mise à jour :</strong><br>
@@ -339,7 +375,7 @@ Une réflexion est menée sur la manière dont la comparaison est effectuée. Il
 <p>-<strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer une meilleure façon de gérer la comparaison des devises, en utilisant leur signification plutôt que leur classe.</p>
 <p>Ce chapitre met en lumière l'importance de coder en tenant compte de la signification des objets plutôt que de leur implémentation interne. La todo list est mise à jour pour réfléchir à une meilleure façon de gérer la comparaison des devises.</p>
-<h2>9. Duplication Franc/Dollar</h2>
+<h3>9. Duplication Franc/Dollar</h3>
 <p>Dans ce chapitre, l'objectif est de supprimer la duplication entre les classes Franc et Dollar en les remplaçant par une seule classe, tout en garantissant que toutes les fonctionnalités sont préservées grâce aux tests.</p>
 <p>-<strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer la possibilité de supprimer les tests de la classe Franc.</p>
@@ -358,7 +394,7 @@ Bien que les tests aient été modifiés pour utiliser le factory, des duplicati
 <p>-<strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour gérer la suppression des duplications entre Franc et Dollar.</p>
 <p>Ce chapitre montre comment utiliser le design pattern factory pour remplacer les références directes aux classes Franc et Dollar par des fonctions de création d'objets, en préparation de leur unification.</p>
-<h2>10. Devise</h2>
+<h3>10. Devise</h3>
 <p>Dans ce chapitre, l'objectif est de remplacer les classes Franc et Dollar par une seule classe Monnaie tout en maintenant les fonctionnalités existantes et en éliminant les duplications de code.</p>
 <p>-<strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer la possibilité de supprimer les tests de la classe Franc.</p>
@@ -373,7 +409,7 @@ Les constructeurs des classes Franc et Dollar sont rendus identiques en ajoutant
 <p>-<strong>Suppression des constructeurs :</strong><br>
 Les constructeurs des classes Franc et Dollar sont supprimés une fois qu'ils sont devenus identiques à celui de la classe Monnaie.</p>
 <p>Ce chapitre montre comment unifier les classes Franc et Dollar en une seule classe Monnaie tout en maintenant les fonctionnalités et en éliminant les duplications de code, grâce à l'utilisation de patterns de refactoring et de bonnes pratiques de conception.</p>
-<h2>11. Unification de *</h2>
+<h3>11. Unification de *</h3>
 <p>Dans ce chapitre, l'objectif était de supprimer les méthodes de multiplication <code>__mul__</code> des classes Franc et Dollar pour les unifier dans la classe Monnaie.</p>
 <p>-<strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour supprimer les duplications entre Franc et Dollar.</p>
@@ -391,7 +427,7 @@ Les factory methods pour créer des objets sont mises à jour pour utiliser le c
 Finalement, les classes Franc et Dollar sont supprimées une fois que toutes les fonctionnalités sont unifiées dans la classe Monnaie.</p>
 <p>Ce chapitre montre comment unifier les méthodes de multiplication <code>__mul__</code> des classes Franc et Dollar dans la classe Monnaie, en éliminant les duplications de code et en maintenant les fonctionnalités existantes.</p>
 <p>PS : il faut bien penser à retirer l'importation des classes Dollar et Franc qui n'existe plus du fichier des tests sinon ça marche pas :)</p>
-<h2>12. Addition 1/3</h2>
+<h3>12. Addition 1/3</h3>
 <p>Dans cette étape, nous avons ajouté la fonctionnalité d'addition pour une unique devise.</p>
 <p>-<strong>Todo list mise à jour :</strong><br>
 Un nouvel item a été ajouté pour traiter l'addition de deux montants de la même devise.</p>
@@ -433,7 +469,7 @@ Après vérification ma fonction <strong> plus </strong> est similaire à la cor
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">def test_plus():
     assert monnaie.dollar(7) == monnaie.dollar(5).plus(monnaie.dollar(2))
 </code></pre>
-<h2>13. Addition</h2>
+<h3>13. Addition</h3>
 <p>Avant de traiter l'addition de deux monnaies différentes, il est nécessaire de commencer par traiter le cas de l'addition de montants d'une même monnaie.</p>
 <p>-<strong>Écrire un test :</strong><br>
 Commencez par écrire un test pour vérifier que $5 + $2 donne $7.</p>
@@ -478,7 +514,7 @@ Dans la classe <code>Monnaie</code>, mettez à jour la méthode <code>__add__</c
 <p>-<strong>Valider le test :</strong><br>
 Exécutez les tests pour vérifier que la somme de deux montants de monnaies différentes crée une instance de <code>Somme</code> contenant les montants d'origine.</p>
 <p>En suivant ces étapes, l'ajout de montants de devises différentes sera correctement géré par la classe <code>Somme</code>, tandis que les montants de la même devise resteront gérés par la classe <code>Monnaie</code>.</p>
-<h2>14. Conversion</h2>
+<h3>14. Conversion</h3>
 <p>Pour permettre que $5 + $2 corresponde à quelque chose qui vaut à $7, nous devons travailler sur la méthode <code>conversion</code> de la classe <code>Banque</code>. Actuellement, c'est une méthode fictive qui renvoie $7. Nous devons la rendre fonctionnelle pour gérer les conversions de devises.</p>
 <p>-<strong>Supprimer les duplications dans la méthode <code>conversion</code> de la <code>Banque</code> :</strong><br>
 Cette méthode doit pouvoir gérer les sommes de monnaies en supposant que les parties gauche et droite sont des <code>Monnaie</code>, et que le taux de change est toujours de 1 pour 1.</p>
@@ -496,7 +532,7 @@ Cette étape permet de réduire le niveau de connaissance de la banque sur les o
 Écrivez un test où l'argument de <code>Banque.conversion</code> est un objet de type <code>Monnaie</code>.</p>
 <p>-<strong>Implémenter la méthode de conversion dans la classe <code>Monnaie</code> :</strong><br>
 Ajoutez une méthode <code>conversion</code> à la classe <code>Monnaie</code> pour gérer la conversion vers une devise donnée.</p>
-<h2>15. Taux de change</h2>
+<h3>15. Taux de change</h3>
 <p>Dans cette partie, nous nous attaquons à la gestion des taux de change. Nous commençons par travailler sur les objets de type <code>Monnaie</code> pour réaliser des conversions entre devises.</p>
 <p>-<strong>Créer un test pour <code>Banque.change</code> :</strong><br>
 Assurez-vous que <code>Banque.change</code> fonctionne correctement pour deux devises identiques et implémentez cette méthode dans la classe <code>Banque.conversion</code>.</p>
@@ -514,7 +550,7 @@ Assurez-vous que l'addition de deux sommes fonctionne correctement en implément
 Implémentez la méthode <code>__mul__</code> pour permettre la multiplication d'une somme par un entier.</p>
 <p>-<strong>Tester la multiplication de somme :</strong><br>
 Écrivez un test pour la multiplication d'une somme et assurez-vous que cela fonctionne correctement.</p>
-<h3>Conclusion</h3>
+<h3>Conclusion du cours</h3>
 <p>La programmation par les tests (TDD) est une approche de développement logiciel où les tests sont écrits avant le code de production. Durant ce cours on a vu son principe et ses qualités :</p>
 <ol>
 <li>
@@ -534,6 +570,530 @@ Implémentez la méthode <code>__mul__</code> pour permettre la multiplication d
 </li>
 </ol>
 <p>La programmation par les tests est essentielle pour développer rapidement des logiciels de haute qualité, tout en favorisant la collaboration et l'agilité.</p>
+<h2>Exercices</h2>
+<p>Maintenant que je connais mieux le fonctionnement du TDD et que j'ai réalisé mon premier programme à l'aide du cours, je peux tenter de réaliser un exercice par moi-même. J'ai donc demandé à ChatGPT de me proposer un exercice pour mettre en application ce que j'ai appris :</p>
+<div style="display:flex">
+<div><img src="ChatGPTExo.png"></div>
+</div>
+<p>Donc on va coder une <stong>calculatrice simple !</stong></p>
+<h3>Calculatrice simple</h3>
+<p>Je crée un nouveau dossier <strong>calculatrice-tdd</strong> dans lequel j'ajoute un fichier pour les tests <strong>test_calculatrice.py</strong>, un fichier pour mon code <strong>calculatrice.py</strong> et bien sur on n'oublies pas <strong>todo.md</strong>.</p>
+<div style="display:flex">
+<div><img src="environnementExo.png"></div>
+</div>
+<p>La première chose c'est donc de remplir notre <strong>todo</strong>.<br>
+Le plus instinctif ça serait d'écrire ça :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO 1
+- [] Pouvoir ajouter deux nombres
+- [] Pouvoir soustraire deux nombres
+- [] Pouvoir multiplier deux nombres
+- [] Pouvoir diviser deux nombres
+</code></pre>
+<p>Commençons par <strong>l'addition</strong>.<br>
+On écrit un test simple :</p>
+<p><strong>test_calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+</code></pre>
+<p>Je lance mon test :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">python -m pytest test_calculatrice.py
+</code></pre>
+<p>Et évidemment ça échoue, il n'existe pas de class <strong>Calculatrice</strong>. On en crée donc une mais qui ne fait rien :</p>
+<p><strong>calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+    pass
+</code></pre>
+<p>Maintenant l'erreur vient du fais que la class <strong>Calculatrice</strong> n'a pas de méthode <strong>add</strong>. On va donc la coder :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+    def add(self, other) :
+        return self + other
+</code></pre>
+<p>Et le test passe !<br>
+Maintenant on va s'ocupper de la <strong>soustraction</strong>.<br>
+J'écris un nouveau test :</p>
+<p><strong>test_calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+</code></pre>
+<p>Evidemment le test échoue car on a pas créé de méthode <strong>sub.<br>
+On s'occupe de le faire :</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+</code></pre>
+<p>Super les tests passent !</p>
+<p>On va faire la <strong>multiplication</strong>.</p>
+<p><strong>test_calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+
+def test_multiplication():
+    assert Calculatrice.mul(4,5)==20
+</code></pre>
+<p><strong>calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+    
+    def mul(self, other) : 
+        return self*other
+</code></pre>
+<p>Et les 3 tests passent bien.</p>
+<p>La <strong>division</strong> pour finir :</p>
+<p><strong>test_calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+
+def test_addition():
+    assert Calculatrice.add(1,2)==3
+
+def test_soustraction():
+    assert Calculatrice.sub(5,3)==2
+
+def test_multiplication():
+    assert Calculatrice.mul(4,5)==20
+
+def test_division():
+    assert Calculatrice.div(36,3)==12
+</code></pre>
+<p><strong>calculatrice.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+    def add(self, other) :
+        return self + other
+    
+    def sub(self, other) :
+        return self - other
+    
+    def mul(self, other) : 
+        return self*other
+    
+    def div(self, other):
+        return self/other
+</code></pre>
+<p>Et nos tests passent bien.</p>
+<p>Bon cet exercice est assez simple parce qu'on manipule des nombres, même si je peux complexifier le code j'ai envie d'aller vers autre chose de moins intuitif.</p>
+<h3>Gestion d'une bibliothèque</h3>
+<p>Je redemande à ChatGPT un nouvel exo mais un peut moins simple cette fois :</p>
+<div style="display:flex">
+<div><img src="ExoBibliothèque.png"></div>
+</div>
+<p>Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [] Rechercher un livre par titre ou par auteur
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+</code></pre>
+<p>On va commencer par <strong>ajouter un livre</strong> car sans ça on ne peut pas faire les autes.</p>
+<h4>Ajouter un livre</h4>
+<p>Je ne savais pas trop quoi mettre comme test pour vérifier que l'ajout a bien fonctionné. J'ai fait ça sans être trop sûre de moi :</p>
+<p><strong>test_bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+</code></pre>
+<p>Evidemment le test échoue, il n'existe pas de class <strong>Bibliotheque</strong> et encore moins de méthode <strong>add_book</strong> ou <strong>livre_existe</strong>.</p>
+<p>Je commence mon code dans <strong>bibliotheque.py</strong>. Evidemment ça a pas été évident du premier coup, j'ai un peu eu du mal au début (surtout que je code pas souvent en orienté objet...) mais au final j'ai réussi à m'en sortir ! Voici le code :</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_est_disponible(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return livre["disponible"]
+        return False
+</code></pre>
+<p>Et ça passe !<br>
+On peut mettre à jour la <strong>Todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [-] Rechercher un livre par titre et obtenir ses infos
+- [ ] Rechercher un livre par auteur et avoir la liste de ses livres
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+</code></pre>
+<p>On va s'occuper de la recherche d'un livre maintenant, mais comme on a déjà codé le fait qu'il existe on va dire que cette fois on veut savoir ses informations et surtout sa disponibilité.</p>
+<h3>Recherche d'un livre par titre</h3>
+<p>On commence par écrire le test associé à la fonctionnalité :</p>
+<p><strong>test_bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+</code></pre>
+<p>Le test échoue, on va rajouter une nouvelle méthode <strong>recherche_livre</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+</code></pre>
+<p>Et ça passe du premier coup !<br>
+On peut mettre à jour la <strong>Todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [-] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+</code></pre>
+<h3>Recherche d'un livre par auteur</h3>
+<p>On commence par écrire le test associé à la fonctionnalité :</p>
+<p><strong>test_bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+</code></pre>
+<p>Je commence donc à coder une fonction pour faire passer le test :<br>
+<strong>bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+</code></pre>
+<p>Ca passe aussi !<br>
+On peut mettre à jour la <strong>Todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [-] Emprunter un livre disponible
+- [] Retourné un livre emprunté
+</code></pre>
+<h3>Emprunter un livre</h3>
+<p>On va s'occuper maintenant de l'emprunt d'un livre si il est disponible.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Test associé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><strong>bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+
+def test_emprunt_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==True
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==False
+    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code associé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><strong>bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+
+    def emprunt_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre and livre["disponible"]:
+                livre["disponible"]=False
+                return True
+        return False
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On peut mettre à jour la <strong>Todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [x] Emprunter un livre disponible
+- [-] Retourné un livre emprunté
+</code></pre>
+<h3>Retourner un livre</h3>
+<p>On va s'occuper maintenant de retourner un livre emprunté.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Test associé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><strong>bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+
+def test_ajout_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.livre_existe("L'Ecume des jours")
+
+def test_recherche_livre():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
+
+def test_recherche_livres_par_auteur():
+    bibliotheque= Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
+
+def test_emprunt_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==True
+    assert bibliotheque.emprunt_livre("L'Arrache-coeur")==False
+    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True
+
+def test_retour_livre():
+    bibliotheque=Bibliotheque()
+    bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
+    bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
+    bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
+    bibliotheque.emprunt_livre("L'Arrache-coeur")
+    bibliotheque.emprunt_livre("L'Ecume des jours")
+    bibliotheque.retour_livre("L'Arrache-coeur")
+    assert bibliotheque.livre_disponible("L'Arrache-coeur")==True
+    assert bibliotheque.livre_disponible("L'Ecume des jours")==False
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code associé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><strong>bibliotheque.py</strong></p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+    def __init__(self):
+        self.livres = []
+
+    def add_book(self, titre, auteur, annee):
+        livre = {"titre" : titre, "auteur": auteur, "année" : annee, "disponible" : True}
+        self.livres.append(livre)
+
+    def livre_existe(self, titre):
+        for livre in self.livres : 
+            if livre["titre"] == titre:
+                return True
+        return False
+    
+    def recherche_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
+            
+    def recherche_livres_par_auteur(self, auteur):
+        listes_des_livres=[]
+        for livre in self.livres : 
+            if livre["auteur"]==auteur:
+                listes_des_livres.append(livre["titre"])
+        return listes_des_livres
+
+    def emprunt_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre and livre["disponible"]:
+                livre["disponible"]=False
+                return True
+        return False
+
+    def retour_livre(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre:
+                livre["disponible"]=True
+        pass
+    
+    def livre_disponible(self, titre):
+        for livre in self.livres :
+            if livre["titre"] == titre: 
+                return livre["disponible"]
+        return False
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On peut mettre à jour la <strong>Todo</strong>.</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+- [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
+- [x] Rechercher un livre par titre et obtenir ses infos 
+- [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
+- [x] Emprunter un livre disponible
+- [x] Retourné un livre emprunté
+</code></pre>
+<p>On a fini notre gestionaire de bibliothèque !</p>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -558,6 +1118,16 @@ Implémentez la méthode <code>__mul__</code> pour permettre la multiplication d
 <td>Dimanche 25/02</td>
 <td>2H</td>
 <td><em>Partie 3/3</em></td>
+</tr>
+<tr>
+<td>Mercredi 28/02</td>
+<td>30min</td>
+<td><em>Exercice calculatrice</em></td>
+</tr>
+<tr>
+<td>Mercredi 28/02</td>
+<td>2H</td>
+<td><em>Exercice bibliothèque</em></td>
 </tr>
 </tbody>
 </table>
