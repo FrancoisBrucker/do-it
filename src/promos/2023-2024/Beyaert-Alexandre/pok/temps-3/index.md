@@ -191,7 +191,9 @@ Pour ces raisons, **peu d'entreprises restent désireuses d'expérimenter l'indu
 La question à se poser est alors la suivante : **"Où, quand et comment les industries devraient implémenter l'Industrie 4.0 dans l'approche de leur SUpply Chain ?".**
 
 
-#### Lean supply chain management and Industry 4.0
+#### Lean Supply Chain management and Industry 4.0
+
+
 
 Lean & I4.0 : same goals, reducing the costs and increasing the productivity
 Lean : through waste reduction
