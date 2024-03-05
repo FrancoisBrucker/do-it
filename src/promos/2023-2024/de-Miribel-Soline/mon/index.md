@@ -13,3 +13,4 @@ Ensemble des MON réalisés par Soline de Miribel.
 * [MON 2.1 : La gouvernance d'entreprise](./temps-2.1/)
 * [MON 2.2 : La gouvernance partagée](./temps-2.2/)
 * [MON 3.1 : Le management d'innovation](./temps-3.1/)
+* [MON 3.2 : Le management intergénérationnel](./temps-3.2)

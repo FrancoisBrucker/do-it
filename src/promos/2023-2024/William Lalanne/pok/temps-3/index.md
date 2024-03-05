@@ -97,6 +97,11 @@ const Accueil = () => {
 };
 ```
 
+<div style="display:flex">
+<div><img src="accueil.jpg" width="300" height="600"></div>
+</div>
+
+
 Maintenant ce qu'il faudrait c'est que quand on clique sur les boutons **CONNEXION** et **INSCRIPTION**, les fenêtres s'ouvrent pour que l'utilisateur puisse se connecter ou s'inscrire comme vu sur les design précédent. J'ai créé la fenêtre de connexion de la manière suivante : 
 
 
@@ -147,6 +152,53 @@ Voilà ce que ça donne :
 <div style="display:flex">
 <div><img src="fenetre_connexion.jpg" width="300" height="600"></div>
 </div>
+
+
+Ensuite on fait la même chose mais avec l'inscription :
+
+<div style="display:flex">
+<div><img src="inscription.jpg" width="300" height="600"></div>
+</div>
+
+Voici le code associé :
+
+```js
+<Modal animationType="slide" transparent={true} visible={inscriptionModalVisible} onRequestClose={ouvertureInscriptionModal}>
+  <View style={styles.centeredView}>
+    <View style={styles.modalView}>
+      <TouchableOpacity style={styles.button} onPress={ouvertureInscriptionModal}>
+        <Text style={styles.textStyle}>X</Text>
+      </TouchableOpacity>
+      <View>
+        <Text style={styles.title}>S'inscrire</Text>
+            <View style={styles.userInput}>
+              <Text>Prénom*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Nom*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Email*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Mot de passe*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <View style={styles.userInput}>
+              <Text>Confirmation du mot de passe*</Text>
+              <TextInput style={styles.textInput}></TextInput>
+            </View>
+            <CustomButton title="S'inscrire"></CustomButton>
+      </View>
+    </View>
+  </View>
+</Modal>
+
+```
+
 
 
 ## Les étapes à réaliser pendant le Sprint 2 

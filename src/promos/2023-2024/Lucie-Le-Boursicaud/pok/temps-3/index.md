@@ -878,6 +878,8 @@ Voici d'autres améliorations possibles :
 - une possibilité d'enregistrement du meilleur score 
 - correction de certains bugs inexpliqués (un oignon a réussi à traverser le sol...)
 
+[Cliquez ici](./pumpkin-main.zip) pour télécharger le fichier zip.
+
 
 ### Horodateur
 | Date | Heures passées | Indications |
