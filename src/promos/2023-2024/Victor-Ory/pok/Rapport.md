@@ -42,16 +42,23 @@ Si aujourd'hui j'en utilise seulement une fraction, je pense que ce sera utile t
 ## Deuxième étape : Faire le rapport :
 
 Le cadre du rapport est important et essentielles pour la structure et la démarche qui va habiter ce travail.
-Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur : .
+Le sujet va se baser sur les informations qui seront récoltés au sein de la [veille technologique](../mon/VeilleTechno.md) sur : ????
 Le format attendu sera une analyse descriptive dans un premier temps et en fonction de l'avancé, nous pourrons faire une analyse explicative d'un phénomène 'un phénomène du milieu.
 
 #### Horodatage :
 
-[17/02] : Planification, recherche des sources  = 0H30
-[22/02] : Lecture Critical Thinking Chapter 1&2 = 1H
-[23/02] : Lecture Critical Thinking Chapter 3 = 1H
-[24/02] : Lecture Critical Thinking Chapter 4 = 1H
-[24/02] : Lecture Critical Thinking Chapter 4&5 = 1H
-[25/02] : Lecture Critical Thinking Chapter 5 = 1H
-[25/02] : Lecture Critical Thinking Chapter 8 = 1H
-[27/02] : Travail sur les études de cas sur partie 1 et 2 = 2H
+| Date | Indications | Temps passé |
+| -------- | -------- |-------- |
+|[17/02] | Planification, recherche des sources  | 0H30 |
+|[22/02] | Lecture Critical Thinking Chapter 1&2 | 1H |
+|[23/02] | Lecture Critical Thinking Chapter 3 | 1H |
+|[24/02] | Lecture Critical Thinking Chapter 4 | 1H |
+|[24/02] | Lecture Critical Thinking Chapter 4&5 | 1H |
+|[25/02] | Lecture Critical Thinking Chapter 5 | 1H |
+|[25/02] | Lecture Critical Thinking Chapter 7 | 1H |
+|[27/02] | Travail sur les études de cas sur partie 1 et 2 | 2H |
+|[27/02] | Lecture Critical Thinking  | 2H |
+| -------- | -------- |-------- |
+|[29/02] | Lecture Critical Thinking Chapter 8-9 | 1H30 |
+|[01/03] | Lecture Critical Thinking Chapter 10-11 | 1H |
+|[01/03] | Lecture Critical Thinking Chapter 12-13 | 1H30 |
