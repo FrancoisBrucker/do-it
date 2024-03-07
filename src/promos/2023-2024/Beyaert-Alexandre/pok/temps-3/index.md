@@ -294,6 +294,24 @@ Cette réticence est exacerbée par les préoccupations en matière de sécurit�
 ### Discussion avec Richard Markoff
 
 ### Construction de la grille d'entretien
+- Votre entreprise implémente-t-elle déjà des stratégies de Lean Supply Chain Management ?
+- Votre entreprise implémente-t-elle déjà des technologies d'Industrie 4.0 ? IA, IoT, Blockhain, Cloud, Big Data.... ?
+  **- Si oui**, pouvez-vous partager des exemples concrets de cas où ces technologies technologies sont implémentées ?
+  - Ces technologies ont-elles démontrées un impact sur l'efficacité de votre Supply Chain ?
+  - Comment s'est déroulée leur implémentation ? Quelles difficultés avez-vous du surmonter ? (Réticence, formations d'employés, problèmes techniques...) --> Comment gérer la résistance au changement ? La formation à ces nouvelles tech ?
+**- Si non,** planifiez-vous d'implémentez des technologies de la sorte ?
+    **- Si oui,** savez-vous vers quelles technologies vous voudriez-vous diriger ? Avez-vous une ligne de conduite / stratégie opérationnelle digitale claire ?
+    **- Si non,** pourquoi ? (Investissement trop cher, frein au changement, manque de spécialistes pour gérer ces technologies, cadre légal, cybersécurité...)
+
+- Technologies mises en places à un niveau stratégique ? (prise de décisions, tendances marchés, prédictions demande...) ou plutôt sur des tâches répétitives en prod' (robotique / automatisation...)
+- Quels sont les défis spécifiques que votre entreprise a rencontrés en termes d'intégration des différents systèmes de gestion de la Supply Chain (WMS, TMS, OMS, etc.)?
+- Mettez-vous en oeuvre une stratégie pour garantir la cybersécurité de votre Supply Chain ?
+- Quel impact la pandémie de COVID-19 a-t-elle eu sur votre stratégie de digitalisation de la Supply Chain?
+- Quels sont les indicateurs clés de performance que votre entreprise utilise pour évaluer l'efficacité de sa chaîne d'approvisionnement numérique?
+- Comment votre entreprise anticipe-t-elle les évolutions technologiques futures et leur impact sur la gestion de la Supply Chain?
+- Comment votre entreprise collabore-t-elle avec ses partenaires commerciaux pour promouvoir l'interopérabilité et la transparence dans la chaîne d'approvisionnement numérique?
+
+--> Ajouter toute une partie sur résilience, gestion des ressources (notamment eau/elec)
 
 ### Identification des intervenants
 
