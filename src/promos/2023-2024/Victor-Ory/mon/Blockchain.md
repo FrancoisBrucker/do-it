@@ -28,17 +28,26 @@ Ce MON est une introduction au monde Crypto/Blockchain pour enfin comprendre ce 
 - Avoir un panorama des acteurs essentiels
 - Avoir un panorama des questionnements récurrents
 
-##
-
 # Conclusion 
 
+Le cours sur lequel j'ai basé la plupart de ce MON dure en fait 20h et aborde en profondeur des problématiques super intéressantes ensuite, c'est pourquoi je pense que je vais encore poursuivre pendant le départ de mon stage.
+Les cours durent une heure mais les lectures sont importantes pour vraiment capter certains trucs avec un sens pratique.
 
 ### Bibliographie : 
 
 [Blockchain et cryptomonnaies](https://www.cairn.info/blockchain-et-cryptomonnaies--9782130811459.htm)
+[Cours MIT Blockchain and Money](https://www.youtube.com/watch?v=EH6vE97qIP4&list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn), focus sur la finance et la blockchain plutôt que sur la technique. 
+    - [Article introductif](https://www.thebanker.com/Gary-Gensler-How-blockchain-can-solve-the-payments-riddle-1535961633)
+    - [Manifeste du Bitcoin](https://bitcoin.org/bitcoin.pdf)
+    - [Consensus Protocol](https://www.coindesk.com/markets/2017/03/04/a-short-guide-to-blockchain-consensus-protocols/)
+    - [Cryptoeconomics](https://www.coindesk.com/markets/2017/08/19/making-sense-of-cryptoeconomics/)
+[Cryptomonnaies et Banque Centrale](https://www.cairn.info/annuaire-francais-de-relations--9782376510550-page-747.htm)
 
 #### Horodatage :
 
 | Date | Indications | Temps passé |
 | -------- | -------- |-------- |
-|[01/03] | Lecture sur concept, démarche | 1h30 |
+|[01/03] | Initialisation du projet, récolte des sources| 0h30 |
+|[03/03] | Visionnage [Cours MIT Blockchain and Money](https://www.youtube.com/watch?v=EH6vE97qIP4&list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn) Cours 1 | 2h00 |
+|[03/03] | Visionnage [Cours MIT Blockchain and Money](https://www.youtube.com/watch?v=EH6vE97qIP4&list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn) Cours 2 + Reading  | 2h00 |
+|[04/03] | Visionnage [Cours MIT Blockchain and Money](https://www.youtube.com/watch?v=EH6vE97qIP4&list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn) Cours 3-4 + Reading  | 2h00 |
