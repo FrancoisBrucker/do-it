@@ -21,7 +21,7 @@ Deux parties vont constituer ce MON :
 
     - Comprendre et mettre en place la méthode de veille 
     - Mettre en place ce dispositif
-    - Faire un petit rapport sur les sujets de politiques publiques du monde cuber
+    - Faire un petit rapport sur les sujets de politiques publiques du monde cyber
 
 ## Comprendre :
 
@@ -121,14 +121,16 @@ Analyse en cours ... Affaire à suivre dans [mon POK](../pok/Rapport.md)
 
 ### Résultats :
 
-J'aime bien le concept mais c'est chiant qu'il n'y est rien de gratuit, comme Mr.Magnagni l'avait expérimenté, les outils manquent encore pour faire ça bien... La méthode pour le cadrage et identifier les sources est intéressante, je pense que je vais poursuivre cette veille toutefois cela restera chronophage.
+J'aime bien le concept mais c'est chiant qu'il n'y est rien de gratuit, comme Mr.Magnani l'avait expérimenté, les outils manquent encore pour faire ça bien... La méthode pour le cadrage et identifier les sources est intéressante, je pense que je vais poursuivre cette veille toutefois cela restera chronophage.
 
 #### Horodatage :
 
-[19/02] : Lecture sur concept, démarche = 1h30
-[21/02] : Établir le cadre, les limites de ma veille  = 1H
-[24/02] : Test des différentes solutions et sélection : [Feedly](https://feedly.com/), [Inoreader](https://www.inoreader.com/fr/), [NewsBlur](https://newsblur.com/), [Raven Reader](https://github.com/hello-efficiency-inc/raven-reader) = 1h30
-[24/02] : Penser à faire une application de lecture de flux RSS avec des filtres, car aucune app ne le permet alors que ça n'a pas l'air si complexe ... = 1H
-[25/02] : Identification des sources pertinentes : 2H
-[27/02] : Mise en place d'automatisation Zapier : 2H
-[27/02] : Analyse des articles triés et sélectionné par l'automatisation : 1H
+| Date | Indications | Temps passé |
+| -------- | -------- |-------- |
+|[19/02] | Lecture sur concept, démarche | 1h30 |
+|[21/02] | Établir le cadre, les limites de ma veille  | 1H |
+|[24/02] | Test des différentes solutions et sélection : [Feedly](https://feedly.com/), [Inoreader](https://www.inoreader.com/fr/), [NewsBlur](https://newsblur.com/), [Raven Reader](https://github.com/hello-efficiency-inc/raven-reader) | 1H30 |
+|[24/02] | Penser à faire une application de lecture de flux RSS avec des filtres, car aucune app ne le permet alors que ça n'a pas l'air si complexe ... | 1H |
+|[25/02] | Identification des sources pertinentes | 2H |
+|[27/02] | Mise en place d'automatisation Zapier | 2H |
+|[27/02] | Analyse des articles triés et sélectionné par l'automatisation | 1H |
