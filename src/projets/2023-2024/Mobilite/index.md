@@ -3,11 +3,11 @@ layout: layout/projet.njk
 
 title: "Mobilité"
 authors:
+  - Le Boursicaud Lucie 
   - Rabachou Agathe
-  - Le Boursicaud Lucie
-  - Schultz Mathis
-  - Le Bihan Paul
   - Kawtar Bahri
+  - Le Bihan Paul
+  - Schultz Mathis 
 
 date: 2024-03-28
 
@@ -26,6 +26,7 @@ Pour notre projet Do_It, nous avons voulu créer une plateforme afin d'héberger
 ### L'équipe du projet
 
 Notre équipe pour mener à bien ce projet est la suivante :
+
 - Lucie Le Boursicaud
 - Agathe Rabachou
 - Kawtar Bahri
