@@ -1046,6 +1046,142 @@ On peut mettre à jour la <strong>Todo</strong>.
 ```
 On a fini notre gestionaire de bibliothèque ! 
 
+### Sytème de réservation de vol
+
+Je redemande à ChatGPT un nouvel exo mais encore plus dur :
+
+<div style="display:flex">
+<div><img src="ExoVol.png"></div>
+</div>
+
+Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.
+
+```html
+## MY TODO
+- [] Pouvoir ajouter un nouveau vol en précisant la compagnie, la ville de départ, la ville d'arrivée, l'heure de départ, l'heure d'arrivée, la date du vol et le numéro de vol
+- [] Rechercher des vols disponibles en précisant une ville de départ, une ville d'arrivée et la date du voyage
+- [] Pouvoir réserver un vol et obtenir un numéro de réservation
+- [] Pouvoir réserver un siège sur le vol à l'aide du numéro de réservation
+- [] Pouvoir annuler une réservation à l'aide de son numéro
+```
+
+#### Ajouter un nouveau vol
+
+<strong>test_vol.py</strong>
+```html
+from vol import VolSysteme
+
+def test_ajouter_vol():
+    volsysteme=VolSysteme()
+    volsysteme.ajouter_vol("Rayanair","Marseille","Lisbonne","16:00","17:20","12/03/2024","RYA2598")
+    volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
+    assert volsysteme.recherche_vol("Marseille","Lisbonne","12/03/2024")==["RYA2598","EZS081"]
+```
+Evidemment le test échoue, il n'existe pas de class <strong>VolSysteme</strong> et encore moins de méthode <strong>ajouter_vol</strong> ou <strong>recherche_vol</strong>.
+
+Je commence mon code dans <strong>vol.py</strong>.
+
+```html
+class VolSysteme():
+    def __init__(self):
+        self.vols = []
+
+    def ajouter_vol(self,compagnie, depart, arrivee, heured, heurea, date, numero):
+        vol = {"compagnie":compagnie, "depart":depart, "arrivee":arrivee, "heured":heured, "heurea":heurea, "date": date, "numero":numero}
+        self.vols.append(vol)
+    
+    def recherche_vol(self,depart,arrivee,date):
+        vols_possibles=[]
+        for vol in self.vols:
+            print(vol)
+            if(vol["arrivee"] == arrivee and vol["depart"] == depart and vol["date"] == date):
+                vols_possibles.append(vol["numero"])
+        return vols_possibles
+```
+
+```html
+## MY TODO
+- [x] Pouvoir ajouter un nouveau vol en précisant la compagnie, la ville de départ, la ville d'arrivée, l'heure de départ, l'heure d'arrivée, la date du vol et le numéro de vol
+- [x] Rechercher des vols disponibles en précisant une ville de départ, une ville d'arrivée et la date du voyage
+- [] Pouvoir réserver un vol et obtenir un numéro de réservation
+- [] Pouvoir réserver un siège sur le vol à l'aide du numéro de réservation
+- [] Pouvoir annuler une réservation à l'aide de son numéro
+```
+
+#### Suite de l'exercice
+ 
+J'ai continué l'exercice de la même manière. Voici mes deux fichiers finaux : 
+
+<strong>test_vol.py</strong>
+
+```html
+from vol import VolSysteme
+
+def test_ajouter_vol():
+    volsysteme=VolSysteme()
+    volsysteme.ajouter_vol("Rayanair","Marseille","Lisbonne","16:00","17:20","12/03/2024","RYA2598")
+    volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
+    assert volsysteme.recherche_vol("Marseille","Lisbonne","12/03/2024")==["RYA2598","EZS081"]
+
+def test_réserver_siège():
+    volsysteme=VolSysteme()
+    volsysteme.ajouter_vol("Rayanair","Marseille","Lisbonne","16:00","17:20","12/03/2024","RYA2598")
+    volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
+    assert volsysteme.réserver_siège("RYA2598", "A1")==True
+    assert ("A1" in volsysteme.vols[0]["sieges"]) == True
+
+def test_annuler_réservation():
+    volsysteme=VolSysteme()
+    volsysteme.ajouter_vol("Rayanair","Marseille","Lisbonne","16:00","17:20","12/03/2024","RYA2598")
+    volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
+    assert volsysteme.réserver_siège("RYA2598", "A1")==True
+    assert volsysteme.annuler_réservation("RYA2598", "A1")==True
+    assert ("A1" not in volsysteme.vols[0]["sieges"]) == True
+```
+
+<strong>vol.py</strong>
+
+```html
+class VolSysteme():
+    def __init__(self):
+        self.vols = []
+
+    def ajouter_vol(self,compagnie, depart, arrivee, heured, heurea, date, numero):
+        vol = {"compagnie":compagnie, "depart":depart, "arrivee":arrivee, "heured":heured, "heurea":heurea, "date": date, "numero":numero}
+        self.vols.append(vol)
+    
+    def recherche_vol(self,depart,arrivee,date):
+        vols_possibles=[]
+        for vol in self.vols:
+            print(vol)
+            if(vol["arrivee"] == arrivee and vol["depart"] == depart and vol["date"] == date):
+                vols_possibles.append(vol["numero"])
+        return vols_possibles
+    
+    def réserver_siège(self, numéro_vol, siège):
+        for vol in self.vols:
+            if vol["numero"] == numéro_vol:
+                if "sieges" not in vol:
+                    vol["sieges"] = []
+                vol["sieges"].append(siège)
+                return True
+        return False
+
+    def annuler_réservation(self, numéro_vol, siège):
+        for vol in self.vols:
+            if vol["numero"] == numéro_vol and "sieges" in vol and siège in vol["sieges"]:
+                vol["sieges"].remove(siège)
+                return True
+        return False
+```
+
+Maintenant je me dis qu'on peut ajouter une gestion des passagers et de les tarifs. 
+Je fais donc une nouvelle <strong>Todo</strong>, créer mes tests et ajuster le code en conséquence. 
+
+[Ici](tdd.zip), vous trouverez mes différents fichiers sur lesquels j'ai travaillé. 
+
+
+
 ### Horodateur
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
@@ -1054,3 +1190,4 @@ On a fini notre gestionaire de bibliothèque !
 | Dimanche 25/02 | 2H | *Partie 3/3* |
 | Mercredi 28/02 | 30min | *Exercice calculatrice* |
 | Mercredi 28/02 | 2H | *Exercice bibliothèque* |
+| Vendredi 01/03 | 2H | *Exercice réservation de vol*|

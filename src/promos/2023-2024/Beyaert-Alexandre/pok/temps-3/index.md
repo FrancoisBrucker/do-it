@@ -41,17 +41,17 @@ Avant de commencer le POK
 
 Après avoir commencé le POK
 **Sprint 1**
-| Timing | SC, Industrie 4.0 & Lean Management | Cas particuliers | Construction grille d'entretien | Identification des intervenants |
+| Timing | SC, Industrie 4.0 & Lean Management | Cas particuliers | Construction grille d'entretien |
 | -------| -------- | -------- | -------- |
-| Sprint 1 - Temps prévu (en heures) | 4 | 4 | 2 | 2 |
-| Sprint 1 - Temps dédié (en heures) | ? | ? | ? | ? |
+| Sprint 1 - Temps prévu (en heures) | 4 | 5 | 1 |
+| Sprint 1 - Temps dédié (en heures) | 5 | ? | ? |
 
 
 **Sprint 2**
-| Timing | Entretiens | Analyse | Restitution |
-| -------| -------- | -------- |
-| Sprint 2 - Temps prévu (en heures) | 3 | 3 | 4 |
-| Sprint 2 - Temps dédié (en heures) | ? | ? | ? |
+| Timing | Identification des intervenants | Entretiens | Analyse | Restitution |
+| -------| -------- | -------- | -------- | -------- |
+| Sprint 2 - Temps prévu (en heures) | 1 | 3 | 3 | 4 |
+| Sprint 2 - Temps dédié (en heures) | ? | ? | ? | ? |
 
 
 ## Sommaire
@@ -70,9 +70,9 @@ Aujourd'hui, la logistique en France [1] c'est :
 - 1,8 million d’emplois
 - 168,4 millards de tonnes-kilomètres pour l'activité intérieur du pavillon français [2]
 
-À l'ère de la digitalisation et de l'interconnexion croissante des marchés mondiaux, la supply chain connaît une transformation sans précédent. Les avancées technologiques telles que l'internet des objets (IoT), l'intelligence artificielle (IA) et la blockchain ont révolutionné la façon dont les entreprises gèrent leurs flux de marchandises et d'informations.
-Cette évolution n'a pas été sans défi et la pandémie de COVID-19 a agi comme un catalyseur, exposant les vulnérabilités et les lacunes de nombreuses Supply Chain traditionnelles.
-Désormais, la résilience devient un impératif majeur pour les entreprises, et la transformation de la supply chain est au cœur des stratégies visant à garantir une agilité et une adaptabilité face à l'incertitude et aux perturbations futures.
+À l'ère de la digitalisation et de l'interconnexion croissante des marchés mondiaux, la Supply Chain connaît une transformation sans précédent. Les avancées technologiques telles que l'internet des objets (IoT), l'intelligence artificielle (IA) et la blockchain ont révolutionné la façon dont les entreprises gèrent leurs flux de marchandises et d'informations.
+Cette évolution n'a pas été sans défi : bien que la pandémie de COVID-19 fut un catalyseur à l'adoption des nouvelles technologies numériques, elle a largement exposé les vulnérabilités et les lacunes de nombreuses Supply Chain traditionnelles, pénurie de main-d'oeuvre, pénurie de matériaux, retards de livraisons...
+Désormais, la résilience devient un impératif majeur pour les entreprises, et la transformation de la Supply Chain est au cœur des stratégies visant à garantir une agilité et une adaptabilité face à l'incertitude et aux perturbations futures.
 
 Dans ce contexte, ce POK vise à présenter les enjeux auxquels la Supply Chain est aujourd'hui confrontée et ainsi comprendre le défi de taille qu'est la construction de ["l'Usine du Futur" présentée par le GROUPE PSA en septembre 2016.](https://www.youtube.com/watch?v=igW-MyX7PkI)
 
@@ -234,11 +234,84 @@ De cette conclusion, la review souligne 2 leçons :
 Blockchain in SC https://aws.amazon.com/fr/blockchain/blockchain-for-supply-chain-track-and-trace/#:~:text=With%20blockchain%2C%20supply%20chain%20companies,at%20any%20point%20in%20time.
 
 
+#### Impact of Digital Technology on Supply Chain Efficiency in Manufacturing Industry [14]
+
+Les résultats de l'étude réalisée à travers cette revue de littérature démontrent que l'IoT et l'IA sont les deux technologies les plus susceptibles d'atteindre l'autonomie et la capacité prédictive nécessaires pour répondre aux futures attentes de la chaîne d'approvisionnement.
+
+Pour autant, 80% des pratiques liées à la transformation digitale ont échoué. En cause, les entreprises n'identifient pas clairement quelle technologie devrait être mise en plase en concordance avec leurs objectifs stratégiques de opérationnels et optent aveuglement sur une technologie pour le plaisir de la technologie.
+
+Dès lors, le but de cette étude est de répondre aux 2 questions suivantes :
+- "Comment l'IA et l'IoT améliorent l'effiacité de la SUpply Chain ?"
+- "Quels facteurs influencent le succès de l'implémentation d'une Supply Chain digitale ?"
+
+Kevin Ashton, pionner britannique de la technologie, a décrit le premier l'IoT comme "l'identification unique d'un objet en connectant des choses physiques via la technologie et son réseau virtuel. Trois éléments sont nécessaires pour atteindre la fonction de l'IoT : l'acquisition de données, le transfert de données et l'analyse de données. L'IoT devient alors un réseau intelligent basé sur l'internet qui permet non seulement de collecter, transférer et analyser les données d'un appareil mais également d'observer en continu tout son environnement.
+
+L'IA quant à elle, va être couplée aux larges quantitées de données récupérées par l'IoT pour effectuer des prédictions, aider à la prise de décision. Ses applications dans la Supply Chain prennent place ans le transport, la maintenance prédictive, la prévision de la demande.
+
+Néanmoins, des doutes persistent quant à l'IA, notamment en ce qui concerne ses implications éthiques notamment sur l'éventualité d'accorder aux systèmes intelligents, comme les robots, les mêmes droits que les êtres humains. De plus, l'extraction d'informations sensibles peut compromettre la sécurité de la vie privée et même influencer les affaires politiques.
+
+Le développement de l'IA et l'IoT ont largement favorisé l'émergence de l'Industrie 4.0 et des usines intelligentes. L'IoT est alors décrite comme la partie hardware de la technologie produisant une grande quantité d'information, dirigée par l'IA en tant que software.
+
+Leur intérêt est le partage de l'information pertinente en temps réel permettant ainsi de prendre de meilleurs déceisions, d'optimiser les opérations, de mieux appréhender les risques. Cependant, ces technologies ne sont pas le seul élément clé contribuant à l'amélioration de la Supply Chain : elles sont un outil utile à la favorisation de la communication entre les différentes parties prenantes de la Supply Chain. "L'essence de l'IoT est de founrir des informations et des les intégrer. Cependant, ce qui améliore réellement la performance opérationnel est la vitesse de transmission de cette information et son niveau de transparence". L'information doit être complétée d'analyse, de traitement pour tirer des décisions.
+
+**IoT applications**
+Les applications de l'IoT sont diverses. Elles permettent d'optimiser la précision, l'intégration et la transparence de l'information.
+General Motors, par exemple, utilise les données de capteurs pour déterminer l'humidité de l'environnement de peinture des voitures. Cette donnée est envoyée à un algorithme afin de savoir si la dose est dans la gamme d'acceptation, sinon la voiture est envoyée à un autre endroit ce qui permet de miniser la re-peinture et de maximiser le temps de fonctionnement de l'usine. Cette innovation à elle seule permet à General Motors d'économiser des millions de dollars par an.
+
+L'IoT permet également l'amélioration des stocks de 2 manières différentes. D'une part il facilite le partage des stocks inutilisés entre entreprises, d'autre part il permet de visualiser l'état des stocks en temps réel et ainsi mieux les gérer ressources. En le combinant avec l'utilisation d'un ERP, l'IoT facilite le Product Lifecycle Management.
+
+Également, la mise en oeuvre de composants IoT sur les lignes de production permmet de surveiller en permanence l'état des véhicules, d'anticiper les dommages ou défaillances potentielles et prendre des mesures préventives.
+
+**IA applications**
+Différentes IA sont envisagées pour améliorer le management de la SUpply Chain, des réseaux de neurones (ANN) à la réalité virtuelle (VR) en passant par les algorithmes génétiques (AG).
+
+Ces applications permettent d'améliorer les prévisions de la demande, les décisions marketing, la maintenance système, la tarification, le choix des fournisseurs, la fabrication des produits. Elle aide notamment la logistique à éviter le gachis de ressources et diminue les risques business tels que le "Bullwhip Effect".
+
+Son intérêt est de développer une stratégie opérationelle dynamique en se basant sur l'analyse des données historiques. Ainsi, elle est capable de minimiser les risques même dans des périodes chaotiques. Par exemple, lors des inondations en Thaïlande en août 2017, la division de la Supply Chain Management d'IBM à Singapour a rapidement réagi en anticipant les impacts sur les fabricants thaïlandais de disques durs. Grâce à l'IA, ils ont pu sélectionner des fournisseurs alternatifs, passer des commandes et organiser le transport afin de maintenir l'approvisionnement en disques durs et éviter toute interruption de la production.
+
+Cependant, pour effectuer de bonnes prédictions il est nécessaire d'avoir une base de données conséquente, précise, bien intégrée par l'algorithme. Une mauvaise prédiction pourrait être dramatique comme ce fut le cas pour Nike en 2001. L'entreprise a introduit un programme de prédiction de la demande mais n'a pas réussi à le mettre en œuvre ce qui a conduit à un stock insuffisant de Air Jordans et à un excès de types moins populaires. Cette expérience valut environ 100 millions de dollars de ventes perdues à Nike.
+
+L'IA est également efficace pour automatiser les tâches répétitives coutant du temps et de l'argent : algorithmes d'emballage, appariement des véhicules et des cargaisons, planification des AGV (Automated Guided Vehicles).
+
+Tungsten Network (entreprise mondiale de facturation électronique fournissant des services de financement de la SUpply Chain) a rapporté qu'elle perdait en moyenne 125 heures par semaine sur des tâches commerciales triviales telles que des routines répétitives, des traitements de demandes fournisseurs ou des audits comptables, ce qui représente environ 6 500 heures par an de travail inefficace. En réponse, certaines organisations adoptent des applications avancées d'IA, telles que des robots, pour automatiser ces tâches répétitives.
+
+Un exemple typique est l'usine intelligente d'Audi, où la logistique et le transport des pièces sont gérés par des systèmes de conduite autonome, réalisant ainsi une véritable automatisation de l'usine. Des robots légers remplacent le travail fastidieux dans l'installation de parties faciles et l'assistance du système d'assemblage indique à l'opérateur où assembler les pièces les plus difficiles en plus de lui indiquer les vérifications finales.
+
+**Facteurs influençant le succès d'implémentation de la Supply Chain digitale**
+Les facteurs influençant la mise en œuvre réussie de la chaîne d'approvisionnement numérique sont variés et comprennent des éléments internes et externes tels que l'internationalisation croissante des entreprises, la fluctuation de la demande et les cycles de production plus rapides. Malgré les avantages potentiels, de nombreux obstacles persistent, notamment des défis technologiques, organisationnels et stratégiques. Bien que les entreprises investissent davantage dans la digitalisation de leur Supply Chain, seulement 5% sont satisfaites de leur transformation.
+
+3 freins majoritaires aux transformations digitales semblent se prononcer.
+
+Le 1er est le manque de budget, la mise en place des technologies peut se montrer très onéreuse et manquer de visibilité quant à son retour sur investissement dans la mesure où ce dernier est difficile à déterminer. Qui plus est, l'intégration de ces technologies recquiert le recrutement de talents spécialisés dans ces domaines puis la formation des employés à ces nouvelles technologies.
+
+Vient ensuite le manque de lignes de conduites, de stratégies de déploiement. Bien que certaines entreprises soient déjà équipées en WMS, TMS, OMS... elles n'ont pas de ligne de conduite précise pour digitaliser leur métier. Il existe diverses façons de digitalisation mais la plupart des entreprises choisiront la technologie la plus populaire plutôt que celle la plus appropriée à leur développement. Ce n'est pas tant l'application de la technologie numérique qui détermine l'efficacité du management de la Supply Chain, mais plutôt le degré d'adaptation entre le mode opératoire et la technologie de l'information. La transformation réussie d'une entreprise vers le numérique repose sur le changement de business modèle.
+
+
+Enfin arrive la question des droits sociaux et de l'environnement. Une enquête du MIT Sloan Management Review révèle que la résistance au changement, notamment chez les dirigeants d'entreprise, constitue un obstacle majeur à la transformation numérique. 43% des 4 500 directeurs des systèmes d'information (CIO) interrogés dans l'enquête Harvard Nash/KPMG CIO ont identifié la résistance au changement comme le plus grand obstacle à une stratégie numérique réussie.
+Cette réticence est exacerbée par les préoccupations en matière de sécurité et de confidentialité des données, entravant ainsi la transparence nécessaire à la réussite des chaînes d'approvisionnement numériques. De plus, les risques croissants liés à la cybersécurité, notamment les cyber-attaques provenant de dispositifs IoT, soulignent l'urgence d'une législation et d'une réglementation appropriées pour garantir la sécurité et accroître la confiance dans le développement numérique.
 
 
 ### Discussion avec Richard Markoff
 
 ### Construction de la grille d'entretien
+- Votre entreprise implémente-t-elle déjà des stratégies de Lean Supply Chain Management ?
+- Votre entreprise implémente-t-elle déjà des technologies d'Industrie 4.0 ? IA, IoT, Blockhain, Cloud, Big Data.... ?
+  **- Si oui**, pouvez-vous partager des exemples concrets de cas où ces technologies technologies sont implémentées ?
+  - Ces technologies ont-elles démontrées un impact sur l'efficacité de votre Supply Chain ?
+  - Comment s'est déroulée leur implémentation ? Quelles difficultés avez-vous du surmonter ? (Réticence, formations d'employés, problèmes techniques...) --> Comment gérer la résistance au changement ? La formation à ces nouvelles tech ?
+**- Si non,** planifiez-vous d'implémentez des technologies de la sorte ?
+    **- Si oui,** savez-vous vers quelles technologies vous voudriez-vous diriger ? Avez-vous une ligne de conduite / stratégie opérationnelle digitale claire ?
+    **- Si non,** pourquoi ? (Investissement trop cher, frein au changement, manque de spécialistes pour gérer ces technologies, cadre légal, cybersécurité...)
+
+- Technologies mises en places à un niveau stratégique ? (prise de décisions, tendances marchés, prédictions demande...) ou plutôt sur des tâches répétitives en prod' (robotique / automatisation...)
+- Quels sont les défis spécifiques que votre entreprise a rencontrés en termes d'intégration des différents systèmes de gestion de la Supply Chain (WMS, TMS, OMS, etc.)?
+- Mettez-vous en oeuvre une stratégie pour garantir la cybersécurité de votre Supply Chain ?
+- Quel impact la pandémie de COVID-19 a-t-elle eu sur votre stratégie de digitalisation de la Supply Chain?
+- Quels sont les indicateurs clés de performance que votre entreprise utilise pour évaluer l'efficacité de sa chaîne d'approvisionnement numérique?
+- Comment votre entreprise anticipe-t-elle les évolutions technologiques futures et leur impact sur la gestion de la Supply Chain?
+- Comment votre entreprise collabore-t-elle avec ses partenaires commerciaux pour promouvoir l'interopérabilité et la transparence dans la chaîne d'approvisionnement numérique?
+
+--> Ajouter toute une partie sur résilience, gestion des ressources (notamment eau/elec)
 
 ### Identification des intervenants
 
@@ -267,4 +340,5 @@ Blockchain in SC https://aws.amazon.com/fr/blockchain/blockchain-for-supply-chai
 [11] : Miguel Núnez-Merino, Juan Manuel Maqueira-Marín, José Moyano-Fuentes & Carlos Alberto Castano-Moraga (2022): Industry 4.0 and supply chain. A Systematic Science Mapping analysis". Literature Review, Technological Forecasting and Social Change.
 [12] :  Maryam Abdirad & Krishna Krishnan (2020): Industry 4.0 in Logistics and Supply Chain Management: A Systematic Literature Review, Engineering Management Journal.
 [13] : Matteo Rossini, Daryl John Powell, Kaustav Kundu (2022): Lean supply chain management and Industry 4.0: a systematic literature review. Literature review, International Journal of Lean Six Sigma.
-
+[14] : Xuan Wang, Vikas Kumar, Archana Kumari, Evgeny Kuzmin (2022): Impact of Digital Technology on Supply Chain Efficiency in Manufacturing Industry. Literature Review.
+[15] : 
