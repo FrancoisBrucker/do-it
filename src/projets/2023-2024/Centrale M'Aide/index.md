@@ -87,8 +87,7 @@ Découverte des différentes fonctionnalités/interfaces visibles sur un site in
 
 **Devweb Front-End**
 Apprentissage HTML, CSS, JS
-Utilisation de l'application Bootstrap pour implémenter des fonctionnalités sophistiquées
-Utilisation des outils de dévloppement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
+Utilisation des outils de développement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
 
 **Devweb Back-End**
 Utilisation de Python/ Javascript / node au service des bases de données
@@ -103,13 +102,37 @@ La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
 ![Image Timeline](Gantt.png)
 
-## Fonctionnalités
-
-### Connexion et inscription
-
+## Fonctionnalités et pages du site
 La prise en main de notre site se doit d'être facile et rapide.
 L'étude **Experience 2030** (menée par Futurum Research et SAS) montre qu'un internaute décide en quelques secondes de quitter un site Internet si celui-ci n'est pas ergonomique.
 
+Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionnalités
+
+**Voici l'utilité de chacune de ces pages :**
+
+
+|                              | **En bref** | **Informations** | **Fonctionnalités Dev** |  
+|:----------------------------:|:-------------:|:----------------:|:-----------------------:|
+| **Connexion et inscription** | Simple page d'accueil permettant de se connecter/s'inscrire sur le site | Notre slogan, quelques menus, boutons connexion/inscription | |
+| **Mon profil**               | Personnalisation et actualisation du profil | Nom, Prénom, Age non modifiables. | |
+| **Dépôt d'annonce**          | Depôt d'une annonce | Titre, descriptif, dates, localisation, annexes supplémentaires | | 
+| **Recherche d'annonce**      | Liste des annonces désposées et encore d'actu | Image illustrant l'annonce, Titre, Dates | |
+| **Description d'annonce**    | Description précise d'une annonce | Image, titre, description, localisation, profil du déposeur ||
+| **Mes annonces**             | Répertoire de mes différentes annonces | Liste des annonces avec image, titre, dates ||
+| **Favoris**                  | Annonces gardées dans les favoris | Liste des annonces en favori avec image, titre, dates (Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté) | |
+| **Carte des annonces**       | Carte interactive répertoriant les annonces et leur localisation | Carte intéractive (Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs) | |
+
+#### Déconnexion
+
+Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
+
+## Développement du site web
+
+### Low-code
+
+Profitant du cours de Low-code proposé par Adèle Bourgeix, nous avons décidé de faire une première maquette de notre site pour se pencher sur les fonctionnalités intéressantes à implémenter et avoir un apperçu de chaque page pour par la suite refaire leur design.
+
+### Connexion et inscription
 Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
 
 ![Image page d'accueil MBM](MBM-homepage.png)
@@ -122,25 +145,14 @@ Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gè
 
 #### Menu déroulant
 
-Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet à l'utilisateur de naviguer aisément vers les pages **importantes** de notre parcours utilisateur :
-
+Nous avons implémenté un menu déroulant sur la droite de l'écran permettant à l'utilisateur de naviguer aisément vers les pages **importantes** de notre parcours utilisateur :
 - Mon Profil
 - Mes Annonces
-- Mes favoris
-- Carte des annonces
+- Mes Favoris
+- Carte des Annonces
 - Déconnexion
 
 ![Image](MBM-accueil.png)
-
-**Voici l'utilité de chacune de ces pages :**
-|                                    | Mon Profil   | Mes Annonces       | Favoris            | Carte des Annonces |
-|:----------------------------------:|:------------:|:------------------:|:------------------:|:------------------:|
-| **Résumé**                         | Personnalisation et actualisation du profil | Liste des annonces déposées | Liste des annonces ajoutées aux favoris. | Carte interactive répertoriant les annonces et leur localisation |
-| **Informations que l'on y trouve** |  Nom, Prénom, Age non modifiables.       | Visibilité des annonces, utilisateurs intéressés. Possibilité de modifier les annonces. | Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté  | Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs  |
-
-#### Déconnexion
-
-Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
 
 #### Dépôt d'une annonce
 
@@ -171,16 +183,37 @@ Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour
 - Le système de favoris qui communique avec la base de données
 - Un espace de retour de la part des utilisateurs pour les développeurs
 
-## Développement du site web
-
-### Low-code
-
 ### Design : Maquette Figma
 Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.
 
+Pour commencer, nous avons testé différents sets de couleurs afin d'en retenir quelques favoris.
 
+![Choix des couleurs](Figma1.png)
+
+Une fois le set de couleur choisi, nous avons testé différents agencements / design de la page recherche d'annonces. Ce test nous aide à définir la police, les logos, les contours à choisir, la façon dont les images et annonces doivent être exposées...
+
+Design 1
+![Design annonces](Figma2.png)
+
+Design 2
+![Design annonces](Figma3.png)
+
+
+![Figma Propal Design 1](FigmaPropal1.png)
+
+![Figma Propal Design 2](FigmaPropal2.png)
+
+![Figma Propal Design 3](FigmaPropal3.png)
 
 ### Front-end
+A l'heure actuelle (28/11/2023), nous avons créé en local l'ensemble des pages du site en HTML. Nous avons décidé de créer un fichier .css pour le header, qui sera identique pour l'ensemble des pages du site. Cela permet de centraliser l'information, et si nous souhaitons modifier l'apparence du header, cela peut être fait directement dans ce fichier et s'actualiser sur toutes les pages.
+Nous avons aussi défini des classes et des styles pour les fonctionnalités suivantes :
+
+- les boutons de connexion et de déconnexion
+- le menu déroulant
+- les grid qui recueillent l'ensemble des annonces
+- les titres, les sous-titres, le corps de texte
+
 
 ### Back-end
 
@@ -192,13 +225,3 @@ Le centrage du projet sur les élèves centraliens permet de limiter les effets 
 ## Business Plan
 
 Etant donné le public centralien, le site internet ne sera pas à but lucratif (même si y aura la possibilité pour les associations de faire de la pub moyennant finance). Les serveurs seront ceux de l'école, ainsi tout l'argent ira directement dans nos poches après un partage inéquitable.
-
-## Front end
-
-A l'heure actuelle (28/11/2023), nous avons créé en local l'ensemble des pages du site en HTML. Nous avons décidé de créer un fichier .css pour le header, qui sera identique pour l'ensemble des pages du site. Cela permet de centraliser l'information, et si nous souhaitons modifier l'apparence du header, cela peut être fait directement dans ce fichier et s'actualiser sur toutes les pages.
-Nous avons aussi défini des classes et des styles pour les fonctionnalités suivantes :
-
-- les boutons de connexion et de déconnexion
-- le menu déroulant
-- les grid qui recueillent l'ensemble des annonces
-- les titres, les sous-titres, le corps de texte
