@@ -9,7 +9,7 @@ authors:
   - Le Bihan Paul
   - Kawtar Bahri
 
-date: 2023-09-27
+date: 2024-03-28
 
 tags: 
   - "projets"
@@ -18,193 +18,69 @@ tags:
 résumé: L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.
 
 ---
+
 ## Introduction - définition du projet
 
-L'objectif est de pouvoir centraliser les informations sur les mobilités afin que les étudiants puissent les filtrer à leur guise et obtenir les contacts nécessaires.
+Pour notre projet Do_It, nous avons voulu créer une plateforme afin d'héberger l'ensemble des mobilités des Centraliens, afin d'aiguiller les prochains élèves à trouver leur destination.
 
-## Design du site web
+### L'équipe du projet
 
-### Déposer sa mobilité
+Notre équipe pour mener à bien ce projet est la suivante :
+- Lucie Le Boursicaud
+- Agathe Rabachou
+- Kawtar Bahri
+- Paul Le Bihan
+- Mathis Schultz
 
-**L'étudiant remplit un formulaire**
+### Les missions
 
-```
-Des questions fermées : le but est d'obtenir des réponses dans un format précis : date, pays... le format doit permettre l'utilisation de requête SQL.
-Des questions ouvertes pour le descriptif qui seront des textes sans importance pour la base de donnée, ou des images mais utiles pour les utilisateurs.
+Voici les différentes étapes mises en œuvre afin de mener à bien notre projet :
 
-Intérêts :
-- Une donnée collecté de manière unique.
-- Facile à reconduire dans le temps.
-- Un format de donnée tout de suite adapté.
+- Étude du besoin
+- Cahier des charges
+- Développement
+- Retour d'expérience
+- Explication du code
+- Présentation
 
-Difficultés :
-- Nécessite un engagement supplémentaire des élèves avec un nouveau formulaire à remplir.
-- Difficulté à inciter les gens à répondre.
-```
+## Étude du besoin
 
-**Collecte de données via l'administration**
+La première étape afin de réaliser notre site web a été de faire une étude afin de définir nos objectifs, rencontrer les parties prenantes pour comprendre les besoins et les opportunités.
 
-```
-Venir récupérer les données de l'administration, venant de leur différentes plateformes : My Mobility Online, CFA,...  
-Les implémenter dans la base de données du site
+### Rencontre avec les Élèves
 
-Intérêts : 
-- faire gagner du temps aux étudiants en évitant de donnée plusieurs fois les mêmes informations.
+Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1As, 2As et 3As pour savoir si le projet les intéressait, s'ils seraient prêt à y accorder un peu de temps.
 
-Difficultés :  
-- Réussir à collecter les datas des différentes plateforme pour les adapter au site
-- Problème en cas de mise à jour des données d'un site externe, nécessite une mise à jour de l'API qui transforme la data pour la rentrer dans la base de donnée.
-- Nécessite un lien permanent avec l'admin pour mettre à jour ces données.
-- Comment savoir si l'élève accepte que ses datas soient partager ? remplir quand même le formulaire ? L'admin souhaite les retours d'expérience.
-```
+**Contact des élèves cherchant une mobilité**
+Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A. Nous avons donc voulu savoir quelles étaient les questions qu'ils se posent.
 
-#### Plusieurs méthodes possibles
+**Contact des élèves retournant de mobilité**
+Les 2A et 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet. L'enjeux pour nous et de savoir dans quel mesure on peut les impliquer et comment leur simplifier la vie.
 
-###### Un formulaire sur une page annexe
+**Exemple de question pour mener des interviews**
+Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :
 
-L'objectif est de créer une page dédié au dépôt de mobilité sur le site : l'étudiant rempli un formulaire sur le site  
-et le soumet à l'administration, si le dossier est valide, il est alors visible sur le site.
+- Quelles informations te semblent indispensables pour choisir ta mobilité ?
+- Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?
+- As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ?
+- Combien de temps serais-tu prêt à consacrer pour remplir un formulaire de retour de mobilité ? Le ferais-tu si ça n'était pas obligatoire ? Qu'est-ce qui pourrait te motiver à le faire ?
+- Une FAQ regroupant les questions récurrentes des étudiants serait-il intéressant ? Irais-tu sur le site pour avoir réponse à ta question ou enverrais-tu quand même un mail "pour être sûr"?
+- Quelles données as-tu besoin d'avoir pour gérer les possibles bugs ? A quel degré de liberté ? (Lecture seule, modification sous certaines conditions , modifications totales , suppression …)
+- Aimerais-tu avoir les contacts des anciens élèves ayant effectué une mobilité qui t'intéresse ?
+- Aimerais-tu avoir accès aux sites des écoles pour les SMA ? 
+- As-tu des suggestions de fonctionnalités ? 
+- A quel point le fait de devoir prendre l’avion pour y aller a- t-il fermé des destinations ?
 
-Cette méthode requiert :
+### Rencontre avec l'administration
 
-- une page de dépôt hébergé sur le site
-- Une page administrateur pour valider les mobilités qui seront déposé.
+L'administration est au cœur de notre projet avec un double rôle :
 
-###### Un formulaire Moodle
+- gérer les mobilités : étudier les demandes de mobilités, accorder ou non le droit aux élèves de les réaliser.
+- Collecter l'information : l'administration, au travers de plusieurs service rassemble l'ensemble des informations de mobilités des élèves.
 
-Cette méthode requiert :
+Ainsi, nous avons contacté les différentes parties afin de comprendre quel pourrait-être leur rôle dans notre projet, dans quel mesure il pourrait les intéresser et comment pourraient-ils nous aider.
 
-- Un formulaire Moodle précis donnant des réponses sous un format exploitable.
-- une validation de l'administration
-- une implémentation manuelle de l'administration dans la base de donnée.
-
-### Site publique/réservé à Centrale
-
-Il semble être nécessaire d'implémenter un système de connection au site afin de protéger les données des utilisateurs.
-
-#### Différents utilisateurs
-
-**Un identifiant d'accès consultation unique pour tout le monde**  
-L'idée est que tout le monde accède au site via un mot de passe unique pouvant changer tous les ans, défini par l'administration.
-*méthode la plus simple, mais nécessite une modération*
-
-**Un identifiant individuel**  
-L'idée est de venir utiliser les identifiants Moodle (le système d'authentification CAS) pour se connecter au site, le site ferait une requête vers le serveur pour demander si la personne a accès ou non aux données : *cette méthode requiert des compétences élevés en sécurité*
-*cette méthode limite les dépôts de dossier par étudiant*
-
-**Un compte pour l'administration**  
-L'idée est que ce compte puisse gérer les différentes mobilités.
-
-- Un mot de passe sécurisé
-- Un accès limité à l'administration
-- La capacité à valider/refuser/supprimer une mobilité de la base de donnée
-*Cela permet d'avoir une modération du site, mais demande un travail supplémentaire à l'administration*
-
-### Création de la map monde
-
-utilisation d'un ficher geojson afin d'avoir les vecteurs définissant les frontières des pays.  
-récupérer le ficher [Geojson](https://geojson-maps.ash.ms/), penser à sélectionner les différentes régions du monde souhaité.  
-L'idée est de générer une map cliquable afin de sélectionner la région qui nous intéresse pour accéder au mobilité des années précédentes.
-
-<img src="map.png">
-
-### Système de filtre
-
-Il est nécessaire de pouvoir filtrer les mobilités pour qu'elle nous corresponde.
-
-*Un apprenti ne pourra pas effectuer de SMA donc ne voudra pas voir ce genre de mobilité*  
-*Quelqu'un avec un trop faible GPA ne voudra pas s'intéresser au SMA nécessitant d'avoir 4/4*
-
-Pour rendre possible le fonctionnement en filtre il est nécessaire que la base de donnée soit dans un format précis avec des réponses fermer.
-*on ne veut pas que Japon/japon/JAPON soit trois pays différents*
-
-**Les différentes catégories à implémenter**
-
-| Column 1 | Column 2 |
-| -------- | -------- |
-| Nom    | *Sacha*   |
-| Prénom    |  *Ketchum*   |
-| e-mail élève    | *Sacha.Ketchum@pokémon*    |
-| Bio de l'élève    | *Un jour je serai le meilleur dresseur*    |
-| Année de mobilité    | *2023*    |
-| Durée    | *6 mois*    |
-| Type de mobilité    | *SMA/SSE/Césure*    |
-| Pays    | *Espagne*    |
-| Ville    | *Barcelone*    |
-| Description rapide de la mobilité    | *Un SMA pour apprendre l'électronique de pikachu*    |
-| Contact mission    | *Pierre*    |
-| Budget   | *500-1000€*   |
-
-## Moyen technique mis en oeuvre
-
-### La réalisation d'une maquette CANVA
-
-Les intérêts
-
-- Réfléchir aux différentes fonctionnalités pour rendre l'application viable
-- Établir les différents boutons à implémenter
-- Établir l'esthétisme du site
-- Modéliser les différentes interfaces : utilisateur/élève  
-déposant sa mobilité/administrateur de l'école
-
-Avant de venir développer le site Web nous avons décider de le dessiner sur Canva afin de prendre le temps tous ensemble de décider du design, mais surtout de s'assurer de la faciliter d'accès et d'être sûr de créer un parcours utilisateur efficace.
-
-Voici une première maquette Canva pour représenter les mobilités des élèves.
-
-<img src="canva_site_1.png">
-
-<img src="canva_site_2.png">
-
-### La réalisation d'un MVP (minimum viable project)
-
-Les intérêts
-
-- tester la faisabilité d'un projet rapidement.
-- Avoir une première application à éprouver pour trouver les limites du projet  
-et cadrer proprement les outils à développer.
-
-Les phases pour faire le MVP (minimum viable product)
-
-1. Étude des fonctionnalités et des solutions à disposition, aller demander à l'administration  
-les fonctionnalités qui les intéresse.
-2. Développement en équipe d'une maquette en utilisant un outil de no-code (Bubble/Rettol/Sendinblue ) ou de design (Figma)
-3. Tests des parcours utilisateurs (résolution et dev bug).
-4. Préparation du pitch et de la démonstration.
-
-Bien que le MVP propose un certain nombre d'avantage afin d'obtenir une maquette qu'il est possible d'éprouver. Nous avons décider de ne pas mettre en œuvre cette solution puisqu'elle nous prendrait trop de temps. On choisit donc de passer plus de temps à réfléchir à la structure du site et après d'attaquer directement le développement propre du site web.
-
-Notre MVP sera réalisé sous Figma, c'est un logiciel de design qui permet de tester les fonctionnalités et de mettre en page le site web pour visualiser les parcours utilisateurs, définir les aspects graphiques ainsi que de s'assurer que l'utilisation est intuitive.
-
-Actuellement la maquette Figma présente le parcours utilisateur d'un étudiant pour voir les mobilités et aussi pour déposer la sienne.
-
-<img src="figma.png">
-
-Maquette Figma.
-
-<video width="1280" height="720" controls>
-  <source src="presentation_figma.mp4" type="video/mp4">
-</video>
-
-Vidéo de présentation de la maquette Figma.
-
-### La réalisation du site web final
-
-Les intérêts
-
-- Avoir un site web propre et se débarrasser des contraintes liées au no-code.
-- Avoir les données en interne sur les serveurs de l'école pour ne pas transférer les datas.
-
-### L'authentification CAS
-
-L'intérêt de l'authentification CAS est de définir les accès au site pour s'assurer que seul des personnes de l'écoles et sous certaines conditions auraient accès aux données partagés.
-
-### L'hébergement du site
-
-L'objectif est d'héberger le site web sur les serveurs de l'écoles pour rester souverain de la data.
-
-## Contact des parties impliquées dans le projet
-
-### Contact auprès de l'administration
+Voici quelques questions que nous avons pu leur poser :
 
 - Quelles sont les données que vous pouvez extraire de MyMobilityOnline ou autre site ?
 - Quelles sont les tâches les plus pénibles que vous êtes amenés à effectuer en tant que RI ? Quel travail effectuez vous avec ces datas ?
@@ -225,8 +101,9 @@ pas déjà dans la liste)
 - Est-ce que l'admin veut donner des informations sur certaines écoles ? GPA minimum ?
 - Nombre de Centralien pris par an/Nombre de Centralien pris l'année précédentes ?
 
-**Gestionnaire des SMA et double diplôme : Olivier Boiron**
+Voici le retour des différentes parties :
 
+**Gestionnaire des SMA et double diplôme : Olivier Boiron**
 Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.
 
 - Sur mobility online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilités de faire des requêtes PHP pour obtenir des informations de la Base de donnée, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractable, par exemple les cours sont dans la convention qui est au format pdf donc pas accessible facilement.
@@ -238,55 +115,165 @@ Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lu
 - Pour Boiron il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
 - Obligatoire : avoir une FAQ et demander des retours d’expériences
 
-**Gestionnaire des SSE & TFE : Muriel Roche**
+**Gestionnaire des SSE & TFE : Muriel Roche**  
+Les SSE et TFE sont gérés comme des stages, donc via le site des stages, les informations liées à ces mobilités ne sont pas rassemblé et ne peuvent être partager. De plus, ne souhaitant pas modifier ses méthodes, il est nécessaire que cette plateforme ne rajoute pas de travail, et que les informations sur la plateforme soient exactes et à jour. Donc il est nécessaire que le site renvoie vers le moodle.
+**Gestionnaire des Alternants entreprise : Guillaume Graton**  
+Les mobilités des alternants sont gérés indépendamment d'autre service, notamment via le CFA, qui collecte les données à part et qui ne partage qu'un mail avec le BIP.
+**Gestionnaire des mobilité recherche : Daniel Mazzoni**  
+Aucune information notable a été partagé.
+**Vincent Merval**  
+Nous avons rencontré Monsieur Merval en vue d'échanger à propos des enjeux RGPD associés au projet. Ce qui est ressorti de cette réunion est qu'il n'est pas possible d'engager l'image de l'école sur un projet étudiant. En terme de sécurité si le projet est réalisé, il faut que les données soient protégées. La connexion CAS est une bonne idée et il sera nécessaire de faire une revue de code avec les services informatiques de l'école. De plus, il a insisté sur la nécessité d'avoir une pérennité dans le projet pour autoriser son déploiement.
 
-Nous n'avons pas encore réalisé d'entrevu avec le responsable.
+### Conclusion des rencontres
 
-**Gestionnaire des Alernants entreprise : Guillaume Graton**
+Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et les intérêts de ce projet pour les élèves. Cependant des contraintes sont apparu qui ont aiguillé le projet :
 
-Nous n'avons pas encore réalisé d'entrevu avec le responsable.
+- Ne pourra pas être déployé officiellement
+- L'administration ne communiquera pas de données
+- Il faut, si le projet est poursuivi, quelqu'un pour le maintenir
+- Toutes les informations partagées doivent être exacte et à jour.
+- Les élèves veulent un lieu unique d'accès à l'information
+- Les datas doivent être protégé, donc le code doit être robuste et mis à jour régulièrement.
 
-**Gestionnaire des mobilité recherche : Daniel Mazzoni**
+### Construction de la base de données
 
-Nous n'avons pas encore réalisé d'entrevu avec le responsable.
+À la suite des différents échanges avec les élèves et l'administration nous avons donc pu relever les points les plus important aux yeux des utilisateurs afin de rendre le service pertinent à l'utilisation. Nous avons tout d'abord mis à l'épreuve ces différentes données au près des utilisateurs pour étudier leur exhaustivité et pertinence. De ces recherches, nous avons sélectionné un ensemble de catégories que nous souhaitons récolter et exposer sur le site :
 
-### Contact des étudiants
+- Nom
+- Prénom
+- Mail
+- Téléphone
+- Réseaux sociaux
+- GPA S6
+- Type de mobilité (SMA,SSE..)
+- Pays
+- Ville
+- Durée
+- Date de début
+- Langue requise
+- Retour d'expérience général
+- Retour sur la vie dans le pays et la ville
+- Coût de la vie
+- Tips
+- Autorisation de publication de la donnée
 
-Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1A et 2A pour savoir si le projet les intéressait, s'il serait prêt à y accorder un peu de temps.
+Questions spécifiques aux SMA et DD
 
-Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :
+- Référent géographique
+- Référent scientifique
+- Université
+- Domaine des cours
+- Liste des cours
+- Retour d'expérience
 
-- Quelles informations te semblent indispensables pour choisir ta mobilité ?
-- Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?
-- As-tu envie de décider de l'anonymat ou non de ton retour d'expérience ?
-- Combien de temps serais-tu prêt à consacrer pour remplir un formulaire de retour de mobilité ? Le ferais-tu si ça n'était pas obligatoire ? Qu'est-ce qui pourrait te motiver à le faire ?
-- Une FAQ regroupant les questions récurrentes des étudiants serait-il intéressant ? Irais-tu sur le site pour avoir réponse à ta question ou enverrais-tu quand même un mail "pour être sûr"?
-- Quelles données as-tu besoin d'avoir pour gérer les possibles bugs ? A quel degré de liberté ? (Lecture seule, modification sous certaines conditions , modifications totales , suppression …)
-- Aimerais-tu avoir les contacts des anciens élèves ayant effectué une mobilité qui t'intéresse ?
-- Aimerais-tu avoir accès aux sites des écoles pour les SMA ? 
-- As-tu des suggestions de fonctionnalités ? 
-- A quel point le fait de devoir prendre l’avion pour y aller a- t-il fermé des destinations ?
+Questions spécifiques aux SSE, Alternant et TFE
 
-**Contact des élèves cherchant une mobilité**
+- Nom de l'entreprise ou organisme
+- Domaine d'activité
+- Retour d'expérience
 
-Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A.
+Ces données sont à la discrétion de l'élève, il choisit ou non de les partager. L'élève pourra donc remplir ces données sur le site via la page dédié. Et sa mobilité sera donc accessible sur la page d'accueille via un ensemble de filtre.
 
-**Contact des élèves retournant de mobilité**
+## Design du site web
 
-Les 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet.
+Des études précédentes ainsi que des cours de design nous avons cadré notre projet, et défini un cahier des charges pour considérer notre projet aboutit.
 
-## Premières répartitions des tâches 
-| Taches | Affectée à | Statut |
-| ------- | ---------- | ------ |
-| Recueillir le besoin des étudiants | Tous le monde | A faire |
-| Construire une US | | A faire |
-| Benchmarker les étudiants des autres écoles sur leur recherche de mobilité | A faire |
-| Préparer un Git-Hub   | Lucie | A faire |
-| Choisir nos extensions    | Lucie | A faire |
-| Hébergement du site      | | A faire |
-| Etudier la connexion CAS     | | A faire |
-| Faire les maquettes de toutes les pages    | Paul & Kawtar| A faire |
-| Tables de données   | Mathis & Agathe | A faire |
-| Préparer l'entretien avec les RI   | Tout le monde | A faire |
-| Faire un Google Form pour les centraliens    | Mathis & Agathe | A faire |
-| Choisir entre API Google ou GeoPanda | | A faire |
+### Persona, à qui s'adresse notre projet ?
+
+**Premier persona : l'élève de première année**
+
+Cet élève a besoin pour compléter son diplôme d'effectuer une mobilité internationale. Notre objectif va donc être de le guider en lui exposant les différentes possibilités en fonction de son parcours, de son budget et des expériences antérieures.
+
+**Second persona : l'élève qui rentre de mobilité**
+
+Cet élève n'a pas directement besoin de notre site. En effet c'est nous qui avons besoin de lui. Mais nous comptons beaucoup sur la participation grâce à un effet de remerciement envers le service qu'il aurait pu en tirer les années précédentes.
+
+**Troisième persona : l'administration**
+
+L'administration a émis le souhait d'avoir des retours sur les mobilités, sur l'aspect expérience et sur les cours qui sont proposés notamment en SMA.
+
+### Cahier des charges
+
+Ce paragraphe décris l'ensemble des objectifs à atteindre afin de considérer le projet abouti
+
+Fonctionnalités :
+
+- Une visualisation des mobilités via une map
+    ○ Affichage de la map
+    ○ Possibilité de se déplacer dessus, de zoomer
+    ○ Localisation de la ville des mobilités
+- Une page pour remplir les détails de sa mobilité
+    ○ Questions claires
+    ○ Exhaustives
+    ○ Rapide à répondre et intuitif
+- Une base de donnée
+    ○ Système de filtre
+    ○ Exhaustivité
+    ○ Confidentialité
+- Connexion Cas
+- Hébergement
+  
+Critères de validation :
+
+- Facilité d'utilisation
+- Design épuré
+- Couleurs de Centrale
+
+### Planification
+
+Voici le gant des tâches à réaliser afin de compléter notre projet, réparti en sprint tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que des moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
+
+<img src="planning.png">
+
+### Maquettes
+
+Cette section regroupe donc les premiers designs et maquettes misent en œuvre afin d'obtenir une expérience utilisateur optimale et pouvoir passer au développement en ayant une visualisation claire du projet. Ces différents modèles ont été conçu au travers des cours d'UX et d'UI via Canva et figma.
+
+**Première maquette - Canva**
+
+L'intérêt de cette maquette est de mettre à plat les idées et les contraintes de charte graphique. De choisir la disposition d'ensemble du site.
+
+<img src="canva_site_1.png">
+<img src="canva_site_2.png">
+
+**Minimum Viable Project - Figma**
+
+Au travers des différents outils que propose Figma nous avons voulu construire la structure et les fonctionnalités du site web. De plus, cette maquette nous a permis de réaliser les différents testes pour vérifier que notre interface est intuitive.
+
+Figma nous permet d'obtenir un rendu très proche de la solution finale avec rapidité et précision.
+<img src="figma.png">
+
+Voici par exemple le parcours utilisateur d'un élève :
+
+<video width="1280" height="720" controls>
+  <source src="presentation_figma.mp4" type="video/mp4">
+</video>
+
+## Postérité du projet
+
+Ce projet a été salué par de nombreux élèves qui sont intéressés par son aboutissement. Cette section a donc pour objectif de donner les clés pour reprendre le projet et le faire avancer.
+
+Voici tout d'abord les défis à relever pour aller plus loin :
+
+- Réaliser la connexion CAS.
+- Héberger le site indépendamment de Centrale
+
+Ces différentes étapes n'ont pas été mise en œuvre due à des restrictions administratives pour publier le site publiquement sur les serveurs de centrale pour des raisons de sécurité des données et de maintient du code dans le temps. Cependant, il est possible de publier le site pour des durées d'un an reconductible à condition d'effectuer les mises à jours de sécurités annuelles.
+Pour réaliser la connexion CAS, la première étape est de se renseigner auprès de monsieur Brucker afin d'avoir un script pour implémenter la connexion CAS. 
+
+### Héritage du code
+
+Voici une présentation des outils mis en œuvre afin de réaliser le site. Plus de détail sont accessible directement dans le code.
+Voici le Github pour accéder au code :
+[Github du code](https://github.com/KawtarBahri/Projet-3A.git)
+De plus, pour réaliser ce projet nous avons choisit les outils suivants :
+
+- JavaScript
+- HTML
+- CSS Bootstrap
+- Sqlite
+- Sequelize
+- [Figma](https://www.figma.com/file/ThyCFPc8uPskYkBhsdn5pb/Projet-3A?type=design&node-id=0%3A1&mode=design&t=uWpVRZaWnSmndIUo-1)
+- [Canva](https://www.canva.com/design/DAFvptH5m2c/gqgP8YRc3GiXS5b69VPgcg/edit?utm_content=DAFvptH5m2c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [Formulaire provisoire](https://docs.google.com/forms/d/e/1FAIpQLSeIoCivfvWPjLD-TudeHL9b3HjVbGLAArKJkqyT0_V0_DV8-A/viewform?usp=sf_link)
+  
