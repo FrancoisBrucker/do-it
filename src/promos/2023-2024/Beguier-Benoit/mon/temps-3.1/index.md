@@ -24,6 +24,9 @@ résumé: "Le but de ce MON est d'apprendre les bases du G-code, langage permett
 
 1. Sources
 2. Introduction
+3. Nomenclature des phases
+4. Gamme d'usinage
+5. La Fabrication Assistée par Ordinateur
 
 ## Sources
 

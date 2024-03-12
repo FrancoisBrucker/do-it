@@ -11,7 +11,7 @@ authors:
 
 Création d'un site de mise en relation des élèves centraliens pour déposer et répondre à des annonces.
 
-Dernière mise à jour : 20/02/2024
+Dernière mise à jour : 12/03/2024
 
 ## Description du projet
 ### Contexte
@@ -87,8 +87,7 @@ Découverte des différentes fonctionnalités/interfaces visibles sur un site in
 
 **Devweb Front-End**
 Apprentissage HTML, CSS, JS
-Utilisation de l'application Bootstrap pour implémenter des fonctionnalités sophistiquées
-Utilisation des outils de dévloppement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
+Utilisation des outils de développement pour comparer les scripts d'autres sites et s'en inspirer pour développer notre site
 
 **Devweb Back-End**
 Utilisation de Python/ Javascript / node au service des bases de données
@@ -103,13 +102,37 @@ La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
 ![Image Timeline](Gantt.png)
 
-## Fonctionnalités
-
-### Connexion et inscription
-
+## Fonctionnalités et pages du site
 La prise en main de notre site se doit d'être facile et rapide.
 L'étude **Experience 2030** (menée par Futurum Research et SAS) montre qu'un internaute décide en quelques secondes de quitter un site Internet si celui-ci n'est pas ergonomique.
 
+Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionnalités
+
+**Voici l'utilité de chacune de ces pages :**
+
+
+|                              | **En bref** | **Informations** |
+|:----------------------------:|:-----------:|:----------------:|
+| **Connexion et inscription** | Simple page d'accueil permettant de se connecter/s'inscrire sur le site | Notre slogan, quelques menus, boutons connexion/inscription |
+| **Mon profil**               | Personnalisation et actualisation du profil | Nom, Prénom, Age non modifiables. |
+| **Dépôt d'annonce**          | Depôt d'une annonce | Titre, descriptif, dates, localisation, annexes supplémentaires | 
+| **Recherche d'annonce**      | Liste des annonces désposées et encore d'actu | Image illustrant l'annonce, Titre, Dates |
+| **Description d'annonce**    | Description précise d'une annonce | Image, titre, description, localisation, profil du déposeur |
+| **Mes annonces**             | Répertoire de mes différentes annonces | Liste des annonces avec image, titre, dates |
+| **Favoris**                  | Annonces gardées dans les favoris | Liste des annonces en favori avec image, titre, dates (Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté) |
+| **Carte des annonces**       | Carte interactive répertoriant les annonces et leur localisation | Carte intéractive (Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs) |
+
+#### Déconnexion
+
+Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
+
+## Développement du site web
+
+### Low-code
+
+Profitant du cours de Low-code proposé par Adèle Bourgeix, nous avons décidé de faire une première maquette de notre site pour se pencher sur les fonctionnalités intéressantes à implémenter et avoir un apperçu de chaque page pour par la suite refaire leur design.
+
+### Connexion et inscription
 Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
 
 ![Image page d'accueil MBM](MBM-homepage.png)
@@ -122,25 +145,14 @@ Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gè
 
 #### Menu déroulant
 
-Nous avons implémenté un menu déroulant sur la droite de l'écran qui permet à l'utilisateur de naviguer aisément vers les pages **importantes** de notre parcours utilisateur :
-
+Nous avons implémenté un menu déroulant sur la droite de l'écran permettant à l'utilisateur de naviguer aisément vers les pages **importantes** de notre parcours utilisateur :
 - Mon Profil
 - Mes Annonces
-- Mes favoris
-- Carte des annonces
+- Mes Favoris
+- Carte des Annonces
 - Déconnexion
 
 ![Image](MBM-accueil.png)
-
-**Voici l'utilité de chacune de ces pages :**
-|                                    | Mon Profil   | Mes Annonces       | Favoris            | Carte des Annonces |
-|:----------------------------------:|:------------:|:------------------:|:------------------:|:------------------:|
-| **Résumé**                         | Personnalisation et actualisation du profil | Liste des annonces déposées | Liste des annonces ajoutées aux favoris. | Carte interactive répertoriant les annonces et leur localisation |
-| **Informations que l'on y trouve** |  Nom, Prénom, Age non modifiables.       | Visibilité des annonces, utilisateurs intéressés. Possibilité de modifier les annonces. | Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté  | Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs  |
-
-#### Déconnexion
-
-Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
 
 #### Dépôt d'une annonce
 
@@ -161,44 +173,83 @@ Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour
 
 ![Image recherche annonce](MBM-recherche-annonce.png)
 
-#### Fonctionnalités à développer
-
-- Le système de chat entre particuliers une fois que l'annonce a été acceptée.
-- La carte des annonces qui permet à l'utilisateur d'afficher une carte de ses environs avec les annonces à disposition.
-- Le système de notation des autres utilisateurs et des services rendus. Afin de garantir une transparence et de garder des bonnes mains bienveillantes, ce système permet d'alerter les autres utilisateurs et de les mettre en garde avec une mauvaise note si une bonne main ou un annonceur n'ont pas respecté leurs engagements.
-- La page de confirmation lors du dépôt d'une annonce
-- La barre de recherche fonctionnelle
-- Le système de favoris qui communique avec la base de données
-- Un espace de retour de la part des utilisateurs pour les développeurs
-
-## Développement du site web
-
-### Low-code
-
 ### Design : Maquette Figma
 Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.
 
+Pour commencer, nous avons testé différents sets de couleurs afin d'en retenir quelques favoris.
 
+![Choix des couleurs](Figma1.png)
+
+Ensuite, nous travaillons sur l'achitecture et le design de la page recherche d'annonces. L'objectif est alors de compléter la charte graphique en choisissant la police d'écriture, les logos utilisés, les contours des annonces, la façon dont les images et annonces doivent être exposées...
+
+Un premier jet est alors proposé au travers l'image ci-dessous :
+![Design annonces](Figma2.png)
+
+Bien que nous sommes satisfaits de la clarté de la page, de sa facilité de lecture, de la façon dont ressortent les informations, ce premier design semble encore brouillon.
+Le choix des logos manque de cohérence, peu d'annonces sont visibles sur un même écran, les couleurs sont à ajuster..
+
+Un retrevail permet d'aboutir au desgin suivant, bien plus satisfaisant :
+![Design annonces](Figma3.png)
+
+L'architecture de la page choisie, nous testons les différents sets de couleurs sélectionnés pour en retenir un définitif et ainsi terminer notre charte graphique. En l'occurence, nous sélectionnons la Propal 1 rappelant la charte graphique de l'école.
+
+| Propal 1 | Propal 2 | Propal 3 |
+|:--------:|:--------:|:--------:|
+| ![Figma Propal Design 1](FigmaPropal1.png) | ![Figma Propal Design 2](FigmaPropal2.png) | ![Figma Propal Design 3](FigmaPropal3.png) |
 
 ### Front-end
+Nous avons créé l'ensemble des pages du site en HTML et avons ajouté un fichier .css pour le header qui est identique pour l'ensemble des pages du site.
+Ce fichier permet de centraliser l'information, et modifier l'apparence du header des dfférentes pages aisément.
 
-### Back-end
-
-## Sécurité de l'utilisateur
-
-Une problématique centrale réside dans la confidentialité des données, et de la sécurité des annonceurs (biens dégradés, cambriolages, etc...). De la même manière qu'Airbnb, seule la personne ayant accepté une annonce peut consulter l'adresse exacte de l'annonceur, sinon elle est localisée par une zone relativement large.
-Le centrage du projet sur les élèves centraliens permet de limiter les effets listés ci-dessus, car il existe une relation de confiance non-négligeable entre les centraliens.
-
-## Business Plan
-
-Etant donné le public centralien, le site internet ne sera pas à but lucratif (même si y aura la possibilité pour les associations de faire de la pub moyennant finance). Les serveurs seront ceux de l'école, ainsi tout l'argent ira directement dans nos poches après un partage inéquitable.
-
-## Front end
-
-A l'heure actuelle (28/11/2023), nous avons créé en local l'ensemble des pages du site en HTML. Nous avons décidé de créer un fichier .css pour le header, qui sera identique pour l'ensemble des pages du site. Cela permet de centraliser l'information, et si nous souhaitons modifier l'apparence du header, cela peut être fait directement dans ce fichier et s'actualiser sur toutes les pages.
-Nous avons aussi défini des classes et des styles pour les fonctionnalités suivantes :
-
+Nous avons également défini des classes et des styles pour les fonctionnalités suivantes :
 - les boutons de connexion et de déconnexion
 - le menu déroulant
 - les grid qui recueillent l'ensemble des annonces
 - les titres, les sous-titres, le corps de texte
+
+Voici un apperçu des différentes pages :
+
+#### Page de connexion/inscription
+| Page initiale | Connexion (mdp incorrect) | Formulaire d'inscription (email déjà utilisé) |
+|:--------:|:--------:|:--------:|
+| ![Page d'accueil](Connexion.png) | ![Connexion](Connexion2.png) | ![Formulaire d'inscription](Inscription.png) |
+
+Il est intéressant de remarquer qu'une erreur dans le mot de passe à la connexion ou que l'essai d'inscription avec une adresse mail déjà utilisée renvoient des erreurs permettant aux utilisateurs de corriger leur identification.
+
+#### Répertoire et aperçu d'une annonce
+| Annonces | Aperçu d'une annonce | Mes annonces |
+|:--------:|:--------:|:--------:|
+| ![Annonces](Annonces.png) | ![Annonce](Annonce.png) | ![Mes annonces](Mes_annonces.png) |
+
+Le menu déroulant est présent sur toutes les pages du site une fois l'utilisateur connecté. Il permet d'accéder rapidement aux pages principales.
+
+
+#### Dépôt d'une annonce et aperçu du profil
+| Dépôt d'une annonce | Aperçu du profil |
+|:--------:|:--------:|
+| ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](Profil.png) |
+
+### Back-end
+
+## Perspectives d'avenir du site
+
+### Business Plan
+
+Etant donné le public centralien, le site internet est pour le moment considéré à but non lucratif.
+Cependant, dans la mesure où celui-ci prendrait place dans la vie centralienne, il pourrait servir de vitrine aux publicités de certaines associations en l'échange de financement permettant par exemple d'entretenir le site en bonne et due forme.
+
+### Sécurité de l'utilisateur
+
+Il s'agit d'un sujet peu abordé au cours de notre projet - partant du principe qu'au sein du public centralien, il existe une relation de confiance - toutefois, la sécurité de l'utilisateur est évidemment une problématique centrale de ce site.
+Des coordonées, adresses utilisateurs sont partagées à travers ce site et il est nécessaire de protéger ces données.
+
+Il pourrait dès lors être intéressant de se pencher sur ces questions de sécurité et confidentialité des données dans un objectif d'amélioration du projet.
+
+#### Fonctionnalités à développer
+
+Notre site contient les fonctionnalités jugées les plus essentielles lors de nos campagnes utilisateurs. Des améliorations futures sont envisageables :
+- un système de chat entre centraliens une fois l'annonce acceptée
+- un système de notation des autres utilisateurs et des services rendus, incitant à la bienveillance de la communauté
+- une page de confirmation lors du dépôt d'une annonce
+- rendre la barre de recherche fonctionnelle
+- un espace de retour de la part des utilisateurs pour les développeurs.
