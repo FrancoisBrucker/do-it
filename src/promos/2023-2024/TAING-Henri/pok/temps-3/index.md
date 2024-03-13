@@ -102,6 +102,7 @@ On prendra comme user-stories à faire :
 ## Sources et horodateur <a id="section-7"></a>
 
 [MOOC de l'ANSSI](https://secnumacademie.gouv.fr/) 
+[Méthode EBIOS](https://cyber.gouv.fr/la-methode-ebios-risk-manager)
 [Formation en cybersécurité pour s'initier - parfait pour faire du management en cybersécurité, Certified in Cybersecurity by ISC2](https://www.isc2.org/certifications/cc)
 
 Autres sources : CCI - Formations de formateurs "Acquérir les compétences clés pour bien écrire un cas" et "Maîtriser les étapes et les enjeux d'une animation de cas" animés respectivement par Jean-Marc RAGGI et Emmanuelle LE NAGARD-ASSAYAG, les supports m'étant été prêtés par Laetitia PIET. 
@@ -113,4 +114,4 @@ Autres sources : CCI - Formations de formateurs "Acquérir les compétences clé
 > Vendredi 23/02 : 2h (Fin de la lecture de la méthode EBIOS et début de la rédaction du cas)
 > Dimanche 25/02 : 2h (Formalisation de mes notes)
 > Mardi 27/02 : 2h (Extraits d'interview) 
-
+> Mercredi 13/03 : 2h (Questions de l'étude de cas et changements mineurs)
