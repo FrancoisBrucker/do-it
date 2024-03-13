@@ -17,41 +17,24 @@ résumé: Un POK traitant de la transformation de la Supply Chain à l'ère de l
 ## Contexte
 Très concerné par l'industrie et la Supply Chain - y ayant déjà été confronté lors de ma césure via un stage chez L'Oréal et souhaitant y faire mon cadre de carrière - je souhtaite réaliser un POK dans le but d'accroître ma connaissance de la Supply Chain, en particulier les enjeux auxquels elle se retrouve confronté face à la digitalisation des industries.
 
-Le but du 1er sprint serait de faire un état de l'art de cette thématique, de construire une grille d'entretien et de rechercher des intervenants avec lesquels discuter de ces enjeux.
+Le but du 1er sprint serait de faire un état de l'art de cette thématique : sur les enjeux d'Industrie 4.0 de Lean Management, un focus sur certaines technologies et les risques qu'ils font encourir à la Supply Chain.
 
-Le 2ème sprint consisterait en l'interview de ces intervenants suivie d'une analyse/synthèse de leur pensée qui sera restituée sous la forme d'un article.
+Le 2ème sprint consisterait en la préparation d'une grille d'entretien pour questionner ces sujets auprès d'experts de la Supply Chain afin d'en faire une analyse/synthèse.
 
 ## Horodateur des sprints
 
-Avant de commencer le POK
-**Sprint 1**
-| Timing | Revue de la littérature | Discussion avec Richard Markoff | Construction grille d'entretien | Identification des intervenants |
-| -------| -------- | -------- | -------- |
-| Sprint 1 - Temps prévu (en heures) | 5 | 1 | 2 | 2 |
-| Sprint 1 - Temps dédié (en heures) | ? | ? | ? | ? |
+**Sprint 1 : état de l'art**
+| Timing | Notions de bases, définitions | SC & I4.0 | I4.0 & Lean Management | Applications concrètes d'IA et IoT dans la SC | Riskis in Digital Supply Chain |
+| -------| -------- | -------- | -------- | -------- | -------- |
+| Sprint 1 - Temps prévu (en heures) | 2 | 4 | 2 | 2 | 2 |
+| Sprint 1 - Temps dédié (en heures) | 2 | 5 | 3 | 2 | 2 |
 
 
 **Sprint 2**
-| Timing | Entretiens | Analyse | Restitution |
-| -------| -------- | -------- |
-| Sprint 2 - Temps prévu (en heures) | 3 | 3 | 4 |
-| Sprint 2 - Temps dédié (en heures) | ? | ? | ? |
-
-
-
-Après avoir commencé le POK
-**Sprint 1**
-| Timing | SC, Industrie 4.0 & Lean Management | Cas particuliers | Construction grille d'entretien |
-| -------| -------- | -------- | -------- |
-| Sprint 1 - Temps prévu (en heures) | 4 | 5 | 1 |
-| Sprint 1 - Temps dédié (en heures) | 5 | ? | ? |
-
-
-**Sprint 2**
-| Timing | Identification des intervenants | Entretiens | Analyse | Restitution |
-| -------| -------- | -------- | -------- | -------- |
-| Sprint 2 - Temps prévu (en heures) | 1 | 3 | 3 | 4 |
-| Sprint 2 - Temps dédié (en heures) | ? | ? | ? | ? |
+| Timing | Identification des intervenants | Lecture de nouveaux articles (Covid / résilience / énergie...) | Grille d'entretien | Entretiens | Analyse & Restitution |
+| -------| -------- | -------- | -------- | -------- | -------- |
+| Sprint 2 - Temps prévu (en heures) | 1 | 3 | 2 | 3 | 2 |
+| Sprint 2 - Temps dédié (en heures) | ? | ? | ? | ? | ? |
 
 
 ## Sommaire
@@ -306,7 +289,7 @@ Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforce
 
 **D'un point de vue juridique :**
 - les risques liés à la sécurité et à la confidentialité des données peuvent résulter de **violations des accords de sécurité et de confidentialité** par les partenaires de la Supply Chain ou les employés. L'**absence de clarté** concernant la propriété des données peut rendre difficile l'application des lois sur la propriété intellectuelle traditionnelles. De plus, le turnover des employés peut entraîner une incertitude quant à la **propriété des droits** sur le savoir-faire agrégé et les données techniques, ce qui peut également poser des risques. Les partenaires de la SC peuvent extraire des connaissances concurrentielles à partir des données partagées, ce qui soulève des questions juridiques sur l'**utilisation non intentionnelle des données partagées**. Ces défis légaux peuvent conduire à la divulgation non voulue de connaissances concurrentielles, ce qui représente un défi juridique supplémentaire, notamment en ce qui concerne la protection de la propriété intellectuelle (PI).
-- *Les contre-mesures juridiques comprennent* la gestion des **contrats** intégrée dans le réseau de la SC, l'utilisation de contrats de non-divulgation et l'adoption de **mesures formelles et informelles** de protection, telles que les secrets commerciaux, la protection par le droit d'auteur ou les brevets. En résumé, il est essentiel d'élaborer des **contrats formels et des accords de non-divulgation adaptés** aux collaborations centrées sur les données afin de prévenir les risques juridiques associés à l'échange de données au sein de la chaîne d'approvisionnement numérique.
+- *Les contre-mesures juridiques comprennent* la gestion des **contrats** intégrée dans le réseau de la SC, l'utilisation de contrats de non-divulgation et l'adoption de **mesures formelles et informelles** de protection, telles que les secrets commerciaux, la protection par le droit d'auteur ou les brevets. En résumé, il est essentiel d'élaborer des **contrats formels et des accords de non-divulgation adaptés** aux collaborations centrées sur les données afin de prévenir les risques juridiques associés à l'échange de données au sein de la Supply Chain numérique.
 
 ![Challenges et contre-mesures](challenges-countermeasures.png)
 
@@ -315,38 +298,19 @@ Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforce
 (3) the SC are more frequently changed and composed differently
 (4) there is only a limited transparency and relational capital between SC partners
 
-
-### Construction de la grille d'entretien
-- Votre entreprise implémente-t-elle déjà des stratégies de Lean Supply Chain Management ?
-- Votre entreprise implémente-t-elle déjà des technologies d'Industrie 4.0 ? IA, IoT, Blockhain, Cloud, Big Data.... ?
-  **- Si oui**, pouvez-vous partager des exemples concrets de cas où ces technologies technologies sont implémentées ?
-  - Ces technologies ont-elles démontrées un impact sur l'efficacité de votre Supply Chain ?
-  - Comment s'est déroulée leur implémentation ? Quelles difficultés avez-vous du surmonter ? (Réticence, formations d'employés, problèmes techniques...) --> Comment gérer la résistance au changement ? La formation à ces nouvelles tech ?
-**- Si non,** planifiez-vous d'implémentez des technologies de la sorte ?
-    **- Si oui,** savez-vous vers quelles technologies vous voudriez-vous diriger ? Avez-vous une ligne de conduite / stratégie opérationnelle digitale claire ?
-    **- Si non,** pourquoi ? (Investissement trop cher, frein au changement, manque de spécialistes pour gérer ces technologies, cadre légal, cybersécurité...)
-
-- Technologies mises en places à un niveau stratégique ? (prise de décisions, tendances marchés, prédictions demande...) ou plutôt sur des tâches répétitives en prod' (robotique / automatisation...)
-- Quels sont les défis spécifiques que votre entreprise a rencontrés en termes d'intégration des différents systèmes de gestion de la Supply Chain (WMS, TMS, OMS, etc.)?
-- Mettez-vous en oeuvre une stratégie pour garantir la cybersécurité de votre Supply Chain ?
-- Quel impact la pandémie de COVID-19 a-t-elle eu sur votre stratégie de digitalisation de la Supply Chain?
-- Quels sont les indicateurs clés de performance que votre entreprise utilise pour évaluer l'efficacité de sa chaîne d'approvisionnement numérique?
-- Comment votre entreprise anticipe-t-elle les évolutions technologiques futures et leur impact sur la gestion de la Supply Chain?
-- Comment votre entreprise collabore-t-elle avec ses partenaires commerciaux pour promouvoir l'interopérabilité et la transparence dans la chaîne d'approvisionnement numérique?
-
---> Ajouter toute une partie sur résilience, gestion des ressources (notamment eau/elec)
+## Sprint 2
 
 ### Identification des intervenants
 
-## Sprint 2
+### Lecture de nouveaux articles (Covid / résilience / énergie...)
+
+### Grille d'entretien
 
 ### Entretiens
 
 #### Entretien avec Richard Markoff
 
-### Analyse
-
-### Restitution
+### Analyse & Restitution
 
 ## Conclusion
 
