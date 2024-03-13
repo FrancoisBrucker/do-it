@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "BBQ"
+title: "On barbecute ?"
 authors:
   - Benoit BEGUIER
 
@@ -55,4 +55,28 @@ J'ai eu de très bons retours sur le barbecue 2023 donc je ne changerai pas l'or
 
 ![retourGaby](retour1.png)
 
+![retourTimtoum](retour2.png)
+
 ### Estimation du nombre de participants
+
+Au lieu de faire un Google Form, j'ai préféré faire voter sur la conversation Messenger avec l'ensemble des élèves de Do-It. Cela permet de rajouter des options simples et visuelles (vote avec emojis) sans remplir un questionnaire, qui peut être rebutant pour certaines personnes.
+
+Nous avons 22 participants (moi compris) au sein des étudiants de Do-It, auxquels je rajoute les trois professeurs, soit **25 repas** à préparer au total.
+
+![partici](participants.png)
+
+Au vu de l'appétit de mes camarades en pleine croissance intellectuelle, je décide de monter les portions à **30 repas**. Dans le cas où il resterait de la nourriture (peu de chances mais probabilité non nulle), celle-ci sera distribuée parmi les étudiants et les professeurs.
+
+### Régimes alimentaires
+
+Je prends ensuite en compte les régimes alimentaires de mes petits camarades ainsi que celui des professeurs. D'après les votes, je prévois au moins 6 portions végétariennes pour les étudiants, et aucune pour les professeurs.
+
+![regimes](regimes.png)
+
+![detail](detail_regimes.png)
+
+Je table donc pour 10 portions végétariennes, et 20 portions de viandes.
+
+### Liste de course
+
+### Budget
