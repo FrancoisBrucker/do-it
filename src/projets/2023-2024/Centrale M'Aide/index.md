@@ -185,7 +185,7 @@ Ensuite, nous travaillons sur l'achitecture et le design de la page recherche d'
 Un premier jet est alors proposé au travers l'image ci-dessous :
 ![Design annonces](Figma2.png)
 
-Bien que nous sommes satisfaits de la clarté de la page, de sa facilité de lecture, de la façon dont ressortent les informations, ce premier design semble encore brouillon.
+Bien que nous soyons satisfaits de la clarté de la page, de sa facilité de lecture, de la façon dont ressortent les informations, ce premier design semble encore brouillon.
 Le choix des logos manque de cohérence, peu d'annonces sont visibles sur un même écran, les couleurs sont à ajuster..
 
 Un retrevail permet d'aboutir au desgin suivant, bien plus satisfaisant :

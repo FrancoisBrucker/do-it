@@ -286,12 +286,35 @@ Le 1er est le manque de budget, la mise en place des technologies peut se montre
 
 Vient ensuite le manque de lignes de conduites, de stratégies de déploiement. Bien que certaines entreprises soient déjà équipées en WMS, TMS, OMS... elles n'ont pas de ligne de conduite précise pour digitaliser leur métier. Il existe diverses façons de digitalisation mais la plupart des entreprises choisiront la technologie la plus populaire plutôt que celle la plus appropriée à leur développement. Ce n'est pas tant l'application de la technologie numérique qui détermine l'efficacité du management de la Supply Chain, mais plutôt le degré d'adaptation entre le mode opératoire et la technologie de l'information. La transformation réussie d'une entreprise vers le numérique repose sur le changement de business modèle.
 
-
 Enfin arrive la question des droits sociaux et de l'environnement. Une enquête du MIT Sloan Management Review révèle que la résistance au changement, notamment chez les dirigeants d'entreprise, constitue un obstacle majeur à la transformation numérique. 43% des 4 500 directeurs des systèmes d'information (CIO) interrogés dans l'enquête Harvard Nash/KPMG CIO ont identifié la résistance au changement comme le plus grand obstacle à une stratégie numérique réussie.
 Cette réticence est exacerbée par les préoccupations en matière de sécurité et de confidentialité des données, entravant ainsi la transparence nécessaire à la réussite des chaînes d'approvisionnement numériques. De plus, les risques croissants liés à la cybersécurité, notamment les cyber-attaques provenant de dispositifs IoT, soulignent l'urgence d'une législation et d'une réglementation appropriées pour garantir la sécurité et accroître la confiance dans le développement numérique.
 
+#### Knowledge Risks in Digital Supply Chains: A Literature Review [15]
 
-### Discussion avec Richard Markoff
+Les avancées des technologies de l'information ont rendu les échanges de données plus vastes et complexes, mais ont aussi exposé les Supply Chain à de **nouveaux risques liés à la connaissance.**
+Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforcer la **résilience** des Supply Chain. Les caractéristiques des Supply Chain numériques, telles que l'échange accru de données, la dépendance accrue aux systèmes informatiques, les changements fréquents et la transparence limitée entre les partenaires, soulignent l'importance de la **sécurisation des données** et d'une **gestion des risques** efficace. Il est crucial d'assurer la **transparence** sur les risques afin de permettre aux acteurs de prendre des décisions éclairées sur le **partage des données,** et de développer de n**ouvelles approches techniques et juridiques** pour protéger les connaissances dans les collaborations centrées sur les données.
+
+**D'un point de vue organisationnel :**
+- les chercheurs soulignent le **manque de communication** ou l'**asymétrie de l'information**, ce qui peut entraîner des **résistances au partage de données**. Ces résistances peuvent conduire au refus d'adopter des Supply Chain numériques et à des barrières supplémentaires à la communication entre les acteurs de la chaîne, réduisant ainsi la **transparence**.
+- *Les risques identifiés* incluent **la perte ou le vol de propriété intellectuelle**, ainsi que les **fuites de connaissances intentionnelles ou non intentionnelles**.
+- *Pour faire face à ces risques*, des stratégies de **gestion proactive et réactive** sont nécessaires, ainsi que l'**établissement de règles de collaboration explicites et communes**. Il est également important d'investir dans la **formation à la sensibilisation** et à la gestion des risques, ainsi que dans l'**utilisation de systèmes** d'aide à la décision pour faciliter l'apprentissage collaboratif au sein des Supply Chain numériques.
+
+**D'un point de vue technique technique :**
+- l'augmentation de la **dépendance aux technologies** de l'information expose les entreprises à des risques accrus. Des lacunes dans la réingénierie des processus métier, la conception concurrente, les systèmes informatiques inadéquats ou la sécurité informatique laxiste peuvent faciliter les **cyberattaques** ou le **vol de données.** De plus, l'absence de système de mesure de performance, de procédure de résolution de conflits, de plan de contingence ou de restrictions d'accès peuvent également entraîner des risques. Ces risques sont particulièrement préoccupants pour les entreprises axées sur les données, qui échangent de vastes ensembles de données de manière automatisée. La sécurisation des systèmes informatiques et des données devient donc une priorité, d'autant plus que les cyberattaques deviennent plus courantes avec la pénétration accrue des systèmes informatiques et des objets connectés.
+- *Les risques identifiés* comprennent la **perte de propriété intellectuelle** due à l'extraction de connaissances à partir de données partagées et les menaces pour la **sécurité** et la **confidentialité** des informations, en particulier avec la dépendance croissante à l'égard des technologies de l'information.
+- *Pour contrer ces risques,* des mesures techniques telles que les **architectures de sécurité, la cryptographie, la détection d'anomalies et la gestion des données** sont essentielles. L'utilisation de l'analyse prédictive pour la maintenance prédictive et la prévision, ainsi que l'exploitation des systèmes informatiques avancés pour prendre des décisions automatisées, sont également recommandées pour renforcer la résilience des chaînes d'approvisionnement face aux perturbations et aux risques liés aux données.
+
+**D'un point de vue juridique :**
+- les risques liés à la sécurité et à la confidentialité des données peuvent résulter de **violations des accords de sécurité et de confidentialité** par les partenaires de la Supply Chain ou les employés. L'**absence de clarté** concernant la propriété des données peut rendre difficile l'application des lois sur la propriété intellectuelle traditionnelles. De plus, le turnover des employés peut entraîner une incertitude quant à la **propriété des droits** sur le savoir-faire agrégé et les données techniques, ce qui peut également poser des risques. Les partenaires de la SC peuvent extraire des connaissances concurrentielles à partir des données partagées, ce qui soulève des questions juridiques sur l'**utilisation non intentionnelle des données partagées**. Ces défis légaux peuvent conduire à la divulgation non voulue de connaissances concurrentielles, ce qui représente un défi juridique supplémentaire, notamment en ce qui concerne la protection de la propriété intellectuelle (PI).
+- *Les contre-mesures juridiques comprennent* la gestion des **contrats** intégrée dans le réseau de la SC, l'utilisation de contrats de non-divulgation et l'adoption de **mesures formelles et informelles** de protection, telles que les secrets commerciaux, la protection par le droit d'auteur ou les brevets. En résumé, il est essentiel d'élaborer des **contrats formels et des accords de non-divulgation adaptés** aux collaborations centrées sur les données afin de prévenir les risques juridiques associés à l'échange de données au sein de la chaîne d'approvisionnement numérique.
+
+![Challenges et contre-mesures](challenges-countermeasures.png)
+
+(1) more and more comprehensive data sets are exchanged
+(2) the IT penetration and the dependency on IT systems increased
+(3) the SC are more frequently changed and composed differently
+(4) there is only a limited transparency and relational capital between SC partners
+
 
 ### Construction de la grille d'entretien
 - Votre entreprise implémente-t-elle déjà des stratégies de Lean Supply Chain Management ?
@@ -319,6 +342,8 @@ Cette réticence est exacerbée par les préoccupations en matière de sécurit�
 
 ### Entretiens
 
+#### Entretien avec Richard Markoff
+
 ### Analyse
 
 ### Restitution
@@ -341,4 +366,4 @@ Cette réticence est exacerbée par les préoccupations en matière de sécurit�
 [12] :  Maryam Abdirad & Krishna Krishnan (2020): Industry 4.0 in Logistics and Supply Chain Management: A Systematic Literature Review, Engineering Management Journal.
 [13] : Matteo Rossini, Daryl John Powell, Kaustav Kundu (2022): Lean supply chain management and Industry 4.0: a systematic literature review. Literature review, International Journal of Lean Six Sigma.
 [14] : Xuan Wang, Vikas Kumar, Archana Kumari, Evgeny Kuzmin (2022): Impact of Digital Technology on Supply Chain Efficiency in Manufacturing Industry. Literature Review.
-[15] : 
+[15] : Johannes Paul Zeiringer, Stefan Thalmann (2020) : Knowledge Risks in Digital Supply Chains: A Literature Review, 
