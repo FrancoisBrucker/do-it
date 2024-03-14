@@ -130,9 +130,8 @@ Dans le cas où l'on conçoit le métaverse comme un réseau en ligne, la questi
 
 ## Bibliogrpahie 
 
-- [Europol (2022), Policing in the metaverse: what law enforcement needs to know, an observatory report from the Europol Innovation Lab, Publications Office of the European Union, Luxembourg.](https://www.europol.europa.eu/publications-events/publications/policing-in-metaverse-what-law-enforcement-needs-to-know#downloads)
+- [Europol Policing in the metaverse](https://www.europol.europa.eu/publications-events/publications/policing-in-metaverse-what-law-enforcement-needs-to-know#downloads)
 - [Mission exploratoire sur les métavers](https://www.economie.gouv.fr/files/files/2022/Rapport-interministeriel-metavers.pdf?__cf_chl_tk=HNyOf1ysZahLTvitdEvpHXCnwo0SUB5hXRBevU0BdA8-1709197690-0.0-1703)
-- 
 
 {%enddetails%}
 
