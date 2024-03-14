@@ -70,6 +70,7 @@ Les questions que cela apporte sont le suivantes :
 - Existe-t-il des moments cruciaux pour la mise en place d'un cadre juridique spécifique en France et en Europe ?
 - Quelles actions les forces de l'ordre opèrent dans les espaces physique et numériques ?
 - RGPD ?
+- Quelle motivations pour la construction des ces technologies ? 
 
 Les questions doivent être relevant, timely, precisely worded, actionnable et answerable.
 On doit ensuite filtrer, reformuler et prioriser les questions.
@@ -79,8 +80,9 @@ Ainsi je peux déjà fait une ébauche de la structure du rapport à partir de c
 - Qu'est-ce que le métaverse ?
   - Depuis quand cela existe-il ? Quels sont les principales évolutions et technologies ?
   - Quelles sont ses formes possibles ?
+  - À quel besoin cela répond-t-il ?
 - Quels sont les acteurs de ce écosystème ?
-  - Etatique ?
+  - Étatique ?
   - Scientifique ?
   - Communautaire ?
 - Quels sont les crimes possibles dansa le métaverse ?
@@ -90,6 +92,49 @@ Ainsi je peux déjà fait une ébauche de la structure du rapport à partir de c
   - Quelles sont les cadres juridiques actuels et les moments clés de leur construction ou modification ?
 - Est-ce que c'est un enjeu de souveraineté ?
 - Quels sont les politiques publiques relatives au métaverse actuel en France ? En Europe ?
+
+### Comprendre le contexte large :
+
+On va essayer de comprendre ensuite, dans quel environnement ces problématiques évoluent, comprendre les concepts clés pour préparer les recherches plus précises, en gros ce sont des recherches vite fait dans les domaines :
+
+- Sécurité;
+- Technologie;
+- Economique;
+- Militaire;
+- Politique;
+- Légal;
+- Environnemental;
+- Social;
+
+#### Ainsi d'un point de vue technologique que recouvrent ce vaste sujet ?
+
+La notion de Métaverse recouvre communément 3 pratiques différentes :
+
+- La Réalité Virtuelle, un espace totalement virtuelle,
+- La Réalité Mixte, ajout réalité et interaction avec personne autre,( interaction avec monde virtuelle en conscience de son environnement actuel ) ( hologram de ton boss dans ta chambre et discussion sur tes performances)
+- La Réalité Augmentée, ajout à la réalité ( filtre snapchat, réalité est un support pour 2D/3D )
+
+Les domaines actuelles et futures de l'utilisation de cette technologie sont plus étendues que simplement le gaming :
+
+- la formation professionnelle
+- Assistance à distance
+- Réunion en distanciel
+- Immobilier
+- Fashion
+- E-commerce
+
+L'ensemble de ces mondes sont potentiellement en lien une forme d'économie de [Blockchain](../mon/Blockchain.md), de Smart Contract.
+Cela impose une distinction entre deux usages qui changent du tout au tout l'action possible des forces l'ordre : une évolution d'internet sous la forme d'un réseau globale ou bine un outil offline contrôlée par l'hôte.
+
+Dans le cas où l'on conçoit le métaverse comme un réseau en ligne, la question de l'unicité de la plateforme est encore en suspend ou bien cela pourrait ressembler à notre utilisation des services de messagerie Whastapp, Signal, Telegram, Facebook, ... ( sur lesquels l'interopérabilité est une question en progrès)
+
+## Bibliogrpahie 
+
+- [Europol (2022), Policing in the metaverse: what law enforcement needs to know, an observatory report from the Europol Innovation Lab, Publications Office of the European Union, Luxembourg.](https://www.europol.europa.eu/publications-events/publications/policing-in-metaverse-what-law-enforcement-needs-to-know#downloads)
+- [Mission exploratoire sur les métavers](https://www.economie.gouv.fr/files/files/2022/Rapport-interministeriel-metavers.pdf?__cf_chl_tk=HNyOf1ysZahLTvitdEvpHXCnwo0SUB5hXRBevU0BdA8-1709197690-0.0-1703)
+- 
+
+{%enddetails%}
 
 #### Horodatage :
 
@@ -109,3 +154,4 @@ Ainsi je peux déjà fait une ébauche de la structure du rapport à partir de c
 |[01/03] | Lecture Critical Thinking Chapter 10-11 | 1H |
 |[01/03] | Lecture Critical Thinking Chapter 12-13 | 1H30 |
 |[12/03] | Initiation du Rapport sur le Métaverse Cadrage, Question| 1H30 |
+|[14/03] | Exploration du contexte large | 1H30 |
