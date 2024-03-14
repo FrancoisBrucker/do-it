@@ -33,6 +33,7 @@ Ne pas avoir peur de tout casser à chaque fois
 ## 1. Introduction <a id="section-1"></a>
 
 J'ai mis sur mon CV que je savais utiliser Power BI alors que je n'avais pas fait que joujou rapidement avec. Donc, il est temps de faire de mon bullshit une réalité. 
+Le but de ce MON est de recenser tous les points qui m'ont semblé importants et les commandes les plus utilisées. Et aussi de faire une petite étude sur un sujet qui me porte à cœur, les bibliothèques.
 
 ## 2. Commandes Microsoft Power Query <a id="section-2"></a>
 
@@ -96,4 +97,5 @@ J'ai mis sur mon CV que je savais utiliser Power BI alors que je n'avais pas fai
 Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Aspire. 
 
 **Horodateur** : 
-> Lundi 04/03/2024 : 2h (Initialisation et suivi du premier cours)
+> Lundi 04/03/2024 : 1h (Initialisation)
+> Mercredi 13/03/2024 : 1h (Trouver une base de données intéressante et choisir les questions qui vont nous intéresser)
