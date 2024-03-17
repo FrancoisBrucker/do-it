@@ -94,8 +94,10 @@ Le but de ce MON est de recenser tous les points qui m'ont semblé importants et
 
 ## 5. Sources et horodateur <a id="section-5"></a>
 
-Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Aspire. 
+Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Skillsoft Aspire Journeys. 
+[Mastering Power BI](https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126)
 
 **Horodateur** : 
 > Lundi 04/03/2024 : 1h (Initialisation)
-> Mercredi 13/03/2024 : 1h (Trouver une base de données intéressante et choisir les questions qui vont nous intéresser)
+> Mercredi 13/03/2024 : 1h (Choisir les questions qui vont nous intéresser)
+> Dimanche 17/03/2024 : 4h (Première partie du premier cours)
