@@ -128,10 +128,48 @@ Cela impose une distinction entre deux usages qui changent du tout au tout l'act
 
 Dans le cas où l'on conçoit le métaverse comme un réseau en ligne, la question de l'unicité de la plateforme est encore en suspend ou bien cela pourrait ressembler à notre utilisation des services de messagerie Whastapp, Signal, Telegram, Facebook, ... ( sur lesquels l'interopérabilité est une question en progrès)
 
-## Bibliogrpahie 
+Cela fait partie d'un ensemble de technologies qui se développent actuellement et interragissent entre eux :
+
+- Spatial Web / web3.0
+- Blockchain
+- IoT
+- IPv6
+
+La construction d'un espace qui inclut ces différents points est estimé pouvoir émerger dans les 5 à 10 à venir. Toutefois pour le moment, les applications spécifique à cet espace sont peu nombreuses et populaires même si nous pouvons citer Decentraland et Cryptovoxels.
+
+
+{%details "Une définition"%}
+
+The metaverse is a cloud distributed, multi-vendor, immersive-interactive operating environment that users
+can access through different categories of connected devices (both static and mobile). It uses Web 2.0 and
+Web 3.0 technologies to provide an interactive layer on top of the existing internet. As proposed, it is an
+open platform for working and playing inside a VR/AR/MR/XR environment. This concept is comparable to
+existing MMORPG platforms, but while each MMORPG represents a proprietary single virtual world, the
+metaverse will allow players to seamlessly move between virtual spaces together with their virtual assets.
+The metaverse is not merely a platform for human users; it will also be a communications layer for smart
+city devices through which humans and AI can share information
+
+
+Source : [Cybersecurity Threats Against the Internet of Experiences, Numaan Huq, Roel Reyes, Philippe Lin, and Morton Swimmer](https://documents.trendmicro.com/assets/white_papers/wp-metaverse-or-metaworse-cybersecurity-threats-against-the-internet-of-experiences.pdf)
+{%enddetails%}
+
+#### Les menaces et les crimes nouveaux :
+
+Blockchain: NFT et les transactions que cela impliquent pourraient être exploiter à des fins criminelles de détournement et autres en fonction de la blockchain support.
+
+Darkverse : un darkweb dans le metaverse, des espaces en dehors de toute loi et qui serait accessibles seulement par permission par token ou localisation. De part les difficultés et les features permettant ce genre d'espace, il est envisageable que ce soit une pratique qui se développe particulièrement.
+
+Fraude financière : 
+
+
+
+##### Quels limites techniques empêchent une réglementation efficaces ?
+
+## Bibliogrpahie :
 
 - [Europol Policing in the metaverse](https://www.europol.europa.eu/publications-events/publications/policing-in-metaverse-what-law-enforcement-needs-to-know#downloads)
 - [Mission exploratoire sur les métavers](https://www.economie.gouv.fr/files/files/2022/Rapport-interministeriel-metavers.pdf?__cf_chl_tk=HNyOf1ysZahLTvitdEvpHXCnwo0SUB5hXRBevU0BdA8-1709197690-0.0-1703)
+- [Spatial Web](https://medium.com/swlh/an-introduction-to-the-spatial-web-bb8127f9ac45)
 
 #### Horodatage :
 
@@ -151,4 +189,4 @@ Dans le cas où l'on conçoit le métaverse comme un réseau en ligne, la questi
 |[01/03] | Lecture Critical Thinking Chapter 10-11 | 1H |
 |[01/03] | Lecture Critical Thinking Chapter 12-13 | 1H30 |
 |[12/03] | Initiation du Rapport sur le Métaverse Cadrage, Question| 1H30 |
-|[14/03] | Exploration du contexte large | 1H30 |
+|[14-15/03] | Exploration du contexte large | 1H30 |
