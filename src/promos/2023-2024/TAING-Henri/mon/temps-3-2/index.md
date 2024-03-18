@@ -68,6 +68,8 @@ Une fois votre base de données extraite, il est temps de la transformer.
 **Transformer avec Power Query Editor**
 On peut d'abord consulter les profils des colonnes en faisant un clic droit sur les colonnes et en sélectionnant Column Quality (Valid - Error- Empty) et Column Distribution (Répartition des données entrées dans la colone) ou en allant dans View > Cocher ces mêmes cases. 
 
+<img src="profile_distrib.PNG">
+
 Puis changer la première ligne en titre si ce n'est pas fait avec "Use First Row as Headers". 
 En faisant ça, une ligne apparaît avec **Promoted Headers** sur la droite dans Query Settings (Si vous ne voyez pas cette fenêtre, il suffit d'aller dans View > Cliquer sur Query Settings). Cette fenêtre fournit un suivi des opérations effectuées sur la table.
 Si vous cliquez sur une opération par exemple, vous pouvez voir la formule utilisée que vous pouvez modifier.
@@ -94,8 +96,6 @@ Pour créer d'autres colonnes, vous pouvez utiliser Add Column :
 ## 3. Power BI Service <a id="section-3"></a>
 
 
-## 4. Cas des bibliothèques <a id="section-4"></a>
-
 ## 5. Conclusion <a id="section-5"></a>
 
 ## 6. Sources et horodateur <a id="section-5"></a>
@@ -103,6 +103,9 @@ Pour créer d'autres colonnes, vous pouvez utiliser Add Column :
 Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Skillsoft Aspire Journeys. 
 [Mastering Power BI](https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126)
 
+Bases de données utilisés pour les exemples : 
+[Baromètre des représentations sociales du changement climatique de l'ADEME](https://www.data.gouv.fr/fr/datasets/barometre-representations-sociales-du-changement-climatique/)
+[Base de données sur les bibliothèques](https://www.data.gouv.fr/fr/datasets/adresses-des-bibliotheques-publiques-2/#/resources)
 **Horodateur** : 
 > Vendredi 01/03/2024 : 2h (Début du premier cours)
 > Mercredi 06/03/2024 : 3h (Première partie du premier cours)
