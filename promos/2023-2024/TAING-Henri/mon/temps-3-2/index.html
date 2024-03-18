@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Faire du clean code et du back avec Python Flask</title>
+        <title>Utiliser Microsoft Power BI pour comprendre la donnée]</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Faire du clean code et du back avec Python Flask</h1>
+<h1 class="mb-1">Utiliser Microsoft Power BI pour comprendre la donnée]</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -122,7 +122,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/">TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/mon/">MON de TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/mon/temps-3-2/">Faire du clean code et du back avec Python Flask</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/">TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/mon/">MON de TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/mon/temps-3-2/">Utiliser Microsoft Power BI pour comprendre la donnée]</a>
 
 </div></div>
 
@@ -142,52 +142,90 @@
 <h2>Table des matières</h2>
 <ol>
 <li><a href="#section-1">Introduction</a></li>
-<li><a href="#section-2">PEP 8 pour Python et Google HTML/CSS Style Guide et Google JavaScript Style Guide</a></li>
-<li><a href="#section-3">Découverte et apprentissage de Flask</a></li>
-<li><a href="#section-4">Conclusion</a></li>
-<li><a href="#section-5">Sources et horodateur</a></li>
+<li><a href="#section-2">Power BI Desktop</a></li>
+<li><a href="#section-3">Power BI Service</a></li>
+<li><a href="#section-4">Cas des bibliothèques</a></li>
+<li><a href="#section-5">Conclusion</a></li>
+<li><a href="#section-6">Sources et horodateur</a></li>
 </ol>
 <h2>1. Introduction <a id="section-1"></a></h2>
-<p>J'ai mis sur mon CV que je savais utiliser Power BI alors que je n'avais pas fait que joujou rapidement avec. Donc, il est temps de faire de mon bullshit une réalité.<br>
-Le but de ce MON est de recenser tous les points qui m'ont semblé importants et les commandes les plus utilisées. Et aussi de faire une petite étude sur un sujet qui me porte à cœur, les bibliothèques.</p>
-<h2>2. Commandes Microsoft Power Query <a id="section-2"></a></h2>
-<p><strong>Créer une application Flask</strong></p>
-<pre><code>
-
+<p>J'ai mis sur mon CV que je savais utiliser Power BI alors que je n'avais pas fait que joujou rapidement avec. Donc, il est temps de faire de mon bullshit une réalité.</p>
+<p>Je me suis appuyé sur le cours proposé par Skillsoft et mis à disposition par mon entreprise :<br>
+<a href="https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126">Mastering Power BI</a></p>
+<p>Je n'ai comptabilisé que les heures passées sur le premier cours (environ 8h) et le temps de mettre en forme toutes mes notes que j'ai prises durant ces 24 heures de formation (environ 2h).</p>
+<h2>2. Power BI Desktop <a id="section-2"></a></h2>
+<p>Il faut savoir premièrement que dans la plupart des cas, vous n'aurez pas à mettre les mains dans le code. Sauf si la base de données utilisée est exécrable.</p>
+<p><strong>Organisation de Power BI</strong><br>
+Il faut d'abord faire la différence entre Power BI Desktop et Power BI Service :</p>
+<ul>
+<li>Power BI Desktop, application en local,</li>
+<li>Power BI Service, sur le cloud et permet de partager ses rapports en live.</li>
+</ul>
+<p>Les deux permettent quasiment les mêmes opérations, mais Power BI Desktop est plus maniable et plus rapide.<br>
+On va s'intéresser plus à Power BI Desktop en premier lieu.</p>
+<p><strong>Pour commencer</strong><br>
+Vous avez 3 fenêtres sur la colonne de gauche qui correspondent de haut en bas à votre page de rapport (Report View), votre base de données (Table View) et les liens entre les différentes tables et colonnes (Model View).</p>
+<p>Pour <strong>extraire</strong> une base de données qu'on va étudier, analyser puis visualiser, il suffit d'aller dans &quot;Get Data&quot;, puis de choisir ce qui vous intéresse.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Remarques sur l'extraction</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<ul>
+<li>Il faut avoir les autorisations nécessaires et ses identifiants si on veut utiliser les données d'un sharepoint de son entreprise par exemple</li>
+<li>Faire attention à bien avoir la même version installée pour SQL Connector et MySQL/SQLServer</li>
+<li>Utiliser un compte avec le moins de privilèges possible pour des raisons de sécurité, ce genre de comptes peut être créé par exemple quand on utilise Google Cloud ou AWS.</li>
+</ul>
+</div>
+</details>     
+</div>
+<p>Une fois votre base de données extraite, il est temps de la transformer.</p>
+<h3>Table View</h3>
+<p><strong>Transformer avec Power Query Editor</strong><br>
+On peut d'abord consulter les profils des colonnes en faisant un clic droit sur les colonnes et en sélectionnant Column Quality (Valid - Error- Empty) et Column Distribution (Répartition des données entrées dans la colone) ou en allant dans View &gt; Cocher ces mêmes cases.</p>
+<p>Puis changer la première ligne en titre si ce n'est pas fait avec &quot;Use First Row as Headers&quot;.<br>
+En faisant ça, une ligne apparaît avec <strong>Promoted Headers</strong> sur la droite dans Query Settings (Si vous ne voyez pas cette fenêtre, il suffit d'aller dans View &gt; Cliquer sur Query Settings). Cette fenêtre fournit un suivi des opérations effectuées sur la table.<br>
+Si vous cliquez sur une opération par exemple, vous pouvez voir la formule utilisée que vous pouvez modifier.</p>
+<pre><code>= Table.PromoteHeaders(#&quot;Nom_initial_de_la_table&quot;, [PromoteAllScalars=true])
 </code></pre>
-<p><strong>Créer des routes pour que l'application renvoie les vues pour l'utilisateur</strong></p>
-<pre><code>
+<p>Si vous appliquez une autre transformation, par exemple, clic droit une colonne et &quot;Remove Errors&quot;, on a :</p>
+<pre><code>= Table.RemoveRowsWithErrors(#&quot;Promoted Headers&quot;, {&quot;nom_colonne&quot;})
 </code></pre>
-<p><strong>Lancer l'application</strong></p>
-<pre><code>
-
-</code></pre>
-<p><strong>Relier à une base de données avec SQLAlchemy</strong></p>
-<pre><code>
-                
-</code></pre>
-<p><strong>Créer des users grâce à une classe</strong></p>
-<pre><code>
-  
-</code></pre>
-<p><strong>Mettre à jour la base de données avec Flask (on peut aussi passer par DB Browser pour visualiser et modifier la base de données)</strong></p>
-<pre><code>
-
-</code></pre>
-<p><strong>La méthode POST pour les inputs</strong></p>
-<pre><code>
-
-</code></pre>
-<h2>3. Cas des bibliothèques <a id="section-3"></a></h2>
-<h2>4. Conclusion <a id="section-4"></a></h2>
-<h2>5. Sources et horodateur <a id="section-5"></a></h2>
+<p>On vient donc d'appliquer Table.RemoveRowsWithErrors à la table précédente nommée &quot;Promoted Headers&quot; à cause de notre transformation (on peut la renommer dans la fenêtre Querry Settings).</p>
+<p>Pour aller plus loin, vous pouvez utiliser l'éditeur avancé : View &gt; Advanced Editor<br>
+<img src="advanced_editor.PNG"></p>
+<p>Pour créer d'autres colonnes, vous pouvez utiliser Add Column :</p>
+<ul>
+<li>Merge Columns pour concaténer des colonnes</li>
+<li>Custom Column avec une formule DAX (Data Expressing Formula) avec des IFs, des opérations mathématiques, etc.</li>
+<li>dans le cas de plusieurs tables, vous pouvez utiliser les colonnes d'autres tables, mais il faut bien vérifier leurs liens logiques dans la partie &quot;Model View&quot;.</li>
+</ul>
+<h3>Report View</h3>
+<h2>3. Power BI Service <a id="section-3"></a></h2>
+<h2>4. Cas des bibliothèques <a id="section-4"></a></h2>
+<h2>5. Conclusion <a id="section-5"></a></h2>
+<h2>6. Sources et horodateur <a id="section-5"></a></h2>
 <p>Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Skillsoft Aspire Journeys.<br>
 <a href="https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126">Mastering Power BI</a></p>
 <p><strong>Horodateur</strong> :</p>
 <blockquote>
-<p>Lundi 04/03/2024 : 1h (Initialisation)<br>
-Mercredi 13/03/2024 : 1h (Choisir les questions qui vont nous intéresser)<br>
-Dimanche 17/03/2024 : 4h (Première partie du premier cours)</p>
+<p>Vendredi 01/03/2024 : 2h (Début du premier cours)<br>
+Mercredi 06/03/2024 : 3h (Première partie du premier cours)<br>
+Jeudi 07/03/2024 : 3h (Fin du premier cours)<br>
+Vendredi, Samedi, Dimanche : Suite du cours de mon côté<br>
+Lundi 18/03/2024 : 2h (Notes)</p>
 </blockquote>
 
 
