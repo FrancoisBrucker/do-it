@@ -16,3 +16,4 @@ Ensemble des MON réalisés par Lola Bourdon
    2. [MON 2.2 : Excel et Power BI pour l'analyse de données](./temps-2.2/)
 3. Temps 3
    1. [MON 3.1 : Sciences sociales pour élaborer un questionnaire](./temps-3.1/)
+   2. [MON 3.2 : Management de l'innovation](./temps-3.2/)
