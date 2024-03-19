@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Utiliser Microsoft Power BI pour comprendre la donnée]"
+title: "Utiliser Microsoft Power BI pour comprendre la donnée"
 authors:
   - TAING Henri
 
@@ -54,8 +54,10 @@ On va s'intéresser plus à Power BI Desktop en premier lieu.
 
 **Pour commencer**
 Vous avez 3 fenêtres sur la colonne de gauche qui correspondent de haut en bas à votre page de rapport (Report View), votre base de données (Table View) et les liens entre les différentes tables et colonnes (Model View).
+<img src="fenetre.PNG">
 
-Pour **extraire** une base de données qu'on va étudier, analyser puis visualiser, il suffit d'aller dans "Get Data", puis de choisir ce qui vous intéresse. 
+Pour **extraire** une base de données qu'on va étudier, analyser puis visualiser, il suffit d'aller dans "Get Data", puis de choisir ce qui vous intéresse.
+<img src="getdata.PNG">
 {% details "Remarques sur l'extraction" %}
 - Il faut avoir les autorisations nécessaires et ses identifiants si on veut utiliser les données d'un sharepoint de son entreprise par exemple
 - Faire attention à bien avoir la même version installée pour SQL Connector et MySQL/SQLServer 
@@ -86,17 +88,52 @@ Pour aller plus loin, vous pouvez utiliser l'éditeur avancé : View > Advanced 
 <img src="advanced_editor.PNG">
 
 Pour créer d'autres colonnes, vous pouvez utiliser Add Column :
-- Merge Columns pour concaténer des colonnes 
-- Custom Column avec une formule DAX (Data Expressing Formula) avec des IFs, des opérations mathématiques, etc.
+- Merge Columns pour concaténer des colonnes de la table ou d'autres tables
+- Custom Column avec une formule DAX (Data Expressing Formula) avec des IFs, des opérations mathématiques, etc. 
 - dans le cas de plusieurs tables, vous pouvez utiliser les colonnes d'autres tables, mais il faut bien vérifier leurs liens logiques dans la partie "Model View". 
+
+{% details "Remarques sur la manipulation des données" %}
+- Il existe une fonctionnalité GROUP BY comme en SQL.
+- Astuce, si notre base de données contient des erreurs. On peut les filtrer à l'aide de Combine > Merge Queries > Left Anti-join avec table 1 = notre table, table 2 = table d'erreurs et comme clé, la colonne commune. 
+- Il est possible de faire des tablés croisés dynamiques et inverser la tranformation (pivot tables et pivot columns)
+- Il est possible de combiner deux tables (Queries) avec une similarité plus ou moins élevée avec le fuzzy matching dans Combine > Merge Queries.
+{% enddetails %}
 
 ### Report View
 
+Au-delà de tous les visuels qu'on peut créer que ce soit grâce aux visuels déjà intégrés dans Power BI ou aux visuels qu'on peut télécharger, une chose que je trouve importante à relever est la "mesure". 
+Cette fonctionnalité permet de faire des opérations (en DAX) avec des colonnes sans changer la base de données et avoir d'autres attributs intéressants à exploiter comme par exemple la somme du nombre d'employés. 
+<img src="mesure.PNG">
+
+Ce qui est aussi intéressant dans Power BI est l'interactivité, on peut soit utiliser un "slicer" qui est en fait un filtre intelligent ou par exemple ici cliquer sur un département et les "cards" vont s'adapter. 
+<img src="departement.PNG">
 
 ## 3. Power BI Service <a id="section-3"></a>
 
+Il s'agit de la plateforme en ligne pour pouvoir partager et concevoir vos dashboards.
+
+Avant de s'attaquer à tout ça, récapitulons à quoi ressemble le flux de données (schéma inspiré par le cours Skillsoft) :
+<img src="dataflow.PNG">
+
+Power BI Service va donc nous accompagner pendant tout ce processus. On peut y créer des visuels (qu'on créera plutôt sur Power BI Desktop d'habitude, car plus pratique, pas besoin de connexion), créer des rapports, des métriques et surtout des dashboards (et les alertes, informations intéressantes à exploiter associées) à partir de datasets.
+De plus, il y a aussi des fonctions BI IA super intéressantes, comme la "QA" sur les visuels (qui n'est pas sur la version Desktop), les "Get Insights", etc. 
+
+{% details "Remarques sur le 'live' dashboard/métriques" %}
+- On peut programmer des actualisations
+- On peut aussi utiliser des 'real time datasets' :
+  - Push dataset : base de données classique en temps réel
+  - Streaming dataset : stockée comme du cache temporaire, donc ne peut être utilisé que pour créer des tuiles (éléments sur un dashboard) et ne peut donc pas être utilisé pour les rapports
+  - PubNub : même chose, ne peut être utilisé que pour créer des tuiles et il faut vérifier si le pare-feu de l'ordinateur autorise le lien API
+  Dans ces trois cas, il faudra penser à créer une porte d'entrée pour les données (gateway) afin que les données se réactualisent en local et sur le cloud. 
+{% enddetails %}
+
+Tous ces objets que vous créerez peuvent après être mis dans une application qui sera déployé. Ce déploiement est pris en charge par Power BI également, au travers de 3 étapes, le développement, les tests et le déploiement. 
+
+Pour gérer tout ça et la sécurité des privilèges, il existe un rôle, celui de Fabric Admin qui va gérer l'accès des équipes BI.
 
 ## 5. Conclusion <a id="section-5"></a>
+
+C'est un outil utile, intelligent et efficace. J'essaierai de l'utiliser plus dans le futur si j'en ai l'occasion. 
 
 ## 6. Sources et horodateur <a id="section-5"></a>
 
@@ -112,3 +149,4 @@ Bases de données utilisés pour les exemples :
 > Jeudi 07/03/2024 : 3h (Fin du premier cours)
 > Vendredi, Samedi, Dimanche : Suite du cours de mon côté
 > Lundi 18/03/2024 : 2h (Notes)
+> Mardi 19/03/2024 : 2h (Fin des notes)
