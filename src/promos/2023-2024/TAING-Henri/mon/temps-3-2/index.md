@@ -116,7 +116,7 @@ Avant de s'attaquer à tout ça, récapitulons à quoi ressemble le flux de donn
 <img src="dataflow.PNG">
 
 Power BI Service va donc nous accompagner pendant tout ce processus. On peut y créer des visuels (qu'on créera plutôt sur Power BI Desktop d'habitude, car plus pratique, pas besoin de connexion), créer des rapports, des métriques et surtout des dashboards (et les alertes, informations intéressantes à exploiter associées) à partir de datasets.
-De plus, il y a aussi des fonctions BI IA super intéressantes, comme la "QA" sur les visuels (qui n'est pas sur la version Desktop), les "Get Insights", etc. 
+De plus, il y a aussi des fonctions BI IA (qui sont aussi sur Power BI Desktop d'une façon ou d'une autre) super intéressantes, comme la "QA" sur les visuels, les "Get Insights", etc. 
 
 {% details "Remarques sur le 'live' dashboard/métriques" %}
 - On peut programmer des actualisations
