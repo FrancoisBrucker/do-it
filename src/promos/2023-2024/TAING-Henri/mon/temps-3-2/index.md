@@ -74,7 +74,7 @@ On peut d'abord consulter les profils des colonnes en faisant un clic droit sur 
 
 Puis changer la première ligne en titre si ce n'est pas fait avec "Use First Row as Headers". 
 En faisant ça, une ligne apparaît avec **Promoted Headers** sur la droite dans Query Settings (Si vous ne voyez pas cette fenêtre, il suffit d'aller dans View > Cliquer sur Query Settings). Cette fenêtre fournit un suivi des opérations effectuées sur la table.
-Si vous cliquez sur une opération par exemple, vous pouvez voir la formule utilisée que vous pouvez modifier.
+Si vous cliquez sur une opération par exemple, vous pouvez voir la formule utilisée écrite en M (langage de PBI) que vous pouvez modifier.
 ```
 = Table.PromoteHeaders(#"Nom_initial_de_la_table", [PromoteAllScalars=true])
 ```
