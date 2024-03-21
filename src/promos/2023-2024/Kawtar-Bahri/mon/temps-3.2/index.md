@@ -17,10 +17,11 @@ Pour m'initier à la fintech, j’ai suivi un cours sur Coursera : [Fondements e
 
 | Tâche      | Contenu                                       | Date       | Durée |
 |------------|-----------------------------------------------|------------|-------|
-| Chapitre 1 | Qu'est-ce que FinTech ?                       | 11/03/2024 | 3h    |
+| Chapitre 1 | Qu'est-ce que FinTech ?                       | 11/03/2024 | 2h    |
 | Chapitre 2 | Applications commerciales des FinTech         | 15/03/2024 | 3h    |
 | Chapitre 3 | La technologie des FinTech                    | 16/03/2024 | 4h    |
-| Chapitre 4 | Implications des FinTech pour les entreprises & Projet final | 21/03/2024  | 5h    |
+| Chapitre 4 | Implications des FinTech pour les entreprises | 20/03/2024 | 3h    |
+| Evaluations | Des Quiz et Projet final                     | 21/03/2024 | 3h    |
 
 ## Chapitre 1 : Qu'est-ce que FinTech ?
 ### Pour les entrepreneurs : 
@@ -114,19 +115,81 @@ Malgré les progrès technologiques, les fraudes continuent d'être un problème
 Enfin, l'identification est importante comme technologie sous-jacente à de nombreuses applications FinTech et autres, et comment son développement ouvre de nouvelles perspectives pour des transactions plus sécurisées, efficaces et confidentielles. D’où la nécessité de trouver un équilibre entre sécurité, commodité et protection de la vie privée.
 
 ### Blockchain et cryptage
-Bien que la blockchain soit souvent associée à Bitcoin, elle n'est pas la seule manière de tirer parti de cette technologie. Elle est présentée comme un outil puissant et largement accepté, bien qu'il existe d'autres approches pour exploiter les avantages des grands livres distribués*.
-La blockchain est présentée comme une technologie qui favorise la transparence grâce à la traçabilité des transactions. Elle est également vantée pour sa sécurité, car une fois qu'une transaction est enregistrée dans un bloc, il est pratiquement impossible de la modifier sans modifier tous les blocs suivants. Le chiffrement est souligné comme une composante essentielle de la blockchain, garantissant l'intégrité des données et facilitant des fonctionnalités telles que la préservation de la confidentialité des utilisateurs tout en permettant la vérification des transactions.
-La blockchain est donc présentée comme une technologie révolutionnaire qui élimine le besoin d'intermédiaires centraux dans les transactions financières. 
-*Grand livre distribué : base de données décentralisée qui enregistre les transactions sur plusieurs sites ou participants
 
-<img src="2.png" alt="Image 1" style="max-width: 50%;">
+
+
+
+
+<div style="display: flex;">
+    <div style="flex: 55%; padding: 10px;">        
+        <p>
+        Bien que la blockchain soit souvent associée à Bitcoin, elle n'est pas la seule manière de tirer parti de cette technologie. Elle est présentée comme un outil puissant et largement accepté, bien qu'il existe d'autres approches pour exploiter les avantages des grands livres distribués (système numérique d'enregistrement des transactions).
+        La blockchain est présentée comme une technologie qui favorise la transparence grâce à la traçabilité des transactions. Elle est également vantée pour sa sécurité, car une fois qu'une transaction est enregistrée dans un bloc, il est pratiquement impossible de la modifier sans modifier tous les blocs suivants. Le chiffrement est souligné comme une composante essentielle de la blockchain, garantissant l'intégrité des données et facilitant des fonctionnalités telles que la préservation de la confidentialité des utilisateurs tout en permettant la vérification des transactions.
+        </p>
+    </div>
+    <div style="flex: 45%; padding: 10px;">        
+        <img src="2.png" alt="Image 1" style="max-width: 100%;">
+    </div>
+</div>
+Concernant l'efficacité de la blockchain, sa conception implique une complexité computationnelle dans le processus de minage de chaque bloc, ce qui rend les transactions difficiles à modifier. Cette caractéristique est considérée comme inhérente à la blockchain et vise à garantir la sécurité des transactions sans faire appel à un tiers de confiance grâce aux fonctions de hachage. Ces fonctions sont essentielles à la sécurité et à l'intégrité des données dans la blockchain qui permettant de générer des identifiants uniques pour les données, rendant toute altération de ces données facilement détectable.
+
 
 ### Big data et analyse
+Les mégadonnées et l'analyse des données sont décrites comme des éléments essentiels dans le paysage actuel, où une abondance d'informations est disponible en ligne grâce à Internet. Ces données proviennent de diverses sources telles que les moteurs de recherche, les réseaux sociaux et les plates-formes de commerce en ligne, offrant ainsi un réservoir d'informations précieuses pour l'analyse.
+Les entreprises Internet telles qu'Alibaba, Uber et Airbnb détiennent des quantités massives de données sur les utilisateurs, données qui ne sont pas nécessairement accessibles aux grandes banques ou aux compagnies d'assurance. Les mégadonnées peuvent être utilisées pour évaluer divers aspects du marché financier, tels que l'impact des tendances touristiques sur les actions d'une entreprise ou la valorisation des devises étrangères en fonction des événements mondiaux. De plus, l'analyse des données peut aider à déterminer le sentiment du public à l'égard de divers événements ou développements, ce qui peut influencer les décisions d'investissement.
+Cependant, l'un des défis majeurs des mégadonnées est la qualité souvent médiocre des données disponibles en ligne. La prolifération de fausses informations et de données non vérifiées peut rendre difficile l'identification des informations fiables et pertinentes pour une analyse précise. En plus, le processus de nettoyage des données peut être coûteux et fastidieux, mais il est crucial pour assurer la qualité des analyses.
 ### IA, DSS et automatisation
+L'IA, les DSS (systèmes d'aide à la décision) et l'automatisation jouent un rôle crucial dans le développement des marchés FinTech. Grâce à l'accès à des données massives et à des outils d'analyse avancés, les entreprises peuvent désormais exploiter ces technologies pour prendre des décisions éclairées, développer des algorithmes de trading automatisés et améliorer l'efficacité opérationnelle. Parmi les impacts de l’IA, DSS et l'automatisation : 
+-	Augmentation de la puissance informatique
+-	Accessibilité des données => Modèles puissants 
+-	Experts financiers virtuels
+-	Simplification des simples tâches administratives, les tâches de back-office
+-	Prise de décision plus complexes (le trading algorithmique et la gestion des risques) 
+-	Automatisation de l’interaction du client avec le système bancaire (pour avoir un contrôle total sur leurs données bancaires et leur argent)
+
 ### Smartphones et technologie client
+Les smartphones ont joué un rôle essentiel dans l'évolution de la FinTech, émergeant à un moment où le secteur financier connaissait une crise majeure en 2008. Malgré cette crise, l'introduction des smartphones par des entreprises comme Apple et Samsung a ouvert la voie à de nouvelles opportunités. Les applications FinTech ont pleinement exploité les capacités des smartphones, offrant aux utilisateurs une gamme de services bancaires et financiers à portée de main. 
 
-{% details ".." %}
+{% details "Autres technologies associées aux smartphones" %}
+Les technologies portables telles que les ***montres connectées*** comme ***Fitbit*** pourraient jouer un rôle croissant. Ces appareils peuvent suivre les activités physiques des utilisateurs et être intégrés à des systèmes d'assurance ou de prêt pour offrir des avantages ou des taux préférentiels en fonction du mode de vie de l'utilisateur.
 
+Les avancées dans les ***cartes prépayées sans fil***, comme le célèbre ***Octopus*** Card à Hong Kong, illustrent comment les systèmes de paiement sans contact peuvent transformer la manière dont les transactions sont effectuées au quotidien. Ces technologies offrent une commodité élevée et sont devenues des choix prédominants pour les paiements dans certaines régions.
+
+Enfin, des développements plus spéculatifs incluent l'utilisation de la géolocalisation et de l'***Internet des objets (IoT)*** pour recueillir des données sur le comportement des consommateurs. Par exemple, les données provenant de véhicules connectés pourraient être utilisées pour évaluer le risque d'assurance automobile. De même, la ***réalité virtuelle (VR)*** et la ***réalité augmentée (AR)*** pourraient offrir de nouvelles façons d'interagir avec les services financiers, en fournissant des informations sur la santé ou en évaluant le comportement des utilisateurs.
 {% enddetails %}
 
-## Chapitre 4 : Implications des FinTech pour les entreprises & Projet final
+## Chapitre 4 : Implications des FinTech pour les entreprises 
+{%info "**Bill Gates a dit en 1994: “Banking is necessary, but banks are not.”**"%}
+Les banques ne sont que des tiers intermédiaires et leur modèle de service n'a pas fondamentalement changé au fil des ans. Cependant, les technologies émergentes, telles que les API ouvertes et la blockchain, ainsi que les changements dans la gestion des données et de la propriété intellectuelle, transforment l'industrie financière.
+{% endinfo %}
+
+Ci dessous les tendances mondiales de la FinTech et leurs implications pour l'avenir des entreprises :
+
+{% details "Prolifération des start-ups en Fintech" %}
+Le paysage de la FinTech est en plein essor avec plus de 5000 nouvelles entreprises FinTech lancées au cours des dernières années. Cette explosion de start-ups témoigne de l'énorme intérêt et de l'investissement massif dans le secteur. Des investissements massifs sont réalisés dans les start-ups FinTech, avec plus de 250 accords de financement conclu dans un trimestre récent.
+En Chine, la FinTech est particulièrement florissante, avec des entreprises comme Alibaba et Tencent menant la charge. Des entreprises comme Alibaba's Ant Financial et Tencent's WeChat Wallet dominent le marché financier chinois, avec une adoption massive par les consommateurs. Plus de 63% des consommateurs chinois utilisent au moins une application FinTech, ce qui montre à quel point la FinTech est devenue omniprésente dans la vie quotidienne.
+{% enddetails %}
+
+{% details "Fusions et acquisitions" %}
+Nous observons également une tendance croissante à la consolidation du marché, avec un nombre croissant de fusions et acquisitions dans l'espace FinTech. Les acquisitions sont réalisées tant par des entreprises technologiques que par des banques traditionnelles, ce qui montre la volonté des acteurs du marché de s'adapter aux changements.
+{% enddetails %}
+
+{% details "Partenariats et externalisation" %}
+Les partenariats et l'externalisation sont de plus en plus courants dans le secteur FinTech. Les entreprises cherchent à collaborer pour combler les lacunes dans leurs offres de produits et services, ce qui permet une spécialisation et une efficacité accrues.
+{% enddetails %}
+
+{% details "Crypto-monnaies et  ICEO" %}
+On constate une diversification et une croissance énorme du nombre de cryptomonnaies, avec des centaines de nouvelles cryptomonnaies lancées. Les ICO (Initial Coin Offerings) sont devenues une méthode populaire de collecte de fonds pour les nouvelles entreprises, remplaçant parfois les IPO (Initial Public Offerings). Cependant, cette tendance attire également l'attention des régulateurs, qui sont préoccupés par le contournement potentiel des règles réglementaires. Par exemple, le cas de Tether, une cryptomonnaie prétendant être adossée au dollar américain sans preuve vérifiable, soulève des inquiétudes quant à la crédibilité et à la stabilité de certaines cryptomonnaies.
+{% enddetails %}
+
+{% details "réglementation et technologie" %}
+Les régulateurs sont confrontés à des défis complexes. Alors que certains cherchent à renforcer les réglementations pour protéger les investisseurs et maintenir la stabilité financière, d'autres sont en faveur d’un certain assouplissement pour favoriser l'innovation. Cependant, cette dernière approche suscite des inquiétudes quant au risque accru de spéculation et de volatilité financière.
+Sur le plan technologique, nous observons une évolution constante, avec de nouvelles avancées telles que l'intelligence artificielle, le Big Data, l'analyse des données, la Blockchain, etc. Ces avancées transforment le paysage financier en permettant de nouvelles applications et capacités, mais elles posent également des défis en matière de sécurité, de confidentialité et de réglementation.
+{% enddetails %}
+
+Stratégies pour les banques et les compagnies d'assurance : 
+- **L'espoir** : Certaines grandes institutions financières espèrent que les régulateurs les sauveront ou que les entreprises de FinTech échoueront. Cependant, compter uniquement sur l'espoir n'est pas une stratégie viable. Les tendances de la FinTech sont mondiales et dynamiques, et il est peu probable qu'elles disparaissent simplement.
+- **L'acquisition** : Les entreprises peuvent acheter des startups de FinTech réussies pour acquérir leur technologie, leur expertise ou leur clientèle. Cependant, l'acquisition peut être coûteuse et peut entraîner des conflits culturels ou des difficultés d'intégration.
+- **La création** : Les entreprises peuvent développer leurs propres innovations en interne, en s'appuyant sur des modèles de réussite existants ou en investissant dans de nouvelles technologies. Cela nécessite souvent une culture d'entreprise axée sur l'innovation et peut prendre du temps pour porter ses fruits.
+- **L'incubation** : Les entreprises peuvent créer des environnements favorables à l'innovation, tels que des incubateurs ou des « sandbox », pour encourager les startups de FinTech ou les jeunes entrepreneurs à développer de nouvelles idées. Ils peuvent également agir en tant qu'investisseurs providentiels pour soutenir ces startups.
+- **Le partenariat** : Plutôt que d'essayer de tout posséder ou de tout créer, les entreprises peuvent collaborer avec des entreprises de FinTech ou des sociétés technologiques. Cela peut leur permettre de bénéficier de l'expertise et de la technologie des startups sans les coûts ou les risques associés à l'acquisition.
