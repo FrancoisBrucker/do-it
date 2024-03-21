@@ -27,9 +27,8 @@ Ne pas avoir peur de tout casser à chaque fois
 1. [Introduction](#section-1)
 2. [Power BI Desktop](#section-2)
 3. [Power BI Service](#section-3)
-3. [Cas des bibliothèques](#section-4)
-4. [Conclusion](#section-5)
-5. [Sources et horodateur](#section-6) 
+4. [Conclusion](#section-4)
+5. [Sources et horodateur](#section-5) 
 
 ## 1. Introduction <a id="section-1"></a>
 
@@ -108,6 +107,12 @@ Cette fonctionnalité permet de faire des opérations (en DAX) avec des colonnes
 Ce qui est aussi intéressant dans Power BI est l'interactivité, on peut soit utiliser un "slicer" qui est en fait un filtre intelligent ou par exemple ici cliquer sur un département et les "cards" vont s'adapter. 
 <img src="departement.PNG">
 
+### Model View
+
+C'est ici qu'on va définir les relations entre les différentes tables (ou queries) qu'on a. L'idée est de pouvoir après utiliser les liens entre ses tables pour créer des filtres ou des mesures intéressantes, etc. Il faut évidemment qu'elles aient une clé (attribut) en commun. 
+
+Dans cette partie, on peut aussi explorer la notion de cardinalité et de directionnalité, c'est-à-dire qu'une table va avoir un élément qui va avoir plusieurs liens avec les éléments de l'autre table par exemple, donc une relation "one-to-many" de gauche à droite. Cas concret, un client a plusieurs commandes attribuées à son nom. Ceci doit normalement vous rappeler les notions d'injection, surjection et bijection. 
+
 ## 3. Power BI Service <a id="section-3"></a>
 
 Il s'agit de la plateforme en ligne pour pouvoir partager et concevoir vos dashboards.
@@ -131,11 +136,11 @@ Tous ces objets que vous créerez peuvent après être mis dans une application 
 
 Pour gérer tout ça et la sécurité des privilèges, il existe un rôle, celui de Fabric Admin qui va gérer l'accès des équipes BI.
 
-## 5. Conclusion <a id="section-5"></a>
+## 4. Conclusion <a id="section-4"></a>
 
 C'est un outil utile, intelligent et efficace. J'essaierai de l'utiliser plus dans le futur si j'en ai l'occasion. 
 
-## 6. Sources et horodateur <a id="section-5"></a>
+## 5. Sources et horodateur <a id="section-5"></a>
 
 Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Skillsoft Aspire Journeys. 
 [Mastering Power BI](https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126)
