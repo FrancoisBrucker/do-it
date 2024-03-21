@@ -49,3 +49,22 @@ Le schéma de la base de données vous permet de valider les données entrantes 
 **Clés uniques** : Le schéma doit utiliser des clés uniques pour chaque entrée de la base de données. Ces clés établissent des connexions entre les tables et permettent aux utilisateurs de combiner des données pertinentes provenant de l'ensemble de la base de données.
 {% enddetails %}
 
+
+## Pipeline de données: ETL <a id="section-3"></a>
+L'un des pipelines les plus utilisés dans les entreprise est l'ETL(Extract, Load, Transform). ETL permet de collecter des données de différentes sources, de les transformer selon les besoins spécifiques de l'entreprise ou du projet, et enfin de les charger dans une destination où elles peuvent être analysées et exploitées.
+
+{% faire %}
+
+| Caractéristique                   | ETL                                                           | ELT                                                             |
+|-----------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------|
+| **Ordre des opérations**          | Extraction, transformation, chargement                        | Extraction, chargement, transformation                         |
+| **Localisation des transformations** | Transformations dans une zone de staging avant livraison       | Transformations dans le système de destination                  |
+| **Ancienneté de la technologie**  | Plus de 20 ans, nombreux outils développés                     | Plus récente, moins d'outils de support intégrés                |
+| **Accès aux données**             | Seules les données désignées sont transformées et chargées     | Toutes les données sont chargées, choix libre pour l'analyse    |
+| **Calculs**                       | Remplacement ou révision des colonnes existantes               | Ajout direct de calculs au jeu de données existant              |
+| **Systèmes de stockage compatibles** | Entrepôts de données relationnels structurés                    | Peut ingérer des données non structurées (ex. lacs de données)  |
+| **Sécurité et conformité**        | Anonymisation avant chargement, protection des données         | Anonymisation après chargement, données potentiellement vulnérables |
+| **Taille des données**            | Convient aux petits ensembles de données nécessitant des transformations complexes | Adapté aux grandes quantités de données structurées et non structurées |
+| **Temps d'attente**               | Chargement plus long, analyse rapide                           | Chargement rapide, analyse plus lente                          |
+
+{% endfaire %}
