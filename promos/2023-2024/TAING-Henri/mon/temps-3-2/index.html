@@ -144,9 +144,8 @@
 <li><a href="#section-1">Introduction</a></li>
 <li><a href="#section-2">Power BI Desktop</a></li>
 <li><a href="#section-3">Power BI Service</a></li>
-<li><a href="#section-4">Cas des bibliothèques</a></li>
-<li><a href="#section-5">Conclusion</a></li>
-<li><a href="#section-6">Sources et horodateur</a></li>
+<li><a href="#section-4">Conclusion</a></li>
+<li><a href="#section-5">Sources et horodateur</a></li>
 </ol>
 <h2>1. Introduction <a id="section-1"></a></h2>
 <p>J'ai mis sur mon CV que je savais utiliser Power BI alors que je n'avais pas fait que joujou rapidement avec. Donc, il est temps de faire de mon bullshit une réalité.</p>
@@ -247,6 +246,9 @@ Cette fonctionnalité permet de faire des opérations (en DAX) avec des colonnes
 <img src="mesure.PNG"></p>
 <p>Ce qui est aussi intéressant dans Power BI est l'interactivité, on peut soit utiliser un &quot;slicer&quot; qui est en fait un filtre intelligent ou par exemple ici cliquer sur un département et les &quot;cards&quot; vont s'adapter.<br>
 <img src="departement.PNG"></p>
+<h3>Model View</h3>
+<p>C'est ici qu'on va définir les relations entre les différentes tables (ou queries) qu'on a. L'idée est de pouvoir après utiliser les liens entre ses tables pour créer des filtres ou des mesures intéressantes, etc. Il faut évidemment qu'elles aient une clé (attribut) en commun.</p>
+<p>Dans cette partie, on peut aussi explorer la notion de cardinalité et de directionnalité, c'est-à-dire qu'une table va avoir un élément qui va avoir plusieurs liens avec les éléments de l'autre table par exemple, donc une relation &quot;one-to-many&quot; de gauche à droite. Cas concret, un client a plusieurs commandes attribuées à son nom. Ceci doit normalement vous rappeler les notions d'injection, surjection et bijection.</p>
 <h2>3. Power BI Service <a id="section-3"></a></h2>
 <p>Il s'agit de la plateforme en ligne pour pouvoir partager et concevoir vos dashboards.</p>
 <p>Avant de s'attaquer à tout ça, récapitulons à quoi ressemble le flux de données (schéma inspiré par le cours Skillsoft) :<br>
@@ -286,9 +288,9 @@ Dans ces trois cas, il faudra penser à créer une porte d'entrée pour les donn
 </div>
 <p>Tous ces objets que vous créerez peuvent après être mis dans une application qui sera déployé. Ce déploiement est pris en charge par Power BI également, au travers de 3 étapes, le développement, les tests et le déploiement.</p>
 <p>Pour gérer tout ça et la sécurité des privilèges, il existe un rôle, celui de Fabric Admin qui va gérer l'accès des équipes BI.</p>
-<h2>5. Conclusion <a id="section-5"></a></h2>
+<h2>4. Conclusion <a id="section-4"></a></h2>
 <p>C'est un outil utile, intelligent et efficace. J'essaierai de l'utiliser plus dans le futur si j'en ai l'occasion.</p>
-<h2>6. Sources et horodateur <a id="section-5"></a></h2>
+<h2>5. Sources et horodateur <a id="section-5"></a></h2>
 <p>Le cours est mis à disposition par mon entreprise CGI. Il s'agit d'une formation proposée par Skillsoft Aspire Journeys.<br>
 <a href="https://www.skillsoft.com/journey/mastering-power-bi-00f66d92-1f14-41d1-9835-249e5ada7126">Mastering Power BI</a></p>
 <p>Bases de données utilisés pour les exemples :<br>
