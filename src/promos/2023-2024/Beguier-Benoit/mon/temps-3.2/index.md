@@ -95,11 +95,13 @@ Les remboursements seront organisés par une cagnotte Lydia ou bien sur mon Lydi
 Demande au respo patrimoine de l'UA du matériel suivant :
 ![pret](pret.png)
 
+Le matériel est ensuite autorisé à travers le dossier COMA. L'UA fait payer 20€ de frais de prêt, et 1000€ de caution.
+
 ## Autorisations
 
 ### Autorisation d'événement
 
-Demande au PLP mais finalement ce n'est pas l'interlocuteur :
+Demande au PLP mais finalement ce n'est pas l'interlocuteur. Il faut remplir un dossier COMA de l'UA qui sera étudié en commission événement.
 
 ![mail](mail_sauval.png)
 
