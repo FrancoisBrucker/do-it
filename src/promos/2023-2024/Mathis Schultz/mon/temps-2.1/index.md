@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "VBA"
+title: "MON 2.1 - VBA"
 authors:
   - Schultz Mathis
 

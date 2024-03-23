@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "étude d'un système d'information complexe"
+title: "POK1 - Étude d'un système d'information complexe"
 authors:
   - Schultz Mathis
 

@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 3.1"
+title: "MON 3.1 - électronique"
 authors:
   - Schultz Mathis
 
