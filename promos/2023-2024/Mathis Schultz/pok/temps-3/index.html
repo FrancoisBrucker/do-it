@@ -201,24 +201,63 @@ La seconde problématique réside dans les attaques au phishing : nous recevons 
 <p><strong>Les stratégies des géants du numérique (l'inter-connectivité, la complexification et la centralisation de la data)</strong></p>
 <ul>
 <li>Des Objets toujours plus connecté</li>
-<li>Des systèmes impossible à sonder (IA) ?</li>
+</ul>
+<p>Les objets connectés sont au coeur des stratégies marketing des géants d'internet :<br>
+Amazon propose Alexa, l'assistant connecté capable de contrôler les objets connectés. Ces objets peuvent être directement supporté par Amazon ou alors connecté à la main en créant des routines pour Alexa. Orange propose aussi des solution pour la maison connecté, que ce soit pour gérer les verrouillage des portes, les éclairages, les panneaux solaires ou autre. La stratégie d'Apple repose entièrement sur l'inter-connectivité des services. Cela à de grand intérêt comme par exemple pouvoir accéder à ses caméra à distance, verrouiller la porte électromagnétiquement à distance. Cependant cela comporte plusieurs risques majeurs :</p>
+<ul>
+<li>
+<p>Le premier extrêmement critique, facile à imaginer : le piratage du système de contrôle qui donnerai à l'attaquant un accès complet au système. Ce cas n'est pas impossible mais il faut de gros moyen pour s'en prendre à Amazon.</p>
+</li>
+<li>
+<p>Le second, beaucoup plus fréquent est de s'en prendre au maillon faible du réseau : la caméra acheter pour 50€ qui marche en wifi ? ou même la brosse à dent électrique qui permet de mesurer que votre enfant se brosse suffisamment les dents. Le point commun de ces deux objets est qu'il ne sont pas conçu pour être sécurisé. Le problème est qu'ils vont avoir accès au wifi via des protocoles non-sécurisé voir complètement obsolète. Ils vont permettre à l'attaquant de pénétrer dans le réseau en se faisant passer pour celui ci et vont obtenir des droits qui pourraient être néfaste.</p>
+</li>
+<li>
+<p>Des systèmes impossible à sonder (IA) ?</p>
+</li>
+</ul>
+<p>La complexification des systèmes les rends de plus en plus dur à sonder. Personne ne sait comment chat GPT arrive à un résultat. Il ne se base pas sur une base de vérité que l'on peut retracer via l'accès au source comme le permettent les moteurs de recherche plus traditionnel. Le problème majeur en terme de sécurité est qu'il n'est pas impossible de trouver des moyens de sonder la données que connaît l'IA sans en avoir le droit. Il y a une bataille perpétuel entre les administrateurs des IA qui modèrent les droits des IA et les utilisateurs qui trouvent des moyens de faire sortir l'IA de ces règles. Je fais notamment référence au premier prompt qui permettait à Chat GPT de dire des propos racistes ou d'expliquer la recette d'explosif en lui expliquant que c'était dans le cadre de la recherche scientifique.</p>
+<ul>
 <li>Qui utilise et possède de la donnée ?</li>
+</ul>
+<p>Les acteurs de la données comme Amazon travail quotidiennement pour l'accumuler. Cela se fait notamment via des stratégie de pricing très faible, en effet pour quelques euros par mois on peut stocker énormément sur le cloud. Cela sert bien évidemment à la publicité sur internet qui a un impact énorme sur les utilisateurs mais aussi pour les propagandes. Mention spécial pour les pubs de tourisme dans un pays du proche orient qui souhaite maintenir le soutien Européen pendant les massacres au sud de son territoire. Ou pour des élections présidentielles américaines.<br>
+Au delà des pubs, nos données servent aussi à l’entraînement des IA sans avoir un consentement particulier de la part de l'utilisateur. Ainsi ces données collecté massivement deviennent des enjeux majeurs, et les infrastructures sont régulièrement la proie des hackeurs.</p>
+<ul>
 <li>Cloud VS On premise</li>
+</ul>
+<p>Présenté par Datadog, les avantages des solution cloud sont multiples, on peut mettre en place un ensemble de traces, de metrics ou de logs pour analyser d'une part le système mais aussi les préférences utilisateurs. Ces solutions sont facilement extensibles probablement moins impactante environnementalement parlant si les sociétés partagent la ressource. Elle nécessite bien moins de compétence puisque le système est en partie géré par des acteurs comme AWS ou Datadog qui fournissent la compétence technique. Cependant, ces entités deviennent donc des cibles et même s'ils ne sont que rarement hacké (2016 il me semble la dernière fois que Datadog a eu un soucis majeur - date à confirmer) lorsque cela arrive ce n'est pas un service qui est piraté avec quelques utilisateurs mais bien un ensemble d'entreprise qui regroupe un nombre certain d'utilisateur.</p>
+<p>Les solutions on Premise pour les petites entreprises sont plus onéreuses à installer et à sécuriser mais limite la criticité d'une attaque.</p>
+<ul>
 <li>Payer ? Un moyen de se soustraire à la donnée ?</li>
 </ul>
+<p>Malheureusement le fait de payer pour des services ne soustrait pas l'utilisateur des logs ou autre collecte de données. En effet, les services payant comme Netflix analyse nos données pour proposer du contenu ou même pour savoir quel film financer. Leurs algorithmes sont en phase de test pour l'analyse et l'écriture de script afin d'optimiser leur dépense. Ce service est bien évidemment source de débat sur le travail des écrivains. D'autre entreprise comme Microsoft qui nous fait payer des licenses une centaine d'euros collecte gracieusement nos données (les confrères en font tout autant).</p>
 <p><strong>Les bonnes pratiques des développeurs.</strong></p>
 <ul>
 <li>Des systèmes orienté sécurité</li>
+</ul>
+<p>La création de système doit se faire en suivant un ensemble de règle afin de limiter les risques, bien évidemment il y a des règles de cryptographie ou de protection de la données qu'il est nécessaire de suivre mais même plus simplement le fait d'utiliser des outils qui soient à jour et toujours supporté. En effet, une fois qu'une faille est découverte, si le système n'est pas maintenu à jour et que les technologies utilisés sont obsolète, il y aura toujours quelqu'un qui finira par s'attaquer au système.</p>
+<ul>
 <li>La modération de la data</li>
+</ul>
+<p>La collecte de données est un outil intéressant pour comprendre et améliorer un service, collecter les préférences des utilisateurs permet de proposer du contenu adapter, mais est-ce vraiment une pratique acceptable éthiquement ? Ne devrait-il pas y avoir un voile qui limite ce qui est accessible pour une plateforme ? Dois-je vraiment donner mon nom, numéro de téléphone et mail pour être un client fidèle ? Ne serait il pas plus raisonnable de limiter cela à un pseudo ou nom si la personne le souhaite ? Qu'apporte le fait de donner son numéro au client ? De plus, la collecte des numéros permet en cas de brèche dans un service de contacter les utilisateurs en se faisant passer pour l'entreprise. Il est donc nécessaire que les entreprises ou l'état modère la collecte de données.</p>
+<ul>
 <li>La protection de l'utilisateur</li>
 </ul>
+<p>Si l'entreprise collecte de la données, il est nécessaire qu'elle soit protégé. Cela passe par des méthodes d'anonymisations, le fait de séparer les données bancaires, d'écarter le nom de l'utilisateur de ses préférences.</p>
 <p><strong>Les bonnes pratiques des utilisateurs.</strong></p>
 <ul>
 <li>les gestionnaires de mdp ? Une vraie solution ?</li>
-<li>Le rôle des VPN ?</li>
-<li>Quelques outils pour se protéger</li>
 </ul>
+<p>Les gestionnaires de mot de passe sont des outils redoutable pour sécuriser l'ensemble de ses applications. En effet, il génère des mots de passes trop complexe pour être piraté individuellement. De plus, en proposant des mots de passes pré-enregistré pour des services il nous mette la puce à l'oreille lorsque le mot de passe n'est pas prérempli. Cependant, il y a deux points clés à garder en tête, tout d'abord, le mot de passe de ces applications doit être très sécurisé car il contient les clés de tout vos services y compris le mail de récupération en cas de problème. Ainsi, ces services sont les cibles des hackeurs puisqu'ils deviennent stratégique.</p>
+<ul>
+<li>La double authentification</li>
+</ul>
+<p>Ce système est sûrement le plus désagréable à utiliser puisqu'il vous demande un effort supplémentaire mais c'est le plus sécurisé puisqu'il limite le pouvoir d'un mot de passe sur un service. Il existe différentes manières de le mettre en place. Soit via une clé externe (clé usb notamment) ou alors via la signature d'un appareil ou d'une application.</p>
+<ul>
+<li>Le rôle des VPN ?</li>
+</ul>
+<p>Les VPN sont un système de protection supplémentaire, son objectif va être d'encrypter la communication entre vous et un serveur intermédiaire afin d'éviter que quelqu'un puisse intercepter vos requêtes à mi-chemin. Ils sont donc indispensable dans des environnement non sécurisé (aéroport ou réseau wifi gratuit). Ces solutions sont de plus mise en place dans les entreprises afin de permettre aux employés de se connecter au service de l'entreprise depuis l'extérieur. Ce sont des services performant mais pas invincible.</p>
 <h2 id="h4"> Conclusion </h2>
+<p>Pour moi, le plus important en cybersécurité est de comprendre que c'est une course technologique sans fin entre la défense et l'attaque qui à un coût financier et environnemental considérable. Rien dans le système n'est inviolable mais l'objectif est d'avoir quelque chose de suffisamment long et coûteux à attaquer pour que ce ne soit pas rentable pour l'attaquant de s'en prendre à vous. Les ressources ci dessous donne des détails sur l'ensemble des technologies, des bonnes pratiques ou même des choses à faire en cas de problème, section que je n'ai pas développé ici.</p>
 <h2 id="liens"> Liens utiles </h2>
 <p>● Le site de l’<a href="https://cyber.gouv.fr">ANSSI</a> avec des ressources en français, et en particulier le guide d’hygiène informatique, utile pour connaître les sujets de sécurité les plus critiques à mettre en œuvre pour une organisation, ou tout document de la catégorie bonnes pratiques ;<br>
 ● Le site <a href="https://www.cybermalveillance.gouv.fr">cybermalveillance.gouv.fr</a> fournit des conseils et des informations pour se protéger contre les cyberattaques et savoir y réagir ;<br>
