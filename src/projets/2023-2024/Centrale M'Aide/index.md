@@ -59,6 +59,7 @@ Nous comptons rendre, d'une part : **un Site Low-Code / No-Code**. Il sera const
 - Bubble : un outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
 
 Ce site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permettre de naviguer sur les différentes pages :
+
 - dépôt d'annonce
 - sélection d'annonce
 - chatbot
@@ -68,6 +69,7 @@ Ce site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permet
 **Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.**
 
 D'autre part : **un Site "dur"**. Ce site sera construit "à la main" avec :
+
 - une partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
 - une partie back-end pour gérer les fichiers et données utilisateurs.
 
@@ -75,6 +77,7 @@ Le site "dur" sera une version partielle du site Low-Code / No-Code : seules les
 L'objectif étant cette fois-ci le développement de compétences en DevWeb.
 
 ### Compétences sollicitées
+
 **Design de l'Interface (UI)**
 Construction d'un site esthétiquement qualitatif, prise en main de l'outil Figma, travail de créativité.
 
@@ -157,6 +160,7 @@ Nous avons implémenté un menu déroulant sur la droite de l'écran permettant 
 #### Dépôt d'une annonce
 
 L'annonceur remplit un formulaire simple mais précis, présentant plusieurs fonctionnalités destinées faciliter son expérience :
+
 - la sélection d'une date se fait avec un calendrier interactif
 - le dépôt d'un fichier photo permettant d'ajouter des informations : "une image vaut 1000 mots", la photographie d'un potager sera probablement plus parlante qu'un paragraphe visant à le décrire...
 
@@ -174,6 +178,7 @@ Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour
 ![Image recherche annonce](MBM-recherche-annonce.png)
 
 ### Design : Maquette Figma
+
 Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.
 
 Pour commencer, nous avons testé différents sets de couleurs afin d'en retenir quelques favoris.
@@ -198,10 +203,12 @@ L'architecture de la page choisie, nous testons les différents sets de couleurs
 | ![Figma Propal Design 1](FigmaPropal1.png) | ![Figma Propal Design 2](FigmaPropal2.png) | ![Figma Propal Design 3](FigmaPropal3.png) |
 
 ### Front-end
+
 Nous avons créé l'ensemble des pages du site en HTML et avons ajouté un fichier .css pour le header qui est identique pour l'ensemble des pages du site.
 Ce fichier permet de centraliser l'information, et modifier l'apparence du header des dfférentes pages aisément.
 
 Nous avons également défini des classes et des styles pour les fonctionnalités suivantes :
+
 - les boutons de connexion et de déconnexion
 - le menu déroulant
 - les grid qui recueillent l'ensemble des annonces
@@ -210,6 +217,7 @@ Nous avons également défini des classes et des styles pour les fonctionnalité
 Voici un apperçu des différentes pages :
 
 #### Page de connexion/inscription
+
 | Page initiale | Connexion (mdp incorrect) | Formulaire d'inscription (email déjà utilisé) |
 |:--------:|:--------:|:--------:|
 | ![Page d'accueil](Connexion.png) | ![Connexion](Connexion2.png) | ![Formulaire d'inscription](Inscription.png) |
@@ -217,14 +225,15 @@ Voici un apperçu des différentes pages :
 Il est intéressant de remarquer qu'une erreur dans le mot de passe à la connexion ou que l'essai d'inscription avec une adresse mail déjà utilisée renvoient des erreurs permettant aux utilisateurs de corriger leur identification.
 
 #### Répertoire et aperçu d'une annonce
+
 | Annonces | Aperçu d'une annonce | Mes annonces |
 |:--------:|:--------:|:--------:|
 | ![Annonces](Annonces.png) | ![Annonce](Annonce.png) | ![Mes annonces](Mes_annonces.png) |
 
 Le menu déroulant est présent sur toutes les pages du site une fois l'utilisateur connecté. Il permet d'accéder rapidement aux pages principales.
 
-
 #### Dépôt d'une annonce et aperçu du profil
+
 | Dépôt d'une annonce | Aperçu du profil |
 |:--------:|:--------:|
 | ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](Profil.png) |
@@ -248,8 +257,9 @@ Il pourrait dès lors être intéressant de se pencher sur ces questions de séc
 #### Fonctionnalités à développer
 
 Notre site contient les fonctionnalités jugées les plus essentielles lors de nos campagnes utilisateurs. Des améliorations futures sont envisageables :
+
 - un système de chat entre centraliens une fois l'annonce acceptée
 - un système de notation des autres utilisateurs et des services rendus, incitant à la bienveillance de la communauté
 - une page de confirmation lors du dépôt d'une annonce
 - rendre la barre de recherche fonctionnelle
-- un espace de retour de la part des utilisateurs pour les développeurs.
+- un espace de retour de la part des utilisateurs pour les développeurs

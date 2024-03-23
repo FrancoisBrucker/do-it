@@ -40,13 +40,13 @@ De la même manière qu'Eugénie, j'établis ma To-do pour ce MON.
 - [X] obtenir une répartition végé/carné
 - [X] faire une liste de courses
 - [X] estimer le budget (à la hausse)
-- [] demander aux professeurs d'avancer le budget
-- [] demander au Bar'bu d'héberger l'événement
-- [] demander si le Bar'bu peut prêter le barbecue (si non, voir le réchaud de l'UA avec poële)
+- [X] demander aux professeurs d'avancer le budget
+- [X] demander au Bar'bu d'héberger l'événement
+- [X] demander si le Bar'bu peut prêter le barbecue (si non, voir le réchaud de l'UA avec poële)
 - [] obtenir le permis feu auprès du PLP
 - [] faire les courses
 - [] organiser le remboursement en demandant les sous aux participants
-- [] trouver l'équipe pour allumer le barbecue et faire la cuisine
+- [X] trouver l'équipe pour allumer le barbecue et faire la cuisine
 - [] organiser le rangement
 
 ### Retour d'expérience sur le barbecue 2023
@@ -79,4 +79,30 @@ Je table donc pour 10 portions végétariennes, et 20 portions de viandes.
 
 ### Liste de course
 
+![courses](courses.png)
+
 ### Budget
+
+D'après la liste de course, le budget total est de **150€**.
+Les professeurs m'avancent la sommme (chacun 50€) ce qui m'évite de l'avancer par moi-même.
+
+Cela revient à 150/25=**6€** par personne.
+
+Les remboursements seront organisés par une cagnotte Lydia ou bien sur mon Lydia directement, que je reverserai ensuite aux professeurs.
+
+### Prêt de matériel
+
+Demande au respo patrimoine de l'UA du matériel suivant :
+![pret](pret.png)
+
+Le matériel est ensuite autorisé à travers le dossier COMA. L'UA fait payer 20€ de frais de prêt, et 1000€ de caution.
+
+## Autorisations
+
+### Autorisation d'événement
+
+Demande au PLP mais finalement ce n'est pas l'interlocuteur. Il faut remplir un dossier COMA de l'UA qui sera étudié en commission événement.
+
+![mail](mail_sauval.png)
+
+### Permis feu

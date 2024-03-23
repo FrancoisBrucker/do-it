@@ -115,3 +115,4 @@ Autres sources : CCI - Formations de formateurs "Acquérir les compétences clé
 > Dimanche 25/02 : 2h (Formalisation de mes notes)
 > Mardi 27/02 : 2h (Extraits d'interview) 
 > Mercredi 13/03 : 2h (Questions de l'étude de cas et changements mineurs)
+> Mercredi 20/03 : 2h (Rédaction des annexes à partir de mes notes et d'EBIOS)
