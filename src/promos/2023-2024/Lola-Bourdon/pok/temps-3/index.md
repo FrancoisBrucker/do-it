@@ -186,7 +186,253 @@ Pour ce premier sprint j'ai pu lire presque entièrement le PMI, il me manque le
 
 ### Objectif sprint 2
 
-L'objectif pour la fin de ce POK est de finir le PMI et relire les parties nécessaires, finir de mettre au propre mes notes et mettre en application les connaissances acquises au servie de mon futur stage.
+L'objectif pour la fin de ce POK est de finir le PMI et relire les parties nécessaires, finir de mettre au propre mes notes et mettre en application les connaissances acquises au service de mon futur stage.
+
+
+### Executing Process group
+
+L'executing process group concerne la mise en œuvre des plans de projet et l'accomplissement du travail nécessaire pour atteindre les objectifs du projet. 
+
+<u>Objectifs de l'Executing process Group :</u>
+
+- Transformer les plans et les stratégies de projet en actions concrètes.
+- Mobiliser les ressources assignées pour réaliser les activités du projet.
+- Assurer que les objectifs de qualité sont atteints à travers la livraison des livrables.
+- Faciliter la communication et l'engagement des parties prenantes tout au long du projet.
+
+<u>Processus Clés :</u>
+
+- **Diriger et gérer le travail du projet :** Implique l'exécution du plan de gestion du projet pour atteindre les objectifs établis. Cela comprend l'allocation des ressources, l'exécution des activités planifiées, et la garantie que les livrables du projet sont produits comme prévu.
+- **Acquérir et développer l'équipe du projet :** Se concentre sur l'obtention, la formation et le maintien d'une équipe de projet capable. Cela inclut l'assignation des rôles et responsabilités, le développement des compétences et la promotion de la cohésion d'équipe.
+- **Effectuer l'assurance qualité :** Vise à garantir que les normes de qualité du projet sont satisfaites ou dépassées. Cela implique l'évaluation des performances du projet et l'identification des moyens d'améliorer les processus de gestion de la qualité.
+- **Gérer les communications :** Englobe la création, la collecte, la distribution, le stockage et la disposition finale des informations du projet. Cela assure que toutes les parties prenantes sont correctement informées et engagées.
+- **Mettre en oeuvre les réponses aux risques :** Comprend l'application des plans de réponse aux risques, le suivi des risques identifiés et l'identification de nouveaux risques.
+- **Conduire les acquisitions :** Inclut l'obtention de produits, services ou résultats nécessaires à l'extérieur de l'équipe du projet. Cela peut impliquer la sélection de fournisseurs, l'administration de contrats et la clôture des accords d'achat.
+- **Gérer l'engagement des parties prenantes :** Se concentre sur la communication avec les parties prenantes pour répondre à leurs attentes, résoudre les problèmes et favoriser leur engagement dans le projet.
+
+<u>Importance de l'Exécution :</u>
+
+Le groupe de processus d'exécution est important car il transforme les plans en actions réelles et visibles, conduisant à la création des livrables du projet. C'est pendant cette phase que la majorité des ressources du projet sont consommées, et c'est pourquoi une gestion efficace est cruciale pour le succès du projet.
+
+<u>Défis Communs :</u>
+
+- **Gestion des changements:** Adapter les plans de projet aux changements tout en minimisant les perturbations.
+- **Communication :** Maintenir une communication claire et continue avec toutes les parties prenantes.
+- **Gestion des ressources :** Assurer une allocation et une utilisation efficaces des ressources.
+
+### Monitoring and controlling process group
+
+Le Monitoring and controlling process group englobe une série de processus nécessaires pour **suivre**, **examiner** et **réguler** l'avancement et la performance du projet. Elle assure également que les objectifs du projet restent alignés avec les plans de projet. Voici un résumé détaillé de cette partie essentielle de la gestion de projet.
+
+<u>Processus Clés :</u>
+
+- **Surveillance et contrôle du travail du projet :** Ce processus implique de mesurer les performances du projet par rapport au plan de gestion du projet et au plan de performance de base. Il utilise des indicateurs de performance clés (KPIs) pour identifier les écarts et recommander des actions correctives.
+- **Maîtrise des coûts :** Focalisé sur la gestion des changements dans le budget du projet. Il comprend l'utilisation de techniques comme la Valeur Acquise (Earned Value Management - EVM) pour évaluer les performances budgétaires.
+- **Maîtrise de calendriers :** Ce processus ajuste les progrès du projet et modifie le calendrier du projet en conséquence. Il utilise des outils comme les diagrammes de Gantt et le chemin critique pour surveiller les délais.
+- **Maîtrise de la qualité :** Assure que les livrables du projet répondent aux normes de qualité définies. Cela implique des audits de qualité et des inspections pour identifier les écarts par rapport aux normes de qualité.
+- **Maîtrise des Communications :** Gère la distribution, le stockage et la génération des informations sur le projet. Ce processus assure que toutes les parties prenantes sont correctement informées de l'état du projet.
+- **Maîtrise des risques :** Implique l'identification, l'analyse et la réponse aux risques du projet tout au long de sa durée. Cela comprend la surveillance des risques résiduels, l'identification de nouveaux risques et l'exécution de plans de réponse aux risques.
+- **Maîtrise des approvisionnements :** Gère l'acquisition de biens et services de l'extérieur de l'organisation exécutante. Ce processus assure que les contrats sont respectés et que les performances des fournisseurs sont surveillées.
+- **Maîtrise des parties prenantes :** Vise à surveiller les relations avec les parties prenantes et à ajuster les stratégies pour engager efficacement les parties prenantes tout au long du projet.
+
+<u>Importance du monitoring and controlling :</u>
+
+Cela permet aux gestionnaires de projet de prendre des décisions éclairées basées sur des données actuelles. Il aide à maintenir le projet sur la bonne voie, à gérer efficacement les changements et à s'assurer que le projet répond aux objectifs de qualité, de délai et de coût.
+
+### Closing process group
+
+Le closing process group marque la conclusion formelle du projet ou d'une phase du projet. Elle assure que tous les aspects du projet sont terminés de manière satisfaisante, que les livrables sont acceptés, et que la documentation est correctement archivée. 
+
+<u>Objectifs du closing process group : </u>
+	
+Le closing process group vise à confirmer que tous les travaux du projet ont été terminés comme prévu et que le projet a atteint ses objectifs. Il s'assure également que les ressources sont libérées, que les accords contractuels sont clôturés, et que les leçons apprises sont documentées pour des projets futurs.
+
+<u>Processus Clés : </u>
+
+1. **Clôture du projet ou de la phase :** comprend plusieurs activités clés telles que la confirmation que tous les travaux ont été réalisés conformément aux exigences, que les livrables ont été acceptés, et que la documentation du projet est complète. Il implique également la rédaction d'un rapport final de projet, qui résume les performances, les leçons apprises et fournit une évaluation finale du travail par rapport aux objectifs initiaux.
+
+2. **Clôture des contrats :** Implique la vérification que tout le travail décrit dans les contrats a été achevé de manière satisfaisante et que les paiements finaux sont effectués. Cela inclut également la résolution de tout litige et la documentation formelle de la clôture des contrats.
+
+<u>Importance de la Clôture :</u>
+
+La clôture formelle du projet est essentielle pour plusieurs raisons. Elle permet une transition en douceur des livrables du projet au fonctionnement quotidien ou à d'autres parties prenantes. Elle assure également que les ressources sont libérées pour de nouveaux projets et que toutes les obligations contractuelles sont remplies. De plus, la documentation des leçons apprises offre une valeur inestimable pour l'amélioration continue des processus dans les projets futurs.
+
+<u>Processus de Clôture : </u>
+
+- **Évaluation des Performances :** Examiner les performances du projet par rapport aux objectifs originaux, y compris l'analyse des coûts, des délais et de la qualité.
+- **Documentation :** S'assurer que tous les documents du projet sont complets, à jour et archivés correctement.
+- **Acceptation des Livrables :** Obtenir l'acceptation formelle des livrables par les clients ou les parties prenantes.
+- **Libération des Ressources :** Libérer les ressources humaines, matérielles et financières utilisées pendant le projet.
+- **Rapport Final :** Préparer et distribuer le rapport final du projet, incluant les succès, les échecs, les leçons apprises et les recommandations pour les projets futurs.
+
+### Inputs and Outputs
+
+La partie concernant les Inputs and Outputs permts de comprendre comment les différents processus de gestion de projet interagissent entre eux à travers des flux d'informations. Cette section met en lumière la manière dont chaque processus reçoit des informations (inputs), les traite, et produit des résultats (outputs) qui serviront d'entrées pour d'autres processus, facilitant ainsi la coordination et l'avancement du projet. 
+
+<u>Importance des Inputs et Outputs :</u>
+
+Elles assurent que les informations nécessaires sont disponibles pour exécuter chaque processus et que les résultats de ces processus sont correctement transmis aux étapes suivantes. Cela permet une gestion de projet fluide et efficace, où chaque processus est interconnecté et contribue à l'avancement global du projet.
+
+<u>Catégories Générales :</u>
+
+
+1. **Entrées (Inputs) :** Les entrées comprennent toutes les informations, données, ressources, plans et documents nécessaires pour réaliser un processus de gestion de projet. Elles peuvent provenir de processus internes au projet, d'autres projets, ou de sources externes à l'organisation.
+2. **Sorties (Outputs) :** Les sorties sont les résultats ou produits d'un processus de gestion de projet. Elles incluent des documents mis à jour, des plans, des mesures de performance, des livrables de projet, et des enregistrements de processus. Ces sorties deviennent souvent les entrées pour d'autres processus dans le projet.
+
+<u>Exemples :</u>
+
+- Plan de gestion de projet (entrée) : Sert de base pour la planification détaillée et l'exécution du projet.
+- Rapports de performance (sortie) : Fournissent des informations sur l'avancement du projet et sont essentiels pour la prise de décision.
+- Demandes de changement (sortie) : Peuvent être générées à la suite de l'analyse des performances du projet et nécessitent une révision et une approbation avant d'être implémentées.
+- Registre des risques mis à jour (sortie) : Résulte de l'identification continue et de l'analyse des risques tout au long du projet.
+
+<u>Processus de gestion des Inputs et outputs :</u>
+
+La gestion efficace des inputs et outputs implique plusieurs pratiques clés, telles que :
+
+- **Identification et documentation :** Reconnaître et documenter clairement les entrées nécessaires et les sorties attendues pour chaque processus.
+- **Révision et approbation :** S'assurer que toutes les sorties sont revues et approuvées par les parties prenantes concernées avant de passer au processus suivant.
+- **Stockage et accès :** Garantir que les documents et les données sont stockés de manière sécurisée et sont facilement accessibles aux membres de l'équipe de projet.
+
+
+### Tools and Techniques
+
+La partie Tools and Techniques permets de comprendre comment les gestionnaires de projet peuvent appliquer des méthodes concrètes pour atteindre les objectifs de leurs projets. Cette section détaille une variété d'outils et de techniques utilisés à travers les différents groupes de processus de gestion de projet : **initiation, planification, exécution, surveillance et contrôle, ainsi que clôture**. Voici un résumé approfondi de cette partie essentielle.
+
+<u>Catégories générales :</u>
+
+Il peuvent être classés en plusieurs catégories en fonction de leur application, y compris, mais sans s'y limiter :
+
+- **Techniques de planification :** Comme le brainstorming, l'analyse des parties prenantes, et la modélisation des données.
+- **Outils d'estimation :** Tels que l'estimation par analogie, l'estimation paramétrique, et l'estimation à trois points.
+- **Techniques d'analyse :** Incluant l'analyse des risques, l'analyse de la valeur acquise (EVA) pour le contrôle des coûts et des délais, et l'analyse SWOT.
+- **Outils de suivi et de contrôle :** Comme les tableaux de bord de projet, les logiciels de gestion de projet, et les systèmes de gestion de l'information du projet.
+- **Techniques de communication :** Englobant les réunions efficaces, la communication électronique, et les techniques de présentation.
+- **Méthodes de résolution de problèmes :** Y compris la négociation, la prise de décision en groupe, et la résolution de conflits.
+
+<u>Exemples spécifiques : </u>
+
+- *Diagramme de Gantt* : Utilisé pour la planification et le suivi des délais des activités du projet.
+- *Logiciel de Gestion de Projet* : Permet une planification détaillée, le suivi, et la communication au sein des équipes de projet.
+- *Matrice des Parties Prenantes* : Aide à identifier et à analyser les attentes et l'influence des différentes parties prenantes sur le projet.
+- *Techniques de Brainstorming et de Delphi* : Utilisées pour générer des idées et obtenir un consensus parmi les experts respectivement.
+
+**Processus de sélection des Outils et Techniques :**
+
+La sélection des tools and techniques appropriés dépend de plusieurs facteurs, tels que la nature du projet, les objectifs spécifiques, les ressources disponibles, et les préférences de l'équipe de projet. Les gestionnaires de projet doivent évaluer soigneusement ces facteurs pour choisir les méthodes les plus efficaces pour leur projet.
+
+### Préparation de mon stage
+
+Pour préparer mon stage en tant qu’assistante chef de projet dans la maintenance et la rénovation des yachts, j'ai commencé par demandé directement à l'entreprise qi il y avait des choses, logiciels ou autre que je pouvais commencer à étudier dans le cadre de ce POK. L'entreprise m'a donc envoyée plusieurs documents avec par exemple le vocabulaire et les logiciels utilisés. La plupart des informations sont confidentielles donc je ne pourrai pas les détailler ici mais je vais quand même citer une partie de vocabulaire et de noms de constructeurs, cela me servira de fiche méthode synthétique.
+
+#### Vocabulaire :
+
+**Voiliers :**
+
+1. Hauban : Câble ou cordage rigide utilisé pour soutenir le mât.
+2. Gréement dormant : Les câbles et les haubans qui maintiennent le mât en place.
+3. Gréement courant : Les cordages utilisés pour régler les voiles.
+4. Spinnaker : Une grande voile légère utilisée pour la navigation par vent arrière.
+5. Tangon : Une barre transversale utilisée pour maintenir le spinnaker éloigné du bateau.
+6. Drisse : Le cordage utilisé pour hisser ou abaisser les voiles.
+7. Hale-bas : Le cordage utilisé pour contrôler la position verticale du mât.
+8. Winch de voile : Un treuil utilisé pour ajuster les cordages des voiles.
+9. Beaupré : Une barre horizontale située à l'avant du bateau, utilisée pour monter les voiles d'avant.
+10. Étai : Le câble qui supporte le mât d'avant.
+11. Pataras : Le câble diagonale ou le hauban tendu arrière reliant le mât au côté de la coque opposé.
+12. Bout-dehors : Une structure horizontale qui prolonge la proue du bateau, permettant de monter des voiles supplémentaires.
+13. Lazy bag : Un sac en toile utilisé pour ranger la grand-voile lorsqu'elle n'est pas utilisée.
+14. Lazy jack : Un système de cordes qui soutient la grand-voile lorsqu'elle est abaissée.
+
+**Yachts :**
+
+1. Coque : La structure principale du yacht.
+2. Ligne de flottaison : La ligne où la coque rencontre l'eau.
+3. Tirant d'eau : La distance verticale entre la ligne de flottaison et la partie la plus basse de la coque.
+4. Oeuvres vives : La partie de la coque qui est immergée sous l'eau.
+5. Oeuvres mortes : La partie de la coque située au-dessus de la ligne de flottaison.
+6. Étrave : la partie avant de la coque qui coupe l'eau lorsque le bateau avance
+7. Proue : la zone plus large qui englobe toute la partie avant du bateau, y compris l'étrave.
+8. Poupe : La partie arrière de la coque.
+9. Propulseur d'étrave : Un propulseur monté à l'avant du yacht pour faciliter la manœuvre.
+10. Superstructure : La partie du yacht au-dessus du pont principal, comprenant les cabines et les espaces de vie.
+11. Pont : La surface supérieure du yacht où les passagers se déplacent.
+12. Passavants : Les allées le long des côtés du yacht permettant de se déplacer d'un bout à l'autre du bateau.
+13. Ballast : Le poids ajouté à un bateau pour améliorer sa stabilité.
+14. Winch : Un dispositif mécanique utilisé pour enrouler ou dérouler les cordages.
+15. Moteur hors-bord : Un moteur fixé à l'extérieur de la coque.
+16. Flybridge : Une plate-forme située au-dessus du pont principal, offrant une vue panoramique et souvent utilisée pour la navigation.
+17. Bossoirs : Dispositifs de levage utilisés pour descendre et remonter les annexes depuis l'eau.
+18. Chaise de gréement : Une chaise spéciale utilisée pour monter dans le mât ou faire des réparations en hauteur.
+19. Lof : Le mouvement d'un yacht vers le vent, généralement causé par une mauvaise répartition du poids ou une mauvaise manœuvre.
+20. Jauge : Une mesure de la taille ou de la capacité d'un yacht, généralement exprimée en tonnes de déplacement ou en longueur.
+21. Loa (Longueur hors tout) : La longueur totale du yacht, mesurée de l'extrémité avant à l'extrémité arrière.
+22. Bimini : Une toile tendue au-dessus du cockpit ou du pont pour fournir de l'ombre.
+23. Timonerie : La cabine où se trouvent les commandes de navigation du yacht.
+24. VHF : La radio maritime utilisée pour les communications à courte distance entre les navires et les stations côtières.
+25. Tender : Petite embarcation utilisée pour assurer la liaison entre un yacht et la terre ferme, ou pour pratiquer des activités nautiques.
+
+**Constructeurs Navals :**
+
+**Azimut Yachts :** Marque italienne de yachts de luxe, reconnue pour ses designs innovants et ses performances élevées.
+**Benetti :** Constructeur italien de yachts de luxe sur mesure, proposant des navires allant de 30 à plus de 100 mètres.
+**Feadship :** Chantier naval néerlandais spécialisé dans la construction de yachts de luxe personnalisés, alliant design, innovation et qualité.
+**Lürssen :** Entreprise allemande de construction de yachts de luxe, réputée pour ses navires de grande taille et ses technologies avancées.
+**Oceanco :** Constructeur néerlandais de yachts de luxe, proposant des navires alliant confort, performances et respect de l'environnement.
+**Perini Navi :** Chantier naval italien spécialisé dans la construction de voiliers et de yachts à moteur de luxe, reconnu pour ses designs élégants et ses innovations techniques.
+**Princess Yachts :** Marque britannique de yachts de luxe, proposant une large gamme de navires alliant design, performances et confort.
+**Sanlorenzo :** Constructeur italien de yachts de luxe, réputé pour ses navires sur mesure et ses designs intemporels.
+**Sunseeker :** Marque britannique de yachts de luxe, reconnue pour ses designs audacieux et ses performances exceptionnelles.
+Wally : Chantier naval italien spécialisé dans la construction de yachts de luxe à voile et à moteur, proposant des navires alliant design innovant et performances élevées.
+
+
+**Catégories des différentes tailles de Yacht:** 
+
+- 7 < x < 40 m = Yacht
+- 40 < x < 50 m = super-yacht
+- 50 < x < 60 m = méga-yacht
+- 60 m < x = giga-yacht
+
+### Mise en pratique
+
+Dans le cadre de mon stage je pourrais mettre en pratique la théorie du PMI comme suit dans le cadre d'un projet de rénovation de yacht :
+
+1. Identifier les parties prenantes et gérer leurs attentes tout au long du projet (clients, équipage, sous-traitants, chef de projet, etc.)
+2. Définir les objectifs et les livrables du projet en collaboration avec les parties prenantes
+3. Élaborer un plan de gestion de projet complet, incluant la portée, le calendrier, le budget, les ressources, les risques et la qualité
+4. Décomposer les livrables en tâches et activités, et créer un calendrier détaillé
+5. Gérer les ressources et les approvisionnements nécessaires à la réalisation du projet
+6. Surveiller et contrôler l'avancement du projet, en identifiant les écarts par rapport au plan et en mettant en place des actions correctives si nécessaire
+7. Assurer une communication efficace entre toutes les parties prenantes
+8. Clôturer le projet en obtenant l'acceptation des livrables, en documentant les leçons apprises et en libérant les ressources
+
+
+détail de la phase de cadrage :
+
+- Identifier les besoins et les exigences des clients et des parties prenantes
+- Évaluer l'état actuel du yacht et déterminer les travaux de maintenance et de rénovation nécessaires
+- Estimer les coûts, les délais et les ressources nécessaires pour réaliser les travaux
+- Élaborer un plan de projet détaillé, incluant un calendrier, un budget et un plan de gestion des risques
+- Obtenir l'approbation des parties prenantes et lancer la phase de planification
+
+Détail de la phase de planification :
+
+1. Planification détaillée : Décomposer les livrables en tâches et activités, estimer les durées et les ressources nécessaires, et créer un calendrier détaillé. Identifier les dépendances entre les tâches et gérez les conflits de ressources.
+2. Gestion des risques : Identifier les risques potentiels, évaluer leur impact et leur probabilité, et élaborer des plans de réponse aux risques. Mettre en place un processus de suivi et de contrôle des risques.
+3. Gestion des approvisionnements : Identifiez les besoins en approvisionnement, sélectionner les fournisseurs, et négocier les contrats. Gérer les relations avec les fournisseurs et s'assurer que les livraisons sont conformes aux exigences : Établir un plan de gestion des approvisionnements.
+4. Gestion de la qualité : Définir les standards de qualité, élaborez un plan de contrôle et de gestion de la qualité, et mettre en place des processus d'amélioration continue.
+5. Créer un plan de communication pour assurer une communication efficace entre toutes les parties prenantes.
+
+
+### Conclusion sprint 2
+
+Ce second sprint m'aura permis de finir la lecture du PMI ainsi que la rédaction de la fiche méthode. J'ai également pu commencer à me familiariser avec l'environnement de mon stage.
+
+
+### Conclusion générale
+
+Ce dernier POK m'aura permis d'étudier le PMI qui me sera très utile pour mon stage en gestion de projet et pour mon futur emploi. J'ai aussi pu commencer à me familiariser et me former sur les outils que j'utiliserai pendant mon stage (confidentiel malheureusement). Enfin, j'ai mis en application le PMI en réalisant un petit résumé des étapes à suivre pour un projet de rénovation de yacht en détaillant les phases de cadrage et de planification.
+
 
 ### Horodateur
 
@@ -199,6 +445,22 @@ L'objectif pour la fin de ce POK est de finir le PMI et relire les parties néce
 | 24/02 | Lecture Iniciating process group et note | 0h30 |
 | 25/02 | Lecture Planning Process group et note | 1h30|
 | 26/02 | Lecture Executing Process group et note | 1h30|
-| 27/02 | Lecture Monitoring and Controlling Process group et note | 1h|
-| 28/02 | Lecture Closing Process group et Input et OUtput | 1h30|
+| 27/02 | Lecture Monitoring and Controlling Process group et note | 1h30|
+| 28/02 | Lecture Closing Process group et Input et OUtput | 2h|
+| 10/03 | Fin de lecture | 2h30|
+| 15/03 | Rédaction notes et relectures | 1h|
+| 17/03 | Recherches stage (vocabulaire, etc.) | 1h|
+| 20/03 | Lecture documentation entreprise stage | 1h|
+| 22/03 | Formation outils stage | 2h|
+| 23/03 | Mise en application PMI stage | 2h|
+
+
+### Sources
+
+PMI- Project Management Institut
+<https://fr.wikipedia.org/wiki/Yacht#:~:text=Traditionnellement%2C%20le%20terme%20«%20yacht%20»,yacht%20s'exprime%20en%20pied.>
+<https://www.yachtworld.fr/research/les-10-meilleurs-constructeurs-de-yachts-de-luxe/>
+<https://www.abys-yachting.com/marque-yacht>
+<https://www.talamare.fr/maitriser-le-lexique-bateau-en-vue-de-votre-prochaine-location-de-yacht-b9.php>
+
 
