@@ -10,7 +10,7 @@ date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
+résumé: Etude de cas sur l'optimisation de l'organisation interne d'une entreprise
 ---
 
 ## Table des matières
@@ -24,9 +24,9 @@ résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
 
 ## Introduction<a id="section-1"></a>
 ### Présentation de l'entreprise
-[Aptiv](https://www.aptiv.com/) (anciennement Delphi) est un leader technologique mondial, avec plus de 190 000 employés répartis dans 127 sites de production et 12 grands centres techniques à travers le monde. Avec une présence dans 46 pays, ils relèvent les défis les plus complexes de la mobilité grâce à leur expertise approfondie en matière de logiciels et d'intégration de systèmes, offrant des solutions pertinentes pour leurs clients.
+Un leader technologique mondial, avec plus de 190 000 employés répartis dans 127 sites de production et 12 grands centres techniques à travers le monde. Avec une présence dans 46 pays, ils relèvent les défis les plus complexes de la mobilité grâce à leur expertise approfondie en matière de logiciels et d'intégration de systèmes, offrant des solutions pertinentes pour leurs clients.
 ### Problématique
-Aptiv vise à améliorer la gestion des ressources humaines, en se concentrant spécifiquement sur la gestion de la main-d'œuvre, qui compte 2500 employés par usine. L'entreprise souhaite transformer les processus actuels de surveillance des données, qui sont manuels et intensifs, et qui concernent le contrôle de la présence, la gestion des absences, l'échange d'informations entre employés et employeurs, ainsi que la fourniture de documents administratifs. Aptiv prévoit d'identifier un outil adapté à ses besoins, capable de réduire de manière significative la dépendance actuelle à l'égard des processus manuels utilisés pour générer des informations de prévision et de budget.
+L'entreprise vise à améliorer la gestion des ressources humaines, en se concentrant spécifiquement sur la gestion de la main-d'œuvre, qui compte 2500 employés par usine. L'entreprise souhaite transformer les processus actuels de surveillance des données, qui sont manuels et intensifs, et qui concernent le contrôle de la présence, la gestion des absences, l'échange d'informations entre employés et employeurs, ainsi que la fourniture de documents administratifs. Elle prévoit d'identifier un outil adapté à ses besoins, capable de réduire de manière significative la dépendance actuelle à l'égard des processus manuels utilisés pour générer des informations de prévision et de budget.
 Le nouveau système de gestion des ressources humaines devrait permettre aux ressources de concentrer l'essentiel de leur temps et de leurs efforts sur l'analyse des modèles et des tendances des données, afin de fournir des analyses pertinentes et à forte valeur ajoutée. Cela sera réalisé en réduisant considérablement le temps et les efforts nécessaires pour les activités manuelles et intensives en main-d'œuvre, telles que la collecte et la consolidation des données nécessaires, ainsi que le remplissage des feuilles de calcul, qui représentent la majeure partie du temps dans le processus actuel.
 
 ## Sprint 1<a id="section-2"></a>
@@ -47,7 +47,7 @@ Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus 
 
 <img src="ddm.png" width="700" height="550">
 
-**Résultat attendu : Situer le cas d’Aptiv dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
+**Résultat attendu : Situer le cas d'étude dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
 
 {% details "Niveaux Digital Maturity Deloitte" %}
 - **Niveau de base/initial** : À ce stade, l'entreprise commence tout juste à adopter des technologies digitales. Les initiatives digitales sont souvent sporadiques et fragmentées, et il peut y avoir une résistance au changement de la part des employés.
@@ -163,7 +163,7 @@ Personnes concernées par le questionnaires : DRH , DSI , Shift Leader.
 <img src="hris.png" width="700" height="550">
 
 ### Niveau de maturité
-Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
+Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
 
 ## Sprint 2<a id="section-6"></a>
 | Tâche                                | Durée estimée |
@@ -172,5 +172,15 @@ Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'
 | Rédaction du cahier de charge       | 4h            |
 | Schéma directeur des projets        | 2h            |
 | Validation                           | 1h            |
+
+## Cahier de charge<a id="section-6"></a>
+Après avoir effectué un benchmarking et recherché les normes internationales des SIRH spécifiques à l'industrie, j'ai pu identifier les fonctionnalités clés nécessaires pour développer une solution conforme aux standards de l'industrie en termes de sécurité, d'automatisation et de gestion des données. Ces fonctionnalités essentielles comprennent des systèmes robustes de sécurité des informations pour protéger contre les accès non autorisés et les fuites de données, des outils d'automatisation pour rationaliser les processus RH et réduire les erreurs manuelles, ainsi que des capacités avancées d'analyse de données pour soutenir la prise de décision.
+{% note %}
+**Liste de ressources**
+- [Des Normes internationales ISO pour de meilleurs processus RH](https://myrhline.com/type-article/cest-quoi-ce-truc-normes-internationales-de-gestion-des-rh/#:~:text=La%20norme%20internationale%20ISO%2030405,et%20recruter%20de%20nouveaux%20talents.)
+- [CNIL: Publication du référentiel relatif à la gestion des ressources humaines](https://www.cnil.fr/fr/publication-du-referentiel-relatif-la-gestion-des-ressources-humaines)
+- [ISO 30409](https://cdn.standards.iteh.ai/samples/64150/b8074452346d426b8e56e4790625ffa5/ISO-30409-2016.pdf)
+- [Discussion ChatGPT](https://chat.openai.com/share/06ec0a48-d710-4cce-b555-e61835c4bb0d)
+{% endnote %}
 
 [Drive de mon travail](https://drive.google.com/drive/folders/1UxRs99Mpo37_-gLLmpO96G_sKGVlFZNP?usp=drive_link)
