@@ -761,3 +761,262 @@ Le deuxième sprint sera dédié à la création d'une interface graphique qui a
 - Design des nouvelles interfaces pour l'assistant de jeu: **3, 2h30**
 - Création du code implémentant la logique de l'assistant: **5, 3h30**
 - Tests de l'assistant: **2, 1h30**
+
+## Affichage des résultats sous la forme d'une carte de chaleur
+
+Un élément manquant du premier sprint est la représentation sous forme de carte de chaleur. En effet, nous avons deja représenté le classement des meilleures mains avec un diagramme en barres. Il peut maintenant être intéressant de représenter les meilleures mains avec un dégradé de couleurs: plus les cases seront vertes, plus elles ont un taux de réussite important. Pour cela, on crée une méthode *plot_heatmap_hands_ranking* dans la classe **Plot_stats**. Cette méthode récupère le classement des mains grâce à l'attribut *all_average_winrates5* qui est une liste contenant les mains associées avec leurs taux de réussite moyen. Ensuite, on les place dans une liste à deux dimensions, qui sera la source pour la méthode *imshow* qui permettra de créer la carte de chaleur. On détermine le placement d'une valeur dans cette liste à deux dimensions grâce à la valeur de la combinaison associée. On fait en sorte que les mains associées se trouvent en haut à gauche de l'image, et les mains dépareillées en bas à droite. On fait ensuite quelques lignes pour afficher les valeurs sur l'image.
+
+{% details "Cliquer pour voir la méthode *plot_heatmap_hands_ranking*" %}
+
+```python
+def plot_heatmap_hands_ranking(self):
+    table_winrates = [[0 for j in range(13)] for i in range(13)]
+    for k in range(len(self.all_average_winrates5)):
+        first_value = self.all_average_winrates5[k][0][0:1]
+        second_value = self.all_average_winrates5[k][0][1:2]
+        if first_value == "A":
+            first_value = 14
+        elif first_value == "K":
+            first_value = 13
+        elif first_value == "Q":
+            first_value = 12
+        elif first_value == "J":
+            first_value = 11
+        elif first_value == "T":
+            first_value = 10
+        else:
+            first_value = int(first_value)
+        if second_value == "A":
+            second_value = 14
+        elif second_value == "K":
+            second_value = 13
+        elif second_value == "Q":
+            second_value = 12
+        elif second_value == "J":
+            second_value = 11
+        elif second_value == "T":
+            second_value = 10
+        else:
+            second_value = int(second_value)
+        if first_value != second_value:
+            suit = self.all_average_winrates5[k][0][2:3]
+            if suit == "s":
+                index1 = 14 - first_value
+                index2 = second_value - 2
+            elif suit == "o":
+                index1 = 1 - second_value
+                index2 = first_value - 2
+        else:
+            index1 = 14 - first_value
+            index2 = first_value - 2
+        table_winrates[index1][index2] = self.all_average_winrates5[k][1]
+    size_x = 13
+    size_y = 13
+    x_start = 0
+    x_end = 13
+    y_start = 0
+    y_end = 13
+    extent = [x_start, x_end, y_end, y_start]
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(111)
+    axes = plt.gca()
+    # axes.set_ylabel('Première carte du dealer')
+    axes.yaxis.set_ticks(np.arange(0.5,13.5))
+    axes.yaxis.set_ticklabels(reversed(['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']), rotation = 0, fontsize = 12)
+    # axes.set_xlabel('Main du joueur')
+    axes.xaxis.set_ticks(np.arange(0.5,13.5))
+    axes.xaxis.set_ticklabels(['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'], rotation = 0,  verticalalignment = 'center',fontsize = 12)
+    im = ax.imshow(table_winrates, extent = extent, cmap="RdYlGn", vmin = 28.7, vmax = 85.1)
+    plt.title("Taux de réussite de chaque main possible\nMains associées en haut à gauche et mains dépareillées en bas à droite ", pad = 15)
+    fig.colorbar(im)
+
+    jump_x = (x_end - x_start) / (2.0 * size_x)
+    jump_y = (y_end - y_start) / (2.0 * size_y)
+    x_positions = np.linspace(start=x_start, stop=x_end, num=size_x, endpoint=False)
+    y_positions = np.linspace(start=y_start, stop=y_end, num=size_y, endpoint=False)
+    
+    for y_index, y in enumerate(y_positions):
+        for x_index, x in enumerate(x_positions):
+            label = round(table_winrates[y_index][x_index], sigfigs = 3)
+            text_x = x + jump_x
+            text_y = y + jump_y
+            ax.text(text_x, text_y, label, color='black', ha='center', va='center')
+    plt.show()
+```
+
+{% enddetails %}
+
+L'exécution de ce code donne le graphique suivant:
+
+![Image8](Image8.png)
+
+On observe un dégradé de couleurs: plus on augmente sur l'axe des abscisses et sur celui des ordonnées, plus le taux de réussite est important. De plus, on remarque que les paires servies, situées sur la diagonale, sont clairement des meilleures mains que les autres. Enfin, les mains associées ont un taux de réussite légèrement supérieur aux mains dépareillées.
+Il ne manque plus qu'à ajouter un bouton sur la fenêtre principale associé à l'affichage de cette image.
+
+## Création d'une aide à la décision
+
+La deuxième étape est de créer une aide à la décision pour un joueur de poker. Nous allons utiliser les méthodes déjà créées pour construire cette interface. Il faut tout d'abord comprendre les bases de la théorie de calcul des probabilités au poker.
+
+### Quelques mots sur la théorie des calculs de probabilités au poker
+
+Au poker, on appelle **pot odd** le ratio entre la taille actuelle du pot total et de la taille de la relance auquel un joueur fait face. Son **equity** est son pourcentage de chance de gagner la main. Concrètement, lors d'une situation donnée, c'est-à-dire lorsqu'un joueur fait face à une relance, il doit suivre cette relance si et seulement s'il a plus d'*equity* que le *pot odd* de la situation.
+
+Le pot odd d'une situation est calculé comme suit: Pot odd = Taille de la relance/ Taille du pot final. Notons que la taille du pot final correspond à la taille du pot si jamais le joueur suit la relance.
+
+L'objectif pour notre programme sera donc de calculer ces deux valeurs selon la situation actuelle, pour suggérer au joueur s'il doit suivre, se coucher ou relancer.
+
+### Application de la théorie
+
+Maintenant que la théorie est comprise, il faut l'implémenter. Le *pot odd* est assez simple à calculer. Il faudra simplement demander au joueur le pot actuel et la taille de la relance, et on aura juste à appliquer la formule. Calculer l'*equity* est un peu plus compliqué. Cette valeur dépend en effet de ce que l'adversaire qui a relancé peut avoir en main. On appelle cela la **range** du joueur. Cette range est difficile à déterminer par un programme informatique (cela impliquerait des structures très complexes d'intelligence artificielle), mais on va considérer que le joueur a une idée de la *range* de son adversaire. La première étape est donc de créer une interface graphique permettant au joueur de renseigner la range de son adversaire. Pour cela, on met en place 169 boutons, correspondant aux 169 mains possibles. Le joueur aura donc à cliquer sur l'interface les mains dont il pense constitutives de la *range* de son adversaire. Nous allons nommer chaque bouton sur la base de la syntaxe suivante: "buttonQ7o". Les deux valeurs qui suivent le mot "button" correspondent aux deux cartes de la main correspondante, et la lettre (*o* ou *s*) indique si la main et dépareillée ou associée (*offsuit* ou *suited*). Ensuite, au niveau du backend, on va créer une classe **Button_methods** qui va contenir toutes les méthodes relatives aux boutons de cette interface. Dans l'initialisation, il faut associer les 169 boutons à 169 méthodes différentes. Cela prendrait des heures à faire à la main, mais j'ai écrit un script qui écrit ces méthodes plus rapidement. Voici un exemple d'une de ces méthodes:
+
+```python
+def button65o_clicked(self):
+    if '65o' not in self.range_selected:
+        self.button65o.setStyleSheet('background-color: green')
+        self.range_selected.append('65o')
+    else:
+        self.range_selected.remove('65o')
+        self.button65o.setStyleSheet('background-color: white')
+```
+
+Cette méthode est connectée au bouton correspondant à la main 6-5 dépareillée ("65o"). Lorsque ce bouton est cliqué par l'utilisateur, le bouton se colore en vert si la main n'avait pas déjà été sélectionnée, sinon elle se remet en blanc. On garde en mémoire les mains sélectionnées dans la *range* grâce à l'attribut *range_selected*, qui est une liste contenant les mains sélectionnées sour forme de chaînes de caractères.
+
+On rajoute également des boutons aux extrémités des lignes et des colonnes, qui serviront à sélectionner une ligne ou une colonne entière. Ces boutons seront de la forme: "buttonA_2" pour les lignes et "buttonA_1" pour les colonnes. Les méthodes que nous allons connecter à chacun de ces boutons vont ajouter dans la liste *range_selected*. Voici un exemple d'une telle méthode (il y en a 26: 13 pour les lignes et 13 pour les colonnes):
+
+```python
+def select_line_K(self):
+    combination = 'K' + 'K'
+    if combination not in self.range_selected:
+        self.range_selected.append(combination)
+    values = list(range(2, 10)) + ['T', 'J', 'Q']
+    for value2 in values:
+        combination = "K"+ str(value2) + "s"
+        if combination not in self.range_selected:
+            self.range_selected.append(combination)
+    values = ['A']
+    for value2 in values:
+        combination = str(value2) + "K" + "o"
+        if combination not in self.range_selected:
+            self.range_selected.append(combination)
+    self.color_buttons()
+```
+
+La fin de la méthode fait appel à la méthode *color_buttons*, qui colore en vert ou en blanc les boutons correspondants aux combinaisons présentes dans la liste *range_selected*. Voici à quoi ressemble la fenêtre:
+
+![Image9](Image9.png)
+
+On arrive bien à sélectionner les mains unes par unes, ou bien une colonne ou une ligne entière d'un coup.
+
+D'autres éléments sont présents sur cette fenêtre:
+
+- Un bouton "Réinitialiser", qui vide la liste *selected_range* ce qui permet de remettre tout les boutons en blanc.
+- Un champ textuel dans lequel l'utilisateur est invité à renseigner un nombre N. Ce nombre permet de sélectionner directement le top N% des meilleures mains. Cela peut s'avérer utile pour sélectionner plusieurs mains d'un seul coup. La méthode associée au bouton "Valider" utilise la liste *all_average_winrates5* qui contient le classement des meilleures mains. Il suffit ensuite d'effectuer un slicing sur cette liste.
+- Quatre objets de la classe **QRadioButton**, qui permettront à l'utilisateur d'indiquer quelles couleurs il pense que l'adversaire a. Ces objets sont des icônes de type *radio button* que l'on peut cocher ou pas
+- Quatre objets de la classe **QComboBox**, qui sont des menus déroulants qui permettent à l'utilisateur de renseigner le main qu'il a.
+- Deux champs textuels destinés à renseigner la taille du pot en cours et du prix pour suivre la relance.
+- Deux boutons "Cartes associées" et "Cartes dépareillées" qui permettent de sélectionner toutes les cartes associées ou dépareillées
+- Un bouton pour ouvrir une nouvelle fenêtre qui permettra de renseigner le tableau en cours
+- Un bouton pour valider la sélection.
+
+Maintenant que l'on a toutes ces informations, on peut écrire la méthode qui calcule le *pot odd* et l'*equity* d'une situation donnée. Pour calculer l'*equity*, on récupère les mains sélectionnées dans la *range* et on effectue un nombre N de simulations contre la main du joueur. On récupère les taux de réussite moyens grâce à la méthode *get_winrate* définie précédemment. On fait une moyenne de tout ces taux de réussite, ce qui donne l'*equity* du joueur compte tenu de la *range* qu'il a déterminé.
+
+{% details "Cliquer pour voir le code de la méthode *get_decision*" %}
+
+```python
+def get_decision(self, pot: int, amount_to_call: int, player_hand: list, N: int):
+    pot_odd = amount_to_call /(pot + amount_to_call)
+    tot_winrate = 0
+    count = 0
+    suits = []
+    if self.radio_button_heart.IsChecked():
+        suits.append("coeur")
+    if self.radio_button_diamond.IsChecked():
+        suits.append("carreau")
+    if self.radio_button_club.IsChecked():
+        suits.append("trèfle")
+    if self.radio_button_spade.IsChecked():
+        suits.append("pique")
+    for combination in tqdm(self.range_selected):
+        if len(combination) == 2:
+            value = combination[0]
+            value = self.value_name(value)
+            for k in range(3):
+                suit1 = suits[k]
+                card1 = Card(value, suit1)
+                suits2 = suits[k+1:]
+                for suit2 in suits2:
+                    card2 = Card(value, suit2)
+                    opponent_hand = [card1, card2]
+                    tot_winrate += self.get_winrate(player_hand, opponent_hand, N)[0]
+                    count += 1
+        else:
+            suited = combination[-1]
+            if suited == "o":
+                value1 = combination[0]
+                value1 = self.value_name(value1)
+                value2 = combination[1]
+                value2 = self.value_name(value2)
+                for k in range(3):
+                    suit1 = suits[k]
+                    card1 = Card(value1, suit1)
+                    suits2 = suits[k+1:]
+                    for suit2 in suits2:
+                        card2 = Card(value2, suit2)
+                        opponent_hand = [card1, card2]
+                        tot_winrate += self.get_winrate(player_hand, opponent_hand, N)[0]
+                        count += 1
+            if suited == "s":
+                value1 = combination[0]
+                value1 = self.value_name(value1)
+                value2 = combination[1]
+                value2 = self.value_name(value2)
+                for k in range(4):
+                    suit = suits[k]
+                    card1 = Card(value1, suit)
+                    card2 = Card(value2, suit)
+                    opponent_hand = [card1, card2]
+                    tot_winrate += self.get_winrate(player_hand, opponent_hand, N)[0]
+                    count += 1
+    average_winrate = round(tot_winrate/count, sigfigs = 3)
+    return(average_winrate, pot_odd * 100)
+```
+
+{% enddetails %}
+
+#### Test de l'interface
+
+Pour tester cette méthode, on va se mettre dans la peau d'un joueur de poker. Voici le déroulement d'une main:
+Le joueur 1 (le Héros) a la main constituée d'un 8 de coeur et d'un Valet de coeur. Les joueurs autour de la table construisent un pot et un des joueurs (le Vilain) mise 300 dans un pot de 200. Tout le monde se couche et c'est au Héros de parler. Considérant les mains qui se sont passées plus tôt dans la soirée, le Héros se fait une idée de la *range* du Vilain. La taille de la relance l'amène à penser que la *range* de son adversaire contient toutes les paires servies, toutes les cartes contenant un As ou un Roi et quelques combinaisons qui sont dans le top 30% des meilleures mains.
+
+Pour avoir l'aide à la décision de notre algorithme, on rentre toutes ces informations sur l'interface et on lance les calculs:
+
+![Test1](Test1.gif)
+
+Le programme envoie une *equity* de 40.5%, et un *pot odd* de 37.5%. Le Héros doit donc suivre la relance, et il peut même relancer encore pour ajuster le *pot odd* à son *equity*.
+
+La situation au *flop* (3 premières cartes) est la suivante: le flop est constitué des cartes 5 de coeur, Roi de coeur et As de pique. Le Héros ouvre avec une mise à 150 et le Vilain relance de 100. Le Héros affine donc la *range* de son adversaire: il y inclut les combinaisons suivantes:
+
+- Les mains avec un As ou un Roi qui font une bonne paire avec le flop, mais pas les cartes avec un 5 compte tenu de la taille de la relance
+- Les paires servies jusqu'à la main 8-8, et la paire servie 5-5 pour compléter le 5 de coeur
+- Des combinaisons allant de 9-10 jusqu'à K-Q, pour compléter une potentielle suite.
+- Toutes les couleurs sont pour l'instant possibles.
+
+![test2](Test2.gif)
+
+Le programme renvoie une *equity* de 34.7% et un *pot odd* de 28.6%. On remarque que l'*equity* au flop est plus faible que celle au preflop, car la *range* a été affinée. Cependant, elle est toujours supérieure au *pot odd*, donc le Héros suit la relance.
+
+La situation au *turn* est la suivante. La quatrième carte dévoilée est le Valet de pique: le Héros fait une paire. Le Héros ouvre avec une mise à 300 et le Vilain relance pour 400 de plus. Compte tenu de la situation, le Héros pense que le Vilain a une main associée avec deux cartes de pique. C'est donc ce qu'il rentre dans l'interface:
+
+![Test3](Test3.gif)
+
+L'*equity* du Héros est passée à 56.4% et le *pot odd* est de 36.4%. L'*equity* est bien plus élevée grâce au fait qu'un Valet soit arrivé au *turn*, ce qui fait que le Héros a une main gagnante face à plus de la moitié de la *range* de son adversaire. Le *pot odd* est également assez élevé car le Vilain a fortement relancé. Le Héros suit donc la relance.
+
+Voici la dernière situation de ce test: la carte à la *river* est le 5 de pique. Le Héros ouvre à 100 et le Vilain relance pour 200 de plus. D'après le Héros, la *range* de son adversaire n'a pas changé. Il rentre ces informations comme suit:
+
+![Test4](Test4.gif)
+
+L'*equity* du Héros est de... 0%. En effet, d'après la range renseignée, le Héros perd tout le temps à cause car son adversaire a une couleur à pique. Le Héros se couche donc et perd la main.
+
+#### Bilan du test
+
+L'interface a été globalement fluide et il n'y a pas eu de problème lors de l'exécution de l'algorithme. Cependant, il met environ 1 à 2 minutes pour s'exécuter pour 3500 simulations (ce qui est suffisant, d'après mes tests). Notons tout de même que cette aide à la décision dépend de la *range* déterminée par le joueur. Cette *range* est ce qui est le plus difficile au poker, donc l'interface est inutile pour un joueur débutant.
