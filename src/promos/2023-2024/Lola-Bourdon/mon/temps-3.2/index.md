@@ -30,6 +30,10 @@ L'objectif de ce MON est de faire suite au [MON de Soline](https://francoisbruck
 
 ## Rappel
 
+Le management de l'innovation est une discipline qui vise à gérer le processus de création, de développement et de mise en œuvre de nouvelles idées, produits, services ou processus au sein d'une organisation. Il englobe la gestion de toutes les étapes du cycle d'innovation, de la génération des idées à leur commercialisation réussie.
+
+Une invention est la création d'une nouvelle idée ou technologie, tandis que l'innovation est le processus de mise en œuvre réussie de cette idée ou technologie pour créer de la valeur. Le management de l'innovation vise à faciliter ce processus en fournissant un cadre et des méthodologies pour générer, développer et exploiter efficacement les idées nouvelles et créatives.
+
 ## Les outils du management de l'innovation
 
 Il existe de nombreux outils de management de l'innovation comme le mentionne [Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/). Je vais donc expliquer plus en profondeur les méthodes C-K, TRL et crouwdsourcing qui sont pour moi les plus intéressantes.
@@ -146,7 +150,7 @@ Pour surmonter ces défis, l'entreprise doit envisager une réponse organisation
 
 - Créer une nouvelle entité dédiée à l'innovation de rupture, isolée de l'entreprise principale, pour explorer de nouveaux modèles d'affaires et de nouveaux marchés.
 
-**2. Equipe dédiée :**
+**2. Équipe dédiée :**
 
 - Constituer une équipe avec des profils entrepreneuriaux capables de mener à bien l'innovation de rupture, avec une autonomie suffisante pour explorer de nouvelles opportunités.
 
@@ -208,13 +212,13 @@ Cette étude de cas illustre comment la méthode TRL peut être utilisée pour �
 
 ---
 
-### Étude de Cas 3 - La méthode C-K 
+### Étude de Cas 3 - La méthode C-K
 
-#### Contexte :
+#### Contexte:
 
 Prenons l'exemple fictif d'une entreprise automobile qui cherche à développer une nouvelle génération de voitures électriques autonomes pour répondre à la demande croissante de véhicules écologiques et autonomes sur le marché.
 
-#### Étape 1 : Exploration du Concept (C-K Concept) :
+#### Étape 1 : Exploration du Concept (C-K Concept):
 
 - **Objectif Principal :** Concevoir une voiture électrique autonome innovante qui offre une expérience de conduite sûre, confortable et durable.
 
@@ -265,18 +269,16 @@ Prenons l'exemple fictif d'une entreprise automobile qui cherche à développer 
   - Formation des concessionnaires et du personnel sur les caractéristiques et les avantages du nouveau véhicule.
   - Fourniture d'un support clientèle dédié pour répondre aux questions et aux préoccupations des propriétaires de voitures électriques autonomes.
 
-#### Résultats:
+#### Résultats
 
 Grâce à l'approche C-K, l'entreprise a réussi à développer une voiture électrique autonome innovante qui a suscité un fort intérêt sur le marché. Le nouveau véhicule a été largement acclamé pour ses performances, sa sécurité et sa durabilité, renforçant ainsi la position de l'entreprise en tant que leader de l'innovation dans l'industrie automobile.
-
-
 
 ---
 
 
 ### Étude de Cas 4 - Le crouwdsourcing
 
-#### Contexte:
+#### Contexte
 
 Prenons l'exemple fictif d'une entreprise de technologie qui souhaite développer une nouvelle plateforme de crowdsourcing pour stimuler l'innovation et la collaboration au sein de l'entreprise ainsi qu'avec des partenaires externes.
 
@@ -322,11 +324,16 @@ Prenons l'exemple fictif d'une entreprise de technologie qui souhaite développe
   - Suivi des performances de la plateforme à l'aide de données analytiques pour évaluer l'engagement et l'efficacité.
   - Révisions régulières pour améliorer la plateforme en fonction des retours d'expérience et des suggestions des utilisateurs.
 
-#### Résultats:
+
+#### Résultats
 
 La nouvelle plateforme de crowdsourcing a connu un succès significatif, avec une forte participation des employés et des parties prenantes externes. Grâce à cette plateforme, l'entreprise a pu recueillir un grand nombre d'idées novatrices provenant de diverses sources. Ces idées ont été soigneusement évaluées et mises en œuvre, ce qui a conduit à plusieurs innovations réussies, renforçant ainsi la position de l'entreprise en tant que pionnière dans son domaine. De plus, la plateforme a favorisé un sentiment de communauté et de collaboration au sein de l'entreprise, renforçant la culture de l'innovation et l'engagement des employés. En fin de compte, le crowdsourcing a permis à l'entreprise d'accélérer son processus d'innovation, de répondre de manière agile aux défis du marché et de maintenir sa compétitivité à long terme.
 
-### Horodateur 
+## Conclusion
+
+Ce MON m'aura permis d'acquérir plus de connaissances dans le domaine du management de l'innovation qui est un domaine qui me plait beaucoup. Je n'avais jamais entendu parler des méthodes de crouwdsourcing et TRL et j'ai trouvé ça très intéressant. J'ai ainsi pu compléter le [MON de Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/) avec des études de cas plus approfondies.
+
+### Horodateur
 
 | Date | Travail effectué | Temps |
 | -------- | -------- |-------- |
@@ -342,3 +349,10 @@ La nouvelle plateforme de crowdsourcing a connu un succès significatif, avec un
 
 <https://www.grenoble-inp.fr/fr/recherche-valorisation/trl-a-quoi-ca-sert>
 <https://uved.univ-perp.fr/module4/res/Parcs-eoliens_Etude-de-cas.pdf>
+<https://www.cairn.info/revue-management-et-avenir-2011-1-page-254.htm#:~:text=Le%20crowdsourcing%20est%20une%20forme,Pisano%20et%20Verganti%2C%202008).>
+<https://www.cairn.info/revue-entreprendre-et-innover-2016-1-page-38.htm>
+<https://www.cercle-editeurs.fr/logiciels-metiers/quelles-sont-les-approches-et-les-outils-adaptes-pour-reussir-a-innover/>
+<https://www.ck-theory.org/la-theorie-ck/>
+<https://www.finovup.fr/blog/lechelle-trl-technology-readiness-level-mesurer-la-maturite-dune-technologie/>
+<https://www.cea.fr/multimedia/Documents/infographies/Defis-du-CEA-infographie-echelle-trl.pdf>
+<https://exed.polytechnique.edu/formations/innovation/innovation-rupture-methode-c-k>
