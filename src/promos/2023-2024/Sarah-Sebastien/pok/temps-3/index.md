@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "POK 3: Google Apps Cure"
+title: "POK 3: My Google Health Assistant"
 authors:
   - Sebastien Sarah
 
@@ -28,8 +28,13 @@ Prérequis : Aucun
 - [Recherches des ressources](#ressources)
 - [Focus sur Google Sheet](#googlesheet)
 - [Focus sur Google Apps Scripts](#googleAppscript)
-- [Une courte présentation de Google Apps Cure](#projet)
 - [Vers le sprint 2](#sprint2)
+- [Une courte présentation de My Google Health Assistant](#projet)
+- [Construction de la base de données Google Sheet du projet](#BDD)
+- [Création du Google Form](#Form)
+- [Rédaction du script avec Google Apps Script](#script)
+- [Résultat final](#final)
+- [Retour sur le sprint 2 et retour d'expérience](#retex)
 
 <h2 id=introduction> Introduction</h2>
 
@@ -175,7 +180,6 @@ Besoin de 2 fonctions :
 
 - une fonction **contientElement** qui va venir tester si un élément est dans un tableau *(car le cas se présente plusieurs fois dans la fonction principale)*
 
-
 {% details "contientElement" %}
 ```javascript
 function contientElement(array, element) {
@@ -248,7 +252,7 @@ function getRecipe() {
 #### Test du script
 
 Aujourd'hui, j'avais envie de manger **italien**. Mais je n'avais chez moi que des **cacahuètes grillées** et de la **canneberge séchée**. 
-*Qu'est ce que j'allais bien pouvoir cuisine?*
+*Qu'est ce que j'allais bien pouvoir cuisiner?*
 
 <img width=350 src=resultat_recette.png>
 
@@ -266,8 +270,6 @@ Aujourd'hui, j'avais envie de manger **italien**. Mais je n'avais chez moi que d
 - [Lien vers le Sheet](https://docs.google.com/spreadsheets/d/1KGEUPpCguz-CgjBRoZtw-efDRjphKRTtqgmCwERGkHs/edit?usp=sharing)
 - [Lien vers le script](https://script.google.com/u/0/home/projects/16E4KcCd9lwJmOOt_XYX1SBhEZnGqHfAb8tCSZGMxqZN0VCO6gRwqTxmR/edit)
 {%endprerequis%}
-
-<h2 id=projet> Une courte présentation de Google Apps Cure</h2>
 
 
 <h2 id=sprint2> Vers le sprint 2</h2>
@@ -302,3 +304,331 @@ On peut alors redéfinir le backlog pour le sprint 2 :
 |- Codage du script de gestion de données du Sheet|3h mins|
 |- Codage du script de gestion de l'envoi des mail|45 mins|
 |- Réalisations de divers tests et correction du code|1h30|
+
+
+<h2 id=projet> Une courte présentation de My Google Health Assistant</h2>
+
+"My Google Health Assistant" est le tout nouveau **assistant de santé personnel** conçu pour fournir des **recommandations de compléments alimentaires** adaptées aux besoins spécifiques
+d'un utilisateur. Il se base sur les réponses d'un **Form** rempli par l'utilisateur, dans lequel il renseigne ses **préférences alimentaires** et ses **antécédents de santé** afin qu'on choisisse pour lui, le complément alimentaire le plus adapté, et qu'on lui envoie **par mail** toutes les **caractéristiques du complément alimentaire**.
+
+### Backlog du produit
+
+|Intitulé|Complexité|Valeur métier(MoSCoW)|
+|---|---|---|
+|Permettre aux utilisateurs de remplir un formulaire en spécifiant leur prénom, adresse mail, type de population, l'objectif de santé, les allergies/intolérances alimentaires éventuelles, les antécédents|3|Must|
+|Pouvoir choisir plusieurs allergies|1|Must|
+|Pouvoir rentrer à la main ses allergies|1|Must|
+|Pouvoir choisir plusieurs régimes|3|Won't|
+|Pouvoir choisir plusieurs objectifs dans une demande|5|Won't|
+|Configurer l'application pour enregistrer les réponses du formulaire dans une feuille de calcul Google Sheets|1|Must|
+|Développer un algorithme pour recommander des compléments alimentaires personnalisés en fonction des réponses du formulaire et des données sur les compléments alimentaires disponibles|5|Must|
+|Intégrer une base de données de compléments alimentaires contenant des informations sur les ingrédients, les avantages pour la santé, les posologies recommandées, et les mises en garde|1|Must|
+|Envoyer un e-mail personnalisé à l'utilisateur avec une proposition de complément alimentaire adapté à son besoin contenant le nom du complément, sa marque, sa posologie, ses ingrédients, ses mises en gardes |3|Must|
+
+<h2 id=BDD> Construction de la base de données Google Sheet du projet </h2>
+
+J'ai construit ma BDD avec le jeu de données trouvé sur le site de data.gouv, [ici](https://www.data.gouv.fr/fr/datasets/liste-des-complements-alimentaires-declares/). 
+
+> Cette liste répertorie tous les compléments alimentaires ayant fait l’objet d’une déclaration auprès des services de la DGCCRF depuis le 26 avril 2016, et ayant obtenu une attestation de déclaration de commercialisation sur le territoire français.
+
+On y retrouve **plus de 85 000** compléments alimentaires répertoriés avec certaines de leurs **caractéristiques**, comme notamment : 
+- leur nom commercial
+- la marque qui les a déposés
+- leur forme galénique
+- leur composition
+- leur(s) objectif(s)
+- leur posologie
+- les mises en garde concernant leur prise
+- ...
+
+### Etape 1 : Tri et nettoyage des données
+
+- J'ai réduit à **2000 lignes** la taille des données. *Cela permet de couvrir tout de même une bonne quantité de données et de rester gérable à traiter.*
+- Je supprime toutes les colonnes dont les données ne me serviront pas, et renomme les restantes *(Responsable étiquetage, plantes, etc...)*
+- Je modifie à la main les lignes qui n'ont pas un format adapté.
+
+On obtient alors une BDD exploitable :
+
+<img src=BDD.png>
+
+### Etape 2 : Obtenir une liste exhaustive des possibilités/choix parmi lesquelles l'utilisateur devra choisir
+
+Il y avait en tout **3 grosses variables** à prendre en compte :
+
+- le **type de population** *(qui permettra ensuite d'éliminer les médicaments pour lesquels l'utilisateur fait partie des populations à risques)*
+- les **objectifs** du complément *(qui permettra à l'utilisateur de choisir l'effet qu'il recherche parmi tous les effets possibles proposés par les compléments présents dans la BDD)*
+- la **composition** des compléments *(qui permettra de savoir quels types d'ingrédients vont être à risque pour un consommateur)*
+
+Pour ce faire, il me fallait **récupérer le contenu de chaque cellule** des colonnes concernées, et de réussir à **extraire chaque item** des cellules, de sorte à ce qu'une **cellule corresponde à une item**. Mon idée était d'ensuite pouvoir **supprimer les doublons**, mais il me fallait réussir, pour cela, à placer toutes ces cellules les unes à la suite des autres sur une **même colonne**.
+
+<img width=350 src=extraction_données.png>
+
+**Petit problème :** vu comment s'était déroulé la première partie de ce POK sur le traitement de données avec Sheet, réaliser toutes ces actions sur ce logiciel allait être compliqué.
+Je me suis alors tournée vers mon ancien ami Excel, et plus particulièrement **Power Query**.
+
+J'ai alors réalisé les actions suivantes pour parvenir au résultat : 
+
+- **Split column** by **Delimiters** : qui permet de séparer le contenu des cellules de la colonne en fonction des *virgules*
+
+<img width=450 src=extraction_données_2.png>
+
+- **Unpivot columns**: qui permet de transformer des colonnes de valeurs en lignes
+
+<img width=250 src=extraction_données_3.png>
+
+Ensuite, il suffit de **Supprimer les doublons** sur Excel, et puis le tour est joué. 
+
+{%faire%}
+Pour les données concernant la composition totale des médicaments, l'opération ne s'est pas terminé là. Il était un peu compliqué d'obtenir une liste exhaustive des aliments allergènes que pouvait contenir un médicament, alors je me suis juste aidée de ces données traitées pour établir certaines règles dont je parlerai plus tard. 
+{%endfaire%}
+
+<h2 id=Form> Création du Google Form </h2>
+
+Je pensais au début, créer une question dans laquelle l'utilisateur viendrait rentrer son/ses allergies. Mais lors de mon analyse des ingrédients des compléments alimentaires, j'ai découvert que la liste des exceptions à prendre en compte était **beaucoup plus massive** que je ne l'avais imaginé.
+
+### Problème d'allergies/régimes alimentaires non traités
+
+Il fallait d'abord se renseigner sur **son régime alimentaire**. 
+
+- certains ingrédients possédaient de *"la gélatine de porc"*, *"des protéines ou des cartilages de poulet"*, *"des membranes ou des jaunes d'oeufs"*, "*des extraits de poissons ou de crustacés* : **ne convenaient pas aux végétariens**
+- en plus de ces ingrédients, on retrouvait parfois *"du lactose"*, *"du miel"*, ou de la *"cire d'abeille"* : **ne convenaient pas aux végétaliens** 
+- apparaissaient également dans certains compléments : de l'"*avoine"*, *"amidon"*, *"blé"*, *"lin"*, *"gluten"*, *"malt"* : **ne convenaient pas aux régimes sans gluten**
+
+Par ailleurs certaines allergies étaient **plus délicates à traiter**:
+- si la personne cochait **allergique aux poissons** : il fallait rajouter *"raie"*,*"marin"*,*"requin"*, *"anchois"*, *"sardine"*, *"morue"*, *"saumon"*, aux ingrédients interdits
+- si la personne cochait **allergique aux crustacés** : il fallait rajouter *"marin"*,*"huître"*,*"corail"*, aux ingrédients interdits
+- si la personne cochait **allergique/intolérante au lactose**: il fallait rajouter *"lact"*,*"yaourt"*, aux ingrédients interdits
+
+### Problème de formatage des choix de réponses
+
+<img align="right" width=138 src=pop_a_risques_ex.png>
+
+Si on reprend les données bruts de **toutes les populations à risques**, on distingue 2 catégories: 
+- les **catégories de population**
+- les **antécédents**
+
+Par ailleurs, pour les catégories de populations, il fallait rajouter les catégories qui avaient été exclues. Et je me suis permise de renommer :
+- **allaitement** par **femme allaitante** 
+- **grossesse** par **femme enceinte**
+Ca faisait  un peu moins sauvage je trouvais..
+
+{%faire%}
+Important de noter aussi que les catégories n'étaient pas **exclusives**. 
+Ex : un **enfant (de moins de 6 ans)** c'est aussi un **enfant (de moins de 10 ans)**, mais aussi un **enfant (de moins de 12 ans)**. Il fallait donc faire attention à prendre en compte dans le code, ces possibilités.
+{%endfaire%}
+
+---
+
+{%info%}
+**[Lien vers le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSfFLYaqlpzypnKtLbPI_m1djJuIJRUskninneo5w1JXc8h36g/viewform?usp=sf_link)**
+{%endinfo%}
+
+<h2 id=script> Rédaction du script avec Google Apps Script </h2>
+
+Au final, la connexion entre les **réponses du Form** et ma feuille **de calculs Sheet**, était beaucoup plus facile que je ne le pensais. Là où on a besoin d'un **Power Automate** pour réaliser cette action avec la suite Microsoft, pour la suite Google, il suffit de créer un lien entre le formulaire et la feuille de calcul directement avec Form. La feuille dans laquelle se trouvent les réponses se met à jour automatiquement lors de chaque réponse envoyée.
+
+### Construction du code
+
+On pourrait découper mon code Apps Script en **3 parties** :
+
+- [fonction principale](#main)
+- [fonction d'envoi de mail](#sendEmail)
+- [fonction annexes test](#tests)
+
+<h4 id=main> Fonction principale </h4>
+
+Le plan du code de ma fonction **main** est le suivant :
+
+- on collecte les **données de réponse** de l'utilisateur 
+- on **adapte les données** en fonction des critères que j'ai énoncés plus haut
+- on définit des **paramètres de la page de BDD**
+- on boucle sur **toutes les lignes de la BDD** en ajoutant dans un array toutes les lignes qui remplissent l'objectif recherché par l'utilisateur
+- on regarde pour chaque ligne trouvée si elle **correspond bien** avec la *catégorie de population* de l'utilisateur, ses *allergies* et ses *antécédents*, sinon, on les enlève.
+- on **trie** ensuite tous les médicaments en fonction du **nombre d'objectifs qu'ils remplissent** et on ne garde que celui qui ne remplit qu'un objectif
+
+{%faire%}
+Si un complément remplit beaucoup d'objectifs, ça signifie que son effet est moins ciblé. On recherche donc le complément avec **l'effet le plus ciblé**, et donc celui qui a le moins d'objectifs.
+{%endfaire%}
+
+- on appelle la fonction **d'envoi de mail**
+
+<h4 id=sendEmail> Fonction d'envoi de mail </h4>
+
+Après avoir lu plusieurs articles sur les triggers dans Apps Script et notamment [celui là](https://spreadsheet.dev/triggers-in-google-sheets) conseillé par Ossama, j'ai découvert que ce dont j'avais besoin, c'était d'utiliser un **Spreadsheet trigger** qui permettait de *lancer une fonction à chaque fois qu'une feuille était modifiée*.
+
+Pour ce qui est ensuite d'écrire le code qui permettait d'envoyer le mail avec les données adaptées, je me suis d'abord penchée sur les MON que j'avais vus qui traitaient de ce sujet. Dont notamment celui de Thomas Pont, qui correspondant le plus à ce que je voulais faire. En parallèle, je suis tombée sur cette vidéo [Automate emails with Google Forms and Google Apps Script](https://www.youtube.com/watch?v=8VXSXQ-RMI0). Une vidéo incroyable, qui correspondait parfaitement à mon besoin. J'ai donc basé ma méthode sur la démarche que suivait cette vidéo, pour des questions de simplicité:
+
+- on définit d'abord les variables qui vont contenir les données de l'utilisateur récupérées : **prénom** (pour personnaliser le mail) et **e-mail** (pour envoyer le message). 
+- on vient créer un template pour construire le code **html**
+
+```javascript
+var htmlTemplate = HtmlService.createTemplateFromFile('email');
+```
+
+A partir de cette ligne, on appelle le fichier **email.html** créé qui contient le corps du message
+{% details "email.html" %}
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <p>Bonjour &agrave; toi <?= prenomUtilisateur?>, </p>
+    <p>Apparement, tu aurais besoin d&apos;un compl&eacute;ment alimentaire pour le/la <strong><?= objectifUtilisateur?></strong>. </p>
+    <p>Ne t&apos;inqui&egrave;tes pas, j&apos;ai ce qu&apos;il te faut !&nbsp;</p>
+    <p>D&apos;apr&egrave;s tout ce que tu m&apos;as renseign&eacute;, je pense que ce qui te convient le mieux c&apos;est ce compl&eacute;ment alimentaire r&eacute;pertori&eacute; et v&eacute;rifi&eacute; :</p>
+    <ol>
+      <li><strong>Nom</strong> : <?= nomMedicament ?> </li>
+      <li><strong>Marque</strong> : <?= marque ?> </li>
+      <li><strong>forme pharmaceutique</strong>: <?= forme ?> </li>
+      <li><strong>Dose journali&egrave;re</strong> : <?= dose ?> </li>
+      <li><strong>Mode d&apos;emploi </strong>: <?= emploi ?> </li>
+      <li><strong>Composition du compl&eacute;ment</strong> : <?= composition ?> </li>
+      <li><strong>Objectif(s) du m&eacute;dicament&nbsp;</strong>: <?= totalObjectifs ?> </li>
+    </ol>
+    <p><span style='font-size:15px;font-family:"Segoe UI Emoji",sans-serif;'>⚠️&nbsp;</span><span style="color: rgb(226, 80, 65);"><strong>ATTENTION</strong></span> <span style='font-size:15px;font-family:"Segoe UI Emoji",sans-serif;'>⚠️</span></p>
+    <p><span style="color: rgb(226, 80, 65);">D&apos;apr&egrave;s les recommandations du m&eacute;dicament : <strong> <?= attention ?> </strong> </span></p>
+  </body>
+</html>
+```
+{% enddetails %}
+
+- on définit toutes les **variables** qui sont appelées dans le code html
+- on **évalue** le modèle HTML *(ie on remplace les variables et expressions dans le modèle par leurs valeurs correspondantes)* et on renvoie le résultat
+
+```javascript
+var htmlForEmail = htmlTemplate.evaluate().getContent();
+```
+
+- on envoie le mail au **destinataire**, en renseignant **l'objet du mail**
+
+```javascript
+GmailApp.sendEmail(
+    emailRecipient,
+    'My Google Health Assistant: Ton résultat de sélection de complément alimentaire personnalisé',
+    "This email contains html",
+    {htmlBody: htmlForEmail}
+  );
+```
+
+<h4 id=tests> Fonctions annexes tests </h4>
+
+Ces fonctions regroupent des tests qui devaient être réalisés à plusieurs reprises. On y retrouve notamment :
+
+- une fonction permettant de vérifier si un un array **contient un élément**. *Fonction déjà utilisée au cours du sprint 1*.
+- une fonction qui **teste si une chaine de caractère est présente dans une cellule**
+- 
+{% details "fonction testPresence" %}
+```javascript
+function testPresence(valeurCellule, chaineRecherche) {
+  // Vérifie si la chaîne de caractères est présente dans la valeur de la cellule
+  if (valeurCellule.indexOf(chaineRecherche) !== -1) {
+    return true; // La cellule contient la chaîne de caractères
+  } else {
+    return false; // La cellule ne contient pas la chaîne de caractères
+  }
+}
+```
+{% enddetails %}
+
+- une fonction qui permet de **transformer les valeurs d'une cellule, séparées par une virgule, en éléments d'un array**
+
+{% details "getArray" %}
+```javascript
+function getArray(array, cell) {
+  //on regarde s'il y a plusieurs items sélectionnés, en comptant le nombre virgules
+  //(recherche toutes les apparitions du motif /,/ (ie virgules) de manière "globale" et les ajoute dans un array )
+  // par défaut, si ne trouve rien, renvoie un tableau vide 
+  var nbVirgules = (cell.getValue().match(/,/g) || []).length;
+  if (nbVirgules > 0) {
+    // Séparer les valeurs en utilisant la virgule comme délimiteur
+    array = cell.getValue().split(',');
+  } else {
+    // pas de virgules, on ajoute la valeur au tableau
+    array.push(cell.getValue());
+  }
+  var arraySansEspace = array.map(function(element) {
+  return element.trim(); // utilisation de trim() pour enlever les espaces avant et après la chaîne
+  });
+  return arraySansEspace;
+}
+```
+{% enddetails %}
+
+- une fonction qui permet de **comparer toutes les valeurs d'un tableau avec une valeur**. Si la valeur se trouve dans ce tableau, elle est retirée, avec la méthode **splice**.
+
+{% details "removeNonValid" %}
+```javascript
+function removeNonValid (value,array,item){
+  for (let i=0; i<array.length; i++ ){
+      if(testPresence(value.toLowerCase(),array[i].toLowerCase())){
+        array.splice(item,1);
+      }
+    } 
+}
+```
+{% enddetails %}
+
+---
+
+{%info%}
+Vous pourrez trouver le code complet de mon projet en accédant à l'Apps Script de ce [document sheet](https://docs.google.com/spreadsheets/d/1gZ_XYiGxzoCT6srdWcrt3L770RTBbOQ9KWiwqvOf6Cw/edit?usp=sharing).
+{%endinfo%}
+
+<h2 id=final> Résultat final</h2>
+
+Je m'appelle Raphaël. Je suis en 3/2 et je passe mes concours le mois prochain. Alors je me dit qu'un petit complément alimentaire pour booster ma **mémoire** ne serait pas de refus. 
+Il faut faire attention parce que je suis **végétarien**, et allergique à **l'arachide** et aux **crustacés**. Et également, sinon c'est pas drôle, j'ai quelques **problèmes de foie** et **problèmes cardiaques**... 
+Je fais le test pour savoir quel complément alimentaire je peux prendre :
+
+<img src=mail1.png>
+
+Ah zut, c'est vrai que j'oubliais que je suis sous anti-coagulants. Je refais le test : 
+
+<img src=mail2.png>
+
+*En espérant que Raphaël puisse réussir ses concours avec ça !*
+
+<h2 id=retex> Retour sur le sprint 2 et retour d'expérience</h2>
+
+Si on reprend le backlog du sprint 2 que je m'étais fixé :
+
+|Intitulé|Temps estimé|Temps réalisé|
+|---|---|---|
+|- Définition du backlog pour le mini projet imaginé|15 mins|**10 mins**|
+|- Recherches sur les connexions Apps Script avec les autres applications Google *(Form,Gmail)* |30 mins|**15 mins**|
+|- Recherche et récupération des ressources utiles sur les déclencheurs|30 mins|**15 mins**|
+|- Mise en forme des données récupérées |2h|**2h**|
+|- Mise au point du contenu du questionnaire et création du Form|45 mins|**1h30**|
+|- Codage du script de récupération des données du Form|45 mins|**5 mins**|
+|- Codage du script de gestion de données du Sheet|3h|**3h**|
+|- Codage du script de gestion de l'envoi des mail|45 mins|**30 mins**|
+|- Réalisations de divers tests et correction du code|1h30|**2h**|
+
+Au final, on remarque que les recherches de ressources ont été beaucoup plus rapides que ce que j'avais prévu. Egalement, comme expliqué plus tôt, le lien **Sheet-Form** s'est fait vraiment simplement. C'est au niveau de la rédaction du formulaire, et des tests à faire à chaque fois, que j'ai passé plus de temps que ce que j'avais planifié.
+
+AU niveau du backlog produit :
+
+|Intitulé|Complexité|Valeur métier(MoSCoW)|Réalisé|
+|---|---|---|---|
+|Permettre aux utilisateurs de remplir un formulaire en spécifiant leur prénom, adresse mail, type de population, l'objectif de santé, les allergies/intolérances alimentaires éventuelles, les antécédents|3|Must|✅|
+|Pouvoir choisir plusieurs allergies|1|Must|✅|
+|Pouvoir rentrer à la main ses allergies|1|Must|✅|
+|Pouvoir choisir plusieurs régimes|3|Won't|❌|
+|Pouvoir choisir plusieurs objectifs dans une demande|5|Won't|❌|
+|Configurer l'application pour enregistrer les réponses du formulaire dans une feuille de calcul Google Sheets|1|Must|✅|
+|Développer un algorithme pour recommander des compléments alimentaires personnalisés en fonction des réponses du formulaire et des données sur les compléments alimentaires disponibles|5|Must|✅|
+|Intégrer une base de données de compléments alimentaires contenant des informations sur les ingrédients, les avantages pour la santé, les posologies recommandées, et les mises en garde|1|Must|✅|
+|Envoyer un e-mail personnalisé à l'utilisateur avec une proposition de complément alimentaire adapté à son besoin contenant le nom du complément, sa marque, sa posologie, ses ingrédients, ses mises en gardes |3|Must|✅|
+
+Seules 2 fonctionnalités n'ont pas pû être implémentées. Mais elles ne sont pas primordiales : 
+
+- Si l'utilisateur veut un complément alimentaire qui remplisse un autre objectif, il lui suffit de remplir le formulaire à nouveau
+- Si l'utilisateur est *végétarien* et *sans gluten*, il lui suffit sélectionner *végétarien* en régime et de cocher *gluten* dans les intolérances  
+
+Et pour finir, un petit comparatif des avantages que j'ai notés pour **Google** (Sheet et Apps Script) et **Microsoft** (Excel et VBA):
+
+|Avantages **Google**|Avantages **Microsoft**|
+|---|---|
+|- Gratuit <br> - Sheet : Certaines fonctionnalités simplifiées et plus facile à utiliser <br> - Apps Script : utilisation plus intuitive et simplifiée <br> - Apps Script : tests de code plus faciles à réaliser (avec l'utilisation du Logger.log(), notamment) <br> - Apps Script : mise en couleur du code qui permet visualisation plus rapide <br> - Pas besoin d'installation locale + Apps Script exécute les codes même dans le cloud | - Excel : permet de traiter beaucoup plus de quantités de données et de manière plus poussé <br> - VBA : plus grande quantités de fonctionnalités disponibles + plus de capacités de programmation <br> - large base d'utilisateurs et de ressources <br> - exécution des macros en local permet le respect de certaines contraintes de sécurité au sein des entreprises | 
