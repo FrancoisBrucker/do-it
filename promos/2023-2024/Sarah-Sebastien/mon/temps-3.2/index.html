@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON traitera du concept de Cookies, comment il a vu le jour, son utilisation par les entreprises, et et les réglementations qui vont avec
+                Ce MON traitera du concept de Cookies, comment il a vu le jour, son utilisation par les entreprises, et les réglementations qui vont avec.
 
         </p>
 
@@ -152,15 +152,489 @@
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#definition">Qu'est ce qu'un cookie ?</a></li>
 <li><a href="#histoire">D'où ça vient?</a></li>
-<li><a href="#fonctionnement">Le fonctionnement d'un cookie</a></li>
+<li><a href="#s%C3%A9curit%C3%A9">Est-ce qu'un cookie c'est sécurisé?</a></li>
 <li><a href="#publicit%C3%A9">L'utilisation des cookies dans le ciblage publicitaire</a></li>
 <li><a href="#loi">Que dit la loi?</a></li>
-<li><a href="#conseils">Conseils pour s'en prévenir</a></li>
-<li><a href="#sprint2">Une parenthèse sur le &quot;Data Collection&quot;</a></li>
 </ul>
 <h2 id="introduction"> Introduction</h2>
 <p>Après avoir lu le MON de Kawtar sur le <a href="../../../Kawtar-Bahri/MON/temps-2.1">Data Collection</a> et le POK de Victor sur <a href="../../../Victor-Ory/POK/CNIL">l'AIPD</a>, que j'ai trouvés très intéressants, j'ai voulu explorer un peu plus ce sujet. Et je me suis dit : <em>&quot;C'est bien beau tout ça, mais finalement, c'est quoi un cookie ? Et à quoi ça sert ?&quot;</em>.<br>
 Voilà donc comment ce MON a vu le jour.</p>
+<h2 id="definition"> Qu'est ce qu'un cookie?</h2>
+<h3>Tentative de définition la plus simpe possible</h3>
+<p>Un cookie Internet, que l'on appelle aussi <strong>témoin</strong> (ou même <strong>témoin de connexion</strong>) est un fichier texte qui est échangé entre <strong>le client</strong> et <strong>le serveur</strong> entre chaque appel : ils sont générés par le serveur d'un site internet ou d'une application, puis sont déposés sur le disque dur de l'ordinateur.</p>
+<blockquote>
+<p>Dans son usage le plus basique, un cookie permet <strong>d'identifier</strong> un internaute qui visite un site web et de le <strong>reconnaître</strong> lorsqu'il le visitera à nouveau.</p>
+</blockquote>
+<p>Le <strong>serveur</strong> va <strong>stocker les informations de la session</strong> de l'utilisateur dans une BDD et ne donner qu'à l'utilisateur un <strong>identifiant de session</strong> <em>(ou cookie)</em> (qui est unique et aléatoire) qui est stocké dans le disque dur de l'utilisateur. Dès lors que la session se termine, le cookie devient <em>obsolète</em>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>On compare ça au fait de poser son vêtement au vestiaire et de recevoir un ticket avec un numéro pour le retrouver lorsque l'on revient.</p>
+</div></div>
+<p>Techniquement parlant, les cookies sont envoyés à l'aide d'en-têtes http <em>(protocole qui assure que le navigateur et le serveur peuvent se comprendre)</em>  dans les messages échangés entre le navigateur, souvent appelé <strong>client</strong>, et le <strong>serveur.</strong></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Le protocole http est <strong>sans état</strong>, ie : il ne conserve ni ne stocke les sessions des clients. Donc, le client est responsable du stockage des informations de session pour les demandes ultérieures. Ainsi, lorsque le client fait une requête, il doit inclure ses informations de session au serveur pour l'authentification ou la validation.</p>
+</div></div>
+<img width="350" src="def_cookies.png">
+<p><a href="https://blog.larapulse.com/web/protect-cookies">Source</a></p>
+<h3>Les attributs d'un cookie</h3>
+<img width="400" src="info_cookie.png">
+<ul>
+<li><strong>ID de session</strong> : un <strong>long</strong> string <strong>aléatoire</strong> utilisé for la gestion d'une session, qui sert à identifier de manière <strong>unique</strong> un client qui essaie d'accéder à un serveur</li>
+<li><strong>date d'expiratiion</strong> : plus ou moins longue
+<ul>
+<li><em>réseaux sociaux</em> comme Facebook : sessions avec des durées de vie très longues <em>(pas beaucoup besoin de se connecter)</em></li>
+<li><em>site d'une banque</em> : sessions avec des durées de vie très courtes, pour sécuriser les données <em>(5 minutes ou moins, sans interaction de l'utilisateur avec le serveur)</em></li>
+</ul>
+</li>
+<li><strong>domaine</strong> : qui spécifie le domaine dans lequel le cookie peut être utilisé</li>
+<li><strong>chemin</strong> : utilisé pour spécifier la ressource ou le chemin où ce cookie est valide (URL)</li>
+<li><strong>HttpOnly</strong> : protection définie dans les entêtes http : si <em>true</em>, permet d'éviter d'accéder au cookie via JavaScript du côté client</li>
+</ul>
+<h3>Pourquoi on se sert d'un cookie ?</h3>
+<p>Les cookies ont de multiples usages : ils peuvent servir à...</p>
+<ul>
+<li>la gestion de sessions utilisateur (<em>ex: mémoriser un identifiant client auprès d'un site marchand)</em></li>
+<li>le suivi de l'activité de l'utilisateur sur le site <em>(ex: le contenu courant d'un panier d'achat)</em></li>
+<li>les préférences d'un utilisateur <em>(ex: sa langue d’affichage)</em></li>
+<li>un identifiant permettant de tracer notre navigation à des fins statistiques ou publicitaires, etc.</li>
+<li>réseaux sociaux, notamment générés par leurs boutons de partage.</li>
+</ul>
+<p>Certains de ces usages sont strictement nécessaires aux fonctionnalités expressément demandées par l’utilisateur ou bien à l’établissement de la communication et donc <strong>impossibles à refuser</strong>. D’autres, qui ne correspondent pas à ces critères, nécessitent un consentement de l’utilisateur avant lecture ou écriture.<br>
+C'est pour ça qu'on distingue <strong>deux types de cookies</strong>.</p>
+<h3>Les cookies internes et tiers</h3>
+<ul>
+<li>Les <strong>cookies &quot;internes&quot;</strong> <em>(ou cookies first party)</em> proviennent du site visité, principalement sur son propre domaine. Ils peuvent être utilisés pour le fonctionnement du site ou pour collecter des données personnelles.</li>
+<li>Les <strong>cookies &quot;tiers&quot;</strong> <em>(ou cookies third party)</em> sont déposés sur des domaines différents, généralement par des entreprises tierces. Ils sont émis par des sites tiers présents sur la page affiché : ils servent à suivre les pages visitées sur le site pour collecter des informations sur l'utilisateur.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les cookies <strong>internes</strong> suivent l'utilisateur uniquement sur le site web d'origine, tandis que les cookies <strong>tiers</strong> peuvent le suivre sur tous les sites qui les utilisent.</p>
+</div></div>
+<h3>Vers la fin des cookies tiers ?</h3>
+<p>Les cookies tiers sont de plus en plus remis en question pour limiter le suivi publicitaire, et notamment par certains navigateurs. <em>(ex : Safari d'Apple en 2017 avec programme ITP (&quot;Intelligent Tracking Prevention&quot; ou &quot;prévention intelligente de pistage&quot;))</em></p>
+<p>La CNIL observe l'émergence plusieurs alternatives aux cookies tiers, voici celles que j'ai retenues <em>(et comprises)</em> :</p>
+<ul>
+<li><strong>Fingerprinting</strong> : Identifie de manière unique un utilisateur en utilisant les caractéristiques techniques de son navigateur pour créer une <em>empreinte numérique</em>, plutôt que de stocker des cookies.</li>
+<li><strong>Authentification unique (SSO)</strong> : Permet la connexion à plusieurs sites avec un seul compte utilisateur, ce qui peut être utilisé pour suivre l'utilisateur sur différents sites.</li>
+<li><strong>Ciblage publicitaire par cohorte</strong> : consiste à regrouper les utilisateurs en &quot;cohortes&quot;basées sur des caractéristiques similaires <em>(intérêts ou les comportements en ligne)</em>, plutôt que des individus spécifiques : permet de réduire le suivi individuel</li>
+<li></li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p>Ressources de la CNIL :<br>
+<a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/alternatives-aux-cookies-tiers">https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/alternatives-aux-cookies-tiers</a><br>
+<a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/definitions/glossaire">https://www.cnil.fr/fr/cookies-et-autres-traceurs/definitions/glossaire</a><br>
+Wikipédia :<br>
+<a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">https://fr.wikipedia.org/wiki/Cookie_(informatique)</a> <em>(permet d'avoir une vision globale des thèmes et notions du sujet)</em><br>
+Youtube :<br>
+<a href="https://www.youtube.com/watch?v=GhrvZ5nUWNg">https://www.youtube.com/watch?v=GhrvZ5nUWNg</a><br>
+<a href="https://www.youtube.com/watch?v=zHBpJA5XfDk">https://www.youtube.com/watch?v=zHBpJA5XfDk</a> <em>(très bonne explication des attributs d'un cookie)</em><br>
+<a href="https://www.youtube.com/watch?v=ZHvwVsoQx3o">https://www.youtube.com/watch?v=ZHvwVsoQx3o</a> <em>(quelques précisions sur les cookies, même si ce n'est pas le but principal de la vidéo)</em></p>
+</div></div>
+<h2 id="histoire"> D'où ça vient?</h2>
+<h3>Le premier cookie</h3>
+<p>Les cookies furent inventés au milieu des <strong>années 1990</strong> par les <strong>Américains</strong>. Leur but était améliorer <strong>l’expérience de l’utilisateur</strong>, pour permettre aux sites web de se souvenir du passage d'une personne. Les cookies ont ainsi joué un rôle important dans le développement d’internet tel qu’on le connaît aujourd’hui.</p>
+<p>À ses débuts, le <strong>World Wide Web</strong>, tel qu'imaginé par Tim Berners-Lee, était conçu comme <strong>&quot;sans état&quot;</strong>: chaque requête effectuée via le protocole HTTP était considérée comme <strong>indépendante</strong>. Pas de possibilité pour le serveur de lier deux requêtes successives provenant du même système et, donc de <strong>stocker des informations sur un utilisateur</strong>.  Cette fonctionnalité visait à renforcer les liens entre les personnes publiant sur le Web, en encourageant les sites à inclure des liens vers d'autres sites qui leur envoyaient des visiteurs.</p>
+<p>En 1994, deux ingénieurs <em>(John Giannandrea et Lou Montulli)</em> de chez Netscape créent le <strong>cookie</strong>. Ils travaillaient à ce moment là sur un projet de création de serveurs qui permettraient à leur clients d'avoir une solution de <strong>commerce en ligne</strong>. L'enjeu était de savoir : <em>comment garder la trace des différents éléments qu’un client qui navigue sur un site web ajoute à son panier ?</em><br>
+Le problème à l'époque, c'était que <strong>sans état</strong>, chaque navigation vers une nouvelle page provoque l’oubli de toutes les actions précédentes.</p>
+<p>Les deux ingénieurs proposent alors une solution permettant de stocker un <strong>état</strong> dans un nouvel objet qu'ils appellent <em><strong>Persistent Client State HTTP Cookies</strong></em> ou <strong>cookie</strong>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Des expérimentations testent le stockage de ces informations dans l’URL des pages, cependant elles ne sont pas très fructueuses.</p>
+</div></div>
+<h3>La naissance de nouveaux problèmes qui deviennent vite préoccupants</h3>
+<p>Netscape voulait à cette époque, <strong>être rapide</strong> : dès qu'il a été trouvé, le code a été introduit sur le web, <em>sans en informer les utilisateurs, sans introduire de notification à la dépose d’un cookie par un site web, et sans documentation.</em></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ce n'est qu'en 1996, que l’existence des cookies est pour la première fois révélée au grand public, dans un article du Financial Times.</p>
+</div></div>
+<p>Très vite, Netscape commence à être <strong>critiquée</strong>, pour un problème :<br>
+Si le serveur du site peut <em>lire et écrire</em> des cookies sur l'ordinateur de l'utilisateur, alors lorsqu'il intègre des ressources tierces telles que des images, des scripts, etc., le serveur fournissant ces ressources tierces peut également lire et écrire des cookies sur le terminal de l'utilisateur, en identifiant le contexte dans lequel ces ressources ont été appelées (par exemple, l'URL).<br>
+Alors, si un éditeur de contenu en ligne intègre une bannière publicitaire sur son site, le <strong>publicitaire</strong> peut <strong>accéder aux URL visitées par l'utilisateur</strong>. Si ce même publicitaire est également présent sur le site d'un autre éditeur, il peut identifier le même utilisateur sur ce site également.</p>
+<p><strong>En 1997</strong>, l’IAB (Interactive Advertising Bureau) annonce un chiffre d’affaire global du marché de la publicité en ligne de <strong>906,5 millions de dollars</strong>. Forte opisition qui amène à un constat sans appel : <em>il faut désactiver par défaut les cookies tiers</em>. En octobre <strong>2000</strong> la norme est publiée, RFC2965. Cette année-là, le chiffre d’affaire calculé par l’IAB est de <strong>8,2 milliards de dollars</strong> <em>(soit presque 1000% de croissance en trois ans)</em>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Remarque</p>
+</div><div class="pl-8 mr-8">
+<p>En 1996, la société <strong>DoubleClick</strong> a été créée pour exploiter ces cookies tiers à des fins publicitaires. Cette entreprise est un succès : elle est rachetée pour <strong>1,1 milliards de dollars</strong> en <strong>2005</strong> par des investisseurs et fera ensuite l’objet d’un  rachat en <strong>2007</strong> pour <strong>3,1 milliards de dollars</strong> par Google.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>DoubleClick</p>
+</div><div class="pl-8 mr-8">
+<p>Le cookie <strong>DoubleClick</strong> utilisé par Google pour sa régie publicitaire du même nom : il contrôle l’ensemble des campagnes publicitaires qui passent par cette régie. Il permet alors d’améliorer les performances de ces campagnes, et d’éviter que les publicités soient affichées plusieurs fois de suite.</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://linc.cnil.fr/une-petite-histoire-du-cookie">https://linc.cnil.fr/une-petite-histoire-du-cookie</a><br>
+<a href="https://www.numerama.com/tech/701436-au-fait-pourquoi-les-cookies-sappellent-ils-des-cookies.html">https://www.numerama.com/tech/701436-au-fait-pourquoi-les-cookies-sappellent-ils-des-cookies.html</a></p>
+</div></div>
+<h2 id="sécurité"> Est-ce qu'un cookie c'est sécurisé?</h2>
+<p>Les cookies contiennent des <strong>données personnelles</strong> de <em>notre compte</em>, de <em>notre ordinateur</em>. Les cookies sont donc des <strong>données sensibles</strong> d'un point de vue de la sécurité. <em>Particulièrement les <strong>cookies de session</strong> qui permettent de s'authentifier sur un site internet.</em><br>
+En théorie, un cookie associé à un site web <strong>ne peut pas être envoyé à un autre site web</strong>. Mais, un certain nombre de failles permettent de voler des cookies.</p>
+<p>En faisant mes recherches, je suis tombée sur <a href="https://www.youtube.com/watch?v=nHUswhLl-Bw">cette vidéo</a> de ce fort sympathique québécois. Il y explique, avec un exemple concret <strong>comment récupérer un ID de session</strong>. J'ai donc essayé de réappliquer sa vidéo, pour mieux comprendre les enjeux.</p>
+<h3>Récupérer un ID de session : tentative 1</h3>
+<p>Il faut se rendre sur cette adresse : <strong><a href="https://altoromutual.com">altoromutual.com</a></strong>, via <strong>Chrome</strong> (je n'ai pas réussi sur Mozilla).</p>
+<p>Une fois arrivé sur la page, on fait <em>clique droit &gt; inspecter</em>.<br>
+<img width="350" src="inspecter.png"></p>
+<p>On ouvre l'onglet <em>Application</em> pour accéder aux cookies, et on clique sur l'URL du site.<br>
+On voit alors qu'il n'y a qu'une ligne.</p>
+<img src="pasidentifier.png">
+<p>Il faut ensuite se connecter <em>(identifiant : admin, et mot de passe : admin)</em>. Si on regarde le chemin de la page, on voit qu'on arrive sur la page :</p>
+<pre><code>https://altoromutual.com/bank/main.jsp
+</code></pre>
+<p>On voit bien que cette page est une page <strong>réservée aux utilisateurs</strong>, où est écrit <em>&quot;Hello Admin User&quot;</em>.</p>
+<p>Si on se penche maintenant sur les cookies du site, on voit alors apparaître le cookie de connexion qui vient d'être envoyé par le serveur, comme on s'est connecté.</p>
+<img src="identifier.png">
+<p>Maintenant, si on ouvre un onglet de <em>Navigation privée</em>, et qu'on revient sur <a href="https://altoromutual.com">cette page</a> et qu'on essaie de se connecter à cette page :</p>
+<pre><code>https://altoromutual.com/bank/main.jsp
+</code></pre>
+<p>On voit que c'est impossible, car je n'ai pas les droits pour accéder à cette page, comme je ne suis pas identifiée. <strong>MAIS</strong>, si je recopie les cookies de session que j'avais obtenus au début en me connectant, dans les cookies de la page privée, et que j'essaie à nouveau d'accéder à la page administrateur, la magie opère ...</p>
+<img src="page_administrateur.png">
+<h3>Récupérer un ID de session : tentative 2</h3>
+<p>En continuant mes recherches, je suis tombée sur la méthode du <strong>Cross site scripting</strong>(ou XXS).En fait, cette technique part d'une question simple : <em>et si on a accès au Java Script d'un site, qu'est ce qu'on pourrait faire ?</em> XSS consiste donc à injecter un code JavaScript malveillant, dans une autre page web. Ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs. Il permet notamment facilement, d'extraire des informations et <strong>des cookies</strong>.</p>
+<p>Il existe normalement une politique qui empêche un site Web de lire ou d'écrire des données sur un autre site, c'est la <strong>SOP</strong> (same origin policy). Elle vérifie <strong>3 conditions</strong> dans l'origine du site web :</p>
+<ul>
+<li><strong>le protocole</strong></li>
+<li><strong>l'hôte</strong></li>
+<li><strong>le port</strong></li>
+<li></li>
+</ul>
+<p>Alors seulement si ces 3 paramètres sont <strong>identiques</strong> pour 2 origines <strong>différentes</strong>, le navigateur autorise la lecture ou l'écriture d'origines croisées.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Exemple :<br>
+http//pwnfunction.com<br>
+http//hackfunction.com<br>
+Le protocole est le même, mais l'hôte est différent : la navigateur refuse la lecture.</p>
+</div></div>
+<hr>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p>Par manque de temps, et parce que ça devenait un peu compliqué pour moi vu mon faible niveau en JavaScript et en web, j'ai seulement visionné les vidéos suivantes. Mais elles restent très intéressantes, et très accessibles pour un sujet pas si facile !<br>
+<a href="https://www.youtube.com/watch?v=ZHvwVsoQx3o">https://www.youtube.com/watch?v=ZHvwVsoQx3o</a><br>
+<a href="https://www.youtube.com/watch?v=UXtxfka2TuY">https://www.youtube.com/watch?v=UXtxfka2TuY</a><br>
+<a href="https://www.youtube.com/watch?v=EoaDgUgS6QA">https://www.youtube.com/watch?v=EoaDgUgS6QA</a></p>
+</div></div>
+<h2 id="publicité"> L'utilisation des cookies dans le ciblage publicitaire</h2>
+<h3>A quelle fin ?</h3>
+<p>On considère qu’un consommateur doit obtenir l’information qu’il désire en <strong>3 clics</strong> (ie <em>maximum 3 pages après la page d'accueil</em>) : c'est ce qu'on appelle la <strong>règle des trois clics</strong>. Même si ce n'est qu'une simple règle, elle reflète bien <strong>la frustration</strong> d'un internaute lorsqu’il a des difficultés à trouver l’information souhaitée.</p>
+<p>Les cookies, qu'on appelle <strong>cookies de pistage</strong>, permettent sont alors un outil de :</p>
+<ul>
+<li><strong>suivi et d’analyse</strong> du comportement des utilisateurs, en collectant leur données de navigation afin d’améliorer leur expérience et de créer un profil de consommation.</li>
+<li><strong>remarketing</strong> qui permet de suggérer plus tard à un internaute qui serait passé sur un site e-commerce des biens qui l’intéressaient</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://www.definitions-marketing.com/definition/regle-des-3-clics/">https://www.definitions-marketing.com/definition/regle-des-3-clics/</a></p>
+</div></div>
+<h3>Prendre conscience de ces cookies de pistage grâce au logiciel CookieViz</h3>
+<h4>Qu'est ce que c'est ?</h4>
+<p><strong>CookieViz</strong> est le premier logiciel à destination du grand public développé en interne par la <strong>CNIL</strong>. Il est disponible sur Windows, Linux et Mac OS. C'est un <strong>logiciel open source</strong> qui analyse les interactions entre notre ordinateur, notre navigateur et des sites et serveurs distants. Il permet de savoir à quels autres acteurs le site qu'on visite envoie des informations.</p>
+<p>Vous pouvez retrouver <a href="https://linc.cnil.fr/cookieviz-une-dataviz-en-temps-reel-du-tracking-de-votre-navigation">ici</a> le support de présentation de l'application avec les liens utiles pour télécharger le logiciel.</p>
+<h4>Utilisation du logiciel</h4>
+<p>J'ai voulu faire le test : j'ai navigué sur un grand nombre de sites en <strong>2 étapes</strong> pour voir l'influence des cookies et de mon consentement. Dans la première étape, <em>j'acceptais tous les cookies</em>, dans la 2e <em>je les refusais tous</em>.<br>
+Pour mon chemin de navigation, j'ai varié les plaisirs :</p>
+<ul>
+<li>je suis allée faire du shopping sur <strong>Asos</strong></li>
+<li>j'ai cherché un cadeau d'anniversaire pour ma soeur sur <strong>Amazon</strong></li>
+<li>j'ai regardé les dernières sorties de  livres sur la <strong>Fnac</strong></li>
+<li>j'ai regardé plusieurs vidéos <strong>Youtube</strong> parmi le top tendances</li>
+<li>j'ai cherché une nouvelle table de chevet sur <strong>leboncoin</strong></li>
+<li>je me suis mis à jour sur les actualités sur <strong>bbc</strong> et j'ai traduit une phrase que je n'avais pas comprise sur <strong>reverso</strong></li>
+</ul>
+<p>Au final j'ai navigué sur près de <strong>9 sites</strong>, en revenant sur <em>Google</em> entre chaque recherche, mais aucune des recherches que j'ai faites n'avait de lien avec la précédente.</p>
+<h3>Expérience 1 : on accepte tous les cookies</h3>
+<h4>Résultats au global</h4>
+<img width="350" src="diagramme_cookie_1.png">
+<p>Si on regarde les statistiques annoncées par le logiciel sur <strong>ma navigation</strong> :</p>
+<ul>
+<li>Sur les <strong>9 sites visités</strong>, <strong>76%</strong> d'entre eux ont déposé au moins un cookie.</li>
+<li>Ces cookies échangent potentiellement des informations avec <strong>28 domaines tiers</strong></li>
+</ul>
+<p>Si on se penche maintenant sur <strong>l'usage des cookies</strong>:<br>
+<img width="350" src="diagramme_usage_cookies_1.png"></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>La <strong>zone orange</strong> indique la couverture de tiers déclarés comme <em>explicitement publicitaires</em> dans des fichiers ads.tx ayant déposé des cookies parmi les sites visités.</li>
+<li>La <strong>zone violette</strong> indique la couverture des tiers ayant déposé des cookies dont la finalité <em>n’est pas explicitement indiqué comme publicitaire</em> dans des fichiers ads.txt.</li>
+</ul>
+</div></div>
+<p>On peut voir qu'il y a quand même beaucoup plus de violet que de orange dans ce diagramme...</p>
+<h4>Résultats au détails</h4>
+<ul>
+<li>la pieuvre avec le plus de tentacules c'est <strong>reverso</strong>. Et les tentacules mènent à des domaines tiers très ciblés : <em>casalemedia</em>, <em>adnxs</em>, <em>smartadserver</em>, tous des domaines publicitaires. On retrouve également une tentacule liée à Amazon par le biais du domaine <em>amazon-adsystem</em></li>
+<li>la seconde pieuvre avec le plus de tentacule c'est <strong>asos</strong>, étonnement ses tentacules mènent à de nombreux autres réseaux sociaux : on retrouve <em>facebook, instagram, snapchat, tiktok, pinterest</em> et d'autres.</li>
+</ul>
+<h3>Expérience 2: on refuse tous les cookies</h3>
+<h4>Résultats au global</h4>
+<img width="350" src="diagramme_cookie_2.png">
+<p>Si on regarde les statistiques annoncées par le logiciel sur <strong>ma navigation</strong> :</p>
+<ul>
+<li>Sur les <strong>9 sites visités</strong>, <strong>89%</strong> d'entre eux ont déposé au moins un cookie.</li>
+<li>Ces cookies échangent potentiellement des informations avec <strong>13 domaines tiers</strong></li>
+</ul>
+<p>Si on se penche maintenant sur <strong>l'usage des cookies</strong>:<br>
+<img width="350" src="diagramme_usage_cookies_2.png"></p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Remarques</p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>on passe de 76% à 86% de sites qui ont déposés des cookies en les refusant. <em>Un résultat qui me semble tout de même drôlement illogique. Même si cette information ne nous renseigne pas sur la réelle nature du cookie...</em></li>
+<li>si on regarde le diagramme d'usage de cookies, on remarque que la zone violette <strong>est beaucoup plus étendu quand on refuse les cookies</strong>. On en déduit donc, que les cookies tiers ont tendance à être moins explicites quand on refuse les cookies.</li>
+</ul>
+</div></div>
+<h4>Résultats au détails</h4>
+<ul>
+<li>on remarque que le pieuvre reverso a perdu beaucoup de ses tentacules, mais que certaines sont tenaces : notamment celle d'amazon adsystem, étonnamment.</li>
+<li>on remarque une deuxième pieuvre de google,<em>ce qui est cohérent avec le fait que j'accédé à chaque site depuis google.</em></li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Constat intriguant : sur le site de la <strong>fnac</strong> aucune bannière de consentement des cookies ne s'est affichée de toute ma navigation sur le site.</p>
+</div></div>
+<h2 id="loi"> Que dit la loi?</h2>
+<p>Les lois régissant l'utilisation des cookies varient selon les pays et les régions, mais en général, elles visent à protéger la vie privée des utilisateurs en ligne et à garantir qu'ils sont informés de manière transparente sur l'utilisation des cookies par les sites web qu'ils visitent.</p>
+<h3>Principes énoncés par le CNIL</h3>
+<ul>
+<li><strong>Consentement</strong>
+<ul>
+<li>Les sites web doivent obtenir le consentement des utilisateurs <strong>avant</strong> le dépôt ou la lecture des cookies, et il doit être <strong>re-demandé</strong> à chaque fois qu'il est nécessaire.</li>
+<li>Le consentement doit donc être <strong>libre, spécifique, éclairé, univoque</strong> et donné <strong>explicitement</strong></li>
+<li>Chaque acteur recueillant le consentement doit être en mesure de prouver qu'il l'a fait *( captures d'écran horodatées, audits réguliers, conservation des informations sur les outils utilisés)</li>
+<li><em>L'acceptation des conditions générales d'utilisation ne suffit pas pour recueillir le consentement</em></li>
+<li>la simple poursuite de la navigation sur un site ne peut plus être considérée comme une expression valide du consentement de l’internaute</li>
+</ul>
+</li>
+<li><strong>Transparence</strong>
+<ul>
+<li>Les utilisateurs doivent être <strong>informés</strong> la finalité des cookies utilisés, les données collectées et la manière dont elles sont utilisées, de manière <strong>claire, complète et rédigée en termes simples et compréhensibles.</strong></li>
+</ul>
+</li>
+<li><strong>Options de contrôle</strong>
+<ul>
+<li>L'utilisateur doit avoir un <strong>réel choix</strong> entre accepter ou refuser les cookies, sans subir de préjudice en cas de refus.</li>
+<li>l’utilisateur doit être en mesure de <strong>retirer</strong> son consentement, à tout moment, avec la <strong>même simplicité</strong> qu’il l’a accordé</li>
+</ul>
+</li>
+<li><strong>Données personnelles</strong>
+<ul>
+<li>Si les cookies collectent des données personnelles, les <strong>lois sur la protection des données personnelles</strong> peuvent également s'appliquer, ce qui signifie que les sites web doivent se conformer à des normes plus strictes en matière de collecte, de traitement et de protection de ces données.</li>
+</ul>
+</li>
+</ul>
+<p>En plus de ça, le CNIL a publié certaines <em>recommandations</em> à destinations des</p>
+<ul>
+<li>Limiter la durée de vie des traceurs à treize mois sans prolongation automatique.</li>
+<li>Conserver les données collectées pendant vingt-cinq mois maximum.</li>
+<li>Réexaminer régulièrement ces périodes pour les limiter au strict nécessaire.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><em>Trop de consentement, tue le consentement</em></p>
+</div><div class="pl-8 mr-8">
+<p>La multiplication de ces bannières, si elle a permis de rendre plus visible l’existence des traceurs, aboutirait, selon certains, à une <strong>fatigue du consentement</strong> qui signifierait, selon eux, que les internautes ne souhaitent pas que leur accord leur soit demandé.<br>
+Cependant, on remarque tout de même que <strong>70 % des personnes</strong> interrogées trouvent indispensable que les acteurs obtiennent leur accord avant qu’il soit possible de se servir de leurs données de navigation via des traceurs, même si cela prend un peu plus de temps dans la navigation. Signe supplémentaire de cette volonté de contrôle étroit de l’usage des traceurs, les personnes interrogées se prononcent massivement pour que les sites qu’elles fréquentent souvent leur redemandent un consentement à intervalles réguliers (77 % souhaitent ainsi qu’une nouvelle demande de consentement pour utiliser des traceurs ait lieu au moins tous les 3 mois).</p>
+</div></div>
+<h3>Exceptions des cookies</h3>
+<p>Traceurs sont cependant exemptés du recueil de consentement, exemple :</p>
+<ul>
+<li>traceurs destinés à <strong>l’authentification auprès d’un service</strong></li>
+<li>traceurs destinés à <strong>garder en mémoire le contenu d’un panier d’achat</strong> sur un site marchand</li>
+<li>traceurs visant à <strong>générer des statistiques de fréquentation</strong></li>
+<li>traceurs permettant aux sites payants de <strong>limiter l’accès gratuit</strong> à un échantillon de contenu demandé par les utilisateurs.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/que-dit-la-loi">https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/que-dit-la-loi</a><br>
+<a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/lignes-directrices-modificatives-et-recommandation">https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/lignes-directrices-modificatives-et-recommandation</a><br>
+<a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls/publicite-ciblee-en-ligne-quels-enjeux-pour-la-protection-des-donnees-personnelles">https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls/publicite-ciblee-en-ligne-quels-enjeux-pour-la-protection-des-donnees-personnelles</a><br>
+<a href="https://www.cnil.fr/fr/la-loi-informatique-et-libertes#article82">https://www.cnil.fr/fr/la-loi-informatique-et-libertes#article82</a></p>
+</div></div>
+<h3>Cookie Walls</h3>
+<p>De nombreux services en ligne sont gratuits aujourd'hui, mais pas sans conséquence : les données personnelles des utilisateurs (âge, emplacement géographique, intérêts et comportements d'achat) sont souvent collectées, <em>via cookies et d'autres outils de suivi</em>, et utilisées par les entreprises du web pour financer ses services, principalement via la publicité ciblée.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Cookie Walls</p>
+</div><div class="pl-8 mr-8">
+<p>L’expression « murs de traceurs » <em>(ou « cookie walls » en anglais)</em> désigne le fait de conditionner l’accès à un service à l’acceptation par l’internaute du dépôt de cookies sur son terminal (ordinateur, smartphone, ...).</p>
+</div></div>
+<p>En cas de refus de ces <em>cookies</em>, certains sites ont recourt à la proposition d’un choix alternatif <strong>l'internaute doit fournir une contrepartie</strong> (<em>pour permettre aux éditeurs de ces site de compenser la perte de revenus publicitaires liée à cette absence de traceurs par un autre mode de rémunération</em>)</p>
+<p><u><strong>Solution</strong></u> :<br>
+Dans la majorité des cas, la contrepartie est <strong>financière</strong>, on parle alors de <strong>paywall</strong> : <em>l’internaute qui refuse d’accepter les cookies est obligé de payer pour accéder au site</em>. Exemple : on retrouve souvent cela sur des sites de magazines en lignes, qui proposent de <em>s'abonner</em> en cas de non consentement</p>
+<p>Les <strong>Cookie Walls</strong> ne sont pas interdits par principe, mais leur légalité dépend de plusieurs critères. En l'absence d'une législation spécifique ou d'une position de la Cour de justice de l'Union européenne, c'est la CNIL qui a établi et publié ces critères :</p>
+<ul>
+<li><strong>Alternative juste</strong> : Les utilisateurs doivent avoir une vraie option pour accéder au site sans accepter les cookies.</li>
+<li><strong>Tarif raisonnable</strong> : Si le site propose une option payante pour éviter les cookies, le prix doit être juste et justifié.</li>
+<li><strong>Transparence sur les données</strong> : Si le site demande aux utilisateurs de créer un compte, il doit expliquer clairement pourquoi et limiter les données collectées.</li>
+<li><strong>Raisons des cookies</strong> : Le site doit dire clairement pourquoi les cookies sont nécessaires pour accéder au service. Seules les raisons importantes sont acceptables.</li>
+<li><strong>Refus des cookies</strong> : Normalement, si un utilisateur refuse les cookies, aucun ne devrait être utilisé. Mais dans quelques cas spéciaux, le site peut demander le consentement pour certaines fonctions spécifiques et nécessaires.</li>
+</ul>
+<p>Si certains sont intéressés par le droit, le site du CNIL est bien étoffé à ce sujet, vous pouvez aller sur <a href="https://www.cnil.fr/fr/les-procedures-de-sanction">cette page</a></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls">https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookie-walls</a><br>
+<a href="https://www.cnil.fr/fr/cookie-walls-la-cnil-publie-des-premiers-criteres-devaluation">https://www.cnil.fr/fr/cookie-walls-la-cnil-publie-des-premiers-criteres-devaluation</a></p>
+</div></div>
+<h3>Scandale liés aux cookies</h3>
+<h4>Facebook-Cambridge Analytica, en 2014</h4>
+<p>Ce scandale, souvent appelé la <strong>fuite de données Facebook-Cambridge Analytica</strong>, concerne les informations personnelles de <strong>87 millions de personnes</strong> sur Facebook, qu'une société britannique nommée Cambridge Analytica, a récupérées à partir de <strong>2014</strong>. Elle a ensuite utilisé ces informations pour influencer les campagnes politiques à grande échelle:</p>
+<ul>
+<li>lors des élections présidentielles aux États-Unis en 2016</li>
+<li>lors du référendum sur le Brexit au Royaume-Uni.</li>
+</ul>
+<p>Tout part d'un quiz de personnalité développé sur une application appelée &quot;thisisyourdigitallife&quot;, conçue en 2014 par Aleksandr Kogan, un chercheur en psychologie affilié à l'Université de Cambridge. Environ 270 000 personnes ont téléchargé cette application sur Facebook, ce qui a permis de partager, sans leur consentement explicite, leurs données personnelles, ainsi que celles de leurs amis, avec l'application. Tout cela, en raison de la manière dont Facebook autorisait le partage de données à l'époque.</p>
+<p><strong>Utilisation des données par Cambridge Analytica :</strong> Cambridge Analytica a acheté ces données à Kogan, affirmant qu'elles seraient utilisées à des fins de recherche académique. Cependant, il a été révélé que les données ont été utilisées pour développer des profils psychographiques détaillés des électeurs, qui ont ensuite été utilisés pour cibler des messages politiques personnalisés<br>
+Le scandale Facebook-Cambridge Analytica est une affaire qui a éclaté en 2018 et qui a suscité de vives préoccupations quant à la protection de la vie privée des utilisateurs et à la manipulation des données personnelles à des fins politiques:</p>
+<h4>Yahoo, en 2023</h4>
+<p>29 décembre 2023, la CNIL a sanctionné la société YAHOO EMEA LIMITED d’une amende de 10 millions d’euros pour ne pas avoir respecté le choix des internautes qui refusaient les cookies sur son site « <a href="http://Yahoo.com">Yahoo.com</a> » et ne pas avoir permis aux utilisateurs de sa messagerie « Yahoo! Mail » de librement retirer leur consentement aux cookies.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><u>Sources</u></p>
+</div><div class="pl-8 mr-8">
+<p><a href="https://www.lesechos.fr/tech-medias/hightech/scandale-de-cambridge-analytica-facebook-accepte-de-payer-725-millions-de-dollars-1891714">https://www.lesechos.fr/tech-medias/hightech/scandale-de-cambridge-analytica-facebook-accepte-de-payer-725-millions-de-dollars-1891714</a><br>
+<a href="https://fr.wikipedia.org/wiki/Scandale_Facebook-Cambridge_Analytica">https://fr.wikipedia.org/wiki/Scandale_Facebook-Cambridge_Analytica</a></p>
+</div></div>
+<h3>Conclusion</h3>
+<p>Comme on l'a vu, les cookies sont des fichiers <strong>installés</strong> sur nos ordinateurs, on peut donc facilement contrôler les <strong>cookies tiers</strong>, qui ne sont pas forcément nécessaires pour profiter des ressources disponibles sur Internet. Pour ce faire, on peut soit :</p>
+<ul>
+<li><strong>limiter l'utilisation des cookies</strong> : dans les paramètres de notre navigateur / en utilisant la navigation privée.</li>
+<li><strong>effacer les cookies</strong> déposés par les sites web sur notre appareil<br>
+<em>Pour le paramétrage des naviguateurs, la CNIL explique <a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/comment-se-proteger/maitriser-votre-navigateur">sur cette page</a>, toute la marche à suivre en fonction du naviguateur.</em></li>
+</ul>
+<h3>Horodateur</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mercredi 07/02</td>
+<td>45min</td>
+<td><em>Définition du plan et recherches de ressources adaptées</em></td>
+</tr>
+<tr>
+<td>Samedi 02/03</td>
+<td>1h30</td>
+<td><em>Visionnage de plusieurs vidéos youtube et lectures d'articles internet pour définir précisément et simplement les cookies</em></td>
+</tr>
+<tr>
+<td>Dimanche 03/03</td>
+<td>30min</td>
+<td><em>Recherches sur l'histoire des cookies</em></td>
+</tr>
+<tr>
+<td>Samedi 09/03</td>
+<td>2h30</td>
+<td><em>Découverte de CookieViz, installation, prise en main, réalisation d'une étude et analyse des résultats</em></td>
+</tr>
+<tr>
+<td>Dimanche 10/03</td>
+<td>1h30</td>
+<td><em>Recherche d'informations sur la loi concernant ce sujet, lecture des évolutions pénales, lectures de plusieurs articles sur des scandales passés, synthèses du résultat des recherches</em></td>
+</tr>
+<tr>
+<td>Lundi 11/03</td>
+<td>1h</td>
+<td><em>Réalisation de l’entraînement &quot;Récupérer un ID de session&quot;</em></td>
+</tr>
+<tr>
+<td>Samedi 16/03</td>
+<td>1h15</td>
+<td><em>Recherches sur le sujet du ciblage publicitaire, visionnage de vidéos, et synthèse</em></td>
+</tr>
+<tr>
+<td>Dimanche 17/03</td>
+<td>1h</td>
+<td><em>Recherche des conseils à appliquer lors d'une navigation sur internet, et synthèse des conseils les plus pertinents trouvés</em></td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
