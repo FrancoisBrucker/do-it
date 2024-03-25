@@ -144,7 +144,7 @@
 <li>Création du design de la page d'inscription (★☆☆☆ 1h)</li>
 <li>Commencer à faire les pages avec React Native (★☆☆☆ 4h)</li>
 </ul>
-<h2>Sommaire</h2>
+<h2>Sommaire sprint 1</h2>
 <ul>
 <li>
 <ol>
@@ -153,12 +153,12 @@
 </li>
 <li>
 <ol start="2">
-<li>Front des pages avec React Native</li>
+<li>Front de la page d'accueil en React Native</li>
 </ol>
 </li>
 <li>
 <ol start="3">
-<li>Backend</li>
+<li>Création de la base de données</li>
 </ol>
 </li>
 </ul>
@@ -187,7 +187,7 @@
 <div style="display:flex">
 <div><img src="principale.png" width="300" height="600"></div>
 </div>
-<h2>Frontend des pages en React Native</h2>
+<h2>Frontend de la page d'accueil en React Native</h2>
 <p>Pour le frontend des pages, il faut que l'on puisse naviguer entre chacune d'entre elles, je vais donc créer un component pour la page d'accueil, un component pour le pop-up de connexion et un component pour le pop-up de connexion.</p>
 <p>Voici le component pour la page d'accueil :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">
@@ -290,19 +290,87 @@
 <span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">></span>
 
 </code></pre>
+<h2>Création de la base de données</h2>
+<p>Cette étape est très rapide à réaliser, il faut créer une base de données qu'on appelle par exemple POK3 avec la commande suivante :</p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> POK3<span class="token punctuation">;</span>
+</code></pre>
+<p>Ensuite dans cette base de données on crée les tables dont on a besoin. Dans mon cas j'ai seulement besoin d'une table <em><strong>utilisateurs</strong></em> dans laquelle je vais mettre les informations de chaque utilisateur : prenom, nom, adresse mail et mot de passe. Pour faire cela :</p>
+<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> utilisateurs <span class="token punctuation">(</span>
+    id <span class="token keyword">INT</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+    prenom <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    nom <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    email <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token keyword">UNIQUE</span><span class="token punctuation">,</span>
+    mdp <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Les données seront ensuites ajoutées dans cette table.</p>
 <h2>Les étapes à réaliser pendant le Sprint 2</h2>
 <ul>
-<li>Finir le front des pages (★☆☆☆☆ 4h)</li>
+<li>Faire le frotend de la page des annonces (★☆☆☆☆ 4h)</li>
 <li>Faire le backend avec la logique de l'inscription (★★☆☆ 3h)</li>
 <li>Faire le backend avec la logique de connexion (★★☆☆ 3h)</li>
 </ul>
 <h2>Modification du frontend et création de la dernière page</h2>
 <p>Je devais lors de mon deuxième sprint finir la création des pages de l'application, j'en ai profité pour modifier légèrement celles que j'avais créé avant.</p>
+<p>Je devais ensuite créer la page sur laquelle figure les annonces, c'est aussi la page qui apparaîtra après que l'utilisateur se soit connecté. Voici à quoi je suis arriver :</p>
+<div style="display:flex">
+<div><img src="Page_Annonce.jpg" width="300" height="600"></div>
+</div>
+<p>Voici le code qui permet d'arriver à cette page:</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">Annonces</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>header<span class="token punctuation">}</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>Image 
+                    source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                    style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>titrePage<span class="token punctuation">}</span><span class="token operator">></span>Les Annonces<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+            <span class="token operator">&lt;</span>Barre<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Barre<span class="token operator">></span>
+
+            <span class="token operator">&lt;</span>TouchableOpacity style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>button<span class="token punctuation">}</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textButton<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">+</span>  Annonce<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>TouchableOpacity<span class="token operator">></span>
+
+            <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>annoncesContainer<span class="token punctuation">}</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>annonce<span class="token punctuation">}</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token operator">></span>Appartement libre <span class="token constant">R</span>éformés<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateText<span class="token punctuation">}</span><span class="token operator">></span>Octobre <span class="token number">2023</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresse<span class="token punctuation">}</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseText<span class="token punctuation">}</span><span class="token operator">></span><span class="token number">8</span> rue Lafayette <span class="token number">13001</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+
+                <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>annonce<span class="token punctuation">}</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token operator">></span>Donne table <span class="token number">4</span> personnes<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateText<span class="token punctuation">}</span><span class="token operator">></span>Mai 2O24<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresse<span class="token punctuation">}</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseText<span class="token punctuation">}</span><span class="token operator">></span><span class="token number">45</span> Allée <span class="token constant">L</span>éon Gambetta<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+            
+        <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Annonces<span class="token punctuation">;</span>
+</code></pre>
 <h2>Backend : inscription</h2>
 <p>En ce qui concerne le backend, j'ai décidé d'utiliser express car je l'ai déjà beaucoup utilisé pour le projet 3A et c'est un langage avec lequel je suis à l'aise. Cela me permettra de voir si le langage est adaptée au développement mobile.</p>
 <p>Voyons ainsi comment j'ai géré la logique d'inscription d'un utilisateur sur mon application.</p>
 <p>Dans le front, l'utilisateur est invité à rentrer son prénom, son nom, son email, son mot de passe et à confirmer son mot de passe pour s'inscrire. Les informations rentrer par l'utilisateur doivent être récupérées puis envoyer à la bonne table de données.</p>
-<p>D'abord, il faut se connecter à la base de données :</p>
+<p>D'abord, il faut se connecter à la base de données créée précédemment  :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> connection <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">user</span><span class="token operator">:</span> <span class="token string">'williamlalanne'</span><span class="token punctuation">,</span>
@@ -349,7 +417,8 @@ route<span class="token punctuation">.</span><span class="token function">post</
 <p>La requête sql que l'on va faire à la base de données est la suivante :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)'</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch :</p>
+<p>On insère dans la table <strong>utilisateurs</strong> des données pour chaque colonne.<br>
+Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token punctuation">{</span>
             prenom<span class="token punctuation">,</span>
             nom<span class="token punctuation">,</span>
@@ -376,6 +445,99 @@ route<span class="token punctuation">.</span><span class="token function">post</
     <span class="token punctuation">}</span>
 </code></pre>
 <p>formData correspond aux données qui seront entrés par l'utilisateur.</p>
+<h2>Backend : connexion</h2>
+<p>Pour la connexion la logique est plus simple. L'utilisateur est invité à entre son adresse mail et son mot de passe dans deux input puis à appuyer sur connexion. Lorsqu'il appuie sur le bouton, son adresse mail est comparée à celles se trouvant dans la base de données. Si elle y figure, il y a ensuite une comparaison entre le mot de passe entré par l'utilisateur et celui associé à l'adresse mail se trouvant dans la base de données. Si l'adresse mail n'existe pas un message d'erreur apparaît.</p>
+<p>Voici la route associée à la connexion :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">route<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/connexion'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> email<span class="token punctuation">,</span> mot_de_passe <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'SELECT * FROM utilisateurs WHERE email = ?'</span><span class="token punctuation">;</span>
+  
+  db<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sql<span class="token punctuation">,</span> <span class="token punctuation">[</span>email<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Erreur pour la connexion'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Erreur connexion'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+      <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>results<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">const</span> user <span class="token operator">=</span> results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              bcrypt<span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span>mot_de_passe<span class="token punctuation">,</span> user<span class="token punctuation">.</span>mot_de_passe<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">bcryptErr<span class="token punctuation">,</span> passwordMatch</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>bcryptErr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Erreur lors de la comparaison des mots de passe'</span><span class="token punctuation">,</span> bcryptErr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Erreur lors de la connexion'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                      <span class="token keyword">if</span> <span class="token punctuation">(</span>passwordMatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Email de l\'utilisateur:'</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span>email<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                          <span class="token keyword">const</span> token <span class="token operator">=</span> jwt<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">email</span><span class="token operator">:</span> user<span class="token punctuation">.</span>email <span class="token punctuation">}</span><span class="token punctuation">,</span> secret<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">expiresIn</span><span class="token operator">:</span> <span class="token string">'1d'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Token généré:'</span><span class="token punctuation">,</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                          res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> token <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span> 
+                      <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                          res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Mot de passe incorrect'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span>
+                  <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> 
+          <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Utilisateur non trouvé'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Pour gérer les résultats de la requete côté front :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">handleConnection</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token punctuation">{</span>
+            email<span class="token punctuation">,</span>
+            <span class="token literal-property property">mot_de_passe</span><span class="token operator">:</span> mdp<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://192.168.0.23:8080/api/connexion'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>formData<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> responseData <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>responseData<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">'Annonces'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Erreur lors de la connexion jjjjj: '</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Erreur lors de la requete: '</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Pour expliquer un peu le code, si la requête réussie, donc si response.ok, alors on change de page et au lieu d'être sur la page accueil, on passe sur la page Annonces.</p>
+<h2>Conclusion</h2>
+<p>Pour une première utilisation de React Native, j'ai trouvé que c'est un langage facile à prendre en main et très pratique, notamment le système de components qui peuvent être réutilisés. En revanche, pour observer le resultat et voir ce que donne l'application sur un téléphone, expo n'est pas une solution que je conseillerai. Il faut prendre son téléphone à chaque fois, être connecté sur la même wifi que son ordinateur, prendre le qrcode en photo... Cela fait perdre pas mal de temps.<br>
+En cas de bug, expo ne fournit pas assez d'informations pour comprendre d'où ça vient. J'aurais aimé avoir plus de temps pour continuer à développer l'application.</p>
+<h2>Horodatage</h2>
+<ul>
+<li>
+<p>Sprint 1 :<br>
+Création du design des pages sur figma : 4h<br>
+Création des pages avec React Native : 4h<br>
+Création de la base de données : 10min</p>
+</li>
+<li>
+<p>Sprint 2 :<br>
+Reprise du front et création de la page Annonces avec RN : 4h<br>
+Logique d'inscription avec Express : 3h30<br>
+Logique de connexion avec Express : 2h30</p>
+</li>
+</ul>
 
 
 </article>
