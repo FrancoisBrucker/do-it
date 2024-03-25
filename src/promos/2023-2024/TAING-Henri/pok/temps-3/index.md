@@ -24,16 +24,16 @@ Un cerveau et vaguement quelques connaissances en tech
 
 ## Table des matières
 
-- [Objectifs et backlog produit ](#objectifs-et-backlog-produit-)
-- [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement ](#ce-que-jai-prévu-au-1er-sprint-et-ce-qui-a-été-fait-finalement-)
-- [Sprint 1 Review ](#sprint-1-review-)
-- [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement ](#ce-que-jai-prévu-au-2ème-sprint-et-ce-qui-a-été-fait-finalement-)
-- [Sprint 2 Review ](#sprint-2-review-)
-- [Etude de cas](#etude-de-cas-)
-- [Conclusion](#conclusion-)
-- [Sources et horodateur ](#sources-et-horodateur-)
+- [Objectifs et backlog produit ](#section-1)
+- [Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement ](#section-2)
+- [Sprint 1 Review ](#section-3)
+- [Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement ](#section-4)
+- [Sprint 2 Review ](#section-5)
+- [Conclusion](#section-6)
+- [Cas pédagogique en cybersécurité - Les risques cyber d’un projet de digitalisation](#section-7)
+- [Sources et horodateur ](#section-1)
 
-## Objectifs et backlog produit
+## Objectifs et backlog produit <a id="section-1"></a>
 
 **Les objectifs**
 
@@ -62,7 +62,7 @@ Un cerveau et vaguement quelques connaissances en tech
 
 - <u>Documenter le POK</u> [] = 1 (1h)
 
-## Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement 
+## Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement <a id="section-2"></a>
 
 **Backlog Sprint 1**
 On prendra comme user-stories à faire :
@@ -81,12 +81,12 @@ On prendra comme user-stories à faire :
   - Choix du scénario et sa formalisation/présentation [X] = 2 (2h)
   + Extraits des interviews [X] = 2 (2h)
 
-## Sprint 1 Review 
+## Sprint 1 Review <a id="section-3"></a>
  
 Ayant suivi le MOOC de l'ANSSI, j'avais une idée de la qualité de la documentation qu'elle pouvait produire, mais à nouveau, j'ai été bluffé. J'aurais voulu passer plus de temps sur EBIOS, une méthode de management de risques, mais il faudra passer pour cette fois. J'ai pris en note ce dont j'aurais besoin pour le sprint 2. De même, j'aurais voulu passer plus de temps sur mes notes (ce que je ferais finalement plus tard), car j'ai redécouvert des passages que j'ai envie d'approfondir. 
 J'ai pu définir la problématique de l'étude de cas qui sera le management des risques dans le cadre d'un projet de renforcement IT. 
 
-## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement 
+## Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a>
 
 **Backlog Sprint 2**
 On prendra comme user-stories à faire :
@@ -100,31 +100,30 @@ On prendra comme user-stories à faire :
 
 - <u>Documenter le POK</u> [X] = 1 (1h -> 2h)
 
-
-## Sprint 2 Review 
+## Sprint 2 Review <a id="section-5"></a>
 
 Au cours de la rédaction de l'étude de cas, je me suis rendu compte de la quantité de choses intéressantes que je voulais partager et du peu de temps que j'avais. Car, finalement, une dizaine d'heures, c'est très peu pour arriver à compacter, densifier et fluidifier la connaissance. 
 
-## Conclusion
+## Conclusion <a id="section-6"></a>
 
 En conclusion, je suis un peu déçu du résultat. J'aurais voulu traiter plus en profondeur quelques points comme les différents types de contrôles d'accès ou encore la partie réseaux. De plus, l'étude de cas aurait pu être plus polie en terme de chiffres, car en voulant de m'éloigner de la réalité, les graphes sont devenus un poil confus.
 Enfin, j'aurais aimé pouvoir le tester et me relire encore quelques fois de plus pour travailler sur la cohérence et la pédagogie du contenu.
 
-## Cas pédagogique en cybersécurité - Les risques cyber d’un projet de digitalisation
+## Cas pédagogique en cybersécurité - Les risques cyber d’un projet de digitalisation <a id="section-7"></a>
 
 Ce cas est fictif et s’appuie sur une situation réelle ayant été anonymisée, scénarisée et modifiée pour en faciliter l’exploitation pédagogique et respecter la confidentialité.
 
 Il a été grandement inspiré par l’étude de cas MSF Log animé par Laetitia PIET, professeure en sciences sociales, ma mission à CGI Business Consulting, les guides de l’ANSSI, la formation CC de (ISC)², du cours de cybersécurité donné par Guillaume SEIGNEURET, RSSI à 360Learning et les échanges que j’ai eus avec Wavestone Brussels.
 
-### Table des matières
+### Sommaire
 
-- [Les Promeneurs de Tracteurs](#les-promeneurs-de-tracteurs-)
-- [Une gestion de risques cyber pour un outil digital](#une-gestion-de-risques-cyber-pour-un-outil-digital-)
-  - [Origine du projet](#origine-du-projet-)
-  - [Extraits des interviews](#extraits-des-interviews-)
-  - [Documents existants](#documents-existants-)
-- [Votre approche en tant que consultant en cybersécurité](#votre-approche-en-tant-que-consultant-en-cybersécurité-)
-- [Annexes](#annexes-)
+- [Les Promeneurs de Tracteurs](#section-8)
+- [Une gestion de risques cyber pour un outil digital](#section-9)
+  - [Origine du projet](#section-10)
+  - [Extraits des interviews](#section-11)
+  - [Documents existants](#section-12)
+- [Votre approche en tant que consultant en cybersécurité](#section-13)
+- [Annexes](#section-14)
 
 ### Les Promeneurs de Tracteurs
 
@@ -201,15 +200,55 @@ Bien que votre manageuse soit excellente opérationnellement, deux autres missio
 
 Le développement de l’outil avance rapidement et il faut vite préparer un plan pour le sécuriser.
 
-Q1. Pour mieux comprendre l’outil, faites un schéma du système d’information de l’outil et en déduire les biens clés à sécuriser.
-Q2. Identifier les risques potentiels et les évaluer et les hiérarchiser. 
-Q3. En déduire une matrice de risques.
-Q4. Dresser un tableau des potentiels sources de risques.
-Q5. Imaginer un scénario d’attaque pour la source de risque la plus susceptible de poser problème.
-Q6. Proposer des mesures pour traiter le risque autour de l’outil.
+**Q1.** Pour mieux comprendre l’outil, faites un schéma du système d’information de l’outil et en déduire les biens clés à sécuriser.
+**Q2.** Identifier les risques potentiels, les évaluer et les hiérarchiser. 
+**Q3.** En déduire une matrice de risques.
+**Q4.** Dresser un tableau des potentiels sources de risques.
+**Q5.** Imaginer un scénario d’attaque pour la source de risque la plus susceptible de poser problème.
+**Q6.** Proposer des mesures pour traiter le risque autour de l’outil.
 
 ### Annexes
 
+#### Annexe 1 - Extrait de la synthèse des interviews avec la directrice de production et de la directrice des SI sur les process que couvrira l’outil
+
+En résumé, l’outil s’adresse à quatre parties prenantes :
+- les clients qui auront accès à l’outil via une plateforme web,
+- les employés effectuant les maintenances via une application mobile quand il est en déplacement,
+- les manageurs via une API qui relie l’ERP et l’application.
+De plus, les employés pourront consulter l’application sur les ordinateurs du bureau.
+
+L’outil sert à suivre les machines durant leurs ventes, leurs locations, leurs maintenances.
+
+Les clients pourront par exemple consulter l’état de la machine qu’ils ont loué ou acheté.
+Les employés “maintenance” utiliseront l’application pour suivre les services qui doivent être rendus chez un client et un historique des services déjà rendues. Et, ils auront accès aux détails de la machine qu’ils doivent prendre en main. 
+Les managers pourront suivre le travail des employés concernés sur leurs ordinateurs.
+
+
+#### Annexe 2 - Vos notes sur la formation de cybersécurité (CC de (ISC)²) que vous avez suivie
+
+<img src = "note1.PNG">
+<img src = "note2.PNG">
+<img src = "note3.PNG">
+
+#### Annexe 3 - Exemple d'application de la méthode de gestion des risques EBIOS pour qualifier une source de risques
+
+<img src = "ebios.PNG">
+
+#### Annexe 4 - Top 10 vulnérabilités de l’OWASP (Open Web Application Security Project - organisation internationale à but non lucratif qui se consacre à la sécurité des applications web) et quelques explications à propos d’elles
+
+1. **Contrôle d'Accès défaillant**, les restrictions d'accès aux données ou aux fonctionnalités ne sont pas correctement appliquées, exposant ainsi les données sensibles à des individus non autorisés
+2. Échec des mécanismes de **chiffrement** ou leur mauvaise implémentation
+3. **Injection**, l’application permet à des données non fiables d'être interprétées comme des commandes ou des requêtes, ce qui peut entraîner l'exécution de code malveillant
+4. **Défauts de conception** rendant difficile la mise en œuvre de mesures de sécurité
+5. Appareils ou infrastructures **mal configurés**, laissant ainsi des failles ouvertes exploitables
+6. **Composants Vulnérables et Obsolètes**
+7. **Mécanismes d'Identification et d'Authentification mal implémentés ou contournés**
+8. **Échecs de l'Intégrité Logicielle et des Données**, des hypothèses incorrectes sont faites concernant l'intégrité des mises à jour logicielles, des données critiques ou des pipelines CI/CD, ce qui peut entraîner des altérations ou des compromissions des données
+9. **Échecs de la Surveillance de la Sécurité et des Logs (enregistrements créés à chaque action)**
+10. **Fausse Requête Côté Serveur**
+
+On peut aussi rajouter à ces vulnérabilités techniques l'ingénierie sociale, qui rassemble toutes les pratiques passant par une erreur humaine, arnaque au président, phishing, etc. 
+Parce qu'il ne faut pas oublier que derrière chaque écran, il y a un être humain, du moins pour l'instant. 
 
 ## Sources et horodateur <a id="section-7"></a>
 
