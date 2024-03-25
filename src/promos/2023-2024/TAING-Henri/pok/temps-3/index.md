@@ -147,31 +147,31 @@ Pour ça, elle fait appel à vous, cabinet de conseil connu pour son sérieux et
 
 **Extrait de l’interview réalisée par votre manageuse avec la Directrice Générale, Angeline Walker (DG)**
 
-M : Quel est selon vous le métier de Tractors Walkers ?
-DG : C’est simple. On produit des machines. On les vend. On les livre. On les entretient.
-M : Quels sont vos enjeux stratégiques de cette année ? 
-DG : Nous avons deux objectifs. Le premier, changer notre façon de penser la production. Le deuxième, créer un outil sécurisé pour suivre et optimiser nos processus.
-M : Sur ces deux aspects, quels sont les défis que vous rencontrez ? 
-DG : Sur la production, réorganiser la chaîne et l’optimiser. Pour l’outil, le sécuriser.
-M : Avez-vous déjà un plan pour ça ?
-DG : Une démarche de gestion des risques a été commencée. Vous y aurez accès en même temps qu’à notre organigramme simplifié. Nous attendons de vous à ce que vous puissiez l’utiliser pour nous éclairer sur la suite. 
-M : Que pensez-vous de votre politique de sécurité actuelle ? Avez-vous des problèmes pour l’implémenter ? 
-DG : Il y a du travail à faire effectivement en termes de responsabilité et en termes de prise de conscience autour du sujet de la cybersécurité. Les campagnes de phishing ne sont pas toujours suffisantes. Il faut dire que nous avons du retard.
+**M :** Quel est selon vous le métier de Tractors Walkers ?
+**DG :** C’est simple. On produit des machines. On les vend. On les livre. On les entretient.
+**M :** Quels sont vos enjeux stratégiques de cette année ? 
+**DG :** Nous avons deux objectifs. Le premier, changer notre façon de penser la production. Le deuxième, créer un outil sécurisé pour suivre et optimiser nos processus.
+**M :** Sur ces deux aspects, quels sont les défis que vous rencontrez ? 
+**DG :** Sur la production, réorganiser la chaîne et l’optimiser. Pour l’outil, le sécuriser.
+**M :** Avez-vous déjà un plan pour ça ?
+**DG :** Une démarche de gestion des risques a été commencée. Vous y aurez accès en même temps qu’à notre organigramme simplifié. Nous attendons de vous à ce que vous puissiez l’utiliser pour nous éclairer sur la suite. 
+**M :** Que pensez-vous de votre politique de sécurité actuelle ? Avez-vous des problèmes pour l’implémenter ? 
+**DG :** Il y a du travail à faire effectivement en termes de responsabilité et en termes de prise de conscience autour du sujet de la cybersécurité. Les campagnes de phishing ne sont pas toujours suffisantes. Il faut dire que nous avons du retard.
 
 **Extrait de l’interview réalisée par votre manageuse avec la Responsable de la Sécurité des Systèmes d’Information (RSSI)**
 
-M : Quel est votre travail ? 
-RSSI : C’est une question très large. Je surveille la définition et la mise en œuvre des politiques de sécurité de l'information. Je suis en quelque sorte le chef d’orchestre de la cybersécurité dans l’entreprise. Sauf que je n’ai pas d’orchestre. Donc, je mets aussi la main à la pâte.
-M : C’est-à-dire ? 
-RSSI : Le budget qu’on nous attribue est ridicule. Il a fallu que la directrice générale insiste pour que le comité exécutif et le directeur des finances comprennent que la sécurité est un vrai enjeu. J’ai enfin pu recruter un cinquième ingénieur en sécurité informatique pour m’épauler. 
-M : Vous êtes donc six en tout pour toute l’entreprise ? 
-RSSI : C’est ça, on forme un petit SOC (Security Operations Center) et un petit CERT (Computer Emergency Response Team) et un petit CSIRT (Computer Security Incident Response Team), tout en fait. Six personnes pour une entreprise de plus de 3000 personnes. Et je ne parle pas même pas du parc informatique à maintenir. On a vu mieux comme conditions de travail.
-M : Pour implémenter la politique de sécurité informatique, je suppose que... 
-RSSI : Un enfer. On arrive à peine à maintenir les services en vie. Mais, j’ai espoir que votre arrivée annonce que la direction va commencer à prendre le sujet au sérieux et que j’aurai plus de monde prochainement dans l’équipe, car nous avons du pain sur la planche. 
-M : Qu’avez-vous en tête ? 
-RSSI : Au-delà de la sécurisation du nouvel outil développé, on voudrait organiser plus d’exercices de sensibilisation. J’ai entendu dire que vous avez interviewé la directrice des ventes et le directeur des finances avant de finir par le directeur de la production. Ils vous ont parlé de l’outil n’est-ce pas ?
-M : Ils nous ont partagé les processus importants qui existeraient dans l’outil. 
-RSSI : Parfait, je vous partagerai ce que nous avons commencé à faire. Je dois vous laisser. J’ai mon équipe qui m’attend. 
+**M :** Quel est votre travail ? 
+**RSSI :** C’est une question très large. Je surveille la définition et la mise en œuvre des politiques de sécurité de l'information. Je suis en quelque sorte le chef d’orchestre de la cybersécurité dans l’entreprise. Sauf que je n’ai pas d’orchestre. Donc, je mets aussi la main à la pâte.
+**M :** C’est-à-dire ? 
+**RSSI :** Le budget qu’on nous attribue est ridicule. Il a fallu que la directrice générale insiste pour que le comité exécutif et le directeur des finances comprennent que la sécurité est un vrai enjeu. J’ai enfin pu recruter un cinquième ingénieur en sécurité informatique pour m’épauler. 
+**M :** Vous êtes donc six en tout pour toute l’entreprise ? 
+**RSSI :** C’est ça, on forme un petit SOC (Security Operations Center) et un petit CERT (Computer Emergency Response Team) et un petit CSIRT (Computer Security Incident Response Team), tout en fait. Six personnes pour une entreprise de plus de 3000 personnes. Et je ne parle pas même pas du parc informatique à maintenir. On a vu mieux comme conditions de travail.
+**M :** Pour implémenter la politique de sécurité informatique, je suppose que... 
+**RSSI :** Un enfer. On arrive à peine à maintenir les services en vie. Mais, j’ai espoir que votre arrivée annonce que la direction va commencer à prendre le sujet au sérieux et que j’aurai plus de monde prochainement dans l’équipe, car nous avons du pain sur la planche. 
+**M :** Qu’avez-vous en tête ? 
+**RSSI :** Au-delà de la sécurisation du nouvel outil développé, on voudrait organiser plus d’exercices de sensibilisation. J’ai entendu dire que vous avez interviewé la directrice des ventes et le directeur des finances avant de finir par le directeur de la production. Ils vous ont parlé de l’outil n’est-ce pas ?
+**M :** Ils nous ont partagé les processus importants qui existeraient dans l’outil. 
+**RSSI :** Parfait, je vous partagerai ce que nous avons commencé à faire. Je dois vous laisser. J’ai mon équipe qui m’attend. 
 
 #### Documents existants
 
@@ -186,9 +186,8 @@ Les documents existants liés à la sécurité sont :
   - la conception et la mise en œuvre de la sécurité  
   - la gestion de la sécurité 
   - évolution de la politique de sécurité 
-- la liste des actifs de l’entreprises (applications, outils, infrastructures, process, serveurs, matériel, personnes, réseaux, fournisseurs)
-- un organigramme simplifié, 
-- un début de RACI que votre manageuse a oublié de vous partager. 
+- la liste des actifs de l’entreprises (applications, outils, infrastructures, process, serveurs, matériel, personnes, réseaux, fournisseurs) qui sont séparés en Non-Critiques et en Critiques à partir des critères CIA ou CID en français, 
+- un organigramme simplifié.
 
 <img src = "fig2.PNG"> 
 
@@ -202,7 +201,7 @@ Le développement de l’outil avance rapidement et il faut vite préparer un pl
 
 **Q1.** Pour mieux comprendre l’outil, faites un schéma du système d’information de l’outil et en déduire les biens clés à sécuriser.
 **Q2.** Identifier les risques potentiels, les évaluer et les hiérarchiser. 
-**Q3.** En déduire une matrice de risques.
+**Q3.** En déduire une matrice de risques avec deux axes pertinents.
 **Q4.** Dresser un tableau des potentiels sources de risques.
 **Q5.** Imaginer un scénario d’attaque pour la source de risque la plus susceptible de poser problème.
 **Q6.** Proposer des mesures pour traiter le risque autour de l’outil.
@@ -220,7 +219,7 @@ De plus, les employés pourront consulter l’application sur les ordinateurs du
 L’outil sert à suivre les machines durant leurs ventes, leurs locations, leurs maintenances.
 
 Les clients pourront par exemple consulter l’état de la machine qu’ils ont loué ou acheté.
-Les employés “maintenance” utiliseront l’application pour suivre les services qui doivent être rendus chez un client et un historique des services déjà rendues. Et, ils auront accès aux détails de la machine qu’ils doivent prendre en main. 
+Les employés “maintenance” utiliseront l’application pour suivre les services qui doivent être rendus chez un client et un historique des services déjà rendues. Et, ils auront accès aux détails de la machine qu’ils doivent prendre en main. Ils pourront aussi utiliser l'application pour vérifier l'identité du client grâce à un QR Code.
 Les managers pourront suivre le travail des employés concernés sur leurs ordinateurs.
 
 
@@ -247,8 +246,18 @@ Les managers pourront suivre le travail des employés concernés sur leurs ordin
 9. **Échecs de la Surveillance de la Sécurité et des Logs (enregistrements créés à chaque action)**
 10. **Fausse Requête Côté Serveur**
 
-On peut aussi rajouter à ces vulnérabilités techniques l'ingénierie sociale, qui rassemble toutes les pratiques passant par une erreur humaine, arnaque au président, phishing, etc. 
+On peut aussi rajouter à ces vulnérabilités techniques **l'ingénierie sociale**, qui rassemble toutes les pratiques passant par une erreur humaine, arnaque au président, phishing, etc. 
 Parce qu'il ne faut pas oublier que derrière chaque écran, il y a un être humain, du moins pour l'instant. 
+
+#### Annexe 5 - Conversation que vous avez eu avec le RSSI
+
+**RSSI :** Une façon d'évaluer l'impact d'un risque ? Vous avez les critères CIA ou CID en français. Ici, on donne une note de 1 à 5 pour chaque critère et on fait la moyenne des 3 notes. En fonction de ça, on place l'actif soit dans la catégorie Non-Critiques, soit dans la catégorie Critiques.
+Dans mon ancienne entreprise, on utilisait trois autres critères, Réputation pour l'impact sur l'image de l'entreprise, Humain pour le risque humain qui existait, Technique pour les dégâts qui pourraient être causés sur les machines. Et on avait 3 catégories. C'était plus simple pour nos SLAs. 
+**Vous :** Si j'ai bien compris, un Service Level Agreement est l'accord que vous signez avec les fournisseurs qui garantit un certain niveau de services ? 
+**RSSI :** Exactement, et plus la catégorie est importante, plus le SLA sera important à négocier, car ça coûte cher. On appelait nos 3 types de SLA, Silver, Gold, Platinium pour Non-Critiques, Critiques et Super-Critiques. 
+**Vous :** Et comment avez-vous fait votre matrice de risques ?
+**RSSI :** Classique. Impact en abcisse et Probabilité en ordonnée, puis plus qu'à placer les vulnérabilités existantes de nos process. J'ai entendu parler d'autres façons de calculer le risque la semaine dernière d'ailleurs, si tu veux, je peux te partager ça demain.
+
 
 ## Sources et horodateur <a id="section-7"></a>
 
