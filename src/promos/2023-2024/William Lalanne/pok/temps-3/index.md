@@ -204,5 +204,101 @@ Voici le code associé :
 ## Les étapes à réaliser pendant le Sprint 2 
 
 - Finir le front des pages (★☆☆☆☆ 4h)
-- Faire le backend avec la logique de connexion (★★☆☆ 6h )
+- Faire le backend avec la logique de l'inscription (★★☆☆ 3h)
+- Faire le backend avec la logique de connexion (★★☆☆ 3h)
 
+
+## Modification du frontend et création de la dernière page
+Je devais lors de mon deuxième sprint finir la création des pages de l'application, j'en ai profité pour modifier légèrement celles que j'avais créé avant. 
+## Backend : inscription
+
+En ce qui concerne le backend, j'ai décidé d'utiliser express car je l'ai déjà beaucoup utilisé pour le projet 3A et c'est un langage avec lequel je suis à l'aise. Cela me permettra de voir si le langage est adaptée au développement mobile. 
+
+Voyons ainsi comment j'ai géré la logique d'inscription d'un utilisateur sur mon application. 
+
+Dans le front, l'utilisateur est invité à rentrer son prénom, son nom, son email, son mot de passe et à confirmer son mot de passe pour s'inscrire. Les informations rentrer par l'utilisateur doivent être récupérées puis envoyer à la bonne table de données. 
+
+D'abord, il faut se connecter à la base de données : 
+
+```js
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'williamlalanne',
+  password: 'motdepasse',
+  database: 'POK3'
+});
+
+connection.connect((err) => {
+    if (err) {
+        console.log("Erreur lors de la connextion à la bdd", err);
+    }
+    else {
+        console.log("Connexion à la bdd réussie");
+    }
+});
+
+module.exports = connection;
+```
+
+Dès qu'on voudra faire une requête à la base de données il faudra utiliser ***connection*** pour pouvoir s'y connecter. 
+
+Pour gérer la logique d'inscription, il faut créer une route : 
+
+```js
+// Endpoint pour l'inscription
+route.post('/inscription', (req, res) => {
+  const saltRounds = 10;
+  const { prenom, nom, email, mot_de_passe} = req.body;
+
+    bcrypt.hash(mot_de_passe, saltRounds, (err, hash) => {
+        if (err) {
+            console.error('Erreur lors du hachage du mot de passe :', err);  
+        } 
+        else {
+            const sql = 'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)';
+            db.query(sql, [prenom, nom, email, hash,], (err, results) => {
+                if (err) {
+                    console.log('Erreur inscription', err);
+                    return res.status(500).send('Erreur inscription');
+                }
+                console.log('Inscription succès');
+                return res.status(200).json(results);
+            });
+        }
+    })
+});
+```
+
+La requête sql que l'on va faire à la base de données est la suivante : 
+```js
+const sql = 'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)';
+```
+Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch : 
+
+```js
+const formData = {
+            prenom,
+            nom,
+            email,
+            mot_de_passe: mdp,
+        };
+    
+    try {
+        const response = await fetch('http://192.168.1.45:8080/api/inscription', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        if (response.ok) {
+            const responseData = await response.json();
+            console.log(responseData.message);
+            props.function();
+        }
+        else {
+            console.error('Erreur lors de la création du profil', response.statusText)
+        }
+    }
+```
+formData correspond aux données qui seront entrés par l'utilisateur.
