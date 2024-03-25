@@ -33,10 +33,10 @@ Pour le premier sprint j'aimerais réaliser les étapes suivantes :
 - Création du design de la page d'inscription (★☆☆☆ 1h)
 - Commencer à faire les pages avec React Native (★☆☆☆ 4h)
 
-## Sommaire
+## Sommaire sprint 1
 - 1. Création du design des premières pages sur Figma
-- 2. Front des pages avec React Native
-- 3. Backend
+- 2. Front de la page d'accueil en React Native
+- 3. Création de la base de données
 
 
 ## Création du design 
@@ -74,7 +74,7 @@ Enfin, une fois que l'utilisateur est connecté, il a accès à la page principa
 </div>
 
 
-## Frontend des pages en React Native
+## Frontend de la page d'accueil en React Native
 
 Pour le frontend des pages, il faut que l'on puisse naviguer entre chacune d'entre elles, je vais donc créer un component pour la page d'accueil, un component pour le pop-up de connexion et un component pour le pop-up de connexion. 
 
@@ -199,17 +199,98 @@ Voici le code associé :
 
 ```
 
+## Création de la base de données
+
+Cette étape est très rapide à réaliser, il faut créer une base de données qu'on appelle par exemple POK3 avec la commande suivante : 
+```sql
+CREATE DATABASE POK3;
+```
+
+Ensuite dans cette base de données on crée les tables dont on a besoin. Dans mon cas j'ai seulement besoin d'une table ***utilisateurs*** dans laquelle je vais mettre les informations de chaque utilisateur : prenom, nom, adresse mail et mot de passe. Pour faire cela : 
+
+```sql
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prenom VARCHAR(50),
+    nom VARCHAR(50),
+    email VARCHAR(100) UNIQUE,
+    mdp VARCHAR(255)
+);
+```
+Les données seront ensuites ajoutées dans cette table.
+
 
 
 ## Les étapes à réaliser pendant le Sprint 2 
 
-- Finir le front des pages (★☆☆☆☆ 4h)
+- Faire le frotend de la page des annonces (★☆☆☆☆ 4h)
 - Faire le backend avec la logique de l'inscription (★★☆☆ 3h)
 - Faire le backend avec la logique de connexion (★★☆☆ 3h)
 
 
 ## Modification du frontend et création de la dernière page
 Je devais lors de mon deuxième sprint finir la création des pages de l'application, j'en ai profité pour modifier légèrement celles que j'avais créé avant. 
+
+Je devais ensuite créer la page sur laquelle figure les annonces, c'est aussi la page qui apparaîtra après que l'utilisateur se soit connecté. Voici à quoi je suis arriver : 
+
+<div style="display:flex">
+<div><img src="Page_Annonce.jpg" width="300" height="600"></div>
+</div>
+
+Voici le code qui permet d'arriver à cette page: 
+
+```js
+const Annonces = () => {
+
+    return (
+        <View>
+            <View style={styles.header}>
+                <Image 
+                    source={require('../logo.png')}
+                    style={styles.logo}
+                />
+            </View>
+            <Text style={styles.titrePage}>Les Annonces</Text>
+            <Barre></Barre>
+
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.textButton}>+  Annonce</Text>
+            </TouchableOpacity>
+
+            <View style={styles.annoncesContainer}>
+                <View style={styles.annonce}>
+                    <Text style={styles.titre}>Appartement libre Réformés</Text>
+                    <View style={styles.date}>
+                        <Image style={styles.dateImage} source={require('./date.png')}></Image>
+                        <Text style={styles.dateText}>Octobre 2023</Text>
+                    </View>
+                    <View style={styles.adresse}>
+                        <Image style={styles.adresseImage} source={require('./adresse.png')}></Image>
+                        <Text style={styles.adresseText}>8 rue Lafayette 13001</Text>
+                    </View>
+                </View>
+
+                <View style={styles.annonce}>
+                    <Text style={styles.titre}>Donne table 4 personnes</Text>
+                    <View style={styles.date}>
+                        <Image style={styles.dateImage} source={require('./date.png')}></Image>
+                        <Text style={styles.dateText}>Mai 2O24</Text>
+                    </View>
+                    <View style={styles.adresse}>
+                        <Image style={styles.adresseImage} source={require('./adresse.png')}></Image>
+                        <Text style={styles.adresseText}>45 Allée Léon Gambetta</Text>
+                    </View>
+                </View>
+            </View>
+            
+        </View>
+    )
+};
+
+export default Annonces;
+```
+
+
 ## Backend : inscription
 
 En ce qui concerne le backend, j'ai décidé d'utiliser express car je l'ai déjà beaucoup utilisé pour le projet 3A et c'est un langage avec lequel je suis à l'aise. Cela me permettra de voir si le langage est adaptée au développement mobile. 
@@ -218,7 +299,7 @@ Voyons ainsi comment j'ai géré la logique d'inscription d'un utilisateur sur m
 
 Dans le front, l'utilisateur est invité à rentrer son prénom, son nom, son email, son mot de passe et à confirmer son mot de passe pour s'inscrire. Les informations rentrer par l'utilisateur doivent être récupérées puis envoyer à la bonne table de données. 
 
-D'abord, il faut se connecter à la base de données : 
+D'abord, il faut se connecter à la base de données créée précédemment  : 
 
 ```js
 const connection = mysql.createConnection({
@@ -273,6 +354,7 @@ La requête sql que l'on va faire à la base de données est la suivante :
 ```js
 const sql = 'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)';
 ```
+On insère dans la table **utilisateurs** des données pour chaque colonne. 
 Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch : 
 
 ```js
@@ -302,3 +384,108 @@ const formData = {
     }
 ```
 formData correspond aux données qui seront entrés par l'utilisateur.
+
+
+## Backend : connexion
+
+Pour la connexion la logique est plus simple. L'utilisateur est invité à entre son adresse mail et son mot de passe dans deux input puis à appuyer sur connexion. Lorsqu'il appuie sur le bouton, son adresse mail est comparée à celles se trouvant dans la base de données. Si elle y figure, il y a ensuite une comparaison entre le mot de passe entré par l'utilisateur et celui associé à l'adresse mail se trouvant dans la base de données. Si l'adresse mail n'existe pas un message d'erreur apparaît. 
+
+Voici la route associée à la connexion : 
+
+```js
+route.post('/connexion', (req, res) => {
+
+  const { email, mot_de_passe } = req.body;
+  console.log(req.body);
+
+  const sql = 'SELECT * FROM utilisateurs WHERE email = ?';
+  
+  db.query(sql, [email], (err, results) => {
+      if (err) {
+          console.log('Erreur pour la connexion', err);
+          res.status(500).json({ message: 'Erreur connexion' });
+      } 
+      else {
+          if (results.length > 0) {
+              const user = results[0];
+              console.log(user);
+              bcrypt.compare(mot_de_passe, user.mot_de_passe, (bcryptErr, passwordMatch) => {
+                  if (bcryptErr) {
+                      console.error('Erreur lors de la comparaison des mots de passe', bcryptErr);
+                      res.status(401).json({ message: 'Erreur lors de la connexion' });
+                  } else {
+                      if (passwordMatch) {
+                          console.log('Email de l\'utilisateur:', user.email);
+                          const token = jwt.sign({ email: user.email }, secret, { expiresIn: '1d' });
+                          console.log('Token généré:', token);
+                          res.status(200).json({ token });
+                      } 
+                      else {
+                          res.status(401).json({ message: 'Mot de passe incorrect' });
+                      }
+                  }
+              });
+          } 
+          else {
+              res.status(404).json({ message: 'Utilisateur non trouvé' });
+          }
+      }
+  });
+
+});
+```
+
+Pour gérer les résultats de la requete côté front : 
+
+```js
+const handleConnection = async () => {
+
+        const formData = {
+            email,
+            mot_de_passe: mdp,
+        };
+
+        try {
+            const response = await fetch('http://192.168.0.23:8080/api/connexion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                const responseData = await response.json();
+                console.log(responseData.message);
+                navigation.navigate('Annonces');
+            }
+            else {
+                console.error('Erreur lors de la connexion jjjjj: ', response.statusText);
+            }
+        }
+        catch (error) {
+            console.error('Erreur lors de la requete: ', error);
+        }
+    };
+```
+
+Pour expliquer un peu le code, si la requête réussie, donc si response.ok, alors on change de page et au lieu d'être sur la page accueil, on passe sur la page Annonces. 
+
+
+## Conclusion 
+
+Pour une première utilisation de React Native, j'ai trouvé que c'est un langage facile à prendre en main et très pratique, notamment le système de components qui peuvent être réutilisés. En revanche, pour observer le resultat et voir ce que donne l'application sur un téléphone, expo n'est pas une solution que je conseillerai. Il faut prendre son téléphone à chaque fois, être connecté sur la même wifi que son ordinateur, prendre le qrcode en photo... Cela fait perdre pas mal de temps. 
+En cas de bug, expo ne fournit pas assez d'informations pour comprendre d'où ça vient. J'aurais aimé avoir plus de temps pour continuer à développer l'application. 
+
+## Horodatage  
+
+- Sprint 1 :
+Création du design des pages sur figma : 4h
+Création des pages avec React Native : 4h
+Création de la base de données : 10min
+
+- Sprint 2 : 
+Reprise du front et création de la page Annonces avec RN : 4h
+Logique d'inscription avec Express : 3h30
+Logique de connexion avec Express : 2h30
+
+
