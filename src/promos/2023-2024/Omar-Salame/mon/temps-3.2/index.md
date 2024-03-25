@@ -16,10 +16,8 @@ résumé: Je souhaite explorer les différents modèles de données ainsi que le
 ## Table des matières
 
 1. [Introduction](#section-1)
-2. [Transformateurs](#section-2)
-3. [Pré-entraînement des LLM](#section-3)
-4. [Conclusion](#section-4)
-5. [Conclusion](#section-5)
+2. [Modélisation des données](#section-2)
+3. [Pipeline de données](#section-3)
 
 ## Introduction <a id="section-1"></a>
 
@@ -50,10 +48,11 @@ Le schéma de la base de données vous permet de valider les données entrantes 
 {% enddetails %}
 
 
-## Pipeline de données: ETL <a id="section-3"></a>
+## Pipeline de données <a id="section-3"></a>
+### ETL 
 L'un des pipelines les plus utilisés dans les entreprise est l'ETL(Extract, Load, Transform). ETL permet de collecter des données de différentes sources, de les transformer selon les besoins spécifiques de l'entreprise ou du projet, et enfin de les charger dans une destination où elles peuvent être analysées et exploitées.
 
-{% faire %}
+{% details "ETL vs ELT" %}
 
 | Caractéristique                   | ETL                                                           | ELT                                                             |
 |-----------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------|
@@ -67,4 +66,43 @@ L'un des pipelines les plus utilisés dans les entreprise est l'ETL(Extract, Loa
 | **Taille des données**            | Convient aux petits ensembles de données nécessitant des transformations complexes | Adapté aux grandes quantités de données structurées et non structurées |
 | **Temps d'attente**               | Chargement plus long, analyse rapide                           | Chargement rapide, analyse plus lente                          |
 
-{% endfaire %}
+{% enddetails %}
+
+### Stockage des données:
+
+| Data warehouse                                                     | Data lake                                                           |
+|--------------------------------------------------------------------|---------------------------------------------------------------------|
+| Données déjà traitées et stockées dans un système relationnel      | Données brutes et non traitées jusqu'à leur analyse; peut aussi contenir une copie complète de la base de données relationnelle ou OLTP |
+| La finalité des données est déjà assignée et elles sont en cours d'utilisation | La finalité des données n'est pas encore déterminée                 |
+| Les modifications peuvent être compliquées et demander beaucoup de travail | Systèmes hautement accessibles et faciles à mettre à jour           |
+
+### Qualité des données:
+
+Vérifier la qualité des données implique de s'assurer que les données sont fiables avant d'atteindre leur destination. Il y a sept éléments qu'il faut prendre en compte :
+
+- **Complétude** : Les données contiennent-elles tous les composants ou mesures souhaités ?
+
+- **Consistance** : Les données sont-elles compatibles et en accord dans tous les systèmes ?
+
+- **Conformité** : Les données correspondent-elles au format requis de la destination ?
+
+- **Précision** : Les données correspondent-elles à l'entité réelle mesurée ou décrite ?
+
+- **Redondance** : Seules les données nécessaires sont-elles déplacées, transformées et stockées pour utilisation ?
+
+- **Actualité** : Les données sont-elles actuelles ?
+
+- **Intégrité** : Les données sont-elles précises, complètes, cohérentes et fiables ? 
+
+{% info %}
+**Problèmes courants**
+Il existe également quelques problèmes courants contre lesquels on peut se protéger au sein du système pour garantir que les données entrantes ne causent pas d'erreurs:
+
+- Vérifier le mappage des données : Les données provenant de la source correspondent-elles aux données dans la base de données cible ?
+
+- Vérifier les incohérences : Existe-t-il des incohérences entre le système source et le système cible ?
+
+- Vérifier les données inexactes : Les données sont-elles correctes et reflètent-elles l'entité réelle mesurée ?
+
+- Vérifier les données en double : Ces données existent-elles déjà dans le système cible ?
+{% endinfo %}

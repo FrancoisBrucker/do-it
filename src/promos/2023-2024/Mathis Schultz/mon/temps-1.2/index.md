@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Front Web 2"
+title: "MON 1.2 - Front Web 2"
 authors:
   - Schultz Mathis
 

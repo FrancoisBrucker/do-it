@@ -12,7 +12,7 @@ tags:
 
 résumé: " Suite du MON de Soline sur le management de l'innovation"
 ---
-L'objectif de ce MON est de faire suite au [MON de Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/) sur le management de l'innovation. Pour cela, je vais revenir plus en détail sur certaines notions faire des études de cas représentatives.
+L'objectif de ce MON est de faire suite au [MON de Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/) sur le management de l'innovation. Pour cela, je vais revenir plus en détail sur certaines notions et faire des études de cas représentatives.
 
 ## Sommaire
 
@@ -23,12 +23,20 @@ L'objectif de ce MON est de faire suite au [MON de Soline](https://francoisbruck
    3. Le crowdsourcing
 3. Etude de cas 1
 4. Etude de cas 2
-5. Conclusion
-6. Sources
+5. Etude de cas 3
+6. Etude de cas 4
+7. Conclusion
+8. Sources
 
 ## Rappel
 
+Le management de l'innovation est une discipline qui vise à gérer le processus de création, de développement et de mise en œuvre de nouvelles idées, produits, services ou processus au sein d'une organisation. Il englobe la gestion de toutes les étapes du cycle d'innovation, de la génération des idées à leur commercialisation réussie.
+
+Une invention est la création d'une nouvelle idée ou technologie, tandis que l'innovation est le processus de mise en œuvre réussie de cette idée ou technologie pour créer de la valeur. Le management de l'innovation vise à faciliter ce processus en fournissant un cadre et des méthodologies pour générer, développer et exploiter efficacement les idées nouvelles et créatives.
+
 ## Les outils du management de l'innovation
+
+Il existe de nombreux outils de management de l'innovation comme le mentionne [Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/). Je vais donc expliquer plus en profondeur les méthodes C-K, TRL et crouwdsourcing qui sont pour moi les plus intéressantes.
 
 ### La méthode C-K
 
@@ -49,6 +57,8 @@ Dans un contexte où les entreprises sont confrontées à des transformations ma
 La méthode du TRL (Technological Readiness Level), également connue sous le nom de Niveau de Maturité Technologique, est un cadre d'évaluation largement utilisé dans le domaine de la gestion de l'innovation et du développement technologique. Cette méthode fournit une échelle de mesure permettant d'évaluer le degré de préparation et de développement d'une technologie spécifique, en la situant sur une échelle allant de niveaux bas (TRL 1) à des niveaux élevés (TRL 9). 
 
 Développée à l'origine par des organisations gouvernementales américaines telles que la NASA et l'US Air Force, l'échelle TRL a été conçue pour aider à mesurer et à évaluer la maturité des technologies émergentes. Elle est devenue un outil essentiel dans le domaine de la recherche et développement, ainsi que dans l'évaluation des projets innovants.
+
+![nsa](nasatrl.png)
 
 Les Technology Readiness Levels (TRL) sont définis comme un ensemble de neuf niveaux, chacun représentant un stade spécifique dans le cycle de développement d'une technologie. Voici une brève description de chaque niveau :
 
@@ -99,7 +109,9 @@ Il existe plusieurs formes de crowdsourcing, notamment :
 
 Le crowdsourcing présente plusieurs avantages, notamment l'accès à une diversité d'expertise, la réduction des coûts, l'accélération de l'innovation et l'engagement de la communauté. Cependant, il peut également présenter des défis tels que la gestion de la qualité des contributions, la protection de la propriété intellectuelle et la gestion des attentes des participants. En général, le succès du crowdsourcing dépend de la manière dont il est conçu, géré et mis en œuvre pour répondre aux besoins spécifiques du projet ou de l'organisation.
 
-### Etude de cas 1
+### Etude de cas 1 - dilemme de l'innovateur
+
+Cette première étude cas détaille l'exemple fourni par [Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/) sur le dilemme de l'innovateur.
 
 #### Introduction et Contexte
 
@@ -138,7 +150,7 @@ Pour surmonter ces défis, l'entreprise doit envisager une réponse organisation
 
 - Créer une nouvelle entité dédiée à l'innovation de rupture, isolée de l'entreprise principale, pour explorer de nouveaux modèles d'affaires et de nouveaux marchés.
 
-**2. Equipe dédiée :**
+**2. Équipe dédiée :**
 
 - Constituer une équipe avec des profils entrepreneuriaux capables de mener à bien l'innovation de rupture, avec une autonomie suffisante pour explorer de nouvelles opportunités.
 
@@ -150,9 +162,9 @@ Pour surmonter ces défis, l'entreprise doit envisager une réponse organisation
 
 En adoptant cette approche, l'entreprise peut espérer surmonter les défis liés au dilemme de l'innovateur et exploiter de nouveaux marchés grâce à une innovation de rupture. La nouvelle entité dédiée peut se concentrer sur le développement d'un nouveau modèle d'affaires adapté au nouveau produit, tout en bénéficiant de la structure et des ressources de l'entreprise mère. Cela permettrait à l'entreprise de rester compétitive et de maintenir sa position de leader sur le marché de l'impression, tout en explorant de nouveaux domaines de croissance.
 
-### Etude de cas sur la méthode TRL
+### Etude de cas 2 - La méthode TRL
 
-Prenons l'exemple fictif du développement d'une Technologie de Stockage d'Énergie Éolienne
+Prenons l'exemple fictif du développement d'une technologie de stockage d'énergie éolienne
 
 #### Contexte
 
@@ -194,11 +206,134 @@ Le système de stockage d'énergie éolienne est largement déployé dans plusie
 
 La technologie de stockage d'énergie éolienne est désormais pleinement intégrée dans l'infrastructure énergétique mondiale. Elle est devenue une norme de l'industrie pour maximiser l'utilisation de l'énergie éolienne et stabiliser les réseaux électriques.
 
----
+#### Résultats:
 
 Cette étude de cas illustre comment la méthode TRL peut être utilisée pour évaluer le développement d'une nouvelle technologie, en suivant sa progression depuis le stade conceptuel jusqu'à sa pleine intégration dans l'industrie.
 
-### Horodateur 
+---
+
+### Étude de Cas 3 - La méthode C-K
+
+#### Contexte:
+
+Prenons l'exemple fictif d'une entreprise automobile qui cherche à développer une nouvelle génération de voitures électriques autonomes pour répondre à la demande croissante de véhicules écologiques et autonomes sur le marché.
+
+#### Étape 1 : Exploration du Concept (C-K Concept):
+
+- **Objectif Principal :** Concevoir une voiture électrique autonome innovante qui offre une expérience de conduite sûre, confortable et durable.
+
+- **Contraintes :**
+  - Respecter les réglementations en matière de sécurité et d'émissions.
+  - Assurer une autonomie suffisante pour répondre aux besoins des conducteurs.
+  
+- **Opportunités :**
+  - Saisir la demande croissante pour les véhicules électriques et autonomes.
+  - Créer un avantage concurrentiel en proposant des fonctionnalités innovantes et une expérience utilisateur exceptionnelle.
+
+#### Étape 2 : Recherche de Connaissances (C-K Knowledge):
+
+- **Expertise Interne :**
+  - Ingénieurs spécialisés en intelligence artificielle et conception automobile.
+  - Équipe de conception expérimentée ayant une connaissance approfondie du marché et des tendances de l'industrie.
+
+- **Recherche Externe :**
+  - Analyse des technologies émergentes dans le domaine de la conduite autonome, des batteries et des matériaux légers et durables.
+  - Consultation d'experts en mobilité urbaine et en durabilité.
+
+#### Étape 3 : Processus d'Innovation:
+
+- **Génération de Concepts (C-K Concept) :**
+  - Utilisation de l'expertise interne et des connaissances externes pour générer des concepts de véhicule électrique autonome, y compris des designs futuristes, des systèmes de recharge innovants et des fonctionnalités avancées de conduite autonome.
+
+- **Évaluation et Sélection des Concepts :**
+  - Évaluation des concepts en fonction de critères tels que l'efficacité énergétique, la sécurité, le confort et l'esthétique.
+  - Sélection du concept le plus prometteur basé sur des analyses quantitatives et qualitatives.
+
+#### Étape 4 : Développement et Mise en Œuvre:
+
+- **Prototypage et Tests :**
+  - Développement de prototypes basés sur le concept sélectionné, en utilisant des technologies de pointe pour la propulsion électrique, la connectivité et l'automatisation.
+  - Tests approfondis en conditions réelles pour évaluer les performances, la sécurité et la fiabilité du prototype.
+
+- **Optimisation et Amélioration :**
+  - Réajustement du design et des fonctionnalités en fonction des retours des tests et des simulations.
+  - Collaboration avec des partenaires technologiques pour intégrer les dernières avancées dans le domaine de l'électromobilité et de l'intelligence artificielle.
+
+#### Étape 5 : Commercialisation et Diffusion :
+
+- **Stratégie de Commercialisation :**
+  - Élaboration d'une stratégie de lancement pour présenter la nouvelle voiture électrique autonome sur le marché.
+  - Campagnes de marketing ciblées pour sensibiliser les consommateurs aux avantages de la conduite autonome et de l'électromobilité.
+
+- **Formation et Support :**
+  - Formation des concessionnaires et du personnel sur les caractéristiques et les avantages du nouveau véhicule.
+  - Fourniture d'un support clientèle dédié pour répondre aux questions et aux préoccupations des propriétaires de voitures électriques autonomes.
+
+#### Résultats
+
+Grâce à l'approche C-K, l'entreprise a réussi à développer une voiture électrique autonome innovante qui a suscité un fort intérêt sur le marché. Le nouveau véhicule a été largement acclamé pour ses performances, sa sécurité et sa durabilité, renforçant ainsi la position de l'entreprise en tant que leader de l'innovation dans l'industrie automobile.
+
+---
+
+
+### Étude de Cas 4 - Le crouwdsourcing
+
+#### Contexte
+
+Prenons l'exemple fictif d'une entreprise de technologie qui souhaite développer une nouvelle plateforme de crowdsourcing pour stimuler l'innovation et la collaboration au sein de l'entreprise ainsi qu'avec des partenaires externes.
+
+#### Étape 1 : Planification de la Plateforme de Crowdsourcing
+
+- **Objectif Principal :** Créer une plateforme conviviale et efficace pour recueillir des idées innovantes et mobiliser les ressources internes et externes.
+  
+- **Contraintes :**
+  - Respecter les normes de sécurité et de confidentialité des données.
+  - Assurer la participation active des employés et des parties prenantes externes.
+  
+- **Opportunités :**
+  - Favoriser la créativité et l'engagement des employés.
+  - Encourager la collaboration ouverte et la diversité des idées.
+
+#### Étape 2 : Développement de la Plateforme
+
+- **Conception de l'Interface Utilisateur :**
+  - Collaboration avec des concepteurs UX/UI pour créer une interface conviviale et intuitive.
+  - Intégration de fonctionnalités telles que la soumission d'idées, le vote, les commentaires et les discussions.
+
+- **Développement Technique :**
+  - Équipe de développement logiciel pour concevoir et construire la plateforme en utilisant les dernières technologies.
+  - Tests rigoureux pour assurer la fiabilité et la sécurité de la plateforme.
+
+#### Étape 3 : Lancement et Promotion
+
+- **Communication Interne :**
+  - Campagne de sensibilisation pour informer les employés sur la plateforme et encourager leur participation.
+  - Formation sur l'utilisation de la plateforme et les meilleures pratiques du crowdsourcing.
+
+- **Marketing Externe :**
+  - Promotion de la plateforme auprès des partenaires externes, des clients et de la communauté en ligne.
+  - Utilisation des médias sociaux, des newsletters et des événements pour accroître la visibilité de la plateforme.
+
+#### Étape 4 : Gestion et Suivi
+
+- **Modération et Animation :**
+  - Équipe dédiée pour modérer les contributions, encourager les interactions et stimuler l'engagement.
+  - Réponse rapide aux questions et aux commentaires des utilisateurs pour maintenir un environnement positif.
+
+- **Évaluation et Suivi :**
+  - Suivi des performances de la plateforme à l'aide de données analytiques pour évaluer l'engagement et l'efficacité.
+  - Révisions régulières pour améliorer la plateforme en fonction des retours d'expérience et des suggestions des utilisateurs.
+
+
+#### Résultats
+
+La nouvelle plateforme de crowdsourcing a connu un succès significatif, avec une forte participation des employés et des parties prenantes externes. Grâce à cette plateforme, l'entreprise a pu recueillir un grand nombre d'idées novatrices provenant de diverses sources. Ces idées ont été soigneusement évaluées et mises en œuvre, ce qui a conduit à plusieurs innovations réussies, renforçant ainsi la position de l'entreprise en tant que pionnière dans son domaine. De plus, la plateforme a favorisé un sentiment de communauté et de collaboration au sein de l'entreprise, renforçant la culture de l'innovation et l'engagement des employés. En fin de compte, le crowdsourcing a permis à l'entreprise d'accélérer son processus d'innovation, de répondre de manière agile aux défis du marché et de maintenir sa compétitivité à long terme.
+
+## Conclusion
+
+Ce MON m'aura permis d'acquérir plus de connaissances dans le domaine du management de l'innovation qui est un domaine qui me plait beaucoup. Je n'avais jamais entendu parler des méthodes de crouwdsourcing et TRL et j'ai trouvé ça très intéressant. J'ai ainsi pu compléter le [MON de Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/) avec des études de cas plus approfondies.
+
+### Horodateur
 
 | Date | Travail effectué | Temps |
 | -------- | -------- |-------- |
@@ -207,8 +342,17 @@ Cette étude de cas illustre comment la méthode TRL peut être utilisée pour �
 | 13/02 | 1h| Le crowdsourcing |
 | 13/02 | 2h | Etude de cas 1|
 | 16/02 | 2h30 | Etude de cas 2|
+| 18/02 | 1h | Etude de cas 3|
+| 19/02 | 1h | Etude de cas 4|
 
 ### Sources
 
 <https://www.grenoble-inp.fr/fr/recherche-valorisation/trl-a-quoi-ca-sert>
 <https://uved.univ-perp.fr/module4/res/Parcs-eoliens_Etude-de-cas.pdf>
+<https://www.cairn.info/revue-management-et-avenir-2011-1-page-254.htm#:~:text=Le%20crowdsourcing%20est%20une%20forme,Pisano%20et%20Verganti%2C%202008).>
+<https://www.cairn.info/revue-entreprendre-et-innover-2016-1-page-38.htm>
+<https://www.cercle-editeurs.fr/logiciels-metiers/quelles-sont-les-approches-et-les-outils-adaptes-pour-reussir-a-innover/>
+<https://www.ck-theory.org/la-theorie-ck/>
+<https://www.finovup.fr/blog/lechelle-trl-technology-readiness-level-mesurer-la-maturite-dune-technologie/>
+<https://www.cea.fr/multimedia/Documents/infographies/Defis-du-CEA-infographie-echelle-trl.pdf>
+<https://exed.polytechnique.edu/formations/innovation/innovation-rupture-methode-c-k>

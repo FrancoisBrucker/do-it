@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Business Intelligence"
+title: "MON 2.2 - Business Intelligence"
 authors:
   - Schultz Mathis
 

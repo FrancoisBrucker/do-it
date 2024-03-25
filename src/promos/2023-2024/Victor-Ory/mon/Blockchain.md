@@ -13,11 +13,7 @@ tags:
   - 'Crypto'
 ---
 
-## Ressources :
-
-
-
-### Résumé et Objectifs 
+### Résumé et Objectifs :
 
 Ce MON est une introduction au monde Crypto/Blockchain pour enfin comprendre ce qui les crypto bro disent. J'aimerais comprendre mieux les acteurs et les enjeux autour de ce domaine qui me semble encore un peu large.
 
@@ -28,10 +24,24 @@ Ce MON est une introduction au monde Crypto/Blockchain pour enfin comprendre ce 
 - Avoir un panorama des acteurs essentiels
 - Avoir un panorama des questionnements récurrents
 
+## Le cours :
+
+Les concepts essentiels abordés comprennent :
+
+- Le hashage ;
+- La cryptographie;
+
+Ces bases permettent d'explorer la structure fondamentale de la blockchain et ses mécanismes tels que les forks, les processus de validation par consensus et le proof of work. En comprenant ces éléments, il devient possible de différencier le Bitcoin de l'Ethereum et de saisir les implications, ce qui est pertinent pour une approche de conception de la Blockchain.
+
+Le point de vue du professeur tente d'apporter une certaine nuance en exposant les opportunités et les limites inhérentes à chaque aspect. Toutefois, le cours reste à mi-chemin entre la technique et une perspective économique.
+
+Cette explication technique permet ensuite d'aborder une description des différents acteurs de l'écosystème de la Blockchain. Les cours s'appuient sur des lectures importantes, certaines visant à observer l'impact économique des fonctionnalités, d'autres représentant la vision des concepteurs, et parfois des articles explicatifs sur des aspects précis.
+
+Comme on peut s'y attendre d'une institution comme le MIT, l'intervenant est pointu. Bien qu'il adopte une perspective économique du projet, il demeure compétent tant sur le plan technique que pédagogique.
+
 # Conclusion 
 
-Le cours sur lequel j'ai basé la plupart de ce MON dure en fait 20h et aborde en profondeur des problématiques super intéressantes ensuite comme le lien avec les banques centrales et la politique publique, c'est pourquoi je pense que je vais encore poursuivre pendant le départ de mon stage.
-Les cours durent une heure mais les lectures sont vraiment fondamentales pour vraiment capter certains trucs avec un sens pratique. Ce sont des ressources de qualité qui peuvent facilement mené à un Rabbit Hole.
+Le cours sur lequel je me suis principalement basé s'étend en réalité sur 20 heures et aborde en profondeur des problématiques super intéressantes, notamment le lien avec les banques centrales et la politique publique. C'est pourquoi je pense poursuivre pendant le début de mon stage. Au départ, je pensais que nous ne devrions pas entreprendre une régulation de la Blockchain, car cela s'opposerait fondamentalement à l'idéologie qui sous-tend sa genèse. Toutefois, comme toujours, une nuance est à apporter à cet outil et à ses déclinaisons. Les cours durent une heure, mais les lectures sont vraiment fondamentales pour bien comprendre certains aspects avec un sens pratique. Ce sont des ressources de qualité qui peuvent facilement mener à un débat approfondi.
 
 ### Bibliographie : 
 

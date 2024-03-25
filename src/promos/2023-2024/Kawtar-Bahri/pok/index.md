@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Kawtar Bahri.
 
-* [POK 1](./temps-1)
-* [POK 2](./temps-2)
-* [POK 3](./temps-3)
+* [Stratégie numérique](./temps-1)
+* [Développement de mon Portfolio](./temps-2)
+* [Analyse des dépenses technologiques en VBA Excel](./temps-3)
