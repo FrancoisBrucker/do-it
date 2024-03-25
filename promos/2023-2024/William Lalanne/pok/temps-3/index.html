@@ -293,8 +293,89 @@
 <h2>Les étapes à réaliser pendant le Sprint 2</h2>
 <ul>
 <li>Finir le front des pages (★☆☆☆☆ 4h)</li>
-<li>Faire le backend avec la logique de connexion (★★☆☆ 6h )</li>
+<li>Faire le backend avec la logique de l'inscription (★★☆☆ 3h)</li>
+<li>Faire le backend avec la logique de connexion (★★☆☆ 3h)</li>
 </ul>
+<h2>Modification du frontend et création de la dernière page</h2>
+<p>Je devais lors de mon deuxième sprint finir la création des pages de l'application, j'en ai profité pour modifier légèrement celles que j'avais créé avant.</p>
+<h2>Backend : inscription</h2>
+<p>En ce qui concerne le backend, j'ai décidé d'utiliser express car je l'ai déjà beaucoup utilisé pour le projet 3A et c'est un langage avec lequel je suis à l'aise. Cela me permettra de voir si le langage est adaptée au développement mobile.</p>
+<p>Voyons ainsi comment j'ai géré la logique d'inscription d'un utilisateur sur mon application.</p>
+<p>Dans le front, l'utilisateur est invité à rentrer son prénom, son nom, son email, son mot de passe et à confirmer son mot de passe pour s'inscrire. Les informations rentrer par l'utilisateur doivent être récupérées puis envoyer à la bonne table de données.</p>
+<p>D'abord, il faut se connecter à la base de données :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> connection <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">user</span><span class="token operator">:</span> <span class="token string">'williamlalanne'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">password</span><span class="token operator">:</span> <span class="token string">'motdepasse'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">database</span><span class="token operator">:</span> <span class="token string">'POK3'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+connection<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Erreur lors de la connextion à la bdd"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Connexion à la bdd réussie"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> connection<span class="token punctuation">;</span>
+</code></pre>
+<p>Dès qu'on voudra faire une requête à la base de données il faudra utiliser <em><strong>connection</strong></em> pour pouvoir s'y connecter.</p>
+<p>Pour gérer la logique d'inscription, il faut créer une route :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Endpoint pour l'inscription</span>
+route<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/inscription'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> saltRounds <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> prenom<span class="token punctuation">,</span> nom<span class="token punctuation">,</span> email<span class="token punctuation">,</span> mot_de_passe<span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+
+    bcrypt<span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>mot_de_passe<span class="token punctuation">,</span> saltRounds<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> hash</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Erreur lors du hachage du mot de passe :'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token punctuation">}</span> 
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)'</span><span class="token punctuation">;</span>
+            db<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sql<span class="token punctuation">,</span> <span class="token punctuation">[</span>prenom<span class="token punctuation">,</span> nom<span class="token punctuation">,</span> email<span class="token punctuation">,</span> hash<span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Erreur inscription'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Erreur inscription'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Inscription succès'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La requête sql que l'on va faire à la base de données est la suivante :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)'</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token punctuation">{</span>
+            prenom<span class="token punctuation">,</span>
+            nom<span class="token punctuation">,</span>
+            email<span class="token punctuation">,</span>
+            <span class="token literal-property property">mot_de_passe</span><span class="token operator">:</span> mdp<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://192.168.1.45:8080/api/inscription'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>formData<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> responseData <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>responseData<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            props<span class="token punctuation">.</span><span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Erreur lors de la création du profil'</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>formData correspond aux données qui seront entrés par l'utilisateur.</p>
 
 
 </article>
