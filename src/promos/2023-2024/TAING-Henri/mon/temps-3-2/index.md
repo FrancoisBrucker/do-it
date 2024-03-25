@@ -134,7 +134,7 @@ De plus, il y a aussi des fonctions BI IA (qui sont aussi sur Power BI Desktop d
 
 Tous ces objets que vous créerez peuvent après être mis dans une application qui sera déployé. Ce déploiement est pris en charge par Power BI également, au travers de 3 étapes, le développement, les tests et le déploiement. 
 
-Pour gérer tout ça et la sécurité des privilèges, il existe un rôle, celui de Fabric Admin qui va gérer l'accès des équipes BI.
+Pour gérer tout ça et la sécurité des privilèges, il existe un rôle, celui de Fabric Admin qui va gérer l'accès des équipes BI. 
 
 ## 4. Conclusion <a id="section-4"></a>
 
@@ -149,9 +149,9 @@ Bases de données utilisés pour les exemples :
 [Baromètre des représentations sociales du changement climatique de l'ADEME](https://www.data.gouv.fr/fr/datasets/barometre-representations-sociales-du-changement-climatique/)
 [Base de données sur les bibliothèques](https://www.data.gouv.fr/fr/datasets/adresses-des-bibliotheques-publiques-2/#/resources)
 **Horodateur** : 
-> Vendredi 01/03/2024 : 2h (Début du premier cours)
-> Mercredi 06/03/2024 : 3h (Première partie du premier cours)
-> Jeudi 07/03/2024 : 3h (Fin du premier cours)
-> Vendredi, Samedi, Dimanche : Suite du cours de mon côté
-> Lundi 18/03/2024 : 2h (Notes)
-> Mardi 19/03/2024 : 2h (Fin des notes)
+- Vendredi 01/03/2024 : 2h (Début du premier cours)
+- Mercredi 06/03/2024 : 3h (Première partie du premier cours)
+- Jeudi 07/03/2024 : 3h (Fin du premier cours)
+- Vendredi, Samedi, Dimanche : Suite du cours de mon côté
+- Lundi 18/03/2024 : 2h (Notes)
+- Mardi 19/03/2024 : 2h (Fin des notes)
