@@ -168,13 +168,22 @@ Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital
 ## Sprint 2<a id="section-6"></a>
 | Tâche                                | Durée estimée |
 |--------------------------------------|---------------|
-| Modélisation du nouveau processus optimisée | 2h            |
+| Modélisation du nouveau processus optimisé| 2h            |
 | Rédaction du cahier de charge       | 4h            |
 | Schéma directeur des projets        | 2h            |
 | Validation                           | 1h            |
 
-## Cahier de charge<a id="section-6"></a>
-Après avoir effectué un benchmarking et recherché les normes internationales des SIRH spécifiques à l'industrie, j'ai pu identifier les fonctionnalités clés nécessaires pour développer une solution conforme aux standards de l'industrie en termes de sécurité, d'automatisation et de gestion des données. Ces fonctionnalités essentielles comprennent des systèmes robustes de sécurité des informations pour protéger contre les accès non autorisés et les fuites de données, des outils d'automatisation pour rationaliser les processus RH et réduire les erreurs manuelles, ainsi que des capacités avancées d'analyse de données pour soutenir la prise de décision.
+## Processus optimisés<a id="section-7"></a>
+
+{% details "Process 1: Gestion des documents administratifs " %}
+<img src="process1up.png" width="700" height="550">
+{% enddetails %}
+{% details "Process 2: Gestion de l'envoie des documents" %}
+<img src="process2up.png" width="700" height="550">
+{% enddetails %}
+
+## Cahier de charge<a id="section-8"></a>
+Après avoir révisé les procédures et examiné les standards internationaux des SIRH spécifiques à l'industrie, j'ai pu identifier les [fonctionnalités](https://docs.google.com/spreadsheets/d/1Ddm2TmfpYh1n6c5mJks5NtY0I2bxd2JW/edit#gid=49217966) clés nécessaires pour développer une solution conforme aux standards de l'industrie en termes de sécurité, d'automatisation et de gestion des données. Ces fonctionnalités essentielles comprennent des systèmes robustes de sécurité des informations pour protéger contre les accès non autorisés et les fuites de données, des outils d'automatisation pour rationaliser les processus RH et réduire les erreurs manuelles, ainsi que des capacités avancées d'analyse de données pour soutenir la prise de décision. J'ai ensuite compilé ces exigences fonctionnelles et non fonctionnelles dans un fichier Excel pour une référence facile et une meilleure organisation du développement du système.
 {% note %}
 **Liste de ressources**
 - [Des Normes internationales ISO pour de meilleurs processus RH](https://myrhline.com/type-article/cest-quoi-ce-truc-normes-internationales-de-gestion-des-rh/#:~:text=La%20norme%20internationale%20ISO%2030405,et%20recruter%20de%20nouveaux%20talents.)
