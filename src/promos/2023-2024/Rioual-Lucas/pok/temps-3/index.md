@@ -39,7 +39,7 @@ Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en Rea
 ## **Objectif du POK**
 
 L’objectif de ce POK est de créer un jeu de Quiz multijoueur en mode Battle Royale. Le but du jeu est d’être le dernier survivant de la partie en répondant juste à toutes les questions.
-Nous sommes deux pour réaliser ce POK : Moi, le grand Lucas Rioual, et mon larbin Samy Diafat.
+Nous sommes deux pour réaliser ce POK : Lucas Rioual et   Samy Diafat.
 
 Nous avons choisi cette thématique pour créer une application web avec Spring Boot. 
 
@@ -180,21 +180,31 @@ L’objectif du sprint 2 est de proposer une version jouable du jeu.
 | Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
 |--------------------------------------------------|--------------|
 | **Développement frontend**                          |              |
-| Page de fin de Game                                 | 1h           || |
-| Connection à l'API pour créer/rejoindre             | 1h           || |
-| Afficher les joueurs de la session en temps réel    | 3h           || |
-| Connection Question/réponse à l'API                 | 3h           || |
-| Hôte qui passe à la prochaine question              | 1h           || |
-| Page d'élimination                                  | 30 min           || |
-| Afficher le nombre de vie en temps réel             | 1h          || |
-| Afficher les stats réels                            | 2h          || |
+| Page de fin de Game                                 | 1h           | 0h | |
+| Connection à l'API pour créer/rejoindre             | 1h           |0h| |
+| Afficher les joueurs de la session en temps réel    | 3h           |0h| |
+| Connection Question/réponse à l'API                 | 3h           |0h| |
+| Hôte qui passe à la prochaine question              | 1h           |0h| |
+| Page d'élimination                                  | 30 min           |0h| |
+| Afficher le nombre de vie en temps réel             | 1h          |1h| |
+| Afficher les stats réels                            | 2h          |0h| |
 | **Développement backend**                          |              | | |
-| Implémenter les webSockets                         | 3h          || |
-| Créer les routes qu'on a pas prévu                 | 3h          || |
-| **Mise en production**                             | 5h            | | |
+| Implémenter les webSockets                         | 3h          |1h| |
+| Créer les routes qu'on a pas prévu                 | 3h          |0h| |
+| **Mise en production**                             | 5h            |0h| |
+
+
+## Sprint 2
+
+
+Après avoir beaucoup travaillé durant sprint 1 (20h), il a été dur pour Samy de reprendre le projet après une longue pause. Il faut être honnête, reprendre un projet après l'avoir arrêté brusquement est bien plus compliqué que ce que je pensais.
+Cependant, le back-end developpé durant le premier sprint a permis à Lucas d'avoir un début d'application fonctionnel.
 
 
 
+## Conclusion
 
 
+
+Le projet n'est malheuresement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.
 
