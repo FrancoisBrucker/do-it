@@ -407,49 +407,49 @@ Le temps pour le développement des trois premières pages a été respecté . C
 <td>Page de fin de Game</td>
 <td>1h</td>
 <td>0h</td>
-<td></td>
+<td>0h</td>
 </tr>
 <tr>
 <td>Connection à l'API pour créer/rejoindre</td>
 <td>1h</td>
 <td>0h</td>
-<td></td>
+<td>3h</td>
 </tr>
 <tr>
 <td>Afficher les joueurs de la session en temps réel</td>
 <td>3h</td>
 <td>0h</td>
-<td></td>
+<td>1h</td>
 </tr>
 <tr>
 <td>Connection Question/réponse à l'API</td>
 <td>3h</td>
 <td>0h</td>
-<td></td>
+<td>0h</td>
 </tr>
 <tr>
 <td>Hôte qui passe à la prochaine question</td>
 <td>1h</td>
 <td>0h</td>
-<td></td>
+<td>0h</td>
 </tr>
 <tr>
 <td>Page d'élimination</td>
 <td>30 min</td>
 <td>0h</td>
-<td></td>
+<td>30 min</td>
 </tr>
 <tr>
 <td>Afficher le nombre de vie en temps réel</td>
 <td>1h</td>
 <td>1h</td>
-<td></td>
+<td>0h</td>
 </tr>
 <tr>
 <td>Afficher les stats réels</td>
 <td>2h</td>
 <td>0h</td>
-<td></td>
+<td>0h</td>
 </tr>
 <tr>
 <td><strong>Développement backend</strong></td>
@@ -461,7 +461,7 @@ Le temps pour le développement des trois premières pages a été respecté . C
 <td>Implémenter les webSockets</td>
 <td>3h</td>
 <td>1h</td>
-<td></td>
+<td>6h</td>
 </tr>
 <tr>
 <td>Créer les routes qu'on a pas prévu</td>
@@ -473,15 +473,61 @@ Le temps pour le développement des trois premières pages a été respecté . C
 <td><strong>Mise en production</strong></td>
 <td>5h</td>
 <td>0h</td>
-<td></td>
+<td>4h</td>
 </tr>
 </tbody>
 </table>
 <h2>Sprint 2</h2>
 <p>Après avoir beaucoup travaillé durant sprint 1 (20h), il a été dur pour Samy de reprendre le projet après une longue pause. Il faut être honnête, reprendre un projet après l'avoir arrêté brusquement est bien plus compliqué que ce que je pensais.<br>
-Cependant, le back-end developpé durant le premier sprint a permis à Lucas d'avoir un début d'application fonctionnel.</p>
+Cependant, le back-end développé durant le premier sprint a permis à Lucas d'avoir un début d'application fonctionnel.</p>
+<h3>Déploiement avec Docker</h3>
+<p>Au début de ce sprint, Lucas a voulu se concentrer sur la conteneurisation de l'API, de la base de donnée et du front.</p>
+<p>Il s'est d'abord concentré sur cet aspect car il pensait que c'est l'étape qui allait poser le plus de problème. Et c'est pas faux.</p>
+<p>L'objectif de cette étape était de créer une pipeline d'intégration continue, comme on l'avait vu dans le cours de Docker. Cependant, il y a eu beaucoup de problème avec la connexion entre la base de donnée mysql et l'api Spring Boot. Voici le DockerFile utilisé :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token literal-property property">version</span><span class="token operator">:</span> <span class="token string">'1'</span>
+<span class="token literal-property property">services</span><span class="token operator">:</span>
+  <span class="token literal-property property">mysql</span><span class="token operator">:</span>
+    <span class="token literal-property property">image</span><span class="token operator">:</span> mysql<span class="token operator">:</span><span class="token number">8.0</span>
+    <span class="token literal-property property">ports</span><span class="token operator">:</span>
+      <span class="token operator">-</span> <span class="token string">"3306:3306"</span>
+    <span class="token literal-property property">environment</span><span class="token operator">:</span>
+      <span class="token constant">MYSQL_ROOT_PASSWORD</span><span class="token operator">:</span> password
+      <span class="token constant">MYSQL_USER</span><span class="token operator">:</span> doit_user
+      <span class="token constant">MYSQL_PASSWORD</span><span class="token operator">:</span> doit_user_password
+      <span class="token constant">MYSQL_DATABASE</span><span class="token operator">:</span> doit
+
+  spring<span class="token operator">-</span>boot<span class="token operator">-</span>app<span class="token operator">:</span>
+    <span class="token literal-property property">build</span><span class="token operator">:</span>
+      <span class="token literal-property property">context</span><span class="token operator">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>backend<span class="token operator">/</span>quizz
+      <span class="token literal-property property">dockerfile</span><span class="token operator">:</span> Dockerfile
+
+    <span class="token literal-property property">environment</span><span class="token operator">:</span>
+      <span class="token constant">SPRING_DATASOURCE_URL</span><span class="token operator">:</span> jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>mysql<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>doit<span class="token operator">?</span>allowPublicKeyRetrieval<span class="token operator">=</span><span class="token boolean">true</span><span class="token operator">&amp;</span>useSSL<span class="token operator">=</span><span class="token boolean">false</span><span class="token operator">&amp;</span>createDatabaseIfNotExist<span class="token operator">=</span><span class="token boolean">true</span>
+      <span class="token constant">SPRING_DATASOURCE_USERNAME</span><span class="token operator">:</span> doit_user
+      <span class="token constant">SPRING_DATASOURCE_PASSWORD</span><span class="token operator">:</span> doit_user_password
+
+    <span class="token literal-property property">ports</span><span class="token operator">:</span>
+      <span class="token operator">-</span> <span class="token string">"8080:8080"</span>
+    <span class="token literal-property property">depends_on</span><span class="token operator">:</span>
+      <span class="token operator">-</span> mysql
+
+  react<span class="token operator">-</span>app<span class="token operator">:</span>
+    <span class="token literal-property property">build</span><span class="token operator">:</span>
+      <span class="token literal-property property">context</span><span class="token operator">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>frontend
+      <span class="token literal-property property">dockerfile</span><span class="token operator">:</span> Dockerfile
+    <span class="token literal-property property">ports</span><span class="token operator">:</span>
+      <span class="token operator">-</span> <span class="token string">"3000:80"</span>
+
+</code></pre>
+<p>Le problème était que lorsque que le conteneur était exécuté, cela afficher une erreur car les tables de la base de donnée était vide. Après beaucoup de temps passé dessus, Lucas a abandonné pour ce concentrer sur l’interaction entre l’API et React.</p>
+<h3>Connection entre Spring Boot et React avec des websockets</h3>
+<p>Cette partie était beaucoup plus longue que prévue. Pour afficher les joueurs en temps réel dans le salon, nous voulions utiliser des webSockets. Lucas avait déjà utilisé ce genre de chose pour l’application du Killer avec Node. Mais l’implémentation avec Spring Boot était plus compliqué que sur Node.js.</p>
+<p>Lucas a perdu beaucoup de temps (5h) car la version <a href="http://socket.io">socket.io</a> utilisé avec React était différente de celle utilisé par Spring Boot.<br>
+Malgré cela, nous avons réussi à connecter les joueurs ensemble dans un même salon. Nous avons pas eu le temps de faire la suite du projet.</p>
 <h2>Conclusion</h2>
-<p>Le projet n'est malheuresement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.</p>
+<p>Le projet n'est malheureusement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.<br>
+Le frontend est tout de même disponible à cette adresse : <a href="https://quiz-front-one.vercel.app/">https://quiz-front-one.vercel.app/</a><br>
+Le site est statique car l'API n'est pas déployé.</p>
 
 
 </article>

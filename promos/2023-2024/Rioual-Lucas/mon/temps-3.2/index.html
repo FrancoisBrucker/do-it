@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Programmation par les test</title>
+        <title>Test avec Jest</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Programmation par les test</h1>
+<h1 class="mb-1">Test avec Jest</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">javascript</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">jest</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Express</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -118,7 +130,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/">Lucas RIOUAL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/">MON de Lucas Rioual</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-3.2/">Programmation par les test</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/">Lucas RIOUAL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/">MON de Lucas Rioual</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/mon/temps-3.2/">Test avec Jest</a>
 
 </div></div>
 
@@ -130,11 +142,154 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Aucun</strong></p>
+<p><strong>Javascript</strong></p>
 </div></div>
-<h1>MON</h1>
-<p>L'objectif de ce MON est de me concentrer sur les tests. C'est un aspect que j'ai laissé de côté dans mes projets.<br>
-Je vais travailler avec Jest, une librairie de test pour javascript. Je vais mettre en pratique ce MON sur le projet 3A : Le killer.</p>
+<h2>Introduction</h2>
+<p>L’objectif de ce MON est de me former sur les tests javascript.  Je souhaite me concentrer sur cette thématique car c’est quelque chose qui est primordial pour faire du code professionnel.</p>
+<p>Je vais m’attarder sur la biblothèque Jest qui permet de tester du code Javascript. Je vais utiliser le backend du projet Killer pour m’entrainer.</p>
+<h2>Tester du code Javascript</h2>
+<p>Je voulais savoir comment tester l’API du projet Killer car pour l’instant, pour tester les différentes fonctionnalités, j’utilise l’interface de l’application. C’est long à tester une fonctionnalité mais surtout, il est difficile de tester une seule fonctionnalité à la fois.<br>
+L’objectif est donc de pouvoir tester les différentes routes de l’API et s’assurer que le résultat renvoyé est bien celui attendu.</p>
+<p>J’ai utilisé ces deux tuto :</p>
+<ul>
+<li><a href="https://saniaalikhan224.medium.com/mastering-api-testing-with-jest-node-js-express-and-mongodb-a-step-by-step-guide-bcd5f72e0d26">https://saniaalikhan224.medium.com/mastering-api-testing-with-jest-node-js-express-and-mongodb-a-step-by-step-guide-bcd5f72e0d26</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-test-in-express-and-mongoose-apps/">https://www.freecodecamp.org/news/how-to-test-in-express-and-mongoose-apps/</a></li>
+</ul>
+<p>Cela permet de tester une application Express qui communique avec une base de donnée Mongo DB.</p>
+<p>Voici comment installer les dépendances nécessaire :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> jest supertest mongoose
+</code></pre>
+<ul>
+<li>Jest : tester du code Javascript</li>
+<li>Supertest : permet de tester des routes et des endpoints</li>
+<li>Mongoose : communiquer avec la base de donnée</li>
+</ul>
+<p>Ensuite, le but est de tester mon application sans tout casser. En effet, les tests permettront d’intéragir avec la base de donnée. Cependant, lorsqu’on effectue des tests, il ne faut pas modifier la vrai base de donnée qui est utilisé par l’application en production.<br>
+Pour cela, on crée un ficher .env qui stocke des variables d’environnement :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">MONGODB_URI</span><span class="token operator">=</span><span class="token string">'url'</span>
+<span class="token assign-left variable">MONGODB_URI_TEST</span><span class="token operator">=</span><span class="token string">'url de test'</span>
+</code></pre>
+<p>Comme ça on peut choisir quel url choisir n’importe où dans l’application</p>
+<p>Ensuite on rajoute un script dans package.json :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"test"</span><span class="token builtin class-name">:</span> <span class="token string">"jest"</span>
+  <span class="token punctuation">}</span>,
+</code></pre>
+<h3>Tester une route</h3>
+<p>Maintenant, je souhaite tester la route <strong>POST</strong> <code>/api/user/testUser</code>  qui permet d’ajouter un nouvel utilisateur dans la base de donnée avec le nom ‘testUser’.</p>
+<p>Voici le code que j’ai qui permet de tester cette route :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"User API"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">MONGODB_URI_TEST</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">afterAll</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> Game<span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"POST /user"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"doit créer un nouvel utilisateur"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">"/api/user/testUser"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">expoToken</span><span class="token operator">:</span> <span class="token string">"testToken"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p>Le code commence par définir une suite de tests avec <strong><code>describe(&quot;User API&quot;, () =&gt; { ... })</code></strong>. Cette suite de tests contient plusieurs hooks et blocs de tests.</p>
+<ul>
+<li>Le premier hook est <strong><code>beforeAll(async () =&gt; { ... })</code></strong>, qui est exécuté une seule fois avant tous les tests de la suite. Dans ce hook, la connexion à la base de données de test est établie en utilisant <strong><code>mongoose.connect(process.env.MONGODB_URI_TEST)</code></strong>.</li>
+<li>Le deuxième hook est <strong><code>afterAll(async () =&gt; { ... })</code></strong>, qui est exécuté une seule fois après tous les tests de la suite. Dans ce hook, la connexion à la base de données est fermée en utilisant <strong><code>mongoose.connection.close()</code></strong>.</li>
+<li>Le troisième hook est <strong><code>beforeEach(async () =&gt; { ... })</code></strong>, qui est exécuté avant chaque test de la suite. Dans ce hook, toutes les collections <strong><code>User</code></strong> et <strong><code>Game</code></strong> sont supprimées à l'aide de <strong><code>User.deleteMany({})</code></strong> et <strong><code>Game.deleteMany({})</code></strong>, respectivement.</li>
+<li>Ensuite, il y a un bloc de tests imbriqué pour tester la création d'un nouvel utilisateur en utilisant la méthode HTTP POST sur l'URL <strong><code>/api/user/testUser</code></strong>. Dans ce test, une requête HTTP est envoyée à l'application Node.js à l'aide de <strong><code>request(app).post(&quot;/api/user/testUser&quot;).send({ expoToken: &quot;testToken&quot; })</code></strong>. La réponse HTTP est ensuite vérifiée pour s'assurer que le code d'état est 200, que la propriété <strong><code>success</code></strong> est définie sur <strong><code>true</code></strong> et que la propriété <strong><code>userId</code></strong> existe dans le corps de la réponse.</li>
+</ul>
+<p>Maintenant si on fait <code>npm run test</code>  on a ce resultat :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">PS D:<span class="token punctuation">\</span>Programmation<span class="token punctuation">\</span>Ecm<span class="token punctuation">\</span>Killer-back<span class="token operator">></span> <span class="token function">npm</span> run <span class="token builtin class-name">test</span>
+
+<span class="token operator">></span> killer-back@1.0.0 <span class="token builtin class-name">test</span>
+<span class="token operator">></span> jest
+
+ PASS  test/user.test.js
+  User API
+    POST /user
+      √ doit créer un nouvel utilisateur <span class="token punctuation">(</span><span class="token number">280</span> ms<span class="token punctuation">)</span>
+
+Test Suites: <span class="token number">1</span> passed, <span class="token number">1</span> total
+Tests:       <span class="token number">1</span> passed, <span class="token number">1</span> total
+Snapshots:   <span class="token number">0</span> total
+Time:        <span class="token number">1.952</span> s, estimated <span class="token number">8</span> s
+Ran all <span class="token builtin class-name">test</span> suites.
+</code></pre>
+<h3>Tester la modification d’un utilisateur</h3>
+<p>Ensuite, je souhaite tester la route PUT <code userId="">/api/user/</code>  qui permet de modifier le surnom d’un utilisateur. Le problème, c’est qu’au début des tests, ma base de donnée est vide. J’ai donc crée 3 utilisateurs de test que j’évite de supprimer à la fin des test :</p>
+<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">
+<span class="token keyword">const</span> user1Id <span class="token operator">=</span> <span class="token string">"65fd4cbe4352edb5a9722609"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> user2Id <span class="token operator">=</span> <span class="token string">"65fd4cdb034e02d9b0920de8"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> user3Id <span class="token operator">=</span> <span class="token string">"65fd511875033da71380cc99"</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"User API"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">MONGODB_URI_TEST</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">afterAll</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">_id</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">$nin</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          user1Id<span class="token punctuation">,</span>
+          user2Id<span class="token punctuation">,</span>
+          user3Id<span class="token punctuation">,</span>
+          
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> Game<span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"POST /user"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"doit créer un nouvel utilisateur"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">"/api/user/testUser"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">expoToken</span><span class="token operator">:</span> <span class="token string">"testToken"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"modifier le surnom de l'utilisateur"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/user/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user1Id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">expoToken</span><span class="token operator">:</span> <span class="token string">"testToken"</span><span class="token punctuation">,</span> <span class="token literal-property property">userName</span><span class="token operator">:</span> <span class="token string">"Tom"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"modifie le surnom de l'utilisateur mais l'id n'existe pas dans la base de donnée"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"/api/user/65f58e6326c2f024807a6376"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">expoToken</span><span class="token operator">:</span> <span class="token string">"testToken"</span><span class="token punctuation">,</span> <span class="token literal-property property">userName</span><span class="token operator">:</span> <span class="token string">"Tom"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2>Conclusion</h2>
+<p>Il y a pleins d’autres routes à tester pour s’assurer que l’application fonctionne bien. Cependant je n’ai pas eu le temps de toutes les tester. J’ai mis pas mal de temps à faire fonctionner le premier test car j’avais des soucis pour me connecter à la base de donnée. Je n’ai pas eu le temps de passer les 10h sur ce MON. J’ai passé environ 6h sur la documentation et les exemples que j’ai présenté.</p>
 
 
 </article>
