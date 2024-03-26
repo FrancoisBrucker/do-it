@@ -131,7 +131,7 @@ Il peut s'agir d'un besoin :</p>
 <p>Chaque centralien qui le souhaite dépose son/ses annonce(s) incluant description et informations pratiques : localisation, date, besoin...</p>
 <p>Les autres utilisateurs peuvent alors scruter les différentes annonces, rechercher celles proches de chez eux via un accès à la carte des colocs.</p>
 <p>Après acceptation d'une annonce, le demandeur est invité à contacter l'accepteur sur Messenger.</p>
-<h2>Et ça existe déjà ?</h2>
+<h3>Et ça existe déjà ?</h3>
 <p>Oui, mais non...<br>
 Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent <strong>que de la mise en relation entre particuliers et artisans ou dépanneurs, etc...</strong> Les sercives restent tout à fait factuels or nous souhaitons <strong>proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales.</strong> La vie des centraliens s'en verra grandement améliorée.</p>
 <p>Il existe également un groupe Facebook &quot;Centrale bière au Bar'bu&quot; qui permet de demander des services de la sorte mais la <strong>page est inadaptée aux besoins :</strong> les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, la page est peu gérée...</p>
@@ -174,7 +174,7 @@ Utilisation de Python/ Javascript / node au service des bases de données</p>
 <p><strong>Gestion de projet</strong><br>
 Division et répartition des tâches dans la création d'un site<br>
 Utilisation de l'outil Notion afin de suivre l'avancée du projet</p>
-<h2>TimeLine Projet</h2>
+<h3>TimeLine Projet</h3>
 <p>La TimeLine est vouée à évoluer et sera actualisée au cours du projet.</p>
 <p><img src="Gantt.png" alt="Image Timeline"></p>
 <h2>Fonctionnalités et pages du site</h2>
@@ -186,8 +186,8 @@ L'étude <strong>Experience 2030</strong> (menée par Futurum Research et SAS) m
 <thead>
 <tr>
 <th style="text-align:center"></th>
-<th style="text-align:center"><strong>En bref</strong></th>
-<th style="text-align:center"><strong>Informations</strong></th>
+<th style="text-align:center"><strong>Description de la page</strong></th>
+<th style="text-align:center"><strong>Informations que l'on y retrouve</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -240,10 +240,23 @@ L'étude <strong>Experience 2030</strong> (menée par Futurum Research et SAS) m
 <p>Profitant du cours de Low-code proposé par Adèle Bourgeix, nous avons décidé de faire une première maquette de notre site pour se pencher sur les fonctionnalités intéressantes à implémenter et avoir un apperçu de chaque page pour par la suite refaire leur design.</p>
 <h3>Connexion et inscription</h3>
 <p>Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques <em>Se connecter</em> et <em>S'inscrire</em> sont les seuls mis en valeurs sur la page d'accueil.</p>
-<p><img src="MBM-homepage.png" alt="Image page d'accueil MBM"></p>
 <p>Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gère les questions d'authentification et met à jour la base de données des identifiants/mots de passe. À titre d'exemple pour la maquette en low code, seuls le nom, l'adresse mail et le mot de passe suffisent à s'inscrire. <em>Il est possible que ces exigences évoluent dans le futur.</em></p>
-<p><img src="MBM-connection.png" alt="Image connection"></p>
-<p><img src="MBM-inscription.png" alt="Image inscription"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Page d'accueil</th>
+<th style="text-align:center">Connexion</th>
+<th style="text-align:center">Inscription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="MBM-homepage.png" alt="Image page d'accueil MBM"></td>
+<td style="text-align:center"><img src="MBM-connection.png" alt="Image connexion"></td>
+<td style="text-align:center"><img src="MBM-inscription.png" alt="Image inscription"></td>
+</tr>
+</tbody>
+</table>
 <h4>Menu déroulant</h4>
 <p>Nous avons implémenté un menu déroulant sur la droite de l'écran permettant à l'utilisateur de naviguer aisément vers les pages <strong>importantes</strong> de notre parcours utilisateur :</p>
 <ul>
@@ -253,7 +266,6 @@ L'étude <strong>Experience 2030</strong> (menée par Futurum Research et SAS) m
 <li>Carte des Annonces</li>
 <li>Déconnexion</li>
 </ul>
-<p><img src="MBM-accueil.png" alt="Image"></p>
 <h4>Dépôt d'une annonce</h4>
 <p>L'annonceur remplit un formulaire simple mais précis, présentant plusieurs fonctionnalités destinées faciliter son expérience :</p>
 <ul>
@@ -261,23 +273,50 @@ L'étude <strong>Experience 2030</strong> (menée par Futurum Research et SAS) m
 <li>le dépôt d'un fichier photo permettant d'ajouter des informations : &quot;une image vaut 1000 mots&quot;, la photographie d'un potager sera probablement plus parlante qu'un paragraphe visant à le décrire...</li>
 </ul>
 <p>Pour éviter toute erreur de missclick, une confirmation sera demandée après clic du bouton <em>Déposer mon annonce</em>.</p>
-<p><img src="MBM-depot-annonce.png" alt="Image dépot annonce"></p>
 <h4>Recherche des annonces</h4>
 <p>Inspirée des sites d'annonces, la page de recherche n'affiche que les éléments primordiaux de chaque annonce, elle se veut d'être impactante et lisible.<br>
 La sélection d'une annonce se fait d'abord sur sa mission (titre de l'annonce) puis, si celle-ci semble intéressante, sur les critères de dates et de localisation.</p>
 <p>Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour avoir plus de détails et la mettre dans ses favoris. Il peut ensuite confirmer qu'il est disponible pour débuter la conversation avec l'annonceur.</p>
-<p><img src="MBM-recherche-annonce.png" alt="Image recherche annonce"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Page d'accueil</th>
+<th style="text-align:center">Dépôt d'annonce</th>
+<th style="text-align:center">Recherche d'annonce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="MBM-homepage.png" alt="Image page d'accueil MBM"></td>
+<td style="text-align:center"><img src="MBM-depot-annonce.png" alt="Image dépot annonce"></td>
+<td style="text-align:center"><img src="MBM-recherche-annonce.png" alt="Image recherche annonce"></td>
+</tr>
+</tbody>
+</table>
 <h3>Design : Maquette Figma</h3>
 <p>Les premières fonctionnalités en low-code développées, nous profitons du cours de User Interface proposé par Valery Ly pour définir notre charte graphique.</p>
 <p>Pour commencer, nous avons testé différents sets de couleurs afin d'en retenir quelques favoris.</p>
-<p><img src="Figma1.png" alt="Choix des couleurs"></p>
 <p>Ensuite, nous travaillons sur l'achitecture et le design de la page recherche d'annonces. L'objectif est alors de compléter la charte graphique en choisissant la police d'écriture, les logos utilisés, les contours des annonces, la façon dont les images et annonces doivent être exposées...</p>
-<p>Un premier jet est alors proposé au travers l'image ci-dessous :<br>
-<img src="Figma2.png" alt="Design annonces"></p>
+<p>Un premier jet est alors proposé. (cf image 2 du tableau ci-dessous)</p>
 <p>Bien que nous soyons satisfaits de la clarté de la page, de sa facilité de lecture, de la façon dont ressortent les informations, ce premier design semble encore brouillon.<br>
 Le choix des logos manque de cohérence, peu d'annonces sont visibles sur un même écran, les couleurs sont à ajuster..</p>
-<p>Un retrevail permet d'aboutir au desgin suivant, bien plus satisfaisant :<br>
-<img src="Figma3.png" alt="Design annonces"></p>
+<p>Un retrevail permet d'aboutir à un design bien plus satisfaisant. (cf image 3 du tableau ci-dessous)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Choix des couleurs</th>
+<th style="text-align:center">Design annonces 1er jet</th>
+<th style="text-align:center">Design annonces 2nd jet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="Figma1.png" alt="Choix des couleurs"></td>
+<td style="text-align:center"><img src="Figma2.png" alt="Design annonces"></td>
+<td style="text-align:center"><img src="Figma3.png" alt="Design annonces"></td>
+</tr>
+</tbody>
+</table>
 <p>L'architecture de la page choisie, nous testons les différents sets de couleurs sélectionnés pour en retenir un définitif et ainsi terminer notre charte graphique. En l'occurence, nous sélectionnons la Propal 1 rappelant la charte graphique de l'école.</p>
 <table>
 <thead>
