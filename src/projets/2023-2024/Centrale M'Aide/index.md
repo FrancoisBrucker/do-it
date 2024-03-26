@@ -118,7 +118,6 @@ Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionn
 
 **Voici l'utilité de chacune de ces pages :**
 
-
 |                              | **Description de la page** | **Informations que l'on y retrouve** |
 |:----------------------------:|:-----------:|:----------------:|
 | **Connexion et inscription** | Simple page d'accueil permettant de se connecter/s'inscrire sur le site | Notre slogan, quelques menus, boutons connexion/inscription |
@@ -128,7 +127,7 @@ Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionn
 | **Description d'annonce**    | Description précise d'une annonce | Image, titre, description, localisation, profil du déposeur |
 | **Mes annonces**             | Répertoire de mes différentes annonces | Liste des annonces avec image, titre, dates |
 | **Favoris**                  | Annonces gardées dans les favoris | Liste des annonces en favori avec image, titre, dates (Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté) |
-| **Carte des annonces**       | Carte interactive répertoriant les annonces et leur localisation | Carte intéractive (Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs) |
+| **Carte des annonces**       | Carte interactive répertoriant les annonces et leur localisation | Carte interactive (Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs) |
 
 **Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.**
 
@@ -203,6 +202,7 @@ L'architecture de la page choisie, nous testons les différents sets de couleurs
 |:--------:|:--------:|:--------:|
 | ![Figma Propal Design 1](FigmaPropal1.png) | ![Figma Propal Design 2](FigmaPropal2.png) | ![Figma Propal Design 3](FigmaPropal3.png) |
 
+
 ### Front-end
 
 Nous avons créé l'ensemble des pages du site en HTML et avons ajouté un fichier .css pour le header qui est identique pour l'ensemble des pages du site.
@@ -256,6 +256,21 @@ Le menu déroulant est présent sur toutes les pages du site une fois l'utilisat
 
 Etant donné le public centralien, le site internet est pour le moment considéré à but non lucratif.
 Cependant, dans la mesure où celui-ci prendrait place dans la vie centralienne, il pourrait servir de vitrine aux publicités de certaines associations en l'échange de financement permettant par exemple d'entretenir le site en bonne et due forme.
+
+### User Survey
+
+Après avoir terminé la majorité de fonctionnalités en code "dur", nous avons fait tester la première version du site à un pannel d'utilisateurs. Le public visé étant centralien, la majorité des testeurs sont des élèves à l'école, cependant d'autres personnes ont aussi testé le site (comme le père de Nicolas pour ne pas le citer).
+Le but du *User Survey* est de récolter des avis directs sur les fonctionnnalités et le fonctionnement du site, ainsi que sur les irritants potentiels. Cela fait partie de la phase de tests avant le déploiement.
+
+Après avoir testé le site, le testeur remplit un questionnaire, un *Google Forms* dans notre cas. La construction de ce questionnaire et la formulation des question est cruciale afin de ne pas biaiser le résultat.
+
+Dans l'ensemble, les testeurs sont très satisfaits de leur expérience sur notre site (86% des utilisateurs ont décerné la note de 4 ou 5).
+
+![test](Avis_general.png)
+
+De même, ils ont trouvé facilement les fonctionnalités recherchées (86% des testeurs ont décerné la note de 4 ou 5). En revanche, le point faible de notre site semble être le design.
+L'ensemble des résultats de l'*User Survey* est disponible en pdf dans le [répertoire du projet](Questionnaire_de_satisfaction.pdf).
+
 
 ### Sécurité de l'utilisateur
 
