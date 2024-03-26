@@ -1020,3 +1020,14 @@ L'*equity* du Héros est de... 0%. En effet, d'après la range renseignée, le H
 #### Bilan du test
 
 L'interface a été globalement fluide et il n'y a pas eu de problème lors de l'exécution de l'algorithme. Cependant, il met environ 1 à 2 minutes pour s'exécuter pour 3500 simulations (ce qui est suffisant, d'après mes tests). Notons tout de même que cette aide à la décision dépend de la *range* déterminée par le joueur. Cette *range* est ce qui est le plus difficile au poker, donc l'interface est inutile pour un joueur débutant.
+
+## Bilan du deuxième sprint
+
+Si l'on reprend le backlog du deuxième sprint, voici les items qui ont été réalisé et avec combien de temps:
+
+- Reprise des éléments manquants de l'interface graphique du premier sprint: **2, 30min** -> **45min**
+- Design des nouvelles interfaces pour l'assistant de jeu: **3, 2h30** -> **3h30**
+- Création du code implémentant la logique de l'assistant: **5, 3h30** -> **4h30**
+- Tests de l'assistant: **2, 1h30** -> **1h**
+
+J'ai largement sous-estimé le temps qu'il fallait pour développer les interfaces graphiques, notamment car il fallait lier énormément de méthodes aux centaines de boutons qu'il y avait. J'ai donc passé un peu moins de temps sur les tests.

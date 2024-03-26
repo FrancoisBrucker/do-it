@@ -178,6 +178,20 @@ class Poker_methods():
         else:
             return(f"{value} de " + suit)
 
+    def value_name(self, value):
+        if value == "A" or value == "As":
+            return(14)
+        elif value == "K" or value == "Roi":
+            return(13)
+        elif value == "Q" or value == "Dame":
+            return(12)
+        elif value == "J" or value == "Valet":
+            return(11)
+        elif value == "T":
+            return(10)
+        else:
+            return(int(value))
+
     def get_all_possible_hands(self):
         all_possible_hands = []
         list_card_names = []
@@ -269,7 +283,7 @@ class Poker_methods():
                 score = self.get_score(player2_hand, board)
                 print(f"Le joueur 2 a gagné avec un score de {score}")
 
-    def get_winrate(self, player1_hand, player2_hand, N):
+    def get_winrate(self, player1_hand, player2_hand, N, current_board = []):
         players_cards = []
         for k in range(2):
             players_cards.append(player1_hand[k].name)
@@ -278,23 +292,70 @@ class Poker_methods():
         tot_wins_player1 = 0
         tot_wins_player2 = 0
         tot_draws = 0
-        for k in range(N):
-            board = []
-            deck = current_deck[:]
-            for i in range(5):
-                index = rd.randint(0, len(deck) - 1)
-                card = deck[index]
-                deck.pop(index)
-                board.append(card)
-            result = self.do_first_player_win(player1_hand, player2_hand, board)
-            if result == None:
-                tot_draws += 1
-            elif result:
-                tot_wins_player1 += 1
-            elif not result:
-                tot_wins_player2 += 1
-        return(round(tot_wins_player1/N * 100, sigfigs = 3), round(tot_wins_player2/N * 100, sigfigs = 3), round(tot_draws/N * 100, sigfigs = 3))
-    
+        if len(current_board) == 0:
+            for k in range(N):
+                board = []
+                deck = current_deck[:]
+                for i in range(5):
+                    index = rd.randint(0, len(deck) - 1)
+                    card = deck[index]
+                    deck.pop(index)
+                    board.append(card)
+                result = self.do_first_player_win(player1_hand, player2_hand, board)
+                if result == None:
+                    tot_draws += 1
+                elif result:
+                    tot_wins_player1 += 1
+                elif not result:
+                    tot_wins_player2 += 1
+            return(round(tot_wins_player1/N * 100, sigfigs = 3), round(tot_wins_player2/N * 100, sigfigs = 3), round(tot_draws/N * 100, sigfigs = 3))
+        elif len(current_board) == 3:
+            for k in range(N):
+                board = current_board[:]
+                deck = current_deck[:]
+                for i in range(2):
+                    index = rd.randint(0, len(deck) - 1)
+                    card = deck[index]
+                    deck.pop(index)
+                    board.append(card)
+                result = self.do_first_player_win(player1_hand, player2_hand, board)
+                if result == None:
+                    tot_draws += 1
+                elif result:
+                    tot_wins_player1 += 1
+                elif not result:
+                    tot_wins_player2 += 1
+            return(round(tot_wins_player1/N * 100, sigfigs = 3), round(tot_wins_player2/N * 100, sigfigs = 3), round(tot_draws/N * 100, sigfigs = 3))
+        elif len(current_board) == 4:
+            for k in range(N):
+                board = current_board[:]
+                deck = current_deck[:]
+                for i in range(1):
+                    index = rd.randint(0, len(deck) - 1)
+                    card = deck[index]
+                    deck.pop(index)
+                    board.append(card)
+                result = self.do_first_player_win(player1_hand, player2_hand, board)
+                if result == None:
+                    tot_draws += 1
+                elif result:
+                    tot_wins_player1 += 1
+                elif not result:
+                    tot_wins_player2 += 1
+            return(round(tot_wins_player1/N * 100, sigfigs = 3), round(tot_wins_player2/N * 100, sigfigs = 3), round(tot_draws/N * 100, sigfigs = 3))
+        elif len(current_board) == 5:
+            for k in range(N):
+                board = current_board[:]
+                deck = current_deck[:]
+                result = self.do_first_player_win(player1_hand, player2_hand, board)
+                if result == None:
+                    tot_draws += 1
+                elif result:
+                    tot_wins_player1 += 1
+                elif not result:
+                    tot_wins_player2 += 1
+            return(round(tot_wins_player1/N * 100, sigfigs = 3), round(tot_wins_player2/N * 100, sigfigs = 3), round(tot_draws/N * 100, sigfigs = 3))
+
     def get_average_winrate(self, hand, N):
         tot_winrate = 0
         winrates = []
@@ -360,7 +421,55 @@ class Poker_methods():
         for k in range(len(self.all_average_winrates_detail5)):
             if self.all_average_winrates_detail5[k][0] == hand_player1:
                 return("Taux de réussite de la main " + hand_player1 + " face à la main " + hand_player2[0] + "-" + hand_player2[1] + ":", self.all_average_winrates_detail5[k][1][index])
-            
+    
+    def get_decision(self, pot: int, amount_to_call: int, suits: list, player_hand: list, N: int, current_board = []):
+        pot_odd = amount_to_call /(pot + amount_to_call)
+        tot_winrate = 0
+        count = 0
+        
+        for combination in tqdm(self.range_selected):
+            if len(combination) == 2 and len(suits) != 1:
+                value = combination[0]
+                value = self.value_name(value)
+                for k in range(len(suits) - 1):
+                    suit1 = suits[k]
+                    card1 = Card(value, suit1)
+                    suits2 = suits[k+1:]
+                    for suit2 in suits2:
+                        card2 = Card(value, suit2)
+                        opponent_hand = [card1, card2]
+                        tot_winrate += self.get_winrate(player_hand, opponent_hand, N, current_board)[0]
+                        count += 1
+            else:
+                suited = combination[-1]
+                if suited == "o" and len(suits) != 1:
+                    value1 = combination[0]
+                    value1 = self.value_name(value1)
+                    value2 = combination[1]
+                    value2 = self.value_name(value2)
+                    for k in range(len(suits) - 1):
+                        suit1 = suits[k]
+                        card1 = Card(value1, suit1)
+                        suits2 = suits[k+1:]
+                        for suit2 in suits2:
+                            card2 = Card(value2, suit2)
+                            opponent_hand = [card1, card2]
+                            tot_winrate += self.get_winrate(player_hand, opponent_hand, N, current_board)[0]
+                            count += 1
+                if suited == "s":
+                    value1 = combination[0]
+                    value1 = self.value_name(value1)
+                    value2 = combination[1]
+                    value2 = self.value_name(value2)
+                    for k in range(len(suits)):
+                        suit = suits[k]
+                        card1 = Card(value1, suit)
+                        card2 = Card(value2, suit)
+                        opponent_hand = [card1, card2]
+                        tot_winrate += self.get_winrate(player_hand, opponent_hand, N, current_board)[0]
+                        count += 1
+        average_winrate = round(tot_winrate/count, sigfigs = 3)
+        return(average_winrate, pot_odd * 100)
 
 class Plot_stats(Poker_methods):
     def __init__(self):
@@ -409,4 +518,79 @@ class Plot_stats(Poker_methods):
         ax.set_ylabel("Taux de réussite moyen en %")
         plt.bar(X, results_extract)
         plt.show()
+    
+    def plot_heatmap_hands_ranking(self):
+        table_winrates = [[0 for j in range(13)] for i in range(13)]
+        for k in range(len(self.all_average_winrates5)):
+            first_value = self.all_average_winrates5[k][0][0:1]
+            second_value = self.all_average_winrates5[k][0][1:2]
+            if first_value == "A":
+                first_value = 14
+            elif first_value == "K":
+                first_value = 13
+            elif first_value == "Q":
+                first_value = 12
+            elif first_value == "J":
+                first_value = 11
+            elif first_value == "T":
+                first_value = 10
+            else:
+                first_value = int(first_value)
+            if second_value == "A":
+                second_value = 14
+            elif second_value == "K":
+                second_value = 13
+            elif second_value == "Q":
+                second_value = 12
+            elif second_value == "J":
+                second_value = 11
+            elif second_value == "T":
+                second_value = 10
+            else:
+                second_value = int(second_value)
+            if first_value != second_value:
+                suit = self.all_average_winrates5[k][0][2:3]
+                if suit == "s":
+                    index1 = 14 - first_value
+                    index2 = second_value - 2
+                elif suit == "o":
+                    index1 = 1 - second_value
+                    index2 = first_value - 2
+            else:
+                index1 = 14 - first_value
+                index2 = first_value - 2
+            table_winrates[index1][index2] = self.all_average_winrates5[k][1]
+        size_x = 13
+        size_y = 13
+        x_start = 0
+        x_end = 13
+        y_start = 0
+        y_end = 13
+        extent = [x_start, x_end, y_end, y_start]
+        fig = plt.figure(figsize=(10, 10))
+        ax = fig.add_subplot(111)
+        axes = plt.gca()
+        # axes.set_ylabel('Première carte du dealer')
+        axes.yaxis.set_ticks(np.arange(0.5,13.5))
+        axes.yaxis.set_ticklabels(reversed(['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']), rotation = 0, fontsize = 12)
+        # axes.set_xlabel('Main du joueur')
+        axes.xaxis.set_ticks(np.arange(0.5,13.5))
+        axes.xaxis.set_ticklabels(['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'], rotation = 0,  verticalalignment = 'center',fontsize = 12)
+        im = ax.imshow(table_winrates, extent = extent, cmap="RdYlGn", vmin = 28.7, vmax = 85.1)
+        plt.title("Taux de réussite de chaque main possible\nMains associées en haut à gauche et mains dépareillées en bas à droite ", pad = 15)
+        fig.colorbar(im)
 
+        jump_x = (x_end - x_start) / (2.0 * size_x)
+        jump_y = (y_end - y_start) / (2.0 * size_y)
+        x_positions = np.linspace(start=x_start, stop=x_end, num=size_x, endpoint=False)
+        y_positions = np.linspace(start=y_start, stop=y_end, num=size_y, endpoint=False)
+        
+        for y_index, y in enumerate(y_positions):
+            for x_index, x in enumerate(x_positions):
+                label = round(table_winrates[y_index][x_index], sigfigs = 3)
+                text_x = x + jump_x
+                text_y = y + jump_y
+                ax.text(text_x, text_y, label, color='black', ha='center', va='center')
+        plt.show()
+    
+    

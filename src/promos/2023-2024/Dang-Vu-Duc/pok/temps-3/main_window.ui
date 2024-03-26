@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>493</width>
-    <height>342</height>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="Button_get_average_winrate">
+   <widget class="QPushButton" name="Button_plot_heatmap">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -29,8 +29,8 @@
      </font>
     </property>
     <property name="text">
-     <string>Obtenir un taux de réussite global 
- d'une main</string>
+     <string>Afficher les taux de réussite globaux de
+chaque main (carte de chaleur)</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -85,8 +85,8 @@
      </font>
     </property>
     <property name="text">
-     <string>Afficher les fréquences d'apparition 
- des combinaisons</string>
+     <string>Afficher les fréquences d'apparition
+des combinaisons</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Button_get_winrate">
@@ -104,8 +104,8 @@
      </font>
     </property>
     <property name="text">
-     <string>Obtenir un taux de réussite d'une main 
- face à une autre</string>
+     <string>Obtenir un taux de réussite d'une main
+face à une autre</string>
     </property>
    </widget>
   </widget>
