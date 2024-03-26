@@ -10,7 +10,7 @@ date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
+résumé: Etude de cas sur l'optimisation de l'organisation interne d'une entreprise
 ---
 
 ## Table des matières
@@ -24,9 +24,9 @@ résumé: Etude de cas sur l'optimisation de l'organisation interne de APTIV
 
 ## Introduction<a id="section-1"></a>
 ### Présentation de l'entreprise
-[Aptiv](https://www.aptiv.com/) (anciennement Delphi) est un leader technologique mondial, avec plus de 190 000 employés répartis dans 127 sites de production et 12 grands centres techniques à travers le monde. Avec une présence dans 46 pays, ils relèvent les défis les plus complexes de la mobilité grâce à leur expertise approfondie en matière de logiciels et d'intégration de systèmes, offrant des solutions pertinentes pour leurs clients.
+Un leader technologique mondial, avec plus de 190 000 employés répartis dans 127 sites de production et 12 grands centres techniques à travers le monde. Avec une présence dans 46 pays, ils relèvent les défis les plus complexes de la mobilité grâce à leur expertise approfondie en matière de logiciels et d'intégration de systèmes, offrant des solutions pertinentes pour leurs clients.
 ### Problématique
-Aptiv vise à améliorer la gestion des ressources humaines, en se concentrant spécifiquement sur la gestion de la main-d'œuvre, qui compte 2500 employés par usine. L'entreprise souhaite transformer les processus actuels de surveillance des données, qui sont manuels et intensifs, et qui concernent le contrôle de la présence, la gestion des absences, l'échange d'informations entre employés et employeurs, ainsi que la fourniture de documents administratifs. Aptiv prévoit d'identifier un outil adapté à ses besoins, capable de réduire de manière significative la dépendance actuelle à l'égard des processus manuels utilisés pour générer des informations de prévision et de budget.
+L'entreprise vise à améliorer la gestion des ressources humaines, en se concentrant spécifiquement sur la gestion de la main-d'œuvre, qui compte 2500 employés par usine. L'entreprise souhaite transformer les processus actuels de surveillance des données, qui sont manuels et intensifs, et qui concernent le contrôle de la présence, la gestion des absences, l'échange d'informations entre employés et employeurs, ainsi que la fourniture de documents administratifs. Elle prévoit d'identifier un outil adapté à ses besoins, capable de réduire de manière significative la dépendance actuelle à l'égard des processus manuels utilisés pour générer des informations de prévision et de budget.
 Le nouveau système de gestion des ressources humaines devrait permettre aux ressources de concentrer l'essentiel de leur temps et de leurs efforts sur l'analyse des modèles et des tendances des données, afin de fournir des analyses pertinentes et à forte valeur ajoutée. Cela sera réalisé en réduisant considérablement le temps et les efforts nécessaires pour les activités manuelles et intensives en main-d'œuvre, telles que la collecte et la consolidation des données nécessaires, ainsi que le remplissage des feuilles de calcul, qui représentent la majeure partie du temps dans le processus actuel.
 
 ## Sprint 1<a id="section-2"></a>
@@ -47,7 +47,7 @@ Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus 
 
 <img src="ddm.png" width="700" height="550">
 
-**Résultat attendu : Situer le cas d’Aptiv dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
+**Résultat attendu : Situer le cas d'étude dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
 
 {% details "Niveaux Digital Maturity Deloitte" %}
 - **Niveau de base/initial** : À ce stade, l'entreprise commence tout juste à adopter des technologies digitales. Les initiatives digitales sont souvent sporadiques et fragmentées, et il peut y avoir une résistance au changement de la part des employés.
@@ -163,14 +163,47 @@ Personnes concernées par le questionnaires : DRH , DSI , Shift Leader.
 <img src="hris.png" width="700" height="550">
 
 ### Niveau de maturité
-Aptiv se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
+Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
 
 ## Sprint 2<a id="section-6"></a>
 | Tâche                                | Durée estimée |
 |--------------------------------------|---------------|
-| Modélisation du nouveau processus optimisée | 2h            |
+| Modélisation du nouveau processus optimisé| 2h            |
 | Rédaction du cahier de charge       | 4h            |
 | Schéma directeur des projets        | 2h            |
 | Validation                           | 1h            |
+
+## Processus optimisés<a id="section-7"></a>
+
+{% details "Process 1: Gestion des documents administratifs " %}
+<img src="process1up.png" width="700" height="550">
+{% enddetails %}
+{% details "Process 2: Gestion de l'envoie des documents" %}
+<img src="process2up.png" width="700" height="550">
+{% enddetails %}
+
+## Cahier de charge<a id="section-8"></a>
+Après avoir révisé les procédures et examiné les standards internationaux des SIRH spécifiques à l'industrie, j'ai pu identifier les [fonctionnalités](https://docs.google.com/spreadsheets/d/1Ddm2TmfpYh1n6c5mJks5NtY0I2bxd2JW/edit#gid=49217966) clés nécessaires pour développer une solution conforme aux standards de l'industrie en termes de sécurité, d'automatisation et de gestion des données. Ces fonctionnalités essentielles comprennent des systèmes robustes de sécurité des informations pour protéger contre les accès non autorisés et les fuites de données, des outils d'automatisation pour rationaliser les processus RH et réduire les erreurs manuelles, ainsi que des capacités avancées d'analyse de données pour soutenir la prise de décision. J'ai ensuite compilé ces exigences fonctionnelles et non fonctionnelles dans un fichier Excel pour une référence facile et une meilleure organisation du développement du système.
+{% note %}
+**Liste de ressources**
+- [Des Normes internationales ISO pour de meilleurs processus RH](https://myrhline.com/type-article/cest-quoi-ce-truc-normes-internationales-de-gestion-des-rh/#:~:text=La%20norme%20internationale%20ISO%2030405,et%20recruter%20de%20nouveaux%20talents.)
+- [CNIL: Publication du référentiel relatif à la gestion des ressources humaines](https://www.cnil.fr/fr/publication-du-referentiel-relatif-la-gestion-des-ressources-humaines)
+- [ISO 30409](https://cdn.standards.iteh.ai/samples/64150/b8074452346d426b8e56e4790625ffa5/ISO-30409-2016.pdf)
+- [Discussion ChatGPT](https://chat.openai.com/share/06ec0a48-d710-4cce-b555-e61835c4bb0d)
+{% endnote %}
+ Je tiens à souligner plusieurs aspects cruciaux pour garantir un système performant et convivial. Tout d'abord, il est essentiel de permettre à chaque employé d'accéder facilement au SIRH, que ce soit depuis un kiosque dans l'usine, un ordinateur personnel ou même un smartphone. L'idée, c'est de rendre l'accès aux informations RH simple et accessible. Je souligne aussi l'importance  de garantir la sécurité des données personnelles de ses employés. Pour ce faire, l'utilisation d'identifiants tiers et d'une double authentification est essentielle. Cela permettra de protéger efficacement les informations sensibles, assurant ainsi la confidentialité et l'intégrité des données de l'entreprise et de ses collaborateurs. En mettant en place ces mesures de sécurité robustes, nous nous assurons que seules les personnes autorisées puissent accéder aux données du SIRH, renforçant ainsi la confiance et la tranquillité d'esprit de chacun.
+
+ En ce qui concerne la gestion des demandes de documents RH, il est important de faciliter le processus pour les employés. Pouvoir demander et recevoir facilement les documents nécessaires, que ce soit pour leur propre consultation ou pour des démarches administratives, simplifierait grandement les tâches quotidiennes. Cela permettrait une gestion plus pratique et rapide des demandes, bénéficiant à la fois aux employés et à l'efficacité globale de l'entreprise.
+
+Quant à la gestion de la présence, il est crucial que toutes les informations soient claires et standardisées pour éviter toute confusion. Une intégration en temps réel des données de présence de tous les systèmes serait très bénéfique. Cela permettrait à chacun d'être bien informé en temps réel sur qui est présent et qui ne l'est pas, assurant ainsi une gestion transparente et efficace des emplois du temps.
+
+### Risques
+L'implémentation d'une nouvelle solution de SIRH peut soulever des préoccupations légitimes au sein de l'équipe. Il est important de reconnaître les défis potentiels auxquels les employés pourraient être confrontés. Ces défis peuvent entraîner une perte de temps et d'efficacité au lieu de les améliorer, ce qui va à l'encontre de l'objectif initial de la mise en œuvre.
+
+L'un des risques majeurs est la **résistance au changement** de la part des employés. L'introduction d'un nouveau système peut perturber les habitudes de travail établies et susciter des inquiétudes quant à la nécessité de s'adapter à de nouvelles méthodes et procédures. Les employés peuvent craindre d'être **micro-gérés** ou **contrôlés de manière excessive**, ce qui peut entraîner une baisse de moral et une diminution de la motivation. Cette opposition au changement peut entraîner une adhésion limitée au nouveau système et, par conséquent, compromettre son efficacité globale.
+
+De plus, il est crucial de reconnaître que tous les employés peuvent ne pas être à l'aise avec les technologies ou les **interfaces informatiques complexes**. Si la nouvelle solution de SIRH n'est pas conviviale ou si elle nécessite une courbe d'apprentissage importante, certains employés peuvent rencontrer des difficultés à l'utiliser correctement, ce qui entraînera des retards et des inefficacités supplémentaires.
+
+Pour surmonter ces défis, il est essentiel d'adopter une **approche proactive** et inclusive. Il est nécessaire d'**impliquer les employés** dès le début du processus de mise en œuvre, en leur fournissant une formation adéquate et en les consultant sur leurs besoins et préoccupations. De plus, il est important de communiquer de manière transparente sur les raisons du changement et les avantages attendus pour les employés et l'entreprise dans son ensemble. 
 
 [Drive de mon travail](https://drive.google.com/drive/folders/1UxRs99Mpo37_-gLLmpO96G_sKGVlFZNP?usp=drive_link)

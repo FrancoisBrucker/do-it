@@ -226,17 +226,24 @@ Il est intéressant de remarquer qu'une erreur dans le mot de passe à la connex
 
 #### Répertoire et aperçu d'une annonce
 
-| Annonces | Aperçu d'une annonce | Mes annonces |
-|:--------:|:--------:|:--------:|
-| ![Annonces](Annonces.png) | ![Annonce](Annonce.png) | ![Mes annonces](Mes_annonces.png) |
+| Annonces | Aperçu d'une annonce | Mes annonces | Mes favoris |
+|:--------:|:--------:|:--------:|:--------:|
+| ![Annonces](menu_deroulant.png) | ![Annonce](Annonce.png) | ![Mes annonces](mes_annonces.png) | ![Mes favoris](mes_favoris.png)| 
 
 Le menu déroulant est présent sur toutes les pages du site une fois l'utilisateur connecté. Il permet d'accéder rapidement aux pages principales.
 
 #### Dépôt d'une annonce et aperçu du profil
 
-| Dépôt d'une annonce | Aperçu du profil |
+| Dépôt d'une annonce | Aperçu du profil | Modification d'une annonce | Modification du profil |
+|:--------:|:--------:|:--------:|:--------:|
+| ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](mon_profil.png) | ![Modif annonce](modif_annonce.png) | ![Modif profil](modif_mon_profil.png) |
+
+#### Carte des annonces
+
+| Carte des annonces | Aperçu d'une annonce sur la carte |
 |:--------:|:--------:|
-| ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](Profil.png) |
+| ![Carte des annonces](carte_annonces.png) | ![Aperçu d'une annonce](carte_une_annonce.png) |
+
 
 ### Back-end
 
@@ -261,5 +268,4 @@ Notre site contient les fonctionnalités jugées les plus essentielles lors de n
 - un système de chat entre centraliens une fois l'annonce acceptée
 - un système de notation des autres utilisateurs et des services rendus, incitant à la bienveillance de la communauté
 - une page de confirmation lors du dépôt d'une annonce
-- rendre la barre de recherche fonctionnelle
 - un espace de retour de la part des utilisateurs pour les développeurs

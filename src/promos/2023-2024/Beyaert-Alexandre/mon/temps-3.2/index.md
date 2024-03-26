@@ -43,10 +43,10 @@ L'OST trouve ses fondements dans l'ouvrage "Recherches sur la nature et les caus
 
 ### 2.1 L'école classique du management [4], [5] & [6]
 
-L'école classique du management (ou école formelle des organisation), initiée par les travaux de Fayol, Taylor et Weber, a profondément marqué la gestion des entreprises.
+L'école classique du management (ou école formelle des organisation), initiée par les travaux de **Fayol, Taylor et Weber,** a profondément marqué la gestion des entreprises.
 
 #### Fayol, la rationalité administrative
-Henri Fayol est un ingénieur civil des mines français. Auteur de L'Administration industrielle et générale (1916) il propose une théorie administrative qui se concentre sur la direction de l'entreprise, reposant principalement sur son expérience personelle de directeur général d'une société minière pendant 30 ans. Il estime que toutes les activités dans l'entreprise se répartissent en 6 catégories :
+**Henri Fayol est un ingénieur civil des mines français.** Auteur de **L'Administration industrielle et générale (1916)**, il propose une théorie administrative qui se concentre sur la **direction de l'entreprise,** reposant principalement sur son expérience personelle de directeur général d'une société minière pendant 30 ans. Il estime que toutes les activités dans l'entreprise se répartissent en 6 catégories :
 1. La fonction technique : production, fabrication, transformation
 2. La fonction commerciale : achats, ventes, échanges
 3. La fonction financière : recherche et gestion des capitaux
@@ -71,16 +71,16 @@ La fonction administrative est ce que l'on appelle désormais le management. Sel
 14. L'union du personnel
 
 #### Weber, la rationalité structurelle
-Max Weber, économiste et sociologue allemand, préconise lui une organisation bureaucratique de l'entreprise, qu'il considère comme garante de son efficacité.  Sa théorie de la bureaucratie, met en avant la rationalisation des organisations à travers une structure hiérarchique stricte, des règles et des procédures bien définies. Son ouvrage Économie et Société (1921) sera publié inachevé et à titre posthume.
+**Max Weber, économiste et sociologue allemand,** préconise lui une **organisation bureaucratique de l'entreprise,** qu'il considère comme garante de son efficacité.  Sa théorie de la bureaucratie, met en avant la rationalisation des organisations à travers une **structure hiérarchique stricte, des règles et des procédures bien définies.** Son ouvrage **Économie et Société (1921)** sera publié inachevé et à titre posthume.
 
 Selon Weber, la mise en place de l'administration bureaucratique représente une manifestation puissante de la rationalisation. Elle symbolise l'avancée de la domination légale ou rationnelle au détriment des formes traditionnelles ou charismatiques de légitimité, souvent prévalentes dans les structures antérieures. Weber identifie trois types de domination légitime :
-- La légitimité charismatique, fondée sur la reconnaissance des qualités extraordinaires d'un leader, telles que le charisme. Cependant, cette forme de légitimité est vulnérable aux défis posés par la succession en cas de disparition du leader charismatique.
-- La légitimité traditionnelle repose sur la croyance en la validité des traditions historiques et en la légitimité des détenteurs du pouvoir en vertu de ces traditions. Toutefois, elle est remise en question par son manque d'adaptabilité aux évolutions de l'environnement.
-- La légitimité rationnelle-légale, dont la validité découle de son caractère rationnel et de la conformité aux règles et aux lois établies. Dans le modèle organisationnel de Weber, l'autorité repose sur cette forme de légitimité, où le pouvoir est exercé conformément à des statuts légaux et à des compétences fondées sur des règles établies de manière rationnelle.
+- **La légitimité charismatique,** fondée sur la reconnaissance des qualités extraordinaires d'un leader, telles que le charisme. Cependant, cette forme de légitimité est vulnérable aux défis posés par la succession en cas de disparition du leader charismatique.
+- **La légitimité traditionnelle** repose sur la croyance en la validité des traditions historiques et en la légitimité des détenteurs du pouvoir en vertu de ces traditions. Toutefois, elle est remise en question par son manque d'adaptabilité aux évolutions de l'environnement.
+- **La légitimité rationnelle-légale,** dont la validité découle de son caractère rationnel et de la conformité aux règles et aux lois établies. Dans le modèle organisationnel de Weber, l'autorité repose sur cette forme de légitimité, où le pouvoir est exercé conformément à des statuts légaux et à des compétences fondées sur des règles établies de manière rationnelle.
 
 #### Taylor, la rationalité productive : le Taylorisme
 
-**Frederick Winslow Taylor**, ingénieur américain, s'intéresse à l'organisation des ateliers de production. 
+**Frederick Winslow Taylor, ingénieur américain,** s'intéresse à l'organisation des ateliers de production. 
 
 Il conceptualisera le constat d'Adam Smith au travers son livre **The Principles of Scientific Management (1911)** pour développer une OST consistant en une division **horizontale** (spécialisation avec parcellisation des tâches d'exécution et chronométrage pour définir "the one best way") et **verticale** (hiérarchie afin de séparer les tâches d'éxecution de celles de conception) du travail.
 
@@ -156,7 +156,7 @@ Askenazy propose des solutions inspirées du modèle américain, soulignant que 
 
 ## 4. Comparaison statistique des conditions de travai au fil du temps
 
-L'anact (agence nationale pour l'amélioration des conditions de travail) propose une étude de l'évolution de la sinistralité au travail en France différenciée entre les femmes et les hommes du secteur privé entre 2001 et 2019. [8] Sont alors étudiés l'évolution des accidents de travail, des accidents de trajet et des maladies professionnelles.
+L'**anact (agence nationale pour l'amélioration des conditions de travail)** propose une étude de l'évolution de la sinistralité au travail en France différenciée entre les femmes et les hommes du secteur privé entre 2001 et 2019. [8] Sont alors étudiés l'évolution des accidents de travail, des accidents de trajet et des maladies professionnelles.
 
 Voici quelques conclusions de l'étude :
 - "En 2019, sur 19,6 millions de salarié-e-s du secteur privé, les accidents du travail concernent 650 715 personnes, dont 62,7% d’hommes et 37,3% de femmes. "
@@ -165,13 +165,31 @@ Voici quelques conclusions de l'étude :
 
 ![Évolution différenciée par sexe des accidents de travail](evolution-accidents-travail.png)
 
-Bien qu'en baisse, les chiffres des accidents du travail en France restent loin d'être négligeables : en 2021, 640 000 accidents du travail étaient reconnus dont 39 000 dits "graves". En réaction, le gouvernement a lancé fin 2023 une campagne de prévention pour alerter l'opinion publique : "Sécurité au travail : responsabilité de l'entreprise, vigilance". [8] Dans le but de faire réagir l'opinion public sont alors mis en avant des chiffres chocs : près 700 morts par an soit 2 par jour sont liées aux accidents de travail.
+**Bien qu'en baisse, les chiffres des accidents du travail en France restent loin d'être négligeables :** en 2021, 640 000 accidents du travail étaient reconnus dont 39 000 dits "graves". En réaction, le gouvernement a lancé fin 2023 une **campagne de prévention** pour alerter l'opinion publique : "Sécurité au travail : responsabilité de l'entreprise, vigilance". [8] Dans le but de faire réagir l'opinion public sont alors mis en avant des chiffres chocs : **près 700 morts par an soit 2 par jour sont liées aux accidents de travail.**
 
 "D'après les relevés du service européen de statistiques Eurostat, la France aurait le plus mauvais taux, avec 3,53 accidents mortels du travail pour 100 000 salariés". Ce classement reste toutefois à manipuler avec précaution dans la mesure où les pays ne recensent pas de la même façon les accidents du travail.
 
-## 5. Étude de cas
+## 5. Étude de cas : pourquoi les chiffres d'accidents du travail restent élevés ? [10] & [11]
 
-## 6. Bibliographie
+À l'heure actuelle, l'industrie automobile française traverse une période de profonds bouleversements, où les modèles traditionnels de travail sont remis en question par une série de facteurs. D'une part, la **désindustrialisation** progressive du secteur, marquée par des **délocalisations** et des **restructurations** permanentes, a entraîné une baisse significative de la production et de l'emploi. Cette dynamique a été alimentée par une **concurrence** accrue avec des pays à bas coûts, incitant les constructeurs français à déplacer une partie de leur production vers des régions où les coûts de main-d'œuvre sont plus faibles. En conséquence, les conditions de travail se sont **détériorées**, avec une **pression croissante** sur les travailleurs pour maintenir la **compétitivité** et préserver les emplois en France.
+
+D'autre part, l'introduction de méthodes de travail inspirées du modèle de production lean a profondément transformé l'organisation du travail dans l'industrie automobile. Initialement présenté comme un moyen de rationaliser la production et d'améliorer la qualité, **le lean s'est vu perverti** et s'est révélé être une source de flexibilité accrue, mais aussi de **précarisation des conditions de travail.** Les travailleurs se retrouvent confrontés à des horaires de travail variables, des journées prolongées et une pression constante pour atteindre des objectifs de production. De plus, la responsabilisation des équipes de travail s'est souvent traduite par un **contrôle** accru et un **stress** accru, plutôt que par une meilleure autonomie et une amélioration de la satisfaction au travail.
+
+En parallèle, l'émergence du numérique dans l'industrie, sous la forme de l'Industrie 4.0 et de la fabrication digitale, a suscité l'espoir d'un travail moins pénible grâce à l'automatisation et à l'optimisation des processus de travail. Cependant, cette transformation technologique n'a pas nécessairement abouti à une amélioration des conditions de travail. Au contraire, elle a souvent conduit à une **intensification** du travail, avec des salariés de plus en plus **dépendants des technologies** et soumis à des rythmes de travail accélérés.
+
+Dans ce contexte, les **accords de compétitivité (dispositif mis en place par la réforme du code du travail français en 2017)** sont devenus un outil clé pour les constructeurs automobiles afin de modifier les conditions de travail et de maintenir la compétitivité de l'industrie en France. Ces accords, négociés en échange de garanties d'emploi, ont souvent conduit à une plus grande flexibilité du temps de travail et à une augmentation de la charge de travail pour les salariés.
+
+En conclusion, malgré les avancées technologiques et les changements organisationnels, les conditions de travail dans l'industrie automobile française restent précaires et marquées par une pression constante pour maintenir la compétitivité. La convergence du lean, de la digitalisation et du chantage à l'emploi a créé un environnement où les travailleurs sont confrontés à des défis croissants pour concilier leurs besoins professionnels et personnels.
+
+## 6. Conclusion
+
+Outre la révision de modèles organisationnels et fondements du management en entreprise, ce MON m'aura permis de prendre du recul quant à la qualité des conditions de travail et de ses responsables.
+
+Bien que la plupart des bouleversements technologiques (Industrialisation, robotisation) ou organisationnels (adoption du lean management notamment) semblent propices à une amélioration des conditions de travail - davantage d'autonomie, de flexibilité, travail moins laborieux, plus ergonome, seul leur implémentation effective permettra de juger véritablement d'un embellissement du travail.
+
+Lorsque dégradation des conditions il ya, le problème réside majoritairement dans l'écart qu'il existe entre théorie et pratique et notamment dans le manque de prise en compte du facteur humain lors du passage de l'un à l'autre, le "lean à la française" en est un bon exemple. Malgré ses promesses de qualité, de responsabilisation, de gain en autonomie, d'écoute de l'opérateur, ce mode de travail peut devenir néfaste au bon développement de l'opérateur s'il s'en voit perverti, accroissant pression physique et morale dans le but de conserver la performance exigée par son entreprise.  
+
+## 7. Bibliographie
 
 [1] : Chaîne YouTube Les SES en vidéos : Comment l'organisation du travail a-t-elle évolué ? (2020). Disponible ici : 3https://www.youtube.com/watch?v=VE81xDeKY0w
 [2] : UE Sciences Humaines et Sociales, Module 2 - Individu, travail, organisation, TD2 : Évolution des modèles productifs et des conditions de travail.
@@ -182,3 +200,5 @@ Bien qu'en baisse, les chiffres des accidents du travail en France restent loin 
 [7] : Philippe Askenazy : Les désordres du travail. Enquête sur le nouveau productivisme (2004), Éditions du Seuil et La République des Idées.
 [8] : Agence nationale pour l'amélioration des conditions de travail : Sinistralité au travail en France : une évolution différenciée entre les femmes et les hommes entre 2001 et 2019 (2022).
 [9] : France inter : "Accidents du travail en France : cinq chiffres à retenir" (2023). Disponible ici : https://www.radiofrance.fr/franceinter/accidents-du-travail-en-france-cinq-chiffres-a-retenir-2759756
+[10] : Juan Sebastian Carbonell : Entre délocalisations, intensification, et digitalisation : travailler dans l'industrie automobile aujourd'hui, SciencesPo laboratoire interdisciplinaire d'évaluation des politiques publiques. Disponible ici : https://www.sciencespo.fr/liepp/fr/content/juan-sebastian-carbonell-entre-delocalisations-intensification-et-digitalisation-travailler-.html
+[11] : Jérôme Gautié : Le lean à la française : management technocratique et faiblesse du dialogue social. L'exemple de l'aéronautique, SciencesPo laboratoire interdisciplinaire d'évaluation des politiques publiques. Disponible ici : https://www.sciencespo.fr/liepp/fr/content/le-lean-la-francaise-management-technocratique-et-faiblesse-du-dialogue-social-l-exemple-de-.html

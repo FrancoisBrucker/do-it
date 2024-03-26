@@ -21,7 +21,7 @@ résumé: L'objectif est de pouvoir centraliser les informations sur les mobilit
 
 ## Introduction - définition du projet
 
-Pour notre projet Do_It, nous avons voulu créer une plateforme afin d'héberger l'ensemble des mobilités des Centraliens, afin d'aiguiller les prochains élèves à trouver leur destination.
+Pour notre projet Do_It, nous avons voulu créer une plateforme permettant d'héberger l'ensemble des mobilités des Centraliens, afin d'aiguiller les prochains élèves à trouver leur destination.
 
 ### L'équipe du projet
 
@@ -53,10 +53,10 @@ La première étape afin de réaliser notre site web a été de faire une étude
 Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1As, 2As et 3As pour savoir si le projet les intéressait, s'ils seraient prêt à y accorder un peu de temps.
 
 **Contact des élèves cherchant une mobilité**
-Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectés, les informations misent en avant sont destiné majoritairement aux 1A. Nous avons donc voulu savoir quelles étaient les questions qu'ils se posent.
+Les 1A sont les acteurs principaux ciblés par notre site internet, en effet, les données collectées, les informations misent en avant sont destinées majoritairement aux 1A. Nous avons donc voulu savoir quelles étaient les questions qu'ils se posent. Nous sommes donc allés directement à leur rencontre dans les couloirs de l'école pour les questionner sur notre idée de projet. Nous avons pu grâce à leur regard extérieur lister les informations et fonctionalités primordiales à intégrer.
 
 **Contact des élèves retournant de mobilité**
-Les 2A et 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet. L'enjeux pour nous et de savoir dans quel mesure on peut les impliquer et comment leur simplifier la vie.
+Les 2A et 3A sont tout aussi important, ils vont devoir en fonction de la solution qu'on met en œuvre partager leur expérience sur leur mobilité et alimenter le site internet. L'enjeux pour nous et de savoir dans quel mesure on peut les impliquer sans qu'ils ne doivent remplir trop d'informations pour ne pas qu'ils abandonnent la démarche de partage.
 
 **Exemple de question pour mener des interviews**
 Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :
@@ -76,7 +76,7 @@ Nous avons donc établit une trame de question afin d'entamer la discussion avec
 
 L'administration est au cœur de notre projet avec un double rôle :
 
-- gérer les mobilités : étudier les demandes de mobilités, accorder ou non le droit aux élèves de les réaliser.
+- Gérer les mobilités : étudier les demandes de mobilités, accorder ou non le droit aux élèves de les réaliser.
 - Collecter l'information : l'administration, au travers de plusieurs service rassemble l'ensemble des informations de mobilités des élèves.
 
 Ainsi, nous avons contacté les différentes parties afin de comprendre quel pourrait-être leur rôle dans notre projet, dans quel mesure il pourrait les intéresser et comment pourraient-ils nous aider.
@@ -127,7 +127,7 @@ Nous avons rencontré Monsieur Merval en vue d'échanger à propos des enjeux RG
 
 ### Conclusion des rencontres
 
-Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et les intérêts de ce projet pour les élèves. Cependant des contraintes sont apparu qui ont aiguillé le projet :
+Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et les intérêts de ce projet pour les centraliens. Cependant des contraintes sont apparu et ont aiguillé le projet :
 
 - Ne pourra pas être déployé officiellement
 - L'administration ne communiquera pas de données
@@ -151,7 +151,7 @@ Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et le
 - Ville
 - Durée
 - Date de début
-- Langue requise
+- Langue requise et niveau
 - Retour d'expérience général
 - Retour sur la vie dans le pays et la ville
 - Coût de la vie
@@ -165,19 +165,19 @@ Questions spécifiques aux SMA et DD
 - Université
 - Domaine des cours
 - Liste des cours
-- Retour d'expérience
+- Retour d'expérience scolaire
 
 Questions spécifiques aux SSE, Alternant et TFE
 
 - Nom de l'entreprise ou organisme
 - Domaine d'activité
-- Retour d'expérience
+- Retour d'expérience professionnel
 
-Ces données sont à la discrétion de l'élève, il choisit ou non de les partager. L'élève pourra donc remplir ces données sur le site via la page dédié. Et sa mobilité sera donc accessible sur la page d'accueille via un ensemble de filtre.
+Ces données sont à la discrétion de l'élève, il choisit ou non de les partager. L'élève pourra donc remplir ces données sur le site via le formulaire dédié. Et sa mobilité sera donc accessible sur la page d'accueil via un ensemble de filtre.
 
 ## Design du site web
 
-Des études précédentes ainsi que des cours de design nous avons cadré notre projet, et défini un cahier des charges pour considérer notre projet aboutit.
+Nous avons utilisé nos études antérieures ainsi que nos cours de design pour structurer notre projet et élaborer un cahier des charges afin de le mener à terme.
 
 ### Persona, à qui s'adresse notre projet ?
 
@@ -195,34 +195,38 @@ L'administration a émis le souhait d'avoir des retours sur les mobilités, sur 
 
 ### Cahier des charges
 
-Ce paragraphe décris l'ensemble des objectifs à atteindre afin de considérer le projet abouti
+Ce paragraphe décris l'ensemble des objectifs à atteindre afin de considérer le projet comme abouti.
 
 Fonctionnalités :
 
 - Une visualisation des mobilités via une map
-    ○ Affichage de la map
+    ○ Affichage d'une carte du monde
     ○ Possibilité de se déplacer dessus, de zoomer
-    ○ Localisation de la ville des mobilités
+    ○ Localisation de la ville des mobilités avec un pin
+    ○ Pouvoir afficher les informations pour chaque mobilité
 - Une page pour remplir les détails de sa mobilité
     ○ Questions claires
     ○ Exhaustives
     ○ Rapide à répondre et intuitif
+- Une page FAQ
+    ○ Questions récurentes
+    ○ Liens vers les informations de moodle
 - Une base de donnée
     ○ Système de filtre
     ○ Exhaustivité
     ○ Confidentialité
-- Connexion Cas
+- Connexion CAS
 - Hébergement
   
 Critères de validation :
 
 - Facilité d'utilisation
 - Design épuré
-- Couleurs de Centrale
+- Chartre graphique appuyé sur celle de Centrale
 
 ### Planification
 
-Voici le gant des tâches à réaliser afin de compléter notre projet, réparti en sprint tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que des moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
+Voici le GANT des tâches à réaliser afin de compléter notre projet, réparti en sprint tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que des moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
 
 <img src="planning.png">
 
@@ -249,6 +253,41 @@ Voici par exemple le parcours utilisateur d'un élève :
 <video width="1280" height="720" controls>
   <source src="presentation_figma.mp4" type="video/mp4">
 </video>
+
+**Deuxième maquette - Canva**
+
+Suite à cette première maquette, on l'avait révisé pendant le cours d'UI. Cela nous a donc mené à ce design général sur lequel on s'appuiera lors du développement : 
+
+<img src="canva2.png">
+<img src="canva2-1.png">
+
+## Développement
+
+Une fois que nous avons assez d'éléments pour guider notre projet nous avons commencé le développement du site en local. 
+Pour ce faire nous avons créer un GitHub dédié afin de pouvoir tous travailler sur le même projet.
+
+<strong>Comment fonctionne le site ? </strong>
+
+Supposons qu'un utilisateur possède un compte et décide de se connecter au site. Il va d'abord s'identifier sur la page d'authentification à l'aide de son nom d'utilisateur et son mot de passse. Une fois connecté il arrive sur la page <strong>Carte des mobilités</strong> dans laquelle il peut naviguer sur la carte, filtrer et se renseigner sur chaque mobilité. Il peut ensuite ce rendre sur l'onglet <strong>FAQ</strong> pour obtenir des réponses aux questions qu'il peut se poser lors de sa recherche de mobilité. 
+Si l'édudiant veut partager son expérience de mobilité il se rend sur l'onglet <strong>Mon espace</strong>. Il peut alors remplir le formulaire dédié à l'aide de ses informations. Une fois soumis sa mobilité apparaitra à condition qu'il est bien accepté le partage de celle-ci. 
+Si il se rend de nouveau sur <strong>Mon espace</strong> il aura accès à ses informations et pourra les modifier. Il peut aussi décider à tout moment de ne plus partager sa mobilité.
+
+### Point technique : les pins de la carte
+
+Le site a été codé en JavaScript à l'aide de Node.JS, Express, Sequeelize et de nombreuses autres bibliotèques. Nous avons utilisés aussi BootStrap pour faciliter le CSS.
+
+Pour réaliser notre site le point assez important résidait dans la carte interactive, sans celle-ci le site perd un gros atout. Pour ce faire nous avons utilisé <strong>Leaflet </strong>, une bibliothèque JavaScript spécialisées dans les cartes interactives.
+
+Dans notre BDD il y a 3 tables : 
+- Users
+- Mobilites
+- Locations
+
+Chaque mobilité est rattaché à un user et un user ne peut avoir qu'une mobilité. 
+La table Locations permet d'avoir notre propre BDD des localisation des villes que l'on souhaite affichés sur la map.
+Lorsqu'un utilisateur ajoute sa mobilité, si la ville n'existe pas dans la table alors on l'ajoute en récupérant sa localisation à l'aide d'une API d'OpenStreetMap.
+Et pour les mobilités à afficher on va chercher la localisation des villes via cette table là.
+De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisés au départ n'était jamais traduit que en Français mais dans la langue du pays.
 
 ## Postérité du projet
 
