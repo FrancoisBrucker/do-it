@@ -132,4 +132,47 @@ Mercredi 21/02 : 1 heure de documentation de *Lean 540°* + 1 heure pour créer 
 Vendredi 23/02 : 2 heures d'organisation de partage des avancées + créer le support adéquat
 Samedi 24/02 : 1 heure de tri des réponses du questionnaire, choix des actions à mener, des outils et des jalons
 Lundi 26/02 : 2 heures de jalonnement de tâches et répartition des acteurs
-Mardi 27/02 : 1h échange avec Florian + lecture de la fin de *Lean 540°*
+Mardi 27/02 : 1h échange avec Florian + lecture de *Lean 540°*
+
+## Objectifs du Sprint 2
+
+Voici les objectifs que je me suis fixé :
+
+- Finir la lecture de *Lean 540°* (★☆☆☆☆, **0 heure 30 estimée**)
+- Mettre en place un processus d'organisation et de partage des tâches de mon département (★☆☆☆☆, **1 heure estimée**)
+- Documentation et recherche sur les bonnes pratiques de l'organisation d'une équipe de Formula Student (★☆☆☆☆, **2 heures estimées**)
+- Entretien avec le Team Manager (★☆☆☆☆, **1 heure estimée**)
+- Entretien avec chacun des membres (★☆☆☆☆, **2 heures estimées**)
+- Jalonnement des tâches du département à court terme et à long terme (★☆☆☆☆, **1 heure estimée**)
+- Documentation sur quels critères se baser pour choisir un fournisseur, négocier les prix et les délais (★☆☆☆☆, **2 heures estimées**)
+TOTAL : 10 heures
+
+Les étoiles correspondent au niveau de difficulté de l'objectif dans mon référentiel de débutant en Gestion de projet et en Management.
+
+## Mise en place d'un processus d'organisation et de partage des tâches de mon département
+
+### Partage des tâches
+
+Avant de jalonner les tâches, il faut d'abord les définir et les répartir au sein de l'équipe.
+On peut parler de **lots de travail** ou de **work package**. Nous avons au sein de l'association souvent procédé par Sprint, et chaque membre avait son work package à réaliser.
+Nous avons procédé de la même manière ici. Les lots étaient définis en amont par deux critères :
+
+- type de tâche (réaliser des plans, dimensionner, CAO)
+- objet de travail, en l'occurrence le sous-ensemble ou la pièce
+
+A partir des affinités et de l'expérience de chacun, nous avons ensemble dispatché les tâches. Cela a pu être réalisé suite au point LAS que j'avais mis en place.
+J'ai noté un réel redynamisme au sein du département.
+
+### Calendrier sur tableau
+
+De part plusieurs lectures que j'ai pu faire et mon expérience personnelle, j'ai décidé de mettre en place un planning sur un tableau, au sein du local de l'association. De telle sorte, chaque membre de mon département est constamment au fait des prochaines échéances, que ce soit les siennes mais aussi celles du département dans son ensemble.
+En effet, il est important de **réintégrer dans l'association une cohésion et une vue d'ensemble** du projet. L'articulation du travail de chacun est ainsi mise en exergue par ce planning : il ne suffit pas de concevoir ses pièces dans son coin, mais il faut aussi prendre en compte les pièces du voisin. Dans le même temps, cela permet aussi de mieux s'organiser avec les autres départements. Par exemple, j'ai pu planifier avant de débuter ma conception des moyeux arrières la réunion avec le département GMP (Groupe Motopropulseur) qui était indispensable à la réussite du projet.
+
+![d](planningtableau.png)
+
+### Mise en place d'un Google Tasks
+
+En supplément du planning sur le tableau, il faut aussi que chacun puisse consulter ses tâches à distance, et tenir les autres au courant de ses avancées. J'ai donc décidé de créer un Google Tasks, qui permet de créer une tâche, l'assigner à quelqu'un de l'équipe et ajouter une échéance. La personne peut la cocher en tant que *Terminée* lorsque la mission est remplie.
+Dans mon esprit, cela permettrait un management plus simple des avancées. En réalité, l'outil n'a pas été adopté par tout le monde, il a été au fur et à mesures délaissé.
+
+![](google_task.png)
