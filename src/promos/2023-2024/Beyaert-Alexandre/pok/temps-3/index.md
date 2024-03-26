@@ -15,7 +15,7 @@ résumé: Un POK traitant de la transformation de la Supply Chain à l'ère de l
 
 
 ## Contexte
-Très concerné par l'industrie et la Supply Chain - y ayant déjà été confronté lors de ma césure via un stage chez L'Oréal et souhaitant y faire mon cadre de carrière - je souhtaite réaliser un POK dans le but d'accroître ma connaissance de la Supply Chain, en particulier les enjeux auxquels elle se retrouve confronté face à la digitalisation des industries.
+Très concerné par l'industrie et la Supply Chain - y ayant déjà été confronté lors de ma césure via un stage chez L'Oréal et souhaitant y faire mon cadre de carrière - je souhaite réaliser un POK dans le but d'accroître ma connaissance de la Supply Chain, en particulier les enjeux auxquels elle se retrouve confronté face à la digitalisation des industries.
 
 Le but du 1er sprint serait de faire un état de l'art de cette thématique : sur les enjeux d'Industrie 4.0 de Lean Management, un focus sur certaines technologies et les risques qu'ils font encourir à la Supply Chain.
 
@@ -24,17 +24,17 @@ Le 2ème sprint consisterait en la préparation d'une grille d'entretien pour qu
 ## Horodateur des sprints
 
 **Sprint 1 : état de l'art**
-| Timing | Notions de bases, définitions | SC & I4.0 | I4.0 & Lean Management | Applications concrètes d'IA et IoT dans la SC | Riskis in Digital Supply Chain |
+| Timing | Notions de bases, définitions | SC & I4.0 | I4.0 & Lean Management | Applications concrètes d'IA et IoT dans la SC | Risks in Digital Supply Chain |
 | -------| -------- | -------- | -------- | -------- | -------- |
 | Sprint 1 - Temps prévu (en heures) | 2 | 4 | 2 | 2 | 2 |
 | Sprint 1 - Temps dédié (en heures) | 2 | 5 | 3 | 2 | 2 |
 
 
 **Sprint 2**
-| Timing | Identification des intervenants | Lecture de nouveaux articles (Covid / résilience / énergie...) | Grille d'entretien | Entretiens | Analyse & Restitution |
+| Timing | Identification des intervenants | Lecture d'articles | Grille d'entretien | Entretiens | Analyse & Restitution |
 | -------| -------- | -------- | -------- | -------- | -------- |
-| Sprint 2 - Temps prévu (en heures) | 1 | 3 | 2 | 3 | 2 |
-| Sprint 2 - Temps dédié (en heures) | ? | ? | ? | ? | ? |
+| Sprint 2 - Temps prévu (en heures) | 1 | 3 | 2 | 2 | 2 |
+| Sprint 2 - Temps dédié (en heures) | 1 | 4 | 2 | 2 | 2 |
 
 
 ## Sommaire
@@ -126,7 +126,16 @@ Un bon exemple prend racine dans une étude proposée sur le Groupe Volvo. [9]
 
 #### Takt Time, Cycle Time & Lead Time : les métriques temporelles de la Supply Chain
 
-https://www.picomto.com/comprendre-le-lead-time-takt-time-et-cycle-time/
+**Takt Time**: rythme de production nécessaire pour répondre à la demande des clients, exprimé comme le temps moyen pour produire un produit.
+Calcul : Temps disponible divisé par la demande du client (en nombre d'unités).
+
+**Cycle Time**: temps nécessaire pour accomplir une opération spécifique, mesuré de son début à sa fin.
+Utilité : Dimensionner les ressources, identifier les goulots d'étranglement, produire en juste-à-temps.
+Calcul : Temps disponible divisé par le nombre d'unités produites.
+
+**Lead Time**: temps total requis pour qu'un produit traverse toute la chaîne de valeur, de l'entrée de la matière première à la livraison au client.
+Utilité : Déterminer la vitesse de réalisation, gérer les stocks, planifier la demande.
+Calcul : Soustraction de la date de fin du processus par la date de début du processus.
 
 ### Revue de la littérature
 
@@ -152,8 +161,6 @@ De plus, la Blockchain offre de nouvelles perspectives intéressantes pour la du
 Cette nouvelle révolution est également une opportunité de transformer l'industrie que nous connaissons en une **industrie plus durable**. **Les enjeux sociaux, d'économie et d'environnement durables sont un des plus grands défis de la Supply Chain à l'heure actuelle** or il s'agit d'un des objectifs de cette révolution industrielle de **minimiser le gaspillage en couplant ressources et efficacité energétique.**
 
 **Pour autant, le simple recourt à la technologie n'est pas suffisant. Leur mise en place et leur exploitation n'est pas anodine, elles nécessitent des compétences techniques et organisationelles qui peuvent s'avérer être un réel obstacle au succès de la transformation digitale de la Supply Chain.**
-
---> Ajouter paragraphe sur le Big Data Analytics qui permet d'améliorer le decision-making en manageant l'incertitude et la volatilité. Il permet d'effectuer des prédictions sur les flux de données et ainsi anticiper des tendances que ce soit au niveau des marchés (approvisionnement, besoin consommateurs..) ou également pour optimiser le transport et ainsi réduire ses coûts et ses émissions carbone, le tout améliorant la satisfaction client.
 
 Au lendemain de la crise sanitaire, l'incertitude, la volatilité, les risques - approvisionnement, crise d'un produit, retards... - ont largement été renforcés. La Supply Chain s'est complexifiée et **l'usage des nouvelles technologies est la clé pour assurer intelligence, flexibilité et agilité de la Supply Chain afin d'ajuster les achats, productions, livraisons** dans les meilleures perspectives et ainsi notamment éviter le **Bullwhip effect.**
 
@@ -188,11 +195,11 @@ La question à se poser est alors la suivante : **"Où, quand et comment les ind
 
 #### Lean Supply Chain management (LSCM) and Industry 4.0 (I4.0) [13]
 
-Les pratiques de Lean Supply Chain Management sont d'ores et déjà adoptés dans différents secteurs depuis quelques décennies. Elles consistent à intégrer les flux amont et aval des différentes entités pour augmenter la valeur, réduire les coûts et les déchets, et répondre rapidement à la demande des clients.
+Les pratiques de Lean Supply Chain Management sont d'ores et déjà adoptés dans différents secteurs depuis quelques décennies. Elles consistent à **intégrer les flux amont et aval** des différentes entités pour **augmenter la valeur, réduire les coûts et les déchets, et répondre rapidement** à la demande des clients.
 
-Dès lors, les entreprises les plus performantes sont celles prenant en compte les clients et les fournisseurs externes dans leurs processus d'amélioration interne avec pour objectif d'améliorer compétitivité et efficacité.
+Dès lors, les entreprises les plus **performantes** sont celles prenant en compte les **clients et les fournisseurs externes** dans leurs processus d'amélioration interne avec pour objectif d'améliorer compétitivité et efficacité.
 
-Une approche du flux aval pour réduire les gaspillages et atteindre la durabilité dans la Supply Chain est la production Lean (heijunka), basée sur le système de production Toyota. Elle vise a réduire les irrégularités (mura), ce qui a pour effet de réduire les déchets (muda). Néanmons, cette approche aval ne suffit pas à l'obtention de résultats durables. Il est nécessaire d'employer des méthodes similaires du développement produit jusqu'à la livraison client en passant par le sourcing, l'approvisionnement et ainsi englober tous les acteurs de la Supply Chain.
+Une approche du flux aval pour réduire les gaspillages et atteindre la durabilité dans la Supply Chain est la production Lean (heijunka), basée sur le système de production Toyota. Elle vise a réduire les irrégularités (mura), ce qui a pour effet de réduire les déchets (muda). Néanmons, cette **approche aval ne suffit pas** à l'obtention de résultats durables. Il est nécessaire d'employer des méthodes similaires du développement produit jusqu'à la livraison client en passant par le sourcing, l'approvisionnement et ainsi englober tous les acteurs de la Supply Chain.
 
 L'I4.0 offre de nouvelles possibilités en reliant les différentes entités de la Supply Chain en temps réel, il reste alors à définir si une **synergie est possible entre celle-ci et le Lean Supply Chain Management.**
 
@@ -200,77 +207,73 @@ De manière globale, cette revue de la littérature montre clairement que le **L
 
 Toutefois, cette synergie semble nuancée lorsque l'on pousse l'analyse en se penchant soit au **niveau stratégique** soit au **niveau opérationnel.**
 
-Au niveau stratégique, le LSCM soutient l'I4.0 dans la mesure où il favorise son introduction. Pour aller plus loin, la review souligne même que la LSCM est une base nécessaire au bon déploiement de l'I4.0 : étant donné la qualité de la Supply Chain que permet le LSCM, elle permet de préciser une ligne de conduite claire pour mener aux bons investissements.
+**Au niveau stratégique,** le LSCM soutient l'I4.0 dans la mesure où il favorise son introduction. Pour aller plus loin, la review souligne même que la **LSCM est une base nécessaire au bon déploiement de l'I4.0** : étant donné la qualité de la Supply Chain que permet le LSCM, elle permet de préciser une ligne de conduite claire pour mener aux bons investissements.
 
-À l'opposé, au niveau opérationnel, l'I4.0 soutient le LSCM car il améliore ses pratiques. On peut notamment mentionner l'amélioration des techniques lean tel que l'outil 5S en MSP (Maitrîse Statistiques des Procédés) ou en Total Productive Maintenance (TPM) par les technologies de l'I4.0 p
-https://www.linkedin.com/pulse/what-tpm-how-implement-benefits-implementing-best-books-india-team-1f/
+À l'opposé, **au niveau opérationnel, l'I4.0 soutient le LSCM car il améliore ses pratiques.** On peut notamment mentionner l'amélioration des techniques lean tel que l'outil 5S en MSP (Maitrîse Statistiques des Procédés) ou en Total Productive Maintenance (TPM) par les technologies de l'I4.0.
 
 ![Synergie Lean et I4.0](Lean&I4.0.png)
 
-En résumé, au niveau stratégique la LSCM stimule l'intégration durable de l'I4.0 en tenant compte de la diversification des demandes clients alors qu'au niveau opérationnel l'I4.0 améliore les performances de la LSCM en permettant l'accès à un flux continu en temps réel de l'information grâce aux technologies de CloudChain, Big Data, réalité augmentée, Blockchain...
+**En résumé, au niveau stratégique la LSCM stimule l'intégration durable de l'I4.0 en tenant compte de la diversification des demandes clients alors qu'au niveau opérationnel l'I4.0 améliore les performances de la LSCM en permettant l'accès à un flux continu en temps réel de l'information grâce aux technologies de CloudChain, Big Data, réalité augmentée, Blockchain...**
 
 De cette conclusion, la review souligne 2 leçons :
-- il semble judicieux de favoriser l'adoption de la LSCM dans un premier temps afin d'établir une Supply Chain efficace et durable conductrice de l'amélioration via l'I4.0.
-- L'I4.0 joue un rôle actif dans l'amélioration continue ce qui est la caractéristique phare du LSCM.
-
-
-Blockchain in SC https://aws.amazon.com/fr/blockchain/blockchain-for-supply-chain-track-and-trace/#:~:text=With%20blockchain%2C%20supply%20chain%20companies,at%20any%20point%20in%20time.
+- il semble **judicieux de favoriser l'adoption de la LSCM dans un premier temps** afin d'établir une Supply Chain efficace et durable conductrice de l'amélioration via l'I4.0.
+- **L'I4.0 joue un rôle actif dans l'amélioration continue** ce qui est la caractéristique phare du LSCM.
 
 
 #### Impact of Digital Technology on Supply Chain Efficiency in Manufacturing Industry [14]
 
-Les résultats de l'étude réalisée à travers cette revue de littérature démontrent que l'IoT et l'IA sont les deux technologies les plus susceptibles d'atteindre l'autonomie et la capacité prédictive nécessaires pour répondre aux futures attentes de la chaîne d'approvisionnement.
+Les résultats de l'étude réalisée à travers cette revue de littérature démontrent que **l'IoT et l'IA** sont les deux technologies les plus susceptibles d'atteindre l'autonomie et la capacité prédictive nécessaires pour répondre aux futures attentes de la chaîne d'approvisionnement.
 
-Pour autant, 80% des pratiques liées à la transformation digitale ont échoué. En cause, les entreprises n'identifient pas clairement quelle technologie devrait être mise en plase en concordance avec leurs objectifs stratégiques de opérationnels et optent aveuglement sur une technologie pour le plaisir de la technologie.
+Pour autant, **80% des pratiques liées à la transformation digitale ont échoué.** En cause, les entreprises **n'identifient pas clairement quelle technologie devrait être mise en place** en concordance avec leurs objectifs stratégiques de opérationnels et **optent aveuglement sur une technologie pour le plaisir de la technologie.**
 
 Dès lors, le but de cette étude est de répondre aux 2 questions suivantes :
 - "Comment l'IA et l'IoT améliorent l'effiacité de la SUpply Chain ?"
 - "Quels facteurs influencent le succès de l'implémentation d'une Supply Chain digitale ?"
 
-Kevin Ashton, pionner britannique de la technologie, a décrit le premier l'IoT comme "l'identification unique d'un objet en connectant des choses physiques via la technologie et son réseau virtuel. Trois éléments sont nécessaires pour atteindre la fonction de l'IoT : l'acquisition de données, le transfert de données et l'analyse de données. L'IoT devient alors un réseau intelligent basé sur l'internet qui permet non seulement de collecter, transférer et analyser les données d'un appareil mais également d'observer en continu tout son environnement.
+Kevin Ashton, pionner britannique de la technologie, a décrit le premier l'IoT comme "l'identification unique d'un objet en connectant des choses physiques via la technologie et son réseau virtuel. Trois éléments sont nécessaires pour atteindre la fonction de l'IoT : **l'acquisition de données, le transfert de données et l'analyse de données.** L'IoT devient alors un réseau intelligent basé sur l'internet qui permet non seulement de collecter, transférer et analyser les données d'un appareil mais également d'observer en continu tout son environnement.
 
-L'IA quant à elle, va être couplée aux larges quantitées de données récupérées par l'IoT pour effectuer des prédictions, aider à la prise de décision. Ses applications dans la Supply Chain prennent place ans le transport, la maintenance prédictive, la prévision de la demande.
+L'IA quant à elle, va être couplée aux larges quantitées de données récupérées par l'IoT pour **effectuer des prédictions, aider à la prise de décision.** Ses applications dans la Supply Chain prennent place dans le transport, la maintenance prédictive, la prévision de la demande.
 
-Néanmoins, des doutes persistent quant à l'IA, notamment en ce qui concerne ses implications éthiques notamment sur l'éventualité d'accorder aux systèmes intelligents, comme les robots, les mêmes droits que les êtres humains. De plus, l'extraction d'informations sensibles peut compromettre la sécurité de la vie privée et même influencer les affaires politiques.
+Néanmoins, des doutes persistent quant à l'IA, notamment en ce qui concerne ses **implications éthiques** notamment sur l'éventualité d'accorder aux systèmes intelligents, comme les robots, les mêmes droits que les êtres humains. De plus, l'extraction d'informations sensibles peut compromettre la sécurité de la vie privée et même influencer les affaires politiques.
 
-Le développement de l'IA et l'IoT ont largement favorisé l'émergence de l'Industrie 4.0 et des usines intelligentes. L'IoT est alors décrite comme la partie hardware de la technologie produisant une grande quantité d'information, dirigée par l'IA en tant que software.
+Le développement de l'IA et l'IoT ont largement favorisé l'émergence de l'Industrie 4.0 et des usines intelligentes. **L'IoT est alors décrite comme la partie hardware de la technologie produisant une grande quantité d'information, dirigée par l'IA en tant que software.**
 
-Leur intérêt est le partage de l'information pertinente en temps réel permettant ainsi de prendre de meilleurs déceisions, d'optimiser les opérations, de mieux appréhender les risques. Cependant, ces technologies ne sont pas le seul élément clé contribuant à l'amélioration de la Supply Chain : elles sont un outil utile à la favorisation de la communication entre les différentes parties prenantes de la Supply Chain. "L'essence de l'IoT est de founrir des informations et des les intégrer. Cependant, ce qui améliore réellement la performance opérationnel est la vitesse de transmission de cette information et son niveau de transparence". L'information doit être complétée d'analyse, de traitement pour tirer des décisions.
+Leur intérêt est le **partage de l'information pertinente en temps réel** permettant ainsi de prendre de meilleurs déceisions, d'optimiser les opérations, de mieux appréhender les risques. Cependant, ces technologies ne sont pas le seul élément clé contribuant à l'amélioration de la Supply Chain : elles sont un outil utile à la favorisation de la communication entre les différentes parties prenantes de la Supply Chain. **"L'essence de l'IoT est de fournir des informations et des les intégrer. Cependant, ce qui améliore réellement la performance opérationnel est la vitesse de transmission de cette information et son niveau de transparence"**. L'information doit être complétée d'analyse, de traitement pour tirer des décisions.
 
 **IoT applications**
 Les applications de l'IoT sont diverses. Elles permettent d'optimiser la précision, l'intégration et la transparence de l'information.
-General Motors, par exemple, utilise les données de capteurs pour déterminer l'humidité de l'environnement de peinture des voitures. Cette donnée est envoyée à un algorithme afin de savoir si la dose est dans la gamme d'acceptation, sinon la voiture est envoyée à un autre endroit ce qui permet de miniser la re-peinture et de maximiser le temps de fonctionnement de l'usine. Cette innovation à elle seule permet à General Motors d'économiser des millions de dollars par an.
+General Motors, par exemple, utilise les données de capteurs pour déterminer l'humidité de l'environnement de peinture des voitures. Cette donnée est envoyée à un algorithme afin de savoir si la dose est dans la gamme d'acceptation, sinon la voiture est envoyée à un autre endroit ce qui permet de miniser la re-peinture et de maximiser le temps de fonctionnement de l'usine. **Cette innovation à elle seule permet à General Motors d'économiser des millions de dollars par an.**
 
-L'IoT permet également l'amélioration des stocks de 2 manières différentes. D'une part il facilite le partage des stocks inutilisés entre entreprises, d'autre part il permet de visualiser l'état des stocks en temps réel et ainsi mieux les gérer ressources. En le combinant avec l'utilisation d'un ERP, l'IoT facilite le Product Lifecycle Management.
+L'IoT permet également l'amélioration des stocks de 2 manières différentes. D'une part il facilite le partage des stocks inutilisés entre entreprises, d'autre part il permet de visualiser l'état des stocks en temps réel et ainsi mieux les gérer ressources. En le combinant avec l'utilisation d'un ERP, **l'IoT facilite le Product Lifecycle Management.**
 
-Également, la mise en oeuvre de composants IoT sur les lignes de production permmet de surveiller en permanence l'état des véhicules, d'anticiper les dommages ou défaillances potentielles et prendre des mesures préventives.
+Également, la mise en oeuvre de composants IoT sur les lignes de production permmet de **surveiller en permanence l'état des véhicules, d'anticiper les dommages ou défaillances potentielles et prendre des mesures préventives.**
 
 **IA applications**
 Différentes IA sont envisagées pour améliorer le management de la SUpply Chain, des réseaux de neurones (ANN) à la réalité virtuelle (VR) en passant par les algorithmes génétiques (AG).
 
-Ces applications permettent d'améliorer les prévisions de la demande, les décisions marketing, la maintenance système, la tarification, le choix des fournisseurs, la fabrication des produits. Elle aide notamment la logistique à éviter le gachis de ressources et diminue les risques business tels que le "Bullwhip Effect".
+Ces applications permettent d'améliorer les prévisions de la demande, les décisions marketing, la maintenance système, la tarification, le choix des fournisseurs, la fabrication des produits. Elle aide notamment la logistique à éviter le gachis de ressources et **diminue les risques business tels que le "Bullwhip Effect".**
 
-Son intérêt est de développer une stratégie opérationelle dynamique en se basant sur l'analyse des données historiques. Ainsi, elle est capable de minimiser les risques même dans des périodes chaotiques. Par exemple, lors des inondations en Thaïlande en août 2017, la division de la Supply Chain Management d'IBM à Singapour a rapidement réagi en anticipant les impacts sur les fabricants thaïlandais de disques durs. Grâce à l'IA, ils ont pu sélectionner des fournisseurs alternatifs, passer des commandes et organiser le transport afin de maintenir l'approvisionnement en disques durs et éviter toute interruption de la production.
+Son intérêt est de développer une **stratégie opérationelle dynamique** en se basant sur l'analyse des données historiques. Ainsi, elle est capable de minimiser les risques même dans des périodes chaotiques. Par exemple, lors des **inondations en Thaïlande en août 2017,** la division de la Supply Chain Management d'IBM à Singapour a rapidement réagi en anticipant les impacts sur les fabricants thaïlandais de disques durs. **Grâce à l'IA, ils ont pu sélectionner des fournisseurs alternatifs, passer des commandes et organiser le transport afin de maintenir l'approvisionnement en disques durs et éviter toute interruption de la production.**
 
-Cependant, pour effectuer de bonnes prédictions il est nécessaire d'avoir une base de données conséquente, précise, bien intégrée par l'algorithme. Une mauvaise prédiction pourrait être dramatique comme ce fut le cas pour Nike en 2001. L'entreprise a introduit un programme de prédiction de la demande mais n'a pas réussi à le mettre en œuvre ce qui a conduit à un stock insuffisant de Air Jordans et à un excès de types moins populaires. Cette expérience valut environ 100 millions de dollars de ventes perdues à Nike.
+Cependant, pour effectuer de bonnes prédictions il est n**écessaire d'avoir une base de données conséquente, précise, bien intégrée par l'algorithme.** Une mauvaise prédiction pourrait être dramatique comme ce fut le cas pour **Nike en 2001.** L'entreprise a introduit un programme de prédiction de la demande mais n'a pas réussi à le mettre en œuvre ce qui a conduit à un stock insuffisant de Air Jordans et à un excès de types moins populaires. Cette expérience valut **environ 100 millions de dollars de ventes perdues à Nike.**
 
-L'IA est également efficace pour automatiser les tâches répétitives coutant du temps et de l'argent : algorithmes d'emballage, appariement des véhicules et des cargaisons, planification des AGV (Automated Guided Vehicles).
+L'IA est également efficace pour **automatiser les tâches répétitives coutant du temps et de l'argent** : algorithmes d'emballage, appariement des véhicules et des cargaisons, planification des AGV (Automated Guided Vehicles).
 
-Tungsten Network (entreprise mondiale de facturation électronique fournissant des services de financement de la SUpply Chain) a rapporté qu'elle perdait en moyenne 125 heures par semaine sur des tâches commerciales triviales telles que des routines répétitives, des traitements de demandes fournisseurs ou des audits comptables, ce qui représente environ 6 500 heures par an de travail inefficace. En réponse, certaines organisations adoptent des applications avancées d'IA, telles que des robots, pour automatiser ces tâches répétitives.
+**Tungsten Network** (entreprise mondiale de facturation électronique fournissant des services de financement de la SUpply Chain) a rapporté qu'elle perdait en moyenne 125 heures par semaine sur des tâches commerciales triviales telles que des routines répétitives, des traitements de demandes fournisseurs ou des audits comptables, ce qui représente environ 6 500 heures par an de travail inefficace. En réponse, certaines organisations adoptent des applications avancées d'IA, telles que des robots, pour automatiser ces tâches répétitives.
 
-Un exemple typique est l'usine intelligente d'Audi, où la logistique et le transport des pièces sont gérés par des systèmes de conduite autonome, réalisant ainsi une véritable automatisation de l'usine. Des robots légers remplacent le travail fastidieux dans l'installation de parties faciles et l'assistance du système d'assemblage indique à l'opérateur où assembler les pièces les plus difficiles en plus de lui indiquer les vérifications finales.
+Un exemple typique est **l'usine intelligente d'Audi**, où la logistique et le transport des pièces sont gérés par des systèmes de conduite autonome, réalisant ainsi une véritable automatisation de l'usine. Des robots légers remplacent le travail fastidieux dans l'installation de parties faciles et l'assistance du système d'assemblage indique à l'opérateur où assembler les pièces les plus difficiles en plus de lui indiquer les vérifications finales.
 
 **Facteurs influençant le succès d'implémentation de la Supply Chain digitale**
-Les facteurs influençant la mise en œuvre réussie de la chaîne d'approvisionnement numérique sont variés et comprennent des éléments internes et externes tels que l'internationalisation croissante des entreprises, la fluctuation de la demande et les cycles de production plus rapides. Malgré les avantages potentiels, de nombreux obstacles persistent, notamment des défis technologiques, organisationnels et stratégiques. Bien que les entreprises investissent davantage dans la digitalisation de leur Supply Chain, seulement 5% sont satisfaites de leur transformation.
+Les facteurs influençant la mise en œuvre réussie de la chaîne d'approvisionnement numérique sont variés et comprennent des éléments internes et externes tels que l'internationalisation croissante des entreprises, la fluctuation de la demande et les cycles de production plus rapides. Malgré les avantages potentiels, de nombreux obstacles persistent, notamment des **défis technologiques, organisationnels et stratégiques.** Bien que les entreprises investissent davantage dans la digitalisation de leur Supply Chain, **seulement 5% sont satisfaites de leur transformation.**
 
-3 freins majoritaires aux transformations digitales semblent se prononcer.
+**3 freins majoritaires aux transformations digitales semblent se prononcer.**
 
-Le 1er est le manque de budget, la mise en place des technologies peut se montrer très onéreuse et manquer de visibilité quant à son retour sur investissement dans la mesure où ce dernier est difficile à déterminer. Qui plus est, l'intégration de ces technologies recquiert le recrutement de talents spécialisés dans ces domaines puis la formation des employés à ces nouvelles technologies.
+Le 1er est le **manque de budget,** la mise en place des technologies peut se montrer très onéreuse et **manquer de visibilité quant à son retour sur investissement** dans la mesure où ce dernier est difficile à déterminer. Qui plus est, l'intégration de ces technologies recquiert le **recrutement de talents** spécialisés dans ces domaines puis la formation des employés à ces nouvelles technologies.
 
-Vient ensuite le manque de lignes de conduites, de stratégies de déploiement. Bien que certaines entreprises soient déjà équipées en WMS, TMS, OMS... elles n'ont pas de ligne de conduite précise pour digitaliser leur métier. Il existe diverses façons de digitalisation mais la plupart des entreprises choisiront la technologie la plus populaire plutôt que celle la plus appropriée à leur développement. Ce n'est pas tant l'application de la technologie numérique qui détermine l'efficacité du management de la Supply Chain, mais plutôt le degré d'adaptation entre le mode opératoire et la technologie de l'information. La transformation réussie d'une entreprise vers le numérique repose sur le changement de business modèle.
+Vient ensuite le **manque de lignes de conduites, de stratégies de déploiement.** Bien que certaines entreprises soient déjà équipées en WMS, TMS, OMS... elles n'ont pas de ligne de conduite précise pour digitaliser leur métier. Il existe diverses façons de digitalisation mais **la plupart des entreprises choisiront la technologie la plus populaire plutôt que celle la plus appropriée à leur développement.** Ce n'est pas tant l'application de la technologie numérique qui détermine l'efficacité du management de la Supply Chain, mais plutôt le degré d'adaptation entre le mode opératoire et la technologie de l'information. La transformation réussie d'une entreprise vers le numérique repose sur le changement de business modèle.
 
-Enfin arrive la question des droits sociaux et de l'environnement. Une enquête du MIT Sloan Management Review révèle que la résistance au changement, notamment chez les dirigeants d'entreprise, constitue un obstacle majeur à la transformation numérique. 43% des 4 500 directeurs des systèmes d'information (CIO) interrogés dans l'enquête Harvard Nash/KPMG CIO ont identifié la résistance au changement comme le plus grand obstacle à une stratégie numérique réussie.
-Cette réticence est exacerbée par les préoccupations en matière de sécurité et de confidentialité des données, entravant ainsi la transparence nécessaire à la réussite des chaînes d'approvisionnement numériques. De plus, les risques croissants liés à la cybersécurité, notamment les cyber-attaques provenant de dispositifs IoT, soulignent l'urgence d'une législation et d'une réglementation appropriées pour garantir la sécurité et accroître la confiance dans le développement numérique.
+Enfin arrive la **question des droits sociaux et de l'environnement.** Une enquête du MIT Sloan Management Review révèle que la résistance au changement, notamment chez les dirigeants d'entreprise, constitue un obstacle majeur à la transformation numérique. **43% des 4 500 directeurs des systèmes d'information (CIO) interrogés dans l'enquête Harvard Nash/KPMG CIO ont identifié la résistance au changement comme le plus grand obstacle à une stratégie numérique réussie.**
+Cette réticence est exacerbée par les **préoccupations en matière de sécurité et de confidentialité des données**, entravant ainsi la transparence nécessaire à la réussite des chaînes d'approvisionnement numériques. De plus, les risques croissants liés à la cybersécurité, notamment les cyber-attaques provenant de dispositifs IoT, soulignent **l'urgence d'une législation et d'une réglementation appropriées** pour garantir la sécurité et accroître la confiance dans le développement numérique.
 
 #### Knowledge Risks in Digital Supply Chains: A Literature Review [15]
 
@@ -301,6 +304,9 @@ Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforce
 ## Sprint 2
 
 ### Identification des intervenants
+
+Différents experts de la Supply Chain ont été sollicités, la plupart à l'aide de Florian Magnani que je remercie amplement.
+Parmi eux, deux ont accepté de mettre à disposition de leur temps pour m'accorder une interview : Richard Markoff et Olivier Gléron.
 
 ### Lecture de nouveaux articles (Covid / résilience / énergie...)
 
