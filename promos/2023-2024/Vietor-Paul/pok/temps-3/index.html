@@ -131,19 +131,32 @@
 
 <h2>Objectif du projet</h2>
 <p>Pour ce projet je souhaite faire un programme permettant de générer de façon procédurale la carte d'un monde avec de multiples environnements ainsi que de l'afficher, et éventuellement de l'exporter pour l'utiliser plus tard dans d'autres programmes.</p>
-<p>Le code source sera disponible sur <a href="https://github.com/lauravietor/WorldGen">Github</a></p>
+<p>Le code source est disponible sur <a href="https://github.com/lauravietor/WorldGen">Github</a></p>
 <h2>Objectifs du premier sprint</h2>
 <ul>
-<li><s>Affichage d'une carte prédéfinie (3h)</s> -&gt; Sprint 2</li>
-<li>Recherche, choix et implémentation des algorithmes de base : (2h)
+<li>Affichage d'une carte prédéfinie (3h)</li>
+<li>Recherche, choix et implémentation des algorithmes de base : (6h total, dont :)
 <ul>
 <li>Wave function collapse (3h)</li>
 <li>Fonctions de bruits (Bruit simplexe, 1h)</li>
-<li>Autre chose ? -&gt; Sprint 2</li>
+<li>Autre chose ?</li>
 </ul>
 </li>
 </ul>
 <h2>Résultats du premier sprint</h2>
+<p>Réalisé au premier sprint :</p>
+<ul>
+<li>Recherche, choix et implémentation des algorithmes de base : (temps estimé 2h, temps réel 2h)
+<ul>
+<li>Wave function collapse (temps estimé 3h, temps réel 3h)</li>
+<li>Fonctions de bruits (temps estimé 1h, temps réel 1h)</li>
+</ul>
+</li>
+</ul>
+<p>Pas réalisé par manque de temps :</p>
+<ul>
+<li>Affichage d'une carte prédéfinie</li>
+</ul>
 <p>Pour ce premier sprint, j'ai grandement manqué de temps dans les deux semaines allouées, donc je n'ai finalement pas eu le temps de faire l'affichage et je me suis restreint à deux algorithmes, mais j'espère continuer un peu les recherches et implémenter d'autres algorithmes pour avoir par exemple des cours d'eau.</p>
 <h2>Objectifs pour le second sprint</h2>
 <ul>
@@ -155,12 +168,30 @@
 <li>Génération au niveau local avec WFC (2h)</li>
 </ul>
 <p>Et je me garde à priori 1h pour d'éventuelles difficultés imprévues, que je compte utiliser pour implémenter un export de monde si je ne l'utilise finalement pas pour autre chose.</p>
+<h2>Résultats du second sprint</h2>
+<p>Réalisé au second sprint :</p>
+<ul>
+<li>Affichage de la carte (temps estimé 4h, temps réel 7h)</li>
+<li>Changement entre la vue globale et la vue locale (temps estimé 1h, temps réel 1h)</li>
+<li>Génération de la hauteur du terrain et de biomes avec le bruit simplexe (temps estimé 2h, temps réel 2h)</li>
+<li>Chargement d'un ensemble de tuiles pour l'algorithme WFC (temps estimé 1h, temps réel 1h)</li>
+<li>Génération au niveau local avec WFC (temps estimé 2h, temps réel 3h)</li>
+</ul>
+<p>Pas réalisé par manque de temps :</p>
+<ul>
+<li>Génération de cours d'eau</li>
+</ul>
+<p>Finalement, j'ai eu de nombreux soucis avec l'affichage de la carte, qui a fini par me prendre bien plus longtemps que prévu, et le débogage de la génération au niveau local était particulièrement long car mon implémentation n'est pas bien optimisée, donc je n'ai pas eu le temps de m'intéresser à la génération de cours d'eau. Voici quelques exemples de ce que j'ai pu obtenir comme résultats :</p>
+<p><img src="bonjourdoit.png" alt=""><br>
+<img src="bonjourcentrale.png" alt=""><br>
+<img src="bonjourcentrale_zoom.png" alt=""></p>
 <h2>Ressources</h2>
 <p>Un tutoriel pour la génération de cartes de planète avec Unity : <a href="http://www.jgallant.com/procedurally-generating-wrapping-world-maps-in-unity-csharp-part-1/">http://www.jgallant.com/procedurally-generating-wrapping-world-maps-in-unity-csharp-part-1/</a><br>
 La page Wikipédia sur le bruit simplexe (en anglais) : <a href="https://en.wikipedia.org/wiki/Simplex_noise">https://en.wikipedia.org/wiki/Simplex_noise</a><br>
 Une vidéo Youtube sur l'algorithme Wave Function Collapse : <a href="https://youtu.be/2SuvO4Gi7uY">https://youtu.be/2SuvO4Gi7uY</a><br>
 Une présentation par un des développeurs de Minecraft sur la génération du monde de Minecraft : <a href="https://youtu.be/ob3VwY4JyzE">https://youtu.be/ob3VwY4JyzE</a><br>
-Dépôt Github de WaveFunctionCollapse : <a href="https://github.com/mxgmn/WaveFunctionCollapse">https://github.com/mxgmn/WaveFunctionCollapse</a></p>
+Dépôt Github de WaveFunctionCollapse : <a href="https://github.com/mxgmn/WaveFunctionCollapse">https://github.com/mxgmn/WaveFunctionCollapse</a><br>
+Tileset utilisé : <a href="https://jamiebrownhill.itch.io/solaria-rural-village">https://jamiebrownhill.itch.io/solaria-rural-village</a></p>
 
 
 </article>
