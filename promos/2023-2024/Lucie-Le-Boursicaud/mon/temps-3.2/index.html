@@ -148,7 +148,6 @@
 </div></div>
 <h3>Introduction</h3>
 <p>Pour ce MON je vais donc me baser sur le cours <a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/projet-TDD/">Programmation par les tests</a> de François Brucker. On utilisera tout au long des chapitres le language Python.</p>
-<p>python -m pytest test_monnaie.py</p>
 <h2>Sommaire</h2>
 <ol>
 <li>Cours de François Brucker</li>
@@ -282,9 +281,11 @@ En ajoutant un test supplémentaire, les duplications dans la méthode <strong>e
 <p>Ce chapitre illustre la démarche itérative du TDD pour implémenter la comparaison d'égalité entre les objets Dollar, en mettant l'accent sur la détection des duplications et la résolution progressive des problèmes identifiés.</p>
 <h3>4. <strong>mul</strong></h3>
 <p>Le quatrième chapitre se concentre sur l'implémentation de la méthode spéciale <strong>mul</strong> pour permettre la multiplication des objets Dollar.</p>
-<p>-<strong>Todo list :</strong><br>
-La mise à jour de la liste des tâches inclut l'implémentation de la méthode spéciale <strong>mul</strong> pour permettre la multiplication des objets Dollar.</p>
 <ul>
+<li>
+<p><strong>Todo list :</strong><br>
+La mise à jour de la liste des tâches inclut l'implémentation de la méthode spéciale <strong>mul</strong> pour permettre la multiplication des objets Dollar.</p>
+</li>
 <li>
 <p><strong>Écriture des tests : </strong><br>
 Les tests sont adaptés pour inclure l'utilisation de l'opérateur de multiplication (*) entre les objets Dollar et un scalaire.</p>
@@ -301,9 +302,11 @@ Après avoir complété l'implémentation de la méthode spéciale <strong>mul</
 <p>ce chapitre illustre comment utiliser la méthodologie TDD pour implémenter la multiplication des objets Dollar en ajoutant la méthode spéciale <strong>mul</strong>. Ce processus met en évidence la progression itérative du développement logiciel en identifiant les tâches à accomplir et en les réalisant une par une.</p>
 <h3>5. Privacy</h3>
 <p>Le cinquième chapitre se concentre sur la confidentialité de l'attribut montant et sur la manière de tester les objets Dollar en se concentrant sur leur comportement externe plutôt que sur leur implémentation interne.</p>
-<p>-<strong>Todo list mise à jour : </strong><br>
-La confidentialité de l'attribut montant est ajoutée à la liste des tâches à accomplir.</p>
 <ul>
+<li>
+<p><strong>Todo list mise à jour : </strong><br>
+La confidentialité de l'attribut montant est ajoutée à la liste des tâches à accomplir.</p>
+</li>
 <li>
 <p><strong>Écriture des tests : </strong><br>
 Les tests sont adaptés pour ne pas faire référence directe à l'attribut montant. Ils se concentrent uniquement sur le comportement des objets Dollar, en utilisant les opérateurs définis (<strong>mul</strong>) pour les tester.</p>
@@ -312,19 +315,23 @@ Les tests sont adaptés pour ne pas faire référence directe à l'attribut mont
 <p><strong>Bonnes pratiques de test : </strong><br>
 Il est souligné qu'il est préférable de tester le comportement d'une classe plutôt que de ses attributs internes. Cela garantit que les tests restent robustes même lorsque l'implémentation de la classe change.</p>
 </li>
-</ul>
-<p>-<strong>Progression itérative :</strong><br>
+<li>
+<p><strong>Progression itérative :</strong><br>
 À mesure que de nouveaux tests sont ajoutés et que l'implémentation évolue, la liste des tâches est mise à jour pour refléter les prochaines étapes à réaliser.</p>
+</li>
+</ul>
 <p>Ce chapitre illustre l'importance de tester le comportement externe des objets Dollar et de maintenir la confidentialité de leur implémentation interne. La méthodologie TDD est utilisée pour guider le développement de manière itérative, en se concentrant sur les fonctionnalités à implémenter et en vérifiant leur fonctionnement par le biais de tests.</p>
 <h3>6. Dollar</h3>
 <p>Dans ce chapitre, l'objectif est de commencer à introduire les Francs dans le système de gestion de la monnaie.</p>
 <ul>
-<li><strong>Todo list mise à jour :</strong><br>
-L'objectif ambitieux de la conversion de $5 + 2.5CHF = $10 est découpé en sous-tâches. La première étape est de permettre la multiplication de 5 CHF par 2 pour obtenir 10 CHF.</li>
-</ul>
-<p>-<strong>Écriture des tests :</strong><br>
+<li>
+<p><strong>Todo list mise à jour :</strong><br>
+L'objectif ambitieux de la conversion de $5 + 2.5CHF = $10 est découpé en sous-tâches. La première étape est de permettre la multiplication de 5 CHF par 2 pour obtenir 10 CHF.</p>
+</li>
+<li>
+<p><strong>Écriture des tests :</strong><br>
 Deux nouveaux tests sont ajoutés pour les Francs, similaire à ceux des Dollars mais adaptés à cette nouvelle devise.</p>
-<ul>
+</li>
 <li>
 <p><strong>Implémentation des Francs :</strong><br>
 Pour faire passer les tests, une classe Franc est créée en copiant/collant la classe Dollar et en la modifiant pour refléter les caractéristiques des Francs.</p>
@@ -337,9 +344,11 @@ Après avoir fait passer les tests, la todo list est mise à jour pour refléter
 <p>Ce chapitre montre comment découper des tâches ambitieuses en étapes plus gérables et comment commencer à intégrer de nouvelles fonctionnalités dans le système en utilisant la méthodologie TDD. La todo list sert de guide pour s'assurer que toutes les étapes nécessaires sont prises en compte et réalisées de manière itérative.</p>
 <h3>7. même == pour tous</h3>
 <p>Ce chapitre se concentre sur l'élimination de la duplication du code identique présent dans les classes Dollar et Franc en les faisant hériter d'une classe mère Monnaie.</p>
-<p>-<strong>Todo list mise à jour : </strong><br>
-Un nouvel item est ajouté pour éliminer la duplication du code identique présent dans les classes Dollar et Franc.</p>
 <ul>
+<li>
+<p><strong>Todo list mise à jour : </strong><br>
+Un nouvel item est ajouté pour éliminer la duplication du code identique présent dans les classes Dollar et Franc.</p>
+</li>
 <li>
 <p><strong>Création de la classe abstraite Monnaie :</strong><br>
 Une classe abstraite Monnaie est créée pour englober les fonctionnalités communes des classes Dollar et Franc. Initialement, cette classe ne contient aucune méthode.</p>
@@ -348,95 +357,173 @@ Une classe abstraite Monnaie est créée pour englober les fonctionnalités comm
 <p><strong>Vérification des tests :</strong><br>
 Les tests sont exécutés pour vérifier qu'ils passent initialement.</p>
 </li>
-</ul>
-<p>-<strong>Héritage de Dollar et Franc de la classe Monnaie :</strong><br>
+<li>
+<p><strong>Héritage de Dollar et Franc de la classe Monnaie :</strong><br>
 Les classes Dollar et Franc sont modifiées pour hériter de la classe Monnaie.</p>
-<p>-<strong>Remontée de la méthode __init__ : </strong><br>
+</li>
+<li>
+<p><strong>Remontée de la méthode __init__ : </strong><br>
 Comme la méthode __init__ est identique dans les classes Dollar et Franc, elle est remontée dans la classe mère Monnaie.</p>
-<p>-<strong>Ajout de tests d'égalité pour les Francs :</strong><br>
+</li>
+<li>
+<p><strong>Ajout de tests d'égalité pour les Francs :</strong><br>
 Des tests d'égalité et de différence sont ajoutés pour les Francs afin de garantir que le mouvement de la méthode __eq__ dans la classe mère Monnaie se déroule correctement.</p>
-<p>-<strong>Todo list mise à jour :</strong><br>
+</li>
+<li>
+<p><strong>Todo list mise à jour :</strong><br>
 La todo list est mise à jour pour inclure la comparaison entre les Francs et les Dollars.</p>
-<p>-<strong>Remontée de la méthode __eq__ :</strong><br>
+</li>
+<li>
+<p><strong>Remontée de la méthode __eq__ :</strong><br>
 La méthode __eq__ est finalement remontée dans la classe mère Monnaie pour éliminer la duplication du code.</p>
+</li>
+</ul>
 <p>Ce chapitre montre l'importance de l'élimination de la duplication du code pour maintenir un code propre et éviter les répétitions inutiles. L'utilisation de l'héritage et de la remontée des méthodes communes dans une classe mère permet d'optimiser la structure du code.</p>
 <h3>8. Franc/Dollar</h3>
 <p>Ce chapitre se concentre sur la comparaison entre les objets de classe Franc et Dollar.</p>
 <ul>
-<li><strong>Todo list mise à jour :</strong><br>
-Un nouvel item est ajouté pour comparer les Francs et les Dollars.</li>
-</ul>
-<p>-<strong>Ajout d'un test de comparaison :</strong><br>
+<li>
+<p><strong>Todo list mise à jour :</strong><br>
+Un nouvel item est ajouté pour comparer les Francs et les Dollars.</p>
+</li>
+<li>
+<p><strong>Ajout d'un test de comparaison :</strong><br>
 Un test est ajouté pour vérifier que des Francs ne sont pas égaux à des Dollars.</p>
-<p>-<strong>Correction de la méthode __eq__ :</strong><br>
+</li>
+<li>
+<p><strong>Correction de la méthode __eq__ :</strong><br>
 La méthode __eq__ est modifiée pour vérifier que les classes des deux objets à comparer sont différentes.</p>
-<p>-<strong>Réflexion sur la conception :</strong><br>
+</li>
+<li>
+<p><strong>Réflexion sur la conception :</strong><br>
 Une réflexion est menée sur la manière dont la comparaison est effectuée. Il est souligné que la comparaison actuelle est basée sur les classes des objets plutôt que sur leur signification réelle en termes de devises. Cela soulève des préoccupations quant à la conception du code.</p>
-<p>-<strong>Mise à jour de la todo list :</strong><br>
+</li>
+<li>
+<p><strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer une meilleure façon de gérer la comparaison des devises, en utilisant leur signification plutôt que leur classe.</p>
+</li>
+</ul>
 <p>Ce chapitre met en lumière l'importance de coder en tenant compte de la signification des objets plutôt que de leur implémentation interne. La todo list est mise à jour pour réfléchir à une meilleure façon de gérer la comparaison des devises.</p>
 <h3>9. Duplication Franc/Dollar</h3>
 <p>Dans ce chapitre, l'objectif est de supprimer la duplication entre les classes Franc et Dollar en les remplaçant par une seule classe, tout en garantissant que toutes les fonctionnalités sont préservées grâce aux tests.</p>
-<p>-<strong>Mise à jour de la todo list :</strong><br>
+<ul>
+<li>
+<p><strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer la possibilité de supprimer les tests de la classe Franc.</p>
-<p>-<strong>Utilisation du design pattern factory :</strong><br>
+</li>
+<li>
+<p><strong>Utilisation du design pattern factory :</strong><br>
 Les tests sont modifiés pour utiliser une fonction factory, <code>dollar</code>, qui crée des objets de la classe Dollar.</p>
-<p>-<strong>Implémentation de la fonction <code>dollar</code> :</strong><br>
+</li>
+<li>
+<p><strong>Implémentation de la fonction <code>dollar</code> :</strong><br>
 Une fonction <code>dollar</code> est ajoutée dans le module <code>monnaie</code> pour créer des objets de la classe Dollar.</p>
-<p>-<strong>Remplacement des références à Dollar :</strong><br>
+</li>
+<li>
+<p><strong>Remplacement des références à Dollar :</strong><br>
 Toutes les références à la classe Dollar dans les tests sont remplacées par des appels à la fonction <code>dollar</code> du module <code>monnaie</code>.</p>
-<p>-<strong>Question sur l'utilité des tests de Franc :</strong><br>
+</li>
+<li>
+<p><strong>Question sur l'utilité des tests de Franc :</strong><br>
 Une réflexion est menée sur l'utilité de conserver les tests de la classe Franc, étant donné que les deux classes Franc et Dollar seront unifiées. Cette question est ajoutée à la todo list.</p>
-<p>-<strong>Remplacement des références à Franc :</strong><br>
+</li>
+<li>
+<p><strong>Remplacement des références à Franc :</strong><br>
 De manière similaire à Dollar, toutes les références à la classe Franc dans les tests sont remplacées par des appels à une fonction factory <code>franc</code> du module <code>monnaie</code>.</p>
-<p>-<strong>Réflexion sur la suppression des duplications :</strong><br>
+</li>
+<li>
+<p><strong>Réflexion sur la suppression des duplications :</strong><br>
 Bien que les tests aient été modifiés pour utiliser le factory, des duplications persistent entre Franc et Dollar dans le code. Cependant, avant de les supprimer, une réflexion est menée sur la manière de les remplacer par quelque chose qui les unifie.</p>
-<p>-<strong>Mise à jour de la todo list :</strong><br>
+</li>
+<li>
+<p><strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour gérer la suppression des duplications entre Franc et Dollar.</p>
+</li>
+</ul>
 <p>Ce chapitre montre comment utiliser le design pattern factory pour remplacer les références directes aux classes Franc et Dollar par des fonctions de création d'objets, en préparation de leur unification.</p>
 <h3>10. Devise</h3>
 <p>Dans ce chapitre, l'objectif est de remplacer les classes Franc et Dollar par une seule classe Monnaie tout en maintenant les fonctionnalités existantes et en éliminant les duplications de code.</p>
-<p>-<strong>Mise à jour de la todo list :</strong><br>
+<ul>
+<li>
+<p><strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour explorer la possibilité de supprimer les tests de la classe Franc.</p>
-<p>-<strong>Ajout de l'attribut devise :</strong><br>
+</li>
+<li>
+<p><strong>Ajout de l'attribut devise :</strong><br>
 Un attribut <code>devise</code> est ajouté aux classes Franc et Dollar pour distinguer les devises.</p>
-<p>-<strong>Refactoring pattern : Pull Up Field : </strong><br>
+</li>
+<li>
+<p><strong>Refactoring pattern : Pull Up Field : </strong><br>
 L'attribut <code>devise</code> est remonté dans la classe Monnaie à l'aide du pattern de refactoring Pull Up Field.</p>
-<p>-<strong>Refactoring pattern : Pull Up Method :</strong><br>
+</li>
+<li>
+<p><strong>Refactoring pattern : Pull Up Method :</strong><br>
 Les constructeurs des classes Franc et Dollar sont modifiés pour avoir la même signature que celui de la classe Monnaie, puis les méthodes de création d'objets (factory methods) sont utilisées pour créer des objets Monnaie. Les méthodes <code>__mul__</code> des classes Franc et Dollar sont également modifiées pour utiliser les factory methods.</p>
-<p>-<strong>Uniformisation des constructeurs :</strong><br>
+</li>
+<li>
+<p><strong>Uniformisation des constructeurs :</strong><br>
 Les constructeurs des classes Franc et Dollar sont rendus identiques en ajoutant un paramètre de devise utilisé pour créer des objets Monnaie.</p>
-<p>-<strong>Suppression des constructeurs :</strong><br>
+</li>
+<li>
+<p><strong>Suppression des constructeurs :</strong><br>
 Les constructeurs des classes Franc et Dollar sont supprimés une fois qu'ils sont devenus identiques à celui de la classe Monnaie.</p>
+</li>
+</ul>
 <p>Ce chapitre montre comment unifier les classes Franc et Dollar en une seule classe Monnaie tout en maintenant les fonctionnalités et en éliminant les duplications de code, grâce à l'utilisation de patterns de refactoring et de bonnes pratiques de conception.</p>
 <h3>11. Unification de *</h3>
 <p>Dans ce chapitre, l'objectif était de supprimer les méthodes de multiplication <code>__mul__</code> des classes Franc et Dollar pour les unifier dans la classe Monnaie.</p>
-<p>-<strong>Mise à jour de la todo list :</strong><br>
+<ul>
+<li>
+<p><strong>Mise à jour de la todo list :</strong><br>
 Un nouvel item est ajouté pour supprimer les duplications entre Franc et Dollar.</p>
-<p>-<strong>Modification de <code>__mul__</code> dans Monnaie :</strong><br>
+</li>
+<li>
+<p><strong>Modification de <code>__mul__</code> dans Monnaie :</strong><br>
 Une méthode <code>__mul__</code> est ajoutée dans la classe Monnaie pour remplacer les méthodes <code>__mul__</code> des classes Franc et Dollar.</p>
-<p>-<strong>Suppression de <code>__mul__</code> dans Franc :</strong><br>
+</li>
+<li>
+<p><strong>Suppression de <code>__mul__</code> dans Franc :</strong><br>
 La méthode <code>__mul__</code> est supprimée de la classe Franc.</p>
-<p>-<strong>Correction de <code>__eq__</code> dans Monnaie : </strong><br>
+</li>
+<li>
+<p><strong>Correction de <code>__eq__</code> dans Monnaie : </strong><br>
 La méthode <code>__eq__</code> de la classe Monnaie est modifiée pour utiliser l'attribut <code>devise</code> plutôt que la classe elle-même.</p>
-<p>-<strong>Suppression de <code>__mul__</code> dans Dollar :</strong><br>
+</li>
+<li>
+<p><strong>Suppression de <code>__mul__</code> dans Dollar :</strong><br>
 La méthode <code>__mul__</code> est également supprimée de la classe Dollar.</p>
-<p>-<strong>Utilisation du constructeur de Monnaie :</strong><br>
+</li>
+<li>
+<p><strong>Utilisation du constructeur de Monnaie :</strong><br>
 Les factory methods pour créer des objets sont mises à jour pour utiliser le constructeur de la classe Monnaie.</p>
-<p>-<strong>Suppression des classes Franc et Dollar :</strong><br>
+</li>
+<li>
+<p><strong>Suppression des classes Franc et Dollar :</strong><br>
 Finalement, les classes Franc et Dollar sont supprimées une fois que toutes les fonctionnalités sont unifiées dans la classe Monnaie.</p>
+</li>
+</ul>
 <p>Ce chapitre montre comment unifier les méthodes de multiplication <code>__mul__</code> des classes Franc et Dollar dans la classe Monnaie, en éliminant les duplications de code et en maintenant les fonctionnalités existantes.</p>
 <p>PS : il faut bien penser à retirer l'importation des classes Dollar et Franc qui n'existe plus du fichier des tests sinon ça marche pas :)</p>
 <h3>12. Addition 1/3</h3>
 <p>Dans cette étape, nous avons ajouté la fonctionnalité d'addition pour une unique devise.</p>
-<p>-<strong>Todo list mise à jour :</strong><br>
+<ul>
+<li>
+<p><strong>Todo list mise à jour :</strong><br>
 Un nouvel item a été ajouté pour traiter l'addition de deux montants de la même devise.</p>
-<p>-<strong>Écriture du test d'addition : </strong><br>
+</li>
+<li>
+<p><strong>Écriture du test d'addition : </strong><br>
 Un test a été écrit pour vérifier que l'addition de $5 et $2 est égale à $7 en utilisant la méthode <code>plus</code> de la classe Monnaie. Cela garantit que l'opération d'addition fonctionne correctement.</p>
-<p>-<strong>Implémentation de l'addition : </strong><br>
+</li>
+<li>
+<p><strong>Implémentation de l'addition : </strong><br>
 Dans la classe Monnaie, la méthode <code>plus</code> a été remplacée par <code>__add__</code> pour permettre une syntaxe plus élégante lors de l'addition de deux montants. L'implémentation de <code>__add__</code> crée un nouvel objet Monnaie avec le montant total de l'addition et la même devise que les objets d'origine.</p>
-<p>-<strong>Mise à jour du test :</strong><br>
+</li>
+<li>
+<p><strong>Mise à jour du test :</strong><br>
 Le test a été ajusté pour utiliser l'opérateur <code>+</code> à la place de la méthode <code>plus</code>.</p>
+</li>
+</ul>
 <p>Cette étape nous a permis d'ajouter la fonctionnalité d'addition pour une unique devise, ce qui constitue un progrès dans la réalisation des opérations monétaires de base.</p>
 <p>Voici le test que j'ai ajouté :</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">def test_addition():
@@ -471,85 +558,161 @@ Après vérification ma fonction <strong> plus </strong> est similaire à la cor
 </code></pre>
 <h3>13. Addition</h3>
 <p>Avant de traiter l'addition de deux monnaies différentes, il est nécessaire de commencer par traiter le cas de l'addition de montants d'une même monnaie.</p>
-<p>-<strong>Écrire un test :</strong><br>
+<ul>
+<li>
+<p><strong>Écrire un test :</strong><br>
 Commencez par écrire un test pour vérifier que $5 + $2 donne $7.</p>
-<p>-<strong>Implémenter la méthode plus :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la méthode plus :</strong><br>
 Créez une méthode <code>plus</code> dans la classe <code>Monnaie</code> qui prend une autre monnaie en paramètre et retourne la somme des deux montants.</p>
-<p>-<strong>Utiliser <strong>add</strong> :</strong><br>
+</li>
+<li>
+<p><strong>Utiliser <strong>add</strong> :</strong><br>
 Remplacez la méthode <code>plus</code> par <code>__add__</code> dans la classe <code>Monnaie</code> pour utiliser l'opérateur <code>+</code>.</p>
-<p>-<strong>Écrire le test :</strong><br>
+</li>
+<li>
+<p><strong>Écrire le test :</strong><br>
 Écrivez un test pour vérifier que l'opérateur <code>+</code> fonctionne correctement avec des montants de même devise.</p>
-<p>-<strong>Implémenter <strong>add</strong> :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter <strong>add</strong> :</strong><br>
 Implémentez la méthode <code>__add__</code> dans la classe <code>Monnaie</code> pour retourner une nouvelle instance de <code>Monnaie</code> contenant la somme des montants.</p>
-<p>-<strong>Valider le test :</strong><br>
+</li>
+<li>
+<p><strong>Valider le test :</strong><br>
 Exécutez les tests pour vérifier que l'opérateur <code>+</code> fonctionne comme prévu pour les montants de même devise.</p>
+</li>
+</ul>
 <p>Cela permet de garantir que l'addition de montants d'une même monnaie fonctionne correctement avant de passer à des cas plus complexes impliquant des devises différentes.</p>
 <p>Après avoir traité l'addition de montants d'une même monnaie, il est nécessaire de résoudre le problème de l'addition de montants de devises différentes.</p>
-<p>-<strong>Identifier le problème :</strong><br>
+<ul>
+<li>
+<p><strong>Identifier le problème :</strong><br>
 L'addition de montants de devises différentes pose des défis car les taux de change peuvent varier avec le temps, ce qui signifie que la valeur de la somme peut également changer.</p>
-<p>-<strong>Écrire un test :</strong><br>
+</li>
+<li>
+<p><strong>Écrire un test :</strong><br>
 Écrivez un test pour vérifier que la conversion d'une somme de devises différentes en une devise donnée produit le résultat attendu.</p>
-<p>-<strong>Implémenter la conversion :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la conversion :</strong><br>
 Créez une classe <code>Banque</code> avec une méthode <code>conversion</code> qui prend une somme et une devise cible en paramètres, puis retourne la conversion de la somme dans la devise cible.</p>
-<p>-<strong>Écrire le test final :</strong><br>
+</li>
+<li>
+<p><strong>Écrire le test final :</strong><br>
 Utilisez la classe <code>Banque</code> pour convertir une somme de montants de devises différentes en une devise cible, puis vérifiez que le résultat correspond à ce qui est attendu.</p>
-<p>-<strong>Implémenter la conversion :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la conversion :</strong><br>
 Implémentez la logique de conversion dans la méthode <code>conversion</code> de la classe <code>Banque</code>.</p>
-<p>-<strong>Valider le test :</strong><br>
+</li>
+<li>
+<p><strong>Valider le test :</strong><br>
 Exécutez les tests pour vérifier que la conversion de la somme de devises différentes produit le résultat attendu.</p>
+</li>
+</ul>
 <p>Cela permet de résoudre le problème de l'addition de montants de devises différentes en assurant une conversion appropriée des montants avant de les additionner.</p>
 <p>Après avoir traité l'addition de montants de devises différentes, il est temps de généraliser cette approche pour toutes les opérations d'addition.</p>
-<p>-<strong>Définir la nouvelle approche :</strong><br>
+<ul>
+<li>
+<p><strong>Définir la nouvelle approche :</strong><br>
 Considérez que toute somme de deux montants de monnaies différentes est une nouvelle classe appelée <code>Somme</code>.</p>
-<p>-<strong>Mettre à jour la liste de tâches :</strong><br>
+</li>
+<li>
+<p><strong>Mettre à jour la liste de tâches :</strong><br>
 Modifiez la liste de tâches pour inclure la nécessité de rendre $5 + $2 égal à $7, tout en maintenant la conversion correcte pour les montants de devises différentes.</p>
-<p>-<strong>Supprimer les tests obsolètes :</strong><br>
+</li>
+<li>
+<p><strong>Supprimer les tests obsolètes :</strong><br>
 Supprimez le test vérifiant que $5 + $2 égale $7, car cela ne sera plus vrai avec la nouvelle approche.</p>
-<p>-<strong>Écrire un test pour la classe <code>Somme</code> :</strong><br>
+</li>
+<li>
+<p><strong>Écrire un test pour la classe <code>Somme</code> :</strong><br>
 Écrivez un test pour vérifier que la somme de deux montants de monnaies différentes crée une instance de la classe <code>Somme</code> contenant les montants d'origine.</p>
-<p>-<strong>Implémenter la classe <code>Somme</code> :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la classe <code>Somme</code> :</strong><br>
 Créez une classe <code>Somme</code> avec des attributs <code>gauche</code> et <code>droite</code> pour stocker les montants d'origine.</p>
-<p>-<strong>Modifier l'implémentation de l'addition :</strong><br>
+</li>
+<li>
+<p><strong>Modifier l'implémentation de l'addition :</strong><br>
 Dans la classe <code>Monnaie</code>, mettez à jour la méthode <code>__add__</code> pour renvoyer une instance de <code>Somme</code> au lieu d'une nouvelle monnaie.</p>
-<p>-<strong>Valider le test :</strong><br>
+</li>
+<li>
+<p><strong>Valider le test :</strong><br>
 Exécutez les tests pour vérifier que la somme de deux montants de monnaies différentes crée une instance de <code>Somme</code> contenant les montants d'origine.</p>
+</li>
+</ul>
 <p>En suivant ces étapes, l'ajout de montants de devises différentes sera correctement géré par la classe <code>Somme</code>, tandis que les montants de la même devise resteront gérés par la classe <code>Monnaie</code>.</p>
 <h3>14. Conversion</h3>
 <p>Pour permettre que $5 + $2 corresponde à quelque chose qui vaut à $7, nous devons travailler sur la méthode <code>conversion</code> de la classe <code>Banque</code>. Actuellement, c'est une méthode fictive qui renvoie $7. Nous devons la rendre fonctionnelle pour gérer les conversions de devises.</p>
-<p>-<strong>Supprimer les duplications dans la méthode <code>conversion</code> de la <code>Banque</code> :</strong><br>
+<ul>
+<li>
+<p><strong>Supprimer les duplications dans la méthode <code>conversion</code> de la <code>Banque</code> :</strong><br>
 Cette méthode doit pouvoir gérer les sommes de monnaies en supposant que les parties gauche et droite sont des <code>Monnaie</code>, et que le taux de change est toujours de 1 pour 1.</p>
-<p>-<strong>Implémenter une nouvelle méthode de conversion dans la classe <code>Somme</code> :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter une nouvelle méthode de conversion dans la classe <code>Somme</code> :</strong><br>
 Pour éviter que la classe <code>Banque</code> ait une connaissance directe des attributs de <code>Monnaie</code>, déplacez la logique de conversion de la banque vers une méthode <code>conversion</code> dans la classe <code>Somme</code>.</p>
-<p>-<strong>Mettre à jour la liste de tâches :</strong><br>
+</li>
+<li>
+<p><strong>Mettre à jour la liste de tâches :</strong><br>
 Ajoutez à la liste de tâches la nécessité de faire en sorte que la méthode <code>Somme.conversion(devise)</code> effectue réellement des conversions.</p>
+</li>
+</ul>
 <p>L'implémentation actuelle de la méthode <code>Banque.conversion</code> pose des problèmes car la banque doit connaître l'implémentation de <code>Monnaie</code> pour accéder à l'attribut <code>montant</code>. Cela viole le principe de la loi de Déméter en matière de développement orienté objet.</p>
 <ul>
 <li><strong>Remonter la méthode de conversion de la <code>Banque</code> à la <code>Somme</code> :</strong><br>
 Cette étape permet de réduire le niveau de connaissance de la banque sur les objets environnants, suivant ainsi la loi de Déméter.</li>
 </ul>
 <p>L'étape précédente a permis de baisser le niveau de connaissance de la banque, mais il reste à traiter le cas où la méthode <code>Banque.conversion</code> a une <code>Monnaie</code> comme paramètre. Pour cela, nous devons ajouter une méthode de conversion dans la classe <code>Monnaie</code>.</p>
-<p>-<strong>Créer un test pour la conversion d'une <code>Monnaie</code> :</strong><br>
+<ul>
+<li>
+<p><strong>Créer un test pour la conversion d'une <code>Monnaie</code> :</strong><br>
 Écrivez un test où l'argument de <code>Banque.conversion</code> est un objet de type <code>Monnaie</code>.</p>
-<p>-<strong>Implémenter la méthode de conversion dans la classe <code>Monnaie</code> :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la méthode de conversion dans la classe <code>Monnaie</code> :</strong><br>
 Ajoutez une méthode <code>conversion</code> à la classe <code>Monnaie</code> pour gérer la conversion vers une devise donnée.</p>
+</li>
+</ul>
 <h3>15. Taux de change</h3>
 <p>Dans cette partie, nous nous attaquons à la gestion des taux de change. Nous commençons par travailler sur les objets de type <code>Monnaie</code> pour réaliser des conversions entre devises.</p>
-<p>-<strong>Créer un test pour <code>Banque.change</code> :</strong><br>
+<ul>
+<li>
+<p><strong>Créer un test pour <code>Banque.change</code> :</strong><br>
 Assurez-vous que <code>Banque.change</code> fonctionne correctement pour deux devises identiques et implémentez cette méthode dans la classe <code>Banque.conversion</code>.</p>
-<p>-<strong>Ajouter des tests pour les conversions de devises :</strong><br>
+</li>
+<li>
+<p><strong>Ajouter des tests pour les conversions de devises :</strong><br>
 Écrivez des tests pour convertir des dollars en CHF et vice versa, et assurez-vous que la méthode <code>Banque.conversion</code> renvoie les résultats corrects.</p>
-<p>-<strong>Implémenter la méthode <code>Monnaie.conversion</code> :</strong><br>
+</li>
+<li>
+<p><strong>Implémenter la méthode <code>Monnaie.conversion</code> :</strong><br>
 Utilisez la banque pour effectuer des conversions dans la méthode <code>Monnaie.conversion</code>. N'oubliez pas d'ajouter la banque comme paramètre.</p>
+</li>
+</ul>
 <p>Maintenant que la conversion de devises pour les sommes de monnaies identiques fonctionne, nous passons à la gestion des conversions pour des devises différentes.</p>
-<p>-<strong>Ajouter un test pour la conversion de somme de devises différentes :</strong><br>
-Écrivez un test pour convertir la somme de $2 et 1CHF en franc suisse et implémentez la logique nécessaire.</p>
+<ul>
+<li><strong>Ajouter un test pour la conversion de somme de devises différentes :</strong><br>
+Écrivez un test pour convertir la somme de $2 et 1CHF en franc suisse et implémentez la logique nécessaire.</li>
+</ul>
 <p>Pour généraliser les opérations sur les sommes et les monnaies, nous utilisons le design pattern composite. Nous devons nous assurer que les opérations telles que l'addition et la multiplication fonctionnent correctement avec les sommes et les monnaies.</p>
-<p>-<strong>Implémenter la méthode <code>__add__</code> pour la classe <code>Somme</code> :</strong><br>
+<ul>
+<li>
+<p><strong>Implémenter la méthode <code>__add__</code> pour la classe <code>Somme</code> :</strong><br>
 Assurez-vous que l'addition de deux sommes fonctionne correctement en implémentant la méthode <code>__add__</code>.</p>
-<p>-<strong>Ajouter une méthode <code>__mul__</code> pour la classe <code>Somme</code> :</strong><br>
+</li>
+<li>
+<p><strong>Ajouter une méthode <code>__mul__</code> pour la classe <code>Somme</code> :</strong><br>
 Implémentez la méthode <code>__mul__</code> pour permettre la multiplication d'une somme par un entier.</p>
-<p>-<strong>Tester la multiplication de somme :</strong><br>
+</li>
+<li>
+<p><strong>Tester la multiplication de somme :</strong><br>
 Écrivez un test pour la multiplication d'une somme et assurez-vous que cela fonctionne correctement.</p>
+</li>
+</ul>
 <h3>Conclusion du cours</h3>
 <p>La programmation par les tests (TDD) est une approche de développement logiciel où les tests sont écrits avant le code de production. Durant ce cours on a vu son principe et ses qualités :</p>
 <ol>
