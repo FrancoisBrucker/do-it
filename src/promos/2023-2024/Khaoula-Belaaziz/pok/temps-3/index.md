@@ -25,12 +25,26 @@ Un CV interactif et un portfolio servent tous deux à présenter vos compétence
 - Structure : Le CV a tendance à suivre une structure plus traditionnelle et linéaire, même dans sa forme interactive, tandis que le portfolio offre plus de liberté créative dans la présentation des travaux.
 
 ## Sprint 1
-Pendant ce Sprint, j'ai passé ce Sprint à parcourir le travail d'Agathe et de Mathis.
+Pendant ce Sprint, j'ai lu et compris le travail d'Agathe et de Mathis.
 - Suivre le cours : [Coder un site CV responsive ](https://www.youtube.com/watch?v=KYDrF6OnuOE&list=PLcQBsrNMWIfJGc6GybxdxlqLSLz6YfSRg&index=1) pour savoir les grandes lignes de la création du CV
 - Se familiariser avec le projet d'Agathe: analyser la structure du code HTML et explorer les diverses fonctionnalités
-- Parcourir le code de Mathis et comprendre comment il a publié son CV 
+- Parcourir le code de Mathis et comprendre comment il a publié son CV.
 - Adapter le code de Mathis à mon propre parcours scolaire et professionnel.
 ### Conclusion
 Le travail fait par Agathe et Mathis est très intéressant et très bien décrit. J'ai passé ce Sprint à comprendre leur travail pour savoir comment je peux l'approprier, l'adapter à mon parcours et l'améliorer, et c'est ce que je vais faire pendant le deuxième Sprint de ce POK. 
 
 ## Sprint 2
+L'objectif de ce print est de personnaliser le CV intéractif, l'améliorer et le rendre le plus complet possible. Pour y arriver, je compte :
+- Ajouter une page "Exploration Personnelle" où je peux partager les sujets qui m'interressent et surlequels je travaille.
+- Optimiser le code de Mathis
+- Changer un peu le design
+- Détailler les informations du parcours suivi pourqu'il soit plus clair et parlant à tout le monde.
+
+
+### Horodateur
+| Date       | Heures passées | Tâches                           | Commentaires                                                    |
+|------------|----------------|----------------------------------|-----------------------------------------------------------------|
+| Vendredi 22/03 | 3h             | - Lancer le site en local        | J’ai rencontré un problème de chargement et de lancement en local du site web et je ne savais pas la source du problème => J’ai passé le temps à réinstaller les packages et à chercher sur internet des pistes applicables. |
+| Samedi 23/03   | 1h30min        | - Rechercher les pistes d’amélioration du CV et du code | Rechercher sur Internet des inspirations pour booster le design |
+| Samedi 23/03   | 5h             | - Coder la page “Explorations Personnelles” | Le carrousel a été un vrai challenge                           |
+| Mardi 26/03    | 2h             | - Mettre le code au propre       | J’ai optimisé le code en combinant les parties redondantes comme le header et le footer car si on modifiait le footer d’une page, il ne se modifiait pas dans les autres, il fallait à chaque fois recopier les changements. |
