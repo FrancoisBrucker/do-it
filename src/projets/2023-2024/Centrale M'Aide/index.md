@@ -261,5 +261,4 @@ Notre site contient les fonctionnalités jugées les plus essentielles lors de n
 - un système de chat entre centraliens une fois l'annonce acceptée
 - un système de notation des autres utilisateurs et des services rendus, incitant à la bienveillance de la communauté
 - une page de confirmation lors du dépôt d'une annonce
-- rendre la barre de recherche fonctionnelle
 - un espace de retour de la part des utilisateurs pour les développeurs
