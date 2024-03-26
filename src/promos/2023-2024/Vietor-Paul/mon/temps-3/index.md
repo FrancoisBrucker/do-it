@@ -61,4 +61,36 @@ En effet, la représentation utilisée par LLVM est en ce que l'on appelle [form
 
 ## L'optimisation & les compilateurs JIT
 
-Le tutoriel expliquait également le fonctionnement de l'optimisation avec LLVM et nous montre comment utiliser un compilateur "à la volée" (*just in time* ou JIT en anglais), mais je ne me suis pas beaucoup intéressé dans ce MON, et reviendrai dessus plus en détail dans mon second MON sur ce tutoriel.
+Le tutoriel expliquait également le fonctionnement de l'optimisation avec LLVM et nous montre comment utiliser un compilateur "à la volée" (*just in time* ou JIT en anglais). Le compilateur JIT n'a cependant pas été expliqué dans le tutoriel.
+
+En ce qui concerne les optimisations, l'optimisation avec LLVM se fait par "passes" : tout d'abord on analyse le code, ce qui permet de trouver certains motifs dans le code qui peuvent être remplacés de façon équivalente pas des motifs plus rapides ou plus courts, puis on applique ces remplacements dans un second ensemble de passes. C'est finalement très facile à mettre en place, et on comprend bien pourquoi LLVM est devenu si populaire.
+
+## Opérateurs définis par l'utilisateur et premier "vrai" programme
+
+L'étape suivante consistait à ajouter la possibilité à l'utilisateur de définir des nouveaux opérateurs (unaires et binaires). Cela demande d'être capable de les reconnaître au moment de *parser* le code, et en particulier de gérer les précédences, mais finalement l'architecture assez simpliste de notre compilateur rend ça très facile.
+
+Ensuite, le tutoriel nous guide dans l'implémention d'un programme permettant de visualiser la fractale de Mandelbrot (même si on ne peut afficher que de l'ASCII, donc ce n'est pas exactement de la HD) ! Voici le résultat :
+
+![](mandelbrot.png)
+
+## Variables mutables
+
+Enfin, des variables... et bien, variables. Nous avons parlé un peu plus tôt de la forme SSA, qui peut à priori rendre la création de variables mutables (dont on peut modifier la valeur) difficile. Mais il y a une simple "astuce" que l'on peut utiliser : dans notre programme, chaque valeur est stockée dans ce que l'on appelle la pile, qui est une façon de stocker des données qui nous permet d'accéder uniquement à la donnée "du dessus", et d'y rajouter des données par le dessus, mais nulle part ailleurs. Cela nous permet de contourner la difficulté que poserait la forme SSA : quand on a besoin d'utiliser une variable, on récupère sa valeur sur la pile, et cela compte comme l'unique assignement de la forme SSA, peu importe ce qui a conduit à mettre cette valeur spécifique dans la pile.
+
+Cependant, cela veut dire que les données sont envoyées dans la mémoire de l'ordinateur, ce qui est lent. Pour éviter les problèmes de performances, il faudrait faire comme avec les structures de contrôle et insérer des fonctions phi. Mais là encore, LLVM nous sauve ! Il y a en effet une passe d'optimisation qui reconnaît ce motif, et se charge d'insérer les fonctions phi pour nous.
+
+Ainsi l'implémentation est là encore assez facile : on rajoute un opérateur, pour assigner une valeur, un mot-clef pour déclarer une variable, et on ajoute la capacité au compilateur d'émettre des alllocations sur la pile.
+
+## Compilation en code objet
+
+Le code objet est ce qui peut être lu et exécuté par notre ordinateur. Ici, on va créer un objet partagé, qui est la forme compilée d'une bibliothèque, un ensemble de fonctions que l'on peut importer puis utiliser dans d'autres programmes.
+
+Là encore, c'est finalement très facile : il n'y a pratiquement rien à faire nous-même, si ce n'est appeler une passe de LLVM, puis on obtient notre objet partagé, que l'on utilise dans un mini-programme en C.
+
+## Conclusion
+
+Il reste dans le tutoriel deux parties : l'ajout d'information de débogage au code compilé, et une conclusion avec quelques pistes et généralités sur LLVM.
+
+L'ajout d'information de débogage n'est pas très intéressant à expliquer ici, puisque c'est "juste" utiliser un nouvel objet pour stocker les noms des fonction/variables et les lignes où elles apparaissent dans le code. Cepedant il est bon de noter que cette partie montre également comment transformer notre compilateur pour compiler un vrai exécutable, au lieu d'un objet partagé.
+
+De même, je ne vais pas résumer la conclusion ici, donc je vous invite à [aller la voir par vous-même](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl10.html) si cela vous intéresse.
