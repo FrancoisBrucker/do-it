@@ -132,9 +132,7 @@ Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionn
 | **Favoris**                  | Annonces gardées dans les favoris | Liste des annonces en favori avec image, titre, dates (Si le déposant modifie une annonce ajoutée aux favoris par un autre utilisateur, ce dernier sera alerté) |
 | **Carte des annonces**       | Carte interactive répertoriant les annonces et leur localisation | Carte intéractive (Annonces affiliées à une zone géographique et non une adresse précise pour préserver la sécurité des utilisateurs) |
 
-#### Déconnexion
-
-Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.
+**Quand un utilisateur se déconnecte, il est redirigé vers la page d'accueil du site.**
 
 ## Développement du site web
 
@@ -233,7 +231,7 @@ Il est intéressant de remarquer qu'une erreur dans le mot de passe à la connex
 
 | Annonces | Aperçu d'une annonce | Mes annonces | Mes favoris |
 |:--------:|:--------:|:--------:|:--------:|
-| ![Annonces](menu_deroulant.png) | ![Annonce](Annonce.png) | ![Mes annonces](mes_annonces.png) | ![Mes favoris](mes_favoris.png)| 
+| ![Annonces](menu_deroulant.png) | ![Annonce](Annonce.png) | ![Mes annonces](Mes_annonces.png) | ![Mes favoris](mes_favoris.png)| 
 
 Le menu déroulant est présent sur toutes les pages du site une fois l'utilisateur connecté. Il permet d'accéder rapidement aux pages principales.
 
@@ -251,6 +249,8 @@ Le menu déroulant est présent sur toutes les pages du site une fois l'utilisat
 
 
 ### Back-end
+
+## Livrable
 
 ## Perspectives d'avenir du site
 
