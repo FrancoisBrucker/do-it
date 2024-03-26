@@ -43,7 +43,7 @@ Les autres utilisateurs peuvent alors scruter les différentes annonces, recherc
 
 Après acceptation d'une annonce, le demandeur est invité à contacter l'accepteur sur Messenger.
 
-## Et ça existe déjà ?
+### Et ça existe déjà ?
 
 Oui, mais non... 
 Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent **que de la mise en relation entre particuliers et artisans ou dépanneurs, etc...** Les sercives restent tout à fait factuels or nous souhaitons **proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales.** La vie des centraliens s'en verra grandement améliorée.
@@ -99,7 +99,7 @@ Utilisation de Python/ Javascript / node au service des bases de données
 Division et répartition des tâches dans la création d'un site
 Utilisation de l'outil Notion afin de suivre l'avancée du projet
 
-## TimeLine Projet
+### TimeLine Projet
 
 La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
@@ -114,7 +114,7 @@ Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionn
 **Voici l'utilité de chacune de ces pages :**
 
 
-|                              | **En bref** | **Informations** |
+|                              | **Description de la page** | **Informations que l'on y retrouve** |
 |:----------------------------:|:-----------:|:----------------:|
 | **Connexion et inscription** | Simple page d'accueil permettant de se connecter/s'inscrire sur le site | Notre slogan, quelques menus, boutons connexion/inscription |
 | **Mon profil**               | Personnalisation et actualisation du profil | Nom, Prénom, Age non modifiables. |
@@ -138,13 +138,12 @@ Profitant du cours de Low-code proposé par Adèle Bourgeix, nous avons décidé
 ### Connexion et inscription
 Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
 
-![Image page d'accueil MBM](MBM-homepage.png)
-
 Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gère les questions d'authentification et met à jour la base de données des identifiants/mots de passe. À titre d'exemple pour la maquette en low code, seuls le nom, l'adresse mail et le mot de passe suffisent à s'inscrire. *Il est possible que ces exigences évoluent dans le futur.*
 
-![Image connection](MBM-connection.png)
+| Page d'accueil | Connexion | Inscription |
+|:--------:|:--------:|:--------:|
+| ![Image page d'accueil MBM](MBM-homepage.png) | ![Image connexion](MBM-connection.png) | ![Image inscription](MBM-inscription.png) |
 
-![Image inscription](MBM-inscription.png)
 
 #### Menu déroulant
 
@@ -155,8 +154,6 @@ Nous avons implémenté un menu déroulant sur la droite de l'écran permettant 
 - Carte des Annonces
 - Déconnexion
 
-![Image](MBM-accueil.png)
-
 #### Dépôt d'une annonce
 
 L'annonceur remplit un formulaire simple mais précis, présentant plusieurs fonctionnalités destinées faciliter son expérience :
@@ -166,8 +163,6 @@ L'annonceur remplit un formulaire simple mais précis, présentant plusieurs fon
 
 Pour éviter toute erreur de missclick, une confirmation sera demandée après clic du bouton *Déposer mon annonce*.
 
-![Image dépot annonce](MBM-depot-annonce.png)
-
 #### Recherche des annonces
 
 Inspirée des sites d'annonces, la page de recherche n'affiche que les éléments primordiaux de chaque annonce, elle se veut d'être impactante et lisible.
@@ -175,7 +170,10 @@ La sélection d'une annonce se fait d'abord sur sa mission (titre de l'annonce) 
 
 Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour avoir plus de détails et la mettre dans ses favoris. Il peut ensuite confirmer qu'il est disponible pour débuter la conversation avec l'annonceur.
 
-![Image recherche annonce](MBM-recherche-annonce.png)
+| Page d'accueil | Dépôt d'annonce | Recherche d'annonce |
+|:--------:|:--------:|:--------:|
+| ![Image page d'accueil MBM](MBM-homepage.png) | ![Image dépot annonce](MBM-depot-annonce.png) | ![Image recherche annonce](MBM-recherche-annonce.png) |
+
 
 ### Design : Maquette Figma
 
@@ -183,18 +181,18 @@ Les premières fonctionnalités en low-code développées, nous profitons du cou
 
 Pour commencer, nous avons testé différents sets de couleurs afin d'en retenir quelques favoris.
 
-![Choix des couleurs](Figma1.png)
-
 Ensuite, nous travaillons sur l'achitecture et le design de la page recherche d'annonces. L'objectif est alors de compléter la charte graphique en choisissant la police d'écriture, les logos utilisés, les contours des annonces, la façon dont les images et annonces doivent être exposées...
 
-Un premier jet est alors proposé au travers l'image ci-dessous :
-![Design annonces](Figma2.png)
+Un premier jet est alors proposé. (cf image 2 du tableau ci-dessous)
 
 Bien que nous soyons satisfaits de la clarté de la page, de sa facilité de lecture, de la façon dont ressortent les informations, ce premier design semble encore brouillon.
 Le choix des logos manque de cohérence, peu d'annonces sont visibles sur un même écran, les couleurs sont à ajuster..
 
-Un retrevail permet d'aboutir au desgin suivant, bien plus satisfaisant :
-![Design annonces](Figma3.png)
+Un retrevail permet d'aboutir à un design bien plus satisfaisant. (cf image 3 du tableau ci-dessous)
+
+| Choix des couleurs | Design annonces 1er jet | Design annonces 2nd jet |
+|:--------:|:--------:|:--------:|
+| ![Choix des couleurs](Figma1.png) | ![Design annonces](Figma2.png) | ![Design annonces](Figma3.png) |
 
 L'architecture de la page choisie, nous testons les différents sets de couleurs sélectionnés pour en retenir un définitif et ainsi terminer notre charte graphique. En l'occurence, nous sélectionnons la Propal 1 rappelant la charte graphique de l'école.
 
