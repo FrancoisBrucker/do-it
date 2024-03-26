@@ -31,10 +31,6 @@ Nous nous basons ainsi sur un public clairement identifié et les personae seron
 
 ### Analyse de l'existant : Centrale bière au Bar'Bu
 
-Il existe déjà le groupe Facebook **Centrale bière au Bar'Bu** qui permet de poster une annonce. En général, il s'agit de meubles ou d'échanges d'objets en échange de bières au Bar'Bu. En revanche, le groupe n'est plus vraiment actif, et les nouvelles générations ne le connaissent pas. Il y a donc un créneau à aller chercher.
-
-![d](CentraleBiere.png)
-
 ### Présentation du projet retenu
 
 Nous souhaitons créer une **plateforme d'entraide entre centraliens**, du type Leboncoin, permettant à tout étudiant de déposer une annonce pour tout type de service.
@@ -52,10 +48,12 @@ Après acceptation d'une annonce, le demandeur est invité à contacter l'accept
 
 ### Et ça existe déjà ?
 
-Oui, mais non... 
+Oui, mais non...
 Les plateformes existantes (Allovoisins, Yoojo, etc...) ne proposent **que de la mise en relation entre particuliers et artisans ou dépanneurs, etc...** Les sercives restent tout à fait factuels or nous souhaitons **proposer un site Internet de confiance dédié uniquement aux centraliens favorisant l'échange et les interactions sociales.** La vie des centraliens s'en verra grandement améliorée.
 
-Il existe également un groupe Facebook "Centrale bière au Bar'bu" qui permet de demander des services de la sorte mais la **page est inadaptée aux besoins :** les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, la page est peu gérée...
+Il existe également un groupe Facebook  **Centrale bière au Bar'Bu** qui permet de demander des services de la sorte mais la **page est inadaptée aux besoins**. En général, il s'agit de meubles ou d'échanges d'objets en échange de bières au Bar'Bu. Les annonces se perdent dans le fil d'actu, les informations pratiques sont peu visibles, beaucoup de centraliens sont manquants, les nouvelles générations ne le connaissent pas, la page est peu gérée...
+
+![d](CentraleBiere.png)
 
 ## Objectifs du projet
 
