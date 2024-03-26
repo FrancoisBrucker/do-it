@@ -20,6 +20,8 @@ résumé: Etude de cas sur l'optimisation de l'organisation interne d'une entrep
 4. [Questionnaires](#section-4)
 5. [Résultats](#section-5)
 6. [Sprint 2](#section-6)
+7. [Processus optimisés](#section-7)
+8. [Cahier de charge](#section-8)
 
 
 ## Introduction<a id="section-1"></a>
@@ -184,19 +186,20 @@ Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital
 
 ## Cahier de charge<a id="section-8"></a>
 Après avoir révisé les procédures et examiné les standards internationaux des SIRH spécifiques à l'industrie, j'ai pu identifier les [fonctionnalités](https://docs.google.com/spreadsheets/d/1Ddm2TmfpYh1n6c5mJks5NtY0I2bxd2JW/edit#gid=49217966) clés nécessaires pour développer une solution conforme aux standards de l'industrie en termes de sécurité, d'automatisation et de gestion des données. Ces fonctionnalités essentielles comprennent des systèmes robustes de sécurité des informations pour protéger contre les accès non autorisés et les fuites de données, des outils d'automatisation pour rationaliser les processus RH et réduire les erreurs manuelles, ainsi que des capacités avancées d'analyse de données pour soutenir la prise de décision. J'ai ensuite compilé ces exigences fonctionnelles et non fonctionnelles dans un fichier Excel pour une référence facile et une meilleure organisation du développement du système.
-{% note %}
-**Liste de ressources**
+{% prerequis "**Liste de ressources**"%}
 - [Des Normes internationales ISO pour de meilleurs processus RH](https://myrhline.com/type-article/cest-quoi-ce-truc-normes-internationales-de-gestion-des-rh/#:~:text=La%20norme%20internationale%20ISO%2030405,et%20recruter%20de%20nouveaux%20talents.)
 - [CNIL: Publication du référentiel relatif à la gestion des ressources humaines](https://www.cnil.fr/fr/publication-du-referentiel-relatif-la-gestion-des-ressources-humaines)
 - [ISO 30409](https://cdn.standards.iteh.ai/samples/64150/b8074452346d426b8e56e4790625ffa5/ISO-30409-2016.pdf)
 - [Discussion ChatGPT](https://chat.openai.com/share/06ec0a48-d710-4cce-b555-e61835c4bb0d)
-{% endnote %}
+{% endprerequis %}
  Je tiens à souligner plusieurs aspects cruciaux pour garantir un système performant et convivial. Tout d'abord, il est essentiel de permettre à chaque employé d'accéder facilement au SIRH, que ce soit depuis un kiosque dans l'usine, un ordinateur personnel ou même un smartphone. L'idée, c'est de rendre l'accès aux informations RH simple et accessible. Je souligne aussi l'importance  de garantir la sécurité des données personnelles de ses employés. Pour ce faire, l'utilisation d'identifiants tiers et d'une double authentification est essentielle. Cela permettra de protéger efficacement les informations sensibles, assurant ainsi la confidentialité et l'intégrité des données de l'entreprise et de ses collaborateurs. En mettant en place ces mesures de sécurité robustes, nous nous assurons que seules les personnes autorisées puissent accéder aux données du SIRH, renforçant ainsi la confiance et la tranquillité d'esprit de chacun.
 
- En ce qui concerne la gestion des demandes de documents RH, il est important de faciliter le processus pour les employés. Pouvoir demander et recevoir facilement les documents nécessaires, que ce soit pour leur propre consultation ou pour des démarches administratives, simplifierait grandement les tâches quotidiennes. Cela permettrait une gestion plus pratique et rapide des demandes, bénéficiant à la fois aux employés et à l'efficacité globale de l'entreprise.
+ En ce qui concerne la **gestion des demandes de documents RH**, il est important de faciliter le processus pour les employés. Pouvoir demander et recevoir facilement les documents nécessaires, que ce soit pour leur propre consultation ou pour des démarches administratives, simplifierait grandement les tâches quotidiennes. Cela permettrait une gestion plus pratique et rapide des demandes, bénéficiant à la fois aux employés et à l'efficacité globale de l'entreprise.
 
-Quant à la gestion de la présence, il est crucial que toutes les informations soient claires et standardisées pour éviter toute confusion. Une intégration en temps réel des données de présence de tous les systèmes serait très bénéfique. Cela permettrait à chacun d'être bien informé en temps réel sur qui est présent et qui ne l'est pas, assurant ainsi une gestion transparente et efficace des emplois du temps.
-
+Quant à la **gestion de la présence**, il est crucial que toutes les informations soient claires et standardisées pour éviter toute confusion. Une intégration en temps réel des données de présence de tous les systèmes serait très bénéfique. Cela permettrait à chacun d'être bien informé en temps réel sur qui est présent et qui ne l'est pas, assurant ainsi une gestion transparente et efficace des emplois du temps.
+{% note %}
+L'objectif principal est de détecter les absences le plus tôt possible. Ce que je propose est de vérifier dès le début de la tournée du bus ou du ramassage si quelqu'un est absent. Dans cette optique, nous distribuerions des badges aux employés, qu'ils utiliseraient pour scanner à leur entrée dans le bus. De cette manière, si un employé ne scanne pas son badge, nous saurions qu'il sera absent. Cette approche offrirait une marge de manœuvre plus importante et davantage de temps pour planifier le remplacement de cette personne.
+{% endnote %}
 ### Risques
 L'implémentation d'une nouvelle solution de SIRH peut soulever des préoccupations légitimes au sein de l'équipe. Il est important de reconnaître les défis potentiels auxquels les employés pourraient être confrontés. Ces défis peuvent entraîner une perte de temps et d'efficacité au lieu de les améliorer, ce qui va à l'encontre de l'objectif initial de la mise en œuvre.
 
