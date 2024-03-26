@@ -243,14 +243,21 @@ Le menu déroulant est présent sur toutes les pages du site une fois l'utilisat
 
 | Carte des annonces | Aperçu d'une annonce sur la carte |
 |:--------:|:--------:|
+| ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](Profil.png) |
+| <video width="1280" height="720" controls> <source src="depos.mp4" type="video/mp4"></video> | <video width="1280" height="720" controls> <source src="profil.mp4" type="video/mp4"></video> |
 | ![Carte des annonces](carte_annonces.png) | ![Aperçu d'une annonce](carte_une_annonce.png) |
 
 
 ### Back-end
 
-## Livrable
+
+<video width="1280" height="720" controls>
+  <source src="inscription.mp4" type="video/mp4">
+</video>
+
 
 ## Perspectives d'avenir du site
+
 
 ### Business Plan
 
