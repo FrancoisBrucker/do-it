@@ -11,7 +11,7 @@ authors:
 
 Création d'un site de mise en relation des élèves centraliens pour déposer et répondre à des annonces.
 
-Dernière mise à jour : 12/03/2024
+Dernière mise à jour : 26/03/2024
 
 ## Description du projet
 ### Contexte
@@ -29,10 +29,17 @@ Nous nous concentrons sur un **public centralien uniquement**, ce qui nous perme
 
 Nous nous basons ainsi sur un public clairement identifié et les personae seront correctement définis.
 
+### Analyse de l'existant : Centrale bière au Bar'Bu
+
+Il existe déjà le groupe Facebook **Centrale bière au Bar'Bu** qui permet de poster une annonce. En général, il s'agit de meubles ou d'échanges d'objets en échange de bières au Bar'Bu. En revanche, le groupe n'est plus vraiment actif, et les nouvelles générations ne le connaissent pas. Il y a donc un créneau à aller chercher.
+
+![d](CentraleBiere.png)
+
 ### Présentation du projet retenu
 
 Nous souhaitons créer une **plateforme d'entraide entre centraliens**, du type Leboncoin, permettant à tout étudiant de déposer une annonce pour tout type de service.
 Il peut s'agir d'un besoin :
+
 - ponctuel de courte durée (prêt d'outils, déménagement, vends bureau) ;
 - ponctuel de plus longue durée (entretien d'un potager pendant les vacances) ; 
 - ou encore d'un besoin récurrent (prêt de matériel de sport)
