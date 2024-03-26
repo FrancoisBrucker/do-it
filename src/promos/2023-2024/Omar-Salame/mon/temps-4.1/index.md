@@ -10,7 +10,7 @@ date: 2024-02-14
 tags: 
   - "temps 3"
 
-résumé: "L'IA générative est de plus en plus palpable dans le paysage technologique actuel. Les grands modèles de langage ont ouvert de nouvelles perspectives et suscité un vif intérêt dans divers domaines professionnels. J'ai choisi de suivre le [cours de DeepLearning.AI](https://www.deeplearning.ai/courses/generative-ai-with-llms/)"
+résumé: L'IA générative est de plus en plus palpable dans le paysage technologique actuel. Les grands modèles de langage ont ouvert de nouvelles perspectives et suscité un vif intérêt dans divers domaines professionnels.
 ---
 
 ## Table des matières
@@ -24,7 +24,7 @@ résumé: "L'IA générative est de plus en plus palpable dans le paysage techno
 ## Introduction <a id="section-1"></a>
 ### Intelligence artificielle
 L'IA est un terme général souvent utilisé pour décrire toutes sortes de systèmes informatiques avancés. Je préfère parler plus précisément de *Machine learning*. La majeure partie de ce que nous voyons aujourd'hui dans l'IA est en fait de l'apprentissage automatique : doter les systèmes informatiques de la capacité d'apprendre à partir d'exemples.
-Les machines programmées pour apprendre à partir d'exemples sont appelées "réseaux neuronaux". L'une des principales méthodes d'apprentissage consiste à leur donner de nombreux exemples à partir desquels apprendre, par exemple en leur indiquant le contenu d'une image - c'est ce que nous appelons la classification. Si nous voulons apprendre à un réseau à reconnaître un éléphant, il faut qu'un humain lui présente de nombreux exemples de ce à quoi ressemble un éléphant et qu'il étiquette ces photos en conséquence. C'est ainsi que le modèle apprend à faire la distinction entre un éléphant et d'autres détails d'une image.
+Les machines programmées pour apprendre à partir d'exemples sont appelées "réseaux neuronaux". L'une des principales méthodes d'apprentissage consiste à leur donner de nombreux exemples à partir desquels apprendre, par exemple en leur indiquant le contenu d'une image - c'est ce que nous appelons la classification. Si nous voulons apprendre à un réseau à reconnaître un éléphant, il faut qu'un humain lui présente de nombreux exemples de ce à quoi ressemble un éléphant et qu'il étiquette ces photos en conséquence. C'est ainsi que le modèle apprend à faire la distinction entre un éléphant et d'autres détails d'une image. Pour explorer tout cela, j'ai choisi de suivre le [cours de DeepLearning.AI](https://www.deeplearning.ai/courses/generative-ai-with-llms/)
 
 
 {% info %}

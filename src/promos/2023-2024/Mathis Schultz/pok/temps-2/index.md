@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "CV interactif"
+title: "POK 2 - CV interactif"
 authors:
   - Schultz Mathis
 

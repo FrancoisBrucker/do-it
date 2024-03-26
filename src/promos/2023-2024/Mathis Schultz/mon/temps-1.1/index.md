@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "TailwindCSS et le langage HTML au service du Front Web"
+title: "MON 1.1 - TailwindCSS et le langage HTML au service du Front Web"
 authors:
   - Schultz Mathis
 

@@ -21,7 +21,7 @@ Deux parties vont constituer ce MON :
 
     - Comprendre et mettre en place la méthode de veille 
     - Mettre en place ce dispositif
-    - Faire un petit rapport sur les sujets de politiques publiques du monde cuber
+    - Faire un petit rapport sur les sujets de politiques publiques du monde cyber
 
 ## Comprendre :
 
@@ -108,6 +108,12 @@ Ce medium va abrité des acteurs parfois biaisé, intéressé, sensationnaliste 
 ### 4 / Collecter les sources :
 
 Pour le moment, la méthode push est privilégiée toutefois je développe mon app mais pour le moment, la fonctionnalité essentielle est RSS puis filtre puis compatibilité avec Twitter mais cela ne rentrera jamais dans les 10h ...
+Pour pallier au problème de prix et de fonctionnalité, j'ai eu le choix entre créer une application dédiée ou bien commencer petit avec des automatisations simples. J'ai donc créer une série d'automation sur la plateforme [Zapier](https://zapier.com/app/dashboard) pour récolter des flux rss, les filtrer de façon stricte m'envoyer un message discord.
+C'est simple mais je peux suivre 10 flux RSS avec un filtre plutôt strict pour pas avoir plus de 3 notifs par jour.
+Cette solution est efficace pour les flux RSS mais n'est pas compatible avec Twitter et Reddit car leurs APIs ne sont plus disponibles.
+
+Voici le template que j'ai crée : [cliquez ici](https://zapier.com/shared/b388aedb52dd5d5fb3c11bf51d62d9ade926c1c7)
+Cela me permets d'avoir tout les jours un condensé côté métaverse et côté RI grâce à des filtres de temps et de mots clé.
 
 ### 5 / Traiter et analyser :
 
@@ -115,12 +121,16 @@ Analyse en cours ... Affaire à suivre dans [mon POK](../pok/Rapport.md)
 
 ### Résultats :
 
-J'aime bien le concept mais c'est chiant qu'il n'y est rien de gratuit, comme Mr.Magnagni l'avait expérimenté, les outils manquent encore pour faire ça bien... La méthode pour le cadrage et identifier les sources est intéressante, je pense que je vais poursuivre cette veille toutefois cela restera chronophage.
+J'aime bien le concept mais c'est chiant qu'il n'y est rien de gratuit, comme Mr.Magnani l'avait expérimenté, les outils manquent encore pour faire ça bien... La méthode pour le cadrage et identifier les sources est intéressante, je pense que je vais poursuivre cette veille toutefois cela restera chronophage.
 
 #### Horodatage :
 
-[19/02] : Lecture sur concept, démarche = 1H30
-[21/02] : Établir le cadre, les limites de ma veille  = 1H
-[24/02] : Test des différentes solutions et sélection : [Feedly](https://feedly.com/), [Inoreader](https://www.inoreader.com/fr/), [NewsBlur](https://newsblur.com/), [Raven Reader](https://github.com/hello-efficiency-inc/raven-reader) = 1h30
-[24/02] : Penser à faire une application de lecture de flux RSS avec des filtres, car aucune app ne le permet alors que ça n'a pas l'air si complexe ... = 0h30
-[25/02] : Identification des sources pertinentes : 2H
+| Date | Indications | Temps passé |
+| -------- | -------- |-------- |
+|[19/02] | Lecture sur concept, démarche | 1h30 |
+|[21/02] | Établir le cadre, les limites de ma veille  | 1H |
+|[24/02] | Test des différentes solutions et sélection : [Feedly](https://feedly.com/), [Inoreader](https://www.inoreader.com/fr/), [NewsBlur](https://newsblur.com/), [Raven Reader](https://github.com/hello-efficiency-inc/raven-reader) | 1H30 |
+|[24/02] | Penser à faire une application de lecture de flux RSS avec des filtres, car aucune app ne le permet alors que ça n'a pas l'air si complexe ... | 1H |
+|[25/02] | Identification des sources pertinentes | 2H |
+|[27/02] | Mise en place d'automatisation Zapier | 2H |
+|[27/02] | Analyse des articles triés et sélectionné par l'automatisation | 1H |
