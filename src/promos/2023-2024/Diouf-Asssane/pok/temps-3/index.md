@@ -61,14 +61,28 @@ Toutes les commandes listées ci-dessous ont bien été entièrement implément�
 ![Informations sur le projet Do-It](./flow_info.png)
 
 ## Ce que j'aimerai faire au sprint 2
-- [ ] Pouvoir ouvrir les projets dans l'ide souhaité par le développeur (2h)
+- [ ] Pouvoir ouvrir les projets dans l'ide souhaité par le développeur (2h) *réalisé au sprint 1*
 - [ ] Pouvoir suivre le temps passé sur chaque projet (4h)
   - [ ] Conserver dernière date d'ouverture (1h)
   - [ ] Ajouter une commande pour indiquer que l'utilisateur arrête de travailler sur le projet (2h)
   - [ ] Garder en mémoire le temps passé (1h)
-- [ ] Pouvoir ouvrir les projets dans vscode (1h)
+- [ ] Pouvoir ouvrir les projets dans vscode (1h) *réalisé au sprint 1*
 - [ ] Cloner le projet si il n'est pas présent en local (1h)
 
 ## Ce que j'ai fait au sprint 2
+- [X] Pouvoir suivre le temps passé sur chaque projet
+  - [X] Garder en mémoire le temps passé
+  - [X] Ajouter un système pour lancer le timer et pour l'arrêter
+- [X] Cloner le projet si il n'est pas présent en local
+
+Les taches suivantes n'ont pas été réalisée car je ne suis pas sûr de leur utilité dans le projet :
+- [ ] Conserver dernière date d'ouverture
+- [ ] Ajouter une commande pour indiquer que l'utilisateur arrête de travailler sur le projet
 
 ## Conclusion
+Le CLI fonctionne avec les fonctionnalités attendues ! Je l'utilise régulièrement et, pour la suite, je vois quelques pistes d'évolution comme par exemple :
+- Mettre un meilleur système de gestion des erreurs
+- Automatiquement lancer l'installation des dépendances après le clonage d'un projet
+- Automatiquement trouver les liens github des projets
+- Améliorer le README
+- Publier le programme
