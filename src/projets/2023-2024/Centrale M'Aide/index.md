@@ -271,7 +271,6 @@ Dans l'ensemble, les testeurs sont très satisfaits de leur expérience sur notr
 De même, ils ont trouvé facilement les fonctionnalités recherchées (86% des testeurs ont décerné la note de 4 ou 5). En revanche, le point faible de notre site semble être le design.
 L'ensemble des résultats de l'*User Survey* est disponible en pdf dans le [répertoire du projet](Questionnaire_de_satisfaction.pdf).
 
-
 ### Sécurité de l'utilisateur
 
 Il s'agit d'un sujet peu abordé au cours de notre projet - partant du principe qu'au sein du public centralien, il existe une relation de confiance - toutefois, la sécurité de l'utilisateur est évidemment une problématique centrale de ce site.
@@ -287,3 +286,17 @@ Notre site contient les fonctionnalités jugées les plus essentielles lors de n
 - un système de notation des autres utilisateurs et des services rendus, incitant à la bienveillance de la communauté
 - une page de confirmation lors du dépôt d'une annonce
 - un espace de retour de la part des utilisateurs pour les développeurs
+
+## Atteinte ou non des objectifs, analyse des écarts
+
+Nous avons réussi à produire un site fonctionnel avec un back-end/front-end. Nous avons développé la quasi-totalité des fonctionnalités que nous avions défini dans le cahier des charges. Les quelques fonctionnalités manquantes (principalement le tchat) étaient dès le départ définies comme ambitieuses et en bonus.
+
+Notre cahier des charges a été rempli, et également validé par notre tutrice.
+
+## Livrables 
+
+Maquette Bubble : [benoitbeguier.bubbleapps.io/version-test/](benoitbeguier.bubbleapps.io/version-test/)
+
+Maquette Figma : [ici](https://www.figma.com/file/C06wE0TDJzsnxTPR5HOqet/Maquette?type=design&node-id=0%3A1&mode=design&t=hd9UGllpKLRbmCeH-1)
+
+Github : [ici]()
