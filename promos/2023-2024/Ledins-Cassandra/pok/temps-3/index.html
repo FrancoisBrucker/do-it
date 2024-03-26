@@ -215,7 +215,7 @@
 <p>A la fin du sprint : je pouvais me connecter en SSH sur ma VM depuis un réseau extérieur, et je pouvais voir la page d'accueil par défaut de Apache sur mon IP depuis un réseau extérieur aussi. Je suis sur Internet Maman !</p>
 <p>Le serveur ne tourne pas en permanence et j'ai encore peur de ne pas avoir configuré assez bien le pare-feu et mon routeur, donc je ne divulguerai pas mon adresse pour l'instant.</p>
 <h3>Technique</h3>
-<p>J'ai utilisé une VM Ubuntu-server, installé Apache, définis une IP pour ma VM, changé l'adresse IP de mon routeur, cassé mon routeur, changé l'adresse IP de mon ordi et redémarrer mon routeur pour réparer tout ça, et puis finalement ils n'étaient pas dans le même sous-réseau donc la page ne s'affichait pas sur Internet alors j'ai changé la plage d'IP pour qu'ils puissent communiquer plus facilement, mais en fait le problème n'avait rien à voir. Finalementil fallait reconfigurer la VM.</p>
+<p>J'ai utilisé une VM Ubuntu-server, installé Apache, définis une IP pour ma VM, changé l'adresse IP de mon routeur, cassé mon routeur, changé l'adresse IP de mon ordi et redémarrer mon routeur pour réparer tout ça, et puis finalement ils n'étaient pas dans le même sous-réseau donc la page ne s'affichait pas sur Internet alors j'ai changé la plage d'IP pour qu'ils puissent communiquer plus facilement, mais en fait le problème n'avait rien à voir. Finalement, il fallait reconfigurer la VM.</p>
 <p>Tout ça pour dire que j'ai bidouillé dans tous les sens, gaffé beaucoup, appris et compris beaucoup par la même occasion.</p>
 <p>Photo montage de mon aventure :</p>
 <p>L'envers du décor avec la VM :</p>
@@ -224,9 +224,118 @@
 <p><img src="routeur.png" alt=""></p>
 <p>J'accède au site depuis mon téléphone en 5G :</p>
 <p><img src="youpi.jpg" alt=""></p>
+<h2>Sprint 2</h2>
+<p>A la fin du sprint 1, en réalisant que j'étais plus rapide que prévu sur les objectifs fixés au départ, je me suis dit qu'il pourrait être intéressant de mettre en place une sorte de sonde sur le serveur, qui analyserait les tentatives d'accès et afficherait des stats sur un site. Il me paraît aussi plus judicieux et instructif de faire cela que de simplement copier-coller un site déjà prêt.</p>
+<p>Voici donc les objectifs du sprint 2 redéfinis.</p>
+<h3>Nouveaux objectifs</h3>
+<ul>
+<li>
+<p>[ ] Configuration d'une base de données et mise en place de la collecte des logs (3 heures) - Niveau de difficulté : 5</p>
+<ul>
+<li>Installation et configuration d'une base de données.</li>
+<li>Configuration des autorisations d'accès à la base de données.</li>
+<li>Mise en place de la collecte des logs des accès au serveur.</li>
+</ul>
+</li>
+<li>
+<p>[ ] Création de la CGI pour afficher les logs avec localisation (3 heures) - Niveau de difficulté : 5</p>
+<ul>
+<li>Apprentissage et mise en œuvre des CGI pour créer une page web dynamique.</li>
+<li>Intégration de la base de données GeoLite pour la localisation des adresses IP.</li>
+<li>Utilisation de GeoIP pour obtenir les informations de localisation.</li>
+<li>Mise en forme des logs pour affichage sur la page web.</li>
+</ul>
+</li>
+<li>
+<p>[ ] Gestion avancée des autorisations et sécurité du serveur (4 heures) - Niveau de difficulté : 8</p>
+<ul>
+<li>Apprentissage et mise en œuvre de la gestion avancée des autorisations (chmod).</li>
+<li>Création de groupes spéciaux avec des accès restreints pour renforcer la sécurité du serveur.</li>
+<li>Configuration et sécurisation des accès aux fichiers et répertoires nécessaires pour la CGI.</li>
+<li>Test de sécurité pour s'assurer que seuls les utilisateurs autorisés peuvent accéder aux données sensibles.</li>
+</ul>
+</li>
+</ul>
+<p>Les nouveaux objectifs restent similaires à ceux précédemment définis, mais me permettront d'apprendre de manière plus poussée la récupération de logs, la gestion des permissions d'accès aux données, et puis finalement, de voir qui essaie de trouver des failles sur mon serveur (probablement beaucoup de robots).</p>
+<h3>C'est parti</h3>
+<p>Pour pouvoir voir qui se connecte sur le site, il faut configurer la récupération des données dans Apache. Comme je ne suis pas encore une vraie admin système, et que j'en ai marre de tout coder sur un terminal avec Nano et sans souris, j'ai mis en place une connexion SSH-remote sur mon serveur pour pouvoir faire des manipulations sur mon serveur à partir : d'un IDE, et possiblement d'un autre ordinateur.</p>
+<p>Je peux maintenant me connecter sur mon serveur à partir de n'importe quel ordinateur et avoir une vue d'ensemble des fichiers en quelques clics, sans avoir à &quot;ls&quot; dans tous les coins.</p>
+<p><img src="saveas.png" alt=""></p>
+<p>Mais un problème apparaît : Modifier et sauvegarder le fichier avec les commandes de l'IDE ne l'effectue pas en tant que 'sudo' (membre avec tous les droits). J'ai trouvé une extension VSCode qui permet de &quot;Save as root&quot;, que j'ai lié à un shortcut au clavier. Pratique !</p>
+<p>Cette étape n'était pas nécessaire et a ajouté une vulnérabilité à mon serveur en ouvrant un nouveau port pour la connexion SSH. Mais ce genre de pratique reste courante et réaliste.</p>
+<h3>Configurer les logs</h3>
+<p>Configurer les logs s'est fait en quelques lignes seulement dans les fichiers .conf d'Apache. Il fallait déterminer le format des informations qu'on récupère, ainsi que le fichier de sortie. Cette configuration a été rapide, mais la mise en place correcte des droits d'écriture et de lecture corrects pour les fichiers et dossiers de logs a été compliquée (pour moi en tout cas).</p>
+<p><img src="conf.png" alt=""></p>
+<h3>Création de la CGI pour afficher les logs</h3>
+<p>Je me suis ensuite renseignée rapidement sur les CGIs puisque celà me semblait être une solution viable pour afficher des statistiques en direct à partir de mes documents .log. J'ai alors écrit un programme Python qui renvoie un html avec les IPs présents dans les logs. C'EST PAS TRES RGPD. Après 5 secondes de réflexion, j'ai réalisé que ça ne semblait pas très éthique. J'ai finalement masqué environ 75% des IPs pour pas qu'ils ne soient lisibles.</p>
+<h3>GeoLite</h3>
+<p>J'ai ensuite trouvé une base de données gratuite appelée GeoLite qui permet d'associer une IP à un pays, une région ou une ville. J'ai choisi les pays, car je n'ai pas plus d'intérêt que ça à savoir exactement d'où les IPs proviennent. Après avoir importé et décompressé la base de données sur mon serveur, je l'ai inclue dans mon script Python. Et tada ! Ca ne marche pas du tout.</p>
+<h3>Le REGEX c'est pas marrant</h3>
+<p>Il se trouve que la récupération d'IP à partir de logs c'est pas évident. J'utilise une expression Regex, mais elle ne marchait pas correctement, et je me retrouvais avec des IPs au format non correct, et surtout je loupais pas mal d'IPs pour une raison inconnue (enfin si, je ne sais juste pas faire des regex propres). Donc j'ai bidouillé une expression jusqu'à ce que ça ait l'air de fonctionner...</p>
+<p>Et là ça marche ! C'est ce que j'aurais dit si j'avais eu des résultats à ce moment.</p>
+<h3>Configuration des droits de lecture et d'écriture</h3>
+<p>Je ne m'étais pas encore bien occupée de la configuration de l'accès aux différents fichiers et dossiers.<br>
+Sans rentrer dans trop de détails, il a fallu :</p>
+<ul>
+<li>enable l'exécution de CGI</li>
+<li>créer un nouveau groupe de droits &quot;Apache&quot;</li>
+<li>donner la propriété des logs à &quot;Apache&quot; et donc le droit en lecture et écriture</li>
+<li>donner la propriété de mon script Python à &quot;Apache&quot; pour qu'il puisse l'éxécuter</li>
+<li>après avoir géré les fichiers, il faut faire d'autres manipulations de droits sur les dossiers...</li>
+</ul>
+<p>Et maintenant que j'ai fait ça... Je n'ai plus accès aux dossiers. Il est temps de se connecter en tant que root pour faire les modifications nécessaires.</p>
+<p>Ca a été une partie vraiment pas évidente pour moi, sûrement parce qu'on s'improvise pas professionel dans la durée d'un POK. Le test de sécurité a simplement été de voir avec différents profils utilisateurs quels acccès j'avais ou non aux fichiers.</p>
+<p>Mais tout fonctionne comme prévu maintenant. Au détail près que les logs affichés ne sont pas nécessairement des &quot;attaques&quot;, mais au moins sont des visiteurs. En sachant que mon site n'est pas référencé, n'a pas de nom, et est juste mon adresse IP que je n'avais au préalable partagé avec personne, on peut en déduire que les visites détectées sont des robots parcourant le web, pas forcément tous avec de bonnes intentions.</p>
+<h2>Fin du Sprint 2</h2>
+<ul>
+<li>
+<p>[X] Configuration d'une base de données et mise en place de la collecte des logs (3 heures) - Niveau de difficulté : 5</p>
+<ul>
+<li>Installation et configuration d'une base de données.</li>
+<li>Configuration des autorisations d'accès à la base de données.</li>
+<li>Mise en place de la collecte des logs des accès au serveur.</li>
+</ul>
+</li>
+<li>
+<p>[X] Création de la CGI pour afficher les logs avec localisation (3 heures) - Niveau de difficulté : 5</p>
+<ul>
+<li>Apprentissage et mise en œuvre des CGI pour créer une page web dynamique.</li>
+<li>Intégration de la base de données GeoLite pour la localisation des adresses IP.</li>
+<li>Utilisation de GeoIP pour obtenir les informations de localisation.</li>
+<li>Mise en forme des logs pour affichage sur la page web.</li>
+</ul>
+</li>
+<li>
+<p>[X] Gestion avancée des autorisations et sécurité du serveur (4 heures) - Niveau de difficulté : 8</p>
+<ul>
+<li>Apprentissage et mise en œuvre de la gestion avancée des autorisations (chmod).</li>
+<li>Création de groupes spéciaux avec des accès restreints pour renforcer la sécurité du serveur.</li>
+<li>Configuration et sécurisation des accès aux fichiers et répertoires nécessaires pour la CGI.</li>
+<li>Test de sécurité pour s'assurer que seuls les utilisateurs autorisés peuvent accéder aux données sensibles.</li>
+</ul>
+</li>
+</ul>
+<h2>Résultats</h2>
+<p>J'ai laissé tourner mon détecteur pendant :</p>
+<p><strong>1 heure</strong></p>
+<p><img src="1heure.png" alt=""></p>
+<p><strong>4 heures</strong></p>
+<p><img src="4heures.png" alt=""></p>
+<p>J'ai filtré quelques adresses telles que 127.0.0.1 ou autre mais je n'ai pas enlevé ma propre adresse, ce qui fausse le total. NEANMOINS ! On remarque que dès la première heure, il y a eu relativement beaucoup de visites sur le site (alors qu'il n'est pas référencé, et que je n'ai envoyé mon IP à personne). Notamment une IP irlandaise qui a tenté 100 accès, probablement pour &quot;mapper&quot; le site et voir les URLs disponibles, mais j'avoue que je n'ai pas approfondi les recherches.</p>
+<h2>Conclusion</h2>
+<p>La mise en place du serveur a été vraiment différente de ce que j'ai pu imaginer au départ. Certaines choses ont été beaucoup plus rapides que prévues et à l'inverse, d'autre ont pris beaucoup plus de temps par manque de connaissances. Le cours Réseaux me paraît absolument nécessaire pour réaliser ce travail. Quelques notions de pentest peuvent aussi aider à se représenter la nature et la forme des dangers, pour éviter de faire n'importe quoi dans les réglages.</p>
+<h3>Conclusion BIS</h3>
+<p>La prochaine fois je choisis un mot de passe sudo un poil plus court, j'ai passé la moitié du POK à le retaper dans tous les sens et à faire des fautes de frappe.</p>
+<h3>Sources</h3>
+<ul>
+<li><a href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data">Base de données GeoLite2 gratuite</a></li>
+</ul>
 <h3>Horodateur</h3>
 <p><strong>18/02 :</strong> 3h, lecture, compréhension, installation de la VM<br>
-<strong>22/02 :</strong> 7h, installation Apache et autres modules, bidouille routeur</p>
+<strong>22/02 :</strong> 7h, installation Apache et autres modules, bidouille routeur<br>
+<strong>18/03 :</strong> 3h, configuration SSH, IDE, extension Sudo, configuration access log<br>
+<strong>21/03 :</strong> 3h, apprentissage et codage CGI, récupération et mise en place GeoLite<br>
+<strong>23/03 :</strong> 4h, Mise en place des groupes admin, droit de lecture, écriture et éxécution, test, correction de Regex</p>
 
 
 </article>
