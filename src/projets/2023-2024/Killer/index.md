@@ -170,14 +170,27 @@ Cette approche nous a permis de maintenir une visibilité claire sur le progrès
 <img src="taches.png" width="760" height="650">|<img src="taches2.png" width="700" height="550">
 <img src="taches3.png" width="700" height="550">|<img src="taches4.png" width="760" height="650">
 
-## Evolution de la maquette et du design
-:-------------------------:|:-------------------------:
-<img src="accueil1.png" width="500" >|<img src="Modes.png" width="500" >
-<img src="Paramètrage.png" width="700" height="550">|<img src="Salon.png" width="760" height="650">
-<img src="Partie.png" width="700" height="550">|<img src="Endgame.png" width="760" height="650">
+# Evolution de la maquette et du design
+
+La conception de notre projet a évolué à travers plusieurs phases avant d'atteindre le rendu final présenté dans la section suivante. Le processus de design a commencé dès la troisième semaine du premier temps. Nous avons sélectionné une palette de couleurs, optant pour des tons sombres afin de capturer l'atmosphère mystérieuse du jeu.
+
+Toutefois, après avoir assisté aux cours sur l'UX et l'UI design, nous avons remis en question notre conception initiale. À ce stade, une portion significative du développement front-end de l'application était déjà en cours, ce qui a rendu la révision du design particulièrement ardue. Nous avions une vision claire et détaillée de l'agencement des pages de l'application, et il était donc difficile de se pencher sur de nouvelles alternatives pour la palette de couleurs et le style général.
+
+L'intégration des enseignements de l'UI/UX design a été source de confusion ; une partie du code était déjà écrite, et modifier le design à ce stade signifiait recommencer une grande partie du travail. Voici quelques exemples des orientations que les cours d'UI design ont inspirées :
+
+<img src="exploration_design.png" width="100%" >
+<img src="choix_couleurs.png" width="100%" >
+
+Finalement, après consultation et réflexion avec notre tuteur, M. Préa Pascal, nous avons décidé de conserver la structure originale et la palette de couleurs que nous avions initialement choisies :
+
+<img src="maquette.png" width="100%" >
+
+Des ajustements ont été apportés progressivement au développement des pages tout au long des deux derniers temps, au fur et à mesure qu'on teste l'application.
+
+Vous pouvez accéder à notre maquette et notre espace de brainstorming en cliquant sur : [KILLER](https://www.figma.com/file/2LV3DAZ3pRUwxTUauOtV6E/Killer?type=design&node-id=0%3A1&mode=design&t=Ohbx9IIjUQS3iSxp-1).
 
 
-## Développement de l’application
+# Développement de l’application
 
 ### Choix techniques
 
