@@ -97,9 +97,92 @@ Frais mensuels pour 5 utilisateurs : 345 euros.
 
 {% details "Infrastructure Informatique" %}
 Cela comprend les serveurs hébergent les données (dans ce cas, tous les logiciel cités ci-dessus sont en mode SaaS et le site web est hébergé dans le cloud) et le réseau qui permet la connectivité et les échanges de données entre les systèmes. Tous les systèmes susmentionnés dépendent de l'infrastructure informatique pour un fonctionnement ininterrompu et sécurisé.
+Les frais mensuels d'internet : 2539 euros. 
 {% enddetails %}
 
 Pour estimer les coûts des systèmes ci-dessous pour cette entreprise, j'ai obtenu des [devis](https://drive.google.com/drive/folders/1-OVvAbypUaF9puBc4iRZjyubTQo1qBHj?usp=sharing) en ligne auprès des fournisseurs des differentes solutions.
+
+## Analyse des dépenses - Dashboard en Excel VBA
+Télécharger le [fichier Excel](pok_3.zip)
+
+Création du dashboard :
+•	Créer la liste déroulante pour le filtre des dépenses
+•	Créer les boutons "Analyser" et "Réinitialiser"
+•	Écrire le code VBA pour les macros pour ces deux actions 
+
+L'utilisateur choisit la dépense qu'il souhaite visualiser dans liste déroulante du filtre : 
+<img src="2.png" width="550px">
+
+{% details "Code du bouton Analyser" %}
+```
+Sub AnalyserButton_Click()
+    Dim ws1 As Worksheet
+    Dim ws2 As Worksheet
+    Dim expensesList As Range
+    Dim selectedExpense As String
+    
+    Set ws1 = ThisWorkbook.Sheets("Janvier 2023")
+    Set ws2 = ThisWorkbook.Sheets("Aout 2023")
+    Set expensesList = ThisWorkbook.Sheets("Dashboard").Range("C7")
+    
+    selectedExpense = expensesList.Value
+    
+    If selectedExpense <> "" Then
+        Dim januaryExpense As Double
+        Dim augustExpense As Double
+        
+        januaryExpense = ws1.Range("A:A").Find(selectedExpense).Offset(0, 1).Value
+        augustExpense = ws2.Range("A:A").Find(selectedExpense).Offset(0, 1).Value
+
+        
+        ' Créer le graphique
+        Dim chartSheet As Chart
+        Set chartSheet = ThisWorkbook.Sheets("Dashboard").Shapes.AddChart2(227, xlLineMarkers).Chart
+        
+        ' Définir les données du graphique
+        chartSheet.SetSourceData Source:=ws1.Range("A1:B2")
+        chartSheet.SeriesCollection.NewSeries
+        chartSheet.SeriesCollection(1).Name = "Janvier 2023"
+        chartSheet.SeriesCollection(1).XValues = Array("Janvier", "Aout")
+        chartSheet.SeriesCollection(1).Values = Array(januaryExpense, augustExpense)
+
+            
+        ' Ajouter les étiquettes d'axe
+        chartSheet.Axes(xlCategory, xlPrimary).CategoryNames = Array("Janvier", "Aout")
+        chartSheet.Axes(xlValue, xlPrimary).HasTitle = True
+        chartSheet.Axes(xlValue, xlPrimary).AxisTitle.Text = selectedExpense
+        
+        ' Afficher le graphique
+        chartSheet.Parent.Activate
+        chartSheet.Parent.Name = "Graphique_" & selectedExpense
+        
+    Else
+        MsgBox "Veuillez sélectionner une dépense à analyser."
+    End If
+End Sub
+
+``` 
+{% enddetails %}
+
+en cliquant sur le bouton 'Analyser', on peut visualiser l'evolution de la dépense choisie en parallèle de l'évolution de l'activité (mesurée par le taux d'occupation des hôtels par exemple).
+<img src="3.png" width="550px">
+
+Le bouton 'Rénitialiser' efface le contenue du dashboard, pour pouvoir relancer le code par la suite. 
+
+{% details "Code du bouton Rénitialiser" %}
+```
+Sub RénitialiserButton_Click()
+    Dim chartSheet As chartObject
+    
+    ' Vérifier si un graphique existe sur la feuille "Dashboard"
+    For Each chartSheet In ThisWorkbook.Sheets("Dashboard").ChartObjects
+        chartSheet.Delete
+    Next chartSheet
+End Sub
+``` 
+{% enddetails %}
+
+Faute de temps, j'ai pas pu ajouter plus de fonctionnalités dans le dashboard (comme les alertes quand les dépenses dépassent un seuil).
 
 ## Perspectives d’optimisation des dépenses technologiques
 Optimiser les dépenses ne veut pas dire réduire les dépenses uniquement. Il s’agit plutôt d’une gestion financière stratégique à long terme qui vise à économiser de l’argent tout en augmentant la valeur des applications, des services, etc. Et ceci à travers une évaluation continue des processus technologiques. Pour ce faire, l’entreprise doit commencer par **cartographier l’environnement informatique** ainsi que les capacité métier. Ensuite, l’entreprise peut **rationnaliser ses applications** éliminant les redondances dans son système informatique. 

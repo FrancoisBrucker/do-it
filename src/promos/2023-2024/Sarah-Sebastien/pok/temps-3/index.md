@@ -21,6 +21,8 @@ résumé: "Ce MON traitera de l'apprentissage de Google Sheet et d'Apps Script e
 Prérequis : Aucun
 {%endprerequis%}
 
+**[Lien vers le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSfFLYaqlpzypnKtLbPI_m1djJuIJRUskninneo5w1JXc8h36g/viewform?usp=sf_link)**
+
 ## Sommaire
 
 - [Introduction](#introduction)

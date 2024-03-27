@@ -88,7 +88,6 @@ Les professeurs m'avancent la sommme (chacun 50€) ce qui m'évite de l'avancer
 
 Cela revient à 150/25=**6€** par personne.
 
-Les remboursements seront organisés par une cagnotte Lydia ou bien sur mon Lydia directement, que je reverserai ensuite aux professeurs.
 
 ### Prêt de matériel
 
@@ -105,4 +104,6 @@ Demande au PLP mais finalement ce n'est pas l'interlocuteur. Il faut remplir un 
 
 ![mail](mail_sauval.png)
 
-### Permis feu
+## Remboursement de l'avance
+
+Les remboursements seront organisés par une cagnotte Lydia ou bien sur mon Lydia directement, que je reverserai ensuite aux professeurs.

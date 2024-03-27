@@ -18,6 +18,10 @@ tags:
 résumé: Ce POK, modestement nommé selon le nom de son grand frère Sérénade, est un projet de création d'un site web de gestion de calendrier pour les élèves en 3A.
 ---
 
+<a href="http://node.oignon.ovh1.ec-m.fr/" class="buttonGithub">
+  <span>Accéder à SérénaDo_It !</span>
+</a>
+
 ## Sommaire
 
 - [Objectifs](#objectifs)

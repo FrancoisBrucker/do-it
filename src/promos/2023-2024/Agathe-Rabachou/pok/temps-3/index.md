@@ -87,11 +87,33 @@ Pour conclure, l'ensemble du code réalisé est disponible sur ce [Github](https
 
 ### Réalisations
 
+Pour commencer, l'ensemble de mon code est toujours disponible à [ce lien](https://github.com/arabachou/-r-e-markaball.git), je ne l'insérerai donc pas dans ce compte rendu.
 
+Dans ce deuxième sprint, j'ai réalisé toutes les fonctions qui permettent de récupérer les données rentrées par l'utilisateur dans l'interface, de les identifier et de les classer correctement dans différentes listes afin de pouvoir les réutiliser. Pour cela, j'ai crée un menu déroulant avec les différents choix possibles qui apparaît lors de chaque interaction avec l'interface, et j'ai stocké les informations dans un dictionnaire.
+
+<img src="menu_deroulant.png">
+
+Ensuite, je suis passée à la partie qui a été de loin la plus compliquée de ce projet : la création et la mise en page de la feuille de match. Pour cela, j'ai utilisé une partie de la bibliothèque *reportlab*, qui permet entre autres de générer des fichiers PDF (et que j'ai découverte au passage). J'ai mis beaucoup de temps à la prendre en main, j'ai fait face à de nombreux bugs et il m'a vraiment fallu plusieurs heures pour obtenir un rendu de template convenable. Puis il a fallu remplir ce template à partir d'un dictionnaire de données contenant les points par joueur et par équipe ainsi que les fautes, dans le même format que les dictionnaires remplis grâce aux fonctions et à l'interface dans la partie précédente, le but étant bien sûr par la suite de relier les deux. Cela a encore été une très longue étape et beaucoup de problèmes à régler, mais voici un exemple de résultat avec des données choisies aléatoirement :
+
+<img src="feuille_de_match-1.png">
+
+Le PDF généré lors de l'utilisation de l'interface est alors téléchargeable (voici d'ailleurs la [version PDF](feuille_de_match.pdf)).
+
+Pour finir, j'ai commencé à développer les fonctions pour récupérer le reste des données d'un match (hors points et fautes) afin de créer les grilles de statistiques, mais je n'ai pas eu le temps d'aller au bout des réalisations que j'avais prévu.
 
 ### Retours
 
-
+Pour conclure ce sprint, j'ai largement sous-estimé le temps passé à corriger des bugs et à créer et mettre en forme un document propre et fonctionnel pour le rendu de la feuille de match. Je n'ai donc pas eu le temps de me pencher sur les autres fonctionnalités de mon backlog, et seule la partie principale, sans les statistiques et la personnalisation des équipes est utilisable. 
+Cependant, j'ai beaucoup appris sur les méthodes de génération de PDF à partir d'un programme ou de données quelconques.
+Mention honorable également à la documentation officielle de la bibliothèque *reportlab* ainsi qu'à ChatGPT (parfois utile, parfois moins...) pour les situations débloquées.
 
 ### Organisation du temps
 
+| Durée | Action |
+| -------- | -------- |
+| 30min | Finalisation du menu déroulant commencé au sprint 1 |
+| 3h | Développement des fonctions de récupération, d'identification et de stockage des données de l'interface |
+| 3h30 | Création et mise en forme du template vierge de la feuille de match |
+| 1h | Remplissage des tableaux des fautes sur la feuille de match à partir d'un dictionnaire de données |
+| 2h30 | Remplissage des tableaux des points sur la feuille de match à partir d'un dictionnaire de données |
+| 1h30 | Lien entre l'utilisation de l'interface et le remplissage de la feuille de match |

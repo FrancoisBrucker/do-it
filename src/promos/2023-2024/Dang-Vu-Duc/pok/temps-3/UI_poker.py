@@ -1,5 +1,6 @@
 from poker import Poker_methods, Card, Plot_stats
-from PySide6.QtWidgets import QMainWindow, QPushButton, QLabel, QSlider, QLineEdit, QProgressBar, QComboBox
+from button_methods import Button_methods
+from PySide6.QtWidgets import QMainWindow, QPushButton, QLabel, QSlider, QLineEdit, QProgressBar, QComboBox, QRadioButton
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile
 from PySide6.QtGui import QPixmap, QIntValidator, QIcon
@@ -20,12 +21,23 @@ class UI_stats(Plot_stats, Poker_methods):
         self.main_window.show()
 
         self.main_window.setWindowTitle("Fenêtre principale")
+
+        ui_file_name = "window_hand_range.ui"
+        ui_file = QFile(ui_file_name)
+        loader = QUiLoader()
+        self.window_hand_range = loader.load(ui_file)
+        ui_file.close()
+
+        self.window_hand_range.setWindowTitle("Fenêtre d'aide au choix")
+
         # icon_main_window = QIcon("Logo Do_IT.png")
         # self.main_window.setWindowIcon(icon_main_window)
         self.button_plot_stats_combinations = self.main_window.findChild(QPushButton, "Button_plot_stats_combinations")
         self.button_plot_hands_ranking = self.main_window.findChild(QPushButton, "Button_plot_hands_ranking")
         self.button_get_winrate = self.main_window.findChild(QPushButton, "Button_get_winrate")
-        self.button_get_average_winrate = self.main_window.findChild(QPushButton, "Button_get_average_winrate")
+        self.button_plot_heatmap = self.main_window.findChild(QPushButton, "Button_plot_heatmap")
+
+        self.button_plot_heatmap.clicked.connect(self.plot_heatmap_hands_ranking)
 
         self.button_plot_stats_combinations.clicked.connect(self.show_window_plot_stats_combinations)
         self.button_plot_hands_ranking.clicked.connect(self.show_window_hands_ranking)
@@ -243,8 +255,8 @@ class UI_stats(Plot_stats, Poker_methods):
         if len(cards_removed) == 4:
             self.button_valider_get_winrate.setEnabled(False)
             self.label_erreur_get_winrate.setText("")
-            player1_hand = [Card(value1_player1, str(self.suit1_player1.currentText())), Card(value2_player1, str(self.suit2_player1.currentText()))]
-            player2_hand = [Card(value1_player2, str(self.suit1_player2.currentText())), Card(value2_player2, str(self.suit2_player2.currentText()))]
+            player1_hand = [Card(value1_player1, str(self.suit1_player1.currentText()).lower()), Card(value2_player1, str(self.suit2_player1.currentText()).lower())]
+            player2_hand = [Card(value1_player2, str(self.suit1_player2.currentText()).lower()), Card(value2_player2, str(self.suit2_player2.currentText()).lower())]
             players_cards = []
             for k in range(2):
                 players_cards.append(player1_hand[k].name)
@@ -276,3 +288,6 @@ class UI_stats(Plot_stats, Poker_methods):
             self.button_valider_get_winrate.setEnabled(True)
         else:
             self.label_erreur_get_winrate.setText("Au moins une carte se répète")
+    
+                
+                
