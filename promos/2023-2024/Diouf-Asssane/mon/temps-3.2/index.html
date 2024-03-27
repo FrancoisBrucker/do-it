@@ -127,6 +127,78 @@
 
 <h2>Introduction</h2>
 <p>Dans ce MON je vais essayer Three.js, il s'agit d'un framework js qui permet de faire de la 3D directement dans le navigateur. Beaucoup de développeurs créatifs ont pu faire des sites tout à fait bluffant avec ce framework.</p>
+<h2>Présentation</h2>
+<p>Three.js est une librairie javascript constituant une abstraction par dessus WebGL, permettant ainsi de faire des rendus 3D plus facilement directement dans le navigateur.</p>
+<p>Il peut être utilisé pour faire des jeux ou des sites offrants des expériences uniques. Cette librairie peut aussi être utilisée pour faire du <strong>creative coding</strong>. Il s'agit de l'utilisation de l'informatique comme un moyen d'expression artistique à part entière.</p>
+<h2>Comment l'utiliser ?</h2>
+<h3>Installation</h3>
+<p>L'Installation peut se faire de 2 <strong>façons</strong> différentes. Celle que j'ai utilisée consiste à installer three js dans le projet avec node ainsi que vite. <em>Vite ne sera utilisé que pour le développement.</em></p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> three
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev vite
+</code></pre>
+<p>Pour lancer le code et visualiser votre site, il faut lancer vite :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx vite
+</code></pre>
+<h3>Premiers pas</h3>
+<p><em>Le code de cette section est tiré de la documentation de Three.js</em><br>
+Commençons par le index.html !</p>
+<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>My first three.js app<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+			<span class="token selector">body</span> <span class="token punctuation">{</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+		</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/main.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>On créer une page HTML simple. Tout se passe dans le javascript.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> <span class="token constant">THREE</span> <span class="token keyword">from</span> <span class="token string">'three'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> scene <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>Scene</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> camera <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>PerspectiveCamera</span><span class="token punctuation">(</span> <span class="token number">75</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">/</span> window<span class="token punctuation">.</span>innerHeight<span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>WebGLRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+renderer<span class="token punctuation">.</span><span class="token function">setSize</span><span class="token punctuation">(</span> window<span class="token punctuation">.</span>innerWidth<span class="token punctuation">,</span> window<span class="token punctuation">.</span>innerHeight <span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span> renderer<span class="token punctuation">.</span>domElement <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token keyword">const</span> geometry <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>BoxGeometry</span><span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> material <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>MeshBasicMaterial</span><span class="token punctuation">(</span> <span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token number">0x00ff00</span> <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cube <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>Mesh</span><span class="token punctuation">(</span> geometry<span class="token punctuation">,</span> material <span class="token punctuation">)</span><span class="token punctuation">;</span>
+scene<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span> cube <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+camera<span class="token punctuation">.</span>position<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    
+<span class="token keyword">function</span> <span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span> animate <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    cube<span class="token punctuation">.</span>rotation<span class="token punctuation">.</span>x <span class="token operator">+=</span> <span class="token number">0.01</span><span class="token punctuation">;</span>
+    cube<span class="token punctuation">.</span>rotation<span class="token punctuation">.</span>y <span class="token operator">+=</span> <span class="token number">0.01</span><span class="token punctuation">;</span>
+    
+    renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span> scene<span class="token punctuation">,</span> camera <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+    
+<span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On commence par importer le package. Ensuite, pour pouvoir afficher des éléments, il nous faut une scène et une caméra.</p>
+<p>Ensuite, on récupère le renderer WebGL, c'est lui qui va se charger de faire les appels à WebGL et d'afficher nos modèles.</p>
+<p>Puis on crée une forme simple : un cube. Three.js dispose de méthodes de base pour facilement créer les formes usuelles. La géométrie est la forme ici et le mesh va définir la couleur de l'objet. on pourrait ici mettre une texture par exemple. Ici, on veut simplement que notre cube soit vert.<br>
+Il ne reste plus qu'à ajouter le cube à la scène.</p>
+<h2>Possibilités</h2>
+<p>Durant ma découverte de Three.JS, j'ai découvert le nombre impressionnant d'applications possibles. La page de démo de la librairie est remplie d'exemples tous plus impressionnants les uns que les autres.</p>
+<p>On peut aussi voir de nombreux développeurs utiliser cette librairie pour réaliser des sites aux expériences plus immersives (des portfolios epoustouflants aux jeux vidéo et aux expériences en réalités augmentées).</p>
+<p>Pour me former à Three.JS, j'ai démarré un site d'application mais je n'ai pas eu le temps de le mener à son terme. Je pense que pour un développeur avec un esprit d'artiste, three.js est parfait : couplé avec des outils comme Blender il est vraiment possible de laisser sa créativité s'exprimer.</p>
+<h2>Comment appprendre ?</h2>
+<p>Pour apprendre Three.js, il y a des ressources sur le site de la librairie ainsi que sur youtube par exemple. Mais il y a aussi de nombreux cours et en particulier un qui semble n'avoir que de bons retours et être d'excellente qualité (et proposé par un français) : <a href="https://threejs-journey.com">Three.js Journey</a></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://threejs.org/docs/index.html#manual/en/introduction/Installation">Three.js</a></li>
+<li><a href="https://youtu.be/vhK6o26OV4Q?si=H9FHf-daqZJ9Lmra">Video Youtube</a></li>
+</ul>
 
 
 </article>
