@@ -144,7 +144,7 @@
 <li>Lancer un projet TypeScript</li>
 <li>Les types en TypeScript</li>
 <li>Les fonctions et les classes</li>
-<li>TypeScript dans le développement web</li>
+<li>Notion d'interface</li>
 <li>Conclusion</li>
 </ol>
 <h2>TypeScript, qu'est-ce que c'est</h2>
@@ -161,6 +161,7 @@
 </code></pre>
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">npx tsc .ts
 </code></pre>
+<p>Les fichiers typescript doivent se terminer par .ts au lieu de .js comme en JavaScript.</p>
 <h2>Les types en TypeScript</h2>
 <p>L'un des points forts de TypeScript est son système de typage statique. Cela signifie qu'on peut spécifier le type de chaque variable ou de chaque paramètre de fonction et même le type de retour des fonctions. Le code sera alors bien plus clair et plus prévisible, et cela évite les erreurs de typage comme il en arrive souvent.<br>
 Voici un exemple de code TypeScript avec des types pour se rendre mieux compte de comment cela fonctionne :</p>
@@ -212,6 +213,20 @@ Ensuite la fonction possède deux paramètres, des nombres et le retour doit lui
         <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> and I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> years old.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+</code></pre>
+<h2>Notion d'interface</h2>
+<p>TypeScript permet de créer ce qu'on appelle des interfaces. Cette notion n'existe pas en JavaScript, elle est propre à TypeScript car elle permet de typer les objets et les classes en définissant proprement leur structure. Prenons un exemple :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">person</span><span class="token operator">:</span> Person</span><span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>person<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> and I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>person<span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> years old.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> alice <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alice'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">greet</span><span class="token punctuation">(</span>alice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2>Conclusion</h2>
 <p>Grâce à ce MON j'ai pu découvir sommairement ce qu'était TypeScript. Malheuresement en seulement 10h je n'ai pas pu manipuler assez pour vraiment m'habituer à l'utiliser, mais je vais gagner du temps d'apprentissage quand je serai en stage car je saurai à quoi m'attendre.</p>
