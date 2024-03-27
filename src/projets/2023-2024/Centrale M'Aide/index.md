@@ -29,8 +29,6 @@ Nous nous concentrons sur un **public centralien uniquement**, ce qui nous perme
 
 Nous nous basons ainsi sur un public clairement identifié et les personae seront correctement définis.
 
-### Analyse de l'existant : Centrale bière au Bar'Bu
-
 ### Présentation du projet retenu
 
 Nous souhaitons créer une **plateforme d'entraide entre centraliens**, du type Leboncoin, permettant à tout étudiant de déposer une annonce pour tout type de service.
@@ -59,21 +57,7 @@ Il existe également un groupe Facebook  **Centrale bière au Bar'Bu** qui perme
 
 ### Rendu final
 
-Nous comptons rendre, d'une part : **un Site Low-Code / No-Code**. Il sera construit à partir de :
-- Airtable : un outil permettant de gérer les bases de données, dans notre cas pour gérer les annonces, les utilisateurs et les favoris,
-- Bubble : un outil de no-code permettant de créer une maquette fonctionnelle de notre site Web.
-
-Ce site Low-Code / No-Code doit être fonctionnel et esthétique. Il doit permettre de naviguer sur les différentes pages :
-
-- dépôt d'annonce
-- sélection d'annonce
-- chatbot
-- ajout de favoris
-- création du profil utilisateur...
-
-**Le but étant d'exploiter au maximum les possibilités fournies par l'usage du Low-Code / No-Code de sorte à proposer en peu de temps un prototype avancé du futur site web.**
-
-D'autre part : **un Site "dur"**. Ce site sera construit "à la main" avec :
+Nous comptons rendre : **un Site "dur"**. Ce site sera construit "à la main" avec :
 
 - une partie front-end, fonctionnelle pour déposer une annonce, visualiser des annonces, échanger entre utilisateurs
 - une partie back-end pour gérer les fichiers et données utilisateurs.
@@ -110,7 +94,7 @@ La TimeLine est vouée à évoluer et sera actualisée au cours du projet.
 
 ![Image Timeline](Gantt.png)
 
-## Fonctionnalités et pages du site
+### Fonctionnalités et pages du site
 La prise en main de notre site se doit d'être facile et rapide.
 L'étude **Experience 2030** (menée par Futurum Research et SAS) montre qu'un internaute décide en quelques secondes de quitter un site Internet si celui-ci n'est pas ergonomique.
 
@@ -137,7 +121,7 @@ Voici les pages que nous souhaitons présenter sur notre site et leurs fonctionn
 
 Profitant du cours de Low-code proposé par Adèle Bourgeix, nous avons décidé de faire une première maquette de notre site pour se pencher sur les fonctionnalités intéressantes à implémenter et avoir un apperçu de chaque page pour par la suite refaire leur design.
 
-### Connexion et inscription
+#### Connexion et inscription
 Nous avons décidé de bâtir une interface utilisateur claire avec un nombre limité de boutons. Les boutons classiques *Se connecter* et *S'inscrire* sont les seuls mis en valeurs sur la page d'accueil.
 
 Ces deux boutons renvoient vers une page d'identification fonctionnelle, qui gère les questions d'authentification et met à jour la base de données des identifiants/mots de passe. À titre d'exemple pour la maquette en low code, seuls le nom, l'adresse mail et le mot de passe suffisent à s'inscrire. *Il est possible que ces exigences évoluent dans le futur.*
@@ -172,9 +156,9 @@ La sélection d'une annonce se fait d'abord sur sa mission (titre de l'annonce) 
 
 Lorsqu'un utilisateur est intéressé par une annonce, il peut la consulter pour avoir plus de détails et la mettre dans ses favoris. Il peut ensuite confirmer qu'il est disponible pour débuter la conversation avec l'annonceur.
 
-| Page d'accueil | Dépôt d'annonce | Recherche d'annonce |
-|:--------:|:--------:|:--------:|
-| ![Image page d'accueil MBM](MBM-homepage.png) | ![Image dépot annonce](MBM-depot-annonce.png) | ![Image recherche annonce](MBM-recherche-annonce.png) |
+| Dépôt d'annonce | Recherche d'annonce |
+|:--------:|:--------:|
+| ![Image dépot annonce](MBM-depot-annonce.png) | ![Image recherche annonce](MBM-recherche-annonce.png) |
 
 
 ### Design : Maquette Figma
