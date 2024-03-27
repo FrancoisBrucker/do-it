@@ -12,6 +12,9 @@ authors:
 
 L'objectif du projet est de créer une application mobile permettant de jouer au jeu du Killer.
 
+{% details "Début du projet" %}
+
+
 ## Description du projet
 
 ### Présentation du jeu du Killer
@@ -54,8 +57,6 @@ Le créateur de la partie pourra paramétrer sa partie comme il le souhaite :
 
 Dans le cas où l'organisateur choisit de rendre la cible non explicite, les participants ne connaitrons pas leur cible. Ils auront simplement des indices sur leur cibles. Ces indices seront remplis par les participants à l'aide d'un formulaire en amont de la partie.
 
-
-
 ## Objectif à atteindre
 Créer un site web avec une meilleur expérience utilisateur, qui permet de jouer le jeu "Killer" en différents modes. Les modes principaux visés comme objectifs sont :
     - Mode Normal (actions)
@@ -63,9 +64,56 @@ Créer un site web avec une meilleur expérience utilisateur, qui permet de joue
     - Mode Team Building
     - Mode Personnalisable
 
-## Organisations et étapes clés 
+{% enddetails %}
 
 
+# Présentation du projet
+
+### Le jeu du Killer
+
+**KILLER** est une adaptation mobile innovante du jeu de société classique joué en groupe, où l'astuce, la stratégie et la discrétion sont les clés de la survie. Conçu pour dynamiser les rencontres sociales, **KILLER** transforme chaque participant en un chasseur astucieux, avec pour mission de "tuer" sa cible en accomplissant un gage spécifique, sans se faire démasquer.
+
+Dans **KILLER**, chaque joueur reçoit secrètement le nom d'une autre personne du groupe à "tuer", ainsi qu'une mission ou un gage particulier à réaliser à l'encontre de sa cible. Les missions sont conçues pour être exécutées discrètement lors d'interactions sociales, rendant le jeu parfait pour les fêtes, les rassemblements ou comme un moyen ludique de briser la glace.
+
+### But et règles du jeu
+
+Le but ultime est de rester le dernier "en vie", en "tuant" le plus de cibles possibles. Pour réussir, les joueurs doivent réaliser leur gage sans éveiller les soupçons de leur cible, tout en restant vigilants à ne pas se faire "tuer" par leur propre chasseur. La discrétion est essentielle : révéler son identité de tueur ou échouer dans sa mission peut entraîner l'élimination du joueur.
+
+- Être le dernier en jeu,
+- ou Éliminer le plus grand nombre de joueurs,
+- ou les deux à la fois (c'est encore mieux !)
+
+Normalement le jeu est destiné à n’importe qui entre 15 et 99 ans et peut se jouer à n’importante où.
+
+### Déroulement classique du Jeu
+
+1. Avant de commencer 
+    1. L’organisateur se munira de papier et d'un crayon.
+    2. Il établira une liste claire de tous les participants, en plaçant les noms les uns sous les autres selon un ordre déterminé : chaque joueur aura pour mission d'"éliminer" la personne listée juste après lui (et le dernier sur la liste aura pour cible le premier).
+    3. L’organisateur doit confier à chaque joueur une “MISSION”, qu’il doit faire faire à sa cible.
+2. Attribution des missions
+L’organisateur doit distribuer secrètement une  "MISSION" à chaque participant en indiquant le nom de sa victime. Il leur fait comprendre qu'il n'est pas encore temps de passer à l'acte.
+3. Lancement officiel
+L’organisateur doit réunir tous les joueurs et leurs communiquer les informations suivantes :
+    1. → La partie prend fin à "tel" moment ou lorsqu'il ne reste plus qu'un joueur en jeu. Le dernier survivant ainsi que le joueur ayant réalisé le plus de "meurtres" seront déclarés grands vainqueurs.
+        
+        NB : Il peut également envisager de récompenser le tueur le plus rapide, le plus théâtral, le plus rusé…
+        
+
+**NB : KILLER** est un jeu de stratégie et d'esprit : ici, le "meurtre" est purement symbolique. Les joueurs doivent faire preuve d'intelligence et de finesse pour réussir leurs missions.
+Il est essentiel de jouer dans le respect des autres : pas de blessures, pas de violence physique, pas de larmes, et certainement pas de chaos.
+
+### Notre application mobile
+
+L'application mobile **KILLER** simplifie l'organisation et l'exécution du jeu. Les joueurs s'inscrivent sur l'application, un hôte crée la partie, et les participants rejoignent via un code unique. Une fois la partie lancée, chaque joueur reçoit sa cible et son gage directement sur son appareil.
+
+Les avantages de notre application sont :
+
+- Permettre à l’organisateur de jouer au jeu
+- Faciliter la préparation et le déroulement du jeu
+- Fournir une vaste base de données de gages, organisés par thème ou type d'événement, prêts à être mis en œuvre.
+
+# Organisations et étapes clés 
 ### Design Thinking
 
 Au tout début de notre projet, avant même de commencer le développement, nous avons organisé des ateliers de design thinking. Ces sessions ont été cruciales pour définir les fondations de notre projet, en mettant un accent particulier sur la compréhension de nos utilisateurs finaux. À l'aide des principes et techniques issus de nos cours d'UX, nous avons créé plusieurs personas, représentant les archétypes de nos utilisateurs cibles.
@@ -111,6 +159,7 @@ Voici le tableau récapitulatif des fonctionnalités envisagées au début du pr
 | Voir les participants restants quand on est mort |  | 2/5 | 4/5 | Autre page ? |
 {% enddetails %}
 
+
 ### Développement
 Pour la phase de développement de notre projet, nous avons continué à travailler avec Notion pour la gestion des tâches, permettant ainsi une organisation et une collaboration efficace au sein de notre équipe. Grâce à Notion, nous avons pu lister toutes les tâches nécessaires à la réalisation de notre projet, en attribuant à chacune un statut précis qui reflète son avancement : "Non commencé", "En cours", et "Terminé".
 
@@ -118,3 +167,9 @@ Cette approche nous a permis de maintenir une visibilité claire sur le progrès
 :-------------------------:|:-------------------------:
 <img src="taches.png" width="760" height="650">|<img src="taches2.png" width="700" height="550">
 <img src="taches3.png" width="700" height="550">|<img src="taches4.png" width="760" height="650">
+
+## Evolution de la maquette et du design
+:-------------------------:|:-------------------------:
+<img src="accueil1.png" width="500" >|<img src="Modes.png" width="500" >
+<img src="Paramètrage.png" width="700" height="550">|<img src="Salon.png" width="760" height="650">
+<img src="Partie.png" width="700" height="550">|<img src="Endgame.png" width="760" height="650">
