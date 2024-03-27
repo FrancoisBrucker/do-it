@@ -201,8 +201,11 @@ D'abord, j'ai ajouté une base de donneées pour gérer plusieurs éléments :
 2. La gestion des noms de cours donnés sur la feuille de calcul
 3. La gestion du cache pour éviter de recalculer les emplois du temps à chaque fois
 
-On peut s'amuser un peu avec l'interface d'administration pour supprimer et ajouter des cours : 
-[La page d'administration](http://node.oignon.ovh1.ec-m.fr/admin)
+On peut s'amuser un peu avec l'interface d'administration pour supprimer et ajouter des cours :
+
+<a href="http://node.oignon.ovh1.ec-m.fr/admin" class="buttonGithub">
+  <span>Administation SérénaDo_It</span>
+</a>
 
 Avec la fonctionnalité de personnalisation du calendrier, il devient crucial de pouvoir associer fidèlement les cours donnés sur la feuille de calcul EDT avec ceux du sheet élève (choix des cours).
 Pour cela, le parti pris a été de laisser cette opération à tous les utilisateurs qui souhaitent contribuer.
