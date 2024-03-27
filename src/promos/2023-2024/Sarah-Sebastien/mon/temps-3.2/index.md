@@ -33,12 +33,12 @@ Prérequis : Aucun
 
 <h2 id=introduction> Introduction</h2>
 
-Après avoir lu le MON de Kawtar sur le [Data Collection](../../../Kawtar-Bahri/MON/temps-2.1/) et le POK de Victor sur [l'AIPD](../../../Victor-Ory/POK/CNIL/), que j'ai trouvés très intéressants, j'ai voulu explorer un peu plus ce sujet. Et je me suis dit : *"C'est bien beau tout ça, mais finalement, c'est quoi un cookie ? Et à quoi ça sert ?"*. 
+Après avoir lu le MON de Kawtar sur le **Data Collection** et le POK de Victor sur **l'AIPD**, que j'ai trouvés très intéressants, j'ai voulu explorer un peu plus ce sujet. Et je me suis dit : *"C'est bien beau tout ça, mais finalement, c'est quoi un cookie ? Et à quoi ça sert ?"*. 
 Voilà donc comment ce MON a vu le jour. 
 
 <h2 id=definition> Qu'est ce qu'un cookie?</h2>
 
-### Tentative de définition la plus simpe possible
+### Tentative de définition, la plus simple possible
 
 Un cookie Internet, que l'on appelle aussi **témoin** (ou même **témoin de connexion**) est un fichier texte qui est échangé entre **le client** et **le serveur** entre chaque appel : ils sont générés par le serveur d'un site internet ou d'une application, puis sont déposés sur le disque dur de l'ordinateur.
 
