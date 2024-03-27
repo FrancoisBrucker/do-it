@@ -326,24 +326,64 @@ Nous avons rencontré Monsieur Merval en vue d'échanger à propos des enjeux RG
 <h2>Développement</h2>
 <p>Une fois que nous avons assez d'éléments pour guider notre projet nous avons commencé le développement du site en local.<br>
 Pour ce faire nous avons créer un GitHub dédié afin de pouvoir tous travailler sur le même projet.</p>
-<p><strong>Comment fonctionne le site ? </strong></p>
+<p><strong>Comment ça marche ? </strong></p>
 <p>Supposons qu'un utilisateur possède un compte et décide de se connecter au site. Il va d'abord s'identifier sur la page d'authentification à l'aide de son nom d'utilisateur et son mot de passse. Une fois connecté il arrive sur la page <strong>Carte des mobilités</strong> dans laquelle il peut naviguer sur la carte, filtrer et se renseigner sur chaque mobilité. Il peut ensuite ce rendre sur l'onglet <strong>FAQ</strong> pour obtenir des réponses aux questions qu'il peut se poser lors de sa recherche de mobilité.<br>
 Si l'édudiant veut partager son expérience de mobilité il se rend sur l'onglet <strong>Mon espace</strong>. Il peut alors remplir le formulaire dédié à l'aide de ses informations. Une fois soumis sa mobilité apparaitra à condition qu'il est bien accepté le partage de celle-ci.<br>
 Si il se rend de nouveau sur <strong>Mon espace</strong> il aura accès à ses informations et pourra les modifier. Il peut aussi décider à tout moment de ne plus partager sa mobilité.</p>
-<h3>Point technique : les pins de la carte</h3>
+<h3>Points techniques</h3>
 <p>Le site a été codé en JavaScript à l'aide de Node.JS, Express, Sequeelize et de nombreuses autres bibliotèques. Nous avons utilisés aussi BootStrap pour faciliter le CSS.</p>
-<p>Pour réaliser notre site le point assez important résidait dans la carte interactive, sans celle-ci le site perd un gros atout. Pour ce faire nous avons utilisé <strong>Leaflet </strong>, une bibliothèque JavaScript spécialisées dans les cartes interactives.</p>
-<p>Dans notre BDD il y a 3 tables :</p>
+<p>Pour réaliser notre site le point assez important résidait dans la carte interactive, sans celle-ci le site perd un gros atout. Pour ce faire nous avons utilisé <strong>Leaflet</strong>, une bibliothèque JavaScript spécialisées dans les cartes interactives.</p>
+<p>Dans notre BDD SQLite on retrouve 3 tables :</p>
 <ul>
 <li>Users</li>
 <li>Mobilites</li>
 <li>Locations</li>
 </ul>
-<p>Chaque mobilité est rattaché à un user et un user ne peut avoir qu'une mobilité.<br>
-La table Locations permet d'avoir notre propre BDD des localisation des villes que l'on souhaite affichés sur la map.<br>
+<p>Chaque mobilité est rattaché à un <strong>user</strong> et un user ne peut avoir <strong>qu'une mobilité</strong>.<br>
+La table <strong>Locations</strong> permet d'avoir notre propre BDD des localisation des villes que l'on souhaite affichés sur la map.<br>
 Lorsqu'un utilisateur ajoute sa mobilité, si la ville n'existe pas dans la table alors on l'ajoute en récupérant sa localisation à l'aide d'une API d'OpenStreetMap.<br>
 Et pour les mobilités à afficher on va chercher la localisation des villes via cette table là.<br>
-De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisés au départ n'était jamais traduit que en Français mais dans la langue du pays.</p>
+De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisés au départ n'était jamais traduit que en Français mais dans la langue du pays (en gros si on voulait afficher Pékin il fallait avoir le nom de la ville en Chinois...).</p>
+<p>On a au total 5 fichier HTML :</p>
+<ul>
+<li>Page d'authentification</li>
+<li>Carte interactive</li>
+<li>FAQ</li>
+<li>Mon espace</li>
+<li>A propos</li>
+</ul>
+<p>A chaque fichier se rattache un fichier JavaScript et nous avons un fichier CSS global pour toutes nos pages.</p>
+<h3>Résultats</h3>
+<p>Nous avons un site qui fonctionne en <strong>local</strong> avec un systhème d'authentification simple, une carte interactive où l'on peut filtrer les mobilités par <strong>type</strong>,<strong>pays</strong>,et <strong>domaine</strong>, une <strong>FAQ</strong> contenant les réponses aux questions récurrentes et les liens vers les informations officielles de l'administration et un <strong>formulaire</strong> de fin de mobilité à remplir par les étudiants.</p>
+<p>Voici les différentes pages :</p>
+<img src="auth.png">
+<img src="carte.png">
+<img src="FAQ.png">
+<img src="apropos.png">
+<img src="form.png">
+<img src="form2.png">
+<img src="form3.png">
+<img src="form4.png">
+<img src="form5.png">
+<img src="form6.png">
+<img src="infomodif.png">
+<h3>Ecarts</h3>
+<ol>
+<li><strong>Design </strong><br>
+Le design n'est pas exactement comme la maquette figma que nous avons élaboré bien que notre site s'en approche très fortement. Nous avons privilégier un apport de fonctionnalités à la place de rendre une copie conforme de nos maquettes.</li>
+</ol>
+<p>2.<strong>Hébergement </strong><br>
+Le site n'a pas pu être hébergé comme nous l'aurions voulu. L'administration nous a fait comprendre qu'il ne souhaitait pas s'impliquer dans notre projet par manque de moyens mais aussi vu la complexité de la mise en place de la politique de RGPD.</p>
+<ol start="3">
+<li>
+<p><strong>Connexion CAS</strong><br>
+Comme notre site n'allait pas être hébergé l'utilité de la connexion CAS n'était plus présente. Nous avons donc préféré en faire l'impasse et la remplacer par un systhème d'authentification simple indépendant.</p>
+</li>
+<li>
+<p><strong>Promotion du site</strong><br>
+Nous aurions voulu promouvoir notre site aux éléves de l'Ecole nottament avec une vidéo qui aurait mis en avant les fonctionnalités du site, néanmois en l'absence d'un site disponible pour tous nous n'avons pas effectuer cette démarche.</p>
+</li>
+</ol>
 <h2>Postérité du projet</h2>
 <p>Ce projet a été salué par de nombreux élèves qui sont intéressés par son aboutissement. Cette section a donc pour objectif de donner les clés pour reprendre le projet et le faire avancer.</p>
 <p>Voici tout d'abord les défis à relever pour aller plus loin :</p>
