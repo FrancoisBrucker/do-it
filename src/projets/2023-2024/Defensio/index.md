@@ -100,11 +100,16 @@ Nous avons pu tester notre jeu avec les 2As alternants lors de l’une de leur s
 
 Comme pistes d’amélioration, nous avons en effet pensé à la consolidation de la plateforme mais aussi à la révision du tableau de score pour inciter au jeu individuel. Nous avons en effet remarqué que les étudiants ont une forte tendance à jouer en collectif quitte à sacrifier une part de leur score individuel. Leur score individuel, s'il était favorisé, pourrait être un bon indicateur de l’avancement personnel de chacun dans la maîtrise des compétences centraliennes. Cela nécessiterait aussi de faire un lien entre les compétences utilisées et le tableau des scores. Nous avons enfin pensé à l’approfondissement et l’enrichissement de l’apport pédagogique pour s’appuyer davantage sur des exemples concrets et l’expérience professionnelle des animateurs ou des joueurs.
 
-Apports théoriques : 
-- 
+Toutes ces améliorations ont été inspirées par les différents retours d'expérience des étudiants et animateurs, ainsi que la présentation du projet aux différents skippers CAP.
 
-Site : 
-- 
+- Apports théoriques : 
+
+Nous souhaitons que le projet soit repris par un groupe de 3A, qui l'améliore, et le présente en CAP 2A l'année prochaine. Pour être sûrs que les apports théoriques du projets sont en accord avec l'esprit du CAP, il faudra réaligner les apports théoriques. Actuellement, les apports théoriques font des parallèles entre l'expérience en jeu et des situations réelles en enterprise.
+
+
+- Site : 
+
+La digitalisation de la 3ème phase est une des premières étapes d'amélioration pour le site. Le site a aussi besoin de plus de crash tests. 
 
 Sheets pour le suivi : 
 - 
