@@ -243,17 +243,156 @@ Le menu déroulant est présent sur toutes les pages du site une fois l'utilisat
 
 | Carte des annonces | Aperçu d'une annonce sur la carte |
 |:--------:|:--------:|
-| ![Depôt d'une annonce](Depot_annonce.png) | ![Profil](Profil.png) |
-| <video width="1280" height="720" controls> <source src="depos.mp4" type="video/mp4"></video> | <video width="1280" height="720" controls> <source src="profil.mp4" type="video/mp4"></video> |
 | ![Carte des annonces](carte_annonces.png) | ![Aperçu d'une annonce](carte_une_annonce.png) |
 
 
 ### Back-end
 
+Pour le back-end, d'abord nous avons mis en place un système de bases de données composé de trois tables : 
+- utilisateurs
+- annonces
+- favoris
 
-<video width="1280" height="720" controls>
-  <source src="inscription.mp4" type="video/mp4">
-</video>
+Le back-end va donc tourner autour de ses trois tables qui vont permettrent l'essentiel des interactions. 
+Interessons nous aux fonctionnalités que nous avons développé et comment elles interagissent avec chacune des tables. 
+
+### Connexion et inscription 
+Lorsque l'utilisateur s'inscrit, il entre des informations dans des input. Ces informations sont transmises au serveur qui va effectuer des requêtes à la base de données. Pour l'inscription, le serveur fait une requête POST qui ajoute à la table une ligne de données avec toutes les informations sur l'utilisateur. Voilà ce que ça donne au niveau du code : 
+
+```js
+app.post('/inscription', (req, res) => {
+    
+    const saltRounds = 10;
+    const { email, prenom, nom, facebook, adresse, mot_de_passe, mdpConfirmation, imagePath } = req.body;
+
+    bcrypt.hash(mot_de_passe, saltRounds, (err, hash) => {
+        if (err) {
+            console.error('Erreur lors du hachage du mot de passe :', err);  
+        } 
+        else {
+            const sql = 'INSERT INTO utilisateurs (email, prenom, nom, adresse, mot_de_passe, image, facebook) VALUES (?, ?, ?, ?, ?, ?, ?)';
+            connection.query(sql, [email, prenom, nom, adresse, hash, imagePath, facebook], (err, results) => {
+                if (err) {
+                    console.log('Erreur inscription', err);
+                    return res.status(500).send('Erreur inscription');
+                }
+                console.log('Inscription succès');
+                return res.status(200).json(results);
+            });
+        }
+    })
+});
+```
+Donc les informations entrées dans la table seront l'email, le prenom, le nom, l'adresse, le mot de passe, l'image de profil et le lien du profil facebook. 
+
+
+Pour ce qui est de la connexion on a une requête POST également qui est la suivante : 
+
+```js
+app.post('/connexion', (req, res) => {
+    const { email, mot_de_passe } = req.body;
+    const sql = 'SELECT * FROM utilisateurs WHERE email = ?';
+
+    connection.query(sql, [email], (err, results) => {
+        if (err) {
+            console.log('Erreur pour la connexion', err);
+            res.status(500).json({ message: 'Erreur connexion' });
+        } else {
+            if (results.length > 0) {
+                const user = results[0];
+                bcrypt.compare(mot_de_passe, user.mot_de_passe, (bcryptErr, passwordMatch) => {
+                    if (bcryptErr) {
+                        console.error('Erreur lors de la comparaison des mots de passe', bcryptErr);
+                        res.status(401).json({ message: 'Erreur lors de la connexion' });
+                    } else {
+                        if (passwordMatch) {
+                            console.log('Email de l\'utilisateur:', user.email);
+                            const token = jwt.sign({ email: user.email }, secret, { expiresIn: '1d' });
+                            console.log('Token généré:', token);
+                            res.status(200).json({ token });
+                        } else {
+                            res.status(401).json({ message: 'Mot de passe incorrect' });
+                        }
+                    }
+                });
+            } else {
+                res.status(404).json({ message: 'Utilisateur non trouvé' });
+            }
+        }
+    });
+});
+```
+La logique est assez simple, l'utilisateur rentre son adresse mail et son mot de passe qui sont récupérés. Ensuite une requête est faite à la table qui regarde si l'adresse mail existe puis si le mot de passe qui lui est associé est le même que celui rentré par l'utilisateur. 
+
+
+### Profil
+Dans l'onglet mon profil, il est possible de visualiser les informations de l'utilisateur. Cela est rendu possible grâce à une requête GET faite à la table des utilisateurs. Voici à quoi elle ressemble : 
+```js
+app.get('/users', (req, res) => {
+
+    const email = req.query.email;
+
+    const sql = 'SELECT * FROM utilisateurs WHERE email = ?';
+    connection.query(sql, [email], (err, results) => {
+        if (err) {
+            console.log('Requête users echec', err);
+            res.status(500).send('Erreur');
+        }
+        if (results.length>0) {
+            console.log('Utilisateur déjà inscrit');
+            return res.status(201).json({message:'Utilisateur déjà existant'})
+        }
+        else {
+            return res.status(200).json({message: 'Utilisateur non trouvé' })
+        }
+    });
+});
+```
+On prend l'email de l'utilisateur et on sélectionne la ligne dans laquelle figure cette adresse dans la table, chaque élément de cette ligne sera récupéré puis affiché sur la page. 
+
+Pour que l'utilisateur puisse modifier son profil, il y aussi une requête faite à la table des utilisateurs. Il s'agit d'une requête PATCH qui permet cette fois-ci non pas d'ajouter mais de modifier une des lignes de la table. 
+
+
+### Annonces
+Lorsque l'utilisateur veut déposer une annonce, il rentre les informations nécessaires et elles sont ensuite envoyés au serveur. Il y a alors une route GET qui permet d'ajouter des données qui est faite à la table "annonces" :
+```js
+app.get('/annonces', (req, res) => {
+    const sql = "SELECT * FROM Annonces;";
+    connection2.query(sql, (err, results) => {
+        if (err) {
+            console.log("Annonces non récupérées")
+            res.status(500).json({message: 'Erreur récupération Annonces'});
+        }
+        else {
+            res.status(200).json({annonces: results});
+        }
+    })
+});
+```
+La route est assez simple car on sélectionne toutes les lignes présentent dans la table pour les afficher sur la page. 
+
+D'autres routes ont été créées pour modifer ou supprimer une annonce, voici celle qui permet de supprimer une annonce à partir de son id : 
+
+```js
+app.delete("/annonce", verifyToken, (req, res) => {
+    const annonceId = req.body.annonceId;
+    console.log(annonceId);
+    const sql = "DELETE FROM Annonces WHERE id = ?";
+    connection2.query(sql, [annonceId], (err, results) => {
+        if (err) {
+            res.status(500).json({message: "Erreur lors de la suppression de l'annonce"});
+            console.log(`Annonce n°${annonceId} pas supprimée`);
+        }
+        else {
+            res.status(200).json({message: "Annonce supprimée"});
+        }
+    })
+});
+```
+
+### Autres routes
+Il y a encore beaucoup d'autres routes mais nous n'allons pas tout détailler. Vous pouvez les consulter sur le lien github. 
+
 
 
 ## Perspectives d'avenir du site
@@ -306,4 +445,4 @@ Maquette Bubble : [benoitbeguier.bubbleapps.io/version-test/](benoitbeguier.bubb
 
 Maquette Figma : [ici](https://www.figma.com/file/C06wE0TDJzsnxTPR5HOqet/Maquette?type=design&node-id=0%3A1&mode=design&t=hd9UGllpKLRbmCeH-1)
 
-Github : [ici]()
+Github : [ici](https://github.com/williamlalanne1/Projet3A)
