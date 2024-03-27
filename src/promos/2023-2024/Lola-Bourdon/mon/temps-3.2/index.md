@@ -36,7 +36,7 @@ Une invention est la création d'une nouvelle idée ou technologie, tandis que l
 
 ## Les outils du management de l'innovation
 
-Il existe de nombreux outils de management de l'innovation comme le mentionne [Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/). Je vais donc expliquer plus en profondeur les méthodes C-K, TRL et crouwdsourcing qui sont pour moi les plus intéressantes.
+Il existe de nombreux outils de management de l'innovation comme le mentionne [Soline](https://francoisbrucker.github.io/do-it/promos/2023-2024/de-Miribel-Soline/mon/temps-3.1/). Je vais donc expliquer plus en profondeur les méthodes C-K, TRL et crowdsourcing qui sont pour moi les plus intéressantes.
 
 ### La méthode C-K
 
@@ -276,7 +276,7 @@ Grâce à l'approche C-K, l'entreprise a réussi à développer une voiture éle
 ---
 
 
-### Étude de Cas 4 - Le crouwdsourcing
+### Étude de Cas 4 - Le crowdsourcing
 
 #### Contexte
 
