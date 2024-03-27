@@ -76,6 +76,10 @@ Nous avons également présenté notre application lors de l'après- midi de pr�
 Malheureusement l'option de déployer une application avec Bubble est *payante*. Mais vous trouverez ici une courte vidéo de présentation de l'application :
 
 
+
+<video width="400" height="200" controls> <source src="demo.mp4" type="video/mp4"></video> 
+
+
 Et voici le lien vers un preview de notre application [ici](https://duc15dangvu.bubbleapps.io/version-test/page_de_connexion), avec lequel vous pourrez jouer !
 
 ### Base de données Airtable
