@@ -475,7 +475,37 @@ Il est essentiel de jouer dans le respect des autres : pas de blessures, pas de 
 </tr>
 </tbody>
 </table>
-
+<h2>Développement de l’application</h2>
+<h3>Choix techniques</h3>
+<p>Pour le développement de l’application, nous avons choisi de partir sur ces technologies :</p>
+<ul>
+<li><strong>Mongo DB</strong> pour la base de donnée</li>
+<li><strong>Node.js</strong> avec Express pour le backend</li>
+<li><strong>React Native</strong> pour le frontend</li>
+</ul>
+<p>Nous avons choisi d’utiliser <strong>Mongo Db</strong> car c’est une base de donnée No SQL qui permet de créer des bases de données facilement sans commande SQL. De plus Mongo DB permet d’héberger notre base de donnée sur leur serveur, ce qui simplifie la configuration.</p>
+<p>Ensuite, nous avons choisi <strong>Node.js</strong> car c’est une technologie que nous avions utilisé pour certains MON. De plus Node.js utilise du Javascript, comme React Native.<br>
+Enfin, <strong>React Native</strong> nous permet de développer des applications mobiles natives et cross platform (compatible avec IOS et ANDROID avec un seul code source). Il existe également Flutter mais nous avons préféré partir sur React Native car on ce Framework est très similaire à React.js.</p>
+<p>De plus, pour la communication entre les joueurs, nous utilisons <a href="http://socket.io/">Socket.IO</a>.</p>
+<p><a href="http://Socket.IO">Socket.IO</a> est une bibliothèque JavaScript pour permettre la communication temps réel bidirectionnelle entre un client et un serveur.</p>
+<p><a href="http://Socket.IO">Socket.IO</a> utilise WebSocket comme protocole de transport lorsque cela est possible, et bascule automatiquement sur d'autres techniques comme le long polling lorsque WebSocket n'est pas disponible. Cela permet à Socket Io de fonctionner dans tous les environnements</p>
+<p>La bibliothèque est composée de deux parties : une partie cliente, et une partie serveur qui s'exécute dans un environnement Node.js. Les deux parties communiquent ensemble pour permettre l'envoi et la réception de messages en temps réel.</p>
+<h3>Résultat</h3>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="HomeScreen.jpg" width="250"></td>
+<td style="text-align:center"><img src="SettingScreen.jpg" width="250"></td>
+<td style="text-align:center"><img src="SalonScreen.jpg" width="250"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="GameScreen.jpg" width="250"></td>
+<td style="text-align:center"><img src="StatPerso.jpg" width="250"></td>
+<td style="text-align:center"><img src="Classement.jpg" width="250"></td>
+</tr>
+</tbody>
+</table>
+<img src="Historique.jpg" width="250">
 
 </article>
 
