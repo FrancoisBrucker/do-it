@@ -394,6 +394,16 @@ Top 3 des futurs défis :
 
 ### Analyse & Restitution
 
+La transformation numérique, notamment à travers l'Industrie 4.0, est incontestablement l'avenir de la Supply Chain. Cependant, malgré les avancées significatives, nous sommes encore aux prémices de cette révolution, pour citer Olivier Gléron "nous ne sommes pas encore à l'aube de cette transformation". Au niveau opérationnel, l'automatisation en production, l'IoT et d'autres technologies émergentes offrent des opportunités d'optimisation des processus, mais leur intégration reste un défi majeur, toutes les entreprises ne peuvent pas se permettre d'investir dans ces changements. Au niveau stratégique, la plupart des dirigeants préfèrent pour le moment continuer de miser sur leurs talents et la qualité de leur travail plutôt que d'investir dans l'IA et le Machine Learning : bien que ces technologies puissent apporter un gain de temps et une amélioration des prédictions en "temps normal", le manque de ressources lors de périodes de crises reste problématique.
+
+En somme, la priorité des entreprises reste la bonne structuration de leur organisation, l'atteinte d'un niveau de qualité satisfaisant de leurs processus. Cette volonté passe notamment par la mise en place de méthodes Lean.
+
+L'arrivée de nouvelles technologies soulève également des questions éthiques et sociales importantes. Il est crucial de poser des bases éthiques solides pour guider le déploiement et l'utilisation des technologies de manière responsable. Cela inclut la considération de l'impact sur les emplois, la sécurité des données et la protection de la vie privée.
+
+La pandémie de COVID-19 a mis en lumière la nécessité de renforcer la résilience des chaînes d'approvisionnement. La capacité à s'adapter rapidement aux perturbations et à maintenir des opérations fluides est devenue essentielle pour assurer la continuité des activités. Une voie de sortie semble être l'intégration d'une économie circulaire, relocalisation, approvisionnement auprès de fournisseurs de proximité... Ce sont tous les flux de la Supply Chain qui sont à revoir, Olivier Gléron soulevait notamment la question de la nécessité d'importer des produits à faible valeur ajoutée depuis d'autres continents pour une simple question de coûts.
+
+Enfin, la transition vers des sources d'énergie durables et la réduction de l'empreinte carbone sont des défis croissants pour la Supply Chain. Les entreprises doivent intégrer des pratiques et des technologies respectueuses de l'environnement pour répondre aux attentes des consommateurs et aux impératifs de durabilité.
+
 ## Conclusion
 
 Ce POK renouvèle une fois de plus ma volonté de travailler dans la Supply Chain, je fus extrêmement passioné par la lecture de revues et d'articles à son sujet. Qu'il s'agisse des futurs changements auquel la Supply Chain sera confrontée, des questions éthiques ou environnementales qu'elle soulève, des enjeux numériques auquel elle fait face, je suis stimulé par son dynamisme et son importance dans notre monde.
