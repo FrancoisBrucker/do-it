@@ -125,12 +125,231 @@
 
 
 
-<h2>Notes et références :</h2>
+<div style="display:flex;flex-direction:row;">
+    <img style="height:150px" src="images/css3.png" alt="Logo CSS 3">
+    <img style="height:150px" src="images/sass.png" alt="Logo Sass">
+</div>
+<h2>Prérequis</h2>
+<p>Il est préférable d’avoir fait un peu de CSS (voir Sass que nous approfondirons) et de développement Front-End pour suivre les parties de code. Quelques notions d’UI/UX Design seront nécessaires, comme le cours électif de Do_It sur le sujet, par exemple. Bonne lecture !</p>
+<h2>Autres MONs</h2>
+<p>Le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-2.2/">MON de Lucie</a> porte sur le sujet qui m’intéresse. Après avoir navigué dans ses notes, je décide de me lancer dans le visionnage du cours OpenClassrooms sans y passer les 15 heures préconisées et m’attarder sur les parties qui ont suscité mon intérêt pour la rédaction d’un tel MON.</p>
+<p>J’ai aussi vu au cours de l’année au cours d’un MON de Benoit “<strong><a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.2/">HTML C'est Super Simple</a></strong>” un petit jeu nommé Flexbox Froggy que nous allons utiliser pour se remettre à niveau.</p>
+<h2>Objectifs du MON</h2>
 <ul>
-<li>Sass</li>
-<li><a href="https://postcss.org">https://postcss.org</a></li>
-<li><a href="https://gsap.com">https://gsap.com</a></li>
+<li>Se remettre à niveau sur des bases non maitrisées de CSS</li>
+<li>Designer un animation</li>
+<li>Savoir porter un design Figma vers un code CSS</li>
+<li>Appliquer les designs au site portfolio fait en POK 1</li>
+<li>Tester les performances</li>
 </ul>
+<h2>Revenir aux sources</h2>
+<p>Combien de fois me suis-je dit qu'il ne pourrait pas y avoir de bon projet sans fondation solide? Et combien de fois, malgré cela, me suis-je lancé dans un nouveau site sans revoir ces mêmes fondations…</p>
+<p>En revenant à ces bases, je souhaite non seulement solidifier mes connaissances, mais aussi me donner les outils nécessaires pour résoudre efficacement les problèmes centrés sur le design qui pourrait se poser à moi à l'avenir.</p>
+<h3>Les positionnements</h3>
+<p><strong><code>How to center a div</code></strong> est probablement la recherche la plus tapée sur Google par nos amis développeurs débutants ou simplement Back-End. C’est parce que l’on revient rarement à des choses aussi élémentaires que de s’occuper de son jardin et de ses grenouilles. En témoigne le petit jeu <a href="https://flexboxfroggy.com">Flexbox Froggy</a> qui nous rappelle de façon ludique comment placer des éléments grâce à <code>display: flex;</code>.</p>
+<p>Rien à ajouter : jouez-y. En pratiquant régulièrement les concepts, il y a de fortes chances que la question initiale de cette section ne soit qu’un lointain souvenir. À la manière des serious games, le jeu pourrait même conférer des facilités de mémorisation sur le long terme <a href="#bibliographie">[7]</a>. Tout est en place pour acquérir et mémoriser les positionnements dans le web, pour de bon.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Tout… pas si sûr ! ☝🏼 Je crois avoir entendu parler de <code>display: grid;</code>, non ?</p>
+</div></div>
+<p>En effet ! Il m’est arrivé d’utiliser des grids pour aligner des éléments. Cela fait encore partie de la liste des basiques à avoir dans sa boîte à outils, mais pour autant je réalise qu’il me faut reprendre certains points.</p>
+<p>Un peu à la manière des flexbox, les grids CSS offrent un système de positionnement puissant pour organiser les éléments sur une page web. En utilisant <strong><code>display: grid;</code></strong>, nous pouvons définir des grilles composées de lignes et de colonnes, permettant un contrôle précis sur la disposition des éléments enfants à l'intérieur du conteneur de grille. Avec les propriétés telles que <strong><code>grid-template-columns</code></strong>, <strong><code>grid-template-rows</code></strong> et <strong><code>grid-gap</code></strong>, nous pouvons définir la structure de la grille, spécifier la taille des colonnes et des lignes, ainsi que l'espacement entre elles. Les grids CSS offrent une alternative flexible et efficace pour créer des mises en page adaptatives, en offrant des fonctionnalités avancées pour l'alignement et le positionnement des éléments.</p>
+<p>Sur inscription est aussi disponible un jeu du même auteur que Flexbox Froggy : <a href="https://codepip.com/games/grid-garden/">Grid Garden</a>.</p>
+<p>Pour résumer, la grid doit être utilisée pour favoriser la <strong>disposition de la page</strong> tandis que le flex met l’accent sur les <strong>différents contenus des éléments</strong> <a href="#bibliographie">[8]</a>.</p>
+<img align="center" src="images/GridVSFlex.png" alt="Grid VS Flex from Berker Erol">
+Source : [8]
+<h2>Une corde de plus a notre arc : les animations</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Avant toute chose, un presque prérequis pour ce cours a déjà été abordé dans le cadre d’<a href="../../pok/temps-1/">un de mes POK</a>. En effet, il s’agit de Sass. Le cours est lisible sans connaitre cette technologie, mais nous reviendrons sur Sass dans ce MON et dans le cours OpenClassrooms auquel il fait référence.</p>
+</div></div>
+<h4>Bonnes pratiques de design</h4>
+<p>Pour cette partie, nous pouvons pratiquer sur Figma pour tester des concepts étudiés.</p>
+<p>Douze principes venant du cinéma d’animation régissent les règles d’animation. Nous allons utiliser Figma pour mettre en pratique ces principes.</p>
+<p>Pour résumer, la vidéo <a href="#bibliographie">[2]</a> donne une bonne idée de ces principes appliqués par les UI designers et Motion Designers pour donner vie aux sites web de façon naturelle. Pour l’implémentation, je recommande le visionnage de <a href="#bibliographie">[4]</a> d’un excellent vidéaste français pour ce qui touche au design d’interface.</p>
+<p>J’ai effectué quelques tests sur mon Figma et vous pouvez voir <a href="https://www.figma.com/proto/ZzfWiYmFJc8P5VVmpu05Gi/Animation-Presentation?type=design&amp;node-id=1-2&amp;t=C7OA6eEmvNZRs14l-1&amp;scaling=min-zoom&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A2&amp;mode=design">le résultat ici</a>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><em>Source du logo: <a href="https://github.com/atordjmann/cours_ecm/blob/main/frontend/src/assets/images/logo_blue.svg">Cours en Do_It, projet servant d’exemple et ancien projet étudiant</a></em></p>
+</div></div>
+<h4>Quelques règles pour faire des transitions</h4>
+<p>C’est maintenant que nous plongeons tout droit dans le cours d’Openclassrooms <a href="#bibliographie">[1]</a> suivi par Lucie. Je recommande la lecture de son MON pour se faire une idée et si cela vous intéresse, du cours tout entier. Voici ce que j’en retiens à ma manière :</p>
+<h4>Les propriétés à retenir</h4>
+<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition-property</span><span class="token punctuation">:</span> transform<span class="token punctuation">;</span> <span class="token comment">/* Propriété à modifier */</span>
+<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token comment">/* Valeur initiale */</span>
+<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span> <span class="token comment">/* Valeur finale (même propriété) */</span>
+<span class="token property">transition-duration</span><span class="token punctuation">:</span> 1ms<span class="token punctuation">,</span> 1s<span class="token punctuation">,</span> ...<span class="token punctuation">;</span>
+<span class="token comment">/* Événement déclencheur (pseudo-classe ou infini et répétitif) */</span>
+</code></pre>
+<p>Il est possible de combiner ces propriétés en une seule, bien sûr. Par exemple :</p>
+<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transform 100ms<span class="token punctuation">;</span>
+</code></pre>
+<h4>Complexifier ses transitions</h4>
+<p>On peut séparer les transitions par des virgules et plusieurs se produiront. On peut dès lors les espacer avec la propriété <code>transition-delay</code> à mettre après <code>transition-duration</code> dans <code>transition</code>. On a donc :</p>
+<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transition-property transition-delay<span class="token punctuation">,</span>
+            transition-property transition-delay transition-duration<span class="token punctuation">;</span>
+</code></pre>
+<p>Plus d’informations peuvent être trouvées sur l’excellente documentation de Mozilla <a href="#bibliographie">[5]</a>.</p>
+<h4>Performances</h4>
+<p>Arrêtons-nous quelques instants sur la partie performances du site avant d’y ajouter des animations supplémentaires. En se référant au chapitre qui traite des performances, on se rend compte qu’il ne faut animer que certaines propriétés pour que le navigateur rende le moins d’éléments possibles.</p>
+<p>Ainsi, on n’animera pas les propriétés qui lancent le rendu de la mise en page (<code>render</code>) ou de la traduction en pixels (<code>paint</code>) par le navigateur, mais seulement l’étape suivante : la <code>composition</code>.</p>
+<p>Typiquement, les propriétés CSS <code>width</code> ou <code>height</code> interviennent trop tôt dans le calcul de l’affichage de la page et obligent le navigateur à faire à nouveau toutes les étapes d’après, tandis que les propriétés <code>transform</code> et <code>opacity</code> se déroulent à la fin du rendu. On préfèrera alors les dernières évoquées.</p>
+<p>Ceci étant dit, on peut inspecter et modifier ses animations avec l’inspecteur d’élément Chrome. Il convient donc de regarder si les animations ne sont pas trop gourmandes pour les ordinateurs les moins performants, et ajuster celles-ci le cas échéant. Google a développé de très bons outils d’inspection dans les Chrome DevTools, comme le montre l’article sur leur site <a href="#bibliographie">[6]</a>. On peut grâce à l’outil performances vérifier que nous ne ralentissons pas la page en la surchargeant d’effets.</p>
+<h4>Exemple : mon portfolio.</h4>
+<p><a href="http://alouradou.perso.centrale-marseille.fr">Le portfolio</a> que j’ai conçu durant mon premier POK contient des lignes animées qui bougent en arrière plan, et j’ai toujours pensé que ces animations seraient véritablement gourmandes en ressources.</p>
+<p>Pour vérifier cela, j'ai utilisé l'outil de performances de Chrome DevTools. Après avoir analysé les résultats, j'ai constaté que, bien que les animations soient quelque peu exigeantes, elles ne ralentissent pas considérablement la page. En effet, inspectons le code :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Le code testé</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@import</span> <span class="token string">'../../scss/variables'</span><span class="token punctuation">;</span>
+
+<span class="token selector">.background, .background::before </span><span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.background::before </span><span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token variable">$main-gradient</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200vw<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200vw<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-35deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> center left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100vh <span class="token operator">+</span> 100vw <span class="token operator">+</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// increase the size of the line so that it is always visible</span>
+  <span class="token property">border-top</span><span class="token punctuation">:</span> 2px solid white<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> -20px<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line-left </span><span class="token punctuation">{</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> move-left 10s linear infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line-right </span><span class="token punctuation">{</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> move-right 10s linear infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line-alternate </span><span class="token punctuation">{</span>
+  <span class="token property">animation-direction</span><span class="token punctuation">:</span> alternate<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* -- Timings and durations -- */</span>
+.<span class="token property">line</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">animation-duration</span><span class="token punctuation">:</span> 25s<span class="token punctuation">;</span>
+  <span class="token property">animation-delay</span><span class="token punctuation">:</span> 6s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+.<span class="token property">line</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">animation-duration</span><span class="token punctuation">:</span> 13s<span class="token punctuation">;</span>
+  <span class="token property">animation-delay</span><span class="token punctuation">:</span> 8s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+.<span class="token property">line</span><span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span>3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">animation-duration</span><span class="token punctuation">:</span> 18s<span class="token punctuation">;</span>
+  <span class="token property">animation-direction</span><span class="token punctuation">:</span> reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* ... */</span>
+
+<span class="token comment">/* -- Animations -- */</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move-left</span> <span class="token punctuation">{</span>
+  <span class="token selector">0% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-60%<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+  <span class="token selector">10% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">70% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">80% </span><span class="token punctuation">{</span> <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0px<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">90% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">100% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>50%<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move-right</span> <span class="token punctuation">{</span>
+  <span class="token selector">0% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-10%<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">10% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">20% </span><span class="token punctuation">{</span> <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0px<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">70% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">90% </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">100% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-100%<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-25deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>9px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* --- */</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>On peut voir à la lecture de ce code que les animations sont effectivement réalisées avec des propriétés <code>transform</code> et <code>opacity</code>, ce qui respecte les recommandations pour une meilleure performance.</p>
+<h4>Les keyframes</h4>
+<p>La notion de keyframes est aussi abordée dans le cours pour mettre en place des animations plus complexes, c’est ce qui a été utilisé ici pour donner une impression aléatoire au mouvement.</p>
+<h2>Sass</h2>
+<p>Comme je l'ai mentionné dès le début, Sass est l'une de mes belles découvertes de l'année en termes de production de code propre et maintenable à long terme. J’avais pu commencer le visionnage du cours OpenClassrooms [9] par le passé et avait été frappé par sa clareté.</p>
+<p>Pour faire simple, Sass est un préprocesseur CSS, ce qui signifie que l’on écrit du code qui est ensuite compilé pour être lu par le navigateur, en CSS original.</p>
+<h2>Ce que j’ai appris durant ce MON</h2>
+<p>Au cours de ce MON, j'ai appris à exprimer et à articuler des aspects de la conception et du développement CSS qui étaient précédemment passés sous silence ou réalisés de manière précipitée. Mon objectif était de prendre le temps de comprendre ces éléments en profondeur et de les expliquer de manière claire et détaillée. En effet, pour reprendre l’exemple de mon portfolio, j’avais pu réaliser par le passé des animations sans comprendre fondamentalement les enjeux de performance ou de décomposition de procédés complexes.</p>
+<p>En somme, ce MON a été une occasion précieuse de renforcer mes compétences en CSS. Il m'a permis de mieux comprendre l'importance des performances et de la façon dont les animations peuvent améliorer l'expérience utilisateur. Enfin, il a souligné l'importance de toujours revenir aux bases et de continuer à apprendre, même dans des domaines que nous pensons maîtriser.</p>
+<h2 id="bibliographie">Bibliographie</h2>
+<p>[1] OpenClassrooms - <strong>Créez des animations CSS modernes</strong><br>
+<a href="https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes">https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes</a></p>
+<p>[2] AlanBeckerTutorials - <strong>12 Principles of Animation (Official Full Series)</strong><br>
+<a href="https://www.youtube.com/watch?v=uDqjIdI4bF4">https://www.youtube.com/watch?v=uDqjIdI4bF4</a></p>
+<p>[3] Basti UI - <strong>Animer ses design avec Figma</strong><br>
+<a href="https://www.youtube.com/watch?v=-zr_JzddTSk">https://www.youtube.com/watch?v=-zr_JzddTSk</a></p>
+<p>[4] Basti UI - <strong>Tuto Figma : créer une animation de switch</strong><br>
+<a href="https://www.youtube.com/watch?v=rk43LIeTsjc">https://www.youtube.com/watch?v=rk43LIeTsjc</a></p>
+<p>[5] Mozilla - <strong>Using CSS transitions</strong><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions?ref=yon.fun">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions?ref=yon.fun</a></p>
+<p>[6] Google Developers - <strong>Animations in Chrome DevTools</strong><br>
+<a href="https://developer.chrome.com/docs/devtools/css/animations/">https://developer.chrome.com/docs/devtools/css/animations/</a></p>
+<p>[7] Pascal Brassier, Patrick Ralet. <strong>LA GAMIFICATION POUR APPRENDRE : PERCEPTIONS DES ACTEURS ET PISTES DE DÉVELOPPEMENT.</strong> @GRH, 2021. <a href="https://uca.hal.science/hal-03180445">hal-03180445</a></p>
+<p>[8] Berker Erol - <strong>CSS Grid vs. CSS Flexbox — How and when to use them</strong><br>
+<a href="https://medium.com/css-grid-vs-css-flexbox-how-and-when-to-use-them/css-grid-vs-css-flexbox-how-and-when-to-use-them-80ed02188016">https://medium.com/css-grid-vs-css-flexbox-how-and-when-to-use-them/css-grid-vs-css-flexbox-how-and-when-to-use-them-80ed02188016</a></p>
+<p>[9] OpenClassrooms - <strong>Simplifiez-vous le CSS avec Sass</strong><br>
+<a href="https://openclassrooms.com/fr/courses/8069761-simplifiez-vous-le-css-avec-sass">https://openclassrooms.com/fr/courses/8069761-simplifiez-vous-le-css-avec-sass</a></p>
 
 
 </article>
