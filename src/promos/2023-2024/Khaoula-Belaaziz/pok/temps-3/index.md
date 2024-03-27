@@ -40,7 +40,53 @@ L'objectif de ce print est de personnaliser le CV intéractif, l'améliorer et l
 - Changer un peu le design
 - Détailler les informations du parcours suivi pourqu'il soit plus clair et parlant à tout le monde.
 
+### Rendu final
 
+<div style="display: flex; justify-content: space-around;">
+  <img src="im1.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="im2.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="im3.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="im4.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="im5.png" alt="qlqs manips" style="width: 100%; margin-right: 2%;">
+</div>
+
+{% details "Faciliter la prise en main du code" %}
+
+- IL faut cloner le projet localement et  utiliser la commande suivante dans votre terminal
+```
+git clone https://github.com/KhaoulaBelaaziz/CV_interactif.git
+``` 
+- Créer et initialiser un nouveau dépôt Github
+- Il faut Supprimer le lien du dépôt original et initialisez un nouveau dépôt Git
+```
+cd projet_original
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
+``` 
+Cela supprime l'historique de version du projet original et commence un nouvel historique pour votre projet.
+- Liaison du nouveau dépôt Github
+```
+git remote add origin URL_DU_NOUVEAU_DEPOT
+``` 
+- Finalement, il faut pousser le code au nouveau dépôt 
+```
+git push -u origin main
+``` 
+{% enddetails %}
+
+### Conclusion
+J'ai pu ajouter la page que je veux dans ce CV, mais elle est loin d'être intéractive comme j'ai prévu. Cette page a pour but d'afficher des blogs qui sont liées aux thématiques qui m'intéressent, un espace ou je peux exprimer mes pensées et mes recherches à propos de ces sujets. J'ai rencontré plusieurs problèmes techniques dont je ne savais pas la source et cela m'a attardé vachement puisque je ne code pas d'une manière fréquente.
+Bref, ce projet est intéressant et je vais sûrment l'améliorer avec le temps pour qu'il soit un espace informatif et intéractionnel avec mon entourage.
 ### Horodateur
 | Date       | Heures passées | Tâches                           | Commentaires                                                    |
 |------------|----------------|----------------------------------|-----------------------------------------------------------------|
