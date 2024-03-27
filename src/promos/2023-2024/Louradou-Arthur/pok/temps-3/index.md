@@ -13,6 +13,19 @@ tags:
 résumé: Cette seconde partie du projet SérénaDo_It a pour objectif de définir les bases d'un projet pérenne. Elle abordera la mise en place d'une architecture logicielle robuste, la définition des processus de déploiement continu et la mise en place d'une stratégie de tests unitaires.
 ---
 
+## Rappels { #rappels }
+
+Le projet permettant aux élèves de Do_It de consulter leur emploi du temps est déployé à l'adresse suivante :
+
+<a href="http://node.oignon.ovh1.ec-m.fr/" class="buttonGithub">
+  <span>Accéder à SérénaDo_It !</span>
+</a>
+
+(Tenez, une belle animation qui vous donnera envie de lire [mon dernier MON](../../mon/temps-3.2/) peut-être ? 😉)
+
+Le projet a été débuté au temps 2, et a été présenté dans le [POK 2](../temps-2/). Le code source est disponible [sur mon GitHub](https://github.com/alouradou/SerenaDo_It).
+
+
 ## Objectifs { #objectifs }
 
 - Améliorations et fonctionnalitées
@@ -194,8 +207,8 @@ On peut s'amuser un peu avec l'interface d'administration pour supprimer et ajou
 Avec la fonctionnalité de personnalisation du calendrier, il devient crucial de pouvoir associer fidèlement les cours donnés sur la feuille de calcul EDT avec ceux du sheet élève (choix des cours).
 Pour cela, le parti pris a été de laisser cette opération à tous les utilisateurs qui souhaitent contribuer.
 
-Dès lors, si un cours n'est pas reconnu, il est possible de l'ajouter dans la base de données pour l'associer à un cours du sheet élève et qu'il soit reconnu par la suite.
-À chaque fois qu'un emploi du temps est demandé par l'utilisateur, apparaitra la liste des cours aux noms non reconnus pour qu'il puisse les associer à un cours de la base de données.
+Dès lors, si un cours n'est pas reconnu, il est possible de l'ajouter dans la base de données pour l'associer à un cours du sheet élève et qu'il soit reconnu par la suite. À chaque fois qu'un emploi du temps est demandé par l'utilisateur, apparaitra la liste des cours aux noms non reconnus pour qu'il puisse les associer à un cours de la base de données.
+
 Il n'y a pas encore de système qui permette d'en avertir l'utilisateur dans la page, mais on peut imaginer une notification qui apparaitrait en haut de la page.
 
 
@@ -203,12 +216,51 @@ Il n'y a pas encore de système qui permette d'en avertir l'utilisateur dans la 
 
 Finalement, à l'issue de ces quatre Sprints, il s'est passé beaucoup de choses et j'ai appris énormément.
 
-J'ai pu conceptualiser une preuve de concept à partir de l'analyse d'un besoin du côté des étudiants, puis j'ai pu le développer et le déployer.
-Entre ces étapes, beaucoup de technologies et techniques ont été utiles et que je peux remettre en perspective avec l'anneée passée et mon parcours scolaire qui s'achève (presque...).
+J'ai pu conceptualiser une preuve de concept à partir de l'analyse d'un besoin du côté des étudiants, puis j'ai pu le développer et le déployer. Entre ces étapes, beaucoup de technologies et techniques ont été utiles et que je peux remettre en perspective avec l'anneée passée et mon parcours scolaire qui s'achève (presque...).
 
-En effet, les cours de Data que j'ai suivi durant ma césure m'ont permis de mener à bien cette preuve de concept en explorant les possibilités offertes par différentes bibliothèques dans des notebooks Python.
-Ensuite, les cours d'Ops suivis en Do_It nous ont offert une connaissance de la mise de ligne d'APIs et de la gestion de serveurs. Je m'en suis servi pour consruire le serveur Flask qui fait tourner la plateforme.
-Nous avons aussi appris à mettre en place des bonnes pratiques pour ce code, notamment avec les tests unitaires et l'intégration continue dans des cours de Do_It, ce n'est pas à négliger !
-Aussi, les POKs et les MONs des autres élèves ont fait expérimenter le travail collaboratif.
+En effet, les cours de Data que j'ai suivi durant ma césure m'ont permis de mener à bien cette preuve de concept en explorant les possibilités offertes par différentes bibliothèques dans des notebooks Python. Ensuite, les cours d'Ops suivis en Do_It nous ont offert une connaissance de la mise de ligne d'APIs et de la gestion de serveurs. Je m'en suis servi pour consruire le serveur Flask qui fait tourner la plateforme. Nous avons aussi appris à mettre en place des bonnes pratiques pour ce code, notamment avec les tests unitaires et l'intégration continue dans des cours de Do_It, ce n'est pas à négliger ! Aussi, les POKs et les MONs des autres élèves ont fait expérimenter le travail collaboratif.
 
 Enfin, j'espère que ce projet pourra être utilisé l'année prochaine grâce aux fonctions d'administration et de déploiement continu fraichement ajoutées.
+
+
+<style>
+    a.buttonGithub {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 10px;
+      border: 2px solid #3498db;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, transform 0.3s ease-in-out;
+    }
+
+    a.buttonGithub:hover {
+      background-color: #3498db;
+      transform: translateY(-5px);
+      color: #3498db;
+    }
+
+    a.buttonGithub span {
+      position: relative;
+      z-index: 1;
+    }
+
+    a.buttonGithub::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: left 0.3s;
+    }
+
+    a.buttonGithub:hover::before {
+      left: 0;
+    }
+  </style>
+
