@@ -29,4 +29,4 @@ Ensemble des MON réalisés par Vladimir Jeantroux
 
 -[Java tranquille et toi ?](./temps-3-1)
 
--[Aprentissage d'Excel](./temps-3-2)
+-[Atteindre l'Excel-lence.](./temps-3-2)
