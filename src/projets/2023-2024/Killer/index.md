@@ -63,26 +63,58 @@ Créer un site web avec une meilleur expérience utilisateur, qui permet de joue
     - Mode Team Building
     - Mode Personnalisable
 
-## Plan d'action
+## Organisations et étapes clés 
 
 
-1. **Planification et Conception**:
-- Lister les fonctionnalités
-- Creation d'une maquette 
-:--------------:|:----------------:
-<img src="figma.png" width="150" height="150"> | <img src="xd.png" width="100" height="100">
+### Design Thinking
 
-- Définir les règles du jeu
-2. **Développement de l'Application**:
-- Création d'une version minimale viable (MVP) du jeu. (no code)
-- Conception de l'interface utilisateur <img src="flutter.png" width="100" height="60">
-- Intégration des fonctionnalités clés
-- Conception de l'architecture des données
+Au tout début de notre projet, avant même de commencer le développement, nous avons organisé des ateliers de design thinking. Ces sessions ont été cruciales pour définir les fondations de notre projet, en mettant un accent particulier sur la compréhension de nos utilisateurs finaux. À l'aide des principes et techniques issus de nos cours d'UX, nous avons créé plusieurs personas, représentant les archétypes de nos utilisateurs cibles.
 
+À la suite de nos ateliers de design thinking et de l'analyse des personas, nous avons tiré des conclusions sur le type d’application que nous voulons développer. Notre objectif est de développer un jeu de soirée destiné principalement à un public jeune, âgé de 18 à 30 ans. L'aspect le plus distinctif de notre application réside dans sa facilité et rapidité de mise en place d'une partie, ainsi que dans la simplicité de son organisation. Nous voulons que notre jeu encourage non seulement l'amusement mais aussi l'échange et la possibilité de rencontrer de nouvelles personnes lors des soirées. Cela signifie que l'interface utilisateur doit être intuitive, éliminant toute barrière technique qui pourrait entraver la spontanéité et la fluidité de ces interactions. De plus, un point crucial de notre conception est de permettre à l'organisateur de la soirée de participer pleinement au jeu, assurant ainsi que personne ne soit laissé de côté et que tous les participants puissent profiter pleinement de l'expérience. 
 
-## Points d'amélioration
+Ces ateliers ont définit plus ou moins le scope de notre projet. Ce qui nous a aidé dans la prochaine étape de déterminer les fonctionnalités clés de notre application avec des sessions de brainstorming.
 
-Comme amélioration du projet, on propose un mode **Grand Public**, qui permet une grande communauté de jouer le jeu pendant une semaine ou une quinzaine.
-Exemple d'application: L'intégration des étudiants centraliens.
-Concept du mode : Celui des **Hunger Games**, où les cibles tuées vont être affichées dans les écrans Centraliennes tout au long du jeu.
+### Brainstorming
 
+Suite à une session de brainstorming, nous avons collectivement identifié et évalué toutes les fonctionnalités nécessaires pour notre projet, une étape cruciale dans la définition du scope. Chaque fonctionnalité a été notée en termes de difficulté de réalisation et de priorité, en alignement avec notre charte de projet et nos objectifs. La distinction entre les éléments essentiels et les fonctionnalités optionnelles ou secondaires est essentielle pour affiner le scope de notre projet. Cela a facilité la gestion des taches. 
+
+Voici le tableau récapitulatif des fonctionnalités envisagées au début du projet:
+{% details "Fonctionnalités" %}
+| Fonctionnalité | Description | Priorité | Difficulté | Page  |
+| --- | --- | --- | --- | --- |
+| Création d’une partie | Btn pour créer une partie | 5/5 | 5/5 | Page d’accueil |
+| Rejoindre une partie | Btn pour rejoindre une partie existante (⇒ Entrer un code, mettre son nom) | 5/5 | 5/5 | Page d’accueil |
+| Accéder aux règles du jeu | Ouvre une page d’aide qui liste les différents modes de jeu et les règles associées | 1/5 | 2/5 | Page d’accueil |
+| Section “à propos”  | Section de texte listant les CGU, le contexte et les créateurs de l’appli | 1/5 | 1/5 | Page d’accueil |
+| S’identifier | Création de compte/connexion (sauvegarder des presets) | 1/5 | 5/5 | Page d’accueil |
+| Case “je ne bois pas” | Paramètre qui permet de définir si on peut recevoir un gage impliquant de la consommation d’alcool ou non |  |  | Page d’accueil |
+| Choisir une thématique | Le créateur de la partie choisit la thématique qui définit les gages (donc prédéfinis) de la soirée.  | 3/5 | 3/5 | Page de paramétrage de la partie |
+|  Case “soirée alcoolisée”  | Le créateur peut choisir d’exclure ou non les gages liés à la consommation d’alcool de la “pool” de gages |  |  | Page de paramétrage de la partie |
+| Possibilité de Reset les gages | Acceder à un système de vote dans le jeu pour reset les gages si trop de personne sont bloqués | 1/5 | 5/5 | Page de paramétrage de la partie |
+| Sauvegarder/Charger un preset | Si le créateur a un compte, il peut sauvegarder ou charger des paramètres de partie | 1/5 | 3/5 | Page de paramétrage de la partie |
+| Ajouter des gages personnalisées | L’utilisateur peut ajouter à la liste des gages à faire | 2/5 | 3/5 | Page de paramétrage de la partie |
+| Créer un timer | A la fin du timer la personne avec  le plus de kill gagne la partie | 2/5 | 3/5 | Page de paramétrage de la partie |
+| Lancer la partie | L’hôte peut lancer la partie | 5/5 |  | Page de paramétrage de la partie |
+| Notifications et Alerte  | Pour vérifier si la cible est morte + pour annoncer le nombre des derniers participants restants + Annoncer un reset | 5/5 | 3/5 | Notification |
+|  |  |  |  |  |
+| Attribution des gages et des cibles (automatiquement) | L’application va attribuer à chaque joueur une cible et un gage, de façon à ce qu’un joueur ne puisse pas tomber sur lui-même comme cible. (boucle) | 5/5 | 5/5 | Après le lancement de la partie |
+| Voir tout le monde dans un salon |  |  |  | Page d’attente |
+| afficher les infos dans le salon | Nombre de joueurs, Thématique, Fin de partie | 2/5 | 2/5 | Page d’attente |
+| Pouvoir lancer le jeu (hôte) |  | 5/5 | 5/5 | Page d’attente |
+| Possibilité d’ajouter un participant (au milieu du jeu) | Ajouter un nœud dans les relations | 1/5 | 2/5 | Page de la partie (Hôte) |
+| Possibilité de supprimer un participant | Si un joueur part de la soirée, l’hôte doit être capable de l’éjecter de la partie pour le bon déroulement du jeu. La cible et le gage de la personne déconnectée seront alors transférés à son tueur.  | 3/5 | 3/5 | Page de partie |
+| Voir sa cible |  | 5/5 |  | Page de partie |
+| voir son gage  | (cacher cette information derrière une confirmation pour éviter les révélations accidentelles)  | 5/5 |  | Page de partie |
+| Tuer sa cible |  | 5/5 |  | Page de partie |
+| Voter pour reset les gages |  | 2 | 5/5 | Page de la partie |
+| Confirmer qu’on est mort | La cible recevra une notification “Etes vous mort ?” et si elle confirme, verra qui était son tueur et son gage.  | 5/5 | 5/5 | Page de la partie |
+| Voir les participants restants quand on est mort |  | 2/5 | 4/5 | Autre page ? |
+{% enddetails %}
+
+### Développement
+Pour la phase de développement de notre projet, nous avons continué à travailler avec Notion pour la gestion des tâches, permettant ainsi une organisation et une collaboration efficace au sein de notre équipe. Grâce à Notion, nous avons pu lister toutes les tâches nécessaires à la réalisation de notre projet, en attribuant à chacune un statut précis qui reflète son avancement : "Non commencé", "En cours", et "Terminé".
+
+Cette approche nous a permis de maintenir une visibilité claire sur le progrès de chaque aspect du projet, facilitant ainsi la communication et assurant que nous sommes alignés sur les priorités et les échéances. Le suivi du statut des tâches via Notion a également contribué à une gestion de projet plus dynamique, permettant des ajustements en temps réel pour répondre aux changements de scope.
+:-------------------------:|:-------------------------:
+<img src="taches.png" width="760" height="650">|<img src="taches2.png" width="700" height="550">
+<img src="taches3.png" width="700" height="550">|<img src="taches4.png" width="760" height="650">
