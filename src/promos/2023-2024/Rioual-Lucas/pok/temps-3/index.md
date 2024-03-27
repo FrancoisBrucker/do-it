@@ -39,7 +39,7 @@ Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en Rea
 ## **Objectif du POK**
 
 L’objectif de ce POK est de créer un jeu de Quiz multijoueur en mode Battle Royale. Le but du jeu est d’être le dernier survivant de la partie en répondant juste à toutes les questions.
-Nous sommes deux pour réaliser ce POK : Moi, le grand Lucas Rioual, et mon larbin Samy Diafat.
+Nous sommes deux pour réaliser ce POK : Lucas Rioual et   Samy Diafat.
 
 Nous avons choisi cette thématique pour créer une application web avec Spring Boot. 
 
@@ -180,21 +180,87 @@ L’objectif du sprint 2 est de proposer une version jouable du jeu.
 | Objectif                                        | Temps estimé | Temps réalisé Samy |Temps réalisé Lucas |
 |--------------------------------------------------|--------------|
 | **Développement frontend**                          |              |
-| Page de fin de Game                                 | 1h           || |
-| Connection à l'API pour créer/rejoindre             | 1h           || |
-| Afficher les joueurs de la session en temps réel    | 3h           || |
-| Connection Question/réponse à l'API                 | 3h           || |
-| Hôte qui passe à la prochaine question              | 1h           || |
-| Page d'élimination                                  | 30 min           || |
-| Afficher le nombre de vie en temps réel             | 1h          || |
-| Afficher les stats réels                            | 2h          || |
+| Page de fin de Game                                 | 1h           | 0h | 0h|
+| Connection à l'API pour créer/rejoindre             | 1h           |0h| 3h|
+| Afficher les joueurs de la session en temps réel    | 3h           |0h| 1h |
+| Connection Question/réponse à l'API                 | 3h           |0h| 0h|
+| Hôte qui passe à la prochaine question              | 1h           |0h| 0h |
+| Page d'élimination                                  | 30 min           |0h| 30 min |
+| Afficher le nombre de vie en temps réel             | 1h          |1h| 0h|
+| Afficher les stats réels                            | 2h          |0h| 0h|
 | **Développement backend**                          |              | | |
-| Implémenter les webSockets                         | 3h          || |
-| Créer les routes qu'on a pas prévu                 | 3h          || |
-| **Mise en production**                             | 5h            | | |
+| Implémenter les webSockets                         | 3h          |1h| 6h |
+| Créer les routes qu'on a pas prévu                 | 3h          |0h| |
+| **Mise en production**                             | 5h            |0h| 4h |
+
+
+## Sprint 2
+
+
+Après avoir beaucoup travaillé durant sprint 1 (20h), il a été dur pour Samy de reprendre le projet après une longue pause. Il faut être honnête, reprendre un projet après l'avoir arrêté brusquement est bien plus compliqué que ce que je pensais.
+Cependant, le back-end développé durant le premier sprint a permis à Lucas d'avoir un début d'application fonctionnel.
+
+
+### Déploiement avec Docker
+
+ Au début de ce sprint, Lucas a voulu se concentrer sur la conteneurisation de l'API, de la base de donnée et du front. 
+
+Il s'est d'abord concentré sur cet aspect car il pensait que c'est l'étape qui allait poser le plus de problème. Et c'est pas faux.
+
+ L'objectif de cette étape était de créer une pipeline d'intégration continue, comme on l'avait vu dans le cours de Docker. Cependant, il y a eu beaucoup de problème avec la connexion entre la base de donnée mysql et l'api Spring Boot. Voici le DockerFile utilisé :
+
+```jsx
+version: '1'
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: doit_user
+      MYSQL_PASSWORD: doit_user_password
+      MYSQL_DATABASE: doit
+
+  spring-boot-app:
+    build:
+      context: ./backend/quizz
+      dockerfile: Dockerfile
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/doit?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: doit_user
+      SPRING_DATASOURCE_PASSWORD: doit_user_password
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+  react-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+
+```
+
+Le problème était que lorsque que le conteneur était exécuté, cela afficher une erreur car les tables de la base de donnée était vide. Après beaucoup de temps passé dessus, Lucas a abandonné pour ce concentrer sur l’interaction entre l’API et React.
+
+### Connection entre Spring Boot et React avec des websockets
+
+Cette partie était beaucoup plus longue que prévue. Pour afficher les joueurs en temps réel dans le salon, nous voulions utiliser des webSockets. Lucas avait déjà utilisé ce genre de chose pour l’application du Killer avec Node. Mais l’implémentation avec Spring Boot était plus compliqué que sur Node.js.
+
+Lucas a perdu beaucoup de temps (5h) car la version [socket.io](http://socket.io) utilisé avec React était différente de celle utilisé par Spring Boot. 
+Malgré cela, nous avons réussi à connecter les joueurs ensemble dans un même salon. Nous avons pas eu le temps de faire la suite du projet.
+
+
+## Conclusion
 
 
 
-
-
+Le projet n'est malheureusement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.
+Le frontend est tout de même disponible à cette adresse : [https://quiz-front-one.vercel.app/](https://quiz-front-one.vercel.app/)
+Le site est statique car l'API n'est pas déployé.
 

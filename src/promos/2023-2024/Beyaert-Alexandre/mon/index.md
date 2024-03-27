@@ -14,4 +14,4 @@ Ensemble des MON réalisés par Alexandre Beyaert.
 
 ## Temps 3
 * [Découverte de VBA](./temps-3.1)
-* [MON 3.2](./temps-3.2)
+* [Évolution de l'organisation du travail : modèles organisationnels et conditions des employés](./temps-3.2)

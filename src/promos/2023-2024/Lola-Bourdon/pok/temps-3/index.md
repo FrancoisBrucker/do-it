@@ -20,7 +20,7 @@ résumé: Préparer mon stage en gestion de projet à l'aide du PMI.
 Afin  de bien préparer mon stage de fin d'étude en tant qu'assistante chef de projet, je vais pour ce POK étudier le PMI - Project Management Institut. Une partie du POK sera donc de synthétiser tout le savoir du PMI, et de le rendre transferable.
 Ensuite, la deuxième partie sera une caractérisation des process du PMI dans ma mission ; comment les suivre,sur les phases de cadrage et de planification.
 
-### Sommaire
+## Sommaire
 
 1. Objectif Sprint 1
 2. Introduction
@@ -31,7 +31,7 @@ Ensuite, la deuxième partie sera une caractérisation des process du PMI dans m
 7. Objectif Srpint 2
 8. Horodateur
 
-### Objectif sprint 1
+## Objectif sprint 1
 
 L'objectif de ce premier sprint est de lire le PMI et d'en faire un cours en résumé. L'idée est de se concentrer sur chacun des process.
 
@@ -180,11 +180,11 @@ Les estimations de coûts doivent être revues et affinées au cours du projet p
 23. **Le plan de gestion de l'approvisionnement** consiste à documenter les décisions d'approvisionnement du projet, à spécifier l'approche et à identifier les vendeurs potentiels. Le principal avantage de ce processus est qu'il permet de déterminer s'il faut acquérir des biens et des services en dehors du projet et, dans l'affirmative, ce qu'il faut acquérir ainsi que la manière et le moment de le faire. Les biens et services peuvent être acquis auprès d'autres parties de l'organisation exécutante ou de sources externes.
 24. **Le plan d'engagement des parties prenantes** consiste à développer des approches pour impliquer les parties prenantes d'un projet en fonction de leurs besoins, de leurs attentes, de leurs intérêts et de leur impact potentiel sur le projet. Il fournit un plan d'action pour interagir efficacement avec les parties prenantes. Un plan de communication efficace est créé dès le début du projet pour répondre aux besoins d'information diversifiés des parties prenantes. Il est régulièrement révisé pour s'adapter aux changements dans les parties prenantes.
 
-### Conclusion Sprint 1
+## Conclusion Sprint 1
 
 Pour ce premier sprint j'ai pu lire presque entièrement le PMI, il me manque le dernier chapitre. J'ai besoin de relire certaines parties et je n'ai pas eu le temps de mettre toutes mes notes au propres sur la seconde partie du document.
 
-### Objectif sprint 2
+## Objectif sprint 2
 
 L'objectif pour la fin de ce POK est de finir le PMI et relire les parties nécessaires, finir de mettre au propre mes notes et mettre en application les connaissances acquises au service de mon futur stage.
 
@@ -321,11 +321,11 @@ Il peuvent être classés en plusieurs catégories en fonction de leur applicati
 
 La sélection des tools and techniques appropriés dépend de plusieurs facteurs, tels que la nature du projet, les objectifs spécifiques, les ressources disponibles, et les préférences de l'équipe de projet. Les gestionnaires de projet doivent évaluer soigneusement ces facteurs pour choisir les méthodes les plus efficaces pour leur projet.
 
-### Préparation de mon stage
+## Préparation de mon stage
 
 Pour préparer mon stage en tant qu’assistante chef de projet dans la maintenance et la rénovation des yachts, j'ai commencé par demandé directement à l'entreprise qi il y avait des choses, logiciels ou autre que je pouvais commencer à étudier dans le cadre de ce POK. L'entreprise m'a donc envoyée plusieurs documents avec par exemple le vocabulaire et les logiciels utilisés. La plupart des informations sont confidentielles donc je ne pourrai pas les détailler ici mais je vais quand même citer une partie de vocabulaire et de noms de constructeurs, cela me servira de fiche méthode synthétique.
 
-#### Vocabulaire :
+### Vocabulaire :
 
 **Voiliers :**
 
@@ -407,7 +407,7 @@ Dans le cadre de mon stage je pourrais mettre en pratique la théorie du PMI com
 8. Clôturer le projet en obtenant l'acceptation des livrables, en documentant les leçons apprises et en libérant les ressources
 
 
-détail de la phase de cadrage :
+Détail de la phase de cadrage :
 
 - Identifier les besoins et les exigences des clients et des parties prenantes
 - Évaluer l'état actuel du yacht et déterminer les travaux de maintenance et de rénovation nécessaires
@@ -429,7 +429,7 @@ Détail de la phase de planification :
 Ce second sprint m'aura permis de finir la lecture du PMI ainsi que la rédaction de la fiche méthode. J'ai également pu commencer à me familiariser avec l'environnement de mon stage.
 
 
-### Conclusion générale
+## Conclusion générale
 
 Ce dernier POK m'aura permis d'étudier le PMI qui me sera très utile pour mon stage en gestion de projet et pour mon futur emploi. J'ai aussi pu commencer à me familiariser et me former sur les outils que j'utiliserai pendant mon stage (confidentiel malheureusement). Enfin, j'ai mis en application le PMI en réalisant un petit résumé des étapes à suivre pour un projet de rénovation de yacht en détaillant les phases de cadrage et de planification.
 

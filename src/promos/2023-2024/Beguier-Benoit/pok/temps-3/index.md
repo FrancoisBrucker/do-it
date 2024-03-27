@@ -38,6 +38,13 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 5. Collecte des retours
 6. Organiser l'action
 7. Actions concrètes
+8. Retour d'expérience sur le Sprint 1
+9. Objectifs du Sprint 2
+10. Mise en place d'un processus d'organisation et de partage des tâches de mon département
+11. Pérennisation du savoir
+12. Passation
+13. Entretiens individuels
+14. Retour d'expérience sur le Sprint 2
 
 ## Objectifs du Sprint 1
 
@@ -125,11 +132,116 @@ J'ai aussi mis en place un outil Google Tasks, qui permet d'assigner des tâches
 
 L'ensemble des tâches que je m'étais fixée ont été effectuées. Il était important de bien discerner le besoin et les actions à mener. Au lieu d'aborder le sujet des fournisseurs, j'ai du coup préféré allouer ces deux heures à ce sujet.
 
-## Horodotage
+### Horodotage
 
 Lundi 19/02 : 2 heures de documentation
 Mercredi 21/02 : 1 heure de documentation de *Lean 540°* + 1 heure pour créer le questionnaire du besoin de la bonne manière
 Vendredi 23/02 : 2 heures d'organisation de partage des avancées + créer le support adéquat
 Samedi 24/02 : 1 heure de tri des réponses du questionnaire, choix des actions à mener, des outils et des jalons
 Lundi 26/02 : 2 heures de jalonnement de tâches et répartition des acteurs
-Mardi 27/02 : 1h échange avec Florian + lecture de la fin de *Lean 540°*
+Mardi 27/02 : 1h échange avec Florian + lecture de *Lean 540°*
+
+## Objectifs du Sprint 2
+
+Voici les objectifs que je me suis fixé :
+
+- Finir la lecture de *Lean 540°* (★☆☆☆☆, **0 heure 30 estimée**)
+- Mettre en place un processus d'organisation et de partage des tâches de mon département (★☆☆☆☆, **1 heure 30 estimées**)
+- Mise en place du Google Tasks (★☆☆☆☆, **1 heure 30 estimées**)
+- Pérennisation du savoir (★☆☆☆☆, **1 heure estimée**)
+- Passation (★☆☆☆☆, **1 heure estimée**)
+- Entretien avec le Team Manager (★☆☆☆☆, **1 heure estimée**)
+- Entretien avec chacun des membres (★☆☆☆☆, **2 heures estimées**)
+- Rédaction d'un rapport détaillé à destination de toute l'équipe (★☆☆☆☆, **1 heure 30 estimées**)
+
+TOTAL : 10 heures
+
+Les étoiles correspondent au niveau de difficulté de l'objectif dans mon référentiel de débutant en Gestion de projet et en Management.
+
+## Mise en place d'un processus d'organisation et de partage des tâches de mon département
+
+### Partage des tâches
+
+Avant de jalonner les tâches, il faut d'abord les définir et les répartir au sein de l'équipe.
+On peut parler de **lots de travail** ou de **work package**. Nous avons au sein de l'association souvent procédé par Sprint, et chaque membre avait son work package à réaliser.
+Nous avons procédé de la même manière ici. Les lots étaient définis en amont par deux critères :
+
+- type de tâche (réaliser des plans, dimensionner, CAO)
+- objet de travail, en l'occurrence le sous-ensemble ou la pièce
+
+A partir des affinités et de l'expérience de chacun, nous avons ensemble dispatché les tâches. Cela a pu être réalisé suite au point LAS que j'avais mis en place.
+J'ai noté un réel redynamisme au sein du département.
+
+### Calendrier sur tableau
+
+De part plusieurs lectures que j'ai pu faire et mon expérience personnelle, j'ai décidé de mettre en place un planning sur un tableau, au sein du local de l'association. De telle sorte, chaque membre de mon département est constamment au fait des prochaines échéances, que ce soit les siennes mais aussi celles du département dans son ensemble.
+En effet, il est important de **réintégrer dans l'association une cohésion et une vue d'ensemble** du projet. L'articulation du travail de chacun est ainsi mise en exergue par ce planning : il ne suffit pas de concevoir ses pièces dans son coin, mais il faut aussi prendre en compte les pièces du voisin. Dans le même temps, cela permet aussi de mieux s'organiser avec les autres départements. Par exemple, j'ai pu planifier avant de débuter ma conception des moyeux arrières la réunion avec le département GMP (Groupe Motopropulseur) qui était indispensable à la réussite du projet.
+
+![d](planningtableau.png)
+
+### Mise en place d'un Google Tasks
+
+En supplément du planning sur le tableau, il faut aussi que chacun puisse consulter ses tâches à distance, et tenir les autres au courant de ses avancées. J'ai donc décidé de créer un Google Tasks, qui permet de créer une tâche, l'assigner à quelqu'un de l'équipe et ajouter une échéance. La personne peut la cocher en tant que *Terminée* lorsque la mission est remplie.
+Dans mon esprit, cela permettrait un management plus simple des avancées. En réalité, l'outil n'a pas été adopté par tout le monde, il a été au fur et à mesures délaissé.
+
+![a](google_task.png)
+
+## Pérennisation du savoir
+
+Le *turnover* d'une association telle que Marseille Racing est assez élevé : l'équipe est renouvelée quasiment dans sa totalité tous les ans. Il est vital de stocker l'information et les travaux produits d'une manière organisée, et qui a vocation a être compris par tous : un document de travail illisible ou suivant la logique de son auteur sans aucune explication est inutilisable.
+
+Action :
+
+- ré-organisation du Google Drive
+- création d'un *template* de rapport utilisé par toute l'équipe, avec une structure et une charte graphique communes.
+
+## Passation
+
+Dans la continuité du paragraphe précédent, il faut aussi penser à la passation pour les futurs membres et au recrutement. J'ai participé à l'élaboration du formulaire de recrutement qui a pour objectif de mettre en valeur les candidats qui correspondraient à l'engagement et aux valeurs recherchés.
+
+![recrutement](recrutement.png)
+
+## Entretiens individuels
+
+### Entretien avec le département
+
+J'ai d'abord fait un entretien personnalisé avec les deux autres membres de mon département afin de recueillir leur avis sur le déroulement de l'année, l'organisation, la communication, le management de l'équipe et leur vision du projet à l'heure actuelle. Cette manière de faire permet de ne pas mettre uniquement l'accent sur les choses positives ou négatives.
+Ma méthode : leur donner ces grandes lignes et les laisser parler. Si le sujet dérive, je recentre avec du tact pour avoir une discussion constructive.
+
+Je n'ai pas leur autorisation pour dévoiler ce qui s'est dit pendant ces entretiens.
+
+### Entretien avec le Team Manager
+
+J'ai ensuite fait le même type d'entretien avec le Team Manager. Je lui ai d'abord posé les mêmes questions, puis je l'ai questionné sur son retour d'expérience en tant que manager, qu'impulseur.
+
+### Rédaction du rapport
+
+J'ai ensuite rédigé un rapport détaillant ce que j'ai pu apprendre lors de ce POK, mais de manière très appliquée. Ce rapport n'a pas vocation à être une "recette magique" mais il pourra aider l'équipe dans le futur. Ils y trouveront notamment des sections telles que :
+
+- la communication du manager
+- l'importance d'une organisation horizontale et transparente
+- la découverte puis la gestion d'un irritant
+
+## Retour d'expérience sur le Sprint 2
+
+J'ai pu réaliser l'ensemble des objectifs que j'avais fixé pour le temps 2. J'aurais aimé avoir le temps d'aborder le thème de la supply chain, qui n'est pas directement lié au POK que j'ai traité mais qui a un lien dans Marseille Racing. Ce POK était très plaisant car j'ai pu mettre en pratique de la théorie sur le management et la gestion d'équipe, qui sont parfois abstraits pour des jeunes de 24 ans qui n'ont pas encore d'équipe à gérer.
+
+### Horodatage
+
+Samedi 02/03 : 3 heures pour la réflexion, la création du planning sur le tableau et le Google tasks dans la foulée
+
+Dimanche 03/03 sur la route des vacances : 30 minutes pour terminer l'agréable lecture de *Lean à 540°*
+
+Trêve des vacances
+
+Mercredi 14/03 : 1 heure pour le premier entretien avec Iwan
+
+Jeudi 14/03 : 1 heure pour le deuxième entretien avec Maël
+
+Samedi 16/03 : 1 heure pour l'entretien avec Tony
+
+Lundi 18/03 : 1 heure pour organiser le Drive et créer le template du rapport
+
+Mercredi 20/03 : 1 heure 30 pour rédiger le rapport sur la gestion et l'amélioration d'un département et de l'équipe
+
+Samedi 23/03 : 1 heure pour construire le formulaire de passation

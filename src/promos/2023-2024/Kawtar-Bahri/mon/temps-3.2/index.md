@@ -23,6 +23,8 @@ Pour m'initier à la fintech, j’ai suivi un cours sur Coursera : [Fondements e
 | Chapitre 4 | Implications des FinTech pour les entreprises | 20/03/2024 | 3h    |
 | Evaluations | Des Quiz et Projet final                     | 21/03/2024 | 3h    |
 
+[Voir certificat](https://www.coursera.org/account/accomplishments/certificate/QU76AU88NPXE)
+
 ## Chapitre 1 : Qu'est-ce que FinTech ?
 ### Pour les entrepreneurs : 
 L’utilisation de la technologie par les institutions financières n'est pas un phénomène récent, mais remonte à plusieurs siècles ; L'innovation majeure que représente le distributeur automatique de billets (ATM) avait un impact majeur sur l'accès aux services financiers. En plus de l'impact transformateur de plateformes comme Yu'e Bao d'Alibaba sur le marché financier chinois, et éventuellement mondial. 

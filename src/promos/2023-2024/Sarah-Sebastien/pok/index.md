@@ -10,4 +10,4 @@ Voici l'ensemble des POK que j'ai réalisés.
 
 * [POK 1: Réalisation d'un diagramme de GANTT sous VBA](./temps-1)
 * [POK 2: Discovering the Mastermind of Java](./temps-2)
-* [POK 3: Google Apps Cure](./temps-3)
+* [POK 3: My Google Health Assistant](./temps-3)
