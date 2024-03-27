@@ -32,7 +32,7 @@ Pré-requis :
 4. Lancer un projet TypeScript
 5. Les types en TypeScript
 6. Les fonctions et les classes
-7. TypeScript dans le développement web
+7. Notion d'interface
 8. Conclusion
 
 
@@ -63,6 +63,7 @@ npm init -y
 ```shell
 npx tsc .ts
 ```
+Les fichiers typescript doivent se terminer par .ts au lieu de .js comme en JavaScript. 
 
 ## Les types en TypeScript
 L'un des points forts de TypeScript est son système de typage statique. Cela signifie qu'on peut spécifier le type de chaque variable ou de chaque paramètre de fonction et même le type de retour des fonctions. Le code sera alors bien plus clair et plus prévisible, et cela évite les erreurs de typage comme il en arrive souvent. 
@@ -125,6 +126,25 @@ class Person {
         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
     }
 }
+```
+
+## Notion d'interface
+
+TypeScript permet de créer ce qu'on appelle des interfaces. Cette notion n'existe pas en JavaScript, elle est propre à TypeScript car elle permet de typer les objets et les classes en définissant proprement leur structure. Prenons un exemple : 
+
+
+```js
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person): string {
+    return `Hello, my name is ${person.name} and I am ${person.age} years old.`;
+}
+
+const alice = { name: 'Alice', age: 30 };
+console.log(greet(alice));
 ```
 
 
