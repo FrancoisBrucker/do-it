@@ -234,7 +234,7 @@ Ayant manqué de temps je n'ai pu faire l'étude que d'une seule entreprise. Pou
 | Ecoute de l'interview de Sébastien Louyot                                                  | 1h|
 
 ### Sprint 2
-| Tâche                                                                            | Temps |
+| Tâche                                                                            | Temps|
 |----------------------------------------------------------------------------------|-------|
 |Ecoute de l'interview de Nicolas de Nayer                                                           | 1h    |
 |Résumé de l'interview écouté |1h|

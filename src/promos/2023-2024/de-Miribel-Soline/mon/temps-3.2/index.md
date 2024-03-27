@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "La management intergénérationnel"
+title: "Le management intergénérationnel"
 authors:
   - Soline de MIRIBEL
 
