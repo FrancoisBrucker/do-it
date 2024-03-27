@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Dans ce MON je souhaite apprendre les bases du développement mobile
+                Dans ce MON je souhaite apprendre les bases de TypeScript
 
         </p>
 
@@ -125,6 +125,99 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pré-requis :<br>
+<strong>Niveau :</strong> Moyen<br>
+<strong>Prérequis :</strong> Pour ce MON, il est nécessaire d'avoir certaines bases de JavaScript pour comprendre les concepts avec plus de facilité mais il est possible de s'en passer.</p>
+</div></div>
+<h2>Liens utiles</h2>
+<p><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">Site TypeScript</a><br>
+<a href="https://kinsta.com/fr/base-de-connaissances/guide-complet-typescript/">Autre site très bien</a></p>
+<h2>Sommaire</h2>
+<ol>
+<li>TypeScript, qu'est-ce que c'est</li>
+<li>Pourquoi ce MON</li>
+<li>Lancer un projet TypeScript</li>
+<li>Les types en TypeScript</li>
+<li>Les fonctions et les classes</li>
+<li>TypeScript dans le développement web</li>
+<li>Conclusion</li>
+</ol>
+<h2>TypeScript, qu'est-ce que c'est</h2>
+<p>TypeScript est un langage de programmation développé par Microsoft, qui s'appuie sur JavaScript. La différence entre les deux est que TypeScript est un langage typé, il prend les fonctionnalités de bases de JS et en ajoute des nouvelles dans lesquels le type des variables, des fonctions doit être précisé. Cela apporte une meilleure stabilité et sécurité au code et permet de limiter grandement les erreurs ou en tout cas de les détecter plus tôt.</p>
+<h2>Pourquoi ce MON</h2>
+<p>J'ai voulu en apprendre plus sur TypeScript pour plusieurs raisons. D'abord car ce langage est en plein essort, de nombreuses entreprises l'utilisent et c'est le cas de celle dans laquelle je vais effectuer mon stage. C'est donc aussi pour ça que je souhaite connaître ce langage.</p>
+<h2>Lancer un projet TypeScript</h2>
+<p>Pour lancer un projet TypeScript, rien de très compliqué. Il faut ouvrir un nouvel onglet sur VSCode avec un terminal et taper les commandes suivantes :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> typescript
+</code></pre>
+<p>Cette commande permet d'installer le compilateur.</p>
+<p>Ensuite on crée un projet node avec la commande :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> init <span class="token parameter variable">-y</span>
+</code></pre>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">npx tsc .ts
+</code></pre>
+<h2>Les types en TypeScript</h2>
+<p>L'un des points forts de TypeScript est son système de typage statique. Cela signifie qu'on peut spécifier le type de chaque variable ou de chaque paramètre de fonction et même le type de retour des fonctions. Le code sera alors bien plus clair et plus prévisible, et cela évite les erreurs de typage comme il en arrive souvent.<br>
+Voici un exemple de code TypeScript avec des types pour se rendre mieux compte de comment cela fonctionne :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Déclaration d'une variable avec son type</span>
+<span class="token keyword">let</span> <span class="token literal-property property">message</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+message <span class="token operator">=</span> <span class="token string">"Hello, TypeScript!"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Déclaration d'une fonction avec des types pour les paramètres et le retour</span>
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token operator">:</span> number <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Utilisation de la fonction</span>
+<span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On voit ici que la variable message est un String, ou ne pourra donc pas lui attribuer la valeur d'un nombre par exemple.<br>
+Ensuite la fonction possède deux paramètres, des nombres et le retour doit lui aussi être un nombre.</p>
+<h2>Les fonctions et les classes</h2>
+<p>En TypeScript, on peut créer des classes comme en JavaScript, la seule différence étant que l'on doit préciser le type des propriétés que l'on utilise.</p>
+<p>Voici comment on écrirait une classe en JavaScript :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Constructeur pour initialiser les propriétés</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Méthode de la classe</span>
+    <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> and I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> years old.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Et voici comment on l'écrirait en TypeScript :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Propriétés de la classe avec des types</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+
+    <span class="token comment">// Constructeur pour initialiser les propriétés</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Méthode de la classe</span>
+    <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> and I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> years old.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2>Conclusion</h2>
+<p>Grâce à ce MON j'ai pu découvir sommairement ce qu'était TypeScript. Malheuresement en seulement 10h je n'ai pas pu manipuler assez pour vraiment m'habituer à l'utiliser, mais je vais gagner du temps d'apprentissage quand je serai en stage car je saurai à quoi m'attendre.</p>
+<h2>Horodatage</h2>
+<p>Lecture des différentes informations sur TypeScript: 4h<br>
+Ecriture du code et mise en place d'un projet TS : 4h</p>
 
 
 </article>
