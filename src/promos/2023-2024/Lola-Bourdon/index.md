@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Panique au château](../../../projets/2023-2024/Panique_au_chateau)
+[Defensio, un Serious Game autour de la gestion de crise pour développer ses compétences centraliennes](../../../projets/2023-2024/Defensio)
