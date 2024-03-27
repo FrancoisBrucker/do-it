@@ -109,18 +109,127 @@
 
 <h3>Sommaire</h3>
 <ul>
-<li><a href="#contexte">Contexte et objectifs du projet</a></li>
-<li><a href="#papier">Comparaison avec le jeu papier</a></li>
-<li><a href="#stacktechnique">&quot;Tech stack&quot; ou stack technique</a></li>
-<li><a href="#organisation">Organisation</a></li>
-<li><a href="#resultat">Résultats et livrables</a></li>
-<li><a href="#apprentissage">Apprentissage et retour d'expérience</a></li>
-<li><a href="#capitalisation">Capitalisation et suite à donner</a></li>
+<li><a href="#sommaire">Sommaire</a></li>
+<li><a href="#organisation-interne">Organisation interne</a></li>
+<li><a href="#tests-utilisateurs-et-am%C3%A9liorations-du-backlog">Tests utilisateurs et améliorations du backlog</a></li>
+<li><a href="#maquette-figma">Maquette Figma</a></li>
+<li><a href="#poster">Poster</a></li>
+<li><a href="#application-bubble">Application Bubble</a></li>
+<li><a href="#base-de-donn%C3%A9es-airtable">Base de données Airtable</a></li>
+<li><a href="#difficult%C3%A9s-rencontr%C3%A9es">Difficultés rencontrées</a></li>
 </ul>
 <h2 id="contexte"> Contexte et objectifs du projet</h2>
+<p>Ce projet a pour but de créer une version mobile du jeu de cartes &quot;Chiche ou Pois Chiche&quot;.  Ce projet provient d’un constat simple : après plusieurs parties du jeu de cartes, on retombe rapidement sur les mêmes questions et le jeu devient vite obsolète pour un joueur une fois qu’il a rencontré toutes les questions et connaît toutes les réponses. Notre idée serait donc de créer une version mobile du jeu pour pouvoir alimenter la base de données et ainsi offrir aux fervents joueurs de “Chiche ou pois Chiche”, de pouvoir y jouer indéfiniment.</p>
+<p>Par ailleurs, en terme de plus value apportée au jeu, une application mobile serait un moyen d'accroître sa visibilité, et faciliter son accès. En effet, à l’ère du digital, les jeux mobiles offrent une accessibilité sans précédent, qui permet aux utilisateurs de jouer n'importe où et à tout moment, contrairement aux jeux de cartes papier qui nécessitent d’avoir le jeu à portée de soi pour cela.</p>
+<p><img src="Image1.jpg" alt="Image jeu"><br>
+<em>Image du jeu original</em></p>
 <h2 id="papier"> Comparaison avec le jeu papier</h2>
+<p>Le but est de bien connaître son partenaire de jeu, afin de poser les questions pertinentes auxquelles on pense qu’il aura la réponse et de gagner le plus de points. La partie se termine quand il n’y a plus de cartes dans aucun jeu des joueurs, et l’équipe gagnante est celle qui a le plus de points.<br>
+Les quelques nuances que nous avons apportées sont répertoriées dans ce tableau.</p>
+<table>
+<thead>
+<tr>
+<th><strong>&quot;Chiche ou Pois Chiche&quot;</strong></th>
+<th><strong>&quot;Tu tires ou tu pointes&quot;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pour chaque question le joueur lit l'indice à son partenaire puis lui demande &quot;Chiche ou Pois Chiche ?&quot;. Il répond &quot;Chiche&quot; s'il pense pouvoir répondre à la question sans proposition de réponse ou &quot;Pois Chiche&quot; s'il souhaite les 4 propositions. Si la réponse donnée est correcte, l'équipe récupère une &quot;Carte Chiche&quot; (3 points) ou une &quot;Carte Pois Chiche&quot; (1 point) selon l'annonce faite précédemment.</td>
+<td>Pour chaque question le joueur lit l'indice à son partenaire puis lui demande &quot;Tu tires ou tu pointes&quot;. Il répond &quot;Je tire&quot; s'il pense pouvoir répondre à la question sans proposition de réponse ou &quot;Je pointe&quot; s'il souhaite les 4 propositions. Si la réponse donnée est correcte, l'équipe gagne 3 points ou une 1 point selon l'annonce faite précédemment.</td>
+</tr>
+<tr>
+<td>Les équipes sont de 2 joueurs minimum, autant que voulu.</td>
+<td>Les équipes sont de 2 joueurs exactement. Entre 4 et 8 joueurs.</td>
+</tr>
+<tr>
+<td>Le jeu possède 8 catégories de questions : &quot;Sport&quot;, &quot;Culture G&quot;, &quot;Petits écrans&quot;, &quot;Grand écran&quot;, &quot;Voyage&quot;,“Musique&quot;, &quot;Bouffe&quot;.</td>
+<td>Le jeu possède 11 catégories de questions pour permettre à tout le monde d’avoir des points forts et des faiblesses :&quot;Sport&quot;, &quot;Culture G&quot;, &quot;Petits écrans&quot;, &quot;Grand écran&quot;, &quot;Voyage&quot;, “Musique&quot;, &quot;Bouffe&quot;, “Sciences”, Histoire”, “Divers”.</td>
+</tr>
+<tr>
+<td>Quantité limitée de questions : 495 cartes</td>
+<td>Base de données de questions illimitée et approvisionnable par les joueurs</td>
+</tr>
+<tr>
+<td>Dé à lancer pour définir les règles du tour (chiche imposé, vol de points, etc…)</td>
+<td>Pas de dés</td>
+</tr>
+</tbody>
+</table>
 <h2 id="stacktechnique"> "Tech stack" ou stack technique</h2>
+<p>Pour réaliser ce projet de jeu mobile, nous avons pris le partie de réaliser l’entièreté du jeu en low code. Nous utilisons les technologies suivantes :</p>
+<ul>
+<li><strong>Figma</strong>: Éditeur de d’interface graphique. Comme la réussite d’un jeu mobile dépend en grande partie de la réussite du parcours utilisateur, c’était un des points crucial sur lequel nous devions nous focaliser et travailler. Cette étape a été assez longue, les résultats de cette réflexion sont présentés dans la partie Livrables.</li>
+<li><strong>Bubble</strong>: N’ayant que peu voire pas du tout d'expérience en développement mobile, nous avons décidé de développer notre application sur Bubble. Ce choix a été guidé par le cours de Low-code donné au temps 1, qui nous a inspiré, mais également car notre tuteur nous a recommandé d’utiliser cet outil Low code au vu du temps et des compétences dont nous disposions.</li>
+<li><strong>Airtable</strong>: Bubble est certes un outil gratuit, il est cependant limité en ce qui concerne certaines fonctionnalités. Il est par exemple possible de payer afin d’obtenir davantage de “workload units” permettant une utilisation plus approfondie de Bubble. En particulier, nous avions besoin d’une solution de base de données gratuite afin d’héberger notre banque de questions de taille moyenne (quelques centaines de questions). La base de données native de Bubble étant très limitée (50 lignes maximum), nous avons opté pour une solution de base de données gratuite : Airtable. La plateforme d’Airtable nous a permis de stocker et d’approvisionner notre base de données de questions gratuitement, et bien sûr de la connecter directement à Bubble via un plugin.</li>
+</ul>
 <h2 id="organisation"> Organisation</h2>
+<p>Dans le cadre de notre projet, nous avons cherché à mettre en pratique les différentes notions apprises cette année. Tout d'abord, nous avons utilisé les méthodes de l'UX Design pour définir la problématique à laquelle notre projet répondra. Après une phase de recherche et d'analyse, nous avons défini la problématique suivante : &quot;Faire en sorte que les amis, collègues, familles s’amusent avec une interface simple, dynamique et sans limite&quot;. Cette problématique nous a permis de mieux cadrer notre projet en identifiant trois personas, correspondant aux futurs utilisateurs de notre application. La création de ces personas nous a permis d'identifier les fonctionnalités importantes pour chaque profil d'utilisateur, afin de répondre au mieux à leurs attentes</p>
+<p>Ensuite, nous avons décidé de nous organiser en suivant la méthode Agile, dont nous avons appris les bases en début d'année. Cette méthode encourage l'itération rapide, la prise de décision décentralisée, la livraison plus fréquente d'une plus petite valeur et une réponse plus rapide au changement. Cette méthode est basée sur des cycles de travail réguliers, les sprints, qui sont alimentés par des tâches clairement définies dans notre backlog de projet. Grâce à cette approche, nous avons pu livrer des fonctionnalités opérationnelles à chaque fin de sprint, tout en restant flexibles et en nous adaptant aux changements de priorités.</p>
+<p>Nous avons donc tout d'abord établi le backlog de notre projet. Nous avons classé les User Stories suivant plusieurs catégories. Nous avons aussi estimé les complexités de chaque fonctionnalité (échelle de Fibonacci) et associé à chacune une valeur métier (méthode MoSCoW).</p>
+<p><img src="backlog_png.png" alt="backlog"></p>
+<p>Si l'on fait un bilan des User Stories qui ont été réalisées et celles qui ne l'ont pas été, on obtient le graphique suivant:</p>
+<img width="500" src="nombre_fonctionnalités.png">
+<p>Deux fonctionnalités &quot;Must&quot; n'ont pas été développées:</p>
+<ul>
+<li>Le lancer de dé: nous n'avons pas eu le temps de développer toute la logique derrière cette fonctionnalité, faute de temps.</li>
+<li>Le choix de la difficulté: nous n'avons pas eu le temps d'établir des difficultés à chaque question dans la base de donnée.</li>
+</ul>
+<h3>Organisation interne</h3>
+<p>Étant donné que nous avons développé notre application sur la plateforme web de Bubble, nous n'avons pas besoin d'utiliser Git pour le contrôle de version. Cependant, nous avons eu besoin de communiquer efficacement et de stocker tous nos fichiers dans un dossier commun. Pour ce faire, nous avons créé un Google Drive où se trouvent notre banque d’images, nos comptes rendus de réunions ainsi que nos différents livrables. Pour notre communication, nous avons utilisé Messenger, une solution simple et pratique pour les boomers que nous sommes.</p>
+<p>Concernant l’organisation de notre travail, nous n’avons pas eu de rôles précisément définis puisque chacun des membres de notre équipe a travaillé sur toutes les composantes de notre projet. Nous avons décidé de suivre l’emploi du temps standard, à savoir une réunion en présentiel chaque semaine au minimum pour avancer le projet, et ponctuellement des séances en distanciel. En cas de retard, nous avons pu travailler sur notre temps personnel lors des semaines d’alternance et/ou vacances pour rattraper le temps perdu.</p>
+<p>Enfin, pour l'organisation dite &quot;externe&quot;, afin d’avoir une communication fluide avec notre tuteur, nous avons créé un second groupe messenger, ainsi que d’ouvrir l’accès à notre dossier google Drive pour qu’ils puissent avoir accès à nos comptes rendus.</p>
+<h3>Tests utilisateurs et améliorations du backlog</h3>
+<p>Après plusieurs mois de travail, nous avons réussi à avoir une première version fonctionnelle de l’application. C’est alors que nous avons commencé la phase de test. Cette phase a été menée auprès de camarades centraliens. Lors de ces tests, nous avons particulièrement porté notre attention sur la facilité d’utilisation de l’interface, ainsi que de sa clarté. L’application devait être auto-portante, c’est-à-dire que les joueurs devaient savoir ce qu’ils devaient faire sans qu’on ait besoin d’intervenir. Bien évidemment, le jeu doit aussi être amusant pour les joueurs, et les graphiques plaisants. Le premier test a été réalisé lors d’un Bar’bu (partie de 4 joueurs).. Nous avons ensuite fait un deuxième test avec nos camarades de la promo Do-IT (6 joueurs) et lors d’une soirée autour d’une table (6 joueurs). Ces environnements de tests ont été donc plutôt festifs, et donc propice au jeu.  Le but était d’étudier le chemin utilisateur et de voir si ce que nous avions mis en place était clair pour quelqu’un de l’extérieur. En fonction des fonctionnalités que nous voulions évaluer, nous leur laissions le téléphone à une certaine page de l’application (page pour paramétrer la partie, page choix du jeu quand nous avons implémenté la possibilité d’ajouter ses questions, ou la page de connexion), avant de leur avoir introduit brièvement les règles du jeu, pour leur donner envie d’y joueur. Durant le déroulement de la partie, nous avons également essayé d’intervenir le moins possible. Voici ce qui est ressorti de ces tests:</p>
+<ul>
+<li>L’impression globale du jeu a été positive. L’interface utilisateur et les designs de l’application ont plus aux joueurs, et l’expérience utilisateur a été globalement appréciée. Ils se sont amusés, ce qui est le principal!</li>
+<li>Quelques chargements ont été longs, notamment le passage entre les différents écrans mais surtout le début de la partie, lors de la création de la base de donnée de la partie. Cela est dû au fait que nous avons lancé l’application avec un lien dit “Preview”, et non pas dans un environnement déployé (qui est payant),  ce qui ralentit l’application.</li>
+<li>Il y avait plusieurs fois des problèmes lors de la sélection des réponses: l’utilisateur cliquait sur une réponse mais l’application ne sélectionnait pas la réponse voulue.</li>
+<li>Les joueurs ne comprenaient pas la règle de la pioche: ils croyaient que cette règle permettait de piocher une nouvelle carte dans un deck, et non pas piocher chez un adversaire.</li>
+<li>Le temps initial pour lire et répondre à la question (30 secondes) était bien trop court: souvent les joueurs se pressaient trop ce qui affectait l’expérience utilisateur.</li>
+</ul>
+<p>Ces tests nous ont beaucoup appris, et ont pointé des défauts dont nous avions pas pensé, étant trop le nez dans le projet. Cette prise de recul a été bénéfique.<br>
+Nous avons ainsi modifié le backlog de notre application pour mieux pallier aux remarques faites lors des tests. La première modification a été la création d’une fenêtre de confirmation des réponses. Cela a permis d’éviter le problème du joueur qui clique à côté de la réponse qu’il voulait sélectionner. Nous avons également changé le temps de lecture de la carte à 45 secondes au lieu de 30 secondes. Nous avons aussi ajouté un icône d'un voleur sur le bouton de pioche, pour préciser le fait que cette option permet de voler une carte dans le jeu d'un adversaire.<br>
+Malgré la création de la fenêtre de confirmation de réponse, il y avait toujours un problème sur la confirmation de la bonne réponse. En effet, quelques fois, le joueur confirmait la bonne réponse mais ne gagnait pas de point. Cela est dû au fait que dans notre base de données Airtable, nous avons rentré la bonne réponse dans une colonne &quot;Bonne réponse&quot;, et pour vérifier si la réponse choisie est correcte, on compare l'élément dans la colonne &quot;Bonne réponse&quot; et celui dans la colonne de la proposition choisie. Le problème est que cette comparaison compare chaque caractère très rigoureusement. Donc les fautes de frappe posent problème, tout comme la sensibilité à la casse ou même un espace à la fin de la chaîne de caractère. Pour éviter cela, on doit simplement être rigoureux sur le renseignement des données dans la BDD. Nous avons écrit un petit script Python pour vérifier s'il y avait des problèmes dans la base de donnée (heureusement, le script a renvoyé 5 erreurs!). Pour éviter ce problème, nous aurions dû renseigner le numéro de la bonne réponse dans la colonne &quot;Bonne réponse&quot;, plutôt que le texte entier de la bonne réponse.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Cliquer pour voir le script Python</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
+
+wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'BDD.xlsx'</span><span class="token punctuation">)</span>
+sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Questions-Grid view(1)'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> nb_row <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">235</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cell_reponse <span class="token operator">=</span> sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> nb_row<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">)</span>
+    reponse <span class="token operator">=</span> cell_reponse<span class="token punctuation">.</span>value
+    list_proposition <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> nb_column <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        cell_proposition <span class="token operator">=</span> sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> nb_row<span class="token punctuation">,</span> column <span class="token operator">=</span> nb_column<span class="token punctuation">)</span>
+        list_proposition<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cell_proposition<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> reponse <span class="token keyword">not</span> <span class="token keyword">in</span> list_proposition<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ERREUR"</span><span class="token punctuation">,</span> nb_row<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'FINI'</span><span class="token punctuation">)</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Voici un diagramme de Gantt représentant l'évolution de notre projet sur l'année:</p>
+<p><img src="gantt.png" alt="Gannt"></p>
 <h2 id="resultat"> Résultats et livrables</h2>
 <h3>Maquette Figma</h3>
 <p>Comme la réussite de notre jeu résidait en grande partie à la réussite de <strong>l'expérience utilisateur</strong> de nos joueurs, il nous fallait nous appliquer particulièrement dans le design de notre interface.</p>
@@ -171,52 +280,78 @@
 <p>Pour la base de données, comme expliqué plus tôt, nous l'avons gérée avec Airtable.<br>
 Elle contient donc les informations complémentaires à Bubble, c'est-à-dire l’ensemble des données liées aux questions. Il y  <strong>234 questions différentes aujourd'hui</strong> dans la table. Au total, <strong>200</strong> proviennent des questions du jeu de cartes initial, et nous en avons ajouté <strong>34</strong> que nous avons créés sur les thèmes <strong>Histoire</strong> et <strong>Sciences</strong>.</p>
 <h2 id="apprentissage"> Apprentissage et retour d'expérience</h2>
+<p>Ce projet nous a permis d'apprendre plusieurs choses. Tout d'abord, nous avons un retour sur le no-code, résumé dans le tableau ci-dessous:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Avantages</strong></th>
+<th><strong>Inconvénients</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rapidité de développement (avec utilisation d’interfaces visuelles et des composants prédéfinis)</td>
+<td>Limitations fonctionnelles (limitations en termes de fonctionnalités et de personnalisation disponibles dans les outils de no-code)</td>
+</tr>
+<tr>
+<td>Facilité de l’apprentissage et prise en main (Bubble est assez facile à prendre en main par rapport à un langage de développement mobile à apprendre)</td>
+<td>Nécessité d’utiliser des plugins pour des actions basiques</td>
+</tr>
+<tr>
+<td>Facilité de maintenance (car applications reposent sur des modèles et des composants standardisés)</td>
+<td>Chargements très longs, pas très adapté à un jeu</td>
+</tr>
+<tr>
+<td colspan="2">Agilité accrue (cycles de développement plus courts et une plus grande flexibilité, qui permettent de développer de nouvelles fonctionnalités plus rapidement)</td>
+</tr>
+</tbody>
+</table>
+<h3>Difficultés rencontrées</h3>
+<p>Nous avons rencontré des difficultés sur plusieurs points de notre projet:</p>
+<ul>
+<li>Récupération des données Airtable: il fallait faire des boucles itératives sur Bubble pour récupérer des données via l'API, ce qui n'est pas très adapté à la situation. Une solution serait d'utiliser des <em>backend workflows</em>, mais cette fonctionnalité est réservée aux utilisateurs payants.</li>
+<li>Difficultés inattendues: nous avons rencontré des difficultés dont nous n'avions pas soupçonné, comme par exemple la gestion de l'ordre de passage qui nécessitait de réfléchir sur une certaine logique dans le workflow. Le temps passé sur la maquette était aussi une difficulté: nous ne pensions pas passer autant de temps sur la maquette et sur la réflexion sur l'UX.</li>
+<li>Difficultés liées à la version gratuite de Bubble: la version gratuite du site nous a restreint sur certains points. Par exemple, nous avions des workloads limités, et le travail en collaboration était parfois difficile.</li>
+</ul>
 <h2 id="capitalisation"> Capitalisation et suite à donner</h2>
-<h2>Introduction</h2>
-<p>Ce projet a pour but de créer une version mobile du jeu de cartes “Chiche ou Pois Chiche”. Après plusieurs parties, on retombe rapidement sur les mêmes questions et le jeu devient vite obsolète pour un joueur une fois qu’il a rencontré toutes les questions et connaît toutes les réponses. Notre idée serait donc de créer une version mobile du jeu pour pouvoir alimenter la base de données et ainsi offrir aux fervents joueurs de “Chiche ou pois Chiche”, de pouvoir y jouer indéfiniment. De plus, une application mobile serait un moyen d'accroître la visibilité du jeu.</p>
-<p><img src="Image1.jpg" alt="Image jeu"></p>
-<p>Le but du jeu est de gagner le plus de points en posant les bonnes questions à son ou ses partenaire de jeu. On forme plusieurs équipes de 2 minimum. Pour chaque question le joueur lit l'indice à son partenaire puis lui demande &quot;Chiche ou Pois Chiche ?&quot;. Il répond &quot;Chiche&quot; s'il pense pouvoir répondre à la question sans proposition de réponse ou &quot;Pois Chiche&quot; s'il souhaite les 4 propositions. Si la réponse donnée est correcte l'équipe récupère une &quot;Carte Chiche&quot; (3 points) ou une &quot;Carte Pois Chiche&quot; (1 point) selon l'annonce faite précédemment.<br>
-Le jeu possède 8 catégories de questions pour permettre à tout le monde d’avoir des points forts et des faiblesses. (&quot;Sport&quot;, &quot;Culture G&quot;, &quot;Petits écrans&quot;, &quot;Grand écran&quot;, &quot;Voyage&quot;, “Musique&quot;, &quot;Bouffe&quot;)</p>
-<h2>Fonctionnalités</h2>
-<p>Voici une première liste de fonctionnalités que nous voulons implémenter sur l'application:</p>
-<ul>
-<li>La gestion d'un compte utilisateur</li>
-<li>Lancer un dé pour déterminer le type de tour</li>
-<li>Pouvoir rejoindre un salon avec les autres participants (mode en ligne? bluetooth?)</li>
-<li>Tirer aléatoirement une question</li>
-<li>Comptage de points</li>
-<li>Afficher la réponse à une question sur demande de l'utilisateur</li>
-</ul>
-<h2>Planification du projet</h2>
-<p>Nous avons réalisé une feuille de route pour notre projet, qui consiste en quelques étapes que nous devrons réaliser au fur et à mesure de notre avancement:</p>
-<ul>
-<li>Faire des maquettes de l'apparence graphique générale du jeu (sur Canva ou autres)
-<ul>
-<li>Quelle charte graphique pour l'application?</li>
-<li>Quelle expérience utilisateur?</li>
-</ul>
-</li>
-<li>Réfléchir sur les fonctionnalités de l’application
-<ul>
-<li>Quelles règles établir? Ajout de règles?</li>
-</ul>
-</li>
-<li>Elaboration d’un premier prototype sur Figma
-<ul>
-<li>Apprentissage et prise en main de l'outil</li>
-</ul>
-</li>
-<li>Première version en no code sur <a href="http://Bubble.io">Bubble.io</a>
-<ul>
-<li>Création d'une première base de donnée de questions sur Bubble (ou autre) avec les questions du jeu</li>
-<li>Création de l'interface utilisateur</li>
-</ul>
-</li>
-<li>Recueil d’un grand nombre de questions et de réponses</li>
-<li>Test et retours d’expérience auprès de plusieurs utilisateurs</li>
-<li>Améliorations sur le jeu suite aux remarques soulevées</li>
-<li>Possible migration (NiceGui sur Python)?</li>
-</ul>
+<!-- ## Introduction
+
+Ce projet a pour but de créer une version mobile du jeu de cartes “Chiche ou Pois Chiche”. Après plusieurs parties, on retombe rapidement sur les mêmes questions et le jeu devient vite obsolète pour un joueur une fois qu’il a rencontré toutes les questions et connaît toutes les réponses. Notre idée serait donc de créer une version mobile du jeu pour pouvoir alimenter la base de données et ainsi offrir aux fervents joueurs de “Chiche ou pois Chiche”, de pouvoir y jouer indéfiniment. De plus, une application mobile serait un moyen d'accroître la visibilité du jeu.
+
+![Image jeu](Image1.jpg)
+
+Le but du jeu est de gagner le plus de points en posant les bonnes questions à son ou ses partenaire de jeu. On forme plusieurs équipes de 2 minimum. Pour chaque question le joueur lit l'indice à son partenaire puis lui demande "Chiche ou Pois Chiche ?". Il répond "Chiche" s'il pense pouvoir répondre à la question sans proposition de réponse ou "Pois Chiche" s'il souhaite les 4 propositions. Si la réponse donnée est correcte l'équipe récupère une "Carte Chiche" (3 points) ou une "Carte Pois Chiche" (1 point) selon l'annonce faite précédemment.
+Le jeu possède 8 catégories de questions pour permettre à tout le monde d’avoir des points forts et des faiblesses. ("Sport", "Culture G", "Petits écrans", "Grand écran", "Voyage", “Musique", "Bouffe")
+
+## Fonctionnalités
+
+Voici une première liste de fonctionnalités que nous voulons implémenter sur l'application:
+
+- La gestion d'un compte utilisateur
+- Lancer un dé pour déterminer le type de tour
+- Pouvoir rejoindre un salon avec les autres participants (mode en ligne? bluetooth?)
+- Tirer aléatoirement une question
+- Comptage de points
+- Afficher la réponse à une question sur demande de l'utilisateur
+
+## Planification du projet
+
+Nous avons réalisé une feuille de route pour notre projet, qui consiste en quelques étapes que nous devrons réaliser au fur et à mesure de notre avancement:
+
+- Faire des maquettes de l'apparence graphique générale du jeu (sur Canva ou autres)
+  - Quelle charte graphique pour l'application?
+  - Quelle expérience utilisateur?
+- Réfléchir sur les fonctionnalités de l’application
+  - Quelles règles établir? Ajout de règles?
+- Elaboration d’un premier prototype sur Figma
+  - Apprentissage et prise en main de l'outil
+- Première version en no code sur Bubble.io
+  - Création d'une première base de donnée de questions sur Bubble (ou autre) avec les questions du jeu
+  - Création de l'interface utilisateur
+- Recueil d’un grand nombre de questions et de réponses
+- Test et retours d’expérience auprès de plusieurs utilisateurs
+- Améliorations sur le jeu suite aux remarques soulevées
+- Possible migration (NiceGui sur Python)? -->
 
 
 </article>
