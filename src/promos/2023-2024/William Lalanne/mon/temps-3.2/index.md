@@ -25,6 +25,7 @@ Pré-requis :
 
 [Site TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 [Autre site très bien](https://kinsta.com/fr/base-de-connaissances/guide-complet-typescript/)
+[Vidéo youtube TypeScript](https://www.youtube.com/watch?v=30LWjhZzg50)
 
 ## Sommaire 
 1. TypeScript, qu'est-ce que c'est 
@@ -32,7 +33,7 @@ Pré-requis :
 4. Lancer un projet TypeScript
 5. Les types en TypeScript
 6. Les fonctions et les classes
-7. TypeScript dans le développement web
+7. Notion d'interface
 8. Conclusion
 
 
@@ -63,6 +64,7 @@ npm init -y
 ```shell
 npx tsc .ts
 ```
+Les fichiers typescript doivent se terminer par .ts au lieu de .js comme en JavaScript. 
 
 ## Les types en TypeScript
 L'un des points forts de TypeScript est son système de typage statique. Cela signifie qu'on peut spécifier le type de chaque variable ou de chaque paramètre de fonction et même le type de retour des fonctions. Le code sera alors bien plus clair et plus prévisible, et cela évite les erreurs de typage comme il en arrive souvent. 
@@ -127,11 +129,31 @@ class Person {
 }
 ```
 
+## Notion d'interface
+
+TypeScript permet de créer ce qu'on appelle des interfaces. Cette notion n'existe pas en JavaScript, elle est propre à TypeScript car elle permet de typer les objets et les classes en définissant proprement leur structure. Prenons un exemple : 
+
+
+```js
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person): string {
+    return `Hello, my name is ${person.name} and I am ${person.age} years old.`;
+}
+
+const alice = { name: 'Alice', age: 30 };
+console.log(greet(alice));
+```
+
 
 ## Conclusion 
 Grâce à ce MON j'ai pu découvir sommairement ce qu'était TypeScript. Malheuresement en seulement 10h je n'ai pas pu manipuler assez pour vraiment m'habituer à l'utiliser, mais je vais gagner du temps d'apprentissage quand je serai en stage car je saurai à quoi m'attendre. 
 
 
 ## Horodatage
-Lecture des différentes informations sur TypeScript: 4h
+Lecture des différentes informations sur TypeScript: 3h
+Visionnage de la vidéo : 3h
 Ecriture du code et mise en place d'un projet TS : 4h

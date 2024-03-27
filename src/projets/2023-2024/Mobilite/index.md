@@ -266,28 +266,75 @@ Suite à cette première maquette, on l'avait révisé pendant le cours d'UI. Ce
 Une fois que nous avons assez d'éléments pour guider notre projet nous avons commencé le développement du site en local. 
 Pour ce faire nous avons créer un GitHub dédié afin de pouvoir tous travailler sur le même projet.
 
-<strong>Comment fonctionne le site ? </strong>
+<strong>Comment ça marche ? </strong>
 
 Supposons qu'un utilisateur possède un compte et décide de se connecter au site. Il va d'abord s'identifier sur la page d'authentification à l'aide de son nom d'utilisateur et son mot de passse. Une fois connecté il arrive sur la page <strong>Carte des mobilités</strong> dans laquelle il peut naviguer sur la carte, filtrer et se renseigner sur chaque mobilité. Il peut ensuite ce rendre sur l'onglet <strong>FAQ</strong> pour obtenir des réponses aux questions qu'il peut se poser lors de sa recherche de mobilité. 
 Si l'édudiant veut partager son expérience de mobilité il se rend sur l'onglet <strong>Mon espace</strong>. Il peut alors remplir le formulaire dédié à l'aide de ses informations. Une fois soumis sa mobilité apparaitra à condition qu'il est bien accepté le partage de celle-ci. 
 Si il se rend de nouveau sur <strong>Mon espace</strong> il aura accès à ses informations et pourra les modifier. Il peut aussi décider à tout moment de ne plus partager sa mobilité.
 
-### Point technique : les pins de la carte
+### Points techniques
 
 Le site a été codé en JavaScript à l'aide de Node.JS, Express, Sequeelize et de nombreuses autres bibliotèques. Nous avons utilisés aussi BootStrap pour faciliter le CSS.
 
-Pour réaliser notre site le point assez important résidait dans la carte interactive, sans celle-ci le site perd un gros atout. Pour ce faire nous avons utilisé <strong>Leaflet </strong>, une bibliothèque JavaScript spécialisées dans les cartes interactives.
+Pour réaliser notre site le point assez important résidait dans la carte interactive, sans celle-ci le site perd un gros atout. Pour ce faire nous avons utilisé <strong>Leaflet</strong>, une bibliothèque JavaScript spécialisées dans les cartes interactives.
 
-Dans notre BDD il y a 3 tables : 
+Dans notre BDD SQLite on retrouve 3 tables : 
 - Users
 - Mobilites
 - Locations
 
-Chaque mobilité est rattaché à un user et un user ne peut avoir qu'une mobilité. 
-La table Locations permet d'avoir notre propre BDD des localisation des villes que l'on souhaite affichés sur la map.
+Chaque mobilité est rattaché à un <strong>user</strong> et un user ne peut avoir <strong>qu'une mobilité</strong>. 
+La table <strong>Locations</strong> permet d'avoir notre propre BDD des localisation des villes que l'on souhaite affichés sur la map.
 Lorsqu'un utilisateur ajoute sa mobilité, si la ville n'existe pas dans la table alors on l'ajoute en récupérant sa localisation à l'aide d'une API d'OpenStreetMap.
 Et pour les mobilités à afficher on va chercher la localisation des villes via cette table là.
-De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisés au départ n'était jamais traduit que en Français mais dans la langue du pays.
+De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisés au départ n'était jamais traduit que en Français mais dans la langue du pays (en gros si on voulait afficher Pékin il fallait avoir le nom de la ville en Chinois...).
+
+On a au total 5 fichier HTML : 
+- Page d'authentification
+- Carte interactive
+- FAQ
+- Mon espace
+- A propos
+
+A chaque fichier se rattache un fichier JavaScript et nous avons un fichier CSS global pour toutes nos pages.
+
+### Résultats
+
+Nous avons un site qui fonctionne en <strong>local</strong> avec un systhème d'authentification simple, une carte interactive où l'on peut filtrer les mobilités par <strong>type</strong>,<strong>pays</strong>,et <strong>domaine</strong>, une <strong>FAQ</strong> contenant les réponses aux questions récurrentes et les liens vers les informations officielles de l'administration et un <strong>formulaire</strong> de fin de mobilité à remplir par les étudiants.
+
+Voici les différentes pages : 
+
+<img src="auth.png">
+<img src="carte.png">
+
+<img src="FAQ.png">
+<img src="apropos.png">
+
+<img src="form.png">
+<img src="form2.png">
+<img src="form3.png">
+
+
+<img src="form4.png">
+<img src="form5.png">
+<img src="form6.png">
+
+<img src="infomodif.png">
+
+### Ecarts 
+
+1. <strong>Design </strong>
+   Le design n'est pas exactement comme la maquette figma que nous avons élaboré bien que notre site s'en approche très fortement. Nous avons privilégier un apport de fonctionnalités à la place de rendre une copie conforme de nos maquettes.
+
+2.<strong>Hébergement </strong>
+   Le site n'a pas pu être hébergé comme nous l'aurions voulu. L'administration nous a fait comprendre qu'il ne souhaitait pas s'impliquer dans notre projet par manque de moyens mais aussi vu la complexité de la mise en place de la politique de RGPD.
+
+3. <strong>Connexion CAS</strong>
+   Comme notre site n'allait pas être hébergé l'utilité de la connexion CAS n'était plus présente. Nous avons donc préféré en faire l'impasse et la remplacer par un systhème d'authentification simple indépendant. 
+
+4. <strong>Promotion du site</strong>
+   Nous aurions voulu promouvoir notre site aux éléves de l'Ecole nottament avec une vidéo qui aurait mis en avant les fonctionnalités du site, néanmois en l'absence d'un site disponible pour tous nous n'avons pas effectuer cette démarche.
+
 
 ## Postérité du projet
 
