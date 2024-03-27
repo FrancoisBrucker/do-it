@@ -57,6 +57,8 @@ Le créateur de la partie pourra paramétrer sa partie comme il le souhaite :
 
 Dans le cas où l'organisateur choisit de rendre la cible non explicite, les participants ne connaitrons pas leur cible. Ils auront simplement des indices sur leur cibles. Ces indices seront remplis par les participants à l'aide d'un formulaire en amont de la partie.
 
+
+
 ## Objectif à atteindre
 Créer un site web avec une meilleur expérience utilisateur, qui permet de jouer le jeu "Killer" en différents modes. Les modes principaux visés comme objectifs sont :
     - Mode Normal (actions)
@@ -173,3 +175,34 @@ Cette approche nous a permis de maintenir une visibilité claire sur le progrès
 <img src="accueil1.png" width="500" >|<img src="Modes.png" width="500" >
 <img src="Paramètrage.png" width="700" height="550">|<img src="Salon.png" width="760" height="650">
 <img src="Partie.png" width="700" height="550">|<img src="Endgame.png" width="760" height="650">
+
+
+## Développement de l’application
+
+### Choix techniques
+
+Pour le développement de l’application, nous avons choisi de partir sur ces technologies :
+
+- **Mongo DB** pour la base de donnée
+- **Node.js** avec Express pour le backend
+- **React Native** pour le frontend
+
+Nous avons choisi d’utiliser **Mongo Db** car c’est une base de donnée No SQL qui permet de créer des bases de données facilement sans commande SQL. De plus Mongo DB permet d’héberger notre base de donnée sur leur serveur, ce qui simplifie la configuration.
+
+Ensuite, nous avons choisi **Node.js** car c’est une technologie que nous avions utilisé pour certains MON. De plus Node.js utilise du Javascript, comme React Native.
+Enfin, **React Native** nous permet de développer des applications mobiles natives et cross platform (compatible avec IOS et ANDROID avec un seul code source). Il existe également Flutter mais nous avons préféré partir sur React Native car on ce Framework est très similaire à React.js.
+
+De plus, pour la communication entre les joueurs, nous utilisons [Socket.IO](http://socket.io/).
+
+Socket.IO est une bibliothèque JavaScript pour permettre la communication temps réel bidirectionnelle entre un client et un serveur.
+
+Socket.IO utilise WebSocket comme protocole de transport lorsque cela est possible, et bascule automatiquement sur d'autres techniques comme le long polling lorsque WebSocket n'est pas disponible. Cela permet à Socket Io de fonctionner dans tous les environnements
+
+La bibliothèque est composée de deux parties : une partie cliente, et une partie serveur qui s'exécute dans un environnement Node.js. Les deux parties communiquent ensemble pour permettre l'envoi et la réception de messages en temps réel.
+
+### Résultat
+
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="HomeScreen.jpg" width="250" >|<img src="SettingScreen.jpg" width="250" >|<img src="SalonScreen.jpg" width="250" >
+<img src="GameScreen.jpg" width="250" >|<img src="StatPerso.jpg" width="250" >|<img src="Classement.jpg" width="250" >
+<img src="Historique.jpg" width="250" >
