@@ -50,16 +50,16 @@ La première étape afin de réaliser notre site web a été de faire une étude
 
 ### Rencontre avec les Élèves
 
-Afin d'obtenir une vision plus large sur notre projet nous avons voulu contacter les 1As, 2As et 3As pour savoir si le projet les intéressait, et s'ils seraient prêt à y accorder un peu de temps.
+Afin d'obtenir une vision plus large sur notre projet nous avons voulu <strong>contacter les 1As, 2As et 3As </strong>pour savoir si le projet les intéressait, et s'ils seraient prêt à y accorder un peu de temps.
 
 **Contact des élèves cherchant une mobilité**
-Les 1As sont les utilisateurs principaux ciblés par notre site internet. En effet, les données collectées et les informations mises en avant sont destinées majoritairement aux 1As. Nous avons donc voulu savoir quelles étaient les questions qu'ils se posent. Nous sommes donc allés directement à leur rencontre dans les couloirs de l'école pour les questionner sur notre idée de projet. Nous avons pu grâce à leur regard extérieur lister les informations et fonctionnalités primordiales à intégrer.
+Les 1As sont les <strong>utilisateurs principaux</strong> ciblés par notre site internet. En effet, <strong>les données collectées</strong> et <strong>les informations</strong> mises en avant sont destinées majoritairement aux 1As. Nous avons donc voulu savoir <strong>quelles étaient les questions</strong> qu'ils se posent. Nous sommes donc allés directement à leur rencontre dans les couloirs de l'école pour les questionner sur notre idée de projet. Nous avons pu grâce à leur regard extérieur <strong>lister les informations et fonctionnalités primordiales à intégrer.</strong>
 
 **Contact des élèves revenant de mobilité**
-Les 2As et 3As sont tout aussi importants, puisqu'ils vont devoir utiliser notre solution pour partager leur expérience sur leur mobilité et alimenter le site internet. L'enjeu pour nous est de savoir dans quelle mesure on peut les impliquer sans que la tâche ne soit trop complexe ou chronophage, le but étant qu'ils n'abandonnent pas la démarche de partage.
+Les 2As et 3As sont <strong>tout aussi importants</strong>, puisqu'ils vont devoir utiliser notre solution pour <strong>partager leur expérience sur leur mobilité</strong> et alimenter le site internet. L'enjeu pour nous est de savoir dans quelle mesure on peut les impliquer sans que la tâche ne soit <strong>trop complexe ou chronophage</strong>, le but étant qu'ils n'abandonnent pas la démarche de partage au milieu de celle-ci.
 
 **Exemples de questions pour mener des interviews**
-Nous avons donc établit une trame de question afin d'entamer la discussion avec les élèves :
+Nous avons donc établit une <strong>trame de question</strong> afin d'entamer la discussion avec les élèves :
 
 - Quelles informations te semblent indispensables pour choisir ta mobilité ?
 - Si on te dit qu'un site regroupant toutes les mobilités a été créé : qu'est-ce que tu imagines ?
@@ -74,12 +74,12 @@ Nous avons donc établit une trame de question afin d'entamer la discussion avec
 
 ### Rencontre avec l'administration
 
-L'administration est au cœur de notre projet avec un double rôle :
+L'administration est <strong>au cœur de notre projet</strong> avec un double rôle :
 
-- Gérer les mobilités : étudier les demandes de mobilité, accorder ou non le droit aux élèves de les réaliser.
-- Collecter l'information : l'administration, au travers de plusieurs services, rassemble l'ensemble des informations de mobilité des élèves.
+- <strong>Gérer les mobilités</strong> : étudier les demandes de mobilité, accorder ou non le droit aux élèves de les réaliser.
+- <strong>Collecter l'information</strong> : l'administration, au travers de plusieurs services, rassemble l'ensemble des informations de mobilité des élèves.
 
-Ainsi, nous avons contacté les différentes parties afin de comprendre quel pourrait-être leur rôle dans notre projet, dans quelle mesure il pourrait les intéresser et comment ils pourraient nous aider.
+Ainsi, nous avons <strong>contacté les différentes parties</strong> afin de comprendre quel pourrait-être leur rôle dans notre projet, dans quelle mesure il pourrait les intéresser et comment ils pourraient nous aider.
 
 Voici quelques questions que nous avons pu leur poser et sujets dont nous avons discuté :
 
@@ -102,32 +102,32 @@ Voici quelques questions que nous avons pu leur poser et sujets dont nous avons 
 Voici le retour des différentes parties :
 
 **Gestionnaire des SMA et doubles diplômes : Olivier Boiron**
-Le 5 octobre 2023, nous sommes allés rencontrer Monsieur Olivier Boiron pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.
+Le 5 octobre 2023, nous sommes allés rencontrer <strong>Monsieur Olivier Boiron</strong> pour lui présenter notre projet et le questionner sur le fonctionnement actuel. Voici les idées qui en ressortent.
 
-- Sur Mobility Online on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilité de faire des requêtes PHP pour obtenir des informations de la base de données, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractables, par exemple les cours sont dans la convention qui est au format pdf donc pas accessibles facilement.
-- Moodle sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
-- Les RI aimeraient pouvoir avoir un retour des étudiants pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui s'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
-- Le point critique : les étudiants ne contactent pas les référents pays ou scientifique, ainsi lors des commissions les dossiers ne sont pas cohérents ce qui ne les favorise pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.
+- Sur <strong>Mobility Online</strong> on retrouve l'actualité des conventions, partage d’information entre les RI et les élèves, validation des mobilités : il y a la possibilité de faire des requêtes PHP pour obtenir des informations de la base de données, il y a 3 étudiants embauchés pour travailler les requêtes, toutes les datas ne sont pas extractables, par exemple les cours sont dans la convention qui est au format pdf donc pas accessibles facilement.
+- <strong>Moodle</strong> sert avant tout d’outils d’informations pour les élèves mais n’est pas forcément à jour. Le plus fiable est le système de mail.
+- Les RI aimeraient pouvoir <strong>avoir un retour des étudiants</strong> pour évaluer ce qui a marché ou non lors de leur mobilité : savoir ce qui s'est bien passé ou non, si des cours sont intéressant, si la vie dans ce pays est agréable ou chère.
+- Le point critique : <strong> les étudiants ne contactent pas les référents pays ou scientifique </strong>, ainsi lors des commissions les dossiers ne sont pas cohérents ce qui ne les favorise pas : par exemple quelqu'un qui ne maîtrise pas une langue alors que les cours ne sont pas en anglais.
 - Ce qu’il nous faut : la liste des référents mise à jour, le contact des étudiants travaillant avec Mobility Online
-- Les RI ne gèrent que les SMA et Double Diplôme
+- Les RI ne gèrent <strong>que les SMA et Double Diplôme</strong>
 - Pour Monsieur Boiron, il faut : identifier les responsables des zones (référent géographique et référent scientifique) et faciliter la prise de contact pour s’assurer de la pertinence de son dossier de mobilité (c’est le référent qui valide les choix des cours)
-- Obligatoire : avoir une FAQ et demander des retours d’expériences
+- Obligatoire : <strong>avoir une FAQ et demander des retours d’expériences</strong>
 
 **Gestionnaire des SSE & TFE : Muriel Roche**  
-Les SSE et TFE sont gérés comme des stages, donc via le site des stages, les informations liées à ces mobilités ne sont pas rassemblées et ne peuvent être partagées. De plus, le service ne souhaitant pas modifier ses méthodes, il est nécessaire que cette plateforme ne rajoute pas de travail, et que les informations sur la plateforme soient exactes et à jour. Donc il est nécessaire que le site renvoie vers le moodle.
+Les <strong>SSE et TFE sont gérés comme des stages</strong>, donc via le site des stages, les informations liées à ces mobilités ne sont pas rassemblées et ne peuvent être partagées. De plus, le service ne souhaitant pas modifier ses méthodes, il est nécessaire que cette plateforme ne rajoute pas de travail, et que les informations sur la plateforme soient exactes et à jour. Donc il est nécessaire que <strong>le site renvoie vers le moodle.</strong>
 
 **Gestionnaire des Alternants entreprise : Guillaume Graton**  
-Les mobilités des alternants sont gérées via d'autres services hors école, notamment le CFA, qui collecte les données à part et qui ne partage qu'un mail avec le BIP.
+Les <strong>mobilités des alternants</strong> sont gérées via d'autres services hors école, notamment le CFA, qui collecte les données à part et qui ne partage qu'un mail avec le BIP.
 
 **Gestionnaire des mobilité recherche : Daniel Mazzoni**  
 Aucune information notable n'a été partagée.
 
 **Vincent Merval**  
-Nous avons rencontré Monsieur Merval en vue d'échanger à propos des enjeux RGPD associés au projet. Ce qui est ressorti de cette réunion est qu'il n'est pas possible d'engager l'image de l'école sur un projet étudiant. En terme de sécurité si le projet est réalisé, il faut que les données soient protégées. La connexion CAS est une bonne idée et il sera nécessaire de faire une revue de code avec les services informatiques de l'école. De plus, il a insisté sur la nécessité d'avoir une pérennité dans le projet pour autoriser son déploiement.
+Nous avons rencontré <strong>Monsieur Merval</strong> en vue d'échanger à propos des <strong>enjeux RGPD associés au projet</strong>. Ce qui est ressorti de cette réunion est qu'il n'est <strong>pas possible d'engager l'image de l'école sur un projet étudiant.</strong> En terme de sécurité si le projet est réalisé, il faut que les données soient protégées. La connexion CAS est une bonne idée et il sera nécessaire de faire <strong>une revue de code avec les services informatiques de l'école.</strong> De plus, il a insisté sur la nécessité d'avoir une <strong>pérennité</strong> dans le projet pour autoriser son déploiement.
 
 ### Conclusion des rencontres
 
-Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et les intérêts de ce projet pour les centraliens. Cependant des contraintes sont apparues et ont aiguillé le projet :
+Tout d'abord, les élèves comme l'administration ont <strong>reconnu le potentiel et les intérêts de ce projet </strong>pour les centraliens. Cependant des contraintes sont apparues et ont aiguillé le projet :
 
 - Ne pourra pas être déployé officiellement
 - L'administration ne communiquera pas de données
@@ -138,7 +138,7 @@ Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et le
 
 ### Construction de la base de données
 
-À la suite des différents échanges avec les élèves et l'administration nous avons donc pu relever les points les plus importants aux yeux des utilisateurs afin de rendre le service pertinent à l'utilisation. Nous avons tout d'abord mis à l'épreuve ces différentes données au près des utilisateurs pour étudier leur exhaustivité et pertinence. De ces recherches, nous avons sélectionné un ensemble de catégories de données que nous souhaitons récolter et exposer sur le site :
+À la suite des différents échanges avec les élèves et l'administration nous avons donc pu <strong>relever les points les plus importants</strong> aux yeux des utilisateurs afin de rendre le service pertinent à l'utilisation. Nous avons tout d'abord mis à l'épreuve ces différentes données au près des utilisateurs pour étudier leur exhaustivité et pertinence. De ces recherches, nous avons sélectionné un ensemble de catégories de données que nous souhaitons récolter et exposer sur le site :
 
 - Nom
 - Prénom
@@ -158,7 +158,7 @@ Tout d'abord, les élèves comme l'administration ont reconnu le potentiel et le
 - Tips
 - Autorisation de publication de la donnée
 
-Questions spécifiques aux SMA et DD
+<strong>Questions spécifiques aux SMA et DD</strong>
 
 - Référent géographique
 - Référent scientifique
@@ -167,7 +167,7 @@ Questions spécifiques aux SMA et DD
 - Liste des cours
 - Retour d'expérience scolaire
 
-Questions spécifiques aux SSE, Alternant et TFE
+<strong>Questions spécifiques aux SSE, Alternant et TFE</strong>
 
 - Nom de l'entreprise ou organisme
 - Domaine d'activité
@@ -177,7 +177,7 @@ Ces données sont à la discrétion de l'élève, il choisit ou non de les parta
 
 ## Design du site web
 
-Nous avons utilisé nos études antérieures ainsi que nos cours de design pour structurer notre projet et élaborer un cahier des charges afin de le mener à terme.
+Nous avons utilisé nos études antérieures ainsi que <strong>nos cours de design</strong> pour structurer notre projet et élaborer un cahier des charges afin de le mener à terme.
 
 ### Persona, à qui s'adresse notre projet ?
 
@@ -218,7 +218,7 @@ Fonctionnalités :
 - Connexion CAS
 - Hébergement
   
-Critères de validation :
+<strong>Critères de validation :</strong>
 
 - Facilité d'utilisation
 - Design épuré
@@ -226,13 +226,13 @@ Critères de validation :
 
 ### Planification
 
-Voici le GANTT des tâches à réaliser afin de compléter notre projet, réparti en sprints tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que les moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
+Voici le <strong>GANTT</strong> des tâches à réaliser afin de compléter notre projet, réparti en <strong>sprints</strong> tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que les moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
 
 <img src="planning.png">
 
 ### Maquettes
 
-Cette section regroupe donc les premiers designs et maquettes réalisés afin d'obtenir une expérience utilisateur optimale et pouvoir passer au développement en ayant une visualisation claire du projet. Ces différents modèles ont été conçu au travers des cours d'UX et d'UI via Canva et Figma.
+Cette section regroupe donc <strong>les premiers designs et maquettes réalisés</strong> afin d'obtenir une expérience utilisateur optimale et pouvoir passer au développement en ayant une visualisation claire du projet. Ces différents modèles ont été conçu au travers des cours <strong>d'UX et d'UI via Canva et Figma.</strong>
 
 **Première maquette - Canva**
 
@@ -243,9 +243,8 @@ L'intérêt de cette maquette est de mettre à plat les idées et les contrainte
 
 **Minimum Viable Project - Figma**
 
-Au travers des différents outils que propose Figma nous avons voulu construire la structure et les fonctionnalités du site web. De plus, cette maquette nous a permis de réaliser les différents tests pour vérifier que notre interface est intuitive.
+Au travers des différents outils que propose Figma nous avons voulu construire <strong>la structure et les fonctionnalités du site web.</strong> De plus, cette maquette nous a permis de réaliser les différents tests pour vérifier que notre interface est intuitive.
 
-Figma nous permet d'obtenir un rendu très proche de la solution finale avec rapidité et précision.
 <img src="figma.png">
 
 Voici par exemple le parcours utilisateur d'un élève :
@@ -254,7 +253,7 @@ Voici par exemple le parcours utilisateur d'un élève :
   <source src="presentation_figma.mp4" type="video/mp4">
 </video>
 
-**Deuxième maquette - Canva**
+**Deuxième maquette - Figma**
 
 Suite à cette première maquette, nous l'avions révisé pendant le cours d'UI. Cela nous a donc mené à ce design général sur lequel on s'appuiera lors du développement : 
 
@@ -263,8 +262,8 @@ Suite à cette première maquette, nous l'avions révisé pendant le cours d'UI.
 
 ## Développement
 
-Une fois que nous avons assez d'éléments pour guider notre projet nous avons commencé le développement du site en local. 
-Pour ce faire nous avons créer un GitHub dédié afin de pouvoir tous travailler sur le même projet.
+Une fois que nous avons assez d'éléments pour guider notre projet nous avons <strong>commencé le développement du site en local.</strong> 
+Pour ce faire nous avons créer un <strong>GitHub</strong> dédié afin de pouvoir tous travailler sur le même projet.
 
 <strong>Comment ça marche ? </strong>
 
@@ -285,9 +284,9 @@ Dans notre BDD SQLite on retrouve 3 tables :
 
 Chaque mobilité est rattaché à un <strong>user</strong> et un user ne peut avoir <strong>qu'une mobilité</strong>. 
 La table <strong>Locations</strong> permet d'avoir notre propre BDD des localisations des villes que l'on souhaite afficher sur la map.
-Lorsqu'un utilisateur ajoute sa mobilité, si la ville n'existe pas dans la table alors on l'ajoute en récupérant sa localisation à l'aide d'une API d'OpenStreetMap.
+Lorsqu'un utilisateur ajoute sa mobilité, si la ville n'existe pas dans la table alors on l'ajoute en récupérant sa localisation à l'aide d'une <strong> API d'OpenStreetMap.</strong>
 On va ensuite chercher la localisation des villes via cette table là pour afficher les mobilités.
-De cette façon on utilise que les données nécessaires et rien de superflus, d'autant plus que les gros fichiers CSV que nous avions utilisé au départ n'étaient jamais traduits en Français mais étaient dans la langue du pays (en gros si on voulait afficher Pékin il fallait avoir le nom de la ville en Chinois...).
+De cette façon on utilise <strong>que les données nécessaires et rien de superflus</strong>, d'autant plus que les gros fichiers CSV que nous avions utilisé au départ n'étaient jamais traduits en Français mais étaient dans la langue du pays (en gros si on voulait afficher Pékin il fallait avoir le nom de la ville en Chinois...).
 
 On a au total 5 fichier HTML : 
 - Page d'authentification
@@ -326,7 +325,7 @@ Voici les différentes pages :
 1. <strong>Design </strong>
    Le design n'est pas exactement comme la maquette Figma que nous avons élaboré bien que notre site s'en approche très fortement. Nous avons privilégié un apport de fonctionnalités à la place de rendre une copie conforme de nos maquettes.
 
-2.<strong>Hébergement </strong>
+2. <strong>Hébergement </strong>
    Le site n'a pas pu être hébergé comme nous l'aurions voulu. L'administration nous a fait comprendre qu'ils ne souhaitaient pas s'impliquer dans notre projet par manque de moyens mais aussi vu la complexité de la mise en place de la politique de RGPD.
 
 3. <strong>Connexion CAS</strong>
@@ -338,15 +337,15 @@ Voici les différentes pages :
 
 ## Postérité du projet
 
-Ce projet a été salué par de nombreux élèves qui sont intéressés par son aboutissement. Cette section a donc pour objectif de donner les clés pour reprendre le projet et le faire avancer.
+Ce projet a été salué par de <strong>nombreux élèves qui sont intéressés par son aboutissement.</strong> Cette section a donc pour objectif de donner les clés pour reprendre le projet et le faire avancer.
 
 Voici tout d'abord les défis à relever pour aller plus loin :
 
 - Réaliser la connexion CAS.
 - Héberger le site indépendamment de Centrale
 
-Ces différentes étapes n'ont pas été mises en œuvre dû à des restrictions administratives pour publier le site publiquement sur les serveurs de centrale pour des raisons de sécurité des données et de maintient du code dans le temps. Cependant, il est possible de publier le site pour des durées d'un an reconductible à condition d'effectuer les mises à jours de sécurité annuelles.
-Pour réaliser la connexion CAS, la première étape est de se renseigner auprès de Monsieur Brucker afin d'avoir un script pour implémenter la connexion CAS. 
+Ces différentes étapes n'ont pas été mises en œuvre <strong>dû à des restrictions administratives</strong> pour publier le site publiquement sur les serveurs de centrale pour des raisons de <strong>sécurité des données</strong> et de maintient du code dans le temps. Cependant, il est possible de publier le site pour des durées d'un an reconductible à condition d'effectuer les mises à jours de sécurité annuelles.
+Pour réaliser la connexion CAS, la première étape est de <strong>se renseigner auprès de Monsieur Brucker ou du Ginfo</strong> afin d'avoir un script pour implémenter la connexion CAS. 
 
 ### Héritage du code
 
