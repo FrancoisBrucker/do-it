@@ -178,3 +178,37 @@ Le sprint a aussi été l'occasion de corriger quelques bugs mineurs et amélior
 
 J'attends des feedbacks des utilisateurs pour prioriser les tâches du sprint 4. Jusqu'ici, cela m'a permis d'aboutir à une version stable et une idée claire des fonctionnalités du projet.
 
+## Sprint 4 - Finitions { #sprint-4-finish }
+
+J'ai finalement pu continuer ce dernier Sprint en mettant en place plusieurs fonctionnalités qui semblaient cruciales pour la pérennisation du projet.
+
+D'abord, j'ai ajouté une base de donneées pour gérer plusieurs éléments :
+
+1. La modification des feuilles de calculs sources de la donnée (utile pour le changement d'anée scolaire)
+2. La gestion des noms de cours donnés sur la feuille de calcul
+3. La gestion du cache pour éviter de recalculer les emplois du temps à chaque fois
+
+On peut s'amuser un peu avec l'interface d'administration pour supprimer et ajouter des cours : 
+[La page d'administration](http://node.oignon.ovh1.ec-m.fr/admin)
+
+Avec la fonctionnalité de personnalisation du calendrier, il devient crucial de pouvoir associer fidèlement les cours donnés sur la feuille de calcul EDT avec ceux du sheet élève (choix des cours).
+Pour cela, le parti pris a été de laisser cette opération à tous les utilisateurs qui souhaitent contribuer.
+
+Dès lors, si un cours n'est pas reconnu, il est possible de l'ajouter dans la base de données pour l'associer à un cours du sheet élève et qu'il soit reconnu par la suite.
+À chaque fois qu'un emploi du temps est demandé par l'utilisateur, apparaitra la liste des cours aux noms non reconnus pour qu'il puisse les associer à un cours de la base de données.
+Il n'y a pas encore de système qui permette d'en avertir l'utilisateur dans la page, mais on peut imaginer une notification qui apparaitrait en haut de la page.
+
+
+## Conclusion { #conclusion }
+
+Finalement, à l'issue de ces quatre Sprints, il s'est passé beaucoup de choses et j'ai appris énormément.
+
+J'ai pu conceptualiser une preuve de concept à partir de l'analyse d'un besoin du côté des étudiants, puis j'ai pu le développer et le déployer.
+Entre ces étapes, beaucoup de technologies et techniques ont été utiles et que je peux remettre en perspective avec l'anneée passée et mon parcours scolaire qui s'achève (presque...).
+
+En effet, les cours de Data que j'ai suivi durant ma césure m'ont permis de mener à bien cette preuve de concept en explorant les possibilités offertes par différentes bibliothèques dans des notebooks Python.
+Ensuite, les cours d'Ops suivis en Do_It nous ont offert une connaissance de la mise de ligne d'APIs et de la gestion de serveurs. Je m'en suis servi pour consruire le serveur Flask qui fait tourner la plateforme.
+Nous avons aussi appris à mettre en place des bonnes pratiques pour ce code, notamment avec les tests unitaires et l'intégration continue dans des cours de Do_It, ce n'est pas à négliger !
+Aussi, les POKs et les MONs des autres élèves ont fait expérimenter le travail collaboratif.
+
+Enfin, j'espère que ce projet pourra être utilisé l'année prochaine grâce aux fonctions d'administration et de déploiement continu fraichement ajoutées.
