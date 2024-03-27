@@ -150,38 +150,251 @@
 - Mode Mots<br>
 - Mode Team Building<br>
 - Mode Personnalisable</p>
-<h2>Plan d'action</h2>
-<ol>
-<li><strong>Planification et Conception</strong>:</li>
-</ol>
-<ul>
-<li>Lister les fonctionnalités</li>
-<li>Creation d'une maquette</li>
-</ul>
+<h2>Organisations et étapes clés</h2>
+<h3>Design Thinking</h3>
+<p>Au tout début de notre projet, avant même de commencer le développement, nous avons organisé des ateliers de design thinking. Ces sessions ont été cruciales pour définir les fondations de notre projet, en mettant un accent particulier sur la compréhension de nos utilisateurs finaux. À l'aide des principes et techniques issus de nos cours d'UX, nous avons créé plusieurs personas, représentant les archétypes de nos utilisateurs cibles.</p>
+<p>À la suite de nos ateliers de design thinking et de l'analyse des personas, nous avons tiré des conclusions sur le type d’application que nous voulons développer. Notre objectif est de développer un jeu de soirée destiné principalement à un public jeune, âgé de 18 à 30 ans. L'aspect le plus distinctif de notre application réside dans sa facilité et rapidité de mise en place d'une partie, ainsi que dans la simplicité de son organisation. Nous voulons que notre jeu encourage non seulement l'amusement mais aussi l'échange et la possibilité de rencontrer de nouvelles personnes lors des soirées. Cela signifie que l'interface utilisateur doit être intuitive, éliminant toute barrière technique qui pourrait entraver la spontanéité et la fluidité de ces interactions. De plus, un point crucial de notre conception est de permettre à l'organisateur de la soirée de participer pleinement au jeu, assurant ainsi que personne ne soit laissé de côté et que tous les participants puissent profiter pleinement de l'expérience.</p>
+<p>Ces ateliers ont définit plus ou moins le scope de notre projet. Ce qui nous a aidé dans la prochaine étape de déterminer les fonctionnalités clés de notre application avec des sessions de brainstorming.</p>
+<h3>Brainstorming</h3>
+<p>Suite à une session de brainstorming, nous avons collectivement identifié et évalué toutes les fonctionnalités nécessaires pour notre projet, une étape cruciale dans la définition du scope. Chaque fonctionnalité a été notée en termes de difficulté de réalisation et de priorité, en alignement avec notre charte de projet et nos objectifs. La distinction entre les éléments essentiels et les fonctionnalités optionnelles ou secondaires est essentielle pour affiner le scope de notre projet. Cela a facilité la gestion des taches.</p>
+<p>Voici le tableau récapitulatif des fonctionnalités envisagées au début du projet:</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Fonctionnalités</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <table>
+<thead>
+<tr>
+<th>Fonctionnalité</th>
+<th>Description</th>
+<th>Priorité</th>
+<th>Difficulté</th>
+<th>Page</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="figma.png" width="150" height="150"></td>
-<td style="text-align:center"><img src="xd.png" width="100" height="100"></td>
+<td>Création d’une partie</td>
+<td>Btn pour créer une partie</td>
+<td>5/5</td>
+<td>5/5</td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>Rejoindre une partie</td>
+<td>Btn pour rejoindre une partie existante (⇒ Entrer un code, mettre son nom)</td>
+<td>5/5</td>
+<td>5/5</td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>Accéder aux règles du jeu</td>
+<td>Ouvre une page d’aide qui liste les différents modes de jeu et les règles associées</td>
+<td>1/5</td>
+<td>2/5</td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>Section “à propos”</td>
+<td>Section de texte listant les CGU, le contexte et les créateurs de l’appli</td>
+<td>1/5</td>
+<td>1/5</td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>S’identifier</td>
+<td>Création de compte/connexion (sauvegarder des presets)</td>
+<td>1/5</td>
+<td>5/5</td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>Case “je ne bois pas”</td>
+<td>Paramètre qui permet de définir si on peut recevoir un gage impliquant de la consommation d’alcool ou non</td>
+<td></td>
+<td></td>
+<td>Page d’accueil</td>
+</tr>
+<tr>
+<td>Choisir une thématique</td>
+<td>Le créateur de la partie choisit la thématique qui définit les gages (donc prédéfinis) de la soirée.</td>
+<td>3/5</td>
+<td>3/5</td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Case “soirée alcoolisée”</td>
+<td>Le créateur peut choisir d’exclure ou non les gages liés à la consommation d’alcool de la “pool” de gages</td>
+<td></td>
+<td></td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Possibilité de Reset les gages</td>
+<td>Acceder à un système de vote dans le jeu pour reset les gages si trop de personne sont bloqués</td>
+<td>1/5</td>
+<td>5/5</td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Sauvegarder/Charger un preset</td>
+<td>Si le créateur a un compte, il peut sauvegarder ou charger des paramètres de partie</td>
+<td>1/5</td>
+<td>3/5</td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Ajouter des gages personnalisées</td>
+<td>L’utilisateur peut ajouter à la liste des gages à faire</td>
+<td>2/5</td>
+<td>3/5</td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Créer un timer</td>
+<td>A la fin du timer la personne avec  le plus de kill gagne la partie</td>
+<td>2/5</td>
+<td>3/5</td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Lancer la partie</td>
+<td>L’hôte peut lancer la partie</td>
+<td>5/5</td>
+<td></td>
+<td>Page de paramétrage de la partie</td>
+</tr>
+<tr>
+<td>Notifications et Alerte</td>
+<td>Pour vérifier si la cible est morte + pour annoncer le nombre des derniers participants restants + Annoncer un reset</td>
+<td>5/5</td>
+<td>3/5</td>
+<td>Notification</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Attribution des gages et des cibles (automatiquement)</td>
+<td>L’application va attribuer à chaque joueur une cible et un gage, de façon à ce qu’un joueur ne puisse pas tomber sur lui-même comme cible. (boucle)</td>
+<td>5/5</td>
+<td>5/5</td>
+<td>Après le lancement de la partie</td>
+</tr>
+<tr>
+<td>Voir tout le monde dans un salon</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Page d’attente</td>
+</tr>
+<tr>
+<td>afficher les infos dans le salon</td>
+<td>Nombre de joueurs, Thématique, Fin de partie</td>
+<td>2/5</td>
+<td>2/5</td>
+<td>Page d’attente</td>
+</tr>
+<tr>
+<td>Pouvoir lancer le jeu (hôte)</td>
+<td></td>
+<td>5/5</td>
+<td>5/5</td>
+<td>Page d’attente</td>
+</tr>
+<tr>
+<td>Possibilité d’ajouter un participant (au milieu du jeu)</td>
+<td>Ajouter un nœud dans les relations</td>
+<td>1/5</td>
+<td>2/5</td>
+<td>Page de la partie (Hôte)</td>
+</tr>
+<tr>
+<td>Possibilité de supprimer un participant</td>
+<td>Si un joueur part de la soirée, l’hôte doit être capable de l’éjecter de la partie pour le bon déroulement du jeu. La cible et le gage de la personne déconnectée seront alors transférés à son tueur.</td>
+<td>3/5</td>
+<td>3/5</td>
+<td>Page de partie</td>
+</tr>
+<tr>
+<td>Voir sa cible</td>
+<td></td>
+<td>5/5</td>
+<td></td>
+<td>Page de partie</td>
+</tr>
+<tr>
+<td>voir son gage</td>
+<td>(cacher cette information derrière une confirmation pour éviter les révélations accidentelles)</td>
+<td>5/5</td>
+<td></td>
+<td>Page de partie</td>
+</tr>
+<tr>
+<td>Tuer sa cible</td>
+<td></td>
+<td>5/5</td>
+<td></td>
+<td>Page de partie</td>
+</tr>
+<tr>
+<td>Voter pour reset les gages</td>
+<td></td>
+<td>2</td>
+<td>5/5</td>
+<td>Page de la partie</td>
+</tr>
+<tr>
+<td>Confirmer qu’on est mort</td>
+<td>La cible recevra une notification “Etes vous mort ?” et si elle confirme, verra qui était son tueur et son gage.</td>
+<td>5/5</td>
+<td>5/5</td>
+<td>Page de la partie</td>
+</tr>
+<tr>
+<td>Voir les participants restants quand on est mort</td>
+<td></td>
+<td>2/5</td>
+<td>4/5</td>
+<td>Autre page ?</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Définir les règles du jeu</li>
-</ul>
-<ol start="2">
-<li><strong>Développement de l'Application</strong>:</li>
-</ol>
-<ul>
-<li>Création d'une version minimale viable (MVP) du jeu. (no code)</li>
-<li>Conception de l'interface utilisateur <img src="flutter.png" width="100" height="60"></li>
-<li>Intégration des fonctionnalités clés</li>
-<li>Conception de l'architecture des données</li>
-</ul>
-<h2>Points d'amélioration</h2>
-<p>Comme amélioration du projet, on propose un mode <strong>Grand Public</strong>, qui permet une grande communauté de jouer le jeu pendant une semaine ou une quinzaine.<br>
-Exemple d'application: L'intégration des étudiants centraliens.<br>
-Concept du mode : Celui des <strong>Hunger Games</strong>, où les cibles tuées vont être affichées dans les écrans Centraliennes tout au long du jeu.</p>
+</div>
+</details>     
+</div>
+<h3>Développement</h3>
+<p>Pour la phase de développement de notre projet, nous avons continué à travailler avec Notion pour la gestion des tâches, permettant ainsi une organisation et une collaboration efficace au sein de notre équipe. Grâce à Notion, nous avons pu lister toutes les tâches nécessaires à la réalisation de notre projet, en attribuant à chacune un statut précis qui reflète son avancement : &quot;Non commencé&quot;, &quot;En cours&quot;, et &quot;Terminé&quot;.</p>
+<p>Cette approche nous a permis de maintenir une visibilité claire sur le progrès de chaque aspect du projet, facilitant ainsi la communication et assurant que nous sommes alignés sur les priorités et les échéances. Le suivi du statut des tâches via Notion a également contribué à une gestion de projet plus dynamique, permettant des ajustements en temps réel pour répondre aux changements de scope.</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="taches.png" width="760" height="650"></td>
+<td style="text-align:center"><img src="taches2.png" width="700" height="550"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="taches3.png" width="700" height="550"></td>
+<td style="text-align:center"><img src="taches4.png" width="760" height="650"></td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
