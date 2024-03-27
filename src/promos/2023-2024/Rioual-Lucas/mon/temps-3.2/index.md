@@ -46,7 +46,8 @@ Voici comment installer les dépendances nécessaire :
  
 
 ```bash
-npm install jest supertest mongoose
+npm install --save-dev jest supertest 
+npm install mongoose
 ```
 
 - Jest : tester du code Javascript
