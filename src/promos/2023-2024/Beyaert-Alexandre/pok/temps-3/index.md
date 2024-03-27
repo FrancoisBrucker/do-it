@@ -308,17 +308,96 @@ Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforce
 Différents experts de la Supply Chain ont été sollicités, la plupart à l'aide de Florian Magnani que je remercie amplement.
 Parmi eux, deux ont accepté de mettre à disposition de leur temps pour m'accorder une interview : Richard Markoff et Olivier Gléron.
 
+Richard Markoff a debuté sa carrière chez L'Oréal. Il y a passé plus de 10 ans jusqu'à atteindre les postes de Director Global Manufacturing Supply Chain et de Corporate Supply Chain Standards & Audits Director. Richard fut à l'initiative de différents projets de digitalisation afin d'optimiser le transfert d'information et la communication au sein de la Supply Chain mais aussi avec les intervenants extérieurs.
+Professeur en Supply Chain à l'ESCP et auteur de sujets en Supply Chain pour l'IMD Business School il est désormais co-dirigeant et co-fondateur d'Innovobot : une plateforme d'investissement et d'innovation aidant les entreprises proposant des technologies disruptives.
+
+Olivier Gléron a gravi les échelons au sein de la Supply Chain de Nestlé. Il y aura passé plus de 20 ans au sein de différentes entités en France, en Roumanie, en Suisse ou en Pologne. Devenu Global Supply Chain Head en 2020, il décide en 2024 de rejoindre les locaux parisiens pour contribuer au One Operation Project de Nestlé France.
+
+Olivier et Richard sont deux Senior Supply Chain Operations Leader accomplis que je suis ravi d'avoir pu interviewer et que je remercie une fois de plus pour leur temps, nos échanges furent très intéressants et dépassèrent largement le cadre de mon projet, réaffirmant une fois de plus ma motivation à faire carrière au coeur de la Supply Chain.
+
 ### Lecture de nouveaux articles (Covid / résilience / énergie...)
+
 
 ### Grille d'entretien
 
-### Entretiens
+#### Introduction
+**1-	Présentation du parcours : pouvez-vous, présentez votre parcours, les différents rôles que vous avez assumez au sein de votre carrière.**
 
-#### Entretien avec Richard Markoff
+#### Généralités directeur de Supply Chain
+*En tant que directeur de Supply Chain, on voit passer beaucoup d’indicateurs, de KPI... De mon point de vue de stagiaire, lorsque chez L'Oréal le Directeur Technique passait à la logistique (tous les 2/3 mois), il ingurgitait en une petite heure une quantité de statistiques, de chiffres et d'indicateurs : performances en production, en terme d'approvisionnement, avancées projets...*
+
+**2-	Parmi toutes les informations que vous devez assimiler, les quelles vous paraissent être les plus importantes pour mesurer la performance de votre Supply Chain ? Quels sont les KPIs clés que vous regardez ?**
+
+**3-	Quels ont été les principaux défis auxquels vous étiez confrontés ?**
+
+#### Nouvelles technologies
+*Chez L’Oréal j’étais surpris de voir l’automatisation qui était réalisée en production : besoin d’un seul opérateur par ligne, robots, AGV… Forte présence d’IoT en production. J’ai d’ailleurs vu que Richard avait fait un article sur le digital chez L’Oréal (Richard Markoff, Ralf W. Seifert : L’Oréal: the beauty of supply chain digitalization (2022), IMD https://www.imd.org/ibyimd/innovation/loreal-the-beauty-of-supply-chain-digitalization/), montrant qu’il s’agissait d’une entreprise assez novatrice, qu’en 2016  avait été nommé un « Chief Operations Digital Officer » pour comprendre et explorer comment les nouvelles technologies pouvaient changer la manufacture et la distribution des produits. Cependant, je n’ai vu que peu de technologies implémentées au niveau décisionnel, à un niveau plus stratégique.*
+
+**4-	Utilisez vous des technologies de l’Industrie 4.0 dans votre Supply Chain ? Plutôt au niveau opérationnel (automatisation en production, IoT pour suivre la production, le flux des stocks...) ? Stratégique (prise de décision, prévisions marketing, prévision de la demande, des besoins en ressources et énergies, anticipaction de crises…) ?**
+
+**5-	Comment a été vécu la mise en place de ces nouvelles technologies ? Y a-t-il eu de la résistance au changement, des formations pour l'accompagner ?**
+
+*Une revue de la littérature datant de 2022 (Industry 4.0 and supply chain [11]) soulignait que la Blockchain pouvait être une solution révolutionnaire pour l’avenir des Digital Supply Chain. Qu'elle permettrait d'assurer l'interoperabilité des systèmes, leur transparence, leur traçabilité favorisant l’économie circulaire tout en maintenant la confidentialité et la sécurité.
+Pour autant, dans un de vos articles (Richard Markoff, Ralf W. Seifert : Where does Blockchain go from where (2022), IMD, https://www.imd.org/ibyimd/supply-chain/where-does-blockchain-go-from-here/) vous mentionnez que l’implémentation de la Blockchain fut un échec (notamment sur l’exemple d’IBM) et qu’elle semblerait moins révolutionnaire que prévue.
+
+**6-	Pourquoi ces échecs ? Qu’est-ce qui n’a pas fonctionné ? Quel est l’avenir de la blockchain dans la Supply Chain ?**
+
+**7- Quel est le top 3 des + gros changements apportés dans la Supply Chain que vous avez vécu ? Quel serait le top 3 des futurs changements à effectuer ? Sentez-vous votre entreprise prête/armée pour faire face à ces futurs changements ?**
+
+*Parmi les lecture review que j’ai feuilletés sur les enjeux de la Supply Chain face à la digitalisation des industries, il était notamment souligné que parmi les entreprises qui rencontraient des échecs dans leur digitalisation, beaucoup d’entre elles n’avaient pas de ligne de conduite précise des investissements à mener, de la digitalisation à effectuer et que globalement elles optaient pour la technologie la plus populaire plutôt que la technologie la plus propice à leur développement. Dans la mesure où quand on parle de digitalisation, on parle de technologies dont les rendements sont encore difficiles à chiffrer, dont les investissements sont conséquents, dont la nature peut-être très diverse (IA, IoT, Big Data Analytics, Blockchain...)*
+
+**8-	Comment on définit une stratégie de digitalisation ? Comment on choisit vers quelles technologies s’orienter ?**
+
+*Afin de mettre en place les nouvelles technologies, les entreprises auront besoin de connaissances/compétences.*
+
+**9-  Concrètement, comment réaliser l’intégration de ces nouvelles technologies ? Mise en place d’outils via du consulting, recrutement de talents, création d'un pôle digital au cœur des entreprises veillant à la mise en place d’outils IoT / Big Data / IA… ?**
+
+#### Cybersécurité & cybermenaces
+
+*L'implémentation de nouvelles tech ouvre les portes aux Supply Chain Attack. Sur l'exemple du cas SolardWind en 2020, les hackers s'en prennent désormais aux sous-traitants, fournisseurs et acteurs extérieurs de la Supply Chain mère pour attaquer indirectement certaines entreprises.*
+
+**10-	Comment on se prépare à ce genre de menace dans la Supply Chain ? Doit-on intégrer tous les fournisseurs et sous-traitants dans notre système pour solidifer le réseau global ?**
+
+#### Éthique et place de l'homme dans l'industrie
+*On parle de nouvelles technologies, de robots, d'automatisation… mais la place de l'homme au coeur de la SUpply Chain et de l'industrie est peu souvent abordée : comment évoluera son métier, comment devra-t-il s'adapter...? Dans un article de Richard Markoffs (Richard Markoff, Ralf W. Seifert : Is Industry 4.0 Tech for Good? (2022), IMD, https://www.imd.org/ibyimd/innovation/is-industry-4-0-tech-for-good/) sont évoqués les enjeux sociétiaux de l’industrie 4.0. Un impact serait notamment le remplacement des hommes par les robots et il est notamment mentionné que Bill Gates proposait de taxer les robots pour ralentir leur déploiement et de mieux gérer les risques.*
+
+*cf position de Singapour 16 février 2024*
+
+**11-	Faut-il ralentir l’innovation dans le domaine de la Supply Chain ? Quels sont les bénéfices et inconvénients à l’accélération de l’innovation ? Au ralentissement.. ?**
+
+### Entretiens
+Le but de ces entretiens était d'obtenir des réponses personnelles des 2 experts de la Supply Chain, voici quelques unes de leurs réponses aux différentes questions.
+
+2- Olivier rappelle que selon lui 3 principaux KPI sont à mettre en avant :
+- le service client
+- la Demand Planning Accuracy and Biased
+- le niveau de stock
+Ces 3 KPI sont les réels indicateurs de la bonne performance de la Supply Chain et sont à surveiller de près.
+
+En ce qui concerne Richard, le point primordial est la précision de l'estimation de la demande. Celui-ci reflète la connaissance du marché, la qualité de notre service, de nos talents et des outils qu'ils emploient, permet d'atteindre un stock optimal.
+
+4- Du point de vue de Richard, l'implémentation de technologies numériques pour L'Oréal semble complexe au niveau décisionnel : l'entreprise propose beaucoup de références, leur durée de vie est relativement courte, il préfère compter sur les talents de l'entreprise. Il est nécessaire pour l'entreprise d'avoir des fondations solides avant d'implémenter de nouvelles technologies, autrement les prédictions risquent d'être pires que sans ces technologies.
+
+Olivier lui rebondit à ce sujet en le liant à la question précédente et le thème du Demand Planning Accuracy and Biased. Au cours de sa carrière, l'amélioration de la prédiction de la demande fut un réel sujet propice à l'implémentation de nouvelles technologies. Initialement basée sur des prévisions statistiques, il fut l'opportunité d'intégrer du Machine Learning. Toutefois, cette intégration reste à surveiller avec précaution : pour recourir à cet outil, il est nécessaire d'être en possession de grandes bases de données produit (ce point est probablement lié au manque de possibilité de L'Oréal d'implémenter du ML du fait du court cycle de vie de leurs produits), ainsi l'entreprise fut confronté à un réel problème durant la crise du Covid pendant laquelle aucune donnée n'était pertinente.
+
+6- L'implémentation de la blockchain dans la chaîne d'approvisionnement a été considérée comme un échec pour plusieurs raisons. Tout d'abord, malgré les promesses de révolution en éliminant les tiers, offrant une transparence totale et permettant un suivi précis des marchandises, les projets ont souvent rencontré des difficultés à passer de la phase pilote à une adoption à grande échelle. Des initiatives majeures telles que Food Trust et TradeLens ont échoué à maintenir leur élan initial, avec des partenariats qui se sont estompés et des annonces de fermeture. De plus, des problèmes persistants tels que des attentes irréalistes quant aux capacités de la technologie et des difficultés à intégrer la blockchain dans les infrastructures existantes ont contribué à cet échec. En fin de compte, la blockchain dans la Supply Chain n'a pas réussi à résoudre efficacement les problèmes rencontrés dans le secteur et n'a pas pu dépasser les défis de mise en œuvre.
+
+7- Olivier :
+Top 3 des défis vécus
+- L'apparition de nouvelles technologies
+- La création de la S&OP dans la fin des années 2000 et qui est désormais cruciale au bon fonctionnement de la SUpply Chain
+- le remplacement d'APO
+
+Top 3 des futurs défis :
+- Le remplacement d'APO est toujours un sujet actuel, la restructure des organisations notamment via leur digitalisation est au cours des stratégies des entreprises.
+- 
 
 ### Analyse & Restitution
 
 ## Conclusion
+
+Ce POK renouvèle une fois de plus ma volonté de travailler dans la Supply Chain, je fus extrêmement passioné par la lecture de revues et d'articles à son sujet. Qu'il s'agisse des futurs changements auquel la Supply Chain sera confrontée, des questions éthiques ou environnementales qu'elle soulève, des enjeux numériques auquel elle fait face, je suis stimulé par son dynamisme et son importance dans notre monde.
+Les interviews que j'ai pu réalisées furent également très exaltantes, c'est une réelle chance pour moi d'avoir pu échanger avec des experts de la Supply Chain dont le parcours est à mes yeux un réel exemple.
 
 ## Bibliographie
 
