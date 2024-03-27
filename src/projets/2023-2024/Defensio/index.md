@@ -39,7 +39,9 @@ Nous nous sommes aussi inspirés de serious games que nous connaissions (Fastrat
 Quant à la question de la visée pédagogique, elle a été fondamentale et centrale dès le début car nous avons construit tout le jeu autour du développement des compétences centraliennes.
 
 ## 2. Ensemble des livrables <a id="section-4"></a>
-### Liste des livrables + Présentation pour la soutenance<a id="section-5"></a>
+### Lien du Github + Liste des livrables + Présentation pour la soutenance<a id="section-5"></a>
+
+[Lien du Github](https://github.com/Cledins/defensio)
 
 [Brief graphique](https://www.canva.com/design/DAF1SKB4O_0/FDEh5i03ldAYG6MXD7lrPQ/edit?utm_content=DAF1SKB4O_0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
