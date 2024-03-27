@@ -33,7 +33,7 @@ Prérequis : Aucun
 
 <h2 id=introduction> Introduction</h2>
 
-Après avoir lu le MON de Kawtar sur le [Data Collection](../../../Kawtar-Bahri/MON/temps-2.1) et le POK de Victor sur [l'AIPD](../../../Victor-Ory/POK/CNIL), que j'ai trouvés très intéressants, j'ai voulu explorer un peu plus ce sujet. Et je me suis dit : *"C'est bien beau tout ça, mais finalement, c'est quoi un cookie ? Et à quoi ça sert ?"*. 
+Après avoir lu le MON de Kawtar sur le [Data Collection](../../../Kawtar-Bahri/MON/temps-2.1/) et le POK de Victor sur [l'AIPD](../../../Victor-Ory/POK/CNIL/), que j'ai trouvés très intéressants, j'ai voulu explorer un peu plus ce sujet. Et je me suis dit : *"C'est bien beau tout ça, mais finalement, c'est quoi un cookie ? Et à quoi ça sert ?"*. 
 Voilà donc comment ce MON a vu le jour. 
 
 <h2 id=definition> Qu'est ce qu'un cookie?</h2>
@@ -103,9 +103,7 @@ La CNIL observe l'émergence plusieurs alternatives aux cookies tiers, voici cel
 - **Fingerprinting** : Identifie de manière unique un utilisateur en utilisant les caractéristiques techniques de son navigateur pour créer une *empreinte numérique*, plutôt que de stocker des cookies.
 - **Authentification unique (SSO)** : Permet la connexion à plusieurs sites avec un seul compte utilisateur, ce qui peut être utilisé pour suivre l'utilisateur sur différents sites.
 - **Ciblage publicitaire par cohorte** : consiste à regrouper les utilisateurs en "cohortes"basées sur des caractéristiques similaires *(intérêts ou les comportements en ligne)*, plutôt que des individus spécifiques : permet de réduire le suivi individuel
-- 
-
-
+  
 {%prerequis "<u>Sources</u>"%}
 Ressources de la CNIL :
 https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/alternatives-aux-cookies-tiers
@@ -153,10 +151,7 @@ Alors, si un éditeur de contenu en ligne intègre une bannière publicitaire su
 En 1996, la société **DoubleClick** a été créée pour exploiter ces cookies tiers à des fins publicitaires. Cette entreprise est un succès : elle est rachetée pour **1,1 milliards de dollars** en **2005** par des investisseurs et fera ensuite l’objet d’un  rachat en **2007** pour **3,1 milliards de dollars** par Google.
 {%endinfo%}
 
-{%info 'DoubleClick'%}
-Le cookie **DoubleClick** utilisé par Google pour sa régie publicitaire du même nom : il contrôle l’ensemble des campagnes publicitaires qui passent par cette régie. Il permet alors d’améliorer les performances de ces campagnes, et d’éviter que les publicités soient affichées plusieurs fois de suite.
-{%endinfo%}
-
+---
 
 {%prerequis "<u>Sources</u>"%} 
 https://linc.cnil.fr/une-petite-histoire-du-cookie
@@ -317,6 +312,12 @@ Si on se penche maintenant sur **l'usage des cookies**:
 {%faire%}
 Constat intriguant : sur le site de la **fnac** aucune bannière de consentement des cookies ne s'est affichée de toute ma navigation sur le site.
 {%endfaire%}
+
+---
+
+{%info 'DoubleClick'%}
+J'ai remarqué plusieurs fois l'apparition du cookie **DoubleClick** utilisé par Google pour sa régie publicitaire du même nom : il contrôle l’ensemble des campagnes publicitaires qui passent par cette régie. Il permet alors d’améliorer les performances de ces campagnes, et d’éviter que les publicités soient affichées plusieurs fois de suite.
+{%endinfo%}
 
 <h2 id=loi> Que dit la loi?</h2>
  
