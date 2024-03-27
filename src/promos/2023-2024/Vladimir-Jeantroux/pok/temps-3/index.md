@@ -114,7 +114,9 @@ Le backlog est aussi une boucherie, avec une multitude de tâches qui ont été 
 
 Ce POK a été très instructif sur Unity et le développement de jeux mobiles en général. C'est un moteur à la fois extrêmement dense et complet, mais aussi intuitif par le fait que la documentation est très riche, les forums sont actifs, et le langage principal est le C#. C'est un projet que je continuerai probablement pendant mon temps libre, notamment pour rajouter les fonctionnalités que je n'ai pas réussi à implémenter pendant le POK, mais aussi pour y faire des améliorations mineures et peut-être même le déployer sur le Play Store si je vais assez loin. 
 
-Le Github du projet se trouve [ici](https://github.com/VlaadimirJ/parcours-obstacles-kubique) et le jeu peut s'installer depuis [ici](https://drive.google.com/file/d/1PiJLEEll2Knoigbu2sob3Rf1GkHs_0Ns/view?usp=sharing) (Android seulement, désolé !).
+Le Github du projet se trouve [ici](https://github.com/VlaadimirJ/parcours-obstacles-kubique) et le jeu peut s'installer depuis [ici](https://drive.google.com/file/d/1PiJLEEll2Knoigbu2sob3Rf1GkHs_0Ns/view?usp=sharing) ou à partir du QR Code ci-dessous. (Android seulement, désolé !).
+
+<img src="qr-code.png" alt="qr code" width="200"/>
 
 ## Bibliographie 
 
