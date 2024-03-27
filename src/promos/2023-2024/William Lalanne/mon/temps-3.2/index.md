@@ -25,6 +25,7 @@ Pré-requis :
 
 [Site TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 [Autre site très bien](https://kinsta.com/fr/base-de-connaissances/guide-complet-typescript/)
+[Vidéo youtube TypeScript](https://www.youtube.com/watch?v=30LWjhZzg50)
 
 ## Sommaire 
 1. TypeScript, qu'est-ce que c'est 
@@ -153,5 +154,6 @@ Grâce à ce MON j'ai pu découvir sommairement ce qu'était TypeScript. Malheur
 
 
 ## Horodatage
-Lecture des différentes informations sur TypeScript: 4h
+Lecture des différentes informations sur TypeScript: 3h
+Visionnage de la vidéo : 3h
 Ecriture du code et mise en place d'un projet TS : 4h
