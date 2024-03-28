@@ -430,3 +430,5 @@ Maquette Bubble : [benoitbeguier.bubbleapps.io/version-test/](benoitbeguier.bubb
 Maquette Figma : [ici](https://www.figma.com/file/C06wE0TDJzsnxTPR5HOqet/Maquette?type=design&node-id=0%3A1&mode=design&t=hd9UGllpKLRbmCeH-1)
 
 Github : [ici](https://github.com/williamlalanne1/Projet3A)
+
+Lien des slides pour la présentation : [slides](slides.pdf)
