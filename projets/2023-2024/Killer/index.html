@@ -499,6 +499,29 @@ Enfin, <strong>React Native</strong> nous permet de développer des applications
 </tbody>
 </table>
 <img src="Historique.jpg" width="250">
+<h1>Analyse des écarts et difficultés</h1>
+<h3><strong>Les écarts par rapport à la vision initiale</strong></h3>
+<p>Etant donné que nous avons défini et explicité le but de l’application et son public cible, le projet n’a pas eu de revirement majeur en cours de route. Tout au long du projet on s’est tout de même posé la question du gagnant : Est-il celui qui a le plus tué ? Ou alors celui qui survit le plus longtemps ? Nous avons finalement formé un compromis : le gagnant est celui qui reste le dernier en lice, mais en cas d’égalité (par exemple si le temps imparti est écoulé), alors les derniers survivants seront départagés sur leur nombre de victimes.</p>
+<p>Il y a aussi eu des remaniements dans les priorités du projet : par exemple, bien qu’initialement nous voulions implémenter un système d’authentification en se faisant un compte sur l’appli, nous avons pensé que la procédure serait trop fastidieuse. On veut quelque chose d’accessible à un public aussi large que possible, et mettre une étape supplémentaire pour lancer une partie peut former une barrière d’entrée.  Peut-être que sur le long terme, se connecter serait une possibilité pour pouvoir enregistrer des gages customisés par exemple, mais toujours présenté comme optionnel.</p>
+<h3>Difficultés principales</h3>
+<p>La principale difficulté lors du développement était de trouver un moyen pour faire en sorte que le joueur reste dans la partie même si l’appli est fermée ou tuée. L’ajout d’animations sur React Native était aussi un gros obstacle à franchir.</p>
+<p>Difficultés principales rencontrées lors du développement :</p>
+<ul>
+<li>Faire en sorte que le joueur ne soit pas exclu de la parti si l’appli est fermée ou tuée</li>
+<li>Implémenter des animations</li>
+<li>Fermeture totale d’une partie</li>
+<li>Notifications Push</li>
+<li>Ajout de gages</li>
+</ul>
+<p>On a bien sûr eu des difficultés purement techniques, mais l’une des plus grosses montagnes à gravir n’avait rien à voir avec une fonctionnalité à implémenter ou un bug.</p>
+<p>En effet, le thème central du jeu tourne autour des gages. S’ils ne sont pas drôles, le jeu est inintéressant, et s’il ne sont pas assez variés, on s’en lasse vite. Il faut aussi qu’ils soient atteignables, sans être trop faciles, ou évidents à deviner pour la cible. Bien que cette partie ne soit pas technique en soi, il a fallu dédier un temps non-négligeable pour trouver les gages, même pour un événement aussi court que le barbecue. Si on laisse aux joueurs la possibilité de changer de gage, il faut prévoir bien plus de gages que de personnes, ce qui devient difficile avec des parties de plusieurs dizaines de personnes.</p>
+<p>Si on veut aller plus loin dans le développement du jeu dans le but de le déployer sur les stores, il faudra réfléchir à plusieurs centaines de gages initialement, donc devoir trouver assez de gages pour le barbecue nous a donné un aperçu de cette tâche gargantuesque.</p>
+<h1>La suite</h1>
+<p>Finalement, l’application Killer est parfaitement jouable dans son état actuel, et permet d’organiser et gérer une partie du début à la fin.</p>
+<p>Le but suprême sur le long terme serait de rendre cette application commercialisable.</p>
+<p>Dans l’immédiat, l’objectif serait de corriger les bugs communs qui pourraient rester, ainsi qu’implémenter toutes les fonctionnalités définies au début du projet. Il faudrait ajouter beaucoup de gages, et remanier la base de données de manière à attribuer des tags à chaque gage, et ainsi les activer ou non en fonction du thème choisi par le créateur de la partie.</p>
+<p>Bien sûr, il y aurait aussi toutes les étapes administratives/fonctionnelles : modalités de téléchargement de l’app sur le Play/App Store, accord de confidentialité utilisateur, et toutes les étapes administratives liées à gagner de l’argent via l’application, éventuellement.</p>
+
 
 </article>
 
