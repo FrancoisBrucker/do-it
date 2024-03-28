@@ -360,6 +360,7 @@ De plus, pour réaliser ce projet nous avons choisit les outils suivants :
 - SQLite
 - Sequelize
 - [Figma](https://www.figma.com/file/ThyCFPc8uPskYkBhsdn5pb/Projet-3A?type=design&node-id=0%3A1&mode=design&t=uWpVRZaWnSmndIUo-1)
-- [Canva](https://www.canva.com/design/DAFvptH5m2c/gqgP8YRc3GiXS5b69VPgcg/edit?utm_content=DAFvptH5m2c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [Maquette Canva](https://www.canva.com/design/DAFvptH5m2c/gqgP8YRc3GiXS5b69VPgcg/edit?utm_content=DAFvptH5m2c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [Formulaire de retours de mobilités](https://docs.google.com/forms/d/e/1FAIpQLSeIoCivfvWPjLD-TudeHL9b3HjVbGLAArKJkqyT0_V0_DV8-A/viewform?usp=sf_link)
+- [Télécharger la présentation](presentation.pdf)
   
