@@ -219,3 +219,39 @@ La bibliothèque est composée de deux parties : une partie cliente, et une part
 <img src="HomeScreen.jpg" width="250" >|<img src="SettingScreen.jpg" width="250" >|<img src="SalonScreen.jpg" width="250" >
 <img src="GameScreen.jpg" width="250" >|<img src="StatPerso.jpg" width="250" >|<img src="Classement.jpg" width="250" >
 <img src="Historique.jpg" width="250" >
+
+# Analyse des écarts et difficultés
+
+### **Les écarts par rapport à la vision initiale**
+
+Etant donné que nous avons défini et explicité le but de l’application et son public cible, le projet n’a pas eu de revirement majeur en cours de route. Tout au long du projet on s’est tout de même posé la question du gagnant : Est-il celui qui a le plus tué ? Ou alors celui qui survit le plus longtemps ? Nous avons finalement formé un compromis : le gagnant est celui qui reste le dernier en lice, mais en cas d’égalité (par exemple si le temps imparti est écoulé), alors les derniers survivants seront départagés sur leur nombre de victimes. 
+
+Il y a aussi eu des remaniements dans les priorités du projet : par exemple, bien qu’initialement nous voulions implémenter un système d’authentification en se faisant un compte sur l’appli, nous avons pensé que la procédure serait trop fastidieuse. On veut quelque chose d’accessible à un public aussi large que possible, et mettre une étape supplémentaire pour lancer une partie peut former une barrière d’entrée.  Peut-être que sur le long terme, se connecter serait une possibilité pour pouvoir enregistrer des gages customisés par exemple, mais toujours présenté comme optionnel.
+
+### Difficultés principales
+
+La principale difficulté lors du développement était de trouver un moyen pour faire en sorte que le joueur reste dans la partie même si l’appli est fermée ou tuée. L’ajout d’animations sur React Native était aussi un gros obstacle à franchir. 
+
+Difficultés principales rencontrées lors du développement : 
+
+- Faire en sorte que le joueur ne soit pas exclu de la parti si l’appli est fermée ou tuée
+- Implémenter des animations
+- Fermeture totale d’une partie
+- Notifications Push
+- Ajout de gages
+
+On a bien sûr eu des difficultés purement techniques, mais l’une des plus grosses montagnes à gravir n’avait rien à voir avec une fonctionnalité à implémenter ou un bug.
+
+En effet, le thème central du jeu tourne autour des gages. S’ils ne sont pas drôles, le jeu est inintéressant, et s’il ne sont pas assez variés, on s’en lasse vite. Il faut aussi qu’ils soient atteignables, sans être trop faciles, ou évidents à deviner pour la cible. Bien que cette partie ne soit pas technique en soi, il a fallu dédier un temps non-négligeable pour trouver les gages, même pour un événement aussi court que le barbecue. Si on laisse aux joueurs la possibilité de changer de gage, il faut prévoir bien plus de gages que de personnes, ce qui devient difficile avec des parties de plusieurs dizaines de personnes. 
+
+Si on veut aller plus loin dans le développement du jeu dans le but de le déployer sur les stores, il faudra réfléchir à plusieurs centaines de gages initialement, donc devoir trouver assez de gages pour le barbecue nous a donné un aperçu de cette tâche gargantuesque. 
+
+# La suite
+
+Finalement, l’application Killer est parfaitement jouable dans son état actuel, et permet d’organiser et gérer une partie du début à la fin.
+
+Le but suprême sur le long terme serait de rendre cette application commercialisable. 
+
+Dans l’immédiat, l’objectif serait de corriger les bugs communs qui pourraient rester, ainsi qu’implémenter toutes les fonctionnalités définies au début du projet. Il faudrait ajouter beaucoup de gages, et remanier la base de données de manière à attribuer des tags à chaque gage, et ainsi les activer ou non en fonction du thème choisi par le créateur de la partie. 
+
+Bien sûr, il y aurait aussi toutes les étapes administratives/fonctionnelles : modalités de téléchargement de l’app sur le Play/App Store, accord de confidentialité utilisateur, et toutes les étapes administratives liées à gagner de l’argent via l’application, éventuellement.
