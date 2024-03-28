@@ -257,3 +257,7 @@ Le but suprême sur le long terme serait de rendre cette application commerciali
 Dans l’immédiat, l’objectif serait de corriger les bugs communs qui pourraient rester, ainsi qu’implémenter toutes les fonctionnalités définies au début du projet. Il faudrait ajouter beaucoup de gages, et remanier la base de données de manière à attribuer des tags à chaque gage, et ainsi les activer ou non en fonction du thème choisi par le créateur de la partie. 
 
 Bien sûr, il y aurait aussi toutes les étapes administratives/fonctionnelles : modalités de téléchargement de l’app sur le Play/App Store, accord de confidentialité utilisateur, et toutes les étapes administratives liées à gagner de l’argent via l’application, éventuellement.
+
+Les repository Github du projet sont disponibles ici : 
+- Front end : https://github.com/LucasRioual/Killer 
+- Back end : https://github.com/LucasRioual/Killer-back
