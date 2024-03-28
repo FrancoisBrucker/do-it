@@ -246,9 +246,11 @@ En effet, le thème central du jeu tourne autour des gages. S’ils ne sont pas 
 
 Si on veut aller plus loin dans le développement du jeu dans le but de le déployer sur les stores, il faudra réfléchir à plusieurs centaines de gages initialement, donc devoir trouver assez de gages pour le barbecue nous a donné un aperçu de cette tâche gargantuesque. 
 
-# La suite
+# Bilan et suite
 
-Finalement, l’application Killer est parfaitement jouable dans son état actuel, et permet d’organiser et gérer une partie du début à la fin.
+Finalement, l’application Killer est parfaitement jouable dans son état actuel, et permet d’organiser et gérer une partie du début à la fin. En ce qui concerne ce que l’on a appris du projet, nous avons pu mettre en application des outils de gestion de projet, afin de travailler efficacement en groupe, et mener à bien le projet. En effet, pour la plupart d’entre nous, nous avons pas eu l’occasion ou la présence d’esprit d’utiliser ces outils dans nos projets des années précédentes. Pour d’autres, c’était aussi notre première expérience de développement mobile, voire de développement en général : React Native, tests, utilisation de Github… En particulier pour Github, nous avons été confronté à des problèmes qu’on ne pourrait pas rencontrer lorsqu’on met à jour son POK ou MON car nous travaillions tous sur tous les fichiers du jeu.
+
+“Mince, je viens de pull depuis Github et je viens d’écraser tous les modifs que j’avais faites…” 
 
 Le but suprême sur le long terme serait de rendre cette application commercialisable. 
 
