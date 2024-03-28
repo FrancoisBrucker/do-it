@@ -18,6 +18,7 @@ authors:
 - [Application Bubble](#application-bubble)
 - [Base de données Airtable](#base-de-données-airtable)
 - [Difficultés rencontrées](#difficultés-rencontrées)
+- [Apprentissage](#apprentissage)
 
 <h2 id=contexte> Contexte et objectifs du projet</h2>
 
@@ -188,11 +189,23 @@ Ce projet nous a permis d'apprendre plusieurs choses. Tout d'abord, nous avons u
 
 Nous avons rencontré des difficultés sur plusieurs points de notre projet:
 
-- Récupération des données Airtable: il fallait faire des boucles itératives sur Bubble pour récupérer des données via l'API, ce qui n'est pas très adapté à la situation. Une solution serait d'utiliser des *backend workflows*, mais cette fonctionnalité est réservée aux utilisateurs payants.
-- Difficultés inattendues: nous avons rencontré des difficultés dont nous n'avions pas soupçonné, comme par exemple la gestion de l'ordre de passage qui nécessitait de réfléchir sur une certaine logique dans le workflow. Le temps passé sur la maquette était aussi une difficulté: nous ne pensions pas passer autant de temps sur la maquette et sur la réflexion sur l'UX.
-- Difficultés liées à la version gratuite de Bubble: la version gratuite du site nous a restreint sur certains points. Par exemple, nous avions des workloads limités, et le travail en collaboration était parfois difficile.
+- **Récupération des données Airtable**: il fallait faire des boucles itératives sur Bubble pour récupérer des données via l'API, ce qui n'est pas très adapté à la situation. Une solution serait d'utiliser des *backend workflows*, mais cette fonctionnalité est réservée aux utilisateurs payants.
+- **Difficultés inattendues**: nous avons rencontré des difficultés dont nous n'avions pas soupçonné, comme par exemple la gestion de l'ordre de passage qui nécessitait de réfléchir sur une certaine logique dans le workflow. Le temps passé sur la maquette était aussi une difficulté: nous ne pensions pas passer autant de temps sur la maquette et sur la réflexion sur l'UX.
+- **Difficultés liées à la version gratuite de Bubble**: la version gratuite du site nous a restreint sur certains points. Par exemple, nous avions des workloads limités, et le travail en collaboration était parfois difficile.
+
+### Apprentissage
+
+Outre les difficultés rencontrées, nous avons également réussi à faire ressortir quelques apprentissages:
+
+- **Travail sur l'UX important**: Comme mentionné précédemment, cette étape fut assez longue, ce qui nous a fait réaliser l'importance de celle-ci. Le plus gros apprentissage fut l'importance des personas. En effet, nous ne sommes pas assez référé à ces derniers, ce qui nous a fait perdre de vue l'importance d'inclure l'aspect jeu de notre application.
+- **Importance des tests**: Cet aspect nous a été essentiel durant notre projet. Lors du développement de l'application, nous étions "la tête dans le guidon", ce qui nous a infligé un manque de recul très important. Les tests nous ont permis d'avoir ce recul, qui a été très important pour la version finale du jeu.
+- **Application de la méthode agile**: On a appris à garder en tête le backlog et qu’il est parfois difficile de s’en tenir à la méthode jusqu'au bout. On a fait des US trop complexes, ce qui fait qu’on était tous sur la même feature (c’était un choix), mais on aurait dû s'en tenir à la méthode agile, qui stipule de faire des US courtes afin de les répartir en prenant compte de la vélocité de chacun.
 
 <h2 id=capitalisation> Capitalisation et suite à donner</h2>
+
+Pour clôturer ce projet, nous pouvons nous questionner sur son avenir. Une des tâches à faire est d'enrichir la base de donnée Airtable afin de rendre le jeu plus pérenne. Il faut également faire tester le jeu à un public plus large. Une des solutions serait de rendre le jeu accessible en ligne, via une plateforme multijoueur, qui permettrait de jouer sur plusieurs téléphones en même temps.
+L'implémentation du dé peut aussi être pertinent, car cette règle ajoute de l'aléatoire ce qui rend le jeu plus amusant.
+Comme nous l'avons mentionné précédemment, il existe plusieurs inconvénients au low-code, qui pourrait entraver un développement futur de l'application. Il pourrait être intéressant de passer sur une méthode de programmation "dure", pour rendre le jeu plus viable pour l'avenir.
 
 <!-- ## Introduction
 
