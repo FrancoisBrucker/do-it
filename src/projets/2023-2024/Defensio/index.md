@@ -38,10 +38,12 @@ L’idée du jeu nous est venue en discutant ensemble puis par des échanges et 
 Nous nous sommes aussi inspirés de serious games que nous connaissions (Fastratège, Montée de l’Evrest d’Harvard, Construction d’une ville par les méthodes agiles avec Oresys).
 Quant à la question de la visée pédagogique, elle a été fondamentale et centrale dès le début car nous avons construit tout le jeu autour du développement des compétences centraliennes.
 
-## 2. Ensemble des livrables <a id="section-4"></a>
+## 2. Ensemble des livrables (attention à ne rien modifier) <a id="section-4"></a>
 ### Lien du Github + Liste des livrables + Présentation pour la soutenance<a id="section-5"></a>
 
 [Lien du Github](https://github.com/Cledins/defensio)
+
+[Lien du sheets pour le suivi de l'atelier](https://docs.google.com/spreadsheets/d/1NIOnLP6eGzL1NfOXFOQ26iPIP9rR-cMnneVdLBBiEiE/edit?usp=sharing)
 
 [Brief graphique](https://www.canva.com/design/DAF1SKB4O_0/FDEh5i03ldAYG6MXD7lrPQ/edit?utm_content=DAF1SKB4O_0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
