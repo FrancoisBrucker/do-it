@@ -130,7 +130,7 @@
     │   │   ├── index.njk
     │   │   └── sources.zip
     │   ├── RS
-    │   └── index.njk 
+    │   └── index.njk
     └── index.njk
 </code></pre>
 <p>Il aurait en effet contenu, en plus du fichier <code class="fichier">index.md</code> les sources du site compressées au format <code>zip</code>.</p>
@@ -161,7 +161,7 @@ authors:
   - François Brucker
 résumé: "Comment contribuer au site do-it."
 
-tags: 
+tags:
   - 'ct'
 ---
 </code></pre>
@@ -170,11 +170,13 @@ tags:
 <h3>corps du texte</h3>
 <p>Le reste du post, écrit en markdown. Le titre est déjà mis, vos différentes parties sont donc de niveau <code class="language-">##</code></p>
 <h3>les ressources</h3>
-<p>Placez les ressources dans le même dossier que votre post. Vos liens auront alors la forme suivante :</p>
-<ul>
-<li><code class="fichier">[ressource à télécharger](./sources.zip)</code></li>
-<li><code class="fichier">![image à voir](./mon-image.png)</code></li>
-</ul>
+<p>Placez les ressources dans le même dossier que votre post. Vos liens auront alors l'une des deux formes suivantes</p>
+<h4>Ressources à télécharger</h4>
+<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">[ressource à télécharger](./sources.zip)`{.fichier}
+</code></pre>
+<h4>Images</h4>
+<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">![image à voir](./mon-image.png)`{.fichier}
+</code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -200,7 +202,7 @@ tags:
     │   │   ├── index.njk
     │   │   └── sources.zip
     │   ├── RS
-    │   └── index.njk 
+    │   └── index.njk
     ├── index.njk
     └── ct
        ├── contribuer-au-site
@@ -389,14 +391,12 @@ Le corrigé de l'exercice.
 &#123;% endchemin %}
 </div>
 </code></pre>
-<h4>Shortcode <code>prerequis</code></h4>
+<h4><span id="prerequis"></span>Shortcode <code>prerequis</code></h4>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
-<div class="pl-8  mb-2 mr-8">
-<p>Documentation :</p>
-</div><div class="pl-8 mr-8">
+<div class="pl-8 mr-8">
 <ul>
 <li>un pré-requis à lire</li>
 <li>un autre pré-requis à lire</li>
@@ -404,12 +404,35 @@ Le corrigé de l'exercice.
 </div></div>
 <p>Code :</p>
 <pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
-&#123;% prerequis "Documentation :" %}
+&#123;% prerequis %}
 
-* un pré-requis à lire
-* un autre pré-requis à lire
+- un pré-requis à lire
+- un autre pré-requis à lire
 
 &#123;% endprerequis %}
+
+</div>
+</code></pre>
+<h4><span id="lien"></span> Shortcode <code>lien</code></h4>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="/do-it/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-2.2/">un MON utile</a></li>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">un cours qui sert</a></li>
+</ul>
+</div></div>
+
+<p>Code :</p>
+<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+&#123;% lien %}
+
+- [un MON utile](/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-2.2/)
+- [un cours qui sert](https://francoisbrucker.github.io/cours_informatique/cours/web/)
+
+&#123;% endlien %}
 
 </div>
 </code></pre>
@@ -472,8 +495,8 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
-|     Je prends 2 colonnes     ||
-| Content Cell  | Content Cell  |
+| Je prends 2 colonnes ||
+| Content Cell | Content Cell |
 </code></pre>
 <h4>Tables multi-lignes</h4>
 <table>
@@ -493,9 +516,9 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
-| Je prends 2 lignes  |Content Cell  |
-| ^^            |Content Cell  |
-| Content Cell  | Content Cell  |
+| Je prends 2 lignes |Content Cell |
+| ^^ |Content Cell |
+| Content Cell | Content Cell |
 </code></pre>
 <h4>plusieurs ligne dans une cellule</h4>
 <table>
@@ -509,8 +532,8 @@ Le corrigé de l'exercice.
 </td>
 <td>
 <ol>
-<li>ligne  colonne 2</li>
-<li>ligne  colonne 2</li>
+<li>ligne colonne 2</li>
+<li>ligne colonne 2</li>
 </ol>
 </td>
 </tr>
@@ -522,9 +545,9 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
-| 1. ligne colonne 1 | 1. ligne  colonne 2 | \
-| 1. ligne colonne 1 | 2. ligne  colonne 2  |
-| Content Cell  | Content Cell  |
+| 1. ligne colonne 1 | 1. ligne colonne 2 | \
+| 1. ligne colonne 1 | 2. ligne colonne 2 |
+| Content Cell | Content Cell |
 </code></pre>
 <h4>Alignement horizontal</h4>
 <table>
@@ -548,16 +571,16 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| :- | :-: | -: |
-| Content Cell  | Content Cell  | Content Cell |
-| Content Cell  | Content Cell  |Content Cell  |
-| Content Cell  | Content Cell  |Content Cell  |
+| Content Cell | Content Cell | Content Cell |
+| Content Cell | Content Cell |Content Cell |
+| Content Cell | Content Cell |Content Cell |
 </code></pre>
 <h4>Alignement vertical</h4>
 <p>On ajoute un style, mais il ne faut pas que ce soit la dernière colonne. Exemple sur une colonne multi-ligne :</p>
 <table>
 <tbody>
 <tr>
-<td rowspan="2" style="vertical-align:middle">Content Cell </td>
+<td rowspan="2" style="vertical-align:middle">Content Cell</td>
 <td>Content Cell</td>
 </tr>
 <tr>
@@ -571,16 +594,16 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
-| Content Cell  {style="vertical-align:middle"}| Content Cell |
+| Content Cell {style="vertical-align:middle"}| Content Cell |
 | ^^| Content Cell |
-| Content Cell  | Content Cell  |
+| Content Cell | Content Cell |
 </code></pre>
 <p>Si l'on veut avoir un alignement vertical de la dernière colonne, il faut ajouter une colonne vide (je ne sais pas trop pourquoi) :</p>
 <table>
 <tbody>
 <tr>
 <td>Content Cell</td>
-<td rowspan="2" style="vertical-align:middle">Content Cell </td>
+<td rowspan="2" style="vertical-align:middle">Content Cell</td>
 <td></td>
 </tr>
 <tr>
@@ -596,9 +619,9 @@ Le corrigé de l'exercice.
 </table>
 <p>Code :</p>
 <pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- | - |
-| Content Cell | Content Cell  {style="vertical-align:middle"}| |
+| Content Cell | Content Cell {style="vertical-align:middle"}| |
 | Content Cell | ^^ | |
-| Content Cell  | Content Cell  | |
+| Content Cell | Content Cell | |
 </code></pre>
 <h2>tbd</h2>
 <blockquote>
