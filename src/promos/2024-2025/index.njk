@@ -1,0 +1,22 @@
+---
+layout: layout/rubrique.njk
+
+title: "2024-2025"
+annee: "2024"
+tags: ['promo']
+
+resume: 'Promotion 2024-2025'
+
+eleventyNavigation:
+    order: 2
+---
+
+<article>
+    <ul>
+        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) %}
+            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</article>

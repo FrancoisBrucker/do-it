@@ -10,8 +10,8 @@ authors:
 
 ## POK & MON
 
-* [POK](./pok)
-* [MON](./mon)
+- [POK](./pok)
+- [MON](./mon)
 
 ## Projet
 
