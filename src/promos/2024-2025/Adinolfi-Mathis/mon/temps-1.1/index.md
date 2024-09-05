@@ -1,15 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1.2 : Gouvernance partagée VS Holacratie"
+title: "Titre du premier MON du temps 1"
 authors:
-  - Clarisse Francese
+  - ADINOLFI Mathis
 
-date: 1970-10-01
+date: 1970-09-01
+
 tags: 
   - "temps 1"
 
-résumé: "Je compte à travers ce MON faire un récap de ce que sont la gouvernance partagée et l’holacratie. L’entreprise où j’ai effectué mon stage de césure est passée de la première à la seconde juste avant mon stage et je veux mieux comprendre les différences entre ces 2 modèles et les raisons qui les ont poussés à changer de modèle de gouvernance."
+résumé: "Un MON traitant d'un sujet."
 ---
 
 {% prerequis %}
