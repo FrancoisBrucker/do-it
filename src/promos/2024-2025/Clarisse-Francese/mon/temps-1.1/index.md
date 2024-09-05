@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "MON 1.1 : faciliter l'intelligence collective"
 authors:
   - Clarisse Francese
 
@@ -10,7 +10,7 @@ date: 1970-09-01
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je compte à travers ce MON faire une introduction facile sur l’intelligence collective et expliquer ses conditions d’émergence, le rôle de la facilitation et présenter des outils simples à utiliser lors de réunions ou de temps collectifs."
 ---
 
 {% prerequis %}
