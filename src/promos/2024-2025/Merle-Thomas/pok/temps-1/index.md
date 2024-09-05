@@ -29,8 +29,20 @@ Codage en HTML et CSS
 
 
 ### Sprint 1
-- 
-    
+- [ ] 
+- [ ] 
+- [ ] 
+
 
 ### Sprint 2
-- 
+- [ ] 
+- [ ] 
+- [ ]
+
+### Horodateur
+
+Toutes les séances et le nombre d'heure que l'on y a passé.
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| Mardi 27/08  | 1H  | Travail sur la trame du site |
