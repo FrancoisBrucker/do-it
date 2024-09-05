@@ -3,9 +3,9 @@ layout: layout/mon.njk
 
 title: "Titre du premier MON du temps 1"
 authors:
-  - Gordon Zola
+  - Kévin BERNARD
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags: 
   - "temps 1"

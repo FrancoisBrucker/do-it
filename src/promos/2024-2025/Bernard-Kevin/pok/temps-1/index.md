@@ -3,9 +3,9 @@ layout: layout/pok.njk
 
 title: "Titre du POK du temps 1"
 authors:
-  - Gordon Zola
+  - Kévin BERNARD
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags:
   - "temps 1"
