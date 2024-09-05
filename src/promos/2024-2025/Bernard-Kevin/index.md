@@ -1,12 +1,12 @@
 ---
 layout: layout/fiche.njk
 
-title: "Gordon ZOLA"
+title: "Kévin BERNARD"
 authors:
-    - "Gordon Zola"
+    - "Kévin BERNARD"
 ---
 
-Étudiant fictif, utilisé pour le template de nouveaux élèves.
+Étudiant
 
 ## POK & MON
 
@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+Rien pour le moment.

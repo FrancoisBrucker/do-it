@@ -1,13 +1,11 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de Kévin BERNARD"
 authors:
-  - Gordon Zola
+  - Kévin BERNARD
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Kévin BERNARD.
 
 - [POK 1](./temps-1)
-- [POK 2](./temps-2)
-- [POK 3](./temps-3)
