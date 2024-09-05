@@ -3,7 +3,7 @@ layout: layout/fiche.njk
 
 title: "Valentin Billa"
 authors:
-    - "Valentin Billa"
+  - Valentin Billa
 ---
 
 Bonjour !
