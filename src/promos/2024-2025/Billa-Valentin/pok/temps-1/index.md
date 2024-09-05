@@ -8,10 +8,12 @@ authors:
 date: 2024-09-05
 
 tags: 
-  - "temps 1"
-  - "Go"
-  - "Authentification"
-  - "OAuth2"
+  - 'temps 1'
+  - 'vert'
+  - 'avancé'
+  - 'Go'
+  - 'Authentification'
+  - 'OAuth2'
 
 résumé: Création d'un serveur OAuth2 en Go.
 ---

@@ -9,6 +9,8 @@ date: 2024-09-05
 
 tags:
   - 'temps 1'
+  - 'vert'  
+  - 'avancé'
   - 'SQL'
 ---
 
