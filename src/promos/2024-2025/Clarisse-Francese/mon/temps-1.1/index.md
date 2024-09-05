@@ -3,7 +3,7 @@ layout: layout/mon.njk
 
 title: "Titre du premier MON du temps 1"
 authors:
-  - Gordon Zola
+  - Clarisse Francese
 
 date: 1970-09-01
 

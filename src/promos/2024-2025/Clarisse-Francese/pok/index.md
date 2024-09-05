@@ -6,7 +6,7 @@ authors:
   - Clarisse Francese
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Clarisse Francese.
 
 - [POK 1](./temps-1)
 - [POK 2](./temps-2)

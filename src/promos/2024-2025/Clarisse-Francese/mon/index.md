@@ -1,12 +1,12 @@
 ---
 layout: layout/mon-index.njk
 
-title: "MON de Gordon Zola"
+title: "MON de Clarisse Francese"
 authors:
-  - Gordon Zola
+  - Clarisse Francese
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par Clarisse Francese.
 
 - [MON 1.1](./temps-1.1)
 - [MON 1.2](./temps-1.2)
