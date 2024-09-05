@@ -10,7 +10,7 @@ date: 2024-09-05
 tags:
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Optimisation d'un tableur et création d'un tableau de bord
 
 ---
 {% prerequis %}
@@ -41,12 +41,12 @@ Produire un tableur efficace pour ma soeur et un tableau de bord qui récapitule
 - [ ] suivre tuto google apps script
 - [ ] récupérer le tableau de ma soeur
 - [ ] avec ces 2 tutos optimiser ce tableau par exemple récupérer les infos marqués à plusieurs endroits
-automatiser l'envoi de mail selon certaines conditions remplies par ma soeur
+- [ ] automatiser l'envoi de mail selon certaines conditions remplies par ma soeur
 
 #### Sprint 2
 
 - [ ] suivre un tuto sur looker studio
-- [ ] lister avec ma soeur toutes les données qui seraient pertinente pour elle
+- [ ] lister avec ma soeur toutes les données qui seraient pertinentes pour elle
 - [ ] mettre ses données sous forme d’un joli tableau de bord où elle a accès à tous les chiffres et peut choisir ce qu’elle veut regarder
 
 ### Horodatage

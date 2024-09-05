@@ -6,7 +6,8 @@ authors:
     - "Clarisse Francese"
 ---
 
-Étudiante très cool, plutôt un profil saumon et bleu mais promis je vais faire un peu de vert aussi
+Parcours : 2A méca, césure dans laquelle j'ai fait un stage au Tiers-Lab des Transitions dans l'évènementiel puis des voyages et du wwoofing
+Objectif : je sais pas encore que ce que je veux faire mais ce serait plutôt dans le domaine du management ou de la gestion de projet
 
 ## POK & MON
 
