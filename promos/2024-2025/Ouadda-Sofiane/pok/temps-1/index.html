@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>GoAuth2</title>
+        <title>Front site Dark Kitchen</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">GoAuth2</h1>
+<h1 class="mb-1">Front site Dark Kitchen</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -71,27 +71,11 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
-                
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Go</li>
-                
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Authentification</li>
-                
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">OAuth2</li>
-                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
                 
                     
                 
@@ -106,7 +90,7 @@
             <div class="font-bold">Auteurs : </div>
             <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
                 
-                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Valentin Billa</li>
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Sofiane Ouadda</li>
                 
             </ul>
         </div>
@@ -114,12 +98,6 @@
 
     
 </div>
-
-        <p class="mb-4 text-lg">
-
-                Création d'un serveur OAuth2 en Go.
-
-        </p>
 
 
 
@@ -130,76 +108,13 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/">Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/pok/">POKs Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/pok/temps-1/">GoAuth2</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/">Dark kitchen</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/pok/">POKs Sofiane Ouadda</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/pok/temps-1/">Front site Dark Kitchen</a>
 
 </div></div>
 
 
 
 
-<h1>POK 1 - GoAuth2</h1>
-<p>Création d'un serveur OAuth2 en Go</p>
-<h2>Objectifs</h2>
-<p>Je n'ai jamais codé en Go, mais le langage m'intrigue depuis un moment,<br>
-c'est pourquoi j'ai envie de tenter de coder un projet concret pour m'initier aux bases.<br>
-En l'occurence, ce sera un serveur d'authentification OAuth2,<br>
-mes connaissances sur le sujet sont relativement superficielles,<br>
-c'est pourquoi je souhaite les approfondir au long de ce POK.</p>
-<h2>À propos de OAuth et Go</h2>
-<p>OAuth est un protocole d'autorisation utilisé pour permettre à des applications tierces d'accéder aux<br>
-ressources d'un utilisateur sans divulguer les identifiants de celui-ci. Il est couramment utilisé pour<br>
-permettre des connexions via des services comme Google, Facebook, etc.</p>
-<p>Go (ou Golang) est un langage de programmation développé par Google, connu pour sa simplicité,<br>
-ses performances élevées, et son support solide pour la concurrence grâce aux goroutines.</p>
-<h2>Plan d'action</h2>
-<blockquote>
-<p>Volontairement très (trop) fourni, pour être certain de ne pas manquer de contenu.</p>
-</blockquote>
-<h3>Sprint 1</h3>
-<ul>
-<li>
-<p><strong>Introduction à Go</strong></p>
-<ul>
-<li>Configurer l'environnement de développement Go.</li>
-<li>Parcourir les tutoriels de base sur Go.</li>
-<li>Écrire quelques programmes simples pour se familiariser avec la syntaxe et les concepts de Go.</li>
-</ul>
-</li>
-<li>
-<p><strong>Concepts de base d'OAuth2</strong></p>
-<ul>
-<li>Étudier le protocole OAuth2 (RFC 6749).</li>
-<li>Comprendre les différents rôles (Client, Ressource Owner, Authorization Server, Resource Server).</li>
-<li>Examiner les types de flux (Authorization Code, Implicit, Resource Owner Password Credentials, Client Credentials).</li>
-</ul>
-</li>
-<li>
-<p><strong>Développement initial</strong></p>
-<ul>
-<li>Créer un projet Go pour le serveur OAuth2.</li>
-<li>Implémenter une première version du serveur OAuth2 avec les routes de base pour l'autorisation et les tokens.</li>
-<li>Tester les premières implémentations avec des clients simples.</li>
-</ul>
-</li>
-</ul>
-<h3>Sprint 2</h3>
-<ul>
-<li>
-<p><strong>Tests et Client</strong></p>
-<ul>
-<li>Écrire des tests unitaires pour quelques fonctions internes.</li>
-<li>Écrire des tests d'intégration pour les routes principales.</li>
-<li>Créer une page de connection avec Java Spring Boot Oauth.</li>
-</ul>
-</li>
-<li>
-<p><strong>Persistence des données</strong></p>
-<ul>
-<li>Choisir et configurer une base de données (ex. MySQL).</li>
-<li>Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.</li>
-</ul>
-</li>
-</ul>
 
 
 </article>
