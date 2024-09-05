@@ -1,11 +1,11 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POKs Valentin Billa"
+title: "POKs Sofiane Ouadda"
 authors:
-    - Valentin Billa
+    - Sofiane Ouadda
 ---
 
 ## Temps 1
 
-- [POK 1 - GoAuth2](./temps-1)
+- 

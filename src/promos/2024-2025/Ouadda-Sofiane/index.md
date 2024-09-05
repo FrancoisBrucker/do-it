@@ -1,9 +1,9 @@
 ---
 layout: layout/fiche.njk
 
-title: "Valentin Billa"
+title: "Dark kitchen"
 authors:
-    - "Valentin Billa"
+    - "Sofiane Ouadda"
 ---
 
 Bonjour !
