@@ -6,7 +6,7 @@ authors:
     - "Clarisse Francese"
 ---
 
-Étudiante réelle blabla...
+Étudiante très cool, plutôt un profil saumon et bleu mais promis je vais faire un peu de vert aussi
 
 ## POK & MON
 

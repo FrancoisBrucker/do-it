@@ -12,7 +12,11 @@ tags:
 
 résumé: Un POK traitant d'un sujet.
 ---
+{% prerequis %}
 
+Liste des prérequis du POK ET/OU MON
+
+{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
