@@ -1,33 +1,22 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: " Management inclusif"
 authors:
   - Alix Duréault
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON traite de comment adopté un management inclusif et notamment envers les personnes en situation de handicap"
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Dans ce MON, je m'intéresserais au soucis de D&I (Diversité et inclusion). Pour avoir une vision plus complète, je m'intéresserai aux cas des personnes en situation de handicap : 
+- ce qui est prévu d'un point de vue légal, 
+- différents aménagements à mettre en place en fonction du handicap et
+- les bonnes pratiques d'un point de vue managériel.
 
 ## Contenu
 

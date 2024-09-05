@@ -1,53 +1,31 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "Capitaine Crochet"
 authors:
   - Alix Duréault
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags:
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Création d'un site en utilisant html et css
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Dans l'objectif de mieux comprendre les enjeux du dev, je vais me former en front end. Dans ce but, je vais dev un site web dont l'objectif sera de regrouper des patrons en crochet.
 
 ## Tâches
 
 ### Sprints
 
-But final.
-
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Définition de la structure du site
+- [ ] Remise à jour de mes connaissances en html et css
+- [ ] Développement de la base du site
 
 #### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
 ### Horodatage
 
@@ -55,7 +33,7 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+| | | |
 
 ## Contenu
 

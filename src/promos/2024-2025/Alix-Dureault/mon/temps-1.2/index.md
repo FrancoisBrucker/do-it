@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Knowledge Management et faire face au turnover"
 authors:
   - Alix Duréault
 
@@ -12,21 +12,9 @@ tags:
 résumé: "Un MON traitant d'un sujet."
 ---
 
-{% prerequis %}
+Pendant la vie d'un projet, il arrive que des chefs de projet se succèdent les uns par rapport aux autres. Cette situation peut arriver pour des mutations internes, un départ ou encore par un besoin de changement. Ces situations peuvent mettre en péril le bon déroulement du projet car elles causent souvent une perte d'informations concidérable.
 
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Pendant ce MON, je vais donc essayer de comprendre ce qu'est le knowledge management et comment s'assurer de la bonne conservation des informations tout au long de la vie d'un projet.
 
 ## Contenu
 
