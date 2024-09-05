@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "MON 1.2 : l'holacratie"
 authors:
   - Clarisse Francese
 
@@ -9,7 +9,7 @@ date: 1970-10-01
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je compte à travers ce MON faire un récap de ce qu’est l’holacratie, une forme de gestion agile que j’ai moi-même expérimenté au cours de mon stage de césure. J’établirai aussi un regard critique sur l’holacratie."
 ---
 
 {% prerequis %}
