@@ -1,16 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1.1 : faciliter l'intelligence collective"
+title: "Titre du second MON du temps 3"
 authors:
-  - Clarisse Francese
+  - Gordon Zola
 
-date: 1970-09-01
-
+date: 1971-03-01
 tags: 
-  - "temps 1"
+  - "temps 3"
 
-résumé: "Je compte à travers ce MON faire une introduction facile sur l’intelligence collective et expliquer ses conditions d’émergence, le rôle de la facilitation et présenter des outils simples à utiliser lors de réunions ou de temps collectifs."
+résumé: "Un MON traitant d'un sujet."
 ---
 
 {% prerequis %}

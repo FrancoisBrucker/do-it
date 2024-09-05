@@ -1,16 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1.1 : faciliter l'intelligence collective"
+title: "Titre du second MON du temps 1"
 authors:
-  - Clarisse Francese
+  - Kévin BERNARD
 
-date: 1970-09-01
-
+date: 2024-09-05
 tags: 
   - "temps 1"
 
-résumé: "Je compte à travers ce MON faire une introduction facile sur l’intelligence collective et expliquer ses conditions d’émergence, le rôle de la facilitation et présenter des outils simples à utiliser lors de réunions ou de temps collectifs."
+résumé: "Un MON traitant d'un sujet."
 ---
 
 {% prerequis %}
