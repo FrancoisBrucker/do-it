@@ -1,7 +1,7 @@
 ---
 layout: layout/fiche.njk
 
-title: "Dark kitchen"
+title: "Sofiane Ouadda"
 authors:
     - "Sofiane Ouadda"
 ---
