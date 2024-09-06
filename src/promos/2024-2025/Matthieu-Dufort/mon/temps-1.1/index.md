@@ -1,21 +1,24 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "L'utilisation d'Excel pour mettre en forme de la donnée"
 authors:
   - Matthieu Dufort
 
-date: 1970-09-01
+date: 2024-09-06
 
 tags: 
   - "temps 1"
+  - "Excel"
+  - "Traitement de données"
+  - "Novice/intérmédiaire"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le rattrapge de donnée consiste à corriger les données existantes d'une base afin de les aligner sur un format commun. Pour cela on utilise beaucoup Excel. Le but de se MON va être d'apprendre et de découvrir des formules Excels pour corriger des données."
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Connaitre les bases d'Excel.
 
 {% endprerequis %}
 {% lien %}
@@ -24,10 +27,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Dans ce MON je vais utiliser des formules Excel pour mettre en forme une base de données que j'aurais au préalable volontairement mal rempli en m'inspirant de ce que l'on peut retrouver dans une base réel.
 
 ## Contenu
 
