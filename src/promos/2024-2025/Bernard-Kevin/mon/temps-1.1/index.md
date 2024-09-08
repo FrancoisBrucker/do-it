@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "MON 1.1 : Apprendre à utiliser Figma"
 authors:
   - Kévin BERNARD
 
@@ -10,7 +10,7 @@ date: 2024-09-05
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je souhaite découvrir l'utilisation de figma, une application de design d'UI et d'UX,  dont j'ai seulement vu mes amis utiliser pour pouvoir réussir à faire le joli Mock-up lié à mon POK1."
 ---
 
 {% prerequis %}

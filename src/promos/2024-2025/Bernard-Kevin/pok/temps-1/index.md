@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "POK 1 : Site Web avec mon Portfolio"
 authors:
   - Kévin BERNARD
 
@@ -33,29 +33,32 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 
 ### Sprints
 
-But final.
+Mon projet à long terme est de travailler en tant qu'illustrateur free-lance et je profite de Do-It pour avancer mes compétences en informatique et avancer vers cet objectif.
+C'est pour cela que j'ai décider de créer mon site web avec mon portfolio.
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+<!-- Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok. -->
+
+- [ ] Faire un Mock-up sur Figma
+- [ ] Coder les pages en HTML
+- [ ] Coder le style en CSS
+<!-- - [x] Une tâche réalisée -->
+
+<!-- #### Sprint 2
 
 - [ ] Une tâche non réalisée
 - [x] Une tâche réalisée
 
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok. -->
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
+<!-- Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+| Mardi 27/08  | 1H  | Travail sur la trame du site | -->
 
 ## Contenu
 
