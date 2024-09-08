@@ -10,7 +10,7 @@ date: 2024-09-05
 tags:
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK traitant de la création d'un site web.
 ---
 
 {% prerequis %}
