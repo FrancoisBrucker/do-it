@@ -1,15 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Le web sémantique"
 authors:
   - Lola Perdrix
 
-date: 1970-10-01
+date: 2024-09-08
 tags: 
   - "temps 1"
+  - "web"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Découverte de la notion du web sémantique"
 ---
 
 {% prerequis %}
@@ -23,10 +24,12 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+# MON 2 - "Le web sémantique"
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+## Objectifs
+
+L'objectif est de découvrir cette notion que je ne connais pas encore mais qui m'a plutôt l'air intéressante.
+L'idée provient de la liste des enseignements du Master SID.
 
 ## Contenu
 

@@ -1,16 +1,18 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "Data Storytelling"
+
 authors:
   - Lola Perdrix
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags: 
-  - "temps 1"
+ - "temps 1"
+ - "Data"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Comprendre les mécanismes et utilisations du Data Storytelling"
 ---
 
 {% prerequis %}
@@ -24,10 +26,20 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+# MON 1.1 - "Data Storytelling"
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+## Objectifs
+
+L'objectif de ce MON est de découvrir les différentes techniques de storytelling appliquées aux données.
+Je voudrais parcourir :
+
+- Les mécanismes
+- Les outils et techniques
+- Les liens avec la Data Viz, l'UX/UI
+- Pourquoi c’est crucial pour les entreprises
+- Des exemples / cas concrets
+
+C'est un domaine qui m'intéresse tout particulièrement car on peut faire énormément de choses cool avec des données et ça peut être utile.
 
 ## Contenu
 

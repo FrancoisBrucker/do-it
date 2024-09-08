@@ -1,15 +1,18 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "Manipulation d'un dataset et Data Viz avec Excel : Application à une base de données statistiques"
+
 authors:
   - Lola Perdrix
-date: 1970-09-01
+
+date: 2024-09-09
 
 tags:
   - "temps 1"
+  - "Excel"
 
-résumé: Un POK traitant d'un sujet.
+résumé: "Apprentissage des outils d'Excel pour la gestion et l'analyse d'un dataset"
 ---
 
 {% prerequis %}
@@ -23,10 +26,13 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+# POK 1 - "Manipulation d'un dataset et Data Viz avec Excel : Application à une base de données statistiques"
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Apprentissage des outils d'Excel pour la gestion et l'analyse d'un dataset en appliquant à un dataset spécifique.
+
+## Objectifs
+
+L'objectif est de prendre en main les outils mis à disposition par Excel pour étudier une base de données et faire de la data visualisation. Pour cela je souhaite étudier des jeux de données sur les caractéristiques des différents Pokemon afin d'aboutir in fine à un dashboard clair et bien réalisé permettant de tout savoir sur les Pokemon et mettre en lumière les différentes tendances.
 
 ## Tâches
 
@@ -36,17 +42,23 @@ But final.
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Recherche documentaire sur les différents outils (également avancés) d'Excel
+- [ ] Choisir des dataset à étudier et les importer
+- [ ] Mise en forme et nettoyage des données
+- [ ] Définition de problématiques / questions cibles
+- [ ] Analyse pour la première génération, réponse à chaque problématique
+- [ ] Visualisation des résultats en comparant les différents outils
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Apprentissage VBA
+- [ ] Macros répétant l'analyse pour les autres générations
+- [ ] Réaliser le rapport final
+- [ ] Étudier des techniques avancées pour embellir le tout
+- [ ] Tester d'autres dataset en étudiant l'adaptabilité
+- [ ] Comparer avec d'autres logiciels
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+à réajuster à la fin du 1er sprint
 
 ### Horodatage
 
