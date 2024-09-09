@@ -1,33 +1,28 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 1"
+title: "Découverte des API REST"
 authors:
   - Baptiste Audouin
 
-date: 1970-09-01
+date: 2024-09-09
 
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le but de ce MON est de me former sur les API REST ainsi que sur leurs intégrations dans des projets web"
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Je souhaiterai découvrir le fonctionnement et les utilisations des API REST.
+<br> Il y a deux cours sur open classrooms :
+- Ce premier [cours](https://openclassrooms.com/fr/courses/6031886-debutez-avec-les-api-rest) qui permet de découvrir er débuter avec les API REST
+- Et ce second [cours](https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web) qui forme sur les mises en application des API REST dans des projets web
 
 ## Contenu
 
