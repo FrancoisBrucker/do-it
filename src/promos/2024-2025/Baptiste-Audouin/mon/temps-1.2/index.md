@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: ""
+title: "Python et bases de données : application à des données sportives"
 authors:
   - Baptiste Audouin
 
@@ -9,7 +9,7 @@ date: 2024-09-09
 tags: 
   - "temps 1"
 
-résumé: "Python et bases de données : application à des données sportives"
+résumé: "Au cours de ce MON je souhaite découvrir la manipulation des bases de données avec Python et faire une application à des données sportives"
 ---
 
 {% lien %}
