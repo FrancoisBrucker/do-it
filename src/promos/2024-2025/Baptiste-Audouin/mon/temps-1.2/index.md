@@ -1,32 +1,24 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: ""
 authors:
   - Baptiste Audouin
 
-date: 1970-10-01
+date: 2024-09-09
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Python et bases de données : application à des données sportives"
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Je souhaite suivre [ce cours](https://openclassrooms.com/fr/courses/6204541-initiez-vous-a-python-pour-lanalyse-de-donnees) qui est une découverte de l'utilisation de python pour les bases de données. Après avoir suivi ce cours de 6h je voudrai appliquer ce que j'ai appris à un cas concret : l'analyse et la manipulation de données sportive avec, par exemple, le basketball.
 
 ## Contenu
 
