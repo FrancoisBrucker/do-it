@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "MON 1.2 : Apprendre à envoyer des mails en Backend"
 authors:
   - Kévin BERNARD
 
@@ -9,7 +9,7 @@ date: 2024-09-05
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je souhaite créer un formulaire dans Java qui m'envoyer un mail avec le message, le nom de l'expéditeur et son mail via le Backend de mon projet Pok1."
 ---
 
 {% prerequis %}

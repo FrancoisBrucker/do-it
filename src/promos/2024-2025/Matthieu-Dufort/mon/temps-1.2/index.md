@@ -1,32 +1,26 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Origine et comparaison de langages de programmation"
 authors:
   - Matthieu Dufort
 
-date: 1970-10-01
+date: 2024-09-06
 tags: 
   - "temps 1"
+  - "Novice"
+  - "Langage de programmation"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "MON traitant des languages de programmation pour comprendre quand préférer un langage par rapport à un autre."
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Donner pour chacun des languages de programmation : l'origine, la raison de sa création, l'utilisation principale, les avantages et les inconvénient.
 
 ## Contenu
 

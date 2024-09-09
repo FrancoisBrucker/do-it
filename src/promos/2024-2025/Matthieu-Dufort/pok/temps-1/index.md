@@ -1,53 +1,56 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "Structuration d'une base de données"
 authors:
   - Matthieu Dufort
 
-date: 1970-09-01
+date: 2024-09-06
 
 tags:
   - "temps 1"
+  - "Base de données"
+  - "Novice"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK traitant des bases de données et de la façon d'en construire une.
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Ce POK à pour but de retracer toute la conception d'une base de données en partant de la création pour ensuite la visualiser et organiser la donnée dedans. Le but va être aussi d'en créer une en suivant des bonnes pratiques.
 
 ## Tâches
 
+- Définition et utilisation d'une base de données
+- Format d'une base de données
+- Representation possible
+- Bonne pratique dans l'architecture
+- Création d'une base de données en python sur un cas pratique
+- Exploitation rapide de cette base
+- Révision du SQL sur cette base
+
 ### Sprints
 
-But final.
+Le but final de ce POK est d'avoir une bonne connsaissance de la création de base de données.
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Définir d'une base de données ainsi que son utilisation et l'intérêt
+- [ ] Définir le Format et les éléments qui constituent la base
+- [ ] Aborder les représentations possibles d'une base de données
+- [ ] Définir des bonnes pratiques pour créer une base de données
+- [ ] Définir Les façons de garantir la fiabilité d'une base pour éviter un rattrapage
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Etudier une entreprise et les données qu'elle traite
+- [ ] Imaginer et construire en diagramme sa base de données
+- [ ] Construire la base de données à l'aide de python
+- [ ] Exploiter rapidement la base de données en faisant des requêtes dessus
 
 ### Horodatage
 
@@ -58,8 +61,6 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | Mardi 27/08  | 1H  | Travail sur la trame du site |
 
 ## Contenu
-
-Le contenu du POK.
 
 ### Premier Sprint
 

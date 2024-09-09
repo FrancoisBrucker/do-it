@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "FlashFac"
 authors:
   - Manuela BARRETO
 
@@ -10,7 +10,7 @@ date: 2024-09-05
 tags:
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK traitant de la création d'un site web.
 ---
 
 {% prerequis %}
@@ -24,38 +24,37 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+Création d'un site web de flashcards de vocabulaire en français pour les universitaires étrangers
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+## Objectif
+
+Développer un site web simple permettant aux utilisateurs d'apprendre du vocabulaire en français lié à différents domaines académiques (comme Médecine, Ingénierie, Arts, Histoire, Géographie, etc.) à l'aide de flashcards interactives.
 
 ## Tâches
 
 ### Sprints
 
-But final.
-
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+| Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
+| :---: | :----: | :----------: | :--------: |
+| Création du design du site web | 3H | - |  |
+| Développement de la Page d'Accueil | 6H | - |  |
+| Création des listes de vocabulaire | 1H | - |  |
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+| Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
+| :---: | :----: | :----------: | :--------: |
+| Développement de la Page de Flashcards | 6H | - |  |
+| Tests et Ajustements | 2H | - |  |
+| Documentation et Finalisation | 2H | - |  |
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
-
 | Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+| :--: | :------------: | :---------: |
+| Dimanche 08/09  | $\frac{1}{2}$H  | Travail sur la trame du site |
 
 ## Contenu
 

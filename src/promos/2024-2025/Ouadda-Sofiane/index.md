@@ -1,18 +1,18 @@
 ---
 layout: layout/fiche.njk
 
-title: "Valentin Billa"
+title: "Sofiane Ouadda"
 authors:
-    - "Valentin Billa"
+    - "Sofiane Ouadda"
 ---
 
 Bonjour !
 
-[Profil Github](https://github.com/ValentinBilla)
+[Profil Github](https://github.com/SofianeOuadda)
 
-[Clefs publiques PGP](https://github.com/ValentinBilla.gpg)
+[Clefs publiques PGP](https://github.com/SofianeOuadda.gpg)
 
-[Clefs publiques SSH](https://github.com/ValentinBilla.keys)
+[Clefs publiques SSH](https://github.com/SofianeOuadda.keys)
 
 ## POK & MON
 
