@@ -5,7 +5,7 @@ title: "Processus de transformation d’une entreprise"
 authors:
   - Juliette Kocupyr
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags: 
   - "temps 1"

@@ -1,53 +1,55 @@
 ---
 layout: layout/pok.njk
 
-title: "Etude d’une transformation agile d’entreprise"
+title: "Etude de cas : Transformation agile d’entreprise"
 authors:
   - Juliette Kocupyr
 
-date: 1970-09-01
+date: 2024-09-05
 
 tags:
   - "temps 1"
+  - "Agile"
+  - "Etude de cas"
 
-résumé: Ce POK traite des transformations agiles en entreprise, avec l'étude de deux grandes groupes devenus des modèles de l'agile.
+
+résumé: Ce POK traite des transformations agiles en entreprise, avec l'étude de deux grands groupes devenus des modèles de l'agile.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Connaître les bases de la méthode Agile
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[Les méthodes Agile](https://fr.wikipedia.org/wiki/Méthode_agile)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+Ce POK se composera d'une partie théorique sur le processus de transformation agile d'une entreprise, complétée par l'étude de deux grands groupes français et international devenus agile.
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+- Niveau : Débutant
+- Prérequis : Avoir des connaissances sur les méthodes agile et les transformations d'entreprise
+- Mon MON 1.1 permet d'appréhender le [processus de transformation d'une entreprise](/promos/2024-2025/Juliette-Kocupyr/mon/temps-1.1/) pour mieux comprendre les besoins de la trasformation agile.
 
-## Tâches
+## Objectifs
 
-### Sprints
+L'objectif de ce POK est de comprendre le processus de transformation agile d'une entreprise, les raisons de cette transformation et l'impact résultant de celle-ci. À travers les études de cas, je veux montrer que les méthodes agiles ne sont pas réservées qu'à un projet ou qu'aux petites entreprises. Mais également que la transformation agile n'est pas une baguette magique, qu'elle s'accompagne d'un lot de défis à surmonter et ne convient pas à toutes les entreprises.
 
-But final.
+### Sprint 1
 
-#### Sprint 1
+- [ ] Étude du processus des transformations agiles
+- [ ] Compréhension des enjeux d'une telle transformation et de l'impact selon la taille de l'entreprise
+- [ ] Rédaction de la partie théorique et bibliographie
+- [ ] Étude de cas : Spotify, un modèle de l'agile à grande échelle
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Étude de cas : LeroyMerlin, un géant en mode agile
+- [ ] Rédaction des études de cas
+- [ ] Analyse et comparaison des études de cas
+- [ ] Rédaction finale et mise en ligne
 
 ### Horodatage
 

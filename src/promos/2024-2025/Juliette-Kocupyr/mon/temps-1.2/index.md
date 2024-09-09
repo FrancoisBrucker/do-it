@@ -5,11 +5,11 @@ title: "Ux design"
 authors:
   - Juliette Kocupyr
 
-date: 1970-10-01
+date: 2024-09-05
 tags: 
   - "temps 1"
 
-résumé: "Introduction au design thinking et à l'Ux design."
+résumé: "Introduction au Design Thinking et à l'Ux Design."
 ---
 
 {% prerequis %}

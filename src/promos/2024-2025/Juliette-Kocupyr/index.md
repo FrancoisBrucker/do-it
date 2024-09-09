@@ -1,7 +1,7 @@
 ---
 layout: layout/fiche.njk
 
-title: "Juliette KOCUPYR"
+title: "Juliette Kocupyr"
 authors:
     - "Juliette Kocupyr"
 ---
