@@ -101,7 +101,7 @@ xychart-beta horizontal
 </pre>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux" title="Windows">
+  <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux" title="Linux">
   <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Windows_icon.svg/256px-Windows_icon.svg.png" alt="Windows" title="Windows">
   <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacOS_logo_%282017%29.svg/512px-MacOS_logo_%282017%29.svg.png" alt="MacOS" title="MacOS">
 </div>
