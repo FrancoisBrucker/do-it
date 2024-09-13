@@ -10,7 +10,7 @@ date: 1970-09-01
 tags: 
   - "temps 1"
 
-résumé: "Je compte à travers ce MON faire une introduction facile sur l’intelligence collective et expliquer ses conditions d’émergence, le rôle de la facilitation et présenter des outils simples à utiliser lors de réunions ou de temps collectifs."
+résumé: "Je ctest à travers ce MON faire une introduction facile sur l’intelligence collective et expliquer ses conditions d’émergence, le rôle de la facilitation et présenter des outils simples à utiliser lors de réunions ou de temps collectifs."
 ---
 
 {% prerequis %}
