@@ -16,28 +16,26 @@ résumé: "Ce MON résume ce qu'est l’intelligence collective, ses conditions 
 
 {% prerequis %}
 
-Aucun prérequis
+MON débutant, aucun prérequis
 
 {% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Le but de ce MON est de rédiger un mini cours facile à comprendre sur l’intelligence collective. J'ai ainsi expliqué ce que ce terme signifie, ses conditions d’émergence et comment les créer. Puis j’ai listé des outils d’intelligence collective simples à utiliser pour faciliter des réunions ou des temps collectifs. Enfin, j’ai imaginé un temps collectif d’1h à la rentrée que pourrait animer Laetitia et François pour commencer à connaître la promo Do_It et créer du lien entre les élèves.
 
 ## Sommaire
 
-truc
+- [C'est quoi l'intelligence collective ?](#definition)
+- [Exemples d'intelligence collective](#exemples)
+- [Quelles sont les conditions d’émergence de l’IC ?](#conditions)
+- [Comment créer ces conditions ?](#creation)
+- [Boîte à outils d’IC](#outils)
+- [Exemple de temps collectif pour lancer l’année Do_It](#exemple)
 
-## C’est quoi l’intelligence collective ?
+<h2 id=definition> 🧠C'est quoi l'intelligence collective ?</h2>
 
 L'intelligence collective (souvent abrégée IC dans la suite) est une **méthode de travail qui vise à mobiliser et impliquer chaque membre d’une équipe** dans la mise en place d'un processus d'innovation. Elle se met en place grâce à de **nombreux outils** qui permettent de faciliter la coopération et repose sur le postulat qu'une équipe de personnes travaillant ensemble peut résoudre des problèmes plus efficacement que lorsque ces personnes travaillent isolément.
 
-## Exemples d’IC
+<h2 id=exemples> 🔎Exemples d'intelligence collective </h2>
 
-### Partie d’échec entre Garry Kasparov et la foule
+### ♟️Partie d’échec entre Garry Kasparov et la foule
 
 **Garry Kasparov** est un joueur russe d’échecs anciennement numéro un mondial.
 En 1999, un site internet de jeux vidéo lui propose d’affronter une foule lors d’une seule partie d’échecs.  
@@ -54,7 +52,7 @@ Il a même publié un livre de 200 pages exclusivement dédié à l’analyse de
 Vidéo publié par le chercheur Mehdi Moussaïd qui travaille à l’institut Max Planck de Berlin dans un institut de psychologie spécialisé dans la recherche sur l’intelligence collective. Il est connu pour sa chaîne youtube Fouloscopie consacrée à l’analyse des foules. Je vous recommande très fortement sa chaîne si le sujet vous intéresse !
 {% endlien %}
 
-### Estimation du poids d’un boeuf par une foule
+### 🐄Estimation du poids d’un boeuf par une foule
 
 En 2004 (5 ans après la partie d'échec opposant la foule à Garry Kasparov) l’écrivain James Surowiecki publie un livre intitulé “*La sagesse des foules*”. Dedans, il décrit les différents mécanismes qui permettent à une foule d’individus lambda de former des jugements pertinents et de résoudre des problèmes complexes. Notamment il popularise l'expérience ci-dessous :  
 En 1906, le statisticien britannique **Francis Galton** se rend à un marché de bétail anglais dans lequel se déroule un concours consistant à **deviner le poids d’un bœuf**. Galton prend alors note de 787 paris d’amateurs et décide d’établir la médiane. Il est alors surpris de constater que la médiane est 1197 livres (548 kg), un résultat très proche du poids réel du bœuf qui était de 1198 livres.
@@ -68,15 +66,15 @@ Cette sagesse collective, **Aristote** l’avait déjà perçu à l’époque de
 [La Sagesse des foules - Wikipédia](https://fr.wikipedia.org/wiki/La_Sagesse_des_foules)
 {% endlien %}
 
-### Dans la nature
+### 🐝Dans la nature
 
 On retrouve le concept d’IC dans le règne animal. Les **fourmis** et les abeilles nous offrent une leçon fascinante d'organisation : isolées, elles sont désorientées, mais ensemble, elles forment un tout remarquablement efficace avec une répartition naturelle en différents rôles. Ce phénomène se manifeste également chez les mammifères, comme dans les **meutes de loups**, ou encore chez les oiseaux capables de virevolter en nuée en parfaite harmonie en une fraction de seconde.
 
 Bref, tout ça pour dire qu’on retrouve l’IC un peu partout, depuis toujours et que c’est un concept ultra puissant !
 
-## Quelles sont les conditions d’émergence de l’IC ?
+<h2 id=conditions> 💡Quelles sont les conditions d’émergence de l’IC ?</h2>
 
-### 3 pré-requis pour faire émerger l’IC
+### ✅3 pré-requis pour faire émerger l’IC
 
 D' après La Sagesse des Foules de **James Surowiecki**, il a 3 critères essentiels pour que l’IC puisse s’exprimer.
 
@@ -84,7 +82,7 @@ D' après La Sagesse des Foules de **James Surowiecki**, il a 3 critères essent
 - **Indépendance d'esprit** : faire en sorte que chaque individu puisse pleinement exprimer son propre avis sans être influencé et encourager l' originalité plutôt que le conformisme.
 - **Décentralisation des sources** : récolter l'information spécialisée sur le terrain et laisser ces différents jugements s’additionner plutôt que de laisser une autorité supérieure choisir les idées qu’elle préfère.
 
-### 3 facteurs clés de l'intelligence d'un groupe
+### 👪3 facteurs clés de l'intelligence d'un groupe
 
 D’après une étude du MIT, le **quotient intellectuel (QI) d’un groupe est décorrélé de la hauteur des QI individuels**.
 Il est lié à la qualité de la relation entre les membres qui dépend elle-même des facteurs ci-dessous :
@@ -101,18 +99,18 @@ Cette étude du MIT remarque aussi que **plus il y a de femmes dans un groupe, p
 [Opinion | Why Some Teams Are Smarter Than Others - The New York Times](https://www.google.com/url?q=https://www.nytimes.com/2015/01/18/opinion/sunday/why-some-teams-are-smarter-than-others.html&sa=D&source=docs&ust=1726062912152792&usg=AOvVaw06B1Gx75D1jghnSUOOX3G1)
 {% endlien %}
 
-### Intelligence ou les intelligences ?
+### 🤔Intelligence ou les intelligences ?
 
 La notion de QI m’amène à présenter **Howard Gardner**, un psychologue cognitiviste, professeur de neurologie à Boston. Il s’intéresse particulièrement, à la fin des années 70, au potentiel humain et au concept d’intelligence et est farouchement opposé au test du QI. En effet, selon lui l’intelligence ne pourrait pas être mesurée et il met en évidence que **tous les hommes sont intelligents, mais pas forcément de la même façon**. Ses recherches le conduisent à mettre, avec raison, le terme d’intelligence au pluriel. Il établit ainsi une liste de **8 types d’intelligence** de base, correspondant chacune à un talent, une aptitude spécifique? Voici ces intelligences :
 
-- logico-mathématique
-- interpersonnelle
-- intrapersonnelle
-- spatiale
-- corporelle-kinesthésique
-- musicale
-- linguistique
-- naturaliste
+- **logico-mathématique**
+- **interpersonnelle**
+- **intrapersonnelle**
+- **spatiale**
+- **corporelle-kinesthésique**
+- **musicale**
+- **linguistique**
+- **naturaliste**
   
 Ainsi, il est essentiel de garder en tête que l’intelligence collective d’un groupe repose sur de multiples formes d’intelligences.
 
@@ -120,16 +118,16 @@ Ainsi, il est essentiel de garder en tête que l’intelligence collective d’u
 [Gardner et sa théorie – Intelligences Multiples](https://www.intelligences-multiples.org/intelligences-multiples2/les-8-types-dintelligences/)
 {% endlien %}
 
-## Comment créer ces conditions ?
+<h2 id=creation> ❓Comment créer ces conditions ?</h2>
 
 Maintenant que j’ai présenté quelles étaient les conditions d'émergence de l’IC, **comment faire concrètement pour être sûr qu’un groupe respecte ces conditions ?** On peut citer les 4 ingrédients suivants : une **intention claire**, des **postures individuelles**, le rôle de la **facilitation** et un **cadre et des processus** clairs.
 
-### Clarifier son intention
+### 🎯Clarifier son intention
 
 Il existe de **multiples objectifs liés à un temps collectif**. Par exemple, un groupe peut se réunir pour créer du lien, partager des idées, réfléchir ensemble, trouver des solutions, résoudre des conflits, définir sa raison d'être, élaborer une vision commune etc.  
 Ainsi, il est essentiel pour choisir des méthodes adaptées d’**aider le participant à se situer sur ce qui est attendu de lui**. Cela permet d'éviter les frustrations liées à une mauvaise compréhension d’un temps collectif (par exemple un participant déçu de ne pas créer du lien avec ses nouveaux collègues lors d’une réunion qui avait uniquement pour but d’informer les salariés d’un changement de procédure).
 
-### Adopter la bonne posture
+### 🧘‍♀️Adopter la bonne posture
 
 Cela peut sembler paradoxal mais l'intelligence collective part avant tout... de soi !
 Il est donc nécessaire de travailler sa posture individuelle en **développant les facteurs clés de l’IC d’un groupe** évoqués précédemment (intelligence émotionnelle, sensibilité sociale et sens de l’écoute et observation).
@@ -142,9 +140,9 @@ Heureusement, il existe des outils pour aider à atteindre cet objectif. On peut
 La Facipulation est une pratique de manipulation consistant à faire participer les concernés alors que l'issue est déjà validée et scellée.
 {% endinfo %}
 
-### Avoir un facilitateur
+### 🙋Avoir un facilitateur
 
-Un atelier d'intelligence collective sans facilitateur, c 'est comme un plat de pâtes sans sauce !  
+*Un atelier d'intelligence collective sans facilitateur, c'est comme un plat de pâtes sans sauce !*  
 D’après **J.-P. Poupard**, la raison d’être d’un facilitateur est de "***rendre la tâche d' un collectif plus facile tout en utilisant au mieux le temps et l'intelligence des individus qui le composent.*** "  
 Ainsi le facilitateur doit non seulement accompagner les personnes vers une convergence et aboutir à des décisions mais aussi rendre les collaborations utiles, productives et plaisantes.
 Le rôle de facilitateur est différent de celui d’un formateur, ou coach ou consultant comme le résume ce schéma.
@@ -158,7 +156,7 @@ Le facilitateur va notamment endosser ou attribuer à d’autres membres **2 rô
 
 Ainsi, les compétences clés d’un bon facilitateur sont l’écoute active, la sensibilité sociale, l'intelligence émotionnelle, l'art du questionnement, la reformulation, l’esprit de synthèse,  l’empathie et la bienveillance.
 
-### Garantir un cadre et des processus
+### 🖼️Garantir un cadre et des processus
 
 Parfois l’idée même de règles ou de cadre entraîne des résistances (peur d’enfermement) mais il est essentiel de rappeler que **l’absence de règles explicites cache en réalité énormément de règles implicites**.  
 Ainsi, un **cadre** pour un temps collectif permet de **se mettre d' accord sur les règles du jeu**, de favoriser la co-responsabilité, de générer de la sécurité et de la confiance au sein du groupe, de limiter les jeux d'égos et les rapports de domination et d’avoir des sessions de travail plus efficientes.  
@@ -170,13 +168,13 @@ Ce diamant illustre les étapes qu’on traverse quand, devant une question ou u
 
 METTRE IMAGE
 
-## Boîte à outils d’IC
+<h2 id=outils> 📦Boîte à outils d’IC</h2>
 
 Maintenant que j’ai précisé comment créer théoriquement des conditions optimales pour un temps collectif, voici ci-dessous une liste de plein d’outils d’IC que j’ai tous personnellement eu l'occasion de vivre au cours de mon stage de 6 mois au Tiers-Lab des Transitions à Marseille.  
 Ces outils peuvent sembler en apparence assez simples mais leur utilisation apporte une grande différence dans le vécu d’un temps collectif !  
 C’est **le facilitateur qui est censé animer ces outils** pendant le temps collectif.
 
-### Le tour de météo
+### ⛅Le tour de météo
 
 Outil de **2 à 15** personnes, prévoir **1 à 2 min par participant**.
 
@@ -196,7 +194,7 @@ De là, un tour de parole s’installe en **écoute active**, sans réaction. On
 On peut utiliser des supports visuels pour décrire son humeur : la **roue des émotions**, l’**Arbre d'Ostende**, s’associer à un **animal**, un **fruit**, une **carte émotion** etc.
 Si le groupe est nombreux, on peut par exemple **se positionner dans l'espace** sur une ligne imaginaire et indiquer son **niveau d'énergie de 1 à 5** ou bien juste indiquer tous ensemble son niveau d’énergie de 1 à 5 avec les doigts.
 
-### Le cadre de confiance
+### 🤝Le cadre de confiance
 
 Outil de **2 à 20 personnes**, prévoir **5 à 10 min** au total.
 
@@ -217,7 +215,7 @@ Voici le cadre de confiance qui avait été construit lors d’une formation que
 
 METTRE IMAGE
 
-### Le pense écoute
+### 👂Le pense écoute
 
 Outil de **2 à 3 personnes**, prévoir **15 à 25 min** au total.
 
@@ -245,7 +243,7 @@ Concrètement pour un groupe de 2 et une durée de 15 min cela donne :
 
 Option : on peut **débriefer du vécu** de l'exercice en collectif. Par exemple, chacun peut résumer ce qu’a dit son groupe ou bien dire 3 mots pour résumer ce qu’à dit l’autre ou bien en collectif tout le monde dit au fur et à mesure ce qui n’a pas déjà été dit avant.
 
-### Le débat mouvant
+### 👣Le débat mouvant
 
 Outil **à partir de 5 personnes jusqu'à une centaine**, prévoir **entre 10 et 30 min**.
 
@@ -266,7 +264,7 @@ Voici un débat mouvant auquel j’avais participé au LICA, le Laboratoire d’
 
 METTRE PHOTO
 
-### Le tour de déclusion
+### 💬Le tour de déclusion
 
 Outil de **2 à 15 participants**, prévoir **1 à 2 min par participant**.
 
@@ -285,7 +283,7 @@ Ex : "*Avec quelle émotion repartez vous aujourd'hui ?*", “*Quel élément vo
 **Mot clé** : dire un mot pour résumer cette journée.  
 **Mêmes outils que pour l'inclusion** : dire son niveau d’énergie après ce temps collectif.
 
-### Ice breaker
+### 🧊Les ice breaker
 
 #### Son but ?
 
@@ -295,7 +293,7 @@ Il permet au groupe d’**apprendre à se connaître autrement** et de commencer
 - **L’anti “Tu fais quoi dans la vie”** : en sous-groupe ou en tour de parole, les participants racontent ce qu’ils font dans la vie SANS évoquer le travail.
 - **Qui est qui ?** Chacun écrit sur une feuille 3 infos sur lui. On mélange les feuilles et à tour de rôle une personne pioche et essaie de deviner de qui il s'agit.
 
-### Les 6 Chapeaux de De Bono
+### 🎩Les 6 Chapeaux de De Bono
 
 Outil de **3 à 15 personnes**, prévoir **45 min à 1h** au total.
 
@@ -329,12 +327,12 @@ Ex de séquence sur la question générale : ***Comment faire évoluer nos réun
 5. Chapeau vert 6 min : Quels sont tous les changements que l'on pourrait imaginer pour mieux vivre nos réunions ?
 6. Chapeau bleu, en dehors de l'atelier : en petit groupe de travail se réunir pour faire une proposition au reste du groupe à partir de ce qui a émergé.
 
-## Exemple de temps collectif pour lancer l’année Do_It
+<h2 id=exemple> 🏫Exemple de temps collectif pour lancer l’année Do_It</h2>
 
 Maintenant que j’ai présenté plusieurs outils d’IC, je me suis amusée à **imaginer à quoi aurait pu ressembler la première matinée de Do_It lors de la rentrée.** Pour ce temps, je décide que l’intention est d’**apprendre aux élèves de la promo et aux professeurs à se connaître** et ainsi commencer à **créer du lien** entre tout ce beau monde ! Pour ceci, j'ai séparé ce temps d'environ 1h en 4 phases.  
 J’emploie le mot facilitateur en imaginant que Laetitia et François se familiarisent avec les outils d’IC et qu’ils endossent successivement ce rôle au sein des différents temps.
 
-### Inclusion : accueil, prénom et humeur - 20 min
+### 👋Inclusion : accueil, prénom et humeur - 20 min
 
 Les élèves de Do_It arrivent dans la salle avec Laetitia et François. De là, ces derniers leur disent de **laisser toutes leurs affaires dans la salle et de venir avec eux dans la cour au soleil pour d’abord faire des présentations**.
 (Si il ne fait pas beau, possibilité de le faire dans la rue basse ou dans une salle dont les chaises et tables ont été poussé sur les côtés).
@@ -348,7 +346,7 @@ METTRE PHOTO
 Il explique alors les consignes : les **élèves ont 2 min pour regarder les feuilles et se positionner à côté de l’émotion qu’ils ressentent ce matin** lors de cette rentrée en Do_It.  
 Un **tour de parole** s’installe où chaque élève doit dire **son prénom et dire le nom de l’émotion choisie en expliquant pourquoi en 1 phrase** (pas plus car il y a beaucoup d’élèves). Quand un élève a fini, il **désigne l’élève qui enchaîne** pour que la parole circule vite sans blanc.
 
-### Pense écoute : choix de Do_It - 20 min
+### 👂Pense écoute : choix de Do_It - 20 min
 
 Une fois le tour des émotions fini, l’animateur **remercie** pour ce partage et demande aux élèves de se **répartir en binôme avec un élève qu’il ne connaisse pas**. Ils auront alors 15 min pour se présenter et répondre à la question “***Pourquoi j’ai choisi Do_It ? Qu’est ce que cette option va m’apporter ?***”
 
@@ -363,7 +361,7 @@ Le facilitateur doit choisir s'il veut annoncer lui-même les changements de tem
 Si il y a un nombre impair d’élèves, faire un groupe de 3 et remplacer la dernière phase de 5 min par le temps de parole de l’élève C.  
 Pendant ce temps, le facilitateur peut récupérer les feuilles de l'activité précédente par terre.
 
-### Positionnement spatiale : césure, alternance, option 2A, couleur - 20 min
+### 👣Positionnement spatiale : césure, alternance, option 2A, couleur - 20 min
 
 Une fois les élèves revenus, le facilitateur les **remercie** d’avoir joué le jeu et énonce qu’on va maintenant faire quelques **positionnements spatiaux pour apprendre à connaître les situations des autres élèves.** A chaque question, **il désigne des zones** de chaque côté de lui pour que les élèves puissent s’y placer. A chaque fin de positionnement, les élèves **prennent un temps pour observer où sont leurs camarades** et ainsi mieux comprendre la promo.
 
@@ -376,18 +374,18 @@ Questions possibles :
 - ***Même question pour le bleu management des SI***
 - ***Même question pour le saumon gestion de projet***
 
-### Déclusion : prénom et ressenti - 10 min
+### 🗣️Déclusion : prénom et ressenti - 10 min
 
 Le facilitateur **remercie** les élèves pour le positionnement spatial et annonce qu’on va faire un dernier **tour de parole dans lequel chacun rappelle son prénom et explique en 1 phrase comment il a trouvé ce temps collectif.** Là encore, l’élève qui a fini de parler désigne l’élève suivant qui parlera.  
 Une fois le tour fini, le facilitateur **remercie** pour le partage et indique aux élèves qu’on peut rentrer dans la salle pour passer à une présentation plus formelle de l’option (les cours, les POK, MON etc).
 
-### Bilan du temps collectif en DO_It
+### ✅Bilan du temps collectif en DO_It
 
 Et voilà, en un peu plus d’1h, les élèves et les profs ont vécu un **moment collectif** dans lequel ils ont chacun pû dire leur prénom, exprimer une émotion, réfléchir à leur choix sur Do_It et ce que ça va leur apporter, connaître la situation des autres camarades (césure, contrat, option 2A, profil de couleur…) et donner un feedback sur ce temps.
 Le tout en **créant du lien** et sans s’impatienter sur une chaise au fond d’une salle en écoutant d’une oreille distraite ce que racontent les autres.
 
 Bien sûr, ce temps n'est qu’une proposition et je ne sais pas en pratique à quel point ça fonctionnerait bien, d’où le tour de déclusion à la fin qui permet d’avoir un feedback et d’**améliorer ce temps pour l’année suivante**. Je suis très curieuse d’avoir l’avis des élèves et des profs sur cette proposition donc si vous avez lu jusque là hésitez pas à venir m’en parler !
 
-## Conclusion MON
+## 👍Conclusion de ce MON
 
 J’ai **adoré travailler sur ce sujet** et notamment sur le cas du temps pour Do_It ! J’espère que ça servira aux autres élèves et **n’hésitez pas à me poser des questions** sur le contenu de ce MON.
