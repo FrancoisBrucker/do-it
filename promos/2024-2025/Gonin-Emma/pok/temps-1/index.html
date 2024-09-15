@@ -129,10 +129,10 @@
 
 
 
-<p>L'un de mes objectifs personnels de ma césure était de peindre à la gouache et de pouvoir partager mes peintures par la suite. Ce second objectif peut être réalisé grâce à un site web que je peux développer à l'occasion de ce POK. Pour ce premier POK, je vais faire l'interface graphique du site avec ReactJs, une librairie JavaScript que j'ai pû apprendre à utiliser lors de ma césure.</p>
+<p>L'un de mes objectifs personnels de ma césure était de peindre à la gouache et de pouvoir partager mes peintures par la suite. Ce second objectif peut être réalisé grâce à un site web que je peux développer à l'occasion de ce POK. Pour ce premier POK, je vais faire l'interface graphique du site avec ReactJs, un framework que j'ai pû apprendre à utiliser lors de ma césure.</p>
 <h2>Tâches</h2>
 <h3>Sprints</h3>
-<p>Réaliser l'interface graphique du site web.</p>
+<p>L'objectif à la fin de ces 20 heures est d'avoir réalisé l'interface graphique du site web.</p>
 <h4>Sprint 1</h4>
 <ul>
 <li>
@@ -180,25 +180,81 @@
 <tbody>
 <tr>
 <td>Mardi 03/09</td>
-<td>1H</td>
+<td>30 MIN</td>
 <td>Création de la base de données des peintures + fichier json</td>
 </tr>
 <tr>
 <td>Mercredi 04/09</td>
-<td>2H15</td>
+<td>2H</td>
 <td>Création de l'application et mise en page de la page d'accueil + choix charte graphique</td>
 </tr>
 <tr>
 <td>Lundi 09/09</td>
 <td>3H</td>
-<td>Création des différentes pages, lier les vues avec les onglets, première ébauche de la page portefolio</td>
+<td>Création des différentes pages, lier les vues avec les onglets, première ébauche de la page portfolio avec la création d'un carousel</td>
+</tr>
+<tr>
+<td>Jeudi 12/09</td>
+<td>4H30</td>
+<td>Mise en page du portfolio et de la page à propos</td>
 </tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
 <p>Le contenu du POK.</p>
 <h3>Premier Sprint</h3>
-<img src="wip.png" width="800px">
+<p>La première chose que j'ai faite pour débuter ce projet c'est choisir les peintures que je souhaitais montrer dans ce portfolio web. J'ai créé un fichier JSON pour contenir les données de chaque peinture. Le contenu du JSON ressemble à ça :</p>
+<pre><code>{
+    &quot;paintings&quot;: [
+        {
+            &quot;img_url&quot;: &quot;../data/paintings/NAME.jpg&quot;,
+            &quot;date&quot;:&quot;MONTH YEAR&quot;,
+            &quot;title&quot;:&quot;TITLE&quot;,
+            &quot;artist&quot;: &quot;Emma Casagrande&quot;,
+            &quot;size&quot;: &quot;&quot;,
+            &quot;description&quot;: &quot;DESCRIPTION&quot;
+        },
+        ....]
+}
+</code></pre>
+<p>Au début de ce premier sprint, j'ai créé l'application react en lançant la commande suivante dans mon terminal à l'emplacement de mon projet :</p>
+<pre><code>npx create-react-app portfolio
+</code></pre>
+<p>Cette commande crée directement mon application avec une architecture simple, à laquelle j'ai rajouté le dossier /data qui va contenir les photos qui apparaitront sur le site et /fonts qui contient la police que j'ai choisi :</p>
+<pre><code>└── /src
+	├── /data
+	├── /components
+	├── /fonts
+	├── App.jsx
+	├── index.js
+  ├── index.css
+└── /public
+  ├── /data
+  ├── index.html
+  ├── logo.png
+└── ./node_modules
+</code></pre>
+<p>J'ai également installé les librairies dont j'ai besoin pour le design de mon projet, c'est-à-dire les librairies mui/material et emotion/styled. La librairie mui/material me permet d'avoir accès à des composants React qui sont interactifs, qui ont déjà un design avec une certaine charte graphique et dont je peux modifier le style grâce à emotion/styled.</p>
+<p>J'ai dessiné une maquette rapidement sur une feuille avec les différentes vues de mon site, cela m'a permis de savoir comment je vais devoir diviser mes différentes vues en composants. Par exemple, j'ai divisé ma page Home en deux composants : le fond (background) qui sera défini dans le fichier Home.jsx et l'en-tête qui sera définie dans le fichier Header.jsx et que je vais pouvoir récupérer pour toutes mes autres pages.</p>
+<p>Après cette étape rapide de maquettage, j'ai entrepris le code des différents composants, notamment ceux qui composent la page Home, la page AboutMe et la page Portfolio, puisque c'était mes objectifs pour ce premier sprint.</p>
+<p>La partie qui m'a pris le plus de temps était la création du Carousel de la page Portfolio. Qu'est-ce qu'un carousel ? Un carousel permet de visualiser un ou plusieurs items en même temps et de changer les items visualisés lorsque l'utilisateur clique sur les boutons fléchés du carousel.</p>
+<p>A la fin de ce premier sprint, j'ai donc produit ces quatre pages :</p>
+<ol>
+<li>En attendant d'avoir les pages gallery et contact, j'affiche ceci :<br>
+<img src="wip.png" alt="work in progress"><br>
+<br></li>
+<li>La page d'accueil &quot;home&quot; ressemble à ceci :<br>
+<img src="home.png" alt="home"><br>
+<br></li>
+<li>Le rendu de quelques vues du portfolio-carousel est le suivant :<br>
+<img src="portfolio-1.png" alt="flores"><br>
+<img src="portfolio-2.png" alt="flash"><br>
+<img src="portfolio-3.png" alt="porte divine"><br>
+J'ai créé un composant StackCarousel qui contient la mise en page image/texte et un Carousel qui affiche deux StackCarousel au même moment afin de montrer deux peintures à la fois. Pour l'instant la mise en forme est faite pour des peintures de format portrait, il faudra que je change le code pour inclure des peintures de format paysage afin de visualiser un seul paysage à la fois.<br>
+<br></li>
+<li>La dernière page effectuée lors de ce sprint, une description du contexte de ce site et brève description de moi (avec un pseudonyme, ce nom de famille est celui de mon grand-père maternel)<br>
+<img src="about-me.png" alt="About me"></li>
+</ol>
 <h3>Second Sprint</h3>
 
 
