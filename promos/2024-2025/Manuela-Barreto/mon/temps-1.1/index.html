@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du premier MON du temps 1</title>
+        <title>Développement d&#39;applications mobiles pour les novices</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du premier MON du temps 1</h1>
+<h1 class="mb-1">Développement d&#39;applications mobiles pour les novices</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON traitant d'un sujet.
+                Un MON traitant de l'initiation au développement d'applications mobiles pour les débutants absolus.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/">Manuela BARRETO</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/mon/">MON de Manuela BARRETO</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/mon/temps-1.1/">Titre du premier MON du temps 1</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/">Manuela BARRETO</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/mon/">MON de Manuela BARRETO</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Manuela-Barreto/mon/temps-1.1/">Développement d&#39;applications mobiles pour les novices</a>
 
 </div></div>
 
@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Il n'y a pas de prérequis pour ce MON</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -140,13 +140,230 @@
 <p>Les lien utiles pour la compréhension de celui-ci.</p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<h2>Sommaire</h2>
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li><a href="#r%C3%A9sum%C3%A9">Résumé</a></li>
+<li><a href="#quest-ce-quune-application">Qu'est-ce qu'une application ?</a></li>
+<li><a href="#quest-ce-quun-syst%C3%A8me-dexploitation">Qu'est-ce qu'un système d'exploitation ?</a></li>
+<li><a href="#les-approches-de-d%C3%A9veloppement-dapplications-mobiles">Les Approches de Développement d'Applications Mobiles</a></li>
+<li><a href="#%C3%A9mulateurs">Émulateurs</a></li>
+<li><a href="#cas-pratique">Cas pratique</a></li>
+<li><a href="#bibliographie">Bibliographie</a></li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<a name="résumé">
+<h2> Résumé </h2>
+</a>
+<p>Cette étude a pour but de me lancer dans le monde du développement d'applications mobiles.</p>
+<p>Avec le contenu appris tout au long de ce MON, j'espère avoir suffisamment de connaissances pour développer ma propre application mobile sur POK2.</p>
+<p>Ce MON couvrira les principes du développement mobile et se terminera par un cas pratique simple : la création d'une calculatrice simplifiée pour additionner, soustraire, multiplier ou diviser deux nombres.</p>
+<a name="quest-ce-quune-application">
+<h2> Qu'est-ce qu'une application ? </h2>
+</a>
+<p>Les applications ( souvent appelées « apps ») sont des logiciels qui regroupent certaines fonctionnalités permettant d'<strong>effectuer des tâches spécifiques sur un appareil</strong>, tel qu'un ordinateur, un smartphone ou une tablette. Leur objectif principal est d'appliquer une série d'instructions qui <strong>résolvent des problèmes ou facilitent une activité pour l'utilisateur</strong>.</p>
+<h3>Desktop Apps X Web Apps X Mobile Apps</h3>
+<p>Il existe de nombreux types d'applications, mais les plus courants sont les desktop apps, les web apps et les mobile apps</p>
+<p>Chacune d'entre elles présente des caractéristiques spécifiques, ainsi que des avantages et des inconvénients qui doivent être pris en compte lors du choix de l'application à utiliser.</p>
+<h4>Desktop Apps</h4>
+<p>Les applications desktop sont des « programmes informatiques » qui sont directement installés sur le disque dur et fonctionnent indépendamment d'un navigateur.</p>
+<p>Ils sont particulièrement utiles pour le travail hors ligne ou l'utilisation de fonctions spécifiques du <a href="#quest-ce-quun-syst%C3%A8me-dexploitation">système d'exploitation</a>. Mais elles présentent l'inconvénient d'être limitées à l'appareil sur lequel elles sont installées et d'avoir des mises à jour régulières qui doivent être téléchargées, ce qui peut prendre du temps et s'avérer peu pratique.</p>
+<h4>Web Apps</h4>
+<p>Les applications web sont exécutées à partir de n'importe quel navigateur internet et n'ont pas besoin d'être téléchargées ou installées. Pour les utiliser, il suffit d'avoir accès à un navigateur web, ce qui signifie qu'elles peuvent être exécutées dans n'importe quel <a href="#quest-ce-quun-syst%C3%A8me-dexploitation">système d'exploitation</a>, ce qui les rend intrinsèquement multiplateformes (nom que l'on donne aux applications qui fonctionnent dans plus d'un système d'exploitation).</p>
+<p>Il est également important de ne pas confondre les applications web et les sites web. De manière simplifiée, les sites web sont principalement informatifs et présentent un contenu statique. Les interactions avec les utilisateurs sont typiquement basiques, comme cliquer sur des liens ou faire défiler la page.</p>
+<p>Les applications web, en plus de présenter du contenu, offrent aux utilisateurs des services spécifiques et des possibilités d'interaction. Il peut s'agir d'inscriptions, de réservations, d'achats et de communications. Elles peuvent également s'intégrer à d'autres services (par exemple, les paiements).</p>
+<p>Leurs principaux avantages sont qu'ils sont multiplateformes, qu'ils disposent de mises à jour automatiques appliquées côté serveur et qu'ils n'utilisent pas beaucoup de ressources de l'appareil (puisque leurs principales opérations sont effectuées sur le serveur).</p>
+<p>En revanche, ils offrent une fonctionnalité hors ligne limitée et ne sont pas totalement intégrés à l'appareil utilisé (ils ont un accès restreint à certaines fonctions telles que le GPS, l'appareil photo, etc.)</p>
+<h4>Mobile Apps</h4>
+<p>Les applications mobiles sont des <strong>applications projetées et installées sur des appareils mobiles</strong> (smartphones et tablettes). Elles peuvent généralement être téléchargées et installées à partir de plateformes telles que App Store et Google Play. Elles sont conçus pour offrir une expérience conviviale sur les petits écrans et pour les interactions tactiles.</p>
+<p>Ses principales avantages sont les suivants :</p>
+<ul>
+<li><strong>Richesse fonctionnelle</strong> : Les applications mobiles (en particulier les applications natives) ont un accès complet aux ressources de l'appareil, comme la caméra, le GPS, le microfone, etc. Il en résulte une expérience optimale pour l'utilisateur.</li>
+<li><strong>Performance</strong> : Les applications mobiles peuvent offrir de meilleures performances et des temps de chargement plus rapides puisqu'elles sont installées directement sur l'appareil de l'utilisateur.</li>
+<li><strong>Accès hors ligne</strong> : Les applications mobiles peuvent fonctionner hors ligne ou avec une connectivité limitée.</li>
+<li><strong>Possibilités d'interaction avec l'utilisateur</strong> : Les applications mobiles peuvent utiliser divers gestes et interactions tels que le toucher, le glissement, le défilement et la secousse, ce qui permet d'obtenir des interfaces utilisateur plus intuitives et plus avancées.</li>
+</ul>
+<p>En revanche, les principaux inconvénients sont les suivants :</p>
+<ul>
+<li><strong>Coût, temps de développement et complexité de la maintenance</strong> : S'il est nécessaire de développer pour plusieurs plateformes (iOS et Android), le coût, le temps de développement et la complexité de la maintenance augmentent, car elles nécessitent généralement des versions distinctes.</li>
+<li><strong>Les boutiques d'applications</strong> : Bien que les boutiques d'applications constituent un canal de distribution efficace, elles imposent également des règles strictes, des frais de publication et peuvent rejeter les applications et les mises à jour qui ne répondent pas à leurs normes.</li>
+<li><strong>Espace de stockage sur l'appareil</strong> : Les utilisateurs doivent télécharger et installer l'application, ce qui prend de la place sur l'appareil et peut décourager l'installation.</li>
+</ul>
+<a name="quest-ce-quun-système-dexploitation">
+<h2> Qu'est-ce qu'un système d'exploitation ? </h2>
+</a>
+<p>Les applications s'exécutent dans des système d'exploitation (<strong><em>Operating Systems</em> (OS)</strong>), qui sont les logiciels les plus importants à l'intérieur d'un appareil. Un OS <strong>gère la mémoire et les processus de l'appareil, ainsi que l'ensemble de ses softwares et de son hardware.</strong></p>
+<h3>iOS X Android</h3>
+<p>Les systèmes d'exploitation les plus populaires et les plus utilisés sont Android OS et Apple iOS. Vous trouverez ci-dessous un tableau comparatif simple entre les deux systèmes :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Sistema Operacional</th>
+<th style="text-align:center">Empresa/Desenvolvedor</th>
+<th style="text-align:center">Linguagens de Desenvolvimento</th>
+<th style="text-align:center">Loja de Aplicativos</th>
+<th style="text-align:center">Popularidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Android</strong></td>
+<td style="text-align:center">Google</td>
+<td style="text-align:center">Java, Kotlin</td>
+<td style="text-align:center">Google Play Store</td>
+<td style="text-align:center">Alta (Globalmente)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>iOS</strong></td>
+<td style="text-align:center">Apple</td>
+<td style="text-align:center">Swift, Objective-C</td>
+<td style="text-align:center">Apple App Store</td>
+<td style="text-align:center">Alta (EUA, Europa)</td>
+</tr>
+</tbody>
+</table>
+<p>Comme vous pouvez le voir dans le tableau ci-dessus, ces systèmes ont des <strong>langages de programmation différents</strong>, ce qui a un impact direct sur le choix du langage à utiliser pour programmer une nouvelle application. Mais plus spécifiquement, le fait que chaque système d'exploitation soit conçu et agisse différemment a un impact direct sur l'<strong>approche de développement d'applications mobiles à adopter par un développeur mobile</strong>.</p>
+<a name="les-approches-de-développement-dapplications-mobiles">
+<h2> Les Approches de Développement d'Applications Mobiles </h2>
+</a>
+<p>Dans le développement d'applications mobiles, il existe plusieurs approches que les développeurs peuvent adopter, chacune avec ses avantages et inconvénients. Dans cette étude, je me suis concentré sur les <strong>approches « native » et « cross-platform »</strong>.</p>
+<h3>Native Develpment</h3>
+<p>Le développement natif implique la création d'<strong>applications spécifiques à un système d'exploitation mobile</strong> en utilisant les outils et langages officiels de la plateforme. Cela signifie développer une application distincte pour iOS (en utilisant Swift ou Objective-C et l'IDE Xcode) et une autre pour Android (en utilisant Java ou Kotlin et l'IDE Android Studio).</p>
+<p>Ses avantages sont :</p>
+<ul>
+<li><strong>Performance supérieure</strong> : Les applications natives ont un accès complet aux ressources et API de la plateforme, ce qui se traduit par de meilleures performances et une meilleure intégration.</li>
+<li><strong>Expérience Utilisateur (UX)</strong> : Amélioration de l'expérience utilisateur, car les applications suivent les directives de conception spécifiques à la plateforme, offrant une interface intuitive et familière.</li>
+<li><strong>Accès complet aux ressources</strong> : Permet d'utiliser toutes les fonctionnalités de l'appareil, telles que les capteurs et les services natifs, avec une grande efficacité.</li>
+</ul>
+<p>Mais elle présente également des inconvénients :</p>
+<ul>
+<li><strong>Coût de développement</strong> : Plus coûteux et plus long, car il nécessite le développement de deux applications distinctes (une pour chaque plateforme). Autrement dit, il est nécessaire d'avoir une équipe pour chaque plateforme afin de développer une même application.</li>
+<li><strong>Maintenance</strong> : Les mises à jour et la maintenance doivent être effectuées séparément pour chaque plateforme, augmentant ainsi le coût et les efforts.</li>
+</ul>
+<h3>Cross-Platform Development</h3>
+<p>Le développement cross-platform permet de créer des applications fonctionnant sur plusieurs plateformes à partir d'une seule base de code. Cela se fait en utilisant des <a href="#frameworks">frameworks</a> qui abstraient les différences entre les plateformes.</p>
+<p>Ses avantages sont :</p>
+<ul>
+<li><strong>Code unique</strong> : Réduit le temps et le coût de développement, car un seul code est utilisé pour les deux plateformes.</li>
+<li><strong>Développement plus rapide</strong> : La capacité de partager une base de code accélère le processus de développement et de lancement.</li>
+<li><strong>Maintenance facilitée</strong> : Facilite la maintenance et les mises à jour, car les modifications sont apportées à une seule base de code.</li>
+</ul>
+<p>Mais ses inconvénients sont :</p>
+<ul>
+<li><strong>Performance inférieure</strong> : Bien que proche du natif, elle peut ne pas atteindre le même niveau de performance que les applications natives, surtout en cas d'utilisation intensive.</li>
+<li><strong>Accès limité aux ressources</strong> : Il peut y avoir des limitations dans l'accès à certaines fonctionnalités et API spécifiques de l'appareil.</li>
+</ul>
+<h4>Frameworks</h4>
+<p>Les frameworks sont des structures de développement qui fournissent un <strong>ensemble d'outils, de bibliothèques et de modèles de code prédéfinis pour aider les développeurs à créer des logiciels de manière plus rapide, plus organisée et plus efficace</strong>. Ils offrent une base sur laquelle les développeurs peuvent construire leurs applications ou leurs systèmes, ce qui leur permet de se concentrer davantage sur la logique et la fonctionnalité du logiciel plutôt que d'avoir à tout construire à partir de zéro.</p>
+<p><strong>Ils sont différents des bibliothèques</strong>.<br>
+Les bibliothèques sont des collections de codes réutilisables que les développeurs appellent explicitement dans leur code pour exécuter une fonction spécifique. En d'autres termes, le contrôle est entre les mains du développeur, qui décide quand et comment utiliser la bibliothèque.<br>
+Quant aux frameworks, ils définissent la structure et contrôlent le flux de l'application. Dans ce cas, c'est le framework qui « appelle » le code du développeur à des moments précis. Au lieu que le développeur contrôle le flux principal du programme, il met en œuvre des parties du code que le framework exécute en réponse à certains événements.</p>
+<p>Les deux principaux frameworks utilisés sur le marché pour le développement multiplateforme d'applications mobiles sont <strong>React Native</strong> (développé par FaceBook) et <strong>Flutter</strong> (développé par Google).</p>
+<h3>Comparation Final</h3>
+<p>Pour conclure, les principales différences entre ces approches de développement mobile se trouvent dans le tableau ci-dessous.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Attribut</strong></th>
+<th style="text-align:center"><strong>Native (Apple / Google)</strong></th>
+<th style="text-align:center"><strong>Cross-Platform (React Native)</strong></th>
+<th style="text-align:center"><strong>Cross-Platform (Fultter)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Framework Owner</strong></td>
+<td style="text-align:center">Apple / Google</td>
+<td style="text-align:center">Facebook</td>
+<td style="text-align:center">Google</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>UI / UX</strong></td>
+<td style="text-align:center">Native</td>
+<td style="text-align:center">Native</td>
+<td style="text-align:center">Bespoke</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Development Speed</strong></td>
+<td style="text-align:center">Slow</td>
+<td style="text-align:center">Fast</td>
+<td style="text-align:center">Fast</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Maintenance Cost</strong></td>
+<td style="text-align:center">High</td>
+<td style="text-align:center">Low</td>
+<td style="text-align:center">Medium</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Performance</strong></td>
+<td style="text-align:center">Very High</td>
+<td style="text-align:center">High</td>
+<td style="text-align:center">High</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Programming Language</strong></td>
+<td style="text-align:center">Swift / Java</td>
+<td style="text-align:center">JavaScript</td>
+<td style="text-align:center">Dart</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Maturity</strong></td>
+<td style="text-align:center">Very Mature</td>
+<td style="text-align:center">Mature</td>
+<td style="text-align:center">Young</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Feature Access</strong></td>
+<td style="text-align:center">Complete</td>
+<td style="text-align:center">Complete</td>
+<td style="text-align:center">Complete</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Open Source</strong></td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+</tr>
+</tbody>
+</table>
+<a name="émulateurs">
+<h2> Émulateurs </h2>
+</a>
+<p>Émuler quelque chose, c'est le copier ou le reproduire. Dans l'univers du développement d'applications, un émulateur est un matériel ou un logiciel qui <strong>permet à un ordinateur d'en imiter un autre</strong>. Les applications mobiles sont conçues pour fonctionner sur des appareils mobiles, mais elles sont codées à l'aide d'ordinateurs. Ainsi, afin de tester le code, les développeurs ont besoin d'un moyen d'<strong>émuler les systèmes d'exploitation mobiles comme iOS ou Android sur leurs ordinateurs</strong>.</p>
+<p>L'émulateur donne accès à toutes les capacités requises au niveau du système pour reproduire l'appareil mobile, y compris la quantité de RAM ou de mémoire de travail, le type et la vitesse du processeur, la taille et la résolution de l'écran et la quantité de stockage de fichiers locaux disponible. Les émulateurs font gagner du temps et de l'argent à l'équipe de développement en lui permettant de mettre en œuvre différents environnements de test qui reproduisent de manière fiable les appareils de l'utilisateur final.</p>
+<p>Bien que les émulateurs soient une solution puissante, ils ont certaines limites, ce qui signifie que <strong>même les meilleurs émulateurs ne peuvent pas émuler certains aspects de l'environnement mobile natif</strong>. C'est pourquoi il est d'usage que les développeurs testent leurs applications à la fois sur l'environnement émulé et sur des appareils physiques, dans la mesure du possible.</p>
+<p>Généralement, les IDE's et frameworks incluent un émulateur ou en suggèrent un.</p>
+<a name="cas-pratique">
+<h2> Cas pratique </h2>
+</a>
+<p>Pour finaliser cette étude, j'ai suivi <a href="https://www.youtube.com/watch?v=tnKFHw8LOrM&amp;list=PLcwp2fRcIXJVTScoTrGUmntyygrdXUGWt&amp;index=7">ce tutoriel</a> pour créer une simple application en utilisant l'IDE Android Studio. J'ai pu installer les outils nécessaires et me familiariser un peu avec le monde du développement d'applications mobiles.</p>
+<h3>Installation d'Android Studio Avec Émulateur</h3>
+<p>Pour installer cet IDE et certains de ses outils, rendez-vous sur le <a href="https://developer.android.com/studio">site officiel</a> et cliquez sur le bouton ci-dessous.</p>
+<p><img src="assets/Installation_AndroidStudio.png" alt="Installation d'Android Studio"></p>
+<p>Double-cliquez ensuite sur le fichier installé pour lancer le téléchargement. Lorsque vous arrivez à l'onglet « Check Components “, si vous souhaitez également télécharger l'émulateur AndroidStudio standard, cochez ” Android Virtual Device ».</p>
+<p><img src="assets/Android_Virtual_Device.png" alt="Android Virtual Device"></p>
+<p>Enfin, choisissez le dossier dans lequel vous souhaitez installer le logiciel et finalisez l'installation.</p>
+<p>Une fois l'application installée, lors de la première utilisation, l'utilisateur est invité à choisir le type d'installation qu'il souhaite. Comme je suis encore une débutante et que je ne connais pas les possibilités de configuration, j'ai opté pour la configuration « standard ».</p>
+<p><img src="assets/AndroidStudio_Setup.png" alt="Android Studio Setup"></p>
+<p>Vous devez ensuite accepter les conditions d'utilisation et voilà, l'IDE Android Studio est installé.</p>
+<h3>Création de la Calculatrice</h3>
+<p>Dans le tutoriel, lorsque vous créez un nouveau projet, deux fichiers sont créés : <strong>MainActivity.java et activity_main.xml</strong>.<br>
+Le premier est l'endroit où nous écrivons le code avec les instructions sur ce qu'il faut faire dans chaque événement. Le second est un écran sur lequel nous pouvons ajouter les éléments visuels pour assembler l'application.</p>
+<p>Dans mon cas, seul le premier fichier a été créé automatiquement, j'ai donc créé le second fichier manuellement dans un dossier « layouts ».</p>
+<p><img src="assets/main_activityxml.png" alt="main_activity.xml"></p>
+<p>Une fois cela fait, j'ai simplement suivi les instructions et les codes écrits dans le tutoriel et le résultat final peut être vu dans la vidéo suivante.</p>
+<h3>Résultat</h3>
+<video width="200" controls="">
+  <source src="assets/Resultat_MON1.webm" type="video/webm">
+</video>
+<a name="bibliographie">
+<h2> Bibliographie </h2>
+</a>
+<p><a href="https://www.coursera.org/learn/intro-to-mobile-development">Coursera : Introduction to Mobile Development (by Meta)</a></p>
+<p><a href="https://mobitouch.net/blog/mobile-app-web-app-desktop-app-know-the-difference">Mobile app, web app, desktop app: know the difference!</a></p>
+<p><a href="https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/">What is an operating system?</a></p>
+<p><a href="https://www.youtube.com/watch?v=D_MO9vIRBcA">What is the difference between a framework and a library?</a></p>
+<p><a href="https://www.youtube.com/watch?v=4m7msadL5iA">Choosing the best mobile app framework</a></p>
+<p><a href="https://www.youtube.com/watch?v=RIX4ufelA58">Do You Know How Mobile Apps Are Released?</a></p>
 
 
 </article>
