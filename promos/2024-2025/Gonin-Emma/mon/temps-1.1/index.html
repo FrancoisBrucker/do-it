@@ -137,12 +137,32 @@
 <p>Pas de prérequis spécifique, juste de la curiosité pour le langage.</p>
 </div></div>
 <h2>Introduction</h2>
-<p>Le Go, ou Golang, est un langage de programmation open source créé par Google en 2009. Il se revendique simple d'utilisation avec une rapidité et efficacité d'exécution. Il est multi-platformes et a permis le développement d'outils pour le Cloud (Docker, Kubernetes), d'outils CLI (Terraform) ou pour le développement de jeux vidéos (Ebitengine).</p>
+<p>Le <em>Go</em>, ou <em>Golang</em>, est un langage de programmation open source créé par Google en 2009. Il se revendique simple d'utilisation avec une rapidité et efficacité d'exécution. Il est multi-platformes et a permis le développement d'outils pour le Cloud (Docker, Kubernetes), d'outils CLI (Terraform) ou pour le développement de jeux vidéos (Ebitengine).</p>
 <h2>Table des matières</h2>
-<h2>Installation de Go sur son ordinateur</h2>
-<p>Pour installer Go sur son ordinateur, on télécharge un fichier d'installement sur le lien <a href="https://go.dev/dl/">https://go.dev/dl/</a> selon son système d'exploitation.<br>
-Pour faire notre première utilisation de Go, on va faire un classique affichage de &quot;Hello world !&quot; dans notre terminal !<br>
-On crée un fichier main.go dans lequel on écrit :</p>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#installation-de-go-sur-son-ordinateur-">Installation de Go sur son ordinateur </a></li>
+<li><a href="#faire-sa-propre-application-cli-command-line-interface-">Faire sa propre application CLI (Command Line Interface) </a></li>
+<li><a href="#notions-basiques-du-langage-go-">Notions basiques du langage Go </a>
+<ul>
+<li><a href="#les-variables-">Les variables </a></li>
+<li><a href="#arrays-ou-slices-">Arrays ou slices </a></li>
+<li><a href="#les-d%C3%A9clarations-">Les déclarations </a></li>
+<li><a href="#les-pointeurs-">Les pointeurs </a></li>
+<li><a href="#structures-et-interfaces-">Structures et interfaces </a></li>
+<li><a href="#goroutines-et-channels-">Goroutines et channels </a></li>
+</ul>
+</li>
+<li><a href="#petite-application-cli-pour-g%C3%A9rer-sa-todo-list-">Petite application CLI pour gérer sa todo list </a></li>
+<li><a href="#petit-exemple-de-mise-en-place-dun-protocole-http-avec-go-">Petit exemple de mise en place d'un protocole HTTP avec Go </a></li>
+<li><a href="#ressources">Ressources</a></li>
+</ul>
+<h2>Installation de Go sur son ordinateur <a id="#installation-de-go-sur-son-ordinateur-"></a></h2>
+<p>Pour installer Go sur son ordinateur, on télécharge le <a href="https://go.dev/dl/">fichier d'installation de Go</a> selon son système d'exploitation.<br>
+Si on n'a pas d'IDE, on télécharge VSCode et on installe l'extension Go pour VScode.</p>
+<p>Pour faire notre première utilisation de Go, on va faire un affichage classique de <code>Hello world !</code> sur notre terminal !<br>
+On crée un fichier <em>main.go</em> dans lequel on écrit :</p>
 <pre><code>package main
 
 import (
@@ -156,14 +176,254 @@ func main() {
 <p>On exécute le fichier dans le Powershell (à l'emplacement du fichier) en tapant la commande</p>
 <pre><code>go run main.go
 </code></pre>
-<h2>Faire sa propre application CLI (Command Line Interface)</h2>
-<p>J'ai voulu me familiariser avec le langage en suivant un tutoriel pour faire ma propre application à interface à ligne de commandes.</p>
+<p>Et normalement on peut observer un <code>Hello world !</code> dans notre terminal, bravo !</p>
+<h2>Faire sa propre application CLI (Command Line Interface) <a id="#faire-sa-propre-application-cli-command-line-interface-"></a></h2>
+<p>J'ai voulu me familiariser avec le langage en suivant un <a href="https://spf13.com/presentation/building-an-awesome-cli-app-in-go-oscon/">tutoriel</a> pour faire ma propre application à interface ligne de commandes.</p>
+<p>Pour créer cette interface de manière plutôt simple, on télécharge <a href="https://github.com/spf13/cobra/blob/main/README.md">Cobra</a> en exécutant les lignes de commandes :</p>
+<pre><code>go mod init name-project
+go get github.com/spf13/cobra@latest
+go install github.com/spf13/cobra-cli@latest
+</code></pre>
+<p>Cela nous permet d'installer Cobra ainsi que Cobra-CLI pour notre projet. Ce sont des librairies qui permettent de créer facilement des applications CLI en Go. Pour initialiser l'appli on lance :</p>
+<pre><code>cobra-cli init
+go build
+</code></pre>
+<p>Notre projet a l'architecture suivante :</p>
+<pre><code>└── /cmd
+	├── root.go
+└── name-project.exe
+└── go.mod
+└── go.sum
+└── main.go
+</code></pre>
+<p>Dans le dossier /cmd, il y aura tous les fichiers relatifs aux commandes que l'on souhaite créer.<br>
+Pour créer une nouvelle commande au nom new-cmd, on lance</p>
+<pre><code>cobra-cli add new-cmd
+</code></pre>
+<p>Et sur notre terminal doit s'afficher &quot;new-cmd created at chemin\du\projet&quot;.<br>
+Pour appeler cette commande, on lance sur le terminal à l'emplacement du projet :</p>
+<pre><code>.\name-project.exe new-cmd
+</code></pre>
+<p>On aura alors écrit sur le terminal : &quot;new-cmd called&quot;.</p>
+<p>Pour pouvoir customiser nos commandes, il est mieux de faire un tour des bases du langage Go avant de se lancer.</p>
+<h2>Notions basiques du langage Go <a id="#notions-basiques-du-langage-go"></a></h2>
+<h3>Les variables <a id="#les-variables-"></a></h3>
+<p>Pour déclarer une variable en Go, on utilise <code>var</code>. Les types de variables sont les booléens <code>bool</code>, les entiers <code>int</code>, les <code>bytes</code> (qui sont des uint8), les <code>runes</code> (qui sont des int32 et qui représentent les caractères), les <code>strings</code> qui sont des slices de bytes qu'on peut uniquement lire, les flottants <code>float</code> et les complexes.<br>
+On peut utiliser la syntaxe <code>:=</code> pour déclarer et initier une variable.</p>
+<h3>Arrays ou slices <a id="#arrays-ou-slices"></a></h3>
+<p>Un <code>array</code> est de longueur fixe, avec un seul type et qu'on parcourt avec les indexs. <code>[n]T</code> est un array de n valeurs de type T mais en Go on utilise plus souvent une structure de données qui s'appelle &quot;slice&quot;.<br>
+Un slice est une version avec longueur variable d'un array. On peut les initier seulement avec leur type, par exemple <code>[]string</code> est une slice vide de longueur 0 de chaîne de caractères. On utilise la fonction make pour initier une slice vide de longueur non-nulle. <code>c:=make([]int, 3, capacity)</code> est une slice d'entiers de longueur 3. La capacity est la capacité d'int que pourrait contenir c, cela augmente les performances de mémoire.</p>
+<h3>Les déclarations <a id="#les-declarations"></a></h3>
+<p>En Go, il y a seulement un opérateur boucle : la boucle <em><code>for</code></em>, qui a la syntaxe suivante :</p>
+<pre><code>for i := 0; i &lt; 10; i++ {
+  sum += i
+}
+</code></pre>
+<p>Remarque : il n'y a pas de parenthèses après le for contrairement au C, JavaScript ou Java.<br>
+Les déclarations <em><code>if</code></em> et <em><code>else</code></em> ont la syntaxe suivante :</p>
+<pre><code>if 7%2 == 0 {
+    fmt.Println(&quot;7 est pair&quot;)
+} else {
+    fmt.Println(&quot;7 est impair&quot;)
+}
+</code></pre>
+<p>On peut utiliser la déclaration <em><code>switch/case</code></em> comme en C, C++, JavaScript... La seule différence c'est qu'on n'a pas à déclarer de break entre chaque cas car Go le fait automatiquement.</p>
+<h3>Les pointeurs <a id="#les-pointeurs"></a></h3>
+<p>Go a des pointeurs comme en C++, C... Ils stockent l'adresse mémoire d'une valeur mais peuvent aussi être nuls (nil). On les initie comme ceci, avec une astérisque :</p>
+<pre><code>var p *int32 = new(int32)
+</code></pre>
+<p><code>*p</code> déréférence le pointeur et est la valeur vers laquelle le pointeur pointe.<br>
+<code>&amp;v</code> est l'adresse mémoire de la variable v.</p>
+<h3>Structures et interfaces <a id="structures-et-interfaces"></a></h3>
+<p>En Go, on peut créer des structures personnalisées, une structure est une collection de champs. Par exemple :</p>
+<pre><code>type Vector struct {
+    X int
+    Y int
+}
+</code></pre>
+<p>est la structure d'un vecteur.<br>
+Go n'a pas de classes mais on peut créer des méthodes relatives à des types.<br>
+Par exemple :</p>
+<pre><code>func (r rect) perim() int {
+    return 2*r.width + 2*r.height
+}
+</code></pre>
+<p>est une méthode associée à la structure rect qui représente un rectangle d'hauteur height et de largeur width.<br>
+Une interface est une collection de méthodes.<br>
+Par exemple :</p>
+<pre><code>type geometrie interface {
+    aire() float64
+    perim() float64
+}
+</code></pre>
+<p>L'interface géométrie contient les méthodes qui permettent de calculer l'aire et le périmètre. La méthode aire peut être déclarée pour plusieurs types : on peut avoir une <code>aire()</code> pour les rectangle et une autre fonction <code>aire()</code> pour les cercles.</p>
+<h3>Goroutines et channels <a id="goroutines-et-channels"></a></h3>
+<p>Une <em>goroutine</em> permet de lancer plusieurs fonctions en même temps et de les exécuter de manière concurrente. Attention, l'exécution concurrente n'est pas la même chose qu'une exécution parallèle. Un seul CPU gère les tâches de manière concurrente dans l'exécution concurrente tandis que deux CPUs gèrent les tâches en parallèle dans l'execution parallèle. Une goroutine est la plus petite unité d'exécution en Golang.</p>
+<p>Il est important d'utiliser les méthodes <code>lock()</code> et <code>unlock()</code> pour préserver les données lors de l'appel de plusieurs fonctions qui vont accéder à ces données, pour éviter qu'elles n'y accèdent en même temps.</p>
+<p>Pour créer une goroutine, on ajoute le mot <code>go</code> devant l'appel de la fonction qu'on souhaite lancer en concurrence.</p>
+<p>par exemple :</p>
+<pre><code>package main
+ 
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+ 
+func f() {
+    time.Sleep(10 * time.Millisecond)
+    fmt.Print(&quot;Hello&quot;)
+}
+ 
+func main() {
+    go f()
+    f()
+}
+</code></pre>
+<p>La fonction <code>Sleep()</code> permet à la goroutine d'avoir le temps de finir de s'exécuter.<br>
+On peut utiliser des goroutines lorsqu'on fait plusieurs requêtes API différentes, lorsqu'on lit un fichier SQL et qu'on souhaite mettre les données dans des tableurs...</p>
+<p>Les canaux (<em>channels</em>) sont un moyen utilisé par les goroutines pour communiquer de manière efficace.<br>
+Ils gardent des données, sont thread-safe et on peut &quot;écouter&quot; les données qui arrivent sur ce canal. Un canal (channel) dépend du type de données qu'il contient, on ne peut pas envoyer une chaîne de caractères sur un canal d'entiers.</p>
+<pre><code>var c = make(chan int)
+</code></pre>
+<p>Pour envoyer et recevoir des données, on utilise l'opérateur channel qui est <code>&lt;-</code></p>
+<pre><code>c &lt;- 3 // On envoie l'entier 3 sur le canal c
+v := &lt;-c // On reçoit et stocke l'entier 3 dans la variable v
+</code></pre>
+<p>Un canal non initialisé est <code>nil</code> :</p>
+<pre><code>var ch chan int
+</code></pre>
+<p>Après avoir envoyé les données, on peut fermer le canal avec la fonction <code>close()</code>.</p>
+<h2>Petite application CLI pour gérer sa todo list <a id="#petite-application-cli-pour-gérer-sa-todo-list"></a></h2>
+<p>Après ce petit tour des fondamentaux du langage Go, on peut s'attaquer à un mini-projet pour mettre en pratique la théorie. J'ai regardé des idées de projets en Go faciles à mettre en place et l'une des idées qui est revenue était la création d'une application CLI de todo lists.<br>
+J'ai ainsi créé une commande <code>add</code>, une commande <code>init</code> et une commande <code>list</code>.</p>
+<ul>
+<li>La commande <code>init</code> permet d'initier le fichier <em>todo.csv</em> dans le dossier Utilisateur</li>
+<li>La commande <code>add</code> doit permettre d'ajouter une tâche au fichier <em>todo.csv</em></li>
+<li>La commande <code>list</code> doit permettre de lister les tâches qui se trouvent dans le fichier <em>todo.csv</em></li>
+</ul>
+<p>Pour cette application, j'ai installé les packages suivants : <code>encoding/csv</code> pour la gestion du fichier csv (création, écriture et lecture), <code>os</code> pour la gestion des fichiers dans le système d'exploitation, <code>log</code> pour garder des logs des erreurs et <code>path/filepath</code> pour la gestion des chemins d'accès au fichier.</p>
+<p>Dans le fichier <em>add.go</em>, j'ai créé une structure qui s'appelle Task représentant la tâche avec son contenu et sa catégorie. La fonction principale sert à écrire les données relatives à la tâche dans le fichier <em>todo.csv</em>.</p>
+<pre><code>package cmd
+
+import (
+	&quot;encoding/csv&quot;
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;os&quot;
+	&quot;path/filepath&quot;
+
+	&quot;github.com/spf13/cobra&quot;
+)
+
+// Fonction principale
+func AppendToCSV(filename string, data []Task) error {
+  //On ouvre le fichier csv
+	file, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+  //On crée une instance qui va écrire dans le fichier
+	writer := csv.NewWriter(file)
+	defer writer.Flush()
+
+	for _, task := range data {
+    // Le writer va écrire les données sous forme de chaînes de caractères dans le csv et renvoie une erreur si il y en a une lors de l'écriture dans le fichier
+		if err := writer.Write([]string{task.Content, task.Category}); err != nil {
+			return err
+		}
+	}
+  // on retourne 0, pas besoin de retourner une variable
+	return nil
+}
+
+//Création de la structure de la tâche
+type Task struct {
+	Content  string
+	Category string
+}
+
+// la commande Cobra add va appeler la fonction appendToCsv 
+var addCmd = &amp;cobra.Command{
+	Use:   &quot;add&quot;,
+	Short: &quot;Add a task to the todo.csv file&quot;,
+	Long: `Add a task to the todo.csv file that is located in the home directory`,
+	Run: func(cmd *cobra.Command, args []string) {
+    // Dans le terminal va s'afficher &quot;add called&quot;
+		fmt.Println(&quot;add called&quot;)
+    // On va chercher le fichier todo.csv qui est dans la Maison (si il y a une erreur, elle se retrouvera dans les logs)
+		homeDir, err1 := os.UserHomeDir()
+		if err1 != nil {
+			log.Fatal(err1)
+		}
+		filepath := filepath.Join(homeDir, &quot;.todo.csv&quot;)
+    // On crée une liste de tâches avec les arguments que l'utilisateur a écrit dans le terminal
+		tasks := []Task{
+			{Content: contentFlag, Category: catFlag},
+		}
+    // On appelle la fonction AppendToCSV avec pour arguments le chemin d'accès du todo.csv et la liste des tâches que l'utilisateur souhaite ajouter au fichier
+		err := AppendToCSV(filepath, tasks)
+		if err != nil {
+			log.Fatal(err)
+		}
+	},
+}
+// On crée les flags relatifs au contenu et à la catégorie de la tâche
+var (
+	contentFlag string
+  catFlag string
+)
+
+// On initialise la commande
+func init() {
+  //On ajoute la commande au fichier root.go qui répertorie toutes les commandes du projet grâce à Cobra-CLI
+	rootCmd.AddCommand(addCmd)
+  //On définit les flags de la commande add
+	addCmd.Flags().StringVarP(&amp;contentFlag, &quot;content&quot;, &quot;&quot;, &quot;&quot;, &quot;The content of the new task&quot;)
+	addCmd.Flags().StringVarP(&amp;catFlag, &quot;category&quot;, &quot;c&quot;, &quot;&quot;, &quot;The category of new task&quot;)
+}
+</code></pre>
+<p>Ainsi, lorsqu'on écrit et lance sur le terminal la ligne <code>.\name-project.exe add -content &quot;Seek an internship&quot; -category &quot;To do&quot;</code>, normalement, le fichier <em>todo.csv</em> est mis à jour avec une nouvelle ligne contenant &quot;Seek an internship, To do&quot; !<br>
+<img src="image.png" alt="Exemple todo"></p>
+<p>Si vous êtes intéressés, je vous conseille de jeter un coup d'oeil au github de <a href="https://github.com/heybran/gtodo">Gtodo</a> de heybran qui a un projet similaire complet. Le point positif de son projet, c'est qu'il n'a pas utilisé Cobra donc la structure du code est probablement plus intuitive. Il manipule des JSON et pas des CSV également donc les packages à installer seront différents mais son <a href="http://ReadMe.md">ReadMe.md</a> est assez clair.</p>
+<h2>Petit exemple de mise en place d'un protocole HTTP avec Go <a id="#petit-exemple-de-mise-en-place-dun-protocole-http-avec-go"></a></h2>
+<p>Petit exemple pour créer un serveur web avec un protocole HTTP. On importe le package <code>net/http</code> en lançant dans le terminal de VSCode :</p>
+<pre><code>go install net/http
+</code></pre>
+<p>Dans un fichier <em>main.go</em>, on importe ce package ainsi que le package <code>fmt</code> qui servira à print.</p>
+<pre><code>import (
+  &quot;fmt&quot;,
+  &quot;net/http&quot;
+)
+</code></pre>
+<p>On va créer un gestionnaire de requêtes, cela peut être une fonction basique qui écrit une réponse au client HTTP. HandleHello est un gestionnaire de requêtes qui a deux paramètres : <code>w http.ResponseWriter</code> et <code>r *http.Request</code>. <code>http.ResponseWriter</code> est utilisé pour écrire la réponse au client et <code>*http.Request</code> contient toutes les informations à propos de la requête.</p>
+<pre><code>func handleHello(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, &quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)
+}
+</code></pre>
+<p>On utilise la fonction HandleFunc suivante :</p>
+<pre><code>http.HandleFunc(&quot;/hello&quot;, handleHello)
+</code></pre>
+<p>La fonction http.HandleFunc accepte deux arguments : le premier est le chemin URL de la requête et le second est la fonction qui va traiter la requête.</p>
+<p>Lorsque l'on va faire une requête <code>http://localhost/hello</code> à ce serveur, le serveur va nous renvoyer une page html avec marqué &quot;Hello, World!&quot;.</p>
+<p>Pour répondre à quelconque client HTTP, le serveur doit écouter les requêtes entrantes sur un port.</p>
+<pre><code>http.ListenAndServe(&quot;:80&quot;, nil)
+</code></pre>
+<p>Cette ligne de code va démarrer le serveur HTTP et écouter les connexions entrantes sur le port 80.</p>
+<p>On lance cette commande à l'emplacement du fichier :</p>
+<pre><code>go run main.go
+</code></pre>
+<p>Enfin, vous pouvez aller sur <a href="http://localhost/hello">http://localhost/hello</a> et voir comment le serveur gère votre requête !</p>
+<p>Pour aller plus loin, on pourrait créer une méthode qui différencie les requêtes GET des requêtes POST. On pourrait inclure une ou des variables dans l'URL de la requête avec une route dynamique.</p>
 <h2>Ressources</h2>
 <ul>
-<li>Pour toutes les questions générales ou précises relevant du langage Go, je conseille d'aller lire la documentation officielle qui est assez fournie : <a href="https://go.dev/docs">https://go.dev/docs</a></li>
-<li>Le site officiel de Golang propose un tutoriel pour se familiariser au langage, je me suis servie de ce tutoriel pour faire ce MON et vous résumer les principaux axes de ce langage : <a href="https://go.dev/tour/welcome/1">https://go.dev/tour/welcome/1</a></li>
-<li>J'ai suivi un tutoriel vidéo qui retrace en 1h les bases du Go, je conseille cette vidéo : <a href="https://www.youtube.com/watch?v=8uiZC0l4Ajw&amp;ab_channel=AlexMux">https://www.youtube.com/watch?v=8uiZC0l4Ajw&amp;ab_channel=AlexMux</a></li>
-<li></li>
+<li>Pour toutes les questions générales ou précises relevant du langage Go, je conseille d'aller lire la documentation officielle qui est assez fournie : <a href="https://go.dev/docs">Documentation officielle Go</a></li>
+<li>Le site officiel de Golang propose un tutoriel pour se familiariser au langage, je me suis servie de ce tutoriel pour faire ce MON et vous résumer les principaux axes de ce langage : <a href="https://go.dev/tour/welcome/1">Tour de Go</a></li>
+<li>J'ai suivi un tutoriel vidéo qui retrace en 1h les bases du Go, je conseille cette vidéo : <a href="https://www.youtube.com/watch?v=8uiZC0l4Ajw&amp;ab_channel=AlexMux">Learn GO Fast: Full Tutorial d'Alex Mux</a></li>
+<li>Le <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Adelain-thibault/pok/Go/">POK</a> de Thibault Adelain</li>
+<li><a href="https://go.dev/play/">The Go Playground</a> permet de lancer un programme dans une sandbox, les templates de programmes vont du classique &quot;Hello, World!&quot; à l'envoi de requêtes sur un serveur en passant par une fonction de test...</li>
+<li><a href="https://www.golinuxcloud.com/golang-web-server/">Golang Web Server</a> pour apprendre le protocole HTTP avec Go</li>
 </ul>
 
 
