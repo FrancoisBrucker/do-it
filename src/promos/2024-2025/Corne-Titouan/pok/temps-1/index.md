@@ -5,12 +5,15 @@ title: "Développement Android - Programmation Kotlin"
 authors:
   - Titouan Corne
 
-date: 2024-09-05
+date: 2024-09-12
 
 tags:
   - "temps 1"
+  - "vert"
+  - "Android"
+  - "Kotlin"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK pour apprendre les bases de la programmation Kotlin qui permet de coder des applications Androïd.
 ---
 
 {% prerequis %}
@@ -20,46 +23,96 @@ Sans prérequis
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
-
+Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
 {% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Tâches
 
+- [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
+- [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
+- [ ] Developper une application basique (une seule activité)
+- [ ] Faire un cahier des charges de l'application que je souhaite réaliser
+- [ ] Faire des wireframes réalistes pour chaque page de l'appli
+- [ ] Coder
+
 ### Sprints
 
-But final.
+**But final :** Développer une application Android retraçant mon voyage en Australie.
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
+- [ ] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
+- [ ] Developper une application basique (une seule activité)
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Faire un cahier des charges de l'application que je souhaite réaliser
+- [ ] Faire des wireframes réalistes pour chaque page de l'appli
+- [ ] Coder
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
-
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+| Jeudi 12/09  | 0H40  | Tuto dev Kotlin (tâche 1) |
+| Jeudi 12/09  | 0H20  | Mise en place environnement de travail |
 
 ## Contenu
 
-Le contenu du POK.
+## Table des matières
+
+1. [Les bases en Kotlin (tâche 1)](#section1)
+2. [Mise en place de l'environnement de travail (tâche 2)](#section2)
+3. [Créer un émulateur (machine virtuelle)](#section3)
+
+### 1. Les bases en Kotlin <a id="section1"></a>
+
+Pour commencer un petit mot sur Kotlin :
+
+"Kotlin est un langage de programmation moderne qui aide les développeurs à gagner en productivité. Par exemple, Kotlin vous permet d'être plus concis et d'écrire moins de lignes de code pour la même fonctionnalité que les autres langages de programmation. Les applications développées en Kotlin sont également moins susceptibles de planter, ce qui se traduit par une application plus stable et plus robuste pour les utilisateurs. Globalement, Kotlin vous permet de créer de meilleures applications Android et plus rapidement. C'est pourquoi Kotlin prend de l'ampleur dans le secteur et est d'ailleurs le langage utilisé par la majorité des développeurs Android professionnels." (source : l'équipe de formation Google Developers)
+
+Pour me familiariser avec le langage Kotlin, j'ai utilisé un éditeur de code intéractif appelé [Kotlin Playground](https://play.kotlinlang.org/). Celui-ci est directement accessible depuis le Web.
+
+[Liste exhaustive des mots clés Kotlin](https://kotlinlang.org/docs/keyword-reference.html)
+
+Bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin ("[guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)"). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
+Voici quelques recommandations du guide de style : 
+
+- Les noms de fonctions doivent être en camel case et être des verbes ou des expressions verbales.
+- Chaque instruction doit figurer sur une ligne distincte.
+- L'accolade ouvrante doit apparaître à la fin de la ligne où la fonction commence.
+- Il doit y avoir une espace avant l'accolade ouvrante.
+  ![Syntaxe pour fonction](./img/GuideDeStyle.png) *Illustration disponible sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#6)*
+
+Je vais pour la suite utiliser Kotlin pour la logique de mon application et le langage de données XML pour son contenu.
+
+### 2. Mise en place de l'environnement de travail <a id="section2"></a>
+
+Il faut télécharger l'IDE [Android Studio]() qui permet d'écrire du code mais aussi d'avoir un appercu de l'application et un émulateur (appareil Android fictif).
+
+Une fois téléchargé, j'ai créé un nouveau projet avec les propriétés suivantes :
+
+![Initialisation Projet](./img/initialisationProjet.png) *Capture d'écran personnelle*
+
+Un projet est alors créé, voici sa structure :
+
+![Structure Projet](./img/structureProjetAndroid.png) *Capture d'écran commentée*
+
+{% note %}
+Pour avoir exactement la même fenêtre avec la même structure de projet, il faut veiller à sélectionner "Android" en haut à gauche!
+{% endnote %}
+
+Cette structure permet de centraliser certains éléments qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (*res*) dans le fichier *themes.xml*
+
+![Texte par défaut](./img/defaultText.png) *Capture d'écran commentée*
+
+### 3. Créer un émulateur (machine virtuelle) <a id="section3"></a>
+
+Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android,...).
+C'est cette dernière option que j'ai choisi d'utiliser :
+
+![Machine Virtuelle](./img/machineVirtuelle.png) *Capture d'écran*
 
 ### Premier Sprint
 

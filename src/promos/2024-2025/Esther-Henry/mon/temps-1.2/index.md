@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Découvrir les bases du VBA"
+title: "Python pour l’Analyse de Données Textuelles - Partie 2 : Analyser"
 authors:
   - Esther Henry
 
@@ -9,7 +9,7 @@ date: 1970-10-01
 tags: 
   - "temps 1"
 
-résumé: "Lors de mon précédent stage, afin d’optimiser un outil de travail sur Excel, j’ai dû créer une macro. N'ayant aucune connaissance en VBA, je l’ai réalisée en utilisant l’enregistrement automatique, ce qui complique la modification et la maintenance par la suite. J’aimerais donc apprendre les bases de VBA pour être capable de créer, par exemple, une macro simple permettant de modifier l’affichage d’une page. Dans l'absolu, l'idée serait de se familiariser avec le code VBA pour par la suite découvrir Google script"
+résumé: "Ce MON fait suite au MON1.1, son objectif est donc de continuer l’apprentissage de python pour les SHS et de passer cette fois à l’étape de manipulation de données, et de traiter un exemple simple d’analyse de données textuelles avec python."
 ---
 
 {% prerequis %}
