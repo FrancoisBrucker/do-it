@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen
+                Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen. Pour réaliser ce MON et débuter mon apprentissage, j'ai décidé de suivre les cours du site de Mr Brucker, ainsi que de suivre un tutoriel disponible en ligne et recommandé par le site do-it. Il s'agit du tutoriel [`W3School`](https://www.w3schools.com/html/default.asp). Ce tutoriel permet d'apprendre les notions de bases de HTML/CSS et est accompagné d'exercices de codes sur un éditeur en ligne.
 
         </p>
 
@@ -130,7 +130,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/">Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/mon/">MON de Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/mon/temps-1.1/">Apprendre HTML/CSS pour un débutant en Dev Web</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/">Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/mon/">MONs de Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/mon/temps-1.1/">Apprendre HTML/CSS pour un débutant en Dev Web</a>
 
 </div></div>
 
@@ -142,14 +142,15 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis nécessaires.</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://www.w3schools.com/html/default.asp"><code>W3School</code></a><br>
+<a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/pok/temps-1/"><code>POK1: Asian Fried Rice - FrontEnd</code></a></p>
 </div></div>
 
 <p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
@@ -158,7 +159,292 @@
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
 <h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h3>1.HTML</h3>
+<h4>Généralités</h4>
+<p>Les sigles « HTML » sont l’abréviation de « HyperText Markup Language ». Le HTML est donc un langage de balisage, c’est-à-dire un langage qui va nous permettre de définir les différents contenus d’une page.</p>
+<p>Tout d’abord, qu’est-ce qu’un site internet ? Un site internet est un ensemble de fichiers de code et de medias (images, videos, etc.) liés entre eux et disponibles à tout moment via le web. Pour que les différentes ressources constituant un site internet soient toujours accessibles, on les héberge généralement sur un serveur d’un hébergeur.</p>
+<p>Comment accède-t-on à une page d’un site internet ? Notre navigateur va contacter le serveur sur lequel est hébergée la page à laquelle on souhaite accéder et lui demander de renvoyer les différents éléments de la page : la page sous forme de code HTML et potentiellement les différents médias intégrés dans la page. Le navigateur va donc recevoir ces différents éléments et les afficher en utilisant le code HTML.</p>
+<p>Voici ci-dessous le code minimum pour créer une page HTML valide :</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;title&gt;Titre du document&lt;title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    en-tête du document
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+    corps du document
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</code></pre>
+<p>Comme son nom l’indique, le doctype sert à indiquer le type du document.<br>
+L’élément meta sert lui à transmettre des meta informations sur la page au <a href="http://navigateur.La">navigateur.La</a> valeur utf-8 est la valeur de référence pour tous les alphabets latins.</p>
+<h4>Les éléments HTML</h4>
+<p>Le langage HTML tout entier repose sur l’utilisation d’éléments. Dans une page, nous allons utiliser les éléments en HTML pour marquer du contenu, c’est-à-dire pour lui donner du sens aux yeux des navigateurs et des moteurs de recherche.</p>
+<ol>
+<li><strong>Les balises HTML</strong></li>
+</ol>
+<p>Une balise peut prendre trois formes. La première, la plus simple, un simple nom d'élément encadré par les signes inférieur et supérieur. Dans un deuxième temps, la balise peut porter sur une partie précise du document, auquel cas, elle doit s'ouvrir et se refermer. Enfin, il peut être nécessaire de préciser le comportement de la balise, cela se fait avec des attributs.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Elément de base</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">html</td>
+<td>root of an HTML document</td>
+</tr>
+<tr>
+<td style="text-align:left">body</td>
+<td>document's body</td>
+</tr>
+<tr>
+<td style="text-align:left">p</td>
+<td>paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left">h1 to h6</td>
+<td>HTML headings</td>
+</tr>
+<tr>
+<td style="text-align:left">br</td>
+<td>line break</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td>hyperlink</td>
+</tr>
+<tr>
+<td style="text-align:left">img</td>
+<td>used to embed an image</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td>Bold text</td>
+</tr>
+<tr>
+<td style="text-align:left">strong</td>
+<td>Important text</td>
+</tr>
+<tr>
+<td style="text-align:left">i</td>
+<td>Italic text</td>
+</tr>
+<tr>
+<td style="text-align:left">em</td>
+<td>Emphasized text</td>
+</tr>
+<tr>
+<td style="text-align:left">mark</td>
+<td>Marked text</td>
+</tr>
+<tr>
+<td style="text-align:left">small</td>
+<td>Smaller text</td>
+</tr>
+<tr>
+<td style="text-align:left">del</td>
+<td>Deleted text</td>
+</tr>
+<tr>
+<td style="text-align:left">ins</td>
+<td>Inserted text</td>
+</tr>
+<tr>
+<td style="text-align:left">sub</td>
+<td>Subscript text</td>
+</tr>
+<tr>
+<td style="text-align:left">sup</td>
+<td>Superscript text</td>
+</tr>
+<tr>
+<td style="text-align:left">blockquote</td>
+<td>section that is quoted from another source</td>
+</tr>
+<tr>
+<td style="text-align:left">abbr</td>
+<td>abbreviation or acronym</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li><strong>Les attributs HTML</strong></li>
+</ol>
+<p>Les éléments vont également pouvoir contenir des attributs qu’on va alors placer au sein de la balise ouvrante de ceux-ci. Pour certains éléments, les attributs vont être facultatifs tandis que pour d’autres ils vont être obligatoires pour garantir le bon fonctionnement du code.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attribut</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">style</td>
+<td>add styles to an element</td>
+</tr>
+<tr>
+<td style="text-align:left">href</td>
+<td>link's destnation</td>
+</tr>
+<tr>
+<td style="text-align:left">target</td>
+<td>where to open the linked document</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td>path to the image</td>
+</tr>
+<tr>
+<td style="text-align:left">alt</td>
+<td>specifies an alternate text for an image</td>
+</tr>
+<tr>
+<td style="text-align:left">lang</td>
+<td>to declare the language of the Web page</td>
+</tr>
+<tr>
+<td style="text-align:left">title</td>
+<td>defines some extra information about an element</td>
+</tr>
+<tr>
+<td style="text-align:left">width and height</td>
+<td>provides size information for images</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li><strong>Focus sur l'indentation et les commentaires</strong></li>
+</ol>
+<p>Indenter va nous permettre d’avoir un code plus propre et plus lisible, donc plus compréhensible. Indenter permet également de plus facilement détecter les erreurs potentielles dans un code.<br>
+Note : Les retours à la ligne et l’indentation créés dans l’éditeur n’affectent pas le résultat final dans le navigateur.</p>
+<p>Les commentaires ne seront pas affichés par le navigateur lorsque celui-ci va afficher la page : ils ne vont servir qu’aux développeurs créant ou lisant le code. Les commentaires en HTML vont prendre la forme d’une balise orpheline très particulière :</p>
+<pre><code>&lt;!--Commentaire--&gt;
+</code></pre>
+<ol start="4">
+<li><strong>Les listes</strong></li>
+</ol>
+<p>Il est possible en HTML de définir différents types de listes :</p>
+<ul>
+<li>des listes non ordonnées (élément ul, l'élément li permet de définir chaque item) ;</li>
+<li>des listes ordonnées (élément ol, l'élément li permet de définir chaque item) ;</li>
+<li>des listes de définition (dl, lh, dt et dd).</li>
+</ul>
+<ol start="5">
+<li><strong>Les entités</strong></li>
+</ol>
+<p>Une entité HTML est une suite de caractère qui est utilisée pour afficher un caractère réservé ou un caractère invisible.</p>
+<ul>
+<li>&quot;&amp;nbsp&quot; : ajouter une espace simple dit espace « insécable » ;</li>
+<li>&quot;&amp;ensp&quot; : créer une espace double ;</li>
+<li>&quot;&amp;emsp&quot; :créer une espace quadruple ;</li>
+<li>&quot;&amp;thinsp&quot; : créer un espace très fin (demi-espace).</li>
+</ul>
+<ol start="6">
+<li><strong>Les tables</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attribut</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">table</td>
+<td>Defines a table</td>
+</tr>
+<tr>
+<td style="text-align:left">th</td>
+<td>Defines a header cell in a table</td>
+</tr>
+<tr>
+<td style="text-align:left">tr</td>
+<td>Defines a row in a table</td>
+</tr>
+<tr>
+<td style="text-align:left">td</td>
+<td>Defines a cell in a table</td>
+</tr>
+<tr>
+<td style="text-align:left">caption</td>
+<td>Defines a table caption</td>
+</tr>
+<tr>
+<td style="text-align:left">colgroup</td>
+<td>Specifies a group of one or more columns in a table for formattingv</td>
+</tr>
+<tr>
+<td style="text-align:left">col</td>
+<td>Specifies column properties for each column within a <colgroup> element</colgroup></td>
+</tr>
+<tr>
+<td style="text-align:left">thead</td>
+<td>Groups the header content in a table</td>
+</tr>
+<tr>
+<td style="text-align:left">tbody</td>
+<td>Groups the body content in a table</td>
+</tr>
+<tr>
+<td style="text-align:left">tfoot</td>
+<td>Groups the footer content in a table</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li><strong>Block/Inline Elemnent</strong></li>
+</ol>
+<ul>
+<li>Un élément de niveau bloc commence toujours sur une nouvelle ligne et occupe toute la largeur disponible;</li>
+<li>Un élément en ligne ne démarre pas sur une nouvelle ligne et prend uniquement la largeur nécessaire;</li>
+<li>L'élément div est au niveau bloc et est souvent utilisé comme conteneur pour d'autres éléments HTML.</li>
+<li>L'élément span est un conteneur en ligne utilisé pour baliser une partie d'un texte ou une partie d'un document.</li>
+</ul>
+<h3>2.CSS</h3>
+<h3>Horodateur</h3>
+<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vendredi 06/09</td>
+<td>1H</td>
+<td>Lecture du cours do-it dév Web et recherche d'un tutoriel</td>
+</tr>
+<tr>
+<td>Mardi 10/09</td>
+<td>2H</td>
+<td>HTML : Structure de base en HTML, balises et attributs</td>
+</tr>
+<tr>
+<td>Vendredi 13/09</td>
+<td>2H</td>
+<td>HTML : En-tête, paragraphes, commentaires, styles et couleurs</td>
+</tr>
+<tr>
+<td>Samedi 14/09</td>
+<td>1H</td>
+<td>HTML : Listes et tables</td>
+</tr>
+<tr>
+<td>Dimanche 15/09</td>
+<td>1H</td>
+<td>HTML : début du codage du FrontEnd du site de Dark Kitchen</td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
