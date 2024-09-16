@@ -5,9 +5,9 @@ title: "React dans Laravel"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024-12-09
+date: 2024-16-09
 tags: 
-   - "développement web"
+  - "développement web"
   - "React"
   - "Laravel"
 
