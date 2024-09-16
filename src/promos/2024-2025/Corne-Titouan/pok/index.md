@@ -6,7 +6,7 @@ authors:
   - Titouan Corne
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Titouan Corne.
 
 - [POK 1](./temps-1)
 - [POK 2](./temps-2)
