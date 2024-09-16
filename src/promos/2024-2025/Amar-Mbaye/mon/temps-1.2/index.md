@@ -8,8 +8,8 @@ authors:
 date: 2024-12-09
 tags: 
    - "développement web"
-  - "React"
-  - "Laravel"
+   - "React"
+   - "Laravel"
 
 résumé: "Un MON traitant de l'intégration de React dans Laravel."
 ---

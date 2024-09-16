@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1 - Handicap ou pas cap : créer une UI inclusive"
+title: "MON 1.1 - Handicap ou pas cap : créer une UI inclusive"
 
 authors:
   - Inès Kebbab
