@@ -11,7 +11,7 @@ tags:
   - "React"
   - "Laravel"
 
-résumé: "Un MON traitant de l'intégration de React dans Laravel."
+résumé: "Un MON traitant de l'intégration de React dans Laravel ."
 ---
 
 {% prerequis %}
