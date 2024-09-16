@@ -9,8 +9,6 @@ date: 2024-09-15
 
 tags: 
   - "temps 1"
-  - "MON"
-  - "2024-2025"
   - "Management"
   - "Inclusivité"
 
