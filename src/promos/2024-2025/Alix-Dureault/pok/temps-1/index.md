@@ -21,6 +21,8 @@ Dans l'objectif de mieux comprendre les enjeux du dev, je vais me former en fron
 
 #### Sprint 1
 
+L'objectif du premier sprint est de sortir une première version épurée du site. L'ajout de fonctionnalités se fera dans un second temps. Pour cela, j'ai prévu de compléter les tâches suivantes :
+
 - [ ] Définition de la structure du site
 - [ ] Remise à jour de mes connaissances en html et css
 - [ ] Développement de la base du site

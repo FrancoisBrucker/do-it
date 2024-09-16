@@ -1,33 +1,29 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "MON 1.2 - Les bases de la cryptographie"
 authors:
   - Emma Gonin
 
-date: 1970-10-01
+date: 2024-09-16
 tags: 
   - "temps 1"
+  - "cybersécurité"
+  - "cryptographie"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON traitant des bases de la cryptographie."
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Pas de prérequis, seulement de la curiosité pour la cybersécurité.
 
 {% endprerequis %}
-{% lien %}
+Le but de ce MON 1.2 est d'apprendre les bases de la cryptographie, en continuité du [MON d'Arthur Louradou](https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-1.2/). Lors de mon stage de césure j'ai dû m'initier à la cryptographie pour protéger les communications intralogicielles avec le hachage des messages.
 
-Les lien utiles pour la compréhension de celui-ci.
+## Introduction
 
-{% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
-## Contenu
-
-Le contenu du MON.
+## Ressources
+- https://www.di.ens.fr/~ferradi/cours.pdf
+- [MON d'Arthur Louradou](https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-1.2/)
+- [MON de Thibault Adelain](https://francoisbrucker.github.io/do-it/promos/2022-2023/Adelain-thibault/mon/HachageChiffrement/)
