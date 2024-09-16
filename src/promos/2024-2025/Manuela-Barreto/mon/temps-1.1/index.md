@@ -110,10 +110,10 @@ Les applications s'exécutent dans des système d'exploitation (***Operating Sys
 
 Les systèmes d'exploitation les plus populaires et les plus utilisés sont Android OS et Apple iOS. Vous trouverez ci-dessous un tableau comparatif simple entre les deux systèmes :
 
-| Sistema Operacional |	Empresa/Desenvolvedor	| Linguagens de Desenvolvimento |	Loja de Aplicativos	| Popularidade |
+| Système d'Exploitation |	Entreprise/Développeur	| Langues de Développement |	App Store	| Popularité |
 | :-----------------: | :-------------------: | :----------------: | :-----------------: | :----------: |
-|**Android** | Google	| Java, Kotlin |	Google Play Store	| Alta (Globalmente) |
-| **iOS**	| Apple	| Swift, Objective-C	| Apple App Store	| Alta (EUA, Europa) |
+|**Android** | Google	| Java, Kotlin |	Google Play Store	| Élevée (au niveau mondial) |
+| **iOS**	| Apple	| Swift, Objective-C	| Apple App Store	| Élevée (États-Unis, Europe) |
 
 Comme vous pouvez le voir dans le tableau ci-dessus, ces systèmes ont des **langages de programmation différents**, ce qui a un impact direct sur le choix du langage à utiliser pour programmer une nouvelle application. Mais plus spécifiquement, le fait que chaque système d'exploitation soit conçu et agisse différemment a un impact direct sur l'**approche de développement d'applications mobiles à adopter par un développeur mobile**.
 
@@ -155,7 +155,9 @@ Mais ses inconvénients sont :
 - **Performance inférieure** : Bien que proche du natif, elle peut ne pas atteindre le même niveau de performance que les applications natives, surtout en cas d'utilisation intensive.
 - **Accès limité aux ressources** : Il peut y avoir des limitations dans l'accès à certaines fonctionnalités et API spécifiques de l'appareil.
 
-#### Frameworks
+<a name="frameworks">
+<h4> Frameworks </h4>
+</a>
 
 Les frameworks sont des structures de développement qui fournissent un **ensemble d'outils, de bibliothèques et de modèles de code prédéfinis pour aider les développeurs à créer des logiciels de manière plus rapide, plus organisée et plus efficace**. Ils offrent une base sur laquelle les développeurs peuvent construire leurs applications ou leurs systèmes, ce qui leur permet de se concentrer davantage sur la logique et la fonctionnalité du logiciel plutôt que d'avoir à tout construire à partir de zéro.
 
