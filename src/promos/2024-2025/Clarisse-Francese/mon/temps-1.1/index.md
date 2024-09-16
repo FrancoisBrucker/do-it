@@ -145,10 +145,9 @@ La Facipulation est une pratique de manipulation consistant à faire participer 
 *Un atelier d'intelligence collective sans facilitateur, c'est comme un plat de pâtes sans sauce !*  
 D’après **J.-P. Poupard**, la raison d’être d’un facilitateur est de "***rendre la tâche d' un collectif plus facile tout en utilisant au mieux le temps et l'intelligence des individus qui le composent.*** "  
 Ainsi le facilitateur doit non seulement accompagner les personnes vers une convergence et aboutir à des décisions mais aussi rendre les collaborations utiles, productives et plaisantes.
+Le rôle de facilitateur est différent de celui d’un formateur, ou coach ou consultant comme le résume ce schéma.
 
-Le rôle de facilitateur est différent de celui d’un formateur, ou coach ou consultant comme le résume le schéma ci-dessous :
-
-<img src="role facilitateur.png" width="50%" alt="Image description">
+METTRE LE SCHEMA
 
 Le facilitateur va notamment endosser ou attribuer à d’autres membres **2 rôles essentiels** lors de temps collectif type réunions :
 
@@ -164,9 +163,10 @@ Ainsi, un **cadre** pour un temps collectif permet de **se mettre d' accord sur 
 Voir l’outil : **cadre de confiance** dans la partie “Boîte à outils”
 
 Ensuite, les **processus** permettent de **passer plus facilement et sereinement de la phase de divergence à la phase de convergence** lors d’une décision de groupe.
-On retrouve ces phases dans le **diamant de la participation**, un modèle de processus participatif élaboré par **Sam Kaner**, un facilitateur aux USA. Ce diamant visible ci-dessous illustre les étapes qu’on traverse quand, devant une question ou un problème, on quitte ce qu’on connaît (divergence) pour explorer de nouvelles possibilités (émergence), puis qu’on sélectionne ensuite l’option la plus pertinente (convergence).
+On retrouve ces phases dans le **diamant de la participation**, un modèle de processus participatif élaboré par **Sam Kaner**, un facilitateur aux USA.
+Ce diamant illustre les étapes qu’on traverse quand, devant une question ou un problème, on quitte ce qu’on connaît (divergence) pour explorer de nouvelles possibilités (émergence), puis qu’on sélectionne ensuite l’option la plus pertinente (convergence).
 
-<img src="diamant participation.png" width="90%" alt="Image description">
+METTRE IMAGE
 
 <h2 id=outils> 📦Boîte à outils d’IC</h2>
 
@@ -213,7 +213,7 @@ Une fois le cadre fini, il faut **l’afficher dans la salle** pour pouvoir s’
 
 Voici le cadre de confiance qui avait été construit lors d’une formation que j’ai suivi au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille.
 
-<img src="cadre confiance.png" width="50%" alt="Image description">
+METTRE IMAGE
 
 ### 👂Le pense écoute
 
@@ -260,9 +260,9 @@ Ensuite, **un participant défend son point de vue** et pendant son argumentatio
 Puis, un **participant de la zone opposée prend la parole** pour exprimer à son tour son point de vue. Ce **cycle se répète** jusqu’à ce que tous les arguments aient été dit ou bien que le temps soit écoulé.  
 Idéalement, le **facilitateur prend en note** les arguments des 2 équipes pour avoir un compte-rendu à la fin du débat mouvant.
 
-Voici la restitution visuelles d'un débat mouvant auquel j’avais participé au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille. Le thème était “*On peut coopérer avec tout le monde*”.
+Voici un débat mouvant auquel j’avais participé au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille. Le thème était “*On peut coopérer avec tout le monde*”.
 
-<img src="debat mouvant.png" width="40%" alt="Image description">
+METTRE PHOTO
 
 ### 💬Le tour de déclusion
 
@@ -339,9 +339,9 @@ Les élèves de Do_It arrivent dans la salle avec Laetitia et François. De là,
 
 Laetitia et François se **présentent**, **félicitent** les élèves d’être en Do_It et souhaitent à tout le monde une **bonne rentrée**. Ils précisent qu’on va d’abord **consacrer 1h de la matinée à faire des activités pour apprendre à mieux connaître la promo**.  
 
-Puis l’un des facilitateurs commence par placer des **feuilles A4 plastifiées colorées** de manière espacée sur le sol avec des **émotions marquées dessus** (joie, sérénité, motivation, fatigue…) comme sur la photo ci-dessous.  
+Puis l’un des facilitateurs commence par placer des **feuilles A4 plastifiées colorées** de manière espacée sur le sol avec des **émotions marquées dessus** (joie, sérénité, motivation, fatigue…) comme sur la photo.  
 
-<img src="inclusion sentiment.png" width="40%" alt="Image description">
+METTRE PHOTO
 
 Il explique alors les consignes : les **élèves ont 2 min pour regarder les feuilles et se positionner à côté de l’émotion qu’ils ressentent ce matin** lors de cette rentrée en Do_It.  
 Un **tour de parole** s’installe où chaque élève doit dire **son prénom et dire le nom de l’émotion choisie en expliquant pourquoi en 1 phrase** (pas plus car il y a beaucoup d’élèves). Quand un élève a fini, il **désigne l’élève qui enchaîne** pour que la parole circule vite sans blanc.
@@ -379,7 +379,7 @@ Questions possibles :
 Le facilitateur **remercie** les élèves pour le positionnement spatial et annonce qu’on va faire un dernier **tour de parole dans lequel chacun rappelle son prénom et explique en 1 phrase comment il a trouvé ce temps collectif.** Là encore, l’élève qui a fini de parler désigne l’élève suivant qui parlera.  
 Une fois le tour fini, le facilitateur **remercie** pour le partage et indique aux élèves qu’on peut rentrer dans la salle pour passer à une présentation plus formelle de l’option (les cours, les POK, MON etc).
 
-### ✅Bilan du temps collectif en Do_It
+### ✅Bilan du temps collectif en DO_It
 
 Et voilà, en un peu plus d’1h, les élèves et les profs ont vécu un **moment collectif** dans lequel ils ont chacun pû dire leur prénom, exprimer une émotion, réfléchir à leur choix sur Do_It et ce que ça va leur apporter, connaître la situation des autres camarades (césure, contrat, option 2A, profil de couleur…) et donner un feedback sur ce temps.
 Le tout en **créant du lien** et sans s’impatienter sur une chaise au fond d’une salle en écoutant d’une oreille distraite ce que racontent les autres.
@@ -389,13 +389,3 @@ Bien sûr, ce temps n'est qu’une proposition et je ne sais pas en pratique à 
 ## 👍Conclusion de ce MON
 
 J’ai **adoré travailler sur ce sujet** et notamment sur le cas du temps pour Do_It ! J’espère que ça servira aux autres élèves et **n’hésitez pas à me poser des questions** sur le contenu de ce MON.
-
-## ⌛Horodateur
-
-| Date | Temps passé | Indications |
-| -------- | -------- |-------- |
-| Vendredi 06/09 | 30 min | *Définition du plan et recherches de ressources adaptées* |
-| Mardi 10/09 | 3h30  | *Recherche et écriture sur l'IC, les exemples et les conditions (émergences et création)* |
-| Mercredi 11/09 | 4h30 | *Recherche et écriture des outils et du cas sur la rentrée en Do_It* |
-| Vendredi 13/09 | 1h | *Rédaction sur Github* |
-| Lundi 16/09 | 30 min | *Finalisation et mise en forme sur Github* |
