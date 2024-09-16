@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1.2 - La Théorie du Donut : comment rendre digeste une transformation durable des organisations ?"
+title: "MON 1.2 - La Théorie du Donut : comment rendre digeste une transformation durable des organisations ? 🌱"
 authors:
   - Inès Kebbab
 
