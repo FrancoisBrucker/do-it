@@ -113,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen
+                Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen. Pour ce faire, j'ai suivi les cours de Mr Brucker de développement Web sur le site do-it ainsi que les MON des élèves des années précédentes. J'ai également suivi le tutoriel [`W3School`](https://www.w3schools.com/js/default.asp) qui est accompagné de petits exercices sur un éditeur en ligne. La plus grande partie du MON a été passé sur le suivi d'un tutoriel [`javascrip-koans`](https://github.com/mrdavidlaing/javascript-koans), dont le code a été téléchargé sur GitHub et qui propose d'apprendre la language JavaScript à partir d'une série d'exercices de code à trous qui doivent passer différents tests.
 
         </p>
 
@@ -138,14 +138,16 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Languages HTML/CSS</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://www.w3schools.com/js/default.asp"><code>W3School</code></a><br>
+<a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/mon/temps-1.1/"><code>MON1: HTML/CSS</code></a><br>
+<a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/pok/temps-1/"><code>POK1: Asian Fried Rice - FrontEnd</code></a></p>
 </div></div>
 
 <p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
@@ -153,8 +155,348 @@
 <li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Présentation du tutoriel javascript-koans</h2>
+<h3><span style="color: #26B260">1. Généralités</span></h3>
+<p>Basé sur le tutoriel de Edgecase [Ruby koans] (<a href="http://github.com/edgecase/ruby_koans">http://github.com/edgecase/ruby_koans</a>), l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de <strong>tests</strong> et de <strong>code à trous</strong>.</p>
+<p>Lors de la première execution, une erreur d'exécution apparaît, ainsi qu'une indication qui montre où l'erreur s'est produite. L'objectif est de faire disparaître l'erreur dans le code. En corrigeant chaque erreur, je vais apprendre une notion particulière sur le langage Javascript et la programmation fonctionnelle en général.</p>
+<p>Le tutoriel d'apprentissage Javascript commence dans le fichier <em>koans/AboutExpects.js</em>. Ces premiers koans sont assez simples au départ! Au fur et à mesure que je progresse dans les koans, de plus en plus de syntaxe Javascript est introduite, ce qui m'a permis de résoudre des problèmes de plus en plus compliqués et d'utiliser des techniques plus avancées.</p>
+<h3><span style="color: #26B260">2. Running the koans</span></h3>
+<p>Pour compléter les exercices et visualiser le passage des tests, il suffit de <strong>RUN</strong> le fichier <em>KoansRunnner.html</em> dans le navigateur du système, ici <strong>Google Chrome</strong>. Pour ce faire j'ai dû télécharger l'extension <strong>RunServer</strong> de VsCode.</p>
+<p>La première erreur se trouve dans <em>koans/AboutExpects.js</em>. Je l'ai corrigé et ai lancé le premier test. A chaque complétion, il suffit de rafraîchir le navigateur pour voir si on passe les tests ou non, jusqu'à ce que tous les tests deviennent verts.</p>
+<p>Le gestionnaire de tests utilisé est <a href="http://jasmine.github.io/">Jasmine</a> avec un visualiseur de rapport personnalisé.</p>
+<h3><span style="color: #26B260">3. Premier exemple d'exercice : AboutArrays complété</span></h3>
+<pre><code>describe(&quot;About Arrays&quot;, function() {
+
+  //We shall contemplate truth by testing reality, via spec expectations.
+  it(&quot;should create arrays&quot;, function() {
+    var emptyArray = [];
+    expect(typeof(emptyArray)).toBe(&quot;object&quot;); //A mistake? - http://javascript.crockford.com/remedial.html
+    expect(emptyArray.length).toBe(0);
+
+    var multiTypeArray = [0, 1, &quot;two&quot;, function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
+    expect(multiTypeArray[0]).toBe(0);
+    expect(multiTypeArray[2]).toBe('two');
+    expect(multiTypeArray[3]()).toBe(3);
+    expect(multiTypeArray[4].value1).toBe(4);
+    expect(multiTypeArray[4][&quot;value2&quot;]).toBe(5);
+    expect(multiTypeArray[5][0]).toBe(6);
+  });
+
+  it(&quot;should understand array literals&quot;, function () {
+    var array = [];
+    expect(array).toEqual([]);
+
+    array[0] = 1;
+    expect(array).toEqual([1]);
+
+    array[1] = 2;
+    expect(array).toEqual([1, 2]);
+
+    array.push(3);
+    expect(array).toEqual([1, 2, 3]);
+  });
+
+  it(&quot;should understand array length&quot;, function () {
+    var fourNumberArray = [1, 2, 3, 4];
+
+    expect(fourNumberArray.length).toBe(4);
+    fourNumberArray.push(5, 6);
+    expect(fourNumberArray.length).toBe(6);
+
+    var tenEmptyElementArray = new Array(10);
+    expect(tenEmptyElementArray.length).toBe(10);
+
+    tenEmptyElementArray.length = 5;
+    expect(tenEmptyElementArray.length).toBe(5);
+  });
+
+  it(&quot;should slice arrays&quot;, function () {
+    var array = [&quot;peanut&quot;, &quot;butter&quot;, &quot;and&quot;, &quot;jelly&quot;];
+
+    expect(array.slice(0, 1)).toEqual(['peanut']);
+    expect(array.slice(0, 2)).toEqual(['peanut', 'butter']);
+    expect(array.slice(2, 2)).toEqual([]);
+    expect(array.slice(2, 20)).toEqual(['and', 'jelly']);
+    expect(array.slice(3, 0)).toEqual([]);
+    expect(array.slice(3, 100)).toEqual(['jelly']);
+    expect(array.slice(5, 1)).toEqual([]);
+  });
+
+  it(&quot;should know array references&quot;, function () {
+    var array = [ &quot;zero&quot;, &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot; ];
+
+    function passedByReference(refArray) {
+        refArray[1] = &quot;changed in function&quot;;
+    }
+    passedByReference(array);
+    expect(array[1]).toBe('changed in function');
+
+    var assignedArray = array;
+    assignedArray[5] = &quot;changed in assignedArray&quot;;
+    expect(array[5]).toBe('changed in assignedArray');
+
+    var copyOfArray = array.slice();
+    copyOfArray[3] = &quot;changed in copyOfArray&quot;;
+    expect(array[3]).toBe('three');
+  });
+
+  it(&quot;should push and pop&quot;, function () {
+    var array = [1, 2];
+    array.push(3);
+
+    expect(array).toEqual([1, 2, 3]);
+
+    var poppedValue = array.pop();
+    expect(poppedValue).toBe(3);
+    expect(array).toEqual([1, 2]);
+  });
+
+  it(&quot;should know about shifting arrays&quot;, function () {
+    var array = [1, 2];
+
+    array.unshift(3);
+    expect(array).toEqual([3, 1, 2]);
+
+    var shiftedValue = array.shift();
+    expect(shiftedValue).toEqual(3);
+    expect(array).toEqual([1, 2]);
+  });
+});
+</code></pre>
+<h3><span style="color: #26B260">4. 2ème exemple d'exercice : AboutFunctions complété</span></h3>
+<pre><code>describe(&quot;About Functions&quot;, function() {
+
+  it(&quot;should declare functions&quot;, function() {
+
+    function add(a, b) {
+      return a + b;
+    }
+
+    expect(add(1, 2)).toBe(3);
+  });
+
+  it(&quot;should know internal variables override outer variables&quot;, function () {
+    var message = &quot;Outer&quot;;
+
+    function getMessage() {
+      return message;
+    }
+
+    function overrideMessage() {
+      var message = &quot;Inner&quot;;
+      return message;
+    }
+
+    expect(getMessage()).toBe('Outer');
+    expect(overrideMessage()).toBe('Inner');
+    expect(message).toBe('Outer');
+  });
+
+  it(&quot;should have lexical scoping&quot;, function () {
+    var variable = &quot;top-level&quot;;
+    function parentfunction() {
+      var variable = &quot;local&quot;;
+      function childfunction() {
+        return variable;
+      }
+      return childfunction();
+    }
+    expect(parentfunction()).toBe('local');
+  });
+
+  it(&quot;should use lexical scoping to synthesise functions&quot;, function () {
+
+    function makeMysteryFunction(makerValue)
+    {
+      var newFunction = function doMysteriousThing(param)
+      {
+        return makerValue + param;
+      };
+      return newFunction;
+    }
+
+    var mysteryFunction3 = makeMysteryFunction(3);
+    var mysteryFunction5 = makeMysteryFunction(5);
+
+    expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(23);
+  });
+
+  it(&quot;should allow extra function arguments&quot;, function () {
+
+    function returnFirstArg(firstArg) {
+      return firstArg;
+    }
+
+    expect(returnFirstArg(&quot;first&quot;, &quot;second&quot;, &quot;third&quot;)).toBe('first');
+
+    function returnSecondArg(firstArg, secondArg) {
+      return secondArg;
+    }
+
+    expect(returnSecondArg(&quot;only give first arg&quot;)).toBe(undefined);
+
+    function returnAllArgs() {
+      var argsArray = [];
+      for (var i = 0; i &lt; arguments.length; i += 1) {
+        argsArray.push(arguments[i]);
+      }
+      return argsArray.join(&quot;,&quot;);
+    }
+
+    expect(returnAllArgs(&quot;first&quot;, &quot;second&quot;, &quot;third&quot;)).toBe('first,second,third');
+  });
+
+  it(&quot;should pass functions as values&quot;, function () {
+
+    var appendRules = function (name) {
+      return name + &quot; rules!&quot;;
+    };
+
+    var appendDoubleRules = function (name) {
+      return name + &quot; totally rules!&quot;;
+    };
+
+    var praiseSinger = { givePraise: appendRules };
+    expect(praiseSinger.givePraise(&quot;John&quot;)).toBe('John rules!');
+
+    praiseSinger.givePraise = appendDoubleRules;
+    expect(praiseSinger.givePraise(&quot;Mary&quot;)).toBe('Mary totally rules!');
+
+  });
+});
+</code></pre>
+<h3><span style="color: #26B260">5. 3ème exemple d'exercice : AboutObjects non complété</span></h3>
+<pre><code>describe(&quot;About Objects&quot;, function () {
+
+  describe(&quot;Properties&quot;, function () {
+    var megalomaniac;
+
+    beforeEach(function () {
+       megalomaniac = {  mastermind: &quot;Joker&quot;, henchwoman: &quot;Harley&quot; };
+    });
+
+    it(&quot;should confirm objects are collections of properties&quot;, function () {
+      expect(megalomaniac.mastermind).toBe(FILL_ME_IN);
+    });
+
+    it(&quot;should confirm that properties are case sensitive&quot;, function () {
+      expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
+      expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+    });
+  });
+
+
+  it(&quot;should know properties that are functions act like methods&quot;, function () {
+    var megalomaniac = {
+      mastermind : &quot;Brain&quot;,
+      henchman: &quot;Pinky&quot;,
+      battleCry: function (noOfBrains) {
+        return &quot;They are &quot; + this.henchman + &quot; and the&quot; +
+          Array(noOfBrains + 1).join(&quot; &quot; + this.mastermind);
+      }
+    };
+
+    var battleCry = megalomaniac.battleCry(4);
+    expect(FILL_ME_IN).toMatch(battleCry);
+  });
+
+  it(&quot;should confirm that when a function is attached to an object, 'this' refers to the object&quot;, function () {
+    var currentDate = new Date();
+    var currentYear = (currentDate.getFullYear());
+    var megalomaniac = {
+      mastermind: &quot;James Wood&quot;,
+      henchman: &quot;Adam West&quot;,
+      birthYear: 1970,
+      calculateAge: function () {
+        return currentYear - this.birthYear;
+      }
+    };
+
+    expect(currentYear).toBe(FILL_ME_IN);
+    expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
+  });
+
+  describe(&quot;'in' keyword&quot;, function () {
+    var megalomaniac;
+    beforeEach(function () {
+      megalomaniac = {
+        mastermind: &quot;The Monarch&quot;,
+        henchwoman: &quot;Dr Girlfriend&quot;,
+        theBomb: true
+      };
+    });
+
+    it(&quot;should have the bomb&quot;, function () {
+
+      var hasBomb = &quot;theBomb&quot; in megalomaniac;
+
+      expect(hasBomb).toBe(FILL_ME_IN);
+    });
+
+    it(&quot;should not have the detonator however&quot;, function () {
+
+      var hasDetonator = &quot;theDetonator&quot; in megalomaniac;
+
+      expect(hasDetonator).toBe(FILL_ME_IN);
+    });
+  });
+
+  it(&quot;should know that properties can be added and deleted&quot;, function () {
+    var megalomaniac = { mastermind : &quot;Agent Smith&quot;, henchman: &quot;Agent Smith&quot; };
+
+    expect(&quot;secretary&quot; in megalomaniac).toBe(FILL_ME_IN);
+
+    megalomaniac.secretary = &quot;Agent Smith&quot;;
+    expect(&quot;secretary&quot; in megalomaniac).toBe(FILL_ME_IN);
+
+    delete megalomaniac.henchman;
+    expect(&quot;henchman&quot; in megalomaniac).toBe(FILL_ME_IN);
+  });
+
+
+  it(&quot;should use prototype to add to all objects&quot;, function () {
+      function Circle(radius)
+      {
+        this.radius = radius;
+      }
+
+      var simpleCircle = new Circle(10);
+      var colouredCircle = new Circle(5);
+      colouredCircle.colour = &quot;red&quot;;
+
+      expect(simpleCircle.colour).toBe(FILL_ME_IN);
+      expect(colouredCircle.colour).toBe(FILL_ME_IN);
+
+      Circle.prototype.describe = function () {
+        return &quot;This circle has a radius of: &quot; + this.radius;
+      };
+
+      expect(simpleCircle.describe()).toBe(FILL_ME_IN);
+      expect(colouredCircle.describe()).toBe(FILL_ME_IN);
+  });
+});
+</code></pre>
+<h3><span style="color: #26B260">6. Passage des tests</span></h3>
+<p>Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel :</p>
+<p>![Tests js-koans](/Users/macbookthomas/Documents/GitHub/do-it/src/promos/2024-2025/Merle-Thomas/mon/temps-1.2/test js-koans.png&quot;Tests js-koans&quot;)</p>
+<h2>Horodateur</h2>
+<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vendredi 06/09</td>
+<td>1H</td>
+<td>blabla</td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
