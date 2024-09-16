@@ -9,7 +9,7 @@ date: 2024-16-09
 
 tags: 
   - "développement web"
-  - "Laravel"
+  - "Laravel "
 
 résumé: Un POK traitant de la création d'une plateforme de certification en ligne où les utilisateurs peuvent suivre des cours en vidéo et obtenir un certificat après évaluation.
 ---
