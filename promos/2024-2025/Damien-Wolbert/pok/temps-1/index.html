@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Outil de suivi de la montée en compétences sur Google Drive</title>
+        <title>Outil de suivi de la montée en compétences individuelle sur Google Drive</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Outil de suivi de la montée en compétences sur Google Drive</h1>
+<h1 class="mb-1">Outil de suivi de la montée en compétences individuelle sur Google Drive</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce POK vise à mettre en place un outil opérationnel de suivi de la compétence au sein d'une organisation type en utilisant les différentes fonctionnalités et outils de Google Drive.
+                Ce POK vise à mettre en place la maquette d'un outil opérationnel de suivi de la compétence individuelle au sein d'une organisation simple, en utilisant les différentes fonctionnalités et outils de Google Drive.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-1/">Outil de suivi de la montée en compétences sur Google Drive</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-1/">Outil de suivi de la montée en compétences individuelle sur Google Drive</a>
 
 </div></div>
 
@@ -133,8 +133,8 @@
 <p><strong>Niveau :</strong> Basique<br>
 <strong>Pré-requis:</strong></p>
 <ul>
-<li>Connaissance dede base de Google AppScript, de Google Sheet et d'un Google Drive.</li>
-<li>Connaissance de base des enjeux</li>
+<li>Connaissance de base de Google AppScript, de Google Sheet et d'un Google Drive. (Approdondi en MON)</li>
+<li>Connaissance de base des enjeux de la compétence individuelle en entreprise. (Approfondi en première phase du projet à partir des connaissances déjà accumulées en stage et alterance)</li>
 </ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
@@ -145,30 +145,57 @@
 <p>Les lien utiles pour la compréhension de celui-ci.</p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :</p>
-<ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
-</ul>
-<h2>Objectifs principaux</h2>
+<h2>Contexte</h2>
+<p>J'ai souvent constaté que le sujet du suivi des compétences des membres d'une orgnanisation est à la fois critique et délicat.</p>
+<table>
+<thead>
+<tr>
+<th>Contexte</th>
+<th>Structure</th>
+<th>Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Responsable RSE et chargé de mission SI</td>
+<td>KSI Centrale Marseille</td>
+<td>Les compétences ne sont pas clairement identifiées ou suivies dans chaque pôle. Ce qui rend plus diffcile la formation et donc l'activité de la structure.</td>
+</tr>
+<tr>
+<td>Stage employé polyvalent</td>
+<td>Mairie de Lunel-Viel (34)</td>
+<td>Les managers ne connaissent pas les compétences nécessaire ou détenue par les personnes à leur charge. Ils n'ont donc pas de visibilité sur toutes leurs activités ou les activités qu'ils pourraient leur sous-traiter.</td>
+</tr>
+<tr>
+<td>Alternant ingénieur électricien</td>
+<td>Service support électricité, Engie Renouvelables</td>
+<td>Le manager ne connait pas les réelles compétences de ses agents ce qui le contraint à les laisser gérer et chosisirs leurs missions et projets. Cela déséquilibre complètement le service (travail sur le même sujet en parralèle) et bloque toute possibilité de pérennité de la compétence au sein du service (aucun pré-requis ou plan de formation)</td>
+</tr>
+</tbody>
+</table>
+<p>Je trouve donc intéressant de me plonger dans ces problèmatiques afin d'analyser d'où proviennent les points de blocages des structures dans lesquelles j'ai évolué.</p>
+<p>D'autre part, je n'ai jamais pû approfondir l'utilisation de Google Appscript et de toutes possibilités offertes par Google Drive. Je pourrai donc réaliser un certain nombre de parallèle entre ce languages de programmation et mes connaissance de VBA (Visual Basic fo Application) sur Excel.</p>
+<h2>Cadrage</h2>
+<h3>Objectifs principaux</h3>
 <ol>
 <li>Identifier les enjeux du monitoring des compétences.</li>
 <li>Identifier les fonctionnalités indispensables à l'implémentation d'un tel outil.</li>
-<li>Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs.</li>
-<li>Identifier une architecture robuste sur Google Drive.</li>
-<li>Livrer une maquette fonctionnelle et testée.</li>
+<li>Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs en utilisant des fonctionnalités simples de Google AppScript, Google Sheet, Google formular et Google Drive.</li>
+<li>Identifier une architecture robuste sur Google Drive permettant d'ajouter des foncitonnalités au fur et à mesure.</li>
+<li>Livrer une maquette fonctionnelle et testée à la fin des 20 heures allouées au POK.</li>
 </ol>
-<h2>Tâches</h2>
-<h3>Sprints</h3>
+<h3>Monitoring du projet</h3>
+<p>Le suivi du projet a été réalisé sur un outil personnel développé spécialement pour le suivi des POK et MON. Le contenu est reporté ci-dessous.</p>
+<h4>Sprints back-logs</h4>
 <p>L'objectif final de ce POK est de fournir un dossier Google Drive contenant des outils automatisés de suivi de la compétence des membres d'une entreprise type à déterminée.</p>
-<h4>Sprint 1</h4>
+<h5>Sprint 1</h5>
 <ul>
-<li>[ ] Recueillir des informations sur le monitoring et le management de la compétence dans la littérature.</li>
+<li>[x] Recueillir des informations sur le monitoring et le management de la compétence dans la littérature.</li>
 <li>[ ] Recueillir les besoins de différents acteurs responsables du suivi de la montée en compétence des membres de leur organisation.
 <ul>
 <li>[ ] Au sein de KSI Centrale Marseille.</li>
 <li>[ ] Au sein de différents service d'Engie Renouvelables.</li>
-<li>[ ] Au sein d'une organisation du secteur publique (TBD)</li>
+<li>[x] Au sein d'une organisation du secteur publique (TBD)</li>
 <li>[ ] Au sein d'une strcuture de formation.</li>
 </ul>
 </li>
@@ -176,10 +203,9 @@
 <li>[ ] Réaliser l'architecture fonctionnelle de l'outil.</li>
 <li>[ ] Préparer et tester les templates utilisés sur Google Sheet et/ou Google Doc et/ou Google formular.</li>
 </ul>
-<h4>Sprint 2</h4>
+<h5>Sprint 2</h5>
 <p>TBD</p>
-<h3>Horodatage</h3>
-<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
+<h4>Horodatage</h4>
 <table>
 <thead>
 <tr>
@@ -198,10 +224,108 @@
 </tr>
 </tbody>
 </table>
-<h2>Contenu</h2>
-<p>Le contenu du POK.</p>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
+<h2>I. Les enjeux du suivi de la compétence individuelle</h2>
+<h3>I.1. Définitions et caractérisation</h3>
+<p>Dans son ouvrage <em>INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie</em>, T. ARDOUIN explique que la définition même du mot compétence crée le débat. Il en donne la définition suivante à la page 119 :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Déf. 1 :</strong> La compétence est la mise en oeuvre de capacités en situation professionnelle qii permettente d'exercer convenablement une fonction ou une activité.&quot; [4].</p>
+</div></div>
+<p>D'autre part, Cécile DEJOUX dans son ouvrage <em>Gestion des compétences et GPEC</em> sépare dès la défintion, compétences individuelles, collectives, organisationelles et territoriales. Dans ce contexte nous noterons la défintion suivante :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Déf. 2 :</strong> La compétence individuelle est la combianaison d'un ensemble de connaissances, savoir-faire et d'aptitudes qui dans un contexte donné, permettent d'aboutir à un niveau de performance attendu et validé.</p>
+</div></div>
+<p>Lors de l'étude du besoin détaillée plus bas, j'ai demandé aux personnes intérrogées : Comment définissez vous &quot;compétence individuelle&quot; ? Il est intéressant de noter la pluralité des réponses et des points de vus.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Déf. 3 : &quot;</strong> Savoir faire acquis par l'apprentissage ou la pratique.<br>
+<strong>Déf. 4 : &quot;</strong> Aptitude à une tâche d'un individu.</p>
+</div></div>
+<p>Je trouve la définition De C. DEJOUX intéressante car elle montre la diversité des compétences dans leur typologie. Dans son ouvrage [4] elle caractérise la compétence individuelle par 6 points :</p>
+<ol>
+<li>Savoir-agir : Prend son sens par rapport à une action.</li>
+<li>Finalisée : Prend son sens par rapport à un objectif et un résultat. On peut les mesurer et la normer.</li>
+<li>Combinatoire : Se divise et sous-devise en unités.</li>
+<li>Contingente : Dépends des outils et des conditions disponibles lors de sa mise en place.</li>
+<li>Dynamique : Evolue continuellement.</li>
+<li>Reconnue collectivement : Reconnue par un statut, une valeur financière...</li>
+</ol>
+<p>D'autre part, elle mets en avant la dépendance de la compétence au contexte, au lieu, à la structure. Comme une compétence est reconnue collectivement, sa défintion et sa valeur varient en fonction du temps et de l'espace.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il faudra donc permettre à l'utilisateur de garder une grande felxibilité dans la façon de définir les compétences.</p>
+</div></div>
+<p>Elle définit alors 4 catégories :</p>
+<ol>
+<li>Les savoirs : Connaissances théotiques de bases, souvent associés à des diplomes ou des certificats. <strong>ATTENTION : Je trouve que cette limitation aux diplômes dépend de la culture du pays et de l'organisation que l'on considère.</strong></li>
+<li>Savoirs-faire : Aptitudes pratiques, capacité à ma maitriser quelque chose, à rendre le savoir opérationnel.</li>
+<li>Savoir être : Aptitude sociale, innée ou acquise ; compétence comportementale interpersonnelle.</li>
+<li>Compétences émotionnelles : Conscience et maitrise de soi et de ses relations avec les autres. Capacité à percevoir les émotions, les exprimer, les intégrer dans un processus de pensée, de compréhension, de raisonnement.</li>
+</ol>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il faudra permettre à l'utilisateur de classer les types de compétences tout en fournissant un guide de classification.</p>
+</div></div>
+<p>Cette dernière classification ne permet cependant pas à un manager de prioriser facilement une compétence au profit d'une autre (pour le recrutement ou la formation interne par exemple). On s'aperçoit notamment quand la caractérisation de C. DEJOUX, deux autres échelles sont à définir :</p>
+<p>** Une échelle d'acquisition, de maitrise (caractéristique n°2):**<br>
+Au delè d'une échelle d'acquisition de la compétence, quantitative ou qualitative, il peut être intéressant de considérer le niveau d'autonomie d'un individu quant à la mise en application de cette compétence. Dans son ouvrage, T. ARDOUIN définit en page 120, 3 niveaux :</p>
+<ul>
+<li>A : Assiste et applique - Reproduction d'activité envisagées et organisées par d'autres.</li>
+<li>B : Intervient et produit - Production de donnée ou de modes de travail.</li>
+<li>C : Anime et conçoit - Réalisation de mode de travail et de donnée avec la responsabilité d'animé débats et groupes de travail.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il pourra être pertinent de mettre en place une échelle d'autonomie face à la tâche.</p>
+</div></div>
+<p>** Une échelle de reconnaissance (caractéristique n°3) :**<br>
+Dans un article *Compétences individuelles et collectives&quot; [3] du ministère de la transition écologique et de la cohésion des territoires, nous pouvons trouver des ressources présentant la compétence individuelle comme critique pour une organisation. Ainsi, on peut les classer les compétences à la fois par raport à son utilité immédiates mais aussi par rapport à son utilité stratégique, à moyene et long terme.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il faudra permettre à l'utilisateur de définir des échelles d'importance actuelles et stratégiques.</p>
+</div></div>
+<h3>I.2. Notions et outils à considérer</h3>
+<h4>Référentiel métier et référentiel de compétence</h4>
+<h4>Plan de développement individuel (PDI)</h4>
+<h2>II. Besoin fonctionnel</h2>
+<h3>II.1. Présupposés du besoin</h3>
+<h3>II.2. Etude du besoin auprès d'usagers potentiels</h3>
+<h3>II.3. Formalisation du besoin fonctionnel</h3>
+<h4>Fonctionnalités de base</h4>
+<h4>Fonctionnalités souhaitables</h4>
+<h4>Fonctionnalités additionnelles</h4>
+<h2>Bibliographie</h2>
+<p>[1] <strong>DEJOUX, Cécile.</strong> <em>Gestion des compétences et GPEC</em>, 2ème édition, DUNOD, 2013, Les topos</p>
+<p>[2] <strong>QUINN James Brian, ANDERSON Phili &amp; FINKELSTEIN Sydney.</strong> <em>La gestion du capital intellectuel : Comment tirer le meilleur parti des meilleurs</em>, Editions d'Organisation, 1996.</p>
+<p>[3] CEDIP, Secrétariat Général-DRH-. « Compétences individuelles et collectives ». <em>Secrétariat Général - DRH - CEDIP</em>, 2 août 2022, <a href="https://www.cedip.developpement-durable.gouv.fr/competences-individuelles-et-collectives-a2141.html">https://www.cedip.developpement-durable.gouv.fr/competences-individuelles-et-collectives-a2141.html</a>.</p>
+<p>[4] <strong>ARDOUIN, Thierry</strong> <em>INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie</em>, 5ème édition, 2017, DUNOD, Collection formation.</p>
+<h2>REX</h2>
 
 
 </article>
