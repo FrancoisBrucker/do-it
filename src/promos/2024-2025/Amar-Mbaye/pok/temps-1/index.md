@@ -5,11 +5,11 @@ title: "Un POK traitant de la création d'une plateforme de certification en lig
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024/16/09
+date: 2024-16-09
 
 tags: 
   - "développement web"
-  - "Laravel"
+  - "Laravel "
 
 résumé: Un POK traitant de la création d'une plateforme de certification en ligne où les utilisateurs peuvent suivre des cours en vidéo et obtenir un certificat après évaluation.
 ---
