@@ -24,7 +24,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Ce premier MON fait suite à une problématique rencontrée lors de chacun de mes stages de césure, au cours desquels j'ai été confronté a des "macros" à cooriger ou compléter. Ces "macros" permettaient d'automatiser des tâches pouvant être longues et chronophages sur Excel.
+Ce premier MON fait suite à une problématique rencontrée lors de chacun de mes stages de césure, au cours desquels j'ai été confronté a des "macros" à corriger ou compléter. Ces "macros" permettaient d'automatiser des tâches pouvant être longues et chronophages sur Excel.
 
 - le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
