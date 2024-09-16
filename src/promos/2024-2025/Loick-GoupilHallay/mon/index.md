@@ -9,4 +9,4 @@ authors:
 ## Temps 1
 
 - [MON 1.1 - Environnement de développement idéal](./temps-1.1)
-- [MON 1.2 - Environnement de développement idéal CYBER](./temps-1.2)
+- [MON 1.2 - Sécurisation de l'environnement de développement](./temps-1.2)

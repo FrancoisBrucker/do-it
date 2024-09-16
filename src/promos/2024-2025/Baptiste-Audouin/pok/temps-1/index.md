@@ -1,16 +1,16 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 1"
+title: "Découverte de VBA pour créer un outils de calcul de coûts de déplacements."
 authors:
   - Baptiste Audouin
 
-date: 1970-09-01
+date: 2024-09-10
 
 tags:
   - "temps 1"
 
-résumé: Un POK traitant d'un sujet.
+résumé: POK traitant du language VBA avec une mise en application concrète
 ---
 
 {% prerequis %}
@@ -24,30 +24,27 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+J'aimerai à travers se POK me former au langage VBA qui est très souvent utilisé en entreprise.
+En mise en application j'aimerai créer un outil permettant aux commerciaux d'une entreprise de calculer les coûts de leurs déplacements afin de créer des notes de frais. 
 
 ## Tâches
 
 ### Sprints
 
-But final.
+##### Sprint 1 :
 
-#### Sprint 1
+- [ ] Découvrir et me former en VBA *(Temps estimé : 4h)*
+- [ ] Définir le visuel et les fonctionnalités du rendu final *(Temps estimé : 1h)*
+- [ ] Ecrire une prmière version du code avec les éléments de base *(Temps estimé : 4h30)* 
+- [ ] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint *(Temps estimé : 30min)*
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+##### Sprint 2 :
 
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Définir les améliorations à implémenter *(Temps estimé : 1h)*
+- [ ] Améliorer et compléter l'outil avec les améliorations définies *(Temps estimé : 2h30)*
+- [ ] Appliquer les connaissances acquises lors du MON 1 avec une connexion API REST *(Temps estimé : 5h)* 
+- [ ] Documenter le projet et préparer la présentation finale *(Temps estimé : 1h30)*
 
 ### Horodatage
 

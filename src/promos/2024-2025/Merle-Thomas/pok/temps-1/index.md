@@ -16,17 +16,44 @@ tags:
   - 'JavaScript'
   - 'Dark Kitchen'
 
-résumé: Codage du FrontEnd du site de notre Dark Kitchen de Fried Rice
+résumé: "Codage du FrontEnd du site de notre Dark Kitchen de Fried Rice"
 ---
+{% prerequis %}
+**Niveau :** Basique
+**Pré-requis:**
+- Développement FrontEnd en HTML/CSS/JavaScript.
+- Méthode d'analyse du besoin client : définir l'expérience utilisateur.
+- Développement UI/UX.
+
+{% endprerequis %}
+{% lien %}
+
+Les lien utiles pour la compréhension de celui-ci.
+
+{% endlien %}
+
+Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+
+- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
+- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 # POK 1 - Asian Fried Rice - FrontEnd
-Codage en HTML et CSS
+Codage en HTML/CSS/JavaScript
 
-## Objectifs
+## Objectifs principaux
+
+1. Mise en oeuvre des connaissances acquises durant les MON1 et MON2.
+2. Mise en pratique de l'apprentissage des language HTML/CSS et JavaScript.
+3. Codage du FrontEnd de mon 1er site web de Dark Kitchen.
+4. Déployer les premières pages de mon site web. 
 
 
 ## Plan d'action
 
+   1. Apprentissage des bases des languages utilisés grâce à mes MONs. 
+   2. Définir les besoins utilisateurs à l'aide d'une méthode d'analyse de l'expérience utilisateur : définir les Users Stories.
+   3. Définir la structure du site web : nombre de pages, design et architecture, etc.
+   4. Codage du FrontEnd en HTML/CSS et JavaScript.
 
 ### Sprint 1
 - [ ] 

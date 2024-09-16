@@ -8,10 +8,24 @@ Auto-formation, cours et prés-requis pour le parcours do-it
 
 Pour installer et compiler le site, il suffit d'installer la version courante de [node](https://nodejs.org/en/download/current/) (attention, pas la version LTS qui est plus ancienne) (sous mac, utilisez <https://brew.sh> pour l'installation).
 
-Droits d'utilisation sous Windows :
+### Droits d'utilisation sous Windows :
 
 1. ouvrir un powershell en mode administrateur (clique droit sur powershell)
 2. `Set-ExecutionPolicy RemoteSigned`
+
+### Eviter les problèmes liés à OneDrive :
+
+La sauvegarde des documents sur Onedrive peut être problématique. Il est préférable de placer les documents Github en local :
+- Ouvrir l'explorateur de fichiers
+- Cliquer sur Ce PC > OS (C:) > Utilisater > Dossier utilisateur
+- Choisir un emplacement hors OneDrive.
+
+#### Remarque - Si vous voulez supprimer la synchronisation OneDrive :
+- Cliquer que le raccourcis OneDrive en bas à droite de la barre de tâche.
+- Ouvrez les paramètres.
+- Supprimer la relation avec OneDrive
+- Ouvrez l'explorateur de fichier : Ce PC > OS (C:) > Utilisater > Dossier utilisateur > OneDrive
+- Déplacer les éléments présents dans ce dossier dans le dossier OS (C:)
 
 ## Compiler le site et le voir
 
