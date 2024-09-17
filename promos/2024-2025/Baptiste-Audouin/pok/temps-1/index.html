@@ -143,12 +143,11 @@
 <p>J'aimerai à travers se POK me former au langage VBA qui est très souvent utilisé en entreprise.<br>
 En mise en application j'aimerai créer un outil permettant aux commerciaux d'une entreprise de calculer les coûts de leurs déplacements afin de créer des notes de frais.</p>
 <h2>Tâches</h2>
-<h3>Sprints</h3>
 <h5>Sprint 1 :</h5>
 <ul>
 <li>[ ] Découvrir et me former en VBA <em>(Temps estimé : 4h)</em></li>
 <li>[ ] Définir le visuel et les fonctionnalités du rendu final <em>(Temps estimé : 1h)</em></li>
-<li>[ ] Ecrire une prmière version du code avec les éléments de base <em>(Temps estimé : 4h30)</em></li>
+<li>[ ] Ecrire une première version du code avec les éléments de base <em>(Temps estimé : 2h30)</em></li>
 <li>[ ] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint <em>(Temps estimé : 30min)</em></li>
 </ul>
 <h5>Sprint 2 :</h5>
@@ -158,28 +157,114 @@ En mise en application j'aimerai créer un outil permettant aux commerciaux d'un
 <li>[ ] Appliquer les connaissances acquises lors du MON 1 avec une connexion API REST <em>(Temps estimé : 5h)</em></li>
 <li>[ ] Documenter le projet et préparer la présentation finale <em>(Temps estimé : 1h30)</em></li>
 </ul>
-<h3>Horodatage</h3>
-<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Heures passées</th>
-<th>Indications</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mardi 27/08</td>
-<td>1H</td>
-<td>Travail sur la trame du site</td>
-</tr>
-</tbody>
-</table>
-<h2>Contenu</h2>
-<p>Le contenu du POK.</p>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
+<h2>Premier Sprint : découverte de VBA et première version de l'outil</h2>
+<h3>Tâches effectuées  :</h3>
+<p>Dans ce premier sprint j'ai pu réaliser toutes les tâches prévues pour une durée d'environ dix heures :</p>
+<ul>
+<li>[x] Découvrir et me former en VBA <em>4h vs 4h prévues</em></li>
+<li>[x] Définir le visuel et les fonctionnalités du rendu final <em>(2h vs 1h prévue)</em></li>
+<li>[x] Ecrire une première version du code avec les éléments de base <em>(1h30 vs 2h30 prévues)</em></li>
+<li>[x] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint <em>(45 min vs 30 min prévues)</em></li>
+</ul>
+<h3>1. Formation VBA</h3>
+<p>J'ai commencé ce sprint par me documenter et me former en VBA. J'avais déjà utilisé des fichiers Excel avec des macro mais sans coder et apprendre ce langage. J'ai donc suivi les cours du site <a href="https://excel-pratique.com">Excel pratique</a> sur les <a href="https://excel-pratique.com/fr/vba/variables">variables</a>, les <a href="https://excel-pratique.com/fr/vba/boucles">boucles</a> mais aussi sur les <a href="https://excel-pratique.com/fr/formation/creation_userform">UserForm</a> avant de découvrir que ceux-ci n'étaient pas disponible sur mac...</p>
+<h3>2. Définitions des fonctionnalités de la premiere version</h3>
+<p>Voici les différents points que j'ai retenu durant cette seconde tâche pour définir les premières fonctionnalités :</p>
+<ul>
+<li>Formulaire avec les champs nom, prénom, date, ville de départ, ville d'arrivée, véhicule.</li>
+<li>Utilisation de deux bases de données :
+<ul>
+<li>Véhicules : utilisation de cette <a href="https://voiture.car2db.com">base de données</a> qui permet de répertorier plus d'une centaine de véhicules avec leur type de carburant ainsi que leur consommation en vue des calcules de frais de déplacements.</li>
+<li>Villes de France avec les coordonnées : utilisation des <a href="https://www.data.gouv.fr/fr/datasets/villes-de-france/#/resources">données</a> disponibles sur le site du gouvernement.</li>
+</ul>
+</li>
+</ul>
+<h3>3. Première version</h3>
+<p>La première version de l'outil utilise deux feuilles Excel, une feuille $Déplacement$ où l'utilisateur remplis ses déplacements et une seconde feuille $Récap$ qui récapitule tous les déplacements :</p>
+<div style="text-align: center;">
+  <img src="Deplacements-V1.png" alt="Déplacements V1" style="width: 300px; margin-right: 20px;">
+  <img src="Recap-V1.png" alt="Récap V1" style="width: 500px;">
+</div>
+<p>Le bouton fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.</p>
+<p>Voici une explication détaillée du code VBA en utilisant un format Markdown :</p>
+<p>Ce code est coposée d'une macro principale <code>new_drive</code> qui utilise également une autre macro que j'ai créé <code>add_empty_row</code>.</p>
+<h4><code>Sub add_empty_row()</code></h4>
+<p>Ce code ajoute une ligne vide en dessous de la dernière ligne non-vide dans le tableau de la feuille <code>Récap</code>.</p>
+<ul>
+<li><strong>Déclaration des variables</strong> :
+<ul>
+<li><code>ligne</code> est un entier long qui permet de parcourir les lignes de la feuille.</li>
+<li><code>feuille</code> est un objet représentant la feuille <code>Récap</code>.</li>
+<li><code>r_min</code> stocke la première ligne vide trouvée.</li>
+</ul>
+</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Dim</span> ligne <span class="token keyword">As</span> <span class="token keyword">Long</span>
+<span class="token keyword">Dim</span> feuille <span class="token keyword">As</span> Worksheet
+<span class="token keyword">Dim</span> r_min <span class="token keyword">As</span> <span class="token keyword">Long</span>
+<span class="token keyword">Set</span> feuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li><strong>Insertion d'une nouvelle ligne en bas de tableau'</strong> :<br>
+Le programme parcourt le tableau de la feuille <code>Récap</code> en cherchant le dernière ligne non-vide avant d'en ajouter une en dessous.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">For</span> ligne <span class="token operator">=</span> <span class="token number">3</span> <span class="token keyword">To</span> feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count
+    <span class="token keyword">If</span> IsEmpty<span class="token punctuation">(</span>feuille<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>ligne<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">)</span> <span class="token keyword">Then</span>
+        r_min <span class="token operator">=</span> ligne
+        <span class="token keyword">Exit</span> <span class="token keyword">For</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+<span class="token keyword">Next</span> ligne
+
+feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>r_min<span class="token punctuation">)</span><span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown<span class="token punctuation">,</span> CopyOrigin<span class="token punctuation">:</span><span class="token operator">=</span>xlFormatFromLeftOrAbove
+</code></pre>
+<h4><code>Sub new_drive()</code></h4>
+<p>Une fois la macro <code>add_empty_row</code> créée, on peut code la macro générale <code>new_drive</code>.</p>
+<ul>
+<li><strong>Définition des feuilles</strong> :<br>
+Les objets <code>sourceFeuille</code> et <code>destinationFeuille</code> sont assignés aux feuilles respectives.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Set</span> sourceFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Déplacements"</span><span class="token punctuation">)</span>
+<span class="token keyword">Set</span> destinationFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li><strong>Initialisation de la variable <code>ligne</code></strong> :<br>
+Le programme commence à chercher une ligne vide à partir de la ligne 5 dans la feuille <code>Récap</code>.<br>
+La procédure <code>add_empty_row</code> est appelée pour ajouter une ligne vide.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">ligne <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token keyword">Call</span> add_empty_row
+</code></pre>
+<ul>
+<li><strong>Boucle de recherche de la première ligne vide</strong> :<br>
+Cette boucle vérifie la colonne B à partir de la ligne 5 pour trouver la première cellule vide, puis stocke le numéro de cette ligne.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Do</span> <span class="token keyword">While</span> destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">""</span>
+    ligne <span class="token operator">=</span> ligne <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">Loop</span>
+</code></pre>
+<ul>
+<li><strong>Copie des valeurs</strong> :<br>
+Le programme copie les valeurs des cellules D6, D8, D10, etc. de la feuille <code>Déplacements</code> vers les colonnes B, C, D, etc. de la feuille <code>Récap</code>, à la ligne trouvée.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"c"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<ul>
+<li><strong>Nettoyage des données sources</strong> :<br>
+Après avoir copié les données, le contenu des cellules D6, D8, D10, etc. de la feuille <code>Déplacements</code> est effacé pour les préparer à de nouvelles entrées.</li>
+</ul>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>Ainsi, cette macro permet d'envoyer les informations du formulaire dans le tableau récapitulatif.</p>
+<h3>4. Améliorations pour le second sprint</h3>
+<p>Comme prévue lors de la définition des tâches de mon POK j'avais prévu un temps de relecture et de réflexion pour les futures améliorations envisagées dans le second sprint :</p>
+<p>** Revoir le visuel de l'outil<br>
+** Intégrer l'API google qui permet d'obtenir l'itinéraire et non la distance à vol d'oiseau<br>
+** Recherche d'une API pour avoir le prix du carburant actualisé<br>
+** Intégrer un envoie automatique de mail</p>
 
 
 </article>
