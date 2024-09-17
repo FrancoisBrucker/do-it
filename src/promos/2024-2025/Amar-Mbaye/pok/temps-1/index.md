@@ -61,8 +61,8 @@ Ce sprint est dédié à l'ajout de fonctionnalités permettant aux instructeurs
   - [ ] Intégrer un lecteur vidéo pour permettre aux étudiants de suivre des cours en ligne.
   - [ ] Créer des évaluations pour chaque cours avec un système de notation.
   - [ ] Générer des certificats après la réussite des évaluations.
-  - [ ] Intégrer un système de paiement en ligne (ex : Stripe, PayPal) pour l'accès aux cours et certifications.
- *** Étude post-mortem : *** Évaluer la fluidité de la gestion des cours, le processus de paiement et la génération de certificats. Ajuster les problèmes liés à l'expérience utilisateur ou à la gestion des données.
+  - [ ] Intégrer un système de paiement.
+ ***Étude post-mortem :*** Évaluer la fluidité de la gestion des cours, le processus de paiement et la génération de certificats. Ajuster les problèmes liés à l'expérience utilisateur ou à la gestion des données.
 
 
 ### Horodatage
