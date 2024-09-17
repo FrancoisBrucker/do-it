@@ -374,7 +374,7 @@ describe("About Objects", function () {
 
 Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel : 
 
-![Tests js-koans](https://file%2B.vscode-resource.vscode-cdn.net/Users/macbookthomas/Documents/GitHub/do-it/src/promos/2024-2025/Merle-Thomas/mon/temps-1.2/test%20js-koans.png?version%3D1726510427085)
+![Tests js-koans](./Users/macbookthomas/Documents/GitHub/do-it/src/promos/2024-2025/Merle-Thomas/mon/temps-1.2/test%20js-koans.png)
 
 ## Horodateur
 
