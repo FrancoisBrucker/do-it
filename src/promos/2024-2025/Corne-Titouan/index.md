@@ -40,4 +40,4 @@ J'ai choisi d'intégrer Do-It car je suis attiré par l'informatique, et je souh
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Notre Projet](../../../projets/2024-2025/EH-JK-LP-TC)
