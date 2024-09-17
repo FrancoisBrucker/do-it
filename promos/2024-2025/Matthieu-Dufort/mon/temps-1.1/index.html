@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Le rattrapge de donnée consiste à corriger les données existantes d'une base afin de les aligner sur un format commun. Pour cela on utilise beaucoup Excel. Le but de se MON va être d'apprendre et de découvrir des formules Excels pour corriger des données.
+                Le rattrapage de données consiste à corriger les données existantes d'une base afin de les aligner sur un format commun. Pour cela, on utilise beaucoup Excel. Le but de ce MOOC sera d'apprendre et de découvrir des formules Excel pour corriger des données.
 
         </p>
 
@@ -142,19 +142,148 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Connaitre les bases d'Excel.</p>
+<p>Connaitre les bases d'Excel et les formules standards.</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li><a href="https://fr.excel-translator.de/fonctions/">Traduction des formules Excel</a></li>
+<li><a href="../BaseDeDonnees.xlsx">Fichier Excel utilisé dans ce MON</a></li>
+</ul>
 </div></div>
 
-<p>Dans ce MON je vais utiliser des formules Excel pour mettre en forme une base de données que j'aurais au préalable volontairement mal rempli en m'inspirant de ce que l'on peut retrouver dans une base réel.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<p>Dans ce MOOC, je vais utiliser des formules Excel pour mettre en forme une base de données que j'aurai au préalable volontairement mal remplie, en m'inspirant de ce que l'on peut retrouver dans une base réelle.</p>
+<h2>Introduction</h2>
+<p>Lorsqu'une base de données présente de nombreux formats différents pour un seul et unique champ, cela perturbe l'analyse de données. Pour éviter cela, il est fréquent d'imposer un formatage avec des règles de validation ou des listes de choix imposés. Cependant, il arrive fréquemment que certaines de ces règles ne soient pas conçues dès le début, car on peut de temps en temps oublier à quel point une réponse d'un utilisateur peut varier par rapport à un autre. Et, une fois que l'on ajoute ces règles, il faut alors corriger l'ancienne data. C'est ce que nous allons faire dans ce MOOC à l'aide d'Excel.</p>
+<p>Pour cela, nous allons tout d'abord créer une base de données qui ne suivra aucune bonne pratique. Puis, nous alignerons toutes les données sur des formats communs en travaillant sur des formules Excel que nous expliquerons.</p>
+<h2>Constitution d'une base de données non formatées</h2>
+<p>Nous allons partir d'une base présentant des données standard d'un utilisateur avec comme clé primaire l'email de l'utilisateur (un email étant forcément synonyme d'unicité).</p>
+<p>Pour la constitution de cette base de données, j'ai choisi de commencer par demander à ChatGPT un exemple de ce que pourrait donner une base sans aucune contrainte de remplissage. Pour cela, j'ai utilisé le prompt suivant :</p>
+<p><em>Can you fill this data base with french information that could be not well formatted like a wrong email or different phone number format etc. The data base use this fields and there is for now no rules on how to fill it : Name, Surname, email, phone number, phone number 2, Street number,	Street, City, Postal Code, Country, Birth date,	City of Birth, Nationality</em></p>
+<p>Je suis ensuite parti de sa réponse en corrigeant légèrement certaine abération afin d'aboutir à ceci :</p>
+<p><img src="../Picture1.png" alt="image de la base de données non formatées"></p>
+<p>On peut bien observer sur cette base que certains emails sont faux et ne peuvent pas marcher. Les numéros de téléphone ont absolument tous les formats possibles et imaginables, tout comme les dates de naissance. Certains champs ne sont pas remplis et l'information se trouve ailleurs. Il faut donc remettre tout cela en ordre afin de pouvoir faire du reporting efficace. Mais, avant cela, il faut faire en sorte que ce genre d'erreurs ne se reproduise pas en mettant des règles en place.</p>
+<h2>Les nouvelles règles sur la base</h2>
+<p>En suivant les bonnes pratiques que l'on retrouve dans le  <a href="/do-it/do-it/2024-2025/Matthieu-Dufort/pok/temps-1">POK 1</a>, nous allons fixer des règles pour chacun des objets.</p>
+<p>En premier, pour <strong>l'adresse email</strong>, nous allons fixer une règle de validation d'adresse email en vérifiant le format <em>---@---.---</em></p>
+<p>Puis, pour les <strong>numéros de téléphone</strong>, nous allons rajouter une règle sur le format en s'alignant sur un format fixe de la forme <em>XX........</em> ; de sorte que les XX reprennent les numéros d'identification du pays et ensuite on ajoute sans espace la suite de chiffre.</p>
+<p>Pour le <strong>code Postal</strong> et <strong>la nationalité</strong>, nous le remplaçons par une <em>liste de choix</em> permettant l'homogénéité. La ville peut ensuite être déduite du code postal afin de proposer un auto-remplissage. Elle pourra ensuite être modifiée en cas de besoin.</p>
+<p>Pour la <strong>rue</strong>, il est difficile de confirmer que l'adresse existe vraiment. On peut donc envisager, afin de réduire au maximum les erreurs potentielles, de se connecter à <em>l'API de google maps</em> afin de donner la possibilité à l'utilisateur de rechercher son adresse pour remplir tous les champs automatiquement.</p>
+<p>Enfin, nous allons forcer le formatage de la <strong>date</strong> au format <em>jj/mm/aaaa</em>.</p>
+<p>Grâce à ces nouvelles règles en place, nous pouvons maintenant être sûrs que la donnée sera remplie au mieux, et il est donc temps de corriger l'ancienne donnée grâce à Excel.</p>
+<h2>Nettoyage et allignement des données</h2>
+<p>Pour aligner les données, il est possible d'utiliser Excel avec des formules de niveau intérmédiaire.</p>
+<h3>L'email</h3>
+<p>Tout d'abord l'email étant l'élément essentiel de la base, nous allons supprimer tous les emails qui ont des formats non conforme. Pour cela, il faut d'abord vérifier que chaque email a au moins un &quot;<em>.</em>&quot; après &quot;@&quot; et uniquement un &quot;<em>@</em>&quot;. Nous allons combiner plusieurs fonctions :</p>
+<ul>
+<li>
+<p>Fonction <strong>MID</strong> (STXT) :</p>
+<ul>
+<li><em>Format</em> : MID(Texte sur lequel on travail,numéro de caractère où commencer l'extraction, Nombre de caractères à extraire)</li>
+<li><em>Réponse</em> : La partie de texte extraite sur une longueur du nombre de caractères rentré en paramètre</li>
+</ul>
+</li>
+<li>
+<p>Fonction <strong>SEARCH</strong> (CHERCHE) :</p>
+<ul>
+<li><em>Format</em> : SEARCH(&quot;texte à trouver&quot; ; Ou le chercher)</li>
+<li><em>Réponse</em> : Position du premier caractère à trouver qui est trouvé (premier caractère du texte = 1) ; Renvoie une erreur si le caractère n'est pas dans la liste</li>
+</ul>
+</li>
+<li>
+<p>Fonction <strong>ISNUMBER</strong> (ESTNUM) :</p>
+<ul>
+<li><em>Format</em> : ISNUMBER(Test logique, valeur si c'est un nombre, valeur sinon)</li>
+<li><em>Réponse</em> : Retourne les valeurs choisies en fonction de ce qu'on a mis en paramètre de la fonction</li>
+</ul>
+</li>
+</ul>
+<p>La fonction <strong>MID</strong> va nous permettre d'extraire tous les caractères trouvés après le premier @ (ou une erreur s'il n'y en a pas). Pour cela nous allons la combiner avec la fonction <strong>SEARCH</strong>. Puis nous allons verifier dans cette extraction qu'il n'y a plus de @ et qu'il y a bien un point en utilisant la fonction <strong>IF</strong> (Si), <strong>NOT</strong> (NON), et <strong>AND</strong> (ET) pour faire nos tests de logique ainsi que <strong>LEN</strong>.</p>
+<p>Cela donne :</p>
+<pre><code>=MID(C2; SEARCH(&quot;@&quot;;C2)+1; LEN(C2) - SEARCH(&quot;@&quot;;C2))
+</code></pre>
+<p>Pour réaliser l'extraction et on peut maintenant rajouter la logique en rentrant la formule précédente dans la colonne N :</p>
+<pre><code>=IF(AND(NOT(ISNUMBER(SEARCH(&quot;@&quot;;N2)));ISNUMBER(SEARCH(&quot;.&quot;;N2)));&quot;ok&quot;;&quot;Wrong&quot;)
+</code></pre>
+<p>Ce qui donne :</p>
+<p><img src="../Picture2.png" alt="Analyse de la base sur les emails"></p>
+<p>Et on peut donc maintenant supprimer tous ceux qui sont mauvais et passer à la suite.</p>
+<h3>Les numéros de téléphone</h3>
+<p>Pour s'aligner sur le format nouvellement imposé, nous allons commencer par supprimer tout ce qui n'est pas un chiffre. Puis, nous changerons les nombres en fonction des besoins restants.</p>
+<ul>
+<li>Fonction <strong>SUBSTITUTE</strong> (SUBSTITUE) :
+<ul>
+<li><em>Format</em> : SUBSTITUTE(&quot;texte sur lequel on travaille&quot; ; &quot;ancienne valeur à remplacer&quot; ; &quot;Nouvelle Valeur&quot;)</li>
+<li><em>Réponse</em> : Texte sur lequel on travaille avec la nouvelle valeur à la place de l'ancienne.</li>
+</ul>
+</li>
+</ul>
+<p>On fait donc :</p>
+<pre><code>=SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(D2;&quot; &quot;;&quot;&quot;);&quot;+&quot;;&quot;&quot;);&quot;.&quot;;&quot;&quot;);&quot;-&quot;;&quot;&quot;);&quot;(&quot;;&quot;&quot;);&quot;)&quot;;&quot;&quot;)
+</code></pre>
+<p>On combine ensuite, en fonction de la longueur de la chaîne, des fonctions logiques et des fonctions qui récupèrent une partie des caractères :</p>
+<ul>
+<li>Fonction <strong>RIGHT</strong> (DROITE) :
+<ul>
+<li><em>Format</em> : RIGHT(&quot;texte sur lequel on travaille&quot; ; &quot;Nombre de caractères à récupérer en partant de la droite&quot;)</li>
+<li><em>Réponse</em> : Nombre de caractères choisis sur le texte indiqué en partant de la droite</li>
+</ul>
+</li>
+<li>Fonction <strong>TEXT</strong> (TEXT) :
+<ul>
+<li><em>Format</em> : TEXT(&quot;champ à transformer au format texte&quot; ; &quot;format du texte voulue&quot;)</li>
+<li><em>Réponse</em> : Le champ sous forme de texte au format souhaité</li>
+</ul>
+</li>
+</ul>
+<pre><code>=IF(LEN(N2)=11;N2;IF(LEN(N2)=10;&quot;33&quot; &amp; TEXT(RIGHT(N2;9);&quot;0&quot;);&quot;33&quot; &amp; N2))
+</code></pre>
+<p>Et on obtient :</p>
+<p><img src="../Picture3.png" alt="Analyse de la base sur les emails"></p>
+<p>On applique ceci au numéro 2 aussi pour passer ensuite au numéro de rue et à l'adresse.</p>
+<h3>Adresse</h3>
+<p>Pour l'adresse, comme observé dans les règles précédemment, on ne peut que fixer le choix du code postal. Nous allons donc aligner les codes postaux. Pour cela, nous réutilisons uniquement des fonctions vues précédemment de la façon suivante :</p>
+<pre><code>=IF(LEN(I2)=4;&quot;0&quot;&amp;TEXT(I2;&quot;0&quot;);IF(LEN(I2)=2;TEXT(I2;&quot;0&quot;)&amp;&quot;000&quot;;I2))
+</code></pre>
+<p>Et cela donne :</p>
+<p><img src="../Picture4.png" alt="Analyse de la base sur l'adresse"></p>
+<h3>Nationalité</h3>
+<p>Pour la nationalité, nous allons homogénéiser en passant par une liste de choix avec les abréviations des pays.</p>
+<pre><code>=IF(LEFT(M2;4)=&quot;Fran&quot;;&quot;FR&quot;; &quot;Other&quot;)
+</code></pre>
+<p><img src="../Picture5.png" alt="Analyse de la base sur la nationalité"></p>
+<h3>Date de naissance</h3>
+<p>Pour la date de naissance, il suffit de substituer tout ce qui n'est pas un chiffre par un / afin d'obtenir le format voulu. On utilise donc la fonction <strong>SUBSTITUTE</strong></p>
+<pre><code>=IF(ISNUMBER(SEARCH(&quot;/&quot;;TEXT(K2; &quot;jj/mm/aaaa&quot;)))=TRUE;TEXT(K2;&quot;jj/mm/aaaa&quot;);SUBSTITUTE(SUBSTITUTE(K2;&quot;.&quot;;&quot;/&quot;);&quot;-&quot;;&quot;/&quot;))
+</code></pre>
+<p><img src="../Picture6.png" alt="Analyse de la base sur la date de naissance"></p>
+<p>Et on obtient alors une base de données propre et alignée sur les nouveaux critères afin de repartir sur de bonnes bases pour faire du reporting.</p>
+<h2>Bonus : Doublon</h2>
+<p>En base de données, il y a souvent des doublons. Pour traiter cela dans Excel, on utilise une fonction très pratique :</p>
+<ul>
+<li>Fonction <strong>VLOOKUP</strong> (RECHERCHEV) :
+<ul>
+<li><em>Format</em> : VLOOKUP(&quot;Valeur recherché&quot;; Endroit ou chercher la valeur ; L'indexe de la colonne à retourner, Le type de ressemblance)
+<ul>
+<li>La valeur recherchée correspond à la cellule sur le test du doublon.</li>
+<li>L'endroit où chercher est une matrice ; cependant, Excel ne cherchera que dans la première colonne de la matrice. Le fait d'utiliser une matrice permet uniquement d'afficher différentes valeurs si un doublon est trouvé.</li>
+<li>L'index correspond au numéro de la colonne de la matrice dont on veut retourner la valeur. Si on cherche uniquement sur une colonne simple et qu'on veut retourner la valeur de cette colonne, cela sera <em>1</em>.</li>
+<li>Le type de ressemblance peut être TRUE ou FALSE : FALSE pour une ressemblance exacte et TRUE pour une ressemblance approximative (si aucune ressemblance n'est trouvée, Excel retourne la valeur d'en dessous ; il faut donc bien ordonner la première colonne pour faire ce type de ressemblance).</li>
+</ul>
+</li>
+<li><em>Réponse</em> : Retourne la valeur de la colonne choisie en paramètre 3 en fonction du match en paramètre 1.</li>
+</ul>
+</li>
+</ul>
+<p>Exemple :</p>
+<pre><code>=VLOOKUP(C2;C3:C10;1;FALSE)
+</code></pre>
+<p>Ce qui donne :<br>
+<img src="../Picture7.png" alt="Analyse de la base sur les doublons"></p>
+<p>Il ne reste plus ensuite qu'a combiner les informations des doublons pour les supprimer.</p>
 
 
 </article>
