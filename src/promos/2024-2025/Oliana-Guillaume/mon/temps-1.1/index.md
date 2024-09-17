@@ -472,10 +472,230 @@ Exemple de Media Query pour les écrans de moins de 768 pixels :
 }
 ```
 
-Explication des propriétés utilisées :
-
 `@media (max-width: 768px)` : S'applique lorsque la largeur de l'écran est inférieure ou égale à 768px.
 
 `flex-direction: column` : Transforme les éléments de la section .services en colonnes sur les petits écrans pour une meilleure lisibilité.
 
+## 6. Ajouter des interactions CSS (1h)
 
+### Introduction aux Pseudo-classes
+
+Les **pseudo-classes** permettent d'appliquer des styles spécifiques à un élément en fonction de son état (survol, sélection, etc.), ajoutant ainsi de l'interactivité à la page.
+
+### Pseudo-classes principales :
+- **`:hover`** : Appliqué lorsqu'un élément est survolé avec la souris.
+- **`:focus`** : Appliqué lorsqu'un élément, comme un champ de formulaire, est sélectionné.
+
+### Exemple d'interaction avec `:hover`
+
+Voici comment ajouter des effets au survol des liens de navigation et des services :
+
+#### CSS :
+```css
+/* Effet au survol des liens de navigation */
+nav ul li a:hover {
+  color: #ffcc00; /* Change la couleur du lien au survol */
+  text-decoration: underline;
+}
+
+/* Effet au survol des services */
+.service:hover {
+  background-color: #e0e0e0; /* Change la couleur de fond au survol */
+  transform: scale(1.05); /* Agrandit légèrement l'élément */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide */
+}
+
+```
+
+- `:hover sur les liens` : Change la couleur et ajoute un soulignement au survol.
+
+- `:hover sur les services` : L'élément grandit légèrement et change de couleur de fond au survol grâce à transform et transition pour une animation fluide.
+
+
+## 7. Projet final : Créer une page complète (1h30)
+
+### Objectif
+
+Le but de cette dernière partie est de combiner tout ce que nous avons appris pour créer une page web complète, interactive et responsive. Nous allons utiliser **HTML** et **CSS** pour structurer et styliser la page, en s'assurant qu'elle soit fonctionnelle sur tous types d'appareils (ordinateurs, tablettes, mobiles).
+
+### Étapes :
+
+1. **Structure HTML** :
+   - Utiliser les balises sémantiques telles que `<header>`, `<nav>`, `<section>`, et `<footer>`.
+   - Ajouter une section avec des services ou informations à mettre en valeur.
+
+2. **Application des styles CSS** :
+   - Utiliser **Flexbox** pour la mise en page, en particulier pour les sections à plusieurs colonnes.
+   - Ajouter des **Media Queries** pour rendre la page responsive, en s'assurant qu'elle soit lisible sur petits écrans.
+
+3. **Interactivité** :
+   - Ajouter des effets au survol (`:hover`) pour rendre la navigation plus dynamique.
+   - Utiliser des **transitions CSS** pour rendre les changements visuels plus fluides.
+
+### Projet final :
+
+#### HTML :
+```html
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Final</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Mon Projet Web</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h2>Bienvenue</h2>
+      <p>Voici la section d'accueil.</p>
+      <img src="image.png" alt="Une image illustrant la section d'accueil">
+    </section>
+
+    <section class="services">
+      <div class="service">
+        <h3>Service 1</h3>
+        <p>Description du service 1.</p>
+      </div>
+      <div class="service">
+        <h3>Service 2</h3>
+        <p>Description du service 2.</p>
+      </div>
+      <div class="service">
+        <h3>Service 3</h3>
+        <p>Description du service 3.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Contactez-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+    </footer>
+  </body>
+</html>
+
+```
+
+## CSS :
+```css
+
+
+/* Styles globaux */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* Section principale */
+section {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #333;
+}
+
+section p {
+  color: #555;
+}
+
+/* Section services avec Flexbox */
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.service {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 30%;
+  text-align: center;
+}
+
+.service:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+``
