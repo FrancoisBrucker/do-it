@@ -386,6 +386,6 @@ Le tout en **créant du lien** et sans s’impatienter sur une chaise au fond d�
 
 Bien sûr, ce temps n'est qu’une proposition et je ne sais pas en pratique à quel point ça fonctionnerait bien, d’où le tour de déclusion à la fin qui permet d’avoir un feedback et d’**améliorer ce temps pour l’année suivante**. Je suis très curieuse d’avoir l’avis des élèves et des profs sur cette proposition donc si vous avez lu jusque là hésitez pas à venir m’en parler !
 
-## 👍Conclusion de ce MON
+## 👍Conclusion de ce TRUC
 
 J’ai **adoré travailler sur ce sujet** et notamment sur le cas du temps pour Do_It ! J’espère que ça servira aux autres élèves et **n’hésitez pas à me poser des questions** sur le contenu de ce MON.
