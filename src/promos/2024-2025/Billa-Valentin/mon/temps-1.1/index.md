@@ -12,10 +12,9 @@ tags:
   - 'vert'  
   - 'avancé'
   - 'SQL'
----
 
-# MON 1.1 - SQL Avancé
-Apprentissage de fonctionnalités avancées SQL
+résumé: "Apprentissage de fonctionnalités avancées SQL"
+---
 
 ## Objectifs
 Ayant une attirance particulière pour le back, SQL me fait de l'œil !

@@ -11,9 +11,9 @@ tags:
   - "temps 1"
   - "HTML/CSS" 
   - "Beginner"
-  - "Basics""
+  - "Basics"
 
-résumé: "Un MON reprenant les bases du HTML et CSS
+résumé: "Un MON reprenant les bases du HTML et CSS"
 ---
 
 {% prerequis %}
