@@ -13,11 +13,6 @@ tags:
 résumé: "Ce MON vise à étudier les enjeux du déploiement d'un nouvel outil au sein d'une équipe : enjeux psychologiques, comportementaux, professionnels."
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.

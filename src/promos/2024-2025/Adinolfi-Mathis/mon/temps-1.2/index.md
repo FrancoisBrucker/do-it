@@ -1,32 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Impact énergétique des IA"
 authors:
   - ADINOLFI Mathis
 
-date: 1970-10-01
+date: 2024-16-09
 tags: 
-  - "temps 1"
+  - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Les intelligences artificielles occupent une place centrale et semblent être la solution à tous nos problèmes, même à ceux qui ne nécessitent pas leur emploi. Mais qu'en est-il de la consommation énergétique ? Dans quelle mesure l'implémentation de l'IA alourdit-elle notre facture d'énergie ? C'est à ces questions que je m'efforcerai de répondre dans ce MON."
 ---
-
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Contenu
 

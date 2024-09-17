@@ -6,7 +6,7 @@ authors:
   - Esther Henry
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par Esther Henry.
 
 - [MON 1.1](./temps-1.1)
 - [MON 1.2](./temps-1.2)
