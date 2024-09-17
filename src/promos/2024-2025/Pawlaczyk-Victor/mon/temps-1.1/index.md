@@ -9,6 +9,8 @@ date: 2024-09-14
 
 tags: 
   - "temps 1"
+  - "Vert"
+  - "VBA"
 
 résumé: "Découverte du langage VBA"
 ---
