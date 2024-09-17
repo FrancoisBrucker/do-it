@@ -28,7 +28,9 @@ résumé: "Codage du FrontEnd du site de notre Dark Kitchen de Fried Rice"
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[`W3School`](https://www.w3schools.com/js/default.asp)
+[`MON1: HTML/CSS`](https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/mon/temps-1.1/)
+[`MON2: JavaScript`](https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/mon/temps-1.2/)
 
 {% endlien %}
 
@@ -43,17 +45,18 @@ Codage en HTML/CSS/JavaScript
 ## Objectifs principaux
 
 1. Mise en oeuvre des connaissances acquises durant les MON1 et MON2.
-2. Mise en pratique de l'apprentissage des language HTML/CSS et JavaScript.
+2. Mise en pratique de l'apprentissage des languages HTML/CSS et JavaScript.
 3. Codage du FrontEnd de mon 1er site web de Dark Kitchen.
 4. Déployer les premières pages de mon site web. 
 
 
 ## Plan d'action
 
-   1. Apprentissage des bases des languages utilisés grâce à mes MONs. 
+   1. Apprentissage des bases des languages utilisés grâce à mes MONs: suivi de cours en ligne et tutoriels. 
    2. Définir les besoins utilisateurs à l'aide d'une méthode d'analyse de l'expérience utilisateur : définir les Users Stories.
    3. Définir la structure du site web : nombre de pages, design et architecture, etc.
-   4. Codage du FrontEnd en HTML/CSS et JavaScript.
+   4. Définir l'identité visuelle du site web.
+   5. Codage du FrontEnd en HTML/CSS et JavaScript.
 
 ### Sprint 1
 - [ ] 

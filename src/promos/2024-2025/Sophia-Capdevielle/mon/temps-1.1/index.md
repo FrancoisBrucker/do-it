@@ -1,34 +1,27 @@
 ---
 layout: layout/mon.njk
 
-title: "Les applications de productivité"
+title: "Bases du front et du framework Vue"
 authors:
   - Sophia Capdevielle
 
-date: 1970-09-01
+date: 2024-09-18
 
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON pose les bases du front-end et notamment du framework Vue."
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Pas de prérequis
 
 {% endprerequis %}
-{% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+Ce MON pose les bases du font-end: HTML, CSS, JavaScript (un peu) et présente un framework: Vue.js; le tout permettant de créer des sites internets interactifs. 
 
-{% endlien %}
+## Bases du front-end 
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+### HTML
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
-## Contenu
-
-Le contenu du MON.

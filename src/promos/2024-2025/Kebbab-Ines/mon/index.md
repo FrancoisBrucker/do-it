@@ -6,11 +6,16 @@ authors:
   - Inès Kebbab
 ---
 
-Ensemble des MON réalisés par Inès Kebbab.
+Découvrez l'ensemble des MON réalisés par Inès Kebbab. 🐣
 
-- [MON 1.1](./temps-1.1)
-- [MON 1.2](./temps-1.2)
+## Temps 1 : Transformations et enjeux socio-environnementaux
+- [MON 1.1 Handicap ou pas cap : créer une UI inclusive ✅](./temps-1.1)
+- [MON 1.2 La Théorie du Donut : comment rendre digeste une transformation durable des organisations ? 🌱](./temps-1.2)
+
+## Temps 2 : Systèmes d'informations et transformations pédagogiques
 - [MON 2.1](./temps-2.1)
 - [MON 2.2](./temps-2.2)
+
+## Temps 3 : Viser la polyvalence
 - [MON 3.1](./temps-3.1)
 - [MON 3.2](./temps-3.2)

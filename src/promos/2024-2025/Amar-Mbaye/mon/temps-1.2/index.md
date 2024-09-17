@@ -1,32 +1,34 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "React dans Laravel"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024-12-09
+date: 2024-16-09
 tags: 
-  - "temps 1"
+  - "développement web"
+  - "React"
+  - "Laravel"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON traitant de l'intégration de React dans Laravel ."
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+- Avoir des connaissances de base en Laravel.
+- Comprendre les bases de React .
+- Avoir Node.js et npm installés sur votre machine.
 
 {% endprerequis %}
 {% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
+Les lien utiles pour la compréhension de celui-ci: 
+[Documentation officielle Laravel](https://laravel.com/docs/10.x)
+[Introduction à React](https://legacy.reactjs.org/docs/getting-started.html)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Ce MON explique comment intégrer React dans un projet Laravel pour utiliser React dans l'interface utilisateur tout en gardant Laravel comme back-end. Vous vais apprendre à configurer un projet Laravel pour qu'il fonctionne avec React, Je vais aussi appliquer ce que j'ai appris lors de mon MON 1 sur React.
 
 ## Contenu
 
