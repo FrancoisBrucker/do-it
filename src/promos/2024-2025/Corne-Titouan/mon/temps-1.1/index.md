@@ -193,3 +193,12 @@ J'ai également ajouté du code javascript pour pouvoir afficher des information
 Lorsqu'on zoome vers Sydney et qu'on clique sur le point le plus à l'ouest (Lithgow), on obtient ceci :
 
 ![Australie zoom sur Sydney](./img/cartevf2.png) *Capture d'écran personnelle*
+
+## Sources utiles
+
+{% lien %}
+
+- [GitHub de données GeoJson pour l'Australie](https://github.com/tonywr71/GeoJson-Data)
+- [Site d'OpenLayers](https://openlayers.org/)
+
+{% endlien %}

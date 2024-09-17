@@ -18,7 +18,7 @@ résumé: "Introduction au VBA et utilisation des macro pour des tâches chronop
 Aucun prérequis
 
 {% endprerequis %}
-{% lien %}Ò
+{% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
@@ -74,7 +74,7 @@ End Sub
 ```
 La boîte de dialogue de confirmation qui s'affiche est alors la suivante :
 
-![alt text](<Capture d’écran 2024-09-11 à 14.39.07.png>)
+![alt text](Images/BoiteDeDialogue.png)
 
 #### InputBox (Texte, Titre, Valeur par défaut)
 Cette fonction permet de demander à l'utilisateur de rentrer une valeur dans la boîte de dialogue. Ainsi, le code suivant demande à l'utilisateur de rentrer son nom, avec comme valeur par défaut "NOM", puis affiche le message "Welcome Nom!" :
@@ -87,7 +87,7 @@ Sub exemple()
     MsgBox "Welcome " & resultat & "!"
 End Sub
 ```
-![alt text](<Capture d’écran 2024-09-11 à 14.58.28.png>)
+![alt text](Images/DemandeEntree.png)
 
 ### Utilisation de variables
 
@@ -208,8 +208,6 @@ La base donnée servant d'imput comprend 4 colonnes, contenant dans l'ordre les 
 
 Pour cet exemple, la base de données contient 100 étudiants.
 
-![alt text](<Capture d’écran 2024-09-13 à 17.55.44.png>)
-
 ### Objectif
 L'objectif est d'automatiser un certain nombre d'actions : 
 + Création de l'adresse mail de chaque étudiant comprenant son nomn son prénom et son école
@@ -267,11 +265,11 @@ Les résultats obtenus après avoir exécuté la macro sont les suivants :
 
 *Création des adresses mail*
 
-![Création des adresses mail](<Capture d’écran 2024-09-13 à 17.58.52-1.png>)
+![alt text](Images/AdressesMails.png)
 
 *Extraction des centraliens de Marseille*
 
-![alt text](<Capture d’écran 2024-09-13 à 17.59.08.png>)
+![alt text](Images/ElevesECM.png)
 
 ### Pistes d'amélioration
 Il est possible d'améliorer le code suivant avec les éléments suivants :

@@ -1,12 +1,12 @@
 ---
 layout: layout/pok-index.njk
 
-title: "POK de Gordon Zola"
+title: "POK de Guillaume OLIANA"
 authors:
-  - Gordon Zola
+  - OLIANA Guillaume
 ---
 
-Ensemble des POK réalisés par Gordon Zola.
+Ensemble des POK réalisés par Guillaume OLIANA.
 
 - [POK 1](./temps-1)
 - [POK 2](./temps-2)
