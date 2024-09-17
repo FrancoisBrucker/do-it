@@ -125,6 +125,8 @@ Comment passer de ça :
 
 ![illustration](exemple-graphes.png)
 
+(1)
+
 Je me suis appuyée sur cette [vidéo](https://www.youtube.com/watch?v=IM-r9lEZciM&t=80s) qui m'a bien introduite aux rouages de cette approche, puis j'ai voulu illustrer avec mes propres exemples. Pour cela j'ai utilisé la plateforme web [Visme](https://www.visme.co/fr/) que j'ai découvert en cherchant des outils gratuits pour la DataViz, ce qui m'a permis de pratiquer un peu.
 
 #### 1. Aller à l'essentiel, faire simple
@@ -263,7 +265,7 @@ Sur une même présentation de données, les personnes peuvent avoir plusieurs a
 
 - [EDHEC](https://online.edhec.edu/fr/blog/dataviz-et-data-storytelling/)
 
-- [Data pour tous](https://datapourtous.fr/comprendre-le-data-storytelling-par-lexemple/)
+- [Data pour tous](https://datapourtous.fr/comprendre-le-data-storytelling-par-lexemple/) (1)
 
 - [Think with Google](https://www.thinkwithgoogle.com/intl/fr-fr/strategies-marketing/donnees-et-mesure/raconter-une-histoire-pertinente-a-laide-des-donnees/)
 
