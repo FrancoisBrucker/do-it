@@ -39,7 +39,7 @@ L'objectif de ce POK est de comprendre le processus de transformation agile d'un
 
 ### Sprint 1
 
-- [ ] Étude du processus des transformations agiles
+- [ ] Définir le processus des transformations agiles
 - [ ] Compréhension des enjeux d'une telle transformation et de l'impact selon la taille de l'entreprise
 - [ ] Rédaction de la partie théorique et bibliographie
 - [ ] Étude de cas : Spotify, un modèle de l'agile à grande échelle

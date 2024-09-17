@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Étude statistique des Pokemon avec Excel : outis Excel pour analyser des données"
+title: "Étude statistique des Pokémons avec les outils Excel"
 
 authors:
   - Lola Perdrix
@@ -10,10 +10,11 @@ date: 2024-09-09
 
 tags:
   - "temps 1"
-  - "pok"
   - "Excel"
+  - "vert"
+  - "données"
 
-résumé: "Prise en main des outils d'Excel pour la gestion et l'analyse d'un dataset à travers la réalisation d'un rapport d'analyse statistique complet sur les Pokemon"
+résumé: "Prise en main des outils d'Excel pour la gestion et l'analyse d'un dataset à travers la réalisation d'un rapport d'analyse statistique complet sur les Pokémons"
 
 ---
 
@@ -25,56 +26,55 @@ Prérequis : Quelques bases d'Excel
 
 {% lien %}
 
-[Maîtrisez les fondamentaux d'Excel](https://openclassrooms.com/fr/courses/7168336-maitrisez-les-fondamentaux-dexcel)
+- MON de Lola Bourdon : [Excel - repartir sur de bonnes bases](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-1.2/)
+- OpenClassrooms : [Maîtrisez les fondamentaux d'Excel](https://openclassrooms.com/fr/courses/7168336-maitrisez-les-fondamentaux-dexcel)
 
 {% endlien %}
 
-## Objectifs
+## Objectif
 
-L'objectif est de prendre en main les outils mis à disposition par Excel pour étudier une base de données et faire de la data visualisation. Pour cela je souhaite étudier des jeux de données sur les caractéristiques des différents Pokemon afin d'aboutir in fine à un dashboard clair et bien réalisé permettant de tout savoir sur les Pokemon et mettre en lumière les différentes tendances.
+L'objectif est de prendre en main les outils mis à disposition par Excel pour étudier une base de données, de sa structuration à sa visualisation. Pour cela, je souhaite réaliser une étude statistique complète à partir de datasets sur les Pokémons, l'objectif final étant de produire un rapport descriptif complet sous Excel en utilisant au maximum les outils Excel disponibles.
 
 ## Tâches
 
 ### Sprint 1
 
-- [x] Téléchargement et import de mon data set dans Excel (estimé 10 min, réalisé 10 min)
-- [x] Recherche documentaire sur les fonctionnalités d'Excel qui vont m'être utiles, choix des sources, Apprentissage théorique (estimé 2h, réalisé 1h30)
+- [x] Téléchargement et import de mon dataset dans Excel (estimé 10min, réalisé 10min)
+- [x] Recherche documentaire sur les fonctionnalités d'Excel qui vont m'être utiles, choix des sources, apprentissage théorique (estimé 2h, réalisé 1h30)
 - [x] Mise en forme et nettoyage des données (estimé 1h, réalisation 4h30)
-- [x] Définition de problématiques / questions cibles (estimé 30 min, réalisation 15min)
-- [x] Analyse pour la première génération, réponse à chaque problématique (estimé 4h, réalisation 2h30)
+- [x] Définition de problématiques / questions cibles (estimé 30min, réalisation 15min)
+- [x] Analyse de la première génération, réponse à chaque question définie (estimé 4h, réalisation 2h30)
 - [ ] Visualisation des résultats en comparant les différents outils (estimé 2h30, pas réalisé)
 
 ### Sprint 2
 
 - [ ] Apprentissage VBA
-- [ ] Macros répétant l'analyse pour les autres générations
+- [ ] Macro répétant l'analyse pour les autres générations
 - [ ] Réaliser le rapport final
 - [ ] Étudier des techniques avancées pour embellir le tout
-- [ ] Tester d'autres dataset en étudiant l'adaptabilité
+- [ ] Tester d'autres datasets en étudiant l'adaptabilité
 - [ ] Comparer avec d'autres logiciels
 
 à réajuster à la fin du 1er sprint
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
-
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Jeudi 12/09 matin | 15 min  | Téléchargement des datasets |
-| Jeudi 12/09 aprem | 1h30 | Import dataset, OpenClassroom, exploration des fonctions directement via excel |
+| Jeudi 12/09 aprem | 1h30 | Import des datasets, OpenClassroom, exploration des fonctions Excel |
 | | 3h30 | Préparation du dataset |
-| Vendredi 13/09 aprem | 1h | Fin de la préparation du Dataset |
-| Dimanche 15/09 aprem | 15 min | Réfléchir aux questions cibles|
+| Vendredi 13/09 aprem | 1h | Fin de la préparation du dataset |
+| Dimanche 15/09 aprem | 15 min | Définition des questions cibles |
 | Lundi 16/09 aprem | 3h30 | Analyse des données |
 
 ## Premier Sprint
 
-### Téléchargement du dataset
+### Téléchargement des datasets
 
-J'ai commencé par téléchager mon dataset sur [Kaggle](https://www.kaggle.com/datasets?search=pokemon), qui est une plateforme dédiée à la Data Science et mettant à disposition de nombreux datasets pour apprendre (gratuit).
+J'ai commencé par téléchager mes datasets sur [Kaggle](https://www.kaggle.com/datasets?search=pokemon), qui est une plateforme dédiée à la Data Science et mettant à disposition de nombreux datasets pour apprendre (gratuit).
 
-J'ai choisi deux datasets pour l'instant à étudier, en me basant sur les informations renseignées : liste exhaustive des Pokémons, types, attributs de combat...
+J'ai choisi deux datasets à étudier pour l'instant, en me basant sur les informations fournies par celles-ci : liste exhaustive des Pokémons, types, attributs de combat...
 
 {% lien %}
 
@@ -103,19 +103,19 @@ Puis je n'ai pas voulu perdre trop de temps avec cette partie car j'ai pensé qu
 
 {% note %}
 
-Remarque : J'aurais effectivement du passer à cette étape tout de suite car cela s'est révélé plus efficace et m'aurait fait gagner du temps...
+Remarque : J'aurais effectivement du passer à cette étape plus rapidement car cela s'est révélé plus efficace et m'aurait fait gagner du temps...
 
 {% endnote %}
 
 ### Préparation du dataset
 
-Je pensais que le dataset que j'avais choisi serait facile à préparer car il m'avait l'air très bien structuré. Finalement, il s'est révélé être un excellent exemple pour m'apprendre à nettoyer / structurer / préparer mes données avec Excel !
+Je pensais que le dataset que j'avais choisi serait facile à préparer car il m'avait l'air déjà bien structuré. Finalement, il s'est révélé être un excellent exemple pour m'apprendre à nettoyer / structurer / préparer mes données avec Excel !
 
 Voici les problèmes principaux auxquels j'ai du faire face lors de la préparation des données :
 
 - **Problème n°1 : les méga évolutions**
 
-Dans un objectif de pouvoir associer les pokémons à leur numéro d'identification unique du pokédex (ce qui n'était pas le cas dans le dataset importé, les pokémons étant dans l'ordre mais les nombres ne correspondant pas forcément à leur numéro de pokédex), j'ai tout d'abord compris qu'il fallait que j'enlève les lignes correspondant à des méga évolutions.
+Dans un objectif de pouvoir associer les pokémons à leur numéro d'identification unique du pokédex (ce qui n'était pas le cas dans le dataset importé, les pokémons étant dans l'ordre mais les nombres ne correspondant pas forcément à leur numéro de pokédex), j'ai remarqué premièrement qu'il fallait que j'enlève les lignes correspondant à des méga évolutions.
 
 Pour cela, j'ai utilisé la formule :
 
@@ -125,29 +125,31 @@ qui me dit alors si oui ou non le nom de mon pokémon contient "Méga ", il ne m
 
 {% note %}
 
-Attention à ne pas oublier l'espace après "Méga", sinon de pauvres pokémon comme Méganium et Yanméga se retrouvent supprimmés et on met du temps à s'en rendre compte et à revenir en arrière...
+Attention à ne pas oublier l'espace après "Méga", sinon de pauvres pokémons comme Méganium et Yanméga se retrouvent supprimmés et on met du temps à s'en rendre compte et à revenir en arrière...
 
 {% endnote %}
 
 - **Problème n°2 : La pluricité des formes**
 
-Certains pokémons possèdent plusieurs formes alternatives ou des formes régionales, qui apparaissent malheureusement dans mon dataset. Par exemple : Ratata d'Alola, Kyurem Dark, Kyurem White,...
+Certains pokémons possèdent plusieurs formes alternatives ou des formes régionales, qui apparaissent dans mon dataset contre ma volonté. Par exemple : Ratata d'Alola, Kyurem Dark, Kyurem White,...
 
 Pour les enlever, j'ai utilisé les formules :
 
-  `=SIERREUR(GAUCHE(B2;TROUVE(" ";B2;1));B2)` + `SUPPRESPACE(B2)` pour récupérer le premier mot de la cellule, puis je supprime les doublons.
+  `=SIERREUR(GAUCHE(B2;TROUVE(" ";B2;1));B2)` + `SUPPRESPACE(B2)`
+  
+pour récupérer le premier mot de la cellule, puis je supprime les doublons.
 
 Même problème à droite : Heat Rotom, Wash Rotom, Frost Rotom...
 
 `=SIERREUR(DROITE(B2;NBCAR(B2)-TROUVE(" ";B2;1));B2)` + `SUPPRESPACE(B2)`
 
-Mais je me suis rendue comtpe que certains pokémons pouvaient avoir le même dernier mot et ne pas être le même pour autant... Je ne pouvais également pas prédire des cellules vides ? ainsi que des pokémons dont le nom était au milieu de mots, bref, ne voulant pas éterniser mon POK sur cette partie difficile, j'ai décidé de finaliser la structure de la colonne "nom" à la main en modifiant directement les cellules posant problème (il n'en restait plus beaucoup), jusqu'à ce que j'en ai le bon nombre et qu'ils correspondent tous bien à leur numéro de pokédex.
+Mais je me suis rendue comtpe que certains pokémons pouvaient avoir le même dernier mot dans son nom et ne pas être le même pokémon pour autant... Je ne pouvais également pas prédire les cellules restées vides, ainsi que des pokémons dont le nom était au milieu d'autres mots, bref, ne voulant pas éterniser mon POK sur cette partie difficile, j'ai décidé de finaliser la structure de la colonne "name" à la main en modifiant directement les cellules posant problème (il n'en restait plus beaucoup), jusqu'à ce que j'en ai le bon nombre et qu'ils correspondent tous bien à leur numéro de pokédex.
 
 - **Problème n°3 : et si je veux les noms des Pokémons en français ?**
 
-Je voulais avoir les noms en français car ils me sont plus familiers et je me suis dit que c'était l'occasion d'apprendre à faire une jointure de tables.
+Je voulais pouvoir avoir les noms en français car ils me sont plus familiers et je me suis dit que c'était l'occasion d'apprendre à faire une jointure de tables.
 
-J'ai du faire un copier-coller de [cette page internet](https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National)  à défaut de trouver un dataset en français, puis ai utilisé la fonction `RECHERCHEV` pour faire correspondre les noms anglais avec les noms français dans mon tableau principal.
+J'ai dû faire un copier-coller de [cette page internet](https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National)  à défaut de trouver un dataset en français, puis ai utilisé la fonction `RECHERCHEV` pour faire correspondre les noms anglais avec les noms français dans mon tableau principal.
 
 `=RECHERCHEV("B2";'fr-en'!A:B:;2;FAUX)`
 
@@ -157,7 +159,7 @@ J'ai du faire un copier-coller de [cette page internet](https://www.pokepedia.fr
 
 {% note %}
 
-J'ai largement sous-estimé le temps que nécessiterait la préparation du dataset car le texte était plutôt mal formaté et je découvrais toujours une nouvelle source d'erreur, qui n'était pass toujours évidente à régler quand c'est la première fois qu'on essaie...
+Remarque : J'ai largement sous-estimé le temps que nécessiterait la préparation du dataset car le texte était plutôt mal formaté et je découvrais toujours une nouvelle source d'erreur, qui n'était pas toujours évidente à régler lors du premier essai...
 
 {% endnote %}
 
@@ -168,9 +170,9 @@ J'ai largement sous-estimé le temps que nécessiterait la préparation du datas
 - [x] Est-ce que chaque type présente des forces et des faiblesses caractéristiques ?
 - [x] Est-ce que les pokémons légendaires sont forcément plus forts ?
 - [x] Est-ce un avantage de posséder deux types plutôt qu'un seul ?
-- [x] Quels pokémons détiennent les records pour chaque atribut ?
+- [x] Quels pokémons détiennent les records pour chaque attribut ?
 - [ ] Quels sont les pokémons les moins bons et les meilleurs par type ? => à faire
-- [ ] Peut-on faire une table des types à partir des combats => à faire si temps
+- [ ] Faire une table des types à partir des combats => à faire si temps
 - [ ] Les attributs de combat sont-ils bien répartis ? (distributions) => à faire si temps
 
 Ainsi que l'évolution des réponses à ces questions au fil des générations : ces tendances évoluent-elles ? => Deuxième sprint.
@@ -181,7 +183,9 @@ Ainsi que l'évolution des réponses à ces questions au fil des générations :
 
 J'ai utilisé la formule :
 
-`= NB.SI($D$2:$E$152;C157)` avec la liste des types dans la colonne C, le type 1 en colonne D, et le type 2 en colonne E.
+`= NB.SI($D$2:$E$152;C157)`
+
+avec la liste des types dans la colonne C, le type 1 en colonne D, et le type 2 en colonne E.
 
 ![image](Tableau_repartition.jpg)
 
@@ -197,17 +201,17 @@ J'ai calculé pour chaque type la moyenne de chaque attribut de combat avec la f
 
 `=(SOMME.SI($D$2:$D$152;$C172;F$2:F$152)+SOMME.SI($E$2:$E$152;$C172;F$2:F$152))/$D172`
 
-qui je l'admets n'est pas très compréhensible telle quelle, mais je peux faire néanmoins la remarque que le bon positionnement des dollars dans ma formule m'a permis de l'étirer dans tous les sens pour remplir ce tableau :
+qui je l'admets n'est pas très compréhensible telle quelle, mais je peux faire néanmoins la remarque que le bon positionnement des dollars dans ma formule m'a permis de l'étirer dans tous les sens pour remplir ce tableau avec seulement celle-ci :
 
 ![image](Tableau_carac_type.jpg)
 
 Ce qui peut donner visuellement ceci bien que je me concentrerai sur la visualisation au prochain sprint :
 
-| Tous les types ensemble | Filtrage dans la source de données | Graphique dynamique |
+| Tous les types ensemble | Filtrage dans la source de données | Graphique dynamique avec filtre associé |
 |:-------:|:-------:|:--------:|
 | ![image](Graphe_carac_type.jpg) | ![image](Graphe_carac_type_filtre.jpg) | ![image](Graphe_dynamique.jpg) |
 
--**Est-ce que les pokémons légendaires sont forcément les plus forts ?**
+- **Est-ce que les pokémons légendaires sont forcément les plus forts ?**
 
 Grâce à des méthodes semblables, je mets une condition sur l'attribut légendaire, et je calcule la moyenne de la statistique totale pour la comparer avec celle des non-légendaires.
 
@@ -215,7 +219,7 @@ Grâce à des méthodes semblables, je mets une condition sur l'attribut légend
 
 Je compte le nombre de types, et je calcule la moyenne de la statistique totale pour les pokémons avec 1 type et pour 2 types.
 
-- **Les pokémons détenant les records (qui a la meilleure attaque, qui est le plus rapide, etc.)**
+- **Les pokémons détenant les records**
 
 Pour cette question j'utilise les fonctions `INDEX`, `EQUIV`, `MIN` et `MAX` combinées, sur chaque attribut.
 
@@ -228,9 +232,13 @@ et j'ai finalement regroupé ces résultats dans ces tableaux.
 
 {% note %}
 
-Je n'ai pas vraiment eu le temps que je souhaitais pour finir et optimiser l'analyse des données et il me reste encore des manipulations à faire avant de passer aux autres générations. L'estimation de la durée des tâches a été le principal souci sur ce premier sprint.
+Remarque : Je n'ai pas vraiment eu le temps que je souhaitais pour optimiser et finir l'analyse des données et il me reste encore des manipulations à faire avant de passer aux autres générations. L'estimation de la durée des tâches a été le principal souci sur ce premier sprint.
 
 {% endnote %}
+
+### Retour Sprint 1
+
+Le principal défi de ce premier sprint a été l'estimation de la durée des tâches à effectuer : alors que l'analyse était peut-être faisable plus rapidement, la préparation du dataset m'a pris beaucoup plus de temps que prévu et me retarde sur le prochain sprint que j'ai dû réajuster. De plus, lorsque l'on apprend en tatônnant face aux problèmes rencontrés, la vitesse de résolution est étonnament très variable car on peut passer à côté de réponses évidentes en voulant faire trop complexe...
 
 ## Second Sprint
 
@@ -244,3 +252,7 @@ Je n'ai pas vraiment eu le temps que je souhaitais pour finir et optimiser l'ana
 - [ ] ~~Étudier des techniques avancées pour embellir le tout~~
 - [ ] ~~Tester d'autres dataset en étudiant l'adaptabilité~~ -> J'aurais assez de quoi m'occuper...
 - [ ] ~~Comparer avec d'autres logiciels~~ -> idem
+
+## Sources
+
+Openclassrooms : [Perfectionnez vous sur Excel](https://openclassrooms.com/fr/courses/7139456-perfectionnez-vous-sur-excel)
