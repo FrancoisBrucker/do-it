@@ -215,7 +215,7 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 
 
 ### Conclusion
-En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle et esthétique.
+En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
 À suivre pour mon MON 2 sur l'étude de comment intégrer React dans Laravel.
 {% lien %}
 
