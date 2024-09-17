@@ -126,16 +126,37 @@
 
 
 <p>Dans l'objectif de mieux comprendre les enjeux du dev, je vais me former en front end. Dans ce but, je vais dev un site web dont l'objectif sera de regrouper des patrons en crochet.</p>
+<h2>Pré-requis :</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Niveau débutant</p>
+</div><div class="pl-8 mr-8">
+<p>Pré-requis :</p>
+<ul>
+<li>Bases en css et en html</li>
+</ul>
+</div></div>
 <h2>Tâches</h2>
 <h3>Sprints</h3>
 <h4>Sprint 1</h4>
 <p>L'objectif du premier sprint est de sortir une première version épurée du site. L'ajout de fonctionnalités se fera dans un second temps. Pour cela, j'ai prévu de compléter les tâches suivantes :</p>
 <ul>
-<li>[ ] Définition de la structure du site</li>
-<li>[ ] Remise à jour de mes connaissances en html et css</li>
-<li>[ ] Développement de la base du site</li>
+<li>[x] Définition de la structure du site</li>
+<li>[x] Remise à jour de mes connaissances en html et css</li>
+<li>[x] Développement de la base du site</li>
 </ul>
+<p>Pendant ce sprint, j'ai globalement eu le temps de remplir la plupart de mes objectifs. Je suis cependant un peu en retard sur le développement de la base du site. Par cela, j'entendais code html complet et début du css, il me reste encore un peu de travail sur le html pour avoir un contenu du site cohérent et je n'ai pas eu le temps de commencer le css.</p>
+<p>Après ce sprint, je me suis rendu compte que j'avais bien démarré sur les premiers jours avec un travail efficace. Mais que comme j'ai fait une pause pour me concentrer sur le MON, je me suis retrouvé bloqué par moi même ne sachant plus par où commencer les prochaines tâches. Et ainsi, je me suis retrouver à devoir rusher sur la fin du sprint pour compléter le travail. Pour le prochain sprint, je pense m'organiser mieux pour jongler entre le POK et le MON et ne pas me retrouver encore une fois à finir mon POK en retard et dans le stress.</p>
 <h4>Sprint 2</h4>
+<p>En perspective du premier sprint, les tâches que je prévois de remplir pour le prochain sprint sont les suivantes :</p>
+<ul>
+<li>[ ] Finaliser le contenu du site</li>
+<li>[ ] Ecrire le code css des pages</li>
+<li>[ ] Ajouter de nouvelles fonctionalités comme une fiche contact et une barre de recherche</li>
+</ul>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
@@ -148,15 +169,142 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>6/09</td>
+<td>2h</td>
+<td>Apprentissage de l'html et première base du code</td>
+</tr>
+<tr>
+<td>7/09</td>
+<td>1h30</td>
+<td>Code html de toute la structure du site</td>
+</tr>
+<tr>
+<td>9/09</td>
+<td>1h15</td>
+<td>Approfondissement des connaissances en html</td>
+</tr>
+<tr>
+<td>9/09</td>
+<td>2h30</td>
+<td>Apprentissage du css</td>
+</tr>
+<tr>
+<td>17/09</td>
+<td>2h45</td>
+<td>Enrichissement du contenu du site</td>
 </tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
-<p>Le contenu du POK.</p>
 <h3>Premier Sprint</h3>
+<p>Le premier sprint a été dédiée à la conception du site.</p>
+<p>J'ai d'abord revu mes bases en html et css grâce aux POK de Louise Bourdon et Vladimir Jeantroux ainsi que le cours d'<a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">OpenClassroom</a>.</p>
+<p>Ensuite, j'ai défini ce que je voulais comme base du site : une page d'acceuil emmenant sur les différents patrons existants dans le site et des fiches patrons. Dans les fiches patrons, elles doivent être simple mais contenir les mesures à prendre, une photo du résultat, le matériel nécessaire, la source et les instructions afin de réaliser le patron.</p>
+<p>J'ai ensuite consacré le reste de mon sprint 1 à crée la structure de ces pages :</p>
+<h4>Page d'acceuil</h4>
+<p>Le design de la page d'acceuil est assez sommaire pour l'instant. Il s'agit d'une page rappelant le nom du site et montrant les différents patrons disponibles.</p>
+<p>Pour cela, j'ai codé avec html un code assez simple avec en titre de la page le nom du site ainsi qu'un petit paragraphe de bienvenu et un lien pour apprendre les bases du crochet :</p>
+<pre><code>&lt;h1&gt;Capitaine crochet&lt;/h1&gt;
+    &lt;p&gt;Bienvenue sur le site du Capitaine crochet! Ici vous pourrez suivre de superbes patrons pour réaliser vos propres oeuvres en crochet.&lt;/p&gt;
+
+    &lt;p&gt;Si vous avez besoin de revoir les bases du crochet ou les aborder pour la première fois, munissez vous de votre meilleur crochet, d'un peu de coton et visionnez la série de &lt;a href = &quot;https://www.youtube.com/watch?v=oJtFRE6V0I8&amp;t=600s&quot; target = &quot;_blank&quot;&gt;4 vidéos réalisées par Retropically.&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<p>J'ai continué en ajoutant une image et le lien de chaque page de patron que j'ai pu crée :</p>
+<pre><code>&lt;p&gt;
+        &lt;img src=&quot;https://woolpattern.com/wp-content/uploads/2024/05/Lilith-Top.jpg&quot; alt=&quot;Photo du Lilith Top en ocre&quot; /&gt;
+    &lt;/p&gt;
+    &lt;a href = &quot;patron3.html&quot;&gt;Lilith Top&lt;/a&gt;
+</code></pre>
+<p>Voici donc le résultat de la page pour le moment :<br>
+<img src="Pageacceuil1.jpg" alt="Page d'acceuil"></p>
+<h4>Page patron typique</h4>
+<p>La page patron à une structure typique à chaque fois :</p>
+<ul>
+<li>Titre du patron</li>
+</ul>
+<pre><code>&lt;h1&gt;Lilith Top&lt;/h1&gt;
+</code></pre>
+<ul>
+<li>Bouton de retour vers la page d'acceuil</li>
+</ul>
+<pre><code>&lt;a href = &quot;Acceuil.html&quot;&gt;Retour à l'acceuil&lt;/a&gt;
+</code></pre>
+<ul>
+<li>Image du résultat attendu</li>
+</ul>
+<pre><code>    &lt;p&gt;
+        &lt;img src=&quot;https://woolpattern.com/wp-content/uploads/2024/05/Lilith-Top.jpg&quot; alt=&quot;Photo du Lilith top en ocre&quot; /&gt;
+    &lt;/p&gt;
+</code></pre>
+<ul>
+<li>Quelques informations de type niveau, type de projet,...</li>
+</ul>
+<pre><code>    &lt;p&gt;
+        Niveau du patron : 3/5 &lt;br&gt;
+        Type du patron : Top
+    &lt;/p&gt;
+</code></pre>
+<ul>
+<li>Le sommaire de la page</li>
+</ul>
+<pre><code>    &lt;p&gt;
+        Plan de la page :&lt;br&gt;
+            &lt;a href=&quot;#matériel&gt;&quot;&gt;Matériel&lt;/a&gt;&lt;br&gt;
+            &lt;a href=&quot;#mesures&quot;&gt;Mesures&lt;/a&gt;&lt;br&gt;
+    &lt;/p&gt;
+</code></pre>
+<ul>
+<li>Le matériel nécessaire</li>
+</ul>
+<pre><code>    &lt;h2 id = &quot;matériel&quot;&gt;Matériel&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;1 crochet 4 mm&lt;/li&gt;
+        &lt;li&gt;3 pelotes de poids 3&lt;/li&gt;
+        &lt;li&gt;1 ciseau&lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+<ul>
+<li>Les mesures à prendre sous forme d'image</li>
+</ul>
+<pre><code>&lt;h2 id = &quot;mesures&quot;&gt;Mesures à prendre avant de commencer&lt;/h2&gt;
+    &lt;img src=&quot;&quot; alt=&quot;Photo expliquant les mesures à prendre pour réaliser le top.&quot; /&gt;
+</code></pre>
+<ul>
+<li>Les abréviations utilisées dans le patron</li>
+</ul>
+<pre><code> &lt;h2 id = &quot;abbréviations&quot;&gt;Abbréviations utilisés dans le patron&lt;/h2&gt;
+    &lt;p&gt;
+        sl st = slip stitch&lt;br&gt;
+        ch = chain / chaine&lt;br&gt;
+    &lt;/p&gt;
+</code></pre>
+<ul>
+<li>Les instructions du patron</li>
+</ul>
+<pre><code>&lt;h2 id = &quot;instructions&quot;&gt;Instructions&lt;/h2&gt;
+        &lt;h3&gt;Bas du Top&lt;/h3&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Faire un noeud coulant autour du crochet.&lt;/li&gt;
+                &lt;li&gt;Ch 3, yarn over, insérrer le crochet dans la première chaîne, ch 1, yarn over, tirer à travers une boucle,yarn over, tirer à travers 2 boucles, yarn over, tirer à travers 2 boucles &lt;/li&gt;
+            &lt;/ol&gt;
+</code></pre>
+<ul>
+<li>La fiche pdf du patron si elle existe</li>
+</ul>
+<pre><code>    &lt;h2 id = &quot;pdf&quot;&gt;Patrons en pdf&lt;/h2&gt;
+        &lt;a href = &quot;patron3.pdf&quot;&gt;Patron détaillé en pdf&lt;/a&gt;
+</code></pre>
+<ul>
+<li>La source</li>
+</ul>
+<pre><code>&lt;h2 id = &quot;sources&quot;&gt;Sources&lt;/h2&gt;
+    &lt;a href = &quot;https://www.youtube.com/watch?v=sjY9wFO0sU8&quot; target = &quot;_blank&quot;&gt;Patron du Lilith Top par Made by BJax&lt;/a&gt;
+</code></pre>
+<p>Le résultat final du sprint donne quelque chose comme ça :<br>
+<img src="Lilithtop1.jpg" alt="Début de la page patron"><br>
+<img src="Lilithtop2.jpg" alt="Milieu de la page patron"><br>
+<img src="Dosnu1.jpg" alt="Fin de la page patron"></p>
+<p>Pour l'instant le visuel n'est pas incroyable mais cela devrait s'arranger avec le sprint 2 et l'ajout du code css.</p>
 <h3>Second Sprint</h3>
 
 
