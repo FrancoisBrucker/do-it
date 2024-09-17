@@ -10,6 +10,8 @@ date: 1970-09-01
 tags: 
   - "temps 1"
   - "python"
+  - "vert"
+  - "bleu"
 
 résumé: "L'objectif de ces MON 1.1 et MON 1.2 est d'apprendre à utiliser Python pour l’analyse de données textuelles et de mettre en pratique ces compétences à travers un exemple concret.
 
@@ -606,3 +608,10 @@ print (resultats)
 | Mardi 10/09 | 3H | Reprendre les bases de python (Théorie & Exercices) |
 | Mercredi 11/09 | 3H | Bibliothèques |
 | Lundi 16/09 | 4H | Mettre en forme |
+
+### Bibliographie
+
+{% lien %}
+[Python pour les SHS](https://pur-editions.fr/product/7857/python-pour-les-shs)
+[Vidéo présentant comment installer VS Code pour python](https://www.youtube.com/watch?v=V6NfiMu4eZ0) 
+{% endlien %}
