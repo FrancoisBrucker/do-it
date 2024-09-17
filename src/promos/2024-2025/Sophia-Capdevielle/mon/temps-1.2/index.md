@@ -1,9 +1,9 @@
 ---
 layout: layout/mon.njk
 
-title: "UI avec Figma"
+title: "MON 1.2"
 authors:
-  - Gordon Zola
+  - Sophia Capdevielle
 
 date: 1970-10-01
 tags: 
