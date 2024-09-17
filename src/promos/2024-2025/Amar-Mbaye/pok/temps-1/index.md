@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Un POK traitant de la création d'une plateforme de certification en ligne où les utilisateurs peuvent suivre des cours en vidéo et obtenir un certificat après évaluation."
+title: "Un POK traitant de la création d'une plateforme de certification en ligne"
 authors:
   - Serigne Mbaye Sy AMAR
 
