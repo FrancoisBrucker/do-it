@@ -6,7 +6,7 @@ authors:
   - OLIANA Guillaume
 ---
 
-Ensemble des MON réalisés par Gordon Zola.
+Ensemble des MON réalisés par OLIANA Guillaume.
 
 - [MON 1.1](./temps-1.1)
 - [MON 1.2](./temps-1.2)
