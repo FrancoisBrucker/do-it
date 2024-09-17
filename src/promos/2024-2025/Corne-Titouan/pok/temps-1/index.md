@@ -24,13 +24,14 @@ Sans prérequis
 {% lien %}
 
 Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
+
 {% endlien %}
 
 ## Tâches
 
 - [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
 - [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
-- [ ] Developper une application basique (une seule activité)
+- [ ] Developper une application basique (une seule activité).
 - [ ] Faire un cahier des charges de l'application que je souhaite réaliser
 - [ ] Faire des wireframes réalistes pour chaque page de l'appli
 - [ ] Coder
@@ -41,8 +42,8 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 
 #### Sprint 1
 
-- [ ] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
-- [ ] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
+- [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
+- [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
 - [ ] Developper une application basique (une seule activité)
 
 #### Sprint 2
@@ -57,6 +58,9 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 | -------- | -------- |-------- |
 | Jeudi 12/09  | 0H40  | Tuto dev Kotlin (tâche 1) |
 | Jeudi 12/09  | 0H20  | Mise en place environnement de travail |
+| Jeudi 12/09  | 3H00  | Recherches sur Android Studio/Kotlin |
+| Vendredi 13/09 | 1H00  | Recherches sur Android Studio/Kotlin |
+| Lundi 16/09 | 4H00  | Prise en main Android Studio/Kotlin |
 
 ## Contenu
 
@@ -65,6 +69,7 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 1. [Les bases en Kotlin (tâche 1)](#section1)
 2. [Mise en place de l'environnement de travail (tâche 2)](#section2)
 3. [Créer un émulateur (machine virtuelle)](#section3)
+4. [Apprendre à coder sur Android Studio](#section4)
 
 ### 1. Les bases en Kotlin <a id="section1"></a>
 
@@ -77,7 +82,7 @@ Pour me familiariser avec le langage Kotlin, j'ai utilisé un éditeur de code i
 [Liste exhaustive des mots clés Kotlin](https://kotlinlang.org/docs/keyword-reference.html)
 
 Bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin ("[guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)"). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
-Voici quelques recommandations du guide de style : 
+Voici quelques recommandations du guide de style :
 
 - Les noms de fonctions doivent être en camel case et être des verbes ou des expressions verbales.
 - Chaque instruction doit figurer sur une ligne distincte.
@@ -86,6 +91,12 @@ Voici quelques recommandations du guide de style :
   ![Syntaxe pour fonction](./img/GuideDeStyle.png) *Illustration disponible sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#6)*
 
 Je vais pour la suite utiliser Kotlin pour la logique de mon application et le langage de données XML pour son contenu.
+
+{% info %}
+
+Un fichier XML (eXtensible Markup Language) est un format de fichier utilisé pour structurer, organiser et stocker des données d'une manière qui soit à la fois lisible par les humains et compréhensible par les machines. Il est basé sur un ensemble de balises (tags) pour décrire les données de manière hiérarchique et flexible. Contrairement à d'autres formats de fichiers, comme HTML qui est plus axé sur la présentation, XML est purement un format de données. Extensible : en XML, les utilisateurs peuvent créer leurs propres balises pour structurer les données selon leurs besoins. Il n'y a pas de balises prédéfinies comme en HTML.
+
+{% endinfo %}
 
 ### 2. Mise en place de l'environnement de travail <a id="section2"></a>
 
@@ -112,7 +123,22 @@ Cette structure permet de centraliser certains éléments qui seront présents �
 Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android,...).
 C'est cette dernière option que j'ai choisi d'utiliser :
 
-![Machine Virtuelle](./img/machineVirtuelle.png) *Capture d'écran*
+![Machine Virtuelle](./img/machineVirtuelle.png) *Capture d'écran depuis Android Studio*
+
+### 4. Apprendre à coder sur Android Studio <a id="section4"></a>
+
+Les chaînes de caractères ne sont pas codées en dur dans la page xml dédiée à l'activité (activity_main.xml). Les chaînes sont définies dans /res/values/strings.xml puis sont appelées à partir du layout. Ainsi dans le fichier strings.xml on retrouve la définition de notre string :
+
+``` xml
+<string name="choose_number"> Choisis un nombre entre 1 et 10 :</string>
+```
+
+Et dans le fichier activity_main.xml, on fait référence au string défini :
+
+``` xml
+<TextView
+        android:text="@string/choose_number"
+```
 
 ### Premier Sprint
 

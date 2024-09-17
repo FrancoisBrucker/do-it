@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Titouan Corne.
 
-- [POK 1](./temps-1)
+- [POK 1 : Développement Android - Programmation Kotlin](./temps-1)
 - [POK 2](./temps-2)
 - [POK 3](./temps-3)
