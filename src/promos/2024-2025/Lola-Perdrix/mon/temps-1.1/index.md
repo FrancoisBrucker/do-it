@@ -11,6 +11,8 @@ date: 2024-09-11
 tags: 
  - "temps 1"
  - "Data"
+ - "vert"
+ - "bleu"
 
 résumé: "Comprendre les mécanismes et utilisations du Data Storytelling"
 ---
@@ -256,6 +258,10 @@ Le Data Storytelling c'est utile, mais il ya tout de même quelques points d'att
 Et voilà, on vient de démontrer que non, les données ne parlent pas vraiment d'elles mêmes... Mais on peut les faire parler en maniant la Data Visualization à notre avantage, et en apprenant à raconter des histoires captivantes.
 
 Sur une même présentation de données, les personnes peuvent avoir plusieurs analyses différentes : maîtriser le data storytelling va permettre d'une part de mieux se faire comprendre et mieux faire passer notre message, et d'autre part à rallier les gens à notre cause en les convaincant.
+
+### Retour sur le MON
+
+Le sujet me paraissait hyper intéressant, mais finalement plus limité que je ne pensais, et j'ai un peu peur de m'être perdu dans les limites de la définition... Cela dit, j'ai quand même appris des tas choses utiles et ne regrette pas mon choix !
 
 ## Sources
 
