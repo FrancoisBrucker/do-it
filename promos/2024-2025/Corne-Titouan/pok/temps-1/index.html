@@ -156,7 +156,7 @@
 <ul>
 <li>[x] Apprendre les bases de Kotlin en suivant le tuto proposé sur <a href="https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0">developer.android.com</a>.</li>
 <li>[x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.</li>
-<li>[ ] Developper une application basique (une seule activité).</li>
+<li>[x] Developper une application basique (une seule activité).</li>
 <li>[ ] Faire un cahier des charges de l'application que je souhaite réaliser</li>
 <li>[ ] Faire des wireframes réalistes pour chaque page de l'appli</li>
 <li>[ ] Coder</li>
@@ -167,8 +167,11 @@
 <ul>
 <li>[x] Apprendre les bases de Kotlin en suivant le tuto proposé sur <a href="https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0">developer.android.com</a>.</li>
 <li>[x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.</li>
-<li>[ ] Developper une application basique (une seule activité)</li>
+<li>[x] Developper une application basique (une seule activité)</li>
 </ul>
+<p><strong>Analyse post-mortem :</strong></p>
+<p>J'ai réussi à réaliser entièrement la to do list fixée au départ pour ce premier sprint. J'ai abouti sur un livrable qui fonctionne : l'application basique. Il m'a été un peu difficile d'organiser mes recherches sur le langage Kotlin, qui est tout nouveau pour moi. Je me suis senti au début comme étant au pied d'un mur. Mais avec du temps, un peu de prise en main, j'estime avoir compris les bases du langage. Le nombre de ressources dédiées à la programmation Kotlin n'est pas en manque sur internet !</p>
+<p>Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en apprendre encore plus !</p>
 <h4>Sprint 2</h4>
 <ul>
 <li>[ ] Faire un cahier des charges de l'application que je souhaite réaliser</li>
@@ -210,6 +213,11 @@
 <td>4H00</td>
 <td>Prise en main Android Studio/Kotlin</td>
 </tr>
+<tr>
+<td>Mardi 17/09</td>
+<td>1H00</td>
+<td>Réalisation application (très) basique</td>
+</tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
@@ -224,8 +232,14 @@
 <p>Pour commencer un petit mot sur Kotlin :</p>
 <p>&quot;Kotlin est un langage de programmation moderne qui aide les développeurs à gagner en productivité. Par exemple, Kotlin vous permet d'être plus concis et d'écrire moins de lignes de code pour la même fonctionnalité que les autres langages de programmation. Les applications développées en Kotlin sont également moins susceptibles de planter, ce qui se traduit par une application plus stable et plus robuste pour les utilisateurs. Globalement, Kotlin vous permet de créer de meilleures applications Android et plus rapidement. C'est pourquoi Kotlin prend de l'ampleur dans le secteur et est d'ailleurs le langage utilisé par la majorité des développeurs Android professionnels.&quot; (source : l'équipe de formation Google Developers)</p>
 <p>Pour me familiariser avec le langage Kotlin, j'ai utilisé un éditeur de code intéractif appelé <a href="https://play.kotlinlang.org/">Kotlin Playground</a>. Celui-ci est directement accessible depuis le Web.</p>
-<p><a href="https://kotlinlang.org/docs/keyword-reference.html">Liste exhaustive des mots clés Kotlin</a></p>
-<p>Bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin (&quot;<a href="https://developer.android.com/kotlin/style-guide?hl=fr">guide de style</a>&quot;). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ici tu retrouves la <a href="https://kotlinlang.org/docs/keyword-reference.html">liste exhaustive des mots clés Kotlin</a></p>
+</div></div>
+<p>Une bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin (&quot;<a href="https://developer.android.com/kotlin/style-guide?hl=fr">guide de style</a>&quot;). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
 Voici quelques recommandations du guide de style :</p>
 <ul>
 <li>Les noms de fonctions doivent être en camel case et être des verbes ou des expressions verbales.</li>
@@ -240,12 +254,22 @@ Voici quelques recommandations du guide de style :</p>
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Un fichier XML (eXtensible Markup Language) est un format de fichier utilisé pour structurer, organiser et stocker des données d'une manière qui soit à la fois lisible par les humains et compréhensible par les machines. Il est basé sur un ensemble de balises (tags) pour décrire les données de manière hiérarchique et flexible. Contrairement à d'autres formats de fichiers, comme HTML qui est plus axé sur la présentation, XML est purement un format de données. Extensible : en XML, les utilisateurs peuvent créer leurs propres balises pour structurer les données selon leurs besoins. Il n'y a pas de balises prédéfinies comme en HTML.</p>
+<p>Un fichier XML (eXtensible Markup Language) est un format de fichier utilisé pour structurer, organiser et stocker des données d'une manière qui soit à la fois lisible par les humains et compréhensible par les machines. Il est basé sur un ensemble de balises (tags) pour décrire les données de manière hiérarchique et flexible. Contrairement à d'autres formats de fichiers, comme HTML qui est plus axé sur la présentation, XML est purement un format de données.</p>
+<p>Extensible : en XML, les utilisateurs peuvent créer leurs propres balises pour structurer les données selon leurs besoins. Il n'y a pas de balises prédéfinies comme en HTML.</p>
 </div></div>
 <h3>2. Mise en place de l'environnement de travail <a id="section2"></a></h3>
 <p>Il faut télécharger l'IDE <a href=".">Android Studio</a> qui permet d'écrire du code mais aussi d'avoir un appercu de l'application et un émulateur (appareil Android fictif).</p>
 <p>Une fois téléchargé, j'ai créé un nouveau projet avec les propriétés suivantes :</p>
 <p><img src="img/initialisationProjet.png" alt="Initialisation Projet"> <em>Capture d'écran personnelle</em></p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Important</p>
+</div><div class="pl-8 mr-8">
+<p>Il faut veiller à choisir une &quot;Minimum SDK&quot; pas trop récent afin que l'application puisse fonctionner sur une grande majorité d'appareils Android (99,7% des appareils pourront faire fonctionner mon application si on se réfère à la version choisie sur la capture d'écran précédente)</p>
+</div></div>
 <p>Un projet est alors créé, voici sa structure :</p>
 <p><img src="img/structureProjetAndroid.png" alt="Structure Projet"> <em>Capture d'écran commentée</em></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -255,11 +279,11 @@ Voici quelques recommandations du guide de style :</p>
 <div class="pl-8 mr-8">
 <p>Pour avoir exactement la même fenêtre avec la même structure de projet, il faut veiller à sélectionner &quot;Android&quot; en haut à gauche!</p>
 </div></div>
-<p>Cette structure permet de centraliser certains éléments qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (<em>res</em>) dans le fichier <em>themes.xml</em></p>
+<p>Cette structure d'application permet de centraliser certains éléments (dans <em>res</em>) qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (<em>res</em>) dans le fichier <em>themes.xml</em></p>
 <p><img src="img/defaultText.png" alt="Texte par défaut"> <em>Capture d'écran commentée</em></p>
 <h3>3. Créer un émulateur (machine virtuelle) <a id="section3"></a></h3>
-<p>Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android,...).
-C'est cette dernière option que j'ai choisi d'utiliser :</p>
+<p>Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android, ...).
+C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p><img src="img/machineVirtuelle.png" alt="Machine Virtuelle"> <em>Capture d'écran depuis Android Studio</em></p>
 <h3>4. Apprendre à coder sur Android Studio <a id="section4"></a></h3>
 <p>Les chaînes de caractères ne sont pas codées en dur dans la page xml dédiée à l'activité (activity_main.xml). Les chaînes sont définies dans /res/values/strings.xml puis sont appelées à partir du layout. Ainsi dans le fichier strings.xml on retrouve la définition de notre string :</p>
@@ -269,8 +293,30 @@ C'est cette dernière option que j'ai choisi d'utiliser :</p>
 <pre class="language-xml " style="counter-reset: linenumber 0"><code class="language-xml">&lt;TextView
         android:text="@string/choose_number"
 </code></pre>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
+<p>Pour apprendre à coder une application basique, j'ai suivi principalement deux tutoriels :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=TCJFoExOBUE">TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)</a></li>
+<li><a href="https://www.youtube.com/watch?v=XLt_moCoauw">Simple Kotlin App | Android Studio | 2024</a></li>
+</ul>
+<p>Le premier tutoriel m'a été utile pour comprendre comment ajouter des éléments de base sur la page principale de l'application (textes, boutons, ...). Cependant pour la logique de l'application, qui doit être codée pour ma part dans le fichier <em>MainActivity.kt</em>, j'ai dû adapter ce qui est expliqué dans le tuto car le developpeur code son application en java et non en Kotlin. Bien que cela m'ait fin un rappel intéressant sur le langage java, j'ai dû chercher une aide pour coder correctement en Kotlin. C'est pour cela que le deuxième tuto est intéressant.</p>
+<p>Voici l'aperçu l'application (très) basique sur laquelle j'ai abouti :</p>
+<p><img src="img/appliBasique.png" alt="Apllication Android Basique">
+<em>Captures d'écran depuis Android Studio</em></p>
+<p>Cette petite application est un jeu d'estimation. Il faut trouver un nombre entre 1 et 100 en un nombre d'essais limité (10 max). Une barre de progression représente le nombre de tentatives. Une zone de texte (<em>TextView</em>) permet de donner des indications sur le nombre à trouver : plus petit ou plus grand !</p>
+<h2>Sources utiles</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://kotlinlang.org/docs/keyword-reference.html">liste exhaustive des mots clés Kotlin</a></li>
+<li><a href="https://developer.android.com/kotlin/style-guide?hl=fr">guide de style</a></li>
+<li><a href="https://www.youtube.com/watch?v=TCJFoExOBUE">TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)</a></li>
+<li><a href="https://www.youtube.com/watch?v=XLt_moCoauw">Simple Kotlin App | Android Studio | 2024</a></li>
+</ul>
+</div></div>
+
 
 
 </article>

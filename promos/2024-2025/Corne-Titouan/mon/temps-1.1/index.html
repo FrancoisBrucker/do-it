@@ -166,29 +166,29 @@
 <h2>Table des matières</h2>
 <ol>
 <li><a href="#section1">Introduction</a></li>
-<li><a href="#section2">OpenLayers, qu'est ce que c'est ?</a></li>
+<li><a href="#section2">OpenLayers, qu'est-ce que c'est ?</a></li>
 <li><a href="#section3">Vocabulaire du SIG</a></li>
 <li><a href="#section4">Mise en route</a></li>
 <li><a href="#section5">Prise en main d'OpenLayers</a></li>
 </ol>
 <h2>1. Introduction <a id="section1"></a></h2>
 <p>Durant mon stage de césure j'aurais aimé apprendre à intégrer une couche SIG dans mon application web. Mais par faute de temps, je n'ai pas eu la chance de pouvoir vraiment m'y intéresser. C'est pourquoi j'ai décidé de consacré ce premier MON à la représentation cartographique Web pour acquérir les bases. L'objectif du MON étant de réaliser une petite architecture web en y intégrant un fond de carte en utilisant OpenLayers.</p>
-<h2>2. OpenLayers, qu'est ce que c'est ? <a id="section2"></a></h2>
+<h2>2. OpenLayers, qu'est-ce que c'est ? <a id="section2"></a></h2>
 <p>OpenLayers est une API JavaScript Open Source (gratuite) qui permet de représenter facilement des données géographiques sur une page Web.</p>
 <p>Une simple connaissance des bases en Html, CSS et JavaScript est nécessaire pour s'approprier et utiliser OpenLayers. Les tutoriels fournis sur leur <a href="https://openlayers.org/">site internet</a> sont accessibles et permettent de commencer rapidement à jouer avec des fonds de cartes et autres données géographiques.</p>
 <h2>3. Vocabulaire du SIG à connaître <a id="section3"></a></h2>
-<p>Pour représenter une carte intéractive, il faut comprendre le système de couches. Par exemple, il y a une première couche qui consiste à afficher un fond de carte, puis on peut ajouter une couche représentant les capitales de chaque pays repésentées par un point.
-Il y a quatre types de couches différents :</p>
+<p>Pour représenter une carte intéractive, il faut comprendre le système de couches. Par exemple, il y a une première couche qui consiste à afficher un fond de carte, puis on peut par exemple ajouter une couche représentant les capitales de chaque pays repésentées par un point.
+Il existe quatre différents types de couches :</p>
 <ul>
-<li><strong>Les couches de tuiles ('Tile') :</strong> elles  affichent des images prédécoupées organisées en grilles à différents niveaux de zoom. Ces images sont généralement extraites d'un serveur sous forme de pour chaque niveau de zoom. Le serveur de tuiles fournit ces images en fonction de la zone géographique et du niveau de zoom demandé par le client. Ces couches de tuiles sont souvent utilisées pour afficher des fonds de carte basiques. Pour ma part j'ai utilisé le service OpenStreetMap (parfois abrégé en OSM) pour avoir un fond de carte.</li>
-<li><strong>Les couches d'images ('Image') :</strong> elles affichent des images non découpées qui peuvent être rendues à des résolutions et des étendues arbitraires. Elles sont moins efficaces en termes de performance que les couches de tuiles, mais peuvent être utiles pour des images ou des cartes spécifiques non découpées. On les utilise principalement lorqu'on a à faire à une carte spécifique à une certaine échelle ou une image géoréférencée (par exemple une photo aérienne des îles du Frioul). Pour ma part je n'en ai pas utilisées dans ce MON.</li>
+<li><strong>Les couches de tuiles ('Tile') :</strong> elles  affichent des images prédécoupées organisées en grilles à différents niveaux de zoom. Ces images sont généralement extraites d'un serveur sous forme de tuiles pour chaque niveau de zoom. Le serveur de tuiles fournit ces images en fonction de la zone géographique et du niveau de zoom demandé par le client. Ces couches de tuiles sont souvent utilisées pour afficher des fonds de carte basiques. Pour ma part j'ai utilisé le service OpenStreetMap (parfois abrégé en OSM) pour avoir un fond de carte.</li>
+<li><strong>Les couches d'images ('Image') :</strong> elles affichent des images non découpées qui peuvent être rendues à des résolutions et des étendues arbitraires. Elles sont moins efficaces en termes de performance que les couches de tuiles, mais peuvent être utiles pour des images ou des cartes spécifiques non découpées. On les utilise principalement lorsqu'on a affaire à une carte spécifique à une certaine échelle ou une image géoréférencée (par exemple une photo aérienne des îles du Frioul). Pour ma part je n'en ai pas utilisées dans ce MON.</li>
 <li><strong>Les couches vectorielles ('Vector') :</strong> elles affichent les données géographiques sous forme de vecteur. Un vecteur peut être de trois natures différentes : il peut s'agir d'un point (ex : représenter une ville), d'une ligne (ex : représenter un cours d'eau) ou d'un polygone (ex : repésenter une région).</li>
 <li><strong>Les couches de tuiles vectorielles ('VectorTile') :</strong> comme leur nom l'indique, elles affichent des données vectorielles fournies sous forme de tuiles. Cela permet de gérer de grandes quantités de données vectorielles de manière plus efficace, en les découpant en petites tuiles que la carte charge dynamiquement selon le zoom et la position géographique.</li>
 </ul>
-<p>Un <strong>raster</strong> est un format de données géographiques qui représente l'espace sous forme de grille de cellules (ou pixels), où chaque cellule a une valeur spécifique.
-<img src="img/rasterVSvecteur.png" alt="Mode raster vs Mode Vecteur"> <em>Illustration disponible sur <a href="https://www.researchgate.net/figure/Representation-des-points-lignes-et-polygones-en-modes-Raster-et-Vecteur-Source_fig1_315837966">researchgate.net</a></em></p>
+<p>Un <strong>raster</strong> est un format de données géographiques qui représente l'espace sous forme de grille de cellules (ou pixels), où chaque cellule a une valeur spécifique.</p>
+<p><img src="img/rasterVSvecteur.png" alt="Mode raster vs Mode Vecteur"> <em>Illustration disponible sur <a href="https://www.researchgate.net/figure/Representation-des-points-lignes-et-polygones-en-modes-Raster-et-Vecteur-Source_fig1_315837966">researchgate.net</a></em></p>
 <h2>4. Mise en route <a id="section4"></a></h2>
-<p>En suivant le tutoriel <em><a href="https://openlayers.org/doc/quickstart.html">&quot;Quick Start&quot;</a></em> pour l'initialisation rapide d'un projet, on arrive rapidement à afficher un fond de carte OpenStreetMap. Les trois petites lignes de commande :</p>
+<p>En suivant le tutoriel <em><a href="https://openlayers.org/doc/quickstart.html">&quot;Quick Start&quot;</a></em> pour l'initialisation rapide d'un projet, on arrive rapidement à afficher un fond de carte OpenStreetMap. Les trois petites lignes de commande utilisées sont les suivantes :</p>
 <p><code>npm create ol-app my-app</code> pour créer un projet avec l'architecture adaptée à OpenLayers</p>
 <p><code>cd my-app</code> pour rentrer dans le dossier du projet</p>
 <p><code>npm start</code> pour lancer le projet.</p>
@@ -198,10 +198,10 @@ Il y a quatre types de couches différents :</p>
 <p><img src="img/cartev0.png" alt="Page web initialisée"> <em>Capture d'écran personnelle</em></p>
 <p>Nous voilà maintenant avec un fond de carte. On peut facilement depuis le javascript ajuster le centre de la carte, et le zoom.</p>
 <h2>5. Prise en main d'OpenLayers <a id="section5"></a></h2>
-<p>A présent pour prendre en main OpenLayers, j'ai décidé de &quot;jouer&quot; avec les différentes fonctionnalités proposées en personnalisant la carte et les vecteurs que je souhaite représenter. J'ai ainsi décidé de reprenter l'Australie, et d'ajouter quelques vecteurs qui retracent le voyage que j'ai pu réaliser en césure.</p>
+<p>A présent pour prendre en main OpenLayers, j'ai décidé de &quot;jouer&quot; avec les différentes fonctionnalités proposées en personnalisant la carte et les vecteurs que je souhaite représenter. J'ai ainsi décidé de représenter l'Australie, et d'ajouter quelques vecteurs qui retracent le voyage que j'ai pu réaliser en césure.</p>
 <p>Tout d'abord, j'ai centré la carte sur l'Australie et j'ai ajusté le zoom pour avoir une vision du pays entier.</p>
 <p><img src="img/cartev1.png" alt="Carte centrée sur l'Australie"> <em>Capture d'écran personnelle</em></p>
-<p>Pour réaliser cela, il a fallu que je m'intéresse au système de projection. Le fond de carte OSM est en projection Mercator Web (EPSG:3857) qui est la projection standard utilisée pour la cartographie web. C'est cette projection que Google Maps a adopté à partir de 2005. D'autres systèmes de projections peuvent être utilisés en SIG. Pour ma part je me suis également servi le système EPSG:4326, également connu sous le nom de WGS84, qui est un système de coordonnées utilisé dans les systèmes Google Earth et GPS. En effet, il m'a été plus facile de troiuver les coordonnées GPS (longitude, latitude) des différentes villes australiennes que j'ai dans un second temps converties en coordonnées Web Mercator.</p>
+<p>Pour réaliser cela, il a fallu que je m'intéresse au système de projection. Le fond de carte OSM est en projection Mercator Web (EPSG:3857) qui est la projection standard utilisée pour la cartographie web. C'est cette projection que Google Maps a adopté à partir de 2005. D'autres systèmes de projections peuvent être utilisés en SIG. Pour ma part je me suis également servi le système EPSG:4326, également connu sous le nom de WGS84, qui est un système de coordonnées utilisé dans les systèmes Google Earth et GPS. En effet, il m'a été plus facile de trouver les coordonnées GPS (longitude, latitude) des différentes villes australiennes que j'ai dans un second temps converties en coordonnées Web Mercator.</p>
 <p>Pour transformer les coordonnées du centre de l'Australie de la projection EPSG:3857 à la projection EPSG:4326, j'ai utilisé <em>Proj4</em> et <em>fromLonLat</em>. <em>Proj4</em> est une bibliothèque JavaScript utilisée pour la conversion entre différents systèmes de projection cartographique. Elle permet de transformer des coordonnées d'une projection à une autre. <em>fromLonLat</em> est une fonction fournie par OpenLayers qui facilite la conversion de coordonnées géographiques (exprimée en longitude et latitude dans le système EPSG:4326) en coordonnées projetées dans le système EPSG:3857.</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> proj4 <span class="token keyword">from</span> <span class="token string">'proj4'</span><span class="token punctuation">;</span> <span class="token comment">//pour convertir les coordonnées d'une projection à une autre</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span>fromLonLat<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ol/proj'</span><span class="token punctuation">;</span>
@@ -215,7 +215,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
 
 <span class="token keyword">const</span> australieCoordonnees3857 <span class="token operator">=</span> <span class="token function">fromLonLat</span><span class="token punctuation">(</span>australieCoordonnees<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Ensuite, j'ai voulu ajouter une couche vectorielle sur mon fond de carte. J'ai alors décidé d'utiliser des polygones pour représenter les différents états australien. J'ai trouvé ces données sous forme d'un fichier GeoJson sur ce repository Github : <a href="https://github.com/tonywr71/GeoJson-Data">GeoJson-Data</a>.</p>
+<p>Ensuite, j'ai voulu ajouter une couche vectorielle sur mon fond de carte. J'ai alors décidé d'utiliser des polygones pour représenter les différents états australiens. J'ai trouvé ces données sous la forme d'un fichier GeoJson sur ce repository Github : <a href="https://github.com/tonywr71/GeoJson-Data">GeoJson-Data</a>.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -223,7 +223,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
 <div class="pl-8 mr-8">
 <p>GeoJson est un format de fichier qui utilise la norme JSON pour représenter des entités géographiques simples et leurs attributs non spatiaux.</p>
 </div></div>
-<p>J'ai modifié le fichier GeoJson pour ajouter des informations personnelles. J'ai par exemple ajouté une propriété booléenne &quot;VISITED&quot; pour les états dans lesquels je suis allé.</p>
+<p>J'ai modifié le fichier GeoJson pour ajouter des informations personnelles. J'ai par exemple ajouté une propriété booléenne &quot;VISITED&quot; pour les états dans lesquels je suis allé (représentés en vert).</p>
 <p><img src="img/cartev2.png" alt="Australie &amp; ses états"> <em>Capture d'écran personnelle</em></p>
 <p>Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres informations telles que les villes visitées, les hôtes qui m'ont accueilli, etc. Voici une partie du fichier créé :</p>
 <pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
