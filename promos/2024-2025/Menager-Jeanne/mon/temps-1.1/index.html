@@ -130,23 +130,99 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
-</div></div>
+<h2>Qu'est-ce que le frontend ?</h2>
+<p>HTLM et CSS sont 2 langages complémentaires et utiles pour le front-end, mais qu'est-ce que le frontend ?
+En developpement web, on parle souvent de frontend et de backend. Le frontend est souvent défini comme la partie visible par l'utilisateur, la partie avec laquelle, il interragit. Par exemple, les titres lu, les images visibles ou encore les boutons sur lesquels il peut cliquer. Le frontend doit donc être estétique pour donner à l'utilisateur l'envie d'utiliser notre site web, il a aussi un role dans la compréhension de notre site. <br>
+Le backend au contraire est invisible pour l'utilisateur, il permet de stocker les données utiles au site pour les transmettre à l'utilisateur via le frontend. <br>
+Le frontend et le backend sont codés avec des langages différents. Le HTML et le CSS peuvent être utilisés pour le frontend. <br>
+Afin d'apprendre à utiliser ces 2 langages, j'ai suivi le cours <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061257-comprenez-la-difference-entre-html-et-css">Créez votre site web avec HTML5 et CSS3</a> sur OpenClassrooms.</p>
+<h2>Qu'est-ce que l'HTML ?</h2>
+<p>HTML signifie HyperText Markup Language et permet de créer et structurer les pages web. Pour se faire, il utilise différentes balises de cette manière :</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Ma Page Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bienvenue sur ma page web&lt;/h1&gt;
+    &lt;p&gt;Ceci est un paragraphe de texte.&lt;/p&gt;
+    &lt;a href=&quot;https://www.example.com&quot;&gt;Visitez ce site&lt;/a&gt;
+    &lt;img scr=&quot;mon_image.png&quot; alt=&quot;Ceci est mon image&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Chaque balise permet au navigateur de comprendre la nature du texte qu'elles encadrent et donc de bien l'afficher à l'écran pour les visiteurs du site web.\</p>
+<p>Elles vont souvent par paire, voici quelques exemples :</p>
+<p><code>&lt;title&gt;&lt;/title&gt;</code> indiquent le titre de la page web<br>
+<code>&lt;p&gt;&lt;/p&gt;</code> indiquent un paragraphe <br>
+<code>&lt;img&gt;</code> est une balise orpheline qui indique une image <br>
+<code>&lt;a&gt;&lt;/a&gt;</code> indiquent un lien vers un site externe ou une autre partie du site <br>
+<code>&lt;h1&gt;&lt;/h1&gt;</code>indiquent un titre sur la page, il existe aussi <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;h3&gt;&lt;/h3&gt;</code> ... <code>&lt;h6&gt;&lt;/h6&gt;</code>, plus le chiffre augmente, plus le titre est petit.</p>
+<p>Dans le cours d'openClassRoom, un projet fil rouge était proposé afin d'appliquer directement les principes appris et voici le résultat à la fin de la partie d'htlm :</p>
+<p><img src="HTML.png" alt="Capture d'écran à la fin de la partie HTML"></p>
+<p>On voit ici le titre de la page ** À propos - Robbie Lens Photographie** est indiqué en haut. La page est ensuite divisée et plusieurs sections avec des titres de tailles différentes. Mais ce contenu n'est pas joli et ne donne pas envie d'être lu. Pour le rendre plus attractif, nous allons donc utiliser le CSS.</p>
+<h2>Qu'est-ce que le CSS ?</h2>
+<p>CSS signifie Cascading Style Sheets et permet de gérer l’apparence visuelle et le style des pages web. Cela permet notamment de définir les couleurs et arrière-plans, les styles typographiques ou la mise en page. Un fivhier CSS ressemble à ça :</p>
+<pre><code>a {
+  color: #242424;
+  text-decoration: none;
+}
+</code></pre>
+<h3>Style typographique et arrière plan</h3>
+<pre><code>body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+}
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
-<ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
-</ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+h1 {
+  font-size: 3.5em;
+  color: #a5b4fc;
+  font-family: 'Montserrat', sans-serif;
+}
+</code></pre>
+<p>Ici, par exemple, on définit une police et une taille qui s'applique à tous les textes dans la balise <body> en HTML ainsi qu'une couleur d'arrière plan. <br>
+Dans la deuxième propriété, on définit une taille, une couleur et une police spécifique uniquement aux titres h1.</body></p>
+<h3>Couleurs</h3>
+<pre><code>.carre-contenu {
+  border-right: 1px solid #8e86b5;
+  border-bottom: 1px solid #8e86b5;
+  padding: 50px;
+}
+</code></pre>
+<pre><code>&lt;div class=&quot;carre-contenu&quot;&gt;
+</code></pre>
+<p>Ici, le css s'applique à une <code>&lt;div&gt;</code> particulière, celle où la classe &quot;carre-contenu&quot; est spécifiée. Celle-çi permet de définir les bordures de l'élément et indiquant son épaisseur, son style et sa couleur.</p>
+<h3>Modifier le style suite à une action</h3>
+<p>Il est possible de mofifier le style d'un élément au survol ou lors du clic:</p>
+<pre><code>a:hover {
+  text-decoration: underline;
+}
+</code></pre>
+<p>Ici, le lien va se souligner lorsque l'utilisateur va passer la souris dessus.</p>
+<h3>La mise en page</h3>
+<p>Tout d'abord, on peut régler les marges externes appellées &quot;margin&quot; et les marges internes appelées &quot;padding&quot;. Par exemple, ici, on règle la marge à gauche :</p>
+<pre><code>.lien-icone {
+  margin-left: 30px;
+}
+</code></pre>
+<p>Ensuite, on peut utiliser ce qui s'appelle des flexbox pour aligner les éléments comme on le souhaite comme illustré sur cette image :</p>
+<p><img src="flexbox.png" alt="Explication flexbox"></p>
+<p>Enfin, les CSS grids permetent de placer vos élément dans un tableau en précisant les tailles des colonnes et lignes comme fait ici :</p>
+<pre><code>.grid-paysages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+  gap: 15px;
+}
+</code></pre>
+<p>Ainsi, grace au CSS, nous avons pu rendre le site web de la photographe plus attractif :</p>
+<p><img src="CSS1.png" alt="Site après l'utilisation du CSS">
+<img src="CSS2.png" alt="Site après l'utilisation du CSS">
+<img src="CSS3.png" alt="Site après l'utilisation du CSS"></p>
+<p>Je n'ai pas eu le temps de finir la formation d'openClassRoom mais je suis satisfaite du travail que j'ai effectué et je sais où trouver les ressources qu'il me manque si j'en ai besoin un jour. Les parties manquantes ne me seront pas utiles pour mon POK, ce n'est donc pas grave.</p>
 
 
 </article>
