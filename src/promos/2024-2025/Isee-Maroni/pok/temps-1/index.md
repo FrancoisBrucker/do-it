@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "POK 1 : Application web - Offres de stages"
+title: "Application web - Offres de stages"
 authors:
   - Isée Maroni
 
