@@ -30,7 +30,10 @@ Aucun prérequis ici, je suis parti de zéro. L'idée est de prendre en main Bub
 
 Ce POK présente le développement d'une application web avec Bubble.io pour aider les coureurs à suivre leurs performances et à personnaliser leurs plans d'entraînement selon leurs objectifs. Ce projet vise à terme à inclure la mise en place de fonctionnalités de base que l'on peut retrouver dans les applications déjà existantes et la personnalisation des plans d'entrainement en fonction des données fournies par l'utilisateur lors de son inscription.
 
-![RunMate](./logo_RunMate.png)
+<div style="margin: auto; width: fit-content;">
+  <img src="./logo_RunMate.png" alt="RunMate" style="width: 200px">
+
+</div>
 
 
 ## Tâches
@@ -73,9 +76,9 @@ Toutes les séances et le nombre d'heures passées sur le projet.
 | ------------ | -------------- | ----------------------------------------------------------------------------------- |
 | Samedi 14/09 | 2H             | Exploration des fonctionnalités des applications existantes (Runna, Campus)          |
 | Samedi 14/09 | 2H             | Réflexion sur l'UI/UX et identification des fonctionnalités principales à développer |
-| Dimanche 15/09 | 3H            | Création de la base de données et structure des utilisateurs                         |
-| Dimanche 15/09 | 3H            | Création des pages d'inscription et d'informations utilisateur                      |
-| Dimanche 15/09 | 3H            | Développement du Dashboard utilisateur                                               |
+| Dimanche 15/09 | 2H            | Création de la base de données et structure des utilisateurs                         |
+| Dimanche 15/09 | 2H            | Création des pages d'inscription et d'informations utilisateur                      |
+| Dimanche 15/09 | 2H            | Développement du Dashboard utilisateur                                               |
 
 ## Contenu
 
@@ -93,9 +96,17 @@ J'ai vite préféré passer peu de temps sur la formation vidéo ( d'une durée 
 
 Une réflexion sur l'interface utilisateur (UI) et l'expérience utilisateur (UX) a été menée pour définir le parcours utilisateur optimal. J'ai également pris le temps d'explorer les fonctionnalités des applications existantes, comme **Runna** et **Campus**, pour voir sur quelles fonctionnalités principales se concentrer. Cela m'a aussi donné des idées sur des fonctionnalités qui ne sont pas encore présentées et que je pourrais développer pour différencier mon application.
 
+
+
 #### Création de la base de données utilisateurs (User)
 
 La base de données **User** est l'un des éléments centraux de l'application, car elle permet de stocker toutes les informations nécessaires pour personnaliser l'expérience utilisateur et proposer des plans d'entraînement adaptés à chaque coureur. Voici un aperçu détaillé des étapes et des choix effectués pour la création de cette base de données :
+
+<div style="margin: auto; width: fit-content;">
+  <img src="./Screenshot from 2024-09-18 12-00-33.png" alt="RunMate">
+
+</div>
+
 
 ##### 1. Structure de la base de données
 
@@ -146,6 +157,12 @@ J'ai créé les pages permettant aux utilisateurs de s'inscrire et de renseigner
 - Une page **Info 2** pour choisir entre débutant ou pratiquant déjà la course à pied.
 - Des pages supplémentaires pour définir le volume d'entraînement hebdomadaire, l'objectif de course, et le nombre de sessions par semaine.
 
+<div style="margin: auto; width: fit-content;">
+  <img src="./Screenshot from 2024-09-18 12-12-55.png" alt="Page infos">
+
+</div>
+
+
 #### Développement du tableau de bord (Dashboard)
 
 J'ai mis en place un **tableau de bord** affichant les performances de l'utilisateur avec des données sur :
@@ -156,6 +173,12 @@ J'ai mis en place un **tableau de bord** affichant les performances de l'utilisa
 - Les heures de course effectuées
 
 Des graphiques dynamiques permettent de visualiser les progrès mois par mois.
+
+<div style="margin: auto; width: fit-content;">
+  <img src="./Screenshot from 2024-09-18 12-18-01.png" alt="Dashboard">
+
+</div>
+
 
 ### Second Sprint
 
