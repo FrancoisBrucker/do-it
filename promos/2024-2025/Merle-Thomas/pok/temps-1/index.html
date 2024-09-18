@@ -160,6 +160,9 @@
 <li>Développement FrontEnd en HTML/CSS/JavaScript.</li>
 <li>Méthode d'analyse du besoin client : définir l'expérience utilisateur.</li>
 <li>Développement UI/UX.</li>
+<li>Connaissance des concepts fondamentaux de JavaScript (variables, fonctions, DOM).</li>
+<li>Une première expérience avec un éditeur de code.</li>
+<li>Familiarité avec le concept des frameworks FrontEnd (Vue.js sera introduit).</li>
 </ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
@@ -177,34 +180,66 @@
 <li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
-<h1>POK 1 - Asian Fried Rice - FrontEnd</h1>
-<p>Codage en HTML/CSS/JavaScript</p>
-<h2>Objectifs principaux</h2>
+<h1><span style="color: #26B260">POK 1 - Asian Fried Rice - FrontEnd</span></h1>
+<p>Codage en HTML/CSS/JavaScript.</p>
+<p>Ce POK décrit les étapes du développement du site web de notre Dark Kitchen de Fried Rice. Il s'agit de la création du FrontEnd à l'aide de HTML, CSS et JavaScript. Le projet évoluera vers une structure dynamique en utilisant Vue.js. Le site aura une page d'accueil, un menu, un panier et d'autres composants nécessaires pour faire des commandes en ligne.</p>
+<h2><span style="color: #26B260">Objectifs principaux</span></h2>
 <ol>
-<li>Mise en oeuvre des connaissances acquises durant les MON1 et MON2.</li>
-<li>Mise en pratique de l'apprentissage des languages HTML/CSS et JavaScript.</li>
-<li>Codage du FrontEnd de mon 1er site web de Dark Kitchen.</li>
-<li>Déployer les premières pages de mon site web.</li>
+<li>Mise en oeuvre des connaissances acquises durant les <strong>MON</strong> et <strong>MON2</strong>.</li>
+<li>Mise en pratique de l'apprentissage des languages <strong>HTML/CSS</strong> et <strong>JavaScript</strong>.</li>
+<li>Migrer le site d'une architecture statique vers une structure plus dynamique avec <strong>Vue.js</strong>.</li>
+<li>Déployer une interface utilisateur fluide et réactive pour un site web de Dark Kitchen.</li>
 </ol>
-<h2>Plan d'action</h2>
-<ol>
-<li>Apprentissage des bases des languages utilisés grâce à mes MONs: suivi de cours en ligne et tutoriels.</li>
-<li>Définir les besoins utilisateurs à l'aide d'une méthode d'analyse de l'expérience utilisateur : définir les Users Stories.</li>
-<li>Définir la structure du site web : nombre de pages, design et architecture, etc.</li>
-<li>Définir l'identité visuelle du site web.</li>
-<li>Codage du FrontEnd en HTML/CSS et JavaScript.</li>
-</ol>
-<h3>Sprint 1</h3>
+<h2><span style="color: #26B260">Plan d'action</span></h2>
+<h3>1. Conception initiale avec HTML/CSS</h3>
 <ul>
-<li>[ ]</li>
-<li>[ ]</li>
-<li>[ ]</li>
+<li>Définir la structure du site avec HTML : création de l'<strong>index</strong> (page d'accueil), <strong>page de menu</strong>, et <strong>panier</strong>.</li>
+<li>Designer l'interface utilisateur à l'aide de <strong>CSS</strong> : structure de la navigation, sections, boutons et visuels.</li>
+<li>Développement du layout général et de l'identité visuelle (typographie, couleurs, design des boutons).</li>
 </ul>
-<h3>Sprint 2</h3>
+<h3>2. Dynamisation du FrontEnd avec JavaScript</h3>
 <ul>
-<li>[ ]</li>
-<li>[ ]</li>
-<li>[ ]</li>
+<li>Intégrer des fonctionnalités <strong>JavaScript</strong> pour dynamiser l'interface utilisateur (par exemple, le panier).</li>
+<li>Manipulation du <strong>DOM</strong> pour interagir avec les éléments HTML.</li>
+<li>Ajouter des transitions et animations légères via <strong>CSS</strong> et <strong>JavaScript</strong>.</li>
+</ul>
+<h3>3. Migration vers Vue.js</h3>
+<ul>
+<li>Refactoriser le code <strong>HTML/CSS/JavaScript</strong> en composants <strong>Vue.js</strong>.</li>
+<li>Introduction de la réactivité : rendre le site plus dynamique en fonction des interactions utilisateurs.</li>
+<li>Gestion des événements utilisateurs (ex. : ajout de produits au panier, mise à jour du contenu).</li>
+</ul>
+<h3><span style="color: purple">Sprint 1</span></h3>
+<ul>
+<li><strong>Objectif :</strong> Structurer le site web avec les pages principales (accueil, menu et panier) et concevoir l'interface de base.
+<ul>
+<li>[x] Création du fichier <code>index.html</code> avec les sections : header, hero, featured dish, footer.</li>
+<li>[x] Conception de la page <code>menu.html</code> avec un système de grille pour afficher les menus.</li>
+<li>[x] Création de la page <code>panier.html</code> pour gérer les articles du panier.</li>
+<li>[x] Définition du style de la navigation (menus, boutons, couleurs) dans le fichier <code>style.css</code>.</li>
+</ul>
+</li>
+</ul>
+<h3><span style="color: purple">Sprint 2</span></h3>
+<ul>
+<li><strong>Objectif :</strong> Intégrer des fonctionnalités JavaScript pour interagir avec le contenu.
+<ul>
+<li>[ ] Utiliser JavaScript pour ajouter des produits au panier et mettre à jour dynamiquement le contenu.</li>
+<li>[ ] Gestion des événements DOM (ex. : clics sur les boutons &quot;Ajouter au panier&quot;).</li>
+<li>[ ] Implémentation de transitions visuelles avec CSS et JavaScript.</li>
+</ul>
+</li>
+</ul>
+<h3><span style="color: purple">Sprint 3 :</span></h3>
+<ul>
+<li><strong>Objectif :</strong> Transformer le site en une application plus interactive avec Vue.js.
+<ul>
+<li>[ ] Diviser les pages en composants Vue.js (ex. : <code>MenuComponent</code>, <code>CartComponent</code>).</li>
+<li>[ ] Mettre en place la réactivité avec Vue pour gérer les états du panier.</li>
+<li>[ ] Utiliser des directives Vue (<code>v-for</code>, <code>v-if</code>, etc.) pour dynamiser l'affichage du contenu.</li>
+<li>[ ] Intégration de formulaires réactifs pour la commande.</li>
+</ul>
+</li>
 </ul>
 <h3>Horodateur</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
@@ -218,9 +253,29 @@
 </thead>
 <tbody>
 <tr>
-<td>Mardi 27/08</td>
+<td>13/09</td>
 <td>1H</td>
-<td>Travail sur la trame du site</td>
+<td>Création du projet GitHub</td>
+</tr>
+<tr>
+<td>13/09</td>
+<td>1H</td>
+<td>Création de la structure du code HTML</td>
+</tr>
+<tr>
+<td>14/09</td>
+<td>2H</td>
+<td>Conception primitive des pages du sites</td>
+</tr>
+<tr>
+<td>15/09</td>
+<td>3H</td>
+<td>Design de la page principal avec CSS</td>
+</tr>
+<tr>
+<td>16/09</td>
+<td>3H</td>
+<td>Design des pages <strong>menu</strong> et <strong>panier</strong></td>
 </tr>
 </tbody>
 </table>
