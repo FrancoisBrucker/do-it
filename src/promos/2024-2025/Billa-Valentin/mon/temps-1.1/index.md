@@ -363,6 +363,8 @@ et prennent en charge un large éventail de langages de programmation via des la
 ## Bibliographie
 
 {% lien %}
+- [W3Schools SQL Quickref](https://www.w3schools.com/sql/sql_quickref.asp)
+  *documentation plutôt détaillée de tout un tas de fonctionnalités SQL*
 - [GeeksForGeeks](https://www.geeksforgeeks.org)
   *bon site regroupant tutoriels et explications (pas seulement pour SQL)*
 - [Doc MySQL 9.0](https://dev.mysql.com/doc/refman/9.0/en/)
