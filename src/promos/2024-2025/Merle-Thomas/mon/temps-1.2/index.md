@@ -382,4 +382,8 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Vendredi 06/09  | 1H  | blabla |
+| 12/09  | 1H  | Discussion avec Sofiane pour trouver le tutoriel à suivre, téléchargment et prise en main du code |
+| 13/09  | 0.5H  | Exercice 1 : AboutExpects|
+| 13/09  | 0.5H  | Exercice 2 : AboutArrays |
+| 13/09  | 0.5H  | Exercice 3 : AboutFunctions |
+

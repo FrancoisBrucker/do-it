@@ -61,6 +61,7 @@ NB: on peut imbriquer `<em><strong> texte </strong></em>` qui nous donne ***text
 * `<br/>` pour un saut de ligne définitif
 
 ### CSS
+
 CSS pour Cascading Style Sheets permet de styliser le page web, la rendre plus jolie et agréable.
 Dans le même dossier que notre fichier html, on crée un fichier .css dans lequel on va mettre nos éléments de style.
 Pour lier le fichier html au css, on entre `<link rel='stylesheet' href='styles.css'/>` (styles.css étant notre fichier css) dans le `<head> </head>` du html. Désormais, tous les éléments de styles ajoutés au fichier css seront visibles sur la page web.

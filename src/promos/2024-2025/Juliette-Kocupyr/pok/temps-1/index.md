@@ -216,20 +216,21 @@ Pour mener à bien cette mission d'envergure, il a été nécessaire de trouver 
 
 Dans son siège de Stockholm, des **squads** autogérées de six à douze personnes se concentrent sur un domaine ou fonctionnalité, selon une méthodologie autonome et choisie. Une mission unique, appuyée par un **coach agile** pour le support et un **product owner** pour les conseils. Ensuite, pour maintenir la cohérence globale et le partage des savoirs, les squads sont organisées en grandes **tribus**, gérées par un responsable. En parallèle, les **chapitres** organisent les familles de spécialistes (développeur JavaScript, etc.). Quant aux **guildes**, elles sont des communautés transversales d’intérêts. Enfin, trios et alliances forment d’autres combinaisons, toujours avec le même objectif: favoriser la collaboration et l’alignement.
 
-![planspotify](/src/promos/2024-2025/Juliette-Kocupyr/pok/temps-1/image/planspotify.png)
+![planspotify](./image/planspotify.png)
 
 
 1. **Les squads, l'unité de base du modèle Spotify**
 
-  Une squad est une équipe d'une dizaine de personnes indépendante et qui n'a qu'une seule mission à long terme touchant à un seul bloc fonctionnel. Semblables à une équipe Scrum, les Squads sont autonomes et se concentrent sur un domaine de fonctionnalité gérer par un product owner. Les membres de l'équipe s'assoient ensemble et disposent de toutes les compétences et de tous les outils nécessaires pour concevoir, développer, tester et mettre en production. Les équipes s'organisent elles-mêmes et décident de leur propre méthode de travai comme les sprints Scrum ou Kanban. Elles sont encouragées à utiliser les méthodes de Lean Startup pour développer de nouvelles fonctionnalités : Minimum Viable Product (MVP), validated learning et A/B testing font partie des pratiques prônées chez Spotify.
+    Une squad est une équipe d'une dizaine de personnes indépendante et qui n'a qu'une seule mission à long terme touchant à un seul bloc fonctionnel. Semblables à une équipe Scrum, les Squads sont autonomes et se concentrent sur un domaine de fonctionnalité gérer par un product owner. Les membres de l'équipe s'assoient ensemble et disposent de toutes les compétences et de tous les outils nécessaires pour concevoir, développer, tester et mettre en production. Les équipes s'organisent elles-mêmes et décident de leur propre méthode de travai comme les sprints Scrum ou Kanban. Elles sont encouragées à utiliser les méthodes de Lean Startup pour développer de nouvelles fonctionnalités : Minimum Viable Product (MVP), validated learning et A/B testing font partie des pratiques prônées chez Spotify.
 
-   Dans l'idéal, chaque équipe est totalement autonome, en contact direct avec les parties prenantes, et ne dépend pas d'autres équipes. Mais avec plus de 30 équipes, ce n'est pas si simple. Pour ce faire, une enquête trimestrielle est réalisée auprès de chaque équipe afin de cibler les efforts d'amélioration et de déterminer le type de soutien organisationnel nécessaire. La plupart des équipes disposent d'un espace de travail comprenant un bureau, un salon et une salle de réunion personnelle. Presque tous les murs sont des tableaux blancs. L'objectif est de favoriser la collaboration. De plus, pour promouvoir l'apprentissage et l'innovation, chaque équipe est encouragée à consacrer environ 10 % de son temps à des « hack days » des journées où les participants font ce qu'ils veulent, essaient de nouvelles idées et les partagent avec leurs camarades.
+    Dans l'idéal, chaque équipe est totalement autonome, en contact direct avec les parties prenantes, et ne dépend pas d'autres équipes. Mais avec plus de 30 équipes, ce n'est pas si simple. Pour ce faire, une enquête trimestrielle est réalisée auprès de chaque équipe afin de cibler les efforts d'amélioration et de déterminer le type de soutien organisationnel nécessaire. La plupart des équipes disposent d'un espace de travail comprenant un bureau, un salon et une salle de réunion personnelle. Presque tous les murs sont des tableaux blancs. L'objectif est de favoriser la collaboration. De plus, pour promouvoir l'apprentissage et l'innovation, chaque équipe est encouragée à consacrer environ 10 % de son temps à des « hack days » des journées où les participants font ce qu'ils veulent, essaient de nouvelles idées et les partagent avec leurs camarades.
 
 2. **Les tribus**
 
    Une tribu est constituée d'une ensemble de squad travaillant sur le même domaine de fonctionnalité. Elles contribuent à l'alignement entre les Squads et sont généralement composées d'au maximum 100 collaborateurs, car il est dfficile pour une personne de maintenir une relation sociale avec plus de gens sans instaurer des règles restrictives, de la bureaucratie ou encore des niveaux de gestion supplémentaires. Dans chaque Tribu, un Responsable de Tribu est en charge de soutenir la coordination des Squads et d'encourager la collaboration en offrant le meilleur environnement de travail possible. La tribu peut être considérée comme l'« incubateur » des squads.
 
 3. **Les chapitres**
+
    Ce modèle présente tout de même un inconvénient du à l'autonomie totale des équipes, la perte d’économies d’échelle. Le testeur d'une équipe peut être confronté à un problème qu'une autre équipe a déjà résolu. Pour éviter ça, le modèle suggère la mise en place de communautés dédiées au partage de connaissances et de bonnes pratiques : les chapitres et les guildes.
 
    Chaque employé faisant partie d’une squad, fait également partie d’un chapitre, qui correspond à un domaine de compétence métier, comme par exemple le testing chapter. Henrik Kniberg définit les chapitres comme “une petite famille de personnes ayant des compétences similaires dans une même tribu”. Les chapitres se réunissent régulièrement pour discuter de leur problème et partager leurs solutions. Ils disposent chacun d’un Chapter Lead, qui prend le rôle de Manager du chapitre, notamment sur les questions de ressources humaines. Il restent cependant membres d’un squad et continuent à participer à la livraison de valeur, et ce afin de garder une bonne connaissance du travail sur le terrain.
@@ -254,14 +255,24 @@ L'organisation matricielle en équipe (squads, tribus) et transversale (chapitre
 
 ## Bibliographie
 
-[**PwC**. *La transformation agile des organisations*.](https://www.pwc.fr/fr/publications/innovation/la-transformation-agile-des-organisations.html).
-[**Planview**. *Definitive Digital Transformation Guide: Enterprise Agile Transformation*.](https://www.planview.com/fr/resources/guide/definitive-digital-transformation-guide/enterprise-agile-transformation/).
-[**Forvis & Mazars**. *L’agilité : un changement culturel avant tout*.](https://www.forvismazars.com/fr/fr/insights/le-blog/l-agilite-un-changement-culturel-avant-tout).
-[**Tuleap**. *Transformation agile à l’échelle : comment s’y prendre*.](https://www.tuleap.org/fr/agilite-echelle/transformation-agile-a-echelle-comment-sy-prendre).
-[**Advaloris**. *Réussir sa transformation agile : les étapes clés pour un changement durable et efficace*.](https://www.advaloris.ch/organisation-entreprise/reussir-sa-transformation-agile-les-etapes-cles-pour-un-changement-durable-et-efficace).
+[**PwC**. *La transformation agile des organisations*.](https://www.pwc.fr/fr/publications/innovation/la-transformation-agile-des-organisations.html)
+
+[**Planview**. *Definitive Digital Transformation Guide: Enterprise Agile Transformation*.](https://www.planview.com/fr/resources/guide/definitive-digital-transformation-guide/enterprise-agile-transformation/)
+
+[**Forvis & Mazars**. *L’agilité : un changement culturel avant tout*.](https://www.forvismazars.com/fr/fr/insights/le-blog/l-agilite-un-changement-culturel-avant-tout)
+
+[**Tuleap**. *Transformation agile à l’échelle : comment s’y prendre*.](https://www.tuleap.org/fr/agilite-echelle/transformation-agile-a-echelle-comment-sy-prendre)
+
+[**Advaloris**. *Réussir sa transformation agile : les étapes clés pour un changement durable et efficace*.](https://www.advaloris.ch/organisation-entreprise/reussir-sa-transformation-agile-les-etapes-cles-pour-un-changement-durable-et-efficace)
+
 [**Hubvisory**. *Spotify : organisation et pratiques de l’agilité à l’échelle*.]( https://www.hubvisory.com/fr/blog/spotify-organisation-et-pratiques-de-l-agilite-a-l-echelle)
+
 [**Crisp**. *Scaling Spotify – A model for large-scale agile*.](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf)
+
 [**Spotify Engineering Blog**. *Spotify Engineering Culture*.](https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1/)
+
 [**Atlassian**. *Le modèle Spotify et l’agilité à l’échelle*.](https://www.atlassian.com/fr/agile/agile-at-scale/spotify)
+
 [**Toucan Toco**. *Spotify : comment la société révolutionne le management et l’agilité*.](https://www.toucantoco.com/blog/spotify-revolutionne-management-agilite)
+
 [**Rhapsodies Conseil**. *Le modèle Spotify n’est pas un modèle*.](https://www.rhapsodiesconseil.fr/le-modele-spotify-nest-pas-un-modele/)

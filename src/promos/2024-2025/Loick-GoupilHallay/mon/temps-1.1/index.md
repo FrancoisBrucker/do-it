@@ -296,7 +296,7 @@ Les fonctionnalités attendues d'une plateforme de partage de code source sont:
 - Self-hosting (OPTIONNEL): Possibilité d'héberger la plateforme sur ses propres serveurs
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img class="icon" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub" title="GitLab">
+  <img class="icon" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub" title="GitHub">
   <img class="icon" src="https://images.ctfassets.net/xz1dnu24egyd/1IRkfXmxo8VP2RAE5jiS1Q/ea2086675d87911b0ce2d34c354b3711/gitlab-logo-500.png" alt="GitLab" title="GitLab">
   <img class="icon" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/44_Bitbucket_logo_logos-512.png" alt="Bitbucket" title="Bitbucket">
   <img class="icon" src="https://www.svgrepo.com/show/448271/azure-devops.svg" alt="Azure Devops" title="Azure Devops">
@@ -311,7 +311,7 @@ La plupart des plateformes de partage de code source offrent des fonctionnalité
 En fonction de la composition de l'équipe et des besoins du projet, il peut être intéressant de choisir un outil de gestion de projet dédié, qui offre des fonctionnalités plus avancées, plus intuitives, plus adaptées à la gestion de projet.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png" alt="Jira" title="Confluence">
+  <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png" alt="Jira" title="Jira">
   <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968793.png" alt="Confluence" title="Confluence">
   <img class="icon" src="https://cdn-icons-png.flaticon.com/256/174/174874.png" alt="Trello" title="Trello">
 </div>

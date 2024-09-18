@@ -12,16 +12,10 @@ tags:
   - "Base de données"
   - "Novice"
 
-résumé: Un POK traitant des bases de données et de la façon d'en construire une.
+résumé: POK traitant des bases de données en général ainsi que de la façon d'en construire une.
 ---
 
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
-
-Ce POK à pour but de retracer toute la conception d'une base de données en partant de la création pour ensuite la visualiser et organiser la donnée dedans. Le but va être aussi d'en créer une en suivant des bonnes pratiques.
+Ce POK a pour but de retracer toute la conception d'une base de données, en partant de sa définition pour ensuite la visualiser et l'organiser. Il se séparera en deux parties : une plus théorique et une partie pratique.
 
 ## Tâches
 
@@ -35,19 +29,20 @@ Ce POK à pour but de retracer toute la conception d'une base de données en par
 
 ### Sprints
 
-Le but final de ce POK est d'avoir une bonne connsaissance de la création de base de données.
+Le but final de ce POK est d'avoir une bonne connsaissance sur la création de base de données pertinente et scalable.
 
 #### Sprint 1
 
 - [x] Définir d'une base de données ainsi que son utilisation et l'intérêt
 - [x] Définir le Format et les éléments qui constituent la base
-- [ ] Aborder les représentations possibles d'une base de données
-- [ ] Définir des bonnes pratiques pour créer une base de données
-- [ ] Définir Les façons de garantir la fiabilité d'une base pour éviter un rattrapage
+- [x] Aborder les représentations possibles d'une base de données
+- [x] Définir des bonnes pratiques pour créer une base de données
+- [x] Définir Les façons de garantir la fiabilité d'une base pour éviter un rattrapage
 
 #### Sprint 2
 
-- [x] Etudier une entreprise et les données qu'elle traite
+- [x] Imaginer une entreprise fictive pour travailler dessus
+- [ ] Etudier et représenter les données qu'elle traite
 - [ ] Imaginer et construire en diagramme sa base de données
 - [ ] Construire la base de données à l'aide de python
 - [ ] Exploiter rapidement la base de données en faisant des requêtes dessus
@@ -60,7 +55,7 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | -------- | -------- |-------- |
 | Mercredi 11/09  | 4h  | Définition base de données + début structures des bases + un peu d'histoire + trouver un exemple |
 |Mardi 16/09 | 5h30 |fin structure base + structures transactionnels, mise au propre du markdown + fiabilité + relecture|
-|Mercredi 17/09 | ..h | Représentation d'une base + Définir les bonnes pratiques + Bilan sprint |
+|Mercredi 17/09 | 2h | Représentation d'une base + Définir les bonnes pratiques + Bilan sprint |
 
 # Contenu
 
@@ -86,19 +81,13 @@ Pour les données sensibles, une base est soumise aux conditions du RGPD.
 
 Si plusieurs bases de données fonctionnent en collection, on parle de banque de données.
 
-## Présentation de l'entreprise exemple
+## Présentation de l'entreprise exemple fictive
 
 L'entreprise exemple fictive que nous allons utiliser tout au long de l'exercice se nomme **BatiBase**. C'est une entreprise qui travaille dans le secteur du bâtiment en faisant du génie civil. Elle intervient sur de grands chantiers partout en France et ne possède actuellement pas de système digital 🥵. En effet, elle s'est développée très vite après sa création et n'a pas eu le temps de mettre à jour ses systèmes. Il faut donc urgemment y remédier !
 
 Pour cela, BatiBase a fait appel à nous afin de construire leur base de données. Ils ne connaissent pas bien les bases de données et nous laissent donc libre choix sur tout, tant que cela couvre leur activité et que la base est scalable. Nous allons donc devoir choisir un modèle d'architecture et le construire en suivant les recommandations d'experts.
 
-![logo BatiBase](./logoBatiBase.png)
-
-{% info %}
-
-Ce logo a bien évidement été généré par chatGPT
-
-{% endinfo %}
+![logo BatiBase](./logoBatiBase.png)*(ChatGPT)*
   
 ## Utilisation d'une base de données
 
@@ -147,9 +136,9 @@ On utilise essentiellement le SQL pour exploiter ces données, car le SQL est ba
 
 Ce système atteint cependant ses limites pour les très grandes entreprises, car il se base sur les propriétés ACID *(voir structure transactionnelle)*.
 
-Voici un schéma de cette représentation par *Scifipete — Travail personnel, CC BY-SA 3.0, [Lien image](https://commons.wikimedia.org/w/index.php?curid=11506013)*
+Voici un schéma de cette représentation :
 
-![Schéma de la base relationnelle](./RDBMS_structure.png)
+![Schéma de la base relationnelle](./RDBMS_structure.png)*(File : RDBMS structure.png - Wikimedia Commons, 2010)*
 
 On observe bien le procédé de stockage sous forme de tableau. On peut aussi voir le fonctionnement plus classique d'une base de données avec les processus qui se déroulent dans une instance et qui sont ensuite reportés sur le disque de la base tout en conservant des logs.
 
@@ -161,9 +150,19 @@ On peut citer les systèmes de base de données de Google : BigTable ; Amazon : 
 
 Si l'on se penche sur le fonctionnement de LinkedIn, par exemple, on retrouve un système de clé qui s'associe à un index, lui-même associé à la clé et à la valeur, comme sur le schéma ci-dessous :
 
-![Table de Hachage](./tableHachage.png)
+![Table de Hachage](./tableHachage.png)*(File : HASHTB08.svg — Wikimedia Commons, s. d.)*
 
 Le tableau n'a alors pas d'ordre et l'on retrouve l'index très rapidement pour ensuite accéder au reste. Ceci permet de gagner en efficacité et en temps tout en permettant la répartition des données sur différents serveurs. Pour constituer ce genre de tableau, on utilise des fonctions de hachage que l'on doit définir de sorte à éviter les duplicats et à garantir que deux clés n'aient pas le même index.
+
+### Base de données orientée document
+
+Une base de données orientée document est une base de données semi-structurée qui stocke les données par collection présentant des propriétés et des types différents. Les données sont donc organisées par groupe, et le principal désavantage est qu'elles ne sont pas organisées entre elles. Cependant, la flexibilité de cette base la rend très utile pour stocker des données hétérogènes. Ce modèle répond donc très bien aux demandee d'agilité actuelles.
+
+### Base de données orientée Graph
+
+Cette base a une organisation sous la forme de graphique où chaque entité correspond à un nœud, et les entités sont liées entre elles par des branches. Le but de ce type de base de données est de représenter les données de façon interconnectée. L'avantage principal de ce modèle est qu'il permet de fouiller en profondeur dans des bases sans avoir à utiliser une infinité de jointures. Cette base permet aux utilisateurs de se promener dans le graphique facilement pour passer d'un enregistrement à un autre. On peut associer cela aux connexions des réseaux sociaux où les personnes se connectent entre elles.
+
+![Base de donnée orientée graph](./BDDorientegraph.png)*(Vauquier, 2022)*
 
 ## Structure transactionnelle
 
@@ -200,7 +199,39 @@ La flexibilité, la performance, l'évolutivité et la synchronisation sont beau
 
 ## Représentations possibles d'une base de données
 
+### Diagramme entité-relation
+
+Dans ce type de diagramme, il existe les objets, leurs associations et les attributs. Il peut être utilisé pour représenter une base de données, mais aussi une organisation d'entreprise ou autre. Les objets sont sous forme de carrés, et leur façon d'interagir ensemble passe par un losange représentant leur lien. On peut ensuite ajouter des attributs sur les objets en utilisant des ronds.
+
+On précise dans ce modèle le type de lien entre les objets (1, n), (n, 1), (n, n).
+
+![Diagramme entité relation](./ER_Diagram.png)*(Database-design — Diagrammes de Modèle D’entité-relation Dans Visio, s. d.)*
+
+### Diagramme de structure de données
+
+Ce diagramme est apparenté au modèle entité-association, mais il est plus focalisé sur la représentation des bases de données. Ce diagramme se concentre sur les liens entre les éléments à l'intérieur des entités, et non plus sur les entités en général.
+
+Il utilise une convention bien précise pour définir les liens entre les éléments. Il est possible de personaliser ces liens en simplifiant en utilisant la convention précédente de (1, n), (n, 1), (n, n) :
+
+![Lien entre les éléments](./FlecheType.png)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
+
+Ce qui permet d'aboutir à des diagrammes très précis qui permettent de bien comprendre la conception de la base de données. Il peut être intéressant de commencer par un diagramme entité-relation avant de passer à ce type de diagramme pour bien illustrer tous les procédés et liens facilement, puis se pencher ensuite sur le côté plus technique.
+
+![Diagramme de Strucure de donnée](./DiagrammeStructure.png)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
+
+### Arbre de données
+
+Cette représentation permet de montrer la hiérarchie qu'il existe entre des objets. On peut l'utiliser pour représenter tout ce qui découle d'un certain objet des diagrammes précédents ou plus directement pour une base particulièrement centrée sur un objet.
+
+![Diagramme en arbre](./arbre_1.png)*(Structures de Données Hiérarchiques : Les Arbres, s. d.)*
+
 ## Bonnes pratiques pour la réalisation d'un base
+
+Pour une base de données bien réalisée, il est essentiel d'éviter les données erronées qui falsifient par la suite l'utilisation de la base. Il faut donc garantir la fiabilité des données avec les méthodes du paragraphe suivant.
+
+Pour une bonne conception d'architecture, il est recommandé de se centrer sur les objets afin d'organiser proprement les informations. Il faut ensuite bien considérer et créer tous les liens nécessaires aux utilisateurs entre les objets en utilisant une clé unique. En effet, une base bien conçue doit permettre aux utilisateurs d'accéder à toutes les informations dont ils ont besoin à tout moment. Il est donc important de bien comprendre tous les processus d'une entreprise avant de concevoir leur base de données.
+
+Il faut ensuite penser à l'utilisation directe de la base avec les procédés de reporting, etc.
 
 ## Garantir la fiabilité de la donnée
 
@@ -217,5 +248,13 @@ Ensuite, il faut garantir le **bon remplissage des champs** demandés. Pour cela
 Au-delà de l'interface utilisateur, il est aussi possible de créer au niveau de l'instance des règles de validation n'autorisant que certains formats pour valider, ou encore d'ajouter des automatismes qui corrigent les données avant leur création dans la base.
 
 Il existe encore d'autres façons de procéder, plus spécifiques à certains champs (comme l'utilisation d'une API Google Maps pour rechercher et remplir les champs d'adresse), mais étant très spécifiques, nous les verrons au cas par cas lors de la création de la base de données dans le sprint 2.
+
+{% details "Bilan sprint 1" %}
+
+Pour ce Sprint, j'ai sous-estimé le temps passé sur cette première phase d'analyse générale des bases de données. En effet, je suis vite tombé sur beaucoup plus d'informations que je ne pensais. J'ai beaucoup apprécié découvrir l'histoire des bases de données évoluant en même temps que les besoins et les avancées technologiques, mais je me suis donc un peu perdu là-dedans en apprenant beaucoup de choses pas forcément très utiles dans la réalisation de ce POK, mais intéressantes pour la culture. J'ai aussi dû faire une étape du sprint 2 afin d'être plus concret dans la partie 1 du sprint 1. Ceci va par contre me permettre de rester dans les temps pour faire le sprint 2, je l'espère, sur 10h.
+
+J'ai aussi mal réparti mon temps en travaillant dessus beaucoup au dernier moment, ce qui a fait un sprint un peu lourd.
+
+{% enddetails %} 
 
 # Second Sprint

@@ -113,7 +113,7 @@ Bien entendu, 1h30 d’étude sur JavaScript est loin d’être suffisant pour m
 
 ## Développement <a id="développement"></a>
 
-### Le Frontend
+### Le Code
 Pour cette première phase du projet, prévue lors de la première sprint, j'ai choisi de développer **uniquement une page HTML**. Cette décision a été guidée par mes apprentissages durant ma MON 1, où j'ai compris que pour créer un site web avec une seule page, il faudrait utiliser beaucoup de JavaScript. Ainsi, pour atteindre mon objectif de progresser en JavaScript, cette approche s’est imposée comme la plus adaptée.
 
 La création de cette page a nécessité plusieurs divisions (div) HTML, que j'ai ensuite manipulées en utilisant JavaScript. L'idée était de **masquer ou afficher** ces divisions en fonction des actions de l'utilisateur et/ou du temps, notamment pour les animations d'ouverture de la page.
