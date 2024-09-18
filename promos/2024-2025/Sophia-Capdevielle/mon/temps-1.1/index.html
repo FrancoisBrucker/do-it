@@ -73,11 +73,27 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">frontend</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">html</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">css</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vue.js</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -102,12 +118,6 @@
 
     
 </div>
-
-        <p class="mb-4 text-lg">
-
-                Ce MON pose les bases du front-end et notamment du framework Vue.
-
-        </p>
 
 
 
@@ -135,6 +145,95 @@
 <p>Ce MON pose les bases du font-end: HTML, CSS, JavaScript (un peu) et présente un framework: Vue.js; le tout permettant de créer des sites internets interactifs.</p>
 <h2>Bases du front-end</h2>
 <h3>HTML</h3>
+<p>HTML pour HyperText Markup Language permet de structurer la page web. Tout est défini à l'aide de balises &lt;&gt;.
+Un fichier html commence par <code>&lt;!DOCTYPE html&gt;</code>, puis <code>&lt;html&gt;</code> et se termine par <code>&lt;/html&gt;</code>; l'intégralité du code se trouve entre ces deux balises.
+On retrouve ensuite <code>&lt;head&gt; &lt;/head&gt;</code>: avec à l'intérieur toutes les données dont on a besoin mais qu'on ne souhaite pas afficher; y compris le <code>&lt;title&gt;</code>.
+Puis <code>&lt;body&gt; &lt;/body&gt;</code> avec à l'intérieur les données visibles sur la page web.</p>
+<p>Quelques balises basiques que l'on trouve au sein du <code>&lt;body&gt;</code>:</p>
+<ul>
+<li><code>&lt;p&gt; &lt;/p&gt;</code> pour paragraphes</li>
+<li><code>&lt;h1&gt;&lt;/h1&gt;</code> à <code>&lt;h6&gt;&lt;/h6&gt;</code> pour les titres 1 à 6</li>
+<li><code>&lt;ul&gt; &lt;/ul&gt;</code> pour les listes désordonnées, et <code>&lt;li&gt; &lt;/li&gt;</code> pour chaque élément de la liste</li>
+<li><code>&lt;ol&gt; &lt;/ol&gt;</code> pour les listes ordonnées et donc numérotées</li>
+<li><code>&lt;header&gt; &lt;/header&gt;</code> , <code>&lt;footer&gt; &lt;/footer&gt; </code></li>
+<li><code>&lt;span&gt; &lt;/span&gt;</code> pour regrouper des éléments d'une même ligne</li>
+<li><code>&lt;div&gt; &lt;/div&gt;</code>pour regrouper des éléments de la page
+Ces deux dernières balises sont notamment utiles quand on fait entrer en jeu le style de la page avec CSS: on applique le style directement au <code>&lt;span&gt;</code> ou <code>&lt;div&gt;</code>.</li>
+</ul>
+<p>On peut également rajouter des éléments à une balise ouvrante: des <strong>attributs</strong>.
+On a par exemple &quot;id&quot; qui permet de donner un identifiant à notre élément:
+<code>&lt;p id=&quot;parag1&quot;&gt; &lt;/p&gt;</code> -&gt; ce paragraphe est désormais identifié comme &quot;parag1&quot;.
+De même avec &quot;class&quot;. Cela permet ensuite de cibler le paragraphe ou le titre que l'on veut stylisé.</p>
+<ul>
+<li><code>&lt;a href=&quot;autre_page.html&quot;&gt;Cliquez ici pour vous rendre sur une autre page&lt;/a&gt;</code> pour faire un lien cliquable</li>
+<li><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;descrption&quot;/&gt;</code> (balise à la fois ouvrante et fermante) pour insérer une image</li>
+</ul>
+<p>Niveau style de texte, on trouve:</p>
+<ul>
+<li>
+<p><code>&lt;em&gt; texte &lt;/em&gt;</code> permet d'écrire <em>texte</em> (en italique)</p>
+</li>
+<li>
+<p><code>&lt;strong&gt; texte &lt;/strong&gt;</code> permet d'écrire <strong>texte</strong> (en gras)</p>
+</li>
+<li>
+<p><code>&lt;u&gt; texte &lt;/u&gt;</code> permet décrire en souligné
+NB: on peut imbriquer <code>&lt;em&gt;&lt;strong&gt; texte &lt;/strong&gt;&lt;/em&gt;</code> qui nous donne <em><strong>texte</strong></em></p>
+</li>
+<li>
+<p><code>&lt;br/&gt;</code> pour un saut de ligne définitif</p>
+</li>
+</ul>
+<h3>CSS</h3>
+<p>CSS pour Cascading Style Sheets permet de styliser le page web, la rendre plus jolie et agréable.
+Dans le même dossier que notre fichier html, on crée un fichier .css dans lequel on va mettre nos éléments de style.
+Pour lier le fichier html au css, on entre <code>&lt;link rel='stylesheet' href='styles.css'/&gt;</code> (styles.css étant notre fichier css) dans le <code>&lt;head&gt; &lt;/head&gt;</code> du html. Désormais, tous les éléments de styles ajoutés au fichier css seront visibles sur la page web.</p>
+<p>Pour ajouter les éléments de style:</p>
+<ul>
+<li>On note la partie du site que l'on veut stylisé; par exemple &quot;body&quot;</li>
+<li>On ouvre {}</li>
+<li>On met différents attributs à l'intérieur; par exemple &quot;color&quot;, &quot;background-color&quot;</li>
+</ul>
+<p>Voilà ce que ça donne: (!! penser aux ;!!)</p>
+<p>body { <br>
+color: #FFC0CB;<br>
+background-color: #0000FF; <br>
+text-align: left;<br>
+}</p>
+<p>Un autre exemple:</p>
+<p>h1 { <br>
+font-size: 36px; <br>
+}</p>
+<p>On peut le faire sur plusieurs éléments à la fois:</p>
+<p>h1, h2, h3, h4, h5, h6 { <br>
+font-family: &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif; <br>
+}</p>
+<h3>JavaScript (un peu)</h3>
+<p>JavaScript est le language permettant de rendre les pages web dynamiques et interactives. Il permet de réagir aux actions de l'utilisateur: clics, mouvements de la souris,...On a donc: HTML qui structure, CSS qui stylise, et Js qui dynamise.</p>
+<h2>Qu'est-ce-que Vue? Les bases</h2>
+<p>Vue est un framework JavaScript qui se repose sur les standards HTML, CSS et JavaScript. Il propose une manière efficace de déclarer des composants pour la construction d'interfaces utilisateur dynamiques.</p>
+<h3>Composant monofichier (Single-File Components)</h3>
+<p>Dans la plupart des projets Vue dotés d'outils de construction, nous créons des composants Vue en utilisant un format de fichier semblable à HTML appelé <strong>Composant monofichier</strong>, ou <strong>Single-File Component</strong> en anglais (également connu sous le nom de fichiers <code>*.vue</code>). Celui-ci encapsule la partie JavaScript, HTML et les styles (CSS) du composant dans un seul fichier.</p>
+<h3>API</h3>
+<p>Les composants Vue peuvent être créés dans deux styles d'API différents: <strong>Options API</strong> et <strong>Composition API</strong>.</p>
+<h3>Démarrage</h3>
+<p>Installation CLI Vue: 'npm install -g @vue/cli'<br>
+'vue create mon-projet-vue' <br>
+Voilà on a créer notre premier projet Vue !</p>
+<p><img src="VueCLI.png" alt="Vue CLI"></p>
+<p>Ici, on choisira &quot;Default&quot; avec Vue3.<br>
+Tous les fichiers nécessaires sont ensuite générés automatiquement: structure de base, Babel, ESLint, scripts de base. Voilà ce à quoi ressemble le base créée:</p>
+<p><img src="AppVuebase.png" alt="App Vue Base"></p>
+<p>Et voilà les dossiers et fichiers créés:</p>
+<p><img src="DossiersAppVue.png" alt="Dossiers App Vue"></p>
+<p>App.vue est appelé <strong>composant racine</strong></p>
+<p>Sinon, j'ai aussi regardé quelques vidéos Youtube qui décrivent les fonctions et éléments de base et notamment celles de Net Ninja.</p>
+<h2>Conclusion</h2>
+<p>Maintenant que l'on a quelques bases, on peut passer au POK 1 afin de prendre en main ces outils à travers la réalisation d'une application concrète: un calendrier.</p>
+<h3>Sources</h3>
+<p><a href="https://fr.vuejs.org/tutorial/">Documentation Vue.js</a></p>
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">JavaScript</a></p>
+<p><a href="https://internetingishard.netlify.app/html-and-css/css-box-model/">HTML et CSS</a></p>
 
 
 </article>

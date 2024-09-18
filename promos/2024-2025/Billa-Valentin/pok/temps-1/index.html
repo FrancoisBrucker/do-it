@@ -251,8 +251,13 @@ et son support solide pour la concurrence grâce aux goroutines.</p>
 <td>OAuth2.1 &amp; GitHub</td>
 </tr>
 <tr>
+<td>Mardi 14/09</td>
+<td>3H</td>
+<td>Rédaction Compte Rendu</td>
+</tr>
+<tr>
 <td><strong>Total</strong></td>
-<td><strong>25H</strong></td>
+<td><strong>28H</strong></td>
 <td><strong>Petit Overtime...</strong></td>
 </tr>
 </tbody>
@@ -266,7 +271,9 @@ ensuite raffiné les heures suivantes dont je parlerais dans des parties supplé
 <p>Mon plan pour le sprint 2 ne change que très peu (encore très fourni) car je n'ai volontairement pas
 beaucoup touché à ce qui était prévu pour le second sprint.</p>
 <p>Pour mieux respecter les objectifs de temps, je vais utiliser un minuteur plutôt qu'un chronomètre
-pour l'horodatage et apposer des estimations de temps aux étapes prévues pour le sprint.</p>
+pour l'horodatage et apposer des estimations de temps aux étapes prévues pour le sprint.
+Aussi, la rédaction du compte rendu de POK m'a pris bien plus de temps que prévu,
+je le prendrais en compte au sprint 2, en particulier en rédigeant au fur et à mesure que j'avance.</p>
 <h3>Introduction à Go</h3>
 <p>Quel meilleur endroit pour faire connaissance avec un langage que la doc ?!
 J'ai commencé par me balader sur un <a href="https://go.dev/tour/">tutoriel interfactif</a> disponible sur le site du langage.</p>
@@ -309,20 +316,123 @@ suite à quoi j'ai utilisé le <a href="https://www.oauth.com/playground/">playg
 <p>Plusieurs protocoles sont proposés dans la spécification pour récupérer le token cependant nous
 allons nous concentrer sur un seul, principalement, car c'est le plus recommandé et sécurisé,
 mais aussi puisque c'est d'après moi le plus intéressant.</p>
+<h4>Clients Publics / Privés</h4>
+<blockquote>
+<p><strong>RFC 6749 Section 2.1: OAuth 2.0 Client Types</strong>
+<a href="https://tools.ietf.org/html/rfc6749#section-2.1">tools.ietf.org/html/rfc6749#section-2.1</a></p>
+<p>OAuth définit deux types de clients : les clients confidentiels et les clients publics.</p>
+<p>Les clients confidentiels sont des applications qui sont capables de s'authentifier de manière sécurisée avec le serveur d'autorisation,
+par exemple en étant capables de garder leur secret client [équivalent d'un mot de passe] enregistré en sécurité. <br>
+Les clients publics ne peuvent pas utiliser de secrets clients enregistrés,
+comme les applications s'exécutant dans un navigateur ou sur un appareil mobile.
+<em>texte traduit à partir de <a href="https://oauth.net/2/client-types/">https://oauth.net/2/client-types/</a></em></p>
+</blockquote>
 <h4>Protocole avec code autorisation et PKCE</h4>
 <p>Ce <a href="https://www.oauth.com/playground/authorization-code.html">playground</a> est une petite merveille pour mieux comprendre
 le protocole utilisé, je conseille de faire une tour dessus avant la lecture des paragraphes suivants.</p>
 <p><img src="authorization-code-flow.png" alt="Authorization Code Flow">
 Ici, okta est le serveur d'authentification et le 'resource server' peut être utilisé pour récupérer des données à partir des tokens fournis par okta.
 <em>Tout à l'heure Dropbox était responsable à la fois de l'authentification et de ressources, ce n'est pas toujours le cas.</em></p>
-<h4>Développement Initial</h4>
+<p>Le flow du code d'autorisation comprend plusieurs étapes clés :</p>
+<ol>
+<li><strong>Initialisation de la demande d'autorisation</strong> :
+L'utilisateur commence le processus d'autorisation en accédant à une page de connexion via l'application cliente.
+L'application redirige l'utilisateur vers le serveur d'autorisation avec les informations pertinentes (client_id,
+redirection_uri, etc.).</li>
+<li><strong>Demande de l'autorisation</strong> :
+L'utilisateur est invité à se connecter et à autoriser l'accès pour l'application cliente.
+Le serveur d'autorisation affiche une page de connexion où l'utilisateur doit entrer ses identifiants.</li>
+<li><strong>Consentement</strong> :
+Après s'être connecté, l'utilisateur est invité à donner son consentement quant aux informations auxquelles l'
+application cliente peut accéder.</li>
+<li><strong>Obtention du code d'autorisation</strong> :
+Une fois l'utilisateur authentifié et le consentement donné, le serveur d'autorisation émet un code d'autorisation et
+redirige l'utilisateur vers l'application cliente grâce à l'URL de redirection fournie. Cette URL contient le code
+d'autorisation.</li>
+<li><strong>Échange du code d'autorisation contre un token</strong> :
+L'application cliente envoie ce code d'autorisation au serveur d'autorisation pour obtenir un token d'accès.</li>
+<li><strong>Réception du token d'accès</strong> :
+Le serveur de token vérifie l'authenticité de la demande, puis émet un token d'accès.</li>
+<li><strong>Accès aux ressources protégées</strong> :
+L'application cliente utilise ensuite ce token d'accès pour accéder aux ressources protégées de l'utilisateur sur le
+serveur de ressources.</li>
+</ol>
+<h3>PKCE (Proof Key for Code Exchange) ?</h3>
+<p>Le PKCE est une extension du protocole OAuth 2.0 conçue pour atténuer certaines
+vulnérabilités de sécurité associées aux clients publics qui ne peuvent pas stocker de secrets client en toute sécurité.
+En ajoutant PKCE, on renforce la sécurité du Flow Authorization Code en empêchant les éventuels attaquants d'obtenir des
+tokens d'accès en interceptant le code d'autorisation durant l'échange.</p>
+<p>Voici un résumé des échanges avec PKCE :</p>
+<ol>
+<li><strong>Client</strong> : Génère un <code>code_verifier</code> et calcule <code>code_challenge = hash(code_verifier)</code>.</li>
+<li><strong>Client</strong> : Fait une demande d'autorisation en incluant <code>code_challenge</code>.</li>
+<li><strong>Serveur d'autorisation</strong> : Stocke <code>code_challenge</code> et émet un <code>code d'autorisation</code>.</li>
+<li><strong>Client</strong> : Fait une demande de token d'accès en incluant le <code>code_verifier</code>.</li>
+<li><strong>Serveur d'autorisation</strong> : Vérifie <code>code_challenge</code> contre le hash du <code>code_verifier</code> fourni.</li>
+<li><strong>Serveur d'autorisation</strong> : Émet un token d'accès si la vérification est réussie.</li>
+</ol>
+<p>Cette procédure garantie l'identité du client auprès du serveur d'autorisation. En effet, puisque l'opération de
+hash ne peut être faite que dans un sens, même si le <code>code_challenge</code> seul le client qui a généré le <code>code_verifier</code>
+peut le retrouver et l'envoyer au serveur d'autorisation.</p>
+<h3>Développement Initial</h3>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Le code que j'ai écrit lors de ce POK est disponible sur un <a href="https://github.com/ValentinBilla/GoAuth2.0">répository GitHub</a>.</p>
+<p>Le code que j'ai écrit lors de ce POK est disponible sur un <a href="https://github.com/ValentinBilla/GoAuth2.0">répository GitHub</a>. <br>
+<em>J'y ai même mis un logo tout mignon, ça vaut le détour.</em></p>
 </div></div>
+<p>Au vu des étapes clés du flow code d'autorisation, je dois implémenter obligatoirement 3 endpoints</p>
+<ol>
+<li><code>GET /authorize</code> (<strong>Demande de l'autorisation</strong>)
+Qui renvoie une page HTML de connection pour que l'utilisateur se connecte
+<em>un simple login suffira, je ne souhaite pas me concentrer sur la partie UI/UX</em></li>
+<li><code>POST /authorize</code> (<strong>Obtention du code d'autorisation</strong>)
+Qui permet de générer le code d'accès et rediriger l'utilisateur vers l'application cliente</li>
+<li><code>POST /token</code> (<strong>Échange du code d'autorisation contre un token</strong>)</li>
+</ol>
+<p>En plus de ceux-là, j'ai créé un enpoint permettant de simuler une requête sur le serveur de resource,
+authentifiée par un token : <code>GET /photos/:id</code></p>
+<h4>Modules et Frameworks</h4>
+<p>J'ai décidé d'utiliser gin pour plus simplement créer des endpoints avec les paramètres que je souhaite décris par des structs.</p>
+<p>Voici un exemple d'endpoint déclaré pour gin :</p>
+<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">type</span> authorizationGrantRequest <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	ResponseType <span class="token builtin">string</span> <span class="token string">`form:"response_type" binding:"required,oneof=code token"`</span>
+	ClientId     <span class="token builtin">string</span> <span class="token string">`form:"client_id" binding:"required"`</span>
+	ClientSecret <span class="token builtin">string</span> <span class="token string">`form:"client_secret"`</span>
+	RedirectUri  <span class="token builtin">string</span> <span class="token string">`form:"redirect_uri" binding:"required,url"`</span>
+	Scope        <span class="token builtin">string</span> <span class="token string">`form:"scope"`</span>
+	State        <span class="token builtin">string</span> <span class="token string">`form:"state" binding:"required"`</span>
+
+	CodeChallenge       <span class="token builtin">string</span> <span class="token string">`form:"code_challenge" binding:"required,if=CodeChallengeMethod=plain"`</span>
+	CodeChallengeMethod <span class="token builtin">string</span> <span class="token string">`form:"code_challenge_method" binding:"required,oneof=plain S256"`</span>
+
+	Username <span class="token builtin">string</span> <span class="token string">`form:"username"`</span>
+	Password <span class="token builtin">string</span> <span class="token string">`form:"password"`</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">GetAuthorize</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> request authorizationGrantRequest
+	<span class="token keyword">if</span> err <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">ShouldBind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">"error"</span><span class="token punctuation">:</span> err<span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+	c<span class="token punctuation">.</span><span class="token function">Header</span><span class="token punctuation">(</span><span class="token string">"Content-Type"</span><span class="token punctuation">,</span> <span class="token string">"text/html; charset=utf-8"</span><span class="token punctuation">)</span>
+	c<span class="token punctuation">.</span><span class="token function">HTML</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> <span class="token string">"authorize.gohtml"</span><span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span>
+		<span class="token string">"clientId"</span><span class="token punctuation">:</span> request<span class="token punctuation">.</span>ClientId<span class="token punctuation">,</span>
+		<span class="token string">"scopes"</span><span class="token punctuation">:</span>   strings<span class="token punctuation">.</span><span class="token function">Split</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>Scope<span class="token punctuation">,</span> <span class="token string">"+"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Ensuite, pour la génération de tokens j'ai préféré déléguer à un module existant (<code>github.com/golang-jwt/jwt/v5</code>),
+car c'est une partie sensible qui n'est pas triviale à correctement implémenter, surtout la validation de tokens existants.</p>
+<p>Initialement, j'ai écrit le hashing et la validation des mots de passes mot même en utilisant Argon2ID un algorithme de
+hash recommandé par <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#argon2id">OWASP</a>.
+J'ai finalement, pour la postérité, décidé d'utiliser un wrapper existant (<code>github.com/alexedwards/argon2id</code>).</p>
+<p>Pour ce qui est du stockage des codes d'accès et des tokens de refresh, j'ai décidé d'utiliser Redis pour sa simplicité
+et la possibilité d'assigner une durée de vie aux données stockées après laquelle elles expirent.</p>
 <h2>Sprint 2</h2>
 <h3>Planning Prévisionnel</h3>
 <h4>2.1 Tests et Client</h4>
