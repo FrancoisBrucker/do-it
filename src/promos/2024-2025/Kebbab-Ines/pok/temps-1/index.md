@@ -31,9 +31,9 @@ Ayant déjà de bases du dev web (front end, back end...), les objectifs princip
 ## Tâches
 
 #### Sprint 1 - Rodage et premiers tests
-1. [ ] Maquette express (avec des wireframes ?) de l'interface et choix de premières catégories à implémenter pour le sprint.
-2. [ ] Remise à niveau / rappels HTML et CSS.
-3. [ ] Remise à niveau / rappels en JS et analyse du code de site de James Turner pour comprendre la structure.
+1. [X] Maquette express (avec des wireframes ?) de l'interface et choix de premières catégories à implémenter pour le sprint.
+2. [X] Remise à niveau / rappels HTML et CSS.
+3. [/] Remise à niveau / rappels en JS et analyse du code de site de James Turner pour comprendre la structure.
 4. [ ] Implémentation du premier bloc de checklist "simple", en front end VS en back puis front end.
 
 #### Sprint 2 - Ajout des autres blocs et informations
