@@ -221,6 +221,7 @@ Une fois le cadre fini, il faut **l’afficher dans la salle** pour pouvoir s’
 Voici le cadre de confiance qui avait été construit lors d’une formation que j’ai suivi au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille.
 
 <img src="cadre confiance.png" width="50%" alt="Image description">
+
 ### 👂Le pense écoute
 
 Outil de **2 à 3 personnes**, prévoir **15 à 25 min** au total.

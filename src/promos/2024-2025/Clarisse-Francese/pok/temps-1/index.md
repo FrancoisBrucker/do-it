@@ -207,9 +207,9 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [s
 4. **Produit facturés** : je créé rapidement 3 colonnes et une ligne des totaux avec la fonction SOMME.
 5. **Bilan des factures par librairie** : je créé un TCD sur une nouvelle feuille que je nomme "Créé bilan 2024".
 
-<img src="Factures 2024.png" width="70%" alt="Image description">
+<img src="Factures 2024.png" width="90%" alt="Image description">
 
-<img src="TCD 2024.png" width="70%" alt="Image description">
+<img src="TCD 2024.png" width="50%" alt="Image description">
 
 #### Amélioration tableau calendrier et compta
 
@@ -223,6 +223,6 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [c
 
 ### 👍Retours de Laura
 
-Elle est **très contente** de ces améliorations et a immédiatement adopté cette nouvelle version. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.
+Elle est **très contente** de ces améliorations et a **immédiatement adopté cette nouvelle version**. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.
 
 ## 2️⃣POK : sprint 2
