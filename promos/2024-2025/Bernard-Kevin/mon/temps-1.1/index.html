@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">saumon</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">figma</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">UI</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -130,23 +142,149 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Pas de prérequi</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
-</div></div>
-
 <p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
 <ul>
 <li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Table des matières</h2>
+<ol>
+<li><a href="#section1">Introduction</a></li>
+<li><a href="#section2">Fonctionnement</a></li>
+<li><a href="#section3">Composants</a></li>
+<li><a href="#section4">Lbrairies</a></li>
+<li><a href="#section5">Conseils pratiques</a></li>
+<li><a href="#section6">Conclusion</a></li>
+</ol>
+<h2>1.Introduction <a id="section1"></a></h2>
+<p>L'objectif de ce MON était de me familiariser avec figma et ses principaux outils. Grâce à ses connaissances j'ai pu me créer un Mockup ou autrement dit une maquette pour mon site web.</p>
+<h3>Petite présentation</h3>
+<p>Bon, dans un premier temps qu'est-ce que c'est que Figma ?
+Figma est une application de design où l'on construit la maquette de notre futur site web, application.</p>
+<p>Grosso modo, on représente les pages du site/de l'application que l'on veut faire.
+Il n'y a pas de code, simplement des composants (rectangles, textes, icônes...) que l'on utilise pour avoir une idée de l'apparence finale des pages.</p>
+<p>Pourquoi c'est utile ?
+<strong>On sait où on va!</strong></p>
+<p>Donc</p>
+<ul>
+<li>On réfléchit indirectement à notre code en plaçant les éléments en avance.</li>
+<li>On ne fait pas mille et un aller-retour parce qu'on n'est pas satisfait de l'apparence de nos pages.</li>
+</ul>
+<h3>Desktop</h3>
+<p><img src="1_1_figma_desktop.png" alt="alt text"></p>
+<p>Alors voilà sur quoi on arrive quand on ouvre un design file sur Figma (je vous fais confiance pour arriver jusque là 😉).</p>
+<p>On peut définir 4 zones qu'on va utiliser :
+<img src="1_2_figma_desktop_encadre.png" alt="alt text"></p>
+<p>On va avoir :</p>
+<ul>
+<li><span style="color:blue"><b>L'explorateur</b></span> : c'est là où seront listés nos composants (textes, images, carrés, cercles...).</li>
+<li><span style="color:black"><b>Le bureau</b></span> : c'est là que s'affiche nos pages et basiquement là où on rajoute nos composants.</li>
+<li><span style="color:red"><b>Les paramètres</b></span> : c'est là que l'on va pouvoir modifier nos composants (couleur, taille, police, épaisseur, opacité...)</li>
+<li><span style="color:#FFD700"><b>Les outils</b></span> : ce sont les outils que l'on utilise pour ajouter les composants.</li>
+</ul>
+<h2>2.Fonctionnement des Frames <a id="section2"></a></h2>
+<p><img src="2_1_figma_frame.png" alt="alt text"></p>
+<p>En cliquant sur cet icône dans la partie <span style="color:#FFD700"><b>outils</b></span> on va pouvoir tracer un rectangle qui définira une <strong>frame</strong>. On peut aussi choisir un type de frame prédéfini dans la partie <span style="color:red"><b>paramètres</b></span>.</p>
+<p><img src="2_2_figma_frame_parametres.png" alt="alt text"></p>
+<p>Les frames sont ce qui va nous servir de <strong>zones de rangement</strong> pour tous nos composants.
+Elles représentent la taille de nos écrans (écran d'ordinateur, d'iphone, de smartphone...) mais aussi des zones contenant des composants.</p>
+<p>Ainsi on va pouvoir mettre des frames dans des frames ce qui va former une hiérarchie, comme avec nos dossiers, visible dans la zone <span style="color:blue"><b>explorateur</b></span>.</p>
+<p><img src="2_3_figma_frame_layers.png" alt="alt text"></p>
+<p>🚨<strong>Petite attention</strong> s'il-vous-plaît !
+Utiliser des <strong>FRAMES</strong> plutôt des <strong>formes</strong> quand vous voulez mettre des composants dedans/devant.
+Les frames permettent plein de choses dont deux très utiles : avoir le même espacement entre vos composants ou bien tous les centrer dans la frame.</p>
+<h2>3.Composants <a id="section3"></a></h2>
+<p>Maintenant que l'on a nos frames, on peut rajouter nos composants avec la partie <span style="color:#FFD700"><b>outils</b></span>.
+Je ne parle ici que de ceux principalement utilisés et de même pour leurs <span style="color:red"><b>paramètres</b></span>.</p>
+<h3>Formes</h3>
+<p>Dans les <span style="color:#FFD700"><b>outils</b></span>, on peut créer différentes formes...</p>
+<p><img src="3_1_figma_formes.png" alt="alt text"></p>
+<p>...et sur le <span style="color:black"><b>bureau</b></span> cela donne ceci :</p>
+<p><img src="3_2_figma_formes_bureau.png" alt="alt text"></p>
+<p>Ensuite dans les <span style="color:red"><b>paramètres</b></span>, on peut modifier la couleur, la position dans la frame, les contours...</p>
+<p><img src="3_3_figma_formes_parametres.png" alt="alt text"></p>
+<p>On peut aussi insérer des images mais on va voir qu'on peut faire beaucop plus simple.</p>
+<h3>Images</h3>
+<p>Il suffit de faire <code>Ctrl + C</code> et <code>Ctrl + V</code>, voilà c'est tout !</p>
+<p>Après on peut toujours aller dans les <span style="color:red"><b>paramètres</b></span> pour rogner, changer l'opacité, rajouter des contours...</p>
+<h3>Textes</h3>
+<p>On sélectionne l'<span style="color:#FFD700"><b>outil</b></span> texte ou, plus rapide, on tape <code>T</code></p>
+<p><img src="3_4_figma_texte_outis.png" alt="alt text"></p>
+<p>...et dans les <span style="color:red"><b>paramètres</b></span> on change la police, la taille...</p>
+<p><img src="3_5_figma_texte_parametres.png" alt="alt text"></p>
+<h3>Icônes</h3>
+<p>Pour les icônes c'est comme les images, on va faire un <code>Ctrl + C</code> et <code>Ctrl + V</code> mais <strong>attention</strong>, on copie un icône d'un fichier Figma.</p>
+<p>C'est pas trop compliqué, il suffit de chercher &quot;figma free icons&quot; sur le navigateur et d'ouvrir le premier lien. Vous aurez quelque chose de similaire à ceci :</p>
+<p><img src="3_6_figma_icons.png" alt="alt text"></p>
+<p>Sinon l'autre solution c'est de sélectionner des icônes via une librairie téléchargée...</p>
+<h2>4. Librairies <a id="section4"></a></h2>
+<h3>Présentation</h3>
+<p>Une librairie c'est très simple, c'est un ensemble de composants stylisés.
+De mon côté je me suis plutôt intéressé aux UI Kit qui sont dédiés à la création d'interfaces utilisateurs.
+On va y trouver des boutons, des icônes, des barres de navigations, des polices préfaites (pour les différents titres par exemple : h1, h2...) et plein, pleiiin d'autres choses.</p>
+<p>Petit exemple avec des composants stylisés de la librairie d'iOS 18 :
+<img src="4_1_figma_librairie_exemple.png" alt="alt text"></p>
+<p>Ce qui est bien avec Figma c'est qu'il y a une communauté où tout le monde peut publier ce qu'il fait et on retrouve à la fois les librairies des composants de google, d'android... mais aussi d'autres réalisées par des particuliers.</p>
+<h3>Télécharger une librairie</h3>
+<p>Dans un premier temps, on revient sur notre compte Figma avec nos fichiers et on va explorer le contenu de la communauté.</p>
+<p><img src="4_2_figma_librairie_telechargement_community.png" alt="alt text"></p>
+<p><img src="4_3_figma_librairie_telechargement_browse.png" alt="alt text"></p>
+<p><img src="4_4_figma_librairie_telechargement_UIkit.png" alt="alt text"></p>
+<p>Une fois le UI Kit choisi, il reste plus qu'à l'ouvrir.</p>
+<p>On publie la librairie dans son répertoire.
+<img src="4_5_figma_librairie_telechargement_publish1.png" alt="alt text"></p>
+<h3>Ajouter la librairie au projet</h3>
+<p>On revient sur notre fichier figma et on va sur <span style="color:green"><b>Assets</b></span> dans notre <span style="color:blue"><b>explorateur</b></span>.</p>
+<p><img src="4_6_figma_librairie_ajout1.png" alt="alt text"></p>
+<p>Il ne reste plus qu'à ajouter la librairie :</p>
+<p><img src="4_7_figma_librairie_ajout2.png" alt="alt text"></p>
+<p><strong>Remarques :</strong>
+On retrouvera les nouveaux composants stylisés toujours dans la partie <span style="color:green"><b>Assets</b></span>.</p>
+<h2>5.Conseils pratiques <a id="section5"></a></h2>
+<p>Maintenant que l'on a vu tout ce que l'on pouvait mettre dans nos frames :</p>
+<ul>
+<li>formes</li>
+<li>images</li>
+<li>textes</li>
+<li>icônes</li>
+<li>composants stylisés</li>
+</ul>
+<p>Il ne nous reste plus qu'à parler des conseils praticos-pratiques dans leur utilisation.</p>
+<h3>Organiser ses frames</h3>
+<p>C'est le truc de base.
+Plus nos frames sont organisés, plus c'est lisible et on s'y retrouve.</p>
+<p>Je vous conseille d'avoir une frame pour les différentes parties de vos pages : le header, la barre de navigation...
+Et surtout <strong>nommer</strong> vos frames.</p>
+<h3>Template</h3>
+<p>Cela fait écho au conseil précédent.
+En ayant des frames qui reviennent souvent dans vos pages vous pouvez faire une templates avec ces frames récurrentes pour vous faciliter la vie.</p>
+<h3>Raccouris</h3>
+<p>Liste de raccourcis utiles :</p>
+<ul>
+<li>'Crtl + D' : duppliquer</li>
+<li>'Shift' : sélection multiple</li>
+<li>'F' : ajouter une frame</li>
+<li>'R' : ajouter un rectangle</li>
+<li>'T' : ajouter un texte</li>
+</ul>
+<h2>6.Conclusion <a id="section6"></a></h2>
+<p>Cela m'a été très utile, et j'ai vraiment pu apprendre et l'utiliser pour mon projet perso.
+Clairement, je ferai toujours une maquette sur figma avant de coder.</p>
+<p><img src="6_figma_portfolio.png" alt="alt text"></p>
+<h2>Sources utiles</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HZuk6Wkx_Eg">Tutoriel</a></li>
+<li><a href="https://www.youtube.com/watch?v=ewwwX6N8oO8">Librairies</a></li>
+</ul>
+</div></div>
+
 
 
 </article>
