@@ -13,11 +13,6 @@ tags:
 résumé: "Le but de ce MON est de me former sur les API REST ainsi que sur leurs intégrations dans des projets web"
 ---
 
-{% lien %}
-
-Les liens utiles pour la compréhension de celui-ci.
-
-{% endlien %}
 ## Introduction
 A travers ce MON j'ai pu découvrir le fonctionnement et les utilisations des API REST.
 <br> J'ai donc suivi deux cours en ligne sur le sujet :
@@ -62,7 +57,7 @@ Dans un premier temps, il faut que l'API utilise le protocole HTTPS, comme c'est
 
 #### Exemple de requête avec POSTMAN
 
-Voici un exemple de requête avec POSTMAN,  j'ai choisi l'API countrylayer qui est libre d'accès. Pour la tester on regarde dans la documentation, par exemple il y a une requête qui nous donne le nom d'un pays en fonction de sa capitale. Avant de l'exécuter il faut générer une clé d'accès unique afin de s'authentifier lors de la requête. On peut désormais exécuter la requête :
+Voici un exemple de requête avec POSTMAN, j'ai choisi l'API [countrylayer](https://countrylayer.com/documentation/) qui est libre d'accès. Pour la tester on regarde dans la documentation, par exemple il y a une requête qui nous donne le nom d'un pays en fonction de sa capitale. Avant de l'exécuter il faut générer une clé d'accès unique afin de s'authentifier lors de la requête. On peut désormais exécuter la requête :
 
 <div><img src="API-request_country_by_capital.png"></div>
 
@@ -70,8 +65,6 @@ Voici un exemple de requête avec POSTMAN,  j'ai choisi l'API countrylayer qui e
 ## 3. Intégration dans un script Python
  
 ### Utilisation de l'API CountryLayer avec Python
-
-Ce document décrit comment utiliser l'API CountryLayer pour obtenir des informations sur les pays en fonction de leur capitale ou de leur devise.
 
 #### Définition des variables globales
 
@@ -85,19 +78,7 @@ countrylayer_TOKEN = "5db9c34ca3979a85d30ce91cef09a02b"
 countrylayer_URL = "https://api.countrylayer.com/v2"
 ```
 
-#### Fonction générique pour interroger l'API
-
-La fonction `query_countrylayer` est utilisée pour envoyer des requêtes à l'API. Elle prend l'URL et les paramètres comme arguments et renvoie la réponse de l'API.
-
-```python
-# Fonction générique pour interroger l'API countrylayer
-def query_countrylayer(url: str, params: dict = None):
-    headers = {
-        'Content-Type': 'application/json'
-    }
-    # Envoi de la requête GET avec l'URL et les paramètres
-    return requests.get(url, headers=headers, params=params)
-```
+Ensuite, en parcourant la documentation de countrylayer on peut regarder toutes les requêtes possbles avec les paramètres requis pour faire la requête.
 
 #### Fonction pour obtenir des pays par capitale
 
@@ -115,7 +96,7 @@ def get_country_by_capital(capital: str):
 
 #### Fonction pour obtenir des pays par devise
 
-La fonction `get_country_by_currency` permet de rechercher des pays en fonction de leur devise. Elle utilise l'URL spécifique à cette recherche et passe la clé d'API en paramètre.
+La fonction `get_country_by_currency` permet de rechercher des pays en fonction de leur devise. Elle utilise l'URL spécifique à cette recherche et inclut la clé d'API en paramètre.
 
 ```python
 # Fonction pour obtenir des pays par devise
@@ -142,7 +123,7 @@ get_country_by_capital("paris").json()
   'altSpellings': ['FR', 'French Republic', 'République française'],
   'region': 'Europe'}]
 ```
-On obtient bien la réponse $France$ avec différents paramètres sur le pays.
+On obtient bien la réponse *France* avec différents paramètres sur le pays.
 ```python
 get_country_by_currency("usd")
 ```
@@ -324,10 +305,12 @@ get_country_by_currency("usd")
   'region': 'Africa'}]
   ```
   Ici, on obtient la liste des pays ayant le dollar comme monnaie mais ce résultat est pollué par tous les paramètres, on va chercher à obtenir la liste de ces pays :
+
   ```python
   dollar = get_country_by_currency("usd").json()
   [dollar[k]['name'] for k in range(len(dollar))]
   ```
+
   ```python
   ['American Samoa',
  'Bonaire, Sint Eustatius and Saba',
@@ -351,7 +334,7 @@ get_country_by_currency("usd")
  'Zimbabwe']
  ```
 
-Cette application n'était qu'un exemple illustrant l'intégration d'une API REST dans un script Python. Selon les besoins spécifiques d'un projet, des recherches peuvent aider à trouver une API adaptée. 
+Cette application n'était qu'un exemple illustrant l'intégration d'une API REST dans un script Python. Selon les besoins spécifiques d'un projet, des recherches ainsi que le parcours des documentations peuvent aider à trouver une API adaptée. 
 ## Conclusion
 
-Au cours de ce MON j'ai pu apprendre les fondamentaux des API REST ainsi que leur utilisation à travers l'API CountryLayer et des exemples pratiques en Python. L'intégration d'API REST simplifie la récupération et l'analyse des données, enrichissant ainsi nos applications. Pour le sprint 2 de mon POK, je prévois d'intégrer une API REST en VBA dans Excel afin d'en explorer les manipulations avec ce langage.
+Au cours de ce MON j'ai pu apprendre les fondamentaux des API REST ainsi que leur utilisation à travers l'API CountryLayer et des exemples pratiques en Python. L'intégration d'API REST simplifie la récupération et l'analyse des données facilitant ainsi leurs utilisations. Pour le sprint 2 de mon POK, je prévois d'intégrer une API REST en VBA dans Excel afin d'en explorer les manipulations avec ce langage.
