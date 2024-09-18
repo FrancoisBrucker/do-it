@@ -30,9 +30,9 @@ Les lien utiles pour la compréhension de celui-ci.
 Ma **grande sœur illustratrice** s’est lancée il y a moins d'un an dans la vente de carte postale qu’elle dessine et vend à des librairies qui les revendent à des clients. Son talent en art est immense, mais ses connaissances en bureautique sont proches du néant. Or, elle doit gérer de nombreux intermédiaires, comptabiliser les stocks dans chaque librairie, suivre l’évolution de ses ventes et aimerait **savoir plus facilement quelles librairies sont les plus rentables**.
 Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite **Google Sheets** et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre **Google Apps Script** pour voir si je peux automatiser des fonctions grâce à cet outil (des envoies de mail automatiques par exemple).
 
-## Tâches
+## 📌Tâches
 
-### Sprints
+### 🏃‍➡️Sprints
 
 **Optimiser les tableaux de comptabilité** de ma soeur Laura.
 
@@ -43,18 +43,18 @@ Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la s
 - [x] récupérer les tableaux google sheets de Laura et établir un cahier des charges des améliorations à effectuer : 30 min (40 min)
 - [x] améliorer les tableaux selon le CDC fixé : 2h (2h30)
 - [x] envoiyer les tableaux et explications à Laura : pas estimé (30 min)
-- [x] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30 (2)
+- [x] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30 (2h)
 
 #### Sprint 2
 
-- [ ] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 30 min
-- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h30
-- [ ] établir un cahier des charges des améliorations à effectuer : 40 min
-- [ ] améliorer les tableaux selon le CDC fixé : 3h
-- [ ] envoyer les tableaux et explication à Laura : 20 min
-- [ ] rédiger ce que j’ai fait et mettre en forme GitHub : 1h
+- [ ] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 15 min
+- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h
+- [ ] établir un cahier des charges des améliorations à effectuer : 30 min
+- [ ] améliorer les tableaux selon le CDC fixé : 3h30
+- [ ] envoyer les tableaux et explication à Laura : 15 min
+- [ ] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30
 
-### Horodatage
+### ⌛Horodatage
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
@@ -63,9 +63,9 @@ Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la s
  Mardi 17/09  | 1h40  | Finalisation des tableaux et envoie des tableaux et d'expication à Laura |
  Mercredi 18/09  | 1h30 | Mise au propre et rédaction sur Github |
 
-## POK : sprint 1
+## 1️⃣POK : sprint 1
 
-### Ressources déjà existantes
+### 📖Ressources déjà existantes
 
 La plupart des MON sur les tableaux que j’ai trouvé parlent d’Excel or j’ai décidé de renforcer mes connaissances sur Google Sheets (abrégé GS dans la suite). En effet, je n’ai pas accès à la licence Excel qui est payante (mais que fait Centrale Med ?!) et je pars du principe que Excel et GS sont très proches donc que je pourrai facilement apprendre Excel en entreprise si on m’oblige à l’utiliser. L’important est donc de découvrir toutes les possibilités avec ces tableurs pour ensuite y penser facilement grâce à une **fiche récap de toutes les fonctionnalités pratiques**.
 
@@ -77,7 +77,7 @@ La plupart des MON sur les tableaux que j’ai trouvé parlent d’Excel or j’
 
 {% endlien %}
 
-### Formation
+### 🎓Formation
 
 Voici le [tableau d'entrainement](https://docs.google.com/spreadsheets/d/1gqWjpNlDxRKQS0zSzKrygT4uDm_xVV5DqzeDctvrYCQ/edit?usp=sharing) sur lequel j'ai effectué pleins d'exercices au cours de la formation. Il est partagé en mode lecteur donc vous ne pouvez pas le modifier.
 
@@ -178,7 +178,7 @@ Permet aux lecteurs de pouvoir changer de vue pour visualiser les données de ma
 **TCD** : sélectionner les données avec les en-têtes → insertion → TCD → insérer dans une nouvelle feuille → rentrer les bons paramètres dans l’éditeur de TCD
 Ex : ajouter la ligne “produit” → ajouter la ligne “provenance” → ajouter la valeur “nombre d’unités achetées” → ajouter la valeur “prix par unité” et modifier sa fonction en “average” pour avoir la moyenne et non la somme par défaut
 
-### Cahier des charges des améliorations des tableaux de Laura
+### 💡Cahier des charges des améliorations des tableaux de Laura
 
 Maintenant que je suis bien plus à l'aise avec GS, je récupère les tableaux de comptabilité de Laura. Je lui avais créé le tableau [calendrier et compta ancien](https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=957877577#gid=957877577) un an plus tôt et elle l'a un peu modifié entre temps. Vous pouvez voir la version qu'elle utilisait en allant sur la feuille "**Ancien calendrier compta 2024**".
 
@@ -200,7 +200,7 @@ Je vais donc lister toutes les **améliorations possibles de ces 2 tableaux**.
 2. **Graphique sparkline** : ajouter un graphique pour chaque librairie pour voir l'évolution des ventes au fil des mois.
 3. **Feuille graphique** : déplacer les graphiques sur une nouvelle feuille pour plus de lisibilité car ils sont actuellement dessous le calendrier de la feuille "ancien calendrier compta 2024".
 
-### Améliorations effectuées selon le CDC
+### ✅Améliorations effectuées selon le CDC
 
 #### Amélioration tableau suivi des factures
 
@@ -220,8 +220,8 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [c
 2. **Graphique sparkline** : en regardant plus précisément le tableau de Laura, je réalise que ces graphiques n’auraient pas d’intérêt car elle reçoit les virements à des moments variées et non tous les mois.
 3. **Feuille graphique** : je déplace facilement les graphiques sur une nouvelle feuille que je nomme "Créé graphique 2024".
 
-### Retours de Laura
+### 👍Retours de Laura
 
-Elle est** très contente** de ces améliorations et a immédiatement adopté cette nouvelle version. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux améliorer ce point là.
+Elle est **très contente** de ces améliorations et a immédiatement adopté cette nouvelle version. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.
 
-## POK : sprint 2
+## 2️⃣POK : sprint 2
