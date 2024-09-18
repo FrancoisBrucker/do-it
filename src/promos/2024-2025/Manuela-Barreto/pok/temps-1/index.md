@@ -15,12 +15,12 @@ résumé: Un POK traitant de la création d'un site web.
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Il n'y a pas de prérequis pour ce POK
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+GitHub du POK: https://github.com/ManuelaBarreto/S9_POK1_FlashFac
 
 {% endlien %}
 
@@ -39,9 +39,9 @@ Développer un site web simple qui permet aux utilisateurs d'apprendre le vocabu
 | Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
 | :---: | :----: | :----------: | :--------: |
 | Création du design du site web | 3H | 1H30 | X |
-| Développement de la Page d'Accueil | 6H | 7H30 | X |
+| Développement de la Page d'Accueil | 6H | 7H | X |
 | Création des listes de vocabulaire | 1H | 1H | X |
-| Documentation Sprint 1 | - | 1H | X |
+| Documentation Sprint 1 | - | 1H30 | X |
 | **TOTAL** | **10H** | **11H** |  |
 
 #### Sprint 2
@@ -70,7 +70,7 @@ Développer un site web simple qui permet aux utilisateurs d'apprendre le vocabu
 
 ## Sommaire
 
-- [ Le design du site web](#le-design-du-siteweb)
+- [Le design du site web](#le-design-du-siteweb)
 - [Un Étude Preliminaire de JavaScript](#un-etude-preliminaire-de-javascript)
 - [Développement](#développement)
 - [Résultats à ce jour](#resultats-a-ce-jour)
