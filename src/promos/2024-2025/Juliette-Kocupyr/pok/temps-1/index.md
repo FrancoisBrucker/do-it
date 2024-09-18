@@ -77,6 +77,7 @@ L'objectif de ce POK est de comprendre le processus de transformation agile d'un
     - [Mise en place du changement](#mise-en-place-du-changement)
     - [Aperçu du modèle Spotify](#aperçu-du-modèle-spotify)
     - [Analyse du modèle](#analyse-du-modèle)
+- [Bibliographie](#bibliographie)
 
 ## Introduction
 
@@ -256,3 +257,17 @@ L'organisation matricielle en équipe (squads, tribus) et transversale (chapitre
 1. Des logiciels opérationnels plus qu’une documentation exhaustive
 2. La collaboration avec les clients plus que la négociation contractuelle
 3. L’adaptation au changement plus que le suivi d’un plan
+
+## Bibliographie
+
+[**PwC**. *La transformation agile des organisations*.](https://www.pwc.fr/fr/publications/innovation/la-transformation-agile-des-organisations.html).
+[**Planview**. *Definitive Digital Transformation Guide: Enterprise Agile Transformation*.](https://www.planview.com/fr/resources/guide/definitive-digital-transformation-guide/enterprise-agile-transformation/).
+[**Forvis & Mazars**. *L’agilité : un changement culturel avant tout*.](https://www.forvismazars.com/fr/fr/insights/le-blog/l-agilite-un-changement-culturel-avant-tout).
+[**Tuleap**. *Transformation agile à l’échelle : comment s’y prendre*.](https://www.tuleap.org/fr/agilite-echelle/transformation-agile-a-echelle-comment-sy-prendre).
+[**Advaloris**. *Réussir sa transformation agile : les étapes clés pour un changement durable et efficace*.](https://www.advaloris.ch/organisation-entreprise/reussir-sa-transformation-agile-les-etapes-cles-pour-un-changement-durable-et-efficace).
+[**Hubvisory**. *Spotify : organisation et pratiques de l’agilité à l’échelle*.]( https://www.hubvisory.com/fr/blog/spotify-organisation-et-pratiques-de-l-agilite-a-l-echelle)
+[**Crisp**. *Scaling Spotify – A model for large-scale agile*.](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf)
+[**Spotify Engineering Blog**. *Spotify Engineering Culture*.](https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1/)
+[**Atlassian**. *Le modèle Spotify et l’agilité à l’échelle*.](https://www.atlassian.com/fr/agile/agile-at-scale/spotify)
+[**Toucan Toco**. *Spotify : comment la société révolutionne le management et l’agilité*.](https://www.toucantoco.com/blog/spotify-revolutionne-management-agilite)
+[**Rhapsodies Conseil**. *Le modèle Spotify n’est pas un modèle*.](https://www.rhapsodiesconseil.fr/le-modele-spotify-nest-pas-un-modele/)
