@@ -325,29 +325,16 @@ Ce MON m'a permis de comprendre bien en détail ce processus de transformation d
 ## Bibliographie
 
 [**LegalPlace**. *Transformation d’entreprise*.](https://www.legalplace.fr/guides/transformation-entreprise/)
-
 [**LeanIX**. *Transformation d’entreprise*.](https://www.leanix.net/fr/wiki/tech-transformation/transformation-de-enterprise#Le-cadre-Modern-Business-Transformation)
-
 [**IBM**. *Business Transformation*.](https://www.ibm.com/topics/business-transformation)
-
 [**McKinsey & Company**. *What is Business Transformation*.](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-business-transformation)
-
 [**École Polytechnique Executive Education**. *Transformation vs changement : Quelle différence ?*](https://exed.polytechnique.edu/transformation-vs-changement-quelle-difference)
-
 [**Julhiet Sterwen**. *Transformation : 4 piliers de la Business Transformation*.](https://www.julhiet-sterwen.com/transformation-4-piliers/business-transformation/)
-
 [**Harvard Business Review France**. *Transformation d’entreprise : Comment identifier ceux qui vont vraiment faire bouger les lignes ?*](https://www.hbrfrance.fr/chroniques-experts/2018/11/23184-transformation-dentreprise-comment-identifier-ceux-qui-vont-vraiment-faire-bouger-les-lignes/)
-
 [**Triskell Software**. *Comment réussir son projet de transformation d’entreprise ?*](https://triskellsoftware.com/fr/blog/comment-reussir-son-projet-de-transformation-entreprise/)
-
 [**Harvard Business Review France**. *Trois pièges qui bloquent la transformation des entreprises*.](https://www.hbrfrance.fr/chroniques-experts/2016/09/12036-trois-pieges-qui-bloquent-la-transformation-des-entreprises/)
-
 [**Appvizer**. *Plan de transformation*.](https://www.appvizer.fr/magazine/operations/ppm/plan-de-transformation)
-
 [**Meltis**. *Les 5 clés de la transformation des entreprises*.](https://meltis.fr/management-leadership/les-5-cles-de-la-transformation-des-entreprises/)
-
 [**Le Village by CA**. *Pourquoi entreprendre une transformation d’entreprise ?*](https://levillagebyca.com/pourquoi-entreprendre-une-transformation-dentreprise/)
-
 [**Le Mag IT**. *Open Source*.](https://www.lemagit.fr/definition/Open-Source)
-
 [**Red Hat**. *Organizational Transformation*.](https://www.redhat.com/fr/topics/organizational-transformation)
