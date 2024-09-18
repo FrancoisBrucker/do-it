@@ -73,7 +73,7 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">frontend</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Vue.js</li>
                 
 
             </ul>
@@ -107,12 +107,6 @@
     
 </div>
 
-        <p class="mb-4 text-lg">
-
-                L'objectif de ce POK est de prendre en main l'outil Vue.js découvert avec mon MON 1.1 en réalisant une application web: un calendrier. Cet outil basique devrait permettre à l'utilisateur d'afficher un calendrier mensuel, de naviguer entre les mois et de gérer des événements. 
-
-        </p>
-
 
 
     
@@ -136,6 +130,150 @@
 <div class="pl-8 mr-8">
 <p>Bases front-end et Vue.js (cf MON 1.1)</p>
 </div></div>
+<p>L'objectif de ce POK est de prendre en main l'outil Vue.js découvert avec mon MON 1.1 en réalisant une application web: un calendrier. Cet outil basique devrait permettre à l'utilisateur d'afficher un calendrier mensuel, de naviguer entre les mois et de gérer des événements.</p>
+<h4>Sprint 1</h4>
+<p>L'objectif de ce premier sprint est de réaliser une base de calendrier avec Vue.js.</p>
+<h4>Sprint 2</h4>
+<p>Pour le prochain sprint, l'objectif est d'intégrer la gestion des événements et d'améliorer le base de calendrier réalisée lors du sprint 1.</p>
+<h3>Horodatage</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samedi 14/09</td>
+<td>2h</td>
+<td>Voir (et comprendre) les différentes façons de faire un calendrier avec Vue.js</td>
+</tr>
+<tr>
+<td>Dimanche 15/09</td>
+<td>3h</td>
+<td>Faire un premier calendrier avec V-calendar (et comprendre)</td>
+</tr>
+<tr>
+<td>Lundi 16/09</td>
+<td>2h</td>
+<td>Corrections des bugs et amélioration du style</td>
+</tr>
+<tr>
+<td>Mercredi 18/09</td>
+<td>2h</td>
+<td>Débuts sur la gestion d'événements</td>
+</tr>
+</tbody>
+</table>
+<h2>Contenu</h2>
+<p>Il existe plusieurs façons de créer un calendrier avec Vue:</p>
+<ul>
+<li>Avec une bibliothèque dédiée: V-Calendar</li>
+<li>Avec une bibliothèque d'UI: Vuetify</li>
+<li>À partir de zéro</li>
+</ul>
+<p>Chaque méthode a ses avantages et inconvénients. Pour commencer, j'ai choisi la première option car plus simple et donc (selon moi) plus adaptée pour débuter.</p>
+<p>Tout d'abord on installe v-calendar: <code>npm install v-calendar</code></p>
+<p>On importe et configure v-calendar dans le main.js:</p>
+<pre><code>import { createApp } from 'vue';\
+import App from './App.vue';\
+import VCalendar from 'v-calendar';\
+
+const app = createApp(App);
+
+app.mount('#app')\
+app.use(VCalendar, {})
+
+</code></pre>
+<p>On créer un composant CalendarComponent.vue dans src/components/ puis dans App.vue, on importe ce composant.</p>
+<p>App.vue:</p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;CalendarComponent /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import CalendarComponent from './components/CalendarComponent.vue';
+
+export default {
+  name: 'App',
+  components: {
+    CalendarComponent,
+  },
+};
+&lt;/script&gt;
+</code></pre>
+<p>CalendarComponent.vue:</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;v-calendar
+      is-range
+      :attributes=&quot;attrs&quot;
+      :color=&quot;selectedColor&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { defineComponent } from 'vue';
+import { VCalendar } from 'v-calendar';  
+export default defineComponent({
+  name: 'CalendarComponent',
+  components: {
+    VCalendar,  
+  },
+  data() {
+    return {
+      attrs: [
+        {
+          key: 'today',
+          highlight: {
+            backgroundColor: '#FFDDDD',
+            color: '#FF0000',
+          },
+          dates: new Date(),
+        },
+      ],
+    };
+  },
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+
+.vc-calendar {
+  border-radius: 8px; 
+  background: #fff;
+}
+
+.vc-calendar-header {
+  background: #ffc5cb; 
+  color: #333; 
+  font-weight: bold; 
+}
+
+.vc-calendar-day {
+  color: #333; 
+}
+
+.vc-calendar-day.selected {
+  background: #ffc5cb; 
+  color: #333;
+}
+
+&lt;/style&gt;
+</code></pre>
+<p>Et voilà ca que ça donne:</p>
+<p><img src="calendriervue1.png" alt="Calendrier vue 1">
+<img src="calendriervue2.png" alt="Calendrier vue 2"></p>
+<p>On peut aussi intégrer des bibliothèques de style comme Bootstrap ou Tailwind CSS.</p>
+<p>L'un des inconvénients de V-Calendar est qu'il restreint beaucoup; je vais donc voir pour utiliser une autre méthode de création de calendrier lors du sprint 2.</p>
+<p>Je souhaite également m'occuper de la gestion des événements sur le calendrier.</p>
+<h3>Sources</h3>
+<p><a href="https://vcalendar.io/getting-started/installation.html">Documentation v-calendar</a></p>
 
 
 </article>
