@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Découverte de VBA pour créer un outils de calcul de coûts de déplacements."
+title: "Découverte de VBA pour créer un outil de calcul de coûts de déplacements."
 authors:
   - Baptiste Audouin
 
@@ -15,7 +15,7 @@ résumé: POK traitant du language VBA avec une mise en application concrète
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Connaissances de base en Excel
 
 {% endprerequis %}
 {% lien %}
@@ -33,8 +33,8 @@ En mise en application j'aimerai créer un outil permettant aux commerciaux d'un
 
 - [ ] Découvrir et me former en VBA *(Temps estimé : 4h)*
 - [ ] Définir le visuel et les fonctionnalités du rendu final *(Temps estimé : 1h)*
-- [ ] Ecrire une première version du code avec les éléments de base *(Temps estimé : 2h30)* 
-- [ ] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint *(Temps estimé : 30min)*
+- [ ] Ecrire une première version du code avec les éléments de base *(Temps estimé : 4h)* 
+- [ ] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint *(Temps estimé : 1h)*
 
 
 ##### Sprint 2 :
@@ -46,14 +46,17 @@ En mise en application j'aimerai créer un outil permettant aux commerciaux d'un
 
 ## Premier Sprint : découverte de VBA et première version de l'outil
 
-###  Tâches effectuées  :
+###  Horodatage  :
 
 Dans ce premier sprint j'ai pu réaliser toutes les tâches prévues pour une durée d'environ dix heures :
 
-- [x] Découvrir et me former en VBA *4h vs 4h prévues*
-- [x] Définir le visuel et les fonctionnalités du rendu final *(2h vs 1h prévue)*
-- [x] Ecrire une première version du code avec les éléments de base *(1h30 vs 2h30 prévues)* 
-- [x] Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint *(45 min vs 30 min prévues)*
+| Tâches | Heures passées | Heures prévues |
+| -------- | -------- |-------- |
+| Découvrir et me former en VBA | 4h | 4h |
+| Définir le visuel et les fonctionnalités du rendu final | 2h | 1h |
+| Ecrire une première version du code avec les éléments de base | 3h30 | 4h |
+| Tester les fonctionnalités et réfléchir à des améliorations à réaliser lors du second sprint | 45min | 1h |
+
 
 ### 1. Formation VBA
 
@@ -65,23 +68,23 @@ Voici les différents points que j'ai retenu durant cette seconde tâche pour d�
 
 * Formulaire avec les champs nom, prénom, date, ville de départ, ville d'arrivée, véhicule.
 * Utilisation de deux bases de données :
-  * Véhicules : utilisation de cette [base de données](https://voiture.car2db.com) qui permet de répertorier plus d'une centaine de véhicules avec leur type de carburant ainsi que leur consommation en vue des calcules de frais de déplacements.
+  * Véhicules : utilisation de cette [base de données](https://voiture.car2db.com) qui permet de répertorier plus d'une centaine de véhicules avec leur type de carburant ainsi que leur consommation en vue des calculs de frais de déplacements.
   * Villes de France avec les coordonnées : utilisation des [données](https://www.data.gouv.fr/fr/datasets/villes-de-france/#/resources) disponibles sur le site du gouvernement.
 
 ### 3. Première version
 
-La première version de l'outil utilise deux feuilles Excel, une feuille $Déplacement$ où l'utilisateur remplis ses déplacements et une seconde feuille $Récap$ qui récapitule tous les déplacements :
+La première version de l'outil utilise deux feuilles Excel, une feuille *Déplacements* où l'utilisateur remplis ses déplacements et une seconde feuille *Récap* qui récapitule tous les déplacements :
 
-<div style="text-align: center;">
-  <img src="Deplacements-V1.png" alt="Déplacements V1" style="width: 300px; margin-right: 20px;"/>
-  <img src="Recap-V1.png" alt="Récap V1" style="width: 500px;"/>
+<div>
+  <img src="Deplacements_V1.png">
+  <img src="Recap_V1.png">
 </div>
 
-Le bouton fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.
+Le bouton *Enregistrer*fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.
 
 Voici une explication détaillée du code VBA en utilisant un format Markdown :
 
-Ce code est coposée d'une macro principale `new_drive` qui utilise également une autre macro que j'ai créé `add_empty_row`. 
+Ce code est coposé d'une macro principale `new_drive` qui utilise également une autre macro que j'ai créé `add_empty_row`. 
 
 #### `Sub add_empty_row()`
 
@@ -166,8 +169,8 @@ Ainsi, cette macro permet d'envoyer les informations du formulaire dans le table
 
 Comme prévue lors de la définition des tâches de mon POK j'avais prévu un temps de relecture et de réflexion pour les futures améliorations envisagées dans le second sprint :
 
-** Revoir le visuel de l'outil
-** Intégrer l'API google qui permet d'obtenir l'itinéraire et non la distance à vol d'oiseau 
-** Recherche d'une API pour avoir le prix du carburant actualisé
-** Intégrer un envoie automatique de mail
+*  Revoir le visuel de l'outil
+*  Intégrer l'API google qui permet d'obtenir l'itinéraire et non la distance à vol d'oiseau 
+*  Recherche d'une API pour avoir le prix du carburant actualisé
+*  Intégrer un envoie automatique de mail
 
