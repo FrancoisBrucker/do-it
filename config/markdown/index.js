@@ -2,7 +2,7 @@ module.exports = function (eleventyConfig) {
 
   markdownItLibrary = require("markdown-it")({
     html: true,
-    breaks: true,
+    breaks: false,
     linkify: true
   })
 
