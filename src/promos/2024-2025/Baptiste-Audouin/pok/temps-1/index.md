@@ -10,7 +10,7 @@ date: 2024-09-10
 tags:
   - "temps 1"
 
-résumé: POK traitant du language VBA avec une mise en application concrète
+résumé: POK traitant du langage VBA avec une mise en application concrète
 ---
 
 {% prerequis %}
@@ -18,11 +18,6 @@ résumé: POK traitant du language VBA avec une mise en application concrète
 Connaissances de base en Excel
 
 {% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
 
 J'aimerai à travers se POK me former au langage VBA qui est très souvent utilisé en entreprise.
 En mise en application j'aimerai créer un outil permettant aux commerciaux d'une entreprise de calculer les coûts de leurs déplacements afin de créer des notes de frais. 
