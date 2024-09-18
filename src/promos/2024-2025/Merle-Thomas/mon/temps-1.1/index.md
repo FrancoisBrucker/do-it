@@ -162,8 +162,8 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Vendredi 06/09  | 1H  | Lecture du cours do-it dév Web et recherche d'un tutoriel |
-| Mardi 10/09  | 2H  | HTML : Structure de base en HTML, balises et attributs|
-| Vendredi 13/09  | 2H  | HTML : En-tête, paragraphes, commentaires, styles et couleurs |
-| Samedi 14/09  | 1H  | HTML : Listes et tables |
-| Dimanche 15/09  | 1H  | HTML : début du codage du FrontEnd du site de Dark Kitchen |
+| 06/09  | 1H  | Lecture du cours do-it dev Web et recherche d'un tutoriel |
+| 10/09  | 1H  | HTML : Structure de base en HTML, balises et attributs|
+| 13/09  | 1H  | HTML : En-tête, paragraphes, commentaires, styles et couleurs |
+| 14/09  | 1H  | HTML : Listes et tables |
+| 13/09  | 2H  | HTML : début du codage du FrontEnd du site de Dark Kitchen |
