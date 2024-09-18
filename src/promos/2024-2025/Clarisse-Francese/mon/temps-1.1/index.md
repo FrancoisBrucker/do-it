@@ -13,6 +13,8 @@ date: 1970-09-01
 tags:
   - "temps 1"
   - "intelligence collective"
+  - "bleu"
+  - "saumon"
 
 
 résumé: "Ce MON résume ce qu'est l’intelligence collective, ses conditions d’émergence et comment les créer. Il y a aussi des outils d’intelligence collective simples à utiliser et une proposition de temps collectif d’1h à la rentrée que pourrait animer Laetitia et François pour commencer à connaître la promo Do_It et créer du lien entre les élèves."
@@ -394,12 +396,12 @@ Bien sûr, ce temps n'est qu’une proposition et je ne sais pas en pratique à 
 
 J’ai **adoré travailler sur ce sujet** et notamment sur le cas du temps pour Do_It ! J’espère que ça servira aux autres élèves et **n’hésitez pas à me poser des questions** sur le contenu de ce MON.
 
-## ⌛Horodateur
+## ⌛Horodatage
 
-| Date | Temps passé | Indications |
+| Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Vendredi 06/09 | 30 min | *Définition du plan et recherches de ressources adaptées* |
+| Vendredi 06/09 | 0h30 | *Définition du plan et recherches de ressources adaptées* |
 | Mardi 10/09 | 3h30  | *Recherche et écriture sur l'IC, les exemples et les conditions (émergences et création)* |
 | Mercredi 11/09 | 4h30 | *Recherche et écriture des outils et du cas sur la rentrée en Do_It* |
 | Vendredi 13/09 | 1h | *Rédaction sur Github* |
-| Lundi 16/09 | 30 min | *Finalisation et mise en forme sur Github* |
+| Lundi 16/09 | 0h30 | *Finalisation et mise en forme sur Github* |
