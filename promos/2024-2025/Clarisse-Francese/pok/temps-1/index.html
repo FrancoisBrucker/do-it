@@ -142,21 +142,13 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON : aucun</p>
+<p>POK débutant : aucun prérequis</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
-</div></div>
-
 <p>Ma <strong>grande sœur illustratrice</strong> s’est lancée il y a moins d'un an dans la vente de carte postale qu’elle dessine et vend à des librairies qui les revendent à des clients. Son talent en art est immense, mais ses connaissances en bureautique sont proches du néant. Or, elle doit gérer de nombreux intermédiaires, comptabiliser les stocks dans chaque librairie, suivre l’évolution de ses ventes et aimerait <strong>savoir plus facilement quelles librairies sont les plus rentables</strong>.
 Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite <strong>Google Sheets</strong> et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre <strong>Google Apps Script</strong> pour voir si je peux automatiser des fonctions grâce à cet outil (des envoies de mail automatiques par exemple).</p>
 <h2>📌Tâches</h2>
 <h3>🏃‍➡️Sprints</h3>
-<p><strong>Optimiser les tableaux de comptabilité</strong> de ma soeur Laura.</p>
+<p>Objectif général : <strong>optimiser les tableaux de comptabilité</strong> de ma soeur Laura.</p>
 <h4>Sprint 1</h4>
 <ul>
 <li>[x] faire l'état de l’art de ce qui existe déjà MON, POK sur google sheets : 30 min (30 min)</li>
@@ -294,7 +286,7 @@ Ex : ajouter la ligne “produit” → ajouter la ligne “provenance” → aj
 <li><strong>Produit facturés</strong> : remplacer la saisie sous forme de texte par 3 colonnes et avoir les totaux de chaque produit à la fin.</li>
 <li><strong>Bilan des factures par librairie</strong> : créer un TCD qui permet de voir sur l’année les ventes par ville et par librairie.</li>
 </ol>
-<h4>Idées tableau calednrier et compta</h4>
+<h4>Idées tableau calendrier et compta</h4>
 <ol>
 <li><strong>Mail</strong> : ajouter la vérification de mail automatique.</li>
 <li><strong>Graphique sparkline</strong> : ajouter un graphique pour chaque librairie pour voir l'évolution des ventes au fil des mois.</li>
@@ -302,7 +294,7 @@ Ex : ajouter la ligne “produit” → ajouter la ligne “provenance” → aj
 </ol>
 <h3>✅Améliorations effectuées selon le CDC</h3>
 <h4>Amélioration tableau suivi des factures</h4>
-<p>Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau <a href="https://docs.google.com/spreadsheets/d/1RZB_4vyWY-2KVkbhKPkIwlEmPMH9DsRkCuLGLq1DHOk/edit?gid=2019233211#gid=2019233211">suivi des factures nouveau</a> sur les feuilles &quot;Modifié 2024&quot; et &quot;Créé bilan 2024&quot;.</p>
+<p>Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau <a href="https://docs.google.com/spreadsheets/d/1RZB_4vyWY-2KVkbhKPkIwlEmPMH9DsRkCuLGLq1DHOk/edit?gid=2019233211#gid=2019233211">suivi des factures nouveau</a> sur les feuilles &quot;<strong>Modifié 2024</strong>&quot; et &quot;<strong>Créé bilan 2024</strong>&quot;.</p>
 <ol>
 <li><strong>Date</strong> : je remarque que ma soeur a mis volontairement les dates à l’envers (mois/jour/année), je dois voir avec elle pourquoi car ça perturbe google sheet. En attendant, je ne préfère par modifier cette partie là.</li>
 <li><strong>Client</strong> : je créé un tableau récapitulant les clients et les villes des librairies juste à côté du tableau des factures. Puis j'insère dans la colonne &quot;client&quot; une liste à partir de la plage de données créée pour permettre de choisir la librairie parmis la liste quand on ajoute une ligne de facturation.</li>
@@ -310,13 +302,16 @@ Ex : ajouter la ligne “produit” → ajouter la ligne “provenance” → aj
 <li><strong>Produit facturés</strong> : je créé rapidement 3 colonnes et une ligne des totaux avec la fonction SOMME.</li>
 <li><strong>Bilan des factures par librairie</strong> : je créé un TCD sur une nouvelle feuille que je nomme &quot;Créé bilan 2024&quot;.</li>
 </ol>
+<img src="Factures 2024.png" width="70%" alt="Image description">
+<img src="TCD 2024.png" width="70%" alt="Image description">
 <h4>Amélioration tableau calendrier et compta</h4>
-<p>Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau <a href="https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=1842762687#gid=1842762687">calendrier et compta nouveau</a> sur les feuilles &quot;Modifié calendrier compta 2024&quot; et &quot;Créé graphique 2024&quot;.</p>
+<p>Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau <a href="https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=1842762687#gid=1842762687">calendrier et compta nouveau</a> sur les feuilles &quot;<strong>Modifié calendrier compta 2024</strong>&quot; et &quot;<strong>Créé graphique 2024</strong>&quot;.</p>
 <ol>
 <li><strong>Mail</strong> : j'ajoute facilement la vérification de mail automatique grace à la validation de données (voir formation).</li>
 <li><strong>Graphique sparkline</strong> : en regardant plus précisément le tableau de Laura, je réalise que ces graphiques n’auraient pas d’intérêt car elle reçoit les virements à des moments variées et non tous les mois.</li>
 <li><strong>Feuille graphique</strong> : je déplace facilement les graphiques sur une nouvelle feuille que je nomme &quot;Créé graphique 2024&quot;.</li>
 </ol>
+<img src="Graphique 2024.png" width="70%" alt="Image description">
 <h3>👍Retours de Laura</h3>
 <p>Elle est <strong>très contente</strong> de ces améliorations et a immédiatement adopté cette nouvelle version. Elle aussi regrette l'affichage du TCD dans la feuille &quot;créé bilan 2024&quot; car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.</p>
 <h2>2️⃣POK : sprint 2</h2>
