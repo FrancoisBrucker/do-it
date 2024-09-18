@@ -156,7 +156,261 @@
 </ol>
 <p>À noter, le prisme du handicap permet de répondre aussi à d'autres types de réflexions pour penser une UI/UX accessible au plus grand nombre de persona (âge et fracture générationnelle, niveaux d'éducation variés, niveaux de langues...).</p>
 <h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Introduction</h2>
+<h3>A - C’est quoi l’accessibilité ?</h3>
+<p>Certains composants des interfaces web excluent les utilisateurs porteurs d’un handicap (permanent ou temporaire) : ce nombre est estimé à <strong>15% des utilisateurs</strong>… soit près d**’1 milliard d’internautes** pour lesquels le web n’est pas un long fleuve tranquille !</p>
+<p>Concrètement, le terme handicap désigne “la <strong>limitation des possibilités d’interaction d’un individu avec son environnement, causée par une déficience provoquant une incapacité, permanente ou non</strong>. Il exprime une déficience vis-à-vis d’un environnement, que ce soit en termes d**’accessibilité, d’expression, de compréhension ou d’appréhension**. Il s’agit donc plus d’une notion sociale que d’une notion médicale.” (source : Comité national Coordination Action Handicap - CCAH)</p>
+<p>Un handicap est d’ailleurs le plus souvent <strong>invisible</strong> (80% des handicaps) et <strong>s’acquiert au cours de la vie</strong> (85% VS 15% à la naissance) : tout le monde pourrait donc un jour être concerné par ces sujets.</p>
+<p>Dans un monde où le digital est toujours plus important, pour s’informer ou un besoin administratif en passant aux interactions sociales, il est nécessaire que ces supports soient adaptés à tous. Pour cela, il est important de d’abord prendre conscience de ce qui se cache concrètement derrière ce terme, très vaste.</p>
+<p><strong>Concrètement, il y a 4 principes fondamentaux autour d’un contenu inclusif (site ou appli) :</strong></p>
+<ol>
+<li>Le site doit être <strong>perceptible</strong> (image, son et toucher) ;</li>
+<li>Le site doit être <strong>utilisable</strong> (avec des alternatives à la souris) ;</li>
+<li>Le site doit être <strong>compréhensible</strong> et clair (il guide les utilisateurs si nécessaire) ;</li>
+<li>Le site doit être <strong>robuste</strong> et pouvoir être compatible à différents contextes ou outils (comme un lecteur d’écran par exemple).</li>
+</ol>
+<h3>B - Les types de handicap</h3>
+<p>Il y a différentes typologies de handicap :</p>
+<ul>
+<li><strong>Handicap moteur</strong> (ou déficience motrice) qui recouvre l’ensemble des troubles pouvant entraîner une atteinte partielle ou totale de la motricité (troubles de la dextérité, paralysie, amputation, difficultés pour se déplacer, conserver ou changer une position, prendre et manipuler, effectuer certains gestes,…).</li>
+<li><strong>Handicap auditif ou surdité</strong>, totale ou partielle. Les personnes peuvent être appareillées ou non, certaines personnes s’expriment uniquement en langage des signes (LSF) tout comme d’autres peuvent s’exprimer verbalement (oralisme). Concrètement, faire passage un message qu’au travers du son d’une vidéo sur votre site sans sous-titre pourrait limiter les utilisateurs.</li>
+<li><strong>Handicap visuel</strong>, comme la cécité (aveugle) ou la malvoyance. Les personnes développent généralement davantage leurs autres sens, notamment le sens du toucher. Il y a aussi les handicaps tel que le daltonisme ou l’achromatopsie (pas de vision des couleurs).</li>
+<li><strong>Handicap psychique,</strong> issue d’une maladie psychique (phobie, anxiété généralisée, peur panique, agora-phobie, trouble obsessionnel compulsif (TOC), bipolarité...). Il peut être durable ou épisodique et peut apparaitre à tout âge. À la différence du handicap mental, le handicap psychique n’affecte pas la capacité intellectuelle de la personne.</li>
+<li><strong>Handicap cognitif,</strong> conséquence d’une déficience des grandes fonctions cérébrales supérieures que sont l’attention, la mémoire, les fonctions exécutives et perceptives, le raisonnement, le jugement, le langage. Cela se manifeste par différentes difficultés sur des fonctions cognitives très précises comme le langage (écrit, oral), la mémorisation, la motricité fine (en cas d’apraxie) comme sur des fonctions plus larges telles que les interactions sociales ou l’attention (dans certains cas d’autisme). <em>Ex. Troubles du déficit de l’attention/hyperactivité (TDAH), troubles DYS comme la dyslexie ou la dysorthographie, troubles du spectre de l’autisme (TSA),..</em>.</li>
+<li><strong>Handicap mental</strong> ou déficience intellectuelle, qui se caractérise par une réduction des facultés intellectuelles sous des formes très variables (difficulté à comprendre, développement psychologique plus ou moins perturbé, difficultés d’ordre spatio-temporel). <em>Ex. Trisomie 21.</em></li>
+<li><strong>Maladies chroniques évolutives ou invalidantes</strong>, qui peuvent entrainer une restriction d’activité  ou des contraintes plus ou moins importantes. Elles peuvent être momentanées, permanentes ou évolutives. Ex. Épilepsie, maladie d’Alzheimer,…</li>
+</ul>
+<p>À noter, la notion de <strong>comorbidité</strong> (présence de plusieurs troubles en simultanée), notamment dans les handicaps cognitifs et psychiques (TDAH, autisme,…).</p>
+<h3>C - Pourquoi l’accessibilité est incontournable ?</h3>
+<p>Tout d’abord, <strong>un design accessible n’est pas uniquement bénéfique à une minorité, mais bien à l’ensemble des utilisateurs</strong> : privilégier une interface claire, simple, prévisible et offrant une expérience fluide, c’est faire une interface qui sera davantage utilisée. De même, l’ajout de sous-titres au vidéo ajoute généralement un confort supplémentaire aux utilisateurs. On notera aussi l’importance d’avoir une interface aérée avec des textes légers (a contrario de pavés de textes denses) parmi les bonnes pratiques pour une bonne expérience UX, et non uniquement pour les personnes porteurs d’un trouble cognitif ou mental.</p>
+<p>Si cela ne vous a pas convaincu, peut-être que l’influence de la prise en compte des enjeux d’accessibilité dans le <strong>référencement sur les moteurs de recherche</strong> vous motivera davantage (aka le SEO). Les balises textes Alt pour les images ou les transcripts pour les vidéos sont d’autant plus de contenus où injecter ses mots clés en SEO, tout comme les balises titres si elles sont bien hiérarchisées… Google a des critères liés à l’accessibilité dans son algorithme de SEO pour le référencement naturel.</p>
+<p>Et si vous n’êtes toujours pas prêt à franchir le pas, c’est bien dommage car la loi française impose des obligations légales en matière d’accessibilité numérique avec le <strong>Référentiel Général d’Accessibilité pour les Administrations (RGAA)</strong> pour les organisations publiques, d’intérêt général et les entreprises dont le chiffre d’affaires dépasse 250 millions d’euros . Ce cadre est restreint et plus généralement, on observe que seulement 50% des sites de l’internet français répondent aux critères… Néanmoins, pour les chanceux soumis au RGAA, on notera que le manquement à ces obligations déclaratives peut entraîner une sanction financière d’un montant de 20 000 euros par service en ligne.</p>
+<p><strong>Alors, prêt(e) à créer des interfaces plus inclusives ?</strong></p>
+<hr>
+<h2>Quelles sont les règles pour un web accessible ?</h2>
+<p>L’accessibilité du web, ce n’est pas un sujet nouveau : la première initiative internationales, la <strong>Web Accessibility Initiative (WAI)</strong>, est lancée dès 1997 par la Word Wide Web Consortium (W3C).</p>
+<p>La <strong>WAI</strong> (ou WCAG) est un ensemble de recommandations pour faciliter l’accès aux personnes en situation de handicap ou les seniors. En France, le <strong>RGAA</strong> traduit le WAI en 106 critères opérationnels à respecter pour un site.</p>
+<p>S’il s’agit généralement de bon sens ou d’utiliser certains outils à bon escient, d’autres solutions sont plus complexes à implémenter dans les sites. À noter, il est généralement plus simple de prendre en compte l’accessibilité dès le début d’un projet pour ne pas avoir à revenir dessus plus tard.</p>
+<h3>A- Les règles pour des contenus webs accessibles (WCAG)</h3>
+<p>Il existe 13 règles différentes pour la version 2 du référentiel (à noter, une version 3 est en construction mais est encore à l’état de brouillon), organisées dans les 4 principes présentées précédemment : Perceptible, Utilisable, Compréhensible, Robuste. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/fr"><strong>Lire les 13 règles en bref à ce lien.</strong></a></p>
+<p>Il propose aussi un détail de ces 13 règles, les techniques et conseils pour l’implémenter et les choses à ne pas faire : cela permet aussi de questionner comment on aborde toutes les fonctionnalités et les interactions. <a href="https://www.w3.org/WAI/WCAG22/quickref/">Retrouvez le détail de comment suivre les recommandations de la WCAG 2.2 à ce lien.</a></p>
+<p>A chaque règle, des critères de succès sont proposés pour s’évaluer par rapport à trois niveaux : A, AA et AAA (le A étant le plus bas et le AAA le plus “réussi”).</p>
+<p>D’autres règles existent, notamment l’ATAG davantage à destination des développeurs et l’UAAG tournés davantage vers l’utilisateur (les navigateurs, les agents d’accessibilité, les lecteurs de médias).</p>
+<h3><strong>B - C’est quoi le WAI-ARIA ?</strong></h3>
+<p>C’est un nouveau système d’attributs (à glisser dans HTML CSS) qui ajoute de la sémantique pour mieux appréhender les contrôles d’interface complexes (souvent en Javascript), cela permet de pouvoir annoncer et décrire les actions exécutées et permettre d’avoir une arborescence plus accessible (’Accessibility Tree’). Par exemple, cela permet d’avoir une indication sonore lorsqu’on coche ou décoche une checkbox.</p>
+<p>Néanmoins, cela ne permet ni de modifier l’apparence de l’élément, de modifier son fonctionnement, d’ajouter un “focus” ou de gérer la gestion au clavier des actions.</p>
+<p>Il se base sur :</p>
+<ol>
+<li>Les rôles (navigation, search,..) qui généralement définit ce que l’élément est ou fait ;</li>
+<li>Les propriétés qui définissent les éléments et ne changent pas selon l’interaction (ex. “<code>aria-required=&quot;true&quot;</code> indiquera qu'un champ doit être renseigné afin que le formulaire soit valide);</li>
+<li>Les états qui définissent les conditions actuelles de l’élément (case cochée ou décochée par exemple). Comme ces conditions peuvent changer, les états sont généralement mis à jour à l’aide d’un script Javascript.</li>
+</ol>
+<p>Les fonctionnalités WAI-ARIA sont généralement prise en charge par tous les navigateurs, néanmoins tous les lecteurs d’écrans ne sont pas compatibles.</p>
+<p>De plus, il faut veiller à utiliser ces fonctionnalités à bon escient (et pas dans tous les éléments HTML), qui auront une utilité pour un usage pratique.</p>
+<p>Certains langages les ont aussi adapté pour avoir des components implémentant automatiquement les fonctionnalités ARIA pour l’accessibilité, comme le REACT-ARIA. Pour rendre un site accessible, il faut à la fois une attention dans le design UI mais aussi un effort pour les développeurs, en bref, c’est un travail d’équipe !</p>
+<h3>C- C’est quoi le WAI-Adapt ?</h3>
+<p>WAI-Adapt permet aux utilisateurs d’adapter (ou « personnaliser ») la manière dont le contenu est présenté pour satisfaire leurs besoins et préférences. Parmi les exemples, on verra plus tard l’ancien site de la SCNF qui proposait de personnaliser la police, les contrastes, désactiver les animations… Le plus commun est de proposer de régler la taille de la police sur les pages.</p>
+<p>De plus, cela peut se révéler utile comme certains utilisateurs ont des besoins contradictoires : certains utilisateurs comprendront mieux une information sous forme de texte et d’autres sous forme de symboles ou d’images.</p>
+<hr>
+<h2><strong>Les bonnes pratiques</strong></h2>
+<h3><strong>A - Une vue d’ensemble en 7 affiches : qu’en retenir ?</strong></h3>
+<p>Les affiches de l’UK Home Office illustrent en 7 affiches les bonnes pratiques pour différents types d’utilisateurs :</p>
+<ul>
+<li>Pour les utilisateurs sur le spectre autistique ;</li>
+<li>Pour les lecteurs d’écran ;</li>
+<li>Pour les malvoyants ;</li>
+<li>Pour les dyslexiques ;</li>
+<li>Pour les personnes à mobilité réduite ou des handicaps moteurs ;</li>
+<li>Pour les sourds et malentendants ;</li>
+<li>Pour les personnes souffrant d’anxiété.</li>
+</ul>
+<p>On retrouve notamment des recommandations valables pour plusieurs utilisateurs :</p>
+<ul>
+<li>Des pages simples, par blocs définis et espacés et des structures linéaires.</li>
+<li>Avoir des boutons explicites sur les actions (”cliquer ici” VS “joindre des fichiers par exemple).</li>
+<li>Des phrases simples et courtes, plutôt que des blocs de textes.</li>
+<li>Des designs pour navigation possible au clavier uniquement.</li>
+<li>Laisser suffisamment de temps aux utilisateurs de faire l’action et expliquer les prochaines étapes, les conséquences de telle action.</li>
+</ul>
+<p>Parfois, certaines recommandations sont contradictoires :</p>
+<ul>
+<li>Utiliser des bullets points pour les TSA ;</li>
+<li>Utiliser des mots plutôt que des images /icônes pour les TSA et les malentendants mais l’inverse pour les dyslexies.</li>
+<li>La production audio ou vidéo pour les dyslexies VS les enjeux de proposer du texte / transcripts pour les sourds et malentendants.</li>
+<li>Des couleurs simples (pour les TSA) VS l’enjeu d’avoir de bons contrastes pour les troubles de la vision, bien que le mieux soit de laisser le choix à l’utilisateur de modifier le contraste (entre texte et fond).</li>
+</ul>
+<p>Il est aussi important de laisser le choix du mode de communication préféré pour les utilisateurs (dans les formulaires de contact notamment), ou de fournir un support suffisant aux utilisateurs pour les aider dans leurs démarches.</p>
+<h3><strong>B - En HTML, le diable se cache dans les détails…</strong></h3>
+<ul>
+<li>Pour la navigation au clavier, l’élément sélectionné est mis en avant par rapport au reste : on appelle cela un “focus”. Pour avoir une navigation fluide, il faut s’assurer que l’ordre est bien linéaire et logique en hiérarchisant ses contenus dans la page HTML (en CSS, on peut donner une position “absolue” qui bouleverse l’ordre dans lequel on a écrit la page).</li>
+<li>Pour nous aider à la navigation au clavier et la gestion du focus, on peut aussi ajouter en CSS l’attribut “tabindex” pour forcer un ordre de parcours précis.</li>
+<li>Pour la navigation au clavier, le hamburger menu (notamment avec le contenu navbar) ne s’ouvre pas : le focus de l’élément sur lequel on navigue disparaît car il navigue dans le contenu de la navbar qui est masqué. La solution est notamment d’utiliser l’attribut “inert” pour permettre de soit passer le contenu de la navbar masqué, soit d’ouvrir le menu.</li>
+<li>Utiliser la balise “button” (plutôt qu’un div) - pour une meilleure interprétation par les lecteurs d’écrans, et avoir les bonnes interactions au clavier (en cliquant sur espace par exemple).</li>
+<li>Mettre en place des alertes (visuelles, et “screen reader friendly”), à l’aide de petit script JS. Ceci est en lien avec la notion d’Aria Live Regions. Pour illustrer, c’est pour une action du type “on va faire ça, il faut l’annoncer à l’utilisateur (notamment pour les infos importantes)”.</li>
+<li>Utiliser des “labels” (libellé) pour avoir des alternatives de textes (avec un “name”, son “role” et son état “state” dans certains cas), notamment sur les champs de formulaire.</li>
+<li>Avoir un autocomplete ou une recherche de champ textuel “intelligente” (ex. comprendre que “dsylexie” est pour “dyslexie” avec une intervention de caractères…)</li>
+<li>Mais aussi, les alternatives aux Captchas d’images,</li>
+</ul>
+<p>Finalement, les différents éléments ne sont pas sorciers : il s’agit de se forcer à utiliser les balises et le HTML pour structurer et le CSS pour la forme, comme prévu par l’esprit des deux langages !</p>
+<h3><strong>C - Et en terme de design, à quoi faire attention ?</strong></h3>
+<ul>
+<li><strong>Hiérarchisation de contenu :</strong>
+<ul>
+<li>Avoir une structure claire ;</li>
+<li>Laisser de l’espace vide et aérer ces pages.</li>
+</ul>
+</li>
+<li><strong>Polices et texte :</strong>
+<ul>
+<li>Utiliser une police sans serif (c’est à dire sans empattement), plus faciles à lire pour les dyslexiques par exemple. Éviter les polices fantaisie, avec des courbes ou manuscrites.</li>
+<li>Permettre l’augmentation de la taille du texte.</li>
+<li>Paradoxalement, la mise en gras limite l’accessibilité en rapprochant les lettres entre elles. De même, l’italique peut complexifier la lecture.</li>
+<li>Ne pas utiliser de texte justifié qui augmente les espaces et diminue la lisibilité (on repère moins les retours à la ligne). De même, préférer un texte aligné à gauche plutôt que centré pour faciliter la lecture.</li>
+</ul>
+</li>
+<li><strong>Couleurs et contrastes :</strong>
+<ul>
+<li>Utiliser un contraste fort entre le texte et l’arrière-plan.</li>
+<li>Privilégier texte sombre sur fond clair.</li>
+<li>Choisir des tons qui offrent un ratio de 4.5 minimum (norme recommandée par le WCAG), à l’aide du site <a href="https://app.contrast-finder.org/?lang=fr">Contrast Finder</a>, <a href="https://contrastchecker.com/">Contrast Checker</a> ou <a href="https://snook.ca/technical/colour_contrast/colour.html">Colour Constrast Check</a>.</li>
+</ul>
+</li>
+<li><strong>Contenus alternatifs :</strong> fournir un texte alternatif pour tous les éléments visuels (images, vidéos etc…) et tous les contenus audio, renseigner la balise alt sur toutes les balises img, proposer les transcripts sur les vidéos, podcasts etc.</li>
+<li><strong>Effets et animations :</strong>
+<ul>
+<li>Ne pas proposer qu’un bouton en drag &amp; drop ou d’interactions à la souris.</li>
+<li>Réduire ou éviter le lancement automatique de contenu et d’animations, ou laisser le choix aux utilisateurs (pause, stop, cacher).</li>
+<li>Éviter les carrousels automatiques, blocs qui défilent car ils peuvent entraîner des difficultés de lecture, être imprévisible, créer une gêne ou de la fatigue.</li>
+<li>Réduire les animations à l’essentiel : “more is less”, éviter les animations sans valeur ajoutée. Ne pas avoir des animations intrusives.</li>
+<li>NB. L’idée n’est pas de supprimer les animations, mais de questionner la tendance des sites “qui claquent”. Parfois, des sites plus statiques sont plus adaptés et il faut utiliser les animations de manière intelligente.</li>
+</ul>
+</li>
+<li><strong>Responsive :</strong> s’assurer que le rendu est optimal sur toutes les plateformes (mobile, pc, lecteur etc…).</li>
+</ul>
+<h3><strong>D - Une information “Facile À Lire et à Comprendre” (FALC) : que retenir ?</strong></h3>
+<p>Pour la compréhension des informations, des règles ont été pensé pour notamment faciliter la compréhension aux personnes en situation de handicap (mais pas que, cela est aussi utile pour les personnes dont la langue du texte n’est pas leur langue maternelle). Ces règles sont notamment utilisées sur les sites du gouvernement français pour faciliter la compréhension aux différents utilisateurs. Il existe un logo pour repérer si le texte est FALC et respecte les recommandations.</p>
+<p>La liste complète des recommandations dépasse la rédaction de texte, elle interroge aussi le système d’information choisi pour transmettre une information. <a href="https://www.inclusion-europe.eu/wp-content/uploads/2017/06/FR_Information_for_all.pdf">Retrouvez la liste complète sur ce PDF</a>, à parcourir pour les intéressés. Bien que beaucoup semblent être des règles de bons sens, il peut d’agir de rappels utiles (ex. éviter des documents trop longs).</p>
+<p>Parmi elles, on trouve des conseils sur le choix des mots, sur des phrases qui s’adressent directement aux utilisateurs (”vous”)</p>
+<p>Un conseil important est qu’il ne faut pas oublier de faire valider les supports par les personnes visées (notamment en cas de situation de handicap) et ne pas le présupposer pour eux ! Plusieurs associations proposent notamment ce genre de relecture.</p>
+<hr>
+<h2><strong>Comment check si son site est accessible ?</strong></h2>
+<h3><strong>Les problèmes majeurs :</strong></h3>
+<ul>
+<li>Navigation au clavier + Bouton “accéder au contenu” (et check le clavier notamment si navbar show/hidden dans un burger menu selon la taille de l’écran).</li>
+<li>Test avec le screen reader (vérifier notamment les alt des images, si on a bien les bonnes “catégories” de balise).
+<ul>
+<li><strong>Comprendre les lecteurs d’écrans (Screen Reader) :</strong> Voiceover sur Mac et NVDA sur Windows, et avec la vidéo A11Y (<a href="https://youtu.be/5R-6WvAihms?si=6ZtBzJlCTP7mEFOx">MAC</a>/<a href="https://youtu.be/Jao3s_CwdRU?si=eyvLVXOtFxC6xTR2">Windows</a>), il existe aussi Jaws.</li>
+</ul>
+</li>
+<li>Tester les fonctionnalités importantes (ex. site de shopping, que la mise en panier se déroule bien…).</li>
+<li>Squelette de la page et hiérarchie (des titres H1, H2…) correcte.</li>
+<li>Couleur et constrate (avec l’extension aXe par exemple ou l’extension Chrome Accessibility Developer Tools qui en plus suggère une couleur pour corriger).</li>
+</ul>
+<h3>Les outils :</h3>
+<p><strong>Attention néanmoins, si de nombreux outils existent, il est toujours pertinent de faire vérifier l’accessibilité de notre site par un humain et de le faire tester par les personnes concernées !</strong></p>
+<p>Les outils Axe Core pour tester en développement (sur Github).</p>
+<p>Il y a aussi le site <a href="https://www.accessibilitychecker.org/">**Accessibility Checker</a>** pour vérifier la conformité avec la loi (en France ou à l’étranger) ou le site <a href="https://squizlabs.github.io/HTML_CodeSniffer/"><strong>HTML_Code Sniffer</strong></a> pour la réglementation WCAG.</p>
+<p>Des plugins Figma permettent aussi d’accompagner les web designers pour un design inclusif. En voici quelques uns qui me semblent pertinent :</p>
+<ul>
+<li><a href="https://www.figma.com/community/plugin/732603254453395948/stark-contrast-accessibility-checker"><strong>Stark - Contrast &amp; Accessibility Checker</strong></a></li>
+<li><a href="https://www.figma.com/community/plugin/1085612091163821851/axe-for-designers-a-free-accessibility-plugin"><strong>axe for Designers: A Free Accessibility Plugin</strong></a></li>
+<li><a href="https://www.figma.com/community/plugin/731310036968334777/a11y-focus-order"><strong>A11y - Focus Order</strong></a> pour aider au design pour navigation au clavier et au lecteur d’écran.</li>
+<li><a href="https://www.figma.com/community/plugin/734693888346260052/able-friction-free-accessibility">**Able – Friction free accessibility</a>** pour les contrastes notamment ou <a href="https://www.figma.com/community/plugin/733159460536249875/a11y-color-contrast-checker">**A11y - Color Contrast Checker</a>** et/ou <a href="https://www.figma.com/community/plugin/733343906244951586/color-blind"><strong>Color Blind</strong></a></li>
+<li><a href="https://www.figma.com/community/plugin/892114953056389734/text-resizer-accessibility-checker"><strong>Text Resizer - Accessibility Checker</strong></a></li>
+<li><a href="https://www.figma.com/community/plugin/1373362852131056921/wcag-plugin"><strong>WCAG Plugin</strong></a></li>
+<li>Un <a href="https://www.figma.com/community/file/1131891137727824106/free-accessible-design-system"><strong>design system accessible (pour Tailwind)</strong></a> pour commencer sa maquette.</li>
+<li><a href="https://www.figma.com/community/file/1311421011482282592"><strong>Web Accessibility Annotation Kit</strong></a></li>
+</ul>
+<p>Sur Wordpress, le CMS le plus utilisé, des plugins proposent aussi de résoudre les problèmes courants d’accessibilité.</p>
+<p>Les extensions Chrome <a href="https://chromewebstore.google.com/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac?hl=fr">**Tanaguru</a>** (audit accessibilité), ou <a href="https://chromewebstore.google.com/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd"><strong>Chrome Lens</strong></a> (simuler un handicap visuel). (NB. à condition qu’elles soient maintenues dans le temps)</p>
+<h3><strong>Pour aller plus loin :</strong></h3>
+<p>Le référentiel <strong>RGAA propose notamment avec ces 106 critères des tests et des méthodologies</strong>, parfaites pour les dev test-driven ! (Cela concerne les images, cadres, liens, couleurs, multimédias, tableaux, liens, scripts, la structure et présentation de l’information, les formulaires, la navigation et la consultation du site). <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/">Découvrez la liste complète sur leur site.</a></p>
+<hr>
+<h2>Quelques exemples :</h2>
+<ul>
+<li>
+<p>L’ancien site de la SCNF 👍</p>
+<ul>
+<li><strong>La typographie</strong> peut être changée pour la <strong>Police Dyslexie (<a href="https://www.bloghoptoys.fr/la-police-dyslexie-liens-et-nouveautes-2">Open Dyslexic)</a>.</strong></li>
+<li><strong>L’interlignage</strong> peut être augmenté pour laisser respirer le contenu et faciliter la lecture.</li>
+<li><strong>Les animations</strong> peuvent être <strong>désactivées.</strong></li>
+<li><strong>Les contrastes</strong> ont <strong>trois niveaux de lisibilité</strong> : par défaut, renforcés et inversés.</li>
+<li><strong>Le défilement horizontal</strong> (swipe) peut être désactivé pour garder un seul mouvement vertical tout au long de la navigation</li>
+<li>En plus des changements visuels, nous remarquons que la <strong>navigation au clavier</strong> (grâce aux touches : tabulation, espace et entrée) est <strong>disponible</strong></li>
+</ul>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/96c10bf7-265a-4b46-9afd-09568386e715/image.png" alt="image.png"></p>
+</li>
+<li>
+<p>Hollister : réglages “Hauts Contraste” (correction de texte blanc sur fond noir). 👍</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/7c6c4019-6809-4443-989d-95d509575b6a/image.png" alt="image.png"></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/de0ecc11-ec3f-4a45-b0fc-dd6914e53bb1/image.png" alt="image.png"></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/a92596d7-45a7-4a6b-a974-31ba42881293/image.png" alt="image.png"></p>
+</li>
+<li>
+<p>Amazon 👎</p>
+<ul>
+<li>Grâce à <strong>l’extension Chrome <a href="https://chrome.google.com/webstore/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac/related">Tanaguru</a></strong>, nous pouvons voir qu’il y a un certain nombre de <strong>conflits et d’éléments invalidés</strong> par l’outil concernant l’accessibilité :
+<ul>
+<li>Par exemple, sur cette capture d’écran, il est précisé qu’il y a un <strong>changement de sens de lecture non-conforme</strong> qui peut amener à perdre l’utilisateur·rice lors de sa navigation sur le site.</li>
+</ul>
+</li>
+<li>En étudiant un peu plus le site, on peut remarquer que <strong>les formulaires n’ont pas d’étiquettes associées</strong>. Cette négligence entraîne une navigation et une <strong>compréhension impossible</strong> par les <strong>personnes aveugles ou malvoyantes</strong> qui utilisent des <strong>lecteurs d’écran</strong>.</li>
+</ul>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/0f804ee4-da63-45e7-8c29-c693c756477d/image.png" alt="image.png"></p>
+</li>
+<li>
+<p><strong>Un site promotionnel d’une <a href="https://www.experience-nouvelletwingo.renault.fr/">Renault Twingo</a> 👎:</strong> bien que primé à l’époque, le site propose un jeu qui n’est accessible qu’à la souris et avec un choix de couleurs très peu contrastés.</p>
+<ul>
+<li>Même si ici le jeu est surtout une pub, il est intéressant aussi de se questionner sur les jeux en général et l’approche que l’on aura (notamment si l’on veut créer des jeux ludiques pour transmettre une information, pour gamifier des expériences).</li>
+</ul>
+</li>
+<li>
+<p><strong>Le site de Centrale: quelles sont les améliorations à faire ?</strong></p>
+<ul>
+<li>
+<p>Après avoir fait passé un audit d’accessibilité au site de l’école avec le site <a href="http://www.accessibilitychecker.org/">www.accessibilitychecker.org</a>, l’évaluation semble nous indiquer 3 erreurs qui renderaient le site non conforme : qu’en est-il réellement ?</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/daf73a36-3358-46f1-a3f8-3a44540ae33f/image.png" alt="image.png"></p>
+</li>
+<li>
+<p><em>“Ensures aria-hidden elements are not focusable nor contain focusable elements”</em> : on a un carrousel de photos pour la couverture avec deux flèches qui permettent de passer de l’image “bachelor” à l’image “Digital Lab” (au clavier si on clique sur Enter). Hors en naviguant au clavier, la navigation fait un aller retour entre les éléments focusables du carrousel et les flèches. On pourrait ne pas avoir de focus sur les flèches du carrousel pour améliorer la fluidité.</p>
+</li>
+<li>
+<p><em>“Ensures buttons have discernible text”</em> : comme il s’agissait des boutons cachés “Rechercher” et celui du Burger Menu (lorsque la fenêtre est plus petite), a priori on est bon ! Il faut simplement s’assurer que les boutons ont un label adapté qui indique l’action qu’il va faire, ce qui est aussi a priori bon.</p>
+</li>
+<li>
+<p><em>“Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds” :</em>  cela était indiqué pour le texte de l’inscription à la newsletter qui semble respecter les contrastes. Néanmoins, j’ai remarqué que dans la bannière d’accueil, le texte et le fond peuvent être difficile à distinguer (pour l’image avec le bachelor), de même que les flèches blanches que j’ai découvert en naviguant au clavier (et non visuellement). On pourrait proposer une option “Haut contraste” pour régler cela ou assombrir la photo en fond pour améliorer le contraste.</p>
+</li>
+<li>
+<p>On pourrait aussi proposer, lors de la navigation au clavier de skipper directement au contenu.</p>
+</li>
+<li>
+<p>De plus, je n’ai pas réussi au clavier à entrer dans les différents menus et sous-menus et j’ai repéré quelques améliorations possibles (certains “sous-sous menus ne s’ouvrent pas alors qu’on navigue dedans au, comme présenté plus haut). De plus, l’arborescence est très vaste. D’autres options de contact pourraient aussi être proposer en alternative au téléphone (et aux réseaux sociaux).</p>
+</li>
+<li>
+<p>Néanmoins, nous pouvons reconnaître les efforts faits sur le site pour appliquer le référentiel RGAA (niveau AA) ! Et contrairement à l’audit, il semble bien conforme.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Pour aller plus loin</h2>
+<p><a href="https://developer.mozilla.org/fr/docs/Learn/Accessibility/WAI-ARIA_basics"><strong>Les bases de WAI-ARIA - mdn</strong></a></p>
+<p><a href="https://www.w3.org/WAI/test-evaluate/fr"><strong>Évaluer l’accessibilité Web - W3C</strong></a>, avec des outils et comment choisir ses outils (en anglais notamment)</p>
+<p><a href="https://webaim.org/">https://webaim.org/</a></p>
+<p><a href="https://www.w3schools.com/accessibility/index.php">https://www.w3schools.com/accessibility/index.php</a></p>
+<hr>
+<h2><strong>Bibliographie</strong></h2>
+<p><a href="https://ukhomeoffice.github.io/accessibility-posters/">https://ukhomeoffice.github.io/accessibility-posters/</a> (et <a href="https://github.com/UKHomeOffice/posters/tree/master/accessibility/dos-donts/posters_fr">VF ici</a> par Vincent Valentin, à afficher dans vos bureaux pour y penser !)</p>
+<p><a href="https://accessibilite.numerique.gouv.fr/">https://accessibilite.numerique.gouv.fr/</a></p>
+<p><a href="https://www.w3.org/WAI/tips/developing/">https://www.w3.org/WAI/tips/developing/</a></p>
+<p><a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/conformance.html#uc-levels-head">https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/conformance.html#uc-levels-head</a></p>
+<p><a href="https://developer.mozilla.org/fr/docs/Learn/Accessibility/What_is_accessibility">https://developer.mozilla.org/fr/docs/Learn/Accessibility/What_is_accessibility</a></p>
+<p><a href="https://web.dev/articles/accessibility?hl=fr">https://web.dev/articles/accessibility?hl=fr</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g</a></p>
+<p><a href="https://app.daily.dev/tags/accessibility?ref=roadmapsh">https://app.daily.dev/tags/accessibility?ref=roadmapsh</a></p>
+<p><a href="https://falc.unapei.org/">https://falc.unapei.org/</a></p>
+<p><a href="https://www.inclusion-europe.eu/wp-content/uploads/2017/06/FR_Information_for_all.pdf">https://www.inclusion-europe.eu/wp-content/uploads/2017/06/FR_Information_for_all.pdf</a> Règles Européenne du FALC</p>
+<p><a href="https://blog.lachouette.company/laccessibilit%C3%A9-web-au-sein-d-un-studio-de-design-et-de-d%C3%A9veloppement-num%C3%A9rique-partie-n-2-61206134a296">https://blog.lachouette.company/laccessibilité-web-au-sein-d-un-studio-de-design-et-de-développement-numérique-partie-n-2-61206134a296</a></p>
 
 
 </article>
