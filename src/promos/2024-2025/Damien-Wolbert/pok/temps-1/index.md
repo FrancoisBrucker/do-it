@@ -17,7 +17,7 @@ résumé: Ce POK vise à mettre en place la maquette d'un outil opérationnel de
 **Niveau :** Basique
 **Pré-requis:**
 - Connaissance de base de Google AppScript, de Google Sheet et d'un Google Drive. (Approdondi en MON)
-- Connaissance de base des enjeux de la compétence individuelle en entreprise. (Approfondi en première phase du projet à partir des connaissances déjà accumulées en stage et alterance)
+- Connaissance de base des enjeux de la compétence individuelle en entreprise. (Approfondi en première phase du projet à partir des connaissances déjà accumulées en stage et alternance)
 
 {% endprerequis %}
 {% lien %}
@@ -29,13 +29,13 @@ résumé: Ce POK vise à mettre en place la maquette d'un outil opérationnel de
 J'ai souvent constaté que le sujet du suivi des compétences des membres d'une orgnanisation est à la fois critique et délicat.
 | Contexte | Structure | Observations |
 |----------|-----------|--------------|
-| Responsable RSE et chargé de mission SI | KSI Centrale Marseille | Les compétences ne sont pas clairement identifiées ou suivies dans chaque pôle. Ce qui rend plus diffcile la formation et donc l'activité de la structure.|
-| Stage employé polyvalent | Mairie de Lunel-Viel (34) | Les managers ne connaissent pas les compétences nécessaire ou détenue par les personnes à leur charge. Ils n'ont donc pas de visibilité sur toutes leurs activités ou les activités qu'ils pourraient leur sous-traiter. |
-| Alternant ingénieur électricien | Service support électricité, Engie Renouvelables | Le manager ne connait pas les réelles compétences de ses agents ce qui le contraint à les laisser gérer et chosisirs leurs missions et projets. Cela déséquilibre complètement le service (travail sur le même sujet en parralèle) et bloque toute possibilité de pérennité de la compétence au sein du service (aucun pré-requis ou plan de formation) |
+| Responsable RSE et chargé de mission SI | KSI Centrale Marseille | Les compétences ne sont pas clairement identifiées ou suivies dans chaque pôle. Ce qui rend plus diffcile la formation et donc l'activité de la structure ainsi que les passations.|
+| Stage employé polyvalent | Mairie de Lunel-Viel (34) | Les managers ne connaissent pas les compétences nécessaires ou détenues par les personnes à leur charge. Ils n'ont donc pas de visibilité sur toutes leurs activités ou les activités qu'ils pourraient leur sous-traiter. |
+| Alternant ingénieur électricien | Service support électricité, Engie Renouvelables | Le manager ne connait pas les réelles compétences de ses agents, ce qui le contraint à les laisser gérer et chosisirs leurs missions et projets. Cela déséquilibre complètement le service (travail sur le même sujet en parralèle) et bloque toute possibilité de pérennité de la compétence au sein du service (aucun pré-requis ou plan de formation) |
 
-Je trouve donc intéressant de me plonger dans ces problèmatiques afin d'analyser d'où proviennent les points de blocages des structures dans lesquelles j'ai évolué.
+Je trouve donc intéressant de me plonger dans ces problèmatiques afin d'analyser d'où proviennent les points de blocages des structures dans lesquelles j'ai évolué et proposé une solution simple.
 
-D'autre part, je n'ai jamais pû approfondir l'utilisation de Google Appscript et de toutes possibilités offertes par Google Drive. Je pourrai donc réaliser un certain nombre de parallèle entre ce languages de programmation et mes connaissance de VBA (Visual Basic fo Application) sur Excel.
+D'autre part, je n'ai jamais pû approfondir l'utilisation de Google Appscript et de toutes possibilités offertes par Google Drive. Je pourrai donc réaliser un certain nombre de parallèles entre ce languages de programmation et mes connaissance de VBA (Visual Basic fo Application) sur Excel.
 
 ## Cadrage
 
@@ -43,7 +43,7 @@ D'autre part, je n'ai jamais pû approfondir l'utilisation de Google Appscript e
 
 1. Identifier les enjeux du monitoring des compétences.
 2. Identifier les fonctionnalités indispensables à l'implémentation d'un tel outil.
-3. Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs en utilisant des fonctionnalités simples de Google AppScript, Google Sheet, Google formular et Google Drive.
+3. Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs, en utilisant des fonctionnalités simples de Google AppScript, Google Sheet, Google formular et Google Drive.
 4. Identifier une architecture robuste sur Google Drive permettant d'ajouter des foncitonnalités au fur et à mesure.
 5. Livrer une maquette fonctionnelle et testée à la fin des 20 heures allouées au POK.
 
@@ -79,6 +79,8 @@ L'objectif final de ce POK est de fournir un dossier Google Drive contenant des 
 | 13/09/2024 | 0.5h | Tentative de communication avec le responsable du référentiel centralien à Centrale | Elevé |
 | 16/09/2024 | 1h | Finalisation du questionnaire + envoie | Elevé |
 | 16/09/2024 | 3.7h | Recherche bibliographique | Elevé |
+| 18/09/2024 | 2h | Mise en forme du sprint sur le site DO-It | Elevé |
+**Total du sprint :***11 heures soit 10% de plus que le temps demandé*
 
 ##### Sprint 2
 
@@ -96,7 +98,7 @@ L'objectif final de ce POK est de fournir un dossier Google Drive contenant des 
 Dans son ouvrage *INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie*, T. ARDOUIN explique que la définition même du mot compétence crée le débat. Il en donne la définition suivante à la page 119 :
 
 {% info %}
-**Déf. 1 :** La compétence est la mise en oeuvre de capacités en situation professionnelle qii permettente d'exercer convenablement une fonction ou une activité." [4].
+**Déf. 1 :** La compétence est la mise en oeuvre de capacités en situation professionnelle qui permet d'exercer convenablement une fonction ou une activité." [4].
 {% endinfo %}
 
 D'autre part, Cécile DEJOUX dans son ouvrage *Gestion des compétences et GPEC* sépare dès la défintion, compétences individuelles, collectives, organisationelles et territoriales. Dans ce contexte nous noterons la défintion suivante :
@@ -138,8 +140,8 @@ Il faudra permettre à l'utilisateur de classer les types de compétences tout e
 
 Cette dernière classification ne permet cependant pas à un manager de prioriser facilement une compétence au profit d'une autre (pour le recrutement ou la formation interne par exemple). On s'aperçoit notamment quand la caractérisation de C. DEJOUX, deux autres échelles sont à définir :
 
-** Une échelle d'acquisition, de maitrise (caractéristique n°2):**
-Au delè d'une échelle d'acquisition de la compétence, quantitative ou qualitative, il peut être intéressant de considérer le niveau d'autonomie d'un individu quant à la mise en application de cette compétence. Dans son ouvrage, T. ARDOUIN définit en page 120, 3 niveaux :
+**Une échelle d'acquisition, de maitrise (caractéristique n°2):**
+Au delà d'une échelle d'acquisition de la compétence, quantitative ou qualitative, il peut être intéressant de considérer le niveau d'autonomie d'un individu quant à la mise en application de cette compétence. Dans son ouvrage, T. ARDOUIN définit en page 120, 3 niveaux :
 - A : Assiste et applique - Reproduction d'activité envisagées et organisées par d'autres.
 - B : Intervient et produit - Production de donnée ou de modes de travail.
 - C : Anime et conçoit - Réalisation de mode de travail et de donnée avec la responsabilité d'animé débats et groupes de travail.
@@ -148,7 +150,7 @@ Au delè d'une échelle d'acquisition de la compétence, quantitative ou qualita
 Il pourra être pertinent de mettre en place une échelle d'autonomie face à la tâche.
 {% endfaire %}
 
-** Une échelle de reconnaissance (caractéristique n°3) :**
+**Une échelle de reconnaissance (caractéristique n°3) :**
 Dans un article *Compétences individuelles et collectives" [3] du ministère de la transition écologique et de la cohésion des territoires, nous pouvons trouver des ressources présentant la compétence individuelle comme critique pour une organisation. Ainsi, on peut les classer les compétences à la fois par raport à son utilité immédiates mais aussi par rapport à son utilité stratégique, à moyene et long terme. 
 
 {% faire %}
@@ -345,18 +347,14 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 
 ### II.3. Formalisation du besoin fonctionnel
 
-#### Fonctionnalités de base
+Par soucis de temps et afin de construire une maquette fonctionnelle à la fin du temps alloué au projet, il est nécessaire de hiérarchiser les fonctions et de définir celles qui sont indispensables.
 
-
-
+#### Fonctionnalités indispensables
+TBD
 #### Fonctionnalités souhaitables
-
-
+TBD
 #### Fonctionnalités additionnelles
-
-
-
-
+TBD
 ## Bibliographie
 
 [1] **DEJOUX, Cécile.** *Gestion des compétences et GPEC*, 2ème édition, DUNOD, 2013, Les topos
@@ -368,3 +366,9 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 [4] **ARDOUIN, Thierry** *INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie*, 5ème édition, 2017, DUNOD, Collection formation.
 
 ## REX
+
+### REX Sprint 1
+
+**GESTION DU TEMPS :** Je pense avoir commencé à travailler sur le POK trop tard, ce qui m'a obligé de condenser mes séances de travail juste avant la deadline.
+**PROGRAMMATION DES TACHES :** Je n'ai pas pris en compte le temps additionnel que prenait la répoonse à une enquête. Ainsi, j'aurais dû d'abord me concentrer sur la conception du formulaire afin de les envoyer le plus rapidement possible.
+**DIMENSIONNEMENT DU PROJET :** Je pense que ce projet est trop ambitieux pour ne solliciter que 10 heures de travail. L'origine de cette erreur de jugement provient sûrement d'une fausse impression de maitrise du sujet. En effet, je ne pensais pas que la recherche documentaire et l'approfondissement du sujet me prendrait autant de temps.
