@@ -21,18 +21,27 @@ résumé: "Je souhaite découvrir l'utilisation de figma, une application de des
 Pas de prérequi
 
 {% endprerequis %}
+{% lien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+<b>SOURCES</b>
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+- [Tutoriel](https://www.youtube.com/watch?v=HZuk6Wkx_Eg)
+- [Librairies](https://www.youtube.com/watch?v=ewwwX6N8oO8)
+
+{% endlien %}
+
+<!-- {% chemin %}
+
+<b> POK & MON </b>
+
+{% endchemin %} -->
 
 ## Table des matières
 
 1. [Introduction](#section1)
-2. [Fonctionnement](#section2) 
+2. [Fonctionnement](#section2)
 3. [Composants](#section3)
-4. [Lbrairies](#section4)
+4. [Librairies](#section4)
 5. [Conseils pratiques](#section5)
 6. [Conclusion](#section6)
 
@@ -216,12 +225,3 @@ Cela m'a été très utile, et j'ai vraiment pu apprendre et l'utiliser pour mon
 Clairement, je ferai toujours une maquette sur figma avant de coder.
 
 ![alt text](6_figma_portfolio.png)
-
-## Sources utiles
-
-{% lien %}
-
-- [Tutoriel](https://www.youtube.com/watch?v=HZuk6Wkx_Eg)
-- [Librairies](https://www.youtube.com/watch?v=ewwwX6N8oO8)
-
-{% endlien %}

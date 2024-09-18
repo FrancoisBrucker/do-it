@@ -24,6 +24,24 @@ Savoir un peu coder en HTML (balises : a, div, button, ul, li, hX)
 
 {% endprerequis %}
 
+{% lien %}
+
+<b>SOURCES</b>
+
+- [Sites de portfolio](https://www.ultra-book.com/portfolios)<
+- [Créer un Site Web HTML & CSS](https://www.youtube.com/watch?v=EFBufG7TKRE&t=510s)
+- [Exemple de formulaire](https://www.youtube.com/watch?v=lR4-DJey_3A)
+- [How to import Google Font](https://www.youtube.com/watch?v=E7QPO8P8nls)
+
+{% endlien %}
+
+{% chemin %}
+<b> POK & MON </b>
+
+- [MON 1.1 : Apprendre à utiliser Figma](../../mon/temps-1.1)
+
+{% endchemin %}
+
 Mon projet à long terme est de travailler en tant qu'**illustrateur free-lance** et je profite de Do-It pour avancer mes compétences en informatique et avancer vers cet objectif.
 C'est pour cela que j'ai décidé de créer **mon site web avec mon portfolio.**
 
@@ -37,12 +55,13 @@ C'est pour cela que j'ai décidé de créer **mon site web avec mon portfolio.**
 - [x] Coder les pages en HTML
 - [x] Coder le style en CSS
 
-<!-- #### Sprint 2
+#### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok. -->
+- [ ] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>, <b>réel :</b> )
+- [ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>, <b>réel :</b> )
+- [ ] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>, <b>réel :</b> )
+- [ ] Animation dans la sélection des images (<b>estimé : </b>, <b>réel :</b> )
+- [ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>, <b>réel :</b> )
 
 ### Horodatage
 
@@ -328,7 +347,14 @@ div.mon_profil p b {
 
 ![alt text](media/Sprint1_8_apres_css_mon_profil.png)
 
-#### Conclusion
+### Retour sur expérience
+
+**Difficultés :**
+- J'ai eu du mal à importer le font.
+- J'ai beaucoup chercher les paramètres CSS des balises HTML.
+- J'ai mis du temps avant de réussir à mettre mon bouton au bout de ligne de mon div.
+
+**Bilan**
 
 Je suis beaucoup monté en compétence et mes bases en HTML & CSS qui étaient bancales sont devenues beaucoup plus solides.
 
