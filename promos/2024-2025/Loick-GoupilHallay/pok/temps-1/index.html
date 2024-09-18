@@ -139,7 +139,11 @@
 <ul>
 <li><a href="https://github.com/boxboxjason/svcadm">GitHub</a></li>
 </ul>
-<h2>Sprint Planning 1</h2>
+<h2>Introduction</h2>
+<p>Ce POK se base sur un projet déjà existant qui déployait à l'époque des services antivirus de manière automatisée en utilisant des conteneurs accessibles depuis un proxy.<br>
+Le code était écrit en bash et était peu personnalisable.</p>
+<h2>Planification</h2>
+<h3>Sprint Planning 1</h3>
 <ul>
 <li>[ ] Outil de gestion des codes sources</li>
 <li>[ ] Cluster de base de données</li>
@@ -147,6 +151,23 @@
 <li>[ ] Outils de communication</li>
 <li>[ ] Outil d'analyse de qualité de code</li>
 <li>[ ] Outil d'analyse antivirus</li>
+</ul>
+<h2>Pratique</h2>
+<p>Le sprint ne s'est pas du tout déroulé comme prévu, j'ai trouvé qu'il y avait très peu de plus value à réécrire des scripts non personnalisables en bash.<br>
+Cela ne correspond pas du tout au besoin des équipes de développement modernes qui veulent des outils personnalisables et faciles à utiliser.</p>
+<p>J'ai donc réorienté le fonctionnement du projet, en offrant la possibilité de customiser les services à déployer et en utilisant un fichier de configuration pour les paramétrer.</p>
+<p>Pour m'offrir plus de flexibilité, j'ai décidé d'utiliser golang pour l'intégralité du code car c'est un langage que je maîtrise bien et qui est utilisé pour la plupart des opérateurs de conteneurs &amp; kubernetes.</p>
+<h3>Sprint Réel 1</h3>
+<ul>
+<li>Rédaction d'un fichier de configuration pour l'outil entier (1h)
+<ul>
+<li>Choix des services à activer</li>
+<li>Paramétrage de chaque service</li>
+</ul>
+</li>
+<li>Code du parser &amp; validateur de fichier de configuration (5h)</li>
+<li>Code du script de déploiement par des conteneurs (1h)</li>
+<li>Fine tuning pour chaque service (3h)</li>
 </ul>
 
 
