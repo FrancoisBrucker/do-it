@@ -355,6 +355,8 @@ TBD
 TBD
 #### Fonctionnalités additionnelles
 TBD
+### Architecture générale
+TBD
 ## Bibliographie
 
 [1] **DEJOUX, Cécile.** *Gestion des compétences et GPEC*, 2ème édition, DUNOD, 2013, Les topos
