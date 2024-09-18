@@ -154,7 +154,7 @@
 </div></div>
 <h2>Initialisation :</h2>
 <h3>Installations</h3>
-<p>On commence par installer les dépendances nécessaires et par initialiser notre projet.<br>
+<p>On commence par installer les dépendances nécessaires et par initialiser notre projet.
 On commence un projet next.js, auquel on installe jest et les types typescript :</p>
 <pre class="language-sh " style="counter-reset: linenumber 0"><code class="language-sh">npx create-next-app@latest
 <span class="token function">npm</span> i <span class="token parameter variable">-D</span> jest ts-jest @types/jest
@@ -283,8 +283,8 @@ Ran all <span class="token builtin class-name">test</span> suites.
 <li>les données envoyés par la base de données</li>
 </ul>
 <p>Non seulement il est dur de tester le frontend en se détachant de ses dépendances, mais en plus cela n'a pas forcément de sens.</p>
-<p>Nous allons tout de même essayer d'implémenter un système dit de <strong>snapshot</strong> .<br>
-Les snapshot sont une &quot;photographie&quot; de votre frontend à un instant donné. En lançant un test, le code va simuler le frontend puis regarder si il y a des différences avec la snapshot.<br>
+<p>Nous allons tout de même essayer d'implémenter un système dit de <strong>snapshot</strong> .
+Les snapshot sont une &quot;photographie&quot; de votre frontend à un instant donné. En lançant un test, le code va simuler le frontend puis regarder si il y a des différences avec la snapshot.
 Cette snapshot n'est pas stocké en tant qu'image, c'est enfaîte plus ou moins le fichier html qui est récupéré puis comparé.</p>
 <p>Voici une implémentation naïve :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
@@ -302,8 +302,8 @@ Cette snapshot n'est pas stocké en tant qu'image, c'est enfaîte plus ou moins 
 </code></pre>
 <p>Ici, on récupère notre component, puis on le &quot;render&quot; et on le compare à la dernière snapshot avec 'toMatchSnapshot'. Si il n'y a pas de snapshot, jest valide le test et créer une snapshot qui sera utilisée les prochaines fois.</p>
 <p>Cette implémentation à deux problème, elle n'est pas asynchrone, et elle lance le component header tel quel. Si la fonction n'est pas asynchrone, on n'attend pas que le component se met à jour avec les données qu'il récupère avant d'enregistrer la <a href="http://snapshot.De">snapshot.De</a> plus, lancer le component est un problème car ce component appel la base de données. Si il y a un problème coté BDD, il pourrait se répercuté coté frontend et ça pourrai invalider notre snapshot alors qu'il n'y a pas de soucis coté frontend.</p>
-<p>Pour contourner ces problèmes, on utilise des fonctions asynchrones qui attendent la complétion du component et aussi, on utilise des mocks.<br>
-Les mocks sont un moyen de jest de dire au component : 'Au lieu d'utiliser ta fonction pour faire ta requête, tu vas utiliser la mienne pour les tests'.<br>
+<p>Pour contourner ces problèmes, on utilise des fonctions asynchrones qui attendent la complétion du component et aussi, on utilise des mocks.
+Les mocks sont un moyen de jest de dire au component : 'Au lieu d'utiliser ta fonction pour faire ta requête, tu vas utiliser la mienne pour les tests'.
 En pratique : on code une copie de fonction qui renvoie ce que renvoie la fonction qui appel la base de donné quand tout ce passe bien, et on appel cette fonction au lieu d’appeler l'originale.</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'../services'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">getCategories</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -362,7 +362,7 @@ exports[`Header renders correctly 1`] = `
 <p>En théorie, dans la balise d'id 'links' il devrait y avoir les valeurs 'category' de la fonction getCategories. Cependant, il n'y a rien. C'est à cause du fait que la snapshot n'attend pas la mise à jour du useEffect avant d'être sauvegardée. C'est problématique et en sit, on est sensé combiner des await et une fonction act() pour résoudre le problème mais je n'y suis pas arrivé alors je laisse ce problème à l'appréciation du lecteur.</p>
 </div></div>
 <h3>Conclusion :</h3>
-<p>Nous avons deux types de tests qui marchent avec jest.<br>
+<p>Nous avons deux types de tests qui marchent avec jest.
 Je trouve personnellement que les tests frontend sont très laborieux pour le peu de bénéfices qu'ils apportent.</p>
 
 

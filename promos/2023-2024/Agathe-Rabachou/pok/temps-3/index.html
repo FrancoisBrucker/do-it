@@ -138,7 +138,7 @@
 
 
 <h2>Introduction</h2>
-<p>Ce POK s'inscrit dans le cadre d'un loisir personnel : le basket-ball. Le but est de réaliser une interface qui permette de rentrer un maximum d'informations sur un match que l'on regarderait en temps réel, et de laquelle on pourrait récupérer la feuille de match et toutes les grilles de statistiques à l'issue de la rencontre. A terme, l'outil pourrait être utilisé dans un club amateur à des fins d'optimisation des performances. L'interface devra donc être la plus intuitive possible afin que l'utilisateur puisse suivre le rythme du match, et les documents extraits devront respecter un certain format, condenser les données pertinentes et permettre des comparaisons rapides.<br>
+<p>Ce POK s'inscrit dans le cadre d'un loisir personnel : le basket-ball. Le but est de réaliser une interface qui permette de rentrer un maximum d'informations sur un match que l'on regarderait en temps réel, et de laquelle on pourrait récupérer la feuille de match et toutes les grilles de statistiques à l'issue de la rencontre. A terme, l'outil pourrait être utilisé dans un club amateur à des fins d'optimisation des performances. L'interface devra donc être la plus intuitive possible afin que l'utilisateur puisse suivre le rythme du match, et les documents extraits devront respecter un certain format, condenser les données pertinentes et permettre des comparaisons rapides.
 Tout ce projet sera réalisé en Python, afin de revoir et de développer mes (faibles) connaissances dans ce langage.</p>
 <h2>Sprint 1</h2>
 <h3>Objectifs</h3>
@@ -161,7 +161,7 @@ Tout ce projet sera réalisé en Python, afin de revoir et de développer mes (f
 <li>Chaque faute, avec le type de faute, l'équipe et le joueur concernés ;</li>
 <li>Chaque changement, avec l'équipe concernée, le joueur entrant, le joueur sortant, et le chrono associé (cela comprend les joueurs du 5 majeur au début du match).</li>
 </ul>
-<p>Idéalement, chaque événement rentré dans l'interface doit être lié à un quart-temps (grâce au temps déjà écoulé au chronomètre). L'utilisateur doit également pour revenir en arrière en cas d'erreur, et consulter l'ensemble des événements déjà rentrés.<br>
+<p>Idéalement, chaque événement rentré dans l'interface doit être lié à un quart-temps (grâce au temps déjà écoulé au chronomètre). L'utilisateur doit également pour revenir en arrière en cas d'erreur, et consulter l'ensemble des événements déjà rentrés.
 A la fin du match, l'utilisateur doit pouvoir récupérer :</p>
 <ul>
 <li>La feuille de match remplie ;</li>
@@ -169,11 +169,11 @@ A la fin du match, l'utilisateur doit pouvoir récupérer :</p>
 <li>L'évaluation individuelle et la grille de statistique de chaque joueur ;</li>
 </ul>
 <p>Si le temps me le permet, une suite intéressante au projet pourrait être de conserver toutes les informations de chaque match dans une base de données pour pouvoir faire des comparaisons de performance des équipes et des joueurs entre les matchs ou encore des statistiques moyennes sur une saison complète. Dans ce cas, il faudrait également conserver en mémoire pour chaque match la date, le lieu (domicile ou extérieur) et l'équipe adverse.</p>
-<p>Dans un <strong>second temps</strong>, j'ai imaginé un design pour l'interface, que j'ai maquetté sur Canva. Voici le rendu de la page principale :<br>
-<img src="maquette_page_principale.png"><br>
+<p>Dans un <strong>second temps</strong>, j'ai imaginé un design pour l'interface, que j'ai maquetté sur Canva. Voici le rendu de la page principale :
+<img src="maquette_page_principale.png">
 La maquette complète avec la page d'accueil et des exemples de fonctionnement est disponible à <a href="https://www.canva.com/design/DAF9aX-qabs/2vwFKz3I0joGODFLJQR0hw/edit?utm_content=DAF9aX-qabs&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">ce lien</a>.</p>
-<p><strong>Ensuite</strong>, j'ai commencé le développement. J'ai fait quelques recherche avant de choisir Tkinter comme framework Python pour réaliser l'interface. J'ai eu un peu de mal à le prendre en main, mais je suis finalement arrivée au résultat suivant pour ma page principale :<br>
-<img src="interface_main.png"><br>
+<p><strong>Ensuite</strong>, j'ai commencé le développement. J'ai fait quelques recherche avant de choisir Tkinter comme framework Python pour réaliser l'interface. J'ai eu un peu de mal à le prendre en main, mais je suis finalement arrivée au résultat suivant pour ma page principale :
+<img src="interface_main.png">
 J'ai alors commencé le développement des fonctionnalités : pour l'instant, une liste déroulante pour choisir le joueur s'affiche lorsque l'on clic sur un événement, et une fois le joueur choisi, un couple ('événement', 'numéro du joueur') s'ajoute à la liste correspondante.</p>
 <h3>Retours</h3>
 <p>Pour conclure, l'ensemble du code réalisé est disponible sur ce <a href="https://github.com/arabachou/-r-e-markaball.git">Github</a>. Faute de temps, ce sprint n'a pas duré les 10h prévues et sera compensé par le suivant. Enfin, les difficultés rencontrées se sont principalement situées sur la prise en main et l'utilisation de Tkinter pour l'interface, que je ne connaissais pas du tout, mais qui s'avère très bien fait une fois maîtrisé.</p>
@@ -235,8 +235,8 @@ J'ai alors commencé le développement des fonctionnalités : pour l'instant, un
 <p>Le PDF généré lors de l'utilisation de l'interface est alors téléchargeable (voici d'ailleurs la <a href="feuille_de_match.pdf">version PDF</a>).</p>
 <p>Pour finir, j'ai commencé à développer les fonctions pour récupérer le reste des données d'un match (hors points et fautes) afin de créer les grilles de statistiques, mais je n'ai pas eu le temps d'aller au bout des réalisations que j'avais prévu.</p>
 <h3>Retours</h3>
-<p>Pour conclure ce sprint, j'ai largement sous-estimé le temps passé à corriger des bugs et à créer et mettre en forme un document propre et fonctionnel pour le rendu de la feuille de match. Je n'ai donc pas eu le temps de me pencher sur les autres fonctionnalités de mon backlog, et seule la partie principale, sans les statistiques et la personnalisation des équipes est utilisable.<br>
-Cependant, j'ai beaucoup appris sur les méthodes de génération de PDF à partir d'un programme ou de données quelconques.<br>
+<p>Pour conclure ce sprint, j'ai largement sous-estimé le temps passé à corriger des bugs et à créer et mettre en forme un document propre et fonctionnel pour le rendu de la feuille de match. Je n'ai donc pas eu le temps de me pencher sur les autres fonctionnalités de mon backlog, et seule la partie principale, sans les statistiques et la personnalisation des équipes est utilisable.
+Cependant, j'ai beaucoup appris sur les méthodes de génération de PDF à partir d'un programme ou de données quelconques.
 Mention honorable également à la documentation officielle de la bibliothèque <em>reportlab</em> ainsi qu'à ChatGPT (parfois utile, parfois moins...) pour les situations débloquées.</p>
 <h3>Organisation du temps</h3>
 <table>

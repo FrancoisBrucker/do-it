@@ -167,20 +167,20 @@
 <div class="pl-8  mb-2 mr-8">
 <p>Repo github</p>
 </div><div class="pl-8 mr-8">
-<p><a href="https://github.com/LucasRioual/quiz-front">Front</a><br>
+<p><a href="https://github.com/LucasRioual/quiz-front">Front</a>
 <a href="https://github.com/SamyDiafat/DoItQuizz-backend">Back</a></p>
 </div></div>
 <img src="illustration.jpg" alt="Illustration" style="width:50%;">
 <h2><strong>Objectif du POK</strong></h2>
-<p>L’objectif de ce POK est de créer un jeu de Quiz multijoueur en mode Battle Royale. Le but du jeu est d’être le dernier survivant de la partie en répondant juste à toutes les questions.<br>
+<p>L’objectif de ce POK est de créer un jeu de Quiz multijoueur en mode Battle Royale. Le but du jeu est d’être le dernier survivant de la partie en répondant juste à toutes les questions.
 Nous sommes deux pour réaliser ce POK : Lucas Rioual et   Samy Diafat.</p>
 <p>Nous avons choisi cette thématique pour créer une application web avec Spring Boot.</p>
 <h2>Cahier des charges</h2>
 <h3>Backend</h3>
 <p>J’ai demandé à Chat GPT de rédiger le cahier des charges pour le backend. Voici ce que je lui ai demandé :</p>
-<p><em>Je souhaite développer une application web de quiz en ligne multijoueur et battle royale.<br>
-Le backend sera crée avec Spring Boot.<br>
-L'objectif de cette application web est que plusieurs utilisateurs se connectent à une session. Lorsque la session est lancée par l'organisateur, chaque joueur se retrouve dans la partie avec la première réponse.  Si le joueur a bon, il reste dans la partie, sinon il est éliminé. Lorsque la partie est terminé, on a accès au classement de la partie.<br>
+<p><em>Je souhaite développer une application web de quiz en ligne multijoueur et battle royale.
+Le backend sera crée avec Spring Boot.
+L'objectif de cette application web est que plusieurs utilisateurs se connectent à une session. Lorsque la session est lancée par l'organisateur, chaque joueur se retrouve dans la partie avec la première réponse.  Si le joueur a bon, il reste dans la partie, sinon il est éliminé. Lorsque la partie est terminé, on a accès au classement de la partie.
 Rédige moi tous les endpoints à prendre en compte en expliquant le fonctionnement</em></p>
 <ol>
 <li><strong>Création d'une nouvelle session de jeu :</strong>
@@ -369,7 +369,7 @@ Rédige moi tous les endpoints à prendre en compte en expliquant le fonctionnem
 <h2>Sprint 1</h2>
 <p>Le temps estimé pour réaliser la maquette a été très largement sous-estimé (Lucas voulait faire ça à la vite mais Samy l'a rappelé à l'ordre).</p>
 <p>Le développement du back-end a pris plus de temps que prévu également.</p>
-<p>Pour le front, nous avons choisi de partir sur du React et Tailwind CSS car Lucas avait déjà utilisé ces outils.<br>
+<p>Pour le front, nous avons choisi de partir sur du React et Tailwind CSS car Lucas avait déjà utilisé ces outils.
 Le temps pour le développement des trois premières pages a été respecté . Cependant le setup du projet a mis plus de temps que prévu (comme à chaque fois). Pour l'instant, il n'y a aucune interaction entre le front et le back. On verra ça pour le deuxième sprint</p>
 <p>Voici quelques livrables issus du Sprint 1</p>
 <h3>Maquette Figma</h3>
@@ -478,7 +478,7 @@ Le temps pour le développement des trois premières pages a été respecté . C
 </tbody>
 </table>
 <h2>Sprint 2</h2>
-<p>Après avoir beaucoup travaillé durant sprint 1 (20h), il a été dur pour Samy de reprendre le projet après une longue pause. Il faut être honnête, reprendre un projet après l'avoir arrêté brusquement est bien plus compliqué que ce que je pensais.<br>
+<p>Après avoir beaucoup travaillé durant sprint 1 (20h), il a été dur pour Samy de reprendre le projet après une longue pause. Il faut être honnête, reprendre un projet après l'avoir arrêté brusquement est bien plus compliqué que ce que je pensais.
 Cependant, le back-end développé durant le premier sprint a permis à Lucas d'avoir un début d'application fonctionnel.</p>
 <h3>Déploiement avec Docker</h3>
 <p>Au début de ce sprint, Lucas a voulu se concentrer sur la conteneurisation de l'API, de la base de donnée et du front.</p>
@@ -522,11 +522,11 @@ Cependant, le back-end développé durant le premier sprint a permis à Lucas d'
 <p>Le problème était que lorsque que le conteneur était exécuté, cela afficher une erreur car les tables de la base de donnée était vide. Après beaucoup de temps passé dessus, Lucas a abandonné pour ce concentrer sur l’interaction entre l’API et React.</p>
 <h3>Connection entre Spring Boot et React avec des websockets</h3>
 <p>Cette partie était beaucoup plus longue que prévue. Pour afficher les joueurs en temps réel dans le salon, nous voulions utiliser des webSockets. Lucas avait déjà utilisé ce genre de chose pour l’application du Killer avec Node. Mais l’implémentation avec Spring Boot était plus compliqué que sur Node.js.</p>
-<p>Lucas a perdu beaucoup de temps (5h) car la version <a href="http://socket.io">socket.io</a> utilisé avec React était différente de celle utilisé par Spring Boot.<br>
+<p>Lucas a perdu beaucoup de temps (5h) car la version <a href="http://socket.io">socket.io</a> utilisé avec React était différente de celle utilisé par Spring Boot.
 Malgré cela, nous avons réussi à connecter les joueurs ensemble dans un même salon. Nous avons pas eu le temps de faire la suite du projet.</p>
 <h2>Conclusion</h2>
-<p>Le projet n'est malheureusement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.<br>
-Le frontend est tout de même disponible à cette adresse : <a href="https://quiz-front-one.vercel.app/">https://quiz-front-one.vercel.app/</a><br>
+<p>Le projet n'est malheureusement pas abouti, mais nous pensons qu'avec 10h de travail supplémentaire chacun nous aurions pu avoir une version en ligne jouable.
+Le frontend est tout de même disponible à cette adresse : <a href="https://quiz-front-one.vercel.app/">https://quiz-front-one.vercel.app/</a>
 Le site est statique car l'API n'est pas déployé.</p>
 
 

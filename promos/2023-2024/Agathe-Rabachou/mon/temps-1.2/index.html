@@ -139,18 +139,18 @@
 
 <h2>1. Introduction</h2>
 <p>La programmation orientée objet (abrégée POO) est un modèle qui a pour but de simplifier l'écriture, la lecture et la modification d'un code. Pour cela, l'idée est de segmenter et de factoriser au maximum le code en regroupant ce qui se répète dans des entités que l'on peut réutiliser et faire interagir entre elles au besoin.</p>
-<p>Dans ce MON, mon objectif est de m'approprier les notions de bases de la programmation orientée objet, et de l'utiliser sur des applications simples en Python.<br>
-Contrairement à ce que je pensais, je me suis rendu compte que j'avais très peu de restes de mes connaissances du langage Python, et j'ai donc dû passer plus de temps que prévu à revoir la syntaxe et les fonctionnalités de base. J'ai utilisé pour cela les 8 premiers chapitres du livre <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a> en ligne. Cela m'a permis de me remettre en mémoire les principaux types de données, leur écriture et les opérations possibles sur chacune d'entre elles.<br>
+<p>Dans ce MON, mon objectif est de m'approprier les notions de bases de la programmation orientée objet, et de l'utiliser sur des applications simples en Python.
+Contrairement à ce que je pensais, je me suis rendu compte que j'avais très peu de restes de mes connaissances du langage Python, et j'ai donc dû passer plus de temps que prévu à revoir la syntaxe et les fonctionnalités de base. J'ai utilisé pour cela les 8 premiers chapitres du livre <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a> en ligne. Cela m'a permis de me remettre en mémoire les principaux types de données, leur écriture et les opérations possibles sur chacune d'entre elles.
 Ensuite, j'ai suivi la première moitié du cours <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/">Programmation Objet</a> de François Brucker et j'ai aussi regardé en détail l'exemple traité dans le MON <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Bert-Nicolas/mon/poo-python/">Programmation objet en Python</a> de Nicolas Bert.</p>
 <h2>2. Principes et définitions</h2>
 <p>Lorsque l'on fait de la programmation orientée objet, on manipule des objets et des classes. Voici quelques définitions du vocabulaire courant :</p>
 <ul>
 <li>
-<p>Un <strong>objet</strong> est une structure de données précise qui prend en paramètres des valeurs appelées <strong>attributs</strong> qui lui sont propres. Sur cet objet, on peut effectuer différentes opérations que l'on nomme aussi <strong>méthodes</strong>.<br>
+<p>Un <strong>objet</strong> est une structure de données précise qui prend en paramètres des valeurs appelées <strong>attributs</strong> qui lui sont propres. Sur cet objet, on peut effectuer différentes opérations que l'on nomme aussi <strong>méthodes</strong>.
 Les chaînes de caractères, les entiers ou encore les listes sont des objets simples inclus dans le langage Python.</p>
 </li>
 <li>
-<p>Une <strong>classe</strong> est un ensemble d'objets qui possèdent la même structure de données et auxquels on peut appliquer les mêmes <strong>méthodes</strong>. Ces objets sont donc uniquement différenciés par leurs <strong>attributs</strong>. A partir d'une classe existante, on peut donc créer un <strong>objet</strong> qui a d'office une certaine structure et des opérations associées, il ne reste alors qu'à attribuer des valeurs à ses champs.<br>
+<p>Une <strong>classe</strong> est un ensemble d'objets qui possèdent la même structure de données et auxquels on peut appliquer les mêmes <strong>méthodes</strong>. Ces objets sont donc uniquement différenciés par leurs <strong>attributs</strong>. A partir d'une classe existante, on peut donc créer un <strong>objet</strong> qui a d'office une certaine structure et des opérations associées, il ne reste alors qu'à attribuer des valeurs à ses champs.
 Pour reprendre un des exemples précédents, on pourrait imaginer une classe qui contient toutes les listes d'entiers de taille 4 (ce sont bien des objets, leurs attributs sont les valeurs des éléments de la liste), et lui associer une méthode qui remplace la dernière valeur de la liste par 7.</p>
 </li>
 <li>

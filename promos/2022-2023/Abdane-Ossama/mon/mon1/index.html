@@ -133,7 +133,7 @@
 <p>N'oubliez pas d'enregistrer votre script après chaque modification</p>
 </div></div>
 <h3>Les Triggers</h3>
-<p>Pour mon MON, j'ai décidé de me focaliser sur les triggers, en français déclencheurs, j'ai trouvé leur utilisation pouvait beaucoup m'apporter dans le futur.<br>
+<p>Pour mon MON, j'ai décidé de me focaliser sur les triggers, en français déclencheurs, j'ai trouvé leur utilisation pouvait beaucoup m'apporter dans le futur.
 Les triggers permettent d'exécuter une fonction automatiquement à la suite d'un événement. Il peut s'agir de l'ouverture du fichier, la modification d'une case, après un certain délai... Je vais présenter les différents types de triggers et leur utilisation ci-dessous.</p>
 <h4>Les triggers simples</h4>
 <table>
@@ -166,8 +166,8 @@ Les triggers permettent d'exécuter une fonction automatiquement à la suite d'u
 <ul>
 <li>
 <p>onOpen() :</p>
-<p>function onOpen(){<br>
-SpreadsheetApp.getActive().getRange('A1').setValue(new Date());<br>
+<p>function onOpen(){
+SpreadsheetApp.getActive().getRange('A1').setValue(new Date());
 }</p>
 </li>
 </ul>
@@ -176,8 +176,8 @@ SpreadsheetApp.getActive().getRange('A1').setValue(new Date());<br>
 <ul>
 <li>
 <p>onSelectionChange() :</p>
-<p>function onSelectionChange(e){<br>
-console.log(e.range.getA1Notation());<br>
+<p>function onSelectionChange(e){
+console.log(e.range.getA1Notation());
 }</p>
 </li>
 </ul>
@@ -189,22 +189,22 @@ console.log(e.range.getA1Notation());<br>
 <p>function onEdit(data){</p>
 <p>if(data.range.getSheet().getName() =='Feuille 1' &amp;&amp;  data.range.getA1Notation() == 'B3'){</p>
 <p>let isValid = emailValidation(data.range.getValue());</p>
-<p>if(isValid){<br>
-data.range.setBackground('white');<br>
-}else{<br>
-data.range.setBackground('red');<br>
-}<br>
-}<br>
+<p>if(isValid){
+data.range.setBackground('white');
+}else{
+data.range.setBackground('red');
+}
+}
 }</p>
 <p>function emailValidation(email){</p>
 <p>let mailformat = /^\w+([.-]?\w+)<em>@\w+([.-]?\w+)</em>(.\w{2,3})+$/;</p>
-<p>if(email.match(mailformat)){<br>
-return true;<br>
-}else{<br>
-return false;<br>
-}<br>
+<p>if(email.match(mailformat)){
+return true;
+}else{
+return false;
+}
 }</p>
-<p>Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la syntaxe n'est pas bonne, la case se colore en rouge.<br>
+<p>Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la syntaxe n'est pas bonne, la case se colore en rouge.
 Lorsque l'e-mail est bien noté :</p>
 <p><img src="Image1.png" alt="Optional Text"></p>
 <p>Lorsque qu'il y a une erreur (il manque le &quot;.fr&quot;) :</p>
@@ -235,7 +235,7 @@ Lorsque l'e-mail est bien noté :</p>
 <h5>Exemple d'application</h5>
 <p>On va créer une fonction qui va nous envoyer un mail tout les matins pour me rappeler d'aller signer la feuille de présence :</p>
 <p>function Rappelsignature() {</p>
-<p>MailApp.sendEmail(&quot;<a href="mailto:ossama84130@gmail.com">ossama84130@gmail.com</a>&quot;,&quot;Rappel émargement&quot;,&quot;Aller à l'acceuil et signer le feuille d'émargement&quot;);<br>
+<p>MailApp.sendEmail(&quot;<a href="mailto:ossama84130@gmail.com">ossama84130@gmail.com</a>&quot;,&quot;Rappel émargement&quot;,&quot;Aller à l'acceuil et signer le feuille d'émargement&quot;);
 }</p>
 <p>Après avoir créer la fonction, on va créer le déclencheur temporel et le paramétrer :</p>
 <p><img src="Image6.png" alt="Optional Text"></p>

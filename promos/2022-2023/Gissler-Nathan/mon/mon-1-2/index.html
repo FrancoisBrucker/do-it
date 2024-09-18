@@ -150,12 +150,12 @@
 <h3>Templates</h3>
 <p>Eleventy fonctionne avec des &quot;templating engines&quot; qui permettent de modifier certaines données du site à un seul endroit même si elles sont utilisées à plusieurs endroits (par exemple le titre d'une page).</p>
 <p>Une des syntaxe qui existe avec Eleventy est la syntaxe liquid, elle est utilisée dans les fichiers HTML et Markdown. On place les données (titre de la page, noms de fichiers, etc.) en en-tête du fichier sous cette forme :</p>
-<p>---<br>
-title: Giffleball<br>
-images:<br>
-- ???.jpg<br>
-- ….jpg<br>
-- parrot.gif<br>
+<p>---
+title: Giffleball
+images:
+- ???.jpg
+- ….jpg
+- parrot.gif
 ---</p>
 <p>Ces données peuvent ensuite être utilisée au sein du fichier (ici en HTML) de cette manière :</p>
 <p><img src="utilisation_titre.png" alt="Utilisation du titre"></p>
@@ -166,11 +166,11 @@ images:<br>
 <p>Remarque : attention quand on parle d'Eleventy sur un site qui fonctionne avec Eleventy, les textes entre doules accolades sont remplacés même si on les met entre `` ou dans un bloc de code (je n'ai pas trouvé d'autre moyen que de mettre des images).</p>
 <h3>Filtres</h3>
 <p>Les filtres peuvent servir à différentes choses, ils peuvent se créer de cette manière, dans un fichier <code>.eleventy.js</code> :</p>
-<p>module.exports = (function(eleventyConfig) {<br>
-eleventyConfig.addFilter(&quot;nom_du_filtre&quot;, function(argument) {<br>
-/* code */<br>
-return &quot;valeur retournée&quot;;<br>
-});<br>
+<p>module.exports = (function(eleventyConfig) {
+eleventyConfig.addFilter(&quot;nom_du_filtre&quot;, function(argument) {
+/* code */
+return &quot;valeur retournée&quot;;
+});
 });</p>
 <p>Ils s'utilisent ensuite dans un fichier HTML comme ceci :</p>
 <p><img src="utilisation_filtre.png" alt="Utilisation d'un filtre"></p>
@@ -181,16 +181,16 @@ return &quot;valeur retournée&quot;;<br>
 <p>Et le contenu de la page par :</p>
 <p><img src="content.png" alt="Content"></p>
 <p>Ces informations seront ensuite renseignées dans un fichier Markdown situé dans <code>/src</code> : <code>/src/index.md</code>.</p>
-<p>---<br>
-layout: nom_du_layout.njk<br>
-title: Titre de la page<br>
+<p>---
+layout: nom_du_layout.njk
+title: Titre de la page
 ---</p>
 <p>Contenu de la page</p>
 <p>Ce fichier correspond à une page de notre site qui utilise le layout nom_du_layout.njk. Lors de la génération du site, les informations comme le titre ou le contenu seront placés dans le code HTML du fichier Nunjucks pour créer un fichier HTML classique. La force des layouts est bien entendu qu'ils peuvent être utilisés pour de nombreuses pages, telles que des posts de blog, qui se présenteront sous la même forme et pourront être créées très simplement dans un fichier Markdown.</p>
 <p>On peut également appliquer un layout à toutes les pages d'un dossier en leur appliquant un tag avec ce type de fichier JSON :</p>
-<p>{<br>
-&quot;layout&quot;: &quot;base.njk&quot;,<br>
-&quot;tags&quot;: &quot;articles&quot;<br>
+<p>{
+&quot;layout&quot;: &quot;base.njk&quot;,
+&quot;tags&quot;: &quot;articles&quot;
 }</p>
 <h3>Paginations</h3>
 <p>Les paginations servent à créer plusieurs page en itérant sur des données (qui peuvent être de plusieurs types).</p>
@@ -210,21 +210,21 @@ title: Titre de la page<br>
 <p>On remarque que l'on peut choisir le lien auquel on trouvera les pages générées.</p>
 <h2>4. Création d'un site</h2>
 <p>On peut commencer par saisir ces commandes dans le dossier du projet :</p>
-<p>npm init -y<br>
+<p>npm init -y
 npm i --save-dev @11ty/eleventy</p>
 <p>Puis placer les lignes suivantes dans le <code>&quot;scripts&quot;</code> du <code>package.json</code> :</p>
-<p>&quot;scripts&quot;: {<br>
-&quot;start&quot;: &quot;eleventy --serve&quot;,<br>
-&quot;build&quot;: &quot;eleventy&quot;<br>
+<p>&quot;scripts&quot;: {
+&quot;start&quot;: &quot;eleventy --serve&quot;,
+&quot;build&quot;: &quot;eleventy&quot;
 }</p>
 <p>On crée le .eleventy.js avec le code suivant :</p>
-<p>module.exports = function(eleventyConfig) {<br>
-return {<br>
-dir: {<br>
-input: &quot;src&quot;,<br>
-output: &quot;public&quot;<br>
-}<br>
-};<br>
+<p>module.exports = function(eleventyConfig) {
+return {
+dir: {
+input: &quot;src&quot;,
+output: &quot;public&quot;
+}
+};
 };</p>
 <p>On crée le <code>src/_includes</code> qui va contenir les fichiers Nunjucks de templates.</p>
 <p>On crée notre <code>index.md</code>, puis un fichier CSS qu'on lie au fichier Nunjucks (comme à un fichier HTML classique).</p>

@@ -156,7 +156,7 @@
 <li><strong>ignorer l'erreur</strong> et l'utilisateur peut accéder à sa page : problématique car on ne peut plus savoir d'où il vient</li>
 <li><strong>renvoyer un message</strong> au serveur à une fréquence <em>f</em> jusqu'à ce que le serveur remarche à nouveau.</li>
 </ul>
-<p>Cette dernière solution permet de ne <strong>pas perdre l'information</strong> que l'on souhaite collecter sur l'utilisateur tout en lui permettant d'<strong>accéder à notre site</strong>.<br>
+<p>Cette dernière solution permet de ne <strong>pas perdre l'information</strong> que l'on souhaite collecter sur l'utilisateur tout en lui permettant d'<strong>accéder à notre site</strong>.
 Cependant, si les appels au serveur externes sont faits avant que la page s'affiche (donc de manière <strong>asynchrone</strong>), le <strong>temps d'attente</strong> pour le client peut être <strong>très long</strong>. Une solution est donc d'effectuer ces calculs de manière <strong>asynchrone</strong>.</p>
 <p><img src="../image/Sch%C3%A9ma6.1.png" alt="Schéma de l'asynchronicité" title="Schéma explicatif asynchronicité"></p>
 <p><em>Source : Openclassrooms</em></p>
@@ -207,24 +207,24 @@ Cependant, si les appels au serveur externes sont faits avant que la page s'affi
 </code></pre>
 <p>De la même manière, on peut ajouter des serveurs Zookeeper pour qu'ils fonctionnent en parallèle.</p>
 <h3>Projet</h3>
-<p>Par la suite, j'ai réalisé un mini-projet avec Storm. Le but est de savoir grâce à l'API précédemment utilisé quand une borne de vélo devient vide ou n'est plus vide.<br>
+<p>Par la suite, j'ai réalisé un mini-projet avec Storm. Le but est de savoir grâce à l'API précédemment utilisé quand une borne de vélo devient vide ou n'est plus vide.
 Le code que j'ai réalisé est disponible sur <a href="https://github.com/ThomasP04/MON6-Kafka">ce github</a>.</p>
 <h2>Apache Storm</h2>
-<p>On a vu à la partie précédente que Kafka permettait de faire la distribution des messages. Storm permet lui de les <strong>traiter</strong>.<br>
+<p>On a vu à la partie précédente que Kafka permettait de faire la distribution des messages. Storm permet lui de les <strong>traiter</strong>.
 Un site peut par exemple transmettre des logs sur ses visites (date et heure, url de la page visitée, ...). Tout ceci peut permettre de tirer beaucoup d'informations utiles (nombre de visite de chaque page, ...). Mais, ceci nécessite un travail préalable : décomposition de chaque ligne pour en <strong>extraire les données</strong> et <strong>transmission</strong> de ces données pour effectuer les calculs. A grande échelle, cela nécessite une <strong>architecture distribuée</strong> afin d'être résistant aux pannes.</p>
 <h3>Présentation</h3>
 <p>Storm possède une architecture comme suit :</p>
 <p><img src="../image/Sch%C3%A9ma6.3.png" alt="Schéma de Storm" title="Schéma explicatif Storm"></p>
 <p><em>Source : Openclassrooms</em></p>
-<p>Les messages ou <strong>tuples</strong> sont <strong>créés</strong> par des composants appelés <em>spouts</em>, qui sont configurés pour <strong>lire les données</strong>.<br>
-Une fois les tuples créés, ils sont envoyés à différents <em>bolts</em> pour être traités. Les <em>bolts</em> sont les composants de traitement de Storm, qui effectuent des <strong>opérations sur les tuples</strong> tels que des filtrages, des agrégations, des jointures, etc. Ils peuvent être configurés pour exécuter des tâches spécifiques en parallèle, afin de permettre le traitement de flux de données massifs.<br>
-Un même message peut être envoyé à plusieurs <em>bolts</em>. Cela permet à Storm d'être tolérant aux pannes (en cas de défaillance d'un <em>bolt</em> ou d'un nœud du cluster, le traitement des messages peut continuer sans interruption).<br>
-De plus, les <em>bolts</em> peuvent également émettre de nouveaux messages vers d'autres <em>bolts</em> pour effectuer des traitements supplémentaires sur les données.<br>
+<p>Les messages ou <strong>tuples</strong> sont <strong>créés</strong> par des composants appelés <em>spouts</em>, qui sont configurés pour <strong>lire les données</strong>.
+Une fois les tuples créés, ils sont envoyés à différents <em>bolts</em> pour être traités. Les <em>bolts</em> sont les composants de traitement de Storm, qui effectuent des <strong>opérations sur les tuples</strong> tels que des filtrages, des agrégations, des jointures, etc. Ils peuvent être configurés pour exécuter des tâches spécifiques en parallèle, afin de permettre le traitement de flux de données massifs.
+Un même message peut être envoyé à plusieurs <em>bolts</em>. Cela permet à Storm d'être tolérant aux pannes (en cas de défaillance d'un <em>bolt</em> ou d'un nœud du cluster, le traitement des messages peut continuer sans interruption).
+De plus, les <em>bolts</em> peuvent également émettre de nouveaux messages vers d'autres <em>bolts</em> pour effectuer des traitements supplémentaires sur les données.
 Tout ce processus peut être <strong>distribué</strong> sur différentes machines.</p>
 <h3>Conclusion</h3>
 <p>Le tutoriel d'Openclassroom permet de bien comprendre la théorie derrière la gestion de données en temps réel. Chaque point est bien détaillé et des exemples sont données. De plus, l'introduction de Kafka et Storm permet de tester et de voir ce qu'on peut réaliser en pratique.</p>
 <h2>Liens</h2>
-<p><a href="https://kafka.apache.org/documentation/">Documentation de Kafka</a><br>
+<p><a href="https://kafka.apache.org/documentation/">Documentation de Kafka</a>
 <a href="https://storm.apache.org/">Documentation de Storm</a></p>
 
 

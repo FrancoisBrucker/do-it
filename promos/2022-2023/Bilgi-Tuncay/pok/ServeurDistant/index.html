@@ -148,7 +148,7 @@
 <p>Dans le second sprint, on utilise des scripts bash qui nécessite une compréhension du shell assez complète.</p>
 </div></div>
 <h1>Déploiement sur un site distant.</h1>
-<p>Le but du POK est d'appréhender le déploiement de projets sur un serveur.<br>
+<p>Le but du POK est d'appréhender le déploiement de projets sur un serveur.
 Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Artblog, qui est un blog en Javascript, plus précisément, il utilise Next.js et la base de données est hébergée par un service cloud.</p>
 <h3>Remarque :</h3>
 <p>Mon back étant hébergé sur un HeadlessCMS il n'y a pas besoin de déployer la BDD, je vais donc potentiellement créer un mini projet qui contient une BDD classique juste pour me frotter au déploiement complet d'une application.</p>
@@ -175,15 +175,15 @@ Ici, je vais spécifiquement déployer le site développé pendant le POK1 : Art
 <h1>Premier sprint:</h1>
 <h2>Premiers pas</h2>
 <p>Le serveur est organisée de la même manière pour chaque compte. Mon compte est curcuma donc je prend cela pour exemple et je me concentre sur la partie node puisque le projet que je veut mettre en place est basé sur node.js :</p>
-<p>_ Home<br>
-|_Curcuma<br>
-|_Django<br>
-|_Flask<br>
-|_java<br>
-|_node<br>
-|<em>example.js<br>
+<p>_ Home
+|_Curcuma
+|_Django
+|_Flask
+|_java
+|_node
+|<em>example.js
 |</em> readme.txt</p>
-<p>Le <strong>readme</strong> contient les addresses à questionner selon le port que l'on veut atteindre.<br>
+<p>Le <strong>readme</strong> contient les addresses à questionner selon le port que l'on veut atteindre.
 Dans notre cas, on vois dans le fichier <code>example.js</code> que l'on utilise le port 10438 et que pour communiquer à travers ce port, on doit envoyer nos requêtes à <code>node.curcuma.ovh1.ec-m.fr</code>.</p>
 <p>Avec la commande <code>node example.js</code> on lance le programme et on met donc en place notre serveur. Sur un navigateur, <a href="http://node.curcuma.ovh1.ec-m.fr">node.curcuma.ovh1.ec-m.fr</a> nous renvoie <code>Hello World</code>.</p>
 <h2>Mise en production du Artblog :</h2>
@@ -208,8 +208,8 @@ Dans notre cas, on vois dans le fichier <code>example.js</code> que l'on utilise
 <p>scp ./.env <a href="mailto:curcuma@ovh1.ec-m.fr">curcuma@ovh1.ec-m.fr</a>/node</p>
 <h3>Test de la mise en production sur mon ordinateur :</h3>
 <p>Avec Next.js, certaines commandes servent à la mise en production :</p>
-<p>npm run dev // Lance le projet en mode développement en local<br>
-npm run build // build le projet<br>
+<p>npm run dev // Lance le projet en mode développement en local
+npm run build // build le projet
 npm run start -p PORT //lance le serveur de production sur le port indiqué</p>
 <p>On lance le build, après un certain temps il semble que tout marche, on peut alors essayer de lancer l'application sur un port différent que le port par défaut (3000) car on aura besoin de le faire sur ovh1.</p>
 <h3>Changement de port :</h3>
@@ -218,7 +218,7 @@ npm run start -p PORT //lance le serveur de production sur le port indiqué</p>
 <p>Ce qui devrait lancer l'application sur le port 8080.</p>
 <p>Pour lancer sur un autre port, on va d'abord vérifier qu'il est libre. Par exemple, on active le port 3000 avec <code>npm run start</code> et en lançant cette commande dans le Powershell : <code>Get-NetTCPConnection | where Localport -eq 3000 | select Localport,OwningProcess</code>, on voit qu'un processus écoute le port 3000. Si le port n'est pas écouté, rien ne s'affiche.</p>
 <p>On vérifie que le port 8080 est libre puis on lance l'application sur ce port.</p>
-<p>npm run start<br>
+<p>npm run start
 Get-NetTCPConnection | where Localport -eq 8080 | select Localport,OwningProcess</p>
 <p>La dernière commande renvoie :</p>
 <p>Localport OwningProcess</p>
@@ -226,7 +226,7 @@ Get-NetTCPConnection | where Localport -eq 8080 | select Localport,OwningProcess
 <p>8080         17516</p>
 <p>C'est prometteur. On passe sur le port 10438 qui sera utilisé sur ovh1.</p>
 <h3>Faire du git proprement:</h3>
-<p>Comme précisé précédemment, on a copié l’entièreté du repo dans le serveur de production. On oublie et on refait.<br>
+<p>Comme précisé précédemment, on a copié l’entièreté du repo dans le serveur de production. On oublie et on refait.
 On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne manière de le faire et je n'ai pas regardé. Ici, je supprime le dossier et tout ce qu'il y avait dedans, ce qui peut être dangereux.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -235,22 +235,22 @@ On commence par supprimer l'ancien dossier. Je ne sais pas si il y a une bonne m
 <div class="pl-8 mr-8">
 <p>Si vous aviez des fichiers importants, tout va sauter, vérifiez 2 fois avant de lancer des commandes qui commencent par rm -r</p>
 </div></div>
-<p>// Dans ovh1 [...]/node<br>
+<p>// Dans ovh1 [...]/node
 rm -r artblog/</p>
 <p>Ensuite, on pull proprement le projet :</p>
-<p>git init<br>
-git remote add origin <a href="https://github.com/TuncayBilgi/artblog.git">https://github.com/TuncayBilgi/artblog.git</a><br>
+<p>git init
+git remote add origin <a href="https://github.com/TuncayBilgi/artblog.git">https://github.com/TuncayBilgi/artblog.git</a>
 git pull origin main</p>
-<p>Ici, seul la branche main est clonée sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.<br>
+<p>Ici, seul la branche main est clonée sur le serveur. Il suffit de replacer le fichier .env et on peut potentiellement tester le site.
 Pou mettre le repo à jour sur le serveur il suffit de :</p>
-<p>git fetch origin main<br>
-git reset --hard origin/main<br>
+<p>git fetch origin main
+git reset --hard origin/main
 git clean -fdx // attention cela surprime tous les fichiers non présent dans la branche, notamment le fichier .env si il existe, cette        commande est optionnelle</p>
 <p>Ou plus simplement :</p>
 <p>git pull origin master</p>
 <h3>Letsgo on test enfin :</h3>
 <p>Tous les préparatifs sont faits, il ne reste qu'à build l'application sur le serveur, puis la lancer :</p>
-<p>npm run build<br>
+<p>npm run build
 npm run start</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -264,32 +264,32 @@ npm run start</p>
 <h3>Lancer l'application de façon permanente :</h3>
 <p>En effet, exit le terminal tue tous les processus sur ovh1 qui ont été lancés depuis notre propre terminale. Ce n'est pas ce qu'on veut car ça signifie qu'on ne peut pas éteindre notre ordinateur sans que ça coupe l'application.</p>
 <p>Il faut donc créer un terminale sur le serveur ovh1 qui ne s'éteigne pas quand on éteint celui de notre ordinateur. Sous les conseils de M.Brucker, on utilise simplement la commande screen qui permet de lancer des terminaux et des processus en tâche de fond.</p>
-<p>screen -S artblog // Nous emmène dans un nouveau terminale.<br>
-npm run start<br>
+<p>screen -S artblog // Nous emmène dans un nouveau terminale.
+npm run start
 // on tape Ctrl-A + D pour quitter le terminale</p>
 <p>Et voila l'application tourne de façon permanente sur ovh1.</p>
 <h2>Bilan premier sprint :</h2>
-<p>J'ai réalisé le travail que j'avais prévu de faire car j'ai eu la chance de ne rencontrer aucun problème.<br>
+<p>J'ai réalisé le travail que j'avais prévu de faire car j'ai eu la chance de ne rencontrer aucun problème.
 J'ai cependant été un peu léger sur la correction de bugs du site mais ça n'était pas la priorité et j'ai amplement le temps durant le second sprint.</p>
 <h3>Pour le second sprint :</h3>
 <p>Je compte mettre de vrais articles sur le artblog pour que le site soit intéressant à visiter. De plus, je vais tenter de mettre en place une automatisation CI/CD qui permet de pull la dernière version stable sur ovh1 puis de build automatiquement.</p>
 <h1>Second Sprint :</h1>
-<p>On va se faciliter la vie en écrivant un script qui va mettre à jour, sur ovh1, le site, en allant chercher la dernière version de artblog et en l'activant, ensuite on pourra lancer ce script depuis un pc distant via ssh.<br>
+<p>On va se faciliter la vie en écrivant un script qui va mettre à jour, sur ovh1, le site, en allant chercher la dernière version de artblog et en l'activant, ensuite on pourra lancer ce script depuis un pc distant via ssh.
 Dans cette partie, on utilise git en ligne de commande.</p>
 <h2>Git CLI :</h2>
 <p>On commence par mettre à jour notre projet :</p>
-<p>git add . // on ajoute les changements au commit<br>
-git commit // on commit les changements<br>
-git push // on les envoies à l'origine<br>
-git checkout main // on va sur la branche main<br>
+<p>git add . // on ajoute les changements au commit
+git commit // on commit les changements
+git push // on les envoies à l'origine
+git checkout main // on va sur la branche main
 git merge dev  // on y fusionne la banche dev</p>
 <h2>Création du script :</h2>
 <p>La première version sera toute basique, on y inclut ces quelques commandes pour tester :</p>
 <p>#!/bin/sh</p>
 <p>cd /home/curcuma/node/artblog</p>
-<p>git pull origin main<br>
-npm install<br>
-npm run build<br>
+<p>git pull origin main
+npm install
+npm run build
 npm run start</p>
 <p>echo &quot;Prod successfully started&quot;</p>
 <p>A ce stade, le script va chercher la dernière version du artblog sur github, installe les dépendances du projet, le build et lance le serveur sur mon port.</p>
@@ -308,7 +308,7 @@ npm run start</p>
 <p>Cette commande doit être lancée à chaque modifications.</p>
 <h2>On essaie maintenant d'executer le script via ssh :</h2>
 <p>ssh nom_d_utilisateur@nom_du_serveur &quot;bash /chemin/distant/publish.sh&quot;</p>
-<p>On a un echo : prod succelfully started, ça s'annonce bien. Quelques erreurs de script plus tard, j'ai une version qui fait ce que je demande.<br>
+<p>On a un echo : prod succelfully started, ça s'annonce bien. Quelques erreurs de script plus tard, j'ai une version qui fait ce que je demande.
 On essaie maintenant d'améliorer le système point par point.</p>
 <h2>Creation d'un script pour lancer le script :</h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -318,10 +318,10 @@ On essaie maintenant d'améliorer le système point par point.</p>
 <div class="pl-8 mr-8">
 <p>A ce stade, je ne pense pas que ça soit une bonne idée d'essayer de tout lancer sans voir ce qu'il se passe</p>
 </div></div>
-<p>Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.<br>
+<p>Pas forcément utile mais un tout petit script permettrais de mettre à jour le script serveur puis de le lancer dans la foulée.
 Je ne le fais pas car je préfère voir si il y a des erreurs, mais il ressemblerait tout simplement à cela :</p>
 <p>Prepare_prod :</p>
-<p>scp <a href="http://publish.sh">publish.sh</a> [...]<br>
+<p>scp <a href="http://publish.sh">publish.sh</a> [...]
 ssh [...] /publish.sh</p>
 <h2>Détachement du server dans un terminal en daemon :</h2>
 <p>on modifie le script :</p>
@@ -337,7 +337,7 @@ ssh [...] /publish.sh</p>
 <h3>Debug mode :</h3>
 <p>On essaie de trouver le problème, pour commencer, le serveur est bien disponible sur node.curcuma.ovh1, ce qui veut dire que le screen à bien fonctionné.</p>
 <p>On trouve le processus qui écoute sur mon port 10438 avec :</p>
-<p>ps -ef | grep artblog | awk '{print $2}'<br>
+<p>ps -ef | grep artblog | awk '{print $2}'
 // cette commande liste les processus, ne garde que ceux qui s’appellent artblog et print l'id du process. on reçoit 304108</p>
 <p>On kill le processus:</p>
 <p>kill 34108</p>
@@ -419,7 +419,7 @@ ssh [...] /publish.sh</p>
 <span class="token builtin class-name">echo</span> <span class="token string">"Script ended"</span>
 
 </code></pre>
-<p>Mais à cause de je ne sais quoi le screen ne marche pas a travers ssh.<br>
+<p>Mais à cause de je ne sais quoi le screen ne marche pas a travers ssh.
 On essaie la même chose en utilisant tmux au lieu de screen.</p>
 <p>On remplace les lignes liées a screen part</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">tmux kill-session <span class="token parameter variable">-t</span> artblogDeamon
@@ -486,15 +486,15 @@ tmux new-session <span class="token parameter variable">-d</span> <span class="t
 </ul>
 <p>On peut maintenant 'wrapper' toutes nos fonctions avec cette Error_Handler pour que toutes les commandes me donnent des logs en cas d'erreur.</p>
 <h3>Problème de wrap :</h3>
-<p>La commande du tmux agit mal quand elle est placée dans Error_Handler. Je suspecte que ça à un lien avec le fait qu'il y ait 3 fonctions imbriqués.<br>
+<p>La commande du tmux agit mal quand elle est placée dans Error_Handler. Je suspecte que ça à un lien avec le fait qu'il y ait 3 fonctions imbriqués.
 Je recopie juste la fonction Error_handler directement autour du tmux. Cela à l'avantage de marcher, mais l'inconvénient de baisser la qualitée de mon code. En effet il y a de la recopie et si je veux modifier le nom du fichier de logs par exemple, je dois le faire 2 fois maintenant.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Avec ce genre de fonction, et surtout en bash, il faut faire attention.<br>
-$command désigne la variable alors que $($command) l’exécute. La syntax est crucial, surtout dans ce genre de script ou il est crucial de ne lancer la commande qu'une fois, et non pas plusieurs.<br>
+<p>Avec ce genre de fonction, et surtout en bash, il faut faire attention.
+$command désigne la variable alors que $($command) l’exécute. La syntax est crucial, surtout dans ce genre de script ou il est crucial de ne lancer la commande qu'une fois, et non pas plusieurs.
 Ici, le script lance la commande une unique fois, c'est ce qu'on veut.</p>
 </div></div>
 <p>De plus, on conditionne le tmux-kill pour qu'il ne se lance que si il n'y a pas de session artblog déjà présente. Cela permet de ne lancer la commande que si nécessaire puis ça permet d'éviter d'ajouter des logs inutiles dans error.log à chaque fois que la fonction est exécutée.</p>
@@ -575,7 +575,7 @@ Ici, le script lance la commande une unique fois, c'est ce qu'on veut.</p>
 <p>Pour aller plus loin, on peut automatiser le lancement de se script, suivant certaines conditions, avec Jenkins par exemple, comme dans <a href="../../../../mon/TBi/MON/Jenkins">ce MON</a></p>
 </div></div>
 <h2>Bilan second sprint :</h2>
-<p>Je suis partie dans une direction différente que prévu. Dans une démarche DevOps, la mise en production est un 'non événement', c'est à dire qu'il doit se faire facilement, rapidement, et aussi souvent que nécessaire. Grâce à ce petit script, on se rapproche de cette démarche.<br>
+<p>Je suis partie dans une direction différente que prévu. Dans une démarche DevOps, la mise en production est un 'non événement', c'est à dire qu'il doit se faire facilement, rapidement, et aussi souvent que nécessaire. Grâce à ce petit script, on se rapproche de cette démarche.
 Je n'ai cependant pas eu le temps de remplir mon site de vrai articles.</p>
 
 

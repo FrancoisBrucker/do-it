@@ -246,7 +246,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Pour une base de donnée Oracle, Microsoft ou PostgreSQL, les commentaires sont fait par <strong>--</strong><br>
+<p>Pour une base de donnée Oracle, Microsoft ou PostgreSQL, les commentaires sont fait par <strong>--</strong>
 Pour une base de donnée qui utilise MySQL, les commentaires sont fait par <strong>#</strong> qui vaut <strong>%23</strong> en hexadécimal</p>
 </div></div>
 <p>Donc si on termine le <em>username</em> envoyé dans la requête par un comentaire, il n'y aura pas de vérificaton du <em>password</em>.</p>
@@ -266,8 +266,8 @@ Pour une base de donnée qui utilise MySQL, les commentaires sont fait par <stro
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Le caractère <strong>%27</strong> correspond au symbole <strong>'</strong> de fermeture de chaine de caractère, il permet de dire que le nom d'utilisateur est fini.<br>
-Pourquoi on utilise ça plutôt que <strong>'</strong> ?<br>
+<p>Le caractère <strong>%27</strong> correspond au symbole <strong>'</strong> de fermeture de chaine de caractère, il permet de dire que le nom d'utilisateur est fini.
+Pourquoi on utilise ça plutôt que <strong>'</strong> ?
 Le serveur va rajouter un caractère d'échappement devant les caractères qu'il utilise notamment <strong>'</strong>, mais pas devant sa forme hexadécimale <strong>%27</strong></p>
 </div></div>
 <h4 id="h4-1-4"> Interprétation de la requête par le serveur </h4>
@@ -282,7 +282,7 @@ Le serveur va rajouter un caractère d'échappement devant les caractères qu'il
 </div></div>
 <h3 id="h4-2"> UNION Attack </h3>
 <p>C'est sympa de pouvoir se connecter à la place de l'administrateur, mais si l'administrateur ne s'appelle pas <strong>administrateur</strong>, comment est ce qu'on peut faire pour quand même se connecter ?</p>
-<p>Jusque là, on était limité par le fait de devoir faire des recherches dans la table par défaut de la requête : il est impossible de modifier la requête avant un <strong>WHERE</strong> qui se situe forcément après le <strong>FROM</strong>.<br>
+<p>Jusque là, on était limité par le fait de devoir faire des recherches dans la table par défaut de la requête : il est impossible de modifier la requête avant un <strong>WHERE</strong> qui se situe forcément après le <strong>FROM</strong>.
 <em>On veut pouvoir effectuer nos propre requêtes dans d'autres table.</em></p>
 <p>Pour cela on va utiliser le mot clé SQL <strong>UNION</strong> qui va réaliser la concaténation de 2 recherches dans la base de donnée : celle par défaut et celle injectée.</p>
 <h4 id="h4-2-1"> Spécificités d'une UNION </h4>
@@ -295,11 +295,11 @@ Le serveur va rajouter un caractère d'échappement devant les caractères qu'il
 <div class="pl-8 mr-8">
 <ul>
 <li>
-<p>Il doit avoir autant de valeurs de retour des 2 recherches :<br>
+<p>Il doit avoir autant de valeurs de retour des 2 recherches :
 ex : si la recherche par défaut envoie 2 informations (un nom et prénom d'utilisateur par exemple), la 2e recherche devra envoyer exactement 2 informations</p>
 </li>
 <li>
-<p>Les valeurs de retour doivent être de même type :<br>
+<p>Les valeurs de retour doivent être de même type :
 ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envoyer exactement 2 chaines de caractères</p>
 </li>
 </ul>
@@ -337,7 +337,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> CONCAT<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token string">'/'</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> users
 </code></pre>
 <h4 id="h4-2-5"> Versions </h4>
-<p>Il peut être interressant de connaitre la version de la base de donnée pour effectuer des attaques ciblées sur la version.<br>
+<p>Il peut être interressant de connaitre la version de la base de donnée pour effectuer des attaques ciblées sur la version.
 Les requêtes dépendent de la base de donnée :</p>
 <ul>
 <li><em>Oracle</em> : <strong>SELECT banner FROM v$version</strong></li>
@@ -398,7 +398,7 @@ ResultSet resultSet <span class="token operator">=</span> statement<span class="
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Attention</strong> aux ORM</p>
 </div><div class="pl-8 mr-8">
-<p>Un ORM est un outils permettant de faciliter la communication entre le serveur et la base de donnée.<br>
+<p>Un ORM est un outils permettant de faciliter la communication entre le serveur et la base de donnée.
 Un ORM n'est pas forcément une protexion contre les injections de SQL.</p>
 </div></div>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">

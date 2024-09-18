@@ -159,9 +159,9 @@
 <li><a href="#ressources">Ressources</a></li>
 </ul>
 <h2>Installation de Go sur son ordinateur <a id="#installation-de-go-sur-son-ordinateur-"></a></h2>
-<p>Pour installer Go sur son ordinateur, on télécharge le <a href="https://go.dev/dl/">fichier d'installation de Go</a> selon son système d'exploitation.<br>
+<p>Pour installer Go sur son ordinateur, on télécharge le <a href="https://go.dev/dl/">fichier d'installation de Go</a> selon son système d'exploitation.
 Si on n'a pas d'IDE, on télécharge VSCode et on installe l'extension Go pour VScode.</p>
-<p>Pour faire notre première utilisation de Go, on va faire un affichage classique de <code>Hello world !</code> sur notre terminal !<br>
+<p>Pour faire notre première utilisation de Go, on va faire un affichage classique de <code>Hello world !</code> sur notre terminal !
 On crée un fichier <em>main.go</em> dans lequel on écrit :</p>
 <pre><code>package main
 
@@ -196,11 +196,11 @@ go build
 └── go.sum
 └── main.go
 </code></pre>
-<p>Dans le dossier /cmd, il y aura tous les fichiers relatifs aux commandes que l'on souhaite créer.<br>
+<p>Dans le dossier /cmd, il y aura tous les fichiers relatifs aux commandes que l'on souhaite créer.
 Pour créer une nouvelle commande au nom new-cmd, on lance</p>
 <pre><code>cobra-cli add new-cmd
 </code></pre>
-<p>Et sur notre terminal doit s'afficher &quot;new-cmd created at chemin\du\projet&quot;.<br>
+<p>Et sur notre terminal doit s'afficher &quot;new-cmd created at chemin\du\projet&quot;.
 Pour appeler cette commande, on lance sur le terminal à l'emplacement du projet :</p>
 <pre><code>.\name-project.exe new-cmd
 </code></pre>
@@ -208,10 +208,10 @@ Pour appeler cette commande, on lance sur le terminal à l'emplacement du projet
 <p>Pour pouvoir customiser nos commandes, il est mieux de faire un tour des bases du langage Go avant de se lancer.</p>
 <h2>Notions basiques du langage Go <a id="#notions-basiques-du-langage-go"></a></h2>
 <h3>Les variables <a id="#les-variables-"></a></h3>
-<p>Pour déclarer une variable en Go, on utilise <code>var</code>. Les types de variables sont les booléens <code>bool</code>, les entiers <code>int</code>, les <code>bytes</code> (qui sont des uint8), les <code>runes</code> (qui sont des int32 et qui représentent les caractères), les <code>strings</code> qui sont des slices de bytes qu'on peut uniquement lire, les flottants <code>float</code> et les complexes.<br>
+<p>Pour déclarer une variable en Go, on utilise <code>var</code>. Les types de variables sont les booléens <code>bool</code>, les entiers <code>int</code>, les <code>bytes</code> (qui sont des uint8), les <code>runes</code> (qui sont des int32 et qui représentent les caractères), les <code>strings</code> qui sont des slices de bytes qu'on peut uniquement lire, les flottants <code>float</code> et les complexes.
 On peut utiliser la syntaxe <code>:=</code> pour déclarer et initier une variable.</p>
 <h3>Arrays ou slices <a id="#arrays-ou-slices"></a></h3>
-<p>Un <code>array</code> est de longueur fixe, avec un seul type et qu'on parcourt avec les indexs. <code>[n]T</code> est un array de n valeurs de type T mais en Go on utilise plus souvent une structure de données qui s'appelle &quot;slice&quot;.<br>
+<p>Un <code>array</code> est de longueur fixe, avec un seul type et qu'on parcourt avec les indexs. <code>[n]T</code> est un array de n valeurs de type T mais en Go on utilise plus souvent une structure de données qui s'appelle &quot;slice&quot;.
 Un slice est une version avec longueur variable d'un array. On peut les initier seulement avec leur type, par exemple <code>[]string</code> est une slice vide de longueur 0 de chaîne de caractères. On utilise la fonction make pour initier une slice vide de longueur non-nulle. <code>c:=make([]int, 3, capacity)</code> est une slice d'entiers de longueur 3. La capacity est la capacité d'int que pourrait contenir c, cela augmente les performances de mémoire.</p>
 <h3>Les déclarations <a id="#les-declarations"></a></h3>
 <p>En Go, il y a seulement un opérateur boucle : la boucle <em><code>for</code></em>, qui a la syntaxe suivante :</p>
@@ -219,7 +219,7 @@ Un slice est une version avec longueur variable d'un array. On peut les initier 
   sum += i
 }
 </code></pre>
-<p>Remarque : il n'y a pas de parenthèses après le for contrairement au C, JavaScript ou Java.<br>
+<p>Remarque : il n'y a pas de parenthèses après le for contrairement au C, JavaScript ou Java.
 Les déclarations <em><code>if</code></em> et <em><code>else</code></em> ont la syntaxe suivante :</p>
 <pre><code>if 7%2 == 0 {
     fmt.Println(&quot;7 est pair&quot;)
@@ -232,7 +232,7 @@ Les déclarations <em><code>if</code></em> et <em><code>else</code></em> ont la 
 <p>Go a des pointeurs comme en C++, C... Ils stockent l'adresse mémoire d'une valeur mais peuvent aussi être nuls (nil). On les initie comme ceci, avec une astérisque :</p>
 <pre><code>var p *int32 = new(int32)
 </code></pre>
-<p><code>*p</code> déréférence le pointeur et est la valeur vers laquelle le pointeur pointe.<br>
+<p><code>*p</code> déréférence le pointeur et est la valeur vers laquelle le pointeur pointe.
 <code>&amp;v</code> est l'adresse mémoire de la variable v.</p>
 <h3>Structures et interfaces <a id="structures-et-interfaces"></a></h3>
 <p>En Go, on peut créer des structures personnalisées, une structure est une collection de champs. Par exemple :</p>
@@ -241,15 +241,15 @@ Les déclarations <em><code>if</code></em> et <em><code>else</code></em> ont la 
     Y int
 }
 </code></pre>
-<p>est la structure d'un vecteur.<br>
+<p>est la structure d'un vecteur.
 Go n'a pas de classes mais on peut créer des méthodes relatives à des types.<br>
 Par exemple :</p>
 <pre><code>func (r rect) perim() int {
     return 2*r.width + 2*r.height
 }
 </code></pre>
-<p>est une méthode associée à la structure rect qui représente un rectangle d'hauteur height et de largeur width.<br>
-Une interface est une collection de méthodes.<br>
+<p>est une méthode associée à la structure rect qui représente un rectangle d'hauteur height et de largeur width.
+Une interface est une collection de méthodes.
 Par exemple :</p>
 <pre><code>type geometrie interface {
     aire() float64
@@ -279,9 +279,9 @@ func main() {
     f()
 }
 </code></pre>
-<p>La fonction <code>Sleep()</code> permet à la goroutine d'avoir le temps de finir de s'exécuter.<br>
+<p>La fonction <code>Sleep()</code> permet à la goroutine d'avoir le temps de finir de s'exécuter.
 On peut utiliser des goroutines lorsqu'on fait plusieurs requêtes API différentes, lorsqu'on lit un fichier SQL et qu'on souhaite mettre les données dans des tableurs...</p>
-<p>Les canaux (<em>channels</em>) sont un moyen utilisé par les goroutines pour communiquer de manière efficace.<br>
+<p>Les canaux (<em>channels</em>) sont un moyen utilisé par les goroutines pour communiquer de manière efficace.
 Ils gardent des données, sont thread-safe et on peut &quot;écouter&quot; les données qui arrivent sur ce canal. Un canal (channel) dépend du type de données qu'il contient, on ne peut pas envoyer une chaîne de caractères sur un canal d'entiers.</p>
 <pre><code>var c = make(chan int)
 </code></pre>
@@ -294,7 +294,7 @@ v := &lt;-c // On reçoit et stocke l'entier 3 dans la variable v
 </code></pre>
 <p>Après avoir envoyé les données, on peut fermer le canal avec la fonction <code>close()</code>.</p>
 <h2>Petite application CLI pour gérer sa todo list <a id="#petite-application-cli-pour-gérer-sa-todo-list"></a></h2>
-<p>Après ce petit tour des fondamentaux du langage Go, on peut s'attaquer à un mini-projet pour mettre en pratique la théorie. J'ai regardé des idées de projets en Go faciles à mettre en place et l'une des idées qui est revenue était la création d'une application CLI de todo lists.<br>
+<p>Après ce petit tour des fondamentaux du langage Go, on peut s'attaquer à un mini-projet pour mettre en pratique la théorie. J'ai regardé des idées de projets en Go faciles à mettre en place et l'une des idées qui est revenue était la création d'une application CLI de todo lists.
 J'ai ainsi créé une commande <code>add</code>, une commande <code>init</code> et une commande <code>list</code>.</p>
 <ul>
 <li>La commande <code>init</code> permet d'initier le fichier <em>todo.csv</em> dans le dossier Utilisateur</li>
@@ -384,7 +384,7 @@ func init() {
 	addCmd.Flags().StringVarP(&amp;catFlag, &quot;category&quot;, &quot;c&quot;, &quot;&quot;, &quot;The category of new task&quot;)
 }
 </code></pre>
-<p>Ainsi, lorsqu'on écrit et lance sur le terminal la ligne <code>.\name-project.exe add -content &quot;Seek an internship&quot; -category &quot;To do&quot;</code>, normalement, le fichier <em>todo.csv</em> est mis à jour avec une nouvelle ligne contenant &quot;Seek an internship, To do&quot; !<br>
+<p>Ainsi, lorsqu'on écrit et lance sur le terminal la ligne <code>.\name-project.exe add -content &quot;Seek an internship&quot; -category &quot;To do&quot;</code>, normalement, le fichier <em>todo.csv</em> est mis à jour avec une nouvelle ligne contenant &quot;Seek an internship, To do&quot; !
 <img src="image.png" alt="Exemple todo"></p>
 <p>Si vous êtes intéressés, je vous conseille de jeter un coup d'oeil au github de <a href="https://github.com/heybran/gtodo">Gtodo</a> de heybran qui a un projet similaire complet. Le point positif de son projet, c'est qu'il n'a pas utilisé Cobra donc la structure du code est probablement plus intuitive. Il manipule des JSON et pas des CSV également donc les packages à installer seront différents mais son <a href="http://ReadMe.md">ReadMe.md</a> est assez clair.</p>
 <h2>Petit exemple de mise en place d'un protocole HTTP avec Go <a id="#petit-exemple-de-mise-en-place-dun-protocole-http-avec-go"></a></h2>

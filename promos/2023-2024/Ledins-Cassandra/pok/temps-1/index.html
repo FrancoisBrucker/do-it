@@ -185,7 +185,7 @@ def gptresponse():
     print(response)
     return response['choices'][0]['message']
 </code></pre>
-<p>La température, c'est le degré de créativité autorisé. Entre 0 et 1, ici je l'ai mis à 1 pour avoir des réponses originales !<br>
+<p>La température, c'est le degré de créativité autorisé. Entre 0 et 1, ici je l'ai mis à 1 pour avoir des réponses originales !
 Un nombre max de token (longueur de réponse), pour éviter qu'il nous écrive un roman et pour pas brûler tous mes crédits d'un coup.</p>
 <p>Pour l'instant, je ne créé pas de &quot;mémoire&quot; au chat, c'est-à-dire qu'après vous avoir répondu, si vous renvoyez un message, il ne saura pas de quoi vous avez parlé avant.</p>
 <p>J'ai ajouté un effet de display lettre par lettre, comme on peut retrouver dans l'API ChatGPT. Sauf que j'ai triché, je l'ai fait avec un random timeout() en JavaScript. Je voulais le faire en live avec l'option stream=True qu'on peut ajouter au prompt de ChatGPT pour récupérer les infos de génération en direct, mais après quelques essais infructueux, parce que les exemples de la documentation ne marchaient pas pour moi, j'ai décidé de le faire à la main.</p>

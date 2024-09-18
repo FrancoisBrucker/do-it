@@ -174,7 +174,7 @@
 <p><img src="Image1.png" alt="Image test"></p>
 <p>La feuille qui est remplie se nomme <em>Feuille 1</em>.</p>
 <h3>Lecture de données</h3>
-<p>Dans un premier temps, nous allons expliquer comment lire des données. La première classe qui est importante à connaître est la classe <strong>Workbook</strong>. Pour créer un objet de cette classe, on utilise la méthode <em>openpyxl.load_workbook</em>. Les objets de cette classe correspondent au fichier Excel renseigné en paramètre de la méthode. Ils contiennent toutes les informations du fichier: lignes, colonnes, cellules etc... Par exemple, on peut récupérer les noms des feuilles du fichier Excel avec la méthode <em>sheetnames</em>.<br>
+<p>Dans un premier temps, nous allons expliquer comment lire des données. La première classe qui est importante à connaître est la classe <strong>Workbook</strong>. Pour créer un objet de cette classe, on utilise la méthode <em>openpyxl.load_workbook</em>. Les objets de cette classe correspondent au fichier Excel renseigné en paramètre de la méthode. Ils contiennent toutes les informations du fichier: lignes, colonnes, cellules etc... Par exemple, on peut récupérer les noms des feuilles du fichier Excel avec la méthode <em>sheetnames</em>.
 Il faut ensuite récupérer la feuille sur laquelle on veut lire les données. Pour cela, on renseigne le nom de la feuille en question comme suit:</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
 

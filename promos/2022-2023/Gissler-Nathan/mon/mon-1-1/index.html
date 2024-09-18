@@ -152,14 +152,14 @@
 <h4>Bases</h4>
 <p>Le langage HTML sert à définir le contenu d'une page web. Il fonctionne avec des balises qui peuvent être seules : <code>&lt;img /&gt;</code>, ou par deux : <code>&lt;title&gt; &lt;/title&gt;</code>.</p>
 <p>Le code de base d'un fichier HTML est le suivant :</p>
-<p><!DOCTYPE html><br>
-<html><br>
-<head><br>
-<meta charset="utf-8"><br>
-<title>Titre de la page</title><br>
+<p><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Titre de la page</title>
 </head></html></p>
 <p><body></body></p>
-<p></p></article></main></body><br>
+<p></p></article></main></body>
 </html><p></p>
 <p>On place ensuite le contenu de la page entre les balises <code>&lt;body&gt; &lt;/body&gt;</code>.</p>
 <p>On peut insérer des commentaires sous la forme <code>&lt;!-- commentaire --&gt;</code>.</p>
@@ -183,19 +183,19 @@
 <p><img src="sections_page_web.png" alt="Balises pour identifier les sections de la page"></p>
 <h4>Tableaux</h4>
 <p>La structure des tableaux HTML est la suivante :</p>
-<p></p><table><br>
-<tr><br>
-<td><br>
-ligne 1 colonne 1<br>
-ligne 1 colonne 2<br>
-</td><br>
-</tr><br>
-<tr><br>
-<td><br>
-ligne 2 colonne 1<br>
-ligne 2 colonne 2<br>
-</td><br>
-</tr><br>
+<p></p><table>
+<tr>
+<td>
+ligne 1 colonne 1
+ligne 1 colonne 2
+</td>
+</tr>
+<tr>
+<td>
+ligne 2 colonne 1
+ligne 2 colonne 2
+</td>
+</tr>
 </table><p></p>
 <p>Il est possible de fusionner des cellules avec <code>colspan</code> et <code>rowsspan</code>.</p>
 <h4>Formulaires</h4>
@@ -212,51 +212,51 @@ ligne 2 colonne 2<br>
 <ul>
 <li>
 <p>à un type de balise :</p>
-<p>p<br>
-{<br>
-color: blue;<br>
+<p>p
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>à la balise ayant l'attribut <code>id=&quot;unebalise&quot;</code> :</p>
-<p>#unebalise<br>
-{<br>
-color: blue;<br>
+<p>#unebalise
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>à toutes les balises ayant l'attribut <code>class=&quot;certainesbalises</code> :</p>
-<p>.certainesbalises<br>
-{<br>
-color: blue;<br>
+<p>.certainesbalises
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>aux balises h1 et h2 :</p>
-<p>h1, h2<br>
-{<br>
-color: blue;<br>
+<p>h1, h2
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>aux balises p contenues dans des balises h1 :</p>
-<p>h1 p<br>
-{<br>
-color: blue;<br>
+<p>h1 p
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>aux balises h2 qui suivent une balise h1 :</p>
-<p>h1 + h2<br>
-{<br>
-color: blue;<br>
+<p>h1 + h2
+{
+color: blue;
 }</p>
 </li>
 <li>
 <p>à toutes les balises :</p>
-<p>*<br>
-{<br>
-color: blue;<br>
+<p>*
+{
+color: blue;
 }</p>
 </li>
 <li>
@@ -297,9 +297,9 @@ color: blue;<br>
 <li><code>box-shadow</code> pour mettre une ombre sur un bloc ou <code>text-shadow</code> sur un texte (l'ombre est alors sur le contour des lettres)</li>
 </ul>
 <p>Il est possible de définir un style pour un élément seulement lorsqu'il est survolé (pour un lien par exemple) avec <code>:hover</code></p>
-<p>a:hover<br>
-{<br>
-color: blue;<br>
+<p>a:hover
+{
+color: blue;
 }</p>
 <p>Il existe également <code>:active</code> pour un élément cliqué (lors du clic), <code>:focus</code> pour un élément sélectionné, ou encore <code>:visited</code> pour un élément déjà visité.</p>
 <p>Il est possible d'ajouter la propriété <code>display: flex</code> à un conteneur pour gérer la disposition de ses éléments assez simplement avec Flexbox (disposition verticale ou horizontale, ordre, espacement...).</p>
@@ -312,70 +312,70 @@ color: blue;<br>
 <h3>2.2 Quelques fonctionnalités</h3>
 <h4>Bases</h4>
 <p>Insertion du canvas dans le fichier HTML :</p>
-<p><body><br>
-<canvas id="canvas"></canvas><br>
-</body><br>
+<p><body>
+<canvas id="canvas"></canvas>
+</body>
 <script src="main.js"></script></p>
 <p>Paramétrage de la taille et du fond du canvas dans le fichier <code>main.js</code> :</p>
 <p>let canvas = document.getElementById(&quot;canvas&quot;);</p>
 <p>let context = canvas.getContext(&quot;2d&quot;);</p>
-<p>var window_height = window.innerHeight;<br>
+<p>var window_height = window.innerHeight;
 var window_width = window.innerWidth;</p>
 <p>canvas.style.background = &quot;#fff&quot;;</p>
 <h4>Création d'objets</h4>
 <p>On se place pour la suite dans <code>main.js</code></p>
 <p>Rectangle (la couleur est facultative) :</p>
-<p>context.fillStyle = &quot;colorName&quot;;<br>
+<p>context.fillStyle = &quot;colorName&quot;;
 context.fillRect(xpos, ypos, width, height);</p>
 <p>Cercle :</p>
-<p>context.beginPath();<br>
-context.strokeStyle = &quot;colorName&quot;;<br>
-context.lineWidth = lineWidth;<br>
-context.arc(x, y, radius, startAngle, endAngle, anticlockwise?);<br>
-context.stroke();<br>
+<p>context.beginPath();
+context.strokeStyle = &quot;colorName&quot;;
+context.lineWidth = lineWidth;
+context.arc(x, y, radius, startAngle, endAngle, anticlockwise?);
+context.stroke();
 context.closePath();</p>
 <p>Texte (la police est également facultative) :</p>
-<p>context.fillText(text, xpos, ypos);<br>
+<p>context.fillText(text, xpos, ypos);
 context.font = &quot;20px Arial&quot;;</p>
 <p>Image :</p>
-<p>let image = document.createElement(&quot;img&quot;);<br>
-image.src = imagePath;<br>
-image.onload = function() {<br>
-context.drawImage(image, xpos, ypos, width, height);<br>
+<p>let image = document.createElement(&quot;img&quot;);
+image.src = imagePath;
+image.onload = function() {
+context.drawImage(image, xpos, ypos, width, height);
 }</p>
 <h4>Création de classes</h4>
 <p>Classe permettant de créer des cercles :</p>
-<p>class Circle {<br>
-constructor(xpos, ypos, radius, color) {<br>
-this.xpos = xpos;<br>
-this.ypos = ypos;<br>
-this.radius = radius;<br>
-this.color = color;<br>
+<p>class Circle {
+constructor(xpos, ypos, radius, color) {
+this.xpos = xpos;
+this.ypos = ypos;
+this.radius = radius;
+this.color = color;
 }</p>
-<p>draw(context) {<br>
-context.beginPath();<br>
-context.strokeStyle = color;<br>
-context.arc(xpos, ypos, radius, 0, Math.PI * 2, false);<br>
-context.stroke();<br>
-context.closePath();<br>
-}<br>
+<p>draw(context) {
+context.beginPath();
+context.strokeStyle = color;
+context.arc(xpos, ypos, radius, 0, Math.PI * 2, false);
+context.stroke();
+context.closePath();
+}
 }</p>
 <p>Création d'un cercle grâce à cette classe :</p>
 <p>let circle = new Circle(100, 200, 50, &quot;red&quot;);</p>
 <p>circle.draw(context);</p>
 <h4>Animation d'un objet</h4>
 <p>Une fonction de ce type permet d'avoir un objet en mouvement (la méthode update modifie légèrement la position du cercle) :</p>
-<p>let updateCircle = function() {<br>
-requestAnimationFrame(updateCircle);<br>
-circle.update();<br>
+<p>let updateCircle = function() {
+requestAnimationFrame(updateCircle);
+circle.update();
 }</p>
 <h4>Intéractions avec le canvas (clic)</h4>
 <p>Pour exécuter une action en cas de clic sur le canvas :</p>
-<p>canvas.addEventListener('click', (event) =&gt; {<br>
-const rect = canvas.getBoundingClientRect();<br>
-const x = event.clientX - rect.left;<br>
-const y = event.clientY - rect.top;<br>
-// action à effectuer en utilisant la position x, y du clic<br>
+<p>canvas.addEventListener('click', (event) =&gt; {
+const rect = canvas.getBoundingClientRect();
+const x = event.clientX - rect.left;
+const y = event.clientY - rect.top;
+// action à effectuer en utilisant la position x, y du clic
 })</p>
 <h2>3. Liens</h2>
 <ul>

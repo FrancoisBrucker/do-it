@@ -259,7 +259,7 @@
 </table>
 <p>Dans cette partie, nous allons créer une interface permettant d'exporte un .ics et de s'abonner au calendrier de la filière Do_It, en tâchant de personnaliser cela aux élèves en utilisant le travail de Duc.</p>
 <h2 id="de-la-recherche-au-poc">De la recherche au POC</h2>
-<p>Je vais vous présenter dans cette partie les pistes de codes envisagées au cours de la phase de recherche nécessaire à l'analyse de données.<br>
+<p>Je vais vous présenter dans cette partie les pistes de codes envisagées au cours de la phase de recherche nécessaire à l'analyse de données.
 En effet, ce projet comporte une phase de recherche importante, car il faut comprendre le fonctionnement de l'API Google Spreadsheet, et trouver un moyen de l'utiliser pour traiter les données du calendrier de la filière Do_It.</p>
 <h3 id="google-spredsheet">Google Spredsheet</h3>
 <p>Pour commencer, voilà comment importer notre fichier dans Google Colab :</p>
@@ -560,7 +560,7 @@ cal <span class="token operator">=</span> Calendar<span class="token punctuation
 </div>
 </details>     
 </div>
-<p>Ce code parcourt donc les colonnes pour une ligne donnée, et crée un événement pour chaque cours détecté.<br>
+<p>Ce code parcourt donc les colonnes pour une ligne donnée, et crée un événement pour chaque cours détecté.
 Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier, est satisfaisant et démontre que l'on peut faire un Proof Of Concept de ce POK.</p>
 <p>Le problème subsiste avec les cours de deux ou trois heures, qui sont détectés comme des cours d'une heure.</p>
 <h2 id="du-poc-à-la-réalisation">Du POC à la réalisation</h2>
@@ -570,7 +570,7 @@ Le fait que cela fonctionne, et donne des cours d'une heure dans mon calendrier,
 <h2 id="revue-de-sprint-1">Revue de Sprint 1</h2>
 <p>Dans ce Sprint, nous avons vu comment extraire les informations de l'emploi du temps de la filière Do_It, et comment les traiter pour les exporter dans un fichier .ics.</p>
 <p>Nous avons ainsi produit un Proof Of Concept qui nous permet de voir que le projet est réalisable, puis nous avons défini la structure du code sous forme de classes qui sera utilisée pour la suite du projet.</p>
-<p>Vous pourrez noter ici que la structure du code est générée à l'aide de l'assistant chatGPT et je m'assurerai que le contenu qui s'y trouve en dernier lieu sera bien vérifié et testé par mes soins.<br>
+<p>Vous pourrez noter ici que la structure du code est générée à l'aide de l'assistant chatGPT et je m'assurerai que le contenu qui s'y trouve en dernier lieu sera bien vérifié et testé par mes soins.
 Petit point méthodologique cependant : j'utilise principalement chatGPT dans ce genre de cas, à l'initialisation d'un projet, car ses réponses sont bonnes pour établir une architecture globale et &quot;dans les règles de l'art&quot; (respectant des bonnes pratiques dès le départ) d'une application.</p>
 <h2 id="suite--sprint-2">Suite : Sprint 2</h2>
 <h3 id="objectifs-fin-sprint1">Objectifs à l'issue du Sprint 1</h3>
@@ -618,7 +618,7 @@ xlsx_url <span class="token operator">=</span> <span class="token string">"https
 </li>
 <li>
 <p>Scrapping de l’export de Duc depuis Github (route <code>/github</code>)</p>
-<p>À l’origine, Duc a sorti un export lors de <a href="../../../Dang-Vu-Duc/mon/temps-1.2/">son MON 1.2.</a> Il est donc possible de récupérer les fichiers Excel bruts sur le repo du site. On affiche ainsi une liste de documents qui peuvent être intégrés au programme de traitement.<br>
+<p>À l’origine, Duc a sorti un export lors de <a href="../../../Dang-Vu-Duc/mon/temps-1.2/">son MON 1.2.</a> Il est donc possible de récupérer les fichiers Excel bruts sur le repo du site. On affiche ainsi une liste de documents qui peuvent être intégrés au programme de traitement.
 Problème relevé : lorsque l’orthographe des cours est inexacte dans la première ligne de la cellule de l’emploi du temps, le cours n’apparait pas. Deux solutions sont envisagées : modifier un peu l’algorithme pour le rendre plus robuste ou écrire des tests unitaires pour garantir l’intégrité du calendrier ainsi généré.</p>
 </li>
 <li>

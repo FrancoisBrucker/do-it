@@ -201,7 +201,7 @@
 <li>Ajout d'une instance Jenkins pour, plus tard, automatiser la production.</li>
 </ul>
 <h3>Ce qu'il reste à faire :</h3>
-<p>Nous allons finir de mettre en place l'automatisation autour du projet.<br>
+<p>Nous allons finir de mettre en place l'automatisation autour du projet.
 Le but final est d'avoir un site disponible sur internet. Quand un développeur ajoute une fonctionnalité ou corrige un bug, un serveur détecte automatiquement qu'il y des changements qui ne sont pas sur internet. A ce moment, il effectue une batterie de tests sur le code source, si les tests passent, le serveur déploie automatiquement la nouvelle version sur le net.</p>
 <p>Techniquement cela veut dire qu'au premier sprint nous allons :</p>
 <ul>
@@ -221,7 +221,7 @@ Le but final est d'avoir un site disponible sur internet. Quand un développeur 
 <p>On installe Jest pour pouvoir créer des tests unitaires :</p>
 <p><code>npm install --save-dev jest</code></p>
 <p>Jest est très pratique, il permet de lancer tous les tests contenues dans les fichiers présents dans le répertoire &quot;<strong>tests</strong>&quot;</p>
-<p>La batterie de tests se lance avec <code>npx jest</code>, que l'on eut ajouter dans le config.json pour utiliser <code>npm run test</code>.<br>
+<p>La batterie de tests se lance avec <code>npx jest</code>, que l'on eut ajouter dans le config.json pour utiliser <code>npm run test</code>.
 le fichier config.json ressemble alors à cela :</p>
 <pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"test"</span> <span class="token operator">:</span> <span class="token string">"npx jest"</span><span class="token punctuation">,</span>
@@ -273,14 +273,14 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </code></pre>
 <p>Cette implémentation paraît débile, mais si vous coder en équipe, elle permet de valider le test ET de laisser à vous collègue la possibilité de coder le front en ayant une idée de la structure de données à laquelle le code doit s'attendre.</p>
 <ul>
-<li>Implémentation finale :<br>
+<li>Implémentation finale :
 C'est une requête graphQL il n'y à pas d’intérêt à la coller ici.</li>
 </ul>
 <p>Après ça, on code le front, allez voir le premier POK ou des MON Reacts pour des tutos détaillés sur comment faire. Voici les résultats :</p>
 <img src="../images/artblog-cat1.png" alt="page de sculpture" style="height: 250px;width:600px; margin: 0 auto;">
 <img src="../images/artblog-cat2.png" alt="page de sculpture" style="height: 250px;width:500px; margin: 0 auto;">
 <h3>Conclusion Premier sprint :</h3>
-<p>La partie facile de ce POK est terminée.<br>
+<p>La partie facile de ce POK est terminée.
 Tout c'est bien passé, on pourrait continuer en :</p>
 <ul>
 <li>Implémentant des tests unitaires pour toutes les fonctionnalités du projet.</li>
@@ -290,7 +290,7 @@ Tout c'est bien passé, on pourrait continuer en :</p>
 <p>Mais je n'ai pas le temps pour ces options, on passe à la suite.</p>
 <h2>Second sprint :</h2>
 <h3>Jenkins :</h3>
-<p>La mise en place de Jenkins dans un container peut être vu dans le MON sur Jenkins.<br>
+<p>La mise en place de Jenkins dans un container peut être vu dans le MON sur Jenkins.
 Néanmoins, cette mise en place possède plusieurs problème :</p>
 <ul>
 <li>Jenkins ne possède même pas les librairies nécessaires pour faire tourner le projet.</li>
@@ -299,8 +299,8 @@ Néanmoins, cette mise en place possède plusieurs problème :</p>
 </ul>
 <p>On y va dans l'ordre.</p>
 <h4>L'installation propre :</h4>
-<p>Jenkins à besoin de node, de git,de ssh etc... pour faire tourner le projet.<br>
-Dans le MON Jenkins on avait créer un conteneur Jenkins en prenant simplement l'image officielle.<br>
+<p>Jenkins à besoin de node, de git,de ssh etc... pour faire tourner le projet.
+Dans le MON Jenkins on avait créer un conteneur Jenkins en prenant simplement l'image officielle.
 Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a laquelle j'ajoute node et tmux (je n'ai pas eu besoin de tmux).</p>
 <p>Voici le dockerfile :</p>
 <pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> jenkins/jenkins:lts-alpine-jdk11</span>
@@ -338,10 +338,10 @@ Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a 
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Ces informations, qu'on appelle à juste titre des <strong>secrets</strong>, sont hautement confidentielles. Il ne faut surtout pas les mettre sur serveur qui peuvent être compromis, c'est à dire tous les serveurs qui ne vous appartiennent pas et qui ont accès à internet.<br>
+<p>Ces informations, qu'on appelle à juste titre des <strong>secrets</strong>, sont hautement confidentielles. Il ne faut surtout pas les mettre sur serveur qui peuvent être compromis, c'est à dire tous les serveurs qui ne vous appartiennent pas et qui ont accès à internet.
 Ainsi il ne faut pas stocker vos clés ssh sur ovh1, ni sur github, au risque de vous la voir voler, et que quelqu'un achète des armes avec votre carte bleu au marché noir.</p>
 </div></div>
-<p>Jenkins est en local, si il est accédé par l'extérieur c'est que quelqu'un à déjà le contrôle sur votre pc. Aussi, les secrets qui y sont stockés sont cryptés, on peut donc y mettre de façon sûre la clé ssh privée qui va déployé sur ovh1, ainsi que les variables d'environnement de votre application.<br>
+<p>Jenkins est en local, si il est accédé par l'extérieur c'est que quelqu'un à déjà le contrôle sur votre pc. Aussi, les secrets qui y sont stockés sont cryptés, on peut donc y mettre de façon sûre la clé ssh privée qui va déployé sur ovh1, ainsi que les variables d'environnement de votre application.
 Je recommande cependant de créer une clé ssh uniquement pour Jenkins et de ne pas mettre la votre, si elle est compromise il suffira de bloquer les accès à cette unique clé.</p>
 <p>Ne donnez pas non plus accès à ovh1 à votre repository github!</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -352,18 +352,18 @@ Je recommande cependant de créer une clé ssh uniquement pour Jenkins et de ne 
 <p>Ces secrets sont accessible depuis le Jenkinsfile grâce aux méthodes withcredentials() et on peut communiquer en ssh avec le ssh-agent, je vous invite à lire la doc Jenkins, même si elle est parfois lunaire.</p>
 </div></div>
 <ul>
-<li>Résultats :<br>
+<li>Résultats :
 <img src="../images/jenkins-cred.png" alt="credentials"></li>
 </ul>
 <h4>Le jenkinsfile :</h4>
-<p>Le <a href="https://github.com/TuncayBilgi/artblog/blob/main/Jenkinsfile">jenkinsfile</a> est le fichier dont va se servir Jenkins pour executer votre Pipeline, voir le MON Jenkins si jamais vous ne l'avez pas encore fait.<br>
+<p>Le <a href="https://github.com/TuncayBilgi/artblog/blob/main/Jenkinsfile">jenkinsfile</a> est le fichier dont va se servir Jenkins pour executer votre Pipeline, voir le MON Jenkins si jamais vous ne l'avez pas encore fait.
 Je ne détaille pas le code, il est disponible sur le repository de mon projet sur Github.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Jenkins est une machine à gaz très capricieuse. Avec des milliers de plugins, et plus d'une dizaine année d’existence, il existe des millions de manières différentes de faire la même chose, et quand vous en choisissez une, ça ne marche pas.<br>
+<p>Jenkins est une machine à gaz très capricieuse. Avec des milliers de plugins, et plus d'une dizaine année d’existence, il existe des millions de manières différentes de faire la même chose, et quand vous en choisissez une, ça ne marche pas.
 Évitez les interactions complexes entre Jenkins et d'autres site. Si vous voulez faire quelque chose qui existe utilisez ce qui existe déjà, et sinon bon courage.</p>
 </div></div>
 <p>Ici, on choisit la méthode suivante :</p>
@@ -389,14 +389,14 @@ Je ne détaille pas le code, il est disponible sur le repository de mon projet s
 </div>
 <p>On peut voir, de gauche à droite, que Jenkins repère les différents commits, ensuite il execute la pipeline où il lance des tests et où il build et enfin, la pipeline est exécutée périodiquement.</p>
 <h3>Conclusions sprint 2 :</h3>
-<p>l’utilisation de jenkins n'est pas une chose aisée, et je vous épargne toutes les autres solutions que j'ai testé avant d'arriver à celle-ci qui est juste convenable. Cependant, une bonne partie de ceci serait plus simple si jenkins était un serveur ayant accès à un réseau, comme ça devrait être le cas normalement.<br>
+<p>l’utilisation de jenkins n'est pas une chose aisée, et je vous épargne toutes les autres solutions que j'ai testé avant d'arriver à celle-ci qui est juste convenable. Cependant, une bonne partie de ceci serait plus simple si jenkins était un serveur ayant accès à un réseau, comme ça devrait être le cas normalement.
 J'ai pris le temps de réaliser l'essentiel de ce que je voulais, on pourrai aller plus loin en :</p>
 <ul>
 <li>Mettant en place une messagerie qui envoie un mail si la pipeline est cassée.</li>
 <li>Mettant en place une seconde pipeline qui s'occupe seulement de verifier que le site est disponible sur internet et qui le redéploie sinon, sans build (c'est possible facilement grâce à l'implémentation de mon script).</li>
 </ul>
 <h2>Conclusion POK 1,2 et 3 :</h2>
-<p>Ces trois POK m'ont permis de m'initier au développement web.<br>
+<p>Ces trois POK m'ont permis de m'initier au développement web.
 J'ai commencé l'année en tant que débutant ne connaissant que html,css et bootstrap. Aujourd'hui, je suis capable de coder un site (simple) de bout en bout, j'ai des notions d'architecture système, j'ai connaissances de certaines best practices et surtout j'ai découvert le pan Dev-ops du développement web.</p>
 <p>Finalement, j'ai une site fonctionnel qui m'a permis de beaucoup apprendre, les efforts en valaient la peine et je suis satisfait du résultat.</p>
 

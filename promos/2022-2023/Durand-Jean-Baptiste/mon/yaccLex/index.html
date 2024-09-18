@@ -159,7 +159,7 @@
 </ul>
 <h2 id="h1"> Language Machine </h2>
 <h3 id="h1-1"> Qu'est ce que le language machine ? </h3>
-<p>Le language machine est un <strong>language informatique reconnu par l'ordinateur</strong> et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).<br>
+<p>Le language machine est un <strong>language informatique reconnu par l'ordinateur</strong> et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).
 Par exemple, le C est un language informatique compilé, et Python est un language interprété.</p>
 <img src="../Image/differencePyC.jpg" alt="Arbre de calcul" style="height: 400px; margin: 0 auto; border: 0">
 <table>
@@ -193,7 +193,7 @@ Par exemple, le C est un language informatique compilé, et Python est un langua
 <p>Sur Linux, il est possible de récupérer le code machine d'un fichier compilé grâce à la commande <strong>objdump</strong> (pas disponible par défaut)</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">objdump <span class="token parameter variable">-d</span> fichierCompilé <span class="token operator">></span> languageMachine.txt
 </code></pre>
-<p>Il existe aussi un logiciel permettant de décompiler des fichiers : <a href="https://ghidra-sre.org/">Ghidra</a>.<br>
+<p>Il existe aussi un logiciel permettant de décompiler des fichiers : <a href="https://ghidra-sre.org/">Ghidra</a>.
 Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outil permettant de comprendre comment fonctionne le fichier compilé.</p>
 <p>Voilà à quoi peut ressembler une partie de code désassemblée. (Ici seulement la partie principal du code)</p>
 <pre><code>0000000000001149 &lt;main&gt;:
@@ -274,8 +274,8 @@ Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outi
 <p>exemple :</p>
 <pre><code>[0-9]+          {yylval.num = atoi(yytext); return NUMBER;}
 </code></pre>
-<p><strong>[0-9]</strong> est une expression régulière permettant de reconnaître les caractères '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9'<br>
-<strong>+</strong> permet de trouver toutes expression respectant au moins une fois ou plus l'expression juste avant.<br>
+<p><strong>[0-9]</strong> est une expression régulière permettant de reconnaître les caractères '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9'
+<strong>+</strong> permet de trouver toutes expression respectant au moins une fois ou plus l'expression juste avant.
 <strong>[0-9]+</strong> reconnaît tous les nombres, ayant 1 ou plusieurs chiffres.</p>
 <p>Donc l'exemple va reconnaître les nombres et stocker leurs valeurs</p>
 <h3 id="h2-2"> Yacc </h3>
@@ -298,7 +298,7 @@ Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outi
 ;
 </code></pre>
 <p>On définit qu'un calcul peut être l'addition de 2 calculs, la différence entre 2 calculs ou un nombre. Ce qui permet de reconstruire tous les calculs possibles entre des nombres et en faisant des additions et des soustractions.</p>
-<p>L'objectif va être de construire un arbre pour faire les opérations.<br>
+<p>L'objectif va être de construire un arbre pour faire les opérations.
 Par exemple pour le calcul suivant <em><em>12+4</em>(7+2)</em>*, l'arbre suivant sera généré :</p>
 <img src="../Image/treeYacc.jpg" alt="Arbre de calcul" style="height: 200px; margin: 0 auto; border: 0">
 <p>Cet arbre est ensuite parcouru en Postfixe, ce qui donne :</p>
@@ -339,7 +339,7 @@ Condition passée
 </code></pre>
 <p>Il est donc primordial de pouvoir sauter d'une ligne d'exécution à une autre pour faire des boucles.</p>
 <h3 id="h2-4">Solution à ces problèmes </h3>
-<p>Il n'est pas impossible de contourner ces problèmes, pour cela il faut manuellement reconstruire les lignes d'executions grace au parseur de yacc et ensuite executer le code.<br>
+<p>Il n'est pas impossible de contourner ces problèmes, pour cela il faut manuellement reconstruire les lignes d'executions grace au parseur de yacc et ensuite executer le code.
 Voici un exemple d'une personne ayant réalisé cela : <a href="https://github.com/chetnasureka/if-else-and-while-compiler-for-C-in-Yacc/blob/master/parser.y">compiler if and while</a></p>
 <h2 id="liens">Liens Utiles </h2>
 <p><strong>Language machine</strong></p>

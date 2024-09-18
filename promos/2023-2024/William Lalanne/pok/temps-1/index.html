@@ -169,9 +169,9 @@
 <h2>Création de la page d'accueil</h2>
 <p>La page d'accueil est la suivante :</p>
 <p><img src="pageAccueilPOK1.png" alt="Page d'accueil"></p>
-<p>Pour faire ça, je me suis servi des connaissances acquises avec mon premier MON sur les grid et le flexbox.<br>
-J'ai aussi du apprendre ce qu'était les radio button et comment les modifier pour créer les petites cases à cocher.<br>
-Sur cette page on peut paramétrer la partie, d'abord on choisit si on veut des numéros ou des images sur les cartes. Ensuite on choisit si on veut jouer seul ou à deux et enfin la taille du jeu, 4x4 ou 6x6.<br>
+<p>Pour faire ça, je me suis servi des connaissances acquises avec mon premier MON sur les grid et le flexbox.
+J'ai aussi du apprendre ce qu'était les radio button et comment les modifier pour créer les petites cases à cocher.
+Sur cette page on peut paramétrer la partie, d'abord on choisit si on veut des numéros ou des images sur les cartes. Ensuite on choisit si on veut jouer seul ou à deux et enfin la taille du jeu, 4x4 ou 6x6.
 Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, seuls les numéros sont disponibles. De plus on ne peut pour l'instant jouer qu'à deux. Ainsi l'utilisateur doit seulement choisir le nombre de cartes. S'il ne choisit pas, un message d'erreur apparaît et il ne peut pas démarrer la partie.</p>
 <p><img src="memoryErrorMessage.png" alt="message d'erreur"></p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">newGameButton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -549,8 +549,8 @@ startGame<span class="token punctuation">.</span><span class="token function">ad
 <p>La page de jeu est la plus difficile à coder. Toutes les actions sont basées sur des cliques :</p>
 <ul>
 <li>Quand on clique sur une carte pas retournée, cela déclenche le retournement de la carte</li>
-<li>Quand on clique sur une deuxième carte une autre action se déclenche<br>
-Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déclencher une fonction suite à une action de l'utilisateur qui peut être un clique ou un mouvement de souris.<br>
+<li>Quand on clique sur une deuxième carte une autre action se déclenche
+Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déclencher une fonction suite à une action de l'utilisateur qui peut être un clique ou un mouvement de souris.
 Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListener.</li>
 </ul>
 <p>Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à chacun des boutons un addEventListener qui déclenche la fonction returnCard() à chaque clique.</p>

@@ -158,18 +158,18 @@
 <li><a href="#section-7">Sources</a></li>
 </ol>
 <h2>1. Introduction <a id="section-1"></a></h2>
-<p>Pendant le premier cours d'éco-système digital, on nous a demandé de faire un tableau de données sur Excel/Google Sheets, quelques calculs et donner une représentation pertinente. N'ayant pas Excel, j'ai utilisé Google Sheets.<br>
-Et je fus incapable de créer un beau graphique. Quelle ne fut pas ma tristesse.<br>
+<p>Pendant le premier cours d'éco-système digital, on nous a demandé de faire un tableau de données sur Excel/Google Sheets, quelques calculs et donner une représentation pertinente. N'ayant pas Excel, j'ai utilisé Google Sheets.
+Et je fus incapable de créer un beau graphique. Quelle ne fut pas ma tristesse.
 Il est donc temps de devenir moins idiot. Pour ça, j'ai décidé de faire comme <strong><a href="../../../Lola-Bourdon/mon/temps-1.2/">Lola BOURDON dans son MON 1.2</a></strong> en suivant le cours sur <a href="excel-pratique.com">excel-pratique.com</a>.</p>
 <p>Dans ce MON, vous trouverez ce que j'ai trouvé intéressant à souligner et ce que j'ai fait.</p>
-<p>Au début, j'ai été ralenti par le fait que le tutoriel soit sur Excel et non sur Google Sheets, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.<br>
+<p>Au début, j'ai été ralenti par le fait que le tutoriel soit sur Excel et non sur Google Sheets, car je devais toujours trouver l'équivalent sur Google Sheets, et la syntaxe changeait parfois.
 <strong>Puis, quelques jours plus tard</strong>, quand je suis arrivé aux graphiques Sparkline - graphes miniatures qu'on peut mettre dans les cellules - et que je bloquais, car je ne trouvais pas la bonne syntaxe pour la fonction <strong>SPARKLINE</strong>, <strong>j'ai découvert qu'il existait la même formation pour Google Sheets</strong> (<a href="https://www.sheets-pratique.com">sheets-pratique.com</a>)... Comme quoi, je ne suis pas le couteau le plus affûté du tiroir.</p>
-<p>A partir de ce moment-là, tout s'est accéléré.<br>
+<p>A partir de ce moment-là, tout s'est accéléré.
 Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époque pour rire où avec des amis nous avions mis des notes sur l'apparence des Miss pour Miss France 2022 et des acteurs (égalité des sexes). C'est très superficiel, j'entends. Je m'en excuse.</p>
 <h2>2. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-2"></a></h2>
-<p><strong>Base de données 1 sur les Miss</strong><br>
+<p><strong>Base de données 1 sur les Miss</strong>
 <img src="graphiques.png"></p>
-<p><strong>Base de données 2 sur des acteurs/célébrités</strong><br>
+<p><strong>Base de données 2 sur des acteurs/célébrités</strong>
 <img src="repetition_incrementee.png"></p>
 <h2>3. Quelques images <a id="section-3"></a></h2>
 <p><strong>Utilisation de filtres</strong></p>
@@ -209,15 +209,15 @@ Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époqu
 </tr>
 </tbody>
 </table>
-<p>Première chose, je suis déçu. Je pensais que la création d'un tableau croisé dynamique était un truc de malade, mais il s'agit simplement de cliquer sur deux boutons...<br>
+<p>Première chose, je suis déçu. Je pensais que la création d'un tableau croisé dynamique était un truc de malade, mais il s'agit simplement de cliquer sur deux boutons...
 Deuxième chose, je me suis rendu compte que la façon avec laquelle j'ai rempli ma base de données ne convenait pas à une analyse par tableaux croisés dynamiques. Doublement déçu.</p>
 <p>Que faire ? Refaire une base de données à la main ? Pfff. Bande de fous. QUE NENNI !</p>
 <p>Il est temps de voir ce qu'est App Scripts, l'équivalent du VBA sur Excel :o.</p>
 <h2>4. App Scripts à la rescousse <a id="section-4"></a></h2>
-<p>Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi personne ne me l'a jamais dit ?! J'avais toujours cette image obscure de la chose et pis en fait, c'est juste du code. (-.-)<br>
+<p>Eh bien, en fait. App Scripts, c'est un langage de programmation. Pourquoi personne ne me l'a jamais dit ?! J'avais toujours cette image obscure de la chose et pis en fait, c'est juste du code. (-.-)
 En plus, c'est un langage qui est plutôt facile à prendre en main pour l'usage que je prévois d'en faire (#J'ai menti, j'ai souffert).</p>
-<p>M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur (<a href="https://www.sheets-pratique.com/fr/apps-script">sheets-pratique.com/fr/apps-script</a>) avec des étoiles dans les yeux.<br>
-Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois).<br>
+<p>M'appuyant sur mon B2 en Python et mon A1 en C#, Java, j'ai donc suivi le tutoriel sur (<a href="https://www.sheets-pratique.com/fr/apps-script">sheets-pratique.com/fr/apps-script</a>) avec des étoiles dans les yeux.
+Il est divisé en 12 parties que j'ai survolées (peut-être un peu trop vite parfois).
 Après avoir lu et noté ce dont j'aurai besoin pour ma tâche qui était de réécrire mon tableau sous une forme plus appropriée, je suis parti comme une flèche (ou plutôt une tortue asthmatique et amnnésique).</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -353,8 +353,8 @@ function main(){
 </div>
 </details>     
 </div>
-<p>Voilà le résultat magnifique :<br>
-<strong>Avant</strong><br>
+<p>Voilà le résultat magnifique :
+<strong>Avant</strong>
 <img src="graphiques.png"></p>
 <p><strong>Après</strong></p>
 <table>
@@ -390,8 +390,8 @@ INDEX(table; ligne; colonne) retourne la valeur qui se trouve à la ligne 4, col
 =MATCH(&quot;drôle&quot;; A2:A11; 0)
 MATCH(valeur; table; 0 pour avoir la valeur exacte et 1 pour approximation) retourne la position de &quot;drôle&quot; dans la colonne A2:A11, qui est donc ici une ligne.
 </code></pre>
-<p>MATCH peut faire la même recherche dans une ligne et retourner une colonne.<br>
-Et c'est ce qu'on va utiliser pour combiner MATCH et INDEX.<br>
+<p>MATCH peut faire la même recherche dans une ligne et retourner une colonne.
+Et c'est ce qu'on va utiliser pour combiner MATCH et INDEX.
 Adresse! qui est devant la table choisie signifie qu'on extrait les données de la feuille Adresse.</p>
 <pre><code>=INDEX(Adresse!A$1:D$10;MATCH(F$3;Adresse!A$1:A$10;0);MATCH(E4;Adresse!A$1:D$1;0))
 </code></pre>
@@ -402,8 +402,8 @@ Adresse! qui est devant la table choisie signifie qu'on extrait les données de 
 <p>J'ai l'impression à peu près fait le tour de Google Sheets en terme de fonctionnalités. Par contre, quant à Apps Scripts, je n'ai qu'effleuré la surface de son potentiel. A voir si j'en ai besoin dans ma vie.</p>
 <p>Le MON s'est plutôt bien passé, j'ai bien aimé (et beaucoup souffert psychologiquement pendant la partie Apps Scripts, moi qui ne suis pas un fan de programmation).</p>
 <h2>7. Sources <a id="section-7"></a></h2>
-<p><a href="excel-pratique.com">Formation en Excel</a> par <a href="http://excel-pratique.com">excel-pratique.com</a><br>
-<a href="https://www.sheets-pratique.com/">Formation en Google Sheets</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a><br>
+<p><a href="excel-pratique.com">Formation en Excel</a> par <a href="http://excel-pratique.com">excel-pratique.com</a>
+<a href="https://www.sheets-pratique.com/">Formation en Google Sheets</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a>
 <a href="https://www.sheets-pratique.com/fr/apps-script">Formation en Apps Scripts</a> par <a href="http://sheets-pratique.com">sheets-pratique.com</a></p>
 
 

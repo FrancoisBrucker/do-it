@@ -150,7 +150,7 @@
 <p>J'ai donc commencé par regarder ce qui avait déjà été fait sur le sujet, et on peut recenser le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/temps-1.1/">MON de Nicolas</a>, le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-3-1/">MON de Vladimir</a> et le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Sarah-Sebastien/pok/temps-2/">POK de Sarah</a>. Tous les trois on commencé en s'appuyant sur la même formation OpenClassroom intitulée <a href="https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java">Apprenez à programmer en Java</a>, qu'ils recommandent. J'ai donc suivi cette formation en un peu moins des 10h annoncées, et je vais essayer de la synthétiser ci-dessous afin de pouvoir réutiliser ce MON comme fiche mémoire au besoin.</p>
 <p>J'ai ensuite utilisé le temps restant pour lire le MON de Vladimir, qui a suivi une formation plus avancée sur Codecademy, disponible à <a href="https://www.codecademy.com/courses/learn-intermediate-java/informationals/welcome-to-learn-intermediate-java">ce lien</a>. Je n'ai pas suivi la formation moi-même par manque de temps, et le résumé de Valdimir m'a donc été très utile.</p>
 <h2>2. Les variables</h2>
-<p>Une <strong>variable</strong> est une sorte de conteneur qui renferme une donnée utilisée par un programme. Cette donnée s'appelle alors valeur, et il est de rigueur de donner à la variable associée un nom qui reflète la signification de cette valeur afin de rendre le code plus compréhensible.<br>
+<p>Une <strong>variable</strong> est une sorte de conteneur qui renferme une donnée utilisée par un programme. Cette donnée s'appelle alors valeur, et il est de rigueur de donner à la variable associée un nom qui reflète la signification de cette valeur afin de rendre le code plus compréhensible.
 Pour déclarer une variable, on utilise un mot clé qui dépend du type de la variable. On écrire par exemple :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">38</span><span class="token punctuation">;</span> <span class="token comment">// pour un entier</span>
 <span class="token keyword">double</span> taille <span class="token operator">=</span> <span class="token number">1.77</span><span class="token punctuation">;</span> <span class="token comment">// pour un décimal (on peut également utiliser float, mais moins précis)</span>
@@ -179,7 +179,7 @@ Pour déclarer une variable, on utilise un mot clé qui dépend du type de la va
 <p>C'est ce que l'on appelle le cast.</p>
 <h2>3. Les classes et les fonctions</h2>
 <p>Pour rappel, en Programmation Orientée Objet, une classe est un ensemble de variables (que l'on appelle attributs) et de fonctions (nommées méthodes) qui utilisent ces variables. En Java, l'ensemble du code doit se trouver à l'intérieur d'une classe, qui elle même est contenue dans un package.</p>
-<p>Lorsque l'on lance un programme en Java, c'est la fonction appelée <em>main</em> qui se lance. On dit que c'est le point d'entrée.<br>
+<p>Lorsque l'on lance un programme en Java, c'est la fonction appelée <em>main</em> qui se lance. On dit que c'est le point d'entrée.
 Voici un programme très simple pour découvrir la syntaxe de base :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">hello</span><span class="token punctuation">;</span>                                      <span class="token comment">// déclare le package hello</span>
 
@@ -193,7 +193,7 @@ Voici un programme très simple pour découvrir la syntaxe de base :</p>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Je ne me suis pas attardée sur cette partie car j'utilise un environnement de développement qui fait cela tout seul, mais à ce moment du cours sont présentées les différentes étapes et commandes pour exécuter un programme Java à partir du terminal. Je laisse cependant le lien <a href="https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java/6445721-ecrivez-une-fonction">ici</a> pour les lecteurs intéressés.</p>
-<p>Une autre bonne pratique en Java et en programmation de manière générale, est d'avoir un code organisé pour que la fonction main soit la plus courte possible et appelle uniquement les méthodes utiles, toutes écrites séparément.<br>
+<p>Une autre bonne pratique en Java et en programmation de manière générale, est d'avoir un code organisé pour que la fonction main soit la plus courte possible et appelle uniquement les méthodes utiles, toutes écrites séparément.
 Pour aider à cette organisation, il existe deux types de classes :</p>
 <ul>
 <li><strong>Les classes modèles</strong> : ce sont des types complexes qui regroupent différentes variables d'un même concept. La classe <em>String</em> avec l'ensemble de ses méthodes en est un exemple (contrairement à <em>int</em> ou <em>double</em> qui sont des primitifs). En général, elles modélisent des objets auxquels s'appliquent le programme.</li>
@@ -209,8 +209,8 @@ Pour aider à cette organisation, il existe deux types de classes :</p>
 <p>Pour appeler une méthode à agir sur une variable, on utilise la syntaxe suivante :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">variable <span class="token operator">=</span> variable<span class="token punctuation">.</span>mé<span class="token function">thode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">// on met les arguments nécessaires à la fonction entre les parenthèses le cas échéant</span>
 </code></pre>
-<p>Une variable ne peut être utilisée que dans l'environnement dans laquelle elle a été déclarée (une boucle, une fonction, une classe...). C'est ce que l'on appelle la <strong>portée</strong> de la variable. En général, on repère cet environnement grâce à des indicateurs d'ouverture et de fermeture. En Java, ce sont des <strong>accolades</strong>. Voici un schéma tiré de la formation suivie qui explique très bien ce principe :<br>
-<img src="schema_portee_variable.png"><br>
+<p>Une variable ne peut être utilisée que dans l'environnement dans laquelle elle a été déclarée (une boucle, une fonction, une classe...). C'est ce que l'on appelle la <strong>portée</strong> de la variable. En général, on repère cet environnement grâce à des indicateurs d'ouverture et de fermeture. En Java, ce sont des <strong>accolades</strong>. Voici un schéma tiré de la formation suivie qui explique très bien ce principe :
+<img src="schema_portee_variable.png">
 Cependant, une variable déclarée dans une classe peut par défaut être utilisée en dehors de celle-ci. Pour empêcher cela, on peut la restreindre en la précédant de la commande <em>private</em> (le contraire est le mot clé <em>public</em>). On peut faire de même avec une fonction pour empêcher son accès depuis une autre classe que celle dans laquelle elle a été déclarée. Il existe d'autres commandes pour contrôler de manière plus précise l'accès aux données.</p>
 <h2>4. Les boucles et les conditions</h2>
 <p>Comme dans la plupart des langages de programmation, on construit et structure les fonctions avec des boucles et des conditions. Voici la syntaxe en Java de ces outils :</p>
@@ -229,7 +229,7 @@ Cependant, une variable déclarée dans une classe peut par défaut être utilis
 <p><strong>Attention</strong> à bien choisir la condition de terminaison pour ne pas créer de boucles infinies !</p>
 </div></div>
 <ul>
-<li><strong>Les boucles 'for each'</strong><br>
+<li><strong>Les boucles 'for each'</strong>
 Elles fonctionnent comme les boucles for, mais lorsqu'on veut parcourir tous les éléments d'un tableau par exemple, dont on ne connaît pas la taille. On écrit alors :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> number<span class="token operator">:</span> monTableau<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -237,7 +237,7 @@ Elles fonctionnent comme les boucles for, mais lorsqu'on veut parcourir tous les
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li><strong>Les boucles conditionnelles</strong> (ou boucle while)<br>
+<li><strong>Les boucles conditionnelles</strong> (ou boucle while)
 L'instruction est alors répétée tant que la condition est vraie.</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -245,7 +245,7 @@ L'instruction est alors répétée tant que la condition est vraie.</li>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li><strong>Les boucles 'do... while'</strong><br>
+<li><strong>Les boucles 'do... while'</strong>
 C'est une variante de la boucle while classique, mais dans laquelle la condition se trouve à la fin du code. Ainsi, l'instruction de la boucle est forcément exécutée au moins une fois, même quand la condition est fausse. On écrit :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">do</span> <span class="token punctuation">{</span>
@@ -253,8 +253,8 @@ C'est une variante de la boucle while classique, mais dans laquelle la condition
 <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li><strong>Interruption de boucle</strong><br>
-Il est possible d'interrompre une boucle. Par exemple si l'on a trouvé la valeur que la boucle cherchait dans un tableau. Pour cela, on écrit une condition dans la boucle qui vérifie à chaque itération si la valeur cherchée a été trouvée; lorsque c'est le cas, on arrête les itérations avec la commande <em>'break'</em>.<br>
+<li><strong>Interruption de boucle</strong>
+Il est possible d'interrompre une boucle. Par exemple si l'on a trouvé la valeur que la boucle cherchait dans un tableau. Pour cela, on écrit une condition dans la boucle qui vérifie à chaque itération si la valeur cherchée a été trouvée; lorsque c'est le cas, on arrête les itérations avec la commande <em>'break'</em>.
 On peut également répéter k fois une action en voulant ignorer les itérations 3 et 7. On ajoute alors, dans la boucle et avant le code explicitant l'action, l'instruction suivante :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>k <span class="token operator">==</span> <span class="token number">3</span> <span class="token operator">||</span> k <span class="token operator">==</span> <span class="token number">7</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -262,7 +262,7 @@ On peut également répéter k fois une action en voulant ignorer les itération
 <span class="token punctuation">}</span>
 </code></pre>
 <ul>
-<li><strong>Les opérateurs</strong><br>
+<li><strong>Les opérateurs</strong>
 Afin de pouvoir construire des conditions pour la sous-partie suivante, voici des opérateurs courants, qu'il peut être utile de retenir :</li>
 </ul>
 <table>
@@ -316,7 +316,7 @@ Afin de pouvoir construire des conditions pour la sous-partie suivante, voici de
 </tbody>
 </table>
 <ul>
-<li><strong>Les conditions</strong><br>
+<li><strong>Les conditions</strong>
 Pour écrire une condition ou un enchaînement de conditions en Java, on utilise la syntaxe classique suivante :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -331,7 +331,7 @@ Pour écrire une condition ou un enchaînement de conditions en Java, on utilise
 <span class="token punctuation">}</span>
 </code></pre>
 <p>On peut utiliser les arguments rentrés en paramètre de la fonction pour créer les conditions. A noter que ces arguments sont en réalité sous forme d'un tableau d'arguments, il faut donc les appeler en conséquence.</p>
-<p>Il existe deux outils qui permettent dans certains cas de simplifier la rédaction des conditions.<br>
+<p>Il existe deux outils qui permettent dans certains cas de simplifier la rédaction des conditions.
 Premièrement, la commande <em>switch</em>. Imaginons que l'on veuille par exemple agir différemment selon le nombre d'arguments entrés. On pourrait écrire avec la méthode basique présentée ci-dessus :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -404,7 +404,7 @@ Premièrement, la commande <em>switch</em>. Imaginons que l'on veuille par exemp
 <span class="token punctuation">}</span>
 </code></pre>
 <h2>5. La Programmation Orientée Objet en Java</h2>
-<p>Pour comprendre le principe global de la POO, je vous renvoie vers mon <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-1.2/">MON 1.2 : Programmation orientée objet</a>. Ici, on va s'intéresser plus particulièrement à son implémentation en Java.<br>
+<p>Pour comprendre le principe global de la POO, je vous renvoie vers mon <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Agathe-Rabachou/mon/temps-1.2/">MON 1.2 : Programmation orientée objet</a>. Ici, on va s'intéresser plus particulièrement à son implémentation en Java.
 Voici le format d'une déclaration de <strong>classe</strong> en Java :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ExempleClasse</span> <span class="token punctuation">{</span>
   <span class="token class-name">String</span> attribut1<span class="token punctuation">;</span>
@@ -427,7 +427,7 @@ Voici le format d'une déclaration de <strong>classe</strong> en Java :</p>
       <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>On initialise toujours les attributs du constructeur grâce au mot-clé <em>this</em>.<br>
+<p>On initialise toujours les attributs du constructeur grâce au mot-clé <em>this</em>.
 De plus, il est possible de déclarer plusieurs constructeurs pour une même classe, par exemple dans le cas où l'un des attributs est identique pour un grand nombre d'éléments de la classe. Afin d'éviter les répétitions, on déclare alors un constructeur principal, et un secondaire dans lequel l'attribut en question est déjà renseigné et n'est plus une variable des objets.</p>
 <p>Une fois que tout cela est fait, on peut alors créer un objet de notre classe. On écrit, si l'on reprend l'exemple de classe précédent :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token class-name">Book</span> monLivre <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token string">"Harry Potter et le prisonnier d'Azkaban"</span><span class="token punctuation">,</span> <span class="token string">"J.K. Rowling"</span><span class="token punctuation">,</span> <span class="token number">444</span><span class="token punctuation">,</span> <span class="token string">"folio"</span><span class="token punctuation">)</span>
@@ -438,7 +438,7 @@ De plus, il est possible de déclarer plusieurs constructeurs pour une même cla
 <h2>6. L'héritage et le polymorphisme</h2>
 <p>Il existe deux notions importantes pour spécialiser des classes, que l'on va expliciter dans cette partie.</p>
 <ul>
-<li><strong>L'héritage</strong> :<br>
+<li><strong>L'héritage</strong> :
 C'est le fait de regrouper des attributs ou des méthodes communes à plusieurs classe dans une <em>classe mère</em>, puis de créer plusieurs <em>classes filles</em> qui récupèrent les propriétés de la classe mère et y ajoutent leurs spécialisations. Pour cela, on définit la classe mère comme vu précédemment, puis on crée une classe fille avec la syntaxe suivante :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClasseFille</span> <span class="token keyword">extends</span> <span class="token class-name">ClasseMere</span> <span class="token punctuation">{</span>
@@ -447,7 +447,7 @@ C'est le fait de regrouper des attributs ou des méthodes communes à plusieurs 
 </code></pre>
 <p>Plusieurs points sont importants : une classe fille ne peut hériter que d'une seule classe mère (l'inverse est faux); tous les champs de la classe mère sont hérités, et ils peuvent être manipulés selon leur accessibilité (comme présenté plus haut); on peut également appeler le constructeur de la classe mère dans la classe fille grâce au mot clé <em>super</em>.</p>
 <ul>
-<li><strong>Le polymorphisme</strong><br>
+<li><strong>Le polymorphisme</strong>
 C'est un concept qui permet d'adapter le comportement d'une méthode de la classe mère selon la classe fille depuis laquelle on l'appelle. Prenons un exemple :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Saluer</span> <span class="token punctuation">{</span>
@@ -480,7 +480,7 @@ C'est un concept qui permet d'adapter le comportement d'une méthode de la class
 <h2>7. Les collections</h2>
 <p>Cette partie présente les principaux moyens de stocker des piles de données.</p>
 <ul>
-<li><strong>Le tableau</strong> (ou array en anglais) :<br>
+<li><strong>Le tableau</strong> (ou array en anglais) :
 Il est ordonné et indexé à partir de 0. On le déclare en fournissant le type de variables qu'il stocke, des crochets et le nom de ces variables. Ensuite on l'instancie en lui attribuant un nombre d'emplacements qui s'initialisent automatiquement à 0 dans le cas d'entiers. Puis on peut accéder à ces emplacements et les modifier si besoin. Cela donne :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> notesElevesDoIT<span class="token punctuation">;</span>       <span class="token comment">// création du tableau</span>
@@ -495,7 +495,7 @@ notesELevesDoIt<span class="token punctuation">[</span><span class="token number
 </code></pre>
 <p>Il est également possible de remplir le tableau directement à sa création en ajoutant ses valeurs entre accolades, ou de créer des tableaux multidimensionnels en ajoutant des paires de crochets (pour faire des matrices par exemple).</p>
 <ul>
-<li><strong>La liste</strong> :<br>
+<li><strong>La liste</strong> :
 Elle n'a pas une taille fixe, elle est ordonnée et on ne peut y modifier que des variables existantes. Elle est obligatoirement vide au départ et se déclare comme suit :</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span>maListe <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -507,7 +507,7 @@ maListe<span class="token punctuation">.</span><span class="token function">remo
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>maListe<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// affiche la taille de la liste</span>
 </code></pre>
 <ul>
-<li><strong>L'ensemble</strong> (ou set) :<br>
+<li><strong>L'ensemble</strong> (ou set) :
 Il est non ordonné, ses éléments sont uniques.</li>
 </ul>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span>nomsPrenomsEleves <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// déclaration de l'ensemble</span>
@@ -534,9 +534,9 @@ nomsPrenomsEleves<span class="token punctuation">.</span><span class="token func
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Attention</strong>, il existe deux types pour les paramètres, et la différence est fondamentale.<br>
-Si l'on copie un objet de type <strong>valeur</strong>, comme un entier, d'une variable dans une autre, les deux variables sont indépendantes, on peut en modifier une sans changer l'autre.<br>
-A l'inverse, dans le cas d'un objet de type <strong>référence</strong>, comme une classe, lorsque l'on en crée une copie on crée simplement un autre pointeur qui renvoie en fait vers le même élément. Une modification sur cette copie modifie donc la classe originale.<br>
+<p><strong>Attention</strong>, il existe deux types pour les paramètres, et la différence est fondamentale.
+Si l'on copie un objet de type <strong>valeur</strong>, comme un entier, d'une variable dans une autre, les deux variables sont indépendantes, on peut en modifier une sans changer l'autre.
+A l'inverse, dans le cas d'un objet de type <strong>référence</strong>, comme une classe, lorsque l'on en crée une copie on crée simplement un autre pointeur qui renvoie en fait vers le même élément. Une modification sur cette copie modifie donc la classe originale.
 Ainsi, il faut faire très attention à ce que l'on fait des éléments dans une fonction, et notamment des éléments de types référence, au risque de faire des modifications plus larges sans le vouloir.</p>
 </div></div>
 <h2>9. La récursivité</h2>

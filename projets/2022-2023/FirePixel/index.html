@@ -114,11 +114,11 @@
 <p>Un tableau de $n \times m$ pixels est partagé entre plusieurs utilisateurs sur un écran. Les utilisateurs peuvent modifier les couleurs des cases parmi 16 couleurs disponibles. Le but est que plusieurs utilisateurs se coordonnent pour dessiner une image, ou remplacer celles des autres.</p>
 <h2>En Pratique</h2>
 <p>Le projet sera déployé sur un écran qui pourra être posé n'importe où dans Centrale. Celui-ci pourra par exemple être dans un lieu de pause comme à coté des distributeurs de café ou dans un lieu de passage.</p>
-<p>Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à l'application. Sur leur téléphone, ils peuvent choisir un pixel et une couleur, et appliquer la modification (qui sera alors affichée en temps réel sur l'écran principal) à l'aide d'un joystick.<br>
+<p>Les centraliens pourront s'approcher de l'écran et scanner un QRcode pour accéder à l'application. Sur leur téléphone, ils peuvent choisir un pixel et une couleur, et appliquer la modification (qui sera alors affichée en temps réel sur l'écran principal) à l'aide d'un joystick.
 Il existe deux possibilités de modification. Un mode pixel par pixel et un mode continu qui permet de tracer des lignes d'une couleur.</p>
 <p>16 utilisateurs peuvent interagir simultanément. Afin de savoir où l'on est sur l'écran, chaque utilisateur est représenté par une couleur et son pixel actuel est marqué par cette couleur.</p>
 <h2>Stack technologique</h2>
-<p>L'application nécessite un Front, un Back et une base de données.<br>
+<p>L'application nécessite un Front, un Back et une base de données.
 Pour la réaliser on utilise le stack suivant :</p>
 <ul>
 <li>Front-end : React.js avec Tailwind</li>
@@ -156,7 +156,7 @@ Pour la réaliser on utilise le stack suivant :</p>
 <h3>II. Première phase</h3>
 <p>Pour débuter ce projet, nous avons choisi de réaliser une <strong>première version</strong> de ce que nous souhaitions faire. Nous avions pour objectif de terminer cette version pour la soutenance de mi-projet, qui a eu lieu en janvier 2023. Cette partie du travail a été découpée en trois  temps : le maquettage, la réalisation du schéma d’entités et le développement.</p>
 <h4>1. Maquette</h4>
-<p>Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que <strong>l’interface utilisateur soit simple et intuitive</strong>. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.<br>
+<p>Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que <strong>l’interface utilisateur soit simple et intuitive</strong>. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.
 Nous avons donc réalisé une première maquette de la Web App sur Figma.</p>
 <p><img src="Photo_rapport/Maquette1.1.png" alt="Maquette1" title="Maquette1"></p>
 <p>Cette maquette est simple et épurée.</p>
@@ -185,13 +185,13 @@ Nous avons donc réalisé une première maquette de la Web App sur Figma.</p>
 <li>L’UX/UI</li>
 <li>L'interaction à travers le joystick</li>
 </ul>
-<p>L’UX/UI a été un problème tant <strong>l’application est singulière</strong>. Elle n’a pas vocation à afficher du contenu comme une application classique. Au contraire, elle affiche le moins de contenu possible sur le téléphone pour <strong>forcer les joueurs à lever la tête</strong> et à collaborer verbalement. Cela mène à la recherche de compromis. Faut-il créer une application <strong>type télécommande</strong> avec pleins de boutons à proximité mais sans souci d’esthétisme, ou, au contraire faut-il <strong>compartimenter l’application pour laisser l’utilisateur respirer</strong> ?<br>
+<p>L’UX/UI a été un problème tant <strong>l’application est singulière</strong>. Elle n’a pas vocation à afficher du contenu comme une application classique. Au contraire, elle affiche le moins de contenu possible sur le téléphone pour <strong>forcer les joueurs à lever la tête</strong> et à collaborer verbalement. Cela mène à la recherche de compromis. Faut-il créer une application <strong>type télécommande</strong> avec pleins de boutons à proximité mais sans souci d’esthétisme, ou, au contraire faut-il <strong>compartimenter l’application pour laisser l’utilisateur respirer</strong> ?
 Nous avons choisi la deuxième approche.</p>
 <p>Ensuite, le <strong>joystick</strong> a été un problème. <strong>Il a reçu plusieurs révisions</strong>. Nous avons utilisé un composant tiers, sans dépendance, qui contient le minimum de code possible. Il a fallu gérer le comportement du joystick et son interaction avec l’application de A à Z, ce qui nous a mené à créer différentes fonctions plus ou moins algorithmiques.</p>
 <p>Par exemple, le premier joystick permettait seulement d’atteindre 8 directions, alors que le joystick actuel est beaucoup plus fin. Pour réaliser ces itérations, nous avons tirées des enseignements du <strong>lean engineering</strong>. A chaque <strong>itération</strong>, on relevait un <strong>problème majeur</strong>. Puis, on essayait de régler ce problème à l’itération suivante jusqu'à finir sur un joystick plaisant à utiliser.</p>
 <h5>b. Back</h5>
 <p>Afin de pouvoir communiquer entre le front et le back, nous avons choisi d’utiliser la <strong>technologie de Websockets</strong>. Cela permet de conserver une <strong>interaction en quasi temps instantané</strong>. Mais, une des premières difficultés a été de bien comprendre cette technologie. Nous avons donc mis en place une petite application web pour comprendre comment il est possible de l’intégrer dans un projet.</p>
-<p>Une fois cette application faite, nous avions toutes les connaissances pour mettre en place la partie back-end du projet. Le <strong>premier objectif</strong> étant d’avoir quelque chose de <strong>fonctionnel</strong>, nous nous sommes limités aux fonctionnalités les plus importantes : <strong>transmettre l’information</strong> des téléphones à l’écran, sans nous soucier de la sauvegarde des données (ce qui sera une difficulté en plus lors de l’amélioration vers la deuxième version). Nous nous sommes donc entièrement passés de base de données. Les données nécessaires à faire fonctionner le projet - les adresses websockets, et positions des curseurs - étaient stockées dans la RAM. Nous n’avons pas spécialement besoin d’avoir une persistance de ces données donc l’utilisation de la RAM est suffisante.<br>
+<p>Une fois cette application faite, nous avions toutes les connaissances pour mettre en place la partie back-end du projet. Le <strong>premier objectif</strong> étant d’avoir quelque chose de <strong>fonctionnel</strong>, nous nous sommes limités aux fonctionnalités les plus importantes : <strong>transmettre l’information</strong> des téléphones à l’écran, sans nous soucier de la sauvegarde des données (ce qui sera une difficulté en plus lors de l’amélioration vers la deuxième version). Nous nous sommes donc entièrement passés de base de données. Les données nécessaires à faire fonctionner le projet - les adresses websockets, et positions des curseurs - étaient stockées dans la RAM. Nous n’avons pas spécialement besoin d’avoir une persistance de ces données donc l’utilisation de la RAM est suffisante.
 Il n’y a pas eu spécialement de difficultés liées au Back de notre projet jusque là.</p>
 <p>Enfin, nous avons déployé le travail réalisé sur le serveur OVH mis à notre disposition.</p>
 <h3>III. Tests utilisateurs</h3>
@@ -253,7 +253,7 @@ Il n’y a pas eu spécialement de difficultés liées au Back de notre projet j
 <p>La partie Back du projet, à la fin du premier déploiement, <strong>utilisait seulement un stockage en RAM</strong>, sans sauvegarde de l’écran dessiné. Ceci implique que si on recharge la page front, l’écran est entièrement effacé. Ce qui n’est pas optimal car l’objectif est de pouvoir garder une trace de ces dessins.</p>
 <p>La première étape a donc été de complètement restructurer le Back pour <strong>intégrer une base de données</strong>. Cette restructuration s’est décomposée en création des entités, création des services sur ces entités et liaison avec une base de données en PostgreSQL.</p>
 <p>Ainsi nous avons créé <strong>3 entités : Grid, Cursor et NewPixels</strong>. Chaque modification de la part d’un joueur est enregistrée dans la base de données. Pour bouger un curseur, il faut trouver le curseur associé au joueur, modifier cette entité et sauvegarder les modifications. Ce qui fait un <strong>grand nombre d’interactions avec la base de données</strong> et ralentit énormément le mouvement du joueur.</p>
-<p>Il a fallu faire un compromis sur ce que nous souhaitions stocker en base de données et ce qui ne nécessitait pas forcément d'avoir une trace dans la mémoire.<br>
+<p>Il a fallu faire un compromis sur ce que nous souhaitions stocker en base de données et ce qui ne nécessitait pas forcément d'avoir une trace dans la mémoire.
 Premièrement, nous avons décidé que le stockage de chaque nouveau pixel, n'apportait rien au projet, donc nous avons supprimé ces accès en mémoire. Mais le serveur restait encore trop lent.</p>
 <p>Parmi les 2 entités qui reste, on a les curseurs, dont la réelle persistence des données n'est pas nécessaire mais qui a besoin que la donnée soit gardée au moins pendant toute l'utilisation d'un joueur.</p>
 <p>Et il y a l'écran dont on veut absolument garder en mémoire une trace.</p>
@@ -261,8 +261,8 @@ Premièrement, nous avons décidé que le stockage de chaque nouveau pixel, n'ap
 <p>Pour les curseurs, nous avons simplement transféré toute la donnée du curseur dans la RAM. Pour l'écran, nous avons construit un composant de stockage RAM relié à la base de donnée. Ce composant met à jour la base de donnée de manière régulière (toute les 10 minutes). Le temps passé à stocker l'écran ne dépend plus du nombre d'utilisateur ni de la fréquence d'écriture sur l'écran.</p>
 <p>Grace à cette réorganisation de la partie back du projet, nous avons pu largement augmenté les performances serveur. Nous avons <strong>divisé par 28 le temps qu'il faut au serveur pour répondre</strong> tout en gardant une persistence de l'écran.</p>
 <h2>Lien</h2>
-<p>Notre code est disponible aux liens suivants :<br>
-<a href="https://github.com/Jean-Baptiste-DP/FirePixel-front">Front</a><br>
+<p>Notre code est disponible aux liens suivants :
+<a href="https://github.com/Jean-Baptiste-DP/FirePixel-front">Front</a>
 <a href="https://github.com/Jean-Baptiste-DP/FirePixel-back">Back</a></p>
 <p>Enfin, l'écran de FirePixel est disponible <a href="http://melisse.ovh1.ec-m.fr/#/screen">ici</a>.</p>
 

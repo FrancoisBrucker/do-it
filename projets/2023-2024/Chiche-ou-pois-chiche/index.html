@@ -122,10 +122,10 @@
 <h2 id="contexte"> Contexte et objectifs du projet</h2>
 <p>Ce projet a pour but de créer une version mobile du jeu de cartes &quot;Chiche ou Pois Chiche&quot;.  Ce projet provient d’un constat simple : après plusieurs parties du jeu de cartes, on retombe rapidement sur les mêmes questions et le jeu devient vite obsolète pour un joueur une fois qu’il a rencontré toutes les questions et connaît toutes les réponses. Notre idée serait donc de créer une version mobile du jeu pour pouvoir alimenter la base de données et ainsi offrir aux fervents joueurs de “Chiche ou pois Chiche”, de pouvoir y jouer indéfiniment.</p>
 <p>Par ailleurs, en terme de plus value apportée au jeu, une application mobile serait un moyen d'accroître sa visibilité, et faciliter son accès. En effet, à l’ère du digital, les jeux mobiles offrent une accessibilité sans précédent, qui permet aux utilisateurs de jouer n'importe où et à tout moment, contrairement aux jeux de cartes papier qui nécessitent d’avoir le jeu à portée de soi pour cela.</p>
-<p><img src="Image1.jpg" alt="Image jeu"><br>
+<p><img src="Image1.jpg" alt="Image jeu">
 <em>Image du jeu original</em></p>
 <h2 id="papier"> Comparaison avec le jeu papier</h2>
-<p>Le but est de bien connaître son partenaire de jeu, afin de poser les questions pertinentes auxquelles on pense qu’il aura la réponse et de gagner le plus de points. La partie se termine quand il n’y a plus de cartes dans aucun jeu des joueurs, et l’équipe gagnante est celle qui a le plus de points.<br>
+<p>Le but est de bien connaître son partenaire de jeu, afin de poser les questions pertinentes auxquelles on pense qu’il aura la réponse et de gagner le plus de points. La partie se termine quand il n’y a plus de cartes dans aucun jeu des joueurs, et l’équipe gagnante est celle qui a le plus de points.
 Les quelques nuances que nous avons apportées sont répertoriées dans ce tableau.</p>
 <table>
 <thead>
@@ -189,8 +189,8 @@ Les quelques nuances que nous avons apportées sont répertoriées dans ce table
 <li>Les joueurs ne comprenaient pas la règle de la pioche: ils croyaient que cette règle permettait de piocher une nouvelle carte dans un deck, et non pas piocher chez un adversaire.</li>
 <li>Le temps initial pour lire et répondre à la question (30 secondes) était bien trop court: souvent les joueurs se pressaient trop ce qui affectait l’expérience utilisateur.</li>
 </ul>
-<p>Ces tests nous ont beaucoup appris, et ont pointé des défauts dont nous avions pas pensé, étant trop le nez dans le projet. Cette prise de recul a été bénéfique.<br>
-Nous avons ainsi modifié le backlog de notre application pour mieux pallier aux remarques faites lors des tests. La première modification a été la création d’une fenêtre de confirmation des réponses. Cela a permis d’éviter le problème du joueur qui clique à côté de la réponse qu’il voulait sélectionner. Nous avons également changé le temps de lecture de la carte à 45 secondes au lieu de 30 secondes. Nous avons aussi ajouté un icône d'un voleur sur le bouton de pioche, pour préciser le fait que cette option permet de voler une carte dans le jeu d'un adversaire.<br>
+<p>Ces tests nous ont beaucoup appris, et ont pointé des défauts dont nous avions pas pensé, étant trop le nez dans le projet. Cette prise de recul a été bénéfique.
+Nous avons ainsi modifié le backlog de notre application pour mieux pallier aux remarques faites lors des tests. La première modification a été la création d’une fenêtre de confirmation des réponses. Cela a permis d’éviter le problème du joueur qui clique à côté de la réponse qu’il voulait sélectionner. Nous avons également changé le temps de lecture de la carte à 45 secondes au lieu de 30 secondes. Nous avons aussi ajouté un icône d'un voleur sur le bouton de pioche, pour préciser le fait que cette option permet de voler une carte dans le jeu d'un adversaire.
 Malgré la création de la fenêtre de confirmation de réponse, il y avait toujours un problème sur la confirmation de la bonne réponse. En effet, quelques fois, le joueur confirmait la bonne réponse mais ne gagnait pas de point. Cela est dû au fait que dans notre base de données Airtable, nous avons rentré la bonne réponse dans une colonne &quot;Bonne réponse&quot;, et pour vérifier si la réponse choisie est correcte, on compare l'élément dans la colonne &quot;Bonne réponse&quot; et celui dans la colonne de la proposition choisie. Le problème est que cette comparaison compare chaque caractère très rigoureusement. Donc les fautes de frappe posent problème, tout comme la sensibilité à la casse ou même un espace à la fin de la chaîne de caractère. Pour éviter cela, on doit simplement être rigoureux sur le renseignement des données dans la BDD. Nous avons écrit un petit script Python pour vérifier s'il y avait des problèmes dans la base de donnée (heureusement, le script a renvoyé 5 erreurs!). Pour éviter ce problème, nous aurions dû renseigner le numéro de la bonne réponse dans la colonne &quot;Bonne réponse&quot;, plutôt que le texte entier de la bonne réponse.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -278,7 +278,7 @@ sheet <span class="token operator">=</span> wb<span class="token punctuation">[<
 <p><video width="400" height="200" controls=""> <source src="demo.mp4" type="video/mp4"></video></p>
 <p>Et voici le lien vers un preview de notre application <a href="https://duc15dangvu.bubbleapps.io/version-test/page_de_connexion">ici</a>, avec lequel vous pourrez jouer !</p>
 <h3>Base de données Airtable</h3>
-<p>Pour la base de données, comme expliqué plus tôt, nous l'avons gérée avec Airtable.<br>
+<p>Pour la base de données, comme expliqué plus tôt, nous l'avons gérée avec Airtable.
 Elle contient donc les informations complémentaires à Bubble, c'est-à-dire l’ensemble des données liées aux questions. Il y  <strong>234 questions différentes aujourd'hui</strong> dans la table. Au total, <strong>200</strong> proviennent des questions du jeu de cartes initial, et nous en avons ajouté <strong>34</strong> que nous avons créés sur les thèmes <strong>Histoire</strong> et <strong>Sciences</strong>.</p>
 <h2 id="apprentissage"> Apprentissage et retour d'expérience</h2>
 <p>Ce projet nous a permis d'apprendre plusieurs choses. Tout d'abord, nous avons un retour sur le no-code, résumé dans le tableau ci-dessous:</p>
@@ -322,8 +322,8 @@ Elle contient donc les informations complémentaires à Bubble, c'est-à-dire l�
 <li><strong>Application de la méthode agile</strong>: On a appris à garder en tête le backlog et qu’il est parfois difficile de s’en tenir à la méthode jusqu'au bout. On a fait des US trop complexes, ce qui fait qu’on était tous sur la même feature (c’était un choix), mais on aurait dû s'en tenir à la méthode agile, qui stipule de faire des US courtes afin de les répartir en prenant compte de la vélocité de chacun.</li>
 </ul>
 <h2 id="capitalisation"> Capitalisation et suite à donner</h2>
-<p>Pour clôturer ce projet, nous pouvons nous questionner sur son avenir. Une des tâches à faire est d'enrichir la base de donnée Airtable afin de rendre le jeu plus pérenne. Il faut également faire tester le jeu à un public plus large. Une des solutions serait de rendre le jeu accessible en ligne, via une plateforme multijoueur, qui permettrait de jouer sur plusieurs téléphones en même temps.<br>
-L'implémentation du dé peut aussi être pertinent, car cette règle ajoute de l'aléatoire ce qui rend le jeu plus amusant.<br>
+<p>Pour clôturer ce projet, nous pouvons nous questionner sur son avenir. Une des tâches à faire est d'enrichir la base de donnée Airtable afin de rendre le jeu plus pérenne. Il faut également faire tester le jeu à un public plus large. Une des solutions serait de rendre le jeu accessible en ligne, via une plateforme multijoueur, qui permettrait de jouer sur plusieurs téléphones en même temps.
+L'implémentation du dé peut aussi être pertinent, car cette règle ajoute de l'aléatoire ce qui rend le jeu plus amusant.
 Comme nous l'avons mentionné précédemment, il existe plusieurs inconvénients au low-code, qui pourrait entraver un développement futur de l'application. Il pourrait être intéressant de passer sur une méthode de programmation &quot;dure&quot;, pour rendre le jeu plus viable pour l'avenir.</p>
 <!-- ## Introduction
 

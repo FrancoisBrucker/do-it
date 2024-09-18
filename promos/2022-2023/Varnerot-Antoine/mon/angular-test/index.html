@@ -140,7 +140,7 @@
 <li>la programmation par les tests qu'on a vu en cours du temps 3</li>
 <li>Angular que j'ai pu utiliser dans des projets</li>
 </ul>
-<p>Sur le site d'Angular, il y a une partie &quot;Testing&quot;, je vais essayer de suivre le tuto qu'il fournisse :<br>
+<p>Sur le site d'Angular, il y a une partie &quot;Testing&quot;, je vais essayer de suivre le tuto qu'il fournisse :
 <a href="https://angular.io/guide/testing">https://angular.io/guide/testing</a></p>
 <p>Prérequis (selon le tuto):</p>
 <ul>
@@ -181,7 +181,7 @@ TOTAL: <span class="token number">18</span> FAILED, <span class="token number">1
   <figcaption>Résultat des tests du projet 3a</figcaption>
 </figure>
 <p>Les fichiers de tests dans Angular sont tous les fichiers qui ont l'extension <code>.spec.ts</code>.</p>
-<p>Il y a 18 erreurs mais il y a quand même 11 succès ^^.<br>
+<p>Il y a 18 erreurs mais il y a quand même 11 succès ^^.
 On va essayer de comprendre comment on peut résoudre ces erreurs et comment implémenter d'autres tests.</p>
 <h2>Réalisation</h2>
 <p>En regardant de plus près les erreurs, il y en avait beaucoup qui était très simple à résoudre. En effet, il n'y avait pas d'erreur dans le code en lui-même mais le fichier qui était exécuté pour faire le test ne disposait pas de toutes les informations. Par exemple, il n'y avait pas le module pour faire des requêtes HTTP. Je l'ai donc rajouté avant de réaliser tous les tests :</p>
@@ -200,12 +200,12 @@ On va essayer de comprendre comment on peut résoudre ces erreurs et comment imp
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Après avoir réalisé tout ces imports manquants, il me restait que 5 erreurs.</p>
-<h1>J'ai aussi rajouté l'option <code>--code-coverage</code> pour savoir si tout mon code était bien testé.<br>
-Résultat :<br>
-=============================== Coverage summary ===============================<br>
-Statements   : 57.04% ( 174/305 )<br>
-Branches     : 9.52% ( 2/21 )<br>
-Functions    : 48.67% ( 55/113 )<br>
+<h1>J'ai aussi rajouté l'option <code>--code-coverage</code> pour savoir si tout mon code était bien testé.
+Résultat :
+=============================== Coverage summary ===============================
+Statements   : 57.04% ( 174/305 )
+Branches     : 9.52% ( 2/21 )
+Functions    : 48.67% ( 55/113 )
 Lines        : 57.23% ( 174/304 )</h1>
 <h2>Ajouter des tests personnalisés</h2>
 <p>Il suffit d'utiliser les 3 fonctions suivantes pour implémenter un test :</p>

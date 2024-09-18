@@ -166,11 +166,11 @@
 <ol>
 <li>Mise en ligne de l'API</li>
 </ol>
-<p>L'API et le front-ent étant décomposés en deux dossier différents, on commence d'abord par mettre en ligne l'API sur l'OVH.<br>
+<p>L'API et le front-ent étant décomposés en deux dossier différents, on commence d'abord par mettre en ligne l'API sur l'OVH.
 Tout d'abord dans notre API, on replace le port dé déploiement par défaut par un port géré par l'OVH. Dans notre fichier <code>server.js</code> on remplace le port 3000 par le 8080 comme suit:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token function">normalizePort</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token string">'8080'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>On voudra lancer la commande <code>nodemon serve</code> sur notre OVH une fois les fichiers déployés, mais l'OVH ne reconnait pas la commande nodemon directement, cependant il reconnait les commandes npm.<br>
+<p>On voudra lancer la commande <code>nodemon serve</code> sur notre OVH une fois les fichiers déployés, mais l'OVH ne reconnait pas la commande nodemon directement, cependant il reconnait les commandes npm.
 Pour pouvoir lancer la commande nodemon, il faut donc la renseigner dans notre fichier <code>package.json</code>:</p>
 <pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json">scripts"<span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span>
@@ -182,7 +182,7 @@ Pour pouvoir lancer la commande nodemon, il faut donc la renseigner dans notre f
 <ol start="2">
 <li>Mise en ligne du front</li>
 </ol>
-<p>Maintenant que notre API est en ligne sur l'OVH, il faut relier le front-end à l'API en changeant l'adresse des requêtes.<br>
+<p>Maintenant que notre API est en ligne sur l'OVH, il faut relier le front-end à l'API en changeant l'adresse des requêtes.
 Dans <code>/src/app/services/music.service.ts</code>, on va remplacer les URL par ceux de l'API en ligne comme suit:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">getMusics</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://node.origan.ovh1.ec-m.fr:8080/api/musics</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
@@ -194,7 +194,7 @@ Dans <code>/src/app/services/music.service.ts</code>, on va remplacer les URL pa
   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span>post<span class="token operator">&lt;</span>any<span class="token operator">></span><span class="token punctuation">(</span>route<span class="token punctuation">,</span> newMusic<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>On build notre application localement avec la commande <code>npm run build</code>. Cela va nous générer les fichiers nécessaire à déployer.<br>
+<p>On build notre application localement avec la commande <code>npm run build</code>. Cela va nous générer les fichiers nécessaire à déployer.
 Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous: <code>/projet3a</code>)</p>
 <p>On supprime au prélable sur l'OVH tous les fichiers du dossier <code>/www</code>, puis on colle tout le contenu de notre dossier dans ce dernier.</p>
 <p>Notre site est désormais en ligne, et en se connectant on remarque que le front-end fonctionne correctement et communique bien avec l'API puisque les infos du feed de musique ont bien été collectées depuis MongoDB</p>
@@ -206,7 +206,7 @@ Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous
 <li>Utilisation de Docker (docker-compose)</li>
 </ol>
 <p>Il est dans notre cas possible d'utiliser l'outil Docker Compose pour créer une application multi-conteneurs avec le front et l'API.</p>
-<p>Tout d'abord il nous faut définir le Dockerfile pour l'API.<br>
+<p>Tout d'abord il nous faut définir le Dockerfile pour l'API.
 Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</code> puis on copie le code suivant:</p>
 <pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /usr/src/app/front</span>

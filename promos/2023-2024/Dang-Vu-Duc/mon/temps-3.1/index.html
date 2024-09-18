@@ -169,7 +169,7 @@
 <h3>Présentation des éléments de base du module</h3>
 <p>Nous allons commencer par présenter les éléments de base de cette bibliothèque. La première classe à connaître est la classe <strong>PdfFileReader</strong>. Les objets de cette classe permettent d'intégrer dans le code Python un document PDF. Ces objets ont différents attributs, correspondants à différentes caractéristiques du document en question. Elles ont également plusieurs méthodes pour effectuer des opérations sur le document.</p>
 <p>Dans la suite de cette section, nous nous appuierons sur deux documents PDF, enregistrés sous les noms de <em>PDF test 1.pdf</em> et <em>PDF test 2.pdf</em>. Ces documents sont des travaux que j'ai effectué lors de ma deuxième année.</p>
-<p>Pour ouvrir les documents PDF et les associer à des objets de la classe <strong>PdfFileReader</strong>, il faut d'abord les ouvrir avec la fonction <em>open</em>, en précisant en argument le paramètre <em>rb</em>, qui permet de lire en binaire le fichier. Ensuite, on créé l'objet en appellant la classe <strong>PdfFileReader</strong> du module <strong>PyPDF2</strong>.<br>
+<p>Pour ouvrir les documents PDF et les associer à des objets de la classe <strong>PdfFileReader</strong>, il faut d'abord les ouvrir avec la fonction <em>open</em>, en précisant en argument le paramètre <em>rb</em>, qui permet de lire en binaire le fichier. Ensuite, on créé l'objet en appellant la classe <strong>PdfFileReader</strong> du module <strong>PyPDF2</strong>.
 Une fois que l'on a cet objet, on peut récupérer ses attributs et utiliser les méthodes associées.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pdfFile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'PDF test 2.pdf'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
 pdfReader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdfFile<span class="token punctuation">)</span>
@@ -391,7 +391,7 @@ CentraleMarseille
 <p>Le texte d'un document Word est décomposé en paragraphes, qui se terminent à un retour à la ligne. Dans ces paragraphes, on y trouve des objets de la classe <strong>Runs</strong> qui correspondent à du texte de la même police. Par exemple, dans le texte suivant:</p>
 <p><img src="Image5.png" alt="Image5"></p>
 <p>on y trouve 6 objets de la classe <strong>Runs</strong>. Chacun de ces objets ont des attributs que l'ont peut modifier. En voici une liste:</p>
-<p><img src="Image6.png" alt="Image6"><br>
+<p><img src="Image6.png" alt="Image6">
 <em>Source: <a href="https://automatetheboringstuff.com/2e/chapter15/">Automate the boring stuff with Python</a></em></p>
 <p>On peut changer chacun de ces attributs en True ou False.</p>
 <p>L'attribut <em>paragraphs</em> de la classe <strong>Document</strong> permet de récupérer une liste de tout les paragraphes du documents. Chaque objet de la classe <strong>Paragraphs</strong> a un attribut <em>runs</em>, qui est une liste d'objets de la classe <strong>Runs</strong>.</p>

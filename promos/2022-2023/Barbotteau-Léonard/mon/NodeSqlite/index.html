@@ -123,10 +123,10 @@
 <p>Le Back-end avec Node.js, puis la base de données Sqlite</p>
 <!-- fin résumé -->
 <h2>Sources</h2>
-<p><a href="https://www.youtube.com/watch?v=09tWCISVU70">Un tuto youtube sur Node.js</a><br>
-<a href="https://www.youtube.com/watch?v=nf0FvGwAQBg">Un tuto youtube sur la programmation asynchrone en Javascript</a><br>
-<a href="https://www.linuxtricks.fr/wiki/sqlite-l-essentiel-sur-cette-base-de-donnees-cli-sql-php">De la documentation sur Sqlite</a><br>
-<a href="https://expressjs.com/fr">La documentation sur express</a><br>
+<p><a href="https://www.youtube.com/watch?v=09tWCISVU70">Un tuto youtube sur Node.js</a>
+<a href="https://www.youtube.com/watch?v=nf0FvGwAQBg">Un tuto youtube sur la programmation asynchrone en Javascript</a>
+<a href="https://www.linuxtricks.fr/wiki/sqlite-l-essentiel-sur-cette-base-de-donnees-cli-sql-php">De la documentation sur Sqlite</a>
+<a href="https://expressjs.com/fr">La documentation sur express</a>
 <a href="https://openai.com/api/">Une IA qui répond aux questions sépcifiques sur l'informatique avec une justesse étonnante</a></p>
 <h3>Introduction avec la programmation synchrone vs la programmation asynchrone.</h3>
 <p>D'après mes recherches, pour bien comprendre l'objet de ce MON il faut d'abord bien comprendre les notions de programmation synchrone/asynchrone.</p>
@@ -154,13 +154,13 @@ const r1 = readLine.createInterface({
 <h3>Qu'est ce que Node.js?</h3>
 <p>Node.js est un environnement d'exécution JavaScript qui permet de faire des applications web côté serveur. On peut utiliser JavaScript non seulement dans son navigateur, mais aussi sur son serveur web.</p>
 <h3>A quoi sert Node.js?</h3>
-<p>Node.js est très populaire pour la création de serveurs web et de services en temps réel en raison de sa performance et de sa flexibilité.<br>
+<p>Node.js est très populaire pour la création de serveurs web et de services en temps réel en raison de sa performance et de sa flexibilité.
 Node.js permet également de construire des applications full-stack (c'est-à-dire avec une interface utilisateur côté client et un serveur côté serveur) en utilisant le même langage de programmation (JavaScript) sur les deux côtés.</p>
 <h3>Comment utiliser Node.js ?</h3>
-<p>Pour utiliser Node.js, on peut écrire des scripts Node.js dans un éditeur de texte et les exécuter à l'aide de la commande &quot;node&quot; dans son terminal.<br>
+<p>Pour utiliser Node.js, on peut écrire des scripts Node.js dans un éditeur de texte et les exécuter à l'aide de la commande &quot;node&quot; dans son terminal.
 On peut également utiliser Node.js avec des frameworks tels que Express pour créer des applications web plus complexes. Ce sera le cas dans mon cours et pour la réalisation du POK.</p>
 <h3>Les fonctionnalités qu'Express peut fournir</h3>
-<p>Explorant ce qu'est le back-end, les premières questions qui me viennent à l'esprit sont : à quoi cela sert de faire le lien entre le serveur et le client et comment le faire grâce à Express?<br>
+<p>Explorant ce qu'est le back-end, les premières questions qui me viennent à l'esprit sont : à quoi cela sert de faire le lien entre le serveur et le client et comment le faire grâce à Express?
 Nous allons le voir ici en listant les fonctionnalités d'Express</p>
 <ul>
 <li>
@@ -168,7 +168,7 @@ Nous allons le voir ici en listant les fonctionnalités d'Express</p>
 <p>La définition de route s'écrit de cette manière:</p>
 <pre><code>app.METHOD(PATH, HANDLER)
 </code></pre>
-<p>Avec <strong>app</strong> une instance d'express, <strong>METHOD</strong> une méthode de demande HTTP, <strong>PATH</strong> un chemin sur le serveur et <strong>HANDLER</strong> la fonction exécutée lorsque la route est mise en correspondance.<br>
+<p>Avec <strong>app</strong> une instance d'express, <strong>METHOD</strong> une méthode de demande HTTP, <strong>PATH</strong> un chemin sur le serveur et <strong>HANDLER</strong> la fonction exécutée lorsque la route est mise en correspondance.
 Express nous permet de créer des routes pour notre serveur, qui sont des URL spécifiques que votre serveur peut gérer. Par exemple, on peut créer une route &quot;/&quot; qui gère les requêtes à la racine de son site, ou une route &quot;/api/users&quot; qui gère les requêtes à une API utilisateur.</p>
 <p>On va prendre un exemple avec le code suivant:</p>
 <pre><code>app.get('/partitions/:userId', (req, res) =&gt; {
@@ -235,7 +235,7 @@ const preferences = req.body.preferences;
   res.send({ message: 'Preferences saved' });
 });
 </code></pre>
-<p>Les options du cookies contiennent <strong>maxAge</strong> qui définit la durée de vie du cookie en millisecondes, et <strong>httpOnly</strong> qui précise que le cookie ne peut être accédé que par le serveur ce qui peut prévenir des attaques.<br>
+<p>Les options du cookies contiennent <strong>maxAge</strong> qui définit la durée de vie du cookie en millisecondes, et <strong>httpOnly</strong> qui précise que le cookie ne peut être accédé que par le serveur ce qui peut prévenir des attaques.
 Quand l'utilisateur enverra une demande au serveur, le cookie sera envoyé simultanément et on pourra accéder aux préférences de l'utilisateur à l'aide de la propriété <strong>req.cookies</strong>:</p>
 <pre><code>app.get('/preferences', (req, res) =&gt; {
   // Récupérer les préférences de l'utilisateur à partir du cookie
@@ -248,7 +248,7 @@ Quand l'utilisateur enverra une demande au serveur, le cookie sera envoyé simul
 </ul>
 <h2>La base de données</h2>
 <h3>La base de données SQLite fonctionnant sous Express</h3>
-<p>Je vais désormais expliquer comment développer une base de données Sqlite et la faire fontionner sous Express<br>
+<p>Je vais désormais expliquer comment développer une base de données Sqlite et la faire fontionner sous Express
 Pour ceci suivez ces étapes:</p>
 <ol>
 <li>Installez SQLite et le module Sqlite pour Node.js avec npm:</li>

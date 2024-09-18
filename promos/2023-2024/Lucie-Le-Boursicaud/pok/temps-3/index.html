@@ -157,8 +157,8 @@
 <h3>Introduction</h3>
 <p>Le &quot;Jeu de la pastèque&quot; ou <em>Suika Game</em> est un jeu vidéo japonais qui est sorti en décembre 2021 au Japon. Il est diffusé au reste du monde en octobre 2023 et devient un véritable phénomène très relié par les réseaux sociaux notamment par TikTok.</p>
 <h5>But du jeu</h5>
-<p>Le joueur doit remplir une jarre avec des fruits, à chaque fois qu'il en jette un, il gagne des point. L'objectif est de déverser un maximum de fruits afin d'obtenir un meilleur score. Mais lorsque deux fruits identiques entrent en contact, ils fusionnent pour donner un fruit plus gros. Le plus petit fuits est une myrtille et le plus gros une pastèque (d'où le nom du jeu). Dès lors qu'un fruit dépasse de la jarre alors la partie est terminé.<br>
-Ce jeu s'est beaucoup inspiré du mécanisme de 2048 qui a été un gros succès il y a déjà quelques années.<br>
+<p>Le joueur doit remplir une jarre avec des fruits, à chaque fois qu'il en jette un, il gagne des point. L'objectif est de déverser un maximum de fruits afin d'obtenir un meilleur score. Mais lorsque deux fruits identiques entrent en contact, ils fusionnent pour donner un fruit plus gros. Le plus petit fuits est une myrtille et le plus gros une pastèque (d'où le nom du jeu). Dès lors qu'un fruit dépasse de la jarre alors la partie est terminé.
+Ce jeu s'est beaucoup inspiré du mécanisme de 2048 qui a été un gros succès il y a déjà quelques années.
 Voici une capture d'écran du jeu qui est disponible sur téléphone :</p>
 <div style="display:flex">
 <div><img src="jeu_de_pasteque.png"></div>
@@ -178,7 +178,7 @@ Voici une capture d'écran du jeu qui est disponible sur téléphone :</p>
 <li>[x] Générer aléatoirement plusieurs tailles de rond (2H)</li>
 </ul>
 <h3>1. Découvrir rapidement Matters.js</h3>
-<p><a href="https://brm.io/matter-js/">Matter.js</a> est une bibliothèque JavaScript open-source qui permet la création de simulations physiques en 2D. Il s'agit d'une bibliothèque assez populaire dans le domaine du développement de jeux car elle est facile à utiliser et est très performante. Elle permet de simuler des objets, des collisions, des forces et la gravité, ce qui va être utile dans la création du jeu.<br>
+<p><a href="https://brm.io/matter-js/">Matter.js</a> est une bibliothèque JavaScript open-source qui permet la création de simulations physiques en 2D. Il s'agit d'une bibliothèque assez populaire dans le domaine du développement de jeux car elle est facile à utiliser et est très performante. Elle permet de simuler des objets, des collisions, des forces et la gravité, ce qui va être utile dans la création du jeu.
 Je me suis rendue sur une <a href="https://brm.io/matter-js/">documentation</a> pour comprendre comment fonctionne cette bibliothèque. J'ai donc regardé une première vidéo <a href="https://www.youtube.com/watch?v=urR596FsU68&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh">Introduction to Matter.js</a> et la deuxième <a href="https://www.youtube.com/watch?v=uITcoKpbQq4&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh&amp;index=21">Introduction to Matter.js Continued</a>.</p>
 <h3>2. Créer l'environnement de code</h3>
 <p>Je me crée un dossier <em>Pasteque</em> et j'initialise mon projet avec :</p>
@@ -195,7 +195,7 @@ npm install matter-js
 </div>
 <p>J'ai donc utilisé <a href="https://vitejs.dev/">Vite</a> pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.</p>
 <h3>3. Créer la boite du jeu</h3>
-<p>Maintenant que j'ai mon environnement je peux commencer à coder le jeu.<br>
+<p>Maintenant que j'ai mon environnement je peux commencer à coder le jeu.
 La première chose à créer est donc une boite, pour ça j'ai juste suivi la <a href="https://brm.io/matter-js/">documentation</a> qui explique comment ajouter des corps aux mondes ce qui m'a donné cela :</p>
 <div style="display:flex">
 <div><img src="boite.png"></div>
@@ -555,7 +555,7 @@ window.onkeyup = (event) => {
 <div><img src="déplacementetmur2.png"></div>
 </div>
 <h2>7. Faire tomber le fruit avec la barre espace</h2>
-<p>L'ojectif est clair : lorsque l'on appuie sur la barre espace, le fruit &quot;se réveille&quot; et tombe.<br>
+<p>L'ojectif est clair : lorsque l'on appuie sur la barre espace, le fruit &quot;se réveille&quot; et tombe.
 Pour ça on utilise encore l'écouteur d'évenement <strong>onkeydown</strong> et on va devoir importer <strong>Sleeping</strong> depuis la bibliothèque matter.js.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body, Sleeping} from 'matter-js';
 </code></pre>
@@ -588,7 +588,7 @@ Pour ça on utilise encore l'écouteur d'évenement <strong>onkeydown</strong> e
 };
 
 </code></pre>
-<p>Notre fruit tombe quand on appuie sur espace !<br>
+<p>Notre fruit tombe quand on appuie sur espace !
 Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lorsque le premier fruit est tombé. J'ai donc rajouté l'appel à la fonction <strong>ajouterFruit()</strong> à la suite de mon cas.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">case "Space":
   Sleeping.set(monFruit, false);
@@ -685,7 +685,7 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
 <div><img src="disparition.png"></div>
 <div><img src="disparition2.png"></div>
 </div>
-<p>Lorsque deux fruits identiques se touchent ils disparaisent.<br>
+<p>Lorsque deux fruits identiques se touchent ils disparaisent.
 Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collision. Comment savoir le fruit prochain ? Et bien le tableau <strong>FRUITS</strong> doit être ordonné par croissance des fruits pour nous faciliter la tâche. On va donc récupérer l'<strong>index</strong> du fruit qui est rentré en collision et l'incrémenter de 1 pour obtenir l'index du nouveau fruit et extraire ses propriétés du tableau.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
@@ -714,7 +714,7 @@ Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collisi
 <div><img src="colission1.png"></div>
 <div><img src="colission2.png"></div>
 </div>
-<p>Désormais quand deux fruits se rencontrent, le fruit suivant apparait !<br>
+<p>Désormais quand deux fruits se rencontrent, le fruit suivant apparait !
 Par contre il faut que l'on fasse attention au cas ou deux derniers fruits se rencontrent. Dans le jeu les deux pastèques disparaisent mais rien ne réapparait. On va donc rajouter cette règle dans notre fonction.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
@@ -798,7 +798,7 @@ World.add(world, [sol,murgauche,murdroite,lignehaut]);
 <div><img src="artichoke.png"></div>
 <div><img src="pumpkin.png"></div>
 </div>
-<p>Le set n'est pas parfait et il y a les filligrames de Canva mais si j'ai le temps j'essaierais de trouver quelque chose de mieux à la fin.<br>
+<p>Le set n'est pas parfait et il y a les filligrames de Canva mais si j'ai le temps j'essaierais de trouver quelque chose de mieux à la fin.
 On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple <em>garlic.png</em> pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function ajouterFruit(){
     const randomFruit = randomFruit();

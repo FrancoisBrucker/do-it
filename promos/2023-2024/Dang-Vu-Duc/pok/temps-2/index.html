@@ -151,7 +151,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Il est possible de tester l'implémentation du jeu sur le lien suivant: <a href="https://duc-dgv.itch.io/jeu-dchecs">Jeu d'échecs avec Python</a><br>
+<p>Il est possible de tester l'implémentation du jeu sur le lien suivant: <a href="https://duc-dgv.itch.io/jeu-dchecs">Jeu d'échecs avec Python</a>
 Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-2">codes du POK2</a></p>
 </div></div>
 <h2>Introduction</h2>
@@ -809,7 +809,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <li>Capturer la pièce qui met en échec,</li>
 <li>Interposer une pièce entre le roi est la pièce qui met en échec.</li>
 </ul>
-<p>La méthode <em>IsCheckmate</em> gère ces cas un par un, et renvoie un booléen qui indique s'il y a uun échec et mat ou pas.<br>
+<p>La méthode <em>IsCheckmate</em> gère ces cas un par un, et renvoie un booléen qui indique s'il y a uun échec et mat ou pas.
 Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais il est intéressant de noter que cette méthode utilise la plupart des méthodes ci-avant.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -998,7 +998,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 <p>Notons que cette fonction d'évaluation est centrale dans les meilleurs robots d'échecs. Elle est ici loin d'être complète, mais comme on s'intéresse seulement à des échecs et mat, il est inutile de pousser plus loin cette méthode.</p>
 </div></div>
 <h4>L'algorithme de résolution</h4>
-<p>Nous arrivons enfin à l'algorithme de résolution. Cet algorithme va utiliser toutes les méthodes précédemment présentées pour trouver un échec et mat en quelques coups. Cette méthode prend en entrée une position en notation FEN, un nombre de coups à explorer (qui est la profondeur de calcul) et renvoie une liste de coups qui correspond à l'échec et mat trouvé.<br>
+<p>Nous arrivons enfin à l'algorithme de résolution. Cet algorithme va utiliser toutes les méthodes précédemment présentées pour trouver un échec et mat en quelques coups. Cette méthode prend en entrée une position en notation FEN, un nombre de coups à explorer (qui est la profondeur de calcul) et renvoie une liste de coups qui correspond à l'échec et mat trouvé.
 Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https://fr.wikipedia.org/wiki/Algorithme_minimax">l'algorithme Minimax</a>. Il est inutiles d'expliquer comment fonctionne cet algorithme en détail car beaucoup de documentation est disponible sur ce sujet, mais le principe général repose sur le fait que l'algorithme trouve les mouvements qui permet de minimiser le score pour un joueur et maximiser ce même score pour l'autre joueur. Ce score est trouvé grâce à la méthode <em>evaluate</em>. Notons également que j'ai également implémenter <a href="https://fr.wikipedia.org/wiki/%C3%89lagage_alpha-b%C3%AAta">l'élagage &quot;Alpha-Beta&quot;</a> qui permet de réduire considérablement le temps d'exécution, en coupant les branches de l'arbre qui sont inutiles à explorer.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -1146,10 +1146,10 @@ Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https:/
 <h2>Démonstration du code</h2>
 <p>Pour vérifier si ce code fonctionne correctement, j'ai cherché des problèmes de mat en 2 et de mat en 3 sur Internet, et j'ai fait tourner l'algorithme sur ces positions. Voici un exemple sur cette position:</p>
 <p><img src="Image1.png" alt="Image1"></p>
-<p>L'exécution de l'algorithme sur cette position donne la ligne suivante: <code>['Qd5+', 'nxd5', 'Rxc6#']</code> en 55.5 secondes. D'après l'ordinateur le plus puissant du monde &quot;Stockfish&quot;, c'est bien la solution! (Notons le brillant sacrifice de Dame). Plusieurs lignes sont possibles, celle qui est donnée n'en est qu'un exemple.<br>
+<p>L'exécution de l'algorithme sur cette position donne la ligne suivante: <code>['Qd5+', 'nxd5', 'Rxc6#']</code> en 55.5 secondes. D'après l'ordinateur le plus puissant du monde &quot;Stockfish&quot;, c'est bien la solution! (Notons le brillant sacrifice de Dame). Plusieurs lignes sont possibles, celle qui est donnée n'en est qu'un exemple.
 Voici un autre exemple d'un mat en 3 sur la position suivante:</p>
 <p><img src="Image2.png" alt="Image2"></p>
-<p>L'algorithme fournit la ligne suivante: <code>['Ke2', 'nc1+', 'Ke3', 'na2', 'd4#']</code> en 24 minutes. Encore une fois, c'est la bonne réponse. On remarque cependant que la résolution a été bien plus longue. Ceci est dû au fait qu'il y a beaucoup plus de pièces sur l'échiquier, et le nombre de mouvements explorés est également beaucoup plus élevé que le cas précédent.<br>
+<p>L'algorithme fournit la ligne suivante: <code>['Ke2', 'nc1+', 'Ke3', 'na2', 'd4#']</code> en 24 minutes. Encore une fois, c'est la bonne réponse. On remarque cependant que la résolution a été bien plus longue. Ceci est dû au fait qu'il y a beaucoup plus de pièces sur l'échiquier, et le nombre de mouvements explorés est également beaucoup plus élevé que le cas précédent.
 Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivante:</p>
 <p><img src="Image3.png" alt="Image3"></p>
 <p>L'algorithme résout ce problème en 12 minutes et 57 secondes: <code>['Bh5', 'kxh5', 'Kg7', 'h6', 'Kf6', 'kh4', 'Kg6#']</code>. Notons que l'exécution est gérable grâce au fait qu'il y ait peu de pièces sur l'échiquier, et que les coups des Noirs soient forcés après le mouvement Fou H5. En réalité, j'ai essayé de faire tourner l'algorithme sur d'autres problèmes de Mat en 4 pendant plusieurs heures, sans avoir de résultat. Le mat en 4 est donc la limite, ce qui traduit le manque d'optimisation de l'algorithme.</p>
@@ -1667,11 +1667,11 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </div>
 <h3>Test du programme</h3>
 <p>Voici quelques captures d'écran de ce que le programme produit:</p>
-<p><img src="Image5.png" alt="Image partie normale"><br>
+<p><img src="Image5.png" alt="Image partie normale">
 <em>Image d'une partie en cours, avec une pièce sélectionnée</em></p>
-<p><img src="Image6.png" alt="Image échec"><br>
+<p><img src="Image6.png" alt="Image échec">
 <em>Image d'une situation d'échec par les Blancs</em></p>
-<p><img src="Image7.png" alt="Image échec et mat"><br>
+<p><img src="Image7.png" alt="Image échec et mat">
 <em>Image d'une situation de fin de partie (échec et mat)</em></p>
 <h2>Bilan du deuxième sprint</h2>
 <p>Tout les éléments du backlog ont été réalisés, excepté la fonctionnalité du retournement de plateau. En effet, j'ai largement sous-estimé la difficulté de cette fonctionnalité, car elle implique d'inverser toutes les coordonnées présentes dans le code et cela prendrait un temps considérable.</p>

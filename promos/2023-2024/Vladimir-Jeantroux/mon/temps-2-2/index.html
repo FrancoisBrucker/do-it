@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Pré-requis :<br>
+<p>Pré-requis :
 Un peu d'expérience en programmation, car le livre part du principe qu'on en a avec d'autres langages. Il serait judicieux d'avoir aussi des connaissances en C, car il y a des notions dans la gestion de mémoire.</p>
 </div></div>
 <h2>Approfondissements</h2>
@@ -144,7 +144,7 @@ Un peu d'expérience en programmation, car le livre part du principe qu'on en a 
 <p>Après m'être entraîné avec les exemples du livre de Rust, j'ai voulu créer un jeu simple avec le temps qu'il me restait. Ayant réussi à mettre la main sur le livre &quot;Hands-on Rust : Effective learning through 2D Game Development and Play&quot; par Herbert Wolverson, j'ai souhaité m'intéressé à la philosophie de programmation d'un jeu vidéo lorsqu'on utilise Rust, en faisant un jeu &quot;Flappy Dragon&quot;.</p>
 <h3>Game Loop</h3>
 <p>Une fonction normale en Rust dans le fichier <code>main.rs</code> s'exécute de haut en bas, attendant une entrée de l'utilisateur (s'il y en a) avant de continuer à s'exécuter. Ce n'est évidemment pas possible dans un jeu vidéo, le jeu doit continuer de tourner même si l'utilisateur ne fait rien. Lorsqu'on joue à Flappy Bird, l'oiseau continue de tomber même si le joueur ne touche pas à son écran. On fait donc appel à une boucle qui s'appelle &quot;Game loop&quot;, qui va s'exécuter à chaque fois que l'écran s'actualise.</p>
-<p><img src="gameloop.JPG" alt="Schéma d'un Game Loop"><br>
+<p><img src="gameloop.JPG" alt="Schéma d'un Game Loop">
 <em>Image : Schéma d'un game loop et de ses étapes, Hands-on Rust : Effective learning through 2D Game Development and Play, Herbert Wolverson.</em></p>
 <p>En premier lieu, il faut initialiser l'application afin qu'on soit capable d'afficher quelque chose à l'écran (1). Ensuite, pendant l'exécution de la boucle, on va demander en premier lieu à l'OS s'il y a eu des entrées de la part de l'utilisateur et lesquelles (appuyer sur son clavier, mouvements/clics de souris,...) (2). Le moteur du jeu va alors traduire ces événements, en faisant appel à la fonction <em>tick</em>, et va fournir la réponse du jeu à ces événements, comme les mouvements du personnage par exemple (3). Le jeu met ensuite l'écran à jour (4), et vérifie si le programme doit être fermé (5). Si oui, le jeu se ferme, sinon, on retourne à l'étape 2, et continuer le jeu.</p>
 <p>Cette vision du jeu implique beaucoup d'interactions avec l'OS de la machine, ce qui implique qu'il faudra s'adapter pour chaque type de machine, une solution peut très bien fonctionner sur une machine particulière et pas du tout sur une autre. C'est pour ça que les développeurs utilisent des <code>moteurs</code>, qui permettent de s'affranchir des problèmes liés à une plateforme spécifique, entre autres.</p>
@@ -164,7 +164,7 @@ Un peu d'expérience en programmation, car le livre part du principe qu'on en a 
 ​​​	    ​<span class="token punctuation">.</span>with_title​<span class="token punctuation">(</span>​<span class="token lifetime-annotation symbol">'Flappy</span> <span class="token class-name">Dragon</span>'​<span class="token punctuation">)</span> 
 ​​​	    ​<span class="token punctuation">.</span>build​<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">;</span> 
 </code></pre>
-<p>Une autre particularité de Rust est qu'il n'y a pas de tabulation, on utilise 4 espaces à la place.<br>
+<p>Une autre particularité de Rust est qu'il n'y a pas de tabulation, on utilise 4 espaces à la place.
 Un autre exemple d'application est la création du personnage joueur. On initialise ses coordonnées horizontales et verticales avec des entiers codés sur 32 bits, ainsi que sa vitesse, qui est un flottant. On va aussi initialiser un constructeur pour le joueur, le plaçant sur des coordonnées x et y avec une vitesse initiale.</p>
 <pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust">​<span class="token keyword">struct</span>​ <span class="token class-name">Player</span> <span class="token punctuation">{</span>
 ​​​	    x<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> 

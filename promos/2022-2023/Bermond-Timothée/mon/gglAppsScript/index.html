@@ -147,8 +147,8 @@
 <li>Automatiquement &quot;clean up&quot; des données dans un tableur. (réécrire différents formats de numéros de téléphones en un seul)</li>
 </ul>
 <h2>Autres fonctionnalités</h2>
-<p><strong>Modifier le style de police</strong><br>
-Pour cela on utilise la fontion <em>Font()</em> du module <em>openpyxl.styles</em>.<br>
+<p><strong>Modifier le style de police</strong>
+Pour cela on utilise la fontion <em>Font()</em> du module <em>openpyxl.styles</em>.
 Il est possible:</p>
 <ul>
 <li>de changer la police avec l'attribut <em>name</em></li>
@@ -156,15 +156,15 @@ Il est possible:</p>
 <li>d'écrire en gras avec l'attribut <em>bold</em></li>
 <li>ou en italique avec l'attribut <em>italic</em>.</li>
 </ul>
-<p><strong>Écrire des formules</strong><br>
+<p><strong>Écrire des formules</strong>
 Il est possible d'écrire des formules exactement comme dans un Excel.</p>
-<p><strong>Modifier la taille des lignes et des colonnes</strong><br>
+<p><strong>Modifier la taille des lignes et des colonnes</strong>
 Il est possible de changer la hauteur des lignes <em>row_dimension[].height</em> et la largeur des colonnes <em>column_dimension[].width</em>.</p>
-<p><strong>Fusionner ou séparer des cellules</strong><br>
+<p><strong>Fusionner ou séparer des cellules</strong>
 En utilisant les fontions <em>merge_cells()</em> ou <em>unmerge_cells()</em>.</p>
-<p><strong>Figer des volets</strong><br>
+<p><strong>Figer des volets</strong>
 Afin d'avoir toujours accès à certaines lignes ou colonnes, il est possible d'utiliser l'attribut <em>sheet.freeze.panes = ' '</em>. Toutes les lignes au dessus de celle indiquée ainsi que toutes les colonnes à gauche seront figer mais pas celles indiquées.</p>
-<p><strong>Créer des diagrammes</strong><br>
+<p><strong>Créer des diagrammes</strong>
 Pour créer un diagramme, il faut suivre les étapes suivantes:</p>
 <ul>
 <li>Créer un objet <em>Reference</em> à partir d'une selection de cellules : <em>chart.Reference(sheet, min_col= , min_row= , max_col= , max_row=)</em></li>
@@ -182,18 +182,18 @@ Pour créer un diagramme, il faut suivre les étapes suivantes:</p>
 <li>Lire des données : avec les fonctions <em>getValue()</em> ou <em>getValues()</em></li>
 <li>Écrire des données : avec les fonctions <em>setValue()</em> ou <em>setValues()</em></li>
 </ul>
-<p>On peut ensuite créer des fonctions qui permettent de transformer les valeurs récupérés ou d'en écrire de nouvelles.<br>
+<p>On peut ensuite créer des fonctions qui permettent de transformer les valeurs récupérés ou d'en écrire de nouvelles.
 Différentes fonctionnalités :</p>
 <ul>
 <li>
 <p>Mise en forme : <a href="https://developers.google.com/apps-script/reference/spreadsheet/range">Class Range</a>, permet de modifier le fond, le style de police, permet de fusionner ou de diviser des cellules, définir des règles de validation,...</p>
 </li>
 <li>
-<p>Création de graphiques :<br>
-<em>var chart = sheet.newChart()</em> (initialisation)<br>
-<em>.setChartType()</em> (type de graphique)<br>
-<em>.addRange(sheet.getRange())</em> (séléction des cellules)<br>
-<em>.setPosition()</em> (position du graphique)<br>
+<p>Création de graphiques :
+<em>var chart = sheet.newChart()</em> (initialisation)
+<em>.setChartType()</em> (type de graphique)
+<em>.addRange(sheet.getRange())</em> (séléction des cellules)
+<em>.setPosition()</em> (position du graphique)
 <em>.build();</em> (construction du graphique)</p>
 <p><em>sheet.insertChart(chart);</em> (insère le graphique dans la feuille de calcul)</p>
 </li>

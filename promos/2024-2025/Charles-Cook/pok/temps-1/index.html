@@ -217,7 +217,7 @@
 <h4>Travailler avec des feuilles Excel</h4>
 <p>Il est possible de travailler sur Python à partir de classeurs Excel. Pour cela, il faut importer la librairie <code>openpyxl</code>.</p>
 <h5>Ouvrir un classeur Excel</h5>
-<p>La fonction <code>openpyxl.load_workbook()</code> permet de charger un classeur Excel. Une fois que celui-ci est chargé, nous pouvons accéder à son contenu et le manipuler ou le modifier.<br>
+<p>La fonction <code>openpyxl.load_workbook()</code> permet de charger un classeur Excel. Une fois que celui-ci est chargé, nous pouvons accéder à son contenu et le manipuler ou le modifier.
 Il est important de noter que si le fichier contient des formules, il est parfois préférable de lire les valeurs calculées au lieu de lire les formules entrées dans les cellules. Dans ce cas, on précise à l'aide de l'option <code>data_only=True</code>. Ainsi, pour ouvrir le fichier <em>Exemple</em> en utilisant les valeurs calculée, on rédige le code suivant :</p>
 <pre><code>import openpyxl
 
@@ -293,7 +293,7 @@ del wb['Sheet']
 <p>Tous ces éléments nous seront utiles pour automatiser la création des bons de commande.</p>
 <h3>Création d'une base de données fictive</h3>
 <h4>Order Review</h4>
-<p>L'objectif de ce POK est d'automatiser la création de bons de commande à partir de l'état actuel des stocks. Ainsi, pour simuler cet exercice il est nécessaire de créer une base de données fictive refletant le niveau de stock.<br>
+<p>L'objectif de ce POK est d'automatiser la création de bons de commande à partir de l'état actuel des stocks. Ainsi, pour simuler cet exercice il est nécessaire de créer une base de données fictive refletant le niveau de stock.
 Cette bas de donnée doit contenir les éléments suivants :</p>
 <ul>
 <li>Le code rédérence de chaque produit.</li>

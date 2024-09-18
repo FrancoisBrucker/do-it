@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Pré-requis :<br>
+<p>Pré-requis :
 Connaître la syntaxe de Java, et comprendre la notion de Programmation Orientée Objet.</p>
 </div></div>
 <h3>Input, Output</h3>
@@ -143,7 +143,7 @@ Connaître la syntaxe de Java, et comprendre la notion de Programmation Orienté
 <p>Output :</p>
 <pre><code>J'ai acheté 23 pastèques
 </code></pre>
-<p>Les méthodes FileReader et FileWriter permettent respectivement de lire et de créer/écrire sur un fichier .txt.<br>
+<p>Les méthodes FileReader et FileWriter permettent respectivement de lire et de créer/écrire sur un fichier .txt.
 input and output (print, scanner). Elle doit être importées avant la fonction main, ainsi que l'exception <code>IOException</code>, qui est l'erreur qui apparaît lorsqu'un problème lié à l'input ou l'output survient (interruption d'une action input/output, impossibilité d'accéder à un fichier, ou d'écrire dedans,...). Cette partie m'a introduit à la gestion d'exceptions à l'aide de blocs try/catch. En effet, le développeur peut lui même gérer une exception dans son code, ce qui permet d'éviter que le programme crash au moment de la compilation ou de l'exécution.</p>
 <p>Par exemple :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">FileReader</span></span><span class="token punctuation">;</span>
@@ -215,7 +215,7 @@ java.io.FileNotFoundException: /path/nul/et/faux/fichier.txt (No such file or di
 </code></pre>
 <p><img src="tableauwrapper.JPG" alt="Classes Wrapper" title="Tableau comportant les équivalents Wrapper pour les classes primitives de Java"></p>
 <p>&quot;Wrapper Classes for Primitive Data Types&quot;, Codecademy <a href="https://www.codecademy.com/courses/learn-intermediate-java/lessons/generics-java/exercises/java-generics-wrapper-classes">https://www.codecademy.com/courses/learn-intermediate-java/lessons/generics-java/exercises/java-generics-wrapper-classes</a></p>
-<p>On peut aussi créer des interfaces ou des méthodes génériques selon les besoins, et changer le nombre de paramètres.<br>
+<p>On peut aussi créer des interfaces ou des méthodes génériques selon les besoins, et changer le nombre de paramètres.
 Exemple de méthode qui compare 2 objets et renvoie si ce sont des nombres ou non:</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Util</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">S</span><span class="token punctuation">></span></span> <span class="token keyword">boolean</span> <span class="token function">sontNombres</span><span class="token punctuation">(</span><span class="token class-name">T</span> elem1<span class="token punctuation">,</span> <span class="token class-name">S</span> elem2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -228,8 +228,8 @@ Exemple de méthode qui compare 2 objets et renvoie si ce sont des nombres ou no
 <p>En Java, le framework des collections offre une structure organisée pour travailler avec des groupes d'objets, dépassant les limitations des tableaux avec leur taille fixe. Il comprend des interfaces et des classes implémentées pour différents types de structures de données, ainsi que des algorithmes pour effectuer des opérations courantes sur ces collections. On peut alors se concentrer sur la logique métier au lieu de l'implémentation bas niveau.</p>
 <p>Par exemple, le framework propose plusieurs implémentations de listes, comme <code>ArrayList</code> ou <code>LinkedList</code>, chacune ayant ses utilisations : <code>ArrayList</code> est plus couramment utilisée, mais <code>LinkedList</code> est plus pratique s'il y a beaucoup d'ajouts ou de suppression en début/fin de liste. On a aussi l'interface <code>Set</code>, collection d'objets qui ne permet pas de doublon.</p>
 <h2>Conclusion</h2>
-<p>Je n'ai pas pu finir la leçon par manque de temps, il reste encore les Threads à voir. Les quiz de la leçon que j'ai suivi étaient verrouillés derrière un abonnement, j'ai donc pratiqué en parallèle sur les exercices du site de W3School.<br>
-Les notions abordées par ce cours étaient très intéressantes et j'ai surtout pu comprendre comment fonctionnaient certains aspects du langage. Les problèmes que j'ai rencontré sur ce site étaient les quiz cachés derrière les paywalls, mais chaque partie avait sa petite partie pratique, mais parfois le terminal inclus ne détectait pas certains problèmes avec le code, il faut donc être un peu vigilant.<br>
+<p>Je n'ai pas pu finir la leçon par manque de temps, il reste encore les Threads à voir. Les quiz de la leçon que j'ai suivi étaient verrouillés derrière un abonnement, j'ai donc pratiqué en parallèle sur les exercices du site de W3School.
+Les notions abordées par ce cours étaient très intéressantes et j'ai surtout pu comprendre comment fonctionnaient certains aspects du langage. Les problèmes que j'ai rencontré sur ce site étaient les quiz cachés derrière les paywalls, mais chaque partie avait sa petite partie pratique, mais parfois le terminal inclus ne détectait pas certains problèmes avec le code, il faut donc être un peu vigilant.
 Je recommande tout de même la leçon pour ceux qui veulent aller plus loin, car elle était très claire et compréhensive. Il faut cependant bien parler anglais, j'ai eu du mal à comprendre quelques concepts techniques en anglais tout au long de la leçon.</p>
 <h2>Bibliographie</h2>
 <ul>

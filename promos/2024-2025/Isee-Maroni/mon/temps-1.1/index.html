@@ -172,16 +172,16 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://www.youtube.com/watch?v=oIeZWL9Lsm0">https://www.youtube.com/watch?v=oIeZWL9Lsm0</a><br>
-<a href="https://www.youtube.com/watch?v=OpBcnhEjMJg">https://www.youtube.com/watch?v=OpBcnhEjMJg</a><br>
+<p><a href="https://www.youtube.com/watch?v=oIeZWL9Lsm0">https://www.youtube.com/watch?v=oIeZWL9Lsm0</a>
+<a href="https://www.youtube.com/watch?v=OpBcnhEjMJg">https://www.youtube.com/watch?v=OpBcnhEjMJg</a>
 <a href="https://www.youtube.com/watch?v=hb5zvNQvka0">https://www.youtube.com/watch?v=hb5zvNQvka0</a></p>
 </div></div>
 
 <p>En parallèle, je créais ma propre base de données <strong>Offres de stage</strong> ayant pur but de mettre à disposition des offres de stages, les renseignements associés et le moyen de postuler.</p>
 <p>Dans Airtable, une base est l'élément fondamental où sont stockées et organisées les informations. Elle se compose de plusieurs tables, qui fonctionnent comme des feuilles de calcul dans un tableur, mais avec plus de puissance et de flexibilité.</p>
-<p>Une base est composée de plusieurs tables, chacune dédiée à une catégorie de données.<br>
+<p>Une base est composée de plusieurs tables, chacune dédiée à une catégorie de données.
 Par exemple, dans ma base, j'ai fait une table pour les <strong>Offres</strong> et une autre pour les <strong>Entreprises</strong>.</p>
-<p><img src="Airtable_tableOffres.png" alt="table_Offres"><br>
+<p><img src="Airtable_tableOffres.png" alt="table_Offres">
 <img src="Airtable_tableEntreprises.png" alt="table_Entreprises"></p>
 <p>Une des fonctionnalités puissantes d’Airtable, que j'apprécie particulièremnt, est la possibilité de créer des relations entre tables en utilisant des champs liés. Cela permet de relier les données et de mieux les organiser. Par exemple, dans la table <strong>Offres</strong>, j'ai lié chaque offre à une entreprise de la table <strong>Entreprise</strong>, et j'en ai récupérer l'information à propos du type de structure : champ nommé &quot;Structure (à partir de Entreprises)&quot;.</p>
 <p>On peut créer plusieurs vues pour une même table, afin de visualiser les données de différentes manières selon les besoins. Il est possible d'afficher la base de données sous forme de tableau, kanban, ou galerie d'images (exemples ci-dessous).</p>
@@ -190,10 +190,10 @@ Par exemple, dans ma base, j'ai fait une table pour les <strong>Offres</strong> 
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Le <strong>Kanban</strong> permet d'organiser les offres par colonnes, les regroupant par entreprise.<br>
+<p>Le <strong>Kanban</strong> permet d'organiser les offres par colonnes, les regroupant par entreprise.
 La <strong>Galerie</strong> permet d'afficher les enregistrements sous forme de cartes visuelles défilant.</p>
 </div></div>
-<p><img src="Airtable_VueKanban.png" alt="Vue_Kanban"><br>
+<p><img src="Airtable_VueKanban.png" alt="Vue_Kanban">
 <img src="Airtable_VueGalerie.png" alt="Vue_Galerie"></p>
 <p>Airtable permet de configurer des automatisations afin d'effectuer des actions automatiquement, comme envoyer des emails, mettre à jour des enregistrements, ou déclencher des workflows dans d'autres applications, à partir de conditions spécifiques définies. Cependant, pour l'instant je n'ai pas encore utilisé d'automatisations avec d'autres applications.</p>
 <p>J'ai mis en place une petite automatisation au sein d'Airtable qui assure la liaison entre la table <strong>Offres</strong> et la table <strong>Entreprises</strong>. Lorsque un nouvelle entrée est créé dans la table <strong>Offres</strong> et que le nom de l'Entreprise y est renseigné, le champ &quot;liaison à la table Entreprises&quot; se remplit automatiquement. Ainsi, le champ &quot;Structure&quot; dans la table <strong>Offres</strong> se remplit automatiquement également. De plus, si l'entreprise n'existe pas encore dans la table <strong>Entreprises</strong>, une nouvelle entrée y est automatiquement ajoutée.</p>
@@ -218,21 +218,21 @@ La <strong>Galerie</strong> permet d'afficher les enregistrements sous forme de 
 <li>Formulaires : Pour collecter des informations ou créer des inscriptions.</li>
 <li>Listes dynamiques : Pour afficher des données issues d’Airtable (par exemple, une liste d'articles, de produits, ou de tâches).</li>
 <li>Boutons CTA (Call to Action) : Inciter les utilisateurs à prendre des actions comme s’inscrire, acheter, ou contacter.</li>
-<li>Galeries et tableaux : Pour présenter visuellement des images ou des collections de données.<br>
+<li>Galeries et tableaux : Pour présenter visuellement des images ou des collections de données.
 Ces blocs sont entièrement personnalisables pour s'adapter à l'apparence et à la fonctionnalité souhaitée.</li>
 </ul>
 <p>L'un des points les plus importants est que Softr peut se connecter directement à une base Airtable. Les données sont alors synchronisées dynamiquement, ce qui signifie que chaque mise à jour dans Airtable se reflète automatiquement dans l'application. C'est très pratique !</p>
 <p>On peut ajouter des filtres dynamiques et des barres de recherche aux pages pour permettre aux utilisateurs de trouver rapidement des informations. Par exemple, dans le cas des offres de stage, les utilisateurs pourraient filtrer les produits par entreprise, types de stage, localisation ou secteur d'activité.</p>
 <p><img src="Softr_InterfaceList.png" alt="Softr"></p>
 <p>De plus, les formulaires peuvent alimenter directement Airtable pour stocker les données collectées.</p>
-<p>Voici d'autres fonctionnalités que j'ai vues mais que je n'ai pas encore pu tester.<br>
+<p>Voici d'autres fonctionnalités que j'ai vues mais que je n'ai pas encore pu tester.
 Softr propose des fonctionnalités d'authentification et de gestion des utilisateurs : créer des espaces membres, des portails sécurisés, ou des applications où les utilisateurs peuvent s’inscrire, se connecter, et accéder à du contenu personnalisé.</p>
 <p>La dernière étape est la publication du site web. Softr se charge de l'hébergement de l'application ou site web. Il est possible de choisir d’utiliser un sous-domaine fourni par Softr ou connecter son propre domaine personnalisé. Une fois l'application prête, elle est déployée en ligne et accessible aux utilisateurs sans qu'il y ait à gérer l’infrastructure technique.</p>
 <h3>Sources</h3>
-<p><a href="https://support.airtable.com/docs/fr/airtable-training-and-resources">https://support.airtable.com/docs/fr/airtable-training-and-resources</a><br>
-<a href="https://www.youtube.com/watch?v=oIeZWL9Lsm0">https://www.youtube.com/watch?v=oIeZWL9Lsm0</a><br>
-<a href="https://www.youtube.com/watch?v=OpBcnhEjMJg">https://www.youtube.com/watch?v=OpBcnhEjMJg</a><br>
-<a href="https://www.youtube.com/watch?v=hb5zvNQvka0">https://www.youtube.com/watch?v=hb5zvNQvka0</a><br>
+<p><a href="https://support.airtable.com/docs/fr/airtable-training-and-resources">https://support.airtable.com/docs/fr/airtable-training-and-resources</a>
+<a href="https://www.youtube.com/watch?v=oIeZWL9Lsm0">https://www.youtube.com/watch?v=oIeZWL9Lsm0</a>
+<a href="https://www.youtube.com/watch?v=OpBcnhEjMJg">https://www.youtube.com/watch?v=OpBcnhEjMJg</a>
+<a href="https://www.youtube.com/watch?v=hb5zvNQvka0">https://www.youtube.com/watch?v=hb5zvNQvka0</a>
 <a href="https://www.youtube.com/@caastor_nocode">https://www.youtube.com/@caastor_nocode</a></p>
 
 

@@ -158,8 +158,8 @@
 <p>Pour créer la base de données avec la table et les colonnes voulues après l'installation de MySQL, j'ai d'abord du créer une table grâce à la requête suivante :</p>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> mydb
 </code></pre>
-<p>&quot;mydb&quot; est le nom de la base de données créés.<br>
-Quand on regarde la liste des bases de données crées, on voit que mydb existe :<br>
+<p>&quot;mydb&quot; est le nom de la base de données créés.
+Quand on regarde la liste des bases de données crées, on voit que mydb existe :
 <img src="databases.png" alt="databases"></p>
 <p>Ensuite au sein de la base de données on crée une table qui va contenir les informations des utilisateurs du Memory, cette table s'appelera <strong>users</strong>. Pour faire cela il faut utiliser la commande :</p>
 <pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> users <span class="token punctuation">(</span>     
@@ -167,7 +167,7 @@ Quand on regarde la liste des bases de données crées, on voit que mydb existe 
   name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><img src="table.png" alt="table"></p>
-<p>On précise que dans la table on veut 2 colonnes, une première qui s'appelle <strong>id</strong> qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé <em>AUTO_INCREMENT</em> permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle <strong>name</strong> qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères :<br>
+<p>On précise que dans la table on veut 2 colonnes, une première qui s'appelle <strong>id</strong> qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé <em>AUTO_INCREMENT</em> permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle <strong>name</strong> qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères :
 <img src="colonnes.png" alt="colonnes"></p>
 <p>Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée:</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">  <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
@@ -272,8 +272,8 @@ connection<span class="token punctuation">.</span><span class="token function">c
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Ici on a une requête coté client qui va permettre de savoir si l'utilisateur s'est déjà inscrit ou non sur le site. On voit que cette requête utilise la route précédemment créée car l'url utilisée est <a href="http://localhost:3000/users">http://localhost:3000/users</a> et on utilise la méthode &quot;GET&quot;.<br>
-Pour faire simple, cette requête prend en argument l'email entré par l'utilisateur dans le formulaire d'inscription. Ensuite, on donne à notre route l'adresse mail et on interroge la base de données, est ce qu'il y a un utilisateur avec cette adresse ?<br>
+<p>Ici on a une requête coté client qui va permettre de savoir si l'utilisateur s'est déjà inscrit ou non sur le site. On voit que cette requête utilise la route précédemment créée car l'url utilisée est <a href="http://localhost:3000/users">http://localhost:3000/users</a> et on utilise la méthode &quot;GET&quot;.
+Pour faire simple, cette requête prend en argument l'email entré par l'utilisateur dans le formulaire d'inscription. Ensuite, on donne à notre route l'adresse mail et on interroge la base de données, est ce qu'il y a un utilisateur avec cette adresse ?
 La route renvoie des data que l'on utilise dans notre requête coté client. En fonction de ses data, la réponse ne sera pas la même. Si l'utilisateur existe déjà : on renvoie &quot;Utilisateur déjà exitant&quot;. Si ce n'est pas le cas &quot;Utilisateur non trouvé&quot;. Mais il faudrait faire une autre requête à la place pour ajouter l'utilisateur à la base de données.</p>
 <h2>Route qui gère l'inscription</h2>
 <p>Pour gérer l'inscription, il faut créer une route sur l'url &quot;/inscription&quot; qui utilise une méthode POST pour ajouter des données à notre table users. Voilà ce que donne notre route :</p>
@@ -327,7 +327,7 @@ La route renvoie des data que l'on utilise dans notre requête coté client. En 
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Les valeurs du prenom, nom, email et mot de passe entrées par l'utilisateur dans le form d'inscription sont récupérées et utilisées comme body de la requête. Or, comme on a l'a précisé dans la route créée, req.body est utilisé pour attribuer les valeurs de first_name, last_name, email et mot_de_passe.<br>
+<p>Les valeurs du prenom, nom, email et mot de passe entrées par l'utilisateur dans le form d'inscription sont récupérées et utilisées comme body de la requête. Or, comme on a l'a précisé dans la route créée, req.body est utilisé pour attribuer les valeurs de first_name, last_name, email et mot_de_passe.
 Donc la requête sql devient : <strong>INSERT INTO users (first_name, last_name, email, mot_de_passe) VALUES (prenom entré par l'utilisateur, nom entré par l'utilisateur, email entré par l'utilisateur, mot de passe entré par l'utilisateur)</strong>.</p>
 <p>On peut faire le test et essayer d'inscrire Nicolas Ouzouliasse à la base de données.</p>
 <p><img src="Exemple_Inscription.png" alt="Exemple d'inscription"></p>

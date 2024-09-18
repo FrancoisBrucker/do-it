@@ -150,8 +150,8 @@
 <li><a href="#tableau_bord">Présentation du tableau de bord</a></li>
 </ul>
 <h2 id="introduction"> Introduction </h2>
-<p>Pour ce MON, j'ai suivi dans les grandes lignes la formation <a href="https://openclassrooms.com/fr/courses/7139456-perfectionnez-vous-sur-excel/7321389-enrichissez-votre-tableau-de-donnees">&quot;Perfectionnez-vous sur Excel&quot;</a> d'Open classroom. Elle est assez intéressante et plutôt bien construite. Pour la suite de ce MON, je me suis d'ailleurs basée sur le plan de la formation pour arriver à l'élaboration de mon tableau de bord.<br>
-<em>La formation va d'ailleurs au delà de la création de ce tableau de bord, puisqu'elle étudie même les outils d'analyse des données (valeurs cibles, solveur, scénarios de données) : même si ce n'était pas ce que je recherchais de prime abord, c'est aussi des notions intéressantes.</em><br>
+<p>Pour ce MON, j'ai suivi dans les grandes lignes la formation <a href="https://openclassrooms.com/fr/courses/7139456-perfectionnez-vous-sur-excel/7321389-enrichissez-votre-tableau-de-donnees">&quot;Perfectionnez-vous sur Excel&quot;</a> d'Open classroom. Elle est assez intéressante et plutôt bien construite. Pour la suite de ce MON, je me suis d'ailleurs basée sur le plan de la formation pour arriver à l'élaboration de mon tableau de bord.
+<em>La formation va d'ailleurs au delà de la création de ce tableau de bord, puisqu'elle étudie même les outils d'analyse des données (valeurs cibles, solveur, scénarios de données) : même si ce n'était pas ce que je recherchais de prime abord, c'est aussi des notions intéressantes.</em>
 Cependant, pour ce qui est de la réelle construction d'un tableau de bord, je trouve que ce cours manquait un peu de contenu. Il n'évoquait même pas de notion de &quot;segment&quot;. J'ai donc approfondi ces notions au travers de vidéos:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=KkUoFjIRup8">Aide sur les segments</a></li>
@@ -162,7 +162,7 @@ Cependant, pour ce qui est de la réelle construction d'un tableau de bord, je t
 <p>Pour choisir la base de données que j'allais exploiter pour appliquer les connaissances et la démarche apprises, je suis allée sur le site <a href="https://www.data.gouv.fr/fr/">d'open data du gouvernement</a>. J'y ai trouvé une base de données sur le <a href="https://www.data.gouv.fr/fr/datasets/classement-thematique-des-sujets-de-journaux-televises-janvier-2005-septembre-2020/#/resources">classement thématique des sujets de journaux télévisés des chaînes de TF1 à M6 sur la période de janvier 2005 à septembre 2020</a>. Elle comprend 2 fichiers que vous pouvez télécharger <a href="Fichiers_excel_initiaux.zip">ici</a>.</p>
 <ul>
 <li>l'un représente pour <strong>chaque chaîne</strong> la <strong>quantité</strong> de JT <strong>d'un thème</strong></li>
-<li>l'autre représente pour <strong>chaque chaîne</strong> la <strong>durée</strong> des JT <strong>d'un thème</strong><br>
+<li>l'autre représente pour <strong>chaque chaîne</strong> la <strong>durée</strong> des JT <strong>d'un thème</strong>
 Je trouvais cette BDD très intéressante, d'une part pour son thème, sur lequel il y avait de nombreux angles d'analyse à adopter, et d'autre part pour sa structure qui nécessitait d'appliquer un peu de notions d'SQL en définissant une colonne clé pour pouvoir joindre les deux tables afin d'analyser la globalité des données.</li>
 </ul>
 <h2 id="préparation"> Préparation des données </h2>
@@ -190,7 +190,7 @@ Je trouvais cette BDD très intéressante, d'une part pour son thème, sur leque
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Comment?</strong></p>
 </div><div class="pl-8 mr-8">
-<p>On peut le retrouver en faisant:<br>
+<p>On peut le retrouver en faisant:
 <em>Fichier &gt; Informations &gt; « Vérifier l’absence de problèmes » &gt; « Inspecter le document »</em></p>
 </div></div>
 <p>Ensuite, il faut supprimer les données inutiles et alléger le poids du fichier en s’assurant qu’aucune donnée n’est enregistrée dans une zone non visible avec l’outil « Rechercher et sélectionner », ce qui permet de s’assurer que la dernière cellule est bien la bonne.</p>
@@ -289,7 +289,7 @@ Je trouvais cette BDD très intéressante, d'une part pour son thème, sur leque
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Création de filtres élaborés</strong></p>
 </div><div class="pl-8 mr-8">
-<p>Excel permet de créer des filtres élaborés avec la création d’une zone de critères. On peut alors additionner des critères <strong>&quot;ET&quot;</strong> ou définir une condition <strong>&quot;OU&quot;</strong> (je filtre sur l’un ou l’autre des critères)<br>
+<p>Excel permet de créer des filtres élaborés avec la création d’une zone de critères. On peut alors additionner des critères <strong>&quot;ET&quot;</strong> ou définir une condition <strong>&quot;OU&quot;</strong> (je filtre sur l’un ou l’autre des critères)
 <em>Clique droit sur une donnée du tableau &gt; Onglet &quot;Données&quot; &gt; &quot;Avancé&quot; (dans &quot;Fitre&quot;)</em></p>
 </div></div>
 <p>Par exemple ici :</p>
@@ -312,14 +312,14 @@ Je trouvais cette BDD très intéressante, d'une part pour son thème, sur leque
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Calcul statistique</strong></p>
 </div><div class="pl-8 mr-8">
-<p>On peut également faire avec Excel du calcul de statistiques avec des <strong>fonctions de base de données</strong>. Celles ci commencent par &quot;BD&quot; avec un nom de fonction derrière (ex : BDSOMME(), BDMIN(), BDNOMBRE(), etc...)<br>
+<p>On peut également faire avec Excel du calcul de statistiques avec des <strong>fonctions de base de données</strong>. Celles ci commencent par &quot;BD&quot; avec un nom de fonction derrière (ex : BDSOMME(), BDMIN(), BDNOMBRE(), etc...)
 <em>Il est important de nommer les plages de cellules de travail pour pouvoir ensuite les exploiter comme base de données</em></p>
 </div></div>
 <blockquote>
 <p>REMARQUE : en cliquant sur fx on a accès à l’assistant d’Excel qui permet de rechercher des fonctions prédéfinies proposées par Excel en fonction de différents domaines d’activités (financier, comptables…)</p>
 </blockquote>
 <h4>Exemple avec l'utilisation de BDSOMME()</h4>
-<p>J'ai voulu comparer la différence de quantités de JT sur le thème de la Santé diffusés en 2005 et en 2020.<br>
+<p>J'ai voulu comparer la différence de quantités de JT sur le thème de la Santé diffusés en 2005 et en 2020.
 J'ai renommé ma table de données &quot;Global&quot; puis j'ai appliqué la formule BDSOMME() pour les 2 années:</p>
 <pre><code>=BDSOMME(Global;&quot;Quantité&quot;;K2:L3) (appliqué en L4)
 =BDSOMME(Global;&quot;Quantité&quot;;N2:O3) (appliqué en O4)
@@ -354,7 +354,7 @@ J'ai renommé ma table de données &quot;Global&quot; puis j'ai appliqué la for
 </tr>
 </tbody>
 </table>
-<p>On peut voir que depuis 2005, il y a un monopole des chaines TF1 et France 2. Même si la diffusion de journaux télévisés a globalement beaucoup diminué depuis le début de l'étude, la chaine M6 quant à elle diffuse de plus en plus de JT.<br>
+<p>On peut voir que depuis 2005, il y a un monopole des chaines TF1 et France 2. Même si la diffusion de journaux télévisés a globalement beaucoup diminué depuis le début de l'étude, la chaine M6 quant à elle diffuse de plus en plus de JT.
 On remarque également qu'aucun JT n'a été publié en 2020 par Canal +. Si on regarde plus précisément, on peut voir qu'un tournant a été observé entre 2015 et 2017 où la chaine est passée de <strong>3 143 JT diffusés</strong> à <strong>491</strong>. <em>Après recherche, ol s'avère que &quot;le JT de Canal +&quot; a arrêté d'être diffusé depuis le 3 juillet 2016</em>.</p>
 <h4 id="question2"> Les chaînes TV offrent-elles toutes le même contenu? </h4>
 <table>
@@ -438,13 +438,13 @@ On remarque également qu'aucun JT n'a été publié en 2020 par Canal +. Si on 
 <h3>Le petit mot de la fin</h3>
 <p>Finalement, même si j'ai déjà utilisé souvent excel pendant mon alternance, je me rends compte qu'il y avait beaucoup de fonctionnalités dont j'ignorais l'existence. Cependant, même si la base de données sur laquelle je me suis appuyée était très intéressante, je ne suis pas sure que c'était la plus adaptée pour réaliser un tableau de bord pertinent. J'ai remarqué que c'était surtout au travers d'analyses de ventes, ou de suivi de KPI que les tableau de bord étaient surtout utilisés. Mais, cela reste, au final, un très bon entraînement !</p>
 <blockquote>
-<p><strong>Horodateur</strong> :<br>
-Samedi 11/11 : 30 mins (Recherche de ressources d'apprentissage et d'une base de données sur laquelle m'appuyer)<br>
-Jeudi 23/11 : 2h50 (Réalisation de la formation Open Classroom trouvée)<br>
-Vendredi 24/11 : 40 mins (Visionnage de vidéos supplémentaires pour compléter la formation)<br>
-Jeudi 30/11 : 1h30 (Mise en forme de la base de données obtenue suivant le plan énoncé dans ce MON)<br>
-Samedi 09/12  : 1h (Recherche de questions pertinentes pour analyser les données graphiquement)<br>
-Dimanche 10/12 : 2h (Mise en forme des graphiques)<br>
+<p><strong>Horodateur</strong> :
+Samedi 11/11 : 30 mins (Recherche de ressources d'apprentissage et d'une base de données sur laquelle m'appuyer)
+Jeudi 23/11 : 2h50 (Réalisation de la formation Open Classroom trouvée)
+Vendredi 24/11 : 40 mins (Visionnage de vidéos supplémentaires pour compléter la formation)
+Jeudi 30/11 : 1h30 (Mise en forme de la base de données obtenue suivant le plan énoncé dans ce MON)
+Samedi 09/12  : 1h (Recherche de questions pertinentes pour analyser les données graphiquement)
+Dimanche 10/12 : 2h (Mise en forme des graphiques)
 Mardi 12/12 : 1h30 (Ajout de graphiques et mise en forme finale du tableau de bord)</p>
 </blockquote>
 

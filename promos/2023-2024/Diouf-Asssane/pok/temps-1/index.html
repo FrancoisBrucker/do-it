@@ -151,14 +151,14 @@
 <p>Ces informations m'ont permis de mieux saisir ce qu'est le WebAssembly. Elles ont aussi considérablement renforcés mon envie de le tester.</p>
 <h3>Du C++ au WebAssembly</h3>
 <p>J'ai donc décidé d'essayer wasm. J'ai commencé par un autre langage que Rust car je ne le connaissais pas encore assez. Il est cependant possible de cibler le WebAssembly depuis plusieurs langages comme le C et le C++ par exemple, j'ai donc commencé par là.</p>
-<p>Pour créer un code wasm avec du C++, il faut utiliser <a href="https://emscripten.org">emscripten</a>. Emscripten va prendre les fichiers sources et sortir un fichier en WebAssembly (.wasm), un fichier javascript et un fichier en HTML. Le javascript va automatiquement appelé le WebAssembly et définir les fonctions nécessaires pour que nos méthodes puissent être appelées depuis le javascript. Le HTML est alors une page générée automatiquement pour appeler ce javascript (en tout cas sa fonction main). J'ai pu obtenir le résultat suivant en utilisant emscripten sur un programme en C++/SDL :<br>
+<p>Pour créer un code wasm avec du C++, il faut utiliser <a href="https://emscripten.org">emscripten</a>. Emscripten va prendre les fichiers sources et sortir un fichier en WebAssembly (.wasm), un fichier javascript et un fichier en HTML. Le javascript va automatiquement appelé le WebAssembly et définir les fonctions nécessaires pour que nos méthodes puissent être appelées depuis le javascript. Le HTML est alors une page générée automatiquement pour appeler ce javascript (en tout cas sa fonction main). J'ai pu obtenir le résultat suivant en utilisant emscripten sur un programme en C++/SDL :
 <img src="emscripten.png" alt="Affichage avec emscripten"></p>
 <h3>Rust et WebAssembly</h3>
 <p>J'ai ensuite suivi le tutoriel fournit par Rust sur le WebAssembly accessible <a href="https://rustwasm.github.io/docs/book/introduction.html">ici</a>.</p>
 <p>Après cette étape, la majorité de mes questions sur le WebAssembly avaient trouvées leur réponses.</p>
 <h3>Des équations croisées</h3>
-<p>Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :<br>
-<img src="crossmath.png" alt="Crossmath"><br>
+<p>Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :
+<img src="crossmath.png" alt="Crossmath">
 <em>Cette image a été tirée du jeu Crossmath</em></p>
 <p>Je n'ai pas d'affichage pour l'instant, cependant voici ma progression jusqu'à présent :</p>
 <ul>
@@ -196,7 +196,7 @@
 <li>et biensûr, publier le site</li>
 </ul>
 <h2>Conclusion</h2>
-<p>J'ai pu découvrir le webassembly avec Rust et réaliser cette application. Le webassembly est une très belle découverte, il ouvre de toutes nouvelles possibilités à mon sens. Je souhaite toutefois noter qu'il y a des façons différentes de faire du web avec Rust. Ces autres méthodes vont un peu masquer le côté web mais se basent aussi sur le webassembly (voir <a href="https://trunkrs.dev">Trunk</a>).<br>
+<p>J'ai pu découvrir le webassembly avec Rust et réaliser cette application. Le webassembly est une très belle découverte, il ouvre de toutes nouvelles possibilités à mon sens. Je souhaite toutefois noter qu'il y a des façons différentes de faire du web avec Rust. Ces autres méthodes vont un peu masquer le côté web mais se basent aussi sur le webassembly (voir <a href="https://trunkrs.dev">Trunk</a>).
 Enfin, le code est disponible dans mon <a href="https://github.com/assanediouf18/Crossmath">github</a>.</p>
 
 

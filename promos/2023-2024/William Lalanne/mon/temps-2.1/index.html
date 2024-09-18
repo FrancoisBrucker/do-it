@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Niveau :</strong> Moyen<br>
+<p><strong>Niveau :</strong> Moyen
 <strong>Prérequis :</strong> Avoir fait un peu de JavaScript avant</p>
 </div></div>
 <h2>Sommaire</h2>
@@ -169,12 +169,12 @@
 <li><em><strong>req</strong></em> qui correspond à la requête faîte au serveur.</li>
 <li><em><strong>res</strong></em> qui correspond à la réponse.</li>
 </ul>
-<p>Ensuite, à chaque requête faite au serveur la fonction après le <strong>(req, res)</strong> est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'.<br>
+<p>Ensuite, à chaque requête faite au serveur la fonction après le <strong>(req, res)</strong> est jouée. Dans notre cas, à chaque requête faite au serveur on reçoit la réponse : 'Voilà la réponse du serveur'.
 On améliorera plus tard dans ce MON le serveur pour qu'il fasse ce que l'on veut.</p>
 <h2>API RESTful : 2h</h2>
-<p><img src="schema.png" alt="schema"><br>
+<p><img src="schema.png" alt="schema">
 <a href="https://welovedevs.com/fr/articles/api-rest/">Source_Image</a></p>
-<p>Une API (Application Programming Interface) permet l'interaction entre différentes applications ou différentes briques d'une même application. On parle d'API RESTful ou REST quand l'API suit le principe de &quot;Represential State Transfer&quot;. Cela signifie que les interactions qui ont lieu se font grâce au protocole HTTP et la logique CRUD (Create Read Update Delete).<br>
+<p>Une API (Application Programming Interface) permet l'interaction entre différentes applications ou différentes briques d'une même application. On parle d'API RESTful ou REST quand l'API suit le principe de &quot;Represential State Transfer&quot;. Cela signifie que les interactions qui ont lieu se font grâce au protocole HTTP et la logique CRUD (Create Read Update Delete).
 On a 4 interactions possibles :</p>
 <ul>
 <li>GET qui renvoie les données voulues</li>
@@ -198,7 +198,7 @@ On a 4 interactions possibles :</p>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span>
 </code></pre>
 <p>D'abord on importe le package express, puis on crée l'application grâce à la méthode <em><strong>express()</strong></em> et enfin on exporte l'application pour l'utiliser dans d'autres fichiers.</p>
-<p>Il faut ensuite exécuter l'application Express que l'on vient de créer dans le serveur Node.<br>
+<p>Il faut ensuite exécuter l'application Express que l'on vient de créer dans le serveur Node.
 On revient sur le fichier de départ où l'on écrit les commandes suivantes :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -221,7 +221,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
 </code></pre>
 <p>Grâce à cette commande, à chaque requête faite au serveur, il renvoie la réponse <strong>&quot;Votre requête a bien été reçue&quot;</strong>.</p>
 <h2>Les Middlewares : 2h</h2>
-<p>La commande ci-dessus est ce qu'on appelle un middleware, les application express sont essentiellements composées d'une suite de middlewares. Ce sont des fonctions qui reçoivent en entrée une requête (req) et une réponse (res). Ils peuvent lire ces objets, les analyser et les manipuler. On peut aussi leur donner en entrée la méthode <em>next()</em> qui permet à un middleware de passer l'exécution du code au middleware suivant.<br>
+<p>La commande ci-dessus est ce qu'on appelle un middleware, les application express sont essentiellements composées d'une suite de middlewares. Ce sont des fonctions qui reçoivent en entrée une requête (req) et une réponse (res). Ils peuvent lire ces objets, les analyser et les manipuler. On peut aussi leur donner en entrée la méthode <em>next()</em> qui permet à un middleware de passer l'exécution du code au middleware suivant.
 Pour mieux comprendre, prenons un exemple :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -250,8 +250,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </code></pre>
 <p>Pour faire simple, le premier middleware renvoie &quot;requête reçue&quot; lorsque qu'il y a une requête faite au serveur. Ensuite, il passe l'exécution au middleware suivant qui lui, renvoie un statut 201 puis passe l'éxecution. Le troisième middleware renvoie une réponse sous format JSON puis passe l'exécution. Le dernier renvoie &quot;Réponse envoyée avec succès&quot; dans la console.</p>
 <h2>Exemple de méthodes HTTP et les routes : 2H30</h2>
-<p>On peut aussi faire des requêtes en utilisant les méthodes HTTP vues précédemment.<br>
-Pour cela on va devoir définir des routes.<br>
+<p>On peut aussi faire des requêtes en utilisant les méthodes HTTP vues précédemment.
+Pour cela on va devoir définir des routes.
 Les routes permettent de définir comment l'application doit répondre à une requête HTTP spécifique. Par exemple, si on veut mettre en place un sytème d'ajout de contacts ou de suppression ou de mise à jour, il y aura une route pour chacun de ces actions.</p>
 <p>Voyons un exemple de requête GET qui peut-être fait pour savoir si une personne existe dans nos contacts :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/contacts/:prenom'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>

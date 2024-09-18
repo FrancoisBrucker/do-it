@@ -128,28 +128,28 @@
 <ol>
 <li>Bases de données relationnelles</li>
 </ol>
-<p>En général, les systèmes de bases de données vus jusqu'à présent sont des bases de données relationnelles. Ces dernières sont caractérisées comme ayant des schémas stricts et des relations entre les différentes tables importantes. Cela permet d'éviter de faire des erreurs dans l'écriture ou le récupérage de donnée.<br>
+<p>En général, les systèmes de bases de données vus jusqu'à présent sont des bases de données relationnelles. Ces dernières sont caractérisées comme ayant des schémas stricts et des relations entre les différentes tables importantes. Cela permet d'éviter de faire des erreurs dans l'écriture ou le récupérage de donnée.
 MySQL et PostgreSQL sont des bons exemples de bdd relationnelles.</p>
 <ol start="2">
 <li>Bases de données non relationnelles</li>
 </ol>
-<p>Les bdd non relationnelles ou NoSQL sont des bdd beaucoup plus libres : il n'y a pas de structure de tables strictes et pas de relations entre les tables. On travaille plutot avec des &quot;documents&quot; qui correspondent à des collections d’objets. Cela permet donc de regrouper des données ayant des structures différentes.<br>
+<p>Les bdd non relationnelles ou NoSQL sont des bdd beaucoup plus libres : il n'y a pas de structure de tables strictes et pas de relations entre les tables. On travaille plutot avec des &quot;documents&quot; qui correspondent à des collections d’objets. Cela permet donc de regrouper des données ayant des structures différentes.
 Exemples :  MongoDB, Cassandra, HBase, GraphQL ...</p>
 <p><a href="https://getc.com.tn/sql-vs-nosql-quelles-differences/">https://getc.com.tn/sql-vs-nosql-quelles-differences/</a></p>
 <h2>Réalisation</h2>
-<p>Pour mon apprentissage d'un système de base de données non relationnelles, j'ai choisi MongoDb car c'est une technologie que j'ai déjà vu sur des offres de stage et elle m'a l'air très populaire. J'ai d'abord suivi le tuto : <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb</a><br>
+<p>Pour mon apprentissage d'un système de base de données non relationnelles, j'ai choisi MongoDb car c'est une technologie que j'ai déjà vu sur des offres de stage et elle m'a l'air très populaire. J'ai d'abord suivi le tuto : <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb</a>
 Prérequis :</p>
 <ul>
 <li>Connaissances de base de Javascript</li>
 <li>Connaissances de l'architecture du web (client/serveur)</li>
-<li>Avoir envie d'apprendre Express et NodeJs aussi<br>
+<li>Avoir envie d'apprendre Express et NodeJs aussi
 Temps estimé : 5h</li>
 </ul>
 <p><a href="https://www.mongodb.com/atlas/database">https://www.mongodb.com/atlas/database</a></p>
 <p>Le site a un peu changé de design depuis que le tuto a été fait mais on s'y retrouve assez bien.</p>
 <h2>Petit projet</h2>
-<p>Pour utiliser les connnaissances que je viens d'acquérir, j'ai décidé de faire un petit projet : une to-do list où l'on peut ajouter des taches, les supprimer et bien sûr les afficher.<br>
-(Le code est disponible ici: <a href="https://github.com/AntwanV/Little-Todo-app/tree/master">https://github.com/AntwanV/Little-Todo-app/tree/master</a>)<br>
+<p>Pour utiliser les connnaissances que je viens d'acquérir, j'ai décidé de faire un petit projet : une to-do list où l'on peut ajouter des taches, les supprimer et bien sûr les afficher.
+(Le code est disponible ici: <a href="https://github.com/AntwanV/Little-Todo-app/tree/master">https://github.com/AntwanV/Little-Todo-app/tree/master</a>)
 Explication des grandes lignes:</p>
 <figure>
   <img src="../assets/todoapp.png">
@@ -167,7 +167,7 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB réussie !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB échouée !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Ici on importe mongoose (Doc: <a href="https://mongoosejs.com/">https://mongoosejs.com/</a>) qui permet un dialogue plus facile entre MongoDb et NodeJs et la possibilité de créer des schémas de données.<br>
+<p>Ici on importe mongoose (Doc: <a href="https://mongoosejs.com/">https://mongoosejs.com/</a>) qui permet un dialogue plus facile entre MongoDb et NodeJs et la possibilité de créer des schémas de données.
 Ensuite on se connecte à la bdd avec un identifiant (antoine) et un mot de passe (que j'ai mis dans un autre fichier qui n'est pas mis sur GitHub).</p>
 <p>Dans le code qui suit, on définit un modèle pour les données</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">//Models</span>

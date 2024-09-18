@@ -130,8 +130,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Pré-requis :<br>
-<strong>Niveau :</strong> Facile<br>
+<p>Pré-requis :
+<strong>Niveau :</strong> Facile
 <strong>Prérequis :</strong> Pour ce POK, il est nécessaire d'avoir fait un peu de développement mobile avec React Native pour comprendre les concepts abordés.</p>
 </div></div>
 <h2>Objectif de ce POK</h2>
@@ -417,7 +417,7 @@ route<span class="token punctuation">.</span><span class="token function">post</
 <p>La requête sql que l'on va faire à la base de données est la suivante :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)'</span><span class="token punctuation">;</span>
 </code></pre>
-<p>On insère dans la table <strong>utilisateurs</strong> des données pour chaque colonne.<br>
+<p>On insère dans la table <strong>utilisateurs</strong> des données pour chaque colonne.
 Les valeurs des différents paramètres seront celles entrées par l'utilisateur. Pour les récupérer, on utilise un fetch :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token punctuation">{</span>
             prenom<span class="token punctuation">,</span>
@@ -521,20 +521,20 @@ Les valeurs des différents paramètres seront celles entrées par l'utilisateur
 </code></pre>
 <p>Pour expliquer un peu le code, si la requête réussie, donc si response.ok, alors on change de page et au lieu d'être sur la page accueil, on passe sur la page Annonces.</p>
 <h2>Conclusion</h2>
-<p>Pour une première utilisation de React Native, j'ai trouvé que c'est un langage facile à prendre en main et très pratique, notamment le système de components qui peuvent être réutilisés. En revanche, pour observer le resultat et voir ce que donne l'application sur un téléphone, expo n'est pas une solution que je conseillerai. Il faut prendre son téléphone à chaque fois, être connecté sur la même wifi que son ordinateur, prendre le qrcode en photo... Cela fait perdre pas mal de temps.<br>
+<p>Pour une première utilisation de React Native, j'ai trouvé que c'est un langage facile à prendre en main et très pratique, notamment le système de components qui peuvent être réutilisés. En revanche, pour observer le resultat et voir ce que donne l'application sur un téléphone, expo n'est pas une solution que je conseillerai. Il faut prendre son téléphone à chaque fois, être connecté sur la même wifi que son ordinateur, prendre le qrcode en photo... Cela fait perdre pas mal de temps.
 En cas de bug, expo ne fournit pas assez d'informations pour comprendre d'où ça vient. J'aurais aimé avoir plus de temps pour continuer à développer l'application.</p>
 <h2>Horodatage</h2>
 <ul>
 <li>
-<p>Sprint 1 :<br>
-Création du design des pages sur figma : 4h<br>
-Création des pages avec React Native : 4h<br>
+<p>Sprint 1 :
+Création du design des pages sur figma : 4h
+Création des pages avec React Native : 4h
 Création de la base de données : 10min</p>
 </li>
 <li>
-<p>Sprint 2 :<br>
-Reprise du front et création de la page Annonces avec RN : 4h<br>
-Logique d'inscription avec Express : 3h30<br>
+<p>Sprint 2 :
+Reprise du front et création de la page Annonces avec RN : 4h
+Logique d'inscription avec Express : 3h30
 Logique de connexion avec Express : 2h30</p>
 </li>
 </ul>

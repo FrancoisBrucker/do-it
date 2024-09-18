@@ -148,7 +148,7 @@
 <p>L’objectif de ce MON est de me former sur les tests javascript.  Je souhaite me concentrer sur cette thématique car c’est quelque chose qui est primordial pour faire du code professionnel.</p>
 <p>Je vais m’attarder sur la biblothèque Jest qui permet de tester du code Javascript. Je vais utiliser le backend du projet Killer pour m’entrainer.</p>
 <h2>Tester du code Javascript</h2>
-<p>Je voulais savoir comment tester l’API du projet Killer car pour l’instant, pour tester les différentes fonctionnalités, j’utilise l’interface de l’application. C’est long à tester une fonctionnalité mais surtout, il est difficile de tester une seule fonctionnalité à la fois.<br>
+<p>Je voulais savoir comment tester l’API du projet Killer car pour l’instant, pour tester les différentes fonctionnalités, j’utilise l’interface de l’application. C’est long à tester une fonctionnalité mais surtout, il est difficile de tester une seule fonctionnalité à la fois.
 L’objectif est donc de pouvoir tester les différentes routes de l’API et s’assurer que le résultat renvoyé est bien celui attendu.</p>
 <p>J’ai utilisé ces deux tuto :</p>
 <ul>
@@ -165,7 +165,7 @@ L’objectif est donc de pouvoir tester les différentes routes de l’API et s�
 <li>Supertest : permet de tester des routes et des endpoints</li>
 <li>Mongoose : communiquer avec la base de donnée</li>
 </ul>
-<p>Ensuite, le but est de tester mon application sans tout casser. En effet, les tests permettront d’intéragir avec la base de donnée. Cependant, lorsqu’on effectue des tests, il ne faut pas modifier la vrai base de donnée qui est utilisé par l’application en production.<br>
+<p>Ensuite, le but est de tester mon application sans tout casser. En effet, les tests permettront d’intéragir avec la base de donnée. Cependant, lorsqu’on effectue des tests, il ne faut pas modifier la vrai base de donnée qui est utilisé par l’application en production.
 Pour cela, on crée un ficher .env qui stocke des variables d’environnement :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">MONGODB_URI</span><span class="token operator">=</span><span class="token string">'url'</span>
 <span class="token assign-left variable">MONGODB_URI_TEST</span><span class="token operator">=</span><span class="token string">'url de test'</span>

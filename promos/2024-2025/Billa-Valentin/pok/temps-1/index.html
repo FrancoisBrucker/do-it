@@ -152,16 +152,13 @@
 <div class="pl-8 mr-8">
 <ul>
 <li>Bases relativement solides en programmation</li>
+<li>Une idée des différences entre utilisateur, client, serveur</li>
+<li>Quelques concepts d'authentification peuvent aider (token, hash...)</li>
 </ul>
 </div></div>
-<ul>
-<li><a href="https://go.dev">Site officiel</a></li>
-<li><a href="https://datatracker.ietf.org/doc/html/rfc6749">Spécification OAuth2.0</a></li>
-<li><a href="https://www.oauth.com/playground/">https://www.oauth.com/playground/</a></li>
-</ul>
 <h2>Objectifs</h2>
-<p>Je n'ai jamais codé en Go, mais le langage m'intrigue depuis un moment, c'est pourquoi j'ai envie de tenter de coder un<br>
-projet concret pour m'initier aux bases. En l'occurence, ce sera un serveur d'authentification OAuth2, mes connaissances<br>
+<p>Je n'ai jamais codé en Go, mais le langage m'intrigue depuis un moment, c'est pourquoi j'ai envie de tenter de coder un
+projet concret pour m'initier aux bases. En l'occurence, ce sera un serveur d'authentification OAuth2, mes connaissances
 sur le sujet sont relativement superficielles, c'est pourquoi je souhaite les approfondir au long de ce POK.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -171,10 +168,10 @@ sur le sujet sont relativement superficielles, c'est pourquoi je souhaite les ap
 <p>Les objectifs sont volontairement très (trop) optimistes, pour être certain de ne pas manquer de contenu !</p>
 </div></div>
 <h2>À propos de OAuth et Go</h2>
-<p>OAuth est un protocole d'autorisation utilisé pour permettre à des applications tierces d'accéder aux ressources d'un<br>
-utilisateur sans divulguer les identifiants de celui-ci. Il est couramment utilisé pour permettre des connexions via des<br>
+<p>OAuth est un protocole d'autorisation utilisé pour permettre à des applications tierces d'accéder aux ressources d'un
+utilisateur sans divulguer les identifiants de celui-ci. Il est couramment utilisé pour permettre des connexions via des
 services comme Google, Facebook, etc.</p>
-<p>Go (ou Golang) est un langage de programmation développé par Google, connu pour sa simplicité, ses performances élevées,<br>
+<p>Go (ou Golang) est un langage de programmation développé par Google, connu pour sa simplicité, ses performances élevées,
 et son support solide pour la concurrence grâce aux goroutines.</p>
 <h2>Sprint 1</h2>
 <h3>Planning Prévisionnel</h3>
@@ -260,35 +257,72 @@ et son support solide pour la concurrence grâce aux goroutines.</p>
 </tr>
 </tbody>
 </table>
-<p>J'ai un peu abusé... le sujet m'intéresse beaucoup et j'avais envie de bien travailler sur un projet pour<br>
-avoir des choses à mettre sur mon GitHub. Étant donné que j'ai tendance à hyper-focus, il va falloir que<br>
+<h3>Rétro</h3>
+<p>J'ai un peu abusé... le sujet m'intéresse beaucoup et j'avais envie de bien travailler sur un projet pour
+avoir des choses à mettre sur mon GitHub. Étant donné que j'ai tendance à hyper-focus, il va falloir que
 je me fixe des limites dures pour le prochain sprint pour éviter d'en faire trop.</p>
-<p>Néanmoins, j'ai pu faire le gros du travail de prototypage les 10 premières heures. Travail que j'ai<br>
+<p>Néanmoins, j'ai pu faire le gros du travail de prototypage les 10 premières heures. Travail que j'ai
 ensuite raffiné les heures suivantes dont je parlerais dans des parties supplémentaires.</p>
-<p>Mon plan pour le sprint 2 ne change que très peu (encore très fourni) car je n'ai volontairement pas<br>
+<p>Mon plan pour le sprint 2 ne change que très peu (encore très fourni) car je n'ai volontairement pas
 beaucoup touché à ce qui était prévu pour le second sprint.</p>
+<p>Pour mieux respecter les objectifs de temps, je vais utiliser un minuteur plutôt qu'un chronomètre
+pour l'horodatage et apposer des estimations de temps aux étapes prévues pour le sprint.</p>
 <h3>Introduction à Go</h3>
-<p>Quel meilleur endroit pour faire connaissance avec un langage que la doc ?!<br>
+<p>Quel meilleur endroit pour faire connaissance avec un langage que la doc ?!
 J'ai commencé par me balader sur un <a href="https://go.dev/tour/">tutoriel interfactif</a> disponible sur le site du langage.</p>
 <p>On y constate en effet la grande simplicité du langage</p>
 <ul>
 <li>2 structures de données disponibles par défault (dictionnaires <code>map[T]T</code> et arrays <code>[]T</code>)</li>
 <li>seules les boucles <code>for</code> existent</li>
-<li>pas d'héritage (le type embedding existe cependant)</li>
+<li>pas d'héritage (le type embedding permet une fonctionnalité similaire.)</li>
 <li>seulement deux types de visibilités (public et package private) choisies en fonction de la casse du premier caractère</li>
 <li>les erreurs sont des valeurs</li>
 </ul>
-<p>Les channels sont au cœur du langage, mais je n'ai pas trop eu l'occasion d'y toucher.<br>
+<p>Les channels sont au cœur du langage, mais je n'ai pas trop eu l'occasion d'y toucher.
 Elles permettent une grande flexibilité et aisance dans la gestion de l'asynchrone.</p>
-<p>Une fois le tutoriel complété, j'ai directement décidé de me mettre les mains à la patte<br>
+<p>Une fois le tutoriel complété, j'ai directement décidé de me mettre les mains à la patte
 pour me mettre en conditions réelles.</p>
+<p>Pour plus d'informations n'hésitez pas à aller voir les POK&amp;MON existants sur Go</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="../../../Gonin-Emma/mon/temps-1.1">MON d'Emma</a></p>
+</div></div>
 <h3>Concepts de base d'OAuth2</h3>
-<p>OAuth (Open Authorization) est un protocole d'autorisation standardisé permettant à des applications tierces d'accéder<br>
-aux ressources d'un utilisateur sans divulguer les identifiants de celui-ci.<br>
-OAuth est souvent utilisé pour permettre des connexions via des services comme Google, Facebook, etc.,<br>
+<p>OAuth (Open Authorization) est un protocole d'autorisation standardisé permettant à des applications tierces d'accéder
+aux ressources d'un utilisateur sans divulguer les identifiants de celui-ci.
+OAuth est souvent utilisé pour permettre des connexions via des services comme Google, Facebook, etc.,
 tout en renforçant la sécurité.</p>
-<p>Pour mieux comprendre les concepts clés, j'ai passé un long moment à lire la <a href="https://datatracker.ietf.org/doc/html/rfc6749">spécification OAuth2</a>,<br>
+<p>Voici une image pour illustrer rapidement le rôle du serveur d'authentification (Dropbox dans le cas ci-dessous)
+<img src="basic-auth-flow.png" alt="Illustration de l'authentification"></p>
+<p>L'objectif premier du protocole OAuth est simple : transmettre un token (~équivalent à une clé numérique)
+à une application tierce pour que celle-ci puisse faire des actions en tant que l'utilisateur qui
+a consenti à lui donner certains droits. Par exemple, sur l'image d'au-dessus, l'application à le
+droit d'accéder aux fichiers dropbox de l'utilisateur.</p>
+<p>Comme pour beaucoup de processus de sécurité ou d'authentification, la communication s'établie
+en plusieurs étapes, car elle a pour objectif de vérifier tout un tas de choses sur les parties prenantes
+que l'on détaillera lors de l'explication du flow authorization code avec PKCE.</p>
+<p>Pour mieux comprendre les concepts clés, j'ai passé un long moment à lire la <a href="https://datatracker.ietf.org/doc/html/rfc6749">spécification OAuth2</a>,
 suite à quoi j'ai utilisé le <a href="https://www.oauth.com/playground/">playground OAuth</a> pour tester les différents flows d'authentification.</p>
+<p>Plusieurs protocoles sont proposés dans la spécification pour récupérer le token cependant nous
+allons nous concentrer sur un seul, principalement, car c'est le plus recommandé et sécurisé,
+mais aussi puisque c'est d'après moi le plus intéressant.</p>
+<h4>Protocole avec code autorisation et PKCE</h4>
+<p>Ce <a href="https://www.oauth.com/playground/authorization-code.html">playground</a> est une petite merveille pour mieux comprendre
+le protocole utilisé, je conseille de faire une tour dessus avant la lecture des paragraphes suivants.</p>
+<p><img src="authorization-code-flow.png" alt="Authorization Code Flow">
+Ici, okta est le serveur d'authentification et le 'resource server' peut être utilisé pour récupérer des données à partir des tokens fournis par okta.
+<em>Tout à l'heure Dropbox était responsable à la fois de l'authentification et de ressources, ce n'est pas toujours le cas.</em></p>
+<h4>Développement Initial</h4>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Le code que j'ai écrit lors de ce POK est disponible sur un <a href="https://github.com/ValentinBilla/GoAuth2.0">répository GitHub</a>.</p>
+</div></div>
 <h2>Sprint 2</h2>
 <h3>Planning Prévisionnel</h3>
 <h4>2.1 Tests et Client</h4>
@@ -301,6 +335,18 @@ suite à quoi j'ai utilisé le <a href="https://www.oauth.com/playground/">playg
 <li>[ ] Choisir et configurer une base de données (ex. MySQL).</li>
 <li>[ ] Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.</li>
 </ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://go.dev">Site officiel de Go</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc6749">Spécification OAuth2.0</a></li>
+<li><a href="https://www.oauth.com/playground/">Playground OAuth2.0</a></li>
+</ul>
+</div></div>
+
 
 
 </article>

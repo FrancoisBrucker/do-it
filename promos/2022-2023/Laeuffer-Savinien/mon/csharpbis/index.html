@@ -123,7 +123,7 @@
 <p>Déploiement de microservices en C# avec Docker</p>
 <!-- fin résumé -->
 <h2>Description</h2>
-<p>Toujours dans le but de me former en C# pour mon stage de fin d'études, j'ai continué à apprendre ce langage en me formant plus particulièrement sur la notion de microservices dont je n'avais pas encore connaissaces. J'ai allé fait le lien rapidement avec Docker, mais plus particulièrement Docker Compose qui est plutôt adapté à l'architecture en microservice. Ici on se focalise sur le langage C# pour créer et exécuter les services d'API Web et le front-end, mais cela marcherait avec d'autres langages et frameworks.<br>
+<p>Toujours dans le but de me former en C# pour mon stage de fin d'études, j'ai continué à apprendre ce langage en me formant plus particulièrement sur la notion de microservices dont je n'avais pas encore connaissaces. J'ai allé fait le lien rapidement avec Docker, mais plus particulièrement Docker Compose qui est plutôt adapté à l'architecture en microservice. Ici on se focalise sur le langage C# pour créer et exécuter les services d'API Web et le front-end, mais cela marcherait avec d'autres langages et frameworks.
 Pour cela je me base sur le MON précédemment réalisé par Nicolas Bert au temps 2 ainsi que de toutes les sources qu'il a pu fournir en fin de MON. Pour la partie C#, un cours par Microsoft explique l'application d'une architecture de microservices au langage C# et les méthodes utiles.</p>
 <h4>Pré-requis</h4>
 <p>Afin de voir les bases en C# et .NET pour créer une API web, vous pouvez vous renseigner sur mon 2ème MON du temps 2, ou bien sur la documentation Microsoft Learn:</p>
@@ -169,7 +169,7 @@ Pour cela je me base sur le MON précédemment réalisé par Nicolas Bert au tem
 </div>
 <h2>Rôle des conteneurs (Docker)</h2>
 <p>Dans notre cas, pour .NET, la conteneurisation de l'application est un moyen utile de travailler avec une architecture de microservices, malgré qu'elle ne soit pas la seule solution.</p>
-<p>Les conteneurs permettent de créer un environnement d'exécution isolé et portable pour des applications logicielles. L'application, tout son contenu ainsi que toutes ses dépendances, sa configuration, sont empaquetées dans un conteneur. Celui-ci permet d'exécuter, de tester, de déployer l'application dans le système d'exploitation hôte.<br>
+<p>Les conteneurs permettent de créer un environnement d'exécution isolé et portable pour des applications logicielles. L'application, tout son contenu ainsi que toutes ses dépendances, sa configuration, sont empaquetées dans un conteneur. Celui-ci permet d'exécuter, de tester, de déployer l'application dans le système d'exploitation hôte.
 L'avantage de travailler avec des conteneurs est de garantir une stabilité et sécurité puisque les conteneurs possèdent leur propre configuration et dépendance et sont isolés les uns des autres. Il est alors possible de déployer les applications rapidement et de manière fiable sans se soucier de l'environnement dans lequel elles sont déployées. Les modifications sont rapides et cela n'impacte pas les autres applications exécutées sur le même système.</p>
 <p>Docker est un projet open source qui permet la création de ce types de conteneurs</p>
 <div style="width:100%;">
@@ -179,8 +179,8 @@ L'avantage de travailler avec des conteneurs est de garantir une stabilité et s
   </figure>
 </div>
 <h2>Génération d'un Dockerfile</h2>
-<p>Microsoft Learn nous fournit un dépôt GitHub contenant un site web et une API back-end que l'on peut clôner afin de s'initier à la conteneurisation.<br>
-Ce repository est accessible à l'adresse suivate:<br>
+<p>Microsoft Learn nous fournit un dépôt GitHub contenant un site web et une API back-end que l'on peut clôner afin de s'initier à la conteneurisation.
+Ce repository est accessible à l'adresse suivate:
 <a href="https://github.com/MicrosoftDocs/mslearn-dotnetmicroservices/">https://github.com/MicrosoftDocs/mslearn-dotnetmicroservices/</a></p>
 <p>Dans VS Code, on ouvre le dossier <code>backend</code> et dans le fichier Dockerfile vide on colle le code suivant afin de le configurer:</p>
 <pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> mcr.microsoft.com/dotnet/sdk:6.0 <span class="token keyword">AS</span> build</span>
@@ -216,7 +216,7 @@ Ce repository est accessible à l'adresse suivate:<br>
     <figcaption>Architecture multi-conteneurs appliquée aux microservices</figcaption>
   </figure>
 </div>
-<p>Un fichier YAML est utilisé avec Docker Compose afin de configurer les différents services d'une application.<br>
+<p>Un fichier YAML est utilisé avec Docker Compose afin de configurer les différents services d'une application.
 Docker Compose est une fonctionnalité de Docker qui est installé par défaut lorsque l'on a Docker.</p>
 <p>Dans VS Code, toujours dans le même répertoire, on peut trouver un fichier <code>docker-compose.yml</code> vide où l'on ajoute le code suivant:</p>
 <pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.4'</span>
@@ -242,13 +242,13 @@ Docker Compose est une fonctionnalité de Docker qui est installé par défaut l
     <span class="token key atrule">ports</span><span class="token punctuation">:</span> 
       <span class="token punctuation">-</span> <span class="token string">"5000:80"</span>
 </code></pre>
-<p>Ce code permet de créer la partie front-end du site inter dans un premier temps, et il indique à Docker quel est le chemin vers le Dockerfile du front-end afin de le générer. Un port est choisi pour la partie back-end.<br>
+<p>Ce code permet de créer la partie front-end du site inter dans un premier temps, et il indique à Docker quel est le chemin vers le Dockerfile du front-end afin de le générer. Un port est choisi pour la partie back-end.
 Ensuite le service du back-end est créé et est généré à partir du Dockerfile créé précédemment.</p>
-<p>Afin de générer les images conteneur, on utilise la commande <code>docker-compose build</code> dans notre terminal.<br>
+<p>Afin de générer les images conteneur, on utilise la commande <code>docker-compose build</code> dans notre terminal.
 Finalement pour démarrer les deux services simultanément grâce à Docker Compose, on utilise la commande suivante:</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker-compose</span> up
 </code></pre>
-<p>On peut donc accéder en local à notre site sur le port 5902 à l'adresse <a href="http://localhost:5902">http://localhost:5902</a><br>
+<p>On peut donc accéder en local à notre site sur le port 5902 à l'adresse <a href="http://localhost:5902">http://localhost:5902</a>
 Nous avons donc réussi à conteneuriser le service d'API et le front-end séparément et de les générer/exécuter simultanément grâce à Docker Compose</p>
 <h2>Resources</h2>
 <ul>

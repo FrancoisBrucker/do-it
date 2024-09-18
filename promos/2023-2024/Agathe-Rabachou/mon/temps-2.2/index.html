@@ -153,11 +153,11 @@
 <p>Pour mieux appréhender la suite, il est important de comprendre que dans une application web, le front communique avec le back via des <strong>requêtes HTTP</strong>. En bref, chaque action de l'utilisateur sur le front envoie une requête au back, et le back est une sorte de programme qui lit ces requêtes et renvoie au front la réponse correspondante.</p>
 <p>Dans ce cadre, on parle souvent d'<strong>API</strong>. Une API (pour <em>Application Programming Interface</em>) est l'interface qui permet la communication entre les différentes parties d'une application, ici principalement le front, le back et la potentielle base de données, via ces requêtes HTTP et différentes routes que l'on verra plus loin. Le schéma suivant explique simplement le but de cette interface :</p>
 <img src="schema_API.png">
-<p>Plus largement et même si ce n'est pas l'utilisation que nous en ferons ici dans un premier temps, une API permet la communication et l'échange de données entre deux applications qui peuvent être distinctes. Un exemple classique : l'application météo d'un téléphone portable ne fait pas elle même une recherche et une analyse de données pour afficher la météo. Elle utilise une API qui se connecte à une base de données qui contient déjà ces informations.<br>
+<p>Plus largement et même si ce n'est pas l'utilisation que nous en ferons ici dans un premier temps, une API permet la communication et l'échange de données entre deux applications qui peuvent être distinctes. Un exemple classique : l'application météo d'un téléphone portable ne fait pas elle même une recherche et une analyse de données pour afficher la météo. Elle utilise une API qui se connecte à une base de données qui contient déjà ces informations.
 Une API permet donc à un utilisateur de récupérer et d'intégrer à son application des fonctionnalités ou des données issues d'un programme externe, même si il n'en connaît pas exactement le fonctionnement.</p>
 <h2>3. Création et initialisation du back-end avec Node</h2>
 <p><em>On considère que Node.js est déjà installé sur la machine utilisée. Node est un environnement d'exécution qui permet d'écrire en JavaScript toutes les tâches nécessaires côté serveur.</em></p>
-<p>Pour commencer, il est important de séparer le front et le back dans deux dossiers bien distincts à l'intérieur du projet.<br>
+<p>Pour commencer, il est important de séparer le front et le back dans deux dossiers bien distincts à l'intérieur du projet.
 Puis on se place dans le dossier back et on exécute la commande suivante :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> init
 </code></pre>
@@ -165,7 +165,7 @@ Puis on se place dans le dossier back et on exécute la commande suivante :</p>
 <p>On peut ensuite exécuter</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
 </code></pre>
-<p>afin de créer le repository GitHub du projet, et ajouter un fichier &quot;.gitignore&quot; dans lequel on mettra tout ce que l'on ne veut pas charger sur le repo GitHub.<br>
+<p>afin de créer le repository GitHub du projet, et ajouter un fichier &quot;.gitignore&quot; dans lequel on mettra tout ce que l'on ne veut pas charger sur le repo GitHub.
 Enfin, on crée un fichier &quot;index.js&quot;, qui contiendra le code de notre projet.</p>
 <p>On peut donc reprendre notre code, et dans le fichier &quot;index.js&quot;, il faut commencer par créer le serveur et son fonctionnement de base. Le code commenté ci-dessous explique cette étape :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe le package qui permet de créer le serveur</span>
@@ -184,11 +184,11 @@ server<span class="token punctuation">.</span><span class="token function">liste
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>A noter : avec cette méthode, il est nécessaire de redémarrer le serveur avec la commande <em>node server</em> à chaque modification dans le code, pour prendre en compte cette modification.<br>
+<p>A noter : avec cette méthode, il est nécessaire de redémarrer le serveur avec la commande <em>node server</em> à chaque modification dans le code, pour prendre en compte cette modification.
 Pour éviter cela, il est très utile d'installer le package <strong>nodemon</strong>. Lorsque c'est fait, il suffit de remplacer la commande de démarrage <em>node server</em> par <em>nodemon server</em>, et la mise à jour du serveur se fera automatiquement au fur et à mesure de l'avancée du code, sans besoin de le redémarrer.</p>
 </div></div>
 <h2>4. Express : installation et utilisation</h2>
-<p>Express est un framework pour Node, qui rend beaucoup plus simple l'analyse des requêtes et évite le travail très fastidieux que demanderait la même tâche à réaliser uniquement avec Node (ce qui est malgré tout possible).<br>
+<p>Express est un framework pour Node, qui rend beaucoup plus simple l'analyse des requêtes et évite le travail très fastidieux que demanderait la même tâche à réaliser uniquement avec Node (ce qui est malgré tout possible).
 Pour l'utiliser, nous allons donc commencer par l'installer, en exécutant dans le dossier backend :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express
 </code></pre>
@@ -249,10 +249,10 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <ul>
 <li><strong>Les routes</strong></li>
 </ul>
-<p>Les routes permettent de construire l'API et donc le lien entre le front et le back. La plupart des API sont structurées autour de 4 grandes actions : on parle de CRUD pour Create, Read, Update et Delete, soit créer, lire, modifier et supprimer. Il existe donc une méthode pour chacune de ces actions :<br>
--&gt; On lit une donnée grâce à la méthode GET<br>
--&gt; On crée une donnée grâce à la méthode POST<br>
--&gt; On modifie une donnée grâce à la méthode PUT<br>
+<p>Les routes permettent de construire l'API et donc le lien entre le front et le back. La plupart des API sont structurées autour de 4 grandes actions : on parle de CRUD pour Create, Read, Update et Delete, soit créer, lire, modifier et supprimer. Il existe donc une méthode pour chacune de ces actions :
+-&gt; On lit une donnée grâce à la méthode GET
+-&gt; On crée une donnée grâce à la méthode POST
+-&gt; On modifie une donnée grâce à la méthode PUT
 -&gt; On supprime une donnée grâce à la méthode DELETE</p>
 <p>Voici un exemple de requête GET commentée :</p>
 <pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">x <span class="token operator">=</span> <span class="token number">7</span> 
@@ -297,7 +297,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
   res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>stuff<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//retourne les articles et le code d'état de requête réussie</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>On effectue ensuite une requête GET sur Postman, et on obtient comme prévu le résultat suivant :<br>
+<p>On effectue ensuite une requête GET sur Postman, et on obtient comme prévu le résultat suivant :
 <img src="requete_GET_postman.png"></p>
 <ul>
 <li><strong>Les headers</strong></li>

@@ -151,7 +151,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Le jeu du Morpion codé en exemple est disponible sur le lien suivant: <a href="https://duc-dgv.itch.io/morpion">Jeu du morpion avec Pygame</a><br>
+<p>Le jeu du Morpion codé en exemple est disponible sur le lien suivant: <a href="https://duc-dgv.itch.io/morpion">Jeu du morpion avec Pygame</a>
 Tout les codes présentés sont disponibles dans le dossier Git du MON2.1: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-2.1">codes du MON2.1</a></p>
 </div></div>
 <h2>Introduction</h2>
@@ -176,7 +176,7 @@ screen <span class="token operator">=</span> pygame<span class="token punctuatio
 </code></pre>
 <p>L'exécution de ce code affiche la fenêtre suivante:</p>
 <p><img src="Image1.png" alt="Image1"></p>
-<p>Il faut à présent remplir cette page. Une première étape est de personnaliser le fond, en utilisant la méthode <em>fill</em> : <code>screen.fill(&quot;White&quot;)</code>. Il est également possible de rajouter une image. Pour cela, il faut comprendre la classe <strong>Surface</strong>. Les objets de cette classe sont des éléments, sur lesquels on peut placer différents éléments, comme des images par exemple. Pour associer une image à une surface, on utilise le module <em>image</em> et sa méthode <em>load</em>. Ensuite, on utilise la méthode <em>blit</em> pour afficher cette surface sur l'écran principal. Il ne faut pas oublier d'actualiser la fenêtre avec la méthode <em>update</em> du module <em>display</em>.<br>
+<p>Il faut à présent remplir cette page. Une première étape est de personnaliser le fond, en utilisant la méthode <em>fill</em> : <code>screen.fill(&quot;White&quot;)</code>. Il est également possible de rajouter une image. Pour cela, il faut comprendre la classe <strong>Surface</strong>. Les objets de cette classe sont des éléments, sur lesquels on peut placer différents éléments, comme des images par exemple. Pour associer une image à une surface, on utilise le module <em>image</em> et sa méthode <em>load</em>. Ensuite, on utilise la méthode <em>blit</em> pour afficher cette surface sur l'écran principal. Il ne faut pas oublier d'actualiser la fenêtre avec la méthode <em>update</em> du module <em>display</em>.
 On peut également ajuster la taille de la surface avec le module <em>tranform</em> et la méthode <em>scale</em>, ou aussi renommer la fenêtre grâce à la méthode <em>set_caption</em>.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> pygame
 <span class="token keyword">from</span> sys <span class="token keyword">import</span> exit
@@ -243,7 +243,7 @@ image_chaton <span class="token operator">=</span> pygame<span class="token punc
 </div>
 </details>     
 </div>
-<p>Ensuite, on crée la méthode <em>game</em> qui lance la boucle d'évènement. Dans cette boucle, on donne la possibilité à l'utilisateur de fermer la fenêtre, mais surtout on détecte quand l'utilisateur clique sur la fenêtre. Pour cela, on récupère l'évènement <em>MOUSEBUTTONDOWN</em>. Quand on l'utilisateur clique, on exécute la méthode <em>player_click</em>. Cette méthode récupère la position de la souris, et on détermine la zone dans laquelle elle est dans la grille. Suivant cette zone, et sous réserve qu'elle soit vide, on appelle la méthode <em>play</em> qui dessine un cercle bleu ou une croix rouge.<br>
+<p>Ensuite, on crée la méthode <em>game</em> qui lance la boucle d'évènement. Dans cette boucle, on donne la possibilité à l'utilisateur de fermer la fenêtre, mais surtout on détecte quand l'utilisateur clique sur la fenêtre. Pour cela, on récupère l'évènement <em>MOUSEBUTTONDOWN</em>. Quand on l'utilisateur clique, on exécute la méthode <em>player_click</em>. Cette méthode récupère la position de la souris, et on détermine la zone dans laquelle elle est dans la grille. Suivant cette zone, et sous réserve qu'elle soit vide, on appelle la méthode <em>play</em> qui dessine un cercle bleu ou une croix rouge.
 De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module <em>draw</em>. On utilise la méthode <em>line</em> en indiquant les coordonnées de la ligne ainsi que sa couleur.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">

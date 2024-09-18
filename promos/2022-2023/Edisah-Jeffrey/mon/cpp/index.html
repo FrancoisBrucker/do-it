@@ -149,14 +149,14 @@
 <p>Comme le C, le C++ est un langage typé avec différents types classiques (bool, int, char, double, etc...) qui permettent une allocation précise de la mémoire en fonction du type de la fonction, tout comme en C++ et en Java, et à l'inverse de Python ou de Javascript.</p>
 <h3>Références</h3>
 <p>Le C++ introduit le concept de référence, qui comme son nom l'indique permet de référencer une variable déjà existante sans devoir lui attribuer une autre case mémoire. Les références sont utiles pour modifier directement les paramètres de fonction sans avoir à créer des variables locales pour effectuer nos calculs. Une référence se déclare comme ceci :</p>
-<p>int variable(0);<br>
+<p>int variable(0);
 int&amp; référence(variable);</p>
 <h3>Pointeurs</h3>
 <p>Comme le C, le C++ continue à utiliser les pointeurs, c'est-à-dire des variables qui garde en mémoire les adresses mémoires vers d'autres variables. Ces pointeurs sont les outils de prédilection pour la gestion de la mémoire en C comme en C++. En effet à partir des pointeurs on peut accéder aux valeurs pointés et allouer la mémoire manuellement. Par contre, il est nécessaire de libérer la mémoire aussi, avant de supprimer le pointeur, sinon on perd de vue les variables considérés, et on risque de remplir la mémoire de la machine jusqu'au plantage. Voici le cycle de vie d'un pointeur.</p>
-<p>int *pointeur(0); //initialisation du pointeur<br>
-pointeur = new int; //allocation mémoire d'un int<br>
-*pointeur = 2; //affectation dans la précédente case mémoire<br>
-delete pointeur; //libération de la case mémoire<br>
+<p>int *pointeur(0); //initialisation du pointeur
+pointeur = new int; //allocation mémoire d'un int
+*pointeur = 2; //affectation dans la précédente case mémoire
+delete pointeur; //libération de la case mémoire
 pointeur = 0; //pointeur ne pointe plus vers rien</p>
 <h2>Conclusion</h2>
 <p>Le C++ est un langage plutôt difficile à mon avis, et nécessite une connaissance d'autres langages à priori avant de l’utiliser. Mais ce MON m'a permis une bonne mise à jour nécessaire pour le prochain MON.</p>

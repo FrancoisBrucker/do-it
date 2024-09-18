@@ -140,7 +140,7 @@
 <div class="pl-8 mr-8">
 <p><strong>PHP, Docker(mieux mais pas indispensable), Programmation orienté objet</strong></p>
 </div></div>
-<p>L'objectif de ce MON est de me former sur un framworks PHP : Symfony. Pourquoi ce Frameworks ? Parce qu'il est beaucoup utilisé dans l'entreprise dans laquelle je vais faire mon stage.<br>
+<p>L'objectif de ce MON est de me former sur un framworks PHP : Symfony. Pourquoi ce Frameworks ? Parce qu'il est beaucoup utilisé dans l'entreprise dans laquelle je vais faire mon stage.
 Pour cela, je vais suivre le livre sur symfony 6 : <a href="https://symfony.com/book">https://symfony.com/book</a> en parallèle de la doc officielle <a href="https://symfony.com/doc/current/index.html">https://symfony.com/doc/current/index.html</a>.</p>
 <h2>Présentation du projet</h2>
 <p>Le projet proposé dans le livre <a href="https://symfony.com/book">https://symfony.com/book</a> de Symfony 6 est une plateforme web qui  a pour but d'obtenir un retour d'expérience sur des conférences. Une sorte de livre d’or. Il y a une liste des conférences sur la page d'accueil ainsi qu'une page pour chacune d'entre elles.</p>
@@ -153,7 +153,7 @@ Pour cela, je vais suivre le livre sur symfony 6 : <a href="https://symfony.com/
 <h3>PHP</h3>
 <p>Tout d’abord il faut installer PHP. Il faut aller sur le ce site <a href="https://windows.php.net/download#php-8.3">https://windows.php.net/download#php-8.3</a>, et télécharger le zip x64 Thread Safe.</p>
 <p>Ensuite, il faut ajouter le contenu zip dans sa variable d’environnement PATH. Voilà comment faire : <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/</a></p>
-<p>Ensuite, dans le dossier PHP, il faut dupliquer le fichier php.ini-development et renommer le nouveau fichier php.ini. C’est ce fichier qui indiquera les extensions nécessaires au projet. Pour ajouter une dépendance, il faut décommenter la ligne associée.<br>
+<p>Ensuite, dans le dossier PHP, il faut dupliquer le fichier php.ini-development et renommer le nouveau fichier php.ini. C’est ce fichier qui indiquera les extensions nécessaires au projet. Pour ajouter une dépendance, il faut décommenter la ligne associée.
 Voici les extension à décommenter :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">extension</span><span class="token operator">=</span>curl
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>gd
@@ -174,7 +174,7 @@ Voici les extension à décommenter :</p>
 </code></pre>
 <h3><strong>Composer</strong></h3>
 <p><a href="https://getcomposer.org/">Composer</a> permet de gérer les dépendances du projet. Pour l’installer, il faut télecharger le Composer-setup.exe depuis ce site <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a></p>
-<p>Normalement, cela ajoute directement Composer à la variable PATH.<br>
+<p>Normalement, cela ajoute directement Composer à la variable PATH.
 On peut vérifier que l’installation s’est bien passée :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">composer</span> <span class="token parameter variable">--version</span>
 </code></pre>
@@ -186,7 +186,7 @@ On peut vérifier que l’installation s’est bien passée :</p>
 <p>Installez la <a href="https://symfony.com/download">commande symfony</a>. Il faut installer le Binaries amd64 et ajouter le contenu du fichier télécharger dans la variable PATH.</p>
 <p>Ensuite, comme écrit dans le livre, pour pouvoir utiliser HTTPS localement, nous avons également besoin d'<code>installer une autorité de certification</code> :</p>
 <p><code>$ symfony server:ca:install</code></p>
-<p>Maintenant dernière étape pour savoir si on a tout bien installé :<br>
+<p>Maintenant dernière étape pour savoir si on a tout bien installé :
 <code>symfony book:check-requirements</code></p>
 <p>Si on a tout fait correctement, on doit avoir cette réponse :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>utilisateur<span class="token operator">></span>symfony book:check-requirements
@@ -221,7 +221,7 @@ On peut vérifier que l’installation s’est bien passée :</p>
 <h2>Mon retour sur le livre</h2>
 <p>Je ne vais pas détaillé les autres chapitres du livre car je ne vais pas mieux expliquer que l’auteur, qui est le créateur de Symfony.  J’ai eu le temps de faire les 14 premiers chapitres du livre.</p>
 <p>Durant ces chapitres, on voit comment créer des controleurs, des entity et des repository, comment faire une page admin CRUD qui communique avec la base de donnée ou comment utiliser twig pour des templates HTML.</p>
-<p>Il y a beaucoup de concept différents à assimiler. Il faut être à l’aise sur la programmation orienté objet, bien connaître PHP ou encore le concept de routage et controleurs .<br>
+<p>Il y a beaucoup de concept différents à assimiler. Il faut être à l’aise sur la programmation orienté objet, bien connaître PHP ou encore le concept de routage et controleurs .
 Personnellement, je ne connaissais pas bien PHP. Je devais m’arrêter sans cesse pour me documenter sur les concepts PHP.</p>
 <p>Le cours de Java, Spring Boot m’a permis de mieux appréhender certains concepts comme les controleurs, les repository et les entity qu’on retrouve dans Symfony.</p>
 <p>Je conseille Symfony et ce livre pour des personnes qui ont déjà un bon bagage en développement web. Parce qu’il repose sur pas mal de prérequis qui j’ai listé en haut.</p>

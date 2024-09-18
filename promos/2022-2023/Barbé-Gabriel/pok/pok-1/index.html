@@ -122,16 +122,16 @@
 
 
 <!-- Début Résumé -->
-<p>Notre site chez nous :<br>
-Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'ordinateur.<br>
+<p>Notre site chez nous :
+Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'ordinateur.
 Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.</p>
 <p><a href="https://github.com/gabrielbarbe00/POK-de-Gabriel.git">lien du projet</a></p>
 <!-- Fin Résumé -->
 <img src="Images/Accueil.png">
 <h3>Partie Gabriel</h3>
-<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br><br>
+<p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc.</p>
-<p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.<br>
+<p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
 <p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc.</p>
 <img src="Images/Page_Gaby.png">
@@ -159,7 +159,7 @@ Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot d
                 PFC<span class="token punctuation">(</span>J1,J2<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
 </code></pre>
-<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton &quot;annuler&quot; du prompt n'annule pas notre demande et affiche &quot;entrez un coup valide&quot;. De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. </p><hr><br>
+<p>PFC est ensuite une fonction déduisant le vainqueur avec des if...else. Problème : une fois le bouton appuyé, on ne peut plus refuser de jouer, le bouton &quot;annuler&quot; du prompt n'annule pas notre demande et affiche &quot;entrez un coup valide&quot;. De plus, ma condition n'accepte qu'une orthographe très spécifique pour le coup voulu. Néanmoins cette fonction est satisfaisante pour notre première partie. </p><hr>
 J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer contre l'IA mais aussi de me passer du prompt pour selectionner mon coup. Dorénavant, lorsque j'appuie sur &quot;jouer&quot; une liste de coup disponible apparait et je n'ai qu'à cliquer sur le coup désiré. Parralèlement se lance une fonction determinant le coup de l'IA (déterminé aléatoirement).<p></p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">            <span class="token keyword">function</span> <span class="token function-name function">choixCoups2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 var html <span class="token operator">=</span> document.querySelector<span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -211,7 +211,7 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
 </code></pre>
-<p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br><br>
+<p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du &quot;prompt&quot;, j'avais aussi mon élèment &quot;panel&quot; qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le &quot;resetbutton&quot; n'aparaissait pas comme je le souhaitais. <br></p>
 <img src="Images/Choix.png">
 <img src="Images/Reset.png">
@@ -240,7 +240,7 @@ Le reste du code est bien sur disponible via le lien en haut de page.
 </code></pre>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
 </code></pre>
-<p>Étant donné que je voulais faire une page différente pour les roulettes, j'ai eu du mal à transférer les choix pour les afficher. Adrien Brunet (un intervenant) m'a conseillé d'utiliser le localStorage qui permet d'enregistrer des données dans le navigateur et de les conserver lors des changements de pages.<br>
+<p>Étant donné que je voulais faire une page différente pour les roulettes, j'ai eu du mal à transférer les choix pour les afficher. Adrien Brunet (un intervenant) m'a conseillé d'utiliser le localStorage qui permet d'enregistrer des données dans le navigateur et de les conserver lors des changements de pages.
 Pour ce faire j'utilise la fonction :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'text_choix1'</span><span class="token punctuation">,</span>text_choix1<span class="token punctuation">)</span>
 </code></pre>
@@ -304,7 +304,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 2 choix"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>J'arrive donc à cette page :<br>
+<p>J'arrive donc à cette page :
 <img src="Images/Index_sans_css.jpg"></p>
 <p>Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.</p>
 <h4> Mise en page</h4>
@@ -317,7 +317,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <img src="Images/index_avec_css.jpg">
 <h3 id="2"> Page pour chaque roulette</h3>
 <p>J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.</p>
-<p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.<br>
+<p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.
 Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>z-index</em> j'ai placé les textes des différents choix sur l'image, choix que j'ai récupérer dans le local Storage. J'ai également ajouté un triangle qui permet de montrer quel choix a été tiré au sort.</p>
 <p>Pour la rotation de la roulette j'ai utilisé les animations webkit.</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">@keyframes rotating {
@@ -346,7 +346,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
 </code></pre>
 <p>Cette fonction se lance lorsque l'on clique sur le bouton start.</p>
 <p>Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.</p>
-<p>J'ai donc obtenu cette page :<br>
+<p>J'ai donc obtenu cette page :
 <img src="Images/roulette.jpg"></p>
 
 

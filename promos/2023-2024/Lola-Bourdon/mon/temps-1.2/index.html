@@ -157,10 +157,10 @@
 <h3>Chapitres 1 à 7 - revoir les bases</h3>
 <p>Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. Pour cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur <a href="http://excel.pratique.com">excel.pratique.com</a> étant très synthétique, je vais juste énumérer les points importants pour moi.</p>
 <ul>
-<li>L'utilisation du <code>$</code> permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :<br>
-<img src="EXCEL2.png" alt="excel"><br>
-Dans cette exemple, on divise par la valeur <strong>3</strong>, qui apparaît dans la cellule <strong>B8</strong>. Seulement on veut pouvoir diviser à chaque fois par cette <strong>même valeur</strong> de cellule <strong>B8</strong> lors de la recopie. Corrigeons:<br>
-<img src="EXCEL3.png" alt="excel"><br>
+<li>L'utilisation du <code>$</code> permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
+<img src="EXCEL2.png" alt="excel">
+Dans cette exemple, on divise par la valeur <strong>3</strong>, qui apparaît dans la cellule <strong>B8</strong>. Seulement on veut pouvoir diviser à chaque fois par cette <strong>même valeur</strong> de cellule <strong>B8</strong> lors de la recopie. Corrigeons:
+<img src="EXCEL3.png" alt="excel">
 Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici, on aurait pu simplement fixer la ligne</li>
 <li>L'opérarteur <strong>&lt;&gt;</strong> signifie est <strong>différent de</strong></li>
 <li>L'opérateur <strong>&lt;=</strong> signifie est <strong>inférieur ou égal à</strong></li>
@@ -176,14 +176,14 @@ Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonn
 <h4>Les formules SI, ET, OU</h4>
 <ul>
 <li>
-<p>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong><br>
-Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.<br>
-Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :<br>
-<img src="screen_SI_1.png" alt="excel"><br>
-Il suffit de rentrer dans la cellule D36: <strong>=SI(C36&gt;=18 (qui explique la condition); &quot;majeur&quot;;&quot;mineur&quot;)</strong> et de faire une recopie sur les cellules souhaitées.<br>
-Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:<br>
+<p>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong>
+Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.
+Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :
+<img src="screen_SI_1.png" alt="excel">
+Il suffit de rentrer dans la cellule D36: <strong>=SI(C36&gt;=18 (qui explique la condition); &quot;majeur&quot;;&quot;mineur&quot;)</strong> et de faire une recopie sur les cellules souhaitées.
+Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:
 <img src="screen_SI_2.png" alt="excel"></p>
-<p>Ici, on souhaite calculer dans la cellule <strong>D3</strong> la valeur du <em>rabais</em> en fonction de la <em>quantité d'article</em>. Pour cela il faut <strong>imbriquer</strong> une fonction SI dans une autre.<br>
+<p>Ici, on souhaite calculer dans la cellule <strong>D3</strong> la valeur du <em>rabais</em> en fonction de la <em>quantité d'article</em>. Pour cela il faut <strong>imbriquer</strong> une fonction SI dans une autre.
 Dans ce cas, on demande d'abort si la quantité est inférieure à 50:</p>
 <ol>
 <li>Si <strong>Vrai</strong> alors on demande si elle est inférieur à 10:
@@ -192,8 +192,8 @@ Dans ce cas, on demande d'abort si la quantité est inférieure à 50:</p>
 <li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H4</strong> sans oublier de fixer <strong>H3</strong> avec des '$'</li>
 </ol>
 </li>
-<li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H5</strong> sans oublier de fixer <strong>H3</strong> avec des '$'<br>
-Cela donne la formule suivante, non unique:<br>
+<li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H5</strong> sans oublier de fixer <strong>H3</strong> avec des '$'
+Cela donne la formule suivante, non unique:
 <img src="formule1.png" alt="excel"></li>
 </ol>
 </li>
@@ -206,9 +206,9 @@ Cela donne la formule suivante, non unique:<br>
 </li>
 </ul>
 <h4>Les graphiques Sparkline</h4>
-<p>Le <strong>graphique sparkline</strong> (non disponible sur la version en ligne) est un graphique miniature qui apparaît directement dans une cellule et apporte une représentation visuelle des données d'une ligne (ou d'une colonne) sous forme de graphique.<br>
+<p>Le <strong>graphique sparkline</strong> (non disponible sur la version en ligne) est un graphique miniature qui apparaît directement dans une cellule et apporte une représentation visuelle des données d'une ligne (ou d'une colonne) sous forme de graphique.
 Pour l'insérer il suffit de faire :</p>
-<p><strong>insertion &gt; graphique sparkline &gt; choisir</strong> entre <em>courbe</em>, <em>histogramme</em> et <em>conclusion et perte</em> <strong>&gt; choisir la ligne ou colonne de données à utiliser &gt; recopie possible &gt; personnalisation possible.</strong><br>
+<p><strong>insertion &gt; graphique sparkline &gt; choisir</strong> entre <em>courbe</em>, <em>histogramme</em> et <em>conclusion et perte</em> <strong>&gt; choisir la ligne ou colonne de données à utiliser &gt; recopie possible &gt; personnalisation possible.</strong>
 Cela donne par exemple:</p>
 <p><img src="screen_sparkline.png" alt="excel"></p>
 <h3>Chapitres 8 à 11 - Apprendre</h3>
@@ -221,8 +221,8 @@ Cela donne par exemple:</p>
 <li>Bordures</li>
 <li>Format des données</li>
 </ul>
-<p>L'outil de MFC ést assez intuitif, pour appliquer une MFC à un fichier excel, il faut :<br>
-<strong>sélectionner la plage de cellules contenant les données &gt; accueil &gt; Mise en forme conditionnelle</strong><br>
+<p>L'outil de MFC ést assez intuitif, pour appliquer une MFC à un fichier excel, il faut :
+<strong>sélectionner la plage de cellules contenant les données &gt; accueil &gt; Mise en forme conditionnelle</strong>
 On pourra ensuite faire:</p>
 <ul>
 <li>règle de mise en surbrillance &gt; supérieur à &gt; remplissage vert avec texte vert foncé</li>
@@ -231,7 +231,7 @@ On pourra ensuite faire:</p>
 <p>Cela donne le résultat suivant :</p>
 <p><img src="screen_MFC.png" alt="excel"></p>
 <p>Pour gérer/modifier les MFC ajoutées il faut :</p>
-<p><strong>Mise en forme conditionnelle &gt; gérer mes règles</strong> - comme c'est affiché sur la photo ci-dessus.<br>
+<p><strong>Mise en forme conditionnelle &gt; gérer mes règles</strong> - comme c'est affiché sur la photo ci-dessus.
 Le gestionnaire affiché à droite permet de :</p>
 <ul>
 <li>Ajouter/supprimer de nouvelles règles</li>
@@ -254,10 +254,10 @@ Le gestionnaire affiché à droite permet de :</p>
 <p><img src="screen_tri2.png" alt="excel"></p>
 <p>La fonctionnalité <strong>filtrer des données</strong> permet <strong>d'afficher</strong> les données en fonction d'un ou de plusieurs critères, pour cela il faut : <strong>onglet données &gt; filtre &gt; remplir</strong> la fenêtre qui s'affiche.</p>
 <p>La fonctionnalité <strong>validation de données</strong> s'assure de la <strong>validité</strong> des données entrées et affiche un message d'erreur et refuse l'entrée si les données ne sont pas valides, pour cela :</p>
-<p><strong>Sélectionner la plage qui contiendra les données valides &gt; onglet données &gt; Validation des données &gt; remplir</strong> la fenêtre qui s'affiche.<br>
-Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100<br>
+<p><strong>Sélectionner la plage qui contiendra les données valides &gt; onglet données &gt; Validation des données &gt; remplir</strong> la fenêtre qui s'affiche.
+Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100
 <img src="screen_valisation.png" alt="excel"></p>
-<p>Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :<br>
+<p>Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
 <img src="screen_valisation3.png" alt="excel"></p>
 <h4>Tableaux croisés dynamiques</h4>
 <p>Les <em>pivot table</em> (en anglais) permettent de structurer des informations à partir d'un tableau brut de données, pour analyser, présenter ou resumer.</p>

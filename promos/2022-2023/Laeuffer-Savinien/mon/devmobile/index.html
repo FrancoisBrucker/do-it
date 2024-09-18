@@ -146,7 +146,7 @@
 <li>Une API en Dart qui permet d'écrire des requêtes plus simples sans passer par du SQL.</li>
 </ul>
 <h5>Firebase</h5>
-<p><em><strong>Firebase</strong></em> est une plateforme de développement d'application créée par Google qui va nous fournir les outils nécessaires à la <strong>création d'une base de données sur un serveur</strong> afin de stocker nos données d'applications.<br>
+<p><em><strong>Firebase</strong></em> est une plateforme de développement d'application créée par Google qui va nous fournir les outils nécessaires à la <strong>création d'une base de données sur un serveur</strong> afin de stocker nos données d'applications.
 <em><strong>Flutterfire</strong></em> est le <strong>package</strong> faisant le lien entre Firebase et nos applications mobiles en Flutter que nous allons installer afin de stocker sur le serveur nos données stockée localement grâce à Drift.</p>
 <div style="width:100%;">
   <figure style="text-align:center">
@@ -161,8 +161,8 @@
 <div class="pl-8  mb-2 mr-8">
 <p>Pré-requis</p>
 </div><div class="pl-8 mr-8">
-<p>Dans la suite de ce MON, on considère que Flutter et Dart sont acquis et qu'un projet est déjà créé. Ce tutoriel est destiné à un niveau déjà avancé en Flutter.<br>
-Pour débuter Flutter, on peut se servir de la documentation officielle qui est suffisante et bien faite:<br>
+<p>Dans la suite de ce MON, on considère que Flutter et Dart sont acquis et qu'un projet est déjà créé. Ce tutoriel est destiné à un niveau déjà avancé en Flutter.
+Pour débuter Flutter, on peut se servir de la documentation officielle qui est suffisante et bien faite:
 <a href="https://docs.flutter.dev/">Documentation de Flutter</a></p>
 </div></div>
 <h2>Persistence des données (Drift)</h2>
@@ -213,8 +213,8 @@ Pour débuter Flutter, on peut se servir de la documentation officielle qui est 
 <p>Remarques</p>
 </div><div class="pl-8 mr-8">
 <ul>
-<li>Attention, par défaut il n'est pas possible d'avoir une valeur null dans une colonne. Une erreur sera affichée si il manque une valeur lors de l'insertion dans la base de données.<br>
-Si on veut rendre une valeur nullable, on peut écrire comme suit:<br>
+<li>Attention, par défaut il n'est pas possible d'avoir une valeur null dans une colonne. Une erreur sera affichée si il manque une valeur lors de l'insertion dans la base de données.
+Si on veut rendre une valeur nullable, on peut écrire comme suit:
 <code>TextColumn get email =&gt; text().withLength(min: 6, max: 32)().nullable();</code></li>
 <li>Si une table possède une colonne d'Integers avec une contrainte autoIncrement(), drift considèrera que ce sera la clé primaire par défaut. Si on veut changer la clé primaire on peut overrider cette clé.</li>
 </ul>
@@ -257,7 +257,7 @@ Si on veut rendre une valeur nullable, on peut écrire comme suit:<br>
 <span class="token punctuation">}</span>
 </code></pre>
 <h5>Création de requêtes</h5>
-<p>Toutes les requêtes se définissent dans notre classe MyDatabase, elles se basent sur du SQL mais se rédigent intégralement en Dart.<br>
+<p>Toutes les requêtes se définissent dans notre classe MyDatabase, elles se basent sur du SQL mais se rédigent intégralement en Dart.
 Voici donc quelques requêtes afin de comprendre comment on peut les créer soi même.</p>
 <p>Récupérer tous les users:</p>
 <pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> allUsersEntries <span class="token operator">=</span><span class="token operator">></span> <span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -284,9 +284,9 @@ Voici donc quelques requêtes afin de comprendre comment on peut les créer soi 
 <span class="token punctuation">}</span>
 </code></pre>
 <h2>Firebase (FlutterFire)</h2>
-<p>Afin d'utiliser Firebase et pour pouvoir l'incorporer à notre application, il est avant tout nécessaire de se créer un compte Firebase sur le lien ci dessous:<br>
+<p>Afin d'utiliser Firebase et pour pouvoir l'incorporer à notre application, il est avant tout nécessaire de se créer un compte Firebase sur le lien ci dessous:
 <a href="https://firebase.google.com/">Site de Firebase</a></p>
-<p>Une fois le compte créé, on ajoute un nouveau projet auquel on fournit le nom (identique à l'application créée). Dès que le projet est créé, on arrive sur notre tableau de bord. On peut désormais utiliser les fonctionalités proposées par Firebase.<br>
+<p>Une fois le compte créé, on ajoute un nouveau projet auquel on fournit le nom (identique à l'application créée). Dès que le projet est créé, on arrive sur notre tableau de bord. On peut désormais utiliser les fonctionalités proposées par Firebase.
 Ici nous tenterons de nous servir des outils de base de données, donc Realtime Database.</p>
 <h5>Installation et initialisation de FlutterFire</h5>
 <p>Pour installer FlutterFire à notre projet flutter, comme précédemment il faut ajouter plusieurs packages aux dépences. On peut le faire rapidement à l'aide de la commande suivante:</p>

@@ -177,7 +177,7 @@
 <p>OpenLayers est une API JavaScript Open Source (gratuite) qui permet de représenter facilement des données géographiques sur une page Web.</p>
 <p>Une simple connaissance des bases en Html, CSS et JavaScript est nécessaire pour s'approprier et utiliser OpenLayers. Les tutoriels fournis sur leur <a href="https://openlayers.org/">site internet</a> sont accessibles et permettent de commencer rapidement à jouer avec des fonds de cartes et autres données géographiques.</p>
 <h2>3. Vocabulaire du SIG à connaître <a id="section3"></a></h2>
-<p>Pour représenter une carte intéractive, il faut comprendre le système de couches. Par exemple, il y a une première couche qui consiste à afficher un fond de carte, puis on peut ajouter une couche représentant les capitales de chaque pays repésentées par un point.<br>
+<p>Pour représenter une carte intéractive, il faut comprendre le système de couches. Par exemple, il y a une première couche qui consiste à afficher un fond de carte, puis on peut ajouter une couche représentant les capitales de chaque pays repésentées par un point.
 Il y a quatre types de couches différents :</p>
 <ul>
 <li><strong>Les couches de tuiles ('Tile') :</strong> elles  affichent des images prédécoupées organisées en grilles à différents niveaux de zoom. Ces images sont généralement extraites d'un serveur sous forme de pour chaque niveau de zoom. Le serveur de tuiles fournit ces images en fonction de la zone géographique et du niveau de zoom demandé par le client. Ces couches de tuiles sont souvent utilisées pour afficher des fonds de carte basiques. Pour ma part j'ai utilisé le service OpenStreetMap (parfois abrégé en OSM) pour avoir un fond de carte.</li>
@@ -185,7 +185,7 @@ Il y a quatre types de couches différents :</p>
 <li><strong>Les couches vectorielles ('Vector') :</strong> elles affichent les données géographiques sous forme de vecteur. Un vecteur peut être de trois natures différentes : il peut s'agir d'un point (ex : représenter une ville), d'une ligne (ex : représenter un cours d'eau) ou d'un polygone (ex : repésenter une région).</li>
 <li><strong>Les couches de tuiles vectorielles ('VectorTile') :</strong> comme leur nom l'indique, elles affichent des données vectorielles fournies sous forme de tuiles. Cela permet de gérer de grandes quantités de données vectorielles de manière plus efficace, en les découpant en petites tuiles que la carte charge dynamiquement selon le zoom et la position géographique.</li>
 </ul>
-<p>Un <strong>raster</strong> est un format de données géographiques qui représente l'espace sous forme de grille de cellules (ou pixels), où chaque cellule a une valeur spécifique.<br>
+<p>Un <strong>raster</strong> est un format de données géographiques qui représente l'espace sous forme de grille de cellules (ou pixels), où chaque cellule a une valeur spécifique.
 <img src="img/rasterVSvecteur.png" alt="Mode raster vs Mode Vecteur"> <em>Illustration disponible sur <a href="https://www.researchgate.net/figure/Representation-des-points-lignes-et-polygones-en-modes-Raster-et-Vecteur-Source_fig1_315837966">researchgate.net</a></em></p>
 <h2>4. Mise en route <a id="section4"></a></h2>
 <p>En suivant le tutoriel <em><a href="https://openlayers.org/doc/quickstart.html">&quot;Quick Start&quot;</a></em> pour l'initialisation rapide d'un projet, on arrive rapidement à afficher un fond de carte OpenStreetMap. Les trois petites lignes de commande :</p>

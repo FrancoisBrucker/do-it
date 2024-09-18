@@ -158,7 +158,7 @@
 <li>Etape <strong>Reduce</strong> : l'opération reduce, qui dépend du problème notre problème, est appliqué à chaque clé. Elle permet d'obtenir le résultat final.</li>
 </ul>
 <p>Tout ceci peut être résumé par le schéma suivant :</p>
-<p><img src="../image/Sch%C3%A9ma.jpg" alt="Schéma du MapReduce" title="Schéma explicatif MapReduce"><br>
+<p><img src="../image/Sch%C3%A9ma.jpg" alt="Schéma du MapReduce" title="Schéma explicatif MapReduce">
 <em>Source : Openclassrooms</em></p>
 <h3>Exemples</h3>
 <h4>Word count</h4>
@@ -200,10 +200,10 @@
 <h4>Autres exemples</h4>
 <p>Cette méthode peut paraître simple mais, elle peut également s'appliquer à d'autres problèmes beaucoup plus complexes tel que la multiplication de matrice par un vecteur. C'est notamment à partir de ceci que Google a mis au point son algorithme de <strong>Page Ranking</strong>.</p>
 <h3>Hadoop</h3>
-<p>Pour effectuer du MapReduce dans un contexte de Big Data, il faut une <strong>infrastructure logicielle</strong>. Cette dernière permettra de faire tourner des fonctions de manière <strong>massivement développée</strong> en s'assurant qu'il n'y ait pas de problèmes liés à la localité des données, à la puissance et aux pannes.<br>
+<p>Pour effectuer du MapReduce dans un contexte de Big Data, il faut une <strong>infrastructure logicielle</strong>. Cette dernière permettra de faire tourner des fonctions de manière <strong>massivement développée</strong> en s'assurant qu'il n'y ait pas de problèmes liés à la localité des données, à la puissance et aux pannes.
 Le framework <strong>Hadoop</strong> permet ceci. Celui-ci est composé d'un <strong>système de fichiers</strong> où ceux-ci sont distribués, répliqués et optimisés et d'une <strong>architecture pour faire tourner MapReduce</strong>. Vous pouvez trouver plus d'informations sur Hadoop <a href="https://hadoop.apache.org/">ici</a>.</p>
 <p>Globalement, l'utilisateur peut déposer des fichiers qui sont découpés sur des Datas Node. Toutes les informations sont dupliqués pour faire face aux potentielles pannes. Il peut ensuite donner le travail à effectuer au job tracker. Celui-ci communique avec le name node pour savoir où sont les données et pouvoir lancer les calculs de la manière la plus efficace possible. Tous les résultats sont sauvegardés au fur et à mesure.</p>
-<p><img src="../image/Sch%C3%A9ma2.jpg" alt="Schéma de Hadoop" title="Schéma explicatif Hadoop"><br>
+<p><img src="../image/Sch%C3%A9ma2.jpg" alt="Schéma de Hadoop" title="Schéma explicatif Hadoop">
 <em>Source : Openclassrooms</em></p>
 <p>Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.</p>
 <p>En suivant ce lien, on peut télécharger et tester une <a href="https://www.cloudera.com/downloads/cdp-private-cloud-trial.html">machine virtuelle Hadoop</a>. Il est donc possible de tester la fonction <em>Count Word</em> sur Hadoop.</p>
@@ -227,7 +227,7 @@ compte_mot <span class="token operator">=</span> ligne<span class="token punctua
 <span class="token keyword">for</span> <span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span> <span class="token keyword">in</span> compte_mot<span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span>
 </code></pre>
-<p>Les premières lignes du code permettent d'importer les bons modules. Notre fichier est ensuite mis en RDD (cf lien dans les sources pour plus d'informations). Enfin, on définit les méthodes <em>Map</em> et <em>Reduce</em> qui sont ensuite directement gérées par Spark.<br>
+<p>Les premières lignes du code permettent d'importer les bons modules. Notre fichier est ensuite mis en RDD (cf lien dans les sources pour plus d'informations). Enfin, on définit les méthodes <em>Map</em> et <em>Reduce</em> qui sont ensuite directement gérées par Spark.
 Ici Spark tourne en <strong>local</strong> sur notre ordinateur mais il prévoit déjà une architecture si on possède <strong>plusieurs machines connectées</strong>.</p>
 <h3>Compléments</h3>
 <p>Spark permet également d'aller plus loin notamment pour les Data Scientists. Un module Spark SQL est ainsi disponible pour faire &quot;un modèle de requête SQL distribué&quot; via des Data Frame. Il existe également un module de Machine Learning Spark ML.</p>

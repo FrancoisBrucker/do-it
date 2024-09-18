@@ -141,7 +141,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://react.dev/">Les lien utiles pour la compréhension de celui-ci.</a><br>
+<p><a href="https://react.dev/">Les lien utiles pour la compréhension de celui-ci.</a>
 <a href="https://github.com/MbayeSyAmar/mon_amar.git">Vous pouvez consulter les codes sources ici </a></p>
 </div></div>
 
@@ -220,32 +220,32 @@
 </code></pre>
 <p>Ce morceau a pour but de gerer la navigation entre les diferentes pages.</p>
 <hr>
-<p><strong>Composants Principaux :</strong><br>
-<em><strong>1. Header.js</strong></em><br>
+<p><strong>Composants Principaux :</strong>
+<em><strong>1. Header.js</strong></em>
 Le composant Header est responsable de la navigation dans le portfolio. Il affiche les liens vers les différentes sections (Accueil, Projets, Expériences, Formation, Contact) et assure une navigation fluide.</p>
 <p>Détails :</p>
-<p>Utilisation de React Router pour la navigation entre les pages.<br>
-Style de base avec CSS pour un affichage propre et fonctionnel.<br>
-<em><strong>2. Home.js</strong></em><br>
+<p>Utilisation de React Router pour la navigation entre les pages.
+Style de base avec CSS pour un affichage propre et fonctionnel.
+<em><strong>2. Home.js</strong></em>
 Le composant Home est la page d'accueil du portfolio. Il introduit le visiteur avec une photo de profil et un texte d'accueil.</p>
 <p>Détails :</p>
-<p>Affichage d'une image de profil et d'un texte de bienvenue.<br>
-Lien pour télécharger le CV.<br>
-Utilisation de CSS pour définir les styles de mise en page.<br>
-<em><strong>3. Projects.js</strong></em><br>
+<p>Affichage d'une image de profil et d'un texte de bienvenue.
+Lien pour télécharger le CV.
+Utilisation de CSS pour définir les styles de mise en page.
+<em><strong>3. Projects.js</strong></em>
 Le composant Projects présente une liste de projets. Chaque projet est affiché avec une image, une description et un lien vers le dépôt GitHub.</p>
-<p><em><strong>4. Experience.js</strong></em><br>
+<p><em><strong>4. Experience.js</strong></em>
 Le composant Experience affiche les expériences professionnelles sous forme de liste. Chaque élément de la liste inclut la période, l'entreprise et une brève description des responsabilités.</p>
 <p>Détails techniques :</p>
-<p>Affichage dynamique des expériences à l'aide d'un tableau.<br>
-Mise en forme des éléments avec des balises HTML et du CSS.<br>
-<em><strong>5. Education.js</strong></em><br>
+<p>Affichage dynamique des expériences à l'aide d'un tableau.
+Mise en forme des éléments avec des balises HTML et du CSS.
+<em><strong>5. Education.js</strong></em>
 Le composant Education liste les diplômes et les institutions fréquentées. Chaque élément de la liste comprend l'année, le nom de l'institution et le diplôme obtenu.</p>
-<p><em><strong>6. Contact.js</strong></em><br>
+<p><em><strong>6. Contact.js</strong></em>
 Le composant Contact contient un formulaire permettant aux visiteurs de m'envoyer un message. Le formulaire comprend des champs pour le nom, l'email et le message, avec validation intégrée.</p>
 <h3>Pages</h3>
-<p>Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.<br>
-Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des &quot;containers&quot; pour ces composants.<br>
+<p>Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
+Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des &quot;containers&quot; pour ces composants.
 <strong>Exemple : HomePage</strong></p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./HomePage.css'</span><span class="token punctuation">;</span>
@@ -289,16 +289,16 @@ Les pages sont souvent composées de plusieurs composants et peuvent être consi
 <span class="token keyword">export</span> <span class="token keyword">default</span> HomePage<span class="token punctuation">;</span>
 </code></pre>
 <hr>
-<p><strong>Pages Principales :</strong><br>
-<em><strong>1. HomePage.js</strong></em><br>
+<p><strong>Pages Principales :</strong>
+<em><strong>1. HomePage.js</strong></em>
 La page d'accueil complète est assemblée en utilisant le composant Home. Elle affiche la vue d'ensemble avec tous les éléments d'accueil.</p>
-<p><em><strong>2. ProjectsPage.js</strong></em><br>
+<p><em><strong>2. ProjectsPage.js</strong></em>
 Cette page utilise le composant Projects pour afficher tous les projets avec les images, descriptions, et liens pertinents.</p>
-<p><em><strong>3. ExperiencePage.js</strong></em><br>
+<p><em><strong>3. ExperiencePage.js</strong></em>
 La page des expériences professionnelles est construite avec le composant Experience pour afficher toutes les expériences en détail.</p>
-<p><em><strong>4. EducationPage.js</strong></em><br>
+<p><em><strong>4. EducationPage.js</strong></em>
 La page de formation est rendue avec le composant Education pour présenter les diplômes et les institutions fréquentées.</p>
-<p><em><strong>5. ContactPage.js</strong></em><br>
+<p><em><strong>5. ContactPage.js</strong></em>
 Cette page affiche le formulaire de contact à l'aide du composant Contact, permettant aux utilisateurs de me contacter directement.</p>
 <h3>Resultats</h3>
 <img src="image.png" alt="Page du jeu">
@@ -309,7 +309,7 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 <img src="image5.png" alt="On peut gagner">
 <img src="Capture6.png" alt="On peut gagner">
 <h3>Conclusion</h3>
-<p>En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.<br>
+<p>En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
 À suivre pour mon MON 2 sur l'étude de comment intégrer React dans Laravel.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -325,8 +325,8 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://react.dev/">Documentation React </a><br>
-<a href="https://www.youtube.com/watch?v=GeIFHYVTyik">Cours complet sur ReactJS dans 5 heures | tuto fr </a><br>
+<p><a href="https://react.dev/">Documentation React </a>
+<a href="https://www.youtube.com/watch?v=GeIFHYVTyik">Cours complet sur ReactJS dans 5 heures | tuto fr </a>
 <a href="https://www.youtube.com/watch?v=f0X1Tl8aHtA">[Cours / Tuto] Apprendre React de Zéro (débutant) </a></p>
 </div></div>
 

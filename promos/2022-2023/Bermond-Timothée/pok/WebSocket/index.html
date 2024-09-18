@@ -99,7 +99,7 @@
 
 
 <!-- Début Résumé -->
-<p>Amélioration de mon site pour compter les points au Yams du temps du 2.<br>
+<p>Amélioration de mon site pour compter les points au Yams du temps du 2.
 Avec notamment l'utilisation de WebSocket afin de rendre collaborative les pages de score.</p>
 <!-- Fin Résumé -->
 <h2>Sprint 1</h2>
@@ -126,13 +126,13 @@ Avec notamment l'utilisation de WebSocket afin de rendre collaborative les pages
 <li>une page permettant de choisir si l'on veut créer ou rejoindre une partie</li>
 <li>une page permettant de rejoindre une partie déjà créée.</li>
 </ul>
-<p>Mettre en place la possibilité de créer ou de rejoindre des parties a été bien plus compliqué que ce que je pensais.<br>
+<p>Mettre en place la possibilité de créer ou de rejoindre des parties a été bien plus compliqué que ce que je pensais.
 En effet, il faut que je stock les points de chaque parties différement et que j'actualise les scores pour les joueurs faisant partie de la partie.</p>
 <p>Ma 1ère idée a été d'utiliser une base de données. À chaque création de nouvelle partie, je créé une nouvelle partie dans la bd et j'enregistre l'id de la partie dans les cookies. Sauf que je me suis retrouvé avec le même problème que dans le POK 2 avec des cookies qui s'enregistrent pas sans que je comprenne pourquoi.</p>
 <p>Ma seconde idée a été de créer une liste contenant tous les points avec comme index l'indice de chaque de partie : à chaque création de nouvelle partie je push une liste de points vierge et l'id de la partie est la longueur de la liste des parties. Et d'enregistrer l'id dans les cookies puis d'y faire appel à chaque changement dans une partie.</p>
 <p>C'est finalement cette idée que j'ai mise en place non sans mal.</p>
 <p>En effet, lorsque je modifiais le score d'une partie cela modifiais le score pour toutes les parties. Il m'a fallu du temps pour comprendre d'où ça venait. Au début je pensais que c'était un problème avec les cookies mais non enfait.</p>
-<p>Le problème venait du fait que je pushais mon template de la liste de points dans la liste des parties sauf que quand je modifiais les points pour une partie ça modifiait directement le template et donc les points de toutes les parties et pas uniquement ceux de la partie modifiée.<br>
+<p>Le problème venait du fait que je pushais mon template de la liste de points dans la liste des parties sauf que quand je modifiais les points pour une partie ça modifiait directement le template et donc les points de toutes les parties et pas uniquement ceux de la partie modifiée.
 J'ai réglé ce problème avec ces deux lignes :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span>
 list_parties<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span>

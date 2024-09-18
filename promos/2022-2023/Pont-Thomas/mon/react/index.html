@@ -147,10 +147,10 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Banner
 </code></pre>
-<p>créera un composant Banner qui pourra être mis sur notre site.<br>
+<p>créera un composant Banner qui pourra être mis sur notre site.
 Dans ce fichier en .js, on peut ajouter tous les éléments que l’on souhaite avec les balises de HTML (&lt;h1&gt; pour un titre, &lt;ul&gt; pour une liste, &lt;p&gt; pour un paragraphe, &lt;img&gt; pour une image,...).</p>
 <p>On peut également associer un fichier CSS pour donner du style au texte ou aux éléments présents sur un composant.</p>
-<p>Mais comment afficher notre site ensuite ?<br>
+<p>Mais comment afficher notre site ensuite ?
 Pour cela, à la création de notre projet, un fichier App.js a été créé. On peut lui ajouter les composants que l’on a créés.</p>
 <p>Ainsi :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> Banner <span class="token keyword">from</span> <span class="token string">'./Banner'</span>
@@ -165,11 +165,11 @@ Pour cela, à la création de notre projet, un fichier App.js a été créé. On
 <p>permettra d’avoir un site avec la Banner précédemment défini.</p>
 <p>En lançant la commande suivante dans la console, notre site s’affiche sur un serveur local:</p>
 <p><strong>npm start</strong></p>
-<p>On peut progressivement ajouter des composants et du style pour que notre site ressemble à ce que l’on souhaite. Ainsi, on ajoute des composants pour les utilisateurs, la liste des utilisateurs, les messages et la liste des messages.<br>
+<p>On peut progressivement ajouter des composants et du style pour que notre site ressemble à ce que l’on souhaite. Ainsi, on ajoute des composants pour les utilisateurs, la liste des utilisateurs, les messages et la liste des messages.
 On crée également un composant main qui regroupe la liste des utilisateurs et la liste des messages.</p>
 <h3>Contextualiser ces composants</h3>
 <p>On a vu que React permet de créer des composants. Mais, il permet également de les contextualiser. En effet, lors de la définition d’un composant, on peut ajouter du javascript afin de savoir comment afficher un élément.</p>
-<p>Par exemple, ou peut mettre en avant nos meilleurs amis en affichant une flamme à côté de leur nom.<br>
+<p>Par exemple, ou peut mettre en avant nos meilleurs amis en affichant une flamme à côté de leur nom.
 La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque personne on peut lui attribuer un booléen isBestFriend qui indique si oui ou non on est meilleur ami avec lui.</p>
 <p>Le script suivant affichera cela:</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> userList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allUser'</span>
@@ -193,7 +193,7 @@ La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque perso
 <h3>Les interactions</h3>
 <p>On a ainsi vu jusque là que l'on pouvait créer et afficher des composants et qu’on pouvait les contextualiser. Cependant, pour le moment, notre site reste statique et ne prend pas en compte les interactions que l’utilisateur pouvait avoir avec les composants.</p>
 <p>On souhaite pouvoir voir les messages qu'on a eu avec une personne si l'on clique sur son nom.</p>
-<p>Pour cela on utilise les liens de parenté entre les composants. L'utilisateur va cliquer sur un UserItem. L'information va remonter à son parent Main puis redescendre jusqu'à MessageList et c'est la liste de message avec le bon utilisateur qui va s'afficher.<br>
+<p>Pour cela on utilise les liens de parenté entre les composants. L'utilisateur va cliquer sur un UserItem. L'information va remonter à son parent Main puis redescendre jusqu'à MessageList et c'est la liste de message avec le bon utilisateur qui va s'afficher.
 Pour cela on utilise la fonction useState.</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> UserList <span class="token keyword">from</span> <span class="token string">'./UserList'</span>
 <span class="token keyword">import</span> MessageList <span class="token keyword">from</span> <span class="token string">'./MessageList'</span>
@@ -224,10 +224,10 @@ Pour cela on utilise la fonction useState.</p>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Main
 </code></pre>
-<p>La ligne <strong>const [conversationwith, setconversation]=useState('Alice')</strong> permet de créer une zone de stockage pour savoir ce que l'on affiche et pouvoir le modifier. La fonction useState permettra de modifier les informations de la page si l'utilisateur clique sur une autre personne.<br>
+<p>La ligne <strong>const [conversationwith, setconversation]=useState('Alice')</strong> permet de créer une zone de stockage pour savoir ce que l'on affiche et pouvoir le modifier. La fonction useState permettra de modifier les informations de la page si l'utilisateur clique sur une autre personne.
 La ligne <strong>UserList changeConversation={setconversation}</strong> permet de récupérer l'information de UserList de quel utilisateur a été sélectionné. La ligne <strong>MessageList list={allMessage[conversationwith]}</strong> permet elle de modifier ce qui va s'afficher.</p>
 <h2>Ressources utilisées</h2>
-<p>Pour effectuer ce MON, j'ai suivi le tutoriel d'OpenClassroom sur React : <a href="https://openclassrooms.com/fr/courses/7008001-debutez-avec-react">https://openclassrooms.com/fr/courses/7008001-debutez-avec-react</a>.<br>
+<p>Pour effectuer ce MON, j'ai suivi le tutoriel d'OpenClassroom sur React : <a href="https://openclassrooms.com/fr/courses/7008001-debutez-avec-react">https://openclassrooms.com/fr/courses/7008001-debutez-avec-react</a>.
 Par ailleurs, pour avoir plus d'informations sur certains points précis, j'ai également lu de la documentation sur le site de React : <a href="https://fr.reactjs.org/docs/getting-started.html">https://fr.reactjs.org/docs/getting-started.html</a>.</p>
 
 

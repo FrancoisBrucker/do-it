@@ -1119,7 +1119,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 </div>
 </details>     
 </div>
-<p>Le joueur peut valider sa mise grâce au bouton &quot;valider&quot;. Ce bouton ferme la fenêtre de mise et ouvre la fenêtre de jeu principale. De plus, ce bouton actualise le &quot;stack&quot; du joueur (c'est-à-dire le nombre jetons restants) et affiche la mise dans l'espace dédié. Enfin, il active ou désactive les boutons &quot;Doubler&quot; et &quot;Séparer&quot;, suivant le stack restant du joueur et de sa mise actuelle.<br>
+<p>Le joueur peut valider sa mise grâce au bouton &quot;valider&quot;. Ce bouton ferme la fenêtre de mise et ouvre la fenêtre de jeu principale. De plus, ce bouton actualise le &quot;stack&quot; du joueur (c'est-à-dire le nombre jetons restants) et affiche la mise dans l'espace dédié. Enfin, il active ou désactive les boutons &quot;Doubler&quot; et &quot;Séparer&quot;, suivant le stack restant du joueur et de sa mise actuelle.
 Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -1241,9 +1241,9 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 <p>Pour compléter le système de mise, il faut également compléter le code présenté lors du premier sprint pour actualiser le stack du joueur en fonction de sa mise, s'il a gagné ou pas, s'il a doublé ou pas etc... Cette partie n'est pas expliquée ici, mais elle est bien implémentée dans le code Python présent dans mon <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/pok/temps-1">dossier GitHub</a> de Do-It</p>
 </div></div>
 <h2>Implémentation des simulations autour du jeu de Blackjack</h2>
-<p>Maintenant que l'implémentation de l'interface graphique du jeu de Blackjack est fonctionnelle, il faut implémenter le code nécessaire aux simulations pour obtenir des statistiques autour du jeu de Blackjack.<br>
+<p>Maintenant que l'implémentation de l'interface graphique du jeu de Blackjack est fonctionnelle, il faut implémenter le code nécessaire aux simulations pour obtenir des statistiques autour du jeu de Blackjack.
 Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16 points mais s'arrête quand il a 17 points ou plus. Sur cette base, il est connu qu'il existe une stratégie nommée &quot;stratégie de base&quot;. Cette stratégie se présente sous forme de tableau, qui indique quelle action doit réaliser le joueur en fonction de sa main et de la première carte du dealer.</p>
-<p><img src="Image8.png" alt="Stratégie de base"><br>
+<p><img src="Image8.png" alt="Stratégie de base">
 <em>Source: <a href="https://www.guide-blackjack.com/strategie-base-las-vegas.html">Guide-Blackjack.com</a></em></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1935,7 +1935,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </div>
 </details>     
 </div>
-<p>Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevé, plus il y a de chances de gagner, et donc plus il faut miser.<br>
+<p>Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevé, plus il y a de chances de gagner, et donc plus il faut miser.
 Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si ce seuil est dépassé, la mise est plus grande. L'éxecution de cet algorithme sur 10 millions de parties   avec le comptage des cartes activé donne ce graphique en barre:</p>
 <p><img src="Image13.png" alt="Image count"></p>
 <p>On remarque que le taux de réussite moyen et les taux de réussite face à chaque main du dealer ne changent pas comparé au graphique obtenu quand le joueur ne compte pas. Ceci est logique, puisque l'on change seulement la mise. Cependant, on remarque que l'avantage au casino n'est plus que de <strong>0,75%!</strong> C'est plus de deux fois moins que précédemment. Le comptage des cartes est donc bien efficace, mais ne permet cependant pas d'avoir une espérance positive: le casino sera donc toujours gagnant!</p>

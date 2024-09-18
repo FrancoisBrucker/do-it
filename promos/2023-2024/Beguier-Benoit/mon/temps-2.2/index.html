@@ -142,7 +142,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Niveau :</strong> Intermédiaire<br>
+<p><strong>Niveau :</strong> Intermédiaire
 <strong>Prérequis :</strong></p>
 <ul>
 <li>Bases d'HTML, CSS et de JavaScript sont un plus</li>
@@ -177,11 +177,11 @@
 
 <span class="token function">npm</span> run dev
 </code></pre>
-<p>NPM signifie Node Package Manager.<br>
+<p>NPM signifie Node Package Manager.
 Vite dirige l'application sur le port 5173. Cela crée un répertoire entier avec des modules, un fichier <code>index.html</code>, un fichier .css, et un package .json. Le code de l'application est dans le dossier <em>src</em>.</p>
 <p><img src="dossier.png" alt="alt"></p>
 <h3>Configuration du serveur Node.js</h3>
-<p>Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur V8 de Google. L'un de ses principaux avantages réside dans sa capacité à créer des serveurs de manière efficace et non bloquante. Pour mettre en place un serveur avec Node.js de manière traditionnelle, le processus est relativement simple.<br>
+<p>Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur V8 de Google. L'un de ses principaux avantages réside dans sa capacité à créer des serveurs de manière efficace et non bloquante. Pour mettre en place un serveur avec Node.js de manière traditionnelle, le processus est relativement simple.
 Tout d'abord, il faut importer le module &quot;http&quot; inclus dans Node.js, puis créer un serveur en utilisant la méthode <code>createServer()</code>. Ensuite, on définit une fonction de rappel qui sera appelée à chaque fois qu'une requête est reçue. Cette fonction de rappel prend généralement deux paramètres, représentant la requête (<em>request</em>) et la réponse (<em>response</em>). À l'intérieur de cette fonction, on spécifie les actions à effectuer en réponse à la requête, comme par exemple l'envoi de données ou la lecture de fichiers. On spécifie enfin le port sur lequel le serveur &quot;écoutera&quot; les requêtes entrantes, en utilisant la méthode <code>listen()</code>.</p>
 <p>Pour ajouter un serveur Node.js, je vais plutôt utiliser Express, un framework web reposant sur Node. Cette méthode est relativement plus rapide et simple. Express s'installe avec la commande :</p>
 <pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> express

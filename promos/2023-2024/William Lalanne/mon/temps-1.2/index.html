@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Niveau :</strong> Facile<br>
+<p><strong>Niveau :</strong> Facile
 <strong>Prérequis :</strong> Bases en JavaScript</p>
 </div></div>
 <h2>Sommaire</h2>
@@ -142,7 +142,7 @@
 <li>Pour le développement web</li>
 </ol>
 <h2>Switch</h2>
-<p>En JavaScript, comme dans de nombreux langages de programmation, lorsqu'on a une variable qui prend des valeurs différentes et que pour chacune de ses valeurs on veut afficher un message différent, on peut utiliser un switch. Pour mieux comprendre, prenons un exemple.<br>
+<p>En JavaScript, comme dans de nombreux langages de programmation, lorsqu'on a une variable qui prend des valeurs différentes et que pour chacune de ses valeurs on veut afficher un message différent, on peut utiliser un switch. Pour mieux comprendre, prenons un exemple.
 Imaginons que j'ai une fonction qui prend un paramètre un prénom et qui renvoie en sortie un chanteur qui possède le même prénom cela donnerait :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">famousSinger</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> familyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
@@ -236,7 +236,7 @@ tailsNumberValue <span class="token operator">=</span> <span class="token number
 dog<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"gender"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2>Fonctions anonymes</h2>
-<p>Parfois en JavaScript il n'y pas besoin de nommer des fonctions, surtout lorsqu'elles sont utilisés comme argument par d'autres fonctions. On dit alors que c'est une fonction anonymé.<br>
+<p>Parfois en JavaScript il n'y pas besoin de nommer des fonctions, surtout lorsqu'elles sont utilisés comme argument par d'autres fonctions. On dit alors que c'est une fonction anonymé.
 Par exemple au lieu d'écrire ça :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> myVar <span class="token operator">=</span> <span class="token string">"value"</span><span class="token punctuation">;</span>
@@ -250,7 +250,7 @@ Par exemple au lieu d'écrire ça :</p>
 <span class="token punctuation">}</span>
 </code></pre>
 <h2>Les classes</h2>
-<p>Il est possible de créer des objets plus facilement qu'avec la méthode que nous avons utilisé précedemment, ce qui peut être très pratique quand on crée de nombreux objets. Pour cela on utilise des classes qui agissent en quelques sortes comme des plans pour les objets.<br>
+<p>Il est possible de créer des objets plus facilement qu'avec la méthode que nous avons utilisé précedemment, ce qui peut être très pratique quand on crée de nombreux objets. Pour cela on utilise des classes qui agissent en quelques sortes comme des plans pour les objets.
 Par exemple pour créer une classe livre :</p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span>
 
@@ -320,15 +320,15 @@ htmlElement<span class="token punctuation">.</span>style<span class="token punct
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3>Les event listeners</h3>
-<p>Pouvoir modifier les éléments de la page web par l'intermédiaire du DOM c'est bien, mais comment faire pour que ces modifications se fassent à la suite d'une action d'un utilisateur ?<br>
-C'est là qu'intervienne les event listeners.<br>
+<p>Pouvoir modifier les éléments de la page web par l'intermédiaire du DOM c'est bien, mais comment faire pour que ces modifications se fassent à la suite d'une action d'un utilisateur ?
+C'est là qu'intervienne les event listeners.
 Des évènements peuvent avoir lieu sur la page web :</p>
 <ul>
 <li>Des cliques sur des éléments</li>
 <li>Des mouvements de souris</li>
-<li>Appuis sur le clavier<br>
-...<br>
-On peut savoir à quel moment ont lieux ces évènements.<br>
+<li>Appuis sur le clavier
+...
+On peut savoir à quel moment ont lieux ces évènements.
 Pour cela on place des event listeners sur les éléments qui avec lesquels l'utilisateur est susceptible d'intéragir.</li>
 </ul>
 <p>Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclenchera une action. Pour cela :</p>

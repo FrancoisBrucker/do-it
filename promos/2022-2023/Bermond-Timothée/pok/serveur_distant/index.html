@@ -99,7 +99,7 @@
 
 
 <!-- Début Résumé -->
-<p>Je vais créer un site qui permet de compter les points au Yams.<br>
+<p>Je vais créer un site qui permet de compter les points au Yams.
 Il est disponible <a href="https://github.com/Timothee-Bermond/yams">ici</a></p>
 <!-- Fin Résumé -->
 <h2>Liste des thâches</h2>
@@ -120,13 +120,13 @@ Il est disponible <a href="https://github.com/Timothee-Bermond/yams">ici</a></p>
 <li>D'avoir entièrement suivi le cours dispensé en 2e année afin d'avoir les compétences pour déployer mon site sur un serveur distant.</li>
 <li>D'aller voir Mr. Brucker pour me créer un compte sur l'evh</li>
 </ul>
-<p>Durant ce print j'ai eu le temps de créer toute ma partie front.<br>
-<img src="../Images/yams.jpg"><br>
-J'ai rencontré plusieurs difficultés : je voulais notamment ajouter un input avec une liste déroulante et une zone de texte. J'ai eu du mal à trouver comment faire, la solution était toute simple : utilisé une datalist qui en plus peut-être réutilisable pour plusieurs input.<br>
-<img src="../Images/datalist.jpg"><br>
-Une autre difficulté a été la création d'indication au survol d'une image. Je me suis pris la tête avec des <em>:hoover</em> alors qu'il suffisait d'utiliser la propriété title.<br>
-<img src="../Images/indication.jpg"><br>
-J'ai également tenté d'implémenter une boucle for dans le fichier javascrpit afin de traiter les scores de tous les joueurs d'un seul coup ce qui m'aurait permis de créer facilement d'autres joueurs. Mais cette méthode n'a pas fonctionné et je n'ai pas eu le temps de chercher une méthode alternative.<br>
+<p>Durant ce print j'ai eu le temps de créer toute ma partie front.
+<img src="../Images/yams.jpg">
+J'ai rencontré plusieurs difficultés : je voulais notamment ajouter un input avec une liste déroulante et une zone de texte. J'ai eu du mal à trouver comment faire, la solution était toute simple : utilisé une datalist qui en plus peut-être réutilisable pour plusieurs input.
+<img src="../Images/datalist.jpg">
+Une autre difficulté a été la création d'indication au survol d'une image. Je me suis pris la tête avec des <em>:hoover</em> alors qu'il suffisait d'utiliser la propriété title.
+<img src="../Images/indication.jpg">
+J'ai également tenté d'implémenter une boucle for dans le fichier javascrpit afin de traiter les scores de tous les joueurs d'un seul coup ce qui m'aurait permis de créer facilement d'autres joueurs. Mais cette méthode n'a pas fonctionné et je n'ai pas eu le temps de chercher une méthode alternative.
 Pour toute la partie CSS je me suis référé à mon <a href="../../../../mon/TB/Mes_MON/CSS">MON1.2</a>. Il y a juste la fonctionnalité <em>:before</em> que j'ai utilisé afin d'ajouter un fond d'écran partiellement opaque.</p>
 <p>J'ai ensuite suivi la <a href="https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/">formation</a> de Mr. Brucker, notamment le Projet Numérologie, afin de me former sur les serveurs web. Je n'ai pas eu le temps de tout parcourir mais je finirais ça d'ici la fin de la semaine.</p>
 <p>Pour ce qui est du dernier point de ce sprint : la création du compte sur l'evh, je m'y suis pris un peu tard et n'ai pas eu le temps de le faire.</p>
@@ -147,19 +147,19 @@ Pour toute la partie CSS je me suis référé à mon <a href="../../../../mon/TB
 <p>Puis j'ai initialiser le projet et installé le package express.</p>
 <p>J'ai ensuite créé le fichier <em>server.js</em> qui contiendra les routes et un dossier <em>back</em> pour les calculs.</p>
 <p>J'arrive donc à cette architecture :</p>
-<p>__ back<br>
-|__ calcul.js<br>
-__ node_module<br>
-__ static<br>
-|__ Images<br>
-|__ index.html<br>
-|__ index.js<br>
-|__ yams.css<br>
-|__ yams.css<br>
-|__ yams.html<br>
-|__ yams.js<br>
-__ package-lock.json<br>
-__ package.json<br>
+<p>__ back
+|__ calcul.js
+__ node_module
+__ static
+|__ Images
+|__ index.html
+|__ index.js
+|__ yams.css
+|__ yams.css
+|__ yams.html
+|__ yams.js
+__ package-lock.json
+__ package.json
 __ server.js</p>
 <p>Puis j'ai mis en place ma base de données. Pour cela, j'ai utilisé SQlite et sequelize.</p>
 <p>Tout d'abord, je fais le lien avec la base de données SQlite:</p>
@@ -198,7 +198,7 @@ __ server.js</p>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Je n'ai affiché qu'une partie car le modèle est très loin puisque je stock les points de tous les joueurs.<br>
+<p>Je n'ai affiché qu'une partie car le modèle est très loin puisque je stock les points de tous les joueurs.
 Je me suis demandé si il était possible de créer un modèle <em>player</em> puis de l'invoquer 4 fois dans mon modèle <em>partie</em> mais je n'ai pas trouvé la réponse.</p>
 <p>Ensuite j'ai mis en place ma première route qui permet de créer la partie. Lorsque l'utilisateur clique sur le bouton suivant, une nouvelle partie est créée dans la base de données et les noms des joueurs sont récupérés dans les <em>headers</em> de la requête et enregistré dans la partie, puis un cookie est créé contenant l'id de la partie. J'ai cependant un problème avec cela car des fois le cookie ne s'envoie pas et je reste donc bloqué dans la partie précédente.</p>
 <p>index.js :</p>
@@ -404,7 +404,7 @@ Je me suis demandé si il était possible de créer un modèle <em>player</em> p
 <p>Update : comme pour le nom des joueurs j'envoie les points des joueurs dans le <em>body</em> et non les <em>headers</em> de la requête.</p>
 </div></div>
 <p>J'ai ensuite réitéré cela pour les joueurs 2, 3 et 4.</p>
-<p>J'ai toujours un problème, c'est que mes cookies ne s'envoient pas toujours et je n'arrive pas à comprendre ce qui en est la cause.<br>
+<p>J'ai toujours un problème, c'est que mes cookies ne s'envoient pas toujours et je n'arrive pas à comprendre ce qui en est la cause.
 Je suis allé voir avec Mr. Brucker et ce serait un problème avec les fonctions asynchrone (le cookie met trop de temps à s'envoyer et le code passe donc à la suite sans l'envoyer). J'ai essayé d'ajouter un then mais ça n'a pas réglé mon problème.</p>
 <h3>Déploiement sur l'ovh</h3>
 <p>Pour déployer son site sur l'ovh il faut tout d'abord suivre ces <a href="https://francoisbrucker.github.io/cours_informatique/cours/ops/ssh/">instructions</a> pour générer sa paire de clé et accéder à son compte sur l'ovh.</p>

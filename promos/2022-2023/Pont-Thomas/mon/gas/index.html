@@ -153,7 +153,7 @@ Yves Martin
  Yves Martin
 </code></pre>
 <p>Les éléments entre crochets seront ensuite automatiquement remplacé en fonction des informations sur la personne et sur l'évènement.</p>
-<p>On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce <a href="https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js">Github</a>.<br>
+<p>On doit ensuite convertir ce texte en HTML pour qu'il puisse être bien envoyé. Pour cela, on récupère une fonction publique disponible sur ce <a href="https://github.com/oazabir/GoogleDoc2Html/blob/master/code.js">Github</a>.
 On nomme le texte ainsi converti mailBodyHTML</p>
 <h3>Google Sheet</h3>
 <p>On crée un Google Sheet permettant de réunir les éléments des mails que l'on doit envoyer. On le place dans un onglet intitulé Inscriptions.</p>
@@ -208,11 +208,11 @@ On nomme le texte ainsi converti mailBodyHTML</p>
 <p>Il faut faire attention à la gestion des dates dans le tableau. Si on fait seulement</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">const</span> date <span class="token operator">=</span> inscriptions <span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
-<p>rien ne sera extrait du tableau<br>
-De même si on formate pas la date on récupère également l'heure de minuit ainsi que le fuseau horaire de là où on se situe.<br>
+<p>rien ne sera extrait du tableau
+De même si on formate pas la date on récupère également l'heure de minuit ainsi que le fuseau horaire de là où on se situe.
 Il est donc important de bien l'extraire et de bien la formater.</p>
 </div></div>
-<p>On place toutes ses données ainsi récupérées dans un tableau <em>variables</em>.<br>
+<p>On place toutes ses données ainsi récupérées dans un tableau <em>variables</em>.
 Pour compléter le texte on utilise la fonction suivante :</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> id in variables<span class="token punctuation">)</span>
   <span class="token punctuation">{</span>
@@ -229,7 +229,7 @@ Pour compléter le texte on utilise la fonction suivante :</p>
 </code></pre>
 <p>On peut choisir l'intitulé tel que Convocation qu'on peut stocker dans une constante.</p>
 <p>On peut retrouver ici le tableau avec le Google App Script final. L'envoi du mail se fait lorsqu'on l'on lance la fonction gestionConvocations.</p>
-<p>Ainsi on peut lancer manuellement cette fonction et le bon mail s'enverra à Jean et Anna. Il reste cependant un problème. Si on décide d'envoyer ce mail à quelqu'un d'autre, qu'on rajoute cette personne dans le tableau, le mail se renverra également à Jean et Anna.<br>
+<p>Ainsi on peut lancer manuellement cette fonction et le bon mail s'enverra à Jean et Anna. Il reste cependant un problème. Si on décide d'envoyer ce mail à quelqu'un d'autre, qu'on rajoute cette personne dans le tableau, le mail se renverra également à Jean et Anna.
 Pour pallier à ce problème on peut ajouter une colonne intitulée <em>Mail envoyé</em>. On place des cases non cochées dans ce tableau. Lorsque le mail est bien envoyé un ajoute une ligne dans le code pour que la case soit cochée.</p>
 <pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">inscriptionsSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"TRUE"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>

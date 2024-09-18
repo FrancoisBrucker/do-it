@@ -157,7 +157,7 @@
 </ul>
 <h1>Letsgo :</h1>
 <h2>1 - Installer Angular et Tailwind :</h2>
-<p>Après avoir lu le MON d'antoine sur angular, on se lance.<br>
+<p>Après avoir lu le MON d'antoine sur angular, on se lance.
 Nous avons besoin d'installer deux frameworks. Un framwork, en javascript, est un ensemble d'outil permettant de coder plus facilement qu'en utilisant le classique combo HTML/CSS. Ici, on utilise un framework front :  Angular, et un framework de style : Tailwind.</p>
 <ul>
 <li>Angular permet de découper sa page html en composants réutilisables, et de les rendres facilement interactif avec un script JS.</li>
@@ -221,16 +221,16 @@ Nous avons besoin d'installer deux frameworks. Un framwork, en javascript, est u
 </ul>
 <p>On a maintenant un projet Angular+Tailwind.</p>
 <ul>
-<li>On lance le projet pour voir à quoi il ressemble : <code>ng serve</code> puis sur un navigateur on tape : <code>localhost:4200</code><br>
+<li>On lance le projet pour voir à quoi il ressemble : <code>ng serve</code> puis sur un navigateur on tape : <code>localhost:4200</code>
 Vous devriez tomber sur une page pré-remplie avec pleins de documentation pour apprendre angular. Personnellement je n'aime pas cette doc, je me suis appuyé sur les ressources citées plus haut.</li>
 </ul>
 <h2>2 - Dev le site de portfolio à projets.</h2>
 <p>Le but est de développer un site contenant une unique page web. Cette page web, comme un cv, va contenir des informations sur mon parcours et sur mes projets. Aussi, elle contiendra des éléments interactifs, des images, et des liens vers mes autres coordonnées accesibles depuis internet (de mes autres POK et MON par exemple).</p>
 <p>En plus de cela, je veux que mon site soit <strong>Responsive</strong>. C'est à dire que l'affichage doit s'adapter à toute taille d'écran. C'est très peu évident à faire, c'est même fastidieu. Tailwind va nous aider un peu.</p>
 <h3>Style</h3>
-<p>En regardant la doc de Tailwind, on voit que le framework propose de modifier nos balises HTML avec des noms de classes. Ces noms modifie le style de l'élement.<br>
+<p>En regardant la doc de Tailwind, on voit que le framework propose de modifier nos balises HTML avec des noms de classes. Ces noms modifie le style de l'élement.
 Par exemple <code>&lt;p&gt;Du texte blanc&lt;/p&gt;</code> peut devenir <code>&lt;p class=&quot;text-red-800&quot;&gt;Du texte rouge&lt;/p&gt;</code>.</p>
-<p>Ces modifications peuvent être appliquées sous certaines conditions, notamment des conditions de taille d'écran.<br>
+<p>Ces modifications peuvent être appliquées sous certaines conditions, notamment des conditions de taille d'écran.
 Tailwind propose de divisé nos tailles d'écran en 4 catégories, que l'on peut sélectionner avec un préfixe:</p>
 <ul>
 <li>Aucun préfixe : Tous les écrans.</li>
@@ -242,7 +242,7 @@ Tailwind propose de divisé nos tailles d'écran en 4 catégories, que l'on peut
 <p>On peut alors avoir ceci : <code>&lt;p class='text-white lg:text-red'&gt; Ce texte est blanc sur téléphone mais rouge sur grand écran&lt;/p&gt;</code></p>
 <p>On ce sert alors de ceci pour styliser nos components de façon responsive.</p>
 <h3>Component</h3>
-<p>Comme dit plus haut, Angular marche avec des components.<br>
+<p>Comme dit plus haut, Angular marche avec des components.
 Par exemple, si on a besoin d'un bouton, au lieu de le faire en plein milieu de notre page principale, on va créer un component Bouton que l'on va inserer dans la page principale. Comme ça, si on a besoind e plusieurs boutons similairs, au lieu de recopier le code completement à chaque fois, on replace simplement le component ailleurs. Par exemple :</p>
 <pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span>
@@ -255,7 +255,7 @@ Par exemple, si on a besoin d'un bouton, au lieu de le faire en plein milieu de 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>https://unlien.fr<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
-<p>Pour créer un component vide avec l'ossature désirée on tape <code>ng generate component nom-component</code><br>
+<p>Pour créer un component vide avec l'ossature désirée on tape <code>ng generate component nom-component</code>
 On l'appelle dans un html avec la balise <code>&lt;app-nom-component&gt;&lt;/app-nom-component&gt;</code>.</p>
 <p>En guise d'exemple plus concret, pour mon projet, j'ai plusieurs components :</p>
 <ul>
@@ -297,7 +297,7 @@ On l'appelle dans un html avec la balise <code>&lt;app-nom-component&gt;&lt;/app
 </div>
 </details>     
 </div>
-<p>Nous allons faire ce qu'on appelle <strong>un site statique</strong>. C'est un site dont le contenue ne change pas. Cest à dire que tous les utlisateurs verrons la même chose, et cette chose ne peut être mise à jour que si on modifie les fichiers du serveur.<br>
+<p>Nous allons faire ce qu'on appelle <strong>un site statique</strong>. C'est un site dont le contenue ne change pas. Cest à dire que tous les utlisateurs verrons la même chose, et cette chose ne peut être mise à jour que si on modifie les fichiers du serveur.
 C'est à mettre en opposition aux <strong>sites dynamiques</strong> qui possèdent une base de données et un programme qui peret d'afficher des choses différentes selon les utilisateurs, et de mettre à jour ces choses dans la base de données.</p>
 <p>Les sites statiques sont très bien pour l'application qu'on en fait. C'est à dire qe je veu montrer la même chose à tous le monde, et je n'ai pas besoin de faire de mises à jour régulière du contenu.</p>
 <p>En plus, OVH1 possède un répertoire particulier : www, qui permet de relier une page html directement sur internet.</p>

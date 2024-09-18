@@ -155,21 +155,21 @@
 <h3>Utilisation du fichier <code>index.js</code></h3>
 <p>Exemple du fichier <code>index.js</code> que j'utilise pour mon site, dans le cadre de mon POK :</p>
 <p>const path = require('path')</p>
-<p>const express = require('express')<br>
+<p>const express = require('express')
 const app = express()</p>
-<p>const hostname = '127.0.0.1';<br>
+<p>const hostname = '127.0.0.1';
 const port = 3000;</p>
 <p>app.use(&quot;/static&quot;, express.static(path.join(__dirname, '/static')))</p>
-<p>app.get('/', (req, res) =&gt; {<br>
-res.redirect(301, '/static/index.html')<br>
+<p>app.get('/', (req, res) =&gt; {
+res.redirect(301, '/static/index.html')
 })</p>
-<p>app.use(function (req, res) {<br>
+<p>app.use(function (req, res) {
 console.log(&quot;404 : &quot; + req.url);</p>
-<p>res.statusCode = 404;<br>
+<p>res.statusCode = 404;
 res.setHeader('Content-Type', 'text/html');</p>
 <p>res.end(&quot;<html><head><title>404</title></head><body>404</body></html>&quot;);</p>
 <p>})</p>
-<p>app.listen(port, hostname);<br>
+<p>app.listen(port, hostname);
 console.log(<code>Server running at http://${hostname}:${port}/</code>);</p>
 <p>Ici, j'utilise le port 3000 du serveur local (qui correspond à l'adresse IP 127.0.0.1).</p>
 <p>A chaque fois que l'on va envoyer une requête au serveur, chaque appel de <code>app</code> va être testé (sachant que <code>use</code> fonctionne avec toutes les requêtes, <code>get</code> avec les requêtes de type <code>get</code> et <code>post</code> avec les requêtes de type <code>post</code>), et dès que la condition du premier paramètre d'un des appels est satisfait on exécute le deuxième paramètre de cet appel.</p>

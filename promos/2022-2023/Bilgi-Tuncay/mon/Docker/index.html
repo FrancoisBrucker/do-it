@@ -124,9 +124,9 @@
 
 
 <h2>Docker :</h2>
-<p>Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur<br>
-Il est largement utiliser dans la mise en production des applications.<br>
-Le MON consiste à prendre l'outil en main en suivant <a href="https://docs.docker.com/">la doc officielle</a> et un workshop <a href="https://www.youtube.com/watch?v=gAGEar5HQoU&amp;t=1400s&amp;ab_channel=Docker">officiel</a>.<br>
+<p>Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur
+Il est largement utiliser dans la mise en production des applications.
+Le MON consiste à prendre l'outil en main en suivant <a href="https://docs.docker.com/">la doc officielle</a> et un workshop <a href="https://www.youtube.com/watch?v=gAGEar5HQoU&amp;t=1400s&amp;ab_channel=Docker">officiel</a>.
 Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -152,7 +152,7 @@ Le but est d'en faire un maximum puisque l'on a moins de 10h sur ce MON.</p>
 <h3>Initialisation et premiers pas.</h3>
 <p>Il faut installer Docker depuis <a href="https://www.docker.com/">le site officiel</a>.</p>
 <p>Ensuite, on suit le workshop.</p>
-<p>Docker permet d'empaqueter une application dans un conteneur, c'est à dire que le but est de créer, sur notre ordinateur, une boite isolée du reste du système. Cette boite va contenir le code de l'application que l'on veut mettre en production, et tout ce dont elle a besoin pour fonctionner.<br>
+<p>Docker permet d'empaqueter une application dans un conteneur, c'est à dire que le but est de créer, sur notre ordinateur, une boite isolée du reste du système. Cette boite va contenir le code de l'application que l'on veut mettre en production, et tout ce dont elle a besoin pour fonctionner.
 Ces boites doivent donc posséder leur propre système d'exploitation. Nous n'allons pas recréer ce système nous même, mais nous allons chercher une image (une copie) de ce système sur un &quot;drive d'images&quot; sur internet. ON se dirige donc sur DockerHub qui contient pleins d'images, par exemple, on peut y récupérer l'image d'un système Linux avec la distribution Ubuntu.</p>
 <h4>Hello World</h4>
 <p>Pour chercher une image, ici une image de la distribution Linux Fedora, on se place dans le répertoire de notre projet et on lance :</p>
@@ -168,22 +168,22 @@ Ces boites doivent donc posséder leur propre système d'exploitation. Nous n'al
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>docker run --help //liste les commandes et les options<br>
--i  //maintenir le container ouvert après l'executions des tâches<br>
--t  //ouvrir un pseudo terminale<br>
+<p>docker run --help //liste les commandes et les options
+-i  //maintenir le container ouvert après l'executions des tâches
+-t  //ouvrir un pseudo terminale
 -d  // exécuter les taches en daemon -&gt; en arrière plan, dans un autre terminale.</p>
 </div></div>
 <p>D'autres commandes importantes :</p>
-<p>docker ps //liste tous les containers en marche<br>
-docker stop [id] // arrête le container proprement<br>
-docker kill [id] // force l'arrêt<br>
+<p>docker ps //liste tous les containers en marche
+docker stop [id] // arrête le container proprement
+docker kill [id] // force l'arrêt
 docker log -f [id] // renvoie tous les logs du container sur le terminale</p>
 <h4>Dockerfile</h4>
 <p>Une image est un template pour créer un container. Au lieu de simplement copier celle des autres, nous pouvons créer ou modifier les nôtres avec des Dockerfile.</p>
 <p>On crée un Dockerfile dans le projet et on ouvre vscode dans le dossier courant :</p>
-<p>&gt;&gt; New-Item Dockerfile<br>
+<p>&gt;&gt; New-Item Dockerfile
 &gt;&gt; code .</p>
-<p>On crée notre Dockerfile, il va chercher l'image fedora et lancer une commande pour nous qui va installer une dépendance, ici figlet, qui permet de faire de jolies echos.<br>
+<p>On crée notre Dockerfile, il va chercher l'image fedora et lancer une commande pour nous qui va installer une dépendance, ici figlet, qui permet de faire de jolies echos.
 Le Dockerfile ressemble à ça :</p>
 <p>FROM fedora:latest</p>
 <p>RUN yum install -y figlet</p>
@@ -201,9 +201,9 @@ Le Dockerfile ressemble à ça :</p>
 <p>docker build -t mon_pseudo_docker/nom_image:latest .</p>
 <p>Puis sur docker desktop on clique sur push to hub.</p>
 <h3>Conteneurisation d'un premier projet :</h3>
-<p>Lors des cours de flask, on à eu l'occasion de coder un front en React et un back en flask, nous allons essayer de conteneuriser ça.<br>
+<p>Lors des cours de flask, on à eu l'occasion de coder un front en React et un back en flask, nous allons essayer de conteneuriser ça.
 On commence à créer une image qui va créer le conteneur du front.</p>
-<p>Le front utilise node et react.js.<br>
+<p>Le front utilise node et react.js.
 On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher les dossiers spécifiant les dépendances et qui les installes avec npm. Ensuite, on exécute la commande qui lance le serveur pour le front.</p>
 <p>FROM node:18-slim</p>
 <p>WORKDIR /app</p>
@@ -226,7 +226,7 @@ On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher l
 <p>WORKDIR /app</p>
 <p>COPY requirements.txt requirements.txt</p>
 <p>COPY requirements.dev.txt requirements.dev.txt</p>
-<p>RUN pip install -r requirements.txt<br>
+<p>RUN pip install -r requirements.txt
 RUN pip install -r requirements.dev.txt</p>
 <p>COPY  . .</p>
 <p>EXPOSE 5000</p>
@@ -235,32 +235,32 @@ RUN pip install -r requirements.dev.txt</p>
 <h4>Dockercompose file</h4>
 <p>On possède maintenant deux images, une pour le front, une pour le back, on peut essayer de faire fonctionner les deux.</p>
 <p>Pour cela on créer un Docker-composer.yml file.</p>
-<p>version : '3'<br>
-services:<br>
-web :<br>
-build: flask<br>
-ports:<br>
-- '5000:5000'<br>
-environment:<br>
-FLASK_ENV: development<br>
-volumes :<br>
+<p>version : '3'
+services:
+web :
+build: flask
+ports:
+- '5000:5000'
+environment:
+FLASK_ENV: development
+volumes :
 - ./flask:/app</p>
-<p>front :<br>
-build: react-todo<br>
-ports :<br>
+<p>front :
+build: react-todo
+ports :
 - '3000:3000'</p>
-<p>db:<br>
-image : postgres<br>
-ports :<br>
-- '5432:5432'<br>
-environment:<br>
-POSTGRES_USER : test<br>
-POSTGRES_PASSWORD : test<br>
-POSTGRES_DB : postgres<br>
-volumes:<br>
+<p>db:
+image : postgres
+ports :
+- '5432:5432'
+environment:
+POSTGRES_USER : test
+POSTGRES_PASSWORD : test
+POSTGRES_DB : postgres
+volumes:
 - db:/var/lib/postgresql/data</p>
-<p>volumes:<br>
-db:<br>
+<p>volumes:
+db:
 driver : local</p>
 <p>Ce fichier préparer le lancement de trois containers basées sur :</p>
 <ul>

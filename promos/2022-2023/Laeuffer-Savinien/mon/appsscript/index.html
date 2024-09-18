@@ -123,8 +123,8 @@
 <p>Google Apps Script</p>
 <!-- fin résumé -->
 <h2>Description</h2>
-<p>Le but de ce MON est de découvrir Google Apps Script, un outil/language de programmation développé par Google permettant d'executer des scripts entre les différents services proposés par Google. J'ai présenté ça sous la forme d'un tutoriel où j'explique différents outils de Google Apps Script , et j'essaye par la suite de les combiner entre eux pour en faire quelque chose d'utile et pratique.<br>
-Pour ce MON je me suis globalement servi de la documentation fournie par Google sur son service.<br>
+<p>Le but de ce MON est de découvrir Google Apps Script, un outil/language de programmation développé par Google permettant d'executer des scripts entre les différents services proposés par Google. J'ai présenté ça sous la forme d'un tutoriel où j'explique différents outils de Google Apps Script , et j'essaye par la suite de les combiner entre eux pour en faire quelque chose d'utile et pratique.
+Pour ce MON je me suis globalement servi de la documentation fournie par Google sur son service.
 Apps Script apparait dans l'onglet Extension dans différents services proposés sur Google Drive (Sheets, Document)`</p>
 <h2>Afficher un Toast</h2>
 <p>Pour afficher un toast, ce petit composant qui apparait en bas à droite de l'écran pour afficher un message, on peut utiliser la commande <code>SpreadsheetApp.getActiveSpreadsheet().toast()</code> comme suit:</p>
@@ -133,7 +133,7 @@ Apps Script apparait dans l'onglet Extension dans différents services proposés
 <p>Le premier argument correspond au corps du toast, le 2ème au titre du toast, et le 3ème, au nombre de secondes d'affichage (mettre -1 pour ne pas fermer automatiquement la notification)</p>
 <h2>Envoyer un mail à une liste de diffusion</h2>
 <h5>a. La liste de diffusion et le message (Google Sheets)</h5>
-<p>Supposons que l'on a une liste de diffusion immense et on veut envoyer un message personnalisé à tous les destinataires en mentionnant à chacun leur prénom en début de mail.<br>
+<p>Supposons que l'on a une liste de diffusion immense et on veut envoyer un message personnalisé à tous les destinataires en mentionnant à chacun leur prénom en début de mail.
 Pour envoyer un mail à une liste de diffusion, il me faut tout d'abord une liste de diffusion que je crée comme ceci sur Google Sheets:</p>
 <figure>
   <img src="../mon2sheets.png">
@@ -165,7 +165,7 @@ Infos
   var finalMessage = template.replace(&quot;PRENOM&quot;, range[i][1])
 }
 </code></pre>
-<p>En executant, on s'apperçoit dans les logs que le dernier message s'est affiché et correspond bien au dernier message.<br>
+<p>En executant, on s'apperçoit dans les logs que le dernier message s'est affiché et correspond bien au dernier message.
 On cherche maintenant à envoyer ces mails aux destinataires, on ajoute la ligne suivante dans la boucle for, juste après avoir défini <code>finalMessage</code>:</p>
 <pre><code>GmailApp.sendEmail(range[i][0], &quot;Salut mon pote&quot;, finalMessage)
 </code></pre>
@@ -185,7 +185,7 @@ On cherche maintenant à envoyer ces mails aux destinataires, on ajoute la ligne
 </code></pre>
 <p>Il suffit d'exécuter, passer les autorisations, et le tour est joué !</p>
 <h2>Les déclencheurs simple</h2>
-<p>Les déclencheurs sont des fonctions qui s'exécutent automatiquement lorsque un évènement se produit (changement d'une cellule, ouverture d'un document).<br>
+<p>Les déclencheurs sont des fonctions qui s'exécutent automatiquement lorsque un évènement se produit (changement d'une cellule, ouverture d'un document).
 Pour utiliser un déclencheur simple, il suffit de nommer sa fonction d'une certaine manière, voici les noms à donner et ce à quoi ils correspondent:</p>
 <ul>
 <li><code>onOpen(e)</code>: Se lance lorsqu'on ouvre un fichier Google</li>

@@ -128,11 +128,11 @@
 <!-- Début Résumé -->
 <h2>Introduction</h2>
 <p>Ce MON est destiné à des <strong>débutants</strong> en Bash. En effet, avant de débuter ce travail je n'avais que peu de connaissances sur le sujet.</p>
-<p>Bash (ou Bourne-Again Shell) est un <strong>interpréteur en ligne de commande</strong>. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour que ce dernier les exécute. Il permet <strong>d’utiliser son ordinateur de façon efficace</strong> et de <strong>réaliser des opérations complexes très rapidement</strong>.<br>
-Il s’agit d’une <strong>interface en ligne de commande</strong> ou CLI (“Command Line Interface”).  L’utilisateur est face à un terminal dans lequel il entre ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation la plus classique de son ordinateur : avec l’accueil, le bureau, les icônes,... Même si une CLI peut être <strong>plus complexe à maîtriser et moins intuitive</strong>, elle est <strong>plus puissante</strong> qu’une GUI.<br>
+<p>Bash (ou Bourne-Again Shell) est un <strong>interpréteur en ligne de commande</strong>. C’est un Shell : il reçoit des commandes informatiques d’un utilisateur et les envoie au système d’exploitation pour que ce dernier les exécute. Il permet <strong>d’utiliser son ordinateur de façon efficace</strong> et de <strong>réaliser des opérations complexes très rapidement</strong>.
+Il s’agit d’une <strong>interface en ligne de commande</strong> ou CLI (“Command Line Interface”).  L’utilisateur est face à un terminal dans lequel il entre ses lignes de commandes. La plupart des utilisateurs utilisent une interface graphique ou GUI (“Graphical User Interface”). C’est l’utilisation la plus classique de son ordinateur : avec l’accueil, le bureau, les icônes,... Même si une CLI peut être <strong>plus complexe à maîtriser et moins intuitive</strong>, elle est <strong>plus puissante</strong> qu’une GUI.
 Par ailleurs Bash fonctionne généralement en <strong>commande synchrone</strong>. Cela signifie que les lignes de commande sont lues et exécutées une par une.</p>
 <h2>Comment faire du Bash ?</h2>
-<p>Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais, sans interpréteur, certaines fonctions peuvent être limitées.<br>
+<p>Bash est conçu pour être utilisé sur un environnement Linux ou MacOS. On peut également en faire sur Windows mais, sans interpréteur, certaines fonctions peuvent être limitées.
 Pour ce MON, j’ai utilisé Bash sur un système Linux en me <strong>connectant à mon compte Centrale</strong>. Pour cela j’ai lancé la commande suivante dans un terminal Windows Powershell:</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> tpont@sas1.ec-m.fr
 </code></pre>
@@ -140,7 +140,7 @@ Pour ce MON, j’ai utilisé Bash sur un système Linux en me <strong>connectant
 <p>Lorsqu’on est connecté, on peut voir que sa ligne de commande commence par :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token punctuation">[</span>tpont@sas1 ~<span class="token punctuation">]</span>$
 </code></pre>
-<p>Dans un premier lieu (avant le ~), il s’agit du <strong>nom d’utilisateur</strong>. Le signe “~” en fin de ligne indique que l’on se situe dans le <strong>dossier home</strong>. Le signe “$” quant à lui signifie qu’on est connecté en tant qu’<strong>utilisateur classique</strong>.<br>
+<p>Dans un premier lieu (avant le ~), il s’agit du <strong>nom d’utilisateur</strong>. Le signe “~” en fin de ligne indique que l’on se situe dans le <strong>dossier home</strong>. Le signe “$” quant à lui signifie qu’on est connecté en tant qu’<strong>utilisateur classique</strong>.
 Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="https://www.pierre-giraud.com/shell-bash/">Apprendre à utiliser le shell Bash - Pierre Giraud</a>.</p>
 <h2>Les principales commandes</h2>
 <p>Bash s’effectue en ligne de commande. Pour cela, il faut connaître les différentes commandes existantes. Sur certaines commandes, on peut rajouter des options. Cela permet d’avoir plus de fonctionnalités que la commande de base. Elles sont matérialisées par des &quot;-&quot;.</p>
@@ -189,7 +189,7 @@ Afin d’apprendre les bases de Bash, j’ai suivi le cours suivant : <a href="h
 <div class="pl-8  mb-2 mr-8">
 <p><strong>Attention</strong> aux espaces</p>
 </div><div class="pl-8 mr-8">
-<p>Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée, il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.<br>
+<p>Si le nom du document ou du dossier comporte des espaces, pour que la commande puisse bien être interprétée, il faut mettre des \ avant les espaces ou des “ ” ou encore des ‘ ’  autour du nom du fichier ou du dossier.
 Par exemple :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">cp</span> “ mon document.txt” Dossier
 </code></pre>
@@ -236,14 +236,14 @@ Par exemple :</p>
 <h2>Projet en Bash</h2>
 <p>Après avoir vu les commandes élémentaires et les avoir testées pour bien les comprendre, on peut réaliser un projet en Bash qui peut être pratique pour effectuer différentes tâches.</p>
 <h3>Création d'un script en Bash</h3>
-<p>Pour lancer un script faisant appel à des commandes, on peut créer un script en Bash.<br>
+<p>Pour lancer un script faisant appel à des commandes, on peut créer un script en Bash.
 La commande suivante permet de le faire :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token environment constant">$HOME</span> <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> script.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x script.sh
 </code></pre>
 <p>Ceci permet de se placer dans le dossier home, de créer un script &quot;<a href="http://script.sh">script.sh</a>&quot; et de l'ajouter dans la liste des scripts exécutables. Un script Bash doit commencer par :</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash'</span>
 </code></pre>
-<p>pour pouvoir être exécuté correctement.<br>
+<p>pour pouvoir être exécuté correctement.
 On peut écrire un script qui affiche &quot;Hello world !&quot; quand on le lance en utilisant la commande <strong>nano</strong>.</p>
 <pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash'</span>
 <span class="token builtin class-name">echo</span> <span class="token string">"Hello World !"</span>
@@ -277,7 +277,7 @@ On peut écrire un script qui affiche &quot;Hello world !&quot; quand on le lanc
 </div></div>
 <h4>Gestionnaire de tâches</h4>
 <p>L'objectif est de créer un gestionnaire de tâches. Ce gestionnaire stockera une liste de tâches dans un fichier texte et permettra de stocker leur état (à faire, fait).</p>
-<p>Pour ce faire, on crée un script <em><a href="http://gestion.sh">gestion.sh</a></em> et un fichier texte <em>tache.txt</em>.<br>
+<p>Pour ce faire, on crée un script <em><a href="http://gestion.sh">gestion.sh</a></em> et un fichier texte <em>tache.txt</em>.
 On a besoin de plusieurs commandes pour faire fonctionner ce gestionnaire :</p>
 <ul>
 <li><strong>add</strong> : pour ajouter une tâche (on doit vérifier qu'il y a bien une tâche à ajouter</li>
