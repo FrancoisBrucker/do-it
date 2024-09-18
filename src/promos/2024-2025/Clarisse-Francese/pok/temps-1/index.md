@@ -18,14 +18,9 @@ résumé: Optimisation des tableaux de comptabilité de ma soeur artiste
 ---
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON : aucun
+POK débutant : aucun prérequis
 
 {% endprerequis %}
-{% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
-{% endlien %}
 
 Ma **grande sœur illustratrice** s’est lancée il y a moins d'un an dans la vente de carte postale qu’elle dessine et vend à des librairies qui les revendent à des clients. Son talent en art est immense, mais ses connaissances en bureautique sont proches du néant. Or, elle doit gérer de nombreux intermédiaires, comptabiliser les stocks dans chaque librairie, suivre l’évolution de ses ventes et aimerait **savoir plus facilement quelles librairies sont les plus rentables**.
 Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite **Google Sheets** et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre **Google Apps Script** pour voir si je peux automatiser des fonctions grâce à cet outil (des envoies de mail automatiques par exemple).
@@ -34,7 +29,7 @@ Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la s
 
 ### 🏃‍➡️Sprints
 
-**Optimiser les tableaux de comptabilité** de ma soeur Laura.
+Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Laura.
 
 #### Sprint 1
 
@@ -194,7 +189,7 @@ Je vais donc lister toutes les **améliorations possibles de ces 2 tableaux**.
 4. **Produit facturés** : remplacer la saisie sous forme de texte par 3 colonnes et avoir les totaux de chaque produit à la fin.
 5. **Bilan des factures par librairie** : créer un TCD qui permet de voir sur l’année les ventes par ville et par librairie.
 
-#### Idées tableau calednrier et compta
+#### Idées tableau calendrier et compta
 
 1. **Mail** : ajouter la vérification de mail automatique.
 2. **Graphique sparkline** : ajouter un graphique pour chaque librairie pour voir l'évolution des ventes au fil des mois.
@@ -204,7 +199,7 @@ Je vais donc lister toutes les **améliorations possibles de ces 2 tableaux**.
 
 #### Amélioration tableau suivi des factures
 
-Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [suivi des factures nouveau](https://docs.google.com/spreadsheets/d/1RZB_4vyWY-2KVkbhKPkIwlEmPMH9DsRkCuLGLq1DHOk/edit?gid=2019233211#gid=2019233211) sur les feuilles "Modifié 2024" et "Créé bilan 2024".
+Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [suivi des factures nouveau](https://docs.google.com/spreadsheets/d/1RZB_4vyWY-2KVkbhKPkIwlEmPMH9DsRkCuLGLq1DHOk/edit?gid=2019233211#gid=2019233211) sur les feuilles "**Modifié 2024**" et "**Créé bilan 2024**".
 
 1. **Date** : je remarque que ma soeur a mis volontairement les dates à l’envers (mois/jour/année), je dois voir avec elle pourquoi car ça perturbe google sheet. En attendant, je ne préfère par modifier cette partie là.
 2. **Client** : je créé un tableau récapitulant les clients et les villes des librairies juste à côté du tableau des factures. Puis j'insère dans la colonne "client" une liste à partir de la plage de données créée pour permettre de choisir la librairie parmis la liste quand on ajoute une ligne de facturation.
@@ -212,13 +207,19 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [s
 4. **Produit facturés** : je créé rapidement 3 colonnes et une ligne des totaux avec la fonction SOMME.
 5. **Bilan des factures par librairie** : je créé un TCD sur une nouvelle feuille que je nomme "Créé bilan 2024".
 
+<img src="Factures 2024.png" width="70%" alt="Image description">
+
+<img src="TCD 2024.png" width="70%" alt="Image description">
+
 #### Amélioration tableau calendrier et compta
 
-Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [calendrier et compta nouveau](https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=1842762687#gid=1842762687) sur les feuilles "Modifié calendrier compta 2024" et "Créé graphique 2024".
+Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [calendrier et compta nouveau](https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=1842762687#gid=1842762687) sur les feuilles "**Modifié calendrier compta 2024**" et "**Créé graphique 2024**".
 
 1. **Mail** : j'ajoute facilement la vérification de mail automatique grace à la validation de données (voir formation).
 2. **Graphique sparkline** : en regardant plus précisément le tableau de Laura, je réalise que ces graphiques n’auraient pas d’intérêt car elle reçoit les virements à des moments variées et non tous les mois.
 3. **Feuille graphique** : je déplace facilement les graphiques sur une nouvelle feuille que je nomme "Créé graphique 2024".
+
+<img src="Graphique 2024.png" width="70%" alt="Image description">
 
 ### 👍Retours de Laura
 
