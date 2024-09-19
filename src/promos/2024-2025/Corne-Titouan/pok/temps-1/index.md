@@ -24,6 +24,7 @@ Sans prérequis
 {% lien %}
 
 Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
+[Mon projet sur Github](https://github.com/TitouanCorne/AndroidKotlinFirstApp.git)
 
 {% endlien %}
 
@@ -34,7 +35,7 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 - [x] Developper une application basique (une seule activité).
 - [ ] Faire un cahier des charges de l'application que je souhaite réaliser
 - [ ] Faire des wireframes réalistes pour chaque page de l'appli
-- [ ] Coder
+- [ ] Coder (à changer en mettant des étapes précises)
 
 ### Sprints
 
