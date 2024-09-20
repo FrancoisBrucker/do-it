@@ -12,8 +12,8 @@ tags:
   - "HTML"
   - "CSS"
 
-Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen.
-Pour réaliser ce MON et débuter mon apprentissage, j'ai décidé de suivre les cours du site de Mr Brucker, ainsi que de suivre un tutoriel disponible en ligne et recommandé par le site do-it. Il s'agit du tutoriel [`W3School`](https://www.w3schools.com/html/default.asp). Ce tutoriel permet d'apprendre les notions de bases de HTML/CSS et est accompagné d'exercices de codes sur un éditeur en ligne.
+Résumé: "Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen.
+Pour réaliser ce MON et débuter mon apprentissage, j'ai décidé de suivre les cours du site de Mr Brucker, ainsi que de suivre un tutoriel disponible en ligne et recommandé par le site do-it. Il s'agit du tutoriel W3School. Ce tutoriel permet d'apprendre les notions de bases de HTML/CSS et est accompagné d'exercices de codes sur un éditeur en ligne."
 ---
 
 {% prerequis %}

@@ -11,7 +11,7 @@ tags:
   - "Developpement FrontEnd"
   - "JavaScript"
 
-Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen. Pour ce faire, j'ai suivi les cours de Mr Brucker de développement Web sur le site do-it ainsi que les MON des élèves des années précédentes. J'ai également suivi le tutoriel [`W3School`](https://www.w3schools.com/js/default.asp) qui est accompagné de petits exercices sur un éditeur en ligne. La plus grande partie du MON a été passé sur le suivi d'un tutoriel [`javascrip-koans`](https://github.com/mrdavidlaing/javascript-koans), dont le code a été téléchargé sur GitHub et qui propose d'apprendre la language JavaScript à partir d'une série d'exercices de code à trous qui doivent passer différents tests.
+Résumé : "Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen. Pour ce faire, j'ai suivi les cours de Mr Brucker de développement Web sur le site do-it ainsi que les MON des élèves des années précédentes. J'ai également suivi le tutoriel W3School qui est accompagné de petits exercices sur un éditeur en ligne. La plus grande partie du MON a été passé sur le suivi d'un tutoriel javascrip-koans, dont le code a été téléchargé sur GitHub et qui propose d'apprendre la language JavaScript à partir d'une série d'exercices de code à trous qui doivent passer différents tests.""
 ---
 
 {% prerequis %}
@@ -35,7 +35,10 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 ## Présentation du tutoriel javascript-koans
 ### <span style="color: #26B260">1. Généralités
 
-Basé sur le tutoriel de Edgecase [Ruby koans] (http://github.com/edgecase/ruby_koans), l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de **tests** et de **code à trous**.
+Basé sur le tutoriel de Edgecase [Ruby koans](http://github.com/edgecase/ruby_koans), l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de **tests** et de **code à trous**.
+
+Lien vers le code : 
+[JavaScript koans](http://github.com/edgecase/javascript-koans)
 
 Lors de la première execution, une erreur d'exécution apparaît, ainsi qu'une indication qui montre où l'erreur s'est produite. L'objectif est de faire disparaître l'erreur dans le code. En corrigeant chaque erreur, je vais apprendre une notion particulière sur le langage Javascript et la programmation fonctionnelle en général.
 
