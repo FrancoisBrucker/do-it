@@ -79,6 +79,7 @@ Comme son nom l’indique, le **doctype** sert à indiquer le type du document.
 L’élément meta sert lui à transmettre des meta informations sur la page au navigateur. La valeur *utf-8* est la valeur de référence pour tous les alphabets latins.
 
 #### <span style="color: #26B260">Les éléments HTML<a name="HTML-éléments"></a>
+
 Le langage HTML tout entier repose sur l’utilisation d’**éléments**. Dans une page, nous allons utiliser les éléments en HTML pour marquer du contenu, c’est-à-dire pour lui donner du sens aux yeux des navigateurs et des moteurs de recherche.
 
 **<span style="color: purple">1. Les balises HTML**<a name="balises"></a>
@@ -188,6 +189,7 @@ Une **entité HTML** est une suite de caractère qui est utilisée pour afficher
 | tfoot |	Groups the footer content in a table|
 
 **<span style="color: purple">7. Block/Inline Elemnent**<a name="B/I_element"></a>
+
 * Un **élément de niveau bloc** commence toujours sur une nouvelle ligne et occupe toute la largeur disponible;
 * Un élément en ligne ne démarre pas sur une nouvelle ligne et prend uniquement la largeur nécessaire; 
 * L'**élément div** est au niveau bloc et est souvent utilisé comme conteneur pour d'autres éléments HTML.
@@ -197,6 +199,7 @@ Une **entité HTML** est une suite de caractère qui est utilisée pour afficher
 ## 2.CSS<a name="CSS"></a>
 
 **<span style="color: purple">1. Généralités**<a name="CSS-Généralités"></a>
+
 * Le code CSS est contenu dans une feuille de style construite en cascade.
 * Il décrit comment les éléments HTML doivent être affichés à l'écran, en définissant le style de chaque éléments.
 * Il peut contrôler la mise en page de plusieurs pages Web à la fois.
@@ -213,6 +216,7 @@ Il existe trois manières d'insérer une feuille de style, en interne, en extern
 Le sélecteur pointe vers l’élément HTML que vous souhaitez styliser. Chaque déclaration comprend un nom de propriété CSS et une valeur.
 
 **<span style="color: purple">2. Les sélecteurs**<a name="sélecteurs"></a>
+
 Les sélecteurs CSS sont utilisés pour « trouver » (ou sélectionner) les éléments HTML que vous souhaitez styliser. Il en existe 5 catégories : 
 * Sélecteurs simples (sélectionnez des éléments en fonction du nom, de l'identifiant, de la classe)
 * Sélecteurs combinatoires (sélectionnez des éléments en fonction d'une relation spécifique entre eux)
@@ -221,6 +225,7 @@ Les sélecteurs CSS sont utilisés pour « trouver » (ou sélectionner) les él
 * Sélecteurs d'attributs (sélectionnez des éléments en fonction d'un attribut ou d'une valeur d'attribut)*
 
 **<span style="color: purple">3. En pratique**<a name="pratique"></a>
+
 Tous les styles d'une page seront « mis en cascade » dans une nouvelle feuille de style « virtuelle » selon les règles suivantes, où le numéro un a la priorité la plus élevée :
 
 1. Style en ligne (à l'intérieur d'un élément HTML)
