@@ -141,15 +141,59 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://react.dev/">Les lien utiles pour la compréhension de celui-ci.</a>
+<p><a href="https://react.dev/">Les lien utiles pour la compréhension de celui-ci.</a><br>
 <a href="https://github.com/MbayeSyAmar/mon_amar.git">Vous pouvez consulter les codes sources ici </a></p>
 </div></div>
 
-<h2>Pourquoi React ?</h2>
+<h2>Table des matières<a name="table-des-matières"></a></h2>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#pourquoi-react">Pourquoi React🤔?</a></li>
+<li><a href="#objectifs-">Objectifs 🎯</a></li>
+<li><a href="#m%C3%A9thode-%EF%B8%8F">Méthode 🛠️</a></li>
+<li><a href="#structure-du-projet-%EF%B8%8F">Structure du Projet 🏗️</a></li>
+<li><a href="#concepts-cl%C3%A9s-de-mon-projet-">Concepts Clés de mon projet 💡</a>
+<ul>
+<li><a href="#les-composants-">Les Composants 🧩</a></li>
+<li><a href="#pages-">Pages 📄</a></li>
+</ul>
+</li>
+<li><a href="#resultats-">Resultats 📊</a></li>
+<li><a href="#horodatage-">Horodatage 🕒</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#sources-">Sources :</a></li>
+</ul>
+<style>
+  .hint {
+  background-color: #e2f0d9;
+  color: #155724;
+  padding: 15px;
+  border-left: 5px solid #c3e6cb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.tip {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-left: 5px solid #ffeeba;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.danger {
+  background-color: #fbe9e7;
+  color: #c62828;
+  padding: 15px;
+  border-left: 5px solid #ef9a9a;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+</style>
+<h2>Pourquoi React🤔?</h2>
 <p>J'ai choisi d'apprendre <strong>React</strong> car c'est une bibliothèque JavaScript très populaire pour la création d'interfaces utilisateur. Elle permet de <strong>réutiliser des composants</strong>, de gérer efficacement l'état de l'application, et de rendre des pages dynamiques tout en améliorant les performances. Un portfolio est une bonne première application car il comprend plusieurs pages qui bénéficient de la modularité et des composants réutilisables.</p>
-<h2>Objectifs</h2>
-<p>Mon objectif était de créer un <strong>portfolio simple</strong> avec <strong>React</strong>, en me concentrant sur la séparation des différentes sections comme l'accueil, les projets, les expériences professionnelles, et un formulaire de contact. Le but est de mettre en avant mes compétences techniques et mes projets en utilisant une <strong>navigation fluide</strong>.</p>
-<h2>Méthode</h2>
+<h2>Objectifs 🎯</h2>
+<p>Mon objectif était de créer un <strong>portfolio simple</strong> avec <strong>React</strong>, en me concentrant sur la séparation des différentes sections comme l'accueil, les projets, les expériences professionnelles, et un formulaire de contact. Le but estde mettre en avant mes compétences techniques et mes projets en utilisant une <strong>navigation fluide</strong>.</p>
+<h2>Méthode 🛠️</h2>
 <p>Voici les étapes générales que j'ai suivies pour construire ce portfolio :</p>
 <ul>
 <li>[X] Utiliser <code>create-react-app</code> pour créer la structure de base du projet.</li>
@@ -158,8 +202,22 @@
 <li>[X] Ajouter des images pour personnaliser le portfolio.</li>
 <li>[X] Utiliser du CSS pour styliser chaque page et rendre l'interface plus attrayante.</li>
 </ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Avec React, la gestion de l'état (via hooks comme useState et useEffect) devient fluide, ce qui améliore la réactivité et la performance des applications.</p>
+</div></div>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les hooks comme useState et useEffect permettent de gérer l'état et les effets secondaires dans les composants fonctionnels. Ils sont essentiels pour maîtriser React moderne.</p>
+</div></div>
 <hr>
-<h2>Structure du Projet</h2>
+<h2>Structure du Projet 🏗️</h2>
 <p>J'ai structuré mon projet de manière claire et logique, avec une séparation des composants dans des dossiers distincts.</p>
 <pre><code>mon_amar/
 │
@@ -190,9 +248,19 @@
 │
 └── package.json      // Fichier de configuration du projet
 </code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>React facilite la création d'interfaces modulaires en divisant le code en composants réutilisables. Cela permet de réduire la duplication du code et de simplifier la maintenance.</p>
+</div></div>
+<blockquote>
+<p><strong>Citation :</strong> &quot;La réutilisation des composants dans React permet de créer des interfaces utilisateur complexes avec un minimum d'effort.&quot; <em><strong>— Jordan Walke, créateur de React</strong></em></p>
+</blockquote>
 <hr>
-<h2>Concepts Clés de mon projet</h2>
-<h3>Les Composants</h3>
+<h2>Concepts Clés de mon projet 💡</h2>
+<h3>Les Composants 🧩</h3>
 <p>Les composants sont les blocs de construction de toute application React. Ils permettent de diviser l'interface utilisateur en morceaux réutilisables.</p>
 <p><strong>Exemple : Composant Header</strong></p>
 <pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
@@ -243,7 +311,7 @@ Mise en forme des éléments avec des balises HTML et du CSS.
 Le composant Education liste les diplômes et les institutions fréquentées. Chaque élément de la liste comprend l'année, le nom de l'institution et le diplôme obtenu.</p>
 <p><em><strong>6. Contact.js</strong></em>
 Le composant Contact contient un formulaire permettant aux visiteurs de m'envoyer un message. Le formulaire comprend des champs pour le nom, l'email et le message, avec validation intégrée.</p>
-<h3>Pages</h3>
+<h3>Pages 📄</h3>
 <p>Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
 Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des &quot;containers&quot; pour ces composants.
 <strong>Exemple : HomePage</strong></p>
@@ -288,6 +356,9 @@ Les pages sont souvent composées de plusieurs composants et peuvent être consi
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> HomePage<span class="token punctuation">;</span>
 </code></pre>
+<div class="tip">
+  <strong>Astuce :</strong> Utilise des techniques comme le lazy loading pour charger dynamiquement les composants et améliorer la performance de ton application React.
+</div>
 <hr>
 <p><strong>Pages Principales :</strong>
 <em><strong>1. HomePage.js</strong></em>
@@ -300,7 +371,10 @@ La page des expériences professionnelles est construite avec le composant Exper
 La page de formation est rendue avec le composant Education pour présenter les diplômes et les institutions fréquentées.</p>
 <p><em><strong>5. ContactPage.js</strong></em>
 Cette page affiche le formulaire de contact à l'aide du composant Contact, permettant aux utilisateurs de me contacter directement.</p>
-<h3>Resultats</h3>
+<div class="hint">
+  <strong>Conseil :</strong> Utilise l'extension React Developer Tools pour déboguer et analyser les composants et l'état de ton application en temps réel.
+</div>
+<h2>Resultats 📊</h2>
 <img src="image.png" alt="Page du jeu">
 <img src="image1.png" alt="hhh">
 <img src="image2.png" alt="On peut perdre">
@@ -308,7 +382,37 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 <img src="image4.png" alt="On peut perdre">
 <img src="image5.png" alt="On peut gagner">
 <img src="Capture6.png" alt="On peut gagner">
-<h3>Conclusion</h3>
+<div class="danger">
+  <strong>Attention :</strong> Bien que React améliore la performance de l'interface utilisateur mais il n'est pas idéal pour le SEO sans l'utilisation d'outils comme Next.js ou le rendu côté serveur, car il fonctionne principalement côté client.
+</div>
+<h2>Horodatage 🕒</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeudi 05/09</td>
+<td>2h00</td>
+<td><em>[Cours / Tuto] Apprendre React de Zéro (débutant) sur Youtube</em></td>
+</tr>
+<tr>
+<td>Samedi &amp; Dimanche 07-08/09</td>
+<td>5h00</td>
+<td><em>Cours complet sur ReactJS sur Youtube</em></td>
+</tr>
+<tr>
+<td>Lundi 10/09</td>
+<td>3h00</td>
+<td><em>Codage du portefolio</em></td>
+</tr>
+</tbody>
+</table>
+<h2>Conclusion</h2>
 <p>En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
 À suivre pour mon MON 2 sur l'étude de comment intégrer React dans Laravel.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
