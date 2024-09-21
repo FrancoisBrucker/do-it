@@ -20,17 +20,57 @@ Prérequis : JavaScript, HTML et CSS
 {% endprerequis %}
 {% lien %}
 
-[Les lien utiles pour la compréhension de celui-ci.](https://react.dev/)
+[Les lien utiles pour la compréhension de celui-ci.](https://react.dev/)\
 [Vous pouvez consulter les codes sources ici ](https://github.com/MbayeSyAmar/mon_amar.git)
 {% endlien %}
 
-## Pourquoi React ?
+## Table des matières<a name="table-des-matières"></a>
+- [Table des matières](#table-des-matières)
+- [Pourquoi React🤔?](#pourquoi-react)
+- [Objectifs 🎯](#objectifs-)
+- [Méthode 🛠️](#méthode-️)
+- [Structure du Projet 🏗️](#structure-du-projet-️)
+- [Concepts Clés de mon projet 💡](#concepts-clés-de-mon-projet-)
+  - [Les Composants 🧩](#les-composants-)
+  - [Pages 📄](#pages-)
+- [Resultats 📊](#resultats-)
+- [Horodatage 🕒](#horodatage-)
+- [Conclusion](#conclusion)
+- [Sources :](#sources-)
+<style>
+  .hint {
+  background-color: #e2f0d9;
+  color: #155724;
+  padding: 15px;
+  border-left: 5px solid #c3e6cb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.tip {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-left: 5px solid #ffeeba;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.danger {
+  background-color: #fbe9e7;
+  color: #c62828;
+  padding: 15px;
+  border-left: 5px solid #ef9a9a;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+</style>
+
+## Pourquoi React🤔?
 J'ai choisi d'apprendre **React** car c'est une bibliothèque JavaScript très populaire pour la création d'interfaces utilisateur. Elle permet de **réutiliser des composants**, de gérer efficacement l'état de l'application, et de rendre des pages dynamiques tout en améliorant les performances. Un portfolio est une bonne première application car il comprend plusieurs pages qui bénéficient de la modularité et des composants réutilisables.
 
-## Objectifs
-Mon objectif était de créer un **portfolio simple** avec **React**, en me concentrant sur la séparation des différentes sections comme l'accueil, les projets, les expériences professionnelles, et un formulaire de contact. Le but est de mettre en avant mes compétences techniques et mes projets en utilisant une **navigation fluide**.
+## Objectifs 🎯
+Mon objectif était de créer un **portfolio simple** avec **React**, en me concentrant sur la séparation des différentes sections comme l'accueil, les projets, les expériences professionnelles, et un formulaire de contact. Le but estde mettre en avant mes compétences techniques et mes projets en utilisant une **navigation fluide**.
 
-## Méthode
+## Méthode 🛠️
 Voici les étapes générales que j'ai suivies pour construire ce portfolio :
 
 - [X] Utiliser `create-react-app` pour créer la structure de base du projet.
@@ -38,10 +78,16 @@ Voici les étapes générales que j'ai suivies pour construire ce portfolio :
 - [X] Utiliser **React Router** pour naviguer entre les sections de manière fluide.
 - [X] Ajouter des images pour personnaliser le portfolio.
 - [X] Utiliser du CSS pour styliser chaque page et rendre l'interface plus attrayante.
+  {% info %}
+Avec React, la gestion de l'état (via hooks comme useState et useEffect) devient fluide, ce qui améliore la réactivité et la performance des applications.
+{% endinfo %}
+{% note %}
+Les hooks comme useState et useEffect permettent de gérer l'état et les effets secondaires dans les composants fonctionnels. Ils sont essentiels pour maîtriser React moderne.
+{% endnote %}
 
 ---
 
-## Structure du Projet
+## Structure du Projet 🏗️
 
 J'ai structuré mon projet de manière claire et logique, avec une séparation des composants dans des dossiers distincts.
 
@@ -75,9 +121,13 @@ mon_amar/
 │
 └── package.json      // Fichier de configuration du projet
 ```
+{% info %}
+React facilite la création d'interfaces modulaires en divisant le code en composants réutilisables. Cela permet de réduire la duplication du code et de simplifier la maintenance.
+{% endinfo %}
+> **Citation :** "La réutilisation des composants dans React permet de créer des interfaces utilisateur complexes avec un minimum d'effort." ***— Jordan Walke, créateur de React***
 ---
-## Concepts Clés de mon projet
-### Les Composants
+## Concepts Clés de mon projet 💡
+### Les Composants 🧩
 Les composants sont les blocs de construction de toute application React. Ils permettent de diviser l'interface utilisateur en morceaux réutilisables.
 
 **Exemple : Composant Header**
@@ -141,7 +191,7 @@ Le composant Education liste les diplômes et les institutions fréquentées. Ch
 ***6. Contact.js***
 Le composant Contact contient un formulaire permettant aux visiteurs de m'envoyer un message. Le formulaire comprend des champs pour le nom, l'email et le message, avec validation intégrée.
 
-### Pages
+### Pages 📄
 Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
 Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des "containers" pour ces composants.
 **Exemple : HomePage**
@@ -187,6 +237,10 @@ function HomePage() {
 
 export default HomePage;
 ```
+<div class="tip">
+  <strong>Astuce :</strong> Utilise des techniques comme le lazy loading pour charger dynamiquement les composants et améliorer la performance de ton application React.
+</div>
+
 ---
 **Pages Principales :** 
 ***1. HomePage.js***
@@ -203,8 +257,11 @@ La page de formation est rendue avec le composant Education pour présenter les 
 
 ***5. ContactPage.js***
 Cette page affiche le formulaire de contact à l'aide du composant Contact, permettant aux utilisateurs de me contacter directement.
+<div class="hint">
+  <strong>Conseil :</strong> Utilise l'extension React Developer Tools pour déboguer et analyser les composants et l'état de ton application en temps réel.
+</div>
 
-### Resultats
+## Resultats 📊
 <img src="./image.png" alt="Page du jeu" />
 <img src="./image1.png" alt="hhh" />
 <img src="./image2.png" alt="On peut perdre"/>
@@ -213,8 +270,19 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 <img src="./image5.png" alt="On peut gagner"/>
 <img src="./Capture6.png" alt="On peut gagner"/>
 
+<div class="danger">
+  <strong>Attention :</strong> Bien que React améliore la performance de l'interface utilisateur mais il n'est pas idéal pour le SEO sans l'utilisation d'outils comme Next.js ou le rendu côté serveur, car il fonctionne principalement côté client.
+</div>
 
-### Conclusion
+## Horodatage 🕒
+
+| Date                       | Heures passées | Indications                                                     |
+| -------------------------- | -------------- | --------------------------------------------------------------- |
+| Jeudi 05/09                | 2h00           | *[Cours / Tuto] Apprendre React de Zéro (débutant) sur Youtube* |
+| Samedi & Dimanche 07-08/09 | 5h00           | *Cours complet sur ReactJS sur Youtube*                         |
+| Lundi 10/09                | 3h00           | *Codage du portefolio*                                          |
+
+## Conclusion
 En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
 À suivre pour mon MON 2 sur l'étude de comment intégrer React dans Laravel.
 {% lien %}
