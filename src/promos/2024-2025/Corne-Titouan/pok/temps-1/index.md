@@ -24,6 +24,7 @@ Sans prérequis
 {% lien %}
 
 Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
+[Mon projet sur Github](https://github.com/TitouanCorne/AndroidKotlinFirstApp.git)
 
 {% endlien %}
 
@@ -31,10 +32,10 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 
 - [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
 - [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
-- [ ] Developper une application basique (une seule activité).
+- [x] Developper une application basique (une seule activité).
 - [ ] Faire un cahier des charges de l'application que je souhaite réaliser
 - [ ] Faire des wireframes réalistes pour chaque page de l'appli
-- [ ] Coder
+- [ ] Coder (à changer en mettant des étapes précises)
 
 ### Sprints
 
@@ -44,7 +45,13 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 
 - [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
 - [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
-- [ ] Developper une application basique (une seule activité)
+- [x] Developper une application basique (une seule activité)
+
+**Analyse post-mortem :**
+
+J'ai réussi à réaliser entièrement la to do list fixée au départ pour ce premier sprint. J'ai abouti sur un livrable qui fonctionne : l'application basique. Il m'a été un peu difficile d'organiser mes recherches sur le langage Kotlin, qui est tout nouveau pour moi. Je me suis senti au début comme étant au pied d'un mur. Mais avec du temps, un peu de prise en main, j'estime avoir compris les bases du langage. Le nombre de ressources dédiées à la programmation Kotlin n'est pas en manque sur internet !
+
+Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en apprendre encore plus !
 
 #### Sprint 2
 
@@ -61,6 +68,7 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 | Jeudi 12/09  | 3H00  | Recherches sur Android Studio/Kotlin |
 | Vendredi 13/09 | 1H00  | Recherches sur Android Studio/Kotlin |
 | Lundi 16/09 | 4H00  | Prise en main Android Studio/Kotlin |
+| Mardi 17/09 | 1H00  | Réalisation application (très) basique |
 
 ## Contenu
 
@@ -79,9 +87,11 @@ Pour commencer un petit mot sur Kotlin :
 
 Pour me familiariser avec le langage Kotlin, j'ai utilisé un éditeur de code intéractif appelé [Kotlin Playground](https://play.kotlinlang.org/). Celui-ci est directement accessible depuis le Web.
 
-[Liste exhaustive des mots clés Kotlin](https://kotlinlang.org/docs/keyword-reference.html)
+{% info %}
+Ici tu retrouves la [liste exhaustive des mots clés Kotlin](https://kotlinlang.org/docs/keyword-reference.html)
+{% endinfo %}
 
-Bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin ("[guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)"). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
+Une bonne pratique à adopter : suivre les normes de codage Android de Google pour le codage en Kotlin ("[guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)"). Cela permet d'avoir un code lisible et en accord avec le code écrit par d'autres développeurs dans le cas d'un projet collaboratif.
 Voici quelques recommandations du guide de style :
 
 - Les noms de fonctions doivent être en camel case et être des verbes ou des expressions verbales.
@@ -94,7 +104,9 @@ Je vais pour la suite utiliser Kotlin pour la logique de mon application et le l
 
 {% info %}
 
-Un fichier XML (eXtensible Markup Language) est un format de fichier utilisé pour structurer, organiser et stocker des données d'une manière qui soit à la fois lisible par les humains et compréhensible par les machines. Il est basé sur un ensemble de balises (tags) pour décrire les données de manière hiérarchique et flexible. Contrairement à d'autres formats de fichiers, comme HTML qui est plus axé sur la présentation, XML est purement un format de données. Extensible : en XML, les utilisateurs peuvent créer leurs propres balises pour structurer les données selon leurs besoins. Il n'y a pas de balises prédéfinies comme en HTML.
+Un fichier XML (eXtensible Markup Language) est un format de fichier utilisé pour structurer, organiser et stocker des données d'une manière qui soit à la fois lisible par les humains et compréhensible par les machines. Il est basé sur un ensemble de balises (tags) pour décrire les données de manière hiérarchique et flexible. Contrairement à d'autres formats de fichiers, comme HTML qui est plus axé sur la présentation, XML est purement un format de données.
+
+Extensible : en XML, les utilisateurs peuvent créer leurs propres balises pour structurer les données selon leurs besoins. Il n'y a pas de balises prédéfinies comme en HTML.
 
 {% endinfo %}
 
@@ -106,6 +118,10 @@ Une fois téléchargé, j'ai créé un nouveau projet avec les propriétés suiv
 
 ![Initialisation Projet](./img/initialisationProjet.png) *Capture d'écran personnelle*
 
+{% attention "Important" %}
+Il faut veiller à choisir une "Minimum SDK" pas trop récent afin que l'application puisse fonctionner sur une grande majorité d'appareils Android (99,7% des appareils pourront faire fonctionner mon application si on se réfère à la version choisie sur la capture d'écran précédente)
+{% endattention %}
+
 Un projet est alors créé, voici sa structure :
 
 ![Structure Projet](./img/structureProjetAndroid.png) *Capture d'écran commentée*
@@ -114,14 +130,14 @@ Un projet est alors créé, voici sa structure :
 Pour avoir exactement la même fenêtre avec la même structure de projet, il faut veiller à sélectionner "Android" en haut à gauche!
 {% endnote %}
 
-Cette structure permet de centraliser certains éléments qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (*res*) dans le fichier *themes.xml*
+Cette structure d'application permet de centraliser certains éléments (dans *res*) qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (*res*) dans le fichier *themes.xml*
 
 ![Texte par défaut](./img/defaultText.png) *Capture d'écran commentée*
 
 ### 3. Créer un émulateur (machine virtuelle) <a id="section3"></a>
 
-Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android,...).
-C'est cette dernière option que j'ai choisi d'utiliser :
+Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android, ...).
+C'est cette dernière option que j'ai choisie d'utiliser :
 
 ![Machine Virtuelle](./img/machineVirtuelle.png) *Capture d'écran depuis Android Studio*
 
@@ -140,6 +156,27 @@ Et dans le fichier activity_main.xml, on fait référence au string défini :
         android:text="@string/choose_number"
 ```
 
-### Premier Sprint
+Pour apprendre à coder une application basique, j'ai suivi principalement deux tutoriels :
 
-### Second Sprint
+- [TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)](https://www.youtube.com/watch?v=TCJFoExOBUE)
+- [Simple Kotlin App | Android Studio | 2024](https://www.youtube.com/watch?v=XLt_moCoauw)
+
+Le premier tutoriel m'a été utile pour comprendre comment ajouter des éléments de base sur la page principale de l'application (textes, boutons, ...). Cependant pour la logique de l'application, qui doit être codée pour ma part dans le fichier *MainActivity.kt*, j'ai dû adapter ce qui est expliqué dans le tuto car le developpeur code son application en java et non en Kotlin. Bien que cela m'ait fin un rappel intéressant sur le langage java, j'ai dû chercher une aide pour coder correctement en Kotlin. C'est pour cela que le deuxième tuto est intéressant.
+
+Voici l'aperçu l'application (très) basique sur laquelle j'ai abouti :
+
+![Apllication Android Basique](./img/appliBasique.png)
+*Captures d'écran depuis Android Studio*
+
+Cette petite application est un jeu d'estimation. Il faut trouver un nombre entre 1 et 100 en un nombre d'essais limité (10 max). Une barre de progression représente le nombre de tentatives. Une zone de texte (*TextView*) permet de donner des indications sur le nombre à trouver : plus petit ou plus grand !
+
+## Sources utiles
+
+{% lien %}
+
+- [liste exhaustive des mots clés Kotlin](https://kotlinlang.org/docs/keyword-reference.html)
+- [guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)
+- [TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)](https://www.youtube.com/watch?v=TCJFoExOBUE)
+- [Simple Kotlin App | Android Studio | 2024](https://www.youtube.com/watch?v=XLt_moCoauw)
+  
+{% endlien %}

@@ -1,7 +1,7 @@
 ---
 layout: layout/projet.njk
 
-title: "What the weathART like ?"
+title: "What's the weath'ART like ?"
 authors:
   - Esther Henry
   - Juliette Kocupyr

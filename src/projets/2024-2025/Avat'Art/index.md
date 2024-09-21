@@ -46,3 +46,5 @@ La partie **informatique** de ce projet vient de la détection et du traitement 
 
 ## En Pratique
 
+
+-20h --> : Plannification

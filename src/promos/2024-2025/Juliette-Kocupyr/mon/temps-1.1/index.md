@@ -16,26 +16,33 @@ résumé: "À travers ce MON, j'aimerais étudier en détail le processus de tra
 - Niveau : Débutant
 - Prérequis : Aucun
 
-## Introduction <!-- omit in toc -->
+## Introduction
 
 Selon [une étude de Mckinsey](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/unlocking-success-in-digital-transformations), cabinet international de conseil en stratégie, près de **70 % des transformations d'entreprise échouent** et plus de 84 % dans le cas des transformations digitales. Pourtant, dans un environnement en constante mutation (évolutions technologiques, mondialisation, apparition de nouveaux acteurs sur les différents marchés, ...) la transformation devient presque inéluctable car **le mouvement est permanent** et les entreprises mal préparées iront droit vers l'échec. Ainsi, pour espérer réussir un tel changement, une **analyse détaillée des raisons, des enjeux et du processus** complet de cette transformation est nécessaire pour éviter les pièges.
 
-## Sommaire <!-- omit in toc -->
+## Sommaire
 
-- [1. Comprendre la transformation d'entreprise 🔍](#1-comprendre-la-transformation-dentreprise-)
-  - [Définition](#définition)
-  - [Transformation ou changement](#transformation-ou-changement)
-- [2. Le processus d'une transformation 📚](#2-le-processus-dune-transformation-)
-  - [Pourquoi entreprendre une transformation](#pourquoi-entreprendre-une-transformation)
-  - [Réussir un plan de transformation](#réussir-un-plan-de-transformation)
-  - [Étapes clés du processus](#étapes-clés-du-processus)
-  - [Modèle de l'Open Source](#modèle-de-lopen-source)
-- [3. Les enjeux d'une transformation ⚠️](#3-les-enjeux-dune-transformation-️)
-  - [Comment éviter l'échec](#comment-éviter-léchec)
-  - [Avantages d'une transformation](#avantages-dune-transformation)
-- [4. Exemples 📌](#4-exemples-)
-  - [Les différents types de transformation](#les-différents-types-de-transformation)
-  - [Exemples d'entreprises](#exemples-dentreprises)
+[1. Comprendre la transformation d'entreprise](#1-comprendre-la-transformation-dentreprise-)
+
+- Définition
+- Transformation ou Changement
+
+[2. Le processus d'une transformation](#2-le-processus-dune-transformation-)
+
+- Pourquoi entreprendre une transformation
+- Réussir un plan de transformation
+- Étapes clés du processus
+- Modèle de l'Open Source
+
+[3. Les enjeux d'une transformation](#3-les-enjeux-dune-transformation-️)
+
+- Comment éviter l'échec
+- Avantages d'une transformation
+
+[4. Exemples](#4-exemples-)
+
+- Les différents types de transformation
+- Exemples d'entreprises
 
 ## 1. Comprendre la transformation d'entreprise 🔍
 
@@ -51,13 +58,13 @@ C'est **une stratégie de gestion du changement** qui vise à faire évoluer une
 
 En travaillant sur des points comme l'adaptation des méthodes de travail cela permet de répondre aux besoins des infrastructures informatiques et d'environnements de travail pour permettre à l'entreprise de **s'adapter continuellement** à son environnement et son écosystème.
 
-{% attention "Attention" %}
+{% attention "**Attention**" %}
 La transformation n'est pas un projet technique qui se contente d'appliquer une palette d'outils.
 {% endattention %}
 
 C'est un avant tout un projet collectif organisationnel qui nécessite des convictions, de la volonté et de la rigueur. C'est accepter de nouveaux challenges, perspectives de développement et des opportunités de progrès pour garder sa place au sein du système économique, renforcer ses positions et assurer sa pérénnité.
 
-{% attention "Attention" %}
+{% attention "**Attention**" %}
 Ce n'est pas non plus un sujet visionnaire limité à un petit groupe de spécialistes.
 {% endattention %}
 
@@ -134,49 +141,49 @@ Il devient alors nécessaire de :
 
 ### Étapes clés du processus
 
-Pour concevoir un plan de transformation d’entreprise qui soit à la fois réaliste et efficace, une approche structurée est indispensable. Pour cela on peut définir les étapes clés ci-dessous :
+Pour concevoir un plan de transformation d’entreprise qui soit à la fois **réaliste** et **efficace**, une approche structurée est indispensable. Pour cela on peut définir les étapes clés ci-dessous :
 
 1. Définir la vision de l’entreprise et son ambition précise pour construire une stratégie. 🧠
 
-    Avant toute chose, il faut réaliser un diagnostic approfondi de l’organisation. Cela implique une analyse SWOT (forces, faiblesses, opportunités et menaces) pour identifier les domaines à transformer. Autrement dit, une analyse détaillée du marché, des concurrents et des tendances émergentes. Cette analyse guidera la définition des objectifs.
+    Avant toute chose, il faut réaliser un **diagnostic approfondi** de l’organisation. Cela implique une analyse SWOT (forces, faiblesses, opportunités et menaces) pour identifier les domaines à transformer. Autrement dit, une analyse détaillée du **marché**, des **concurrents** et des **tendances émergentes**. Cette analyse guidera la définition des objectifs.
 
-    Vient ensuite l'élaboration d'une stratégie détaillée en définissant les étapes de transformation. La stratégie doit prendre en compte la culture de l’entreprise, ses ressources, ses parties prenantes et les tendances du marché. Elle doit être une feuille de route cohérente intégrant toutes les parties prenantes et les flux de travail.
+    Vient ensuite l'élaboration d'une **stratégie détaillée** en définissant les étapes de transformation. La stratégie doit prendre en compte la culture de l’entreprise, ses ressources, ses parties prenantes et les tendances du marché. Elle doit être une **feuille de route** cohérente intégrant toutes les parties prenantes et les flux de travail.
 
 2. La définition des objectifs. ✅
 
-   Ensuite, il faut établir des objectifs clairs, réalistes et alignés sur la vision globale de l’entreprise. Ces objectifs doivent être mesurables pour suivre les progrès réalisés et faciliter l’évaluation des résultats. À ce stade, ils ne sont pas nécessairement chiffrés.
+   Ensuite, il faut **établir des objectifs** clairs, réalistes et alignés sur la vision globale de l’entreprise. Ces objectifs doivent être **mesurables** pour suivre les progrès réalisés et faciliter l’évaluation des résultats. À ce stade, ils ne sont pas nécessairement chiffrés.
 
-   Il convient donc d'identifier les besoins économiques, stratégiques ou sociaux, auxquels doit répondre le plan de transformation. Les enjeux liés à la transformation doivent s’aligner avec le secteur d’activité et l'environnement économique de l'organisation, mais aussi avec la vision et les valeurs de celle-ci, afin de faciliter la compréhension et l’adhésion des équipes.
+   Il convient donc d'identifier les besoins économiques, stratégiques ou sociaux, auxquels doit répondre le plan de transformation. Les enjeux liés à la transformation doivent s’aligner avec le secteur d’activité et l'environnement économique de l'organisation, mais aussi avec la vision et les valeurs de celle-ci, afin de faciliter la compréhension et l’**adhésion des équipes**.
 
    Par exemple, faire évoluer le management et les processus pour gagner en efficacité et en productivité, modifier l'image de marque afin de conquérir un nouveau marché ou encore augmenter votre chiffre d’affaires pour rester compétitif.
 
 3. Impliquer les collaborateurs et constituer l'équipe projet. 👥
 
-   Il est important de ne pas trop attendre avant de communiquer auprès des collaborateurs sur les objectifs du plan de transformation. Recueillir leurs réflexions, de manière libre et décomplexée vis-à-vis des contraintes de temps ou de budget permettra de nourrir le projet grâce aux idées de tous les acteurs de l’entreprise (toutes sont bonnes à prendre). Une telle démarche implique davantage les équipes et facilite la compréhension de la stratégie pour obtenir plus facilement leur adhésion au changement.
+   Il est important de ne pas trop attendre avant de **communiquer auprès des collaborateurs** sur les objectifs du plan de transformation. Recueillir leurs réflexions, de manière libre et décomplexée vis-à-vis des contraintes de temps ou de budget permettra de nourrir le projet grâce aux idées de tous les acteurs de l’entreprise (toutes sont bonnes à prendre). Une telle démarche implique davantage les équipes et facilite la compréhension de la stratégie pour obtenir plus facilement leur adhésion au changement.
 
-   Pour mener à bien ces actions de transformation et de changement, les entreprises s’appuient sur leurs cadres qui assurent souvent la conduite auprès des équipes, la responsabilité voire les échecs. Certaines sociétés font appel à un directeur de la transformation, véritable expert du changement. Autrement, les entreprises nomment des chefs de projet pour piloter les différentes activités liées au plan de transformation, qui sont soutenus par des équipes opérationnelles au plus proche du terrain.
+   Pour mener à bien ces actions de transformation et de changement, les entreprises s’appuient sur leurs **cadres** qui assurent souvent la conduite auprès des équipes, la responsabilité voire les échecs. Certaines sociétés font appel à **un directeur de la transformation**, véritable expert du changement. Autrement, les entreprises nomment des chefs de projet pour **piloter** les différentes activités liées au plan de transformation, qui sont soutenus par des équipes opérationnelles au plus proche du terrain.
 
 4. Création du plan d'action. 📝
 
-   Le plan d'action est constitué de différentes étapes ou tâches à réaliser, auxquelles sont associées des échéances afin de structurer le projet dans le temps et des responsables chargés de les mener à bien.
+   Le **plan d'action** est constitué de différentes étapes ou **tâches à réaliser**, auxquelles sont associées des **échéances**, afin de structurer le projet dans le temps, et des **responsables** chargés de les mener à bien.
 
-   Cette étape commence donc par l'évaluation de l’impact de la stratégie sur les métiers de l’entreprise et systèmes d'information en termes de cibles à atteindre. Puis la décomposition de la stratégie en actions spécifiques avec pour chaque action des responsables, des délais et des indicateurs de performance définis. Cela entraîne un travail de priorisation des actions.
+   Cette étape commence donc par l'évaluation de l’impact de la stratégie sur les **métiers de l’entreprise** et **systèmes d'information** en termes de cibles à atteindre. Puis la **décomposition de la stratégie** en actions spécifiques avec pour chaque action des responsables, des délais et des indicateurs de performance définis. Cela entraîne un travail de priorisation des actions.
 
-   C'est à cette étape en particulier que les méthodes agiles et l'approche itérative trouvent leur place pour affronter plus efficacement les imprévus et obtenir de meilleurs résultat.
+   C'est à cette étape en particulier que les **méthodes agiles** et l'**approche itérative** trouvent leur place pour affronter plus efficacement les imprévus et obtenir de meilleurs résultat.
 
 5. Mise en oeuvre du plan de transformation. 🫵🏻
 
-   Il s'agit de lancer le plan de transformation tout en s’assurant que les collaborateurs sont impliqués et informés. Autrement dit, gérer le changement de manière proactive pour minimiser les résistances avec notamment la mise en place des tableaux de bord de mesure d’atteinte des objectifs.
+   Il s'agit de lancer le plan de transformation tout en s’assurant que les collaborateurs sont impliqués et informés. Autrement dit, gérer le changement de manière **proactive** pour minimiser les résistances avec notamment la mise en place des **tableaux de bord de mesure d’atteinte des objectifs**.
 
 6. Pilotage du projet. 📊
 
-    L'objectif de cette dernière étape est de s'assurer que tout va dans la bonne direction par un suivi et une évaluation continue. Une mesure régulière des résultats obtenus par rapport aux objectifs fixés doit être réalisée pour ajuster la stratégie et les actions si nécessaire afin de maintenir le cap. À ce niveau, il est important de faire preuve de réactivité face aux risques et aux aléas.
+    L'objectif de cette dernière étape est de s'assurer que tout va dans la bonne direction par un suivi et une **évaluation continue**. Une **mesure régulière** des résultats obtenus par rapport aux objectifs fixés doit être réalisée pour ajuster la stratégie et les actions si nécessaire afin de maintenir le cap. À ce niveau, il est important de faire preuve de **réactivité** face aux risques et aux aléas.
 
-    Pour gérer cette étape complexe, l'entreprise désigne un comité de pilotage (COPIL) ou comité de projet (COPRO). Il doit veiller au bon déroulé du plan de transformation et arbitrer les décisions, notamment face à un risque potentiel. Par conséquent, les membres sont sélectionnés avec soin, et conscients des enjeux ainsi que des obstacles à affronter. Le COPIL a souvent recourt à un logiciel de gestion de portefeuille de projets pour travailler efficacement en respectant les contraintes, par exemple de temps, et communiquer facilement avec l'équipe tout au long du processus.
+    Pour gérer cette étape complexe, l'entreprise désigne un **comité de pilotage** (COPIL) ou comité de projet (COPRO). Il doit veiller au bon déroulé du plan de transformation et arbitrer les décisions, notamment face à un risque potentiel. Par conséquent, les membres sont sélectionnés avec soin, et conscients des enjeux ainsi que des obstacles à affronter. Le COPIL a souvent recourt à un logiciel de gestion de portefeuille de projets pour travailler efficacement en respectant les contraintes, par exemple de temps, et communiquer facilement avec l'équipe tout au long du processus.
 
 7. La communication. 🏆
 
-   En réalité il ne s'agit vraiment d'une étape mais d'un fil conducteur. Si la communication n'est pas optimale, la transformation ira droit vers l'échec. Faire passer les bons messages pour fédérer tous les collaborateurs (parfois répartis dans des services différents) autour d’une vision commune est le point le plus important.
+   En réalité il ne s'agit vraiment d'une étape mais d'un **fil conducteur**. Si la communication n'est pas optimale, la transformation ira droit vers l'échec. Faire passer les bons messages pour **fédérer** tous les collaborateurs (parfois répartis dans des services différents) autour d’une **vision commune** est le point le plus important.
 
 {% note %}
 La **communication** est l'élément clé de toute transformation d'entreprise.
@@ -198,19 +205,19 @@ Si les entreprises peuvent toutes adopter une approche ouverte, le résultat ser
 
 Les projets de transformation répondent dans la plupart des cas à des enjeux similaires auxquels l’entreprise doit faire face.
 
-1. Convaincre
+1. **Convaincre**
 
 La volonté de transformation provient souvent d'un choix de la hiérarchie, pourtant l’entreprise embarque dans l’aventure de la transformation l’ensemble de ses collaborateurs, voire au-delà. Il est donc de la responsabilité des instances dirigeantes de leur démontrer en quoi l’ambition affichée est légitime, en quoi la destination indiquée est crédible et en quoi les objectifs fixés sont réalistes.
 
-2. Fédérer
+2. **Fédérer**
 
 L’enjeu de la fédération des parties prenantes autour de l’ambition, des buts et des objectifs est essentiel pour que chacune d’entre elles comprenne sa contribution à l’intérêt général.
 
-3. Organiser
+3. **Organiser**
 
 La transformation de l’entreprise ne peut pas s’apparenter à un jeu de fléchettes où, sur une grande carte, on vise comme on peut des cibles que l’on distingue plus ou moins avec des résultats que l’on ne constate qu’à posteriori. Elle nécessite d’être planifiée de manière rigoureuse depuis l’ambition globale, jusqu’aux programmes d’initiatives et d’actions en passant par la définition des cibles, des trajectoires et des jalons. Cette planification se doit d’être agile et dynamique afin de s’adapter aux différents aléas et risques susceptibles de survenir en cours de route.
 
-4. Piloter
+4. **Piloter**
 
 Dans un projet de transformation aucune place ne doit être laissée à l’improvisation, à l’interprétation, ou pire, à l’inconnu. Le pilotage de la transformation s’appuie sur deux piliers :
 
@@ -291,13 +298,13 @@ Il existe plusieurs types de transformation d’entreprise, chacun ciblant diff�
 
 ### Exemples d'entreprises
 
-- Transformation de Netflix :
+- Transformation de Netflix 🎞️ :
 
 À sa création en 1998, Netflix était un service d’envoi de DVD par correspondance. Les abonnés créaient une liste de titres souhaités, et l’entreprise les leur expédiait progressivement, un modèle qui a bien fonctionné jusqu’au début des années 2000. Mais avec l'évolution du marché du divertissement, Netflix a été contraint de revoir sa stratégie. Persister dans l’envoi de DVD aurait limité sa croissance en raison de l’évolution des habitudes de consommation et de la montée des concurrents proposant le streaming.
 
 Netflix à donc changer, en instaurant des frais distincts pour le streaming et les DVD en 2011 ce qui lui a valu une perte de 800 000 abonnés et 77% de ses actions en quatre mois. Malgré cela, l’entreprise a persisté dans sa transition numérique, investissant massivement dans le streaming et les contenus originaux. Ce plan de transformation s’est avéré fructueux : en 2017, Netflix a dépassé les opérateurs de télévision par câble américains en nombre d’abonnés, devenant le leader du streaming mondial.
 
-- Transformation de Nokia :
+- Transformation de Nokia 📞 :
 
 Nokia Corporation a dû également se transformer en profondeur pour faire face à l’évolution du marché. Dans les années 1985-1995, l’entreprise a recentré progressivement son portefeuille de produits (à l’origine composé du papier, du caoutchouc et des câbles) autour de l’électronique. Par la suite, ce segment a été remplacé par les réseaux mobiles de télécommunication.
 
@@ -305,17 +312,17 @@ Outre le portefeuille de produits de Nokia, les modèles d’action de l’entre
 
 {% lien %}
 
-- [Étude de la transformation agile de Spotify et LeroyMerlin](/promos/2024-2025/Juliette-Kocupyr/pok/temps-1/)
+- [Autres exemples : Étude de la transformation agile de Spotify et LeroyMerlin](/promos/2024-2025/Juliette-Kocupyr/pok/temps-1/)
   
 {% endlien %}
 
-## Conclusion <!-- omit in toc -->
+## Conclusion
 
 La transformation d’entreprise est un processus complexe et multidimensionnel, essentiel pour assurer la pérennité et la compétitivité des organisations dans un environnement en constante évolution. Elle englobe des aspects variés, tels que l’innovation technologique, la révision des modèles économiques, et la réorganisation des structures internes. Les entreprises doivent naviguer à travers des défis importants, comme la résistance au changement, la gestion des ressources humaines, et l’intégration des nouvelles technologies. Le succès dans ces démarches repose souvent sur une vision claire, un engagement stratégique de la part des dirigeants, et une capacité à mobiliser les équipes autour des objectifs communs. L’utilisation de cadres méthodologiques adaptés, ainsi que l’apprentissage continu des meilleures pratiques, peuvent grandement faciliter ce processus. Finalement, la transformation d’entreprise est non seulement une nécessité pour s’adapter aux nouvelles réalités du marché, mais aussi une opportunité pour réinventer les pratiques et redéfinir les valeurs d’une organisation, en vue de garantir une croissance durable et une réussite à long terme à la condition qu'elle soit bien préparée et respecte certains points clés pour éviter l'échec.
 
 Ce MON m'a permis de comprendre bien en détail ce processus de transformation d'entreprise. J'ai essayé de retranscrire le maximum d'informations utiles de manière la plus légère possible pour pouvoir apréhender au mieux la complexité du sujet.
 
-## Bibliographie <!-- omit in toc -->
+## Bibliographie
 
 [**LegalPlace**. *Transformation d’entreprise*.](https://www.legalplace.fr/guides/transformation-entreprise/)
 

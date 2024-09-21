@@ -21,18 +21,19 @@ Avoir un cerveau à moitié allumé
 
 ## Table des matières
 
-1. [Introduction](#section-1)
-2. [Développer son activité sur internet](#section-2)
-   - [Une introduction du pourquoi et du comment](#subsection-1)
-   - [Lancer son site web](#subsection-1)
-   - [Parcours client](#subsection-3)
-3. [Optimiser pour se faire mieux connaître](#section-3)
-   - [Mesurer pour optimiser](#subsection-4)
-   - [Les moteurs de recherche](#subsection-5)
-   - [La recherche locale](#subsection-6)
-4. [Introduction aux réseaux sociaux](#section-4)
-5. [Conclusion](#section-5)
-6. [Sources](#section-6)
+- [Table des matières](#table-des-matières)
+- [1. Introduction ](#1-introduction-)
+- [2. Développer son activité sur internet ](#2-développer-son-activité-sur-internet-)
+  - [Une introduction du pourquoi et du comment ](#une-introduction-du-pourquoi-et-du-comment-)
+  - [Lancer son site web ](#lancer-son-site-web-)
+  - [Parcours client ](#parcours-client-)
+- [3. Optimiser pour se faire mieux connaître ](#3-optimiser-pour-se-faire-mieux-connaître-)
+  - [Mesurer pour optimiser ](#mesurer-pour-optimiser-)
+  - [Les moteurs de recherche ](#les-moteurs-de-recherche-)
+  - [La recherche locale ](#la-recherche-locale-)
+  - [4. Introduction aux réseaux sociaux ](#4-introduction-aux-réseaux-sociaux-)
+- [5. Conclusion ](#5-conclusion-)
+  - [Sources ](#sources-)
 
 ## 1. Introduction <a id="section-1"></a>
 

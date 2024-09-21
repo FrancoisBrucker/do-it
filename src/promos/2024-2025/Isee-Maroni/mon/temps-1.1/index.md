@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 1.1 : Apprentissage Airtable & Softr - Gestion de bases de données pour une application web"
+title: "Apprentissage Airtable & Softr - Gestion de bases de données pour une application web"
 authors:
   - Isée Maroni
 
@@ -16,7 +16,7 @@ tags:
 résumé: "Approfondir mes connaissances dans l'utilisation d'Airtable et découvrir Softr, en vue de faire une application web liée à la base de donnée (POK 1)."
 ---
 
-{% prerequis "**Niveau débutant**" %}
+{% prerequis "Niveau débutant" %}
 
 Pré-requis : Aucun
 

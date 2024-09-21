@@ -13,7 +13,7 @@ tags:
   - "Traitement de données"
   - "Novice/intérmédiaire"
 
-résumé: "Le rattrapage de données consiste à corriger les données existantes d'une base afin de les aligner sur un format commun. Pour cela, on utilise beaucoup Excel. Le but de ce MOOC sera d'apprendre et de découvrir des formules Excel pour corriger des données."
+résumé: "Le rattrapage de données consiste à corriger les données existantes d'une base afin de les aligner sur un format commun. Pour cela, on utilise beaucoup Excel. Le but de ce MON sera d'apprendre et de découvrir des formules Excel pour corriger des données."
 ---
 
 {% prerequis %}
@@ -24,15 +24,15 @@ Connaitre les bases d'Excel et les formules standards.
 {% lien %}
 
 - [Traduction des formules Excel](https://fr.excel-translator.de/fonctions/)
-- [Fichier Excel utilisé dans ce MON](./BaseDeDonnees.xlsx)
+- [Fichier Excel utilisé dans ce MON](BaseDeDonnees.zip)
 
 {% endlien %}
 
-Dans ce MOOC, je vais utiliser des formules Excel pour mettre en forme une base de données que j'aurai au préalable volontairement mal remplie, en m'inspirant de ce que l'on peut retrouver dans une base réelle.
+Dans ce MON, je vais utiliser des formules Excel pour mettre en forme une base de données que j'aurai au préalable volontairement mal remplie, en m'inspirant de ce que l'on peut retrouver dans une base réelle.
 
 ## Introduction
 
-Lorsqu'une base de données présente de nombreux formats différents pour un seul et unique champ, cela perturbe l'analyse de données. Pour éviter cela, il est fréquent d'imposer un formatage avec des règles de validation ou des listes de choix imposés. Cependant, il arrive fréquemment que certaines de ces règles ne soient pas conçues dès le début, car on peut de temps en temps oublier à quel point une réponse d'un utilisateur peut varier par rapport à un autre. Et, une fois que l'on ajoute ces règles, il faut alors corriger l'ancienne data. C'est ce que nous allons faire dans ce MOOC à l'aide d'Excel.
+Lorsqu'une base de données présente de nombreux formats différents pour un seul et unique champ, cela perturbe l'analyse de données. Pour éviter cela, il est fréquent d'imposer un formatage avec des règles de validation ou des listes de choix imposés. Cependant, il arrive fréquemment que certaines de ces règles ne soient pas conçues dès le début, car on peut de temps en temps oublier à quel point une réponse d'un utilisateur peut varier par rapport à un autre. Et, une fois que l'on ajoute ces règles, il faut alors corriger l'ancienne data. C'est ce que nous allons faire dans ce MON à l'aide d'Excel.
 
 Pour cela, nous allons tout d'abord créer une base de données qui ne suivra aucune bonne pratique. Puis, nous alignerons toutes les données sur des formats communs en travaillant sur des formules Excel que nous expliquerons.
 

@@ -253,14 +253,14 @@ Une fois cela fait, j'ai simplement suivi les instructions et les codes écrits 
 <h2> Bibliographie </h2>
 </a>
 
-[Coursera : Introduction to Mobile Development (by Meta)](https://www.coursera.org/learn/intro-to-mobile-development)
+[Coursera : Introduction to Mobile Development (by Meta)](https://www.coursera.org/learn/intro-to-mobile-development) - Pour apprendre les concepts existants et créer une base
 
-[Mobile app, web app, desktop app: know the difference!](https://mobitouch.net/blog/mobile-app-web-app-desktop-app-know-the-difference)
+[Mobile app, web app, desktop app: know the difference!](https://mobitouch.net/blog/mobile-app-web-app-desktop-app-know-the-difference) - Pour comprendre les différences entre les types d'applications
 
-[What is an operating system?](https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/)
+[What is an operating system?](https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/) - Pour comprendre ce qu'est un système d'exploitation
 
-[What is the difference between a framework and a library?](https://www.youtube.com/watch?v=D_MO9vIRBcA)
+[What is the difference between a framework and a library?](https://www.youtube.com/watch?v=D_MO9vIRBcA) - Pour comprendre ce qu'est un Framework
 
-[Choosing the best mobile app framework](https://www.youtube.com/watch?v=4m7msadL5iA)
+[Choosing the best mobile app framework](https://www.youtube.com/watch?v=4m7msadL5iA) - Pour comprendre la différence entre certains des cadres existants
 
-[Do You Know How Mobile Apps Are Released?](https://www.youtube.com/watch?v=RIX4ufelA58)
+[Do You Know How Mobile Apps Are Released?](https://www.youtube.com/watch?v=RIX4ufelA58) - Pour comprendre le déroulement général de la publication d'une application mobile et se faire une idée du rôle des boutiques d'applications dans ce processus.

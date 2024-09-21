@@ -61,6 +61,8 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 | Lundi 16/09  | 2H  | (Re)Découverte du langage Python |
 | Lundi 16/09  | 1H  | Création de la base de données fictive |
 | Lundi 16/09  | 2H  | Début du code |
+| Mardi 17/09  | 1H  | Suite code |
+| Mercredi 18/09  | 2H  | 1ère version des feuilles propositions de commande |
 
 ## Sommaire
 
@@ -196,8 +198,127 @@ Les bons de commande contiennent également une date de livraison demandée. Cet
 ### Calcul des *quantités recommandées*
 
 Les quantités de commande recommandées sont calculés comme suit : 
-+ On caclul dans un premier temps le physique disponible. Il s'agit du physique en stock, auquel on ajoute les quantités commandées à la manufacture, et on retranche les quantités commandées par les marchés. Ainsi : $ Physique Dispo = Physique Stock + Commande Manuf - Commande Marchés $
++ On caclul dans un premier temps le physique disponible. Il s'agit du physique en stock, auquel on ajoute les quantités commandées à la manufacture, et on retranche les quantités commandées par les marchés. Ainsi : Physique Dispo = Physique Stock + Commande Manuf - Commande Marchés 
 
-+ Si $ Physique Dispo >= MS $, alors $ Quantité Recommandée = 0 $
-+ Si $ Physiue Dispo < MS $ alors $ Quantité Recommandée = MS - Physique Dispo $
++ Si Physique Dispo >= MS , alors Quantité Recommandée = 0 
++ Si Physiue Dispo < MS  alors Quantité Recommandée = MS - Physique Dispo
+
+### 1ère version des feuilles de propositions de commande
+
+Le code suivant permet de créer, à partir de la base de données évoquée précédemment, une feuille par manufacture listant l'ensemble des références nécéssitant une commande auprès de la manufacture, et donnant la quantité de commande recommandée pour chacune des références. 
+
+#### Création et mise en page des feuilles de proposition de commande
+````
+import openpyxl
+
+wb = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/BD POK 1.xlsx',data_only=True)
+
+indice_max = wb['Order Review'].max_row
+
+# Création des feuilles proposition pour chaque manufacture
+wb.create_sheet(title='Proposition CHT')
+wb.create_sheet(title='Proposition ELA')
+wb.create_sheet(title='Proposition ESN')
+wb.create_sheet(title='Proposition FLE')
+wb.create_sheet(title='Proposition GOD')
+wb.create_sheet(title='Proposition MAT')
+
+# Introduction des variables
+indice_CHT=2
+indice_ELA=2
+indice_ESN=2
+indice_FLE=2
+indice_GOD=2
+indice_MAT=2
+
+# Mise en place des en-têtes pour les feuilles propositions
+for k in range(1,11):
+    wb['Proposition CHT'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition ELA'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition ESN'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition FLE'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition GOD'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition MAT'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    
+    wb['Proposition CHT'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition CHT'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition ELA'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition ELA'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition ESN'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition ESN'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition FLE'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition FLE'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition GOD'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition GOD'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition MAT'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition MAT'].cell(row=1,column=12).value='Quantité Corrigée'
+````
+Ce code permet de créer une feuille par manufacture et la création des en-têtes. 
+
+#### Calcul de la quantité de commande recommandée par référence
+````
+for i in range(2,indice_max+1):
+    Physique_Stock = wb['Order Review'].cell(row=i,column=8).value
+    Commande_Manuf = wb['Order Review'].cell(row=i,column=9).value
+    Commande_Marche = wb['Order Review'].cell(row=i,column=10).value
+    MS = wb['Order Review'].cell(row=i,column=7).value
+    MOQ = wb['Order Review'].cell(row=i,column=6).value
+    Manufacture = wb['Order Review'].cell(row=i,column=4).value
+
+
+    Physique_Dispo = Physique_Stock + Commande_Manuf - Commande_Marche
+
+    if MS>Physique_Dispo :
+        R_Qty = MS - Physique_Dispo
+        if R_Qty<MOQ :
+            R_Qty = MOQ
+    else :
+        R_Qty = 0
+````
+R_Qty est la quantité de commande recommandée, qui est nulle si il n'y a pas besoin de commander des pièces, et qui est supérieure ou égale au MOQ (Minimum Order Quantity) si il y a un besoin.
+
+#### Extraction des refs ayant un besoin et trie par manufacture
+````
+# Copie des refs à commander dans des feuilles séparées par manufacture    
+
+    if R_Qty>0 and Manufacture == 'CHT':
+        for j in range(1,11):
+            wb['Proposition CHT'].cell(row=indice_CHT,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition CHT'].cell(row=indice_CHT,column=11).value=R_Qty
+        indice_CHT=indice_CHT+1
+    if R_Qty>0 and Manufacture == 'ELA':
+        for j in range(1,11):
+            wb['Proposition ELA'].cell(row=indice_ELA,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition ELA'].cell(row=indice_ELA,column=11).value=R_Qty
+        indice_ELA=indice_ELA+1
+    if R_Qty>0 and Manufacture == 'ESN':
+        for j in range(1,11):
+            wb['Proposition ESN'].cell(row=indice_ESN,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition ESN'].cell(row=indice_ESN,column=11).value=R_Qty
+        indice_ESN=indice_ESN+1  
+    if R_Qty>0 and Manufacture == 'FLE':
+        for j in range(1,11):
+            wb['Proposition FLE'].cell(row=indice_FLE,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition FLE'].cell(row=indice_FLE,column=11).value=R_Qty
+        indice_FLE=indice_FLE+1
+    if R_Qty>0 and Manufacture == 'GOD':
+        for j in range(1,11):
+            wb['Proposition GOD'].cell(row=indice_GOD,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition GOD'].cell(row=indice_GOD,column=11).value=R_Qty
+        indice_GOD=indice_GOD+1
+    if R_Qty>0 and Manufacture == 'MAT':
+        for j in range(1,11):
+            wb['Proposition MAT'].cell(row=indice_MAT,column=j).value=wb['Order Review'].cell(row=i,column=j).value 
+            wb['Proposition MAT'].cell(row=indice_MAT,column=11).value=R_Qty
+        indice_MAT=indice_MAT+1
+
+wb.save('/Users/charlescook/Desktop/DO IT/fichier_modifié.xlsx') 
+````
+Ce code permet d'obtenir une feuille par manufacture qui permet de une order review par l'utilisateur chargé du processus de la commande mensuelle. 
+
+![alt text](<Images/Feuille Order Review.png>)
+
+#### Pistes d'amélioration du code
+
+Il est possible d'améliorer le code en mettant en place un code couleur en fonction de l'importance de la commande, si cette commande résulte d'un besoin marché (un besoin client), la ligne pourrait être en rouge afin de souligner son importance. C'est une piste à étudier en second sprint.
 

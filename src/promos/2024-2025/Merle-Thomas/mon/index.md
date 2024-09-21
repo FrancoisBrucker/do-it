@@ -10,8 +10,7 @@ Ensemble des MON réalisés par Thomas.
 
 ## Temps 1
 
-- [MON 1.1](./temps-1.1)
+- [MON 1.1 : Apprendre HTML/CSS pour un débutant en Dev Web](./temps-1.1)
+- [MON 1.2 : Developpement FrontEnd en Javascript](./temps-1.2)
 
 ## Temps 2
-
-- [MON 1.2](./temps-1.2)
