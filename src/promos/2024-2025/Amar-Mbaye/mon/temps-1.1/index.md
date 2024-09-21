@@ -65,12 +65,18 @@ Prérequis : JavaScript, HTML et CSS
 </style>
 
 ## Pourquoi React🤔?
+
+
 J'ai choisi d'apprendre **React** car c'est une bibliothèque JavaScript très populaire pour la création d'interfaces utilisateur. Elle permet de **réutiliser des composants**, de gérer efficacement l'état de l'application, et de rendre des pages dynamiques tout en améliorant les performances. Un portfolio est une bonne première application car il comprend plusieurs pages qui bénéficient de la modularité et des composants réutilisables.
 
 ## Objectifs 🎯
+
+
 Mon objectif était de créer un **portfolio simple** avec **React**, en me concentrant sur la séparation des différentes sections comme l'accueil, les projets, les expériences professionnelles, et un formulaire de contact. Le but estde mettre en avant mes compétences techniques et mes projets en utilisant une **navigation fluide**.
 
 ## Méthode 🛠️
+
+
 Voici les étapes générales que j'ai suivies pour construire ce portfolio :
 
 - [X] Utiliser `create-react-app` pour créer la structure de base du projet.
@@ -124,11 +130,18 @@ mon_amar/
 {% info %}
 React facilite la création d'interfaces modulaires en divisant le code en composants réutilisables. Cela permet de réduire la duplication du code et de simplifier la maintenance.
 {% endinfo %}
+
+
 > **Citation :** "La réutilisation des composants dans React permet de créer des interfaces utilisateur complexes avec un minimum d'effort." ***— Jordan Walke, créateur de React***
 ---
 ## Concepts Clés de mon projet 💡
+
+
 ### Les Composants 🧩
+
+
 Les composants sont les blocs de construction de toute application React. Ils permettent de diviser l'interface utilisateur en morceaux réutilisables.
+
 
 **Exemple : Composant Header**
 ```javascript
@@ -162,6 +175,8 @@ export default Header;
 
 
 ***1. Header.js***
+
+
 Le composant Header est responsable de la navigation dans le portfolio. Il affiche les liens vers les différentes sections (Accueil, Projets, Expériences, Formation, Contact) et assure une navigation fluide.
 
 Détails :
@@ -171,6 +186,8 @@ Style de base avec CSS pour un affichage propre et fonctionnel.
 
 
 ***2. Home.js***
+
+
 Le composant Home est la page d'accueil du portfolio. Il introduit le visiteur avec une photo de profil et un texte d'accueil.
 
 Détails :
@@ -181,10 +198,14 @@ Utilisation de CSS pour définir les styles de mise en page.
 
 
 ***3. Projects.js***
+
+
 Le composant Projects présente une liste de projets. Chaque projet est affiché avec une image, une description et un lien vers le dépôt GitHub.
 
 
 ***4. Experience.js***
+
+
 Le composant Experience affiche les expériences professionnelles sous forme de liste. Chaque élément de la liste inclut la période, l'entreprise et une brève description des responsabilités.
 
 Détails techniques :
@@ -194,14 +215,20 @@ Mise en forme des éléments avec des balises HTML et du CSS.
 
 
 ***5. Education.js***
+
+
 Le composant Education liste les diplômes et les institutions fréquentées. Chaque élément de la liste comprend l'année, le nom de l'institution et le diplôme obtenu.
 
 
 ***6. Contact.js***
+
+
 Le composant Contact contient un formulaire permettant aux visiteurs de m'envoyer un message. Le formulaire comprend des champs pour le nom, l'email et le message, avec validation intégrée.
 
 
 ### Pages 📄
+
+
 Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
 Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des "containers" pour ces composants.
 
@@ -260,23 +287,33 @@ export default HomePage;
 
 
 ***1. HomePage.js***
+
+
 La page d'accueil complète est assemblée en utilisant le composant Home. Elle affiche la vue d'ensemble avec tous les éléments d'accueil.
 
 
 ***2. ProjectsPage.js***
+
+
 Cette page utilise le composant Projects pour afficher tous les projets avec les images, descriptions, et liens pertinents.
 
 
 ***3. ExperiencePage.js***
+
+
 La page des expériences professionnelles est construite avec le composant Experience pour afficher toutes les expériences en détail.
 
 
 
 ***4. EducationPage.js***
+
+
 La page de formation est rendue avec le composant Education pour présenter les diplômes et les institutions fréquentées.
 
 
 ***5. ContactPage.js***
+
+
 Cette page affiche le formulaire de contact à l'aide du composant Contact, permettant aux utilisateurs de me contacter directement.
 <div class="hint">
   <strong>Conseil :</strong> Utilise l'extension React Developer Tools pour déboguer et analyser les composants et l'état de ton application en temps réel.
@@ -300,6 +337,7 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 
 ## Horodatage 🕒
 
+
 | Date                       | Heures passées | Indications                                                     |
 | -------------------------- | -------------- | --------------------------------------------------------------- |
 | Jeudi 05/09                | 2h00           | *[Cours / Tuto] Apprendre React de Zéro (débutant) sur Youtube* |
@@ -308,6 +346,8 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 
 
 ## Conclusion
+
+
 En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
 À suivre pour mon MON 2 sur l'étude de comment intégrer React dans Laravel.
 {% lien %}
