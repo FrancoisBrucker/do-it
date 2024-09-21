@@ -159,6 +159,8 @@ export default Header;
 
 ---
 **Composants Principaux :** 
+
+
 ***1. Header.js***
 Le composant Header est responsable de la navigation dans le portfolio. Il affiche les liens vers les différentes sections (Accueil, Projets, Expériences, Formation, Contact) et assure une navigation fluide.
 
@@ -166,6 +168,8 @@ Détails :
 
 Utilisation de React Router pour la navigation entre les pages.
 Style de base avec CSS pour un affichage propre et fonctionnel.
+
+
 ***2. Home.js***
 Le composant Home est la page d'accueil du portfolio. Il introduit le visiteur avec une photo de profil et un texte d'accueil.
 
@@ -174,6 +178,8 @@ Détails :
 Affichage d'une image de profil et d'un texte de bienvenue.
 Lien pour télécharger le CV.
 Utilisation de CSS pour définir les styles de mise en page.
+
+
 ***3. Projects.js***
 Le composant Projects présente une liste de projets. Chaque projet est affiché avec une image, une description et un lien vers le dépôt GitHub.
 
@@ -185,15 +191,21 @@ Détails techniques :
 
 Affichage dynamique des expériences à l'aide d'un tableau.
 Mise en forme des éléments avec des balises HTML et du CSS.
+
+
 ***5. Education.js***
 Le composant Education liste les diplômes et les institutions fréquentées. Chaque élément de la liste comprend l'année, le nom de l'institution et le diplôme obtenu.
+
 
 ***6. Contact.js***
 Le composant Contact contient un formulaire permettant aux visiteurs de m'envoyer un message. Le formulaire comprend des champs pour le nom, l'email et le message, avec validation intégrée.
 
+
 ### Pages 📄
 Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
 Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des "containers" pour ces composants.
+
+
 **Exemple : HomePage**
 ```javascript
 import React from 'react';
@@ -242,24 +254,35 @@ export default HomePage;
 </div>
 
 ---
+
+
 **Pages Principales :** 
+
+
 ***1. HomePage.js***
 La page d'accueil complète est assemblée en utilisant le composant Home. Elle affiche la vue d'ensemble avec tous les éléments d'accueil.
+
 
 ***2. ProjectsPage.js***
 Cette page utilise le composant Projects pour afficher tous les projets avec les images, descriptions, et liens pertinents.
 
+
 ***3. ExperiencePage.js***
 La page des expériences professionnelles est construite avec le composant Experience pour afficher toutes les expériences en détail.
 
+
+
 ***4. EducationPage.js***
 La page de formation est rendue avec le composant Education pour présenter les diplômes et les institutions fréquentées.
+
 
 ***5. ContactPage.js***
 Cette page affiche le formulaire de contact à l'aide du composant Contact, permettant aux utilisateurs de me contacter directement.
 <div class="hint">
   <strong>Conseil :</strong> Utilise l'extension React Developer Tools pour déboguer et analyser les composants et l'état de ton application en temps réel.
 </div>
+
+
 
 ## Resultats 📊
 <img src="./image.png" alt="Page du jeu" />
@@ -274,6 +297,7 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
   <strong>Attention :</strong> Bien que React améliore la performance de l'interface utilisateur mais il n'est pas idéal pour le SEO sans l'utilisation d'outils comme Next.js ou le rendu côté serveur, car il fonctionne principalement côté client.
 </div>
 
+
 ## Horodatage 🕒
 
 | Date                       | Heures passées | Indications                                                     |
@@ -281,6 +305,7 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 | Jeudi 05/09                | 2h00           | *[Cours / Tuto] Apprendre React de Zéro (débutant) sur Youtube* |
 | Samedi & Dimanche 07-08/09 | 5h00           | *Cours complet sur ReactJS sur Youtube*                         |
 | Lundi 10/09                | 3h00           | *Codage du portefolio*                                          |
+
 
 ## Conclusion
 En développant ce portfolio avec React, j'ai appliqué les concepts clés de cette bibliothèque, notamment les composants et la navigation entre les pages. Ce projet est un excellent moyen d'apprendre les bases tout en créant une application fonctionnelle.
@@ -290,6 +315,7 @@ En développant ce portfolio avec React, j'ai appliqué les concepts clés de ce
 [Vous pouvez consulter les codes sources ici ](https://github.com/MbayeSyAmar/mon_amar.git)
 
 {% endlien %}
+
 
 ## Sources :
 {% lien %}
