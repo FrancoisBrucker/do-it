@@ -26,6 +26,17 @@ résumé: "Ce MON résume ce qu'est l’intelligence collective, ses conditions 
 MON débutant, aucun prérequis
 
 {% endprerequis %}
+{% lien %}
+
+Ressources mentionnées dans ce MON :
+
+- [La foule peut-elle battre Kasparov aux échecs ?](https://youtu.be/cWTn73BZs8c?si=lnnmFUWkNRDYgRCO)
+- [La Sagesse des foules - Wikipédia](https://fr.wikipedia.org/wiki/La_Sagesse_des_foules)
+- [Opinion | Why Some Teams Are Smarter Than Others - The New York Times](https://www.google.com/url?q=https://www.nytimes.com/2015/01/18/opinion/sunday/why-some-teams-are-smarter-than-others.html&sa=D&source=docs&ust=1726062912152792&usg=AOvVaw06B1Gx75D1jghnSUOOX3G1)
+- [Gardner et sa théorie – Intelligences Multiples](https://www.intelligences-multiples.org/intelligences-multiples2/les-8-types-dintelligences/)
+- [Formation inititation à l'intelligence collective du LICA](https://www.lica-europe.org/intelligence-collective)
+
+{% endlien %}
 
 ## Sommaire
 
@@ -177,9 +188,15 @@ On retrouve ces phases dans le **diamant de la participation**, un modèle de pr
 
 <h2 id=outils> 📦Boîte à outils d’IC</h2>
 
-Maintenant que j’ai précisé comment créer théoriquement des conditions optimales pour un temps collectif, voici ci-dessous une liste de plein d’outils d’IC que j’ai tous personnellement eu l'occasion de vivre au cours de mon stage de 6 mois au Tiers-Lab des Transitions à Marseille.  
+Maintenant que j’ai précisé comment créer théoriquement des conditions optimales pour un temps collectif, voici ci-dessous une liste de plein d’outils d’IC que j’ai tous personnellement eu l'occasion de vivre au cours de mon stage de 6 mois au Tiers-Lab des Transitions à Marseille. C'est au cours de ce stage que j'ai suivi une **formation de 2 jours nommée "*Inititation à l'intelligence collective*" du LICA**, le Laboratoire d'Intelligence Collective et Artificielle.
 Ces outils peuvent sembler en apparence assez simples mais leur utilisation apporte une grande différence dans le vécu d’un temps collectif !  
 C’est **le facilitateur qui est censé animer ces outils** pendant le temps collectif.
+
+{% lien %}
+
+- [Formation inititation à l'intelligence collective du LICA](https://www.lica-europe.org/intelligence-collective)
+
+{% endlien %}
 
 ### ⛅Le tour de météo
 

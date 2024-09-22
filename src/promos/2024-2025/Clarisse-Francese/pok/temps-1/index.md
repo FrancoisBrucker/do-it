@@ -21,6 +21,16 @@ résumé: Optimisation des tableaux de comptabilité de ma soeur artiste
 POK débutant : aucun prérequis
 
 {% endprerequis %}
+{% lien %}
+
+Ressources mentionnées dans ce POK :
+
+- [POK : Un peu d'Excel/Google Sheets pour mourir moins idiot](/promos/2023-2024/TAING-Henri/mon/temps-2-1/)
+- [Formation sheets-Pratique.com](https://sheets-pratique.com/fr/cours)
+- [Récap fonctions qui existent](https://sheets-pratique.com/fr/fonctions).
+- [Générateur de formule pour extraire des données](https://sheets-pratique.com/fr/utilitaires/formule-extraction).
+
+{% endlien %}
 
 Ma **grande sœur illustratrice** s’est lancée il y a moins d'un an dans la vente de carte postale qu’elle dessine et vend à des librairies qui les revendent à des clients. Son talent en art est immense, mais ses connaissances en bureautique sont proches du néant. Or, elle doit gérer de nombreux intermédiaires, comptabiliser les stocks dans chaque librairie, suivre l’évolution de ses ventes et aimerait **savoir plus facilement quelles librairies sont les plus rentables**.
 Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite **Google Sheets** et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre **Google Apps Script** pour voir si je peux automatiser des fonctions grâce à cet outil (des envoies de mail automatiques par exemple).
@@ -37,8 +47,11 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 - [x] suivre des tutos sur google sheets, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 5h30 (5h15)
 - [x] récupérer les tableaux google sheets de Laura et établir un cahier des charges des améliorations à effectuer : 30 min (40 min)
 - [x] améliorer les tableaux selon le CDC fixé : 2h (2h30)
-- [x] envoiyer les tableaux et explications à Laura : pas estimé (30 min)
+- [x] envoyer les tableaux et explications à Laura : pas estimé (30 min)
 - [x] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30 (2h)
+
+**Total d'heures : 11h25**  
+**Etude post mortem** : dans mon planning intitial, j'avais oublié de prévoir un temps d'envoie des tableaux et d'explications à Laura et j'ai un peu sous-estimé le temps sur google sheet et le temps de rédaction et de prise en main de GitHub.
 
 #### Sprint 2
 
