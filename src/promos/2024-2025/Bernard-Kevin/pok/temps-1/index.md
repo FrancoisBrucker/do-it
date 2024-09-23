@@ -32,6 +32,7 @@ Savoir un peu coder en HTML (balises : a, div, button, ul, li, hX)
 - [Créer un Site Web HTML & CSS](https://www.youtube.com/watch?v=EFBufG7TKRE&t=510s)
 - [Exemple de formulaire](https://www.youtube.com/watch?v=lR4-DJey_3A)
 - [How to import Google Font](https://www.youtube.com/watch?v=E7QPO8P8nls)
+- [Github avec le projet](https://github.com/KevinBERNARD1901/site_portfolio)
 
 {% endlien %}
 

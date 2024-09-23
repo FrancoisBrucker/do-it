@@ -14,10 +14,10 @@ Comment sublimer les arts martiaux avec l'informatique ?
 {% details "Début du projet" %}
 ## Speech
 
-Qui n'a jamais rêvé de contrôler les éléments (feu🔥, air🌀, eau💧, terre🪨) en donnant son meilleur coup droit 👊 ?
+Qui n'a jamais rêvé de contrôler les éléments (feu🔥, air🌀, eau💧, terre🏔️) en donnant son meilleur coup droit 👊 ?
 
 Quand deux **combattants s'affrontent**, des **élements projetés sur un écran derrière eux** viennent sublimer le combat.
-Concrètement, quand le combattant A donne un coup de poing dans la direction du combattant B, une animation (vague, tornade🌪️, rocher, boule de feu) parcourt l'écran dans la même direction.
+Concrètement, quand le combattant A donne un coup de poing dans la direction du combattant B, une animation (vague🌊, tornade🌪️, rocher🪨, boule de feu💥) parcourt l'écran dans la même direction.
 
 ## Solution technique
 
