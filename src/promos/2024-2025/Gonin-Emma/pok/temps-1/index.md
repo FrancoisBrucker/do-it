@@ -14,7 +14,7 @@ tags:
 résumé: Le but de ce POK est de faire un portfolio web de mes peintures réalisées pendant ma césure.
 ---
 
-L'un de mes objectifs personnels de ma césure était de peindre à la gouache et de pouvoir partager mes peintures par la suite. Ce second objectif peut être atteint grâce à un site web que je peux développer à l'occasion de ce POK. Pour ce premier POK, je vais créer l'interface graphique du site avec ReactJs, un framework que j'ai pu apprendre à utiliser lors de ma césure.
+L'un de mes objectifs personnels de ma césure était de peindre à la gouache et de pouvoir partager mes peintures par la suite. Ce second objectif peut être atteint grâce à un site web que je peux développer à l'occasion de ce POK. Pour ce premier POK, je vais créer l'interface graphique du site avec ReactJs, une librairie que j'ai pu apprendre à utiliser lors de ma césure.
 
 ## Tâches
 
@@ -38,7 +38,7 @@ L'objectif à la fin de ces 20 heures est d'avoir réalisé l'interface graphiqu
 #### Sprint 2
 
 - [ ] Faire la page contacts
-- [ ] Faire la page galerie photo
+- [x] Faire la page galerie photo
 - [ ] Finir les différentes pages et harmoniser le rendu
 - [ ] Faire tester le site a mes proches pour avoir un retour utilisateur
 - [ ] Ameliorer le site selon leurs retours si j'ai le temps
@@ -53,9 +53,11 @@ L'objectif à la fin de ces 20 heures est d'avoir réalisé l'interface graphiqu
 | Lundi 09/09  | 3H  | Création des différentes pages, liaison des vues avec les onglets de l'en-tête, première ébauche de la page portfolio avec la création d'un carousel |
 | Jeudi 12/09  | 4H30  | Mise en page du portfolio et de la page à propos |
 
+| Lundi 23/09 | 30 MIN | Mise en phase de la galerie photo : assez rapide grâce à un composant React qui existe déjà |
+
 ## Contenu
 
-Le contenu du POK.
+Le contenu du POK. Le lien du projet est sur mon [github](https://github.com/egonin/art-portfolio).
 
 ### Premier Sprint
 La première tâche que j'ai réalisée pour démarrer ce projet a consisté au choix des peintures que je souhaitais présenter dans ce portfolio en ligne. J'ai créé un fichier JSON pour contenir les données de chaque peinture. Le contenu du JSON ressemble à ça :
@@ -121,3 +123,9 @@ J'ai créé un composant StackCarousel qui contient la mise en page image/texte 
 ![About me](about-me.png)
 
 ### Second Sprint
+
+J'ai démarré ce second sprint par la page galerie photo qui fût fort rapide à mettre en place à l'aide d'un composant React qui s'appelle [ImageList](https://mui.com/material-ui/react-image-list/). Voici des photos du rendu final : 
+
+![galerie-1](image.png)
+![galerie-2](image-1.png)
+![galerie-3](image-2.png)
