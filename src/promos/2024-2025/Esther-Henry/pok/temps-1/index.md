@@ -9,6 +9,7 @@ date: 1970-09-01
 
 tags:
   - "temps 1"
+  - "bleu"
 
 résumé: Ce POK explore l'utilisation de SAP en tant que système ERP (Enterprise Resource Planning), notamment dans le secteur cosmétique, et analyse la perception des utilisateurs par rapport aux promesses formulées par SAP.
 

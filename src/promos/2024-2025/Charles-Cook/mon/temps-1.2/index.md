@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 1"
+title: "Etude de cas d'une entreprise ayant changé de busines modele"
 authors:
   - Charles Cook
 

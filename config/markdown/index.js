@@ -2,7 +2,7 @@ module.exports = function (eleventyConfig) {
 
   markdownItLibrary = require("markdown-it")({
     html: true,
-    breaks: true,
+    breaks: false,
     linkify: true
   })
 
@@ -20,11 +20,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require('@pborenstein/eleventy-md-syntax-highlight'),
     { showLineNumbers: false }
   )
-  
+
   // eleventyConfig.addPlugin(require("eleventy-plugin-mathjax"));
 
   eleventyConfig.addFilter("md", function (content = "") {
-    
+
     return markdownItLibrary.render(content);
   });
 
@@ -33,4 +33,3 @@ module.exports = function (eleventyConfig) {
   require("./shortcodes")(eleventyConfig);
 
 };
-

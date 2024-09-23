@@ -11,6 +11,8 @@ date: 2024-09-11
 tags: 
  - "temps 1"
  - "Data"
+ - "vert"
+ - "bleu"
 
 résumé: "Comprendre les mécanismes et utilisations du Data Storytelling"
 ---
@@ -124,6 +126,8 @@ Comment passer de ça :
 à ça :
 
 ![illustration](exemple-graphes.png)
+
+(1)
 
 Je me suis appuyée sur cette [vidéo](https://www.youtube.com/watch?v=IM-r9lEZciM&t=80s) qui m'a bien introduite aux rouages de cette approche, puis j'ai voulu illustrer avec mes propres exemples. Pour cela j'ai utilisé la plateforme web [Visme](https://www.visme.co/fr/) que j'ai découvert en cherchant des outils gratuits pour la DataViz, ce qui m'a permis de pratiquer un peu.
 
@@ -255,6 +259,10 @@ Et voilà, on vient de démontrer que non, les données ne parlent pas vraiment 
 
 Sur une même présentation de données, les personnes peuvent avoir plusieurs analyses différentes : maîtriser le data storytelling va permettre d'une part de mieux se faire comprendre et mieux faire passer notre message, et d'autre part à rallier les gens à notre cause en les convaincant.
 
+### Retour sur le MON
+
+Le sujet me paraissait hyper intéressant, mais finalement plus limité que je ne pensais, et j'ai un peu peur de m'être perdu dans les limites de la définition... Cela dit, j'ai quand même appris des tas choses utiles et ne regrette pas mon choix !
+
 ## Sources
 
 {% lien %}
@@ -263,7 +271,7 @@ Sur une même présentation de données, les personnes peuvent avoir plusieurs a
 
 - [EDHEC](https://online.edhec.edu/fr/blog/dataviz-et-data-storytelling/)
 
-- [Data pour tous](https://datapourtous.fr/comprendre-le-data-storytelling-par-lexemple/)
+- [Data pour tous](https://datapourtous.fr/comprendre-le-data-storytelling-par-lexemple/) (1)
 
 - [Think with Google](https://www.thinkwithgoogle.com/intl/fr-fr/strategies-marketing/donnees-et-mesure/raconter-une-histoire-pertinente-a-laide-des-donnees/)
 

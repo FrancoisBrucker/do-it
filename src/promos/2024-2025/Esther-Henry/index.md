@@ -15,4 +15,4 @@ Hello !
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Notre Projet : What the weathART like ?](../../../projets/2024-2025/EH-JK-LP-TC)
