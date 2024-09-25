@@ -28,7 +28,7 @@ Savoir un peu coder en HTML (balises : a, div, button, ul, li, hX)
 
 <b>SOURCES</b>
 
-- [Sites de portfolio](https://www.ultra-book.com/portfolios)<
+- [Sites de portfolio](https://www.ultra-book.com/portfolios)
 - [Créer un Site Web HTML & CSS](https://www.youtube.com/watch?v=EFBufG7TKRE&t=510s)
 - [Exemple de formulaire](https://www.youtube.com/watch?v=lR4-DJey_3A)
 - [How to import Google Font](https://www.youtube.com/watch?v=E7QPO8P8nls)
@@ -58,11 +58,11 @@ C'est pour cela que j'ai décidé de créer **mon site web avec mon portfolio.**
 
 #### Sprint 2
 
-- [ ] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>, <b>réel :</b> )
-- [ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>, <b>réel :</b> )
-- [ ] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>, <b>réel :</b> )
-- [ ] Animation dans la sélection des images (<b>estimé : </b>, <b>réel :</b> )
-- [ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>, <b>réel :</b> )
+- [ ] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>3h, <b>réel :</b> )
+- [ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>3h, <b>réel :</b> )
+- [ ] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>1h, <b>réel :</b> )
+- [ ] Animation dans la sélection des images (<b>estimé : </b>1h30, <b>réel :</b> )
+- [ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>1h30, <b>réel :</b> )
 
 ### Horodatage
 
