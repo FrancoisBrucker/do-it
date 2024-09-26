@@ -6,7 +6,16 @@ authors:
     - "Clarisse Francese"
 ---
 
-## Présentation
+## POK & MON
+
+- [POK](./pok)
+- [MON](./mon)
+
+## Projet
+
+[Projet Avat'Art](../../../projets/2024-2025/Avat'Art/)
+
+## Qui suis-je ?
 
 Je m'appelle Clarisse Francese, élève en 4ème année. J'aime plein de chose dans la vie mais surtout la **danse**, l'**escalade**, les sports collectifs, les balades dans la **nature**, les **voyages**, la cuisine et passer du temps avec mes amis et ma famille.
 
@@ -28,12 +37,3 @@ Ensuite, j'ai passé un mois en Bretagne avec Manon dans 3 fermes différentes p
 
 J'ai choisi d'intégrer Do-It notamment pour sa partie **management** et **gestion de projet** mais je compte aussi mieux comprendre le domaine informatique.  
 Dans mon futur professionnel, je pense m'orienter vers le métier de consultante en **design thinking** ou bien travailler dans la **gestion de projet dans le secteur de l'environnement**.
-
-## POK & MON
-
-- [POK](./pok)
-- [MON](./mon)
-
-## Projet
-
-[Projet Avat'Art](../../../projets/2024-2025/Avat'Art/)
