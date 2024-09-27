@@ -33,9 +33,12 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 - [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
 - [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
 - [x] Developper une application basique (une seule activité).
-- [ ] Faire un cahier des charges de l'application que je souhaite réaliser
-- [ ] Faire des wireframes réalistes pour chaque page de l'appli
-- [ ] Coder (à changer en mettant des étapes précises)
+- [ ] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.
+- [ ] Faire des wireframes réalistes pour chaque page de l'application.
+- [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).
+- [ ] Implémenter l'interface en respectant les wireframes.
+- [ ] Gérer l'identification/inscription de l'utilisateur.
+- [ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.
 
 ### Sprints
 
