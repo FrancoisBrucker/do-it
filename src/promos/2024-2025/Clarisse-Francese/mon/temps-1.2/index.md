@@ -26,7 +26,8 @@ MON débutant, aucun prérequis
 Ressources mentionnées dans ce MON :
 
 - [MON d'Ossama Abdane MOOC Design thinking for innovation](https://francoisbrucker.github.io/do-it/promos/2022-2023/Abdane-Ossama/mon/mon1.2/)  
-- [Article : Design de service](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/)  
+- [Article : Design de service](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/)
+- [Vidéo youtube : TED, Tim Brown urge les designers à penser grand](https://youtu.be/UAinLaT42xY?si=gwnmSVj2pGpM9sd6)  
 - [Article : Qu'est-ce que le design thinking ?](https://www.usabilis.com/quest-ce-que-le-design-thinking/)  
 - [Vidéo youtube : Présentation Double Diamant Design Thinking](https://www.youtube.com/watch?si=AmYC0MRxxokmRmaQ&v=oobuFri_Cps&feature=youtu.be)  
 - [Mon MON sur l’intelligence collective](https://francoisbrucker.github.io/do-it/promos/2024-2025/Clarisse-Francese/mon/temps-1.1/)  
@@ -34,6 +35,7 @@ Ressources mentionnées dans ce MON :
 - [Article : Les outils indispensables de design thinking](https://kwantic.fr/les-outils-indispensables-de-design-thinking/)  
 - [Article : Les 46 meilleurs outils du Design Thinking](https://www.google.com/url?q=https://www.emydigital.fr/46-meilleurs-outils-design-thinking/&sa=D&source=docs&ust=1727363897610766&usg=AOvVaw2BlzCobfgQ4P3paHqs4ofU) 
 - [Article : Coach en Design Thinking : 10 qualités à développer](https://www.klap.io/coach-en-design-thinking-10-qualites-a-developper/)
+- [Article : Le “Design Thinker” : maître de l’innovation](https://www.usabilis.com/design-thinker/)
 - [Article : Tout savoir sur le design thinking](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking)
 
 {% endlien %}
@@ -43,7 +45,7 @@ Ressources mentionnées dans ce MON :
 - [Le Design Thinking](#DT)
 - [La démarche double diamant](#DD)
 - [Les outils du Design Thinking](#outils)
-- [Les qualités d’un consultant en design thinking](#qualites)
+- [Le facilitateur en design thinking](#ldt)
 - [Regard critique sur le design thinking](#RC)
 
 <h2 id=DT> 💡Le Design Thinking</h2>
@@ -84,11 +86,31 @@ S’il est difficile de donner une définition unique du Design Thinking (abrég
 Steve Jobs
 {% endinfo %}
 
-Il y a plusieurs principes fondamentaux :
+Il y a plusieurs **principes fondamentaux** :
 
 - La **collaboration** : Co-créer pour faire émerger de nouvelles idées et innover.
 - L’**empathie** : Remettre l’utilisateur au centre pour leur apporter des solutions pertinentes et adaptées.
 - L’**itération** : Tester les solutions pour les adapter et les améliorer tout en se donnant le droit à l’erreur.
+
+Le design thinking définir correctement quel problème on cherche à résoudre, avant de le résoudre et proposer les **bonnes solutions**, qui devront être à la fois :
+
+- **Désirables**
+- **Viables**
+- **Faisables techniquement**
+
+C'est en voyant tous ces critères qu'on se rend compte de la **différence entre le "design thinking" et le simple "design"** tel qu'on se l'imagine généralement. En effet, le design classique pensé par un designer sans prendre l'avis des utilisateurs va souvent créer un article esthétiquement beau et à la mode mais qui ne prend pas en compte les réelles attentes des clients. Tim Brown explique ce phénomène dans la vidéo TED ci-dessous que je vous recommande vivement ! Il explique pourquoi le **design doit commencer avec les humains et la culture** et non les technologies. Il souligne également l'**importance des prototypes** et pourquoi il est essentiel de passer du lien passif entre consommateur et vendeur à une **relation participative** dans laquelle le consommateur exprime ses besoins au vendeur.
+
+{% lien %}
+[Vidéo youtube : TED, Tim Brown urge les designers à penser grand](https://youtu.be/UAinLaT42xY?si=gwnmSVj2pGpM9sd6)
+{% endlien %}
+
+Grâce à sa démarche soucieuce de résoudre des problèmes complexes d’une manière centrée sur l’utilisateur, le DT peut s'utiliser dans de **nombreux domaines** :
+
+- **Conception du produit**
+- **Conception de services et d’expériences**
+- **Conception d’entreprise**
+- **Leadership**
+- **Changement organisationnel**
 
 {% lien %}
 [Article : Qu'est-ce que le design thinking ?](https://www.usabilis.com/quest-ce-que-le-design-thinking/)
@@ -129,9 +151,13 @@ Le prototype sert de support pour réaliser ensuite les **tests auprès des util
 [Vidéo youtube : Présentation Double Diamant Design Thinking](https://www.youtube.com/watch?si=AmYC0MRxxokmRmaQ&v=oobuFri_Cps&feature=youtu.be)
 {% endlien %}
 
+On remarque que les étapes de la démarche double diamants coorespondant aux 5 grandes étapes du Design Thinking selon la D-School de l'université de Stanford : Empathize (empathy), Define (définir), Ideate (imaginer), Prototype (prototyper) et Test (tester).
+
 <h2 id=outils> 🧰Les Outils du Design Thinking</h2>
 
-De nombreux outils sont utilisés à chaque étape et ils exploitent souvent la **visualisation pour stimuler l’intelligence collective**. Il est donc important de maitriser cette notion que vous pouvez découvrir dans [mon MON sur l’intelligence collective](https://francoisbrucker.github.io/do-it/promos/2024-2025/Clarisse-Francese/mon/temps-1.1/).
+De nombreux outils sont utilisés à chaque étape et ils exploitent souvent la **visualisation pour stimuler l’intelligence collective**. Il est donc important de maitriser cette notion que vous pouvez découvrir dans [mon MON sur l’intelligence collective](https://francoisbrucker.github.io/do-it/promos/2024-2025/Clarisse-Francese/mon/temps-1.1/).  
+Bien que j'ai mis une liste d'outils ci-dessous, n’y a pas d’outil ultime. Un **bon outil doit convenir à la fois au facilitateur et au groupe**.
+L'idéal est de privilégier l’expression visuelle aux écrans qui sont moins rapides et moins propices à la collaboration. Du matériel, tels que les post-its, les gommettes ou les feutres, reviennent ainsi très souvent. Le carton, les LEGO, la pâte à modeler ou les innovation games sont aussi sollicités pour trouver des solutions créatives par le jeu.
 
 ### Les outils d’immersion
 
@@ -224,7 +250,9 @@ C’est un exercice d’observation dans lequel on demande à des utilisateurs d
 - [Article : Les 46 meilleurs outils du Design Thinking](https://www.google.com/url?q=https://www.emydigital.fr/46-meilleurs-outils-design-thinking/&sa=D&source=docs&ust=1727363897610766&usg=AOvVaw2BlzCobfgQ4P3paHqs4ofU)
 {% endlien %}
 
-<h2 id=qualites> 🙋Les qualités d’un consultant en design thinking</h2>
+<h2 id=ldt> 🙋Le facilitateur en design thinking</h2>
+
+### Les qualités nécessaires
 
 - **Excellent relationnel** : Sociable, à l’aise pour échanger et communiquer efficacement avec son équipe et les utilisateurs.
 - **Empathie élevée** : Comprend les perspectives des autres et leurs besoins, avec une forte capacité d’écoute et de questionnement.
@@ -237,13 +265,28 @@ C’est un exercice d’observation dans lequel on demande à des utilisateurs d
 - **Proactivité** : Passe du théorique au pratique au bon moment, guide le processus de manière fluide.
 - **Synthèse et production de contenu** : Trie les informations, analyse, et formule des recommandations claires et compréhensibles.
 
+Ainsi, bien qu'il y ait un effet de mode autour de ce secteur, être facilitateur en design thinking est un métier exigeant, qui demande des **compétences analytiques et humaines**.
+
 {% lien %}
 [Article : Coach en Design Thinking : 10 qualités à développer](https://www.klap.io/coach-en-design-thinking-10-qualites-a-developper/)
 {% endlien %}
 
+### Son rôle
+
+Etre facilitateur en design thinking est très compliqué car la **frontière avec le coach, l’animateur, le professeur ou le formateur** est très poreuse. Il est chargé de **veiller à la bonne énergie entre les participants**, à ce qu’ils restent motivés et à ce que chacun puisse apporter sa contribution.... Le tout sans **jamais porter de jugement**. Il est là pour tirer le meilleur parti d’un groupe, aider les participants à accoucher de leurs idées et **veiller au respect du programme**. Souvent, le premier atelier de Design Thinking est perçu comme une activité récréative. Le facilitateur doit alors **adopter différentes postures** “hautes” (autorité)  et “basses” (humilité), comme en improvisation théâtrale, pour rythmer la session. Ainsi, un facilitateur en Design Thinking donne les outils et les moyens pour mener le projet à bien mais **n’est en aucun cas décisionnaire**.
+
+### Son salaire
+
+Le salaire moyen pour les emplois liés au Design Thinking en France, est de **45 k€ par an**.
+Le salaire moyen varie entre 40 k€ pour les postes de niveau débutant à 50 k€ pour les travailleurs les plus expérimentés
+
+{% lien %}
+[Article : Le “Design Thinker” : maître de l’innovation](https://www.usabilis.com/design-thinker/)
+{% endlien %}
+
 <h2 id=RC> 👀Regard critique sur le design thinking</h2>
 
-Ses atouts :
+✅ Ses atouts :
 
 - **Un souffle créatif** : En incitant à sortir des sentiers battus, cette méthode permet de relever des défis avec une rapidité et une efficacité souvent hors de portée des approches classiques.
 - **Des connexions humaines** : En réunissant les talents autour d’une co-création, elle favorise la cohésion et renforce les liens au sein des équipes.
@@ -251,7 +294,7 @@ Ses atouts :
 - **Valorisation du collectif** : En impliquant activement les collaborateurs dans la conception, elle leur donne du pouvoir et du sens, tout en nourrissant un esprit d’équipe.
 - **Flexibilité et ajustements** : L’approche tolère l’erreur, encourageant les itérations rapides et l’ajustement précoce des idées avant leur mise sur le marché, ce qui se traduit par un gain de temps et de ressources considérable.
 
-Ses défauts :
+🚩 Ses défauts :
 
 - **Besoin de temps et d'argent** : Les méthodes nécessitent du temps et d'impliquer de nombreuses personnes donc elles sont onéreuses.
 - **Des risques d’échec** : Le caractère expérimental de cette démarche peut entraîner des échecs inattendus lorsque certaines idées ne fonctionnent pas comme prévu.

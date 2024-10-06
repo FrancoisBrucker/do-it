@@ -55,21 +55,28 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 
 #### Sprint 2
 
-- [ ] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 15 min
-- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h
+- [x] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 30 min (35 min)
+- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h (déjà 1h25)
 - [ ] établir un cahier des charges des améliorations à effectuer : 30 min
 - [ ] améliorer les tableaux selon le CDC fixé : 3h30
 - [ ] envoyer les tableaux et explication à Laura : 15 min
-- [ ] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30
+- [ ] rédiger ce que j’ai fait et mettre en forme GitHub : 1h15
+
+**Total d'heures : ?**  
+**Etude post mortem** : 
 
 ### ⌛Horodatage
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Jeudi 12/09  | 3h30  | Etat de l'art ressources google sheets et début formation |
+| **Sprint 1**
+Jeudi 12/09  | 3h30  | Etat de l'art ressources google sheets et début formation |
  Lundi 16/09  | 4h45  | Fin formation, récupération des tableaux de Laura, écriture CDC et début des amélioration des tableaux  |
  Mardi 17/09  | 1h40  | Finalisation des tableaux et envoie des tableaux et d'expication à Laura |
  Mercredi 18/09  | 1h30 | Mise au propre et rédaction sur Github |
+ **Sprint 2**
+  Dimanche 09/10  | 2h | Etat de l'art ressources apps script et début formation |
+
 
 ## 1️⃣POK : sprint 1
 
@@ -79,9 +86,8 @@ La plupart des MON sur les tableaux que j’ai trouvé parlent d’Excel or j’
 
 {% lien %}
 
-- Je suis tombée sur ce MON de Henri [Un peu d'Excel/Google Sheets pour mourir moins idiot](/promos/2023-2024/TAING-Henri/mon/temps-2-1/)
-- 
-- Dedans, il recommande la formation suivante [Sheets-Pratique.com](https://sheets-pratique.com/fr/cours) que j’ai donc décidé de suivre.
+Je suis tombée sur ce MON de Henri [Un peu d'Excel/Google Sheets pour mourir moins idiot](/promos/2023-2024/TAING-Henri/mon/temps-2-1/)  
+Dedans, il recommande la formation suivante [Sheets-Pratique.com](https://sheets-pratique.com/fr/cours) que j’ai donc décidé de suivre.
 
 {% endlien %}
 
@@ -239,3 +245,101 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [c
 Elle est **très contente** de ces améliorations et a **immédiatement adopté cette nouvelle version**. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.
 
 ## 2️⃣POK : sprint 2
+
+### 📖Ressources déjà existantes
+
+J'ai trouvé de nombreux MON sur Google Apps Script que j'ai parcouru en diagonal. Je me suis particulièrement intéressée aux 2 ci-dessous car il traitent de l'envoie de mail automatisé.
+
+{% lien %}
+
+- [MON d'Ossama Abdane : Google Apps Script, Rappel anniversaire](/promos/2022-2023/Abdane-Ossama/mon/mon2.1/)
+- [MON de Thomas Pont : Google Apps Script](/promos/2022-2023/Pont-Thomas/mon/gas/)  
+- De nombreux MON recommandent là encore cette formation [Sheets-Pratique : Cours Apps Script](https://sheets-pratique.com/fr/apps-script) que j’ai donc décidé de suivre.
+
+{% endlien %}
+
+### 🎓Formation
+
+#### Divers fonctionnalités et variables
+
+Pour accéder à Apps Cript, il faut dans Google Sheets cliquer sur **Extensions** > **Apps Script**
+
+**Assigner un script à une forme** : insérer une forme > cliquer sur les trois points à droite > Assigner le script
+
+**Déclarer une variable et lui atribuer une valeur** : let coutTotalAnnuel = 100;  
+Nommer les variables en commençant par une minuscule et ajouter les autres mots  en commençant par une majuscule.
+Une variable peut stocker des valeurs au format texte entre '', "" ou ``
+On retrouve aussi var au lieu de let dans certains codes
+
+**Tester et vérifier la valeur d'une variable** : console.log();  
+Puis exécuter le code contenant par exemple console.log(coutTotalAnnuel)
+
+**Déclarer une contsante** : const nbVentesJanvier = 45;
+
+**Ajouter un commentaire** : //commentaire
+
+**Augmenter une valeur de +1** : valeur += 1; OU valeur++;
+
+**Concaténer du texte** : texte1 += + texte2;
+
+**Convertir un nombre au format texte** : let nombre2 = Number('10'); OU let nombre3 = '10' * 1;
+
+**Trouver le max** : Math.max
+
+#### Tableaux
+
+**Créer un tableau** : const monTableau = [];
+
+**Accéder au valeur d'un tableau** :
+
+```
+const texte1 = plageValeurs[0];  
+console.log(tableau[1][0]); // affiche la valeur 2ème ligne et 1ère colonne car le 0 correspond à la première valeur
+```
+
+**Modifier une valeur d'un tableau** : plageValeurs[0] = 'Sheets';
+
+**Ajouter une valeur à un tableau** :  
+
+```
+plageValeurs.push('pain'); // pour ajouter à la fin  
+plageValeurs.unshift('pain'); // pour ajouter au début
+```
+
+**Longueur d'un tableau** : console.log(listeDeCourses.length);
+
+#### Feuilles et cellules
+
+**Récupérer la valeur d'une cellule** :  
+
+```
+const feuille = SpreadsheetApp.getActiveSheet(); // on déclare une constante qui va récupérer la feuille active  
+const cellule = feuille.getRange('A1'); // puis une constante pour la cellule A1 de la feuille  
+const valeur = cellule.getValue(); // on utilise la méthode getValue pour récupérer la valeur
+```
+
+On peut aussi rentrer le numéro de ligne et de colonne au lieu de la case pour getRange : getRange('A1') = getRange(1, 1)
+
+**Accéder à la valeur d'une autre feuille** : const feuille = SpreadsheetApp.getActive().getSheetByName('Feuille 2');
+
+**Accéder à une plage de valeurs** :  
+
+```
+const plage = feuille.getRange('A1:E2');  
+const tableau = plage.getValues(); //retourne un tableau, contenant un tableau pour chaque ligne de la plage
+```
+
+**Aplatir un tableau** : 
+```
+const feuille = SpreadsheetApp.getActiveSheet();
+const plage = feuille.getRange('A1:E2');
+const tableau = plage.getValues().flat();
+
+console.log(tableau); // Affiche [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] si tableau = [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ]
+```
+
+### 💡Cahier des charges des améliorations des tableaux de Laura
+
+### ✅Améliorations effectuées selon le CDC
+
+### 👍Retours de Laura

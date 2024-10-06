@@ -43,8 +43,5 @@ La partie **informatique** de ce projet vient de la détection et du traitement 
 
 ## Le Principe
 
+### Période 1
 
-## En Pratique
-
-
--20h --> : Plannification
