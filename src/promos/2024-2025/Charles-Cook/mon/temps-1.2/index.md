@@ -20,10 +20,11 @@ Aucun prérequis
 {% lien %}
 
 - [Xerfi Canal. (2022, 2 mars). Le business model au cœur de la réflexion stratégique [Pierre-Jean Benghozi]](https://www.youtube.com/watch?v=1EAUicMXZo4)
--  [Xerfi Canal. (2019, 8 avril). Comment rafraîchir ou réinventer son business model ? [Hélène Chanut-Musikas]](https://www.youtube.com/watch?v=equSKAmMnrs)
+- [Xerfi Canal. (2019, 8 avril). Comment rafraîchir ou réinventer son business model ? [Hélène Chanut-Musikas]](https://www.youtube.com/watch?v=equSKAmMnrs)
 - [La servicisation des entreprises industrielles, Un changement majeur de business model, Par Sophie Peillon](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-131?lang=fr)
 - [Transformation d’un modèle d’affaires dans un contexte de mondialisation :
 le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)
+- [Robert, I., & Herbert, M. (s. d.). Un business model qui encouragerait à consommer moins de vêtements est-il possible ?  The Conversation.](https://theconversation.com/un-business-model-qui-encouragerait-a-consommer-moins-de-vetements-est-il-possible-220053)
 
 {% endlien %}
 
@@ -46,6 +47,11 @@ le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.i
   - Obstacles de direction
   - Le nouveau business model de Keystone
   - Simple évolution ou transformation du business model ?
++ Un business model tendant vers la décroissance : possible ? 
+  - Business model sobre activiste
+  - Business model sobre de produire moins 
+  - Business model écosystémique territorial
+  - Business model sobre “do it yourself”
 + Conclusion
 
 ## Introduction
@@ -172,6 +178,28 @@ Ainsi, au cours de l’évolution du modèle économique de Keystone, des change
 ![Tableau_2](Images/Tableau_2.png)
 
 Ainsi, de par les modifications de ces composantes, nous pouvons qualifier l’évolution dans les activités de Keystone de transformation de business model. 
+
+## Un business model tendant vers la décroissance : possible ? 
+
+Dans l’étude de cas précédente, nous avons utilisé l’exemple de Keystone, qui est une entreprise textile. Or, le phénomène de fast-fashion est un fléau pour l’environnement. En effet la surconsommation de vêtement est à l’origine de 20% de la pollution des eaux et de 10% des émissions de CO2 par exemple. Pour remplir les objectifs de limitation du réchauffement climatique, il faudrait que chaque individu n’achète que 4 nouvelles pièces vestimentaires par an, alors que la moyenne française est 11 fois plus élevée, soit environ 34 pièces par an et par personne. Ainsi, il est intéressant de se pencher sur l’existence de business model qui suivent cette volonté de réduire l’impact de l’industrie textile sur l’environnement. 
+
+### Business model sobre activiste
+Ce modèle économique durable combine décroissance et sobriété, en influençant à la fois la production et la consommation. Trois critères clés le caractérisent :
+-	Éducation continue des consommateurs pour encourager à "moins consommer".
+-	Longévité accrue des produits.
+-	Activisme social et environnemental intense de la marque.
+La proposition de valeur se base sur la durabilité des produits tout en jouant un rôle de messager environnemental, informant sur l'impact écologique de la production et consommation. Ce modèle valorise le renoncement à l'achat, illustré par des marques comme Loom, qui incitent à consommer moins.
+
+### Business model sobre de produire moins 
+Ce second modèle se concentre sur une production agile, inspirée des principes de l'industrie 4.0, comme la production à la demande, avec l'objectif de réduire les stocks à zéro. Bien que la surconsommation ne soit pas directement abordée, le modèle encourage une réflexion avant l'achat en rendant visible le processus de fabrication, limitant ainsi les achats impulsifs. En remettant en question les codes de la fast fashion, il vise à réduire le gaspillage vestimentaire à toutes les étapes. L'exemple des "trois tricoteurs" de Roubaix résume bien cette approche : ne pas surproduire, ni surstocker, tout en valorisant la production locale.
+
+### Business model écosystémique territorial
+Ce troisième modèle s'inscrit dans une démarche écosystémique, où la valeur est créée par des acteurs locaux en interaction. Il s'intègre dans des projets territoriaux et vise à reconstruire des filières locales comme le lin, le chanvre ou la laine. Sa sobriété repose sur l'offre limitée de matières premières locales, la collaboration dans la chaîne de valeur et une gouvernance démocratique. Il privilégie les circuits courts, reconnectant le consommateur au produit en expliquant les étapes de fabrication. Ce modèle favorise une durabilité affective et un attachement territorial, comme illustré par Laines paysannes, qui valorise le patrimoine local.
+
+### Business model sobre “do it yourself”
+Ce dernier modèle se concentre sur le transfert de compétences, permettant aux consommateurs de fabriquer ou réparer eux-mêmes leurs vêtements, en lien avec des pratiques comme l'upcycling. Il valorise l'unicité et l'esthétisme, contribuant à un nouveau courant artistique. L'objectif principal est de donner aux consommateurs les compétences pour prolonger la vie des vêtements par la réparation ou la transformation. Comme le modèle écosystémique, il renforce le lien entre l'individu et le vêtement, tout en redéfinissant le consommateur comme créateur et réparateur, plutôt que simple acheteur dans une économie linéaire.
+
+Ainsi, il était important au travers de ces 4 exemple de montrer qu’il existe des modèles économiques pouvant concilier rentabilité et respect de l’environnement. Ces modèles économiques sont aujourd’hui encore rares, mais l’existence d’organisations prônant ces valeurs sont un message d’espoir. 
 
 ## Conclusion
 
