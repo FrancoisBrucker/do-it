@@ -58,11 +58,9 @@ Quelles sont les dynamiques derrières le changement de business model d’une e
 
 ### Définition
 Selon Le Robert, un business model peut se définir comme suit :
-{% definition %}
 
 Représentation synthétique des aspects majeurs de l’activité d’une entreprise ou d’une organisation.
 
-{% enddefinition %}
 On peut également parler de modèle économique. 
 De manière plus simple, un business model (ou modèle économique), est le choix que fais une organisation pour générer des revenus.
 
@@ -76,11 +74,8 @@ B. DEMIL et X. LECOCQ définissent un modèle économique au travers d’une vis
 
 Ainsi, à partir des ressources et compétences qu’une organisation contrôle, l’entreprise définit donc une ou plusieurs propositions de valeur pour ses clients qui vont lui permettre de générer des revenus. Ces ressources et compétences peuvent être internes, développées par l’entreprise, mais également d’origine extérieure (dans ce cas, les ressources et compétences sont acquises sur le marché). 
 
-{% definition %}
-
 Proposition de valeur : déclaration qui décrit les avantages que l’entreprise offre à ses clients par rapport aux produits et services proposés par la concurrence. 
 
-{% enddefinition %}
 Les propositions de valeurs sont portées par une organisation interne (chaîne de valeur) mais également externes (partenaires), ce qui engendre inévitablement des coûts de support. La structure organisationnelle comprend ainsi les activités réalisées au sein de l’entreprise mais également les relations établies avec d’autres organisations. 
 
 Ainsi, les choix réalisés par une organisation en termes de ressources/compétences, structure organisationnelle et propositions de valeur vont déterminer les coûts et revenus de l’organisation, et ainsi la marge effectuée par celle-ci. 
@@ -90,8 +85,5 @@ L’approche RCOV est intéressante dans le cas de notre étude sur les changeme
 ### Le business model au centre des réflexions stratégiques
 On remarque que la notion de business model est revenu sur le devant de la scène avec l’émergence des technologies de l’information, de la communication et du numérique. En effet ces technologies flexibles ont permis une redéfinition simple et rapide des produits et services, permettant ainsi à certaines entreprises de se réinventer. Le changement de modèle économique est donc un besoin auquel sont confrontées de nombreuses organisations. Cela ne signifie pas forcément changer fondamentalement la proposition de valeur, mais aussi la manière avec laquelle on produit cette proposition de valeur. 
 
-{% exemple %}
-
 Netflix est un exemple de cette idée : la proposition de valeur de l’organisation n’a pas fondamentalement changé, il s’agit toujours de mettre à disposition du client des films et séries, mais la manière de faire a été modifiée. On passe d’un système de location de DVD à un système d’abonnement et de téléchargement en streaming.
 
-{% endexemple %}
