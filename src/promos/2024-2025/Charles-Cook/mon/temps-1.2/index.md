@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Etude de cas d'une entreprise ayant changé de busines modele"
+title: "Changement de business model : les dynamiques et obstacles derrière cet exercice"
 authors:
   - Charles Cook
 
@@ -9,7 +9,7 @@ date: 1970-10-01
 tags: 
   - "temps 1"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON reprend les base de ce qu'est un business model, et explique pourquoi cette notion est stratégique pour les entreprises afin de rester compétitives"
 ---
 
 {% prerequis %}
@@ -19,14 +19,14 @@ Liste des prérequis du POK ET/OU MON
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+- [Xerfi Canal. (2022, 2 mars). Le business model au cœur de la réflexion stratégique [Pierre-Jean Benghozi]](https://www.youtube.com/watch?v=1EAUicMXZo4)
+-  [Xerfi Canal. (2019, 8 avril). Comment rafraîchir ou réinventer son business model ? [Hélène Chanut-Musikas]](https://www.youtube.com/watch?v=equSKAmMnrs)
+- [La servicisation des entreprises industrielles, Un changement majeur de business model, Par Sophie Peillon](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-131?lang=fr)
+- [Transformation d’un modèle d’affaires dans un contexte de mondialisation :
+le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Table des matières
 
