@@ -9,12 +9,12 @@ date: 1970-10-01
 tags: 
   - "temps 1"
 
-résumé: "Ce MON reprend les base de ce qu'est un business model, et explique pourquoi cette notion est stratégique pour les entreprises afin de rester compétitives"
+résumé: "Ce MON reprend les bases de ce qu'est un business model, et explique pourquoi cette notion est stratégique pour les entreprises afin de rester compétitives"
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Aucun prérequis
 
 {% endprerequis %}
 {% lien %}
