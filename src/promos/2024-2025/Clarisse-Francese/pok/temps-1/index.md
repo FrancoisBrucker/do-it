@@ -37,6 +37,7 @@ Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la s
 
 ## 📌Tâches
 
+{% details "Sprints et horodatage" %}
 ### 🏃‍➡️Sprints
 
 Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Laura.
@@ -56,7 +57,7 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 #### Sprint 2
 
 - [x] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 30 min (35 min)
-- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h (déjà 1h25)
+- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h (déjà 2h55)
 - [ ] établir un cahier des charges des améliorations à effectuer : 30 min
 - [ ] améliorer les tableaux selon le CDC fixé : 3h30
 - [ ] envoyer les tableaux et explication à Laura : 15 min
@@ -74,9 +75,11 @@ Jeudi 12/09  | 3h30  | Etat de l'art ressources google sheets et début formatio
  Lundi 16/09  | 4h45  | Fin formation, récupération des tableaux de Laura, écriture CDC et début des amélioration des tableaux  |
  Mardi 17/09  | 1h40  | Finalisation des tableaux et envoie des tableaux et d'expication à Laura |
  Mercredi 18/09  | 1h30 | Mise au propre et rédaction sur Github |
- **Sprint 2**
-  Dimanche 09/10  | 2h | Etat de l'art ressources apps script et début formation |
+| **Sprint 2**
+Dimanche 09/10  | 2h30  | Etat de l'art ressources apps script et début formation |
+  Lundi 10/10  | 1h | Suite formation |
 
+{% enddetails %}
 
 ## 1️⃣POK : sprint 1
 
@@ -97,6 +100,7 @@ Voici le [tableau d'entrainement](https://docs.google.com/spreadsheets/d/1gqWjpN
 
 Voici ci-dessous ma **fiche récap** de tout ce que j'ai appris ou mieux compris en suivant cette formation et en creusant ailleurs :
 
+{% details "Ma fiche récap pour googlesheets" %}
 #### Fonctionnalités diverses
 
 **Modifier toutes les largeurs de colonnes en même temps** : sélectionner toutes les colonnes avec le curseur ou touche ctrl enfoncée → modifier
@@ -192,6 +196,8 @@ Permet aux lecteurs de pouvoir changer de vue pour visualiser les données de ma
 **TCD** : sélectionner les données avec les en-têtes → insertion → TCD → insérer dans une nouvelle feuille → rentrer les bons paramètres dans l’éditeur de TCD
 Ex : ajouter la ligne “produit” → ajouter la ligne “provenance” → ajouter la valeur “nombre d’unités achetées” → ajouter la valeur “prix par unité” et modifier sa fonction en “average” pour avoir la moyenne et non la somme par défaut
 
+{% enddetails %}
+
 ### 💡Cahier des charges des améliorations des tableaux de Laura
 
 Maintenant que je suis bien plus à l'aise avec GS, je récupère les tableaux de comptabilité de Laura. Je lui avais créé le tableau [calendrier et compta ancien](https://docs.google.com/spreadsheets/d/1DkWvw-FkCZZZqjcyfCk64FEBDqxFVWs1153f-OzHmgE/edit?gid=957877577#gid=957877577) un an plus tôt et elle l'a un peu modifié entre temps. Vous pouvez voir la version qu'elle utilisait en allant sur la feuille "**Ancien calendrier compta 2024**".
@@ -260,83 +266,137 @@ J'ai trouvé de nombreux MON sur Google Apps Script que j'ai parcouru en diagona
 
 ### 🎓Formation
 
+{% details "Ma fiche récap pour google apps script" %}
 #### Divers fonctionnalités et variables
 
-Pour accéder à Apps Cript, il faut dans Google Sheets cliquer sur **Extensions** > **Apps Script**
+Pour accéder à Apps script, il faut dans Google Sheets cliquer sur **Extensions** > **Apps Script**
 
 **Assigner un script à une forme** : insérer une forme > cliquer sur les trois points à droite > Assigner le script
 
-**Déclarer une variable et lui atribuer une valeur** : let coutTotalAnnuel = 100;  
+**let coutTotalAnnuel = 100;** déclarer une variable et lui atribuer une valeur
 Nommer les variables en commençant par une minuscule et ajouter les autres mots  en commençant par une majuscule.
 Une variable peut stocker des valeurs au format texte entre '', "" ou ``
 On retrouve aussi var au lieu de let dans certains codes
 
-**Tester et vérifier la valeur d'une variable** : console.log();  
-Puis exécuter le code contenant par exemple console.log(coutTotalAnnuel)
+**console.log();** tester et vérifier la valeur d'une variable : console.log(coutTotalAnnuel) puis exécuter
 
-**Déclarer une contsante** : const nbVentesJanvier = 45;
+**const nbVentesJanvier = 45;** déclarer une constante
 
-**Ajouter un commentaire** : //commentaire
+**//commentaire** ajouter un commentaire
 
-**Augmenter une valeur de +1** : valeur += 1; OU valeur++;
+**valeur += 1;** ou **valeur++;** augmenter une valeur de +1
 
-**Concaténer du texte** : texte1 += + texte2;
+**texte1 += + texte2;** concaténe du texte
 
-**Convertir un nombre au format texte** : let nombre2 = Number('10'); OU let nombre3 = '10' * 1;
+**let nombre2 = Number('10');** ou **let nombre3 = '10' * 1;** convertir un nombre au format texte
 
-**Trouver le max** : Math.max
+**Math.max** : trouver le max
 
 #### Tableaux
 
-**Créer un tableau** : const monTableau = [];
+**const monTableau = [];** créer un tableau
 
 **Accéder au valeur d'un tableau** :
 
 ```
 const texte1 = plageValeurs[0];  
-console.log(tableau[1][0]); // affiche la valeur 2ème ligne et 1ère colonne car le 0 correspond à la première valeur
+console.log(tableau[1][0]); // affiche la valeur 2ème ligne et 1ère colonne
 ```
 
-**Modifier une valeur d'un tableau** : plageValeurs[0] = 'Sheets';
+**plageValeurs[0] = 'Sheets';** Modifier une valeur d'un tableau (ici la 1ère valeur)
 
-**Ajouter une valeur à un tableau** :  
+**plageValeurs.push('pain');** pour ajouter une valeur à la fin  d'un tableau  
+**plageValeurs.unshift('pain');** pour ajouter une valeur au début d'un tableau
 
-```
-plageValeurs.push('pain'); // pour ajouter à la fin  
-plageValeurs.unshift('pain'); // pour ajouter au début
-```
-
-**Longueur d'un tableau** : console.log(listeDeCourses.length);
+**console.log(listeDeCourses.length);** longueur d'un tableau
 
 #### Feuilles et cellules
 
-**Récupérer la valeur d'une cellule** :  
+**const feuille = SpreadsheetApp.getActive().getSheetByName('Feuille 2');** : accéder à la valeur d'une autre feuille
 
+**Aplatir un tableau** : 
 ```
-const feuille = SpreadsheetApp.getActiveSheet(); // on déclare une constante qui va récupérer la feuille active  
+const feuille = SpreadsheetApp.getActiveSheet();
+const plage = feuille.getRange('A1:C2');
+const tableau = plage.getValues().flat();
+
+console.log(tableau); // Affiche [ 1, 2, 3, 4, 5, 6 ] si tableau = [ [ 1, 2, 3], [ 4,5,6] ]
+```
+
+**Modifier la valeur d'une cellule** :
+```
+const feuille = SpreadsheetApp.getActiveSheet();
+const cellule = feuille.getRange('A1');
+cellule.setValue(1234); // Entre la valeur "1234" dans la cellule A1
+// De même, utiliser getValues quand on veut modifier une plage de cellules
+```
+
+**activate** : active une feuille ou une cellule
+
+**appendRow** : insère une ligne à la suite des données de la feuille : feuille.appendRow([1, 2, 3]);
+
+**clear** : supprime complètement le contenu et la mise en forme de la feuille ou cellule
+
+**clearContents** : supprime le contenu de la feuille ou cellule (en laissant la mise en forme) 
+
+**deleteRow** : supprime une ligne entière de la feuille (ici, la ligne 17) : feuille.deleteRow(17);
+
+**getActiveCell** : retourne la cellule active de la feuille
+
+**getActiveRange** : retourne la plage de cellules active de la feuille 
+
+**getDataRange** : retourne la plage de cellules de la feuille contenant des données
+
+**getName** : retourne le nom de la feuille
+
+**getRange** : retourne une cellule ou une plage de cellules de la feuille
+
+**getValue** : récupère la valeur de la cellule  
+```
+const feuille = SpreadsheetApp.getActiveSheet(); // on récupère la feuille active  
 const cellule = feuille.getRange('A1'); // puis une constante pour la cellule A1 de la feuille  
 const valeur = cellule.getValue(); // on utilise la méthode getValue pour récupérer la valeur
+// On peut aussi rentrer le numéro de ligne et de colonne pour getRange : getRange('A1') = getRange(1, 1)
 ```
 
-On peut aussi rentrer le numéro de ligne et de colonne au lieu de la case pour getRange : getRange('A1') = getRange(1, 1)
-
-**Accéder à la valeur d'une autre feuille** : const feuille = SpreadsheetApp.getActive().getSheetByName('Feuille 2');
-
-**Accéder à une plage de valeurs** :  
-
+**getValues** : récupère les valeurs de la plage de cellules :
 ```
 const plage = feuille.getRange('A1:E2');  
 const tableau = plage.getValues(); //retourne un tableau, contenant un tableau pour chaque ligne de la plage
 ```
 
-**Aplatir un tableau** : 
+**Exos :**
+{% details "Créer un compteur" %}
 ```
-const feuille = SpreadsheetApp.getActiveSheet();
-const plage = feuille.getRange('A1:E2');
-const tableau = plage.getValues().flat();
+function compteur() {
+  // Feuille active
+  const feuille = SpreadsheetApp.getActiveSheet();
+  // Cellule A2
+  const celluleCompteur = feuille.getRange('A2');
+  // Valeur de la cellule A2 + 1
+  const compteur = celluleCompteur.getValue() + 1;
+  // Changement de la valeur de la cellule A2
+  celluleCompteur.setValue(compteur);
+}
+```
+{% enddetails %}
 
-console.log(tableau); // Affiche [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] si tableau = [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ]
+
+{% details "Ajouter une ligne d'une feuille à la suite d'une autre" %}
 ```
+function ajoutLigne() {
+
+  const ss = SpreadsheetApp.getActive(); // Pour éviter d'exécuter "getActive()" à double
+  const feuille1 = ss.getSheetByName('Feuille 1');
+  const feuille2 = ss.getSheetByName('Feuille 2');
+
+  // Copie les valeurs de la ligne 1 de "Feuille 1" à la suite dans "Feuille 2"
+  feuille2.appendRow(feuille1.getRange('1:1').getValues()[0]);
+}
+```
+{% enddetails %}
+
+{% enddetails %}
 
 ### 💡Cahier des charges des améliorations des tableaux de Laura
 
