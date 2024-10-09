@@ -418,6 +418,7 @@ Toutes les variables en JS sont définis par des identificateurs qui sont unique
 
 Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables : 
 |   | Scope	| Redeclare	| Reassign	| Hoisted	| Binds this  |
+| -------- | -------- |-------- |-------- |-------- |-------- |
 |var	| No	| Yes	| Yes	| Yes	| Yes |
 |let	| Yes	| No	| Yes	| No	| No |
 |const	| Yes	| No	| No	| No	| No |
