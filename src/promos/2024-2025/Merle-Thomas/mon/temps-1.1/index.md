@@ -12,7 +12,7 @@ tags:
   - "HTML"
   - "CSS"
 
-Résumé: "Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen.
+résumé: "Grâce à ce MON, je souhaite apprendre les languages HTML et CSS dans l'objectif de me lancer dans le codage de mon 1er site web de Dark Kitchen.
 Pour réaliser ce MON et débuter mon apprentissage, j'ai décidé de suivre les cours du site de Mr Brucker, ainsi que de suivre un tutoriel disponible en ligne et recommandé par le site do-it. Il s'agit du tutoriel W3School. Ce tutoriel permet d'apprendre les notions de bases de HTML/CSS et est accompagné d'exercices de codes sur un éditeur en ligne."
 ---
 
@@ -48,7 +48,7 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
     - [Généralités](#CSS-Généralités)
     - [Les sélecteurs](#sélecteurs)
     - [En Pratique](#pratique)
-
+3. [Bilan](#Bilan)
 
 ## Contenu
 
@@ -255,6 +255,159 @@ body {background-color: linen;}
 
 On se limitera ici à une brève présentation du language CSS, puisque nous allons rapidement le pratiquer à l'aide de notre POK1, puisque nous allons écrire un fichier externe qui définira le style de notre site web.
 
+
+Voici un exemple d'un code que nous avons écris pour définir le design de la page menu de notre site web : 
+```
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-section {
+    padding: 50px 0;
+}
+
+.menu-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e55340;
+}
+```
+
+Et voici ensuite la code HTML permettant de faire appel à notre fichier CSS externe : 
+```
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Kitchen - Menus</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="panier.html">Panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <div class="container">
+            <h1>Nos Menus</h1>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="../images/nazi_goreng.jpg" alt="Menu 1">
+                    <h3>Menu Savoureux</h3>
+                    <h4>Nazi Goreng</h4>
+                    <p>Un délicieux menu composé d'ingrédients ultra proteine.</p>
+                    <a href="panier.html" class="btn-primary">Ajouter au panier</a>
+                </div>
+                <div class="menu-item">
+                    <img src="../images/mie_goreng.jpg" alt="Menu 2">
+                    <h3>Menu Gourmand</h3>
+                    <h4>Mie Goreng</h4>
+                    <p>Un menu généreux pour les afters salle.</p>
+                    <a href="panier.html" class="btn-primary">Ajouter au panier</a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+```
+
+L'exécution de ce code sur le serveur web nous permet d'afficher ce rendu visuel : 
+![Page-Menu-Dark-Kitchen](./page-menu.png)
+
+## 3.Bilan<a name="Bilan"></a>
+Lors de ce MON, j'ai réalisé 2 tutoriels complets sur W3School qui m'ont permis de découvrir et d'apprendre la mécanique du FrontEnd avec l'utilisation des languages HTML et CSS. L'objectif de ce MON était de bien assimilé ces 2 languages afin de les utiliserr pour le codage de mon propre site web qui fait l'objet de mon POK1. Je suis donc satisfait du travail réalisé puisque le rendu des premières pages de mon site est satisfaisant. Reste maintenant à acquérir des connaissance complémentaires en JavaScript et sur l'utilisation du framework Vue pour ajouter de l'interactivité aux pages de mon site internet. 
+
 ## Horodateur
 
 Toutes les séances et le nombre d'heures que l'on y a passé.
@@ -267,4 +420,5 @@ Toutes les séances et le nombre d'heures que l'on y a passé.
 | 14/09  | 1.5H  | HTML : Listes et tables |
 | 13/09  | 1H  | HTML : Les attributs class, div et id |
 | 20/09  | 2H  | CSS : Tutoriel W3schools, introduction au language |
+| 22/09  | 2H  | CSS : Codage des pages Menu et Panier Dark Kitchen |
 
