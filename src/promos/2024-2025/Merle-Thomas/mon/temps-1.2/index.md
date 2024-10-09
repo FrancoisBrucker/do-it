@@ -11,7 +11,7 @@ tags:
   - "Developpement FrontEnd"
   - "JavaScript"
 
-Résumé : "Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen. Pour ce faire, j'ai suivi les cours de Mr Brucker de développement Web sur le site do-it ainsi que les MON des élèves des années précédentes. J'ai également suivi le tutoriel W3School qui est accompagné de petits exercices sur un éditeur en ligne. La plus grande partie du MON a été passé sur le suivi d'un tutoriel javascrip-koans, dont le code a été téléchargé sur GitHub et qui propose d'apprendre la language JavaScript à partir d'une série d'exercices de code à trous qui doivent passer différents tests."
+résumé: "Ce MON a pour objectif de m'initier au language JavaScript pour coder le FrontEnd de mon 1er site de DarkKitchen. Pour ce faire, j'ai suivi les cours de Mr Brucker de développement Web sur le site do-it ainsi que les MON des élèves des années précédentes. J'ai également suivi le tutoriel W3School qui est accompagné de petits exercices sur un éditeur en ligne. La plus grande partie du MON a été passé sur le suivi d'un tutoriel javascrip-koans, dont le code a été téléchargé sur GitHub et qui propose d'apprendre la language JavaScript à partir d'une série d'exercices de code à trous qui doivent passer différents tests."
 ---
 
 {% prerequis %}
@@ -32,8 +32,26 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 - le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
-## Présentation du tutoriel javascript-koans
-### <span style="color: #26B260">1. Généralités
+## Table des matières<a name="table-des-matières"></a>
+- [Table des matières](#table-des-matières)
+- [Contenu](#contenu)
+- [Présentation du tutoriel javascript-koans](#présentation-du-tutoriel-javascript-koans)
+  - [1. Généralités](#1-généralités)
+  - [2. Running the koans](#2-running-the-koans)
+  - [3. Premier exemple d'exercice : AboutArrays complété](#3-premier-exemple-dexercice--aboutarrays-complété)
+  - [4. 2ème exemple d'exercice : AboutFunctions complété](#4-2ème-exemple-dexercice--aboutfunctions-complété)
+  - [5. 3ème exemple d'exercice : AboutObjects non complété](#5-3ème-exemple-dexercice--aboutobjects-non-complété)
+  - [6. Passage des tests](#6-passage-des-tests)
+- [Tutoriel W3School JS](#tutoriel-w3school-js)
+  - [1. Variables](#1-variables)
+  - [2. Objets](#2-objets)
+  - [3. Classes](#3-classes)
+- [Horodateur](#horodateur)
+
+
+## Contenu 
+## Présentation du tutoriel javascript-koans<a name="présentation-du-tutoriel-javascript-koans"></a>
+### <span style="color: #26B260">1. Généralités<a name="1-généralités"></a>
 
 Basé sur le tutoriel de Edgecase [Ruby koans](http://github.com/edgecase/ruby_koans), l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de **tests** et de **code à trous**.
 
@@ -44,7 +62,7 @@ Lors de la première execution, une erreur d'exécution apparaît, ainsi qu'une 
 
 Le tutoriel d'apprentissage Javascript commence dans le fichier *koans/AboutExpects.js*. Ces premiers koans sont assez simples au départ! Au fur et à mesure que je progresse dans les koans, de plus en plus de syntaxe Javascript est introduite, ce qui m'a permis de résoudre des problèmes de plus en plus compliqués et d'utiliser des techniques plus avancées.
 
-### <span style="color: #26B260">2. Running the koans
+### <span style="color: #26B260">2. Running the koans<a name="2-running-the-koans"></a>
 
 Pour compléter les exercices et visualiser le passage des tests, il suffit de **RUN** le fichier *KoansRunnner.html* dans le navigateur du système, ici **Google Chrome**. Pour ce faire j'ai dû télécharger l'extension **RunServer** de VsCode. 
 
@@ -52,7 +70,7 @@ La première erreur se trouve dans *koans/AboutExpects.js*. Je l'ai corrigé et 
 
 Le gestionnaire de tests utilisé est [Jasmine](http://jasmine.github.io/) avec un visualiseur de rapport personnalisé.
 
-### <span style="color: #26B260">3. Premier exemple d'exercice : AboutArrays complété
+### <span style="color: #26B260">3. Premier exemple d'exercice : AboutArrays complété<a name="3-premier-exemple-dexercice--aboutarrays-complété"></a>
 
 ```
 describe("About Arrays", function() {
@@ -154,7 +172,7 @@ describe("About Arrays", function() {
 });
 ```
 
-### <span style="color: #26B260">4. 2ème exemple d'exercice : AboutFunctions complété
+### <span style="color: #26B260">4. 2ème exemple d'exercice : AboutFunctions complété<a name="4-2ème-exemple-dexercice--aboutfunctions-complété"></a>
 
 ```
 describe("About Functions", function() {
@@ -259,7 +277,7 @@ describe("About Functions", function() {
 });
 ```
 
-### <span style="color: #26B260">5. 3ème exemple d'exercice : AboutObjects non complété
+### <span style="color: #26B260">5. 3ème exemple d'exercice : AboutObjects non complété<a name="5-3ème-exemple-dexercice--aboutobjects-non-complété"></a>
 
 ```
 describe("About Objects", function () {
@@ -373,13 +391,230 @@ describe("About Objects", function () {
 });
 ```
 
-### <span style="color: #26B260">6. Passage des tests
+### <span style="color: #26B260">6. Passage des tests<a name="6-passage-des-tests"></a>
 
 Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel : 
 
 ![Tests js-koans](./test-js-koans.png)
 
-## Horodateur
+## Tutoriel W3School JS<a name="tutoriel-w3school-js"></a>
+Comme pour les languages HTML et CSS, j'ai utilisé le tutoriel W3School pour apprendre les bases de JS. J'ai suivi les cours puis réalisé chaque exercices de chaque partie grâce à l'éditeur de code en ligne. Ces tutoriels sont vraiment bien fiat pour ceux qui veulent apprendre les bases des languages du FrontEnd, même s'ils sont très longs car traitent de toutes les notions de chaque language, donc difficile de faire le tri sur ce dont on a besoin dès le départ de l'apprentissage. 
+
+### <span style="color: #26B260">1. Variables<a name="1-variables"></a>
+Les variables en JS peuvent être déclarées selon 4 possibilités : 
+  * automatiquement
+  * utilisant *var*
+  * utilisant *const*
+  * utilisant *let*
+  
+Comment choisir parmi ces possibilités ? 
+1. Il faut toujours déclaré ses varaiables
+2. Toujours utiliser *const* si la variables est fixe
+3. Toujours utiliser *const* si le type de variable est fixe (Arrays and Objects)
+4. Utiliser seulement *let* si on ne peut utiliser *const*
+5. Utiliser *var* seulement pour les anciens navigateurs.
+
+Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme *age*, *titre*, *couleur* etc.
+
+Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables : 
+|   | Scope	| Redeclare	| Reassign	| Hoisted	| Binds this  |
+|var	| No	| Yes	| Yes	| Yes	| Yes |
+|let	| Yes	| No	| Yes	| No	| No |
+|const	| Yes	| No	| No	| No	| No |
+
+### <span style="color: #26B260">2. Objets<a name="2-objets"></a>
+En JS, on utlise des objets qui possèdent plusieurs propriétés que l'on définit et on peut ensuite accéder à ces propriétés. Prenons l'exemple d'une voiture comme dans le tutoriel : 
+```
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white"
+};
+```
+L'objet car possède 4 propriétés : name, model, weight et color.
+
+Il est également possible de créer un objet et y ajouter ses propriétés : 
+```
+// Create an Object
+const car = {}; 
+
+// Add Properties
+car.name= "Fiat";
+car.model= "500";
+car.weight= 800;
+car.color= "white"
+```
+
+En utilisant le mot clé *new Object ()* cela donne : 
+```
+// Create an Object
+const car = new Object{}; 
+
+// Add Properties
+car.name= "Fiat";
+car.model= "500";
+car.weight= 800;
+car.color= "white"
+```
+
+Il est possible ensuite d'accéder au différentes propriétés de l'objet de la manière suivante : 
+```
+objectName.propertyName
+objectName["propertyName"]
+```
+Ou d'utiliser le mot clé *let* : 
+```
+let weight = car.weight;
+let weigjt = car["weight"];
+let weight = car[x];
+```
+
+Il est possible d'ajouter et d'en supprimer des nouvelles propriétés à tous les objets : 
+```
+//Add property
+car.launch = "2015";
+
+//Delete property
+delete car.weight;
+```
+
+Les objets possèdent des propriétés mais également des **Méthodes**, ce sont des actions réalisées par les objets qui sont définies comme des fonctions et stockées sous forme de propriétés de l'objet : 
+```
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white"
+  modelName : function() {
+    return this.name + " " + this.model};
+};
+```
+
+En JS, les objets ne sont pas figés et leurs propriétés peuvent être modifiées : 
+```
+//Create an Object
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white";
+
+// Create a copy
+const x= car ; 
+
+// Change Color in both
+x.color = "blue";
+};
+```
+
+Il y a plusieurs façon d'afficher un Objet en JS : 
+   * On affiche les propriétés de l'objet par nom
+```
+//Create an Object
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white";
+};
+// Display Properties
+document.getElementById("demo").innerHTML =
+car.name + "," + car.model + "," + car.color;
+```
+   * On affiche les propriétés de l'objet dans une boucle
+```
+//Create an Object
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white";
+};
+// Build a Text
+let text = "";
+for (let x in car) {
+  text += car[x] + " ";
+};
+// Display Properties
+document.getElementById("demo").innerHTML=text;
+```
+   * On affiche l'objet à l'aide de Object.values()
+```
+//Create an Object
+const car = {
+  "name": "Fiat",
+  "model": "500",
+  "weight":800,
+  "color": "white";
+};
+// Create an Array
+const myArray = Object.values(car);
+
+// Display the Array
+document.getElementById("demo").innerHTML = myArray;
+```
+
+
+### <span style="color: #26B260">3. Classes<a name="3-classes"></a>
+Il est souvent utile de créer plusieurs objets du même type. Pour créer un type d'objet, nous utilisons une fonction constructeur d'objet. Il est considéré comme une bonne pratique de nommer les fonctions constructeur avec une première lettre majuscule.
+```
+function Car(name, model, weight, color) {
+  this.name = name;
+  this.model = model;
+  this.weight = weight;
+  this.color = color;
+}
+```
+Dans la fonction constructeur, thisn'a aucune valeur. La valeur de *this* deviendra le nouvel objet lorsqu'un nouvel objet est créé.
+Nous pouvons maintenant l'utiliser *new car()* pour créer de nombreux nouveaux objets *Car* :
+```
+const FatherCar = new car("Audi", "Q7", 1500, "black");
+const GrandFatherCar = new car("Renaud", "408", 900, "grey");
+const myCar = new car("Lamborghini", "Aventador", 2000, "orange");
+```
+
+Une valeur donnée à une propriété sera une valeur par défaut pour tous les objets créés par le constructeur :
+```
+function Car(name, model, weight, color) {
+  this.name = name;
+  this.model = model;
+  this.weight = weight;
+  this.color = color;
+  this.launch = "2015";
+}
+```
+
+Une fonction constructeur peut également avoir des **méthodes**, qu'il est possible d'ajouter à n'importe quel objet : 
+```
+FatherCar.changeModel = function (model) {
+  this.model = model;
+}
+```
+La nouvelle méthode sera ajoutée à FatherCar, et pas à d'autres objets car.
+
+Néanmoins, il est impossible d'ajouter une nouvelle méthode à une fonction constructeur d’objet avec la même méthode, cela nous renverra une erreur du type **TypeError: FatherCar.changeModel is not a function**. L'ajout d'une nouvelle méthode doit être effectué sur le prototype de la fonction constructeur :
+```
+Car.prototype.changeModel = function (model) {
+  this.model = model;
+}
+FatherCar.changeModel("RS Q7");
+```
+La fonction changeModel() attribue la valeur du model à la propriété de la Car *model*, en remplaçant this par FatherCar.
+
+JS dispose de constructeurs intégrés pour tous les objets communs :
+```
+new Object()   // A new Object object
+new Array()    // A new Array object
+new Map()      // A new Map object
+new Set()      // A new Set object
+new Date()     // A new Date object
+new RegExp()   // A new RegExp object
+new Function() // A new Function object
+```
+
+
+## Horodateur<a name="horodateur"></a>
 
 Toutes les séances et le nombre d'heure que l'on y a passé.
 
@@ -389,4 +624,9 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | 13/09  | 0.5H  | Exercice 1 : AboutExpects|
 | 13/09  | 0.5H  | Exercice 2 : AboutArrays |
 | 13/09  | 0.5H  | Exercice 3 : AboutFunctions |
-
+| 20/09  | 0.5H  | Exercice 4 : AboutHigherOrderFunctions |
+| 20/09  | 0.5H  | Exercice 5 : AboutInheritance |
+| 20/09  | 0.5H  | Exercice 5 : AboutMutability |
+| 20/09  | 0.5H  | Exercice 6 : AboutObjects |
+| 05/10  | 2.5H  | Tuto W3School : Variables, Objets, Classes et Constructeurs en JS|
+| 09/10  | 3H  | |
