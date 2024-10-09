@@ -524,11 +524,45 @@
 <li>Utiliser <em>var</em> seulement pour les anciens navigateurs.</li>
 </ol>
 <p>Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme <em>age</em>, <em>titre</em>, <em>couleur</em> etc.</p>
-<p>Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables :
-|   | Scope	| Redeclare	| Reassign	| Hoisted	| Binds this  |
-|var	| No	| Yes	| Yes	| Yes	| Yes |
-|let	| Yes	| No	| Yes	| No	| No |
-|const	| Yes	| No	| No	| No	| No |</p>
+<p>Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Scope</th>
+<th>Redeclare</th>
+<th>Reassign</th>
+<th>Hoisted</th>
+<th>Binds this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>var</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>let</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>const</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
 <h3><span style="color: #26B260">2. Objets<a name="2-objets"></a></span></h3>
 <p>En JS, on utlise des objets qui possèdent plusieurs propriétés que l'on définit et on peut ensuite accéder à ces propriétés. Prenons l'exemple d'une voiture comme dans le tutoriel :</p>
 <pre><code>const car = {
