@@ -39,7 +39,7 @@ Softr, quant à lui, est une plateforme no-code permettant de créer des applica
 On peut voir Softr comme la partie front-end d'une application web (l'interface visible et interactive), tandis qu’Airtable fait office de back-end (là où les données sont enregistrées et stockées).
 
 {% faire %}
-Tout en expliquant ce que j'ai appris au fil du MON, je présente la création d'un projet.
+Tout en expliquant ce que j'ai appris au fil du MON, je présente la création d'un projet pour une application web.
 {% endfaire %}
 
 
@@ -49,8 +49,8 @@ Pour en apprendre plus sur Airtable, j'ai suivi les 3 vidéos de [Rémi OJR](htt
 
 {% lien %}
 
-https://www.youtube.com/watch?v=oIeZWL9Lsm0
-https://www.youtube.com/watch?v=OpBcnhEjMJg
+https://www.youtube.com/watch?v=oIeZWL9Lsm0 \
+https://www.youtube.com/watch?v=OpBcnhEjMJg \
 https://www.youtube.com/watch?v=hb5zvNQvka0
 
 {% endlien %}
@@ -71,7 +71,7 @@ On peut créer plusieurs vues pour une même table, afin de visualiser les donn�
 
 
 {% info %}
-Le **Kanban** permet d'organiser les offres par colonnes, les regroupant par entreprise.
+Le **Kanban** permet d'organiser les offres par colonnes, les regroupant par entreprise. \
 La **Galerie** permet d'afficher les enregistrements sous forme de cartes visuelles défilant.
 {% endinfo %}
 
@@ -97,10 +97,10 @@ J'ai appris que Softr permettait de créer l'interface d'une application web con
 
 ### Softr
 
-Pour découvrir Softr, j'ai suivi les 5 vidéos de [Caastor](https://www.youtube.com/@caastor_nocode) "Lance ta plateforme web sans coder avec Softr" accessibles au lien ci-dessous.
+Pour découvrir Softr, j'ai suivi la vidéo de "Premiers pas avec Softr" de [Contournement](https://www.youtube.com/@Contournement), puis les 5 vidéos de [Caastor](https://www.youtube.com/@caastor_nocode) "Lance ta plateforme web sans coder avec Softr" accessibles aux liens ci-dessous.
 
 {% lien %}
-
+https://www.youtube.com/watch?v=a36OFSK0JsU \
 https://www.youtube.com/@caastor_nocode
 
 {% endlien %}
@@ -121,7 +121,7 @@ L'un des points les plus importants est que Softr peut se connecter directement 
 On peut ajouter des filtres dynamiques et des barres de recherche aux pages pour permettre aux utilisateurs de trouver rapidement des informations. Par exemple, dans le cas des offres de stage, les utilisateurs pourraient filtrer les produits par entreprise, types de stage, localisation ou secteur d'activité. 
 
 ![Softr](./Softr_InterfaceList.png)
-
+![Softr_Avancement](./Softr_OffresIntermediaire.png)
 
 De plus, les formulaires peuvent alimenter directement Airtable pour stocker les données collectées.
 
@@ -133,8 +133,9 @@ La dernière étape est la publication du site web. Softr se charge de l'héberg
 
 
 ### Sources
-https://support.airtable.com/docs/fr/airtable-training-and-resources
-https://www.youtube.com/watch?v=oIeZWL9Lsm0
-https://www.youtube.com/watch?v=OpBcnhEjMJg
-https://www.youtube.com/watch?v=hb5zvNQvka0
+https://support.airtable.com/docs/fr/airtable-training-and-resources \
+https://www.youtube.com/watch?v=oIeZWL9Lsm0 \
+https://www.youtube.com/watch?v=OpBcnhEjMJg \
+https://www.youtube.com/watch?v=hb5zvNQvka0 \
+https://www.youtube.com/watch?v=a36OFSK0JsU \
 https://www.youtube.com/@caastor_nocode
