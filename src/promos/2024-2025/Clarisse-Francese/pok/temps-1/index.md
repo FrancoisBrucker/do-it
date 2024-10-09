@@ -33,7 +33,7 @@ Ressources mentionnées dans ce POK :
 {% endlien %}
 
 Ma **grande sœur illustratrice** s’est lancée il y a moins d'un an dans la vente de carte postale qu’elle dessine et vend à des librairies qui les revendent à des clients. Son talent en art est immense, mais ses connaissances en bureautique sont proches du néant. Or, elle doit gérer de nombreux intermédiaires, comptabiliser les stocks dans chaque librairie, suivre l’évolution de ses ventes et aimerait **savoir plus facilement quelles librairies sont les plus rentables**.
-Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite **Google Sheets** et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre **Google Apps Script** pour voir si je peux automatiser des fonctions grâce à cet outil (des envoies de mail automatiques par exemple).
+Ainsi je veux utiliser ce POK pour dans un premier temps mieux me former à la suite **Google Sheets** (GS) et améliorer les tableaux que je lui avais déjà créé il y a un an. Puis je compte apprendre **Google Apps Script** (GAS) pour voir si je peux automatiser des fonctions grâce à cet outil.
 
 ## 📌Tâches
 
@@ -44,9 +44,9 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 
 #### Sprint 1
 
-- [x] faire l'état de l’art de ce qui existe déjà MON, POK sur google sheets : 30 min (30 min)
-- [x] suivre des tutos sur google sheets, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 5h30 (5h15)
-- [x] récupérer les tableaux google sheets de Laura et établir un cahier des charges des améliorations à effectuer : 30 min (40 min)
+- [x] faire l'état de l’art de ce qui existe déjà MON, POK sur GS : 30 min (30 min)
+- [x] suivre des tutos sur GS, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 5h30 (5h15)
+- [x] récupérer les tableaux GS de Laura et établir un cahier des charges des améliorations à effectuer : 30 min (40 min)
 - [x] améliorer les tableaux selon le CDC fixé : 2h (2h30)
 - [x] envoyer les tableaux et explications à Laura : pas estimé (30 min)
 - [x] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30 (2h)
@@ -56,15 +56,17 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 
 #### Sprint 2
 
-- [x] faire l'état de l’art de ce qui existe déjà MON, POK sur google apps script : 30 min (35 min)
-- [ ] suivre des tutos sur google apps script, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h (déjà 2h55)
-- [ ] établir un cahier des charges des améliorations à effectuer : 30 min
-- [ ] améliorer les tableaux selon le CDC fixé : 3h30
-- [ ] envoyer les tableaux et explication à Laura : 15 min
-- [ ] rédiger ce que j’ai fait et mettre en forme GitHub : 1h15
+- [x] faire l'état de l’art de ce qui existe déjà MON, POK sur GAS : 30 min (30 min)
+- [x] suivre des tutos sur GAS, consulter d’autres ressources et m’écrire une fiche récap des fonctionnalités : 4h (4h)
+- [ ] ~~établir un cahier des charges des améliorations à effectuer : 30 min~~
+- [ ] ~~améliorer les tableaux selon le CDC fixé : 3h30~~
+- [ ] ~~envoyer les tableaux et explication à Laura : 15 min~~
+- [ ] ~~rédiger ce que j’ai fait et mettre en forme GitHub : 1h15~~
+- [ ] regarder les tableaux de Laura puis choisir et réaliser un projet 1 : pas prévu (déjà 40 min)
+- [ ] choisir et réaliser un projet 2 : pas prévu (déjà )
 
 **Total d'heures : ?**  
-**Etude post mortem** : 
+**Etude post mortem** : j'ai **changé ce que je voulais faire en milieu de sprint** pour faire des projets plus cohérents avec les outils de GAS. J'ai aussi changé ma manière de faire en écrivant au fur et à mesure sur Github au lieu de tout à la fin. Ainsi le sprint a été très chamboulé.
 
 ### ⌛Horodatage
 
@@ -72,12 +74,13 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 | -------- | -------- |-------- |
 | **Sprint 1**
 Jeudi 12/09  | 3h30  | Etat de l'art ressources google sheets et début formation |
- Lundi 16/09  | 4h45  | Fin formation, récupération des tableaux de Laura, écriture CDC et début des amélioration des tableaux  |
+ Lundi 16/09  | 4h45  | Fin formation, récupération des tableaux de Laura, écriture CDC et début des améliorations des tableaux  |
  Mardi 17/09  | 1h40  | Finalisation des tableaux et envoie des tableaux et d'expication à Laura |
  Mercredi 18/09  | 1h30 | Mise au propre et rédaction sur Github |
 | **Sprint 2**
-Dimanche 09/10  | 2h30  | Etat de l'art ressources apps script et début formation |
-  Lundi 10/10  | 1h | Suite formation |
+Dimanche 06/10  | 2h30  | Etat de l'art ressources apps script et début formation |
+  Lundi 07/10  | 1h | Suite formation |
+  Mecredi 09/10  | 1h40 | Fin formation, regardé les tableaux de Laura et finalement choix du projet 1|
 
 {% enddetails %}
 
@@ -254,17 +257,16 @@ Elle est **très contente** de ces améliorations et a **immédiatement adopté 
 
 ### 📖Ressources déjà existantes
 
-J'ai trouvé de nombreux MON sur Google Apps Script que j'ai parcouru en diagonal. Je me suis particulièrement intéressée aux 2 ci-dessous car il traitent de l'envoie de mail automatisé.
+J'ai trouvé de nombreux MON sur Google Apps Script que j'ai parcouru pour voir ce qu'il était possible de faire.
 
 {% lien %}
-
-- [MON d'Ossama Abdane : Google Apps Script, Rappel anniversaire](/promos/2022-2023/Abdane-Ossama/mon/mon2.1/)
-- [MON de Thomas Pont : Google Apps Script](/promos/2022-2023/Pont-Thomas/mon/gas/)  
 - De nombreux MON recommandent là encore cette formation [Sheets-Pratique : Cours Apps Script](https://sheets-pratique.com/fr/apps-script) que j’ai donc décidé de suivre.
 
 {% endlien %}
 
 ### 🎓Formation
+
+Comme avec Google Sheet, j'ai passé plusieurs heures à suivre la formation pour mieux comprendre ce langage et rédigé ma **fiche récap** ci-dessous.
 
 {% details "Ma fiche récap pour google apps script" %}
 #### Divers fonctionnalités et variables
@@ -282,7 +284,7 @@ On retrouve aussi var au lieu de let dans certains codes
 
 **const nbVentesJanvier = 45;** déclarer une constante
 
-**//commentaire** ajouter un commentaire
+**//commentaire** ajouter un commentaire **/*** si plusieurs lignes de commentaires ***/**
 
 **valeur += 1;** ou **valeur++;** augmenter une valeur de +1
 
@@ -291,6 +293,11 @@ On retrouve aussi var au lieu de let dans certains codes
 **let nombre2 = Number('10');** ou **let nombre3 = '10' * 1;** convertir un nombre au format texte
 
 **Math.max** : trouver le max
+
+**setBackground**: applique une couleur de fond (au format CSS) aux cellules
+**setFontColor** : applique une couleur (au format CSS) au texte des cellules
+**toUpperCase** : met en majuscule
+**setFormula** : insère une formule (en anglais) dans la cellule
 
 #### Tableaux
 
@@ -307,6 +314,8 @@ console.log(tableau[1][0]); // affiche la valeur 2ème ligne et 1ère colonne
 
 **plageValeurs.push('pain');** pour ajouter une valeur à la fin  d'un tableau  
 **plageValeurs.unshift('pain');** pour ajouter une valeur au début d'un tableau
+
+**pop** : supprime la dernière valeur du tableau et **shift** : supprime la première valeur du tableau
 
 **console.log(listeDeCourses.length);** longueur d'un tableau
 
@@ -364,6 +373,49 @@ const valeur = cellule.getValue(); // on utilise la méthode getValue pour récu
 const plage = feuille.getRange('A1:E2');  
 const tableau = plage.getValues(); //retourne un tableau, contenant un tableau pour chaque ligne de la plage
 ```
+**setValue** : définit la valeur de la cellule (idem avec **setValues**)
+
+#### conditions
+
+**if** : teste une condition
+**else** : pour effectuer une autre action si la condition est fausse
+**else if** : pour ajouter des conditions intermédiaires
+```
+if (valeurA1 == '') {
+  celluleA1.setValue('A compléter');
+} else if (valeurA1 > 0) {
+  console.log('Valeur = ' + valeurA1);
+} else {
+  console.log('Valeur non valide');
+}
+```
+
+**la condition ? valeur si vrai : valeur si faux**
+```
+const age = 12;
+const texte = 'Tarif appliqué : ' + (age < 16 ? 'enfant' : 'adulte');
+
+console.log(texte); // Affiche : "Tarif appliqué : enfant"
+```
+
+**for (let i = 1; i <= 12; i++)** : déclaration variable, condition à vérifier, modification variable
+
+**while (tableau.length < 10)** : condition à vérifier
+
+**&&** : équivalent de la fonction Google Sheets ET
+**||** : équivalent de la fonction Google Sheets OU
+
+#### fonctions
+
+**function** et **return** :
+```
+// Calcule la moyenne de 2 nombres
+function moyenne(nombre1, nombre2) {
+  return (nombre1 + nombre2) / 2;
+}
+```
+
+**fonction fléchée** : const moyenne = (nombre1, nombre2) => (nombre1 + nombre2) / 2;
 
 **Exos :**
 {% details "Créer un compteur" %}
@@ -396,10 +448,38 @@ function ajoutLigne() {
 ```
 {% enddetails %}
 
+#### déclencheurs
+
+**onEdit** : après la modification d'une valeur
+
+**onOpen** : à l'ouverture du document
+
+#### menu
+
+[formation sur les menus](https://sheets-pratique.com/fr/apps-script/menus)
+Voir dans la formation l'exemple pour convertir des cellules en majuscules ou minuscules
+
+#### boîtes de dialogue
+
+[formation sur les boîtes de dialogue](https://sheets-pratique.com/fr/apps-script/boites-de-dialogue)
+**alert** permet d'afficher une boîte de dialogue avec différents paramètres possibles
+
+#### ChatGPT est votre ami
+
+J'ai remarqué en faisant les exercices que ChatGPT est vraiment très compétent pour aider à générer les fonctions, trouver les fomrules. C'est efficient de d'abord demander à ChatGPT de créer la fomrule puis de la personnaliser ou modifier petit à petit.
+
 {% enddetails %}
 
-### 💡Cahier des charges des améliorations des tableaux de Laura
+### 💡Idée de projet perso
 
-### ✅Améliorations effectuées selon le CDC
+En regardant mieux les tableaux de ma soeur, je pense qu'il n'y a pas vraiment besoin de les améliorer avec google apps script car il n'a pas beaucoup de choses à automatiser. Je change donc totalement mon sprint pour décider de consacrer les 5h30 qu'il me reste à **travailler sur d'autres projets** dans lesquels je pourrai utiliser mes connaissances et mieux prendre en main cet outil !
 
-### 👍Retours de Laura
+J'ai trouvé de l'inspiration en parcourant le [MON d'Antoine](https://francoisbrucker.github.io/do-it/promos/2022-2023/Varnerot-Antoine/mon/google-app-script/) grâce au lien ci-dessous qui présente plusieurs mini projets à faire sur google apps script.
+
+{% lien %}
+[Find inspiration with Apps Script samples](https://developers.googleblog.com/en/getting-started-is-the-hardest-part-find-inspiration-with-apps-script-samples/)
+{% endlien %}
+
+#### ✅Réalisation du projet 1 : importer des fichiers dans Google Drive à partir de Google Forms
+
+Pour réaliser ce projet, je vais suivre ce [tuto](https://developers.google.com/apps-script/samples/automations/upload-files?hl=fr) directement proposé par Google.
