@@ -72,6 +72,8 @@ C'est pour cela que j'ai décidé de créer **mon site web avec mon portfolio.**
 | Lundi 16/09 | 2H15 | Création des pages HTML + import font "Fira Sans" |
 | Mardi 17/09 | 3H30 | Création du CSS des pages |
 | Mercredi 18/09 | 1H30 | Rédaction du POK |
+| **Début Sprint 2** |
+| Mercredi 25/09 | 1H00 | Barre qui bouge |
 
 ## Contenu
 

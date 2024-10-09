@@ -31,3 +31,9 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 ## Contenu
 
 Le contenu du MON.
+
+### Horodatage
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| Dimanche 29/09  | 0H40  | Découverte de mail.node.js |
