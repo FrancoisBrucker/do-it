@@ -331,3 +331,371 @@ Ce code permet d'obtenir une feuille par manufacture qui permet de une order rev
 
 Il est possible d'améliorer le code en mettant en place un code couleur en fonction de l'importance de la commande, si cette commande résulte d'un besoin marché (un besoin client), la ligne pourrait être en rouge afin de souligner son importance. C'est une piste à étudier en second sprint.
 
+## Point d'avancement au second Sprint
+
+### Ajout d'un code couleur
+L'objectif de l'ajout du code couleur est de faciliter la relecture de la proposition automatique de commande par l'utilisateur. 
+Ainsi, le code suivant permet de surligner en jaune les lignes qui concernent des commandes jugées "importantes" car elles répondent à un besoin marché (un besoin client). Les autres commandes sont passées afin que le stock central soit au niveau des MS, il n'y a pas d'attente client derrière celles-ci. 
+
+### Code de l'ajout du code couleur
+````
+if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition CHT'].cell(row=indice_CHT,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+````
+Ce code vérifie pour chaque commande passée la valeur du Physique_Dispo. Si celui-ci est négatif, cela signifie que la somme du Stock physique dans le stok central et des commandes déjà passées à la manufacture est inférieure aux quantités passées par les marchés. Ainsi il est urgent de repasser une commande manufacture afin de répondre au besoin client.
+Dans ce cas, le code couleur "FFFF00" est attribué à la ligne, soit la couleur jaune. 
+Le résultat obtenu est le suivant : 
+![alt text](<Images/Code couleur.png>)
+
+### Code complet
+````
+import openpyxl
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+from openpyxl.styles import Font
+from openpyxl.styles import PatternFill
+
+wb = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/BD POK 1.xlsx',data_only=True)
+
+indice_max = wb['Order Review'].max_row
+
+# Création des feuilles proposition pour chaque manufacture
+wb.create_sheet(title='Proposition CHT')
+wb.create_sheet(title='Proposition ELA')
+wb.create_sheet(title='Proposition ESN')
+wb.create_sheet(title='Proposition FLE')
+wb.create_sheet(title='Proposition GOD')
+wb.create_sheet(title='Proposition MAT')
+
+# Introduction des variables
+indice_CHT=2
+indice_ELA=2
+indice_ESN=2
+indice_FLE=2
+indice_GOD=2
+indice_MAT=2
+
+
+# Mise en place des en-têtes pour les feuilles propositions
+for k in range(1,11):
+    wb['Proposition CHT'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition ELA'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition ESN'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition FLE'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition GOD'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    wb['Proposition MAT'].cell(row=1,column=k).value=wb['Order Review'].cell(row=1,column=k).value
+    
+    wb['Proposition CHT'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition CHT'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition ELA'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition ELA'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition ESN'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition ESN'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition FLE'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition FLE'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition GOD'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition GOD'].cell(row=1,column=12).value='Quantité Corrigée'
+    wb['Proposition MAT'].cell(row=1,column=11).value='Quantité Recommandée'
+    wb['Proposition MAT'].cell(row=1,column=12).value='Quantité Corrigée'
+
+for i in range(2,indice_max+1):
+    Physique_Stock = wb['Order Review'].cell(row=i,column=8).value
+    Commande_Manuf = wb['Order Review'].cell(row=i,column=9).value
+    Commande_Marche = wb['Order Review'].cell(row=i,column=10).value
+    MS = wb['Order Review'].cell(row=i,column=7).value
+    MOQ = wb['Order Review'].cell(row=i,column=6).value
+    Manufacture = wb['Order Review'].cell(row=i,column=4).value
+
+    Physique_Dispo = Physique_Stock + Commande_Manuf - Commande_Marche
+
+    if MS>Physique_Dispo :
+        R_Qty = MS - Physique_Dispo
+        if R_Qty<MOQ :
+            R_Qty = MOQ
+    else :
+        R_Qty = 0
+    
+# Copie des refs à commander dans des feuilles séparées par manufacture    
+
+    if R_Qty>0 and Manufacture == 'CHT':
+        for j in range(1,11):
+            wb['Proposition CHT'].cell(row=indice_CHT,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition CHT'].cell(row=indice_CHT,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition CHT'].cell(row=indice_CHT,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_CHT=indice_CHT+1
+    
+    if R_Qty>0 and Manufacture == 'ELA':
+        for j in range(1,11):
+            wb['Proposition ELA'].cell(row=indice_ELA,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition ELA'].cell(row=indice_ELA,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition ELA'].cell(row=indice_ELA,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_ELA=indice_ELA+1
+    if R_Qty>0 and Manufacture == 'ESN':
+        for j in range(1,11):
+            wb['Proposition ESN'].cell(row=indice_ESN,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition ESN'].cell(row=indice_ESN,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition ESN'].cell(row=indice_ESN,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_ESN=indice_ESN+1  
+    if R_Qty>0 and Manufacture == 'FLE':
+        for j in range(1,11):
+            wb['Proposition FLE'].cell(row=indice_FLE,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition FLE'].cell(row=indice_FLE,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition FLE'].cell(row=indice_FLE,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_FLE=indice_FLE+1
+    if R_Qty>0 and Manufacture == 'GOD':
+        for j in range(1,11):
+            wb['Proposition GOD'].cell(row=indice_GOD,column=j).value=wb['Order Review'].cell(row=i,column=j).value
+            wb['Proposition GOD'].cell(row=indice_GOD,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition GOD'].cell(row=indice_GOD,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_GOD=indice_GOD+1
+    if R_Qty>0 and Manufacture == 'MAT':
+        for j in range(1,11):
+            wb['Proposition MAT'].cell(row=indice_MAT,column=j).value=wb['Order Review'].cell(row=i,column=j).value 
+            wb['Proposition MAT'].cell(row=indice_MAT,column=11).value=R_Qty
+        if Physique_Dispo<0 :
+            for l in range(1,13):
+                wb['Proposition MAT'].cell(row=indice_MAT,column=l).fill=PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+        indice_MAT=indice_MAT+1
+
+wb.save('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx')       
+
+
+wb2 = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx',data_only=True)
+
+# Suivi de l'historique
+hst=wb2['Suivi Historique Four'].cell(row=2,column=16).value
+
+# Création des bons de commande
+for i in range(2,indice_CHT):
+    # Prise en compte des valeurs corrigées par l'utilisateur
+    if wb2['Proposition CHT'].cell(row=i,column=12).value is None :
+        wb2['Proposition CHT'].cell(row=i,column=12).value=wb2['Proposition CHT'].cell(row=i,column=11).value
+    # Calcul des prix de lot
+    wb2['Proposition CHT'].cell(row=i,column=13).value = wb2['Proposition CHT'].cell(row=i,column=5).value * wb2['Proposition CHT'].cell(row=i,column=12).value
+    # Caclul des dates demandées en fonction du lead time de la manufacture
+    wb2['Proposition CHT'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+3)).strftime('%d/%m/%Y')
+# Supression des colonnes 
+wb2['Proposition CHT'].delete_cols(4,8)
+wb2['Proposition CHT'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition CHT'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition CHT'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition CHT'].cell(row=indice_CHT+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_CHT):
+    total+=wb2['Proposition CHT'].cell(row=j,column=4).value
+    total2+=wb2['Proposition CHT'].cell(row=j,column=5).value
+wb2['Proposition CHT'].cell(row=indice_CHT+1,column=4).value=total
+wb2['Proposition CHT'].cell(row=indice_CHT+1,column=5).value=total2
+
+# Ajout Historique CHT
+wb2['Suivi Historique Four'].cell(row=3,column=hst+1).value = total
+
+# Mise en page 
+for j in range(1,7) :
+    wb2['Proposition CHT'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition CHT'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition CHT'].title = 'BDC CHT'
+
+# Répétition pour ELA
+for i in range(2,indice_ELA):
+    if wb2['Proposition ELA'].cell(row=i,column=12).value is None :
+        wb2['Proposition ELA'].cell(row=i,column=12).value=wb2['Proposition ELA'].cell(row=i,column=11).value
+    wb2['Proposition ELA'].cell(row=i,column=13).value = wb2['Proposition ELA'].cell(row=i,column=5).value * wb2['Proposition ELA'].cell(row=i,column=12).value
+    wb2['Proposition ELA'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+2)).strftime('%d/%m/%Y')
+wb2['Proposition ELA'].delete_cols(4,8)
+wb2['Proposition ELA'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition ELA'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition ELA'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition ELA'].cell(row=indice_ELA+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_ELA):
+    total+=wb2['Proposition ELA'].cell(row=j,column=4).value
+    total2+=wb2['Proposition ELA'].cell(row=j,column=5).value
+wb2['Proposition ELA'].cell(row=indice_ELA+1,column=4).value=total
+wb2['Proposition ELA'].cell(row=indice_ELA+1,column=5).value=total2
+
+# Ajout Historique ELA
+wb2['Suivi Historique Four'].cell(row=4,column=hst+1).value = total
+
+for j in range(1,7) :
+    wb2['Proposition ELA'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition ELA'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition ELA'].title = 'BDC ELA'
+
+# Répétition pour ESN
+for i in range(2,indice_ESN):
+    if wb2['Proposition ESN'].cell(row=i,column=12).value is None :
+        wb2['Proposition ESN'].cell(row=i,column=12).value=wb2['Proposition ESN'].cell(row=i,column=11).value
+    wb2['Proposition ESN'].cell(row=i,column=13).value = wb2['Proposition ESN'].cell(row=i,column=5).value * wb2['Proposition ESN'].cell(row=i,column=12).value
+    wb2['Proposition ESN'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+2)).strftime('%d/%m/%Y')
+wb2['Proposition ESN'].delete_cols(4,8)
+wb2['Proposition ESN'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition ESN'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition ESN'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition ESN'].cell(row=indice_ESN+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_ESN):
+    total+=wb2['Proposition ESN'].cell(row=j,column=4).value
+    total2+=wb2['Proposition ESN'].cell(row=j,column=5).value
+wb2['Proposition ESN'].cell(row=indice_ESN+1,column=4).value=total
+wb2['Proposition ESN'].cell(row=indice_ESN+1,column=5).value=total2
+
+# Ajout Historique ESN
+wb2['Suivi Historique Four'].cell(row=5,column=hst+1).value = total
+
+for j in range(1,7) :
+    wb2['Proposition ESN'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition ESN'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition ESN'].title = 'BDC ESN'
+
+# Répétition pour FLE
+for i in range(2,indice_FLE):
+    if wb2['Proposition FLE'].cell(row=i,column=12).value is None :
+        wb2['Proposition FLE'].cell(row=i,column=12).value=wb2['Proposition FLE'].cell(row=i,column=11).value
+    wb2['Proposition FLE'].cell(row=i,column=13).value = wb2['Proposition FLE'].cell(row=i,column=5).value * wb2['Proposition FLE'].cell(row=i,column=12).value
+    wb2['Proposition FLE'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+2)).strftime('%d/%m/%Y')
+wb2['Proposition FLE'].delete_cols(4,8)
+wb2['Proposition FLE'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition FLE'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition FLE'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition FLE'].cell(row=indice_FLE+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_FLE):
+    total+=wb2['Proposition FLE'].cell(row=j,column=4).value
+    total2+=wb2['Proposition FLE'].cell(row=j,column=5).value
+wb2['Proposition FLE'].cell(row=indice_FLE+1,column=4).value=total
+wb2['Proposition FLE'].cell(row=indice_FLE+1,column=5).value=total2
+
+# Ajout Historique FLE
+wb2['Suivi Historique Four'].cell(row=6,column=hst+1).value = total
+
+for j in range(1,7) :
+    wb2['Proposition FLE'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition FLE'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition FLE'].title = 'BDC FLE'
+
+# Répétition pour GOD
+for i in range(2,indice_GOD):
+    if wb2['Proposition GOD'].cell(row=i,column=12).value is None :
+        wb2['Proposition GOD'].cell(row=i,column=12).value=wb2['Proposition GOD'].cell(row=i,column=11).value
+    wb2['Proposition GOD'].cell(row=i,column=13).value = wb2['Proposition GOD'].cell(row=i,column=5).value * wb2['Proposition GOD'].cell(row=i,column=12).value
+    wb2['Proposition GOD'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+1)).strftime('%d/%m/%Y')
+wb2['Proposition GOD'].delete_cols(4,8)
+wb2['Proposition GOD'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition GOD'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition GOD'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition GOD'].cell(row=indice_GOD+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_GOD):
+    total+=wb2['Proposition GOD'].cell(row=j,column=4).value
+    total2+=wb2['Proposition GOD'].cell(row=j,column=5).value
+wb2['Proposition GOD'].cell(row=indice_GOD+1,column=4).value=total
+wb2['Proposition GOD'].cell(row=indice_GOD+1,column=5).value=total2
+
+# Ajout Historique GOD
+wb2['Suivi Historique Four'].cell(row=7,column=hst+1).value = total
+
+for j in range(1,7) :
+    wb2['Proposition GOD'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition GOD'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition GOD'].title = 'BDC GOD'
+
+# Répétition pour MAT
+for i in range(2,indice_MAT):
+    if wb2['Proposition MAT'].cell(row=i,column=12).value is None :
+        wb2['Proposition MAT'].cell(row=i,column=12).value=wb2['Proposition MAT'].cell(row=i,column=11).value
+    wb2['Proposition MAT'].cell(row=i,column=13).value = wb2['Proposition MAT'].cell(row=i,column=5).value * wb2['Proposition MAT'].cell(row=i,column=12).value
+    wb2['Proposition MAT'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+2)).strftime('%d/%m/%Y')
+wb2['Proposition MAT'].delete_cols(4,8)
+wb2['Proposition MAT'].cell(row=1,column=4).value='Quantité'
+wb2['Proposition MAT'].cell(row=1,column=5).value='Prix lot'
+wb2['Proposition MAT'].cell(row=1,column=6).value='Date demandée'
+wb2['Proposition MAT'].cell(row=indice_MAT+1,column=3).value='TOTAL'
+total=0
+total2=0
+for j in range(2,indice_MAT):
+    total+=wb2['Proposition MAT'].cell(row=j,column=4).value
+    total2+=wb2['Proposition MAT'].cell(row=j,column=5).value
+wb2['Proposition MAT'].cell(row=indice_MAT+1,column=4).value=total
+wb2['Proposition MAT'].cell(row=indice_MAT+1,column=5).value=total2
+
+# Ajout Historique MAT
+wb2['Suivi Historique Four'].cell(row=8,column=hst+1).value = total
+
+for j in range(1,7) :
+    wb2['Proposition MAT'].cell(row=1,column=j).font = Font(bold=True)
+    wb2['Proposition MAT'].cell(row=1,column=j).fill=PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
+wb2['Proposition MAT'].title = 'BDC MAT'
+
+#Supression des feuilles n'étant pas des bons de commande
+del wb2['Order Review']
+del wb2['Lead Time']
+
+# Suivi de l'historique
+
+# Graphe Historique CHT
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=3, max_col=13,max_row=3)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique CHT'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'B12')
+
+# Graphe Historique ELA
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=4, max_col=13,max_row=4)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique ELA'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'J12')
+
+# Graphe Historique ESN
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=5, max_col=13,max_row=5)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique ESN'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'B27')
+
+# Graphe Historique FLE
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=6, max_col=13,max_row=6)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique FLE'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'J27')
+
+# Graphe Historique GOD
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=7, max_col=13,max_row=7)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique GOD'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'B42')
+
+# Graphe Historique MAT
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=7, max_col=13,max_row=7)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique MAT'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'J42')
+
+wb2.save('/Users/charlescook/Desktop/DO IT/bon_de_commande.xlsx')
+````
