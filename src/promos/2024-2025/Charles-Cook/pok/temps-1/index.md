@@ -66,9 +66,18 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 
 ## Sommaire
 
-+ Présnetation de l'outil
++ Contexte
++ Présentation de l'outil
 + Point d'avancement au premier Sprint
-+ 
++ Point d'avancement au second Sprint
+
+## Contexte : 
+Pour ce POK, nous nous placons dans le cas d'une entreprise qui vend des produits finis. Ces produits sont référencés par numéro de références et par taille. 
+La fabrication des produits est effectuée par diverses manufactures. Lorsqu'elle passe une commande à une manufacture, l'entreprise conserve alors les quantités dans un stock central. Les marchés sont les filiales de l'entreprise à l'international, et ce sont elles qui sont en contact direct avec le client final. Afin de répondre à la demande client, une filiale passe une commande à l'entreprise, qui si elle a les quantités nécéssaires en stock centrale, répond directement à la demande. Sinon, l'entreprise passe alors une commande à la manufacture.
+Il y a donc 3 niveaux à identifier clairement pour comprendre le déroulement de ce POK : 
+- Niveau manufacture
+- Niveau entreprise
+- Niveau marchés (filiales)
 
 ## Présentation de l'outil :
 Cet outil à pour but de répondre à plusieurs objectifs utilisateur :
@@ -185,10 +194,10 @@ Cette bas de donnée doit contenir les éléments suivants :
 + Le fournisseur. L'objectif est de créer un fichier par fournisseur, il est donc nécessaire de rensigner le fournisseur chargé de la production de chaque référence. 
 + Le prix.
 + Le MOQ (Minimum Order Quantity). Le prix auquel est acheté une référence auprès du fournisseur dépend de la taille de lot, plus celle-ci est grande, plus le fournisseur peut proposer un prix faibleà l'unité. Ainsi, une taille de lot minimale (MOQ) est décidée afin de garantir le prix, et toutes les commandes passées doivent être supérieures au MOQ.
-+ Le MS (Minimum Stock). Il s'agit du seuil qui déclenche automatiquement une nouvelle commande afin d'éviter la rupture de stock.
++ Le MS (Minimum Stock). Il s'agit du seuil qui déclenche automatiquement une nouvelle commande pour le stock central afin d'éviter la rupture de stock.
 + Le physique en stock. Il s'agit du stock central physique. 
-+ Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique disponible. 
-+ Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées.
++ Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique en stock. 
++ Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées. Ces quantités apparaissent donc encore dans le stock central physique. 
 
 ![alt text](Images/BDPOK1.png)
 
