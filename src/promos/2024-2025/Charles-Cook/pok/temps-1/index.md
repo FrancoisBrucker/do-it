@@ -388,8 +388,44 @@ Le résultat obtenu en faisant tourner le code est donc le suivant.
 
 ![alt text](<Images/Bon de commande.png>)
 
+### Historisation des commandes mensuelles
+Il peut être intéressant, au niveau de l'analyse et de la vérification avant d'envoyer le bon de commande, d'avoir une vision globale sur les quantités qui ont été commandées lors des précédentes commeandes mensuelles. Pour cela, nous allons tenter de mettre en place un suivi de l'hitorique sur l'année. 
+Nous considererons que les commandes mensuelles de janvier à octobre ont été passées. La commande en cours est la commande mensuelle de novembre. 
+
+Cette partie historisation permet notamment de pouvoir comparer les quantités afin de détecter d'éventuelles erreur dans la saisie des commandes des marchés par exemple. 
+
+#### Création d'une feuille *Suivi Historique Fournisseur*
+Afin de pouvoir suivre de manière précise l'historique des commandes mensuelles, nous avons créé une feuille Historique : 
+![alt text](<Images/Historique BD.png>)
+
+La cellule *P2* doit être modifiée de manière manuelle par l'utilisateur, afin de renseigner le commande mensuelle de quelle mois va être passée. Ainsi, cela permet au moment de la génération des bons de commande finaux d'avoir une simulation des quantités par rapport aux précédentes. 
+
+#### Synthèse des historiques dans la création des bons de commande
+Au moment de la génération des bons de commande, le code suibvant permet d'entrer les quantités afin de compléter le tableau de suivi : 
+````
+# Ajout Historique CHT
+wb2['Suivi Historique Four'].cell(row=3,column=hst+1).value = total
+````
+On obtient ainsi le tableau complété suivant : 
+![alt text](<Images/Historique completed.png>)
+
+Afin d'avoir une présentation plus visuelle de l'évolution des quantités de commande, le code suivant permet de présenter les données sous forme de graphique en barres, par manufacture :
+````
+# Graphe Historique CHT
+refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=3, max_col=13,max_row=3)
+seriesObj = openpyxl.chart.Series(refObj, title='Qty commande')
+chartObj = openpyxl.chart.BarChart()
+chartObj.title = 'Historique CHT'
+chartObj.append(seriesObj)
+wb2['Suivi Historique Four'].add_chart(chartObj, 'B12')
+````
+
+Le résultat obtenu est le suivant : 
+![alt text](<Images/Tableaux historiuqes.png>)
 
 ### Code complet
+
+Code pour la partie génération de la proposition des quantités de commande.
 ````
 import openpyxl
 from datetime import datetime
@@ -512,6 +548,7 @@ for i in range(2,indice_max+1):
 wb.save('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx')       
 ````
 
+Code pour la partie génération des bons de comman de finaux et mise à jour de l'historique. 
 ````
 wb2 = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx',data_only=True)
 
