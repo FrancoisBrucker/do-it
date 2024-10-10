@@ -108,7 +108,7 @@ import openpyxl
 wb = openpyxl.load_workbook('Exemple.xsl',read_only=True)
 ````
 
-#### Manipuler les feuilles
+##### Manipuler les feuilles
 Une fois le classeur chargé, il est possible d'accéder aux feuilles qui le composent :
 ````
 import openpyxl
@@ -125,7 +125,7 @@ ws = wb['NameSheet']
 Nom_feuille = ws.title
 ````
 
-#### Manipuler les cellules
+##### Manipuler les cellules
 On peut séléctionner et obtenir la valuer d'une cellule grâce à ses coordonnées : 
 ````
 import openpyxl
@@ -141,10 +141,10 @@ Cell = ws['A1']
 Cell.value, Cell.column, Cell.row
 ````
 
-#### Dimensionner un tableau
+##### Dimensionner un tableau
 Il est possible d'obtenir les dimensions d'un tableau en utilisant les attribut ```max.row```et ```max.column``` qui renvoient respectivmement le numéro de la dernière ligne et de la dernière colonne. 
 
-#### Manipuler lignes et colonnes
+##### Manipuler lignes et colonnes
 Il est possible de séletionner des lignes ou des colonnes d'un coup :
 ````
 import openpyxl
@@ -157,7 +157,7 @@ ws = wb['NameSheet']
 tuple(ws['A7':'B9'])
 ````
 
-#### Créer un classeur Excel
+##### Créer un classeur Excel
 Nous pouvons créer un nouveau classeur Excel avec la fonction ```openpyxl.Workbook()```. Par défaut, le classeur Excel créé est vide et contient une seule feuille nommé *Sheet*.
 ````
 import openpyxl
@@ -167,7 +167,7 @@ wb = openpyxl.Workbook()
 ````
 Pour renommer le classeur ou la feuille, il suffit d'utiliser les attributs vus précédemment.
 
-#### Créer ou supprimer une feuille
+##### Créer ou supprimer une feuille
 On peut manipuler le nombre de feuilles dans un claseur en en créant ou en en suppimant. Ainsi :
 ````
 import openpyxl
