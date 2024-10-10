@@ -337,7 +337,7 @@ Il est possible d'améliorer le code en mettant en place un code couleur en fonc
 L'objectif de l'ajout du code couleur est de faciliter la relecture de la proposition automatique de commande par l'utilisateur. 
 Ainsi, le code suivant permet de surligner en jaune les lignes qui concernent des commandes jugées "importantes" car elles répondent à un besoin marché (un besoin client). Les autres commandes sont passées afin que le stock central soit au niveau des MS, il n'y a pas d'attente client derrière celles-ci. 
 
-### Code de l'ajout du code couleur
+#### Code de l'ajout du code couleur
 ````
 if Physique_Dispo<0 :
             for l in range(1,13):
@@ -347,6 +347,47 @@ Ce code vérifie pour chaque commande passée la valeur du Physique_Dispo. Si ce
 Dans ce cas, le code couleur "FFFF00" est attribué à la ligne, soit la couleur jaune. 
 Le résultat obtenu est le suivant : 
 ![alt text](<Images/Code couleur.png>)
+
+### Création du fichier des bon de commande finaux
+
+#### Objectif
+L'objectif de cette partie est d'avoir un fihcier Excel comprenant tous les bons de commande par manufacture. Ceux-ci doivent contenir les informations suivantes : 
+- Code référence
+- Taille
+- SKU
+- Quantité de commande
+- Prix du lot
+- Date demandée
+
+#### Code pour le bons de commande
+````
+# Création des bons de commande
+for i in range(2,indice_CHT):
+    # Prise en compte des valeurs corrigées par l'utilisateur
+    if wb2['Proposition CHT'].cell(row=i,column=12).value is None :
+        wb2['Proposition CHT'].cell(row=i,column=12).value=wb2['Proposition CHT'].cell(row=i,column=11).value
+````
+Cette partie copie les quantités de commande finales : la valeur proposée automatiquement s'il n'y a pas eu de modification faite par l'utilisateur, la valeur entrée manuellement par l'utilisateur si un changement a été effectué.
+
+````
+    # Calcul des prix de lot
+    wb2['Proposition CHT'].cell(row=i,column=13).value = wb2['Proposition CHT'].cell(row=i,column=5).value * wb2['Proposition CHT'].cell(row=i,column=12).value
+````
+Cette partie calcule le prix de chaque lot en mulitpliant simplement la quantité finale de commande par le prix unitaire.
+
+````
+    # Caclul des dates demandées en fonction du lead time de la manufacture
+    wb2['Proposition CHT'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+3)).strftime('%d/%m/%Y')
+````
+Cette partie va chercher le lead time par manufacture dans la feuille *Lead Time* et calcul donc la date demandée en fonction de la date à laquelle les bons de commande sont édités. 
+
+Les colonnes restantes qui ne sont pas nécessaires dans le bon de commande sont ensuite supprimées, et un total par manufacture est calculé (un total en nombre de pièces et un total en terme financier). 
+
+#### Résultat des bons de commande
+Le résultat obtenu en faisant tourner le code est donc le suivant.
+
+![alt text](<Images/Bon de commande.png>)
+
 
 ### Code complet
 ````
@@ -469,8 +510,9 @@ for i in range(2,indice_max+1):
         indice_MAT=indice_MAT+1
 
 wb.save('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx')       
+````
 
-
+````
 wb2 = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx',data_only=True)
 
 # Suivi de l'historique
