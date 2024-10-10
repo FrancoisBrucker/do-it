@@ -210,9 +210,19 @@
 </table>
 <h2>Sommaire</h2>
 <ul>
-<li>Présnetation de l'outil</li>
+<li>Contexte</li>
+<li>Présentation de l'outil</li>
 <li>Point d'avancement au premier Sprint</li>
-<li></li>
+<li>Point d'avancement au second Sprint</li>
+</ul>
+<h2>Contexte :</h2>
+<p>Pour ce POK, nous nous placons dans le cas d'une entreprise qui vend des produits finis. Ces produits sont référencés par numéro de références et par taille.
+La fabrication des produits est effectuée par diverses manufactures. Lorsqu'elle passe une commande à une manufacture, l'entreprise conserve alors les quantités dans un stock central. Les marchés sont les filiales de l'entreprise à l'international, et ce sont elles qui sont en contact direct avec le client final. Afin de répondre à la demande client, une filiale passe une commande à l'entreprise, qui si elle a les quantités nécéssaires en stock centrale, répond directement à la demande. Sinon, l'entreprise passe alors une commande à la manufacture.
+Il y a donc 3 niveaux à identifier clairement pour comprendre le déroulement de ce POK :</p>
+<ul>
+<li>Niveau manufacture</li>
+<li>Niveau entreprise</li>
+<li>Niveau marchés (filiales)</li>
 </ul>
 <h2>Présentation de l'outil :</h2>
 <p>Cet outil à pour but de répondre à plusieurs objectifs utilisateur :</p>
@@ -312,10 +322,10 @@ Cette bas de donnée doit contenir les éléments suivants :</p>
 <li>Le fournisseur. L'objectif est de créer un fichier par fournisseur, il est donc nécessaire de rensigner le fournisseur chargé de la production de chaque référence.</li>
 <li>Le prix.</li>
 <li>Le MOQ (Minimum Order Quantity). Le prix auquel est acheté une référence auprès du fournisseur dépend de la taille de lot, plus celle-ci est grande, plus le fournisseur peut proposer un prix faibleà l'unité. Ainsi, une taille de lot minimale (MOQ) est décidée afin de garantir le prix, et toutes les commandes passées doivent être supérieures au MOQ.</li>
-<li>Le MS (Minimum Stock). Il s'agit du seuil qui déclenche automatiquement une nouvelle commande afin d'éviter la rupture de stock.</li>
+<li>Le MS (Minimum Stock). Il s'agit du seuil qui déclenche automatiquement une nouvelle commande pour le stock central afin d'éviter la rupture de stock.</li>
 <li>Le physique en stock. Il s'agit du stock central physique.</li>
-<li>Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique disponible.</li>
-<li>Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées.</li>
+<li>Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique en stock.</li>
+<li>Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées. Ces quantités apparaissent donc encore dans le stock central physique.</li>
 </ul>
 <p><img src="Images/BDPOK1.png" alt="alt text"></p>
 <h4>Lead Time</h4>
