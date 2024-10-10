@@ -248,7 +248,7 @@ wb = openpyxl.load_workbook('Exemple.xsl',data_only=True)
 
 wb = openpyxl.load_workbook('Exemple.xsl',read_only=True)
 </code></pre>
-<h4>Manipuler les feuilles</h4>
+<h5>Manipuler les feuilles</h5>
 <p>Une fois le classeur chargé, il est possible d'accéder aux feuilles qui le composent :</p>
 <pre><code>import openpyxl
 
@@ -263,7 +263,7 @@ ws = wb['NameSheet']
 # Obtenir le nom d'une feuille comme un type *String*
 Nom_feuille = ws.title
 </code></pre>
-<h4>Manipuler les cellules</h4>
+<h5>Manipuler les cellules</h5>
 <p>On peut séléctionner et obtenir la valuer d'une cellule grâce à ses coordonnées :</p>
 <pre><code>import openpyxl
 
@@ -277,9 +277,9 @@ Cell = ws['A1']
 # Obtenir la valeur, la colonne et la ligne de la cellule A1
 Cell.value, Cell.column, Cell.row
 </code></pre>
-<h4>Dimensionner un tableau</h4>
+<h5>Dimensionner un tableau</h5>
 <p>Il est possible d'obtenir les dimensions d'un tableau en utilisant les attribut <code>max.row</code>et <code>max.column</code> qui renvoient respectivmement le numéro de la dernière ligne et de la dernière colonne.</p>
-<h4>Manipuler lignes et colonnes</h4>
+<h5>Manipuler lignes et colonnes</h5>
 <p>Il est possible de séletionner des lignes ou des colonnes d'un coup :</p>
 <pre><code>import openpyxl
 
@@ -290,7 +290,7 @@ ws = wb['NameSheet']
 # Sélectionner toutes les cellules de A7 à B9
 tuple(ws['A7':'B9'])
 </code></pre>
-<h4>Créer un classeur Excel</h4>
+<h5>Créer un classeur Excel</h5>
 <p>Nous pouvons créer un nouveau classeur Excel avec la fonction <code>openpyxl.Workbook()</code>. Par défaut, le classeur Excel créé est vide et contient une seule feuille nommé <em>Sheet</em>.</p>
 <pre><code>import openpyxl
 
@@ -298,7 +298,7 @@ tuple(ws['A7':'B9'])
 wb = openpyxl.Workbook()
 </code></pre>
 <p>Pour renommer le classeur ou la feuille, il suffit d'utiliser les attributs vus précédemment.</p>
-<h4>Créer ou supprimer une feuille</h4>
+<h5>Créer ou supprimer une feuille</h5>
 <p>On peut manipuler le nombre de feuilles dans un claseur en en créant ou en en suppimant. Ainsi :</p>
 <pre><code>import openpyxl
 
