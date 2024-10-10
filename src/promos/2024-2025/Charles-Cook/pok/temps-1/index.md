@@ -21,7 +21,7 @@ Aucun prérequis
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[Automate Boring Stuff With Python](https://automatetheboringstuff.com/#toc)
 
 {% endlien %}
 
