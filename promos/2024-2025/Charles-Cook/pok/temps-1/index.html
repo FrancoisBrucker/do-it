@@ -455,7 +455,7 @@ wb.save('/Users/charlescook/Desktop/DO IT/fichier_modifié.xlsx')
 <h3>Ajout d'un code couleur</h3>
 <p>L'objectif de l'ajout du code couleur est de faciliter la relecture de la proposition automatique de commande par l'utilisateur.
 Ainsi, le code suivant permet de surligner en jaune les lignes qui concernent des commandes jugées &quot;importantes&quot; car elles répondent à un besoin marché (un besoin client). Les autres commandes sont passées afin que le stock central soit au niveau des MS, il n'y a pas d'attente client derrière celles-ci.</p>
-<h3>Code de l'ajout du code couleur</h3>
+<h4>Code de l'ajout du code couleur</h4>
 <pre><code>if Physique_Dispo&lt;0 :
             for l in range(1,13):
                 wb['Proposition CHT'].cell(row=indice_CHT,column=l).fill=PatternFill(start_color=&quot;FFFF00&quot;, end_color=&quot;FFFF00&quot;, fill_type=&quot;solid&quot;)
@@ -464,6 +464,37 @@ Ainsi, le code suivant permet de surligner en jaune les lignes qui concernent de
 Dans ce cas, le code couleur &quot;FFFF00&quot; est attribué à la ligne, soit la couleur jaune.
 Le résultat obtenu est le suivant :
 <img src="Images/Code%20couleur.png" alt="alt text"></p>
+<h3>Création du fichier des bon de commande finaux</h3>
+<h4>Objectif</h4>
+<p>L'objectif de cette partie est d'avoir un fihcier Excel comprenant tous les bons de commande par manufacture. Ceux-ci doivent contenir les informations suivantes :</p>
+<ul>
+<li>Code référence</li>
+<li>Taille</li>
+<li>SKU</li>
+<li>Quantité de commande</li>
+<li>Prix du lot</li>
+<li>Date demandée</li>
+</ul>
+<h4>Code pour le bons de commande</h4>
+<pre><code># Création des bons de commande
+for i in range(2,indice_CHT):
+    # Prise en compte des valeurs corrigées par l'utilisateur
+    if wb2['Proposition CHT'].cell(row=i,column=12).value is None :
+        wb2['Proposition CHT'].cell(row=i,column=12).value=wb2['Proposition CHT'].cell(row=i,column=11).value
+</code></pre>
+<p>Cette partie copie les quantités de commande finales : la valeur proposée automatiquement s'il n'y a pas eu de modification faite par l'utilisateur, la valeur entrée manuellement par l'utilisateur si un changement a été effectué.</p>
+<pre><code>    # Calcul des prix de lot
+    wb2['Proposition CHT'].cell(row=i,column=13).value = wb2['Proposition CHT'].cell(row=i,column=5).value * wb2['Proposition CHT'].cell(row=i,column=12).value
+</code></pre>
+<p>Cette partie calcule le prix de chaque lot en mulitpliant simplement la quantité finale de commande par le prix unitaire.</p>
+<pre><code>    # Caclul des dates demandées en fonction du lead time de la manufacture
+    wb2['Proposition CHT'].cell(row=i,column=14).value = (datetime.now() + relativedelta(months=+3)).strftime('%d/%m/%Y')
+</code></pre>
+<p>Cette partie va chercher le lead time par manufacture dans la feuille <em>Lead Time</em> et calcul donc la date demandée en fonction de la date à laquelle les bons de commande sont édités.</p>
+<p>Les colonnes restantes qui ne sont pas nécessaires dans le bon de commande sont ensuite supprimées, et un total par manufacture est calculé (un total en nombre de pièces et un total en terme financier).</p>
+<h4>Résultat des bons de commande</h4>
+<p>Le résultat obtenu en faisant tourner le code est donc le suivant.</p>
+<p><img src="Images/Bon%20de%20commande.png" alt="alt text"></p>
 <h3>Code complet</h3>
 <pre><code>import openpyxl
 from datetime import datetime
@@ -584,9 +615,8 @@ for i in range(2,indice_max+1):
         indice_MAT=indice_MAT+1
 
 wb.save('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx')       
-
-
-wb2 = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx',data_only=True)
+</code></pre>
+<pre><code>wb2 = openpyxl.load_workbook('/Users/charlescook/Desktop/DO IT/proposition_commande.xlsx',data_only=True)
 
 # Suivi de l'historique
 hst=wb2['Suivi Historique Four'].cell(row=2,column=16).value
