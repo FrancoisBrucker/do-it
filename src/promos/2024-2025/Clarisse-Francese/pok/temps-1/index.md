@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "POK 1 : artiste en détresse"
+title: "POK 1 : artiste en détresse (google sheets et apps script)"
 authors:
   - Clarisse Francese
 
@@ -29,6 +29,8 @@ Ressources mentionnées dans ce POK :
 - [Formation sheets-Pratique.com](https://sheets-pratique.com/fr/cours)
 - [Récap fonctions qui existent](https://sheets-pratique.com/fr/fonctions).
 - [Générateur de formule pour extraire des données](https://sheets-pratique.com/fr/utilitaires/formule-extraction).
+- [Sheets-Pratique : Cours Apps Script](https://sheets-pratique.com/fr/apps-script)
+- [Find inspiration with Apps Script samples](https://developers.googleblog.com/en/getting-started-is-the-hardest-part-find-inspiration-with-apps-script-samples/)
 
 {% endlien %}
 
@@ -51,7 +53,7 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 - [x] envoyer les tableaux et explications à Laura : pas estimé (30 min)
 - [x] rédiger ce que j’ai fait et mettre en forme GitHub : 1h30 (2h)
 
-**Total d'heures : 11h25**  
+**Total d'heures sprint 1 : 11h25**  
 **Etude post mortem** : dans mon planning intitial, j'avais oublié de prévoir un temps d'envoie des tableaux et d'explications à Laura et j'ai un peu sous-estimé le temps sur google sheet et le temps de rédaction et de prise en main de GitHub.
 
 #### Sprint 2
@@ -62,10 +64,11 @@ Objectif général : **optimiser les tableaux de comptabilité** de ma soeur Lau
 - [ ] ~~améliorer les tableaux selon le CDC fixé : 3h30~~
 - [ ] ~~envoyer les tableaux et explication à Laura : 15 min~~
 - [ ] ~~rédiger ce que j’ai fait et mettre en forme GitHub : 1h15~~
-- [ ] regarder les tableaux de Laura puis choisir et réaliser un projet 1 : pas prévu (déjà 40 min)
-- [ ] choisir et réaliser un projet 2 : pas prévu (déjà )
+- [x] regarder les tableaux de Laura puis choisir et essayer un projet 1 : pas prévu (2h40)
+- [x] choisir et réaliser un projet 2 : pas prévu (30 min)
+- [x] choisir et essayer un projet 3 : pas prévu (1h)
 
-**Total d'heures : ?**  
+**Total d'heures sprint 2 : 9h10**  oui, techniquement il manque 50 min mais vu que j'avais dépassé de 1h25 au sprint 1, j'ai bien passé **plus de 20h sur le POK** au total  
 **Etude post mortem** : j'ai **changé ce que je voulais faire en milieu de sprint** pour faire des projets plus cohérents avec les outils de GAS. J'ai aussi changé ma manière de faire en écrivant au fur et à mesure sur Github au lieu de tout à la fin. Ainsi le sprint a été très chamboulé.
 
 ### ⌛Horodatage
@@ -80,11 +83,18 @@ Jeudi 12/09  | 3h30  | Etat de l'art ressources google sheets et début formatio
 | **Sprint 2**
 Dimanche 06/10  | 2h30  | Etat de l'art ressources apps script et début formation |
   Lundi 07/10  | 1h | Suite formation |
-  Mecredi 09/10  | 1h40 | Fin formation, regardé les tableaux de Laura et finalement choix du projet 1|
+  Mecredi 09/10  | 3h40 | Fin formation, regardé les tableaux de Laura et tentative projet 1|
+  Jeudi 10/10  | 2h | Projets 2 et 3 et mise en forme sur GitHub|
 
 {% enddetails %}
 
-## 1️⃣POK : sprint 1
+## Sommaire
+
+- [POK : sprint 1](#POK1)
+- [POK : sprint 2](#POK2)
+- [Conclusion de ce POK 1](#conclusion)
+
+<h2 id=POK1> 1️⃣POK : sprint 1</h2>
 
 ### 📖Ressources déjà existantes
 
@@ -253,14 +263,14 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [c
 
 Elle est **très contente** de ces améliorations et a **immédiatement adopté cette nouvelle version**. Elle aussi regrette l'affichage du TCD dans la feuille "créé bilan 2024" car elle le trouve pas instinctif (on voit mal les séparations entre les villes) mais c'est un modèle imposé par GS donc je ne peux pas améliorer ce point là.
 
-## 2️⃣POK : sprint 2
+<h2 id=POK2> 2️⃣POK : sprint 2</h2>
 
 ### 📖Ressources déjà existantes
 
 J'ai trouvé de nombreux MON sur Google Apps Script que j'ai parcouru pour voir ce qu'il était possible de faire.
 
 {% lien %}
-- De nombreux MON recommandent là encore cette formation [Sheets-Pratique : Cours Apps Script](https://sheets-pratique.com/fr/apps-script) que j’ai donc décidé de suivre.
+De nombreux MON recommandent là encore cette formation [Sheets-Pratique : Cours Apps Script](https://sheets-pratique.com/fr/apps-script) que j’ai donc décidé de suivre.
 
 {% endlien %}
 
@@ -470,7 +480,7 @@ J'ai remarqué en faisant les exercices que ChatGPT est vraiment très compéten
 
 {% enddetails %}
 
-### 💡Idée de projet perso
+### 💡Tentatives de projets perso
 
 En regardant mieux les tableaux de ma soeur, je pense qu'il n'y a pas vraiment besoin de les améliorer avec google apps script car il n'a pas beaucoup de choses à automatiser. Je change donc totalement mon sprint pour décider de consacrer les 5h30 qu'il me reste à **travailler sur d'autres projets** dans lesquels je pourrai utiliser mes connaissances et mieux prendre en main cet outil !
 
@@ -480,6 +490,37 @@ J'ai trouvé de l'inspiration en parcourant le [MON d'Antoine](https://francoisb
 [Find inspiration with Apps Script samples](https://developers.googleblog.com/en/getting-started-is-the-hardest-part-find-inspiration-with-apps-script-samples/)
 {% endlien %}
 
-#### ✅Réalisation du projet 1 : importer des fichiers dans Google Drive à partir de Google Forms
+#### 📬Projet 1 : importer des fichiers dans Google Drive à partir de Google Forms
 
-Pour réaliser ce projet, je vais suivre ce [tuto](https://developers.google.com/apps-script/samples/automations/upload-files?hl=fr) directement proposé par Google.
+Pour réaliser ce projet, je vais suivre ce [tuto drive](https://developers.google.com/apps-script/samples/automations/upload-files?hl=fr) directement proposé par Google. L'idée est de réaliser un google form relié à un script qui **permet de choisir l'emplacement où un fichier déposé dans le form sera enregistré dans le Drive**.
+
+J'ai d'abord essayé de suivre le tuto mais alors que j'ai suivi minutieusement chaque étape, **ça ne fonctionnait pas**. J'ai donc essayé de recoder la fonction avec ChatGTPT mais sans plus de succès... **J'ai abandonné** après 2h d'effort.
+
+#### 🧹Projet 2 : nettoyer des données dans une feuille de calcul
+
+Ayant subi un échec cuisant lors du dernier projet, je décide de faire le même projet qu'Antoine avait réalisé dans son MON en me disant que le tuto de Google doit cette fois normalement bien marcher. En plus, j'utiliserai vraiment cette fonctionnalité à l'avenir qui permet de **nettoyer des données en enlèvant les lignes vides et colonnes vides**.
+Voici le [tuto nettoyage](https://developers.google.com/workspace/add-ons/samples/clean-sheet?hl=fr) suivi.
+
+Cette fois tout s'est bien passé, c'était même un peu décevant car en 20 min le tuto était fini et tout fonctionnait.  
+Voici le **tableau non nettoyé** :
+<img src="tableauPasNettoye.png" width="30%" alt="Image description">
+
+Et ce qu'on obtient **après avoir exécuté le script** avec Google Apps Script :
+<img src="tableauNettoye.png" width="30%" alt="Image description">
+
+#### 📅Projet 3 : remplir un agenda de vacances d'équipe
+
+Ce projet a pour but de **créer un agenda de vacances partagé pour que n'importe quel collègue d'une entreprise puisse savoir en un coup d'oeil qui est absent du bureau** plutôt que de devoir aller chercher dans chaque agenda un par un ou de demander aux collègues de remplir un agenda spécifique à leur absence qui serait vite illisible. Cette option aurait été super pratique lors de mon stage au Tiers-Lab des Transitions où l'on fonctionnait justement avec la suite Google.  
+Je vais suivre ce [tuto agenda](https://developers.google.com/apps-script/samples/automations/vacation-calendar?hl=fr).
+
+Cette fois c'était tout le contraire du tuto précédent : j'ai passé 1h à suivre les étapes, constaté qu'il y avait des bugs, trouver des solutions, voir apparaître de nouveaux bugs etc. ChatGPT a fait de son mieux, mais même lui est coincé. C'est avec regret que **j'abandonne là aussi ce projet** car je n'ai clairement pas la patience de résoudre tous ces bugs. De ce que je comprends, il y a un problème avec l'une des adresses mail du groupe que j'ai créé mais je ne dispose pas d'autres adresses mail dispo pour tester cette fonctionnalité, donc tant pis.  
+Ci-dessous un screen d'un des bugs qui me donne encore des cauchemars :
+<img src="bugCode.png" width="70%" alt="Image description">
+
+Si on retient le positif, ce projet non fini m'a quand même permis de **mieux comprendre l'intérêt des Google groupes** pour envoyer plus facilement des emails à un groupe ou donner plus facilement accès à des ressources.
+
+<h2 id=conclusion> 👍 Conclusion de ce POK 1</h2>
+
+A travers ce POK 1, je peux confirmer que **mon amour pour la bureautique est inversement proportionnel à la complexité du code utilisé**. Ainsi, j'adore utiliser des petites formules sur Google Sheet avec des listes déroulantes, des recherches verticales, des mises en formes conditionnelles etc. Mais je déteste travailler sur des codes compliqués sur Google Apps Script car il y a trop de fois où le code que j'écris ou copie ne fonctionne pas et je me sens plus facilement démunie face aux bugs.  
+C'était quand même intéressant de découvrir ce langage et en vrai je l'utiliserai sûrement encore, mais à petite dose.  
+Je suis donc bien un **profil Do_It de couleur bleu et saumon, le vert c'est pas ce que je préfère**.
