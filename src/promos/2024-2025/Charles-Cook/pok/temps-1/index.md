@@ -69,7 +69,37 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 + Contexte
 + Présentation de l'outil
 + Point d'avancement au premier Sprint
+    - Remise à niveau Python
+        - Travailler avec des feuilles Excel
+            - Ouvrir un classeur Excel
+            - Manipuler les feuilles
+            - Manipuler les cellules
+            - Dimensionner un tableau
+            - Manipuler lignes et colonnes
+            - Créer un classeur Excel
+            - Créer ou supprimer une feuille
+    - Création d'une base de données fictive
+        - Order Review
+        - Lead Time
+    - Calcul des *quantités recommandées*
+    - 1ère version des feuilles de propositions de commande
+        - Création et mise en page des feuilles de proposition de commande
+        - Calcul de la quantité de commande recommandée par référence
+        - Extraction des refs ayant un besoin et trie par manufacture
+        - Pistes d'amélioration du code
 + Point d'avancement au second Sprint
+    - Ajout d'un code couleur
+        - Code de l'ajout du code couleur
+    - Création du fichier des bon de commande finaux
+        - Objectif
+        - Code pour le bons de commande
+        - Résultat des bons de commande
+    - Historisation des commandes mensuelles
+        - Création d'une feuille *Suivi Historique Fournisseur*
+        - Synthèse des historiques dans la création des bons de commande
++ Pistes d'amélioration
++ Code complet
+    
 
 ## Contexte : 
 Pour ce POK, nous nous placons dans le cas d'une entreprise qui vend des produits finis. Ces produits sont référencés par numéro de références et par taille. 
@@ -423,7 +453,14 @@ wb2['Suivi Historique Four'].add_chart(chartObj, 'B12')
 Le résultat obtenu est le suivant : 
 ![alt text](<Images/Tableaux historiuqes.png>)
 
-### Code complet
+## Pistes d'amélioration
+
+Le code, dont la version complète se trouve ci-après, fonctionne. Cependant, de nombreuses lignes se répètent. Dans un objectif d'efficacité et de clareté dans la lecture de celui-ci, il serait intéressant de le simplifier en utilisant des boucles. En effet, chacune des étapes est répétée 6 fois pour chacune des manufactures. Or, si un changement doit être apporté dans le code, il peut être chronophage de répéter ce changement 6 fois à chaque fois. De plus, cela peut également permettre d'améliorer la rapidité d'exécution du code. 
+Ainsi, la solution est de créer une liste avec les identifiants de chaque manufacture, et d'utiliser une boucle *for* pour répéter l'opération pour chacun des éléments de la liste. Cette technique permet également d'ajouter facilement de nouvelle manufacture. 
+
+*J'ai tenté d'implémenter cette solution mais je n'y suis pas parvenu, des erreurs empêchaient l'execution du code*
+
+## Code complet
 
 Code pour la partie génération de la proposition des quantités de commande.
 ````
