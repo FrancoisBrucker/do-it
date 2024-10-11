@@ -43,11 +43,12 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 - [x] (Re)Découverte du langage Python
 - [x] Création d'une base de données fictive
 - [x] Déterminantion de la forme de l'outil
-- [x] Création d'une première version du code
+- [ ] Création d'une première version du code
 
 
 #### Sprint 2
 
+- [x] Création d'une première version du code
 - [x] Amélioration du code
 - [x] Mise en forme de l'interface utilisateur
 - [x] Complexification du modèle
