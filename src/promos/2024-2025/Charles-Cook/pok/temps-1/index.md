@@ -63,6 +63,7 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 | Lundi 16/09  | 2H  | Début du code |
 | Mardi 17/09  | 1H  | Suite code |
 | Mercredi 18/09  | 2H  | 1ère version des feuilles propositions de commande |
+| **Fin du premier sprint** |
 | Jeudi 26/09  | 2H30  | Finalisation des feuilles propositions de commande  |
 | Jeudi 03/10  | 2H  | Code de la partie génération des bons de commande |
 | Samedi 05/10  | 2H  | Code de la partie génération des bons de commande |
