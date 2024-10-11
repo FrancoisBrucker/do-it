@@ -43,14 +43,14 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 - [x] (Re)Découverte du langage Python
 - [x] Création d'une base de données fictive
 - [x] Déterminantion de la forme de l'outil
-- [ ] Création d'une première version du code
+- [x] Création d'une première version du code
 
 
 #### Sprint 2
 
-- [ ] Amélioration du code
-- [ ] Mise en forme de l'interface utilisateur
-- [ ] Complexification du modèle
+- [x] Amélioration du code
+- [x] Mise en forme de l'interface utilisateur
+- [x] Complexification du modèle
 
 
 ### Horodatage
@@ -63,6 +63,11 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 | Lundi 16/09  | 2H  | Début du code |
 | Mardi 17/09  | 1H  | Suite code |
 | Mercredi 18/09  | 2H  | 1ère version des feuilles propositions de commande |
+| Jeudi 26/09  | 2H30  | Finalisation des feuilles propositions de commande  |
+| Jeudi 03/10  | 2H  | Code de la partie génération des bons de commande |
+| Samedi 05/10  | 2H  | Code de la partie génération des bons de commande |
+| Jeudi 10/10  | 2H  | Code de la partie Historisation |
+| Vendredi 11/10  | 1H  | Rédaction du rapport |
 
 ## Sommaire
 
