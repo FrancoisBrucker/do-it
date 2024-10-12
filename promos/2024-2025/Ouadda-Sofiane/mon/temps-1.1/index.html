@@ -161,8 +161,95 @@
 <h2>Contenu</h2>
 <h3>HTML</h3>
 <p>Mon apprentissage du HTML a commencé avec une vidéo YouTube qui m’a permis de comprendre les concepts fondamentaux de ce langage. J'ai appris que le HTML permet de structurer les pages web et de définir les différents éléments visibles. J'ai découvert comment utiliser des balises pour organiser le contenu, ainsi que des attributs pour ajouter des détails et des liens. Le tutoriel GitHub que j'ai suivi m'a permis de consolider ces connaissances en réalisant des exercices pratiques, ce qui m’a aidé à mieux comprendre comment les balises s'imbriquent et comment structurer efficacement une page.</p>
+<h4>Qu'est-ce que HTML ?</h4>
+<p>HTML (HyperText Markup Language) est le langage de base pour structurer le contenu d'une page web. Il permet de définir des éléments tels que les titres, les paragraphes, les images, les liens, etc. Chaque élément de la page est encadré par des balises (tags).</p>
+<p>Exemple d’une balise HTML :
+<code>&lt;p&gt;Ceci est un paragraphe en HTML&lt;/p&gt;</code></p>
+<h4>Les bases du HTML</h4>
+<h5>Structure de base d'une page HTML</h5>
+<p>Chaque document HTML suit une structure de base qui commence par la déclaration <!DOCTYPE html>. Voici un exemple de la structure minimale d'une page HTML :</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Mon site vitrine&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenue sur mon site vitrine&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;p&gt;Ceci est une simple page web réalisée en HTML et CSS.&lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 MonSite&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> : Indique au navigateur qu'il s'agit d'un document HTML5.</li>
+<li><code>&lt;html&gt;</code> : La balise racine qui contient tout le contenu de la page.</li>
+<li><code>&lt;head&gt;</code> : Contient les métadonnées (titre, encodage, etc.) de la page.</li>
+<li><code>&lt;body&gt;</code> : Contient le contenu visible de la page.</li>
+</ul>
+<h5>Balises HTML courantes</h5>
+<p>Voici quelques balises couramment utilisées dans les pages HTML :</p>
+<ul>
+<li><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> : Balises de titres, <code>&lt;h1&gt;</code> étant le plus important.</li>
+<li><code>&lt;p&gt;</code> : Balise de paragraphe.</li>
+<li><code>&lt;a&gt;</code> : Balise pour créer des liens hypertextes.</li>
+<li><code>&lt;img&gt;</code> : Balise pour insérer des images.</li>
+</ul>
+<h5>Liens et images</h5>
+<p>Les liens et les images sont des éléments essentiels de toute page web.</p>
+<p>Exemple de lien hypertexte :</p>
+<pre><code>&lt;a href=&quot;https://www.example.com&quot;&gt;Visitez mon site&lt;/a&gt;
+</code></pre>
+<p>Exemple d'image :</p>
+<pre><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;Description de l'image&quot;&gt;
+</code></pre>
 <h3>CSS</h3>
 <p>En parallèle, j'ai étudié le CSS à travers une autre vidéo YouTube, qui portait sur la mise en forme des pages HTML. Le CSS est utilisé pour styliser les pages en ajustant les couleurs, les polices, les tailles, les marges, et la disposition des éléments sur la page. J'ai appris à utiliser les sélecteurs CSS pour cibler des éléments précis et appliquer des styles. J'ai aussi découvert comment gérer la mise en page en utilisant des concepts comme le &quot;box model&quot;, ainsi que la gestion des marges, des bordures et des espacements pour créer des designs plus avancés.</p>
+<h4>Qu'est-ce que CSS ?</h4>
+<p>CSS (Cascading Style Sheets) est le langage utilisé pour styliser une page web. Il permet de définir l'apparence des éléments HTML, comme la couleur, la taille des polices, les marges, les bordures, etc.</p>
+<p>Exemple d’un style CSS :</p>
+<pre><code>p {
+  color: blue;
+  font-size: 18px;
+}
+</code></pre>
+<h4>Les bases du CSS</h4>
+<p>Introduction aux sélecteurs CSS
+Les sélecteurs CSS sont utilisés pour cibler les éléments HTML à styliser. Voici quelques exemples courants :</p>
+<ul>
+<li>Sélecteur par type de balise : sélectionne tous les éléments de ce type.</li>
+<li>Sélecteur par classe : sélectionne tous les éléments avec une certaine classe.</li>
+<li>Sélecteur par ID : sélectionne l'élément avec l'ID spécifique.</li>
+</ul>
+<h4>Mise en forme du texte et des éléments</h4>
+<p>Le CSS permet de modifier l'apparence du texte et des éléments HTML. Voici quelques propriétés de base :</p>
+<ul>
+<li>Couleur du texte : color</li>
+<li>Police : font-family</li>
+<li>Taille du texte : font-size</li>
+<li>Marges : margin</li>
+<li>Padding (espacement intérieur) : padding</li>
+</ul>
+<p>Exemple :</p>
+<pre><code>h1 {
+    color: blue;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+</code></pre>
+<h4>Disposition et mise en page</h4>
+<p>Le CSS propose différentes techniques pour organiser les éléments sur la page, notamment :</p>
+<ul>
+<li>Flexbox : une méthode puissante pour aligner et distribuer les éléments dans un conteneur.</li>
+<li>Grid : une autre méthode pour créer des mises en page plus complexes.</li>
+</ul>
 <h3>Git</h3>
 <p>En parallèle de l’apprentissage du HTML et du CSS, j'ai appris à utiliser Git pour versionner mon travail. Git est un outil essentiel dans le développement, qui permet de suivre les modifications du code et de collaborer plus facilement. J'ai appris les commandes basiques comme <code>git init</code>, <code>git add</code>, <code>git commit</code> et <code>git status</code>. Cela m’a permis de mieux comprendre comment gérer un projet et enregistrer mes différentes étapes de développement de manière efficace.</p>
 <h3>Bonnes pratiques de développement</h3>
