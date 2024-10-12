@@ -1,63 +1,139 @@
 ---
 layout: layout/mon.njk
 
-title: "Développement FrontEnd en JavaScript"
+title: "Développement d'une Application Vue.js"
 authors:
   - Sofiane Ouadda
-date: 2024-09-16
+date: 2024-10-10
 
 tags: 
-  - "temps 2"
-  - "Developpement FrontEnd"
-  - "JavaScript"
+  - temps 1.2
+  - "Développement Web"
+  - "FrontEnd"
   - "Vue.js"
 
-résumé: "Ce MON a pour objectif de m'initier au langage JavaScript et au framework Vue.js pour développer la partie FrontEnd de mes projets web."
+résumé: "Ce cours détaille comment créer une application complète avec Vue.js, de la configuration initiale à la gestion des composants dynamiques."
 
 ---
 
 {% prerequis %}
 
-Aucun prérequis nécessaires, mais une base en HTML et CSS est recommandée.
+Bases en HTML, CSS, et JavaScript sont nécessaires. Une connaissance préalable des concepts de programmation réactive est recommandée.
 
 {% endprerequis %}
 {% lien %}
 
-[`JavaScript Koans`](https://github.com/mrdavidlaing/javascript-koans)
+[`Vue.js Documentation Officielle`](https://vuejs.org/guide/)
 
-[`Vue.js Documentation`](https://vuejs.org/guide/)
+[`Vue Router Documentation`](https://router.vuejs.org/)
 
 {% endlien %}
 
 ## Objectifs
 
-Dans cette deuxième phase de mon apprentissage du développement web, je vais me concentrer sur l'acquisition des fondamentaux de JavaScript, un langage clé pour le développement FrontEnd. JavaScript est indispensable pour rendre les pages web dynamiques et interactives, et je vais donc chercher à maîtriser ses concepts de base ainsi que ses principales fonctionnalités.
+L'objectif de ce cours est de fournir les bases pour créer une application Vue.js complète. Vous apprendrez à structurer l'application, utiliser Vue Router, gérer les événements entre composants.
 
-### 1. Initiation au JavaScript
+### 1. Initialisation du projet Vue.js
 
-L'objectif principal est d'apprendre à manipuler les éléments JavaScript essentiels, tels que :
+Nous allons commencer par la création du projet Vue.js avec l'aide de Vue CLI.
 
-- Les variables et types de données (nombres, chaînes, booléens, tableaux, objets).
-- Les structures de contrôle (conditions, boucles).
-- Les fonctions et leurs différents types (fonctions déclarées, fonctions fléchées).
-- Les événements et la manipulation du DOM pour interagir avec les éléments HTML.
-- La gestion des erreurs et le débogage de code.
+- **Installer Vue CLI** : Assurez-vous d'avoir Node.js installé, puis exécutez `npm install -g @vue/cli`.
+- **Créer un projet Vue** : Utilisez `vue create mon-projet`. Choisissez les options de base comme Babel et Vue Router (sans Vuex).
+  
+Voici la structure générée du projet :
+- **`src/components`** : Contiendra les composants réutilisables.
+- **`src/views`** : Contiendra les pages principales (ou vues) de l'application.
+- **`src/router`** : Contiendra la configuration des routes (navigation).
 
-Pour cela, je vais suivre un tutoriel interactif, [`JavaScript Koans`](https://github.com/mrdavidlaing/javascript-koans), qui permet d'apprendre JavaScript à travers une série de petits défis progressifs. Chaque défi me permettra de comprendre une nouvelle fonctionnalité du langage en pratiquant directement dans un environnement de développement.
+### 2. Composants Vue.js
 
-### 2. Initiation à Vue.js
+Les composants sont au cœur de Vue.js. Ils permettent de créer des éléments modulaires et réutilisables. Voici comment définir et utiliser un composant.
 
-En parallèle de l'apprentissage des fondamentaux de JavaScript, je vais m'initier à Vue.js, un framework JavaScript moderne qui permet de construire des interfaces utilisateurs réactives. Vue.js est reconnu pour sa simplicité d'apprentissage et sa flexibilité, ce qui en fait un excellent choix pour structurer des projets web interactifs et modulaires.
+- **Création d'un composant** : Créez un fichier `MonComposant.vue` dans le dossier `src/components/` avec la structure suivante :
 
-L'objectif est de comprendre comment Vue.js fonctionne en se basant sur ces concepts :
+  ```
+  vue
+  <template>
+    <div>
+      <h2> "title" </h2>
+      <p> "description" </p>
+    </div>
+  </template>
 
-- Le modèle "Vue Component", qui permet de diviser une application en petites parties réutilisables.
-- Le rendu réactif et la gestion des données dans Vue.
-- La manipulation des directives Vue.js (comme `v-if`, `v-for`) pour contrôler l'affichage des éléments.
-- La gestion des événements et de la communication entre les composants.
+  <script>
+  export default {
+    props: {
+      title: String,
+      description: String
+    }
+  }
+  </script>
+  ```
 
-Pour m'initier à Vue.js, je vais suivre la [documentation officielle de Vue.js](https://vuejs.org/guide/), qui propose un guide pratique pas à pas, en plus de tutoriels interactifs pour mettre en œuvre des concepts essentiels.
+Ce composant prend deux props, title et description, et les affiche dans le template.
 
-### Conclusion
+  - **Utilisation dans une vue** : Importez ce composant dans une vue (comme Home.vue) et utilisez-le :
+  ```
+  <template>
+  <div>
+    <MonComposant title="Bienvenue" description="Ceci est un exemple"/>
+  </div>
+  </template>
 
-À la fin de cette deuxième phase, mon objectif est d’avoir acquis une solide compréhension des fondamentaux du JavaScript ainsi que des premières bases de Vue.js. Ces compétences me permettront de développer des interfaces dynamiques et interactives pour mes projets, et de continuer à évoluer dans le domaine du développement FrontEnd.
+  <script>
+  import MonComposant from '@/components/MonComposant.vue';
+
+  export default {
+    components: {
+      MonComposant
+    }
+  }
+  </script>
+  ```
+
+### 3. Vue Router
+
+Pour naviguer entre plusieurs pages de votre application, nous allons utiliser Vue Router.
+
+  - **Installation de Vue Router** : Si vous ne l'avez pas ajouté lors de la configuration du projet, installez-le avec `npm install vue-router`.
+
+  - **Configuration des routes** : Dans src/router/index.js, configurez les routes pour votre application :
+  ```
+  import { createRouter, createWebHistory } from 'vue-router';
+import Home from '@/views/Home.vue';
+import About from '@/views/About.vue';
+
+const routes = [
+  { path: '/', name: 'Home', component: Home },
+  { path: '/about', name: 'About', component: About }
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+````
+
+Cela définit deux routes : une pour la page d'accueil et une pour la page "À propos".
+
+  - **Navigation entre pages** : Dans votre template, utilisez le composant <router-link> pour créer des liens de navigation :  
+  ```
+  <router-link to="/">Accueil</router-link>
+  <router-link to="/about">À propos</router-link>
+  ```
+
+  - **Afficher la vue actuelle** : Ajoutez <router-view> dans votre App.vue pour rendre la vue actuelle selon l'URL active :
+  ```
+  <template>
+  <div>
+    <router-view></router-view>
+  </div>
+  </template>
+  ```
+
+### Horodateur
+
+| Date            | Heures passées | Indications |
+| --------------- | -------------- |-------------|
