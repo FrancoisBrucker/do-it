@@ -49,16 +49,16 @@ tags:
 1. [Introduction](#introduction)
 2. [Durcissement du poste de travail](#durcissement-du-poste-de-travail)
     1. [Durcissement Hardware](#durcissement-hardware)
-        1. [BIOS/UEFI](#bios-uefi)
-        2. [Chiffrement du disque dur](#chiffrement-du-disque-dur)
-        3. [Authentification forte](#authentification-forte)
-    2. [Durcissement du système d'exploitation](#durcissement-du-système-dexploitation)
-        1. [Configuration bootloader & kernel](#configuration-bootloader-kernel)
-        2. [Mises à jours](#mises-à-jour)
-        3. [SSH, Réseau & firewall](#ssh-réseau-firewall)
-        4. [Gestion des comptes utilisateurs](#gestion-des-comptes-utilisateurs)
-            1. Mots de passe forts
-            2. Niveaux de privilèges
+        - [BIOS/UEFI](#bios-uefi)
+        - [Chiffrement du disque dur](#chiffrement-du-disque-dur)
+    2. [Durcissement Logiciel & Système d'Exploitation](#durcissement-logiciel-système-dexploitation)
+        - [Configuration bootloader & kernel](#configuration-bootloader-kernel)
+        - [Mises à jours](#mises-à-jour)
+        - [SSH, Réseau & firewall](#ssh-réseau-firewall)
+        - [Gestion des comptes utilisateurs](#gestion-des-comptes-utilisateurs)
+            - [Mots de passe forts](#mots-de-passe-forts)
+            - [Authentification forte](#authentification-forte)
+            - [Niveaux de privilèges](#niveaux-de-privilèges)
 3. [Zero Trust](#zero-trust)
     1. [Moindre privilège](#moindre-privilège)
     2. [Sécurisation des accès](#sécurisation-des-accès)
@@ -117,14 +117,8 @@ Le chiffrement consiste à **protéger les données** en les transformant en un 
 
 Le disque dur chiffré <u>nécessite</u> un mot de passe pour être déverrouillé, il est essentiel de choisir un **mot de passe fort** ET de ne pas l'oublier, car il est <u>impossible</u> de récupérer les données sans lui. Le chiffrement est généralement réalisé durant l'installation du système d'exploitation, car il est <u>difficile de chiffrer un disque dur déjà utilisé sans perdre les données</u>.
 
-#### Authentification forte<a name="authentification-forte"></a>
-L'authentification forte consiste à **utiliser plusieurs facteurs d'authentification** pour se connecter à un système. Par exemple, un mot de passe et un code envoyé par SMS. Le deuxième facteur d'authentification peut aussi être un élément physique comme une clé USB ou un token.
 
-Les systèmes d'exploitation modernes proposent des solutions d'authentification forte comme [Windows Hello](https://www.microsoft.com/fr-fr/windows/tips/windows-hello) (reconnaissance faciale) ou [Touch ID](https://support.apple.com/fr-fr/105095) (reconnaissance d'empreinte digitale). Les éléments physiques comme les clés USB ou les tokens sont souvent utilisés pour l'authentification forte dans les entreprises. Il s'agit par exemple de la clé [YubiKey](https://www.yubico.com), de la carte à puce ou du token OTP. Tous ces éléments peuvent être déployés (longtemps) après l'installation du système d'exploitation. Ils sont souvent gérés par un service d'**authentification centralisé**.
-
-Cette méthode est **plus sécurisée** que l'authentification par mot de passe seul, car il est plus difficile pour un attaquant de compromettre plusieurs facteurs d'authentification. Cependant elle peut générer de la **frustration** et être **contraignante** pour les utilisateurs.
-
-### Durcissement du système d'exploitation<a name="durcissement-du-système-dexploitation"></a>
+### Durcissement Logiciel & Système d'Exploitation<a name="durcissement-logiciel-système-dexploitation"></a>
 Le système d'exploitation est le logiciel qui permet à un ordinateur de fonctionner. Il est essentiel de **sécuriser le système d'exploitation** pour protéger les données et les outils de développement des accès non autorisés.
 
 #### Configuration bootloader & kernel<a name="configuration-bootloader-kernel"></a>
@@ -151,12 +145,19 @@ Il faut paramétrer l'IPv4 et l'IPv6 pour qu'ils soient **sécurisés** et **pri
 #### Gestion des comptes utilisateurs<a name="gestion-des-comptes-utilisateurs"></a>
 La gestion des utilisateurs est un élément clé de la sécurité du système d'exploitation. Il est recommandé de **créer des comptes utilisateurs** pour chaque utilisateur et de **limiter les privilèges** des comptes utilisateurs. Il est également recommandé de **désactiver les comptes inutilisés** pour réduire la surface d'attaque.
 
-##### Mots de passe forts
+##### Mots de passe forts<a name="mots-de-passe-forts"></a>
 Il est essentiel de **choisir des mots de passe forts** pour les comptes utilisateurs. Un mot de passe fort est un mot de passe qui est difficile à deviner pour un attaquant. Il est recommandé d'utiliser des mots de passe longs, composés de lettres majuscules et minuscules, de chiffres et de caractères spéciaux.
 
 L'ANSSI met régulièrement à jour son [guide d'authentification multifacteur et mots de passe](https://cyber.gouv.fr/sites/default/files/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf) pour vous aider à choisir un bon mot de passe, robustes vis-à-vis des évolutions technologiques.
 
-##### Niveaux de privilèges
+#### Authentification forte<a name="authentification-forte"></a>
+L'authentification forte consiste à **utiliser plusieurs facteurs d'authentification** pour se connecter à un système. Par exemple, un mot de passe et un code envoyé par SMS. Le deuxième facteur d'authentification peut aussi être un élément physique comme une clé USB ou un token.
+
+Les systèmes d'exploitation modernes proposent des solutions d'authentification forte comme [Windows Hello](https://www.microsoft.com/fr-fr/windows/tips/windows-hello) (reconnaissance faciale) ou [Touch ID](https://support.apple.com/fr-fr/105095) (reconnaissance d'empreinte digitale). Les éléments physiques comme les clés USB ou les tokens sont souvent utilisés pour l'authentification forte dans les entreprises. Il s'agit par exemple de la clé [YubiKey](https://www.yubico.com), de la carte à puce ou du token OTP. Tous ces éléments peuvent être déployés (longtemps) après l'installation du système d'exploitation. Ils sont souvent gérés par un service d'**authentification centralisé**.
+
+Cette méthode est **plus sécurisée** que l'authentification par mot de passe seul, car il est plus difficile pour un attaquant de compromettre plusieurs facteurs d'authentification. Cependant elle peut générer de la **frustration** et être **contraignante** pour les utilisateurs.
+
+##### Niveaux de privilèges<a name="niveaux-de-privilèges"></a>
 Par défaut, les systèmes d'exploitation n'ont que 2 niveaux de privilèges: **administrateur** et **utilisateur**. Pour compléter ces niveaux, il est recommandé de **créer des groupes** pour regrouper les utilisateurs avec des privilèges similaires. Par exemple, un groupe "développeurs" pour les utilisateurs qui ont besoin d'accéder aux outils de développement.
 
 L'idée est d'avoir le moins de véritables administrateurs possible, et de donner les privilèges les plus bas nécessaires pour effectuer le travail. C'est le principe du **moindre privilège**.
