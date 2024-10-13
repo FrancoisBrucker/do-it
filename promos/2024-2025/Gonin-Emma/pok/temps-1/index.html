@@ -162,11 +162,11 @@
 </ul>
 <h4>Sprint 2</h4>
 <ul>
-<li>[ ] Faire la page contacts</li>
+<li>[x] Faire la page contacts</li>
 <li>[x] Faire la page galerie photo</li>
-<li>[ ] Finir les différentes pages et harmoniser le rendu</li>
-<li>[ ] Faire tester le site a mes proches pour avoir un retour utilisateur</li>
-<li>[ ] Ameliorer le site selon leurs retours si j'ai le temps</li>
+<li>[x] Finir les différentes pages et harmoniser le rendu</li>
+<li>[x] Faire tester le site a mes proches pour avoir un retour utilisateur</li>
+<li>[] Ameliorer le site selon leurs retours si j'ai le temps</li>
 </ul>
 <h3>Horodatage</h3>
 <table>
@@ -177,36 +177,18 @@
 <th>Indications</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td>Mardi 03/09</td>
-<td>30 MIN</td>
-<td>Création de la base de données des peintures + fichier JSON</td>
-</tr>
-<tr>
-<td>Mercredi 04/09</td>
-<td>2H</td>
-<td>Création de l'application et mise en page de la page d'accueil + choix charte graphique</td>
-</tr>
-<tr>
-<td>Lundi 09/09</td>
-<td>3H</td>
-<td>Création des différentes pages, liaison des vues avec les onglets de l'en-tête, première ébauche de la page portfolio avec la création d'un carousel</td>
-</tr>
-<tr>
-<td>Jeudi 12/09</td>
-<td>4H30</td>
-<td>Mise en page du portfolio et de la page à propos</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td>Lundi 23/09</td>
-<td>30 MIN</td>
-<td>Mise en phase de la galerie photo : assez rapide grâce à un composant React qui existe déjà</td>
-</tr>
-</tbody>
 </table>
+<p>Sprint 1
+| Mardi 03/09  | 30 MIN  | Création de la base de données des peintures + fichier JSON |
+| Mercredi 04/09  | 2H  | Création de l'application et mise en page de la page d'accueil + choix charte graphique |
+| Lundi 09/09  | 3H  | Création des différentes pages, liaison des vues avec les onglets de l'en-tête, première ébauche de la page portfolio avec la création d'un carousel |
+| Jeudi 12/09  | 4H30  | Mise en page du portfolio et de la page à propos |
+Sprint 2
+| Lundi 23/09 | 30 MIN | Mise en place de la galerie photo : assez rapide grâce à un composant React qui existe déjà |
+| Lundi 23/09 | 1H15 | Mise en phase du formulaire de contact avec EmailJS : assez sympa à faire, rapide et efficace. |
+| Mercredi 25/09 | 1H | Travail sur l'affichage des images |
+| Samedi 12/10 | 2H | Travail sur la gestion des évènements clavier |
+| Dimanche 13/10 | 3H | Tests à ma famille : retours négatifs sur le préloading des images + Travail sur ce dit préchargement des images |</p>
 <h2>Contenu</h2>
 <p>Le contenu du POK. Le lien du projet est sur mon <a href="https://github.com/egonin/art-portfolio">github</a>.</p>
 <h3>Premier Sprint</h3>
@@ -267,6 +249,9 @@ J'ai créé un composant StackCarousel qui contient la mise en page image/texte 
 <p><img src="image.png" alt="galerie-1">
 <img src="image-1.png" alt="galerie-2">
 <img src="image-2.png" alt="galerie-3"></p>
+<p>Pour la page Contact, je crée un formulaire grâce à la mise en page <a href="https://www.copycat.dev/blog/material-ui-form/">https://www.copycat.dev/blog/material-ui-form/</a>. Pour éviter pour l'instant de faire un système back-end avec des API etc, j'ai suivi le tutoriel <img src="https://medium.com/@thomasaugot/create-a-react-contact-form-with-email-js-cad2c8606f33" alt="React Contact Form w/ EmailJS"> pour apprendre à utiliser EmailJS de manière temporaire afin de recevoir les messages via cette plateforme.</p>
+<p><img src="image-3.png" alt="Contact"></p>
+<p>J'ai travaillé sur la navigation avec les flèches du clavier pour le portfolio. J'ai eu des problèmes avec la gestion des keyEvent et de la gestion du state de l'item courant.</p>
 
 
 </article>
