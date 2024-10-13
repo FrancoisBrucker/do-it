@@ -151,54 +151,116 @@
 <div class="pl-8 mr-8">
 <p><a href="https://vuejs.org/guide/"><code>Vue.js Documentation Officielle</code></a></p>
 <p><a href="https://router.vuejs.org/"><code>Vue Router Documentation</code></a></p>
+<p><a href="https://www.vuemastery.com/"><code>Vue Mastery – Free Vue.js Tutorials</code></a></p>
+<p><a href="https://www.youtube.com/watch?v=Wy9q22isx3U"><code>Vue.js Crash Course Youtube</code></a></p>
+<p><a href="https://www.youtube.com/watch?v=6IuFRgGQD24"><code>Learn Vue 3 Components</code></a></p>
+<p><a href="https://www.youtube.com/watch?v=YmxHXjJPfv0"><code>Vue Router Tutorial</code></a></p>
 </div></div>
 
 <h2>Objectifs</h2>
-<p>L'objectif de ce cours est de fournir les bases pour créer une application Vue.js complète. Vous apprendrez à structurer l'application, utiliser Vue Router, gérer les événements entre composants.</p>
-<h3>1. Initialisation du projet Vue.js</h3>
-<p>Nous allons commencer par la création du projet Vue.js avec l'aide de Vue CLI.</p>
+<p>À la fin de ce cours, vous serez capable de :</p>
+<ol>
+<li>Comprendre les bases de Vue.js.</li>
+<li>Configurer un projet Vue.js avec Vue CLI.</li>
+<li>Créer et utiliser des composants Vue.</li>
+<li>Configurer et utiliser Vue Router pour naviguer entre plusieurs vues.</li>
+<li>Gérer les événements entre composants.</li>
+<li>Utiliser les propriétés calculées et les observateurs pour améliorer la réactivité.</li>
+<li>Mettre en place une gestion d'état simple sans Vuex.</li>
+</ol>
+<hr>
+<h2>1. Introduction à Vue.js</h2>
+<p>Vue.js est un framework JavaScript progressif utilisé pour construire des interfaces utilisateur dynamiques. Contrairement à des frameworks monolithiques, Vue est conçu pour être adopté de manière progressive. Vous pouvez l'utiliser pour créer des fonctionnalités interactives dans des projets existants ou créer des applications monopages complexes (Single Page Applications - SPA).</p>
+<h3>Architecture MVVM (Model-View-ViewModel)</h3>
+<p>Vue suit un modèle MVVM où :</p>
 <ul>
-<li><strong>Installer Vue CLI</strong> : Assurez-vous d'avoir Node.js installé, puis exécutez <code>npm install -g @vue/cli</code>.</li>
-<li><strong>Créer un projet Vue</strong> : Utilisez <code>vue create mon-projet</code>. Choisissez les options de base comme Babel et Vue Router (sans Vuex).</li>
+<li><strong>Model</strong> : Représente les données de votre application.</li>
+<li><strong>View</strong> : Ce qui est visible par l'utilisateur (le HTML).</li>
+<li><strong>ViewModel</strong> : Fait le lien entre les deux, en répercutant les changements du modèle sur la vue, et inversement.</li>
 </ul>
-<p>Voici la structure générée du projet :</p>
+<h3>Directives</h3>
+<p>Vue.js est basé sur des <strong>directives</strong> qui lient votre HTML à votre logique JavaScript :</p>
 <ul>
-<li><strong><code>src/components</code></strong> : Contiendra les composants réutilisables.</li>
-<li><strong><code>src/views</code></strong> : Contiendra les pages principales (ou vues) de l'application.</li>
-<li><strong><code>src/router</code></strong> : Contiendra la configuration des routes (navigation).</li>
+<li><code>v-if</code> : Affiche ou cache des éléments en fonction d'une condition.</li>
+<li><code>v-for</code> : Boucle sur une liste pour générer plusieurs éléments.</li>
+<li><code>v-bind</code> : Lie dynamiquement des attributs ou des classes CSS à des données.</li>
 </ul>
-<h3>2. Composants Vue.js</h3>
-<p>Les composants sont au cœur de Vue.js. Ils permettent de créer des éléments modulaires et réutilisables. Voici comment définir et utiliser un composant.</p>
-<ul>
-<li>
-<p><strong>Création d'un composant</strong> : Créez un fichier <code>MonComposant.vue</code> dans le dossier <code>src/components/</code> avec la structure suivante :</p>
-<pre><code>vue
-&lt;template&gt;
+<h4>Exemple :</h4>
+<pre><code>&lt;template&gt;
   &lt;div&gt;
-    &lt;h2&gt; &quot;title&quot; &lt;/h2&gt;
-    &lt;p&gt; &quot;description&quot; &lt;/p&gt;
+    &lt;p v-if=&quot;isLoggedIn&quot;&gt;Bienvenue, utilisateur !&lt;/p&gt;
+    &lt;p v-else&gt;Veuillez vous connecter.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
 export default {
-  props: {
-    title: String,
-    description: String
+  data() {
+    return {
+      isLoggedIn: false
+    };
   }
-}
+};
 &lt;/script&gt;
 </code></pre>
-</li>
-</ul>
-<p>Ce composant prend deux props, title et description, et les affiche dans le template.</p>
+<h3>Réactivité</h3>
+<p>Vue.js est réactif par nature. Cela signifie que lorsque les données de l'état changent, la vue est automatiquement mise à jour sans que vous ayez à manipuler manuellement le DOM.</p>
+<h2>2. Installation de Vue CLI et création d’un projet</h2>
+<h3>Installation de Vue CLI</h3>
+<p>Vue CLI est un outil en ligne de commande qui permet de créer des projets Vue.js de manière rapide et efficace. Il offre une configuration standard avec des outils modernes comme Babel, ESLint, et Vue Router.</p>
+<h4>Installez Vue CLI :</h4>
+<p>Assurez-vous d’avoir Node.js installé, puis exécutez la commande suivante pour installer Vue CLI globalement sur votre machine :</p>
+<pre><code>npm install -g @vue/cli
+</code></pre>
+<h3>Création d’un projet</h3>
+<p>Pour créer un nouveau projet, utilisez la commande suivante :</p>
+<pre><code>vue create mon-projet
+</code></pre>
+<p>Vue CLI vous demandera de choisir certaines options comme Babel, Vue Router et ESLint.</p>
+<h3>Structure du projet généré</h3>
+<p>Une fois le projet créé, la structure suivante sera générée :</p>
 <ul>
-<li><strong>Utilisation dans une vue</strong> : Importez ce composant dans une vue (comme Home.vue) et utilisez-le :</li>
+<li><code>src/components</code> : Contient tous les composants réutilisables.</li>
+<li><code>src/views</code> : Contient les pages principales de l'application.</li>
+<li><code>src/router</code> : Gère les routes pour naviguer entre différentes vues/pages.</li>
+<li><code>App.vue</code> : Le composant principal qui contient la structure générale de l'application.</li>
+<li><code>main.js</code> : Le point d’entrée où Vue.js est initialisé.</li>
 </ul>
+<h2>3. Création et utilisation des composants</h2>
+<p>Les composants sont l'élément central de Vue.js. Ils permettent de diviser l'interface en parties réutilisables. Chaque composant a sa propre logique, son template et son style.</p>
+<h3>Création d'un composant</h3>
+<p>Un composant Vue est défini dans un fichier <code>.vue</code> et comporte trois sections principales :</p>
+<ul>
+<li><strong>Template</strong> : Définit la structure HTML.</li>
+<li><strong>Script</strong> : Contient la logique JavaScript du composant.</li>
+<li><strong>Style</strong> : Permet d’ajouter des styles spécifiques au composant.</li>
+</ul>
+<h3>Exemple de composant simple :</h3>
 <pre><code>&lt;template&gt;
-&lt;div&gt;
-  &lt;MonComposant title=&quot;Bienvenue&quot; description=&quot;Ceci est un exemple&quot;/&gt;
-&lt;/div&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Développement d&amp;#39;une Application Vue.js&lt;/h1&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: ['title', 'description']
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+h1 {
+  color: blue;
+}
+&lt;/style&gt;
+</code></pre>
+<h3>Utilisation d’un composant</h3>
+<p>Une fois créé, vous pouvez réutiliser un composant dans une autre vue ou un autre composant :</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;MonComposant title=&quot;Bienvenue&quot; description=&quot;Ceci est un exemple de composant&quot;/&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
@@ -208,52 +270,164 @@ export default {
   components: {
     MonComposant
   }
-}
+};
 &lt;/script&gt;
 </code></pre>
-<h3>3. Vue Router</h3>
-<p>Pour naviguer entre plusieurs pages de votre application, nous allons utiliser Vue Router.</p>
-<ul>
-<li>
-<p><strong>Installation de Vue Router</strong> : Si vous ne l'avez pas ajouté lors de la configuration du projet, installez-le avec <code>npm install vue-router</code>.</p>
-</li>
-<li>
-<p><strong>Configuration des routes</strong> : Dans src/router/index.js, configurez les routes pour votre application :</p>
-</li>
-</ul>
+<h2>4. Vue Router : Navigation entre Pages</h2>
+<p>Vue Router est la bibliothèque officielle pour gérer les routes dans une application Vue.js. Il permet de naviguer entre plusieurs pages sans recharger la page, ce qui est essentiel dans une SPA (Single Page Application).</p>
+<h3>Installation de Vue Router</h3>
+<p>Si Vue Router n’a pas été installé lors de la création du projet, vous pouvez l’ajouter avec la commande suivante :</p>
+<pre><code>npm install vue-router
+</code></pre>
+<h3>Configuration des routes</h3>
+<p>Dans <code>src/router/index.js</code>, vous configurez vos routes en associant chaque chemin à un composant de vue :</p>
 <pre><code>import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
 import About from '@/views/About.vue';
 
 const routes = [
-{ path: '/', name: 'Home', component: Home },
-{ path: '/about', name: 'About', component: About }
+  { path: '/', name: 'Home', component: Home },
+  { path: '/about', name: 'About', component: About }
 ];
 
 const router = createRouter({
-history: createWebHistory(),
-routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;
 </code></pre>
-<p>Cela définit deux routes : une pour la page d'accueil et une pour la page &quot;À propos&quot;.</p>
-<ul>
-<li><strong>Navigation entre pages</strong> : Dans votre template, utilisez le composant <router-link> pour créer des liens de navigation :</router-link></li>
-</ul>
-<pre><code>&lt;router-link to=&quot;/&quot;&gt;Accueil&lt;/router-link&gt;
-&lt;router-link to=&quot;/about&quot;&gt;À propos&lt;/router-link&gt;
-</code></pre>
-<ul>
-<li><strong>Afficher la vue actuelle</strong> : Ajoutez <router-view> dans votre App.vue pour rendre la vue actuelle selon l'URL active :</router-view></li>
-</ul>
+<h3>Navigation entre les pages</h3>
+<p>Pour naviguer entre les pages, vous utilisez le composant <code>&lt;router-link&gt;</code> :</p>
 <pre><code>&lt;template&gt;
-&lt;div&gt;
-  &lt;router-view&gt;&lt;/router-view&gt;
-&lt;/div&gt;
+  &lt;div&gt;
+    &lt;router-link to=&quot;/&quot;&gt;Accueil&lt;/router-link&gt;
+    &lt;router-link to=&quot;/about&quot;&gt;À propos&lt;/router-link&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 </code></pre>
-<h3>Horodateur</h3>
+<p>Enfin, dans <code>App.vue</code>, vous devez inclure le composant <code>&lt;router-view&gt;</code> qui rend la vue correspondant à la route actuelle :</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<h2>5. Gestion des événements et méthodes</h2>
+<p>Vue.js permet de gérer facilement les événements utilisateurs, tels que les clics de boutons ou les saisies de formulaires, via des méthodes associées.</p>
+<h3>Attachement d'événements</h3>
+<p>Vous pouvez utiliser la directive <code>v-on</code> ou son raccourci <code>@</code> pour attacher des événements comme <code>click</code>, <code>submit</code>, etc. :</p>
+<pre><code>&lt;template&gt;
+  &lt;button @click=&quot;incrementCounter&quot;&gt;Incrémenter&lt;/button&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      counter: 0
+    };
+  },
+  methods: {
+    incrementCounter() {
+      this.counter++;
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Dans cet exemple, chaque fois que le bouton est cliqué, la méthode <code>incrementCounter</code> est appelée, augmentant la valeur de <code>counter</code>.</p>
+<h2>6. Computed Properties et Watchers</h2>
+<p>Les computed properties et watchers sont deux fonctionnalités puissantes pour gérer les calculs basés sur les données et réagir aux changements.</p>
+<h3>Computed Properties</h3>
+<p>Les computed properties sont des propriétés dérivées qui sont recalculées uniquement lorsque leurs dépendances changent, ce qui améliore les performances par rapport aux méthodes :</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;Prix total : &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      price: 100,
+      quantity: 2
+    };
+  },
+  computed: {
+    totalPrice() {
+      return this.price * this.quantity;
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<h3>Watchers</h3>
+<p>Les <strong>watchers</strong> permettent de surveiller des données réactives et d'exécuter du code lorsque ces données changent. Cela peut être particulièrement utile pour effectuer des actions en réponse à des modifications.</p>
+<h4>Exemple de Watcher</h4>
+<p>Voici un exemple simple de watcher qui réagit aux changements d'une propriété :</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;input v-model=&quot;inputText&quot; placeholder=&quot;Entrez du texte&quot;/&gt;
+    &lt;p&gt;Texte actuel : &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      inputText: ''
+    };
+  },
+  watch: {
+    inputText(newValue) {
+      console.log(`Texte modifié : ${newValue}`);
+      // Vous pouvez également ajouter ici des actions supplémentaires
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Dans cet exemple, chaque fois que <code>inputText</code> est modifié par l'utilisateur, un message est enregistré dans la console.</p>
+<h2>7. Gestion d'état avec Vue.js</h2>
+<p>Bien que Vuex soit le système de gestion d'état officiel pour Vue.js, il est parfois possible de gérer l'état global simplement avec des méthodes dans votre composant. Cela peut être suffisant pour des projets simples.</p>
+<h3>Exemple de gestion d'état basique</h3>
+<p>Nous pouvons gérer un état global (comme un panier d'achats) en utilisant des événements personnalisés ou des props. Voici un exemple basique sans Vuex :</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;button @click=&quot;addToCart(item)&quot;&gt;Ajouter au panier&lt;/button&gt;
+    &lt;p&gt;Nombre d'articles dans le panier : &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      cartCount: 0,
+    };
+  },
+  methods: {
+    addToCart(item) {
+      this.cartCount++;
+      console.log(`Article ajouté : ${item}`);
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Dans cet exemple, lorsque l'utilisateur clique sur le bouton, le nombre d'articles dans le panier augmente, et vous pouvez facilement voir la mise à jour.</p>
+<h2>Ressources pour aller plus loin</h2>
+<ul>
+<li><a href="https://vuejs.org/guide/">Vue.js Official Guide</a></li>
+<li><a href="https://router.vuejs.org/">Vue Router Official Documentation</a></li>
+<li><a href="https://www.youtube.com/c/Academind">YouTube Channel - Academind</a> pour des tutoriels avancés sur Vue.js</li>
+<li><a href="https://www.youtube.com/c/TraversyMedia">YouTube - Traversy Media</a> pour des projets pratiques avec Vue.js</li>
+</ul>
+<h2>Horodateur</h2>
 <table>
 <thead>
 <tr>
@@ -262,6 +436,48 @@ export default router;
 <th>Indications</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td>25/09</td>
+<td>1H30</td>
+<td>Visionnage de la vidéo &quot;Vue.js Crash Course&quot; sur YouTube, introduction à Vue.js : Concepts fondamentaux (MVVM, réactivité, directives)</td>
+</tr>
+<tr>
+<td>25/09</td>
+<td>2H</td>
+<td>Lecture de la documentation officielle de Vue.js sur les concepts de base</td>
+</tr>
+<tr>
+<td>26/09</td>
+<td>2H</td>
+<td>Visionnage de &quot;Learn Vue 3 - The Complete Guide&quot; sur YouTube</td>
+</tr>
+<tr>
+<td>26/09</td>
+<td>1H30</td>
+<td>Communication entre composants : Événements et passage de données</td>
+</tr>
+<tr>
+<td>27/09</td>
+<td>1H30</td>
+<td>Pratique des composants et du Vue Router avec des exemples simples</td>
+</tr>
+<tr>
+<td>27/09</td>
+<td>1H30</td>
+<td>Gestion des événements utilisateurs et méthodes dynamiques</td>
+</tr>
+<tr>
+<td>28/09</td>
+<td>1H</td>
+<td>Utilisation des computed properties</td>
+</tr>
+<tr>
+<td>29/09</td>
+<td>1H</td>
+<td>Gestion de l'état global avec le système de réactivité de Vue</td>
+</tr>
+</tbody>
 </table>
 
 

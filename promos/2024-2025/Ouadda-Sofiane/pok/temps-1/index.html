@@ -73,8 +73,6 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
-                
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">FrontEnd</li>
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">HTML</li>
@@ -92,8 +90,6 @@
             
             
             <div class="hidden" data-pagefind-meta="Type">
-                
-                    
                 
                     
                 
@@ -173,8 +169,6 @@
 </svg>
 <div class="pl-8 mr-8">
 <ul>
-<li><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/mon/temps-1.1/index.md">MON1 : Développement FrontEnd - HTML/CSS</a></li>
-<li><a href="/do-it/promos/2024-2025/Ouadda-Sofiane/mon/temps-1.2/index.md">MON2 : Développement FrontEnd en JavaScript</a></li>
 <li><a href="https://github.com/SofianeOuadda/dark-kitchen">GitHub Projet Dark Kitchen v1</a></li>
 <li><a href="https://github.com/SofianeOuadda/dark-kitchen-v2">GitHub Projet Dark Kitchen v2</a></li>
 </ul>
@@ -221,29 +215,95 @@
 </li>
 </ul>
 <h4>Démo du site après la première phase</h4>
-<p><img src="Demo_Website_HTML.mov" alt="demo"></p>
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls="">
+    <source src="video/Demo_Website_HTML.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 <h4>[CE SPRINT N'A PAS ÉTÉ RÉALISER] (Pas utile pour la migration vers Vue)</h4>
 <h3>Sprint 2 : Dynamisation avec JavaScript</h3>
 <ul>
-<li><strong>Objectif :</strong> Intégrer des fonctionnalités JavaScript pour interagir avec le contenu.
+<li><s><strong>Objectif :</strong> Intégrer des fonctionnalités JavaScript pour interagir avec le contenu.</s>
 <ul>
-<li>[ ] Utiliser JavaScript pour ajouter des produits au panier et mettre à jour dynamiquement le contenu.</li>
-<li>[ ] Gestion des événements DOM (ex. : clics sur les boutons &quot;Ajouter au panier&quot;).</li>
-<li>[ ] Implémentation de transitions visuelles avec CSS et JavaScript.</li>
+<li><s>[ ] Utiliser JavaScript pour ajouter des produits au panier et mettre à jour dynamiquement le contenu.</s></li>
+<li><s>[ ] Gestion des événements DOM (ex. : clics sur les boutons &quot;Ajouter au panier&quot;).</s></li>
+<li><s>[ ] Implémentation de transitions visuelles avec CSS et JavaScript.</s></li>
 </ul>
 </li>
 </ul>
 <h3>Sprint 3 : Migration vers Vue.js</h3>
 <ul>
-<li><strong>Objectif :</strong> Transformer le site en une application plus interactive avec Vue.js.
+<li><strong>Objectif :</strong> Migrer l'application existante vers Vue.js et implémenter les fonctionnalités permettant d'ajouter des éléments au panier, tout en calculant dynamiquement le total.</li>
+</ul>
+<h5>1. Configuration du Projet Vue.js</h5>
 <ul>
-<li>[x] Diviser les pages en composants Vue.js (ex. : <code>MenuComponent</code>, <code>CartComponent</code>).</li>
-<li>[x] Mettre en place la réactivité avec Vue pour gérer les états du panier.</li>
-<li>[x] Utiliser des directives Vue pour dynamiser l'affichage du contenu.</li>
-<li>[ ] Intégration de formulaires réactifs pour la commande.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Initialiser un nouveau projet Vue.js avec Vue CLI.</li>
+<li>Créer la structure des dossiers du projet (<code>components</code>, <code>views</code>, <code>router</code>, etc.).</li>
+<li>Valider que le projet démarre correctement avec un serveur local.</li>
 </ul>
 </li>
 </ul>
+<h5>2. Migration des Composants Visuels (Header, Footer, Hero)</h5>
+<ul>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Migrer les éléments statiques du header et footer dans des composants Vue (<code>AppHeader</code>, <code>AppFooter</code>).</li>
+<li>Créer un composant <code>AppHero</code> pour l'image de fond et le texte d'introduction.</li>
+<li>Valider l'affichage statique sans logique métier.</li>
+</ul>
+</li>
+</ul>
+<h5>3. Migration des Pages (Home, Menu, Panier)</h5>
+<ul>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Migrer la page d'accueil dans <code>HomePage.vue</code> en utilisant les composants <code>AppHero</code>, <code>AppHeader</code>, et <code>AppFooter</code>.</li>
+<li>Créer la structure de la page Menu dans <code>MenuPage.vue</code> en affichant une liste statique d'items de menu.</li>
+<li>Créer la page <code>CartPage.vue</code> pour afficher le panier avec les articles ajoutés.</li>
+</ul>
+</li>
+</ul>
+<h5>4. Ajout des Composants Dynamiques (MenuItem, CartItem)</h5>
+<ul>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Créer le composant <code>AppMenuItem.vue</code> pour chaque item du menu, avec les props <code>name</code>, <code>description</code>, <code>price</code>, et <code>image</code>.</li>
+<li>Créer le composant <code>AppCartItem.vue</code> pour chaque article dans le panier, avec les props <code>name</code>, <code>price</code>, et <code>quantity</code>.</li>
+<li>Valider que chaque composant affiche correctement les données transmises.</li>
+</ul>
+</li>
+</ul>
+<h5>5. Gestion Globale du Panier dans <code>App.vue</code></h5>
+<ul>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Implémenter la gestion globale du panier dans <code>App.vue</code> avec une méthode <code>addToCart(item)</code> pour ajouter des articles et une méthode <code>removeFromCart(item)</code> pour les retirer.</li>
+<li>Utiliser un tableau d'articles dans l'état global (<code>data</code>) pour stocker les articles du panier.</li>
+<li>Passer les méthodes <code>addToCart</code> et <code>removeFromCart</code> en tant que props aux composants enfants (<code>MenuPage.vue</code> et <code>CartPage.vue</code>).</li>
+<li>S'assurer que les pages Menu et Panier interagissent avec le panier global dans <code>App.vue</code>.</li>
+</ul>
+</li>
+</ul>
+<h5>6. Calcul Dynamique du Total du Panier</h5>
+<ul>
+<li><strong>Tâches</strong> :
+<ul>
+<li>Ajouter une méthode dans <code>CartPage.vue</code> pour calculer le total du panier en fonction des quantités et des prix.</li>
+<li>Mettre à jour dynamiquement le total lorsque des articles sont ajoutés ou supprimés.</li>
+<li>Afficher le total à la fin de la page Panier.</li>
+</ul>
+</li>
+</ul>
+<h4>Démo du site après la migration vers Vue</h4>
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls="">
+    <source src="video/Demo_Website_Vue.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 <h3>Horodateur</h3>
 <table>
 <thead>
@@ -278,6 +338,36 @@
 <td>16/09</td>
 <td>3H</td>
 <td>Design des pages menu et panier</td>
+</tr>
+<tr>
+<td>25/09</td>
+<td>1H</td>
+<td>Configuration du projet Vue.js et initialisation avec Vue CLI</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>2H</td>
+<td>Migration des composants statiques (Header, Footer, Hero)</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>3H</td>
+<td>Migration des pages Menu et Panier</td>
+</tr>
+<tr>
+<td>10/10</td>
+<td>2H</td>
+<td>Création des composants dynamiques <code>AppMenuItem</code> et <code>AppCartItem</code></td>
+</tr>
+<tr>
+<td>11/10</td>
+<td>2H</td>
+<td>Gestion globale du panier dans <code>App.vue</code></td>
+</tr>
+<tr>
+<td>11/10</td>
+<td>2H</td>
+<td>Implémentation du calcul dynamique du total dans le panier</td>
 </tr>
 </tbody>
 </table>
