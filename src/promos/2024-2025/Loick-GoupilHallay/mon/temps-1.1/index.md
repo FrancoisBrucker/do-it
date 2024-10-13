@@ -16,9 +16,14 @@ résumé: "Introduction à l'environnement de développement idéal pour une éq
 ---
 
 {%prerequis 'MON débutant'%}
-Savoir ce qu'est un ordinateur et utiliser un navigateur web
+- Utiliser un navigateur web
+- Travail en équipe
 {%endprerequis%}
 
+{% lien %}
+- [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
+- [POK déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/)
+{% endlien %}
 
 <script type="module">
   // Mermaid configuration
@@ -70,6 +75,8 @@ Dans le monde du développement logiciel, une équipe doit disposer d'un ensembl
 L'objectif est de vous fournir une vue d'ensemble des outils et pratiques qui sont cruciaux pour le bon fonctionnement d'une équipe de développement, afin que vous ne soyiez pas perdu lorsque vous rejoindrez une équipe de développement.
 
 Toutes les informations concernants les habitudes des développeurs seront tirées des résultats du sondage [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
+
+Pour ceux qui souhaitent avoir un aperçu concret: Une implémentation de ces outils est réalisée dans mon [POK sur le déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/).
 
 <h3>Le Développeur</h3><a name="le-développeur"></a>
 Le développeur est une créature étrange qui passe la majeure partie de son temps à écrire du code, à résoudre des problèmes et à boire du café. Il est souvent solitaire, mais il peut aussi travailler en équipe. Il est passionné par la technologie et aime apprendre de nouvelles choses. Il est curieux, créatif et persévérant. Il est capable de passer des heures à chercher une solution à un problème, sans jamais abandonner. Il est un peu geek, un peu artiste, un peu scientifique. Il aime les défis et les puzzles. Il n'aime pas les bugs, les retards, les réunions et les gens en général. Il est un peu bizarre, mais c'est ce qui fait son charme.
