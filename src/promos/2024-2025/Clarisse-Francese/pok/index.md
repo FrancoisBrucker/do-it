@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Clarisse Francese.
 
-- [POK 1 : artiste en détresse](./temps-1)
+- [POK 1 : artiste en détresse (google sheets et apps script)](./temps-1)
 - [POK 2](./temps-2)
 - [POK 3](./temps-3)

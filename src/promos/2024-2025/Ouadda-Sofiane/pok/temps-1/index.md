@@ -31,8 +31,10 @@ résumé: "Codage du FrontEnd du site de ma Dark Kitchen avec HTML/CSS/JavaScrip
 {% endprerequis %}
 {% lien %}
 
-- [MON1 : Développement FrontEnd - HTML/CSS](../mon1.html)
-- [MON2 : Développement FrontEnd en JavaScript](../mon2.html)
+- [MON1 : Développement FrontEnd - HTML/CSS](/promos/2024-2025/Ouadda-Sofiane/mon/temps-1.1/index.md)
+- [MON2 : Développement FrontEnd en JavaScript](/promos/2024-2025/Ouadda-Sofiane/mon/temps-1.2/index.md)
+- [GitHub Projet Dark Kitchen v1](https://github.com/SofianeOuadda/dark-kitchen)
+- [GitHub Projet Dark Kitchen v2](https://github.com/SofianeOuadda/dark-kitchen-v2)
 
 {% endlien %}
 
@@ -73,7 +75,12 @@ Ce POK décrit les étapes du développement du site web de ma Dark Kitchen. Il 
   - [x] Création de la page `panier.html` pour gérer les articles du panier.
   - [x] Définition du style de la navigation (menus, boutons, couleurs) dans le fichier `style.css`.
 
-### Sprint 2 : Dynamisation avec JavaScript
+#### Démo du site après la première phase
+
+![demo](./Demo_Website_HTML.mov)
+
+#### [CE SPRINT N'A PAS ÉTÉ RÉALISER] (Pas utile pour la migration vers Vue)
+### Sprint 2 : Dynamisation avec JavaScript 
 - **Objectif :** Intégrer des fonctionnalités JavaScript pour interagir avec le contenu.
   - [ ] Utiliser JavaScript pour ajouter des produits au panier et mettre à jour dynamiquement le contenu.
   - [ ] Gestion des événements DOM (ex. : clics sur les boutons "Ajouter au panier").
@@ -81,9 +88,9 @@ Ce POK décrit les étapes du développement du site web de ma Dark Kitchen. Il 
 
 ### Sprint 3 : Migration vers Vue.js
 - **Objectif :** Transformer le site en une application plus interactive avec Vue.js.
-  - [ ] Diviser les pages en composants Vue.js (ex. : `MenuComponent`, `CartComponent`).
-  - [ ] Mettre en place la réactivité avec Vue pour gérer les états du panier.
-  - [ ] Utiliser des directives Vue (`v-for`, `v-if`, etc.) pour dynamiser l'affichage du contenu.
+  - [x] Diviser les pages en composants Vue.js (ex. : `MenuComponent`, `CartComponent`).
+  - [x] Mettre en place la réactivité avec Vue pour gérer les états du panier.
+  - [x] Utiliser des directives Vue pour dynamiser l'affichage du contenu.
   - [ ] Intégration de formulaires réactifs pour la commande.
 
 ### Horodateur

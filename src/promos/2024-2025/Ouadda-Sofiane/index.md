@@ -10,10 +10,6 @@ Bonjour !
 
 [Profil Github](https://github.com/SofianeOuadda)
 
-[Clefs publiques PGP](https://github.com/SofianeOuadda.gpg)
-
-[Clefs publiques SSH](https://github.com/SofianeOuadda.keys)
-
 ## POK & MON
 
 * [POK](./pok)

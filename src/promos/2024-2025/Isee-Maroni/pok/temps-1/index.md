@@ -25,7 +25,7 @@ Connaitre les bases de Airtable et Softr.
 {% endprerequis %}
 {% lien %}
 
-[`MON Apprentissage Airtable & Softr `](././mon/temps-1.1/)
+[`MON Apprentissage Airtable & Softr `](https://francoisbrucker.github.io/do-it/promos/2024-2025/Isee-Maroni/mon/temps-1.1/)
 
 {% endlien %}
 
@@ -92,8 +92,8 @@ Puis j'ai créé la base de données Offres de stages contenant les tables **Off
 
 ## 3. Début de l'application web avec *Softr*
 
-La première page que j'ai créée pour l'application web est la page des **Offres**. Je voulais qu'elles soient toutes visibles sur la même page, que l'on puisse défiler et que les informations les plus importantes soient visibles en un coup d'oeil. Les informations les plus importantes à mes yeux sont l'intitulé, l'entreprise, le secteur d'activité, la durée du stage et le type de missions (parfois présent dans l'intitulé)
-Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai ajouté les tags, des images et des filtres, y compris des filtres conditionnels, afin de . En m'inspirant de sites spécialisés dans les offres d'emploi, j'ai observé quelles informations étaient mises en avant et quelles sections étaient accessibles aux utilisateurs pour répondre au mieux à leur besoin.
+La première page que j'ai créée pour l'application web est la page des **Offres**. Je voulais qu'elles soient toutes visibles sur la même page, que l'on puisse défiler et que les informations les plus importantes soient visibles en un coup d'oeil. Les informations les plus importantes à mes yeux sont l'intitulé, l'entreprise, le secteur d'activité, la durée du stage et le type de missions (parfois présent dans l'intitulé). \
+Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai ajouté les tags, des images et des filtres, y compris des filtres conditionnels. En m'inspirant de sites spécialisés dans les offres d'emploi, j'ai observé quelles informations étaient mises en avant et quelles sections étaient accessibles aux utilisateurs pour répondre au mieux à leur besoin.
 
 Voici quelques étapes intermédiaires de la page Offres liée à la base de données *Airtable* :
 
@@ -111,8 +111,8 @@ Les pages suivantes que je vais créer sont les pages **Home** et **Offre-Detail
 #### Sprint 2
 
 Airtable
--champ lieu : automatisation ville, région et vice versa
--choisir les données pertinentes à mettre dans un questionnaire (le moins possible)
+- champ lieu : automatisation ville, région et vice versa
+- choisir les données pertinentes à mettre dans un questionnaire (le moins possible)
 
 Softr
 - Rajouts de filtres : lieu, secteur, profil étudiant
@@ -133,11 +133,11 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 10/09  | 1H  | Etude du besoin et définition des utilisateurs |
+| Mardi 10/09  | 30min  | Etude du besoin et définition des utilisateurs |
 | Mardi 10/09  | 1H  | Récupération des informations pertinentes sur le site des stages Centrale |
 | Mercredi 11/09  | 2H  | Création de la table *Airtable*, modifications et automatisations |
 | Mercredi 11/09  | 1H  | Création de l'application web *Softr* |
-| Dimanche 15/09  | 3H30  | Page **Offres** tests et améliorations |
-| Mercredi 18/09  | 1H30  | Test formulaire *Softr* qui je ne garde pas |
+| Dimanche 15/09  | 3H  | Développement page **Offres** tests et améliorations |
+| Mercredi 18/09  | 2H30  | Rédaction |
 
 ### Second Sprint

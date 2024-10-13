@@ -33,9 +33,12 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 - [x] Apprendre les bases de Kotlin en suivant le tuto proposé sur [developer.android.com](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-program?hl=fr#0).
 - [x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.
 - [x] Developper une application basique (une seule activité).
-- [ ] Faire un cahier des charges de l'application que je souhaite réaliser
-- [ ] Faire des wireframes réalistes pour chaque page de l'appli
-- [ ] Coder (à changer en mettant des étapes précises)
+- [x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.
+- [x] Faire des wireframes réalistes pour chaque page de l'application.
+- [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).
+- [ ] Implémenter l'interface en respectant les wireframes.
+- [ ] Gérer l'identification/inscription de l'utilisateur.
+- [ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.
 
 ### Sprints
 
@@ -55,9 +58,12 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 
 #### Sprint 2
 
-- [ ] Faire un cahier des charges de l'application que je souhaite réaliser
-- [ ] Faire des wireframes réalistes pour chaque page de l'appli
-- [ ] Coder
+- [x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.
+- [x] Faire des wireframes réalistes pour chaque page de l'application.
+- [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).è
+- [ ] Implémenter l'interface en respectant les wireframes.
+- [ ] Gérer l'identification/inscription de l'utilisateur.
+- [ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.
 
 ### Horodatage
 
@@ -69,6 +75,9 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 | Vendredi 13/09 | 1H00  | Recherches sur Android Studio/Kotlin |
 | Lundi 16/09 | 4H00  | Prise en main Android Studio/Kotlin |
 | Mardi 17/09 | 1H00  | Réalisation application (très) basique |
+||||
+| Samedi 12/10 | 1H00  | Cahier des charges |
+| Samedi 12/10 | 1H30  | Figma - wireframes |
 
 ## Contenu
 
@@ -78,6 +87,9 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 2. [Mise en place de l'environnement de travail (tâche 2)](#section2)
 3. [Créer un émulateur (machine virtuelle)](#section3)
 4. [Apprendre à coder sur Android Studio](#section4)
+5. [Réaliser le cahier des charges](#section5)
+6. [Réaliser des wireframes](#section6)
+7. [Créer une base de données](#section6)
 
 ### 1. Les bases en Kotlin <a id="section1"></a>
 
@@ -170,7 +182,7 @@ Voici l'aperçu l'application (très) basique sur laquelle j'ai abouti :
 
 Cette petite application est un jeu d'estimation. Il faut trouver un nombre entre 1 et 100 en un nombre d'essais limité (10 max). Une barre de progression représente le nombre de tentatives. Une zone de texte (*TextView*) permet de donner des indications sur le nombre à trouver : plus petit ou plus grand !
 
-## Sources utiles
+### Sources utiles - Sprint 1
 
 {% lien %}
 
@@ -178,5 +190,44 @@ Cette petite application est un jeu d'estimation. Il faut trouver un nombre entr
 - [guide de style](https://developer.android.com/kotlin/style-guide?hl=fr)
 - [TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)](https://www.youtube.com/watch?v=TCJFoExOBUE)
 - [Simple Kotlin App | Android Studio | 2024](https://www.youtube.com/watch?v=XLt_moCoauw)
+  
+{% endlien %}
+
+{% info %}
+Le sprint 1 s'achève à ce niveau.
+{% endinfo %}
+
+### 5. Réaliser le cahier des charges <a id="section5"></a>
+
+Avant dans se lancer dans les phases de conception et de réalisation, il est important de bien identifier le besoin client. Celui-ci peut être restituer sous forme de cahier des charges. Il est important que ce document soit clair et complet pour que le besoin client soit bien compris et que l'équipe de dev puisse correctement faire son travail.
+
+Au cours de mon stage de césure, j'ai été amené à développer une application web de la phase de conception à celle de mise en production. Le besoin client n'avait pas bien été défini ce qui a provoqué une grosse perte de temps de mon côté pour revoir certaines fonctionnalités voire en ajouter d'autres auxquelles ils n'avaient pas pensé initialement.
+
+Pour ce POK, la situation est un peu particulière, je suis à la fois le client et le développeur, mais ça ne fait rien. Dorénavant je m'efforcerai toujours à receuillir correctement le besoin client dans un premier temps pour avoir une bonne feuille de route de ce qui est à faire. Puis, dans un second temps, je commencerai à coder.
+
+Voici le cahier des charges consacré à l'application *EVASION* que j'ai décidé de développer dans le cadre de ce POK :
+
+![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-1.jpg)
+![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-2.jpg)
+
+### 6. Réaliser des wireframes <a id="section6"></a>
+
+Pour réaliser des wireframes, j'ai décidé d'utiliser le logiciel d'UI design [Figma](https://www.figma.com). Ce logiciel permet de créer des prototypes de sites web ou d'application.
+
+Après avoir appris à utiliser Figma, voici les wireframes créées :
+
+![Figma - global](./img/figma-global.png)
+
+![Figma - détails](./img//figma-details.png)
+
+Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.
+
+### 7. Créer une base de données <a id="section7"></a>
+
+### Sources utiles - Sprint 2
+
+{% lien %}
+
+- [Comment rédiger un cahier des charges](https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc)
   
 {% endlien %}
