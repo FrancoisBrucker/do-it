@@ -181,6 +181,13 @@ Il existe une fonctionnalité permettant d'enregistrer directement une macro san
 
 Voici une session, sous forme de vidéo, d'une partie du jeu codé :
 
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="./video/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 ## Sources utiles
 
 {% lien %}
