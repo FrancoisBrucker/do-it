@@ -180,17 +180,17 @@
 </ul>
 <h2>Contenu</h2>
 <h2>Présentation du tutoriel javascript-koans<a name="présentation-du-tutoriel-javascript-koans"></a></h2>
-<h3><span style="color: #26B260">1. Généralités<a name="1-généralités"></a></span></h3>
+<h3><span style="color: blue">1. Généralités<a name="1-généralités"></a></span></h3>
 <p>Basé sur le tutoriel de Edgecase <a href="http://github.com/edgecase/ruby_koans">Ruby koans</a>, l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de <strong>tests</strong> et de <strong>code à trous</strong>.</p>
 <p>Lien vers le code :
 <a href="http://github.com/edgecase/javascript-koans">JavaScript koans</a></p>
 <p>Lors de la première execution, une erreur d'exécution apparaît, ainsi qu'une indication qui montre où l'erreur s'est produite. L'objectif est de faire disparaître l'erreur dans le code. En corrigeant chaque erreur, je vais apprendre une notion particulière sur le langage Javascript et la programmation fonctionnelle en général.</p>
 <p>Le tutoriel d'apprentissage Javascript commence dans le fichier <em>koans/AboutExpects.js</em>. Ces premiers koans sont assez simples au départ! Au fur et à mesure que je progresse dans les koans, de plus en plus de syntaxe Javascript est introduite, ce qui m'a permis de résoudre des problèmes de plus en plus compliqués et d'utiliser des techniques plus avancées.</p>
-<h3><span style="color: #26B260">2. Running the koans<a name="2-running-the-koans"></a></span></h3>
+<h3><span style="color: blue">2. Running the koans<a name="2-running-the-koans"></a></span></h3>
 <p>Pour compléter les exercices et visualiser le passage des tests, il suffit de <strong>RUN</strong> le fichier <em>KoansRunnner.html</em> dans le navigateur du système, ici <strong>Google Chrome</strong>. Pour ce faire j'ai dû télécharger l'extension <strong>RunServer</strong> de VsCode.</p>
 <p>La première erreur se trouve dans <em>koans/AboutExpects.js</em>. Je l'ai corrigé et ai lancé le premier test. A chaque complétion, il suffit de rafraîchir le navigateur pour voir si on passe les tests ou non, jusqu'à ce que tous les tests deviennent verts.</p>
 <p>Le gestionnaire de tests utilisé est <a href="http://jasmine.github.io/">Jasmine</a> avec un visualiseur de rapport personnalisé.</p>
-<h3><span style="color: #26B260">3. Premier exemple d'exercice : AboutArrays complété<a name="3-premier-exemple-dexercice--aboutarrays-complété"></a></span></h3>
+<h3><span style="color: blue">3. Premier exemple d'exercice : AboutArrays complété<a name="3-premier-exemple-dexercice--aboutarrays-complété"></a></span></h3>
 <pre><code>describe(&quot;About Arrays&quot;, function() {
 
   //We shall contemplate truth by testing reality, via spec expectations.
@@ -289,7 +289,7 @@
   });
 });
 </code></pre>
-<h3><span style="color: #26B260">4. 2ème exemple d'exercice : AboutFunctions complété<a name="4-2ème-exemple-dexercice--aboutfunctions-complété"></a></span></h3>
+<h3><span style="color: blue">4. 2ème exemple d'exercice : AboutFunctions complété<a name="4-2ème-exemple-dexercice--aboutfunctions-complété"></a></span></h3>
 <pre><code>describe(&quot;About Functions&quot;, function() {
 
   it(&quot;should declare functions&quot;, function() {
@@ -391,7 +391,7 @@
   });
 });
 </code></pre>
-<h3><span style="color: #26B260">5. 3ème exemple d'exercice : AboutObjects non complété<a name="5-3ème-exemple-dexercice--aboutobjects-non-complété"></a></span></h3>
+<h3><span style="color: blue">5. 3ème exemple d'exercice : AboutObjects non complété<a name="5-3ème-exemple-dexercice--aboutobjects-non-complété"></a></span></h3>
 <pre><code>describe(&quot;About Objects&quot;, function () {
 
   describe(&quot;Properties&quot;, function () {
@@ -502,12 +502,12 @@
   });
 });
 </code></pre>
-<h3><span style="color: #26B260">6. Passage des tests<a name="6-passage-des-tests"></a></span></h3>
+<h3><span style="color: blue">6. Passage des tests<a name="6-passage-des-tests"></a></span></h3>
 <p>Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel :</p>
 <p><img src="test-js-koans.png" alt="Tests js-koans"></p>
 <h2>Tutoriel W3School JS<a name="tutoriel-w3school-js"></a></h2>
 <p>Comme pour les languages HTML et CSS, j'ai utilisé le tutoriel W3School pour apprendre les bases de JS. J'ai suivi les cours puis réalisé chaque exercices de chaque partie grâce à l'éditeur de code en ligne. Ces tutoriels sont vraiment bien fiat pour ceux qui veulent apprendre les bases des languages du FrontEnd, même s'ils sont très longs car traitent de toutes les notions de chaque language, donc difficile de faire le tri sur ce dont on a besoin dès le départ de l'apprentissage.</p>
-<h3><span style="color: #26B260">1. Variables<a name="1-variables"></a></span></h3>
+<h3><span style="color: blue">1. Variables<a name="1-variables"></a></span></h3>
 <p>Les variables en JS peuvent être déclarées selon 4 possibilités :</p>
 <ul>
 <li>automatiquement</li>
@@ -520,7 +520,7 @@
 <li>Il faut toujours déclaré ses varaiables</li>
 <li>Toujours utiliser <code>const</code> si la variables est fixe</li>
 <li>Toujours utiliser <code>const</code> si le type de variable est fixe (Arrays and Objects)</li>
-<li>Utiliser seulement <code>let</code> si on ne peut utiliser <em>const</em></li>
+<li>Utiliser seulement ``letv` si on ne peut utiliser <em>const</em></li>
 <li>Utiliser <em>var</em> seulement pour les anciens navigateurs.</li>
 </ol>
 <p>Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme <code>age</code>, <code>titre</code>, <code>couleur</code> etc.</p>
@@ -563,7 +563,7 @@
 </tr>
 </tbody>
 </table>
-<h3><span style="color: #26B260">2. Objets<a name="2-objets"></a></span></h3>
+<h3><span style="color: blue">2. Objets<a name="2-objets"></a></span></h3>
 <p>En JS, on utlise des objets qui possèdent plusieurs propriétés que l'on définit et on peut ensuite accéder à ces propriétés. Prenons l'exemple d'une voiture comme dans le tutoriel :</p>
 <pre><code>const car = {
   &quot;name&quot;: &quot;Fiat&quot;,
@@ -683,7 +683,7 @@ const myArray = Object.values(car);
 // Display the Array
 document.getElementById(&quot;demo&quot;).innerHTML = myArray;
 </code></pre>
-<h3><span style="color: #26B260">3. Classes<a name="3-classes"></a></span></h3>
+<h3><span style="color: blue">3. Classes<a name="3-classes"></a></span></h3>
 <p>Il est souvent utile de créer plusieurs objets du même type. Pour créer un type d'objet, nous utilisons une fonction constructeur d'objet. Il est considéré comme une bonne pratique de nommer les fonctions constructeur avec une première lettre majuscule.</p>
 <pre><code>function Car(name, model, weight, color) {
   this.name = name;
