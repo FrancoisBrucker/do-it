@@ -51,7 +51,7 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 
 ## Contenu 
 ## Présentation du tutoriel javascript-koans<a name="présentation-du-tutoriel-javascript-koans"></a>
-### <span style="color: #26B260">1. Généralités<a name="1-généralités"></a>
+### <span style="color: blue">1. Généralités<a name="1-généralités"></a>
 
 Basé sur le tutoriel de Edgecase [Ruby koans](http://github.com/edgecase/ruby_koans), l'objectif des koans Javascript est d'enseigner la programmation Javascript par le biais de **tests** et de **code à trous**.
 
@@ -62,7 +62,7 @@ Lors de la première execution, une erreur d'exécution apparaît, ainsi qu'une 
 
 Le tutoriel d'apprentissage Javascript commence dans le fichier *koans/AboutExpects.js*. Ces premiers koans sont assez simples au départ! Au fur et à mesure que je progresse dans les koans, de plus en plus de syntaxe Javascript est introduite, ce qui m'a permis de résoudre des problèmes de plus en plus compliqués et d'utiliser des techniques plus avancées.
 
-### <span style="color: #26B260">2. Running the koans<a name="2-running-the-koans"></a>
+### <span style="color: blue">2. Running the koans<a name="2-running-the-koans"></a>
 
 Pour compléter les exercices et visualiser le passage des tests, il suffit de **RUN** le fichier *KoansRunnner.html* dans le navigateur du système, ici **Google Chrome**. Pour ce faire j'ai dû télécharger l'extension **RunServer** de VsCode. 
 
@@ -70,7 +70,7 @@ La première erreur se trouve dans *koans/AboutExpects.js*. Je l'ai corrigé et 
 
 Le gestionnaire de tests utilisé est [Jasmine](http://jasmine.github.io/) avec un visualiseur de rapport personnalisé.
 
-### <span style="color: #26B260">3. Premier exemple d'exercice : AboutArrays complété<a name="3-premier-exemple-dexercice--aboutarrays-complété"></a>
+### <span style="color: blue">3. Premier exemple d'exercice : AboutArrays complété<a name="3-premier-exemple-dexercice--aboutarrays-complété"></a>
 
 ```
 describe("About Arrays", function() {
@@ -172,7 +172,7 @@ describe("About Arrays", function() {
 });
 ```
 
-### <span style="color: #26B260">4. 2ème exemple d'exercice : AboutFunctions complété<a name="4-2ème-exemple-dexercice--aboutfunctions-complété"></a>
+### <span style="color: blue">4. 2ème exemple d'exercice : AboutFunctions complété<a name="4-2ème-exemple-dexercice--aboutfunctions-complété"></a>
 
 ```
 describe("About Functions", function() {
@@ -277,7 +277,7 @@ describe("About Functions", function() {
 });
 ```
 
-### <span style="color: #26B260">5. 3ème exemple d'exercice : AboutObjects non complété<a name="5-3ème-exemple-dexercice--aboutobjects-non-complété"></a>
+### <span style="color: blue">5. 3ème exemple d'exercice : AboutObjects non complété<a name="5-3ème-exemple-dexercice--aboutobjects-non-complété"></a>
 
 ```
 describe("About Objects", function () {
@@ -391,7 +391,7 @@ describe("About Objects", function () {
 });
 ```
 
-### <span style="color: #26B260">6. Passage des tests<a name="6-passage-des-tests"></a>
+### <span style="color: blue">6. Passage des tests<a name="6-passage-des-tests"></a>
 
 Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel : 
 
@@ -400,21 +400,21 @@ Voici comment se présente la page de passage des tests pour suivre notre avanc�
 ## Tutoriel W3School JS<a name="tutoriel-w3school-js"></a>
 Comme pour les languages HTML et CSS, j'ai utilisé le tutoriel W3School pour apprendre les bases de JS. J'ai suivi les cours puis réalisé chaque exercices de chaque partie grâce à l'éditeur de code en ligne. Ces tutoriels sont vraiment bien fiat pour ceux qui veulent apprendre les bases des languages du FrontEnd, même s'ils sont très longs car traitent de toutes les notions de chaque language, donc difficile de faire le tri sur ce dont on a besoin dès le départ de l'apprentissage. 
 
-### <span style="color: #26B260">1. Variables<a name="1-variables"></a>
+### <span style="color: blue">1. Variables<a name="1-variables"></a>
 Les variables en JS peuvent être déclarées selon 4 possibilités : 
   * automatiquement
-  * utilisant `var`
-  * utilisant `const`
-  * utilisant `let`
+  * utilisant ``var``
+  * utilisant ``const``
+  * utilisant ``let``
   
 Comment choisir parmi ces possibilités ? 
 1. Il faut toujours déclaré ses varaiables
-2. Toujours utiliser `const` si la variables est fixe
-3. Toujours utiliser `const` si le type de variable est fixe (Arrays and Objects)
-4. Utiliser seulement `let` si on ne peut utiliser *const*
+2. Toujours utiliser ``const`` si la variables est fixe
+3. Toujours utiliser ``const`` si le type de variable est fixe (Arrays and Objects)
+4. Utiliser seulement ``letv` si on ne peut utiliser *const*
 5. Utiliser *var* seulement pour les anciens navigateurs.
 
-Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme `age`, `titre`, `couleur` etc.
+Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme ``age``, ``titre``, ``couleur`` etc.
 
 Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables : 
 |   | Scope	| Redeclare	| Reassign	| Hoisted	| Binds this  |
@@ -423,7 +423,7 @@ Voici un tableau récapitulant les utilisation des différrents types de déclar
 |`let`	| Yes	| No	| Yes	| No	| No |
 |`const`	| Yes	| No	| No	| No	| No |
 
-### <span style="color: #26B260">2. Objets<a name="2-objets"></a>
+### <span style="color: blue">2. Objets<a name="2-objets"></a>
 En JS, on utlise des objets qui possèdent plusieurs propriétés que l'on définit et on peut ensuite accéder à ces propriétés. Prenons l'exemple d'une voiture comme dans le tutoriel : 
 ```
 const car = {
@@ -447,7 +447,7 @@ car.weight= 800;
 car.color= "white"
 ```
 
-En utilisant le mot clé `new Object ()` cela donne : 
+En utilisant le mot clé ``new Object ()`` cela donne : 
 ```
 // Create an Object
 const car = new Object{}; 
@@ -540,7 +540,7 @@ for (let x in car) {
 // Display Properties
 document.getElementById("demo").innerHTML=text;
 ```
-   * On affiche l'objet à l'aide de `Object.values()`
+   * On affiche l'objet à l'aide de ``Object.values()``
 ```
 //Create an Object
 const car = {
@@ -557,7 +557,7 @@ document.getElementById("demo").innerHTML = myArray;
 ```
 
 
-### <span style="color: #26B260">3. Classes<a name="3-classes"></a>
+### <span style="color: blue">3. Classes<a name="3-classes"></a>
 Il est souvent utile de créer plusieurs objets du même type. Pour créer un type d'objet, nous utilisons une fonction constructeur d'objet. Il est considéré comme une bonne pratique de nommer les fonctions constructeur avec une première lettre majuscule.
 ```
 function Car(name, model, weight, color) {
@@ -568,7 +568,7 @@ function Car(name, model, weight, color) {
 }
 ```
 Dans la fonction constructeur, thisn'a aucune valeur. La valeur de `this` deviendra le nouvel objet lorsqu'un nouvel objet est créé.
-Nous pouvons maintenant l'utiliser `new car()` pour créer de nombreux nouveaux objets `Car` :
+Nous pouvons maintenant l'utiliser ``new car()`` pour créer de nombreux nouveaux objets ``Car`` :
 ```
 const FatherCar = new car("Audi", "Q7", 1500, "black");
 const GrandFatherCar = new car("Renaud", "408", 900, "grey");
@@ -601,7 +601,7 @@ Car.prototype.changeModel = function (model) {
 }
 FatherCar.changeModel("RS Q7");
 ```
-La fonction `changeModel()` attribue la valeur du model à la propriété de la `Car model`, en remplaçant this par `FatherCar`.
+La fonction ``changeModel()`` attribue la valeur du model à la propriété de la ``Car model``, en remplaçant this par ``FatherCar``.
 
 JS dispose de constructeurs intégrés pour tous les objets communs :
 ```
