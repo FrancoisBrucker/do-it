@@ -48,17 +48,16 @@ L'objectif à la fin de ces 20 heures est d'avoir réalisé l'interface graphiqu
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-Sprint 1 
 | Mardi 03/09  | 30 MIN  | Création de la base de données des peintures + fichier JSON |
 | Mercredi 04/09  | 2H  | Création de l'application et mise en page de la page d'accueil + choix charte graphique |
 | Lundi 09/09  | 3H  | Création des différentes pages, liaison des vues avec les onglets de l'en-tête, première ébauche de la page portfolio avec la création d'un carousel |
 | Jeudi 12/09  | 4H30  | Mise en page du portfolio et de la page à propos |
-Sprint 2
 | Lundi 23/09 | 30 MIN | Mise en place de la galerie photo : assez rapide grâce à un composant React qui existe déjà |
 | Lundi 23/09 | 1H15 | Mise en phase du formulaire de contact avec EmailJS : assez sympa à faire, rapide et efficace. |
 | Mercredi 25/09 | 1H | Travail sur l'affichage des images |
 | Samedi 12/10 | 2H | Travail sur la gestion des évènements clavier |
 | Dimanche 13/10 | 3H | Tests à ma famille : retours négatifs sur le préloading des images + Travail sur ce dit préchargement des images |
+| Lundi 14/10 | 2H | Refactor du carousel |
 
 ## Contenu
 
@@ -135,8 +134,10 @@ J'ai démarré ce second sprint par la page galerie photo qui fût fort rapide �
 ![galerie-2](image-1.png)
 ![galerie-3](image-2.png)
 
-Pour la page Contact, je crée un formulaire grâce à la mise en page https://www.copycat.dev/blog/material-ui-form/. Pour éviter pour l'instant de faire un système back-end avec des API etc, j'ai suivi le tutoriel ![React Contact Form w/ EmailJS](https://medium.com/@thomasaugot/create-a-react-contact-form-with-email-js-cad2c8606f33) pour apprendre à utiliser EmailJS de manière temporaire afin de recevoir les messages via cette plateforme. 
+Pour la page Contact, je crée un formulaire grâce à la mise en page https://www.copycat.dev/blog/material-ui-form/. Pour éviter pour l'instant de faire un système back-end avec des API etc, j'ai suivi le tutoriel [React Contact Form w/ EmailJS](https://medium.com/@thomasaugot/create-a-react-contact-form-with-email-js-cad2c8606f33) pour apprendre à utiliser EmailJS de manière temporaire afin de recevoir les messages via cette plateforme. 
 
-![Contact](image-3.png)
+![Contact](contact.png)
 
 J'ai travaillé sur la navigation avec les flèches du clavier pour le portfolio. J'ai eu des problèmes avec la gestion des keyEvent et de la gestion du state de l'item courant. 
+
+<video controls src="demo.mp4" title="Demo"></video>
