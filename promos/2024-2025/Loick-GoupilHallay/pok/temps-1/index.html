@@ -273,7 +273,7 @@ Pour qu'il puisse fonctionner, la seule condition est que la machine hôte ait i
 architecture-beta
     service users(clarity:users-solid)[Utilisateurs]
 
-    group network(internet)[Network]
+    group network(internet)[Container Network]
 
     service nginx(logos:nginx)[Nginx] in network
     service postgres(logos:postgresql)[PostgreSQL] in network
