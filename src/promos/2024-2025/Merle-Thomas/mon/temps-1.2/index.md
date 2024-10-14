@@ -403,25 +403,25 @@ Comme pour les languages HTML et CSS, j'ai utilisé le tutoriel W3School pour ap
 ### <span style="color: #26B260">1. Variables<a name="1-variables"></a>
 Les variables en JS peuvent être déclarées selon 4 possibilités : 
   * automatiquement
-  * utilisant *var*
-  * utilisant *const*
-  * utilisant *let*
+  * utilisant `var`
+  * utilisant `const`
+  * utilisant `let`
   
 Comment choisir parmi ces possibilités ? 
 1. Il faut toujours déclaré ses varaiables
-2. Toujours utiliser *const* si la variables est fixe
-3. Toujours utiliser *const* si le type de variable est fixe (Arrays and Objects)
-4. Utiliser seulement *let* si on ne peut utiliser *const*
+2. Toujours utiliser `const` si la variables est fixe
+3. Toujours utiliser `const` si le type de variable est fixe (Arrays and Objects)
+4. Utiliser seulement `let` si on ne peut utiliser *const*
 5. Utiliser *var* seulement pour les anciens navigateurs.
 
-Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme *age*, *titre*, *couleur* etc.
+Toutes les variables en JS sont définis par des identificateurs qui sont uniques. On peut leur donner des noms court (x ou y) ou des noms plus descriptifs comme `age`, `titre`, `couleur` etc.
 
 Voici un tableau récapitulant les utilisation des différrents types de déclarations de variables : 
 |   | Scope	| Redeclare	| Reassign	| Hoisted	| Binds this  |
 | -------- | -------- |-------- |-------- |-------- |-------- |
-|var	| No	| Yes	| Yes	| Yes	| Yes |
-|let	| Yes	| No	| Yes	| No	| No |
-|const	| Yes	| No	| No	| No	| No |
+|`var`	| No	| Yes	| Yes	| Yes	| Yes |
+|`let`	| Yes	| No	| Yes	| No	| No |
+|`const`	| Yes	| No	| No	| No	| No |
 
 ### <span style="color: #26B260">2. Objets<a name="2-objets"></a>
 En JS, on utlise des objets qui possèdent plusieurs propriétés que l'on définit et on peut ensuite accéder à ces propriétés. Prenons l'exemple d'une voiture comme dans le tutoriel : 
@@ -447,7 +447,7 @@ car.weight= 800;
 car.color= "white"
 ```
 
-En utilisant le mot clé *new Object ()* cela donne : 
+En utilisant le mot clé `new Object ()` cela donne : 
 ```
 // Create an Object
 const car = new Object{}; 
@@ -540,7 +540,7 @@ for (let x in car) {
 // Display Properties
 document.getElementById("demo").innerHTML=text;
 ```
-   * On affiche l'objet à l'aide de Object.values()
+   * On affiche l'objet à l'aide de `Object.values()`
 ```
 //Create an Object
 const car = {
@@ -567,8 +567,8 @@ function Car(name, model, weight, color) {
   this.color = color;
 }
 ```
-Dans la fonction constructeur, thisn'a aucune valeur. La valeur de *this* deviendra le nouvel objet lorsqu'un nouvel objet est créé.
-Nous pouvons maintenant l'utiliser *new car()* pour créer de nombreux nouveaux objets *Car* :
+Dans la fonction constructeur, thisn'a aucune valeur. La valeur de `this` deviendra le nouvel objet lorsqu'un nouvel objet est créé.
+Nous pouvons maintenant l'utiliser `new car()` pour créer de nombreux nouveaux objets `Car` :
 ```
 const FatherCar = new car("Audi", "Q7", 1500, "black");
 const GrandFatherCar = new car("Renaud", "408", 900, "grey");
@@ -601,7 +601,7 @@ Car.prototype.changeModel = function (model) {
 }
 FatherCar.changeModel("RS Q7");
 ```
-La fonction changeModel() attribue la valeur du model à la propriété de la Car *model*, en remplaçant this par FatherCar.
+La fonction `changeModel()` attribue la valeur du model à la propriété de la `Car model`, en remplaçant this par `FatherCar`.
 
 JS dispose de constructeurs intégrés pour tous les objets communs :
 ```
