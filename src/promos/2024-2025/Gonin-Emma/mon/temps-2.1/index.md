@@ -1,32 +1,34 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "MON 2.1 -Docker"
 authors:
   - Emma Gonin
 
 date: 1970-11-01
 tags: 
   - "temps 2"
+  - "vert"
+  - "Docker"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "MON sur Docker"
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Novice
 
 {% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
+[MON de Tuncay Bilgi](https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/)
+[MON de Victor Ory](https://francoisbrucker.github.io/do-it/promos/2023-2024/Victor-Ory/mon/Docker/)
+[MON d'Arthur Louradou](https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.1/)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Un MON pour se familiariser avec Docker. J'ai déjà utilisé un peu Docker mais je souhaite approfondir mes connaissances pour monter en compétences DevOps.
 
 ## Contenu
 
