@@ -169,7 +169,7 @@ Il est essentiel de **choisir des mots de passe forts** pour les comptes utilisa
 
 L'ANSSI met régulièrement à jour son [guide d'authentification multifacteur et mots de passe](https://cyber.gouv.fr/sites/default/files/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf) pour vous aider à choisir un bon mot de passe, robustes vis-à-vis des évolutions technologiques.
 
-#### Authentification forte<a name="authentification-forte"></a>
+##### Authentification forte<a name="authentification-forte"></a>
 L'authentification forte consiste à **utiliser plusieurs facteurs d'authentification** pour se connecter à un système. Par exemple, un mot de passe et un code envoyé par SMS. Le deuxième facteur d'authentification peut aussi être un élément physique comme une clé USB ou un token.
 
 Les systèmes d'exploitation modernes proposent des solutions d'authentification forte comme [Windows Hello](https://www.microsoft.com/fr-fr/windows/tips/windows-hello) (reconnaissance faciale) ou [Touch ID](https://support.apple.com/fr-fr/105095) (reconnaissance d'empreinte digitale). Les éléments physiques comme les clés USB ou les tokens sont souvent utilisés pour l'authentification forte dans les entreprises. Il s'agit par exemple de la clé [YubiKey](https://www.yubico.com), de la carte à puce ou du token OTP. Tous ces éléments peuvent être déployés (longtemps) après l'installation du système d'exploitation. Ils sont souvent gérés par un service d'**authentification centralisé**.
@@ -332,6 +332,13 @@ Ensuite, il faut **analyser** l'incident pour comprendre comment il a eu lieu et
 ### Risques légaux<a name="risques-légaux"></a>
 Un point important de la sensibilisation du développeur consiste à l'informer des risques légaux encourus par l'entreprise mais aussi par lui-même en cas de non-respect des règles de sécurité. Les entreprises sont soumises à des **obligations légales** en matière de sécurité informatique. Elles doivent respecter des **normes** et des **règlements** pour protéger les données des utilisateurs.\
 Une faille de sécurité peut entraîner des **sanctions** financières, des **poursuites judiciaires** et une **perte de confiance** des utilisateurs. Les développeurs peuvent également être tenus **responsables** en cas de faille de sécurité. Ils doivent comprendre qu'ils ont un rôle essentiel à jouer dans la sécurité de l'entreprise et qu'ils doivent respecter les règles de sécurité pour éviter tout problème avec la justice.
+
+## Conclusion<a name="conclusion"></a>
+La sécurité informatique est un enjeu majeur pour les entreprises, <u>même si elles ne produisent pas des services numériques</u>. La sécurité informatique est un domaine complexe qui nécessite des compétences avancées en informatique et en sécurité. Les entreprises ont des services **SRE** (Site Reliability Engineering) ou des **DSI** (Direction des Systèmes d'Information) qui sont chargés de mettre en place les mesures de sécurité nécessaires pour protéger le SI de l'entreprise.
+
+La sécurité coûte cher, mais les conséquences d'une faille de sécurité peuvent être encore plus coûteuses. Il est donc essentiel d'investir dans la sécurité informatique pour protéger les données de l'entreprise, sa réputation et éviter les attaques.
+
+Enfin n'oubliez pas que la <u>sécurité informatique est l'affaire de tous</u>. Les développeurs ont un rôle essentiel à jouer dans la sécurité de l'entreprise. Ils doivent être sensibilisés à la sécurité informatique et formés aux bonnes pratiques de sécurité. Ils doivent respecter les règles de sécurité et mettre en place les mesures de sécurité nécessaires pour protéger les données de l'entreprise.
 
 ## Lexique<a name="lexique"></a>
 - **Piratage informatique**: Action de s'introduire dans un système informatique sans autorisation.
