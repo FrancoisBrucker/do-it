@@ -1,32 +1,29 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "MON 2.2 -Jenkins"
 authors:
   - Emma Gonin
 
 date: 1971-01-01
 tags: 
   - "temps 2"
+  - "vert"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON traitant de Jenkins"
 ---
 
 {% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
+Docker
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[MON de Tuncay Bilgi](https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Jenkins/)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Un MON pour savoir utiliser Jenkins. C'est un outil de CI/CD qui était utilisé lors de mon premier stage mais je n'ai pas eu l'occasion de mettre les mains dans le cambouis, ce MON est l'occasion de le faire.
 
 ## Contenu
 
