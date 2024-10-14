@@ -27,6 +27,23 @@ tags:
   // Mermaid configuration
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
+  mermaid.registerIconPacks([
+  {
+    name: 'carbon',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/carbon/icons.json').then((res) => res.json()),
+  },
+  {
+    name: 'tabler',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/tabler/icons.json').then((res) => res.json()),
+  },
+  {
+    name: 'emojione',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/emojione/icons.json').then((res) => res.json()),
+  },
+  ]);
 </script>
 <style>
   section.optional {
@@ -62,7 +79,12 @@ tags:
 3. [Zero Trust](#zero-trust)
     1. [Moindre privilège](#moindre-privilège)
     2. [Sécurisation des accès](#sécurisation-des-accès)
+        - [Politique d'authentification de l'entreprise](#politique-dauthentification-de-lentreprise)
+        - [Politique de PKI](#politique-de-pki)
     3. [Sécurisation des flux](#sécurisation-des-flux)
+        - [Firewall](#firewall)
+        - [DMZ](#dmz)
+        - [Proxy](#proxy)
 4. [Former les développeurs](#former-les-développeurs)
     1. [Chiffrement](#chiffrement)
     2. [Gestion des secrets](#gestion-des-secrets)
@@ -71,10 +93,6 @@ tags:
     5. [Logging & Monitoring](#logging-monitoring)
     6. [Réponse aux incidents](#réponse-aux-incidents)
     7. [Risques légaux](#risques-légaux)
-5. [Réseau](#réseau)
-    1. [TLS](#tls)
-    2. [Proxy](#proxy)
-    3. [Firewall](#firewall)
 6. [Conclusion](#conclusion)
 7. [Lexique](#lexique)
 
@@ -136,7 +154,7 @@ Il est essentiel de **mettre à jour régulièrement** le système d'exploitatio
 #### SSH, réseau & firewall<a name="ssh-réseau-firewall"></a>
 Il est recommandé de **désactiver le service SSH** si vous n'en avez pas besoin. Le service SSH est souvent utilisé pour accéder à une machine à distance, mais il peut être une porte d'entrée pour les attaquants s'il est mal configuré.
 
-Il est également recommandé de **configurer un firewall** pour contrôler le trafic réseau entrant et sortant. Un **firewall** permet de **filtrer le trafic réseau** entrantes et sortantes. Il suit des **règles de filtrage** définies par l'administrateur pour autoriser ou bloquer le trafic réseau. C'est un bon moyen d'empêcher votre extension VSCode de communiquer avec Pyongyang.
+Il est également recommandé de **configurer un pare-feu** pour contrôler le trafic réseau entrant et sortant. Un **pare-feu** permet de **filtrer le trafic réseau** entrant et sortant. Il suit des **règles de filtrage** définies par l'administrateur pour autoriser ou bloquer le trafic réseau. C'est un bon moyen d'empêcher votre extension VSCode de communiquer avec Pyongyang.
 
 Il est enfin recommandé de **désactiver les services réseau non utilisés** pour réduire la surface d'attaque. Par exemple, si vous n'utilisez pas le service FTP (privilégiez SFTP), IPv6 ou le partage de fichiers, il est recommandé de les désactiver.
 
@@ -173,33 +191,130 @@ De plus, il est recommandé de **limiter les accès aux fichiers et répertoires
 </section>
 
 ## Zero Trust<a name="zero-trust"></a>
+Le [modèle Zero Trust](https://cyber.gouv.fr/publications/le-modele-zero-trust) est un modèle de sécurité informatique qui consiste à ne **faire confiance à aucun utilisateur ou appareil à l'intérieur ou à l'extérieur du réseau**. Cela va à l'encontre du modèle habituel de confiance implicite, où les utilisateurs et les appareils à l'intérieur du réseau sont considérés comme sûrs.\
+C'est un modèle de sécurité qui définit **l'ensemble de l'architecture de sécurité** d'une entreprise. Par conséquent il est difficile à mettre en place et nécessite une **réflexion globale**. Il est encore plus compliqué de transformer un système existant en un système Zero Trust.
+
+Ce modèle repose sur plusieurs principes clés
+
+### Moindre privilège<a name="moindre-privilège"></a>
+Le principe du **moindre privilège** consiste à accorder à chaque utilisateur les **privilèges les plus bas nécessaires** pour effectuer son travail.
+
+Cela signifie que:
+- L'accès aux ressources repose uniquement sur le **besoin d'en connaître** de l'utilisateur
+- L'accès donné est le **plus faible possible** permettant tout de même à l'utilisateur de réaliser son travail
+- Les demandes d'accès sont **contrôlées et traçables**. Si possible elles sont **automatiques** pour éviter les erreurs humaines et la frustration des utilisateurs
+- Les accès sont **révoqués** dès que l'utilisateur n'en a plus besoin
+- Il y a une **surveillance** (automatique ou non) pour détecter les abus, les anomalies et les erreurs
+- La politique de sécurité est **appliquée**, **contrôlée** et **(r)évaluée** régulièrement
+
+### Sécurisation des accès<a name="sécurisation-des-accès"></a>
+La **sécurisation des accès** consiste à **authentifier** et **autoriser** les utilisateurs et les appareils avant de leur donner accès aux ressources.
+
+Concrètement, d'après le [Guide de d'administration système de l'ANSSI](https://cyber.gouv.fr/sites/default/files/2018/04/anssi-guide-admin_securisee_si_v3-0.pdf), pour une entreprise / équipe, cela passe par:
+
+#### Politique d'authentification de l'entreprise<a name="politique-dauthentification-de-lentreprise"></a>
+L'entreprise doit mettre en place une **politique d'authentification** pour définir les règles d'authentification des utilisateurs sur leurs postes physiques. Cette politique doit inclure:
+- **Authentification robuste**
+- **Authentification forte**
+- **Rotation régulière des mots de passe**
+- Déployer et maintenir des moyens de **gestion centralisée des identités et des accès** tels que des [LDAP](https://www.redhat.com/fr/topics/security/what-is-ldap-authentication), des [Active Directory](https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview), des [SSO](https://www.oracle.com/fr/security/qu-est-ce-qu-un-sso/) ([SAML](https://fr.wikipedia.org/wiki/Security_assertion_markup_language) ou [OIDC](https://fr.wikipedia.org/wiki/OpenID_Connect))
+- Utiliser des **certificats** pour l'authentification
+
+#### Politique de PKI<a name="politique-de-pki"></a>
+La [PKI](https://cpl.thalesgroup.com/faq/public-key-infrastructure-pki/what-public-key-infrastructure-pki) (Public Key Infrastructure) est un ensemble de technologies et de procédures qui permettent de gérer les clés et les certificats numériques. Ces certificats numériques sont utilisés pour **authentifier** les utilisateurs et les appareils. Ils sont aussi utilisés pour **chiffrer** les communications entre les utilisateurs et les ressources. Ou encore pour **signer** les données pour garantir leur intégrité.
+
+Les certificats numériques sont délivrés par une **autorité de certification** (CA) qui atteste de l'identité de l'utilisateur ou de l'appareil. Il est essentiel de mettre en place une **politique de PKI** pour définir les règles de gestion des certificats numériques.
+
+### Sécurisation des flux<a name="sécurisation-des-flux"></a>
+La **sécurisation des flux** consiste à **chiffrer** les communications entre les utilisateurs et les ressources pour protéger les données des attaques de type [Man In The Middle](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu). Il est recommandé d'utiliser des protocoles de sécurisation des échanges comme **SSL** ou **TLS** pour chiffrer les communications. Cela permet de garantir la **confidentialité** et l'**intégrité** des données. Pour les développeurs, il est recommandé d'utiliser des protocoles de transfert de fichiers sécurisés comme **SFTP** pour transférer des fichiers en toute sécurité.
+
+Il est également recommandé de **surveiller les flux** pour détecter les anomalies et les attaques. La surveillance des flux permet de détecter les attaques en temps réel et de réagir rapidement pour les contrer. Cela passe par la mise en place de systèmes de logging et de monitoring.
+
+#### Firewall<a name="firewall"></a>
+L'entreprise peut (et doit) mettre en place un **firewall** pour contrôler le trafic réseau entrant et sortant de l'entreprise. Ce firewall est un appareil physique ou un logiciel qui filtre le trafic réseau pour l'ensemble de ses utilisateurs. Il est au dessus des firewalls logiciels installés sur les postes de travail.\
+C'est une couche de sécurité supplémentaire qui permet de bloquer certaines communications non autorisées ou encore des attaques de type [DDOS](https://cyber.gouv.fr/publications/comprendre-et-anticiper-les-attaques-ddos)
+
+#### DMZ<a name="dmz"></a>
+La **DMZ** (Demilitarized Zone) est une zone du réseau qui est isolée du reste du réseau de l'entreprise. C'est une zone de sécurité intermédiaire entre le réseau interne et le réseau externe. Elle permet de **limiter les risques** en cas de compromission d'un serveur dans la DMZ. Elle est utilisée pour héberger des services accessibles depuis l'extérieur de l'entreprise, comme un site web ou un serveur de messagerie. La DMZ est une couche de sécurité supplémentaire qui permet de protéger les ressources sensibles de l'entreprise. Elle est souvent utilisée pour héberger des services qui nécessitent un accès depuis l'extérieur de l'entreprise, ou pour connecter des réseaux de confiance différents. Cela peut aussi faire office de **sandbox** pour les développeurs. Ou encore être utilisé pour héberger un **proxy** ou un **firewall**.
+
+<pre class="mermaid" style="background-color: transparent">
+%%{init: {'theme': 'forest'}}%%
+architecture-beta
+    group intranet(carbon:chart-network)[Intranet]
+    service server1(server)[Server 1] in intranet
+    service server2(server)[Server 2] in intranet
+
+    group dmz(cloud)[DMZ]
+    service firewall(carbon:firewall-classic)[Firewall] in dmz
+    service proxy(carbon:server-proxy)[Proxy] in dmz
+    service webserver(carbon:server-dns)[Web Server] in dmz
+    service mailserver(carbon:mail-all)[Mail Server] in dmz
+
+    server1:T <--> L:proxy
+    server1:R <--> L:webserver
+    server1:B <--> L:mailserver
+
+    group internet(tabler:world-www)[Internet]
+    service china(emojione:flag-for-china)[Unsuspicious server] in internet
+
+    proxy:R <--> T:firewall
+    webserver:R <--> L:firewall
+    mailserver:R <--> B:firewall
+
+    firewall:R <--> L:china
+</pre>
+
+#### Proxy<a name="proxy"></a>
+Un **proxy** est un serveur intermédiaire qui sert d'intermédiaire entre les utilisateurs et les serveurs. Il permet de **filtrer** les communications pour contrôler l'accès aux ressources. Il peut être utilisé pour **bloquer** les sites web malveillants, **contrôler** les accès aux ressources sensibles ou **accélérer** les communications. Il est recommandé de mettre en place un proxy pour contrôler le trafic réseau et protéger les utilisateurs des attaques.
+
 
 ## Lexique<a name="lexique"></a>
 - **Piratage informatique**: Action de s'introduire dans un système informatique sans autorisation.
-- **Brèche de données**: Fuite de données personnelles ou sensibles.
-- **Système d'exploitation**: Logiciel qui permet à un ordinateur de fonctionner.
-- **BIOS/UEFI**: Logiciel qui s'exécute lors du démarrage de l'ordinateur.
-- **Secure Boot**: Fonctionnalité qui empêche le démarrage de logiciels non signés.
-- **Chiffrement**: Procédé de cryptographie qui consiste à transformer un message clair en un message chiffré.
-- **Authentification forte**: Utilisation de plusieurs facteurs d'authentification pour se connecter à un système.
-- **OTP**: One-Time Password, mot de passe à usage unique.
-- **Bootloader**: Logiciel qui permet de charger le système d'exploitation.
-- **Kernel**: Noyau du système d'exploitation.
-- **Kernel Exploit**: Attaque qui exploite une faille dans le noyau du système d'exploitation.
-- **ACL**: Access Control List, liste de contrôle d'accès.
-- **IPv4**: Protocole de communication utilisé sur Internet.
-- **IPv6**: Protocole de communication utilisé sur Internet.
-- **FTP**: File Transfer Protocol, protocole de transfert de fichiers.
-- **SFTP**: Secure File Transfer Protocol, protocole de transfert de fichiers sécurisé.
-- **SSH**: Secure Shell, protocole de communication sécurisé pour accéder à un ordinateur à distance.
+    - **Kernel Exploit**: Attaque qui exploite une faille dans le noyau du système d'exploitation.
+    - **Man In The Middle**: Attaque qui consiste à intercepter et modifier les communications entre deux parties.
+    - **Phishing**: Technique d'attaque qui consiste à tromper les utilisateurs pour obtenir des informations sensibles.
+    - **DDOS**: Distributed Denial of Service, attaque qui vise à rendre un service indisponible en saturant les serveurs.
+    - **Brèche de données**: Fuite de données personnelles ou sensibles.
+- **Ordinateur**
+    - **BIOS/UEFI**: Logiciel qui s'exécute lors du démarrage de l'ordinateur.
+    - **Secure Boot**: Fonctionnalité qui empêche le démarrage de logiciels non signés.
+    - **Bootloader**: Logiciel qui permet de charger le système d'exploitation.
+    - **Système d'exploitation**: Logiciel qui permet à un ordinateur de fonctionner.
+    - **Kernel**: Noyau du système d'exploitation.
+- **Authentification**: Processus qui permet de vérifier l'identité d'un utilisateur.
+    - **Mots de passe forts**: Mots de passe difficiles à deviner pour un attaquant.
+    - **Authentification forte**: Utilisation de plusieurs facteurs d'authentification pour se connecter à un système.
+    - **OTP**: One-Time Password, mot de passe à usage unique.
+    - **LDAP**: Lightweight Directory Access Protocol, protocole d'accès à un annuaire.
+    - **Active Directory**: Service d'annuaire de Microsoft.
+    - **SSO**: Single Sign-On, authentification unique.
+    - **SAML**: Security Assertion Markup Language, langage de balisage d'assertion de sécurité.
+    - **OIDC**: OpenID Connect, protocole d'authentification.
+- **Protocoles Informatiques**: Ensemble de règles qui permettent à des appareils de communiquer entre eux.
+    - **IPv4**: Protocole de communication utilisé sur Internet.
+    - **IPv6**: Protocole de communication utilisé sur Internet.
+    - **FTP**: File Transfer Protocol, protocole de transfert de fichiers.
+    - **SFTP**: Secure File Transfer Protocol, protocole de transfert de fichiers sécurisé.
+    - **SSH**: Secure Shell, protocole de communication sécurisé pour accéder à un ordinateur à distance.
+    - **SSL**: Secure Sockets Layer, protocole de sécurisation des échanges sur Internet.
+    - **TLS**: Transport Layer Security, protocole de sécurisation des échanges sur Internet.
 - **Zero Trust**: Modèle de sécurité informatique qui ne fait confiance à aucun utilisateur ou appareil à l'intérieur ou à l'extérieur du réseau.
-- **Moindre privilège**: Principe de sécurité informatique qui consiste à accorder à chaque utilisateur les privilèges les plus bas nécessaires pour effectuer son travail.
-- **Chiffrement**: Procédé de cryptographie qui consiste à transformer un message clair en un message chiffré.
-- **Gestion des secrets**: Pratique de sécurité informatique qui consiste à protéger les informations sensibles.
+    - **Moindre privilège**: Principe de sécurité informatique qui consiste à accorder à chaque utilisateur les privilèges les plus bas nécessaires pour effectuer son travail.
+    - **ACL**: Access Control List, liste de contrôle d'accès qui définit les permissions d'accès aux fichiers et répertoires.
+- **Principes de sécurité**
+    - **Secure Coding**: Pratique de développement logiciel qui vise à produire du code sûr et fiable.
+    - **Logging & Monitoring**: Pratique de sécurité informatique qui consiste à surveiller et enregistrer les événements d'un système.
+    - **Mises à jour**: Processus de maintenance informatique qui consiste à appliquer les correctifs de sécurité.
+    - **Gestion des secrets**: Pratique de sécurité informatique qui consiste à protéger les informations sensibles.
+    - **Chiffrement**: Procédé de cryptographie qui consiste à transformer un message clair en un message chiffré.
+    - **SandBox**: Environnement isolé qui permet d'exécuter des applications de manière sécurisée.
+
+- **PKI**: Public Key Infrastructure, infrastructure de gestion des clés et des certificats numériques.
+    - **Certificat numérique**: Document électronique qui atteste de l'identité d'une personne ou d'une entité.
+    - **Autorité de certification**: Entité qui délivre les certificats numériques.
 - **Supply Chain**: Chaîne d'approvisionnement, ensemble des acteurs qui interviennent dans la production et la distribution d'un produit.
-- **Secure Coding**: Pratique de développement logiciel qui vise à produire du code sûr et fiable.
-- **Logging & Monitoring**: Pratique de sécurité informatique qui consiste à surveiller et enregistrer les événements d'un système.
-- **Mises à jour**: Processus de maintenance informatique qui consiste à appliquer les correctifs de sécurité.
-- **TLS**: Protocole de sécurisation des échanges sur Internet.
-- **Proxy**: Serveur intermédiaire qui sert d'intermédiaire entre les utilisateurs et les serveurs.
-- **Firewall**: Dispositif de sécurité informatique qui contrôle le trafic réseau.
+- **Réseau**: Ensemble d'appareils interconnectés qui permettent de communiquer entre eux.
+    - **DMZ**: Demilitarized Zone, zone du réseau isolée du reste du réseau de l'entreprise.
+    - **Proxy**: Serveur intermédiaire qui sert d'intermédiaire filtrant entre les utilisateurs et les serveurs.
+    - **Firewall**: Dispositif de sécurité informatique qui contrôle le trafic réseau, permettant de filtrer les communications.
+    - **DMZ**: Demilitarized Zone, zone du réseau isolée du reste du réseau de l'entreprise.
