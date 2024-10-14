@@ -133,6 +133,33 @@
 
 
 
+<script type="module">
+  // Mermaid configuration
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+  mermaid.registerIconPacks([
+  {
+    name: 'logos',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/logos/icons.json').then((res) => res.json()),
+  },
+  {
+    name: 'devicon',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/devicon/icons.json').then((res) => res.json()),
+  },
+  {
+    name: 'clarity',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/clarity/icons.json').then((res) => res.json()),
+  },
+  {
+    name: 'simple-icons',
+    loader: () =>
+      fetch('https://unpkg.com/@iconify-json/simple-icons/icons.json').then((res) => res.json()),
+  },
+]);
+</script>
 <style>
   img.banner {
     width: min(45vw, 300px);
@@ -241,6 +268,45 @@ Il ajoute également une couche de sécurité en masquant les services déployé
 Pour qu'il puisse fonctionner, la seule condition est que la machine hôte ait installé le moteur d'éxécution de conteneurs qu'elle souhaite utiliser (docker ou podman).</p>
 <p><img src="help.png" alt="svcadm help"></p>
 <h3>Comment ça marche ?</h3>
+<pre class="mermaid" style="background-color: transparent">
+%%{init: {'theme': 'forest'}}%%
+architecture-beta
+    service users(clarity:users-solid)[Utilisateurs]
+
+    group network(internet)[Network]
+
+    service nginx(logos:nginx)[Nginx] in network
+    service postgres(logos:postgresql)[PostgreSQL] in network
+    service sonarqube(devicon:sonarqube)[SonarQube] in network
+    service gitlab(devicon:gitlab)[GitLab] in network
+    service mattermost(logos:mattermost-icon)[Mattermost] in network
+    service vault(devicon:vault)[Vault] in network
+    service trivy(simple-icons:trivy)[Trivy] in network
+    service minio(simple-icons:minio)[MinIO] in network
+
+    junction row1 in network
+    junction row2 in network
+    junction row3 in network
+    junction line1 in network
+
+    users:R <--> L:nginx
+
+    nginx:R <-- L:row1
+    vault:B <-- T:row1
+    gitlab:T <-- B:row1
+
+    row1:R -- L:row2
+    minio:B <-- T:row2
+    sonarqube:T <-- B:row2
+
+    row2:R -- L:row3
+    trivy:B <-- T:row3
+    mattermost:T <-- B:row3
+
+    gitlab:B --> L:postgres
+    sonarqube:B --> T:postgres
+    mattermost:B --> R:postgres
+</pre>
 <ol>
 <li>L'utilisateur remplit un fichier de configuration <code>svcadm.yaml</code> pour définir les services à déployer et les paramétrer.
 <ul>
