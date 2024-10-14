@@ -107,9 +107,9 @@ Travailler en binôme favorise l’émulation et donc la créativité puisque l�
 
 ## <span style="color: green">Sprint 3 :
 - **Objectif :** Transformer le site en une application plus interactive avec Vue.js.
-  - [x] Diviser les pages en composants Vue.js (ex. : `MenuComponent`, `CartComponent`).
+  - [x] Diviser les pages en composants Vue.js (ex. : ``MenuComponent``, ``CartComponent``).
   - [x] Mettre en place la réactivité avec Vue pour gérer les états du panier.
-  - [x] Utiliser des directives Vue (`v-for`, `v-if`, etc.) pour dynamiser l'affichage du contenu.
+  - [x] Utiliser des directives Vue (``v-for``, ``v-if``, etc.) pour dynamiser l'affichage du contenu.
   - [x] Intégration de formulaires réactifs pour la commande.
 
 - [x]**Objectif :** Migrer l'application existante vers **Vue.js** et implémenter les fonctionnalités permettant d'ajouter des éléments au panier, tout en calculant dynamiquement le total.
@@ -117,32 +117,32 @@ Travailler en binôme favorise l’émulation et donc la créativité puisque l�
 ### 1. Configuration du Projet Vue.js
 - **Tâches** :
   - [Sofiane](#)&[Thomas](#): Initialiser un nouveau projet Vue.js avec Vue CLI. 
-  - [Sofiane](#)&[Thomas](#) : Créer la structure des dossiers du projet (`components`, `views`, `router`, etc.).
+  - [Sofiane](#)&[Thomas](#) : Créer la structure des dossiers du projet (``components``, ``views``, ``router``, etc.).
   - [Sofiane](#)&[Thomas](#) : Valider que le projet démarre correctement avec un serveur local.
 
 ### 2. Migration des Composants Visuels (Header, Footer, Hero)
 - **Tâches** :
-  - [Sofiane](#) : Migrer les éléments statiques du header et footer dans des composants Vue (`AppHeader`, `AppFooter`).
-  - [Sofiane](#) : Créer un composant `AppHero` pour l'image de fond et le texte d'introduction.
+  - [Sofiane](#) : Migrer les éléments statiques du header et footer dans des composants Vue (``AppHeader``, ``AppFooter``).
+  - [Sofiane](#) : Créer un composant ``AppHero`` pour l'image de fond et le texte d'introduction.
   - [Sofiane](#) : Valider l'affichage statique sans logique métier.
 
 ### 3. Migration des Pages (Home, Menu, Panier)
 - **Tâches** :
-  - [Sofiane](#) : Migrer la page d'accueil dans `HomePage.vue` en utilisant les composants `AppHero`, `AppHeader`, et `AppFooter`.
+  - [Sofiane](#) : Migrer la page d'accueil dans `HomePage.vue` en utilisant les composants ``AppHero``, ``AppHeader``, et ``AppFooter``.
   - [Sofiane](#)&[Thomas](#) : Créer la structure de la page Menu dans `MenuPage.vue` en affichant une liste statique d'items de menu.
   - [Sofiane](#)&[Thomas](#) : Créer la page `CartPage.vue` pour afficher le panier avec les articles ajoutés.
 
 ### 4. Ajout des Composants Dynamiques (MenuItem, CartItem)
 - **Tâches** :
-  - [Sofiane](#)&[Thomas](#) : Créer le composant `AppMenuItem.vue` pour chaque item du menu, avec les props `name`, `description`, `price`, et `image`.
-  - [Sofiane](#)&[Thomas](#) : Créer le composant `AppCartItem.vue` pour chaque article dans le panier, avec les props `name`, `price`, et `quantity`.
+  - [Sofiane](#)&[Thomas](#) : Créer le composant `AppMenuItem.vue` pour chaque item du menu, avec les props ``name``, ``description``, ``price``, et ``image``.
+  - [Sofiane](#)&[Thomas](#) : Créer le composant `AppCartItem.vue` pour chaque article dans le panier, avec les props ``name``, ``price``, et ``quantity``.
   - [Sofiane](#)&[Thomas](#) : Valider que chaque composant affiche correctement les données transmises.
 
 ### 5. Gestion Globale du Panier dans `App.vue`
 - **Tâches** :
-  - [Sofiane](#)&[Thomas](#) : Implémenter la gestion globale du panier dans `App.vue` avec une méthode `addToCart(item)` pour ajouter des articles et une méthode `removeFromCart(item)` pour les retirer.
-  - [Sofiane](#)&[Thomas](#) : Utiliser un tableau d'articles dans l'état global (`data`) pour stocker les articles du panier.
-  - [Sofiane](#)&[Thomas](#) : Passer les méthodes `addToCart` et `removeFromCart` en tant que props aux composants enfants (`MenuPage.vue` et `CartPage.vue`).
+  - [Sofiane](#)&[Thomas](#) : Implémenter la gestion globale du panier dans `App.vue` avec une méthode ``addToCart(item)`` pour ajouter des articles et une méthode `removeFromCart(item)` pour les retirer.
+  - [Sofiane](#)&[Thomas](#) : Utiliser un tableau d'articles dans l'état global (``data``) pour stocker les articles du panier.
+  - [Sofiane](#)&[Thomas](#) : Passer les méthodes ``addToCart`` et ``removeFromCart`` en tant que props aux composants enfants (`MenuPage.vue` et `CartPage.vue`).
   - [Sofiane](#) : S'assurer que les pages Menu et Panier interagissent avec le panier global dans `App.vue`.
 
 
@@ -173,7 +173,7 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | 16/09      | 3H             | Design des pages **menu** et **panier**        |
 | 09/10      | 2H             | Migration des composants statiques (Header, Footer, Hero)         |
 | 09/10      | 3H             | Migration des pages Menu et Panier                                |
-| 10/10      | 2H             | Création des composants dynamiques `AppMenuItem` et `AppCartItem` |
+| 10/10      | 2H             | Création des composants dynamiques ``AppMenuItem`` et ``AppCartItem`` |
 | 11/10      | 2H             | Gestion globale du panier dans `App.vue`                          |
 | 11/10      | 2H             | Implémentation du calcul dynamique du total dans le panier        |
 | 14/10      | 1H             | Derniers updates comme ajouter le plat du jour à la CartPage depuis la Home Page |
