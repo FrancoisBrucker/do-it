@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Le web sémantique</title>
+        <title>Les fondamentaux de SQL</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Le web sémantique</h1>
+<h1 class="mb-1">Les fondamentaux de SQL</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -73,13 +73,21 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">web</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">SQL</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">bigquery</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vert</li>
                 
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -109,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Découverte de la notion du web sémantique
+                Reprendre les bases de SQL pour comprendre ce que c'est et acquérir les compétences fondamentales.
 
         </p>
 
@@ -122,7 +130,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/">MON de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/temps-1.2/">Le web sémantique</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/">MON de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/temps-1.2/">Les fondamentaux de SQL</a>
 
 </div></div>
 
@@ -134,22 +142,1093 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Prérequis : Aucun</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+<h2>Objectifs</h2>
+<p>L'objectif de ce MON est de replonger dans le monde de SQL après l'avoir quitté après la prépa, tout simplement car ce langage est toujours très répendu est paraît nécessaire dès lors que l'on souhaite travailler avec des bases de données relationnelles.</p>
+<h2>Sommaire</h2>
+<ul>
+<li>Introduction</li>
+<li>Les notions de base du langage SQL</li>
+<li>SQL avec BigQuery</li>
+<li>Fonctionnalités principales
+<ul>
+<li>SELECT... FROM... WHERE...</li>
+<li>COUNT, GROUP BY, GROUP BY... HAVING</li>
+<li>ORDER BY</li>
+<li>EXTRACT</li>
+<li>WITH... AS</li>
+<li>JOIN... ON</li>
+<li>Bilan</li>
+</ul>
+</li>
+<li>Pour aller plus loin
+<ul>
+<li>UNION</li>
+<li>Fonctions analytiques</li>
+<li>Nested / Repeated data</li>
+<li>Optimiser des requêtes</li>
+</ul>
+</li>
+<li>Conclusion</li>
+<li>Sources</li>
+</ul>
+<h2>Introduction</h2>
+<p>Aujourd'hui, la quasi-totalité des entreprises utilise des bases de données relationnelles pour gérer leur données depuis leur apparition sur le marché vers la fin des années 70.</p>
+<p>Ces données sont supportées par des <strong>systèmes de gestion de bases de données (SGBD)</strong>, qui jouent un rôle d'interface entre l'utilisateur et la base de données et permettent notamment de créer des bases, de les gérer, de les requêter, ou d'assurer leur sécurité. Il existe plusieurs SGBD relationnels conçus par différentes grandes entreprises dont MySQL, PostgreSQL, SQL Server etc.</p>
+<p><strong>SQL</strong> a alors été conçu en vue d'uniformiser toutes ces variétés de systèmes, et constitue aujourd'hui le <strong>langage standard des bases de données relationnelles</strong>. Tous les SGBD mentionnés précédemment se conforment donc tous sur le langage SQL et diffèrent uniquement par quelques spécifités qui leur sont propres, mais le but n'est pas de les détailler ici.</p>
+<p><strong>Sources :</strong> Pour ce MON je me base sur 3 sources principales (qui sont aussi à la fin de la page) :</p>
+<ul>
+<li>Le livre <em><strong>&quot;SQL, les fondamentaux du langage&quot;</strong></em>, de Anne-Christine BISSON et Eric GODOC</li>
+<li>Le livre <em><strong>&quot;Bases de données et systèmes d'information&quot;</strong></em>, de Saïd BENAÏCHOU</li>
+<li>Les cours intéractifs <a href="https://www.kaggle.com/learn/intro-to-sql"><em><strong>Intro to SQL</strong></em></a> et <a href="https://www.kaggle.com/learn/advanced-sql"><em><strong>Advanced SQL</strong></em></a> disponibles gratuitement sur Kaggle et proposant des exercices simples à chaque étape.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p>Je n'avais pas prévu initialement de faire ce MON au temps 1, mais ce qui m'a fait changer d'avis, c'est surtout que justement beaucoup d'entreprises demandent sur les offres de stages que je regarde de maîtriser (plus ou moins) SQL. Autant se former rapidement pour mettre en avant ces compétences.</p>
 </div></div>
+<h2>Notions de base du langage SQL</h2>
+<h3>Le modèle relationnel</h3>
+<p>Le langage SQL (Structured Query Language) sert à manipuler des <strong>bases de données relationnelles</strong>. Le modèe relationnel vise à représenter les données de manière logique, indépendamment de la manière dont elles sont stockées physiquement.</p>
+<p>Les données sont organisées dans différentes <strong>tables</strong> distinctes, qu'on peut aussi appeler <strong>relations</strong>.
+Les tables sont constituées de différentes colonnes que l'on appelle <strong>champs</strong>, ou <strong>attributs</strong>, et des lignes contenant les valeurs que l'on appelle <strong>tuples</strong>.</p>
+<p>Quelques règles doivent être respectées, comme par exemple l'<strong>unicité</strong> des éléments d'une table, ou la présence d'une <strong>clé primaire</strong> qui sert en tant qu'identifiant unique pour chaque élément de la table.</p>
+<h3>Les sous-ensembles du SQL</h3>
+<ul>
+<li>Le <strong>DDL</strong> (Data Definition Language) : regroupe les fonctions permettant de créer, modifier ou supprimer des structures de bases de données (CREATE, ALTER, DROP)</li>
+<li>Le <strong>DML</strong> (Data Manipulation Language) : regroupe les fonctions permettant de manipuler les données dans la base (SELECT, INSERT, DELETE, UPDATE...). C'est ça qu'on utilisera principalement dans ce MON.</li>
+<li>Le <strong>DCL</strong> (Data Control Language) : regroupe les fonctions permettant de gérer la sécurité et les accès à la base (GRANT, REVOKE)</li>
+<li>Le <strong>TCL</strong> (Transaction Control Language) : regroupe les fonctions permettant de gérer la validation des mises à jour effectuées sur la base (COMMIT, ROLLBACK)</li>
+</ul>
+<h3>Les normes SQL</h3>
+<p>Il s'agit des différentes versions de SQL qui évoluent au fil du temps. Chaque version de SQL est normalisée. Il s'agit par exemple de :</p>
+<ul>
+<li>SQL-86 ou SQL-87 : première version normalisée</li>
+<li>SQL-2 ou SQL-92 : implémentée dans la majorité des SGBD relationnels</li>
+<li>SQL-3 ou SQL-99 : apporte des fonctionnalités complémentaires (requêtes récursives par ex, etc.)</li>
+<li>SQL:2011 : idem</li>
+</ul>
+<p>Chaque fournisseur de SGBD implémnte alors SQL comme il le souhaite dans son système en étant libre de rajouter ses propres extensions, d'où les disparités subtiles d'utilisation de SQL d'une entreprise à l'autre...</p>
+<h2>SQL avec BigQuery</h2>
+<h3>Récupérer un dataset avec bigquery</h3>
+<p>Le cours que je souhaite réaliser sur Kaggle repose sur l'utilisation de BigQuery avec Python pour permettre de faire des requêtes SQL sur de grands datasets (Google Cloud).</p>
+<p>Il faut donc commencer par comprendre comment faire des requêtes avec BigQuery.</p>
+<p><em><strong>Schéma de la structure de bigquery</strong></em>
+<img src="bigquery_schema.jpg" alt="schema"></p>
+<p>Les premières étapes à suivre sont celles pour aller chercher son dataset choisi au préalable :</p>
+<ul>
+<li>Importer <code>bigquery</code></li>
+<li>Créer un objet <code>client</code>qui nous permet d'accéder au dataset avec la méthode <code>.Client</code></li>
+<li>Créer la référence de notre dataset avec la méthode <code>.dataset()</code></li>
+<li>Récupérer notre dataset avec la méthode <code>.get_dataset</code> et la référence créée juste avant</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>cloud <span class="token keyword">import</span> bigquery
 
-<h1>MON 2 - &quot;Le web sémantique&quot;</h1>
-<h2>Objectifs</h2>
-<p>L'objectif est de découvrir cette notion que je ne connais pas encore mais qui m'a plutôt l'air intéressante.
-L'idée provient de la liste des enseignements du Master SID.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<span class="token comment"># Create a "Client" object</span>
+client <span class="token operator">=</span> bigquery<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Construct a reference to the "hacker_news" dataset</span>
+dataset_ref <span class="token operator">=</span> client<span class="token punctuation">.</span>dataset<span class="token punctuation">(</span><span class="token string">"hacker_news"</span><span class="token punctuation">,</span> project<span class="token operator">=</span><span class="token string">"bigquery-public-data"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># API request - fetch the dataset</span>
+dataset <span class="token operator">=</span> client<span class="token punctuation">.</span>get_dataset<span class="token punctuation">(</span>dataset_ref<span class="token punctuation">)</span>
+</code></pre>
+<p>On peut ensuite <strong>lister les tables</strong> que contient le dataset :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># List all the tables in the "hacker_news" dataset</span>
+tables <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>client<span class="token punctuation">.</span>list_tables<span class="token punctuation">(</span>dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> table <span class="token keyword">in</span> tables<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>table_id<span class="token punctuation">)</span>
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Résultat</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">comments
+full
+full_201510
+stories
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Puis, de la même manière que l'on récupère notre dataset, on peut <strong>récupérer une table</strong> en particulier, et afficher son <strong>schéma de table</strong> pour pouvoir étudier sa structure :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Construct a reference to the "full" table</span>
+table_ref <span class="token operator">=</span> dataset_ref<span class="token punctuation">.</span>table<span class="token punctuation">(</span><span class="token string">"full"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># API request - fetch the table</span>
+table <span class="token operator">=</span> client<span class="token punctuation">.</span>get_table<span class="token punctuation">(</span>table_ref<span class="token punctuation">)</span>
+
+table<span class="token punctuation">.</span>schema
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Résultat</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token punctuation">[</span>SchemaField<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story title'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story url'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story or comment text'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'dead'</span><span class="token punctuation">,</span> <span class="token string">'BOOLEAN'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Is dead?'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'by'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">"The username of the item's author."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'score'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story score'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'time'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Unix time'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'timestamp'</span><span class="token punctuation">,</span> <span class="token string">'TIMESTAMP'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Timestamp for the unix time'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'type'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Type of details (comment, comment_ranking, poll, story, job, pollopt)'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">"The item's unique id."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'parent'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Parent comment ID'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'descendants'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Number of story or poll descendants'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'ranking'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Comment ranking'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'deleted'</span><span class="token punctuation">,</span> <span class="token string">'BOOLEAN'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Is deleted?'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code></pre>
+<p>Chaque ligne représente un champ (une colonne) de la table, et donne davantage d'informations comme le type de données dans ce champ, son titre, sa description, et certains autres paramètres.</p>
+</div>
+</details>     
+</div>
+<p>Enfin, en connaissant quelques commandes / fonctions, on peut faire quelques petites choses intéressantes telles qu'<strong>afficher les premières lignes du dataset</strong>, c'est plutôt utile pour voir à quoi il ressemble :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Preview the first five lines of the "full" table</span>
+client<span class="token punctuation">.</span>list_rows<span class="token punctuation">(</span>table<span class="token punctuation">,</span> max_results<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_dataframe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Résultat</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><img src="list_rows.jpg" alt="rows"></p>
+</div>
+</details>     
+</div>
+<h3>Faire des requêtes SQL avec bigquery</h3>
+<p>Pour faire des requêtes SQL, on va suivre ces différentes étapes :</p>
+<ul>
+<li>Définir la requête SQL dans une variable query</li>
+<li>Configurer la requête, ici on rajoute une <code>safe_config</code> pour empêcher de faire des requêtes trop lourdes car sinon ça devient payant...</li>
+<li>On exécute la requête et on la renvoie sous la forme d'un dataframe pour pouvoir le visualiser</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">-</span> <span class="token comment"># Query to select prolific commenters and post counts</span>
+titles_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+                SELECT title
+                FROM `bigquery-public-data.hacker_news.full`
+                """</span>
+
+<span class="token comment"># Set up the query (cancel the query if it would use too much of your quota, with the limit set to 1 GB)</span>
+safe_config <span class="token operator">=</span> bigquery<span class="token punctuation">.</span>QueryJobConfig<span class="token punctuation">(</span>maximum_bytes_billed<span class="token operator">=</span><span class="token number">10</span><span class="token operator">**</span><span class="token number">10</span><span class="token punctuation">)</span>
+query_job <span class="token operator">=</span> client<span class="token punctuation">.</span>query<span class="token punctuation">(</span>titles_query<span class="token punctuation">,</span> job_config<span class="token operator">=</span>safe_config<span class="token punctuation">)</span>
+
+<span class="token comment"># API request - run the query, and return a pandas DataFrame</span>
+titles <span class="token operator">=</span> query_job<span class="token punctuation">.</span>to_dataframe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># View top few rows of results</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>titles<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Par la suite, je n'afficherai pas toujours ce code servant à exécuter la requête pour alléger le rendu, mais gardons en tête que les requêtes SQL que j'ai écrites par la suite ne se sont pas exécutées toutes seules.</p>
+<h2>Les requêtes SQL de base</h2>
+<p>Pour cette partie je me suis appuyé sur la formation <a href="https://www.kaggle.com/learn/intro-to-sql">Intro to SQL</a> du site Kaggle, en prenant le temps de faire chaque exercice proposé sans pour autant les restituer ici.</p>
+<h3>SELECT... FROM... WHERE</h3>
+<p>Ces trois mots clés servent à effectuer les requêtes les plus basiques en SQL.</p>
+<p>Rafraîchissons-nous la mémoire :</p>
+<ul>
+<li><strong>SELECT</strong> permet d'indiquer quel(s) champ(s) de la table on souhaite récupérer</li>
+<li><strong>FROM</strong> permet d'indiquer depuis quelle(s) table(s) on va chercher ces champs</li>
+<li><strong>WHERE</strong> permet de spécifier que l'on souhaite retourner uniquement les lignes qui vérifient une certaine condition</li>
+</ul>
+<p>Par exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">table : <em><strong>pet_records</strong></em></th>
+<th style="text-align:center">requête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center" rowspan="2"><img src="pet_records.jpg" alt="table"></td>
+<td style="text-align:center"><img src="select_from.jpg" alt="query"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="select_from_where.jpg" alt="query"></td>
+</tr>
+</tbody>
+</table>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Après le FROM, on doit indiquer ici la source entre backticks (``) en mentionnant d'abord le projet auquel fait partie le dataset, puis le nom du dataset, puis le nom de la table, séparés par des points (.)</p>
+</div></div>
+<p>Remarques :</p>
+<ul>
+<li>On peut sélectionner plusieurs colonnes en les séparant par des virugles après le SELECT</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm"</span>
+first_query <span class="token operator">=</span> <span class="token string">""</span>"
+              SELECT city<span class="token punctuation">,</span> country
+              FROM `bigquery<span class="token operator">-</span>public<span class="token operator">-</span>data<span class="token punctuation">.</span>openaq<span class="token punctuation">.</span>global_air_quality`
+              WHERE unit <span class="token operator">=</span> <span class="token string">'ppm'</span>
+</code></pre>
+<p>Retourne :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">city</th>
+<th style="text-align:center">country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<ul>
+<li>On peut rajouter <code>DISTINCT</code> derrière SELECT afin de n'afficher que des résultats uniques (enlève les occurrences multiples)</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm" (unique)</span>
+first_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+              SELECT DISTINCT city, country
+              FROM `bigquery-public-data.openaq.global_air_quality`
+              WHERE unit = 'ppm'
+              """</span> 
+</code></pre>
+<p>Retourne :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">city</th>
+<th style="text-align:center">country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:center">Buenos Aires</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">彰化縣</td>
+<td style="text-align:center">TW</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">מישור החוף הדרומי</td>
+<td style="text-align:center">IL</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">אילת</td>
+<td style="text-align:center">IL</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">Bogota</td>
+<td style="text-align:center">CO</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<ul>
+<li>On peut choisir de sélectionner toutes les colonnes de la table en écrivant <code>SELECT *</code></li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select all columns where pollution levels are exactly 0</span>
+zero_pollution_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+                        SELECT *
+                        FROM `bigquery-public-data.openaq.global_air_quality`
+                        WHERE value = 0
+                        """</span>
+</code></pre>
+<p>Retourne :</p>
+<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important">    </span><span class="token punctuation">|</span><span class="token table-header important"> location                     </span><span class="token punctuation">|</span><span class="token table-header important"> city     </span><span class="token punctuation">|</span><span class="token table-header important"> country   </span><span class="token punctuation">|</span><span class="token table-header important"> pollutant   </span><span class="token punctuation">|</span><span class="token table-header important">   value </span><span class="token punctuation">|</span><span class="token table-header important"> timestamp                 </span><span class="token punctuation">|</span><span class="token table-header important"> unit   </span><span class="token punctuation">|</span><span class="token table-header important"> source_name   </span><span class="token punctuation">|</span><span class="token table-header important">   latitude </span><span class="token punctuation">|</span><span class="token table-header important">   longitude </span><span class="token punctuation">|</span><span class="token table-header important">   averaged_over_in_hours </span><span class="token punctuation">|</span><span class="token table-header important"> location_geom      </span><span class="token punctuation">|</span></span>
+<span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">---:</span><span class="token punctuation">|</span><span class="token punctuation">:-----------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:---------</span><span class="token punctuation">|</span><span class="token punctuation">:----------</span><span class="token punctuation">|</span><span class="token punctuation">:------------</span><span class="token punctuation">|</span><span class="token punctuation">--------:</span><span class="token punctuation">|</span><span class="token punctuation">:--------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:-------</span><span class="token punctuation">|</span><span class="token punctuation">:--------------</span><span class="token punctuation">|</span><span class="token punctuation">-----------:</span><span class="token punctuation">|</span><span class="token punctuation">------------:</span><span class="token punctuation">|</span><span class="token punctuation">-------------------------:</span><span class="token punctuation">|</span><span class="token punctuation">:-------------------</span><span class="token punctuation">|</span></span>
+<span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data">  0 </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka, Bory Tucholskie    </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-04-29 14:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.6621 </span><span class="token punctuation">|</span><span class="token table-data">                  17.934  </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.662136 1) </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data">  1 </span><span class="token punctuation">|</span><span class="token table-data"> Toruń, ul. Przy Kaszowniku   </span><span class="token punctuation">|</span><span class="token table-data"> Toruń    </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-04-19 04:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.0176 </span><span class="token punctuation">|</span><span class="token table-data">                  18.6128 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.017628 1) </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data">  2 </span><span class="token punctuation">|</span><span class="token table-data"> Kielce, ul. Targowa          </span><span class="token punctuation">|</span><span class="token table-data"> Kielce   </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-07 17:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     50.879  </span><span class="token punctuation">|</span><span class="token table-data">                  20.6337 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(50.878998 1) </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data">  3 </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka, Bory Tucholskie    </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-19 14:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.6621 </span><span class="token punctuation">|</span><span class="token table-data">                  17.934  </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.662136 1) </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data">  4 </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin, ul. Armii Krajowej </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-12 20:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     54.194  </span><span class="token punctuation">|</span><span class="token table-data">                  16.1725 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(54.193986 1) </span><span class="token punctuation">|</span></span></span></code></pre>
+</div>
+</details>     
+</div>
+<ul>
+<li>On peut utiliser <code>LIKE</code> et des <code>%</code> pour spécifier une condition après WHERE : cela permet de rechercher des lignes qui <em><strong>contiennent</strong></em> des mots ou des lettres spécifiques, sans être obligé d'avoir une égalité exacte entre les contenus.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select all columns where the name contains 'ipl'</span>
+query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+        SELECT * 
+        FROM `bigquery-public-data.pet_records.pets` 
+        WHERE Name LIKE '%ipl%'
+        """</span>
+</code></pre>
+</div>
+</details>     
+</div>
+<h3>COUNT, GROUP BY, HAVING</h3>
+<ul>
+<li>La fonction <strong>COUNT()</strong> est une fonction d'agrégation qui permet de compter le nombre d'entrées dans une colonne. Si on lui dit de compter une clé unique telle qu'une colonne &quot;ID&quot;, elle renverra le nombre de lignes, il est donc intéressant de la combiner avec la fonction GROUP BY () ci-dessous.</li>
+<li><strong>GROUP BY()</strong> prend une ou plusieurs colonnes en entrée, et va permettre de grouper ensemble toutes les lignes ayant la même valeur dans cette colonne, pour que les fonctions d'agrégation telles que COUNT() puissent s'appliquer à des catégories et non sur toutes les lignes. Je pense que c'est plus clair par l'exemple...</li>
+<li><strong>HAVING()</strong> permet de rajouter une condition sur les groupes créés pour ne pas considérer ceux qui ne correspondent pas à un certain critère.</li>
+</ul>
+<p>Par exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">table : <em><strong>pet_records</strong></em></th>
+<th style="text-align:center">requête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center" rowspan="3"><img src="pet_records.jpg" alt="table"></td>
+<td style="text-align:center"><img src="count.jpg" alt="query"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="count_groupby.jpg" alt="query"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="count_groupby_having.jpg" alt="query"></td>
+</tr>
+</tbody>
+</table>
+<p>Remarques :</p>
+<ul>
+<li>
+<p>Il existe d'autres fonctions d'agrégation comme SUM(), AVG(), MIN(), ou MAX(), qui font ce à quoi on peut penser.</p>
+</li>
+<li>
+<p>On peut utiliser <code>COUNT(1)</code> pour compter le nombre de lignes si on n'est pas certains d'un colonne qui serait clé unique. Cela rend aussi le code plus lisible.</p>
+</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
+deleted_query<span class="token operator">=</span><span class="token triple-quoted-string string">"""
+                SELECT COUNT(1)
+                FROM `bigquery-public-data.hacker_news.full`
+                WHERE deleted = True
+                """</span>
+</code></pre>
+<p>Qui retourne :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left">f0_</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:left">0</td>
+</tr>
+</tbody>
+</table>
+<p>(Oui ce n'est pas une erreur c'est qu'il y en avait vraiment 0)</p>
+</div>
+</details>     
+</div>
+<ul>
+<li>On peut utiliser <code>AS</code> pour renommer des colonnes dans notre requête pour faciliter la lecture et la compréhension.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
+deleted_query<span class="token operator">=</span><span class="token triple-quoted-string string">"""
+                SELECT COUNT(1)as Number_deleted
+                FROM `bigquery-public-data.hacker_news.full`
+                WHERE deleted = True
+                """</span>
+</code></pre>
+<p>Qui retourne un tableau avec un joli titre :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left">Number_deleted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:left">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<ul>
+<li>Si on utilise GROUP BY() ou COUNT(), alors tous les champs appelés doivent passer au moins dans un GROUP BY ou un COUNT, sinon la requête n'est pas valide.</li>
+</ul>
+<h3>ORDER BY</h3>
+<p>La fonction <strong>ORDER BY</strong> va permettre de <strong>trier</strong> les résultats de notre requête. Si on choisit de trier sur un champ numérique, cela renverra le tableau avec les valeurs de la plus petites à la plus grande, et si l'on trie sur un champ textuel, alors cela renverra les lignes dans l'ordre alphabétiquepour ce champ.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>On peut inverser l'ordre (décroissant ou alphabétique inverse) en utilisant <code>DESC</code> après le ORDER BY</p>
+</div></div>
+<p>Par exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">table : <em><strong>pet_records</strong></em></th>
+<th style="text-align:center">requête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center" rowspan="2"><img src="pet_records.jpg" alt="table"></td>
+<td style="text-align:center"><img src="orderby.jpg" alt="query"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="orderby_desc.jpg" alt="query"></td>
+</tr>
+</tbody>
+</table>
+<h3>EXTRACT</h3>
+<p>On peut utiliser la fonction <strong>EXTRACT</strong> pour extraire <strong>une information d'un champ uniquement</strong>. Par exemple, pour les champs contenant des dates, on peut choisir d'extraire uniquement le jour, le mois, ou l'année du champ.</p>
+<p>Par exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">table : <em><strong>pet_records2</strong></em></th>
+<th style="text-align:center">requête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="pet_records2.jpg" alt="table"></td>
+<td style="text-align:center"><img src="extract.jpg" alt="query"></td>
+</tr>
+</tbody>
+</table>
+<h3>WITH... AS</h3>
+<p>La syntaxe <strong>WITH... AS</strong> permet de créer des &quot;tables intermédiaires&quot; que l'on appelle <em><strong>common expression table (CTE)</strong></em> ou <em><strong>expression de table commune</strong></em>, lorsque les requêtes deviennent plus compliquées, toujours dans le but de fluidifier l'écriture et rendre la requête plus lisible.</p>
+<p>Le principe est en quelque sorte de faire un premier filtre sur notre table et ensuite faire une requête sur notre table simplifiée (on divise en deux étapes).</p>
+<p>Par exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">table : <em><strong>pet_records3</strong></em></th>
+<th style="text-align:center">requête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center" rowspan="2"><img src="pet_records3.jpg" alt="table"></td>
+<td style="text-align:center"><img src="CTE.jpg" alt="query"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="with_as.jpg" alt="query"></td>
+</tr>
+</tbody>
+</table>
+<h3>JOIN... ON</h3>
+<p>Enfin, la dernière fonctionnalité que l'on voit dans la formation, est le INNER JOIN. Cette fonction permet de faire des <strong>jointure de tables</strong> lorsque l'information que l'on recherche se trouve non pas dans une seule table mais dans plusieurs à la fois.</p>
+<p>Une jointure est une opération qui a pour but de relier deux tables en faisant correspondre des champs entre eux, comme sur l'illustration ci-dessous.</p>
+<p><img src="jointure.jpg" alt="jointure"></p>
+<p>Pour récupérer le nom du propriétaire ET le nom de son animal, on fait une requête utilisant une jointure de cette manière :</p>
+<ul>
+<li><strong>Dans le FROM</strong>, on mentionne les deux tables en les séparant par le <strong>INNER JOIN</strong></li>
+<li>On fait un <strong>aliasing</strong> (&quot;AS&quot;) pour chaque table pour indiquer plus facilement à quelle table appartiennent les champs que l'on mentionne (bonne pratique qui sert notamment lorsque les deux tables contiennent les mêmes noms de champs)</li>
+<li>On indique après le <strong>ON</strong> les <strong>champs que l'on fait correspondre</strong></li>
+</ul>
+<p><img src="join.jpg" alt="join"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple plus complexe de JOIN</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">bigquery_experts_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+                        SELECT a.owner_user_id AS user_id, COUNT(1) AS number_of_answers
+                        FROM `bigquery-public-data.stackoverflow.posts_answers` as a
+                            INNER JOIN `bigquery-public-data.stackoverflow.posts_questions` as q
+                            ON a.parent_id = q.id
+                        WHERE q.tags LIKE '%bigquery%'
+                        GROUP BY user_id
+                        """</span>
+</code></pre>
+<p>Qui retourne les utilisateurs ayant répondu à le plus de questions sur bigquery sur Stackoverflow :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:right">user_id</th>
+<th style="text-align:right">number_of_answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right">5.22194e+06</td>
+<td style="text-align:right">5203</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1.1337e+07</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">1.45928e+07</td>
+<td style="text-align:right">11</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">1.57505e+07</td>
+<td style="text-align:right">38</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1.35943e+06</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il existe plusieurs types de jointures, ici on utilise le INNER JOIN qui récupère uniquement les lignes où il y a une correspondance des champs dans les deux tables, car c'est peut-être le plus utile / le plus intuitif pour débuter (mais ce n'est pas toujours le cas). Pour mieux comprendre, c'est illustré sur le schéma ci-dessous.</p>
+</div></div>
+<p><img src="types_join.jpg" alt="schema"></p>
+<p><em><strong>Source : <a href="http://LearnSQL.fr">LearnSQL.fr</a></strong></em></p>
+<h3>Bilan</h3>
+<p>Et voilà ! Après avoir fait le tour de toutes ces fonctionnalités, on est déjà capables de faire tout un tas de requêtes plus ou moins complexes, ce qui était le but pour ce MON.</p>
+<p>Le cours que j'ai suivi sur Kaggle et que j'ai essayé de retranscrire ici m'a aussi permis de faire des exercices à la fin de chaque chapitre pour m'entraîner et me familiariser avec toutes les notions, c'est d'ailleurs ce qui a pris le plus de temps pendant le MON.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple de requête que je pouvais faire à la fin</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Write a query that shows, for each hour of the day in the dataset, the corresponding number of trips and average speed.</span>
+
+speeds_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+               WITH RelevantRides AS
+               (
+                   SELECT EXTRACT(HOUR FROM trip_start_timestamp) AS hour_of_day,
+                          trip_miles,
+                          trip_seconds
+                   FROM `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+                   WHERE (trip_start_timestamp) > '2016-01-01'
+                         AND (trip_start_timestamp) &lt; '2016-04-01'
+                        AND trip_seconds > 0
+                        AND trip_miles > 0
+               )
+               SELECT hour_of_day,
+                      COUNT(1) AS num_trips,
+                      3600 * SUM(trip_miles) / SUM(trip_seconds) AS avg_mph
+               FROM RelevantRides
+               GROUP BY hour_of_day
+               ORDER BY hour_of_day
+               """</span>
+</code></pre>
+<p>Qui retourne :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:right">hour_of_day</th>
+<th style="text-align:right">num_trips</th>
+<th style="text-align:right">avg_mph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">203092</td>
+<td style="text-align:right">20.1917</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">178046</td>
+<td style="text-align:right">18.6286</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">143447</td>
+<td style="text-align:right">18.4444</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">108899</td>
+<td style="text-align:right">19.2731</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">80067</td>
+<td style="text-align:right">27.5997</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">75786</td>
+<td style="text-align:right">33.0656</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">102254</td>
+<td style="text-align:right">28.5331</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">187585</td>
+<td style="text-align:right">19.8846</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">284223</td>
+<td style="text-align:right">16.7879</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">306854</td>
+<td style="text-align:right">18.4341</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">279762</td>
+<td style="text-align:right">20.0913</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">294006</td>
+<td style="text-align:right">20.9263</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">311522</td>
+<td style="text-align:right">20.0639</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">317225</td>
+<td style="text-align:right">19.7663</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">312629</td>
+<td style="text-align:right">19.3097</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">319953</td>
+<td style="text-align:right">18.5156</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">349455</td>
+<td style="text-align:right">17.1688</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">394324</td>
+<td style="text-align:right">14.6414</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">431991</td>
+<td style="text-align:right">15.382</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td style="text-align:right">19</td>
+<td style="text-align:right">416743</td>
+<td style="text-align:right">17.795</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">356279</td>
+<td style="text-align:right">20.3474</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">318363</td>
+<td style="text-align:right">22.5847</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td style="text-align:right">22</td>
+<td style="text-align:right">289886</td>
+<td style="text-align:right">21.1298</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td style="text-align:right">23</td>
+<td style="text-align:right">241690</td>
+<td style="text-align:right">20.2598</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<h2>Pour aller plus loin</h2>
+<p>Je mets ici tout ce que j'ai eu le temps de voir dans le deuxième cours de Kaggle : <a href="https://www.kaggle.com/learn/advanced-sql">Advanced SQL</a>. J'ai eu le temps de parcourir rapidement tout le cours sans m'être autant penchée sur les exercices que je ferai plus tard par manque de temps.</p>
+<h3>UNION</h3>
+<p>L'opérateur <strong>UNION</strong> permet de combiner non pas des lignes comme le fait JOIN, mais des colonnes. Ce n'est donc possible qu'entre des champs de même type.</p>
+<ul>
+<li><code>UNION ALL</code> récupère toutes les valeurs du champ qu'on va unir même si cela crée des doublons par la suite</li>
+<li><code>UNION DISTINCT</code> récupère seules les valeurs n'étant pas déjà citées</li>
+</ul>
+<h3>Les fonctions analytiques</h3>
+<p>Aussi appelées <strong>fonctions window</strong>, les fonctions analytiques permettent d'effectuer des <strong>calculs plus poussés</strong> sur les différentes données, en appliquant des formules à une <strong>selection de valeurs</strong> que l'on peut définir dans une fenêtre.</p>
+<ul>
+<li>
+<p>Ces fonctions sont par exemple <code>AVG</code>, <code>SUM</code>, <code>FIRST_VALUE</code>, <code>RANK</code>, etc.</p>
+</li>
+<li>
+<p>Chacune de ces fonctions s'appliquent avec une clause <strong>OVER</strong> qui définit comment la fonction doit être appliquée :</p>
+<ul>
+<li><strong>PARTITION BY</strong> permet de regrouper des lignes à traiter ensemble (par exemple un résultat &quot;pour chaque&quot; utilisateur donnerait <code>PARTITION BY utilisateur</code>)</li>
+<li><strong>ORDER BY</strong> fait la même chose que ce qu'on a définit avant mais concerne surtout l'ordre dans lequel les calculs vont être effectués</li>
+<li>La <strong>window frame</strong> définit les lignes qui doivent être considérées en input de la fonction : par exemple, si je souhaite calculer une somme cumulée, je peux indiquer <code>ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</code> pour sommer sur toutes les lignes précédentes jusqu'à la ligne actuelle (c'est le principal avantage de ces fonctions)</li>
+</ul>
+</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to count the (cumulative) number of trips per day</span>
+num_trips_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+                  WITH trips_by_day AS
+                  (
+                  SELECT DATE(start_date) AS trip_date,
+                      COUNT(*) as num_trips
+                  FROM `bigquery-public-data.san_francisco.bikeshare_trips`
+                  WHERE EXTRACT(YEAR FROM start_date) = 2015
+                  GROUP BY trip_date
+                  )
+                  SELECT *,
+                      SUM(num_trips) 
+                          OVER (
+                               ORDER BY trip_date
+                               ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                               ) AS cumulative_trips
+                      FROM trips_by_day
+                  """</span>
+</code></pre>
+<p><img src="cumul.jpg" alt="result"></p>
+</div>
+</details>     
+</div>
+<h3>Nested / Repeated data</h3>
+<p><strong>Nested data</strong> : Si je ne veux pas créer trop de tables inutiles, il est possible de renseigner les informations d'une autre table au sein d'une seule et même colonne grâce à un <strong>type</strong> de données <code>TRUST</code> ou <code>RECORD</code>. Les données sont alors &quot;emboîtées&quot; dans la colonne d'où le nom de &quot;nested column&quot;.</p>
+<p>Pour requêter sur ce type de colonne, on renseigne en premier l'attribut principal suivi du sous-attribut contenu dans la case que l'on souhaite, séparés par un point (.).</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><img src="nested.jpg" alt="nested"></p>
+</div>
+</details>     
+</div>
+<p><strong>Repeated data</strong> : Lorsqu'il arrive de vouloir renseigner plusieurs valeurs dans une seule et même &quot;case&quot; de la table (dans l'exmple ici, quand un animal ne possède pas qu'un seul jouet), on peut alors faire quelque chose de similaire en &quot;listant&quot; les différentes valeurs dans la même case, cette fois-ci grâce au <strong>mode</strong> <code>REPEATED</code>.</p>
+<p>Pour requêter sur des colonnes de ce type, on utilise la fonction <code>UNNEST()</code>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><img src="repeated.jpg" alt="repeated"></p>
+</div>
+</details>     
+</div>
+<p>On peut alors combiner des données de type <code>RECORD</code>avec le mode <code>REPEATED</code></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Exemple</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><img src="combined.jpg" alt="combined"></p>
+</div>
+</details>     
+</div>
+<h3>Optimiser des requêtes</h3>
+<p>L'enjeu de l'optimisation des requêtes est plus ou moins important selon le contexte. Si l'on doit faire des requêtes très fréquemment pour alimenter un site web, ou bien sur des quantités de données très grandes, cela peut vite devenir coûteux, mais aussi long, et on n'aime pas trop ça en général. C'est donc bien de savoir comment optimiser des requêtes par des moyens très faciles dans un premier temps.</p>
+<ul>
+<li>Sélectionner <strong>uniquement les colonnes que l'on souhaite</strong> et non pas toutes les colonnes avec * (la différence peut être significative)</li>
+<li><strong>Lire le moins de données possible</strong> en essayant d'être efficace sur le choix des colonnes nécessaires</li>
+<li>Éviter les jointures trop inclusives</li>
+<li>Utiliser les fonctions <code>show_amount_of_data_scanned()</code> et <code>show_time_to_run()</code> pour évaluer nos requêtes ou les comparer afin d'avoir en tête les coûts.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Ce MON m'a permis dans un premier temps de <strong>mettre au clair tout ce que je ne comprenais pas concernant SQL</strong> : mais pourquoi il existe tant de noms qui contiennent SQL et c'est quoi la différence entre toutes ces choses ? (Je pensais notamment à SQL, vs MySQL, vs SQL3, vs SQL Server, etc...).</p>
+<p>Maintenant je me sens beaucoup plus éclairée à ce niveau (même pendant mon stage je me rends compte que je n'avais jamais compris qu'on utilisait SQL Server pour dire).</p>
+<p>Dans un second temps, pendant la majeure partie de ce MON, j'ai pu m'entraîner à utiliser SQL en pratiquant sur des exercices proposés. Je suis maintenant plus à l'aise et <strong>ai de bonnes bases pour ensuite aller plus loin</strong> (c'est l'objectif).</p>
+<p>Je me sentirais également plus à l'aise lorsque je verrais sur les offres de stages qu'il faut connaître un minimum SQL.</p>
+<p>Enfin, les livres que j'ai utilisés se sont révélés être très intéressants à approfondir, en effet je n'ai pas trop eu le temps de les exploiter mise à part pour comprendre un peu mieux les bases de SQL, mais <strong>ils contiennent beaucoup plus de ressources que je souhaite regarder après ce MON</strong>, dans un second MON ou bien sur mon temps libre. Par exemple, j'aimerais approfondir les modèles relationnels, d'autres opérateurs qui ne m'ont pas été présentés jusqu'à maintenant, comment sont implémentées les BDD dans les entreprises, et tout plein d'autres choses.</p>
+<h2>Sources</h2>
+<p><a href="https://www.kaggle.com/learn/intro-to-sql">Intro to SQL</a> course, Kaggle</p>
+<p><a href="https://www.kaggle.com/learn/advanced-sql">Advanced SQL</a> course, Kaggle</p>
+<p>Le livre <em><strong>&quot;SQL, les fondamentaux du langage&quot;</strong></em>, de Anne-Christine BISSON et Eric GODOC</p>
+<p>Le livre <em><strong>&quot;Bases de données et systèmes d'information&quot;</strong></em>, de Saïd BENAÏCHOU</p>
 
 
 </article>
