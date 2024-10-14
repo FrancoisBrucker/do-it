@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Google AppScript et fonctionnalités d&#39;un Google Drive</title>
+        <title>Google AppScript et son cousin VBA</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Google AppScript et fonctionnalités d&#39;un Google Drive</h1>
+<h1 class="mb-1">Google AppScript et son cousin VBA</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON vise à approfondir ma connaissance du langage Google AppScript afin d'explorer les possibilités d'automatisations apportée par Google Drive et les différents outils qu'il contient : GSheet, GFormular...
+                Ce MON vise à à construire un socle de connaissance solide de Google Appscript. De plus, il présente les similitudes entre ce langage et VBA afin de pouvoir passer de l'un à l'autre pour les fonctionnalités principales.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/">MON de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-1.2/">Google AppScript et fonctionnalités d&#39;un Google Drive</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/">MON de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-1.2/">Google AppScript et son cousin VBA</a>
 
 </div></div>
 
@@ -130,23 +130,577 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<ul>
+<li>Connaissances des bases de VBA</li>
+</ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li>Lien pratique pour commencer en VBA : <a href="https://excel-pratique.com/fr/vba">https://excel-pratique.com/fr/vba</a></li>
+<li>Lien pratique pour commencer en AppScript : <a href="https://sheets-pratique.com/fr/apps-script">https://sheets-pratique.com/fr/apps-script</a></li>
+</ul>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<h2>Contexte et remarques</h2>
+<p>Le langage Google Appscript permet de coder des programmes sur Google Drive et notamment Google Sheet. Il est pour Google Sheet ce que VBA est pour. Toutefois, la syntaxe de ces deux langages est assez différentes. Ce MON contient un ensemble d'éléments de base pour coder en AppScript ainsi qu'une comparaison avec ldes éléments de base de VBA.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>ChatGPT peut s'avérer un véritable allié pour apprendre à coder dans ces langages. Attention toutefois à vérifier tous les résultats proposés : en effet certains ne fonctionnent pas. Une grande partie de ce MON a été réalisé en s'appuyant sur ChatGPT</p>
+</div></div>
+<h2>Comment utiliser AppScript ?</h2>
+<h3>Créer un projet AppScript depuis GSheet</h3>
+<p>Pour créer un projet AppScript depuis un fichier GSheet, il suffit de cliquer sur le mneu &quot;Extension&quot; de la barre de tâche, puis sur &quot;Google AppScript&quot;. Une fenêtre s'ouvre avec un projet vierge.</p>
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li>Nommer son projet</li>
+<li>Nommer son premier fichier (par défaux appelé &quot;<a href="http://Code.gs">Code.gs</a>&quot;)</li>
+<li>Créer une fonction de mise en route, par exemple une fonction affichant &quot;Hello World&quot;. Cela permettra de lancer les demandes d'autorisation pour l'accès aux données. Chaque utilisateur des différentes fonctions et programmes que vous créez doivent autoriser vos programmes à acceder à vos données.</li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>ATTENTION !</strong></p>
+</div><div class="pl-8 mr-8">
+<p>Lorsque vous travaillez avec d'autres collaborateurs, chacun doit réaliser les tâches d'autorisation avant toute automatisation (Utilisation de programme et/ou d'automatisation créées par d'autres personnes, lancements différés automatiques...).</p>
+</div></div>
+<h3>Les choses à savoir</h3>
+<p>Google AppScript possède un certain nombre de défaut qui n'en sont plus lorsque nous savons qu'ils existent.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>L'enregistrement</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>L'enregistrement est réalisé soit manuellement soit avant chaque lancement de programme. Il est réalisé sur l'ensemble du projet et indique les erreur de synthaxe. Cela permet en effet de limiter le risque de perte mais pose un problème majeur : vous ne pouvez pas laisser une fonction en attente ! Si vous lancez un programme vous devez vous assurer que la synthaxe de l'entièreté de votre projet est correcte.
+Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</strong> et de convertir les blocs &quot;en attente&quot; en commentaire.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Les droits d'accès</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Comme évoqué précemment, tout utilisateur d'un nouveau programme doit d'abord autorisé ce dernier à s'exécuter. Pour se faire, il est intéressant de créer une fonction simple, permettant cependant d'accéder ou de modifier la valeur d'une cellule du document GSheet (N'afficher qu'un message dans la boite de dialogue ne fonctionne par exemple pas).</p>
+<pre><code>function Hello_world() {
+  // Le document actif possède une feuille dont le nom est &quot;Feuille 2&quot;
+  feuille = SpreadsheetApp.getActive().getSheetByName(&quot;Feuille 2&quot;);
+
+  // On inscrit &quot;Hello World&quot; dans la cellule A1 (première ligne, première colonne)
+  feuille.getRange(1,1).setValue(&quot;Hello World&quot;);
+}
+</code></pre>
+<p>Après avoir cliqué sur le bouton de lancement, un certain nombre de fenêtre vont se succéder.
+<img src="Autorisation%201.png" alt="Autorisation 1">
+<img src="Autorisation%202.png" alt="Autorisation 2">
+<img src="Autorisation%203.png" alt="Autorisation 3">
+<img src="Autorisation%204.png" alt="Autorisation 4"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Les déclencheurs</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Les déclencheurs permettent de lancer des porgrammes de manière différents ou lors d'un évènement.
+<strong>Types de déclencheurs :</strong></p>
+<ul>
+<li>Basé sur une feuille de calcul : Ouverture, modification (modification manuelle d'une cellule), changement (modifications structurelle ou par des programmes : nouvelle feuille, nouvelle colonne...), envoie d'un formulaire.</li>
+<li>Horaires : date et heure précise, intervalles de temps (de la minute au mois).</li>
+<li>Bassé sur un agenda : A la modification d'un google agenda.</li>
+</ul>
+<p><img src="Menu%20d%C3%A9clencheurs.png" alt="Menu déclencheurs">
+<img src="R%C3%A9glage%20d%C3%A9clencheur.png" alt="Réglage déclencheur"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Journal d'éxécution</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Le journal d'éxécution permet de tester ses fonctions et programmes plus facilement, sans avoir à afficher des boites de dialogues nécessitant une action utilisateur. Par exemple, fermer la boite de dialogue pour que le programme puisse continuer.
+On utilise donc la commande <strong>console.log</strong> pour faire appraraïtre des résultats dans le journal</p>
+<pre><code>console.log(&quot;7&quot;);
+console.log(&quot;8&quot;);
+</code></pre>
+<p>Résultat :
+<img src="Journal%20d'ex%C3%A9cution.png" alt="Journal d'exécution"></p>
+</div>
+</details>     
+</div>
+<h2>Synthaxes AppScript et VBA</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>En Appscript, chaque ligne doit être terminée par <strong>&quot;;&quot;</strong> !!!!</p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les commentaire se font :</p>
+<ul>
+<li><strong>En VBA :</strong> Avec <em><strong>'</strong></em></li>
+<li><strong>En AppScript :</strong> Avec <em><strong>//</strong></em></li>
+</ul>
+</div></div>
+<h3>Données de référence pour comparaison</h3>
+<p>Considérons les données suivantes :</p>
+<ul>
+<li>Un fichier (Gsheet ou Excel) nommé &quot;Suivi&quot;</li>
+<li>Suivi possède deux feuilles : &quot;Page de garde&quot; et &quot;KPI&quot; telles que suit :</li>
+</ul>
+<h3>Variables</h3>
+<h4>Déclarer des variables</h4>
+<p>En VBA ou en AppScript il n'est pas nécessaire de déclarer les variable que l'on utilise. Cela reste tout de même une bonne pratique.
+<strong>En VBA :</strong></p>
+<pre><code>Sub test()
+
+'Déclarer avec le type
+Dim a As Integer
+a = 7
+'Déclarer sans le type
+Dim b
+b = 10
+'Affecter directement une valeur
+c = 12
+
+End Sub
+</code></pre>
+<p><strong>En Appscript :</strong></p>
+<pre><code>function Variables() {
+  // Déclarer et affectercer
+  var a = 7;
+  // Ne pas déclarer
+  b = 8;
+}
+</code></pre>
+<h4>Types principaux et fonctions de conversion</h4>
+<p><strong>En Appscript :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Conversion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number</td>
+<td>Nombres entiers et flottants</td>
+<td>Fonction <strong>Number()</strong>, s'applique aux chaines de carcatères et aux booléens</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Chaine de caractère</td>
+<td>Méthode <strong>.toString()</strong></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Valeur booléenne : <strong>true</strong> ou <strong>false</strong></td>
+<td>Fonction <strong>Boolean()</strong>. Renvoie true pour toute chaine de caractère autre que la chaine vide &quot;&quot; et pour tout Number autre que 0</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Tableaux</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>En VBA :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Conversion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td>Entiers entre -32768 et 32767</td>
+<td>Fonction <strong>CInt()</strong></td>
+</tr>
+<tr>
+<td>Long</td>
+<td>Entiers entre -2147483648 et 2147483647</td>
+<td>Fonction <strong>CLng</strong></td>
+</tr>
+<tr>
+<td>Double</td>
+<td>Nombres décimaux</td>
+<td>Fonction <strong>CDbl()</strong></td>
+</tr>
+<tr>
+<td>String</td>
+<td>Chaines de caractère</td>
+<td>Fonction <strong>CStr()</strong></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Valeur booléenne : <strong>True</strong> ou <strong>False</strong></td>
+<td>Fonction <strong>CBool()</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Opérateurs logiques et conditions</h3>
+<p>Supposons que nous voulons tester la valeur d'une variable : si elle est supérieure à 5, on lui ajoute 10 ; si elle est égale à 2, on lui attribue la valeur 0 ; sinon, on lui ajoute 5.</p>
+<p><strong>En Appscript :</strong></p>
+<pre><code>let a = 2;
+if(a &gt;= 10){
+  a = a + 10;
+} else if(a == 2){
+  a=0;
+} else {
+  a = a + 5;
+}
+</code></pre>
+<p><strong>En VBA :</strong></p>
+<pre><code>a = 2
+If a &gt;= 10 Then
+    a = a + 10
+ElseIf a = 2 Then
+    a = 0
+Else
+    a = a + 5
+End If
+</code></pre>
+<h3>Boucles</h3>
+<h4>Boucle while</h4>
+<p>Suppossons que nous voulons connaitre le premier éléments de la suite de Fibonacci supérieur à 8 ainsi que son rang dans la suite.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Rappel sur la suite de Fibonacci</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>D'après Wikipédia :
+<img src="Suite%20de%20Fibonacci.png" alt="Suite de Fibonacci"></p>
+</div>
+</details>     
+</div>
+<p><strong>En Appscript :</strong></p>
+<pre><code>rang = 1;
+seuil = 95;
+
+f0 = 0;
+transi = 0;
+f1 = 1;
+
+while(f1&lt;seuil){
+  rang += 1;
+  transi = f1;
+  f1 = f1 + f0;
+  f0 = transi;
+</code></pre>
+<p><strong>En VBA :</strong></p>
+<pre><code>rang = 1
+seuil = 95
+
+f0 = 0
+transi = 0
+f1 = 1
+
+While f1 &lt; seuil
+    rang = rang + 1
+    transi = f1
+    f1 = f1 + f0
+    f0 = transi
+Wend
+
+MsgBox (rang)
+MsgBox (f1)
+</code></pre>
+<h4>Boucle for</h4>
+<p>Reprenons l'exemple de la suite de Fibonacci, cette fois-ci, nous voulons créer une liste avec les n premiers éléments de la suite.
+<strong>En AppScript :</strong></p>
+<pre><code>  rang = 50;
+  f0 = 0;
+  transi = 0;
+  f1 = 1;
+  liste = [f0,f1];
+
+  for(let i=2;i&lt;=rang-2;i++){
+    transi = f1;
+    f1 = f1 + f0;
+    f0 = transi;
+    liste.push(f1);   
+  }
+</code></pre>
+<p><strong>EN VBA :</strong></p>
+<pre><code>rang = 50
+f0 = 0
+transi = 0
+f1 = 1
+Set liste = New Collection
+
+For i = 2 To rang - 2
+    transi = f1
+    f1 = f1 + f0
+    f0 = transi
+    liste.Add f1
+Next
+</code></pre>
+<h3>Les listes</h3>
+<h4>Doit-on réellement utiliser des listes ? L'utilité d'un &quot;back-end&quot;</h4>
+<p>AppScript et VBA sont souvant utilisés pour intéragir avec des tableurs. Il est donc facile de stocker des valeurs dans un de ces tableaux.
+Lorsque des listes sont utilisées de manière récurentes pour l'exécution d'un programme, il peut être interessant de créer une feuille de calcul annexe permettant de stocker et d'accéder à différentes données. J'ai pour habitude de nommer cette feuille <strong>Back-end</strong>.</p>
+<h4>Opérations sur les listes</h4>
+<h5>¤ Créer une liste</h5>
+<p><em><strong>En AppScript :</strong></em></p>
+<pre><code>liste = []; // Création d'une liste vide
+liste = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;]
+</code></pre>
+<p><em><strong>En VBA :</strong></em>
+En VBA, il est possible d'utiliser des tableaux, des collections, des Arraylist, des dictionnaires... La structure la plus simple d'utilisation est la collection.</p>
+<pre><code>Dim liste = New Collection 'Création d'une liste vide
+liste.Add &quot;a&quot;
+liste.Add &quot;b&quot;
+liste.Add &quot;c&quot;
+liste.Add &quot;d&quot;
+liste.Add &quot;e&quot;
+</code></pre>
+<h5>¤ Longueur de liste</h5>
+<p><em><strong>En AppScript :</strong></em></p>
+<pre><code>Longueur = liste.length;
+</code></pre>
+<p><em><strong>En VBA :</strong></em></p>
+<pre><code>Longueur = liste.Count
+</code></pre>
+<h5>¤ Accéder à des éléments</h5>
+<p><em><strong>En AppScript :</strong></em></p>
+<pre><code>premier = liste[0]; // Premier élément de la liste
+dernier = liste[liste.length-1]; //Dernier élément de la liste
+troisieme = liste[2]; // Troisème élément de la liste. LE RANG COMMENCE A 0 !!
+</code></pre>
+<p><em><strong>En VBA :</strong></em></p>
+<pre><code>premier = liste(1) // Premier élément de la liste
+dernier = liste(liste.Count) // Dernier élément de la liste
+troisième = liste(3) // Troisième élément de la liste. LE RANG COMMENCE A 1 !!
+</code></pre>
+<h5>¤ Ajouter et supprimer des éléments</h5>
+<p><em><strong>En AppScript :</strong></em></p>
+<pre><code>liste.push(&quot;x&quot;,&quot;y&quot;,&quot;z&quot;); // Ajoute &quot;x&quot;, &quot;y&quot; et &quot;z&quot; à la fin de la liste
+liste.unshift(&quot;alpha&quot;); // Ajoute &quot;alpha&quot; au début de la liste
+position = 0;
+nombre = 2;
+liste.splice(position,nombre,&quot;delta&quot;,&quot;mu&quot;); // Permet de supprimer un certain nombre d'éléments à partir d'une position initiale et d'ajouter d'autres éléments à la place
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Méthode .splice()</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>La méthode <strong>.splice()</strong> permet de supprimer des éléments mais aussi d'ajouter des éléments à une certaine position en mettant le nombre d'élements à supprimer à 0.</p>
+<pre><code>liste = [1,2,3,4,5,6,7,8,9,10];
+liste.splice(4,0,152,189,204); // 152, 189, 204 sont les valeurs insérée à la position 4
+// liste est maintenant égale à [1, 2, 3, 4, 152, 189, 204, 5, 6, 7, 8, 9, 10]
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Methode .filter()</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p><strong>.filter()</strong> permet de créer une liste fille en filtrant une liste mère.</p>
+<pre><code>liste=[1,2,3,4,5,6,7];
+liste = liste.filter(nombre =&gt; nombre!=5); //liste est alors égale à [1,2,3,4,6,7]
+</code></pre>
+</div>
+</details>     
+</div>
+<p><em><strong>En VBA :</strong></em></p>
+<pre><code>liste.Add &quot;z&quot;
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>En VBA, on ne peut pas éliminer facilement un élément d'une Collection. Il faut utiliser une boucle pour créer une nouvelle collection dépourvue des éléments à supprimer.
+Les <strong>ArrayList</strong> sont en cela plus simples d'utilisation mais tous les ordinateurs ne les acceptent pas (c'est le cas du miens). On constate donc que VBA préviligie l'utilsation de classeurs Excel.</p>
+</div></div>
+<h2>Créer des programmes et des fonctions</h2>
+<h3>AppScript</h3>
+<p>Pour travailler en AppScript il est nécessaire d'utiliser des fonctions ou de définir les fonctions utilisées dans un fichier à part. En effet, il est possible d'écrire un programme sans fonction au sein d'un fichier. Cependant, lors de l'éxecution de celui-ci, toutes les fonction également définies sur le fichier seront exécutées.</p>
+<p>Pour définir des fonctions :</p>
+<pre><code>function MaFonction(x,y){
+  return()
+}
+</code></pre>
+<ul>
+<li>Notons qu'une fonction peut ne rien renvoyer et donc ne pas comporter de return.</li>
+<li>Pour utiliser une fonction au sein d'une d'autre, il suffit de l'appliquer, la fonction sera notamment proposée après avoir tapé les premiers caractères de son nom.</li>
+</ul>
+<h3>VBA</h3>
+<p>Pour travailler en VBA, il faut obliagtoirement travailler au sein d'un <strong>Sub</strong> dans lequel il sera possible d'appeler d'autres <strong>Sub</strong> ou d'autres <strong>fonctions</strong>.</p>
+<pre><code>Sub MonSub(argument)
+argument = argument + 1
+End Sub
+
+'''''''''''''''''''''''''''''
+Sub MonGrandSub()
+x = 2
+Call MonSub(x) // La fonction MonSub est appliquée à x, qui devient donc égal à 3
+End Sub
+</code></pre>
+<p>Lorsque nous voulons utilser une fonction renvoyant quelque chose, il faut utiliser Function</p>
+<pre><code>Function Ajouter_Deux(argument)
+Ajouter_Deux = argument + 2
+End Function
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>La valeur renvoyée par la fonction doit posséder le même nom que la fonction.</p>
+</div></div>
+<h2>Les fonctions utiles</h2>
+<p>Supposons que nous travaillons avec un document nommé &quot;Suivi&quot; et possédant deux feuilles :&quot;Page de garde&quot; et &quot;Suivi&quot;.</p>
+<h3>Accéder à des fichiers et des feuilles de calcul</h3>
+<p>Pour pouvoir accéder à un document GSheet, plusieurs méthodes sont possible :</p>
+<pre><code>Document = SpreadsheetApp.getActive(); // La variable Document permet maintenant de se référer au document GSheet ouvert.
+DocumentBis = SpreadsheetApp.OpenByUrl(&quot;https://...&quot;); // La variable DocumentBis permet de se référer au document dont on a donné l'url.
+
+Feuille = Document.getSheetByName(&quot;KPI&quot;); // La variable Feuille permet de se référer à la feuille &quot;KPI&quot; du document &quot;Suivi&quot;.
+FeuilleBis = Document.getActiveSheet(); // La variable FeuilleBis permet de se référer à la feuille active du document &quot;Suivi&quot;.
+
+Toutes_feuilles = Document.getSheets();
+</code></pre>
+<h3>Accéder ou modifier la valeur d'une cellule</h3>
+<pre><code>Feuille = SpreadsheetApp.getActive().getSheetByName(&quot;KPI&quot;);
+valeur = Feuille.getRange(3,2).getValue(); // valeur est égale au contenue de la cellule positionnée à la 3ème ligne, 2ème colonne.
+Feuille.getRange(3,2).setValue(&quot;Nom d'assurance&quot;); // La cellule de la 3ème ligne, 2ème colonne est maintenant égale à &quot;Nom d'assurance&quot;.
+</code></pre>
+<h3>Dernière ligne ou colonne d'un tableau</h3>
+<p>Il est parfois intéressant de connaitre les dimensions d'un tableau afin de réaliser des boucles par exemple.</p>
+<pre><code>Feuille = SpreadsheetApp.getActive().getSheetByName(&quot;KPI&quot;);
+derniere_ligne = Feuille.getLastRow();
+derniere_colonne = Feuille.getLastColumn();
+</code></pre>
+<h3>Nom d'une feuille</h3>
+<pre><code>Feuille = SpreadsheetApp.getActive().getActiveSheet();
+nom = Feuille.getName(); // Nom de la feuille active
+</code></pre>
+<h3>Nombre de feuilles du classeur</h3>
+<pre><code>Feuilles = SpreadsheetApp.getActive().getSheets();
+Nbr = Feuilles.length;
+
+Feuille = SpreadsheetApp.getActive().getActiveSheet();
+numero = Feuilles.indexOf(Feuille);
+</code></pre>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Si l'index est <strong>-1</strong>, cela signifie que la feuille n'a pas été trouvée.</p>
+</div></div>
+<h3>Sortir d'une boucle ou d'une fonction</h3>
+<ul>
+<li>Afin de sortir d'une boucle, on utilise <strong>break</strong>.</li>
+<li>Afin de sortir d'une fonction en cours, on utilise <strong>return</strong>.</li>
+</ul>
 
 
 </article>
