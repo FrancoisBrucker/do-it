@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Python et bases de données : application à des données sportives</title>
+        <title>Python et analyse de données : application à des données sportives</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Python et bases de données : application à des données sportives</h1>
+<h1 class="mb-1">Python et analyse de données : application à des données sportives</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/">Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/">MON de Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-1.2/">Python et bases de données : application à des données sportives</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/">Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/">MON de Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-1.2/">Python et analyse de données : application à des données sportives</a>
 
 </div></div>
 
@@ -130,12 +130,157 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li><a href="https://realpython.com/python-for-data-analysis/">Real python</a>*</li>
+</ul>
 </div></div>
 
-<p>Je souhaite suivre <a href="https://openclassrooms.com/fr/courses/6204541-initiez-vous-a-python-pour-lanalyse-de-donnees">ce cours</a> qui est une découverte de l'utilisation de python pour les bases de données. Après avoir suivi ce cours de 6h je voudrai appliquer ce que j'ai appris à un cas concret : l'analyse et la manipulation de données sportive avec, par exemple, le basketball.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Introduction</h2>
+<p>A travers ce MON, je souhaitait apprendre à manipuler et analyser des données sur python. Après quelques recherches notamment sur le site <a href="https://realpython.com/python-for-data-analysis/">Real python</a> et sur Youtube je me suis lancer dans l'analyse des données de l'équipe de basketball de Golden State lors de la saison 2022/2023 et plus particulièrement de l'influence d'un joueur sur son équipe : Stephen Curry.</p>
+<h2>Sommaire</h2>
+<ol>
+<li>Importation des données</li>
+<li>Nettoyage des données</li>
+<li>Performances de Curry</li>
+<li>Influence de Curry sur les performances de son équipe</li>
+<li>Comparaison avec d'autres joueurs</li>
+<li>Modélisation prédictive des résultats des Warriors</li>
+</ol>
+<h2>1. Importation des données</h2>
+<p>Pour faire ces analyses, il me fallait les statistiques de tous les matchs des Golden State Warriors los de la saison 2022/2023 ainsi que ceux des joueurs de l'effectif. Après quelques recherches, j'ai trouvé le site <a href="https://www.basketball-reference.com">Basketball Reference</a> qui contient toutes ces données et bien plus encore. J'ai donc récupérer et téléchargé ces données pour commencer le projet.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> panda <span class="token keyword">as</span> pd
+
+warriors_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'GSW_season.xlsx'</span><span class="token punctuation">)</span>
+curry_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'Regular_curry.csv'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Aperçu des données</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Données des Warriors :"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>warriors_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nDonnées de Stephen Curry :"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>curry_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>On joint maintenant les deux tables en utilisant la date comme clé primaire avant de passer aux nettoyage des données.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">curry_data<span class="token punctuation">[</span><span class="token string">'Date'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>curry_data<span class="token punctuation">[</span><span class="token string">'Date'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+warriors_data<span class="token punctuation">[</span><span class="token string">'game_date'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>warriors_data<span class="token punctuation">[</span><span class="token string">'game_date'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+merged_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>warriors_data<span class="token punctuation">,</span> curry_data<span class="token punctuation">,</span> left_on<span class="token operator">=</span><span class="token string">'game_date'</span><span class="token punctuation">,</span> right_on<span class="token operator">=</span><span class="token string">'Date'</span><span class="token punctuation">,</span> how<span class="token operator">=</span><span class="token string">'inner'</span><span class="token punctuation">)</span>
+merged_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2>2. Nettoyage des données</h2>
+<p>Dans cette partie nous allons nettoyer les données afin d'en faciliter la manipulation. Certaines colonnes contiennent des éléments de types $string$ ce qui peut compromettre certains calculs, pour les matchs où Curry ne joue pas nous allons remplacer <em>'Inactive'</em> par <em>'Nan'</em> afin de pouvoir calculer les corrélations entre ses performances et celles de son équipe. De plus, ces calculs sont possible seulement avec des float on va donc remplacer les <em>'W'</em> et <em>'L'</em> qui signifient victoire ou défaite par des booléens, 1 pour une Win et 0 pour une Loose.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">merged_data<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Inactive'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+merged_data<span class="token punctuation">[</span><span class="token string">'AST'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'AST'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Inactive'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+merged_data<span class="token punctuation">[</span><span class="token string">'TRB'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Inactive'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+
+merged_data<span class="token punctuation">[</span><span class="token string">'wl_home'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'wl_home'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'W'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'L'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+merged_data<span class="token punctuation">[</span><span class="token string">'wl_away'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'wl_away'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'W'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'L'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Fonction pour convertir 'MM:SS' en minutes, avec gestion des valeurs comme 'Inactive'</span>
+<span class="token keyword">def</span> <span class="token function">convert_to_minutes</span><span class="token punctuation">(</span>time_str<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>time_str<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token string">':'</span> <span class="token keyword">in</span> time_str<span class="token punctuation">:</span>
+            minutes<span class="token punctuation">,</span> seconds <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> time_str<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">':'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> minutes <span class="token operator">+</span> seconds <span class="token operator">/</span> <span class="token number">60</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>  <span class="token comment"># Si le joueur est inactif ou la valeur est invalide</span>
+    <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>  <span class="token comment"># Si la valeur est autre que du texte attendu ou format erroné</span>
+
+<span class="token comment"># Appliquer cette fonction sur la colonne 'MP'</span>
+merged_data<span class="token punctuation">[</span><span class="token string">'MP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'MP'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>convert_to_minutes<span class="token punctuation">)</span>
+</code></pre>
+<p>Nous avons également besoin d'une colonne qui nous donne les résultats des Warriors.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token builtin">len</span><span class="token punctuation">(</span>merged_data<span class="token punctuation">[</span><span class="token string">'wl_home'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_home'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span> <span class="token punctuation">:</span>
+    result<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'wl_home'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+  <span class="token keyword">else</span> <span class="token punctuation">:</span>
+    result<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'wl_away'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+
+merged_data<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span> <span class="token operator">=</span> result
+merged_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Enfin, nous ajoute au tableau le nombre de points marqués par l'équipe.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token builtin">len</span><span class="token punctuation">(</span>merged_data<span class="token punctuation">[</span><span class="token string">'pts_home'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
+  <span class="token keyword">if</span> merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_home'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span> <span class="token punctuation">:</span>
+    points<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'pts_home'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+  <span class="token keyword">else</span> <span class="token punctuation">:</span>
+    points<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token string">'pts_away'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+
+merged_data<span class="token punctuation">[</span><span class="token string">'points'</span><span class="token punctuation">]</span> <span class="token operator">=</span> points
+</code></pre>
+<h2>3. Performances de Curry</h2>
+<p>Dans cette partie nous allons simplement visualiser les performances du joueur tout au long de la saison. Pour le premier graphe on regarde l'évolution des points du joueur sur la saison.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># On prend seulement les matchs où Curry a joué</span>
+
+curry_played <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'MP'</span><span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">]</span>
+curry_played<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_numeric<span class="token punctuation">(</span>curry_played<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> errors<span class="token operator">=</span><span class="token string">'coerce'</span><span class="token punctuation">)</span>
+curry_played <span class="token operator">=</span> curry_played<span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span>by<span class="token operator">=</span><span class="token string">'game_date'</span><span class="token punctuation">)</span>
+
+
+Y <span class="token operator">=</span> curry_played<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span>
+X <span class="token operator">=</span> curry_played<span class="token punctuation">[</span><span class="token string">'game_date'</span><span class="token punctuation">]</span>
+
+
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">'-'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">)</span>  <span class="token comment"># Ajout de marqueurs pour chaque point</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Date'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Points'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Évolution des points de Curry'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajout d'une grille pour faciliter la lecture</span>
+plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajuste la mise en page pour éviter le chevauchement</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'curry_points.csv'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>METTRE LE PLOT</p>
+<p>Le graphe suivant permet de faire une distinction entre les performances à domicile et à l'exterieur afin de savoir si ce paramètre à une influence sur le joueur.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">home_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_home'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
+away_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_away'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Conversion des données en float</span>
+home_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> home_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span>to_numeric<span class="token punctuation">,</span> errors<span class="token operator">=</span><span class="token string">'coerce'</span><span class="token punctuation">)</span>
+away_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> away_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span>to_numeric<span class="token punctuation">,</span> errors<span class="token operator">=</span><span class="token string">'coerce'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Calcul des moyennes</span>
+home_avg <span class="token operator">=</span> home_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span>
+away_avg <span class="token operator">=</span> away_games<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+comparison <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'Domicile'</span><span class="token punctuation">:</span> home_avg<span class="token punctuation">,</span> <span class="token string">'Extérieur'</span><span class="token punctuation">:</span> away_avg<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+comparison<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind<span class="token operator">=</span><span class="token string">'bar'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Performance de Curry à domicile vs extérieur"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"Moyenne"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>GRAPHE</p>
+<p>Au vu de ces derniers résultats, on peut conclure que les statistiques du joueurs ont été constante cette saison et surtout les lieux de matchs n'ont eux aucun impacte sur lui.</p>
+<h2>4. Influence de Curry sur les performances de son équipe</h2>
+<p>Nous allons visualiser dans cette partie la matrice de corrélation entre les performances de Stephen Curry (points, passes décisives, rebonds, minutes jouées) et les résultats des Warriors (victoires ou défaites)</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">correlation <span class="token operator">=</span> merged_data<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">,</span> <span class="token string">'MP'</span><span class="token punctuation">,</span> <span class="token string">'result'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>correlation<span class="token punctuation">,</span> annot<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">"coolwarm"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Corrélation entre performances de Poole et résultats des Warriors"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>MATRICE</p>
+<h4>Analyse des corrélations :</h4>
+<ul>
+<li><strong>Points (PTS) et Victoires (result)</strong> : La corrélation entre les points de Curry et les victoires des Warriors est faible (0.069), ce qui indique que le nombre de points marqués par Curry n'a pas un impact direct sur les résultats de l'équipe.</li>
+<li><strong>Passes décisives (AST) et Victoires (result)</strong> : Une corrélation plus forte (0.202) est observée entre les passes décisives de Curry et les victoires, suggérant que la capacité de Curry à faire des passes contribue davantage aux succès de l'équipe.</li>
+<li><strong>Minutes jouées (MP) et Victoires (result)</strong> : Étonnamment, la corrélation entre les minutes jouées et les victoires est légèrement négative (-0.031), ce qui peut signifier que le simple fait que Curry passe plus de temps sur le terrain ne garantit pas toujours une victoire.</li>
+<li><strong>Autres corrélations</strong> : Les corrélations entre les rebonds (TRB) et les victoires sont quasiment nulles (0.004), soulignant que les rebonds de Curry n'influencent pas significativement le résultat du match.</li>
+</ul>
+<p>Dans la suite, nous allons comparer ces résultats avec ceux de deux autres joueurs clés des Warriors pour mieux comprendre l'impact des différentes contributions individuelles sur les victoires de l'équipe. Cela permettra de voir comment les performances collectives influencent les résultats.</p>
+<h2>5. Comparaison avec d'autres joueurs</h2>
+<p>Après avoir récupéré les données de deux autres joueurs majeurs de l'équipe (Jordan Poole et Klay Thompson) sur le même site <a href="https://www.basketball-reference.com">Basketball Reference</a>, j'ai effectué les mêmes manipulations sur leurs statistiques et voici les matrices obtenues :</p>
+<p>DEUX MATRICES POOLE ET THOMPSON</p>
+<h4>Analyse</h4>
+<p>Poole et Thompson, montrent des corrélations plus importantes (surtout Thompson) dans des aspects du jeu qui impactent directement les résultats des matchs, notamment les points de Thompson et les passes de Poole. Curry, en tant que joueur constant semble moins &quot;déterminant&quot; dans les victoires ce qui s'explique par le fait que son niveau est toujours élevé.</p>
+<p>En résumé, bien que Curry soit essentiel pour la stabilité de l’équipe, les victoires des Warriors semblent davantage liées aux performances de Poole et surtout Thompson.</p>
+<h2>6. Modélisation prédictive des résultats des Warriors</h2>
+<h3></h3>
 
 
 </article>
