@@ -6,7 +6,7 @@ authors:
   - ADINOLFI Mathis
 ---
 
-Ensemble des POK réalisés par Mathis ADINOLFI.
+Ensemble de mes POK 
 
 - [POK 1 : Modélisation et simulation du traffic routier](./temps-1)
 - [POK 2](./temps-2)

@@ -6,7 +6,7 @@ authors:
   - ADINOLFI Mathis
 ---
 
-Ensemble des MON réalisés par ADINOLFI Mathis.
+Ensemble de mes MON
 
 - [MON 1.1 : Un pas vers l'intellignece artificielle](./temps-1.1)
 - [MON 1.2 : Impact énergétique des IA](./temps-1.2)
