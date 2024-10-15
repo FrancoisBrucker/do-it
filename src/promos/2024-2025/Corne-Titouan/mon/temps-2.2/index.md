@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "React - Front-End"
 authors:
   - Titouan Corne
 

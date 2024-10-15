@@ -35,8 +35,8 @@ Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kot
 - [x] Developper une application basique (une seule activité).
 - [x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.
 - [x] Faire des wireframes réalistes pour chaque page de l'application.
+- [x] Implémenter l'interface en respectant les wireframes.
 - [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).
-- [ ] Implémenter l'interface en respectant les wireframes.
 - [ ] Gérer l'identification/inscription de l'utilisateur.
 - [ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.
 
@@ -60,8 +60,8 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 
 - [x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.
 - [x] Faire des wireframes réalistes pour chaque page de l'application.
-- [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).è
-- [ ] Implémenter l'interface en respectant les wireframes.
+- [x] Implémenter l'interface en respectant les wireframes.
+- [ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).
 - [ ] Gérer l'identification/inscription de l'utilisateur.
 - [ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.
 
@@ -78,6 +78,8 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 ||||
 | Samedi 12/10 | 1H00  | Cahier des charges |
 | Samedi 12/10 | 1H30  | Figma - wireframes |
+| Lundi 14/10 | 2H00 | Ressources Android Studio |
+| Mardi 15/10 | 3H30 | Veille + Implémenter l'interface en respectant les wireframes |
 
 ## Contenu
 
@@ -89,7 +91,8 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 4. [Apprendre à coder sur Android Studio](#section4)
 5. [Réaliser le cahier des charges](#section5)
 6. [Réaliser des wireframes](#section6)
-7. [Créer une base de données](#section6)
+7. [Ajout des ressources de l'application](#section7)
+8. [Développer](#section8)
 
 ### 1. Les bases en Kotlin <a id="section1"></a>
 
@@ -218,16 +221,115 @@ Après avoir appris à utiliser Figma, voici les wireframes créées :
 
 ![Figma - global](./img/figma-global.png)
 
-![Figma - détails](./img//figma-details.png)
+![Figma - détails](./img/figma-details.png)
 
 Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.
 
-### 7. Créer une base de données <a id="section7"></a>
+### 7. Ajout des ressources de l'application <a id="section7"></a>
+
+Une fois qu'on a une vision du futur rendu de notre application (grâce aux wireframes), on commence à coder le visuel de notre application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :
+
+![Définition couleurs](./img/definitionCouleurs.png)
+
+De même, on saisit le contenu textuel (dans le fichier ./res/values/string.xml)   :
+
+``` kotlin
+<resources>
+    <string name="app_name">Evasion</string>
+    <string name="app_name_capital_letters">EVASION</string>
+
+    <!-- Main page -->
+    <string name="main_page_exp_title">Title of the experience</string>
+    <string name="main_page_exp_author">Surname and name</string>
+    <string name="main_page_summary">Few lines for a short description</string>
+    <string name="main_page_search_bar">Search for an experience</string>
+
+    <!-- Detail one experience -->
+    <string name="detail_one_experience_page_button_delete">Delete this experience</string>
+    <string name="detail_one_experience_page_title">Title of the experience</string>
+    <string name="detail_one_experience_page_author">Surname and name</string>
+    <string name="detail_one_experience_page_description">Long description</string>
+
+    <!-- Log in -->
+    <string name="login_page_label_email">Email</string>
+    <string name="login_page_input_email">surname.name@centrale-med.fr</string>
+    <string name="login_page_label_password">Password</string>
+    <string name="login_page_input_password">Enter your password</string>
+    <string name="login_page_button_login">Log in</string>
+    <string name="login_page_link_to_signup">Don\'t have an account ? Sign up !</string>
+
+    <!-- Sign up -->
+    <string name="signup_page_label_name">Name</string>
+    <string name="signup_page_input_name">Enter your name</string>
+    <string name="signup_page_label_surname">Surname</string>
+    <string name="signup_page_input_surname">Enter your surname</string>
+    <string name="signup_page_label_email">Email</string>
+    <string name="signup_page_input_email">surname.name@centrale-med.fr</string>
+    <string name="signup_page_label_password">Password</string>
+    <string name="signup_page_input_password">Enter your password</string>
+    <string name="signup_page_label_password_confirmation">Password confirmation</string>
+    <string name="signup_page_input_password_confirmation">Confirm your password</string>
+    <string name="signup_page_button_signup">Sign up</string>
+    <string name="signup_page_link_to_login">Already have an account ? Log in !</string>
+
+    <!-- Personal page -->
+    <string name="personal_page_button_add_new_experience">Add a new experience</string>
+    <string name="personal_page_exp_title">Title of the expérience</string>
+    <string name="personal_page_exp_author">Surname and name</string>
+    <string name="personal_page_summary">Few lines for a short description</string>
+    <string name="personal_page_search_bar">Search for an experience</string>
+
+    <!-- About one of my experiences page -->
+    <string name="detail_my_experience_page_button_modify">Modify this experience</string>
+    <string name="detail_my_experience_page_button_delete">Delete this experience</string>
+    <string name="detail_my_experience_page_title">Title of the experience</string>
+    <string name="detail_my_experience_page_author">Surname and name</string>
+    <string name="detail_my_experience_page_description">Long description</string>
+    <string name="detail_my_experience_page_summary">Long description</string>
+
+    <!-- Modify my experience page -->
+    <string name="modify_my_experience_page_button_confirm">Confirm modifications</string>
+    <string name="modify_my_experience_page_label_title">Title</string>
+    <string name="modify_my_experience_page_input_title">@string/detail_my_experience_page_title</string> <!-- On récupère le titre de l'expérience -->
+    <string name="modify_my_experience_page_label_summary">Short description</string>
+    <string name="modify_my_experience_page_input_summary">@string/detail_my_experience_page_summary</string> <!-- On récupère le résumé de l'expérience -->
+    <string name="modify_my_experience_page_label_description">Long description</string>
+    <string name="modify_my_experience_page_input_description">@string/detail_my_experience_page_description</string> <!-- On récupère la description complète de l'expérience -->
+    <string name="modify_my_experience_page_change_picture">Click to upload or change the picture</string>
+
+</resources>
+```
+
+{% info %}
+
+C'est à ce moment qu'on comprend l'importance du temps passé à réaliser des wireframes qui permettent de ne pas se perdre et d'organiser au mieux sont espace de travail.
+  
+{% endinfo %}
+
+Ensuite, j'ai importé tous les icons présents dans mes wireframes (dans le dossier ./res/drawable). J'ai également ajouté une photo pour l'afficher à l'emplacement prévu pour un retour d'expérience.
+
+![Drawable](./img/drawable.png)
+
+Enfin, après avoir créé un *Android Ressource Directory* pour stocker les différentes polices que je veux utiliser, j'ai défini les différents styles de textes souhaités dans le fichier ./res/values/themes/themes.xml :
+
+![Styles de textes](./img//textStyle.png)
+
+{% attention "Faites attention à vos noms de fichiers" %}
+
+Le nom de fichier des ressources doit être écrit en **minuscules** et seul le caractère **underscore** est autorisé.
+  
+{% endattention %}
+
+### 8. Implémenter l'interface en respectant les wireframes <a id="section8"></a>
+
+Ensuite, j'ai commencé à coder l'application en disposant les ressources correctement sur les layouts. Puis, j'ai appelé ces layouts depuis la MainActivity. Cette partie a été (beaucoup) plus longue que prévue parce que, bien que la création de layout semble triviale, c'est en réalité assez dur de prendre en main l'outil lors d'une première utilisation. De plus, j'ai eu du mal à comprendre comment appeler le layout au bon endroit. J'ai aussi eu du mal à implémenter la liste variable d'expériences. En effet, dans mes wireframes, j'ai décidé que, sur ma page principale, l'utilisateur pouvait consulter un nombre variable d'expériences en défilant vers le bas. Pour cette partie, un peu plus technique, j'ai utilisé une vidéo youtube : [créer une application mobile sur Android](https://www.youtube.com/watch?v=WlDzTh4WXek&t=2714s)
 
 ### Sources utiles - Sprint 2
 
 {% lien %}
 
 - [Comment rédiger un cahier des charges](https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc)
+- [Vidéo youtube, créer une application mobile sur Android](https://www.youtube.com/watch?v=WlDzTh4WXek&t=2714s)
+- [iStock, pour récupérer des images](https://www.istockphoto.com/)
   
 {% endlien %}

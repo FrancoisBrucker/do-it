@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Découvrir Google Script"
 authors:
   - Esther Henry
 
@@ -9,7 +9,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "À la suite de mon apprentissage du VBA au MON 2.1, je souhaite explorer Google Script afin d'élargir mes compétences et d'approfondir ma compréhension des scripts, dans l'environnement Google."
 ---
 
 {% prerequis %}
