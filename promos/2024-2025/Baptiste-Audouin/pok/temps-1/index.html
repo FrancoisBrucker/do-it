@@ -73,11 +73,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vba</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Excel</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -130,8 +138,22 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Connaissances de base en Excel</p>
+<ul>
+<li>Connaissances de base en Excel</li>
+<li>Ce POK est très peu compatible avec les mac</li>
+</ul>
 </div></div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://excel-pratique.com">Excel pratique</a>
+<a href="https://voiture.car2db.com">Bases de données véhiculaires</a>
+<a href="https://www.data.gouv.fr/fr/datasets/villes-de-france/#/resources">Bases de données géographiques</a>
+<a href="https://openrouteservice.org">API Open Route Service</a></p>
+</div></div>
+
 <p>J'aimerai à travers se POK me former au langage VBA qui est très souvent utilisé en entreprise.
 En mise en application j'aimerai créer un outil permettant aux commerciaux d'une entreprise de calculer les coûts de leurs déplacements afin de créer des notes de frais.</p>
 <h2>Tâches</h2>
@@ -202,9 +224,9 @@ En mise en application j'aimerai créer un outil permettant aux commerciaux d'un
   <img src="Deplacements_V1.png">
   <img src="Recap_V1.png">
 </div>
-<p>Le bouton <em>Enregistrer</em>fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.</p>
-<p>Voici une explication détaillée du code VBA en utilisant un format Markdown :</p>
-<p>Ce code est coposé d'une macro principale <code>new_drive</code> qui utilise également une autre macro que j'ai créé <code>add_empty_row</code>.</p>
+<p>Le bouton <em>Enregistrer</em>fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.
+Voici une explication détaillée du code VBA en utilisant un format Markdown :
+Ce code est coposé d'une macro principale <code>new_drive</code> qui utilise également une autre macro que j'ai créé <code>add_empty_row</code>.</p>
 <h4><code>Sub add_empty_row()</code></h4>
 <p>Ce code ajoute une ligne vide en dessous de la dernière ligne non-vide dans le tableau de la feuille <code>Récap</code>.</p>
 <ul>
@@ -231,7 +253,6 @@ Le programme parcourt le tableau de la feuille <code>Récap</code> en cherchant 
         <span class="token keyword">Exit</span> <span class="token keyword">For</span>
     <span class="token keyword">End</span> <span class="token keyword">If</span>
 <span class="token keyword">Next</span> ligne
-
 feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>r_min<span class="token punctuation">)</span><span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown<span class="token punctuation">,</span> CopyOrigin<span class="token punctuation">:</span><span class="token operator">=</span>xlFormatFromLeftOrAbove
 </code></pre>
 <h4><code>Sub new_drive()</code></h4>
@@ -280,9 +301,194 @@ sourceFeuille<span class="token punctuation">.</span>Range<span class="token pun
 <p>Comme prévue lors de la définition des tâches de mon POK j'avais prévu un temps de relecture et de réflexion pour les futures améliorations envisagées dans le second sprint :</p>
 <ul>
 <li>Revoir le visuel de l'outil</li>
-<li>Intégrer l'API google qui permet d'obtenir l'itinéraire et non la distance à vol d'oiseau</li>
+<li>Intégrer une API pour avoir le calcul d'itinéraire</li>
 <li>Recherche d'une API pour avoir le prix du carburant actualisé</li>
+<li>Calcul du coût de déplacement</li>
 <li>Intégrer un envoie automatique de mail</li>
+</ul>
+<h2>Second Sprint : Intégration d'API et automatisation d'envoie de mail en VBA</h2>
+<h3>Horodatage  :</h3>
+<p>Dans ce second sprint j'ai été énormément ralenti par l'incompatibilité entre mac et Excel qui bloque l'utilisation d'API et l'envoie de mail. J'ai tout de même réussi à avancer en utilisant un autre ordinateur :</p>
+<table>
+<thead>
+<tr>
+<th>Tâches</th>
+<th>Heures passées</th>
+<th>Heures prévues</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intégrer une API pour avoir le calcul d'itinéraire</td>
+<td>3h</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Intégrer un envoi automatique de mail</td>
+<td>3h</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Calcul du coût de déplacement</td>
+<td>1h</td>
+<td>45min</td>
+</tr>
+<tr>
+<td>Recherche et intégration d'une API pour obtenir le prix du carburant actualisé</td>
+<td>3h</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Revoir le visuel de l'outil</td>
+<td>1h</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Rédaction</td>
+<td>1h</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<h3>1. Intégration d'une API</h3>
+<p>Comme évoqué précédemment, cette partie m'a pris beaucoup plus de temps que prévu mais, en utilisant un autre ordinateur j'ai pu la réaliser.
+Après quelques recherches j'ai choisi l'API <a href="https://openrouteservice.org">Open Route Service</a> qui permet de faire des requêtes de navigation et donc de donner la distance en km d'un itinéraire entre deux villes et non de la distance à vol d'oiseau comme calculée jusque là.
+Voici le code correspondant à cette requête où la fonction <code>GetDirections</code>prend en argument une ligne et renvoie la distance entre les deux villes entrées dans les cellules de cette ligne. Cette fonction sera appelée dans notre fonction <code>new_drive</code> et appliquée à la ligne qui vient d'être ajoutée dans le tableau de la feuille <code>Recap</code> afin d'afficher la distance du trajet.</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> GetDirections<span class="token punctuation">(</span>ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+    <span class="token comment">'Definition des coordonnees</span>
+    <span class="token keyword">Dim</span> startcoord <span class="token keyword">As</span> <span class="token keyword">String</span>
+    <span class="token keyword">Dim</span> endcoord <span class="token keyword">As</span> <span class="token keyword">String</span>
+    
+    <span class="token comment">'Attribution des coordonnées</span>
+    startcoord <span class="token operator">=</span> Application<span class="token punctuation">.</span>WorksheetFunction<span class="token punctuation">.</span>Index<span class="token punctuation">(</span>Sheets<span class="token punctuation">(</span><span class="token string">"Villes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"L:L"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Application<span class="token punctuation">.</span>WorksheetFunction<span class="token punctuation">.</span>Match<span class="token punctuation">(</span>Sheets<span class="token punctuation">(</span><span class="token string">"Recap"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"e"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> Sheets<span class="token punctuation">(</span><span class="token string">"Villes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D:D"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    endcoord <span class="token operator">=</span> Application<span class="token punctuation">.</span>WorksheetFunction<span class="token punctuation">.</span>Index<span class="token punctuation">(</span>Sheets<span class="token punctuation">(</span><span class="token string">"Villes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"L:L"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Application<span class="token punctuation">.</span>WorksheetFunction<span class="token punctuation">.</span>Match<span class="token punctuation">(</span>Sheets<span class="token punctuation">(</span><span class="token string">"Recap"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"f"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> Sheets<span class="token punctuation">(</span><span class="token string">"Villes"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D:D"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">' Creer la requete HTTP vers l'API OpenRouteService</span>
+    <span class="token keyword">Dim</span> request <span class="token keyword">As</span> <span class="token keyword">Object</span>
+    <span class="token keyword">Set</span> request <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">"MSXML2.ServerXMLHTTP.6.0"</span><span class="token punctuation">)</span>
+    request<span class="token punctuation">.</span>Open <span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf624851d78afb034647d69ce565d480d3b168&amp;start=&amp;startcoord&amp;&amp;end=&amp;endcoord&amp;"</span><span class="token punctuation">,</span> <span class="token boolean">False</span>
+    <span class="token comment">' Definir les en-tetes de la requete</span>
+    request<span class="token punctuation">.</span>setRequestHeader <span class="token string">"Accept"</span><span class="token punctuation">,</span> <span class="token string">"application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8"</span>
+    
+    <span class="token comment">' Envoyer la requete</span>
+    request<span class="token punctuation">.</span>Send
+    <span class="token comment">' Recuperer et traiter la reponse</span>
+    <span class="token keyword">Dim</span> responseContent <span class="token keyword">As</span> <span class="token keyword">String</span>
+    responseContent <span class="token operator">=</span> request<span class="token punctuation">.</span>responseText
+    
+    ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Parametres"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"F6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> responseContent
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+<h3>2. Intégrer l'envoie automatique de mail</h3>
+<p>D'après mes recherches lors de la fin du sprint 1, il est possible d'automatiser l'envoie de mail avec des macros en utilisant l'application <strong>Outlook</strong> de <strong>Microsoft</strong>. Cependant, la configuration d'Outlook ainsi que l'élaboration du code m'ont pris beaucoup plus de temps que ce que j'avais envisagé.
+Le code suivant permet d'envoyer par mail le tableau de la feuille <code>recap</code> après avoir cliqué sur le bouton envoyer présent sur cette même page :</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">  <span class="token keyword">Sub</span> EnvoyerMailAvecTableau<span class="token punctuation">(</span>tableau <span class="token keyword">As</span> Range<span class="token punctuation">)</span>
+      <span class="token keyword">Dim</span> OutlookApp <span class="token keyword">As</span> <span class="token keyword">Object</span>
+      <span class="token keyword">Dim</span> OutlookMail <span class="token keyword">As</span> <span class="token keyword">Object</span>
+      <span class="token keyword">Dim</span> Feuille <span class="token keyword">As</span> Workshee
+      <span class="token keyword">Dim</span> CorpsMessage <span class="token keyword">As</span> <span class="token keyword">String</span>
+      <span class="token keyword">Dim</span> i <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> j <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+      <span class="token comment">' Initialiser la feuille et le tableau</span>
+      <span class="token keyword">Set</span> Feuille <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Recap"</span><span class="token punctuation">)</span>
+      <span class="token keyword">Set</span> tableau <span class="token operator">=</span> Feuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span>tableau<span class="token punctuation">)</span>
+      <span class="token comment">' Creer un nouveau mail</span>
+      <span class="token keyword">Set</span> OutlookMail <span class="token operator">=</span> OutlookApp<span class="token punctuation">.</span>CreateItem<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+      <span class="token comment">' on intègre le tableau au corps du mail</span>
+      CorpsMessage <span class="token operator">=</span> <span class="token string">"&lt;html>&lt;body>&lt;table border=1 cellspacing=0 cellpadding=3>"</span>
+      <span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> tableau<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count
+          CorpsMessage <span class="token operator">=</span> CorpsMessage <span class="token operator">&amp;</span> <span class="token string">"&lt;tr>"</span>
+          <span class="token keyword">For</span> j <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> tableau<span class="token punctuation">.</span>Columns<span class="token punctuation">.</span>Count
+              CorpsMessage <span class="token operator">=</span> CorpsMessage <span class="token operator">&amp;</span> <span class="token string">"&lt;td>"</span> <span class="token operator">&amp;</span> tableau<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">&amp;</span> <span class="token string">"&lt;/td>"</span>
+          <span class="token keyword">Next</span> j
+          CorpsMessage <span class="token operator">=</span> CorpsMessage <span class="token operator">&amp;</span> <span class="token string">"&lt;/tr>"</span>
+      <span class="token keyword">Next</span> i
+      CorpsMessage <span class="token operator">=</span> CorpsMessage <span class="token operator">&amp;</span> <span class="token string">"&lt;/table>&lt;/body>&lt;/html>"</span>
+      <span class="token comment">' Configurer les proprietes du mail</span>
+      <span class="token keyword">With</span> OutlookMail
+          <span class="token punctuation">.</span><span class="token keyword">To</span> <span class="token operator">=</span> <span class="token string">"baptisteaudouin.ba@gmail.com"</span> <span class="token comment">'</span>
+          <span class="token punctuation">.</span>CC <span class="token operator">=</span> <span class="token string">""</span>
+          <span class="token punctuation">.</span>BCC <span class="token operator">=</span> <span class="token string">""</span>
+          <span class="token punctuation">.</span>Subject <span class="token operator">=</span> <span class="token string">"Note de frais"</span>
+          <span class="token punctuation">.</span>Send
+      <span class="token keyword">End</span> <span class="token keyword">With</span>
+      <span class="token comment">' Nettoyage des objets</span>
+      <span class="token keyword">Set</span> OutlookMail <span class="token operator">=</span> <span class="token boolean">Nothing</span>
+      <span class="token keyword">Set</span> OutlookApp <span class="token operator">=</span> <span class="token boolean">Nothing</span>
+      MsgBox <span class="token string">"E-mail evoyé avec succès  !"</span>
+  <span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+<h3>3. Calcul du coût de déplacement</h3>
+<p>Il était prévu d'utiliser également une API afin d'avoir le prix du carburant actualisé en temps réel mais en vu du temps restant j'ai choisi de prendre un prix fixe (celui du 13/10/2024) et privilégier le calcul du prix du trajet qui est le but même de ce projet.
+Voici la formule que j'applique dans la cellule correspondant au coût du trajet à l'aide de la macro :</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"i"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Formula <span class="token operator">=</span> <span class="token string">"= (INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0)) * Recap!H"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">" / 100) * INDEX(Véhicules!AW:AW, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0))"</span>
+</code></pre>
+<p>Voici quelques explications concernant cette formule :</p>
+<ul>
+<li><code>INDEX(Véhicules!AT:AT, MATCH(Recap!G&quot; &amp; ligne &amp; &quot;, Véhicules!C:C, 0))</code> : Cette séquence permet d'obtenir le type du carburant utilisé</li>
+<li><code>INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G&quot; &amp; ligne &amp; &quot;, Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0))</code>: Ici on réutulise la formule précédente pour obtenir le prix du Litre de carburant.</li>
+<li><code>INDEX(Véhicules!AW:AW, MATCH(Recap!G&quot; &amp; ligne &amp; &quot;, Véhicules!C:C, 0))</code>: Cette dernière partie permet d'avoir la consomation du véhicule pour 100km.</li>
+<li><code>Recap!H&quot; &amp; ligne &amp; &quot; / 100</code> : Enfin on mutiplie par la distance parcourue divisé par 100 pour homogénéisée la formule et avoir le résultat souhaité.
+Notre tableau est donc finalement complété automatiquement à chaque fois que l'utilisateur entre un déplacement dans le formulaire de la feuille du même nom.</li>
+</ul>
+<h3>4. Intégration des nouvelles fonctions dans <code>new_drive()</code></h3>
+<p>Maintenant que toutes nos fonctionnalités ont été implémenter, on peut appeler les nouvelles fonctions et obtenir le code final qui s'execute à chaque clique sur le bouton <code>Enregistrer</code>:</p>
+<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> new_drive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">Dim</span> ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> sourceFeuille <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> destinationFeuille <span class="token keyword">As</span> Worksheet
+    
+    <span class="token comment">' Définir la feuille source (Deplacements)</span>
+    <span class="token keyword">Set</span> sourceFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Deplacements"</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">' Définir la feuille de destination (Recap)</span>
+    <span class="token keyword">Set</span> destinationFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Recap"</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">' Commencer à la ligne 5</span>
+    ligne <span class="token operator">=</span> <span class="token number">4</span>
+    <span class="token comment">'Ajout d'une ligne vide</span>
+    <span class="token keyword">Call</span> add_empty_row
+    <span class="token comment">' Boucle pour trouver la première ligne vide dans la colonne F de la feuille Récap</span>
+    <span class="token keyword">Do</span> <span class="token keyword">While</span> destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">""</span>
+        ligne <span class="token operator">=</span> ligne <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token keyword">Loop</span>
+    
+    <span class="token comment">' Copier les valeurs depuis la feuille Sheet1 et les coller dans la feuille Récap</span>
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"c"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"d"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D10"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"e"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"f"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D14"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"g"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D16"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    
+    <span class="token comment">'Vide les valeurs du formulaire</span>
+
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D10"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D14"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D16"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+    
+    <span class="token comment">'Appel de l'API pour calculer la distance</span>
+    
+    <span class="token keyword">Call</span> GetDirections<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span>
+    
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"h"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Parametres"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"F12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+    destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"i"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Formula <span class="token operator">=</span> <span class="token string">"= (INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0)) * Recap!H"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">" / 100) * INDEX(Véhicules!AW:AW, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0))"</span>
+    
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre>
+<h2>Conclusion</h2>
+<p>Après un premier sprint concluant avec toutes les tâches réalisées sans réelles difficultés, le second fut plus compliqué notamment à cause des problèmes d'incompatibilités entre mac et Excel que je n'avais pas anticipé. Cependant, si on récapitule les fonctionnalités de l'outil, elles sont en accord avec la définition du projet :</p>
+<ul>
+<li>
+<p><strong>1. Feuille <code>Deplacements</code></strong> : L'utilisateur entre son déplacement avec l'aide des bases de données <code>Villes</code> et <code>Véhicules</code> puis le valide avec le bouton <code>Enregistrer</code>.</p>
+</li>
+<li>
+<p><strong>2. Feuille <code>Recap</code></strong> : Après que l'utilisateur ait enregistrer un déplacement, une nouvelle ligne apparait dans le tableau avec la distance de l'itinéraire calculée à l'aide d'une requête API REST ainsi que le calcul complet du coût du trajet grâce aux paramètres du véhicule utilisé présent dans la base de donnée <code>Véhicules</code>.</p>
+</li>
+<li>
+<p><strong>3. Feuille <code>Recap</code></strong> : Une fois ces deux dernières étapes réalisées autant de fois que l'utilisateur a de trajets à entrer, le bouton <code>Envoyer</code> permet d'envoyer le tableau récapitulatif de tous les trajets par mail.</p>
+</li>
 </ul>
 
 
