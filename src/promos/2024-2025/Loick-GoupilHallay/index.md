@@ -12,7 +12,7 @@ authors:
 
 ## whoami
 
-Je m'appelle Loïck Goupil-Hallay, j'ai 22 ans.\
+Je m'appelle Loïck Goupil-Hallay, Jason pour les intimes. Vous m'avez peut-être vu sous le pseudo de boxboxjason.\
 Je suis alternant en tant qu'ingénieur DevSecOps chez [Naval Group](https://www.naval-group.com/) depuis 2 ans.\
 Je me charge de développer, déployer et intégrer des solutions et services sur des clouds privés, notamment avec kubernetes, terraform et flux.\
 Je fais aussi du développement backend en Go, du 'développement' bash et surtout de la pipeline CI/CD avec GitLab.\
@@ -27,7 +27,10 @@ Mon truc c'est l'automatisation, la cybersécurité et les potichats.
 
 ## POK & MON
 
-* [POK](./pok)
-* [MON](./mon)
+- [POK](./pok)
+    - [Déploiement automatique d'un environnement de développement](./pok/temps-1)
+- [MON](./mon)
+    - [L'environnement de développement idéal](./mon/temps-1.1)
+    - [La sécurisation de l'environnement de développement](./mon/temps-1.2)
 
 ## Projet

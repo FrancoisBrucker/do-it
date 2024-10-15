@@ -16,9 +16,15 @@ résumé: "Introduction à l'environnement de développement idéal pour une éq
 ---
 
 {%prerequis 'MON débutant'%}
-Savoir ce qu'est un ordinateur et utiliser un navigateur web
+- Utiliser un navigateur web
+- Travail en équipe
 {%endprerequis%}
 
+{% lien %}
+- [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
+- [POK déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/)
+- [MON sécurisation de l'environnement de développement](../temps-1.2/)
+{% endlien %}
 
 <script type="module">
   // Mermaid configuration
@@ -42,42 +48,43 @@ Savoir ce qu'est un ordinateur et utiliser un navigateur web
   }
 </style>
 
-# L'environnement de développement idéal pour une équipe
-
 ## Table des matières<a name="table-des-matières"></a>
 1. [Introduction](#introduction)
-    - [Le Développeur](#le-développeur)
+    1. [Le Développeur](#le-développeur)
 2. [Outils au poste](#outils-au-poste)
-    - [Système d'exploitation](#système-dexploitation)
-    - [Navigateur](#navigateur)
-    - [IDE](#ide)
-    - [Terminal](#terminal)
-    - [Gestionnaire de versions](#gestionnaire-de-versions)
-    - [Langages de programmation](#langages-de-programmation)
-    - [Conteneuristation](#conteneurisation)
+    1. [Système d'exploitation](#système-dexploitation)
+    2. [Navigateur](#navigateur)
+    3. [IDE](#ide)
+    4. [Terminal](#terminal)
+    5. [Gestionnaire de versions](#gestionnaire-de-versions)
+    6. [Langages de programmation](#langages-de-programmation)
+    7. [Conteneuristation](#conteneurisation)
 3. [Outils partagés](#partagés)
-    - [Communication](communication)
-    - [Partage de code source](#partage-de-code-source)
-    - [Gestion de projet](#gestion-de-projet)
-    - [Stockage d'artefacts](#stockage-dartefacts)
-    - [Qualimétrie Logicielle](#qualimétrie-logicielle)
+    1. [Communication](communication)
+    2. [Partage de code source](#partage-de-code-source)
+    3. [Gestion de projet](#gestion-de-projet)
+    4. [Stockage d'artefacts](#stockage-dartefacts)
+    5. [Qualimétrie Logicielle](#qualimétrie-logicielle)
 4. [Conclusion](#conclusion)
 5. [Lexique](#lexique)
 
 ## Introduction<a name="introduction"></a>
-Dans le monde du développement logiciel, une équipe doit disposer d'un ensemble d'outils permettant assurer l'efficacité et la qualité de son travail. Ces outils sont essentiels non seulement pour coder, mais aussi pour partager et gérer le code, communiquer efficacement, analyser et tester les applications, ainsi que pour déployer des solutions robustes. Cette section vise à offrir un aperçu détaillé des outils incontournables qui facilitent chaque aspect du processus de développement.
+Dans le monde du développement logiciel, une équipe doit disposer d'un ensemble d'outils permettant assurer l'efficacité et la qualité de son travail. Ces outils sont essentiels non seulement pour **coder**, mais aussi pour **partager** et **gérer** le code, **communiquer** efficacement, **analyser** et **tester** les applications, ainsi que pour **déployer** des solutions **robustes**. Cette section vise à offrir un aperçu détaillé des outils incontournables qui facilitent chaque aspect du processus de développement.
 
 L'objectif est de vous fournir une vue d'ensemble des outils et pratiques qui sont cruciaux pour le bon fonctionnement d'une équipe de développement, afin que vous ne soyiez pas perdu lorsque vous rejoindrez une équipe de développement.
 
 Toutes les informations concernants les habitudes des développeurs seront tirées des résultats du sondage [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
 
-<h3>Le Développeur</h3><a name="le-développeur"></a>
+Pour ceux qui souhaitent avoir un aperçu concret: Une implémentation de ces outils est réalisée dans mon [POK sur le déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/).
+
+### Le Développeur<a name="le-développeur"></a>
 Le développeur est une créature étrange qui passe la majeure partie de son temps à écrire du code, à résoudre des problèmes et à boire du café. Il est souvent solitaire, mais il peut aussi travailler en équipe. Il est passionné par la technologie et aime apprendre de nouvelles choses. Il est curieux, créatif et persévérant. Il est capable de passer des heures à chercher une solution à un problème, sans jamais abandonner. Il est un peu geek, un peu artiste, un peu scientifique. Il aime les défis et les puzzles. Il n'aime pas les bugs, les retards, les réunions et les gens en général. Il est un peu bizarre, mais c'est ce qui fait son charme.
 
 C'est généralement quelqu'un qui a des habitudes et qui aime personnaliser son environnement de travail, il ne faut donc pas le brusquer en lui imposant des outils qu'il n'aime pas. Il est important de lui laisser le choix de ses outils, tout en lui fournissant des recommandations et des bonnes pratiques.
 
 <section class="optional">
-<h2>Outils au poste</h2><a name="outils-au-poste"></a>
+
+## Outils au poste<a name="outils-au-poste"></a>
 <p style="background-color: #ffb1a8; border: 2px solid #ba1300; padding: 10px; border-radius: 10px">
 <em>Cette section sert uniquement pour votre culture personnelle.</em><br>
 Vous trouverez ici une liste de recommandations basées sur les habitudes des développeurs.<br>
@@ -88,8 +95,8 @@ Un développeur a besoin d'un ensemble d'outils pour travailler efficacement. Ce
 
 Il est essentiel qu'un développeur puisse tester son code localement avant de le partager avec l'équipe. Premièrement car il est timide et n'aime pas que l'on puisse voir que ce qu'il fait ne fonctionne pas tout de suite. Pour cela, il doit disposer d'un environnement de développement complet, incluant un éditeur de texte, un terminal, un gestionnaire de versions, des langages de programmation, des outils de virtualisation et de conteneurisation.
 
-<h3>Système d'exploitation</h3><a name="système-dexploitation"></a>
-<b>Définition</b>: Le système d'exploitation (OS), c'est le logiciel qui permet à un ordinateur de fonctionner. Il gère les ressources matérielles de l'ordinateur, comme le processeur, la mémoire, le disque dur, etc. Ca lui qui permet de lancer des applications, de lire des fichiers, de se connecter à internet, etc.
+### Système d'exploitation<a name="système-dexploitation"></a>
+**Définition**: Le système d'exploitation (OS), c'est le logiciel qui permet à un ordinateur de fonctionner. Il gère les ressources matérielles de l'ordinateur, comme le processeur, la mémoire, le disque dur, etc. Ca lui qui permet de lancer des applications, de lire des fichiers, de se connecter à internet, etc.
 
 Les résultats du [sondage OS](https://survey.stackoverflow.co/2024/technology#1-operating-system) donne la part des développeurs qui ont utilisé chaque OS de manière extensive au cours de l'année, dans le cadre professionnel:
 <pre class="mermaid" style="background-color: transparent">
@@ -109,8 +116,8 @@ xychart-beta horizontal
 En règle générale, les développeurs préfèrent utiliser tout ce qui n'est pas Windows, car c'est plus stable, plus rapide, plus sécurisé. Un autre avantage est que ces systèmes d'exploitation sont hautement personnalisables, ce qui permet de les adapter à ses besoins.\
 Le départage entre MacOS et Linux se fait en fonction des préférences personnelles de chacun, et surtout en fonction des préférences pécuniaires de l'entreprise, car fournir une flotte de Macs à tous les développeurs coûte beaucoup plus cher que de fournir des PC sous Linux.
 
-<h3>Navigateur</h3><a name="navigateur"></a>
-<b>Définition</b>: Un navigateur web est un logiciel qui permet de consulter des sites web. Il permet de lire du texte, de regarder des images, de regarder des vidéos, de remplir des formulaires, etc.
+### Navigateur<a name="navigateur"></a>
+**Définition**: Un navigateur web est un logiciel qui permet de consulter des sites web. Il permet de lire du texte, de regarder des images, de regarder des vidéos, de remplir des formulaires, etc.
 
 Il existe 3 familles de navigateurs web:
 - Les navigateurs basés sur Chromium (Google Chrome, Microsoft Edge, Opera, Brave, Vivaldi, etc.)
@@ -144,8 +151,8 @@ Il est aussi possible (au niveau de l'entreprise ou du développeur) d'appliquer
 
 Il n'y a donc pas de navigateur idéal, chacun a ses avantages et ses inconvénients. Il est donc important de choisir un navigateur qui correspond à ses préférences, plutôt que de suivre la tendance.
 
-<h3>IDE</h3><a name="ide"></a>
-<b>Définition</b>: Un IDE (Integrated Development Environment) est un logiciel qui regroupe un ensemble d'outils pour faciliter le développement logiciel. Il permet d'écrire du code, de le compiler, de le déboguer, de le tester, etc.
+### IDE<a name="ide"></a>
+**Définition**: Un IDE (Integrated Development Environment) est un logiciel qui regroupe un ensemble d'outils pour faciliter le développement logiciel. Il permet d'écrire du code, de le compiler, de le déboguer, de le tester, etc.
 
 Les résultats du [sondage IDE](https://survey.stackoverflow.co/2024/technology#1-integrated-development-environment) montre que les développeurs ont utilisé au moins une fois dans l'année, dans le cadre professionnel:
 <pre class="mermaid" style="background-color: transparent">
@@ -174,8 +181,8 @@ Les outils de JetBrains (IntelliJ IDEA, PyCharm, WebStorm, etc.) sont toujours t
 
 Il n'est pas rare de voir des développeurs utiliser plusieurs IDE en même temps, en fonction du langage de programmation, du projet, de l'équipe, etc. Il est donc important de choisir un IDE qui correspond à ses besoins, plutôt que de suivre la tendance.
 
-<h3>Terminal</h3><a name="terminal"></a>
-<b>Définition</b>: Un terminal est un logiciel qui permet d'interagir avec le système d'exploitation en ligne de commande. Il permet de lancer des programmes, de manipuler des fichiers, de gérer des processus, etc.
+### Terminal<a name="terminal"></a>
+**Définition**: Un terminal est un logiciel qui permet d'interagir avec le système d'exploitation en ligne de commande. Il permet de lancer des programmes, de manipuler des fichiers, de gérer des processus, etc.
 
 Chaque poste de travail est livré avec un terminal par défaut, mais il est possible d'installer des terminaux plus avancés, comme [Hyper](https://hyper.is/), [iTerm2](https://iterm2.com/), [Windows Terminal](https://aka.ms/terminal), etc. Ces terminaux offrent des fonctionnalités supplémentaires, comme la coloration syntaxique, la complétion automatique, la gestion des onglets, etc.
 
@@ -183,15 +190,15 @@ Il existe des outils permettant d'améliorer l'expérience du développeur sur l
 - [Oh My Zsh](https://ohmyz.sh/): Framework de configuration pour Zsh (ne fonctionne pas sur Windows)
 - [Starship](https://starship.rs/): Prompt minimaliste, rapide et hautement personnalisable (fonctionne sur tous les systèmes d'exploitation)
 
-<h3>Gestionnaire de versions</h3><a name="gestionnaire-de-versions"></a>
-<b>Définition</b>: Un gestionnaire de versions est un logiciel qui permet de gérer les différentes versions d'un projet. Il permet de suivre les modifications apportées au code, de revenir en arrière, de fusionner des branches,...
+### Gestionnaire de versions<a name="gestionnaire-de-versions"></a>
+**Définition**: Un gestionnaire de versions est un logiciel qui permet de gérer les différentes versions d'un projet. Il permet de suivre les modifications apportées au code, de revenir en arrière, de fusionner des branches,...
 
 Il n'y a pas de débat sur le fait que Git est le gestionnaire de versions le plus populaire, avec une part de marché de 89.48% en 2024. Il est utilisé par la plupart des développeurs, quel que soit le langage de programmation, le projet, l'équipe, etc. Il est rapide, fiable, sécurisé, flexible, distribué, etc. Il permet de travailler en mode déconnecté, de gérer des branches, de fusionner des branches, de réécrire l'historique, etc.
 
 Pensez donc à installer Git sur votre poste de travail, et à vous familiariser avec les commandes de base, comme `git clone`, `git add`, `git commit`, `git push`, `git pull`, `git merge`, `git rebase`, etc.
 
-<h3>Langages de programmation</h3><a name="langages-de-programmation"></a>
-<b>Définition</b>: Un langage de programmation est un langage formel qui permet de décrire des algorithmes et de les exécuter sur un ordinateur. Il existe des centaines de langages de programmation, chacun ayant ses avantages et ses inconvénients.
+### Langages de programmation<a name="langages-de-programmation"></a>
+**Définition**: Un langage de programmation est un langage formel qui permet de décrire des algorithmes et de les exécuter sur un ordinateur. Il existe des centaines de langages de programmation, chacun ayant ses avantages et ses inconvénients.
 
 Il faut penser à installer les langages et compilateurs nécessaires pour travailler sur les projets en cours. Pas de recommandation particulière, chaque langage a ses avantages et ses inconvénients, il est donc important de choisir un langage qui correspond à ses besoins, plutôt que de suivre la tendance.
 
@@ -205,14 +212,14 @@ Il faut penser à installer les langages et compilateurs nécessaires pour trava
   <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/711px-PHP-logo.svg.png" alt="PHP" title="PHP">
 </div>
 
-<h3>Conteneurisation</h3><a name="conteneurisation"></a>
-<b>Définition</b>: La conteneurisation est une technique qui permet d'isoler une application et ses dépendances dans un conteneur isolé en dehors de son système d'exploitation. Cela permet de garantir que l'application fonctionne de la même manière, quel que soit l'environnement dans lequel elle est exécutée. C'est une technique très utilisée dans le développement logiciel moderne.
+### Conteneurisation<a name="conteneurisation"></a>
+**Définition**: La conteneurisation est une technique qui permet d'isoler une application et ses dépendances dans un conteneur isolé en dehors de son système d'exploitation. Cela permet de garantir que l'application fonctionne de la même manière, quel que soit l'environnement dans lequel elle est exécutée. C'est une technique très utilisée dans le développement logiciel moderne.
 
 Les conteneurs sont devenus un outil incontournable pour les développeurs, car ils permettent de créer des environnements de développement reproductibles, portables, légers, sécurisés. Ils permettent principalement de tester des applications dans des environnements isolés, de déployer des applications dans des environnements hétérogènes, de gérer des applications à grande échelle.
 
 Le [Sondage sur les outils](https://survey.stackoverflow.co/2024/technology#1-other-tools) montre que 58.7% des développeurs professionnels ont utilisé au moins une fois dans l'année, dans le cadre professionnel, un outil de conteneurisation.
 
-<h4>Les outils</h4>
+#### Les outils
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
   <img class="banner" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Docker_logo.png" alt="Docker" title="Docker">
