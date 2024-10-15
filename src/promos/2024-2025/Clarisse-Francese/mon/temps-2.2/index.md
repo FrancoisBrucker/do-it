@@ -1,15 +1,19 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "MON 2.2 : les entreprises opales"
 authors:
   - Clarisse Francese
 
 date: 1971-01-01
 tags: 
   - "temps 2"
+  - "entreprise opale"
+  - "gouvernance"
+  - "organisation"
+  - "saumon"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "J'ai découvert la notion d'entreprises opales pendant ma césure et j'ai lu un bouquin passionant sur ce sujet. Je compte résumer tous les concepts cléfs de ce type d'entreprise que je trouve révolutionnaire."
 ---
 
 {% prerequis %}
@@ -22,11 +26,6 @@ Liste des prérequis du POK ET/OU MON
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Contenu
 
