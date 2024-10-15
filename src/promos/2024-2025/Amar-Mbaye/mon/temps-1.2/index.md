@@ -165,7 +165,7 @@ class MyApp extends StatelessWidget {
 
 
 ``` 
-<img src="1.jpeg" alt="image" />
+<img src="1.JPEG" alt="image" />
   
 
 ### Exemple de StatefulWidget 
@@ -242,7 +242,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 ``` 
-<img src="./2.jpeg" alt="image" />
+<img src="./2.JPEG" alt="image" />
   
 --- 
 
@@ -326,7 +326,7 @@ class MyApp extends StatelessWidget {
 
 
 ``` 
-<img src="./3.jpeg" alt="image" />
+<img src="./3.JPEG" alt="image" />
   
 --- 
 
@@ -446,8 +446,8 @@ class MyApp extends StatelessWidget {
 
 
 ``` 
-<img src="./4.jpeg" alt="image" />
-  
+<img src="./4.JPEG" alt="image" />
+
 --- 
 
   
@@ -544,9 +544,9 @@ class SecondScreen extends StatelessWidget {
 }
 
 ``` 
-<img src="./5.jpeg" alt="image" />
+<img src="./5.JPEG" alt="image" />
 
-<img src="./6.jpeg" alt="image" />
+<img src="./6.JPEG" alt="image" />
   
 
 --- 
@@ -639,7 +639,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 ``` 
-<img src="./7.jpeg" alt="image" />
+<img src="./7.JPEG" alt="image" />
 
 
 --- 
