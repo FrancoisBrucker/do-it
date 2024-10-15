@@ -210,6 +210,85 @@ font-family: &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif; <br>
 }</p>
 <h3>JavaScript (un peu)</h3>
 <p>JavaScript est le language permettant de rendre les pages web dynamiques et interactives. Il permet de réagir aux actions de l'utilisateur: clics, mouvements de la souris,...On a donc: HTML qui structure, CSS qui stylise, et Js qui dynamise.</p>
+<p>Voici les bases:</p>
+<p>Les variables sont utilisées pour stocker des données. Elles peuvent être définies avec let ou const.</p>
+<ul>
+<li>let : permet de déclarer une variable qui peut changer de valeur.</li>
+<li>const : permet de déclarer une variable dont la valeur ne change pas.</li>
+</ul>
+<p>Par exemple:</p>
+<pre><code>let age = 21;
+const name = &quot;Sophia&quot;;
+</code></pre>
+<ol start="2">
+<li>Types
+Les principaux types sont :</li>
+</ol>
+<ul>
+<li>Nombre (Number) : 42, 3.14</li>
+<li>Chaîne de caractères (String) : &quot;Hello&quot;</li>
+<li>Booléen (Boolean) : true ou false</li>
+<li>Tableau (Array) : [1, 2, 3]</li>
+<li 21="" nom:="" Sophia,="" âge:="">Objet (Object) :</li>
+</ul>
+<ol start="3">
+<li>Opérateurs
+Les opérateurs permettent de manipuler les données :</li>
+</ol>
+<p>Mathématiques : +, -, *, /
+Comparaison : ==, === (égalité stricte), !=, &gt;, &lt;
+Logiques : &amp;&amp; (ET), || (OU), ! (NON)</p>
+<p>Voici un exemple:</p>
+<pre><code>let a = 10;
+let b = 5;
+console.log(a + b); // 15
+console.log(a === 10); // true
+</code></pre>
+<p>À noter que la fonction console.log() permet d'afficher des informations dans la console du navigateur ou de l'environnement de développement.</p>
+<ol start="4">
+<li>Conditions: &quot;if&quot;</li>
+</ol>
+<p>Un exemple de la syntaxe:</p>
+<pre><code>let age = 20;
+if (age &gt;= 18) {
+  console.log(&quot;Majeur&quot;);
+} else {
+  console.log(&quot;Mineur&quot;);
+}
+</code></pre>
+<ol start="5">
+<li>Boucles: &quot;for&quot; et &quot;while&quot;</li>
+</ol>
+<p>for : pour itérer un nombre déterminé de fois.
+while : pour itérer tant qu'une condition est vraie.</p>
+<pre><code>for (let i = 0; i &lt; 5; i++) {
+  console.log(i); 
+}
+</code></pre>
+<pre><code>let i = 0;
+while (i &lt; 5) { 
+  console.log(i); 
+  i++; //
+}
+</code></pre>
+<ol start="6">
+<li>Fonctions</li>
+</ol>
+<p>function hello(name) {
+return &quot;hello &quot; + name;
+}
+console.log(hello(&quot;Sophia&quot;)); // hello Sophia</p>
+<ol start="7">
+<li>Manipulation du DOM
+En Js, on peut interagir avec le HTML en utilisant le DOM (Document Object Model).</li>
+</ol>
+<p>document.getElementById(&quot;myButton&quot;).addEventListener(&quot;click&quot;, function() {
+alert(&quot;Button clicked!&quot;);
+});</p>
+<p>document étant la page HTML
+getElementById(&quot;myButton&quot;) sélectionne un élément HTML en fonction de son id, ce qui signifie que dasn document on peut retrouver:
+<code>&lt;button id=&quot;myButton&quot;&gt;Clique-moi&lt;/button&gt;</code>
+ici, on a donc fait en sorte que lorsque ce bouton est cliqué, une alerte &quot;Button clicked&quot; est créée</p>
 <h2>Qu'est-ce-que Vue? Les bases</h2>
 <p>Vue est un framework JavaScript qui se repose sur les standards HTML, CSS et JavaScript. Il propose une manière efficace de déclarer des composants pour la construction d'interfaces utilisateur dynamiques.</p>
 <h3>Composant monofichier (Single-File Components)</h3>
@@ -228,6 +307,26 @@ Tous les fichiers nécessaires sont ensuite générés automatiquement: structur
 <p><img src="DossiersAppVue.png" alt="Dossiers App Vue"></p>
 <p>App.vue est appelé <strong>composant racine</strong></p>
 <p>Sinon, j'ai aussi regardé quelques vidéos Youtube qui décrivent les fonctions et éléments de base et notamment celles de Net Ninja.</p>
+<ol>
+<li>Les variables
+Les variables ou données réactives, sont définies dans l'ibjet data.
+data() {
+}</li>
+<li>Les directives</li>
+</ol>
+<p>Elles permettent de rendre le HTML interactif. Voici quelques exemples:</p>
+<ul>
+<li><code>v-bind</code></li>
+<li><code>v-model</code></li>
+<li><code>v-for</code></li>
+<li><code>v-if</code>, <code>v-else</code></li>
+</ul>
+<ol start="3">
+<li>Les méthodes</li>
+</ol>
+<p>Elles permettent de manipuler les données réactives et les événements.
+methods:{
+}</p>
 <h2>Conclusion</h2>
 <p>Maintenant que l'on a quelques bases, on peut passer au POK 1 afin de prendre en main ces outils à travers la réalisation d'une application concrète: un calendrier.</p>
 <h3>Sources</h3>
