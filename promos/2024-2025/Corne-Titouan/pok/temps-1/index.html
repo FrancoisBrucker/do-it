@@ -160,8 +160,8 @@
 <li>[x] Developper une application basique (une seule activité).</li>
 <li>[x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.</li>
 <li>[x] Faire des wireframes réalistes pour chaque page de l'application.</li>
+<li>[x] Implémenter l'interface en respectant les wireframes.</li>
 <li>[ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).</li>
-<li>[ ] Implémenter l'interface en respectant les wireframes.</li>
 <li>[ ] Gérer l'identification/inscription de l'utilisateur.</li>
 <li>[ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.</li>
 </ul>
@@ -180,8 +180,8 @@
 <ul>
 <li>[x] Faire un cahier des charges de l'application qui a pour but de partager des expériences de voyage.</li>
 <li>[x] Faire des wireframes réalistes pour chaque page de l'application.</li>
-<li>[ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).è</li>
-<li>[ ] Implémenter l'interface en respectant les wireframes.</li>
+<li>[x] Implémenter l'interface en respectant les wireframes.</li>
+<li>[ ] Mettre en place une base de données (compte utilisateur, textes de blog à afficher, ...).</li>
 <li>[ ] Gérer l'identification/inscription de l'utilisateur.</li>
 <li>[ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.</li>
 </ul>
@@ -236,6 +236,16 @@
 <td>1H30</td>
 <td>Figma - wireframes</td>
 </tr>
+<tr>
+<td>Lundi 14/10</td>
+<td>2H00</td>
+<td>Ressources Android Studio</td>
+</tr>
+<tr>
+<td>Mardi 15/10</td>
+<td>3H30</td>
+<td>Veille + Implémenter l'interface en respectant les wireframes</td>
+</tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
@@ -247,7 +257,8 @@
 <li><a href="#section4">Apprendre à coder sur Android Studio</a></li>
 <li><a href="#section5">Réaliser le cahier des charges</a></li>
 <li><a href="#section6">Réaliser des wireframes</a></li>
-<li><a href="#section6">Créer une base de données</a></li>
+<li><a href="#section7">Ajout des ressources de l'application</a></li>
+<li><a href="#section8">Développer</a></li>
 </ol>
 <h3>1. Les bases en Kotlin <a id="section1"></a></h3>
 <p>Pour commencer un petit mot sur Kotlin :</p>
@@ -358,7 +369,97 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p><img src="img/figma-global.png" alt="Figma - global"></p>
 <p><img src="img/figma-details.png" alt="Figma - détails"></p>
 <p>Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.</p>
-<h3>7. Créer une base de données <a id="section7"></a></h3>
+<h3>7. Ajout des ressources de l'application <a id="section7"></a></h3>
+<p>Une fois qu'on a une vision du futur rendu de notre application (grâce aux wireframes), on commence à coder le visuel de notre application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :</p>
+<p><img src="img/definitionCouleurs.png" alt="Définition couleurs"></p>
+<p>De même, on saisit le contenu textuel (dans le fichier ./res/values/string.xml)   :</p>
+<pre class="language-kotlin " style="counter-reset: linenumber 0"><code class="language-kotlin"><span class="token operator">&lt;</span>resources<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name"</span></span><span class="token operator">></span>Evasion<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name_capital_letters"</span></span><span class="token operator">></span>EVASION<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Main page <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"main_page_exp_title"</span></span><span class="token operator">></span>Title of the experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"main_page_exp_author"</span></span><span class="token operator">></span>Surname <span class="token operator">and</span> name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"main_page_summary"</span></span><span class="token operator">></span>Few lines <span class="token keyword">for</span> a short description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"main_page_search_bar"</span></span><span class="token operator">></span>Search <span class="token keyword">for</span> an experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Detail one experience <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_one_experience_page_button_delete"</span></span><span class="token operator">></span>Delete <span class="token keyword">this</span> experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_one_experience_page_title"</span></span><span class="token operator">></span>Title of the experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_one_experience_page_author"</span></span><span class="token operator">></span>Surname <span class="token operator">and</span> name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_one_experience_page_description"</span></span><span class="token operator">></span>Long description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Log <span class="token keyword">in</span> <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_label_email"</span></span><span class="token operator">></span>Email<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_input_email"</span></span><span class="token operator">></span>surname<span class="token punctuation">.</span><span class="token label symbol">name@</span>centrale<span class="token operator">-</span>med<span class="token punctuation">.</span>fr<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_label_password"</span></span><span class="token operator">></span>Password<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_input_password"</span></span><span class="token operator">></span>Enter your password<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_button_login"</span></span><span class="token operator">></span>Log <span class="token keyword">in</span><span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"login_page_link_to_signup"</span></span><span class="token operator">></span>Don\'t have an account <span class="token operator">?</span> Sign up <span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Sign up <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_label_name"</span></span><span class="token operator">></span>Name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_input_name"</span></span><span class="token operator">></span>Enter your name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_label_surname"</span></span><span class="token operator">></span>Surname<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_input_surname"</span></span><span class="token operator">></span>Enter your surname<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_label_email"</span></span><span class="token operator">></span>Email<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_input_email"</span></span><span class="token operator">></span>surname<span class="token punctuation">.</span><span class="token label symbol">name@</span>centrale<span class="token operator">-</span>med<span class="token punctuation">.</span>fr<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_label_password"</span></span><span class="token operator">></span>Password<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_input_password"</span></span><span class="token operator">></span>Enter your password<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_label_password_confirmation"</span></span><span class="token operator">></span>Password confirmation<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_input_password_confirmation"</span></span><span class="token operator">></span>Confirm your password<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_button_signup"</span></span><span class="token operator">></span>Sign up<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"signup_page_link_to_login"</span></span><span class="token operator">></span>Already have an account <span class="token operator">?</span> Log <span class="token keyword">in</span> <span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Personal page <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"personal_page_button_add_new_experience"</span></span><span class="token operator">></span>Add a new experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"personal_page_exp_title"</span></span><span class="token operator">></span>Title of the expérience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"personal_page_exp_author"</span></span><span class="token operator">></span>Surname <span class="token operator">and</span> name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"personal_page_summary"</span></span><span class="token operator">></span>Few lines <span class="token keyword">for</span> a short description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"personal_page_search_bar"</span></span><span class="token operator">></span>Search <span class="token keyword">for</span> an experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> About one of my experiences page <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_button_modify"</span></span><span class="token operator">></span>Modify <span class="token keyword">this</span> experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_button_delete"</span></span><span class="token operator">></span>Delete <span class="token keyword">this</span> experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_title"</span></span><span class="token operator">></span>Title of the experience<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_author"</span></span><span class="token operator">></span>Surname <span class="token operator">and</span> name<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_description"</span></span><span class="token operator">></span>Long description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"detail_my_experience_page_summary"</span></span><span class="token operator">></span>Long description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Modify my experience page <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_button_confirm"</span></span><span class="token operator">></span>Confirm modifications<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_label_title"</span></span><span class="token operator">></span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_input_title"</span></span><span class="token operator">></span><span class="token label symbol">@string</span><span class="token operator">/</span>detail_my_experience_page_title<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> On récupère le titre de l'expérience <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_label_summary"</span></span><span class="token operator">></span>Short description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_input_summary"</span></span><span class="token operator">></span><span class="token label symbol">@string</span><span class="token operator">/</span>detail_my_experience_page_summary<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> On récupère le résumé de l'expérience <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_label_description"</span></span><span class="token operator">></span>Long description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_input_description"</span></span><span class="token operator">></span><span class="token label symbol">@string</span><span class="token operator">/</span>detail_my_experience_page_description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> On récupère la description complète de l'expérience <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_change_picture"</span></span><span class="token operator">></span>Click <span class="token keyword">to</span> upload <span class="token operator">or</span> change the picture<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>resources<span class="token operator">></span>
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>C'est à ce moment qu'on comprend l'importance du temps passé à réaliser des wireframes qui permettent de ne pas se perdre et d'organiser au mieux sont espace de travail.</p>
+</div></div>
+<p>Ensuite, j'ai importé tous les icons présents dans mes wireframes (dans le dossier ./res/drawable). J'ai également ajouté une photo pour l'afficher à l'emplacement prévu pour un retour d'expérience.</p>
+<p><img src="img/drawable.png" alt="Drawable"></p>
+<p>Enfin, après avoir créé un <em>Android Ressource Directory</em> pour stocker les différentes polices que je veux utiliser, j'ai défini les différents styles de textes souhaités dans le fichier ./res/values/themes/themes.xml :</p>
+<p><img src="img/textStyle.png" alt="Styles de textes"></p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Faites attention à vos noms de fichiers</p>
+</div><div class="pl-8 mr-8">
+<p>Le nom de fichier des ressources doit être écrit en <strong>minuscules</strong> et seul le caractère <strong>underscore</strong> est autorisé.</p>
+</div></div>
+<h3>8. Implémenter l'interface en respectant les wireframes <a id="section8"></a></h3>
+<p>Ensuite, j'ai commencé à coder l'application en disposant les ressources correctement sur les layouts. Puis, j'ai appelé ces layouts depuis la MainActivity. Cette partie a été (beaucoup) plus longue que prévue parce que, bien que la création de layout semble triviale, c'est en réalité assez dur de prendre en main l'outil lors d'une première utilisation. De plus, j'ai eu du mal à comprendre comment appeler le layout au bon endroit. J'ai aussi eu du mal à implémenter la liste variable d'expériences. En effet, dans mes wireframes, j'ai décidé que, sur ma page principale, l'utilisateur pouvait consulter un nombre variable d'expériences en défilant vers le bas. Pour cette partie, un peu plus technique, j'ai utilisé une vidéo youtube : <a href="https://www.youtube.com/watch?v=WlDzTh4WXek&amp;t=2714s">créer une application mobile sur Android</a></p>
 <h3>Sources utiles - Sprint 2</h3>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -367,6 +468,8 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <div class="pl-8 mr-8">
 <ul>
 <li><a href="https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc">Comment rédiger un cahier des charges</a></li>
+<li><a href="https://www.youtube.com/watch?v=WlDzTh4WXek&amp;t=2714s">Vidéo youtube, créer une application mobile sur Android</a></li>
+<li><a href="https://www.istockphoto.com/">iStock, pour récupérer des images</a></li>
 </ul>
 </div></div>
 
