@@ -19,7 +19,9 @@ Liste des prérequis du POK ET/OU MON
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+- [Nodemailer](https://www.youtube.com/watch?v=30VeUWxZjS8&t=1697s)
+- [Mail.node.JS](https://www.youtube.com/watch?v=8JBl2Ug7P_E&t=413s)
+- [Email JS](https://www.youtube.com/watch?v=BgVjild0C9A)
 
 {% endlien %}
 
@@ -36,4 +38,8 @@ Le contenu du MON.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Dimanche 29/09  | 0H40  | Découverte de mail.node.js |
+| Dimanche 29/09  | 0H40  | Découverte de mail.node.js, NodeMailer |
+| Vendredi 12/10  | 0H30  | Découverte Email JS |
+| Lundi 15/10  | 0H30  | Décider quoi faire |
+| Total | 1H10 |
+

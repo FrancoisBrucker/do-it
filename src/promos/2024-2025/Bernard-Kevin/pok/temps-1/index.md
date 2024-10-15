@@ -33,6 +33,7 @@ Savoir un peu coder en HTML (balises : a, div, button, ul, li, hX)
 - [Exemple de formulaire](https://www.youtube.com/watch?v=lR4-DJey_3A)
 - [How to import Google Font](https://www.youtube.com/watch?v=E7QPO8P8nls)
 - [Github avec le projet](https://github.com/KevinBERNARD1901/site_portfolio)
+- [Barre mouvante inspiration](https://www.youtube.com/watch?v=aswRKAjjWuE)
 
 {% endlien %}
 
@@ -58,22 +59,29 @@ C'est pour cela que j'ai décidé de créer **mon site web avec mon portfolio.**
 
 #### Sprint 2
 
-- [ ] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>3h, <b>réel :</b> )
-- [ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>3h, <b>réel :</b> )
-- [ ] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>1h, <b>réel :</b> )
-- [ ] Animation dans la sélection des images (<b>estimé : </b>1h30, <b>réel :</b> )
-- [ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>1h30, <b>réel :</b> )
+- [x] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>3H, <b>réel :</b> 2H50)
+- [x] Ajouter une barre mouvante sur la barre de navigation (<b>estimé : </b>2H, <b>réel :</b> 2H50)
+- [ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>3H, <b>réel :</b> )
+- [x] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>1H, <b>réel :</b> 2H20)
+- [x] Animation dans la sélection des images (<b>estimé : </b>1H30, <b>réel :</b> 2H)
+- [ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>1H30, <b>réel :</b> )
 
 ### Horodatage
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
+| **Début Sprint 1** |
 | Samedi 14/09  | 3H45  | Création du Mockup |
 | Lundi 16/09 | 2H15 | Création des pages HTML + import font "Fira Sans" |
 | Mardi 17/09 | 3H30 | Création du CSS des pages |
 | Mercredi 18/09 | 1H30 | Rédaction du POK |
+| Total | 11H |
 | **Début Sprint 2** |
-| Mercredi 25/09 | 1H00 | Barre qui bouge |
+| Mercredi 25/09 | 1H30 | Barre qui bouge |
+| Vendredi 11/10 | 5H10 | Barre qui bouge + Formulaire Contact + Animation de la sélection des images |
+| Lundi 14/10 | 3H30 | Changer d'une image à l'autre + Hover sur une image |
+| Total | 10H10 |
+
 
 ## Contenu
 
@@ -350,9 +358,10 @@ div.mon_profil p b {
 
 ![alt text](media/Sprint1_8_apres_css_mon_profil.png)
 
-### Retour sur expérience
+#### Retour sur expérience
 
 **Difficultés :**
+
 - J'ai eu du mal à importer le font.
 - J'ai beaucoup chercher les paramètres CSS des balises HTML.
 - J'ai mis du temps avant de réussir à mettre mon bouton au bout de ligne de mon div.
@@ -362,3 +371,64 @@ div.mon_profil p b {
 Je suis beaucoup monté en compétence et mes bases en HTML & CSS qui étaient bancales sont devenues beaucoup plus solides.
 
 ### Second Sprint
+
+#### Barre mouvante
+
+Dans un premier temps j’ai commencé par animer la barre mouvante :
+‘Photo avec du rouge’
+
+Au début j’ai essayer de faire 'bouger' ma barre en utilisant du CSS mais j’ai tout de suite compris que si je voulais une animation avec une barre qui se déplace quand ma souris survole les autres liens de ma barre de navigation, j’allais avoir besoin de JavaScript.
+
+- [Barre mouvante inspiration](https://www.youtube.com/watch?v=aswRKAjjWuE)
+
+C’était la première fois que j’utilisais JavaScript donc je me suis d’abord renseigner sur la manière de l’utiliser et quelle était la logique du langage de programmation de JavaScript. (Lien)
+
+Après cela j’ai rajouté l’animation pour ma barre.
+
+'menu deroulant avec le code'
+
+#### Contact form
+
+Ensuite, j’ai essayé de m’envoyer un mail avec le contenu du form de ma page contact. J’ai d’abord fait des recherches avec mon MON 1.2 (lien). C'était long de tout tester.
+
+Au début, j’ai pensé à Nodejs mail et je devais mettre mon identifiant et mon mot de passe dans mon JavaScript. Mais du coup, j’avais un problème de confidentialité, pour régler ce souci je pouvais utiliser des variables d’environnement et me créer un serveur backend ou gérer mes variables.
+
+Je ne voulais pas avoir de backend à gérer donc j’ai fait marche arrière pour utiliser une API. J’ai trouvé Email JS qui fonctionnait très bien.(lien)
+
+J'ai perdu beaucoup de temps à faire des allers-retours parce que je ne comprenais pas trop ce que je faisais.
+
+'Photo du form, de l’e-mail reçu et dépliant avec le code'
+
+#### Animation du hover et de la sélection d’une image
+
+Suite à cela je me suis occupé de la partie animation des images :
+- Onclick
+- Hover
+
+Pour le **onclick** :
+
+J'ai quelque peu galéré à prendre toutes les images dans mon JS et je ne voyais pas comment faire pour écouter l'événement onclick d'une image parmie les autres sans devoir faire un copier-coller de la fonction pour chaque image.
+Finalement j'ai trouver la commande 'for each image in images' de JS.
+
+Ensuite, ce qui a été le plus long était la mise en forme et comment gérer la transition d'opacité et le display none/flex.
+
+Pour la transition d'une image à l'autre avec les flèches, j'avais un problème avec la taille de images qui était de 7 alors que je n'affichais que 6 images sur ma page. Je me suis rendu compte que l'image zoomée après le click était aussi pris en compte dans ma liste "images".
+
+Pour le **hover** :
+
+J'ai eu un peu de mal à faire en sorte d'avoir les coordonnées de l'image qui était survolée par la souris et surtout gérer le fait que si je clique sur le bandeau du hover cela sélectionne la bonne image.
+J'avais au début un problème parce que l'accès à la référence de l'image n'étais disponible qu'après l'avoir cliquée alors que si je mettais la référence dès le hover, je l'avais à la fois pour l'événement hover et onclick.
+
+#### Retour sur expérience
+
+**Difficultés :**
+
+- J'ai sous-évalué le temps que j'accordais à chaque tâche de mon projet.
+- Je suis parti trop facilement, rapidement dans une direction avec Node.js avant de finalement faire marche arrière.
+
+Je suis beaucoup monté en compétence et mes bases en HTML & CSS qui étaient bancales sont devenues beaucoup plus solides.
+
+**Bilan**
+
+Très satisfait de la qualité de ce que j'ai pu faire et à l'avenir j'ai envie de me faire mon propre serveur backend pour gérer mes mails et déjà me renseigner comment gérer les spams et attaque de sites...  
+J'ai pu me démystifier de JavaScript ce qui était une des raisons du choix de ce POK.
