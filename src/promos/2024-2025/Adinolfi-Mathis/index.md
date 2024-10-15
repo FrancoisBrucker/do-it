@@ -1,7 +1,7 @@
 ---
 layout: layout/fiche.njk
 
-title: "Mes projets réalisés en DO-IT"
+title: "ADINOLFI Mathis"
 
 authors:
     - "ADINOLFI Mathis"
