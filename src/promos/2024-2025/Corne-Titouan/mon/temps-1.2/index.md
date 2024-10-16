@@ -36,11 +36,11 @@ Avoir un Microsoft Excel qui fonctionne.
 
 ## 1. Introduction <a id="section1"></a>
 
-Dans le monde professionnel, un des logiciels les plus importants est **Excel**. Bien que tout le monde connaisse ce logiciel, au moins de nom, seulement une petite partie d'entre eux maîtrisent toutes les fonctionnalités disponibles. Pour ma part, je n'ai jamais vraiment appris à utiliser Excel, je sais simplement utiliser un tableur ou encore afficher des graphes. C'est pour cela que j'ai décidé de consacrer ce MON à l'apprentissage des bases des macros qui permettent d'automatiser des tâches. Lors de mon stage de césure, mon collègue de bureau m'a souvent dit "Excel c'est trop fort, tu peux tout faire avec !".
+Dans le monde professionnel, l'un des logiciels les plus importants est **Excel**. Bien que tout le monde connaisse ce logiciel, au moins de nom, seulement une petite partie d'entre eux maîtrisent toutes les fonctionnalités disponibles. Pour ma part, je n'ai jamais vraiment appris à utiliser Excel ; je sais simplement manipuler un tableur et afficher des graphiques. C'est pour cela que j'ai décidé de consacrer ce MON à l'apprentissage des bases des macros qui permettent d'automatiser des tâches. Lors de mon stage de césure, mon collègue de bureau m'a souvent dit : "Excel c'est trop fort, tu peux tout faire avec !".
 
 ## 2. Les macros et VBA, qu'est-ce que c'est ? <a id="section2"></a>
 
-Le VBA (Visual Basic for Applications) est un langage proche du VB (Visual Basic). Ce langage de programmation est intégré dans plusieurs applications Microsoft dont Excel. Il permet d'automatiser des tâches par l'intermédiaire de macros qui exécutent des séries d'actions. Par exemple il est possible d'automatiser la création d'un graphique à partir de données fournies dans un tableur. Ainsi, VBA permet aux utilisateurs de créer des fonctions personnalisées pour répondre à des besoins spécifiques, au-delà des fonctionnalités de base d'Excel.
+Le VBA (Visual Basic for Applications) est un langage proche du VB (Visual Basic). Ce langage de programmation est intégré dans plusieurs applications Microsoft dont Excel. Il permet d'automatiser des tâches par l'intermédiaire de macros qui exécutent des séries d'actions. Par exemple, il est possible d'automatiser la création d'un graphique à partir de données fournies dans un tableur. Ainsi, VBA permet aux utilisateurs de créer des fonctions personnalisées pour répondre à des besoins spécifiques, au-delà des fonctionnalités de base d'Excel.
 
 ## 3. Quelques points clés en VBA <a id="section3"></a>
 
@@ -61,7 +61,7 @@ End If
 ```
 
 {% info %}
-On remarque qu'on utilise l'appostrophe `'` pour commenter son code.
+On remarque qu'on utilise la simple appostrophe pour commenter son code.
 {% endinfo %}
 
 **Boucles `While` et `Until` :**
@@ -91,7 +91,7 @@ On remarque qu'on utilise des variables (*cellule* dans l'exemple précédent) q
 Exemple : Dim maVariable As Integer
 {% endinfo %}
 
-**Utilisation de `With` pour éviter les répétitions :
+**Utilisation de `With` pour éviter les répétitions :**
 
 ```vb
 With Sheets("Index") 'On cache les différents boutons
@@ -106,11 +106,11 @@ Dans l'exemple précédent, l'utilisation de `With` permet d'éviter la répéti
 
 ## Mise en pratique avec la création d'un jeu <a id="section4"></a>
 
-Pour apprendre et maîtriser un nouveau langage, il est primordiale de mettre en pratique. C'est pour cela que j'ai décidé de réaliser un petit jeu de Tier-List sur Excel à l'aide des connaissances acquises sur [Excel-Pratique].
+Pour apprendre et maîtriser un nouveau langage, il est primordiale de mettre en pratique. C'est pour cela que j'ai décidé de réaliser un petit jeu de Tier-List sur Excel à l'aide des connaissances acquises sur [Excel-Pratique](https://excel-pratique.com/fr/vba).
 
 ### Concept du jeu
 
-Le jeu de Tier-List consiste à classer des éléments dans différentes catégories selon ses préférences. Par exemple, si le thème choisi est 'clubs de ligue 1', le joueur devra classer 8 clubs selon ses préférences. Les clubs sont tirés au hasard (8 parmi 18 en ce qui concerne le thème 'club de ligue 1'). Le joueur pourra choisir le nom des différentes catégories. Des catégories par défaut seront proposées (catégories : 'Incroyable', 'Super', 'Bien', 'Moyen', 'Incroyablement mauvais').
+Le jeu de Tier-List consiste à classer des éléments appartenant à un même thème dans différentes catégories selon ses préférences. Par exemple, si le thème choisi est 'clubs de ligue 1', le joueur devra classer 8 clubs selon ses préférences. Les clubs sont tirés au hasard (8 parmi 18 en ce qui concerne le thème 'club de ligue 1'). Le joueur pourra choisir le nom des différentes catégories. Des catégories par défaut seront proposées (catégories : 'Incroyable', 'Super', 'Bien', 'Moyen', 'Incroyablement mauvais').
 
 ### Organisation du projet : les différentes feuilles Excel
 
@@ -120,15 +120,15 @@ Le jeu de Tier-List consiste à classer des éléments dans différentes catégo
 
 **Feuille n°2 : CreationGrille** : Feuilles consacrée au désign de la grille présente sur la feuille *Index*. Le joueur peut changer le nom de chaque catégorie et sa couleur associée. Sur cette feuille, trois boutons sont disponibles :
 
-- *Effacer la grille actuelle* pour que le joueur crée ses propres catégories de A à Z.
-- *Réinitialiser la grille par défaut* pour recharger la grille qui est actuellement affichée sur la capture d'écran qui suit.
-- *Retour à la page principale* pour être redirigé vers la feuille *Index* et commencer à jouer.
+- *"Effacer la grille actuelle"* pour que le joueur crée ses propres catégories de A à Z.
+- *"Réinitialiser la grille par défaut"* pour recharger la grille qui est actuellement affichée sur la capture d'écran qui suit.
+- *"Retour à la page principale"* pour être redirigé vers la feuille *Index* et commencer à jouer.
 
 ![Organisation des feuilles](./img/CreationGrille.png)
 
 Chaque bouton est associé à une macro, c'est-à-dire à une fonction.
 
-Pour le bouton *Effacer la grille actuelle*, voici le code VBA de la macro associée :
+Pour le bouton *"Effacer la grille actuelle"*, voici le code VBA de la macro associée :
 
 ```vb
 Sub Retour()
@@ -136,7 +136,7 @@ Sub Retour()
 End Sub
 ```
 
-Pour le bouton *Réinitialiser la grille par défaut*, voici le code VBA de la macro associée :
+Pour le bouton *"Réinitialiser la grille par défaut"*, voici le code VBA de la macro associée :
 
 ```vb
 Sub GrilleDefaut()
@@ -159,7 +159,7 @@ Sub GrilleDefaut()
 End Sub
 ```
 
-Pour le bouton *Effacer la grille actuelle*, voici le code VBA de la macro associée :
+Pour le bouton *"Effacer la grille actuelle"*, voici le code VBA de la macro associée :
 
 ```vb
 Sub NouvelleGrille()
