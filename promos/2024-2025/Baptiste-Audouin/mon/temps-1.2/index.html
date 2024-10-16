@@ -135,7 +135,7 @@
 </svg>
 <div class="pl-8 mr-8">
 <ul>
-<li><a href="https://realpython.com/python-for-data-analysis/">Real python</a>*</li>
+<li><a href="https://realpython.com/python-for-data-analysis/">Real python</a></li>
 <li><a href="https://scikit-learn.org/stable/">sklearn</a></li>
 </ul>
 </div></div>
@@ -350,12 +350,14 @@ score<span class="token punctuation">[</span><span class="token string">'Gradien
 <span class="token keyword">for</span> model<span class="token punctuation">,</span> accuracy <span class="token keyword">in</span> score<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Précision du modèle </span><span class="token interpolation"><span class="token punctuation">{</span>model<span class="token punctuation">}</span></span><span class="token string"> : </span><span class="token interpolation"><span class="token punctuation">{</span>accuracy <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">)</span>
 </code></pre>
-<p>Précision du modèle Régression Logistique : 41.67%
-Précision du modèle SVM : 41.67%
-Précision du modèle Arbre de Décision : 58.33%
-Précision du modèle KNN : 41.67%
-Précision du modèle Random Forest : 41.67%
-Précision du modèle Gradient Boosting : 58.33%</p>
+<ul>
+<li>Précision du modèle Régression Logistique : 41.67%</li>
+<li>Précision du modèle SVM : 41.67%</li>
+<li>Précision du modèle Arbre de Décision : 58.33%</li>
+<li>Précision du modèle KNN : 41.67%</li>
+<li>Précision du modèle Random Forest : 41.67%</li>
+<li>Précision du modèle Gradient Boosting : 58.33%</li>
+</ul>
 <h4>Commentaires</h4>
 <p>On voit ici que les meilleurs résultats sont obtenus par les méthodes arbres de décision, Random Forest et Gradient Boosting avec un taux de prédiction de 58,33% ce qui reste assez faible. Ces scores renforce ce que montrait la matrice de corrélations entre les performances de Curry et les résultats de son équipe.</p>
 <p>Regardons quel score nous obtenons avec les performances de Thompson qui sempleit être plus déterminant dans les victoires de son équipe :</p>
@@ -418,12 +420,14 @@ thompson_score<span class="token punctuation">[</span><span class="token string"
 <span class="token keyword">for</span> model<span class="token punctuation">,</span> accuracy <span class="token keyword">in</span> thompson_score<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Précision du modèle </span><span class="token interpolation"><span class="token punctuation">{</span>model<span class="token punctuation">}</span></span><span class="token string"> : </span><span class="token interpolation"><span class="token punctuation">{</span>accuracy <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">)</span>
 </code></pre>
-<p>Précision du modèle Régression Logistique : 50.00%
-Précision du modèle SVM : 50.00%
-Précision du modèle Arbre de Décision : 57.14%
-Précision du modèle KNN : 71.43%
-Précision du modèle Random Forest : 42.86%
-Précision du modèle Gradient Boosting : 28.57%</p>
+<ul>
+<li>Précision du modèle Régression Logistique : 50.00%</li>
+<li>Précision du modèle SVM : 50.00%</li>
+<li>Précision du modèle Arbre de Décision : 57.14%</li>
+<li>Précision du modèle KNN : 71.43%</li>
+<li>Précision du modèle Random Forest : 42.86%</li>
+<li>Précision du modèle Gradient Boosting : 28.57%</li>
+</ul>
 <p>Pour Thompson, les résultats entre les différentes méthodes sont beaucoup plus hétérogène mais avec la méthode des k plus proches voisins (KNN) le score est de 71,43% ce qui est bien plus que pour son coéquipier. Là encore, les résultats mettent en avant le caractère déterminant des performances du joueur sur son équipe.</p>
 <h2>Conclusion</h2>
 <p>En conclusion, ce projet m’a permis de découvrir l’analyse de données avec Python et d’explorer différentes méthodes de modélisation prédictive. En appliquant ces techniques à des données sportives. Avec davantage de statistiques, notamment celles des autres joueurs de l’équipe, il serait possible de réaliser des analyses plus poussées, comme, par exemple, l'optimisation du temps de jeu pour maximiser les performances collectives des Warriors.</p>
