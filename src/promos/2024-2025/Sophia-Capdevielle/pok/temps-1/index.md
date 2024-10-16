@@ -413,5 +413,5 @@ Mais bon j'ai pas eu le temps désolé !
 
 ### Sources
 
-[Documentation v-calendar](https://vcalendar.io/getting-started/installation.html)
-[Let’s Make a Vue-Powered Monthly Calendar](https://css-tricks.com/lets-make-a-vue-powered-monthly-calendar/)
+- [Documentation v-calendar](https://vcalendar.io/getting-started/installation.html)
+- [Let’s Make a Vue-Powered Monthly Calendar](https://css-tricks.com/lets-make-a-vue-powered-monthly-calendar/)
