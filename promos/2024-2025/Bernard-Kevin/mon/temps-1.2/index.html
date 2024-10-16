@@ -243,53 +243,69 @@ transporter.sendMail(mailOptions, (error, info) =&gt; {
   }
 });
 </code></pre>
-<h3>2.3 Envoi d'email avec PHP (PHPMailer)</h3>
-<p>En PHP, la fonction native <code>mail()</code> est assez basique et limitée. C’est pourquoi <strong>PHPMailer</strong> est souvent utilisé pour envoyer des emails plus complexes et sécurisés.</p>
+<!-- ### 2.3 Envoi d'email avec PHP (PHPMailer)
+
+En PHP, la fonction native `mail()` est assez basique et limitée. C’est pourquoi **PHPMailer** est souvent utilisé pour envoyer des emails plus complexes et sécurisés.
+
+
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a></p>
-</div></div>
 
-<h4>Installation (via Composer) :</h4>
-<pre><code>bash
+
+
+[PHPMailer](https://github.com/PHPMailer/PHPMailer)
+
+
+
+</div></div>
+</div>
+
+
+#### Installation (via Composer) :
+
+```
+bash
 
 composer require phpmailer/phpmailer
-</code></pre>
-<h4>Exemple de code :</h4>
-<pre><code>php
+```
 
-&lt;?php
+#### Exemple de code :
+
+```
+php
+
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
 try {
-    $mail-&gt;isSMTP();
-    $mail-&gt;Host       = 'smtp.gmail.com';
-    $mail-&gt;SMTPAuth   = true;
-    $mail-&gt;Username   = 'votreEmail@gmail.com';
-    $mail-&gt;Password   = 'votreMotDePasse';
-    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail-&gt;Port       = 587;
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'votreEmail@gmail.com';
+    $mail->Password   = 'votreMotDePasse';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-    $mail-&gt;setFrom('votreEmail@gmail.com', 'Votre Nom');
-    $mail-&gt;addAddress('destinataire@example.com');
+    $mail->setFrom('votreEmail@gmail.com', 'Votre Nom');
+    $mail->addAddress('destinataire@example.com');
 
-    $mail-&gt;isHTML(true);
-    $mail-&gt;Subject = 'Sujet de l\'email';
-    $mail-&gt;Body    = 'Contenu &lt;b&gt;en HTML&lt;/b&gt;';
+    $mail->isHTML(true);
+    $mail->Subject = 'Sujet de l\'email';
+    $mail->Body    = 'Contenu <b>en HTML</b>';
 
-    $mail-&gt;send();
+    $mail->send();
     echo 'Email envoyé avec succès';
 } catch (Exception $e) {
-    echo &quot;L'email n'a pas pu être envoyé. Erreur : {$mail-&gt;ErrorInfo}&quot;;
+    echo "L'email n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
 }
-</code></pre>
-<h3>2.4 Envoi d'email avec Python (smtplib)</h3>
+``` -->
+<h3>2.3 Envoi d'email avec Python (smtplib)</h3>
 <p>En Python, on utilise la bibliothèque <strong>smtplib</strong> pour envoyer des emails via le protocole SMTP.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
