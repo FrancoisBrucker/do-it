@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON vise à à construire un socle de connaissance solide de Google Appscript. De plus, il présente les similitudes entre ce langage et VBA afin de pouvoir passer de l'un à l'autre pour les fonctionnalités principales.
+                Ce MON vise à à construire un socle de connaissances pour s'initier à Google Appscript. De plus, il présente les similitudes entre ce langage et VBA, afin de pouvoir passer de l'un à l'autre pour les fonctionnalités principales.
 
         </p>
 
@@ -140,19 +140,21 @@
 </svg>
 <div class="pl-8 mr-8">
 <ul>
-<li>Lien pratique pour commencer en VBA : <a href="https://excel-pratique.com/fr/vba">https://excel-pratique.com/fr/vba</a></li>
-<li>Lien pratique pour commencer en AppScript : <a href="https://sheets-pratique.com/fr/apps-script">https://sheets-pratique.com/fr/apps-script</a></li>
+<li>Site pratique pour commencer en VBA : <a href="https://excel-pratique.com/fr/vba">https://excel-pratique.com/fr/vba</a></li>
+<li>Site pratique pour commencer en AppScript : <a href="https://sheets-pratique.com/fr/apps-script">https://sheets-pratique.com/fr/apps-script</a></li>
 </ul>
 </div></div>
 
-<h2>Contexte et remarques</h2>
-<p>Le langage Google Appscript permet de coder des programmes sur Google Drive et notamment Google Sheet. Il est pour Google Sheet ce que VBA est pour. Toutefois, la syntaxe de ces deux langages est assez différentes. Ce MON contient un ensemble d'éléments de base pour coder en AppScript ainsi qu'une comparaison avec ldes éléments de base de VBA.</p>
+<h2>Contexte</h2>
+<p>Ayant dû utiliser Google AppScript pour des projets personnels avant de réaliser ce MON, j'ai préféré ajouter une comparaison à VBA afin qu'il ait une plus-value supplémentaire pour moi et les prochains lecteurs.</p>
+<h2>Introduction</h2>
+<p>Le langage Google Appscript permet de coder des programmes sur Google Drive et notamment Google Sheet. Il est pour Google Sheet ce que VBA est pour Excel. Toutefois, les syntaxes de ces deux langages sont assez différentes. Ce MON contient un ensemble d'éléments de base pour coder en AppScript ainsi qu'une comparaison avec des éléments de base de VBA.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>ChatGPT peut s'avérer un véritable allié pour apprendre à coder dans ces langages. Attention toutefois à vérifier tous les résultats proposés : en effet certains ne fonctionnent pas. Une grande partie de ce MON a été réalisé en s'appuyant sur ChatGPT</p>
+<p>ChatGPT peut s'avérer être un véritable allié pour apprendre à coder dans ces langages. Attention toutefois à vérifier tous les résultats proposés : en effet certains ne fonctionnent pas. Une partie de ce MON a été réalisé en s'appuyant sur ChatGPT.</p>
 </div></div>
 <h2>Comment utiliser AppScript ?</h2>
 <h3>Créer un projet AppScript depuis GSheet</h3>
@@ -160,7 +162,7 @@
 <ul>
 <li>Nommer son projet</li>
 <li>Nommer son premier fichier (par défaux appelé &quot;<a href="http://Code.gs">Code.gs</a>&quot;)</li>
-<li>Créer une fonction de mise en route, par exemple une fonction affichant &quot;Hello World&quot;. Cela permettra de lancer les demandes d'autorisation pour l'accès aux données. Chaque utilisateur des différentes fonctions et programmes que vous créez doivent autoriser vos programmes à acceder à vos données.</li>
+<li>Créer une fonction de mise en route, par exemple une fonction affichant &quot;Hello World&quot; dans une cellule d'un tableau. Cela permettra de lancer les demandes d'autorisation pour l'accès aux données. Chaque utilisateur des différentes fonctions et programmes que vous créez doivent autoriser vos programmes à acceder à vos données.</li>
 </ul>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -169,10 +171,10 @@
 <div class="pl-8  mb-2 mr-8">
 <p><strong>ATTENTION !</strong></p>
 </div><div class="pl-8 mr-8">
-<p>Lorsque vous travaillez avec d'autres collaborateurs, chacun doit réaliser les tâches d'autorisation avant toute automatisation (Utilisation de programme et/ou d'automatisation créées par d'autres personnes, lancements différés automatiques...).</p>
+<p>Lorsque vous travaillez avec d'autres collaborateurs, chacun doit réaliser les tâches d'autorisation avant toute automatisation (Utilisation de programmes et/ou d'automatisation créées par d'autres personnes, lancements différés automatiques...).</p>
 </div></div>
 <h3>Les choses à savoir</h3>
-<p>Google AppScript possède un certain nombre de défaut qui n'en sont plus lorsque nous savons qu'ils existent.</p>
+<p>Google AppScript possède un certain nombre de défauts qui n'en sont plus lorsque nous savons qu'ils existent.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -190,8 +192,8 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p>L'enregistrement est réalisé soit manuellement soit avant chaque lancement de programme. Il est réalisé sur l'ensemble du projet et indique les erreur de synthaxe. Cela permet en effet de limiter le risque de perte mais pose un problème majeur : vous ne pouvez pas laisser une fonction en attente ! Si vous lancez un programme vous devez vous assurer que la synthaxe de l'entièreté de votre projet est correcte.
-Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</strong> et de convertir les blocs &quot;en attente&quot; en commentaire.</p>
+<p>L'enregistrement est réalisé soit manuellement, soit avant chaque lancement de programme. Il est réalisé sur l'ensemble du projet et indique les erreurs de syntaxe. Cela permet en effet de limiter le risque de perte mais pose un problème majeur : vous ne pouvez pas laisser une fonction en attente ! Si vous lancez un programme vous devez vous assurer que la synthaxe de l'entièreté de votre projet est correcte.
+Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</strong> et de convertir les blocs &quot;en attente&quot;, en commentaire.</p>
 </div>
 </details>     
 </div>
@@ -212,7 +214,7 @@ Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</stro
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p>Comme évoqué précemment, tout utilisateur d'un nouveau programme doit d'abord autorisé ce dernier à s'exécuter. Pour se faire, il est intéressant de créer une fonction simple, permettant cependant d'accéder ou de modifier la valeur d'une cellule du document GSheet (N'afficher qu'un message dans la boite de dialogue ne fonctionne par exemple pas).</p>
+<p>Comme évoqué précemment, tout utilisateur d'un nouveau programme doit d'abord autoriser ce dernier à s'exécuter. Pour se faire, il est intéressant de créer une fonction simple, permettant d'accéder ou de modifier la valeur d'une cellule du document GSheet (N'afficher qu'un message dans la boite de dialogue ne fonctionne par exemple pas).</p>
 <pre><code>function Hello_world() {
   // Le document actif possède une feuille dont le nom est &quot;Feuille 2&quot;
   feuille = SpreadsheetApp.getActive().getSheetByName(&quot;Feuille 2&quot;);
@@ -246,12 +248,12 @@ Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</stro
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p>Les déclencheurs permettent de lancer des porgrammes de manière différents ou lors d'un évènement.
+<p>Les déclencheurs permettent de lancer des programmes de manière différentes ou lors d'un évènement.<br>
 <strong>Types de déclencheurs :</strong></p>
 <ul>
-<li>Basé sur une feuille de calcul : Ouverture, modification (modification manuelle d'une cellule), changement (modifications structurelle ou par des programmes : nouvelle feuille, nouvelle colonne...), envoie d'un formulaire.</li>
+<li>Basé sur une feuille de calcul : Ouverture, modification (modification manuelle d'une cellule), changement (modifications structurelles ou par des programmes : nouvelle feuille, nouvelle colonne...), envoie d'un formulaire.</li>
 <li>Horaires : date et heure précise, intervalles de temps (de la minute au mois).</li>
-<li>Bassé sur un agenda : A la modification d'un google agenda.</li>
+<li>Basé sur un agenda : A la modification d'un google agenda.</li>
 </ul>
 <p><img src="Menu%20d%C3%A9clencheurs.png" alt="Menu déclencheurs">
 <img src="R%C3%A9glage%20d%C3%A9clencheur.png" alt="Réglage déclencheur"></p>
@@ -268,15 +270,15 @@ Ainsi, il est pratique <strong>d'enregistrer régulièrement son travail !</stro
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
 <div class="pl-8 font-bold inline-block">
-<p>Journal d'éxécution</p>
+<p>Journal d'exécution</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p>Le journal d'éxécution permet de tester ses fonctions et programmes plus facilement, sans avoir à afficher des boites de dialogues nécessitant une action utilisateur. Par exemple, fermer la boite de dialogue pour que le programme puisse continuer.
-On utilise donc la commande <strong>console.log</strong> pour faire appraraïtre des résultats dans le journal</p>
+<p>Le journal d'exécution permet de tester ses fonctions et programmes plus facilement, sans avoir à afficher des boites de dialogues nécessitant une action utilisateur. Par exemple, fermer la boite de dialogue pour que le programme puisse continuer.
+On utilise donc la commande <strong>console.log()</strong> pour faire appraraïtre des résultats dans le journal</p>
 <pre><code>console.log(&quot;7&quot;);
 console.log(&quot;8&quot;);
 </code></pre>
@@ -285,7 +287,7 @@ console.log(&quot;8&quot;);
 </div>
 </details>     
 </div>
-<h2>Synthaxes AppScript et VBA</h2>
+<h2>Syntaxes AppScript et VBA</h2>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -298,7 +300,7 @@ console.log(&quot;8&quot;);
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les commentaire se font :</p>
+<p>Les commentaires se font :</p>
 <ul>
 <li><strong>En VBA :</strong> Avec <em><strong>'</strong></em></li>
 <li><strong>En AppScript :</strong> Avec <em><strong>//</strong></em></li>
@@ -308,11 +310,11 @@ console.log(&quot;8&quot;);
 <p>Considérons les données suivantes :</p>
 <ul>
 <li>Un fichier (Gsheet ou Excel) nommé &quot;Suivi&quot;</li>
-<li>Suivi possède deux feuilles : &quot;Page de garde&quot; et &quot;KPI&quot; telles que suit :</li>
+<li>&quot;Suivi&quot; possède deux feuilles : &quot;Page de garde&quot; et &quot;KPI&quot; telles que suit :</li>
 </ul>
 <h3>Variables</h3>
 <h4>Déclarer des variables</h4>
-<p>En VBA ou en AppScript il n'est pas nécessaire de déclarer les variable que l'on utilise. Cela reste tout de même une bonne pratique.
+<p>En VBA ou en AppScript il n'est pas nécessaire de déclarer les variables que l'on utilise. Cela reste tout de même une bonne pratique pour ne pas avoir de problème entre variables locales et variables globales.
 <strong>En VBA :</strong></p>
 <pre><code>Sub test()
 
@@ -349,7 +351,7 @@ End Sub
 <tr>
 <td>Number</td>
 <td>Nombres entiers et flottants</td>
-<td>Fonction <strong>Number()</strong>, s'applique aux chaines de carcatères et aux booléens</td>
+<td>Fonction <strong>Number()</strong>, s'applique aux chaines de caractères et aux booléens</td>
 </tr>
 <tr>
 <td>String</td>
@@ -380,12 +382,12 @@ End Sub
 <tbody>
 <tr>
 <td>Integer</td>
-<td>Entiers entre -32768 et 32767</td>
+<td>Entiers entre -32 768 et 32 767</td>
 <td>Fonction <strong>CInt()</strong></td>
 </tr>
 <tr>
 <td>Long</td>
-<td>Entiers entre -2147483648 et 2147483647</td>
+<td>Entiers entre -2 147 483 648 et 2 147 483 647</td>
 <td>Fonction <strong>CLng</strong></td>
 </tr>
 <tr>
@@ -406,7 +408,7 @@ End Sub
 </tbody>
 </table>
 <h3>Opérateurs logiques et conditions</h3>
-<p>Supposons que nous voulons tester la valeur d'une variable : si elle est supérieure à 5, on lui ajoute 10 ; si elle est égale à 2, on lui attribue la valeur 0 ; sinon, on lui ajoute 5.</p>
+<p>Supposons que nous voulons tester la valeur d'une variable : si elle est supérieure à 5, on lui ajoute 10 ; si elle est égale à 2, on lui attribue  0 ; sinon, on lui ajoute 5.</p>
 <p><strong>En Appscript :</strong></p>
 <pre><code>let a = 2;
 if(a &gt;= 10){
@@ -429,7 +431,7 @@ End If
 </code></pre>
 <h3>Boucles</h3>
 <h4>Boucle while</h4>
-<p>Suppossons que nous voulons connaitre le premier éléments de la suite de Fibonacci supérieur à 8 ainsi que son rang dans la suite.</p>
+<p>Suppossons que nous voulons connaitre le premier élément de la suite de Fibonacci supérieur à 8, ainsi que son rang dans la suite.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -485,8 +487,8 @@ MsgBox (rang)
 MsgBox (f1)
 </code></pre>
 <h4>Boucle for</h4>
-<p>Reprenons l'exemple de la suite de Fibonacci, cette fois-ci, nous voulons créer une liste avec les n premiers éléments de la suite.
-<strong>En AppScript :</strong></p>
+<p>Reprenons l'exemple de la suite de Fibonacci, cette fois-ci, nous voulons créer une liste avec les n premiers éléments de la suite.</p>
+<p><strong>En AppScript :</strong></p>
 <pre><code>  rang = 50;
   f0 = 0;
   transi = 0;
@@ -500,7 +502,7 @@ MsgBox (f1)
     liste.push(f1);   
   }
 </code></pre>
-<p><strong>EN VBA :</strong></p>
+<p><strong>En VBA :</strong></p>
 <pre><code>rang = 50
 f0 = 0
 transi = 0
@@ -516,8 +518,15 @@ Next
 </code></pre>
 <h3>Les listes</h3>
 <h4>Doit-on réellement utiliser des listes ? L'utilité d'un &quot;back-end&quot;</h4>
-<p>AppScript et VBA sont souvant utilisés pour intéragir avec des tableurs. Il est donc facile de stocker des valeurs dans un de ces tableaux.
-Lorsque des listes sont utilisées de manière récurentes pour l'exécution d'un programme, il peut être interessant de créer une feuille de calcul annexe permettant de stocker et d'accéder à différentes données. J'ai pour habitude de nommer cette feuille <strong>Back-end</strong>.</p>
+<p>AppScript et VBA sont souvent utilisés pour intéragir avec des tableurs. Il est donc facile de stocker des valeurs dans un de ces tableaux.
+Lorsque des listes sont utilisées de manière récurrente pour l'exécution d'un programme, il peut être interessant de créer une feuille de calcul annexe permettant de stocker et d'accéder à différentes données. J'ai pour habitude de nommer cette feuille <strong>Back-end</strong>.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>En VBA, l'utilisation de listes ou de tableaux n'est pas facile, voire ineffcicace.</p>
+</div></div>
 <h4>Opérations sur les listes</h4>
 <h5>¤ Créer une liste</h5>
 <p><em><strong>En AppScript :</strong></em></p>
@@ -576,7 +585,7 @@ liste.splice(position,nombre,&quot;delta&quot;,&quot;mu&quot;); // Permet de sup
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p>La méthode <strong>.splice()</strong> permet de supprimer des éléments mais aussi d'ajouter des éléments à une certaine position en mettant le nombre d'élements à supprimer à 0.</p>
+<p>La méthode <strong>.splice()</strong> permet de supprimer des éléments mais aussi de les ajouter à une certaine position à place d'un certain nombre d'autres.</p>
 <pre><code>liste = [1,2,3,4,5,6,7,8,9,10];
 liste.splice(4,0,152,189,204); // 152, 189, 204 sont les valeurs insérée à la position 4
 // liste est maintenant égale à [1, 2, 3, 4, 152, 189, 204, 5, 6, 7, 8, 9, 10]
@@ -617,19 +626,19 @@ liste = liste.filter(nombre =&gt; nombre!=5); //liste est alors égale à [1,2,3
 </svg>
 <div class="pl-8 mr-8">
 <p>En VBA, on ne peut pas éliminer facilement un élément d'une Collection. Il faut utiliser une boucle pour créer une nouvelle collection dépourvue des éléments à supprimer.
-Les <strong>ArrayList</strong> sont en cela plus simples d'utilisation mais tous les ordinateurs ne les acceptent pas (c'est le cas du miens). On constate donc que VBA préviligie l'utilsation de classeurs Excel.</p>
+Les <strong>ArrayList</strong> sont en cela plus simples d'utilisation mais il semble nécessaire d'importer des bibliothèsques spéciales pour cela.</p>
 </div></div>
 <h2>Créer des programmes et des fonctions</h2>
 <h3>AppScript</h3>
 <p>Pour travailler en AppScript il est nécessaire d'utiliser des fonctions ou de définir les fonctions utilisées dans un fichier à part. En effet, il est possible d'écrire un programme sans fonction au sein d'un fichier. Cependant, lors de l'éxecution de celui-ci, toutes les fonction également définies sur le fichier seront exécutées.</p>
-<p>Pour définir des fonctions :</p>
+<p><strong>Pour définir des fonctions :</strong></p>
 <pre><code>function MaFonction(x,y){
   return()
 }
 </code></pre>
 <ul>
-<li>Notons qu'une fonction peut ne rien renvoyer et donc ne pas comporter de return.</li>
-<li>Pour utiliser une fonction au sein d'une d'autre, il suffit de l'appliquer, la fonction sera notamment proposée après avoir tapé les premiers caractères de son nom.</li>
+<li>Notons qu'une fonction peut ne rien renvoyer et donc peu ne pas comporter de return().</li>
+<li>Pour utiliser une fonction au sein d'une autre, il suffit de l'appliquer, la fonction sera notamment proposée après avoir tapé les premiers caractères de son nom.</li>
 </ul>
 <h3>VBA</h3>
 <p>Pour travailler en VBA, il faut obliagtoirement travailler au sein d'un <strong>Sub</strong> dans lequel il sera possible d'appeler d'autres <strong>Sub</strong> ou d'autres <strong>fonctions</strong>.</p>
@@ -643,7 +652,7 @@ x = 2
 Call MonSub(x) // La fonction MonSub est appliquée à x, qui devient donc égal à 3
 End Sub
 </code></pre>
-<p>Lorsque nous voulons utilser une fonction renvoyant quelque chose, il faut utiliser Function</p>
+<p>Lorsque nous voulons utilser une fonction renvoyant quelque chose, il faut utiliser <strong>Function</strong></p>
 <pre><code>Function Ajouter_Deux(argument)
 Ajouter_Deux = argument + 2
 End Function
@@ -655,10 +664,10 @@ End Function
 <div class="pl-8 mr-8">
 <p>La valeur renvoyée par la fonction doit posséder le même nom que la fonction.</p>
 </div></div>
-<h2>Les fonctions utiles</h2>
-<p>Supposons que nous travaillons avec un document nommé &quot;Suivi&quot; et possédant deux feuilles :&quot;Page de garde&quot; et &quot;Suivi&quot;.</p>
+<h2>Les fonctions utiles en AppScript</h2>
+<p>Supposons que nous travaillons avec un document nommé &quot;Suivi&quot; et possédant deux feuilles : &quot;Page de garde&quot; et &quot;KPI&quot;.</p>
 <h3>Accéder à des fichiers et des feuilles de calcul</h3>
-<p>Pour pouvoir accéder à un document GSheet, plusieurs méthodes sont possible :</p>
+<p>Pour pouvoir accéder à un document GSheet, plusieurs méthodes sont possibles :</p>
 <pre><code>Document = SpreadsheetApp.getActive(); // La variable Document permet maintenant de se référer au document GSheet ouvert.
 DocumentBis = SpreadsheetApp.OpenByUrl(&quot;https://...&quot;); // La variable DocumentBis permet de se référer au document dont on a donné l'url.
 
