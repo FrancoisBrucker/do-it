@@ -11,6 +11,7 @@ tags:
   - "temps 1"
   - "Base de données"
   - "Novice"
+  - "Pony"
 
 résumé: POK traitant des bases de données en général ainsi que de la façon d'en construire une.
 ---
@@ -42,10 +43,10 @@ Le but final de ce POK est d'avoir une bonne connsaissance sur la création de b
 #### Sprint 2
 
 - [x] Imaginer une entreprise fictive pour travailler dessus
-- [ ] Etudier et représenter les données qu'elle traite
-- [ ] Imaginer et construire en diagramme sa base de données
-- [ ] Construire la base de données à l'aide de python
-- [ ] Exploiter rapidement la base de données en faisant des requêtes dessus
+- [x] Etudier et représenter les données qu'elle traite
+- [x] Imaginer et construire en diagramme sa base de données
+- [x] Construire la base de données à l'aide de python
+- [x] Exploiter rapidement la base de données en faisant des requêtes dessus
 
 ### Horodatage
 
@@ -56,6 +57,10 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | Mercredi 11/09  | 4h  | Définition base de données + début structures des bases + un peu d'histoire + trouver un exemple |
 |Mardi 16/09 | 5h30 |fin structure base + structures transactionnels, mise au propre du markdown + fiabilité + relecture|
 |Mercredi 17/09 | 2h | Représentation d'une base + Définir les bonnes pratiques + Bilan sprint |
+|Samedi 12/10 | 4h | Etudier, représenter la base |
+|Lundi 14/10 | 4h | Construire la base de donnée |
+|Mardi 14/10 | 2h | Exploiter la base de données |
+| **TOTAL** | **21h30**
 
 # Contenu
 
@@ -258,3 +263,166 @@ J'ai aussi mal réparti mon temps en travaillant dessus beaucoup au dernier mome
 {% enddetails %} 
 
 # Second Sprint
+
+## Analyse des données fictives de BatiBase
+
+L'entreprise BatiBase est une entreprise de construction classique qui a besoin de gérer plusieurs choses liées entre elles :
+
+- Les clients
+- Les fournisseurs de matériaux
+- Les commandes
+- Les matériaux (le stock)
+- Les chantiers
+- Les outils et machines
+- Les employés
+- Les compétences
+
+Cela va nous permettre de créer une première base qui pourra bien sûr être améliorée par la suite.
+
+Ces objets sont tous liés entre eux afin de pouvoir bien gérer les informations.
+
+Les clients seront liés aux chantiers pour permettre au chef de chantier de communiquer avec eux si besoin, grâce à leurs informations sur leur fiche client dans la base.
+
+Les fournisseurs de matériaux seront liés aux matériaux et aux commandes. En effet, cela permettra de savoir qui a fourni quels matériaux en cas de problème, mais aussi de pouvoir commander des matériaux.
+
+L'objet commande permet de demander quelque chose au fournisseur. Une fois la commande passée, le matériau commandé entre en stock réel. L'objet commande sera donc lié au matériau, en plus de son lien avec le fournisseur. On peut aussi ajouter un lien avec le chantier afin de savoir pour quel chantier la commande est passée.
+
+Comme vu précédemment, les matériaux sont liés aux fournisseurs et aux chantiers.
+
+Les chantiers sont liés aux clients, aux matériaux, aux outils, mais aussi aux employés. Cela permet de savoir qui travaille où et avec quels outils.
+
+Les outils sont liés aux chantiers, et il en est de même pour les employés.
+
+Enfin, les compétences permettront de choisir les employés nécessaires en fonction de leurs expériences, pour la bonne réalisation d'un chantier. Chaque matériau et machine nécessitent des compétences pour pouvoir les utiliser. Tous ces objets seront donc liés entre eux.
+
+Ainsi, nous allons pouvoir créer une première représentation de la base sous forme de diagramme entité-relation, puis de diagramme de structure de données.
+
+## Représentation en diagramme entité relation
+
+![BatiBase entité relation](./ERBati.png)*(Diagramme entité relation de la société BatiBase)*
+
+Ce diagramme permet d'avoir déjà un premier bon aperçu du fonctionnement de la base de données pour ensuite entrer dans le détail.
+
+Réaliser ce diagramme permet aussi de prendre conscience des manquements ou des erreurs potentiels dans les liens. C'est en faisant ce diagramme que j'ai pu observer l'absence d'un objet liant les machines aux employés pour savoir quel ouvrier peut conduire quelle machine. L'objet compétence permet donc de créer ce lien.
+
+Nous allons maintenant pouvoir entrer dans le détail.
+
+## Représentation en diagramme de structure de données
+
+Pour réaliser ce diagramme, nous allons commencer à réfléchir a tous les champs de chaque objet.
+
+Pour faire cela, j'ai décidé d'utiliser le site [dbdiagram](https://dbdiagram.io/d). Je n'ai jamais utilisé ce site. Cependant grâce à la [documentation](https://dbml.dbdiagram.io/docs) et aux exemples en ligne j'ai pu le prendre en main rapidement. Il permet de faire un rendu propre d'une base de données afin de pouvoir la construire ensuite rapidement.
+
+![BatiBase structure de données](./SDBati.png)*(Diagramme de structure de données de la société BatiBase)*
+
+Le code de ce schéma est retrouvable [ici](DataBaseFile.zip).
+
+Le but de ce schéma est de pouvoir visualiser tous les liens, les clés et les champs de la base de données afin de pouvoir la construire. Ce schéma permet aussi de transmettre au futur équipe qui travailleront dessus un plan clair du fonctionnement de la base afin de pouvoir la faire évoluer en cas de besoin.
+
+## Construction de la base de données
+
+Pour télécharger le fichier python complet : [Fichier python base de donnée](PythonFile.zip)
+
+Pour construire cette base de données, j'ai choisi d'utiliser python avec sa library Pony de base de données car je n'ai pour l'instant eu que l'occasion d'en construire en no-code (Airtable, Salesforce ...). Je souhaitais donc en construire une en partant un peu plus de zéro. Pour cela, j'ai utilisé la [documentation](https://ponyorm.readthedocs.io/en/latest/firststeps.html). J'ai donc construit ma base de données en commençant par faire le model de données.
+
+J'ai donc créé chacun des objets en utilisant des lignes de la forme :
+
+``` python
+class Material(db.Entity):
+    material_id = orm.PrimaryKey(int , auto = True)
+    name = orm.Required(str)
+    type = orm.Required(str)
+    price = orm.Required(float)
+    description = orm.Required(str)
+    created_at = orm.Required(str)
+    skills = orm.Required(Skill)
+    Order = orm.Set("Order")
+```
+
+Chacun des champs de l'objet est défini avec un type de façon obligatoire car l'on souhaite que tous les champs soient remplis. Pour créer des liens entre les objets, il faut les définir avec le type de l'objet que l'on veut lier et utiliser la fonction set sur l'objet lié.
+
+Pour une relation en many to many, pony créer automatiquement l'objet intérmédiaire et il suffit de définir sur chacun des objets à lié l'autre objet en utilisant la fonction *set* sur les deux.
+
+Ensuite, j'ai créé la base de données à l'aide du model défini précédement :
+
+```python
+from pony import orm
+from DataModel import Tool, Employee, Supplier, Order, Skill, Client, Material, ConstructionSite, db
+ 
+db.bind('sqlite', 'database.sqlite', create_db=True)
+orm.sql_debug(True)
+db.generate_mapping(create_tables=True)
+```
+
+Grâce a ceci, la table se créer et l'on va pouvoir surveiller les requètes SQL graçe au mode debug. Ainsi, avant les réponses dans le terminal de commande, j'obtiens les requètes effectuées.
+
+## Création de données dans la base
+
+Maintenant, je vais créer de la donnée dans la base afin d'être sur de son bon fonctionnement pour pouvoir intéragir avec :
+
+```python
+    ConstructionSite1 = ConstructionSite(
+        name="Maison4", 
+        address='Rue des patates', 
+        type="Maison", 
+        comment='Réparation cuisine', 
+        created_at="14/10/2024", 
+        status="En cours"
+    )
+
+    ConstructionSite1.clients.add(Client1)
+    ConstructionSite1.tools.add(Tool1)
+    ConstructionSite1.employees.add(Employee1)
+
+    db.commit() 
+```
+
+J'ai aussi créé chacun des autres objets en utilisant toujours la typographie NomDeLaClasse1. Une fois tous les liens et les champs remplis, il faut insérer le tout dans la base afin de créer la data avec la fonction *commit*
+
+Il est temps d'intéragir avec pour vérifier le bon fonctionnement !
+
+## Intéraction avec la base de données
+
+Pour intéragir avec la base de donnée, il est possible d'utiliser du language python : 
+
+```python
+from pony import orm
+from DataModel import db, Client
+
+db.bind('sqlite', 'database.sqlite', create_db=True)
+db.generate_mapping()
+
+with orm.db_session:
+    client = Client.get(first_name='Patrick', last_name='Oudi')
+
+    if client:
+        print(f"{client.first_name} {client.last_name}, Email: {client.email}")
+    else:
+        print("Le client n'existe pas")
+```
+
+Grâce à ceci, on obtient bien le client cherché avec ses informations. Il est aussi possible de faire des requètes légèrement plus technique :
+
+```python
+with orm.db_session:
+    sql = """
+    SELECT o.order_id, o.created_at, o.price, o.currency, 
+           s.name AS supplier_name, s.phone_number AS supplier_phone
+    FROM "Order" AS o
+    JOIN "Supplier" AS s ON o.supplier = s.supplier_id
+    """
+
+    result = db.execute(sql)
+
+    for row in result:
+        print(f"Order ID: {row[0]}, Created At: {row[1]}, Price: {row[2]}, Currency: {row[3]}, "
+              f"Supplier: {row[4]}, Phone: {row[5]}")
+```
+
+{% details "Bilan sprint 1" %}
+
+Pour ce Sprint, j'ai réussi a plutôt bien répartir mon temps mais je ne suis pas allé aussi loin que je le souhaitais. J'ai cependant rempli l'essentiel de mes objectifs et j'ai pu apprendre a maitriser la bibliothèque Pony pour gérer les bases de données. J'ai découvert une autre façon de les gérer qui est quand même moins visuel et intuitive que du no code mais tout autant intéressante. Je reste un peu sur ma fin sur l'utilisation de la base car je n'ai pas eu assez de temps pour vraiment plonger dedans et jouer avec. Cependant, je pense avoir bien compris le fonctionnement.
+
+Globalement sur ce POK je pense avoir vraiment approndi le sujet dans sa globalité comme je le voulais. En effet je travail avec beaucoup de base de données mais je n'ai jamais pris le temps de connaitre leur fonctionnement et d'apprendre à les représenter.
+
+{% enddetails %}

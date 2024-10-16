@@ -89,7 +89,7 @@ Inquiète, l'entreprise Schneider a publié une estimation des dépenses en éne
 Soit une augmentation de 400 % pour l'IA d'ici 2028 !
 
 <div style="text-align: center;">
-    <img src="Conso_datacenter_2030.png" width="800"/>
+    <img src="Conso_datacenter_2030.PNG" width="800"/>
     <br>
     <u> Image 3 : Estimation des consommations électriques des datacenters en 2030 [10] </u>
 </div>
