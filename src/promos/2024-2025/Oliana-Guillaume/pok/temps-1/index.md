@@ -220,7 +220,61 @@ Le **Sprint 2** du développement de l'application de suivi de course à pied su
     -   Un algorithme a été conçu pour estimer les allures de course sur différentes distances (10 km, semi-marathon, marathon) en se basant sur un temps de référence fourni par l'utilisateur pour une de ces distances. Cet algorithme permet également de calculer l'allure d'endurance fondamentale (une allure plus lente pour les séances longues et faciles).
     -   Voici un exemple d'implémentation en Python pour cet algorithme.
 
-python
+```python
+def predict_time(reference_time, reference_distance, target_distance):
+    """
+    Prédit le temps de course pour une distance cible en fonction d'un temps de référence et de la distance correspondante.
+    
+    :param reference_time: temps de référence (en minutes)
+    :param reference_distance: distance de référence (en km)
+    :param target_distance: distance cible (en km)
+    :return: temps estimé pour la distance cible (en minutes)
+    """
+    predicted_time = reference_time * (target_distance / reference_distance) ** 1.06
+    return predicted_time
+
+def pace_from_time(time_in_minutes, distance_km):
+    """
+    Calcule l'allure de course (minutes par km).
+    
+    :param time_in_minutes: temps de course en minutes
+    :param distance_km: distance en km
+    :return: allure en minutes par km
+    """
+    return time_in_minutes / distance_km
+
+def endurance_pace(race_pace, factor=1.2):
+    """
+    Calcule l'allure d'endurance fondamentale en ajoutant un pourcentage à l'allure de course.
+    
+    :param race_pace: allure de course (en min/km)
+    :param factor: pourcentage par rapport à l'allure de course (1.2 = 120%, donc allure plus lente)
+    :return: allure d'endurance fondamentale (en min/km)
+    """
+    return race_pace * factor
+
+# Exemple d'utilisation
+time_10k = 50  # en minutes
+distance_10k = 10  # en km
+
+# Prédictions pour semi-marathon et marathon
+predicted_semi_time = predict_time(time_10k, distance_10k, 21.097)
+predicted_marathon_time = predict_time(time_10k, distance_10k, 42.195)
+
+# Allures de course
+pace_10k = pace_from_time(time_10k, distance_10k)
+pace_semi = pace_from_time(predicted_semi_time, 21.097)
+pace_marathon = pace_from_time(predicted_marathon_time, 42.195)
+
+# Allure d'endurance fondamentale
+endurance_pace_value = endurance_pace(pace_10k)
+
+print(f"Allure sur 10 km : {pace_10k:.2f} min/km")
+print(f"Allure sur semi-marathon : {pace_semi:.2f} min/km")
+print(f"Allure sur marathon : {pace_marathon:.2f} min/km")
+print(f"Allure d'endurance fondamentale : {endurance_pace_value:.2f} min/km")
+
+```
 
 
 

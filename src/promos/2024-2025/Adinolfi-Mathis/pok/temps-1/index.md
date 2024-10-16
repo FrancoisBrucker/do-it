@@ -45,16 +45,16 @@ résumé: Mon POK a pour but de simuler le traffic routier à l'aide de python a
 
 | Date           | Heures passées | Indications                                          |
 | -------------- | -------------- | ---------------------------------------------------- |
-| Mercredi 4/09  | 2H             | Initialisation du projet / Définission des objectifs |
-| Samedi 7/09    | 4H             | Documentation et liste des éléments d'une route      |
-| Dimanche 8/09  | 2H             | Modéle 1 (abandoné)                                  |
-| Mercredi 11/09 | 2H             | Modèle 2 (abandonné)                                 |
-| Mercredi 11/09 | 4H             | Modèle 3 (retenu) + theory thinking                  |
-| Samedi 14/09   | 1H             | Création du projet                                   |
-| Samedi 14/09   | 2H             | Traduction de notre étude en code                    |
-| Dimanche 15/09 | 3H             | Rédaction POK                                        |
+| Mercredi 4/09  | 1H             | Initialisation du projet / Définission des objectifs |
+| Samedi 7/09    | 2H             | Documentation et liste des éléments d'une route      |
+| Dimanche 8/09  | 1H             | Modéle 1 (abandoné)                                  |
+| Mercredi 11/09 | 1H             | Modèle 2 (abandonné)                                 |
+| Mercredi 11/09 | 2H             | Modèle 3 (retenu) + theory thinking                  |
+| Samedi 14/09   | 30min             | Création du projet                                   |
+| Samedi 14/09   | 1H             | Traduction de notre étude en code                    |
+| Dimanche 15/09 | 1H30             | Rédaction POK                                        |
 |                |                |                                                      |
-| Total          | 20H            |                                                      |
+| Total          | 10H            |                                                      |
 
 Bonne gestion de mon temps mais beaucoup de tâches à faire dans le prochain sprint
 
@@ -80,18 +80,18 @@ Bonne gestion de mon temps mais beaucoup de tâches à faire dans le prochain sp
 
 | Date                   | Heures passées | Indications                       |
 | ---------------------- | -------------- | --------------------------------- |
-| Mercredi 20/09         | 2H             | Création d'une TO DO list         |
-| Samedi 21/09           | 4H             | Dévellopement update route        |
-| Dimanche 22/09         | 4H             | Dévellopement intentions          |
-| Samedi 28/09           | 2H             | Développement mouvements          |
-| Dimanche 29/09         | 3H             | Debug 1                           |
-| Mardi 01/10            | 2H             | Debug 2                           |
-| Samedi 05/10           | 2H             | Simulation                        |
-| Samedi 12/10           | 3H             | Rédaction POK                     |
+| Mercredi 20/09         | 1H             | Création d'une TO DO list         |
+| Samedi 21/09           | 2H             | Dévellopement update route        |
+| Dimanche 22/09         | 2H             | Dévellopement intentions          |
+| Samedi 28/09           | 1H             | Développement mouvements          |
+| Dimanche 29/09         | 1H30             | Debug 1                           |
+| Mardi 01/10            | 1H             | Debug 2                           |
+| Samedi 05/10           | 1H             | Simulation                        |
+| Samedi 12/10           | 1H30             | Rédaction POK                     |
 | (Bonus) Dimanche 06/09 | 2H             | Refonte projet / Bonnes pratiques |
 | (Bonus) Dimanche 06/09 | 4H             | Commentaire code + GitHub         |
 |                        |                |                                   |
-| Total                  | 22H            |                                   |
+| Total                  | 11H            |                                   |
 
 J'ai sous-estimé le temps de débogage, j'ai donc privilégié le fonctionnement au cas par cas pour ce POK. Il me revient de modifier mon code pour gérer l'ensemble des cas possibles dans le prochain POK.
 

@@ -5,12 +5,11 @@ title: "Analyse de Portefeuille d'Actions avec Python"
 authors:
   - OLIANA Guillaume
 
-date: 2024-01-10
+date: 2024-10-10
 
 tags: 
   - "temps 1"
-  - "Python"
-  - "Finance"
+  - "Python - Finance"
   - "Portfolio Analysis"
 
 résumé: "Un MON reprenant les bases de l'analyse de portefeuille d'actions avec Python"
@@ -27,7 +26,7 @@ Connaissances de base en informatique et en programmation. Pas de prérequis sp�
 Les liens utiles pour la compréhension de ce projet.
 
 
-- [Python Finance Tutorials](https://www.pythonforfinance.net)
+- [Python Finance Tutorials](https://www.pythonforfinance.net)d
 - [yfinance Documentation](https://pypi.org/project/yfinance/)
 
 {% endlien %}
@@ -336,8 +335,49 @@ plt.title("Répartition des actifs - Maximisation du rendement")
 plt.axis('equal')  # Assure que le camembert est un cercle
 plt.show()
 
+rendements_portefeuille = []
+volatilites_portefeuille = []
+poids_optimal = []
 
+# Génération des portefeuilles pour différents niveaux de rendement
+for rendement_cible in np.linspace(rendement_annuel.min(), rendement_annuel.max(), 100):
+    contraintes = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1},
+                   {'type': 'eq', 'fun': lambda x: np.sum(x * rendement_annuel) - rendement_cible})
+    result = sco.minimize(objectif_volatilite, len(actions) * [1./len(actions)], method='SLSQP', bounds=limites, constraints=contraintes)
+    
+    rendements_portefeuille.append(rendement_cible)
+    volatilites_portefeuille.append(np.sqrt(np.dot(result.x.T, np.dot(cov_matrix_annuelle, result.x))))
+    poids_optimal.append(result.x)
+
+# ============================
+# Tracé de la frontière efficiente
+# ============================
+plt.figure(figsize=(10, 6))
+plt.plot(volatilites_portefeuille, rendements_portefeuille, marker='o', linestyle='-', color='b')
+plt.title('Frontière efficiente (Markowitz)')
+plt.xlabel('Risque (Volatilité)')
+plt.ylabel('Rendement attendu')
+plt.grid(True)
+plt.show()
+
+# ============================
+# Visualisation de la répartition optimale pour minimisation de la volatilité
+# ============================
+# Choisir un portefeuille optimal (par exemple, le 50ème portefeuille pour un compromis intermédiaire)
+poids_optimal_volatilite = poids_optimal[50]
+
+# Création d'un camembert pour afficher la répartition optimale des actifs
+plt.figure(figsize=(8, 8))
+plt.pie(poids_optimal_volatilite, labels=actions, autopct='%1.1f%%', startangle=90, colors=['lightblue', 'lightgreen', 'coral'])
+plt.title("Répartition des actifs - Minimisation de la volatilité")
+plt.axis('equal')
+plt.show()
 ```
+
+![Frontière de Markowitz](image-8.png)
+
+
+
 ![alt text](image-4.png)
 
 ![alt text](image-5.png)
@@ -348,5 +388,26 @@ Ce qui est cohérent du fait que l'action d'APPLE est celle qui a le mieux perfo
 
 ![alt text](image-7.png)
 
+
+Conclusion
+----------
+
+Dans ce projet, nous avons exploré deux aspects essentiels de la finance avec Python : l'**optimisation de portefeuille** selon la méthode de Markowitz et le développement d'une **stratégie de trading** basée sur des indicateurs techniques. Ces deux approches permettent d'aborder la gestion de portefeuille de manière quantitative, en maximisant le rendement attendu tout en minimisant le risque ou en appliquant des stratégies de trading systématiques.
+
+### 1\. **Optimisation de Portefeuille**
+
+L'optimisation de portefeuille selon la théorie moderne de Markowitz repose sur la maximisation du rendement pour un niveau de risque donné ou la minimisation du risque pour un rendement ciblé. Grâce à cette méthode :
+
+-   Nous avons calculé la **frontière efficiente**, qui représente les portefeuilles optimaux en termes de rendement-risque.
+-   Nous avons examiné trois portefeuilles optimaux : celui qui minimise la volatilité, celui qui maximise le **ratio de Sharpe**, et celui qui maximise le rendement.
+-   Les résultats montrent que la meilleure répartition des actifs dépend des objectifs de l'investisseur. Si l'on cherche à minimiser le risque, une allocation prudente répartie entre Apple, Microsoft et Google est optimale. Pour un rendement maximum, une exposition plus importante à Apple, qui a surperformé durant la période analysée, est recommandée.
+
+### 2\. **Performance et Analyse**
+
+Les graphiques générés permettent de visualiser clairement la **frontière efficiente**, ainsi que la répartition optimale des actifs pour différents objectifs financiers. Il ressort de l'analyse que :
+
+-   La **stratégie de minimisation de la volatilité** offre un portefeuille relativement stable mais avec un rendement plus modéré.
+-   La **maximisation du ratio de Sharpe** permet d'obtenir un bon équilibre entre risque et rendement, ce qui en fait un choix privilégié pour beaucoup d'investisseurs.
+-   Enfin, la **maximisation du rendement** peut offrir des gains élevés mais expose l'investisseur à des risques plus importants, notamment en période de forte volatilité.
 
 
