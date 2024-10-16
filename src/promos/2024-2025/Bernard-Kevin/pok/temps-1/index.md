@@ -385,7 +385,62 @@ C’était la première fois que j’utilisais JavaScript donc je me suis d’ab
 
 Après cela j’ai rajouté l’animation pour ma barre.
 
-'menu deroulant avec le code'
+{% details "CSS barre mouvante" %}
+```
+.barre_mouvante {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    transition: left 0.5s ease, width 0.5s ease;
+}
+```
+{% enddetails %}
+
+{% details "JS barre mouvante" %}
+```
+const liens = document.querySelectorAll('nav ul li a');
+const barre = document.querySelector('.barre_mouvante');
+
+function change_lien_hover(lien){
+    liens.forEach((lien_) => {
+        lien_.style.fontWeight = '100';
+    });
+    lien.style.fontWeight = '500';
+
+    const lien_rect = lien.getBoundingClientRect();
+    const navRect = document.querySelector('nav').getBoundingClientRect();
+
+    barre.style.width = `${lien_rect.width}px`;
+    barre.style.left = `${lien_rect.left - navRect.left}px`;
+}
+
+function set_active_link(){
+    const current_page = window.location.pathname.split('/').pop();
+
+    liens.forEach((lien) => {
+        const lien_href = lien.getAttribute('href');
+        if (lien_href === current_page) {
+            change_lien_hover(lien);
+        }
+    });
+}
+
+liens.forEach((lien) => {
+    lien.addEventListener('mouseover', () => {
+        change_lien_hover(lien);
+    });
+});
+
+document.querySelector('nav').addEventListener('mouseout', () => {
+    set_active_link();
+});
+
+set_active_link();
+```
+{% enddetails %}
 
 #### Contact form
 
@@ -397,7 +452,85 @@ Je ne voulais pas avoir de backend à gérer donc j’ai fait marche arrière po
 
 J'ai perdu beaucoup de temps à faire des allers-retours parce que je ne comprenais pas trop ce que je faisais.
 
-'Photo du form, de l’e-mail reçu et dépliant avec le code'
+![alt text](media/Sprint2_1_contact_form.png)
+![alt text](media/Sprint2_2_alert_contact.png)
+![alt text](media/Sprint2_3_mail_form.png)
+
+{% details "HTML Contact Form" %}
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "oMqq7O7XOuIBpqy1P",
+          });
+      })();
+    </script>
+    <script src="js/contact.js"></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <h1>Kévin BERNARD</h1>
+    <p class="mail">mail : kevin.bernard@gmail.com</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">PORTFOLIO</a></li>
+        <li><a href="contact.html" class="contact">CONTACT</a></li>
+        <li><a href="mon_profil.html">MON PROFIL</a></li>
+      </ul>
+      <div class="barre_mouvante"></div>
+    </nav>
+    <h2 class="contact">Une envie à faire passer ?</h2>
+    <form>
+      <div class="contact">
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Mon message" required></textarea>
+        </div>
+        <div>
+          <label for="nom_prenom">Nom, Prénom</label>
+          <input type="text" name="nom_prenom" id="nom_prenom" placeholder="Mon nom et prénom" required>
+        </div>
+        <div>
+          <label for="mail">Mail</label>
+          <input type="text" name="mail" id="mail" placeholder="Mon mail" required>
+        </div>
+        <button type="button" onclick="send_mail()">ENVOYER</button>
+      </div>
+    </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+```
+{% enddetails %}
+
+{% details "JS Contact Form" %}
+```
+function send_mail(){
+    let parametres = {
+        nom_prenom: document.getElementById("nom_prenom").value,
+        mail: document.getElementById("mail").value,
+        message: document.getElementById("message").value
+    };
+    console.log(parametres);
+
+    emailjs.send("service_82grttd", "template_b9hegeg", parametres).then(function() {
+        alert("Votre message a bien été envoyé !");
+    }).catch(function(error) {
+        console.error("Échec de l'envoi : ", error);
+        alert("Échec de l'envoi, veuillez réessayer.");
+    });    
+}
+```
+{% enddetails %}
 
 #### Animation du hover et de la sélection d’une image
 
@@ -405,19 +538,169 @@ Suite à cela je me suis occupé de la partie animation des images :
 - Onclick
 - Hover
 
+{% details "HTML Index = Page Portfolio" %}
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <h1>Kévin BERNARD</h1>
+    <p class="mail">mail : kevin.bernard@gmail.com</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="portfolio">PORTFOLIO</a></li>
+        <li><a href="contact.html">CONTACTS</a></li>
+        <li><a href="mon_profil.html">MON PROFIL</a></li>
+      </ul>
+      <div class="barre_mouvante"></div>
+    </nav>
+    <div class="portfolio">
+      <div>
+        <img class="media" src="/media/Exercice_3_photo_1loliloetlolilo.png" />
+        <img class="media" src="/media/Exercice_3_photo_2.png" />
+        <img class="media" src="/media/Exercice_4_photo_1.png" />
+      </div>
+      <div>
+        <img class="media" src="/media/Exercice_4_photo_2.png" />
+        <img class="media" src="/media/Exercice_6_Oisillons.png" />
+        <img class="media" src="/media/Exercice_7_Dragon.png" />
+      </div>
+    </div>
+    <div class="media_hover">
+      <p id="media_hover_text"></p>
+    </div>
+    <div id="block_zoom" class="block_zoom">
+      <span class="close">&times;</span>
+      <img class="image_zoom" id="image_zoom" />
+      <div class="fleche_gauche">&#10094;</div>
+      <div class="fleche_droite">&#10095;</div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>
+```
+{% enddetails %}
+
+{% details "JS Portfolio" %}
+```
+const block_zoom = document.querySelector('#block_zoom');
+const image_zoom = document.querySelector('.image_zoom');
+const images = document.querySelectorAll('img.media');
+const close_button = document.querySelector('.close');
+const fleche_gauche = document.querySelector('.fleche_gauche');
+const fleche_droite = document.querySelector('.fleche_droite');
+const media_hover = document.querySelector('.media_hover');
+const media_hover_text = document.querySelector('#media_hover_text');
+
+function getImageZoomIndex() {
+    return Array.from(images).findIndex(image => image.src === image_zoom.src);
+}
+
+media_hover.addEventListener('mouseover', () => {
+    media_hover.style.display = 'flex';
+});
+media_hover.addEventListener('mouseout', () => {
+    media_hover.style.display = 'none';
+});
+media_hover.addEventListener('click', () => {
+    block_zoom.style.display = 'flex';
+    image_zoom.src = images[getImageZoomIndex()].src;
+    setTimeout(() => {
+        block_zoom.style.opacity = '1';
+        image_zoom.style.opacity = '1';
+    }, 100);
+});
+
+images.forEach(image => {
+    image.addEventListener('mouseover', () => {
+        image_zoom.src = image.src;
+        image.style.opacity = '0.8';
+        media_hover.style.display = 'flex';
+        media_hover_text.innerHTML = image.src.split('/').pop().split('.')[0];
+        media_hover.style.left = `${image.getBoundingClientRect().left}px`;
+        media_hover.style.bottom = `${window.innerHeight - image.getBoundingClientRect().bottom}px`;
+        media_hover.style.width = `${image.getBoundingClientRect().width}px`;
+    });
+    image.addEventListener('mouseout', () => {
+        image.style.opacity = '1';
+        media_hover.style.display = 'none';
+    });
+    image.addEventListener('click', () => {
+        block_zoom.style.display = 'flex';
+        setTimeout(() => {
+            block_zoom.style.opacity = '1';
+            image_zoom.style.opacity = '1';
+        }, 100);
+    });
+});
+
+close_button.onclick = () => {
+    block_zoom.style.opacity = '0';
+    image_zoom.style.opacity = '0';
+    setTimeout(() => {
+        block_zoom.style.display = 'none';
+    }, 500);
+};
+
+fleche_gauche.onclick = (e) => {
+    e.stopPropagation();
+    let index_image_zoom = getImageZoomIndex();
+    let max_index = images.length - 1;
+    let index = index_image_zoom - 1;
+    if (index < 0) {
+        index = max_index;
+    }
+    image_zoom.src = images[index].src;
+}
+
+fleche_droite.onclick = (e) => {
+    e.stopPropagation();
+    let index_image_zoom = getImageZoomIndex();
+    let max_index = images.length - 1;
+    let index = index_image_zoom + 1;
+    if (index > max_index) {
+        index = 0;
+    }
+    image_zoom.src = images[index].src;
+}
+
+block_zoom.onclick = () => {
+    block_zoom.style.opacity = '0';
+    image_zoom.style.opacity = '0';
+    setTimeout(() => {
+        block_zoom.style.display = 'none';
+    }, 500);
+}
+
+image_zoom.onclick = (e) => {
+    e.stopPropagation();
+}
+```
+{% enddetails %}
+
 Pour le **onclick** :
 
-J'ai quelque peu galéré à prendre toutes les images dans mon JS et je ne voyais pas comment faire pour écouter l'événement onclick d'une image parmie les autres sans devoir faire un copier-coller de la fonction pour chaque image.
+J'ai quelque peu galéré à prendre toutes les images dans mon JS et je ne voyais pas comment faire pour écouter l'événement onclick d'une image parmie les autres sans devoir faire un copier-coller de la fonction pour chaque image comme j'avais fait pour les liens avec ma barre mouvante.
 Finalement j'ai trouver la commande 'for each image in images' de JS.
 
 Ensuite, ce qui a été le plus long était la mise en forme et comment gérer la transition d'opacité et le display none/flex.
 
 Pour la transition d'une image à l'autre avec les flèches, j'avais un problème avec la taille de images qui était de 7 alors que je n'affichais que 6 images sur ma page. Je me suis rendu compte que l'image zoomée après le click était aussi pris en compte dans ma liste "images".
 
+![alt text](media/Sprint2_4_onclick.png)
+
 Pour le **hover** :
 
 J'ai eu un peu de mal à faire en sorte d'avoir les coordonnées de l'image qui était survolée par la souris et surtout gérer le fait que si je clique sur le bandeau du hover cela sélectionne la bonne image.
 J'avais au début un problème parce que l'accès à la référence de l'image n'étais disponible qu'après l'avoir cliquée alors que si je mettais la référence dès le hover, je l'avais à la fois pour l'événement hover et onclick.
+
+![alt text](media/Sprint2_5_hover.png)
 
 #### Retour sur expérience
 
@@ -426,9 +709,7 @@ J'avais au début un problème parce que l'accès à la référence de l'image n
 - J'ai sous-évalué le temps que j'accordais à chaque tâche de mon projet.
 - Je suis parti trop facilement, rapidement dans une direction avec Node.js avant de finalement faire marche arrière.
 
-Je suis beaucoup monté en compétence et mes bases en HTML & CSS qui étaient bancales sont devenues beaucoup plus solides.
-
 **Bilan**
 
-Très satisfait de la qualité de ce que j'ai pu faire et à l'avenir j'ai envie de me faire mon propre serveur backend pour gérer mes mails et déjà me renseigner comment gérer les spams et attaque de sites...  
+Très satisfait de la qualité de ce que j'ai pu faire et à l'avenir j'ai envie de me faire mon propre serveur backend pour gérer mes mails et déjà me renseigner comment gérer les spams et attaques de sites...  
 J'ai pu me démystifier de JavaScript ce qui était une des raisons du choix de ce POK.
