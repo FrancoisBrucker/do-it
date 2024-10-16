@@ -12,6 +12,8 @@ tags:
   - "temps 1"
   - "Decathlon"
   - "Stratégie entreprise"
+  - "Mangement entreprise"
+  - "Devloppement durable"
 
 résumé: "Etude de cas : Décathlon, une entreprise dynamique et innovante. L'objectif est d'analyser ce qui leur permet de se distinguer aujourd'hui et d'attirer, en particulier les jeunes, en examinant leur stratégie, leur modèle de gestion et leur approche de la transition vers le développement durable."
 ---
@@ -233,12 +235,12 @@ Parmi les résultats marquants de 2023 :
 
 {% lien %}
 https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008 \
-https://www.planetegrandesecoles.com/decathlon-we-play-circular\
-https://engagements.decathlon.fr/circulariser-evoluer-vers-une-economie-circulaire\
+https://www.planetegrandesecoles.com/decathlon-we-play-circular \
+https://engagements.decathlon.fr/circulariser-evoluer-vers-une-economie-circulaire \
 https://engagements.decathlon.fr/lindex-de-reparabilite-chez-decathlon\
-https://www.novethic.fr/actualite/environnement/economie-circulaire/isr-rse/comment-decathlon-veut-atteindre-100-de-produits-ecoconcus-en-2026-151436.html\
-https://engagements.decathlon.fr/quel-plan-daction-pour-une-baisse-des-emissions-absolues-de-co2-eq\
-https://www.decathlon.fr/p/mp/909/veste-upcyclee-impermeable-et-coupe-vent-softshell-graphite-homme/_/R-p-5acf8dc7-b2d3-4106-a847-c42e2f4b2894 \
+https://www.novethic.fr/actualite/environnement/economie-circulaire/isr-rse/comment-decathlon-veut-atteindre-100-de-produits-ecoconcus-en-2026-151436.html \
+https://engagements.decathlon.fr/quel-plan-daction-pour-une-baisse-des-emissions-absolues-de-co2-eq \
+https://www.decathlon.fr/p/mp/909/veste-upcyclee-impermeable-et-coupe-vent-softshell-graphite-homme/_/R-p-5acf8dc7-b2d3-4106-a847-c42e2f4b2894 
 {% endlien %}
 
 
@@ -347,12 +349,12 @@ https://www.decathlon.fr/p/mp/909/veste-upcyclee-impermeable-et-coupe-vent-softs
 https://www.909-upcycling.com/blogs/communique-de-presse/les-tentes-devenues-vestes \
 https://www.decathlon.media/Static/dossier-presse/2024/new-identity/v1.7.1/--livrables--/pdf/Decathlon-Media_La-Nouvelle-ambition-de-Decathlon_DP-FR.pdf \
 https://fr.wikipedia.org/wiki/Decathlon_(entreprise)\
-https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008\
-https://www.planetegrandesecoles.com/decathlon-we-play-circular\
-https://engagements.decathlon.fr/la-biodiversite-et-decathlon\
-https://engagements.decathlon.fr/circulariser-evoluer-vers-une-economie-circulaire\
-https://engagements.decathlon.fr/lindex-de-reparabilite-chez-decathlon\
-https://engagements.decathlon.fr/quel-plan-daction-pour-une-baisse-des-emissions-absolues-de-co2-eq\
+https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008 \
+https://www.planetegrandesecoles.com/decathlon-we-play-circular \
+https://engagements.decathlon.fr/la-biodiversite-et-decathlon \
+https://engagements.decathlon.fr/circulariser-evoluer-vers-une-economie-circulaire \  
+https://engagements.decathlon.fr/lindex-de-reparabilite-chez-decathlon \
+https://engagements.decathlon.fr/quel-plan-daction-pour-une-baisse-des-emissions-absolues-de-co2-eq \
 https://www.novethic.fr/actualite/environnement/economie-circulaire/isr-rse/comment-decathlon-veut-atteindre-100-de-produits-ecoconcus-en-2026-151436.html \
 https://changethework.com/management-responsabilisant-decathlon/ \
 https://www.planetegrandesecoles.com/nouvelle-strategie-decathlon
