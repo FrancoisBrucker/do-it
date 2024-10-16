@@ -170,15 +170,16 @@
 Le premier sprint s'est bien déroulé, avec une prise en main efficace de <a href="http://Bubble.io">Bubble.io</a> et la mise en place des premières fonctionnalités essentielles (sign-up, base de données utilisateurs, dashboard). Les prochaines étapes se concentreront sur la personnalisation des plans d'entraînement et l'amélioration du dashboard.</p>
 <h4>Sprint 2</h4>
 <ul>
-<li>[ ] Personnalisation des plans d'entraînement en fonction des choix d'inscription</li>
-<li>[ ] Finalisation du parcours utilisateur</li>
-<li>[ ] Création des plans d'entraînement affichés dans la page Plan avec détails des séances</li>
+<li>[x] Personnalisation des plans d'entraînement en fonction des choix d'inscription</li>
+<li>[x] Finalisation du parcours utilisateur</li>
+<li>[x] Création des plans d'entraînement affichés dans la page Plan avec détails des séances</li>
 <li>[ ] Intégration des fonctionnalités avancées (filtres par mois, année)</li>
 <li>[ ] Tests utilisateurs pour ajuster l'UI/UX</li>
 <li>[ ] Intégration d'API externes (Strava, Garmin)</li>
 </ul>
 <p><strong>Étude post-mortem Sprint 2 :</strong>
-Le sprint 2 se concentrera sur l'intégration des plans personnalisés. L'objectif est d'avoir une application complète avec une interface claire et des fonctionnalités avancées pour les coureurs.</p>
+Le sprint 2 s'est concentré sur les plans d'entraînements personnalisés, beaucoup de temps a été perdu sur la façon dont les allures de courses doivent être calculées selon la distance.
+<strong>Avec un troisieme sprint de 10h, l'application pourrait être entierement fonctionnelle.</strong></p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heures passées sur le projet.</p>
 <table>
@@ -214,6 +215,31 @@ Le sprint 2 se concentrera sur l'intégration des plans personnalisés. L'object
 <td>Dimanche 15/09</td>
 <td>2H</td>
 <td>Développement du Dashboard utilisateur</td>
+</tr>
+<tr>
+<td>Lundi 07/10</td>
+<td>2H</td>
+<td>Création de la base de données des sessions pour stocker les détails des séances</td>
+</tr>
+<tr>
+<td>Mercredi 09/10</td>
+<td>2H</td>
+<td>Développement du pop-up pour validation des séances (distance, temps, fréquence cardiaque, PPM, difficulté)</td>
+</tr>
+<tr>
+<td>Jeudi 10/10</td>
+<td>2H</td>
+<td>Réflexion sur l'algorithme d'estimation des allures de course et implémentation de l'algorithme</td>
+</tr>
+<tr>
+<td>Vendredi 11/10</td>
+<td>2H</td>
+<td>Mise en place du repeating group pour visualiser les séances d'entraînement hebdomadaires</td>
+</tr>
+<tr>
+<td>Lundi 14/10</td>
+<td>2H</td>
+<td>Rédaction du compte rendu et récapitulatif des fonctionnalités développées</td>
 </tr>
 </tbody>
 </table>
@@ -293,9 +319,81 @@ Le sprint 2 se concentrera sur l'intégration des plans personnalisés. L'object
 <h4>Personnalisation des plans d'entraînement</h4>
 <p>Le deuxième sprint sera consacré à la personnalisation des plans d'entraînement. En fonction des informations fournies par l'utilisateur lors de son inscription (niveau, volume hebdomadaire, objectif de course, nombre de sessions), un plan détaillé sera généré et affiché dans la <strong>page Plan</strong>. Cette page, encore vierge à l'heure actuelle, présentera le détail des séances hebdomadaires, adaptées aux objectifs de l'utilisateur.</p>
 <h4>Intégration des fonctionnalités avancées</h4>
-<p>Je prévois d'ajouter des fonctionnalités comme la possibilité de filtrer les performances par mois ou année, ainsi que d'intégrer des API externes comme <strong>Strava</strong> pour synchroniser les données de course.</p>
-<h4>Tests utilisateurs et amélioration de l'UI</h4>
-<p>Des tests utilisateurs seront effectués pour valider l'expérience utilisateur et ajuster l'interface en fonction des retours.</p>
+<p>Je prévois d'ajouter des fonctionnalités comme la possibilité de filtrer les performances par mois ou année, ainsi que d'intégrer des API externes (si réalisable) comme <strong>Strava</strong> pour synchroniser les données de course.</p>
+<h3>Bilan du Sprint 2 : Développement de l'application de suivi de course à pied</h3>
+<p>Le <strong>Sprint 2</strong> du développement de l'application de suivi de course à pied sur <strong><a href="http://Bubble.io">Bubble.io</a></strong> a permis d'avancer sur plusieurs points clés, avec une approche centrée sur la personnalisation des plans d'entraînement et la visualisation des séances. Voici un récapitulatif détaillé de ce qui a été réalisé et ce qui reste à accomplir.</p>
+<hr>
+<h3>Avancées réalisées durant le Sprint 2</h3>
+<ol>
+<li>
+<p><strong>Personnalisation des plans d'entraînement et base de données des sessions</strong> :</p>
+<ul>
+<li>La base de données des <strong>sessions</strong> a été mise en place pour stocker les détails des séances d'entraînement hebdomadaires. Cette base prend en compte deux paramètres importants : le nombre de séances hebdomadaires choisi par l'utilisateur lors de son inscription (3, 4 ou 5 séances par semaine) et l'objectif de course sélectionné (10 km, semi-marathon ou marathon).</li>
+<li>Chaque session inclut des détails comme la distance à parcourir, le type de séance (endurance, fractionné, etc.), et la durée estimée, en fonction de l'objectif et du niveau de l'utilisateur.</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-1.png" alt="reference_race"></p>
+<ol start="2">
+<li>
+<p><strong>Visualisation des séances avec un repeating group</strong> :</p>
+<ul>
+<li>La visualisation des séances hebdomadaires a été intégrée dans l'application via un <strong>repeating group</strong>. Ce composant permet d'afficher dynamiquement une liste de séances d'entraînement par semaine pour chaque utilisateur. Les utilisateurs peuvent voir clairement leur plan d'entraînement, organisé par semaine, avec des informations sur chaque session.</li>
+</ul>
+</li>
+<li>
+<p><strong>Algorithme d'estimation des allures</strong> :</p>
+<ul>
+<li>Un algorithme a été conçu pour estimer les allures de course sur différentes distances (10 km, semi-marathon, marathon) en se basant sur un temps de référence fourni par l'utilisateur pour une de ces distances. Cet algorithme permet également de calculer l'allure d'endurance fondamentale (une allure plus lente pour les séances longues et faciles).</li>
+<li>Voici un exemple d'implémentation en Python pour cet algorithme.</li>
+</ul>
+</li>
+</ol>
+<p>python</p>
+<h3>Ce qui reste à faire</h3>
+<ol>
+<li>
+<p><strong>Intégration d'API externes (Strava, Garmin)</strong> :</p>
+<ul>
+<li>L'intégration des API externes telles que <strong>Strava</strong> et <strong>Garmin</strong> n'a pas encore été réalisée. Cela reste une étape importante pour enrichir l'expérience utilisateur en permettant de récupérer automatiquement des données de fréquence cardiaque, de PPM (pas par minute), et d'autres métriques importantes comme la cadence, directement depuis ces services.</li>
+<li>L'intégration de ces API permettra de synchroniser automatiquement les données d'entraînement et de les analyser de manière plus précise dans l'application.</li>
+</ul>
+</li>
+<li>
+<p><strong>Amélioration de l'expérience utilisateur (UX)</strong> :</p>
+<ul>
+<li>Bien que le processus de validation des séances soit fonctionnel, des ajustements pourraient encore être apportés pour améliorer l'expérience utilisateur, notamment en facilitant l'entrée des données dans le pop-up et en permettant une meilleure visualisation des performances passées.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tests utilisateurs et ajustements UI/UX</strong> :</p>
+<ul>
+<li>Des tests utilisateurs seront nécessaires pour ajuster l'interface utilisateur et améliorer l'expérience générale. Cela inclut la fluidité du parcours utilisateur lors de la validation des séances et la clarté des informations fournies sur le tableau de bord.</li>
+</ul>
+</li>
+<li>
+<p><strong>Interaction et validation des séances avec un pop-up personnalisé</strong> :</p>
+</li>
+</ol>
+<ul>
+<li>Une nouvelle fonctionnalité devrait être ajoutée pour permettre aux utilisateurs de <strong>valider une séance d'entraînement</strong>. Lorsqu'une séance est validée (marquée comme complétée), un <strong>pop-up</strong> s'ouvre automatiquement pour permettre à l'utilisateur de renseigner les détails spécifiques de la séance effectuée. Ce pop-up comprend les éléments suivants :
+<ul>
+<li><strong>Distance préremplie</strong> : La distance prévue pour la séance est préremplie mais modifiable si l'utilisateur a parcouru une distance différente.</li>
+<li><strong>Temps prérempli</strong> : Le temps estimé pour la séance est également prérempli, mais l'utilisateur peut le modifier selon la réalité de sa performance.</li>
+<li><strong>Fréquence cardiaque moyenne</strong> : Un champ vide permet à l'utilisateur d'entrer la fréquence cardiaque moyenne mesurée pendant la séance, utile pour le suivi de la charge d'entraînement.</li>
+<li><strong>PPM (Pas Par Minute)</strong> : Un champ pour renseigner le PPM (pas par minute), un indicateur important pour les coureurs, en fonction de leurs données.</li>
+<li><strong>Niveau de difficulté ressenti</strong> : Un menu déroulant de 1 à 10 permet à l'utilisateur d'indiquer le niveau de difficulté ressenti pendant la séance. Cela permet d'affiner le suivi de l'effort perçu et de mieux comprendre les variations dans la performance de l'utilisateur.</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>
+<p><strong>Fonctionnalités du Dashboard</strong></p>
+<ul>
+<li>Pour faire de l'application un outil d&quot;entraînement fonctionnel, il faudrait rendre les KPI fonctionnels sur le Dashboard. Je n'ai pas eu le temps de créer les Workflows pour actualiser les KPI lors de l'ajout d'une séance</li>
+</ul>
+</li>
+</ol>
 
 
 </article>
