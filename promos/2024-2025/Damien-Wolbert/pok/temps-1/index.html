@@ -130,7 +130,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>Niveau :</strong> Basique
+<p><strong>Niveau :</strong> Basique<br>
 <strong>Pré-requis:</strong></p>
 <ul>
 <li>Connaissance de base de Google AppScript, de Google Sheet et d'un Google Drive. (Approdondi en MON)</li>
@@ -142,6 +142,9 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
+<ul>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-1.2/">MON sur les fonctionnalités de Googl AppScript</a></li>
+</ul>
 </div></div>
 
 <h2>Contexte</h2>
@@ -187,6 +190,7 @@
 <p>Le suivi du projet a été réalisé sur un outil personnel développé spécialement pour le suivi des POK et MON. Le contenu est reporté ci-dessous.</p>
 <h4>Sprints back-logs</h4>
 <p>L'objectif final de ce POK est de fournir un dossier Google Drive contenant des outils automatisés de suivi de la compétence des membres d'une entreprise type à déterminée.</p>
+<p><strong>TOTAL POK 1 :</strong> <em>25 heures soit 25% de plus que le temps demandé</em></p>
 <h5>Sprint 1</h5>
 <p><strong>To-do</strong></p>
 <ul>
@@ -256,12 +260,73 @@
 <td>Mise en forme du sprint sur le site DO-It</td>
 <td>Elevé</td>
 </tr>
+<tr>
+<td>07/10/2024</td>
+<td>0.5h</td>
+<td>Cadrage du sprint 2</td>
+<td>Elevé</td>
+</tr>
 </tbody>
 </table>
-<p>**Total du sprint :**<em>11 heures soit 10% de plus que le temps demandé</em></p>
+<p><em><strong>Total du sprint :</strong></em> <em>11 heures soit 10% de plus que le temps demandé</em></p>
 <h5>Sprint 2</h5>
 <p><strong>To-do</strong></p>
-<p><strong>Horodatage</strong></p>
+<ul>
+<li>[x] Analyser les réponses du questionnaire</li>
+<li>[x] Lister et hiérarchiser les fonctionnalités nécessaires</li>
+<li>[x] Réaliser l'architecture générale de l'outil</li>
+<li>[x] Réaliser l'architecture relative à la gestion des collaborateurs
+<ul>
+<li>[x] Architecture de l'outil de suivi général</li>
+<li>[x] Architecture des bases de données relatives aux collaborateurs</li>
+</ul>
+</li>
+<li>[ ] Realiser l'architecture relative à la gestion de la compétence
+<ul>
+<li>[ ] Architecture de l'outil de création de référentiels de compétences</li>
+<li>[x] Architecture des bases de données relatives aux compétences</li>
+</ul>
+</li>
+<li>[x] Créer les templates individuels</li>
+<li>[x] Créer le document de suivi général</li>
+<li>[ ] Créer le document de création de référentiel métier</li>
+<li>[x] Coder les fonctions de création relatives à la structure (profiles, postes, équipes, services)</li>
+<li>[ ] Coder les fonction de modification relatives à la structure (profiles, postes, équipes, services)</li>
+<li>[ ] Coder les fonctions de création relatives aux compétences</li>
+<li>[ ] Coder les fonction de modification relatives axu compétences</li>
+</ul>
+<p><strong>Horodatage :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+<th>Niveau d'efficacité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14/10/2024</td>
+<td>7h</td>
+<td>Architecture générale, architecture collaborateurs, architecture bases de données, templates individuels, document de suivi général, fonctions de création pour la structure</td>
+<td>Elevé</td>
+</tr>
+<tr>
+<td>15/10/2024</td>
+<td>3,5h</td>
+<td>Correction fonctions de création, amélioration templates individuels, tests</td>
+<td>Elevé</td>
+</tr>
+<tr>
+<td>16/10/2024</td>
+<td>3,5h</td>
+<td>Rédaction sur site do_it, derniers tests, REX</td>
+<td>Elevé</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Total du sprint 2 :</strong></em> <em>14 heures soit 40% de plus que le temps demandé</em></p>
 <h2>I. Les enjeux du suivi de la compétence individuelle</h2>
 <h3>I.1. Définitions et caractérisation</h3>
 <p>Dans son ouvrage <em>INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie</em>, T. ARDOUIN explique que la définition même du mot compétence crée le débat. Il en donne la définition suivante à la page 119 :</p>
@@ -409,11 +474,9 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 <div class="pl-8 mr-8">
 <p>Le cahier des charges fonctionnel devra détailler et justifier une méthdologie de réalisation des référentiels métier chaque poste <strong>ET</strong> permettre une armonisation entre uex.</p>
 </div></div>
-<h4>Plan de développement individuel (PDI)</h4>
-<p>TBD</p>
 <h2>II. Besoin fonctionnel</h2>
 <h3>II.1. Présupposés du besoin</h3>
-<p>La recherche bibliographique que j'ai réalisé m'a amené identifier plusieurs types de besoins : Esthétisme &amp; accès et Fonctions.</p>
+<p>La recherche bibliographique que j'ai réalisée m'a amené identifier plusieurs types de besoins : Esthétisme &amp; accès et Fonctions.</p>
 <h4>A. Besoin esthétiques et accessibilité</h4>
 <table>
 <thead>
@@ -550,7 +613,17 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<p><strong>Réponses</strong></p>
+<p><strong>Réponses :</strong></p>
+<ul>
+<li><em>Savoir faire acquis par l'apprentissage ou la pratique</em></li>
+<li><em>Aptitude à une tâche d'un individu</em></li>
+<li>*Un savoir-faire, quel qu'il soit (et pas juste un savoir)</li>
+<li>Capacité technique ou fonctionnelle qui s'acquiert suite à formation ou expérience qualité humaine*</li>
+<li><em>Une qualité qui n'implique que la personne à qui elle est attribuée</em></li>
+<li><em>Comme une aptitude me concernant uniquement</em></li>
+<li><em>Un savoir acquis ou développé qui apporte une plus value collective</em></li>
+</ul>
+<p>On constate qu'une réponse sur deux concerne un savoir-faire. En outre, les notions de qualité humaine, d'individualité et de plus-value interveniennent. On peut donc vérifier que le concept de compétence individuel ne fait pas intervenir les mêmes enjeux dans le raisonnement de chaque personne.</p>
 </div>
 </details>     
 </div>
@@ -609,6 +682,7 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>50% des participants estiment qu'une certification valide la détention d'une compétence. Il pourra donc être intéressant de faire apparaitre une notion de preuve d'acquisition dans l'outil, permettant de passer outre la notion de diplôme.</p>
 </div>
 </details>     
 </div>
@@ -670,6 +744,7 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>62.5% des participants (5/8) estiment qu'un diplôme ne permet pas de valider une compétence. Il est intéressant de noter qu'hors mis une personne, les participants ont répondu de la même façon qu'à la question précédente.</p>
 </div>
 </details>     
 </div>
@@ -731,6 +806,9 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>Oui : 50%
+Non : 50%
+Le réseau et les recommandations peuvent donc influer dans la validation d'une compétence. Dans une version plus avancée, un outil de gestion de la compétence pourrait aussi faire intervenir cette notion de recommandationd d'un tiers. Cela permettrait tout d'abord d'affirmer ou d'infirmer la recommandation, ainsi que d'anticipier l'évolution de certains collaborateurs.</p>
 </div>
 </details>     
 </div>
@@ -792,6 +870,9 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>Oui : 5/8
+Non : 3/8
+Il semble que l'expérience sur le terrain témoigne d'une plsu grande légitimité.</p>
 </div>
 </details>     
 </div>
@@ -853,6 +934,8 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>Non : 100%
+Pour chacun des participants, la notion de titre de permet pas de valider une compétence. Il ne faudra pa</p>
 </div>
 </details>     
 </div>
@@ -1411,13 +1494,136 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 <h3>II.3. Formalisation du besoin fonctionnel</h3>
 <p>Par soucis de temps et afin de construire une maquette fonctionnelle à la fin du temps alloué au projet, il est nécessaire de hiérarchiser les fonctions et de définir celles qui sont indispensables.</p>
 <h4>Fonctionnalités indispensables</h4>
-<p>TBD</p>
+<ul>
+<li>Création et modification d'un profile pour chaque collaborateur</li>
+<li>Création et modification de profiles administrateurs</li>
+<li>Suivi des compétences acquises et à acquérir</li>
+<li>Adapatation de l'outil à la structure concernée</li>
+<li>Permettre de s'appuyer sur des exemples concrets : évaluer l'acquisition par l'exemple.</li>
+</ul>
 <h4>Fonctionnalités souhaitables</h4>
-<p>TBD</p>
+<ul>
+<li>Création d'un référentiel de compétences</li>
+<li>Tableau de bord permettant de visualiser l'avancement des équipes.</li>
+<li>Profil individuel consultable par les collaborateurs</li>
+</ul>
 <h4>Fonctionnalités additionnelles</h4>
-<p>TBD</p>
-<h3>Architecture générale</h3>
-<p>TBD</p>
+<ul>
+<li>Lier les compétences entre elles : déterminer les possibilités données par l'acquisition d'une compétence afin de construire un parcours de formation.</li>
+<li>Faire apparaitre de manière explicite la dernière formation en date de chaque collaborateur</li>
+<li>Identifier les lacunes</li>
+</ul>
+<h2>III - Outil global</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://docs.google.com/spreadsheets/d/1crOzv51Mt0-jJi2xNZKXNoEiwMz2lBXg7hcZI-SBvUA/edit?usp=drive_link">Lien vers la V0</a></p>
+</div></div>
+
+<h3>III.1 - Architecture générale</h3>
+<p>L'outil sera construit de sorte à limiter le nombre de programmes à utiliser. Cela passera par la mise en place de modèles de type GSheet. Ces différents modèles graviteront autours d'un fichier centrale regroupant les bases de données et les principales fonctionnalités de personnalisation, suivi et modifications. Toutefois, réalisant une V0 de l'outil, nous considérons les collaborateurs regroupés en équipes, regroupées en services.
+<img src="Architecture%20g%C3%A9n%C3%A9rale.jpg" alt="Architecture générale"></p>
+<h3>III.2 - Document de suivi général</h3>
+<p>Le document de suivi général doit regrouper :</p>
+<ul>
+<li>Le fonctionnalités de création et modification des informations de la structure (profiles, équipes, services, postes)</li>
+<li>Le fonctionnalités de création et modification des informations concernant les compétences.</li>
+<li>Toutes les bases de données.
+Actuellement, ce document comportes les éléments suivants :
+<img src="Fonctions%20g%C3%A9n%C3%A9rales%20disponibles.png" alt="Fonctions générales">
+L'onglet <em><strong>New</strong></em> correspond, à cet étape du projet, aux fonctionnalités correspondant à la structure.</li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://docs.google.com/spreadsheets/d/1crOzv51Mt0-jJi2xNZKXNoEiwMz2lBXg7hcZI-SBvUA/edit?usp=sharing">Lien vers le document de suivi général</a></p>
+</div></div>
+
+<h2>IV - Gestion des collaborateurs</h2>
+<h3>IV.1 - Structure des bases de données</h3>
+<table>
+<thead>
+<tr>
+<th>Nom de la base</th>
+<th>Attributs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BDD_Postes</td>
+<td>Id, Id_service, Id_equipe, Nom</td>
+</tr>
+<tr>
+<td>BDD_Equipes</td>
+<td>Id, Nom, Id_Service, Id_responsable</td>
+</tr>
+<tr>
+<td>BDD_Services</td>
+<td>Id,Nom, Id_responsable</td>
+</tr>
+<tr>
+<td>BDD_RH</td>
+<td>Id, Nom, Prénom, Id_Service, Id_equipe, Id_poste, URL_fiche_perso</td>
+</tr>
+<tr>
+<td>BDD_Admin</td>
+<td>Id_Id_RH</td>
+</tr>
+</tbody>
+</table>
+<h3>IV.2 - Fiche individuelle</h3>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://docs.google.com/spreadsheets/d/1jz4QhZDmInLyTs9LAemzIZA6sGFmrF87wcNzQJi8ugY/edit?usp=sharing">Template d'une fiche individuelle</a>;</p>
+</div></div>
+
+<p>Une fiche individuelle possède 4 éléments principaux :</p>
+<ul>
+<li>Une synthèse permettant de regrouper toutes les informations importantes sur les compétences et objectifs sur collaborateur. (Peu de fonctionnalités présentes pour le moment)</li>
+<li>1 onglet de suivi des compétences propres</li>
+<li>1 onglet de suivi des compétences métier</li>
+<li>1 onglet de suivi des compétences humaines</li>
+</ul>
+<p>Cette séparation en 3 onglets distincts permettra à terme de modifier les compétences métier d'une personne en cas d'évolution de poste, tout en gardant un accès aux compétences plus globales qu'il a acquises (permis, certification, gestion de projet etc...).De plus, réaliser une remise zero des compétences métier lors d'un changement de poste poursera le collaborateurs et les administrateurs de l'outil et réévaluer les compétences tenu par le prisme du nouveau poste.</p>
+<p><img src="Apercu%20competences.png" alt="Apercçu des compétences"></p>
+<p>Comme visible sur la figure précédente, une compétences est définie par un N°, un nom et une description. L'utilisateur peut définir un nombre de pallier d'acquisition entre 1 et 5 et visualiser l'avancement.<br>
+Pour chaque palier, il peut indiquer la date à laquelle il souhaite que le niveau de compétence soit maitrisé, la date à laquelle il est maitrisé ainsi qu'une typologie de preuve d'acquisition (diplôme, certificat ou expérience).
+<img src="Criticite.png" alt="Criticite">
+L'utilisateur peut également saisir une importance et une urgence temporelle pour chaque compétence (Criticité voulue) et vérifier la cohérence des chois des objectifs difinis par les paliers (Criticité effective). La criticité effective calcul les temps restant pour l'acquisition des niveaux de compétences et définis l'ugence temporelle porportionnellement à l'écart entre l'échéance la plus courte et l'échéance la plus longue.</p>
+<p>Pour se faire, il a été nécessaire de créer des onglets &quot;Back-end&quot;, pour réaliser les opérations permettant le calcul évoqué précédemment.
+<img src="Back%20end%20indivi.png" alt="Back-end">
+A terme, il faudra envisager de cacher les feuilles de back-end afin de s'assurer que les utilisateurs ne les modifient pas.</p>
+<h3>IV.3 - Fonctionnalités</h3>
+<p>L'onglet <em><strong>New</strong></em> regroupes les outils suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Fonctionnalité</th>
+<th>Fonction AppScript</th>
+<th>Détail</th>
+<th>Opérationnelle ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Il n'est pour l'instant pas possible de modifier les informations renseignées autrement qu'en modifiant manuellemnt les bases de données. A terme, l'objectif serait de dupliquer <em><strong>New</strong></em>, de créer des fonctions permettant d'importer les informations présentes dans les bases de données et de créer des fonction mettant à jour les nouvelles informations entrées par l'utilisateur.<br>
+<em>Estimation du temps de l'opération : 4 à 5 heures</em></p>
+<h3></h3>
+<h2>V -</h2>
 <h2>Bibliographie</h2>
 <p>[1] <strong>DEJOUX, Cécile.</strong> <em>Gestion des compétences et GPEC</em>, 2ème édition, DUNOD, 2013, Les topos</p>
 <p>[2] <strong>QUINN James Brian, ANDERSON Phili &amp; FINKELSTEIN Sydney.</strong> <em>La gestion du capital intellectuel : Comment tirer le meilleur parti des meilleurs</em>, Editions d'Organisation, 1996.</p>
@@ -1425,9 +1631,14 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 <p>[4] <strong>ARDOUIN, Thierry</strong> <em>INGENIERIE DE FORMATION : Intégrez les nouveaux modes de formation dans votre pédagogie</em>, 5ème édition, 2017, DUNOD, Collection formation.</p>
 <h2>REX</h2>
 <h3>REX Sprint 1</h3>
-<p><strong>GESTION DU TEMPS :</strong> Je pense avoir commencé à travailler sur le POK trop tard, ce qui m'a obligé de condenser mes séances de travail juste avant la deadline./
-<strong>PROGRAMMATION DES TACHES :</strong> Je n'ai pas pris en compte le temps additionnel que prenait la répoonse à une enquête. Ainsi, j'aurais dû d'abord me concentrer sur la conception du formulaire afin de les envoyer le plus rapidement possible./
-<strong>DIMENSIONNEMENT DU PROJET :</strong> Je pense que ce projet est trop ambitieux pour ne solliciter que 10 heures de travail. L'origine de cette erreur de jugement provient sûrement d'une fausse impression de maitrise du sujet. En effet, je ne pensais pas que la recherche documentaire et l'approfondissement du sujet me prendrait autant de temps./</p>
+<p><strong>GESTION DU TEMPS :</strong> Je pense avoir commencé à travailler sur le POK trop tard, ce qui m'a obligé de condenser mes séances de travail juste avant la deadline.<br>
+<strong>PROGRAMMATION DES TACHES :</strong> Je n'ai pas pris en compte le temps additionnel que prenait la répoonse à une enquête. Ainsi, j'aurais dû d'abord me concentrer sur la conception du formulaire afin de les envoyer le plus rapidement possible.<br>
+<strong>DIMENSIONNEMENT DU PROJET :</strong> Je pense que ce projet est trop ambitieux pour ne solliciter que 10 heures de travail. L'origine de cette erreur de jugement provient sûrement d'une fausse impression de maitrise du sujet. En effet, je ne pensais pas que la recherche documentaire et l'approfondissement du sujet me prendrait autant de temps.</p>
+<h3>REX Sprint 2</h3>
+<p><strong>GESTION DU TEMPS GENERALE :</strong> J'ai entammé le sprint 2 beaucoup trop tard. En effet, je me suis basé sur le temps alloué au projet (10h) et pas au temps que le projet allait me prendre.<br>
+<strong>GESTION DU TEMPS DE PROGRAMMATION :</strong> La programmation des différentes fonctions et des templates m'a pris plus longtemps que prévu. En effet, bien que mon MON 1.2 m'ait permis de mieux maitriser Google AppScript, j'ai surestimé mes capacités.<br>
+<strong>PROGRAMMATION DES TACHES :</strong> Comme pour le sprint 1, je n'ai pas pris en compte le temps pris par la propagation et l'étude d'un questionnaire. Je n'ai pas pris le temps de relancer d'autres participants potentiels ce qui a aboutit à un questionnaire inutiles du fait du nombre de réponses. En effet, j'espérais pouvoir récolter une vingtaine de réponses alors que je n'en ai reçu que 8.<br>
+<strong>DIMENSIONNEMENT DU PROJET :</strong> Comme au temps 1, le projet est trop ambitieux pour tenir en 20 heures.</p>
 
 
 </article>
