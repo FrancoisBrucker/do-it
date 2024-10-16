@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Data visualisation sur des projets"
+title: "POK 2 : data visualisation sur des projets"
 authors:
   - Clarisse Francese
 
@@ -38,7 +38,7 @@ Objectif général : **apprendre l'art de la data visualisation** et plus préci
 - [ ] suivre un tuto sur looker studio (1h30)
 - [ ] lister les données que je veux mettre en forme pour ma soeur (30 min)
 - [ ] préparer des tableaux avec les données qui seront représentés (1h)
-- [ ] mettre en forme visuel les données du tableau (5h30)
+- [ ] mettre en forme visuelle les données du tableau (5h30)
 - [ ] envoyer le résultat à ma soeur et lui expliquer comment bien se l'approprier (30 min)
 
 **Total d'heures sprint 1 : ?h**    
