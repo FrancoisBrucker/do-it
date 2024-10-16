@@ -15,7 +15,7 @@ résumé: "Au cours de ce MON je souhaite découvrir la manipulation des bases d
 
 {% lien %}
 
-* [Real python](https://realpython.com/python-for-data-analysis/)*
+* [Real python](https://realpython.com/python-for-data-analysis/)
 * [sklearn](https://scikit-learn.org/stable/)
 
 {% endlien %}
@@ -269,12 +269,12 @@ score['Gradient Boosting'] = accuracy_gb
 for model, accuracy in score.items():
     print(f"Précision du modèle {model} : {accuracy * 100:.2f}%")
 ```
-Précision du modèle Régression Logistique : 41.67%
-Précision du modèle SVM : 41.67%
-Précision du modèle Arbre de Décision : 58.33%
-Précision du modèle KNN : 41.67%
-Précision du modèle Random Forest : 41.67%
-Précision du modèle Gradient Boosting : 58.33%
+- Précision du modèle Régression Logistique : 41.67%
+- Précision du modèle SVM : 41.67%
+- Précision du modèle Arbre de Décision : 58.33%
+- Précision du modèle KNN : 41.67%
+- Précision du modèle Random Forest : 41.67%
+- Précision du modèle Gradient Boosting : 58.33%
 
 #### Commentaires
 
@@ -342,12 +342,12 @@ thompson_score['Gradient Boosting'] = accuracy_gb
 for model, accuracy in thompson_score.items():
     print(f"Précision du modèle {model} : {accuracy * 100:.2f}%")
 ```
-Précision du modèle Régression Logistique : 50.00%
-Précision du modèle SVM : 50.00%
-Précision du modèle Arbre de Décision : 57.14%
-Précision du modèle KNN : 71.43%
-Précision du modèle Random Forest : 42.86%
-Précision du modèle Gradient Boosting : 28.57%
+- Précision du modèle Régression Logistique : 50.00%
+- Précision du modèle SVM : 50.00%
+- Précision du modèle Arbre de Décision : 57.14%
+- Précision du modèle KNN : 71.43%
+- Précision du modèle Random Forest : 42.86%
+- Précision du modèle Gradient Boosting : 28.57%
 
 Pour Thompson, les résultats entre les différentes méthodes sont beaucoup plus hétérogène mais avec la méthode des k plus proches voisins (KNN) le score est de 71,43% ce qui est bien plus que pour son coéquipier. Là encore, les résultats mettent en avant le caractère déterminant des performances du joueur sur son équipe.
 
