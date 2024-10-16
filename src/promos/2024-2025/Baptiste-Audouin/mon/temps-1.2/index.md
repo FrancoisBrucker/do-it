@@ -8,6 +8,7 @@ authors:
 date: 2024-09-09
 tags: 
   - "temps 1"
+  - "python"
 
 résumé: "Au cours de ce MON je souhaite découvrir la manipulation des bases de données avec Python et faire une application à des données sportives"
 ---
@@ -15,6 +16,7 @@ résumé: "Au cours de ce MON je souhaite découvrir la manipulation des bases d
 {% lien %}
 
 * [Real python](https://realpython.com/python-for-data-analysis/)*
+* [sklearn](https://scikit-learn.org/stable/)
 
 {% endlien %}
 
@@ -135,9 +137,8 @@ plt.title('Évolution des points de Curry')
 plt.grid()  # Ajout d'une grille pour faciliter la lecture
 plt.tight_layout()  # Ajuste la mise en page pour éviter le chevauchement
 plt.show()
-plt.savefig('curry_points.csv')
 ```
-METTRE LE PLOT
+ <div><img src="curry_points.png"></div>
 
 Le graphe suivant permet de faire une distinction entre les performances à domicile et à l'exterieur afin de savoir si ce paramètre à une influence sur le joueur.
 
@@ -160,7 +161,7 @@ plt.title("Performance de Curry à domicile vs extérieur")
 plt.ylabel("Moyenne")
 plt.show()
 ```
-GRAPHE
+ <div><img src="home_away_curry.png"></div>
 
 Au vu de ces derniers résultats, on peut conclure que les statistiques du joueurs ont été constante cette saison et surtout les lieux de matchs n'ont eux aucun impacte sur lui.
 
@@ -176,7 +177,7 @@ sns.heatmap(correlation, annot=True, cmap="coolwarm")
 plt.title("Corrélation entre performances de Poole et résultats des Warriors")
 plt.show()
 ```
-MATRICE
+ <div><img src="matrix_curry.png"></div>
 
 #### Analyse des corrélations :
 - **Points (PTS) et Victoires (result)** : La corrélation entre les points de Curry et les victoires des Warriors est faible (0.069), ce qui indique que le nombre de points marqués par Curry n'a pas un impact direct sur les résultats de l'équipe.
@@ -190,7 +191,8 @@ Dans la suite, nous allons comparer ces résultats avec ceux de deux autres joue
 
 Après avoir récupéré les données de deux autres joueurs majeurs de l'équipe (Jordan Poole et Klay Thompson) sur le même site [Basketball Reference](https://www.basketball-reference.com), j'ai effectué les mêmes manipulations sur leurs statistiques et voici les matrices obtenues :
 
-DEUX MATRICES POOLE ET THOMPSON
+ <div><img src="matrix_poole.png"></div>
+ <div><img src="matrix_thompson.png"></div>
 
 #### Analyse
 
@@ -200,6 +202,155 @@ En résumé, bien que Curry soit essentiel pour la stabilité de l’équipe, le
 
 ## 6. Modélisation prédictive des résultats des Warriors
 
+Dans cette partie j'ai voulu m'iintéresser au Machine Learning et plus particulièrement aux méthodes de modélisation prédictive, c'est à dire qu'avec un jeu de donnée dites "d'entrainement", on va pouvoir prédir le reste des données dites de "test". Ici, pour déterminer encore une fois l'influence de curry sur les performances de son équipe nous allons utiliser différentes méthodes de la bibliothèque [sklearn](https://scikit-learn.org/stable/) afin de voir à partir des performances de Curry à quel point on peut prédire le résultat du match.
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 
 
-###
+features = curry_played[['PTS', 'AST', 'TRB', 'FG%', '3P%']]
+labels = curry_played['result']
+
+# Séparation des données en données d'entraînements et de tests
+X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
+
+
+score = {}
+
+# Modèle de régression logistique
+logistic_model = LogisticRegression(max_iter=200)
+logistic_model.fit(X_train, y_train)
+y_pred_logistic = logistic_model.predict(X_test)
+accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
+score['Régression Logistique'] = accuracy_logistic
+
+# Modèle SVM
+svm_model = SVC()
+svm_model.fit(X_train, y_train)
+y_pred_svm = svm_model.predict(X_test)
+accuracy_svm = accuracy_score(y_test, y_pred_svm)
+score['SVM'] = accuracy_svm
+
+# Modèle d'arbre de décision
+decision_tree_model = DecisionTreeClassifier()
+decision_tree_model.fit(X_train, y_train)
+y_pred_tree = decision_tree_model.predict(X_test)
+accuracy_tree = accuracy_score(y_test, y_pred_tree)
+score['Arbre de Décision'] = accuracy_tree
+
+# Modèle KNN
+knn_model = KNeighborsClassifier(n_neighbors=5)
+knn_model.fit(X_train, y_train)
+y_pred_knn = knn_model.predict(X_test)
+accuracy_knn = accuracy_score(y_test, y_pred_knn)
+score['KNN'] = accuracy_knn
+
+# Modèle de Random Forest
+rf_model = RandomForestClassifier()
+rf_model.fit(X_train, y_train)
+y_pred_rf = rf_model.predict(X_test)
+accuracy_rf = accuracy_score(y_test, y_pred_rf)
+score['Random Forest'] = accuracy_rf
+
+# Modèle de Gradient Boosting
+gb_model = GradientBoostingClassifier()
+gb_model.fit(X_train, y_train)
+y_pred_gb = gb_model.predict(X_test)
+accuracy_gb = accuracy_score(y_test, y_pred_gb)
+score['Gradient Boosting'] = accuracy_gb
+
+# Affichage des précisions des modèles
+for model, accuracy in score.items():
+    print(f"Précision du modèle {model} : {accuracy * 100:.2f}%")
+```
+Précision du modèle Régression Logistique : 41.67%
+Précision du modèle SVM : 41.67%
+Précision du modèle Arbre de Décision : 58.33%
+Précision du modèle KNN : 41.67%
+Précision du modèle Random Forest : 41.67%
+Précision du modèle Gradient Boosting : 58.33%
+
+#### Commentaires
+
+On voit ici que les meilleurs résultats sont obtenus par les méthodes arbres de décision, Random Forest et Gradient Boosting avec un taux de prédiction de 58,33% ce qui reste assez faible. Ces scores renforce ce que montrait la matrice de corrélations entre les performances de Curry et les résultats de son équipe.
+
+Regardons quel score nous obtenons avec les performances de Thompson qui sempleit être plus déterminant dans les victoires de son équipe :
+
+```python
+thompson_played = merged_data_thompson[merged_data_thompson['MP'] > 0]
+thompson_played['PTS'] = pd.to_numeric(thompson_played['PTS'], errors='coerce')
+thompson_played = thompson_played.sort_values(by='game_date')
+
+
+features = thompson_played[['PTS', 'AST', 'TRB', 'FG%', '3P%']]
+labels = thompson_played['result']
+
+
+X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
+
+
+thompson_score = {}
+
+# Modèle de régression logistique
+logistic_model = LogisticRegression(max_iter=200)
+logistic_model.fit(X_train, y_train)
+y_pred_logistic = logistic_model.predict(X_test)
+accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
+thompson_score['Régression Logistique'] = accuracy_logistic
+
+# Modèle SVM
+svm_model = SVC()
+svm_model.fit(X_train, y_train)
+y_pred_svm = svm_model.predict(X_test)
+accuracy_svm = accuracy_score(y_test, y_pred_svm)
+thompson_score['SVM'] = accuracy_svm
+
+# Modèle d'arbre de décision
+decision_tree_model = DecisionTreeClassifier()
+decision_tree_model.fit(X_train, y_train)
+y_pred_tree = decision_tree_model.predict(X_test)
+accuracy_tree = accuracy_score(y_test, y_pred_tree)
+thompson_score['Arbre de Décision'] = accuracy_tree
+
+# Modèle KNN
+knn_model = KNeighborsClassifier(n_neighbors=5)
+knn_model.fit(X_train, y_train)
+y_pred_knn = knn_model.predict(X_test)
+accuracy_knn = accuracy_score(y_test, y_pred_knn)
+thompson_score['KNN'] = accuracy_knn
+
+# Modèle de Random Forest
+rf_model = RandomForestClassifier()
+rf_model.fit(X_train, y_train)
+y_pred_rf = rf_model.predict(X_test)
+accuracy_rf = accuracy_score(y_test, y_pred_rf)
+thompson_score['Random Forest'] = accuracy_rf
+
+# Modèle de Gradient Boosting
+gb_model = GradientBoostingClassifier()
+gb_model.fit(X_train, y_train)
+y_pred_gb = gb_model.predict(X_test)
+accuracy_gb = accuracy_score(y_test, y_pred_gb)
+thompson_score['Gradient Boosting'] = accuracy_gb
+
+for model, accuracy in thompson_score.items():
+    print(f"Précision du modèle {model} : {accuracy * 100:.2f}%")
+```
+Précision du modèle Régression Logistique : 50.00%
+Précision du modèle SVM : 50.00%
+Précision du modèle Arbre de Décision : 57.14%
+Précision du modèle KNN : 71.43%
+Précision du modèle Random Forest : 42.86%
+Précision du modèle Gradient Boosting : 28.57%
+
+Pour Thompson, les résultats entre les différentes méthodes sont beaucoup plus hétérogène mais avec la méthode des k plus proches voisins (KNN) le score est de 71,43% ce qui est bien plus que pour son coéquipier. Là encore, les résultats mettent en avant le caractère déterminant des performances du joueur sur son équipe.
+
+## Conclusion
+
+En conclusion, ce projet m’a permis de découvrir l’analyse de données avec Python et d’explorer différentes méthodes de modélisation prédictive. En appliquant ces techniques à des données sportives. Avec davantage de statistiques, notamment celles des autres joueurs de l’équipe, il serait possible de réaliser des analyses plus poussées, comme, par exemple, l'optimisation du temps de jeu pour maximiser les performances collectives des Warriors.
