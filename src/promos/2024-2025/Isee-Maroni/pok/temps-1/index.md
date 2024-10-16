@@ -160,6 +160,7 @@ Softr
 - [x] Ajouter header
 - [ ] Ajouter footer
 - [x] Choix des couleurs et du logo
+- [ ] Publication de l'application web
 
 
 *Note post-mortem :*
@@ -167,6 +168,8 @@ Softr
 La gestion de la base de données comprenant toutes les villes, départements et régions de France dans Airtable s'est avérée plus compliquée que ce que j'imaginais, notamment en raison de la limite de 1 000 lignes imposée par la version gratuite *Airtable*. Je ne pourrai donc pas continuer à utiliser cette version.
 
 J'avais trop d'idées pour le temps imparti, ce qui m'a malheureusement empêché de réaliser le formulaire pour l'ajout d'une nouvelle offre, par exemple. J'ai dû prioriser mes tâches et en laisser certaines de côté au profit d'autres plus urgentes.
+
+Je ne suis pas allée jusqu'à la publication de l'application web car je n'ai pas encore pu aborder les questions de sécurité, confidentialité et RGPD sur la plateforme.
 
 ### Second Sprint
 
