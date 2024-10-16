@@ -1,16 +1,17 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "POK 2 - Pass' Diplôme"
 authors:
   - Alix Duréault
 
-date: 1971-01-01
+date: 2024-10-16
 
 tags: 
   - "temps 2"
+  - "info"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce second POK réalisé en collaboration avec Ines Kebbab a pour objectif de réaliser un SI pour suivre et communiquer les items de diplomation, en collaboration avec la formation de l'école.
 ---
 
 {% prerequis %}
@@ -29,25 +30,30 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 - le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
+## Objectifs
+
+L'objectif de ce POK est de réaliser un système d'information sur un exemple concret, via une base de données (excel et site internet) tout en respectant des contraintes RGPD. Concrètement, les élèves doivent pouvoir consulter les éléments qui les concernent exclusivement.
+
+Ce projet a aussi pour but d'observer les enjeux de management de l'information au sein des services de l'école dans le cadre d'un projet, notamment pour la mise en place d'un process qui se veut durable.
+
+À noter, nous nous sommes engagées en termes de moyens et non de résultat.
+
 ## Tâches
 
-### Sprints
+### Sprint 1
 
-But final.
+- [ ] Réalisation d'un excel et étude de l'automatisation possible
+- [ ] Réalisation d'une maquette du site souhaité
+- [ ] Etude des technologies compatibles avec la DSI de Centrale
+- [ ] Initialisation d'une base de données test
 
-#### Sprint 1
+### Sprint 2
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Front-end du site
+- [ ] Proposition du nouveau process aux équipes
+- [ ] Back-end du site (+ connexion au CAS si accepté par la DSI)
+- [ ] Mise en conformité RGPD
+- [ ] Communication à destination des élèves sur le projet
 
 ### Horodatage
 
@@ -55,7 +61,7 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+|   |   |  |
 
 ## Contenu
 
