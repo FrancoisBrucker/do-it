@@ -154,6 +154,14 @@
 </div></div>
 
 <h2>Tâches</h2>
+<h3>Sommaire</h3>
+<ol>
+<li>Identification du besoin</li>
+<li>Base de données <em>Airtable</em></li>
+<li>Début de l'application web avec <em>Softr</em></li>
+<li>Amélioration de la page Offres</li>
+<li>Création de la page Offres-Details</li>
+</ol>
 <h4>Sprint 1</h4>
 <p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
 <ul>
@@ -165,16 +173,8 @@
 <li>[x] Réalisation de la page <strong>Offres</strong> : affichages, photos, choix des informations, filtres.</li>
 <li>[ ] Configurer le formulaire conditionnel pour l'ajout de nouvelles offres</li>
 </ul>
-<p><em>Note post-mortem :</em>
-Le formulaire pour l'ajout de nouvelles offres créé avec Softr ne m'a pas convaincu, c'est pourquoi j'ai décidé de ne pas le conserver. Lors du prochain sprint, je vais créer un formulaire avec Airtable, qui permettra d'intégrer des conditions. Cela signifie que l'affichage des questions suivantes dépendra des réponses apportées aux questions précédentes, offrant ainsi une expérience plus dynamique et personnalisée.</p>
 <h3>Premier Sprint</h3>
-<h3>Sommaire</h3>
-<ol>
-<li>Etude du besoin</li>
-<li>Base de données <em>Airtable</em></li>
-<li>Début de l'application web avec <em>Softr</em></li>
-</ol>
-<h2>1. Etude du besoin</h2>
+<h2>1. Identification du besoin</h2>
 <p><strong>Utilisateurs:</strong></p>
 <ul>
 <li>C<em>entralien à la recherche d'un stage</em> : cherche de l'inspiration, à voir ce qui existe autour OU a un objectif de secteur d'activité, de mission et de ville bien précise</li>
@@ -182,10 +182,26 @@ Le formulaire pour l'ajout de nouvelles offres créé avec Softr ne m'a pas conv
 <li><em>Centralien recrutant pour son entreprise</em> : jeune diplômé à la tête d'une start-up OU cadre profitant du réseau Alumnis</li>
 <li><em>Membre de l'administration</em> : poste une offre d'une entreprise partenaire de l'école</li>
 </ul>
-<p>Voici un exemple d'offres de stages transmises par des centraliens sur des groupes Facebook ou conversation de promotion qui sont vites perdues.</p>
+<p>Voici des <strong>exemples</strong> d'offres de stages transmises par des centraliens sur des groupes Facebook ou conversation de promotion qui sont vites perdues :</p>
+<div style="display: flex;">
+  <!-- Première colonne -->
+  <div style="flex: 1; padding-right: 10px;">
+    <img src="Messenger1.png" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
+    <img src="Messenger2.png" alt="Image 2" style="width: 100%; margin-bottom: 10px;">
+  </div>
+  <!-- Deuxième colonne -->
+  <div style="flex: 1; padding-left: 10px;">
+    <img src="Greenta_message.png" alt="Image 4" style="width: 100%; margin-bottom: 10px;">
+    <img src="Greenta_pdf.png" alt="Image 5" style="width: 100%; margin-bottom: 10px;">
+  </div>
+  <!-- Première colonne -->
+  <div style="flex: 1; padding-right: 10px;">
+    <img src="Recherche_stage_message.png" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
+  </div>
+</div>
 <div style="display:flex">
-<div><img src="Messenger1.png"></div>
-<div><img src="Messenger2.png"></div>
+<div><img src="Asso_Fb.png"></div>
+<div><img src="CDI_Fb.png"></div>
 </div>
 <h2>2. Base de données <em>Airtable</em></h2>
 <p>Pour cette étape, je suis d'abord allée sur le site des stages pour examiner les offres mises en ligne destinées aux centraliens. Je souhaitais voir quelles informations étaient fournies, lesquelles étaient pertinentes pour l'utilisateur principal (le centralien) ainsi que pour les gestionnaires du site, en l'occurrence l'administration de Centrale.</p>
@@ -204,7 +220,7 @@ Le formulaire pour l'ajout de nouvelles offres créé avec Softr ne m'a pas conv
 <h2>3. Début de l'application web avec <em>Softr</em></h2>
 <p>La première page que j'ai créée pour l'application web est la page des <strong>Offres</strong>. Je voulais qu'elles soient toutes visibles sur la même page, que l'on puisse défiler et que les informations les plus importantes soient visibles en un coup d'oeil. Les informations les plus importantes à mes yeux sont l'intitulé, l'entreprise, le secteur d'activité, la durée du stage et le type de missions (parfois présent dans l'intitulé). <br>
 Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai ajouté les tags, des images et des filtres, y compris des filtres conditionnels. En m'inspirant de sites spécialisés dans les offres d'emploi, j'ai observé quelles informations étaient mises en avant et quelles sections étaient accessibles aux utilisateurs pour répondre au mieux à leur besoin.</p>
-<p>Voici quelques étapes intermédiaires de la page Offres liée à la base de données <em>Airtable</em> :</p>
+<p>Voici quelques étapes intermédiaires de la page <strong>Offres</strong> liée à la base de données <em>Airtable</em> :</p>
 <div style="display:flex">
 <div><img src="Softr_InterfaceGrid.png"></div>
 <div><img src="Softr_InterfaceList.png"></div>
@@ -213,40 +229,6 @@ Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai 
 <div><img src="Softr_OffresIntermediaire.png"></div>
 </div>
 <p>Les pages suivantes que je vais créer sont les pages <strong>Home</strong> et <strong>Offre-Details</strong> auquelle on accèdera en cliquant sur la vignette correspondante de la page <strong>Offres</strong>.</p>
-<h4>Sprint 2</h4>
-<p>Airtable</p>
-<ul>
-<li>champ lieu : automatisation ville, région et vice versa</li>
-<li>choisir les données pertinentes à mettre dans un questionnaire (le moins possible)</li>
-</ul>
-<p>Softr</p>
-<ul>
-<li>
-<p>Rajouts de filtres : lieu, secteur, profil étudiant</p>
-</li>
-<li>
-<p>Rajouter date de publication ?</p>
-</li>
-<li>
-<p>Page Home</p>
-</li>
-<li>
-<p>Page Details offre ( offres cliquables)</p>
-</li>
-<li>
-<p>Ajouter header et footer</p>
-</li>
-<li>
-<p>Choix des couleurs et du logo</p>
-</li>
-<li>
-<p>[ ] Une tâche non réalisée</p>
-</li>
-<li>
-<p>[x] Une tâche réalisée</p>
-</li>
-</ul>
-<p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
@@ -290,7 +272,73 @@ Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai 
 </tr>
 </tbody>
 </table>
+<h4>Sprint 2</h4>
+<p>Airtable</p>
+<ul>
+<li>[x] Champ lieu : automatisation ville, région et vice versa</li>
+<li>[ ] Choisir les données pertinentes à mettre dans un questionnaire (le moins possible)</li>
+<li>[ ] Réalisation du questionnaire conditionnel pour l'ajout d'offre (étudiant, membre de l'administration, entreprise)</li>
+</ul>
+<p>Softr</p>
+<ul>
+<li>[x] Rajouts de filtres : lieu, secteur, profil étudiant</li>
+<li>[ ] Rajouter date de publication ?</li>
+<li>[ ] Page Home</li>
+<li>[x] Page Details offre ( offres cliquables)</li>
+<li>[x] Ajouter header</li>
+<li>[ ] Ajouter footer</li>
+<li>[x] Choix des couleurs et du logo</li>
+</ul>
+<p><em>Note post-mortem :</em></p>
+<p>La gestion de la base de données comprenant toutes les villes, départements et régions de France dans Airtable s'est avérée plus compliquée que ce que j'imaginais, notamment en raison de la limite de 1 000 lignes imposée par la version gratuite <em>Airtable</em>. Je ne pourrai donc pas continuer à utiliser cette version.</p>
+<p>J'avais trop d'idées pour le temps imparti, ce qui m'a malheureusement empêché de réaliser le formulaire pour l'ajout d'une nouvelle offre, par exemple. J'ai dû prioriser mes tâches et en laisser certaines de côté au profit d'autres plus urgentes.</p>
 <h3>Second Sprint</h3>
+<h2>4. Amélioration de la page Offres</h2>
+<p>Pour améliorer la page <strong>Offres</strong> j'ai ajouté plusieurs filtres basés sur la localisation, le secteur d'activité et le type de travail proposé. Cela a nécessité l'importation de la base de données des villes de France dans <em>Airtable</em> avec une automatisation pour associer chaque ville à son département et sa région.</p>
+<p>Il est possible de sélectionner plusieurs villes pour une même offre.</p>
+<p>J'ai également mis en place une barre de recherche où l'on peut rechercher les résultats par entreprise, intitulé de l'offre, type de contrat, spécialité, ainsi que par ville ou département.</p>
+<p>Enfin, un menu déroulant a été ajouté, affichant uniquement les villes proposées parmi les offres à disposition, pour simplifier la recherche.</p>
+<p>Voilà à quoi ressemble la nouvelle page <strong>Offres</strong> du côté de sa construction, lorsque je la conçois en no-code, avant d'entrer dans l'expérience utilisateur :</p>
+<p><img src="Offres_amelioree.png" alt="page_Offres_amelioree"></p>
+<h2>5. Création de la page Offres-Details</h2>
+<p>Pour la page <strong>Offres-Details</strong>, j'ai conçu une mise en page présentant les informations principales de l'offre, accompagnée d'un lien direct vers l'annonce sur le site de l'entreprise pour obtenir plus de détails.</p>
+<p>Voilà un aperçu de l'expérience utilisateur étape par étape :</p>
+<p><img src="Exp_utilisateur1.png" alt="Exp_utilisateur1"></p>
+<p><img src="Exp_utilisateur2.png" alt="Exp_utilisateur2"></p>
+<p><img src="Exp_utilisateur3.png" alt="Exp_utilisateur3"></p>
+<h3>Horodatage</h3>
+<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeudi 10/10</td>
+<td>4h10</td>
+<td>Ajout d'une base de données <em>Villes</em> dans Airtable, et paramètres de <em>localisation</em> dans Softr</td>
+</tr>
+<tr>
+<td>Mardi 15/10</td>
+<td>2h20</td>
+<td>Amélioration page <strong>Offre</strong>, notamment avec les filtres</td>
+</tr>
+<tr>
+<td>Mercredi 16/10</td>
+<td>1h40</td>
+<td>Développement page <strong>Offres-Details</strong></td>
+</tr>
+<tr>
+<td>Mercredi 16/10</td>
+<td>1H30</td>
+<td>Rédaction</td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
