@@ -74,13 +74,13 @@ et son support solide pour la concurrence grâce aux goroutines.
 | Date           | Heures passées | Indications             |
 |----------------|----------------|-------------------------|
 | Samedi 07/09   | 2H             | Introduction à Go       |
-| Lundi 10/09    | 4H             | Concepts d'OAuth2       |
-| Mardi 11/09    | 4H             | Serveur Basique         |
-| Mercredi 12/09 | 5H             | Intégration à Redis     |
-| Samedi 13/09   | 4H             | Token Rotation          |
-| Dimanche 13/09 | 2H             | Fausse Routes Protégées |
-| Lundi 13/09    | 4H             | OAuth2.1 & GitHub       |
-| Mardi 14/09    | 3H             | Rédaction Compte Rendu  |
+| Lundi 9/09     | 4H             | Concepts d'OAuth2       |
+| Mardi 10/09    | 4H             | Serveur Basique         |
+| Mercredi 11/09 | 5H             | Intégration à Redis     |
+| Samedi 14/09   | 4H             | Token Rotation          |
+| Dimanche 15/09 | 2H             | Fausse Routes Protégées |
+| Lundi 16/09    | 4H             | OAuth2.1 & GitHub       |
+| Mardi 17/09    | 3H             | Rédaction Compte Rendu  |
 | **Total**      | **28H**        | **Petit Overtime...**   |
 
 ### Rétro
@@ -277,17 +277,178 @@ Pour ce qui est du stockage des codes d'accès et des tokens de refresh, j'ai d�
 et la possibilité d'assigner une durée de vie aux données stockées après laquelle elles expirent.
 
 ## Sprint 2
-### Planning Prévisionnel
+### Planning Prévisionnel Initial
 #### 2.1 Tests et Client
-- [ ] Écrire des tests unitaires pour quelques fonctions internes.
+- [X] Écrire des tests unitaires pour quelques fonctions internes.
 - [ ] Écrire des tests d'intégration pour les routes principales.
 
 #### 2.2 Persistence des données
 - [ ] Choisir et configurer une base de données (ex. MySQL).
 - [ ] Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.
 
+### Planning Prévisionnel Révisé
+#### 2.1 Tests et Client
+- [X] Écrire des tests unitaires pour quelques fonctions internes.
+- [ ] Écrire des tests d'intégration pour les routes principales.
+
+#### 2.2 Persistence des données
+- [ ] Choisir et configurer une base de données (ex. MySQL).
+- [ ] Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.
+
+#### 2.3 Docker & HTTPS
+- [X] Mettre en place un proxy HTTPS
+- [X] Dockerizer l'application
+
+#### 2.4 CSS! (Pour le coup pas très plannifié)
+- [X] Faire une plus jolie page d'autorisation
+
+| Date           | Heures passées | Indications         |
+|----------------|----------------|---------------------|
+| Mercredi 18/09 | 1H             | Ajout des Clients   |
+| Samedi   21/09 | 2H             | Rédaction Tests     |
+| Dimanche 22/09 | 2H             | Base de données     |
+| Samedi    5/10 | 3H             | Docker              |
+| Dimanche 13/10 | 2H             | CSS                 |
+| **Total**      | **10H**        | **0 Overtime 😎**   |
+
+### Rétro
+Plutôt content de ma gestion du temps sur ce sprint, cependant je n'ai pas fait tout ce que je souhaitais.
+C'est principalement parce que je me suis rendu compte que ce n'était finalement pas vraiment des problématiques Go
+et qu'ayant déjà réalisé les tâches en question moulte fois pendant l'année passée ça ne me motivait pas du tout.
+
+J'ai donc décidé de rajouter une partie Docker au projet, pour affiner mes connaissances sur le sujet, en l'occurrence
+les multistage builds et docker compose.
+
+Le dernier week-end, je venais de visionner un cours d'[introduction au CSS](https://www.youtube.com/watch?v=OXGznpKZ_sA)
+(*je recommande fortement si vous avez 11h à perdre*) alors je me suis dit que je pourrais mettre dans mon POK de quoi
+m'exercer un peu et passer les 2 dernières petites heures que j'avais à remplir.
+
+### Clients
+J'ai commencé rajouter la prise en compte des clients dans la vérification OAuth :
+maintenant seulement les clients enregistrés préalablement peuvent utiliser la route d'authentification
+et l'URI de redirection est aussi vérifiée avant de transmettre des codes d'accès au client. C'est une partie
+importante d'OAuth, sinon n'importe qui peut se faire passer pour un client et rediriger les réponses vers une route
+qu'il contrôle.
+
+### Tests
+Écrire des tests en Go, c'est super, un peu verbose (comme Go en général) mais vraiment facile.
+Imaginons que j'ai un fichier `math.go`, pour créer des tests pour celui-ci, je crée un fichier `math_test.go`.
+Ensuite tout est disponible, dans la librairie standard avec `testing`
+
+```go
+// math.go
+func plus(a int, b int) int {
+   return a + b
+}
+
+// math_test.go
+import "testing"
+
+func Test_plus(t *testing.T) {
+   // Le critère de test est simple: si la fonction de test renvoie une erreur fail sinon c'est bon.
+   t.Run("Test plus", func(t *testing.T) {
+      result := plus(1, 2)
+      if result != 3 {
+         t.Errorf("plus() = %d, want %v", result, 3)
+      }
+   })
+}
+```
+
+### Base de données
+Comme à son habitude, la librairie standard de Go est bien fournie, on peut utiliser 
+[`database/sql`](https://pkg.go.dev/database/sql) pour faire l'interfaçage avec les bases de données SQL.
+J'ai un peu bidouillé sur un projet à côté pour essayer de me connecter à un db existante et en sortir quelques données,
+une fois ça fait, j'ai commencé à configurer une base de donnée SQLite pour l'application, mais je me suis arrêté en
+chemin. J'avais un peu perdu la motivation et trouvant le process un peu fastidieux et répétitif (n'aidant pas à se motiver)
+
+Ainsi, j'ai plutôt décidé de rapidement créer une fausse base de données très basique (un dictionnaire, et des fonctions
+`GetUser` / `GetClient`) pour me pencher sur un sujet qui m'intriguait et un qui me titillait :
+1. Dockerizer l'application
+2. Mettre l'application en HTTPS
+
+### Docker
+#### HTTPS
+Le plus simple pour mettre une application en HTTPS c'est en fait, de ne rien changer !
+Ce qu'on met en place, c'est un proxy, un programme qui va servir d'intermédiaire, on bloque notre site de l'extérieur
+et on oblige toutes les requêtes à passer par le proxy lui en HTTPS (on verra comment plus tard) qui va relayer les
+requêtes à notre site en HTTP tout simple puis transmettre les réponses du site au client en HTTPS.
+
+![Un serveur proxy](proxy.png)
+
+J'ai décidé d'utiliser [Caddy](https://caddyserver.com/) un proxy ~relativement simple à mettre en place, disponible
+en image docker et surtout qui gère le SSL (protocole qui garantie la sécurité d'HTTPS) tout seul à ma place.
+Une fois la configuration faite et Caddy lancé, magie !, mon site est disponible en HTTPS *même si mon navigateur reste suspicieux*.
+
+#### Dockerisation
+##### Multi-Stage Build
+J'ai mis en place un [multi-stage build](https://docs.docker.com/build/building/multi-stage/) dont l'objectif est
+d'optimiser la vitesse de création des container et minimizer leur taille finale.
+
+On peut créer des containers intermédiaires avec des images lourdes, par exemple avec de quoi compiler du Go,
+compiler notre code puis le transférer dans une image finale qui elle ne contient rien de plus que de quoi
+exécuter un programme binaire, notre programme et les assets dont il a besoin (eg. des templates HTML, notre CSS ...).
+
+Voici à quoi ressemble mon Dockerfile
+```
+# Image lourde pour compiler du go
+FROM golang:1.23.1-alpine AS builder
+
+WORKDIR /app
+
+# Copie des requirements et téléchargement des dépendances
+COPY src/go.mod src/go.sum ./
+RUN go mod download
+
+# Copie du code et compilation
+COPY src/ .
+RUN go build -o main .
+
+# Image minimale docker
+FROM scratch
+LABEL authors="Valentin Billa"
+
+WORKDIR /root/
+
+# Transfert du programme et des assets dans le container
+COPY --from=builder /app/main .
+COPY resources/templates ./resources/templates
+COPY resources/assets ./resources/assets
+
+# Copie de la configuration et lancement de l'application
+COPY config.yml .
+CMD ["./main"]
+```
+
+{% info %}
+Un truc intéressant dans ce Dockerfile c'est que je copie télécharge d'abord les dépendances PUIS je copie et compile
+le code, ça permet de bien accélérer la création du container, car tant que les requirements ne changent pas, Docker
+peut utiliser son cache pour sauter l'étape de téléchargement.
+{% endinfo %}
+
+##### Docker Compose
+[Compose](https://docs.docker.com/compose/) permet d'orchestrer la création de plusieurs containers et donc de lancer
+d'un coup tout ce dont j'ai besoin pour faire tourner l'appli (proxy, application, database, redis)
+
+J'ai passé un petit moment à lire la doc et comprendre comment ça fonctionne, c'est très pratique. Actuellement,
+je n'ai ni database ni redis en local mais dans le futur je compte le rajouter au projet et ce sera très utile d'avoir
+un compose déjà commencé.
+
+### CSS
+Pour le CSS, j'ai décidé de m'entraîner un peu en touchant à pas mal des concepts que j'ai vu dans la vidéo dont je
+parle dans la rétro :
+
+![Page d'autorisation](authorize.png)
+
+- `position: absolute` - Logo
+- `display: flex` - Position centrée de la carte blanche
+- `display: grid` - Positionnement des éléments dans la carte
+- `@media` - Responsive
+- Selecteurs & Animations - Label dans les inputs
+
 {% lien %}
 - [Site officiel de Go](https://go.dev)
 - [Spécification OAuth2.0](https://datatracker.ietf.org/doc/html/rfc6749)
 - [Playground OAuth2.0](https://www.oauth.com/playground/)
+- [Documentation Docker](https://docs.docker.com/)
 {% endlien %}

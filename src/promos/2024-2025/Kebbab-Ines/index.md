@@ -15,4 +15,4 @@ Une étudiante de Do_It très gentille de la promo 2024-2025, qui cherche à s'a
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Notre Projet](../../../projets/2024-2025\Audioguide_Ameliore)

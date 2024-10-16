@@ -190,7 +190,7 @@ Pendant le second sprint, je me suis concentrée sur l'apparence de mon site web
 
 Pour cela, j'ai commencé par réaliser une maquette sommaire du rendu que je voulais afin de mieux cerner sur quoi travailler et dans quelle direction me tourner.
 
-![Fin de la page patron](./maquette.jpg)
+![Fin de la page patron](./Maquette.jpg)
 
 Une fois cette maquette terminée, j'ai pu me lancer dans le code, d'abord en html pour ajouter les classes de mes éléments et les balises ```<div>``` et ```<span>``` qui sont utiles pour séparer les éléments de la page et les disposer aux bons endroits.
 

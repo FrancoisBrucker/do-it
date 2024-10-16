@@ -23,7 +23,7 @@ Avoir déjà utilisé Figma ou une maquette d'interface.
 
 L'objectif de ce MON est de comprendre comment penser et adapter les interfaces pour une expérience plus inclusive, notamment pour les utilisateurs en situation de handicap.
 
-*ajouter le niveau, pré-requis et liens éventuels*
+Le MON s'adresse aux débutants 
 
 ## Objectifs du MON
 
@@ -36,11 +36,10 @@ L'étude se découpera en deux temps : comprendre et réaliser.
    * **Quelques études de cas :** identification et analyse critique de quelques sites inclusifs et d'exemples de sites peu adaptés.
    * **Les limites possibles.**
 
-2. **Réaliser une interface inclusive**, via une maquette Figma en apportant des corrections et/ou améliorations à des components et ainsi s'approprier les bonnes pratiques.
+2. **Réaliser une interface inclusive**, via une maquette Figma en apportant des corrections et/ou améliorations à des components et ainsi s'approprier les bonnes pratiques. ()
 
 À noter, le prisme du handicap permet de répondre aussi à d'autres types de réflexions pour penser une UI/UX accessible au plus grand nombre de persona (âge et fracture générationnelle, niveaux d'éducation variés, niveaux de langues...).
-
-## Contenu
+F
 
 ## Introduction
 
@@ -85,7 +84,6 @@ Et si vous n’êtes toujours pas prêt à franchir le pas, c’est bien dommage
 
 **Alors, prêt(e) à créer des interfaces plus inclusives ?**
 
----
 
 ## Quelles sont les règles pour un web accessible ?
 
@@ -128,8 +126,6 @@ Certains langages les ont aussi adapté pour avoir des components implémentant 
 WAI-Adapt permet aux utilisateurs d’adapter (ou « personnaliser ») la manière dont le contenu est présenté pour satisfaire leurs besoins et préférences. Parmi les exemples, on verra plus tard l’ancien site de la SCNF qui proposait de personnaliser la police, les contrastes, désactiver les animations… Le plus commun est de proposer de régler la taille de la police sur les pages.
 
 De plus, cela peut se révéler utile comme certains utilisateurs ont des besoins contradictoires : certains utilisateurs comprendront mieux une information sous forme de texte et d’autres sous forme de symboles ou d’images.
-
----
 
 ## **Les bonnes pratiques**
 
@@ -227,14 +223,14 @@ Un conseil important est qu’il ne faut pas oublier de faire valider les suppor
 
 Les outils Axe Core pour tester en développement (sur Github).
 
-Il y a aussi le site [**Accessibility Checker](https://www.accessibilitychecker.org/)** pour vérifier la conformité avec la loi (en France ou à l’étranger) ou le site [**HTML_Code Sniffer**](https://squizlabs.github.io/HTML_CodeSniffer/) pour la réglementation WCAG.
+Il y a aussi le site [**Accessibility Checker**](https://www.accessibilitychecker.org/) pour vérifier la conformité avec la loi (en France ou à l’étranger) ou le site [**HTML_Code Sniffer**](https://squizlabs.github.io/HTML_CodeSniffer/) pour la réglementation WCAG.
 
 Des plugins Figma permettent aussi d’accompagner les web designers pour un design inclusif. En voici quelques uns qui me semblent pertinent :
 
 - [**Stark - Contrast & Accessibility Checker**](https://www.figma.com/community/plugin/732603254453395948/stark-contrast-accessibility-checker)
 - [**axe for Designers: A Free Accessibility Plugin**](https://www.figma.com/community/plugin/1085612091163821851/axe-for-designers-a-free-accessibility-plugin)
 - [**A11y - Focus Order**](https://www.figma.com/community/plugin/731310036968334777/a11y-focus-order) pour aider au design pour navigation au clavier et au lecteur d’écran.
-- [**Able – Friction free accessibility](https://www.figma.com/community/plugin/734693888346260052/able-friction-free-accessibility)** pour les contrastes notamment ou [**A11y - Color Contrast Checker](https://www.figma.com/community/plugin/733159460536249875/a11y-color-contrast-checker)** et/ou [**Color Blind**](https://www.figma.com/community/plugin/733343906244951586/color-blind)
+- [**Able – Friction free accessibility**](https://www.figma.com/community/plugin/734693888346260052/able-friction-free-accessibility) pour les contrastes notamment ou [**A11y - Color Contrast Checker**](https://www.figma.com/community/plugin/733159460536249875/a11y-color-contrast-checker) et/ou [**Color Blind**](https://www.figma.com/community/plugin/733343906244951586/color-blind)
 - [**Text Resizer - Accessibility Checker**](https://www.figma.com/community/plugin/892114953056389734/text-resizer-accessibility-checker)
 - [**WCAG Plugin**](https://www.figma.com/community/plugin/1373362852131056921/wcag-plugin)
 - Un [**design system accessible (pour Tailwind)**](https://www.figma.com/community/file/1131891137727824106/free-accessible-design-system) pour commencer sa maquette.
@@ -242,7 +238,7 @@ Des plugins Figma permettent aussi d’accompagner les web designers pour un des
 
 Sur Wordpress, le CMS le plus utilisé, des plugins proposent aussi de résoudre les problèmes courants d’accessibilité.
 
-Les extensions Chrome [**Tanaguru](https://chromewebstore.google.com/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac?hl=fr)** (audit accessibilité), ou [**Chrome Lens**](https://chromewebstore.google.com/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd) (simuler un handicap visuel). (NB. à condition qu’elles soient maintenues dans le temps)
+Les extensions Chrome [**Tanaguru**](https://chromewebstore.google.com/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac?hl=fr) (audit accessibilité), ou [**Chrome Lens**](https://chromewebstore.google.com/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd) (simuler un handicap visuel). (NB. à condition qu’elles soient maintenues dans le temps)
 
 ### **Pour aller plus loin :**
 
@@ -253,36 +249,36 @@ Le référentiel **RGAA propose notamment avec ces 106 critères des tests et de
 ## Quelques exemples :
 
 - L’ancien site de la SCNF 👍
-    - **La typographie** peut être changée pour la **Police Dyslexie ([Open Dyslexic)](https://www.bloghoptoys.fr/la-police-dyslexie-liens-et-nouveautes-2).**
+    - **La typographie** peut être changée pour la **Police Dyslexie [(Open Dyslexic)](https://www.bloghoptoys.fr/la-police-dyslexie-liens-et-nouveautes-2).**
     - **L’interlignage** peut être augmenté pour laisser respirer le contenu et faciliter la lecture.
     - **Les animations** peuvent être **désactivées.**
     - **Les contrastes** ont **trois niveaux de lisibilité** : par défaut, renforcés et inversés.
     - **Le défilement horizontal** (swipe) peut être désactivé pour garder un seul mouvement vertical tout au long de la navigation
     - En plus des changements visuels, nous remarquons que la **navigation au clavier** (grâce aux touches : tabulation, espace et entrée) est **disponible**
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/96c10bf7-265a-4b46-9afd-09568386e715/image.png)
+    ![Image des paramétrages de l'ancien site de la SCNF](./img/sncf.png "Exemple Ancien site SNCF")
     
 - Hollister : réglages “Hauts Contraste” (correction de texte blanc sur fond noir). 👍
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/7c6c4019-6809-4443-989d-95d509575b6a/image.png)
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/de0ecc11-ec3f-4a45-b0fc-dd6914e53bb1/image.png)
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/a92596d7-45a7-4a6b-a974-31ba42881293/image.png)
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast.png "Exemple Hollister 1-3")
+
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-1.png "Exemple Hollister 2-3")
+
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-2.png "Exemple Hollister 3-3")
     
 - Amazon 👎
     - Grâce à **l’extension Chrome [Tanaguru](https://chrome.google.com/webstore/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac/related)**, nous pouvons voir qu’il y a un certain nombre de **conflits et d’éléments invalidés** par l’outil concernant l’accessibilité :
         - Par exemple, sur cette capture d’écran, il est précisé qu’il y a un **changement de sens de lecture non-conforme** qui peut amener à perdre l’utilisateur·rice lors de sa navigation sur le site.
     - En étudiant un peu plus le site, on peut remarquer que **les formulaires n’ont pas d’étiquettes associées**. Cette négligence entraîne une navigation et une **compréhension impossible** par les **personnes aveugles ou malvoyantes** qui utilisent des **lecteurs d’écran**.
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/0f804ee4-da63-45e7-8c29-c693c756477d/image.png)
+    ![Audit d'accessibilité du site Amazon, comme mauvais élève du web](./img/amazon.png "Amazon")
     
 - **Un site promotionnel d’une [Renault Twingo](https://www.experience-nouvelletwingo.renault.fr/) 👎:** bien que primé à l’époque, le site propose un jeu qui n’est accessible qu’à la souris et avec un choix de couleurs très peu contrastés.
     - Même si ici le jeu est surtout une pub, il est intéressant aussi de se questionner sur les jeux en général et l’approche que l’on aura (notamment si l’on veut créer des jeux ludiques pour transmettre une information, pour gamifier des expériences).
 - **Le site de Centrale: quelles sont les améliorations à faire ?**
     - Après avoir fait passé un audit d’accessibilité au site de l’école avec le site [www.accessibilitychecker.org](http://www.accessibilitychecker.org/), l’évaluation semble nous indiquer 3 erreurs qui renderaient le site non conforme : qu’en est-il réellement ?
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bc5ec0ab-b400-4e51-a72f-2aec72d23b81/daf73a36-3358-46f1-a3f8-3a44540ae33f/image.png)
+        ![Image exemple du site de Centrale](./img/ecm.png "Exemple Site de Centrale")
         
     - *“Ensures aria-hidden elements are not focusable nor contain focusable elements”* : on a un carrousel de photos pour la couverture avec deux flèches qui permettent de passer de l’image “bachelor” à l’image “Digital Lab” (au clavier si on clique sur Enter). Hors en naviguant au clavier, la navigation fait un aller retour entre les éléments focusables du carrousel et les flèches. On pourrait ne pas avoir de focus sur les flèches du carrousel pour améliorer la fluidité.
     - *“Ensures buttons have discernible text”* : comme il s’agissait des boutons cachés “Rechercher” et celui du Burger Menu (lorsque la fenêtre est plus petite), a priori on est bon ! Il faut simplement s’assurer que les boutons ont un label adapté qui indique l’action qu’il va faire, ce qui est aussi a priori bon.

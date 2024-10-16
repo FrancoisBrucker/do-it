@@ -1,15 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Initiation à TypeScript"
 authors:
   - Alix Duréault
 
-date: 1971-01-01
+date: 2024-10-16
 tags: 
   - "temps 2"
+  - "info"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le but de ce MON est de se former en typescript."
 ---
 
 {% prerequis %}

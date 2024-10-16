@@ -3,7 +3,7 @@ layout: layout/projet.njk
 
 title: "Audioguide Amélioré"
 authors:
-  - Ines KEBAB
+  - Inès Kebbab
   - Mbaye AMAR
   - Victor PAWLACZYK
 ---

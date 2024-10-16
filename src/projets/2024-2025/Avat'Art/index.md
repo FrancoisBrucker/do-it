@@ -9,7 +9,10 @@ authors:
 ---
 
 Comment sublimer les arts martiaux avec l'informatique ?
-<!-- L'objectif est de sublimer un combat d'arts martiaux en projetant des animations liées aux éléments comme dans Avatar. -->
+
+{%lien%}
+https://github.com/KevinBERNARD1901/Avat-Art
+{%endlien%}
 
 {% details "Début du projet" %}
 ## Speech

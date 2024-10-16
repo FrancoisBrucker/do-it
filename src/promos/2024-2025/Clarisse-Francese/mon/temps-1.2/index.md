@@ -45,6 +45,7 @@ MON débutant, aucun prérequis
 - [Les outils du Design Thinking](#outils)
 - [Le facilitateur en design thinking](#ldt)
 - [Regard critique sur le design thinking](#RC)
+- [Echanges sur le métier de consultant](#ITW)
 
 <h2 id=DT> 💡Le Design Thinking</h2>
 
@@ -64,8 +65,8 @@ C'est une méthode, une discipline et des outils permettant d’o**ptimiser des 
 L’**UX Design** :  
 Ce design se concentre sur toute la conception des points de contact, de plus en plus souvent digitaux du service. L’UX design a pour objectif de **concevoir un outil, généralement numérique, afin d’optimiser son usage par l’utilisateur final**. Il doit rendre les interactions pratiques, efficaces, ergonomiques, agréables et va plutôt concerner la phase de réalisation pour concrétiser le projet. 
 
-L’**UI Design** : 
-Il désigne la conception de l’**interface utilisateur pour une application, un logiciel ou tout dispositif digital**. Il englobe donc tout ce qui s’apparente au graphisme, à l’aspect et à l’agencement comme le logo, la grille de mise en page, la typographie, les polices de caractères, les icônes, les couleurs etc.
+L’**UI Design** :  
+Il désigne la conception de l’**interface utilisateur pour une application, un logiciel ou tout dispositif digital**. Il englobe donc tout ce qui s’apparente au **graphisme**, à l’aspect et à l’agencement comme le logo, la grille de mise en page, la typographie, les polices de caractères, les icônes, les couleurs etc.
 
 Finalement, toutes ces notions font partie de la grande famille nommée «**Human Centered Design**». Maintenant que j’y vois plus clair entre les différents types de design, je vais détailler le Design Thinking.
 
@@ -90,7 +91,7 @@ Il y a plusieurs **principes fondamentaux** :
 - L’**empathie** : Remettre l’utilisateur au centre pour leur apporter des solutions pertinentes et adaptées.
 - L’**itération** : Tester les solutions pour les adapter et les améliorer tout en se donnant le droit à l’erreur.
 
-Le design thinking définir correctement quel problème on cherche à résoudre, avant de le résoudre et proposer les **bonnes solutions**, qui devront être à la fois :
+Le design thinking permet de définir correctement quel problème on cherche à résoudre, avant de le résoudre et de proposer les **bonnes solutions**, qui devront être à la fois :
 
 - **Désirables**
 - **Viables**
@@ -127,7 +128,7 @@ Le double diamant comportent plusieurs étapes qui alternent :
 
 ### Phase 1 : l’immersion
 
-C’est la phase qui permet d’observer et de chercher à **comprendre ses utilisateurs** pour identifier leurs usages, leurs besoins, leurs motivations, leurs attentes et aussi leurs freins. Cette phase demande de mobiliser sa **capacité d’empathie** pour se mettre dans la peau de l’utilisateur. Elle demande aussi de prendre du recul : on conçoit solution pour les utilisateurs et non pour nous !
+C’est la phase qui permet d’observer et de chercher à **comprendre ses utilisateurs** pour identifier leurs usages, leurs besoins, leurs motivations, leurs attentes et aussi leurs freins. Cette phase demande de mobiliser sa **capacité d’empathie** pour se mettre dans la peau de l’utilisateur. Elle demande aussi de prendre du recul : on conçoit une solution pour les utilisateurs et non pour nous !
 
 ### Phase 2 : l’analyse et définition du besoin
 
@@ -135,11 +136,11 @@ Cette phase de convergence permet à l’équipe de conception de **se mettre d�
 
 ### Phase 3 : l’idéation
 
-Cette nouvelle phase de divergence ouvre le champ des possibles, le but est de **générer un maximum d’idées** pour répondre à la problématique en laissant libre cours à son **imagination** et à ses idées, même les plus folles sont permises alors aucune censure !
+Cette nouvelle phase de divergence ouvre le champ des possibles, le but est de **générer un maximum d’idées** pour répondre à la problématique en laissant libre cours à son **imagination**. Même les idées les plus folles sont permises, il n'y a pas de censure !
 
 ### Phase 4 : le prototypage
 
-Cette phase convergente permet à l’équipe de se fixer sur la **solution finale** et d’y donner vie en la prototypant. Le prototype n’a pas besoin d’être parfait le tout c’est qu’il permette de bien comprendre la solution et de l’affiner pour la présenter aux utilisateurs.
+Cette phase convergente permet à l’équipe de se fixer sur la **solution finale** définie grâce aux idées de la phase précédente et de la prototyper. Le prototype n’a pas besoin d’être parfait, le tout c’est qu’il permette de bien comprendre la solution et de l’affiner pour la présenter aux utilisateurs.
 
 ### Phase 5 : le test de la solution
 
@@ -241,6 +242,10 @@ Il consiste à capter les premières impressions des utilisateurs ciblés quand 
 **Le test d’usabilité**  
 C’est un exercice d’observation dans lequel on demande à des utilisateurs d’accomplir certaines tâches et on les observe. Ce test permet de voir quels aspects de la conception ont posé des problèmes à l’utilisateur.
 
+{% info %}
+Selon Mickael Lavallée qui nous a fait le cours sur l'UX Design, **5 utilisateurs suffisent pour avoir 80% des retours**. Ainsi, il est inutile de multipler les tests avec des dizaines d'utilisateurs.
+{% endinfo %}
+
 {% lien %}
 
 - [Article : 30 outils de Design Thinking qui favorisent l’innovation](https://www.mjvinnovation.com/fr/blog/30-outils-de-design-thinking-qui-favorisent-linnovation/)  
@@ -302,3 +307,39 @@ Le salaire moyen varie entre 40 k€ pour les postes de niveau débutant à 50 k
 {% lien %}
 [Article : Tout savoir sur le design thinking](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking)
 {% endlien %}
+
+<h2 id=ITW> 💬Echanges sur le métier de consultant</h2>
+
+J'ai eu l'occasion de discuter avec **Duc et Céline**, tous 2 anciens élèves de Centrale qui ont réalisé leur stage de fin d'étude **dans des boîtes de conseils**. Céline est chez **Oresys** et Duc est chez **Onepoint**. Voilà un résumé de ce que j'ai appris ou compris lors de mes échanges avec eux :
+
+- Les 2 **me recommandent leurs boîtes** car il y a une bonne ambiance. La hiérarchie est plutôt horizontale et il y a une vraie bienveillance entres les collègues et le rythme de travail est ok.
+- Ils ont eu des retours assez variés sur le rythme dans les autres boîtes de conseil mais apparement il y a **plus de risque d'avoir une grosse charge de travail stressante dans les big four**.
+
+{% info %}
+Les termes « **Big Four** » ou « Fat Four » font référence à l'oligopole des quatre plus grands cabinets d'audit financier et de conseil au niveau mondial : **Deloitte**, **EY** (Ernst & Young), **KPMG**, et **PwC** (PricewaterhouseCoopers).
+{% endinfo %}
+
+- Ils m'ont **confirmé les salaires** que j'avais vu sur internet : les 2 ont un salaire de 41k à 42k brut/an. Apparement, le salaire **augmente de 7% minimum par an** et il est **courant de changer de boîte de conseil** au moins une fois dans sa carrière car on peut espérer une grosse augmentation (+20% sur son salaire).
+- Ils m'ont confirmé que ce n'est pas un métier solitaire, ils sont **toujours en équipe** (de 3 à 12 chez OnePoint par exemple) pour aller voir les clients.
+- Duc m'a également confirmé qu'il n'y a **pas de journée type** car il faut s'adapter à chaque mission, chaque client. Globalement, les activités majeures sont d'être chez le client et de préparer des présentations en faisant des diapos.
+- Les 2 me conseillent de surtout rechercher un TFE au moment du **Focéen** : c'est un **secteur qui recrute énormément** donc je n'ai pas trop de souci à me faire et si je suis convaincante lors du forum, j'aurai facilement plusieurs propositions. D'ailleurs, **les 2 ont eu une proposition de CDI** après leur TFE. C'était très **rassurant** d'entendre ça !
+
+## 👍Conclusion de ce MON
+
+J’ai **aimé mieux comprendre ce qu'est le design thinking**. Grâce à ce MON, je peux affirmer que ce métier pourrait bien me plaire donc je compte **commencer ma carrière professionnelle en tant que consultante en design thinking dans une boîte de conseil**.  
+J'y vois aussi plus clair sur ce qu'il me reste à faire : 
+
+- me renseigner précisément sur les **différentes entreprises** dans le conseil
+- **interroger d'autres consultants** ou personnes travaillant avec le design thinking (j'ai déjà récupéré des contacts)
+- me préparer un **CV béton** pour le Focéen
+
+## ⌛Horodatage
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| Mercredi 25/09 | 2h | définition design thinking et autres forme de design, lecture d’articles |
+| Jeudi 26/09 | 4h  | focus sur la méthode diamant, les outils de DT, les qualité d’un consultant en DT |
+| Vendredi 27/09 | 2h | focus sur le DT et le rôle du facilitateur/consultant en DT |
+| Lundi 30/09 | 0h30 | échange avec Duc sur le métier de consultant |
+| Mardi 01/10 | 0h30 | échange avec Céline sur le métier de consultant |
+| Mercredi 16/09 | 1h | mise au propre des échanges sur le métier de consultant et mise au propre sur GitHub |

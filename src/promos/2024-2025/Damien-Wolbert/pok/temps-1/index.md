@@ -14,14 +14,14 @@ résumé: Ce POK vise à mettre en place la maquette d'un outil opérationnel de
 ---
 
 {% prerequis %}
-**Niveau :** Basique
+**Niveau :** Basique  
 **Pré-requis:**
 - Connaissance de base de Google AppScript, de Google Sheet et d'un Google Drive. (Approdondi en MON)
 - Connaissance de base des enjeux de la compétence individuelle en entreprise. (Approfondi en première phase du projet à partir des connaissances déjà accumulées en stage et alternance)
 
 {% endprerequis %}
 {% lien %}
-
+- [MON sur les fonctionnalités de Googl AppScript](https://francoisbrucker.github.io/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-1.2/)
 {% endlien %}
 
 ## Contexte
@@ -55,6 +55,8 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 
 L'objectif final de ce POK est de fournir un dossier Google Drive contenant des outils automatisés de suivi de la compétence des membres d'une entreprise type à déterminée.
 
+**TOTAL POK 1 :** *25 heures soit 25% de plus que le temps demandé*
+
 ##### Sprint 1
 
 **To-do**
@@ -80,16 +82,36 @@ L'objectif final de ce POK est de fournir un dossier Google Drive contenant des 
 | 16/09/2024 | 1h | Finalisation du questionnaire + envoie | Elevé |
 | 16/09/2024 | 3.7h | Recherche bibliographique | Elevé |
 | 18/09/2024 | 2h | Mise en forme du sprint sur le site DO-It | Elevé |
-**Total du sprint :***11 heures soit 10% de plus que le temps demandé*
+| 07/10/2024 | 0.5h | Cadrage du sprint 2 | Elevé |
+***Total du sprint :*** *11 heures soit 10% de plus que le temps demandé*  
 
 ##### Sprint 2
 
 **To-do**
+- [x] Analyser les réponses du questionnaire
+- [x] Lister et hiérarchiser les fonctionnalités nécessaires
+- [x] Réaliser l'architecture générale de l'outil
+- [x] Réaliser l'architecture relative à la gestion des collaborateurs
+  - [x] Architecture de l'outil de suivi général
+  - [x] Architecture des bases de données relatives aux collaborateurs
+- [ ] Realiser l'architecture relative à la gestion de la compétence
+  - [ ] Architecture de l'outil de création de référentiels de compétences
+  - [x] Architecture des bases de données relatives aux compétences
+- [x] Créer les templates individuels
+- [x] Créer le document de suivi général
+- [ ] Créer le document de création de référentiel métier
+- [x] Coder les fonctions de création relatives à la structure (profiles, postes, équipes, services)
+- [ ] Coder les fonction de modification relatives à la structure (profiles, postes, équipes, services)
+- [ ] Coder les fonctions de création relatives aux compétences
+- [ ] Coder les fonction de modification relatives axu compétences
 
-
-**Horodatage**
-
-
+**Horodatage :**
+| Date | Heures passées | Indications | Niveau d'efficacité |
+| -------- | -------- |-------- | -------- |
+| 14/10/2024 | 7h | Architecture générale, architecture collaborateurs, architecture bases de données, templates individuels, document de suivi général, fonctions de création pour la structure | Elevé |
+| 15/10/2024 | 3,5h | Correction fonctions de création, amélioration templates individuels, tests | Elevé |
+| 16/10/2024 | 3,5h | Rédaction sur site do_it, derniers tests, REX | Elevé |  
+***Total du sprint 2 :*** *14 heures soit 40% de plus que le temps demandé*  
 
 ## I. Les enjeux du suivi de la compétence individuelle
 
@@ -182,16 +204,11 @@ La méthode de définition des compétences est intrinsèque à la structure et 
 Le cahier des charges fonctionnel devra détailler et justifier une méthdologie de réalisation des référentiels métier chaque poste **ET** permettre une armonisation entre uex.
 {% endinfo %}
 
-
-#### Plan de développement individuel (PDI)
-
-TBD
-
 ## II. Besoin fonctionnel
 
 ### II.1. Présupposés du besoin
 
-La recherche bibliographique que j'ai réalisé m'a amené identifier plusieurs types de besoins : Esthétisme & accès et Fonctions.
+La recherche bibliographique que j'ai réalisée m'a amené identifier plusieurs types de besoins : Esthétisme & accès et Fonctions.
 
 #### A. Besoin esthétiques et accessibilité
 
@@ -230,7 +247,16 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 #### Questionnaire
 
 {% details "Définition de compétence individuelle"%}
-**Réponses**
+**Réponses :**
+- *Savoir faire acquis par l'apprentissage ou la pratique*
+- *Aptitude à une tâche d'un individu*
+- *Un savoir-faire, quel qu'il soit (et pas juste un savoir)
+- Capacité technique ou fonctionnelle qui s'acquiert suite à formation ou expérience qualité humaine*
+- *Une qualité qui n'implique que la personne à qui elle est attribuée*
+- *Comme une aptitude me concernant uniquement*
+- *Un savoir acquis ou développé qui apporte une plus value collective*
+
+On constate qu'une réponse sur deux concerne un savoir-faire. En outre, les notions de qualité humaine, d'individualité et de plus-value interveniennent. On peut donc vérifier que le concept de compétence individuel ne fait pas intervenir les mêmes enjeux dans le raisonnement de chaque personne.
 {% enddetails %}
 
 {% details "La compétence est validée par une certification ?"%}
@@ -238,6 +264,7 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 *Oui*
 {% enddetails %}
 {% details "Réponse réelle"%}
+50% des participants estiment qu'une certification valide la détention d'une compétence. Il pourra donc être intéressant de faire apparaitre une notion de preuve d'acquisition dans l'outil, permettant de passer outre la notion de diplôme.
 {% enddetails %}
 {% enddetails %}
 
@@ -246,6 +273,7 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 *Oui*
 {% enddetails %}
 {% details "Réponse réelle"%}
+62.5% des participants (5/8) estiment qu'un diplôme ne permet pas de valider une compétence. Il est intéressant de noter qu'hors mis une personne, les participants ont répondu de la même façon qu'à la question précédente. 
 {% enddetails %}
 {% enddetails %}
 
@@ -254,6 +282,9 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 *Non*
 {% enddetails %}
 {% details "Réponse réelle"%}
+Oui : 50%
+Non : 50%
+Le réseau et les recommandations peuvent donc influer dans la validation d'une compétence. Dans une version plus avancée, un outil de gestion de la compétence pourrait aussi faire intervenir cette notion de recommandationd d'un tiers. Cela permettrait tout d'abord d'affirmer ou d'infirmer la recommandation, ainsi que d'anticipier l'évolution de certains collaborateurs.
 {% enddetails %}
 {% enddetails %}
 
@@ -262,6 +293,9 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 *Oui*
 {% enddetails %}
 {% details "Réponse réelle"%}
+Oui : 5/8
+Non : 3/8
+Il semble que l'expérience sur le terrain témoigne d'une plsu grande légitimité.
 {% enddetails %}
 {% enddetails %}
 
@@ -270,6 +304,8 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 *Non*
 {% enddetails %}
 {% details "Réponse réelle"%}
+Non : 100%
+Pour chacun des participants, la notion de titre de permet pas de valider une compétence. Il ne faudra pa
 {% enddetails %}
 {% enddetails %}
 
@@ -350,13 +386,89 @@ Afin de réaliser un outil adaptable à plusieurs organisations et de hiérarchi
 Par soucis de temps et afin de construire une maquette fonctionnelle à la fin du temps alloué au projet, il est nécessaire de hiérarchiser les fonctions et de définir celles qui sont indispensables.
 
 #### Fonctionnalités indispensables
-TBD
+- Création et modification d'un profile pour chaque collaborateur
+- Création et modification de profiles administrateurs
+- Suivi des compétences acquises et à acquérir
+- Adapatation de l'outil à la structure concernée
+- Permettre de s'appuyer sur des exemples concrets : évaluer l'acquisition par l'exemple.
 #### Fonctionnalités souhaitables
-TBD
+- Création d'un référentiel de compétences
+- Tableau de bord permettant de visualiser l'avancement des équipes.
+- Profil individuel consultable par les collaborateurs
 #### Fonctionnalités additionnelles
-TBD
-### Architecture générale
-TBD
+- Lier les compétences entre elles : déterminer les possibilités données par l'acquisition d'une compétence afin de construire un parcours de formation.
+- Faire apparaitre de manière explicite la dernière formation en date de chaque collaborateur
+- Identifier les lacunes
+
+## III - Outil global
+{% lien %}
+[Lien vers la V0](https://docs.google.com/spreadsheets/d/1crOzv51Mt0-jJi2xNZKXNoEiwMz2lBXg7hcZI-SBvUA/edit?usp=drive_link)
+{% endlien %}
+### III.1 - Architecture générale
+L'outil sera construit de sorte à limiter le nombre de programmes à utiliser. Cela passera par la mise en place de modèles de type GSheet. Ces différents modèles graviteront autours d'un fichier centrale regroupant les bases de données et les principales fonctionnalités de personnalisation, suivi et modifications. Toutefois, réalisant une V0 de l'outil, nous considérons les collaborateurs regroupés en équipes, regroupées en services.
+ ![Architecture générale](./Architecture%20générale.jpg)
+
+### III.2 - Document de suivi général
+Le document de suivi général doit regrouper :
+- Le fonctionnalités de création et modification des informations de la structure (profiles, équipes, services, postes)
+- Le fonctionnalités de création et modification des informations concernant les compétences.
+- Toutes les bases de données.
+Actuellement, ce document comportes les éléments suivants :
+![Fonctions générales](./Fonctions%20générales%20disponibles.png)
+L'onglet ***New*** correspond, à cet étape du projet, aux fonctionnalités correspondant à la structure.  
+
+{%lien%}
+[Lien vers le document de suivi général](https://docs.google.com/spreadsheets/d/1crOzv51Mt0-jJi2xNZKXNoEiwMz2lBXg7hcZI-SBvUA/edit?usp=sharing)
+{%endlien%}
+
+## IV - Gestion des collaborateurs
+
+### IV.1 - Structure des bases de données
+
+|Nom de la base|Attributs|
+|--------------|---------|
+|BDD_Postes|Id, Id_service, Id_equipe, Nom|
+|BDD_Equipes|Id, Nom, Id_Service, Id_responsable|
+|BDD_Services|Id,Nom, Id_responsable|
+|BDD_RH|Id, Nom, Prénom, Id_Service, Id_equipe, Id_poste, URL_fiche_perso|
+|BDD_Admin|Id_Id_RH|
+
+### IV.2 - Fiche individuelle
+{% lien %}
+[Template d'une fiche individuelle](https://docs.google.com/spreadsheets/d/1jz4QhZDmInLyTs9LAemzIZA6sGFmrF87wcNzQJi8ugY/edit?usp=sharing);
+{%endlien%}
+
+Une fiche individuelle possède 4 éléments principaux :
+- Une synthèse permettant de regrouper toutes les informations importantes sur les compétences et objectifs sur collaborateur. (Peu de fonctionnalités présentes pour le moment)
+- 1 onglet de suivi des compétences propres
+- 1 onglet de suivi des compétences métier
+- 1 onglet de suivi des compétences humaines
+
+Cette séparation en 3 onglets distincts permettra à terme de modifier les compétences métier d'une personne en cas d'évolution de poste, tout en gardant un accès aux compétences plus globales qu'il a acquises (permis, certification, gestion de projet etc...).De plus, réaliser une remise zero des compétences métier lors d'un changement de poste poursera le collaborateurs et les administrateurs de l'outil et réévaluer les compétences tenu par le prisme du nouveau poste.
+
+![Apercçu des compétences](./Apercu%20competences.png)
+
+Comme visible sur la figure précédente, une compétences est définie par un N°, un nom et une description. L'utilisateur peut définir un nombre de pallier d'acquisition entre 1 et 5 et visualiser l'avancement.  
+Pour chaque palier, il peut indiquer la date à laquelle il souhaite que le niveau de compétence soit maitrisé, la date à laquelle il est maitrisé ainsi qu'une typologie de preuve d'acquisition (diplôme, certificat ou expérience).
+![Criticite](./Criticite.png)
+L'utilisateur peut également saisir une importance et une urgence temporelle pour chaque compétence (Criticité voulue) et vérifier la cohérence des chois des objectifs difinis par les paliers (Criticité effective). La criticité effective calcul les temps restant pour l'acquisition des niveaux de compétences et définis l'ugence temporelle porportionnellement à l'écart entre l'échéance la plus courte et l'échéance la plus longue.
+
+Pour se faire, il a été nécessaire de créer des onglets "Back-end", pour réaliser les opérations permettant le calcul évoqué précédemment.
+![Back-end](./Back%20end%20indivi.png)
+A terme, il faudra envisager de cacher les feuilles de back-end afin de s'assurer que les utilisateurs ne les modifient pas.
+
+### IV.3 - Fonctionnalités
+L'onglet ***New*** regroupes les outils suivants :
+
+|Fonctionnalité|Fonction AppScript|Détail|Opérationnelle ?|
+|---|------------------|------|----------------|
+|  |   |   |    |
+
+Il n'est pour l'instant pas possible de modifier les informations renseignées autrement qu'en modifiant manuellemnt les bases de données. A terme, l'objectif serait de dupliquer ***New***, de créer des fonctions permettant d'importer les informations présentes dans les bases de données et de créer des fonction mettant à jour les nouvelles informations entrées par l'utilisateur.  
+*Estimation du temps de l'opération : 4 à 5 heures*
+### 
+
+## V - 
 ## Bibliographie
 
 [1] **DEJOUX, Cécile.** *Gestion des compétences et GPEC*, 2ème édition, DUNOD, 2013, Les topos
@@ -371,6 +483,13 @@ TBD
 
 ### REX Sprint 1
 
-**GESTION DU TEMPS :** Je pense avoir commencé à travailler sur le POK trop tard, ce qui m'a obligé de condenser mes séances de travail juste avant la deadline./
-**PROGRAMMATION DES TACHES :** Je n'ai pas pris en compte le temps additionnel que prenait la répoonse à une enquête. Ainsi, j'aurais dû d'abord me concentrer sur la conception du formulaire afin de les envoyer le plus rapidement possible./
-**DIMENSIONNEMENT DU PROJET :** Je pense que ce projet est trop ambitieux pour ne solliciter que 10 heures de travail. L'origine de cette erreur de jugement provient sûrement d'une fausse impression de maitrise du sujet. En effet, je ne pensais pas que la recherche documentaire et l'approfondissement du sujet me prendrait autant de temps./
+**GESTION DU TEMPS :** Je pense avoir commencé à travailler sur le POK trop tard, ce qui m'a obligé de condenser mes séances de travail juste avant la deadline.  
+**PROGRAMMATION DES TACHES :** Je n'ai pas pris en compte le temps additionnel que prenait la répoonse à une enquête. Ainsi, j'aurais dû d'abord me concentrer sur la conception du formulaire afin de les envoyer le plus rapidement possible.  
+**DIMENSIONNEMENT DU PROJET :** Je pense que ce projet est trop ambitieux pour ne solliciter que 10 heures de travail. L'origine de cette erreur de jugement provient sûrement d'une fausse impression de maitrise du sujet. En effet, je ne pensais pas que la recherche documentaire et l'approfondissement du sujet me prendrait autant de temps.  
+
+### REX Sprint 2
+
+**GESTION DU TEMPS GENERALE :** J'ai entammé le sprint 2 beaucoup trop tard. En effet, je me suis basé sur le temps alloué au projet (10h) et pas au temps que le projet allait me prendre.  
+**GESTION DU TEMPS DE PROGRAMMATION :** La programmation des différentes fonctions et des templates m'a pris plus longtemps que prévu. En effet, bien que mon MON 1.2 m'ait permis de mieux maitriser Google AppScript, j'ai surestimé mes capacités.  
+**PROGRAMMATION DES TACHES :** Comme pour le sprint 1, je n'ai pas pris en compte le temps pris par la propagation et l'étude d'un questionnaire. Je n'ai pas pris le temps de relancer d'autres participants potentiels ce qui a aboutit à un questionnaire inutiles du fait du nombre de réponses. En effet, j'espérais pouvoir récolter une vingtaine de réponses alors que je n'en ai reçu que 8.  
+**DIMENSIONNEMENT DU PROJET :** Comme au temps 1, le projet est trop ambitieux pour tenir en 20 heures.  
