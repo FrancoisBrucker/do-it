@@ -420,5 +420,5 @@ Toutes les séances et le nombre d'heures que l'on y a passé.
 | 14/09  | 1.5H  | HTML : Listes et tables |
 | 13/09  | 1H  | HTML : Les attributs class, div et id |
 | 20/09  | 2H  | CSS : Tutoriel W3schools, introduction au language |
-| 22/09  | 2H  | CSS : Codage des pages Menu et Panier Dark Kitchen |
+| 22/09  | 2H  | CSS : Codage des pages 'Menu' et 'Panier' Dark Kitchen |
 
