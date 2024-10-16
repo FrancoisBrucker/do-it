@@ -11,6 +11,7 @@ tags:
   - 'temps 1'
   - 'vert'  
   - 'débutant'
+  - 'lexique'
 
 résumé: "Dictionnaire `vert` vers français"
 ---
