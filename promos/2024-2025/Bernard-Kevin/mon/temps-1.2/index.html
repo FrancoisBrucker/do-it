@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">email</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">smtp</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vert</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Je souhaite créer un formulaire dans Java qui m'envoyer un mail avec le message, le nom de l'expéditeur et son mail via le Backend de mon projet Pok1.
+                Ce MON a pour objectif d'expliquer comment envoyer des emails dans différents langages de programmation et de garantir la sécurité dans les échanges.
 
         </p>
 
@@ -130,23 +142,306 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Connaissances de base en programmation (HTML, JavaScript, PHP, Python).</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PJo5yOtu7o8">SMTP</a></li>
+<li><a href="https://www.youtube.com/watch?v=NG3WhmbsFvc">Mailto</a></li>
+<li><a href="https://www.youtube.com/watch?v=30VeUWxZjS8&amp;t=1697s">Nodemailer</a></li>
+<li><a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a></li>
+<li><a href="https://www.youtube.com/watch?v=ueqZ7RL8zxM">smtplib</a></li>
+<li><a href="https://www.youtube.com/watch?v=C4cfTFglgJc">Variables d'environnement Node.js</a></li>
+<li><a href="https://www.youtube.com/watch?v=BgVjild0C9A">Tuto Email JS</a></li>
+</ul>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
-<ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
-</ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Table des matières</h2>
+<ol>
+<li><a href="#section1">Introduction</a></li>
+<li><a href="#section2">Exemples de code</a></li>
+<li><a href="#section3">Sécurité</a></li>
+<li><a href="#section4">API</a></li>
+<li><a href="#section5">Conclusion</a></li>
+</ol>
+<h2>1. Introduction <a id="section1"></a></h2>
+<p>L'objectif de ce MON est de découvrir les différentes façons d'envoyer un email dans différents langages de manière sécurisée.</p>
+<h3>Qu'est-ce que SMTP ?</h3>
+<p>SMTP est le protocole qu'utilise notre ordinateur pour acheminer les emails d'un client à un destinataire (le serveur de messagerie).</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=PJo5yOtu7o8">SMTP</a></p>
+</div></div>
+
+<hr>
+<h2>2. Exemples de code <a id="section2"></a></h2>
+<h3>2.1 Envoi d'email avec HTML</h3>
+<p>Avec HTML, il n'est pas possible d'envoyer des emails directement, mais on peut créer un formulaire ou un lien qui ouvre la boîte mail (prêt à send) via <code>mailto</code>.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=NG3WhmbsFvc">Mailto</a></p>
+</div></div>
+
+<p>Exemple de lien <code>mailto</code> :</p>
+<pre><code>html
+
+&lt;a href=&quot;mailto:someone@example.com?subject=Bonjour&amp;body=Comment ça va ?&quot;&gt;
+  Envoyer un email
+&lt;/a&gt;
+</code></pre>
+<p>🚨 <strong>Limitation :</strong> Cette méthode dépend de la messagerie de celui qui clique sur le lien et n'envoie pas automatiquement d'email.</p>
+<h3>2.2 Envoi d'email avec Node.js (Nodemailer)</h3>
+<p><strong>Nodemailer</strong> est une bibliothèque très populaire quand on utilise JavaScript pour envoyer des emails.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=30VeUWxZjS8&amp;t=1697s">Nodemailer</a></p>
+</div></div>
+
+<h4>Installation :</h4>
+<pre><code>bash
+
+npm install nodemailer
+</code></pre>
+<h4>Exemple de code :</h4>
+<pre><code>javascript
+
+const nodemailer = require('nodemailer');
+
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'votreEmail@gmail.com',
+    pass: 'votreMotDePasse'
+  }
+});
+
+let mailOptions = {
+  from: 'votreEmail@gmail.com',
+  to: 'destinataire@example.com',
+  subject: 'Test Email',
+  text: 'Hello world!'
+};
+
+transporter.sendMail(mailOptions, (error, info) =&gt; {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email envoyé : ' + info.response);
+  }
+});
+</code></pre>
+<h3>2.3 Envoi d'email avec PHP (PHPMailer)</h3>
+<p>En PHP, la fonction native <code>mail()</code> est assez basique et limitée. C’est pourquoi <strong>PHPMailer</strong> est souvent utilisé pour envoyer des emails plus complexes et sécurisés.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a></p>
+</div></div>
+
+<h4>Installation (via Composer) :</h4>
+<pre><code>bash
+
+composer require phpmailer/phpmailer
+</code></pre>
+<h4>Exemple de code :</h4>
+<pre><code>php
+
+&lt;?php
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
+
+$mail = new PHPMailer(true);
+
+try {
+    $mail-&gt;isSMTP();
+    $mail-&gt;Host       = 'smtp.gmail.com';
+    $mail-&gt;SMTPAuth   = true;
+    $mail-&gt;Username   = 'votreEmail@gmail.com';
+    $mail-&gt;Password   = 'votreMotDePasse';
+    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail-&gt;Port       = 587;
+
+    $mail-&gt;setFrom('votreEmail@gmail.com', 'Votre Nom');
+    $mail-&gt;addAddress('destinataire@example.com');
+
+    $mail-&gt;isHTML(true);
+    $mail-&gt;Subject = 'Sujet de l\'email';
+    $mail-&gt;Body    = 'Contenu &lt;b&gt;en HTML&lt;/b&gt;';
+
+    $mail-&gt;send();
+    echo 'Email envoyé avec succès';
+} catch (Exception $e) {
+    echo &quot;L'email n'a pas pu être envoyé. Erreur : {$mail-&gt;ErrorInfo}&quot;;
+}
+</code></pre>
+<h3>2.4 Envoi d'email avec Python (smtplib)</h3>
+<p>En Python, on utilise la bibliothèque <strong>smtplib</strong> pour envoyer des emails via le protocole SMTP.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=ueqZ7RL8zxM">smtplib</a></p>
+</div></div>
+
+<h4>Exemple de code :</h4>
+<pre><code>python
+
+import smtplib
+from email.mime.text import MIMEText
+
+sender = 'votreEmail@gmail.com'
+receiver = 'destinataire@example.com'
+msg = MIMEText('Hello, ceci est un email envoyé via Python!')
+msg['Subject'] = 'Test Email'
+msg['From'] = sender
+msg['To'] = receiver
+
+try:
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.starttls()
+        server.login(sender, 'votreMotDePasse')
+        server.sendmail(sender, receiver, msg.as_string())
+        print(&quot;Email envoyé avec succès&quot;)
+except Exception as e:
+    print(f&quot;Erreur : {e}&quot;)
+</code></pre>
+<hr>
+<p>🚨 <strong>Attention :</strong> Ne jamais laisser vos mots de passe dans le code. Utilisez des <strong>variables d’environnement</strong> pour plus de sécurité.</p>
+<hr>
+<h2>3. Sécurité <a id="section3"></a></h2>
+<p>L'envoi d'emails en programmation nécessite de manipuler des informations sensibles comme les identifiants d'accès au serveur SMTP.<br>
+Comment sécuriser ses informations ?</p>
+<h3>3.1 Utilisation des variables d’environnement</h3>
+<p>Au lieu de stocker vos identifiants dans le code, stockez-les dans des fichiers d'environnement <code>.env</code> à bien mettre dans le <code>.gitignore</code>.</p>
+<h4>Exemple :</h4>
+<p>Dans Node.js :</p>
+<pre><code>javascript
+
+require('dotenv').config();
+
+const email = process.env.EMAIL;
+const password = process.env.PASSWORD;
+</code></pre>
+<p>Dans votre fichier <code>.env</code> :</p>
+<pre><code>bash
+
+EMAIL=votreEmail@gmail.com
+PASSWORD=votreMotDePasse
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=C4cfTFglgJc">Variables d'environnement Node.js</a></p>
+</div></div>
+
+<h3>3.2 Utilisation de TLS/SSL</h3>
+<p>Pour protéger les données pendant leur transmission, il est crucial d'activer <strong>TLS</strong> ou <strong>SSL</strong> lorsque vous configurez votre serveur SMTP. Par exemple, Nodemailer et PHPMailer supportent ces protocoles nativement.</p>
+<hr>
+<h2>4. API d'envoi d'emails <a id="section4"></a></h2>
+<p>En plus de l'envoi via SMTP, on peut utiliser des <strong>API spécialisées</strong> pour simplifier l'envoi de mails à grande échelle. Des services comme <strong>SendGrid</strong>, <strong>Mailgun</strong>, <strong>Postmark</strong>, ou <strong>EmailJS</strong> permettent d'avoir des API fiables pour envoyer des emails.</p>
+<h4>Exemple avec EmailJS (en JavaScript) :</h4>
+<p><strong>EmailJS</strong> permet d'envoyer des emails directement depuis une application front-end, sans avoir besoin de serveur backend.</p>
+<ol>
+<li>Créez un compte sur <a href="https://www.emailjs.com/">EmailJS</a>.</li>
+<li>Configurez votre service email (par exemple Gmail) et créez un <strong>template</strong> dans l'interface EmailJS.</li>
+<li>Obtenez votre <strong>User ID</strong> et votre <strong>Service ID</strong>.</li>
+</ol>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=BgVjild0C9A">Tuto Email JS</a></p>
+</div></div>
+
+<h4>Exemple de code :</h4>
+<pre><code>html
+
+&lt;head&gt;
+  &lt;script type=&quot;text/javascript&quot;
+      src=&quot;https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js&quot;&gt;
+  &lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    (function(){
+        emailjs.init({
+          publicKey: &quot;oMqq7O7XOuIBpqy1P&quot;,
+        });
+    })();
+  &lt;/script&gt;
+  &lt;script src=&quot;js/contact.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt;
+      &lt;textarea name=&quot;message&quot; id=&quot;message&quot; placeholder=&quot;Mon message&quot; required&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;nom_prenom&quot;&gt;Nom, Prénom&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot; placeholder=&quot;Mon nom et prénom&quot; required&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;mail&quot;&gt;Mail&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;mail&quot; id=&quot;mail&quot; placeholder=&quot;Mon mail&quot; required&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; onclick=&quot;send_mail()&quot;&gt;ENVOYER&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<pre><code>javascript
+
+// Script pour envoyer l'email avec EmailJS
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.init('YOUR_USER_ID'); // Remplacez par votre User ID
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+      console.log('Email envoyé avec succès !');
+    }, function(error) {
+      console.log('Erreur dans l\'envoi de l\'email:', error);
+    });
+});
+function send_mail(){
+    let parametres = {
+        nom_prenom: document.getElementById(&quot;nom_prenom&quot;).value,
+        mail: document.getElementById(&quot;mail&quot;).value,
+        message: document.getElementById(&quot;message&quot;).value
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', parametres).then(function() {
+        alert(&quot;Votre message a bien été envoyé !&quot;);
+    }).catch(function(error) {
+        console.error(&quot;Échec de l'envoi : &quot;, error);
+        alert(&quot;Échec de l'envoi, veuillez réessayer.&quot;);
+    });    
+}
+</code></pre>
+<p>🚨 <strong>Remarque :</strong> L'avantage d'EmailJS est qu'il permet d'envoyer des emails directement depuis le navigateur, évitant la configuration d'un serveur backend.</p>
+<hr>
+<h2>5. Conclusion <a id="section5"></a></h2>
+<p>Quand on veut envoyer des emails en programmation, l'important est de savoir sécuriser les informations du user.
+Ici, je ne parle pas des interactions avec le backend en cas d'une base de données avec plusieurs utilisateurs.</p>
 
 
 </article>

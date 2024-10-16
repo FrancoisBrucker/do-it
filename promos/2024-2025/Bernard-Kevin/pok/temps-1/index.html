@@ -164,6 +164,10 @@
 <li><a href="https://www.youtube.com/watch?v=lR4-DJey_3A">Exemple de formulaire</a></li>
 <li><a href="https://www.youtube.com/watch?v=E7QPO8P8nls">How to import Google Font</a></li>
 <li><a href="https://github.com/KevinBERNARD1901/site_portfolio">Github avec le projet</a></li>
+<li><a href="https://www.youtube.com/watch?v=aswRKAjjWuE">Barre mouvante inspiration</a></li>
+<li><a href="https://www.youtube.com/watch?v=BgVjild0C9A">Tuto Email JS</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/API/Element/click_event">Documentation onclick</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/API/Element/mouseover_event">Documentation hover</a></li>
 </ul>
 </div></div>
 
@@ -189,11 +193,12 @@ C'est pour cela que j'ai décidé de créer <strong>mon site web avec mon portfo
 </ul>
 <h4>Sprint 2</h4>
 <ul>
-<li>[ ] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>3h, <b>réel :</b> )</li>
-<li>[ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>3h, <b>réel :</b> )</li>
-<li>[ ] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>1h, <b>réel :</b> )</li>
-<li>[ ] Animation dans la sélection des images (<b>estimé : </b>1h30, <b>réel :</b> )</li>
-<li>[ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>1h30, <b>réel :</b> )</li>
+<li>[x] Mettre le contact possible (message, prénom/nom, mail) (<b>estimé : </b>3H, <b>réel :</b> 2H50)</li>
+<li>[x] Ajouter une barre mouvante sur la barre de navigation (<b>estimé : </b>2H, <b>réel :</b> 2H50)</li>
+<li>[ ] Catégories : Tous, illustration, personnages, accessoires, croquis, recherche (<b>estimé : </b>3H, <b>réel :</b> )</li>
+<li>[x] Animation des images et de la souris quand cette dernière passe sur les images de la galerie (<b>estimé : </b>1H, <b>réel :</b> 2H20)</li>
+<li>[x] Animation dans la sélection des images (<b>estimé : </b>1H30, <b>réel :</b> 2H)</li>
+<li>[ ] Icône pour savoir si je suis disponible (cloche ou autre) (<b>estimé : </b>1H30, <b>réel :</b> )</li>
 </ul>
 <h3>Horodatage</h3>
 <table>
@@ -205,6 +210,9 @@ C'est pour cela que j'ai décidé de créer <strong>mon site web avec mon portfo
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>Début Sprint 1</strong></td>
+</tr>
 <tr>
 <td>Samedi 14/09</td>
 <td>3H45</td>
@@ -224,6 +232,32 @@ C'est pour cela que j'ai décidé de créer <strong>mon site web avec mon portfo
 <td>Mercredi 18/09</td>
 <td>1H30</td>
 <td>Rédaction du POK</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>11H</td>
+</tr>
+<tr>
+<td><strong>Début Sprint 2</strong></td>
+</tr>
+<tr>
+<td>Mercredi 25/09</td>
+<td>1H30</td>
+<td>Barre qui bouge</td>
+</tr>
+<tr>
+<td>Vendredi 11/10</td>
+<td>5H10</td>
+<td>Barre qui bouge + Formulaire Contact + Animation de la sélection des images</td>
+</tr>
+<tr>
+<td>Lundi 14/10</td>
+<td>3H30</td>
+<td>Changer d'une image à l'autre + Hover sur une image</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>10H10</td>
 </tr>
 </tbody>
 </table>
@@ -492,7 +526,7 @@ div.mon_profil p b {
 }
 </code></pre>
 <p><img src="media/Sprint1_8_apres_css_mon_profil.png" alt="alt text"></p>
-<h3>Retour sur expérience</h3>
+<h4>Retour sur expérience</h4>
 <p><strong>Difficultés :</strong></p>
 <ul>
 <li>J'ai eu du mal à importer le font.</li>
@@ -502,6 +536,447 @@ div.mon_profil p b {
 <p><strong>Bilan</strong></p>
 <p>Je suis beaucoup monté en compétence et mes bases en HTML &amp; CSS qui étaient bancales sont devenues beaucoup plus solides.</p>
 <h3>Second Sprint</h3>
+<h4>Barre mouvante</h4>
+<p>Dans un premier temps j’ai commencé par animer la barre mouvante :
+‘Photo avec du rouge’</p>
+<p>Au début j’ai essayer de faire 'bouger' ma barre en utilisant du CSS mais j’ai tout de suite compris que si je voulais une animation avec une barre qui se déplace quand ma souris survole les autres liens de ma barre de navigation, j’allais avoir besoin de JavaScript.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=aswRKAjjWuE">Barre mouvante inspiration</a></p>
+</div></div>
+
+<p>C’était la première fois que j’utilisais JavaScript donc je me suis d’abord renseigner sur la manière de l’utiliser et quelle était la logique du langage de programmation de JavaScript. (Lien)</p>
+<p>Après cela j’ai rajouté l’animation pour ma barre.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>CSS barre mouvante</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>.barre_mouvante {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    transition: left 0.5s ease, width 0.5s ease;
+}
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>JS barre mouvante</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>const liens = document.querySelectorAll('nav ul li a');
+const barre = document.querySelector('.barre_mouvante');
+
+function change_lien_hover(lien){
+    liens.forEach((lien_) =&gt; {
+        lien_.style.fontWeight = '100';
+    });
+    lien.style.fontWeight = '500';
+
+    const lien_rect = lien.getBoundingClientRect();
+    const navRect = document.querySelector('nav').getBoundingClientRect();
+
+    barre.style.width = `${lien_rect.width}px`;
+    barre.style.left = `${lien_rect.left - navRect.left}px`;
+}
+
+function set_active_link(){
+    const current_page = window.location.pathname.split('/').pop();
+
+    liens.forEach((lien) =&gt; {
+        const lien_href = lien.getAttribute('href');
+        if (lien_href === current_page) {
+            change_lien_hover(lien);
+        }
+    });
+}
+
+liens.forEach((lien) =&gt; {
+    lien.addEventListener('mouseover', () =&gt; {
+        change_lien_hover(lien);
+    });
+});
+
+document.querySelector('nav').addEventListener('mouseout', () =&gt; {
+    set_active_link();
+});
+
+set_active_link();
+</code></pre>
+</div>
+</details>     
+</div>
+<h4>Contact form</h4>
+<p>Ensuite, j’ai essayé de m’envoyer un mail avec le contenu du form de ma page contact. J’ai d’abord fait des recherches avec mon MON 1.2 (lien). C'était long de tout tester.</p>
+<p>Au début, j’ai pensé à Nodejs mail et je devais mettre mon identifiant et mon mot de passe dans mon JavaScript. Mais du coup, j’avais un problème de confidentialité, pour régler ce souci je pouvais utiliser des variables d’environnement et me créer un serveur backend ou gérer mes variables.</p>
+<p>Je ne voulais pas avoir de backend à gérer donc j’ai fait marche arrière pour utiliser une API. J’ai trouvé Email JS qui fonctionnait très bien.(lien)</p>
+<p>J'ai perdu beaucoup de temps à faire des allers-retours parce que je ne comprenais pas trop ce que je faisais.</p>
+<p><img src="media/Sprint2_1_contact_form.png" alt="alt text">
+<img src="media/Sprint2_2_alert_contact.png" alt="alt text">
+<img src="media/Sprint2_3_mail_form.png" alt="alt text"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>HTML Contact Form</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot;&gt;
+    &lt;script type=&quot;text/javascript&quot;
+        src=&quot;https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js&quot;&gt;
+    &lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      (function(){
+          emailjs.init({
+            publicKey: &quot;oMqq7O7XOuIBpqy1P&quot;,
+          });
+      })();
+    &lt;/script&gt;
+    &lt;script src=&quot;js/contact.js&quot;&gt;&lt;/script&gt;
+    &lt;title&gt;Contact&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Kévin BERNARD&lt;/h1&gt;
+    &lt;p class=&quot;mail&quot;&gt;mail : kevin.bernard@gmail.com&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;PORTFOLIO&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;contact.html&quot; class=&quot;contact&quot;&gt;CONTACT&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;mon_profil.html&quot;&gt;MON PROFIL&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;barre_mouvante&quot;&gt;&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;h2 class=&quot;contact&quot;&gt;Une envie à faire passer ?&lt;/h2&gt;
+    &lt;form&gt;
+      &lt;div class=&quot;contact&quot;&gt;
+        &lt;div&gt;
+          &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt;
+          &lt;textarea name=&quot;message&quot; id=&quot;message&quot; placeholder=&quot;Mon message&quot; required&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label for=&quot;nom_prenom&quot;&gt;Nom, Prénom&lt;/label&gt;
+          &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot; placeholder=&quot;Mon nom et prénom&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label for=&quot;mail&quot;&gt;Mail&lt;/label&gt;
+          &lt;input type=&quot;text&quot; name=&quot;mail&quot; id=&quot;mail&quot; placeholder=&quot;Mon mail&quot; required&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;send_mail()&quot;&gt;ENVOYER&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>JS Contact Form</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>function send_mail(){
+    let parametres = {
+        nom_prenom: document.getElementById(&quot;nom_prenom&quot;).value,
+        mail: document.getElementById(&quot;mail&quot;).value,
+        message: document.getElementById(&quot;message&quot;).value
+    };
+    console.log(parametres);
+
+    emailjs.send(&quot;service_82grttd&quot;, &quot;template_b9hegeg&quot;, parametres).then(function() {
+        alert(&quot;Votre message a bien été envoyé !&quot;);
+    }).catch(function(error) {
+        console.error(&quot;Échec de l'envoi : &quot;, error);
+        alert(&quot;Échec de l'envoi, veuillez réessayer.&quot;);
+    });    
+}
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><a href="https://www.youtube.com/watch?v=BgVjild0C9A">Tuto Email JS</a></p>
+</div></div>
+
+<h4>Animation du hover et de la sélection d’une image</h4>
+<p>Suite à cela je me suis occupé de la partie animation des images :</p>
+<ul>
+<li>Onclick</li>
+<li>Hover</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>HTML Index = Page Portfolio</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&gt;
+    &lt;title&gt;Portfolio&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Kévin BERNARD&lt;/h1&gt;
+    &lt;p class=&quot;mail&quot;&gt;mail : kevin.bernard@gmail.com&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;portfolio&quot;&gt;PORTFOLIO&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;CONTACTS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;mon_profil.html&quot;&gt;MON PROFIL&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;barre_mouvante&quot;&gt;&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;portfolio&quot;&gt;
+      &lt;div&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_3_photo_1loliloetlolilo.png&quot; /&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_3_photo_2.png&quot; /&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_4_photo_1.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_4_photo_2.png&quot; /&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_6_Oisillons.png&quot; /&gt;
+        &lt;img class=&quot;media&quot; src=&quot;/media/Exercice_7_Dragon.png&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;media_hover&quot;&gt;
+      &lt;p id=&quot;media_hover_text&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;block_zoom&quot; class=&quot;block_zoom&quot;&gt;
+      &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;
+      &lt;img class=&quot;image_zoom&quot; id=&quot;image_zoom&quot; /&gt;
+      &lt;div class=&quot;fleche_gauche&quot;&gt;&amp;#10094;&lt;/div&gt;
+      &lt;div class=&quot;fleche_droite&quot;&gt;&amp;#10095;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/portfolio.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>JS Portfolio</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>const block_zoom = document.querySelector('#block_zoom');
+const image_zoom = document.querySelector('.image_zoom');
+const images = document.querySelectorAll('img.media');
+const close_button = document.querySelector('.close');
+const fleche_gauche = document.querySelector('.fleche_gauche');
+const fleche_droite = document.querySelector('.fleche_droite');
+const media_hover = document.querySelector('.media_hover');
+const media_hover_text = document.querySelector('#media_hover_text');
+
+function getImageZoomIndex() {
+    return Array.from(images).findIndex(image =&gt; image.src === image_zoom.src);
+}
+
+media_hover.addEventListener('mouseover', () =&gt; {
+    media_hover.style.display = 'flex';
+});
+media_hover.addEventListener('mouseout', () =&gt; {
+    media_hover.style.display = 'none';
+});
+media_hover.addEventListener('click', () =&gt; {
+    block_zoom.style.display = 'flex';
+    image_zoom.src = images[getImageZoomIndex()].src;
+    setTimeout(() =&gt; {
+        block_zoom.style.opacity = '1';
+        image_zoom.style.opacity = '1';
+    }, 100);
+});
+
+images.forEach(image =&gt; {
+    image.addEventListener('mouseover', () =&gt; {
+        image_zoom.src = image.src;
+        image.style.opacity = '0.8';
+        media_hover.style.display = 'flex';
+        media_hover_text.innerHTML = image.src.split('/').pop().split('.')[0];
+        media_hover.style.left = `${image.getBoundingClientRect().left}px`;
+        media_hover.style.bottom = `${window.innerHeight - image.getBoundingClientRect().bottom}px`;
+        media_hover.style.width = `${image.getBoundingClientRect().width}px`;
+    });
+    image.addEventListener('mouseout', () =&gt; {
+        image.style.opacity = '1';
+        media_hover.style.display = 'none';
+    });
+    image.addEventListener('click', () =&gt; {
+        block_zoom.style.display = 'flex';
+        setTimeout(() =&gt; {
+            block_zoom.style.opacity = '1';
+            image_zoom.style.opacity = '1';
+        }, 100);
+    });
+});
+
+close_button.onclick = () =&gt; {
+    block_zoom.style.opacity = '0';
+    image_zoom.style.opacity = '0';
+    setTimeout(() =&gt; {
+        block_zoom.style.display = 'none';
+    }, 500);
+};
+
+fleche_gauche.onclick = (e) =&gt; {
+    e.stopPropagation();
+    let index_image_zoom = getImageZoomIndex();
+    let max_index = images.length - 1;
+    let index = index_image_zoom - 1;
+    if (index &lt; 0) {
+        index = max_index;
+    }
+    image_zoom.src = images[index].src;
+}
+
+fleche_droite.onclick = (e) =&gt; {
+    e.stopPropagation();
+    let index_image_zoom = getImageZoomIndex();
+    let max_index = images.length - 1;
+    let index = index_image_zoom + 1;
+    if (index &gt; max_index) {
+        index = 0;
+    }
+    image_zoom.src = images[index].src;
+}
+
+block_zoom.onclick = () =&gt; {
+    block_zoom.style.opacity = '0';
+    image_zoom.style.opacity = '0';
+    setTimeout(() =&gt; {
+        block_zoom.style.display = 'none';
+    }, 500);
+}
+
+image_zoom.onclick = (e) =&gt; {
+    e.stopPropagation();
+}
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Pour le <strong>onclick</strong> :</p>
+<p>J'ai quelque peu galéré à prendre toutes les images dans mon JS et je ne voyais pas comment faire pour écouter l'événement onclick d'une image parmie les autres sans devoir faire un copier-coller de la fonction pour chaque image comme j'avais fait pour les liens avec ma barre mouvante.
+Finalement j'ai trouver la commande 'for each image in images' de JS.</p>
+<p>Ensuite, ce qui a été le plus long était la mise en forme et comment gérer la transition d'opacité et le display none/flex.</p>
+<p>Pour la transition d'une image à l'autre avec les flèches, j'avais un problème avec la taille de images qui était de 7 alors que je n'affichais que 6 images sur ma page. Je me suis rendu compte que l'image zoomée après le click était aussi pris en compte dans ma liste &quot;images&quot;.</p>
+<p><img src="media/Sprint2_4_onclick.png" alt="alt text"></p>
+<p>Pour le <strong>hover</strong> :</p>
+<p>J'ai eu un peu de mal à faire en sorte d'avoir les coordonnées de l'image qui était survolée par la souris et surtout gérer le fait que si je clique sur le bandeau du hover cela sélectionne la bonne image.
+J'avais au début un problème parce que l'accès à la référence de l'image n'étais disponible qu'après l'avoir cliquée alors que si je mettais la référence dès le hover, je l'avais à la fois pour l'événement hover et onclick.</p>
+<p><img src="media/Sprint2_5_hover.png" alt="alt text"></p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/API/Element/click_event">Documentation onclick</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/API/Element/mouseover_event">Documentation hover</a></li>
+</ul>
+</div></div>
+
+<h4>Retour sur expérience</h4>
+<p><strong>Difficultés :</strong></p>
+<ul>
+<li>J'ai sous-évalué le temps que j'accordais à chaque tâche de mon projet.</li>
+<li>Je suis parti trop facilement, rapidement dans une direction avec Node.js avant de finalement faire marche arrière.</li>
+</ul>
+<p><strong>Bilan</strong></p>
+<p>Très satisfait de la qualité de ce que j'ai pu faire et à l'avenir j'ai envie de me faire mon propre serveur backend pour gérer mes mails et déjà me renseigner comment gérer les spams et attaques de sites...<br>
+J'ai pu me démystifier de JavaScript ce qui était une des raisons du choix de ce POK.</p>
 
 
 </article>

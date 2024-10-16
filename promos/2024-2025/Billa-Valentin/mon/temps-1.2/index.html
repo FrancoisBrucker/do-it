@@ -133,9 +133,559 @@
 
 
 
-<h2>Objectifs</h2>
-<p>Lexique de multiples concepts, langages et autres nécessaires ou au moins utiles
-à la compréhension de problématiques techniques liées au développement.</p>
+<h2>Concepts</h2>
+<h3>Web</h3>
+<h4>Front-end</h4>
+<p>La partie d'un site web ou d'une application que l'utilisateur voit et avec laquelle il interagit.
+Elle est construite avec des outils comme HTML (pour la structure), CSS (pour le design) et JavaScript (pour le comportement).</p>
+<h4>Back-end</h4>
+<p>La partie d'un site web ou d'une application que les utilisateurs ne voient pas.
+Elle gère les données, la logique et la communication avec les bases de données et les serveurs.
+Elle communique souvent via des APIs.</p>
+<h4>Site Statique</h4>
+<p>Un site statique est un type de site web dont le contenu est pré-référencé et qui ne change pas en fonction
+des interactions de l'utilisateur. Les pages de ce type de site sont généralement constituées de fichiers HTML,
+CSS et JavaScript qui sont servis directement par un serveur web.</p>
+<h3>APIs (Interfaces de Programmation d'Applications)</h3>
+<p>Une API (Interface de Programmation d'Applications) est un ensemble de règles et de protocoles qui permet à
+différents logiciels de communiquer entre eux. Elle définit comment les demandes et les réponses sont formatées,
+facilitant ainsi l'échange de données entre des applications ou des services.</p>
+<h4>HTTP et HTTPS</h4>
+<p>HTTP (HyperText Transfer Protocol) est le protocole utilisé pour transférer des données sur le web.
+Il permet aux navigateurs de récupérer des pages web à partir de serveurs. HTTPS (HTTP Secure)
+est une version sécurisée de HTTP qui utilise le chiffrement pour protéger les données échangées,
+garantissant ainsi la confidentialité et l'intégrité des informations.</p>
+<h4>REST</h4>
+<p>REST (Representational State Transfer) est un style d'architecture pour la création d'APIs qui utilisent les méthodes
+HTTP pour interagir avec des ressources. Les APIs REST sont largement adoptées en raison de leur simplicité et de leur
+capacité à fonctionner sur n'importe quel client capable de faire des requêtes HTTP. Elles sont généralement
+stateless, ce qui signifie que chaque demande du client contient toutes les informations nécessaires pour traiter cette demande.</p>
+<h4>SOAP</h4>
+<p>SOAP (Simple Object Access Protocol) est un protocole ancien utilisé pour échanger des informations structurées
+entre applications. Il repose sur XML pour le format des messages et est souvent considéré comme plus complexe et
+lourd que REST. SOAP est encore utilisé dans certains environnements d'entreprise, mais il a été largement remplacé
+par des architectures plus légères comme REST.</p>
+<h4>gRPC</h4>
+<p>gRPC est un framework open-source de communication entre services qui utilise HTTP/2 pour le transport et
+Protocol Buffers pour la sérialisation des données. Conçu par Google, il est particulièrement adapté aux microservices
+en raison de sa performance et de sa capacité à gérer des connexions bidirectionnelles. gRPC est considéré comme
+une avancée par rapport à REST et SOAP, offrant des fonctionnalités modernes pour les applications distribuées.
+Néanmoins, il induit une complexité considérable.</p>
+<h3>Bases de Données</h3>
+<p>Les bases de données sont des systèmes organisés qui permettent de stocker, gérer et récupérer des données. Elles sont essentielles pour de nombreuses applications, notamment les sites web, les applications mobiles et les logiciels d'entreprise. Les bases de données peuvent être classées en deux grandes catégories : SQL et No-SQL.</p>
+<h4>SQL (Structured Query Language)</h4>
+<p>SQL est un langage de programmation utilisé pour gérer et manipuler des bases de données relationnelles.
+Les bases de données SQL sont organisées en tables, avec des lignes et des colonnes, et elles permettent
+de définir des relations entre les données.</p>
+<ul>
+<li>
+<p><strong>Caractéristiques</strong> :</p>
+<ul>
+<li><strong>Schéma Défini</strong> : Les bases de données SQL nécessitent un schéma défini, ce qui signifie que la structure des données doit être spécifiée avant l'insertion.</li>
+<li><strong>Transactions ACID</strong> : Elles garantissent des transactions fiables avec les propriétés ACID (Atomicité, Cohérence, Isolation, Durabilité).</li>
+<li><strong>Requêtes Complexes</strong> : SQL permet d'effectuer des requêtes complexes et des jointures entre plusieurs tables.</li>
+</ul>
+</li>
+<li>
+<p><strong>Exemples de Bases de Données SQL</strong> :</p>
+<ul>
+<li><strong>MySQL</strong> : Une des bases de données relationnelles les plus populaires, utilisée pour des applications web et
+des systèmes de gestion de contenu.</li>
+<li><strong>PostgreSQL</strong> : Une base de données relationnelle avancée qui prend en charge des fonctionnalités comme
+les requêtes géospatiales et les types de données personnalisés.</li>
+<li><strong>SQLite</strong> : Une base de données légère, souvent utilisée pour les applications embarquées et les petites applications.</li>
+</ul>
+</li>
+</ul>
+<h4>No-SQL (Not Only SQL)</h4>
+<p>Les bases de données No-SQL sont conçues pour stocker et récupérer des données non structurées ou semi-structurées.
+Elles ne nécessitent pas de schéma fixe, ce qui les rend flexibles pour des types de données variés.
+Généralement les bases de données No-SQL sont bien plus spécialisées que les BDD SQL.</p>
+<ul>
+<li>
+<p><strong>Caractéristiques</strong> :</p>
+<ul>
+<li><strong>Flexibilité</strong> : Les bases de données No-SQL permettent d'ajouter des champs sans avoir besoin de modifier un schéma prédéfini.</li>
+<li><strong>Scalabilité Horizontale</strong> : Elles sont souvent conçues pour se développer horizontalement en ajoutant des serveurs supplémentaires.</li>
+<li><strong>Modèles de Données Variés</strong> : Elles prennent en charge plusieurs modèles de données, notamment les documents, les colonnes, les clés-valeurs et les graphes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Exemples de Bases de Données No-SQL</strong> :</p>
+<ul>
+<li><strong>MongoDB</strong> : Une base de données orientée documents qui stocke des données au format JSON.
+Elle est très utilisée pour les applications web modernes.</li>
+<li><strong>Cassandra</strong> : Une base de données orientée colonnes, particulièrement adaptée pour gérer de grandes
+quantités de données sur plusieurs serveurs sans point de défaillance unique.</li>
+<li><strong>Redis</strong> : Une base de données clé-valeur en mémoire, souvent utilisée pour le caching
+et le stockage de données temporaires.</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/illustrations/databases.gif" alt="Illustration de la multitude de bases de données existantes"></p>
+<h3>Serveurs</h3>
+<p>Un serveur est un ordinateur ou un système qui fournit des ressources, des données ou des services à
+d'autres ordinateurs, appelés clients, sur un réseau. Les serveurs sont essentiels pour héberger des sites web,
+des applications, des bases de données et d'autres services en ligne.</p>
+<p>L'hébergement de serveurs peut se faire de deux manières principales : sur site (On-Premise) ou dans le Cloud.</p>
+<h4>On-Premise</h4>
+<p>L'hébergement On-Premise signifie que les serveurs et les infrastructures sont installés et gérés sur le site de
+l'entreprise. Cela permet un contrôle total sur le matériel et les logiciels, mais nécessite également des
+investissements initiaux importants et des coûts d'entretien continus.</p>
+<p><strong>Avantages</strong>:</p>
+<ul>
+<li>Contrôle total : gestion complète des données et des ressources.</li>
+<li>Sécurité : les entreprises peuvent mettre en place des mesures de sécurité personnalisées.</li>
+<li>Conformité : plus facile de respecter certaines régulations de protection des données.</li>
+</ul>
+<p><strong>Mainframes</strong> : <br>
+Ce sont de grands systèmes informatiques conçus pour gérer des volumes élevés de données et d'applications critiques.
+Ils sont principalement utilisés par des grandes entreprises et des organisations gouvernementales pour le traitement
+de transactions massives, la gestion de bases de données complexes et l'exécution d'applications essentielles.
+<em>Basiquement, c'est un gros ordinateur, un très gros ordinateur</em></p>
+<p><img src="https://images.itnewsinfo.com/lmi/articles/grande/000000084904.jpg" alt="Mainframe IBM"></p>
+<h4>Cloud</h4>
+<p>L'hébergement Cloud utilise des serveurs distants situés dans des centres de données gérés par des fournisseurs de
+services (comme AWS (Amazon Web Services), Google Cloud, ou Microsoft Azure). Les ressources sont accessibles
+via Internet, ce qui permet une scalabilité facile, un déploiement rapide et une facturation à l'utilisation.</p>
+<p><strong>Avantages</strong>:</p>
+<ul>
+<li>Scalabilité : possibilité d'augmenter ou de diminuer les ressources selon les besoins.</li>
+<li>Moins de coûts initiaux : pas besoin d'acheter et de maintenir le matériel.</li>
+<li>Accès à des services avancés : IA, machine learning, et outils d'analyse.</li>
+</ul>
+<!-- TODO: Partie sur les OS, parties des outils génériques, controle de version, IDE... -->
+<h2>Langages</h2>
+<blockquote>
+<p>Un langage de programmation est un langage informatique destiné à formuler des algorithmes et produire des
+programmes informatiques qui les appliquent. D'une manière similaire à une langue naturelle, un langage de
+programmation est composé d'un alphabet, d'un vocabulaire, de règles de grammaire, de significations,
+mais aussi d'un environnement de traduction censé rendre sa syntaxe compréhensible par la machine.</p>
+</blockquote>
+<p><em>Wikipédia</em> - <a href="https://fr.wikipedia.org/wiki/Langage_de_programmation">Langage_de_programmation</a></p>
+<h3>Distinctions</h3>
+<h4>Haut Niveau / Bas Niveau</h4>
+<ul>
+<li><strong>Haut Niveau</strong> : <br>
+Langages de programmation plus faciles à comprendre pour les humains car ils utilisent
+des mots et des symboles similaires au langage quotidien.
+Ils aident les développeurs à écrire des programmes plus rapidement en gérant des tâches complexes,
+comme la gestion de la mémoire, en arrière-plan. Exemple : Python est facile à lire et à écrire.</li>
+<li><strong>Bas Niveau</strong> : <br>
+Langages de programmation plus proches de ce qu'un ordinateur comprend réellement (code machine).
+Ils sont plus rapides, mais plus complexes, et les développeurs doivent gérer de nombreux détails, comme la mémoire.
+Exemple : 'C' est rapide, mais plus difficile à utiliser.</li>
+</ul>
+<h4>Compilé / Interprété</h4>
+<ul>
+<li><strong>Compilé</strong> : <br>
+Le code est entièrement traduit en langage machine (le langage que l'ordinateur comprend)
+avant d'être exécuté. Cela rend généralement les programmes plus rapides mais nécessite une étape
+supplémentaire pour &quot;compiler&quot; le code d'abord. Exemple : C++ est compilé.</li>
+<li><strong>Interprété</strong> : <br>
+Le code est traduit en langage machine pendant son exécution, ce qui rend les choses plus lentes,
+mais plus faciles à tester et à modifier. Exemple : Python est interprété.</li>
+</ul>
+<h4>Bare Metal / Machine Virtuelle / Conteneur</h4>
+<ul>
+<li><strong>Bare Metal</strong> : Exécution de programmes directement sur le matériel physique d'un ordinateur sans aucune couche intermédiaire.</li>
+<li><strong>Machine Virtuelle</strong> : Une version logicielle d'un ordinateur qui s'exécute au-dessus d'un matériel réel. Elle agit comme un ordinateur séparé mais partage la même machine physique.</li>
+<li><strong>Conteneur</strong> : Une manière légère d'exécuter des logiciels en isolation. Les conteneurs regroupent tous les fichiers nécessaires à l'exécution d'une application, facilitant ainsi le déplacement entre les environnements.</li>
+</ul>
+<h3>Langages de programmation</h3>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Attribution</strong></p>
+<p>Les images utilisées pour les icônes des languages de programmation sont soit issues directement du
+site du language (disponible en lien directement dans le titre) soit issues de
+<a href="https://www.flaticon.com/free-icons">Flaticon et crées par Freepik</a></p>
+</div></div>
+<h4><img src="images/icons/c++.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://isocpp.org/">C / C++</a></h4>
+<p>C est un langage de programmation compilé, de bas niveau, utilisé pour les systèmes d'exploitation, les systèmes embarqués et les logiciels nécessitant des performances critiques. C++ est une extension de C, ajoutant la programmation orientée objet.</p>
+<p><strong>Origine</strong> : <br>
+C a été développé par Dennis Ritchie chez Bell Labs en 1972. C++ a été développé par Bjarne Stroustrup en 1985 pour ajouter des fonctionnalités orientées objet à C.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Qt</strong> : Un framework multiplateforme pour développer des applications en C++.</li>
+<li><strong>Boost</strong> : Une collection de bibliothèques qui étend les fonctionnalités de C++.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Le kernel Linux est écrit entre autres en C.
+Le navigateur Chrome et une grande partie de Windows sont écrits en C++.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>C, C++, JavaScript, HTML, CSS et bien d'autres parties fondatrices d'internet et de l'informatique
+n'existent officiellement que sous la forme de spécifications, des looongs documents qui disent précisément et
+exactement ce que le langage doit faire ou pas. Ces spécifications sont ensuite implémentées par de nombreux acteurs
+tiers (qui sont d'ailleurs généralement impliqués dans la rédaction et la mise à jour des specs).</p>
+<p>Par exemple, en CSS chaque navigateur (en gros) se charge de coder la façon dont les pages
+web sont affichées, en respectant au mieux la spécification. Certaines features ne sont disponibles
+que sur certaines implémentations eg. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc-size#browser_compatibility"><code>calc-size</code></a></p>
+</div></div>
+<h4><img src="images/icons/c-sharp.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://dotnet.microsoft.com/en-us/languages/csharp">C#</a> <em>(.NET)</em></h4>
+<p>C# est un langage de programmation compilé et orienté objet, principalement utilisé pour le développement d'applications
+Windows, mais aussi pour les applications web et les jeux vidéo.</p>
+<p><strong>Origine</strong> : <br>
+Développé par Microsoft en 2000 dans le cadre de son initiative .NET, C# est conçu pour être un langage simple et moderne pour les développeurs.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong><a href="http://ASP.NET">ASP.NET</a></strong> : Un framework pour la création d'applications web dynamiques et de services web.</li>
+<li><strong>Unity</strong> : Un moteur de développement de jeux vidéo utilisant C# comme langage principal.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Visual Studio Code, un éditeur de code populaire, a été développé en C# à l'aide du framework Electron.</p>
+<h4><img src="images/icons/bash.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.gnu.org/software/bash/">Bash</a></h4>
+<p>Bash (Bourne Again Shell) est un shell Unix utilisé pour exécuter des commandes et écrire des scripts d'automatisation.
+Il est couramment utilisé pour les tâches d'administration système dans les environnements Linux et Unix.</p>
+<p><strong>Origine</strong> : <br>
+Bash, a été développé en 1989 par Brian Fox dans le cadre du projet GNU.</p>
+<p><strong>Frameworks populaires</strong> : <br>
+Bash n'a pas de framework dédié, mais il est utilisé pour l'automatisation directe des tâches sur les systèmes Unix.</p>
+<p><strong>Utilisation réelle</strong> : <br>
+Les administrateurs système et les ingénieurs DevOps utilisent Bash pour automatiser la gestion
+des serveurs et le déploiement de logiciels.</p>
+<h4><img src="images/icons/gopher.svg" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://go.dev/">Go</a></h4>
+<p>Go est un langage compilé, statiquement typé, conçu pour la simplicité, la concurrence et la scalabilité.
+Il est souvent utilisé pour les systèmes distribués et les applications qui nécessitent une haute performance.</p>
+<p><strong>Origine</strong> : <br>
+Go a été développé par des ingénieurs de Google en 2007 pour créer des logiciels efficaces et évolutifs.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Gin</strong> : Un framework web minimaliste et rapide pour Go.</li>
+<li><strong>Beego</strong> : Un framework performant pour le développement rapide d'applications web.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Docker, la plateforme populaire de conteneurisation, est écrit en Go.
+<a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Billa-Valentin/pok/temps-1/">GoAuth2</a> est aussi un exemple.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>La petite créature que j'ai utilisée est en réalité la mascotte de Go, voici le vrai logo
+<img src="images/icons/go.svg" aria-hidden="true" width="40px" height="30px" style="border: none; display: inline-block"></p>
+</div></div>
+<h4><img src="images/icons/haskell.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.haskell.org/">Haskell</a></h4>
+<p>Haskell est un langage de programmation purement fonctionnel, compilé, et à typage statique. Il est connu pour son
+utilisation de fonctions immuables, ce qui signifie que les variables ne peuvent pas être modifiées une fois assignées.
+Haskell favorise l'écriture de programmes robustes, corrects et concis grâce à son système de types avancé et ses
+concepts comme les monades. Il est souvent utilisé dans les domaines nécessitant une grande fiabilité et rigueur,
+tels que les systèmes financiers, la vérification formelle et la recherche académique.</p>
+<p><strong>Origine</strong> : <br>
+Haskell a été standardisé en 1990 par un comité international, nommé d'après le logicien Haskell Curry.
+Il a été conçu pour être un langage fonctionnel pur, permettant aux chercheurs et développeurs de mieux
+explorer les paradigmes de la programmation fonctionnelle.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Yesod</strong> : Un framework web puissant et évolutif pour Haskell, conçu pour des applications sécurisées et performantes.</li>
+<li><strong>Snap</strong> : Un framework web minimaliste pour Haskell, utilisé pour construire des applications web légères.</li>
+<li><strong>Happstack</strong> : Un autre framework web complet pour Haskell, offrant un grand contrôle pour développer des applications de toutes tailles.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Haskell est largement utilisé dans le secteur financier pour développer des systèmes de trading automatisé et
+des algorithmes à haute fréquence. Par exemple, certaines entreprises de finance comme Standard Chartered utilisent
+Haskell pour garantir la fiabilité et la sécurité des systèmes de gestion des risques. Son système de types permet de
+réduire les erreurs critiques dans les applications sensibles.</p>
+<h4><img src="images/icons/java.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.oracle.com/java/">Java</a></h4>
+<p>Java est un langage de programmation à typage statique, orienté objet, et compilé. Connu pour sa portabilité grâce à la
+machine virtuelle Java (JVM), il permet d’écrire une fois du code et de l’exécuter sur n'importe quel système
+d'exploitation. Java est un langage de haut niveau, conçu pour être simple, robuste, sécurisé, et indépendant
+des plateformes, ce qui en fait un des langages les plus utilisés au monde. Il est particulièrement prisé pour les
+applications d’entreprise, les systèmes distribués, et les applications Android.</p>
+<p><strong>Origine</strong> : <br>
+Java a été développé par Sun Microsystems (aujourd'hui détenu par Oracle) et publié en 1995.
+Il a été conçu pour être un langage &quot;write once, run anywhere&quot; (WORA), ce qui signifie que le code Java
+peut fonctionner sur toute plateforme dotée de la JVM.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Spring</strong> : Un framework pour créer des applications Java d'entreprise robustes, évolutives et sécurisées.</li>
+<li><strong>Hibernate</strong> : Une bibliothèque de mappage objet-relationnel (ORM) qui facilite les interactions avec les bases de données.</li>
+<li><strong>JavaFX</strong> : Une bibliothèque pour créer des interfaces graphiques modernes et dynamiques.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Java est largement utilisé pour développer des systèmes backend robustes dans des entreprises comme
+Uber, Amazon, et eBay. Il est également essentiel dans le développement d’applications Android (voir ci-dessous).</p>
+<h4><img src="images/icons/kotlin.svg" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://kotlinlang.org/">Kotlin</a></h4>
+<p>Kotlin est un langage de programmation moderne, concis, et polyvalent qui fonctionne également sur la JVM,
+tout en étant compatible avec Java. Kotlin est un langage à typage statique et un des principaux langages
+utilisés pour le développement Android. Il offre de nombreuses améliorations par rapport à Java, telles que
+la null safety, les lambdas, et une syntaxe plus compacte, ce qui le rend plus agréable à utiliser pour les
+développeurs tout en réduisant les risques d'erreurs.</p>
+<p><strong>Origine</strong> : <br>
+Kotlin a été créé par JetBrains en 2011, une société de logiciels connue pour ses IDE (comme IntelliJ IDEA).
+Il a été conçu pour améliorer l’expérience de développement sur la JVM et a été officiellement adopté par Google en 2017
+comme langage principal pour le développement Android.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Ktor</strong> : Un framework pour créer des applications web modernes et asynchrones en Kotlin.</li>
+<li><strong>Android SDK</strong> : Utilisé avec Kotlin pour développer des applications Android performantes et intuitives.</li>
+<li><strong>Spring</strong> : Compatible avec Kotlin, il permet de tirer parti des fonctionnalités modernes de Kotlin tout en exploitant les outils du framework Spring pour créer des applications robustes.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Kotlin est aujourd’hui le langage recommandé pour le développement d’applications Android,
+ce qui a conduit des entreprises comme Pinterest et Trello à adopter Kotlin pour leurs applications mobiles.
+Son intégration native avec les outils Android et sa compatibilité avec Java en font un choix populaire
+pour les nouveaux projets Android.</p>
+<h4><img src="images/icons/javascript.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></h4>
+<p>JavaScript est le langage incontournable du web et est le seul langage qui permet de créer des interactions directement
+dans le navigateur. Il est interprété, ce qui signifie qu'il est exécuté directement par le moteur JavaScript d'un
+navigateur sans nécessiter de compilation préalable. Cela en fait l’un des langages de développement front-end les plus
+utilisés.</p>
+<p><strong>Origine</strong> : <br>
+Développé par Brendan Eich en 1995 chez Netscape, JavaScript est conçu pour ajouter de l'interactivité aux pages web.
+Contrairement à ce que suggère son nom, il n'est pas lié au langage Java.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>React</strong> : Une bibliothèque JavaScript pour la création d'interfaces utilisateur, maintenue par Facebook.</li>
+<li><strong>Angular</strong> : Un framework de développement d'applications web développé par Google.</li>
+<li><strong>Vue.js</strong> : Un framework progressif pour créer des interfaces utilisateurs et des applications monopages.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+JavaScript est utilisé par presque tous les sites web pour rendre les pages interactives. Par exemple, des plateformes comme Netflix et YouTube utilisent JavaScript pour gérer les lecteurs vidéo en ligne, la navigation fluide et l’affichage dynamique des données. De plus, les réseaux sociaux tels que Twitter et Facebook reposent fortement sur JavaScript pour offrir des expériences utilisateur réactives et interactives.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>JavaScript en tant que langage serveur</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Bien que JavaScript ait historiquement été limité aux navigateurs web, il est aujourd’hui aussi couramment
+utilisé côté serveur grâce à Node.js. Node.js a été développé en 2009 et permet d'exécuter du code JavaScript
+côté serveur. Cela a révolutionné le développement web en permettant aux développeurs d'utiliser un seul langage
+pour gérer à la fois le front-end et le back-end d'une application.</p>
+<p><strong>Utilisation réelle</strong> : <br>
+Node.js est utilisé par des entreprises comme LinkedIn, Uber et PayPal pour gérer les opérations côté serveur.</p>
+</div>
+</details>     
+</div>
+<h4><img src="images/icons/typescript.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.typescriptlang.org/">TypeScript</a></h4>
+<p>TypeScript est un sur-ensemble de JavaScript qui ajoute un typage statique, permettant de détecter les erreurs
+lors de la compilation. Cela améliore la robustesse et la maintenabilité des projets, surtout à grande échelle.</p>
+<p><strong>Origine</strong> : <br>
+Développé par Microsoft, TypeScript a été lancé en 2012 pour aider à structurer et typer le code JavaScript,
+rendant le développement plus sécurisé.</p>
+<p><strong>Utilisation réelle</strong> : <br>
+TypeScript est couramment utilisé dans des entreprises comme Slack, Airbnb, et Microsoft.</p>
+<h4><img src="images/icons/lua.gif" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.lua.org/">Lua</a></h4>
+<p>Lua est un langage de script léger et rapide, souvent utilisé comme langage embarqué dans d'autres applications,
+notamment dans le développement de jeux vidéo et de logiciels.</p>
+<p><strong>Origine</strong> : <br>
+Lua a été développé en 1993 par une équipe de chercheurs brésiliens.
+Il est conçu pour être facile à intégrer dans d'autres systèmes, ce qui en fait un langage
+parfait pour les environnements embarqués.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Love2D</strong> : Un framework pour créer des jeux 2D avec Lua.</li>
+<li><strong>Corona SDK</strong> : Un framework de développement multi-plateforme pour les applications mobiles et de bureau.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Lua est le langage de script utilisé dans Roblox, une des plus grandes plateformes de jeux en ligne.</p>
+<h4><img src="images/icons/ocaml.svg" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://ocaml.org/">Ocaml</a></h4>
+<p>OCaml est un langage de programmation fonctionnel, impératif et orienté objet,
+connu pour sa rapidité et sa polyvalence. Il est compilé et possède un système de types
+fort et statique, avec une syntaxe proche de la programmation mathématique.
+OCaml est souvent utilisé dans les domaines comme la finance, les systèmes de sécurité et la recherche,
+grâce à ses performances élevées et sa capacité à écrire du code fiable et concis.</p>
+<p><strong>Origine</strong> : <br>
+OCaml, initialement développé en France par l'INRIA en 1996, est une évolution du langage Caml, qui lui-même est une version de ML (Meta Language). Il a été conçu pour la programmation fonctionnelle, mais inclut des fonctionnalités permettant une programmation impérative et orientée objet, ce qui en fait un langage extrêmement flexible.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>ReasonML</strong> : Une extension syntaxique d'OCaml, soutenue par Facebook, qui permet de rendre OCaml plus accessible pour les développeurs web.</li>
+<li><strong>Ocsigen</strong> : Un framework complet pour le développement d'applications web riches en OCaml, intégrant un serveur web et un outil de gestion des sessions.</li>
+<li><strong>Lwt</strong> : Une bibliothèque permettant la programmation asynchrone en OCaml, largement utilisée pour la gestion des processus concurrents et des tâches réseau.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+OCaml est largement utilisé dans l'industrie financière, en particulier par des entreprises comme Jane Street,
+qui l'utilise pour développer des systèmes de trading automatisé. OCaml est également utilisé pour développer des
+outils d'analyse formelle et des logiciels critiques nécessitant une grande robustesse et sécurité.
+Grâce à ses performances élevées et son système de types, OCaml est souvent choisi pour des applications
+complexes et performantes.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>On fait du OCaml en option informatique de MP !</p>
+</div></div>
+<h4><img src="images/icons/perl.svg" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.perl.org/">Perl</a></h4>
+<p>Perl est un langage de script polyvalent, connu pour ses puissantes capacités de manipulation de texte.
+Il est souvent utilisé pour l'administration système, le traitement de fichiers et les tâches automatisées.</p>
+<p><strong>Origine</strong> : <br>
+Créé par Larry Wall en 1987, Perl était à l'origine destiné à gérer la manipulation de texte et
+les logs, mais s'est étendu pour devenir un langage généraliste.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Dancer</strong> : Un framework léger pour les applications web en Perl.</li>
+<li><strong>Mojolicious</strong> : Un framework web en temps réel basé sur Perl.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Le système de billetterie initial de Ticketmaster a été développé en Perl.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Perl n'a pas de logo officiel, j'ai utilisé le logo de la Perl foundation</p>
+</div></div>
+<h4><img src="images/icons/php.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.php.net/">PHP</a></h4>
+<p>PHP est un langage de script côté serveur conçu pour le développement web dynamique.
+Il est particulièrement adapté aux applications qui nécessitent des interactions serveur-serveur.</p>
+<p><strong>Origine</strong> : <br>
+Créé par Rasmus Lerdorf en 1994, PHP a rapidement gagné en popularité
+grâce à sa simplicité d'utilisation pour les développeurs web.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Laravel</strong> : Un framework web élégant qui simplifie les tâches courantes.</li>
+<li><strong>Symfony</strong> : Un framework flexible et performant pour des applications web complexes.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Une énorme partie d'Internet repose sur PHP. Environ 77% des sites web utilisent PHP côté serveur,
+principalement grâce à l'influence de WordPress, qui est écrit en PHP. WordPress, le CMS le plus utilisé au monde,
+alimente à lui seul plus de 40% des sites web dans le monde. Cela inclut des millions de sites de toutes tailles,
+des blogs personnels aux grandes entreprises.</p>
+<h4><img src="images/icons/python.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.python.org/">Python</a></h4>
+<p>Python est un langage de programmation de haut niveau, interprété, connu pour sa lisibilité et sa simplicité.
+Il est largement utilisé dans de nombreux domaines : développement web, analyse de données, intelligence artificielle,
+automatisation de tâches, et plus encore. Python est un langage dynamique, ce qui le rend facile à écrire et à modifier.</p>
+<p><strong>Origine</strong> : <br>
+Python a été créé par Guido van Rossum à la fin des années 1980 et publié officiellement en 1991. Son design met l'accent sur la lisibilité du code, ce qui en fait l'un des langages les plus simples à apprendre pour les débutants.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Django</strong> : Un framework web de haut niveau pour créer des applications web sécurisées et évolutives.</li>
+<li><strong>Flask</strong> : Un micro-framework léger et flexible pour des applications web simples.</li>
+<li><strong>TensorFlow / PyTorch</strong> : Des bibliothèques populaires pour le développement d'applications d'intelligence artificielle et de machine learning.</li>
+<li><strong>Pandas</strong> : Un outil puissant pour l'analyse et la manipulation de données.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Le backend d'Instagram utilise massivement Python pour gérer d'énormes quantités de données utilisateur,
+et des géants comme Google et Netflix l'utilisent dans leurs infrastructures.</p>
+<h4><img src="images/icons/r.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.r-project.org/">R</a></h4>
+<p>R est un langage de programmation et un environnement dédiés aux statistiques, à l'analyse de données et à la création de graphiques.</p>
+<p><strong>Origine</strong> : <br>
+Développé au début des années 1990 par Ross Ihaka et Robert Gentleman,
+R est principalement utilisé dans les statistiques et les sciences des données.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Shiny</strong> : Un framework pour créer des applications web interactives directement depuis R.</li>
+<li><strong>ggplot2</strong> : Une bibliothèque de visualisation de données populaire pour créer des graphiques détaillés.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+R est très utilisé dans le milieu académique et dans les institutions de recherche pour l'analyse de données et
+la modélisation statistique.</p>
+<h4><img src="images/icons/ruby.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.ruby-lang.org/en/">Ruby</a></h4>
+<p>Ruby est un langage de programmation interprété, orienté objet, conçu pour être simple et productif.
+Il est souvent utilisé pour le développement web et les scripts.</p>
+<p><strong>Origine</strong> : <br>
+Ruby a été créé par Yukihiro Matsumoto en 1995 avec pour objectif de rendre la programmation
+plus facile et agréable pour les développeurs.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Ruby on Rails</strong> : Un framework web très utilisé qui promeut la convention plutôt que la configuration.</li>
+<li><strong>Sinatra</strong> : Un framework minimaliste pour construire rapidement des applications simples.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+GitLab, une alternative populaire à Github, est développée en Ruby on Rails.</p>
+<h4><img src="images/icons/rust.svg" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.rust-lang.org/">Rust</a></h4>
+<p>Rust est un langage compilé conçu pour la vitesse et la sécurité, en particulier dans la gestion
+de la mémoire. Il est utilisé dans le développement de systèmes nécessitant haute performance et sécurité.</p>
+<p><strong>Origine</strong> : <br>
+Rust a été développé par Mozilla en 2010 avec pour objectif d'offrir des performances élevées
+sans compromis sur la sécurité mémoire.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>Rocket</strong> : Un framework web pour créer des applications rapides et sécurisées.</li>
+<li><strong>Actix</strong> : Un puissant système d'acteurs pour développer des serveurs web en Rust.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+Le moteur de rendu Servo du navigateur Firefox de Mozilla est écrit en Rust.
+En décembre 2022 il est devenu le premier langage autre que C et assembly à être utilisé dans le
+développement du kernel Linux.</p>
+<h4><img src="images/icons/swift.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://www.swift.org/">Swift</a></h4>
+<p>Swift est un langage compilé, moderne, conçu par Apple pour remplacer Objective-C dans le développement
+d'applications pour iOS, macOS, watchOS et tvOS.</p>
+<p><strong>Origine</strong> : <br>
+Swift a été introduit par Apple en 2014 comme alternative moderne à Objective-C pour le développement
+d'applications sur ses plateformes.</p>
+<p><strong>Frameworks populaires</strong>:</p>
+<ul>
+<li><strong>SwiftUI</strong> : Un framework pour la création d'interfaces utilisateurs sur toutes les plateformes Apple.</li>
+<li><strong>Vapor</strong> : Un framework web pour développer des applications côté serveur en Swift.</li>
+</ul>
+<p><strong>Utilisation réelle</strong> : <br>
+La majorité des applications iOS modernes, comme Airbnb, sont développées en Swift.</p>
+<hr>
+<h3>Langages de balisage</h3>
+<p>Les suivants ne sont pas à proprement parler des languages de programmation, mais plutôt des languages de balisage
+<span style="white-space: nowrap">(🇬🇧 &quot;markup langage&quot;)</span>.
+La distinction ne les rend évidemment pas moins utiles et ils restent des outils fondamentaux.</p>
+<blockquote>
+<p>En informatique, les langages de balisage représentent une classe de langages spécialisés dans l'enrichissement
+d'information textuelle. Ils utilisent des balises, unités syntaxiques délimitant une séquence de caractères ou
+marquant une position précise à l'intérieur d'un flux de caractères (par exemple un fichier texte).</p>
+</blockquote>
+<p><em>Wikipédia</em> - <a href="https://fr.wikipedia.org/wiki/Langage_de_balisage">Langage de balisage</a></p>
+<!-- sorry pour la longueur des titres, c'est pas possible de les couper en plusieurs bouts -->
+<h4><img src="images/icons/html.png" aria-hidden="true" width="20px" height="20px" style="border: none; display: inline"> <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> &amp; <img src="images/icons/css.svg" aria-hidden="true" width="20px" height="20px" style="height: 20px; width: auto; border: none; display: inline"> <a href=".">CSS</a></h4>
+<p>HTML (Hypertext Markup Language) structures the content of web pages, while CSS (Cascading Style Sheets) styles it.
+Together, they form the foundation of web development.</p>
+<p><strong>Origine</strong> : <br>
+HTML a été développé en 1993 par Tim Berners-Lee, CSS a suivi en 1996 pour rajouter des styles aux pages de Tim.
+Depuis nous en sommes à la HTML5 et CSS3.</p>
+<p><strong>Frameworks Populaires</strong>:</p>
+<ul>
+<li><strong>Bootstrap</strong>: A front-end framework that simplifies responsive web design using HTML and CSS.</li>
+<li><strong>Tailwind CSS</strong>: A utility-first CSS framework for rapidly building custom designs.</li>
+</ul>
+<p><strong>Real-World Use</strong>: Nearly every website in existence uses HTML and CSS for its structure and design, including Wikipedia.</p>
+<h4>XML, YAML, JSON, Markdown</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/XML"><strong>XML</strong></a> (<em>Extensible Markup Language</em>) : <br>
+Utilisé des balises pour structurer les données, HTML utilise XML pour sa structuration.<pre class="language-xml " style="counter-reset: linenumber 0"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>note</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>to</span><span class="token punctuation">></span></span>User<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>to</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>from</span><span class="token punctuation">></span></span>AI<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>from</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">></span></span>Hello, World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>note</span><span class="token punctuation">></span></span>
+</code></pre>
+Vous pourrez souvent le trouver dans des fichiers de configurations un poil datés (eg. <code>.pom</code>),
+c'était un format très populaire depuis sa création en 1996, mais est en déclin depuis l'arrivée de JSON</li>
+<li><a href="https://www.json.org/json-en.html"><strong>JSON</strong></a> (<em>JavaScript Object Notation</em>) :
+Un format d'échange de données EXTRÊMEMENT populaire (difficile de trouver des API qui ne renvoient pas de JSON) et
+relativement léger, il est basé sur un sous-ensemble du langage de programmation JavaScript<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"user"</span><span class="token operator">:</span> <span class="token string">"AI"</span><span class="token punctuation">,</span>
+  <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Hello, World!"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><a href="https://yaml.org/"><strong>YAML</strong></a> (<em>YAML Ain't a Markup Language™</em>) : <br>
+Un format facilement lisible qu'on retrouve souvent dans les fichiers de configuration<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">user</span><span class="token punctuation">:</span> AI
+<span class="token key atrule">message</span><span class="token punctuation">:</span> <span class="token string">"Hello, World!"</span>
+</code></pre>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Markdown"><strong>Markdown</strong></a> : <br>
+Un format simple pour écrire et formater du texte, largement utilisé dans la documentation.
+Il en existe de multiples variantes, qui ont des fonctionnalités supplémentaires (le site Do_It en est un exemple,
+Discord, Github en sont d'autres), on appelle la version originale <a href="https://commonmark.org/">'CommonMark'</a><pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> Heading</span>
+<span class="token list punctuation">-</span> User: AI
+<span class="token list punctuation">-</span> Message: "Hello, World!"
+</code></pre>
+</li>
+</ul>
 
 
 </article>
