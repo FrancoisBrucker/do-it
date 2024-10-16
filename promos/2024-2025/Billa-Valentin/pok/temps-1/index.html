@@ -221,37 +221,37 @@ et son support solide pour la concurrence grâce aux goroutines.</p>
 <td>Introduction à Go</td>
 </tr>
 <tr>
-<td>Lundi 10/09</td>
+<td>Lundi 9/09</td>
 <td>4H</td>
 <td>Concepts d'OAuth2</td>
 </tr>
 <tr>
-<td>Mardi 11/09</td>
+<td>Mardi 10/09</td>
 <td>4H</td>
 <td>Serveur Basique</td>
 </tr>
 <tr>
-<td>Mercredi 12/09</td>
+<td>Mercredi 11/09</td>
 <td>5H</td>
 <td>Intégration à Redis</td>
 </tr>
 <tr>
-<td>Samedi 13/09</td>
+<td>Samedi 14/09</td>
 <td>4H</td>
 <td>Token Rotation</td>
 </tr>
 <tr>
-<td>Dimanche 13/09</td>
+<td>Dimanche 15/09</td>
 <td>2H</td>
 <td>Fausse Routes Protégées</td>
 </tr>
 <tr>
-<td>Lundi 13/09</td>
+<td>Lundi 16/09</td>
 <td>4H</td>
 <td>OAuth2.1 &amp; GitHub</td>
 </tr>
 <tr>
-<td>Mardi 14/09</td>
+<td>Mardi 17/09</td>
 <td>3H</td>
 <td>Rédaction Compte Rendu</td>
 </tr>
@@ -434,16 +434,198 @@ J'ai finalement, pour la postérité, décidé d'utiliser un wrapper existant (<
 <p>Pour ce qui est du stockage des codes d'accès et des tokens de refresh, j'ai décidé d'utiliser Redis pour sa simplicité
 et la possibilité d'assigner une durée de vie aux données stockées après laquelle elles expirent.</p>
 <h2>Sprint 2</h2>
-<h3>Planning Prévisionnel</h3>
+<h3>Planning Prévisionnel Initial</h3>
 <h4>2.1 Tests et Client</h4>
 <ul>
-<li>[ ] Écrire des tests unitaires pour quelques fonctions internes.</li>
+<li>[X] Écrire des tests unitaires pour quelques fonctions internes.</li>
 <li>[ ] Écrire des tests d'intégration pour les routes principales.</li>
 </ul>
 <h4>2.2 Persistence des données</h4>
 <ul>
 <li>[ ] Choisir et configurer une base de données (ex. MySQL).</li>
 <li>[ ] Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.</li>
+</ul>
+<h3>Planning Prévisionnel Révisé</h3>
+<h4>2.1 Tests et Client</h4>
+<ul>
+<li>[X] Écrire des tests unitaires pour quelques fonctions internes.</li>
+<li>[ ] Écrire des tests d'intégration pour les routes principales.</li>
+</ul>
+<h4>2.2 Persistence des données</h4>
+<ul>
+<li>[ ] Choisir et configurer une base de données (ex. MySQL).</li>
+<li>[ ] Mettre en place les schémas de base pour stocker les utilisateurs, les clients OAuth2, et les tokens.</li>
+</ul>
+<h4>2.3 Docker &amp; HTTPS</h4>
+<ul>
+<li>[X] Mettre en place un proxy HTTPS</li>
+<li>[X] Dockerizer l'application</li>
+</ul>
+<h4>2.4 CSS! (Pour le coup pas très plannifié)</h4>
+<ul>
+<li>[X] Faire une plus jolie page d'autorisation</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mercredi 18/09</td>
+<td>1H</td>
+<td>Ajout des Clients</td>
+</tr>
+<tr>
+<td>Samedi   21/09</td>
+<td>2H</td>
+<td>Rédaction Tests</td>
+</tr>
+<tr>
+<td>Dimanche 22/09</td>
+<td>2H</td>
+<td>Base de données</td>
+</tr>
+<tr>
+<td>Samedi    5/10</td>
+<td>3H</td>
+<td>Docker</td>
+</tr>
+<tr>
+<td>Dimanche 13/10</td>
+<td>2H</td>
+<td>CSS</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>10H</strong></td>
+<td><strong>0 Overtime 😎</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Rétro</h3>
+<p>Plutôt content de ma gestion du temps sur ce sprint, cependant je n'ai pas fait tout ce que je souhaitais.
+C'est principalement parce que je me suis rendu compte que ce n'était finalement pas vraiment des problématiques Go
+et qu'ayant déjà réalisé les tâches en question moulte fois pendant l'année passée ça ne me motivait pas du tout.</p>
+<p>J'ai donc décidé de rajouter une partie Docker au projet, pour affiner mes connaissances sur le sujet, en l'occurrence
+les multistage builds et docker compose.</p>
+<p>Le dernier week-end, je venais de visionner un cours d'<a href="https://www.youtube.com/watch?v=OXGznpKZ_sA">introduction au CSS</a>
+(<em>je recommande fortement si vous avez 11h à perdre</em>) alors je me suis dit que je pourrais mettre dans mon POK de quoi
+m'exercer un peu et passer les 2 dernières petites heures que j'avais à remplir.</p>
+<h3>Clients</h3>
+<p>J'ai commencé rajouter la prise en compte des clients dans la vérification OAuth :
+maintenant seulement les clients enregistrés préalablement peuvent utiliser la route d'authentification
+et l'URI de redirection est aussi vérifiée avant de transmettre des codes d'accès au client. C'est une partie
+importante d'OAuth, sinon n'importe qui peut se faire passer pour un client et rediriger les réponses vers une route
+qu'il contrôle.</p>
+<h3>Tests</h3>
+<p>Écrire des tests en Go, c'est super, un peu verbose (comme Go en général) mais vraiment facile.
+Imaginons que j'ai un fichier <code>math.go</code>, pour créer des tests pour celui-ci, je crée un fichier <code>math_test.go</code>.
+Ensuite tout est disponible, dans la librairie standard avec <code>testing</code></p>
+<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token comment">// math.go</span>
+<span class="token keyword">func</span> <span class="token function">plus</span><span class="token punctuation">(</span>a <span class="token builtin">int</span><span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span>
+
+<span class="token comment">// math_test.go</span>
+<span class="token keyword">import</span> <span class="token string">"testing"</span>
+
+<span class="token keyword">func</span> <span class="token function">Test_plus</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// Le critère de test est simple: si la fonction de test renvoie une erreur fail sinon c'est bon.</span>
+   t<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token string">"Test plus"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result <span class="token operator">:=</span> <span class="token function">plus</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> result <span class="token operator">!=</span> <span class="token number">3</span> <span class="token punctuation">{</span>
+         t<span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"plus() = %d, want %v"</span><span class="token punctuation">,</span> result<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Base de données</h3>
+<p>Comme à son habitude, la librairie standard de Go est bien fournie, on peut utiliser
+<a href="https://pkg.go.dev/database/sql"><code>database/sql</code></a> pour faire l'interfaçage avec les bases de données SQL.
+J'ai un peu bidouillé sur un projet à côté pour essayer de me connecter à un db existante et en sortir quelques données,
+une fois ça fait, j'ai commencé à configurer une base de donnée SQLite pour l'application, mais je me suis arrêté en
+chemin. J'avais un peu perdu la motivation et trouvant le process un peu fastidieux et répétitif (n'aidant pas à se motiver)</p>
+<p>Ainsi, j'ai plutôt décidé de rapidement créer une fausse base de données très basique (un dictionnaire, et des fonctions
+<code>GetUser</code> / <code>GetClient</code>) pour me pencher sur un sujet qui m'intriguait et un qui me titillait :</p>
+<ol>
+<li>Dockerizer l'application</li>
+<li>Mettre l'application en HTTPS</li>
+</ol>
+<h3>Docker</h3>
+<h4>HTTPS</h4>
+<p>Le plus simple pour mettre une application en HTTPS c'est en fait, de ne rien changer !
+Ce qu'on met en place, c'est un proxy, un programme qui va servir d'intermédiaire, on bloque notre site de l'extérieur
+et on oblige toutes les requêtes à passer par le proxy lui en HTTPS (on verra comment plus tard) qui va relayer les
+requêtes à notre site en HTTP tout simple puis transmettre les réponses du site au client en HTTPS.</p>
+<p><img src="proxy.png" alt="Un serveur proxy"></p>
+<p>J'ai décidé d'utiliser <a href="https://caddyserver.com/">Caddy</a> un proxy ~relativement simple à mettre en place, disponible
+en image docker et surtout qui gère le SSL (protocole qui garantie la sécurité d'HTTPS) tout seul à ma place.
+Une fois la configuration faite et Caddy lancé, magie !, mon site est disponible en HTTPS <em>même si mon navigateur reste suspicieux</em>.</p>
+<h4>Dockerisation</h4>
+<h5>Multi-Stage Build</h5>
+<p>J'ai mis en place un <a href="https://docs.docker.com/build/building/multi-stage/">multi-stage build</a> dont l'objectif est
+d'optimiser la vitesse de création des container et minimizer leur taille finale.</p>
+<p>On peut créer des containers intermédiaires avec des images lourdes, par exemple avec de quoi compiler du Go,
+compiler notre code puis le transférer dans une image finale qui elle ne contient rien de plus que de quoi
+exécuter un programme binaire, notre programme et les assets dont il a besoin (eg. des templates HTML, notre CSS ...).</p>
+<p>Voici à quoi ressemble mon Dockerfile</p>
+<pre><code># Image lourde pour compiler du go
+FROM golang:1.23.1-alpine AS builder
+
+WORKDIR /app
+
+# Copie des requirements et téléchargement des dépendances
+COPY src/go.mod src/go.sum ./
+RUN go mod download
+
+# Copie du code et compilation
+COPY src/ .
+RUN go build -o main .
+
+# Image minimale docker
+FROM scratch
+LABEL authors=&quot;Valentin Billa&quot;
+
+WORKDIR /root/
+
+# Transfert du programme et des assets dans le container
+COPY --from=builder /app/main .
+COPY resources/templates ./resources/templates
+COPY resources/assets ./resources/assets
+
+# Copie de la configuration et lancement de l'application
+COPY config.yml .
+CMD [&quot;./main&quot;]
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Un truc intéressant dans ce Dockerfile c'est que je copie télécharge d'abord les dépendances PUIS je copie et compile
+le code, ça permet de bien accélérer la création du container, car tant que les requirements ne changent pas, Docker
+peut utiliser son cache pour sauter l'étape de téléchargement.</p>
+</div></div>
+<h5>Docker Compose</h5>
+<p><a href="https://docs.docker.com/compose/">Compose</a> permet d'orchestrer la création de plusieurs containers et donc de lancer
+d'un coup tout ce dont j'ai besoin pour faire tourner l'appli (proxy, application, database, redis)</p>
+<p>J'ai passé un petit moment à lire la doc et comprendre comment ça fonctionne, c'est très pratique. Actuellement,
+je n'ai ni database ni redis en local mais dans le futur je compte le rajouter au projet et ce sera très utile d'avoir
+un compose déjà commencé.</p>
+<h3>CSS</h3>
+<p>Pour le CSS, j'ai décidé de m'entraîner un peu en touchant à pas mal des concepts que j'ai vu dans la vidéo dont je
+parle dans la rétro :</p>
+<p><img src="authorize.png" alt="Page d'autorisation"></p>
+<ul>
+<li><code>position: absolute</code> - Logo</li>
+<li><code>display: flex</code> - Position centrée de la carte blanche</li>
+<li><code>display: grid</code> - Positionnement des éléments dans la carte</li>
+<li><code>@media</code> - Responsive</li>
+<li>Selecteurs &amp; Animations - Label dans les inputs</li>
 </ul>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -454,6 +636,7 @@ et la possibilité d'assigner une durée de vie aux données stockées après la
 <li><a href="https://go.dev">Site officiel de Go</a></li>
 <li><a href="https://datatracker.ietf.org/doc/html/rfc6749">Spécification OAuth2.0</a></li>
 <li><a href="https://www.oauth.com/playground/">Playground OAuth2.0</a></li>
+<li><a href="https://docs.docker.com/">Documentation Docker</a></li>
 </ul>
 </div></div>
 
