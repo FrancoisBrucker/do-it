@@ -34,6 +34,9 @@ Savoir un peu coder en HTML (balises : a, div, button, ul, li, hX)
 - [How to import Google Font](https://www.youtube.com/watch?v=E7QPO8P8nls)
 - [Github avec le projet](https://github.com/KevinBERNARD1901/site_portfolio)
 - [Barre mouvante inspiration](https://www.youtube.com/watch?v=aswRKAjjWuE)
+- [Tuto Email JS](https://www.youtube.com/watch?v=BgVjild0C9A)
+- [Documentation onclick](https://developer.mozilla.org/fr/docs/Web/API/Element/click_event)
+- [Documentation hover](https://developer.mozilla.org/fr/docs/Web/API/Element/mouseover_event)
 
 {% endlien %}
 
@@ -379,7 +382,9 @@ Dans un premier temps j’ai commencé par animer la barre mouvante :
 
 Au début j’ai essayer de faire 'bouger' ma barre en utilisant du CSS mais j’ai tout de suite compris que si je voulais une animation avec une barre qui se déplace quand ma souris survole les autres liens de ma barre de navigation, j’allais avoir besoin de JavaScript.
 
-- [Barre mouvante inspiration](https://www.youtube.com/watch?v=aswRKAjjWuE)
+{% lien %}
+[Barre mouvante inspiration](https://www.youtube.com/watch?v=aswRKAjjWuE)
+{% endlien %}
 
 C’était la première fois que j’utilisais JavaScript donc je me suis d’abord renseigner sur la manière de l’utiliser et quelle était la logique du langage de programmation de JavaScript. (Lien)
 
@@ -531,6 +536,12 @@ function send_mail(){
 }
 ```
 {% enddetails %}
+
+{% lien %}
+
+[Tuto Email JS](https://www.youtube.com/watch?v=BgVjild0C9A)
+
+{% endlien %}
 
 #### Animation du hover et de la sélection d’une image
 
@@ -701,6 +712,13 @@ J'ai eu un peu de mal à faire en sorte d'avoir les coordonnées de l'image qui 
 J'avais au début un problème parce que l'accès à la référence de l'image n'étais disponible qu'après l'avoir cliquée alors que si je mettais la référence dès le hover, je l'avais à la fois pour l'événement hover et onclick.
 
 ![alt text](media/Sprint2_5_hover.png)
+
+{% lien %}
+
+- [Documentation onclick](https://developer.mozilla.org/fr/docs/Web/API/Element/click_event)
+- [Documentation hover](https://developer.mozilla.org/fr/docs/Web/API/Element/mouseover_event)
+
+{% endlien %}
 
 #### Retour sur expérience
 
