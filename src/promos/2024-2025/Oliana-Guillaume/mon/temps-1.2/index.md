@@ -31,9 +31,7 @@ Les liens utiles pour la compréhension de ce projet.
 
 {% endlien %}
 
-Ce MON couvre deux aspects de la finance avec Python :
-1. **Optimisation de Portefeuille** : Utilisation de techniques d'optimisation pour maximiser le rendement d'un portefeuille tout en minimisant le risque.
-2. **Stratégie de Trading avec TRIX** : Développement d'une stratégie de trading basée sur l'indicateur technique TRIX et backtest de la stratégie pour évaluer sa performance.
+
 
 ---
 
