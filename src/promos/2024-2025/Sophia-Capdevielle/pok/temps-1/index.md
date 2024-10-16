@@ -25,6 +25,9 @@ Il existe diverses manières de code un calendrier avec Vue.js:
 * À partir de zéro 
 J'ai donc voulu explorer ces méthodes et en tester deux.
 
+Code final complet : [mon-calendrier-event-f](https://github.com/sophia-capdevielle/mon-calendrier-event-f)
+
+
 #### Sprint 1
 
 L'objectif de ce premier sprint était de prendre en main l'outil Vue.js pas à pas en utilisant les bases du front-end rappellées dans mon MON 1.1. 

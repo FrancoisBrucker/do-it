@@ -8,7 +8,7 @@ date: 2024-09-08
 tags: 
   - "temps 1"
 
-résumé: "Ce MON vise à à construire un socle de connaissance solide de Google Appscript. De plus, il présente les similitudes entre ce langage et VBA afin de pouvoir passer de l'un à l'autre pour les fonctionnalités principales."
+résumé: "Ce MON vise à à construire un socle de connaissances pour s'initier à Google Appscript. De plus, il présente les similitudes entre ce langage et VBA, afin de pouvoir passer de l'un à l'autre pour les fonctionnalités principales."
 ---
 
 {% prerequis %}
@@ -18,17 +18,20 @@ résumé: "Ce MON vise à à construire un socle de connaissance solide de Googl
 {% endprerequis %}
 {% lien %}
 
-- Lien pratique pour commencer en VBA : https://excel-pratique.com/fr/vba
-- Lien pratique pour commencer en AppScript : https://sheets-pratique.com/fr/apps-script
+- Site pratique pour commencer en VBA : https://excel-pratique.com/fr/vba
+- Site pratique pour commencer en AppScript : https://sheets-pratique.com/fr/apps-script
 
 {% endlien %}
 
-## Contexte et remarques
+## Contexte
+Ayant dû utiliser Google AppScript pour des projets personnels avant de réaliser ce MON, j'ai préféré ajouter une comparaison à VBA afin qu'il ait une plus-value supplémentaire pour moi et les prochains lecteurs.
 
-Le langage Google Appscript permet de coder des programmes sur Google Drive et notamment Google Sheet. Il est pour Google Sheet ce que VBA est pour. Toutefois, la syntaxe de ces deux langages est assez différentes. Ce MON contient un ensemble d'éléments de base pour coder en AppScript ainsi qu'une comparaison avec ldes éléments de base de VBA.
+## Introduction
+
+Le langage Google Appscript permet de coder des programmes sur Google Drive et notamment Google Sheet. Il est pour Google Sheet ce que VBA est pour Excel. Toutefois, les syntaxes de ces deux langages sont assez différentes. Ce MON contient un ensemble d'éléments de base pour coder en AppScript ainsi qu'une comparaison avec des éléments de base de VBA.
 
 {% note %}
-ChatGPT peut s'avérer un véritable allié pour apprendre à coder dans ces langages. Attention toutefois à vérifier tous les résultats proposés : en effet certains ne fonctionnent pas. Une grande partie de ce MON a été réalisé en s'appuyant sur ChatGPT
+ChatGPT peut s'avérer être un véritable allié pour apprendre à coder dans ces langages. Attention toutefois à vérifier tous les résultats proposés : en effet certains ne fonctionnent pas. Une partie de ce MON a été réalisé en s'appuyant sur ChatGPT.
 {% endnote %}
 
 ## Comment utiliser AppScript ?
@@ -39,23 +42,23 @@ Pour créer un projet AppScript depuis un fichier GSheet, il suffit de cliquer s
 
 - Nommer son projet
 - Nommer son premier fichier (par défaux appelé "Code.gs")
-- Créer une fonction de mise en route, par exemple une fonction affichant "Hello World". Cela permettra de lancer les demandes d'autorisation pour l'accès aux données. Chaque utilisateur des différentes fonctions et programmes que vous créez doivent autoriser vos programmes à acceder à vos données.
+- Créer une fonction de mise en route, par exemple une fonction affichant "Hello World" dans une cellule d'un tableau. Cela permettra de lancer les demandes d'autorisation pour l'accès aux données. Chaque utilisateur des différentes fonctions et programmes que vous créez doivent autoriser vos programmes à acceder à vos données.
 
 {% attention '**ATTENTION !**' %}
-Lorsque vous travaillez avec d'autres collaborateurs, chacun doit réaliser les tâches d'autorisation avant toute automatisation (Utilisation de programme et/ou d'automatisation créées par d'autres personnes, lancements différés automatiques...).
+Lorsque vous travaillez avec d'autres collaborateurs, chacun doit réaliser les tâches d'autorisation avant toute automatisation (Utilisation de programmes et/ou d'automatisation créées par d'autres personnes, lancements différés automatiques...).
 {% endattention %}
 
 ### Les choses à savoir
 
-Google AppScript possède un certain nombre de défaut qui n'en sont plus lorsque nous savons qu'ils existent.
+Google AppScript possède un certain nombre de défauts qui n'en sont plus lorsque nous savons qu'ils existent.
 
 {% details "L'enregistrement" %}
-L'enregistrement est réalisé soit manuellement soit avant chaque lancement de programme. Il est réalisé sur l'ensemble du projet et indique les erreur de synthaxe. Cela permet en effet de limiter le risque de perte mais pose un problème majeur : vous ne pouvez pas laisser une fonction en attente ! Si vous lancez un programme vous devez vous assurer que la synthaxe de l'entièreté de votre projet est correcte.
-Ainsi, il est pratique **d'enregistrer régulièrement son travail !** et de convertir les blocs "en attente" en commentaire.
+L'enregistrement est réalisé soit manuellement, soit avant chaque lancement de programme. Il est réalisé sur l'ensemble du projet et indique les erreurs de syntaxe. Cela permet en effet de limiter le risque de perte mais pose un problème majeur : vous ne pouvez pas laisser une fonction en attente ! Si vous lancez un programme vous devez vous assurer que la synthaxe de l'entièreté de votre projet est correcte.
+Ainsi, il est pratique **d'enregistrer régulièrement son travail !** et de convertir les blocs "en attente", en commentaire.
 {% enddetails %}
 
 {% details "Les droits d'accès" %}
-Comme évoqué précemment, tout utilisateur d'un nouveau programme doit d'abord autorisé ce dernier à s'exécuter. Pour se faire, il est intéressant de créer une fonction simple, permettant cependant d'accéder ou de modifier la valeur d'une cellule du document GSheet (N'afficher qu'un message dans la boite de dialogue ne fonctionne par exemple pas).
+Comme évoqué précemment, tout utilisateur d'un nouveau programme doit d'abord autoriser ce dernier à s'exécuter. Pour se faire, il est intéressant de créer une fonction simple, permettant d'accéder ou de modifier la valeur d'une cellule du document GSheet (N'afficher qu'un message dans la boite de dialogue ne fonctionne par exemple pas).
 
 ```
 function Hello_world() {
@@ -75,19 +78,19 @@ Après avoir cliqué sur le bouton de lancement, un certain nombre de fenêtre v
 {% enddetails %}
 
 {% details "Les déclencheurs" %}
-Les déclencheurs permettent de lancer des porgrammes de manière différents ou lors d'un évènement.
+Les déclencheurs permettent de lancer des programmes de manière différentes ou lors d'un évènement.  
 **Types de déclencheurs :**
-- Basé sur une feuille de calcul : Ouverture, modification (modification manuelle d'une cellule), changement (modifications structurelle ou par des programmes : nouvelle feuille, nouvelle colonne...), envoie d'un formulaire.
+- Basé sur une feuille de calcul : Ouverture, modification (modification manuelle d'une cellule), changement (modifications structurelles ou par des programmes : nouvelle feuille, nouvelle colonne...), envoie d'un formulaire.
 - Horaires : date et heure précise, intervalles de temps (de la minute au mois).
-- Bassé sur un agenda : A la modification d'un google agenda.
+- Basé sur un agenda : A la modification d'un google agenda.
 
 ![Menu déclencheurs](Menu%20déclencheurs.png)
 ![Réglage déclencheur](Réglage%20déclencheur.png)
 {% enddetails%}
 
-{% details "Journal d'éxécution" %}
-Le journal d'éxécution permet de tester ses fonctions et programmes plus facilement, sans avoir à afficher des boites de dialogues nécessitant une action utilisateur. Par exemple, fermer la boite de dialogue pour que le programme puisse continuer.
-On utilise donc la commande **console.log** pour faire appraraïtre des résultats dans le journal
+{% details "Journal d'exécution" %}
+Le journal d'exécution permet de tester ses fonctions et programmes plus facilement, sans avoir à afficher des boites de dialogues nécessitant une action utilisateur. Par exemple, fermer la boite de dialogue pour que le programme puisse continuer.
+On utilise donc la commande **console.log()** pour faire appraraïtre des résultats dans le journal
 ```
 console.log("7");
 console.log("8");
@@ -96,14 +99,13 @@ Résultat :
 ![Journal d'exécution](./Journal%20d'exécution.png)
 {% enddetails %}
 
-## Synthaxes AppScript et VBA
+## Syntaxes AppScript et VBA
 
 {% attention %}
 En Appscript, chaque ligne doit être terminée par **";"** !!!!
 {% endattention %}
 {% info %}
-Les commentaire se font :
-
+Les commentaires se font :  
 - **En VBA :** Avec ***'***
 - **En AppScript :** Avec ***//***
 {% endinfo %}
@@ -112,11 +114,11 @@ Les commentaire se font :
 
 Considérons les données suivantes : 
 - Un fichier (Gsheet ou Excel) nommé "Suivi"
-- Suivi possède deux feuilles : "Page de garde" et "KPI" telles que suit :
+- "Suivi" possède deux feuilles : "Page de garde" et "KPI" telles que suit :
 
 ### Variables
 #### Déclarer des variables
-En VBA ou en AppScript il n'est pas nécessaire de déclarer les variable que l'on utilise. Cela reste tout de même une bonne pratique.
+En VBA ou en AppScript il n'est pas nécessaire de déclarer les variables que l'on utilise. Cela reste tout de même une bonne pratique pour ne pas avoir de problème entre variables locales et variables globales.
 **En VBA :**
 ```
 Sub test()
@@ -145,7 +147,7 @@ function Variables() {
 **En Appscript :**
 | Type | Description | Conversion |
 |------|-------------|------------------------|
-| Number | Nombres entiers et flottants | Fonction **Number()**, s'applique aux chaines de carcatères et aux booléens |
+| Number | Nombres entiers et flottants | Fonction **Number()**, s'applique aux chaines de caractères et aux booléens |
 | String | Chaine de caractère | Méthode **.toString()**|
 | Boolean | Valeur booléenne : **true** ou **false** | Fonction **Boolean()**. Renvoie true pour toute chaine de caractère autre que la chaine vide "" et pour tout Number autre que 0 |
 | Array | Tableaux | |
@@ -153,14 +155,14 @@ function Variables() {
 **En VBA :**
 | Type | Description | Conversion |
 |------|-------------|------------------------|
-|Integer| Entiers entre -32768 et 32767 | Fonction **CInt()** |
-|Long| Entiers entre -2147483648 et 2147483647|Fonction **CLng**|
+|Integer| Entiers entre -32 768 et 32 767 | Fonction **CInt()** |
+|Long| Entiers entre -2 147 483 648 et 2 147 483 647|Fonction **CLng**|
 |Double|Nombres décimaux|Fonction **CDbl()**|
 |String|Chaines de caractère|Fonction **CStr()**|
 |Boolean|Valeur booléenne : **True** ou **False**|Fonction **CBool()**|
 
 ### Opérateurs logiques et conditions
-Supposons que nous voulons tester la valeur d'une variable : si elle est supérieure à 5, on lui ajoute 10 ; si elle est égale à 2, on lui attribue la valeur 0 ; sinon, on lui ajoute 5.
+Supposons que nous voulons tester la valeur d'une variable : si elle est supérieure à 5, on lui ajoute 10 ; si elle est égale à 2, on lui attribue  0 ; sinon, on lui ajoute 5.
 
 **En Appscript :**
 ```
@@ -186,7 +188,7 @@ End If
 ```
 ### Boucles
 #### Boucle while
-Suppossons que nous voulons connaitre le premier éléments de la suite de Fibonacci supérieur à 8 ainsi que son rang dans la suite.
+Suppossons que nous voulons connaitre le premier élément de la suite de Fibonacci supérieur à 8, ainsi que son rang dans la suite.
 {% details "Rappel sur la suite de Fibonacci" %}
 D'après Wikipédia :
 ![Suite de Fibonacci](./Suite%20de%20Fibonacci.png)
@@ -229,6 +231,7 @@ MsgBox (f1)
 
 #### Boucle for
 Reprenons l'exemple de la suite de Fibonacci, cette fois-ci, nous voulons créer une liste avec les n premiers éléments de la suite.
+
 **En AppScript :**
 ```
   rang = 50;
@@ -244,7 +247,7 @@ Reprenons l'exemple de la suite de Fibonacci, cette fois-ci, nous voulons créer
     liste.push(f1);   
   }
 ```
-**EN VBA :**
+**En VBA :**
 ```
 rang = 50
 f0 = 0
@@ -261,8 +264,12 @@ Next
 ```
 ### Les listes
 #### Doit-on réellement utiliser des listes ? L'utilité d'un "back-end"
-AppScript et VBA sont souvant utilisés pour intéragir avec des tableurs. Il est donc facile de stocker des valeurs dans un de ces tableaux.
-Lorsque des listes sont utilisées de manière récurentes pour l'exécution d'un programme, il peut être interessant de créer une feuille de calcul annexe permettant de stocker et d'accéder à différentes données. J'ai pour habitude de nommer cette feuille **Back-end**.
+AppScript et VBA sont souvent utilisés pour intéragir avec des tableurs. Il est donc facile de stocker des valeurs dans un de ces tableaux.
+Lorsque des listes sont utilisées de manière récurrente pour l'exécution d'un programme, il peut être interessant de créer une feuille de calcul annexe permettant de stocker et d'accéder à différentes données. J'ai pour habitude de nommer cette feuille **Back-end**.
+
+{% attention %}
+En VBA, l'utilisation de listes ou de tableaux n'est pas facile, voire ineffcicace.
+{% endattention %}
 
 #### Opérations sur les listes
 ##### ¤ Créer une liste
@@ -316,7 +323,7 @@ nombre = 2;
 liste.splice(position,nombre,"delta","mu"); // Permet de supprimer un certain nombre d'éléments à partir d'une position initiale et d'ajouter d'autres éléments à la place
 ```
 {% details "Méthode .splice()" %}
-La méthode **.splice()** permet de supprimer des éléments mais aussi d'ajouter des éléments à une certaine position en mettant le nombre d'élements à supprimer à 0.
+La méthode **.splice()** permet de supprimer des éléments mais aussi de les ajouter à une certaine position à place d'un certain nombre d'autres.
 ```
 liste = [1,2,3,4,5,6,7,8,9,10];
 liste.splice(4,0,152,189,204); // 152, 189, 204 sont les valeurs insérée à la position 4
@@ -337,21 +344,21 @@ liste.Add "z"
 ```
 {% attention %}
 En VBA, on ne peut pas éliminer facilement un élément d'une Collection. Il faut utiliser une boucle pour créer une nouvelle collection dépourvue des éléments à supprimer.
-Les **ArrayList** sont en cela plus simples d'utilisation mais tous les ordinateurs ne les acceptent pas (c'est le cas du miens). On constate donc que VBA préviligie l'utilsation de classeurs Excel.
+Les **ArrayList** sont en cela plus simples d'utilisation mais il semble nécessaire d'importer des bibliothèsques spéciales pour cela.
 {% endattention %}
 
 ## Créer des programmes et des fonctions
 ### AppScript
 Pour travailler en AppScript il est nécessaire d'utiliser des fonctions ou de définir les fonctions utilisées dans un fichier à part. En effet, il est possible d'écrire un programme sans fonction au sein d'un fichier. Cependant, lors de l'éxecution de celui-ci, toutes les fonction également définies sur le fichier seront exécutées.
 
-Pour définir des fonctions :
+**Pour définir des fonctions :**
 ```
 function MaFonction(x,y){
   return()
 }
 ```
-- Notons qu'une fonction peut ne rien renvoyer et donc ne pas comporter de return.
-- Pour utiliser une fonction au sein d'une d'autre, il suffit de l'appliquer, la fonction sera notamment proposée après avoir tapé les premiers caractères de son nom.
+- Notons qu'une fonction peut ne rien renvoyer et donc peu ne pas comporter de return().
+- Pour utiliser une fonction au sein d'une autre, il suffit de l'appliquer, la fonction sera notamment proposée après avoir tapé les premiers caractères de son nom.
 ### VBA
 Pour travailler en VBA, il faut obliagtoirement travailler au sein d'un **Sub** dans lequel il sera possible d'appeler d'autres **Sub** ou d'autres **fonctions**.
 ```
@@ -365,7 +372,7 @@ x = 2
 Call MonSub(x) // La fonction MonSub est appliquée à x, qui devient donc égal à 3
 End Sub
 ```
-Lorsque nous voulons utilser une fonction renvoyant quelque chose, il faut utiliser Function
+Lorsque nous voulons utilser une fonction renvoyant quelque chose, il faut utiliser **Function**
 ```
 Function Ajouter_Deux(argument)
 Ajouter_Deux = argument + 2
@@ -375,11 +382,11 @@ End Function
 La valeur renvoyée par la fonction doit posséder le même nom que la fonction.
 {% endattention %}
 
-## Les fonctions utiles
-Supposons que nous travaillons avec un document nommé "Suivi" et possédant deux feuilles :"Page de garde" et "Suivi".
+## Les fonctions utiles en AppScript
+Supposons que nous travaillons avec un document nommé "Suivi" et possédant deux feuilles : "Page de garde" et "KPI".
 
 ### Accéder à des fichiers et des feuilles de calcul
-Pour pouvoir accéder à un document GSheet, plusieurs méthodes sont possible :
+Pour pouvoir accéder à un document GSheet, plusieurs méthodes sont possibles :
 ```
 Document = SpreadsheetApp.getActive(); // La variable Document permet maintenant de se référer au document GSheet ouvert.
 DocumentBis = SpreadsheetApp.OpenByUrl("https://..."); // La variable DocumentBis permet de se référer au document dont on a donné l'url.
