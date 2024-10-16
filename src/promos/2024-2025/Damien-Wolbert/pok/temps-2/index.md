@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Réaliser un outil de dimensionnement de câbles basse tension avec python"
 authors:
   - Damien WOLBERT
 

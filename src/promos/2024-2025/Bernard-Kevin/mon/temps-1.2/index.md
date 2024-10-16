@@ -130,7 +130,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 });
 ```
 
-### 2.3 Envoi d'email avec PHP (PHPMailer)
+<!-- ### 2.3 Envoi d'email avec PHP (PHPMailer)
 
 En PHP, la fonction native `mail()` est assez basique et limitée. C’est pourquoi **PHPMailer** est souvent utilisé pour envoyer des emails plus complexes et sécurisés.
 
@@ -180,9 +180,9 @@ try {
 } catch (Exception $e) {
     echo "L'email n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
 }
-```
+``` -->
 
-### 2.4 Envoi d'email avec Python (smtplib)
+### 2.3 Envoi d'email avec Python (smtplib)
 
 En Python, on utilise la bibliothèque **smtplib** pour envoyer des emails via le protocole SMTP.
 

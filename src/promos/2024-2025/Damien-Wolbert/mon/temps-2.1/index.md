@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Les différentes façons de faire une interface graphique avec python"
 authors:
   - Damien WOLBERT
 
