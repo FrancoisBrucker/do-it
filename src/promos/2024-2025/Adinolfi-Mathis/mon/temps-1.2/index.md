@@ -82,11 +82,20 @@ Inquiète, l'entreprise Schneider a publié une estimation des dépenses en éne
 <div style="text-align: center;">
     <img src="Estimation.png" width="800"/>
     <br>
-    <u> Image 2 : Estimation des consommations éléectriques des datacenters en 2028 [8] </u>
+    <u> Image 2 : Estimation des consommations électriques des datacenters en 2028 [8] </u>
 </div>
 <br>
 
 Soit une augmentation de 400 % pour l'IA d'ici 2028 !
+
+<div style="text-align: center;">
+    <img src="Conso_datacenter_2030.png" width="800"/>
+    <br>
+    <u> Image 3 : Estimation des consommations électriques des datacenters en 2030 [10] </u>
+</div>
+<br>
+
+Et représentera plus de 3 % de la consommation mondiale en 2030.
 
 En supposant que nous observons la même augmentation dans les rejets de carbone causés par l'IA (hypothèse minimaliste), d'ici 2028, le bilan carbone de l'IA serait de 64,4 MTCO2, ce qui équivaut aux émissions de carbone de la France sur une année.
 
@@ -95,11 +104,11 @@ Tout n'est pas mauvais dans cette technologie. Bien que son entraînement et son
 <div style="text-align: center;">
     <img src="Comparaison.png" width="500"/>
     <br>
-    <u> Image 3 : Comparaison des empreintes carbone pour une même tâche réalisée par un humain et des IA [9] </u>
+    <u> Image 4 : Comparaison des empreintes carbone pour une même tâche réalisée par un humain et des IA [9] </u>
 </div>
 <br>
 
-Cependant, il faut être prudent avec une telle étude car elle ne prend pas en compte l'effet rebond.
+Ainsi, ce qui est inquiétant, ce n'est pas la technologie en elle-même, mais les réactions qu'elle suscite, et comment les gens l'intégreront dans leur vie : l'utiliseront-ils de façon raisonnée ou à tort et à travers. Ce qui est à craindre, c'est l'effet rebond.  
 
 ## ⌛ Conclusion
 
@@ -128,5 +137,7 @@ Ainsi, il devient urgent de limiter l'usage de l'IA aux tâches qui lui sont ré
 **[8] -** [Etude Schneider electric](https://www.se.com/us/en/download/document/SPD_WP110_EN/)
 
 **[9] -** [Gains observés grâce à l'IA !?](https://intelligence-artificielle.developpez.com/actu/356207/Les-emissions-de-carbone-liees-a-l-ecriture-et-a-l-illustration-sont-plus-faibles-pour-l-IA-que-pour-l-homme-selon-une-etude-sur-l-empreinte-environnementale-relative-de-l-IA-et-de-l-homme/)
+
+**[10] -** [Simulation des dépenses énergétiques 2030](https://cloud-computing.developpez.com/actu/310748/La-consommation-d-electricite-des-datacenters-dans-l-Union-europeenne-pourrait-atteindre-jusqu-a-98-5-TWh-d-ici-2030-selon-une-etude-menee-par-la-Commission-europeenne/)
 
 {% endlien %}
