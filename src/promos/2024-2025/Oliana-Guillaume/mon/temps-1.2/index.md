@@ -5,7 +5,7 @@ title: "Analyse de Portefeuille d'Actions avec Python"
 authors:
   - OLIANA Guillaume
 
-date: 2024-1-10
+date: 2024-01-10
 
 tags: 
   - "temps 1"
