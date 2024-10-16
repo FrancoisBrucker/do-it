@@ -25,7 +25,7 @@ Connaissances de base en programmation (HTML, JavaScript, PHP, Python).
 - [SMTP](https://www.youtube.com/watch?v=PJo5yOtu7o8)
 - [Mailto](https://www.youtube.com/watch?v=NG3WhmbsFvc)
 - [Nodemailer](https://www.youtube.com/watch?v=30VeUWxZjS8&t=1697s)
-- [PHPMailer](https://github.com/PHPMailer/PHPMailer)
+<!-- - [PHPMailer](https://github.com/PHPMailer/PHPMailer) -->
 - [smtplib](https://www.youtube.com/watch?v=ueqZ7RL8zxM)
 - [Variables d'environnement Node.js](https://www.youtube.com/watch?v=C4cfTFglgJc)
 - [Tuto Email JS](https://www.youtube.com/watch?v=BgVjild0C9A)
