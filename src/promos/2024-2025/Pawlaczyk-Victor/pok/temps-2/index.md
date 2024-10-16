@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Avant-projet : étude de faisabilité d'un projet immobilier"
 authors:
   - Victor Pawlaczyk
 
@@ -10,7 +10,7 @@ date: 2025-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Quand on pense à un projet immobilier, on pense à l'achat, au financement et éventuellement aux travaux. Cependant, y penser ne suffit pas ! Ce POK a pour objectif de formaliser une étude d'avant projet pour un investissement immobilier.
 ---
 
 {% prerequis %}
@@ -39,8 +39,12 @@ But final.
 
 Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Analyse du bien visité (état global, structure, etc)
+- [ ] Analyse du bien visité (localisation, quartier, copropriété, contraintes légales)
+- [ ] Comparaison avec le marché
+- [ ] Première projection de budget
+- [ ] Budgétisation des travaux plus précise
+- [ ] Etablissement du budget prévisionnel
 
 #### Sprint 2
 
