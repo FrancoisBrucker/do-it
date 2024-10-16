@@ -130,11 +130,35 @@
 <div class="pl-8 mr-8">
 <p>Bases front-end et Vue.js (cf MON 1.1)</p>
 </div></div>
-<p>L'objectif de ce POK est de prendre en main l'outil Vue.js découvert avec mon MON 1.1 en réalisant une application web: un calendrier. Cet outil basique devrait permettre à l'utilisateur d'afficher un calendrier mensuel, de naviguer entre les mois et de gérer des événements.</p>
+<p>L'objectif de ce POK est de prendre en main l'outil Vue.js découvert avec mon MON 1.1 en réalisant une application web: un calendrier. Cet outil basique devrait permettre à l'utilisateur d'afficher un calendrier mensuel et de naviguer entre les mois.
+Il existe diverses manières de code un calendrier avec Vue.js:</p>
+<ul>
+<li>Avec une bibliothèque dédiée: V-Calendar</li>
+<li>Avec une bibliothèque d'UI: Vuetify</li>
+<li>À partir de zéro
+J'ai donc voulu explorer ces méthodes et en tester deux.</li>
+</ul>
 <h4>Sprint 1</h4>
-<p>L'objectif de ce premier sprint est de réaliser une base de calendrier avec Vue.js.</p>
+<p>L'objectif de ce premier sprint était de prendre en main l'outil Vue.js pas à pas en utilisant les bases du front-end rappellées dans mon MON 1.1.
+Pour commencer doucement, j'ai choisi de travailler avec une bibliothèque dédiée: V-calendar.</p>
+<ul>
+<li>[x] Documentation Js et Vue.js</li>
+<li>[x] Lister les différentes façons de faire un calendrier avec Vue.js ainsi que leurs avantages et inconvénients</li>
+<li>[x] Affichage du calendrier</li>
+<li>[x] Styliser</li>
+<li>[] Ajouter la gestion d'événements</li>
+</ul>
 <h4>Sprint 2</h4>
-<p>Pour le prochain sprint, l'objectif est d'intégrer la gestion des événements et d'améliorer le base de calendrier réalisée lors du sprint 1.</p>
+<p>À la fin du premier sprint, j'ai pu remarqué que la bibliothèque V-calendar, bien que simple d'utilisation, était très contraignante. Je suis donc passée sur la technique complètement à l'opposé c'est-à-dire faire de zéro (bon à l'aide d'un tutoriel quand même).</p>
+<ul>
+<li>[x] Lecture et comparaison de différents tutoriels afin de trouver le plus adapté (et mieux expliqué)</li>
+<li>[x] Affichage du calendrier</li>
+<li>[x] Surbrillance pour la date du jour
+- [x] Navigation fluide entre les mois</li>
+<li>[x] Styliser</li>
+<li>[x] Ajout d'événements</li>
+<li>[] Persistance des événements (BD)</li>
+</ul>
 <h3>Horodatage</h3>
 <table>
 <thead>
@@ -147,8 +171,8 @@
 <tbody>
 <tr>
 <td>Samedi 14/09</td>
-<td>2h</td>
-<td>Voir (et comprendre) les différentes façons de faire un calendrier avec Vue.js</td>
+<td>3h</td>
+<td>Documentation Js, Vue, et voir (et comprendre) les différentes façons de faire un calendrier</td>
 </tr>
 <tr>
 <td>Dimanche 15/09</td>
@@ -165,16 +189,46 @@
 <td>2h</td>
 <td>Débuts sur la gestion d'événements</td>
 </tr>
+<tr>
+<td>--------</td>
+<td>--------</td>
+<td>--------</td>
+</tr>
+<tr>
+<td>Lundi 30/09</td>
+<td>2h</td>
+<td>Débuts sur une autre technique</td>
+</tr>
+<tr>
+<td>Jeudi 03/10</td>
+<td>2h</td>
+<td>Affichage du calendrier</td>
+</tr>
+<tr>
+<td>Lundi 07/10</td>
+<td>2h</td>
+<td>Affichage correct bonne date</td>
+</tr>
+<tr>
+<td>Lundi 14/10</td>
+<td>1h</td>
+<td>Style</td>
+</tr>
+<tr>
+<td>Mardi 15/10</td>
+<td>2h</td>
+<td>Ajout d'événements</td>
+</tr>
+<tr>
+<td>Mercredi 16/10</td>
+<td>1h</td>
+<td>Rédaction et dépôt</td>
+</tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
-<p>Il existe plusieurs façons de créer un calendrier avec Vue:</p>
-<ul>
-<li>Avec une bibliothèque dédiée: V-Calendar</li>
-<li>Avec une bibliothèque d'UI: Vuetify</li>
-<li>À partir de zéro</li>
-</ul>
-<p>Chaque méthode a ses avantages et inconvénients. Pour commencer, j'ai choisi la première option car plus simple et donc (selon moi) plus adaptée pour débuter.</p>
+<h3>Sprint 1: V-Calendar</h3>
+<p>L'objectif de ce premier sprint était de réaliser un de calendrier avec la bibliothèque V-Calendar.</p>
 <p>Tout d'abord on installe v-calendar: <code>npm install v-calendar</code></p>
 <p>On importe et configure v-calendar dans le main.js:</p>
 <pre><code>import { createApp } from 'vue';\
@@ -231,8 +285,8 @@ export default defineComponent({
         {
           key: 'today',
           highlight: {
-            backgroundColor: '#FFDDDD',
-            color: '#FF0000',
+          backgroundColor: '#FFDDDD',
+          color: '#FF0000',
           },
           dates: new Date(),
         },
@@ -269,11 +323,222 @@ export default defineComponent({
 <p>Et voilà ca que ça donne:</p>
 <p><img src="calendriervue1.png" alt="Calendrier vue 1">
 <img src="calendriervue2.png" alt="Calendrier vue 2"></p>
-<p>On peut aussi intégrer des bibliothèques de style comme Bootstrap ou Tailwind CSS.</p>
-<p>L'un des inconvénients de V-Calendar est qu'il restreint beaucoup; je vais donc voir pour utiliser une autre méthode de création de calendrier lors du sprint 2.</p>
-<p>Je souhaite également m'occuper de la gestion des événements sur le calendrier.</p>
+<p>On peut notamment naviguer entre les différents mois.
+On peut aussi intégrer des bibliothèques de style comme Bootstrap ou Tailwind CSS.</p>
+<p>L'un des inconvénients de V-Calendar est qu'il restreint beaucoup; notamment au niveau du style et de la gestion d'événements.</p>
+<h3>Sprint 2: De Zéro</h3>
+<p>Maintenant qu'on a fait un premier calendrier avec V-Calendar, on peut tenter de faire un calendrier en partant de zéro histoire de bien appréhender Vue.js.
+Afin d'y arriver je me suis dit que j'allais suivre la trame d'un tutoriel; j'en ai trouvé deux:</p>
+<ul>
+<li><a href="https://emamoah.medium.com/building-a-calendar-from-scratch-with-vue-js-and-css-grid-no-libraries-dec53062ee25">Building a working calendar from scratch with Vue.js and CSS grid (no libraries!)</a></li>
+<li><a href="https://css-tricks.com/lets-make-a-vue-powered-monthly-calendar/">Let’s Make a Vue-Powered Monthly Calendar</a></li>
+</ul>
+<p>Après avoir parcouru les deux, je suis allée vers le deuxième. En effet, celui-ci utilise plusieurs composants: 1 par fonctionnalité et donc cela me paraissait pertinent pour apprendre le fonctionnement de Vue.js</p>
+<p>Pour ce qui est de la structure du projet, on a plusieurs composants:</p>
+<ul>
+<li>CalendarMonth.vue: le composant principal</li>
+<li>CalendarDateIndicator: permet d'afficher la date du moment</li>
+<li>CalendarDateSelector: permet de passer d'un mois à l'autre</li>
+<li>CalendarWeekDays: permet d'afficher les jours de la semaine en haut de la grille</li>
+<li>CalendarMonthDayItem: permet d'afficher la grille avec tous les jours du mois</li>
+</ul>
+<h4>Affichage du calendrier et navigation entre les mois</h4>
+<p>On code la page de haut en bas et on commence donc par le header, avec DateIndicator et DateSelector:</p>
+<p>Pour DateIndicator, Ce code permet d'afficher en haut à gauche le mois actuellement affiché; on utilise à la fois props et computed pour manipuler la donnée.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;calendar-date-indicator&quot;&gt;&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    selectedDate: {
+      type: Object,
+      required: true
+    }
+  },
+
+  computed: {
+    selectedMonth() {
+      return this.selectedDate.format(&quot;MMMM YYYY&quot;);
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Pour DateSelector, ce code permet la navigation entre les mois en cliquant sur tois boutons: &quot;&lt;&quot; &quot;Today&quot; et &quot;&gt;&quot;.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;calendar-date-selector&quot;&gt;
+    &lt;span @click=&quot;selectPrevious&quot;&gt;&amp;lt;&lt;/span&gt;
+    &lt;span @click=&quot;selectCurrent&quot;&gt;Today&lt;/span&gt;
+    &lt;span @click=&quot;selectNext&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import dayjs from &quot;dayjs&quot;; &lt;!-- Bibliothèque Vue.js --&gt;
+
+export default {
+  name: &quot;CalendarModeSelector&quot;,
+
+  props: {
+    currentDate: {
+      type: String,
+      required: true
+    },
+
+    selectedDate: {
+      type: Object,
+      required: true
+    }
+  },
+
+  methods: {
+    selectPrevious() {
+      let newSelectedDate = dayjs(this.selectedDate).subtract(1, &quot;month&quot;);
+      this.$emit(&quot;dateSelected&quot;, newSelectedDate);
+    },
+
+    selectCurrent() {
+      let newSelectedDate = dayjs(this.currentDate);
+      this.$emit(&quot;dateSelected&quot;, newSelectedDate);
+    },
+
+    selectNext() {
+      let newSelectedDate = dayjs(this.selectedDate).add(1, &quot;month&quot;);
+      this.$emit(&quot;dateSelected&quot;, newSelectedDate);
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Une fois ces composants crées, il faut ensuite les ajouter sur notre page principale CalendarMonth.vue en n'oubliant pas de créer les données utiles aux composants comme &quot;selectedDate&quot; et &quot;today&quot;.
+Et voilà le code pour CalendarMonth.vue (pour afficher le header seulement):</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;calendar-month&quot;&gt;
+    &lt;div class=&quot;calendar-month-header&quot;&gt;
+      &lt;CalendarDateIndicator
+        :selected-date=&quot;selectedDate&quot;
+        class=&quot;calendar-month-header-selected-month&quot;
+      /&gt;
+      &lt;CalendarDateSelector
+        :current-date=&quot;today&quot;
+        :selected-date=&quot;selectedDate&quot;
+        @dateSelected=&quot;selectDate&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import dayjs from &quot;dayjs&quot;;
+import CalendarDateIndicator from &quot;./CalendarDateIndicator&quot;;
+import CalendarDateSelector from &quot;./CalendarDateSelector&quot;;
+
+export default {
+  components: {
+    CalendarDateIndicator,
+    CalendarDateSelector
+  },
+
+  data() {
+    return {
+      selectedDate: dayjs(),
+      today: dayjs().format(&quot;YYYY-MM-DD&quot;)
+    };
+  },
+
+  methods: {
+    selectDate(newSelectedDate) {
+      this.selectedDate = newSelectedDate;
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Maintenant qu'on a compris le principe, on peut faire de même avec les autres composants.</p>
+<p>On change un peu les couleurs pour mettre du rose (rien de mieux).
+Et hop voilà le résultat final:</p>
+<p><img src="calendrier-final.png" alt="Calendrier final"></p>
+<h4>Gestion d'événements</h4>
+<p>Pour la gestion d'événements, je me suis dit que j'allais ajouter un formulaire avec le nom de l'événement et sa date; avec pour objectif de l'afficher ensuite dans le jour correspondant.</p>
+<p>Comme jusqu'à maintenant on a fait une fonctionnalité = un composant Vue, j'ai créer deux nouveaux composants: EventForm (pour le formulaire à remplir) et EventList (pour avoir les événements et ensuite pouvoir les afficher).</p>
+<p>Voici EventForm.vue:</p>
+<pre><code>&lt;template&gt;
+  &lt;form @submit.prevent=&quot;submitEvent&quot;&gt;
+    &lt;input v-model=&quot;eventTitle&quot; type=&quot;text&quot; placeholder=&quot;Event Title&quot; required /&gt;
+    &lt;input v-model=&quot;eventDate&quot; type=&quot;date&quot; required /&gt;
+    &lt;button type=&quot;submit&quot;&gt;Add Event&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      eventTitle: '',
+      eventDate: ''
+    };
+  },
+  methods: {
+    submitEvent() {
+      if (this.eventTitle &amp;&amp; this.eventDate) {
+        this.$emit('addEvent', { title: this.eventTitle, date: this.eventDate });
+        this.eventTitle = '';
+        this.eventDate = '';
+      }
+    }
+  }
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #ffe9ec;
+  color: var(--grey-800);
+  border: none;
+  cursor: pointer;
+}
+&lt;/style&gt;
+</code></pre>
+<p>et EventList.vue:</p>
+<pre><code>&lt;template&gt;
+  &lt;ul v-if=&quot;events.length &gt; 0&quot; class=&quot;event-list&quot;&gt;
+    &lt;li v-for=&quot;event in events&quot; :key=&quot;event.title&quot;&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    events: {
+      type: Array,
+      default: () =&gt; []
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<p>Et voilà, on a notre formulaire qui s'affiche en dessous du calendrier !!!
+J'ai essayé le formulaire avec ma date d'anniversaire et on voit bien que ça s'affiche au niveau de la bonne case !</p>
+<p><img src="calendrier-event.png" alt="Calendrier avec event"></p>
+<p>Bon par contre, à chaque fois qu'on refresh la page les événements ajoutés disparaissent car il n'y a pas de persistance, de base de données derrière; il faudrait lier un fichier json.
+Mais bon j'ai pas eu le temps désolé !</p>
 <h3>Sources</h3>
-<p><a href="https://vcalendar.io/getting-started/installation.html">Documentation v-calendar</a></p>
+<p><a href="https://vcalendar.io/getting-started/installation.html">Documentation v-calendar</a>
+<a href="https://css-tricks.com/lets-make-a-vue-powered-monthly-calendar/">Let’s Make a Vue-Powered Monthly Calendar</a></p>
 
 
 </article>
