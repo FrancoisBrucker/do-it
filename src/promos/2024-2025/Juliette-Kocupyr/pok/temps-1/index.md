@@ -246,7 +246,7 @@ Il faut retenir que les solutions d'aujourd'hui donnent naissance aux problèmes
 
 Dans son siège de Stockholm, des **squads** autogérées de six à douze personnes se concentrent sur un domaine ou fonctionnalité, selon une méthodologie autonome et choisie. Une mission unique, appuyée par un **coach agile** pour le support et un **product owner** pour les conseils. Ensuite, pour maintenir la cohérence globale et le partage des savoirs, les squads sont organisées en grandes **tribus**, gérées par un responsable. En parallèle, les **chapitres** organisent les familles de spécialistes (développeur JavaScript, etc.). Quant aux **guildes**, elles sont des communautés transversales d’intérêts. Enfin, trios et alliances forment d’autres combinaisons, toujours avec le même objectif: favoriser la collaboration et l’alignement.
 
-![planspotify](./image/planspotify.png)
+<img src="./image1/planspotify.png" width="50%">
 
 
 1. **Les squads, l'unité de base du modèle Spotify**
