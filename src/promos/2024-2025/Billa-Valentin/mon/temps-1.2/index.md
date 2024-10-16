@@ -24,7 +24,7 @@ Elle est construite avec des outils comme HTML (pour la structure), CSS (pour le
 #### Back-end
 La partie d'un site web ou d'une application que les utilisateurs ne voient pas.
 Elle gère les données, la logique et la communication avec les bases de données et les serveurs. 
-Elle communique souvent via des [APIs](#APIs)
+Elle communique souvent via des APIs.
 
 #### Site Statique
 Un site statique est un type de site web dont le contenu est pré-référencé et qui ne change pas en fonction
