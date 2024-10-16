@@ -349,37 +349,16 @@ Le sprint 2 s'est concentré sur les plans d'entraînements personnalisés, beau
 </ul>
 </li>
 </ol>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">predict_time</span><span class="token punctuation">(</span>reference_time<span class="token punctuation">,</span> reference_distance<span class="token punctuation">,</span> target_distance<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">format_pace</span><span class="token punctuation">(</span>pace<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">"""
-    Prédit le temps de course pour une distance cible en fonction d'un temps de référence et de la distance correspondante.
+    Formatte l'allure de course en minutes:secondes par kilomètre.
     
-    :param reference_time: temps de référence (en minutes)
-    :param reference_distance: distance de référence (en km)
-    :param target_distance: distance cible (en km)
-    :return: temps estimé pour la distance cible (en minutes)
+    :param pace: allure en minutes par km (ex: 3.5 pour 3 minutes 30 secondes)
+    :return: string formaté sous la forme min:sec par km
     """</span>
-    predicted_time <span class="token operator">=</span> reference_time <span class="token operator">*</span> <span class="token punctuation">(</span>target_distance <span class="token operator">/</span> reference_distance<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">1.06</span>
-    <span class="token keyword">return</span> predicted_time
-
-<span class="token keyword">def</span> <span class="token function">pace_from_time</span><span class="token punctuation">(</span>time_in_minutes<span class="token punctuation">,</span> distance_km<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Calcule l'allure de course (minutes par km).
-    
-    :param time_in_minutes: temps de course en minutes
-    :param distance_km: distance en km
-    :return: allure en minutes par km
-    """</span>
-    <span class="token keyword">return</span> time_in_minutes <span class="token operator">/</span> distance_km
-
-<span class="token keyword">def</span> <span class="token function">endurance_pace</span><span class="token punctuation">(</span>race_pace<span class="token punctuation">,</span> factor<span class="token operator">=</span><span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Calcule l'allure d'endurance fondamentale en ajoutant un pourcentage à l'allure de course.
-    
-    :param race_pace: allure de course (en min/km)
-    :param factor: pourcentage par rapport à l'allure de course (1.2 = 120%, donc allure plus lente)
-    :return: allure d'endurance fondamentale (en min/km)
-    """</span>
-    <span class="token keyword">return</span> race_pace <span class="token operator">*</span> factor
+    minutes <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>pace<span class="token punctuation">)</span>
+    seconds <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pace <span class="token operator">-</span> minutes<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>minutes<span class="token punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token punctuation">{</span>seconds<span class="token punctuation">:</span><span class="token format-spec">02d</span><span class="token punctuation">}</span></span><span class="token string"> min/km"</span></span>
 
 <span class="token comment"># Exemple d'utilisation</span>
 time_10k <span class="token operator">=</span> <span class="token number">50</span>  <span class="token comment"># en minutes</span>
@@ -397,10 +376,11 @@ pace_marathon <span class="token operator">=</span> pace_from_time<span class="t
 <span class="token comment"># Allure d'endurance fondamentale</span>
 endurance_pace_value <span class="token operator">=</span> endurance_pace<span class="token punctuation">(</span>pace_10k<span class="token punctuation">)</span>
 
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur 10 km : </span><span class="token interpolation"><span class="token punctuation">{</span>pace_10k<span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string"> min/km"</span></span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur semi-marathon : </span><span class="token interpolation"><span class="token punctuation">{</span>pace_semi<span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string"> min/km"</span></span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur marathon : </span><span class="token interpolation"><span class="token punctuation">{</span>pace_marathon<span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string"> min/km"</span></span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure d'endurance fondamentale : </span><span class="token interpolation"><span class="token punctuation">{</span>endurance_pace_value<span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string"> min/km"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># Affichage des résultats formatés</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur 10 km : </span><span class="token interpolation"><span class="token punctuation">{</span>format_pace<span class="token punctuation">(</span>pace_10k<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur semi-marathon : </span><span class="token interpolation"><span class="token punctuation">{</span>format_pace<span class="token punctuation">(</span>pace_semi<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure sur marathon : </span><span class="token interpolation"><span class="token punctuation">{</span>format_pace<span class="token punctuation">(</span>pace_marathon<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Allure d'endurance fondamentale : </span><span class="token interpolation"><span class="token punctuation">{</span>format_pace<span class="token punctuation">(</span>endurance_pace_value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
 
 </code></pre>
 <h3>Ce qui reste à faire</h3>
