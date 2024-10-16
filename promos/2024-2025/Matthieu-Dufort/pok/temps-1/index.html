@@ -77,11 +77,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Novice</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Pony</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -157,10 +161,10 @@
 <h4>Sprint 2</h4>
 <ul>
 <li>[x] Imaginer une entreprise fictive pour travailler dessus</li>
-<li>[ ] Etudier et représenter les données qu'elle traite</li>
-<li>[ ] Imaginer et construire en diagramme sa base de données</li>
-<li>[ ] Construire la base de données à l'aide de python</li>
-<li>[ ] Exploiter rapidement la base de données en faisant des requêtes dessus</li>
+<li>[x] Etudier et représenter les données qu'elle traite</li>
+<li>[x] Imaginer et construire en diagramme sa base de données</li>
+<li>[x] Construire la base de données à l'aide de python</li>
+<li>[x] Exploiter rapidement la base de données en faisant des requêtes dessus</li>
 </ul>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
@@ -187,6 +191,25 @@
 <td>Mercredi 17/09</td>
 <td>2h</td>
 <td>Représentation d'une base + Définir les bonnes pratiques + Bilan sprint</td>
+</tr>
+<tr>
+<td>Samedi 12/10</td>
+<td>4h</td>
+<td>Etudier, représenter la base</td>
+</tr>
+<tr>
+<td>Lundi 14/10</td>
+<td>4h</td>
+<td>Construire la base de donnée</td>
+</tr>
+<tr>
+<td>Mardi 14/10</td>
+<td>2h</td>
+<td>Exploiter la base de données</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>21h30</strong></td>
 </tr>
 </tbody>
 </table>
@@ -330,6 +353,136 @@
 </details>     
 </div>
 <h1>Second Sprint</h1>
+<h2>Analyse des données fictives de BatiBase</h2>
+<p>L'entreprise BatiBase est une entreprise de construction classique qui a besoin de gérer plusieurs choses liées entre elles :</p>
+<ul>
+<li>Les clients</li>
+<li>Les fournisseurs de matériaux</li>
+<li>Les commandes</li>
+<li>Les matériaux (le stock)</li>
+<li>Les chantiers</li>
+<li>Les outils et machines</li>
+<li>Les employés</li>
+<li>Les compétences</li>
+</ul>
+<p>Cela va nous permettre de créer une première base qui pourra bien sûr être améliorée par la suite.</p>
+<p>Ces objets sont tous liés entre eux afin de pouvoir bien gérer les informations.</p>
+<p>Les clients seront liés aux chantiers pour permettre au chef de chantier de communiquer avec eux si besoin, grâce à leurs informations sur leur fiche client dans la base.</p>
+<p>Les fournisseurs de matériaux seront liés aux matériaux et aux commandes. En effet, cela permettra de savoir qui a fourni quels matériaux en cas de problème, mais aussi de pouvoir commander des matériaux.</p>
+<p>L'objet commande permet de demander quelque chose au fournisseur. Une fois la commande passée, le matériau commandé entre en stock réel. L'objet commande sera donc lié au matériau, en plus de son lien avec le fournisseur. On peut aussi ajouter un lien avec le chantier afin de savoir pour quel chantier la commande est passée.</p>
+<p>Comme vu précédemment, les matériaux sont liés aux fournisseurs et aux chantiers.</p>
+<p>Les chantiers sont liés aux clients, aux matériaux, aux outils, mais aussi aux employés. Cela permet de savoir qui travaille où et avec quels outils.</p>
+<p>Les outils sont liés aux chantiers, et il en est de même pour les employés.</p>
+<p>Enfin, les compétences permettront de choisir les employés nécessaires en fonction de leurs expériences, pour la bonne réalisation d'un chantier. Chaque matériau et machine nécessitent des compétences pour pouvoir les utiliser. Tous ces objets seront donc liés entre eux.</p>
+<p>Ainsi, nous allons pouvoir créer une première représentation de la base sous forme de diagramme entité-relation, puis de diagramme de structure de données.</p>
+<h2>Représentation en diagramme entité relation</h2>
+<p><img src="ERBati.png" alt="BatiBase entité relation"><em>(Diagramme entité relation de la société BatiBase)</em></p>
+<p>Ce diagramme permet d'avoir déjà un premier bon aperçu du fonctionnement de la base de données pour ensuite entrer dans le détail.</p>
+<p>Réaliser ce diagramme permet aussi de prendre conscience des manquements ou des erreurs potentiels dans les liens. C'est en faisant ce diagramme que j'ai pu observer l'absence d'un objet liant les machines aux employés pour savoir quel ouvrier peut conduire quelle machine. L'objet compétence permet donc de créer ce lien.</p>
+<p>Nous allons maintenant pouvoir entrer dans le détail.</p>
+<h2>Représentation en diagramme de structure de données</h2>
+<p>Pour réaliser ce diagramme, nous allons commencer à réfléchir a tous les champs de chaque objet.</p>
+<p>Pour faire cela, j'ai décidé d'utiliser le site <a href="https://dbdiagram.io/d">dbdiagram</a>. Je n'ai jamais utilisé ce site. Cependant grâce à la <a href="https://dbml.dbdiagram.io/docs">documentation</a> et aux exemples en ligne j'ai pu le prendre en main rapidement. Il permet de faire un rendu propre d'une base de données afin de pouvoir la construire ensuite rapidement.</p>
+<p><img src="SDBati.png" alt="BatiBase structure de données"><em>(Diagramme de structure de données de la société BatiBase)</em></p>
+<p>Le code de ce schéma est retrouvable <a href="DataBaseFile.zip">ici</a>.</p>
+<p>Le but de ce schéma est de pouvoir visualiser tous les liens, les clés et les champs de la base de données afin de pouvoir la construire. Ce schéma permet aussi de transmettre au futur équipe qui travailleront dessus un plan clair du fonctionnement de la base afin de pouvoir la faire évoluer en cas de besoin.</p>
+<h2>Construction de la base de données</h2>
+<p>Pour télécharger le fichier python complet : <a href="PythonFile.zip">Fichier python base de donnée</a></p>
+<p>Pour construire cette base de données, j'ai choisi d'utiliser python avec sa library Pony de base de données car je n'ai pour l'instant eu que l'occasion d'en construire en no-code (Airtable, Salesforce ...). Je souhaitais donc en construire une en partant un peu plus de zéro. Pour cela, j'ai utilisé la <a href="https://ponyorm.readthedocs.io/en/latest/firststeps.html">documentation</a>. J'ai donc construit ma base de données en commençant par faire le model de données.</p>
+<p>J'ai donc créé chacun des objets en utilisant des lignes de la forme :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Material</span><span class="token punctuation">(</span>db<span class="token punctuation">.</span>Entity<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    material_id <span class="token operator">=</span> orm<span class="token punctuation">.</span>PrimaryKey<span class="token punctuation">(</span><span class="token builtin">int</span> <span class="token punctuation">,</span> auto <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+    name <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    <span class="token builtin">type</span> <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    price <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">float</span><span class="token punctuation">)</span>
+    description <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    created_at <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    skills <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span>Skill<span class="token punctuation">)</span>
+    Order <span class="token operator">=</span> orm<span class="token punctuation">.</span>Set<span class="token punctuation">(</span><span class="token string">"Order"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Chacun des champs de l'objet est défini avec un type de façon obligatoire car l'on souhaite que tous les champs soient remplis. Pour créer des liens entre les objets, il faut les définir avec le type de l'objet que l'on veut lier et utiliser la fonction set sur l'objet lié.</p>
+<p>Pour une relation en many to many, pony créer automatiquement l'objet intérmédiaire et il suffit de définir sur chacun des objets à lié l'autre objet en utilisant la fonction <em>set</em> sur les deux.</p>
+<p>Ensuite, j'ai créé la base de données à l'aide du model défini précédement :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
+<span class="token keyword">from</span> DataModel <span class="token keyword">import</span> Tool<span class="token punctuation">,</span> Employee<span class="token punctuation">,</span> Supplier<span class="token punctuation">,</span> Order<span class="token punctuation">,</span> Skill<span class="token punctuation">,</span> Client<span class="token punctuation">,</span> Material<span class="token punctuation">,</span> ConstructionSite<span class="token punctuation">,</span> db
+ 
+db<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">'sqlite'</span><span class="token punctuation">,</span> <span class="token string">'database.sqlite'</span><span class="token punctuation">,</span> create_db<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+orm<span class="token punctuation">.</span>sql_debug<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+db<span class="token punctuation">.</span>generate_mapping<span class="token punctuation">(</span>create_tables<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Grâce a ceci, la table se créer et l'on va pouvoir surveiller les requètes SQL graçe au mode debug. Ainsi, avant les réponses dans le terminal de commande, j'obtiens les requètes effectuées.</p>
+<h2>Création de données dans la base</h2>
+<p>Maintenant, je vais créer de la donnée dans la base afin d'être sur de son bon fonctionnement pour pouvoir intéragir avec :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">    ConstructionSite1 <span class="token operator">=</span> ConstructionSite<span class="token punctuation">(</span>
+        name<span class="token operator">=</span><span class="token string">"Maison4"</span><span class="token punctuation">,</span> 
+        address<span class="token operator">=</span><span class="token string">'Rue des patates'</span><span class="token punctuation">,</span> 
+        <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"Maison"</span><span class="token punctuation">,</span> 
+        comment<span class="token operator">=</span><span class="token string">'Réparation cuisine'</span><span class="token punctuation">,</span> 
+        created_at<span class="token operator">=</span><span class="token string">"14/10/2024"</span><span class="token punctuation">,</span> 
+        status<span class="token operator">=</span><span class="token string">"En cours"</span>
+    <span class="token punctuation">)</span>
+
+    ConstructionSite1<span class="token punctuation">.</span>clients<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Client1<span class="token punctuation">)</span>
+    ConstructionSite1<span class="token punctuation">.</span>tools<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Tool1<span class="token punctuation">)</span>
+    ConstructionSite1<span class="token punctuation">.</span>employees<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Employee1<span class="token punctuation">)</span>
+
+    db<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+</code></pre>
+<p>J'ai aussi créé chacun des autres objets en utilisant toujours la typographie NomDeLaClasse1. Une fois tous les liens et les champs remplis, il faut insérer le tout dans la base afin de créer la data avec la fonction <em>commit</em></p>
+<p>Il est temps d'intéragir avec pour vérifier le bon fonctionnement !</p>
+<h2>Intéraction avec la base de données</h2>
+<p>Pour intéragir avec la base de donnée, il est possible d'utiliser du language python :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
+<span class="token keyword">from</span> DataModel <span class="token keyword">import</span> db<span class="token punctuation">,</span> Client
+
+db<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">'sqlite'</span><span class="token punctuation">,</span> <span class="token string">'database.sqlite'</span><span class="token punctuation">,</span> create_db<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+db<span class="token punctuation">.</span>generate_mapping<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> orm<span class="token punctuation">.</span>db_session<span class="token punctuation">:</span>
+    client <span class="token operator">=</span> Client<span class="token punctuation">.</span>get<span class="token punctuation">(</span>first_name<span class="token operator">=</span><span class="token string">'Patrick'</span><span class="token punctuation">,</span> last_name<span class="token operator">=</span><span class="token string">'Oudi'</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> client<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span></span><span class="token string">, Email: </span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>email<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le client n'existe pas"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Grâce à ceci, on obtient bien le client cherché avec ses informations. Il est aussi possible de faire des requètes légèrement plus technique :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">with</span> orm<span class="token punctuation">.</span>db_session<span class="token punctuation">:</span>
+    sql <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+    SELECT o.order_id, o.created_at, o.price, o.currency, 
+           s.name AS supplier_name, s.phone_number AS supplier_phone
+    FROM "Order" AS o
+    JOIN "Supplier" AS s ON o.supplier = s.supplier_id
+    """</span>
+
+    result <span class="token operator">=</span> db<span class="token punctuation">.</span>execute<span class="token punctuation">(</span>sql<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> row <span class="token keyword">in</span> result<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Order ID: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Created At: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Price: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Currency: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, "</span></span>
+              <span class="token string-interpolation"><span class="token string">f"Supplier: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Phone: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Bilan sprint 1</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Pour ce Sprint, j'ai réussi a plutôt bien répartir mon temps mais je ne suis pas allé aussi loin que je le souhaitais. J'ai cependant rempli l'essentiel de mes objectifs et j'ai pu apprendre a maitriser la bibliothèque Pony pour gérer les bases de données. J'ai découvert une autre façon de les gérer qui est quand même moins visuel et intuitive que du no code mais tout autant intéressante. Je reste un peu sur ma fin sur l'utilisation de la base car je n'ai pas eu assez de temps pour vraiment plonger dedans et jouer avec. Cependant, je pense avoir bien compris le fonctionnement.</p>
+<p>Globalement sur ce POK je pense avoir vraiment approndi le sujet dans sa globalité comme je le voulais. En effet je travail avec beaucoup de base de données mais je n'ai jamais pris le temps de connaitre leur fonctionnement et d'apprendre à les représenter.</p>
+</div>
+</details>     
+</div>
 
 
 </article>
