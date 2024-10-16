@@ -61,7 +61,6 @@ NB: on peut imbriquer `<em><strong> texte </strong></em>` qui nous donne ***text
 * `<br/>` pour un saut de ligne définitif
 
 ### CSS
-
 CSS pour Cascading Style Sheets permet de styliser le page web, la rendre plus jolie et agréable.
 Dans le même dossier que notre fichier html, on crée un fichier .css dans lequel on va mettre nos éléments de style.
 Pour lier le fichier html au css, on entre `<link rel='stylesheet' href='styles.css'/>` (styles.css étant notre fichier css) dans le `<head> </head>` du html. Désormais, tous les éléments de styles ajoutés au fichier css seront visibles sur la page web.
@@ -94,6 +93,92 @@ h1, h2, h3, h4, h5, h6 { \
 ### JavaScript (un peu)
 
 JavaScript est le language permettant de rendre les pages web dynamiques et interactives. Il permet de réagir aux actions de l'utilisateur: clics, mouvements de la souris,...On a donc: HTML qui structure, CSS qui stylise, et Js qui dynamise. 
+
+Voici les bases:
+
+Les variables sont utilisées pour stocker des données. Elles peuvent être définies avec let ou const.
+
+* let : permet de déclarer une variable qui peut changer de valeur.
+* const : permet de déclarer une variable dont la valeur ne change pas.
+
+Par exemple:
+```
+let age = 21;
+const name = "Sophia";
+```
+
+2. Types
+Les principaux types sont :
+
+* Nombre (Number) : 42, 3.14
+* Chaîne de caractères (String) : "Hello"
+* Booléen (Boolean) : true ou false
+* Tableau (Array) : [1, 2, 3]
+* Objet (Object) : { nom: "Sophia", âge: 21 }
+
+3. Opérateurs
+Les opérateurs permettent de manipuler les données :
+
+Mathématiques : +, -, *, /
+Comparaison : ==, === (égalité stricte), !=, >, <
+Logiques : && (ET), || (OU), ! (NON)
+
+Voici un exemple:
+```
+let a = 10;
+let b = 5;
+console.log(a + b); // 15
+console.log(a === 10); // true
+```
+À noter que la fonction console.log() permet d'afficher des informations dans la console du navigateur ou de l'environnement de développement.
+
+4. Conditions: "if"
+
+Un exemple de la syntaxe:
+```
+let age = 20;
+if (age >= 18) {
+  console.log("Majeur");
+} else {
+  console.log("Mineur");
+}
+```
+5. Boucles: "for" et "while"
+
+for : pour itérer un nombre déterminé de fois.
+while : pour itérer tant qu'une condition est vraie.
+
+```
+for (let i = 0; i < 5; i++) {
+  console.log(i); 
+}
+```
+```
+let i = 0;
+while (i < 5) { 
+  console.log(i); 
+  i++; //
+}
+```
+
+6. Fonctions
+
+function hello(name) {
+  return "hello " + name;
+}
+console.log(hello("Sophia")); // hello Sophia
+
+7. Manipulation du DOM
+En Js, on peut interagir avec le HTML en utilisant le DOM (Document Object Model).
+
+document.getElementById("myButton").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+
+document étant la page HTML
+getElementById("myButton") sélectionne un élément HTML en fonction de son id, ce qui signifie que dasn document on peut retrouver:
+```<button id="myButton">Clique-moi</button>```
+ici, on a donc fait en sorte que lorsque ce bouton est cliqué, une alerte "Button clicked" est créée
 
 ## Qu'est-ce-que Vue? Les bases
 
@@ -128,6 +213,24 @@ App.vue est appelé **composant racine**
 
 Sinon, j'ai aussi regardé quelques vidéos Youtube qui décrivent les fonctions et éléments de base et notamment celles de Net Ninja.
 
+1. Les variables
+Les variables ou données réactives, sont définies dans l'ibjet data.
+data() {
+}
+2. Les directives
+
+Elles permettent de rendre le HTML interactif. Voici quelques exemples:
+
+* `v-bind`
+* `v-model` 
+* `v-for`
+* `v-if`, `v-else`
+
+3. Les méthodes
+
+Elles permettent de manipuler les données réactives et les événements.
+methods:{
+} 
 
 ## Conclusion
 

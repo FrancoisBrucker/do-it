@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Angular - Front-End Framework"
 authors:
   - Titouan Corne
 

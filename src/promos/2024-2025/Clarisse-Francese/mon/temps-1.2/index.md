@@ -21,9 +21,7 @@ résumé: "J’ai adoré l’intervention sur le design thinking par Oresys en t
 MON débutant, aucun prérequis
 
 {% endprerequis %}
-{% lien %}
-
-Ressources mentionnées dans ce MON :
+{% details "Ressources mentionnées dans ce MON" %}
 
 - [MON d'Ossama Abdane MOOC Design thinking for innovation](https://francoisbrucker.github.io/do-it/promos/2022-2023/Abdane-Ossama/mon/mon1.2/)  
 - [Article : Design de service](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/)
@@ -38,7 +36,7 @@ Ressources mentionnées dans ce MON :
 - [Article : Le “Design Thinker” : maître de l’innovation](https://www.usabilis.com/design-thinker/)
 - [Article : Tout savoir sur le design thinking](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking)
 
-{% endlien %}
+{% enddetails %}
 
 ## Sommaire
 

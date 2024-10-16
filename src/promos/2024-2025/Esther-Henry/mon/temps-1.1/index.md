@@ -612,6 +612,7 @@ print (resultats)
 ### Bibliographie
 
 {% lien %}
-[Python pour les SHS](https://pur-editions.fr/product/7857/python-pour-les-shs)
-[Vidéo présentant comment installer VS Code pour python](https://www.youtube.com/watch?v=V6NfiMu4eZ0) 
+
+- [Python pour les SHS](https://pur-editions.fr/product/7857/python-pour-les-shs)
+- [Vidéo présentant comment installer VS Code pour python](https://www.youtube.com/watch?v=V6NfiMu4eZ0) 
 {% endlien %}
