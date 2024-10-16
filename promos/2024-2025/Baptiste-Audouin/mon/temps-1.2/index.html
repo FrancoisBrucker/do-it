@@ -73,11 +73,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">python</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -132,6 +136,7 @@
 <div class="pl-8 mr-8">
 <ul>
 <li><a href="https://realpython.com/python-for-data-analysis/">Real python</a>*</li>
+<li><a href="https://scikit-learn.org/stable/">sklearn</a></li>
 </ul>
 </div></div>
 
@@ -231,9 +236,8 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
 plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajout d'une grille pour faciliter la lecture</span>
 plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajuste la mise en page pour éviter le chevauchement</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'curry_points.csv'</span><span class="token punctuation">)</span>
 </code></pre>
-<p>METTRE LE PLOT</p>
+ <div><img src="curry_points.png"></div>
 <p>Le graphe suivant permet de faire une distinction entre les performances à domicile et à l'exterieur afin de savoir si ce paramètre à une influence sur le joueur.</p>
 <pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">home_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_home'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
 away_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_away'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
@@ -253,7 +257,7 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"Moyenne"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>GRAPHE</p>
+ <div><img src="home_away_curry.png"></div>
 <p>Au vu de ces derniers résultats, on peut conclure que les statistiques du joueurs ont été constante cette saison et surtout les lieux de matchs n'ont eux aucun impacte sur lui.</p>
 <h2>4. Influence de Curry sur les performances de son équipe</h2>
 <p>Nous allons visualiser dans cette partie la matrice de corrélation entre les performances de Stephen Curry (points, passes décisives, rebonds, minutes jouées) et les résultats des Warriors (victoires ou défaites)</p>
@@ -264,7 +268,7 @@ sns<span class="token punctuation">.</span>heatmap<span class="token punctuation
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Corrélation entre performances de Poole et résultats des Warriors"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-<p>MATRICE</p>
+ <div><img src="matrix_curry.png"></div>
 <h4>Analyse des corrélations :</h4>
 <ul>
 <li><strong>Points (PTS) et Victoires (result)</strong> : La corrélation entre les points de Curry et les victoires des Warriors est faible (0.069), ce qui indique que le nombre de points marqués par Curry n'a pas un impact direct sur les résultats de l'équipe.</li>
@@ -275,12 +279,154 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <p>Dans la suite, nous allons comparer ces résultats avec ceux de deux autres joueurs clés des Warriors pour mieux comprendre l'impact des différentes contributions individuelles sur les victoires de l'équipe. Cela permettra de voir comment les performances collectives influencent les résultats.</p>
 <h2>5. Comparaison avec d'autres joueurs</h2>
 <p>Après avoir récupéré les données de deux autres joueurs majeurs de l'équipe (Jordan Poole et Klay Thompson) sur le même site <a href="https://www.basketball-reference.com">Basketball Reference</a>, j'ai effectué les mêmes manipulations sur leurs statistiques et voici les matrices obtenues :</p>
-<p>DEUX MATRICES POOLE ET THOMPSON</p>
+ <div><img src="matrix_poole.png"></div>
+ <div><img src="matrix_thompson.png"></div>
 <h4>Analyse</h4>
 <p>Poole et Thompson, montrent des corrélations plus importantes (surtout Thompson) dans des aspects du jeu qui impactent directement les résultats des matchs, notamment les points de Thompson et les passes de Poole. Curry, en tant que joueur constant semble moins &quot;déterminant&quot; dans les victoires ce qui s'explique par le fait que son niveau est toujours élevé.</p>
 <p>En résumé, bien que Curry soit essentiel pour la stabilité de l’équipe, les victoires des Warriors semblent davantage liées aux performances de Poole et surtout Thompson.</p>
 <h2>6. Modélisation prédictive des résultats des Warriors</h2>
-<h3></h3>
+<p>Dans cette partie j'ai voulu m'iintéresser au Machine Learning et plus particulièrement aux méthodes de modélisation prédictive, c'est à dire qu'avec un jeu de donnée dites &quot;d'entrainement&quot;, on va pouvoir prédir le reste des données dites de &quot;test&quot;. Ici, pour déterminer encore une fois l'influence de curry sur les performances de son équipe nous allons utiliser différentes méthodes de la bibliothèque <a href="https://scikit-learn.org/stable/">sklearn</a> afin de voir à partir des performances de Curry à quel point on peut prédire le résultat du match.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestClassifier<span class="token punctuation">,</span> GradientBoostingClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>svm <span class="token keyword">import</span> SVC
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score
+
+
+features <span class="token operator">=</span> curry_played<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">,</span> <span class="token string">'FG%'</span><span class="token punctuation">,</span> <span class="token string">'3P%'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+labels <span class="token operator">=</span> curry_played<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Séparation des données en données d'entraînements et de tests</span>
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>features<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span>
+
+
+score <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Modèle de régression logistique</span>
+logistic_model <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span>max_iter<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+logistic_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_logistic <span class="token operator">=</span> logistic_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_logistic <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_logistic<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'Régression Logistique'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_logistic
+
+<span class="token comment"># Modèle SVM</span>
+svm_model <span class="token operator">=</span> SVC<span class="token punctuation">(</span><span class="token punctuation">)</span>
+svm_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_svm <span class="token operator">=</span> svm_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_svm <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_svm<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'SVM'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_svm
+
+<span class="token comment"># Modèle d'arbre de décision</span>
+decision_tree_model <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+decision_tree_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_tree <span class="token operator">=</span> decision_tree_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_tree <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_tree<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'Arbre de Décision'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_tree
+
+<span class="token comment"># Modèle KNN</span>
+knn_model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+knn_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_knn <span class="token operator">=</span> knn_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_knn <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_knn<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'KNN'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_knn
+
+<span class="token comment"># Modèle de Random Forest</span>
+rf_model <span class="token operator">=</span> RandomForestClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+rf_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_rf <span class="token operator">=</span> rf_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_rf <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_rf<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'Random Forest'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_rf
+
+<span class="token comment"># Modèle de Gradient Boosting</span>
+gb_model <span class="token operator">=</span> GradientBoostingClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+gb_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_gb <span class="token operator">=</span> gb_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_gb <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_gb<span class="token punctuation">)</span>
+score<span class="token punctuation">[</span><span class="token string">'Gradient Boosting'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_gb
+
+<span class="token comment"># Affichage des précisions des modèles</span>
+<span class="token keyword">for</span> model<span class="token punctuation">,</span> accuracy <span class="token keyword">in</span> score<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Précision du modèle </span><span class="token interpolation"><span class="token punctuation">{</span>model<span class="token punctuation">}</span></span><span class="token string"> : </span><span class="token interpolation"><span class="token punctuation">{</span>accuracy <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">)</span>
+</code></pre>
+<p>Précision du modèle Régression Logistique : 41.67%
+Précision du modèle SVM : 41.67%
+Précision du modèle Arbre de Décision : 58.33%
+Précision du modèle KNN : 41.67%
+Précision du modèle Random Forest : 41.67%
+Précision du modèle Gradient Boosting : 58.33%</p>
+<h4>Commentaires</h4>
+<p>On voit ici que les meilleurs résultats sont obtenus par les méthodes arbres de décision, Random Forest et Gradient Boosting avec un taux de prédiction de 58,33% ce qui reste assez faible. Ces scores renforce ce que montrait la matrice de corrélations entre les performances de Curry et les résultats de son équipe.</p>
+<p>Regardons quel score nous obtenons avec les performances de Thompson qui sempleit être plus déterminant dans les victoires de son équipe :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">thompson_played <span class="token operator">=</span> merged_data_thompson<span class="token punctuation">[</span>merged_data_thompson<span class="token punctuation">[</span><span class="token string">'MP'</span><span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">]</span>
+thompson_played<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_numeric<span class="token punctuation">(</span>thompson_played<span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> errors<span class="token operator">=</span><span class="token string">'coerce'</span><span class="token punctuation">)</span>
+thompson_played <span class="token operator">=</span> thompson_played<span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span>by<span class="token operator">=</span><span class="token string">'game_date'</span><span class="token punctuation">)</span>
+
+
+features <span class="token operator">=</span> thompson_played<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'PTS'</span><span class="token punctuation">,</span> <span class="token string">'AST'</span><span class="token punctuation">,</span> <span class="token string">'TRB'</span><span class="token punctuation">,</span> <span class="token string">'FG%'</span><span class="token punctuation">,</span> <span class="token string">'3P%'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+labels <span class="token operator">=</span> thompson_played<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span>
+
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>features<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span>
+
+
+thompson_score <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Modèle de régression logistique</span>
+logistic_model <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span>max_iter<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+logistic_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_logistic <span class="token operator">=</span> logistic_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_logistic <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_logistic<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'Régression Logistique'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_logistic
+
+<span class="token comment"># Modèle SVM</span>
+svm_model <span class="token operator">=</span> SVC<span class="token punctuation">(</span><span class="token punctuation">)</span>
+svm_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_svm <span class="token operator">=</span> svm_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_svm <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_svm<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'SVM'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_svm
+
+<span class="token comment"># Modèle d'arbre de décision</span>
+decision_tree_model <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+decision_tree_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_tree <span class="token operator">=</span> decision_tree_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_tree <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_tree<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'Arbre de Décision'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_tree
+
+<span class="token comment"># Modèle KNN</span>
+knn_model <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+knn_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_knn <span class="token operator">=</span> knn_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_knn <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_knn<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'KNN'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_knn
+
+<span class="token comment"># Modèle de Random Forest</span>
+rf_model <span class="token operator">=</span> RandomForestClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+rf_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_rf <span class="token operator">=</span> rf_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_rf <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_rf<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'Random Forest'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_rf
+
+<span class="token comment"># Modèle de Gradient Boosting</span>
+gb_model <span class="token operator">=</span> GradientBoostingClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+gb_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred_gb <span class="token operator">=</span> gb_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_gb <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred_gb<span class="token punctuation">)</span>
+thompson_score<span class="token punctuation">[</span><span class="token string">'Gradient Boosting'</span><span class="token punctuation">]</span> <span class="token operator">=</span> accuracy_gb
+
+<span class="token keyword">for</span> model<span class="token punctuation">,</span> accuracy <span class="token keyword">in</span> thompson_score<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Précision du modèle </span><span class="token interpolation"><span class="token punctuation">{</span>model<span class="token punctuation">}</span></span><span class="token string"> : </span><span class="token interpolation"><span class="token punctuation">{</span>accuracy <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">)</span>
+</code></pre>
+<p>Précision du modèle Régression Logistique : 50.00%
+Précision du modèle SVM : 50.00%
+Précision du modèle Arbre de Décision : 57.14%
+Précision du modèle KNN : 71.43%
+Précision du modèle Random Forest : 42.86%
+Précision du modèle Gradient Boosting : 28.57%</p>
+<p>Pour Thompson, les résultats entre les différentes méthodes sont beaucoup plus hétérogène mais avec la méthode des k plus proches voisins (KNN) le score est de 71,43% ce qui est bien plus que pour son coéquipier. Là encore, les résultats mettent en avant le caractère déterminant des performances du joueur sur son équipe.</p>
+<h2>Conclusion</h2>
+<p>En conclusion, ce projet m’a permis de découvrir l’analyse de données avec Python et d’explorer différentes méthodes de modélisation prédictive. En appliquant ces techniques à des données sportives. Avec davantage de statistiques, notamment celles des autres joueurs de l’équipe, il serait possible de réaliser des analyses plus poussées, comme, par exemple, l'optimisation du temps de jeu pour maximiser les performances collectives des Warriors.</p>
 
 
 </article>
