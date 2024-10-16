@@ -13,7 +13,7 @@ tags:
   - "DevWeb"
   - "Dark Kitchen"
 
-résumé: "Je réalise ce MON pour m'initier au BackEnd et au languauge Go afin de pouvoir me lancer dans le codage du BackEnd de ma Dark Kitchen, qui fait l'objet de mon POK2. Je vais probablement utiliser un tutoriel en ligne et utiliser la documentation Go."
+résumé: "Je réalise ce MON pour m'initier au BackEnd et au language Go afin de pouvoir me lancer dans le codage du BackEnd de ma Dark Kitchen, qui fait l'objet de mon POK2. Je vais probablement utiliser un tutoriel en ligne et utiliser la documentation Go."
 ---
 
 {% prerequis %}
@@ -33,7 +33,7 @@ résumé: "Je réalise ce MON pour m'initier au BackEnd et au languauge Go afin 
 
 {% note %}
 Objectifs :
-- Découvrir le language Go, ses utilisation et son utilité pour réaliser le BackEnd d'un site web
+- Découvrir le language Go, ses utilisations et son utilité pour réaliser le BackEnd d'un site web
 - Apprendre à utiliser Go
 - Faire des exercices d'application pour se familiariser avec Go
 - Coder le BackEnd de ma Dark Kitchen : création de la base de données des plats, etc.
