@@ -274,7 +274,7 @@ Les 2 principaux impacts de Decathlon sur la biodiversité sont :
 
 - Magasins : Avec une surface de vente totale de 14 millions de m², les magasins de Decathlon contribuent à l'artificialisation des terres, ce qui a des conséquences néfastes sur les écosystèmes locaux.
 
-![Impact_ecosystemes](./Impacts_ecosytèmes_Decathlon.png)
+![Impact_ecosystemes](./Impact_ecosystemes_Decathlon.png)
 
 Le calcul de l'empreinte sur la biodiversité avec l'outil [GBS®](https://www.cdc-biodiversite.fr/le-global-biodiversity-score/) permet de distinguer l'impact cumulé, qui tient compte des activités passées de l'entreprise, de l'impact annuel, qui se rapporte aux actions de DECATHLON sur l'année précédente. Cet outil se concentre sur les écosystèmes terrestres et d'eau douce (car les écosystèmes marins ne sont pas encore inclus). Il couvre toutes les activités de DECATHLON sur les scopes 1, 2 et 3, ainsi que sur la Marketplace depuis 2023.
 
@@ -300,7 +300,7 @@ Enfin, 2 ruches ont été installées. 🐝 Elles sont un bon indicateur de la n
 Des aménagements similaires ont été menés sur le site de Lorient et 14 dossiers sont en cours de déploiement selon cette même démarche L’objectif est d’obtenir le label ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/), certification environnementale, pour 100 % des futurs aménagements fonciers neufs en France. Les efforts de l’entreprise se poursuivent pour atteindre l’ambition de 10 % du parc immobilier français intégrant la démarche de renaturation ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/).
 
 
-![Signature_Biodiversite](./Signature-biodivesité-infographie-DPE.png)
+![Signature_Biodiversite](./Signature-biodivesite-infographie-DPE.png)
 
 
 #### Réduire l'impact des matières premières
