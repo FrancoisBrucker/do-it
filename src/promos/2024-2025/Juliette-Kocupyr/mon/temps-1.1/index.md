@@ -22,29 +22,29 @@ Selon [une étude de Mckinsey](https://www.mckinsey.com/capabilities/people-and-
 
 ## Sommaire
 
-[1. Comprendre la transformation d'entreprise](#1-comprendre-la-transformation-dentreprise-)
+[1. Comprendre la transformation d'entreprise](#un)
 
 - Définition
 - Transformation ou Changement
 
-[2. Le processus d'une transformation](#2-le-processus-dune-transformation-)
+[2. Le processus d'une transformation](#deux)
 
 - Pourquoi entreprendre une transformation
 - Réussir un plan de transformation
 - Étapes clés du processus
 - Modèle de l'Open Source
 
-[3. Les enjeux d'une transformation](#3-les-enjeux-dune-transformation-️)
+[3. Les enjeux d'une transformation](#trois)
 
 - Comment éviter l'échec
 - Avantages d'une transformation
 
-[4. Exemples](#4-exemples-)
+[4. Exemples](#quatre)
 
 - Les différents types de transformation
 - Exemples d'entreprises
 
-## 1. Comprendre la transformation d'entreprise 🔍
+<h2 id=un> 1. Comprendre la transformation d'entreprise 🔍</h2>
 
 Alors que le développement des **technologies d'information et de communication** (TIC) est en plein essor, certains parlent de 3e révolution anthropologique majeure de l'histoire de l'humanité. Mais cette révolution a des répercussions directes et conséquentes sur les organisations, les obligeant à évoluer afin de ne pas se perdre sur un marché de plus en plus concurrentiel. On parle alors de **transformation d'entreprise ou business transformation**. La première chose à faire avant d'entamer ce processus est déjà de comprendre ce qu'est une transformation et les enjeux que cela représente.
 
@@ -82,7 +82,7 @@ Lorsqu'on parle de transformation, on fait référence à un **processus de réi
 
 Le changement quant à lui, est la **modification de quelque chose de spécifique** dans l'entreprise. C'est la mise en place d'une initiative précise ou d'un ensemble d'initiatives connectées pour apporter un ajustement **clair** et **mesurable** sur UN aspect du fonctionnement de l'entreprise. On part d'un état connu et on va vers un nouvel état connu. C'est une évolution qui est perpétuelle et un état permanent car on vieillit tous les jours, les clients ont toujours de nouveaux besoins, les équipes évoluent, les concurrents apparaissent et disparaissent, les bouleversements technologiques, sociologiques et autres font évoluer la société. Le **temps** devient alors un témoin direct du changement; il permet de l'observer et de le mesurer entre deux événements.
 
-## 2. Le processus d'une transformation 📚
+<h2 id=deux> 2. Le processus d'une transformation 📚</h2>
 
 Pour comprendre le déroulement d'une transformation, il faut d'abord se questionner sur les raisons qui poussent les entreprises à se lancer. D'où vient ce besoin de se transformer ? Quelles sont les étapes à mettre en place pour réussir ? Quels sont les principaux acteurs de ce processus ?
 
@@ -201,7 +201,7 @@ Les entreprises qui adoptent un **modèle ouvert** peuvent bénéficier des avan
 
 Si les entreprises peuvent toutes adopter une approche ouverte, le résultat sera pourtant différent pour chacune. La transition vers une approche ouverte implique d'adopter les principes qui reflètent **les valeurs de l'Open Source** : la transparence, l'inclusion, l'adaptabilité, la collaboration et la communauté.
 
-## 3. Les enjeux d'une transformation ⚠️
+<h2 id=trois> 3. Les enjeux d'une transformation ⚠️</h2>
 
 Les projets de transformation répondent dans la plupart des cas à des enjeux similaires auxquels l’entreprise doit faire face.
 
@@ -258,7 +258,7 @@ Il existe aussi un **avantages opérationnel**. Après la mise en œuvre d’un 
 
 Enfin, la transformation d’entreprise encourage **une culture axée sur l’innovation et l’agilité**, favorisant ainsi l’**adaptation rapide au changement**. Les collaborateurs deviennent plus engagés, car ils voient leur travail valorisé et mieux organisé. La communication interne s’améliore, créant un environnement où les équipes collaborent davantage et partagent leurs connaissances. Cette évolution de la culture d’entreprise renforce la résilience de l’organisation face aux fluctuations du marché, tout en améliorant la satisfaction et la rétention des employés.
 
-## 4. Exemples 📌
+<h2 id=quatre> 4. Exemples 📌</h2>
 
 ### Les différents types de transformation
 

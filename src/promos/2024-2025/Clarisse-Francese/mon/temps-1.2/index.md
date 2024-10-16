@@ -65,8 +65,8 @@ C'est une méthode, une discipline et des outils permettant d’o**ptimiser des 
 L’**UX Design** :  
 Ce design se concentre sur toute la conception des points de contact, de plus en plus souvent digitaux du service. L’UX design a pour objectif de **concevoir un outil, généralement numérique, afin d’optimiser son usage par l’utilisateur final**. Il doit rendre les interactions pratiques, efficaces, ergonomiques, agréables et va plutôt concerner la phase de réalisation pour concrétiser le projet. 
 
-L’**UI Design** : 
-Il désigne la conception de l’**interface utilisateur pour une application, un logiciel ou tout dispositif digital**. Il englobe donc tout ce qui s’apparente au graphisme, à l’aspect et à l’agencement comme le logo, la grille de mise en page, la typographie, les polices de caractères, les icônes, les couleurs etc.
+L’**UI Design** :  
+Il désigne la conception de l’**interface utilisateur pour une application, un logiciel ou tout dispositif digital**. Il englobe donc tout ce qui s’apparente au **graphisme**, à l’aspect et à l’agencement comme le logo, la grille de mise en page, la typographie, les polices de caractères, les icônes, les couleurs etc.
 
 Finalement, toutes ces notions font partie de la grande famille nommée «**Human Centered Design**». Maintenant que j’y vois plus clair entre les différents types de design, je vais détailler le Design Thinking.
 
@@ -91,7 +91,7 @@ Il y a plusieurs **principes fondamentaux** :
 - L’**empathie** : Remettre l’utilisateur au centre pour leur apporter des solutions pertinentes et adaptées.
 - L’**itération** : Tester les solutions pour les adapter et les améliorer tout en se donnant le droit à l’erreur.
 
-Le design thinking définir correctement quel problème on cherche à résoudre, avant de le résoudre et proposer les **bonnes solutions**, qui devront être à la fois :
+Le design thinking permet de définir correctement quel problème on cherche à résoudre, avant de le résoudre et de proposer les **bonnes solutions**, qui devront être à la fois :
 
 - **Désirables**
 - **Viables**
@@ -128,7 +128,7 @@ Le double diamant comportent plusieurs étapes qui alternent :
 
 ### Phase 1 : l’immersion
 
-C’est la phase qui permet d’observer et de chercher à **comprendre ses utilisateurs** pour identifier leurs usages, leurs besoins, leurs motivations, leurs attentes et aussi leurs freins. Cette phase demande de mobiliser sa **capacité d’empathie** pour se mettre dans la peau de l’utilisateur. Elle demande aussi de prendre du recul : on conçoit solution pour les utilisateurs et non pour nous !
+C’est la phase qui permet d’observer et de chercher à **comprendre ses utilisateurs** pour identifier leurs usages, leurs besoins, leurs motivations, leurs attentes et aussi leurs freins. Cette phase demande de mobiliser sa **capacité d’empathie** pour se mettre dans la peau de l’utilisateur. Elle demande aussi de prendre du recul : on conçoit une solution pour les utilisateurs et non pour nous !
 
 ### Phase 2 : l’analyse et définition du besoin
 
@@ -136,11 +136,11 @@ Cette phase de convergence permet à l’équipe de conception de **se mettre d�
 
 ### Phase 3 : l’idéation
 
-Cette nouvelle phase de divergence ouvre le champ des possibles, le but est de **générer un maximum d’idées** pour répondre à la problématique en laissant libre cours à son **imagination** et à ses idées, même les plus folles sont permises alors aucune censure !
+Cette nouvelle phase de divergence ouvre le champ des possibles, le but est de **générer un maximum d’idées** pour répondre à la problématique en laissant libre cours à son **imagination**. Même les idées les plus folles sont permises, il n'y a pas de censure !
 
 ### Phase 4 : le prototypage
 
-Cette phase convergente permet à l’équipe de se fixer sur la **solution finale** et d’y donner vie en la prototypant. Le prototype n’a pas besoin d’être parfait le tout c’est qu’il permette de bien comprendre la solution et de l’affiner pour la présenter aux utilisateurs.
+Cette phase convergente permet à l’équipe de se fixer sur la **solution finale** définie grâce aux idées de la phase précédente et de la prototyper. Le prototype n’a pas besoin d’être parfait, le tout c’est qu’il permette de bien comprendre la solution et de l’affiner pour la présenter aux utilisateurs.
 
 ### Phase 5 : le test de la solution
 
@@ -241,6 +241,10 @@ Il consiste à capter les premières impressions des utilisateurs ciblés quand 
 
 **Le test d’usabilité**  
 C’est un exercice d’observation dans lequel on demande à des utilisateurs d’accomplir certaines tâches et on les observe. Ce test permet de voir quels aspects de la conception ont posé des problèmes à l’utilisateur.
+
+{% info %}
+Selon Mickael Lavallée qui nous a fait le cours sur l'UX Design, **5 utilisateurs suffisent pour avoir 80% des retours**. Ainsi, il est inutile de multipler les tests avec des dizaines d'utilisateurs.
+{% endinfo %}
 
 {% lien %}
 

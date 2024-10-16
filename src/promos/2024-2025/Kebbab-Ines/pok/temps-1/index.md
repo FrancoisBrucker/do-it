@@ -243,4 +243,4 @@ Je suis satisfaite de constater par moi-même le grand potentiel du trio HTML/CS
 * Ne pas (toujours) foncer directement dans le code sans réfléchir... et ne pas éviter le problème.
 * Ne pas fractionner son temps de travail : travailler 10h sur une journée car on se laisse emporter par le sujet, c'est tenable une fois mais ça ne permet pas d'avoir du recul et de bien mesurer le temps qu'on passe sur des détails parfois inutile (ou sur lesquels on manque de recul, et sur lesquels la nuit porterait conseil).
 
-Lien vers le projet Github :
+[Lien vers le projet Github](https://github.com/i-kebb/checklist-complesims.git)
