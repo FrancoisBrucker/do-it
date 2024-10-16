@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un POK pour apprendre les bases de la programmation Kotlin qui permet de coder des applications Androïd.
+                Un POK pour apprendre les bases de la programmation Kotlin qui permet de coder des applications Android.
 
         </p>
 
@@ -150,7 +150,8 @@
 </svg>
 <div class="pl-8 mr-8">
 <p>Pour coder en lagage Kotlin depuis le web : <a href="https://play.kotlinlang.org/">Kotlin Playground</a>
-<a href="https://github.com/TitouanCorne/AndroidKotlinFirstApp.git">Mon projet sur Github</a></p>
+Pour télécharger Android Studio : <a href="https://developer.android.com/studio?hl=fr">Android Studio</a>
+Pour retrouver mon projet sur Github : <a href="https://github.com/TitouanCorne/AndroidKotlinFirstApp.git">Mon projet sur Github</a></p>
 </div></div>
 
 <h2>Tâches</h2>
@@ -173,7 +174,7 @@
 <li>[x] Mettre en place l'environnement de travail nécessaire au dev Android avec Kotlin sous Windows.</li>
 <li>[x] Developper une application basique (une seule activité)</li>
 </ul>
-<p><strong>Analyse post-mortem :</strong></p>
+<p><strong>Analyse post-mortem (Sprint 1) :</strong></p>
 <p>J'ai réussi à réaliser entièrement la to do list fixée au départ pour ce premier sprint. J'ai abouti sur un livrable qui fonctionne : l'application basique. Il m'a été un peu difficile d'organiser mes recherches sur le langage Kotlin, qui est tout nouveau pour moi. Je me suis senti au début comme étant au pied d'un mur. Mais avec du temps, un peu de prise en main, j'estime avoir compris les bases du langage. Le nombre de ressources dédiées à la programmation Kotlin n'est pas en manque sur internet !</p>
 <p>Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en apprendre encore plus !</p>
 <h4>Sprint 2</h4>
@@ -185,6 +186,8 @@
 <li>[ ] Gérer l'identification/inscription de l'utilisateur.</li>
 <li>[ ] Implémenter une fonctionnalité permettant à l'utilisateur de 'poster un article sur son feed'.</li>
 </ul>
+<p><strong>Analyse post-mortem (Sprint 2) :</strong></p>
+<p>Le projet initial était trop ambitieux pour un temps réduit (normalement fixé à 20h au total). Je suis tout de même content d'avoir acquis de nouvelles compétences en ce qui concerne le développement mobile. Je compte continuer ce projet de mon côté pour répondre à la feuille de route initiale et à mon cahier des charges.</p>
 <h3>Horodatage</h3>
 <table>
 <thead>
@@ -246,6 +249,11 @@
 <td>3H30</td>
 <td>Veille + Implémenter l'interface en respectant les wireframes</td>
 </tr>
+<tr>
+<td>Mercredi 16/10</td>
+<td>2H00</td>
+<td>Comprendre et implémenter le recyclerView</td>
+</tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
@@ -258,7 +266,7 @@
 <li><a href="#section5">Réaliser le cahier des charges</a></li>
 <li><a href="#section6">Réaliser des wireframes</a></li>
 <li><a href="#section7">Ajout des ressources de l'application</a></li>
-<li><a href="#section8">Développer</a></li>
+<li><a href="#section8">Implémenter l'interface en respectant les wireframes</a></li>
 </ol>
 <h3>1. Les bases en Kotlin <a id="section1"></a></h3>
 <p>Pour commencer un petit mot sur Kotlin :</p>
@@ -357,22 +365,22 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p>Le sprint 1 s'achève à ce niveau.</p>
 </div></div>
 <h3>5. Réaliser le cahier des charges <a id="section5"></a></h3>
-<p>Avant dans se lancer dans les phases de conception et de réalisation, il est important de bien identifier le besoin client. Celui-ci peut être restituer sous forme de cahier des charges. Il est important que ce document soit clair et complet pour que le besoin client soit bien compris et que l'équipe de dev puisse correctement faire son travail.</p>
-<p>Au cours de mon stage de césure, j'ai été amené à développer une application web de la phase de conception à celle de mise en production. Le besoin client n'avait pas bien été défini ce qui a provoqué une grosse perte de temps de mon côté pour revoir certaines fonctionnalités voire en ajouter d'autres auxquelles ils n'avaient pas pensé initialement.</p>
-<p>Pour ce POK, la situation est un peu particulière, je suis à la fois le client et le développeur, mais ça ne fait rien. Dorénavant je m'efforcerai toujours à receuillir correctement le besoin client dans un premier temps pour avoir une bonne feuille de route de ce qui est à faire. Puis, dans un second temps, je commencerai à coder.</p>
-<p>Voici le cahier des charges consacré à l'application <em>EVASION</em> que j'ai décidé de développer dans le cadre de ce POK :</p>
+<p>Avant dans se lancer dans les phases de conception et de réalisation, il est important de bien identifier le besoin client. Celui-ci peut être restitué sous forme de cahier des charges. Il est important que ce document soit clair et complet pour que le besoin client soit bien compris et que l'équipe de dev puisse correctement faire son travail.</p>
+<p>Au cours de mon stage de césure, j'ai été amené à développer une application web de la phase de conception à celle de mise en production. Le besoin client n'avait pas bien été défini ce qui a provoqué une grosse perte de temps de mon côté pour revoir certaines fonctionnalités voire en ajouter d'autres auxquelles les clients n'avaient pas pensé initialement.</p>
+<p>Pour ce POK, la situation est un peu particulière, je suis à la fois le client et le développeur, mais ça ne fait rien. Dorénavant, je m'efforcerai toujours à recueillir correctement le besoin client dans un premier temps pour avoir une bonne feuille de route. Puis, dans un second temps, je commencerai les phases de conception et de réalisation.</p>
+<p>Voici le cahier des charges consacré à l'application <em>EVASION</em> que j'ai décidée de développer dans le cadre de ce POK :</p>
 <p><img src="img/CahierDesCharges-client-1.jpg" alt="Cahier des charges - client (partie 1)">
 <img src="img/CahierDesCharges-client-2.jpg" alt="Cahier des charges - client (partie 1)"></p>
 <h3>6. Réaliser des wireframes <a id="section6"></a></h3>
 <p>Pour réaliser des wireframes, j'ai décidé d'utiliser le logiciel d'UI design <a href="https://www.figma.com">Figma</a>. Ce logiciel permet de créer des prototypes de sites web ou d'application.</p>
-<p>Après avoir appris à utiliser Figma, voici les wireframes créées :</p>
+<p>Après avoir découvert l'outil Figma, voici les wireframes créées :</p>
 <p><img src="img/figma-global.png" alt="Figma - global"></p>
 <p><img src="img/figma-details.png" alt="Figma - détails"></p>
 <p>Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.</p>
 <h3>7. Ajout des ressources de l'application <a id="section7"></a></h3>
-<p>Une fois qu'on a une vision du futur rendu de notre application (grâce aux wireframes), on commence à coder le visuel de notre application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :</p>
+<p>Une fois la vision du futur rendu de notre application établie (grâce aux wireframes), j'ai commencé à coder le visuel de l'application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :</p>
 <p><img src="img/definitionCouleurs.png" alt="Définition couleurs"></p>
-<p>De même, on saisit le contenu textuel (dans le fichier ./res/values/string.xml)   :</p>
+<p>De même, j'ai saisi le contenu textuel (dans le fichier ./res/values/string.xml)   :</p>
 <pre class="language-kotlin " style="counter-reset: linenumber 0"><code class="language-kotlin"><span class="token operator">&lt;</span>resources<span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name"</span></span><span class="token operator">></span>Evasion<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name_capital_letters"</span></span><span class="token operator">></span>EVASION<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
@@ -443,7 +451,7 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>C'est à ce moment qu'on comprend l'importance du temps passé à réaliser des wireframes qui permettent de ne pas se perdre et d'organiser au mieux sont espace de travail.</p>
+<p>C'est à ce moment qu'on relève l'importance du temps passé à réaliser des wireframes qui permettent de ne pas se perdre et d'organiser au mieux son espace de travail.</p>
 </div></div>
 <p>Ensuite, j'ai importé tous les icons présents dans mes wireframes (dans le dossier ./res/drawable). J'ai également ajouté une photo pour l'afficher à l'emplacement prévu pour un retour d'expérience.</p>
 <p><img src="img/drawable.png" alt="Drawable"></p>
@@ -454,12 +462,14 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
 </svg>
 <div class="pl-8  mb-2 mr-8">
-<p>Faites attention à vos noms de fichiers</p>
+<p><strong>Faites attention à vos noms de fichiers</strong></p>
 </div><div class="pl-8 mr-8">
 <p>Le nom de fichier des ressources doit être écrit en <strong>minuscules</strong> et seul le caractère <strong>underscore</strong> est autorisé.</p>
 </div></div>
 <h3>8. Implémenter l'interface en respectant les wireframes <a id="section8"></a></h3>
-<p>Ensuite, j'ai commencé à coder l'application en disposant les ressources correctement sur les layouts. Puis, j'ai appelé ces layouts depuis la MainActivity. Cette partie a été (beaucoup) plus longue que prévue parce que, bien que la création de layout semble triviale, c'est en réalité assez dur de prendre en main l'outil lors d'une première utilisation. De plus, j'ai eu du mal à comprendre comment appeler le layout au bon endroit. J'ai aussi eu du mal à implémenter la liste variable d'expériences. En effet, dans mes wireframes, j'ai décidé que, sur ma page principale, l'utilisateur pouvait consulter un nombre variable d'expériences en défilant vers le bas. Pour cette partie, un peu plus technique, j'ai utilisé une vidéo youtube : <a href="https://www.youtube.com/watch?v=WlDzTh4WXek&amp;t=2714s">créer une application mobile sur Android</a></p>
+<p>Ensuite, j'ai commencé à coder l'application en disposant les ressources correctement sur les layouts. Puis, j'ai appelé ces layouts depuis la MainActivity. Cette partie a été (beaucoup) plus longue que prévue parce que, bien que la création de layout semble triviale, c'est en réalité assez dur de prendre en main l'outil lors d'une première utilisation. De plus, j'ai eu du mal à comprendre comment appeler le layout au bon endroit. J'ai aussi eu des difficultés à implémenter la liste variable d'expériences. En effet, dans mes wireframes, sur la page principale, j'ai décidé que l'utilisateur pouvait consulter un nombre variable d'expériences en défilant vers le bas. Pour cette partie, un peu plus technique, j'ai utilisé une vidéo youtube : <a href="https://www.youtube.com/watch?v=WlDzTh4WXek&amp;t=2714s">créer une application mobile sur Android</a></p>
+<h2>Conclusion du POK</h2>
+<p>Ce premier POK m'a été utile à la fois sur le plan technique et sur le plan gestion de projet. En effet, sur le plan &quot;technique&quot;, j'ai appris les bases du langage de programmation Kotlin et à utiliser Android Studio pour développer une application mobile. Sur le plan &quot;gestion de projet&quot;, j'ai pris conscience de ma tendance à sous-estimer le temps nécessaire à l'accomplissement de chaque tâche. De plus, je n'avais pas suffisamment anticipé, voire pas du tout, le temps consacré à la résolution des bugs techniques et des erreurs de code.</p>
 <h3>Sources utiles - Sprint 2</h3>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

@@ -163,9 +163,9 @@
 <li><a href="#section4">Mise en pratique avec la création d'un jeu</a></li>
 </ol>
 <h2>1. Introduction <a id="section1"></a></h2>
-<p>Dans le monde professionnel, un des logiciels les plus importants est <strong>Excel</strong>. Bien que tout le monde connaisse ce logiciel, au moins de nom, seulement une petite partie d'entre eux maîtrisent toutes les fonctionnalités disponibles. Pour ma part, je n'ai jamais vraiment appris à utiliser Excel, je sais simplement utiliser un tableur ou encore afficher des graphes. C'est pour cela que j'ai décidé de consacrer ce MON à l'apprentissage des bases des macros qui permettent d'automatiser des tâches. Lors de mon stage de césure, mon collègue de bureau m'a souvent dit &quot;Excel c'est trop fort, tu peux tout faire avec !&quot;.</p>
+<p>Dans le monde professionnel, l'un des logiciels les plus importants est <strong>Excel</strong>. Bien que tout le monde connaisse ce logiciel, au moins de nom, seulement une petite partie d'entre eux maîtrisent toutes les fonctionnalités disponibles. Pour ma part, je n'ai jamais vraiment appris à utiliser Excel ; je sais simplement manipuler un tableur et afficher des graphiques. C'est pour cela que j'ai décidé de consacrer ce MON à l'apprentissage des bases des macros qui permettent d'automatiser des tâches. Lors de mon stage de césure, mon collègue de bureau m'a souvent dit : &quot;Excel c'est trop fort, tu peux tout faire avec !&quot;.</p>
 <h2>2. Les macros et VBA, qu'est-ce que c'est ? <a id="section2"></a></h2>
-<p>Le VBA (Visual Basic for Applications) est un langage proche du VB (Visual Basic). Ce langage de programmation est intégré dans plusieurs applications Microsoft dont Excel. Il permet d'automatiser des tâches par l'intermédiaire de macros qui exécutent des séries d'actions. Par exemple il est possible d'automatiser la création d'un graphique à partir de données fournies dans un tableur. Ainsi, VBA permet aux utilisateurs de créer des fonctions personnalisées pour répondre à des besoins spécifiques, au-delà des fonctionnalités de base d'Excel.</p>
+<p>Le VBA (Visual Basic for Applications) est un langage proche du VB (Visual Basic). Ce langage de programmation est intégré dans plusieurs applications Microsoft dont Excel. Il permet d'automatiser des tâches par l'intermédiaire de macros qui exécutent des séries d'actions. Par exemple, il est possible d'automatiser la création d'un graphique à partir de données fournies dans un tableur. Ainsi, VBA permet aux utilisateurs de créer des fonctions personnalisées pour répondre à des besoins spécifiques, au-delà des fonctionnalités de base d'Excel.</p>
 <h2>3. Quelques points clés en VBA <a id="section3"></a></h2>
 <p>Pour apprendre comment écrire du code en VBA, j'ai utilisé le <a href="../../../Charles-Cook/mon/temps-1.1/index.md">MON1.1</a> de Charles et j'ai suivi le même cours que lui (<a href="https://excel-pratique.com/fr/vba">Excel-Pratique : cours VBA gratuit</a>). Ce cours est bien fait, facile à suivre, avec des petits exercices d'entraînement. Je te conseille d'y jeter un coup d'œil si tu souhaites toi aussi apprendre le VBA.</p>
 <p>Pour ne pas refaire ce qui a déjà été fait par certains concernant leur MON, je vais simplement mentionner certains 'points clés' qui sont intéressants à voir car on ne retrouve pas exactement la même fonctionnalité ou syntaxe dans d'autres langages de programmation (python, C#, etc).</p>
@@ -183,7 +183,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>On remarque qu'on utilise l'appostrophe <code>'</code> pour commenter son code.</p>
+<p>On remarque qu'on utilise la simple appostrophe pour commenter son code.</p>
 </div></div>
 <p><strong>Boucles <code>While</code> et <code>Until</code> :</strong></p>
 <pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Do</span> <span class="token keyword">While</span> [CONDITION]
@@ -207,7 +207,7 @@
 <p>On remarque qu'on utilise des variables (<em>cellule</em> dans l'exemple précédent) qui doivent être déclarées en précisant leur type (Integer, String, ...).</p>
 <p>Exemple : Dim maVariable As Integer</p>
 </div></div>
-<p>**Utilisation de <code>With</code> pour éviter les répétitions :</p>
+<p><strong>Utilisation de <code>With</code> pour éviter les répétitions :</strong></p>
 <pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">With</span> Sheets<span class="token punctuation">(</span><span class="token string">"Index"</span><span class="token punctuation">)</span> <span class="token comment">'On cache les différents boutons</span>
   <span class="token punctuation">.</span>Shapes<span class="token punctuation">(</span><span class="token string">"BoutonChargerGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Visible <span class="token operator">=</span> <span class="token boolean">False</span>
   <span class="token punctuation">.</span>Shapes<span class="token punctuation">(</span><span class="token string">"BoutonCreerGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Visible <span class="token operator">=</span> <span class="token boolean">False</span>
@@ -217,26 +217,26 @@
 </code></pre>
 <p>Dans l'exemple précédent, l'utilisation de <code>With</code> permet d'éviter la répétition de <code>Sheets(&quot;Index&quot;)</code>.</p>
 <h2>Mise en pratique avec la création d'un jeu <a id="section4"></a></h2>
-<p>Pour apprendre et maîtriser un nouveau langage, il est primordiale de mettre en pratique. C'est pour cela que j'ai décidé de réaliser un petit jeu de Tier-List sur Excel à l'aide des connaissances acquises sur [Excel-Pratique].</p>
+<p>Pour apprendre et maîtriser un nouveau langage, il est primordiale de mettre en pratique. C'est pour cela que j'ai décidé de réaliser un petit jeu de Tier-List sur Excel à l'aide des connaissances acquises sur <a href="https://excel-pratique.com/fr/vba">Excel-Pratique</a>.</p>
 <h3>Concept du jeu</h3>
-<p>Le jeu de Tier-List consiste à classer des éléments dans différentes catégories selon ses préférences. Par exemple, si le thème choisi est 'clubs de ligue 1', le joueur devra classer 8 clubs selon ses préférences. Les clubs sont tirés au hasard (8 parmi 18 en ce qui concerne le thème 'club de ligue 1'). Le joueur pourra choisir le nom des différentes catégories. Des catégories par défaut seront proposées (catégories : 'Incroyable', 'Super', 'Bien', 'Moyen', 'Incroyablement mauvais').</p>
+<p>Le jeu de Tier-List consiste à classer des éléments appartenant à un même thème dans différentes catégories selon ses préférences. Par exemple, si le thème choisi est 'clubs de ligue 1', le joueur devra classer 8 clubs selon ses préférences. Les clubs sont tirés au hasard (8 parmi 18 en ce qui concerne le thème 'club de ligue 1'). Le joueur pourra choisir le nom des différentes catégories. Des catégories par défaut seront proposées (catégories : 'Incroyable', 'Super', 'Bien', 'Moyen', 'Incroyablement mauvais').</p>
 <h3>Organisation du projet : les différentes feuilles Excel</h3>
 <p><img src="img/organisationFeuilles.png" alt="Organisation des feuilles"></p>
 <p><strong>Feuille n°1 : Index</strong> : Correspond à la feuille principale, c'est là que le jeu se déroule.</p>
 <p><strong>Feuille n°2 : CreationGrille</strong> : Feuilles consacrée au désign de la grille présente sur la feuille <em>Index</em>. Le joueur peut changer le nom de chaque catégorie et sa couleur associée. Sur cette feuille, trois boutons sont disponibles :</p>
 <ul>
-<li><em>Effacer la grille actuelle</em> pour que le joueur crée ses propres catégories de A à Z.</li>
-<li><em>Réinitialiser la grille par défaut</em> pour recharger la grille qui est actuellement affichée sur la capture d'écran qui suit.</li>
-<li><em>Retour à la page principale</em> pour être redirigé vers la feuille <em>Index</em> et commencer à jouer.</li>
+<li><em>&quot;Effacer la grille actuelle&quot;</em> pour que le joueur crée ses propres catégories de A à Z.</li>
+<li><em>&quot;Réinitialiser la grille par défaut&quot;</em> pour recharger la grille qui est actuellement affichée sur la capture d'écran qui suit.</li>
+<li><em>&quot;Retour à la page principale&quot;</em> pour être redirigé vers la feuille <em>Index</em> et commencer à jouer.</li>
 </ul>
 <p><img src="img/CreationGrille.png" alt="Organisation des feuilles"></p>
 <p>Chaque bouton est associé à une macro, c'est-à-dire à une fonction.</p>
-<p>Pour le bouton <em>Effacer la grille actuelle</em>, voici le code VBA de la macro associée :</p>
+<p>Pour le bouton <em>&quot;Effacer la grille actuelle&quot;</em>, voici le code VBA de la macro associée :</p>
 <pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> Retour<span class="token punctuation">(</span><span class="token punctuation">)</span>
     Sheets<span class="token punctuation">(</span><span class="token string">"Index"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Activate
 <span class="token keyword">End</span> <span class="token keyword">Sub</span>
 </code></pre>
-<p>Pour le bouton <em>Réinitialiser la grille par défaut</em>, voici le code VBA de la macro associée :</p>
+<p>Pour le bouton <em>&quot;Réinitialiser la grille par défaut&quot;</em>, voici le code VBA de la macro associée :</p>
 <pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> GrilleDefaut<span class="token punctuation">(</span><span class="token punctuation">)</span>
     Sheets<span class="token punctuation">(</span><span class="token string">"CreationGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cells<span class="token punctuation">.</span>Clear <span class="token comment">'On nettoie la page dédiée à la création d'une grille</span>
     Sheets<span class="token punctuation">(</span><span class="token string">"CreationGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Activate <span class="token comment">'Choix de la feuille à modifier</span>
@@ -256,7 +256,7 @@
     StyleColonne <span class="token comment">'Ajouter un style aux colonnes (la fonction StyleColonne a été générée toute seule grâce à l'enregistrement d'une macro)</span>
 <span class="token keyword">End</span> <span class="token keyword">Sub</span>
 </code></pre>
-<p>Pour le bouton <em>Effacer la grille actuelle</em>, voici le code VBA de la macro associée :</p>
+<p>Pour le bouton <em>&quot;Effacer la grille actuelle&quot;</em>, voici le code VBA de la macro associée :</p>
 <pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> NouvelleGrille<span class="token punctuation">(</span><span class="token punctuation">)</span>
     Sheets<span class="token punctuation">(</span><span class="token string">"CreationGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cells<span class="token punctuation">.</span>Clear <span class="token comment">'On nettoie la page dédiée à la création d'une grille</span>
     Sheets<span class="token punctuation">(</span><span class="token string">"CreationGrille"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Activate <span class="token comment">'Choix de la feuille à modifier</span>
