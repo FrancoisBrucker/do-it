@@ -9,7 +9,7 @@ date: 1970-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON ayant pour but de monter en compétence sur Google Script."
 ---
 
 {% prerequis %}
@@ -23,10 +23,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Pour ce mon, je veux me former sur google script afin de pouvoir optimiser tous mes documents avec des macros etc.
 
 ## Contenu
 
