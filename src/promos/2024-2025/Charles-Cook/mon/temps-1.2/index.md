@@ -100,7 +100,7 @@ La servicisation est un terme qui apparait à la fin des années 1980, dans les 
 
 Ainsi, on peut définir la servicisation comme la transition de l’entreprise manufacturière de la vente de produits vers la vente de systèmes produits-services (PSS). 
 
-Système produit-service (PSS) : ensemble commercialisable de produits et de services capables de remplir parfaitement les besoins d’u utilisateur. Le PSS est fourni soit par une seule organisation, soit par une alliance d’entreprises et peut contenir qu’un seul produit, ou plusieurs, ainsi que des services supplémentaires. Il peut également lier un produit et un service supplémentaire. 
+Système produit-service (PSS) : ensemble commercialisable de produits et de services capables de remplir parfaitement les besoins d’un utilisateur. Le PSS est fourni soit par une seule organisation, soit par une alliance d’entreprises et peut contenir qu’un seul produit, ou plusieurs, ainsi que des services supplémentaires. Il peut également lier un produit et un service supplémentaire. 
 
 La servicisation est donc l’innovation des capacités et des processus d’une organisation afin de mieux créer de la valeur mutuelle. 
 
@@ -126,7 +126,7 @@ Il faut également savoir réaliser cet exercice au bon moment, car de par les m
 
 Les questions principales qu’une entreprise doit donc se poser avant d’entamer un exercice d’évolution de son modèle économique sont les suivantes : 
 -	Quels sont les éléments qui font le succès du business model actuel ?
--	Quels sont les potentiels signaux qui appellent à ka refonte du business model ? (Nouvelles règlementations, nouveaux compétiteurs, nouvelles technologies, évolutions du marché,…)
+-	Quels sont les potentiels signaux qui appellent à la refonte du business model ? (Nouvelles règlementations, nouveaux compétiteurs, nouvelles technologies, évolutions du marché,…)
 -	Est-il pertinent de reconfigurer le business model de l’organisation ? 
 
 Au travers de ces trois questions principales, il est possible de juger de la nécessité ou non de modifier le modèle économique d’une entreprise. 
@@ -199,7 +199,7 @@ Ce troisième modèle s'inscrit dans une démarche écosystémique, où la valeu
 ### Business model sobre “do it yourself”
 Ce dernier modèle se concentre sur le transfert de compétences, permettant aux consommateurs de fabriquer ou réparer eux-mêmes leurs vêtements, en lien avec des pratiques comme l'upcycling. Il valorise l'unicité et l'esthétisme, contribuant à un nouveau courant artistique. L'objectif principal est de donner aux consommateurs les compétences pour prolonger la vie des vêtements par la réparation ou la transformation. Comme le modèle écosystémique, il renforce le lien entre l'individu et le vêtement, tout en redéfinissant le consommateur comme créateur et réparateur, plutôt que simple acheteur dans une économie linéaire.
 
-Ainsi, il était important au travers de ces 4 exemple de montrer qu’il existe des modèles économiques pouvant concilier rentabilité et respect de l’environnement. Ces modèles économiques sont aujourd’hui encore rares, mais l’existence d’organisations prônant ces valeurs sont un message d’espoir. 
+Ainsi, il était important au travers de ces 4 exemples de montrer qu’il existe des modèles économiques pouvant concilier rentabilité et respect de l’environnement. Ces modèles économiques sont aujourd’hui encore rares, mais l’existence d’organisations prônant ces valeurs sont un message d’espoir. 
 
 ## Conclusion
 
