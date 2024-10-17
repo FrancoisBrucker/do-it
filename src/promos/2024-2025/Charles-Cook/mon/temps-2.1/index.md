@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Apprentissage des bases du front end : css, html et js"
 authors:
   - Charles Cook
 
