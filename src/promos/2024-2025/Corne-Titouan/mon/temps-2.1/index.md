@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Figma - UI et prototypage"
+title: "React - Front-End"
 authors:
   - Titouan Corne
 

@@ -60,7 +60,7 @@ Il existe quatre différents types de couches :
 
 Un **raster** est un format de données géographiques qui représente l'espace sous forme de grille de cellules (ou pixels), où chaque cellule a une valeur spécifique.
 
-![Mode raster vs Mode Vecteur](./img/rasterVSvecteur.png) *Illustration disponible sur [researchgate.net](https://www.researchgate.net/figure/Representation-des-points-lignes-et-polygones-en-modes-Raster-et-Vecteur-Source_fig1_315837966)*
+![Mode raster vs Mode Vecteur](./img/rasterVSvecteur.png) *Représentation des points, lignes et polygones en modes Raster et Vecteur. Source (Chakhar, 2006). Disponible sur [researchgate.net](https://www.researchgate.net/figure/Representation-des-points-lignes-et-polygones-en-modes-Raster-et-Vecteur-Source_fig1_315837966)*
 
 ## 4. Mise en route <a id="section4"></a>
 
@@ -72,13 +72,13 @@ En suivant le tutoriel *["Quick Start"](https://openlayers.org/doc/quickstart.ht
 
 `npm start` pour lancer le projet.
 
-![Initialisation du projet](./img/initialisation.png) *Capture d'écran personnelle*
+![Initialisation du projet](./img/initialisation.png) *Capture d'écran personnelle (2024)*
 
 Les trois fichiers qui vont nous intéresser pour la suite sont index.html, style.css et surtout main.js.
 
 A ce stade lorsqu'on lance le projet (`npm start`), un serveur local se lance et la page web suivante apparaît :
 
-![Page web initialisée](./img/cartev0.png) *Capture d'écran personnelle*
+![Page web initialisée](./img/cartev0.png) *Capture d'écran personnelle (2024)*
 
 Nous voilà maintenant avec un fond de carte. On peut facilement depuis le javascript ajuster le centre de la carte, et le zoom.
 
@@ -88,7 +88,7 @@ A présent pour prendre en main OpenLayers, j'ai décidé de "jouer" avec les di
 
 Tout d'abord, j'ai centré la carte sur l'Australie et j'ai ajusté le zoom pour avoir une vision du pays entier.
 
-![Carte centrée sur l'Australie](./img/cartev1.png) *Capture d'écran personnelle*
+![Carte centrée sur l'Australie](./img/cartev1.png) *Capture d'écran personnelle (2024)*
 
 Pour réaliser cela, il a fallu que je m'intéresse au système de projection. Le fond de carte OSM est en projection Mercator Web (EPSG:3857) qui est la projection standard utilisée pour la cartographie web. C'est cette projection que Google Maps a adopté à partir de 2005. D'autres systèmes de projections peuvent être utilisés en SIG. Pour ma part je me suis également servi le système EPSG:4326, également connu sous le nom de WGS84, qui est un système de coordonnées utilisé dans les systèmes Google Earth et GPS. En effet, il m'a été plus facile de trouver les coordonnées GPS (longitude, latitude) des différentes villes australiennes que j'ai dans un second temps converties en coordonnées Web Mercator.
 
@@ -116,7 +116,7 @@ GeoJson est un format de fichier qui utilise la norme JSON pour représenter des
 
 J'ai modifié le fichier GeoJson pour ajouter des informations personnelles. J'ai par exemple ajouté une propriété booléenne "VISITED" pour les états dans lesquels je suis allé (représentés en vert).
 
-![Australie & ses états](./img/cartev2.png) *Capture d'écran personnelle*
+![Australie & ses états](./img/cartev2.png) *Capture d'écran personnelle (2024)*
 
 Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres informations telles que les villes visitées, les hôtes qui m'ont accueilli, etc. Voici une partie du fichier créé :
 
@@ -189,17 +189,17 @@ Pour structurer de manière lisible un fichier GeoJson, il est possible d'utilis
 
 J'ai également ajouté du code javascript pour pouvoir afficher des informations concernant les différents éléments affichés de manière dynamique. Voici un appercu de la carte sur laquelle j'ai abouti avec ce MON :
 
-![Australie](./img/cartevf1.png) *Capture d'écran personnelle*
+![Australie](./img/cartevf1.png) *Capture d'écran personnelle (2024)*
 
 Lorsqu'on zoome vers Sydney et qu'on clique sur le point le plus à l'ouest (Lithgow), on obtient ceci :
 
-![Australie zoom sur Sydney](./img/cartevf2.png) *Capture d'écran personnelle*
+![Australie zoom sur Sydney](./img/cartevf2.png) *Capture d'écran personnelle (2024)*
 
 ## Sources utiles
 
 {% lien %}
 
-- [GitHub de données GeoJson pour l'Australie](https://github.com/tonywr71/GeoJson-Data)
-- [Site d'OpenLayers](https://openlayers.org/)
+- [GitHub de données GeoJson pour l'Australie. Source : tonywr71 (2024)](https://github.com/tonywr71/GeoJson-Data)
+- [Site officiel d'OpenLayers (2024)](https://openlayers.org/)
 
 {% endlien %}

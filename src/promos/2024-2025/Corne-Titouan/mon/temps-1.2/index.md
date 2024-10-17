@@ -22,7 +22,7 @@ Avoir un Microsoft Excel qui fonctionne.
 {% endprerequis %}
 {% lien %}
 
-- [Excel-Pratique : cours VBA gratuit](https://excel-pratique.com/fr/vba)
+- [Cours VBA gratuit. Source : Excel-Pratique (2024)](https://excel-pratique.com/fr/vba)
 - [Mon projet (github)](https://github.com/TitouanCorne/MON1.2)
 
 {% endlien %}
@@ -114,7 +114,7 @@ Le jeu de Tier-List consiste à classer des éléments appartenant à un même t
 
 ### Organisation du projet : les différentes feuilles Excel
 
-![Organisation des feuilles](./img/organisationFeuilles.png)
+![Organisation des feuilles](./img/organisationFeuilles.png) *Capture d'écran personnelle (2024)*
 
 **Feuille n°1 : Index** : Correspond à la feuille principale, c'est là que le jeu se déroule.
 
@@ -124,7 +124,7 @@ Le jeu de Tier-List consiste à classer des éléments appartenant à un même t
 - *"Réinitialiser la grille par défaut"* pour recharger la grille qui est actuellement affichée sur la capture d'écran qui suit.
 - *"Retour à la page principale"* pour être redirigé vers la feuille *Index* et commencer à jouer.
 
-![Organisation des feuilles](./img/CreationGrille.png)
+![Organisation des feuilles](./img/CreationGrille.png)  *Capture d'écran personnelle (2024)*
 
 Chaque bouton est associé à une macro, c'est-à-dire à une fonction.
 
@@ -177,7 +177,7 @@ Il existe une fonctionnalité permettant d'enregistrer directement une macro san
 
 **Feuille n°3 : Themes** : Feuille qui regroupe tous les thèmes de jeu (ex : clubs de ligue 1, sodas, etc).
 
-![Organisation des feuilles](./img/Themes.png)
+![Organisation des feuilles](./img/Themes.png)  *Capture d'écran personnelle (2024)*
 
 Voici une session, sous forme de vidéo, d'une partie du jeu codé :
 
@@ -188,11 +188,13 @@ Voici une session, sous forme de vidéo, d'une partie du jeu codé :
   </video>
 </div>
 
+ *Vidéo personnelle (2024)*
+
 ## Sources utiles
 
 {% lien %}
 
-- [Excel-Pratique : cours VBA gratuit](https://excel-pratique.com/fr/vba)
+- [Cours VBA gratuit. Source : Excel-Pratique (2024)](https://excel-pratique.com/fr/vba)
 - [Mon projet (github)](https://github.com/TitouanCorne/MON1.2)
 
 {% endlien %}
