@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Comment les bookmakers gagnent-ils de l'argent ?"
 authors:
   - Ménager Jeanne
 
@@ -9,7 +9,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je cherche à m'intérésser à la façon dont les bookmakers gagnent de l'argent et à savoir ce qu'ils font de l'argent des utilisateurs sur leur site"
 ---
 
 {% prerequis %}

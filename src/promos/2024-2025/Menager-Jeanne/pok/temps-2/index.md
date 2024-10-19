@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Développement d'une application mobile"
 authors:
   - Ménager Jeanne
 
@@ -10,7 +10,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Je vais coder une application mobile très simple pour la déployer sur un serveur web après. Le but est de revoir le code en JS et d'utiliser mes connaissances appris grace au MON 2.1
 ---
 
 {% prerequis %}
