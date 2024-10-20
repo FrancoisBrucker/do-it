@@ -237,6 +237,21 @@
 </table>
 <p><em><strong>Étude post-mortem :</strong></em><br>
 À la fin de ce sprint, Je vais évaler la fonctionnalité des pages développées et corriger les bugs éventuels.</p>
+<p><em><strong>À la fin de du sprint</strong></em></p>
+<ul>
+<li>
+<p>[x] Développer les pages d'accueil</p>
+</li>
+<li>
+<p>[x] Créer les formulaires d'inscription</p>
+</li>
+<li>
+<p>[x] Mettre en place la structure des pages vidéos</p>
+</li>
+<li>
+<p>[x] Implémenter le système d'authentification</p>
+</li>
+</ul>
 <h4>Sprint 2 :</h4>
 <p>Ce sprint est dédié à l'ajout de fonctionnalités permettant aux instructeurs de créer des cours, aux étudiants de les suivre et de passer des évaluations.</p>
 <table>
@@ -269,6 +284,33 @@
 </tr>
 </tbody>
 </table>
+<p><em><strong>À la fin de du sprint</strong></em></p>
+<ul>
+<li>
+<p>[x] Développer un tableau de bord(Toutes les pages visibles) pour les admins</p>
+</li>
+<li>
+<p>[x] Assurer la sécurité</p>
+</li>
+<li>
+<p>[x] Permettre la création de cours(gérer les permissions)</p>
+</li>
+<li>
+<p>[x] Intégrer un lecteur vidéo</p>
+</li>
+<li>
+<p>[x] Recherche sur le systeme de payement</p>
+</li>
+<li>
+<p>[ ] Implémentation d'un filtre de recherche par catégorie pour les cours (non terminé).</p>
+</li>
+<li>
+<p>[ ] Liaison correcte pour le paiement en ligne</p>
+</li>
+<li>
+<p>[ ] Gestion de la progression de l'étudiant dans la base de données (non terminé).</p>
+</li>
+</ul>
 <p><em><strong>Étude post-mortem :</strong></em><br>
 Je vais évaler la fluidité de la gestion des cours et ajuster les problèmes liés à la gestion des données.</p>
 <hr>
@@ -280,6 +322,23 @@ Je vais évaler la fluidité de la gestion des cours et ajuster les problèmes l
 <div class="hint">
   <strong>💡</strong> Vous allez tomber sur cette page d'accueil à l'ouverture de la plateforme. Cette page, représentant la page d'accueil, a pour but de présenter la plateforme dans sa globalité et est dédiée aux étudiants et aux instructeurs.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Page d'accueil</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/1.PNG" alt="image">
 <img src="images/1a.PNG" alt="image">
 <img src="images/1b.PNG" alt="image">
@@ -287,43 +346,223 @@ Je vais évaler la fluidité de la gestion des cours et ajuster les problèmes l
 <img src="images/1d.PNG" alt="image">
 <img src="images/1dd.PNG" alt="image">
 <img src="images/1f.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Après cette page d'accueil, l'élève peut aussi consulter les cours disponibles. Il est censé faire également une sorte de filtre par catégorie, mais je n'ai pas encore réussi à l'implémenter.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Les cours disponibles</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/1g.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Ainsi, s'il trouve un cours qui l'intéresse, il doit se connecter et s'inscrire au cours.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Connexion</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/2.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Ici, l'étudiant va ajouter le cours dans son panier, qui s'incrémente automatiquement.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Ajouter le cours dans son panier</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/entre1.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Il sera redirigé ici lorsqu'il clique sur son panier pour finaliser sa commande.
 <p>Là, je n'ai pas réussi à lier correctement le paiement en ligne, même si j'ai essayé de l'implémenter avec Sandbox Payment System, qui n'est pas un système français. Mais cela n'a pas abouti, donc j'aimerais essayer d'implémenter les méthodes françaises comme Paylib ou PayPal.</p>
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Finalisatioon commande</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/entre2.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> En supposant que l'étudiant a payé, il verra sur son tableau de bord qu'il s'est inscrit à un cours.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Tableau de bord de l'étudiant</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/3.PNG" alt="image">
 <img src="images/4.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> S'il clique sur le cours, il verra la vidéo avec les leçons qu'il devra cocher chaque fois qu'il en termine une. Je n'ai pas fini le développement, mais je dois faire en sorte qu'à chaque fois qu'il coche un cours, je mette à jour sa progression dans la base de données.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Contenu du cours</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/6.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Maintenant, du côté admin, je vais essayer de me connecter en premier lieu comme admin simple (instructeur). 
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Comme instructeur</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/7.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Sur la page d'accueil, il verra toutes les données concernant les cours (nombre d'élèves, nombre de cours) et leur évolution. Mais pour le moment, les données qui y sont sont statiques ; je n'ai pas pu les implémenter. Il s'agit juste d'une récupération de données, mais il y a beaucoup d'autres choses plus intéressantes et utiles à mettre en place sur les 20h à venir. Mais ce que je veux montrer ici, c'est qu'en tant qu'instructeur, il n'est pas permis de visiter la liste des instructeurs, d'ajouter, supprimer, etc. Quand il essaie, il voit un message en haut lui montrant cela. Ce qu'il peut faire, c'est uniquement ce qui le concerne (les cours, quizz, etc.).
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Page d'accueil admin</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/8.PNG" alt="image">
+</div>
+</details>     
+</div>
 <div class="hint">
   <strong>💡</strong> Si on se connecte maintenant avec le compte du super admin, on peut tout faire. Ici, c'est un enchaînement d'écrans où j'ai visité les pages une par une. Mais il y a d'autres pages que j'ai déjà développées, comme l'attribution des permissions (les rôles), l'ajout des quizz et leurs réponses, etc., que je n'ai pas encore mises sur le tableau de bord. Elles sont accessibles juste en tapant la route (le lien) pour le moment.
 </div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Dashbord super admin</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
 <img src="images/9.PNG" alt="image">
 <img src="images/10.PNG" alt="image">
 <img src="images/11.PNG" alt="image">
@@ -332,6 +571,9 @@ Je vais évaler la fluidité de la gestion des cours et ajuster les problèmes l
 <img src="images/14.PNG" alt="image">
 <img src="images/dernier.PNG" alt="image">
 <img src="images/nondernier.PNG" alt="image">
+</div>
+</details>     
+</div>
 <h2>Conclusion</h2>
 <p>Je termine en rappelant que le but de ce projet est de mettre en valeur mes compétences en Laravel, surtout avec la méthode CRUD, car presque la totalité du développement consiste à Créer, Lire, Modifier et Supprimer je voulais aussi renforcer mes compétences en développement frontend. Donc je peux dire que j'ai appris énormément de choses qui me donnent plus de confiance avec ce framework.
 Vous trouverez le code source sur mon GitHub dont <a href="https://github.com/MbayeSyAmar/skillsproof.git">voici le lien</a></p>
