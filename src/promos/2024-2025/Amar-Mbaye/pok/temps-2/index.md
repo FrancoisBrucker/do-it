@@ -1,16 +1,16 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Un forum de discussion avec React pour le front-end et NestJS pour le back-end"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 1971-01-01
+date: 2024-10-18
 
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Le but de ce POK est de mettre en évidence mes connaissances acquises en créant un forum de discussion avec React comme front-end et NestJS comme back-end.
 ---
 
 {% prerequis %}
