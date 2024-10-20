@@ -34,27 +34,21 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Table des matières<a name="table-des-matières"></a>
-1. [HTML](#HTML)
-    - [Généralités](#HTML-Généralité")
-    - [Les éléments HTML](#HTML-éléments")
-      - [Les balises](#balises")
-      - [Les attributs](#attributs")
-      - [Indentation et commentaires](#ind_comm")
-      - [Listes](#listes")
-      - [Entités](#entités")
-      - [Tables](#tables")
-      - [Block/Inline element](#B/I_element")
-2. [CSS](#CSS)
-    - [Généralités](#CSS-Généralités)
-    - [Les sélecteurs](#sélecteurs)
-    - [En Pratique](#pratique)
-3. [Bilan](#Bilan)
+
+- [Table des matières](#table-des-matières)
+- [Contenu](#contenu)
+- [1.HTML](#1html)
+    - [Généralités](#généralités)
+    - [Les éléments HTML](#les-éléments-html)
+- [2.CSS](#2css)
+- [3.Bilan](#3bilan)
+- [Horodateur](#horodateur)
 
 ## Contenu
 
-## 1.HTML<a name="HTML"></a>
+## 1.HTML<a name="1htmlL"></a>
 
-#### <span style="color: #26B260">Généralités<a name="HTML-Généralité"></a>
+#### <span style="color: #26B260">Généralités<a name="généralités"></a>
 Les sigles « HTML » sont l’abréviation de **« HyperText Markup Language »**. Le HTML est donc un langage de **balisage**, c’est-à-dire un langage qui va nous permettre de définir les différents contenus d’une page.
 
 Tout d’abord, qu’est-ce qu’un site internet ? Un site internet est un ensemble de fichiers de code et de medias (images, videos, etc.) liés entre eux et disponibles à tout moment via le web. Pour que les différentes ressources constituant un site internet soient toujours accessibles, on les héberge généralement sur un **serveur** d’un hébergeur.
@@ -78,7 +72,7 @@ Voici ci-dessous le code minimum pour créer une page HTML valide :
 Comme son nom l’indique, le **doctype** sert à indiquer le type du document.
 L’élément meta sert lui à transmettre des meta informations sur la page au navigateur. La valeur *utf-8* est la valeur de référence pour tous les alphabets latins.
 
-#### <span style="color: #26B260">Les éléments HTML<a name="HTML-éléments"></a>
+#### <span style="color: #26B260">Les éléments HTML<a name="les-éléments-html"></a>
 
 Le langage HTML tout entier repose sur l’utilisation d’**éléments**. Dans une page, nous allons utiliser les éléments en HTML pour marquer du contenu, c’est-à-dire pour lui donner du sens aux yeux des navigateurs et des moteurs de recherche.
 
@@ -196,7 +190,7 @@ Une **entité HTML** est une suite de caractère qui est utilisée pour afficher
 * L'**élément span** est un conteneur en ligne utilisé pour baliser une partie d'un texte ou une partie d'un document.
 
 
-## 2.CSS<a name="CSS"></a>
+## 2.CSS<a name="2css"></a>
 
 **<span style="color: purple">1. Généralités**<a name="CSS-Généralités"></a>
 
@@ -405,7 +399,7 @@ Et voici ensuite la code HTML permettant de faire appel à notre fichier CSS ext
 L'exécution de ce code sur le serveur web nous permet d'afficher ce rendu visuel : 
 ![Page-Menu-Dark-Kitchen](./page-menu.png)
 
-## 3.Bilan<a name="Bilan"></a>
+## 3.Bilan<a name="3bilan"></a>
 Lors de ce MON, j'ai réalisé 2 tutoriels complets sur W3School qui m'ont permis de découvrir et d'apprendre la mécanique du FrontEnd avec l'utilisation des languages HTML et CSS. L'objectif de ce MON était de bien assimilé ces 2 languages afin de les utiliserr pour le codage de mon propre site web qui fait l'objet de mon POK1. Je suis donc satisfait du travail réalisé puisque le rendu des premières pages de mon site est satisfaisant. Reste maintenant à acquérir des connaissance complémentaires en JavaScript et sur l'utilisation du framework Vue pour ajouter de l'interactivité aux pages de mon site internet. 
 
 ## Horodateur
@@ -420,5 +414,5 @@ Toutes les séances et le nombre d'heures que l'on y a passé.
 | 14/09  | 1.5H  | HTML : Listes et tables |
 | 13/09  | 1H  | HTML : Les attributs class, div et id |
 | 20/09  | 2H  | CSS : Tutoriel W3schools, introduction au language |
-| 22/09  | 2H  | CSS : Codage des pages Menu et Panier Dark Kitchen |
+| 22/09  | 2H  | CSS : Codage des pages 'Menu' et 'Panier' Dark Kitchen |
 

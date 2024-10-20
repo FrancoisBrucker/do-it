@@ -1,16 +1,16 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Création d'une app web avec Django"
 authors:
   - OLIANA Guillaume
 
-date: 1971-01-01
+date: 2024-10-10
 
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK autour du framework Django pour la création d'une app web de gestion de tâche style to do list.
 ---
 
 {% prerequis %}

@@ -1,15 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Javascript et React"
 authors:
   - Alix Duréault
 
-date: 1970-11-01
+date: 2024-10-16
 tags: 
   - "temps 2"
+  - "info"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON a pour but de me former en Java Script et en React."
 ---
 
 {% prerequis %}
@@ -23,10 +24,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Dans ce MON, je me formerais aux bases du langage de Javascript et son utilisation pour React.
 
 ## Contenu
 

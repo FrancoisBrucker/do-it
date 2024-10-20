@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Management des bases de données"
 authors:
   - Charles Cook
 
@@ -10,7 +10,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: L'objectif de ce POK est d'apprendre comment on nettoie et on gère de la donnée, mais également de montrer comment on présente et traite cette donnée.
 ---
 
 {% prerequis %}

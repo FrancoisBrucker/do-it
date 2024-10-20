@@ -9,8 +9,10 @@ date: 1971-01-01
 
 tags: 
   - "temps 2"
+  - "Novice"
+  - "Ruby"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK ayant pour objectif d'apprendre le langage C.
 ---
 
 {% prerequis %}
@@ -20,14 +22,11 @@ Liste des prérequis du POK ET/OU MON
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[Documentation C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Je vais me former sur l'utilisation du langage C. Pour cela je vais partir de la documentation et construire ensuite dans un second temps un petit projet.
 
 ## Tâches
 

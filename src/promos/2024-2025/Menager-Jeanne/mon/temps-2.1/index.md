@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Projet Numérologie"
 authors:
   - Ménager Jeanne
 
@@ -9,7 +9,7 @@ date: 1970-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Je vais suivre le projet numéri-ologie afin de découvrir les bases du développement de serveur web"
 ---
 
 {% prerequis %}

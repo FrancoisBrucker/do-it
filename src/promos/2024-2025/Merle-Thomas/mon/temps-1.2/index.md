@@ -621,13 +621,13 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| 12/09  | 1H  | Discussion avec Sofiane pour trouver le tutoriel à suivre, téléchargment et prise en main du code |
-| 13/09  | 0.5H  | Exercice 1 : AboutExpects|
-| 13/09  | 0.5H  | Exercice 2 : AboutArrays |
-| 13/09  | 0.5H  | Exercice 3 : AboutFunctions |
-| 20/09  | 0.5H  | Exercice 4 : AboutHigherOrderFunctions |
-| 20/09  | 0.5H  | Exercice 5 : AboutInheritance |
-| 20/09  | 0.5H  | Exercice 5 : AboutMutability |
-| 20/09  | 0.5H  | Exercice 6 : AboutObjects |
-| 05/10  | 2.5H  | Tuto W3School : Variables, Objets, Classes et Constructeurs en JS|
-| 09/10  | 3H  | |
+| 12/09  | 0,5H  | Discussion avec Sofiane pour trouver le tutoriel à suivre, téléchargment et prise en main du code |
+| 13/09  | 1H  | Exercice 1 : AboutExpects|
+| 13/09  | 1H  | Exercice 2 : AboutArrays |
+| 13/09  | 1H  | Exercice 3 : AboutFunctions |
+| 20/09  | 1H  | Exercice 4 : AboutHigherOrderFunctions |
+| 20/09  | 1H  | Exercice 5 : AboutInheritance |
+| 20/09  | 1H  | Exercice 5 : AboutMutability |
+| 20/09  | 1H | Exercice 6 : AboutObjects |
+| 05/10  | 2H | Tuto W3School : Variables, Objets, Classes en JS |
+| 09/10  | 1H | Tuto W3School : Constructeurs en JS |

@@ -9,3 +9,4 @@ authors:
 ## Temps 1
 
 - [MON 1.1 - SQL Avancé](./temps-1.1)
+- [MON 1.2 - Lexique](./temps-1.2)

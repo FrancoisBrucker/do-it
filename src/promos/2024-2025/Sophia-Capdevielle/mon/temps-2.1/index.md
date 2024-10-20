@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "React et comparaison avec Vue.js"
 authors:
-  - Gordon Zola
+  - Sophia Capdevielle
 
-date: 1970-11-01
+date: 2024-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON a pour objectif de découvrir React, d'apprendre les bases et de comparer avec Vue.js que j'ai pu découvrir au temps 1"
 ---
 
 {% prerequis %}
@@ -23,11 +23,3 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
-## Contenu
-
-Le contenu du MON.

@@ -28,11 +28,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 ## Tâches
 
-### Sprints
-
-But final.
-
-#### Sprint 1
+### Sprint 1
 
 Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
@@ -44,22 +40,20 @@ Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la
 - [ ] Codage du programme VBA à partir de la maquette, et des retours reçus
 - [ ] Test de ce programme
 
-#### Sprint 2
+### Sprint 2
 
-- [ ] Continuer le codage du programme du Sprint 1
-- [ ] Test de ce programme + correction des bugs
-- [ ] identification de ses faiblesses ou des améliorations possibles
-- [ ] Correction des faiblesses, amélioration du programme
-- [ ] Codage d'un autre programme qui réponde à une autre des demandes identifiées
-- [ ] Test de ce programme + correction des bugs
-- [ ] identification de ses faiblesses ou des améliorations possibles
-- [ ] Correction des faiblesses, amélioration du programme
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [x] Continuer le codage du programme du Sprint 1
+- [x] Test de ce programme + correction des bugs
+- [x] identification de ses faiblesses ou des améliorations possibles
+- [x] Correction des faiblesses, amélioration du programme
+- [x] Codage d'un autre programme qui réponde à une autre des demandes identifiées
+- [x] Test de ce programme + correction des bugs
+- [x] identification de ses faiblesses ou des améliorations possibles
+- [x] Correction des faiblesses, amélioration du programme
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
+Premier Sprint :
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
@@ -70,6 +64,16 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | Lundi 16/09  | 2H  | Analyse des retours sur la maquette + codage VBA |
 | Lundi 16/09  | 30 min  | Analyse du Sprint + réflexion sur le prochain Sprint |
 | Lundi 16/09 | 1H30 | Rédaction livrable |
+
+Deuxième Sprint :
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| vendredi 04/10  | 3H  | Codage |
+| dimanche 06/10  | 2H  | Codage |
+| jeudi 10/10  | 1H  | Présentation avec Corinne + correction des bugs |
+| lundi 14/10  | 2H 30  | Essai recherche + codage remplissage des formulaires pdf |
+| mardi 15/10  | 1H  | Rédaction livrable |
 
 ## Premier Sprint
 
@@ -115,3 +119,33 @@ Voici le retour d'expérience obtenu de cette maquette :
 Je n'ai pas réalisé l'intégralité de ce que j'avais initialement prévu pour le premier sprint étant donné qu'à ce stade, je n'ai pas encore réussi à coder une solution viable en VBA pour répondre à un des problèmes efficacement. Le codage est en cours. Cela constituera le coeur du second sprint qui était déjà prévu de la sorte.
 
 ## Second Sprint
+
+### La vérification des documents administratifs
+
+Le début de ce second sprint consistait à coder, dans la continuité du premier sprint, la macro de vérification des documents administratifs. Sur un plan technique, cette phase m'a permis de me rendre compte que les array étaient assez contraignants à utiliser en vba. Par exemple, quand on définit un array dynamique, il faut en réalité redéfinir sa dimension en permanence, je n'ai pas trouver de moyen d'ajouter des items à la suite de l'array sans devoir l'agrandir au préalable (une sorte d'équivalent de ".append" en python). De plus, il n'est pas possible de renvoyer un array via une "message box". In fine, il s'est avéré beaucoup plus pratique dans ce cas précis d'utiliser une chaîne de caractère à la place pour concaténer à la suite les noms des profils incomplets ou à litige. Par souci de clarté, j'ai souhaité intégrer des retours à la ligne dans ma chaîne de caractère, ce qui se traduit par la commande suivante "vbCrLf".
+
+Une fois le programme de vérification de validité des cartes d'identité et des visites médicales codé, j'ai pu le montrer à ma collègue Corinne. On a pu vérifier à nouveau que le programme fonctionnait et lui convenait. Ensuite, j'ai ajouté la macro en question sur le vrai tableur qu'elle utilise et non pas ma copie qui me servait de test. J'ai eu quelques bugs lors de la liaison du bouton avec la macro, mais ça a finalement fonctionné. Avant de faire cette présentation à Corinne, j'avais eu le temps aussi de programmer une autre macro qui vérifiait la validité des contrats des intérimaires en fonction des dates renseignées dans le fichier excel. Cette dernière a aussi plu à ma collègue et répond bien à son besoin.
+
+### La saisie des devis
+
+Cette partie était relativement simple à coder. Il s'agissait simplement jouer sur la mise en page du tableau extrait. Pour autant c'était intéressant de se pencher sur la question car celà m'a permis de manipuler un peu les différentes commandes de mise en page via vba. Ainsi j'ai pu mettre en application toute une partie de ce que j'avais appris lors de mon premier MON sur vba.
+
+### Les badges
+
+En ce qui concerne les deux sujets identifiés sur les badges, il s'est finalement avéré peu pertinent d'utiliser vba dans ces deux cas. Pour le suivi des demandes de badge, le code aurait été très similaire à celui des CNI et des visites médicales car il s'agit encore de comparer des dates. En revanche, le programme n'est plus pertinent à mettre en place étant donné que les demandes de badges d'accès se rarifient avec l'avancée du chantier. En effet, il y en avait énormément au départ mais maintenant les accès sont faits et les équipes sont globalement stables.
+
+Concernant les badges véhicules, l'idée aurait été de réussir à modifier à l'aide de vba un formulaire pdf. D'après mes recherches, cela semble faisable. Cependant, la license d'Adobe Acrobat fournie par mon entreprise ne contenait malheureusement pas la bibliothèque nécessaire "Adobe Acrobat Type Library". J'ai vu que d'autres bibliothèques pouvaient permettre d'effectuer ce genre d'interaction comme itext mais, même si cette bibliothèque me permettait d'arriver à mes fins, il aurait fallu l'installer sur mon PC pro et celui de ma collègue. Je voyais venir la source de problèmes plus que la solution miracle. Ce fut le moment pour moi de me souvenir du retour d'expérience récurrent relevé pendant le premier sprint, à savoir : "Parfois, le codage de la macro cause plus de prise de tête qu'il n'apporte de gain réel une fois au point." Pour autant, explorer le sujet m'a déjà permis d'apprendre que l'on pouvait modifier des pdf à formulaires via un programme vba. De plus, je suis à présent d'autant plus curieux d'explorer les différentes manières qui peuvent exister pour "automatiser" le remplissage de ce type de formulaires facilement.
+
+### Le projet Bonus
+
+Après avoir commencé à manipuler les macros excel, et étant en plein dans le codage de celles présentées ci-dessus, j'étais beaucoup plus attentif aux tâches qui se prêtaient bien à une automatisation via vba. C'est alors que je me suis rendu compte qu'un des fichiers de synthèse que l'on remplit régulièrement pouvait être un très bon sujet pour compléter ce POK et manipuler encore un peu vba. En effet, c'est un fichier excel qui vise à synthétiser sur une feuille de calcul les données présentes sur une dizaine d'autres feuilles identiques que l'on crée au fur et à mesure du projet. J'ai donc codé une macro qui permet de créer la nouvelle ligne du tableau synthèse quand on crée une nouvelle feuille dans le fichier.
+
+### Analyse Post Mortem du 2nd Sprint
+
+Finalement, j'ai pu dans ce second sprint terminer de coder la macro inachevée du premier sprint mais aussi en coder quelques autres. En revanche tous les programmes que j'avais envisagés n'ont pas forcément abouti, que ce soit parce qu'ils ne répondaient plus à un réel besoin ou parce que leur mise en oeuvre était trop contraignante, risquant une balance investissement/bénéfice très mauvaise.
+
+Par ailleurs, j'ai été très surpris par le gain en rapidité que j'ai pu observer entre ma première macro et les suivantes. Je ne pensais pas m'approprier si vite les manipulations élémentaires du langage. Bien sûr, pour chaque programme je devais rechercher au fur et à mesure du code certaines propriétés ou formulations qui me manquaient malgré tout. D'ailleurs, la recherche de solutions pour le remplissage des formulaires pdf via vba est une des parties qui m'a pris plus de temps que prévu.
+
+## Conclusion
+
+Je souhaite conclure ce POK avec deux points qui m'ont marqués. Pour le premier, c'est le constat de la puissance pédagogique que ce projet a eu pour moi. Il m'a permis d'appliquer directement ce que j'avais étudié sur vba dans le cadre de mon MON, et ainsi de m'approprier le langage en m'entraînant sur des projets concrets dont je cernais clairement l'objectif, et dont le résultat m'est utile. Le deuxième point concerne l'inclusion de ma collègue Corinne dans le projet, ce qui était très intéressant. En effet, une partie des macros que j'ai codées lui étaient destinées, cela a inclu toute une dimension d'expérience utilisateur à laquelle j'ai du porter attention. La possibilité de tester avec elle au fur et à mesure mes propositions pour réadapter les macros à son utilisation était également enrichissante car ça me permettait de challenger mes programmes et me poussait à les améliorer.

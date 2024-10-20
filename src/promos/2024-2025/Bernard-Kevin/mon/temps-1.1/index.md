@@ -18,7 +18,7 @@ résumé: "Je souhaite découvrir l'utilisation de figma, une application de des
 
 {% prerequis %}
 
-Pas de prérequi
+Pas de prérequis
 
 {% endprerequis %}
 {% lien %}

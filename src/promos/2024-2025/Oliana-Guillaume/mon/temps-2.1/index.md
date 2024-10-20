@@ -1,14 +1,14 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Prise en main de Selenium"
 authors:
   - OLIANA Guillaume
-date: 1970-11-01
+date: 2024-10-10
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON traitant de Selenium."
 ---
 
 {% prerequis %}

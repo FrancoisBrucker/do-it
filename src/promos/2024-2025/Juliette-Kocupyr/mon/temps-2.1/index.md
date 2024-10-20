@@ -1,15 +1,16 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Les tendances UX actuelles"
 authors:
-  - Gordon Zola
+  - Juliette Kocupyr
 
-date: 1970-11-01
+date: 2024-10-21
 tags: 
   - "temps 2"
+  - "UX"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON va me permettre d'explorer les différentes tendances d'UX qui se démarquent aujourd'hui en essayant de comprendre pourquoi et comment elles sont influencées pas les utilisateurs."
 ---
 
 {% prerequis %}

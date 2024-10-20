@@ -159,7 +159,6 @@ Dans notre exemple, voici à quoi ressemble notre premiere page web :
 
 ![alt text](image.png)
 
-Magnifique.
 
 ---
 
@@ -354,7 +353,7 @@ Voici à quoi ressemble maintenant notre site :
 
 ![alt text](image-2.png)
 
-Ca s'améliore...
+
 
 ---
 
@@ -444,7 +443,6 @@ Voici alors à quoi ressemble notre site.
 
 ![alt text](image-6.png)
 
-Ca commence à ressembler à quelque chose ! 
 
 ---
 
@@ -559,8 +557,10 @@ Le but de cette dernière partie est de combiner tout ce que nous avons appris p
     <section id="home">
       <h2>Bienvenue</h2>
       <p>Voici la section d'accueil.</p>
-      <img src="image.png" alt="Une image illustrant la section d'accueil">
+      <img src=bg.png>
     </section>
+
+    
 
     <section class="services">
       <div class="service">
@@ -573,12 +573,12 @@ Le but de cette dernière partie est de combiner tout ce que nous avons appris p
       </div>
       <div class="service">
         <h3>Service 3</h3>
-        <p>Description du service 3.</p>
+        <p>ervice 3.</p>
       </div>
     </section>
 
     <footer>
-      <p>Contactez-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+      <p>Contactez-nous : <a href="mailto:contact@centrale.com">contact@centrale.com</a></p>
     </footer>
   </body>
 </html>
