@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Bases de données relationnelles, SQL avancé, noSQL"
 authors:
   - Lola Perdrix
 
@@ -9,7 +9,7 @@ date: 1970-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "étude plus approfondie des bases de données relationnelles et de SQL qui fait suite à mon MON 1.2."
 ---
 
 {% prerequis %}
@@ -23,10 +23,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+L'objectif de ce MON est de continuer le travail débuté pendant mon MON 1.2 sur les bases de SQL, car je n'ai pas fini d'explorer plusieurs concepts qui me seraient utiles. Je souhaite continuer à travailler sur SQL car je considère que les compétences acquises précédemment ne suffisent pas pour affirmer connaître SQL. Je souhaite également me pencher sur le noSQL pour avoir un ensemble de connaissances plus large des différentes solutions.
 
 ## Contenu
 

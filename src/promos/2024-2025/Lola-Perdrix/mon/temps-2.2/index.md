@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Le cloud computing dans les entreprises"
 authors:
   - Lola Perdrix
 
@@ -9,7 +9,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Comprendre les enjeux du cloud computing actuels."
 ---
 
 {% prerequis %}
@@ -23,10 +23,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+L'objectif de ce MON sera d'explorer les solutions de cloud computing qui existent aujourd'hui, retracer les évolutions dans ce domaine, et me pencher sur les stratégies adoptées par les entreprises face à cette technologie (doivent-elles l'adopter ? quels avantages ? inconvénients ?)
 
 ## Contenu
 

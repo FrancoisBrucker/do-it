@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Jeu de mémory en ligne"
 authors:
   - Lola Perdrix
 
@@ -10,7 +10,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Réalisation d'un site web sur lequel on peut jouer au mémory.
 ---
 
 {% prerequis %}
@@ -24,10 +24,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+L'objectif de ce POK est de reprendre le site web que j'avais commencé à développer pendant le cours de dev web de 2A là où il en était resté. Je souhaite améliorer l'UI du site tout en refaisant le back.
 
 ## Tâches
 
