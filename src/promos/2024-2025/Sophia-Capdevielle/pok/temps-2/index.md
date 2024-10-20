@@ -1,16 +1,17 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Amélioration des process Échanges Phocéens"
 authors:
-  - Gordon Zola
+  - Sophia Capdevielle
 
-date: 1971-01-01
+date: 2024-01-01
 
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: "L'objectif de ce POK est d'améliorer les process de l'association Échanges Phocéens et notamment la gestion des autorisations de sortie qui reste laborieuse aujourd'hui."
+
 ---
 
 {% prerequis %}
