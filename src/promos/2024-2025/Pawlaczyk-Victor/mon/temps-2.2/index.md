@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Comment se constituer la chaîne Hifi Parfaite ?"
 authors:
   - Victor Pawlaczyk
 
@@ -9,7 +9,7 @@ date: 2025-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ampli, bafle, subwoofer, impédance, actif, passif, préampli, etc. Vous êtes perdus ? Moi aussi, mais plus pour longtemps"
 ---
 
 {% prerequis %}
