@@ -21,22 +21,6 @@ résumé: "J’ai adoré l’intervention sur le design thinking par Oresys en t
 MON débutant, aucun prérequis
 
 {% endprerequis %}
-{% details "Ressources mentionnées dans ce MON" %}
-
-- [MON d'Ossama Abdane MOOC Design thinking for innovation](https://francoisbrucker.github.io/do-it/promos/2022-2023/Abdane-Ossama/mon/mon1.2/)  
-- [Article : Design de service](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/)
-- [Vidéo youtube : TED, Tim Brown urge les designers à penser grand](https://youtu.be/UAinLaT42xY?si=gwnmSVj2pGpM9sd6)  
-- [Article : Qu'est-ce que le design thinking ?](https://www.usabilis.com/quest-ce-que-le-design-thinking/)  
-- [Vidéo youtube : Présentation Double Diamant Design Thinking](https://www.youtube.com/watch?si=AmYC0MRxxokmRmaQ&v=oobuFri_Cps&feature=youtu.be)  
-- [Mon MON sur l’intelligence collective](https://francoisbrucker.github.io/do-it/promos/2024-2025/Clarisse-Francese/mon/temps-1.1/)  
-- [Article : 30 outils de Design Thinking qui favorisent l’innovation](https://www.mjvinnovation.com/fr/blog/30-outils-de-design-thinking-qui-favorisent-linnovation/)  
-- [Article : Les outils indispensables de design thinking](https://kwantic.fr/les-outils-indispensables-de-design-thinking/)  
-- [Article : Les 46 meilleurs outils du Design Thinking](https://www.google.com/url?q=https://www.emydigital.fr/46-meilleurs-outils-design-thinking/&sa=D&source=docs&ust=1727363897610766&usg=AOvVaw2BlzCobfgQ4P3paHqs4ofU) 
-- [Article : Coach en Design Thinking : 10 qualités à développer](https://www.klap.io/coach-en-design-thinking-10-qualites-a-developper/)
-- [Article : Le “Design Thinker” : maître de l’innovation](https://www.usabilis.com/design-thinker/)
-- [Article : Tout savoir sur le design thinking](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking)
-
-{% enddetails %}
 
 ## Sommaire
 
@@ -46,6 +30,7 @@ MON débutant, aucun prérequis
 - [Le facilitateur en design thinking](#ldt)
 - [Regard critique sur le design thinking](#RC)
 - [Echanges sur le métier de consultant](#ITW)
+- [Sources](#sources)
 
 <h2 id=DT> 💡Le Design Thinking</h2>
 
@@ -70,12 +55,6 @@ Il désigne la conception de l’**interface utilisateur pour une application, u
 
 Finalement, toutes ces notions font partie de la grande famille nommée «**Human Centered Design**». Maintenant que j’y vois plus clair entre les différents types de design, je vais détailler le Design Thinking.
 
-{% lien %}
-
-- [Article : Design de service](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/)
-
-{% endlien %}
-
 ### Focus sur le Design Thinking
 
 S’il est difficile de donner une définition unique du Design Thinking (abrégée DT dans la suite), c’est notamment parce qu’il s’agit à la fois d’une méthodologie, d’un process et d’un état d’esprit. Cette méthode d’innovation **rompt avec la gestion de projet linéaire**, classique en entreprise qui cherche à trouver des solutions à des problèmes techniques. Au contraire, le DT **met en avant les usages de l’utilisateur** ou du consommateur, le **tâtonnement et l’expérience par l’erreur**. Il ne s’agit pas seulement d’identifier des problèmes existants, mais aussi de répondre à des besoins qui ne sont pas forcément exprimés par les utilisateurs ou clients. Il aide ainsi à s’adresser à des secteurs de marché qui n’avaient pas encore été identifiés.
@@ -99,10 +78,6 @@ Le design thinking permet de définir correctement quel problème on cherche à 
 
 C'est en voyant tous ces critères qu'on se rend compte de la **différence entre le "design thinking" et le simple "design"** tel qu'on se l'imagine généralement. En effet, le design classique pensé par un designer sans prendre l'avis des utilisateurs va souvent créer un article esthétiquement beau et à la mode mais qui ne prend pas en compte les réelles attentes des clients. Tim Brown explique ce phénomène dans la vidéo TED ci-dessous que je vous recommande vivement ! Il explique pourquoi le **design doit commencer avec les humains et la culture** et non les technologies. Il souligne également l'**importance des prototypes** et pourquoi il est essentiel de passer du lien passif entre consommateur et vendeur à une **relation participative** dans laquelle le consommateur exprime ses besoins au vendeur.
 
-{% lien %}
-[Vidéo youtube : TED, Tim Brown urge les designers à penser grand](https://youtu.be/UAinLaT42xY?si=gwnmSVj2pGpM9sd6)
-{% endlien %}
-
 Grâce à sa démarche soucieuce de résoudre des problèmes complexes d’une manière centrée sur l’utilisateur, le DT peut s'utiliser dans de **nombreux domaines** :
 
 - **Conception du produit**
@@ -110,10 +85,6 @@ Grâce à sa démarche soucieuce de résoudre des problèmes complexes d’une m
 - **Conception d’entreprise**
 - **Leadership**
 - **Changement organisationnel**
-
-{% lien %}
-[Article : Qu'est-ce que le design thinking ?](https://www.usabilis.com/quest-ce-que-le-design-thinking/)
-{% endlien %}
 
 <h2 id=DD> 💎La démarche double diamant</h2>
 
@@ -145,10 +116,6 @@ Cette phase convergente permet à l’équipe de se fixer sur la **solution fina
 ### Phase 5 : le test de la solution
 
 Le prototype sert de support pour réaliser ensuite les **tests auprès des utilisateurs** finaux de la solution. Ce sont eux les juges ultimes du projet et comme la solution est conçue pour eux il est essentiel de leur demander si elle correspond bien à leurs attentes et répond à leurs besoins. Selon les **retours** il est possible d’améliorer la solution ou de la changer totalement si nécessaire c’est la force d’un processus itératif.
-
-{% lien %}
-[Vidéo youtube : Présentation Double Diamant Design Thinking](https://www.youtube.com/watch?si=AmYC0MRxxokmRmaQ&v=oobuFri_Cps&feature=youtu.be)
-{% endlien %}
 
 On remarque que les étapes de la démarche double diamants coorespondant aux 5 grandes étapes du Design Thinking selon la D-School de l'université de Stanford : Empathize (empathy), Define (définir), Ideate (imaginer), Prototype (prototyper) et Test (tester).
 
@@ -246,13 +213,6 @@ C’est un exercice d’observation dans lequel on demande à des utilisateurs d
 Selon Mickael Lavallée qui nous a fait le cours sur l'UX Design, **5 utilisateurs suffisent pour avoir 80% des retours**. Ainsi, il est inutile de multipler les tests avec des dizaines d'utilisateurs.
 {% endinfo %}
 
-{% lien %}
-
-- [Article : 30 outils de Design Thinking qui favorisent l’innovation](https://www.mjvinnovation.com/fr/blog/30-outils-de-design-thinking-qui-favorisent-linnovation/)  
-- [Article : Les outils indispensables de design thinking](https://kwantic.fr/les-outils-indispensables-de-design-thinking/)  
-- [Article : Les 46 meilleurs outils du Design Thinking](https://www.google.com/url?q=https://www.emydigital.fr/46-meilleurs-outils-design-thinking/&sa=D&source=docs&ust=1727363897610766&usg=AOvVaw2BlzCobfgQ4P3paHqs4ofU)
-{% endlien %}
-
 <h2 id=ldt> 🙋Le facilitateur en design thinking</h2>
 
 ### Les qualités nécessaires
@@ -270,10 +230,6 @@ Selon Mickael Lavallée qui nous a fait le cours sur l'UX Design, **5 utilisateu
 
 Ainsi, bien qu'il y ait un effet de mode autour de ce secteur, être facilitateur en design thinking est un métier exigeant, qui demande des **compétences analytiques et humaines**.
 
-{% lien %}
-[Article : Coach en Design Thinking : 10 qualités à développer](https://www.klap.io/coach-en-design-thinking-10-qualites-a-developper/)
-{% endlien %}
-
 ### Son rôle
 
 Etre facilitateur en design thinking est très compliqué car la **frontière avec le coach, l’animateur, le professeur ou le formateur** est très poreuse. Il est chargé de **veiller à la bonne énergie entre les participants**, à ce qu’ils restent motivés et à ce que chacun puisse apporter sa contribution.... Le tout sans **jamais porter de jugement**. Il est là pour tirer le meilleur parti d’un groupe, aider les participants à accoucher de leurs idées et **veiller au respect du programme**. Souvent, le premier atelier de Design Thinking est perçu comme une activité récréative. Le facilitateur doit alors **adopter différentes postures** “hautes” (autorité)  et “basses” (humilité), comme en improvisation théâtrale, pour rythmer la session. Ainsi, un facilitateur en Design Thinking donne les outils et les moyens pour mener le projet à bien mais **n’est en aucun cas décisionnaire**.
@@ -282,10 +238,6 @@ Etre facilitateur en design thinking est très compliqué car la **frontière av
 
 Le salaire moyen pour les emplois liés au Design Thinking en France, est de **45 k€ par an**.
 Le salaire moyen varie entre 40 k€ pour les postes de niveau débutant à 50 k€ pour les travailleurs les plus expérimentés
-
-{% lien %}
-[Article : Le “Design Thinker” : maître de l’innovation](https://www.usabilis.com/design-thinker/)
-{% endlien %}
 
 <h2 id=RC> 👀Regard critique sur le design thinking</h2>
 
@@ -303,10 +255,6 @@ Le salaire moyen varie entre 40 k€ pour les postes de niveau débutant à 50 k
 - **Des risques d’échec** : Le caractère expérimental de cette démarche peut entraîner des échecs inattendus lorsque certaines idées ne fonctionnent pas comme prévu.
 - **Des compétences spécifiques requises** : Pour être pleinement efficace, le design thinking nécessite une maîtrise particulière des outils d’empathie, de problématisation et de prototypage.
 - **Un choc culturel potentiel** : Pour les entreprises traditionnelles, l’adoption de cette méthode peut être déstabilisante, nécessitant un réel changement de culture et de mode de fonctionnement.
-
-{% lien %}
-[Article : Tout savoir sur le design thinking](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking)
-{% endlien %}
 
 <h2 id=ITW> 💬Echanges sur le métier de consultant</h2>
 
@@ -343,3 +291,21 @@ J'y vois aussi plus clair sur ce qu'il me reste à faire :
 | Lundi 30/09 | 0h30 | échange avec Duc sur le métier de consultant |
 | Mardi 01/10 | 0h30 | échange avec Céline sur le métier de consultant |
 | Mercredi 16/09 | 1h | mise au propre des échanges sur le métier de consultant et mise au propre sur GitHub |
+
+<h2 id=sources> 📖 Sources</h2>
+{% lien %}
+
+- [MON d'Ossama Abdane MOOC Design thinking for innovation](https://francoisbrucker.github.io/do-it/promos/2022-2023/Abdane-Ossama/mon/mon1.2/)  
+- [p.neveu@differentfactory.com. « ✔︎ Design de Service c’est quoi ? Difference Design Thinking ? D.FactorY ». DIFFERENT FACTORY](https://www.differentfactory.com/design-de-service-quest-ce-que-cest/). Consulté le 25 octobre 2024.
+- [Vidéo youtube : TED, Tim Brown urge les designers à penser grand](https://youtu.be/UAinLaT42xY?si=gwnmSVj2pGpM9sd6). Consulté le 25 octobre 2024.
+- [« Qu’est-ce que le Design thinking ? Design Thinking Définition ». USABILIS, 24 avril 2018](https://www.usabilis.com/quest-ce-que-le-design-thinking/). Consulté le 25 octobre 2024.
+- [Vidéo youtube : Présentation Double Diamant Design Thinking](https://www.youtube.com/watch?si=AmYC0MRxxokmRmaQ&v=oobuFri_Cps&feature=youtu.be). Consulté le 26 octobre 2024.
+- [Mon MON sur l’intelligence collective](https://francoisbrucker.github.io/do-it/promos/2024-2025/Clarisse-Francese/mon/temps-1.1/)  
+- [Team, M. J. V. « 30 outils de Design Thinking qui favorisent l’innovation ». MJV Technology & Innovation, 25 janvier 2022,](https://www.mjvinnovation.com/fr/blog/30-outils-de-design-thinking-qui-favorisent-linnovation/). Consulté le 26 octobre 2024.  
+- [Lou. « Les outils indispensables de design thinking ». Kwantic, 9 mars 2023](https://kwantic.fr/les-outils-indispensables-de-design-thinking/). Consulté le 26 octobre 2024.
+- [« Les 46 meilleurs outils du Design Thinking ». Emy Digital, 24 août 2021](https://www.emydigital.fr/46-meilleurs-outils-design-thinking/).  Consulté le 26 octobre 2024.
+- [Klap, L’équipe. « Coach en Design Thinking : 10 qualités à développer ». Klap - Agence et Formation à l’Intelligence Collective, 13 février 2019,](https://www.klap.io/coach-en-design-thinking-10-qualites-a-developper/).  Consulté le 27 octobre 2024.
+- [Usabilis. « Le “Design Thinker” : maître de l’innovation - Design Thinking ». USABILIS, 16 juin 2020](https://www.usabilis.com/design-thinker/). Consulté le 27 octobre 2024.
+- [« Tout savoir sur le design thinking : définition et avantages ! » Executive Education HEC Lausanne](https://execed.unil.ch/blog/tout-savoir-sur-le-design-thinking). Consulté le 27 octobre 2024.
+
+{% endlien %}

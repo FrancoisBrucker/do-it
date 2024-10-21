@@ -15,6 +15,10 @@ authors:
 
 [Projet Avat'Art](../../../projets/2024-2025/Avat'Art/)
 
+## Mon Github
+
+[Mon Github perso](https://github.com/Clarisse-Francese/GithubClarisse.git)
+
 ## Qui suis-je ?
 
 Je m'appelle Clarisse Francese, élève en 4ème année. J'aime plein de chose dans la vie mais surtout la **danse**, l'**escalade**, les sports collectifs, les balades dans la **nature**, les **voyages**, la cuisine et passer du temps avec mes amis et ma famille.
