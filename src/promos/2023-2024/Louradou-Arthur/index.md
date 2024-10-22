@@ -17,4 +17,4 @@ authors:
 
 Par Arthur, Assane, Victor, Paul
 
-* [OpenDwarfMap : La légendaire exploration cartographique](../../../projets/2023-2024/OpenDwarfMap/)
+* [OpenDwarfMap : La légendaire exploration cartographique](../_projets/OpenDwarfMap/)

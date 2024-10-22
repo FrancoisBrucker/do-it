@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Notre Projet 3a : Site de Mobilité](../../../projets/2023-2024/Mobilite)
+[Notre Projet 3a : Site de Mobilité](../_projets/Mobilite)

@@ -19,4 +19,4 @@ CV trop important pour rentrer sur ce site.
 
 ## Projet
 
-* [OpenDwarfMap ou comment sombrer dans un monde sombre](../../../projets/2023-2024/OpenDwarfMap/)
+* [OpenDwarfMap ou comment sombrer dans un monde sombre](../_projets/OpenDwarfMap/)
