@@ -29,14 +29,14 @@ La sauvegarde des documents sur Onedrive peut être problématique. Il est préf
 
 ## Compiler le site et le voir
 
-Une fois node installé et le site cloné, placez vous dans le dosser du projet avec un terminal puis tapez les commandes :
+Une fois node installé et le site cloné, placez-vous dans le dosser du projet avec un terminal puis tapez les commandes :
 
 ```shell
 npm install
 npm run node-modules-front
 ```
 
-Ceci vous installera les divers bibliothèques nécessaires pour compiler le site.
+Ceci vous installera les diverses bibliothèques nécessaires pour compiler le site.
 
 Pour compiler le site voir le résultat :
 

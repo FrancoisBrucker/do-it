@@ -1,7 +1,7 @@
 
-const { template } = require("./utils")
+import {template} from "./utils.js";
 
-module.exports = function (eleventyConfig) {
+export default async function(eleventyConfig) {
 
   eleventyConfig.addPairedShortcode('note', (content, arg) => {
 

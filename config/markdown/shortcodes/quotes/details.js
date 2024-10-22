@@ -1,7 +1,7 @@
 
-const { escapeHtml } = require("./utils")
+import { escapeHtml } from "./utils.js";
 
-module.exports = function (eleventyConfig) {
+export default async function(eleventyConfig) {
 
     eleventyConfig.addPairedShortcode('details', (content, arg) => {
         

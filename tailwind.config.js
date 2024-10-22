@@ -1,4 +1,9 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+
+import typography from '@tailwindcss/typography';
+
+export default {
+    mode: 'jit',
     content: [
         "./src/assets/stylesheets/*.{html,js,njk}",
         "./src/*.{html,js,njk}",
@@ -10,10 +15,10 @@ module.exports = {
         "./config/markdown/shortcodes/quotes/!(index).js"
     ],
     theme: {
-      extend: {},
+    extend: {},
     },
     plugins: [
-      require('@tailwindcss/typography'),
+        typography,
     ],
-    
-  }
+}
+
