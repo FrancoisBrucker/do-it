@@ -1,38 +1,40 @@
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+import { EleventyRenderPlugin, EleventyHtmlBasePlugin } from "@11ty/eleventy"
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import setupMarkdown from './config/markdown/index.js';
+import setupShortcodes from "./config/markdown/shortcodes/index.js"
+import assetsConfig from "./config/assets.js"
+import collectionsConfig from "./config/filters.js";
+import { DateTime } from "luxon";
 
-const embedYouTube = require("eleventy-plugin-youtube-embed");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
-const markdownConfig = require("./config/markdown")
-const assetsConfig = require("./config/assets")
-const searchConfig = require("./config/search")
-const collectionsConfig = require("./config/filters")
-
-
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-  eleventyConfig.addPlugin(embedYouTube);
+  // eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  
-  markdownConfig(eleventyConfig);
+
+  setupMarkdown(eleventyConfig);
+  setupShortcodes(eleventyConfig);
   assetsConfig(eleventyConfig);
-  searchConfig(eleventyConfig);
   collectionsConfig(eleventyConfig);
+
+  // markdownConfig(eleventyConfig);
+  // searchConfig(eleventyConfig);
 
   eleventyConfig.addFilter('getValueFromPath', function(str, separator, value) {
     return str.split(new RegExp(separator))[value];
   });
 
+  eleventyConfig.addFilter("dateFormat", (dateObj, format = "dd/MM/yyyy") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
+
   return {
     dir: {
       input: "src",
-      output: "dist"
+      output: "dist",
     },
     markdownTemplateEngine: "njk",
-  }
-
+  };
 };

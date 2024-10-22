@@ -4,6 +4,19 @@ Auto-formation, cours et prés-requis pour le parcours do-it
 
 <https://francoisbrucker.github.io/do-it/>
 
+## IMPORTANT ! Mise à jour vers Eleventy 3.0
+
+Si vous avez déjà exécuté le projet, il va falloir remettre à jour les paquets du site suite à une mise à jour majeure.
+
+Pour cela :
+
+```bash
+npm install
+npm run serve
+```
+
+Tout devrait marcher comme avant !
+
 ## Logiciels requis
 
 Pour installer et compiler le site, il suffit d'installer la version courante de [node](https://nodejs.org/en/download/current/) (attention, pas la version LTS qui est plus ancienne) (sous mac, utilisez <https://brew.sh> pour l'installation).
@@ -29,14 +42,14 @@ La sauvegarde des documents sur Onedrive peut être problématique. Il est préf
 
 ## Compiler le site et le voir
 
-Une fois node installé et le site cloné, placez vous dans le dosser du projet avec un terminal puis tapez les commandes :
+Une fois node installé et le site cloné, placez-vous dans le dosser du projet avec un terminal puis tapez les commandes :
 
 ```shell
 npm install
 npm run node-modules-front
 ```
 
-Ceci vous installera les divers bibliothèques nécessaires pour compiler le site.
+Ceci vous installera les diverses bibliothèques nécessaires pour compiler le site.
 
 Pour compiler le site voir le résultat :
 

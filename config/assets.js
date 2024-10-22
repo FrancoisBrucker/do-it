@@ -1,6 +1,8 @@
-module.exports = function (eleventyConfig) {
+// const postCSSConfig = require("eleventy-postcss-extension");
 
-  eleventyConfig.addPlugin(require("eleventy-postcss-extension"));
+export default function (eleventyConfig) {
+
+  // eleventyConfig.addPlugin(postCSSConfig);
 
   // garder le node_modules des assets, ignorer les autres
   eleventyConfig.addPassthroughCopy("src/assets/node_modules");

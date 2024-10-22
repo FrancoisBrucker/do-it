@@ -1,13 +1,13 @@
 ---
 layout: layout/post.njk
 
-title: "Projets promo 2024-2025"
+title: "Projets promo 2022-2023"
 tags: 
     - 'index'
 
 ---
 
-{% set promo = "2024-2025" %}
+{% set promo = "2022-2023" %}
 {% set types = [promo] %}
 
 {% for projet in collections.PROJET | sort | reverse %}
@@ -40,7 +40,7 @@ tags:
                         {% if projet.data.résumé %}
                             {{ projet.data.résumé | safe }}
                         {% else %}
-                            {% résumé projet %}
+                             <i>Aucun résumé de projet fourni pour le moment</i>
                         {% endif %}
                         </div>
                     </div>

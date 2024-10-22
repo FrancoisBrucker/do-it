@@ -5,16 +5,22 @@ title: "Promotions"
 tags: ['index']
 
 order: 5
-resume: 'Liste des promotions de Do-It'
+resume: 'Liste des promotions de Do_It'
 
 ---
 
 <article>
-    <ul>
-        {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) | reverse %}
-            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-                <a href="{{ entry.url }}">{{ entry.title }}</a>
-            </li>
-        {%- endfor %}
-    </ul>
+    <div class="my-3 px-2 p-1 border-solid border-2 rounded relative">
+        <div class="text-3xl mb-3">
+            Années référencées sur ce site
+        </div>
+        <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1">
+            {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) | reverse %}
+                <li{% if entry.url == page.url %} class="my-active-class bg-purple-200 rounded-full p-2 m-1"
+                    {% else %} class="bg-purple-200 rounded-full p-2 m-1"{% endif %}>
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+    </div>
 </article>
