@@ -4,6 +4,19 @@ Auto-formation, cours et prés-requis pour le parcours do-it
 
 <https://francoisbrucker.github.io/do-it/>
 
+## IMPORTANT ! Mise à jour vers Eleventy 3.0
+
+Si vous avez déjà exécuté le prjet, il va falloir remettre à jour les packets du site suite à une mise à jour majeure.
+
+Pour cela :
+
+```bash
+npm install
+npm run serve
+```
+
+Tout devrait marcher comme avant !
+
 ## Logiciels requis
 
 Pour installer et compiler le site, il suffit d'installer la version courante de [node](https://nodejs.org/en/download/current/) (attention, pas la version LTS qui est plus ancienne) (sous mac, utilisez <https://brew.sh> pour l'installation).
