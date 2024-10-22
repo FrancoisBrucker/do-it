@@ -4,6 +4,7 @@ import setupMarkdown from './config/markdown/index.js';
 import setupShortcodes from "./config/markdown/shortcodes/index.js"
 import assetsConfig from "./config/assets.js"
 import collectionsConfig from "./config/filters.js";
+import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
 
@@ -23,6 +24,10 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addFilter('getValueFromPath', function(str, separator, value) {
     return str.split(new RegExp(separator))[value];
+  });
+
+  eleventyConfig.addFilter("dateFormat", (dateObj, format = "dd/MM/yyyy") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
   return {

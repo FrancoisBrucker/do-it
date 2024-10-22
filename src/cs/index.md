@@ -8,7 +8,7 @@ order: 1
 resume: "Cours de Spécialités"
 ---
 
-Do-it est organisé en 3 axes :
+Do_<span style="color: #4a86e8">It</span> est organisé en 3 axes :
 
 - Info : Développement / Informatique
 - Mgt : Systèmes d’information (SI) / Management
