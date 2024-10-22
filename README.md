@@ -6,7 +6,7 @@ Auto-formation, cours et prés-requis pour le parcours do-it
 
 ## IMPORTANT ! Mise à jour vers Eleventy 3.0
 
-Si vous avez déjà exécuté le prjet, il va falloir remettre à jour les packets du site suite à une mise à jour majeure.
+Si vous avez déjà exécuté le projet, il va falloir remettre à jour les paquets du site suite à une mise à jour majeure.
 
 Pour cela :
 

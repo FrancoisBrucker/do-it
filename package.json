@@ -11,7 +11,7 @@
     "node-modules-front": "cd ./src/assets && npm install && cd ../..",
     "build-tailwind": "tailwindcss -i ./src/assets/stylesheets/main.css -o ./dist/assets/stylesheets/main.css",
     "build-github": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=do-it",
-    "serve": "tailwindcss -i ./src/assets/stylesheets/main.css -o ./dist/assets/stylesheets/main.css && npx @11ty/eleventy --serve --incremental",
+    "serve": "tailwindcss -i ./src/assets/stylesheets/main.css -o ./dist/assets/stylesheets/main.css && npx @11ty/eleventy --serve --incremental ||  echo '\n\n[do-it] \\x1b[32mIMPORTANT ! Mise à jour vers Eleventy 3.0 : Veuillez mettre à jour les paquets avec la commande `npm install` (voir README.md)\\x1b[0m'",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "keywords": [],
